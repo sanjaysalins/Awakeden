@@ -69,6 +69,24 @@ viewer's self-interest. This is non-negotiable:
 
 ---
 
+## OPENING STRATEGY (smart-default: problem-first where it fits)
+
+**Default opening = problem-first.** Open on a REAL, present human ache the viewer
+feels in the first 3 seconds (the 3 a.m. fear, the secret shame, the exhaustion of
+performing), then turn. This is the default because it meets real people where they are.
+
+**BUT — the hard guardrail (non-negotiable, enforced by G8):** the turn and the
+landing must go to **WHO CHRIST IS**, never to "your problem solved." Problem-first
+names the ache only to redirect the eyes to Jesus. The moment the payoff becomes
+"and so your anxiety lifts / your life improves," it has become self-help and BETRAYS
+the gospel of grace. The ache is the doorway; Christ is the room.
+
+**Override the default when the text demands it.** Do NOT force a problem onto a text
+that is confrontational, identity-revealing, or a direct claim of Christ. For those,
+cold-open in the scene, a reversal, or question-first is stronger (e.g. "Who do you
+say I am?" is a confrontation, not a felt problem — open on the cliff/the question,
+not on a manufactured ache). Pick the opening the TEXT earns.
+
 ## HOOK CRAFT (the make-or-break first line)
 
 The first 1–3 seconds decide everything. Use one of these proven hook types and
