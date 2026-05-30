@@ -11,6 +11,34 @@ Every script is held against this charter before it ships.
 
 ---
 
+## THE FIVE QUESTIONS (answer these BEFORE you write — binding)
+
+You have a 60-second window to say one profound thing in a genuinely fresh way.
+Before writing a single line, answer all five — and the finished script must
+visibly satisfy them. A draft that cannot answer these is not ready, no matter
+how polished. (The review enforces this as **gate G8**.)
+
+1. **What am I really trying to say?** State the ONE thing in a single sentence.
+   Every beat must serve that one thing. If the hook promises one idea and the
+   body delivers another, the short is disconnected — rewrite, don't ship.
+2. **Am I saying it in a profound, fresh way — not explaining it?** Make the
+   viewer *feel* the truth through a concrete image or turn; do NOT lecture or
+   narrate the theology ("Notice the order…", "This teaches us…" are failures).
+   Profundity is shown, not summarised.
+3. **Am I following the correct structure?** One idea, one turn; every beat in
+   its budget; the conviction beat must actually pierce (feeling, not facts);
+   the series signature must be present (for QJA: the question TURNS onto the
+   viewer — He asked them, now He asks YOU).
+4. **Who is this for? Who NEEDS to hear this?** Name the one real person — the
+   doubter, the exhausted performer, the admirer who won't bow, the grieving,
+   the ashamed. Write the hook and the turn FOR THAT PERSON. A script written
+   for everyone pierces no one.
+5. **What will they take away?** Not a fact learned — a CHANGE: one true thing
+   about Christ that reorders how they see Him, landing on a response to Jesus
+   by grace. If the takeaway is only information, it has failed.
+
+---
+
 ## THE SHAPE OF EVERY SHORT
 
 Every short follows a **named, timed structure** (the exact beats are given to you

@@ -258,6 +258,18 @@ def _generate_role(structure: Structure, variation: str = "") -> str:
         "Honour grace-anchored conviction: no gain/loss framing, no manufactured pressure.\n"
         "If a THREAD block follows, that thread is the spine of this short — open the hook "
         "on it, prove it in the proof beat, and mirror it in the landing.\n\n"
+        "THE FIVE QUESTIONS (answer before writing — the review enforces this as gate G8):\n"
+        "1. WHAT AM I REALLY SAYING? One sentence; every beat serves it. Hook and body must "
+        "carry the SAME idea — no drift between the hook's promise and the body's payoff.\n"
+        "2. AM I SAYING IT PROFOUNDLY, NOT EXPLAINING IT? Make the viewer FEEL the truth via a "
+        "concrete image/turn. Banned: lecture phrasing ('Notice the order', 'This teaches us', "
+        "'The point is') — show, do not summarise.\n"
+        "3. CORRECT STRUCTURE? One idea, one turn; conviction beat must PIERCE (feeling, not "
+        "facts); the series signature must be present (QJA: the question turns onto the VIEWER).\n"
+        "4. WHO IS THIS FOR? Write the hook + turn for ONE named real person (the doubter, the "
+        "exhausted performer, the admirer who won't bow, the grieving, the ashamed). Not everyone.\n"
+        "5. WHAT DO THEY TAKE AWAY? A CHANGE in how they see Christ + a response to Jesus by "
+        "grace — never merely a fact learned.\n\n"
         "MULTI-VOICE DELIVERY (charter: \"Speakers — Let the Scene Breathe\"):\n"
         "- If the verified KJV text is from a PARABLE (Luke 15, Luke 10, Matt 13/25, etc.), "
         "render the parable quote as JESUS speaking. Introduce it in your own narrator "
@@ -408,12 +420,16 @@ def _judge_role() -> str:
         "no manufactured pressure)?\n"
         "- LANDS ON JESUS: does the close resolve on Christ / the gospel, not application?\n"
         "- ONE-THREAD INTEGRITY: does a single thread run hook -> CTA?\n"
-        "- FAITHFUL: KJV verbatim, claim sound in context, no eisegesis for the sake of fresh.\n\n"
-        "Then decide the WINNER (best total arc) and whether a DIFFERENT candidate has a "
-        "stronger HOOK or CTA worth grafting onto the winner.\n\n"
+        "- FAITHFUL: KJV verbatim, claim sound in context, no eisegesis for the sake of fresh.\n"
+        "- FIVE QUESTIONS (heavily weighted): does it say ONE clear thing (no hook/body drift); "
+        "is it SHOWN profoundly, not EXPLAINED (penalise lecture phrasing like 'Notice the order'); "
+        "is it written FOR ONE named audience (not everyone); is the takeaway a CHANGE in how the "
+        "viewer sees Christ, not a fact? Prefer the candidate that best satisfies these.\n\n"
+        "Then decide the WINNER (best total arc that also best answers the Five Questions) and "
+        "whether a DIFFERENT candidate has a stronger HOOK or CTA worth grafting onto the winner.\n\n"
         "Return ONLY a JSON object (optionally inside a ```json fence):\n"
         "{\n"
-        '  "scores": [{"candidate": 1, "arc": 0, "freshness": 0, "conviction": 0, "lands_on_jesus": 0, "thread": 0, "faithful": 0, "total": 0, "note": "one line"}, ...],\n'
+        '  "scores": [{"candidate": 1, "arc": 0, "freshness": 0, "conviction": 0, "lands_on_jesus": 0, "thread": 0, "faithful": 0, "five_questions": 0, "total": 0, "note": "one line"}, ...],\n'
         '  "ranking": [<candidate numbers, best first>],\n'
         '  "winner": <candidate number>,\n'
         '  "graft_hook_from": <candidate number or null — a stronger hook to adopt>,\n'
@@ -547,6 +563,7 @@ and (if not PASS) a specific fix:
 - G5 Structure Conformance: all beats present in order ({structure.beat_ids}); each roughly within budget ({budgets}); the proof beat carries the scripture quote; total ~{config.TARGET_WORDS_MIN}-{config.TARGET_WORDS_MAX} words.
 - G6 Craft: standalone (carries meaning muted); plain prose; clean pacing.
 - G7 Freshness: the draft surfaces a non-obvious TRUE detail (the intended thread, if provided, carried hook -> proof -> landing) and avoids the cliché blocklist + the obvious topic auto-complete. FAIL when the draft is BOTH generic AND exegetically uninteresting — clichéd openers, banned framings/CTA tropes, or the headline take with no fresh angle. ALSO FAIL when a "fresh" reading is exegetically dishonest (Theologian veto): contrarian eisegesis fails this gate even if it surprises. PASS when the thread is carried end-to-end and stays honest.
+- G8 The Five Questions (binding — see charter "THE FIVE QUESTIONS"): (1) ONE clear thing said, with NO drift between the hook's promise and the body's payoff; (2) it is SHOWN profoundly, not explained — FAIL on lecture phrasing ("Notice the order", "This teaches us", "The point is", or any beat that narrates the theology instead of making it felt); (3) the conviction beat actually PIERCES (feeling, not facts) and the series signature is present (QJA: the question turns onto the viewer); (4) the script is clearly FOR ONE named audience (doubter / performer / admirer-who-won't-bow / grieving / ashamed) — FAIL if it is written for no one in particular; (5) the takeaway is a CHANGE in how the viewer sees Christ + a response to Jesus, not merely a fact learned. Quote the offending beat. FAIL if two or more of these are unmet, or if (1) is unmet.
 
 Verdict rules:
 - overall = LOCKED when NO gate is FAIL. CONDITIONAL or CAUTION notes are fine and
@@ -557,7 +574,7 @@ Verdict rules:
 Return ONLY a JSON object (optionally inside a ```json fence):
 {{
   "panel": [{{"agent": "Scroll-Stopper", "verdict": "...", "note": "..."}}, ... 6 agents],
-  "gates": [{{"gate": "G1 Biblical Accuracy", "verdict": "PASS|CONDITIONAL|FAIL", "evidence": "...", "fix": "..."}}, ... 7 gates],
+  "gates": [{{"gate": "G1 Biblical Accuracy", "verdict": "PASS|CONDITIONAL|FAIL", "evidence": "...", "fix": "..."}}, ... 8 gates (G1..G8)],
   "overall": "LOCKED | REVISE | REWORK",
   "priority_fixes": ["the most important fix first", "..."]
 }}
