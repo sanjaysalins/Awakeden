@@ -32,7 +32,9 @@ how polished. (The review enforces this as **gate G8**.)
 4. **Who is this for? Who NEEDS to hear this?** Name the one real person — the
    doubter, the exhausted performer, the admirer who won't bow, the grieving,
    the ashamed. Write the hook and the turn FOR THAT PERSON. A script written
-   for everyone pierces no one.
+   for everyone pierces no one. **This audience is a PLANNING answer for you —
+   it must NEVER be spoken in the script.** Never write "This one's for the
+   person who…" or "If you're someone who…"; speak *to* that person directly.
 5. **What will they take away?** Not a fact learned — a CHANGE: one true thing
    about Christ that reorders how they see Him, landing on a response to Jesus
    by grace. If the takeaway is only information, it has failed.

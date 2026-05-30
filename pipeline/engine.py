@@ -267,7 +267,10 @@ def _generate_role(structure: Structure, variation: str = "") -> str:
         "3. CORRECT STRUCTURE? One idea, one turn; conviction beat must PIERCE (feeling, not "
         "facts); the series signature must be present (QJA: the question turns onto the VIEWER).\n"
         "4. WHO IS THIS FOR? Write the hook + turn for ONE named real person (the doubter, the "
-        "exhausted performer, the admirer who won't bow, the grieving, the ashamed). Not everyone.\n"
+        "exhausted performer, the admirer who won't bow, the grieving, the ashamed). Not everyone. "
+        "CRITICAL: this audience is a PLANNING answer for YOU only — it must NEVER appear as a spoken "
+        "line in the narration. Banned in the script: 'This one's for…', 'If you're someone who…', "
+        "'For the person who…'. Speak TO that person directly; never name them aloud.\n"
         "5. WHAT DO THEY TAKE AWAY? A CHANGE in how they see Christ + a response to Jesus by "
         "grace — never merely a fact learned.\n\n"
         "MULTI-VOICE DELIVERY (charter: \"Speakers — Let the Scene Breathe\"):\n"
@@ -563,7 +566,7 @@ and (if not PASS) a specific fix:
 - G5 Structure Conformance: all beats present in order ({structure.beat_ids}); each roughly within budget ({budgets}); the proof beat carries the scripture quote; total ~{config.TARGET_WORDS_MIN}-{config.TARGET_WORDS_MAX} words.
 - G6 Craft: standalone (carries meaning muted); plain prose; clean pacing.
 - G7 Freshness: the draft surfaces a non-obvious TRUE detail (the intended thread, if provided, carried hook -> proof -> landing) and avoids the cliché blocklist + the obvious topic auto-complete. FAIL when the draft is BOTH generic AND exegetically uninteresting — clichéd openers, banned framings/CTA tropes, or the headline take with no fresh angle. ALSO FAIL when a "fresh" reading is exegetically dishonest (Theologian veto): contrarian eisegesis fails this gate even if it surprises. PASS when the thread is carried end-to-end and stays honest.
-- G8 The Five Questions (binding — see charter "THE FIVE QUESTIONS"): (1) ONE clear thing said, with NO drift between the hook's promise and the body's payoff; (2) it is SHOWN profoundly, not explained — FAIL on lecture phrasing ("Notice the order", "This teaches us", "The point is", or any beat that narrates the theology instead of making it felt); (3) the conviction beat actually PIERCES (feeling, not facts) and the series signature is present (QJA: the question turns onto the viewer); (4) the script is clearly FOR ONE named audience (doubter / performer / admirer-who-won't-bow / grieving / ashamed) — FAIL if it is written for no one in particular; (5) the takeaway is a CHANGE in how the viewer sees Christ + a response to Jesus, not merely a fact learned. Quote the offending beat. FAIL if two or more of these are unmet, or if (1) is unmet.
+- G8 The Five Questions (binding — see charter "THE FIVE QUESTIONS"): (1) ONE clear thing said, with NO drift between the hook's promise and the body's payoff; (2) it is SHOWN profoundly, not explained — FAIL on lecture phrasing ("Notice the order", "This teaches us", "The point is", or any beat that narrates the theology instead of making it felt); (3) the conviction beat actually PIERCES (feeling, not facts) and the series signature is present (QJA: the question turns onto the viewer); (4) the script is clearly FOR ONE named audience (doubter / performer / admirer-who-won't-bow / grieving / ashamed) — FAIL if it is written for no one in particular; ALSO FAIL if the audience descriptor LEAKS into the spoken script as a meta-line (e.g. 'This one's for the person who…', 'If you're someone who…') — the audience is a planning answer, spoken TO directly, never named aloud; (5) the takeaway is a CHANGE in how the viewer sees Christ + a response to Jesus, not merely a fact learned. Quote the offending beat. FAIL if two or more of these are unmet, or if (1) is unmet.
 
 Verdict rules:
 - overall = LOCKED when NO gate is FAIL. CONDITIONAL or CAUTION notes are fine and
