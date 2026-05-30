@@ -71,9 +71,12 @@ MAX_REVISIONS = int(os.getenv("MAX_REVISIONS", "2"))
 # to disable for a cheap dry run.)
 INDEPENDENT_REVIEW = os.getenv("INDEPENDENT_REVIEW", "1") not in ("0", "false", "False", "")
 
-# Model used for the independent auditor. Defaults to the main model; point it at a
-# different model (even a different family) for stronger independence if you wish.
-REVIEW_MODEL = os.getenv("REVIEW_MODEL", "") or None  # None -> use MODEL
+# Model for the review/judge passes (tournament judge, self-review, independent
+# red-team). Defaults to Sonnet 4.6 — keep expensive Opus for WRITING
+# (draft/synthesize/revise), use the cheaper model for the ~6-8 review calls per
+# episode. Quality barely moves; cost drops a lot. Set REVIEW_MODEL=claude-opus-4-7
+# to put Opus back on review.
+REVIEW_MODEL = os.getenv("REVIEW_MODEL", "claude-sonnet-4-6") or None
 
 # Model for COARSE Vision checks (the assembly per-slot "does this frame match the
 # words" verify). Haiku is plenty for that and much cheaper/faster. The SUBTLE

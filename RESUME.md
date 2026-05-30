@@ -1,5 +1,69 @@
 # RESUME.md — start here next session
 
+## ═══════════ SESSION END 2026-05-30 (LATE) — CLARITY FIX + COST CONTROL — READ THIS FIRST ═══════════
+
+**Nothing is mid-flight. Bridge queue empty. Safe to stop. Picking up = listen to 3 mp3s.**
+
+### What happened this session
+1. **Audio quality fixes** (committed) — god voice → HF-POC's shipped
+   `UzI1NsMEV3ni5JRkRSls`; dialogue gaps (pre 0.5s + post 0.45s) around every quote;
+   fixed a duplicate-line bug pinning word count to 165 (made narrator rush). Word
+   target now 115–140. `config.py` + `pipeline/handoff.py`.
+2. **First-hearing clarity test** locked into the engine (committed) — this was the fix
+   for the user's "clever but doesn't make complete sense" rejection. In 5 places:
+   generate prompt, new gate **G8.6**, tournament judge weighting, **G1 now FAILs
+   exegetically false asides**, and a "CLARITY BEATS CLEVERNESS" section in
+   `data/constitution.md` (cached prefix → every call sees it). Rule: spine must be a
+   FELT TRUTH, never a writerly conceit (geography/grammar/wordplay only season a line);
+   zero-Bible-knowledge assumed; no logic-tricks; no self-contradiction.
+3. **Three rejected narrations regenerated from scratch**, all LOCKED (self +
+   independent), audio rendered ~60s with the new pacing:
+   - `24 The Answer Was a Gift` (Matt 16:15) — was "Cliff of Rival Gods"
+   - `25 The Question on the Gaza Road` (Isa 53:5) — was "Pronouns That Preached"
+   - `26 Jesus Walked Past the Pool` (John 5:6) — was "He Never Answered Jesus"
+   (in `PythonProject1/jesus/narration/`; old 19/21/22 LEFT UNTOUCHED for A/B)
+4. **COST CONTROL** (committed) — `REVIEW_MODEL=claude-sonnet-4-6`: Opus only for
+   WRITING (draft tournament / synthesize / revise), Sonnet for the ~6-8 review/judge
+   calls per episode. Big cost drop, quality barely moves. Override:
+   `REVIEW_MODEL=claude-opus-4-7`.
+5. **STANDING RULE (memory `feedback-ask-before-spending`)**: ALWAYS quote estimated
+   spend and wait for explicit OK before any metered batch run. The user was surprised
+   by ~$15-18 of Opus on the 3-episode regen. Each text episode = ~11-19 LLM calls.
+   Free alternative = agent-bridge (`LLM_PROVIDER=agent`, the default).
+
+### ▶ FIRST THING NEXT SESSION — listen + judge #24/#25/#26
+```
+start "" "C:\Users\sanjay\PycharmProjects\PythonProject1\jesus\narration\24 The Answer Was a Gift\v1\narration.mp3"
+start "" "C:\Users\sanjay\PycharmProjects\PythonProject1\jesus\narration\25 The Question on the Gaza Road\v1\narration.mp3"
+start "" "C:\Users\sanjay\PycharmProjects\PythonProject1\jesus\narration\26 Jesus Walked Past the Pool\v1\narration.mp3"
+```
+If they read clear → proceed to the **5-narration batch** the user wanted: these 3 +
+**2 more strong OT picks** (to choose, from `jesus-in-ot`: Sign of Jonah / Pierced
+Zech 12:10 / Bethlehem Micah 5:2 / Crucifixion Foretold Ps 22:16). Then **batch
+hero/still image design** reusing the 12-plate `_library` + Jesus Soul ref.
+**REMEMBER: quote the est. spend and get an OK before running the batch.**
+
+### Still open / not done
+- `23 The Prepared Belly` (Jonah) text LOCKED but NO audio (never cleared tag stage;
+  can run now — API cap is lifted).
+- Default female voice in `config.VOICE_MAP` (carried from prior session).
+- Folder-naming cleanup of the narration tree.
+- Wire `_library` plates into the engine image stage (reuse before generating).
+- Automatic daily Drive backup of `_library`.
+
+### Run one episode (text+audio, stops at Gate 1)
+```
+.venv\Scripts\python.exe _make_ep.py <series_id> <episode_index>   # questions-jesus-asked | jesus-in-ot
+```
+`_regen3.py` regenerates the specific 3 rejected topics. Both force `LLM_PROVIDER=api`
+(remove that line for the free bridge). Known gotcha: `per_turn_synth` round-trip audit
+false-positives when the tagger strips quote-marks around a `<speaker>` line (blocked
+#26); bypass by running `per_turn_synth.py <v1> --target 60 --pre-quote-pause 0.5
+--post-quote-pause 0.45 --stability 0.65 --force` directly. (memory
+`feedback-audio-pacing-and-god-voice`.)
+
+## ════════════════════════════════════════════════════════════════
+
 ## ═══════════ SESSION END 2026-05-30 — READ THIS FIRST (handoff) ═══════════
 
 **Where we are:** the engine is a proven topic→final-cut pipeline running in **agent-mode**
