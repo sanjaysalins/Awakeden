@@ -148,7 +148,11 @@ PER_TURN_SYNTH_SCRIPT = NARRATION_TREE_DIR / "per_turn_synth.py"
 # to fall back to the standard `narration_pipeline.py` full run.
 SHORTS_MODE = os.getenv("SHORTS_MODE", "1") not in ("0", "false", "False", "")
 SHORTS_TARGET_SECONDS = float(os.getenv("SHORTS_TARGET_SECONDS", "59"))
-SHORTS_PRE_QUOTE_PAUSE = float(os.getenv("SHORTS_PRE_QUOTE_PAUSE", "0.4"))
+# Breath around quoted dialogue so the cut doesn't feel hoppy: a beat BEFORE the
+# spoken line and a beat AFTER it (both sides). Raised from 0.4/0.0 after the QJA
+# batch felt rushed and abrupt around the dialogue.
+SHORTS_PRE_QUOTE_PAUSE = float(os.getenv("SHORTS_PRE_QUOTE_PAUSE", "0.5"))
+SHORTS_POST_QUOTE_PAUSE = float(os.getenv("SHORTS_POST_QUOTE_PAUSE", "0.45"))
 SHORTS_STABILITY = float(os.getenv("SHORTS_STABILITY", "0.65"))
 
 # Python interpreter used to run the audio pipeline. It must have that project's
@@ -387,14 +391,14 @@ VOICE_MAP = {
     "disciples": "puDRtQWF8NtQiPMJygTb",
     "crowd":     "SOYHLrjzK2X1ezoPC6cr",   # Harry – Fierce Warrior (mocking crowd)
     "mocker":    "SOYHLrjzK2X1ezoPC6cr",
-    "god":       "1SSD79Zwju3tH7iqJo8a",   # God 1
+    "god":       "UzI1NsMEV3ni5JRkRSls",   # God 1
 
     # Parable cast (re-using existing voices).
     "son":       "puDRtQWF8NtQiPMJygTb",   # ← disciples (younger/mid male)
-    "father":    "1SSD79Zwju3tH7iqJo8a",   # ← god (gravitas, older)
+    "father":    "UzI1NsMEV3ni5JRkRSls",   # ← god (gravitas, older)
     "servant":   "puDRtQWF8NtQiPMJygTb",   # ← disciples
-    "master":    "1SSD79Zwju3tH7iqJo8a",   # ← god (parable master/king)
-    "king":      "1SSD79Zwju3tH7iqJo8a",   # ← god
+    "master":    "UzI1NsMEV3ni5JRkRSls",   # ← god (parable master/king)
+    "king":      "UzI1NsMEV3ni5JRkRSls",   # ← god
     "friend":    "puDRtQWF8NtQiPMJygTb",   # ← disciples
     "neighbour": "puDRtQWF8NtQiPMJygTb",   # ← disciples
     "traveler":  "puDRtQWF8NtQiPMJygTb",   # ← disciples
@@ -404,7 +408,7 @@ VOICE_MAP = {
     "pharisee":  "SOYHLrjzK2X1ezoPC6cr",   # ← crowd/mocker (adversarial edge)
     "scribe":    "SOYHLrjzK2X1ezoPC6cr",   # ← crowd/mocker
     "lawyer":    "SOYHLrjzK2X1ezoPC6cr",   # ← crowd/mocker
-    "priest":    "1SSD79Zwju3tH7iqJo8a",   # ← god (solemn)
+    "priest":    "UzI1NsMEV3ni5JRkRSls",   # ← god (solemn)
     "centurion": "SOYHLrjzK2X1ezoPC6cr",   # ← crowd (warrior fits)
     "soldier":   "SOYHLrjzK2X1ezoPC6cr",   # ← crowd
     "man":       "puDRtQWF8NtQiPMJygTb",   # ← disciples (generic male)
