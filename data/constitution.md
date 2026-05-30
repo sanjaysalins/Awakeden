@@ -542,3 +542,27 @@ spoken window's length; design so the clips drop in cleanly:
 
 *Salt and Light Kingdom — truth felt in three seconds, answered at the cross,
 seen in the painting that holds the moment still.*
+
+## CLARITY BEATS CLEVERNESS — the first-hearing test (binding, gate G8.6)
+
+A short is heard ONCE, at speed, by a tired stranger with no Bible background and
+no rewind. Write for that person. Profound-and-plain always beats clever-and-cold.
+
+- **The spine is a felt truth, never a conceit.** Geography trivia, original-
+  language nuance, grammar / word-order / pronoun play, and clever wordplay may
+  *season* a single line — they may NEVER carry the point. Test: state the beat's
+  idea plainly in six words. If nothing survives, the conceit *was* the point —
+  rewrite it.
+- **Assume zero prior knowledge.** If a beat only lands for someone who already
+  knows the setting, the characters, or the back-story, it fails. Say who is
+  speaking and where we are in plain terms before leaning on any detail.
+- **No logic-tricks.** Never smuggle in a syllogism the viewer must accept on
+  faith ("only one kind of man would do this"). It reads as a trap, not a truth.
+- **No self-contradiction.** The landing must RESOLVE the thread, not reverse it.
+  Read hook → landing as one breath; cut any beat that fights another.
+- **A false aside is worse than none.** Any claim a literate skeptic could
+  disprove from the text (a strawman rebuttal, an over-tidy historical claim)
+  fails outright — it forfeits trust for the whole short.
+
+When the freshest thread is also the coldest, pick the CLEAREST true thread instead.
+Freshness lives in the entry point; it never costs the viewer the meaning.

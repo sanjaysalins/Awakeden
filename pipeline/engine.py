@@ -273,6 +273,23 @@ def _generate_role(structure: Structure, variation: str = "") -> str:
         "'For the person who…'. Speak TO that person directly; never name them aloud.\n"
         "5. WHAT DO THEY TAKE AWAY? A CHANGE in how they see Christ + a response to Jesus by "
         "grace — never merely a fact learned.\n\n"
+        "THE FIRST-HEARING TEST (clarity beats cleverness — G8 enforces this hardest):\n"
+        "Write for a TIRED STRANGER who does not know this Bible story and will hear the words "
+        "ONCE, at speed, with no rewind. Every beat must land on first hearing.\n"
+        "- The SPINE must be a felt TRUTH, never a writerly conceit. Geography trivia, "
+        "original-language nuance, grammar/word-order, and clever wordplay may SEASON one line, "
+        "but they can NEVER be the point. Test: say the beat's idea plainly in 6 words — if "
+        "nothing survives, the conceit WAS the point and the beat fails.\n"
+        "- Assume ZERO prior Bible knowledge. If a beat only makes sense to someone who already "
+        "knows the setting/the characters/the back-story, rewrite it so the stranger follows. "
+        "Name who is speaking and where we are in plain terms before leaning on any detail.\n"
+        "- NO logic-tricks. Do not smuggle in a syllogism the viewer must accept on faith "
+        "(e.g. 'only one kind of man would do this') — it reads as a trap, not a truth.\n"
+        "- NO self-contradiction. The landing must RESOLVE the thread, never reverse it. If the "
+        "body says 'grace doesn't wait for your answer', the close cannot then demand an answer. "
+        "Re-read hook->landing as one breath and cut any beat that fights another.\n"
+        "If the freshest thread is also the cleverest-but-coldest, pick the CLEAREST true thread "
+        "instead — a plain profound truth always beats a clever one the viewer can't follow.\n\n"
         "OPENING STRATEGY (smart-default): DEFAULT to problem-first — open on a REAL present ache "
         "the viewer feels in 3s, then turn. HARD GUARDRAIL (G8 enforces): the turn AND landing go to "
         "WHO CHRIST IS, never to 'your problem solved' — the ache is the doorway, Christ is the room; "
@@ -434,7 +451,13 @@ def _judge_role() -> str:
         "- FIVE QUESTIONS (heavily weighted): does it say ONE clear thing (no hook/body drift); "
         "is it SHOWN profoundly, not EXPLAINED (penalise lecture phrasing like 'Notice the order'); "
         "is it written FOR ONE named audience (not everyone); is the takeaway a CHANGE in how the "
-        "viewer sees Christ, not a fact? Prefer the candidate that best satisfies these.\n\n"
+        "viewer sees Christ, not a fact? Prefer the candidate that best satisfies these.\n"
+        "- FIRST-HEARING CLARITY (heavily weighted — clarity beats cleverness): would a TIRED "
+        "STRANGER with no Bible background get every beat on ONE hearing? HEAVILY PENALISE any "
+        "candidate whose SPINE is a writerly conceit (geography trivia, grammar/pronoun gymnastics, "
+        "original-language nuance, wordplay) rather than a felt truth, that needs prior Bible "
+        "knowledge to follow, that leans on a logic-trick, or whose landing contradicts its thread. "
+        "Between a clever-but-cold candidate and a plain-but-profound one, the plain one WINS.\n\n"
         "Then decide the WINNER (best total arc that also best answers the Five Questions) and "
         "whether a DIFFERENT candidate has a stronger HOOK or CTA worth grafting onto the winner.\n\n"
         "Return ONLY a JSON object (optionally inside a ```json fence):\n"
@@ -566,14 +589,14 @@ the offending line in every note.
 
 Quality gates — each PASS | CONDITIONAL | FAIL, with evidence quoted from the draft
 and (if not PASS) a specific fix:
-- G1 Biblical Accuracy: the quoted verse matches the verified KJV verbatim; the reference is correct; the Point/claim is sound when read in the wider pericope (no proof-texting, no over-claim).
+- G1 Biblical Accuracy: the quoted verse matches the verified KJV verbatim; the reference is correct; the Point/claim is sound when read in the wider pericope (no proof-texting, no over-claim). FAIL (not CONDITIONAL) on any statement that is exegetically FALSE or that a literate skeptic could disprove from the text (e.g. a strawman rebuttal, an over-tidy historical claim) — a false aside is worse than no aside.
 - G2 Relevance: the hook names a real, present human ache in the first beat and the short stays relevant to it.
 - G3 Conviction: it creates holy tension and pierces — NOT mere information — AND is grace-anchored (FAIL on any gain/loss framing, fear-selling, or manufactured pressure).
 - G4 CTA Lands with Jesus: the close invites a response specifically to Jesus, by grace, ending on a real question; not coercive, not cheesy.
 - G5 Structure Conformance: all beats present in order ({structure.beat_ids}); each roughly within budget ({budgets}); the proof beat carries the scripture quote; total ~{config.TARGET_WORDS_MIN}-{config.TARGET_WORDS_MAX} words.
 - G6 Craft: standalone (carries meaning muted); plain prose; clean pacing.
 - G7 Freshness: the draft surfaces a non-obvious TRUE detail (the intended thread, if provided, carried hook -> proof -> landing) and avoids the cliché blocklist + the obvious topic auto-complete. FAIL when the draft is BOTH generic AND exegetically uninteresting — clichéd openers, banned framings/CTA tropes, or the headline take with no fresh angle. ALSO FAIL when a "fresh" reading is exegetically dishonest (Theologian veto): contrarian eisegesis fails this gate even if it surprises. PASS when the thread is carried end-to-end and stays honest.
-- G8 The Five Questions (binding — see charter "THE FIVE QUESTIONS"): (1) ONE clear thing said, with NO drift between the hook's promise and the body's payoff; (2) it is SHOWN profoundly, not explained — FAIL on lecture phrasing ("Notice the order", "This teaches us", "The point is", or any beat that narrates the theology instead of making it felt); (3) the conviction beat actually PIERCES (feeling, not facts) and the series signature is present (QJA: the question turns onto the viewer); (4) the script is clearly FOR ONE named audience (doubter / performer / admirer-who-won't-bow / grieving / ashamed) — FAIL if it is written for no one in particular; ALSO FAIL if the audience descriptor LEAKS into the spoken script as a meta-line (e.g. 'This one's for the person who…', 'If you're someone who…') — the audience is a planning answer, spoken TO directly, never named aloud; (5) the takeaway is a CHANGE in how the viewer sees Christ + a response to Jesus, not merely a fact learned. ALSO: if the short opens problem-first, the turn + landing MUST go to who Christ is — FAIL any 'and so your problem is solved / anxiety lifts / life improves' self-help payoff (the ache is only the doorway). Quote the offending beat. FAIL if two or more of these are unmet, or if (1) is unmet.
+- G8 The Five Questions (binding — see charter "THE FIVE QUESTIONS"): (1) ONE clear thing said, with NO drift between the hook's promise and the body's payoff; (2) it is SHOWN profoundly, not explained — FAIL on lecture phrasing ("Notice the order", "This teaches us", "The point is", or any beat that narrates the theology instead of making it felt); (3) the conviction beat actually PIERCES (feeling, not facts) and the series signature is present (QJA: the question turns onto the viewer); (4) the script is clearly FOR ONE named audience (doubter / performer / admirer-who-won't-bow / grieving / ashamed) — FAIL if it is written for no one in particular; ALSO FAIL if the audience descriptor LEAKS into the spoken script as a meta-line (e.g. 'This one's for the person who…', 'If you're someone who…') — the audience is a planning answer, spoken TO directly, never named aloud; (5) the takeaway is a CHANGE in how the viewer sees Christ + a response to Jesus, not merely a fact learned. ALSO: if the short opens problem-first, the turn + landing MUST go to who Christ is — FAIL any 'and so your problem is solved / anxiety lifts / life improves' self-help payoff (the ache is only the doorway). (6) THE FIRST-HEARING TEST (clarity beats cleverness): would a TIRED STRANGER with ZERO Bible background get each beat on ONE hearing at speed? FAIL if the SPINE is a writerly conceit rather than a felt truth — geography trivia, grammar/word-order/pronoun gymnastics, original-language nuance, or wordplay carrying the point instead of merely seasoning it (test: state the beat plainly in 6 words — if nothing survives, the conceit was the point → FAIL); FAIL if a beat only makes sense to someone who already knows the setting/characters/back-story; FAIL on any logic-trick/smuggled syllogism the viewer must swallow ('only one kind of man would…'); FAIL if the landing CONTRADICTS the thread (e.g. body says grace needs no answer, close demands one). Quote the offending beat. FAIL if two or more of these (1)-(6) are unmet, or if (1) or (6) is unmet on its own.
 
 Verdict rules:
 - overall = LOCKED when NO gate is FAIL. CONDITIONAL or CAUTION notes are fine and
