@@ -10,13 +10,68 @@
       "cta_pattern": "Which I AM do you need to know Him by today?",
       "guardrails": "Keep the deity claim front and centre. Don't soften 'I AM' into a metaphor. Don't reduce these sayings to generic self-help.",
       "episodes": [
-        {"title": "I AM the Bread of Life", "primary_ref": "John 6:35", "refs": ["John 6:35", "Exodus 16"], "theme": "Jesus satisfies (links to manna)"},
-        {"title": "I AM the Light of the World", "primary_ref": "John 8:12", "refs": ["John 8:12"], "theme": "Jesus reveals and leads (Feast of Tabernacles, pillar of fire)"},
-        {"title": "I AM the Door", "primary_ref": "John 10:9", "refs": ["John 10:7", "John 10:9"], "theme": "Jesus gives access (shepherd / sheepfold)"},
-        {"title": "I AM the Good Shepherd", "primary_ref": "John 10:11", "refs": ["John 10:11", "Psalm 23", "Ezekiel 34"], "theme": "Jesus protects and lays down His life"},
-        {"title": "I AM the Resurrection and the Life", "primary_ref": "John 11:25", "refs": ["John 11:25"], "theme": "Jesus conquers death (Lazarus)"},
-        {"title": "I AM the Way, the Truth, and the Life", "primary_ref": "John 14:6", "refs": ["John 14:6"], "theme": "Jesus is the only way to the Father"},
-        {"title": "I AM the True Vine", "primary_ref": "John 15:1", "refs": ["John 15:1", "Isaiah 5", "Psalm 80"], "theme": "Life comes from abiding in Christ"}
+        {
+          "title": "I AM the Bread of Life",
+          "primary_ref": "John 6:35",
+          "refs": [
+            "John 6:35",
+            "Exodus 16"
+          ],
+          "theme": "Jesus satisfies (links to manna)"
+        },
+        {
+          "title": "I AM the Light of the World",
+          "primary_ref": "John 8:12",
+          "refs": [
+            "John 8:12"
+          ],
+          "theme": "Jesus reveals and leads (Feast of Tabernacles, pillar of fire)"
+        },
+        {
+          "title": "I AM the Door",
+          "primary_ref": "John 10:9",
+          "refs": [
+            "John 10:7",
+            "John 10:9"
+          ],
+          "theme": "Jesus gives access (shepherd / sheepfold)"
+        },
+        {
+          "title": "I AM the Good Shepherd",
+          "primary_ref": "John 10:11",
+          "refs": [
+            "John 10:11",
+            "Psalm 23",
+            "Ezekiel 34"
+          ],
+          "theme": "Jesus protects and lays down His life"
+        },
+        {
+          "title": "I AM the Resurrection and the Life",
+          "primary_ref": "John 11:25",
+          "refs": [
+            "John 11:25"
+          ],
+          "theme": "Jesus conquers death (Lazarus)"
+        },
+        {
+          "title": "I AM the Way, the Truth, and the Life",
+          "primary_ref": "John 14:6",
+          "refs": [
+            "John 14:6"
+          ],
+          "theme": "Jesus is the only way to the Father"
+        },
+        {
+          "title": "I AM the True Vine",
+          "primary_ref": "John 15:1",
+          "refs": [
+            "John 15:1",
+            "Isaiah 5",
+            "Psalm 80"
+          ],
+          "theme": "Life comes from abiding in Christ"
+        }
       ]
     },
     {
@@ -28,13 +83,66 @@
       "cta_pattern": "Devotional reflection that points to the cross",
       "guardrails": "The traditional order is church tradition, not Scripture. Don't claim the order is biblical.",
       "episodes": [
-        {"title": "Father, forgive them", "primary_ref": "Luke 23:34", "refs": ["Luke 23:34"], "theme": "Forgiveness from the cross"},
-        {"title": "Today you will be with me in paradise", "primary_ref": "Luke 23:43", "refs": ["Luke 23:43"], "theme": "Grace to the thief"},
-        {"title": "Woman, behold your son", "primary_ref": "John 19:26", "refs": ["John 19:26", "John 19:27"], "theme": "Care in agony"},
-        {"title": "My God, my God, why hast thou forsaken me", "primary_ref": "Matthew 27:46", "refs": ["Matthew 27:46", "Psalm 22:1"], "theme": "Bearing forsakenness (Psalm 22)"},
-        {"title": "I thirst", "primary_ref": "John 19:28", "refs": ["John 19:28", "Psalm 69:21"], "theme": "True humanity, prophecy fulfilled"},
-        {"title": "It is finished", "primary_ref": "John 19:30", "refs": ["John 19:30"], "theme": "Tetelestai - the debt paid in full"},
-        {"title": "Father, into thy hands I commend my spirit", "primary_ref": "Luke 23:46", "refs": ["Luke 23:46", "Psalm 31:5"], "theme": "Trust in death"}
+        {
+          "title": "Father, forgive them",
+          "primary_ref": "Luke 23:34",
+          "refs": [
+            "Luke 23:34"
+          ],
+          "theme": "Forgiveness from the cross"
+        },
+        {
+          "title": "Today you will be with me in paradise",
+          "primary_ref": "Luke 23:43",
+          "refs": [
+            "Luke 23:43"
+          ],
+          "theme": "Grace to the thief"
+        },
+        {
+          "title": "Woman, behold your son",
+          "primary_ref": "John 19:26",
+          "refs": [
+            "John 19:26",
+            "John 19:27"
+          ],
+          "theme": "Care in agony"
+        },
+        {
+          "title": "My God, my God, why hast thou forsaken me",
+          "primary_ref": "Matthew 27:46",
+          "refs": [
+            "Matthew 27:46",
+            "Psalm 22:1"
+          ],
+          "theme": "Bearing forsakenness (Psalm 22)"
+        },
+        {
+          "title": "I thirst",
+          "primary_ref": "John 19:28",
+          "refs": [
+            "John 19:28",
+            "Psalm 69:21"
+          ],
+          "theme": "True humanity, prophecy fulfilled"
+        },
+        {
+          "title": "It is finished",
+          "primary_ref": "John 19:30",
+          "refs": [
+            "John 19:30"
+          ],
+          "theme": "Tetelestai - the debt paid in full"
+        },
+        {
+          "title": "Father, into thy hands I commend my spirit",
+          "primary_ref": "Luke 23:46",
+          "refs": [
+            "Luke 23:46",
+            "Psalm 31:5"
+          ],
+          "theme": "Trust in death"
+        }
       ]
     },
     {
@@ -46,14 +154,79 @@
       "cta_pattern": "Research the rest of these in your own Bible (and meet the Christ they point to)",
       "guardrails": "No inventing types the Bible never names. Skip Rahab's scarlet cord, Eve from Adam's side, etc. unless you can show NT warrant.",
       "episodes": [
-        {"title": "The Passover Lamb", "primary_ref": "John 1:29", "refs": ["1 Corinthians 5:7", "John 1:29", "Exodus 12"], "theme": "Christ our Passover"},
-        {"title": "The Bronze Serpent", "primary_ref": "John 3:14", "refs": ["John 3:14", "John 3:15", "Numbers 21"], "theme": "Lifted up to heal"},
-        {"title": "Manna", "primary_ref": "John 6:51", "refs": ["John 6:31", "John 6:51", "Exodus 16"], "theme": "Bread from heaven"},
-        {"title": "The Rock in the Wilderness", "primary_ref": "1 Corinthians 10:4", "refs": ["1 Corinthians 10:4", "Exodus 17"], "theme": "That Rock was Christ"},
-        {"title": "Melchizedek", "primary_ref": "Hebrews 7:3", "refs": ["Hebrews 7"], "theme": "Priest forever (as type, not appearance)"},
-        {"title": "Jonah - three days and nights", "primary_ref": "Matthew 12:40", "refs": ["Matthew 12:40"], "theme": "Sign of the resurrection"},
-        {"title": "Adam - the last Adam", "primary_ref": "1 Corinthians 15:45", "refs": ["Romans 5:14", "1 Corinthians 15:45"], "theme": "The last Adam, life-giving spirit"},
-        {"title": "The Day of Atonement / scapegoat", "primary_ref": "Hebrews 9:12", "refs": ["Hebrews 9", "Leviticus 16"], "theme": "Once for all sacrifice"}
+        {
+          "title": "The Passover Lamb",
+          "primary_ref": "John 1:29",
+          "refs": [
+            "1 Corinthians 5:7",
+            "John 1:29",
+            "Exodus 12"
+          ],
+          "theme": "Christ our Passover"
+        },
+        {
+          "title": "The Bronze Serpent",
+          "primary_ref": "John 3:14",
+          "refs": [
+            "John 3:14",
+            "John 3:15",
+            "Numbers 21"
+          ],
+          "theme": "Lifted up to heal"
+        },
+        {
+          "title": "Manna",
+          "primary_ref": "John 6:51",
+          "refs": [
+            "John 6:31",
+            "John 6:51",
+            "Exodus 16"
+          ],
+          "theme": "Bread from heaven"
+        },
+        {
+          "title": "The Rock in the Wilderness",
+          "primary_ref": "1 Corinthians 10:4",
+          "refs": [
+            "1 Corinthians 10:4",
+            "Exodus 17"
+          ],
+          "theme": "That Rock was Christ"
+        },
+        {
+          "title": "Melchizedek",
+          "primary_ref": "Hebrews 7:3",
+          "refs": [
+            "Hebrews 7"
+          ],
+          "theme": "Priest forever (as type, not appearance)"
+        },
+        {
+          "title": "Jonah - three days and nights",
+          "primary_ref": "Matthew 12:40",
+          "refs": [
+            "Matthew 12:40"
+          ],
+          "theme": "Sign of the resurrection"
+        },
+        {
+          "title": "Adam - the last Adam",
+          "primary_ref": "1 Corinthians 15:45",
+          "refs": [
+            "Romans 5:14",
+            "1 Corinthians 15:45"
+          ],
+          "theme": "The last Adam, life-giving spirit"
+        },
+        {
+          "title": "The Day of Atonement / scapegoat",
+          "primary_ref": "Hebrews 9:12",
+          "refs": [
+            "Hebrews 9",
+            "Leviticus 16"
+          ],
+          "theme": "Once for all sacrifice"
+        }
       ]
     },
     {
@@ -65,14 +238,74 @@
       "cta_pattern": "Land at grace, then invite the viewer to the same Jesus",
       "guardrails": "Don't psychologise characters beyond the text. Don't turn Jesus into a life coach. Every episode lands at the gospel - grace alone, not 'your idols' moralism.",
       "episodes": [
-        {"title": "Nicodemus by night", "primary_ref": "John 3:3", "refs": ["John 3:3", "John 3:16"], "theme": "Born again"},
-        {"title": "The woman at the well", "primary_ref": "John 4:14", "refs": ["John 4:14"], "theme": "Living water"},
-        {"title": "The rich young ruler", "primary_ref": "Mark 10:21", "refs": ["Mark 10:21"], "theme": "Grace vs works"},
-        {"title": "Zacchaeus in the tree", "primary_ref": "Luke 19:10", "refs": ["Luke 19:10"], "theme": "The Son of man came to seek and save the lost"},
-        {"title": "Thomas after the resurrection", "primary_ref": "John 20:28", "refs": ["John 20:28", "John 20:29"], "theme": "My Lord and my God"},
-        {"title": "Peter restored on the beach", "primary_ref": "John 21:17", "refs": ["John 21:15", "John 21:17"], "theme": "Restoration"},
-        {"title": "The woman caught in adultery", "primary_ref": "John 8:11", "refs": ["John 8:11"], "theme": "Neither do I condemn thee"},
-        {"title": "The thief on the cross", "primary_ref": "Luke 23:43", "refs": ["Luke 23:42", "Luke 23:43"], "theme": "Remember me"}
+        {
+          "title": "Nicodemus by night",
+          "primary_ref": "John 3:3",
+          "refs": [
+            "John 3:3",
+            "John 3:16"
+          ],
+          "theme": "Born again"
+        },
+        {
+          "title": "The woman at the well",
+          "primary_ref": "John 4:14",
+          "refs": [
+            "John 4:14"
+          ],
+          "theme": "Living water"
+        },
+        {
+          "title": "The rich young ruler",
+          "primary_ref": "Mark 10:21",
+          "refs": [
+            "Mark 10:21"
+          ],
+          "theme": "Grace vs works"
+        },
+        {
+          "title": "Zacchaeus in the tree",
+          "primary_ref": "Luke 19:10",
+          "refs": [
+            "Luke 19:10"
+          ],
+          "theme": "The Son of man came to seek and save the lost"
+        },
+        {
+          "title": "Thomas after the resurrection",
+          "primary_ref": "John 20:28",
+          "refs": [
+            "John 20:28",
+            "John 20:29"
+          ],
+          "theme": "My Lord and my God"
+        },
+        {
+          "title": "Peter restored on the beach",
+          "primary_ref": "John 21:17",
+          "refs": [
+            "John 21:15",
+            "John 21:17"
+          ],
+          "theme": "Restoration"
+        },
+        {
+          "title": "The woman caught in adultery",
+          "primary_ref": "John 8:11",
+          "refs": [
+            "John 8:11"
+          ],
+          "theme": "Neither do I condemn thee"
+        },
+        {
+          "title": "The thief on the cross",
+          "primary_ref": "Luke 23:43",
+          "refs": [
+            "Luke 23:42",
+            "Luke 23:43"
+          ],
+          "theme": "Remember me"
+        }
       ]
     },
     {
@@ -84,14 +317,75 @@
       "cta_pattern": "Which name do you need to know Him by today?",
       "guardrails": "Titles only - not descriptions stretched into titles. Stay disciplined; don't pad with non-titles.",
       "episodes": [
-        {"title": "Logos / The Word", "primary_ref": "John 1:1", "refs": ["John 1:1", "John 1:14"], "theme": "The Word made flesh"},
-        {"title": "Lamb of God", "primary_ref": "John 1:29", "refs": ["John 1:29", "Isaiah 53"], "theme": "Takes away the sin of the world"},
-        {"title": "Son of Man", "primary_ref": "Daniel 7:13", "refs": ["Daniel 7:13", "Daniel 7:14"], "theme": "His self-title"},
-        {"title": "Alpha and Omega", "primary_ref": "Revelation 22:13", "refs": ["Revelation 1:8", "Revelation 22:13"], "theme": "First and last"},
-        {"title": "Wonderful, Counsellor, The Prince of Peace", "primary_ref": "Isaiah 9:6", "refs": ["Isaiah 9:6"], "theme": "The child born, the Son given"},
-        {"title": "Immanuel", "primary_ref": "Matthew 1:23", "refs": ["Isaiah 7:14", "Matthew 1:23"], "theme": "God with us"},
-        {"title": "King of Kings and Lord of Lords", "primary_ref": "Revelation 19:16", "refs": ["Revelation 19:16"], "theme": "The reigning Christ"},
-        {"title": "The Lion of the tribe of Judah", "primary_ref": "Revelation 5:5", "refs": ["Revelation 5:5"], "theme": "Root of David, the conqueror who is the Lamb"}
+        {
+          "title": "Logos / The Word",
+          "primary_ref": "John 1:1",
+          "refs": [
+            "John 1:1",
+            "John 1:14"
+          ],
+          "theme": "The Word made flesh"
+        },
+        {
+          "title": "Lamb of God",
+          "primary_ref": "John 1:29",
+          "refs": [
+            "John 1:29",
+            "Isaiah 53"
+          ],
+          "theme": "Takes away the sin of the world"
+        },
+        {
+          "title": "Son of Man",
+          "primary_ref": "Daniel 7:13",
+          "refs": [
+            "Daniel 7:13",
+            "Daniel 7:14"
+          ],
+          "theme": "His self-title"
+        },
+        {
+          "title": "Alpha and Omega",
+          "primary_ref": "Revelation 22:13",
+          "refs": [
+            "Revelation 1:8",
+            "Revelation 22:13"
+          ],
+          "theme": "First and last"
+        },
+        {
+          "title": "Wonderful, Counsellor, The Prince of Peace",
+          "primary_ref": "Isaiah 9:6",
+          "refs": [
+            "Isaiah 9:6"
+          ],
+          "theme": "The child born, the Son given"
+        },
+        {
+          "title": "Immanuel",
+          "primary_ref": "Matthew 1:23",
+          "refs": [
+            "Isaiah 7:14",
+            "Matthew 1:23"
+          ],
+          "theme": "God with us"
+        },
+        {
+          "title": "King of Kings and Lord of Lords",
+          "primary_ref": "Revelation 19:16",
+          "refs": [
+            "Revelation 19:16"
+          ],
+          "theme": "The reigning Christ"
+        },
+        {
+          "title": "The Lion of the tribe of Judah",
+          "primary_ref": "Revelation 5:5",
+          "refs": [
+            "Revelation 5:5"
+          ],
+          "theme": "Root of David, the conqueror who is the Lamb"
+        }
       ]
     },
     {
@@ -103,12 +397,58 @@
       "cta_pattern": "Risen Christ, not debate scoreboard - invite a response to Him",
       "guardrails": "Always engage the STRONGEST version of the objection, not a strawman. Tone: invitation, not victory. Arguments clear the ground; the Holy Spirit convicts.",
       "episodes": [
-        {"title": "The Swoon Theory", "primary_ref": "John 19:34", "refs": ["John 19:34"], "theme": "He really died"},
-        {"title": "The Stolen Body Theory", "primary_ref": "Matthew 28:13", "refs": ["Matthew 28:13"], "theme": "Who moved the stone?"},
-        {"title": "Women as first witnesses", "primary_ref": "Luke 24:5", "refs": ["Luke 24:5", "Luke 24:6"], "theme": "Legal and cultural weight"},
-        {"title": "Paul's early creed", "primary_ref": "1 Corinthians 15:3", "refs": ["1 Corinthians 15:3", "1 Corinthians 15:4", "1 Corinthians 15:5"], "theme": "Dated within years of the event"},
-        {"title": "Would they die for a lie?", "primary_ref": "Acts 4:20", "refs": ["Acts 4:20"], "theme": "The transformed disciples"},
-        {"title": "The conversion of Paul", "primary_ref": "Acts 9:5", "refs": ["Acts 9:5", "1 Corinthians 15:8"], "theme": "The persecutor turned apostle"}
+        {
+          "title": "The Swoon Theory",
+          "primary_ref": "John 19:34",
+          "refs": [
+            "John 19:34"
+          ],
+          "theme": "He really died"
+        },
+        {
+          "title": "The Stolen Body Theory",
+          "primary_ref": "Matthew 28:13",
+          "refs": [
+            "Matthew 28:13"
+          ],
+          "theme": "Who moved the stone?"
+        },
+        {
+          "title": "Women as first witnesses",
+          "primary_ref": "Luke 24:5",
+          "refs": [
+            "Luke 24:5",
+            "Luke 24:6"
+          ],
+          "theme": "Legal and cultural weight"
+        },
+        {
+          "title": "Paul's early creed",
+          "primary_ref": "1 Corinthians 15:3",
+          "refs": [
+            "1 Corinthians 15:3",
+            "1 Corinthians 15:4",
+            "1 Corinthians 15:5"
+          ],
+          "theme": "Dated within years of the event"
+        },
+        {
+          "title": "Would they die for a lie?",
+          "primary_ref": "Acts 4:20",
+          "refs": [
+            "Acts 4:20"
+          ],
+          "theme": "The transformed disciples"
+        },
+        {
+          "title": "The conversion of Paul",
+          "primary_ref": "Acts 9:5",
+          "refs": [
+            "Acts 9:5",
+            "1 Corinthians 15:8"
+          ],
+          "theme": "The persecutor turned apostle"
+        }
       ]
     },
     {
@@ -120,11 +460,47 @@
       "cta_pattern": "Build cumulatively toward Easter and the risen Christ",
       "guardrails": "The four Gospels differ in detail and timing. Don't smooth contradictions out. Where accounts diverge, name it.",
       "episodes": [
-        {"title": "Palm Sunday - the triumphal entry", "primary_ref": "Zechariah 9:9", "refs": ["Zechariah 9:9", "Matthew 21:9"], "theme": "The King comes lowly"},
-        {"title": "Cleansing the temple", "primary_ref": "Matthew 21:13", "refs": ["Matthew 21:13"], "theme": "Zeal for the Father's house"},
-        {"title": "Gethsemane", "primary_ref": "Matthew 26:39", "refs": ["Matthew 26:39"], "theme": "Not my will, but thine"},
-        {"title": "It is finished", "primary_ref": "John 19:30", "refs": ["John 19:30"], "theme": "The work complete"},
-        {"title": "The empty tomb", "primary_ref": "Matthew 28:6", "refs": ["Matthew 28:6"], "theme": "He is risen"}
+        {
+          "title": "Palm Sunday - the triumphal entry",
+          "primary_ref": "Zechariah 9:9",
+          "refs": [
+            "Zechariah 9:9",
+            "Matthew 21:9"
+          ],
+          "theme": "The King comes lowly"
+        },
+        {
+          "title": "Cleansing the temple",
+          "primary_ref": "Matthew 21:13",
+          "refs": [
+            "Matthew 21:13"
+          ],
+          "theme": "Zeal for the Father's house"
+        },
+        {
+          "title": "Gethsemane",
+          "primary_ref": "Matthew 26:39",
+          "refs": [
+            "Matthew 26:39"
+          ],
+          "theme": "Not my will, but thine"
+        },
+        {
+          "title": "It is finished",
+          "primary_ref": "John 19:30",
+          "refs": [
+            "John 19:30"
+          ],
+          "theme": "The work complete"
+        },
+        {
+          "title": "The empty tomb",
+          "primary_ref": "Matthew 28:6",
+          "refs": [
+            "Matthew 28:6"
+          ],
+          "theme": "He is risen"
+        }
       ]
     },
     {
@@ -136,13 +512,64 @@
       "cta_pattern": "He showed who He was - what will you do with it?",
       "guardrails": "Let the text drive the meaning. Don't allegorise beyond what the Gospel writer signals.",
       "episodes": [
-        {"title": "Water to wine at Cana", "primary_ref": "John 2:11", "refs": ["John 2:11"], "theme": "New covenant joy; manifested His glory"},
-        {"title": "Feeding the 5000", "primary_ref": "John 6:14", "refs": ["John 6:14"], "theme": "The new Moses, Bread of Life"},
-        {"title": "Walking on water", "primary_ref": "Mark 6:50", "refs": ["Mark 6:50"], "theme": "Lord over chaos - Be not afraid"},
-        {"title": "Healing the man born blind", "primary_ref": "John 9:25", "refs": ["John 9:25"], "theme": "Light of the World"},
-        {"title": "Raising Lazarus", "primary_ref": "John 11:43", "refs": ["John 11:43", "John 11:25"], "theme": "Resurrection and the Life"},
-        {"title": "Calming the storm", "primary_ref": "Mark 4:39", "refs": ["Mark 4:39", "Psalm 107:29"], "theme": "Yahweh over the chaos waters"},
-        {"title": "Healing the paralytic with forgiveness", "primary_ref": "Mark 2:10", "refs": ["Mark 2:10"], "theme": "Authority on earth to forgive sins"}
+        {
+          "title": "Water to wine at Cana",
+          "primary_ref": "John 2:11",
+          "refs": [
+            "John 2:11"
+          ],
+          "theme": "New covenant joy; manifested His glory"
+        },
+        {
+          "title": "Feeding the 5000",
+          "primary_ref": "John 6:14",
+          "refs": [
+            "John 6:14"
+          ],
+          "theme": "The new Moses, Bread of Life"
+        },
+        {
+          "title": "Walking on water",
+          "primary_ref": "Mark 6:50",
+          "refs": [
+            "Mark 6:50"
+          ],
+          "theme": "Lord over chaos - Be not afraid"
+        },
+        {
+          "title": "Healing the man born blind",
+          "primary_ref": "John 9:25",
+          "refs": [
+            "John 9:25"
+          ],
+          "theme": "Light of the World"
+        },
+        {
+          "title": "Raising Lazarus",
+          "primary_ref": "John 11:43",
+          "refs": [
+            "John 11:43",
+            "John 11:25"
+          ],
+          "theme": "Resurrection and the Life"
+        },
+        {
+          "title": "Calming the storm",
+          "primary_ref": "Mark 4:39",
+          "refs": [
+            "Mark 4:39",
+            "Psalm 107:29"
+          ],
+          "theme": "Yahweh over the chaos waters"
+        },
+        {
+          "title": "Healing the paralytic with forgiveness",
+          "primary_ref": "Mark 2:10",
+          "refs": [
+            "Mark 2:10"
+          ],
+          "theme": "Authority on earth to forgive sins"
+        }
       ]
     },
     {
@@ -154,16 +581,219 @@
       "cta_pattern": "Let Jesus' question land personally; invite an honest response to Him (grace, never moralism)",
       "guardrails": "NOT moralistic — never 'try harder / be braver / do better / prove yourself'. Better: faith grows when we see who Jesus is; grace restores failed disciples; His questions expose the heart so that we respond to Him. SERIES SIGNATURE (every episode must carry it): the question begins in the scene, then TURNS onto the viewer — the same question Jesus put to the person, He now puts to YOU — and the short lands on a response TO JESUS, never on self-improvement. THREE VOICES where the scene has them: narrator (sets the scene) / the person in the passage AND the VIEWER'S OWN INNER RESPONSE (voice the silent answer the question pulls out of the viewer, in the second person) / Jesus (His words from Scripture, KJV, simple and reverent). ENACT a repeated pattern where the text has one — e.g. John 21's three denials -> three questions -> three 'Feed my sheep' — do NOT compress it; the repetition IS the restoration. Where the text RE-COMMISSIONS (Feed my sheep / Follow me / Go and tell), the landing must carry the renewed CALLING, not only the feeling. Let the question LAND — don't be dramatic for its own sake.",
       "episodes": [
-        {"title": "Who Do You Say I Am", "primary_ref": "Matthew 16:15", "refs": ["Matthew 16:13", "Matthew 16:15", "Matthew 16:16", "Matthew 16:17"], "theme": "The identity of Christ — seeing Jesus rightly is grace (the Father reveals the Son)"},
-        {"title": "Why Are You Afraid", "primary_ref": "Matthew 8:26", "refs": ["Matthew 8:23", "Matthew 8:26", "Matthew 8:27"], "theme": "Faith in the storm — fear forgot who is in the boat; Jesus is Lord over creation"},
-        {"title": "Do You Want to Be Made Well", "primary_ref": "John 5:6", "refs": ["John 5:6", "John 5:8", "John 5:9"], "theme": "Grace enters human helplessness — Jesus initiates, not bound by the pool"},
-        {"title": "Do You Love Me", "primary_ref": "John 21:17", "refs": ["John 21:15", "John 21:17"], "theme": "The risen Jesus restores failed disciples — three denials, three calls"},
-        {"title": "What Do You Want Me to Do for You", "primary_ref": "Mark 10:51", "refs": ["Mark 10:47", "Mark 10:51", "Mark 10:52"], "theme": "Honest need before a merciful King; mercy leads to following"},
-        {"title": "Why Do You Call Me Lord", "primary_ref": "Luke 6:46", "refs": ["Luke 6:46", "Luke 6:47", "Luke 6:48"], "theme": "If Jesus is Lord, His words are the foundation — obedience as fruit of grace, not its price"},
-        {"title": "Where Is Your Faith", "primary_ref": "Luke 8:25", "refs": ["Luke 8:24", "Luke 8:25"], "theme": "The object of trust when control disappears — faith grows as Jesus' identity becomes clear"},
-        {"title": "Why Are You Troubled", "primary_ref": "Luke 24:38", "refs": ["Luke 24:38", "Luke 24:39"], "theme": "Resurrection hope — He answers doubt with Himself (wounds shown, body raised)"},
-        {"title": "Have You Not Read", "primary_ref": "Matthew 19:4", "refs": ["Matthew 19:3", "Matthew 19:4", "Matthew 19:5", "Matthew 19:6"], "theme": "Jesus the faithful interpreter — God's Word governs our hardest questions (creation design)"},
-        {"title": "Could You Not Watch With Me One Hour", "primary_ref": "Matthew 26:40", "refs": ["Matthew 26:38", "Matthew 26:40", "Matthew 26:41"], "theme": "Disciples' weakness vs Christ's faithfulness — watch and pray because you need Him"}
+        {
+          "title": "Who Do You Say I Am",
+          "primary_ref": "Matthew 16:15",
+          "refs": [
+            "Matthew 16:13",
+            "Matthew 16:15",
+            "Matthew 16:16",
+            "Matthew 16:17"
+          ],
+          "theme": "The identity of Christ — seeing Jesus rightly is grace (the Father reveals the Son)"
+        },
+        {
+          "title": "Why Are You Afraid",
+          "primary_ref": "Matthew 8:26",
+          "refs": [
+            "Matthew 8:23",
+            "Matthew 8:26",
+            "Matthew 8:27"
+          ],
+          "theme": "Faith in the storm — fear forgot who is in the boat; Jesus is Lord over creation"
+        },
+        {
+          "title": "Do You Want to Be Made Well",
+          "primary_ref": "John 5:6",
+          "refs": [
+            "John 5:6",
+            "John 5:8",
+            "John 5:9"
+          ],
+          "theme": "Grace enters human helplessness — Jesus initiates, not bound by the pool"
+        },
+        {
+          "title": "Do You Love Me",
+          "primary_ref": "John 21:17",
+          "refs": [
+            "John 21:15",
+            "John 21:17"
+          ],
+          "theme": "The risen Jesus restores failed disciples — three denials, three calls"
+        },
+        {
+          "title": "What Do You Want Me to Do for You",
+          "primary_ref": "Mark 10:51",
+          "refs": [
+            "Mark 10:47",
+            "Mark 10:51",
+            "Mark 10:52"
+          ],
+          "theme": "Honest need before a merciful King; mercy leads to following"
+        },
+        {
+          "title": "Why Do You Call Me Lord",
+          "primary_ref": "Luke 6:46",
+          "refs": [
+            "Luke 6:46",
+            "Luke 6:47",
+            "Luke 6:48"
+          ],
+          "theme": "If Jesus is Lord, His words are the foundation — obedience as fruit of grace, not its price"
+        },
+        {
+          "title": "Where Is Your Faith",
+          "primary_ref": "Luke 8:25",
+          "refs": [
+            "Luke 8:24",
+            "Luke 8:25"
+          ],
+          "theme": "The object of trust when control disappears — faith grows as Jesus' identity becomes clear"
+        },
+        {
+          "title": "Why Are You Troubled",
+          "primary_ref": "Luke 24:38",
+          "refs": [
+            "Luke 24:38",
+            "Luke 24:39"
+          ],
+          "theme": "Resurrection hope — He answers doubt with Himself (wounds shown, body raised)"
+        },
+        {
+          "title": "Have You Not Read",
+          "primary_ref": "Matthew 19:4",
+          "refs": [
+            "Matthew 19:3",
+            "Matthew 19:4",
+            "Matthew 19:5",
+            "Matthew 19:6"
+          ],
+          "theme": "Jesus the faithful interpreter — God's Word governs our hardest questions (creation design)"
+        },
+        {
+          "title": "Could You Not Watch With Me One Hour",
+          "primary_ref": "Matthew 26:40",
+          "refs": [
+            "Matthew 26:38",
+            "Matthew 26:40",
+            "Matthew 26:41"
+          ],
+          "theme": "Disciples' weakness vs Christ's faithfulness — watch and pray because you need Him"
+        }
+      ]
+    },
+    {
+      "id": "jesus-in-ot",
+      "name": "Jesus in the Old Testament",
+      "brand": "Awakeden",
+      "concept": "Christ foreshadowed and foretold in the Hebrew Scriptures — the OT prophecy or type, the NT fulfilment that confirms it, and why it proves the gospel was God's plan from the beginning. Apologetic in tone, worshipful in landing.",
+      "hook_pattern": "Name the ache or the doubt, OR drop into the ancient scene -> the OT clue written centuries early -> the NT moment it lands on -> it turns to YOU",
+      "cta_pattern": "Let the precision of fulfilled prophecy land as evidence that becomes worship; invite trust in the Christ the whole Bible was pointing to (grace, never a debate scoreboard)",
+      "guardrails": "ENGAGE the strongest honest version — no proof-texting, no stretched types the NT never names. Every claim must cite a REAL NT fulfilment (the NT writer or Jesus Himself makes the link). Tone: invitation, not victory; the Spirit convicts, evidence clears the ground. Land on the risen Christ and a response to Him, never on 'see, Christianity wins'. KJV verbatim. Smart-default opening applies; for a confrontational or claim-of-deity text, open in the scene rather than forcing a felt problem.",
+      "episodes": [
+        {
+          "title": "The Suffering Servant",
+          "primary_ref": "Isaiah 53:5",
+          "refs": [
+            "Isaiah 52:13",
+            "Isaiah 53:3",
+            "Isaiah 53:5",
+            "Isaiah 53:12",
+            "1 Peter 2:24"
+          ],
+          "theme": "The gospel in the OT — penal substitution foretold 700 years early; the Servant wounded for our transgressions"
+        },
+        {
+          "title": "The Sign of Jonah",
+          "primary_ref": "Jonah 1:17",
+          "refs": [
+            "Jonah 1:17",
+            "Matthew 12:40"
+          ],
+          "theme": "Three days and nights — the one sign Jesus gave, His death and resurrection prefigured"
+        },
+        {
+          "title": "Pierced for Our Transgressions",
+          "primary_ref": "Zechariah 12:10",
+          "refs": [
+            "Zechariah 12:10",
+            "John 19:34",
+            "John 19:37"
+          ],
+          "theme": "They shall look on me whom they have pierced — Yahweh Himself pierced; John cites it at the cross"
+        },
+        {
+          "title": "Born in Bethlehem",
+          "primary_ref": "Micah 5:2",
+          "refs": [
+            "Micah 5:2",
+            "Matthew 2:1",
+            "Matthew 2:6"
+          ],
+          "theme": "The town named centuries early; 'from of old, from everlasting' hints His pre-existence"
+        },
+        {
+          "title": "The Crucifixion Foretold",
+          "primary_ref": "Psalm 22:16",
+          "refs": [
+            "Psalm 22:1",
+            "Psalm 22:16",
+            "Psalm 22:18",
+            "Matthew 27:35",
+            "Matthew 27:46"
+          ],
+          "theme": "Pierced hands and feet, lots cast for garments — written before crucifixion existed"
+        },
+        {
+          "title": "The Seed of the Woman",
+          "primary_ref": "Genesis 3:15",
+          "refs": [
+            "Genesis 3:15",
+            "Galatians 4:4",
+            "Hebrews 2:14"
+          ],
+          "theme": "The first gospel — the seed who crushes the serpent though His heel is struck"
+        },
+        {
+          "title": "Born of a Virgin — Immanuel",
+          "primary_ref": "Isaiah 7:14",
+          "refs": [
+            "Isaiah 7:14",
+            "Matthew 1:22",
+            "Matthew 1:23"
+          ],
+          "theme": "A virgin shall conceive — God with us; incarnation and deity foretold"
+        },
+        {
+          "title": "Thirty Pieces of Silver",
+          "primary_ref": "Zechariah 11:12",
+          "refs": [
+            "Zechariah 11:12",
+            "Zechariah 11:13",
+            "Matthew 26:15",
+            "Matthew 27:9"
+          ],
+          "theme": "The exact betrayal price and the potter's field, foretold and fulfilled to the detail"
+        },
+        {
+          "title": "The Lamb of God",
+          "primary_ref": "Exodus 12:13",
+          "refs": [
+            "Exodus 12:13",
+            "John 1:29",
+            "1 Corinthians 5:7"
+          ],
+          "theme": "The Passover lamb whose blood turns away death — Christ our Passover, no bone broken"
+        },
+        {
+          "title": "The Great I AM",
+          "primary_ref": "Exodus 3:14",
+          "refs": [
+            "Exodus 3:14",
+            "John 8:58"
+          ],
+          "theme": "I AM at the burning bush — the name Jesus claims for Himself, and they took up stones"
+        }
       ]
     }
   ]
