@@ -257,7 +257,12 @@ KLING_SKILL_PATH = Path(os.getenv(
 # is primary. Tradeoff: direct-Kling is fixed ~10s, so the assembly speed/trim (with
 # the reverence cap) remains how clips are fit — the variable-duration win is parked.
 VIDEO_PROVIDER = os.getenv("VIDEO_PROVIDER", "kling").strip().lower()
-VIDEO_HF_MODEL = os.getenv("VIDEO_HF_MODEL", "kling3_0")          # `higgsfield model list`
+# HF video model for the LONG-FORM pipeline only (image->clip via HFVideoProvider).
+# Bake-off (2026-05-30): veo3_1_lite keeps the Baroque oil look without softening it to
+# photoreal, across every scene type, at ~half Kling's credits — chosen for long-form.
+# seedance1_5 is the fallback (more dynamic but photoreal-softens). SHORTS are unaffected:
+# they use direct-Kling (VIDEO_PROVIDER=kling), which executes the viral 8-beat cut-plan.
+VIDEO_HF_MODEL = os.getenv("VIDEO_HF_MODEL", "veo3_1_lite")       # `higgsfield model list`
 VIDEO_HF_MODE = os.getenv("VIDEO_HF_MODE", "std")                 # std | pro | 4k
 VIDEO_HF_ASPECT = os.getenv("VIDEO_HF_ASPECT", "9:16")
 VIDEO_HF_SOUND = os.getenv("VIDEO_HF_SOUND", "off")              # narration muxed separately
@@ -288,17 +293,25 @@ ASSEMBLY_REVERENCE_CAP = float(os.getenv("ASSEMBLY_REVERENCE_CAP", "1.3"))
 # No slot shorter than this (seconds) — avoids subliminal flashes.
 ASSEMBLY_MIN_SLOT = float(os.getenv("ASSEMBLY_MIN_SLOT", "0.8"))
 
-# Hero bookend: the cut opens AND closes on the gospel-pivot hero for this long
-# at the very start and very end, for a continuous / loop feel (total unchanged).
+# Bookend hold times. The cut always holds the HERO (the Christ / cross / NT-gospel
+# pivot) for ASSEMBLY_HERO_TAIL seconds at the very end as the CTA landing. In the
+# legacy "hero" open mode it ALSO holds the hero for ASSEMBLY_HERO_HEAD seconds at the
+# very start; in the default "hook" open mode the head hold is unused (body plays from 0).
 ASSEMBLY_HERO_HEAD = float(os.getenv("ASSEMBLY_HERO_HEAD", "2.0"))
 ASSEMBLY_HERO_TAIL = float(os.getenv("ASSEMBLY_HERO_TAIL", "2.0"))
 
-# Bookend as a STILL (default ON). The head and tail bookends are the SAME held
-# still frame of the hero image — identical first & last frame, the "two slices of
-# bread" — while the animated clips are the "meat" between and the narration runs
-# unbroken underneath. This guarantees the cut opens and closes on the exact same
-# frozen gospel-pivot image. Set ASSEMBLY_HERO_STILL=0 to bookend with the animated
-# hero clip instead (the older behaviour).
+# How the cut OPENS (social-media decision, 2026-05-30: lead with MOTION, not a static
+# hero — the first frame has to stop the scroll):
+#   "hook" (DEFAULT) — open on the animated HOOK clip (the strongest scroll-stopper,
+#       topic-driven; it does NOT have to be Jesus). No hero head bookend: the body plays
+#       from t=0. The hero (Christ / cross / NT-pivot) still CLOSES the cut as the CTA.
+#   "hero" — legacy: the hero bookends BOTH the open and the close (loop feel).
+ASSEMBLY_OPEN_MODE = os.getenv("ASSEMBLY_OPEN_MODE", "hook").strip().lower()
+
+# Render the HERO bookend(s) as a frozen STILL (default ON) instead of the animated hero
+# clip. In "hook" open mode this affects only the CLOSING hero hold (a clean, reverent CTA
+# freeze on Christ); in "hero" mode it affects both ends. Set ASSEMBLY_HERO_STILL=0 for a
+# moving hero close/open.
 ASSEMBLY_HERO_STILL = os.getenv("ASSEMBLY_HERO_STILL", "1") not in ("0", "false", "False", "")
 
 # Default hero scene index (0 = let the planner choose; must be climax/kiss-family).

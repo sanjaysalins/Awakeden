@@ -244,12 +244,27 @@ they're never animated; `VISION_AUDIT_MODEL`=Haiku for the coarse assembly verif
   edits are guarded. Exception: surgical scene-plan tweaks (e.g. renaming a
   vignette in scene_plan.json) are OK when the change is too small to justify
   a full revise call.
-- Do NOT switch model IDs without the user. Default models: text =
-  claude-opus-4-7; image = Higgsfield `nano_banana_2`; animation = **direct-Kling**
-  (`image_to_kling.py`, `VIDEO_PROVIDER=kling`). Bake-off verdict (2026-05-29): the
-  user judged direct-Kling's motion clearly better than HF Kling 3.0 even with the
-  SAME rich cut-plan prompt; HF isn't cheaper and its NSFW filter blocks the cross.
-  HF/hybrid code stays available (`VIDEO_PROVIDER=hybrid|hf`) but parked.
+- Do NOT switch model IDs without the user. Default models: text = claude-opus-4-7;
+  image = `nano_banana_2` (HF for shorts / NBP "Nano Banana Pro" for long-form).
+  **Animation is SPLIT by format:**
+  - **Shorts → direct-Kling** (`image_to_kling.py`, `VIDEO_PROVIDER=kling`). Kling
+    executes the dynamic 8-beat viral cut-plan (full→mid→close→macro→return) *inside a
+    single clip*, turning a still into a viral edit clip — this is why shorts keep Kling.
+    Bake-off verdict (2026-05-29): direct-Kling's motion beat HF Kling 3.0 on the same
+    rich prompt; HF's NSFW filter also blocks the cross.
+  - **Long-form (16:9 deep-dives) → veo3_1_lite** via HF (`VIDEO_PROVIDER=hybrid`,
+    `VIDEO_HF_MODEL=veo3_1_lite`, `VIDEO_DURATION=8`). Bake-off verdict (2026-05-30):
+    veo3_1_lite keeps the Baroque oil look without softening it to photoreal, across
+    every scene type, at ~half Kling's credits; hybrid falls back to direct-Kling for
+    the NSFW-blocked cross. `seedance1_5` is the fallback (more dynamic but photoreal-
+    softens). HFVideoProvider is now model-aware (per-model media flag / no Kling-only
+    `--mode`·`--sound` / duration snapped to the model's legal set).
+  - **Settled (2026-05-30):** veo CANNOT execute the shorts' viral cut-plan. Fed the
+    exact 8-beat `image_to_kling` cut-plan, Kling did crisp crop-cuts (frozen tableau);
+    veo ignored the "cut to / no invented movement" discipline — it animated the subject
+    (the father actually ran), used dissolve/morph transitions, and invented elements
+    (a hand reaching in to grab the ring). Veo is a generative *animator*, not a crop-cut
+    editor. Kling is the permanent shorts animation model; veo is long-form only.
 
 ## Working with the user
 

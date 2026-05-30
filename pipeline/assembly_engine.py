@@ -262,7 +262,9 @@ def allocate(
 ) -> EditPlan:
     """Turn the LLM skeleton into a fully-timed EditPlan with computed slots."""
     min_slot = config.ASSEMBLY_MIN_SLOT
-    hero_head = config.ASSEMBLY_HERO_HEAD
+    # "hook" open mode (default): no hero head bookend — the cut opens on the animated
+    # hook clip (body plays from t=0). "hero" mode keeps the legacy hero head hold.
+    hero_head = config.ASSEMBLY_HERO_HEAD if config.ASSEMBLY_OPEN_MODE == "hero" else 0.0
     hero_tail = config.ASSEMBLY_HERO_TAIL
     total = total_seconds(segments)
     slot_rationales = slot_rationales or {}
@@ -295,7 +297,8 @@ def allocate(
 
     slots: list[EditSlot] = []
     order = 0
-    # hero head — same opening moment at start and end for a seamless loop feel
+    # hero head (legacy "hero" open mode only — hero_head is 0 in the default "hook"
+    # mode, so this is skipped and the cut opens on the first animated hook/body clip)
     hero = clips_by_index.get(hero_scene_index)
     if hero is not None and hero_head > 0:
         slots.append(EditSlot(
@@ -385,7 +388,7 @@ def _plan_json_contract(sections: list[str], budget: int) -> str:
         "{\n"
         '  "narration_reading": "2-4 sentences: how you mapped clips to the spoken words",\n'
         '  "red_team_notes": "your own honest doubts about this cut",\n'
-        '  "hero_scene_index": <int — the single most on-thread clip; bookends start+end>,\n'
+        '  "hero_scene_index": <int — the gospel-pivot (Christ/cross/NT-link) clip that CLOSES the cut as the CTA landing>,\n'
         '  "section_assignment": {\n'
         + "".join(f'    "{s}": [<scene indices in play order>],\n' for s in sections)
         + "  },\n"
@@ -416,10 +419,12 @@ def _matcher_role(sections: list[str], budget: int, all_clips: bool) -> str:
         "the verb, the named object on its mention, the OT/NT echo on the line it "
         "echoes). Hook-open clips open; the emotional climax sits under the climactic "
         "line; the CTA / close clip lands last.\n"
-        "- The HERO bookends the very start AND end, so it carries the gospel landing: "
-        "it MUST be the Christ / cross / NT-gospel-pivot image (the one the CTA points "
-        "to), NOT merely the most emotional frame. Put the hero in your "
-        "section_assignment under its natural section too.\n"
+        "- OPEN on the single most ARRESTING hook-open clip — the scroll-stopper that "
+        "makes a viewer stop in the first second. It is topic-driven and does NOT have to "
+        "be Jesus. Place it first in the first section.\n"
+        "- The HERO is the Christ / cross / NT-gospel-pivot image (the one the CTA points "
+        "to), NOT merely the most emotional frame. It CLOSES the cut as the gospel landing. "
+        "Put the hero in your section_assignment under its natural section too.\n"
         "- Keep the GOSPEL FRAME intact even when dropping clips: always keep the "
         "cross / passion clip, at least one Jesus / NT-gospel-link clip, one hook-open, "
         "and one close. Drop only the weakest 'build' clips.\n"
@@ -573,18 +578,20 @@ def _check_g5_section_coverage(plan: EditPlan, segments: list[NarrationSegment])
 
 
 def _check_g6_hero(plan: EditPlan, clips_by_index: dict[int, ClipAsset]) -> GateResult:
-    head = [s for s in plan.slots if s.role == "hero-head"]
+    """The cut must CLOSE on the gospel-pivot hero (the CTA landing). In the default
+    "hook" open mode it must OPEN on a scroll-stopping hook-open clip (NOT the hero);
+    in legacy "hero" mode the hero bookends both ends."""
+    hook_open = config.ASSEMBLY_OPEN_MODE != "hero"
     tail = [s for s in plan.slots if s.role == "hero-tail"]
-    if not head or not tail:
+    if not tail:
+        return GateResult("AS-G6 Hero Bookend", "FAIL", "No hero-tail slot.",
+                          "Close the cut on the gospel-pivot hero (the CTA landing).")
+    t = tail[0]
+    if t.scene_index != plan.hero_scene_index:
         return GateResult("AS-G6 Hero Bookend", "FAIL",
-                          f"head={bool(head)} tail={bool(tail)}.",
-                          "Bookend the hero at both the start and the end.")
-    h, t = head[0], tail[0]
-    if h.scene_index != t.scene_index or h.scene_index != plan.hero_scene_index:
-        return GateResult("AS-G6 Hero Bookend", "FAIL",
-                          f"head #{h.scene_index} tail #{t.scene_index} hero #{plan.hero_scene_index}.",
-                          "Both bookends must be the same hero clip.")
-    # The close lands on the hero — so the hero MUST be a gospel-pivot (cross / Christ /
+                          f"tail #{t.scene_index} != hero #{plan.hero_scene_index}.",
+                          "The closing hold must be the hero clip.")
+    # The cut lands on the hero — so the hero MUST be a gospel-pivot (cross / Christ /
     # NT-link), per the constitution's 'every short ends pointing to Jesus'.
     hero_clip = clips_by_index.get(plan.hero_scene_index)
     if hero_clip is not None and not _is_gospel_pivot(hero_clip):
@@ -593,6 +600,30 @@ def _check_g6_hero(plan: EditPlan, clips_by_index: dict[int, ClipAsset]) -> Gate
                           f"gospel-pivot (arc={hero_clip.arc_position}); the cut would close "
                           "on a non-Christ image.",
                           "Make the hero the cross / Christ / NT-gospel-link image.")
+    if hook_open:
+        # Motion-open: the FIRST clip must be the scroll-stopping hook-open, NOT the hero.
+        body = sorted(plan.body_slots, key=lambda s: s.order)
+        first = clips_by_index.get(body[0].scene_index) if body else None
+        if first is not None and first.viral_role != "hook-open":
+            return GateResult("AS-G6 Hero Bookend", "CONDITIONAL",
+                              f"Cut opens on #{first.scene_index:02d} '{first.title}' "
+                              f"(role={first.viral_role}), not a hook-open clip.",
+                              "Open on the strongest hook-open scroll-stopper.")
+        if not (2.0 <= t.slot_duration_s <= 3.0):
+            return GateResult("AS-G6 Hero Bookend", "CONDITIONAL",
+                              f"hero close {t.slot_duration_s:.2f}s (target 2-3s).",
+                              "Keep the closing hero hold in the 2-3s range.")
+        return GateResult("AS-G6 Hero Bookend", "PASS",
+                          f"Motion open on hook #{body[0].scene_index:02d}; gospel-pivot hero "
+                          f"#{plan.hero_scene_index:02d} closes {t.slot_duration_s:.1f}s.")
+    # Legacy "hero" open mode: the hero bookends both ends.
+    head = [s for s in plan.slots if s.role == "hero-head"]
+    if not head or head[0].scene_index != plan.hero_scene_index:
+        return GateResult("AS-G6 Hero Bookend", "FAIL",
+                          f"'hero' open mode but head missing/mismatched "
+                          f"(head={[s.scene_index for s in head]}, hero #{plan.hero_scene_index}).",
+                          "Bookend the same hero clip at both start and end.")
+    h = head[0]
     if not (2.0 <= h.slot_duration_s <= 3.0 and 2.0 <= t.slot_duration_s <= 3.0):
         return GateResult("AS-G6 Hero Bookend", "CONDITIONAL",
                           f"head {h.slot_duration_s:.2f}s, tail {t.slot_duration_s:.2f}s (target 2-3s).",
@@ -685,8 +716,9 @@ _PANEL = (
     "the named object on its mention, the echo on the line it echoes)?\n"
     "- Pacing — are speed-ups/trims tasteful for slow Baroque footage? Are SACRED clips "
     "(Christ / cross / the landing) kept near full speed, never jittery?\n"
-    "- Hero-Continuity — does the hero bookend open and close cleanly, AND is the hero a "
-    "Christ / gospel-pivot image so the cut LANDS on Jesus (not on a merely emotional frame)?\n"
+    "- Hero-Continuity — does the cut OPEN on a strong hook (a scroll-stopper) and CLOSE "
+    "cleanly on the Christ / gospel-pivot hero, so it LANDS on Jesus (not on a merely "
+    "emotional frame)?\n"
     "- Thread-Keeper — is the episode's ONE thread visible open → climax → close, and does "
     "the gospel frame (cross + a Jesus/NT-link) survive the selection?\n"
     "- Jaded Viewer — would a scroller stop, or feel the seams?\n"

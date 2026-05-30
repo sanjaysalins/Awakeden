@@ -50,10 +50,11 @@ def render_cut(
     seg_dir = out_dir / SEGMENTS_SUBDIR
     seg_dir.mkdir(parents=True, exist_ok=True)
 
-    # Still bookend (default): the head and tail are the SAME held still of the
-    # hero image — identical first & last frame ("two slices of bread") — with the
-    # animated clips as the meat between and the narration running unbroken. We
-    # resolve ONE still source for the hero and reuse it for both ends.
+    # Hero bookend stills (default): any hero-head / hero-tail slot renders as a frozen
+    # still of the hero image rather than the animated clip. In the default "hook" open
+    # mode only the CLOSING hero hold exists (motion open on the hook clip, reverent still
+    # close on Christ); legacy "hero" mode stills both ends. We resolve ONE still source
+    # for the hero and reuse it for whatever bookend slots exist.
     hero_still_src: Path | None = None
     if config.ASSEMBLY_HERO_STILL:
         hero_idx = next((s.scene_index for s in plan.slots if s.role == "hero-head"),
