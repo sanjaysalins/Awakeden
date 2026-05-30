@@ -1,0 +1,7 @@
+anthropic>=0.49.0
+python-dotenv>=1.0.0
+# Visual stage — image generation (NBP via Google Gemini) + image-size
+# downscaling for the 5MB cap on Claude Vision per-image content audit.
+google-genai>=0.3.0
+Pillow>=10.0.0
+huggingface_hub>=0.24.0

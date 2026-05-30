@@ -1,0 +1,58 @@
+{
+  "_comment": "Narration structures for 60-second gospel shorts. Each structure is an ordered set of timed beats. The engine generates one text block per beat; narration.md is the beats joined in order (blank line between). 'pace' tells the audio path which beat is a normal-pace spoken quote vs hurried narration. Add structures here and select with DEFAULT_STRUCTURE / the env override.",
+  "default": "gospel-five-beat",
+  "structures": {
+    "gospel-five-beat": {
+      "name": "Gospel Five-Beat",
+      "description": "Retention-optimised, gospel-safe spine: Hook -> Point -> Proof -> Conviction -> Landing. Stakes are anchored in truth about God and Christ (not self-interest), and the close invites a response to Jesus rather than manufacturing pressure.",
+      "total_seconds": 60,
+      "beats": [
+        {
+          "id": "hook",
+          "name": "Hook",
+          "start": 0,
+          "end": 8,
+          "pace": "narration (may be hurried)",
+          "word_guide": "18-28",
+          "intent": "Shock + immediate relevance. One line that names the viewer's real world and opens a loop they need closed. A genuine pattern interrupt, impossible to scroll past, and honest about what the short delivers."
+        },
+        {
+          "id": "point",
+          "name": "Point",
+          "start": 8,
+          "end": 18,
+          "pace": "narration",
+          "word_guide": "22-32",
+          "intent": "One unbreakable biblical claim about God / who Jesus is. Stated plainly, no hedging. This is the single idea the whole short defends."
+        },
+        {
+          "id": "proof",
+          "name": "Proof",
+          "start": 18,
+          "end": 40,
+          "pace": "KJV quote at NORMAL pace + narration",
+          "word_guide": "45-60",
+          "intent": "The evidence: the KJV verse or the scene that proves the Point. Quote the spoken words verbatim (this is the normal-pace anchor). Then honestly meet the single strongest objection a thoughtful skeptic would raise here - steel-man it, do not strawman it."
+        },
+        {
+          "id": "conviction",
+          "name": "Conviction",
+          "start": 40,
+          "end": 52,
+          "pace": "narration",
+          "word_guide": "25-35",
+          "intent": "The stakes BEFORE GOD - why this pierces. Create holy tension (Hebrews 4:12 register), not information. Grace-anchored: NO gain/loss or self-interest framing ('what you get'), NO fear-selling, NO manufactured pressure. The Spirit convicts; the line exposes the heart honestly."
+        },
+        {
+          "id": "landing",
+          "name": "Landing",
+          "start": 52,
+          "end": 60,
+          "pace": "narration (slower)",
+          "word_guide": "18-26",
+          "intent": "Restate the Point in one line, then a direct invitation that lands on JESUS - come to Him, trust Him, follow Him - and a question that calls for a response to Christ. Grace, not coercion; warm, not cheesy."
+        }
+      ]
+    }
+  }
+}
