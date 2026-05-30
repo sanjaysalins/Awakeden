@@ -24,6 +24,12 @@ Thumbs.db
 # ── Agent-mode bridge (transient request/response/image files) ─
 .agent_bridge/
 
+# ── Local Claude Code session state + scratch (per-machine) ────
+.claude/
+_video_bakeoff/
+_probe*.txt
+_gitcheck.txt
+
 # ── Media (per repo policy — code/data/docs only, no media) ────
 *.mp4
 *.mov

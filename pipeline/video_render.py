@@ -34,6 +34,31 @@ _MP4_URL_RE = re.compile(r"https://\S+?\.mp4", re.IGNORECASE)
 _NSFW_RE = re.compile(r"nsfw", re.IGNORECASE)
 
 
+# Per-model HF CLI quirks (discovered in the 2026-05-30 video bake-off):
+#   - media flag: most image-to-video models take --start-image, but a few only
+#     accept --image (they error "Model accepts only --image").
+#   - --mode/--sound are Kling-only flags; other models reject them.
+#   - duration is a fixed per-model allow-list; we snap to the nearest legal value
+#     (e.g. VIDEO_DURATION=10 -> 8 for veo, whose legal set is 4/6/8).
+_HF_NEEDS_IMAGE_FLAG = {"minimax_hailuo", "kling2_6", "veo3_1"}
+_HF_KLING_FLAGS = {"kling3_0", "kling2_6"}
+_HF_DURATIONS = {
+    "veo3_1_lite": (4, 6, 8),
+    "veo3_1": (4, 6, 8),
+    "veo3": (4, 6, 8),
+    "minimax_hailuo": (6, 10),
+    "seedance1_5": (4, 8, 12),
+    "seedance_2_0": (4, 8, 12),
+}
+
+
+def _hf_duration(model: str, duration: int) -> int:
+    allowed = _HF_DURATIONS.get(model)
+    if not allowed or duration in allowed:
+        return duration
+    return min(allowed, key=lambda a: abs(a - duration))
+
+
 class NSFWRejected(Exception):
     """HF refused the input image as NSFW (e.g. the bare-torso crucifixion)."""
 
@@ -117,16 +142,18 @@ class HFVideoProvider(VideoProvider):
         self._cli = str(config.HF_CLI_PATH)
 
     def animate(self, png_path: Path, out_mp4: Path, prompt: str, duration: int) -> Path:
+        model = config.VIDEO_HF_MODEL
+        media_flag = "--image" if model in _HF_NEEDS_IMAGE_FLAG else "--start-image"
         cmd = [
-            self._cli, "generate", "create", config.VIDEO_HF_MODEL,
-            "--start-image", str(png_path),
+            self._cli, "generate", "create", model,
+            media_flag, str(png_path),
             "--prompt", prompt,
-            "--duration", str(duration),
+            "--duration", str(_hf_duration(model, duration)),
             "--aspect_ratio", config.VIDEO_HF_ASPECT,
-            "--mode", config.VIDEO_HF_MODE,
-            "--sound", config.VIDEO_HF_SOUND,
-            "--wait",
         ]
+        if model in _HF_KLING_FLAGS:          # --mode/--sound are Kling-only flags
+            cmd += ["--mode", config.VIDEO_HF_MODE, "--sound", config.VIDEO_HF_SOUND]
+        cmd += ["--wait"]
         result = subprocess.run(
             cmd, capture_output=True, text=True, encoding="utf-8",
             errors="replace", timeout=config.VIDEO_HF_GEN_TIMEOUT,
