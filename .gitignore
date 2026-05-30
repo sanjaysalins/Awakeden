@@ -49,3 +49,6 @@ _gitcheck.txt
 *.aac
 *.flac
 *.ogg
+
+# Asset library (media — lives in _library/, backed up to Drive, regenerable via _build_plates.py)
+_library/
