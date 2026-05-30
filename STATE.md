@@ -2,7 +2,12 @@
 
 **Last updated:** 2026-05-30
 **Status (2026-05-30):** 4 cuts finished + upload-kitted in the Drive tracker (QJA #02/#03/#04
-+ prodigal). STILL BOOKEND baked into the pipeline (ASSEMBLY_HERO_STILL) + applied to all
++ prodigal). MOTION-OPEN / Christ-still-close is now the DEFAULT (ASSEMBLY_OPEN_MODE=hook; supersedes
+the both-ends still) — all 4 cuts re-rendered 2026-05-30 + eyeballed: #02 storm→Christ,
+#03 Bethesda man→Christ, #12 swine→cross (3 engine cuts via deterministic re-allocate, no LLM);
+#16 rebuilt by hand (animated risen-Christ-at-fire open + frozen-Christ close — note #16 still
+opens ON Christ, not a non-Christ hook; a true hook-open needs the queued threefold re-sequence).
+Originals kept as .pre-motion-open / .still-both-ends.bak. Earlier still-bookend was baked in + applied to all
 finished cuts. Production+posting TRACKER created on Google Drive (`…/0 Christianity/PRODUCTION
 & POSTING TRACKER.md`) with per-clip upload kits + cross-series overlap map. RED-TEAM of the
 whole plan done: FIXED the image audit to check anatomy (hands/fingers — the hero finger had

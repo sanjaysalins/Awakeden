@@ -39,10 +39,16 @@ upload kits, and a RED-TEAM of the whole plan with fixes applied (below).
    #Reels=IG/FB — give a YT/IG/FB set + a tight ~6-tag TikTok line), handle **@SaltandLightKingdom**.
 
 ## ▶ TOMORROW — START HERE (decided; implement first)
-1. **Motion open / still close** (user decision). Change the assembler so the cut OPENS on the
+1. ✅ **DONE (2026-05-30) — Motion open / Christ-still close.** The assembler now OPENS on the
    animated hook clip (grabs the scroll) and only the CLOSE is the held hero still. Today's
-   `ASSEMBLY_HERO_STILL` makes BOTH ends a still — add a mode (e.g. `ASSEMBLY_HERO_OPEN=motion`)
-   so head=hook-clip, tail=still. Re-render the 4 finished cuts after.
+   Implemented via `config.ASSEMBLY_OPEN_MODE=hook` (DEFAULT; `hero`=legacy both-ends still):
+   allocate() sets hero_head=0 so the body plays from t=0 and the first body clip (a hook-open)
+   leads; only the hero-tail (Christ) close remains, frozen via ASSEMBLY_HERO_STILL. AS-G6 +
+   matcher/planner prompts + visual_engine hero text updated. ALL 4 cuts re-rendered + eyeballed
+   2026-05-30 (3 engine cuts via deterministic re-allocate, no LLM; #16 rebuilt by hand). NOTE:
+   #16 still opens ON the animated risen Christ at the fire (its hand-assembly opens on Christ);
+   a true non-Christ hook-open for #16 needs the queued threefold/window-aware re-sequence.
+   Originals kept as .pre-motion-open.bak / .still-both-ends.bak.
 2. **Default female voice** (user decision: "pick a default for now"). Add a sensible ElevenLabs
    female `voice_id` to `config.VOICE_MAP` (woman/mary/martha/etc.) so women in Encounters etc.
    don't collapse to narrator. User may swap it later.
