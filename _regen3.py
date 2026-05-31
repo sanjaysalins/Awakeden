@@ -5,16 +5,15 @@ don't depend on list indices. Each run writes a NEW numbered folder (text+audio)
 Usage: python _regen3.py
 """
 import os, sys, traceback
-# Force API mode BEFORE importing config (config reads LLM_PROVIDER at import time).
-# The Anthropic usage cap has been lifted, so run autonomously via the metered API
-# rather than the in-chat file bridge.
-os.environ["LLM_PROVIDER"] = "api"
+# Agent-mode (in-chat / Max subscription) — the user's standing direction: NO metered
+# API. Engine LLM calls route through the file bridge; service .agent_bridge/requests/.
+# (Override for an unattended run only: set LLM_PROVIDER=api in the environment.)
+os.environ.setdefault("LLM_PROVIDER", "agent")
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 from pipeline import series as S
 from pipeline import orchestrator
 import config
-assert not config.agent_mode(), "expected API mode but config is in agent mode"
 print(f"[regen] LLM_PROVIDER={config.LLM_PROVIDER}  (agent_mode={config.agent_mode()})", flush=True)
 
 NOTE = (

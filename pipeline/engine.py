@@ -13,7 +13,8 @@ from functools import lru_cache
 import anthropic
 
 import config
-from pipeline.models import Draft, Review, Thread
+from pipeline import kjv_check
+from pipeline.models import Draft, GateResult, Review, Thread
 from pipeline.series import Episode, Series, render_series_library
 from pipeline.structures import Structure, render as render_structure
 
@@ -290,6 +291,31 @@ def _generate_role(structure: Structure, variation: str = "") -> str:
         "Re-read hook->landing as one breath and cut any beat that fights another.\n"
         "If the freshest thread is also the cleverest-but-coldest, pick the CLEAREST true thread "
         "instead — a plain profound truth always beats a clever one the viewer can't follow.\n\n"
+        "THE LANDING TEST (the close is where a short dies tired — judge it hardest):\n"
+        "A strong hook earns nothing if the last 8 seconds feel heard-before. The landing must "
+        "DELIVER, not summarise. Rules:\n"
+        "- The final line must do NEW work — reveal the thread's last image, or name what is now "
+        "true of Christ for THIS viewer. It must NOT restate the body in tireder words.\n"
+        "- BANNED tired closers (you have heard them ten thousand times): a bare rhetorical "
+        "'Will you trust Him? / Will you come to Him? / Will you follow Him?' tacked on as the "
+        "last line; 'the choice is yours'; 'He's waiting for you'; 'all you have to do is believe'; "
+        "any close that would fit ANY episode unchanged. If your last line could end a different "
+        "short about a different verse, it is too generic — rewrite it around THIS thread's image.\n"
+        "- Prefer ending ON a concrete picture or a quiet declarative of grace over ending on a "
+        "question. A question close is allowed ONLY if it carries new weight the body has not "
+        "already implied. When in doubt, do not end on a question.\n"
+        "- GRACE-TUNED QUESTION (critical): if the close turns the verse's question onto the "
+        "viewer, the ANSWER must point to grace / what God gives — NEVER demand the viewer "
+        "PRODUCE it. A close that says 'so, what's your answer?' secretly preaches 'try harder to "
+        "believe' and snaps the grace anchor on the last line. Frame the true answer as something "
+        "received (the Father reveals it / puts it on your lips / opens your eyes), not achieved.\n"
+        "- SCENE-SCOPE THEOLOGY: the landing's claim must be airtight to THIS scene and the wider "
+        "pericope provided — do NOT import later theology the passage does not carry (e.g. before "
+        "the resurrection, do not lean the close on 'He rose / empty tomb / alive from the grave'; "
+        "'living' that means present-and-facing-you is safe, 'living' that means risen is an "
+        "anachronism here). Freshness never licenses smuggling in a doctrine the text hasn't reached.\n"
+        "- Read the hook and the landing back to back: the landing should feel like the hook's "
+        "image RETURNING transformed by the gospel — not a generic altar-call bolted on.\n\n"
         "OPENING STRATEGY (smart-default): DEFAULT to problem-first — open on a REAL present ache "
         "the viewer feels in 3s, then turn. HARD GUARDRAIL (G8 enforces): the turn AND landing go to "
         "WHO CHRIST IS, never to 'your problem solved' — the ache is the doorway, Christ is the room; "
@@ -341,8 +367,11 @@ def generate(
 
 # --------------------------------------------------------------------------
 # Stage 1b — DRAFT TOURNAMENT (generate N divergent drafts -> judge the arc ->
-# synthesize the winner + graft the best hook/CTA). The fix for "feels over-used /
+# synthesize the winner + graft the strongest version of ANY beat from the other
+# candidates + apply the judge's synthesis_notes). The fix for "feels over-used /
 # the CTA is formulaic": explore several arcs instead of polishing the first one.
+# (Grafting any beat — not just hook/CTA — lets the best conviction/proof from a
+# runner-up combine with the winner's arc; see _collect_grafts.)
 # --------------------------------------------------------------------------
 _HOOK_STRATEGIES = [
     "COLD-OPEN IN THE SCENE — drop the viewer into a concrete sensory moment (a smell, a sound, a posture, the light) before any explanation.",
@@ -353,12 +382,12 @@ _HOOK_STRATEGIES = [
     "A QUESTION THAT INDICTS — open on a question the viewer cannot answer comfortably, then let the text press it.",
 ]
 _CTA_STRATEGIES = [
-    "a single honest QUESTION that arises only from THIS thread's central image (never a generic 'before you scroll, ask honestly').",
-    "a concrete INVITATION to come to Christ, framed by the thread's central image, with no imperative pressure.",
-    "a one-line CONFESSION the viewer is invited to echo / pray.",
-    "a STILL, DIRECT address — turn the verse's question onto the viewer ('He is asking you') — no scroll-bait, no formula.",
-    "an IMAGE-ANCHORED call that mirrors the hook so the short loops (hook -> climax -> close echo).",
-    "a quiet GRACE statement that resolves on Jesus, then one small turn toward Him — no command, no fear.",
+    "a fresh CONCRETE IMAGE that completes the thread's picture — end ON the scene (the open door, the dropped jar, the face with the wounds), not on an abstraction or a question. Let the image BE the invitation.",
+    "a one-line CONFESSION the viewer is invited to echo / pray — words put in the viewer's mouth, not a question asked of them.",
+    "a quiet DECLARATIVE turn toward Jesus — a statement of what is now true of Christ for the viewer ('He is already standing over you'), landing as good news, not as a demand.",
+    "an IMAGE-ANCHORED call that mirrors the hook so the short loops (hook -> climax -> close echo) — re-enter the opening picture transformed by the gospel.",
+    "a quiet GRACE statement that resolves on Jesus, then one small concrete move toward Him — no command, no fear, no rhetorical question.",
+    "a single honest QUESTION — USE SPARINGLY: only if the question carries NEW weight the body has not already implied, and is impossible to answer with a shrug. NEVER a bare 'Will you trust Him? / Will you come?' summary-question that could close any episode.",
 ]
 _CONVICTION_ANGLES = [
     "expose the gap between admiring Jesus and trusting Him.",
@@ -443,6 +472,16 @@ def _judge_role() -> str:
         "(not flat, not a list)?\n"
         "- FRESHNESS: is the entry point a real 'I never noticed that', not the topic "
         "auto-complete? Is the CTA specific to THIS thread and NOT a stock formula?\n"
+        "- LANDING (weighted — a tired close kills a strong hook): does the LAST line do NEW "
+        "work, or does it just restate the body? HEAVILY PENALISE a bare rhetorical "
+        "'Will you trust Him? / Will you come?' summary-close, and any landing that would fit a "
+        "DIFFERENT episode unchanged (portable = generic). Reward a close that ends on THIS "
+        "thread's concrete image or a quiet declarative of grace. When grafting a CTA, prefer the "
+        "candidate whose close is the LEAST heard-before, not merely the punchiest. ALSO penalise "
+        "a GRACE-TRAP close (a verse-question turned onto the viewer that demands they PRODUCE the "
+        "answer — it secretly preaches 'try harder to believe'; the answer must be framed as "
+        "received, not achieved) and an ANACHRONISTIC close (a claim that imports later theology "
+        "the scene has not reached, e.g. a pre-resurrection passage leaning on 'He is risen').\n"
         "- GRACE-ANCHORED CONVICTION: does it pierce as grace (no moralism, no gain/loss, "
         "no manufactured pressure)?\n"
         "- LANDS ON JESUS: does the close resolve on Christ / the gospel, not application?\n"
@@ -458,15 +497,20 @@ def _judge_role() -> str:
         "original-language nuance, wordplay) rather than a felt truth, that needs prior Bible "
         "knowledge to follow, that leans on a logic-trick, or whose landing contradicts its thread. "
         "Between a clever-but-cold candidate and a plain-but-profound one, the plain one WINS.\n\n"
-        "Then decide the WINNER (best total arc that also best answers the Five Questions) and "
-        "whether a DIFFERENT candidate has a stronger HOOK or CTA worth grafting onto the winner.\n\n"
+        "Then decide the WINNER (best total arc that also best answers the Five Questions). "
+        "Build the BEST POSSIBLE short by grafting onto the winner's arc the strongest version "
+        "of ANY beat from another candidate — not just the hook and landing. If candidate A wins "
+        "but candidate C has a stronger CONVICTION (or point, or proof), graft C's conviction. For "
+        "each of the five beats, name the candidate whose version is strongest; omit a beat only "
+        "where the winner's own is already best. Put any prose-level instruction (a fix to apply, a "
+        "line to cut, two beats to merge) in `synthesis_notes` — these ARE applied, so be concrete.\n\n"
         "Return ONLY a JSON object (optionally inside a ```json fence):\n"
         "{\n"
         '  "scores": [{"candidate": 1, "arc": 0, "freshness": 0, "conviction": 0, "lands_on_jesus": 0, "thread": 0, "faithful": 0, "five_questions": 0, "total": 0, "note": "one line"}, ...],\n'
         '  "ranking": [<candidate numbers, best first>],\n'
         '  "winner": <candidate number>,\n'
-        '  "graft_hook_from": <candidate number or null — a stronger hook to adopt>,\n'
-        '  "graft_cta_from": <candidate number or null — a fresher CTA to adopt>,\n'
+        '  "grafts": [{"beat": "hook|point|proof|conviction|landing", "from": <candidate number>}, ... — any beats worth taking from a NON-winner; [] if the winner is best throughout],\n'
+        '  "synthesis_notes": "concrete fixes or merges to apply when building the final draft (for example: cut the lecture phrase in the proof; merge the grace line from candidate 3 into the conviction); empty string if none",\n'
         '  "rationale": "why the winner is the strongest arc that lands on Jesus, and what to graft"\n'
         "}\n"
         "No prose outside the JSON object."
@@ -492,43 +536,76 @@ def judge_drafts(
     return _extract_json(reply)
 
 
+def _collect_grafts(judge: dict, winner_idx: int, candidates: list[tuple[Draft, Thread | None]]) -> list[str]:
+    """Build the per-beat graft instructions from the judge verdict. Supports the
+    general `grafts` list ([{beat, from}], any beat) AND the legacy
+    graft_hook_from / graft_cta_from fields. A graft from the winner itself, or an
+    out-of-range candidate, is ignored."""
+    n = len(candidates)
+    _LABEL = {"hook": "HOOK", "point": "POINT", "proof": "PROOF",
+              "conviction": "CONVICTION", "landing": "LANDING/CTA"}
+    pairs: list[tuple[str, int]] = []  # (beat_id, candidate_number)
+    for g in (judge.get("grafts") or []):
+        if not isinstance(g, dict):
+            continue
+        beat = str(g.get("beat", "")).strip().lower()
+        frm = g.get("from")
+        if beat in _LABEL and isinstance(frm, int):
+            pairs.append((beat, frm))
+    # legacy fields
+    if isinstance(judge.get("graft_hook_from"), int):
+        pairs.append(("hook", judge["graft_hook_from"]))
+    if isinstance(judge.get("graft_cta_from"), int):
+        pairs.append(("landing", judge["graft_cta_from"]))
+
+    bits: list[str] = []
+    seen: set[str] = set()
+    for beat, num in pairs:
+        if beat in seen or num == winner_idx or not (1 <= num <= n):
+            continue  # winner's own beat is best, or invalid -> skip
+        cand = candidates[num - 1][0]
+        match = next((b.text for b in cand.beats if b.id == beat), None)
+        if not match:
+            continue
+        seen.add(beat)
+        bits.append(f"STRONGER {_LABEL[beat]} to adopt (from candidate #{num}):\n{match}")
+    return bits
+
+
 def synthesize_draft(
     series: Series, episode: Episode, kjv_text: str | None,
     structure: Structure, thread: Thread | None,
     winner: Draft, candidates: list[tuple[Draft, Thread | None]], judge: dict,
+    winner_idx: int = 0,
 ) -> Draft:
-    """One pass: keep the winner's arc, graft the stronger hook / CTA the judge
-    flagged from other candidates. Returns the winner unchanged if nothing to graft."""
-    hook_from = judge.get("graft_hook_from")
-    cta_from = judge.get("graft_cta_from")
-    n = len(candidates)
-    graft_bits = []
-    if isinstance(hook_from, int) and 1 <= hook_from <= n:
-        graft_bits.append("STRONGER HOOK to adopt (from candidate "
-                          f"#{hook_from}):\n{candidates[hook_from - 1][0].beats[0].text}")
-    if isinstance(cta_from, int) and 1 <= cta_from <= n:
-        graft_bits.append("FRESHER CTA to adopt (from candidate "
-                          f"#{cta_from}):\n{candidates[cta_from - 1][0].beats[-1].text}")
-    if not graft_bits:
+    """One pass: keep the winner's arc, graft the strongest version of ANY beat the
+    judge flagged from other candidates, and apply the judge's synthesis_notes.
+    Returns the winner unchanged only when there is nothing to graft AND no notes."""
+    graft_bits = _collect_grafts(judge, winner_idx, candidates)
+    notes = str(judge.get("synthesis_notes", "")).strip()
+    if not graft_bits and not notes:
         return winner
 
     winner_beats = "\n".join(f"[{b.id}] {b.text}" for b in winner.beats)
     role = (
         "YOUR TASK: produce the FINAL 60-second draft. Start from the WINNING draft's "
-        "arc and thread (below). Graft in the stronger hook and/or fresher CTA shown — "
-        "adapt them so they fit the winner's thread and voice; do not just paste. Keep "
-        "ONE thread hook -> CTA, KJV verbatim, grace-anchored conviction, the landing on "
-        "Jesus, and the structure beat ids exactly.\n\n"
+        "arc and thread (below). Graft in the stronger beats shown from other candidates "
+        "AND apply the synthesis notes — adapt everything so it fits the winner's thread "
+        "and voice; do not just paste. Keep ONE thread hook -> CTA, KJV verbatim (including "
+        "terminal punctuation), grace-anchored conviction, the landing on Jesus, and the "
+        "structure beat ids exactly.\n\n"
         f"{render_structure(structure)}\n\n"
         f"Total target: {config.TARGET_WORDS_MIN}-{config.TARGET_WORDS_MAX} words.\n"
         "Return ONLY a JSON object with the beat ids "
         f"{structure.beat_ids}:\n{_json_contract(structure)}\nNo prose outside the JSON."
     )
+    graft_md = ("\n\n=== GRAFT THESE BEATS ===\n" + "\n\n".join(graft_bits)) if graft_bits else ""
+    notes_md = (f"\n\n=== SYNTHESIS NOTES (apply these) ===\n{notes}") if notes else ""
     user = (
         _episode_block(series, episode, kjv_text, "")
         + _thread_block(thread)
         + f"\n\n=== WINNING DRAFT (keep this arc) ===\nTITLE: {winner.title}\n{winner_beats}"
-        + "\n\n=== GRAFT THESE ===\n" + "\n\n".join(graft_bits)
+        + graft_md + notes_md
     )
     try:
         return Draft.from_json(_extract_json(_call(role, user)))
@@ -557,12 +634,15 @@ def generate_best(
         winner_no = (judge.get("ranking") or [1])[0]
     winner = candidates[winner_no - 1][0]
     won_thread = candidates[winner_no - 1][1]
+    grafts = judge.get("grafts") or []
+    graft_summary = ", ".join(
+        f"{g.get('beat')}<-{g.get('from')}" for g in grafts if isinstance(g, dict)
+    ) or f"hook<-{judge.get('graft_hook_from')} cta<-{judge.get('graft_cta_from')}"
     log(f"      [tournament] winner = candidate #{winner_no} "
-        f"(\"{winner.hook[:50]}...\")  graft hook<-{judge.get('graft_hook_from')} "
-        f"cta<-{judge.get('graft_cta_from')}")
+        f"(\"{winner.hook[:50]}...\")  grafts: {graft_summary}")
     if synthesize:
         return synthesize_draft(series, episode, kjv_text, structure, won_thread,
-                                winner, candidates, judge)
+                                winner, candidates, judge, winner_idx=winner_no)
     return winner
 
 
@@ -589,14 +669,14 @@ the offending line in every note.
 
 Quality gates — each PASS | CONDITIONAL | FAIL, with evidence quoted from the draft
 and (if not PASS) a specific fix:
-- G1 Biblical Accuracy: the quoted verse matches the verified KJV verbatim; the reference is correct; the Point/claim is sound when read in the wider pericope (no proof-texting, no over-claim). FAIL (not CONDITIONAL) on any statement that is exegetically FALSE or that a literate skeptic could disprove from the text (e.g. a strawman rebuttal, an over-tidy historical claim) — a false aside is worse than no aside.
+- G1 Biblical Accuracy: the quoted verse matches the verified KJV verbatim — EXACT wording AND exact terminal punctuation (a quote ending '!' in the KJV must not become '?' or '.'); the reference is correct; the Point/claim is sound when read in the wider pericope (no proof-texting, no over-claim). FAIL (not CONDITIONAL) on any statement that is exegetically FALSE or that a literate skeptic could disprove from the text (e.g. a strawman rebuttal, an over-tidy historical claim) — a false aside is worse than no aside. ALSO FAIL a SCENE-SCOPE OVERCLAIM: a claim that asserts a divine attribute or act the SCENE only implies (e.g. 'the One who made it' / Creator where the text shows only authority/lordship; a pre-resurrection text leaning on 'He is risen / the empty tomb'). True in the wider canon is NOT enough — the line must be airtight to what THIS pericope establishes; tighten the wording to the scene.
 - G2 Relevance: the hook names a real, present human ache in the first beat and the short stays relevant to it.
-- G3 Conviction: it creates holy tension and pierces — NOT mere information — AND is grace-anchored (FAIL on any gain/loss framing, fear-selling, or manufactured pressure).
-- G4 CTA Lands with Jesus: the close invites a response specifically to Jesus, by grace, ending on a real question; not coercive, not cheesy.
+- G3 Conviction: it creates holy tension and pierces — NOT mere information — AND is grace-anchored (FAIL on any gain/loss framing, fear-selling, or manufactured pressure). FAIL on SHAMING — a line that indicts the person in the text OR the viewer for a performance failure ('Only His own people panicked', 'if you had more faith', 'you should have known') is LAW, not grace; the pierce must expose the heart and point to grace (He acts/loves first), never assign blame for not being good/brave/faithful enough.
+- G4 CTA Lands with Jesus: the close invites a response specifically to Jesus, by grace; not coercive, not cheesy. FAIL a GRACE-TRAP close — if the landing turns the verse's question onto the viewer, the ANSWER must be framed as something God GIVES (the Father reveals it / puts it on your lips / opens your eyes), never something the viewer must PRODUCE; a bare 'so, what's your answer?' secretly preaches 'try harder to believe' and snaps the grace anchor. The landing must also obey scene-scope (no imported doctrine) and do NEW work (no tired/portable closer).
 - G5 Structure Conformance: all beats present in order ({structure.beat_ids}); each roughly within budget ({budgets}); the proof beat carries the scripture quote; total ~{config.TARGET_WORDS_MIN}-{config.TARGET_WORDS_MAX} words.
 - G6 Craft: standalone (carries meaning muted); plain prose; clean pacing.
 - G7 Freshness: the draft surfaces a non-obvious TRUE detail (the intended thread, if provided, carried hook -> proof -> landing) and avoids the cliché blocklist + the obvious topic auto-complete. FAIL when the draft is BOTH generic AND exegetically uninteresting — clichéd openers, banned framings/CTA tropes, or the headline take with no fresh angle. ALSO FAIL when a "fresh" reading is exegetically dishonest (Theologian veto): contrarian eisegesis fails this gate even if it surprises. PASS when the thread is carried end-to-end and stays honest.
-- G8 The Five Questions (binding — see charter "THE FIVE QUESTIONS"): (1) ONE clear thing said, with NO drift between the hook's promise and the body's payoff; (2) it is SHOWN profoundly, not explained — FAIL on lecture phrasing ("Notice the order", "This teaches us", "The point is", or any beat that narrates the theology instead of making it felt); (3) the conviction beat actually PIERCES (feeling, not facts) and the series signature is present (QJA: the question turns onto the viewer); (4) the script is clearly FOR ONE named audience (doubter / performer / admirer-who-won't-bow / grieving / ashamed) — FAIL if it is written for no one in particular; ALSO FAIL if the audience descriptor LEAKS into the spoken script as a meta-line (e.g. 'This one's for the person who…', 'If you're someone who…') — the audience is a planning answer, spoken TO directly, never named aloud; (5) the takeaway is a CHANGE in how the viewer sees Christ + a response to Jesus, not merely a fact learned. ALSO: if the short opens problem-first, the turn + landing MUST go to who Christ is — FAIL any 'and so your problem is solved / anxiety lifts / life improves' self-help payoff (the ache is only the doorway). (6) THE FIRST-HEARING TEST (clarity beats cleverness): would a TIRED STRANGER with ZERO Bible background get each beat on ONE hearing at speed? FAIL if the SPINE is a writerly conceit rather than a felt truth — geography trivia, grammar/word-order/pronoun gymnastics, original-language nuance, or wordplay carrying the point instead of merely seasoning it (test: state the beat plainly in 6 words — if nothing survives, the conceit was the point → FAIL); FAIL if a beat only makes sense to someone who already knows the setting/characters/back-story; FAIL on any logic-trick/smuggled syllogism the viewer must swallow ('only one kind of man would…'); FAIL if the landing CONTRADICTS the thread (e.g. body says grace needs no answer, close demands one). Quote the offending beat. FAIL if two or more of these (1)-(6) are unmet, or if (1) or (6) is unmet on its own.
+- G8 The Five Questions (binding — see charter "THE FIVE QUESTIONS"): (1) ONE clear thing said, with NO drift between the hook's promise and the body's payoff; (2) it is SHOWN profoundly, not explained — FAIL on lecture phrasing ("Notice the order", "This teaches us", "The point is", or any beat that narrates the theology instead of making it felt); (3) the conviction beat actually PIERCES (feeling, not facts) and the series signature is present AND EXPLICIT — for a turn-onto-the-viewer series (QJA, Jesus-in-OT), the LANDING must aim the question/claim directly at YOU; FAIL a fully third-person close ('they stared at...', 'the disciples saw...') that only IMPLIES the turn instead of making it; (4) the script is clearly FOR ONE named audience (doubter / performer / admirer-who-won't-bow / grieving / ashamed) — FAIL if it is written for no one in particular; ALSO FAIL if the audience descriptor LEAKS into the spoken script as a meta-line (e.g. 'This one's for the person who…', 'If you're someone who…') — the audience is a planning answer, spoken TO directly, never named aloud; (5) the takeaway is a CHANGE in how the viewer sees Christ + a response to Jesus, not merely a fact learned. ALSO: if the short opens problem-first, the turn + landing MUST go to who Christ is — FAIL any 'and so your problem is solved / anxiety lifts / life improves' self-help payoff (the ache is only the doorway). (6) THE FIRST-HEARING TEST (clarity beats cleverness): would a TIRED STRANGER with ZERO Bible background get each beat on ONE hearing at speed? FAIL if the SPINE is a writerly conceit rather than a felt truth — geography trivia, grammar/word-order/pronoun gymnastics, original-language nuance, or wordplay carrying the point instead of merely seasoning it (test: state the beat plainly in 6 words — if nothing survives, the conceit was the point → FAIL); FAIL if a beat only makes sense to someone who already knows the setting/characters/back-story; FAIL on any logic-trick/smuggled syllogism the viewer must swallow ('only one kind of man would…'); FAIL if the landing CONTRADICTS the thread (e.g. body says grace needs no answer, close demands one). Quote the offending beat. FAIL if two or more of these (1)-(6) are unmet, or if (1) or (6) is unmet on its own.
 
 Verdict rules:
 - overall = LOCKED when NO gate is FAIL. CONDITIONAL or CAUTION notes are fine and
@@ -612,6 +692,38 @@ Return ONLY a JSON object (optionally inside a ```json fence):
   "priority_fixes": ["the most important fix first", "..."]
 }}
 No prose outside the JSON object."""
+
+
+def _apply_kjv_gate(rev: Review, draft: Draft, passage: str | None) -> Review:
+    """Deterministic KJV-verbatim override of G1 (calibration proposal #1). A
+    'punctuation' mismatch (body matches, edge punctuation differs) forces G1 FAIL;
+    a 'wording' near-miss downgrades G1 to at least CONDITIONAL. The LLM never sees
+    this — it is a string compare the review kept missing."""
+    full = "\n".join(b.text for b in draft.beats)
+    issues = kjv_check.verbatim_mismatches(full, passage)
+    if not issues:
+        return rev
+    hard = any(i["kind"] == "punctuation" for i in issues)
+    summary = kjv_check.summarize(issues)
+    fix = f"KJV not verbatim — fix to match the pericope exactly: {summary}"
+    new_gates = []
+    replaced = False
+    for g in rev.gates:
+        if g.gate.upper().startswith("G1"):
+            replaced = True
+            verdict = "FAIL" if hard else ("CONDITIONAL" if g.verdict.upper() == "PASS" else g.verdict)
+            new_gates.append(GateResult(gate=g.gate, verdict=verdict,
+                                        evidence=(g.evidence + " | DETERMINISTIC KJV CHECK: " + summary).strip(" |"),
+                                        fix=(fix if g.verdict.upper() != "FAIL" else g.fix)))
+        else:
+            new_gates.append(g)
+    if not replaced:
+        new_gates.insert(0, GateResult(gate="G1 Biblical Accuracy",
+                                       verdict="FAIL" if hard else "CONDITIONAL",
+                                       evidence="DETERMINISTIC KJV CHECK: " + summary, fix=fix))
+    overall = "REVISE" if (hard and rev.overall.upper() == "LOCKED") else rev.overall
+    return Review(panel=rev.panel, gates=new_gates, overall=overall,
+                  priority_fixes=([fix] + list(rev.priority_fixes)) if hard else list(rev.priority_fixes))
 
 
 def review(
@@ -640,7 +752,8 @@ def review(
         + "NARRATION (by beat):\n"
         + beats_rendered
     )
-    return Review.from_json(_extract_json(_call(_review_role(structure), user)))
+    rev = Review.from_json(_extract_json(_call(_review_role(structure), user)))
+    return _apply_kjv_gate(rev, draft, passage)
 
 
 # --------------------------------------------------------------------------
@@ -690,7 +803,8 @@ def independent_review(
         + beats_rendered
     )
     role = _INDEPENDENT_PREAMBLE + _review_role(structure)
-    return Review.from_json(_extract_json(_call(role, user, model=config.REVIEW_MODEL)))
+    rev = Review.from_json(_extract_json(_call(role, user, model=config.REVIEW_MODEL)))
+    return _apply_kjv_gate(rev, draft, passage)
 
 
 # --------------------------------------------------------------------------

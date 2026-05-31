@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 import config
-from pipeline import engine, handoff, scripture, structures
+from pipeline import engine, handoff, panel, scripture, structures
 from pipeline.models import Draft, Review, Thread
 from pipeline.series import Episode, Series
 from pipeline.structures import Structure
@@ -35,8 +35,15 @@ def create_narration(
     episode: Episode,
     notes: str = "",
     run_audio: bool = True,
+    panel_gate: bool = False,
     log=print,
 ) -> RunResult:
+    # PANEL GATE: when on, the text stage is a hard stop — it writes the draft +
+    # engine assessment + external-LLM panel prompt and does NOT render audio. The
+    # narration is finalized only after the panel (see _finalize.py). This makes the
+    # external review a structural gate, not a step anyone has to remember.
+    if panel_gate:
+        run_audio = False
     structure = structures.get_structure()
     log(f"\n=== {series.name} — {episode.title} ({episode.primary_ref}) ===")
     log(f"    structure: {structure.name}")
@@ -115,7 +122,18 @@ def create_narration(
         log(f"      NOTE: no voice mapping for speaker(s): {', '.join(unknown)} "
             f"(they will read as the narrator). Add them to config.VOICE_MAP.")
 
-    if run_audio:
+    if panel_gate:
+        req = panel.write_panel_request(
+            folder, series, episode, draft, kjv, review, thread=thread,
+        )
+        log("\n" + "=" * 64)
+        log("  PANEL GATE — text LOCKED, audio NOT rendered.")
+        log(f"  Draft + engine assessment + LLM prompt:\n    {req}")
+        log("  NEXT: paste panel_request.md into 2-4 LLMs, bring replies back,")
+        log("  finalize the beats in narration.md, then render audio:")
+        log(f'    python _finalize.py "{folder}"')
+        log("=" * 64)
+    elif run_audio:
         mode = (
             f"Shorts ~{config.SHORTS_TARGET_SECONDS:.0f}s"
             if config.SHORTS_MODE

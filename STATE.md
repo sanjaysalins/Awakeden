@@ -1,5 +1,18 @@
 # STATE.md — progress tracker
 
+**Last updated:** 2026-05-31
+**Status (2026-05-31):** REDO PROGRAM underway — re-doing all ~10 distinct narration topics through
+an upgraded, panel-reviewed pipeline. Shipped this session: (1) a **PANEL GATE** in the runner
+(`_regen_one.py` → text + `panel_request.md`, NO audio → user panels → `_finalize.py` renders audio);
+(2) the tournament judge can now **graft ANY beat** + apply `synthesis_notes` (`engine._collect_grafts`);
+(3) **RECURSIVE LEARNING — the calibration loop** (`data/learning/` + `pipeline/learning.py` +
+`_calibrate.py` + `pipeline/kjv_check.py`): logs what the external panel catches that self-review
+misses, PROPOSES fixes (propose-I-approve), 5 fixes applied + verified (deterministic KJV gate +
+self-review strengthened on scene-scope/shaming/grace-trap/viewer-turn). kjv_check truncation bug fixed.
+Redo done: 27 (Matt 16:15), 28 (Matt 8:26), 31 (John 8:12). Awaiting panel: 29 (John 5:6), 30 (Isaiah 53:5).
+Remaining: I AM Door (John 10:9), Well (John 4:14), Prodigal (Luke 15), Psalm 22, Fire (John 21:17 threefold).
+See RESUME.md top block. Memories: `recursive-learning-system`, `feedback-landing-not-tired`. Prior status below.
+
 **Last updated:** 2026-05-30
 **Status (2026-05-30):** 4 cuts finished + upload-kitted in the Drive tracker (QJA #02/#03/#04
 + prodigal). MOTION-OPEN / Christ-still-close is now the DEFAULT (ASSEMBLY_OPEN_MODE=hook; supersedes

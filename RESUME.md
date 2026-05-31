@@ -1,6 +1,68 @@
 # RESUME.md — start here next session
 
-## ═══════════ SESSION END 2026-05-30 (LATE) — CLARITY FIX + COST CONTROL — READ THIS FIRST ═══════════
+## ═══════════ SESSION END 2026-05-31 — REDO PROGRAM + PANEL GATE + RECURSIVE LEARNING — READ FIRST ═══════════
+
+**Big picture:** we are RE-DOING all ~10 distinct narration topics through an upgraded,
+panel-reviewed pipeline (user: "redo them all for the best outcome"). Decisions locked:
+**narrations-only this pass** (visuals later, per-episode), **panel every landing/script**,
+**keep the 4 shipped cuts live** (redo into NEW folders), **one topic at a time**, **agent-mode only**.
+
+### NEW WORKFLOW (this is how every episode runs now)
+1. `python _regen_one.py "<series_id>" "<Book c:v>"` → runs text tournament + both reviews in
+   agent-mode, then **STOPS at the PANEL GATE**: writes `<v1>/panel_request.md` (engine
+   self-assessment + a ready-to-paste external-LLM prompt) and renders **NO audio**.
+2. User pastes `panel_request.md` into 2-4 other LLMs, brings the replies back.
+3. Agent JUDGES the panel feedback, finalizes the beats by editing `<v1>/narration.md`.
+4. `python _finalize.py "<v1>"` → renders the audio (ElevenLabs, ~$0.20; service the bridge
+   tag/verify/audit calls in chat). Clears stale artifacts first.
+The panel gate is now a real runner property (`runner.create_narration(panel_gate=True)`), not
+a step to remember. **ALWAYS check the bridge request's 'YOUR TASK' line** before answering —
+a deterministic-gate FAIL flips self-review to a REVISE (expects a revised DRAFT, not a review).
+
+### REDO PROGRESS (folders in PythonProject1/jesus/narration/)
+- ✅ **27 A List of Dead Men** (Matt 16:15) — FINALIZED.
+- ✅ **28 What Manner of Man** (Matt 8:26 storm) — FINALIZED (paneled).
+- 🔶 **29 The Race He Could Never Win** (John 5:6 Bethesda) — interim audio, AWAITING PANEL.
+- 🔶 **30 Smitten of God** (Isaiah 53:5) — text-locked, panel_request.md ready, AWAITING PANEL.
+- 🔶 **31 The Light You Can Stand In** (John 8:12) — paneled (6 LLMs) → switched to the honest
+  woman-scene-with-pillar-of-fire spine → **audio RENDERING at session end (confirm narration.mp3
+  + atempo; re-run `_finalize.py` if it didn't finish).**
+- REMAINING distinct topics to redo: I AM the Door (John 10:9) · Woman at the Well (John 4:14) ·
+  Prodigal (Luke 15) · Psalm 22 · Fire/"Do You Love Me" (John 21:17 — THREEFOLD, needs a
+  pacing-vs-repetition design call before running).
+
+### ▶ FIRST THINGS NEXT SESSION
+1. Confirm **#31 audio** rendered (listen). If `_finalize.py` was interrupted, re-run it.
+2. **Clear the panel backlog:** user brings panel replies for #29 (Bethesda) and #30 (Isaiah);
+   judge → finalize narration.md → `_finalize.py`.
+3. Then continue the redo queue (one at a time): suggest **#6 I AM the Door (John 10:9)** next.
+
+### ENGINE CHANGES SHIPPED THIS SESSION (all committed-worthy, agent-mode/free)
+- **Landing-not-tired + grace-tuned-question + scene-scope** rules locked into constitution +
+  generate prompt + judge (memory `feedback-landing-not-tired`).
+- **Panel gate** (`pipeline/panel.py`, `_regen_one.py` panel_gate, `_finalize.py`).
+- **Tournament judge can graft ANY beat** (not just hook/CTA) + apply `synthesis_notes`
+  (`engine._collect_grafts`; legacy graft_hook_from/cta_from still work).
+- **RECURSIVE LEARNING — the calibration loop** (memory `recursive-learning-system`):
+  `data/learning/{defect_classes.json, calibration.jsonl}` + `pipeline/learning.py` + `_calibrate.py`.
+  Logs what the external panel caught that self-review missed; PROPOSES fixes; user approves.
+  **5 fixes applied + verified** (deterministic KJV gate `pipeline/kjv_check.py` wired into both
+  reviews; self-review strengthened on scene-scope / shaming / grace-trap / viewer-turn). Run
+  `python _calibrate.py` to see blind spots. Autonomy = **propose-I-approve**.
+- **kjv_check bug fixed**: it false-positived on truncated quotes; now only flags a real
+  sentence-ender mismatch (the Matt 8:27 '!'-vs-'?' case). Verified.
+- Open red-team findings (NOT yet fixed): cli.py/cli_pipeline.py bypass the panel gate;
+  atempo>1.30 ships with a warning not a block; no KJV check for cross-ref (NT) quotes.
+
+### Calibration loop — how to feed it each episode
+After a panel + finalize, append a record to `data/learning/calibration.jsonl`:
+`{episode, ref, self_review, independent, panel_misses:[{defect_class,beat,detail,caught_by,deterministic}], user_verdict}`.
+If a "fixed" defect class recurs in panel_misses, re-open it. Phase 2 (designed, not built):
+regression set + auto-promotion. Phase 3: audience retention → reweight tournament priors.
+
+## ════════════════════════════════════════════════════════════════
+
+## ═══════════ SESSION END 2026-05-30 (LATE) — CLARITY FIX + COST CONTROL ═══════════
 
 **Nothing is mid-flight. Bridge queue empty. Safe to stop. Picking up = listen to 3 mp3s.**
 

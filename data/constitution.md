@@ -113,6 +113,27 @@ scroll past, and it must be honest — it promises exactly what the short delive
    cut it.
 4. **The CTA points to a Person, not a program.** Invite the viewer to Jesus —
    to trust, to come, to follow — not to "do better" or "try harder." Grace, not works.
+   **The landing must not be tired.** A strong hook is wasted if the last eight seconds
+   feel heard-before. The final line must DELIVER — reveal the thread's last image, or
+   name what is now true of Christ for *this* viewer — never restate the body in tireder
+   words. **Banned tired closers:** a bare rhetorical "Will you trust Him? / Will you come
+   to Him? / Will you follow Him?" tacked on as the last line; "the choice is yours";
+   "He's waiting for you"; "all you have to do is believe"; any close that would fit a
+   *different* episode unchanged. The portability test: if your last line could end a
+   short about a different verse, it is too generic — rewrite it around this thread's
+   image. Prefer ending ON a concrete picture or a quiet declarative of grace; a question
+   close is allowed only when the question carries new weight the body has not already
+   implied. When in doubt, do not end on a question.
+   **Grace-tuned question:** if the close turns the verse's question onto the viewer, the
+   *answer* must point to grace — something God gives (the Father reveals it / puts it on
+   your lips / opens your eyes), never something the viewer must PRODUCE. A close that
+   demands "so, what's your answer?" secretly preaches "try harder to believe" and snaps the
+   grace anchor on the final line.
+   **Scene-scope theology:** the landing's claim must be airtight to the actual scene and
+   the wider pericope — do not import later doctrine the passage has not reached (e.g. a
+   pre-resurrection text must not lean its close on "He is risen / the empty tomb"; "living"
+   as *present-and-facing-you* is safe, "living" as *risen* is an anachronism there).
+   Freshness never licenses smuggling in a truth the text hasn't yet earned.
 5. **Honour the series guardrails.** Each series has specific theological guardrails
    in the series library. They are binding. Do not reduce a deity claim to a metaphor,
    do not turn Jesus into a life coach, do not over-claim what Scripture does not say.
