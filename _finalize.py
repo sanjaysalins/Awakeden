@@ -23,11 +23,18 @@ if not (folder / "narration.md").exists():
 print(f"[finalize] LLM_PROVIDER={config.LLM_PROVIDER}  folder={folder}", flush=True)
 # Clear stale artifacts so tag + synth regenerate from the FINALIZED narration.md
 # (the tag stage is idempotent and would otherwise reuse an old narration-tagged.md).
-for stale in ("narration-tagged.md", "narration.mp3"):
+for stale in ("narration-tagged.md", "narration.mp3", "narration.meta.json"):
     p = folder / stale
     if p.exists():
         p.unlink()
         print(f"[finalize] cleared stale {stale}", flush=True)
+# Also clear per-turn renders — per_turn_synth skips existing _turns/*.mp3 unless
+# --force, so a re-finalize would otherwise reuse stale (old-speed) per-turn audio.
+turns_dir = folder / "_turns"
+if turns_dir.is_dir():
+    for p in turns_dir.glob("*.mp3"):
+        p.unlink()
+    print("[finalize] cleared stale _turns/*.mp3", flush=True)
 print("[finalize] rendering audio from the finalized narration.md ...", flush=True)
 try:
     code = handoff.run_audio_pipeline(folder)

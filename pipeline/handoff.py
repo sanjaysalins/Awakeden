@@ -2,7 +2,7 @@
 optionally run that pipeline end-to-end.
 
 Output contract (matches PythonProject1/jesus/narration/):
-    <NN Title>/v1/
+    <NN_Title>/v1/   (NEW folders use underscores, no spaces; legacy folders kept as-is)
         narration.md             <- plain prose, paragraphs = beats (the input)
         voices.json              <- speaker -> {voice_id, audio_tag} roster
         narration.creation.json  <- our provenance (draft + review summary)
@@ -24,11 +24,16 @@ from pipeline.series import Episode, Series
 from pipeline.structures import Structure
 
 _INVALID = re.compile(r'[\\/:*?"<>|]')
-_LEADING_NUM = re.compile(r"^(\d{2,3})\b")
+# Leading 2-3 digit prefix followed by a space (legacy folders) or underscore
+# (new folders). Both forms must be counted by _next_number so prefixes don't collide.
+_LEADING_NUM = re.compile(r"^(\d{2,3})[ _]")
 
 
 def _safe_title(title: str) -> str:
+    """Filesystem-safe title with NO spaces — whitespace runs collapse to single
+    underscores so paths are click-to-open without quoting (user preference)."""
     cleaned = _INVALID.sub("", title).strip()
+    cleaned = re.sub(r"\s+", "_", cleaned)
     return cleaned or "untitled"
 
 
@@ -92,7 +97,7 @@ def write_narration_folder(
     """
     n = _next_number()
     width = max(2, len(str(n)))
-    folder_name = f"{n:0{width}d} {_safe_title(draft.title or episode.title)}"
+    folder_name = f"{n:0{width}d}_{_safe_title(draft.title or episode.title)}"
     v1 = config.NARRATION_TREE_DIR / folder_name / "v1"
     v1.mkdir(parents=True, exist_ok=True)
 
@@ -252,9 +257,13 @@ def run_audio_pipeline(v1_folder: Path) -> int:
             )
             return code
 
-    return _run([
+    synth_cmd = [
         py, str(synth), str(v1_folder),
         "--target", str(config.SHORTS_TARGET_SECONDS),
         "--pre-quote-pause", str(config.SHORTS_PRE_QUOTE_PAUSE),
         "--stability", str(config.SHORTS_STABILITY),
-    ])
+    ]
+    # Natural speed (default): --target is a ceiling, the voice is never stretched.
+    if config.SHORTS_NATURAL_SPEED:
+        synth_cmd.append("--natural")
+    return _run(synth_cmd)

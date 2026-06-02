@@ -151,7 +151,8 @@ def create_narration(
             log(f'  python "{config.PER_TURN_SYNTH_SCRIPT}" "{folder}" '
                 f"--target {config.SHORTS_TARGET_SECONDS:.0f} "
                 f"--pre-quote-pause {config.SHORTS_PRE_QUOTE_PAUSE} "
-                f"--stability {config.SHORTS_STABILITY}")
+                f"--stability {config.SHORTS_STABILITY}"
+                + (" --natural" if config.SHORTS_NATURAL_SPEED else ""))
         else:
             log(f'  python "{config.NARRATION_PIPELINE_SCRIPT}" "{folder}"')
 

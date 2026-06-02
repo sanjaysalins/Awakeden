@@ -42,7 +42,8 @@ pick series+episode (or custom topic)
        winner + graft best hook/CTA. De-templated CTA. (ENGINE_TOURNAMENT=0 → single draft.)
   → self-review (6 panel agents + 7 gates G1..G7; revise while any gate FAILs)
   → INDEPENDENT red-team audit (fresh hostile auditor; authoritative; ALWAYS ON)
-  → write <NN Title>/v1/ into PythonProject1/jesus/narration/
+  → write <NN_Title>/v1/ into PythonProject1/jesus/narration/  (NEW folders use
+       underscores, no spaces — click-to-open paths; legacy space-named folders kept as-is)
        narration.md · voices.json · narration.creation.json · narration.creation-review.md
   → audio auto-run: narration_pipeline.py verify→tag→audit, then
        per_turn_synth.py --target 59 --pre-quote-pause 0.4 --stability 0.65

@@ -157,6 +157,11 @@ SHORTS_TARGET_SECONDS = float(os.getenv("SHORTS_TARGET_SECONDS", "59"))
 SHORTS_PRE_QUOTE_PAUSE = float(os.getenv("SHORTS_PRE_QUOTE_PAUSE", "0.5"))
 SHORTS_POST_QUOTE_PAUSE = float(os.getenv("SHORTS_POST_QUOTE_PAUSE", "0.45"))
 SHORTS_STABILITY = float(os.getenv("SHORTS_STABILITY", "0.65"))
+# Natural narration speed (user direction): never time-stretch the voice to hit
+# the 59s mark. SHORTS_TARGET_SECONDS becomes a CEILING — under is fine, over
+# means TRIM WORDS (per_turn_synth flags how many; it does NOT compress). On by
+# default; set SHORTS_NATURAL_SPEED=0 to fall back to atempo-to-target.
+SHORTS_NATURAL_SPEED = os.getenv("SHORTS_NATURAL_SPEED", "1") not in ("0", "false", "False", "")
 
 # Python interpreter used to run the audio pipeline. It must have that project's
 # deps (anthropic, requests, python-dotenv) importable. We auto-detect the
@@ -282,10 +287,11 @@ VIDEO_HF_GEN_TIMEOUT = int(os.getenv("VIDEO_HF_GEN_TIMEOUT", "900"))  # seconds
 # ----------------------------------------------------------------------------
 # Assembly stage — fit clips + narration into the deliverable vertical cut
 # ----------------------------------------------------------------------------
-# The viral cut uses the best N clips; all clips go in the all-takes reel. 16
-# clips in ~59s forces ~2.9x average speed (a strobe on slow Baroque footage),
-# so the cut defaults to ~11. Override per-run with `cli_assemble.py --clips`.
-ASSEMBLY_CLIP_BUDGET = int(os.getenv("ASSEMBLY_CLIP_BUDGET", "11"))
+# The viral cut uses the best N clips; all clips go in the all-takes reel. The
+# user wants MORE clips that each land on their narration beat, with the CLIPS
+# (not the voice) sped up to fit. Default raised 11 -> 14; the allocator speeds
+# clips to fill and keeps sacred frames slow. Override with `cli_assemble.py --clips`.
+ASSEMBLY_CLIP_BUDGET = int(os.getenv("ASSEMBLY_CLIP_BUDGET", "14"))
 
 # Hard speed cap. 2.2x (not 2.5x) because low-motion oil-painting clips read
 # "too fast" sooner than action footage. Clips needing more are trimmed-past-cap.

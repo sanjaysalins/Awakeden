@@ -90,7 +90,7 @@ def cut_plan_prompt(png_path: Path, pacing: str = "controlled",
             config.inject_agent_env(env)
             log(f"      [cut-plan] {kj.name} via image_to_kling --plan-only...")
             subprocess.run(
-                [config.NARRATION_PYTHON, str(script), str(png_path), "--plan-only"],
+                [config.NARRATION_PYTHON, str(script), str(png_path), "--plan-only", "--skip-audit"],
                 cwd=str(config.NARRATION_PROJECT_DIR.parent), env=env,
                 capture_output=True, text=True, encoding="utf-8", errors="replace",
             )

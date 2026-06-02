@@ -1,0 +1,31 @@
+      [hf] 01_christ-offers-the-bread — first attempt
+        rendered 10,255,508 bytes in 44.2s -> 01_christ-offers-the-bread.png
+        auditing with Claude Vision...
+
+========================================================================
+  AGENT-BRIDGE REQUEST 0001_acd49f  [vision]  image-audit:scene-1 Come to the Bread of Life
+  prompt : C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\requests\0001_acd49f.request.md
+  image  : C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\images\0001_acd49f.jpg
+  REPLY  -> write the raw model output to: C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\responses\0001_acd49f.txt
+  (engine is blocked, polling every 1.5s up to 3600s)
+========================================================================
+
+        audit PASS
+  + generated christ-offers-the-bread  audit=PASS
+      [hf] 01_christ-in-the-open-door — first attempt
+        rendered 6,627,327 bytes in 70.1s -> 01_christ-in-the-open-door.png
+        auditing with Claude Vision...
+
+========================================================================
+  AGENT-BRIDGE REQUEST 0002_007ef8  [vision]  image-audit:scene-1 The Door Was Never Locked
+  prompt : C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\requests\0002_007ef8.request.md
+  image  : C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\images\0002_007ef8.jpg
+  REPLY  -> write the raw model output to: C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\responses\0002_007ef8.txt
+  (engine is blocked, polling every 1.5s up to 3600s)
+========================================================================
+
+        audit PASS
+  + generated christ-in-the-open-door  audit=PASS
+wrote C:\Users\sanjay\PycharmProjects\PythonProject1\jesus\_hero_library\index.html
+wrote C:\Users\sanjay\PycharmProjects\PythonProject1\jesus\_hero_library\master_index.html  (4 rendered, 3 planned, 24 text-only)
+unify done

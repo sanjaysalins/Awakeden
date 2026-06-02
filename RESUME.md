@@ -1,5 +1,174 @@
 # RESUME.md — start here next session
 
+## ═══════════ SESSION END 2026-06-03 — NATURAL SPEED + MORE CLIPS — READ FIRST ═══════════
+
+**User direction (LOCKED, memory `feedback-natural-speed-more-clips`):** narration plays at NATURAL,
+CONSTANT speed — never time-stretch to hit 59s. 59s is a CEILING: under is fine; over → TRIM WORDS
+(never compress the voice). And use MORE video clips, speeding up the CLIPS (not the voice) so each
+lands on its narration beat.
+
+### Engine changes shipped (agent-mode/free, all in this repo)
+- `config.SHORTS_NATURAL_SPEED` (NEW, default ON) → `handoff.py` passes `--natural` to per_turn_synth.
+  per_turn_synth `--natural` was already built (atempo locked 1.0, --target = ceiling, flags words to
+  trim if over). Set `SHORTS_NATURAL_SPEED=0` to revert to atempo-to-target.
+- `config.ASSEMBLY_CLIP_BUDGET` 11 → **14** (more clips; allocator already speeds clips, sacred ≤1.3×).
+- `_finalize.py` now ALSO clears `_turns/*.mp3` + `narration.meta.json` (fixes the stale-_turns trap).
+- `runner.py` "run later" hint shows `--natural`.
+- ⏳ NOT YET DONE (the user's beat-precision ask): the assembler still places clips per SECTION
+  (`assembly_engine._video_windows`), not pinned to each spoken phrase's time window. Tightening this so
+  each clip sits exactly under the line it depicts is the next code task — but it can't be tested until
+  the 5 I AM episodes have VISUALS (none rendered yet).
+
+### The 5 I AM episodes RE-RENDERED at natural speed (ElevenLabs ~$0.60 this session)
+| Ep | Folder (…/PythonProject1/jesus/narration/) | Natural length | Note |
+| --- | --- | --- | --- |
+| 32 | `32_The_Door_Was_a_Body/v1/narration.mp3` | **60.6s** | trimmed −7 narrator words; accepted ~60s |
+| 33 | `33_The_Shepherd_In_The_Gap/v1/narration.mp3` | **60.2s** | trimmed −6 words; accepted ~60s |
+| 34 | `34_The_Hunger_Bread_Cant_Fill/v1/narration.mp3` | **52.9s** | already natural; untouched |
+| 35 | `35_Manna_Fulfilled/v1/narration.mp3` | **65.2s** | Option A narrator trim (full John 6:51 kept); user accepts 65s — it's the long one |
+| 36 | `36_In_No_Wise_Cast_Out/v1/narration.mp3` | **54.6s** | already natural; untouched |
+
+All edited episodes (32/33/35) re-stamped via `short_gate.py … --stamp --register` — 32 PASS, 33 CONDITIONAL
+(its usual scene-first open), 35 PASS (verse verified verbatim). 34/36 untouched. **All 5 are LOCKED audio.**
+
+### Re-render gotchas hit this session (so you don't repeat them)
+- `rm` in the Bash tool needs **forward-slash** paths — backslash paths silently no-op (-f), leaving stale
+  `_turns/*.mp3` that per_turn_synth then `[skip]`s. Use `C:/Users/.../v1/_turns/*.mp3` or `--force`.
+- Editing narration.md invalidates the short_gate stamp → per_turn_synth GATE-BLOCKs. Re-run
+  `short_gate.py "<v1>" --stamp --register` (deterministic, no LLM) before re-synth.
+- ElevenLabs re-rolls voice timing each render (±1–2s) → chasing strict ≤59 is a moving target; that's
+  why 32/33 were accepted at ~60s.
+
+### ▶ FIRST THINGS NEXT SESSION
+1. (Optional) tighten the assembler to pin clips to each spoken phrase's window (the beat-precision ask).
+2. The 5 I AM episodes still need VISUALS — run `cli_visual.py "<v1 folder>"` (with the new 14-clip budget).
+3. Or pick the next multi-dimension topic (Woman at Well / Prodigal / Psalm 22 / John 21:17).
+
+## ═══════════ SESSION END 2026-06-02 (LATE) — DOOR (×2) + BREAD (×3) SHIPPED ═══════════
+
+**Where we are:** 5 I AM-set narrations LOCKED + rendered across TWO sayings. **Full paths** (for other-service handoff).
+
+### I AM the Bread of Life (×3) — SHIPPED (Cursor session + ai-panel merge)
+
+| Ep | Folder | Audio |
+| --- | --- | --- |
+| 34 | `C:\Users\sanjay\PycharmProjects\PythonProject1\jesus\narration\34_The_Hunger_Bread_Cant_Fill\v1\` | `C:\Users\sanjay\PycharmProjects\PythonProject1\jesus\narration\34_The_Hunger_Bread_Cant_Fill\v1\narration.mp3` (59.02s) |
+| 35 | `C:\Users\sanjay\PycharmProjects\PythonProject1\jesus\narration\35_Manna_Fulfilled\v1\` | `C:\Users\sanjay\PycharmProjects\PythonProject1\jesus\narration\35_Manna_Fulfilled\v1\narration.mp3` (59.03s) |
+| 36 | `C:\Users\sanjay\PycharmProjects\PythonProject1\jesus\narration\36_In_No_Wise_Cast_Out\v1\` | `C:\Users\sanjay\PycharmProjects\PythonProject1\jesus\narration\36_In_No_Wise_Cast_Out\v1\narration.mp3` (59.02s) |
+
+**Panel request (engine):** `C:\Users\sanjay\PycharmProjects\JesusInTheBible\data\bread_of_life_panel_request.md`
+
+**ai-panel merge (4/4 drafts):** `C:\Users\sanjay\PycharmProjects\PythonProject1\ai-panel\runs\2026-06-02-08-56-02\final-narration.md`
+
+**Brief:** `C:\Users\sanjay\PycharmProjects\PythonProject1\ai-panel\examples\bread-of-life-panel-brief.txt`
+
+**Ship order:** 36 → 34 → 35
+
+**Gates:** `C:\Users\sanjay\PycharmProjects\PythonProject1\jesus\narration\short_gate.py` — all three PASS + stamped.
+
+**Unattended synth:** `$env:LLM_PROVIDER="api"` before `narration_pipeline.py` (agent-bridge blocks).
+
+**Narration pickup doc:** `C:\Users\sanjay\PycharmProjects\PythonProject1\jesus\narration\RESUME.md`
+
+### I AM the Door (×2) — SHIPPED earlier today
+
+| Ep | Folder | Audio |
+| --- | --- | --- |
+| 32 | `C:\Users\sanjay\PycharmProjects\PythonProject1\jesus\narration\32_The_Door_Was_a_Body\v1\` | `C:\Users\sanjay\PycharmProjects\PythonProject1\jesus\narration\32_The_Door_Was_a_Body\v1\narration.mp3` |
+| 33 | `C:\Users\sanjay\PycharmProjects\PythonProject1\jesus\narration\33_The_Shepherd_In_The_Gap\v1\` | `C:\Users\sanjay\PycharmProjects\PythonProject1\jesus\narration\33_The_Shepherd_In_The_Gap\v1\narration.mp3` |
+
+**Method (reuse):** multi-dimension drafts → one combined panel request → external LLMs → judge/synthesize → gate stamp → render.
+
+**Multi-dimension direction:** `multi-dimension-per-topic` (memory). See FIRST THINGS below.
+
+---
+**Earlier today — #6 I AM the Door (John 10:9) FINISHED as TWO complementary episodes**, both LOCKED + rendered (2-voice narrator+jesus, ~59s, relaxed atempo ~1.03–1.04, no rush):
+- ✅ **32 The Door Was a Body** — the *invitation* dimension: deity ("I AM", too holy to speak) gives
+  weight; heart = "come in and be saved — the door is open for you AS YOU ARE, before you fix a thing";
+  delivers the verse's saved/safe/fed/pasture payoff. ~151 words. LOCKED-as-is (user-directed v-c, no
+  external panel; `panel_request.md` on disk reflects the superseded v-b deity version).
+  `PythonProject1/jesus/narration/32_The_Door_Was_a_Body/v1/narration.mp3`
+- ✅ **33 The Shepherd In The Gap** — the *shepherd-as-the-gate* dimension: the sheepfold gap, His body
+  in it, the wolf comes first (substitution/protection). Shipped v-a as-is at the user's choice (devotional
+  latitude). ⚠️ KNOWN ACCEPTED RISK: rests on the CONTESTED fold-folklore ("no gate, shepherd's body = the
+  door", "no figure of speech") — John 10:1-3 itself names a doorkeeper+door. Agent flagged it pre-render;
+  user accepted (SLK = devotional, not Awakeden apologetics). Faithful core is sound (only-access + body-takes-
+  the-wolf grounded in John 10:11 "the good shepherd giveth his life for the sheep").
+  `PythonProject1/jesus/narration/33_The_Shepherd_In_The_Gap/v1/narration.mp3`
+
+### ▶▶ NEW STANDING DIRECTION (user, 2026-06-02) — EXPLORE MULTIPLE DIMENSIONS PER TOPIC
+One Bible passage can speak **several distinct truths** and serve more listeners — so deliberately produce
+**multiple doctrinally-faithful narrations per topic** (as we just did with John 10:9 → invitation + shepherd-gate),
+not one per passage. **NON-NEGOTIABLE: every dimension must be Bible-driven and fit evangelical biblical
+doctrine.** Freshness in the entry-point only; orthodoxy in the claim and landing (the locked rule still holds).
+Memory: `multi-dimension-per-topic`. When considering ANY topic, think across all the Bible-based narratives /
+angles it can faithfully carry, pin each to a verse, and offer them. A starter dimension-map is in the FIRST
+THINGS block below.
+
+### ▶ FIRST THINGS NEXT SESSION
+The redo backlog (27/28/29/30/31/32/33) is CLEAR. Next: pick a topic and explore its faithful dimensions
+(user's new direction). Remaining distinct redo topics — each now a CANDIDATE for multiple dimensions:
+- **Woman at the Well** (John 4:14) — dims e.g. (a) living water / never-thirst-again; (b) He told her all she
+  ever did = seen-and-still-wanted; (c) "I that speak unto thee am he" = the Messiah self-revealed to an outsider.
+- **Prodigal** (Luke 15) — dims e.g. (a) the running father / kiss that cut off the bargain (shipped #12);
+  (b) the elder brother / grace that offends the dutiful; (c) "this my son was dead, and is alive again" = resurrection language.
+- **Psalm 22** — dims e.g. (a) "My God, my God, why hast thou forsaken me"; (b) "they pierced my hands and my
+  feet"; (c) "they part my garments" — predictive precision; (d) the turn to praise in v22-31.
+- **Fire / threefold** (John 21:17) — needs the pacing-vs-repetition design call; dims e.g. (a) threefold
+  restoration mirrors threefold denial; (b) charcoal-fire (anthrakia) callback; (c) "feed my sheep" = restored calling.
+Confirm series id before `_regen_one.py`, OR (faster, proven this session) hand-author each dimension's text +
+2-voice render direct when the user has a clear angle. ASK est. spend before any metered batch (audio ~$0.20/ep).
+
+### How #6 was finished (method that worked — reuse it)
+Hand-tag `narration-tagged.md` (jesus speaker on the verse) → **delete `_turns/*.mp3` + narration.mp3 + meta**
+(the `_finalize` stale-_turns trap) → run `per_turn_synth.py "<v1>" --target 59 --pre-quote-pause 0.5
+--stability 0.65 --force` directly. New sibling episodes = new underscore folder (e.g. `33_...`) with
+narration.md + narration-tagged.md + voices.json (narrator LSi9zNCeliLuhIGGS0By + jesus tlETan7Okc4pzjD0z62P).
+
+(Prior history — panel gate / recursive learning / 4 proposed calibration fixes — still applies; see below.)
+
+## ═══════════ SESSION END 2026-06-01 (LATE) — #6 I AM THE DOOR IN PROGRESS — READ FIRST ═══════════
+
+**Where we are:** panel backlog cleared earlier today (#29 + #30 LOCKED; 27/28/29/30/31 all done). Then
+started the next redo topic **#6 "I AM the Door" (John 10:9, series `i-am`)** end-to-end in agent-mode
+(thread→tournament→judge→synth→self-review→independent, all serviced in chat). Folder (NEW underscore naming):
+`PythonProject1/jesus/narration/32_The_Door_Was_a_Body/v1`.
+
+### ▶▶ #6 IS MID-ITERATION — DO THIS FIRST TOMORROW
+The TEXT has been reworked 3 times based on the user's direction; `narration.md` currently holds the
+**invitation-centered** version (the keeper-in-progress). **`narration.mp3` on disk is STALE** (an earlier
+shepherd-spine 2-voice render) — it does NOT match the current narration.md. Nothing is locked.
+1. Re-read the current `narration.md` (the invitation version). Decide with the user: render as-is, tweak the
+   invitation wording, or run one more panel.
+2. To render: it's **2-voice (narrator + jesus** on the "I am the door" verse); voices.json already = narrator+jesus.
+   Hand-tag narration-tagged.md (jesus speaker on the verse), then **delete `_turns/*.mp3` + narration.mp3 +
+   narration.meta.json** (the _finalize stale-_turns bug) and run per_turn_synth.py directly (target 59,
+   pre-quote-pause 0.5, stability 0.65). ~$0.20 ElevenLabs.
+3. Then LOCK + update calibration.jsonl/RESUME/STATE.
+
+### #6 iteration history (so you don't relitigate)
+- v-a: shepherd-as-door (body sleeps across the gap) — panel flagged it rests on CONTESTED field-fold folklore
+  (10:1-3 has a porter+door) and drops the verse's "go in and out, find pasture" payoff.
+- v-b: user said "lead with the I AM / deity" → reframed on the divine Name (Ex 3:14 "I AM THAT I AM" echo);
+  panel (5 LLMs) said CUT "a door takes the blow meant for the sheep" (rule-6 substitution import from 10:11),
+  present-tense the claim (not "became"), withhold "the door" from the Point. Applied.
+- v-c (CURRENT): user said "'I am the door' must land as a PERSONAL salvation INVITATION, not a metaphor/riddle."
+  Reweighted: deity gives weight, but the heart is "come in and be saved — open for you, as you are" + delivers
+  saved/safe/fed/pasture. This is what's in narration.md now. `panel_request.md` still reflects v-b (regenerate
+  via the script in chat history / `_panel_existing.py`-style if re-paneling v-c).
+
+### CURRENT #6 narration.md (invitation version, ~151 words, 1 KJV quote John 10:9):
+Hook: God's own name is "I AM" — too holy to speak. And that God looked at people who could never climb up to
+Him, and opened a door. | Point: He doesn't hand you a ladder to climb, or a list to finish. He is the way in —
+and the way is a Person. | Proof: Hear Him: "I am the door: by me if any man enter in, he shall be saved, and
+shall go in and out, and find pasture." Any man. That's the invitation: don't earn your way up — come in through
+Him, and you're saved, safe, and fed. | Conviction: You keep waiting until you've cleaned yourself up enough to
+be let in. But the door is already open — open for you, as you are, before you fix a thing. | Landing: So come
+in. The great I AM is the door, and He's holding it open for you. Step through — the pasture was waiting all along.
+
+(Panel backlog + locked-episode details + the 4 proposed calibration fixes are in the REDO PROGRESS / FIRST
+THINGS blocks below. The 2026-05-31 context — workflow / panel gate / recursive learning — still applies.)
+
 ## ═══════════ SESSION END 2026-05-31 — REDO PROGRAM + PANEL GATE + RECURSIVE LEARNING — READ FIRST ═══════════
 
 **Big picture:** we are RE-DOING all ~10 distinct narration topics through an upgraded,
@@ -22,20 +191,51 @@ a deterministic-gate FAIL flips self-review to a REVISE (expects a revised DRAFT
 ### REDO PROGRESS (folders in PythonProject1/jesus/narration/)
 - ✅ **27 A List of Dead Men** (Matt 16:15) — FINALIZED.
 - ✅ **28 What Manner of Man** (Matt 8:26 storm) — FINALIZED (paneled).
-- 🔶 **29 The Race He Could Never Win** (John 5:6 Bethesda) — interim audio, AWAITING PANEL.
-- 🔶 **30 Smitten of God** (Isaiah 53:5) — text-locked, panel_request.md ready, AWAITING PANEL.
-- 🔶 **31 The Light You Can Stand In** (John 8:12) — paneled (6 LLMs) → switched to the honest
-  woman-scene-with-pillar-of-fire spine → **audio RENDERING at session end (confirm narration.mp3
-  + atempo; re-run `_finalize.py` if it didn't finish).**
-- REMAINING distinct topics to redo: I AM the Door (John 10:9) · Woman at the Well (John 4:14) ·
-  Prodigal (Luke 15) · Psalm 22 · Fire/"Do You Love Me" (John 21:17 — THREEFOLD, needs a
-  pacing-vs-repetition design call before running).
+- ✅ **30 Smitten of God** (Isaiah 53:5) — LOCKED 2026-06-01 (paneled by 3 LLMs; judged → dropped the
+  1-Peter quote so Proof is 2 Isaiah quotes, fixed 53:4 to verbatim '...smitten of God, and afflicted.').
+  Landing reworked to identity-forward ('The punishment was real, but the guilt was never His. He took
+  yours — into His own body.'). **Isaiah VOICE added** for the two prophecy quotes (weighty voice
+  UzI1NsMEV3ni5JRkRSls) → 5-turn multi-voice, 59.02s, narrator atempo 1.2285. ⚠️ _finalize.py does NOT
+  clear _turns/*.mp3 → edits silently reuse stale per-turn audio; delete _turns manually + run
+  per_turn_synth directly (or fix _finalize to clear _turns).
+- ✅ **29 The Race He Could Never Win** (John 5:6 Bethesda) — LOCKED 2026-06-01. Paneled by 4 LLMs
+  (panel_request.md rebuilt via new helper `_panel_existing.py`). Strong convergence: (1) Rule-1 quote-
+  SELECTION fix — the draft paraphrased the title question 'Wilt thou be made whole?' and spent both quote
+  slots on secondary verses; now quotes John 5:6 + 5:8; (2) Rule-4/5 conviction fix — 'he asks if you still
+  want it' (viewer-produced desire = grace-trap RECURRENCE) reframed to grace exposing 'you must close the
+  distance to God before He acts'. KEPT the RACE spine (did NOT fold panel-4's 'he never said yes' insight —
+  that's the shipped #18's thread, same passage; kept #29 distinct). 2-voice (narrator + jesus on both
+  quotes), 59.04s, narrator atempo 1.1593, 158 words. (Series = questions-jesus-asked.)
+- ✅ **31 The Light You Can Stand In** (John 8:12) — FINALIZED (paneled 6 LLMs; honest
+  woman-scene-with-pillar-of-fire spine). Audio confirmed 2026-06-01: 59.02s.
+- 🔶 **32 The Door Was a Body / I AM the Door** (John 10:9, series `i-am`) — TEXT MID-ITERATION (invitation
+  version in narration.md), NOT rendered (mp3 is stale). See the "#6 IS MID-ITERATION" block at top. Do first.
+- REMAINING distinct topics to redo (after #32): Woman at the Well (John 4:14) · Prodigal (Luke 15) ·
+  Psalm 22 · Fire/"Do You Love Me" (John 21:17 — THREEFOLD, needs a pacing-vs-repetition design call first).
 
 ### ▶ FIRST THINGS NEXT SESSION
-1. Confirm **#31 audio** rendered (listen). If `_finalize.py` was interrupted, re-run it.
-2. **Clear the panel backlog:** user brings panel replies for #29 (Bethesda) and #30 (Isaiah);
-   judge → finalize narration.md → `_finalize.py`.
-3. Then continue the redo queue (one at a time): suggest **#6 I AM the Door (John 10:9)** next.
+**Panel backlog is now CLEARED — 27/28/29/30/31 all LOCKED.** Next redo topic: **#6 I AM the Door
+(John 10:9)** — run `_regen_one.py "questions-jesus-asked-or-correct-series" "John 10:9"` (confirm series id
+first) → panel gate → user panels → judge → `_finalize.py` (or hand-render the 2-voice path if multi-voice).
+Remaining distinct topics after that: Woman at the Well (John 4:14) · Prodigal (Luke 15) · Psalm 22 ·
+Fire/threefold (John 21:17 — needs the pacing-vs-repetition design call first).
+
+**Calibration fixes PROPOSED (awaiting approval), now 4 across #30+#29 panels:**
+   (a) deterministic **Rule-8 quote-count gate** (>2 double-quoted spans FAILs a pacing gate; #30);
+   (b) **widen kjv_check coverage** — feed the cached wider pericope (passage:<ref>) to verbatim_mismatches
+   so flanking-verse quotes are checked, not just the single anchor verse (#30 Isa 53:4 slipped);
+   (c) deterministic **anchor-verse-unquoted check** — the episode's primary_ref verse must appear as a
+   quoted span (esp. the QUESTION for Questions-Jesus-Asked); #29 paraphrased 'Wilt thou be made whole?';
+   (d) extend the **grace-trap gate to the CONVICTION beat** (not just the landing) — #29's 'he asks if you
+   still want it' recurred there. See data/learning/defect_classes.json (3 classes re-opened/added 2026-06-01).
+
+**Two known engine traps to fix when convenient (free, agent-mode):**
+   - `_finalize.py` does NOT clear `_turns/*.mp3` → editing narration.md + re-finalizing silently REUSES
+     stale per-turn audio. Workaround used this session: delete `_turns/*.mp3` + narration.mp3 + meta, run
+     per_turn_synth.py directly. FIX: have _finalize clear `_turns/` too.
+   - New episode folders now use **underscores not spaces** (handoff.py `_safe_title` + `_LEADING_NUM`),
+     so paths are click-to-open; legacy folders kept as-is. User strongly prefers QUOTED full paths or
+     underscore paths in chat (memory `feedback-show-full-paths`).
 
 ### ENGINE CHANGES SHIPPED THIS SESSION (all committed-worthy, agent-mode/free)
 - **Landing-not-tired + grace-tuned-question + scene-scope** rules locked into constitution +

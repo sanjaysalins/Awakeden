@@ -1,5 +1,61 @@
 # STATE.md — progress tracker
 
+**Last updated:** 2026-06-03
+**Status (2026-06-03):** NATURAL-SPEED direction locked (memory `feedback-natural-speed-more-clips`): narration
+never time-stretched to 59s — 59s is a ceiling, trim words if over, never compress the voice; use MORE clips,
+speed the CLIPS not the voice, hit each narration beat. Engine: `SHORTS_NATURAL_SPEED` (default ON) wires
+`--natural` into per_turn_synth via `handoff.py`; `ASSEMBLY_CLIP_BUDGET` 11→14; `_finalize.py` now clears
+stale `_turns/*.mp3`. The 5 I AM episodes re-rendered at natural speed: 32=60.6s (−7 words), 33=60.2s (−6),
+34=52.9s (untouched), 35=65.2s (Option A trim, full John 6:51 kept — accepted long), 36=54.6s (untouched);
+32/33/35 re-stamped. NOT done: pin clips to each spoken-phrase window (beat-precision) — needs visuals to test;
+5 I AM episodes still need visuals (`cli_visual.py`, 14-clip budget). See RESUME.md top. Prior status below.
+
+**Last updated:** 2026-06-02 (end of session)
+**Status (2026-06-02 end):** Multi-dimension direction proven at scale — **5 I AM-set narrations SHIPPED**
+across two sayings (Door ×2 + Bread ×3). Bread cluster: ai-panel merge
+`C:\Users\sanjay\PycharmProjects\PythonProject1\ai-panel\runs\2026-06-02-08-56-02\final-narration.md` →
+Ep 34/35/36 at ~59s each, all `short_gate` PASS + stamped. Full paths in RESUME.md top. Next: gold approve,
+visuals (cli_visual.py), listen by ear, next multi-dimension topic. Prior status below.
+
+**Last updated:** 2026-06-02
+**Status (2026-06-02):** #6 "I AM the Door" (John 10:9) FINISHED as **TWO complementary episodes**, both
+LOCKED + 2-voice rendered (~59s, relaxed atempo ~1.03–1.04): **32 The Door Was a Body** (the *invitation*
+dimension — open door, come in as you are, saved/safe/fed/pasture; user-directed v-c, no external panel) and
+**33 The Shepherd In The Gap** (the *shepherd-as-the-gate* dimension — His body in the gap, the wolf comes
+first; shipped v-a as-is at the user's choice for devotional latitude; KNOWN ACCEPTED RISK = contested
+fold-folklore, agent flagged pre-render, faithful core grounded in John 10:11). **NEW STANDING DIRECTION
+(user):** deliberately explore MULTIPLE doctrinally-faithful dimensions per Bible topic — one passage speaks
+several truths, serves more listeners; NON-NEGOTIABLE = Bible-driven + fits evangelical biblical doctrine
+(memory `multi-dimension-per-topic`). Redo backlog 27–33 CLEAR. Next: pick a topic and produce its faithful
+dimensions (starter dimension-map for Woman-at-Well / Prodigal / Psalm 22 / John 21:17 threefold in RESUME.md
+top block). Method that worked: hand-tag → clear stale _turns → per_turn_synth direct. See RESUME.md. Prior status below.
+
+**Last updated:** 2026-06-01 (late)
+**Status (2026-06-01 late):** Started next redo topic **#6 "I AM the Door" (John 10:9, series `i-am`)** fully
+in agent-mode (thread→tournament→4 candidates→judge→synth→self-review→independent, all serviced in chat; both
+reviews LOCKED). Folder `32_The_Door_Was_a_Body/v1` (NEW underscore naming, working). Text reworked 3× to the
+user's direction: (a) shepherd-as-door → panel flagged contested folklore + dropped pasture payoff; (b) user:
+"lead with I AM/deity" → reframed on the divine-Name echo, 5-LLM panel cut the rule-6 substitution import +
+present-tensed it; (c) user: "'I am the door' must land as a PERSONAL salvation INVITATION, not a metaphor" →
+current narration.md is the invitation-centered version (deity for weight, heart = "come in and be saved, open
+for you as you are," delivers saved/safe/fed/pasture). **NOT rendered — narration.mp3 on disk is STALE (earlier
+shepherd 2-voice take).** Tomorrow: re-read narration.md, decide render/tweak/re-panel, then render 2-voice
+(clear _turns first — the _finalize stale-_turns bug) + lock. See RESUME.md top block. Prior status below.
+
+**Status (2026-06-01):** REDO panel backlog CLEARED — **27/28/29/30/31 all LOCKED**. This session: confirmed
+#31 audio; paneled + finalized **#30 Smitten of God** (Isaiah 53:5 — judged 3 LLMs: dropped the 1-Peter quote
+to 2 Isaiah quotes, fixed 53:4 verbatim, identity-forward landing 'the guilt was never His. He took yours —
+into His own body', + an **Isaiah VOICE** on the two prophecy quotes → 5-turn multi-voice); paneled + finalized
+**#29 The Race He Could Never Win** (John 5:6 — judged 4 LLMs: quoted the title question 'Wilt thou be made
+whole?' which the draft had paraphrased, reframed the conviction off viewer-produced desire to grace acting
+first; kept the RACE spine distinct from shipped #18 'He Never Said Yes'; 2-voice narrator+jesus). Calibration:
+logged the misses, re-opened **grace-trap** (recurred in #29's conviction) + **kjv-verbatim** (coverage gap on
+#30's uncached 53:4), added **quote-count-rule8** + **anchor-verse-unquoted**; 4 deterministic fixes PROPOSED
+(awaiting approval). Engine changes: NEW episode folders use **underscores not spaces** (handoff.py); helper
+**_panel_existing.py** rebuilds panel_request.md for a gate-skipped folder. Known trap: `_finalize.py` doesn't
+clear `_turns/*.mp3` (stale audio on re-render — delete _turns manually). NEXT redo topic: **#6 I AM the Door
+(John 10:9)**. See RESUME.md top block. Prior status below.
+
 **Last updated:** 2026-05-31
 **Status (2026-05-31):** REDO PROGRAM underway — re-doing all ~10 distinct narration topics through
 an upgraded, panel-reviewed pipeline. Shipped this session: (1) a **PANEL GATE** in the runner
