@@ -1,5 +1,52 @@
 # RESUME.md — start here next session
 
+## ═══════════ SESSION END 2026-06-04 — ISAIAH 53 PANEL MERGED + LONG-FORM AUDIO RENDERED — READ FIRST ═══════════
+
+**Isaiah 53 long-form pilot is now SCRIPT-LOCKED (v2) + has multi-voice AUDIO.** Folder:
+`C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\01_Isaiah_53_Suffering_Servant\v1\`
+
+### ✅ External AI panel JUDGED + merged into narration.md (now v2, lock-ready)
+Panel output: `C:\Users\sanjay\PycharmProjects\PythonProject1\ai-panel\runs\2026-06-03-22-26-11\final-narration.md`
+(judge=claude; gemini=polish; codex=nothing substantive). Folded in the winning fixes:
+- **M2 KJV verbatim fix** — dropped the altered `"We hid as it were our faces from him."` (KJV 53:3 is
+  "and we hid…"; the draft capitalised + clipped it). Every remaining quote mark is now exact KJV.
+- **M4 objection steel-manned** — now CONCEDES Isaiah 49:3 ("Thou art my servant, O Israel" — God really
+  does call the nation "servant"), then answers SINLESSNESS FIRST (53:9, kills nation + remnant), then
+  53:8 "for my people." Verified 49:3 verbatim via bible-api. Biggest quality lift.
+- **M6 resurrection over-read softened** — "hiding in plain sight" → "a shape that only resurrection
+  fills… the NT brings to full light" (NT-confirmed, not proven from bare Isaiah).
+- **M3 pacing trim.** Sourcing ledger + status line updated.
+- OPEN (cosmetic): terminal punctuation inside clipped quotes (KJV colon vs script period) left as-is.
+
+### ✅ Long-form AUDIO built BY HAND (no pipeline existed) — natural pace, multi-voice
+- **`narration.mp3` = 476.56s (7 min 57s)**, atempo locked **1.0 (zero time-stretch)** per the natural-speed rule.
+  `C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\01_Isaiah_53_Suffering_Servant\v1\narration.mp3`
+- NEW artifacts: `narration-tagged.md` + `voices.json` (narrator LSi9zNCeliLuhIGGS0By · the_LORD/god
+  UzI1NsMEV3ni5JRkRSls on Isa 52:13 · eunuch/disciples puDRtQWF8NtQiPMJygTb on Acts 8:34).
+- **HOW (reuse this for long-form):** wrap EVERY KJV quote as a `<speaker>` span (the_LORD/eunuch for the
+  two voiced ones, `narrator` for the rest) so per_turn_synth splits the read into 35 small eleven_v3-safe
+  turns (longest 794 chars). Then run with **`--natural`** + a high `--target` ceiling so it never compresses:
+  ```
+  export $(grep ELEVENLABS_API_KEY <PythonProject1/.env | xargs)
+  <JITB .venv>/python.exe <PythonProject1>/jesus/narration/per_turn_synth.py "<v1>" \
+      --target 600 --natural --no-gate --pre-quote-pause 0.4 --post-quote-pause 0.35 --stability 0.65
+  ```
+  (per_turn_synth calls NO LLM — only ElevenLabs — so no agent-bridge needed. ~6.5k chars ≈ $1–2.)
+- ⚠️ UNVERIFIED BY EAR: the `[slow]/[reflective]/[deliberate]` delivery tags on narrator paragraphs —
+  eleven_v3 usually treats them as cues but can occasionally voice one. User to listen; if a stray tag is
+  spoken, strip tags on that turn + re-render the single `_turns/NN_*.mp3` with --force.
+
+### ▶ FIRST THINGS NEXT SESSION (Isaiah 53 long-form)
+1. **User listens to `narration.mp3`.** If a delivery tag is verbalised or a voice is off → fix that turn.
+2. If audio approved → decide the VIDEO path (the user chose "audio first"; video not yet greenlit).
+   16:9 long-form visuals are NOT built (cli_visual is 9:16/shorts-shaped). Options + spend below; ASK first.
+3. Production-path decision still open: extend the engine for long-form (structures.json entry + 16:9
+   visual mode + veo3_1_lite) vs keep hand-crafting. The audio half is now a proven hand-craft recipe (above).
+
+### Decisions made this session (user)
+- **Length: KEEP ~8 min** (the verbatim Servant Song is the "full meal"; trimming <7 min cuts depth not Scripture).
+- **Scope: AUDIO FIRST** (done). Full 16:9 video NOT yet authorised — quote spend before building it.
+
 ## ═══════════ SESSION END 2026-06-03 (LATE) — LONG-FORM PILOT STARTED (Isaiah 53) — READ FIRST ═══════════
 
 **NEW DIRECTION (user):** build a **long-form** companion to the shorts — 16:9, **~6–8 min**, same

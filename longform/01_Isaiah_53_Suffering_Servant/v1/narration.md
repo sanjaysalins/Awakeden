@@ -6,7 +6,7 @@
 - **Spine:** Deep-Dive Seven-Movement (Report → Scandal → Exchange → Silent Lamb + Objection → Fulfilment → Will of the LORD → Arm of the LORD)
 - **Voices:** `narrator` throughout · `the_LORD` for "Behold, my servant" · `eunuch` for the Acts 8 question · KJV verbatim for all quoted Scripture
 - **Doctrine:** penal substitution, sinless Servant, real resurrection hint, grace-anchored landing — evangelical, non-negotiable
-- **Status:** v1 tightened after independent red-team (1348 → ~915 spoken words)
+- **Status:** v2 — external AI panel merged (2026-06-03). Folded: M2 KJV verbatim fix (dropped altered "We hid…" quote), M4 objection steel-manned (concede Isa 49:3, answer sinlessness-first), M6 resurrection over-read softened, M3 pacing trim. Voice tags preserved. LOCK-READY.
 
 ---
 
@@ -48,7 +48,7 @@ a face beaten past recognising.
 "he hath no form nor comeliness; and when we shall see him, there is no beauty that we should desire him. He is despised and rejected of men; a man of sorrows, and acquainted with grief."
 
 **[narrator]**
-God's chosen Servant does not arrive in armour. He arrives in agony. The world looks at him — and looks away. "We hid as it were our faces from him."
+God's chosen Servant does not arrive in armour. He arrives in agony. The world looks at him — and looks away.
 
 The exalted one and the despised one are the same man. Hold those two together — that tension is the whole gospel in a single breath.
 
@@ -69,7 +69,7 @@ Then comes the centre of the chapter — and every line is a transaction.
 "But he was wounded for our transgressions, he was bruised for our iniquities: the chastisement of our peace was upon him; and with his stripes we are healed."
 
 **[narrator]**
-Stay on the small words, because they carry the whole weight. *Our* transgressions. *Our* iniquities. *Our* peace. *His* wounds.
+Stay on the small words. *Our* transgressions. *Our* peace. *His* wounds.
 
 This is not a good man dying as a brave example. This is a substitution: one stands in the place of many and takes what they had earned.
 
@@ -94,23 +94,31 @@ Then watch *how* he suffers.
 **[narrator]**
 No defence. No curse on his accusers. Silent.
 
-Now — an honest question, because this would not be honest without it. For centuries many thoughtful Jewish readers have understood this Servant not as one man, but as the nation of Israel itself — a suffering people, despised among the nations. That is a serious reading, and it deserves a serious answer, not a sneer.
+Now — an honest question. For centuries many thoughtful Jewish readers have understood this Servant not as one man, but as the nation of Israel itself — a suffering people, despised among the nations.
 
-Here is the answer the text gives about itself. Look again:
+And they have a real text behind them. Earlier in this same book, God calls the nation by this very title:
 
-**[narrator — KJV, Isaiah 53:8]**
-"for the transgression of my people was he stricken."
+**[narrator — KJV, Isaiah 49:3]**
+"Thou art my servant, O Israel."
 
 **[narrator]**
-The Servant is stricken *for* "my people" — so the Servant cannot simply *be* the people. He stands in their place. The sufferer and the ones he suffers for are two, not one.
+So reading chapter fifty-three as Israel is not a dodge. It is the natural first guess. It deserves a serious answer, not a sneer.
 
-And the details refuse to fit a nation.
+Here is what the chapter does that no nation can survive. First, the sufferer is sinless:
 
 **[narrator — KJV, Isaiah 53:9]**
 "he made his grave with the wicked, and with the rich in his death; because he had done no violence, neither was any deceit in his mouth."
 
 **[narrator]**
-A single grave. A rich man's tomb. A whole life with no violence and no deceit in it — sinless. No nation in history has ever been honestly described that way. This is not a people. This is a person.
+No people in history — not a nation, not even its most faithful remnant — has ever been honestly described that way.
+
+Second, he dies *for* the people:
+
+**[narrator — KJV, Isaiah 53:8]**
+"for the transgression of my people was he stricken."
+
+**[narrator]**
+The Servant stands in their place — so he cannot simply *be* them. A single grave. A rich man's tomb. A sinless life. This is not a people. This is a person.
 
 ---
 
@@ -158,7 +166,7 @@ Then, quietly, the chapter turns toward morning.
 "he shall see his seed, he shall prolong his days... He shall see of the travail of his soul, and shall be satisfied."
 
 **[narrator]**
-A man bruised to death does not live to see his days prolonged — unless death is not the end of him. Buried in verse nine; alive again in verse eleven. The resurrection is hiding in plain sight, written centuries before the empty tomb was ever found.
+A man bruised to death does not live to see his days prolonged — unless death is not the end of him. Buried in verse nine; alive in verse eleven. Isaiah does not spell out an empty tomb — but he leaves a shape that only resurrection fills, a shadow the New Testament would bring into full light.
 
 And looking back over all of it, the risen Servant feels one word: *satisfied.* It was enough. It worked.
 
@@ -187,10 +195,10 @@ Have you believed the report?
 
 ## DEPTH & SOURCING  *(not spoken — faithfulness ledger)*
 
-- **All quoted Scripture is KJV verbatim** (fetched via the engine's scripture pipeline): Isaiah 52:13–14, 53:1–12; Acts 8:32–35. Independent red-team verified all quotes verbatim and correctly referenced.
+- **All quoted Scripture is KJV verbatim** (fetched via the engine's scripture pipeline): Isaiah 49:3, 52:13–14, 53:1–12; Acts 8:32–35. Independent red-team + external panel verified all quotes verbatim and correctly referenced. (Panel caught + removed one altered quote in M2; Isaiah 49:3 added in M4 — "Thou art my servant, O Israel" is verbatim.)
 - **Penal substitution** is the explicit teaching of 53:4–6 ("wounded for *our* transgressions… the LORD hath laid on him the iniquity of us all") — affirmed, not invented.
-- **The Israel/corporate reading** (Movement 4) is presented honestly as a serious historic interpretation, then answered *from the text itself* (53:8 "for the transgression of **my people** was he stricken" distinguishes the Servant from the people; 53:9 sinlessness + individual grave). No strawman, no sneer.
-- **Resurrection** (Movement 6) is drawn from the text's own tension (death in v9 → "prolong his days / see his seed / be satisfied" in vv10–11), framed as a hint the NT confirms — not over-read.
+- **The Israel/corporate reading** (Movement 4) is steel-manned, not strawmanned: we **concede its strongest form** — God really does call the nation "my servant" elsewhere (Isaiah 49:3 "Thou art my servant, O Israel"), so reading ch. 53 as Israel is the natural first guess — then answer **from the text itself**, sinlessness first (53:9 "no violence… no deceit" rules out a nation *and* its most faithful remnant), then 53:8 "for the transgression of **my people**" (the Servant suffers *for* the people, so cannot *be* them). No sneer.
+- **Resurrection** (Movement 6) is drawn from the text's own tension (death in v9 → "prolong his days / see his seed / be satisfied" in vv10–11), and framed conservatively: Isaiah leaves "a shape that only resurrection fills" which the NT brings to full light — a hint the NT confirms, NOT a resurrection proven from bare Isaiah (over-read corrected per external panel).
 - **"It pleased the LORD to bruise him"** avoids the "divine child abuse" caricature: the Father's redemptive will + the Son's willing self-offering (53:12 "poured out his soul unto death").
 - **Fulfilment is NT-warranted, not asserted:** Acts 8:35 (Philip "preached unto him Jesus" from this chapter); further confirmed by Matthew 8:17 and 1 Peter 2:24, which quote Isaiah 53 of Jesus directly (kept in this ledger rather than stacked in the spoken close, to protect the "preached unto him Jesus" hinge line).
 - **Grace-anchored landing:** no gain/loss, no fear-selling, no manufactured pressure — "you do not have to clean yourself up before you come."
