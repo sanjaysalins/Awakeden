@@ -45,6 +45,41 @@ class NarrationSegment:
 
 
 # --------------------------------------------------------------------------
+# A phrase/beat — the fine-grained unit a clip is pinned to (Rule 3)
+# --------------------------------------------------------------------------
+@dataclass
+class Phrase:
+    """One spoken phrase/clause with REAL per-word start/end times (from forced
+    alignment), the matching unit for beat-accurate clip placement. A clip is
+    pinned to the phrase it depicts so the image sits under the exact words."""
+    index: int                 # 0-based order along the timeline
+    section: str               # the narration section this phrase belongs to
+    speaker: str               # narrator | jesus | ...
+    text: str                  # the spoken words of this phrase
+    start_s: float             # absolute start on the final timeline (first word)
+    end_s: float               # absolute end (last word)
+
+    @property
+    def duration_s(self) -> float:
+        return max(0.0, self.end_s - self.start_s)
+
+    @property
+    def word_count(self) -> int:
+        return len(self.text.split())
+
+    @classmethod
+    def from_json(cls, d: dict) -> "Phrase":
+        return cls(
+            index=int(d.get("index", 0) or 0),
+            section=str(d.get("section", "")).strip().lower(),
+            speaker=str(d.get("speaker", "")).strip().lower(),
+            text=str(d.get("text", "")).strip(),
+            start_s=float(d.get("start_s", 0.0) or 0.0),
+            end_s=float(d.get("end_s", 0.0) or 0.0),
+        )
+
+
+# --------------------------------------------------------------------------
 # A rendered clip the planner can place
 # --------------------------------------------------------------------------
 @dataclass
@@ -113,6 +148,8 @@ class EditSlot:
     speed_factor: float
     op: str                    # "speed" | "speed+trim"
     rationale: str = ""
+    beat_index: int = -1       # which phrase/beat this clip is pinned to (-1 = hero/none)
+    beat_phrase: str = ""      # the exact spoken words this clip plays under (Rule 3)
 
     @property
     def slot_duration_s(self) -> float:
@@ -136,6 +173,8 @@ class EditSlot:
             speed_factor=float(d.get("speed_factor", 1.0) or 1.0),
             op=str(d.get("op", "speed")).strip().lower() or "speed",
             rationale=str(d.get("rationale", "")).strip(),
+            beat_index=int(d.get("beat_index", -1) if d.get("beat_index") is not None else -1),
+            beat_phrase=str(d.get("beat_phrase", "")).strip(),
         )
 
 

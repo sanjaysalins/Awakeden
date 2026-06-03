@@ -173,8 +173,10 @@ def _verify_slot_vision(frame_png: bytes, words: str, clip: ClipAsset, sacred: b
             "You verify that a video frame matches the narration line shown under it in "
             "a 60-second gospel Short. Pass UNLESS the image clearly contradicts or is "
             "irrelevant to the words. Minor literalness is fine (symbolic/echo images "
-            "count as matching). Return ONLY JSON:\n"
-            '{"passed": true|false, "note": "one short line"}'
+            "count as matching). ALSO FAIL if the frame visibly depicts a DIFFERENT story "
+            "than the words (a foreign parable's subject — e.g. a swine/husks under a "
+            "non-Prodigal line, a courtyard denial-fire under an unrelated line). Return "
+            'ONLY JSON:\n{"passed": true|false, "note": "one short line"}'
         )
     user = (
         f"NARRATION WORDS under this frame:\n\"{words}\"\n\n"
@@ -232,9 +234,14 @@ def verify_cut(
         if clip is None:
             continue
         sacred = _is_sacred(clip)
-        mid = (s.slot_start_s + s.slot_end_s) / 2
-        words = _section_words(segments, s.section)
-        png = _extract_frame(viral_cut, mid, frames_dir / f"slot{s.order:02d}.png")
+        # Sample the ESTABLISHING frame (early in the slot — shows the clip's main
+        # subject), not the mid-slot frame (which often lands on a macro/insert and
+        # made the old verify misjudge the wrong image).
+        t = s.slot_start_s + min(0.4, s.slot_duration_s * 0.25)
+        # Verify against the EXACT phrase this clip plays under (Rule 3), falling back
+        # to the section text only when no beat phrase was recorded (legacy mode).
+        words = s.beat_phrase or _section_words(segments, s.section)
+        png = _extract_frame(viral_cut, t, frames_dir / f"slot{s.order:02d}.png")
         try:
             passed, note = _verify_slot_vision(png.read_bytes(), words, clip, sacred)
         except Exception as e:

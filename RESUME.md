@@ -1,5 +1,52 @@
 # RESUME.md — start here next session
 
+## ═══════════ SESSION END 2026-06-03 (LATE) — LONG-FORM PILOT STARTED (Isaiah 53) — READ FIRST ═══════════
+
+**NEW DIRECTION (user):** build a **long-form** companion to the shorts — 16:9, **~6–8 min**, same
+narration style + animation, but **deep, substantial, "a full meal"** (the short is "a quick snack").
+Must be heavily researched, well-structured, make sense to a first-time listener, rooted in the Bible,
+and bring out depth the shorts can't. Picked **one pilot topic from the catalogue: Isaiah 53 — The
+Suffering Servant** (~5–7 min target chosen; landed ~7.5–8 min). Memory: `longform-deep-dive-format`.
+
+### ✅ ep08 Woman at the Well (John 4) — FINISHED earlier this session
+- `C:\Users\sanjay\PycharmProjects\PythonProject1\jesus\narration\08 The Well That Never Runs Dry\v1\assembly\viral_cut.mp4` (59.0s)
+- 11 clips, none reused, every beat matched (verified frame-by-frame), opens on the woman, closes on Christ at the well. Both reviews LOCKED. Library now 88 stills.
+
+### ▶▶ LONG-FORM PILOT — WHERE IT STANDS (do this first next session)
+Working folder (NEW — long-form lives in THIS repo, not PythonProject1):
+`C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\01_Isaiah_53_Suffering_Servant\v1\`
+- **`narration.md`** — the LOCKED-candidate script. **7-movement long-form spine** (the new structure):
+  Report → Behold My Servant (scandal) → The Exchange (substitution heart) → Silent Lamb + honest
+  objection → "Of whom speaketh the prophet this?" (Acts 8 fulfilment) → It Pleased the LORD →
+  The Arm of the LORD (conviction+landing). Passage walked verbatim = Isaiah 52:13–53:12 + Acts 8:32-35.
+  Tightened after internal red-team (1348 → ~1180 spoken words; ~28% is unavoidable KJV quote).
+- **`panel_request.md`** — the document the USER asked for, to feed his **external AI panel**.
+  Adapted from `pipeline/panel.py` for long-form: engine/red-team self-assessment (attack length /
+  M3-M5 drag / resurrection over-read / objection / landing) + full 7-movement script (KJV bolded
+  + referenced) + a copy-paste PROMPT block with 8 binding rules for 2–4 external LLMs.
+- **Internal independent red-team already done** (general-purpose agent): verdict REVISE → only real
+  defect was LENGTH; doctrine SOUND, every KJV quote verbatim, objection steel-manned, landing
+  grace-anchored. Its cut list was applied.
+
+### ▶ FIRST THINGS NEXT SESSION (long-form)
+1. **User is running `panel_request.md` through his external AI panel tonight** — he'll bring the
+   replies back. JUDGE them, fold winners into `narration.md`, lock the script.
+2. Open decision he was asked (UNANSWERED — he pivoted to "panel it" + "save for tomorrow"):
+   (a) keep ~8 min as-is vs trim narration to <7 min; (b) how far to take the pilot — full
+   audio+16:9 video / audio-only first / script-only. **ASK before any metered spend.**
+3. When script locks → build the long-form PRODUCTION path. NOT YET BUILT (this was a hand-crafted
+   pilot, no pipeline): need (a) multi-voice audio at long-form length (narrator + `the_LORD` for
+   Isa 52:13 + `eunuch` for Acts 8:34 — voices.json TBD), (b) **16:9** scene plan (cli_visual is
+   9:16/shorts-shaped — long-form needs 16:9 + more scenes), (c) **veo3_1_lite** animation (the
+   LOCKED long-form video model, `VIDEO_PROVIDER=hybrid`, `VIDEO_HF_MODEL=veo3_1_lite`,
+   `VIDEO_DURATION=8` — veo keeps the Baroque look at ~half Kling credits; falls back to direct-Kling
+   for the NSFW-blocked cross), (d) a 16:9 assembly. Decide: extend the engine (structures.json
+   long-form entry + 16:9 visual mode) vs keep hand-crafting the pilot. Quote spend first.
+
+### NOTE on length math
+Walking the full Servant Song verbatim is naturally ~7.5–8 min — the verbatim chapter+Acts is ~330
+spoken words (~28%) and won't be cut. Forcing <7 min means trimming narration depth, not Scripture.
+
 ## ═══════════ SESSION END 2026-06-03 — NATURAL SPEED + MORE CLIPS — READ FIRST ═══════════
 
 **User direction (LOCKED, memory `feedback-natural-speed-more-clips`):** narration plays at NATURAL,

@@ -1,0 +1,2 @@
+# veed_io dependencies (self-contained; independent of the main engine)
+fal-client>=0.5.0

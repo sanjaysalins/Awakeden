@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VEED dynamic subtitle presets — gallery</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px;
+    background: #0d0f13; color: #e7e9ee;
+    font: 15px/1.5 system-ui, "Segoe UI", Roboto, sans-serif;
+  }
+  header { max-width: 1200px; margin: 0 auto 20px; }
+  h1 { margin: 0 0 6px; font-size: 22px; }
+  .sub { color: #9aa3b2; font-size: 14px; }
+  .spend {
+    display: inline-block; margin-top: 12px; padding: 8px 14px;
+    background: #c0152f; color: #fff; font-weight: 800; border-radius: 6px;
+    letter-spacing: .3px;
+  }
+  .controls { margin: 16px auto 0; max-width: 1200px; display: flex; gap: 10px; flex-wrap: wrap; }
+  button {
+    background: #1b2030; color: #e7e9ee; border: 1px solid #2c3346;
+    padding: 8px 14px; border-radius: 6px; cursor: pointer; font: inherit;
+  }
+  button:hover { background: #232a3d; }
+  .grid {
+    max-width: 1200px; margin: 20px auto 0;
+    display: grid; gap: 18px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  .card {
+    background: #151926; border: 1px solid #232a3d; border-radius: 10px;
+    overflow: hidden; display: flex; flex-direction: column;
+  }
+  .card video { width: 100%; display: block; background: #000; aspect-ratio: 16/9; }
+  .meta { padding: 10px 12px 12px; }
+  .name { font-weight: 700; font-size: 16px; display: flex; align-items: center; gap: 8px; }
+  .tag {
+    font-size: 11px; font-weight: 700; background: #2a1a00; color: #ffb547;
+    border: 1px solid #4a3300; padding: 1px 7px; border-radius: 999px;
+  }
+  .desc { color: #9aa3b2; font-size: 13px; margin-top: 4px; }
+  footer { max-width: 1200px; margin: 28px auto 0; color: #6c7589; font-size: 12px; }
+  a { color: #7aa2ff; }
+</style>
+</head>
+<body>
+<header>
+  <h1>VEED — dynamic subtitle presets</h1>
+  <div class="sub">Same 12.05s source clip, rendered through each dynamic (2&times;) preset via <code>veed/subtitles</code> on fal.ai.</div>
+  <div class="spend">SPEND TO PRODUCE THIS GALLERY: $0.66 &nbsp;(7 dynamic + 21 basic; whisper reused)</div>
+</header>
+
+<div class="controls">
+  <button onclick="allPlay()">&#9654; Play all</button>
+  <button onclick="allPause()">&#10073;&#10073; Pause all</button>
+  <button onclick="toggleMute()" id="muteBtn">&#128263; Unmute all</button>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<footer>
+  Files: <code>preset_&lt;name&gt;.mp4</code> in this folder
+  (<code>C:\Users\sanjay\PycharmProjects\JesusInTheBible\veed_io\out\</code>).
+  Pricing is a client-side estimate ($0.10/min &times; 2 for dynamic presets); the fal.ai dashboard is authoritative.
+</footer>
+
+<script>
+const DYNAMIC = [
+  { id: "whisper",     desc: "Big bold CENTERED, animated, key word in a green→yellow gradient highlight. Punchy / TikTok." },
+  { id: "glide",       desc: "Large centered bold, word highlighted yellow. High-impact, fills the frame." },
+  { id: "glass",       desc: "Small lowercase, white with soft outline, sits low. Understated / minimal." },
+  { id: "glide2",      desc: "Clean white bold, bottom-center, no colour accent. Neutral / simple." },
+  { id: "fusion",      desc: "White bold, bottom, one word highlighted yellow. Like glide2 with pop." },
+  { id: "terminal",    desc: "Monospace green 'matrix/coder' text with a cursor block. Very distinct / techy." },
+  { id: "handwritten", desc: "Casual rounded white font, bottom-center. Friendly / personal." },
+];
+const BASIC = [
+  { id: "simple",    desc: "Minimal lowercase, light yellow accent on the key word." },
+  { id: "plain",     desc: "Plainest — white bold, no accent." },
+  { id: "beans",     desc: "ALL-CAPS bold white." },
+  { id: "corpo",     desc: "Clean white lowercase, corporate." },
+  { id: "boo",       desc: "White bold, centered-ish." },
+  { id: "shadeplay", desc: "White caps with drop shadow." },
+  { id: "casper",    desc: "White bold lowercase, soft." },
+  { id: "capri",     desc: "White bold, yellow word highlight." },
+  { id: "lowkey",    desc: "White bold ALL-CAPS." },
+  { id: "vinta",     desc: "Vintage gold/yellow highlight." },
+  { id: "diego",     desc: "Bold caps, yellow word highlight." },
+  { id: "ali",       desc: "Plain white bold caps." },
+  { id: "slay",      desc: "Bold caps, yellow highlight, sporty." },
+  { id: "kitty",     desc: "Caps with pink/red highlight." },
+  { id: "hustle",    desc: "Bold caps, yellow highlight." },
+  { id: "karl",      desc: "White bold lowercase, clean." },
+  { id: "sprout",    desc: "White bold, friendly." },
+  { id: "flex",      desc: "Bold ALL-CAPS." },
+  { id: "mint",      desc: "White bold lowercase, light." },
+  { id: "rizz",      desc: "Bold caps with highlight." },
+  { id: "vegas",     desc: "Bold caps with pink/red highlight, showy." },
+];
+
+const grid = document.getElementById("grid");
+function section(title) {
+  const h = document.createElement("div");
+  h.style.cssText = "grid-column:1/-1;margin:18px 0 2px;font-weight:800;font-size:18px;color:#ffb547;";
+  h.textContent = title;
+  grid.appendChild(h);
+}
+function addCards(list, tier, mult) {
+  for (const p of list) {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <video src="preset_${p.id}.mp4" muted loop playsinline preload="metadata" controls></video>
+      <div class="meta">
+        <div class="name">${p.id} <span class="tag">${tier} ${mult}</span></div>
+        <div class="desc">${p.desc}</div>
+      </div>`;
+    grid.appendChild(card);
+  }
+}
+section("Dynamic presets — 2× price (richer, animated)");
+addCards(DYNAMIC, "DYNAMIC", "2&times;");
+section("Basic presets — 1× price (fixed, lightweight)");
+addCards(BASIC, "BASIC", "1&times;");
+
+const vids = () => Array.from(document.querySelectorAll("video"));
+function allPlay()  { vids().forEach(v => v.play()); }
+function allPause() { vids().forEach(v => v.pause()); }
+let muted = true;
+function toggleMute() {
+  muted = !muted;
+  vids().forEach(v => v.muted = muted);
+  document.getElementById("muteBtn").innerHTML =
+    muted ? "&#128263; Unmute all" : "&#128266; Mute all";
+}
+</script>
+</body>
+</html>

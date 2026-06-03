@@ -121,11 +121,53 @@ def run_assembly(
 
     log("[A1] Building narration timeline from per-turn audio...")
     segments = T.build_timeline(v1_folder, log=log)
+
+    # Beat board (Rule 3): forced-alignment → per-word times → clause-sized phrases the
+    # matcher pins clips to. Falls back to section-level matching if alignment is
+    # unavailable (e.g. key lacks the forced_alignment permission).
+    beats = None
+    if config.ASSEMBLY_BEAT_MATCH:
+        log("[A1b] Forced-alignment + phrase board (beat-accurate matching)...")
+        try:
+            from pipeline import assembly_align as AL
+            words = AL.align(v1_folder, log=log)
+            beats = T.build_phrase_board(segments, words, log=log)
+            T.print_phrase_board(beats, log=log)
+        except SystemExit as e:
+            log(f"      ! beat alignment unavailable — {e}")
+            log("      ! FALLING BACK to section-level matching (set up forced-alignment "
+                "for beat-accurate clip placement).")
+            beats = None
+
     clips = T.load_clips(v1_folder, provider, exclude=exclude, log=log)
     if exclude:
         log(f"      (excluded {sorted(exclude)} from the cut)")
     if not clips:
         raise SystemExit(f"No rendered clips for provider '{provider}'. Run the visual stage first.")
+
+    # Episode-fit safety net: drop clips that visibly tell ANOTHER story (foreign to this
+    # narration), protecting the gospel-pivot/Christ clips. Behind the library gate; also
+    # covers non-library episodes. Skipped when reusing a LOCKED plan (no re-match).
+    if config.ASSEMBLY_EPISODE_FIT and (replan or _load_existing(out_dir) is None):
+        narr_md = v1_folder / "narration.md"
+        if narr_md.exists():
+            flagged = E.flag_offtopic_clips(clips, narr_md.read_text(encoding="utf-8"), log=log)
+            drop = {i for i, _why in flagged.items()
+                    if i in {c.scene_index for c in clips} and not E._is_gospel_pivot(
+                        next(c for c in clips if c.scene_index == i))}
+            for i in sorted(drop):
+                why = flagged[i]
+                title = next(c.title for c in clips if c.scene_index == i)
+                log(f"      [episode-fit] DROP #{i:02d} '{title}' — foreign to this episode: {why}")
+            if drop:
+                exclude = set(exclude) | drop
+                clips = [c for c in clips if c.scene_index not in drop]
+            kept_foreign = [i for i in flagged if i not in drop]
+            if kept_foreign:
+                log(f"      [episode-fit] kept {sorted(kept_foreign)} (gospel-pivot — protected; "
+                    "review the image manually)")
+    if not clips:
+        raise SystemExit("Episode-fit dropped all clips — pool is off-topic; re-select the visual pool.")
     clips_by_index = {c.scene_index: c for c in clips}
     T.print_board(segments, clips, log=log)
 
@@ -147,32 +189,36 @@ def run_assembly(
     else:
         thread = _thread_summary(v1_folder)
         hero_pref = hero or config.ASSEMBLY_HERO_SCENE or _scene_hero_candidate(v1_folder)
-        log(f"\n[A2] Jigsaw matching (budget={clip_budget}, hero_pref={hero_pref or 'auto'})...")
+        match_mode = "beat" if beats else "section"
+        log(f"\n[A2] Jigsaw matching ({match_mode} mode, budget={clip_budget}, "
+            f"hero_pref={hero_pref or 'auto'})...")
         plan = E.plan_edit(segments, clips, clip_budget=clip_budget,
-                           thread_summary=thread, hero_pref=hero_pref, log=log)
+                           thread_summary=thread, hero_pref=hero_pref, beats=beats, log=log)
         log(f"      reading: {plan.narration_reading[:120]}...")
 
-        log("[A3] Self-review (6 agents + AS-G1..G7 deterministic + AS-G8 thread)...")
-        self_review = E.review_edit_plan(segments, clips, plan)
+        log("[A3] Self-review (panel + AS-G1..G9 deterministic + AS-G8 beat continuity)...")
+        self_review = E.review_edit_plan(segments, clips, plan, beats=beats)
         log(f"      {self_review.overall} ({len(self_review.failed_gates)} FAIL)")
         while self_review.failed_gates and revisions < config.MAX_REVISIONS:
             revisions += 1
             log(f"      revising ({revisions}/{config.MAX_REVISIONS})...")
-            plan = E.revise_edit_plan(segments, clips, plan, self_review, thread_summary=thread, log=log)
-            self_review = E.review_edit_plan(segments, clips, plan)
+            plan = E.revise_edit_plan(segments, clips, plan, self_review,
+                                      thread_summary=thread, beats=beats, log=log)
+            self_review = E.review_edit_plan(segments, clips, plan, beats=beats)
             log(f"      {self_review.overall} ({len(self_review.failed_gates)} FAIL)")
 
         independent_review = None
         if config.ASSEMBLY_INDEPENDENT_REVIEW:
             log("[A4] INDEPENDENT red-team audit (authoritative)...")
-            independent_review = E.independent_review_edit_plan(segments, clips, plan)
+            independent_review = E.independent_review_edit_plan(segments, clips, plan, beats=beats)
             log(f"      independent: {independent_review.overall} "
                 f"({len(independent_review.failed_gates)} FAIL)")
             while independent_review.failed_gates and revisions < config.MAX_REVISIONS:
                 revisions += 1
                 log(f"      revising from independent ({revisions}/{config.MAX_REVISIONS})...")
-                plan = E.revise_edit_plan(segments, clips, plan, independent_review, thread_summary=thread, log=log)
-                independent_review = E.independent_review_edit_plan(segments, clips, plan)
+                plan = E.revise_edit_plan(segments, clips, plan, independent_review,
+                                          thread_summary=thread, beats=beats, log=log)
+                independent_review = E.independent_review_edit_plan(segments, clips, plan, beats=beats)
                 log(f"      independent: {independent_review.overall} "
                     f"({len(independent_review.failed_gates)} FAIL)")
         audit = None

@@ -16,7 +16,7 @@ from pathlib import Path
 
 import config
 from pipeline.assembly_ffmpeg import ffprobe_duration
-from pipeline.assembly_models import ClipAsset, NarrationSegment
+from pipeline.assembly_models import ClipAsset, NarrationSegment, Phrase
 from pipeline.visual_models import ScenePlan
 
 
@@ -181,6 +181,85 @@ def _pre_quote_pause(v1_folder: Path) -> float:
 
 def total_seconds(segments: list[NarrationSegment]) -> float:
     return max((s.end_s for s in segments), default=0.0)
+
+
+# --------------------------------------------------------------------------
+# Phrase board (Rule 3: beat-accurate matching unit, from forced alignment)
+# --------------------------------------------------------------------------
+_STRONG_END = set(".?!:;…")
+_QUOTE_STRIP = "\"'“”‘’)]}"
+
+
+def _ends_phrase(word_text: str, running_words: int) -> bool:
+    """True if this word should CLOSE the current phrase. Strong sentence/clause
+    punctuation always splits; a comma splits only once the phrase is long enough,
+    so we get clause-sized beats, never one-word fragments."""
+    w = word_text.rstrip(_QUOTE_STRIP)
+    if not w:
+        return False
+    if w.endswith("--") or w.endswith("—"):
+        return True
+    last = w[-1]
+    if last in _STRONG_END:
+        return True
+    if last == "," and running_words >= config.ASSEMBLY_MIN_PHRASE_WORDS:
+        return True
+    return False
+
+
+def _segment_at(segments: list[NarrationSegment], t: float) -> NarrationSegment | None:
+    """The narration segment whose window contains time t, else the nearest one."""
+    for s in segments:
+        if s.start_s - 1e-3 <= t <= s.end_s + 1e-3:
+            return s
+    if not segments:
+        return None
+    return min(segments, key=lambda s: min(abs(t - s.start_s), abs(t - s.end_s)))
+
+
+def build_phrase_board(
+    segments: list[NarrationSegment], words: list, log=print
+) -> list[Phrase]:
+    """Group aligned words into clause-sized phrases with REAL start/end times,
+    tagging each with the narration section/speaker it falls under. This is the
+    fine-grained unit the matcher pins clips to (a clip sits under the exact
+    phrase it depicts), replacing the coarse per-turn/section window."""
+    raw: list[tuple[str, float, float]] = []
+    cur: list = []
+
+    def flush():
+        if cur:
+            text = " ".join(w.text for w in cur).strip()
+            raw.append((text, cur[0].start, cur[-1].end))
+            cur.clear()
+
+    max_words = config.ASSEMBLY_MAX_PHRASE_WORDS
+    for w in words:
+        cur.append(w)
+        if _ends_phrase(w.text, len(cur)) or len(cur) >= max_words:
+            flush()
+    flush()
+
+    phrases: list[Phrase] = []
+    for i, (text, s, e) in enumerate(raw):
+        seg = _segment_at(segments, (s + e) / 2.0)
+        phrases.append(Phrase(
+            index=i,
+            section=seg.section if seg else "",
+            speaker=seg.speaker if seg else "narrator",
+            text=text,
+            start_s=round(float(s), 3),
+            end_s=round(float(e), 3),
+        ))
+    log(f"      [phrases] {len(phrases)} beats from {len(words)} aligned words")
+    return phrases
+
+
+def print_phrase_board(phrases: list[Phrase], log=print) -> None:
+    log(f"\n=== PHRASE BOARD ({len(phrases)} beats) ===")
+    for p in phrases:
+        log(f"  P{p.index:02d} [{p.section:>8}/{p.speaker:<7}] "
+            f"{p.start_s:6.2f}-{p.end_s:6.2f}s ({p.duration_s:4.2f}s) {p.text}")
 
 
 # --------------------------------------------------------------------------

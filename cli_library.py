@@ -97,16 +97,68 @@ def cmd_status(args):
               f"{'PIVOT' if e.get('gospel_pivot') else ''}")
 
 
+def _apply_fit_audit(v1, norm: dict, entries: list[dict]) -> dict:
+    """Run the topical-fit audit over the SELECTED LIBRARY stills and demote any
+    that import a foreign story: drop them from the order and swap in the audit's
+    suggested native gap. Writes <v1>/visual/_episode_fit.json. (Rule: a clip must
+    belong to THIS episode — the fix for borrowed prodigal/denial stills.)"""
+    selected_lib = [HL.by_slug(entries, s) for s in norm["ordered_slugs"]]
+    selected_lib = [e for e in selected_lib if e]  # only real library stills (not gaps)
+    if not selected_lib:
+        return norm
+    fit = HL.audit_episode_fit(v1, selected_lib)
+    (v1 / "visual").mkdir(parents=True, exist_ok=True)  # may not exist for an unbuilt episode
+    (v1 / "visual" / "_episode_fit.json").write_text(
+        json.dumps(fit, indent=2, ensure_ascii=False), encoding="utf-8")
+    failed = {s: r for s, r in fit.items() if not r.get("fits", True)}
+    if not failed:
+        print("  episode-fit: all selected stills belong to this episode ✓")
+        return norm
+    new_order = list(norm["ordered_slugs"])
+    new_gaps = {g["slug_hint"].strip().lower(): g for g in norm["gaps"]}
+    hero = norm["hero_slug"]
+    for slug, r in failed.items():
+        rep = r.get("replacement") or {}
+        rep_slug = (rep.get("slug_hint") or f"{slug}-native").strip().lower()
+        print(f"  episode-fit: DROP '{slug}' — foreign: {r.get('foreign_element','?')} "
+              f"({r.get('reason','')}) -> gap '{rep_slug}'")
+        new_order = [rep_slug if s == slug else s for s in new_order]
+        if rep:
+            rep["slug_hint"] = rep_slug
+            new_gaps[rep_slug] = rep
+        if slug == hero:
+            hero = rep_slug
+    norm["ordered_slugs"] = new_order
+    norm["gaps"] = list(new_gaps.values())
+    norm["hero_slug"] = hero
+    norm["episode_fit"] = fit
+    # re-validate against the post-swap order (gaps are validated via their specs)
+    revalidate = _resolve_and_validate(
+        {"reading": norm.get("reading", ""),
+         "selection": [{"id": (s if HL.by_slug(entries, s) else None), "gap_ref": (None if HL.by_slug(entries, s) else s)} for s in new_order],
+         "hero_id": hero, "gaps": norm["gaps"]}, entries)
+    norm["validation"] = revalidate["validation"]
+    return norm
+
+
+def cmd_classify(args):
+    HL.classify_library(force=args.force)
+
+
 def cmd_select(args):
     entries = HL.load()
     if not entries:
         raise SystemExit("library empty — run `seed` first")
+    if any("thread_neutral" not in e for e in entries):
+        print("[note] some stills are unclassified for reuse-safety — run "
+              "`cli_library.py classify` first for the strongest guard.")
     all_gaps: dict[str, dict] = {}
     for p in args.folders:
         v1 = _v1(p)
         print(f"\n=== select: {v1.parent.name} ===")
         doc = HL.select_for_episode(v1, entries, target_clips=args.clips)
         norm = _resolve_and_validate(doc, entries)
+        norm = _apply_fit_audit(v1, norm, entries)  # topical-fit gate (drops foreign stills)
         out = v1 / "visual" / "_library_selection.json"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(json.dumps(norm, indent=2, ensure_ascii=False), encoding="utf-8")
@@ -191,6 +243,10 @@ def main():
     sub.add_parser("status").set_defaults(func=cmd_status)
     sub.add_parser("index").set_defaults(func=cmd_index)
     sub.add_parser("index-all").set_defaults(func=cmd_index_all)
+
+    cl = sub.add_parser("classify")  # backfill reuse-safety tags (thread-neutral vs story-specific)
+    cl.add_argument("--force", action="store_true")
+    cl.set_defaults(func=cmd_classify)
 
     sp = sub.add_parser("select"); sp.add_argument("folders", nargs="+")
     sp.add_argument("--clips", type=int, default=8); sp.set_defaults(func=cmd_select)

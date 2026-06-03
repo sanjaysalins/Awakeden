@@ -306,6 +306,28 @@ ASSEMBLY_REVERENCE_CAP = float(os.getenv("ASSEMBLY_REVERENCE_CAP", "1.3"))
 # No slot shorter than this (seconds) — avoids subliminal flashes.
 ASSEMBLY_MIN_SLOT = float(os.getenv("ASSEMBLY_MIN_SLOT", "0.8"))
 
+# --- Beat-accurate matching (Rule 3) + moment density (Rule 2) ---
+# Per-word timing comes from ElevenLabs forced-alignment (pipeline/assembly_align.py),
+# grouped into clause-sized PHRASES so each clip is pinned under the exact words it
+# depicts. Set ASSEMBLY_BEAT_MATCH=0 to fall back to the legacy section-level matching
+# (no alignment call).
+ASSEMBLY_BEAT_MATCH = os.getenv("ASSEMBLY_BEAT_MATCH", "1") not in ("0", "false", "False", "")
+# Phrase splitter: a comma only starts a new beat once the running phrase is at least
+# MIN words; any phrase is force-split at MAX words. Tune for beat granularity.
+ASSEMBLY_MIN_PHRASE_WORDS = int(os.getenv("ASSEMBLY_MIN_PHRASE_WORDS", "3"))
+ASSEMBLY_MAX_PHRASE_WORDS = int(os.getenv("ASSEMBLY_MAX_PHRASE_WORDS", "12"))
+# Episode-fit safety net: before matching, an LLM flags clips that visibly tell ANOTHER
+# story (a foreign parable's subject) and the runner drops the flagged NON-pivot clips —
+# the last line of defence behind the library's topical-fit gate. Set 0 to disable.
+ASSEMBLY_EPISODE_FIT = os.getenv("ASSEMBLY_EPISODE_FIT", "1") not in ("0", "false", "False", "")
+
+# Moment density (Rule 2: "more clips, sped up, lots of moments"). The density check
+# (AS-G9) is ADVISORY ONLY (CONDITIONAL, never FAIL — a small pool cannot be fixed by
+# the matcher, so failing it would just thrash the revise loop). It flags when body
+# slots run longer than TARGET on average and reports how many more clips to RENDER
+# upstream to hit the target moment count.
+ASSEMBLY_TARGET_SLOT = float(os.getenv("ASSEMBLY_TARGET_SLOT", "4.0"))
+
 # Bookend hold times. The cut always holds the HERO (the Christ / cross / NT-gospel
 # pivot) for ASSEMBLY_HERO_TAIL seconds at the very end as the CTA landing. In the
 # legacy "hero" open mode it ALSO holds the hero for ASSEMBLY_HERO_HEAD seconds at the

@@ -118,6 +118,126 @@ def is_gospel_pivot(entry: dict) -> bool:
 
 
 # --------------------------------------------------------------------------
+# Cross-episode REUSE SAFETY — thread-neutral vs story-specific classification
+# + per-episode topical-fit audit. (Fixes the bug where the selector imported
+# another story's stills — the Prodigal's swine/husks, Peter's courtyard fire —
+# into an episode just because the generic theme overlapped.)
+# --------------------------------------------------------------------------
+_CLASSIFY_ROLE = (
+    "You classify a Baroque gospel-short still for CROSS-EPISODE REUSE SAFETY.\n"
+    "- THREAD-NEUTRAL = a generic plate reusable in ANY gospel short: bread, a loaf, a "
+    "candle/lamp, hands, a table/feast, water/a cup, sky/light, a plain cross or Christ "
+    "figure, an ANONYMOUS person. It carries no marker tying it to one specific story.\n"
+    "- STORY-SPECIFIC = it depicts a PARTICULAR narrative — a named/identifiable person, "
+    "place, or object that ties the image to one parable or scene. Examples: a SWINE or "
+    "carob HUSKS or a feeding-trough (the Prodigal Son); a COURTYARD CHARCOAL FIRE with a "
+    "kneeling/denying man (Peter's denial); a specific WELL, the POOL of Bethesda, a fishing "
+    "BOAT in a storm. The cross/Christ alone is NOT story-specific.\n"
+    'Return ONLY JSON: {"thread_neutral": true|false, '
+    '"origin_subject": "<the specific story/subject this ties to, or \'\' if neutral>", '
+    '"foreign_markers": ["named elements that tie it to one story"]}'
+)
+
+
+def classify_still(entry: dict) -> dict:
+    user = (f"TITLE: {entry.get('title','')}\n"
+            f"SUBJECT: {entry.get('subject_block','')}\n"
+            f"VISIBLE ELEMENTS: {entry.get('visible_elements','')}\n"
+            f"ARC: {entry.get('arc_position','')}  ROLE: {entry.get('viral_role','')}")
+    d = engine._extract_json(engine._call(_CLASSIFY_ROLE, user, label=f"classify:{entry.get('slug','')[:30]}"))
+    return {
+        "thread_neutral": bool(d.get("thread_neutral", False)),
+        "origin_subject": str(d.get("origin_subject", "")).strip(),
+        "foreign_markers": [str(m).strip() for m in (d.get("foreign_markers") or []) if str(m).strip()],
+    }
+
+
+def classify_library(force: bool = False, log=print) -> int:
+    """Backfill thread_neutral / origin_subject / foreign_markers on every library
+    still in ONE batched LLM call (idempotent unless force). Free in agent-mode."""
+    entries = load()
+    todo = [e for e in entries if force or "thread_neutral" not in e]
+    if not todo:
+        log("classified: nothing to do (all stills tagged)")
+        return 0
+    rows = "\n".join(
+        f'- slug="{e["slug"]}" | {e.get("title","")}: {(e.get("subject_block") or "")[:170]} '
+        f'| elements: {(e.get("visible_elements") or "")[:90]}'
+        for e in todo
+    )
+    role = (_CLASSIFY_ROLE.replace("a Baroque gospel-short still", "EACH Baroque gospel-short still")
+            + "\nYou are given a LIST of stills. Classify every one. Return ONLY JSON: "
+            '{"stills": [{"slug": "<slug>", "thread_neutral": true|false, '
+            '"origin_subject": "<story/subject or \'\'>", "foreign_markers": ["..."]}]}')
+    user = f"STILLS TO CLASSIFY ({len(todo)}):\n{rows}"
+    doc = engine._extract_json(engine._call(role, user, label=f"classify-batch:{len(todo)}"))
+    by_slug_res = {str(r.get("slug", "")).strip().lower(): r for r in (doc.get("stills") or [])}
+    n = 0
+    for e in todo:
+        r = by_slug_res.get(e["slug"].strip().lower())
+        if not r:
+            log(f"  ! {e['slug']}: missing from classifier output — left unclassified")
+            continue
+        e["thread_neutral"] = bool(r.get("thread_neutral", False))
+        e["origin_subject"] = str(r.get("origin_subject", "")).strip()
+        e["foreign_markers"] = [str(m).strip() for m in (r.get("foreign_markers") or []) if str(m).strip()]
+        n += 1
+        flag = "NEUTRAL" if e["thread_neutral"] else f"STORY:{e['origin_subject']}"
+        log(f"  {e['slug']:<36} {flag}")
+    save(entries)
+    log(f"classified {n}/{len(todo)} still(s) ({len(entries)} total)")
+    return n
+
+
+_FIT_ROLE = (
+    "You are a STRICT TOPICAL-COHERENCE auditor for a 60-second gospel Short. You are given "
+    "this episode's NARRATION and a set of chosen stills. For EACH still decide whether it "
+    "belongs in THIS episode.\n"
+    "A still FAILS if it imports an element that belongs to a DIFFERENT story and is NOT "
+    "present in this narration — e.g. a swine / carob husks / feeding-trough when this is not "
+    "the Prodigal; a courtyard charcoal fire with a denying man when this is not Peter's "
+    "denial; a specific well/pool/boat the narration never mentions. 'Close enough on theme' "
+    "is still a FAIL — a viewer must not see a clip that visibly tells another parable.\n"
+    "A still PASSES if it is a thread-neutral plate (generic bread/candle/hands/table/light/"
+    "cross/Christ/anonymous figure) OR it depicts something actually in this narration.\n"
+    "For any FAIL, propose a replacement: a fresh native still for that beat (a Baroque, "
+    "state-only tableau, no modern objects, no foreign-story markers).\n"
+    'Return ONLY JSON: {"results": [{"slug": "<id>", "fits": true|false, '
+    '"foreign_element": "<the offending element, or \'\'>", "reason": "<one line>", '
+    '"replacement": {"slug_hint": "<kebab>", "title": "...", "arc_position": "...", '
+    '"viral_role": "...", "jesus_variant": "ministry|passion|resurrection|null", '
+    '"scene_type": "single", "framing": "wide|mid|close|overhead|low-angle", '
+    '"subject_block": "<50-90 words, state-only Baroque, no modern items, native to THIS narration>", '
+    '"mood_block": "...", "visible_elements": "...", "emotional_tone": "...", '
+    '"macro_elements": ["3-5"], "theme_tags": ["..."]}}]}  '
+    "(omit 'replacement' when fits=true)."
+)
+
+
+def audit_episode_fit(v1: Path, selected_entries: list[dict], log=print) -> dict:
+    """LLM topical-fit audit of the chosen LIBRARY stills against this narration.
+    Returns {slug: {fits, foreign_element, reason, replacement?}}."""
+    narration = (v1 / "narration.md").read_text(encoding="utf-8")
+    block = []
+    for e in selected_entries:
+        block.append(
+            f'- id="{e["slug"]}" | neutral={"Y" if e.get("thread_neutral") else "n"} '
+            f'| origin={e.get("origin_subject") or "-"} | {e.get("title","")}: '
+            f'{(e.get("subject_block") or "")[:160]}'
+        )
+    user = (f"EPISODE NARRATION:\n{narration}\n\n"
+            f"CHOSEN STILLS:\n" + "\n".join(block) + "\n\n"
+            "Audit each still for topical fit. Return the JSON described.")
+    doc = engine._extract_json(engine._call(_FIT_ROLE, user, label="episode-fit-audit"))
+    out: dict[str, dict] = {}
+    for r in (doc.get("results") or []):
+        slug = str(r.get("slug", "")).strip().lower()
+        if slug:
+            out[slug] = r
+    return out
+
+
+# --------------------------------------------------------------------------
 # Entry <-> Scene
 # --------------------------------------------------------------------------
 def entry_to_scene(entry: dict, index: int) -> Scene:
@@ -263,8 +383,14 @@ def _candidate_block(entries: list[dict]) -> str:
     lines = []
     for e in entries:
         subj = (e.get("subject_block") or "")[:140]
+        # reuse-safety flag: neutral plates are freely reusable; story-specific stills
+        # carry another narrative and must NOT be imported unless this narration shares it.
+        if "thread_neutral" in e:
+            safe = "NEUTRAL" if e.get("thread_neutral") else f"STORY:{e.get('origin_subject') or '?'}"
+        else:
+            safe = "unclassified"
         lines.append(
-            f'- id="{e["slug"]}" | role={e.get("viral_role") or "?"} | arc={e.get("arc_position") or "?"} '
+            f'- id="{e["slug"]}" | {safe} | role={e.get("viral_role") or "?"} | arc={e.get("arc_position") or "?"} '
             f'| jesus={e.get("jesus_variant") or "-"} | pivot={"Y" if e.get("gospel_pivot") else "n"} '
             f'| tags={",".join(e.get("theme_tags", [])[:6])} | {e.get("title")}: {subj}'
         )
@@ -312,12 +438,18 @@ def select_for_episode(v1: Path, entries: list[dict], target_clips: int = 8, log
         '      "theme_tags": ["..."]} , ...\n'
         '  ]\n'
         "}\n\n"
-        "RULES: (1) NEVER use the same id twice in one selection. (2) Prefer reusing "
-        "a fitting library still over a gap. (3) The CLOSE clip = hero_id and MUST be a "
-        "cross/Christ/NT-gospel-link (gospel frame). (4) Include ≥1 cross/Christ in the cut. "
-        "(5) Vary framing. (6) Every gap subject_block is a still Baroque tableau (camera-only "
-        "motion later), no modern objects. Each selection slot references either a library id "
-        "OR a gap_ref that exactly matches a gaps[].slug_hint."
+        "RULES: (1) NEVER use the same id twice in one selection. (2) TOPICAL FIT IS "
+        "MANDATORY: a still tagged NEUTRAL is reusable here; a still tagged STORY:<x> may "
+        "be reused ONLY if <x> actually appears in THIS narration. NEVER import another "
+        "story's image because the theme is close — a swine/husks still (the Prodigal) or a "
+        "courtyard-fire/denial still (Peter) does NOT belong in an unrelated episode. If no "
+        "fitting library still exists for a beat, REQUEST A GAP (a native still) instead. "
+        "(3) Subject to rule 2, prefer reusing a NEUTRAL library still over a gap. (4) The "
+        "CLOSE clip = hero_id and MUST be a cross/Christ/NT-gospel-link (gospel frame). "
+        "(5) Include ≥1 cross/Christ in the cut. (6) Vary framing. (7) Every gap subject_block "
+        "is a still Baroque tableau (camera-only motion later), no modern objects, native to "
+        "THIS narration. Each selection slot references either a library id OR a gap_ref that "
+        "exactly matches a gaps[].slug_hint."
     )
     raw = engine._call(_SELECT_ROLE, user, label="hero-select")
     doc = engine._extract_json(raw)
@@ -327,6 +459,25 @@ def select_for_episode(v1: Path, entries: list[dict], target_clips: int = 8, log
 # --------------------------------------------------------------------------
 # GAPS — generate new stills and register them
 # --------------------------------------------------------------------------
+def _render_with_retry(scene, provider, log, attempts: int = 4) -> None:
+    """Render a scene, retrying on TRANSIENT image-provider errors (HF 5xx gateway
+    timeouts / bad gateway) with a short backoff. A persistent failure re-raises so
+    the partial batch (already saved per-gap) can be resumed by re-running."""
+    import time
+    for i in range(1, attempts + 1):
+        try:
+            visual_render.render_scene(scene, provider, STILLS_DIR, log=log)
+            return
+        except RuntimeError as e:
+            msg = str(e)
+            transient = any(c in msg for c in ("HTTP 50", "error code: 50", "502", "503", "504", "timeout", "timed out"))
+            if not transient or i == attempts:
+                raise
+            wait = 5 * i
+            log(f"      ! transient image-provider error (attempt {i}/{attempts}); retrying in {wait}s — {msg[:90]}")
+            time.sleep(wait)
+
+
 def generate_gaps(gap_specs: list[dict], provider_name: str = "hf", log=print) -> list[dict]:
     """Render each gap spec into the library (idempotent) and register it.
     Returns the newly-added entries."""
@@ -369,7 +520,7 @@ def generate_gaps(gap_specs: list[dict], provider_name: str = "hf", log=print) -
                     pass
             log(f"  [reuse-on-disk] {slug}.png exists — registering without re-render")
         else:
-            visual_render.render_scene(scene, provider, STILLS_DIR, log=log)
+            _render_with_retry(scene, provider, log)
             # render_scene names files by stem (NN_<slug>); normalize to <slug>.*
             stem = scene.filename_stem
             for src_name, dst_name in (
@@ -402,9 +553,14 @@ def generate_gaps(gap_specs: list[dict], provider_name: str = "hf", log=print) -
             "source": "generated", "episodes_used_in": [],
         }
         entry["gospel_pivot"] = is_gospel_pivot(entry)
+        try:
+            entry.update(classify_still(entry))  # tag reuse-safety for future episodes
+        except Exception as ex:
+            log(f"    (classify skipped for {slug}: {ex})")
         entries.append(entry)
         have.add(slug)
         added.append(entry)
+        save(entries)  # persist after EACH gap so a mid-run crash (e.g. an HF 504) never loses work
         log(f"  + generated {slug}  audit={'PASS' if audit_ok else 'FAIL'}")
     save(entries)
     return added

@@ -1,0 +1,94 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Serif,Inter,90,&H00D8F0F4,&H00D8F0F4,&H00D8F0F4,&H64000000,0,0,0,0,100,100,0,0,1,0,1,1,60,40,460,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.20,Serif,,0,0,0,,{\an1\pos(398,1420)\fs90\fad(180,120)}full
+Dialogue: 0,0:00:00.00,0:00:01.20,Serif,,0,0,0,,{\an1\pos(60,1357)\fs90\fad(180,120)}{\b1\i0\fs139}completely
+Dialogue: 0,0:00:00.00,0:00:01.20,Serif,,0,0,0,,{\an1\pos(60,1259)\fs90\fad(180,120)}You can {\i1\fs112}be{\i0\fs90}
+Dialogue: 0,0:00:01.20,0:00:02.80,Serif,,0,0,0,,{\an1\pos(60,1290)\fs90\fad(180,120)}{\b1\i0\fs232}empty.
+Dialogue: 0,0:00:01.20,0:00:02.80,Serif,,0,0,0,,{\an1\pos(60,1127)\fs90\fad(180,120)}and still feel
+Dialogue: 0,0:00:03.96,0:00:04.76,Serif,,0,0,0,,{\an1\pos(60,1420)\fs90\fad(180,120)}{\b1\i0\fs174}stocked,
+Dialogue: 0,0:00:03.96,0:00:04.76,Serif,,0,0,0,,{\an1\pos(60,1298)\fs90\fad(180,120)}Fridge
+Dialogue: 0,0:00:05.40,0:00:06.10,Serif,,0,0,0,,{\an1\pos(60,1290)\fs90\fad(180,120)}{\b1\i0\fs236}fine
+Dialogue: 0,0:00:05.40,0:00:06.10,Serif,,0,0,0,,{\an1\pos(60,1124)\fs90\fad(180,120)}day went
+Dialogue: 0,0:00:06.98,0:00:08.14,Serif,,0,0,0,,{\an1\pos(399,1420)\fs90\fad(180,120)}deeper {\i1\fs112}than{\i0\fs90} {\i1\fs112}your{\i0\fs90}
+Dialogue: 0,0:00:06.98,0:00:08.14,Serif,,0,0,0,,{\an1\pos(60,1341)\fs90\fad(180,120)}{\b1\i0\fs155}something
+Dialogue: 0,0:00:06.98,0:00:08.14,Serif,,0,0,0,,{\an1\pos(60,1233)\fs90\fad(180,120)}and
+Dialogue: 0,0:00:08.14,0:00:09.38,Serif,,0,0,0,,{\an1\pos(399,1290)\fs90\fad(180,120)}{\i1\fs112}is{\i0\fs90} still hungry.
+Dialogue: 0,0:00:08.14,0:00:09.38,Serif,,0,0,0,,{\an1\pos(60,1211)\fs90\fad(180,120)}{\b1\i0\fs199}stomach
+Dialogue: 0,0:00:10.90,0:00:12.02,Serif,,0,0,0,,{\an1\pos(347,1420)\fs90\fad(180,120)}{\i1\fs112}a{\i0\fs90} flaw
+Dialogue: 0,0:00:10.90,0:00:12.02,Serif,,0,0,0,,{\an1\pos(60,1341)\fs90\fad(180,120)}{\b1\i0\fs236}isn't
+Dialogue: 0,0:00:10.90,0:00:12.02,Serif,,0,0,0,,{\an1\pos(60,1176)\fs90\fad(180,120)}That ache
+Dialogue: 0,0:00:12.02,0:00:12.62,Serif,,0,0,0,,{\an1\pos(60,1290)\fs90\fad(180,120)}{\b1\i0\fs236}fix.
+Dialogue: 0,0:00:12.02,0:00:12.62,Serif,,0,0,0,,{\an1\pos(60,1124)\fs90\fad(180,120)}to
+Dialogue: 0,0:00:13.14,0:00:13.90,Serif,,0,0,0,,{\an1\pos(60,1420)\fs90\fad(180,120)}{\b1\i0\fs155}signpost.
+Dialogue: 0,0:00:13.14,0:00:13.90,Serif,,0,0,0,,{\an1\pos(60,1311)\fs90\fad(180,120)}It's {\i1\fs112}a{\i0\fs90}
+Dialogue: 0,0:00:14.72,0:00:15.64,Serif,,0,0,0,,{\an1\pos(347,1290)\fs90\fad(180,120)}{\i1\fs112}to{\i0\fs90} {\i1\fs112}be{\i0\fs90}
+Dialogue: 0,0:00:14.72,0:00:15.64,Serif,,0,0,0,,{\an1\pos(60,1211)\fs90\fad(180,120)}{\b1\i0\fs236}built
+Dialogue: 0,0:00:14.72,0:00:15.64,Serif,,0,0,0,,{\an1\pos(60,1046)\fs90\fad(180,120)}You {\i1\fs112}were{\i0\fs90}
+Dialogue: 0,0:00:15.64,0:00:16.58,Serif,,0,0,0,,{\an1\pos(60,1420)\fs90\fad(180,120)}{\b1\i0\fs174}Someone,
+Dialogue: 0,0:00:15.64,0:00:16.58,Serif,,0,0,0,,{\an1\pos(60,1298)\fs90\fad(180,120)}filled {\i1\fs112}by{\i0\fs90}
+Dialogue: 0,0:00:17.18,0:00:17.96,Serif,,0,0,0,,{\an1\pos(60,1290)\fs90\fad(180,120)}{\b1\i0\fs139}something.
+Dialogue: 0,0:00:17.18,0:00:17.96,Serif,,0,0,0,,{\an1\pos(60,1192)\fs90\fad(180,120)}not
+Dialogue: 0,0:00:19.16,0:00:19.92,Serif,,0,0,0,,{\an1\pos(60,1420)\fs90\fad(180,120)}{\b1\i0\fs236}Him:
+Dialogue: 0,0:00:19.16,0:00:19.92,Serif,,0,0,0,,{\an1\pos(60,1254)\fs90\fad(180,120)}Hear
+Dialogue: 0,0:00:20.76,0:00:21.74,Serif,,0,0,0,,{\an1\pos(347,1290)\fs90\fad(180,120)}{\i1\fs112}of{\i0\fs90}
+Dialogue: 0,0:00:20.76,0:00:21.74,Serif,,0,0,0,,{\an1\pos(60,1211)\fs90\fad(180,120)}{\b1\i0\fs236}bread
+Dialogue: 0,0:00:20.76,0:00:21.74,Serif,,0,0,0,,{\an1\pos(60,1046)\fs90\fad(180,120)}"I am {\i1\fs112}the{\i0\fs90}
+Dialogue: 0,0:00:21.74,0:00:22.34,Serif,,0,0,0,,{\an1\pos(60,1420)\fs90\fad(180,120)}{\b1\i0\fs236}life:
+Dialogue: 0,0:00:22.92,0:00:24.00,Serif,,0,0,0,,{\an1\pos(399,1290)\fs90\fad(180,120)}{\i1\fs112}to{\i0\fs90} me
+Dialogue: 0,0:00:22.92,0:00:24.00,Serif,,0,0,0,,{\an1\pos(60,1211)\fs90\fad(180,120)}{\b1\i0\fs232}cometh
+Dialogue: 0,0:00:22.92,0:00:24.00,Serif,,0,0,0,,{\an1\pos(60,1049)\fs90\fad(180,120)}he {\i1\fs112}that{\i0\fs90}
+Dialogue: 0,0:00:24.00,0:00:24.88,Serif,,0,0,0,,{\an1\pos(60,1420)\fs90\fad(180,120)}{\b1\i0\fs199}hunger;
+Dialogue: 0,0:00:24.00,0:00:24.88,Serif,,0,0,0,,{\an1\pos(60,1280)\fs90\fad(180,120)}shall never
+Dialogue: 0,0:00:25.80,0:00:26.98,Serif,,0,0,0,,{\an1\pos(399,1290)\fs90\fad(180,120)}{\i1\fs112}on{\i0\fs90}
+Dialogue: 0,0:00:25.80,0:00:26.98,Serif,,0,0,0,,{\an1\pos(60,1211)\fs90\fad(180,120)}{\b1\i0\fs155}believeth
+Dialogue: 0,0:00:25.80,0:00:26.98,Serif,,0,0,0,,{\an1\pos(60,1103)\fs90\fad(180,120)}and he {\i1\fs112}that{\i0\fs90}
+Dialogue: 0,0:00:26.98,0:00:29.20,Serif,,0,0,0,,{\an1\pos(60,1420)\fs90\fad(180,120)}{\b1\i0\fs236}Not
+Dialogue: 0,0:00:26.98,0:00:29.20,Serif,,0,0,0,,{\an1\pos(60,1254)\fs90\fad(180,120)}me shall never thirst."
+Dialogue: 0,0:00:29.20,0:00:29.80,Serif,,0,0,0,,{\an1\pos(60,1290)\fs90\fad(180,120)}{\b1\i0\fs199}hungry.
+Dialogue: 0,0:00:29.20,0:00:29.80,Serif,,0,0,0,,{\an1\pos(60,1150)\fs90\fad(180,120)}less
+Dialogue: 0,0:00:30.56,0:00:31.16,Serif,,0,0,0,,{\an1\pos(60,1420)\fs90\fad(180,120)}{\b1\i0\fs232}Never.
+Dialogue: 0,0:00:32.50,0:00:33.66,Serif,,0,0,0,,{\an1\pos(399,1290)\fs90\fad(180,120)}{\i1\fs112}for{\i0\fs90}
+Dialogue: 0,0:00:32.50,0:00:33.66,Serif,,0,0,0,,{\an1\pos(60,1211)\fs90\fad(180,120)}{\b1\i0\fs174}reaching
+Dialogue: 0,0:00:32.50,0:00:33.66,Serif,,0,0,0,,{\an1\pos(60,1089)\fs90\fad(180,120)}So {\i1\fs112}you{\i0\fs90} keep
+Dialogue: 0,0:00:33.66,0:00:34.28,Serif,,0,0,0,,{\an1\pos(60,1420)\fs90\fad(180,120)}{\b1\i0\fs236}thing
+Dialogue: 0,0:00:33.66,0:00:34.28,Serif,,0,0,0,,{\an1\pos(60,1254)\fs90\fad(180,120)}the next
+Dialogue: 0,0:00:35.02,0:00:35.70,Serif,,0,0,0,,{\an1\pos(60,1290)\fs90\fad(180,120)}{\b1\i0\fs232}plate,
+Dialogue: 0,0:00:35.02,0:00:35.70,Serif,,0,0,0,,{\an1\pos(60,1127)\fs90\fad(180,120)}the next
+Dialogue: 0,0:00:36.16,0:00:36.84,Serif,,0,0,0,,{\an1\pos(60,1420)\fs90\fad(180,120)}{\b1\i0\fs155}purchase,
+Dialogue: 0,0:00:36.16,0:00:36.84,Serif,,0,0,0,,{\an1\pos(60,1311)\fs90\fad(180,120)}the next
+Dialogue: 0,0:00:37.24,0:00:38.08,Serif,,0,0,0,,{\an1\pos(60,1290)\fs90\fad(180,120)}{\b1\i0\fs232}person
+Dialogue: 0,0:00:37.24,0:00:38.08,Serif,,0,0,0,,{\an1\pos(60,1127)\fs90\fad(180,120)}the next
+Dialogue: 0,0:00:38.80,0:00:40.36,Serif,,0,0,0,,{\an1\pos(399,1420)\fs90\fad(180,120)}things {\i1\fs112}to{\i0\fs90} do
+Dialogue: 0,0:00:38.80,0:00:40.36,Serif,,0,0,0,,{\an1\pos(60,1341)\fs90\fad(180,120)}{\b1\i0\fs199}created
+Dialogue: 0,0:00:38.80,0:00:40.36,Serif,,0,0,0,,{\an1\pos(60,1202)\fs90\fad(180,120)}asking
+Dialogue: 0,0:00:40.36,0:00:41.72,Serif,,0,0,0,,{\an1\pos(399,1290)\fs90\fad(180,120)}can do.
+Dialogue: 0,0:00:40.36,0:00:41.72,Serif,,0,0,0,,{\an1\pos(60,1227)\fs90\fad(180,120)}{\b1\i0\fs232}Christ
+Dialogue: 0,0:00:40.36,0:00:41.72,Serif,,0,0,0,,{\an1\pos(60,1064)\fs90\fad(180,120)}what only
+Dialogue: 0,0:00:43.20,0:00:44.82,Serif,,0,0,0,,{\an1\pos(397,1420)\fs90\fad(180,120)}{\i1\fs112}with{\i0\fs90}
+Dialogue: 0,0:00:43.20,0:00:44.82,Serif,,0,0,0,,{\an1\pos(60,1341)\fs90\fad(180,120)}{\b1\i0\fs126}soul-hunger
+Dialogue: 0,0:00:43.20,0:00:44.82,Serif,,0,0,0,,{\an1\pos(60,1253)\fs90\fad(180,120)}Stop feeding {\i1\fs112}a{\i0\fs90}
+Dialogue: 0,0:00:44.82,0:00:45.80,Serif,,0,0,0,,{\an1\pos(399,1290)\fs90\fad(180,120)}{\i1\fs112}that{\i0\fs90} spoil.
+Dialogue: 0,0:00:44.82,0:00:45.80,Serif,,0,0,0,,{\an1\pos(60,1211)\fs90\fad(180,120)}{\b1\i0\fs232}things
+Dialogue: 0,0:00:47.04,0:00:47.78,Serif,,0,0,0,,{\an1\pos(347,1420)\fs90\fad(180,120)}{\i1\fs112}of{\i0\fs90}
+Dialogue: 0,0:00:47.04,0:00:47.78,Serif,,0,0,0,,{\an1\pos(60,1341)\fs90\fad(180,120)}{\b1\i0\fs236}Bread
+Dialogue: 0,0:00:47.04,0:00:47.78,Serif,,0,0,0,,{\an1\pos(60,1176)\fs90\fad(180,120)}Come {\i1\fs112}to{\i0\fs90} {\i1\fs112}the{\i0\fs90}
+Dialogue: 0,0:00:47.78,0:00:48.38,Serif,,0,0,0,,{\an1\pos(60,1290)\fs90\fad(180,120)}{\b1\i0\fs236}life
+Dialogue: 0,0:00:48.94,0:00:49.84,Serif,,0,0,0,,{\an1\pos(347,1420)\fs90\fad(180,120)}{\i1\fs112}for{\i0\fs90} {\i1\fs112}the{\i0\fs90}
+Dialogue: 0,0:00:48.94,0:00:49.84,Serif,,0,0,0,,{\an1\pos(60,1341)\fs90\fad(180,120)}{\b1\i0\fs236}snack
+Dialogue: 0,0:00:48.94,0:00:49.84,Serif,,0,0,0,,{\an1\pos(60,1176)\fs90\fad(180,120)}not {\i1\fs112}a{\i0\fs90}
+Dialogue: 0,0:00:49.84,0:00:50.44,Serif,,0,0,0,,{\an1\pos(60,1290)\fs90\fad(180,120)}{\b1\i0\fs199}moment,
+Dialogue: 0,0:00:50.78,0:00:51.88,Serif,,0,0,0,,{\an1\pos(60,1420)\fs90\fad(180,120)}{\b1\i0\fs236}soul
+Dialogue: 0,0:00:50.78,0:00:51.88,Serif,,0,0,0,,{\an1\pos(60,1254)\fs90\fad(180,120)}but {\i1\fs112}the{\i0\fs90} life {\i1\fs112}your{\i0\fs90}
+Dialogue: 0,0:00:51.88,0:00:52.68,Serif,,0,0,0,,{\an1\pos(289,1290)\fs90\fad(180,120)}{\i1\fs112}for.{\i0\fs90}
+Dialogue: 0,0:00:51.88,0:00:52.68,Serif,,0,0,0,,{\an1\pos(60,1211)\fs90\fad(180,120)}{\b1\i0\fs236}made
+Dialogue: 0,0:00:51.88,0:00:52.68,Serif,,0,0,0,,{\an1\pos(60,1046)\fs90\fad(180,120)}was

@@ -1,0 +1,52 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 1
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Serif,Inter,80,&H00D0F0F5,&H00D0F0F5,&H00101010,&H66000000,0,0,0,0,100,100,0,0,1,0,4,1,60,40,460,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.44,Serif,,60,175,470,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}{\fs177\b1\i0}Everyone{\fs80\b0\i0}\Nhas {\i1}an{\i0} opinion about
+Dialogue: 0,0:00:01.44,0:00:02.04,Serif,,60,175,720,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}{\fs212\b1\i0}Jesus.{\fs80\b0\i0}
+Dialogue: 0,0:00:03.00,0:00:03.60,Serif,,60,175,470,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}A good\N{\fs177\b1\i0}teacher,{\fs80\b0\i0}
+Dialogue: 0,0:00:04.12,0:00:04.72,Serif,,60,175,720,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}a\N{\fs177\b1\i0}prophet,{\fs80\b0\i0}
+Dialogue: 0,0:00:05.24,0:00:05.94,Serif,,60,175,470,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}a moral\N{\fs177\b1\i0}example,{\fs80\b0\i0}
+Dialogue: 0,0:00:06.92,0:00:07.52,Serif,,60,175,720,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}a\N{\fs212\b1\i0}myth,{\fs80\b0\i0}
+Dialogue: 0,0:00:08.04,0:00:08.64,Serif,,60,175,470,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}a\N{\fs203\b1\i0}savior.{\fs80\b0\i0}
+Dialogue: 0,0:00:09.86,0:00:11.00,Serif,,60,175,720,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}But\N{\fs212\b1\i0}Jesus{\fs80\b0\i0}\Ndoes not leave
+Dialogue: 0,0:00:11.00,0:00:11.96,Serif,,60,175,470,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}the\N{\fs177\b1\i0}question{\fs80\b0\i0}\N{\i1}in{\i0} {\i1}the{\i0} crowd.
+Dialogue: 0,0:00:13.26,0:00:13.98,Serif,,60,175,720,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}In\N{\fs203\b1\i0}Matthew{\fs80\b0\i0}\N16,
+Dialogue: 0,0:00:14.62,0:00:15.74,Serif,,60,175,470,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}he asked his\N{\fs158\b1\i0}disciples{\fs80\b0\i0}\Nwhat
+Dialogue: 0,0:00:15.74,0:00:16.86,Serif,,60,175,720,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}people {\i1}were{\i0}\N{\fs212\b1\i0}saying{\fs80\b0\i0}\Nabout him.
+Dialogue: 0,0:00:17.82,0:00:18.84,Serif,,60,175,470,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}They gave {\i1}the{\i0} public\N{\fs177\b1\i0}answers.{\fs80\b0\i0}
+Dialogue: 0,0:00:20.16,0:00:21.20,Serif,,60,175,720,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}Then\N{\fs212\b1\i0}Jesus{\fs80\b0\i0}\Nmade {\i1}it{\i0} personal.
+Dialogue: 0,0:00:22.06,0:00:23.50,Serif,,60,175,470,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}But who do {\i1}you{\i0}\N{\fs212\b1\i0}say{\fs80\b0\i0}
+Dialogue: 0,0:00:23.50,0:00:24.22,Serif,,60,175,720,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}that\N{\fs212\b1\i0}I{\fs80\b0\i0}\Nam?
+Dialogue: 0,0:00:24.58,0:00:26.34,Serif,,60,175,470,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}That\N{\fs177\b1\i0}question{\fs80\b0\i0}\Nends second -hand
+Dialogue: 0,0:00:26.34,0:00:26.94,Serif,,60,175,720,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}{\fs212\b1\i0}faith.{\fs80\b0\i0}
+Dialogue: 0,0:00:27.20,0:00:28.46,Serif,,60,175,470,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}Not {\i1}your{\i0}\N{\fs177\b1\i0}family's{\fs80\b0\i0}\Nanswer,
+Dialogue: 0,0:00:29.00,0:00:29.82,Serif,,60,175,720,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}not {\i1}your{\i0}\N{\fs177\b1\i0}pastor's{\fs80\b0\i0}\Nanswer,
+Dialogue: 0,0:00:30.34,0:00:31.30,Serif,,60,175,470,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}not {\i1}the{\i0}\N{\fs142\b1\i0}internet's{\fs80\b0\i0}\Nanswer.
+Dialogue: 0,0:00:32.26,0:00:32.86,Serif,,60,175,720,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}{\fs212\b1\i0}Yours.{\fs80\b0\i0}
+Dialogue: 0,0:00:33.94,0:00:35.06,Serif,,60,175,470,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}Because {\i1}you{\i0} can admire\N{\fs212\b1\i0}Jesus{\fs80\b0\i0}
+Dialogue: 0,0:00:35.06,0:00:36.26,Serif,,60,175,720,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}from {\i1}a{\i0}\N{\fs177\b1\i0}distance{\fs80\b0\i0}\N{\i1}and{\i0} still
+Dialogue: 0,0:00:36.26,0:00:37.64,Serif,,60,175,470,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}never confess Him {\i1}as{\i0}\N{\fs212\b1\i0}Lord.{\fs80\b0\i0}
+Dialogue: 0,0:00:38.88,0:00:39.48,Serif,,60,175,720,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}Peter\N{\fs158\b1\i0}answered,{\fs80\b0\i0}
+Dialogue: 0,0:00:40.26,0:00:40.94,Serif,,60,175,470,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}You {\i1}are{\i0} {\i1}the{\i0}\N{\fs203\b1\i0}Christ,{\fs80\b0\i0}
+Dialogue: 0,0:00:41.68,0:00:43.16,Serif,,60,175,720,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}the\N{\fs212\b1\i0}Son{\fs80\b0\i0}\N{\i1}of{\i0} {\i1}the{\i0} living
+Dialogue: 0,0:00:43.16,0:00:43.76,Serif,,60,175,470,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}{\fs212\b1\i0}God.{\fs80\b0\i0}
+Dialogue: 0,0:00:43.76,0:00:44.82,Serif,,60,175,720,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}And\N{\fs212\b1\i0}Jesus{\fs80\b0\i0}\Nsaid {\i1}this{\i0} {\i1}was{\i0}
+Dialogue: 0,0:00:44.82,0:00:45.94,Serif,,60,175,470,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}not flesh {\i1}and{\i0}\N{\fs212\b1\i0}blood.{\fs80\b0\i0}
+Dialogue: 0,0:00:47.18,0:00:48.22,Serif,,60,175,720,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}It {\i1}was{\i0}\N{\fs142\b1\i0}revelation{\fs80\b0\i0}\N{\i1}from{\i0} {\i1}the{\i0}
+Dialogue: 0,0:00:48.22,0:00:48.82,Serif,,60,175,470,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}{\fs203\b1\i0}Father.{\fs80\b0\i0}
+Dialogue: 0,0:00:49.84,0:00:50.68,Serif,,60,175,720,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}We do not\N{\fs212\b1\i0}truly{\fs80\b0\i0}\Nsee
+Dialogue: 0,0:00:50.68,0:00:52.30,Serif,,60,175,470,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}Jesus unless\N{\fs212\b1\i0}God{\fs80\b0\i0}\Nopens our
+Dialogue: 0,0:00:52.30,0:00:52.90,Serif,,60,175,720,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}{\fs212\b1\i0}eyes.{\fs80\b0\i0}
+Dialogue: 0,0:00:53.36,0:00:54.56,Serif,,60,175,470,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}So before {\i1}you{\i0}\N{\fs203\b1\i0}scroll,{\fs80\b0\i0}
+Dialogue: 0,0:00:55.08,0:00:55.86,Serif,,60,175,720,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}answer\N{\fs158\b1\i0}honestly.{\fs80\b0\i0}
+Dialogue: 0,0:00:57.26,0:00:58.40,Serif,,60,175,470,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}Who do {\i1}you{\i0} say\N{\fs212\b1\i0}Jesus{\fs80\b0\i0}
+Dialogue: 0,0:00:58.40,0:00:59.00,Serif,,60,175,720,,{\an1\fad(140,90)\fscx88\fscy88\t(0,160,\fscx100\fscy100)}{\fs212\b1\i0}is?{\fs80\b0\i0}
