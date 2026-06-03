@@ -1,0 +1,5 @@
+# Generated media + intermediates (large; regenerable). Keep code + fonts only.
+out/
+__pycache__/
+*.pyc
+.env
