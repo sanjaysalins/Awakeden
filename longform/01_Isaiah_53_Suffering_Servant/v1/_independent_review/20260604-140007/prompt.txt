@@ -1,3 +1,34 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: narration
+
+LENS — judge this NARRATION on (be specific, cite the exact line/phrase):
+- Doctrinal soundness: evangelical, biblically faithful; NO invented doctrine, NO contrarian/
+  clickbait/contested readings used to chase freshness.
+- KJV verbatim: every word inside quotation marks must be exact KJV. Flag any altered word.
+- Clarity on first hearing: a listener with zero Bible knowledge must follow it; no clever-but-
+  confusing conceit, no logic trick, no self-contradiction.
+- Grace-anchored conviction: NO fear / gain-loss / self-interest / works framing; the Spirit
+  convicts, the script invites.
+- Freshness = faithful depth: surprising about the TEXT, orthodox in the claim and the landing.
+- One thread spine from hook -> middle -> CTA (no thread-swapping).
+- Landing does NEW work (not a tired generic 'will you trust Him?' close).
+- Hook grips in the first ~5 seconds.
+
+ADDITIONAL CONTEXT / BRIEF:
+This is a LONG-FORM ~8 min deep-dive that deliberately walks Isaiah 52:13-53:12 + Acts 8 verbatim, so it is intentionally quote-heavy (KJV). Judge it as long-form teaching, not a 60s short.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block:
+
+VERDICT: PASS | REVISE | FAIL
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
 # Isaiah 53 — The Suffering Servant  (LONG-FORM PILOT)
 
 - **Series root:** Jesus in the Old Testament (Awakeden) — long-form deep-dive
@@ -6,7 +37,7 @@
 - **Spine:** Deep-Dive Seven-Movement (Report → Scandal → Exchange → Silent Lamb + Objection → Fulfilment → Will of the LORD → Arm of the LORD)
 - **Voices:** `narrator` throughout · `the_LORD` for "Behold, my servant" · `eunuch` for the Acts 8 question · KJV verbatim for all quoted Scripture
 - **Doctrine:** penal substitution, sinless Servant, real resurrection hint, grace-anchored landing — evangelical, non-negotiable
-- **Status:** v3 — KJV verbatim RE-LOCK (2026-06-04). The enforced cursor+panel independent review (4/5 REVISE) caught an Acts 8:35 elision the engine pass had missed. Fixed: Acts 8:35 (now full verbatim "opened his mouth, and…"), Isaiah 53:10–11 (continuous verbatim, no interior ellipsis), 49:3 (extended to the full clause: "Thou art my servant, O Israel, in whom I will be glorified."), 53:3 (trailing ellipsis, no invented period), "pierced"→"wounded" (M7, matches KJV 53:5), and consistent leading/trailing ellipsis marking on all excerpted quotes. Affected audio turns re-rendered + verified by ASR. Two enforced panel passes confirmed KJV WORDS clean across all 17 spans (claude PASS). Then applied 4 convergent EDITORIAL fixes the panel surfaced (user-approved): M1 "the rich man in his death" (not "own it" — drops the fulfilment over-reach); M6 resurrection kept hint-only (dropped "risen Servant" / "It worked"); M7 "taken away" (not "paid in full" — removes transaction framing from the landing, per the locked grace rule); M7 "wounded for your transgressions, and bore them in your place" (not "so that you would not have to be"). Audio re-rendered again → 482.89s, ASR-verified (new wording in, flagged wording out). Prior: v2 external panel merge (2026-06-03). LOCKED.
+- **Status:** v2 — external AI panel merged (2026-06-03). Folded: M2 KJV verbatim fix (dropped altered "We hid…" quote), M4 objection steel-manned (concede Isa 49:3, answer sinlessness-first), M6 resurrection over-read softened, M3 pacing trim. Voice tags preserved. LOCK-READY.
 
 ---
 
@@ -15,7 +46,7 @@
 **[narrator]**
 Seven hundred years before a Roman nail was ever driven through a human wrist, a prophet in Jerusalem wrote down the death of a man he had never met.
 
-He described the wounds, the silence, the grave — and the rich man in his death. He even wrote down what the wounds were *for*.
+He described the wounds, the silence, the grave — and the rich man who would own it. He even wrote down what the wounds were *for*.
 
 And then he asked the question that still hangs over the page:
 
@@ -39,13 +70,13 @@ It opens with God Himself pointing.
 You brace yourself for a conquering king. And then the picture breaks.
 
 **[narrator — KJV, Isaiah 52:14]**
-"…his visage was so marred more than any man, and his form more than the sons of men…" —
+"his visage was so marred more than any man, and his form more than the sons of men" —
 
 **[narrator]**
 a face beaten past recognising.
 
 **[narrator — KJV, Isaiah 53:2-3]**
-"…he hath no form nor comeliness; and when we shall see him, there is no beauty that we should desire him. He is despised and rejected of men; a man of sorrows, and acquainted with grief…"
+"he hath no form nor comeliness; and when we shall see him, there is no beauty that we should desire him. He is despised and rejected of men; a man of sorrows, and acquainted with grief."
 
 **[narrator]**
 God's chosen Servant does not arrive in armour. He arrives in agony. The world looks at him — and looks away.
@@ -60,7 +91,7 @@ The exalted one and the despised one are the same man. Hold those two together �
 Then comes the centre of the chapter — and every line is a transaction.
 
 **[narrator — KJV, Isaiah 53:4]**
-"Surely he hath borne our griefs, and carried our sorrows…" —
+"Surely he hath borne our griefs, and carried our sorrows" —
 
 **[narrator]**
 *our* griefs. Not his own.
@@ -99,7 +130,7 @@ Now — an honest question. For centuries many thoughtful Jewish readers have un
 And they have a real text behind them. Earlier in this same book, God calls the nation by this very title:
 
 **[narrator — KJV, Isaiah 49:3]**
-"…Thou art my servant, O Israel, in whom I will be glorified."
+"Thou art my servant, O Israel."
 
 **[narrator]**
 So reading chapter fifty-three as Israel is not a dodge. It is the natural first guess. It deserves a serious answer, not a sneer.
@@ -107,7 +138,7 @@ So reading chapter fifty-three as Israel is not a dodge. It is the natural first
 Here is what the chapter does that no nation can survive. First, the sufferer is sinless:
 
 **[narrator — KJV, Isaiah 53:9]**
-"…he made his grave with the wicked, and with the rich in his death; because he had done no violence, neither was any deceit in his mouth."
+"he made his grave with the wicked, and with the rich in his death; because he had done no violence, neither was any deceit in his mouth."
 
 **[narrator]**
 No people in history — not a nation, not even its most faithful remnant — has ever been honestly described that way.
@@ -115,7 +146,7 @@ No people in history — not a nation, not even its most faithful remnant — ha
 Second, he dies *for* the people:
 
 **[narrator — KJV, Isaiah 53:8]**
-"…for the transgression of my people was he stricken."
+"for the transgression of my people was he stricken."
 
 **[narrator]**
 The Servant stands in their place — so he cannot simply *be* them. A single grave. A rich man's tomb. A sinless life. This is not a people. This is a person.
@@ -130,7 +161,7 @@ Which leaves the only question that matters. *Who is he?*
 The New Testament records the exact moment someone asked it out loud. A man from Ethiopia — a court official — is riding home in his chariot, reading this very chapter aloud:
 
 **[narrator — KJV, Acts 8:32]**
-"…He was led as a sheep to the slaughter; and like a lamb dumb before his shearer, so opened he not his mouth…"
+"He was led as a sheep to the slaughter; and like a lamb dumb before his shearer, so opened he not his mouth."
 
 **[narrator]**
 Philip, sent by the Spirit, comes alongside the chariot. And the Ethiopian turns and asks the question Isaiah seems to invite:
@@ -142,7 +173,7 @@ Philip, sent by the Spirit, comes alongside the chariot. And the Ethiopian turns
 And Luke gives the answer in one unforgettable line.
 
 **[narrator — KJV, Acts 8:35]**
-"Then Philip opened his mouth, and began at the same scripture, and preached unto him Jesus."
+"Then Philip... began at the same scripture, and preached unto him Jesus."
 
 **[narrator]**
 He did not have to wrestle the text into shape. He started at Isaiah fifty-three, and the road led straight to Jesus of Nazareth. The report Isaiah wondered if anyone would believe — the New Testament answers: *this is the man.*
@@ -155,7 +186,7 @@ He did not have to wrestle the text into shape. He started at Isaiah fifty-three
 But there is one line in this chapter heavier than all the wounds.
 
 **[narrator — KJV, Isaiah 53:10]**
-"Yet it pleased the LORD to bruise him; he hath put him to grief…"
+"Yet it pleased the LORD to bruise him; he hath put him to grief."
 
 **[narrator]**
 *Pleased.* Not because the Father delights in pain — but because He delights in what the cross would accomplish: a people brought home. And the Servant is no victim caught in the gears — Isaiah says he "poured out his soul unto death." He *gave* it.
@@ -163,12 +194,12 @@ But there is one line in this chapter heavier than all the wounds.
 Then, quietly, the chapter turns toward morning.
 
 **[narrator — KJV, Isaiah 53:10-11]**
-"…he shall see his seed, he shall prolong his days, and the pleasure of the LORD shall prosper in his hand. He shall see of the travail of his soul, and shall be satisfied…"
+"he shall see his seed, he shall prolong his days... He shall see of the travail of his soul, and shall be satisfied."
 
 **[narrator]**
-A man bruised to death does not live to see his days prolonged — unless death is not the end of him. Isaiah does not spell out an empty tomb — but he leaves a shape that only resurrection fills, a shadow the New Testament would bring into full light.
+A man bruised to death does not live to see his days prolonged — unless death is not the end of him. Buried in verse nine; alive in verse eleven. Isaiah does not spell out an empty tomb — but he leaves a shape that only resurrection fills, a shadow the New Testament would bring into full light.
 
-And the chapter's final note over the Servant is not defeat but one word: *satisfied.* The travail was not wasted. It was enough.
+And looking back over all of it, the risen Servant feels one word: *satisfied.* It was enough. It worked.
 
 ---
 
@@ -181,11 +212,11 @@ So come back to where Isaiah began.
 "Who hath believed our report? and to whom is the arm of the LORD revealed?"
 
 **[narrator]**
-The arm of the LORD — the saving strength of God — is not a thing. It is a person. It has a face, marred more than any man's. It has hands, wounded for transgressions that were never his own.
+The arm of the LORD — the saving strength of God — is not a thing. It is a person. It has a face, marred more than any man's. It has hands, pierced for transgressions that were never his own.
 
-And it has your name in verse six. The straying it names — "we have turned every one to his own way" — is yours, and mine. But read where the sentence ends: "the LORD hath laid on him the iniquity of us all." Every way you turned that was your own — laid on him. Already carried. Already taken away.
+And it has your name in verse six. The straying it names — "we have turned every one to his own way" — is yours, and mine. But read where the sentence ends: "the LORD hath laid on him the iniquity of us all." Every way you turned that was your own — laid on him. Already carried. Already paid in full.
 
-You do not have to clean yourself up before you come. That is the whole point of Isaiah fifty-three: he was wounded for your transgressions, and bore them in your place.
+You do not have to clean yourself up before you come. That is the whole point of Isaiah fifty-three: he was wounded so that you would not have to be.
 
 The report is true. The arm of the LORD has a name. His name is Jesus.
 
@@ -195,7 +226,7 @@ Have you believed the report?
 
 ## DEPTH & SOURCING  *(not spoken — faithfulness ledger)*
 
-- **All quoted Scripture is KJV verbatim in its WORDS** (every word inside quotation marks is exact KJV — verified span-by-span against `data/kjv_cache.json` on 2026-06-04; the independent panel confirmed all 17 spans). Quoting convention: a quote may be an EXCERPT that begins mid-verse as a self-contained clause, and where it stops before the verse ends it is marked with a trailing ellipsis (…) so it never implies a complete sentence; a clipped start of a partial clause is marked with a leading ellipsis. **The one hard rule: NO words are ever omitted or altered *inside* a quote** — the interior elision (e.g. the former Acts 8:35 "Then Philip… began", which dropped "opened his mouth, and") is exactly what is forbidden, and is now fixed. Terminal clip punctuation (an ellipsis/period where KJV runs on with a colon) is presentation, not wording. Quotes: Isaiah 49:3, 52:13–14, 53:1–12; Acts 8:32–35. Verified by the engine red-team, the v2 external panel, AND the enforced cursor+panel independent review (2026-06-04, two passes).
+- **All quoted Scripture is KJV verbatim** (fetched via the engine's scripture pipeline): Isaiah 49:3, 52:13–14, 53:1–12; Acts 8:32–35. Independent red-team + external panel verified all quotes verbatim and correctly referenced. (Panel caught + removed one altered quote in M2; Isaiah 49:3 added in M4 — "Thou art my servant, O Israel" is verbatim.)
 - **Penal substitution** is the explicit teaching of 53:4–6 ("wounded for *our* transgressions… the LORD hath laid on him the iniquity of us all") — affirmed, not invented.
 - **The Israel/corporate reading** (Movement 4) is steel-manned, not strawmanned: we **concede its strongest form** — God really does call the nation "my servant" elsewhere (Isaiah 49:3 "Thou art my servant, O Israel"), so reading ch. 53 as Israel is the natural first guess — then answer **from the text itself**, sinlessness first (53:9 "no violence… no deceit" rules out a nation *and* its most faithful remnant), then 53:8 "for the transgression of **my people**" (the Servant suffers *for* the people, so cannot *be* them). No sneer.
 - **Resurrection** (Movement 6) is drawn from the text's own tension (death in v9 → "prolong his days / see his seed / be satisfied" in vv10–11), and framed conservatively: Isaiah leaves "a shape that only resurrection fills" which the NT brings to full light — a hint the NT confirms, NOT a resurrection proven from bare Isaiah (over-read corrected per external panel).
@@ -208,3 +239,4 @@ Have you believed the report?
 - `the_LORD` — Isaiah 52:13 only ("Behold, my servant…") — weighty, set-apart
 - `eunuch` — Acts 8:34 only — sincere, searching
 - All other KJV quotes stay in narrator voice (attribution frames in narrator voice, per the locked rule)
+----- ARTIFACT END -----

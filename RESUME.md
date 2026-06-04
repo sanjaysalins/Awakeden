@@ -1,5 +1,65 @@
 # RESUME.md — start here next session
 
+## ═══════════ SESSION END 2026-06-04 (LATEST) — ISAIAH 53 16:9 LONG-FORM FILM FINISHED ═══════════
+
+**✅ The first 16:9 long-form FILM is done, end to end.**
+`C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\01_Isaiah_53_Suffering_Servant\v1\visual_16x9\Isaiah53_16x9.mp4`
+— 1920×1080, **8:03 (482.9s)**, 21 Baroque scenes, veo3_1_lite motion + slow ken-burns hold per scene,
+balanced immersive soundstage muxed in. Closes on the risen Christ through "Have you believed the report?".
+
+**How it was built (NEW 16:9 long-form path — pipeline was shorts-only):**
+- Scene plan (free, hand-authored): `visual_16x9/scene_plan.json` — 21 scenes mapped to the 7
+  movements + narration word-times + the soundstage cues (visuals match the sounds).
+- Images: **NBP / Gemini 3 Pro Image** (`gemini-3-pro-image-preview`), 16:9 Baroque, via the existing
+  NBPProvider with `ASPECT_RATIO="16:9"`. Driver `longform/_render_images_16x9.py`. ~$10.
+  Image gate: looked at all 21 myself; rerolled only S4 (had come out an elderly beggar → fixed to the
+  marred Servant, anchored jesus_variant=passion).
+- Animation: **Higgsfield → veo3_1_lite** (16:9, 8s), via HFVideoProvider (`VIDEO_HF_ASPECT=16:9`).
+  Driver `longform/_animate_16x9.py`. Anti-morph prompt (keep the painting frozen). 21/21 ok, the robed
+  cross scenes (6,16) passed veo — NO Kling fallback needed. ~$8-11 Higgsfield credits.
+- Assembly: `longform/_assemble_16x9.py` — each veo clip plays then a slow ken-burns push on its frozen
+  last frame to fill its narration window; concat 1920×1080 30fps; mux narration.immersive.mp3. ffmpeg-only.
+  GOTCHA FIXED: 21 segments lost ~2s to frame-rounding → don't `-shortest` against the short video; tpad
+  the video's last frame to the audio length so the close isn't clipped.
+- Test-first de-risk worked: rendered 1 scene (img+clip) before the batch; confirmed veo holds the Baroque oil.
+
+**NEW: image_library/** (memory `image-library`) — 16:9 reusable Baroque stills bank, sibling to
+sound_library + the 9:16 hero `_library`. 21 Isaiah-53 stills banked (neutral plates + gospel-Christ
+reusable; story-specific = this-thread). Topical-fit discipline enforced.
+
+▶ NEXT: user listens/watches the film; tweak any scene (reroll image / re-animate / adjust hold). The
+soundstage cues already match the visuals. Prophet-voice re-cast still parked (panel-gated).
+
+## ═══════════ SESSION END 2026-06-04 (LATE) — IMMERSIVE SOUNDSTAGE + SOUND LIBRARY + ENFORCED CURSOR-PANEL + ISAIAH 53 v3 RE-LOCK ═══════════
+
+**Four things shipped this session (all in JesusInTheBible repo):**
+
+1. **Immersive long-form audio (Isaiah 53 pilot).** Hand-crafted cinematic soundstage:
+   13 layered environmental sounds across the 7 movements, placed on whisper word-times,
+   mixed with ffmpeg (looped beds → one sidechain duck under the voice → one-shots → limiter).
+   Two renders in the v1 folder: `narration.immersive_cinematic_full.mp3` (lean-in) +
+   `narration.immersive_cinematic.mp3` (balanced). Scripts: `longform/_soundstage_cinematic.py`,
+   `longform/_pilot_cue_times.py`. Rules locked: **FOREGROUND-DUCK** — voices AND animal calls
+   get -7dB + deeper duck (atmospherics stay full); "Behold my servant" plays CLEAN.
+   ⏳ AWAITING USER LISTEN: pick FULL vs balanced; flag any cue. Memory `longform-soundstage-pipeline`.
+
+2. **Sound library** (`sound_library/`): generate once, reuse across long+short form. 28 neutral
+   clips + living catalogue `SOUND_IDEAS.md` (both biblical-times lists merged). `sound_library.py`
+   (find/register/import). Spend this session ~$11-14 ElevenLabs (durable asset). Memory `sound-library`.
+
+3. **ENFORCED independent review** (`independent_review.py`): after a narration/significant plan, an
+   outside panel (cursor primary + claude/gemini/codex/grok, local CLIs, NO metered API) adversarially
+   reviews before it's called done. **Hard rule now in CLAUDE.md.** Memory `enforced-independent-review`.
+
+4. **Isaiah 53 narration v3 RE-LOCK.** The new panel CAUGHT a real Acts 8:35 KJV elision the engine
+   missed (+ 53:10-11 splice, 49:3/53:3 punctuation, "pierced"). All fixed + verified vs cache + ASR.
+   Then applied 4 user-approved EDITORIAL fixes (M1 "rich man in his death"; M6 hint-only resurrection;
+   M7 "taken away" not "paid in full"; M7 "bore them in your place"). Audio re-rendered → **482.89s**,
+   immersive mix rebuilt on the new timeline. narration.md status = v3 LOCKED.
+   ▶ Optional next: one final confirmation panel pass on the v3 narration (KJV already clean).
+
+---
+
 ## ═══════════ SESSION END 2026-06-04 — ISAIAH 53 PANEL MERGED + LONG-FORM AUDIO RENDERED — READ FIRST ═══════════
 
 **Isaiah 53 long-form pilot is now SCRIPT-LOCKED (v2) + has multi-voice AUDIO.** Folder:

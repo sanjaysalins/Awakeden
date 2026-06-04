@@ -210,6 +210,11 @@ they're never animated; `VISION_AUDIT_MODEL`=Haiku for the coarse assembly verif
 - **Independent red-team audit is standard practice** — always on,
   authoritative, at every stage (text, scene plan, image, eventually animation).
   LOCKED on 0 FAIL gates; CONDITIONAL/CAUTION advisory.
+- **EXTERNAL independent review is ENFORCED** (see the section below) — every LOCKED
+  narration AND every SIGNIFICANT plan is reviewed by an outside multi-CLI panel
+  (cursor primary + claude/gemini/codex/grok) via `independent_review.py` BEFORE it is
+  called done. I address (or explicitly answer) the findings; the user decides on any
+  REVISE I dispute. This is in addition to the in-engine red-team, not a replacement.
 - **Freshness = faithful depth** — surprising about the *text*, never about
   the *truth*. Novelty in entry point; orthodoxy in claim and landing.
 - **One thread spine through hook → middle → CTA**, mirrored hook → climax →
@@ -233,6 +238,28 @@ they're never animated; `VISION_AUDIT_MODEL`=Haiku for the coarse assembly verif
   camera moves (per `adhoc/SKILL_locked.md`).
 - **Reuse downstream pipelines, do not duplicate** — `narration_pipeline.py`,
   `per_turn_synth.py`, `image_to_kling.py` are subprocess'd, not re-implemented.
+
+## Independent review gate (ENFORCED — cursor + panel)
+
+Replicates the user's `ai-panel` independent-review pattern, self-contained in this repo
+as `independent_review.py`. **Standing rule: I do my work, THEN an outside panel reviews it
+before I call it done.** Mandatory for (a) every LOCKED narration and (b) every SIGNIFICANT
+plan (architecture, a new pipeline/stage, a spend-bearing batch design — not trivial edits).
+
+```
+.venv\Scripts\python.exe independent_review.py "<artifact.md>" --type narration   # or --type plan
+.venv\Scripts\python.exe independent_review.py "<artifact.md>" --type plan --providers cursor,claude
+```
+
+- Reviewers (adversarial, read-only, parallel): **cursor primary** + claude + gemini + codex +
+  grok — all via the user's LOCAL CLI subscriptions (**no metered API**; they consume CLI usage).
+- Each writes a raw review + a `VERDICT: PASS|REVISE|FAIL` + top fixes to
+  `<artifact_dir>/_independent_review/<stamp>/`; I read them, **verify the convergent flags
+  myself** (don't trust a verdict blindly — see `always-independent-red-team`), synthesize the
+  merged verdict, and fix or explicitly answer each before declaring done.
+- A REVISE I disagree with goes to the user, not silently ignored.
+- Validated 2026-06-04 on the Isaiah 53 long-form: 4/5 reviewers caught a real Acts 8:35
+  KJV-verbatim elision the in-engine pass had missed. Memory: `enforced-independent-review`.
 
 ## What NOT to do
 

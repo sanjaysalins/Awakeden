@@ -1,0 +1,435 @@
+[
+  {
+    "slug": "wilderness_dusk_lone_figure",
+    "aspect": "16:9",
+    "tags": [
+      "wilderness",
+      "desert",
+      "dusk",
+      "lone-figure",
+      "landscape"
+    ],
+    "subject": "a vast bleak Judean wilderness at dusk, wind-blown dust, one small lone prophet figure standing far off against dry hills, immense empty sky",
+    "reuse_scope": "neutral",
+    "jesus_variant": null,
+    "style": "baroque-oil",
+    "source": "nbp",
+    "source_episode": "01_Isaiah_53_Suffering_Servant",
+    "created": "2026-06-04",
+    "used_in": [
+      "01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "scroll_candlelight_hands",
+    "aspect": "16:9",
+    "tags": [
+      "scroll",
+      "parchment",
+      "candlelight",
+      "hands",
+      "study"
+    ],
+    "subject": "close on an ancient hand and an unrolled scroll by candlelight, ink and parchment, a question hanging in the dark",
+    "reuse_scope": "neutral",
+    "jesus_variant": null,
+    "style": "baroque-oil",
+    "source": "nbp",
+    "source_episode": "01_Isaiah_53_Suffering_Servant",
+    "created": "2026-06-04",
+    "used_in": [
+      "01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "glory_exalted_light_figure",
+    "aspect": "16:9",
+    "tags": [
+      "glory",
+      "light",
+      "exalted",
+      "heaven",
+      "radiance"
+    ],
+    "subject": "a radiant exalted figure robed in light high above, luminous, awaited as a king, golden glory breaking the dark",
+    "reuse_scope": "neutral",
+    "jesus_variant": null,
+    "style": "baroque-oil",
+    "source": "nbp",
+    "source_episode": "01_Isaiah_53_Suffering_Servant",
+    "created": "2026-06-04",
+    "used_in": [
+      "01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "isa53_despised_rejected",
+    "aspect": "16:9",
+    "tags": [
+      "rejection",
+      "crowd",
+      "isolation",
+      "sorrow"
+    ],
+    "subject": "a lone suffering figure turned away from by a distant crowd of robed people who look away, isolation, cold grey light",
+    "reuse_scope": "specific",
+    "jesus_variant": null,
+    "style": "baroque-oil",
+    "source": "nbp",
+    "source_episode": "01_Isaiah_53_Suffering_Servant",
+    "created": "2026-06-04",
+    "used_in": [
+      "01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "christ_crucified_robed_pierced",
+    "aspect": "16:9",
+    "tags": [
+      "crucifixion",
+      "cross",
+      "christ",
+      "passion"
+    ],
+    "subject": "a robed crucified Servant seen with reverence, pierced hands shown, head bowed, dark sky behind, sacred and restrained, NOT graphic",
+    "reuse_scope": "neutral",
+    "jesus_variant": "passion",
+    "style": "baroque-oil",
+    "source": "nbp",
+    "source_episode": "01_Isaiah_53_Suffering_Servant",
+    "created": "2026-06-04",
+    "used_in": [
+      "01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "isa53_servant_bearing_weight",
+    "aspect": "16:9",
+    "tags": [
+      "substitution",
+      "burden",
+      "servant"
+    ],
+    "subject": "the Servant bowed under a great weight in the foreground while behind him freed figures stand upright in soft light, substitution made visible",
+    "reuse_scope": "specific",
+    "jesus_variant": null,
+    "style": "baroque-oil",
+    "source": "nbp",
+    "source_episode": "01_Isaiah_53_Suffering_Servant",
+    "created": "2026-06-04",
+    "used_in": [
+      "01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "scattered_sheep_hillside_dusk",
+    "aspect": "16:9",
+    "tags": [
+      "sheep",
+      "flock",
+      "hillside",
+      "astray",
+      "shepherd"
+    ],
+    "subject": "scattered sheep wandering apart across a darkening hillside, each going its own way, one shepherd-figure bearing them, dusk",
+    "reuse_scope": "neutral",
+    "jesus_variant": null,
+    "style": "baroque-oil",
+    "source": "nbp",
+    "source_episode": "01_Isaiah_53_Suffering_Servant",
+    "created": "2026-06-04",
+    "used_in": [
+      "01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "lamb_led_to_slaughter",
+    "aspect": "16:9",
+    "tags": [
+      "lamb",
+      "sacrifice",
+      "altar",
+      "sheep"
+    ],
+    "subject": "a single white lamb led gently on a rope toward an altar, calm and unresisting, soft sorrowful light, sheep before shearers behind",
+    "reuse_scope": "neutral",
+    "jesus_variant": null,
+    "style": "baroque-oil",
+    "source": "nbp",
+    "source_episode": "01_Isaiah_53_Suffering_Servant",
+    "created": "2026-06-04",
+    "used_in": [
+      "01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "isa53_servant_silent_trial",
+    "aspect": "16:9",
+    "tags": [
+      "trial",
+      "silence",
+      "accusers",
+      "servant"
+    ],
+    "subject": "the silent Servant standing bound before shadowed accusers, dignified, calm, no defence, chiaroscuro",
+    "reuse_scope": "specific",
+    "jesus_variant": null,
+    "style": "baroque-oil",
+    "source": "nbp",
+    "source_episode": "01_Isaiah_53_Suffering_Servant",
+    "created": "2026-06-04",
+    "used_in": [
+      "01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "exiled_nation_column_grey",
+    "aspect": "16:9",
+    "tags": [
+      "exile",
+      "nation",
+      "israel",
+      "procession",
+      "journey"
+    ],
+    "subject": "a long column of weary exiled people walking under a grey sky, a suffering nation, banners lowered, a corporate body",
+    "reuse_scope": "neutral",
+    "jesus_variant": null,
+    "style": "baroque-oil",
+    "source": "nbp",
+    "source_episode": "01_Isaiah_53_Suffering_Servant",
+    "created": "2026-06-04",
+    "used_in": [
+      "01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "rich_mans_tomb_dusk",
+    "aspect": "16:9",
+    "tags": [
+      "tomb",
+      "grave",
+      "burial",
+      "stone",
+      "dusk"
+    ],
+    "subject": "a single hewn-rock tomb at dusk among rich men's graves, sealed and still, one pure light upon it, set apart",
+    "reuse_scope": "neutral",
+    "jesus_variant": null,
+    "style": "baroque-oil",
+    "source": "nbp",
+    "source_episode": "01_Isaiah_53_Suffering_Servant",
+    "created": "2026-06-04",
+    "used_in": [
+      "01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "isa53_eunuch_chariot_gaza",
+    "aspect": "16:9",
+    "tags": [
+      "chariot",
+      "eunuch",
+      "gaza-road",
+      "acts8",
+      "desert-road"
+    ],
+    "subject": "an Ethiopian court official in rich robes riding a wooden chariot on a dry desert road, a scroll open on his lap, horses, open sky",
+    "reuse_scope": "specific",
+    "jesus_variant": null,
+    "style": "baroque-oil",
+    "source": "nbp",
+    "source_episode": "01_Isaiah_53_Suffering_Servant",
+    "created": "2026-06-04",
+    "used_in": [
+      "01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "isa53_philip_meets_chariot",
+    "aspect": "16:9",
+    "tags": [
+      "philip",
+      "chariot",
+      "meeting",
+      "road",
+      "acts8"
+    ],
+    "subject": "a traveler (Philip) walking up to the halted chariot on the dusty road, the two figures meeting, warm low sun",
+    "reuse_scope": "specific",
+    "jesus_variant": null,
+    "style": "baroque-oil",
+    "source": "nbp",
+    "source_episode": "01_Isaiah_53_Suffering_Servant",
+    "created": "2026-06-04",
+    "used_in": [
+      "01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "isa53_philip_preaches_jesus",
+    "aspect": "16:9",
+    "tags": [
+      "philip",
+      "revelation",
+      "christ",
+      "acts8"
+    ],
+    "subject": "Philip pointing the official to a luminous figure of Christ rising in the light over the open scroll, revelation breaking",
+    "reuse_scope": "specific",
+    "jesus_variant": "resurrection",
+    "style": "baroque-oil",
+    "source": "nbp",
+    "source_episode": "01_Isaiah_53_Suffering_Servant",
+    "created": "2026-06-04",
+    "used_in": [
+      "01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "christ_crucified_dark_sky_golgotha",
+    "aspect": "16:9",
+    "tags": [
+      "crucifixion",
+      "cross",
+      "christ",
+      "storm-sky",
+      "golgotha"
+    ],
+    "subject": "the robed crucified Servant on a hill under a black thunderous sky, a single shaft of heaven's light upon him, he pours out his soul, reverent and restrained",
+    "reuse_scope": "neutral",
+    "jesus_variant": "passion",
+    "style": "baroque-oil",
+    "source": "nbp",
+    "source_episode": "01_Isaiah_53_Suffering_Servant",
+    "created": "2026-06-04",
+    "used_in": [
+      "01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "dawn_over_tomb_stone",
+    "aspect": "16:9",
+    "tags": [
+      "dawn",
+      "tomb",
+      "morning",
+      "resurrection",
+      "stone"
+    ],
+    "subject": "first pale dawn light breaking over a hewn tomb, the heavy stone, dew and quiet, hope at the edge of dark",
+    "reuse_scope": "neutral",
+    "jesus_variant": null,
+    "style": "baroque-oil",
+    "source": "nbp",
+    "source_episode": "01_Isaiah_53_Suffering_Servant",
+    "created": "2026-06-04",
+    "used_in": [
+      "01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "christ_risen_morning_light",
+    "aspect": "16:9",
+    "tags": [
+      "resurrection",
+      "christ",
+      "risen",
+      "glory",
+      "morning"
+    ],
+    "subject": "a radiant risen figure standing in golden morning light, alive, scars on his hands, serene and satisfied, glory restored",
+    "reuse_scope": "neutral",
+    "jesus_variant": "resurrection",
+    "style": "baroque-oil",
+    "source": "nbp",
+    "source_episode": "01_Isaiah_53_Suffering_Servant",
+    "created": "2026-06-04",
+    "used_in": [
+      "01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "christ_arm_of_the_lord_hand",
+    "aspect": "16:9",
+    "tags": [
+      "christ",
+      "hand",
+      "arm",
+      "light",
+      "risen"
+    ],
+    "subject": "a mighty outstretched arm of light resolving into the pierced hand and face of Christ, the saving strength of God revealed as a person",
+    "reuse_scope": "neutral",
+    "jesus_variant": "resurrection",
+    "style": "baroque-oil",
+    "source": "nbp",
+    "source_episode": "01_Isaiah_53_Suffering_Servant",
+    "created": "2026-06-04",
+    "used_in": [
+      "01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "christ_reaching_hand_grace",
+    "aspect": "16:9",
+    "tags": [
+      "christ",
+      "grace",
+      "hand",
+      "invitation"
+    ],
+    "subject": "Christ reaching a pierced hand toward the viewer in warm light, one ordinary kneeling figure receiving it, intimate and tender",
+    "reuse_scope": "neutral",
+    "jesus_variant": "resurrection",
+    "style": "baroque-oil",
+    "source": "nbp",
+    "source_episode": "01_Isaiah_53_Suffering_Servant",
+    "created": "2026-06-04",
+    "used_in": [
+      "01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "christ_risen_glory_hero",
+    "aspect": "16:9",
+    "tags": [
+      "christ",
+      "risen",
+      "glory",
+      "hero",
+      "light"
+    ],
+    "subject": "the risen Christ full of light, face lifted, the marred-now-glorified Servant, the gospel-pivot hero image, luminous gold, reverent close",
+    "reuse_scope": "neutral",
+    "jesus_variant": "resurrection",
+    "style": "baroque-oil",
+    "source": "nbp",
+    "source_episode": "01_Isaiah_53_Suffering_Servant",
+    "created": "2026-06-04",
+    "used_in": [
+      "01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "isa53_marred_face",
+    "aspect": "16:9",
+    "tags": [
+      "suffering",
+      "face",
+      "sorrow",
+      "passion",
+      "marred"
+    ],
+    "subject": "the marred beaten face of the suffering Servant, a man in his early thirties with dark damp hair and a short beard (the same man as the risen Christ, but bruised), his face swollen and bruised, brow furrowed, eyes downcast in deep sorrow, no beauty that we should desire him, heavy shadow with a single cold shaft of light across his wounded face, NO candle, NO elderly man, NO hood",
+    "reuse_scope": "specific",
+    "jesus_variant": "passion",
+    "style": "baroque-oil",
+    "source": "nbp",
+    "source_episode": "01_Isaiah_53_Suffering_Servant",
+    "created": "2026-06-04",
+    "used_in": [
+      "01_Isaiah_53_Suffering_Servant"
+    ]
+  }
+]

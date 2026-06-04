@@ -1,0 +1,641 @@
+[
+  {
+    "slug": "wind_desert_bleak",
+    "category": "ambience",
+    "tags": [
+      "wind",
+      "desert",
+      "wilderness",
+      "bleak",
+      "desolate"
+    ],
+    "prompt": "steady bleak desert wind blowing, present and clearly audible, gusting over open dry land, lonely and desolate, continuous ambience, wind only no music no voices",
+    "duration_s": 22.0,
+    "loopable": true,
+    "raw_mean_db": -25.7,
+    "raw_max_db": -4.4,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 880,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": [
+      "longform/01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "nail_strike_single",
+    "category": "oneshot",
+    "tags": [
+      "nail",
+      "hammer",
+      "iron",
+      "strike",
+      "impact",
+      "crucifixion",
+      "metal"
+    ],
+    "prompt": "one single distant heavy iron hammer strike on a metal spike, deep, reverberant, solemn, struck once, no repeats, no echo spam",
+    "duration_s": 3.0,
+    "loopable": false,
+    "raw_mean_db": -33.6,
+    "raw_max_db": -7.8,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 120,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": [
+      "longform/01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "air_hollow_desolate",
+    "category": "ambience",
+    "tags": [
+      "air",
+      "hollow",
+      "desolate",
+      "bleak",
+      "ambient",
+      "drone"
+    ],
+    "prompt": "low hollow desolate wind and empty air, bleak and still, cavernous lonely atmosphere, dark ambient room tone, no music no voices",
+    "duration_s": 22.0,
+    "loopable": true,
+    "raw_mean_db": -29.9,
+    "raw_max_db": -14.5,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 880,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": [
+      "longform/01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "crowd_murmur_distant",
+    "category": "ambience",
+    "tags": [
+      "crowd",
+      "murmur",
+      "voices",
+      "jeering",
+      "distant",
+      "people"
+    ],
+    "prompt": "distant murmuring crowd of people, faint muttering and jeering far away, outdoor, indistinct voices, no music",
+    "duration_s": 14.0,
+    "loopable": true,
+    "raw_mean_db": -53.0,
+    "raw_max_db": -37.5,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 560,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": [
+      "longform/01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "impact_low_boom",
+    "category": "oneshot",
+    "tags": [
+      "impact",
+      "boom",
+      "sub",
+      "hit",
+      "cinematic",
+      "ominous"
+    ],
+    "prompt": "one deep cinematic low boom impact, dark sub hit, single ominous thud, reverberant, no music",
+    "duration_s": 4.0,
+    "loopable": false,
+    "raw_mean_db": -14.9,
+    "raw_max_db": -0.1,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 160,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": [
+      "longform/01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "flock_sheep_field",
+    "category": "ambience",
+    "tags": [
+      "sheep",
+      "flock",
+      "field",
+      "pastoral",
+      "animals",
+      "bleating"
+    ],
+    "prompt": "small flock of sheep bleating softly in an open field, gentle, distant, calm pastoral ambience, no music",
+    "duration_s": 18.0,
+    "loopable": true,
+    "raw_mean_db": -45.9,
+    "raw_max_db": -18.9,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 720,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": [
+      "longform/01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "chariot_wheels_road",
+    "category": "ambience",
+    "tags": [
+      "chariot",
+      "cart",
+      "wheels",
+      "wood",
+      "road",
+      "travel"
+    ],
+    "prompt": "wooden cart wheels rolling on a dry dirt road, creaking wood, steady travel, open air, no music",
+    "duration_s": 20.0,
+    "loopable": true,
+    "raw_mean_db": -37.5,
+    "raw_max_db": -9.7,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 800,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": [
+      "longform/01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "horse_hooves_walk",
+    "category": "ambience",
+    "tags": [
+      "horse",
+      "hooves",
+      "walk",
+      "road",
+      "travel",
+      "animal"
+    ],
+    "prompt": "single horse hooves walking steadily on dry dirt road, clip clop, calm pace, outdoor, no music",
+    "duration_s": 18.0,
+    "loopable": true,
+    "raw_mean_db": -35.8,
+    "raw_max_db": -5.0,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 720,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": [
+      "longform/01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "footsteps_dirt_approach",
+    "category": "oneshot",
+    "tags": [
+      "footsteps",
+      "walking",
+      "dirt",
+      "approach",
+      "steps"
+    ],
+    "prompt": "footsteps walking on dry dirt and gravel approaching, a few steps, outdoor, no music",
+    "duration_s": 4.0,
+    "loopable": false,
+    "raw_mean_db": -42.5,
+    "raw_max_db": -13.7,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 160,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": [
+      "longform/01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "thunder_low_roll",
+    "category": "oneshot",
+    "tags": [
+      "thunder",
+      "rumble",
+      "storm",
+      "sky",
+      "ominous"
+    ],
+    "prompt": "one long low distant thunder roll, deep rumble rolling away, ominous, no rain, no music",
+    "duration_s": 7.0,
+    "loopable": false,
+    "raw_mean_db": -18.8,
+    "raw_max_db": -1.1,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 280,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": [
+      "longform/01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "rumble_deep_sub",
+    "category": "ambience",
+    "tags": [
+      "rumble",
+      "sub",
+      "drone",
+      "low",
+      "tension",
+      "dark"
+    ],
+    "prompt": "deep sustained low sub rumble, dark ominous drone tone, heavy tension atmosphere, continuous, no melody no music",
+    "duration_s": 20.0,
+    "loopable": true,
+    "raw_mean_db": -8.1,
+    "raw_max_db": -0.4,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 800,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": [
+      "longform/01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "dawn_morning_warm",
+    "category": "ambience",
+    "tags": [
+      "dawn",
+      "morning",
+      "birds",
+      "birdsong",
+      "warm",
+      "hope",
+      "peaceful"
+    ],
+    "prompt": "gentle dawn ambience, distant birdsong, soft warm morning air, peaceful hopeful stillness, no music",
+    "duration_s": 22.0,
+    "loopable": true,
+    "raw_mean_db": -36.7,
+    "raw_max_db": -8.2,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 880,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": [
+      "longform/01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "fire_crackling",
+    "category": "ambience",
+    "tags": [
+      "fire",
+      "campfire",
+      "flames",
+      "crackle",
+      "hearth",
+      "embers"
+    ],
+    "prompt": "steady campfire crackling and popping, warm flames, glowing embers shifting, close, no music no voices",
+    "duration_s": 18.0,
+    "loopable": true,
+    "raw_mean_db": -38.7,
+    "raw_max_db": -0.3,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 720,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": []
+  },
+  {
+    "slug": "sea_waves_shore",
+    "category": "ambience",
+    "tags": [
+      "sea",
+      "waves",
+      "shore",
+      "water",
+      "galilee",
+      "lake"
+    ],
+    "prompt": "gentle lake water waves lapping on a stony shore, calm open water, distant, no music no voices",
+    "duration_s": 18.0,
+    "loopable": true,
+    "raw_mean_db": -35.3,
+    "raw_max_db": -8.3,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 720,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": []
+  },
+  {
+    "slug": "boat_creak_oars",
+    "category": "ambience",
+    "tags": [
+      "boat",
+      "wood",
+      "oars",
+      "rowing",
+      "fishing",
+      "water"
+    ],
+    "prompt": "wooden fishing boat creaking with oars dipping and pulling through water, steady rowing, open water, no music",
+    "duration_s": 16.0,
+    "loopable": true,
+    "raw_mean_db": -24.1,
+    "raw_max_db": 0.0,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 640,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": []
+  },
+  {
+    "slug": "river_well_water",
+    "category": "ambience",
+    "tags": [
+      "water",
+      "river",
+      "well",
+      "spring",
+      "flowing",
+      "stream"
+    ],
+    "prompt": "fresh water flowing and trickling from a stone spring into a well, gentle steady stream, no music no voices",
+    "duration_s": 15.0,
+    "loopable": true,
+    "raw_mean_db": -32.4,
+    "raw_max_db": -6.1,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 600,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": []
+  },
+  {
+    "slug": "bread_tearing",
+    "category": "oneshot",
+    "tags": [
+      "bread",
+      "tear",
+      "food",
+      "break",
+      "meal",
+      "crust"
+    ],
+    "prompt": "hands tearing a loaf of crusty bread apart, close up, crackling crust, single tear, no music",
+    "duration_s": 4.0,
+    "loopable": false,
+    "raw_mean_db": -35.6,
+    "raw_max_db": -7.5,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 160,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": []
+  },
+  {
+    "slug": "coins_clinking",
+    "category": "oneshot",
+    "tags": [
+      "coins",
+      "money",
+      "metal",
+      "silver",
+      "clink"
+    ],
+    "prompt": "metal coins clinking and spilling onto a wooden table, a handful of silver coins, close, no music",
+    "duration_s": 4.0,
+    "loopable": false,
+    "raw_mean_db": -25.0,
+    "raw_max_db": -2.5,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 160,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": []
+  },
+  {
+    "slug": "shofar_blast",
+    "category": "oneshot",
+    "tags": [
+      "shofar",
+      "horn",
+      "ram",
+      "trumpet",
+      "announce",
+      "festival"
+    ],
+    "prompt": "a single long ancient ram's horn shofar blast, resonant and raw, echoing across open land, no music",
+    "duration_s": 6.0,
+    "loopable": false,
+    "raw_mean_db": -26.3,
+    "raw_max_db": -17.1,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 240,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": []
+  },
+  {
+    "slug": "crowd_shout_mob",
+    "category": "ambience",
+    "tags": [
+      "crowd",
+      "shout",
+      "mob",
+      "angry",
+      "voices",
+      "jerusalem"
+    ],
+    "prompt": "an angry crowd of people shouting and clamouring, indistinct furious voices, outdoor mob, no music",
+    "duration_s": 12.0,
+    "loopable": true,
+    "raw_mean_db": -15.5,
+    "raw_max_db": -0.2,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 480,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": []
+  },
+  {
+    "slug": "door_gate_creak",
+    "category": "oneshot",
+    "tags": [
+      "door",
+      "gate",
+      "wood",
+      "creak",
+      "hinge",
+      "open"
+    ],
+    "prompt": "a heavy wooden door creaking open slowly on old hinges then closing with a thud, close, no music",
+    "duration_s": 5.0,
+    "loopable": false,
+    "raw_mean_db": -25.5,
+    "raw_max_db": -0.1,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 200,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": []
+  },
+  {
+    "slug": "donkey_bray",
+    "category": "oneshot",
+    "tags": [
+      "donkey",
+      "bray",
+      "animal",
+      "travel",
+      "rural"
+    ],
+    "prompt": "a donkey braying, two calls, outdoor rural setting, no music no other voices",
+    "duration_s": 4.0,
+    "loopable": false,
+    "raw_mean_db": -13.1,
+    "raw_max_db": -0.1,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 160,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": []
+  },
+  {
+    "slug": "marketplace_chatter",
+    "category": "ambience",
+    "tags": [
+      "market",
+      "crowd",
+      "town",
+      "chatter",
+      "bargaining",
+      "voices"
+    ],
+    "prompt": "busy ancient marketplace ambience, overlapping chatter and bargaining, footsteps and distant animals, no music",
+    "duration_s": 16.0,
+    "loopable": true,
+    "raw_mean_db": -25.5,
+    "raw_max_db": -0.3,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 640,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": []
+  },
+  {
+    "slug": "footsteps_stone",
+    "category": "oneshot",
+    "tags": [
+      "footsteps",
+      "stone",
+      "walking",
+      "sandals",
+      "interior",
+      "courtyard"
+    ],
+    "prompt": "sandaled footsteps walking on stone paving, echoing in a stone courtyard, steady pace, no music",
+    "duration_s": 6.0,
+    "loopable": false,
+    "raw_mean_db": -31.7,
+    "raw_max_db": -5.1,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 240,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": []
+  },
+  {
+    "slug": "stone_roll_tomb",
+    "category": "oneshot",
+    "tags": [
+      "stone",
+      "tomb",
+      "roll",
+      "grind",
+      "rock",
+      "resurrection"
+    ],
+    "prompt": "a large heavy stone grinding and rolling across a rock tomb entrance, deep scraping echo, no music",
+    "duration_s": 6.0,
+    "loopable": false,
+    "raw_mean_db": -15.2,
+    "raw_max_db": -0.4,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 240,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": []
+  },
+  {
+    "slug": "veil_tearing",
+    "category": "oneshot",
+    "tags": [
+      "veil",
+      "cloth",
+      "tear",
+      "rip",
+      "fabric",
+      "temple"
+    ],
+    "prompt": "a heavy thick fabric temple veil tearing and ripping from top to bottom, dramatic, reverberant, no music",
+    "duration_s": 5.0,
+    "loopable": false,
+    "raw_mean_db": -22.1,
+    "raw_max_db": -0.0,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 200,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": []
+  },
+  {
+    "slug": "heavenly_choir_soft",
+    "category": "ambience",
+    "tags": [
+      "choir",
+      "heavenly",
+      "voices",
+      "divine",
+      "ethereal",
+      "holy"
+    ],
+    "prompt": "soft ethereal wordless choir, distant angelic voices, gentle holy ambient swell, no percussion no rhythm",
+    "duration_s": 16.0,
+    "loopable": true,
+    "raw_mean_db": -34.6,
+    "raw_max_db": -18.2,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 640,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": [
+      "longform/01_Isaiah_53_Suffering_Servant"
+    ]
+  },
+  {
+    "slug": "soldiers_march_armor",
+    "category": "ambience",
+    "tags": [
+      "soldiers",
+      "march",
+      "armor",
+      "roman",
+      "military",
+      "clank"
+    ],
+    "prompt": "a rank of Roman soldiers marching in unison on stone, armor and metal clinking, disciplined footsteps, no music",
+    "duration_s": 12.0,
+    "loopable": true,
+    "raw_mean_db": -23.8,
+    "raw_max_db": -0.3,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 480,
+    "reuse_scope": "neutral",
+    "created": "2026-06-04",
+    "used_in": []
+  }
+]
