@@ -74,6 +74,23 @@ def _backfill_times(words: list[dict]) -> list[dict]:
     return words
 
 
+def _monotonic(words: list[dict]) -> list[dict]:
+    """Force a strictly non-overlapping, forward timeline.
+
+    Independent per-window forced alignment can place a new window's first word
+    a few tenths *before* the previous window's last word (seam overlap), which
+    would flash two caption phrases at once. Clamp each word to start no earlier
+    than the previous word ended, keeping a minimum visible duration.
+    """
+    prev_end = 0.0
+    for wd in words:
+        s = max(float(wd["start"]), prev_end)
+        e = max(float(wd["end"]), s + 0.05)
+        wd["start"], wd["end"] = round(s, 3), round(e, 3)
+        prev_end = e
+    return words
+
+
 def _flatten(aligned: dict) -> list[dict]:
     out: list[dict] = []
     for seg in aligned.get("segments", []):
@@ -81,7 +98,7 @@ def _flatten(aligned: dict) -> list[dict]:
             tok = (w.get("word") or "").strip()
             if tok:
                 out.append({"w": tok, "start": w.get("start"), "end": w.get("end")})
-    return _backfill_times(out)
+    return _monotonic(_backfill_times(out))
 
 
 def transcribe_align(wav_path: str, model_size: str = "small.en",

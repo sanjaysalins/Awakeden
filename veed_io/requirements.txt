@@ -1,2 +1,11 @@
 # veed_io dependencies (self-contained; independent of the main engine)
 fal-client>=0.5.0
+
+# --- offline caption engine (caption.py / serif_captions.py) — no API, $0 ---
+numpy>=1.24            # prosody loudness + dynamic emphasis
+faster-whisper>=1.2    # word timings (shorts; long-form fallback)
+
+# --- exact long-form timing (caption.py --aligner whisperx) ---
+# Heavy (CPU torch). Only needed for 16:9 / long-form forced alignment.
+# Install: pip install whisperx   (pulls torch + torchaudio + transformers)
+whisperx>=3.4

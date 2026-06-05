@@ -47,6 +47,29 @@ single spot — no more inter-phrase drift. before/after lines stack above/below
   contact sheet: `C:\Users\sanjay\PycharmProjects\JesusInTheBible\veed_io\out\well\contact_stable.png`
   16:9 demo: `C:\Users\sanjay\PycharmProjects\JesusInTheBible\veed_io\out\well\demo_16x9.mp4`
 
+## EXACT timing — WhisperX forced alignment (NEW 2026-06-05)
+Long-form had loose caption timing (faster_whisper drops words under the music
+bed → the missing words were interpolated → drift). Fixed with **WhisperX**
+(`aligner.py`): phoneme (wav2vec2) **forced alignment of the known script** —
+every KJV word is snapped to the audio acoustically, nothing interpolated.
+- `caption.py --aligner {auto,whisper,whisperx}`. **auto** = whisperx for 16:9 OR
+  clips ≥120s (long-form), faster_whisper for shorts. Installed: torch 2.8 CPU,
+  whisperx (numpy unchanged at 2.4.6).
+- `aligner.forced_align_script` = the exact path (script known); `transcribe_align`
+  = ASR+align (script unknown). A `_monotonic` pass clamps seam overlaps so two
+  phrases never flash at once.
+- **GOTCHA — feed a CLEAN spoken script.** A long-form `narration.md` has a trailing
+  `## DEPTH & SOURCING` / `## VOICE PLAN` ledger that is NOT spoken. forced-align
+  tries to place every script word in the audio, so those notes corrupt it. Use
+  `veed_io/_extract_spoken.py <narration.md> <out.txt>` — keeps prose ONLY inside
+  `## MOVEMENT` sections. (Roadmap: fold into `--script auto`.)
+- First run downloads the wav2vec2 align model (~360MB); offline after. The
+  `torchcodec ... could not load` warning is harmless (pyannote VAD falls back).
+- Proven 2026-06-05 on the Isaiah 53 16:9 film (405s): forced-aligned **1177/1177**
+  script words, 0 interpolated; 5/5 spot-checks word-exact (believed·wounded·All·
+  Nazareth·Jesus). `...\veed_io\out\isaiah53\Isaiah53_16x9_whisperx.mp4`
+  sync sheet: `...\veed_io\out\isaiah53\contact_whisperx_sync.png`
+
 ## LOCKED caption recipe (the STATIC fallback — `--static`)
 Font **Inter** · colour **#F4F0D8** · one **big bold key word on its own line** ·
 mid-phrase connector words **italic + slightly larger** · trailing word
