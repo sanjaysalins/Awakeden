@@ -177,9 +177,10 @@ def caption_video(
     words_json: str | None = None,
     script: str | None = None,
     colour_hex: str | None = None,
-    shadow: int = serif_captions.SHADOW,
+    shadow: int | None = None,
     indent_after: bool = True,
     dynamic: bool = True,
+    style: str = "ivory",
     aligner_choice: str = "auto",
     guides: bool = False,
     keep_intermediate: bool = False,
@@ -253,7 +254,7 @@ def caption_video(
     serif_captions.render(
         video, wj, out, fonts_dir,
         colour_hex=colour_hex, shadow=shadow,
-        indent_after=indent_after, guides=guides, dynamic=dynamic,
+        indent_after=indent_after, guides=guides, dynamic=dynamic, style=style,
     )
 
     if not keep_intermediate and not words_json:
@@ -273,9 +274,11 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--words", help="reuse an existing words.json (skip transcription)")
     ap.add_argument("--script", help="exact narration script (txt/md) to force-align "
                     "to — corrects mis-heard words, keeps audio timing")
-    ap.add_argument("--color", help="override text colour hex (default #F4F0D8)")
-    ap.add_argument("--shadow", type=int, default=serif_captions.SHADOW,
-                    help=f"soft shadow depth (default {serif_captions.SHADOW}; 0 = none)")
+    ap.add_argument("--style", choices=sorted(serif_captions.STYLES), default="ivory",
+                    help="caption look: ivory(locked)/glow/pop/impact/karaoke/minimal")
+    ap.add_argument("--color", help="override the base text colour hex")
+    ap.add_argument("--shadow", type=int, default=None,
+                    help="soft shadow depth override (default: per style)")
     ap.add_argument("--no-indent", dest="indent_after", action="store_false",
                     help="disable the quote-lockup indent (on by default)")
     ap.add_argument("--guides", action="store_true",
@@ -296,7 +299,7 @@ def main(argv: list[str] | None = None) -> int:
             model_size=args.model, fonts_dir=args.fonts, words_json=args.words,
             script=args.script, colour_hex=args.color, shadow=args.shadow,
             indent_after=args.indent_after, guides=args.guides, dynamic=args.dynamic,
-            aligner_choice=args.aligner,
+            style=args.style, aligner_choice=args.aligner,
         )
     except (subprocess.CalledProcessError, RuntimeError) as exc:
         print(f"error: {exc}", file=sys.stderr)

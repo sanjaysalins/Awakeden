@@ -28,7 +28,7 @@ from __future__ import annotations
 import argparse
 import json
 import subprocess
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from pathlib import Path
 
 # ---- style knobs (tuned to the VEED reference) -----------------------------
@@ -126,6 +126,64 @@ def build_layout(w: int, h: int) -> Layout:
     return Layout(w, h, portrait, small, italic, big, bmin, bmax,
                   LINE_STEP_FACTOR, margin_l, s(MARGIN_V), nogo_top, nogo_bottom,
                   nogo_left, nogo_right, big_max_w, big_anchor_y, slots)
+
+
+# ---- caption STYLE presets (all offline, $0) -------------------------------
+# Palette (reverent gospel: ivory + warm gold, never neon).
+GOLD = "#F2C24C"        # warm amber — the emphasis colour
+CREAMC = "#F4F0D8"      # the locked ivory
+WHITE = "#FFFFFF"
+SOFTGOLD = "#E9C877"
+INK = "#141210"         # near-black outline
+
+
+@dataclass
+class Style:
+    """A caption LOOK. Themes colour/outline/animation on top of the dynamic
+    stable-focal layout — the emphasis stays voice-driven, the skin changes."""
+    name: str
+    base_hex: str = CREAMC      # small words
+    accent_hex: str = CREAMC    # the big / active word
+    outline: int = 0            # border px @ portrait ref (scaled per clip)
+    outline_hex: str = INK
+    shadow: int = 1
+    bounce: bool = False        # big word scale-pops in
+    glow: bool = False          # soft halo behind the big word
+    uppercase: bool = False
+    karaoke: bool = False        # each word fills to accent exactly as spoken
+
+
+STYLES: dict[str, Style] = {
+    # the current locked look (cream, big key word, italic connectors)
+    "ivory":   Style("ivory"),
+    # cream words, gold key word with a soft halo + gentle pop — refined viral
+    "glow":    Style("glow", accent_hex=GOLD, glow=True, bounce=True),
+    # white + thick dark outline (reads on ANY image), gold key word, pop
+    "pop":     Style("pop", base_hex=WHITE, accent_hex=GOLD, outline=6, shadow=2,
+                     bounce=True),
+    # ALL-CAPS, heavy outline, gold key word — loud / bold
+    "impact":  Style("impact", base_hex=WHITE, accent_hex=GOLD, outline=5,
+                     shadow=2, uppercase=True),
+    # each word lights up GOLD as it is spoken (uses the exact timings)
+    "karaoke": Style("karaoke", base_hex=WHITE, accent_hex=GOLD, outline=3,
+                     shadow=1, karaoke=True),
+    # quiet, premium lower-third — the calm/cinematic alternative
+    "minimal": Style("minimal", base_hex="#ECE7D2", accent_hex=SOFTGOLD,
+                     outline=0, shadow=0),
+}
+DEFAULT_STYLE = "ivory"
+
+
+@dataclass
+class Tok:
+    """One word with its size/role/timing — the unit the style renderer themes."""
+    text: str
+    fs: int
+    role: str          # 'before' | 'big' | 'after'
+    big: bool
+    italic: bool
+    start: float
+    end: float
 
 # phrasing
 MAX_WORDS = 5                  # words per on-screen phrase (VEED groups ~4-6)
@@ -392,6 +450,127 @@ def _phrase_lines(p: Phrase, lay: Layout) -> list[tuple[str, int, str]]:
     return lines
 
 
+def _wrap_toks(toks: list[Tok], lay: Layout) -> list[list[Tok]]:
+    """Greedy-wrap a run of word toks to the safe width (keeps the tok objects)."""
+    lines: list[list[Tok]] = []
+    cur: list[Tok] = []
+    cur_w = 0.0
+    for t in toks:
+        space = _est_w(1, lay.small_fs) if cur else 0.0
+        add = _est_w(len(t.text), t.fs) + space
+        if cur and cur_w + add > lay.big_max_w:
+            lines.append(cur)
+            cur, cur_w = [], 0.0
+            add = _est_w(len(t.text), t.fs)
+        cur.append(t)
+        cur_w += add
+    if cur:
+        lines.append(cur)
+    return lines
+
+
+def _phrase_toklines_dynamic(p: Phrase, lay: Layout) -> list[list[Tok]]:
+    """Dynamic layout as word toks: big word on its own line at its natural
+    position, lead-in/tail wrapped to width. Style-agnostic (themed later)."""
+    e = p.emphasis
+
+    def mk(i: int, role: str) -> Tok:
+        wd = p.words[i]
+        ital = (i == p.italic)
+        return Tok(wd.w, lay.italic_fs if ital else lay.small_fs, role,
+                   False, ital, wd.start, wd.end)
+
+    before = [mk(i, "before") for i in range(e)]
+    key = p.words[e]
+    big = Tok(key.w, _big_fs_strength(key.w, p.strength, lay), "big",
+              True, False, key.start, key.end)
+    after = [mk(i, "after") for i in range(e + 1, len(p.words))]
+    return _wrap_toks(before, lay) + [[big]] + _wrap_toks(after, lay)
+
+
+def _txt(t: Tok, style: Style) -> str:
+    return t.text.upper() if style.uppercase else t.text
+
+
+def _tok_override(t: Tok, style: Style) -> str:
+    """Inline ASS override for one word (size, italic, big colour/pop)."""
+    o = [rf"\fs{t.fs}", r"\i1" if t.italic else r"\i0",
+         r"\b1" if t.big else r"\b0"]
+    if not style.karaoke:                                 # karaoke owns colour
+        o.append(rf"\1c{hex_to_ass(style.accent_hex if t.big else style.base_hex)}")
+    if t.big and style.bounce:
+        o.append(r"\t(0,130,\fscx116\fscy116)\t(130,260,\fscx100\fscy100)")
+    return "".join(o)
+
+
+def _render_line(line: list[Tok], x: int, y: int, phrase_start: float,
+                 start: str, end: str, lay: Layout, style: Style) -> list[str]:
+    """Emit the ASS Dialogue event(s) for one stacked line, in the given style."""
+    events: list[str] = []
+
+    # soft gold halo behind the big word (glow styles); big lines hold one tok
+    if style.glow and any(t.big for t in line):
+        t = line[0]
+        blur = max(4, int(14 * lay.h / REF_H))
+        halo = (rf"{{\an1\pos({x},{y})\b1\fs{t.fs}\1c{hex_to_ass(style.accent_hex)}"
+                rf"\bord0\shad0\blur{blur}\fad(160,160)}}{_txt(t, style)}")
+        events.append(f"Dialogue: 0,{start},{end},Serif,,0,0,0,,{halo}")
+
+    parts: list[str] = []
+    if style.karaoke:
+        gap = max(0.0, line[0].start - phrase_start)
+        parts.append(rf"{{\kf{int(round(gap * 100))}}}")
+    for i, t in enumerate(line):
+        ov = _tok_override(t, style)
+        if style.karaoke:
+            ov = rf"\kf{max(5, int(round((t.end - t.start) * 100)))}" + ov
+        parts.append((" " if i else "") + "{" + ov + "}" + _txt(t, style))
+
+    intro = rf"{{\an1\pos({x},{y})\fad(180,120)}}"
+    events.append(f"Dialogue: 1,{start},{end},Serif,,0,0,0,,{intro}{''.join(parts)}")
+    return events
+
+
+def _phrase_events_dynamic(p: Phrase, lay: Layout, style: Style,
+                           indent_after: bool) -> list[str]:
+    """Styled dynamic events: stable focal anchor + per-style skin/karaoke."""
+    toklines = _phrase_toklines_dynamic(p, lay)
+    start, end = _ass_time(p.start), _ass_time(p.end)
+    base_x = lay.margin_l
+
+    big_tok = next((t for ln in toklines for t in ln if t.big), None)
+    big_w = (len(big_tok.text) * big_tok.fs * 0.58) if big_tok else 0.0
+
+    # stack bottom -> top, y relative to 0
+    placed: list[list] = []     # [x, y, line_fs, role, line]
+    y = 0.0
+    for line in reversed(toklines):
+        lfs = max(t.fs for t in line)
+        role = "big" if any(t.big for t in line) else line[0].role
+        x = base_x + (int(big_w * 0.42) if role == "after" and indent_after else 0)
+        placed.append([x, y, lfs, role, line])
+        y -= lfs * lay.line_step
+
+    rel_big = next((yy for _x, yy, _f, role, _l in placed if role == "big"), 0.0)
+    shift = lay.big_anchor_y - rel_big
+
+    safe_bottom = lay.h - lay.nogo_bottom
+    safe_top = lay.nogo_top
+    block_bottom = placed[0][1] + shift
+    if block_bottom > safe_bottom:
+        shift += safe_bottom - block_bottom
+    block_top = placed[-1][1] - placed[-1][2] + shift
+    if block_top < safe_top:
+        headroom = safe_bottom - (placed[0][1] + shift)
+        shift += min(safe_top - block_top, max(0.0, headroom))
+
+    events: list[str] = []
+    for x, yb, _lfs, _role, line in placed:
+        events += _render_line(line, x, int(yb + shift), p.start,
+                               start, end, lay, style)
+    return events
+
+
 def _phrase_events(p: Phrase, slot_mv: int, lay: Layout,
                    indent_after: bool = False, dynamic: bool = False) -> list[str]:
     """One positioned Dialogue per visual line, stacked tight, left-aligned.
@@ -457,10 +636,13 @@ def hex_to_ass(hex_colour: str) -> str:
     return f"&H00{b}{g}{r}".upper()
 
 
-def build_ass(phrases: list[Phrase], lay: Layout, *,
-              colour: str = CREAM, shadow: int = SHADOW,
+def build_ass(phrases: list[Phrase], lay: Layout, style: Style, *,
               indent_after: bool = True,             # quote-lockup indent [LOCKED]
               dynamic: bool = False) -> str:
+    primary = hex_to_ass(style.accent_hex if style.karaoke else style.base_hex)
+    secondary = hex_to_ass(style.base_hex)            # karaoke pre-fill colour
+    outline_c = hex_to_ass(style.outline_hex)
+    bord = max(0, int(round(style.outline * lay.h / REF_H)))
     header = f"""[Script Info]
 ScriptType: v4.00+
 PlayResX: {lay.w}
@@ -470,15 +652,17 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Serif,{FONT_NAME},{lay.small_fs},{colour},{colour},{colour},&H64000000,0,0,0,0,100,100,0,0,1,{OUTLINE},{shadow},1,{lay.margin_l},40,{lay.margin_v},1
+Style: Serif,{FONT_NAME},{lay.small_fs},{primary},{secondary},{outline_c},&H64000000,0,0,0,0,100,100,0,0,1,{bord},{style.shadow},1,{lay.margin_l},40,{lay.margin_v},1
 """
     lines = ["[Events]",
              "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"]
     for idx, p in enumerate(phrases):
-        # dynamic: fixed focal anchor (no drift). static: gentle 2-slot drift.
-        slot_mv = lay.static_slots_mv[idx % len(lay.static_slots_mv)]
-        lines.extend(_phrase_events(p, slot_mv, lay,
-                                    indent_after=indent_after, dynamic=dynamic))
+        if dynamic:
+            lines.extend(_phrase_events_dynamic(p, lay, style, indent_after))
+        else:
+            slot_mv = lay.static_slots_mv[idx % len(lay.static_slots_mv)]
+            lines.extend(_phrase_events(p, slot_mv, lay,
+                                        indent_after=indent_after, dynamic=False))
     return header + "\n".join(lines) + "\n"
 
 
@@ -505,20 +689,33 @@ def _guides_filter(lay: Layout) -> str:
     ])
 
 
+def _resolve_style(style: str | Style, colour_hex: str | None,
+                   shadow: int | None) -> Style:
+    s = style if isinstance(style, Style) else STYLES.get(style, STYLES[DEFAULT_STYLE])
+    s = replace(s)                                   # don't mutate the registry
+    if colour_hex:                                   # --color overrides the base
+        s.base_hex = colour_hex
+        if not s.karaoke and s.accent_hex == STYLES[s.name].base_hex:
+            s.accent_hex = colour_hex                # keep mono styles mono
+    if shadow is not None:
+        s.shadow = shadow
+    return s
+
+
 def render(video: str, words_json: str, out: str, fonts_dir: str, *,
-           colour_hex: str | None = None, shadow: int = SHADOW,
+           colour_hex: str | None = None, shadow: int | None = None,
            indent_after: bool = True, guides: bool = False,
-           dynamic: bool = False) -> str:
+           dynamic: bool = False, style: str | Style = DEFAULT_STYLE) -> str:
     w, h = _probe_size(video)
     lay = build_layout(w, h)
+    sty = _resolve_style(style, colour_hex, shadow)
     print(f"  layout: {w}x{h} {'9:16 portrait' if lay.portrait else '16:9 landscape'} "
-          f"(big {lay.big_fs_min}-{lay.big_fs_max}px, focal y={lay.big_anchor_y})")
+          f"(big {lay.big_fs_min}-{lay.big_fs_max}px, focal y={lay.big_anchor_y}) "
+          f"style={sty.name}")
     phrases = build_phrases(load_words(words_json), dynamic=dynamic)
-    colour = hex_to_ass(colour_hex) if colour_hex else CREAM
     ass_path = Path(out).with_suffix(".ass")
     ass_path.write_text(
-        build_ass(phrases, lay, colour=colour, shadow=shadow,
-                  indent_after=indent_after, dynamic=dynamic),
+        build_ass(phrases, lay, sty, indent_after=indent_after, dynamic=dynamic),
         encoding="utf-8",
     )
 
@@ -543,9 +740,11 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--words", required=True, help="word-timings JSON (w,start,end)")
     ap.add_argument("--out", required=True)
     ap.add_argument("--fonts", default="veed_io/fonts")
-    ap.add_argument("--color", help="override text colour hex (default #F4F0D8)")
-    ap.add_argument("--shadow", type=int, default=SHADOW,
-                    help=f"soft shadow depth (default {SHADOW}; 0 = none)")
+    ap.add_argument("--style", choices=sorted(STYLES), default=DEFAULT_STYLE,
+                    help="caption look (ivory/glow/pop/impact/karaoke/minimal)")
+    ap.add_argument("--color", help="override the base text colour hex")
+    ap.add_argument("--shadow", type=int, default=None,
+                    help="soft shadow depth override (default: per style)")
     ap.add_argument("--no-indent", dest="indent_after", action="store_false",
                     help="disable the quote-lockup indent (on by default)")
     ap.add_argument("--guides", action="store_true",
@@ -557,7 +756,7 @@ def main(argv: list[str] | None = None) -> int:
     path = render(args.video, args.words, args.out, args.fonts,
                   colour_hex=args.color, shadow=args.shadow,
                   indent_after=args.indent_after, guides=args.guides,
-                  dynamic=args.dynamic)
+                  dynamic=args.dynamic, style=args.style)
     print(f"wrote {Path(path).resolve()}")
     print(f"ass:  {Path(path).with_suffix('.ass').resolve()}")
     return 0
