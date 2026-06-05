@@ -2,6 +2,8 @@
 
 ## ═══════════ SESSION 2026-06-05 (LATEST) — ISAIAH 53 FILM DONE + CALM SCENES LIVENED ═══════════
 
+**⏸ SESSION PAUSED — everything committed (git `07ec813`, working tree clean). Awaiting user watch/approval.**
+
 **The 16:9 film is finished and rebuilt with livelier motion.** Final cut + gallery (FULL paths):
 - FILM: `C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\01_Isaiah_53_Suffering_Servant\v1\visual_16x9\Isaiah53_16x9.mp4` — 1920×1080, **6:45 (405.3s)**, closes on risen Christ.
 - GALLERY: `C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\01_Isaiah_53_Suffering_Servant\v1\visual_16x9\index.html`
