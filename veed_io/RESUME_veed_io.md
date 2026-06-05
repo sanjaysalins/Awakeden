@@ -47,6 +47,25 @@ single spot — no more inter-phrase drift. before/after lines stack above/below
   contact sheet: `C:\Users\sanjay\PycharmProjects\JesusInTheBible\veed_io\out\well\contact_stable.png`
   16:9 demo: `C:\Users\sanjay\PycharmProjects\JesusInTheBible\veed_io\out\well\demo_16x9.mp4`
 
+## ⏭️ CAPTION STYLE PRESETS — DECIDE TOMORROW (NEW 2026-06-05)
+Built a `--style` system to explore more viral/appealing looks (all $0, offline).
+Same dynamic stable-focal layout; only the *skin* changes. Per-word **karaoke**
+fill is now possible because the WhisperX timings are exact.
+`serif_captions.STYLES` (dataclass `Style`): `ivory glow pop impact karaoke minimal`.
+- **ivory** = the current locked look (cream, big key word, italic). Default for now.
+- **glow** = gold key word + soft halo + gentle pop (halo is currently SUBTLE — can crank).
+- **pop** = white + thick dark outline (reads on any image) + gold key word + bounce.
+- **karaoke** = each word lights up GOLD exactly as spoken. ⭐ the headline viral one.
+- **impact** = ALL-CAPS + heavy outline + gold key word.
+- **minimal** = quiet soft-gold, no outline/shadow (premium/cinematic).
+- Run: `caption.py --style karaoke` (or any). `--color` overrides the base; `--shadow` overrides.
+- **6 sample renders to watch + pick from** (on the Well short):
+  `C:\Users\sanjay\PycharmProjects\JesusInTheBible\veed_io\out\well\styles\well_<style>.mp4`
+  side-by-side still: `C:\Users\sanjay\PycharmProjects\JesusInTheBible\veed_io\out\well\styles\STYLE_COMPARE.png`
+- **TODO tomorrow:** user picks the style (can differ per format — e.g. karaoke for
+  shorts, minimal/glow for long-form). Then set it as the default + maybe blend two
+  (e.g. karaoke fill WITH pop's outline). Code is committed; the pick is open.
+
 ## EXACT timing — WhisperX forced alignment (NEW 2026-06-05)
 Long-form had loose caption timing (faster_whisper drops words under the music
 bed → the missing words were interpolated → drift). Fixed with **WhisperX**
