@@ -51,27 +51,27 @@ CLIPS = [
 
 # ---- placement plan (absolute seconds on the 476.5s timeline) ----------------
 # beds:  (slug, start, end, fade_in, fade_out, target_mean_db)
-# NOTE: absolute times are on the v3 RE-LOCKED audio (482.9s; KJV + editorial re-render
-# 2026-06-04). Re-derive via longform/_pilot_cue_times.py if the audio is re-rendered again.
+# NOTE: absolute times are on the 405.3s audio (narrator sped to 1.20x 2026-06-05;
+# God + eunuch left natural). Re-derived from fresh alignment via longform/_retime.py
+# (piecewise warp off _pilot_cue_times.py). Re-run that pair if the audio changes again.
 BEDS = [
-    ("wind_desert_bleak",     0,  47, 2, 4, -29),
-    ("air_hollow_desolate",  53, 289, 4, 8, -32),
-    ("crowd_murmur_distant", 71,  86, 3, 4, -30),
-    ("rumble_deep_sub",     112, 142, 3, 6, -30),   # exchange weight (nail @117.5)
-    ("flock_sheep_field",   174, 198, 2, 4, -28),
-    ("chariot_wheels_road", 285, 340, 2, 5, -26),
-    ("horse_hooves_walk",   287, 337, 2, 5, -29),
-    ("rumble_deep_sub",     337, 368, 2, 6, -28),   # "it pleased the LORD" weight
-    ("dawn_morning_warm",   364, 482, 4, 8, -28),
-    ("heavenly_choir_soft", 369, 482, 6, 9, -33),   # library: holy swell on the
-                                                     # resurrection turn -> "His name is Jesus"
+    ("wind_desert_bleak",     0,  39, 2, 4, -29),
+    ("air_hollow_desolate",  45, 242, 4, 8, -32),
+    ("crowd_murmur_distant", 61,  73, 3, 4, -30),
+    ("rumble_deep_sub",      95, 120, 3, 6, -30),   # exchange weight (nail @99.2)
+    ("flock_sheep_field",   146, 166, 2, 4, -28),
+    ("chariot_wheels_road", 239, 286, 2, 5, -26),
+    ("horse_hooves_walk",   241, 284, 2, 5, -29),
+    ("rumble_deep_sub",     284, 309, 2, 6, -28),   # "it pleased the LORD" weight
+    ("dawn_morning_warm",   306, 405, 4, 8, -28),
+    ("heavenly_choir_soft", 310, 405, 6, 9, -33),   # holy swell -> "His name is Jesus"
 ]
 # shots: (slug, anchor_s, target_max_db)
 SHOTS = [
-    ("impact_low_boom",          60.4, -7),    # "his visage was so marred"
-    ("nail_strike_single",      117.5, -9),    # "wounded for our transgressions"
-    ("footsteps_dirt_approach", 298.3, -12),   # Philip approaches the chariot
-    ("thunder_low_roll",        339.2, -6),    # "Yet it pleased the LORD to bruise him"
+    ("impact_low_boom",          51.6, -7),    # "his visage was so marred"
+    ("nail_strike_single",       99.2, -9),    # "wounded for our transgressions"
+    ("footsteps_dirt_approach", 250.1, -12),   # Philip approaches the chariot
+    ("thunder_low_roll",        285.5, -6),    # "Yet it pleased the LORD to bruise him"
 ]
 
 

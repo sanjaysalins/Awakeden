@@ -1,0 +1,221 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Isaiah 53 — 16:9 stills</title>
+<style>
+  :root{color-scheme:dark}
+  body{margin:0;background:#14110d;color:#e9e0cf;font:15px/1.4 -apple-system,Segoe UI,Roboto,sans-serif}
+  header{padding:16px 20px;border-bottom:1px solid #332b20;position:sticky;top:0;background:#14110dee;backdrop-filter:blur(6px);z-index:5}
+  h1{margin:0;font-size:18px;font-weight:600}
+  .sub{color:#9c8e74;font-size:13px;margin-top:3px}
+  .controls{margin-top:8px}
+  .controls button{background:#2a2318;color:#e9e0cf;border:1px solid #4a3f2c;border-radius:6px;padding:5px 11px;cursor:pointer;font-size:13px}
+  .controls button.on{background:#6b5836;border-color:#8a724a}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;padding:18px}
+  .card{margin:0;background:#1d1810;border:1px solid #332b20;border-radius:10px;overflow:hidden;cursor:zoom-in;transition:transform .08s,border-color .12s}
+  .card:hover{transform:translateY(-2px);border-color:#7a6238}
+  .thumbwrap{aspect-ratio:16/9;background:#000;overflow:hidden}
+  .thumbwrap img{width:100%;height:100%;object-fit:cover;display:block}
+  figcaption{padding:8px 10px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .num{font-weight:700;color:#e7c98a}
+  .ttl{flex:1 1 100%;order:3;color:#cdbf9f;font-size:13px}
+  .meta{flex:1 1 100%;order:4;color:#80745c;font-size:11px}
+  .badge{font-size:10px;padding:2px 6px;border-radius:20px;letter-spacing:.04em}
+  .badge.redone{background:#5a3e1f;color:#ffd89b}
+  .badge.kept{background:#26331f;color:#a9d191}
+  body.only-redone .card.kepthide{display:none}
+  /* lightbox */
+  #lb{position:fixed;inset:0;background:#000000ee;display:none;align-items:center;justify-content:center;z-index:20;flex-direction:column}
+  #lb.show{display:flex}
+  #lb img{max-width:96vw;max-height:84vh;object-fit:contain;box-shadow:0 0 40px #000}
+  #lbcap{margin-top:10px;color:#e9e0cf;font-size:15px}
+  #lbcap .num{color:#e7c98a;font-weight:700;margin-right:8px}
+  .nav{position:fixed;top:0;height:100%;width:18%;display:flex;align-items:center;cursor:pointer;color:#fff7;font-size:40px;user-select:none}
+  .nav:hover{color:#fff}
+  #prev{left:0;justify-content:flex-start;padding-left:18px}
+  #next{right:0;justify-content:flex-end;padding-right:18px}
+  #close{position:fixed;top:12px;right:18px;color:#fff9;font-size:30px;cursor:pointer;z-index:21}
+  .hint{color:#80745c;font-size:12px;margin-top:4px}
+</style></head><body>
+<header>
+  <h1>Isaiah 53 · long-form 16:9 stills</h1>
+  <div class="sub">21 scenes · <b style="color:#ffd89b">12 redone</b> · 9 kept · click any tile to zoom</div>
+  <div class="controls">
+    <button id="bAll" class="on" onclick="filt(false)">Show all</button>
+    <button id="bRedone" onclick="filt(true)">Only redone</button>
+  </div>
+</header>
+<main class="grid" id="grid">
+    <figure class="card" onclick="openLb(0)">
+      <div class="thumbwrap"><img loading="lazy" src="01_the_wilderness_the_prophet.png" alt="The wilderness, the prophet"></div>
+      <figcaption><span class="num">#01</span>
+        <span class="badge redone">REDONE</span>
+        <span class="ttl">The wilderness, the prophet</span>
+        <span class="meta">1 Report · 0–20s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(1)">
+      <div class="thumbwrap"><img loading="lazy" src="02_the_scroll_the_question.png" alt="The scroll, the question"></div>
+      <figcaption><span class="num">#02</span>
+        <span class="badge redone">REDONE</span>
+        <span class="ttl">The scroll, the question</span>
+        <span class="meta">1 Report · 20–39s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(2)">
+      <div class="thumbwrap"><img loading="lazy" src="03_behold_my_servant_glory.png" alt="Behold my servant (glory)"></div>
+      <figcaption><span class="num">#03</span>
+        <span class="badge redone">REDONE</span>
+        <span class="ttl">Behold my servant (glory)</span>
+        <span class="meta">2 Behold · 40–60s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(3)">
+      <div class="thumbwrap"><img loading="lazy" src="04_the_picture_breaks_the_marred_face.png" alt="The picture breaks (the marred face)"></div>
+      <figcaption><span class="num">#04</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">The picture breaks (the marred face)</span>
+        <span class="meta">2 Scandal · 60–78s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(4)">
+      <div class="thumbwrap"><img loading="lazy" src="05_despised_and_rejected.png" alt="Despised and rejected"></div>
+      <figcaption><span class="num">#05</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">Despised and rejected</span>
+        <span class="meta">2 Scandal · 78–93s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(5)">
+      <div class="thumbwrap"><img loading="lazy" src="06_wounded_for_our_transgressions_the_cross.png" alt="Wounded for our transgressions (the cross beat)"></div>
+      <figcaption><span class="num">#06</span>
+        <span class="badge redone">REDONE</span>
+        <span class="ttl">Wounded for our transgressions (the cross beat)</span>
+        <span class="meta">3 Exchange · 93–111s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(6)">
+      <div class="thumbwrap"><img loading="lazy" src="07_the_chastisement_of_our_peace.png" alt="The chastisement of our peace"></div>
+      <figcaption><span class="num">#07</span>
+        <span class="badge redone">REDONE</span>
+        <span class="ttl">The chastisement of our peace</span>
+        <span class="meta">3 Exchange · 111–131s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(7)">
+      <div class="thumbwrap"><img loading="lazy" src="08_all_we_like_sheep_have_gone_astray.png" alt="All we like sheep have gone astray"></div>
+      <figcaption><span class="num">#08</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">All we like sheep have gone astray</span>
+        <span class="meta">3 Exchange · 131–147s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(8)">
+      <div class="thumbwrap"><img loading="lazy" src="09_a_lamb_to_the_slaughter.png" alt="A lamb to the slaughter"></div>
+      <figcaption><span class="num">#09</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">A lamb to the slaughter</span>
+        <span class="meta">4 Silent Lamb · 147–168s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(9)">
+      <div class="thumbwrap"><img loading="lazy" src="10_he_opened_not_his_mouth.png" alt="He opened not his mouth"></div>
+      <figcaption><span class="num">#10</span>
+        <span class="badge redone">REDONE</span>
+        <span class="ttl">He opened not his mouth</span>
+        <span class="meta">4 Silent Lamb · 168–193s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(10)">
+      <div class="thumbwrap"><img loading="lazy" src="11_the_nation_the_servant_israel.png" alt="The nation, the servant Israel"></div>
+      <figcaption><span class="num">#11</span>
+        <span class="badge redone">REDONE</span>
+        <span class="ttl">The nation, the servant Israel</span>
+        <span class="meta">4 Objection · 193–216s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(11)">
+      <div class="thumbwrap"><img loading="lazy" src="12_a_rich_man_s_tomb_the_sinless_one.png" alt="A rich man&#x27;s tomb, the sinless one"></div>
+      <figcaption><span class="num">#12</span>
+        <span class="badge redone">REDONE</span>
+        <span class="ttl">A rich man&#x27;s tomb, the sinless one</span>
+        <span class="meta">4 Objection · 216–239s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(12)">
+      <div class="thumbwrap"><img loading="lazy" src="13_the_ethiopian_in_his_chariot.png" alt="The Ethiopian in his chariot"></div>
+      <figcaption><span class="num">#13</span>
+        <span class="badge redone">REDONE</span>
+        <span class="ttl">The Ethiopian in his chariot</span>
+        <span class="meta">5 Gaza Road · 240–261s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(13)">
+      <div class="thumbwrap"><img loading="lazy" src="14_philip_comes_alongside.png" alt="Philip comes alongside"></div>
+      <figcaption><span class="num">#14</span>
+        <span class="badge redone">REDONE</span>
+        <span class="ttl">Philip comes alongside</span>
+        <span class="meta">5 Gaza Road · 261–274s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(14)">
+      <div class="thumbwrap"><img loading="lazy" src="15_preached_unto_him_jesus.png" alt="Preached unto him Jesus"></div>
+      <figcaption><span class="num">#15</span>
+        <span class="badge redone">REDONE</span>
+        <span class="ttl">Preached unto him Jesus</span>
+        <span class="meta">5 Gaza Road · 274–285s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(15)">
+      <div class="thumbwrap"><img loading="lazy" src="16_it_pleased_the_lord_the_cross_dark_sky.png" alt="It pleased the LORD (the cross, dark sky)"></div>
+      <figcaption><span class="num">#16</span>
+        <span class="badge redone">REDONE</span>
+        <span class="ttl">It pleased the LORD (the cross, dark sky)</span>
+        <span class="meta">6 It Pleased · 285–307s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(16)">
+      <div class="thumbwrap"><img loading="lazy" src="17_the_chapter_turns_toward_morning.png" alt="The chapter turns toward morning"></div>
+      <figcaption><span class="num">#17</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">The chapter turns toward morning</span>
+        <span class="meta">7 Morning · 307–329s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(17)">
+      <div class="thumbwrap"><img loading="lazy" src="18_he_shall_be_satisfied_the_risen_servant.png" alt="He shall be satisfied (the risen Servant)"></div>
+      <figcaption><span class="num">#18</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">He shall be satisfied (the risen Servant)</span>
+        <span class="meta">7 Morning · 329–351s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(18)">
+      <div class="thumbwrap"><img loading="lazy" src="19_the_arm_of_the_lord_is_a_person.png" alt="The arm of the LORD is a person"></div>
+      <figcaption><span class="num">#19</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">The arm of the LORD is a person</span>
+        <span class="meta">7 Arm of LORD · 351–373s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(19)">
+      <div class="thumbwrap"><img loading="lazy" src="20_it_has_your_name_grace_reaches_out.png" alt="It has your name (grace reaches out)"></div>
+      <figcaption><span class="num">#20</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">It has your name (grace reaches out)</span>
+        <span class="meta">7 Arm of LORD · 373–391s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(20)">
+      <div class="thumbwrap"><img loading="lazy" src="21_his_name_is_jesus_hero_close.png" alt="His name is Jesus (HERO close)"></div>
+      <figcaption><span class="num">#21</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">His name is Jesus (HERO close)</span>
+        <span class="meta">7 Close · 391–405s</span></figcaption>
+    </figure></main>
+
+<div id="lb" onclick="if(event.target.id==='lb')closeLb()">
+  <span id="close" onclick="closeLb()">✕</span>
+  <span id="prev" class="nav" onclick="step(-1)">‹</span>
+  <span id="next" class="nav" onclick="step(1)">›</span>
+  <img id="lbimg" src="">
+  <div id="lbcap"></div>
+  <div class="hint">← → to move · Esc to close</div>
+</div>
+
+<script>
+const S = [{"src": "01_the_wilderness_the_prophet.png", "n": 1, "title": "The wilderness, the prophet", "mvt": "1 Report", "redone": true}, {"src": "02_the_scroll_the_question.png", "n": 2, "title": "The scroll, the question", "mvt": "1 Report", "redone": true}, {"src": "03_behold_my_servant_glory.png", "n": 3, "title": "Behold my servant (glory)", "mvt": "2 Behold", "redone": true}, {"src": "04_the_picture_breaks_the_marred_face.png", "n": 4, "title": "The picture breaks (the marred face)", "mvt": "2 Scandal", "redone": false}, {"src": "05_despised_and_rejected.png", "n": 5, "title": "Despised and rejected", "mvt": "2 Scandal", "redone": false}, {"src": "06_wounded_for_our_transgressions_the_cross.png", "n": 6, "title": "Wounded for our transgressions (the cross beat)", "mvt": "3 Exchange", "redone": true}, {"src": "07_the_chastisement_of_our_peace.png", "n": 7, "title": "The chastisement of our peace", "mvt": "3 Exchange", "redone": true}, {"src": "08_all_we_like_sheep_have_gone_astray.png", "n": 8, "title": "All we like sheep have gone astray", "mvt": "3 Exchange", "redone": false}, {"src": "09_a_lamb_to_the_slaughter.png", "n": 9, "title": "A lamb to the slaughter", "mvt": "4 Silent Lamb", "redone": false}, {"src": "10_he_opened_not_his_mouth.png", "n": 10, "title": "He opened not his mouth", "mvt": "4 Silent Lamb", "redone": true}, {"src": "11_the_nation_the_servant_israel.png", "n": 11, "title": "The nation, the servant Israel", "mvt": "4 Objection", "redone": true}, {"src": "12_a_rich_man_s_tomb_the_sinless_one.png", "n": 12, "title": "A rich man's tomb, the sinless one", "mvt": "4 Objection", "redone": true}, {"src": "13_the_ethiopian_in_his_chariot.png", "n": 13, "title": "The Ethiopian in his chariot", "mvt": "5 Gaza Road", "redone": true}, {"src": "14_philip_comes_alongside.png", "n": 14, "title": "Philip comes alongside", "mvt": "5 Gaza Road", "redone": true}, {"src": "15_preached_unto_him_jesus.png", "n": 15, "title": "Preached unto him Jesus", "mvt": "5 Gaza Road", "redone": true}, {"src": "16_it_pleased_the_lord_the_cross_dark_sky.png", "n": 16, "title": "It pleased the LORD (the cross, dark sky)", "mvt": "6 It Pleased", "redone": true}, {"src": "17_the_chapter_turns_toward_morning.png", "n": 17, "title": "The chapter turns toward morning", "mvt": "7 Morning", "redone": false}, {"src": "18_he_shall_be_satisfied_the_risen_servant.png", "n": 18, "title": "He shall be satisfied (the risen Servant)", "mvt": "7 Morning", "redone": false}, {"src": "19_the_arm_of_the_lord_is_a_person.png", "n": 19, "title": "The arm of the LORD is a person", "mvt": "7 Arm of LORD", "redone": false}, {"src": "20_it_has_your_name_grace_reaches_out.png", "n": 20, "title": "It has your name (grace reaches out)", "mvt": "7 Arm of LORD", "redone": false}, {"src": "21_his_name_is_jesus_hero_close.png", "n": 21, "title": "His name is Jesus (HERO close)", "mvt": "7 Close", "redone": false}];
+let cur = 0;
+const lb=document.getElementById('lb'), lbimg=document.getElementById('lbimg'), lbcap=document.getElementById('lbcap');
+function openLb(i){cur=i;render();lb.classList.add('show');}
+function closeLb(){lb.classList.remove('show');}
+function step(d){cur=(cur+d+S.length)%S.length;render();}
+function render(){const s=S[cur];lbimg.src=s.src;
+  lbcap.innerHTML='<span class="num">#'+String(s.n).padStart(2,'0')+'</span>'+s.title+' — <span style="color:#9c8e74">'+s.mvt+(s.redone?' · redone':'')+'</span>';}
+function filt(only){document.body.classList.toggle('only-redone',only);
+  document.getElementById('bRedone').classList.toggle('on',only);
+  document.getElementById('bAll').classList.toggle('on',!only);}
+// tag kept cards for filtering
+document.querySelectorAll('.card').forEach((c,i)=>{if(!S[i].redone)c.classList.add('kepthide');});
+document.addEventListener('keydown',e=>{if(!lb.classList.contains('show'))return;
+  if(e.key==='Escape')closeLb();else if(e.key==='ArrowRight')step(1);else if(e.key==='ArrowLeft')step(-1);});
+</script></body></html>

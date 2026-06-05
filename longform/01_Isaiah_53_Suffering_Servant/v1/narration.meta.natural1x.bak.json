@@ -2,26 +2,26 @@
   "folder": "v1",
   "stage": "per_turn_synth",
   "mode": "dialogue_per_turn_with_narrator_atempo",
-  "generated_at": "2026-06-05T10:38:17Z",
+  "generated_at": "2026-06-04T13:59:25Z",
   "model_id": "eleven_v3",
   "output_format": "mp3_44100_128",
-  "target_seconds": 405.0,
+  "target_seconds": 600.0,
   "natural_total_seconds": 481.6,
   "narrator_natural_seconds": 468.4,
   "quote_total_seconds": 13.2,
-  "narrator_atempo_factor": 1.2001,
+  "narrator_atempo_factor": 1.0,
   "pre_quote_pause_seconds": 0.4,
   "post_quote_pause_seconds": 0.35,
   "pause_total_seconds": 1.5,
-  "final_total_seconds": 405.261,
-  "delta_vs_target_seconds": 0.261,
+  "final_total_seconds": 482.887,
+  "delta_vs_target_seconds": -117.113,
   "turns": [
     {
       "index": 0,
       "speaker": "narrator",
       "chars": 367,
       "natural_seconds": 26.16,
-      "final_seconds": 21.815,
+      "final_seconds": 26.157,
       "atempo_applied": true
     },
     {
@@ -29,7 +29,7 @@
       "speaker": "narrator",
       "chars": 76,
       "natural_seconds": 4.64,
-      "final_seconds": 3.879,
+      "final_seconds": 4.632,
       "atempo_applied": true
     },
     {
@@ -37,7 +37,7 @@
       "speaker": "narrator",
       "chars": 266,
       "natural_seconds": 16.8,
-      "final_seconds": 14.011,
+      "final_seconds": 16.793,
       "atempo_applied": true
     },
     {
@@ -69,15 +69,15 @@
       "speaker": "narrator",
       "chars": 31,
       "natural_seconds": 2.16,
-      "final_seconds": 4.61,
+      "final_seconds": 5.517,
       "atempo_applied": true
     },
     {
       "index": 7,
       "speaker": "narrator",
-      "chars": 188,
+      "chars": 187,
       "natural_seconds": 16.08,
-      "final_seconds": 4.738,
+      "final_seconds": 5.677,
       "atempo_applied": true
     },
     {
@@ -85,7 +85,7 @@
       "speaker": "narrator",
       "chars": 350,
       "natural_seconds": 26.48,
-      "final_seconds": 1.804,
+      "final_seconds": 2.151,
       "atempo_applied": true
     },
     {
@@ -93,7 +93,7 @@
       "speaker": "narrator",
       "chars": 59,
       "natural_seconds": 3.92,
-      "final_seconds": 13.404,
+      "final_seconds": 16.073,
       "atempo_applied": true
     },
     {
@@ -101,7 +101,7 @@
       "speaker": "narrator",
       "chars": 24,
       "natural_seconds": 2.64,
-      "final_seconds": 22.077,
+      "final_seconds": 26.476,
       "atempo_applied": true
     },
     {
@@ -109,7 +109,7 @@
       "speaker": "narrator",
       "chars": 159,
       "natural_seconds": 10.4,
-      "final_seconds": 3.275,
+      "final_seconds": 3.918,
       "atempo_applied": true
     },
     {
@@ -117,7 +117,7 @@
       "speaker": "narrator",
       "chars": 332,
       "natural_seconds": 24.88,
-      "final_seconds": 2.199,
+      "final_seconds": 2.629,
       "atempo_applied": true
     },
     {
@@ -125,7 +125,7 @@
       "speaker": "narrator",
       "chars": 132,
       "natural_seconds": 8.16,
-      "final_seconds": 8.683,
+      "final_seconds": 10.393,
       "atempo_applied": true
     },
     {
@@ -133,7 +133,7 @@
       "speaker": "narrator",
       "chars": 127,
       "natural_seconds": 10.24,
-      "final_seconds": 20.734,
+      "final_seconds": 24.87,
       "atempo_applied": true
     },
     {
@@ -141,7 +141,7 @@
       "speaker": "narrator",
       "chars": 185,
       "natural_seconds": 12.16,
-      "final_seconds": 6.811,
+      "final_seconds": 8.154,
       "atempo_applied": true
     },
     {
@@ -149,15 +149,15 @@
       "speaker": "narrator",
       "chars": 368,
       "natural_seconds": 28.08,
-      "final_seconds": 8.536,
+      "final_seconds": 10.229,
       "atempo_applied": true
     },
     {
       "index": 17,
       "speaker": "narrator",
-      "chars": 62,
+      "chars": 61,
       "natural_seconds": 4.24,
-      "final_seconds": 10.15,
+      "final_seconds": 12.154,
       "atempo_applied": true
     },
     {
@@ -165,15 +165,15 @@
       "speaker": "narrator",
       "chars": 234,
       "natural_seconds": 17.76,
-      "final_seconds": 23.414,
+      "final_seconds": 28.072,
       "atempo_applied": true
     },
     {
       "index": 19,
       "speaker": "narrator",
-      "chars": 139,
+      "chars": 138,
       "natural_seconds": 8.48,
-      "final_seconds": 3.54,
+      "final_seconds": 4.237,
       "atempo_applied": true
     },
     {
@@ -181,15 +181,15 @@
       "speaker": "narrator",
       "chars": 149,
       "natural_seconds": 10.32,
-      "final_seconds": 14.801,
+      "final_seconds": 17.753,
       "atempo_applied": true
     },
     {
       "index": 21,
       "speaker": "narrator",
-      "chars": 54,
+      "chars": 53,
       "natural_seconds": 2.8,
-      "final_seconds": 7.064,
+      "final_seconds": 8.478,
       "atempo_applied": true
     },
     {
@@ -197,7 +197,7 @@
       "speaker": "narrator",
       "chars": 408,
       "natural_seconds": 34.56,
-      "final_seconds": 8.599,
+      "final_seconds": 10.311,
       "atempo_applied": true
     },
     {
@@ -205,7 +205,7 @@
       "speaker": "narrator",
       "chars": 111,
       "natural_seconds": 7.12,
-      "final_seconds": 2.328,
+      "final_seconds": 2.796,
       "atempo_applied": true
     },
     {
@@ -213,7 +213,7 @@
       "speaker": "narrator",
       "chars": 139,
       "natural_seconds": 7.52,
-      "final_seconds": 28.8,
+      "final_seconds": 34.551,
       "atempo_applied": true
     },
     {
@@ -221,7 +221,7 @@
       "speaker": "eunuch",
       "chars": 83,
       "natural_seconds": 6.72,
-      "final_seconds": 5.952,
+      "final_seconds": 7.111,
       "atempo_applied": false
     },
     {
@@ -229,7 +229,7 @@
       "speaker": "narrator",
       "chars": 59,
       "natural_seconds": 3.12,
-      "final_seconds": 6.285,
+      "final_seconds": 7.51,
       "atempo_applied": true
     },
     {
@@ -261,15 +261,15 @@
       "speaker": "narrator",
       "chars": 306,
       "natural_seconds": 24.0,
-      "final_seconds": 2.6,
+      "final_seconds": 3.117,
       "atempo_applied": true
     },
     {
       "index": 31,
       "speaker": "narrator",
-      "chars": 173,
+      "chars": 172,
       "natural_seconds": 11.44,
-      "final_seconds": 4.411,
+      "final_seconds": 5.272,
       "atempo_applied": true
     },
     {
@@ -277,7 +277,7 @@
       "speaker": "narrator",
       "chars": 436,
       "natural_seconds": 30.8,
-      "final_seconds": 16.083,
+      "final_seconds": 19.277,
       "atempo_applied": true
     },
     {
@@ -285,7 +285,7 @@
       "speaker": "narrator",
       "chars": 76,
       "natural_seconds": 4.16,
-      "final_seconds": 3.214,
+      "final_seconds": 3.834,
       "atempo_applied": true
     },
     {
@@ -293,7 +293,7 @@
       "speaker": "narrator",
       "chars": 812,
       "natural_seconds": 69.68,
-      "final_seconds": 19.998,
+      "final_seconds": 23.996,
       "atempo_applied": true
     }
   ],

@@ -1,53 +1,273 @@
 {
   "format": "16:9 long-form deep-dive",
   "episode": "01_Isaiah_53_Suffering_Servant",
-  "audio": "narration.immersive.mp3 (balanced) — 482.9s",
+  "audio": "narration.immersive.mp3 (balanced) -- 405.3s (narrator 1.20x)",
   "image_provider": "nbp (Nano Banana Pro, Baroque oil)",
   "animation": "veo3_1_lite via HF hybrid (16:9); cross falls back to direct-Kling (NSFW)",
   "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio/Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine brushwork, no text, no modern elements, 16:9 cinematic wide",
   "rule": "every quote's visual matches its soundstage cue; the cut CLOSES on Christ (S22 hero). Cross/crucifixion scenes are ROBED with pierced hands shown (veo NSFW workaround).",
   "scenes": [
-    {"id": 1,  "mvt": "1 Report",      "t": [0, 24],    "title": "The wilderness, the prophet",
-     "subject_block": "a vast bleak Judean wilderness at dusk, wind-blown dust, one small lone prophet figure standing far off against dry hills, immense empty sky", "sfx": "wind_desert_bleak", "camera": "very slow push-in"},
-    {"id": 2,  "mvt": "1 Report",      "t": [24, 47],   "title": "The scroll, the question",
-     "subject_block": "close on an ancient hand and an unrolled scroll by candlelight, ink and parchment, a question hanging in the dark", "sfx": "wind_desert_bleak (tail)", "camera": "slow drift across the scroll"},
-    {"id": 3,  "mvt": "2 Behold",      "t": [48, 70],   "title": "Behold my servant (glory)",
-     "subject_block": "a radiant exalted figure robed in light high above, luminous, awaited as a king, golden glory breaking the dark", "sfx": "CLEAN (God speaks)", "camera": "slow rise / tilt up"},
-    {"id": 4,  "mvt": "2 Scandal",     "t": [70, 92],   "title": "The picture breaks (the marred face)",
-     "subject_block": "the marred beaten face of the suffering Servant, a man in his early thirties with dark damp hair and a short beard (the same man as the risen Christ, but bruised), his face swollen and bruised, brow furrowed, eyes downcast in deep sorrow, no beauty that we should desire him, heavy shadow with a single cold shaft of light across his wounded face, NO candle, NO elderly man, NO hood", "sfx": "impact_low_boom", "camera": "slow push-in to the eyes"},
-    {"id": 5,  "mvt": "2 Scandal",     "t": [92, 110],  "title": "Despised and rejected",
-     "subject_block": "a lone suffering figure turned away from by a distant crowd of robed people who look away, isolation, cold grey light", "sfx": "crowd_murmur_distant", "camera": "slow pull-back"},
-    {"id": 6,  "mvt": "3 Exchange",    "t": [110, 132], "title": "Wounded for our transgressions (the cross beat)",
-     "subject_block": "a robed crucified Servant seen with reverence, pierced hands shown, head bowed, dark sky behind, sacred and restrained, NOT graphic", "sfx": "nail_strike_single + rumble_deep_sub", "camera": "slow push-in to the pierced hand", "jesus": true, "nsfw_fallback": "kling"},
-    {"id": 7,  "mvt": "3 Exchange",    "t": [132, 155], "title": "The chastisement of our peace",
-     "subject_block": "the Servant bowed under a great weight in the foreground while behind him freed figures stand upright in soft light, substitution made visible", "sfx": "rumble_deep_sub", "camera": "slow lateral drift"},
-    {"id": 8,  "mvt": "3 Exchange",    "t": [155, 175], "title": "All we like sheep have gone astray",
-     "subject_block": "scattered sheep wandering apart across a darkening hillside, each going its own way, one shepherd-figure bearing them, dusk", "sfx": "flock (in)", "camera": "slow pan across the scattered flock"},
-    {"id": 9,  "mvt": "4 Silent Lamb", "t": [175, 200], "title": "A lamb to the slaughter",
-     "subject_block": "a single white lamb led gently on a rope toward an altar, calm and unresisting, soft sorrowful light, sheep before shearers behind", "sfx": "flock_sheep_field", "camera": "slow follow of the lamb"},
-    {"id": 10, "mvt": "4 Silent Lamb", "t": [200, 230], "title": "He opened not his mouth",
-     "subject_block": "the silent Servant standing bound before shadowed accusers, dignified, calm, no defence, chiaroscuro", "sfx": "(quiet)", "camera": "slow push-in"},
-    {"id": 11, "mvt": "4 Objection",   "t": [230, 258], "title": "The nation, the servant Israel",
-     "subject_block": "a long column of weary exiled people walking under a grey sky, a suffering nation, banners lowered, a corporate body", "sfx": "(quiet)", "camera": "slow lateral track of the column"},
-    {"id": 12, "mvt": "4 Objection",   "t": [258, 285], "title": "A rich man's tomb, the sinless one",
-     "subject_block": "a single hewn-rock tomb at dusk among rich men's graves, sealed and still, one pure light upon it, set apart", "sfx": "(quiet)", "camera": "slow approach to the tomb mouth"},
-    {"id": 13, "mvt": "5 Gaza Road",   "t": [286, 310], "title": "The Ethiopian in his chariot",
-     "subject_block": "an Ethiopian court official in rich robes riding a wooden chariot on a dry desert road, a scroll open on his lap, horses, open sky", "sfx": "chariot_wheels_road + horse_hooves_walk", "camera": "slow tracking alongside the chariot"},
-    {"id": 14, "mvt": "5 Gaza Road",   "t": [310, 326], "title": "Philip comes alongside",
-     "subject_block": "a traveler (Philip) walking up to the halted chariot on the dusty road, the two figures meeting, warm low sun", "sfx": "footsteps_dirt_approach", "camera": "slow push-in to the meeting"},
-    {"id": 15, "mvt": "5 Gaza Road",   "t": [326, 339], "title": "Preached unto him Jesus",
-     "subject_block": "Philip pointing the official to a luminous figure of Christ rising in the light over the open scroll, revelation breaking", "sfx": "(lift)", "camera": "slow tilt up into the light", "jesus": true},
-    {"id": 16, "mvt": "6 It Pleased",  "t": [339, 365], "title": "It pleased the LORD (the cross, dark sky)",
-     "subject_block": "the robed crucified Servant on a hill under a black thunderous sky, a single shaft of heaven's light upon him, he pours out his soul, reverent and restrained", "sfx": "thunder_low_roll + rumble_deep_sub", "camera": "very slow push-in", "jesus": true, "nsfw_fallback": "kling"},
-    {"id": 17, "mvt": "7 Morning",     "t": [365, 392], "title": "The chapter turns toward morning",
-     "subject_block": "first pale dawn light breaking over a hewn tomb, the heavy stone, dew and quiet, hope at the edge of dark", "sfx": "dawn_morning_warm", "camera": "slow rise with the dawn light"},
-    {"id": 18, "mvt": "7 Morning",     "t": [392, 418], "title": "He shall be satisfied (the risen Servant)",
-     "subject_block": "a radiant risen figure standing in golden morning light, alive, scars on his hands, serene and satisfied, glory restored", "sfx": "dawn + heavenly_choir_soft", "camera": "slow push-in", "jesus": true},
-    {"id": 19, "mvt": "7 Arm of LORD", "t": [418, 444], "title": "The arm of the LORD is a person",
-     "subject_block": "a mighty outstretched arm of light resolving into the pierced hand and face of Christ, the saving strength of God revealed as a person", "sfx": "choir (swell)", "camera": "slow reveal from arm to face", "jesus": true},
-    {"id": 20, "mvt": "7 Arm of LORD", "t": [444, 466], "title": "It has your name (grace reaches out)",
-     "subject_block": "Christ reaching a pierced hand toward the viewer in warm light, one ordinary kneeling figure receiving it, intimate and tender", "sfx": "choir", "camera": "slow push-in to the offered hand", "jesus": true},
-    {"id": 21, "mvt": "7 Close",       "t": [466, 483], "title": "His name is Jesus (HERO close)",
-     "subject_block": "the risen Christ full of light, face lifted, the marred-now-glorified Servant, the gospel-pivot hero image, luminous gold, reverent close", "sfx": "choir (resolve)", "camera": "slow settle / hold", "jesus": true, "hero": true}
+    {
+      "id": 1,
+      "mvt": "1 Report",
+      "t": [
+        0.0,
+        20.1
+      ],
+      "title": "The wilderness, the prophet",
+      "subject_block": "a monumental lone Hebrew prophet standing on a windswept rocky clifftop ridge at storm-dawn, viewed from slightly below for grandeur and scale, his long robe and mantle whipping hard in the wind, both hands gripping a great unfurled ancient scroll that snaps and billows in the gale, an immense churning storm sky split by one dramatic shaft of golden light breaking through black clouds onto him, a vast deep valley falling away far below, awe and foreboding, towering cinematic scale, NO cross, NO modern elements",
+      "sfx": "wind_desert_bleak",
+      "camera": "very slow push-in"
+    },
+    {
+      "id": 2,
+      "mvt": "1 Report",
+      "t": [
+        20.1,
+        39.3
+      ],
+      "title": "The scroll, the question",
+      "subject_block": "a single seamless full-bleed Baroque oil painting, hard chiaroscuro: close on a weathered ancient hand resting on an unrolled parchment scroll by warm candlelight, the scroll covered in faint indistinct ancient script with no readable or legible letters, a reed pen and an ink pot, deep shadow, a question hanging in the dark; one continuous image, no frame, no panels, no border, no modern text",
+      "sfx": "wind_desert_bleak (tail)",
+      "camera": "slow drift across the scroll"
+    },
+    {
+      "id": 3,
+      "mvt": "2 Behold",
+      "t": [
+        40.2,
+        59.8
+      ],
+      "title": "Behold my servant (glory)",
+      "subject_block": "a single seamless full-bleed Baroque oil painting with HARD Caravaggio chiaroscuro, heavy impasto and deep dark shadow: a towering overwhelming COLUMN AND BURST OF PURE RADIANT GOLDEN LIGHT pouring down through massive churning storm cloud that fills the whole wide frame, blinding formless glory and god-rays with absolutely NO human figure inside it — NO head, NO face, NO shoulders, NO arms, NO body, NO human shape, NO halo, NO person of any kind, only formless brilliant light; far below on dark ground a small cluster of awe-struck onlookers in plain 1st-century Judean robes gaze up in wonder at the glory above them; overwhelming majesty present but unseen; one continuous horizontal image, no panels, no dividers, no triptych, no frame, no border",
+      "sfx": "CLEAN (God speaks)",
+      "camera": "slow rise / tilt up"
+    },
+    {
+      "id": 4,
+      "mvt": "2 Scandal",
+      "t": [
+        59.8,
+        78.1
+      ],
+      "title": "The picture breaks (the marred face)",
+      "subject_block": "the marred beaten face of the suffering Servant, a man in his early thirties with dark damp hair and a short beard (the same man as the risen Christ, but bruised), his face swollen and bruised, brow furrowed, eyes downcast in deep sorrow, no beauty that we should desire him, heavy shadow with a single cold shaft of light across his wounded face, NO candle, NO elderly man, NO hood",
+      "sfx": "impact_low_boom",
+      "camera": "slow push-in to the eyes"
+    },
+    {
+      "id": 5,
+      "mvt": "2 Scandal",
+      "t": [
+        78.1,
+        93.0
+      ],
+      "title": "Despised and rejected",
+      "subject_block": "a lone suffering figure turned away from by a distant crowd of robed people who look away, isolation, cold grey light",
+      "sfx": "crowd_murmur_distant",
+      "camera": "slow pull-back"
+    },
+    {
+      "id": 6,
+      "mvt": "3 Exchange",
+      "t": [
+        93.0,
+        111.4
+      ],
+      "title": "Wounded for our transgressions (the cross beat)",
+      "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro: a robed crucified Servant on a wooden cross seen close and intimate, his head bowed in sorrow, his nail-pierced hand the clear focal point catching the shaft of light — the hand anatomically correct and clearly painted with five distinct separated fingers and a clearly separate thumb, a single iron nail driven through the open hand with only subtle blood, NOT graphic; dark storm sky behind, reverent, the same dark-haired bearded man as the risen Christ; one continuous image, no frame, no panels, no border, no text",
+      "sfx": "nail_strike_single + rumble_deep_sub",
+      "camera": "slow push-in to the pierced hand",
+      "jesus": true,
+      "nsfw_fallback": "kling"
+    },
+    {
+      "id": 7,
+      "mvt": "3 Exchange",
+      "t": [
+        111.4,
+        130.6
+      ],
+      "title": "The chastisement of our peace",
+      "subject_block": "a single seamless full-bleed Baroque oil painting, hard chiaroscuro, on open desolate ground under a heavy sky (NOT a room, NOT an interior): in the foreground center one lone Servant figure crushed low to the earth beneath a massive crushing burden bearing down on his bent back and shoulders, his body buckling under the great dark weight, the single clear focal subject in deep shadow; directly behind and above him several ordinary people stand fully UPRIGHT, unburdened and freed, ALL dressed in plain 1st-century Judean robes, simple tunics and mantles with cloth head-coverings (absolutely NO European peasant clothing, NO white bonnets or caps, NO aprons, NO bodices, NO vests, NO breeches, NO buckled boots), their straight backs and lifted faces bathed in a warm shaft of breaking light, plainly released because HE carries the load that was theirs; stark visual contrast between his bent crushed form in shadow and their upright freed forms in light makes the substitution unmistakable; NO praying hands, NO healing-the-sick scene, NO domestic room; one continuous image, no frame, no panels, no triptych, no border",
+      "sfx": "rumble_deep_sub",
+      "camera": "slow lateral drift"
+    },
+    {
+      "id": 8,
+      "mvt": "3 Exchange",
+      "t": [
+        130.6,
+        147.3
+      ],
+      "title": "All we like sheep have gone astray",
+      "subject_block": "scattered sheep wandering apart across a darkening hillside, each going its own way, one shepherd-figure bearing them, dusk",
+      "sfx": "flock (in)",
+      "camera": "slow pan across the scattered flock"
+    },
+    {
+      "id": 9,
+      "mvt": "4 Silent Lamb",
+      "t": [
+        147.3,
+        168.1
+      ],
+      "title": "A lamb to the slaughter",
+      "subject_block": "a single white lamb led gently on a rope toward an altar, calm and unresisting, soft sorrowful light, sheep before shearers behind",
+      "sfx": "flock_sheep_field",
+      "camera": "slow follow of the lamb"
+    },
+    {
+      "id": 10,
+      "mvt": "4 Silent Lamb",
+      "t": [
+        168.1,
+        193.1
+      ],
+      "title": "He opened not his mouth",
+      "subject_block": "a single seamless full-bleed Baroque oil painting, hard chiaroscuro: the silent Servant standing bound with roped wrists before a group of shadowed accusers in a dim stone hall, dignified and calm, head bowed, making no defence; the accusers are 1st-century Judean temple priests and guards in robes, prayer shawls and cloth head-coverings or turbans (absolutely NO European wide-brim hats, NO 17th-century coats, NO buckled boots), one cold shaft of light on the Servant; one continuous image, no frame, no panels, no border, no text",
+      "sfx": "(quiet)",
+      "camera": "slow push-in"
+    },
+    {
+      "id": 11,
+      "mvt": "4 Objection",
+      "t": [
+        193.1,
+        216.5
+      ],
+      "title": "The nation, the servant Israel",
+      "subject_block": "a Baroque oil painting that COMPLETELY FILLS THE ENTIRE FRAME edge to edge, viewed perfectly flat and straight-on as the scene itself (this is NOT a photograph of a canvas, NOT a framed picture hanging on a wall, NO wall, NO visible canvas edges, NO border, NO perspective skew, NO drop shadow): a long column of weary exiled people trudging under a heavy grey sky, hard chiaroscuro, a whole suffering nation on the march, all in plain 1st-century Near-Eastern robes, tunics, mantles and cloth head-coverings, a few leaning on simple wooden walking staffs (NO flag banners, NO standards, NO pennants, NO European peasant clothing, NO caps or bonnets, NO buckled boots), dust and sorrow, a corporate body",
+      "sfx": "(quiet)",
+      "camera": "slow lateral track of the column"
+    },
+    {
+      "id": 12,
+      "mvt": "4 Objection",
+      "t": [
+        216.5,
+        239.0
+      ],
+      "title": "A rich man's tomb, the sinless one",
+      "subject_block": "a Baroque oil painting that fills the entire frame flat and straight-on (NOT a canvas on a wall, NO border, NO frame): the BURIAL of a body at dusk, hard chiaroscuro — mourners in 1st-century robes and head-coverings reverently carrying and lowering a linen-wrapped shrouded body down to a rock-hewn tomb in a stone hillside, lamplight and a fading dusk glow, deep sorrow and stillness, rough-cut stone graves of the rich nearby; the body is still being laid to rest (absolutely NO Christian cross headstones, NO cross markers; do NOT show a large round stone rolled away beside an open dark doorway, NO open or empty glowing tomb mouth, NO resurrection scene)",
+      "sfx": "(quiet)",
+      "camera": "slow approach to the tomb mouth"
+    },
+    {
+      "id": 13,
+      "mvt": "5 Gaza Road",
+      "t": [
+        239.8,
+        260.6
+      ],
+      "title": "The Ethiopian in his chariot",
+      "subject_block": "a single seamless full-bleed Baroque oil painting, hard chiaroscuro: a dark-skinned Ethiopian royal court official, a dignified middle-aged man with a short black beard wearing rich deep-colored robes with gold trim and a wrapped cloth turban, seated reading an open scroll, riding in a simple authentic ancient 1st-century light two-wheeled wooden chariot drawn by two horses on a dry desert road under an open sky, low warm sun, trailing dust (NOT an ornate gilded European carriage, NOT a coach, NOT a covered wagon); one continuous image, no frame, no panels, no border, no text",
+      "sfx": "chariot_wheels_road + horse_hooves_walk",
+      "camera": "slow tracking alongside the chariot"
+    },
+    {
+      "id": 14,
+      "mvt": "5 Gaza Road",
+      "t": [
+        260.6,
+        274.4
+      ],
+      "title": "Philip comes alongside",
+      "subject_block": "a single seamless full-bleed Baroque oil painting, hard chiaroscuro: the SAME dark-skinned Ethiopian court official from the reference image, identical robes, gold trim and turban, now seated in his SAME simple 1st-century light two-wheeled wooden chariot with the SAME two horses halted on the dusty desert road; Philip, a 1st-century Judean traveler in a plain robe and sandals, walks up alongside the chariot and the two meet, warm low sun, dust; one continuous image, no frame, no panels, no border, no text",
+      "sfx": "footsteps_dirt_approach",
+      "camera": "slow push-in to the meeting"
+    },
+    {
+      "id": 15,
+      "mvt": "5 Gaza Road",
+      "t": [
+        274.4,
+        285.3
+      ],
+      "title": "Preached unto him Jesus",
+      "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro (NOT smooth modern devotional art): Philip standing beside the chariot points the SAME dark-skinned Ethiopian official (identical robes and turban as the reference image) toward a luminous figure of the risen Christ rising in breaking golden light above the open scroll, revelation dawning on the official's awestruck face; one continuous image, no frame, no panels, no border, no text",
+      "sfx": "(lift)",
+      "camera": "slow tilt up into the light",
+      "jesus": true
+    },
+    {
+      "id": 16,
+      "mvt": "6 It Pleased",
+      "t": [
+        285.3,
+        307.0
+      ],
+      "title": "It pleased the LORD (the cross, dark sky)",
+      "subject_block": "a single seamless full-bleed Baroque oil painting, hard chiaroscuro: a robed crucified Servant on a cross on a bare hilltop seen wide and small against a vast black thunderous sky, one dramatic shaft of heaven's light breaking through the storm onto him, dark land far below, cosmic scale and dread, reverent and restrained NOT graphic, the gospel pivot, the same dark-haired bearded Christ; one continuous image, no frame, no panels, no border, no text",
+      "sfx": "thunder_low_roll + rumble_deep_sub",
+      "camera": "very slow push-in",
+      "jesus": true,
+      "nsfw_fallback": "kling"
+    },
+    {
+      "id": 17,
+      "mvt": "7 Morning",
+      "t": [
+        307.0,
+        329.4
+      ],
+      "title": "The chapter turns toward morning",
+      "subject_block": "first pale dawn light breaking over a hewn tomb, the heavy stone, dew and quiet, hope at the edge of dark",
+      "sfx": "dawn_morning_warm",
+      "camera": "slow rise with the dawn light"
+    },
+    {
+      "id": 18,
+      "mvt": "7 Morning",
+      "t": [
+        329.4,
+        351.0
+      ],
+      "title": "He shall be satisfied (the risen Servant)",
+      "subject_block": "a radiant risen figure standing in golden morning light, alive, scars on his hands, serene and satisfied, glory restored",
+      "sfx": "dawn + heavenly_choir_soft",
+      "camera": "slow push-in",
+      "jesus": true
+    },
+    {
+      "id": 19,
+      "mvt": "7 Arm of LORD",
+      "t": [
+        351.0,
+        372.6
+      ],
+      "title": "The arm of the LORD is a person",
+      "subject_block": "a mighty outstretched arm of light resolving into the pierced hand and face of Christ, the saving strength of God revealed as a person",
+      "sfx": "choir (swell)",
+      "camera": "slow reveal from arm to face",
+      "jesus": true
+    },
+    {
+      "id": 20,
+      "mvt": "7 Arm of LORD",
+      "t": [
+        372.6,
+        390.9
+      ],
+      "title": "It has your name (grace reaches out)",
+      "subject_block": "Christ reaching a pierced hand toward the viewer in warm light, one ordinary kneeling figure receiving it, intimate and tender",
+      "sfx": "choir",
+      "camera": "slow push-in to the offered hand",
+      "jesus": true
+    },
+    {
+      "id": 21,
+      "mvt": "7 Close",
+      "t": [
+        390.9,
+        405.4
+      ],
+      "title": "His name is Jesus (HERO close)",
+      "subject_block": "the risen Christ full of light, face lifted, the marred-now-glorified Servant, the gospel-pivot hero image, luminous gold, reverent close",
+      "sfx": "choir (resolve)",
+      "camera": "slow settle / hold",
+      "jesus": true,
+      "hero": true
+    }
   ]
 }

@@ -1,0 +1,194 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: plan
+
+LENS — judge this PLAN on (be specific, cite the exact step/claim):
+- Feasibility against the real codebase / tools (does it assume things that exist?).
+- Hidden risks, false assumptions, single points of failure.
+- Over-engineering / premature building before the idea is proven.
+- Missing steps, edge cases, or verification gaps.
+- Reuse: does it duplicate tools that already exist instead of reusing them?
+- Cost / spend and whether it's justified.
+
+ADDITIONAL CONTEXT / BRIEF:
+Gospel long-form deep-dive engine. 16:9 Baroque-oil Isaiah 53 film already built (405s, narrator 1.20x, immersive soundstage LOCKED). Images via NBP gemini-3-pro-image-preview; animation veo3_1_lite (HF), Kling fallback for NSFW cross. Locked rules: KJV verbatim, every cut closes on Christ, no frames/panels, 1st-c Judean dress, reuse downstream pipelines, ask before spend. This plan only changes VISUALS (5 weak stills), not audio/narration.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block:
+
+VERDICT: PASS | REVISE | FAIL
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# Isaiah 53 long-form — STILLS RE-DO PLAN (v1, red-teamed)
+
+Fix the weak/wrong stills in the 16:9 long-form film so **every still is a hero still**
+and the **opening grips instantly**, then re-animate and re-assemble. Audio + soundstage
++ narration are LOCKED and do NOT change (only visuals).
+
+## 0. The production loop (binding for every redone scene)
+
+1. **NARRATION** — what is this beat actually saying?
+2. **MOTION** — what must the viewer SEE move to carry that?
+3. **FIRST FRAME** — what still lets that motion happen on top of it?
+4. **ELEMENTS** — what must ALREADY be in the still (the lamb on the rope, the hand on
+   the chariot, the dove mid-air) so the video animates what's there — never invents it?
+→ then animate ONLY pre-placed elements, lock everything else, and **QC the WHOLE clip,
+not just the last frame.**
+
+**Hero-still bar:** one clear focal subject readable in <1s, strong chiaroscuro value
+contrast, a scale/depth cue, and it must *tell more* than it shows. **Epic-open bar
+(S1):** a first frame that makes a scrolling viewer stop and decide to wait.
+
+## 1. Audit of the current 21 stills (I looked at each)
+
+**RE-DO (clear defects):**
+- **S1 Wilderness/prophet** — not epic; tiny indistinct figure; loose digital-matte look
+  inconsistent with the Baroque oil set. The opening must be a scroll-stopper.
+- **S3 Behold/glory** — composed as a **TRIPTYCH** (three vertical panels + divider
+  borders = a frame) and uses European putti/cherubs. Violates the no-frames/no-panels rule.
+- **S10 He opened not his mouth** — accusers in **17th-century Dutch wide-brim hats and
+  coats** (Rembrandt burghers). Anachronistic for 1st-century Judea.
+- **S13 + S15 (Gaza road)** — the Ethiopian official and his chariot are **inconsistent**
+  across the three consecutive Gaza scenes: S13 = gold robe + turban + rustic farm cart;
+  S14 = grey robe, no turban, ornate gilded chariot; S15 = a light-skinned grey-bearded
+  man (wrong person entirely). S14 is the best; redo S13 + S15 to match it.
+
+**MINOR (optional):**
+- **S2 scroll** — text reads as pseudo-Latin, not Hebrew.
+- **S11 column** — a few European-peasant garments amid otherwise biblical robes.
+
+**KEEP (good Baroque, consistent Christ w/ pierced hands, no frames):** S4, S5, S6, S7,
+S8, S9, S12, S14, S16, S17, S18, S19, S20, S21.
+
+## 2. Per-scene redo spec (the loop applied)
+
+### S1 — Opening hero: "Prophet on the high place" (window 0–20.1s)
+- NARRATION: "Seven hundred years before a Roman nail, a Hebrew prophet wrote…" — ancient
+  words, momentous, foretelling suffering.
+- MOTION: wind whips a great unfurled Hebrew scroll and the prophet's robe; storm clouds
+  churn; one shaft of light breaks and slowly widens (camera: very slow push-in).
+- FIRST FRAME: a monumental lone prophet on a windswept clifftop ridge at storm-dawn, a
+  huge Hebrew scroll snapping in the wind, immense churning sky split by a single shaft of
+  light, vast depth below. Rich Baroque oil, deep chiaroscuro.
+- ELEMENTS already in still: prophet, unfurled scroll (so wind can move it), cloth, dust,
+  light shaft, cloud banks. **NO literal Roman crosses** (see red-team RT1) — foreshadow
+  with a single barren distant hill + foreboding light only.
+
+### S3 — "Behold my servant" exalted (window 40.2–59.8s)
+- NARRATION: "Behold my servant shall deal prudently… exalted and extolled, and be very
+  high" — the awaited one lifted in glory, BEFORE the scandal of the marred face (S4).
+- MOTION: golden glory slowly radiates/brightens; cloth and light stir (camera: slow rise).
+- FIRST FRAME: ONE unified image — a radiant exalted figure robed in light, high and
+  awaited like a king, golden glory breaking the dark. **No panels/triptych/dividers, no
+  cherubs/putti.** Face kept luminous/abstracted so it does NOT pre-reveal the Servant's
+  identity before S4 breaks the picture (RT7).
+- ELEMENTS: the exalted figure, breaking light, cloud/glory. Single frame, soft edges.
+
+### S10 — "He opened not his mouth" (window 168.1–193.1s; boomerang/static)
+- NARRATION: silent Servant bound before accusers, dignified, no defence.
+- MOTION: shadow/flame faintly shifts; the Servant still (camera: slow push-in).
+- FIRST FRAME: the bound Servant before shadowed accusers — **accusers in 1st-century
+  Judean dress** (priestly robes, head coverings/turbans, temple-guard attire), NOT
+  European hats/coats. Chiaroscuro hall.
+- ELEMENTS: Servant (bound hands), accusers in correct dress, flame/shadow.
+
+### S13 — "The Ethiopian in his chariot" (window 239.8–260.6s; DIRECTIONAL, forward-chain)
+- NARRATION: the Ethiopian treasurer riding home, reading Isaiah.
+- MOTION: chariot + horses move forward, wheels turn, dust trails (camera tracks alongside).
+- FIRST FRAME: **match S14's canon** — a dark-skinned Ethiopian court official in rich
+  robes seated in the SAME ornate gilded chariot, a scroll open on his lap, two horses,
+  open desert road, low sun. (Reference-attach S14 for the figure + chariot, RT3.)
+- ELEMENTS: official, gilded chariot (wheels visible to turn), horses (legs to step),
+  scroll, road dust. Scroll text Hebrew/Greek, not Latin.
+
+### S15 — "Preached unto him Jesus" (window 274.4–285.3s; boomerang)
+- NARRATION: Philip began at the same scripture and preached Jesus; revelation breaks.
+- MOTION: luminous figure of Christ brightens/rises over the open scroll (camera: slow
+  tilt up into the light).
+- FIRST FRAME: Philip pointing the **same dark-skinned Ethiopian** (canon from S14, RT3)
+  to a luminous Christ rising over the open scroll. Christ matches the kept Christ design
+  (same face, pierced hands). Rich Baroque, not smooth modern-devotional.
+- ELEMENTS: Philip, Ethiopian (correct identity), luminous Christ, open scroll, breaking light.
+
+### S2 (optional) — Hebrew scroll
+- Same composition; the scroll's writing must be **Hebrew script** (right-to-left), candle,
+  reed/quill. Single object hero of "the words."
+
+### S11 (optional) — the column
+- Same composition; swap the few European-peasant garments for 1st-century Near-Eastern
+  robes/cloaks.
+
+## 3. Consistency canon (applies to every redo)
+- **Style anchor:** reuse the exact `style_base` (Baroque oil, Caravaggio/Rembrandt
+  chiaroscuro, muted earth tones, fine brushwork, no text, no modern elements, 16:9) AND
+  attach a strong KEPT still (S6 cross / S4 marred face) as a STYLE reference so the redo
+  matches its neighbors (RT2).
+- **Dress canon:** 1st-century Judean / Near-Eastern only — robes, tunics, mantles, head
+  cloths/turbans; NO European hats, coats, buckled boots, modern fabrics/zippers.
+- **No frames:** no panels, triptychs, dividers, picture-frames, arches/windows used as
+  borders. Soft-edged single tableau.
+- **Character canon:** Christ = the kept design (same face, pierced hands), via the
+  `ref_jesus_passion/risen` references. Ethiopian = S14's dark-skinned official, via an
+  S14 reference attach.
+- **Script canon:** any visible scripture = Hebrew (Isaiah scroll) or Greek (eunuch's
+  Septuagint), never Latin/English gibberish.
+
+## 4. Execution mechanics
+- Provider: NBP (`gemini-3-pro-image-preview`, 16:9) via the existing `_render_images_16x9.py`
+  path, extended to accept a STYLE ref + a CHARACTER ref attachment (RT3).
+- Per-PNG Claude Vision content audit (subject + dress-era + no-frame check), retry-on-fail
+  with **a hard cap of 3 attempts/scene**, then stop and escalate (RT6).
+- Re-animate ONLY the redone scenes: S1/S3/S10/S15 = 1 clip each (camera-led; prefer
+  camera-only motion, allow only safe cloth/dust/flame motion; RT4). S13 = directional →
+  delete its stale `_cont*` clips (RT8) and re-chain forward (orig + 2 cont) from the new
+  still.
+- Re-assemble: `_assemble_16x9.py` re-runs; only the changed scene segments differ; audio
+  `narration.immersive.mp3` + soundstage + scene windows UNCHANGED. Keep `.frozen.bak` and
+  pre-redo backups (RT10).
+
+## 5. QC procedure (whole-clip, not last-frame; RT5/RT9)
+For each redone clip: extract ~6 evenly-spaced frames → montage → check:
+1. **Anachronism:** dress/artifacts all 1st-century? (checklist)
+2. **No frame/panel/triptych** anywhere in any frame.
+3. **No morph / no invented element** across the whole clip (faces/hands stable; only
+   pre-placed elements move).
+4. **Style match** to the kept neighbors (chiaroscuro, palette, brushwork).
+5. **Consistency:** Christ face = canon; Ethiopian = S14; Servant = consistent.
+6. **Hero/epic test (S1):** single focal subject readable <1s; strong contrast; scale cue;
+   motion rewards waiting.
+I view the montages myself (do not trust the SDK pass/fail alone).
+
+## 6. Cost & scope
+- 5 core scenes: ~10 image renders (≤3 attempts/scene, NBP ~$0.50) ≈ **$5** + ~7 veo clips
+  (~$0.65) ≈ **$4.5** → **~$10–12**. +2 minor scenes → **~$13–15**. Re-assembly $0.
+- Hard not-to-exceed: stop at the 3-attempt cap per scene and report rather than burn budget.
+
+## 7. Red-team findings already folded in
+- **RT1** Literal Roman crosses in Isaiah's wilderness = anachronism + premature reveal →
+  removed; foreshadow with light/scale only.
+- **RT2** Re-render style drift → pin style_base + attach a kept-still style reference; QC vs neighbors.
+- **RT3** Character/style ref attach is not wired in the NBP driver today → must extend it
+  (arbitrary ref image), don't assume it exists.
+- **RT4** veo over-animates (invents motion) → prefer camera-only moves; allow only safe
+  cloth/dust/flame; QC whole clip; fall back to push-in on morph.
+- **RT5** "QC the whole clip" made concrete (6-frame montage + checklist, script it).
+- **RT6** Retry cost spiral → hard cap 3 attempts/scene then escalate.
+- **RT7** S3 could pre-reveal Christ-as-glory before the S4 scandal → keep S3's exalted
+  face luminous/abstracted.
+- **RT8** Stale S13 continuation clips → delete before re-chaining from the new still.
+- **RT9** "Epic" is subjective → operational acceptance criteria defined in QC.
+- **RT10** Reassembly safety → swap only changed segments; audio/soundstage untouched; keep backups.
+
+## 8. Open questions for the panel
+- Is "Prophet on the high place" the strongest epic open for THIS narration, or is the
+  intimate "shadow-of-the-cross" thesis-in-one-frame stronger? (Faithfulness vs. grip.)
+- Is foreshadowing the cross at all in S1 acceptable, or should the open stay purely
+  prophet+scroll+light with zero cross hint?
+- Am I redoing too FEW scenes (is the whole set below a true "hero" bar) or too many?
+- Any consistency/anachronism risk I've missed in the KEEP list?
+----- ARTIFACT END -----

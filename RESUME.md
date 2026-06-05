@@ -1,5 +1,150 @@
 # RESUME.md — start here next session
 
+## ═══════════ SESSION 2026-06-05 (LATEST) — ISAIAH 53 FILM DONE + CALM SCENES LIVENED ═══════════
+
+**The 16:9 film is finished and rebuilt with livelier motion.** Final cut + gallery (FULL paths):
+- FILM: `C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\01_Isaiah_53_Suffering_Servant\v1\visual_16x9\Isaiah53_16x9.mp4` — 1920×1080, **6:45 (405.3s)**, closes on risen Christ.
+- GALLERY: `C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\01_Isaiah_53_Suffering_Servant\v1\visual_16x9\index.html`
+
+**What I did this session (picking up the paused animation):**
+1. **S6 cross was THE blocker.** veo NSFW-refuses the image itself (nail-wound + blood); the direct-Kling
+   fallback is **hardcoded 9:16** (`image_to_kling.py`) = wrong aspect for a 16:9 film, AND it hangs on the
+   agent bridge. So I used the sanctioned fallback (c): a gentle **ffmpeg 16:9 slow push-in** from the still
+   ($0), which the assembler boomerangs like any static scene. No freeze. (S16, the other robed cross, animated
+   fine on veo — only S6's graphic nail-wound trips the filter.)
+2. **S13 (chariot) + S14 (Philip)** were missing their forward-chain continuation clips (redone Gaza stills;
+   old conts had been backed up). Regenerated via `_animate_directional.py` (veo). All 6 directional chains
+   now complete (8,9,11,13,14,20). Re-assembled → 405.3s.
+3. **User flagged the calm scenes felt like ken-burns.** ROOT CAUSE (verified by frame-diff): the anti-morph
+   veo prompt (`_animate_16x9.py`) forces a FROZEN painting — only camera + atmosphere move — so calm scenes
+   read as a slow camera drift. FIX = **NEW `longform/_reanimate_one.py`**: a per-scene `LIVELY` prompt dict
+   that animates REAL motion in living elements only (flame, smoke, dust, wind, cloud, light, cloth edges)
+   while still guarding faces/hands. Test-first on S2 (flame flickers, smoke rises, dust drifts, hand intact)
+   → user approved → rolled out. **10 calm scenes re-animated:** 1,2,3,4,5,7,10,12,16,17. Old clips saved as
+   `<stem>.prev.bak.mp4`. (HF had a transient **HTTP 502 outage** mid-run on 12/16/17 — the script now
+   RESTORES the backup on failure so a scene is never left blank; retried, all rendered.)
+4. **Left reverently STILL on purpose:** S6 (cross — veo refuses), and the 3 Christ-glory landing frames
+   **S18, S19, S21**. These were NOT livened — the held stillness fits the landing.
+
+**Spend this session ≈ $4** (3 directional conts + 10 re-animations, veo3_1_lite via HF; S6 was $0 ffmpeg).
+
+**NEW tool:** `longform/_reanimate_one.py` (re-animate ONE scene with a livelier `LIVELY[id]` prompt; backs
+up to `.prev.bak.mp4`; restores-on-failure). **NEW memory:** `feedback-index-file-and-full-link` (always give
+the user a reviewable index file + the whole absolute path).
+
+▶▶ **DO THIS FIRST ON RETURN:**
+1. **Watch the livened cut** — especially the S1/S2/S3 opening (should feel alive now), and confirm no scene
+   morphs in motion. Path above.
+2. **Open decision I offered:** also liven the 3 landing frames **S18/S19/S21** with a gentle glow/light motion
+   (add their ids to `LIVELY` in `_reanimate_one.py`, run it, re-assemble), or leave them reverent. Also can
+   push any single scene harder the same way (~$0.65/scene). To re-assemble after any change:
+   `.venv\Scripts\python.exe longform\_assemble_16x9.py` then `..\_make_index.py`.
+3. If the film is approved → it's DONE (audio already locked, `narration.immersive.mp3` 405.3s). Then: posting
+   kit for the long-form, or pick the next long-form topic / next multi-dimension short.
+
+## ═══════════ SESSION 2026-06-05 (LATER) — ISAIAH 53 STILLS RE-DO (hero-still bar) ═══════════
+
+**User raised the bar:** every still must be a HERO still; the OPENING must grip instantly; fix
+modern/anachronistic dress + any picture-frames. Locked the user's production LOOP:
+NARRATION → MOTION → FIRST FRAME → ELEMENTS (must already be in the still) → animate ONLY
+pre-placed elements → QC the WHOLE clip (≥6 frames), not just the last.
+
+**Process: red-team (mine, RT1-10) → external ai-panel (`independent_review.py`, claude/gemini/codex
+PASS=none, FAIL/REVISE) → fixed → executed with INDEPENDENT image review every batch.** The panel +
+full-res re-audit proved my FIRST audit (contact-sheet based) was the weak link — it missed S7 (gilt
+picture-frame triptych), S12 (Christian cross headstones), and that S6/S16 never showed the cross.
+**Memory `feedback-audit-stills-fullres`: always QC images full-res, never from a thumbnail.**
+
+**12 stills RE-RENDERED + independently verified** (NBP gemini-3-pro-image, 16:9, ~$11):
+S1 epic prophet-on-cliff open · S2 non-legible script · S3 NON-figurative glory (no Christ pre-reveal) ·
+S6 intimate robed cross (clean pierced hand) · S7 substitution (weight/freed, not "praying friends") ·
+S10 1st-c trial (no Dutch hats) · S11 1st-c column (flat, no banners/canvas-on-wall) · S12 BURIAL act
+(not empty/open tomb) · S13/S14/S15 Gaza trio unified · S16 cosmic robed cross. Kept: S4,S5,S8,S9,S17-21.
+Originals in `visual_16x9/_redo_backup/`.
+
+**Key learnings baked in (for the remaining episodes + future films):**
+- Encode the BEAT not just objects (S3/S7 first passed the frame check but failed the meaning).
+- Negative prompts alone fail ("NO triptych" still produced one; "NO canvas" produced a canvas-on-wall)
+  → use POSITIVE full-bleed/flat framing.
+- Gaza continuity = SINGLE-image reference (render S13, attach its PNG as ref for S14/S15) — NOT text-only,
+  NOT multi-role refs. Wired via NEW `NBPProvider.generate(extra_ref_paths=...)` + `_redo_stills.py --ref`.
+- Cross stills render fine on NBP; the NSFW block is only on the VIDEO stage (veo) → Kling fallback.
+
+**NEW tools this session:** `longform/_redo_stills.py` (re-render specific scenes, backs up stale
+PNG/MP4/cont to `_redo_backup/`, no auto-bank, `--ref` continuity), `longform/_make_index.py`
+(self-contained `visual_16x9/index.html` gallery — grid + #NN + redone/kept badges + click-to-zoom
+lightbox), `pipeline/visual_render.py` NBP `extra_ref_paths`. Plans: `STILLS_REDO_PLAN.md` +
+`STILLS_REDO_PLAN_v2.md` + `_independent_review/` in visual_16x9/.
+
+▶▶ PAUSED MID-ANIMATION (user stepped out 2026-06-05). The animation job was still running in the
+background — let it finish; clips persist on disk. **DO THIS FIRST NEXT SESSION:**
+
+1. **Check what animated.** Read the animation log (task `bwznxragf`) /
+   re-run `.venv\Scripts\python.exe longform\_animate_16x9.py` (idempotent — it SKIPS scenes that
+   already have an .mp4, so it only retries the FAILED ones). Then list `visual_16x9\*.mp4` and find
+   any redone scene MISSING a clip.
+   Known at pause: S1,S2,S3,S7 animated OK; S4,S5,S8,S9 skipped (kept); **S6 robed cross FAILED** both
+   veo (HF NSFW refusal) AND the direct-Kling fallback ("produced no mp4, exit 0"). S10-S16 were still
+   running (S16 is the other robed cross — expect the SAME failure).
+
+2. **FIX THE ROBED-CROSS ANIMATION (the blocker)** — S6 + S16. veo NSFW-blocks the cross (known, memory
+   `feedback-hf-video-blocks-cross`) AND the Kling fallback in `pipeline/video_render.KlingDirectProvider`
+   silently produced no mp4 (exit 0) — DEBUG why (it ran `image_to_kling.py`; check its output/skill path/
+   NSFW audit). Options if Kling won't cooperate: (a) animate via `image_to_kling.py` directly with
+   `--kling-skip-audit`; (b) since the stills are ROBED (not bare-torso) re-try veo with an even more
+   explicitly-clothed/cropped prompt; (c) LAST RESORT — boomerang/ken-burns the still itself (the
+   assembler already boomerangs static scenes, so a still with no veo clip could be handled by giving
+   it a gentle camera move). **The cross is the gospel pivot — both beats MUST have a clip before assembly.**
+
+3. **Directional chains** S11/S13/S14 — Phase 2 (`_animate_directional.py`) regenerates their `_cont*`
+   clips from the NEW base last frames (idempotent; only the redone ones, since S8/S9/S20 conts still exist).
+   Confirm it ran after Phase 1.
+
+4. **Re-assemble:** `.venv\Scripts\python.exe longform\_assemble_16x9.py`. NOTE: it `SystemExit`s
+   "missing clip" if ANY scene lacks a base .mp4 — so S6/S16 must have a clip first (step 2). Audio is
+   LOCKED (`narration.immersive.mp3`, 405.3s); boomerang for static + forward-chain for directional.
+
+5. **QC + show:** spot-check the redone scenes in motion (sample frames across each window), regenerate
+   the gallery (`.venv\Scripts\python.exe longform\_make_index.py`), then show the user the final film:
+   `C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\01_Isaiah_53_Suffering_Servant\v1\visual_16x9\Isaiah53_16x9.mp4`
+
+STILLS ARE DONE + independently verified (12 redone, ~$11). Animation spend in progress (~$11 budgeted).
+Backups: `visual_16x9\_redo_backup\` (all originals), `Isaiah53_16x9.frozen.bak.mp4` (pre-redo film).
+Minor cosmetic: faint faux-signature squiggle in a corner of S12 (invisible in motion; ignore).
+
+## ═══════════ SESSION 2026-06-05 — ISAIAH 53 FILM: FREEZE REMOVED + NARRATOR 1.20x + DIRECTIONAL CHAINS ═══════════
+
+**User feedback acted on (final state):**
+1. **"I don't like the freeze."** → no more frozen ken-burns. TWO fill modes in
+   `longform/_assemble_16x9.py` (old frozen version = `_assemble_16x9.frozen.bak.py`):
+   - **camera-only / static scenes (15)** → seamless **BOOMERANG** (forward + reverse, looped).
+   - **DIRECTIONAL scenes (6: S08 sheep, S09 lamb, S11 marching column, S13 chariot, S14 Philip,
+     S20 reaching hand)** → boomerang looked COMICAL (walking/riding backward), so **FORWARD-only**:
+     the original clip + **chained continuation veo clips** (each clip's last frame seeds the next →
+     the chariot keeps rolling forward). Driver `longform/_animate_directional.py` (NEW).
+     10 continuation clips generated (veo3_1_lite, HF) ≈ **$6**. Test-first validated on S13 (seam
+     invisible, style held, motion forward). `DIRECTIONAL = {8,9,11,13,14,20}` set in the assembler.
+2. **"Narrator faster, up to 1.20."** → re-synthed at **narrator atempo 1.2001x**; **the_LORD + eunuch
+   left natural 1.0**. $0 — reused existing `_turns/*` base renders, only re-applied atempo + re-concat.
+
+**Rebuild chain (re-derived from the 1.0x baseline so cues still land on their words):**
+- narration.mp3: 482.9s → **405.3s** (`per_turn_synth --target 405`). God/eunuch unchanged.
+- Re-aligned (free whisper, `_pilot_cue_times.py`) → new cue times. `longform/_retime.py` (NEW) holds the
+  canonical 1.0x cue times + BEDS/SHOTS + scene windows and warps them to the current target (piecewise-
+  linear). To re-time again: change narrator `--target`, re-run `_pilot_cue_times.py`, paste the new column
+  into `_retime.py` CTRL, run it (rewrites scene_plan.json + prints BEDS/SHOTS), patch `_soundstage_cinematic.py`.
+- Soundstage rebuilt on new anchors → all library sounds reused, $0 → `narration.immersive.mp3` = **405.3s**.
+- Re-assembled. **GOTCHA (handled):** concat frame-rounding leaves video ~2s short of audio → mux `tpad`
+  clones the last frame (hero settle/hold on Christ) up to audio length, then `-shortest`.
+
+**FINAL FILM:** `C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\01_Isaiah_53_Suffering_Servant\v1\visual_16x9\Isaiah53_16x9.mp4`
+— 1920×1080, **6:45 (405.3s)**, narrator 1.20x, boomerang + forward-chain motion (no freeze, no comical reverse),
+immersive soundstage, closes on risen Christ. Backups: `Isaiah53_16x9.frozen.bak.mp4` (1.0x frozen film),
+`narration.natural1x.bak.mp3` / `narration.immersive.natural1x.bak.mp3` (1.0x audio).
+
+▶ NEXT: user watches the 1.20x / no-freeze cut. Speed still dialable (change `--target`, re-time, re-assemble).
+If any boomerang scene still reads as directional, add its id to `DIRECTIONAL` and chain it (~$0.65/extra clip).
+
 ## ═══════════ SESSION END 2026-06-04 (LATEST) — ISAIAH 53 16:9 LONG-FORM FILM FINISHED ═══════════
 
 **✅ The first 16:9 long-form FILM is done, end to end.**

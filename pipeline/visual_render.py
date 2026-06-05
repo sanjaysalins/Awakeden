@@ -123,6 +123,7 @@ class NBPProvider(ImageProvider):
         self._genai_types = genai_types
         self._client = genai.Client(api_key=config.GEMINI_API_KEY)
         self._uploaded_refs: dict[str, str] = {}  # variant -> uploaded fileUri
+        self._uploaded_paths: dict[str, str] = {}  # abs path -> uploaded fileUri
 
     def _upload_ref(self, variant: str) -> str | None:
         if variant in self._uploaded_refs:
@@ -140,7 +141,20 @@ class NBPProvider(ImageProvider):
         self._uploaded_refs[variant] = uploaded.uri
         return uploaded.uri
 
-    def generate(self, scene: Scene, audit_feedback: str = "") -> bytes:
+    def _upload_path(self, p) -> str:
+        """Upload an arbitrary image as a continuity reference (cached by path)."""
+        key = str(p)
+        if key in self._uploaded_paths:
+            return self._uploaded_paths[key]
+        uploaded = self._client.files.upload(
+            file=key,
+            config=self._genai_types.UploadFileConfig(
+                display_name=getattr(p, "name", "ref.png"), mime_type="image/png"),
+        )
+        self._uploaded_paths[key] = uploaded.uri
+        return uploaded.uri
+
+    def generate(self, scene: Scene, audit_feedback: str = "", extra_ref_paths=None) -> bytes:
         prompt = assemble_final_prompt(
             scene,
             character_block=_character_block_for(scene.jesus_variant),
@@ -154,6 +168,10 @@ class NBPProvider(ImageProvider):
         parts: list = []
         if scene.jesus_variant:
             uri = self._upload_ref(scene.jesus_variant)
+            if uri:
+                parts.append({"fileData": {"mimeType": "image/png", "fileUri": uri}})
+        for rp in (extra_ref_paths or []):
+            uri = self._upload_path(rp)
             if uri:
                 parts.append({"fileData": {"mimeType": "image/png", "fileUri": uri}})
         parts.append({"text": prompt})
