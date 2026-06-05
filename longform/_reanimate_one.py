@@ -40,6 +40,14 @@ LIVELY = {
          "the shaft of heaven's light pulses and sweeps, storm clouds churn and roll, the robe and cloth edges stir, light breathes"),
     17: ("a slow rise with the brightening dawn",
          "morning mist rolls and drifts, dawn light grows and pulses, luminous motes drift upward"),
+    18: ("a slow reverent push-in",
+         "very subtle: only the robe and cloth edges faintly stir; keep the painted warm background light EXACTLY as it is, steady and unchanged — NO twinkling, NO growing glow, NO brightening, NO glitter, NO sparkles, NO floating particles, NO bokeh, NO light specks"),
+    19: ("a slow reverent reveal",
+         "the light softly blooms and gently breathes, warm radiance swells and fades, the robe and cloth edges faintly stir — soft painted light only, NO glitter, NO sparkles, NO floating particles, NO bokeh, NO falling light specks"),
+    20: ("a slow continued push-in to the offered hand",
+         "very subtle: only the robe and cloth edges faintly stir; keep the painted light EXACTLY as it is, steady and unchanged — NO growing glow, NO brightening, NO light burst, NO flare, NO new light, NO glitter, NO sparkles, NO floating particles"),
+    21: ("a very slow reverent settle and hold",
+         "the halo glows and gently breathes, the golden light softly swells and fades, the robe edge barely stirs — soft painted light only, NO glitter, NO sparkles, NO floating particles, NO bokeh, NO falling light specks"),
 }
 
 

@@ -20,7 +20,34 @@ gospel-shorts engine):
    (ASS/ffmpeg renderer) + `caption.py` (one-command wrapper). **$0/video, no
    API.** This is the part we iterated on all session and LOCKED.
 
-## LOCKED caption recipe (the default — a plain run produces it)
+## DYNAMIC mode (NEW 2026-06-05 — now the default)
+The enlarged key word + italic are driven by the **real vocal emphasis** measured
+from the narration audio (`prosody.py`: per-word RMS loudness + duration → phrase-
+local z-score + light text prior). The **big word follows the stress** (which word,
+not where on screen), its **size breathes** with how hard the stress lands
+(`BIG_FS_MIN..MAX`), and the **italic moves** to the runner-up word. Stopword guard
+keeps a loud "the" small.
+
+**STABLE FOCAL (updated 2026-06-05):** the big word's baseline is pinned to ONE
+fixed Y every phrase (`Layout.big_anchor_y`, lower third) so the eye rests in a
+single spot — no more inter-phrase drift. before/after lines stack above/below it.
+
+**ASPECT-ADAPTIVE (2026-06-05):** `build_layout(w,h)` auto-detects the clip.
+- **9:16 portrait** → keeps the YouTube-Shorts no-go zones.
+- **16:9 landscape** (long-form deep-dives) → drops Shorts chrome, calm lower-third
+  margins. Every font/margin scales by `h/REF_H`, so a word is the same FRACTION of
+  frame height either way. Verified 1280x720 render.
+
+- Default ON. `--static` restores the old LOCKED fixed look (big always mid, italic
+  on all connectors, 2-slot drift).
+- Knobs: weights in `serif_captions._dynamic_emphasis`; `BIG_FS_MIN/MAX`; portrait
+  vs landscape geometry inside `serif_captions.build_layout`.
+- Proven 2026-06-05 on "The Well That Never Runs Dry" (ep08):
+  `C:\Users\sanjay\PycharmProjects\JesusInTheBible\veed_io\out\well\well_stable.mp4`
+  contact sheet: `C:\Users\sanjay\PycharmProjects\JesusInTheBible\veed_io\out\well\contact_stable.png`
+  16:9 demo: `C:\Users\sanjay\PycharmProjects\JesusInTheBible\veed_io\out\well\demo_16x9.mp4`
+
+## LOCKED caption recipe (the STATIC fallback — `--static`)
 Font **Inter** · colour **#F4F0D8** · one **big bold key word on its own line** ·
 mid-phrase connector words **italic + slightly larger** · trailing word
 **indent-tucked under the key word** (quote lockup) · **near-zero line gap**

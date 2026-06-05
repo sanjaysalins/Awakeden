@@ -23,21 +23,32 @@
    → user approved → rolled out. **10 calm scenes re-animated:** 1,2,3,4,5,7,10,12,16,17. Old clips saved as
    `<stem>.prev.bak.mp4`. (HF had a transient **HTTP 502 outage** mid-run on 12/16/17 — the script now
    RESTORES the backup on failure so a scene is never left blank; retried, all rendered.)
-4. **Left reverently STILL on purpose:** S6 (cross — veo refuses), and the 3 Christ-glory landing frames
-   **S18, S19, S21**. These were NOT livened — the held stillness fits the landing.
+4. **Landing scenes S18/S19/S20/S21 livened too (user asked), then DIALED BACK.** First pass used
+   "luminous motes drift upward" → veo bloomed heavy GOLDEN GLITTER/bokeh (user: too much, "2" = dial back).
+   LESSON (now memory `feedback-veo-no-glitter-glow`): particle words ("motes/sparkles/dust/shimmer") make veo
+   add AI-glitter, and text negatives ("NO glitter") do NOT reliably suppress it on bright glowing backgrounds.
+   Fix = strict "keep the painted light EXACTLY as is, steady, only cloth edges stir" + for the worst offenders
+   use a **clean ffmpeg push-in** (zero added anything). FINAL landing state:
+   - **S18** = clean ffmpeg push-in (veo kept sparkling its warm bg no matter what).
+   - **S20** = clean ffmpeg push-in, **19.5s single clip** so the directional branch needs NO conts (its veo
+     cont-chain kept re-introducing sparkle + a light-burst over the pierced hand).
+   - **S19, S21** = clean veo (strict steady-light prompt held; gentle breathing motion). S21 halo is the
+     gentlest motion — if user wants it bone-clean too, swap to ffmpeg push-in.
+   - **S6** (cross) still ffmpeg (veo NSFW-refuses it).
 
-**Spend this session ≈ $4** (3 directional conts + 10 re-animations, veo3_1_lite via HF; S6 was $0 ffmpeg).
+**Spend this session ≈ $9** (3 directional conts + 10 calm re-animations + landing iterations, veo3_1_lite via
+HF; the ffmpeg push-ins S6/S18/S20 were $0).
 
 **NEW tool:** `longform/_reanimate_one.py` (re-animate ONE scene with a livelier `LIVELY[id]` prompt; backs
 up to `.prev.bak.mp4`; restores-on-failure). **NEW memory:** `feedback-index-file-and-full-link` (always give
 the user a reviewable index file + the whole absolute path).
 
 ▶▶ **DO THIS FIRST ON RETURN:**
-1. **Watch the livened cut** — especially the S1/S2/S3 opening (should feel alive now), and confirm no scene
-   morphs in motion. Path above.
-2. **Open decision I offered:** also liven the 3 landing frames **S18/S19/S21** with a gentle glow/light motion
-   (add their ids to `LIVELY` in `_reanimate_one.py`, run it, re-assemble), or leave them reverent. Also can
-   push any single scene harder the same way (~$0.65/scene). To re-assemble after any change:
+1. **Watch the full cut** — S1/S2/S3 opening should feel alive (flame/smoke/wind), and the S18→S21 landing
+   should be clean (no glitter). Confirm no scene morphs in motion. Path above.
+2. If anything still reads off: re-animate ONE scene via `longform/_reanimate_one.py <id>` (livelier) — but
+   for any bright glowing/glory scene PREFER a clean ffmpeg push-in (see S6/S18/S20 commands in git or just
+   copy the S18 zoompan one) to avoid veo glitter. After any change re-run
    `.venv\Scripts\python.exe longform\_assemble_16x9.py` then `..\_make_index.py`.
 3. If the film is approved → it's DONE (audio already locked, `narration.immersive.mp3` 405.3s). Then: posting
    kit for the long-form, or pick the next long-form topic / next multi-dimension short.
