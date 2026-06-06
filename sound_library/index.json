@@ -637,5 +637,61 @@
     "reuse_scope": "neutral",
     "created": "2026-06-04",
     "used_in": []
+  },
+  {
+    "slug": "waterpot_drop_run",
+    "category": "oneshot",
+    "tags": [
+      "waterpot",
+      "jar",
+      "clay",
+      "pottery",
+      "water",
+      "drop",
+      "footsteps",
+      "run",
+      "well",
+      "flee"
+    ],
+    "prompt": "a heavy clay water jar set down hastily on stone with a hollow ceramic thunk and a little water sloshing, then quick sandaled footsteps running away on dirt, close, no music no voices",
+    "duration_s": 4.0,
+    "loopable": false,
+    "raw_mean_db": -32.8,
+    "raw_max_db": -5.2,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 160,
+    "reuse_scope": "neutral",
+    "created": "2026-06-06",
+    "used_in": [
+      "08 The Well That Never Runs Dry"
+    ]
+  },
+  {
+    "slug": "score_reverent_grace",
+    "category": "music",
+    "tags": [
+      "music",
+      "score",
+      "reverent",
+      "cinematic",
+      "strings",
+      "piano",
+      "hopeful",
+      "grace",
+      "underscore",
+      "sacred"
+    ],
+    "prompt": "reverent cinematic instrumental score, warm strings + soft piano + middle-eastern duduk/oud, intimate then swelling to a redemptive climax of grace, no percussion no vocals",
+    "duration_s": 59.0,
+    "loopable": false,
+    "raw_mean_db": -16.3,
+    "raw_max_db": -0.9,
+    "source": "elevenlabs:sound-generation",
+    "credits_est": 2000,
+    "reuse_scope": "neutral",
+    "created": "2026-06-06",
+    "used_in": [
+      "08 The Well That Never Runs Dry"
+    ]
   }
 ]

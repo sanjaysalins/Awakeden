@@ -31,9 +31,16 @@
   1 panel → lock) · `psalm22-short-series` · `shorts-longform-funnel` (long FIRST, shorts distilled). KJV self-verify
   caught the cache DROPPING a comma in Ps 22:7 — audit the cache (TODO).
 
-▶▶ **DO FIRST NEXT SESSION:** the 8 shorts' audio was being rendered at checkpoint (per_turn_synth, narrator
-LSi9zNCeliLuhIGGS0By, --natural, ~$3-4 ElevenLabs). Check `…/shorts/*/narration.mp3`; re-run per_turn_synth on any
-missing. THEN: listen → Psalm 22 stills (long first, reuse audit) OR next long-form (Passover/Bronze Serpent/7 Words).
+### C) 8 shorts' AUDIO — RENDERED (narrator LSi9zNCeliLuhIGGS0By, --natural, ElevenLabs ≈ $3). mp3s on disk:
+`…/02_Psalm_22…/v1/shorts/<NN>/narration.mp3` — durations at NATURAL pace:
+01 Crucifixion-Foretold 65.4s · 02 Mockers 67.7s · 03 Forsaken-Cry 60.5s · 04 Declared-to-Brethren 64.3s ·
+05 He-Hath-Done-This 55.2s · 06 Ends-of-the-Earth 65.3s · 07 Body-Foretold 68.1s · 08 I-Thirst 71.1s.
+
+▶▶ **DO FIRST NEXT SESSION:** **LISTEN to the 8 short mp3s** (paths above). **DECISION NEEDED:** 6 of 8 run >60s at
+natural pace (the classic Shorts target is ~60s; I-Thirst is 71s). Pick ONE: (a) trim a few narrator words per short
+(accuracy-locked KJV quotes stay; just tighten prose — re-run the prep + per_turn_synth), or (b) a MILD narrator
+speed-up (~1.05–1.15x; note the shorts natural-speed rule prefers trimming over stretching). 05 (55s) + 03 (60.5s)
+are already fine. THEN: Psalm 22 stills (long first, reuse audit) OR next long-form (Passover / Bronze Serpent / 7 Words).
 
 ## ═══════════ SESSION 2026-06-05 — ISAIAH 53 FILM DONE + CALM SCENES LIVENED ═══════════
 

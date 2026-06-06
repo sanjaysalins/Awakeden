@@ -1,0 +1,194 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: plan
+
+LENS — judge this PLAN on (be specific, cite the exact step/claim):
+- Feasibility against the real codebase / tools (does it assume things that exist?).
+- Hidden risks, false assumptions, single points of failure.
+- Over-engineering / premature building before the idea is proven.
+- Missing steps, edge cases, or verification gaps.
+- Reuse: does it duplicate tools that already exist instead of reusing them?
+- Cost / spend and whether it's justified.
+
+ADDITIONAL CONTEXT / BRIEF:
+Reusable INSTRUMENTAL music-bed catalogue (Suno v5.5) for a gospel-shorts + long-form engine. 60s shorts use a Gospel Five-Beat (Hook/Point/Proof/Conviction/Landing); long-form is a 7-movement deep-dive (e.g. Isaiah 53, Psalm 22). LOCKED doctrine: grace-anchored conviction, NO fear/pressure framing. Beds are picked by emotional arc, trimmed + sidechain-ducked under existing narration. Judge: coverage of the moods this content actually needs, redundancy, Suno prompt craft, and any doctrinal/usage risk. 10 moods x 2 takes = 20.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block:
+
+VERDICT: PASS | REVISE | FAIL
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# Music Library Catalogue — 20 reusable instrumental beds (Suno v5.5)
+
+A curated, AI-panel-reviewed catalogue of **instrumental** music beds for the gospel
+content engine (60s shorts + 6–8 min long-form). Generate once on the paid Suno plan,
+tag, reuse forever. Sibling to `sound_library` (SFX) and `image_library` (stills).
+
+**Suno settings (every track):** v5.5 · **Instrumental = ON** · let it run ~2–3 min so
+there's a full arc to trim from · download **both** generations.
+
+**File naming:** Suno makes 2 versions per prompt → save them as `<slug>_a.mp3` and
+`<slug>_b.mp3`, drop both in `music_library/_inbox/`, then I run `ingest.py` (it reads
+this catalogue for tags, measures loudness, registers, and you keep the better take —
+or both if both are strong).
+
+**Aesthetic spine:** orchestral / chamber / sacred ambient with tasteful Middle-Eastern
+colour (duduk, ney, oud, frame drum). NO modern drums/EDM/synth-pop, NO lyric vocals.
+
+---
+
+## Coverage map (10 moods × 2 = 20)
+
+| # | slug | files | mood | use in the engine |
+|---|---|---|---|---|
+| 1 | `sacred_grace_rise` | `_a` `_b` | sacred | the **landing/CTA** grace climax (John 4 type) |
+| 2 | `sacred_intimate_piano` | `_a` `_b` | sacred | quiet revelation, devotional close |
+| 3 | `lonely_searching` | `_a` `_b` | lonely | **hook**: the outcast / the unanswered ache |
+| 4 | `lonely_windswept` | `_a` `_b` | lonely | wilderness, temptation, desolation |
+| 5 | `tender_compassion` | `_a` `_b` | tender | Jesus speaks kindly; mercy to the broken |
+| 6 | `tender_dawn_hope` | `_a` `_b` | tender | healing, new beginning, hope rising |
+| 7 | `awe_revelation_build` | `_a` `_b` | awe | the **proof** beat; OT echo lands |
+| 8 | `awe_holy_mystery` | `_a` `_b` | awe | the divine drawing near, wonder |
+| 9 | `triumphant_resurrection` | `_a` `_b` | triumphant | resurrection, "He is risen", victory |
+| 10 | `triumphant_kingdom_brass` | `_a` `_b` | triumphant | Christ the King, prophecy fulfilled |
+| 11 | `lament_suffering_cello` | `_a` `_b` | lament | Isaiah 53, the suffering servant, the cross |
+| 12 | `lament_forsaken` | `_a` `_b` | lament | Psalm 22 "forsaken", Gethsemane grief |
+| 13 | `tension_dread_pulse` | `_a` `_b` | tension | betrayal, arrest, judgment *(narrative only — see RED-TEAM #1)* |
+| 14 | `tension_storm_unrest` | `_a` `_b` | tension | storm at sea, the mob, chaos |
+| 15 | `glory_holy_stillness` | `_a` `_b` | glory | heaven, theophany — pad/drone, **safe to layer** |
+| 16 | `glory_light_descending` | `_a` `_b` | glory | the divine breaking in, radiant swell |
+| 17 | `pastoral_still_waters` | `_a` `_b` | pastoral | Psalm 23, rest, peace, "rest for your souls" |
+| 18 | `pastoral_shepherd_calm` | `_a` `_b` | pastoral | the Shepherd, the flock, comfort |
+| 19 | `urgent_journey_drive` | `_a` `_b` | urgent | the road, the journey, pursuit (no modern drums) |
+| 20 | `urgent_call_rising` | `_a` `_b` | urgent | the call to follow, the moment of decision |
+
+---
+
+## The 20 Suno v5.5 style prompts (instrumental)
+
+> Paste each into Suno's **Style** box with **Instrumental ON**. Save both takes as the
+> listed filenames.
+
+### SACRED — devotional grace, melodic, the flagship beds
+**1 — `sacred_grace_rise`** → `sacred_grace_rise_a.mp3`, `sacred_grace_rise_b.mp3`
+`cinematic sacred orchestral, warm sustained strings and soft grand piano, subtle Armenian duduk, intimate and searching opening that slowly swells to a warm redemptive climax of grace, reverent, emotional, film score, no drums, ~60 bpm`
+
+**2 — `sacred_intimate_piano`** → `sacred_intimate_piano_a.mp3`, `sacred_intimate_piano_b.mp3`
+`intimate sacred solo piano with delicate string pad underneath, prayerful, hushed, tender and devotional, lots of space and air, chamber, no percussion, slow ~55 bpm`
+
+### LONELY — sparse, hollow, unresolved (hooks, outcasts)
+**3 — `lonely_searching`** → `lonely_searching_a.mp3`, `lonely_searching_b.mp3`
+`sparse melancholic cinematic, lone cello and distant duduk, hollow and searching, unresolved, aching loneliness, minimal, lots of silence, ambient strings, no drums, very slow ~50 bpm`
+
+**4 — `lonely_windswept`** → `lonely_windswept_a.mp3`, `lonely_windswept_b.mp3`
+`desolate ambient cinematic, low drone with a thin lonely ney flute, windswept wilderness, bleak and barren, sustained dark strings, sense of isolation, no rhythm, no drums`
+
+### TENDER — warm human compassion, hope
+**5 — `tender_compassion`** → `tender_compassion_a.mp3`, `tender_compassion_b.mp3`
+`tender cinematic, warm strings and soft harp, gentle and compassionate, comforting, mercy and kindness, hopeful glow, chamber orchestra, no drums, gentle ~62 bpm`
+
+**6 — `tender_dawn_hope`** → `tender_dawn_hope_a.mp3`, `tender_dawn_hope_b.mp3`
+`hopeful cinematic sunrise, soft piano and rising warm strings, gentle woodwinds, new beginning, healing, tender optimism that lifts, chamber, no drums, ~66 bpm`
+
+### AWE — mounting crescendo, revelation
+**7 — `awe_revelation_build`** → `awe_revelation_build_a.mp3`, `awe_revelation_build_b.mp3`
+`cinematic crescendo, building orchestral strings layered with a soft wordless choir pad, mounting wonder and revelation, steadily rising tension to an awe-struck peak, epic but reverent, no drum beat, ~70 bpm`
+
+**8 — `awe_holy_mystery`** → `awe_holy_mystery_a.mp3`, `awe_holy_mystery_b.mp3`
+`mysterious sacred ambient, shimmering high strings over deep low cello, glassy bells, sense of the divine drawing near, holy and otherworldly, slow swelling, no percussion`
+
+### TRIUMPHANT — victory, resurrection, kingdom
+**9 — `triumphant_resurrection`** → `triumphant_resurrection_a.mp3`, `triumphant_resurrection_b.mp3`
+`triumphant cinematic orchestral, bright full strings and soaring brass, radiant and victorious, redemptive resurrection swell, glorious and uplifting, epic finale, light timpani swells, ~80 bpm`
+
+**10 — `triumphant_kingdom_brass`** → `triumphant_kingdom_brass_a.mp3`, `triumphant_kingdom_brass_b.mp3`
+`noble regal cinematic, stately brass fanfare with full strings, majestic and kingly, prophecy fulfilled, grand processional, reverent triumph, orchestral, ~72 bpm`
+
+### LAMENT — grief, suffering, the cross
+**11 — `lament_suffering_cello`** → `lament_suffering_cello_a.mp3`, `lament_suffering_cello_b.mp3`
+`mournful cinematic, grieving solo cello over low sustained strings, sorrowful and heavy, the weight of suffering, aching lament, dark chamber, no drums, very slow ~48 bpm`
+
+**12 — `lament_forsaken`** → `lament_forsaken_a.mp3`, `lament_forsaken_b.mp3`
+`desolate sacred lament, near-silent sparse strings and a distant lone violin, abandonment and anguish, hollow grief, almost ambient, trembling, no percussion, extremely slow`
+
+### TENSION — dread, threat, chaos (NARRATIVE villainy only — never the conviction/CTA)
+**13 — `tension_dread_pulse`** → `tension_dread_pulse_a.mp3`, `tension_dread_pulse_b.mp3`
+`dark cinematic tension, low pulsing string ostinato, no melody, mounting dread and unease, ominous undertow, creeping threat, sparse low percussion pulse, ~90 bpm`
+
+**14 — `tension_storm_unrest`** → `tension_storm_unrest_a.mp3`, `tension_storm_unrest_b.mp3`
+`agitated cinematic storm, frantic tremolo strings and swelling low brass, chaos and turmoil, rising percussion swells, danger and unrest, dramatic, intense`
+
+### GLORY — holy stillness, PAD/DRONE (no melody → safe to layer under a melodic bed)
+**15 — `glory_holy_stillness`** → `glory_holy_stillness_a.mp3`, `glory_holy_stillness_b.mp3`
+`sacred ambient drone, sustained ethereal pad and soft low strings, weightless holy stillness, timeless and reverent, no melody, no rhythm, no drums, pure atmosphere`
+
+**16 — `glory_light_descending`** → `glory_light_descending_a.mp3`, `glory_light_descending_b.mp3`
+`radiant sacred ambient, slowly swelling warm pad with gentle glassy bells and soft high strings, the divine breaking in, light descending, glowing and holy, no beat, no drums`
+
+### PASTORAL — peace, rest, the shepherd
+**17 — `pastoral_still_waters`** → `pastoral_still_waters_a.mp3`, `pastoral_still_waters_b.mp3`
+`peaceful pastoral cinematic, gentle flowing strings and soft harp with light woodwind, restful and serene, still waters, green pastures, calm and reassuring, no drums, ~64 bpm`
+
+**18 — `pastoral_shepherd_calm`** → `pastoral_shepherd_calm_a.mp3`, `pastoral_shepherd_calm_b.mp3`
+`warm folk-orchestral, simple gentle acoustic strings and soft flute, comforting and homely, the good shepherd, pastoral calm, intimate, no drums, ~68 bpm`
+
+### URGENT — forward motion, the call (NO modern drums; orchestral propulsion)
+**19 — `urgent_journey_drive`** → `urgent_journey_drive_a.mp3`, `urgent_journey_drive_b.mp3`
+`driving cinematic strings, light rhythmic staccato ostinato, forward momentum and travel, a determined journey, propulsive but orchestral, taut frame-drum pulse, ~108 bpm`
+
+**20 — `urgent_call_rising`** → `urgent_call_rising_a.mp3`, `urgent_call_rising_b.mp3`
+`rising cinematic urgency, accelerating layered strings building insistently, a summons, a moment of decision, mounting resolve to a decisive hit, orchestral, ~100 bpm`
+
+---
+
+## RED-TEAM (my own adversarial pass before the panel)
+
+**1. Doctrine: tension music must never touch the conviction/CTA.** The engine's locked
+rule is grace-anchored conviction — NO fear/pressure framing. So `tension_*` (#13/#14)
+are for **narrative villainy only** (betrayal, storm, the mob), and are **banned** from
+the Conviction and Landing beats. Conviction = `tender_*` / `sacred_*` / `lonely_*`. This
+is now a hard usage rule in the catalogue, not a suggestion.
+
+**2. The "two music" clash (just hit on the Well clip).** Two melodic beds at once fight
+(different keys/builds). Rule: **one melodic bed per clip.** The only safe layering partner
+is a `glory_*` pad/drone (#15/#16) — they're deliberately melody-free and rhythm-free so
+they can sit *under* a melodic bed without clashing. Designed that way on purpose.
+
+**3. Mood overlap (sacred / awe / glory / tender).** Genuine risk of 4 samey tracks. They
+are deliberately separated: **sacred** = devotional melody w/ grace arc; **awe** = mounting
+crescendo (it *moves*); **glory** = static atmosphere, no melody; **tender** = warm human
+compassion, smaller. If two takes come back indistinguishable, cut one and widen the other.
+
+**4. Suno ignores negatives.** "no drums" is unreliable. Mitigation: the *genre framing*
+does the work (chamber / ambient / sacred orchestral rarely add a beat); reject any take
+that comes back with a drum kit. Tension/urgent tracks intentionally allow percussion.
+
+**5. Stealth vocals.** Even with Instrumental ON, Suno sometimes adds "aah" vocal pads.
+A wordless pad is borderline; for beds that sit UNDER narration, reject vocal takes
+(voice-on-voice muddies the mix). The `awe`/`glory` choir-pad prompts are the main risk —
+audition those carefully.
+
+**6. 60s usability.** Very slow beds (~48–55 bpm) may not present a full arc inside a 59s
+window. Mitigation: we don't need the whole track — `enhance.py` trims to any window and
+picks the in-point, so a 2–3 min Suno track gives several usable 60s sections.
+
+**7. Loudness.** Suno masters hot (~-8 LUFS). Not a problem: `ingest.py` measures each
+track and the downstream mix attenuates + sidechain-ducks under the voice (proven on Well).
+
+**8. Coverage gaps considered.** Childlike/whimsical (rare in this content — skip for now),
+courtroom/legal-conviction (covered by tension narrative + the doctrine rule above keeps it
+off the CTA), worship-anthem with vocals (out of scope — beds are instrumental). Catalogue
+is intentionally 10 moods; expand later from real usage, not speculation.
+
+---
+
+## License
+Tracks generated on the user's **paid Suno plan** (commercial rights). `source: suno`,
+`license: suno-paid-commercial` recorded per entry.
+----- ARTIFACT END -----

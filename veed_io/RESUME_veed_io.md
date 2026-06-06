@@ -3,7 +3,7 @@
 > Kept separate from the repo-wide `RESUME.md` on purpose — that file is being
 > edited by another concurrent session. Pick this up tomorrow from here.
 
-Last worked: 2026-06-03. All paths absolute from
+Last worked: 2026-06-06. All paths absolute from
 `C:\Users\sanjay\PycharmProjects\JesusInTheBible\veed_io\`.
 
 ## What this is
@@ -47,7 +47,14 @@ single spot — no more inter-phrase drift. before/after lines stack above/below
   contact sheet: `C:\Users\sanjay\PycharmProjects\JesusInTheBible\veed_io\out\well\contact_stable.png`
   16:9 demo: `C:\Users\sanjay\PycharmProjects\JesusInTheBible\veed_io\out\well\demo_16x9.mp4`
 
-## ⏭️ CAPTION STYLE PRESETS — DECIDE TOMORROW (NEW 2026-06-05)
+## ✅ CAPTION STYLE — LOCKED: ivory (decided 2026-06-06)
+User watched the 6 samples and **picked `ivory`** (the current cream look) as the
+default. No code change needed — `serif_captions.DEFAULT_STYLE = "ivory"` and
+`caption.py --style` already default to it. The pick is settled; don't re-ask.
+The other 5 styles (glow/pop/impact/karaoke/minimal) stay available via `--style`
+for per-clip overrides. The history below is kept for reference.
+
+## ⏭️ CAPTION STYLE PRESETS — (decided — see LOCKED note above)
 Built a `--style` system to explore more viral/appealing looks (all $0, offline).
 Same dynamic stable-focal layout; only the *skin* changes. Per-word **karaoke**
 fill is now possible because the WhisperX timings are exact.
