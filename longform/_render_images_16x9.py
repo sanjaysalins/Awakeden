@@ -12,6 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import config
 from pipeline.visual_models import Scene
 from pipeline import visual_render
+from pipeline import cost  # noqa: E402
 from _episode import resolve, slugof  # noqa: E402
 from _test_gate import apply_test_gate  # noqa: E402
 sys.path.insert(0, str(ROOT / "image_library"))
@@ -77,6 +78,7 @@ for s in ep.scenes:
         t = time.time()
         png.write_bytes(prov.generate(scene))
         print(f"       ok ({png.stat().st_size:,} b, {time.time()-t:.0f}s) -> {png.name}")
+        cost.record_nbp(ep.slug, "long", "stills", note=f"#{s['id']:02d} {s['title'][:36]}")
         bank(s, png)
         ok += 1
     except Exception as e:

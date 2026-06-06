@@ -11,13 +11,13 @@ Keep this current; it complements `STATE.md` (status) and `RESUME.md` (what to d
 - [ ] Roll out remaining series by brand (SLK → Awakeden → Either), measured against analytics.
 
 ## 💰 Spend tracking + cost control — BUILD FIRST (ASSET_LIBRARY_PLAN.md Loop 2, red-team-approved)
-- [ ] **`pipeline/cost.py` + `data/spend_ledger.jsonl`** — the headline value. NOT credit-balance-delta (red-team: wrong/fragile). Use:
-  - pre-flight: `hf generate cost <model> --json` → EXACT credits before spend (nano_banana_2=2cr, veo~8cr) + ElevenLabs char×rate.
-  - reconcile: `hf account transactions --json` → authoritative spend/refund rows, match by name+timestamp. **Log CREDITS not USD** (Ultimate plan).
-  - **3rd chokepoint:** LLM cost when `LLM_PROVIDER=api` (token×rate); `$0 (agent)` otherwise. Every row has a `mode` field (don't go blind on the flag).
-- [ ] Per-episode budget ceiling ($25/short, $40/long) — pre-flight estimate + block-on-breach with clean `--override` (veed_io red-banner pattern).
-- [ ] `$ / credits Spent` column in PRODUCTION_TRACKER (actuals replace the estimate); track est-vs-actual drift as a KPI.
-- [ ] KPI: cost-per-finished-episode trending DOWN as the bank grows (proves reuse savings — only book savings AFTER they hit the ledger).
+- [x] **`pipeline/cost.py` + `data/spend_ledger.jsonl`** — BUILT + tested. `hf generate cost` (exact pre-flight) + `hf account transactions` (reconcile, spend/refund) + ElevenLabs char-est + NBP/Kling est + the LLM `mode` chokepoint (api token cost vs `$0 agent`). Logs credits + USD-estimate. CLI: balance/estimate/summary/reconcile. Per-episode ceilings ($25/short, $40/long) + `check_budget` override.
+- [x] **Wired into the long-form drivers** — `_render_images_16x9.py` (NBP stills) + `_animate_16x9.py` (HF veo clips + Kling fallback) record automatically.
+- [ ] Wire `per_turn_synth` (shorts/long audio, in PythonProject1) → `record_eleven` (char count).
+- [ ] Wire the shorts pipeline (`cli_pipeline`/orchestrator HF + image_to_kling) → record_hf/record_kling.
+- [ ] `$ / credits Spent` column in PRODUCTION_TRACKER (read `data/spend_ledger.jsonl`); track est-vs-actual drift as a KPI.
+- [ ] After each real batch: `python -m pipeline.cost reconcile --episode <id> --since <ISO>` to swap estimates for actual HF credits.
+- [ ] KPI: cost-per-finished-episode trending DOWN as the bank grows (only book savings AFTER they hit the ledger).
 
 ## 🗂 Asset library + reuse system  (ASSET_LIBRARY_PLAN.md Loops 1/3/4 — most already exists!)
 - [ ] **Close the ONE real verify gap (3 lines):** `longform/_render_images_16x9.py` banks NBP output UNCONDITIONALLY — add `verify_image` before `bank()`. (Shorts path already gated.)
