@@ -1,0 +1,244 @@
+# Gospel Shorts + Long-Form — Comprehensive Production Plan & State
+
+Built from `data/series.json` (10 greenlit series / 76 episodes). Red-team + 5-CLI panel reviewed 2026-06-06; this is the revised master plan.
+
+## 1. Strategy (the funnel — honest version)
+- **Shorts = snack/hook** (60s viral entry); **long-forms = the deep, researched meal** that supports them.
+- **Long TIERING (a dedicated long per short is NOT the goal — the panel showed that's ~$2k+ of compilations nobody clicks):**
+  - **★ Flagship long** — a real, dedicated deep-dive for a RICH text (Isaiah 53, Psalm 22, Passover, Serpent…). This genuinely 'backs' its short(s). ~12 of these.
+  - **Standalone short** — most shorts stand on their own (self-contained gospel hit); they are NOT 'distilled from' a long.
+  - **⚓ Series-anchor long = OPTIONAL overview/playlist hub, a catalog placeholder — NOT a per-short research meal.** Build only if a series earns it. (Panel fix: stop pretending all 76 are 'backed'.)
+- **Write-long-first applies to FLAGSHIP texts only** (Isaiah 53, Psalm 22 prove it). Existing standalone shorts are kept as-is; they don't need a retrofit unless a flagship is later built on that text.
+- **Reuse:** batch audio, then a stills REUSE AUDIT — bounded to same-format (16:9≠9:16) thread-NEUTRAL plates (topical-fit gate). Honest expectation ~15-25%, strong ONLY in the cross/types cluster. Tooling (long-form reuse audit) is NOT built yet — a prerequisite, not an assumption.
+
+## 2. State
+- 21 longs + 76 catalog shorts. Started 16. Cut+ (POC) 9. **COMPLETE (uploaded) 0.**
+- Shorts whose flagship/anchor long isn't built yet: 73 (mostly fine — they're standalone).
+- **Multi-dimension:** series.json is 1:1, but production ships ~N faithful dims/episode (I AM Bread = 3 shipped). Real short folders > 76; cost scaled by ~1.5×.
+
+## 3. PROOF-FIRST priority (panel: don't build inventory before proving the publish loop)
+1. **PUBLISH Isaiah 53 NOW** — it's captioned/ready. Build its upload kit (title/desc/hashtags/thumbnail), post to YT (+TT/FB/IG), link the short cuts to it. Prove the whole loop end-to-end ONCE.
+2. **Finish Psalm 22 long end-to-end** (scene plan → stills → clips → assemble → caption → publish) — the SECOND template; confirms the episode-generic drivers work on episode 2.
+3. **Audit the 9 existing cut POCs** (keep / re-cut / retire) and publish the keepers with kits — turn POCs into COMPLETE before making more.
+4. **THEN the passion BATCH** (words-from-cross + types-shadows flagships + their shorts) — only after the template + publish loop is proven and a reuse-audit tool exists.
+5. Roll out remaining series by brand (SLK first), measured against analytics from steps 1-3.
+
+## 4. Gated pipeline & done-definitions (panel: state list ≠ pipeline)
+`planned → narration → PANEL(enforced) → mp3 → stills → clips → cut(POC) → QA-watch → captioned → upload-kit → uploaded(COMPLETE)`
+- **narration done** = script locked AFTER in-engine red-team + enforced `independent_review.py` panel (mandatory per CLAUDE.md).
+- **mp3 done** = audio rendered + human audio-gate approved.
+- **stills/clips done** = image-gate / clip-gate approved (the 3 human gates from cli_pipeline.py).
+- **cut(POC)** = assembled `viral_cut.mp4` — NOT a release; a POC the engine is still iterating.
+- **QA-watch** = human watches the whole clip (≥6 frames/scene) for morph/anatomy/glitter; re-gen on fail.
+- **captioned** = veed_io caption burn (the locked last step).
+- **upload-kit** = title/desc/hashtags/thumbnail per platform.
+- **uploaded(COMPLETE)** = live on the platform + logged in the GDrive posting tracker.
+
+## 5. Cost (derived, not the old flat $1940)
+- Per CLAUDE.md: **~$23/short** (Kling ~$11 + images ~$5 + Opus ~$5-6 + audio); **~$35/long** clean (Isaiah pilot ~$48 WITH redos).
+- **Metered $ to take everything to a CUT: ~$2250-3900** (low = base; high = ×1.5 multi-dim shorts ×1.3 retries). Excludes human-gate/review TIME.
+- 'To a cut' is NOT the goal — captions are ~$0 tooling but thumbnails + upload kits + the panel/QA passes cost TIME, the real bottleneck.
+- **Reuse can only lower this AFTER the audit tool exists and the cross/types library is seeded** — don't bank the savings yet.
+
+## 6. Distribution (the channel's actual purpose — was missing)
+- **Platforms:** YouTube (longs + shorts), TikTok, FB, IG Reels — the user's 4-platform tracker.
+- **Per-clip upload kit:** title · description (with the short→backing-long link) · hashtags · thumbnail · safe-area caption check. Wire to `0 Christianity/PRODUCTION & POSTING TRACKER.md` on GDrive.
+- **Cross-link:** every short's description points to its flagship long ('full story → deep-dive'); every long pins its shorts.
+- **Cadence:** decide shorts/week + long/2-weeks AFTER steps 1-2 give real retention data. Brand rollout: SLK → Awakeden → Either.
+
+## 7. Cross-series collisions (same verse, two series — resolve, don't double-count)
+- **John 19:30 'It is finished'** — words-from-cross (primary) ↔ last-week (cross-file, don't rebuild; differentiate by lens: atonement vs chronology).
+- **Jonah** — jesus-in-ot 'Sign of Jonah' (primary) ↔ types-shadows 'Jonah three days' (cross-file; one asset).
+- **John 21:17** — QJA 'Do You Love Me' (#16, primary) ↔ encounters 'Peter restored' (same clip; QJA's three-voice vs encounters' anti-psychologising — pick QJA's framing).
+- **Luke 23:43** — words-from-cross 'Today in paradise' ↔ encounters 'thief on the cross' (one asset, two playlists).
+- **John 1:29 'Lamb'** — types-shadows 'Passover Lamb' (flagship) ↔ names-titles 'Lamb of God' (title lens; share the flagship long, distinct short hooks).
+- Headline '76' counts catalog ROWS; **distinct content is ~70** after these cross-files.
+
+## 8. Doctrinal pre-flight (per-episode guardrail flags the panel caught)
+- **Scapegoat (Lev 16 / Heb 9:12)** — Heb warrants the Atonement *sacrifice*; the *scapegoat-sent-away* type has weaker explicit NT warrant. Frame carefully or lead with the sacrifice.
+- **Markan miracles in a 'Signs' series** — Calming the Storm (Mk 4) / Paralytic (Mk 2) aren't Johannine *sēmeia*; don't force John's frame — let Mark's kingdom/authority reading drive (the series' own guardrail).
+- **Rich young ruler (Mk 10)** — the text exposes the idol of wealth; encounters' anti-moralism guardrail must still let the text land grace, not flatten it.
+- **Woman caught in adultery (Jn 8)** — note the textual-variant (pericope adulterae) honestly.
+- **Pierced / Zech 12:10 + 'My God forsaken'** — keep Father/Son distinction explicit so a 60s short can't be misheard as modalism.
+- Every narration still passes the enforced panel before lock — this list is the pre-flight, not a replacement.
+
+## 9. Single source of truth
+- **This plan (PRODUCTION_PLAN.md / PRODUCTION_TRACKER.html) is the master.** Regenerated by `_production_tracker.py` from series.json + the on-disk scan.
+- Sub-plans (binding): `BATCH_PLAN.md` (batched stages), `PRODUCER_ORCHESTRATOR_PLAN.md` (red-teamed → don't build the orchestrator yet; do long-form-generic first — DONE).
+- **Known limitation:** status is a curated overlay (`ST` dict) + a live asset scan, not a fully-automated register. Auto-discovery from disk is a future improvement.
+
+
+## The 7 "I AM" Statements  (i-am · SLK)
+*Each "I AM" claim of Jesus in John, the Jewish backdrop (Exodus 3:14), and what it means now.*
+> guardrail: Keep the deity claim front and centre. Don't soften 'I AM' into a metaphor. Don't reduce these sayings to generic self-help.
+
+- 🎬 **The 7 "I AM" Statements (series deep-dive)** <OT picture -> Jesus' claim -> deity implication> — _planned_ (anchor) SERIES ANCHOR — backs the shorts that have no dedicated flagship
+- 🎬 **Lazarus — Resurrection & the Life** <John 11:25> — _planned_ (flagship) FLAGSHIP · backs Lazarus + I AM Resurrection
+- 📱 I AM the Bread of Life <John 6:35> — _cut_ — backed by: The 7 "I AM" Statements (series deep-dive) (planned) — takes: 3 shipped dims: #34 Hunger · #35 Manna · #36 No Wise Cast Out
+- 📱 I AM the Light of the World <John 8:12> — _mp3_ — backed by: The 7 "I AM" Statements (series deep-dive) (planned) — takes: #06 · #31 Light You Can Stand In
+- 📱 I AM the Door <John 10:9> — _cut_ — backed by: The 7 "I AM" Statements (series deep-dive) (planned) — takes: #32 Door Was a Body (CUT) · #07 (mp3)
+- 📱 I AM the Good Shepherd <John 10:11> — _cut_ — backed by: The 7 "I AM" Statements (series deep-dive) (planned) — takes: #33 Shepherd In The Gap
+- 📱 I AM the Resurrection and the Life <John 11:25> — _planned_ — backed by: Lazarus — Resurrection & the Life (planned)
+- 📱 I AM the Way, the Truth, and the Life <John 14:6> — _planned_ — backed by: The 7 "I AM" Statements (series deep-dive) (planned)
+- 📱 I AM the True Vine <John 15:1> — _planned_ — backed by: The 7 "I AM" Statements (series deep-dive) (planned)
+
+## The 7 Words from the Cross  (words-from-cross · SLK)
+*Each saying of Jesus from the cross - what it reveals about Him and the gospel.*
+> guardrail: The traditional order is church tradition, not Scripture. Don't claim the order is biblical.
+
+- 🎬 **The 7 Words from the Cross (series deep-dive)** <Setting -> the words -> meaning> — _planned_ (anchor) SERIES ANCHOR — backs the shorts that have no dedicated flagship
+- 🎬 **It Is Finished — tetelestai** <John 19:30> — _planned_ (flagship) FLAGSHIP · BATCH (shared w/ last-week)
+- 📱 Father, forgive them <Luke 23:34> — _planned_ — backed by: The 7 Words from the Cross (series deep-dive) (planned)
+- 📱 Today you will be with me in paradise <Luke 23:43> — _planned_ — backed by: The 7 Words from the Cross (series deep-dive) (planned)
+- 📱 Woman, behold your son <John 19:26> — _planned_ — backed by: The 7 Words from the Cross (series deep-dive) (planned)
+- 📱 My God, my God, why hast thou forsaken me <Matthew 27:46> — _planned_ — backed by: Psalm 22 — The Song From the Cross (mp3)
+- 📱 I thirst <John 19:28> — _planned_ — backed by: The 7 Words from the Cross (series deep-dive) (planned)
+- 📱 It is finished <John 19:30> — _planned_ — backed by: It Is Finished — tetelestai (planned)
+- 📱 Father, into thy hands I commend my spirit <Luke 23:46> — _planned_ — backed by: The 7 Words from the Cross (series deep-dive) (planned)
+
+## Types & Shadows  (types-shadows · Awakeden)
+*OT figures, objects, and events that foreshadow Christ - restricted to those the NT explicitly confirms or strongly implies.*
+> guardrail: No inventing types the Bible never names. Skip Rahab's scarlet cord, Eve from Adam's side, etc. unless you can show NT warrant.
+
+- 🎬 **Types & Shadows (series deep-dive)** <OT image first -> NT fulfilment -> 'pattern, not coincidence'> — _planned_ (anchor) SERIES ANCHOR — backs the shorts that have no dedicated flagship
+- 🎬 **The Passover Lamb** <John 1:29> — _planned_ (flagship) FLAGSHIP · BATCH
+- 🎬 **The Bronze Serpent** <John 3:14> — _planned_ (flagship) FLAGSHIP · BATCH
+- 📱 The Passover Lamb <John 1:29> — _planned_ — backed by: The Passover Lamb (planned)
+- 📱 The Bronze Serpent <John 3:14> — _planned_ — backed by: The Bronze Serpent (planned)
+- 📱 Manna <John 6:51> — _planned_ — backed by: Types & Shadows (series deep-dive) (planned)
+- 📱 The Rock in the Wilderness <1 Corinthians 10:4> — _planned_ — backed by: Types & Shadows (series deep-dive) (planned)
+- 📱 Melchizedek <Hebrews 7:3> — _planned_ — backed by: Types & Shadows (series deep-dive) (planned)
+- 📱 Jonah - three days and nights <Matthew 12:40> — _planned_ — backed by: Types & Shadows (series deep-dive) (planned)
+- 📱 Adam - the last Adam <1 Corinthians 15:45> — _planned_ — backed by: Types & Shadows (series deep-dive) (planned)
+- 📱 The Day of Atonement / scapegoat <Hebrews 9:12> — _planned_ — backed by: Types & Shadows (series deep-dive) (planned)
+
+## Encounters  (encounters · SLK)
+*One-on-one conversations between Jesus and a single person. Character-driven, emotional.*
+> guardrail: Don't psychologise characters beyond the text. Don't turn Jesus into a life coach. Every episode lands at the gospel - grace alone, not 'your idols' moralism.
+
+- 🎬 **Encounters (series deep-dive)** <The person's situation in 3 seconds -> Jesus enters -> the turn> — _planned_ (anchor) SERIES ANCHOR — backs the shorts that have no dedicated flagship
+- 🎬 **The Woman at the Well** <John 4:14> — _planned_ (flagship) FLAGSHIP
+- 📱 Nicodemus by night <John 3:3> — _planned_ — backed by: Encounters (series deep-dive) (planned)
+- 📱 The woman at the well <John 4:14> — _cut_ — backed by: The Woman at the Well (planned) — takes: #08 The Well That Never Runs Dry
+- 📱 The rich young ruler <Mark 10:21> — _planned_ — backed by: Encounters (series deep-dive) (planned)
+- 📱 Zacchaeus in the tree <Luke 19:10> — _planned_ — backed by: Encounters (series deep-dive) (planned)
+- 📱 Thomas after the resurrection <John 20:28> — _planned_ — backed by: Encounters (series deep-dive) (planned)
+- 📱 Peter restored on the beach <John 21:17> — _cut_ — backed by: Encounters (series deep-dive) (planned) — takes: cross-filed w/ QJA #16 (Peter restored)
+- 📱 The woman caught in adultery <John 8:11> — _planned_ — backed by: Encounters (series deep-dive) (planned)
+- 📱 The thief on the cross <Luke 23:43> — _planned_ — backed by: Encounters (series deep-dive) (planned)
+
+## Names and Titles of Jesus  (names-titles · SLK)
+*Each title Scripture gives Jesus - what it meant, what it reveals.*
+> guardrail: Titles only - not descriptions stretched into titles. Stay disciplined; don't pad with non-titles.
+
+- 🎬 **Names and Titles of Jesus (series deep-dive)** <The title -> its OT roots -> its meaning for today> — _planned_ (anchor) SERIES ANCHOR — backs the shorts that have no dedicated flagship
+- 📱 Logos / The Word <John 1:1> — _planned_ — backed by: Names and Titles of Jesus (series deep-dive) (planned)
+- 📱 Lamb of God <John 1:29> — _planned_ — backed by: The Passover Lamb (planned)
+- 📱 Son of Man <Daniel 7:13> — _planned_ — backed by: Names and Titles of Jesus (series deep-dive) (planned)
+- 📱 Alpha and Omega <Revelation 22:13> — _planned_ — backed by: Names and Titles of Jesus (series deep-dive) (planned)
+- 📱 Wonderful, Counsellor, The Prince of Peace <Isaiah 9:6> — _planned_ — backed by: Names and Titles of Jesus (series deep-dive) (planned)
+- 📱 Immanuel <Matthew 1:23> — _planned_ — backed by: Names and Titles of Jesus (series deep-dive) (planned)
+- 📱 King of Kings and Lord of Lords <Revelation 19:16> — _planned_ — backed by: Names and Titles of Jesus (series deep-dive) (planned)
+- 📱 The Lion of the tribe of Judah <Revelation 5:5> — _planned_ — backed by: Names and Titles of Jesus (series deep-dive) (planned)
+
+## Resurrection on Trial  (resurrection-trial · Awakeden)
+*Each episode tackles one skeptical objection to the resurrection, then lands at the risen Christ.*
+> guardrail: Always engage the STRONGEST version of the objection, not a strawman. Tone: invitation, not victory. Arguments clear the ground; the Holy Spirit convicts.
+
+- 🎬 **Resurrection on Trial (series deep-dive)** <State the objection in its strongest form -> answer -> invitation> — _planned_ (anchor) SERIES ANCHOR — backs the shorts that have no dedicated flagship
+- 📱 The Swoon Theory <John 19:34> — _planned_ — backed by: Resurrection on Trial (series deep-dive) (planned)
+- 📱 The Stolen Body Theory <Matthew 28:13> — _planned_ — backed by: Resurrection on Trial (series deep-dive) (planned)
+- 📱 Women as first witnesses <Luke 24:5> — _planned_ — backed by: Resurrection on Trial (series deep-dive) (planned)
+- 📱 Paul's early creed <1 Corinthians 15:3> — _planned_ — backed by: Resurrection on Trial (series deep-dive) (planned)
+- 📱 Would they die for a lie? <Acts 4:20> — _planned_ — backed by: Resurrection on Trial (series deep-dive) (planned)
+- 📱 The conversion of Paul <Acts 9:5> — _planned_ — backed by: Resurrection on Trial (series deep-dive) (planned)
+
+## The Last Week, Hour by Hour  (last-week · Either)
+*Passion Week chronologically, from Palm Sunday to Resurrection.*
+> guardrail: The four Gospels differ in detail and timing. Don't smooth contradictions out. Where accounts diverge, name it.
+
+- 🎬 **The Last Week, Hour by Hour (series deep-dive)** <Day + hour anchor -> what happened -> why it matters> — _planned_ (anchor) SERIES ANCHOR — backs the shorts that have no dedicated flagship
+- 🎬 **The Empty Tomb — He Is Risen** <Matthew 28:6> — _planned_ (flagship) FLAGSHIP · flagship resurrection deep-dive
+- 📱 Palm Sunday - the triumphal entry <Zechariah 9:9> — _planned_ — backed by: The Last Week, Hour by Hour (series deep-dive) (planned)
+- 📱 Cleansing the temple <Matthew 21:13> — _planned_ — backed by: The Last Week, Hour by Hour (series deep-dive) (planned)
+- 📱 Gethsemane <Matthew 26:39> — _planned_ — backed by: The Last Week, Hour by Hour (series deep-dive) (planned)
+- 📱 It is finished <John 19:30> — _planned_ — backed by: It Is Finished — tetelestai (planned) — takes: cross-filed w/ words-from-cross
+- 📱 The empty tomb <Matthew 28:6> — _planned_ — backed by: The Empty Tomb — He Is Risen (planned)
+
+## Miracles as Signs  (miracles-signs · Either)
+*Each miracle as a deliberate revelation of Jesus' identity. John calls them signs (semeia).*
+> guardrail: Let the text drive the meaning. Don't allegorise beyond what the Gospel writer signals.
+
+- 🎬 **Miracles as Signs (series deep-dive)** <The miracle -> what it signed about Him> — _planned_ (anchor) SERIES ANCHOR — backs the shorts that have no dedicated flagship
+- 📱 Water to wine at Cana <John 2:11> — _planned_ — backed by: Miracles as Signs (series deep-dive) (planned)
+- 📱 Feeding the 5000 <John 6:14> — _planned_ — backed by: Miracles as Signs (series deep-dive) (planned)
+- 📱 Walking on water <Mark 6:50> — _planned_ — backed by: Miracles as Signs (series deep-dive) (planned)
+- 📱 Healing the man born blind <John 9:25> — _planned_ — backed by: Miracles as Signs (series deep-dive) (planned)
+- 📱 Raising Lazarus <John 11:43> — _planned_ — backed by: Miracles as Signs (series deep-dive) (planned)
+- 📱 Calming the storm <Mark 4:39> — _mp3_ — backed by: Miracles as Signs (series deep-dive) (planned) — takes: #20 He Was Asleep in the Storm (cross-filed)
+- 📱 Healing the paralytic with forgiveness <Mark 2:10> — _planned_ — backed by: Miracles as Signs (series deep-dive) (planned)
+
+## Questions Jesus Asked  (questions-jesus-asked · SLK)
+*Jesus' questions reveal the heart and call people to respond to Him. Each episode is a short ENCOUNTER, not a mini-lecture — His question lands and exposes the heart.*
+> guardrail: NOT moralistic — never 'try harder / be braver / do better / prove yourself'. Better: faith grows when we see who Jesus is; grace restores failed disciples; His questions expose the heart so that we respond to Him. SERIES SIGNATURE (every episode must carry it): the question begins in the scene, then TURNS onto the viewer — the same question Jesus put to the person, He now puts to YOU — and the short lands on a response TO JESUS, never on self-improvement. THREE VOICES where the scene has them: narrator (sets the scene) / the person in the passage AND the VIEWER'S OWN INNER RESPONSE (voice the silent answer the question pulls out of the viewer, in the second person) / Jesus (His words from Scripture, KJV, simple and reverent). ENACT a repeated pattern where the text has one — e.g. John 21's three denials -> three questions -> three 'Feed my sheep' — do NOT compress it; the repetition IS the restoration. Where the text RE-COMMISSIONS (Feed my sheep / Follow me / Go and tell), the landing must carry the renewed CALLING, not only the feeling. Let the question LAND — don't be dramatic for its own sake.
+
+- 🎬 **Questions Jesus Asked (series deep-dive)** <The scene/person in 3 seconds -> Jesus asks the question -> it turns from the crowd to YOU> — _planned_ (anchor) SERIES ANCHOR — backs the shorts that have no dedicated flagship
+- 📱 Who Do You Say I Am <Matthew 16:15> — _mp3_ — backed by: Questions Jesus Asked (series deep-dive) (planned) — takes: #WhoDoYouSay · #27 · #24 · #19 (mp3)
+- 📱 Why Are You Afraid <Matthew 8:26> — _cut_ — backed by: Questions Jesus Asked (series deep-dive) (planned) — takes: #02 (CUT v3) · #28 · #20 (mp3)
+- 📱 Do You Want to Be Made Well <John 5:6> — _cut_ — backed by: Questions Jesus Asked (series deep-dive) (planned) — takes: #18 He Never Said Yes (CUT) · +3 mp3
+- 📱 Do You Love Me <John 21:17> — _cut_ — backed by: Questions Jesus Asked (series deep-dive) (planned) — takes: #16 The Fire Jesus Built
+- 📱 What Do You Want Me to Do for You <Mark 10:51> — _planned_ — backed by: Questions Jesus Asked (series deep-dive) (planned)
+- 📱 Why Do You Call Me Lord <Luke 6:46> — _planned_ — backed by: Questions Jesus Asked (series deep-dive) (planned)
+- 📱 Where Is Your Faith <Luke 8:25> — _planned_ — backed by: Questions Jesus Asked (series deep-dive) (planned)
+- 📱 Why Are You Troubled <Luke 24:38> — _planned_ — backed by: Questions Jesus Asked (series deep-dive) (planned)
+- 📱 Have You Not Read <Matthew 19:4> — _planned_ — backed by: Questions Jesus Asked (series deep-dive) (planned)
+- 📱 Could You Not Watch With Me One Hour <Matthew 26:40> — _planned_ — backed by: Questions Jesus Asked (series deep-dive) (planned)
+
+## Jesus in the Old Testament  (jesus-in-ot · Awakeden)
+*Christ foreshadowed and foretold in the Hebrew Scriptures — the OT prophecy or type, the NT fulfilment that confirms it, and why it proves the gospel was God's plan from the beginning. Apologetic in tone, worshipful in landing.*
+> guardrail: ENGAGE the strongest honest version — no proof-texting, no stretched types the NT never names. Every claim must cite a REAL NT fulfilment (the NT writer or Jesus Himself makes the link). Tone: invitation, not victory; the Spirit convicts, evidence clears the ground. Land on the risen Christ and a response to Him, never on 'see, Christianity wins'. KJV verbatim. Smart-default opening applies; for a confrontational or claim-of-deity text, open in the scene rather than forcing a felt problem.
+
+- 🎬 **Jesus in the Old Testament (series deep-dive)** <Name the ache or the doubt, OR drop into the ancient scene -> the OT clue written centuries early -> the NT moment it lands on -> it turns to YOU> — _planned_ (anchor) SERIES ANCHOR — backs the shorts that have no dedicated flagship
+- 🎬 **Isaiah 53 — The Suffering Servant** <Isaiah 53:5> — _captioned_ (flagship) FLAGSHIP · READY TO POST
+- 🎬 **Psalm 22 — The Song From the Cross** <Psalm 22:16> — _mp3_ (flagship) FLAGSHIP · ACTIVE — next: scene plan
+- 🎬 **The Seed of the Woman** <Genesis 3:15> — _planned_ (flagship) FLAGSHIP · the first gospel
+- 🎬 **The Great I AM** <Exodus 3:14> — _planned_ (flagship) FLAGSHIP · burning bush -> Jn 8:58
+- 🎬 **The Sign of Jonah** <Jonah 1:17> — _planned_ (flagship) FLAGSHIP · death & resurrection sign
+- 📱 The Suffering Servant <Isaiah 53:5> — _mp3_ — backed by: Isaiah 53 — The Suffering Servant (captioned) — takes: 3 dims: #30 Smitten · #21 Pronouns · #25 Gaza Road
+- 📱 The Sign of Jonah <Jonah 1:17> — _narration_ — backed by: The Sign of Jonah (planned) — takes: #23 The Prepared Belly (no mp3)
+- 📱 Pierced for Our Transgressions <Zechariah 12:10> — _planned_ — backed by: Jesus in the Old Testament (series deep-dive) (planned)
+- 📱 Born in Bethlehem <Micah 5:2> — _planned_ — backed by: Jesus in the Old Testament (series deep-dive) (planned)
+- 📱 The Crucifixion Foretold <Psalm 22:16> — _mp3_ — backed by: Psalm 22 — The Song From the Cross (mp3) — takes: #04 psalms 22 part 2
+- 📱 The Seed of the Woman <Genesis 3:15> — _planned_ — backed by: The Seed of the Woman (planned)
+- 📱 Born of a Virgin — Immanuel <Isaiah 7:14> — _planned_ — backed by: Jesus in the Old Testament (series deep-dive) (planned)
+- 📱 Thirty Pieces of Silver <Zechariah 11:12> — _planned_ — backed by: Jesus in the Old Testament (series deep-dive) (planned)
+- 📱 The Lamb of God <Exodus 12:13> — _planned_ — backed by: Jesus in the Old Testament (series deep-dive) (planned)
+- 📱 The Great I AM <Exodus 3:14> — _planned_ — backed by: The Great I AM (planned)
+
+## Off-catalog existing work (not greenlit)
+- The Prodigal Son — the kiss that cut off the bargain <Luke 15:20> — cut — #12 (CUT) · +mp3 #09 Father Who Ran, #10 Line Never Said, #11 Confession — multi-dim. NOT a greenlit series.json episode (parables backlog).
+- He Said It Under the Lamps <John 8?> — narration — #05 incomplete (no mp3) — orphan.
+
+## 10. Backlog — channel flagships to greenlight (proposed 'core gospel' buckets)
+A 'Jesus in the Bible' channel needs these core topics; NOT yet in series.json. Proposed as new buckets (core-incarnation / core-teaching / core-parables / core-passion / core-resurrection / core-sending / core-glory):
+- 🎬 LONG: Resurrection Morning — the whole account <Matthew 28 / John 20>  → bucket: core-resurrection
+- 🎬 LONG: The Incarnation — the Word made flesh <John 1:1-14 / Luke 2>  → bucket: core-incarnation
+- 🎬 LONG: The Sermon on the Mount <Matthew 5-7>  → bucket: core-teaching
+- 🎬 LONG: The Last Supper — communion instituted <Luke 22:19>  → bucket: core-passion
+- 🎬 LONG: The Transfiguration <Matthew 17:2>  → bucket: core-glory
+- 🎬 LONG: The Great Commission & the Ascension <Matthew 28:19 / Acts 1:9>  → bucket: core-sending
+- 🎬 LONG: Pentecost — the Spirit poured out <Acts 2>  → bucket: core-sending
+- 🎬 LONG: Abraham & Isaac (the Akedah) <Genesis 22>  → bucket: types-shadows?
+- 📱 short: For God so loved the world <John 3:16>  → bucket: core-incarnation
+- 📱 short: Ye must be born again <John 3:3>  → bucket: core-incarnation
+- 📱 short: The Lord's Prayer <Matthew 6:9>  → bucket: core-teaching
+- 📱 short: The Beatitudes — blessed are <Matthew 5:3>  → bucket: core-teaching
+- 📱 short: Salt and light <Matthew 5:13-16>  → bucket: core-teaching
+- 📱 short: The Good Samaritan <Luke 10:33>  → bucket: core-parables
+- 📱 short: The Parable of the Sower <Matthew 13:3>  → bucket: core-parables
+- 📱 short: The Lost Sheep / Lost Coin <Luke 15:4-10>  → bucket: core-parables
+- 📱 short: The Mustard Seed <Matthew 13:31>  → bucket: core-parables
+- 📱 short: The Baptism of Jesus <Matthew 3:16>  → bucket: core-incarnation
+- 📱 short: This is my body / my blood <Luke 22:19-20>  → bucket: core-passion
+- 📱 short: He is risen — the angel's word <Matthew 28:6>  → bucket: core-resurrection
+- 📱 short: Go ye therefore <Matthew 28:19>  → bucket: core-sending
