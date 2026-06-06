@@ -1,0 +1,228 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: narration
+
+LENS — judge this NARRATION on (be specific, cite the exact line/phrase):
+- Doctrinal soundness: evangelical, biblically faithful; NO invented doctrine, NO contrarian/
+  clickbait/contested readings used to chase freshness.
+- KJV verbatim: every word inside quotation marks must be exact KJV. Flag any altered word.
+- Clarity on first hearing: a listener with zero Bible knowledge must follow it; no clever-but-
+  confusing conceit, no logic trick, no self-contradiction.
+- Grace-anchored conviction: NO fear / gain-loss / self-interest / works framing; the Spirit
+  convicts, the script invites.
+- Freshness = faithful depth: surprising about the TEXT, orthodox in the claim and the landing.
+- One thread spine from hook -> middle -> CTA (no thread-swapping).
+- Landing does NEW work (not a tired generic 'will you trust Him?' close).
+- Hook grips in the first ~5 seconds.
+
+ADDITIONAL CONTEXT / BRIEF:
+Long-form #2 deep-dive (companion to the locked Isaiah 53 film). Thesis: Psalm 22 predictively describes Christ's crucifixion; Jesus quoted its first line from the cross to claim the whole psalm; the psalm turns at v22 to resurrection + worldwide worship. In-engine red-team already fixed a false Dead Sea fragment dating claim (kept the Septuagint). Attack: KJV verbatim, the 'pierced' steel-man fairness, penal-substitution via the forsaking, the v22 resurrection claim, first-hearing clarity, grace landing.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block:
+
+VERDICT: PASS | REVISE | FAIL
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# Psalm 22 — The Song From the Cross  (LONG-FORM #2)
+
+- **Series root:** Jesus in the Old Testament (Awakeden) — long-form deep-dive
+- **Passage:** Psalm 22 (David, ~1000 BC) — with NT fulfilment in Matthew 27, John 19, Hebrews 2
+- **Format:** 16:9, ~6–7 min, reverent documentary pace
+- **Spine:** Deep-Dive Seven-Movement (The Cry → A Death David Never Died → The Wounds Written Early → The Honest Question → He Quoted the Whole Song → The Turn → He Hath Done This)
+- **Voices:** `narrator` throughout · `jesus` for the words Jesus speaks from the cross (Matt 27:46, John 19:30) · KJV verbatim for all quoted Scripture
+- **Doctrine:** predictive prophecy, penal substitution (the forsaking), real resurrection (the v22 turn), worldwide mission, grace-anchored landing — evangelical, non-negotiable
+- **Status:** v2 DRAFT (2026-06-06). KJV verbatim sourced span-by-span via `pipeline/scripture.fetch_kjv`. In-engine red-team DONE (verdict REVISE → all fixes applied): B1 removed a false "Dead Sea fragment older than the New Testament" claim from Movement 4 (kept the Septuagint, which carries the pre-Christian point); N1 "I thirst" two-words fix; tightened Movements 2/3/4 (~30 words). KJV confirmed clean on all 14 spans by the red-team. NEXT: enforced cursor+panel independent review BEFORE lock. NOT yet rendered.
+
+---
+
+## MOVEMENT 1 — THE CRY   *(~40s · cold open)*
+
+**[narrator]**
+At the ninth hour, nailed to a Roman cross and unable to fill his lungs, Jesus of Nazareth gathered his strength and screamed seven words into the dark.
+
+**[jesus — KJV, Matthew 27:46]**
+"My God, my God, why hast thou forsaken me?"
+
+**[narrator]**
+We hear despair. And it is despair. But it is also a quotation. Those exact words had been written down, in the first person, almost a thousand years before that morning — by a king who died old and safe in his own bed.
+
+**[narrator — KJV, Psalm 22:1]**
+"My God, my God, why hast thou forsaken me? why art thou so far from helping me, and from the words of my roaring?"
+
+**[narrator]**
+This is Psalm twenty-two. And the dying Jesus did not reach for it by accident. He was telling everyone within earshot exactly where to look.
+
+---
+
+## MOVEMENT 2 — A DEATH DAVID NEVER DIED   *(~50s · the scandal)*
+
+**[narrator]**
+King David wrote this song. He wrote it in the first person — *I*, *me*, *my* — as if it were happening to his own body. But here is the strangeness: nothing in David's life ever matched it.
+
+He describes a public execution. A man stripped, surrounded, and mocked to death.
+
+**[narrator — KJV, Psalm 22:6-7]**
+"But I am a worm, and no man; a reproach of men, and despised of the people. All they that see me laugh me to scorn: they shoot out the lip, they shake the head…"
+
+**[narrator]**
+And listen to what the mockers actually say:
+
+**[narrator — KJV, Psalm 22:8]**
+"He trusted on the LORD that he would deliver him: let him deliver him, seeing he delighted in him."
+
+**[narrator]**
+David was a soldier and a king who died of old age — never stripped before a jeering crowd, never executed at all. So whose death is he describing — in his own voice — with such certainty that he writes it down as a fact?
+
+---
+
+## MOVEMENT 3 — THE WOUNDS, WRITTEN EARLY   *(~70s · the heart)*
+
+**[narrator]**
+Then the song turns forensic. It stops sounding like poetry and starts sounding like a witness statement from a cross that would not be invented for centuries.
+
+**[narrator — KJV, Psalm 22:14]**
+"I am poured out like water, and all my bones are out of joint…"
+
+**[narrator]**
+The body of a man hung up by his arms — the joints pulling apart under his own weight.
+
+**[narrator — KJV, Psalm 22:15]**
+"…my tongue cleaveth to my jaws; and thou hast brought me into the dust of death."
+
+**[narrator]**
+A killing thirst. On the cross, John records two words: *I thirst.* And then the line that should not exist this early:
+
+**[narrator — KJV, Psalm 22:16]**
+"…they pierced my hands and my feet."
+
+**[narrator]**
+Pierced hands and feet. David lived a thousand years before Rome turned crucifixion into a science; his own people never executed that way. There was no reason on earth for him to picture a man fixed to wood through his hands and feet — yet there it is, in ink, centuries early.
+
+And it keeps going, down to the smallest detail:
+
+**[narrator — KJV, Psalm 22:18]**
+"They part my garments among them, and cast lots upon my vesture."
+
+**[narrator]**
+Soldiers gambling for a dead man's clothes. Turn to the foot of the cross, and John tells you it happened:
+
+**[narrator — KJV, John 19:24]**
+"…that the scripture might be fulfilled, which saith, They parted my raiment among them, and for my vesture they did cast lots."
+
+**[narrator]**
+The soldiers throwing dice had never read Psalm twenty-two. They were acting it out anyway.
+
+---
+
+## MOVEMENT 4 — THE HONEST QUESTION   *(~65s)*
+
+**[narrator]**
+Now — an honest objection, and it deserves a straight answer, not a sales pitch.
+
+A careful reader will say: this is poetry. David is a man who reached for vivid images — "dogs," a "lion" — when his enemies pressed him. And on that one word, *pierced*, there is a genuine scholarly dispute: the traditional Hebrew text can be read as "like a lion at my hands and feet" rather than "they pierced." That is a real question, honestly raised.
+
+So concede it cleanly. Take *pierced* off the table entirely, just for a moment.
+
+You are still left with a man stripped and mocked to death, his bones out of joint, dying of thirst, his clothing gambled away by the people who killed him — written first-person, by a king who suffered none of it. One disputed word does not carry that. The convergence does.
+
+And on the word itself: the Greek Old Testament — translated by Jewish scholars almost two centuries *before* Jesus was born — already read it "they dug," or "pierced." This is not a Christian edit smuggled in after the fact. The reading was there, in Jewish hands, centuries before there was a cross to defend.
+
+David is describing a death that is not his own.
+
+---
+
+## MOVEMENT 5 — HE QUOTED THE WHOLE SONG   *(~55s · fulfilment)*
+
+**[narrator]**
+Which brings us back to the cross, and to why those seven screamed words matter so much.
+
+When a first-century Jew quoted the opening line of a psalm, he was not quoting a line. He was naming the whole song. Reaching for the first verse pulled the entire psalm into the room.
+
+So when Jesus cried —
+
+**[jesus — KJV, Matthew 27:46]**
+"My God, my God, why hast thou forsaken me?"
+
+**[narrator]**
+— he was not merely voicing his pain. He was placing himself as the *I* of Psalm twenty-two. Every line. He was claiming the pierced hands as his own hands. He was claiming the gambled clothes as his own clothes — even as the soldiers, a few feet below him, divided them up exactly as verse eighteen said they would.
+
+He took the whole song onto himself, out loud, in front of witnesses. He was telling us: *this one is about me.*
+
+---
+
+## MOVEMENT 6 — THE TURN   *(~55s)*
+
+**[narrator]**
+But most people stop reading Psalm twenty-two at the cross. And if you stop there, you miss the most important thing about it.
+
+The song does not end in a grave. Halfway through, it turns — violently, gloriously — from death to life. The same voice that cried "forsaken" suddenly stands up in the middle of a worshipping crowd:
+
+**[narrator — KJV, Psalm 22:22]**
+"I will declare thy name unto my brethren: in the midst of the congregation will I praise thee."
+
+**[narrator]**
+A dead man does not declare anything. The sufferer is *alive* again, on his feet, praising — because God did not leave him in the dust:
+
+**[narrator — KJV, Psalm 22:24]**
+"…neither hath he hid his face from him; but when he cried unto him, he heard."
+
+**[narrator]**
+And then the song throws its arms open to the entire world:
+
+**[narrator — KJV, Psalm 22:27]**
+"All the ends of the world shall remember and turn unto the LORD: and all the kindreds of the nations shall worship before thee."
+
+**[narrator]**
+The psalm that opens with one forsaken man closes with the nations streaming home. The cross was never the end of the song. It was the hinge.
+
+---
+
+## MOVEMENT 7 — HE HATH DONE THIS   *(~50s · conviction + landing)*
+
+**[narrator]**
+Look at the very last line David writes. After the wounds, after the turn, the song ends on three words about a finished work:
+
+**[narrator — KJV, Psalm 22:31]**
+"…he hath done this."
+
+**[narrator]**
+A thousand years later, on the cross, the same finished work gets the same verdict. Jesus receives the vinegar, and says one word:
+
+**[jesus — KJV, John 19:30]**
+"It is finished."
+
+**[narrator]**
+Done. *He hath done this.*
+
+So hold the two ends of the song together. He cried "why hast thou forsaken me" — the forsaking was real — so that you would never have to. The hands that were pierced were spread out wide enough to reach the ends of the world. And the ends of the world is you: every kindred, every nation, anyone far off.
+
+You do not have to make yourself worth saving before you come. That is the whole point of Psalm twenty-two — it ends, not with what you must do, but with what *he hath done.*
+
+The song reaches all the way to where you are sitting.
+
+Will you turn, and join the congregation that praises him?
+
+---
+
+## DEPTH & SOURCING  *(not spoken — faithfulness ledger)*
+
+- **All quoted Scripture is KJV verbatim in its WORDS** — every word inside quotation marks is exact KJV, fetched span-by-span via `pipeline/scripture.fetch_kjv` (2026-06-06). Quoting convention matches the Isaiah 53 long-form: a quote may be an EXCERPT beginning mid-verse as a self-contained clause (marked with a leading ellipsis …) and clipped before the verse ends (trailing ellipsis …); **NO words are ever omitted or altered *inside* a quote.** Quotes: Psalm 22:1, 6–8, 14–16, 18, 22, 24, 27, 31; Matthew 27:46; John 19:24, 19:30.
+- **Predictive precision is the argument, and it is real, not stretched.** The convergence of details — stripped/mocked (vv6–8), bones out of joint (v14), killing thirst (v15), pierced hands and feet (v16), garments parted and gambled for (v18) — describes a Roman crucifixion written ~1000 years before Rome practised it, by a king who died peacefully. Each detail is presented as the text gives it; no detail is invented.
+- **The "pierced" textual question is steel-manned, not hidden (Movement 4).** We CONCEDE the genuine Masoretic variant (כָּאֲרִי "like a lion" vs כָּאֲרוּ "they pierced/dug"), and concede David's vivid metaphorical idiom — then show the case never rested on that one word (the cumulative match holds without it), and that the "pierced/dug" reading predates Christianity via the **Septuagint** (Jewish, ~2nd c. BC, ὤρυξαν "they dug"). **NOTE (red-team B1, fixed 2026-06-06):** the draft also cited a Naḥal Ḥever Dead Sea Psalms fragment as "older than the New Testament" — this is FALSE (5/6HevPs is paleographically dated ~50–68 CE, post-crucifixion, and its reading is disputed by faded ink). The fragment claim was REMOVED from the spoken script; the Septuagint alone carries the pre-Christian point. (Scholarship summarised honestly; the spoken line avoids overclaiming certainty.)
+- **"Quoting the first line invokes the whole psalm" (Movement 5)** is the standard, well-attested first-century Jewish convention of naming a psalm by its incipit — not a novel claim. Jesus' cry (Matt 27:46) therefore lays claim to the entire psalm, including vv16,18 being fulfilled around him.
+- **Resurrection (Movement 6) is drawn from the text's own pivot** at v22 (the forsaken sufferer of vv1–21 stands alive "in the midst of the congregation" praising in vv22–31) — a real, structural turn in the psalm, confirmed by **Hebrews 2:12**, which places Psalm 22:22 in the mouth of the risen Christ ("I will declare thy name unto my brethren"). Kept in the ledger rather than stacked in the spoken close. Note: Heb 2:12 follows the Septuagint ("church… sing praise") where the psalm reads "congregation… praise thee"; we quote the KJV **psalm** verbatim in the script.
+- **"He hath done this" → "It is finished" (Movement 7)** links Psalm 22:31's closing verdict to John 19:30 (Greek *tetelestai*, "it is finished / accomplished / done"). Presented as a resonance the NT itself invites (John 19:24, 19:28 explicitly cite Psalm 22 as being fulfilled at the cross), not as a Hebrew/Greek pun forced on the reader.
+- **Penal substitution** is carried by the forsaking: the sinless Son bears the God-forsakenness our sin earned ("the forsaking was real — so that you would never have to"), grounded in the psalm's own cry and the cross that quotes it. No "divine child abuse" framing.
+- **Grace-anchored landing:** no gain/loss, no fear-selling, no manufactured pressure — "you do not have to make yourself worth saving before you come… not with what you must do, but with what he hath done."
+
+## VOICE PLAN
+- `narrator` — main voice (reverent, measured, documentary)
+- `jesus` — ONLY the two lines Jesus speaks from the cross: Matthew 27:46 ("My God, my God, why hast thou forsaken me?") and John 19:30 ("It is finished") — the deliberate device is that the SAME words are David's (Ps 22:1) in the narrator voice and Jesus' (Matt 27:46) in the jesus voice, a thousand years apart
+- All other KJV quotes stay in narrator voice (attribution frames in narrator voice, per the locked rule)
+----- ARTIFACT END -----

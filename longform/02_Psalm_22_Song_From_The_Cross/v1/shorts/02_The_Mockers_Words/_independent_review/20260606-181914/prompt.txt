@@ -1,0 +1,100 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: narration
+
+LENS — judge this NARRATION on (be specific, cite the exact line/phrase):
+- Doctrinal soundness: evangelical, biblically faithful; NO invented doctrine, NO contrarian/
+  clickbait/contested readings used to chase freshness.
+- KJV verbatim: every word inside quotation marks must be exact KJV. Flag any altered word.
+- Clarity on first hearing: a listener with zero Bible knowledge must follow it; no clever-but-
+  confusing conceit, no logic trick, no self-contradiction.
+- Grace-anchored conviction: NO fear / gain-loss / self-interest / works framing; the Spirit
+  convicts, the script invites.
+- Freshness = faithful depth: surprising about the TEXT, orthodox in the claim and the landing.
+- One thread spine from hook -> middle -> CTA (no thread-swapping).
+- Landing does NEW work (not a tired generic 'will you trust Him?' close).
+- Hook grips in the first ~5 seconds.
+
+ADDITIONAL CONTEXT / BRIEF:
+60s gospel SHORT #2 of the Psalm 22 series (distilled from the locked Psalm 22 long). ACCURACY #1. Thesis: David wrote the mockers' GESTURE (Ps 22:7 'shake the head') + TAUNT (22:8 'let him deliver him') ~1000yrs early; at the cross the crowd did both — Matt 27:39 'wagging their heads' + Matt 27:43 'let him deliver him now'. CRITICAL GUARD: Matthew does NOT say 'that the scripture might be fulfilled' here, so the short claims only the VERBAL/GESTURAL MATCH, never a fulfilment-citation. Landing reframes Matt 27:42 'himself he cannot save' as VOLUNTARY substitution (He WOULD not come down — had the power, Matt 26:53 — because staying saved you). In-engine red-team already verdict LOCK (KJV verbatim verified, citation-guard honored). Verify: KJV verbatim (Ps 22:7-8 cross-verse span, Matt 27:43/42/39), the no-citation-overclaim, the landing doctrine, grace-anchored CTA, first-hearing clarity, ~60s.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block:
+
+VERDICT: PASS | REVISE | FAIL
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# The Mockers' Own Words — Psalm 22 short #2  (distilled from the Psalm 22 long)
+
+- **Series:** `jesus-in-ot` (Awakeden) — short. Psalm 22 short-series, beat #2 (🟢 airtight cross-ref).
+- **Backed by (the deep study):** `longform/02_Psalm_22_Song_From_The_Cross` — the locked Psalm 22 long-form.
+- **Beat distilled:** David wrote the mockers' GESTURE (22:7 "shake the head") and their TAUNT (22:8 "let him
+  deliver him") ~1000 yrs early; at the cross the crowd did both — "wagging their heads" (Matt 27:39) and
+  sneering "let him deliver him now" (Matt 27:43). Undisputed text on both sides (no variant).
+- **ACCURACY GUARD:** Matthew does NOT say "that the scripture might be fulfilled" here (unlike John 19:24 for
+  the garments). So the claim is the striking VERBAL + GESTURAL MATCH, never a "fulfilled-citation." The
+  freshness: the mockers, trying to discredit Him, unknowingly recited the prophecy that marks Him as the One.
+- **Format:** 9:16, ~60s, Gospel Five-Beat (Hook → Point → Proof → Conviction → Landing), CTA-to-Jesus.
+- **Doctrine:** predictive correspondence (undisputed); voluntary substitution landing (He WOULDN'T save Himself,
+  not "couldn't") — grace-anchored.
+- **Status:** v1 DRAFT (2026-06-06). KJV verified span-by-span (Ps 22:7-8; Matt 27:43, 27:42). Awaiting the FULL
+  gauntlet: in-engine red-team → 5-CLI panel → fresh red-team on the FINAL text BEFORE lock. NOT yet rendered.
+
+---
+
+**[narrator]**
+A thousand years before the cross, David wrote down the words Jesus' enemies would hurl at Him — and the way they'd shake their heads doing it.
+
+**[narrator]**
+Psalm twenty-two. David, describing a mocked and dying man, even records what his tormentors would say:
+
+**[narrator — KJV, Psalm 22:7-8]**
+"…they shake the head saying, He trusted on the LORD that he would deliver him: let him deliver him…"
+
+**[narrator]**
+A thousand years later, at the cross, Matthew describes the crowd "wagging their heads" and sneering:
+
+**[narrator — KJV, Matthew 27:43]**
+"He trusted in God; let him deliver him now…"
+
+**[narrator]**
+Almost word for word. The mockers were reciting a script they didn't know existed.
+
+**[narrator]**
+They dared God to rescue Him — and God didn't. Not because He lacked the power, but because rescuing Himself would have meant losing you.
+
+**[narrator]**
+"He saved others," they jeered, "himself he cannot save." They were right: He wouldn't come down — because He was saving you. That's Jesus. Come to Him.
+
+---
+
+## DEPTH & SOURCING  *(not spoken)*
+- **KJV verbatim** (self-verified via `pipeline/scripture.fetch_kjv`, 2026-06-06):
+  - Ps 22:7-8 excerpt: KJV 22:7 ends "…they shake the head saying," and 22:8 opens "He trusted on the LORD
+    that he would deliver him: let him deliver him…" — the quoted span is continuous verbatim across the verse
+    boundary (leading + trailing ellipsis mark the excerpt; the comma after "head" is presentation).
+  - Matt 27:43 excerpt: "He trusted in God; let him deliver him now…" — exact KJV (trailing ellipsis clips
+    "if he will have him").
+  - Matt 27:42 landing: "He saved others" + "himself he cannot save" — both exact KJV (the verse is "He saved
+    others; himself he cannot save…"); the attribution "they jeered" splits a continuous quote, no words altered.
+  - "wagging their heads" — exact KJV phrase from Matt 27:39, quoted.
+- **The correspondence is undisputed** — no textual variant on either side (unlike the "pierced" debate). Two
+  independent matches: the GESTURE (shake/wag the head) AND the TAUNT ("let him deliver him").
+- **NOT a fulfilment-citation:** Matthew does not write "that the scripture might be fulfilled" here, so the
+  short claims only the verbal/gestural MATCH ("almost word for word… a script they didn't know existed"),
+  never that Matthew cites the psalm. Honest about what the text does and doesn't say.
+- **Landing doctrine:** "himself he cannot save" is the mockers' taunt; the gospel reframe is that He WOULD not
+  come down (He had the power — Matt 26:53), because staying was how He saved others. Voluntary substitution,
+  not impotence. Grace-anchored: no fear/gain-loss; "He was saving you. Come to Him."
+- **Funnel:** distilled from the locked Psalm 22 long; beat #2 of the Psalm 22 short-series (🟢 airtight).
+
+## VOICE PLAN
+- `narrator` for v1 (all quoted Scripture narrator-voiced per the locked rule). **Multi-voice OPTION:** a
+  distinct "mockers" voice on the Matt 27:43 taunt could heighten the drama (the scene has speakers — cf. the
+  prefer-dialogue rule); flagged for the user. Kept narrator-only for the first accuracy pass.
+----- ARTIFACT END -----

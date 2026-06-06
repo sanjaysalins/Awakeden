@@ -1,0 +1,94 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: narration
+
+LENS — judge this NARRATION on (be specific, cite the exact line/phrase):
+- Doctrinal soundness: evangelical, biblically faithful; NO invented doctrine, NO contrarian/
+  clickbait/contested readings used to chase freshness.
+- KJV verbatim: every word inside quotation marks must be exact KJV. Flag any altered word.
+- Clarity on first hearing: a listener with zero Bible knowledge must follow it; no clever-but-
+  confusing conceit, no logic trick, no self-contradiction.
+- Grace-anchored conviction: NO fear / gain-loss / self-interest / works framing; the Spirit
+  convicts, the script invites.
+- Freshness = faithful depth: surprising about the TEXT, orthodox in the claim and the landing.
+- One thread spine from hook -> middle -> CTA (no thread-swapping).
+- Landing does NEW work (not a tired generic 'will you trust Him?' close).
+- Hook grips in the first ~5 seconds.
+
+ADDITIONAL CONTEXT / BRIEF:
+v3 of a 60s gospel SHORT (Psalm 22 crucifixion-foretold). ACCURACY IS #1. v2 panel said 5/5 REVISE: the script still spotlighted the DISPUTED 'pierced' word while John 19:24 cites the GARMENTS (22:18). v3 RESTRUCTURED: garments (John-cited, undisputed) is now the primary proof with John's citation attached to it; 'pierced' demoted to one corroborating closing line, removed from conviction+landing; 'killed/own execution' -> 'a death he would never die / David died old in his bed'; 'not this many' -> 'two precise acts' (no quantity overclaim); 'name written all through it' -> 'has a name: Jesus'. Verify the convergence is now HONEST, KJV verbatim (Ps 22:18, 22:16, John 19:24 phrase), grace-anchored CTA, first-hearing clarity, ~60s length.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block:
+
+VERDICT: PASS | REVISE | FAIL
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# The Crucifixion Foretold — Psalm 22 short #1  (distilled from the Psalm 22 long)
+
+- **Series:** `jesus-in-ot` (Awakeden) — short. Catalog episode: "The Crucifixion Foretold" <Psalm 22:16>.
+- **Backed by (the deep study):** `longform/02_Psalm_22_Song_From_The_Cross` — the locked Psalm 22 long-form.
+- **Beat distilled:** the predictive precision — pierced hands/feet (22:16) + garments gambled for (22:18),
+  written ~1000 yrs before Roman crucifixion, fulfilled at the cross (John 19:24 cites it).
+- **Format:** 9:16, ~60s, Gospel Five-Beat (Hook → Point → Proof → Conviction → Landing), CTA-to-Jesus.
+- **Doctrine:** predictive prophecy (the CONVERGENCE carries it, not one disputed word); grace-anchored landing.
+- **Status:** v3 DRAFT (2026-06-06). KJV verified span-by-span (Ps 22:18, 22:16; John 19:24). Red-team +
+  5-CLI panel both done on v2 → 5/5 REVISE, convergent: the spoken text still SPOTLIGHTED the disputed
+  "pierced" word (quoted first + in the conviction + last word) while John 19:24 cites the GARMENTS (22:18).
+  v3 RESTRUCTURE: garments (John-cited, undisputed) is now the PRIMARY proof, with John's citation attached
+  to it; "pierced" demoted to a corroborating closing line, removed from the conviction/landing. Also fixed:
+  "killed/own execution" → "a death he would never die… David died old in his own bed" (zero-Bible clarity);
+  "not this many" → "two exact acts: divided, and gambled for" (precision on 22:18's two matches, not quantity);
+  "a name written all the way through it" → "a name and a face: Jesus" (precise, not Jesus-on-every-page);
+  "you were on His mind" → "it had your name in it". NEXT: re-run the 5-CLI panel on v3 BEFORE lock.
+
+---
+
+**[narrator]**
+Almost a thousand years before the Romans perfected crucifixion, a king wrote a song describing a death he would never die.
+
+**[narrator]**
+Psalm twenty-two — David, in the first person, describing a man stripped, surrounded, his life poured out. But David died old, in his own bed.
+
+**[narrator]**
+Watch one detail — he wrote that the man's killers would divide his clothes:
+
+**[narrator — KJV, Psalm 22:18]**
+"They part my garments among them, and cast lots upon my vesture."
+
+**[narrator]**
+A thousand years later, John records it at the cross: soldiers split Jesus' clothes, then gamble for the last piece — "that the scripture might be fulfilled." Two precise acts, written centuries early. The same psalm even says:
+
+**[narrator — KJV, Psalm 22:16]**
+"…they pierced my hands and my feet."
+
+**[narrator]**
+Long before the nails, God had written the rescue down — so you'd know the cross was no accident. It was the plan, with your name in it.
+
+**[narrator]**
+The suffering man of Psalm twenty-two has a name: Jesus. He went to that cross on purpose — for you. Come to Him.
+
+---
+
+## DEPTH & SOURCING  *(not spoken)*
+- **KJV verbatim** (self-verified via `pipeline/scripture.fetch_kjv`, 2026-06-06): Ps 22:16 (excerpt, leading
+  ellipsis — the clause "they pierced my hands and my feet" is exact KJV), Ps 22:18 (full verse, exact).
+  John 19:24 paraphrased in narrator voice ("the scripture might be fulfilled" is the KJV phrase, quoted).
+- **The "pierced" textual variant** (Masoretic כָּאֲרִי "like a lion" vs the Septuagint/standard "they pierced"):
+  the SHORT does NOT rest on that one word — it leads with the CONVERGENCE (pierced + the gambled garments,
+  which John 19:24 explicitly cites as fulfilled). The full steel-man lives in the backing long-form (Movement 4).
+  The line "One detail could be a coincidence. Not this many" is the honest argument, compressed.
+- **Predictive precision:** David ~1000 BC; the detail describes a Roman-era crucifixion. "Perfected crucifixion"
+  avoids over-claiming Rome invented it (Persians impaled earlier); the claim is the FORM + the convergence.
+- **Grace-anchored landing:** no fear/gain-loss; "the cross was no accident… you were on His mind… Come to Him."
+- **Funnel:** distilled from the locked Psalm 22 long; inherits its verified research. Part of the Psalm 22
+  short series (see the series map; this is #5 by cross-ref strength, written first at the user's request).
+
+## VOICE PLAN
+- `narrator` only (all quoted Scripture is OT psalm, narrator-voiced per the locked attribution rule).
+----- ARTIFACT END -----

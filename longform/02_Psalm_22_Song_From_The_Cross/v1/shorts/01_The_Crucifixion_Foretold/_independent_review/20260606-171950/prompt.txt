@@ -1,0 +1,98 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: narration
+
+LENS — judge this NARRATION on (be specific, cite the exact line/phrase):
+- Doctrinal soundness: evangelical, biblically faithful; NO invented doctrine, NO contrarian/
+  clickbait/contested readings used to chase freshness.
+- KJV verbatim: every word inside quotation marks must be exact KJV. Flag any altered word.
+- Clarity on first hearing: a listener with zero Bible knowledge must follow it; no clever-but-
+  confusing conceit, no logic trick, no self-contradiction.
+- Grace-anchored conviction: NO fear / gain-loss / self-interest / works framing; the Spirit
+  convicts, the script invites.
+- Freshness = faithful depth: surprising about the TEXT, orthodox in the claim and the landing.
+- One thread spine from hook -> middle -> CTA (no thread-swapping).
+- Landing does NEW work (not a tired generic 'will you trust Him?' close).
+- Hook grips in the first ~5 seconds.
+
+ADDITIONAL CONTEXT / BRIEF:
+v4 (final) of a 60s gospel SHORT. ACCURACY #1. Two prior panels (v2 5/5 REVISE, v3 2 PASS/3 REVISE) converged: the disputed 'pierced' (Ps 22:16) word kept taking the strongest proof position. v4 DECISIVELY REMOVES the pierced quote entirely — the proof now rests 100% on the UNDISPUTED garments detail (Ps 22:18), which John 19:24 EXPLICITLY cites as fulfilled. Also fixed: David-pronoun clarity ('it never happened to him; he died an old man'), named the two acts (divide + gamble = the verse's own parallelism), dropped 'with your name in it'/'in his own bed'/'perfected crucifixion' (now 'a Roman cross'), strengthened landing ('walked to it on purpose'), synced the DEPTH ledger. Verify: KJV verbatim (Ps 22:18 + John phrase), the garments-only proof is honest + clear on first hearing, grace-anchored CTA, ~60s.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block:
+
+VERDICT: PASS | REVISE | FAIL
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# The Crucifixion Foretold — Psalm 22 short #1  (distilled from the Psalm 22 long)
+
+- **Series:** `jesus-in-ot` (Awakeden) — short. Catalog: "The Crucifixion Foretold" (this short's spine = the
+  GARMENTS prophecy, Psalm 22:18 → John 19:24 — the 🟢 airtight cross-ref. The pierced/22:16 line was REMOVED;
+  it needs the textual-variant steel-man, reserved for the long-form / a separate treatment).
+- **Backed by (the deep study):** `longform/02_Psalm_22_Song_From_The_Cross` — the locked Psalm 22 long-form.
+- **Beat distilled:** the predictive precision of Psalm 22:18 — the dying man's executioners would BOTH divide
+  his clothes AND cast lots — fulfilled to the letter at the cross, which John 19:24 explicitly cites.
+- **Format:** 9:16, ~60s, Gospel Five-Beat (Hook → Point → Proof → Conviction → Landing), CTA-to-Jesus.
+- **Doctrine:** predictive prophecy resting 100% on the UNDISPUTED, NT-cited garments detail (no contested word);
+  grace-anchored landing.
+- **Status:** v4 DRAFT (2026-06-06). KJV verified span-by-span (Ps 22:18; John 19:24). Two 5-CLI panels run:
+  v2 → 5/5 REVISE (still spotlighted the disputed "pierced"); v3 → 2 PASS / 3 REVISE (pierced still took the
+  strongest end-of-proof position). v4 IMPLEMENTS the panel's convergent direction: **the "pierced" (22:16)
+  quote is REMOVED entirely** — the proof now rests solely on the undisputed garments (22:18) + John 19:24's
+  explicit citation; named the two acts ("divide… and gamble"); dropped "with your name in it", "in his own
+  bed", "perfected crucifixion" → "a Roman cross"; "name written all through it" → "a name: Jesus" (precise);
+  the David-pronoun confusion ("it never happened to him; he lived to old age. He was describing someone else").
+  NEXT: re-run the 5-CLI panel on v4 BEFORE lock.
+
+---
+
+**[narrator]**
+A thousand years before a Roman cross, a king wrote a song describing a death he would never die.
+
+**[narrator]**
+Psalm twenty-two. David wrote it in the first person — but it never happened to him; he died an old man. He was describing someone else: stripped, surrounded, his life poured out.
+
+**[narrator]**
+Watch one line — he wrote that the dying man's killers would both divide his clothes and gamble for them:
+
+**[narrator — KJV, Psalm 22:18]**
+"They part my garments among them, and cast lots upon my vesture."
+
+**[narrator]**
+A thousand years later, John watched it at the cross: soldiers split Jesus' clothes, then threw dice for the rest — "that the scripture might be fulfilled." Both, to the letter.
+
+**[narrator]**
+A thousand years early, God had it written down — so when it happened, you'd know the cross was no accident. It was the plan.
+
+**[narrator]**
+The suffering man of Psalm twenty-two has a name: Jesus. He didn't stumble onto that cross — He walked to it on purpose, for you. Come to Him.
+
+---
+
+## DEPTH & SOURCING  *(not spoken — synced to v4)*
+- **KJV verbatim** (self-verified via `pipeline/scripture.fetch_kjv`, 2026-06-06): Ps 22:18 (full verse, exact);
+  John 19:24's phrase "that the scripture might be fulfilled" quoted exactly (the surrounding line is narrator
+  paraphrase). These are the ONLY quoted spans — the proof rests entirely on them.
+- **Why no "pierced" (22:16):** the Masoretic text reads כָּאֲרִי ("like a lion") vs the Septuagint/standard
+  "they pierced" — a genuine textual dispute. Two 5-CLI panels showed that even a demoted pierced line still
+  carried rhetorical weight and re-opened the dispute. So for a 60s short where accuracy is #1, **it was removed**:
+  the case stands on the UNDISPUTED garments detail, which John 19:24 EXPLICITLY cites as fulfilled. The full
+  pierced steel-man lives in the backing long-form (Movement 4); a dedicated pierced short would carry the variant.
+- **The convergence is honest:** Ps 22:18 itself names TWO acts — "part my garments" AND "cast lots upon my
+  vesture" — and John 19:24 records the soldiers doing both (dividing the clothes, casting lots for the seamless
+  coat). "Two acts… both, to the letter" reflects the verse's own parallelism, not an inflated count.
+- **Accuracy of framing:** "a thousand years before a Roman cross" (David ~1000 BC; avoids the disputed
+  "invented/perfected crucifixion" claim). "David… lived to old age" (1 Kings 2:10) — the first-person sufferer
+  is explicitly NOT David. No claim the listener's literal name is "in" the text.
+- **Grace-anchored landing:** no fear/gain-loss; "He walked to it on purpose, for you. Come to Him."
+- **Funnel:** distilled from the locked Psalm 22 long; inherits its verified research. This is the 🟢 airtight
+  garments short (#1 by cross-ref strength) from the Psalm 22 short-series map.
+
+## VOICE PLAN
+- `narrator` only (all quoted Scripture is OT psalm, narrator-voiced per the locked attribution rule).
+----- ARTIFACT END -----

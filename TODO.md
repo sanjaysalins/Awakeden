@@ -52,6 +52,7 @@ Keep this current; it complements `STATE.md` (status) and `RESUME.md` (what to d
 - [ ] Distribution: posting cadence + per-clip upload kit wired to `0 Christianity/PRODUCTION & POSTING TRACKER.md`.
 
 ## 🛠 Engine improvements
+- [ ] **Audit `data/kjv_cache.json` for punctuation fidelity** — the bible-api source dropped the comma in Ps 22:7 ("shake the head**,** saying"); the authoritative 1769 KJV has it. The 5-CLI panel caught it; `fetch_kjv` alone is NOT sufficient for strict punctuation. Cross-check the cache against a canonical KJV (biblehub/Cambridge 1769) or add a punctuation-trusted source.
 - [ ] Make `_soundstage_cinematic.py` episode-generic (currently hand-authored cues).
 - [ ] Make `_animate_directional.py` / `_redo_stills.py` / `_reanimate_one.py` episode-generic.
 - [ ] Auto status-discovery from disk for the tracker (replace the manual `ST` overlay).

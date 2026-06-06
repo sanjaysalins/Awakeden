@@ -1,0 +1,92 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: narration
+
+LENS — judge this NARRATION on (be specific, cite the exact line/phrase):
+- Doctrinal soundness: evangelical, biblically faithful; NO invented doctrine, NO contrarian/
+  clickbait/contested readings used to chase freshness.
+- KJV verbatim: every word inside quotation marks must be exact KJV. Flag any altered word.
+- Clarity on first hearing: a listener with zero Bible knowledge must follow it; no clever-but-
+  confusing conceit, no logic trick, no self-contradiction.
+- Grace-anchored conviction: NO fear / gain-loss / self-interest / works framing; the Spirit
+  convicts, the script invites.
+- Freshness = faithful depth: surprising about the TEXT, orthodox in the claim and the landing.
+- One thread spine from hook -> middle -> CTA (no thread-swapping).
+- Landing does NEW work (not a tired generic 'will you trust Him?' close).
+- Hook grips in the first ~5 seconds.
+
+ADDITIONAL CONTEXT / BRIEF:
+60s gospel SHORT distilled from the locked Psalm 22 long-form. Thesis: Psalm 22 predictively describes the crucifixion (pierced hands/feet 22:16 + garments gambled 22:18, fulfilled John 19:24). ACCURACY IS THE #1 PRIORITY — attack any KJV imprecision or doctrinal overreach hardest. The 'pierced' textual variant (Masoretic 'like a lion') is steel-manned in the backing long; this short deliberately rests the proof on the undisputed CONVERGENCE (garments + John's explicit citation), not the disputed word. In-engine red-team already fixed that framing + trimmed length. Verify: KJV verbatim, the convergence honesty, grace-anchored CTA-to-Jesus, first-hearing clarity.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block:
+
+VERDICT: PASS | REVISE | FAIL
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# The Crucifixion Foretold — Psalm 22 short #1  (distilled from the Psalm 22 long)
+
+- **Series:** `jesus-in-ot` (Awakeden) — short. Catalog episode: "The Crucifixion Foretold" <Psalm 22:16>.
+- **Backed by (the deep study):** `longform/02_Psalm_22_Song_From_The_Cross` — the locked Psalm 22 long-form.
+- **Beat distilled:** the predictive precision — pierced hands/feet (22:16) + garments gambled for (22:18),
+  written ~1000 yrs before Roman crucifixion, fulfilled at the cross (John 19:24 cites it).
+- **Format:** 9:16, ~60s, Gospel Five-Beat (Hook → Point → Proof → Conviction → Landing), CTA-to-Jesus.
+- **Doctrine:** predictive prophecy (the CONVERGENCE carries it, not one disputed word); grace-anchored landing.
+- **Status:** v2 DRAFT (2026-06-06). KJV verified span-by-span (Ps 22:16, 22:18; John 19:24). In-engine
+  red-team DONE (REVISE → fixed): B2 shifted the "no way of inventing" weight OFF the disputed "pierced"
+  word onto the undisputed convergence (garments + John 19:24 cite) — "Listen to how he describes it"; B1
+  trimmed 178→~140 words. KJV confirmed verbatim by the red-team. NEXT: enforced 5-CLI panel BEFORE lock.
+
+---
+
+**[narrator]**
+Almost a thousand years before the Romans perfected crucifixion, a man described his own execution — in the first person.
+
+**[narrator]**
+This is Psalm twenty-two — David, writing as though it were his own body: a man stripped, surrounded, and killed.
+
+**[narrator]**
+Listen to how he describes it:
+
+**[narrator — KJV, Psalm 22:16]**
+"…they pierced my hands and my feet."
+
+**[narrator]**
+And then:
+
+**[narrator — KJV, Psalm 22:18]**
+"They part my garments among them, and cast lots upon my vesture."
+
+**[narrator]**
+A thousand years later, soldiers gambled for a dying man's clothes at the foot of a cross — and John says it happened so "the scripture might be fulfilled." One detail could be coincidence. Not this many, written this early.
+
+**[narrator]**
+That is the point: long before the nails, God wrote the rescue down — so you'd know the cross was no accident. Those pierced hands were planned. And you were on His mind.
+
+**[narrator]**
+Psalm twenty-two has a name written all the way through it. Jesus — pierced for you, a thousand years on schedule. Come to Him.
+
+---
+
+## DEPTH & SOURCING  *(not spoken)*
+- **KJV verbatim** (self-verified via `pipeline/scripture.fetch_kjv`, 2026-06-06): Ps 22:16 (excerpt, leading
+  ellipsis — the clause "they pierced my hands and my feet" is exact KJV), Ps 22:18 (full verse, exact).
+  John 19:24 paraphrased in narrator voice ("the scripture might be fulfilled" is the KJV phrase, quoted).
+- **The "pierced" textual variant** (Masoretic כָּאֲרִי "like a lion" vs the Septuagint/standard "they pierced"):
+  the SHORT does NOT rest on that one word — it leads with the CONVERGENCE (pierced + the gambled garments,
+  which John 19:24 explicitly cites as fulfilled). The full steel-man lives in the backing long-form (Movement 4).
+  The line "One detail could be a coincidence. Not this many" is the honest argument, compressed.
+- **Predictive precision:** David ~1000 BC; the detail describes a Roman-era crucifixion. "Perfected crucifixion"
+  avoids over-claiming Rome invented it (Persians impaled earlier); the claim is the FORM + the convergence.
+- **Grace-anchored landing:** no fear/gain-loss; "the cross was no accident… you were on His mind… Come to Him."
+- **Funnel:** distilled from the locked Psalm 22 long; inherits its verified research. Part of the Psalm 22
+  short series (see the series map; this is #5 by cross-ref strength, written first at the user's request).
+
+## VOICE PLAN
+- `narrator` only (all quoted Scripture is OT psalm, narrator-voiced per the locked attribution rule).
+----- ARTIFACT END -----

@@ -1,0 +1,29 @@
+# Independent review — grok (OK, 90s)
+
+**Findings (adversarial, line-specific):**
+
+- **Hook fails the "grips in first ~5 seconds" test.** The cold open begins with scene-setting narration: "At the ninth hour, nailed to a Roman cross and unable to fill his lungs, Jesus of Nazareth gathered his strength and screamed seven words into the dark." The actual strangeness (a pre-Christian king describing this death in first person) does not land until two paragraphs later: "by a king who died old and safe in his own bed." For a listener with zero prior knowledge, the first 5–8 seconds are just "Jesus on the cross said something sad." The quotation itself is strong, but the hook is delayed by descriptive wind-up.
+
+- **Resurrection claim (Movement 6) overreaches on first-hearing clarity and textual grounding.** The script asserts as narrative fact: "The sufferer is *alive* again, on his feet, praising — because God did not leave him in the dust." Then: "A dead man does not declare anything." The psalm text moves from "brought me into the dust of death" (v15) to praise language in v22 without narrating an explicit death-and-resurrection sequence. This is a Christian typological reading (bolstered by Heb 2:12 in the ledger but not in the spoken script). On first hearing, the listener is told the psalm itself shows a dead man standing up praising, without the bridge that Jesus' incipit claim (Movement 5) incorporates the turn, or that the NT later reads it that way. The "most people stop at the cross" setup is good, but the jump to "alive again" is asserted rather than shown from the text the zero-knowledge listener just heard.
+
+- **Landing undercuts its own "he hath done / not what you must do" point with a conventional response question.** After "it ends, not with what you must do, but with what *he hath done.*" and "The song reaches all the way to where you are sitting," it closes: "Will you turn, and join the congregation that praises him?" This is still a direct second-person challenge. It echoes v22 and v27 lexically ("turn," "congregation"), which is better than a generic "will you trust Him," but it reintroduces the listener's action as the final note after the script worked to make the finished work the point. For a grace-anchored long-form deep-dive, this is the tired evangelistic pivot the "NEW work" criterion is meant to catch. The personalization "the ends of the world is you" (grammatically awkward) right before it also breaks the reverent documentary register.
+
+- **Minor but real first-hearing clarity friction in Movement 3.** After quoting v15 and saying "A killing thirst. On the cross, John records two words: *I thirst.* And then the line that should not exist this early," it gives the v16 quote. The "And then" is ambiguous on audio: it sounds like it might be sequencing events in John's gospel rather than moving to the next psalm line. A listener cannot see the verse numbers. The surrounding forensic details are otherwise clear and strong.
+
+- **"Pierced" steel-man is mostly fair but still front-loads the disputed word.** Movement 4 does the right things (concedes the Masoretic "like a lion" possibility, says the case does not rest on it, cites the Septuagint pre-dating Christianity). However, the section still spends its opening energy on the one word the script has already called "the line that should not exist this early." The convergence argument that follows is good, but the structure gives the contested term rhetorical prominence before it is taken off the table "just for a moment."
+
+- **Penal substitution via the forsaking is stated cleanly in the spoken text** ("the forsaking was real — so that you would never have to") and is not dressed up with "divine child abuse" or over-realized sin-bearing language. This passes the doctrinal lens. The ledger is also honest about sourcing and the red-team removal of the false Dead Sea fragment claim. No invented doctrine or clickbait contrarianism detected.
+
+- **Thread spine holds.** Cry → David's non-death → early details → honest objection → whole-song claim → the turn → "he hath done this." No thread-swapping. The incipit convention in Movement 5 is the strongest and least-trodden move; it does faithful-depth work.
+
+- **KJV verbatim appears clean** in all spoken quotes (ellipses are used only for excerpting per the stated convention; no words inside quotation marks are altered). The ledger's sourcing claim is not contradicted by the text provided.
+
+- **Grace-anchored overall, with the landing exception noted above.** No fear/gain-loss/works pressure in the body. The "you do not have to make yourself worth saving before you come" sentence is strong.
+
+The piece is disciplined, sources honestly, and avoids the usual cheap moves. The problems are concentrated in hook timing, the assertive resurrection inference for first-time listeners, and the landing's final question form clashing with its own "he hath done" emphasis.
+
+VERDICT: REVISE
+TOP FIXES:
+1. Remove or reframe the final "Will you turn, and join the congregation that praises him?" so the close lands on "he hath done this" + the psalm's open worldwide worship without pivoting to a direct listener challenge or decision question.
+2. Restructure Movement 1 cold open to deliver the core strangeness (pre-Christian king describing this exact death in first person, while he died old and safe) inside the first 5–8 seconds instead of after descriptive setup about the ninth hour and lungs.
+3. In Movement 6, ground "The sufferer is *alive* again, on his feet" for zero-knowledge listeners by explicitly linking it back to Jesus' whole-song claim (Movement 5) in the spoken text and/or noting that Hebrews reads the v22 praise in the risen Christ's mouth; do not leave the "dead man does not declare" inference standing as raw psalm fact.
