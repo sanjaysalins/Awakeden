@@ -1,0 +1,97 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: narration
+
+LENS — judge this NARRATION on (be specific, cite the exact line/phrase):
+- Doctrinal soundness: evangelical, biblically faithful; NO invented doctrine, NO contrarian/
+  clickbait/contested readings used to chase freshness.
+- KJV verbatim: every word inside quotation marks must be exact KJV. Flag any altered word.
+- Clarity on first hearing: a listener with zero Bible knowledge must follow it; no clever-but-
+  confusing conceit, no logic trick, no self-contradiction.
+- Grace-anchored conviction: NO fear / gain-loss / self-interest / works framing; the Spirit
+  convicts, the script invites.
+- Freshness = faithful depth: surprising about the TEXT, orthodox in the claim and the landing.
+- One thread spine from hook -> middle -> CTA (no thread-swapping).
+- Landing does NEW work (not a tired generic 'will you trust Him?' close).
+- Hook grips in the first ~5 seconds.
+
+ADDITIONAL CONTEXT / BRIEF:
+60s gospel SHORT #7 of the Psalm 22 series. ACCURACY #1. Thesis: Psalm 22 (~1000 BC) describes the crucified BODY — 'all my bones are out of joint' (v14, a man hung by his arms) + 'I may tell all my bones: they look and stare upon me' (v17, ribs countable, gawked at) — centuries before Roman crucifixion. GUARDS: (1) DESCRIPTIVE MATCH, not a cited NT prophecy (no verse cites Ps 22:14/17; framed 'here it is, written early', not 'fulfilled in [X]'); (2) NO medical over-claim — v14's 'heart is like wax, it is melted' (cardiac-rupture proof-text) was DROPPED; only 'out of joint' kept, described plainly; (3) 'I may tell all my bones' = 'count his ribs' (KJV 'tell'=count); (4) predictive precision avoids 'Rome invented it' ('a thousand years before Rome ever raised a cross'). Distinct from short #1 (that = the garments, Ps 22:18; this = the body, v14/17). In-engine red-team = LOCK (verified KJV verbatim, medical-claim avoided, descriptive-match honest, grace landing, distinct from #1). FINAL review (one red-team + one panel = lock). Confirm or flag ONLY genuine residual issues (medical over-claim, fulfilment-citation overreach, transaction landing, or KJV).
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block:
+
+VERDICT: PASS | REVISE | FAIL
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# The Body Foretold — Psalm 22 short #7  (distilled from the Psalm 22 long)
+
+- **Series:** `jesus-in-ot` (Awakeden) — short. Psalm 22 short-series, beat #7 (🟡 strong — descriptive match).
+- **Backed by (the deep study):** `longform/02_Psalm_22_Song_From_The_Cross` — the locked Psalm 22 long-form.
+- **Beat distilled:** the BODY on the cross, described ~1000 yrs early — "all my bones are out of joint" (v14,
+  the stretch of a man hung by his arms) and "I may tell all my bones: they look and stare upon me" (v17, ribs
+  countable, gawked at). Distinct from short #1 (the garments) — this is the body itself.
+- **ACCURACY GUARD (why 🟡):** a DESCRIPTIVE MATCH (the psalm pictures what crucifixion does to a body), NOT a
+  cited NT prophecy and NOT an over-claimed MEDICAL proof. v14's "my heart is like wax; it is melted" is DROPPED
+  to avoid the speculative cardiac-rupture theory; the short keeps only "out of joint" (the defensible suspension
+  detail) + "tell all my bones / stare" (the exposed, mocked body). "I may tell all my bones" = "I can COUNT all
+  my bones" (KJV "tell" = count) — glossed for the listener. No "pierced" here (that's short #1).
+- **Process:** ONE red-team + ONE 5-CLI panel → LOCK (the standard lean review).
+- **Format:** 9:16, ~60s, Gospel Five-Beat, CTA-to-Jesus.
+- **Status:** v1 DRAFT (2026-06-06). KJV verified span-by-span (Ps 22:14; Ps 22:17). NOT yet reviewed/rendered.
+
+---
+
+**[narrator]**
+A king once wrote down, in unbearable detail, what crucifixion does to a human body — a thousand years before Rome ever raised a cross.
+
+**[narrator]**
+Psalm twenty-two — the song Jesus quoted as He died. Hear how it pictures the dying man:
+
+**[narrator — KJV, Psalm 22:14]**
+"I am poured out like water, and all my bones are out of joint…"
+
+**[narrator]**
+Out of joint — just what happens to a body hung by its arms, its own weight dragging the bones apart. And:
+
+**[narrator — KJV, Psalm 22:17]**
+"I may tell all my bones: they look and stare upon me."
+
+**[narrator]**
+He could count his own ribs, stretched bare, while a crowd stood and gawked.
+
+**[narrator]**
+David never saw a crucifixion. Rome would not make it their instrument for centuries. Yet here it is — the cross, in a body, written early.
+
+**[narrator]**
+This is what He bore to bring you home — every wrenched joint, every cold stare. He endured all of it, willingly, for you. Come to Him.
+
+---
+
+## DEPTH & SOURCING  *(not spoken)*
+- **KJV verbatim** (self-verified via `pipeline/scripture.fetch_kjv`, 2026-06-06):
+  - Ps 22:14: "I am poured out like water, and all my bones are out of joint…" — exact words; trailing ellipsis
+    clips "my heart is like wax; it is melted in the midst of my bowels." (deliberately dropped — see guard).
+  - Ps 22:17: "I may tell all my bones: they look and stare upon me." — exact, full verse.
+- **Descriptive match, not a cited prophecy:** no NT verse cites Ps 22:14/17; the short claims the psalm
+  PICTURES the crucified body (suspension dislocates joints; the exposed, countable ribs; the staring crowd) —
+  framed as "here it is… written early," NOT "fulfilled in [chapter]." Predictive precision: David ~1000 BC;
+  Roman crucifixion is centuries later ("Rome would not make it their instrument for centuries" — avoids the
+  false "Rome invented it").
+- **NO medical over-claim:** v14's "heart like wax… melted" (the popular cardiac-rupture proof-text) is OMITTED;
+  "out of joint" is the only physiological detail kept, and it's described plainly ("body hung by its arms…
+  weight dragging the bones apart"), not as clinical proof. "I may tell all my bones" glossed as "count his ribs."
+- **Grace landing (no transaction):** "what He bore to bring you home… He endured all of it, willingly, for
+  you" — bearing language, voluntary ("willingly"), no "cost/paid/debt" cadence, no fear/gain-loss. CTA-to-Jesus.
+- **Distinct from short #1** (garments): that one = the clothes gambled (Ps 22:18 + John 19:24); this one = the
+  body itself (Ps 22:14, 17). No overlap of quoted spans.
+- **Funnel:** distilled from the locked Psalm 22 long; beat #7 of the Psalm 22 short-series.
+
+## VOICE PLAN
+- `narrator` only (quoted spans are OT psalm, narrator-voiced per the locked rule).
+----- ARTIFACT END -----
