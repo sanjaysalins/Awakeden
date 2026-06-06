@@ -1,0 +1,91 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: narration
+
+LENS — judge this NARRATION on (be specific, cite the exact line/phrase):
+- Doctrinal soundness: evangelical, biblically faithful; NO invented doctrine, NO contrarian/
+  clickbait/contested readings used to chase freshness.
+- KJV verbatim: every word inside quotation marks must be exact KJV. Flag any altered word.
+- Clarity on first hearing: a listener with zero Bible knowledge must follow it; no clever-but-
+  confusing conceit, no logic trick, no self-contradiction.
+- Grace-anchored conviction: NO fear / gain-loss / self-interest / works framing; the Spirit
+  convicts, the script invites.
+- Freshness = faithful depth: surprising about the TEXT, orthodox in the claim and the landing.
+- One thread spine from hook -> middle -> CTA (no thread-swapping).
+- Landing does NEW work (not a tired generic 'will you trust Him?' close).
+- Hook grips in the first ~5 seconds.
+
+ADDITIONAL CONTEXT / BRIEF:
+60s gospel SHORT #6 of the Psalm 22 series. ACCURACY #1. Thesis: Psalm 22 (the cross-psalm) opens in one forsaken man's agony and ENDS with 'all the ends of the world' turning to God (Ps 22:27); the dying man's song foresaw a worldwide turning, and the gospel did spread to the nations. GUARDS: (1) it's the psalm's OWN prophecy (v27) + the HISTORICAL fact of the gospel's spread, NOT a single NT verse-citation ('his song says... then it happened', not 'fulfilled in [X]'); says 'nation after nation' not 'literally every nation'; (2) 'turn unto the LORD'(Yahweh) -> worshipping the crucified-risen Christ is the orthodox NT identification (Phil 2:10-11, Rev 5), not person-conflation, and the psalm is never said to NAME Jesus; (3) NOT universalism — 'nation after nation turned' = peoples FROM the nations (Rev 7:9), and the close is a personal OFFER ('Come to Him'). In-engine red-team = LOCK (verified KJV verbatim Ps 22:27, all 3 guards honored). FINAL review (one red-team + one panel = lock). Confirm or flag ONLY genuine residual issues (over-read of the historical claim, person-conflation, universalism, or KJV).
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block:
+
+VERDICT: PASS | REVISE | FAIL
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# The Ends of the Earth — Psalm 22 short #6  (distilled from the Psalm 22 long)
+
+- **Series:** `jesus-in-ot` (Awakeden) — short. Psalm 22 short-series, beat #6 (🟡 strong — the psalm's own prophecy + history).
+- **Backed by (the deep study):** `longform/02_Psalm_22_Song_From_The_Cross` — the locked Psalm 22 long-form.
+- **Beat distilled:** the GLOBAL turn. The psalm of the cross opens in one forsaken man's agony and ENDS with
+  "all the ends of the world" turning to God (Ps 22:27). The dying man's song foresaw a worldwide turning — and
+  the gospel did go to every nation.
+- **ACCURACY GUARD (why 🟡):** This is the psalm's OWN prophetic statement (v27 directly says the nations will
+  turn) + the HISTORICAL fact of the gospel's global spread — NOT a specific NT verse-citation of Ps 22:27. The
+  short frames it as "the song foresaw it; then it happened," tied thematically to the Great Commission (Matt
+  28:19) and the nations before the Lamb (Rev 7:9 — kept in the ledger, not overclaimed). "Turn unto the LORD"
+  (Yahweh) applied to worshipping the crucified-risen Christ is sound (Christ is worshipped — Rev 5; Phil 2:10-11).
+  NOT universalism: people FROM every nation, offered to those who come ("Come to Him").
+- **Process:** ONE red-team + ONE 5-CLI panel → LOCK (the standard lean review).
+- **Format:** 9:16, ~60s, Gospel Five-Beat, CTA-to-Jesus.
+- **Status:** v1 DRAFT (2026-06-06). KJV verified span-by-span (Ps 22:27). NOT yet reviewed/rendered.
+
+---
+
+**[narrator]**
+The psalm Jesus cried from the cross begins in agony — one man, forsaken, dying. But look how it ends: with the whole world.
+
+**[narrator]**
+After the suffering, the song throws its arms open to every nation:
+
+**[narrator — KJV, Psalm 22:27]**
+"All the ends of the world shall remember and turn unto the LORD: and all the kindreds of the nations shall worship before thee."
+
+**[narrator]**
+A man dying in one corner of the Roman Empire — and his song says the ends of the earth will turn to God. It sounded impossible. Then it happened. From that cross the message went out, and nation after nation turned to God, worshipping the very One who had died.
+
+**[narrator]**
+That is the reach of the cross. It was never a local tragedy — it was for the nations, every kindred and tongue.
+
+**[narrator]**
+And "the ends of the world" includes wherever you are, right now. The forsaken man's song was reaching all the way to you. Come to Him.
+
+---
+
+## DEPTH & SOURCING  *(not spoken)*
+- **KJV verbatim** (self-verified via `pipeline/scripture.fetch_kjv`, 2026-06-06): Ps 22:27 — "All the ends of
+  the world shall remember and turn unto the LORD: and all the kindreds of the nations shall worship before
+  thee." — exact, full verse. (Only one quoted span.)
+- **Prophecy + history, not a single NT citation:** v27 is the psalm's OWN forward statement that the nations
+  will turn; the fulfilment is the HISTORICAL global spread of the gospel — so the short says "his song says…
+  then it happened," not "this verse was fulfilled in [chapter]." Thematically anchored to the Great Commission
+  (Matt 28:19, "teach all nations") and Rev 7:9 (a multitude of all nations before the Lamb) — kept here, not
+  overclaimed in the spoken text.
+- **"Turn unto the LORD" → worshipping the crucified-risen Christ:** sound — turning to Yahweh is, in the NT,
+  turning to the Lord Jesus (Phil 2:10-11; Rev 5 worships the Lamb). The short ties the nations' worship to
+  "the very One who had died" without conflating the persons or claiming the psalm names Jesus.
+- **NOT universalism:** "nation after nation turned" = people FROM the nations (Rev 7:9), not every individual;
+  the landing offers it personally ("Come to Him"), not a declaration that all are saved.
+- **Grace landing, does new work:** the one-forsaken-man → whole-world arc, then the personal turn ("the song
+  was reaching all the way to you"). "Turn"/"ends of the world" echo the verse. No fear/gain-loss. CTA-to-Jesus.
+- **Funnel:** distilled from the locked Psalm 22 long; beat #6 of the Psalm 22 short-series.
+
+## VOICE PLAN
+- `narrator` only (the quoted span is OT psalm, narrator-voiced per the locked rule). Multi-voice not needed here.
+----- ARTIFACT END -----
