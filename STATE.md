@@ -1,5 +1,17 @@
 # STATE.md — progress tracker
 
+**Last updated:** 2026-06-06
+**Status (2026-06-06):** Big session — (1) **comprehensive production plan + tracker** built from data/series.json
+(red-team + 5-CLI panel): PRODUCTION_PLAN.md / PRODUCTION_TRACKER.html + BATCH_PLAN / ASSET_LIBRARY_PLAN / TODO;
+(2) **long-form drivers made EPISODE-GENERIC** (`longform/_episode.py`; Isaiah migrated + regression-verified);
+(3) **spend ledger built** (`pipeline/cost.py` + data/spend_ledger.jsonl; hf generate-cost/transactions, credits,
+per-episode ceilings; wired into long-form drivers); (4) caption Windows-drive-colon fix; (5) **Psalm 22 CLUSTER**:
+the locked long-form (script + 6:58 mp3) + **8 LOCKED shorts** (`…/02_Psalm_22…/v1/shorts/`), each via 1 red-team +
+1 panel (LEAN process), KJV self-verified — garments/mockers/forsaken-cry/declared-to-brethren (4 airtight) +
+he-hath-done-this/ends-of-the-earth/body-foretold/I-thirst (4 yellow). New memories: accuracy-over-throughput,
+narration-review-process, shorts-longform-funnel, psalm22-short-series, spend-ledger-system. NEXT: render the 8
+shorts' audio (in progress), then Psalm 22 stills / next long-form. See RESUME.md top. Prior status below.
+
 **Last updated:** 2026-06-03
 **Status (2026-06-03):** NATURAL-SPEED direction locked (memory `feedback-natural-speed-more-clips`): narration
 never time-stretched to 59s — 59s is a ceiling, trim words if over, never compress the voice; use MORE clips,

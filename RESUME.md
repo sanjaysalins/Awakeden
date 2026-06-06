@@ -1,6 +1,41 @@
 # RESUME.md — start here next session
 
-## ═══════════ SESSION 2026-06-05 (LATEST) — ISAIAH 53 FILM DONE + CALM SCENES LIVENED ═══════════
+## ═══════════ SESSION 2026-06-06 (LATEST) — PLANS + SPEND LEDGER + PSALM 22 CLUSTER (LONG + 8 SHORTS) ═══════════
+
+**Big session. Everything committed (clean tree). Two phases:**
+
+### A) Strategy + tooling (all committed)
+- **Production plan + tracker** (`PRODUCTION_TRACKER.html` / `PRODUCTION_PLAN.md`, gen by `_production_tracker.py`)
+  — built from `data/series.json` (10 series / 76 eps), red-teamed + 5-CLI-paneled. Funnel + tiering, proof-first
+  priority, gated pipeline, honest cost range, distribution, cross-series collisions, backlog buckets.
+- **`BATCH_PLAN.md`** · **`ASSET_LIBRARY_PLAN.md`** (plan→spend→reuse→verify, red-team-revised) · **`TODO.md`**
+  (master backlog) · **`PRODUCER_ORCHESTRATOR_PLAN.md`** (red-teamed → DON'T build the orchestrator; do
+  long-form-generic first — DONE).
+- **Long-form drivers now EPISODE-GENERIC** (`longform/_episode.py` + `_render/_animate/_assemble/_make_index`
+  read per-episode `scene_plan.json`; Isaiah migrated + regression-verified). `_test_gate.py` (--approved gate).
+- **Spend ledger BUILT** — `pipeline/cost.py` + `data/spend_ledger.jsonl`: `hf generate cost` (exact pre-flight) +
+  `hf account transactions` (reconcile, credits not USD) + LLM `mode` chokepoint + per-episode ceilings; wired into
+  the long-form drivers. CLI: `python -m pipeline.cost {balance|estimate|summary|reconcile}`. Memory `spend-ledger-system`.
+- **Caption fix** committed (`veed_io/serif_captions.py` Windows drive-colon → run from .ass dir). **Isaiah 53 captioned:**
+  `…/01_Isaiah_53…/v1/visual_16x9/Isaiah53_16x9_captioned.mp4`.
+
+### B) Psalm 22 cluster — LONG-FORM STUDY + 8 SHORTS, ALL LOCKED (narration; $0 except the long's mp3)
+`longform/02_Psalm_22_Song_From_The_Cross/v1/`
+- **Long-form** `narration.md` LOCKED (3 passes) + **`narration.mp3` 6:58** (narrator 1.2x). Scene plan NOT yet authored.
+- **8 SHORTS** in `…/v1/shorts/`, each through ONE red-team + ONE 5-CLI panel (LEAN process, memory
+  `narration-review-process`), KJV self-verified, committed: 01 Crucifixion-Foretold(garments 22:18→Jn19:24) ·
+  02 Mockers(22:7-8→Mt27:43) · 03 Forsaken-Cry(22:1→Mt27:46) · 04 Declared-to-Brethren(22:22→Heb2:12, resurrection) ·
+  05 He-Hath-Done-This(22:31~Jn19:30) · 06 Ends-of-the-Earth(22:27) · 07 Body-Foretold(22:14,17) · 08 I-Thirst(22:15~Jn19:28).
+  (🔴 worm v6 left to the long-form — contested tola typology.)
+- **LOCKED process & direction (memories):** `accuracy-over-throughput` · `narration-review-process` (1 red-team +
+  1 panel → lock) · `psalm22-short-series` · `shorts-longform-funnel` (long FIRST, shorts distilled). KJV self-verify
+  caught the cache DROPPING a comma in Ps 22:7 — audit the cache (TODO).
+
+▶▶ **DO FIRST NEXT SESSION:** the 8 shorts' audio was being rendered at checkpoint (per_turn_synth, narrator
+LSi9zNCeliLuhIGGS0By, --natural, ~$3-4 ElevenLabs). Check `…/shorts/*/narration.mp3`; re-run per_turn_synth on any
+missing. THEN: listen → Psalm 22 stills (long first, reuse audit) OR next long-form (Passover/Bronze Serpent/7 Words).
+
+## ═══════════ SESSION 2026-06-05 — ISAIAH 53 FILM DONE + CALM SCENES LIVENED ═══════════
 
 **⏸ SESSION PAUSED — everything committed (git `07ec813`, working tree clean). Awaiting user watch/approval.**
 
