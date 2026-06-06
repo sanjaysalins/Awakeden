@@ -1,0 +1,99 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: narration
+
+LENS — judge this NARRATION on (be specific, cite the exact line/phrase):
+- Doctrinal soundness: evangelical, biblically faithful; NO invented doctrine, NO contrarian/
+  clickbait/contested readings used to chase freshness.
+- KJV verbatim: every word inside quotation marks must be exact KJV. Flag any altered word.
+- Clarity on first hearing: a listener with zero Bible knowledge must follow it; no clever-but-
+  confusing conceit, no logic trick, no self-contradiction.
+- Grace-anchored conviction: NO fear / gain-loss / self-interest / works framing; the Spirit
+  convicts, the script invites.
+- Freshness = faithful depth: surprising about the TEXT, orthodox in the claim and the landing.
+- One thread spine from hook -> middle -> CTA (no thread-swapping).
+- Landing does NEW work (not a tired generic 'will you trust Him?' close).
+- Hook grips in the first ~5 seconds.
+
+ADDITIONAL CONTEXT / BRIEF:
+60s gospel SHORT #4 of the Psalm 22 series — the RESURRECTION TURN. ACCURACY #1; scrutinize the resurrection claim + Hebrews handling hardest. Thesis: Psalm 22 doesn't end at the cross — at v22 the forsaken sufferer stands ALIVE praising; Hebrews 2:12 puts that very line ('I will declare thy name unto my brethren') in the mouth of the RISEN Christ (Heb 2:9-10 context = the glorified Christ after death); Heb 2:11 'not ashamed to call them brethren'. Arc: cross -> resurrection -> family. KEY GUARDS: (1) resurrection is NT-WARRANTED via Hebrews' application, NOT over-read from the bare psalm; (2) Heb 2:12 is REFERENCED not re-quoted — its shared opening phrase is verbatim-identical to Ps 22:22, but its tail follows the Septuagint ('church/sing praise') which DIVERGES from the psalm ('congregation/praise'), so we never conflate them; (3) 'calls you family' is an OFFER to those who come ('Come to Him'), not universalism. In-engine red-team = LOCK (verified Heb 2 context, KJV verbatim Ps22:22+Heb2:11, no over-read, no universalism). FINAL review (one red-team + one panel = lock). Confirm or flag ONLY genuine residual doctrinal/KJV/clarity issues.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block:
+
+VERDICT: PASS | REVISE | FAIL
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# Declared to the Brethren — Psalm 22 short #4  (distilled from the Psalm 22 long)
+
+- **Series:** `jesus-in-ot` (Awakeden) — short. Psalm 22 short-series, beat #4 (🟢 airtight — Hebrews CITES it of Christ).
+- **Backed by (the deep study):** `longform/02_Psalm_22_Song_From_The_Cross` — the locked Psalm 22 long-form.
+- **Beat distilled:** the RESURRECTION TURN. Psalm 22 doesn't end at the cross — at v22 the forsaken sufferer
+  stands alive, praising in the congregation. Hebrews 2:12 takes that very line and puts it in the mouth of the
+  RISEN Christ; Heb 2:11 — He is "not ashamed to call them brethren." Cross → resurrection → family. Completes
+  the arc after #3 (the forsaken cry).
+- **CHECKLIST APPLIED:** airtight cross-ref (Heb 2:12 is a true NT citation of Ps 22:22, like John 19:24) ✓ ·
+  KJV self-verified ✓ · resurrection is NT-WARRANTED (Heb), not over-read from bare psalm ✓ · single thread
+  (the turn: death→life→family) ✓ · grace CTA ✓. Quotes only 2 spans (Ps 22:22 + Heb 2:11); Heb 2:12 referenced
+  not re-quoted (avoids the Septuagint divergence "church/sing praise" vs psalm "congregation/praise").
+- **Process:** ONE red-team + ONE 5-CLI panel → LOCK (the standard lean review).
+- **Format:** 9:16, ~60s, Gospel Five-Beat, CTA-to-Jesus.
+- **Status:** v1 DRAFT (2026-06-06). KJV verified span-by-span (Ps 22:22; Heb 2:11). NOT yet reviewed/rendered.
+
+---
+
+**[narrator]**
+Psalm twenty-two is the psalm Jesus quoted from the cross. Most people stop reading it there — and miss where it actually ends.
+
+**[narrator]**
+But the cry of the forsaken man doesn't stay forsaken. Later, the psalm turns — from death to a man standing alive, praising God in a crowd:
+
+**[narrator — KJV, Psalm 22:22]**
+"I will declare thy name unto my brethren: in the midst of the congregation will I praise thee."
+
+**[narrator]**
+A dead man declares nothing. So the New Testament takes that very line and puts it in the mouth of the risen Jesus. The cross was never the end of the song.
+
+**[narrator]**
+And hear what the risen One calls us. Hebrews says He is —
+
+**[narrator — KJV, Hebrews 2:11]**
+"not ashamed to call them brethren"
+
+**[narrator]**
+— brothers. Family.
+
+**[narrator]**
+The same Jesus who cried out forsaken now stands alive, unashamed to call you His own. That's how Psalm twenty-two ends — not in a grave, but in a family. Come to Him.
+
+---
+
+## DEPTH & SOURCING  *(not spoken)*
+- **KJV verbatim** (self-verified via `pipeline/scripture.fetch_kjv`, 2026-06-06):
+  - Ps 22:22: "I will declare thy name unto my brethren: in the midst of the congregation will I praise thee." — exact, full verse.
+  - Heb 2:11: "not ashamed to call them brethren" — exact KJV phrase (the verse: "…he is not ashamed to call them
+    brethren,"). "them" is the KJV wording; the narrator applies it to "us/you" outside the quote.
+- **Heb 2:12 is REFERENCED, not re-quoted:** "puts that very line in the mouth of the risen Jesus." The shared
+  phrase "I will declare thy name unto my brethren" is identical in Ps 22:22 and Heb 2:12, so "that very line" is
+  honest. NOT re-quoted because (a) it would repeat the line just heard, and (b) Heb 2:12's tail follows the
+  Septuagint ("in the midst of the church will I sing praise") which DIVERGES from the psalm's KJV
+  ("congregation… praise thee") — conflating them would be inaccurate.
+- **Resurrection is NT-WARRANTED, not over-read:** the claim that the v22 turn = resurrection rests on Hebrews
+  2:12 explicitly putting the verse in the RISEN Christ's mouth (an actual NT citation/application), plus the
+  psalm's own structural pivot (the forsaken voice of vv1-21 stands alive praising in vv22-31). This is the
+  long-form's careful framing, compressed — NOT a resurrection "proved" from bare Psalm 22.
+- **Grace:** Heb 2:11 "not ashamed to call them brethren" — the forsaken-then-risen One brings us into the family.
+  No fear/gain-loss. CTA-to-Jesus ("Come to Him"). Landing does new work (the turn: grave → family).
+- **"why hast thou forsaken me" callback** is PARAPHRASED ("cried out forsaken"), not quoted — keeps to 2 quoted
+  spans and ties back to short #3.
+- **Funnel:** distilled from the locked Psalm 22 long; beat #4 of the Psalm 22 short-series. Completes cross→resurrection.
+
+## VOICE PLAN
+- `narrator` for v1. Multi-voice OPTION: a `jesus` voice on the Ps 22:22 / risen-Christ line (it's the risen
+  Christ speaking, per Heb 2:12) — powerful; flagged for the user. Narrator-only for the accuracy pass.
+----- ARTIFACT END -----
