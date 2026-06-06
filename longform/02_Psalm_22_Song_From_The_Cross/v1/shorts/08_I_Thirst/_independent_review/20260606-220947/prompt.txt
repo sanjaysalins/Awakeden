@@ -1,0 +1,94 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: narration
+
+LENS — judge this NARRATION on (be specific, cite the exact line/phrase):
+- Doctrinal soundness: evangelical, biblically faithful; NO invented doctrine, NO contrarian/
+  clickbait/contested readings used to chase freshness.
+- KJV verbatim: every word inside quotation marks must be exact KJV. Flag any altered word.
+- Clarity on first hearing: a listener with zero Bible knowledge must follow it; no clever-but-
+  confusing conceit, no logic trick, no self-contradiction.
+- Grace-anchored conviction: NO fear / gain-loss / self-interest / works framing; the Spirit
+  convicts, the script invites.
+- Freshness = faithful depth: surprising about the TEXT, orthodox in the claim and the landing.
+- One thread spine from hook -> middle -> CTA (no thread-swapping).
+- Landing does NEW work (not a tired generic 'will you trust Him?' close).
+- Hook grips in the first ~5 seconds.
+
+ADDITIONAL CONTEXT / BRIEF:
+60s gospel SHORT #8 (final 🟡) of the Psalm 22 series. ACCURACY #1; scrutinize the Ps 69 LANDMINE hardest. Thesis: Psalm 22:15 pictures the dying man's killing thirst; at the cross Jesus said 'I thirst' (John 19:28); gospel turn = the Giver of living water thirsted in our place. CRITICAL GUARD: John 19:28's 'that the scripture might be fulfilled' points to PSALM 69:21 (vinegar), NOT Ps 22:15 — so the short must NEVER claim John cites/fulfils Psalm 22. It quotes ONLY 'I thirst' (not the fulfilment clause), uses the bridge verb 'John records what the dying Jesus said' (a report, not 'fulfils'), and frames Ps 22:15 as the psalm's PICTURE of the thirst Jesus then lived — a descriptive MATCH (like the mockers short). The living-water landing (John 4:14/7:37, Creator John 1:3) is DEVOTIONAL reflection ('Think of who is saying it'), not asserted as Ps 22's content. In-engine red-team = LOCK (landmine cleared, KJV verbatim, gospel turn faithful). FINAL review (one red-team + one panel = lock). Confirm or flag ONLY genuine residual issues — especially ANY implication John cites Ps 22, or any living-water over-read.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block:
+
+VERDICT: PASS | REVISE | FAIL
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# I Thirst — Psalm 22 short #8  (distilled from the Psalm 22 long)
+
+- **Series:** `jesus-in-ot` (Awakeden) — short. Psalm 22 short-series, beat #8 (🟡 — DESCRIPTIVE MATCH; Ps 69 landmine).
+- **Backed by (the deep study):** `longform/02_Psalm_22_Song_From_The_Cross` — the locked Psalm 22 long-form.
+- **Beat distilled:** Psalm 22:15 pictures the dying man's KILLING THIRST ("strength dried up… tongue cleaveth to
+  my jaws… the dust of death"); at the cross Jesus said "I thirst" (John 19:28). The gospel turn: the Giver of
+  living water thirsted, in our place.
+- **CRITICAL ACCURACY GUARD (the Ps 69 LANDMINE — why this is the trickiest 🟡):** John 19:28's "that the
+  scripture might be fulfilled" points to **Psalm 69:21** ("in my thirst they gave me vinegar to drink"), NOT
+  Psalm 22:15. So this short must NEVER claim John cites/fulfils Ps 22. It quotes ONLY Jesus' words "I thirst"
+  (not the "that the scripture might be fulfilled" clause), and frames Ps 22:15 as the psalm's PICTURE of the
+  dying thirst that Jesus then lived — a descriptive MATCH, not a fulfilment-citation.
+- **Process:** ONE red-team + ONE 5-CLI panel → LOCK (the standard lean review).
+- **Format:** 9:16, ~60s, Gospel Five-Beat, CTA-to-Jesus.
+- **Status:** v1 DRAFT (2026-06-06). KJV verified span-by-span (Ps 22:15; John 19:28 "I thirst"). NOT yet reviewed/rendered.
+
+---
+
+**[narrator]**
+A thousand years before the cross, a song wrote down the killing thirst of a dying man. At the cross, Jesus lived it — in two words.
+
+**[narrator]**
+Psalm twenty-two. David pictures the dying man's body giving out:
+
+**[narrator — KJV, Psalm 22:15]**
+"My strength is dried up like a potsherd; and my tongue cleaveth to my jaws; and thou hast brought me into the dust of death."
+
+**[narrator]**
+Dried like a shard of broken clay. Tongue stuck fast. A man sinking into the dust of death. And then, at the cross, John records what the dying Jesus said:
+
+**[narrator — KJV, John 19:28]**
+"I thirst."
+
+**[narrator]**
+Think of who is saying it. The One who made every river and spring — the One who offers the whole world living water — hung there with nothing, thirsting, in your place.
+
+**[narrator]**
+He went dry to the last, so that you could drink and never thirst again. That's Jesus. Come to Him.
+
+---
+
+## DEPTH & SOURCING  *(not spoken)*
+- **KJV verbatim** (self-verified via `pipeline/scripture.fetch_kjv`, 2026-06-06):
+  - Ps 22:15: "My strength is dried up like a potsherd; and my tongue cleaveth to my jaws; and thou hast brought
+    me into the dust of death." — exact, full verse.
+  - John 19:28: "I thirst." — exact (the verse ends "…saith, I thirst."); the terminal period is the verse's own.
+- **THE Ps 69 LANDMINE (load-bearing guard):** John 19:28's fulfilment formula ("that the scripture might be
+  fulfilled") is standardly referred to **Psalm 69:21** ("in my thirst they gave me vinegar to drink"), NOT Psalm
+  22:15. Therefore: (a) the short quotes ONLY "I thirst" — it deliberately does NOT quote "that the scripture
+  might be fulfilled"; (b) it makes NO claim that John cites/fulfils Psalm 22; (c) it frames Ps 22:15 as the
+  psalm's own PICTURE of a dying man's killing thirst, which Jesus then lived — an honest descriptive MATCH, like
+  the mockers short (#2), not a citation.
+- **The gospel turn (CONVICTION/LANDING) is thematic, not a Ps 22 claim:** "the One who offers living water…
+  thirsting in your place" draws on John 4:14 / 7:37 (Jesus gives living water) and the Creator-of-water irony
+  (John 1:3) — a faithful gospel move, framed as devotional reflection, not asserted as Psalm 22's content.
+  Grace-anchored ("in your place"; "drink and never thirst again"), no fear/gain-loss, CTA-to-Jesus.
+- **Distinct from short #7** (the body, v14/17): this is v15 (thirst/death). No overlap of quoted spans.
+- **Funnel:** distilled from the locked Psalm 22 long; beat #8 (final 🟡) of the Psalm 22 short-series.
+
+## VOICE PLAN
+- `narrator` for v1. Multi-voice OPTION: a `jesus` voice on "I thirst" (His dying word) — powerful; flagged for
+  the user. Narrator-only for the accuracy pass.
+----- ARTIFACT END -----
