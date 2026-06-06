@@ -27,6 +27,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 from dataclasses import dataclass, field, replace
 from pathlib import Path
@@ -719,18 +720,25 @@ def render(video: str, words_json: str, out: str, fonts_dir: str, *,
         encoding="utf-8",
     )
 
-    # ffmpeg subtitles filter wants an escaped path on Windows (drive colon).
-    ass_arg = str(ass_path).replace("\\", "/").replace(":", "\\:")
-    fonts_arg = str(Path(fonts_dir)).replace("\\", "/").replace(":", "\\:")
+    # ffmpeg's subtitles filter mis-parses a Windows drive-colon in the path:
+    # the filtergraph parser splits 'C:' as an option separator and NO escaping
+    # (\: or quoting) survives reliably. Robust fix: run ffmpeg FROM the .ass
+    # directory and pass relative, colon-free paths. video/out stay absolute —
+    # they're plain -i/output args, not inside the filtergraph.
+    work = ass_path.resolve().parent
+    video_abs = str(Path(video).resolve())
+    out_abs = str(Path(out).resolve())
+    ass_arg = ass_path.name
+    fonts_arg = os.path.relpath(str(Path(fonts_dir).resolve()), str(work)).replace("\\", "/")
     chain = []
     if guides:
         chain.append(_guides_filter(lay))       # zones UNDER the text
     chain.append(f"subtitles={ass_arg}:fontsdir={fonts_arg}")
     vf = ",".join(chain)
 
-    cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", video,
-           "-vf", vf, "-c:a", "copy", out]
-    subprocess.run(cmd, check=True)
+    cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", video_abs,
+           "-vf", vf, "-c:a", "copy", out_abs]
+    subprocess.run(cmd, check=True, cwd=str(work))
     return out
 
 
