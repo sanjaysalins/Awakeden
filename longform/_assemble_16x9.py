@@ -1,18 +1,24 @@
 """Assemble the 16:9 long-form film: sequence each veo clip into its narration time
-window, mux the balanced immersive audio. Two fill modes (no frozen ken-burns hold):
+window, mux the immersive (or plain) narration audio. EPISODE-GENERIC: pass an episode
+slug/dir as the first arg (bare = Isaiah). Two fill modes (no frozen ken-burns hold):
   - camera-only / static scenes -> seamless BOOMERANG (forward + reverse, looped).
-  - DIRECTIONAL scenes (walking/riding; reverse looks comical) -> FORWARD-only concat of
-    the original clip + chained continuation clips (<stem>_contN.mp4), trimmed to window.
-Output: 1920x1080 30fps + narration.immersive.mp3 -> Isaiah53_16x9.mp4. ffmpeg only ($0)."""
-import sys, json, re, subprocess
+  - DIRECTIONAL scenes (per-scene `directional:true`; reverse looks comical) -> FORWARD-only
+    concat of the original clip + chained continuation clips (<stem>_contN.mp4).
+Output: 1920x1080 30fps + the episode's audio -> <film_name>. ffmpeg only ($0)."""
+import sys, subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-V1 = ROOT / "longform" / "01_Isaiah_53_Suffering_Servant" / "v1"
-OUT = V1 / "visual_16x9"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _episode import resolve  # noqa: E402
+
+ep = resolve(sys.argv)
+OUT = ep.out
 WORK = OUT / "_assembly"
 WORK.mkdir(exist_ok=True)
-AUDIO = V1 / "narration.immersive.mp3"
+AUDIO = ep.audio(prefer_immersive=True)
+if not AUDIO.exists():
+    raise SystemExit(f"missing audio: {AUDIO} (render narration.mp3 first)")
 W, H, FPS = 1920, 1080, 30
 ENC = ["-c:v", "libx264", "-preset", "medium", "-crf", "19", "-r", str(FPS)]
 
@@ -25,33 +31,27 @@ def dur(p):
     return float(subprocess.run(["ffprobe","-v","error","-show_entries","format=duration",
         "-of","default=noprint_wrappers=1:nokey=1",str(p)], capture_output=True, text=True).stdout.strip())
 
-def slugof(t): return re.sub(r"[^a-z0-9]+","_",t.lower()).strip("_")[:40]
-
 def scaled(src, dst):
     """scale/pad any clip to 1920x1080 30fps yuv420p, no audio."""
     run(["ffmpeg","-y","-i",str(src),
          "-vf",f"scale={W}:{H}:force_original_aspect_ratio=decrease,pad={W}:{H}:(ow-iw)/2:(oh-ih)/2,fps={FPS},format=yuv420p",
          "-an",*ENC,str(dst)])
 
-# scenes with genuine onward locomotion (walking/riding): NEVER boomerang (reverse
-# looks comical). Filled with forward-chained continuation clips (<stem>_contN.mp4).
-DIRECTIONAL = {8, 9, 11, 13, 14, 20}
-
 audio_dur = dur(AUDIO)
-scenes = json.loads((OUT/"scene_plan.json").read_text(encoding="utf-8"))["scenes"]
-print(f"audio {audio_dur:.1f}s · {len(scenes)} scenes · boomerang + directional-chain")
+scenes = ep.scenes
+print(f"{ep.slug}: audio {audio_dur:.1f}s · {len(scenes)} scenes · boomerang + directional-chain")
 
 seg_paths = []
 for i, s in enumerate(scenes):
     start, end = s["t"]
     D = (audio_dur - start) if i == len(scenes)-1 else (end - start)
-    stem = f"{s['id']:02d}_{slugof(s['title'])}"
+    stem = ep.stem(s)
     clip = OUT / f"{stem}.mp4"
     if not clip.exists():
         raise SystemExit(f"missing clip: {clip}")
     scene_mp4 = WORK / f"scene_{s['id']:02d}.mp4"
 
-    if s["id"] in DIRECTIONAL:
+    if s.get("directional"):
         # forward-only: original + chained continuation clips, concat, trim/pad to window
         parts = [clip] + sorted(OUT.glob(f"{stem}_cont*.mp4"))
         scaled_parts = []
@@ -103,7 +103,7 @@ print(f"video_only {dur(video_only):.1f}s")
 # isn't clipped, then -shortest trims to exact audio duration.
 vdur = dur(video_only)
 gap = max(0.0, audio_dur - vdur) + 0.5
-final = OUT / "Isaiah53_16x9.mp4"
+final = ep.film_out
 run(["ffmpeg","-y","-i",str(video_only),"-i",str(AUDIO),
      "-filter_complex",f"[0:v]tpad=stop_mode=clone:stop_duration={gap:.3f}[v]",
      "-map","[v]","-map","1:a",*ENC,"-c:a","aac","-b:a","192k","-shortest",str(final)])

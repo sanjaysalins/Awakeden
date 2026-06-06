@@ -1,26 +1,28 @@
 """Build a single self-contained index.html gallery of the 16:9 long-form stills.
-Zoomed-out responsive grid (all 21 scenes with #NN + title); click any tile for a
+EPISODE-GENERIC: pass an episode slug/dir as the first arg (bare = Isaiah).
+Zoomed-out responsive grid (every scene with #NN + title); click any tile for a
 full-screen lightbox (arrow keys / click to navigate). Relative image paths, so it
 works offline by just opening the file. No dependencies."""
-import json, re, html
+import sys, json, html
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / "longform" / "01_Isaiah_53_Suffering_Servant" / "v1" / "visual_16x9"
-REDONE = {1, 2, 3, 6, 7, 10, 11, 12, 13, 14, 15, 16}
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _episode import resolve  # noqa: E402
 
-def slug(t): return re.sub(r"[^a-z0-9]+", "_", t.lower()).strip("_")[:40]
-
-scenes = json.loads((OUT / "scene_plan.json").read_text(encoding="utf-8"))["scenes"]
+ep = resolve(sys.argv)
+OUT = ep.out
+EP_TITLE = ep.title
+scenes = ep.scenes
 
 cards, slides = [], []
 for i, s in enumerate(scenes):
-    fn = f"{s['id']:02d}_{slug(s['title'])}.png"
+    fn = ep.png(s).name
     if not (OUT / fn).exists():
         continue
     title = html.escape(s["title"]); mvt = html.escape(str(s.get("mvt", "")))
-    badge = "REDONE" if s["id"] in REDONE else "kept"
-    bcls = "redone" if s["id"] in REDONE else "kept"
+    is_redone = bool(s.get("redone"))
+    badge = "REDONE" if is_redone else "kept"
+    bcls = "redone" if is_redone else "kept"
     t0, t1 = s["t"]
     cards.append(f"""
     <figure class="card" onclick="openLb({i})">
@@ -31,11 +33,11 @@ for i, s in enumerate(scenes):
         <span class="meta">{mvt} · {t0:.0f}–{t1:.0f}s</span></figcaption>
     </figure>""")
     slides.append({"src": fn, "n": s["id"], "title": s["title"], "mvt": str(s.get("mvt", "")),
-                   "redone": s["id"] in REDONE})
+                   "redone": is_redone})
 
 doc = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Isaiah 53 — 16:9 stills</title>
+<title>{html.escape(EP_TITLE)} — 16:9 stills</title>
 <style>
   :root{{color-scheme:dark}}
   body{{margin:0;background:#14110d;color:#e9e0cf;font:15px/1.4 -apple-system,Segoe UI,Roboto,sans-serif}}
@@ -72,7 +74,7 @@ doc = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
   .hint{{color:#80745c;font-size:12px;margin-top:4px}}
 </style></head><body>
 <header>
-  <h1>Isaiah 53 · long-form 16:9 stills</h1>
+  <h1>{html.escape(EP_TITLE)} · long-form 16:9 stills</h1>
   <div class="sub">{len(slides)} scenes · <b style="color:#ffd89b">{sum(s['redone'] for s in slides)} redone</b> · {sum(not s['redone'] for s in slides)} kept · click any tile to zoom</div>
   <div class="controls">
     <button id="bAll" class="on" onclick="filt(false)">Show all</button>
