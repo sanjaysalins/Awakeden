@@ -24,7 +24,7 @@
 ---
 
 **[narrator]**
-A thousand years before the cross, a song wrote down the killing thirst of a dying man. Then Jesus hung on that cross — and the same thirst broke from His own lips.
+A thousand years before the cross, a song wrote down the killing thirst of a dying man. Then, on that cross, the same thirst broke from Jesus' lips.
 
 **[narrator]**
 Psalm twenty-two. David wrote it in the first person, but he was picturing someone else's death. Watch the body give out:
@@ -33,7 +33,7 @@ Psalm twenty-two. David wrote it in the first person, but he was picturing someo
 "My strength is dried up like a potsherd; and my tongue cleaveth to my jaws; and thou hast brought me into the dust of death."
 
 **[narrator]**
-Dried like a shard of broken clay. Tongue stuck fast. A man sinking into the dust of death. Then, on the cross, John records the dying Jesus' cry:
+Dried clay; a tongue stuck fast; a man sinking into the dust of death. Then John records the dying Jesus' cry:
 
 **[narrator — KJV, John 19:28]**
 "I thirst."
@@ -42,7 +42,7 @@ Dried like a shard of broken clay. Tongue stuck fast. A man sinking into the dus
 Psalm twenty-two doesn't foretell that cry — it paints the thirst behind it, a thousand years before He felt it.
 
 **[narrator]**
-And think of who is thirsting. The One who made every river and spring — the One who offers the world living water — hung there with nothing, in your place.
+And think who is thirsting: the One who made every river and spring, who offers the world living water — hanging there with nothing, in your place.
 
 **[narrator]**
 He went dry, so that you could come to Him and drink that living water, and never thirst again. Come to Him.
