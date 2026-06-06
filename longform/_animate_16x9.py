@@ -6,8 +6,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 import config
 from pipeline import video_render
+from _test_gate import apply_test_gate  # noqa: E402
 
 config.VIDEO_HF_MODEL = "veo3_1_lite"
 config.VIDEO_HF_ASPECT = "16:9"
@@ -47,10 +49,21 @@ def base(move, atmos):
 def slugof(t): return re.sub(r"[^a-z0-9]+", "_", t.lower()).strip("_")[:40]
 
 plan = json.loads((OUT / "scene_plan.json").read_text(encoding="utf-8"))
+
+# TEST GATE: animate 1-2 test clips, STOP for QC + approval, THEN batch the rest.
+gate_ids, gate_stop, gate_banner = apply_test_gate(
+    sys.argv, OUT, stage="animation",
+    all_ids=[s["id"] for s in plan["scenes"]],
+    default_test=[2, 13],  # a CALM scene (motion must feel alive, not dead) + a directional one
+    qc_hint="Watch the WHOLE clip (>=6 frames): living motion, no morph/glitter, no comical reverse.",
+)
+
 vp = video_render.HFVideoProvider()
 kling = None
 ok = fail = skip = 0
 for s in plan["scenes"]:
+    if s["id"] not in gate_ids:
+        continue
     png = OUT / f"{s['id']:02d}_{slugof(s['title'])}.png"
     mp4 = png.with_suffix(".mp4")
     if mp4.exists():
@@ -80,3 +93,5 @@ for s in plan["scenes"]:
         else:
             fail += 1
 print(f"\n[done] animated {ok}, skipped {skip}, failed {fail} -> {OUT}")
+if gate_stop:
+    print(gate_banner); sys.exit(0)

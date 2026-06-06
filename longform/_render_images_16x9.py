@@ -6,9 +6,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 import config
 from pipeline.visual_models import Scene
 from pipeline import visual_render
+from _test_gate import apply_test_gate  # noqa: E402
 sys.path.insert(0, str(ROOT / "image_library"))
 from image_library import ImageLibrary, ImageEntry  # noqa: E402
 
@@ -74,8 +76,18 @@ if not s1.exists() and (OUT / "test_s01.png").exists():
 if s1.exists() and not lib.by_slug(BANK[1][0]):
     bank(1, s1)
 
+# TEST GATE: render 1-2 test stills, STOP for full-res QC + approval, THEN batch.
+gate_ids, gate_stop, gate_banner = apply_test_gate(
+    sys.argv, OUT, stage="stills",
+    all_ids=[s["id"] for s in plan["scenes"]],
+    default_test=[1, 6],  # opening (must grip) + the cross (hardest / anachronism-prone)
+    qc_hint="Open each PNG full-size — never a contact sheet (that hid the anachronisms).",
+)
+
 ok = fail = skip = 0
 for s in plan["scenes"]:
+    if s["id"] not in gate_ids:
+        continue
     png = OUT / f"{s['id']:02d}_{slug(s['title'])}.png"
     if png.exists():
         print(f"[skip] {png.name}"); skip += 1; continue
@@ -98,3 +110,5 @@ for s in plan["scenes"]:
     except Exception as e:
         print(f"       FAIL: {e}"); fail += 1
 print(f"\n[done] rendered {ok}, skipped {skip}, failed {fail}  -> {OUT}")
+if gate_stop:
+    print(gate_banner); sys.exit(0)
