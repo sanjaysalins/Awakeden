@@ -1,6 +1,35 @@
 # RESUME.md — start here next session
 
-## ═══════════ SESSION 2026-06-06 (LATEST) — PLANS + SPEND LEDGER + PSALM 22 CLUSTER (LONG + 8 SHORTS) ═══════════
+## ═══════════ SESSION 2026-06-07 (LATEST) — VERIFICATION HARDENING + PSALM 22 SHORTS DE-TEMPLATED/LOCKED/RENDERED ═══════════
+
+**Committed `dc0146b` on main, pushed. Working tree clean. Media (mp3) is gitignored — text/meta/.locked are versioned, audio lives on disk.**
+
+### What shipped (the engine fix the user asked for after the templated-shorts problem)
+The 8 Psalm 22 shorts had shipped templated (8/8 closed "Come to Him", 6/8 opened "a thousand years…") and NEITHER the red-team NOR the 5-CLI panel caught it — because **every check was per-artifact**. Built a hardened, mostly-deterministic ($0) verification layer; each phase built → red-team → 5-CLI panel → fixed. **52 tests green.** Memory: `pipeline-verification-hardening`.
+
+NEW modules (all `pipeline/`):
+- **`narration_parse.py`** — fail-closed parser for ALL formats: `**[speaker — KJV, ref]**` markdown, `<speaker name=…>` XML (rendered tagged file), AND engine plain-prose. Replaces the buggy `veed_io/_extract_spoken.py`.
+- **`cluster_gate.py`** — the missing cross-artifact check: flags repeated CTA wording + opener n-gram families within a cluster (blocking); never bans the CTA-to-Jesus destination.
+- **`kjv_strict.py`** — punctuation-STRICT verbatim vs a PINNED corpus `data/kjv_corpus.json` (copied from HF-POC kjv.json, has the correct Ps 22:7 comma). Ordered ellipsis, note-aware `{}` markers, NT-vs-its-own-verse.
+- **`doctrine_gate.py`** — deterministic scan for KNOWN landmines (broken-bones/John 19:36, died-of-thirst, inability-concession, universalism, Ps69-vs-Ps22, works/fear/gain-loss). WARN-level (human is final guard). **Add a landmine whenever a new trap is found.**
+- **`lock.py` + `cli_lock.py`** — fail-closed LOCK chokepoint: `cli_lock.py "<folder>"` runs KJV+cluster+doctrine+Rule-8(short)+md↔tagged parity → writes `.locked` (punctuation-preserving, speaker-bound spoken-text hash). **Enforced at `handoff.run_audio_pipeline` AND `assembly_runner.run_assembly`** (so unverified content can't render or assemble). Engine generate path self-locks in `runner.py`. Override `JITB_REQUIRE_LOCK=0`.
+- **`review_voice.py`** — AUDIO-FIRST review (user is dyslexic, reviews by EAR). Free edge-tts digests; ElevenLabs only for final narration. Memory `feedback-audio-first-review`.
+- `independent_review.py` — `--red-team` runs a NON-Claude subscription CLI (codex); strips metered API keys so panel CLIs use SUBSCRIPTIONS (free).
+
+### Psalm 22 shorts — FINAL (all 8 LOCKED + re-rendered)
+`longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/<NN>/` — de-templated hooks + **form-varied** CTAs (declarative/reversal/grace/question/paradox), KJV-verbatim, doctrine-clean, `.locked`, audio re-rendered (natural + 1.10x cap). Durations: 01 64s · 02 60s · 03 52s · 04 58s · **05 44s (short — option to add a beat)** · 06 62s · 07 60s · **08 67s (longest, hit 1.10x cap)**.
+Listen-through: `…/v1/_ALL_8_FINAL_REVIEW.mp3` (8.3 min, spoken labels). Per-short: `…/<NN>/narration.mp3`.
+
+### SPEND (clarified by user)
+- **Panel + this chat session = SUBSCRIPTION (no extra $).** I over-attributed spend to them earlier — wrong.
+- **Metered API only:** ElevenLabs (audio), **Gemini API** (image gen / NBP `visual_render.py`, only on the VISUAL stage), **Anthropic API** (engine/Vision ONLY if `LLM_PROVIDER=api`; default `agent`=in-chat/free), Higgsfield/Kling (images+video). The user's Gemini/Anthropic charges are from earlier IMAGE/visual runs, not reviews.
+
+### ▶▶ DO FIRST NEXT SESSION
+1. (If not done) listen to `_ALL_8_FINAL_REVIEW.mp3`; decide on **#05 (44s — add a beat?)**.
+2. Then **Psalm 22 VISUALS / assembly** — note: `cli_assemble`/`run_assembly` now REFUSE unless the folder is `.locked` (it is). Or pick the next topic. Quote metered spend (images=Gemini, video=Kling) before running.
+3. Open follow-ups (documented residuals, not blockers): catalogue-WIDE cluster check + real anchor-verse check + tag-stage TOCTOU re-check; direct foreign `per_turn_synth --no-gate` still bypasses the lock.
+
+## ═══════════ SESSION 2026-06-06 — PLANS + SPEND LEDGER + PSALM 22 CLUSTER (LONG + 8 SHORTS) ═══════════
 
 **Big session. Everything committed (clean tree). Two phases:**
 
