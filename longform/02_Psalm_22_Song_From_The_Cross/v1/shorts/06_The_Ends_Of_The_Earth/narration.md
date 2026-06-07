@@ -23,7 +23,7 @@
 ---
 
 **[narrator]**
-The psalm Jesus cried from the cross begins in agony — one man, forsaken, dying. But look how it ends: with the whole world.
+Psalm twenty-two opens with one forsaken man dying alone — and ends with every nation on earth.
 
 **[narrator]**
 After the suffering, the song throws its arms open to every nation:
@@ -38,7 +38,7 @@ A man dying in one corner of the Roman Empire — and his song says the ends of 
 That is the reach of the cross. It was never a local tragedy — it was for the nations, all the kindreds of the earth.
 
 **[narrator]**
-And "the ends of the world" includes wherever you are, right now. The forsaken man's song was reaching all the way to you. Come to Him.
+And "the ends of the world" includes wherever you are, right now. The song that began with one man dying alone has swept the whole earth; the Lord it promised still has room for you to turn to Him.
 
 ---
 

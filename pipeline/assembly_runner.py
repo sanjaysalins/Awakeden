@@ -113,6 +113,12 @@ def run_assembly(
     replan: bool = False,
     log=print,
 ) -> AssemblyRunResult:
+    # Lock chokepoint: refuse to assemble a cut from an unlocked / stale narration
+    # (a templated short already has narration.mp3 and would otherwise sail into the
+    # cut un-verified — the multi-door bypass the panel flagged). Override: JITB_REQUIRE_LOCK=0.
+    from pipeline import lock as _lock
+    _lock.require_lock(v1_folder)
+
     clip_budget = clip_budget if clip_budget is not None else config.ASSEMBLY_CLIP_BUDGET
     reel = config.ASSEMBLY_REEL if reel is None else reel
     exclude = exclude or set()

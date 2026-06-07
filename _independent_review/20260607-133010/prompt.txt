@@ -1,0 +1,491 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: plan
+
+LENS — judge this PLAN on (be specific, cite the exact step/claim):
+- Feasibility against the real codebase / tools (does it assume things that exist?).
+- Hidden risks, false assumptions, single points of failure.
+- Over-engineering / premature building before the idea is proven.
+- Missing steps, edge cases, or verification gaps.
+- Reuse: does it duplicate tools that already exist instead of reusing them?
+- Cost / spend and whether it's justified.
+
+ADDITIONAL CONTEXT / BRIEF:
+This is a CODE REVIEW (not a plan-doc review) of the WORKING Phase A implementation of the narration-verification hardening. Two new modules: pipeline/narration_parse.py (fail-closed parser for shorts **[speaker — KJV, ref]** + long ## MOVEMENT blocks; replaces the buggy veed_io/_extract_spoken.py which returned empty on shorts) and pipeline/cluster_gate.py (the missing CROSS-ARTIFACT gate: flags DENSITY of repeated CTA wording + opener n-gram families within a cluster, BLOCKING; never bans the CTA-to-Jesus destination). All 7 acceptance+regression tests pass: it flags 'come to him' in 8/8 real Psalm 22 shorts, the 'thousand years' opener family in 6/8, catches a synthetic 9th 'Come to Him' short, and does NOT flag two distinct gospel CTAs. YOUR JOB as an adversarial code reviewer: find real BUGS, EDGE CASES, FALSE-PASS holes (where the gate would wrongly pass repetitive/templated content), FALSE-BLOCK holes (where it wrongly flags legitimate variety), parser failures on real narration formatting variance (em dashes, smart quotes, multi-sentence blocks, ranges), and any correctness/robustness issue. Is this Phase A code sound to commit and build Phase B/C on? Be specific with line-level findings; do not rubber-stamp.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block:
+
+VERDICT: PASS | REVISE | FAIL
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# Phase A — working code for review (narration parser + cluster gate)
+
+Context: per-artifact review let 8 Psalm 22 gospel shorts ship all closing on the identical
+'Come to Him' tag. This is the Word of God; sloppiness is unacceptable. Phase A builds the
+missing CROSS-ARTIFACT (cluster) gate + a fail-closed parser. Below are the two new modules,
+the acceptance/regression test, and the passing test output. REVIEW THE CODE for bugs,
+edge-cases, false-PASS (gate passes when it shouldn't) and false-BLOCK (flags legit content).
+
+## pipeline/narration_parse.py
+```python
+"""Shared, fail-closed parser for narration.md (shorts AND long-form).
+
+Both formats mark spoken text with block headers:
+
+    **[narrator]**
+    spoken line(s)...
+
+    **[narrator — KJV, Psalm 22:18]**
+    "They part my garments among them, and cast lots upon my vesture."
+
+Long-form additionally has `## MOVEMENT N — ...` section headers; shorts have a
+`# Title` + status front-matter and a trailing `## DEPTH & SOURCING` / `## VOICE
+PLAN` ledger. None of those non-spoken parts carry a `**[speaker]**` header, so a
+parser that captures ONLY text following a speaker header naturally excludes them.
+
+This replaces `veed_io/_extract_spoken.py` (which kept text only inside
+`## MOVEMENT` sections and therefore returned an EMPTY string on shorts — a
+fail-OPEN bug that let every downstream verification pass on nothing).
+
+FAIL-CLOSED CONTRACT: if a narration yields zero spoken blocks, `parse_blocks`
+raises `EmptyNarrationError`. Callers MUST abort — never silently pass.
+"""
+from __future__ import annotations
+
+import re
+from dataclasses import dataclass, field
+
+# ---- block header: **[speaker]** or **[speaker — KJV, <ref>]** ---------------
+_BLOCK_HEADER = re.compile(r"^\s*\*\*\[([^\]]+)\]\*\*\s*$")
+# section heading (## MOVEMENT ..., ## DEPTH ..., etc.) and the --- rule
+_HEADING = re.compile(r"^\s*#{1,6}\s")
+_RULE = re.compile(r"^\s*-{3,}\s*$")
+# inside a header, the ref tag after an em dash: "narrator — KJV, Psalm 22:18"
+_REF_IN_HEADER = re.compile(r"—\s*KJV\s*,\s*(.+?)\s*$", re.IGNORECASE)
+
+
+class EmptyNarrationError(ValueError):
+    """Raised when a narration.md yields no spoken blocks (fail-closed)."""
+
+
+@dataclass
+class Block:
+    speaker: str
+    ref: str | None          # KJV ref tagged on the header, else None
+    text: str                # the spoken prose of this block
+
+
+@dataclass
+class Narration:
+    blocks: list[Block] = field(default_factory=list)
+
+    @property
+    def spoken_text(self) -> str:
+        return "\n".join(b.text for b in self.blocks if b.text).strip()
+
+    @property
+    def hook(self) -> str:
+        """First spoken sentence (the scroll-stopper)."""
+        s = sentences(self.spoken_text)
+        return s[0] if s else ""
+
+    @property
+    def cta(self) -> str:
+        """Last spoken sentence/clause (the close)."""
+        s = sentences(self.spoken_text)
+        return s[-1] if s else ""
+
+
+def _parse_header(inner: str) -> tuple[str, str | None]:
+    """'narrator — KJV, Psalm 22:18' -> ('narrator', 'Psalm 22:18')."""
+    ref = None
+    m = _REF_IN_HEADER.search(inner)
+    if m:
+        ref = m.group(1).strip()
+    speaker = re.split(r"—", inner, 1)[0].strip().lower()
+    return speaker, ref
+
+
+def parse_blocks(md: str) -> list[Block]:
+    """Parse spoken blocks from a narration.md. Fail-closed on empty."""
+    blocks: list[Block] = []
+    cur: Block | None = None
+    buf: list[str] = []
+
+    def flush() -> None:
+        nonlocal cur, buf
+        if cur is not None:
+            cur.text = " ".join(t.strip() for t in buf if t.strip()).strip()
+            if cur.text:
+                blocks.append(cur)
+        cur, buf = None, []
+
+    for raw in md.splitlines():
+        line = raw.rstrip("\n")
+        mh = _BLOCK_HEADER.match(line)
+        if mh:
+            flush()
+            speaker, ref = _parse_header(mh.group(1))
+            cur = Block(speaker=speaker, ref=ref, text="")
+            continue
+        # a section heading or horizontal rule ends the current spoken block
+        if _HEADING.match(line) or _RULE.match(line):
+            flush()
+            continue
+        if cur is not None:
+            buf.append(line)
+    flush()
+
+    if not blocks:
+        raise EmptyNarrationError(
+            "no spoken **[speaker]** blocks found — refusing to verify an empty "
+            "extraction (fail-closed). Check the narration.md block markers."
+        )
+    return blocks
+
+
+def parse(md: str) -> Narration:
+    return Narration(blocks=parse_blocks(md))
+
+
+# ---- quoted spans + KJV ref classification -----------------------------------
+_QUOTE = re.compile(r"[\"“”]([^\"“”]+)[\"“”]")
+
+# Spoken-but-not-KJV-claim rhetoric that appears inside narrator blocks: a quoted
+# fragment that is an attribution/scripture-frame, not a claim to be verbatim KJV.
+_RHETORIC = {
+    "that the scripture might be fulfilled",
+}
+
+
+def quoted_spans_with_refs(md: str) -> list[dict]:
+    """Each double-quoted span -> {text, ref, klass}.
+
+    klass:
+      'tagged_kjv'  — the span is inside a **[... — KJV, <ref>]** block (must verify)
+      'inline_kjv'  — a quoted span in an untagged block, long enough to look like KJV
+                       (best-effort ref needed; verify if resolvable)
+      'rhetoric'    — a short scripture-frame/attribution phrase, NOT a KJV claim
+    """
+    out: list[dict] = []
+    for b in parse_blocks(md):
+        for q in _QUOTE.findall(b.text):
+            span = q.strip()
+            low = normalize(span)
+            if b.ref:
+                out.append({"text": span, "ref": b.ref, "klass": "tagged_kjv"})
+            elif low in _RHETORIC or len(low.split()) < 4:
+                out.append({"text": span, "ref": None, "klass": "rhetoric"})
+            else:
+                out.append({"text": span, "ref": None, "klass": "inline_kjv"})
+    return out
+
+
+# ---- normalization + sentence segmentation -----------------------------------
+def normalize(s: str) -> str:
+    """Lowercase, fold smart quotes/dashes to ASCII, collapse whitespace.
+
+    For fingerprinting/similarity only — NOT for KJV verbatim comparison (that
+    keeps punctuation; see the strict KJV check in Phase B)."""
+    s = s.replace("’", "'").replace("‘", "'").replace("“", '"').replace("”", '"')
+    s = s.replace("—", " ").replace("–", " ").replace("--", " ")
+    s = s.lower()
+    s = re.sub(r"\s+", " ", s)
+    return s.strip()
+
+
+_SENT_SPLIT = re.compile(r"(?<=[.!?])\s+")
+
+
+def sentences(text: str) -> list[str]:
+    text = re.sub(r"\s+", " ", text).strip()
+    if not text:
+        return []
+    return [s.strip() for s in _SENT_SPLIT.split(text) if s.strip()]
+```
+
+## pipeline/cluster_gate.py
+```python
+"""Cross-artifact CLUSTER gate — the check that was missing.
+
+Per-artifact review cannot see "all 8 shorts end the same way." This gate reads
+a SET of narrations together and flags repeated *phrasing/shape* — the defect the
+Psalm 22 cluster shipped (8/8 closed on the "Come to Him" tag; repeated "thousand
+years" hooks).
+
+DESIGN (per the v5 plan, after 4 panel rounds):
+- It flags DENSITY of near-identical WORDING within a cluster/series — it NEVER
+  bans the CTA-to-Jesus *destination* (that is the locked model). Inviting people
+  to Jesus is always allowed; closing 8 shorts with the byte-identical tag is not.
+- Detection is GENERAL (shared normalized n-grams), not a hard-coded phrase list.
+  The named Psalm 22 phrases are regression FIXTURES, not the strategy.
+- Within-cluster / within-series repetition is BLOCKING; cross-catalogue is
+  ADVISORY (a writer years later using a phrase once must not be blocked).
+
+Reuses `pipeline.narration_parse` for fail-closed hook/CTA extraction.
+"""
+from __future__ import annotations
+
+import re
+from collections import Counter
+from dataclasses import dataclass, field
+
+from pipeline import narration_parse as NP
+
+# stopwords kept OUT of "content" n-grams for the opener-family check, but the CTA
+# suffix check keeps everything (gospel closers like "come to him" are all short words).
+_STOP = {
+    "a", "an", "the", "and", "or", "but", "of", "to", "in", "on", "at", "for",
+    "is", "it", "he", "she", "they", "we", "you", "his", "her", "their", "that",
+    "this", "with", "as", "by", "from", "was", "were", "be", "so", "then",
+}
+
+
+@dataclass
+class Finding:
+    kind: str          # "cta_repetition" | "opener_repetition" | "bridge_repetition"
+    phrase: str
+    members: list[str]  # artifact ids sharing it
+    blocking: bool
+    detail: str
+
+
+@dataclass
+class ClusterReport:
+    findings: list[Finding] = field(default_factory=list)
+
+    @property
+    def blocking(self) -> list[Finding]:
+        return [f for f in self.findings if f.blocking]
+
+    @property
+    def passed(self) -> bool:
+        return not self.blocking
+
+
+def _ngrams(tokens: list[str], n: int) -> list[str]:
+    return [" ".join(tokens[i : i + n]) for i in range(len(tokens) - n + 1)]
+
+
+def _content_ngrams(text: str, lo: int = 2, hi: int = 3) -> set[str]:
+    toks = [t for t in NP.normalize(text).split() if t]
+    grams: set[str] = set()
+    for n in range(lo, hi + 1):
+        for g in _ngrams(toks, n):
+            words = g.split()
+            # skip n-grams that are ALL stopwords (no content)
+            if all(w in _STOP for w in words):
+                continue
+            grams.add(g)
+    return grams
+
+
+def _cta_suffix(cta: str, n: int = 3) -> str:
+    """Normalized trailing n words of the CTA — the 'closing shape'."""
+    toks = NP.normalize(cta).split()
+    return " ".join(toks[-n:]) if toks else ""
+
+
+def cluster_check(
+    artifacts: list[tuple[str, str]],
+    *,
+    within_cluster: bool = True,
+    min_share: int = 2,
+) -> ClusterReport:
+    """artifacts: list of (artifact_id, narration_md_text).
+
+    within_cluster=True → repetition is BLOCKING (same cluster/series).
+    within_cluster=False → ADVISORY (cross-catalogue): findings non-blocking.
+    min_share: how many artifacts must share a phrase to flag it.
+    """
+    parsed: list[tuple[str, NP.Narration]] = []
+    for aid, md in artifacts:
+        parsed.append((aid, NP.parse(md)))  # fail-closed: raises on empty
+
+    report = ClusterReport()
+    block = within_cluster
+
+    # --- CTA shape repetition (the "Come to Him" family) ----------------------
+    # group by trailing 3-gram of the last sentence; also catch a shorter shared
+    # tail via substring containment.
+    cta_by_id = {aid: nar.cta for aid, nar in parsed}
+    suffixes: dict[str, list[str]] = {}
+    for aid, cta in cta_by_id.items():
+        suf = _cta_suffix(cta, 3)
+        if suf:
+            suffixes.setdefault(suf, []).append(aid)
+    # merge: a short suffix that is contained in a longer CTA counts too
+    for suf, members in suffixes.items():
+        extra = [
+            aid for aid, cta in cta_by_id.items()
+            if aid not in members and suf and suf in NP.normalize(cta)
+        ]
+        members = sorted(set(members + extra))
+        if len(members) >= min_share:
+            report.findings.append(Finding(
+                kind="cta_repetition", phrase=suf, members=members, blocking=block,
+                detail=f"{len(members)} of {len(parsed)} artifacts close on the same "
+                       f"CTA wording {suf!r} — repeated phrasing, not the gospel "
+                       f"destination. Vary the closing line per artifact.",
+            ))
+
+    # --- opener-family repetition (the "thousand years" hooks) ----------------
+    opener_counts: Counter[str] = Counter()
+    opener_members: dict[str, list[str]] = {}
+    for aid, nar in parsed:
+        for g in _content_ngrams(nar.hook):
+            opener_counts[g] += 1
+            opener_members.setdefault(g, []).append(aid)
+    # openers use a slightly higher floor than CTAs: a shared opening n-gram is
+    # only a "family" at >=3 hooks (cuts incidental 2-of-N noise / alert fatigue).
+    opener_floor = max(min_share, 3)
+    for g, c in opener_counts.items():
+        if c >= opener_floor:
+            report.findings.append(Finding(
+                kind="opener_repetition", phrase=g, members=sorted(opener_members[g]),
+                blocking=block,
+                detail=f"opening phrase {g!r} appears in {c} of {len(parsed)} hooks — "
+                       f"vary the entry point.",
+            ))
+
+    # de-duplicate overlapping opener n-grams: keep the longest per member-set
+    report.findings = _dedupe_openers(report.findings)
+    return report
+
+
+def _dedupe_openers(findings: list[Finding]) -> list[Finding]:
+    openers = [f for f in findings if f.kind == "opener_repetition"]
+    others = [f for f in findings if f.kind != "opener_repetition"]
+    openers.sort(key=lambda f: len(f.phrase.split()), reverse=True)
+    kept: list[Finding] = []
+    for f in openers:
+        if any(f.phrase in k.phrase and set(f.members) <= set(k.members) for k in kept):
+            continue
+        kept.append(f)
+    return others + kept
+```
+
+## pipeline/test_cluster_gate.py
+```python
+"""Acceptance + regression fixtures for the cluster gate (Phase A3).
+
+This is THE gate for the whole hardening effort: it must catch, on the real
+shipped Psalm 22 shorts, the exact repetition that 4 panel rounds + the red-team
+said per-artifact review could never see.
+
+Run: .venv\\Scripts\\python.exe -m pytest pipeline/test_cluster_gate.py -q
+(or just execute this file: it runs the assertions and prints a report.)
+"""
+from __future__ import annotations
+
+from pathlib import Path
+
+from pipeline import cluster_gate as CG
+from pipeline import narration_parse as NP
+
+_REPO = Path(__file__).resolve().parent.parent
+_SHORTS = _REPO / "longform" / "02_Psalm_22_Song_From_The_Cross" / "v1" / "shorts"
+
+
+def _real_shorts() -> list[tuple[str, str]]:
+    paths = sorted(_SHORTS.glob("0*/narration.md"))
+    assert len(paths) == 8, f"expected 8 Psalm 22 shorts, found {len(paths)}"
+    return [(p.parent.name, p.read_text(encoding="utf-8")) for p in paths]
+
+
+def test_parser_fail_closed_on_empty():
+    try:
+        NP.parse("# Title\n\nprose, no speaker blocks\n\n## DEPTH\nledger\n")
+    except NP.EmptyNarrationError:
+        return
+    raise AssertionError("parser did not fail-closed on a no-blocks narration")
+
+
+def test_all_shorts_parse_nonempty():
+    for aid, md in _real_shorts():
+        nar = NP.parse(md)
+        assert nar.spoken_text, f"{aid}: empty spoken text"
+        assert nar.cta, f"{aid}: no CTA"
+        assert nar.hook, f"{aid}: no hook"
+
+
+def test_cta_repetition_flagged_8_of_8():
+    rep = CG.cluster_check(_real_shorts(), within_cluster=True)
+    come = [f for f in rep.findings if f.kind == "cta_repetition" and "come to him" in f.phrase]
+    assert come, "the 'come to him' CTA family was NOT flagged"
+    assert len(come[0].members) == 8, f"expected 8/8, got {len(come[0].members)}"
+    assert come[0].blocking, "within-cluster CTA repetition must be BLOCKING"
+
+
+def test_opener_family_flagged():
+    rep = CG.cluster_check(_real_shorts(), within_cluster=True)
+    ty = [f for f in rep.findings if f.kind == "opener_repetition" and "thousand years" in f.phrase]
+    assert ty, "the 'thousand years' opener family was NOT flagged"
+    assert len(ty[0].members) >= 4, f"expected >=4 shorts, got {len(ty[0].members)}"
+
+
+def test_real_cluster_is_blocked():
+    rep = CG.cluster_check(_real_shorts(), within_cluster=True)
+    assert not rep.passed, "the real 8 shorts should FAIL the cluster gate"
+
+
+def test_synthetic_ninth_come_to_him_regression():
+    """A NEW short closing on 'Come to Him' must be caught — guarantees the same
+    defect can't silently recur."""
+    synth = (
+        "# Synthetic\n\n---\n\n**[narrator]**\nA brand new and totally different hook.\n\n"
+        "**[narrator — KJV, John 3:16]**\n\"For God so loved the world\"\n\n"
+        "**[narrator]**\nA fresh closing thought. Come to Him.\n\n---\n## DEPTH\nledger\n"
+    )
+    arts = _real_shorts() + [("09_synthetic", synth)]
+    rep = CG.cluster_check(arts, within_cluster=True)
+    come = [f for f in rep.findings if f.kind == "cta_repetition" and "come to him" in f.phrase]
+    assert come and "09_synthetic" in come[0].members, "synthetic 9th short not caught"
+
+
+def test_does_not_ban_gospel_destination_across_two_distinct_shorts():
+    """Two shorts that both invite to Jesus but with DIFFERENT wording must NOT be
+    flagged as a CTA repetition — the gate flags repeated phrasing, never the
+    CTA-to-Jesus destination."""
+    a = ("# A\n---\n**[narrator]**\nHook one is unique.\n\n**[narrator]**\n"
+         "So run to the Saviour today.\n---\n## DEPTH\nx\n")
+    b = ("# B\n---\n**[narrator]**\nHook two is also unique.\n\n**[narrator]**\n"
+         "Will you kneel before the risen Lord?\n---\n## DEPTH\nx\n")
+    rep = CG.cluster_check([("a", a), ("b", b)], within_cluster=True)
+    cta = [f for f in rep.findings if f.kind == "cta_repetition"]
+    assert not cta, f"falsely flagged distinct gospel CTAs: {[f.phrase for f in cta]}"
+
+
+if __name__ == "__main__":
+    tests = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
+    passed = 0
+    for t in tests:
+        try:
+            t()
+            print(f"[PASS] {t.__name__}")
+            passed += 1
+        except AssertionError as e:
+            print(f"[FAIL] {t.__name__}: {e}")
+    print(f"\n{passed}/{len(tests)} acceptance + regression tests passed")
+    raise SystemExit(0 if passed == len(tests) else 1)
+```
+
+## Test run output
+```
+[PASS] test_all_shorts_parse_nonempty
+[PASS] test_cta_repetition_flagged_8_of_8
+[PASS] test_does_not_ban_gospel_destination_across_two_distinct_shorts
+[PASS] test_opener_family_flagged
+[PASS] test_parser_fail_closed_on_empty
+[PASS] test_real_cluster_is_blocked
+[PASS] test_synthetic_ninth_come_to_him_regression
+
+7/7 acceptance + regression tests passed
+```
+----- ARTIFACT END -----

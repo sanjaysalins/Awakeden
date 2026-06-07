@@ -1,0 +1,185 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: plan
+
+LENS — judge this PLAN on (be specific, cite the exact step/claim):
+- Feasibility against the real codebase / tools (does it assume things that exist?).
+- Hidden risks, false assumptions, single points of failure.
+- Over-engineering / premature building before the idea is proven.
+- Missing steps, edge cases, or verification gaps.
+- Reuse: does it duplicate tools that already exist instead of reusing them?
+- Cost / spend and whether it's justified.
+
+ADDITIONAL CONTEXT / BRIEF:
+This is PLAN v3 — the convergence round. v1 got 4x REVISE; v2 got 1 PASS + 4 REVISE where all five agreed v1's substantive findings were resolved and the REVISEs were one consistent set of execution gaps. v3 folds those in: (1) a concrete non-bypassable LOCK CHOKEPOINT (cli_lock.py + .locked token; downstream audio refuses without it) replacing 'note in RESUME.md'; (2) ONE verify CLI (cluster is a mode); (3) KJV canon SCOPED to only the verses actually quoted, not full-Bible; (4) exact CTA/hook match never whitelisted; (5) honest 'thousand years' family hook detection + truthful acceptance test; (6) retire veed_io/_extract_spoken.py and rewire to one parser; (7) calibration loop stated INERT (panel_misses has no writer - verified) so the cluster gate is the real guarantee; (8) --type cluster CLI contract + auto catalogue manifest + grok-failure tolerance; (9) B4 range-refs + typographic normalization; (10) honest re-verification cost. YOUR JOB: confirm whether the lock-chokepoint design and scoped-canon truly close the v2 gaps, find any NEW problem, and give a clear go/no-go on implementing v3. Be specific and adversarial; do not rubber-stamp.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block:
+
+VERDICT: PASS | REVISE | FAIL
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# PIPELINE_HARDENING_PLAN.md — verification hardening for narration (long + short)
+
+**Status:** PLAN **v3** — revised after two 5-CLI panel rounds (`independent_review.py --type plan`). v1 → 4× REVISE; v2 → **1 PASS (claude) + 4 REVISE**, where all five agreed the v1 substantive findings were genuinely resolved and the remaining REVISEs were **one consistent set of execution gaps**, not new architecture holes. v3 folds those in. Decided with the user 2026-06-07: build all fixes, **re-verify all locked content**, panel before code, red-team + panel the build.
+
+> **v2 → v3 changes (driven by the panel consensus):**
+> 1. **A concrete, non-bypassable LOCK CHOKEPOINT** replaces "note in RESUME.md." One command (`cli_lock.py`) must pass before any narration is LOCKED or its audio rendered; downstream refuses to run without its `.locked` token. (#1 fix from codex, grok, gemini, cursor.)
+> 2. **One verification CLI**, not two — `verify_narration.py` takes a single artifact OR a set/manifest; the cluster checks are a mode of it, not a separate tool. (gemini.)
+> 3. **KJV canon scoped to ONLY the verses actually used** (driven off the B1 audit), not a full-Bible witnessing project. (claude, gemini, codex, grok consensus.)
+> 4. **Whitelist can never suppress a CTA/hook/closer** — exact full-sentence CTA/hook match always runs first; whitelist applies only to mid-body doctrinal phrases. (cursor, claude, codex.)
+> 5. **Honest hook detection + acceptance test** — exact CTA match (the solid 8× "Come to Him") + "thousand years" *family* anywhere in the opening block (first ~6 tokens misses #04–#07). (cursor, codex.)
+> 6. **Retire `veed_io/_extract_spoken.py`** and rewire all veed_io callers to the new shared parser. (gemini, codex, cursor.)
+> 7. **The calibration learning loop is INERT** (`panel_misses` has no writer; `append_record` has no caller) — stated plainly; the cluster gate is the real guarantee, defect classes are bookkeeping until a writer is wired. (claude, cursor, codex, grok — verified.)
+> 8. **`--type cluster` CLI contract + catalogue discovery specified** (manifest, concat, exit codes, grok-failure tolerance). (cursor, claude, codex, grok.)
+> 9. **B4 handles range-refs + typographic normalization**; **A1 acceptance requires every KJV quote in the 8+2 to ref-map**, not just non-empty. (codex, gemini, grok.)
+> 10. **Re-verification cost stated honestly** — de-templating 8 LOCKED shorts is content rewrite + re-panel, not just "$0–$3 audio." (cursor, grok.)
+
+---
+
+## Context — why this exists
+
+The Psalm 22 short cluster shipped 8 narrations each individually sound but, **as a set**, templated: **8/8 end "Come to Him"**, plus repeated hooks ("a thousand years…"), bridges ("bring you home"), and tags ("That's Jesus"). This is the *cheesy/tired* failure the project most needs to avoid — and it is the **Word of God**, so sloppiness is unacceptable.
+
+Neither the in-engine red-team nor the external 5-CLI panel caught it. The cause is **structural**:
+
+1. **Every check is per-single-artifact.** Each short was reviewed in isolation; no reviewer ever saw all 8 together. `independent_review.py` takes one `artifact`; `LENS_NARRATION` has no cross-artifact concern.
+2. **The engine's gates never ran on this content.** G1–G8, the `_apply_kjv_gate` KJV override, the CTA/landing tests, and the tournament judge all live inside `engine.generate → engine.review`. The 8 shorts and *all* long-form are **hand-authored**, so they bypassed every gate — and **there is no lock step that forces hand-authored content through any check** (`_finalize.py` only renders audio; `handoff.py` only covers engine-generated folders).
+3. **The KJV cache can be corrupt and is trusted blindly.** `data/kjv_cache.json` holds `Psalm 22:7` as `"…they shake the head saying,"` — the 1769 KJV has the comma: `"…they shake the head, saying,"`. `kjv_check` compares quotes **against that same cache**, and **never verifies NT cross-refs** (low-overlap spans fall through to "ignored"). (Acts 8:35 is **clean** in the cache — that earlier incident was an authoring elision in the Isaiah text, not cache corruption.)
+4. **`tired-landing` is intra-artifact only.** No defect class for cross-artifact/catalogue repetition; the banned-closer list is static (banned "Will you trust Him?"; "Come to Him" became the next cliché).
+
+**The two true root causes, in one line each:**
+- **No one is ever forced to look at the set, or the catalogue, before lock** → repetition ships.
+- **Scripture is trusted from a corrupt cache with no independent witness** → silent verbatim errors.
+
+Everything below targets exactly those two, at the scale of 10 series / ~76 catalog shorts + ~12–21 long-forms.
+
+---
+
+## The keystone: a fail-closed LOCK CHOKEPOINT (`cli_lock.py`)
+
+The panel's dominant finding: a standalone CLI nobody is *required* to run reproduces the org failure that shipped this. So the center of the plan is **one non-bypassable lock step** that every narration — engine-generated, hand-authored, short, or long — must pass.
+
+- `cli_lock.py "<narration-folder>"`:
+  1. runs the **deterministic verify tier** (KJV ref-mapped span check, Rule-8 [short-only], anchor-verse, banned/lecture phrases) via the single `verify_narration.py` core;
+  2. runs the **cluster check** against the series + catalogue (the set-level gate);
+  3. on 0 FAIL / 0 unverified, **appends the artifact's phrases to the ledger** and writes a `<folder>/.locked` token (with the commit-ish of the narration text);
+  4. exits **non-zero** on any FAIL/unverified — nothing downstream proceeds.
+- **Downstream refuses without the token:** `per_turn_synth` / `_finalize.py` / the audio + caption render steps check for a current `.locked` matching the narration hash and **abort** if missing or stale. (This is the enforcement v1/v2 lacked.)
+- **Proof obligation:** the 8 Psalm 22 shorts + 2 long-forms must be shown to flow through `cli_lock.py` before any further code is built on top.
+
+This chokepoint is what makes the standing gate real; A2/B/C below are the checks it runs.
+
+---
+
+## Phase A — PROVE THE CATCH FIRST (the actual miss; ~$0)
+
+### A1 — Shared spoken + ref parser (`pipeline/narration_parse.py`), fail-closed, replaces the old extractor
+
+**Problem (verified, all reviewers).** `veed_io/_extract_spoken.py` keeps text only inside `## MOVEMENT` (CLI-only) → returns **empty** on shorts (`**[narrator]**` blocks) → checks pass on nothing.
+
+**Design.** New importable module:
+- `spoken_blocks(md)` → ordered `{speaker, ref|None, text}`, parsing `**[speaker]**` / `**[speaker — KJV, <ref>]**` short blocks AND `## MOVEMENT` long-form sections; strips status front-matter, `## DEPTH & SOURCING`, `## VOICE PLAN`.
+- `quoted_spans_with_refs(md)` → each double-quoted span mapped to its block's tagged ref (the quote→ref map B4 needs). **Handles range refs** (`Psalm 22:6-7`, `Isaiah 53:10-11`) and multiple spans per block.
+- `sentences(text)` → sentence/clause segmentation. **Normalizes** smart quotes/dashes/whitespace.
+- **Fail-closed:** zero spoken blocks → raise; callers ABORT.
+- **Retire `veed_io/_extract_spoken.py`**: delete it and rewire all `veed_io` callers (caption/aligner/timing) to import `narration_parse`, so there is ONE spoken-text source (no caption/verification drift).
+- **Acceptance:** unit test asserts each of the 8 shorts + 2 long-forms parses to non-empty spoken text **and every KJV quote in them is successfully ref-mapped** (unmapped span = test failure, not silent human-check).
+
+### A2 — Cluster / series check (a mode of `verify_narration.py`)
+
+**Deterministic core ($0):**
+- Per artifact extract via A1: **CTA** (last spoken sentence/clause), **hook** (first 1–2 spoken sentences), **opener family** ("thousand years" and similar stems anywhere in the opening block — *not* just first 6 tokens), key **bridges**.
+- **Exact + normalized match** of CTA/hook/opener across the set — the reliable catch (8× "Come to Him"; the "thousand years" hook family).
+- **Whitelist rule (resolves the v2 contradiction):** the exact full-sentence CTA/hook/closer match **always runs and is never whitelisted**. The doctrinal whitelist ("the cross", "Christ", "grace") suppresses only **mid-body** shared-truth phrases in the *near-duplicate* layer — never a closer/opener. So A3 cannot be self-nullified.
+- **Scope:** within-series AND across-catalogue, via a **catalogue manifest** (`data/catalogue_index.json`, auto-built by globbing narration folders) so discovery isn't manual.
+
+**LLM backstop (the family/semantic layer):** `independent_review.py` gains `--type cluster` + `LENS_CLUSTER`. **Contract:** input = a manifest/list of folders; the CLI concatenates **spoken-only** text (via A1) of each into one prompt; verdict is **blocking** (a flagged cluster cannot lock); per-provider failure (e.g. grok) is tolerated as long as ≥3 reviewers return. Output under `_independent_review/<stamp>/` as today.
+
+**Long-form:** same engine across its **movements** (intra-document) + against the catalogue.
+
+### A3 — Acceptance test (gates the whole effort)
+On the 8 real Psalm 22 shorts (in this repo), the deterministic A2 layer **must** flag: the **8× "Come to Him"** family (incl. "come to Him and drink" / "That's Jesus. Come to Him.") and the **"thousand years" hook family**. Committed as a fixture. **The exact-CTA catch is the hard requirement; the hook-family catch is verified against what's actually in the files (≈ #01/#02/#03/#08 strongly, #07 "a king once wrote… a thousand years before"), not an inflated 6/8 claim.** If A2 misses the CTA family, stop and fix A2 before building B/C.
+
+---
+
+## Phase B — KJV integrity (witnessed, scoped to used verses, fail-closed)
+
+### B1 — Audit what's ACTUALLY corrupt now
+`_audit_kjv_cache.py` dry-run lists current divergences (expected: Ps 22:7 comma; **not** Acts 8:35). Decisions follow the real list.
+
+### B2 — A WITNESSED store of ONLY the verses in use (not the whole Bible)
+**Problem (consensus).** A full-Bible witnessing with "human-adjudicate every disagreement" is unworkable (thousands of edition variances) and contradicts "prove cheap first."
+**Design.**
+- Build `data/kjv_verified.json` containing **only the refs actually quoted in shipped + planned narrations** (driven off A1's quote→ref map + B1).
+- For each such verse: take **one named, vetted public-domain Cambridge-1769 structured dataset** as baseline (named + pinned in metadata), **spot-check it against a second independent source** and a trusted printed reference for the **known-hard cases** (Ps 22:7 comma, Matt 8:27 "!"); record the witness in metadata. No blanket full-Bible reconciliation.
+- New verses entering a narration are witnessed on demand by the same step — bounded, incremental.
+
+### B3 — True fail-closed (no fallback)
+- Lock eligibility requires the quote's ref to be in `data/kjv_verified.json`. **bible-api is not a fallback for lock** — API text is marked **unverified** and **cannot satisfy a lock**. Unverifiable quote → **BLOCK** (not a soft WARN).
+- `scripture.fetch_kjv` may still use the cache for *non-lock* engine context, but `cli_lock.py` only trusts the witnessed store.
+
+### B4 — Ref-mapped, contiguous-substring check (interior elision + LXX-safe + ranges + normalization)
+- Verify each quoted span as a **contiguous substring of its own tagged verse** (range refs joined across verse boundaries) in the witnessed store — catches **interior word omission**; **NT quotes checked against the NT verse**, never the Masoretic OT verse (no LXX false-fail).
+- **Interior** punctuation must match; **boundary** ellipsis (`…`) allowed; **normalize** smart quotes/dashes/whitespace before compare (gemini). KJV italics handled by the chosen dataset's convention, documented.
+- Threaded into `verify_narration.py` (the hand-authored path), not only `engine.review`.
+
+---
+
+## Phase C — catalogue memory (post-gen flagging) + honest learning status
+
+### C1 — `verify_narration.py` (the one verify CLI; single artifact OR set)
+Deterministic checks (A1 + B4): KJV span check; **Rule-8 short-only**; **anchor-verse-quoted** (ref resolved from the narration's own header tag); banned/lecture-phrase (reuse the existing `lecture-phrasing` banned list — do not re-invent). LLM tier = `LENS_NARRATION` on **raw prose** (no five-beat coercion of hand-authored content; no `Draft`/`Beat` adapter → no false G5). Cluster mode (A2) runs when given a set. Deterministic tier is always-on/free; LLM tier on demand. Consolidate quote logic in `kjv_check` (no parallel `quote_rules.py`).
+
+### C2 — Dynamic phrase ledger (post-generation flagging only)
+- `data/learning/phrase_ledger.jsonl` (`{episode, series, hook, cta, opener, key_phrases[]}`), appended **by `cli_lock.py`** (the single chokepoint — solves the "where does append happen" gap). **Backfill** the 8 shorts + 2 long-forms via the chokepoint now.
+- Used for **post-generation flagging** in A2/C1 (a new artifact's hook/CTA/opener checked against the catalogue) — **not** injected as a banned-wall into generation. Optionally a small bounded "recently-used closers" hint to a human author.
+- **HONEST STATUS:** the calibration loop is currently **inert** — `panel_misses` has no writer and `learning.append_record` has no caller (verified). The **cluster gate (A2) is the real guarantee.** Adding `cluster-repetition` / `catalogue-phrase-reuse` to `defect_classes.json` is **bookkeeping only** unless we also wire a writer; treat wiring the writer as an optional, separate follow-up, not a dependency of this plan.
+
+### C3 — Regression test
+Synthetic 9th short ending "Come to Him" **MUST FAIL** `cli_lock.py` (within-series AND cross-series). The guarantee the same defect can't recur.
+
+---
+
+## Phase D — DEFERRED (only if a real defect logs)
+- **Conviction-strength bar** — engine already gates it (`engine.py:674` G3 "pierces"; `:679` G8(3) "actually PIERCES"). Only the external `LENS_NARRATION`/`verify_narration` could *score* it; add **iff** a `flat-conviction` defect actually appears.
+- **`pacing-atempo` re-validation** after any text edit (a CTA rewrite can push a short over 60s).
+
+---
+
+## Re-verification of all locked content (after A–C + the chokepoint exist)
+1. **B1 audit** over every quoted span in the 8 shorts + 2 long-forms → repair real divergences (Ps 22:7 etc.).
+2. **A2 cluster gate** on the 8 shorts (+ long-form movements) → de-template hooks + CTAs so no two land the same. **This is a content rewrite of 8 LOCKED shorts**, each then re-run through red-team + 5-CLI panel — real authoring + review time, not just audio.
+3. **C1 deterministic tier** (free) on all 10 → fix any FAIL.
+4. Re-lock each via `cli_lock.py`.
+5. **Audio/caption/timing re-validation:** a fixed **short** re-renders only that short (~$0–$3 ElevenLabs). A fixed **long-form** also invalidates captions + word-timings (+ possibly rendered video) — budget and re-run (`veed_io` recaption, `_retime.py`).
+
+## Verification — how to test the build
+- **A1:** the 8 shorts + 2 longs parse to non-empty spoken text AND every KJV quote ref-maps; garbage md raises.
+- **A2 (acceptance):** flags 8× "Come to Him" family + the "thousand years" hook family on the real shorts. **Gate for the whole effort.**
+- **B:** Ps 22:7 (comma required), Matt 8:27 ("!" not "?"), an interior-elision span, an NT-of-OT quote (checked vs the NT verse), a boundary ellipsis (PASS), a smart-quote variant (PASS after normalization); unverifiable ref **blocks** lock.
+- **C1:** Rule-8 fires on a 3-quote short, NOT on a long-form; paraphrased anchor flags; clean narration passes.
+- **Chokepoint:** the 8 shorts flow through `cli_lock.py`; downstream audio render refuses without a current `.locked` token.
+- **C3:** synthetic "Come to Him" short FAILs within-series and cross-series.
+
+## Cost (tiered, honest)
+Deterministic layers + the witnessed-verses store (scoped, not full-Bible) are **$0/offline**. LLM tiers run via local CLIs (panel) / agent-bridge (engine) — no metered API, but agent-bridge is human-babysat, not unattended batch. The biggest real cost is **re-verification**: rewriting 8 LOCKED shorts' hooks/CTAs + re-paneling them (authoring + review time), plus per-short audio (~$0–$3) and any long-form caption/timing re-runs. I quote metered spend before running it.
+
+## Sequencing
+**Chokepoint skeleton + A (parser → cluster check → acceptance test) → prove A3 on the real 8 → B (audit → witnessed used-verses store → fail-closed → ref-mapped check) → C (one verify CLI → ledger+backfill via chokepoint → regression) → D (deferred).** A3 must pass before B/C.
+
+## Review discipline
+- **This plan:** v1 → REVISE; v2 → PASS+REVISE; **v3** folds the convergent v2 fixes. One optional confirm-panel on v3, else build.
+- **The implementation:** red-team **+** 5-CLI panel before done; re-verified narrations re-lock through the same gauntlet.
+
+## Deliberately NOT doing
+- No duplication of `narration_pipeline.py` / `per_turn_synth.py` / `image_to_kling.py`.
+- No change to locked doctrine, Gospel Five-Beat, or the CTA-to-Jesus model.
+- No auto-rewrite of locked narrations — flag; the user approves each rewrite.
+- No model-ID switches; no forcing hand-authored/long-form into five-beat gates; no full-Bible canon build.
+----- ARTIFACT END -----

@@ -25,7 +25,7 @@
 ---
 
 **[narrator]**
-A king once wrote a death so vivid it reads like a report from a crucifixion — a thousand years before Rome ever raised a cross.
+A king described a dying body so exactly it reads like an eyewitness account of a crucifixion he never saw.
 
 **[narrator]**
 Psalm twenty-two. David wrote it in the first person, but he was describing someone else's death, not his own. Watch the body of the dying man:
@@ -46,7 +46,7 @@ He could count every bone, stretched and exposed, while onlookers stood and star
 David never saw a crucifixion. Rome would not make it its instrument for centuries. Yet the dying man of his song bears the marks of one — written early.
 
 **[narrator]**
-This is what Jesus bore to bring you home — every wrenched joint, every cold stare. He endured all of it, willingly, for you. Come to Him.
+This is what Jesus bore to bring you home — every wrenched joint, every cold stare, recorded centuries early so you'd know none of it was chance. He was crushed in your place.
 
 ---
 

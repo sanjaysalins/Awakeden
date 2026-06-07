@@ -1,0 +1,463 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: plan
+
+LENS — judge this PLAN on (be specific, cite the exact step/claim):
+- Feasibility against the real codebase / tools (does it assume things that exist?).
+- Hidden risks, false assumptions, single points of failure.
+- Over-engineering / premature building before the idea is proven.
+- Missing steps, edge cases, or verification gaps.
+- Reuse: does it duplicate tools that already exist instead of reusing them?
+- Cost / spend and whether it's justified.
+
+ADDITIONAL CONTEXT / BRIEF:
+CODE REVIEW of Phase C: the fail-closed LOCK chokepoint (pipeline/lock.py + cli_lock.py + a guard wired into handoff.run_audio_pipeline, with the engine generate->audio path exempted via enforce_lock=False). cli_lock runs KJV-strict + Rule-8(short-only) + cluster check vs siblings; on pass writes .locked (sha256 of normalized spoken text from narration-tagged.md) + registers (registry rebuilt from on-disk .locked folders). require_lock() raises unless a current matching .locked exists. Verified: templated Psalm 22 short BLOCKED; clean folder LOCKS; edit busts the lock (stale); guard refuses unlocked; 7/7 tests + A/B suites green. ADVERSARIAL REVIEW: (1) Is it truly non-bypassable for the hand-authored content, or are there OTHER entry points (cli_assemble, orchestrator reusing an existing narration.mp3, veed_io caption, _fix*.py, direct per_turn_synth) that render audio/captions WITHOUT calling require_lock? (2) Does the .locked hash truly bind what gets rendered — synth consumes narration-tagged.md; if narration.md passes cluster/KJV but narration-tagged.md differs, can a mismatch render? spoken_hash prefers narration-tagged.md but run_lock's KJV/cluster checks read narration.md — is that a split-brain hole? (3) registry rebuild-from-disk: race/atomicity, does an in-flight batch of rewritten shorts get compared against each other or only prior locks? (4) is the engine enforce_lock=False exemption a real bypass of the stated goal? (5) any false-lock (writes .locked when it shouldn't) or crash. Be specific, line-level, FALSE-PASS/bypass first. Clear go/no-go.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block:
+
+VERDICT: PASS | REVISE | FAIL
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# Phase C — the fail-closed LOCK chokepoint (code for review)
+
+Context: 4 panel rounds said a standalone gate nobody is REQUIRED to run repeats the org failure.
+Phase C adds cli_lock.py: runs KJV-strict (B) + Rule-8 (short-only) + the cross-artifact cluster
+check (A) vs siblings; on 0 blocking it writes <folder>/.locked (hash of the SPOKEN text in
+narration-tagged.md, what synth consumes) + registers (rebuild-from-disk). require_lock() is the
+guard wired into handoff.run_audio_pipeline so audio cannot render for unlocked/stale text.
+The engine generate->audio path passes enforce_lock=False (different narration format; reconciliation
+is a documented follow-up); hand-authored long/short content is enforced. Override JITB_REQUIRE_LOCK=0.
+
+Verified: a templated Psalm 22 short is BLOCKED (8/8 'come to him'); a clean folder LOCKS; editing
+spoken text busts the lock (stale); the guard refuses unlocked audio; Rule-8 fires on a 3-quote
+short but NOT a long-form. 7/7 Phase C tests + A/B suites green.
+
+REVIEW for: bypass holes (entry points that render audio/captions WITHOUT the guard), hash-binding
+gaps (does .locked truly bind what synth renders?), registry rebuild correctness, the engine
+enforce_lock=False exemption, cross-repo/format assumptions, and any false-lock or false-block.
+
+## pipeline/lock.py
+```python
+"""The fail-closed LOCK chokepoint (Phase C).
+
+A standalone CLI that nobody is *required* to run reproduces the org failure that
+shipped the templated Psalm 22 cluster. So this is the one gate every narration —
+engine-generated or hand-authored, short or long — must pass before it is locked
+or its audio is rendered:
+
+  run_lock(folder)  →  deterministic KJV-strict (Phase B) + Rule-8 (short-only) +
+                       anchor-verse + cross-artifact cluster check (Phase A) vs the
+                       folder's siblings + the catalogue. On 0 FAIL / 0 unverified
+                       it writes <folder>/.locked (hash of the SPOKEN text actually
+                       rendered) and registers the artifact. Otherwise it refuses.
+
+  is_locked(folder) →  True only if .locked exists AND its hash matches the current
+                       spoken text (a re-tag / edit staleness-busts the lock).
+
+  require_lock(folder) is the guard `handoff.run_audio_pipeline` calls so audio is
+  never rendered for unlocked/stale text (the enforcement the standalone CLI lacked).
+
+The `.locked` hash binds `narration-tagged.md` when present (what synth actually
+consumes), else `narration.md` — so a stale tagged file can't be certified.
+"""
+from __future__ import annotations
+
+import hashlib
+import json
+import os
+from pathlib import Path
+
+from pipeline import cluster_gate, kjv_strict
+from pipeline import narration_parse as NP
+
+_REPO = Path(__file__).resolve().parent.parent
+_REGISTRY = _REPO / "data" / "learning" / "freshness_registry.json"
+
+
+def require_lock_enabled() -> bool:
+    return os.getenv("JITB_REQUIRE_LOCK", "1") not in ("0", "false", "no")
+
+
+# ---- spoken-text hash (binds what is rendered) -------------------------------
+def _spoken_source(folder: Path) -> Path | None:
+    for name in ("narration-tagged.md", "narration.md"):
+        p = folder / name
+        if p.is_file():
+            return p
+    return None
+
+
+def spoken_hash(folder: Path) -> str:
+    p = _spoken_source(folder)
+    if p is None:
+        raise FileNotFoundError(f"no narration(-tagged).md in {folder}")
+    nar = NP.parse(p.read_text(encoding="utf-8"))  # fail-closed on empty
+    canon = " ".join(NP.normalize(b.text) for b in nar.blocks if b.text)
+    return hashlib.sha256(canon.encode("utf-8")).hexdigest()
+
+
+def is_locked(folder: Path) -> tuple[bool, str]:
+    lk = folder / ".locked"
+    if not lk.is_file():
+        return (False, "no .locked token")
+    try:
+        data = json.loads(lk.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return (False, ".locked is unreadable")
+    try:
+        cur = spoken_hash(folder)
+    except Exception as e:  # noqa
+        return (False, f"cannot hash spoken text: {e}")
+    if data.get("spoken_sha256") != cur:
+        return (False, "stale: spoken text changed since lock — re-run cli_lock")
+    return (True, "locked")
+
+
+def require_lock(folder: Path) -> None:
+    """Raise unless `folder` holds a current lock (the enforcement guard)."""
+    if not require_lock_enabled():
+        return
+    ok, why = is_locked(folder)
+    if not ok:
+        raise PermissionError(
+            f"REFUSING to proceed: {folder.name} is not locked ({why}). "
+            f"Run:  .venv\\Scripts\\python.exe cli_lock.py \"{folder}\"  first. "
+            f"(set JITB_REQUIRE_LOCK=0 to override — discouraged.)"
+        )
+
+
+# ---- the checks --------------------------------------------------------------
+def _kjv_findings(md: str) -> list[str]:
+    out = []
+    for f in kjv_strict.verify_narration(md):
+        if f.get("blocking"):
+            out.append(f"KJV {f['status']}: {f['detail']}")
+    return out
+
+
+def _rule8_findings(md: str, form: str) -> list[str]:
+    if form != "short":
+        return []
+    spans = [s for s in NP.quoted_spans_with_refs(md) if s["klass"] in ("tagged_kjv", "inline_kjv")]
+    if len(spans) > 2:
+        return [f"Rule-8: {len(spans)} KJV quote spans (>2) — a 60s short can't pace that many"]
+    return []
+
+
+def _anchor_findings(folder: Path, md: str) -> list[str]:
+    """Best-effort: if a primary ref is discoverable, it should be quoted somewhere."""
+    # the narration header may name a primary ref; if none discoverable, skip (advisory only)
+    return []  # advisory-only in Phase C; tightened when a manifest schema exists
+
+
+def _sibling_folders(folder: Path) -> list[Path]:
+    parent = folder.parent
+    return sorted(
+        d for d in parent.iterdir()
+        if d.is_dir() and d != folder and (d / "narration.md").is_file()
+    )
+
+
+def run_lock(folder: Path, *, form: str = "short", check_cluster: bool = True) -> dict:
+    """Run all lock checks. Writes .locked + registers on pass. Returns a report."""
+    md_path = folder / "narration.md"
+    if not md_path.is_file():
+        return {"ok": False, "folder": folder.name, "blocking": ["no narration.md"]}
+    md = md_path.read_text(encoding="utf-8")
+
+    blocking: list[str] = []
+    try:
+        blocking += _kjv_findings(md)
+    except NP.EmptyNarrationError as e:
+        return {"ok": False, "folder": folder.name, "blocking": [f"parse: {e}"]}
+    blocking += _rule8_findings(md, form)
+    blocking += _anchor_findings(folder, md)
+
+    cluster_block: list[str] = []
+    if check_cluster:
+        sibs = _sibling_folders(folder)
+        if sibs:
+            arts = [(folder.name, md)] + [(s.name, (s / "narration.md").read_text(encoding="utf-8")) for s in sibs]
+            rep = cluster_gate.cluster_check(arts, within_cluster=True)
+            for f in rep.blocking:
+                if folder.name in f.members:
+                    cluster_block.append(f"cluster {f.kind}: {f.phrase!r} shared with {sorted(set(f.members)-{folder.name})}")
+    blocking += cluster_block
+
+    ok = not blocking
+    if ok:
+        write_lock(folder)
+        register(folder, form=form)
+    return {"ok": ok, "folder": folder.name, "blocking": blocking}
+
+
+def write_lock(folder: Path) -> None:
+    (folder / ".locked").write_text(
+        json.dumps({"version": 1, "spoken_sha256": spoken_hash(folder)}, indent=2),
+        encoding="utf-8",
+    )
+
+
+# ---- registry (rebuild-from-disk authority) ----------------------------------
+def register(folder: Path, *, form: str = "short") -> None:
+    """Append/refresh this artifact in the freshness registry (rebuilt from disk,
+    so a rewrite/delete never leaves a phantom)."""
+    reg = rebuild_registry()
+    nar = NP.parse((folder / "narration.md").read_text(encoding="utf-8"))
+    reg[str(folder)] = {"folder": folder.name, "form": form,
+                        "hook": nar.hook, "cta": nar.cta}
+    _REGISTRY.parent.mkdir(parents=True, exist_ok=True)
+    _REGISTRY.write_text(json.dumps(reg, indent=2, ensure_ascii=False), encoding="utf-8")
+
+
+def rebuild_registry() -> dict:
+    """Authority = the set of on-disk .locked folders (no append-only phantoms)."""
+    reg: dict = {}
+    for lk in _REPO.glob("longform/**/.locked"):
+        folder = lk.parent
+        md = folder / "narration.md"
+        if not md.is_file():
+            continue
+        try:
+            nar = NP.parse(md.read_text(encoding="utf-8"))
+        except NP.EmptyNarrationError:
+            continue
+        reg[str(folder)] = {"folder": folder.name, "hook": nar.hook, "cta": nar.cta}
+    return reg
+```
+
+## cli_lock.py
+```python
+"""cli_lock.py — the fail-closed lock chokepoint.
+
+Every narration folder must pass this before it is locked or its audio rendered.
+Runs KJV-strict (Phase B) + Rule-8 (short) + the cross-artifact cluster check
+(Phase A) vs its siblings; on 0 blocking findings it writes <folder>/.locked
+(bound to the spoken text) and registers the artifact. Exits non-zero on any
+blocking finding.
+
+  .venv\\Scripts\\python.exe cli_lock.py "<narration-folder>"
+  .venv\\Scripts\\python.exe cli_lock.py "<folder>" --form long
+  .venv\\Scripts\\python.exe cli_lock.py "<folder>" --no-cluster
+  .venv\\Scripts\\python.exe cli_lock.py "<folder>" --status     # just report lock state
+"""
+from __future__ import annotations
+
+import argparse
+import sys
+from pathlib import Path
+
+from pipeline import lock as L
+
+
+def main(argv: list[str]) -> int:
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("folder")
+    ap.add_argument("--form", choices=["short", "long"], default="short")
+    ap.add_argument("--no-cluster", action="store_true", help="skip the cross-artifact cluster check")
+    ap.add_argument("--status", action="store_true", help="report lock state only; make no changes")
+    args = ap.parse_args(argv)
+
+    folder = Path(args.folder).resolve()
+    if not folder.is_dir():
+        print(f"not a folder: {folder}", file=sys.stderr)
+        return 2
+
+    if args.status:
+        ok, why = L.is_locked(folder)
+        print(f"[{'LOCKED' if ok else 'UNLOCKED'}] {folder.name} — {why}")
+        return 0 if ok else 1
+
+    rep = L.run_lock(folder, form=args.form, check_cluster=not args.no_cluster)
+    if rep["ok"]:
+        print(f"[LOCKED] {rep['folder']} — all checks passed; wrote .locked + registered.")
+        return 0
+    print(f"[BLOCKED] {rep['folder']} — {len(rep['blocking'])} blocking finding(s):")
+    for b in rep["blocking"]:
+        print(f"  - {b}")
+    print("\nFix the findings (de-template / correct the KJV) and re-run cli_lock.")
+    return 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main(sys.argv[1:]))
+```
+
+## handoff.run_audio_pipeline (guard wiring — excerpt)
+```python
+def run_audio_pipeline(v1_folder: Path, *, enforce_lock: bool = True) -> int:
+    """Drive the audio pipeline. In SHORTS_MODE (default) this runs the three
+    Anthropic stages then the duration-locked per_turn_synth (PLAYBOOK_shorts);
+    otherwise it runs the natural-length narration_pipeline.py in one shot.
+    Returns 0 on success.
+    """
+    # Lock chokepoint: refuse to render audio for an unlocked / stale narration
+    # (the enforcement the standalone gate lacked). The engine generate->audio path
+    # passes enforce_lock=False pending narration-format reconciliation; hand-authored
+    # / cli_pipeline paths enforce by default. Override: JITB_REQUIRE_LOCK=0.
+    if enforce_lock:
+        try:
+            from pipeline import lock as _lock
+            _lock.require_lock(Path(v1_folder))
+        except PermissionError as e:
+            print(f"  [audio] {e}")
+            return 1
+
+    py = config.NARRATION_PYTHON
+    pipeline = config.NARRATION_PIPELINE_SCRIPT
+    if not pipeline.exists():
+        print(f"  [audio] SKIPPED — pipeline script not found at {pipeline}")
+        print(f"          Set NARRATION_PROJECT_DIR or run it yourself on:\n          {v1_folder}")
+        return 1
+
+    if not config.SHORTS_MODE:
+        return _run([py, str(pipeline), str(v1_folder)])
+
+    # --- Shorts path: verify -> tag -> audit, then duration-locked synth ---
+    synth = config.PER_TURN_SYNTH_SCRIPT
+    if not synth.exists():
+        print(f"  [audio] SKIPPED — per_turn_synth not found at {synth}")
+```
+## runner.py (engine path exemption — excerpt)
+```python
+    elif run_audio:
+        mode = (
+            f"Shorts ~{config.SHORTS_TARGET_SECONDS:.0f}s"
+            if config.SHORTS_MODE
+            else "natural-length"
+        )
+        log(f"\n--- Audio pipeline ({mode}) ---")
+        # engine path is exempt from the lock guard pending narration-format
+        # reconciliation; hand-authored long/short content is enforced via cli_lock.
+        code = handoff.run_audio_pipeline(folder, enforce_lock=False)
+```
+## pipeline/test_lock.py
+```python
+"""Phase C — lock chokepoint tests.
+
+Run: .venv\\Scripts\\python.exe -m pipeline.test_lock
+"""
+from __future__ import annotations
+
+import tempfile
+from pathlib import Path
+
+from pipeline import lock as L
+
+_SHORTS = (Path(__file__).resolve().parent.parent
+           / "longform" / "02_Psalm_22_Song_From_The_Cross" / "v1" / "shorts")
+
+
+def _mk(spoken_hook: str, cta: str, *, quote='"The LORD is my shepherd; I shall not want."',
+        ref="Psalm 23:1") -> Path:
+    d = Path(tempfile.mkdtemp()) / "short"
+    d.mkdir()
+    (d / "narration.md").write_text(
+        f"# T\n---\n**[narrator]**\n{spoken_hook}\n\n"
+        f"**[narrator — KJV, {ref}]**\n{quote}\n\n**[narrator]**\n{cta}\n\n---\n## DEPTH\nx\n",
+        encoding="utf-8")
+    return d
+
+
+def test_templated_short_is_blocked_by_cluster():
+    folder = _SHORTS / "01_The_Crucifixion_Foretold"
+    rep = L.run_lock(folder, form="short", check_cluster=True)
+    assert not rep["ok"], "a templated short must NOT lock"
+    assert any("cta_repetition" in b for b in rep["blocking"]), rep["blocking"]
+    assert not (folder / ".locked").exists(), "must not write .locked on failure"
+
+
+def test_clean_folder_locks_and_registers():
+    d = _mk("A wholly unique opening about a quiet dawn.", "Rest in His care this hour.")
+    rep = L.run_lock(d, form="short", check_cluster=True)
+    assert rep["ok"], rep["blocking"]
+    assert (d / ".locked").is_file()
+    ok, _ = L.is_locked(d)
+    assert ok
+
+
+def test_stale_lock_detected_on_edit():
+    d = _mk("Another unique opening, this time at dusk.", "Turn to Him tonight, friend.")
+    L.run_lock(d, form="short")
+    md = d / "narration.md"
+    md.write_text(md.read_text(encoding="utf-8").replace("dusk", "dawn"), encoding="utf-8")
+    ok, why = L.is_locked(d)
+    assert not ok and "stale" in why, why
+
+
+def test_require_lock_refuses_unlocked():
+    d = _mk("Unlocked unique opening here.", "A distinct closing for this one.")
+    try:
+        L.require_lock(d)
+    except PermissionError:
+        return
+    raise AssertionError("require_lock did not refuse an unlocked folder")
+
+
+def test_kjv_misquote_blocks_lock():
+    # altered KJV word must block the lock
+    d = _mk("Unique opening for the misquote case.", "A distinct close here.",
+            quote='"The LORD is my shepherd; I shall not lack."')  # 'lack' != KJV 'want'
+    rep = L.run_lock(d, form="short", check_cluster=False)
+    assert not rep["ok"] and any("KJV" in b for b in rep["blocking"]), rep["blocking"]
+
+
+def test_rule8_too_many_quotes_blocks_short():
+    d = Path(tempfile.mkdtemp()) / "s"
+    d.mkdir()
+    (d / "narration.md").write_text(
+        '# T\n---\n**[narrator]**\nUnique opener.\n\n'
+        '**[narrator — KJV, Psalm 23:1]**\n"The LORD is my shepherd; I shall not want."\n\n'
+        '**[narrator — KJV, Psalm 23:2]**\n"He maketh me to lie down in green pastures."\n\n'
+        '**[narrator — KJV, Psalm 23:3]**\n"He restoreth my soul."\n\n'
+        '**[narrator]**\nA distinct close.\n\n---\n## DEPTH\nx\n', encoding="utf-8")
+    rep = L.run_lock(d, form="short", check_cluster=False)
+    assert not rep["ok"] and any("Rule-8" in b for b in rep["blocking"]), rep["blocking"]
+
+
+def test_long_form_not_rule8_blocked():
+    # same 3 quotes are fine for a long-form (Rule-8 is short-only)
+    d = Path(tempfile.mkdtemp()) / "l"
+    d.mkdir()
+    (d / "narration.md").write_text(
+        '# T\n---\n**[narrator]**\nUnique opener.\n\n'
+        '**[narrator — KJV, Psalm 23:1]**\n"The LORD is my shepherd; I shall not want."\n\n'
+        '**[narrator — KJV, Psalm 23:2]**\n"He maketh me to lie down in green pastures."\n\n'
+        '**[narrator — KJV, Psalm 23:3]**\n"He restoreth my soul."\n\n'
+        '**[narrator]**\nA distinct close.\n\n---\n## DEPTH\nx\n', encoding="utf-8")
+    rep = L.run_lock(d, form="long", check_cluster=False)
+    assert not any("Rule-8" in b for b in rep["blocking"]), rep["blocking"]
+
+
+if __name__ == "__main__":
+    tests = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
+    passed = 0
+    for t in tests:
+        try:
+            t(); print(f"[PASS] {t.__name__}"); passed += 1
+        except AssertionError as e:
+            print(f"[FAIL] {t.__name__}: {e}")
+        except Exception as e:  # noqa
+            print(f"[ERROR] {t.__name__}: {type(e).__name__}: {e}")
+    print(f"\n{passed}/{len(tests)} tests passed")
+    raise SystemExit(0 if passed == len(tests) else 1)
+```
+## Test output
+```
+[PASS] test_clean_folder_locks_and_registers
+[PASS] test_kjv_misquote_blocks_lock
+[PASS] test_long_form_not_rule8_blocked
+[PASS] test_require_lock_refuses_unlocked
+[PASS] test_rule8_too_many_quotes_blocks_short
+[PASS] test_stale_lock_detected_on_edit
+[PASS] test_templated_short_is_blocked_by_cluster
+
+7/7 tests passed
+```
+----- ARTIFACT END -----

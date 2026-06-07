@@ -132,10 +132,18 @@ def run_one(name: str, prompt: str, outdir: Path) -> tuple[str, bool, str, float
     else:
         stdin_payload = full
     cmd = build_cmd(exe, args)
+    # SPEND FIX: strip metered API keys from the reviewer subprocess so each CLI uses
+    # its (free) SUBSCRIPTION login — e.g. `claude` -> Max plan, `gemini` -> oauth —
+    # instead of billing ANTHROPIC_API_KEY / GEMINI_API_KEY. Set JITB_PANEL_USE_API=1
+    # to keep the keys (metered) if a CLI has no subscription fallback.
+    sub_env = dict(os.environ)
+    if os.getenv("JITB_PANEL_USE_API", "0") not in ("1", "true", "yes"):
+        for k in ("ANTHROPIC_API_KEY", "GEMINI_API_KEY", "GOOGLE_API_KEY", "OPENAI_API_KEY"):
+            sub_env.pop(k, None)
     t = time.monotonic()
     try:
         r = subprocess.run(
-            cmd, input=stdin_payload, capture_output=True, text=True,
+            cmd, input=stdin_payload, capture_output=True, text=True, env=sub_env,
             encoding="utf-8", errors="replace", timeout=cfg["timeout"],
             stdin=None if stdin_payload is not None else subprocess.DEVNULL,
         )
@@ -158,7 +166,14 @@ def main() -> int:
     ap.add_argument("--type", dest="kind", choices=["narration", "plan"], required=True)
     ap.add_argument("--providers", default="cursor,claude,gemini,codex,grok")
     ap.add_argument("--context", default="", help="extra brief, or a path to one")
+    ap.add_argument("--red-team", dest="red_team", action="store_true",
+                    help="adversarial RED-TEAM via a NON-Claude subscription CLI "
+                         "(default codex) — independent of the Claude main loop, no metered API. "
+                         "Override the model with --providers.")
     args = ap.parse_args()
+
+    if args.red_team and args.providers == "cursor,claude,gemini,codex,grok":
+        args.providers = os.getenv("JITB_REDTEAM_PROVIDER", "codex")  # non-Claude, subscription
 
     art = Path(args.artifact)
     if not art.is_file():
@@ -172,6 +187,11 @@ def main() -> int:
     ctx_block = f"\nADDITIONAL CONTEXT / BRIEF:\n{ctx}\n" if ctx else ""
 
     lens = LENS_NARRATION if args.kind == "narration" else LENS_PLAN
+    if args.red_team:
+        lens = ("RED-TEAM LENS — you are a HOSTILE adversary. Assume it is flawed and PROVE it. "
+                "Hunt doctrinal error, Scripture misquote/overclaim, cheesy/tired lines, and anything "
+                "that would embarrass a careful pastor. Default to REVISE/FAIL unless it is clearly clean.\n\n"
+                + lens)
     prompt = REVIEW_TEMPLATE.format(kind=args.kind, lens=lens, context=ctx_block,
                                     artifact=artifact_text)
 

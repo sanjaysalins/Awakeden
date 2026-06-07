@@ -226,12 +226,24 @@ def _run(cmd: list[str]) -> int:
         return 1
 
 
-def run_audio_pipeline(v1_folder: Path) -> int:
+def run_audio_pipeline(v1_folder: Path, *, enforce_lock: bool = True) -> int:
     """Drive the audio pipeline. In SHORTS_MODE (default) this runs the three
     Anthropic stages then the duration-locked per_turn_synth (PLAYBOOK_shorts);
     otherwise it runs the natural-length narration_pipeline.py in one shot.
     Returns 0 on success.
     """
+    # Lock chokepoint: refuse to render audio for an unlocked / stale narration
+    # (the enforcement the standalone gate lacked). The engine generate->audio path
+    # passes enforce_lock=False pending narration-format reconciliation; hand-authored
+    # / cli_pipeline paths enforce by default. Override: JITB_REQUIRE_LOCK=0.
+    if enforce_lock:
+        try:
+            from pipeline import lock as _lock
+            _lock.require_lock(Path(v1_folder))
+        except PermissionError as e:
+            print(f"  [audio] {e}")
+            return 1
+
     py = config.NARRATION_PYTHON
     pipeline = config.NARRATION_PIPELINE_SCRIPT
     if not pipeline.exists():

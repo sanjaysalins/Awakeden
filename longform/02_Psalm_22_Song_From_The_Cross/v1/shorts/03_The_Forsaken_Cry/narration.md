@@ -19,7 +19,7 @@
 ---
 
 **[narrator]**
-The most desolate words Jesus ever spoke, He didn't invent — He was quoting a song written a thousand years before the cross.
+The loneliest sentence Jesus ever spoke wasn't His own line — He was quoting.
 
 **[narrator]**
 Psalm twenty-two opens in the voice of a forsaken man. David wrote it; Jesus made it His own.
@@ -43,7 +43,7 @@ The very same words.
 This was no cry of lost faith — even forsaken, He still calls God "my God." It was the sinless Son taking our place, and bearing the forsaking that our sin deserved.
 
 **[narrator]**
-He was forsaken — so that you never will be. He went into that dark to bring you home, to a Father who will never let you go. That's Jesus. Come to Him.
+He was forsaken so that you never will be. However far you've run, the way home is open — and He opened it from the dark.
 
 ---
 

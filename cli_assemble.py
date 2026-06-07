@@ -62,6 +62,13 @@ def main() -> int:
         raise SystemExit(f"v1 folder does not exist: {args.v1_folder}")
     if not (args.v1_folder / "narration.mp3").exists():
         raise SystemExit(f"No narration.mp3 under {args.v1_folder}. Run the audio stage first.")
+    from pipeline import lock as _lock
+    ok, why = _lock.is_locked(args.v1_folder)
+    if _lock.require_lock_enabled() and not ok:
+        raise SystemExit(
+            f"REFUSING to assemble: {args.v1_folder.name} is not locked ({why}).\n"
+            f"  Run:  .venv\\Scripts\\python.exe cli_lock.py \"{args.v1_folder}\"  first.\n"
+            f"  (set JITB_REQUIRE_LOCK=0 to override — discouraged.)")
     config.require_api_key()
 
     clips_arg = args.clips.strip().lower()

@@ -24,7 +24,7 @@
 ---
 
 **[narrator]**
-Psalm twenty-two is the psalm Jesus quoted from the cross. Most people stop reading it there — and miss where it actually ends.
+Most people stop reading Psalm twenty-two at the cross. Keep going — it doesn't end in a grave.
 
 **[narrator]**
 But the cry doesn't stay forsaken. Later, the psalm turns — the same voice moves from anguish to praise:
@@ -45,7 +45,7 @@ And hear what He calls us. Hebrews says He is —
 — brothers. Family.
 
 **[narrator]**
-The same Jesus who cried out forsaken now lives — not ashamed to call all who come to Him His own. That's where it all lands: not a grave, but a family. Come to Him.
+The same Jesus who cried out forsaken now lives — and the risen Christ is not ashamed to call His own brethren. He is calling you into that family.
 
 ---
 

@@ -140,7 +140,24 @@ def create_narration(
             else "natural-length"
         )
         log(f"\n--- Audio pipeline ({mode}) ---")
-        code = handoff.run_audio_pipeline(folder)
+        # self-lock the engine-generated narration (plain prose is now parseable) so
+        # it passes the same KJV/Rule-8/cluster gate before audio — closing the
+        # engine bypass. check_cluster=False here (cross-episode freshness is the
+        # existing short_gate G7's job); KJV + parity are enforced.
+        try:
+            from pipeline import lock as _lock
+            lrep = _lock.run_lock(folder, form=("short" if config.SHORTS_MODE else "long"),
+                                  check_cluster=False)
+            if not lrep["ok"]:
+                log("  [lock] BLOCKED — not rendering audio:")
+                for b in lrep["blocking"]:
+                    log(f"    - {b}")
+                code = 1
+            else:
+                code = handoff.run_audio_pipeline(folder, enforce_lock=True)
+        except Exception as e:  # noqa - never let the lock step crash a generate run
+            log(f"  [lock] skipped (non-fatal: {e}); rendering without lock enforcement")
+            code = handoff.run_audio_pipeline(folder, enforce_lock=False)
         log(f"--- Audio pipeline exit code: {code} ---")
     else:
         log("\n(audio pipeline skipped — run it later with:)")

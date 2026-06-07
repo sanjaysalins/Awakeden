@@ -24,7 +24,7 @@
 ---
 
 **[narrator]**
-The last line of Psalm twenty-two, and the last word Jesus spoke in John's gospel, both land on a finished work — a thousand years apart.
+A psalm's last line and Jesus' last breath in John close on the very same note: it is done.
 
 **[narrator]**
 The psalm closes looking ahead — to God's saving work, accomplished, and told to a people not yet born. Its final line:
@@ -42,7 +42,7 @@ Done. And as Jesus hung dying, John records His final word:
 Different words, in different tongues, a thousand years apart — but the same note: a finished work.
 
 **[narrator]**
-So what, exactly, was finished? Everything it would take to bring you home to God — the whole work, complete. Nothing left for you to earn, nothing left to prove, nothing to add. It is done. Come to Him.
+So what's left for you to finish? Nothing — only Someone to come home to: the One who said it is done.
 
 ---
 

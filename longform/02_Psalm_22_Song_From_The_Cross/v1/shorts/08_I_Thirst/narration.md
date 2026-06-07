@@ -24,7 +24,7 @@
 ---
 
 **[narrator]**
-A thousand years before the cross, a song wrote down the killing thirst of a dying man. Then, on that cross, the same thirst broke from Jesus' lips.
+The One who made every ocean gasped two words on a cross: I thirst.
 
 **[narrator]**
 Psalm twenty-two. David wrote it in the first person, but he was picturing someone else's death. Watch the body give out:
@@ -45,7 +45,7 @@ Psalm twenty-two doesn't foretell that cry — it paints the thirst behind it, a
 And think who is thirsting: the One who made every river and spring, who offers the world living water — hanging there with nothing, in your place.
 
 **[narrator]**
-He went dry, so that you could come to Him and drink that living water, and never thirst again. Come to Him.
+He went dry so that you could drink and never thirst again. The God who made every ocean cried out in thirst — so He could hand you the one water that never fails. And that water is Himself.
 
 ---
 

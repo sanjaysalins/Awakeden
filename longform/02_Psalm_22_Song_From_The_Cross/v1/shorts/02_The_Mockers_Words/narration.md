@@ -34,7 +34,7 @@
 ---
 
 **[narrator]**
-A thousand years before the cross, David wrote down the words Jesus' enemies would hurl at Him — and the way they'd shake their heads doing it.
+At the cross they shook their heads and sneered the very taunt a psalm had recorded a thousand years before.
 
 **[narrator]**
 Psalm twenty-two. David, describing a mocked and dying man, even writes his tormentors' words:
@@ -55,7 +55,7 @@ The same gesture. The same taunt — flung at Him by people who never saw what t
 "Let him deliver him," they sneered. And He wasn't delivered — not because Jesus lacked the power to come down; He had every power. He stayed because staying was the only way to deliver you.
 
 **[narrator]**
-They thought weakness pinned Him to that cross. It was love. That's Jesus — come to Him.
+They thought weakness pinned Him to that cross. It was love. He could have come down in an instant — He chose to stay, with you in view.
 
 ---
 

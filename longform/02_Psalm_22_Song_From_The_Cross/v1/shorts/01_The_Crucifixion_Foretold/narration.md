@@ -27,7 +27,7 @@
 ---
 
 **[narrator]**
-A thousand years before a Roman cross, a king wrote a song describing a death he would never die.
+Ten centuries before the cross, a song recorded exactly how a dying man's clothes would be divided up.
 
 **[narrator]**
 Psalm twenty-two. David wrote it in the first person — but David himself was never executed; he died an old man. He was describing someone else: stripped, surrounded, his life poured out.
@@ -45,7 +45,7 @@ A thousand years later, John watched it at the cross — soldiers dividing Jesus
 A thousand years early, God had it written down — so when it happened, you'd know the cross was no accident. It was the plan.
 
 **[narrator]**
-The suffering man of Psalm twenty-two has a name: Jesus — promised a thousand years before He came, and given for you. Come to Him.
+The suffering man of Psalm twenty-two has a name: Jesus. They rolled dice for the clothes off His back, never seeing what He was really doing — laying down His life to win you back.
 
 ---
 

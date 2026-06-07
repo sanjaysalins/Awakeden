@@ -1,0 +1,162 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: plan
+
+LENS — judge this PLAN on (be specific, cite the exact step/claim):
+- Feasibility against the real codebase / tools (does it assume things that exist?).
+- Hidden risks, false assumptions, single points of failure.
+- Over-engineering / premature building before the idea is proven.
+- Missing steps, edge cases, or verification gaps.
+- Reuse: does it duplicate tools that already exist instead of reusing them?
+- Cost / spend and whether it's justified.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block:
+
+VERDICT: PASS | REVISE | FAIL
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# PIPELINE_HARDENING_PLAN.md — verification hardening for narration (long + short)
+
+**Status:** PLAN — awaiting (a) my red-team + (b) external 5-CLI panel (`independent_review.py --type plan`) BEFORE any code is written. Decided 2026-06-07 with the user: build **all 5 fixes**, **re-verify all locked content** once built, **panel this plan before coding**, and red-team + panel the finished implementation.
+
+---
+
+## Context — why this exists
+
+The Psalm 22 short cluster shipped 8 narrations that are each individually sound but, **as a set**, feel templated: **8 / 8 end "Come to Him"**, **6 / 8 open "A thousand years before the cross…"**, 3 share "bring you home", 3 prepend "That's Jesus." This is exactly the *cheesy / tired* failure the project most wants to avoid — and it is the **Word of God**, so sloppiness is not acceptable.
+
+Neither the in-engine red-team nor the external 5-CLI panel caught it. The investigation found **why**, and it is structural, not a one-off lapse:
+
+1. **Every check is per-single-artifact.** Each short was reviewed *in isolation*, hours apart, in its own `_independent_review/<stamp>/` run. No reviewer — red-team or panel — ever saw all 8 together. `independent_review.py` takes one `artifact` file; `LENS_NARRATION` has **no cross-artifact concern**. "All 8 end the same" is literally invisible to a per-artifact reviewer, and each "Come to Him" *passes* on its own.
+2. **The engine's gates never ran on this content.** Gates G1–G8.6, the deterministic `_apply_kjv_gate` KJV override, the CTA-strategy/landing-test, and the tournament judge all live **inside `engine.generate → engine.review`**. The 8 shorts (and *all* long-form) were **hand-authored**, so they bypassed every gate and got only red-team + panel.
+3. **The KJV source-of-truth can be corrupt.** `scripture.fetch_kjv` trusts `bible-api.com`, cached to `data/kjv_cache.json`. That source **dropped the Ps 22:7 comma** and **elided Acts 8:35**. `kjv_check.verbatim_mismatches` then compares quotes **against that same cache** — so it validates against the corruption and passes. It also **never verifies NT cross-reference quotes** (they fall through to "ignored"). Only the external panel's *memory of the real KJV* caught these.
+4. **`tired-landing` is a gate, but only intra-artifact.** There is **no defect class** for cross-artifact / catalogue-wide repetition. The banned-closer list is **static** — it banned "Will you trust Him?", and "Come to Him" became the next cliché. A static list is always one cliché behind.
+5. **Conviction is only checked negatively** (no fear / gain-loss / grace-trap). Nothing scores whether it *positively pierces*.
+
+**Intended outcome:** a verification layer that (a) re-grounds Scripture in an authoritative KJV, (b) runs every gate on *any* narration regardless of how it was authored, (c) reviews a **whole series/cluster together**, (d) learns from a **dynamic** catalogue of used phrasing, and (e) scores conviction as a positive bar — for **both long-form and shorts**.
+
+Scale this must serve: 10 series / ~76 catalog shorts (×~1.5 multi-dimension) + ~12–21 long-forms (`data/series.json`, `PRODUCTION_PLAN.md`). The repetition problem compounds with scale, so a cluster gate is not optional.
+
+---
+
+## Root cause (one line)
+
+**Everything verifies one artifact against a (possibly corrupt) cache; nothing verifies the set, the catalogue, or the Scripture source itself — so "individually fine" repeatedly sums to "collectively cheesy," and a corrupt source-of-truth passes a deterministic check.**
+
+---
+
+## The five fixes
+
+### Fix 1 — KJV source-of-truth integrity (the "grounded in the Word" guarantee)
+
+**Problem.** `pipeline/scripture.py:fetch_kjv` (bible-api → `data/kjv_cache.json`) is the only source. It drops punctuation. `pipeline/kjv_check.py:verbatim_mismatches` compares against that cache (so corruption passes) and skips NT cross-refs entirely.
+
+**Design.**
+- Add an **authoritative, offline 1769 KJV** as the source of truth: `data/kjv_1769.json` (full Bible, punctuation-exact, public domain). Build it with a one-time `pipeline/_build_kjv_canon.py` that pulls a vetted public-domain 1769 KJV, verifies integrity (66 books / 31,102 verses / checksum), and writes the store. **Fail-closed**: if canon is missing, verification cannot pass silently.
+- New `pipeline/kjv_source.py`: `verse(ref)` / `passage(ref)` read the canon, returning exact text **including all internal punctuation**.
+- `scripture.fetch_kjv` becomes a thin wrapper: **prefer the canon**, fall back to bible-api only when the canon lacks a ref, and **flag any divergence** between cache and canon.
+- Extend `kjv_check.verbatim_mismatches` to: (a) verify **every** quoted span against the **full-Bible canon** (not just the primary pericope) — including NT cross-refs; (b) compare the **whole span's** punctuation, not only the terminal char; (c) classify: divergent → **FAIL**, ref-not-found/unverifiable → **WARN** (never silent-pass).
+- **Cache audit + repair:** `pipeline/_audit_kjv_cache.py` scans every entry in `data/kjv_cache.json` against the canon, reports each divergence (the Ps 22:7 comma, Acts 8:35 elision will surface), and repairs from canon.
+
+**Files:** new `pipeline/kjv_source.py`, `pipeline/_build_kjv_canon.py`, `pipeline/_audit_kjv_cache.py`, `data/kjv_1769.json`; edit `pipeline/scripture.py`, `pipeline/kjv_check.py`. **Reuse:** keeps `verbatim_mismatches`/`_apply_kjv_gate` shape so the existing G1 override in `engine.py` still works.
+
+### Fix 2 — Standalone verification harness for ANY narration (long + short) — the keystone
+
+**Problem.** All gates are coupled to `engine.generate → engine.review`. Hand-authored long-form and the 8 shorts never touched them.
+
+**Design.**
+- New CLI `verify_narration.py "<narration.md>" [--refs "Ps 22:18, John 19:24"] [--type short|long]`.
+- Pipeline: extract the **spoken** text (strip the DEPTH/SOURCING + VOICE ledger — **reuse** the existing spoken-extractor used for captions, `veed_io/_extract_spoken.py` per memory `veed-io-whisperx-longform-timing`; generalize if needed) → run **deterministic** checks: `kjv_check` (Fix 1, all spans), **quote-count Rule 8** (the `quote-count-rule8` proposed check — count spoken double-quoted spans >2 words), **anchor-verse-quoted** (the `anchor-verse-unquoted` proposed check — primary ref must appear as a quoted span), banned-phrase / `lecture-phrasing` list → then the **LLM review lens** (reuse `engine.review`'s gate panel by adapting a hand-authored `narration.md` into the `Draft`/`Beat` model, OR reuse `independent_review.LENS_NARRATION`; prefer the engine panel so G1–G8.6 apply uniformly).
+- Output: `<dir>/verify.report.md` + a fail-closed verdict (LOCK-eligible only if 0 FAIL).
+- This is the keystone: it makes **all four other fixes runnable on hand-authored content**, and it finally enforces the two already-designed-but-unbuilt deterministic checks (`quote-count-rule8`, `anchor-verse-unquoted`, both `status: none` in the taxonomy).
+
+**Files:** new `verify_narration.py`; small adapter in `pipeline/` to lift a `narration.md` into the review models; `pipeline/quote_rules.py` (the two deterministic checks). **Reuse:** `engine.review`, `kjv_check`, `pipeline/models.py`, the spoken-extractor.
+
+### Fix 3 — Cluster / series review gate (the actual miss)
+
+**Problem.** No cross-artifact review anywhere.
+
+**Design.**
+- New CLI `cluster_review.py "<folder | series-id>" [--llm]`.
+- **Deterministic layer ($0, offline):** from each narration extract **hook** (first spoken line), **CTA** (last spoken line), **opener n-gram**, and key **bridge** sentences; compute pairwise similarity (normalized-exact + token-Jaccard / shingling); **flag** any hook / CTA / opener / bridge that repeats or is near-duplicate across the set. Emit a similarity matrix + offender list.
+- **LLM layer (reuse `independent_review.py` with a new `LENS_CLUSTER` + `--type cluster`):** pass **all** narrations together; ask the panel: "Does this set feel templated/tired? Which hooks / CTAs / bridges repeat? Rewrite-flag offenders." Local CLIs, **no metered API**.
+- **Long-form** uses the same engine across its **movements** (intra-document repetition) and against the catalogue ledger (Fix 4).
+- Output: `cluster.report.md` + per-artifact rewrite flags + a cluster verdict. **A series cannot be called done until the cluster gate is clean** — this becomes a standing gate, like the per-artifact panel.
+
+**Files:** new `cluster_review.py`; edit `independent_review.py` (add `LENS_CLUSTER`, accept a multi-file/cluster artifact). **Reuse:** `independent_review.py` provider plumbing.
+
+### Fix 4 — Dynamic phrase ledger (kills "one cliché behind")
+
+**Problem.** Static banned-closer list; no catalogue memory.
+
+**Design.**
+- `data/learning/phrase_ledger.jsonl`: one record per shipped artifact = `{episode, series, hook, cta, opener_ngram, key_phrases[]}`.
+- `pipeline/phrase_ledger.py`: `append(record)` on lock; `used(scope="series"|"catalogue")` returns prior hooks/CTAs/openers.
+- **Wiring:** (a) `engine._episode_block` / `generate_candidates` are fed "ALREADY-USED hooks/CTAs across the catalogue — diverge from these"; (b) Fix 2 + Fix 3 check new artifacts against the ledger; (c) the static banned-closer floor in `engine.py` stays, but the existing tired-landing judge becomes **catalogue-aware** via the ledger (dynamic, not a fixed list).
+- New defect classes `cluster-repetition` + `catalogue-phrase-reuse` in `data/learning/defect_classes.json`; `pipeline/learning.py` tracks them.
+
+**Files:** new `pipeline/phrase_ledger.py`, `data/learning/phrase_ledger.jsonl`; edit `pipeline/engine.py` (feed ledger into generation + judge), `data/learning/defect_classes.json`. **Reuse:** `pipeline/learning.py` append/aggregate pattern.
+
+### Fix 5 — Conviction as a positive bar
+
+**Problem.** Conviction is only checked negatively.
+
+**Design.** Add a **conviction-strength** dimension — "Does the conviction create holy tension (Heb 4:12) that actually pierces, or is it flat/informational?" scored with evidence — to: the self-review panel (`engine.review`), the tournament judge weighting, `independent_review.LENS_NARRATION`, and the Fix 2 harness. Presence of weight, not just absence of bad framing. New defect class `flat-conviction`.
+
+**Files:** edit `pipeline/engine.py` (review roles + judge), `independent_review.py` (`LENS_NARRATION`), `data/learning/defect_classes.json`, the Fix 2 harness lens. **Reuse:** existing review/judge prompt structure.
+
+---
+
+## Sequencing (dependency order)
+
+1. **Fix 1** (KJV canon + audit) — foundation; everything Scripture-true depends on it.
+2. **Fix 2** (verify harness) — depends on Fix 1; the keystone that runs gates on any artifact.
+3. **Fix 3 + Fix 4** (cluster gate + phrase ledger) — together; the ledger feeds the cluster gate and generation.
+4. **Fix 5** (conviction bar) — woven into the Fix 2/3 lenses + engine review.
+
+Each fix is independently testable and committed separately.
+
+---
+
+## Re-verification of all locked content (after the gates exist)
+
+1. **Fix 1 audit** over every quoted span in the 8 shorts + both long-forms (Isaiah 53, Psalm 22) → list KJV divergences; repair cache; re-confirm spans.
+2. **Fix 2 harness** on all 10 narrations → deterministic + LLM gate report each.
+3. **Fix 3 cluster gate** on the 8 Psalm 22 shorts (and the long's movements) → expect it to flag 8× "Come to Him", the "thousand years" hooks, "bring you home", "That's Jesus."
+4. Produce a single findings report; **fix the offenders** (de-template hooks + CTAs so no two land the same; repair any KJV divergence); **re-lock** each through red-team + 5-CLI panel.
+   - Audio note: text fixes to already-rendered shorts trigger a $0–$3 ElevenLabs re-render of only the changed shorts.
+
+---
+
+## Verification — how to test the build end to end
+
+- **Fix 1 unit tests** (`pipeline/` test file): feed known cases — Ps 22:7 (comma must be required), Acts 8:35 (no elision), Matt 8:27 ("!" not "?") — assert each is FLAGGED against the canon; assert a clean verbatim span PASSES; assert an unknown ref is WARN not silent-pass.
+- **Fix 2:** run `verify_narration.py` on a known-good narration (expect 0 FAIL) and a deliberately broken one (altered quote + 3 quotes + paraphrased anchor) → expect the right FAILs.
+- **Fix 3:** run `cluster_review.py` on the 8 Psalm 22 shorts → **must** flag the "Come to Him" ×8 and the "thousand years" hooks. This is the acceptance test for the whole effort.
+- **Fix 4:** lock a dummy artifact, confirm its hook/CTA appear in `phrase_ledger.jsonl` and that generation is fed them as "diverge from these."
+- **Fix 5:** confirm a flat conviction line is scored low and a piercing one high, with evidence, in both the engine review and the panel lens.
+
+## Cost
+
+Deterministic layers (Fix 1 audit, Fix 2 det-checks, Fix 3 det-layer, Fix 4 ledger) are **$0 / offline**. LLM layers run via the **agent-bridge (engine)** and **local CLIs (panel)** — **no metered API**. Only real spend is later re-rendering any fixed short's audio (~$0–$3). Per the standing rule, I will quote any metered spend before running it.
+
+## Review discipline (per the user's enforced rule)
+
+- **This plan** → my red-team **+** external 5-CLI panel via `independent_review.py "<this file>" --type plan` → I fold in convergent findings before writing code.
+- **The implementation** → red-team **+** 5-CLI panel before it is called done; the re-verified narrations re-lock through the same gauntlet.
+
+---
+
+## What this plan deliberately does NOT do
+
+- Does not duplicate `narration_pipeline.py` / `per_turn_synth.py` / `image_to_kling.py` (locked rule).
+- Does not change locked doctrine, the Gospel Five-Beat structure, or the CTA-to-Jesus model.
+- Does not auto-rewrite locked narrations — it flags; the user approves each rewrite.
+- Does not switch any model IDs.
+----- ARTIFACT END -----
