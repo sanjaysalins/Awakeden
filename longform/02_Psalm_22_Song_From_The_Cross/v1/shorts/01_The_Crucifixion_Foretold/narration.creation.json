@@ -1,0 +1,75 @@
+{
+  "created_at": "2026-06-06T00:00:00",
+  "model": "claude-opus-4-7",
+  "review_model": "claude-sonnet-4-6",
+  "structure": {
+    "id": "gospel-five-beat",
+    "name": "Gospel Five-Beat",
+    "beats": [
+      "hook",
+      "point",
+      "proof",
+      "conviction",
+      "landing"
+    ]
+  },
+  "series": {
+    "id": "jesus-in-ot",
+    "name": "Jesus in the Old Testament",
+    "brand": "SLK"
+  },
+  "episode": {
+    "title": "The Crucifixion Foretold",
+    "primary_ref": "Psalm 22:18"
+  },
+  "kjv_verified": true,
+  "kjv_text": "They part my garments among them, and cast lots upon my vesture.",
+  "thread": {
+    "thread": "Psalm 22:18, written ~1000 years early, names TWO acts a dying man's executioners would do — divide his garments AND cast lots for them; John 19:24 records the soldiers at Jesus' cross doing exactly both and cites this verse as fulfilled.",
+    "lever": "NT-confirmed OT echo (predictive precision)",
+    "anchor_ref": "Psalm 22:18",
+    "anchor_detail": "Roman soldiers at the foot of the cross dividing Jesus' garments among them and casting lots (rolling dice) for the seamless coat",
+    "why_fresh": "the undisputed garments detail — two distinct acts, both fulfilled to the letter — written a thousand years before a Roman cross by David, who was never executed",
+    "gospel_landing": "the precision proves the cross was the plan, not an accident — the suffering man is Jesus, laying down His life to win you back; come to Him",
+    "rationale": "the airtight, NT-cited cross-ref (no contested word)",
+    "candidates": []
+  },
+  "draft": {
+    "title": "The Crucifixion Foretold",
+    "hook_type": "prophecy",
+    "beats": [
+      {
+        "id": "hook",
+        "text": "Ten centuries before the cross, a song recorded exactly how a dying man's clothes would be divided up."
+      },
+      {
+        "id": "point",
+        "text": "Psalm twenty-two. David wrote it in the first person — but David himself was never executed; he died an old man. He was describing someone else: stripped, surrounded, his life poured out."
+      },
+      {
+        "id": "proof",
+        "text": "Watch one line — he wrote that the dying man's killers would divide his clothes, and cast lots for them: \"They part my garments among them, and cast lots upon my vesture.\" A thousand years later, John watched it at the cross — soldiers dividing Jesus' clothes, then casting lots for the seamless coat — \"that the scripture might be fulfilled\"."
+      },
+      {
+        "id": "conviction",
+        "text": "A thousand years early, God had it written down — so when it happened, you'd know the cross was no accident. It was the plan."
+      },
+      {
+        "id": "landing",
+        "text": "The suffering man of Psalm twenty-two has a name: Jesus. They rolled dice for the clothes off His back, never seeing what He was really doing — laying down His life to win you back."
+      }
+    ]
+  },
+  "beat_ids": [
+    "hook",
+    "point",
+    "proof",
+    "conviction",
+    "landing"
+  ],
+  "word_count": 156,
+  "char_count": 0,
+  "authoritative_review": "independent",
+  "review_overall": "LOCKED",
+  "unknown_speakers": []
+}

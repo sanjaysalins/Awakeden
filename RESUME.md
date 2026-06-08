@@ -1,6 +1,40 @@
 # RESUME.md — start here next session
 
-## ═══════════ SESSION 2026-06-07 (LATEST) — VERIFICATION HARDENING + PSALM 22 SHORTS DE-TEMPLATED/LOCKED/RENDERED ═══════════
+## ═══════════ SESSION 2026-06-08 (LATEST) — SFX IMMERSION (shorts + Psalm22 long) + SHORTS-FIRST DIRECTION + PSALM22 SHORT #01 VISUAL PLAN LOCKED ═══════════
+
+**Paused by user ("save everything, pick up later"). NO metered spend this session — everything below is $0 (agent-mode + local ffmpeg + library reuse). Media gitignored; text/json/scripts versioned.**
+
+### A) SFX / ambience immersion — Level A (NO music), all $0 from `sound_library`
+- **Shorts:** added forced-aligned SFX + ambience UNDER the 10 finished shorts (storm #02 **user-approved**; 12/16/18/32/33/34/35/36 built; **32/33/34/35 revised richer** after user feedback "too much one animal / too little"). Each syncs its key sound-shift to the Scripture beat. Outputs: `sfx_pilots/out/<NN>_sfx.mp4` + storm at `sfx_pilots/02_storm_enhanced.mp4`. Gallery: `sfx_pilots/index.html`.
+  - Tooling (reusable): `sfx_pilots/{align_batch.py, sfxlib.py, plans.py, run_batch.py, anchors.py, align_ep.py}`. **GOTCHA fixed:** ffmpeg `alimiter` defaults `level=true` (re-normalizes to 0dB = clipping) → always `alimiter=limit=0.85:level=disabled`.
+  - ⏳ USER EAR-REVIEW PENDING on **12 / 16 / 18 / 36** (storm + 32/33/34/35 already addressed). Memory `audio-enhancement-postpro`.
+- **Psalm 22 LONG soundstage** built → `longform/02_Psalm_22_Song_From_The_Cross/v1/narration.immersive.mp3` (418s, 7-movement arc, nail/coins/shofar/veil-tear, warm turn). Script `longform/_soundstage_ps22.py`. ⏳ USER LISTEN PENDING. (Isaiah 53 long LEFT AS-IS per user — it already has a soundstage.)
+
+### B) DIRECTION LOCKED (memories)
+- **SHORTS ARE FIRST-CLASS + must be PERFECT** (biggest viewership). Render natively 9:16, highest QC, re-render till perfect; never degrade a short with a cropped 16:9 long still; spend more on LONGS later if needed. Memory `feedback-shorts-first-class`.
+- **Provider split LOCKED:** stills — **NBP** (Gemini, Christ ref = face consistency) **$0.50** for Jesus/face · **HF `nano_banana_2`** **$0.30** for neutral plates · animation **direct-Kling** **$0.65/clip**. Psalm 22 shorts = **all-NBP** (crucifixion-heavy). Memory `locked-stills-provider-split`; budget doc `PSALM22_SHORTS_BUDGET.md`.
+- **AGENT-MODE LOCKED for ALL visual-stage LLM — do NOT use `LLM_PROVIDER=api`** (user: API costs money). $0 but heavy (one plan = 6 bridge round-trips; render adds ~14 Vision-audit round-trips). Accepted.
+- **Cost tracking:** `pipeline/cost.py` + `data/spend_ledger.jsonl` (empty/clean). HF balance = **3,296 cr ≈ $494**. `python -m pipeline.cost {balance|summary}`. Per-episode ceiling $25 short / $40 long.
+
+### C) Census + backlog sorted (deduped by topic)
+- **COMPLETED (final video, 11):** shorts 02·08·12·16·18·32·33·34·35·36 + Isaiah 53 long film.
+- **AUDIO-ONLY (need stills/clips):** Psalm 22 **long** (audio+soundstage) + **8 Psalm 22 shorts** (locked) + 19 older drafts.
+- **Backlog split:** 11 SUPERSEDED (redo-drafts of finished cuts — 04/07/09/10/11/20/22/26/28/29 + 06→31), and **DISTINCT new work = Psalm 22 cluster + 5 topics** (31 John 8 Light · 21 1 Peter pronouns · 25 Acts 8 eunuch · 30 Isaiah 53 short · Matt 16 [19/24/27/Who-Do-You-Say, 4 drafts → pick 1]).
+
+### D) Psalm 22 shorts VISUALS — STARTED (all-NBP, agent-mode)
+- **#01 "The Crucifixion Foretold" scene plan LOCKED** (agent-mode, $0): 14 scenes, hero = the cross, garments-only proof (rejected contested 'pierced' + uncited Joseph), gates all PASS after 1 revision (banned 'frame' token). Plan at `…/shorts/01_The_Crucifixion_Foretold/visual/scene_plan.json`.
+- **Synthesized `narration.creation.json`** for #01 (the planner requires it; hand-authored shorts lack it). Hand-craft thread + 5 beats from the narration (see #01's).
+- **Firm quote:** ~$17/short, **~$135 for all 8**.
+
+### ▶▶ DO FIRST NEXT SESSION (Psalm 22 shorts, all-NBP, agent-mode)
+1. **#01 TEST-GATE RENDER** (metered NBP ~**$7–8**, needs the user's explicit spend OK first): run `.venv\Scripts\python.exe cli_visual.py "<#01 folder>" --provider nbp --no-animate --no-short-only` (renders the full 14-scene pool); **service the per-image Vision-audit bridge requests in chat** (agent-mode). Then **QC every PNG full-res** (memory `feedback-audit-stills-fullres`) — re-render any that aren't perfect. This LOCKS the look before scaling.
+2. **Batch the other 7 shorts:** for EACH — synthesize `narration.creation.json` (like #01) → `cli_visual.py "<folder>" --plan-only --provider nbp` (service ~6 bridge reqs) → render → Kling animate → assemble. Quote spend per short, gate at $25.
+3. Pending ear-reviews: SFX on 12/16/18/36; Psalm 22 long `narration.immersive.mp3`.
+
+### NEW/CHANGED FILES (this session)
+`sfx_pilots/` (whole dir) · `longform/_soundstage_ps22.py` · `longform/_align_ps22.py` · `PSALM22_SHORTS_BUDGET.md` · `…/shorts/01_…/narration.creation.json` + `…/visual/*` · memories `feedback-shorts-first-class`, `locked-stills-provider-split` (+ updates to `audio-enhancement-postpro`, `longform-soundstage-pipeline`). `.agent_bridge/_build_0001.py` is a scratch helper (can delete).
+
+## ═══════════ SESSION 2026-06-07 — VERIFICATION HARDENING + PSALM 22 SHORTS DE-TEMPLATED/LOCKED/RENDERED ═══════════
 
 **Committed `dc0146b` on main, pushed. Working tree clean. Media (mp3) is gitignored — text/meta/.locked are versioned, audio lives on disk.**
 

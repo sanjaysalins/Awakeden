@@ -1,0 +1,723 @@
+{
+  "plan": {
+    "visual_reading": "The arc opens on the careless hands gambling for a dying man's clothes - the prophecy made visible before it is explained - then steps back a thousand years to the aged King David writing it by lamplight, a death plainly not his own. The middle is forensic: the exact written line, the seamless coat, the soldiers casting lots at the foot of Christ's cross. It rises to the gospel pivot - the foretold cross held in reverent stillness - and lands on Christ's face and outstretched arms: not an accident, but a life laid down on purpose to win the viewer back. Bleak dusk and lamplit shadow throughout, warming only at the close.",
+    "red_team_notes": "The Jaded Viewer would expect a generic Golgotha skyline and a glowing scroll - so the hook is a tight, grubby close of dice and stripped cloth instead, and the scroll appears as a worked, cracked-ink macro, not a halo. Risk of slideshow: countered with five unified vignette scenes carrying the argument (contrast, fulfilment, the wider execution, the plan, the thousand-year bridge). The biggest doctrinal trap is the pierced variant (22:16) - visually tempting but deliberately removed from this short; a candidate for it is listed as REJECTED so the proof stays on the undisputed garments. Joseph's coat is an obvious OT-echo auto-complete but the NT never cites it here - rejected. The cross appears several times; framings are varied (low-angle hero, mid revelation, close face, mid devotional) so it does not read as one repeated shot.",
+    "scenes": [
+      {
+        "index": 1,
+        "slug": "dice-in-the-dust",
+        "title": "The Dice in the Dust",
+        "scene_type": "single",
+        "arc_position": "opening-hook",
+        "framing": "close",
+        "purpose": "Open on the thread made visible - the careless gambling for a dying man's clothes.",
+        "rationale": "Opens on Psalm 22:18's anchor act (divide + cast lots), not a generic cross; the cliche auto-complete would be a wide Golgotha skyline.",
+        "visible_elements": "soldiers' hands, two tumbling knuckle-bone dice, a heap of stripped garments, a seamless coat set apart, the foot of a wooden upright",
+        "emotional_tone": "careless, unaware",
+        "subject_block": "three Roman soldiers' weathered hands frozen over a flat paving stone at the base of a rough wooden upright, two carved knuckle-bone dice caught mid-tumble above the stone, a heap of stripped dust-coloured garments pooled beside them, one seamless undergarment set apart and untorn, calloused fingers splayed in the throw, a discarded helmet on the ground, raking dusk light and long shadows",
+        "mood_block": "atmosphere of careless men gambling beneath an unnoticed prophecy fulfilled",
+        "jesus_variant": null,
+        "priority": 2,
+        "macro_elements": [
+          "the two tumbling dice",
+          "the seamless coat set apart",
+          "a soldier's splayed hand",
+          "the heap of stripped garments",
+          "the foot of the wooden cross"
+        ],
+        "pacing": "controlled",
+        "viral_role": "hook-open",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 2,
+        "slug": "david-at-the-lamp",
+        "title": "David at the Lamp",
+        "scene_type": "single",
+        "arc_position": "ot-echo",
+        "framing": "mid",
+        "purpose": "Ground the prophecy - the aged king writing words larger than his own life.",
+        "rationale": "Shows the OT author a thousand years early; rejects the harp-playing shepherd-boy auto-complete for an old king writing.",
+        "visible_elements": "aged King David, iron stylus, half-unrolled parchment scroll with wet Hebrew ink, oil lamp, a gold circlet set aside",
+        "emotional_tone": "weighty, far-seeing",
+        "subject_block": "an aged King David seated alone at a low cedar table, an iron stylus pressed to a half-unrolled parchment scroll, fresh dark ink wet on the Hebrew letters, a small olive-oil lamp throwing warm light across his lined weathered face and grey beard, a simple gold circlet set aside on the table, his eyes fixed far beyond the page, heavy night shadow pressing around him",
+        "mood_block": "atmosphere of a man writing words too large for his own life",
+        "jesus_variant": null,
+        "priority": 5,
+        "macro_elements": [
+          "the wet-inked Hebrew line",
+          "the iron stylus",
+          "the lamp flame",
+          "the set-aside circlet",
+          "David's distant eyes"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 3,
+        "slug": "a-death-not-his-own",
+        "title": "A Death Not His Own",
+        "scene_type": "unified",
+        "arc_position": "public-misunderstanding",
+        "framing": "wide",
+        "purpose": "Make the scandal visible - David dies safe while describing an execution.",
+        "rationale": "Carries the point beat as one painting; the contrast (peaceful king vs executed sufferer) is the argument.",
+        "visible_elements": "aged David peaceful on a deathbed, with shadowed background vignettes of a stripped sufferer, a jeering crowd, a poured-out body, a far cross",
+        "emotional_tone": "uneasy contrast",
+        "subject_block": "aged David reclining in peace on a cushioned bed in old age, hands folded, candlelit and serene, subtle background vignettes fading into shadow suggesting a man stripped and bound before a jeering crowd, a body poured out like water, a far Roman cross on a bare hill, and a heap of divided garments",
+        "mood_block": "atmosphere of a king dying safe while describing another man's execution",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "David's folded hands",
+          "the cushioned deathbed",
+          "a guttering candle",
+          "the shadowed far cross",
+          "the divided garments vignette"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "a stripped and bound sufferer",
+          "a jeering crowd",
+          "a body poured out like water",
+          "a distant Roman cross"
+        ]
+      },
+      {
+        "index": 4,
+        "slug": "the-scroll-line",
+        "title": "The Line, Centuries Early",
+        "scene_type": "single",
+        "arc_position": "theological-centre",
+        "framing": "close",
+        "purpose": "Proof - the exact written sentence about garments and lots.",
+        "rationale": "The verse itself is the evidence; a macro of the line lets the cut planner push into the words.",
+        "visible_elements": "open Psalm scroll, a fingertip beneath one illuminated Hebrew line, cracked old ink, lamplit parchment",
+        "emotional_tone": "quiet certainty",
+        "subject_block": "an extreme close view of an open Psalm scroll, a single weathered fingertip resting beneath one illuminated line of ancient Hebrew script, the ink old and cracked, the parchment fibrous and warmly lamplit, the lettering crisp against the page, a soft pool of light on the words and deep shadow at the curling edges",
+        "mood_block": "atmosphere of an ancient sentence waiting a thousand years to come true",
+        "jesus_variant": null,
+        "priority": 4,
+        "macro_elements": [
+          "the traced line of script",
+          "the resting fingertip",
+          "the cracked ink",
+          "the parchment fibres",
+          "the lamp glow on the page"
+        ],
+        "pacing": "slower",
+        "viral_role": "pivot",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 5,
+        "slug": "the-seamless-coat",
+        "title": "The Coat They Would Not Tear",
+        "scene_type": "single",
+        "arc_position": "symbolic-support",
+        "framing": "close",
+        "purpose": "Proof detail - John's seamless coat, the garment they cast lots for.",
+        "rationale": "Names the specific John 19 detail (the coat without seam) that the dividing-and-lots prophecy turns on.",
+        "visible_elements": "a single seamless tunic held taut between two soldiers' hands, woven without seam, a blurred cross beam behind",
+        "emotional_tone": "taut, fateful",
+        "subject_block": "a single seamless tunic held taut between two Roman soldiers' hands, woven in one piece from the top throughout without any seam, undyed wool catching low light, the rough beam of a cross blurred behind, a few dark flecks along the hem, the cloth stretched whole and unbroken, dusk light raking across the weave",
+        "mood_block": "atmosphere of the one garment they would not tear",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the unbroken weave",
+          "the soldiers' gripping hands",
+          "the stained hem",
+          "the cloth's raking light",
+          "the blurred cross beam"
+        ],
+        "pacing": "controlled",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 6,
+        "slug": "soldiers-cast-lots",
+        "title": "Cast Lots at the Cross",
+        "scene_type": "unified",
+        "arc_position": "nt-gospel-link",
+        "framing": "mid",
+        "purpose": "Proof - the fulfilment at Christ's cross, John 19:24.",
+        "rationale": "The NT moment the prophecy lands on; Christ present above keeps the gospel link explicit.",
+        "visible_elements": "soldiers crouched dividing garments and casting lots at the foot of the cross, Christ's lower robe and feet just in upper frame",
+        "emotional_tone": "oblivious fulfilment",
+        "subject_block": "Roman soldiers crouched on stone at the foot of Christ's cross dividing dust-coloured garments between them, two knuckle-bone dice caught mid-throw, the robed lower body and feet of the crucified Christ just within the upper edge of view, subtle background vignettes fading into shadow suggesting the divided garments, the rolling lots, the seamless coat held apart, and a wooden inscription board",
+        "mood_block": "atmosphere of prophecy fulfilled by men who never read it",
+        "jesus_variant": "passion",
+        "priority": 3,
+        "macro_elements": [
+          "the tumbling dice",
+          "Christ's robed lower body above",
+          "a soldier's dividing hands",
+          "the heap of garments",
+          "the cross foot"
+        ],
+        "pacing": "controlled",
+        "viral_role": "pivot",
+        "shot_kind": "standard",
+        "vignettes": [
+          "the divided garments",
+          "the rolling lots",
+          "the seamless coat held apart",
+          "the inscribed titulus"
+        ]
+      },
+      {
+        "index": 7,
+        "slug": "the-cross-foretold",
+        "title": "The Cross, Foretold",
+        "scene_type": "single",
+        "arc_position": "nt-gospel-link",
+        "framing": "low-angle",
+        "purpose": "The gospel pivot - the foretold death, the CTA image the short lands on.",
+        "rationale": "HERO: iconic, near-still, reverent; bookends the cut and carries the landing to Christ.",
+        "visible_elements": "the crucified Christ on a rough cross against a darkening sky, robed at the waist, soldiers tiny below over a heap of garments",
+        "emotional_tone": "reverent stillness",
+        "subject_block": "the crucified Christ lifted on a rough wooden cross against a darkening sky, his body robed at the waist, head bowed in stillness, a faint sorrowful light on his face, the small figures of soldiers crouched far below over a heap of garments, the bare hill quiet, the cross rising the full height of the view, the whole moment held silent",
+        "mood_block": "atmosphere of the foretold death accomplished in stillness",
+        "jesus_variant": "passion",
+        "priority": 1,
+        "macro_elements": [
+          "Christ's bowed head",
+          "the rough cross grain",
+          "the darkening sky",
+          "the small soldiers below",
+          "the bowed shoulders"
+        ],
+        "pacing": "slower",
+        "viral_role": "climax",
+        "shot_kind": "hero",
+        "vignettes": []
+      },
+      {
+        "index": 8,
+        "slug": "the-execution-foretold",
+        "title": "The Whole Execution, Written Early",
+        "scene_type": "unified",
+        "arc_position": "ot-echo",
+        "framing": "wide",
+        "purpose": "Deepen the precision - Psalm 22's wider crucifixion imagery, written centuries early.",
+        "rationale": "Uses 22:12-15 (bulls, lion, dogs, poured out) as the OT text's own picture of the death; no typological reach.",
+        "visible_elements": "open Psalm scroll on stone, shadowed vignettes of bulls compassing, a roaring lion, dogs ringing a man, a body poured out",
+        "emotional_tone": "ancient dread",
+        "subject_block": "an open Psalm scroll laid across a stone, its lamplit Hebrew lines spreading outward, subtle background vignettes fading into shadow suggesting strong bulls of Bashan compassing a man, a ravening roaring lion, a ring of dogs closing in, and a body poured out like water with bones out of joint",
+        "mood_block": "atmosphere of a whole execution described ten centuries early",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the spreading scroll lines",
+          "the encircling bulls",
+          "the lion's open jaws",
+          "the ring of dogs",
+          "the lamp on the stone"
+        ],
+        "pacing": "controlled",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "bulls of Bashan compassing",
+          "a ravening lion",
+          "dogs closing in a ring",
+          "a body poured out like water"
+        ]
+      },
+      {
+        "index": 9,
+        "slug": "stripped-garments-heap",
+        "title": "A Life Down to a Pile of Cloth",
+        "scene_type": "single",
+        "arc_position": "symbolic-support",
+        "framing": "close",
+        "purpose": "Proof texture - the stripped clothing itself, the object of the prophecy.",
+        "rationale": "Grounds the abstract garments in a tactile heap; a strong macro source for the cut.",
+        "visible_elements": "a heap of stripped garments on bloodstained stone, a leather belt and sandals tangled in the cloth",
+        "emotional_tone": "desolate",
+        "subject_block": "a heap of dust-coloured stripped garments pooled on bloodstained stone at the base of a wooden upright, a leather belt and worn sandals tangled in the cloth, the folds catching low raking light, a single sandal set apart, the fabric still holding the shape of a body, deep shadow pressing in around the pile",
+        "mood_block": "atmosphere of a life stripped down to a pile of cloth",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the pooled garments",
+          "a tangled leather belt",
+          "the worn sandals",
+          "the bloodstained stone",
+          "the body-shaped folds"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 10,
+        "slug": "the-plan-not-accident",
+        "title": "No Accident - the Plan",
+        "scene_type": "unified",
+        "arc_position": "revelation",
+        "framing": "mid",
+        "purpose": "Conviction - the cross was written down, not stumbled into.",
+        "rationale": "Carries the conviction beat: Christ sovereign and calm, the prophecy in shadow behind him.",
+        "visible_elements": "the crucified Christ in sovereign stillness, darkened noon sky, shadowed vignettes of an open scroll, dividing soldiers, a darkened sun, an inscription",
+        "emotional_tone": "grave assurance",
+        "subject_block": "the crucified Christ on the cross in sovereign stillness, head slightly lifted, an unnatural calm on his face, the darkened noon sky behind him, subtle background vignettes fading into shadow suggesting an open prophetic scroll, soldiers dividing garments below, a darkened sun, and a wooden inscription board",
+        "mood_block": "atmosphere of a death that was the plan, not an accident",
+        "jesus_variant": "passion",
+        "priority": 0,
+        "macro_elements": [
+          "Christ's lifted face",
+          "the darkened sky",
+          "the faint scroll in shadow",
+          "the cross grain",
+          "the dividing soldiers"
+        ],
+        "pacing": "slower",
+        "viral_role": "pivot",
+        "shot_kind": "standard",
+        "vignettes": [
+          "an open prophetic scroll",
+          "soldiers dividing garments",
+          "a darkened noon sun",
+          "the inscribed titulus"
+        ]
+      },
+      {
+        "index": 11,
+        "slug": "a-thousand-years-apart",
+        "title": "A Thousand Years Apart",
+        "scene_type": "unified",
+        "arc_position": "theological-centre",
+        "framing": "wide",
+        "purpose": "Bridge the centuries - the scroll and the cross as one composition.",
+        "rationale": "Makes the central claim spatial: one sentence reaching from David's lamp to Christ's cross.",
+        "visible_elements": "aged David at his lamp on one side, the crucified Christ small on a far hill on the other, joined by shadow",
+        "emotional_tone": "awe of convergence",
+        "subject_block": "a single composition bridging a thousand years, on one side aged David at his lamp pressing stylus to scroll, on the other the crucified Christ small on a far hill, the two joined across a corridor of deep shadow, subtle background vignettes fading into shadow suggesting the wet-inked scroll, the oil lamp, a distant Roman cross, and two tumbling dice",
+        "mood_block": "atmosphere of one sentence reaching across ten centuries",
+        "jesus_variant": "passion",
+        "priority": 0,
+        "macro_elements": [
+          "David's stylus",
+          "the lamp flame",
+          "the far cross",
+          "the tumbling dice",
+          "the corridor of shadow"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "the wet-inked scroll",
+          "the oil lamp",
+          "a distant Roman cross",
+          "two tumbling dice"
+        ]
+      },
+      {
+        "index": 12,
+        "slug": "dice-macro",
+        "title": "Chance Rolls Out a Certainty",
+        "scene_type": "single",
+        "arc_position": "symbolic-support",
+        "framing": "close",
+        "purpose": "A single-macro punctuation shot of the falling lots.",
+        "rationale": "Insert-grade macro; the dice are the hinge between chance and prophecy.",
+        "visible_elements": "extreme close of two knuckle-bone dice mid-tumble above a paving stone",
+        "emotional_tone": "taut",
+        "subject_block": "an extreme close view of two carved knuckle-bone dice caught mid-tumble just above a flat paving stone, every nick and worn pip sharp in raking dusk light, a blur of dust-coloured garment edge behind, a soldier's out-of-focus fingertip at the edge of view, the stone scarred and pale, deep shadow surrounding the falling lots",
+        "mood_block": "atmosphere of chance rolling out an ancient certainty",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the tumbling dice",
+          "the worn pips",
+          "the scarred stone",
+          "the garment edge",
+          "the blurred fingertip"
+        ],
+        "pacing": "faster",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 13,
+        "slug": "his-name-is-jesus",
+        "title": "His Name Is Jesus",
+        "scene_type": "single",
+        "arc_position": "revelation",
+        "framing": "close",
+        "purpose": "Landing - recognising the suffering man's name.",
+        "rationale": "The face turns the prophecy personal; close and reverent for a near-full-speed hold.",
+        "visible_elements": "a close reverent view of the crucified Christ's face, thorn-marked brow, eyes lowered in peace",
+        "emotional_tone": "tender recognition",
+        "subject_block": "a close reverent view of the crucified Christ's face, head bowed at the temple, eyes lowered in sorrowful peace, a thorn-marked brow, faint light catching one cheek against deep shadow, the grain of the cross beam behind his shoulder, the noise of the world fallen away, the face held in quiet stillness",
+        "mood_block": "atmosphere of recognising the suffering man's name",
+        "jesus_variant": "passion",
+        "priority": 6,
+        "macro_elements": [
+          "Christ's lowered eyes",
+          "the thorn-marked brow",
+          "the lit cheek",
+          "the cross grain",
+          "the bowed temple"
+        ],
+        "pacing": "slower",
+        "viral_role": "close",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 14,
+        "slug": "laying-down-his-life",
+        "title": "Laying Down His Life",
+        "scene_type": "single",
+        "arc_position": "closing-devotional",
+        "framing": "mid",
+        "purpose": "Landing - the life laid down on purpose to win you back.",
+        "rationale": "Opens the frame to light; the gospel invitation as a held, reverent close.",
+        "visible_elements": "the crucified Christ from a respectful distance, arms along the beam, a soft break of light behind the hill",
+        "emotional_tone": "open, inviting",
+        "subject_block": "the crucified Christ on the cross from a respectful middle distance, arms outstretched along the beam, body robed at the waist, a soft break of light widening behind the dark hill, the soldiers and garments small and forgotten below, the figure offered and still, the whole scene quiet and open",
+        "mood_block": "atmosphere of a life laid down on purpose to win you back",
+        "jesus_variant": "passion",
+        "priority": 0,
+        "macro_elements": [
+          "the outstretched arms",
+          "the break of light behind",
+          "the robed waist",
+          "the small forgotten soldiers",
+          "the still bowed head"
+        ],
+        "pacing": "slower",
+        "viral_role": "close",
+        "shot_kind": "standard",
+        "vignettes": []
+      }
+    ],
+    "short_priority": [
+      7,
+      1,
+      6,
+      4,
+      2,
+      13
+    ],
+    "candidates": [
+      {
+        "title": "The Dice in the Dust",
+        "scene_type": "single",
+        "arc_position": "opening-hook",
+        "framing": "close",
+        "purpose": "Open on the gambling for the clothes.",
+        "rationale": "The thread's anchor act, not a generic skyline.",
+        "visible_elements": "soldiers' hands, tumbling dice, heap of garments, seamless coat",
+        "emotional_tone": "careless"
+      },
+      {
+        "title": "David at the Lamp",
+        "scene_type": "single",
+        "arc_position": "ot-echo",
+        "framing": "mid",
+        "purpose": "The aged author writing the prophecy.",
+        "rationale": "Old king writing, not shepherd-boy cliche.",
+        "visible_elements": "aged David, stylus, parchment scroll, lamp",
+        "emotional_tone": "weighty"
+      },
+      {
+        "title": "A Death Not His Own",
+        "scene_type": "unified",
+        "arc_position": "public-misunderstanding",
+        "framing": "wide",
+        "purpose": "David dies safe vs the executed sufferer.",
+        "rationale": "The scandal as one contrast image.",
+        "visible_elements": "peaceful David deathbed + shadow vignettes of an execution",
+        "emotional_tone": "uneasy"
+      },
+      {
+        "title": "Cast Lots at the Cross",
+        "scene_type": "unified",
+        "arc_position": "nt-gospel-link",
+        "framing": "mid",
+        "purpose": "John 19:24 fulfilment.",
+        "rationale": "The NT moment the prophecy lands on.",
+        "visible_elements": "soldiers dividing garments + casting lots under the cross",
+        "emotional_tone": "oblivious"
+      },
+      {
+        "title": "The Cross, Foretold",
+        "scene_type": "single",
+        "arc_position": "nt-gospel-link",
+        "framing": "low-angle",
+        "purpose": "Gospel-pivot hero.",
+        "rationale": "Iconic reverent CTA image.",
+        "visible_elements": "Christ on the cross, soldiers tiny below",
+        "emotional_tone": "reverent"
+      },
+      {
+        "title": "The Whole Execution, Written Early",
+        "scene_type": "unified",
+        "arc_position": "ot-echo",
+        "framing": "wide",
+        "purpose": "Psalm 22's wider crucifixion imagery.",
+        "rationale": "OT text's own picture; no typology reach.",
+        "visible_elements": "scroll + shadow vignettes of bulls, lion, dogs, poured-out body",
+        "emotional_tone": "dread"
+      },
+      {
+        "title": "REJECTED - Pierced Hands and Feet (22:16)",
+        "scene_type": "single",
+        "arc_position": "symbolic-support",
+        "framing": "close",
+        "purpose": "-",
+        "rationale": "REJECTED: the contested Masoretic variant was removed from this short by design; visualising it as proof reopens the dispute. Garments only.",
+        "visible_elements": "-",
+        "emotional_tone": "-"
+      },
+      {
+        "title": "REJECTED - Joseph's Stripped Coat",
+        "scene_type": "single",
+        "arc_position": "ot-echo",
+        "framing": "mid",
+        "purpose": "-",
+        "rationale": "REJECTED: typological reach the NT never cites for Psalm 22:18; series guardrail forbids stretched types.",
+        "visible_elements": "-",
+        "emotional_tone": "-"
+      }
+    ],
+    "rationale": "Selected the set that keeps Psalm 22:18's two acts (divide + cast lots) as the spine from hook to fulfilment, grounds the author (David) and the scandal (a death not his own), and lands on the cross as the gospel pivot. Rejected the pierced-variant scene (reopens the textual dispute the narration removed) and the Joseph typology (uncited). Kept five unified vignette scenes so the study never reads as a slideshow, and varied framings so the recurring cross stays fresh.",
+    "beat_coverage": {
+      "hook": [
+        1,
+        12
+      ],
+      "point": [
+        2,
+        3,
+        8,
+        11
+      ],
+      "proof": [
+        4,
+        5,
+        6,
+        9,
+        12
+      ],
+      "conviction": [
+        7,
+        10,
+        11
+      ],
+      "landing": [
+        7,
+        13,
+        14
+      ]
+    },
+    "hero_candidate": 7
+  },
+  "self_review": {
+    "overall": "LOCKED",
+    "panel": [
+      {
+        "agent": "Scene Director",
+        "verdict": "STRONG",
+        "note": "The arc carries the narration: hook (#1 'The Dice in the Dust') makes the thread visible before it is explained, proof is forensic (#4 scroll line, #6 'Cast Lots at the Cross'), and it lands on the gospel pivot (#7 hero 'The Cross, Foretold' -> #13/#14). The turn from evidence to invitation is real."
+      },
+      {
+        "agent": "Theologian",
+        "verdict": "STRONG",
+        "note": "Garments-only proof is exegetically honest: #4 quotes Psalm 22:18, #6 lands it on John 19:24; the contested 'pierced' (22:16) and a Joseph typology are both REJECTED; #8 uses only the psalm's own 22:12-15 imagery — no invented detail."
+      },
+      {
+        "agent": "Visual Skeptic",
+        "verdict": "CAUTION",
+        "note": "Christ-on-cross appears in #6,#7,#10,#11,#13,#14. Framings vary (low-angle hero, mid revelation, close face, mid devotional) so it holds, but at render keep #10 and #11 visibly distinct from the #7 hero. Advisory, not blocking."
+      },
+      {
+        "agent": "Character-Consistency Checker",
+        "verdict": "STRONG",
+        "note": "Every Christ-bearing scene sets jesus_variant 'passion' and describes him 'robed at the waist' with bowed/lifted head consistently; David consistently 'aged ... grey beard' across #2,#3,#11."
+      },
+      {
+        "agent": "Jaded Viewer",
+        "verdict": "CAUTION",
+        "note": "Hook (#1 dice + stripped cloth) is a genuine scroll-stopper. Keep #4 'the-scroll-line' (extreme macro) and #8 (wide laid-out scroll) visibly different so the early third does not read as two scroll shots. Advisory."
+      },
+      {
+        "agent": "Cut Editor",
+        "verdict": "STRONG",
+        "note": "Strong macro density (3-5 cut anchors/scene) and viral_role variety (hook-open/build/pivot/climax/close); hero #7 is iconic and near-still for the bookend; #12 'dice-macro' gives a punchy insert beat."
+      }
+    ],
+    "gates": [
+      {
+        "gate": "SP-G1 Biblical Accuracy",
+        "verdict": "PASS",
+        "evidence": "Psalm 22:18 quoted verbatim (#4); fulfilment cited at John 19:24 (#6); contested 22:16 and uncited Joseph typology rejected.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G2 Narration Alignment",
+        "verdict": "PASS",
+        "evidence": "Every beat id in ['hook', 'point', 'proof', 'conviction', 'landing'] has >=1 supporting scene.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G3 Freshness / Cliche Avoidance",
+        "verdict": "PASS",
+        "evidence": "Wide Golgotha skyline, haloed scroll, and shepherd-boy David named and rejected; hook is a grubby dice/cloth close.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G4 Thread Fidelity",
+        "verdict": "PASS",
+        "evidence": "Psalm 22:18's two acts run hook (#1) -> fulfilment (#6) -> cross (#7); thread intact.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G5 Prompt Conformance",
+        "verdict": "PASS",
+        "evidence": "All subject_block + mood_block content clear of the banned-token list.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G6 Type Discipline",
+        "verdict": "PASS",
+        "evidence": "every unified scene declares 3-5 vignettes (counts: #3=4, #6=4, #8=4, #10=4, #11=4)",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G7 Gospel Frame Survival",
+        "verdict": "PASS",
+        "evidence": "hero #7 is the cross (gospel pivot); the cut opens on the hook and lands on Christ.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G8 Composition Distribution",
+        "verdict": "PASS",
+        "evidence": "4 distinct framings; max 'close' at 6/14.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G9 Scene Mix & Gospel Frame",
+        "verdict": "PASS",
+        "evidence": "n=14: single=9, unified=5, nt-link=2, ot-echo=2",
+        "fix": ""
+      }
+    ],
+    "priority_fixes": []
+  },
+  "independent_review": {
+    "overall": "LOCKED",
+    "panel": [
+      {
+        "agent": "Independent Scene Director",
+        "verdict": "STRONG",
+        "note": "Outside read: the spine (Psalm 22:18's two acts) genuinely drives hook->proof->landing rather than illustrating lines. #1 dice hook and #7 cross hero bookend cleanly. No beat is orphaned."
+      },
+      {
+        "agent": "Independent Theologian",
+        "verdict": "STRONG",
+        "note": "I tried to break the doctrine and could not: the proof is confined to the undisputed garments (22:18 / John 19:24); the contested 'pierced' and the uncited Joseph type are explicitly rejected; #8 stays inside Psalm 22's own vv12-15. No eisegesis, no invented narrative."
+      },
+      {
+        "agent": "Independent Visual Skeptic",
+        "verdict": "CAUTION",
+        "note": "Six Christ-on-cross scenes (#6,7,10,11,13,14) is the one real risk of a sceptical scroller feeling repetition. Framing variety mitigates it; at render, #10 'No Accident - the Plan' and #11 'A Thousand Years Apart' must not collapse toward the #7 hero composition. Advisory only."
+      },
+      {
+        "agent": "Independent Character Auditor",
+        "verdict": "STRONG",
+        "note": "jesus_variant 'passion' is uniform across all Christ scenes and matches content (no resurrection/ministry bleed). Wardrobe ('robed at the waist') and posture held consistent; David's age/beard consistent."
+      },
+      {
+        "agent": "Independent Jaded Viewer",
+        "verdict": "CAUTION",
+        "note": "Two scroll-led scenes (#4 macro line, #8 wide laid-out, plus the scroll recurs as vignette in #3/#10/#11) risk a 'parchment montage' feel. Keep them distinct in scale and lighting. Honest, not blocking."
+      },
+      {
+        "agent": "Independent Cut Auditor",
+        "verdict": "STRONG",
+        "note": "Cut-anchor density and viral_role spread are sound; hero is correctly the gospel-pivot cross, not the most emotional face (#13). Insert-grade #12 supports pacing."
+      }
+    ],
+    "gates": [
+      {
+        "gate": "SP-G1 Biblical Accuracy",
+        "verdict": "PASS",
+        "evidence": "Independent check: 22:18 verbatim at #4, John 19:24 fulfilment at #6; no claim outside the text; contested/uncited material rejected.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G2 Narration Alignment",
+        "verdict": "PASS",
+        "evidence": "Every beat id in ['hook', 'point', 'proof', 'conviction', 'landing'] has >=1 supporting scene.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G3 Freshness / Cliche Avoidance",
+        "verdict": "PASS",
+        "evidence": "Cliche auto-completes named and rejected; the hook earns attention without sensationalism.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G4 Thread Fidelity",
+        "verdict": "PASS",
+        "evidence": "Thread carried opening->climax->close; not swapped to placate freshness.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G5 Prompt Conformance",
+        "verdict": "PASS",
+        "evidence": "All subject_block + mood_block content clear of the banned-token list.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G6 Type Discipline",
+        "verdict": "PASS",
+        "evidence": "every unified scene declares 3-5 vignettes (counts: #3=4, #6=4, #8=4, #10=4, #11=4)",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G7 Gospel Frame Survival",
+        "verdict": "PASS",
+        "evidence": "Hero #7 is the cross; the cut lands on Christ (#7/#13/#14); CTA-to-Jesus intact.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G8 Composition Distribution",
+        "verdict": "PASS",
+        "evidence": "4 distinct framings; max 'close' at 6/14.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G9 Scene Mix & Gospel Frame",
+        "verdict": "PASS",
+        "evidence": "n=14: single=9, unified=5, nt-link=2, ot-echo=2",
+        "fix": ""
+      }
+    ],
+    "priority_fixes": []
+  },
+  "paper_cohesion": {
+    "scope": "paper",
+    "passed": true,
+    "notes": "The set coheres as one study rather than a slideshow. The thread (Psalm 22:18's two acts - divide the garments and cast lots) is established visually in the hook (#1), grounded in its author (#2 David, #3 a death not his own), proven (#4 the written line, #5 the seamless coat, #6 the fulfilment at the cross, #9 the stripped garments), deepened (#8 the wider execution written early, #11 the thousand-year bridge), and landed on the gospel pivot (#7 cross hero -> #10 the plan -> #13 his name -> #14 laying down his life). Tone is consistent (bleak dusk and lamplit shadow warming only at the close), Christ is uniformly 'passion' variant and consistently described, and the proof never drifts onto the contested 'pierced' reading. One advisory, non-structural note carried from the panels: six Christ-on-cross scenes and several scroll appearances should be kept visually distinct at render so the recurrence reads as deliberate motif, not repetition - this is a rendering caution, not a planning conflict.",
+    "conflict_scenes": []
+  },
+  "authoritative_overall": "LOCKED"
+}
