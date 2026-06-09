@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "aged David",
+      "actual": "David reads as middle-aged-to-older with a greying beard rather than clearly elderly; acceptable"
+    }
+  ],
+  "banned_token_hits": []
+}

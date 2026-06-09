@@ -1,0 +1,51 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, slower pacing with longer holds and restrained cuts.\n\nClassical devotional oil painting realism. Warm amber lamplight rises from a single oil flame at lower-left, painting gold across the old man's face, beard, and the pale parchment while deep shadow swallows the chamber behind him; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\nAn aged man with a full grey beard, in a heavy slate-grey robe, is seated at a plain wooden table, his eyes lifted toward the viewer with quiet gravity. A slender dark pen is at rest in his right hand against a pale parchment marked with faint script. A brass oil lamp with a single lit flame stands at the table's left, a gold crown rests on the table beside it, and a clay jug sits further left in shadow. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the old man at his table, lamp glowing, crown and parchment before him.\n\nCut to mid framing — his face and shoulders, eyes meeting the viewer in amber light.\n\nCut to close-up — the weathered face and grey beard in lamplight.\n\nCut to insert — the slender pen at rest against the parchment's faint script.\n\nCut to insert — the gold crown resting on the wooden table.\n\nCut to macro detail — the small oil-lamp flame, painted light on brass.\n\nCut to lower framing — his right hand at rest near the parchment's edge.\n\nReturn to full composition — the old man, the lamp, the crown, the parchment.\n\nEnd hold on his eyes, steady and direct in the lamplight.\n\nMicro-motion:\n- minimal\n- flame stirs as painted light only\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\nQuiet, grave reverence held in lamplight.\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.11,
+      "description": "Start on full composition — aged man at table, lamp glowing, crown and parchment before him"
+    },
+    {
+      "start_sec": 1.11,
+      "end_sec": 2.22,
+      "description": "Cut to mid framing — face and shoulders, eyes meeting viewer in amber light"
+    },
+    {
+      "start_sec": 2.22,
+      "end_sec": 3.33,
+      "description": "Cut to close-up — weathered face and grey beard in lamplight"
+    },
+    {
+      "start_sec": 3.33,
+      "end_sec": 4.44,
+      "description": "Cut to insert — slender pen at rest against parchment's faint script"
+    },
+    {
+      "start_sec": 4.44,
+      "end_sec": 5.56,
+      "description": "Cut to insert — gold crown resting on the wooden table"
+    },
+    {
+      "start_sec": 5.56,
+      "end_sec": 6.67,
+      "description": "Cut to macro detail — small oil-lamp flame, painted light on brass"
+    },
+    {
+      "start_sec": 6.67,
+      "end_sec": 7.78,
+      "description": "Cut to lower framing — right hand at rest near the parchment's edge"
+    },
+    {
+      "start_sec": 7.78,
+      "end_sec": 8.89,
+      "description": "Return to full composition — old man, lamp, crown, parchment"
+    },
+    {
+      "start_sec": 8.89,
+      "end_sec": 10.0,
+      "description": "End hold on his eyes, steady and direct in the lamplight"
+    }
+  ]
+}

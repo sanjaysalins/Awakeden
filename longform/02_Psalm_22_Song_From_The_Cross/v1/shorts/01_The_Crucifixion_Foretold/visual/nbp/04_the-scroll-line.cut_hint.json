@@ -1,0 +1,19 @@
+{
+  "scene_index": 4,
+  "title": "The Line, Centuries Early",
+  "scene_type": "single",
+  "framing": "close",
+  "arc_position": "theological-centre",
+  "jesus_variant": null,
+  "viral_role": "pivot",
+  "pacing": "slower",
+  "macro_elements": [
+    "the traced line of script",
+    "the resting fingertip",
+    "the cracked ink",
+    "the parchment fibres",
+    "the lamp glow on the page"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

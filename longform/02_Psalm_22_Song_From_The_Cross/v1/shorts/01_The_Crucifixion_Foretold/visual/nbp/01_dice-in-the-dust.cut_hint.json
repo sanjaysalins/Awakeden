@@ -1,0 +1,19 @@
+{
+  "scene_index": 1,
+  "title": "The Dice in the Dust",
+  "scene_type": "single",
+  "framing": "close",
+  "arc_position": "opening-hook",
+  "jesus_variant": null,
+  "viral_role": "hook-open",
+  "pacing": "controlled",
+  "macro_elements": [
+    "the two tumbling dice",
+    "the seamless coat set apart",
+    "a soldier's splayed hand",
+    "the heap of stripped garments",
+    "the foot of the wooden cross"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

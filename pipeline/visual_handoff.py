@@ -52,7 +52,11 @@ def run_kling_pipeline(
     by temporarily passing each PNG path individually (image_to_kling accepts
     either a folder or a single file).
     """
-    render_dir = visual_dir(v1_folder) / provider
+    # Resolve to an ABSOLUTE path: image_to_kling.py runs with cwd=PythonProject1
+    # (NARRATION_PROJECT_DIR.parent), so a relative target path — as passed when
+    # the user gives cli_visual a relative v1 folder — would not resolve there and
+    # the subprocess would exit 1 before the Vision cut-plan call.
+    render_dir = (visual_dir(v1_folder) / provider).resolve()
     if not render_dir.exists():
         log(f"      ! no render dir at {render_dir}")
         return 1

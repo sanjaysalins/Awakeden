@@ -1,0 +1,51 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, slower pacing with longer holds and restrained cuts.\n\nClassical devotional oil painting realism. Soft daylight falls from above on a robed figure raised on a wooden cross, a faint warm light at the brow, while the sky and the far landscape deepen into shadow and a low group of figures rests in dimness at lower left; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\nA robed figure with a bowed head and lowered eyes is raised on a tall wooden cross, arms extended along the beam and fixed at the wrists, feet at rest together on a small wooden ledge below, a faint warm light at the brow. A pale inscription board sits at the top of the cross in shadow. At lower left, two or three armoured soldiers are crouched low over a heap of blue and gold cloth. A dim landscape lies beyond at right. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the robed figure on the cross, soldiers over the cloth at lower left, dim landscape beyond.\n\nCut to mid framing — the bowed head and shoulders, faint light at the brow.\n\nCut to close-up — the lowered face held in quiet stillness.\n\nCut to insert — the fixed right hand at the end of the beam.\n\nCut to lower framing — the pale robe falling in heavy folds.\n\nCut to insert — the feet at rest together on the small wooden ledge.\n\nCut to lower framing — the crouched soldiers over the heap of blue and gold cloth at lower left.\n\nReturn to full composition — the figure on the cross above the dim ground.\n\nEnd hold on the cross and the bowed figure.\n\nMicro-motion:\n- minimal\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\nStill, reverent weight over a finished sorrow.\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.11,
+      "description": "Start on full composition — robed figure on the cross, soldiers over the cloth at lower left, dim landscape"
+    },
+    {
+      "start_sec": 1.11,
+      "end_sec": 2.22,
+      "description": "Cut to mid framing — bowed head and shoulders, faint light at the brow"
+    },
+    {
+      "start_sec": 2.22,
+      "end_sec": 3.33,
+      "description": "Cut to close-up — lowered face held in quiet stillness"
+    },
+    {
+      "start_sec": 3.33,
+      "end_sec": 4.44,
+      "description": "Cut to insert — fixed right hand at the end of the beam"
+    },
+    {
+      "start_sec": 4.44,
+      "end_sec": 5.56,
+      "description": "Cut to lower framing — pale robe falling in heavy folds"
+    },
+    {
+      "start_sec": 5.56,
+      "end_sec": 6.67,
+      "description": "Cut to insert — feet at rest together on the small wooden ledge"
+    },
+    {
+      "start_sec": 6.67,
+      "end_sec": 7.78,
+      "description": "Cut to lower framing — crouched soldiers over the heap of blue and gold cloth at lower left"
+    },
+    {
+      "start_sec": 7.78,
+      "end_sec": 8.89,
+      "description": "Return to full composition — the figure on the cross above the dim ground"
+    },
+    {
+      "start_sec": 8.89,
+      "end_sec": 10.0,
+      "description": "End hold on the cross and the bowed figure"
+    }
+  ]
+}

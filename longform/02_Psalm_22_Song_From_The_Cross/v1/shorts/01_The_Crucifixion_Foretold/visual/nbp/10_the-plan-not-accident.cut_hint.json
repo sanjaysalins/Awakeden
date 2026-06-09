@@ -1,0 +1,19 @@
+{
+  "scene_index": 10,
+  "title": "No Accident - the Plan",
+  "scene_type": "unified",
+  "framing": "mid",
+  "arc_position": "revelation",
+  "jesus_variant": "passion",
+  "viral_role": "pivot",
+  "pacing": "slower",
+  "macro_elements": [
+    "Christ's lifted face",
+    "the darkened sky",
+    "the faint scroll in shadow",
+    "the cross grain",
+    "the dividing soldiers"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

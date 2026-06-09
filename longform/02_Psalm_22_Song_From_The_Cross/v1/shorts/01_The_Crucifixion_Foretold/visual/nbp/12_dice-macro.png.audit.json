@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "two carved knuckle-bone dice",
+      "actual": "the two lots read as cubic pip dice rather than strict knuckle-bone astragali; still clearly 'dice' caught mid-tumble"
+    },
+    {
+      "claim": "deep shadow surrounding the falling lots",
+      "actual": "a faint gold scuff on the stone face could be misread as a mark, but it is incidental texture, not legible text"
+    }
+  ],
+  "banned_token_hits": []
+}

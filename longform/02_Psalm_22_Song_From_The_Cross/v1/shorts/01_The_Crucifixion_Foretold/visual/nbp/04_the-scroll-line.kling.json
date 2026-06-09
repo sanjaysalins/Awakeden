@@ -1,0 +1,46 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, slower pacing with longer holds and restrained cuts.\n\nClassical devotional oil painting realism. Warm light falls across a pale aged parchment, catching a single line of gold-brown lettering and the ridge of a weathered thumb at rest, while deep shadow and a fold of deep-blue cloth frame the right edge; visible brushwork, heavy craquelure, aged varnish throughout.\n\nScene contains:\nA pale aged parchment fills the frame, marked with a single line of faint gold-brown script, its upper-right corner curled. A weathered thumb is at rest against the lower parchment, the rest of the hand below in shadow. A fold of deep-blue cloth lies along the right edge. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the parchment with its line of script, a thumb at rest upon it, blue cloth at right.\n\nCut to insert — the single line of faint gold-brown script across the parchment.\n\nCut to macro detail — the cracked, lamplit surface of the parchment, dense craquelure.\n\nCut to close-up — the weathered thumb at rest on the lower parchment.\n\nCut to insert — the curled upper-right corner of the parchment.\n\nCut to lower framing — the fold of deep-blue cloth meeting the parchment's edge.\n\nReturn to full composition — the parchment, the line of script, the thumb, the blue cloth.\n\nEnd hold on the single line of script.\n\nMicro-motion:\n- minimal\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\nHushed, weighty stillness over an ancient written line.\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.25,
+      "description": "Start on full composition — parchment with line of script, thumb at rest, blue cloth at right"
+    },
+    {
+      "start_sec": 1.25,
+      "end_sec": 2.5,
+      "description": "Cut to insert — single line of faint gold-brown script across the parchment"
+    },
+    {
+      "start_sec": 2.5,
+      "end_sec": 3.75,
+      "description": "Cut to macro detail — cracked lamplit parchment surface, dense craquelure"
+    },
+    {
+      "start_sec": 3.75,
+      "end_sec": 5.0,
+      "description": "Cut to close-up — weathered thumb at rest on the lower parchment"
+    },
+    {
+      "start_sec": 5.0,
+      "end_sec": 6.25,
+      "description": "Cut to insert — curled upper-right corner of the parchment"
+    },
+    {
+      "start_sec": 6.25,
+      "end_sec": 7.5,
+      "description": "Cut to lower framing — fold of deep-blue cloth meeting the parchment edge"
+    },
+    {
+      "start_sec": 7.5,
+      "end_sec": 8.75,
+      "description": "Return to full composition — parchment, line of script, thumb, blue cloth"
+    },
+    {
+      "start_sec": 8.75,
+      "end_sec": 10.0,
+      "description": "End hold on the single line of script"
+    }
+  ]
+}

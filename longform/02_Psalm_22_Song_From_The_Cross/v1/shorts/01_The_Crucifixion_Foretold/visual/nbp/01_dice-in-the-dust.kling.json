@@ -1,0 +1,51 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, controlled pacing with deliberate cuts and extended holds.\n\nClassical devotional oil painting realism. Cool grey daylight falls across a pale stone ledge, raking low so the weathered hands and the two small dice cast hard painted shadows; deep shadow gathers around the heaped cloth below; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\nThree weathered, sun-darkened hands are extended forward above a pale stone ledge, fingers spread toward two small pale dice set upon the stone, each die beside its own painted shadow. A white tunic and a heap of dust-brown cloth are draped over the lower ledge, and a dark metal Roman helmet rests at the lower right. The rough base of a wooden upright stands in the dim centre, a faint landscape beyond at upper left. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the stone ledge, three weathered hands extended toward two dice, heaped garments below, helmet at lower right.\n\nCut to mid framing — the cluster of weathered hands above the pale ledge.\n\nCut to close-up — the foremost weathered hand, fingers spread and extended forward.\n\nCut to insert — the two pale dice set upon the stone, hard painted shadows beside them.\n\nCut to macro detail — the pip-marked face of the nearest die, craquelure across the stone.\n\nCut to lower framing — the heaped garments, white tunic and dust-brown cloth over the ledge.\n\nCut to insert — the dark Roman helmet at lower right, dull light along its metal dome.\n\nReturn to full composition — hands, dice, garments, helmet, and the wooden upright behind.\n\nEnd hold on the two dice at rest on the stone.\n\nMicro-motion:\n- minimal\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\nTaut, forensic stillness over a casual cruelty.\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.11,
+      "description": "Start on full composition — stone ledge, three weathered hands extended toward two dice, garments heaped below, helmet lower right"
+    },
+    {
+      "start_sec": 1.11,
+      "end_sec": 2.22,
+      "description": "Cut to mid framing — cluster of weathered hands above the pale ledge"
+    },
+    {
+      "start_sec": 2.22,
+      "end_sec": 3.33,
+      "description": "Cut to close-up — foremost weathered hand, fingers spread and extended forward"
+    },
+    {
+      "start_sec": 3.33,
+      "end_sec": 4.44,
+      "description": "Cut to insert — two pale dice set upon the stone, hard painted shadows beside them"
+    },
+    {
+      "start_sec": 4.44,
+      "end_sec": 5.56,
+      "description": "Cut to macro detail — pip-marked face of the nearest die, craquelure across the stone"
+    },
+    {
+      "start_sec": 5.56,
+      "end_sec": 6.67,
+      "description": "Cut to lower framing — heaped garments, white tunic and dust-brown cloth over the ledge"
+    },
+    {
+      "start_sec": 6.67,
+      "end_sec": 7.78,
+      "description": "Cut to insert — dark Roman helmet at lower right, dull light along the metal dome"
+    },
+    {
+      "start_sec": 7.78,
+      "end_sec": 8.89,
+      "description": "Return to full composition — hands, dice, garments, helmet, wooden upright behind"
+    },
+    {
+      "start_sec": 8.89,
+      "end_sec": 10.0,
+      "description": "End hold on the two dice at rest on the stone"
+    }
+  ]
+}

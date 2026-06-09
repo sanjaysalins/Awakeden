@@ -1,0 +1,19 @@
+{
+  "scene_index": 3,
+  "title": "A Death Not His Own",
+  "scene_type": "unified",
+  "framing": "wide",
+  "arc_position": "public-misunderstanding",
+  "jesus_variant": null,
+  "viral_role": "build",
+  "pacing": "slower",
+  "macro_elements": [
+    "David's folded hands",
+    "the cushioned deathbed",
+    "a guttering candle",
+    "the shadowed far cross",
+    "the divided garments vignette"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "a simple gold circlet set aside",
+      "actual": "a gold crown is set aside on the table as required, but it is a pointed/spiked king's crown rather than a simple flat circlet — minor stylistic nit"
+    },
+    {
+      "claim": "his eyes fixed far beyond the page",
+      "actual": "David's gaze reads as contemplative but is angled toward the page/middle distance rather than clearly far-off — minor"
+    }
+  ],
+  "banned_token_hits": []
+}

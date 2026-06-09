@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "two carved knuckle-bone dice",
+      "actual": "two dice are present mid-tumble over the stone, but they read as standard cubic pipped dice rather than carved knuckle-bone (astragali) — minor stylistic nit, all other required elements correct"
+    }
+  ],
+  "banned_token_hits": []
+}

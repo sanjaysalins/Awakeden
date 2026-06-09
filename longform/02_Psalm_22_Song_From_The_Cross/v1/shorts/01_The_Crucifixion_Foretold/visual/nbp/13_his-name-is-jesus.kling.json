@@ -1,0 +1,51 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, slower pacing with longer holds and restrained cuts.\n\nClassical devotional oil painting realism. Soft warm light falls across a bowed face from the upper left, catching one cheek and the woven crown of thorns while the wooden cross-beam and the deep-blue robe fall into shadow; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\nA bearded man's face is bowed, eyes lowered in quiet peace, a woven crown of thorns set across the brow with faint marks beneath it. Dark hair falls to the shoulders. A deep-blue robe and an open pale tunic rest at the shoulder, and the grain of a wooden cross-beam stands behind in shadow. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the bowed face crowned with thorns, the wooden cross-beam behind.\n\nCut to mid framing — the face and the crown of thorns in warm light.\n\nCut to insert — the woven crown of thorns across the brow.\n\nCut to close-up — the lowered eyes held in stillness.\n\nCut to insert — a strand of dark hair falling against the shoulder.\n\nCut to lower framing — the deep-blue robe and pale tunic at the shoulder.\n\nCut to macro detail — the grain of the wooden cross-beam behind.\n\nReturn to full composition — the bowed, thorn-crowned face.\n\nEnd hold on the lowered face in quiet peace.\n\nMicro-motion:\n- minimal\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\nTender, reverent stillness.\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.11,
+      "description": "Start on full composition — bowed face crowned with thorns, wooden cross-beam behind"
+    },
+    {
+      "start_sec": 1.11,
+      "end_sec": 2.22,
+      "description": "Cut to mid framing — face and crown of thorns in warm light"
+    },
+    {
+      "start_sec": 2.22,
+      "end_sec": 3.33,
+      "description": "Cut to insert — woven crown of thorns across the brow"
+    },
+    {
+      "start_sec": 3.33,
+      "end_sec": 4.44,
+      "description": "Cut to close-up — lowered eyes held in stillness"
+    },
+    {
+      "start_sec": 4.44,
+      "end_sec": 5.56,
+      "description": "Cut to insert — strand of dark hair falling against the shoulder"
+    },
+    {
+      "start_sec": 5.56,
+      "end_sec": 6.67,
+      "description": "Cut to lower framing — deep-blue robe and pale tunic at the shoulder"
+    },
+    {
+      "start_sec": 6.67,
+      "end_sec": 7.78,
+      "description": "Cut to macro detail — grain of the wooden cross-beam behind"
+    },
+    {
+      "start_sec": 7.78,
+      "end_sec": 8.89,
+      "description": "Return to full composition — the bowed, thorn-crowned face"
+    },
+    {
+      "start_sec": 8.89,
+      "end_sec": 10.0,
+      "description": "End hold on the lowered face in quiet peace"
+    }
+  ]
+}

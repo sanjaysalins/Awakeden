@@ -1,0 +1,19 @@
+{
+  "scene_index": 6,
+  "title": "Cast Lots at the Cross",
+  "scene_type": "unified",
+  "framing": "mid",
+  "arc_position": "nt-gospel-link",
+  "jesus_variant": "passion",
+  "viral_role": "pivot",
+  "pacing": "controlled",
+  "macro_elements": [
+    "the tumbling dice",
+    "Christ's robed lower body above",
+    "a soldier's dividing hands",
+    "the heap of garments",
+    "the cross foot"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

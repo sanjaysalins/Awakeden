@@ -1,6 +1,56 @@
 # RESUME.md — start here next session
 
-## ═══════════ SESSION 2026-06-08 (LATEST) — SFX IMMERSION (shorts + Psalm22 long) + SHORTS-FIRST DIRECTION + PSALM22 SHORT #01 VISUAL PLAN LOCKED ═══════════
+## ═══════════ SESSION 2026-06-09 (LATEST) — PSALM 22 SHORT #01 STILLS DONE (14/14) + ANIMATED (6/6 clips) + LONG-FORM "TYPES & SHADOWS" SLATE + PASSOVER #1 DRAFTED/RED-TEAMED ═══════════
+
+**Paused by user ("save everything, update resume"). Two tracks ran in parallel. Metered spend this session ≈ $8 (NBP stills $4 + Kling clips $3.90). All text/json/scripts saved; media gitignored.**
+
+### TRACK 1 — Psalm 22 Short #01 "The Crucifixion Foretold": STILLS COMPLETE + ANIMATED
+Folder: `longform\02_Psalm_22_Song_From_The_Cross\v1\shorts\01_The_Crucifixion_Foretold\`
+- **Resumed the #01 NBP render** (scenes 8–14) → **14/14 stills passed content audit** (all QC'd full-res by me in chat, agent-mode Vision). Gallery: `…\visual\nbp\index.html`. Spend ≈ $3.50.
+- **Scene 11 re-rendered** (user flagged): the planner had drawn a busy comp (large central Christ bust + foreground crucifix statue). I tightened `scene_plan.json` scene-11 `subject_block` to a strict **diptych** (David foreground-left ↔ small distant Christ on a far hill, no central figure) → clean re-render ($0.50). The other 13 stills unchanged.
+- **ANIMATED 6/6 short-priority clips** (direct-Kling, 10s each, `--kling-skip-audit`): 01 dice · 02 david-at-lamp · 04 scroll-line · 06 soldiers-cast-lots · 07 the-cross · 13 his-name-is-jesus. I authored each Kling cut-plan (locked-discipline SKILL, state-only/frozen-tableau) + serviced every cut-plan & audit via the agent bridge. Spot-checked 07 (nailed hand — 5 fingers, no morph) + 13 (face — no morph) in motion. Spend = 6×$0.65 ≈ $3.90. **#01 running total ≈ $13.**
+- 🐞 **BUG FIXED (important):** `pipeline\visual_handoff.py run_kling_pipeline` passed **relative** image paths to `image_to_kling.py`, which runs with `cwd=PythonProject1` → it couldn't find the PNGs and exited 1 (no bridge request, no spend) — that's the long-standing "Kling produced no mp4" symptom for the cli_visual Phase-C path. Fix = `render_dir = (visual_dir(v1_folder)/provider).resolve()` (absolute). Verified working end-to-end. **NOTE:** `--kling-skip-audit` only disables retries+FAIL-block; the Stage-A.5 audit still RUNS and posts a bridge request (by design) — service it.
+
+### ▶▶ TRACK 1 — DO NEXT
+1. **Watch the 6 clips** (gallery path above) — full QC ≥6 frames each (memory `feedback-audit-stills-fullres`); re-animate any that morph (delete its `.mp4`+`.kling.json`, re-run the same `cli_visual … --kling-skip-audit`, service bridge).
+2. **Assemble the 60s cut:** `.venv\Scripts\python.exe cli_assemble.py "<#01 folder>"` (ffmpeg ~$0 + tiny Vision verify). Folder is `.locked` so assembly is allowed. Hero = the gospel-pivot (the cross / 07). Then caption.
+3. Then animate/assemble the **other 7 Psalm 22 shorts** (stills + animation), gate $25/short.
+
+### TRACK 2 — LONG-FORM: "TYPES & SHADOWS" 5-DEEP-DIVE SLATE (user greenlit) + #1 DRAFTED
+- **Slate:** `longform\LONGFORM_TYPES_SHADOWS_SLATE.md` — user chose **Types & Shadows** set + **slate-first** depth. Order (proof-first): **1 Passover Lamb** (Ex 12→1 Cor 5:7, Jn 19:36) · **2 Bronze Serpent** (Num 21→Jn 3:14) · **3 Seed of the Woman** (Gen 3:15→Gal 4:4) · **4 Day of Atonement/Scapegoat** (Lev 16→Heb 9) · **5 Melchizedek** (Gen 14+Ps 110→Heb 7). Each = 7-movement spine + 3–4 spinoff shorts. Avoids the two done (Isaiah 53, Psalm 22).
+- **#1 Passover Lamb DRAFTED:** `longform\03_The_Passover_Lamb\v1\narration.md` — 7 movements (Picture→Problem→Strange Detail→Centuries-Early Match→Honest Objection→Exchange→Invitation), ~890 spoken words (~6–7 min), KJV grounded (Ex 12 + 1 Cor 5:7 + John 19:33-36 + 1 Pet 1:18-19, all fetched/cached).
+- **#1 RED-TEAM DONE** (independent agent) → verdict REVISE; **all 11 KJV quotes verbatim**; 5 surgical fixes APPLIED (status now draft v1.1): tenth-day anchor (Ex 12:3) added so "four days" is shown not asserted · "the same words"→"the same rule" (Ex 12:46 vs Jn 19:36 wordings differ) · Pilate line reworded as clear paraphrase (not a quasi-quote) · "never read Exodus"→"no thought of Exodus" · Ex 12:7 mid-verse clip given an ellipsis.
+
+### ▶▶ TRACK 2 — DO NEXT
+1. **5-CLI external panel on #1 Passover** (`independent_review.py "<narration.md>" --type narration`, $0 subscription) → judge + apply/answer → **LOCK** (`cli_lock.py`) → multi-voice long-form audio (narrator + the_LORD on God-speech; per the Isaiah recipe in this file).
+2. Then #1 visuals: 16:9 scene plan → test-gate 1–2 stills → batch NBP → veo3 animate → assemble → caption. Quote spend at each gate (~$20-25/long, ceiling $40).
+3. Then **#2 Bronze Serpent** (repeat the loop). Longs-first; shorts distilled after.
+
+### Pending ear-reviews still open (older): SFX on shorts 12/16/18/36; Psalm 22 long `narration.immersive.mp3`.
+
+## ═══════════ SESSION 2026-06-08 — PSALM 22 SHORT #01 TEST-GATE RENDER STARTED (7/14 stills LOCKED, ~$5) ═══════════
+
+**User said "go" → ran the #01 test-gate render (metered NBP, user-authorised ~$7–8). Paused by user at scene 8. NO work lost — render is idempotent.**
+
+### What rendered (all QC'd full-res by me in chat, agent-mode Vision audit)
+**7 of 14 stills LOCKED + on disk** at
+`longform\02_Psalm_22_Song_From_The_Cross\v1\shorts\01_The_Crucifixion_Foretold\visual\nbp\`:
+- 01 dice-in-the-dust ✅ · 02 david-at-the-lamp ✅ · 03 a-death-not-his-own ✅ (retry: fixed a canvas-edge BORDER → full-bleed) · 04 the-scroll-line ✅ (retry: Latin→**HEBREW** script) · 05 the-seamless-coat ✅ · 06 soldiers-cast-lots ✅ (retry: fixed a GARBLED TITULUS that spelled readable English → illegible marks) · 07 the-cross-foretold ✅ (climax; Christ in a full modest robe, faint head light — accepted).
+- **Look is strong** — clean Baroque oil, sound hands/faces, no banned tokens. The 3 retries each caught a REAL defect (border / wrong-language script / garbled English label) — keep auditing this hard (memory `feedback-audit-stills-fullres`).
+
+### SPEND this session ≈ **$5** (10 NBP images: 7 keepers + 3 retries @ $0.50). Budget doc `PSALM22_SHORTS_BUDGET.md`.
+
+### ⏸ Stopped at scene 8 — NOT a content issue
+Gemini server disconnect mid-render (`httpx.RemoteProtocolError: Server disconnected`). Scenes **8–14** still to render (08 scroll · 09 garments-heap · 10–11 passion · 12 dice-macro · 13–14 passion-close).
+
+### ▶▶ DO FIRST NEXT SESSION
+1. **Resume the #01 render** — SAME command (idempotent: SKIPS 1–7, picks up at scene 8, ~$3.50 + any retries):
+   `.venv\Scripts\python.exe cli_visual.py "longform\02_Psalm_22_Song_From_The_Cross\v1\shorts\01_The_Crucifixion_Foretold" --provider nbp --no-animate --no-short-only`
+   **Run it WITH the sandbox disabled / network ON** (the first launch died with `getaddrinfo failed` because run_in_background was sandboxed with no network). Run it in the background, then **service the per-image Vision-audit bridge requests in chat** (read each `.agent_bridge\requests\NNNN.request.md`, Read the image, write the JSON verdict to `.agent_bridge\responses\NNNN.txt`). GOTCHA: `pgrep` is NOT on this Win/git-bash — poll the requests dir, don't `pgrep`.
+2. When all 14 PASS → QC the whole pool full-res once more → that LOCKS the look. THEN animate (direct-Kling) + assemble, OR start synthesizing `narration.creation.json` + plans for the other 7 shorts (~$135 total, gate $25/short).
+3. Pending ear-reviews still open: SFX on 12/16/18/36; Psalm 22 long `narration.immersive.mp3`.
+
+## ═══════════ SESSION 2026-06-08 — SFX IMMERSION (shorts + Psalm22 long) + SHORTS-FIRST DIRECTION + PSALM22 SHORT #01 VISUAL PLAN LOCKED ═══════════
 
 **Paused by user ("save everything, pick up later"). NO metered spend this session — everything below is $0 (agent-mode + local ffmpeg + library reuse). Media gitignored; text/json/scripts versioned.**
 

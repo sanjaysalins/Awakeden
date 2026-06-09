@@ -1,0 +1,19 @@
+{
+  "scene_index": 5,
+  "title": "The Coat They Would Not Tear",
+  "scene_type": "single",
+  "framing": "close",
+  "arc_position": "symbolic-support",
+  "jesus_variant": null,
+  "viral_role": "build",
+  "pacing": "controlled",
+  "macro_elements": [
+    "the unbroken weave",
+    "the soldiers' gripping hands",
+    "the stained hem",
+    "the cloth's raking light",
+    "the blurred cross beam"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}
