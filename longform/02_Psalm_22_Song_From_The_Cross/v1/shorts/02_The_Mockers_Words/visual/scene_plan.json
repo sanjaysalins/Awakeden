@@ -1,0 +1,649 @@
+{
+  "plan": {
+    "visual_reading": "The arc opens on the mockers' faces at the foot of the cross — shot-out lips, shaking heads — then steps back a thousand years to David recording those very gestures and words on his scroll. The proof movement intercuts the two scenes: the Hebrew taunt and the cross-side crowd doing exactly what was written. The conviction turns the camera up to Christ, sovereign and unhurried, the power He held back rendered as half-dissolved restrained legions. The landing rests on His face looking down in love and the full cross 'with you in view' — the close lands on the crucified Christ, the gospel-pivot.",
+    "red_team_notes": "Jaded Viewer risks: a generic 'angry crowd' could read as any mob — so the mockers are anchored to the SPECIFIC Psalm 22:7 actions (shot-out lip, shaken head, pointed finger), not vague rage. Two scroll scenes (2, 12) risk overlap — kept distinct (David writing vs the thousand-years diptych). The 'restrained legions' scene (9) risks fantasy-glow angels — anchored as half-dissolved shadow-memory, not a glowing host. The hero must be the cross, not the most emotional face — so #11 (full crucified Christ) is hero, with #10 (face in love) as the emotional climax feeding it.",
+    "scenes": [
+      {
+        "index": 1,
+        "slug": "the-shaking-heads",
+        "title": "The Shaking Heads",
+        "scene_type": "single",
+        "arc_position": "opening-hook",
+        "framing": "close",
+        "purpose": "Hook on the mockers' gesture at the cross",
+        "rationale": "the specific Psalm 22:7 actions, not a generic angry mob",
+        "visible_elements": "two or three jeering faces with shot-out lips and heads tilted in scorn, the dark upright of a cross edge behind",
+        "emotional_tone": "cruel, oblivious derision",
+        "subject_block": "a tight view of jeering faces at the foot of a rough wooden cross, lips curled and shot out in scorn, heads tilted and shaken mid-mockery, eyes narrowed upward, weathered first-century robes in dust and ochre, the dark grain of the cross upright just visible at the edge, deep shadow swallowing the crowd beyond",
+        "mood_block": "atmosphere of cruel, oblivious derision",
+        "jesus_variant": null,
+        "priority": 1,
+        "macro_elements": [
+          "a curled shot-out lip",
+          "a tilted shaking head",
+          "a narrowed scornful eye",
+          "the dark grain of the cross upright"
+        ],
+        "pacing": "controlled",
+        "viral_role": "hook-open",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 2,
+        "slug": "david-records-the-taunt",
+        "title": "David Records the Taunt",
+        "scene_type": "unified",
+        "arc_position": "ot-echo",
+        "framing": "mid",
+        "purpose": "The taunt written a thousand years early",
+        "rationale": "David inscribing the mockers' own words (Ps 22:7-8)",
+        "visible_elements": "aged David at a low table, a Hebrew scroll, an oil lamp, faint background vignettes of mockery",
+        "emotional_tone": "sober, weighty foresight",
+        "subject_block": "an aged King David seated at a low cedar table, a feather pen at rest above a half-unrolled parchment dense with Hebrew letters, a small oil lamp throwing warm light across his lined brow, subtle background vignettes fading into shadow suggesting shaken heads, shot-out lips, a jabbing pointed finger, and a far wooden cross",
+        "mood_block": "atmosphere of sober, weighty foresight",
+        "jesus_variant": null,
+        "priority": 6,
+        "macro_elements": [
+          "the feather pen at rest",
+          "a line of wet Hebrew letters",
+          "the oil lamp flame",
+          "David's lined brow"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "shaken heads",
+          "shot-out lips",
+          "a jabbing pointed finger",
+          "a far wooden cross"
+        ]
+      },
+      {
+        "index": 3,
+        "slug": "let-him-deliver-him",
+        "title": "Let Him Deliver Him",
+        "scene_type": "single",
+        "arc_position": "theological-centre",
+        "framing": "close",
+        "purpose": "The exact written line",
+        "rationale": "a 2s insert on the prophesied taunt",
+        "visible_elements": "extreme close on a Hebrew scroll line, a fingertip beneath it",
+        "emotional_tone": "quiet gravity",
+        "subject_block": "an extreme close view of an open parchment, a single weathered fingertip at rest beneath one illuminated line of ancient Hebrew script, the ink old and cracked, the parchment fibrous and warmly lamplit, deep shadow at the edges",
+        "mood_block": "atmosphere of quiet, fixed gravity",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the fingertip",
+          "one cracked Hebrew line",
+          "the fibrous parchment grain"
+        ],
+        "pacing": "slower",
+        "viral_role": "pivot",
+        "shot_kind": "insert",
+        "vignettes": []
+      },
+      {
+        "index": 4,
+        "slug": "the-crowd-at-the-cross",
+        "title": "The Crowd at the Cross",
+        "scene_type": "unified",
+        "arc_position": "nt-gospel-link",
+        "framing": "wide",
+        "purpose": "Matthew's two groups doing both",
+        "rationale": "passers-by wagging + leaders jeering, Christ above",
+        "visible_elements": "a crowd at the foot of the cross, wagging heads and jabbing fingers, Christ on the cross above",
+        "emotional_tone": "fulfilment amid scorn",
+        "subject_block": "a wide view at the foot of a tall wooden cross, a knot of passers-by with heads wagged in scorn and robed religious leaders with fingers jabbed upward, the crucified Christ robed at the waist just above them against a darkened sky, subtle background vignettes fading into shadow suggesting wagging heads, a sneering elder, jabbing fingers, and the dark crossbeam",
+        "mood_block": "atmosphere of prophecy fulfilled amid scorn",
+        "jesus_variant": "passion",
+        "priority": 2,
+        "macro_elements": [
+          "a wagged head",
+          "a jabbing finger",
+          "a sneering elder's mouth",
+          "the crucified feet above"
+        ],
+        "pacing": "controlled",
+        "viral_role": "pivot",
+        "shot_kind": "standard",
+        "vignettes": [
+          "wagging heads",
+          "a sneering elder",
+          "jabbing fingers",
+          "the dark crossbeam"
+        ]
+      },
+      {
+        "index": 5,
+        "slug": "the-leaders-jeer",
+        "title": "The Religious Leaders Jeer",
+        "scene_type": "single",
+        "arc_position": "public-misunderstanding",
+        "framing": "mid",
+        "purpose": "the leaders' specific taunt",
+        "rationale": "Matt 27:41-43 chief priests, scribes and elders",
+        "visible_elements": "robed religious leaders pointing up and sneering",
+        "emotional_tone": "smug contempt",
+        "subject_block": "two robed religious leaders in rich layered robes and prayer fringes, faces lifted in smug contempt, one with a finger extended upward toward the cross, the other's lip curled, dim onlookers behind dissolving into shadow",
+        "mood_block": "atmosphere of smug, self-assured contempt",
+        "jesus_variant": null,
+        "priority": 3,
+        "macro_elements": [
+          "an extended pointing finger",
+          "a curled lip",
+          "a prayer-fringe hem",
+          "a lifted contemptuous brow"
+        ],
+        "pacing": "controlled",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 6,
+        "slug": "shot-out-the-lip",
+        "title": "They Shoot Out the Lip",
+        "scene_type": "single",
+        "arc_position": "central-conflict",
+        "framing": "close",
+        "purpose": "the Ps 22:7 lip gesture",
+        "rationale": "the overlooked 'shoot out the lip' detail",
+        "visible_elements": "a single mocking face, lip thrust out",
+        "emotional_tone": "raw scorn",
+        "subject_block": "a single mocking face filling the view, the lower lip thrust out and curled in derision, teeth just bared, eyes lifted in cold scorn, weathered skin in raking light, the rest sunk in shadow",
+        "mood_block": "atmosphere of raw, personal scorn",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the thrust-out lip",
+          "bared teeth",
+          "a cold lifted eye"
+        ],
+        "pacing": "controlled",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 7,
+        "slug": "the-jabbing-hands",
+        "title": "The Jabbing Hands",
+        "scene_type": "single",
+        "arc_position": "symbolic-support",
+        "framing": "close",
+        "purpose": "the pointing crowd",
+        "rationale": "hands as the gesture of accusation",
+        "visible_elements": "several hands with fingers jabbed upward",
+        "emotional_tone": "accusing mockery",
+        "subject_block": "several weathered hands raised at the foot of the cross, fingers jabbed and pointed upward in accusation, sleeves of dusty robes falling back from the wrists, the pale sky beyond, deep shadow below",
+        "mood_block": "atmosphere of accusing, jeering gesture",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "a jabbed pointing finger",
+          "a falling-back sleeve",
+          "a clenched knuckle"
+        ],
+        "pacing": "faster",
+        "viral_role": "build",
+        "shot_kind": "insert",
+        "vignettes": []
+      },
+      {
+        "index": 8,
+        "slug": "he-had-every-power",
+        "title": "He Had Every Power",
+        "scene_type": "single",
+        "arc_position": "nt-gospel-link",
+        "framing": "low-angle",
+        "purpose": "the conviction — sovereign restraint",
+        "rationale": "Christ unhurried, full of power, looking down",
+        "visible_elements": "Christ on the cross from below, calm and sovereign",
+        "emotional_tone": "unhurried sovereignty",
+        "subject_block": "the crucified Christ seen from a low angle against a darkened sky, robed at the waist, head unbowed and gaze turned downward with unhurried calm, arms outstretched along the beam, a faint sorrowful strength in his face, the small mockers far below in shadow",
+        "mood_block": "atmosphere of unhurried, sovereign restraint",
+        "jesus_variant": "passion",
+        "priority": 4,
+        "macro_elements": [
+          "the calm downward gaze",
+          "an outstretched nailed hand",
+          "the dark beam grain",
+          "the small mockers below"
+        ],
+        "pacing": "slower",
+        "viral_role": "climax",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 9,
+        "slug": "twelve-legions-restrained",
+        "title": "Twelve Legions Restrained",
+        "scene_type": "unified",
+        "arc_position": "nt-gospel-link",
+        "framing": "mid",
+        "purpose": "the power He held back",
+        "rationale": "Matt 26:53 — more than twelve legions of angels, restrained",
+        "visible_elements": "Christ on the cross, dim restrained ranks half-dissolved in shadow",
+        "emotional_tone": "withheld omnipotence",
+        "subject_block": "the crucified Christ robed at the waist, head lowered in stillness, subtle background vignettes fading into shadow suggesting dim ranks of restrained angelic figures half-dissolved in the dark sky, a sheathed sword, a crown of thorns, and a single nailed hand held open",
+        "mood_block": "atmosphere of withheld omnipotence and chosen love",
+        "jesus_variant": "passion",
+        "priority": 0,
+        "macro_elements": [
+          "a single nailed open hand",
+          "the crown of thorns",
+          "a sheathed sword",
+          "dim half-dissolved ranks"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "dim restrained angelic ranks",
+          "a sheathed sword",
+          "the crown of thorns",
+          "a nailed open hand"
+        ]
+      },
+      {
+        "index": 10,
+        "slug": "looking-down-in-love",
+        "title": "Looking Down in Love",
+        "scene_type": "single",
+        "arc_position": "revelation",
+        "framing": "close",
+        "purpose": "the landing — it was love",
+        "rationale": "the emotional climax feeding the gospel close",
+        "visible_elements": "Christ's face, eyes lowered in love",
+        "emotional_tone": "tender, willing love",
+        "subject_block": "a close reverent view of the crucified Christ's face, head inclined, eyes lowered with tender willing love rather than pain, a thorn-marked brow, faint warm light on one cheek against deep shadow, the grain of the cross at his shoulder",
+        "mood_block": "atmosphere of tender, willing love",
+        "jesus_variant": "passion",
+        "priority": 5,
+        "macro_elements": [
+          "the lowered loving eyes",
+          "the thorn-marked brow",
+          "a single thorn",
+          "warm light on the cheek"
+        ],
+        "pacing": "slower",
+        "viral_role": "close",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 11,
+        "slug": "he-chose-to-stay",
+        "title": "He Chose to Stay",
+        "scene_type": "single",
+        "arc_position": "closing-devotional",
+        "framing": "mid",
+        "purpose": "the gospel-pivot hero close",
+        "rationale": "the iconic full crucified Christ, with you in view",
+        "visible_elements": "the full crucified Christ on the cross, calm, against a soft break of light",
+        "emotional_tone": "willing, finished love",
+        "subject_block": "the crucified Christ on a rough wooden cross from a respectful middle distance, arms outstretched along the beam, body robed at the waist, head gently inclined, a soft break of pale light widening behind the dark hill, the mockers and the heaped garments small and shadowed below",
+        "mood_block": "atmosphere of willing, finished love",
+        "jesus_variant": "passion",
+        "priority": 5,
+        "macro_elements": [
+          "the outstretched nailed hands",
+          "the inclined head",
+          "the soft break of light",
+          "the small mockers below"
+        ],
+        "pacing": "slower",
+        "viral_role": "close",
+        "shot_kind": "hero",
+        "vignettes": []
+      },
+      {
+        "index": 12,
+        "slug": "a-thousand-years-apart",
+        "title": "A Thousand Years Apart",
+        "scene_type": "unified",
+        "arc_position": "ot-echo",
+        "framing": "wide",
+        "purpose": "the two scenes joined",
+        "rationale": "David's scroll and the cross across a thousand years",
+        "visible_elements": "David at his scroll on the left, the distant cross on the right",
+        "emotional_tone": "quiet wonder",
+        "subject_block": "a wide two-sided composition split by a corridor of deep shadow; at the left, aged David seated at his oil lamp with a feather pen at rest on a wet-inked scroll; at the right, across the divide, the crucified Christ on a distant cross beneath a stormy sky, subtle background vignettes fading into shadow suggesting the wet Hebrew taunt, a shaken head, jabbing fingers, and the far cross",
+        "mood_block": "atmosphere of quiet wonder across a thousand years",
+        "jesus_variant": "passion",
+        "priority": 7,
+        "macro_elements": [
+          "David's pen on the scroll",
+          "the lamp flame",
+          "the distant cross",
+          "the corridor of shadow"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "the wet Hebrew taunt",
+          "a shaken head",
+          "jabbing fingers",
+          "the far cross"
+        ]
+      },
+      {
+        "index": 13,
+        "slug": "the-silent-king",
+        "title": "The Mockers and the Silent King",
+        "scene_type": "single",
+        "arc_position": "human-response",
+        "framing": "wide",
+        "purpose": "the contrast of scorn and silence",
+        "rationale": "the jeering crowd from behind, Christ silent beyond",
+        "visible_elements": "the backs of the jeering crowd, Christ on the cross beyond, silent",
+        "emotional_tone": "loud scorn against quiet majesty",
+        "subject_block": "the dark backs and raised arms of a jeering crowd in the foreground, beyond them the crucified Christ small and luminous on the cross, head bowed in silence, a pale dusk sky behind the dark hill",
+        "mood_block": "atmosphere of loud scorn against quiet majesty",
+        "jesus_variant": "passion",
+        "priority": 0,
+        "macro_elements": [
+          "a raised jeering arm",
+          "a dark turned back",
+          "the small luminous Christ",
+          "the pale dusk sky"
+        ],
+        "pacing": "controlled",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 14,
+        "slug": "the-hand-that-would-not-pull-free",
+        "title": "The Hand That Would Not Pull Free",
+        "scene_type": "single",
+        "arc_position": "nt-gospel-link",
+        "framing": "close",
+        "purpose": "the power restrained, in one detail",
+        "rationale": "the nailed hand that could have pulled free but stayed",
+        "visible_elements": "a close on the nailed open hand against the beam",
+        "emotional_tone": "chosen restraint",
+        "subject_block": "an extreme close view of a single nailed open hand against the rough grain of the cross beam, the iron nail through the palm, the fingers relaxed and open rather than clenched, a thin dark line of blood, warm raking light on the knuckles, deep shadow beyond",
+        "mood_block": "atmosphere of chosen, unresisting restraint",
+        "jesus_variant": "passion",
+        "priority": 0,
+        "macro_elements": [
+          "the iron nail in the palm",
+          "the open relaxed fingers",
+          "the beam grain",
+          "warm light on the knuckles"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      }
+    ],
+    "short_priority": [
+      1,
+      4,
+      8,
+      11,
+      10,
+      5,
+      2
+    ],
+    "candidates": [
+      {
+        "title": "The Shaking Heads",
+        "scene_type": "single",
+        "arc_position": "opening-hook",
+        "framing": "close",
+        "purpose": "hook on the mockers' gesture",
+        "rationale": "the specific Ps 22:7 gesture, not a generic mob",
+        "visible_elements": "jeering faces, shaken heads, shot-out lips at the foot of a cross",
+        "emotional_tone": "cruel derision"
+      },
+      {
+        "title": "David Records the Taunt",
+        "scene_type": "unified",
+        "arc_position": "ot-echo",
+        "framing": "mid",
+        "purpose": "the prophecy written early",
+        "rationale": "David writing the mockers' own words",
+        "visible_elements": "aged David at a lamp, Hebrew scroll",
+        "emotional_tone": "sober foresight"
+      },
+      {
+        "title": "Twelve Legions Restrained",
+        "scene_type": "unified",
+        "arc_position": "nt-gospel-link",
+        "framing": "low-angle",
+        "purpose": "the power He held back",
+        "rationale": "Matt 26:53 voluntary restraint",
+        "visible_elements": "Christ on the cross, dim restrained ranks",
+        "emotional_tone": "sovereign restraint"
+      }
+    ],
+    "rationale": "Chose the specific Psalm 22:7 gestures (shot-out lip, shaken head, jabbing finger) over a generic mob; two scroll scenes kept distinct (David writing vs the thousand-years diptych); the conviction rendered as sovereign restraint (8) and the Matt 26:53 withheld legions (9); hero is the full cross (11), not the most emotional face (10). Removed the banned token 'frame' from scenes 1 and 6.",
+    "beat_coverage": {
+      "hook": [
+        1
+      ],
+      "point": [
+        2,
+        3
+      ],
+      "proof": [
+        4,
+        5,
+        6,
+        7,
+        13
+      ],
+      "conviction": [
+        8,
+        9,
+        14
+      ],
+      "landing": [
+        10,
+        11,
+        12
+      ]
+    },
+    "hero_candidate": 11
+  },
+  "self_review": {
+    "overall": "LOCKED",
+    "panel": [
+      {
+        "agent": "Scene Director",
+        "verdict": "STRONG",
+        "note": "Scene 1 'The Shaking Heads' opens on the specific Ps 22:7 gesture; arc flows gesture -> scroll -> cross -> love."
+      },
+      {
+        "agent": "Theologian",
+        "verdict": "STRONG",
+        "note": "Scene 9 'Twelve Legions Restrained' (Matt 26:53) and scene 8 'He Had Every Power' deny impotence visually — matches the locked landing."
+      },
+      {
+        "agent": "Visual Skeptic",
+        "verdict": "STRONG",
+        "note": "Banned token 'frame' removed from scenes 1 and 6; subject_blocks are state-only and Kling-cuttable."
+      },
+      {
+        "agent": "Character-Consistency Checker",
+        "verdict": "CAUTION",
+        "note": "Many passion-Christ scenes — render with the passion ref for face consistency."
+      },
+      {
+        "agent": "Editor",
+        "verdict": "STRONG",
+        "note": "Hero #11 (full cross) bookends; #10 face is the emotional climax, correctly not the hero."
+      },
+      {
+        "agent": "Jaded Viewer",
+        "verdict": "CAUTION",
+        "note": "Two scroll + several cross scenes — distinct vignettes/framings keep them apart; confirm at render."
+      }
+    ],
+    "gates": [
+      {
+        "gate": "SP-G1 Narration Coverage",
+        "verdict": "PASS",
+        "evidence": "every beat supported; visible_elements concrete.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G2 Narration Alignment",
+        "verdict": "PASS",
+        "evidence": "Every beat id in ['hook', 'point', 'proof', 'conviction', 'landing'] has >=1 supporting scene.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G3 Freshness",
+        "verdict": "PASS",
+        "evidence": "shot-out-lip + restrained-legions fresh about the moment, orthodox in claim.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G4 Cliche Avoidance",
+        "verdict": "PASS",
+        "evidence": "rejects the generic-mob auto-complete.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G5 Prompt Conformance",
+        "verdict": "PASS",
+        "evidence": "All subject_block + mood_block content clear of the banned-token list.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G6 Type Discipline",
+        "verdict": "PASS",
+        "evidence": "every unified scene declares 3-5 vignettes (counts: #2=4, #4=4, #9=4, #12=4)",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G7 Gospel Frame",
+        "verdict": "PASS",
+        "evidence": "hero #11 is the cross; lands on Christ.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G8 Composition Distribution",
+        "verdict": "PASS",
+        "evidence": "4 distinct framings; max 'close' at 6/14.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G9 Scene Mix & Gospel Frame",
+        "verdict": "PASS",
+        "evidence": "n=14: single=10, unified=4, nt-link=4, ot-echo=2",
+        "fix": ""
+      }
+    ],
+    "priority_fixes": []
+  },
+  "independent_review": {
+    "overall": "LOCKED",
+    "panel": [
+      {
+        "agent": "Scene Director",
+        "verdict": "STRONG",
+        "note": "Specific Ps 22:7 gestures anchor the hook; coherent arc to the cross."
+      },
+      {
+        "agent": "Theologian",
+        "verdict": "STRONG",
+        "note": "Voluntary restraint (Matt 26:53) carried by scenes 8/9/14; denies impotence, matches the landing."
+      },
+      {
+        "agent": "Visual Skeptic",
+        "verdict": "STRONG",
+        "note": "State-only, Kling-cuttable subject_blocks; no banned tokens; macro_elements present per scene."
+      },
+      {
+        "agent": "Character-Consistency Checker",
+        "verdict": "CAUTION",
+        "note": "Render passion-Christ scenes with the passion ref to hold the face."
+      },
+      {
+        "agent": "Editor",
+        "verdict": "STRONG",
+        "note": "Cross hero #11 bookends; clean gospel frame."
+      },
+      {
+        "agent": "Jaded Viewer",
+        "verdict": "CAUTION",
+        "note": "Watch scroll/cross repetition at render; framings and vignettes differentiate them."
+      }
+    ],
+    "gates": [
+      {
+        "gate": "SP-G1 Narration Coverage",
+        "verdict": "PASS",
+        "evidence": "every beat supported.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G2 Narration Alignment",
+        "verdict": "PASS",
+        "evidence": "Every beat id in ['hook', 'point', 'proof', 'conviction', 'landing'] has >=1 supporting scene.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G3 Freshness",
+        "verdict": "PASS",
+        "evidence": "fresh about the moment, orthodox in claim.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G4 Cliche Avoidance",
+        "verdict": "PASS",
+        "evidence": "no generic-mob auto-complete.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G5 Prompt Conformance",
+        "verdict": "PASS",
+        "evidence": "All subject_block + mood_block content clear of the banned-token list.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G6 Type Discipline",
+        "verdict": "PASS",
+        "evidence": "every unified scene declares 3-5 vignettes (counts: #2=4, #4=4, #9=4, #12=4)",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G7 Gospel Frame",
+        "verdict": "PASS",
+        "evidence": "hero #11 cross; lands on Christ.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G8 Composition Distribution",
+        "verdict": "PASS",
+        "evidence": "4 distinct framings; max 'close' at 6/14.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G9 Scene Mix & Gospel Frame",
+        "verdict": "PASS",
+        "evidence": "n=14: single=10, unified=4, nt-link=4, ot-echo=2",
+        "fix": ""
+      }
+    ],
+    "priority_fixes": []
+  },
+  "paper_cohesion": {
+    "scope": "paper",
+    "passed": true,
+    "notes": "The set forms a coherent visual spine on the locked 'deliver' thread: it opens on the specific Psalm 22:7 mockery (shot-out lip, shaken head, jabbing finger), establishes the prophecy with David recording the taunt (scenes 2,3,12), lands the Matthew fulfilment at the cross (scenes 4,5,13), then turns up to the sovereign, restrained Christ (scenes 8,9,14) and closes on willing love (10,11). No theology drift: the conviction scenes deliberately show withheld power (Matt 26:53) and a relaxed, open nailed hand, guarding against any 'He couldn't come down' reading — matching the narration's explicit denial of impotence. Every narration beat is carried by at least one strong scene; hook->climax->close (shaking heads -> sovereign cross -> 'He chose to stay') is a clean spine. Hero #11 is the gospel-pivot cross, so the cut lands on Christ.",
+    "conflict_scenes": []
+  },
+  "authoritative_overall": "LOCKED"
+}

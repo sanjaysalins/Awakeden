@@ -1,0 +1,18 @@
+{
+  "scene_index": 1,
+  "title": "The Shaking Heads",
+  "scene_type": "single",
+  "framing": "close",
+  "arc_position": "opening-hook",
+  "jesus_variant": null,
+  "viral_role": "hook-open",
+  "pacing": "controlled",
+  "macro_elements": [
+    "a curled shot-out lip",
+    "a tilted shaking head",
+    "a narrowed scornful eye",
+    "the dark grain of the cross upright"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

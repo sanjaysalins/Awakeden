@@ -1,3 +1,31 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: narration
+
+LENS — judge this NARRATION on (be specific, cite the exact line/phrase):
+- Doctrinal soundness: evangelical, biblically faithful; NO invented doctrine, NO contrarian/
+  clickbait/contested readings used to chase freshness.
+- KJV verbatim: every word inside quotation marks must be exact KJV. Flag any altered word.
+- Clarity on first hearing: a listener with zero Bible knowledge must follow it; no clever-but-
+  confusing conceit, no logic trick, no self-contradiction.
+- Grace-anchored conviction: NO fear / gain-loss / self-interest / works framing; the Spirit
+  convicts, the script invites.
+- Freshness = faithful depth: surprising about the TEXT, orthodox in the claim and the landing.
+- One thread spine from hook -> middle -> CTA (no thread-swapping).
+- Landing does NEW work (not a tired generic 'will you trust Him?' close).
+- Hook grips in the first ~5 seconds.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block:
+
+VERDICT: PASS | REVISE | FAIL
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
 # The Passover Lamb — long-form narration (DRAFT v1)
 
 **Series:** types-shadows (#1) · **Format:** 16:9, ~6–8 min, 7-movement spine
@@ -8,26 +36,16 @@ doorframe, *not one bone broken*. Fourteen centuries later John stands at a cros
 soldiers break two men's legs and stop at the third — "that the scripture should be fulfilled,
 A bone of him shall not be broken." The lamb was always a portrait.
 
-**Status:** DRAFT v1.2 — in-engine red-team DONE + **5-CLI external panel DONE** (2026-06-12; claude/
-gemini/grok all REVISE, convergent; cursor/codex did not return this run — env). Applied convergent fixes:
-(1) M3 "whole assembly" gloss clarified — every household slays its own lamb at the same twilight (was
-the misleading "whole people share the act" on one lamb); (2) M1 "four hundred years"→"centuries" (430
-sojourn / 400 affliction precision); (3) M4 Pilate inspection deepened to the sinless public life + Pilate
-as the corroborating legal verdict; (4) M7 landing rebuilt — removed the "still lose the firstborn"
-fear/loss leverage, replaced the generic altar-call close with the fresh grace-anchor: security rests on
-the blood OUTSIDE the house, not the family's feelings inside; (5) M1 hook line added up front; M2 Ex 12:12
-truncation given an ellipsis. PENDING: KJV-strict lock, then audio.
+**Status:** DRAFT v1.1 — in-engine red-team DONE (verdict REVISE; all 5 fixes applied: tenth-day
+anchor added, "same words"→"same rule", Pilate reworded as paraphrase, "never read Exodus"→"no thought
+of Exodus", Ex 12:7 clip ellipsis). PENDING: 5-CLI external panel, KJV-strict lock, then audio.
 KJV quotes below are verbatim (verified vs cache). Bracketed `[ ]` lines are delivery notes, not spoken.
 
 ---
 
 ## Movement 1 — The Picture
 
-There is a set of instructions in the book of Exodus so oddly specific that, read closely, they stop
-sounding like rules for a meal — and start sounding like a description of a man who would not be born
-for another fourteen hundred years.
-
-It is the last night of Israel's slavery in Egypt. Centuries of bondage, and judgment is
+It is the last night of Israel's slavery in Egypt. Four hundred years of bondage, and judgment is
 finally falling — not on Israel, but on the nation that enslaved them. And on this night of all
 nights, God does not tell His people to fight, or to flee, or to hide. He tells them to kill a lamb.
 
@@ -38,7 +56,7 @@ Almost as if they were describing something — or someone — else.
 ## Movement 2 — The Problem
 
 Because death is coming to every house in Egypt. "I will pass through the land of Egypt this night,"
-God says, "and will smite all the firstborn…" Every home. And here is the part we rush past: God does
+God says, "and will smite all the firstborn." Every home. And here is the part we rush past: God does
 not say the Israelites are automatically safe. Their address does not save them. Their bloodline does
 not save them. Death is coming to *their* doors too.
 
@@ -57,9 +75,8 @@ every man a lamb"** — and **"ye shall keep it up until the fourteenth day of t
 into the home on the tenth, lived with, watched, until the fourteenth — four days. Time enough to be
 certain there was nothing wrong with it. Inspected, and found faultless.
 
-Then, **"the whole assembly of the congregation of Israel shall kill it in the evening."** Not a
-priest off in a temple, and not one household alone — every family across the nation, each slaying its
-own lamb at the same appointed twilight. One people, one hour, one kind of death.
+Then, **"the whole assembly of the congregation of Israel shall kill it in the evening."** Not one
+executioner — the whole people share the act.
 
 And the blood does not go on an altar. It goes on the house. **"They shall take of the blood, and
 strike it on the two side posts and on the upper door post…"** Two uprights, and a beam across the
@@ -90,9 +107,8 @@ a cross — by Roman soldiers with no thought of Exodus, only doing their job.
 
 And the New Testament does not leave the connection for us to guess. Paul says it plainly:
 **"Christ our passover is sacrificed for us."** Peter calls Him **"a lamb without blemish and without
-spot."** Without blemish. Inspected — not for four days, but across a public life no accusation could be made
-to stick to; and at the very end even Pilate, the judge who sentenced Him, said he found no fault in
-Him at all. Faultless, and killed anyway, so that judgment would pass over a guilty house.
+spot."** Without blemish. Inspected, like the Passover lamb — even Pilate examined Him and could find
+no fault in Him. Faultless, and killed anyway, so that judgment would pass over a guilty house.
 
 ## Movement 5 — The Honest Objection
 
@@ -124,21 +140,14 @@ cost the Lamb everything. It is offered to you for nothing.
 ## Movement 7 — The Invitation
 
 There is one more thing about that first Passover. The blood on the doorpost did no good *outside* the
-house. It had to be applied. A family could believe the lamb was spotless and agree every rule was kept —
-and it changed nothing until the blood was actually on their own door. Knowing about the lamb was
-never the same as being under its blood.
+house. It had to be applied. A family could believe the lamb was spotless, agree every rule was kept —
+and still lose the firstborn, if the blood was never put on their own door.
 
 The blood of Christ is not on a doorframe now. It is held out to you. Not earned by your record, not
 deserved by your effort — received, the way a frightened family in Egypt simply trusted the blood and
 stayed under it through the dark.
 
-Picture that first night from inside the house. The family is not safe because they feel brave, or
-because their faith is strong, or because they have stopped flinching at the cries in the street. They
-are safe because of the blood on the door — which, from where they sit, they cannot even see. Their
-whole security is outside of them.
-
-That is the gospel buried in Exodus 12. God never said, "When I see how sure you are," or "When I see
-you unafraid." He said the one sentence the whole night turned on: *when I see the blood, I will pass
-over.* Not your blood — His. So the question that remains is not whether you are good enough to be
-spared. It is whether you will stop trusting your own door, and rest under the blood of the Lamb who
-was slain for you.
+When God looks at your life, what will He see? Your striving — or the blood of the Lamb? The whole of
+Exodus 12 was God teaching the world to hope for one sentence: *when I see the blood, I will pass over.*
+He still means it. Come under the blood of the Lamb who was slain for you — and let the judgment pass over.
+----- ARTIFACT END -----

@@ -1,18 +1,17 @@
 {
-  "scene_index": 6,
-  "title": "Cast Lots at the Cross",
+  "scene_index": 2,
+  "title": "David Records the Taunt",
   "scene_type": "unified",
   "framing": "mid",
-  "arc_position": "nt-gospel-link",
-  "jesus_variant": "passion",
-  "viral_role": "pivot",
-  "pacing": "controlled",
+  "arc_position": "ot-echo",
+  "jesus_variant": null,
+  "viral_role": "build",
+  "pacing": "slower",
   "macro_elements": [
-    "the tumbling dice",
-    "Christ's robed lower body and feet above",
-    "a soldier's outstretched dividing hand",
-    "the heap of garments",
-    "the foot of the cross"
+    "the feather pen at rest",
+    "a line of wet Hebrew letters",
+    "the oil lamp flame",
+    "David's lined brow"
   ],
   "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
   "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."

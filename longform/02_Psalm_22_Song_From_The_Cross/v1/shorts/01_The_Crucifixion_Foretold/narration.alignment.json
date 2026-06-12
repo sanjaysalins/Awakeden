@@ -1,0 +1,861 @@
+{
+  "backend": "whisper",
+  "model": "base",
+  "words": [
+    {
+      "text": "Ten",
+      "start": 0.0,
+      "end": 0.24
+    },
+    {
+      "text": "centuries",
+      "start": 0.24,
+      "end": 0.7
+    },
+    {
+      "text": "before",
+      "start": 0.7,
+      "end": 1.06
+    },
+    {
+      "text": "the",
+      "start": 1.06,
+      "end": 1.24
+    },
+    {
+      "text": "cross,",
+      "start": 1.24,
+      "end": 1.5
+    },
+    {
+      "text": "a",
+      "start": 2.04,
+      "end": 2.08
+    },
+    {
+      "text": "song",
+      "start": 2.08,
+      "end": 2.36
+    },
+    {
+      "text": "recorded",
+      "start": 2.36,
+      "end": 2.78
+    },
+    {
+      "text": "exactly",
+      "start": 2.78,
+      "end": 3.22
+    },
+    {
+      "text": "how",
+      "start": 3.22,
+      "end": 3.54
+    },
+    {
+      "text": "a",
+      "start": 3.54,
+      "end": 3.66
+    },
+    {
+      "text": "dying",
+      "start": 3.66,
+      "end": 3.92
+    },
+    {
+      "text": "man's",
+      "start": 3.92,
+      "end": 4.36
+    },
+    {
+      "text": "clothes",
+      "start": 4.36,
+      "end": 4.6
+    },
+    {
+      "text": "would",
+      "start": 4.6,
+      "end": 4.92
+    },
+    {
+      "text": "be",
+      "start": 4.92,
+      "end": 5.06
+    },
+    {
+      "text": "divided",
+      "start": 5.06,
+      "end": 5.34
+    },
+    {
+      "text": "up.",
+      "start": 5.34,
+      "end": 5.66
+    },
+    {
+      "text": "Psalm",
+      "start": 6.42,
+      "end": 6.74
+    },
+    {
+      "text": "twenty-two.",
+      "start": 6.74,
+      "end": 7.34
+    },
+    {
+      "text": "David",
+      "start": 8.42,
+      "end": 8.64
+    },
+    {
+      "text": "wrote",
+      "start": 8.64,
+      "end": 8.86
+    },
+    {
+      "text": "it",
+      "start": 8.86,
+      "end": 9.0
+    },
+    {
+      "text": "in",
+      "start": 9.0,
+      "end": 9.12
+    },
+    {
+      "text": "the",
+      "start": 9.12,
+      "end": 9.18
+    },
+    {
+      "text": "first",
+      "start": 9.18,
+      "end": 9.38
+    },
+    {
+      "text": "person",
+      "start": 9.38,
+      "end": 9.86
+    },
+    {
+      "text": "—",
+      "start": 9.86,
+      "end": 9.86
+    },
+    {
+      "text": "but",
+      "start": 10.28,
+      "end": 10.4
+    },
+    {
+      "text": "David",
+      "start": 10.4,
+      "end": 10.6
+    },
+    {
+      "text": "himself",
+      "start": 10.6,
+      "end": 11.0
+    },
+    {
+      "text": "was",
+      "start": 11.0,
+      "end": 11.24
+    },
+    {
+      "text": "never",
+      "start": 11.24,
+      "end": 11.46
+    },
+    {
+      "text": "executed;",
+      "start": 11.46,
+      "end": 12.0
+    },
+    {
+      "text": "he",
+      "start": 12.46,
+      "end": 12.58
+    },
+    {
+      "text": "died",
+      "start": 12.58,
+      "end": 12.74
+    },
+    {
+      "text": "an",
+      "start": 12.74,
+      "end": 12.9
+    },
+    {
+      "text": "old",
+      "start": 12.9,
+      "end": 13.04
+    },
+    {
+      "text": "man.",
+      "start": 13.04,
+      "end": 13.28
+    },
+    {
+      "text": "He",
+      "start": 14.12,
+      "end": 14.28
+    },
+    {
+      "text": "was",
+      "start": 14.28,
+      "end": 14.42
+    },
+    {
+      "text": "describing",
+      "start": 14.42,
+      "end": 14.88
+    },
+    {
+      "text": "someone",
+      "start": 14.88,
+      "end": 15.32
+    },
+    {
+      "text": "else:",
+      "start": 15.32,
+      "end": 15.72
+    },
+    {
+      "text": "stripped,",
+      "start": 16.3,
+      "end": 16.86
+    },
+    {
+      "text": "surrounded,",
+      "start": 17.36,
+      "end": 17.76
+    },
+    {
+      "text": "his",
+      "start": 18.34,
+      "end": 18.52
+    },
+    {
+      "text": "life",
+      "start": 18.52,
+      "end": 18.86
+    },
+    {
+      "text": "poured",
+      "start": 18.86,
+      "end": 19.16
+    },
+    {
+      "text": "out.",
+      "start": 19.16,
+      "end": 19.52
+    },
+    {
+      "text": "Watch",
+      "start": 20.54,
+      "end": 20.82
+    },
+    {
+      "text": "one",
+      "start": 20.82,
+      "end": 21.08
+    },
+    {
+      "text": "line",
+      "start": 21.08,
+      "end": 21.36
+    },
+    {
+      "text": "—",
+      "start": 21.36,
+      "end": 21.36
+    },
+    {
+      "text": "he",
+      "start": 22.28,
+      "end": 22.48
+    },
+    {
+      "text": "wrote",
+      "start": 22.48,
+      "end": 22.64
+    },
+    {
+      "text": "that",
+      "start": 22.64,
+      "end": 22.82
+    },
+    {
+      "text": "the",
+      "start": 22.82,
+      "end": 22.92
+    },
+    {
+      "text": "dying",
+      "start": 22.92,
+      "end": 23.18
+    },
+    {
+      "text": "man's",
+      "start": 23.18,
+      "end": 23.66
+    },
+    {
+      "text": "killers",
+      "start": 23.66,
+      "end": 23.88
+    },
+    {
+      "text": "would",
+      "start": 23.88,
+      "end": 24.2
+    },
+    {
+      "text": "divide",
+      "start": 24.2,
+      "end": 24.48
+    },
+    {
+      "text": "his",
+      "start": 24.48,
+      "end": 24.68
+    },
+    {
+      "text": "clothes,",
+      "start": 24.68,
+      "end": 25.02
+    },
+    {
+      "text": "and",
+      "start": 25.02,
+      "end": 25.46
+    },
+    {
+      "text": "cast",
+      "start": 25.46,
+      "end": 25.82
+    },
+    {
+      "text": "lots",
+      "start": 25.82,
+      "end": 26.08
+    },
+    {
+      "text": "for",
+      "start": 26.08,
+      "end": 26.38
+    },
+    {
+      "text": "them:",
+      "start": 26.38,
+      "end": 26.58
+    },
+    {
+      "text": "\"They",
+      "start": 27.32,
+      "end": 27.72
+    },
+    {
+      "text": "part",
+      "start": 27.72,
+      "end": 27.92
+    },
+    {
+      "text": "my",
+      "start": 27.92,
+      "end": 28.12
+    },
+    {
+      "text": "garments",
+      "start": 28.12,
+      "end": 28.4
+    },
+    {
+      "text": "among",
+      "start": 28.4,
+      "end": 28.74
+    },
+    {
+      "text": "them,",
+      "start": 28.74,
+      "end": 28.98
+    },
+    {
+      "text": "and",
+      "start": 28.98,
+      "end": 29.34
+    },
+    {
+      "text": "cast",
+      "start": 29.34,
+      "end": 29.74
+    },
+    {
+      "text": "lots",
+      "start": 29.74,
+      "end": 29.98
+    },
+    {
+      "text": "upon",
+      "start": 29.98,
+      "end": 30.34
+    },
+    {
+      "text": "my",
+      "start": 30.34,
+      "end": 30.54
+    },
+    {
+      "text": "vesture.\"",
+      "start": 30.54,
+      "end": 31.0
+    },
+    {
+      "text": "A",
+      "start": 32.04,
+      "end": 32.2
+    },
+    {
+      "text": "thousand",
+      "start": 32.2,
+      "end": 32.52
+    },
+    {
+      "text": "years",
+      "start": 32.52,
+      "end": 32.74
+    },
+    {
+      "text": "later,",
+      "start": 32.74,
+      "end": 33.14
+    },
+    {
+      "text": "John",
+      "start": 33.44,
+      "end": 33.64
+    },
+    {
+      "text": "watched",
+      "start": 33.64,
+      "end": 34.08
+    },
+    {
+      "text": "it",
+      "start": 34.08,
+      "end": 34.22
+    },
+    {
+      "text": "at",
+      "start": 34.22,
+      "end": 34.32
+    },
+    {
+      "text": "the",
+      "start": 34.32,
+      "end": 34.42
+    },
+    {
+      "text": "cross",
+      "start": 34.42,
+      "end": 34.66
+    },
+    {
+      "text": "—",
+      "start": 34.66,
+      "end": 34.66
+    },
+    {
+      "text": "soldiers",
+      "start": 35.52,
+      "end": 35.78
+    },
+    {
+      "text": "dividing",
+      "start": 35.78,
+      "end": 36.28
+    },
+    {
+      "text": "Jesus'",
+      "start": 36.28,
+      "end": 36.6
+    },
+    {
+      "text": "clothes,",
+      "start": 36.92,
+      "end": 37.12
+    },
+    {
+      "text": "then",
+      "start": 37.76,
+      "end": 37.86
+    },
+    {
+      "text": "casting",
+      "start": 37.86,
+      "end": 38.26
+    },
+    {
+      "text": "lots",
+      "start": 38.26,
+      "end": 38.58
+    },
+    {
+      "text": "for",
+      "start": 38.58,
+      "end": 38.82
+    },
+    {
+      "text": "the",
+      "start": 38.82,
+      "end": 38.94
+    },
+    {
+      "text": "seamless",
+      "start": 38.94,
+      "end": 39.24
+    },
+    {
+      "text": "coat",
+      "start": 39.24,
+      "end": 39.64
+    },
+    {
+      "text": "—",
+      "start": 39.64,
+      "end": 39.64
+    },
+    {
+      "text": "\"that",
+      "start": 40.4,
+      "end": 40.58
+    },
+    {
+      "text": "the",
+      "start": 40.58,
+      "end": 40.72
+    },
+    {
+      "text": "scripture",
+      "start": 40.72,
+      "end": 41.1
+    },
+    {
+      "text": "might",
+      "start": 41.1,
+      "end": 41.48
+    },
+    {
+      "text": "be",
+      "start": 41.48,
+      "end": 41.64
+    },
+    {
+      "text": "fulfilled\".",
+      "start": 41.64,
+      "end": 41.98
+    },
+    {
+      "text": "A",
+      "start": 43.18,
+      "end": 43.32
+    },
+    {
+      "text": "thousand",
+      "start": 43.32,
+      "end": 43.66
+    },
+    {
+      "text": "years",
+      "start": 43.66,
+      "end": 43.9
+    },
+    {
+      "text": "early,",
+      "start": 43.9,
+      "end": 44.3
+    },
+    {
+      "text": "God",
+      "start": 44.58,
+      "end": 44.82
+    },
+    {
+      "text": "had",
+      "start": 44.82,
+      "end": 45.04
+    },
+    {
+      "text": "it",
+      "start": 45.04,
+      "end": 45.18
+    },
+    {
+      "text": "written",
+      "start": 45.18,
+      "end": 45.36
+    },
+    {
+      "text": "down",
+      "start": 45.36,
+      "end": 45.7
+    },
+    {
+      "text": "—",
+      "start": 45.7,
+      "end": 45.7
+    },
+    {
+      "text": "so",
+      "start": 46.34,
+      "end": 46.58
+    },
+    {
+      "text": "when",
+      "start": 46.58,
+      "end": 46.72
+    },
+    {
+      "text": "it",
+      "start": 46.72,
+      "end": 46.8
+    },
+    {
+      "text": "happened,",
+      "start": 46.8,
+      "end": 47.14
+    },
+    {
+      "text": "you'd",
+      "start": 47.68,
+      "end": 47.96
+    },
+    {
+      "text": "know",
+      "start": 47.96,
+      "end": 48.12
+    },
+    {
+      "text": "the",
+      "start": 48.12,
+      "end": 48.3
+    },
+    {
+      "text": "cross",
+      "start": 48.3,
+      "end": 48.6
+    },
+    {
+      "text": "was",
+      "start": 48.6,
+      "end": 48.88
+    },
+    {
+      "text": "no",
+      "start": 48.88,
+      "end": 49.08
+    },
+    {
+      "text": "accident.",
+      "start": 49.08,
+      "end": 49.54
+    },
+    {
+      "text": "It",
+      "start": 50.32,
+      "end": 50.58
+    },
+    {
+      "text": "was",
+      "start": 50.58,
+      "end": 50.74
+    },
+    {
+      "text": "the",
+      "start": 50.74,
+      "end": 50.9
+    },
+    {
+      "text": "plan.",
+      "start": 50.9,
+      "end": 51.24
+    },
+    {
+      "text": "The",
+      "start": 52.38,
+      "end": 52.48
+    },
+    {
+      "text": "suffering",
+      "start": 52.48,
+      "end": 52.78
+    },
+    {
+      "text": "man",
+      "start": 52.78,
+      "end": 53.06
+    },
+    {
+      "text": "of",
+      "start": 53.06,
+      "end": 53.34
+    },
+    {
+      "text": "Psalm",
+      "start": 53.34,
+      "end": 53.5
+    },
+    {
+      "text": "twenty-two",
+      "start": 53.5,
+      "end": 54.02
+    },
+    {
+      "text": "has",
+      "start": 54.02,
+      "end": 54.36
+    },
+    {
+      "text": "a",
+      "start": 54.36,
+      "end": 54.48
+    },
+    {
+      "text": "name:",
+      "start": 54.48,
+      "end": 54.74
+    },
+    {
+      "text": "Jesus.",
+      "start": 55.5,
+      "end": 55.76
+    },
+    {
+      "text": "They",
+      "start": 56.7,
+      "end": 56.94
+    },
+    {
+      "text": "rolled",
+      "start": 56.94,
+      "end": 57.18
+    },
+    {
+      "text": "dice",
+      "start": 57.18,
+      "end": 57.52
+    },
+    {
+      "text": "for",
+      "start": 57.52,
+      "end": 57.74
+    },
+    {
+      "text": "the",
+      "start": 57.74,
+      "end": 57.82
+    },
+    {
+      "text": "clothes",
+      "start": 57.82,
+      "end": 58.1
+    },
+    {
+      "text": "off",
+      "start": 58.1,
+      "end": 58.32
+    },
+    {
+      "text": "His",
+      "start": 58.32,
+      "end": 58.46
+    },
+    {
+      "text": "back,",
+      "start": 58.46,
+      "end": 58.86
+    },
+    {
+      "text": "never",
+      "start": 59.22,
+      "end": 59.34
+    },
+    {
+      "text": "seeing",
+      "start": 59.34,
+      "end": 59.68
+    },
+    {
+      "text": "what",
+      "start": 59.68,
+      "end": 59.9
+    },
+    {
+      "text": "He",
+      "start": 59.9,
+      "end": 60.0
+    },
+    {
+      "text": "was",
+      "start": 60.0,
+      "end": 60.12
+    },
+    {
+      "text": "really",
+      "start": 60.12,
+      "end": 60.38
+    },
+    {
+      "text": "doing",
+      "start": 60.38,
+      "end": 60.72
+    },
+    {
+      "text": "—",
+      "start": 60.72,
+      "end": 60.72
+    },
+    {
+      "text": "laying",
+      "start": 61.54,
+      "end": 61.68
+    },
+    {
+      "text": "down",
+      "start": 61.68,
+      "end": 61.94
+    },
+    {
+      "text": "His",
+      "start": 61.94,
+      "end": 62.2
+    },
+    {
+      "text": "life",
+      "start": 62.2,
+      "end": 62.66
+    },
+    {
+      "text": "to",
+      "start": 62.66,
+      "end": 63.04
+    },
+    {
+      "text": "win",
+      "start": 63.04,
+      "end": 63.26
+    },
+    {
+      "text": "you",
+      "start": 63.26,
+      "end": 63.58
+    },
+    {
+      "text": "back.",
+      "start": 63.58,
+      "end": 63.94
+    }
+  ]
+}

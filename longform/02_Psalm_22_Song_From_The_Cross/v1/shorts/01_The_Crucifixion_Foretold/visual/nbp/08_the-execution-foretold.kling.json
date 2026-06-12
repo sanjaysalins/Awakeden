@@ -1,0 +1,46 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, slower pacing with longer holds and restrained cuts.\n\nClassical devotional oil painting realism. A small brass oil lamp casts warm amber light across a Hebrew parchment scroll spread on pale stone, while a circular vision above sits in cold blue-black shadow; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\nA long parchment scroll covered in lines of ancient Hebrew script lies spread open across a block of pale stone, a brass oil lamp with a single small flame set beside it. Above, framed in a dim circular vision of deep blue shadow, a huddled robed figure is encircled by indistinct dark animal forms that recede into darkness. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the Hebrew scroll on the stone, the lamp glowing, the dim circular vision above.\n\nCut to mid framing — the open Hebrew scroll spread across the pale stone.\n\nCut to macro detail — the lines of ancient Hebrew script on the parchment surface.\n\nCut to insert — the brass oil lamp and its single small flame beside the scroll.\n\nCut to upper framing — the dim circular vision held above, the huddled robed figure within it.\n\nCut to insert — the curled upper edge of the parchment scroll.\n\nCut to lower framing — the pale stone and the scroll's hanging lower end.\n\nReturn to full composition.\n\nEnd hold on the lamp-lit Hebrew scroll.\n\nMicro-motion:\n- minimal\n- lamp flame stirs as painted light only\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\nAncient dread foretold in lamplight.\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no animals moving, no morphing, no scene morphing, no facial morphing, no glow added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.25,
+      "description": "Start on full composition — Hebrew scroll on the stone, lamp glowing, dim circular vision above"
+    },
+    {
+      "start_sec": 1.25,
+      "end_sec": 2.5,
+      "description": "Cut to mid framing — open Hebrew scroll spread across the pale stone"
+    },
+    {
+      "start_sec": 2.5,
+      "end_sec": 3.75,
+      "description": "Cut to macro detail — lines of ancient Hebrew script on the parchment surface"
+    },
+    {
+      "start_sec": 3.75,
+      "end_sec": 5.0,
+      "description": "Cut to insert — brass oil lamp and its single small flame beside the scroll"
+    },
+    {
+      "start_sec": 5.0,
+      "end_sec": 6.25,
+      "description": "Cut to upper framing — dim circular vision held above, the huddled robed figure within it"
+    },
+    {
+      "start_sec": 6.25,
+      "end_sec": 7.5,
+      "description": "Cut to insert — curled upper edge of the parchment scroll"
+    },
+    {
+      "start_sec": 7.5,
+      "end_sec": 8.75,
+      "description": "Cut to lower framing — pale stone and the scroll's hanging lower end"
+    },
+    {
+      "start_sec": 8.75,
+      "end_sec": 10.0,
+      "description": "Return to full composition, end hold on the lamp-lit Hebrew scroll"
+    }
+  ]
+}

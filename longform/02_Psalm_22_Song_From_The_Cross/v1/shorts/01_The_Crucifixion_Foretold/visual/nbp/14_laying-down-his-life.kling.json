@@ -1,0 +1,46 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, slower pacing with longer holds and restrained cuts.\n\nClassical devotional oil painting realism. A golden sunset glows low behind dark hills while warm light falls across a soiled cream robe and a lowered face on the cross; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\nThe crucified Christ is set upon a tall wooden cross, his arms outstretched and nailed along the beam, robed in a soiled cream garment knotted at the waist, his bearded head lowered. His nailed bare feet rest on a small wooden block. A golden sunset sky lies behind dark hills, small distant soldiers stand at the sides, and a heap of red and blue garments is pooled at the lower-right. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the crucified figure on the cross against the sunset.\n\nCut to mid framing — the upper body and lowered head on the cross.\n\nCut to close-up — the bearded face, head lowered in stillness.\n\nCut to insert — the nail-wounded hand at the end of the outstretched arm.\n\nCut to insert — the nailed bare feet on the small wooden block.\n\nCut to lower framing — the heap of red and blue garments at the lower-right.\n\nCut to upper framing — the golden sunset sky behind the dark hills.\n\nReturn to full composition.\n\nEnd hold on the crucified figure against the fading light.\n\nMicro-motion:\n- minimal\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\nQuiet, willing surrender — a life laid down.\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.25,
+      "description": "Start on full composition — crucified figure on the cross against the sunset"
+    },
+    {
+      "start_sec": 1.25,
+      "end_sec": 2.5,
+      "description": "Cut to mid framing — upper body and lowered head on the cross"
+    },
+    {
+      "start_sec": 2.5,
+      "end_sec": 3.75,
+      "description": "Cut to close-up — bearded face, head lowered in stillness"
+    },
+    {
+      "start_sec": 3.75,
+      "end_sec": 5.0,
+      "description": "Cut to insert — nail-wounded hand at the end of the outstretched arm"
+    },
+    {
+      "start_sec": 5.0,
+      "end_sec": 6.25,
+      "description": "Cut to insert — nailed bare feet on the small wooden block"
+    },
+    {
+      "start_sec": 6.25,
+      "end_sec": 7.5,
+      "description": "Cut to lower framing — heap of red and blue garments at the lower-right"
+    },
+    {
+      "start_sec": 7.5,
+      "end_sec": 8.75,
+      "description": "Cut to upper framing — golden sunset sky behind the dark hills"
+    },
+    {
+      "start_sec": 8.75,
+      "end_sec": 10.0,
+      "description": "Return to full composition, end hold on the crucified figure against the fading light"
+    }
+  ]
+}

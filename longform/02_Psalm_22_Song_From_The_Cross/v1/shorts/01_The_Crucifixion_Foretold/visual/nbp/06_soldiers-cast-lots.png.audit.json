@@ -2,16 +2,8 @@
   "passed": true,
   "issues": [
     {
-      "claim": "no readable text on titulus",
-      "actual": "FIXED — the titulus now shows faint illegible weathered strokes, no readable English words"
-    },
-    {
-      "claim": "the divided garments vignette",
-      "actual": "present but subtle (rendered in the right-background mini-scene rather than as a prominent foreground heap)"
-    },
-    {
-      "claim": "left soldier's reaching hand",
-      "actual": "the left foreground soldier's hand reaching toward the stone is slightly soft/indistinct in shadow, but not anatomically garbled (no extra/fused fingers); right soldier's open hand and both faces are clean"
+      "claim": "two carved knuckle-bone dice",
+      "actual": "about three dice visible on the stone — fits the 'scattered knuckle-bone lots' vignette, non-failing"
     }
   ],
   "banned_token_hits": []

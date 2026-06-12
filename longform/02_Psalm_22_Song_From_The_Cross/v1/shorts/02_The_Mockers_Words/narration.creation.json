@@ -1,0 +1,63 @@
+{
+  "created_at": "2026-06-12T00:00:00",
+  "model": "claude-opus-4-7",
+  "review_model": "claude-sonnet-4-6",
+  "structure": {
+    "id": "gospel-five-beat",
+    "name": "Gospel Five-Beat",
+    "beats": ["hook", "point", "proof", "conviction", "landing"]
+  },
+  "series": {
+    "id": "jesus-in-ot",
+    "name": "Jesus in the Old Testament",
+    "brand": "SLK"
+  },
+  "episode": {
+    "title": "The Mockers' Own Words",
+    "primary_ref": "Psalm 22:7-8"
+  },
+  "kjv_verified": true,
+  "kjv_text": "…they shake the head, saying, He trusted on the LORD that he would deliver him: let him deliver him…",
+  "thread": {
+    "thread": "Psalm 22:7-8, written ~1000 years early, records the mockers' GESTURE (shaking the head) and their TAUNT ('let him deliver him'); at the cross the crowd did exactly both — Matthew 27:39 wagging their heads and 27:43 sneering 'let him deliver him now' — the mockers unknowingly reciting the prophecy that marks Him as the One.",
+    "lever": "NT-confirmed OT echo (predictive correspondence, undisputed text both sides)",
+    "anchor_ref": "Psalm 22:7-8",
+    "anchor_detail": "the crowd at the foot of the cross wagging and shaking their heads and sneering the taunt 'let him deliver him', the gesture and words David recorded a thousand years before",
+    "why_fresh": "the mockers, trying to discredit Him, unknowingly recited the very prophecy that identifies Him — the same gesture and the same taunt, from people who never saw what they were echoing",
+    "gospel_landing": "He wasn't delivered — not because He lacked the power to come down, but because staying on the cross was the only way to deliver you; weakness did not pin Him there, love did; come to Him",
+    "rationale": "an airtight, undisputed double match (gesture + taunt), with a voluntary-substitution landing that denies impotence",
+    "candidates": []
+  },
+  "draft": {
+    "title": "The Mockers' Own Words",
+    "hook_type": "prophecy",
+    "beats": [
+      {
+        "id": "hook",
+        "text": "At the cross they shook their heads and sneered the very taunt a psalm had recorded a thousand years before."
+      },
+      {
+        "id": "point",
+        "text": "Psalm twenty-two. David, describing a mocked and dying man, even writes his tormentors' words: \"…they shake the head, saying, He trusted on the LORD that he would deliver him: let him deliver him…\""
+      },
+      {
+        "id": "proof",
+        "text": "A thousand years later, at the cross, Matthew records both — the passers-by wagging their heads, and the religious leaders jeering: \"He trusted in God; let him deliver him now…\" The same gesture. The same taunt — flung at Him by people who never saw what they were echoing."
+      },
+      {
+        "id": "conviction",
+        "text": "\"Let him deliver him,\" they sneered. And He wasn't delivered — not because Jesus lacked the power to come down; He had every power. He stayed because staying was the only way to deliver you."
+      },
+      {
+        "id": "landing",
+        "text": "They thought weakness pinned Him to that cross. It was love. He could have come down in an instant — He chose to stay, with you in view."
+      }
+    ]
+  },
+  "beat_ids": ["hook", "point", "proof", "conviction", "landing"],
+  "word_count": 165,
+  "char_count": 0,
+  "authoritative_review": "independent",
+  "review_overall": "LOCKED",
+  "unknown_speakers": []
+}

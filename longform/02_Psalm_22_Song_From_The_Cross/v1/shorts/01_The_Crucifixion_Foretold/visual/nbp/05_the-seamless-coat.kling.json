@@ -1,0 +1,46 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, controlled pacing with deliberate cuts and extended holds.\n\nClassical devotional oil painting realism. Warm side-light falls across a pale cream tunic and the burnished helmets and weathered faces of two soldiers, while the wooden cross and the background sink into deep brown shadow; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\nTwo Roman soldiers in plumed steel helmets and earth-toned cloaks stand close together, a pale cream seamless tunic held open between their hands. The dark beams of a wooden cross rise behind them against a shadowed sky. Their gazes are turned down toward the cloth between them. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the two soldiers, the pale tunic held between them, the wooden cross behind.\n\nCut to mid framing — the cream seamless tunic spread open between their hands.\n\nCut to close-up — the left soldier's bearded face beneath his plumed helmet.\n\nCut to close-up — the right soldier's face, eyes lowered toward the cloth.\n\nCut to insert — the soldiers' hands at the upper edge of the tunic, fingers set in the cloth.\n\nCut to macro detail — the woven texture and frayed lower hem of the seamless tunic.\n\nCut to upper framing — the dark crossbeam rising behind the helmets.\n\nReturn to full composition.\n\nEnd hold on the pale tunic held between the two soldiers.\n\nMicro-motion:\n- minimal\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\nCold, oblivious appraisal beneath the cross.\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.25,
+      "description": "Start on full composition — two soldiers, pale tunic held between them, wooden cross behind"
+    },
+    {
+      "start_sec": 1.25,
+      "end_sec": 2.5,
+      "description": "Cut to mid framing — cream seamless tunic spread open between their hands"
+    },
+    {
+      "start_sec": 2.5,
+      "end_sec": 3.75,
+      "description": "Cut to close-up — left soldier's bearded face beneath plumed helmet"
+    },
+    {
+      "start_sec": 3.75,
+      "end_sec": 5.0,
+      "description": "Cut to close-up — right soldier's face, eyes lowered toward the cloth"
+    },
+    {
+      "start_sec": 5.0,
+      "end_sec": 6.25,
+      "description": "Cut to insert — soldiers' hands at the upper edge of the tunic, fingers set in the cloth"
+    },
+    {
+      "start_sec": 6.25,
+      "end_sec": 7.5,
+      "description": "Cut to macro detail — woven texture and frayed lower hem of the seamless tunic"
+    },
+    {
+      "start_sec": 7.5,
+      "end_sec": 8.75,
+      "description": "Cut to upper framing — dark crossbeam rising behind the helmets"
+    },
+    {
+      "start_sec": 8.75,
+      "end_sec": 10.0,
+      "description": "Return to full composition, end hold on the pale tunic between the two soldiers"
+    }
+  ]
+}
