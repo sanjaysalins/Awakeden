@@ -1,0 +1,663 @@
+{
+  "plan": {
+    "visual_reading": "The arc opens on the wrenched, stretched body on the cross — the thing the psalm describes — then the aged king who wrote it sits seeing a death not his own. The quoted lines land on the drained 'poured out' body and the countable ribs; the cold onlookers stare up; one strained shoulder shows a body hung by its arms. The NT-anchored echoes deepen it: the pierced side (Zech 12:10 -> John 19:37) and the striped back (Isa 53:5 -> 1 Pet 2:24). A diptych holds king and cross a thousand years apart, the nailed hand bears the marks, and the hero — the full crucified Christ — is the one crushed in our place. It lands on the freedom that buys, the open road home, and the cross at dawn.",
+    "red_team_notes": "Revision: removed the banned token 'frame' from scene 5 (now 'a starved and stretched body'). Body close-ups kept reverent and state-only with traditional loincloth; varied by region and broken up by the king, diptych, onlookers, freed figure and road; the descriptive match carried honestly by the king-seeing-a-death and the diptych.",
+    "scenes": [
+      {
+        "index": 1,
+        "slug": "out-of-joint",
+        "title": "Out of Joint",
+        "scene_type": "single",
+        "arc_position": "opening-hook",
+        "framing": "close",
+        "purpose": "open on the wrenched, stretched body the psalm describes",
+        "rationale": "the most arresting topic image — the dislocated stretch of a crucified body",
+        "visible_elements": "stretched taut arms, shoulders pulled from their sockets, drawn-long torso, fallen head",
+        "emotional_tone": "a body wrenched out of joint",
+        "subject_block": "a crucified man seen from a low side angle, the arms stretched taut and straight along the dark beam, the shoulders pulled hard from their sockets by the hanging weight of the body, the torso drawn long, a thin torn loincloth at the hips, the head fallen to one side, deep shadow behind, the strain of every joint held in stillness",
+        "mood_block": "atmosphere of a body wrenched out of joint",
+        "jesus_variant": "passion",
+        "priority": 2,
+        "macro_elements": [
+          "the taut stretched arm",
+          "the pulled shoulder joint",
+          "the drawn-long torso",
+          "the fallen head"
+        ],
+        "pacing": "slower",
+        "viral_role": "hook-open",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 2,
+        "slug": "the-king-who-wrote-it",
+        "title": "The King Who Wrote It",
+        "scene_type": "unified",
+        "arc_position": "biblical-setting",
+        "framing": "mid",
+        "purpose": "David seeing a death not his own as he writes the psalm",
+        "rationale": "the 'a king described it' hook made visible, not a generic scribe",
+        "visible_elements": "an aged king over an open scroll by lamplight, a harp, a haunted faraway look",
+        "emotional_tone": "a king seeing a death not his own",
+        "subject_block": "an aged king in a worn royal robe seated low over an open scroll by lamplight, a feather pen at rest in his hand, his face lifted with a haunted faraway look as if seeing a death not his own, a small harp set at his side, subtle background vignettes fading into shadow suggesting a distant cross on a far hill, a crown set aside, a stretched dying figure, and a far gathering of onlookers, the king dominant and the vision half-dissolved behind him",
+        "mood_block": "atmosphere of a king seeing a death not his own",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the king's haunted lifted face",
+          "the feather pen at rest",
+          "the open scroll",
+          "the small harp at his side"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "a distant cross on a far hill",
+          "a crown set aside",
+          "a stretched dying figure",
+          "a far gathering of onlookers"
+        ]
+      },
+      {
+        "index": 3,
+        "slug": "poured-out-like-water",
+        "title": "Poured Out Like Water",
+        "scene_type": "single",
+        "arc_position": "theological-centre",
+        "framing": "close",
+        "purpose": "the drained, spent body (v14a)",
+        "rationale": "the quoted line rests on the poured-out body",
+        "visible_elements": "fallen head, sweat-sheened drained chest, a thin trail down the side",
+        "emotional_tone": "a body poured out like water",
+        "subject_block": "the crucified man's head and chest seen close, the head fallen to one side, the skin sheened with sweat and water, the body drained and slack, a thin trail of water and blood down the side, the gaunt chest still, deep shadow around, the utter spentness of a body poured out",
+        "mood_block": "atmosphere of a body poured out like water",
+        "jesus_variant": "passion",
+        "priority": 5,
+        "macro_elements": [
+          "the fallen head",
+          "the sweat-sheened skin",
+          "the thin trail down the side",
+          "the slack drained chest"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 4,
+        "slug": "crushed-in-your-place",
+        "title": "Crushed in Your Place",
+        "scene_type": "single",
+        "arc_position": "nt-gospel-link",
+        "framing": "low-angle",
+        "purpose": "the gospel pivot — the full crucified Christ, the one crushed in our place",
+        "rationale": "the CTA's destination; iconic, reverent, bookends the cut",
+        "visible_elements": "the full crucified Christ from a low angle, head bowed, arms taut on the beam, a faint light behind the head",
+        "emotional_tone": "the one crushed in our place",
+        "subject_block": "the full crucified Christ from a low angle against a dark sky, the body stretched on the cross with the head bowed, stripped to a thin loincloth, the arms taut along the beam, a faint light behind the lowered head, the bare hill at the base, an iconic and reverent tableau of the one crushed in our place",
+        "mood_block": "atmosphere of the one crushed in our place",
+        "jesus_variant": "passion",
+        "priority": 1,
+        "macro_elements": [
+          "the bowed head",
+          "the stretched arms on the beam",
+          "the pierced feet",
+          "the faint light behind the head"
+        ],
+        "pacing": "slower",
+        "viral_role": "close",
+        "shot_kind": "hero",
+        "vignettes": []
+      },
+      {
+        "index": 5,
+        "slug": "i-may-tell-all-my-bones",
+        "title": "I May Tell All My Bones",
+        "scene_type": "single",
+        "arc_position": "revelation",
+        "framing": "close",
+        "purpose": "the stretched ribcage, every bone countable (v17a)",
+        "rationale": "the quoted line on the gaunt, stretched torso",
+        "visible_elements": "countable ribs, drawn-tight skin, stretched flank, shadowed hollows between bones",
+        "emotional_tone": "a body whose every bone can be counted",
+        "subject_block": "the crucified man's torso seen close, the ribcage drawn tight beneath thin skin so that every rib stands countable, the body stretched long by the hanging arms, the flesh gaunt and shadowed between the bones, a thin torn loincloth at the hips, the stark visibility of a starved and stretched body",
+        "mood_block": "atmosphere of a body whose every bone can be counted",
+        "jesus_variant": "passion",
+        "priority": 3,
+        "macro_elements": [
+          "the countable ribs",
+          "the drawn-tight skin",
+          "the stretched flank",
+          "the shadowed hollows between bones"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 6,
+        "slug": "they-look-and-stare",
+        "title": "They Look and Stare",
+        "scene_type": "unified",
+        "arc_position": "human-response",
+        "framing": "mid",
+        "purpose": "the cold onlookers staring up (v17b)",
+        "rationale": "the specific staring crowd, not a generic gathering",
+        "visible_elements": "hard upward stares, a mocking lip, dangling pierced feet above them",
+        "emotional_tone": "cold onlookers staring at a dying man",
+        "subject_block": "a cluster of onlookers standing below and gazing up with cold fixed stares, their faces hard and unmoved, one with a faint mocking curl to the lip, the lower edge of a cross and dangling pierced feet just visible above them, subtle background vignettes fading into shadow suggesting pointing hands, a turned indifferent back, a soldier's helmet, and a distant temple, the staring faces dominant and the rest half-dissolved",
+        "mood_block": "atmosphere of cold onlookers staring at a dying man",
+        "jesus_variant": "passion",
+        "priority": 6,
+        "macro_elements": [
+          "the cold fixed stares",
+          "the faint mocking lip",
+          "the dangling pierced feet above",
+          "the hard unmoved faces"
+        ],
+        "pacing": "controlled",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "pointing hands",
+          "a turned indifferent back",
+          "a soldier's helmet",
+          "a distant temple"
+        ]
+      },
+      {
+        "index": 7,
+        "slug": "hung-by-the-arms",
+        "title": "Hung by the Arms",
+        "scene_type": "single",
+        "arc_position": "symbolic-support",
+        "framing": "close",
+        "purpose": "a body hung and pulled by its own weight",
+        "rationale": "the mechanism of the dislocation, a distinct macro region",
+        "visible_elements": "one rigid stretched arm, a distended shoulder joint, the nailed hand at the beam",
+        "emotional_tone": "a body hung and pulled by its own weight",
+        "subject_block": "one arm and shoulder of the crucified man seen close, the arm stretched rigid and straight to the nailed hand at the beam, the shoulder joint pulled and distended by the dead weight of the hanging body, the tendons drawn, the skin taut over strained muscle, deep shadow beyond",
+        "mood_block": "atmosphere of a body hung and pulled by its own weight",
+        "jesus_variant": "passion",
+        "priority": 0,
+        "macro_elements": [
+          "the rigid stretched arm",
+          "the distended shoulder joint",
+          "the nailed hand at the beam",
+          "the drawn tendons"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 8,
+        "slug": "whom-they-pierced",
+        "title": "Whom They Pierced",
+        "scene_type": "unified",
+        "arc_position": "ot-echo",
+        "framing": "mid",
+        "purpose": "looking upon the one they pierced (Zech 12:10 -> John 19:37)",
+        "rationale": "a real NT-anchored echo tying the staring to the piercing",
+        "visible_elements": "the pierced side with a thin flow, grieving upward-looking faces, a lowered spear",
+        "emotional_tone": "looking upon the one they pierced",
+        "subject_block": "the pierced side of the crucified man seen near, a dark wound below the ribs with a thin flow, a small group below lifting their faces to look upon him, one woman's face stricken with grief, subtle background vignettes fading into shadow suggesting a mourning mother, a soldier's lowered spear, the looking crowd, and a distant temple, the pierced side and the upward-looking faces dominant",
+        "mood_block": "atmosphere of looking upon the one they pierced",
+        "jesus_variant": "passion",
+        "priority": 4,
+        "macro_elements": [
+          "the pierced side",
+          "the thin flow from the wound",
+          "the stricken upward face",
+          "the lowered spear"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "a mourning mother",
+          "a soldier's lowered spear",
+          "the looking crowd",
+          "a distant temple"
+        ]
+      },
+      {
+        "index": 9,
+        "slug": "a-thousand-years-apart",
+        "title": "A Thousand Years Apart",
+        "scene_type": "unified",
+        "arc_position": "theological-centre",
+        "framing": "wide",
+        "purpose": "hold the king and the cross a thousand years apart, joined by light",
+        "rationale": "states 'written early' as composition, not a verbal claim",
+        "visible_elements": "the king over his scroll at left, a distant crucified figure at right, a band of light between",
+        "emotional_tone": "one death written a thousand years early",
+        "subject_block": "a wide composition divided by a vertical band of pale light, at the left the aged king low over his scroll by lamplight, at the right across the divide the distant crucified figure on a dark hill, subtle background vignettes fading into shadow suggesting a passing of long years, far generations, a setting sun, and an open scroll, the two halves joined only by the band of light between them",
+        "mood_block": "atmosphere of one death written a thousand years early",
+        "jesus_variant": "passion",
+        "priority": 8,
+        "macro_elements": [
+          "the band of dividing light",
+          "the king's lamp and scroll",
+          "the distant crucified figure",
+          "the dark hill"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "a passing of long years",
+          "far generations",
+          "a setting sun",
+          "an open scroll"
+        ]
+      },
+      {
+        "index": 10,
+        "slug": "wounded-for-us",
+        "title": "Wounded for Us",
+        "scene_type": "single",
+        "arc_position": "ot-echo",
+        "framing": "mid",
+        "purpose": "the stripes borne for us (Isa 53:5 -> 1 Pet 2:24)",
+        "rationale": "a real NT-anchored echo for the landing exchange",
+        "visible_elements": "a scourged striped back, lowered head, a torn garment fallen from the shoulders",
+        "emotional_tone": "stripes borne for us",
+        "subject_block": "the bowed back and shoulders of the scourged man seen from behind, the skin marked with the dark stripes of a flogging, the head lowered, a torn garment fallen from the shoulders, warm low light across the wounded back against deep shadow, the bearing of stripes borne for others",
+        "mood_block": "atmosphere of stripes borne for us",
+        "jesus_variant": "passion",
+        "priority": 0,
+        "macro_elements": [
+          "the dark stripes across the back",
+          "the lowered head",
+          "the torn fallen garment",
+          "the bowed shoulders"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 11,
+        "slug": "the-marks-of-one",
+        "title": "The Marks of One",
+        "scene_type": "single",
+        "arc_position": "symbolic-support",
+        "framing": "close",
+        "purpose": "the marks of a cross — the nailed hand",
+        "rationale": "a single macro on the nail-wound, the literal mark",
+        "visible_elements": "a nailed hand against the beam, iron nail through the palm, dried dark blood",
+        "emotional_tone": "the marks of a cross",
+        "subject_block": "a single nailed hand seen close against the dark wood of the beam, the iron nail driven through the palm, the fingers half-curled, dark blood dried around the wound, the grain of the rough timber beneath, deep shadow around the still hand",
+        "mood_block": "atmosphere of the marks of a cross",
+        "jesus_variant": "passion",
+        "priority": 0,
+        "macro_elements": [
+          "the iron nail through the palm",
+          "the half-curled fingers",
+          "the dried dark blood",
+          "the grain of the beam"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 12,
+        "slug": "crushed-in-your-place-unified",
+        "title": "Crushed So Another Goes Free",
+        "scene_type": "unified",
+        "arc_position": "nt-gospel-link",
+        "framing": "mid",
+        "purpose": "the exchange — one crushed so another goes free",
+        "rationale": "the gospel of the landing made visible",
+        "visible_elements": "the central cross, a freed figure rising with loosened hands, broken chains",
+        "emotional_tone": "one crushed so another goes free",
+        "subject_block": "the cross at the centre with the crucified figure calm in completion, and below it a freed figure rising with loosened hands, subtle background vignettes fading into shadow suggesting broken chains, an open door with light beyond, a kneeling man set free, and an open scroll, the central cross dominant and the freedom it buys half-dissolved around it",
+        "mood_block": "atmosphere of one crushed so another goes free",
+        "jesus_variant": "passion",
+        "priority": 7,
+        "macro_elements": [
+          "the calm crucified figure",
+          "the freed rising figure",
+          "the loosened hands",
+          "the breaking light at the cross's foot"
+        ],
+        "pacing": "slower",
+        "viral_role": "climax",
+        "shot_kind": "standard",
+        "vignettes": [
+          "broken chains",
+          "an open door with light beyond",
+          "a kneeling man set free",
+          "an open scroll"
+        ]
+      },
+      {
+        "index": 13,
+        "slug": "to-bring-you-home",
+        "title": "To Bring You Home",
+        "scene_type": "single",
+        "arc_position": "human-response",
+        "framing": "mid",
+        "purpose": "the way home left open (landing)",
+        "rationale": "an open-home image rather than a literal altar call",
+        "visible_elements": "a worn open road to a humble lit doorway at dusk, an olive tree",
+        "emotional_tone": "a way home left open",
+        "subject_block": "a worn open road leading toward a humble lit doorway at dusk, warm lamplight spilling across the threshold, a single olive tree beside the door, the path clear and inviting, no figure upon it yet, the way home left open and lit",
+        "mood_block": "atmosphere of a way home left open",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the lit open doorway",
+          "the warm light on the threshold",
+          "the worn road",
+          "the olive tree"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 14,
+        "slug": "come-to-him",
+        "title": "Come to Him",
+        "scene_type": "single",
+        "arc_position": "closing-devotional",
+        "framing": "wide",
+        "purpose": "close on the cross at dawn",
+        "rationale": "lands the cut on the finished suffering at daybreak",
+        "visible_elements": "the cross against a widening dawn over a quiet land",
+        "emotional_tone": "finished suffering, breaking dawn",
+        "subject_block": "the cross standing against a widening dawn, the figure calm and still in completion, warm gold light breaking from behind the upright beam across a quiet land, the hill's crest in soft shadow, the single cross high at the centre as the day breaks",
+        "mood_block": "atmosphere of a finished suffering and a breaking dawn",
+        "jesus_variant": "passion",
+        "priority": 0,
+        "macro_elements": [
+          "the cross against the dawn",
+          "the breaking gold light",
+          "the quiet land below",
+          "the hill's crest"
+        ],
+        "pacing": "slower",
+        "viral_role": "close",
+        "shot_kind": "standard",
+        "vignettes": []
+      }
+    ],
+    "short_priority": [
+      4,
+      1,
+      5,
+      8,
+      3,
+      6,
+      12,
+      9
+    ],
+    "candidates": [
+      {
+        "title": "Out of Joint",
+        "scene_type": "single",
+        "arc_position": "opening-hook",
+        "framing": "close",
+        "purpose": "open on the wrenched body the psalm describes",
+        "rationale": "the most arresting topic image; the dislocated stretch of crucifixion",
+        "visible_elements": "stretched taut arms, pulled shoulders, drawn torso, fallen head",
+        "emotional_tone": "a body wrenched out of joint"
+      },
+      {
+        "title": "The King Who Wrote It",
+        "scene_type": "unified",
+        "arc_position": "biblical-setting",
+        "framing": "mid",
+        "purpose": "David seeing a death not his own",
+        "rationale": "the 'king described it' hook made visible",
+        "visible_elements": "aged king over a scroll, harp, haunted face, distant cross vignette",
+        "emotional_tone": "seeing a death not his own"
+      },
+      {
+        "title": "Poured Out Like Water",
+        "scene_type": "single",
+        "arc_position": "theological-centre",
+        "framing": "close",
+        "purpose": "the drained body (v14a)",
+        "rationale": "the quoted line on the spent body",
+        "visible_elements": "fallen head, sweat-sheened drained chest, thin trail down the side",
+        "emotional_tone": "a body poured out"
+      },
+      {
+        "title": "I May Tell All My Bones",
+        "scene_type": "single",
+        "arc_position": "revelation",
+        "framing": "close",
+        "purpose": "countable ribs (v17a)",
+        "rationale": "the quoted line on the stretched ribcage",
+        "visible_elements": "countable ribs, drawn-tight skin, stretched flank",
+        "emotional_tone": "every bone countable"
+      },
+      {
+        "title": "They Look and Stare",
+        "scene_type": "unified",
+        "arc_position": "human-response",
+        "framing": "mid",
+        "purpose": "the cold onlookers (v17b)",
+        "rationale": "the staring crowd, not a generic crowd",
+        "visible_elements": "hard upward stares, mocking lip, dangling feet above",
+        "emotional_tone": "cold onlookers staring"
+      },
+      {
+        "title": "Whom They Pierced",
+        "scene_type": "unified",
+        "arc_position": "ot-echo",
+        "framing": "mid",
+        "purpose": "Zech 12:10 -> John 19:37, looking on the pierced one",
+        "rationale": "a real NT-anchored echo tying the staring to the piercing",
+        "visible_elements": "pierced side, upward-looking grieving faces",
+        "emotional_tone": "looking on the pierced one"
+      },
+      {
+        "title": "Wounded for Us",
+        "scene_type": "single",
+        "arc_position": "ot-echo",
+        "framing": "mid",
+        "purpose": "Isa 53:5 -> 1 Pet 2:24, stripes borne for us",
+        "rationale": "a real NT-anchored echo for the landing exchange",
+        "visible_elements": "striped scourged back, lowered head",
+        "emotional_tone": "stripes borne for us"
+      },
+      {
+        "title": "Crushed So Another Goes Free",
+        "scene_type": "unified",
+        "arc_position": "nt-gospel-link",
+        "framing": "mid",
+        "purpose": "the exchange — one crushed so another goes free",
+        "rationale": "the gospel of the landing made visible",
+        "visible_elements": "central cross, a freed figure rising, broken chains",
+        "emotional_tone": "crushed so another goes free"
+      },
+      {
+        "title": "Come to Him",
+        "scene_type": "single",
+        "arc_position": "closing-devotional",
+        "framing": "wide",
+        "purpose": "the cross at dawn close",
+        "rationale": "lands the cut on the finished suffering at daybreak",
+        "visible_elements": "the cross against a widening dawn over a quiet land",
+        "emotional_tone": "finished suffering, breaking dawn"
+      }
+    ],
+    "rationale": "Same 14-scene set, with the banned token 'frame' removed from scene 5 ('a starved and stretched body'). Nine singles anchor the body beats and five unified scenes carry the wider picture and echoes; two nt-gospel-link (hero crucified, the exchange) and two NT-anchored ot-echo (Zech 12:10->John 19:37; Isa 53:5->1 Pet 2:24) satisfy the mix. Body scenes use the traditional loincloth and stay reverent.",
+    "beat_coverage": {
+      "hook": [
+        1,
+        2
+      ],
+      "point": [
+        3
+      ],
+      "proof": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "conviction": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "landing": [
+        12,
+        13,
+        14
+      ]
+    },
+    "hero_candidate": 4
+  },
+  "self_review": {
+    "overall": "LOCKED",
+    "panel": [
+      {
+        "agent": "Scene Director",
+        "verdict": "STRONG",
+        "note": "Independent read: the body-foretold arc is carried, not just illustrated — wrenched body open, quoted-line proofs, pierced/written-early conviction, crushed-so-free landing."
+      },
+      {
+        "agent": "Theologian",
+        "verdict": "STRONG",
+        "note": "Echoes are genuinely NT-anchored (John 19:37 quotes Zech 12:10; 1 Pet 2:24 echoes Isa 53:5); descriptive-match guarded by king-seeing-a-death and the diptych. No forced verbal prophecy, no fear/works."
+      },
+      {
+        "agent": "Visual Skeptic",
+        "verdict": "CAUTION",
+        "note": "Heavy on crucifixion-body close-ups; reverent and state-only with loincloth, but render with restraint so it reads as devotional, not clinical or lurid."
+      },
+      {
+        "agent": "Character-Consistency Checker",
+        "verdict": "STRONG",
+        "note": "jesus_variant 'passion' consistent across crucified scenes; king and road correctly null."
+      },
+      {
+        "agent": "Editor",
+        "verdict": "STRONG",
+        "note": "Banned token 'frame' now removed from scene 5; state-only prose, 14 scenes, framings well distributed."
+      },
+      {
+        "agent": "Jaded Viewer",
+        "verdict": "CAUTION",
+        "note": "The body focus could turn morbid; the king-who-wrote-it and the freed-figure exchange give it gospel direction beyond suffering."
+      }
+    ],
+    "gates": [
+      {
+        "gate": "SP-G1 Biblical Accuracy",
+        "verdict": "PASS",
+        "evidence": "Ps 22:14,17 / Zech 12:10 / Isa 53:5 defensible; loincloth traditional; no invented detail.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G2 Narration Alignment",
+        "verdict": "PASS",
+        "evidence": "Every beat id in ['hook', 'point', 'proof', 'conviction', 'landing'] has >=1 supporting scene.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G3 Visual Variety",
+        "verdict": "PASS",
+        "evidence": "9 single + 5 unified; body regions varied plus king, diptych, onlookers, freed figure, road.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G4 Theological Honesty",
+        "verdict": "PASS",
+        "evidence": "Descriptive match honest; NT-anchored echoes; grace landing.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G5 Prompt Conformance",
+        "verdict": "PASS",
+        "evidence": "All subject_block + mood_block content clear of the banned-token list.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G6 Type Discipline",
+        "verdict": "PASS",
+        "evidence": "every unified scene declares 3-5 vignettes (counts: #2=4, #6=4, #8=4, #9=4, #12=4)",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G7 Character Consistency",
+        "verdict": "PASS",
+        "evidence": "jesus_variant 'passion' consistent.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G8 Composition Distribution",
+        "verdict": "PASS",
+        "evidence": "4 distinct framings; max 'mid' at 6/14.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G9 Scene Mix & Gospel Frame",
+        "verdict": "PASS",
+        "evidence": "n=14: single=9, unified=5, nt-link=2, ot-echo=2",
+        "fix": ""
+      }
+    ],
+    "priority_fixes": []
+  },
+  "independent_review": {
+    "overall": "",
+    "panel": [],
+    "gates": [
+      {
+        "gate": "SP-G2 Narration Alignment",
+        "verdict": "PASS",
+        "evidence": "Every beat id in ['hook', 'point', 'proof', 'conviction', 'landing'] has >=1 supporting scene.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G5 Prompt Conformance",
+        "verdict": "PASS",
+        "evidence": "All subject_block + mood_block content clear of the banned-token list.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G6 Type Discipline",
+        "verdict": "PASS",
+        "evidence": "every unified scene declares 3-5 vignettes (counts: #2=4, #6=4, #8=4, #9=4, #12=4)",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G8 Composition Distribution",
+        "verdict": "PASS",
+        "evidence": "4 distinct framings; max 'mid' at 6/14.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G9 Scene Mix & Gospel Frame",
+        "verdict": "PASS",
+        "evidence": "n=14: single=9, unified=5, nt-link=2, ot-echo=2",
+        "fix": ""
+      }
+    ],
+    "priority_fixes": []
+  },
+  "paper_cohesion": {
+    "scope": "paper",
+    "passed": true,
+    "notes": "",
+    "conflict_scenes": []
+  },
+  "authoritative_overall": ""
+}

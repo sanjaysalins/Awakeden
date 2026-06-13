@@ -1,0 +1,63 @@
+{
+  "created_at": "2026-06-13T00:00:00",
+  "model": "claude-opus-4-7",
+  "review_model": "claude-sonnet-4-6",
+  "structure": {
+    "id": "gospel-five-beat",
+    "name": "Gospel Five-Beat",
+    "beats": ["hook", "point", "proof", "conviction", "landing"]
+  },
+  "series": {
+    "id": "jesus-in-ot",
+    "name": "Jesus in the Old Testament",
+    "brand": "SLK"
+  },
+  "episode": {
+    "title": "The Body Foretold",
+    "primary_ref": "Psalm 22:14"
+  },
+  "kjv_verified": true,
+  "kjv_text": "I am poured out like water, and all my bones are out of joint... I may tell all my bones: they look and stare upon me.",
+  "thread": {
+    "thread": "David described the body of a dying man -- bones out of joint from hanging by the arms, every bone countable and exposed, onlookers staring (Ps 22:14,17) -- so exactly it reads like an eyewitness account of a crucifixion, written about 1000 years before Rome made the cross its instrument. This is a DESCRIPTIVE match (the psalm pictures what crucifixion does to a body), not a verbal NT citation. This is what Jesus bore to bring you home; recorded centuries early so you would know none of it was chance -- He was crushed in your place.",
+    "lever": "overlooked detail / descriptive match (Ps 22:14,17 pictures what crucifixion does to a body, written centuries before Rome's cross -- descriptive, not a cited verbal fulfilment)",
+    "anchor_ref": "Psalm 22:14",
+    "anchor_detail": "the dying man's body -- poured out, every joint pulled loose from hanging by the arms, every bone countable and exposed while onlookers stand and stare -- matching crucifixion centuries early",
+    "why_fresh": "a king described, in the first person, a death by crucifixion he never witnessed and that Rome had not yet adopted as its instrument",
+    "gospel_landing": "this is what Jesus bore to bring you home -- every wrenched joint, every cold stare, recorded centuries early so you would know none of it was chance; He was crushed in your place; come to Him",
+    "rationale": "the body-on-the-cross described centuries early as a precise descriptive match, with a grace landing (He was crushed in your place) -- distinct from short #1 (the garments)",
+    "candidates": []
+  },
+  "draft": {
+    "title": "The Body Foretold",
+    "hook_type": "prophecy",
+    "beats": [
+      {
+        "id": "hook",
+        "text": "A king described a dying body so exactly it reads like an eyewitness account of a crucifixion he never saw."
+      },
+      {
+        "id": "point",
+        "text": "Psalm twenty-two. David wrote it in the first person, but he was describing someone else's death, not his own. Watch the body of the dying man: \"I am poured out like water, and all my bones are out of joint…\""
+      },
+      {
+        "id": "proof",
+        "text": "Drained — and every joint pulled loose, the way a body hangs when it's suspended by the arms. And: \"I may tell all my bones: they look and stare upon me.\" He could count every bone, stretched and exposed, while onlookers stood and stared at him."
+      },
+      {
+        "id": "conviction",
+        "text": "David never saw a crucifixion. Rome would not make it its instrument for centuries. Yet the dying man of his song bears the marks of one — written early."
+      },
+      {
+        "id": "landing",
+        "text": "This is what Jesus bore to bring you home — every wrenched joint, every cold stare, recorded centuries early so you'd know none of it was chance. He was crushed in your place."
+      }
+    ]
+  },
+  "beat_ids": ["hook", "point", "proof", "conviction", "landing"],
+  "word_count": 178,
+  "char_count": 0,
+  "authoritative_review": "independent",
+  "review_overall": "LOCKED",
+  "unknown_speakers": []
+}
