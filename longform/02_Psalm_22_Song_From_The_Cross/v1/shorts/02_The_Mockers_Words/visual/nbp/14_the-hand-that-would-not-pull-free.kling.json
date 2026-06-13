@@ -1,0 +1,41 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, slower pacing with longer holds and restrained cuts.\n\nClassical devotional oil painting realism. Warm raking light falls across an open palm and the rough grain of a wooden beam, deep shadow beyond; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\nAn extreme close view of a single nailed open hand against the rough grain of a cross beam, an iron nail through the palm, the fingers relaxed and open rather than clenched, a thin dark line of blood, a cream robe cuff at the wrist. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the nailed open hand against the beam.\n\nCut to macro detail — the iron nail through the palm.\n\nCut to insert — the relaxed, open fingers.\n\nCut to macro detail — the thin dark line of blood.\n\nCut to insert — the cream robe cuff at the wrist.\n\nCut to macro detail — the rough grain of the beam behind the hand.\n\nReturn to full composition.\n\nEnd hold on the open, nailed hand.\n\nMicro-motion:\n- minimal\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\nChosen, unresisting restraint.\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.43,
+      "description": "Start on full composition — the nailed open hand against the beam"
+    },
+    {
+      "start_sec": 1.43,
+      "end_sec": 2.86,
+      "description": "Cut to macro detail — the iron nail through the palm"
+    },
+    {
+      "start_sec": 2.86,
+      "end_sec": 4.29,
+      "description": "Cut to insert — the relaxed, open fingers"
+    },
+    {
+      "start_sec": 4.29,
+      "end_sec": 5.71,
+      "description": "Cut to macro detail — the thin dark line of blood"
+    },
+    {
+      "start_sec": 5.71,
+      "end_sec": 7.14,
+      "description": "Cut to insert — the cream robe cuff at the wrist"
+    },
+    {
+      "start_sec": 7.14,
+      "end_sec": 8.57,
+      "description": "Cut to macro detail — the rough grain of the beam behind the hand"
+    },
+    {
+      "start_sec": 8.57,
+      "end_sec": 10.0,
+      "description": "Return to full composition, end hold on the open, nailed hand"
+    }
+  ]
+}

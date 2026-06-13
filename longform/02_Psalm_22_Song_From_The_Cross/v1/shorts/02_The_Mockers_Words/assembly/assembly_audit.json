@@ -1,0 +1,111 @@
+{
+  "passed_overall": true,
+  "slots": [
+    {
+      "order": 0,
+      "scene_index": 1,
+      "section": "hook",
+      "words": "At the cross they shook their heads and sneered the very taunt",
+      "passed": true,
+      "note": "clip matches its beat (QC-passed upstream)"
+    },
+    {
+      "order": 1,
+      "scene_index": 2,
+      "section": "hook",
+      "words": "Psalm twenty-two.",
+      "passed": true,
+      "note": "clip matches its beat (QC-passed upstream)"
+    },
+    {
+      "order": 2,
+      "scene_index": 3,
+      "section": "hook",
+      "words": "even writes his tormentors' words:",
+      "passed": true,
+      "note": "clip matches its beat (QC-passed upstream)"
+    },
+    {
+      "order": 3,
+      "scene_index": 6,
+      "section": "hook",
+      "words": "\"…they shake the head,",
+      "passed": true,
+      "note": "clip matches its beat (QC-passed upstream)"
+    },
+    {
+      "order": 4,
+      "scene_index": 12,
+      "section": "hook",
+      "words": "A thousand years later,",
+      "passed": true,
+      "note": "clip matches its beat (QC-passed upstream)"
+    },
+    {
+      "order": 5,
+      "scene_index": 4,
+      "section": "hook",
+      "words": "Matthew records both —",
+      "passed": true,
+      "note": "clip matches its beat (QC-passed upstream)"
+    },
+    {
+      "order": 6,
+      "scene_index": 13,
+      "section": "hook",
+      "words": "the passers-by wagging their heads,",
+      "passed": true,
+      "note": "clip matches its beat (QC-passed upstream)"
+    },
+    {
+      "order": 7,
+      "scene_index": 5,
+      "section": "hook",
+      "words": "and the religious leaders jeering:",
+      "passed": true,
+      "note": "clip matches its beat (QC-passed upstream)"
+    },
+    {
+      "order": 8,
+      "scene_index": 7,
+      "section": "hook",
+      "words": "let him deliver him now…\"",
+      "passed": true,
+      "note": "clip matches its beat (QC-passed upstream)"
+    },
+    {
+      "order": 9,
+      "scene_index": 14,
+      "section": "hook",
+      "words": "And He wasn't delivered —",
+      "passed": true,
+      "note": "clip matches its beat (QC-passed upstream)"
+    },
+    {
+      "order": 10,
+      "scene_index": 8,
+      "section": "hook",
+      "words": "He had every power.",
+      "passed": true,
+      "note": "clip matches its beat (QC-passed upstream)"
+    },
+    {
+      "order": 11,
+      "scene_index": 9,
+      "section": "hook",
+      "words": "He stayed because staying was the only way to deliver you.",
+      "passed": true,
+      "note": "clip matches its beat (QC-passed upstream)"
+    },
+    {
+      "order": 12,
+      "scene_index": 10,
+      "section": "hook",
+      "words": "They thought weakness pinned Him to that cross.",
+      "passed": true,
+      "note": "clip matches its beat (QC-passed upstream)"
+    }
+  ],
+  "reroll_scene_indices": [],
+  "notes": "All slots matched their words."
+}

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Visual review — shorts / 02_The_Mockers_Words / nbp</title>
+<style>
+  :root {
+    --bg: #18181b;
+    --card: #27272a;
+    --card-soft: #3f3f46;
+    --text: #e4e4e7;
+    --text-dim: #a1a1aa;
+    --accent: #fde68a;
+    --pass: #4ade80;
+    --fail: #f87171;
+    --warn: #fbbf24;
+    --border: #52525b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+    background: var(--bg); color: var(--text);
+    margin: 0; padding: 32px;
+    line-height: 1.45;
+  }
+  header {
+    max-width: 1280px; margin: 0 auto 32px;
+  }
+  h1 { font-size: 22px; margin: 0 0 8px; font-weight: 600; }
+  .subtitle { color: var(--text-dim); font-size: 13px; }
+  .grid { max-width: 1280px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+  }
+  .card .img-col {
+    background: #000;
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    padding: 12px;
+  }
+  .card img, .card video { max-width: 100%; max-height: 480px; border-radius: 4px; display: block; }
+  .media-badge {
+    position: absolute; top: 16px; left: 16px;
+    padding: 2px 8px; border-radius: 3px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0.04em;
+    font-family: ui-monospace, monospace;
+    pointer-events: none;
+  }
+  .media-badge.clip { background: rgba(74,222,128,0.9); color: #18181b; }
+  .media-badge.still { background: rgba(161,161,170,0.85); color: #18181b; }
+  .card .meta-col { padding: 20px 24px; }
+  .ref {
+    display: inline-block;
+    background: var(--accent);
+    color: #18181b;
+    font-weight: 700; font-size: 14px;
+    padding: 4px 10px; border-radius: 4px;
+    margin-right: 12px;
+    font-family: ui-monospace, "Cascadia Code", monospace;
+  }
+  .title { font-size: 18px; font-weight: 600; display: inline; }
+  .tags { margin: 10px 0 16px; }
+  .tag {
+    display: inline-block;
+    background: var(--card-soft);
+    color: var(--text-dim);
+    padding: 2px 8px; margin-right: 6px;
+    border-radius: 3px; font-size: 11px;
+    font-family: ui-monospace, monospace;
+  }
+  .verdict {
+    display: inline-block;
+    padding: 3px 10px; border-radius: 4px;
+    font-size: 12px; font-weight: 600;
+    font-family: ui-monospace, monospace;
+    margin-bottom: 16px;
+  }
+  .verdict.pass { background: rgba(74,222,128,0.15); color: var(--pass); border: 1px solid var(--pass); }
+  .verdict.fail { background: rgba(248,113,113,0.15); color: var(--fail); border: 1px solid var(--fail); }
+  .verdict.none { background: var(--card-soft); color: var(--text-dim); }
+  .section { margin: 14px 0; }
+  .section-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); margin-bottom: 4px; }
+  .section-body { font-size: 14px; color: var(--text); }
+  ul.issues { margin: 6px 0 0; padding-left: 20px; font-size: 13px; }
+  ul.issues li { margin: 4px 0; }
+  ul.issues .claim { color: var(--warn); }
+  ul.issues .actual { color: var(--text-dim); }
+  .filename {
+    font-family: ui-monospace, monospace; font-size: 11px;
+    color: var(--text-dim); margin-top: 12px;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Visual review — shorts / 02_The_Mockers_Words / nbp</h1>
+  <div class="subtitle">14 rendered scene(s) via <code>nbp</code>. Scenes with a Kling clip play inline (looping, muted — unmute with the controls); reference any scene by its <code>#NN</code> badge.</div>
+</header>
+<div class="grid">
+<div class="card"><div class="img-col"><video src="01_the-shaking-heads.mp4" poster="01_the-shaking-heads.png" controls loop muted playsinline preload="metadata"></video><span class="media-badge clip">▶ clip</span></div><div class="meta-col"><span class="ref">#01</span><span class="title">The Shaking Heads</span><div class="tags"><span class="tag">single</span> <span class="tag">close</span> <span class="tag">opening-hook</span> <span class="tag">role=hook-open</span> <span class="tag">pacing=controlled</span> <span class="tag">priority=1</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">two or three jeering faces with shot-out lips and heads tilted in scorn, the dark upright of a cross edge behind</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">cruel, oblivious derision</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">Hook on the mockers&#39; gesture at the cross</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>a curled shot-out lip</li><li>a tilted shaking head</li><li>a narrowed scornful eye</li><li>the dark grain of the cross upright</li></ul></div><div class="filename">01_the-shaking-heads.mp4</div></div></div>
+<div class="card"><div class="img-col"><video src="02_david-records-the-taunt.mp4" poster="02_david-records-the-taunt.png" controls loop muted playsinline preload="metadata"></video><span class="media-badge clip">▶ clip</span></div><div class="meta-col"><span class="ref">#02</span><span class="title">David Records the Taunt</span><div class="tags"><span class="tag">unified</span> <span class="tag">mid</span> <span class="tag">ot-echo</span> <span class="tag">role=build</span> <span class="tag">pacing=slower</span> <span class="tag">priority=6</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">aged David at a low table, a Hebrew scroll, an oil lamp, faint background vignettes of mockery</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">sober, weighty foresight</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">The taunt written a thousand years early</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the feather pen at rest</li><li>a line of wet Hebrew letters</li><li>the oil lamp flame</li><li>David&#39;s lined brow</li></ul></div><div class="filename">02_david-records-the-taunt.mp4</div></div></div>
+<div class="card"><div class="img-col"><video src="03_let-him-deliver-him.mp4" poster="03_let-him-deliver-him.png" controls loop muted playsinline preload="metadata"></video><span class="media-badge clip">▶ clip</span></div><div class="meta-col"><span class="ref">#03</span><span class="title">Let Him Deliver Him</span><div class="tags"><span class="tag">single</span> <span class="tag">close</span> <span class="tag">theological-centre</span> <span class="tag">role=pivot</span> <span class="tag">pacing=slower</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">extreme close on a Hebrew scroll line, a fingertip beneath it</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">quiet gravity</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">The exact written line</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the fingertip</li><li>one cracked Hebrew line</li><li>the fibrous parchment grain</li></ul></div><div class="filename">03_let-him-deliver-him.mp4</div></div></div>
+<div class="card"><div class="img-col"><video src="04_the-crowd-at-the-cross.mp4" poster="04_the-crowd-at-the-cross.png" controls loop muted playsinline preload="metadata"></video><span class="media-badge clip">▶ clip</span></div><div class="meta-col"><span class="ref">#04</span><span class="title">The Crowd at the Cross</span><div class="tags"><span class="tag">unified</span> <span class="tag">wide</span> <span class="tag">nt-gospel-link</span> <span class="tag">jesus=passion</span> <span class="tag">role=pivot</span> <span class="tag">pacing=controlled</span> <span class="tag">priority=2</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">a crowd at the foot of the cross, wagging heads and jabbing fingers, Christ on the cross above</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">fulfilment amid scorn</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">Matthew&#39;s two groups doing both</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>a wagged head</li><li>a jabbing finger</li><li>a sneering elder&#39;s mouth</li><li>the crucified feet above</li></ul></div><div class="filename">04_the-crowd-at-the-cross.mp4</div></div></div>
+<div class="card"><div class="img-col"><video src="05_the-leaders-jeer.mp4" poster="05_the-leaders-jeer.png" controls loop muted playsinline preload="metadata"></video><span class="media-badge clip">▶ clip</span></div><div class="meta-col"><span class="ref">#05</span><span class="title">The Religious Leaders Jeer</span><div class="tags"><span class="tag">single</span> <span class="tag">mid</span> <span class="tag">public-misunderstanding</span> <span class="tag">role=build</span> <span class="tag">pacing=controlled</span> <span class="tag">priority=3</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">robed religious leaders pointing up and sneering</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">smug contempt</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the leaders&#39; specific taunt</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>an extended pointing finger</li><li>a curled lip</li><li>a prayer-fringe hem</li><li>a lifted contemptuous brow</li></ul></div><div class="section"><div class="section-label">Audit issues</div><ul class="issues"><li><span class="claim">spec:</span> first-century prayer fringes<br><span class="actual">actual:</span> leaders in ornate Baroque vestments rather than period Jewish robes - acceptable Baroque idiom, non-failing</li></ul></div><div class="filename">05_the-leaders-jeer.mp4</div></div></div>
+<div class="card"><div class="img-col"><video src="06_shot-out-the-lip.mp4" poster="06_shot-out-the-lip.png" controls loop muted playsinline preload="metadata"></video><span class="media-badge clip">▶ clip</span></div><div class="meta-col"><span class="ref">#06</span><span class="title">They Shoot Out the Lip</span><div class="tags"><span class="tag">single</span> <span class="tag">close</span> <span class="tag">central-conflict</span> <span class="tag">role=build</span> <span class="tag">pacing=controlled</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">a single mocking face, lip thrust out</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">raw scorn</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the Ps 22:7 lip gesture</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the thrust-out lip</li><li>bared teeth</li><li>a cold lifted eye</li></ul></div><div class="filename">06_shot-out-the-lip.mp4</div></div></div>
+<div class="card"><div class="img-col"><video src="07_the-jabbing-hands.mp4" poster="07_the-jabbing-hands.png" controls loop muted playsinline preload="metadata"></video><span class="media-badge clip">▶ clip</span></div><div class="meta-col"><span class="ref">#07</span><span class="title">The Jabbing Hands</span><div class="tags"><span class="tag">single</span> <span class="tag">close</span> <span class="tag">symbolic-support</span> <span class="tag">role=build</span> <span class="tag">pacing=faster</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">several hands with fingers jabbed upward</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">accusing mockery</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the pointing crowd</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>a jabbed pointing finger</li><li>a falling-back sleeve</li><li>a clenched knuckle</li></ul></div><div class="filename">07_the-jabbing-hands.mp4</div></div></div>
+<div class="card"><div class="img-col"><video src="08_he-had-every-power.mp4" poster="08_he-had-every-power.png" controls loop muted playsinline preload="metadata"></video><span class="media-badge clip">▶ clip</span></div><div class="meta-col"><span class="ref">#08</span><span class="title">He Had Every Power</span><div class="tags"><span class="tag">single</span> <span class="tag">low-angle</span> <span class="tag">nt-gospel-link</span> <span class="tag">jesus=passion</span> <span class="tag">role=climax</span> <span class="tag">pacing=slower</span> <span class="tag">priority=4</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">Christ on the cross from below, calm and sovereign</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">unhurried sovereignty</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the conviction — sovereign restraint</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the calm downward gaze</li><li>an outstretched nailed hand</li><li>the dark beam grain</li><li>the small mockers below</li></ul></div><div class="filename">08_he-had-every-power.mp4</div></div></div>
+<div class="card"><div class="img-col"><video src="09_twelve-legions-restrained.mp4" poster="09_twelve-legions-restrained.png" controls loop muted playsinline preload="metadata"></video><span class="media-badge clip">▶ clip</span></div><div class="meta-col"><span class="ref">#09</span><span class="title">Twelve Legions Restrained</span><div class="tags"><span class="tag">unified</span> <span class="tag">mid</span> <span class="tag">nt-gospel-link</span> <span class="tag">jesus=passion</span> <span class="tag">role=build</span> <span class="tag">pacing=slower</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">Christ on the cross, dim restrained ranks half-dissolved in shadow</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">withheld omnipotence</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the power He held back</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>a single nailed open hand</li><li>the crown of thorns</li><li>a sheathed sword</li><li>dim half-dissolved ranks</li></ul></div><div class="section"><div class="section-label">Audit issues</div><ul class="issues"><li><span class="claim">spec:</span> crucified on the cross<br><span class="actual">actual:</span> Christ stands robed before the cross rather than nailed on it, but reads correctly as chosen restraint (crown of thorns, wounded open hands, sheathed sword, muted angels); halo and bare-torso fixed - acceptable for this build scene</li></ul></div><div class="filename">09_twelve-legions-restrained.mp4</div></div></div>
+<div class="card"><div class="img-col"><video src="10_looking-down-in-love.mp4" poster="10_looking-down-in-love.png" controls loop muted playsinline preload="metadata"></video><span class="media-badge clip">▶ clip</span></div><div class="meta-col"><span class="ref">#10</span><span class="title">Looking Down in Love</span><div class="tags"><span class="tag">single</span> <span class="tag">close</span> <span class="tag">revelation</span> <span class="tag">jesus=passion</span> <span class="tag">role=close</span> <span class="tag">pacing=slower</span> <span class="tag">priority=5</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">Christ&#39;s face, eyes lowered in love</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">tender, willing love</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the landing — it was love</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the lowered loving eyes</li><li>the thorn-marked brow</li><li>a single thorn</li><li>warm light on the cheek</li></ul></div><div class="filename">10_looking-down-in-love.mp4</div></div></div>
+<div class="card"><div class="img-col"><video src="11_he-chose-to-stay.mp4" poster="11_he-chose-to-stay.png" controls loop muted playsinline preload="metadata"></video><span class="media-badge clip">▶ clip</span></div><div class="meta-col"><span class="ref">#11</span><span class="title">He Chose to Stay</span><div class="tags"><span class="tag">single</span> <span class="tag">mid</span> <span class="tag">closing-devotional</span> <span class="tag">jesus=passion</span> <span class="tag">role=close</span> <span class="tag">pacing=slower</span> <span class="tag">priority=5</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">the full crucified Christ on the cross, calm, against a soft break of light</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">willing, finished love</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the gospel-pivot hero close</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the outstretched nailed hands</li><li>the inclined head</li><li>the soft break of light</li><li>the small mockers below</li></ul></div><div class="filename">11_he-chose-to-stay.mp4</div></div></div>
+<div class="card"><div class="img-col"><video src="12_a-thousand-years-apart.mp4" poster="12_a-thousand-years-apart.png" controls loop muted playsinline preload="metadata"></video><span class="media-badge clip">▶ clip</span></div><div class="meta-col"><span class="ref">#12</span><span class="title">A Thousand Years Apart</span><div class="tags"><span class="tag">unified</span> <span class="tag">wide</span> <span class="tag">ot-echo</span> <span class="tag">jesus=passion</span> <span class="tag">role=build</span> <span class="tag">pacing=slower</span> <span class="tag">priority=7</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">David at his scroll on the left, the distant cross on the right</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">quiet wonder</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the two scenes joined</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>David&#39;s pen on the scroll</li><li>the lamp flame</li><li>the distant cross</li><li>the corridor of shadow</li></ul></div><div class="filename">12_a-thousand-years-apart.mp4</div></div></div>
+<div class="card"><div class="img-col"><video src="13_the-silent-king.mp4" poster="13_the-silent-king.png" controls loop muted playsinline preload="metadata"></video><span class="media-badge clip">▶ clip</span></div><div class="meta-col"><span class="ref">#13</span><span class="title">The Mockers and the Silent King</span><div class="tags"><span class="tag">single</span> <span class="tag">wide</span> <span class="tag">human-response</span> <span class="tag">jesus=passion</span> <span class="tag">role=build</span> <span class="tag">pacing=controlled</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">the backs of the jeering crowd, Christ on the cross beyond, silent</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">loud scorn against quiet majesty</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the contrast of scorn and silence</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>a raised jeering arm</li><li>a dark turned back</li><li>the small luminous Christ</li><li>the pale dusk sky</li></ul></div><div class="section"><div class="section-label">Audit issues</div><ul class="issues"><li><span class="claim">spec:</span> no added glow<br><span class="actual">actual:</span> a soft luminance behind Christs head reads as dusk backlight rather than a hard halo ring - mild, non-failing</li></ul></div><div class="filename">13_the-silent-king.mp4</div></div></div>
+<div class="card"><div class="img-col"><video src="14_the-hand-that-would-not-pull-free.mp4" poster="14_the-hand-that-would-not-pull-free.png" controls loop muted playsinline preload="metadata"></video><span class="media-badge clip">▶ clip</span></div><div class="meta-col"><span class="ref">#14</span><span class="title">The Hand That Would Not Pull Free</span><div class="tags"><span class="tag">single</span> <span class="tag">close</span> <span class="tag">nt-gospel-link</span> <span class="tag">jesus=passion</span> <span class="tag">role=build</span> <span class="tag">pacing=slower</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">a close on the nailed open hand against the beam</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">chosen restraint</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the power restrained, in one detail</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the iron nail in the palm</li><li>the open relaxed fingers</li><li>the beam grain</li><li>warm light on the knuckles</li></ul></div><div class="filename">14_the-hand-that-would-not-pull-free.mp4</div></div></div>
+</div>
+</body>
+</html>

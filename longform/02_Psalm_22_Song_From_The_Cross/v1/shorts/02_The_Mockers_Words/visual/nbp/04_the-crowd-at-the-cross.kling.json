@@ -1,0 +1,46 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, controlled pacing with deliberate cuts and extended holds.\n\nClassical devotional oil painting realism. Warm light falls across the pale robe of the crucified figure and the upturned faces of the crowd, while the sky and edges sink into deep brown-black shadow; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\nThe crucified Christ is lifted on a rough wooden cross, arms outstretched along the beam, robed in a soiled cream garment, his bearded head inclined. At the foot of the cross a crowd is gathered — a robed religious leader with a finger jabbed upward, passers-by with heads wagged in scorn, and onlookers with faces lifted. Deep shadow fills the rest. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the crucified figure above, the jeering crowd at the foot.\n\nCut to mid framing — the crucified Christ on the cross, arms outstretched.\n\nCut to close-up — the inclined bearded face.\n\nCut to insert — the religious leader's finger jabbed upward.\n\nCut to mid framing — the cluster of jeering, upturned faces at the foot.\n\nCut to insert — the nailed bare feet on the wooden block.\n\nCut to lower framing — the upturned onlookers in scorn.\n\nReturn to full composition.\n\nEnd hold on the crucified figure above the crowd.\n\nMicro-motion:\n- minimal\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\nProphecy fulfilled amid scorn.\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.25,
+      "description": "Start on full composition — crucified figure above, jeering crowd at the foot"
+    },
+    {
+      "start_sec": 1.25,
+      "end_sec": 2.5,
+      "description": "Cut to mid framing — crucified Christ on the cross, arms outstretched"
+    },
+    {
+      "start_sec": 2.5,
+      "end_sec": 3.75,
+      "description": "Cut to close-up — the inclined bearded face"
+    },
+    {
+      "start_sec": 3.75,
+      "end_sec": 5.0,
+      "description": "Cut to insert — the religious leader's finger jabbed upward"
+    },
+    {
+      "start_sec": 5.0,
+      "end_sec": 6.25,
+      "description": "Cut to mid framing — cluster of jeering upturned faces at the foot"
+    },
+    {
+      "start_sec": 6.25,
+      "end_sec": 7.5,
+      "description": "Cut to insert — nailed bare feet on the wooden block"
+    },
+    {
+      "start_sec": 7.5,
+      "end_sec": 8.75,
+      "description": "Cut to lower framing — upturned onlookers in scorn"
+    },
+    {
+      "start_sec": 8.75,
+      "end_sec": 10.0,
+      "description": "Return to full composition, end hold on the crucified figure above the crowd"
+    }
+  ]
+}

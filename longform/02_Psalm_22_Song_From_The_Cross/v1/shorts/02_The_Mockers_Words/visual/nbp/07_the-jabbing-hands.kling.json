@@ -1,0 +1,41 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, faster rhythm with sharp cut variation and strong visual contrast.\n\nClassical devotional oil painting realism. Cool pale daylight catches a thicket of raised hands while the figures below and the edges sink into deep brown shadow; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\nSeveral weathered hands are raised at the foot of a wooden cross, fingers jabbed and pointed upward in accusation, sleeves of dusty robes fallen back from the wrists. Two upturned bearded faces are below, and the dark cross and a crucified arm are just within the upper-right of view against a pale sky. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the thicket of raised, pointing hands at the foot of the cross.\n\nCut to mid framing — the cluster of jabbing fingers against the pale sky.\n\nCut to insert — a single pointing index finger.\n\nCut to insert — a sleeve fallen back from a raised wrist.\n\nCut to upper framing — the dark cross and a crucified arm at the upper-right.\n\nCut to close-up — an upturned bearded face below.\n\nReturn to full composition.\n\nEnd hold on the jabbing hands beneath the cross.\n\nMicro-motion:\n- minimal\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\nAccusing, jeering gesture.\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.43,
+      "description": "Start on full composition — thicket of raised pointing hands at the foot of the cross"
+    },
+    {
+      "start_sec": 1.43,
+      "end_sec": 2.86,
+      "description": "Cut to mid framing — cluster of jabbing fingers against the pale sky"
+    },
+    {
+      "start_sec": 2.86,
+      "end_sec": 4.29,
+      "description": "Cut to insert — a single pointing index finger"
+    },
+    {
+      "start_sec": 4.29,
+      "end_sec": 5.71,
+      "description": "Cut to insert — a sleeve fallen back from a raised wrist"
+    },
+    {
+      "start_sec": 5.71,
+      "end_sec": 7.14,
+      "description": "Cut to upper framing — dark cross and a crucified arm at upper-right"
+    },
+    {
+      "start_sec": 7.14,
+      "end_sec": 8.57,
+      "description": "Cut to close-up — an upturned bearded face below"
+    },
+    {
+      "start_sec": 8.57,
+      "end_sec": 10.0,
+      "description": "Return to full composition, end hold on the jabbing hands"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, slower pacing with longer holds and restrained cuts.\n\nClassical devotional oil painting realism. Warm lamplight falls across a pale parchment and a single weathered thumb, while a deep-blue robe edge and the surrounds sink into shadow; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\nAn extreme close view of an open parchment, a single weathered thumb at rest beneath one line of ancient Hebrew script, the ink old and cracked, the parchment fibrous and warmly lit, a fold of deep-blue robe at the edge. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the open parchment, the thumb at rest beneath the Hebrew line.\n\nCut to macro detail — the single line of ancient Hebrew letters.\n\nCut to insert — the weathered thumb at rest beneath the line.\n\nCut to macro detail — the cracked ink and fibrous parchment grain.\n\nCut to insert — the fold of deep-blue robe at the edge.\n\nCut to lower framing — the lower curl of the parchment.\n\nReturn to full composition.\n\nEnd hold on the Hebrew line and the resting thumb.\n\nMicro-motion:\n- minimal\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\nQuiet, fixed gravity.\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.43,
+      "description": "Start on full composition — open parchment, thumb beneath the Hebrew line"
+    },
+    {
+      "start_sec": 1.43,
+      "end_sec": 2.86,
+      "description": "Cut to macro detail — single line of ancient Hebrew letters"
+    },
+    {
+      "start_sec": 2.86,
+      "end_sec": 4.29,
+      "description": "Cut to insert — weathered thumb at rest beneath the line"
+    },
+    {
+      "start_sec": 4.29,
+      "end_sec": 5.71,
+      "description": "Cut to macro detail — cracked ink and fibrous parchment grain"
+    },
+    {
+      "start_sec": 5.71,
+      "end_sec": 7.14,
+      "description": "Cut to insert — fold of deep-blue robe at the edge"
+    },
+    {
+      "start_sec": 7.14,
+      "end_sec": 8.57,
+      "description": "Cut to lower framing — lower curl of the parchment"
+    },
+    {
+      "start_sec": 8.57,
+      "end_sec": 10.0,
+      "description": "Return to full composition, end hold on the Hebrew line and resting thumb"
+    }
+  ]
+}

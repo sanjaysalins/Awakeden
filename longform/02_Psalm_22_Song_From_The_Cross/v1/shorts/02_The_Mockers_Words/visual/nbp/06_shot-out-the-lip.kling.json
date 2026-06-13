@@ -1,0 +1,41 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, controlled pacing with deliberate cuts and extended holds.\n\nClassical devotional oil painting realism. Raking warm light falls across a single weathered face while the surrounds drop into deep brown-black shadow; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\nA single mocking face fills the view, the lower lip thrust out and curled in derision, teeth just bared, the eyes lifted in cold scorn, weathered skin sharp in the raking light, the rest sunk in shadow. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the single scornful face.\n\nCut to close-up — the thrust-out, curled lower lip and bared teeth.\n\nCut to insert — the cold, lifted eyes.\n\nCut to insert — the furrowed brow above.\n\nCut to macro detail — the weathered skin texture in the raking light.\n\nCut to mid framing — the full face turned in scorn.\n\nReturn to full composition.\n\nEnd hold on the single mocking face.\n\nMicro-motion:\n- minimal\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\nRaw, personal scorn.\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.43,
+      "description": "Start on full composition — the single scornful face"
+    },
+    {
+      "start_sec": 1.43,
+      "end_sec": 2.86,
+      "description": "Cut to close-up — thrust-out curled lower lip and bared teeth"
+    },
+    {
+      "start_sec": 2.86,
+      "end_sec": 4.29,
+      "description": "Cut to insert — the cold lifted eyes"
+    },
+    {
+      "start_sec": 4.29,
+      "end_sec": 5.71,
+      "description": "Cut to insert — the furrowed brow"
+    },
+    {
+      "start_sec": 5.71,
+      "end_sec": 7.14,
+      "description": "Cut to macro detail — weathered skin texture in raking light"
+    },
+    {
+      "start_sec": 7.14,
+      "end_sec": 8.57,
+      "description": "Cut to mid framing — the full face turned in scorn"
+    },
+    {
+      "start_sec": 8.57,
+      "end_sec": 10.0,
+      "description": "Return to full composition, end hold on the single mocking face"
+    }
+  ]
+}

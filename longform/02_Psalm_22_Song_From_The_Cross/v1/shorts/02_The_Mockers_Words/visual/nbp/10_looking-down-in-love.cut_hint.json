@@ -1,0 +1,18 @@
+{
+  "scene_index": 10,
+  "title": "Looking Down in Love",
+  "scene_type": "single",
+  "framing": "close",
+  "arc_position": "revelation",
+  "jesus_variant": "passion",
+  "viral_role": "close",
+  "pacing": "slower",
+  "macro_elements": [
+    "the lowered loving eyes",
+    "the thorn-marked brow",
+    "a single thorn",
+    "warm light on the cheek"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

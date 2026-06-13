@@ -1,0 +1,18 @@
+{
+  "scene_index": 5,
+  "title": "The Religious Leaders Jeer",
+  "scene_type": "single",
+  "framing": "mid",
+  "arc_position": "public-misunderstanding",
+  "jesus_variant": null,
+  "viral_role": "build",
+  "pacing": "controlled",
+  "macro_elements": [
+    "an extended pointing finger",
+    "a curled lip",
+    "a prayer-fringe hem",
+    "a lifted contemptuous brow"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

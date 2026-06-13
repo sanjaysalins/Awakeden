@@ -1,0 +1,18 @@
+{
+  "scene_index": 4,
+  "title": "The Crowd at the Cross",
+  "scene_type": "unified",
+  "framing": "wide",
+  "arc_position": "nt-gospel-link",
+  "jesus_variant": "passion",
+  "viral_role": "pivot",
+  "pacing": "controlled",
+  "macro_elements": [
+    "a wagged head",
+    "a jabbing finger",
+    "a sneering elder's mouth",
+    "the crucified feet above"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

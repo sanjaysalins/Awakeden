@@ -1,0 +1,46 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, controlled pacing with deliberate cuts and extended holds.\n\nClassical devotional oil painting realism. Warm light catches the rich brocade robes and lifted faces of two leaders, while the crucified figure at the upper-left and the onlookers behind sink into deep shadow; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\nTwo religious leaders stand in rich red and gold brocade robes, the elder with a grey beard and a hand extended in a point toward the cross, the younger beside him with a lip curled in a sneer. At the upper-left the small crucified Christ is lifted on a wooden cross; dim onlookers recede into shadow behind. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the two robed leaders, the crucified figure at the upper-left.\n\nCut to mid framing — the two leaders, rich robes and lifted faces.\n\nCut to close-up — the elder's bearded face turned in contempt.\n\nCut to insert — the elder's hand extended in a point toward the cross.\n\nCut to close-up — the younger leader's curled, sneering lip.\n\nCut to insert — the gold brocade detail of a vestment.\n\nCut to upper framing — the small crucified Christ on the cross.\n\nReturn to full composition.\n\nEnd hold on the two jeering leaders.\n\nMicro-motion:\n- minimal\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\nSmug, self-assured contempt.\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.25,
+      "description": "Start on full composition — two robed leaders, crucified figure at upper-left"
+    },
+    {
+      "start_sec": 1.25,
+      "end_sec": 2.5,
+      "description": "Cut to mid framing — two leaders, rich robes and lifted faces"
+    },
+    {
+      "start_sec": 2.5,
+      "end_sec": 3.75,
+      "description": "Cut to close-up — the elder's bearded face turned in contempt"
+    },
+    {
+      "start_sec": 3.75,
+      "end_sec": 5.0,
+      "description": "Cut to insert — the elder's hand extended in a point toward the cross"
+    },
+    {
+      "start_sec": 5.0,
+      "end_sec": 6.25,
+      "description": "Cut to close-up — the younger leader's curled sneering lip"
+    },
+    {
+      "start_sec": 6.25,
+      "end_sec": 7.5,
+      "description": "Cut to insert — gold brocade detail of a vestment"
+    },
+    {
+      "start_sec": 7.5,
+      "end_sec": 8.75,
+      "description": "Cut to upper framing — the small crucified Christ on the cross"
+    },
+    {
+      "start_sec": 8.75,
+      "end_sec": 10.0,
+      "description": "Return to full composition, end hold on the two jeering leaders"
+    }
+  ]
+}

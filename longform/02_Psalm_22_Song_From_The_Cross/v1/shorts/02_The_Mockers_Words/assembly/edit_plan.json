@@ -1,0 +1,536 @@
+{
+  "plan": {
+    "narration_reading": "Pinned by meaning in time order. Open on #01 the shaking heads at 'they shook their heads and sneered the very taunt'; #02 David records on 'Psalm twenty-two'; #03 the written Hebrew line on 'even writes his tormentors' words'; #06 the shot-out lip on the KJV shaking-the-head taunt; #12 the David-to-cross diptych on 'A thousand years later'; #04 the crowd at the cross on 'Matthew records both'; #13 the wagging crowd on 'passers-by wagging their heads'; #05 the leaders jeering on 'the religious leaders jeering'; #07 the jabbing hands on 'let him deliver him now'; #14 the nailed hand on 'not because Jesus lacked the power to come down'; #08 on 'He had every power'; #09 the restrained legions on 'staying was the only way to deliver you'; #10 the face of love on 'It was love'. Hero #11 (the cross, 'He chose to stay, with you in view') closes the cut.",
+    "red_team_notes": "Many crucified-Christ frames cluster in the back third (8,9,14,10,11) — they read as the deliberate conviction-to-landing crescendo, distinguished by scale (hand macro / low-angle / restraint / face / full cross). The mockery frames (1,5,6,7,13) carry the front; the two scroll scenes (2,3) and the diptych (12) are spaced apart. 13 clips over ~60s plus internal reframes gives strong viral density.",
+    "hero_scene_index": 11,
+    "hero_head_s": 0.0,
+    "hero_tail_s": 2.0,
+    "total_seconds": 60.015,
+    "clip_budget": 13,
+    "selected_scene_indices": [
+      1,
+      2,
+      3,
+      6,
+      12,
+      4,
+      13,
+      5,
+      7,
+      14,
+      8,
+      9,
+      10
+    ],
+    "section_assignment": {},
+    "slots": [
+      {
+        "order": 0,
+        "role": "body",
+        "scene_index": 1,
+        "section": "hook",
+        "slot_start_s": 0.0,
+        "slot_end_s": 3.12,
+        "source_in_s": 1.589,
+        "source_out_s": 8.453,
+        "speed_factor": 2.2,
+        "op": "speed+trim",
+        "rationale": "The shaking, jeering heads — the arresting hook under 'they shook their heads and sneered the very taunt'.",
+        "beat_index": 0,
+        "beat_phrase": "At the cross they shook their heads and sneered the very taunt"
+      },
+      {
+        "order": 1,
+        "role": "body",
+        "scene_index": 2,
+        "section": "hook",
+        "slot_start_s": 3.12,
+        "slot_end_s": 8.16,
+        "source_in_s": 1.745,
+        "source_out_s": 8.297,
+        "speed_factor": 1.3,
+        "op": "speed+trim",
+        "rationale": "David records the taunt — 'Psalm twenty-two', the psalm being written.",
+        "beat_index": 2,
+        "beat_phrase": "Psalm twenty-two."
+      },
+      {
+        "order": 2,
+        "role": "body",
+        "scene_index": 3,
+        "section": "hook",
+        "slot_start_s": 8.16,
+        "slot_end_s": 13.54,
+        "source_in_s": 3.013,
+        "source_out_s": 10.007,
+        "speed_factor": 1.3,
+        "op": "speed+trim",
+        "rationale": "The fingertip on the Hebrew line — 'even writes his tormentors' words'.",
+        "beat_index": 4,
+        "beat_phrase": "even writes his tormentors' words:"
+      },
+      {
+        "order": 3,
+        "role": "body",
+        "scene_index": 6,
+        "section": "hook",
+        "slot_start_s": 13.54,
+        "slot_end_s": 14.7,
+        "source_in_s": 3.745,
+        "source_out_s": 6.297,
+        "speed_factor": 2.2,
+        "op": "speed+trim",
+        "rationale": "The shot-out lip — the Ps 22:7 mockery gesture under 'they shake the head'.",
+        "beat_index": 5,
+        "beat_phrase": "\"…they shake the head,"
+      },
+      {
+        "order": 4,
+        "role": "body",
+        "scene_index": 12,
+        "section": "hook",
+        "slot_start_s": 14.7,
+        "slot_end_s": 21.18,
+        "source_in_s": 0.809,
+        "source_out_s": 9.233,
+        "speed_factor": 1.3,
+        "op": "speed+trim",
+        "rationale": "The David-to-cross diptych — 'A thousand years later', the span itself.",
+        "beat_index": 8,
+        "beat_phrase": "A thousand years later,"
+      },
+      {
+        "order": 5,
+        "role": "body",
+        "scene_index": 4,
+        "section": "hook",
+        "slot_start_s": 21.18,
+        "slot_end_s": 24.16,
+        "source_in_s": 3.013,
+        "source_out_s": 6.887,
+        "speed_factor": 1.3,
+        "op": "speed+trim",
+        "rationale": "The crowd at the cross — 'Matthew records both'.",
+        "beat_index": 10,
+        "beat_phrase": "Matthew records both —"
+      },
+      {
+        "order": 6,
+        "role": "body",
+        "scene_index": 13,
+        "section": "hook",
+        "slot_start_s": 24.16,
+        "slot_end_s": 25.98,
+        "source_in_s": 3.838,
+        "source_out_s": 6.204,
+        "speed_factor": 1.3,
+        "op": "speed+trim",
+        "rationale": "The wagging crowd's backs — 'the passers-by wagging their heads'.",
+        "beat_index": 11,
+        "beat_phrase": "the passers-by wagging their heads,"
+      },
+      {
+        "order": 7,
+        "role": "body",
+        "scene_index": 5,
+        "section": "hook",
+        "slot_start_s": 25.98,
+        "slot_end_s": 28.38,
+        "source_in_s": 2.381,
+        "source_out_s": 7.661,
+        "speed_factor": 2.2,
+        "op": "speed+trim",
+        "rationale": "The religious leaders sneering and pointing — 'the religious leaders jeering'.",
+        "beat_index": 12,
+        "beat_phrase": "and the religious leaders jeering:"
+      },
+      {
+        "order": 8,
+        "role": "body",
+        "scene_index": 7,
+        "section": "hook",
+        "slot_start_s": 28.38,
+        "slot_end_s": 31.96,
+        "source_in_s": 1.083,
+        "source_out_s": 8.959,
+        "speed_factor": 2.2,
+        "op": "speed+trim",
+        "rationale": "The jabbing hands flung up at the cross — 'let him deliver him now'.",
+        "beat_index": 14,
+        "beat_phrase": "let him deliver him now…\""
+      },
+      {
+        "order": 9,
+        "role": "body",
+        "scene_index": 14,
+        "section": "hook",
+        "slot_start_s": 31.96,
+        "slot_end_s": 42.56,
+        "source_in_s": 0.0,
+        "source_out_s": 10.042,
+        "speed_factor": 0.9474,
+        "op": "speed",
+        "rationale": "The nailed open hand that would not pull free — 'not because Jesus lacked the power to come down'.",
+        "beat_index": 20,
+        "beat_phrase": "And He wasn't delivered —"
+      },
+      {
+        "order": 10,
+        "role": "body",
+        "scene_index": 8,
+        "section": "hook",
+        "slot_start_s": 42.56,
+        "slot_end_s": 47.06,
+        "source_in_s": 3.013,
+        "source_out_s": 8.863,
+        "speed_factor": 1.3,
+        "op": "speed+trim",
+        "rationale": "The sovereign low-angle Christ — 'He had every power'.",
+        "beat_index": 22,
+        "beat_phrase": "He had every power."
+      },
+      {
+        "order": 11,
+        "role": "body",
+        "scene_index": 9,
+        "section": "hook",
+        "slot_start_s": 47.06,
+        "slot_end_s": 50.82,
+        "source_in_s": 2.577,
+        "source_out_s": 7.465,
+        "speed_factor": 1.3,
+        "op": "speed+trim",
+        "rationale": "The restrained legions / sheathed sword — 'staying was the only way to deliver you'.",
+        "beat_index": 23,
+        "beat_phrase": "He stayed because staying was the only way to deliver you."
+      },
+      {
+        "order": 12,
+        "role": "body",
+        "scene_index": 10,
+        "section": "hook",
+        "slot_start_s": 50.82,
+        "slot_end_s": 58.015,
+        "source_in_s": 0.344,
+        "source_out_s": 9.698,
+        "speed_factor": 1.3,
+        "op": "speed+trim",
+        "rationale": "The face looking down in love — 'It was love'.",
+        "beat_index": 24,
+        "beat_phrase": "They thought weakness pinned Him to that cross."
+      },
+      {
+        "order": 13,
+        "role": "hero-tail",
+        "scene_index": 11,
+        "section": "hero",
+        "slot_start_s": 58.015,
+        "slot_end_s": 60.015,
+        "source_in_s": 0.0,
+        "source_out_s": 2.0,
+        "speed_factor": 1.0,
+        "op": "speed",
+        "rationale": "Hero close — the cut lands on Christ (single appearance, no reuse).",
+        "beat_index": -1,
+        "beat_phrase": ""
+      }
+    ],
+    "notes": ""
+  },
+  "self_review": {
+    "overall": "LOCKED",
+    "panel": [
+      {
+        "agent": "Editor",
+        "verdict": "STRONG",
+        "note": "13 clips at avg 1.55x over 60s — fast, lots of distinct moments; mockery front, conviction-to-landing crescendo at the back."
+      },
+      {
+        "agent": "Beat-Sync",
+        "verdict": "STRONG",
+        "note": "Each clip on its phrase: shaking heads on the open, David on 'Psalm twenty-two', diptych on 'a thousand years later', nailed hand on 'lacked the power', #08 on 'He had every power', face on 'It was love', hero cross on 'He chose to stay'."
+      },
+      {
+        "agent": "No-Reuse",
+        "verdict": "STRONG",
+        "note": "13 distinct body clips; hero #11 once at close."
+      },
+      {
+        "agent": "Pacing",
+        "verdict": "CAUTION",
+        "note": "Brisk (max 2.2x) by design for a viral edit; sacred frames near the close at lower speed."
+      },
+      {
+        "agent": "Hero-Continuity",
+        "verdict": "STRONG",
+        "note": "Opens on the shaking-heads hook, closes on the cross (#11) after the face of love — lands on the gospel-pivot."
+      },
+      {
+        "agent": "Jaded Viewer",
+        "verdict": "STRONG",
+        "note": "Mockery cold-open stops the scroll; the 'He had every power -> it was love -> He chose to stay' crescendo gives the landing weight."
+      }
+    ],
+    "gates": [
+      {
+        "gate": "AS-G1 Timeline Coverage",
+        "verdict": "PASS",
+        "evidence": "14 slots tile 0->60.02s contiguously.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G2 No Reuse",
+        "verdict": "PASS",
+        "evidence": "13 distinct body clips; hero #11 appears once (close only) — no reuse.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G3 Speed/Trim Health",
+        "verdict": "CONDITIONAL",
+        "evidence": "avg speed 1.55x, max 2.20x, 12/13 trimmed — brisk; verify it does not strobe.",
+        "fix": "Reduce clip count (lower --clips) so slots breathe."
+      },
+      {
+        "gate": "AS-G4 Min Slot",
+        "verdict": "PASS",
+        "evidence": "All body slots >= 0.8s.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G5 Section Coverage",
+        "verdict": "PASS",
+        "evidence": "Every spoken section has a clip: ['hook'].",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G6 Hero Close",
+        "verdict": "PASS",
+        "evidence": "Opens on hook #01; gospel-pivot hero #11 closes 2.0s (single appearance).",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G7 Gospel Frame",
+        "verdict": "PASS",
+        "evidence": "Gospel-pivot + hook-open + close all present; cut lands on Christ.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G8 Beat Continuity",
+        "verdict": "PASS",
+        "evidence": "gesture+taunt -> 'a thousand years later' -> Matthew fulfilment -> 'He had every power / it was love / He chose to stay' carries open->climax->close; clips match beats.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G9 Beat Density",
+        "verdict": "PASS",
+        "evidence": "13 moments · avg slot 4.5s (target 4s) — lively.",
+        "fix": ""
+      }
+    ],
+    "priority_fixes": []
+  },
+  "independent_review": {
+    "overall": "LOCKED",
+    "panel": [
+      {
+        "agent": "Editor",
+        "verdict": "STRONG",
+        "note": "Fast, dense, coherent; mockery front, gospel crescendo back."
+      },
+      {
+        "agent": "Beat-Sync",
+        "verdict": "STRONG",
+        "note": "Clip-to-phrase pins hold under scrutiny; no clip fights its words."
+      },
+      {
+        "agent": "No-Reuse",
+        "verdict": "STRONG",
+        "note": "13 distinct; hero once at close."
+      },
+      {
+        "agent": "Pacing",
+        "verdict": "CAUTION",
+        "note": "Max 2.2x at the cap; acceptable viral pace, watch fastest cuts."
+      },
+      {
+        "agent": "Hero-Continuity",
+        "verdict": "STRONG",
+        "note": "Hook open, cross close — lands on the gospel-pivot."
+      },
+      {
+        "agent": "Jaded Viewer",
+        "verdict": "STRONG",
+        "note": "Holds attention; earned landing on 'He chose to stay'."
+      }
+    ],
+    "gates": [
+      {
+        "gate": "AS-G1 Timeline Coverage",
+        "verdict": "PASS",
+        "evidence": "14 slots tile 0->60.02s contiguously.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G2 No Reuse",
+        "verdict": "PASS",
+        "evidence": "13 distinct body clips; hero #11 appears once (close only) — no reuse.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G3 Speed/Trim Health",
+        "verdict": "CONDITIONAL",
+        "evidence": "avg speed 1.55x, max 2.20x, 12/13 trimmed — brisk; verify it does not strobe.",
+        "fix": "Reduce clip count (lower --clips) so slots breathe."
+      },
+      {
+        "gate": "AS-G4 Min Slot",
+        "verdict": "PASS",
+        "evidence": "All body slots >= 0.8s.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G5 Section Coverage",
+        "verdict": "PASS",
+        "evidence": "Every spoken section has a clip: ['hook'].",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G6 Hero Close",
+        "verdict": "PASS",
+        "evidence": "Opens on hook #01; gospel-pivot hero #11 closes 2.0s (single appearance).",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G7 Gospel Frame",
+        "verdict": "PASS",
+        "evidence": "Gospel-pivot + hook-open + close all present; cut lands on Christ.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G8 Beat Continuity",
+        "verdict": "PASS",
+        "evidence": "thread carries open->climax->close.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G9 Beat Density",
+        "verdict": "PASS",
+        "evidence": "13 moments · avg slot 4.5s (target 4s) — lively.",
+        "fix": ""
+      }
+    ],
+    "priority_fixes": []
+  },
+  "audit": {
+    "passed_overall": true,
+    "slots": [
+      {
+        "order": 0,
+        "scene_index": 1,
+        "section": "hook",
+        "words": "At the cross they shook their heads and sneered the very taunt",
+        "passed": true,
+        "note": "clip matches its beat (QC-passed upstream)"
+      },
+      {
+        "order": 1,
+        "scene_index": 2,
+        "section": "hook",
+        "words": "Psalm twenty-two.",
+        "passed": true,
+        "note": "clip matches its beat (QC-passed upstream)"
+      },
+      {
+        "order": 2,
+        "scene_index": 3,
+        "section": "hook",
+        "words": "even writes his tormentors' words:",
+        "passed": true,
+        "note": "clip matches its beat (QC-passed upstream)"
+      },
+      {
+        "order": 3,
+        "scene_index": 6,
+        "section": "hook",
+        "words": "\"…they shake the head,",
+        "passed": true,
+        "note": "clip matches its beat (QC-passed upstream)"
+      },
+      {
+        "order": 4,
+        "scene_index": 12,
+        "section": "hook",
+        "words": "A thousand years later,",
+        "passed": true,
+        "note": "clip matches its beat (QC-passed upstream)"
+      },
+      {
+        "order": 5,
+        "scene_index": 4,
+        "section": "hook",
+        "words": "Matthew records both —",
+        "passed": true,
+        "note": "clip matches its beat (QC-passed upstream)"
+      },
+      {
+        "order": 6,
+        "scene_index": 13,
+        "section": "hook",
+        "words": "the passers-by wagging their heads,",
+        "passed": true,
+        "note": "clip matches its beat (QC-passed upstream)"
+      },
+      {
+        "order": 7,
+        "scene_index": 5,
+        "section": "hook",
+        "words": "and the religious leaders jeering:",
+        "passed": true,
+        "note": "clip matches its beat (QC-passed upstream)"
+      },
+      {
+        "order": 8,
+        "scene_index": 7,
+        "section": "hook",
+        "words": "let him deliver him now…\"",
+        "passed": true,
+        "note": "clip matches its beat (QC-passed upstream)"
+      },
+      {
+        "order": 9,
+        "scene_index": 14,
+        "section": "hook",
+        "words": "And He wasn't delivered —",
+        "passed": true,
+        "note": "clip matches its beat (QC-passed upstream)"
+      },
+      {
+        "order": 10,
+        "scene_index": 8,
+        "section": "hook",
+        "words": "He had every power.",
+        "passed": true,
+        "note": "clip matches its beat (QC-passed upstream)"
+      },
+      {
+        "order": 11,
+        "scene_index": 9,
+        "section": "hook",
+        "words": "He stayed because staying was the only way to deliver you.",
+        "passed": true,
+        "note": "clip matches its beat (QC-passed upstream)"
+      },
+      {
+        "order": 12,
+        "scene_index": 10,
+        "section": "hook",
+        "words": "They thought weakness pinned Him to that cross.",
+        "passed": true,
+        "note": "clip matches its beat (QC-passed upstream)"
+      }
+    ],
+    "reroll_scene_indices": [],
+    "notes": "All slots matched their words."
+  },
+  "authoritative_overall": "LOCKED"
+}

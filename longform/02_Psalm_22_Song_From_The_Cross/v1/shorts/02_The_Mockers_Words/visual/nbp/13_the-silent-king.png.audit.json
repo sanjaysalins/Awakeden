@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "no added glow",
+      "actual": "a soft luminance behind Christs head reads as dusk backlight rather than a hard halo ring - mild, non-failing"
+    }
+  ],
+  "banned_token_hits": []
+}

@@ -1,0 +1,46 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, slower pacing with longer holds and restrained cuts.\n\nClassical devotional oil painting realism. Muted warm light falls across a cream robe and a lowered face crowned with thorns, while dim attendant figures and the surrounds sink into deep shadow; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\nChrist stands robed in a soiled cream garment before a rough wooden cross, a crown of thorns upon his lowered head, his open hands at his sides marked with nail wounds. A sheathed sword lies on the ground near his feet, and dim, muted attendant figures stand half in shadow at the sides. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — Christ robed before the cross, dim attendants to the sides.\n\nCut to mid framing — the upper body and lowered head crowned with thorns.\n\nCut to close-up — the lowered face beneath the crown.\n\nCut to insert — an open hand at his side marked with a nail wound.\n\nCut to insert — the sheathed sword on the ground at his feet.\n\nCut to macro detail — the crown of thorns.\n\nCut to lower framing — the nailed bare feet on the ground.\n\nReturn to full composition.\n\nEnd hold on the robed figure in chosen restraint.\n\nMicro-motion:\n- minimal\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\nWithheld power and chosen love.\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no angels moving, no wings moving, no morphing, no scene morphing, no facial morphing, no glow added, no halo added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.25,
+      "description": "Start on full composition — Christ robed before the cross, dim attendants to the sides"
+    },
+    {
+      "start_sec": 1.25,
+      "end_sec": 2.5,
+      "description": "Cut to mid framing — upper body and lowered head crowned with thorns"
+    },
+    {
+      "start_sec": 2.5,
+      "end_sec": 3.75,
+      "description": "Cut to close-up — the lowered face beneath the crown"
+    },
+    {
+      "start_sec": 3.75,
+      "end_sec": 5.0,
+      "description": "Cut to insert — open hand at his side marked with a nail wound"
+    },
+    {
+      "start_sec": 5.0,
+      "end_sec": 6.25,
+      "description": "Cut to insert — sheathed sword on the ground at his feet"
+    },
+    {
+      "start_sec": 6.25,
+      "end_sec": 7.5,
+      "description": "Cut to macro detail — the crown of thorns"
+    },
+    {
+      "start_sec": 7.5,
+      "end_sec": 8.75,
+      "description": "Cut to lower framing — nailed bare feet on the ground"
+    },
+    {
+      "start_sec": 8.75,
+      "end_sec": 10.0,
+      "description": "Return to full composition, end hold on the robed figure in chosen restraint"
+    }
+  ]
+}

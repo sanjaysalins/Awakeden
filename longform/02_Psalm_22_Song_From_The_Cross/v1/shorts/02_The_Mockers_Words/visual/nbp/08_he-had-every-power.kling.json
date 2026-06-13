@@ -1,0 +1,41 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, slower pacing with longer holds and restrained cuts.\n\nClassical devotional oil painting realism. Warm light falls across a soiled cream robe and a calm face against a darkened sky, while the figures far below sink into deep shadow; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\nThe crucified Christ is seen from a low angle against a darkened sky, robed in a soiled cream garment, arms outstretched along the beam, his head inclined with an unhurried, calm gaze turned downward. His nailed bare feet rest on a small block, and the small mockers are far below in shadow. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the crucified figure from below, mockers far beneath.\n\nCut to mid framing — the upper body and calm inclined face.\n\nCut to close-up — the calm, sorrowful downward gaze.\n\nCut to insert — an outstretched nailed hand along the beam.\n\nCut to insert — the nailed bare feet on the small block.\n\nCut to lower framing — the small mockers far below in shadow.\n\nReturn to full composition.\n\nEnd hold on the sovereign crucified figure.\n\nMicro-motion:\n- minimal\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\nUnhurried, sovereign restraint.\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.43,
+      "description": "Start on full composition — crucified figure from below, mockers far beneath"
+    },
+    {
+      "start_sec": 1.43,
+      "end_sec": 2.86,
+      "description": "Cut to mid framing — upper body and calm inclined face"
+    },
+    {
+      "start_sec": 2.86,
+      "end_sec": 4.29,
+      "description": "Cut to close-up — calm sorrowful downward gaze"
+    },
+    {
+      "start_sec": 4.29,
+      "end_sec": 5.71,
+      "description": "Cut to insert — outstretched nailed hand along the beam"
+    },
+    {
+      "start_sec": 5.71,
+      "end_sec": 7.14,
+      "description": "Cut to insert — nailed bare feet on the small block"
+    },
+    {
+      "start_sec": 7.14,
+      "end_sec": 8.57,
+      "description": "Cut to lower framing — small mockers far below in shadow"
+    },
+    {
+      "start_sec": 8.57,
+      "end_sec": 10.0,
+      "description": "Return to full composition, end hold on the sovereign crucified figure"
+    }
+  ]
+}
