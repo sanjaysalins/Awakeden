@@ -1,0 +1,51 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, controlled pacing with deliberate cuts and extended holds.\n\nClassical devotional oil painting realism. Warm golden light gathers behind the central head and falls across white drapery and the surrounding faces, with deeper shadow at the edges; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\nA serene figure in a flowing white robe stands at the centre, framed by long hair and a soft beard, with warm light behind the head. Around him a gathered group is positioned close: an elder in a gold mantle is set low at the left with one hand extended toward the white-robed figure, a woman in blue and gold is set low at the right with her hands clasped and her face lifted, and several robed onlookers are ranged behind on both sides, hands at their breasts. Open hands meet near the centre of the canvas. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the white-robed figure at centre, the gathered family ranged close around him, warm light behind his head.\n\nCut to mid framing — the white-robed figure from the waist up, his arms held open among the group.\n\nCut to close-up — the calm central face, long hair and soft beard, warm light behind.\n\nCut to insert — the meeting of open hands near the centre, the elder's extended hand and the woman's clasped hands beside the white-robed figure's open hand.\n\nCut to lower framing — the elder in the gold mantle set low at the left, his face lifted.\n\nCut to lower framing — the woman in blue and gold at the right, her hands clasped, her face lifted.\n\nCut to upper framing — the robed onlookers ranged behind, hands at their breasts.\n\nReturn to full composition — the white-robed figure among the gathered family.\n\nEnd hold on the white-robed figure at the centre.\n\nMicro-motion:\n- minimal\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\nWelcomed in — joy and quiet belonging.\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.11,
+      "description": "Start on full composition — white-robed figure centre, gathered family around, warm light behind head"
+    },
+    {
+      "start_sec": 1.11,
+      "end_sec": 2.22,
+      "description": "Cut to mid framing — white-robed figure waist up, arms held open among the group"
+    },
+    {
+      "start_sec": 2.22,
+      "end_sec": 3.33,
+      "description": "Cut to close-up — calm central face, long hair and soft beard, warm light behind"
+    },
+    {
+      "start_sec": 3.33,
+      "end_sec": 4.44,
+      "description": "Cut to insert — meeting of open hands near centre, elder's extended hand and woman's clasped hands beside the open hand"
+    },
+    {
+      "start_sec": 4.44,
+      "end_sec": 5.56,
+      "description": "Cut to lower framing — elder in gold mantle set low at left, face lifted"
+    },
+    {
+      "start_sec": 5.56,
+      "end_sec": 6.67,
+      "description": "Cut to lower framing — woman in blue and gold at right, hands clasped, face lifted"
+    },
+    {
+      "start_sec": 6.67,
+      "end_sec": 7.78,
+      "description": "Cut to upper framing — robed onlookers ranged behind, hands at their breasts"
+    },
+    {
+      "start_sec": 7.78,
+      "end_sec": 8.89,
+      "description": "Return to full composition — white-robed figure among the gathered family"
+    },
+    {
+      "start_sec": 8.89,
+      "end_sec": 10.0,
+      "description": "End hold on the white-robed figure at the centre"
+    }
+  ]
+}

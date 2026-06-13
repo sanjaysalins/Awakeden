@@ -1,0 +1,716 @@
+{
+  "backend": "whisper",
+  "model": "base",
+  "words": [
+    {
+      "text": "Most",
+      "start": 0.0,
+      "end": 0.2
+    },
+    {
+      "text": "people",
+      "start": 0.2,
+      "end": 0.56
+    },
+    {
+      "text": "stop",
+      "start": 0.56,
+      "end": 0.86
+    },
+    {
+      "text": "reading",
+      "start": 0.86,
+      "end": 1.14
+    },
+    {
+      "text": "Psalm",
+      "start": 1.14,
+      "end": 1.46
+    },
+    {
+      "text": "twenty-two",
+      "start": 1.46,
+      "end": 2.06
+    },
+    {
+      "text": "at",
+      "start": 2.06,
+      "end": 2.24
+    },
+    {
+      "text": "the",
+      "start": 2.24,
+      "end": 2.32
+    },
+    {
+      "text": "cross.",
+      "start": 2.32,
+      "end": 2.58
+    },
+    {
+      "text": "Keep",
+      "start": 3.38,
+      "end": 3.7
+    },
+    {
+      "text": "going",
+      "start": 3.7,
+      "end": 4.04
+    },
+    {
+      "text": "—",
+      "start": 4.04,
+      "end": 4.04
+    },
+    {
+      "text": "it",
+      "start": 4.9,
+      "end": 5.14
+    },
+    {
+      "text": "doesn't",
+      "start": 5.14,
+      "end": 5.5
+    },
+    {
+      "text": "end",
+      "start": 5.5,
+      "end": 5.76
+    },
+    {
+      "text": "in",
+      "start": 5.76,
+      "end": 5.92
+    },
+    {
+      "text": "a",
+      "start": 5.92,
+      "end": 6.0
+    },
+    {
+      "text": "grave.",
+      "start": 6.0,
+      "end": 6.24
+    },
+    {
+      "text": "But",
+      "start": 7.72,
+      "end": 7.9
+    },
+    {
+      "text": "the",
+      "start": 7.9,
+      "end": 8.0
+    },
+    {
+      "text": "cry",
+      "start": 8.0,
+      "end": 8.24
+    },
+    {
+      "text": "doesn't",
+      "start": 8.24,
+      "end": 8.6
+    },
+    {
+      "text": "stay",
+      "start": 8.6,
+      "end": 8.84
+    },
+    {
+      "text": "forsaken.",
+      "start": 8.84,
+      "end": 9.42
+    },
+    {
+      "text": "Later,",
+      "start": 10.14,
+      "end": 10.42
+    },
+    {
+      "text": "the",
+      "start": 10.7,
+      "end": 10.8
+    },
+    {
+      "text": "psalm",
+      "start": 10.8,
+      "end": 11.06
+    },
+    {
+      "text": "turns",
+      "start": 11.06,
+      "end": 11.46
+    },
+    {
+      "text": "—",
+      "start": 11.46,
+      "end": 11.46
+    },
+    {
+      "text": "the",
+      "start": 12.22,
+      "end": 12.3
+    },
+    {
+      "text": "same",
+      "start": 12.3,
+      "end": 12.6
+    },
+    {
+      "text": "voice",
+      "start": 12.6,
+      "end": 13.06
+    },
+    {
+      "text": "moves",
+      "start": 13.06,
+      "end": 13.5
+    },
+    {
+      "text": "from",
+      "start": 13.5,
+      "end": 13.76
+    },
+    {
+      "text": "anguish",
+      "start": 13.76,
+      "end": 14.2
+    },
+    {
+      "text": "to",
+      "start": 14.2,
+      "end": 14.6
+    },
+    {
+      "text": "praise:",
+      "start": 14.6,
+      "end": 14.92
+    },
+    {
+      "text": "\"I",
+      "start": 16.16,
+      "end": 16.3
+    },
+    {
+      "text": "will",
+      "start": 16.3,
+      "end": 16.4
+    },
+    {
+      "text": "declare",
+      "start": 16.4,
+      "end": 16.74
+    },
+    {
+      "text": "thy",
+      "start": 16.74,
+      "end": 16.98
+    },
+    {
+      "text": "name",
+      "start": 16.98,
+      "end": 17.34
+    },
+    {
+      "text": "unto",
+      "start": 17.34,
+      "end": 17.52
+    },
+    {
+      "text": "my",
+      "start": 17.52,
+      "end": 17.68
+    },
+    {
+      "text": "brethren:",
+      "start": 17.68,
+      "end": 18.06
+    },
+    {
+      "text": "in",
+      "start": 18.06,
+      "end": 18.64
+    },
+    {
+      "text": "the",
+      "start": 18.64,
+      "end": 18.74
+    },
+    {
+      "text": "midst",
+      "start": 18.74,
+      "end": 19.0
+    },
+    {
+      "text": "of",
+      "start": 19.0,
+      "end": 19.14
+    },
+    {
+      "text": "the",
+      "start": 19.14,
+      "end": 19.24
+    },
+    {
+      "text": "congregation",
+      "start": 19.24,
+      "end": 19.9
+    },
+    {
+      "text": "will",
+      "start": 19.9,
+      "end": 20.38
+    },
+    {
+      "text": "I",
+      "start": 20.38,
+      "end": 20.52
+    },
+    {
+      "text": "praise",
+      "start": 20.52,
+      "end": 20.82
+    },
+    {
+      "text": "thee.\"",
+      "start": 20.82,
+      "end": 21.1
+    },
+    {
+      "text": "Who",
+      "start": 22.14,
+      "end": 22.5
+    },
+    {
+      "text": "is",
+      "start": 22.5,
+      "end": 22.88
+    },
+    {
+      "text": "that",
+      "start": 22.88,
+      "end": 23.12
+    },
+    {
+      "text": "praising",
+      "start": 23.12,
+      "end": 23.48
+    },
+    {
+      "text": "voice?",
+      "start": 23.48,
+      "end": 23.86
+    },
+    {
+      "text": "Hebrews",
+      "start": 25.02,
+      "end": 25.32
+    },
+    {
+      "text": "takes",
+      "start": 25.32,
+      "end": 25.72
+    },
+    {
+      "text": "that",
+      "start": 25.72,
+      "end": 25.92
+    },
+    {
+      "text": "opening",
+      "start": 25.92,
+      "end": 26.22
+    },
+    {
+      "text": "line",
+      "start": 26.22,
+      "end": 26.64
+    },
+    {
+      "text": "—",
+      "start": 26.64,
+      "end": 26.64
+    },
+    {
+      "text": "word",
+      "start": 26.96,
+      "end": 27.22
+    },
+    {
+      "text": "for",
+      "start": 27.22,
+      "end": 27.46
+    },
+    {
+      "text": "word",
+      "start": 27.46,
+      "end": 27.78
+    },
+    {
+      "text": "—",
+      "start": 27.78,
+      "end": 27.78
+    },
+    {
+      "text": "and",
+      "start": 28.15,
+      "end": 28.46
+    },
+    {
+      "text": "puts",
+      "start": 28.46,
+      "end": 28.7
+    },
+    {
+      "text": "it",
+      "start": 28.7,
+      "end": 28.9
+    },
+    {
+      "text": "in",
+      "start": 28.9,
+      "end": 28.98
+    },
+    {
+      "text": "the",
+      "start": 28.98,
+      "end": 29.08
+    },
+    {
+      "text": "mouth",
+      "start": 29.08,
+      "end": 29.34
+    },
+    {
+      "text": "of",
+      "start": 29.34,
+      "end": 29.52
+    },
+    {
+      "text": "the",
+      "start": 29.52,
+      "end": 29.64
+    },
+    {
+      "text": "risen",
+      "start": 29.64,
+      "end": 29.86
+    },
+    {
+      "text": "Christ.",
+      "start": 29.86,
+      "end": 30.34
+    },
+    {
+      "text": "The",
+      "start": 31.55,
+      "end": 31.86
+    },
+    {
+      "text": "psalm's",
+      "start": 31.86,
+      "end": 32.36
+    },
+    {
+      "text": "turn",
+      "start": 32.36,
+      "end": 32.62
+    },
+    {
+      "text": "is",
+      "start": 32.62,
+      "end": 32.86
+    },
+    {
+      "text": "Jesus,",
+      "start": 32.86,
+      "end": 33.24
+    },
+    {
+      "text": "alive",
+      "start": 33.24,
+      "end": 34.08
+    },
+    {
+      "text": "on",
+      "start": 34.08,
+      "end": 34.4
+    },
+    {
+      "text": "the",
+      "start": 34.4,
+      "end": 34.52
+    },
+    {
+      "text": "far",
+      "start": 34.52,
+      "end": 34.84
+    },
+    {
+      "text": "side",
+      "start": 34.84,
+      "end": 35.2
+    },
+    {
+      "text": "of",
+      "start": 35.2,
+      "end": 35.38
+    },
+    {
+      "text": "the",
+      "start": 35.38,
+      "end": 35.46
+    },
+    {
+      "text": "cross.",
+      "start": 35.46,
+      "end": 35.76
+    },
+    {
+      "text": "And",
+      "start": 37.04,
+      "end": 37.28
+    },
+    {
+      "text": "hear",
+      "start": 37.28,
+      "end": 37.52
+    },
+    {
+      "text": "what",
+      "start": 37.52,
+      "end": 37.7
+    },
+    {
+      "text": "He",
+      "start": 37.7,
+      "end": 37.78
+    },
+    {
+      "text": "calls",
+      "start": 37.78,
+      "end": 38.04
+    },
+    {
+      "text": "us.",
+      "start": 38.04,
+      "end": 38.44
+    },
+    {
+      "text": "Hebrews",
+      "start": 39.52,
+      "end": 39.82
+    },
+    {
+      "text": "says",
+      "start": 39.82,
+      "end": 40.1
+    },
+    {
+      "text": "He",
+      "start": 40.1,
+      "end": 40.34
+    },
+    {
+      "text": "is",
+      "start": 40.34,
+      "end": 40.72
+    },
+    {
+      "text": "—",
+      "start": 40.72,
+      "end": 40.72
+    },
+    {
+      "text": "\"not",
+      "start": 40.72,
+      "end": 41.32
+    },
+    {
+      "text": "ashamed",
+      "start": 41.32,
+      "end": 41.8
+    },
+    {
+      "text": "to",
+      "start": 41.8,
+      "end": 42.08
+    },
+    {
+      "text": "call",
+      "start": 42.08,
+      "end": 42.28
+    },
+    {
+      "text": "them",
+      "start": 42.28,
+      "end": 42.44
+    },
+    {
+      "text": "brethren\"",
+      "start": 42.44,
+      "end": 42.78
+    },
+    {
+      "text": "—",
+      "start": 42.78,
+      "end": 42.78
+    },
+    {
+      "text": "brothers.",
+      "start": 43.68,
+      "end": 44.3
+    },
+    {
+      "text": "Family.",
+      "start": 45.24,
+      "end": 45.84
+    },
+    {
+      "text": "The",
+      "start": 47.08,
+      "end": 47.16
+    },
+    {
+      "text": "same",
+      "start": 47.16,
+      "end": 47.5
+    },
+    {
+      "text": "Jesus",
+      "start": 47.5,
+      "end": 47.94
+    },
+    {
+      "text": "who",
+      "start": 47.94,
+      "end": 48.18
+    },
+    {
+      "text": "cried",
+      "start": 48.18,
+      "end": 48.42
+    },
+    {
+      "text": "out",
+      "start": 48.42,
+      "end": 48.62
+    },
+    {
+      "text": "forsaken",
+      "start": 48.62,
+      "end": 49.26
+    },
+    {
+      "text": "now",
+      "start": 49.26,
+      "end": 49.58
+    },
+    {
+      "text": "lives",
+      "start": 49.58,
+      "end": 50.16
+    },
+    {
+      "text": "—",
+      "start": 50.16,
+      "end": 50.16
+    },
+    {
+      "text": "and",
+      "start": 50.63,
+      "end": 50.94
+    },
+    {
+      "text": "the",
+      "start": 50.94,
+      "end": 51.06
+    },
+    {
+      "text": "risen",
+      "start": 51.06,
+      "end": 51.34
+    },
+    {
+      "text": "Christ",
+      "start": 51.34,
+      "end": 51.8
+    },
+    {
+      "text": "is",
+      "start": 51.8,
+      "end": 52.32
+    },
+    {
+      "text": "not",
+      "start": 52.32,
+      "end": 52.56
+    },
+    {
+      "text": "ashamed",
+      "start": 52.56,
+      "end": 53.04
+    },
+    {
+      "text": "to",
+      "start": 53.04,
+      "end": 53.36
+    },
+    {
+      "text": "call",
+      "start": 53.36,
+      "end": 53.52
+    },
+    {
+      "text": "His",
+      "start": 53.52,
+      "end": 53.76
+    },
+    {
+      "text": "own",
+      "start": 53.76,
+      "end": 54.1
+    },
+    {
+      "text": "brethren.",
+      "start": 54.1,
+      "end": 54.56
+    },
+    {
+      "text": "He",
+      "start": 54.56,
+      "end": 55.02
+    },
+    {
+      "text": "is",
+      "start": 55.02,
+      "end": 56.16
+    },
+    {
+      "text": "calling",
+      "start": 56.16,
+      "end": 56.5
+    },
+    {
+      "text": "you",
+      "start": 56.5,
+      "end": 56.8
+    },
+    {
+      "text": "into",
+      "start": 56.8,
+      "end": 57.48
+    },
+    {
+      "text": "that",
+      "start": 57.48,
+      "end": 57.74
+    },
+    {
+      "text": "family.",
+      "start": 57.74,
+      "end": 58.2
+    }
+  ]
+}

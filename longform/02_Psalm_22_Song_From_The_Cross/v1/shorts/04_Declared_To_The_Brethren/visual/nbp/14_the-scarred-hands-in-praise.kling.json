@@ -1,0 +1,51 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, slower pacing with longer holds and restrained cuts.\n\nClassical devotional oil painting realism. Warm directional light falls across the open palms and the bearded face above, with deep brown shadow behind; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\nA close devotional portrait of a bearded figure with long hair, set high in the frame, looking directly out with calm gravity. Below the face, two open hands are raised palms-out before a white robe, and a small dark nail-scar is set in each palm. The white drapery falls below the forearms into shadow. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the bearded face high in the frame, the two open palms raised before the white robe.\n\nCut to close-up — the calm bearded face, long hair, steady direct gaze.\n\nCut to mid framing — both open palms raised before the white drapery.\n\nCut to insert — the right palm and the small dark nail-scar set in it.\n\nCut to insert — the left palm and the small dark nail-scar set in it.\n\nCut to macro detail — a single nail-mark, the painted shadow within the palm.\n\nCut to lower framing — the white robe folds and forearms falling into shadow.\n\nReturn to full composition — the face above, both scarred palms raised.\n\nEnd hold on the two open scarred palms.\n\nMicro-motion:\n- minimal\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\nReverent wonder — the marks that remain.\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.11,
+      "description": "Start on full composition — bearded face high in frame, two open palms raised before white robe"
+    },
+    {
+      "start_sec": 1.11,
+      "end_sec": 2.22,
+      "description": "Cut to close-up — calm bearded face, long hair, steady direct gaze"
+    },
+    {
+      "start_sec": 2.22,
+      "end_sec": 3.33,
+      "description": "Cut to mid framing — both open palms raised before the white drapery"
+    },
+    {
+      "start_sec": 3.33,
+      "end_sec": 4.44,
+      "description": "Cut to insert — right palm and the small dark nail-scar set in it"
+    },
+    {
+      "start_sec": 4.44,
+      "end_sec": 5.56,
+      "description": "Cut to insert — left palm and the small dark nail-scar set in it"
+    },
+    {
+      "start_sec": 5.56,
+      "end_sec": 6.67,
+      "description": "Cut to macro detail — single nail-mark, painted shadow within the palm"
+    },
+    {
+      "start_sec": 6.67,
+      "end_sec": 7.78,
+      "description": "Cut to lower framing — white robe folds and forearms falling into shadow"
+    },
+    {
+      "start_sec": 7.78,
+      "end_sec": 8.89,
+      "description": "Return to full composition — face above, both scarred palms raised"
+    },
+    {
+      "start_sec": 8.89,
+      "end_sec": 10.0,
+      "description": "End hold on the two open scarred palms"
+    }
+  ]
+}

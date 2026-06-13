@@ -1,0 +1,536 @@
+{
+  "plan": {
+    "narration_reading": "The cut opens on the empty tomb under 'stop reading Psalm 22 at the cross' — the visual rebuttal to ending in a grave. The Psalm-scroll and the David-to-Christ diptych carry 'the psalm turns / anguish to praise'; the fingertip-under-Hebrew lands exactly on 'I will declare thy name', and Christ among the gathered on 'in the midst of the congregation'. The living face asks 'who is that voice?', the Greek codex carries 'Hebrews takes that opening line', and the risen Christ standing alive lands 'in the mouth of the risen Christ'; the scarred hands in praise land 'alive on the far side of the cross'. The embrace, the hand-on-shoulder, and the welcomed-family beat the 'not ashamed / brothers / family' run; the inviting face closes the spoken brethren line, and hero #10 (arms opening to the viewer) holds the final 'calling you into that family'.",
+    "red_team_notes": "Several risen-Christ faces are close in look (#04/#06/#11) — I spread them across distinct beats (reveal / question / invitation) so they don't read as repeats. #12 (diptych) is the only OT-echo image and sits on 'the psalm turns', which is its exact meaning. Risk: P21 has no beat clip so the hero must land cleanly on the closing line — acceptable since hero is the held still close.",
+    "hero_scene_index": 10,
+    "hero_head_s": 0.0,
+    "hero_tail_s": 2.0,
+    "total_seconds": 58.313,
+    "clip_budget": 13,
+    "selected_scene_indices": [
+      1,
+      2,
+      12,
+      3,
+      5,
+      6,
+      7,
+      4,
+      14,
+      8,
+      9,
+      13,
+      11
+    ],
+    "section_assignment": {},
+    "slots": [
+      {
+        "order": 0,
+        "role": "body",
+        "scene_index": 1,
+        "section": "hook",
+        "slot_start_s": 0.0,
+        "slot_end_s": 3.38,
+        "source_in_s": 1.303,
+        "source_out_s": 8.739,
+        "speed_factor": 2.2,
+        "op": "speed+trim",
+        "rationale": "Empty tomb = the most arresting hook-open; the visual answer to 'it doesn't end in a grave', pinned to beat 0.",
+        "beat_index": 0,
+        "beat_phrase": "Most people stop reading Psalm twenty-two at the cross."
+      },
+      {
+        "order": 1,
+        "role": "body",
+        "scene_index": 2,
+        "section": "hook",
+        "slot_start_s": 3.38,
+        "slot_end_s": 12.22,
+        "source_in_s": 0.0,
+        "source_out_s": 10.042,
+        "speed_factor": 1.136,
+        "op": "speed",
+        "rationale": "The Psalm scroll, lower lines breaking into light, on 'Later, the psalm turns'.",
+        "beat_index": 4,
+        "beat_phrase": "Later, the psalm turns —"
+      },
+      {
+        "order": 2,
+        "role": "body",
+        "scene_index": 12,
+        "section": "hook",
+        "slot_start_s": 12.22,
+        "slot_end_s": 16.16,
+        "source_in_s": 2.46,
+        "source_out_s": 7.582,
+        "speed_factor": 1.3,
+        "op": "speed+trim",
+        "rationale": "David-to-risen-Christ diptych across a band of light = 'the same voice moves from anguish to praise' across a thousand years.",
+        "beat_index": 5,
+        "beat_phrase": "the same voice moves from anguish to praise:"
+      },
+      {
+        "order": 3,
+        "role": "body",
+        "scene_index": 3,
+        "section": "hook",
+        "slot_start_s": 16.16,
+        "slot_end_s": 18.06,
+        "source_in_s": 3.013,
+        "source_out_s": 5.483,
+        "speed_factor": 1.3,
+        "op": "speed+trim",
+        "rationale": "Fingertip under the warmly lit Hebrew line on the quoted 'I will declare thy name unto my brethren'.",
+        "beat_index": 6,
+        "beat_phrase": "\"I will declare thy name unto my brethren:"
+      },
+      {
+        "order": 4,
+        "role": "body",
+        "scene_index": 5,
+        "section": "hook",
+        "slot_start_s": 18.06,
+        "slot_end_s": 22.14,
+        "source_in_s": 2.369,
+        "source_out_s": 7.673,
+        "speed_factor": 1.3,
+        "op": "speed+trim",
+        "rationale": "Risen Christ amid the close-gathered group, speaking the Name, on 'in the midst of the congregation will I praise thee'.",
+        "beat_index": 7,
+        "beat_phrase": "in the midst of the congregation will I praise thee.\""
+      },
+      {
+        "order": 5,
+        "role": "body",
+        "scene_index": 6,
+        "section": "hook",
+        "slot_start_s": 22.14,
+        "slot_end_s": 25.02,
+        "source_in_s": 3.149,
+        "source_out_s": 6.893,
+        "speed_factor": 1.3,
+        "op": "speed+trim",
+        "rationale": "Close living face on 'Who is that praising voice?' — the question answered by the face.",
+        "beat_index": 8,
+        "beat_phrase": "Who is that praising voice?"
+      },
+      {
+        "order": 6,
+        "role": "body",
+        "scene_index": 7,
+        "section": "hook",
+        "slot_start_s": 25.02,
+        "slot_end_s": 26.96,
+        "source_in_s": 3.76,
+        "source_out_s": 6.282,
+        "speed_factor": 1.3,
+        "op": "speed+trim",
+        "rationale": "Open Greek codex page on 'Hebrews takes that opening line — word for word'.",
+        "beat_index": 9,
+        "beat_phrase": "Hebrews takes that opening line —"
+      },
+      {
+        "order": 7,
+        "role": "body",
+        "scene_index": 4,
+        "section": "hook",
+        "slot_start_s": 26.96,
+        "slot_end_s": 31.55,
+        "source_in_s": 3.013,
+        "source_out_s": 8.98,
+        "speed_factor": 1.3,
+        "op": "speed+trim",
+        "rationale": "Risen Christ standing alive, low angle, on 'puts it in the mouth of the risen Christ'.",
+        "beat_index": 11,
+        "beat_phrase": "and puts it in the mouth of the risen Christ."
+      },
+      {
+        "order": 8,
+        "role": "body",
+        "scene_index": 14,
+        "section": "hook",
+        "slot_start_s": 31.55,
+        "slot_end_s": 37.04,
+        "source_in_s": 1.453,
+        "source_out_s": 8.589,
+        "speed_factor": 1.3,
+        "op": "speed+trim",
+        "rationale": "Two scarred hands lifted in praise on 'alive on the far side of the cross' — the marks that prove it.",
+        "beat_index": 13,
+        "beat_phrase": "alive on the far side of the cross."
+      },
+      {
+        "order": 9,
+        "role": "body",
+        "scene_index": 8,
+        "section": "hook",
+        "slot_start_s": 37.04,
+        "slot_end_s": 43.68,
+        "source_in_s": 0.705,
+        "source_out_s": 9.337,
+        "speed_factor": 1.3,
+        "op": "speed+trim",
+        "rationale": "Christ drawing the kneeling man into embrace on the quoted 'not ashamed to call them brethren'.",
+        "beat_index": 16,
+        "beat_phrase": "\"not ashamed to call them brethren\" —"
+      },
+      {
+        "order": 10,
+        "role": "body",
+        "scene_index": 9,
+        "section": "hook",
+        "slot_start_s": 43.68,
+        "slot_end_s": 45.24,
+        "source_in_s": 4.007,
+        "source_out_s": 6.035,
+        "speed_factor": 1.3,
+        "op": "speed+trim",
+        "rationale": "Scarred hand on the man's shoulder on 'brothers' — brotherhood made tangible.",
+        "beat_index": 17,
+        "beat_phrase": "brothers."
+      },
+      {
+        "order": 11,
+        "role": "body",
+        "scene_index": 13,
+        "section": "hook",
+        "slot_start_s": 45.24,
+        "slot_end_s": 47.08,
+        "source_in_s": 3.825,
+        "source_out_s": 6.217,
+        "speed_factor": 1.3,
+        "op": "speed+trim",
+        "rationale": "The gathered family drawing a newcomer in on 'Family'.",
+        "beat_index": 18,
+        "beat_phrase": "Family."
+      },
+      {
+        "order": 12,
+        "role": "body",
+        "scene_index": 11,
+        "section": "hook",
+        "slot_start_s": 47.08,
+        "slot_end_s": 56.313,
+        "source_in_s": 0.0,
+        "source_out_s": 10.042,
+        "speed_factor": 1.0876,
+        "op": "speed",
+        "rationale": "Risen face turned warmly to the viewer on 'the risen Christ is not ashamed to call His own brethren'.",
+        "beat_index": 20,
+        "beat_phrase": "and the risen Christ is not ashamed to call His own brethren."
+      },
+      {
+        "order": 13,
+        "role": "hero-tail",
+        "scene_index": 10,
+        "section": "hero",
+        "slot_start_s": 56.313,
+        "slot_end_s": 58.313,
+        "source_in_s": 0.0,
+        "source_out_s": 2.0,
+        "speed_factor": 1.0,
+        "op": "speed",
+        "rationale": "Hero close — the cut lands on Christ (single appearance, no reuse).",
+        "beat_index": -1,
+        "beat_phrase": ""
+      }
+    ],
+    "notes": ""
+  },
+  "self_review": {
+    "overall": "LOCKED",
+    "panel": [
+      {
+        "agent": "Editor",
+        "verdict": "STRONG",
+        "note": "13 distinct moments tile 58s contiguously; brisk viral pace with two breathing holds (#02, #11) — flows, does not strobe."
+      },
+      {
+        "agent": "Beat-Sync",
+        "verdict": "STRONG",
+        "note": "Every clip sits on its phrase: scroll on 'the psalm turns', fingertip on 'I will declare thy name', codex on 'Hebrews takes that line', embrace on 'not ashamed to call them brethren'."
+      },
+      {
+        "agent": "No-Reuse",
+        "verdict": "STRONG",
+        "note": "13 distinct body clips; hero #10 appears only at the close."
+      },
+      {
+        "agent": "Pacing",
+        "verdict": "CAUTION",
+        "note": "Avg 1.34x is brisk for slow Baroque; hero #10 held at 1.0x and #11 near-full speed keep the sacred landing reverent — acceptable for a fast Short."
+      },
+      {
+        "agent": "Hero-Continuity",
+        "verdict": "STRONG",
+        "note": "Opens on the empty tomb (scroll-stopper), closes on the risen Christ with arms open to the viewer — lands on Jesus, not a merely emotional frame."
+      },
+      {
+        "agent": "Jaded Viewer",
+        "verdict": "STRONG",
+        "note": "Empty-tomb open + the death->resurrection->family turn earns the stop; seams are tight."
+      }
+    ],
+    "gates": [
+      {
+        "gate": "AS-G1 Timeline Coverage",
+        "verdict": "PASS",
+        "evidence": "14 slots tile 0->58.31s contiguously.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G2 No Reuse",
+        "verdict": "PASS",
+        "evidence": "13 distinct body clips; hero #10 appears once (close only) — no reuse.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G3 Speed/Trim Health",
+        "verdict": "CONDITIONAL",
+        "evidence": "avg speed 1.34x, max 2.20x, 11/13 trimmed — brisk; verify it does not strobe.",
+        "fix": "Reduce clip count (lower --clips) so slots breathe."
+      },
+      {
+        "gate": "AS-G4 Min Slot",
+        "verdict": "PASS",
+        "evidence": "All body slots >= 0.8s.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G5 Section Coverage",
+        "verdict": "PASS",
+        "evidence": "Every spoken section has a clip: ['hook'].",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G6 Hero Close",
+        "verdict": "PASS",
+        "evidence": "Opens on hook #01; gospel-pivot hero #10 closes 2.0s (single appearance).",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G7 Gospel Frame",
+        "verdict": "CONDITIONAL",
+        "evidence": "Gospel-pivot present (lands on Christ). Soft-missing: a cross/passion image (ok if the pivot is resurrection/NT-link).",
+        "fix": "Add a hook-open if available; cross optional when the pivot is resurrection."
+      },
+      {
+        "gate": "AS-G8 Beat Continuity",
+        "verdict": "PASS",
+        "evidence": "Thread carried open (empty tomb) -> climax (risen Christ / scarred hands) -> close (calling you in); no clip contradicts its words.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G9 Beat Density",
+        "verdict": "PASS",
+        "evidence": "13 moments · avg slot 4.3s (target 4s) — lively.",
+        "fix": ""
+      }
+    ],
+    "priority_fixes": []
+  },
+  "independent_review": {
+    "overall": "LOCKED",
+    "panel": [
+      {
+        "agent": "Editor",
+        "verdict": "STRONG",
+        "note": "13 moments over 58s, time-ordered, with two longer holds to breathe — paced for a Short, no strobe."
+      },
+      {
+        "agent": "Beat-Sync",
+        "verdict": "STRONG",
+        "note": "Object/echo/action clips all land on their words; the only quoted KJV lines (P06/P07, P16) carry the matching scroll, gathered-brethren, and embrace images."
+      },
+      {
+        "agent": "No-Reuse",
+        "verdict": "STRONG",
+        "note": "All 13 body clips distinct; hero #10 only at the close."
+      },
+      {
+        "agent": "Pacing",
+        "verdict": "CAUTION",
+        "note": "1.34x avg is brisk for Baroque; the open at 2.20x is the fastest — fine since it is the empty-tomb hook, and the sacred close holds at 1.0x."
+      },
+      {
+        "agent": "Hero-Continuity",
+        "verdict": "CAUTION",
+        "note": "Lands correctly on the risen Christ, but slot 12 (#11 risen face) immediately precedes hero #10 (risen figure) — two Christ frames in a row at the close; distinct framings keep it from reading as a repeat, acceptable for the landing."
+      },
+      {
+        "agent": "Jaded Viewer",
+        "verdict": "STRONG",
+        "note": "The 'Psalm 22 doesn't end in a grave' hook plus the death->family turn earns the watch."
+      }
+    ],
+    "gates": [
+      {
+        "gate": "AS-G1 Timeline Coverage",
+        "verdict": "PASS",
+        "evidence": "14 slots tile 0->58.31s contiguously.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G2 No Reuse",
+        "verdict": "PASS",
+        "evidence": "13 distinct body clips; hero #10 appears once (close only) — no reuse.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G3 Speed/Trim Health",
+        "verdict": "CONDITIONAL",
+        "evidence": "avg speed 1.34x, max 2.20x, 11/13 trimmed — brisk; verify it does not strobe.",
+        "fix": "Reduce clip count (lower --clips) so slots breathe."
+      },
+      {
+        "gate": "AS-G4 Min Slot",
+        "verdict": "PASS",
+        "evidence": "All body slots >= 0.8s.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G5 Section Coverage",
+        "verdict": "PASS",
+        "evidence": "Every spoken section has a clip: ['hook'].",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G6 Hero Close",
+        "verdict": "PASS",
+        "evidence": "Opens on hook #01; gospel-pivot hero #10 closes 2.0s (single appearance).",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G7 Gospel Frame",
+        "verdict": "CONDITIONAL",
+        "evidence": "Gospel-pivot present (lands on Christ). Soft-missing: a cross/passion image (ok if the pivot is resurrection/NT-link).",
+        "fix": "Add a hook-open if available; cross optional when the pivot is resurrection."
+      },
+      {
+        "gate": "AS-G8 Beat Continuity",
+        "verdict": "PASS",
+        "evidence": "Thread open (empty tomb) -> climax (risen Christ/scarred hands) -> close (calling you in); no clip fights its words.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G9 Beat Density",
+        "verdict": "PASS",
+        "evidence": "13 moments · avg slot 4.3s (target 4s) — lively.",
+        "fix": ""
+      }
+    ],
+    "priority_fixes": []
+  },
+  "audit": {
+    "passed_overall": true,
+    "slots": [
+      {
+        "order": 0,
+        "scene_index": 1,
+        "section": "hook",
+        "words": "Most people stop reading Psalm twenty-two at the cross.",
+        "passed": true,
+        "note": "Empty rock-hewn tomb with burial ledge and dawn light, no figure — matches the empty-tomb hook."
+      },
+      {
+        "order": 1,
+        "scene_index": 2,
+        "section": "hook",
+        "words": "Later, the psalm turns —",
+        "passed": true,
+        "note": "Open Hebrew Psalm scroll, lower lines catching light, faint background vignettes — matches 'the psalm turns'."
+      },
+      {
+        "order": 2,
+        "scene_index": 12,
+        "section": "hook",
+        "words": "the same voice moves from anguish to praise:",
+        "passed": true,
+        "note": "Aged David with scroll lifting his face in hope, risen Christ in white at the divide — matches the anguish-to-praise turn."
+      },
+      {
+        "order": 3,
+        "scene_index": 3,
+        "section": "hook",
+        "words": "\"I will declare thy name unto my brethren:",
+        "passed": true,
+        "note": "Weathered fingertip beneath a line of ancient Hebrew on cracked parchment — matches 'I will declare thy name'."
+      },
+      {
+        "order": 4,
+        "scene_index": 5,
+        "section": "hook",
+        "words": "in the midst of the congregation will I praise thee.\"",
+        "passed": true,
+        "note": "Risen Christ at the centre of a gathered group of men and women, hand lifted — matches 'in the midst of the congregation'."
+      },
+      {
+        "order": 5,
+        "scene_index": 6,
+        "section": "hook",
+        "words": "Who is that praising voice?",
+        "passed": true,
+        "note": "Close view of the risen Christ's living eyes and the faint thorn-scar at the brow — matches 'who is that praising voice?'."
+      },
+      {
+        "order": 6,
+        "scene_index": 7,
+        "section": "hook",
+        "words": "Hebrews takes that opening line —",
+        "passed": true,
+        "note": "Macro of an ancient codex / manuscript edge — the book under 'Hebrews takes that opening line'; relevant, no foreign story."
+      },
+      {
+        "order": 7,
+        "scene_index": 4,
+        "section": "hook",
+        "words": "and puts it in the mouth of the risen Christ.",
+        "passed": true,
+        "note": "The risen Christ, living bearded face, white robe — matches 'in the mouth of the risen Christ'."
+      },
+      {
+        "order": 8,
+        "scene_index": 14,
+        "section": "hook",
+        "words": "alive on the far side of the cross.",
+        "passed": true,
+        "note": "Two open palms with healed nail-marks raised, the living face above — matches 'alive on the far side of the cross'."
+      },
+      {
+        "order": 9,
+        "scene_index": 8,
+        "section": "hook",
+        "words": "\"not ashamed to call them brethren\" —",
+        "passed": true,
+        "note": "Risen Christ drawing a kneeling man into an embrace, hand on his shoulder — matches 'not ashamed to call them brethren'."
+      },
+      {
+        "order": 10,
+        "scene_index": 9,
+        "section": "hook",
+        "words": "brothers.",
+        "passed": true,
+        "note": "The risen Christ's scarred open hand, healed nail-mark visible, resting on a weathered man's shoulder — matches 'brothers'."
+      },
+      {
+        "order": 11,
+        "scene_index": 13,
+        "section": "hook",
+        "words": "Family.",
+        "passed": true,
+        "note": "Hands reaching to welcome, meeting an open hand among the gathered — matches 'Family'."
+      },
+      {
+        "order": 12,
+        "scene_index": 11,
+        "section": "hook",
+        "words": "and the risen Christ is not ashamed to call His own brethren.",
+        "passed": true,
+        "note": "Risen Christ's living face turned warmly to the viewer — matches 'the risen Christ is not ashamed to call His own brethren'."
+      }
+    ],
+    "reroll_scene_indices": [],
+    "notes": "All slots matched their words."
+  },
+  "authoritative_overall": "LOCKED"
+}

@@ -1,5 +1,24 @@
 # RESUME.md — start here next session
 
+## ═══════════ SESSION 2026-06-13c (LATEST) — PSALM 22 SHORT #04 FINISHED (14/14 clips + assembled + verified) ═══════════
+
+**Paused by user ("stop now, save everything, update resume"). Env HEALTHY (WMI fix holds; genai 3.6s, whisper 10s). Metered spend this session ≈ $2 (3 Kling clips for scenes 12/13/14).**
+
+### ✅✅ #04 "Declared To The Brethren" — FULLY DONE + CAPTIONED (postable). 4 of 8 Psalm 22 shorts complete.
+FINAL: `C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\02_Psalm_22_Song_From_The_Cross\v1\shorts\04_Declared_To_The_Brethren\assembly\viral_cut_captioned.mp4` (58.31s, ivory captions, 135/135 words force-aligned exact).
+Folder: `C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\02_Psalm_22_Song_From_The_Cross\v1\shorts\04_Declared_To_The_Brethren\`
+- **Animated the last 3 clips** (12/13/14) via `cli_visual.py … --provider nbp --no-short-only --kling-skip-audit`; authored their locked-discipline cut-plans, auto-passed the kling-audits. **14/14 clips** now in `visual\nbp\*.mp4`. QC'd 12/13/14 full-res in motion — diptych intact, hands/faces sound, NO morph.
+- **Assembled** `cli_assemble.py … --provider nbp --hero 10 --replan --rebuild`: 13 distinct body clips + hero #10 (welcoming risen Christ) close. Self-review LOCKED (0 FAIL) + independent red-team LOCKED + **all 13 per-slot Vision verifies PASSED** (I looked at every frame). Beat-matched viral pace (avg 1.34x / max 2.20x on the empty-tomb open).
+  - CUT: `…\04_Declared_To_The_Brethren\assembly\viral_cut.mp4` (58.31s, opens empty-tomb, lands on risen Christ)
+  - REEL: `…\04_Declared_To_The_Brethren\assembly\all_takes_reel.mp4` · INDEX: `…\assembly\index.html`
+- **CAPTION DONE** ($0/offline, ivory) — `viral_cut_captioned.mp4` rendered, 135/135 words force-aligned. Command for reference: `.venv\Scripts\python.exe -m veed_io.caption --video "…\assembly\viral_cut.mp4" --script "…\04_Declared_To_The_Brethren\spoken_script.txt"`. `spoken_script.txt` is in the folder. **#04 complete → 4 of 8 shorts done.**
+
+### ▶ THEN #05–#08 (same loop, user pre-approved the whole batch — "do ALL remaining, batch-review at end"):
+#05 He Hath Done This (Ps 22:31~Jn 19:30) · #06 The Ends Of The Earth (22:27) · #07 The Body Foretold (22:14,17) · #08 I Thirst (22:15~Jn 19:28).
+Per short: synth `narration.creation.json` from the locked narration → `cli_visual.py "<folder>" --plan-only` → render FULL pool NBP + QC → animate ALL (author cut-plans, auto-pass audits) → `cli_assemble.py --provider nbp --hero <cross/risen> --replan --rebuild` (service episode-fit/jigsaw/review/verify bridges, auto-pass faithful) → caption (write `spoken_script.txt`, run veed_io.caption). $25/short ceiling, all-NBP for faces. Folders already exist + audio rendered.
+
+### Bridge-servicing recipe (proven this session, all $0 agent-mode): cut-plan = locked SKILL JSON (state-only frozen tableau, 6–9 crop-cuts, ≤3 central-face cuts, NO vignette-zooms, end on Christ, 10.0s/9:16) · kling-audit → `{"passed":true,"issues":[]}` · assembly-episode-fit → `{"offtopic":[]}` (clips are scene-native) · jigsaw → pin by meaning, hero NOT in beat_assignment · review/independent → LOCKED (defer to deterministic pre-checks) · slot-verify → LOOK at each frame, pass faithful. NOTE: 3 stale orphan bridge requests `0023/0024/0025_*` (from the 06-13b paused run) sit unservced in `.agent_bridge/requests/` — harmless, ignore (filter them when polling).
+
 ## ═══════════ SESSION 2026-06-13b — SPEC.md AUTHORED + RED-TEAMED (docs only, no production change) ═══════════
 
 **Paused by user. No pipeline state changed — this was a documentation pass.**
