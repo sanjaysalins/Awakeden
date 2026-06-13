@@ -1,0 +1,713 @@
+{
+  "plan": {
+    "visual_reading": "The arc opens on one forsaken man on a lone cross in an immense emptiness, then the psalm's last lines reach outward and the cross on its hill is shown against a whole world horizon. The hero is the cross radiating light to the far edges of the land — the reach the song foresaw. From the tiny hill in one corner of the empire, the gospel goes out by road and sea; the ancient promise to Abraham (all nations blessed) and the light to the Gentiles carry the OT echoes; kindreds of many lands gather in worship and pilgrims turn nation after nation. It lands on a single small figure on a far road turning toward the light, an open way left for whoever will come, and the cross cresting the whole earth at dawn.",
+    "red_team_notes": "Jaded Viewer risks: (1) 'the nations' can become a repetitive parade of bowing crowds — I varied it across gathered worshippers (8), a pilgrim procession (11), a distant people first catching light (9), and a single lone turner (12), each a distinct framing and idea. (2) 'light to the nations' invites the banned heaven-opens beam — I used a low-horizon dawn reaching across dark ground, never a vertical god-beam. (3) The global theme could float free of the cross — every wide scene keeps the cross or its light as the source. (4) Avoided modern globe/map anachronisms; the 'world' is rendered as far lands, seas and horizons.",
+    "scenes": [
+      {
+        "index": 1,
+        "slug": "one-man-alone",
+        "title": "One Man, Alone",
+        "scene_type": "single",
+        "arc_position": "opening-hook",
+        "framing": "close",
+        "purpose": "open on the lone forsaken man dying alone — the contrast the hook turns on",
+        "rationale": "isolation rather than a crowd; the worldwide theme begins from one man",
+        "visible_elements": "a lone cross with one slumped robed figure, a vast empty darkening sky, a bare hill falling away on every side",
+        "emotional_tone": "one man utterly alone",
+        "subject_block": "a single crucified figure on a lone cross against a vast empty darkening sky, the robed body slumped in isolation, no crowd and no other figure near, the bare hill falling away into shadow on every side, the lone cross small and stark at the centre of an immense emptiness",
+        "mood_block": "atmosphere of one man utterly alone",
+        "jesus_variant": "passion",
+        "priority": 2,
+        "macro_elements": [
+          "the lone slumped figure",
+          "the bare hilltop",
+          "the empty darkening sky",
+          "the upright beam against the void"
+        ],
+        "pacing": "slower",
+        "viral_role": "hook-open",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 2,
+        "slug": "the-song-opens-its-arms",
+        "title": "The Song Opens Its Arms",
+        "scene_type": "single",
+        "arc_position": "theological-centre",
+        "framing": "close",
+        "purpose": "the psalm's closing lines reaching outward to the nations",
+        "rationale": "the scroll's light widening outward carries the turn without text overlay",
+        "visible_elements": "an ancient Hebrew scroll, lower lines caught in a widening warm light, upper lines in shadow",
+        "emotional_tone": "a song reaching outward",
+        "subject_block": "an ancient Hebrew scroll spread open across pale stone, its lower lines of script caught in a widening warm light while the upper lines rest in shadow, the parchment worn and fibrous, the ink old and cracked, a single rolled wooden stave at the side, the warmth opening outward toward the lit lower edge of the page",
+        "mood_block": "atmosphere of a song reaching outward",
+        "jesus_variant": null,
+        "priority": 8,
+        "macro_elements": [
+          "the lit lower lines of script",
+          "the worn parchment edge",
+          "the old cracked ink",
+          "the rolled wooden stave"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 3,
+        "slug": "all-the-ends-of-the-world",
+        "title": "All the Ends of the World",
+        "scene_type": "unified",
+        "arc_position": "theological-centre",
+        "framing": "wide",
+        "purpose": "hold the cross against a whole-world horizon",
+        "rationale": "the psalm's global reach as one coherent composition",
+        "visible_elements": "the cross on a hill, a vast horizon, distant lands, dim multitudes turning",
+        "emotional_tone": "one cross, a whole world",
+        "subject_block": "the cross on a high hill at the centre, the robed crucified figure calm in completion, and beyond it a vast world horizon opening on every side, subtle background vignettes fading into shadow suggesting distant far cities, a wide sea, far mountain ranges, and dim multitudes of peoples turning toward the hill, the central cross dominant and the far lands half-dissolved in haze",
+        "mood_block": "atmosphere of one cross reaching a whole world",
+        "jesus_variant": "passion",
+        "priority": 3,
+        "macro_elements": [
+          "the central cross",
+          "the vast horizon line",
+          "the distant lit lands",
+          "the hill's crest"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "distant far cities",
+          "a wide sea",
+          "far mountain ranges",
+          "dim multitudes turning"
+        ]
+      },
+      {
+        "index": 4,
+        "slug": "the-reach-of-the-cross",
+        "title": "The Reach of the Cross",
+        "scene_type": "single",
+        "arc_position": "nt-gospel-link",
+        "framing": "low-angle",
+        "purpose": "the gospel pivot — the cross radiating light to the far edges of the land",
+        "rationale": "the CTA's destination; iconic, near-still, reverent, bookends the cut",
+        "visible_elements": "the lifted cross, a luminous dawn sky, warm light spreading to far horizons",
+        "emotional_tone": "the cross reaching the ends of the earth",
+        "subject_block": "the cross lifted high seen from a low angle, the robed crucified figure against a luminous dawn sky, warm light breaking from behind the upright beam and spreading outward across far horizons on either side, the bare hill at the base, the whole composition radiating from the single lifted cross toward the distant edges of the land",
+        "mood_block": "atmosphere of the cross reaching the ends of the earth",
+        "jesus_variant": "passion",
+        "priority": 1,
+        "macro_elements": [
+          "the lifted cross",
+          "the breaking dawn light",
+          "the far horizons on either side",
+          "the bare hill base"
+        ],
+        "pacing": "slower",
+        "viral_role": "close",
+        "shot_kind": "hero",
+        "vignettes": []
+      },
+      {
+        "index": 5,
+        "slug": "one-corner-of-the-empire",
+        "title": "One Corner of the Empire",
+        "scene_type": "single",
+        "arc_position": "biblical-setting",
+        "framing": "wide",
+        "purpose": "the smallness of the place against the vastness of the world",
+        "rationale": "shows 'one corner of the Roman Empire' literally and modestly",
+        "visible_elements": "a small bare hill with distant crosses, dwarfed by a vast Roman-era landscape",
+        "emotional_tone": "a small place beneath a vast world",
+        "subject_block": "a small bare hill bearing three distant crosses, dwarfed beneath an immense Roman-era landscape of far plains, a remote walled city and a distant aqueduct, the sky vast and pale above, the hill of execution tiny in one corner of an enormous world",
+        "mood_block": "atmosphere of a small place beneath a vast world",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the small distant crosses",
+          "the remote walled city",
+          "the far plains",
+          "the vast pale sky"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 6,
+        "slug": "the-gospel-goes-out",
+        "title": "The Gospel Goes Out",
+        "scene_type": "unified",
+        "arc_position": "nt-gospel-link",
+        "framing": "mid",
+        "purpose": "the gospel's going-out to the nations after the cross and empty tomb",
+        "rationale": "the historical spread shown, not a doctrinal claim overlaid",
+        "visible_elements": "travellers on a road carrying a scroll, a ship with a sail on a far sea",
+        "emotional_tone": "good news carried to far places",
+        "subject_block": "robed figures set out along a worn road that winds toward a distant horizon, one carrying a scroll, a small ship with a single sail upon a far sea beyond, subtle background vignettes fading into shadow suggesting a distant city gate, a mountain pass, a lamp passed from hand to hand, and a far shore, the travelling figures dominant in the foreground and the far places half-dissolved in haze",
+        "mood_block": "atmosphere of good news carried to far places",
+        "jesus_variant": null,
+        "priority": 4,
+        "macro_elements": [
+          "the worn road winding outward",
+          "the carried scroll",
+          "the small sail on the far sea",
+          "the travellers' staffs"
+        ],
+        "pacing": "controlled",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "a distant city gate",
+          "a mountain pass",
+          "a lamp passed hand to hand",
+          "a far shore"
+        ]
+      },
+      {
+        "index": 7,
+        "slug": "in-thee-all-nations-blessed",
+        "title": "In Thee All Nations Blessed",
+        "scene_type": "unified",
+        "arc_position": "ot-echo",
+        "framing": "wide",
+        "purpose": "the ancient promise that all nations would be blessed (Gen 22:18 -> Gal 3:8)",
+        "rationale": "a real NT-anchored OT echo of the nations blessed in Abraham's seed",
+        "visible_elements": "an aged patriarch beneath countless stars, distant peoples, a child",
+        "emotional_tone": "an ancient promise of all nations",
+        "subject_block": "an aged patriarch standing beneath a vast field of countless stars, his face lifted and one hand open toward the night sky, subtle background vignettes fading into shadow suggesting numberless stars, distant tents of a far people, a child at his side, and remote shores, the standing patriarch dominant and the promise of nations half-dissolved across the heavens",
+        "mood_block": "atmosphere of an ancient promise of all nations",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the lifted face",
+          "the open hand toward the sky",
+          "the field of stars",
+          "the patriarch's staff"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "numberless stars",
+          "distant tents of a far people",
+          "a child at his side",
+          "remote shores"
+        ]
+      },
+      {
+        "index": 8,
+        "slug": "kindreds-of-the-nations",
+        "title": "Kindreds of the Nations",
+        "scene_type": "unified",
+        "arc_position": "human-response",
+        "framing": "mid",
+        "purpose": "all the kindreds of the nations worshipping (Ps 22:27 fulfilled)",
+        "rationale": "varied peoples turned up in worship, their homelands behind them",
+        "visible_elements": "a company of peoples of many nations, faces lifted in worship, far homelands",
+        "emotional_tone": "all the kindreds of the earth worshipping",
+        "subject_block": "a close-gathered company of peoples of many nations, varied in dress and feature, their faces lifted in worship toward a warm light at the edge of the scene, robes of many lands among them, subtle background vignettes fading into shadow suggesting a far desert caravan, an island shore, a northern forest, and a distant city, the gathered worshippers dominant and their far homelands half-dissolved behind them",
+        "mood_block": "atmosphere of all the kindreds of the earth worshipping",
+        "jesus_variant": null,
+        "priority": 5,
+        "macro_elements": [
+          "the lifted worshipping faces",
+          "the robes of many lands",
+          "the warm light at the edge",
+          "the clasped hands among them"
+        ],
+        "pacing": "controlled",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "a far desert caravan",
+          "an island shore",
+          "a northern forest",
+          "a distant city"
+        ]
+      },
+      {
+        "index": 9,
+        "slug": "a-light-to-the-gentiles",
+        "title": "A Light to the Gentiles",
+        "scene_type": "single",
+        "arc_position": "ot-echo",
+        "framing": "mid",
+        "purpose": "light reaching a people in darkness (Isaiah 49:6 -> Acts 13:47)",
+        "rationale": "low-horizon dawn reaching across dark ground, never a vertical god-beam",
+        "visible_elements": "a distant people at the edge of shadow, a low warm dawn reaching them",
+        "emotional_tone": "light crossing darkness to find a people",
+        "subject_block": "a distant people of a far land standing at the edge of deep shadow, a warm dawn light reaching across the dark ground toward them from a single source low on the horizon, their faces just catching the first light, the land beyond still in night, the light crossing the darkness to find them",
+        "mood_block": "atmosphere of light reaching a people in darkness",
+        "jesus_variant": null,
+        "priority": 6,
+        "macro_elements": [
+          "the warm dawn on the horizon",
+          "the faces catching first light",
+          "the dark ground between",
+          "the far land's edge"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 10,
+        "slug": "the-empty-tomb",
+        "title": "The Empty Tomb",
+        "scene_type": "single",
+        "arc_position": "revelation",
+        "framing": "mid",
+        "purpose": "the One who died and rose — the gospel's engine",
+        "rationale": "the empty tomb grounds 'died and rose' without a figure",
+        "visible_elements": "an open rock tomb, stone rolled aside, dawn light, folded grave-linen",
+        "emotional_tone": "death undone",
+        "subject_block": "an open rock-hewn tomb cut into a hillside, the great round stone rolled fully aside from the dark doorway, pale dawn light spilling across the empty threshold onto folded grave-linen within, the garden in cool shadow beyond, no figure present",
+        "mood_block": "atmosphere of death undone",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the rolled-aside stone",
+          "the dark empty doorway",
+          "the folded grave-linen",
+          "the dawn light on the threshold"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 11,
+        "slug": "nation-after-nation",
+        "title": "Nation After Nation",
+        "scene_type": "single",
+        "arc_position": "symbolic-support",
+        "framing": "wide",
+        "purpose": "peoples turning age after age",
+        "rationale": "a pilgrim procession rather than another bowing crowd",
+        "visible_elements": "a long procession of pilgrims of many lands on a road toward distant light",
+        "emotional_tone": "peoples turning, age after age",
+        "subject_block": "a long procession of pilgrims of many lands winding along a wide road toward a distant warm light on the horizon, figures in the dress of far peoples strung out across the landscape, the road climbing toward the light, the line of travellers stretching back beyond sight",
+        "mood_block": "atmosphere of peoples turning, age after age",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the winding road of pilgrims",
+          "the distant warm light",
+          "the dress of far peoples",
+          "the line stretching back"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 12,
+        "slug": "wherever-you-are",
+        "title": "Wherever You Are",
+        "scene_type": "single",
+        "arc_position": "personal-confrontation",
+        "framing": "mid",
+        "purpose": "the landing's turn to the single listener",
+        "rationale": "one small figure turning, the global made personal",
+        "visible_elements": "a lone small figure on a far road turned toward distant light",
+        "emotional_tone": "one person, here and now, turning",
+        "subject_block": "a single small figure alone on a far empty road at dusk, turned toward a distant warm light on the horizon, the surrounding land wide and quiet, the lone traveller small against the great expanse, the warm light ahead the only brightness",
+        "mood_block": "atmosphere of one person, here and now, turning",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the lone small figure",
+          "the far warm light",
+          "the empty road",
+          "the wide quiet land"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 13,
+        "slug": "room-to-turn",
+        "title": "Room to Turn",
+        "scene_type": "single",
+        "arc_position": "human-response",
+        "framing": "mid",
+        "purpose": "the open way left for whoever will come",
+        "rationale": "an open road to the cross rather than a literal altar call",
+        "visible_elements": "a worn open road leading to a cross on a low rise at dawn",
+        "emotional_tone": "an open way left open and lit",
+        "subject_block": "a worn open road leading toward a cross on a low rise at dawn, warm gold light widening behind it, the path clear and unobstructed, no figure upon it yet, the way left open and lit toward the cross",
+        "mood_block": "atmosphere of an open way left for whoever will come",
+        "jesus_variant": null,
+        "priority": 7,
+        "macro_elements": [
+          "the open road toward the cross",
+          "the cross on the low rise",
+          "the widening dawn light",
+          "the clear unobstructed path"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 14,
+        "slug": "the-whole-earth-at-dawn",
+        "title": "The Whole Earth at Dawn",
+        "scene_type": "single",
+        "arc_position": "closing-devotional",
+        "framing": "wide",
+        "purpose": "close on the cross over the whole earth at dawn",
+        "rationale": "the song that swept the earth, lands bright beneath the cross",
+        "visible_elements": "the cross cresting a vast world horizon at dawn, light sweeping far lands",
+        "emotional_tone": "a song that swept the whole earth",
+        "subject_block": "the cross cresting a vast world horizon at dawn, warm gold light sweeping outward across far lands, distant seas and remote mountains catching the first light under a widening sky, the single cross high at the centre and the whole earth opening bright beneath it",
+        "mood_block": "atmosphere of a song that swept the whole earth",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the cross at the horizon's crest",
+          "the gold light sweeping the lands",
+          "the distant seas and mountains",
+          "the widening dawn sky"
+        ],
+        "pacing": "slower",
+        "viral_role": "close",
+        "shot_kind": "standard",
+        "vignettes": []
+      }
+    ],
+    "short_priority": [
+      4,
+      1,
+      3,
+      6,
+      8,
+      9,
+      14,
+      2
+    ],
+    "candidates": [
+      {
+        "title": "One Man, Alone",
+        "scene_type": "single",
+        "arc_position": "opening-hook",
+        "framing": "close",
+        "purpose": "open on the lone forsaken man — the contrast the hook turns on",
+        "rationale": "isolation, not a crowd; the whole world theme begins from one man",
+        "visible_elements": "a lone cross with one slumped figure, vast empty sky, bare hill",
+        "emotional_tone": "utterly alone"
+      },
+      {
+        "title": "All the Ends of the World",
+        "scene_type": "unified",
+        "arc_position": "theological-centre",
+        "framing": "wide",
+        "purpose": "hold the cross against a whole-world horizon",
+        "rationale": "the psalm's global reach as one composition, not a montage",
+        "visible_elements": "cross on a hill, vast horizon, distant lands, dim multitudes",
+        "emotional_tone": "one cross, a whole world"
+      },
+      {
+        "title": "The Reach of the Cross",
+        "scene_type": "single",
+        "arc_position": "nt-gospel-link",
+        "framing": "low-angle",
+        "purpose": "the gospel pivot — the cross radiating to the far edges",
+        "rationale": "the CTA's destination; iconic and reverent",
+        "visible_elements": "lifted cross, dawn light spreading to far horizons",
+        "emotional_tone": "the cross reaching the ends of the earth"
+      },
+      {
+        "title": "The Gospel Goes Out",
+        "scene_type": "unified",
+        "arc_position": "nt-gospel-link",
+        "framing": "mid",
+        "purpose": "the spread to the nations (Great Commission, thematic)",
+        "rationale": "shows the historical going-out, not a doctrinal claim overlaid",
+        "visible_elements": "travellers on a road, a ship with a sail, far places",
+        "emotional_tone": "good news carried far"
+      },
+      {
+        "title": "In Thee All Nations Blessed",
+        "scene_type": "unified",
+        "arc_position": "ot-echo",
+        "framing": "wide",
+        "purpose": "the Abraham promise (Gen 22:18 -> Gal 3:8)",
+        "rationale": "a real NT-anchored OT echo of the nations blessed in the seed",
+        "visible_elements": "aged patriarch under countless stars, distant peoples",
+        "emotional_tone": "an ancient promise of all nations"
+      },
+      {
+        "title": "A Light to the Gentiles",
+        "scene_type": "single",
+        "arc_position": "ot-echo",
+        "framing": "mid",
+        "purpose": "Isaiah 49:6 -> Acts 13:47 light to the nations",
+        "rationale": "light reaching a people in darkness, not a heaven-beam cliche",
+        "visible_elements": "distant people at the edge of shadow, low dawn light reaching them",
+        "emotional_tone": "light crossing darkness"
+      },
+      {
+        "title": "Kindreds of the Nations",
+        "scene_type": "unified",
+        "arc_position": "human-response",
+        "framing": "mid",
+        "purpose": "the nations worshipping (Ps 22:27 fulfilled)",
+        "rationale": "varied peoples turned up in worship, homelands behind",
+        "visible_elements": "company of many nations, faces lifted, far homelands",
+        "emotional_tone": "all the kindreds worshipping"
+      },
+      {
+        "title": "Wherever You Are",
+        "scene_type": "single",
+        "arc_position": "personal-confrontation",
+        "framing": "mid",
+        "purpose": "the landing's turn to the listener",
+        "rationale": "one small figure turning, not a generic altar call",
+        "visible_elements": "a lone small figure on a far road turned toward distant light",
+        "emotional_tone": "one person, here and now"
+      },
+      {
+        "title": "The Whole Earth at Dawn",
+        "scene_type": "single",
+        "arc_position": "closing-devotional",
+        "framing": "wide",
+        "purpose": "close on the cross over the whole earth at dawn",
+        "rationale": "the song that swept the earth, lands bright beneath the cross",
+        "visible_elements": "cross cresting a vast world horizon, light sweeping far lands",
+        "emotional_tone": "a song that swept the whole earth"
+      }
+    ],
+    "rationale": "14 scenes carrying the global reach of the cross honestly. Ten singles anchor the literal beats (lone cross, scroll, hero cross, small Golgotha, light to the gentiles, empty tomb, pilgrim procession, lone turner, open road, cross over the world) and four unified scenes carry the breadth and echoes (all the ends, the gospel goes out, the Abraham promise, the kindreds worshipping). Two nt-gospel-link scenes (hero cross, gospel goes out) and two NT-anchored ot-echo scenes (Gen 22:18->Gal 3:8 Abraham; Isaiah 49:6->Acts 13:47 light to the Gentiles) satisfy the mix. Rejected: a vertical heaven-opens light-beam (cliche), a modern globe/map (anachronism), and stacking five identical bowing-crowd scenes (varied to gathered worship / procession / first-light people / lone turner instead).",
+    "beat_coverage": {
+      "hook": [
+        1,
+        5
+      ],
+      "point": [
+        2,
+        3,
+        7
+      ],
+      "proof": [
+        4,
+        6,
+        10
+      ],
+      "conviction": [
+        8,
+        9,
+        11
+      ],
+      "landing": [
+        12,
+        13,
+        14
+      ]
+    },
+    "hero_candidate": 4
+  },
+  "self_review": {
+    "overall": "LOCKED",
+    "panel": [
+      {
+        "agent": "Scene Director",
+        "verdict": "STRONG",
+        "note": "The arc turns from one to all: hook [1] 'One Man, Alone' -> proof [4] 'The Reach of the Cross' -> conviction [8] 'Kindreds of the Nations' -> landing [12]/[14] 'Wherever You Are'/'The Whole Earth at Dawn'. Drives the global turn, not just illustrates."
+      },
+      {
+        "agent": "Theologian",
+        "verdict": "STRONG",
+        "note": "Guards held: [7] 'In Thee All Nations Blessed' (Gen 22:18 -> Gal 3:8) and [9] 'A Light to the Gentiles' (Isa 49:6 -> Acts 13:47) are real NT-anchored echoes; the global reach is the psalm's own v27 plus historical spread, not a forced verse-citation. No modern globe/map."
+      },
+      {
+        "agent": "Visual Skeptic",
+        "verdict": "CAUTION",
+        "note": "[8] kindreds + [11] procession both risk a generic 'nations' look; differentiated (gathered worship vs road procession) but render with real specificity of dress/land so they don't read as stock."
+      },
+      {
+        "agent": "Character-Consistency Checker",
+        "verdict": "STRONG",
+        "note": "jesus_variant 'passion' on the crucified scenes [1][3][4]; distant/bare crosses [5][13][14] correctly null; no drift."
+      },
+      {
+        "agent": "Editor",
+        "verdict": "STRONG",
+        "note": "Subject_blocks state-only and banned-token clean (no 'frame'); 14 scenes within the rich window; each earns its slot."
+      },
+      {
+        "agent": "Jaded Viewer",
+        "verdict": "CAUTION",
+        "note": "'Light to the nations' could invite the heaven-beam cliche, but [9] uses a low-horizon dawn across dark ground, not a vertical god-beam — an honest, non-predictable payoff."
+      }
+    ],
+    "gates": [
+      {
+        "gate": "SP-G1 Biblical Accuracy",
+        "verdict": "PASS",
+        "evidence": "Ps 22:27 scroll, the cross, empty tomb, Abraham/stars, light-to-gentiles all defensible; no invented narrative; no unwarranted halos.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G2 Narration Alignment",
+        "verdict": "PASS",
+        "evidence": "Every beat id in ['hook', 'point', 'proof', 'conviction', 'landing'] has >=1 supporting scene.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G3 Visual Variety",
+        "verdict": "PASS",
+        "evidence": "10 single + 4 unified; anchors vary (lone cross, scroll, world horizon, road, ship, stars, peoples, tomb).",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G4 Theological Honesty",
+        "verdict": "PASS",
+        "evidence": "Global reach honest (psalm's own prophecy + history + NT-anchored echoes); no overclaim, no universalism.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G5 Prompt Conformance",
+        "verdict": "PASS",
+        "evidence": "All subject_block + mood_block content clear of the banned-token list.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G6 Type Discipline",
+        "verdict": "PASS",
+        "evidence": "every unified scene declares 3-5 vignettes (counts: #3=4, #6=4, #7=4, #8=4)",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G7 Character Consistency",
+        "verdict": "PASS",
+        "evidence": "jesus_variant consistent across crucified scenes.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G8 Composition Distribution",
+        "verdict": "PASS",
+        "evidence": "4 distinct framings; max 'mid' at 6/14.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G9 Scene Mix & Gospel Frame",
+        "verdict": "PASS",
+        "evidence": "n=14: single=10, unified=4, nt-link=2, ot-echo=2",
+        "fix": ""
+      }
+    ],
+    "priority_fixes": []
+  },
+  "independent_review": {
+    "overall": "LOCKED",
+    "panel": [
+      {
+        "agent": "Scene Director",
+        "verdict": "STRONG",
+        "note": "Independent read: the one->all turn is carried structurally (lone cross open, cross-reach proof, kindreds conviction, whole-earth close); not a slideshow."
+      },
+      {
+        "agent": "Theologian",
+        "verdict": "STRONG",
+        "note": "The two ot-echoes are genuinely NT-anchored (Gal 3:8 quotes Gen 22:18; Acts 13:47 quotes Isa 49:6); 'turn unto the LORD' applied to the crucified-risen Christ is sound. No overclaim of v27 as a cited NT fulfilment."
+      },
+      {
+        "agent": "Visual Skeptic",
+        "verdict": "CAUTION",
+        "note": "The several 'far lands / distant peoples' scenes must be rendered with real topographic and costume specificity or they blur together; the lone-cross open and empty-tomb keep it grounded."
+      },
+      {
+        "agent": "Character-Consistency Checker",
+        "verdict": "STRONG",
+        "note": "Crucified scenes passion-consistent; bare/distant crosses null; empty tomb null — coherent."
+      },
+      {
+        "agent": "Editor",
+        "verdict": "STRONG",
+        "note": "State-only, banned-token clean, 14 scenes; framings well distributed (5 wide, 6 mid, 2 close, 1 low-angle)."
+      },
+      {
+        "agent": "Jaded Viewer",
+        "verdict": "CAUTION",
+        "note": "Predictable risk on 'nations worshipping', mitigated by the Abraham-under-stars echo and the single lone turner at the landing."
+      }
+    ],
+    "gates": [
+      {
+        "gate": "SP-G1 Biblical Accuracy",
+        "verdict": "PASS",
+        "evidence": "All literal scenes defensible; no invented detail; no unwarranted halos.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G2 Narration Alignment",
+        "verdict": "PASS",
+        "evidence": "Every beat id in ['hook', 'point', 'proof', 'conviction', 'landing'] has >=1 supporting scene.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G3 Visual Variety",
+        "verdict": "PASS",
+        "evidence": "10 single + 4 unified, wide anchor variety.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G4 Theological Honesty",
+        "verdict": "PASS",
+        "evidence": "Honest global reach; NT-anchored echoes; no universalism.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G5 Prompt Conformance",
+        "verdict": "PASS",
+        "evidence": "All subject_block + mood_block content clear of the banned-token list.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G6 Type Discipline",
+        "verdict": "PASS",
+        "evidence": "every unified scene declares 3-5 vignettes (counts: #3=4, #6=4, #7=4, #8=4)",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G7 Character Consistency",
+        "verdict": "PASS",
+        "evidence": "jesus_variant consistent.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G8 Composition Distribution",
+        "verdict": "PASS",
+        "evidence": "4 distinct framings; max 'mid' at 6/14.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G9 Scene Mix & Gospel Frame",
+        "verdict": "PASS",
+        "evidence": "n=14: single=10, unified=4, nt-link=2, ot-echo=2",
+        "fix": ""
+      }
+    ],
+    "priority_fixes": []
+  },
+  "paper_cohesion": {
+    "scope": "paper",
+    "passed": true,
+    "notes": "",
+    "conflict_scenes": []
+  },
+  "authoritative_overall": "LOCKED"
+}

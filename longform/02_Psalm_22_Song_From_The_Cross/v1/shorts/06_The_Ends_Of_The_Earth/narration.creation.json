@@ -1,0 +1,63 @@
+{
+  "created_at": "2026-06-13T00:00:00",
+  "model": "claude-opus-4-7",
+  "review_model": "claude-sonnet-4-6",
+  "structure": {
+    "id": "gospel-five-beat",
+    "name": "Gospel Five-Beat",
+    "beats": ["hook", "point", "proof", "conviction", "landing"]
+  },
+  "series": {
+    "id": "jesus-in-ot",
+    "name": "Jesus in the Old Testament",
+    "brand": "SLK"
+  },
+  "episode": {
+    "title": "The Ends of the Earth",
+    "primary_ref": "Psalm 22:27"
+  },
+  "kjv_verified": true,
+  "kjv_text": "All the ends of the world shall remember and turn unto the LORD: and all the kindreds of the nations shall worship before thee.",
+  "thread": {
+    "thread": "Psalm 22 opens with one forsaken man dying alone and ends with 'all the ends of the world' turning to the LORD (v27). The dying man's own song foresaw a worldwide turning -- and from that cross and empty tomb the gospel did spread to nation after nation. This is the psalm's own prophecy plus the historical fact of the gospel's global reach (tied thematically to the Great Commission and the nations before the Lamb, not over-cited as a verse fulfilment). The ends of the world includes wherever you are; the Lord it promised still has room for you to turn to Him.",
+    "lever": "overlooked detail / the psalm's own prophecy + fulfilled history (Ps 22:27 foresees the nations turning; the gospel spread worldwide -- thematic, not a specific NT citation of v27)",
+    "anchor_ref": "Psalm 22:27",
+    "anchor_detail": "the dying man's song foreseeing all the ends of the world remembering and turning to the LORD -- fulfilled as the gospel of the crucified-risen Christ spread to the nations",
+    "why_fresh": "a man dying alone in one corner of the Roman Empire foresaw, in the same psalm, every nation worshipping before God -- and it happened",
+    "gospel_landing": "the reach of the cross was never a local tragedy but for all the kindreds of the earth; the ends of the world includes wherever you are, and the Lord the song promised still has room for you to turn to Him",
+    "rationale": "the psalm's own global horizon, vindicated by history, with a grace landing that draws the listener into the worldwide turning",
+    "candidates": []
+  },
+  "draft": {
+    "title": "The Ends of the Earth",
+    "hook_type": "prophecy",
+    "beats": [
+      {
+        "id": "hook",
+        "text": "Psalm twenty-two opens with one forsaken man dying alone — and ends with every nation on earth."
+      },
+      {
+        "id": "point",
+        "text": "After the suffering, the song throws its arms open to every nation: \"All the ends of the world shall remember and turn unto the LORD: and all the kindreds of the nations shall worship before thee.\""
+      },
+      {
+        "id": "proof",
+        "text": "A man dying in one corner of the Roman Empire — and his song says the ends of the earth will turn to God. It sounded impossible. But from that cross, and the empty tomb, the gospel went out — and people in nation after nation have turned to the LORD, worshipping the One who died and rose."
+      },
+      {
+        "id": "conviction",
+        "text": "That is the reach of the cross. It was never a local tragedy — it was for the nations, all the kindreds of the earth."
+      },
+      {
+        "id": "landing",
+        "text": "And \"the ends of the world\" includes wherever you are, right now. The song that began with one man dying alone has swept the whole earth; the Lord it promised still has room for you to turn to Him."
+      }
+    ]
+  },
+  "beat_ids": ["hook", "point", "proof", "conviction", "landing"],
+  "word_count": 150,
+  "char_count": 0,
+  "authoritative_review": "independent",
+  "review_overall": "LOCKED",
+  "unknown_speakers": []
+}
