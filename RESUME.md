@@ -1,6 +1,49 @@
 # RESUME.md — start here next session
 
-## ═══════════ SESSION 2026-06-13d (LATEST) — #05 He Hath Done This COMPLETE + NEW RULE: ambient/SFX bed by default ═══════════
+## ═══════════ SESSION 2026-06-14b (LATEST) — NEW Stage 5 "Upload Kit" built (title/desc/tags/hashtags), validated on #06, paused for approval ═══════════
+
+**Paused by user ("stop now, save everything, update memory + resume"). $0 metered this session (all design/code + agent-authored sample). Committed: `b75b407`.**
+
+### 🆕 What I built: Stage 5 — verified, panel-ready UPLOAD METADATA generator
+Turns a finished video + its `narration.creation.json` into copy-paste-ready upload metadata for **YouTube (short + long) · TikTok · Facebook · Instagram**. Red-teamed at every step. Output: `<media>/upload/upload_kit.{json,md}` beside the video.
+- **Decisions locked with user (2 question rounds):** all 4 platforms · content+best-practices grounding (NO live web research) · kit lives BESIDE each video · titles = **HOOKY BUT HONEST** (freshness=faithful, no clickbait) · description **quotes the anchor verse verbatim KJV** (gated) · **FULL external CLI panel per media** · build+run ALL finished media · CTA line = "Subscribe to walk through the whole Bible and meet Jesus on every page. ✝" · user is dyslexic → **review by ear** (review_voice mp3).
+- **Files** (committed): `data/platform_specs.json` (hard limits+house targets per platform) · `data/upload_brand.json` (**single footer config — 6 handle blanks still FILL_ME**) · `pipeline/upload_models.py` · `pipeline/upload_gates.py` (6 gates) · `pipeline/upload_engine.py` (harvest→generate via agent bridge→red-team) · `pipeline/upload_handoff.py` · `pipeline/upload_runner.py` · `cli_upload.py` · `independent_review.py` (+`LENS_UPLOAD`, `--type upload`).
+- **6 deterministic gates, ALL verified to BITE** (broke a sample on purpose, each caught it): UK-G1 length · UK-G2 KJV-strict (caught "entire world" swap) · UK-G3 clickbait tokens · UK-G4 brand/CTA-to-Jesus/footer · UK-G5 platform hashtag+link rules · UK-G6 no-repeat titles vs sibling kits.
+- **Flow per video:** facts → generate N title options → 6 gates → in-engine RED-TEAM → FULL AI PANEL → pick best → `upload_kit.md`.
+
+### ✅ Validated on Psalm 22 short #06 "The Ends of the Earth" (agent-authored sample, all 6 gates PASS)
+- Kit: `C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\02_Psalm_22_Song_From_The_Cross\v1\shorts\06_The_Ends_Of_The_Earth\upload\upload_kit.md`
+- By-ear review mp3 (NOT committed, regenerable): `…\06_The_Ends_Of_The_Earth\upload\upload_kit_review.mp3`
+- Sample generator (one-off, agent = the LLM in agent-mode): `_sample_upload_kit.py`
+
+### ▶ NEXT (resume here) — gates on the batch:
+1. **User approves the shape** (listen to the mp3 above) — yes / tweak titles/footer?
+2. **User fills the 6 footer blanks** in `data/upload_brand.json` (channel display name + YouTube/TikTok/Facebook/Instagram handles+URLs + website). Until then "Follow:" lines render blank; everything else is final. NOT hallucinated — verbatim from config.
+3. Then run in-engine **red-team + FULL panel on #06** (`.venv\Scripts\python.exe cli_upload.py "<#06 folder>" --panel`), I merge/verify the panel verdict + fix/answer each finding → mark READY. Then **batch all FINISHED media**: shorts #01–#06 (`cli_upload.py "<v1>" --all-shorts`) + Isaiah 53 long-form (its v1 folder, separately). NOTE: #07/#08 not assembled yet — only kit FINISHED videos.
+   - Real automated `generate()`/`redteam()` route via the agent bridge (LLM_PROVIDER=agent) — service `.agent_bridge` requests, OR keep agent-authoring the JSON per media like the #06 sample.
+   - ⚠️ Panel is DEGRADED per the doctor session below (grok flaky, codex garbled verdicts) — heed that when running `--panel`.
+
+## ═══════════ SESSION 2026-06-14 — AI PANEL HEALTH CHECK ("doctor") ═══════════
+
+**Built `panel_doctor.py` (repo root) — a health check for the independent-review AI panel.**
+Run: `.venv\Scripts\python.exe panel_doctor.py`  (add `--smoke` for a live test, `--json out.json`).
+Full memory: `panel-doctor.md`.
+
+**Diagnosis 2026-06-14 (35 past runs scanned):**
+- 🟢 claude 100% · gemini 100% — rock solid.
+- 🟢 cursor 94% (primary).  🟡 codex 94% — twice logged the literal template `PASS | REVISE | FAIL` as its verdict.
+- 🔴 **grok 63% — chronically flaky** (~1-in-3 runs returns nothing). The weak link.
+- ⚠️ **Jun-12 regression:** cursor AND codex BOTH hung past their 300s timeout (Windows can't kill the child → ran 778/788/1544/340s). So **Passover Lamb + Bronze Serpent narrations ran on a degraded 3/5 panel** that lost the primary (cursor) — nothing flagged it.
+- Two LLM paths (don't conflate): engine self-review = `LLM_PROVIDER=agent` bridge (in-chat agent); the INDEPENDENT panel = 5 real external CLIs. Doctor checks the second.
+
+**PICK UP HERE TOMORROW:**
+1. Re-review the 3 degraded past runs — `STILLS_REDO_PLAN`, `Passover Lamb` narration, `Bronze Serpent` narration.
+2. Harden the verdict-parser in `independent_review.py` (reject echoed-template / markdown-leak verdicts — copy `verdict_clean()` from `panel_doctor.py`).
+3. Decide grok's fate — drop or replace; it's the weak link.
+4. Optionally run `panel_doctor.py --smoke` to confirm live state (cursor/codex may hang 13–25 min — leave it running).
+5. Minor: `.agent_bridge/requests/` has 3 stale `*.request.md` (0023–0025) + a `bash.exe.stackdump` — clean up if no servicer is running.
+
+## ═══════════ SESSION 2026-06-13d (PREVIOUS) — #05 He Hath Done This COMPLETE + NEW RULE: ambient/SFX bed by default ═══════════
 
 **Still going (user: "keep going"). Metered spend this session so far ≈ $13 (#04 3 clips ~$2 + #05 ~$11: 14 stills+2 retries ~$8, 14 Kling clips ~$9... NBP $0.50 + Kling $0.65; full #05 ≈ $11).**
 
