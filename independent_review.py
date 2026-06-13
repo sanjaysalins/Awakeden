@@ -82,6 +82,20 @@ LENS_PLAN = """LENS — judge this PLAN on (be specific, cite the exact step/cla
 - Reuse: does it duplicate tools that already exist instead of reusing them?
 - Cost / spend and whether it's justified."""
 
+LENS_UPLOAD = """LENS — judge this UPLOAD-METADATA KIT (titles / descriptions / tags /
+hashtags for YouTube, TikTok, Facebook, Instagram). Be specific, cite the exact
+platform + phrase:
+- HOOKY BUT HONEST: does any title clickbait, sensationalise, or overclaim doctrine
+  or history? A curiosity hook is fine ONLY if it is true to the text. Flag any lie
+  or bait-and-switch (metadata promising what the video doesn't deliver).
+- KJV verbatim: any quoted verse must be exact KJV. Flag an altered word.
+- Doctrine: evangelical, Christ-pointing, no fear / gain-loss / works framing.
+- Platform fit: right tone + a strong FIRST line for TikTok/Instagram; long-form vs
+  short framing correct; hashtag counts sane; tags are real search keywords.
+- SEO honesty: keywords/tags are relevant to the actual content (no tag-stuffing).
+- Forgettable / templated titles that won't earn the click honestly.
+- Brand: CTA-to-Jesus present; footer/links not mangled."""
+
 REVIEW_TEMPLATE = """You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
 are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
 
@@ -163,7 +177,7 @@ def run_one(name: str, prompt: str, outdir: Path) -> tuple[str, bool, str, float
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("artifact", help="path to the finished narration/plan file")
-    ap.add_argument("--type", dest="kind", choices=["narration", "plan"], required=True)
+    ap.add_argument("--type", dest="kind", choices=["narration", "plan", "upload"], required=True)
     ap.add_argument("--providers", default="cursor,claude,gemini,codex,grok")
     ap.add_argument("--context", default="", help="extra brief, or a path to one")
     ap.add_argument("--red-team", dest="red_team", action="store_true",
@@ -186,7 +200,7 @@ def main() -> int:
         ctx = Path(ctx).read_text(encoding="utf-8").strip()
     ctx_block = f"\nADDITIONAL CONTEXT / BRIEF:\n{ctx}\n" if ctx else ""
 
-    lens = LENS_NARRATION if args.kind == "narration" else LENS_PLAN
+    lens = {"narration": LENS_NARRATION, "plan": LENS_PLAN, "upload": LENS_UPLOAD}[args.kind]
     if args.red_team:
         lens = ("RED-TEAM LENS — you are a HOSTILE adversary. Assume it is flawed and PROVE it. "
                 "Hunt doctrinal error, Scripture misquote/overclaim, cheesy/tired lines, and anything "
