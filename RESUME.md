@@ -1,5 +1,33 @@
 # RESUME.md — start here next session
 
+## ═══════════ SESSION 2026-06-13 (LATEST) — PSALM 22 SHORTS BATCH: #01/#02/#03 DONE+CAPTIONED · #04 11/14 CLIPS RENDERED (PAUSED) ═══════════
+
+**Paused by user ("pause now, save everything, resume later"). Env is HEALTHY (WMI fix holds — see below). Pattern proven 3×.**
+
+### ▶▶ DO FIRST NEXT SESSION — finish #04 "Declared To The Brethren" (resurrection turn):
+Folder: `longform\02_Psalm_22_Song_From_The_Cross\v1\shorts\04_Declared_To_The_Brethren\`
+- **State:** all 14 stills rendered + QC'd ✅; **11 of 14 clips animated** (`visual\nbp\01..11_*.mp4`). **Scenes 12, 13, 14 still need cut-plans + Kling render.**
+  - 12 = `12_a-thousand-years-apart.png` (diptych David ↔ risen Christ)
+  - 13 = `13_welcomed-into-the-family.png` (gathered group, welcomed in)
+  - 14 = `14_the-scarred-hands-in-praise.png` (two open hands with nail-marks, lifted)
+- **Resume steps:**
+  1. Re-run `cli_visual.py "<#04>" --provider nbp --no-short-only --kling-skip-audit` (background, sandbox-off, PYTHONUNBUFFERED=1). It's idempotent — skips the 11 done clips, asks for cut-plans 12/13/14.
+  2. Service the agent-bridge: author each `kling-director` cut-plan (locked SKILL: state-only frozen tableau, 6–9 crop-cuts, ≤3 face cuts, no vignette-zooms, end on Christ; 10.0s, 9:16) by writing `.agent_bridge/responses/<id>.txt`; **auto-pass** every `kling-audit` request (`{"passed":true,"issues":[]}`).
+  3. Assemble: `cli_assemble.py "<#04>" --provider nbp --hero 10 --replan --rebuild` (hero 10 = welcoming risen Christ). Service episode-fit / jigsaw / review / verify bridges (auto-pass faithful).
+  4. Caption: `.venv\Scripts\python.exe -m veed_io.caption --video "<#04>\assembly\viral_cut.mp4" --script "<spoken narration>"` → `viral_cut_captioned.mp4`.
+- NOTE: #04 risen-Christ scenes use the RESURRECTION variant + carry a soft glory-light (acceptable for the risen Lord; Kling won't amplify it); robed (not bare-torso) for clean animation.
+
+### ▶ THEN #05–#08 (same loop, user pre-approved the whole batch — "do ALL remaining, batch-review at end"):
+#05 He Hath Done This (Ps 22:31~Jn 19:30) · #06 The Ends Of The Earth (22:27) · #07 The Body Foretold (22:14,17) · #08 I Thirst (22:15~Jn 19:28).
+Each: synth `narration.creation.json` from the locked narration → `cli_visual.py "<folder>" --plan-only` → render FULL pool NBP + QC → animate ALL → `cli_assemble.py --hero <cross/risen> --replan --rebuild` → caption. $25/short ceiling, all-NBP for faces. Folders already exist + audio rendered.
+
+### ✅ DONE THIS BATCH (postable, captioned):
+- **#01 The Crucifixion Foretold** — `…\01_The_Crucifixion_Foretold\assembly\viral_cut_captioned.mp4` (14-clip fast viral edit, $6.35)
+- **#02 The Mockers' Words** — `…\02_The_Mockers_Words\assembly\viral_cut_captioned.mp4` (~$17.60)
+- **#03 The Forsaken Cry** — `…\03_The_Forsaken_Cry\assembly\viral_cut_captioned.mp4` (~$17.60)
+
+### Env note: the WMI fix (sitecustomize.py in BOTH venvs) is HOLDING. Don't delete it unless you've run `winmgmt /resetrepository` elevated. Full-pool render + direct-Kling + caption all work.
+
 ## ═══════════ SESSION 2026-06-12 — ⚠️ ENVIRONMENT BLOCKER (native-import hangs) + #01 RE-ASSEMBLED + #01 SCENE-06 NEEDS RE-RENDER ═══════════
 
 ### ✅ RESOLVED 2026-06-12: the import hang was a **hung Windows WMI service** (winmgmt). Python 3.13 `platform.uname()`→`_wmi_query()` blocked forever; aiohttp (google.genai/NBP) + ctranslate2 (whisper) call platform at import → hung. **FIX (no admin, no reboot):** `sitecustomize.py` added to BOTH venvs (`*/.venv/Lib/site-packages/sitecustomize.py`) makes `platform._wmi_query` raise OSError → fast `sys.getwindowsversion()` fallback. Verified: genai+ct2+faster_whisper import in ~6s. **Delete those 2 files once WMI is healthy** (elevated `net stop winmgmt & net start winmgmt`, or `winmgmt /resetrepository`). A plain reboot did NOT clear it. Original symptom notes below (historical):

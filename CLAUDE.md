@@ -97,7 +97,7 @@ config.py                     env, model, paths, voice map, all knobs
 cli.py                        interactive text/audio entry point
 cli_visual.py                 visual-stage entry point (--provider, --plan-only, etc.)
 data/constitution.md          the 60s charter + VISUAL ARC section
-data/series.json              8 greenlit series
+data/series.json              10 greenlit series (76 episodes)
 data/structures.json          narration structures; default = gospel-five-beat
 data/kjv_cache.json           cached exact-KJV lookups (also passage:<ref> wider)
 

@@ -1,0 +1,41 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, slower pacing with longer holds and restrained cuts.\n\nClassical devotional oil painting realism. A soft warm dawn radiance widens behind the risen figure while warm light falls across a white-and-deep-red robe and open welcoming arms; visible brushwork, craquelure, aged varnish throughout. Keep the painted light exactly as it is, steady, no added rays.\n\nScene contains:\nThe risen Christ stands robed in white and deep red, his arms opening toward the viewer in welcome, the healed scars open in his hands, a soft dawn radiance widening behind him, his living face warm and inviting, the gathered family soft in the shadow beside him. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the risen Christ, arms open in welcome.\n\nCut to mid framing — the upper body and warm inviting face.\n\nCut to close-up — the warm, inviting face.\n\nCut to insert — an open scarred hand extended in welcome.\n\nCut to insert — the other open scarred hand.\n\nCut to lower framing — the white-and-red robe in folds.\n\nReturn to full composition.\n\nEnd hold on the welcoming risen Christ.\n\nMicro-motion:\n- minimal\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\nAn open, living welcome into the family.\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no halo added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.43,
+      "description": "Start on full composition — risen Christ, arms open in welcome"
+    },
+    {
+      "start_sec": 1.43,
+      "end_sec": 2.86,
+      "description": "Cut to mid framing — upper body and warm inviting face"
+    },
+    {
+      "start_sec": 2.86,
+      "end_sec": 4.29,
+      "description": "Cut to close-up — the warm, inviting face"
+    },
+    {
+      "start_sec": 4.29,
+      "end_sec": 5.71,
+      "description": "Cut to insert — an open scarred hand extended in welcome"
+    },
+    {
+      "start_sec": 5.71,
+      "end_sec": 7.14,
+      "description": "Cut to insert — the other open scarred hand"
+    },
+    {
+      "start_sec": 7.14,
+      "end_sec": 8.57,
+      "description": "Cut to lower framing — the white-and-red robe in folds"
+    },
+    {
+      "start_sec": 8.57,
+      "end_sec": 10.0,
+      "description": "Return to full composition, end hold on the welcoming risen Christ"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, slower pacing with longer holds and restrained cuts.\n\nClassical devotional oil painting realism. A soft warm dawn light falls across a clean white-and-deep-red robe and a calm living face, the dark receding behind; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\nThe risen Christ stands alive, robed in a clean white tunic and deep-red mantle, his bearded face calm and living, his open hands turned to show the healed scars of the nails, soft dawn light around him and the dark of the tomb receding behind. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the risen Christ standing, robed, hands open showing the scars.\n\nCut to mid framing — the upper body and calm living face.\n\nCut to close-up — the calm, living face.\n\nCut to insert — an open hand showing the healed nail-scar.\n\nCut to insert — the other open scarred hand.\n\nCut to lower framing — the white-and-red robe falling in folds.\n\nReturn to full composition.\n\nEnd hold on the risen Christ standing alive.\n\nMicro-motion:\n- minimal\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\nLiving, quiet triumph.\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no halo added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.43,
+      "description": "Start on full composition — risen Christ standing, robed, hands open showing the scars"
+    },
+    {
+      "start_sec": 1.43,
+      "end_sec": 2.86,
+      "description": "Cut to mid framing — upper body and calm living face"
+    },
+    {
+      "start_sec": 2.86,
+      "end_sec": 4.29,
+      "description": "Cut to close-up — the calm, living face"
+    },
+    {
+      "start_sec": 4.29,
+      "end_sec": 5.71,
+      "description": "Cut to insert — an open hand showing the healed nail-scar"
+    },
+    {
+      "start_sec": 5.71,
+      "end_sec": 7.14,
+      "description": "Cut to insert — the other open scarred hand"
+    },
+    {
+      "start_sec": 7.14,
+      "end_sec": 8.57,
+      "description": "Cut to lower framing — the white-and-red robe in folds"
+    },
+    {
+      "start_sec": 8.57,
+      "end_sec": 10.0,
+      "description": "Return to full composition, end hold on the risen Christ standing alive"
+    }
+  ]
+}

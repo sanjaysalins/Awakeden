@@ -1,0 +1,41 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, slower pacing with longer holds and restrained cuts.\n\nClassical devotional oil painting realism. Soft dawn light rests on a warm, inviting living face against gentle shadow; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\nA close reverent view of the risen Christ's living face turned gently toward the viewer, the eyes warm and inviting, a faint scar at the brow, soft dawn light on the face against gentle shadow, a fold of white robe at the shoulder. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the inviting face turned toward the viewer.\n\nCut to close-up — the warm, inviting eyes.\n\nCut to insert — the faint scar at the brow.\n\nCut to macro detail — soft dawn light on the cheek.\n\nCut to insert — the gentle, parted lips.\n\nCut to lower framing — the white robe at the shoulder.\n\nReturn to full composition.\n\nEnd hold on the warm, inviting face.\n\nMicro-motion:\n- minimal\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\nWarm, personal invitation.\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no halo added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.43,
+      "description": "Start on full composition — the inviting face turned toward the viewer"
+    },
+    {
+      "start_sec": 1.43,
+      "end_sec": 2.86,
+      "description": "Cut to close-up — the warm, inviting eyes"
+    },
+    {
+      "start_sec": 2.86,
+      "end_sec": 4.29,
+      "description": "Cut to insert — the faint scar at the brow"
+    },
+    {
+      "start_sec": 4.29,
+      "end_sec": 5.71,
+      "description": "Cut to macro detail — soft dawn light on the cheek"
+    },
+    {
+      "start_sec": 5.71,
+      "end_sec": 7.14,
+      "description": "Cut to insert — the gentle, parted lips"
+    },
+    {
+      "start_sec": 7.14,
+      "end_sec": 8.57,
+      "description": "Cut to lower framing — the white robe at the shoulder"
+    },
+    {
+      "start_sec": 8.57,
+      "end_sec": 10.0,
+      "description": "Return to full composition, end hold on the warm, inviting face"
+    }
+  ]
+}
