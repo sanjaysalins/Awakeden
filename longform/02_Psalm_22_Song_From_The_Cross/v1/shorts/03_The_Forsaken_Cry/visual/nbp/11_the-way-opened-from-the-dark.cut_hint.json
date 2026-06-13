@@ -1,0 +1,18 @@
+{
+  "scene_index": 11,
+  "title": "The Way Opened from the Dark",
+  "scene_type": "single",
+  "framing": "low-angle",
+  "arc_position": "closing-devotional",
+  "jesus_variant": "passion",
+  "viral_role": "close",
+  "pacing": "slower",
+  "macro_elements": [
+    "the inclined head",
+    "the widening break of pale gold light",
+    "an outstretched nailed hand",
+    "the dark hill below"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

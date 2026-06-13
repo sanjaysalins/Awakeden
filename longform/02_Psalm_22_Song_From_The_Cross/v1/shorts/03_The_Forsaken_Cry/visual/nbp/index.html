@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Visual review — shorts / 03_The_Forsaken_Cry / nbp</title>
+<style>
+  :root {
+    --bg: #18181b;
+    --card: #27272a;
+    --card-soft: #3f3f46;
+    --text: #e4e4e7;
+    --text-dim: #a1a1aa;
+    --accent: #fde68a;
+    --pass: #4ade80;
+    --fail: #f87171;
+    --warn: #fbbf24;
+    --border: #52525b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+    background: var(--bg); color: var(--text);
+    margin: 0; padding: 32px;
+    line-height: 1.45;
+  }
+  header {
+    max-width: 1280px; margin: 0 auto 32px;
+  }
+  h1 { font-size: 22px; margin: 0 0 8px; font-weight: 600; }
+  .subtitle { color: var(--text-dim); font-size: 13px; }
+  .grid { max-width: 1280px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+  }
+  .card .img-col {
+    background: #000;
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    padding: 12px;
+  }
+  .card img, .card video { max-width: 100%; max-height: 480px; border-radius: 4px; display: block; }
+  .media-badge {
+    position: absolute; top: 16px; left: 16px;
+    padding: 2px 8px; border-radius: 3px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0.04em;
+    font-family: ui-monospace, monospace;
+    pointer-events: none;
+  }
+  .media-badge.clip { background: rgba(74,222,128,0.9); color: #18181b; }
+  .media-badge.still { background: rgba(161,161,170,0.85); color: #18181b; }
+  .card .meta-col { padding: 20px 24px; }
+  .ref {
+    display: inline-block;
+    background: var(--accent);
+    color: #18181b;
+    font-weight: 700; font-size: 14px;
+    padding: 4px 10px; border-radius: 4px;
+    margin-right: 12px;
+    font-family: ui-monospace, "Cascadia Code", monospace;
+  }
+  .title { font-size: 18px; font-weight: 600; display: inline; }
+  .tags { margin: 10px 0 16px; }
+  .tag {
+    display: inline-block;
+    background: var(--card-soft);
+    color: var(--text-dim);
+    padding: 2px 8px; margin-right: 6px;
+    border-radius: 3px; font-size: 11px;
+    font-family: ui-monospace, monospace;
+  }
+  .verdict {
+    display: inline-block;
+    padding: 3px 10px; border-radius: 4px;
+    font-size: 12px; font-weight: 600;
+    font-family: ui-monospace, monospace;
+    margin-bottom: 16px;
+  }
+  .verdict.pass { background: rgba(74,222,128,0.15); color: var(--pass); border: 1px solid var(--pass); }
+  .verdict.fail { background: rgba(248,113,113,0.15); color: var(--fail); border: 1px solid var(--fail); }
+  .verdict.none { background: var(--card-soft); color: var(--text-dim); }
+  .section { margin: 14px 0; }
+  .section-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); margin-bottom: 4px; }
+  .section-body { font-size: 14px; color: var(--text); }
+  ul.issues { margin: 6px 0 0; padding-left: 20px; font-size: 13px; }
+  ul.issues li { margin: 4px 0; }
+  ul.issues .claim { color: var(--warn); }
+  ul.issues .actual { color: var(--text-dim); }
+  .filename {
+    font-family: ui-monospace, monospace; font-size: 11px;
+    color: var(--text-dim); margin-top: 12px;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Visual review — shorts / 03_The_Forsaken_Cry / nbp</h1>
+  <div class="subtitle">14 rendered scene(s) via <code>nbp</code>. Scenes with a Kling clip play inline (looping, muted — unmute with the controls); reference any scene by its <code>#NN</code> badge.</div>
+</header>
+<div class="grid">
+<div class="card"><div class="img-col"><img src="01_the-cry.png" alt="Scene 1"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#01</span><span class="title">The Cry</span><div class="tags"><span class="tag">single</span> <span class="tag">close</span> <span class="tag">opening-hook</span> <span class="tag">jesus=passion</span> <span class="tag">role=hook-open</span> <span class="tag">pacing=slower</span> <span class="tag">priority=1</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">the crucified Christ&#39;s lifted face, mouth open in a cry, eyes toward a dark sky</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">desolate, lonely anguish</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">Hook on the forsaken cry</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the open crying mouth</li><li>the lifted, anguished eyes</li><li>the crown of thorns</li><li>a tear track on the cheek</li></ul></div><div class="filename">01_the-cry.png</div></div></div>
+<div class="card"><div class="img-col"><img src="02_davids-forsaken-psalm.png" alt="Scene 2"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#02</span><span class="title">David&#39;s Forsaken Psalm</span><div class="tags"><span class="tag">unified</span> <span class="tag">mid</span> <span class="tag">ot-echo</span> <span class="tag">role=build</span> <span class="tag">pacing=slower</span> <span class="tag">priority=6</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">aged David alone at a scroll in shadow, an oil lamp, faint background vignettes of forsakenness</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">lonely, sober foresight</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">The psalm of the forsaken man, written early</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the feather pen at rest</li><li>the wet first Hebrew line</li><li>the thin lamp flame</li><li>David&#39;s sorrowful brow</li></ul></div><div class="filename">02_davids-forsaken-psalm.png</div></div></div>
+<div class="card"><div class="img-col"><img src="03_the-first-line.png" alt="Scene 3"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#03</span><span class="title">The First Line</span><div class="tags"><span class="tag">single</span> <span class="tag">close</span> <span class="tag">theological-centre</span> <span class="tag">role=pivot</span> <span class="tag">pacing=slower</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">extreme close on a Hebrew scroll line, a fingertip beneath it</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">quiet gravity</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">The exact opening line</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the fingertip</li><li>the first cracked Hebrew line</li><li>the fibrous parchment grain</li></ul></div><div class="filename">03_the-first-line.png</div></div></div>
+<div class="card"><div class="img-col"><img src="04_the-ninth-hour.png" alt="Scene 4"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#04</span><span class="title">The Ninth Hour</span><div class="tags"><span class="tag">single</span> <span class="tag">low-angle</span> <span class="tag">nt-gospel-link</span> <span class="tag">jesus=passion</span> <span class="tag">role=pivot</span> <span class="tag">pacing=slower</span> <span class="tag">priority=2</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">the crucified Christ on the cross under a darkened noon sky</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">cosmic dread</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the darkness at the cry</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the lifted head against the black sky</li><li>the darkened sun</li><li>an outstretched nailed hand</li><li>the thin cold light on the robe</li></ul></div><div class="filename">04_the-ninth-hour.png</div></div></div>
+<div class="card"><div class="img-col"><img src="05_my-god-my-god.png" alt="Scene 5"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#05</span><span class="title">My God, My God</span><div class="tags"><span class="tag">single</span> <span class="tag">close</span> <span class="tag">central-conflict</span> <span class="tag">jesus=passion</span> <span class="tag">role=climax</span> <span class="tag">pacing=slower</span> <span class="tag">priority=3</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">Christ&#39;s face lifted, mouth open, eyes toward heaven</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">anguished appeal</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the lifted cry</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the open crying mouth</li><li>the upturned searching eyes</li><li>the crown of thorns</li><li>the cords of the strained neck</li></ul></div><div class="filename">05_my-god-my-god.png</div></div></div>
+<div class="card"><div class="img-col"><img src="06_darkness-over-the-land.png" alt="Scene 6"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#06</span><span class="title">Darkness Over the Land</span><div class="tags"><span class="tag">unified</span> <span class="tag">wide</span> <span class="tag">nt-gospel-link</span> <span class="tag">jesus=passion</span> <span class="tag">role=build</span> <span class="tag">pacing=slower</span> <span class="tag">priority=4</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">the cross on the hill under a black sky, a darkened land, distant figures</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">vast desolation</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the darkened land at the cross</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the pale central figure on the cross</li><li>the darkened sun</li><li>the dark hill</li><li>the shadowed walls</li></ul></div><div class="section"><div class="section-label">Audit issues</div><ul class="issues"><li><span class="claim">spec:</span> robed at the waist<br><span class="actual">actual:</span> crucified figure is bare-torso with a loincloth (traditional crucifixion); strong still, but watch the direct-Kling stage accepts it - if rejected, exclude scene 6 from the cut</li></ul></div><div class="filename">06_darkness-over-the-land.png</div></div></div>
+<div class="card"><div class="img-col"><img src="07_the-same-words.png" alt="Scene 7"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#07</span><span class="title">The Same Words</span><div class="tags"><span class="tag">single</span> <span class="tag">close</span> <span class="tag">revelation</span> <span class="tag">role=build</span> <span class="tag">pacing=slower</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">the Hebrew first line of the psalm, the dark cross beam beyond</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">solemn recognition</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the verbatim echo</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the first Hebrew line</li><li>the looming dark cross beam</li><li>the worn ink</li><li>the pale parchment fibre</li></ul></div><div class="filename">07_the-same-words.png</div></div></div>
+<div class="card"><div class="img-col"><img src="08_still-my-god.png" alt="Scene 8"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#08</span><span class="title">Still &#39;My God&#39;</span><div class="tags"><span class="tag">single</span> <span class="tag">close</span> <span class="tag">personal-confrontation</span> <span class="tag">jesus=passion</span> <span class="tag">role=build</span> <span class="tag">pacing=slower</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">Christ&#39;s anguished face with eyes still lifted in trust</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">trust amid darkness</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">faith holding in the dereliction</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the steady lifted eyes</li><li>the strained brow</li><li>the crown of thorns</li><li>the faint warm light on the cheek</li></ul></div><div class="filename">08_still-my-god.png</div></div></div>
+<div class="card"><div class="img-col"><img src="09_bearing-the-forsaking.png" alt="Scene 9"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#09</span><span class="title">Bearing the Forsaking</span><div class="tags"><span class="tag">unified</span> <span class="tag">mid</span> <span class="tag">theological-centre</span> <span class="tag">jesus=passion</span> <span class="tag">role=pivot</span> <span class="tag">pacing=slower</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">Christ on the cross bearing the dark, the light turned away</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">borne judgment</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the substitution — bearing the forsaking our sin deserved</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the bowed head in darkness</li><li>the pale robe</li><li>a spotless lamb in the gloom</li><li>broken chains at the foot</li></ul></div><div class="filename">09_bearing-the-forsaking.png</div></div></div>
+<div class="card"><div class="img-col"><img src="10_so-you-never-will-be.png" alt="Scene 10"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#10</span><span class="title">So You Never Will Be</span><div class="tags"><span class="tag">single</span> <span class="tag">close</span> <span class="tag">emotional-turning</span> <span class="tag">jesus=passion</span> <span class="tag">role=close</span> <span class="tag">pacing=slower</span> <span class="tag">priority=5</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">Christ&#39;s face turned up, a faint break of pale light</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">the turn from dark to grace</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the turn toward grace</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the gently upturned face</li><li>the first break of pale light on the brow</li><li>the crown of thorns</li><li>the softened eyes</li></ul></div><div class="filename">10_so-you-never-will-be.png</div></div></div>
+<div class="card"><div class="img-col"><img src="11_the-way-opened-from-the-dark.png" alt="Scene 11"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#11</span><span class="title">The Way Opened from the Dark</span><div class="tags"><span class="tag">single</span> <span class="tag">low-angle</span> <span class="tag">closing-devotional</span> <span class="tag">jesus=passion</span> <span class="tag">role=close</span> <span class="tag">pacing=slower</span> <span class="tag">priority=5</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">the crucified Christ on the cross, a break of pale light behind the dark hill</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">open, costly welcome</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the gospel-pivot hero close</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the inclined head</li><li>the widening break of pale gold light</li><li>an outstretched nailed hand</li><li>the dark hill below</li></ul></div><div class="section"><div class="section-label">Audit issues</div><ul class="issues"><li><span class="claim">spec:</span> soft break of light<br><span class="actual">actual:</span> the painted break of light reads as a radiant burst behind the cross - strong but appropriate for the gospel-landing hero; it is painted (not an added post-glow)</li></ul></div><div class="filename">11_the-way-opened-from-the-dark.png</div></div></div>
+<div class="card"><div class="img-col"><img src="12_a-thousand-years-apart.png" alt="Scene 12"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#12</span><span class="title">A Thousand Years Apart</span><div class="tags"><span class="tag">unified</span> <span class="tag">wide</span> <span class="tag">ot-echo</span> <span class="tag">jesus=passion</span> <span class="tag">role=build</span> <span class="tag">pacing=slower</span> <span class="tag">priority=7</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">David at his scroll at left, the darkened cross at right</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">solemn wonder</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the two scenes joined</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>David&#39;s pen on the scroll</li><li>the thin lamp flame</li><li>the darkened cross</li><li>the corridor of shadow</li></ul></div><div class="filename">12_a-thousand-years-apart.png</div></div></div>
+<div class="card"><div class="img-col"><img src="13_however-far-youve-run.png" alt="Scene 13"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#13</span><span class="title">However Far You&#39;ve Run</span><div class="tags"><span class="tag">single</span> <span class="tag">wide</span> <span class="tag">human-response</span> <span class="tag">role=build</span> <span class="tag">pacing=slower</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">a lone distant figure on a dark road, a far break of light by a cross</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">the long way home</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the way home for the listener</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the lone small figure</li><li>the dark empty road</li><li>the far break of light</li><li>the distant cross on the horizon</li></ul></div><div class="filename">13_however-far-youve-run.png</div></div></div>
+<div class="card"><div class="img-col"><img src="14_he-opened-it-from-the-dark.png" alt="Scene 14"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#14</span><span class="title">He Opened It from the Dark</span><div class="tags"><span class="tag">single</span> <span class="tag">close</span> <span class="tag">nt-gospel-link</span> <span class="tag">jesus=passion</span> <span class="tag">role=build</span> <span class="tag">pacing=slower</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">a nailed open hand against a break of pale light</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">costly opening</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the way opened, in one detail</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the iron nail in the palm</li><li>the open relaxed fingers</li><li>the break of pale light beyond</li><li>warm light on the knuckles</li></ul></div><div class="section"><div class="section-label">Audit issues</div><ul class="issues"><li><span class="claim">spec:</span> extreme close on the hand alone<br><span class="actual">actual:</span> shows the nailed hand prominently plus the face and the break of light beyond - broader than a pure macro but on-beat and clean</li></ul></div><div class="filename">14_he-opened-it-from-the-dark.png</div></div></div>
+</div>
+</body>
+</html>

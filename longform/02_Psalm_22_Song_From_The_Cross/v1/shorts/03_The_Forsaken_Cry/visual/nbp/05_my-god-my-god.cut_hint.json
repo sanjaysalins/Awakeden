@@ -1,0 +1,18 @@
+{
+  "scene_index": 5,
+  "title": "My God, My God",
+  "scene_type": "single",
+  "framing": "close",
+  "arc_position": "central-conflict",
+  "jesus_variant": "passion",
+  "viral_role": "climax",
+  "pacing": "slower",
+  "macro_elements": [
+    "the open crying mouth",
+    "the upturned searching eyes",
+    "the crown of thorns",
+    "the cords of the strained neck"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

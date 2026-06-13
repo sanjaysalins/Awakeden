@@ -1,0 +1,18 @@
+{
+  "scene_index": 13,
+  "title": "However Far You've Run",
+  "scene_type": "single",
+  "framing": "wide",
+  "arc_position": "human-response",
+  "jesus_variant": null,
+  "viral_role": "build",
+  "pacing": "slower",
+  "macro_elements": [
+    "the lone small figure",
+    "the dark empty road",
+    "the far break of light",
+    "the distant cross on the horizon"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

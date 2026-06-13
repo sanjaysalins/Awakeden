@@ -1,0 +1,18 @@
+{
+  "scene_index": 7,
+  "title": "The Same Words",
+  "scene_type": "single",
+  "framing": "close",
+  "arc_position": "revelation",
+  "jesus_variant": null,
+  "viral_role": "build",
+  "pacing": "slower",
+  "macro_elements": [
+    "the first Hebrew line",
+    "the looming dark cross beam",
+    "the worn ink",
+    "the pale parchment fibre"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}
