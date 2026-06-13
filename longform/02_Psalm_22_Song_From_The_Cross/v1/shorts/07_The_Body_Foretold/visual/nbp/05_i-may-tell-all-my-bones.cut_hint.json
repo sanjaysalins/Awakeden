@@ -1,0 +1,18 @@
+{
+  "scene_index": 5,
+  "title": "I May Tell All My Bones",
+  "scene_type": "single",
+  "framing": "close",
+  "arc_position": "revelation",
+  "jesus_variant": "passion",
+  "viral_role": "build",
+  "pacing": "slower",
+  "macro_elements": [
+    "the countable ribs",
+    "the drawn-tight skin",
+    "the stretched flank",
+    "the shadowed hollows between bones"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

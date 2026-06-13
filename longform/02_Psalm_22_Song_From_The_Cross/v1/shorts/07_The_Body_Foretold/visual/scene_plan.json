@@ -530,32 +530,124 @@
       {
         "agent": "Scene Director",
         "verdict": "STRONG",
-        "note": "Independent read: the body-foretold arc is carried, not just illustrated — wrenched body open, quoted-line proofs, pierced/written-early conviction, crushed-so-free landing."
+        "note": "Body-foretold arc drives hook->proof->conviction->landing; [1] out of joint to [4] crushed-in-your-place to [12] crushed-so-free."
       },
       {
         "agent": "Theologian",
         "verdict": "STRONG",
-        "note": "Echoes are genuinely NT-anchored (John 19:37 quotes Zech 12:10; 1 Pet 2:24 echoes Isa 53:5); descriptive-match guarded by king-seeing-a-death and the diptych. No forced verbal prophecy, no fear/works."
+        "note": "NT-anchored echoes real (Zech 12:10->John 19:37; Isa 53:5->1 Pet 2:24); descriptive match guarded; no forced verbal prophecy."
       },
       {
         "agent": "Visual Skeptic",
         "verdict": "CAUTION",
-        "note": "Heavy on crucifixion-body close-ups; reverent and state-only with loincloth, but render with restraint so it reads as devotional, not clinical or lurid."
+        "note": "Many body close-ups; reverent, loincloth, render with restraint."
       },
       {
         "agent": "Character-Consistency Checker",
         "verdict": "STRONG",
-        "note": "jesus_variant 'passion' consistent across crucified scenes; king and road correctly null."
+        "note": "jesus_variant 'passion' consistent; king/road null."
       },
       {
         "agent": "Editor",
         "verdict": "STRONG",
-        "note": "Banned token 'frame' now removed from scene 5; state-only prose, 14 scenes, framings well distributed."
+        "note": "State-only, banned-token clean, 14 scenes, framings distributed."
       },
       {
         "agent": "Jaded Viewer",
         "verdict": "CAUTION",
-        "note": "The body focus could turn morbid; the king-who-wrote-it and the freed-figure exchange give it gospel direction beyond suffering."
+        "note": "Body focus could turn morbid; king-who-wrote-it and freed-figure give gospel direction."
+      }
+    ],
+    "gates": [
+      {
+        "gate": "SP-G1 Biblical Accuracy",
+        "verdict": "PASS",
+        "evidence": "Ps 22:14,17 / Zech 12:10 / Isa 53:5 defensible; loincloth traditional.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G2 Narration Alignment",
+        "verdict": "PASS",
+        "evidence": "Every beat id in ['hook', 'point', 'proof', 'conviction', 'landing'] has >=1 supporting scene.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G3 Visual Variety",
+        "verdict": "PASS",
+        "evidence": "9 single + 5 unified; varied regions.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G4 Theological Honesty",
+        "verdict": "PASS",
+        "evidence": "Descriptive match honest; grace landing.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G5 Prompt Conformance",
+        "verdict": "PASS",
+        "evidence": "All subject_block + mood_block content clear of the banned-token list.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G6 Type Discipline",
+        "verdict": "PASS",
+        "evidence": "every unified scene declares 3-5 vignettes (counts: #2=4, #6=4, #8=4, #9=4, #12=4)",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G7 Character Consistency",
+        "verdict": "PASS",
+        "evidence": "jesus_variant consistent.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G8 Composition Distribution",
+        "verdict": "PASS",
+        "evidence": "4 distinct framings; max 'mid' at 6/14.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G9 Scene Mix & Gospel Frame",
+        "verdict": "PASS",
+        "evidence": "n=14: single=9, unified=5, nt-link=2, ot-echo=2",
+        "fix": ""
+      }
+    ],
+    "priority_fixes": []
+  },
+  "independent_review": {
+    "overall": "LOCKED",
+    "panel": [
+      {
+        "agent": "Scene Director",
+        "verdict": "STRONG",
+        "note": "Independent read: the body-foretold arc is carried, not just illustrated; wrenched body open, quoted-line proofs, pierced/written-early conviction, crushed-so-free landing."
+      },
+      {
+        "agent": "Theologian",
+        "verdict": "STRONG",
+        "note": "Echoes genuinely NT-anchored (John 19:37 quotes Zech 12:10; 1 Pet 2:24 echoes Isa 53:5); descriptive match guarded by the king-seeing-a-death and the diptych."
+      },
+      {
+        "agent": "Visual Skeptic",
+        "verdict": "CAUTION",
+        "note": "Heavy on crucifixion-body close-ups; reverent and loincloth, render with restraint so it reads devotional not clinical."
+      },
+      {
+        "agent": "Character-Consistency Checker",
+        "verdict": "STRONG",
+        "note": "jesus_variant 'passion' consistent across crucified scenes; king and road null."
+      },
+      {
+        "agent": "Editor",
+        "verdict": "STRONG",
+        "note": "State-only, banned-token clean, 14 scenes, framings distributed (5 close, 6 mid, 2 wide, 1 low-angle)."
+      },
+      {
+        "agent": "Jaded Viewer",
+        "verdict": "CAUTION",
+        "note": "Body focus could turn morbid; the king-who-wrote-it and freed-figure exchange give gospel direction."
       }
     ],
     "gates": [
@@ -574,7 +666,7 @@
       {
         "gate": "SP-G3 Visual Variety",
         "verdict": "PASS",
-        "evidence": "9 single + 5 unified; body regions varied plus king, diptych, onlookers, freed figure, road.",
+        "evidence": "9 single + 5 unified; varied body regions plus king, diptych, onlookers, freed figure, road.",
         "fix": ""
       },
       {
@@ -616,48 +708,11 @@
     ],
     "priority_fixes": []
   },
-  "independent_review": {
-    "overall": "",
-    "panel": [],
-    "gates": [
-      {
-        "gate": "SP-G2 Narration Alignment",
-        "verdict": "PASS",
-        "evidence": "Every beat id in ['hook', 'point', 'proof', 'conviction', 'landing'] has >=1 supporting scene.",
-        "fix": ""
-      },
-      {
-        "gate": "SP-G5 Prompt Conformance",
-        "verdict": "PASS",
-        "evidence": "All subject_block + mood_block content clear of the banned-token list.",
-        "fix": ""
-      },
-      {
-        "gate": "SP-G6 Type Discipline",
-        "verdict": "PASS",
-        "evidence": "every unified scene declares 3-5 vignettes (counts: #2=4, #6=4, #8=4, #9=4, #12=4)",
-        "fix": ""
-      },
-      {
-        "gate": "SP-G8 Composition Distribution",
-        "verdict": "PASS",
-        "evidence": "4 distinct framings; max 'mid' at 6/14.",
-        "fix": ""
-      },
-      {
-        "gate": "SP-G9 Scene Mix & Gospel Frame",
-        "verdict": "PASS",
-        "evidence": "n=14: single=9, unified=5, nt-link=2, ot-echo=2",
-        "fix": ""
-      }
-    ],
-    "priority_fixes": []
-  },
   "paper_cohesion": {
     "scope": "paper",
     "passed": true,
     "notes": "",
     "conflict_scenes": []
   },
-  "authoritative_overall": ""
+  "authoritative_overall": "LOCKED"
 }

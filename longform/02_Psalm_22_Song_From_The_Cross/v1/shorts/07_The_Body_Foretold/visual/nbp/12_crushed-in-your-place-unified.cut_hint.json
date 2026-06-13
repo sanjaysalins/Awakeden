@@ -1,0 +1,18 @@
+{
+  "scene_index": 12,
+  "title": "Crushed So Another Goes Free",
+  "scene_type": "unified",
+  "framing": "mid",
+  "arc_position": "nt-gospel-link",
+  "jesus_variant": "passion",
+  "viral_role": "climax",
+  "pacing": "slower",
+  "macro_elements": [
+    "the calm crucified figure",
+    "the freed rising figure",
+    "the loosened hands",
+    "the breaking light at the cross's foot"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

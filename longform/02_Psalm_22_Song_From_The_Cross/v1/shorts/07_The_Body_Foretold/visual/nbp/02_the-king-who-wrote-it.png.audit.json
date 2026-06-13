@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "no legible text (banned)",
+      "actual": "faint illegible cursive on the scroll (the psalm being written) — not readable words, appropriate to the scene, not a text overlay"
+    }
+  ],
+  "banned_token_hits": []
+}

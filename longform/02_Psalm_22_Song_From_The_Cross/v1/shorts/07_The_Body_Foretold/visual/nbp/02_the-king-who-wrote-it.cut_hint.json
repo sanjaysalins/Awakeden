@@ -1,0 +1,18 @@
+{
+  "scene_index": 2,
+  "title": "The King Who Wrote It",
+  "scene_type": "unified",
+  "framing": "mid",
+  "arc_position": "biblical-setting",
+  "jesus_variant": null,
+  "viral_role": "build",
+  "pacing": "slower",
+  "macro_elements": [
+    "the king's haunted lifted face",
+    "the feather pen at rest",
+    "the open scroll",
+    "the small harp at his side"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

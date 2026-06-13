@@ -67,21 +67,21 @@ Revision: removed the banned token 'frame' from scene 5 (now 'a starved and stre
   · visible: the cross against a widening dawn over a quiet land
 
 ## Self-review panel
-- **Scene Director** — `STRONG` — Independent read: the body-foretold arc is carried, not just illustrated — wrenched body open, quoted-line proofs, pierced/written-early conviction, crushed-so-free landing.
-- **Theologian** — `STRONG` — Echoes are genuinely NT-anchored (John 19:37 quotes Zech 12:10; 1 Pet 2:24 echoes Isa 53:5); descriptive-match guarded by king-seeing-a-death and the diptych. No forced verbal prophecy, no fear/works.
-- **Visual Skeptic** — `CAUTION` — Heavy on crucifixion-body close-ups; reverent and state-only with loincloth, but render with restraint so it reads as devotional, not clinical or lurid.
-- **Character-Consistency Checker** — `STRONG` — jesus_variant 'passion' consistent across crucified scenes; king and road correctly null.
-- **Editor** — `STRONG` — Banned token 'frame' now removed from scene 5; state-only prose, 14 scenes, framings well distributed.
-- **Jaded Viewer** — `CAUTION` — The body focus could turn morbid; the king-who-wrote-it and the freed-figure exchange give it gospel direction beyond suffering.
+- **Scene Director** — `STRONG` — Body-foretold arc drives hook->proof->conviction->landing; [1] out of joint to [4] crushed-in-your-place to [12] crushed-so-free.
+- **Theologian** — `STRONG` — NT-anchored echoes real (Zech 12:10->John 19:37; Isa 53:5->1 Pet 2:24); descriptive match guarded; no forced verbal prophecy.
+- **Visual Skeptic** — `CAUTION` — Many body close-ups; reverent, loincloth, render with restraint.
+- **Character-Consistency Checker** — `STRONG` — jesus_variant 'passion' consistent; king/road null.
+- **Editor** — `STRONG` — State-only, banned-token clean, 14 scenes, framings distributed.
+- **Jaded Viewer** — `CAUTION` — Body focus could turn morbid; king-who-wrote-it and freed-figure give gospel direction.
 
 ## Gates (8: SP-G1..SP-G8)
-- **SP-G1 Biblical Accuracy** — `PASS` — Ps 22:14,17 / Zech 12:10 / Isa 53:5 defensible; loincloth traditional; no invented detail.
+- **SP-G1 Biblical Accuracy** — `PASS` — Ps 22:14,17 / Zech 12:10 / Isa 53:5 defensible; loincloth traditional.
 - **SP-G2 Narration Alignment** — `PASS` — Every beat id in ['hook', 'point', 'proof', 'conviction', 'landing'] has >=1 supporting scene.
-- **SP-G3 Visual Variety** — `PASS` — 9 single + 5 unified; body regions varied plus king, diptych, onlookers, freed figure, road.
-- **SP-G4 Theological Honesty** — `PASS` — Descriptive match honest; NT-anchored echoes; grace landing.
+- **SP-G3 Visual Variety** — `PASS` — 9 single + 5 unified; varied regions.
+- **SP-G4 Theological Honesty** — `PASS` — Descriptive match honest; grace landing.
 - **SP-G5 Prompt Conformance** — `PASS` — All subject_block + mood_block content clear of the banned-token list.
 - **SP-G6 Type Discipline** — `PASS` — every unified scene declares 3-5 vignettes (counts: #2=4, #6=4, #8=4, #9=4, #12=4)
-- **SP-G7 Character Consistency** — `PASS` — jesus_variant 'passion' consistent.
+- **SP-G7 Character Consistency** — `PASS` — jesus_variant consistent.
 - **SP-G8 Composition Distribution** — `PASS` — 4 distinct framings; max 'mid' at 6/14.
 - **SP-G9 Scene Mix & Gospel Frame** — `PASS` — n=14: single=9, unified=5, nt-link=2, ot-echo=2
 
