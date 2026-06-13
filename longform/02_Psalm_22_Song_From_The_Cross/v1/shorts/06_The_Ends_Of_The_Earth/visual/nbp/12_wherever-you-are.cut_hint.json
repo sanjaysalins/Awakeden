@@ -1,0 +1,18 @@
+{
+  "scene_index": 12,
+  "title": "Wherever You Are",
+  "scene_type": "single",
+  "framing": "mid",
+  "arc_position": "personal-confrontation",
+  "jesus_variant": null,
+  "viral_role": "build",
+  "pacing": "slower",
+  "macro_elements": [
+    "the lone small figure",
+    "the far warm light",
+    "the empty road",
+    "the wide quiet land"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

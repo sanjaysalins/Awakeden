@@ -1,0 +1,18 @@
+{
+  "scene_index": 4,
+  "title": "The Reach of the Cross",
+  "scene_type": "single",
+  "framing": "low-angle",
+  "arc_position": "nt-gospel-link",
+  "jesus_variant": "passion",
+  "viral_role": "close",
+  "pacing": "slower",
+  "macro_elements": [
+    "the lifted cross",
+    "the breaking dawn light",
+    "the far horizons on either side",
+    "the bare hill base"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

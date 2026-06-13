@@ -1,0 +1,18 @@
+{
+  "scene_index": 8,
+  "title": "Kindreds of the Nations",
+  "scene_type": "unified",
+  "framing": "mid",
+  "arc_position": "human-response",
+  "jesus_variant": null,
+  "viral_role": "build",
+  "pacing": "controlled",
+  "macro_elements": [
+    "the lifted worshipping faces",
+    "the robes of many lands",
+    "the warm light at the edge",
+    "the clasped hands among them"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

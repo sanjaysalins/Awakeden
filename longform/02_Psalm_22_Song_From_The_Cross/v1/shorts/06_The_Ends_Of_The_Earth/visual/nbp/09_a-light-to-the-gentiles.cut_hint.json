@@ -1,0 +1,18 @@
+{
+  "scene_index": 9,
+  "title": "A Light to the Gentiles",
+  "scene_type": "single",
+  "framing": "mid",
+  "arc_position": "ot-echo",
+  "jesus_variant": null,
+  "viral_role": "build",
+  "pacing": "slower",
+  "macro_elements": [
+    "the warm dawn on the horizon",
+    "the faces catching first light",
+    "the dark ground between",
+    "the far land's edge"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

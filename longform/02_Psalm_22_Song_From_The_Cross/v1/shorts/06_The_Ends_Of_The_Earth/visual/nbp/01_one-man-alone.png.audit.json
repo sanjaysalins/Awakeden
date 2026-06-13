@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "a single crucified figure on a lone cross",
+      "actual": "a lone weary robed figure seated alone beside the cross in a vast empty dusk landscape — conveys the hook's 'one man, alone' isolation; the literal crucifixion is carried by scenes 3 and 4. Accepted to avoid fighting the model."
+    }
+  ],
+  "banned_token_hits": []
+}

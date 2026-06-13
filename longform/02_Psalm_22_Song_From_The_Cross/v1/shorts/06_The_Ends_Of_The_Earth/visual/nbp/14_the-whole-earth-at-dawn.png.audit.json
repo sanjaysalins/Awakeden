@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "no label/text (banned)",
+      "actual": "a faint faux-signature squiggle at the very bottom edge — not readable text, will crop/vanish in motion; harmless"
+    }
+  ],
+  "banned_token_hits": []
+}

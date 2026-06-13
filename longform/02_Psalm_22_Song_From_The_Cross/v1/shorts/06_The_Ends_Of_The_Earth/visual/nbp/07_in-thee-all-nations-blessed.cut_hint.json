@@ -1,0 +1,18 @@
+{
+  "scene_index": 7,
+  "title": "In Thee All Nations Blessed",
+  "scene_type": "unified",
+  "framing": "wide",
+  "arc_position": "ot-echo",
+  "jesus_variant": null,
+  "viral_role": "build",
+  "pacing": "slower",
+  "macro_elements": [
+    "the lifted face",
+    "the open hand toward the sky",
+    "the field of stars",
+    "the patriarch's staff"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}
