@@ -1,0 +1,46 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, slower pacing with longer holds and restrained cuts.\n\nClassical devotional oil painting realism. A break of pale dawn light glows low at the horizon by a far cross while the foreground land lies in deep shadow under dramatic clouds; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\nA lone small hooded figure stands on a dark winding road across an empty shadowed land, turned toward a distant break of pale light where a far wooden cross stands on the horizon, dramatic storm clouds above, the foreground in deep shadow, the far light the only warmth. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the lone figure on the dark road, the far cross on the horizon.\n\nCut to mid framing — the lone hooded figure on the road.\n\nCut to insert — the small figure turned toward the light.\n\nCut to upper framing — the dramatic storm clouds above.\n\nCut to insert — the far break of pale light at the horizon.\n\nCut to insert — the distant cross on the horizon.\n\nCut to lower framing — the dark winding road in the foreground.\n\nReturn to full composition.\n\nEnd hold on the lone figure facing the far light.\n\nMicro-motion:\n- minimal\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\nThe long way home opening.\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.25,
+      "description": "Start on full composition — lone figure on the dark road, far cross on the horizon"
+    },
+    {
+      "start_sec": 1.25,
+      "end_sec": 2.5,
+      "description": "Cut to mid framing — the lone hooded figure on the road"
+    },
+    {
+      "start_sec": 2.5,
+      "end_sec": 3.75,
+      "description": "Cut to insert — the small figure turned toward the light"
+    },
+    {
+      "start_sec": 3.75,
+      "end_sec": 5.0,
+      "description": "Cut to upper framing — the dramatic storm clouds above"
+    },
+    {
+      "start_sec": 5.0,
+      "end_sec": 6.25,
+      "description": "Cut to insert — the far break of pale light at the horizon"
+    },
+    {
+      "start_sec": 6.25,
+      "end_sec": 7.5,
+      "description": "Cut to insert — the distant cross on the horizon"
+    },
+    {
+      "start_sec": 7.5,
+      "end_sec": 8.75,
+      "description": "Cut to lower framing — the dark winding road in the foreground"
+    },
+    {
+      "start_sec": 8.75,
+      "end_sec": 10.0,
+      "description": "Return to full composition, end hold on the lone figure facing the far light"
+    }
+  ]
+}

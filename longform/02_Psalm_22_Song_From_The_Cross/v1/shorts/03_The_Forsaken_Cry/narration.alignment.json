@@ -1,0 +1,656 @@
+{
+  "backend": "whisper",
+  "model": "base",
+  "words": [
+    {
+      "text": "The",
+      "start": 0.0,
+      "end": 0.12
+    },
+    {
+      "text": "loneliest",
+      "start": 0.12,
+      "end": 0.64
+    },
+    {
+      "text": "sentence",
+      "start": 0.64,
+      "end": 0.98
+    },
+    {
+      "text": "Jesus",
+      "start": 0.98,
+      "end": 1.4
+    },
+    {
+      "text": "ever",
+      "start": 1.4,
+      "end": 1.78
+    },
+    {
+      "text": "spoke",
+      "start": 1.78,
+      "end": 2.12
+    },
+    {
+      "text": "wasn't",
+      "start": 2.12,
+      "end": 2.72
+    },
+    {
+      "text": "His",
+      "start": 2.72,
+      "end": 2.88
+    },
+    {
+      "text": "own",
+      "start": 2.88,
+      "end": 3.12
+    },
+    {
+      "text": "line",
+      "start": 3.12,
+      "end": 3.38
+    },
+    {
+      "text": "—",
+      "start": 3.38,
+      "end": 3.38
+    },
+    {
+      "text": "He",
+      "start": 4.06,
+      "end": 4.16
+    },
+    {
+      "text": "was",
+      "start": 4.16,
+      "end": 4.34
+    },
+    {
+      "text": "quoting.",
+      "start": 4.34,
+      "end": 4.74
+    },
+    {
+      "text": "Psalm",
+      "start": 5.86,
+      "end": 5.96
+    },
+    {
+      "text": "twenty-two",
+      "start": 5.96,
+      "end": 6.5
+    },
+    {
+      "text": "opens",
+      "start": 6.5,
+      "end": 6.9
+    },
+    {
+      "text": "in",
+      "start": 6.9,
+      "end": 7.1
+    },
+    {
+      "text": "the",
+      "start": 7.1,
+      "end": 7.2
+    },
+    {
+      "text": "voice",
+      "start": 7.2,
+      "end": 7.44
+    },
+    {
+      "text": "of",
+      "start": 7.44,
+      "end": 7.62
+    },
+    {
+      "text": "a",
+      "start": 7.62,
+      "end": 7.7
+    },
+    {
+      "text": "forsaken",
+      "start": 7.7,
+      "end": 8.2
+    },
+    {
+      "text": "man.",
+      "start": 8.2,
+      "end": 8.58
+    },
+    {
+      "text": "David",
+      "start": 9.4,
+      "end": 9.58
+    },
+    {
+      "text": "wrote",
+      "start": 9.58,
+      "end": 9.82
+    },
+    {
+      "text": "it;",
+      "start": 9.82,
+      "end": 10.08
+    },
+    {
+      "text": "Jesus",
+      "start": 10.52,
+      "end": 10.88
+    },
+    {
+      "text": "made",
+      "start": 10.88,
+      "end": 11.18
+    },
+    {
+      "text": "it",
+      "start": 11.18,
+      "end": 11.32
+    },
+    {
+      "text": "His",
+      "start": 11.32,
+      "end": 11.48
+    },
+    {
+      "text": "own.",
+      "start": 11.48,
+      "end": 11.78
+    },
+    {
+      "text": "David's",
+      "start": 13.02,
+      "end": 13.36
+    },
+    {
+      "text": "very",
+      "start": 13.36,
+      "end": 13.56
+    },
+    {
+      "text": "first",
+      "start": 13.56,
+      "end": 13.94
+    },
+    {
+      "text": "line:",
+      "start": 13.94,
+      "end": 14.36
+    },
+    {
+      "text": "\"My",
+      "start": 15.16,
+      "end": 15.24
+    },
+    {
+      "text": "God,",
+      "start": 15.24,
+      "end": 15.58
+    },
+    {
+      "text": "my",
+      "start": 15.8,
+      "end": 15.92
+    },
+    {
+      "text": "God,",
+      "start": 15.92,
+      "end": 16.26
+    },
+    {
+      "text": "why",
+      "start": 16.58,
+      "end": 16.86
+    },
+    {
+      "text": "hast",
+      "start": 16.86,
+      "end": 17.16
+    },
+    {
+      "text": "thou",
+      "start": 17.16,
+      "end": 17.32
+    },
+    {
+      "text": "forsaken",
+      "start": 17.32,
+      "end": 17.84
+    },
+    {
+      "text": "me?\"",
+      "start": 17.84,
+      "end": 18.06
+    },
+    {
+      "text": "A",
+      "start": 19.08,
+      "end": 19.28
+    },
+    {
+      "text": "thousand",
+      "start": 19.28,
+      "end": 19.58
+    },
+    {
+      "text": "years",
+      "start": 19.58,
+      "end": 19.84
+    },
+    {
+      "text": "later,",
+      "start": 19.84,
+      "end": 20.22
+    },
+    {
+      "text": "at",
+      "start": 20.46,
+      "end": 20.56
+    },
+    {
+      "text": "the",
+      "start": 20.56,
+      "end": 20.66
+    },
+    {
+      "text": "ninth",
+      "start": 20.66,
+      "end": 20.84
+    },
+    {
+      "text": "hour,",
+      "start": 20.84,
+      "end": 21.26
+    },
+    {
+      "text": "Jesus",
+      "start": 21.58,
+      "end": 21.86
+    },
+    {
+      "text": "cried",
+      "start": 21.86,
+      "end": 22.24
+    },
+    {
+      "text": "it",
+      "start": 22.24,
+      "end": 22.4
+    },
+    {
+      "text": "from",
+      "start": 22.4,
+      "end": 22.54
+    },
+    {
+      "text": "the",
+      "start": 22.54,
+      "end": 22.68
+    },
+    {
+      "text": "cross:",
+      "start": 22.68,
+      "end": 22.96
+    },
+    {
+      "text": "\"My",
+      "start": 23.88,
+      "end": 24.0
+    },
+    {
+      "text": "God,",
+      "start": 24.0,
+      "end": 24.34
+    },
+    {
+      "text": "my",
+      "start": 24.62,
+      "end": 24.78
+    },
+    {
+      "text": "God,",
+      "start": 24.78,
+      "end": 25.16
+    },
+    {
+      "text": "why",
+      "start": 25.62,
+      "end": 25.9
+    },
+    {
+      "text": "hast",
+      "start": 25.9,
+      "end": 26.2
+    },
+    {
+      "text": "thou",
+      "start": 26.2,
+      "end": 26.44
+    },
+    {
+      "text": "forsaken",
+      "start": 26.44,
+      "end": 26.92
+    },
+    {
+      "text": "me?\"",
+      "start": 26.92,
+      "end": 27.18
+    },
+    {
+      "text": "The",
+      "start": 27.92,
+      "end": 28.22
+    },
+    {
+      "text": "very",
+      "start": 28.22,
+      "end": 28.54
+    },
+    {
+      "text": "same",
+      "start": 28.54,
+      "end": 28.86
+    },
+    {
+      "text": "words.",
+      "start": 28.86,
+      "end": 29.28
+    },
+    {
+      "text": "This",
+      "start": 30.54,
+      "end": 30.68
+    },
+    {
+      "text": "was",
+      "start": 30.68,
+      "end": 30.84
+    },
+    {
+      "text": "no",
+      "start": 30.84,
+      "end": 31.08
+    },
+    {
+      "text": "cry",
+      "start": 31.08,
+      "end": 31.44
+    },
+    {
+      "text": "of",
+      "start": 31.44,
+      "end": 31.66
+    },
+    {
+      "text": "lost",
+      "start": 31.66,
+      "end": 31.88
+    },
+    {
+      "text": "faith",
+      "start": 31.88,
+      "end": 32.28
+    },
+    {
+      "text": "—",
+      "start": 32.28,
+      "end": 32.28
+    },
+    {
+      "text": "even",
+      "start": 32.96,
+      "end": 33.16
+    },
+    {
+      "text": "forsaken,",
+      "start": 33.16,
+      "end": 33.78
+    },
+    {
+      "text": "He",
+      "start": 34.1,
+      "end": 34.16
+    },
+    {
+      "text": "still",
+      "start": 34.16,
+      "end": 34.44
+    },
+    {
+      "text": "calls",
+      "start": 34.44,
+      "end": 34.66
+    },
+    {
+      "text": "God",
+      "start": 34.66,
+      "end": 35.06
+    },
+    {
+      "text": "\"my",
+      "start": 35.32,
+      "end": 35.5
+    },
+    {
+      "text": "God.\"",
+      "start": 35.5,
+      "end": 35.82
+    },
+    {
+      "text": "It",
+      "start": 36.88,
+      "end": 37.02
+    },
+    {
+      "text": "was",
+      "start": 37.02,
+      "end": 37.18
+    },
+    {
+      "text": "the",
+      "start": 37.18,
+      "end": 37.4
+    },
+    {
+      "text": "sinless",
+      "start": 37.4,
+      "end": 37.86
+    },
+    {
+      "text": "Son",
+      "start": 37.86,
+      "end": 38.2
+    },
+    {
+      "text": "taking",
+      "start": 38.2,
+      "end": 38.6
+    },
+    {
+      "text": "our",
+      "start": 38.6,
+      "end": 38.84
+    },
+    {
+      "text": "place,",
+      "start": 38.84,
+      "end": 39.22
+    },
+    {
+      "text": "and",
+      "start": 39.22,
+      "end": 39.8
+    },
+    {
+      "text": "bearing",
+      "start": 39.8,
+      "end": 40.12
+    },
+    {
+      "text": "the",
+      "start": 40.12,
+      "end": 40.3
+    },
+    {
+      "text": "forsaking",
+      "start": 40.3,
+      "end": 40.76
+    },
+    {
+      "text": "that",
+      "start": 40.76,
+      "end": 41.0
+    },
+    {
+      "text": "our",
+      "start": 41.0,
+      "end": 41.28
+    },
+    {
+      "text": "sin",
+      "start": 41.28,
+      "end": 41.54
+    },
+    {
+      "text": "deserved.",
+      "start": 41.54,
+      "end": 41.98
+    },
+    {
+      "text": "He",
+      "start": 43.02,
+      "end": 43.32
+    },
+    {
+      "text": "was",
+      "start": 43.32,
+      "end": 43.5
+    },
+    {
+      "text": "forsaken",
+      "start": 43.5,
+      "end": 44.1
+    },
+    {
+      "text": "so",
+      "start": 44.1,
+      "end": 44.5
+    },
+    {
+      "text": "that",
+      "start": 44.5,
+      "end": 44.66
+    },
+    {
+      "text": "you",
+      "start": 44.66,
+      "end": 44.96
+    },
+    {
+      "text": "never",
+      "start": 44.96,
+      "end": 45.26
+    },
+    {
+      "text": "will",
+      "start": 45.26,
+      "end": 45.5
+    },
+    {
+      "text": "be.",
+      "start": 45.5,
+      "end": 45.74
+    },
+    {
+      "text": "However",
+      "start": 46.68,
+      "end": 46.92
+    },
+    {
+      "text": "far",
+      "start": 46.92,
+      "end": 47.32
+    },
+    {
+      "text": "you've",
+      "start": 47.32,
+      "end": 47.68
+    },
+    {
+      "text": "run,",
+      "start": 47.68,
+      "end": 47.88
+    },
+    {
+      "text": "the",
+      "start": 48.28,
+      "end": 48.34
+    },
+    {
+      "text": "way",
+      "start": 48.34,
+      "end": 48.5
+    },
+    {
+      "text": "home",
+      "start": 48.5,
+      "end": 48.76
+    },
+    {
+      "text": "is",
+      "start": 48.76,
+      "end": 49.0
+    },
+    {
+      "text": "open",
+      "start": 49.0,
+      "end": 49.3
+    },
+    {
+      "text": "—",
+      "start": 49.3,
+      "end": 49.3
+    },
+    {
+      "text": "and",
+      "start": 49.66,
+      "end": 49.96
+    },
+    {
+      "text": "He",
+      "start": 49.96,
+      "end": 50.2
+    },
+    {
+      "text": "opened",
+      "start": 50.2,
+      "end": 50.6
+    },
+    {
+      "text": "it",
+      "start": 50.6,
+      "end": 50.84
+    },
+    {
+      "text": "from",
+      "start": 50.84,
+      "end": 51.16
+    },
+    {
+      "text": "the",
+      "start": 51.16,
+      "end": 51.34
+    },
+    {
+      "text": "dark.",
+      "start": 51.34,
+      "end": 51.58
+    }
+  ]
+}

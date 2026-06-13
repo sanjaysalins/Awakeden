@@ -1,0 +1,41 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, slower pacing with longer holds and restrained cuts.\n\nClassical devotional oil painting realism. A thin cold light rests on a pale robe and a lifted face against a black, unnatural noon sky, a darkened sun low in the murk; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\nThe crucified Christ is on a rough wooden cross seen from a low angle against a black noon sky, robed in a soiled cream garment, his head lifted, arms outstretched along the beam, a thin cold light on the pale robe while the land below sinks into darkness, a darkened sun low at the side. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the crucified figure against the black noon sky.\n\nCut to mid framing — the upper body and lifted head.\n\nCut to close-up — the lifted face against the dark.\n\nCut to insert — an outstretched nailed hand along the beam.\n\nCut to insert — the darkened sun low in the murk.\n\nCut to lower framing — the darkened land below the cross.\n\nReturn to full composition.\n\nEnd hold on the crucified figure under the black sky.\n\nMicro-motion:\n- minimal\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\nCosmic dread at midday darkness.\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no halo added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.43,
+      "description": "Start on full composition — crucified figure against the black noon sky"
+    },
+    {
+      "start_sec": 1.43,
+      "end_sec": 2.86,
+      "description": "Cut to mid framing — upper body and lifted head"
+    },
+    {
+      "start_sec": 2.86,
+      "end_sec": 4.29,
+      "description": "Cut to close-up — the lifted face against the dark"
+    },
+    {
+      "start_sec": 4.29,
+      "end_sec": 5.71,
+      "description": "Cut to insert — outstretched nailed hand along the beam"
+    },
+    {
+      "start_sec": 5.71,
+      "end_sec": 7.14,
+      "description": "Cut to insert — the darkened sun low in the murk"
+    },
+    {
+      "start_sec": 7.14,
+      "end_sec": 8.57,
+      "description": "Cut to lower framing — the darkened land below the cross"
+    },
+    {
+      "start_sec": 8.57,
+      "end_sec": 10.0,
+      "description": "Return to full composition, end hold on the crucified figure under the black sky"
+    }
+  ]
+}

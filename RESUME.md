@@ -17,7 +17,8 @@
   ▶ NOW DOING: shorts #02–#08 same way (creation.json → plan → render full pool → animate all → assemble viral → caption). Pattern proven on #01.
   - **✅ #02 "The Mockers' Words" COMPLETE** (`…\shorts\02_The_Mockers_Words\assembly\viral_cut_captioned.mp4`): 14 stills (caught+fixed scene-4 standing→crucified + scene-9 halo/bare-torso) → 14 clips → beat-matched viral assembly (LOCKED, lands on the cross) → captioned. ~$17.60.
   - **Defect watch (recurring NBP artifacts — FAIL these at the image gate):** (1) a wooden PICTURE-FRAME/BORDER around the painting → re-render full-bleed; (2) Christ STANDING before the cross when the spec says CRUCIFIED → fail (retry puts Him on the cross); (3) added HALO/glowing aura → fail; (4) "restrained-power" unified scenes rendering angels as prominent foreground figures vs dim half-dissolved vignettes.
-  - ▶ NEXT: **#03 The Forsaken Cry** (in progress) and #04–#08, same loop (creation.json → plan → render full pool → animate all → assemble `--hero <cross>` → caption).
+  - **✅ #03 "The Forsaken Cry" COMPLETE** (`…\shorts_The_Forsaken_Cryssemblyiral_cut_captioned.mp4`): 14 stills (fixed halo x2, standing-vs-crucified, bare-torso hero) → 14 clips → beat-matched viral assembly (LOCKED, dark-to-light arc, lands on cross+light) → captioned. ~$17.60. **3 of 8 shorts done (#01/#02/#03).**
+  - ▶ NEXT: **#04 Declared To The Brethren** (in progress) then #05–#08, same loop (creation.json → plan → render full pool → animate all → assemble `--hero <cross>` → caption).
   - #03–#08: each needs creation.json (hand-author from the locked narration) → same loop. Folders: 03_The_Forsaken_Cry, 04_Declared_To_The_Brethren, 05_He_Hath_Done_This, 06_The_Ends_Of_The_Earth, 07_The_Body_Foretold, 08_I_Thirst.
   - **#01 cut-plan SKILL reminder:** state-only/frozen-tableau, 6-9 cuts, ≤3 face cuts, NO vignette-zooms, end on Christ. Auto-pass the kling-audit + slot-verify bridge requests (cut-plans are faithfully authored upstream).
 

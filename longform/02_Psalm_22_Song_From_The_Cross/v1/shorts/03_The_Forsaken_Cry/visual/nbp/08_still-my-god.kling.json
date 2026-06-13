@@ -1,0 +1,41 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, slower pacing with longer holds and restrained cuts.\n\nClassical devotional oil painting realism. A faint warm light catches an upturned face crowned with thorns against deep shadow; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\nA close view of the crucified Christ's face, the eyes lifted and holding toward the dark heaven with a steady, trusting appeal even in anguish, the brow strained beneath a crown of thorns, a faint warm light on the upturned face against the surrounding black. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the upturned face holding steady beneath the crown.\n\nCut to close-up — the steady, lifted eyes.\n\nCut to insert — the strained brow beneath the crown of thorns.\n\nCut to insert — the parted lips holding the appeal.\n\nCut to macro detail — faint warm light on the cheek against the black.\n\nCut to mid framing — the whole face turned upward.\n\nReturn to full composition.\n\nEnd hold on the steady, trusting face.\n\nMicro-motion:\n- minimal\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\nFaith holding in the darkness.\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no halo added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.43,
+      "description": "Start on full composition — upturned face holding steady beneath the crown"
+    },
+    {
+      "start_sec": 1.43,
+      "end_sec": 2.86,
+      "description": "Cut to close-up — the steady, lifted eyes"
+    },
+    {
+      "start_sec": 2.86,
+      "end_sec": 4.29,
+      "description": "Cut to insert — the strained brow beneath the crown of thorns"
+    },
+    {
+      "start_sec": 4.29,
+      "end_sec": 5.71,
+      "description": "Cut to insert — the parted lips holding the appeal"
+    },
+    {
+      "start_sec": 5.71,
+      "end_sec": 7.14,
+      "description": "Cut to macro detail — faint warm light on the cheek against the black"
+    },
+    {
+      "start_sec": 7.14,
+      "end_sec": 8.57,
+      "description": "Cut to mid framing — the whole face turned upward"
+    },
+    {
+      "start_sec": 8.57,
+      "end_sec": 10.0,
+      "description": "Return to full composition, end hold on the steady, trusting face"
+    }
+  ]
+}

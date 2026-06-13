@@ -1,0 +1,41 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, slower pacing with longer holds and restrained cuts.\n\nClassical devotional oil painting realism. A pale shaft of light falls across an old parchment and weathered hands while the cross beam looms in deep shadow beyond; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\nTwo weathered hands hold an old parchment bearing the first line of Hebrew, the worn ink sharp against the pale fibre, the dark grain of a cross beam looming in the shadow beyond, a pale shaft of light crossing the cloth. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the hands holding the Hebrew parchment, the cross beam beyond.\n\nCut to mid framing — the parchment with its first line of Hebrew.\n\nCut to macro detail — the worn Hebrew letters on the pale fibre.\n\nCut to insert — the upper hand gripping the parchment edge.\n\nCut to insert — the lower hand beneath the parchment.\n\nCut to upper framing — the dark cross beam looming in the shadow.\n\nReturn to full composition.\n\nEnd hold on the Hebrew parchment held before the cross.\n\nMicro-motion:\n- minimal\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\nSolemn recognition across the years.\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.43,
+      "description": "Start on full composition — hands holding the Hebrew parchment, cross beam beyond"
+    },
+    {
+      "start_sec": 1.43,
+      "end_sec": 2.86,
+      "description": "Cut to mid framing — the parchment with its first line of Hebrew"
+    },
+    {
+      "start_sec": 2.86,
+      "end_sec": 4.29,
+      "description": "Cut to macro detail — worn Hebrew letters on the pale fibre"
+    },
+    {
+      "start_sec": 4.29,
+      "end_sec": 5.71,
+      "description": "Cut to insert — the upper hand gripping the parchment edge"
+    },
+    {
+      "start_sec": 5.71,
+      "end_sec": 7.14,
+      "description": "Cut to insert — the lower hand beneath the parchment"
+    },
+    {
+      "start_sec": 7.14,
+      "end_sec": 8.57,
+      "description": "Cut to upper framing — the dark cross beam looming in the shadow"
+    },
+    {
+      "start_sec": 8.57,
+      "end_sec": 10.0,
+      "description": "Return to full composition, end hold on the Hebrew parchment held before the cross"
+    }
+  ]
+}

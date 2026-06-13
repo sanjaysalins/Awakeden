@@ -1,0 +1,46 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, slower pacing with longer holds and restrained cuts.\n\nClassical devotional oil painting realism. The pale robe of the crucified figure is the only light in a swallowing black, a faint horizon glow far beyond the dark hill; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\nThe crucified Christ is at the heart of a deep darkness, robed in a soiled cream garment, head bowed, the pale robe the one light in the black. At the foot of the cross a spotless white lamb lies in the gloom and broken iron chains lie on the ground; a faint light is turned away beyond the dark hill. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the crucified figure in the darkness, lamb and chains at the foot.\n\nCut to mid framing — the robed body and bowed head on the cross.\n\nCut to close-up — the bowed head in shadow.\n\nCut to insert — the spotless white lamb in the gloom.\n\nCut to insert — the broken iron chains on the ground.\n\nCut to lower framing — the nailed bare feet above the lamb.\n\nReturn to full composition.\n\nEnd hold on the crucified figure bearing the dark.\n\nMicro-motion:\n- minimal\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\nJudgment borne in the place of another.\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no animals moving, no morphing, no scene morphing, no facial morphing, no glow added, no halo added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.25,
+      "description": "Start on full composition — crucified figure in the darkness, lamb and chains at the foot"
+    },
+    {
+      "start_sec": 1.25,
+      "end_sec": 2.5,
+      "description": "Cut to mid framing — the robed body and bowed head on the cross"
+    },
+    {
+      "start_sec": 2.5,
+      "end_sec": 3.75,
+      "description": "Cut to close-up — the bowed head in shadow"
+    },
+    {
+      "start_sec": 3.75,
+      "end_sec": 5.0,
+      "description": "Cut to insert — the spotless white lamb in the gloom"
+    },
+    {
+      "start_sec": 5.0,
+      "end_sec": 6.25,
+      "description": "Cut to insert — the broken iron chains on the ground"
+    },
+    {
+      "start_sec": 6.25,
+      "end_sec": 7.5,
+      "description": "Cut to lower framing — the nailed bare feet above the lamb"
+    },
+    {
+      "start_sec": 7.5,
+      "end_sec": 8.75,
+      "description": "Cut to mid framing — the robed body the one light in the black"
+    },
+    {
+      "start_sec": 8.75,
+      "end_sec": 10.0,
+      "description": "Return to full composition, end hold on the crucified figure bearing the dark"
+    }
+  ]
+}
