@@ -1,0 +1,651 @@
+{
+  "plan": {
+    "visual_reading": "The arc opens on Christ crying out from the cross, then reaches back to David writing the forsaken-man psalm. The proof movement is the ninth-hour darkness and the lifted cry 'My God, my God'. The conviction holds on the face that still calls God 'my God' even forsaken, and the substitution — the sinless Son bearing the forsaking our sin deserved. The landing turns toward a break of pale light behind the dark cross: forsaken so you never will be, the way home opened from the dark. The hero close is the crucified Christ against that breaking light.",
+    "red_team_notes": "Jaded Viewer risk: a generic 'sad Christ on a cross' could read as any passion image — so the cry is anchored to the SPECIFIC dereliction (head lifted, mouth open in the quoted cry) and the ninth-hour darkness, and the conviction face shows trust-amid-darkness (still 'my God'), not despair. The substitution scene (9) must NOT sever the Trinity — rendered as darkness/sin borne on Him, not the Father turning into a separate figure. Two scroll/David scenes (2, 12) kept distinct (writing vs the thousand-years diptych). Hero is the cross with breaking light (gospel-pivot), not the most anguished face.",
+    "scenes": [
+      {
+        "index": 1,
+        "slug": "the-cry",
+        "title": "The Cry",
+        "scene_type": "single",
+        "arc_position": "opening-hook",
+        "framing": "close",
+        "purpose": "Hook on the forsaken cry",
+        "rationale": "the specific quoted dereliction, not a generic passion image",
+        "visible_elements": "the crucified Christ's lifted face, mouth open in a cry, eyes toward a dark sky",
+        "emotional_tone": "desolate, lonely anguish",
+        "subject_block": "a close view of the crucified Christ's face lifted toward a darkened sky, the mouth open in a single desolate cry, the brow furrowed beneath a crown of thorns, tear-tracked cheeks in faint cold light against deep black shadow, a fold of cream robe and the dark grain of the cross beam at the shoulder",
+        "mood_block": "atmosphere of desolate, lonely anguish",
+        "jesus_variant": "passion",
+        "priority": 1,
+        "macro_elements": [
+          "the open crying mouth",
+          "the lifted, anguished eyes",
+          "the crown of thorns",
+          "a tear track on the cheek"
+        ],
+        "pacing": "slower",
+        "viral_role": "hook-open",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 2,
+        "slug": "davids-forsaken-psalm",
+        "title": "David's Forsaken Psalm",
+        "scene_type": "unified",
+        "arc_position": "ot-echo",
+        "framing": "mid",
+        "purpose": "The psalm of the forsaken man, written early",
+        "rationale": "David writing in the voice of a forsaken man (Ps 22:1)",
+        "visible_elements": "aged David alone at a scroll in shadow, an oil lamp, faint background vignettes of forsakenness",
+        "emotional_tone": "lonely, sober foresight",
+        "subject_block": "an aged King David seated alone at a low table in deep shadow, a feather pen at rest above a half-unrolled parchment of Hebrew, a single small lamp throwing a thin light across his lined, sorrowful face, subtle background vignettes fading into shadow suggesting a forsaken man with bowed head, an empty dark horizon, a far wooden cross, and the wet first line of Hebrew",
+        "mood_block": "atmosphere of lonely, sober foresight",
+        "jesus_variant": null,
+        "priority": 6,
+        "macro_elements": [
+          "the feather pen at rest",
+          "the wet first Hebrew line",
+          "the thin lamp flame",
+          "David's sorrowful brow"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "a forsaken man with bowed head",
+          "an empty dark horizon",
+          "a far wooden cross",
+          "the wet first line of Hebrew"
+        ]
+      },
+      {
+        "index": 3,
+        "slug": "the-first-line",
+        "title": "The First Line",
+        "scene_type": "single",
+        "arc_position": "theological-centre",
+        "framing": "close",
+        "purpose": "The exact opening line",
+        "rationale": "a 2s insert on the written Ps 22:1",
+        "visible_elements": "extreme close on a Hebrew scroll line, a fingertip beneath it",
+        "emotional_tone": "quiet gravity",
+        "subject_block": "an extreme close view of an open parchment, a single weathered fingertip at rest beneath the first illuminated line of ancient Hebrew script, the ink old and cracked, the parchment fibrous and dimly lit, deep shadow at the edges",
+        "mood_block": "atmosphere of quiet, sorrowful gravity",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the fingertip",
+          "the first cracked Hebrew line",
+          "the fibrous parchment grain"
+        ],
+        "pacing": "slower",
+        "viral_role": "pivot",
+        "shot_kind": "insert",
+        "vignettes": []
+      },
+      {
+        "index": 4,
+        "slug": "the-ninth-hour",
+        "title": "The Ninth Hour",
+        "scene_type": "single",
+        "arc_position": "nt-gospel-link",
+        "framing": "low-angle",
+        "purpose": "the darkness at the cry",
+        "rationale": "the ninth-hour darkness over the cross (Matt 27:45)",
+        "visible_elements": "the crucified Christ on the cross under a darkened noon sky",
+        "emotional_tone": "cosmic dread",
+        "subject_block": "the crucified Christ on a rough wooden cross seen from a low angle against a black, unnatural noon sky, robed at the waist, head lifted, a thin cold light on the pale robe while the land below sinks into darkness, a darkened sun low in the murk",
+        "mood_block": "atmosphere of cosmic dread at midday darkness",
+        "jesus_variant": "passion",
+        "priority": 2,
+        "macro_elements": [
+          "the lifted head against the black sky",
+          "the darkened sun",
+          "an outstretched nailed hand",
+          "the thin cold light on the robe"
+        ],
+        "pacing": "slower",
+        "viral_role": "pivot",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 5,
+        "slug": "my-god-my-god",
+        "title": "My God, My God",
+        "scene_type": "single",
+        "arc_position": "central-conflict",
+        "framing": "close",
+        "purpose": "the lifted cry",
+        "rationale": "the face in the act of the quoted cry",
+        "visible_elements": "Christ's face lifted, mouth open, eyes toward heaven",
+        "emotional_tone": "anguished appeal",
+        "subject_block": "a close view of the crucified Christ's face turned upward, the mouth open around the cry, the eyes lifted toward a dark heaven with an anguished, searching appeal, a crown of thorns on the brow, faint light on the upturned face against deep shadow",
+        "mood_block": "atmosphere of anguished, upward appeal",
+        "jesus_variant": "passion",
+        "priority": 3,
+        "macro_elements": [
+          "the open crying mouth",
+          "the upturned searching eyes",
+          "the crown of thorns",
+          "the cords of the strained neck"
+        ],
+        "pacing": "slower",
+        "viral_role": "climax",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 6,
+        "slug": "darkness-over-the-land",
+        "title": "Darkness Over the Land",
+        "scene_type": "unified",
+        "arc_position": "nt-gospel-link",
+        "framing": "wide",
+        "purpose": "the darkened land at the cross",
+        "rationale": "Matt 27:45 darkness over all the land",
+        "visible_elements": "the cross on the hill under a black sky, a darkened land, distant figures",
+        "emotional_tone": "vast desolation",
+        "subject_block": "a wide view of three crosses on a dark hill beneath a black noon sky, the central crucified Christ small and pale at the heart of it, the land below swallowed in unnatural dusk, subtle background vignettes fading into shadow suggesting the darkened sun, fleeing figures on the road, a watching centurion, and the shadowed city walls",
+        "mood_block": "atmosphere of vast, cosmic desolation",
+        "jesus_variant": "passion",
+        "priority": 4,
+        "macro_elements": [
+          "the pale central figure on the cross",
+          "the darkened sun",
+          "the dark hill",
+          "the shadowed walls"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "the darkened sun",
+          "fleeing figures on the road",
+          "a watching centurion",
+          "the shadowed city walls"
+        ]
+      },
+      {
+        "index": 7,
+        "slug": "the-same-words",
+        "title": "The Same Words",
+        "scene_type": "single",
+        "arc_position": "revelation",
+        "framing": "close",
+        "purpose": "the verbatim echo",
+        "rationale": "the Hebrew line of Ps 22:1 against the dark of the cross",
+        "visible_elements": "the Hebrew first line of the psalm, the dark cross beam beyond",
+        "emotional_tone": "solemn recognition",
+        "subject_block": "a close view of the first line of Hebrew on an old parchment held in faint light, the dark grain of a cross beam looming in the shadow beyond, the worn ink sharp against the pale fibre, deep darkness at the edges",
+        "mood_block": "atmosphere of solemn recognition across the years",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the first Hebrew line",
+          "the looming dark cross beam",
+          "the worn ink",
+          "the pale parchment fibre"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "insert",
+        "vignettes": []
+      },
+      {
+        "index": 8,
+        "slug": "still-my-god",
+        "title": "Still 'My God'",
+        "scene_type": "single",
+        "arc_position": "personal-confrontation",
+        "framing": "close",
+        "purpose": "faith holding in the dereliction",
+        "rationale": "even forsaken He still calls God 'my God' — not despair",
+        "visible_elements": "Christ's anguished face with eyes still lifted in trust",
+        "emotional_tone": "trust amid darkness",
+        "subject_block": "a close view of the crucified Christ's face, the eyes lifted and holding toward the dark heaven with a steady, trusting appeal even in anguish, the brow strained beneath the crown of thorns, a faint warm light catching the upturned face against the surrounding black",
+        "mood_block": "atmosphere of faith holding in the darkness",
+        "jesus_variant": "passion",
+        "priority": 0,
+        "macro_elements": [
+          "the steady lifted eyes",
+          "the strained brow",
+          "the crown of thorns",
+          "the faint warm light on the cheek"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 9,
+        "slug": "bearing-the-forsaking",
+        "title": "Bearing the Forsaking",
+        "scene_type": "unified",
+        "arc_position": "theological-centre",
+        "framing": "mid",
+        "purpose": "the substitution — bearing the forsaking our sin deserved",
+        "rationale": "penal substitution as darkness/sin borne, not Trinity severed",
+        "visible_elements": "Christ on the cross bearing the dark, the light turned away",
+        "emotional_tone": "borne judgment",
+        "subject_block": "the crucified Christ at the heart of a deep darkness, head bowed, the pale robe the only light in a swallowing black, subtle background vignettes fading into shadow suggesting a weight of dark shadow gathered upon his shoulders, a light turned away beyond the hill, a spotless white lamb in the gloom, and broken chains at the foot of the cross",
+        "mood_block": "atmosphere of judgment borne in the place of another",
+        "jesus_variant": "passion",
+        "priority": 0,
+        "macro_elements": [
+          "the bowed head in darkness",
+          "the pale robe",
+          "a spotless lamb in the gloom",
+          "broken chains at the foot"
+        ],
+        "pacing": "slower",
+        "viral_role": "pivot",
+        "shot_kind": "standard",
+        "vignettes": [
+          "a weight of dark shadow on his shoulders",
+          "a light turned away beyond the hill",
+          "a spotless white lamb in the gloom",
+          "broken chains at the foot of the cross"
+        ]
+      },
+      {
+        "index": 10,
+        "slug": "so-you-never-will-be",
+        "title": "So You Never Will Be",
+        "scene_type": "single",
+        "arc_position": "emotional-turning",
+        "framing": "close",
+        "purpose": "the turn toward grace",
+        "rationale": "the forsaken face as a faint break of light begins",
+        "visible_elements": "Christ's face turned up, a faint break of pale light",
+        "emotional_tone": "the turn from dark to grace",
+        "subject_block": "a close view of the crucified Christ's face turned gently upward, the crown of thorns above, the anguish softening as a faint break of pale light begins to touch the brow against the receding dark, deep shadow still at the edges",
+        "mood_block": "atmosphere of the first turn from darkness to grace",
+        "jesus_variant": "passion",
+        "priority": 5,
+        "macro_elements": [
+          "the gently upturned face",
+          "the first break of pale light on the brow",
+          "the crown of thorns",
+          "the softened eyes"
+        ],
+        "pacing": "slower",
+        "viral_role": "close",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 11,
+        "slug": "the-way-opened-from-the-dark",
+        "title": "The Way Opened from the Dark",
+        "scene_type": "single",
+        "arc_position": "closing-devotional",
+        "framing": "low-angle",
+        "purpose": "the gospel-pivot hero close",
+        "rationale": "the cross with a break of light — the way home opened",
+        "visible_elements": "the crucified Christ on the cross, a break of pale light behind the dark hill",
+        "emotional_tone": "open, costly welcome",
+        "subject_block": "the crucified Christ on a rough wooden cross from a respectful low angle, robed at the waist, head gently inclined, a widening break of pale gold light breaking behind the dark hill and the black sky, the land below still in shadow, the way out of the dark opening behind him",
+        "mood_block": "atmosphere of a costly, open welcome out of the dark",
+        "jesus_variant": "passion",
+        "priority": 5,
+        "macro_elements": [
+          "the inclined head",
+          "the widening break of pale gold light",
+          "an outstretched nailed hand",
+          "the dark hill below"
+        ],
+        "pacing": "slower",
+        "viral_role": "close",
+        "shot_kind": "hero",
+        "vignettes": []
+      },
+      {
+        "index": 12,
+        "slug": "a-thousand-years-apart",
+        "title": "A Thousand Years Apart",
+        "scene_type": "unified",
+        "arc_position": "ot-echo",
+        "framing": "wide",
+        "purpose": "the two scenes joined",
+        "rationale": "David's forsaken psalm and the ninth-hour cross across a thousand years",
+        "visible_elements": "David at his scroll at left, the darkened cross at right",
+        "emotional_tone": "solemn wonder",
+        "subject_block": "a wide two-sided composition split by a corridor of deep shadow; at the left, aged David seated alone at a thin lamp over a wet-inked scroll; at the right, across the divide, the crucified Christ on a cross beneath a black noon sky, subtle background vignettes fading into shadow suggesting the first Hebrew line, a bowed forsaken head, the darkened sun, and the far hill of the cross",
+        "mood_block": "atmosphere of solemn wonder across a thousand years",
+        "jesus_variant": "passion",
+        "priority": 7,
+        "macro_elements": [
+          "David's pen on the scroll",
+          "the thin lamp flame",
+          "the darkened cross",
+          "the corridor of shadow"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "the first Hebrew line",
+          "a bowed forsaken head",
+          "the darkened sun",
+          "the far hill of the cross"
+        ]
+      },
+      {
+        "index": 13,
+        "slug": "however-far-youve-run",
+        "title": "However Far You've Run",
+        "scene_type": "single",
+        "arc_position": "human-response",
+        "framing": "wide",
+        "purpose": "the way home for the listener",
+        "rationale": "a lone figure on a dark road turning toward the far light",
+        "visible_elements": "a lone distant figure on a dark road, a far break of light by a cross",
+        "emotional_tone": "the long way home",
+        "subject_block": "a wide view of a lone, small figure standing on a dark road across an empty shadowed land, turned toward a distant break of pale light where a far cross stands on the horizon, the foreground in deep shadow, the far light the only warmth",
+        "mood_block": "atmosphere of the long way home opening",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the lone small figure",
+          "the dark empty road",
+          "the far break of light",
+          "the distant cross on the horizon"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 14,
+        "slug": "he-opened-it-from-the-dark",
+        "title": "He Opened It from the Dark",
+        "scene_type": "single",
+        "arc_position": "nt-gospel-link",
+        "framing": "close",
+        "purpose": "the way opened, in one detail",
+        "rationale": "the nailed hand against a break of light",
+        "visible_elements": "a nailed open hand against a break of pale light",
+        "emotional_tone": "costly opening",
+        "subject_block": "an extreme close view of a single nailed open hand against the rough grain of the cross beam, the iron nail through the palm, the fingers relaxed and open, a break of pale gold light widening in the dark beyond the hand, a thin dark line of blood, warm light on the knuckles",
+        "mood_block": "atmosphere of a way costly opened from the dark",
+        "jesus_variant": "passion",
+        "priority": 0,
+        "macro_elements": [
+          "the iron nail in the palm",
+          "the open relaxed fingers",
+          "the break of pale light beyond",
+          "warm light on the knuckles"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      }
+    ],
+    "short_priority": [
+      1,
+      4,
+      5,
+      6,
+      11,
+      10,
+      2
+    ],
+    "candidates": [
+      {
+        "title": "The Cry",
+        "scene_type": "single",
+        "arc_position": "opening-hook",
+        "framing": "close",
+        "purpose": "hook on the forsaken cry",
+        "rationale": "the quoted dereliction, not a generic passion",
+        "visible_elements": "Christ's lifted face, mouth open in the cry",
+        "emotional_tone": "desolate anguish"
+      },
+      {
+        "title": "David's Forsaken Psalm",
+        "scene_type": "unified",
+        "arc_position": "ot-echo",
+        "framing": "mid",
+        "purpose": "the psalm written early",
+        "rationale": "David in the voice of a forsaken man",
+        "visible_elements": "David alone at a scroll in shadow",
+        "emotional_tone": "lonely foresight"
+      },
+      {
+        "title": "The Ninth Hour",
+        "scene_type": "single",
+        "arc_position": "nt-gospel-link",
+        "framing": "low-angle",
+        "purpose": "the darkness at the cry",
+        "rationale": "the ninth-hour darkness over the cross",
+        "visible_elements": "the cross under a black noon sky",
+        "emotional_tone": "cosmic dread"
+      }
+    ],
+    "rationale": "Anchored the hook to the SPECIFIC quoted cry (lifted head, open mouth) and the ninth-hour darkness rather than a generic passion; guarded the substitution scene (9) against Trinity-severing by rendering it as darkness/sin borne, not the Father as a separate figure; the conviction face (8) shows trust-amid-darkness ('still my God'), not despair; hero is the cross with breaking light (11), the gospel-pivot, not the most anguished face.",
+    "beat_coverage": {
+      "hook": [
+        1
+      ],
+      "point": [
+        2,
+        3
+      ],
+      "proof": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "conviction": [
+        8,
+        9
+      ],
+      "landing": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    "hero_candidate": 11
+  },
+  "self_review": {
+    "overall": "LOCKED",
+    "panel": [
+      {
+        "agent": "Scene Director",
+        "verdict": "STRONG",
+        "note": "Scene 1 'The Cry' opens on the specific quoted dereliction; coherent arc cry -> psalm -> ninth-hour darkness -> substitution -> way home."
+      },
+      {
+        "agent": "Theologian",
+        "verdict": "STRONG",
+        "note": "Scene 8 'Still My God' guards against the despair reading; scene 9 'Bearing the Forsaking' renders substitution as darkness borne, not a severed Trinity — orthodox."
+      },
+      {
+        "agent": "Visual Skeptic",
+        "verdict": "STRONG",
+        "note": "State-only, Kling-cuttable subject_blocks; no banned tokens; macro_elements present."
+      },
+      {
+        "agent": "Character-Consistency Checker",
+        "verdict": "CAUTION",
+        "note": "Many passion-Christ scenes — render with the passion ref for face consistency."
+      },
+      {
+        "agent": "Editor",
+        "verdict": "STRONG",
+        "note": "Hero #11 is the cross with breaking light (gospel-pivot), not the most anguished face."
+      },
+      {
+        "agent": "Jaded Viewer",
+        "verdict": "CAUTION",
+        "note": "Several anguished-face scenes risk sameness — framings (low-angle, wide, close) and the light-turn differentiate them."
+      }
+    ],
+    "gates": [
+      {
+        "gate": "SP-G1 Narration Coverage",
+        "verdict": "PASS",
+        "evidence": "every beat supported.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G2 Narration Alignment",
+        "verdict": "PASS",
+        "evidence": "Every beat id in ['hook', 'point', 'proof', 'conviction', 'landing'] has >=1 supporting scene.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G3 Freshness",
+        "verdict": "PASS",
+        "evidence": "the 'He was quoting' angle and trust-amid-darkness are fresh about the moment, orthodox in claim.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G4 Cliche Avoidance",
+        "verdict": "PASS",
+        "evidence": "anchors to the quoted cry + ninth-hour darkness, not a generic passion image.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G5 Prompt Conformance",
+        "verdict": "PASS",
+        "evidence": "All subject_block + mood_block content clear of the banned-token list.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G6 Type Discipline",
+        "verdict": "PASS",
+        "evidence": "every unified scene declares 3-5 vignettes (counts: #2=4, #6=4, #9=4, #12=4)",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G7 Gospel Frame",
+        "verdict": "PASS",
+        "evidence": "hero #11 is the cross; lands on Christ.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G8 Composition Distribution",
+        "verdict": "PASS",
+        "evidence": "4 distinct framings; max 'close' at 7/14.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G9 Scene Mix & Gospel Frame",
+        "verdict": "PASS",
+        "evidence": "n=14: single=10, unified=4, nt-link=3, ot-echo=2",
+        "fix": ""
+      }
+    ],
+    "priority_fixes": []
+  },
+  "independent_review": {
+    "overall": "LOCKED",
+    "panel": [
+      {
+        "agent": "Scene Director",
+        "verdict": "STRONG",
+        "note": "Specific quoted cry anchors the hook; coherent dereliction-to-grace arc."
+      },
+      {
+        "agent": "Theologian",
+        "verdict": "STRONG",
+        "note": "Despair guarded (8); substitution borne, not Trinity severed (9). Sound."
+      },
+      {
+        "agent": "Visual Skeptic",
+        "verdict": "STRONG",
+        "note": "State-only, no banned tokens, macro anchors present."
+      },
+      {
+        "agent": "Character-Consistency Checker",
+        "verdict": "CAUTION",
+        "note": "Render passion-Christ scenes with the passion ref."
+      },
+      {
+        "agent": "Editor",
+        "verdict": "STRONG",
+        "note": "Cross-with-light hero #11 bookends; clean gospel frame."
+      },
+      {
+        "agent": "Jaded Viewer",
+        "verdict": "CAUTION",
+        "note": "Anguished-face repetition mitigated by framing + the light-turn."
+      }
+    ],
+    "gates": [
+      {
+        "gate": "SP-G1 Narration Coverage",
+        "verdict": "PASS",
+        "evidence": "every beat supported.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G2 Narration Alignment",
+        "verdict": "PASS",
+        "evidence": "Every beat id in ['hook', 'point', 'proof', 'conviction', 'landing'] has >=1 supporting scene.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G3 Freshness",
+        "verdict": "PASS",
+        "evidence": "fresh about the moment, orthodox in claim.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G4 Cliche Avoidance",
+        "verdict": "PASS",
+        "evidence": "no generic-passion auto-complete.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G5 Prompt Conformance",
+        "verdict": "PASS",
+        "evidence": "All subject_block + mood_block content clear of the banned-token list.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G6 Type Discipline",
+        "verdict": "PASS",
+        "evidence": "every unified scene declares 3-5 vignettes (counts: #2=4, #6=4, #9=4, #12=4)",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G7 Gospel Frame",
+        "verdict": "PASS",
+        "evidence": "hero #11 cross; lands on Christ.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G8 Composition Distribution",
+        "verdict": "PASS",
+        "evidence": "4 distinct framings; max 'close' at 7/14.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G9 Scene Mix & Gospel Frame",
+        "verdict": "PASS",
+        "evidence": "n=14: single=10, unified=4, nt-link=3, ot-echo=2",
+        "fix": ""
+      }
+    ],
+    "priority_fixes": []
+  },
+  "paper_cohesion": {
+    "scope": "paper",
+    "passed": true,
+    "notes": "The set forms a coherent visual spine on the dereliction thread: it opens on the quoted cry (1), establishes David's forsaken psalm (2,3), lands the ninth-hour darkness and the lifted 'My God, my God' (4,5,6,7), holds the trust-amid-darkness face and the borne substitution (8,9), then turns to a break of light and the way home opened from the dark (10,11,13,14). No theology drift: scene 8 explicitly denies the despair reading (eyes still lifted in trust), and scene 9 renders substitution as darkness/sin borne on Christ rather than the Father severed from the Son. Every narration beat is carried by at least one strong scene; hook->climax->close (the cry -> the ninth-hour darkness -> the cross with breaking light) is a clean spine. Hero #11 is the gospel-pivot cross, so the cut lands on Christ and the opened way home.",
+    "conflict_scenes": []
+  },
+  "authoritative_overall": "LOCKED"
+}

@@ -1,0 +1,63 @@
+{
+  "created_at": "2026-06-13T00:00:00",
+  "model": "claude-opus-4-7",
+  "review_model": "claude-sonnet-4-6",
+  "structure": {
+    "id": "gospel-five-beat",
+    "name": "Gospel Five-Beat",
+    "beats": ["hook", "point", "proof", "conviction", "landing"]
+  },
+  "series": {
+    "id": "jesus-in-ot",
+    "name": "Jesus in the Old Testament",
+    "brand": "SLK"
+  },
+  "episode": {
+    "title": "The Forsaken Cry",
+    "primary_ref": "Psalm 22:1"
+  },
+  "kjv_verified": true,
+  "kjv_text": "My God, my God, why hast thou forsaken me?",
+  "thread": {
+    "thread": "Jesus' cry from the cross (Matthew 27:46) is verbatim Psalm 22:1 — the opening line David wrote ~1000 years early. The strongest link in the series: Jesus did not merely match the psalm, He deliberately QUOTED its first sentence. The cry of dereliction is the sinless Son taking our place and bearing the forsaking our sin deserved — so that you never will be forsaken.",
+    "lever": "NT-confirmed OT echo (Jesus quotes the verse Himself; no textual variant)",
+    "anchor_ref": "Psalm 22:1",
+    "anchor_detail": "Christ crucified, crying out 'My God, my God, why hast thou forsaken me?' at the ninth hour — the very first line of Psalm 22",
+    "why_fresh": "the loneliest sentence Jesus ever spoke was not His own line — He was quoting David's forsaken-man psalm, written a thousand years before, and even forsaken He still calls God 'my God'",
+    "gospel_landing": "He was forsaken so that you never will be; however far you've run, the way home is open — He opened it from the dark; come home",
+    "rationale": "the airtight, self-quoted cross-ref, with a dereliction-to-substitution landing that denies despair and never severs the Trinity",
+    "candidates": []
+  },
+  "draft": {
+    "title": "The Forsaken Cry",
+    "hook_type": "prophecy",
+    "beats": [
+      {
+        "id": "hook",
+        "text": "The loneliest sentence Jesus ever spoke wasn't His own line — He was quoting."
+      },
+      {
+        "id": "point",
+        "text": "Psalm twenty-two opens in the voice of a forsaken man. David wrote it; Jesus made it His own. David's very first line: \"My God, my God, why hast thou forsaken me?\""
+      },
+      {
+        "id": "proof",
+        "text": "A thousand years later, at the ninth hour, Jesus cried it from the cross: \"My God, my God, why hast thou forsaken me?\" The very same words."
+      },
+      {
+        "id": "conviction",
+        "text": "This was no cry of lost faith — even forsaken, He still calls God \"my God.\" It was the sinless Son taking our place, and bearing the forsaking that our sin deserved."
+      },
+      {
+        "id": "landing",
+        "text": "He was forsaken so that you never will be. However far you've run, the way home is open — and He opened it from the dark."
+      }
+    ]
+  },
+  "beat_ids": ["hook", "point", "proof", "conviction", "landing"],
+  "word_count": 150,
+  "char_count": 0,
+  "authoritative_review": "independent",
+  "review_overall": "LOCKED",
+  "unknown_speakers": []
+}
