@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "vignettes fading into shadow (soft, secondary)",
+      "actual": "the pregnant-mother vignette is fairly prominent at left, but the lamplit scribe remains the dominant centre; all 4 vignettes present"
+    }
+  ],
+  "banned_token_hits": []
+}

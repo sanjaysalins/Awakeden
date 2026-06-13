@@ -1,0 +1,18 @@
+{
+  "scene_index": 14,
+  "title": "The One Who Said It Is Done",
+  "scene_type": "single",
+  "framing": "mid",
+  "arc_position": "closing-devotional",
+  "jesus_variant": null,
+  "viral_role": "close",
+  "pacing": "slower",
+  "macro_elements": [
+    "the empty crossbeam against the dawn",
+    "the gold light breaking behind the beam",
+    "the grain and joints of the rough timber",
+    "the amber-and-blue dawn sky"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

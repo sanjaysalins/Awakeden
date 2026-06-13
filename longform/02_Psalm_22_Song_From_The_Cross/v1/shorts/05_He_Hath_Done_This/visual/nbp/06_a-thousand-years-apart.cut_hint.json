@@ -1,0 +1,18 @@
+{
+  "scene_index": 6,
+  "title": "A Thousand Years Apart",
+  "scene_type": "unified",
+  "framing": "wide",
+  "arc_position": "ot-echo",
+  "jesus_variant": "passion",
+  "viral_role": "build",
+  "pacing": "slower",
+  "macro_elements": [
+    "the band of dividing light",
+    "the scribe's lamp",
+    "the distant cross",
+    "the breaking sky"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

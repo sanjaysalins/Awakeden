@@ -1,0 +1,18 @@
+{
+  "scene_index": 11,
+  "title": "The Finished Work",
+  "scene_type": "unified",
+  "framing": "mid",
+  "arc_position": "theological-centre",
+  "jesus_variant": "passion",
+  "viral_role": "climax",
+  "pacing": "slower",
+  "macro_elements": [
+    "the central bowed head",
+    "the pierced hand",
+    "the breaking sky behind the beam",
+    "the faint glow at the cross's foot"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

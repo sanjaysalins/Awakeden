@@ -1,0 +1,709 @@
+{
+  "plan": {
+    "visual_reading": "The arc opens on the Psalm's final illuminated line and travels a thousand years to the cross's finished word, holding the two as bookends of one redemption joined only by light — never collapsing the Hebrew 'done' and the Greek 'finished' into a verbal pun, but letting both rest on the same note of a completed saving work. From the scroll and the scribe telling it forward to a people not yet born, to the bowed head and the torn veil, to the day's end and the hands at rest, the eye moves toward a single gospel pivot: Christ on the cross saying it is done. It lands on the released burden, the open lit door, and the cross at dawn over the road home — nothing left to finish, only Someone to come home to.",
+    "red_team_notes": "Jaded Viewer risks: (1) an abstract 'finished work' theme can drift into floating-text slideshow — anchored every beat in a concrete tableau (frayed scroll thread, torn veil threads, set-down burden, lit doorway). (2) The resonance could be mis-read as a Hebrew/Greek pun — the diptych keeps the two scripts visibly DIFFERENT, joined only by a band of light, never overlaid. (3) Too many cross close-ups would feel repetitive — varied them (low-angle whole, close bowed head, distant silhouette trio, dawn-and-road) and spread non-cross anchors between them. Revision: removed the banned token 'frame' from scenes 1/3/5 subject_blocks (SP-G5).",
+    "scenes": [
+      {
+        "index": 1,
+        "slug": "the-psalms-last-line",
+        "title": "The Psalm's Last Line",
+        "scene_type": "single",
+        "arc_position": "opening-hook",
+        "framing": "close",
+        "purpose": "open the arc on the thread itself — the psalm's closing line caught in light",
+        "rationale": "the hook is the anchor object, not a generic glowing book; the whole composition is weighted to one illuminated closing line",
+        "visible_elements": "an ancient Hebrew scroll, its final lower line lit while the upper lines sit in shadow, frayed thread on the wooden stave",
+        "emotional_tone": "an ending that is also a promise",
+        "subject_block": "an ancient Hebrew scroll spread across pale stone, its upper lines sunk in cold shadow and its final lower line caught in a warm break of light, the parchment fibrous and worn, the ink old and cracked at the edges, a single frayed thread hanging from the rolled wooden stave, deep shadow beyond, the whole composition weighted toward that one illuminated closing line",
+        "mood_block": "atmosphere of an ending that is also a promise",
+        "jesus_variant": null,
+        "priority": 2,
+        "macro_elements": [
+          "the final line of Hebrew script in light",
+          "the cracked old ink",
+          "the frayed thread on the wooden stave",
+          "the worn parchment edge"
+        ],
+        "pacing": "slower",
+        "viral_role": "hook-open",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 2,
+        "slug": "a-people-not-yet-born",
+        "title": "A People Not Yet Born",
+        "scene_type": "unified",
+        "arc_position": "ot-echo",
+        "framing": "mid",
+        "purpose": "carry Ps 22:31's forward look — the saving work told to generations not yet born",
+        "rationale": "uses the verse's own clause rather than a generic prophet at a desk",
+        "visible_elements": "an aged scribe over the open psalm scroll by lamplight, dim background vignettes of future generations",
+        "emotional_tone": "a promise told forward across centuries",
+        "subject_block": "an aged scribe in deep blue and ochre robes seated low over the open psalm scroll at a stone table, his weathered face lifted in dawning hope, a clay lamp at the table's edge, subtle background vignettes fading into shadow suggesting a mother cradling an unborn promise, distant generations of faces in soft shadow, a far crowd at worship, and a child's open hand, the foreground scribe dominant and the vignettes half-dissolved memories of the people not yet born",
+        "mood_block": "atmosphere of a promise carried forward across centuries",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the scribe's weathered lifted face",
+          "the clay lamp flame",
+          "the open scroll",
+          "the scribe's hand at rest on the parchment"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "a mother cradling an unborn promise",
+          "distant generations of faces",
+          "a far crowd at worship",
+          "a child's open hand"
+        ]
+      },
+      {
+        "index": 3,
+        "slug": "the-fingertip-on-the-final-word",
+        "title": "The Fingertip on the Final Word",
+        "scene_type": "single",
+        "arc_position": "theological-centre",
+        "framing": "close",
+        "purpose": "rest on the psalm's last clause as it is quoted",
+        "rationale": "a macro anchor for the quoted line, avoiding a wide reading-room cliche",
+        "visible_elements": "a weathered fingertip beneath the last clause of Hebrew script, cracked dark ink, lamplit parchment",
+        "emotional_tone": "a finished word held in stillness",
+        "subject_block": "an extreme close view of the open parchment, a single weathered fingertip at rest beneath the last clause of ancient Hebrew script, the ink dark and cracked, the parchment lamplit and fibrous, deep shadow at the upper edge, the fingertip the still centre of the image",
+        "mood_block": "atmosphere of a finished word held in stillness",
+        "jesus_variant": null,
+        "priority": 5,
+        "macro_elements": [
+          "the weathered fingertip",
+          "the final Hebrew clause",
+          "the cracked ink",
+          "the lamplit parchment fibre"
+        ],
+        "pacing": "slower",
+        "viral_role": "pivot",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 4,
+        "slug": "it-is-finished",
+        "title": "It Is Finished",
+        "scene_type": "single",
+        "arc_position": "nt-gospel-link",
+        "framing": "low-angle",
+        "purpose": "the gospel pivot — the finished saving work on the cross, the One who said it is done",
+        "rationale": "the CTA's destination; designed iconic, near-still and reverent to bookend the cut, not the most emotional moment",
+        "visible_elements": "the crucified Christ from a low angle, head bowed, robed at the loins, dark sky, a faint light behind the lowered head",
+        "emotional_tone": "a saving work completed",
+        "subject_block": "the crucified Christ seen from a low angle against a darkened sky, his head bowed low in the moment after the final word, the body robed at the loins, the face calm in completion, the arms outstretched along the dark beam, a faint break of pale light behind the lowered head, the bare hill beneath, a held and reverent tableau of a finished work",
+        "mood_block": "atmosphere of a saving work completed",
+        "jesus_variant": "passion",
+        "priority": 1,
+        "macro_elements": [
+          "the bowed head",
+          "the pierced hand on the beam",
+          "the faint light behind the head",
+          "the bare hill beneath the cross"
+        ],
+        "pacing": "slower",
+        "viral_role": "close",
+        "shot_kind": "hero",
+        "vignettes": []
+      },
+      {
+        "index": 5,
+        "slug": "the-greek-word",
+        "title": "The Greek Word",
+        "scene_type": "single",
+        "arc_position": "theological-centre",
+        "framing": "close",
+        "purpose": "John's finished word on the page — a thousand years and a different tongue from the psalm",
+        "rationale": "shows the visibly DIFFERENT script, guarding the resonance-not-citation truth",
+        "visible_elements": "an early Greek codex page, a line of Greek letters, a fingertip beneath, raking lamplight",
+        "emotional_tone": "one accomplished word",
+        "subject_block": "an extreme close view of an early Greek codex page, a single line of dark Greek letters on pale vellum, a weathered fingertip at rest beneath the line, warm lamplight raking across the surface, the ink crisp, deep shadow at the page's outer edge, the lettering the still focus of the image",
+        "mood_block": "atmosphere of one accomplished word",
+        "jesus_variant": null,
+        "priority": 8,
+        "macro_elements": [
+          "the line of Greek letters",
+          "the fingertip beneath the word",
+          "the pale vellum grain",
+          "the raking lamplight"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 6,
+        "slug": "a-thousand-years-apart",
+        "title": "A Thousand Years Apart",
+        "scene_type": "unified",
+        "arc_position": "ot-echo",
+        "framing": "wide",
+        "purpose": "hold scroll and cross as two bookends of one redemption, joined only by light",
+        "rationale": "states the resonance as composition — never an overlay or a pun",
+        "visible_elements": "the scribe over his scroll at left, a distant cross on a dark hill at right, a vertical band of pale light between",
+        "emotional_tone": "two bookends of one redemption",
+        "subject_block": "a wide composition divided by a vertical band of pale light, at the left the aged scribe low over his psalm scroll by lamplight with his face lifting, at the right across the divide a distant cross on a dark hill under a breaking sky, subtle background vignettes fading into shadow suggesting a setting sun, an open road, rolling generations, and a far temple, the two halves joined only by the band of light between them",
+        "mood_block": "atmosphere of two bookends of one redemption",
+        "jesus_variant": "passion",
+        "priority": 4,
+        "macro_elements": [
+          "the band of dividing light",
+          "the scribe's lamp",
+          "the distant cross",
+          "the breaking sky"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "a setting sun",
+          "an open road home",
+          "rolling generations",
+          "a far temple"
+        ]
+      },
+      {
+        "index": 7,
+        "slug": "the-bowed-head",
+        "title": "The Bowed Head",
+        "scene_type": "single",
+        "arc_position": "revelation",
+        "framing": "close",
+        "purpose": "the peace of completion in the lowered face",
+        "rationale": "a close read of the finished moment without repeating the whole-cross framing",
+        "visible_elements": "the crucified Christ's lowered head and shoulder, crown of thorns, faint light along the brow",
+        "emotional_tone": "peace after the finished cry",
+        "subject_block": "a close reverent view of the crucified Christ's lowered head and shoulder, the face turned down in the peace of completion, a crown of thorns resting upon the brow, a faint light along the temple, the dark grain of the beam behind, soft shadow swallowing the edges, the stillness of a finished thing",
+        "mood_block": "atmosphere of peace after the finished cry",
+        "jesus_variant": "passion",
+        "priority": 0,
+        "macro_elements": [
+          "the lowered face",
+          "the crown of thorns",
+          "the faint light on the brow",
+          "the dark grain of the beam"
+        ],
+        "pacing": "slower",
+        "viral_role": "pivot",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 8,
+        "slug": "the-torn-veil",
+        "title": "The Torn Veil",
+        "scene_type": "single",
+        "arc_position": "nt-gospel-link",
+        "framing": "mid",
+        "purpose": "the finished work opens the way — the temple veil rent (Matt 27:51)",
+        "rationale": "a real NT consequence of the finished work, not an invented symbol",
+        "visible_elements": "the temple veil rent top to bottom, golden light through the tear, dust caught in the shaft",
+        "emotional_tone": "a way opened by a finished work",
+        "subject_block": "the great temple veil rent from top to bottom, the heavy embroidered cloth split down its centre and fallen open, dim golden light spilling through the new opening from the holy place beyond, dust caught mid-air in the shaft of light, the torn threads frayed along the tear, a frozen tableau of a barrier finished",
+        "mood_block": "atmosphere of a way opened by a finished work",
+        "jesus_variant": null,
+        "priority": 6,
+        "macro_elements": [
+          "the torn centre of the veil",
+          "the frayed threads",
+          "the shaft of golden light",
+          "the dust caught mid-air"
+        ],
+        "pacing": "controlled",
+        "viral_role": "pivot",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 9,
+        "slug": "the-day-is-done",
+        "title": "The Day Is Done",
+        "scene_type": "single",
+        "arc_position": "symbolic-support",
+        "framing": "wide",
+        "purpose": "the held quiet of a day, and a work, brought to its end",
+        "rationale": "a breathing wide beat that says 'it is done' without another face",
+        "visible_elements": "three bare crosses in silhouette on a dark hill, a low red sun at the horizon",
+        "emotional_tone": "a day brought to its close",
+        "subject_block": "a wide view of three bare crosses in silhouette on a darkened hill, the sun low and red at the horizon behind them, the sky deep with the last light of day, the ground sunk in shadow, no figures near, the held quiet of a day come to its end",
+        "mood_block": "atmosphere of a day, and a work, brought to its close",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the silhouetted central cross",
+          "the low red sun",
+          "the darkened hill",
+          "the last band of horizon light"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 10,
+        "slug": "hands-at-rest",
+        "title": "Hands at Rest",
+        "scene_type": "single",
+        "arc_position": "emotional-turning",
+        "framing": "close",
+        "purpose": "labour ended — the pierced hands utterly still",
+        "rationale": "the finished work read in the body, not in text",
+        "visible_elements": "two open pierced palms at rest, nail-marks dark in the centres, garment edge beneath",
+        "emotional_tone": "finished labour and rest",
+        "subject_block": "a close view of two weathered pierced hands lying open and at rest, palms turned upward, the healed nail-marks dark in the centres, a rough garment edge beneath them, warm light across the open palms against deep shadow, the hands utterly still, labour ended",
+        "mood_block": "atmosphere of finished labour and rest",
+        "jesus_variant": "passion",
+        "priority": 0,
+        "macro_elements": [
+          "the open palm with its nail-mark",
+          "the resting fingers",
+          "the rough garment edge",
+          "the warm light across the palms"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 11,
+        "slug": "the-finished-work",
+        "title": "The Finished Work",
+        "scene_type": "unified",
+        "arc_position": "theological-centre",
+        "framing": "mid",
+        "purpose": "the central cross holding everything the finished work secures",
+        "rationale": "the theological centre as one coherent image with half-dissolved echoes, not a montage",
+        "visible_elements": "the central cross with the robed figure, dim vignettes of scroll, torn veil, open door, generations",
+        "emotional_tone": "one completed work holding everything",
+        "subject_block": "the cross at the centre against a breaking sky, the robed crucified figure calm in completion with head bowed, subtle background vignettes fading into shadow suggesting the open psalm scroll, the torn temple veil, an open door with light beyond, and distant generations coming forward, the central cross dominant and the vignettes half-dissolved echoes of all the finished work secures",
+        "mood_block": "atmosphere of one completed work holding everything",
+        "jesus_variant": "passion",
+        "priority": 3,
+        "macro_elements": [
+          "the central bowed head",
+          "the pierced hand",
+          "the breaking sky behind the beam",
+          "the faint glow at the cross's foot"
+        ],
+        "pacing": "slower",
+        "viral_role": "climax",
+        "shot_kind": "standard",
+        "vignettes": [
+          "the open psalm scroll",
+          "the torn temple veil",
+          "an open door with light beyond",
+          "distant generations coming forward"
+        ]
+      },
+      {
+        "index": 12,
+        "slug": "nothing-left-to-carry",
+        "title": "Nothing Left to Carry",
+        "scene_type": "single",
+        "arc_position": "personal-confrontation",
+        "framing": "mid",
+        "purpose": "the conviction — the weight laid down, nothing left to finish",
+        "rationale": "embodies 'nothing left for you' without a debt/transaction framing",
+        "visible_elements": "a kneeling figure at the foot of a rough cross, a heavy burden set down beside loosened hands",
+        "emotional_tone": "a weight finally laid down",
+        "subject_block": "a kneeling figure at the foot of a rough cross, a heavy travelling burden set down on the ground beside loosened open hands, the shoulders eased, the head bowed in relief, warm light falling on the released load and the bare feet, deep shadow beyond, the weight laid down with nothing more to bear",
+        "mood_block": "atmosphere of a weight finally laid down",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the set-down burden",
+          "the loosened empty hands",
+          "the bare feet",
+          "the rough foot of the cross"
+        ],
+        "pacing": "controlled",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 13,
+        "slug": "the-open-door-home",
+        "title": "The Open Door Home",
+        "scene_type": "single",
+        "arc_position": "human-response",
+        "framing": "mid",
+        "purpose": "the landing's invitation — Someone to come home to",
+        "rationale": "an open-home image rather than a literal altar-call cliche",
+        "visible_elements": "a humble doorway standing open, warm lamplight across the threshold, a worn path, an olive tree",
+        "emotional_tone": "a home left open and waiting",
+        "subject_block": "a humble doorway standing open at the end of a worn path, warm golden lamplight spilling out across the threshold into the blue dusk, a single olive tree beside the door, the path leading the eye inward, no figure yet upon it, the held invitation of a home left open and lit",
+        "mood_block": "atmosphere of a home left open and waiting",
+        "jesus_variant": null,
+        "priority": 7,
+        "macro_elements": [
+          "the lit open doorway",
+          "the warm light across the threshold",
+          "the worn path",
+          "the olive tree beside the door"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 14,
+        "slug": "the-one-who-said-it-is-done",
+        "title": "The One Who Said It Is Done",
+        "scene_type": "single",
+        "arc_position": "closing-devotional",
+        "framing": "mid",
+        "purpose": "close on the bare cross at dawn — the finished work, quiet and iconic",
+        "rationale": "lands the cut on a clean, iconic empty cross at dawn; no figure, no road, no door — nothing competes",
+        "visible_elements": "a bare wooden cross at dawn, warm gold light breaking from behind the upright beam, deep dawn sky, no figures",
+        "emotional_tone": "a finished work and a breaking dawn",
+        "subject_block": "a bare wooden cross standing empty against a widening dawn, warm gold light breaking from directly behind the upright beam and rimming its edges, the grain and joints of the rough timber catching the light, a deep dawn sky of amber and blue beyond, the hill's crest in soft shadow at the base, no figures and no other structures, the empty cross alone and iconic at the centre",
+        "mood_block": "atmosphere of a finished work and a breaking dawn",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the empty crossbeam against the dawn",
+          "the gold light breaking behind the beam",
+          "the grain and joints of the rough timber",
+          "the amber-and-blue dawn sky"
+        ],
+        "pacing": "slower",
+        "viral_role": "close",
+        "shot_kind": "standard",
+        "vignettes": [
+        ]
+      }
+    ],
+    "short_priority": [
+      4,
+      1,
+      11,
+      6,
+      3,
+      8,
+      13,
+      5
+    ],
+    "candidates": [
+      {
+        "title": "The Psalm's Last Line",
+        "scene_type": "single",
+        "arc_position": "opening-hook",
+        "framing": "close",
+        "purpose": "the thread made visible — the psalm's closing line in light",
+        "rationale": "open on the actual anchor object, not a generic open book",
+        "visible_elements": "Hebrew scroll, final lower line lit, upper lines in shadow, frayed stave thread",
+        "emotional_tone": "an ending that is a promise"
+      },
+      {
+        "title": "A People Not Yet Born",
+        "scene_type": "unified",
+        "arc_position": "ot-echo",
+        "framing": "mid",
+        "purpose": "Ps 22:31 told forward to future generations",
+        "rationale": "carries the verse's own forward-looking clause, not a generic prophet",
+        "visible_elements": "aged scribe over scroll, lamp, dim vignettes of generations",
+        "emotional_tone": "a promise carried across centuries"
+      },
+      {
+        "title": "The Fingertip on the Final Word",
+        "scene_type": "single",
+        "arc_position": "theological-centre",
+        "framing": "close",
+        "purpose": "rest on the last clause of the psalm",
+        "rationale": "a macro anchor for the quoted line, avoids a wide cliche",
+        "visible_elements": "fingertip beneath last Hebrew clause, cracked ink",
+        "emotional_tone": "a finished word held still"
+      },
+      {
+        "title": "It Is Finished",
+        "scene_type": "single",
+        "arc_position": "nt-gospel-link",
+        "framing": "low-angle",
+        "purpose": "the gospel pivot — the finished work on the cross",
+        "rationale": "the CTA's destination; iconic and reverent, not the most emotional moment",
+        "visible_elements": "crucified Christ, bowed head, robed, dark sky, faint light",
+        "emotional_tone": "a saving work completed"
+      },
+      {
+        "title": "The Greek Word",
+        "scene_type": "single",
+        "arc_position": "theological-centre",
+        "framing": "close",
+        "purpose": "John's finished word on the page",
+        "rationale": "shows the DIFFERENT script — guards resonance-not-citation",
+        "visible_elements": "early Greek codex, the finished word, fingertip beneath",
+        "emotional_tone": "one accomplished word"
+      },
+      {
+        "title": "A Thousand Years Apart",
+        "scene_type": "unified",
+        "arc_position": "ot-echo",
+        "framing": "wide",
+        "purpose": "hold scroll and cross as two bookends joined by light",
+        "rationale": "states the resonance as composition, never an overlay/pun",
+        "visible_elements": "scribe with scroll left, distant cross right, dividing band of light",
+        "emotional_tone": "two bookends of one redemption"
+      },
+      {
+        "title": "The Torn Veil",
+        "scene_type": "single",
+        "arc_position": "nt-gospel-link",
+        "framing": "mid",
+        "purpose": "the finished work opens the way (Matt 27:51)",
+        "rationale": "a real NT consequence of the finished work, not invented",
+        "visible_elements": "temple veil rent top to bottom, light through the tear, dust in the shaft",
+        "emotional_tone": "a way opened"
+      },
+      {
+        "title": "Hands at Rest",
+        "scene_type": "single",
+        "arc_position": "emotional-turning",
+        "framing": "close",
+        "purpose": "labour ended, the work done",
+        "rationale": "the pierced hands at rest read 'finished' without words",
+        "visible_elements": "two open pierced palms at rest, nail-marks, garment edge",
+        "emotional_tone": "finished labour and rest"
+      },
+      {
+        "title": "The Open Door Home",
+        "scene_type": "single",
+        "arc_position": "human-response",
+        "framing": "mid",
+        "purpose": "the landing — Someone to come home to",
+        "rationale": "an invitation image, not a literal altar-call cliche",
+        "visible_elements": "open lit doorway, warm light on threshold, worn path, olive tree",
+        "emotional_tone": "a home left open and waiting"
+      }
+    ],
+    "rationale": "Same 14-scene set, with the banned token 'frame' removed from the subject_blocks of scenes 1, 3, and 5 (now 'composition' / 'the still centre of the image' / 'the still focus of the image'). The resonance stays honest (different scripts joined only by light); ten singles anchor the literal beats, four unified scenes carry the theology and echoes; hero #4 'It Is Finished' is the gospel pivot that bookends the cut. Rejected alternatives unchanged: no Hebrew/Greek overlay pun, no 'paid in full' ledger, no resurrection finish (this short's pivot is the finished work on the cross).",
+    "beat_coverage": {
+      "hook": [
+        1,
+        4
+      ],
+      "point": [
+        1,
+        2,
+        3
+      ],
+      "proof": [
+        4,
+        5,
+        7
+      ],
+      "conviction": [
+        6,
+        9,
+        11
+      ],
+      "landing": [
+        12,
+        13,
+        14
+      ]
+    },
+    "hero_candidate": 4
+  },
+  "self_review": {
+    "overall": "LOCKED",
+    "panel": [
+      {
+        "agent": "Scene Director",
+        "verdict": "STRONG",
+        "note": "The turn is carried, not merely illustrated: hook [1] 'The Psalm's Last Line' -> proof [4] 'It Is Finished' -> conviction [6] 'A Thousand Years Apart' -> landing [13]/[14] 'The Open Door Home'/'The One Who Said It Is Done'. The thread (two bookends of one finished work) drives the arc."
+      },
+      {
+        "agent": "Theologian",
+        "verdict": "STRONG",
+        "note": "Resonance-not-citation honoured: [5] 'The Greek Word' and [3] 'The Fingertip on the Final Word' keep Hebrew and Greek visibly distinct (no pun/overlay); [8] 'The Torn Veil' is the real Matt 27:51 consequence; no debt/'paid in full' frame; no resurrection over-reach (pivot is the finished work on the cross)."
+      },
+      {
+        "agent": "Visual Skeptic",
+        "verdict": "CAUTION",
+        "note": "[9] 'The Day Is Done' (three crosses, red sun) is the nearest-to-stock beat; defensible as a breathing wide hold but render it with real Baroque weight so it doesn't read as a worship slide."
+      },
+      {
+        "agent": "Character-Consistency Checker",
+        "verdict": "STRONG",
+        "note": "jesus_variant 'passion' consistent across [4][6][7][10][11][14]; identical crucified/robed-at-the-loins description, no drift."
+      },
+      {
+        "agent": "Editor",
+        "verdict": "STRONG",
+        "note": "Banned token 'frame' now removed from [1][3][5] subject_blocks ('composition' / 'the still centre of the image' / 'the still focus of the image'); prose is state-only, 14 scenes within the rich-passage window."
+      },
+      {
+        "agent": "Jaded Viewer",
+        "verdict": "CAUTION",
+        "note": "Scroll-and-cross is a known pairing, but [6] joining the two ONLY by a band of light and [2] 'A People Not Yet Born' as a forward-looking vignette deliver an honest, non-predictable payoff."
+      }
+    ],
+    "gates": [
+      {
+        "gate": "SP-G1 Biblical Accuracy",
+        "verdict": "PASS",
+        "evidence": "Ps 22:31 scroll/scribe, John 19:30 cross, Matt 27:51 torn veil — all defensible; no invented narrative; no unwarranted halos.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G2 Narration Alignment",
+        "verdict": "PASS",
+        "evidence": "Every beat id in ['hook', 'point', 'proof', 'conviction', 'landing'] has >=1 supporting scene.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G3 Visual Variety",
+        "verdict": "PASS",
+        "evidence": "10 single + 4 unified; anchors vary widely; no unrationalised cliche.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G4 Theological Honesty",
+        "verdict": "PASS",
+        "evidence": "Resonance stated as resonance; different scripts joined by light; no foreign doctrine.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G5 Prompt Conformance",
+        "verdict": "PASS",
+        "evidence": "All subject_block + mood_block content clear of the banned-token list.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G6 Type Discipline",
+        "verdict": "PASS",
+        "evidence": "every unified scene declares 3-5 vignettes (counts: #2=4, #6=4, #11=4, #14=4)",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G7 Character Consistency",
+        "verdict": "PASS",
+        "evidence": "jesus_variant 'passion' consistent; identical canonical crucified description.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G8 Composition Distribution",
+        "verdict": "PASS",
+        "evidence": "4 distinct framings; max 'mid' at 6/14.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G9 Scene Mix & Gospel Frame",
+        "verdict": "PASS",
+        "evidence": "n=14: single=10, unified=4, nt-link=2, ot-echo=2",
+        "fix": ""
+      }
+    ],
+    "priority_fixes": []
+  },
+  "independent_review": {
+    "overall": "LOCKED",
+    "panel": [
+      {
+        "agent": "Scene Director",
+        "verdict": "STRONG",
+        "note": "Independent read: the arc genuinely turns — [1] scroll's last line opens the thread, [4] 'It Is Finished' is the proof pivot, [6] 'A Thousand Years Apart' holds the conviction, [13]/[14] land the invitation. Not a slideshow."
+      },
+      {
+        "agent": "Theologian",
+        "verdict": "STRONG",
+        "note": "The load-bearing guard survives scrutiny: [5] 'The Greek Word' and [3] Hebrew fingertip are never overlaid, so no false etymological citation; [8] torn veil is Matt 27:51, real. Pivot is the cross's finished work, correctly NOT the resurrection."
+      },
+      {
+        "agent": "Visual Skeptic",
+        "verdict": "CAUTION",
+        "note": "[9] 'The Day Is Done' is the most familiar image; acceptable as a single breathing wide beat among 13 fresher anchors (codex, torn veil, set-down burden, lit door)."
+      },
+      {
+        "agent": "Character-Consistency Checker",
+        "verdict": "STRONG",
+        "note": "All Jesus-bearing scenes are jesus_variant 'passion', crucified/robed, consistent face and wardrobe; no drift across [4][6][7][10][11][14]."
+      },
+      {
+        "agent": "Editor",
+        "verdict": "STRONG",
+        "note": "Subject_blocks are state-only and banned-token clean after the revision; 14 scenes appropriate for the rich pairing; each scene earns its slot."
+      },
+      {
+        "agent": "Jaded Viewer",
+        "verdict": "CAUTION",
+        "note": "Would not predict the diptych-joined-only-by-light [6] or the 'people not yet born' vignette [2]; honest surprise, not contrarian."
+      }
+    ],
+    "gates": [
+      {
+        "gate": "SP-G1 Biblical Accuracy",
+        "verdict": "PASS",
+        "evidence": "All literal scenes defensible against Ps 22:31 / John 19:30 / Matt 27:51; no invented detail.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G2 Narration Alignment",
+        "verdict": "PASS",
+        "evidence": "Every beat id in ['hook', 'point', 'proof', 'conviction', 'landing'] has >=1 supporting scene.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G3 Visual Variety",
+        "verdict": "PASS",
+        "evidence": "10 single + 4 unified, wide anchor variety.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G4 Theological Honesty",
+        "verdict": "PASS",
+        "evidence": "Resonance honest; no debt/universalism.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G5 Prompt Conformance",
+        "verdict": "PASS",
+        "evidence": "All subject_block + mood_block content clear of the banned-token list.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G6 Type Discipline",
+        "verdict": "PASS",
+        "evidence": "every unified scene declares 3-5 vignettes (counts: #2=4, #6=4, #11=4, #14=4)",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G7 Character Consistency",
+        "verdict": "PASS",
+        "evidence": "jesus_variant 'passion' consistent.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G8 Composition Distribution",
+        "verdict": "PASS",
+        "evidence": "4 distinct framings; max 'mid' at 6/14.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G9 Scene Mix & Gospel Frame",
+        "verdict": "PASS",
+        "evidence": "n=14: single=10, unified=4, nt-link=2, ot-echo=2",
+        "fix": ""
+      }
+    ],
+    "priority_fixes": []
+  },
+  "paper_cohesion": {
+    "scope": "paper",
+    "passed": true,
+    "notes": "",
+    "conflict_scenes": []
+  },
+  "authoritative_overall": "LOCKED"
+}

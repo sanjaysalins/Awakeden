@@ -1,0 +1,63 @@
+{
+  "created_at": "2026-06-13T00:00:00",
+  "model": "claude-opus-4-7",
+  "review_model": "claude-sonnet-4-6",
+  "structure": {
+    "id": "gospel-five-beat",
+    "name": "Gospel Five-Beat",
+    "beats": ["hook", "point", "proof", "conviction", "landing"]
+  },
+  "series": {
+    "id": "jesus-in-ot",
+    "name": "Jesus in the Old Testament",
+    "brand": "SLK"
+  },
+  "episode": {
+    "title": "He Hath Done This",
+    "primary_ref": "Psalm 22:31"
+  },
+  "kjv_verified": true,
+  "kjv_text": "They shall come, and shall declare his righteousness unto a people that shall be born, that he hath done this.",
+  "thread": {
+    "thread": "Psalm 22's final line (\"...that he hath done this\") and Jesus' last word in John (\"It is finished\", John 19:30) land on the very same note: a finished saving work, a thousand years apart. This is thematic RESONANCE, not citation -- Hebrew asah ('done') and Greek tetelestai ('finished') are different words, and the short says so out loud. The cross is the completed work; nothing is left for you to earn -- come home to the One who said it is done.",
+    "lever": "overlooked detail / thematic resonance (Ps 22:31's accomplished saving work echoes John 19:30 'It is finished' -- resonance, NOT a verbal/etymological citation)",
+    "anchor_ref": "Psalm 22:31",
+    "anchor_detail": "the psalm's closing line proclaiming God's righteous saving work accomplished and declared to a people not yet born -- echoing Christ's finished work on the cross",
+    "why_fresh": "the psalm and the cross are the two bookends of redemption, both closing on a finished work -- different words, in different tongues, a thousand years apart, but the same note",
+    "gospel_landing": "the whole work of bringing you home is complete; nothing left for you to finish; come home to the One who said 'It is finished'",
+    "rationale": "a faithful resonance (explicitly NOT a word-for-word citation) between Psalm 22's last line and Jesus' last word, with a grace landing that leaves nothing to earn",
+    "candidates": []
+  },
+  "draft": {
+    "title": "He Hath Done This",
+    "hook_type": "resonance",
+    "beats": [
+      {
+        "id": "hook",
+        "text": "A psalm's last line and Jesus' last breath in John close on the very same note: it is done."
+      },
+      {
+        "id": "point",
+        "text": "The psalm closes looking ahead — to God's saving work, accomplished, and told to a people not yet born. Its final line: \"…that he hath done this.\""
+      },
+      {
+        "id": "proof",
+        "text": "Done. And as Jesus hung dying, John records His final word: \"It is finished\"."
+      },
+      {
+        "id": "conviction",
+        "text": "Different words, in different tongues, a thousand years apart — but the same note: a finished work."
+      },
+      {
+        "id": "landing",
+        "text": "So what's left for you to finish? Nothing — only Someone to come home to: the One who said it is done."
+      }
+    ]
+  },
+  "beat_ids": ["hook", "point", "proof", "conviction", "landing"],
+  "word_count": 96,
+  "char_count": 0,
+  "authoritative_review": "independent",
+  "review_overall": "LOCKED",
+  "unknown_speakers": []
+}

@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "scroll spread across pale stone",
+      "actual": "scroll rests on pale stone but a blue-robed figure also holds its upper edge; the scroll remains the dominant centre"
+    }
+  ],
+  "banned_token_hits": []
+}

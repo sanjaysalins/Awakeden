@@ -1,0 +1,46 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, slower pacing with longer holds and restrained cuts.\n\nClassical devotional oil painting realism. Warm lamplight rises from a single clay lamp at the table's edge, painting amber gold across an old scribe's face and an open scroll while deep shadow holds the figures behind him; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\nAn aged scribe in robes of deep blue and ochre is seated low over an open scroll at a stone table, his weathered face lifted in quiet hope, a feather pen at rest in his clasped hands. A small clay oil lamp glows at the table's edge. Far behind him, half-dissolved into shadow, are dim suggestions of distant figures and a far gathering. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the scribe at his lamp-lit table, the open scroll, dim shapes in the shadow beyond.\n\nCut to mid framing — the scribe seated in his deep blue robe over the scroll.\n\nCut to close-up — the scribe's weathered, lifted face in amber lamplight.\n\nCut to insert — the small clay lamp's flame at the table's edge.\n\nCut to insert — the open scroll spread across the stone table.\n\nCut to lower framing — the scribe's clasped hands and the feather pen at rest.\n\nReturn to full composition — the scribe, the lamp, the scroll, the shadowed figures beyond.\n\nEnd hold on the scribe's lifted face.\n\nMicro-motion:\n- minimal\n- flame stirs as painted light only\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\nQuiet hope carried forward across centuries.\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.25,
+      "description": "Start on full composition — scribe at lamp-lit table, open scroll, dim shapes beyond"
+    },
+    {
+      "start_sec": 1.25,
+      "end_sec": 2.5,
+      "description": "Cut to mid framing — scribe seated in deep blue robe over the scroll"
+    },
+    {
+      "start_sec": 2.5,
+      "end_sec": 3.75,
+      "description": "Cut to close-up — weathered lifted face in amber lamplight"
+    },
+    {
+      "start_sec": 3.75,
+      "end_sec": 5.0,
+      "description": "Cut to insert — the clay lamp's flame at the table edge"
+    },
+    {
+      "start_sec": 5.0,
+      "end_sec": 6.25,
+      "description": "Cut to insert — the open scroll across the stone table"
+    },
+    {
+      "start_sec": 6.25,
+      "end_sec": 7.5,
+      "description": "Cut to lower framing — clasped hands and feather pen at rest"
+    },
+    {
+      "start_sec": 7.5,
+      "end_sec": 8.75,
+      "description": "Return to full composition — scribe, lamp, scroll, shadowed figures"
+    },
+    {
+      "start_sec": 8.75,
+      "end_sec": 10.0,
+      "description": "End hold on the scribe's lifted face"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "a line of dark Greek letters",
+      "actual": "decorative pseudo-Greek lettering (not a real word) — appropriate for an ancient codex and avoids any false textual claim"
+    }
+  ],
+  "banned_token_hits": []
+}
