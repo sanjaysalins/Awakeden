@@ -1,6 +1,21 @@
 # RESUME.md — start here next session
 
-## ═══════════ SESSION 2026-06-13c (LATEST) — PSALM 22 SHORT #04 FINISHED (14/14 clips + assembled + verified) ═══════════
+## ═══════════ SESSION 2026-06-13d (LATEST) — #05 He Hath Done This COMPLETE + NEW RULE: ambient/SFX bed by default ═══════════
+
+**Still going (user: "keep going"). Metered spend this session so far ≈ $13 (#04 3 clips ~$2 + #05 ~$11: 14 stills+2 retries ~$8, 14 Kling clips ~$9... NBP $0.50 + Kling $0.65; full #05 ≈ $11).**
+
+### 🆕 STANDING RULE (memory `feedback-ambient-sfx-default`): every finished clip — long AND short — gets an ambient/SFX bed by DEFAULT.
+Pipeline order per clip now: visual → animate → assemble → **SFX bed** (`sfx_pilots`, from `sound_library`, $0, sidechain-duck) → caption. NOT optional. **Retrofit pending: add the bed to the narration-only #01–#04** (they shipped before this rule).
+- How: author a per-short layer map (like `sfx_pilots/build_ps22_05.py`) → run it → caption the `_sfx.mp4`. Build helper pattern: `sfxlib.layer(label, slug, "loop|oneshot", start, len, gain_db, filt=, fin=, fout=)`; sounds live in `sound_library/clips/<slug>.mp3` (30 slugs incl. veil_tearing, air_hollow_desolate, dawn_morning_warm, rumble_deep_sub, nail_strike_single...). Caption the `_sfx.mp4` so the final carries the bed.
+
+### ✅✅ #05 "He Hath Done This" — FULLY DONE (assembled + SFX bed + captioned). 5 of 8 shorts complete.
+FINAL: `C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\02_Psalm_22_Song_From_The_Cross\v1\shorts\05_He_Hath_Done_This\assembly\viral_cut_sfx_captioned.mp4` (43.9s, opens on the psalm's last line, lands on the crucified 'It Is Finished' hero #4, ivory captions 96/96 words, ambient bed: hollow stillness + low swell under 'It is finished' + soft veil-tear + warm dawn).
+- Synthed creation.json (resonance-not-citation guard kept) → 14-scene plan LOCKED (hero #4 the cross) → 14 NBP stills QC'd full-res (scene 6 re-rendered: had duplicate central Christ + legible 'PSALM' text; scene 14 re-rendered to a **bare cross at dawn** per user) → cross halo on 4/7 KEPT (user OK) → 14 clips animated (auto-serviced via `.agent_bridge/_05_servicer.py` — builds locked cut-plans from each scene's state-only subject_block+macro_elements) → assembled hero-4 → SFX bed → captioned.
+- **Servicer scripts** (reusable for #06–#08): `.agent_bridge/_05_servicer.py` (cut-plans+kling-audit), `.agent_bridge/_05_verify_servicer.py` (assembly slot-verify auto-pass after manual clip QC). Adapt the scene_plan path per short.
+
+### ▶ NEXT: #06 The Ends Of The Earth (22:27) · #07 The Body Foretold (22:14,17) · #08 I Thirst (22:15~Jn 19:28) — same loop, NOW WITH SFX BED. Then retrofit SFX onto #01–#04.
+
+## ═══════════ SESSION 2026-06-13c — PSALM 22 SHORT #04 FINISHED (14/14 clips + assembled + verified) ═══════════
 
 **Paused by user ("stop now, save everything, update resume"). Env HEALTHY (WMI fix holds; genai 3.6s, whisper 10s). Metered spend this session ≈ $2 (3 Kling clips for scenes 12/13/14).**
 

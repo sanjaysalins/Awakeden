@@ -1,0 +1,501 @@
+{
+  "backend": "whisper",
+  "model": "base",
+  "words": [
+    {
+      "text": "A",
+      "start": 0.0,
+      "end": 0.12
+    },
+    {
+      "text": "psalm's",
+      "start": 0.12,
+      "end": 0.62
+    },
+    {
+      "text": "last",
+      "start": 0.62,
+      "end": 0.84
+    },
+    {
+      "text": "line",
+      "start": 0.84,
+      "end": 1.36
+    },
+    {
+      "text": "and",
+      "start": 1.76,
+      "end": 1.84
+    },
+    {
+      "text": "Jesus'",
+      "start": 1.84,
+      "end": 2.1
+    },
+    {
+      "text": "last",
+      "start": 2.4,
+      "end": 2.68
+    },
+    {
+      "text": "breath",
+      "start": 2.68,
+      "end": 3.04
+    },
+    {
+      "text": "in",
+      "start": 3.04,
+      "end": 3.3
+    },
+    {
+      "text": "John",
+      "start": 3.3,
+      "end": 3.6
+    },
+    {
+      "text": "close",
+      "start": 3.94,
+      "end": 4.06
+    },
+    {
+      "text": "on",
+      "start": 4.06,
+      "end": 4.26
+    },
+    {
+      "text": "the",
+      "start": 4.26,
+      "end": 4.36
+    },
+    {
+      "text": "very",
+      "start": 4.36,
+      "end": 4.58
+    },
+    {
+      "text": "same",
+      "start": 4.58,
+      "end": 4.92
+    },
+    {
+      "text": "note:",
+      "start": 4.92,
+      "end": 5.2
+    },
+    {
+      "text": "it",
+      "start": 5.98,
+      "end": 6.32
+    },
+    {
+      "text": "is",
+      "start": 6.32,
+      "end": 6.48
+    },
+    {
+      "text": "done.",
+      "start": 6.48,
+      "end": 6.74
+    },
+    {
+      "text": "The",
+      "start": 7.74,
+      "end": 8.06
+    },
+    {
+      "text": "psalm",
+      "start": 8.06,
+      "end": 8.44
+    },
+    {
+      "text": "closes",
+      "start": 8.44,
+      "end": 8.82
+    },
+    {
+      "text": "looking",
+      "start": 8.82,
+      "end": 9.14
+    },
+    {
+      "text": "ahead",
+      "start": 9.14,
+      "end": 9.54
+    },
+    {
+      "text": "—",
+      "start": 9.54,
+      "end": 9.54
+    },
+    {
+      "text": "to",
+      "start": 9.54,
+      "end": 10.16
+    },
+    {
+      "text": "God's",
+      "start": 10.16,
+      "end": 10.64
+    },
+    {
+      "text": "saving",
+      "start": 10.64,
+      "end": 10.84
+    },
+    {
+      "text": "work,",
+      "start": 10.84,
+      "end": 11.32
+    },
+    {
+      "text": "accomplished,",
+      "start": 11.54,
+      "end": 12.0
+    },
+    {
+      "text": "and",
+      "start": 12.38,
+      "end": 12.46
+    },
+    {
+      "text": "told",
+      "start": 12.46,
+      "end": 12.72
+    },
+    {
+      "text": "to",
+      "start": 12.72,
+      "end": 12.92
+    },
+    {
+      "text": "a",
+      "start": 12.92,
+      "end": 13.02
+    },
+    {
+      "text": "people",
+      "start": 13.02,
+      "end": 13.32
+    },
+    {
+      "text": "not",
+      "start": 13.32,
+      "end": 13.6
+    },
+    {
+      "text": "yet",
+      "start": 13.6,
+      "end": 13.82
+    },
+    {
+      "text": "born.",
+      "start": 13.82,
+      "end": 14.2
+    },
+    {
+      "text": "Its",
+      "start": 15.02,
+      "end": 15.28
+    },
+    {
+      "text": "final",
+      "start": 15.28,
+      "end": 15.54
+    },
+    {
+      "text": "line:",
+      "start": 15.54,
+      "end": 15.92
+    },
+    {
+      "text": "\"…that",
+      "start": 15.92,
+      "end": 16.94
+    },
+    {
+      "text": "he",
+      "start": 16.94,
+      "end": 17.18
+    },
+    {
+      "text": "hath",
+      "start": 17.18,
+      "end": 17.36
+    },
+    {
+      "text": "done",
+      "start": 17.36,
+      "end": 17.62
+    },
+    {
+      "text": "this.\"",
+      "start": 17.62,
+      "end": 17.92
+    },
+    {
+      "text": "Done.",
+      "start": 19.1,
+      "end": 19.28
+    },
+    {
+      "text": "And",
+      "start": 20.08,
+      "end": 20.72
+    },
+    {
+      "text": "as",
+      "start": 20.72,
+      "end": 20.86
+    },
+    {
+      "text": "Jesus",
+      "start": 20.86,
+      "end": 21.22
+    },
+    {
+      "text": "hung",
+      "start": 21.22,
+      "end": 21.56
+    },
+    {
+      "text": "dying,",
+      "start": 21.56,
+      "end": 21.94
+    },
+    {
+      "text": "John",
+      "start": 22.44,
+      "end": 22.58
+    },
+    {
+      "text": "records",
+      "start": 22.58,
+      "end": 22.96
+    },
+    {
+      "text": "His",
+      "start": 22.96,
+      "end": 23.28
+    },
+    {
+      "text": "final",
+      "start": 23.28,
+      "end": 23.66
+    },
+    {
+      "text": "word:",
+      "start": 23.66,
+      "end": 23.96
+    },
+    {
+      "text": "\"It",
+      "start": 24.58,
+      "end": 25.06
+    },
+    {
+      "text": "is",
+      "start": 25.06,
+      "end": 25.18
+    },
+    {
+      "text": "finished\".",
+      "start": 25.18,
+      "end": 25.68
+    },
+    {
+      "text": "Different",
+      "start": 26.68,
+      "end": 27.04
+    },
+    {
+      "text": "words,",
+      "start": 27.04,
+      "end": 27.48
+    },
+    {
+      "text": "in",
+      "start": 27.48,
+      "end": 28.0
+    },
+    {
+      "text": "different",
+      "start": 28.0,
+      "end": 28.36
+    },
+    {
+      "text": "tongues,",
+      "start": 28.36,
+      "end": 28.86
+    },
+    {
+      "text": "a",
+      "start": 29.24,
+      "end": 29.3
+    },
+    {
+      "text": "thousand",
+      "start": 29.3,
+      "end": 29.74
+    },
+    {
+      "text": "years",
+      "start": 29.74,
+      "end": 29.98
+    },
+    {
+      "text": "apart",
+      "start": 29.98,
+      "end": 30.48
+    },
+    {
+      "text": "—",
+      "start": 30.48,
+      "end": 30.48
+    },
+    {
+      "text": "but",
+      "start": 31.0,
+      "end": 31.18
+    },
+    {
+      "text": "the",
+      "start": 31.18,
+      "end": 31.34
+    },
+    {
+      "text": "same",
+      "start": 31.34,
+      "end": 31.66
+    },
+    {
+      "text": "note:",
+      "start": 31.66,
+      "end": 31.98
+    },
+    {
+      "text": "a",
+      "start": 32.8,
+      "end": 32.9
+    },
+    {
+      "text": "finished",
+      "start": 32.9,
+      "end": 33.26
+    },
+    {
+      "text": "work.",
+      "start": 33.26,
+      "end": 33.82
+    },
+    {
+      "text": "So",
+      "start": 34.58,
+      "end": 35.26
+    },
+    {
+      "text": "what's",
+      "start": 35.26,
+      "end": 35.6
+    },
+    {
+      "text": "left",
+      "start": 35.6,
+      "end": 35.74
+    },
+    {
+      "text": "for",
+      "start": 35.74,
+      "end": 36.02
+    },
+    {
+      "text": "you",
+      "start": 36.02,
+      "end": 36.2
+    },
+    {
+      "text": "to",
+      "start": 36.2,
+      "end": 36.32
+    },
+    {
+      "text": "finish?",
+      "start": 36.32,
+      "end": 36.62
+    },
+    {
+      "text": "Nothing",
+      "start": 37.44,
+      "end": 38.12
+    },
+    {
+      "text": "—",
+      "start": 38.12,
+      "end": 38.12
+    },
+    {
+      "text": "only",
+      "start": 38.9,
+      "end": 39.26
+    },
+    {
+      "text": "Someone",
+      "start": 39.26,
+      "end": 39.78
+    },
+    {
+      "text": "to",
+      "start": 39.78,
+      "end": 40.0
+    },
+    {
+      "text": "come",
+      "start": 40.0,
+      "end": 40.14
+    },
+    {
+      "text": "home",
+      "start": 40.14,
+      "end": 40.44
+    },
+    {
+      "text": "to:",
+      "start": 40.44,
+      "end": 40.68
+    },
+    {
+      "text": "the",
+      "start": 41.38,
+      "end": 41.72
+    },
+    {
+      "text": "One",
+      "start": 41.72,
+      "end": 41.96
+    },
+    {
+      "text": "who",
+      "start": 41.96,
+      "end": 42.14
+    },
+    {
+      "text": "said",
+      "start": 42.14,
+      "end": 42.48
+    },
+    {
+      "text": "it",
+      "start": 43.14,
+      "end": 43.3
+    },
+    {
+      "text": "is",
+      "start": 43.3,
+      "end": 43.48
+    },
+    {
+      "text": "done.",
+      "start": 43.48,
+      "end": 43.72
+    }
+  ]
+}
