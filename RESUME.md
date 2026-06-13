@@ -1,5 +1,14 @@
 # RESUME.md — start here next session
 
+## ═══════════ SESSION 2026-06-13b — SPEC.md AUTHORED + RED-TEAMED (docs only, no production change) ═══════════
+
+**Paused by user. No pipeline state changed — this was a documentation pass.**
+
+- **NEW: `SPEC.md` in repo root** — reverse-engineered system spec (the 4 stages, all CLI flags, gates, models, cost, libraries, 16 locked invariants). Read it for a one-page contract of how the engine is built; it points to STATE.md/RESUME.md for live status.
+- **Red-teamed TWICE** (3 adversarial Explore agents/round vs the real source). Caught + fixed 4 factual bugs: TEXT gates 7→**8** (G8="The Five Questions"); ASSEMBLY gates 7→**9** (G1-7 deterministic, G8 panel beat-continuity, G9 advisory beat-density); scene-count direction; `AgentVerdict` enum = **"REVISION NEEDED"**. Plus naming/cost/library nuances. Second round re-verified all fixes CORRECT.
+- **`CLAUDE.md` line 100 fixed:** "8 greenlit series" → **"10 greenlit series (76 episodes)"** (matches data/series.json: 10 series, 76 eps).
+- ▶ **Production resume point is UNCHANGED — see the batch section below (finish #04, then #05–#08).**
+
 ## ═══════════ SESSION 2026-06-13 (LATEST) — PSALM 22 SHORTS BATCH: #01/#02/#03 DONE+CAPTIONED · #04 11/14 CLIPS RENDERED (PAUSED) ═══════════
 
 **Paused by user ("pause now, save everything, resume later"). Env is HEALTHY (WMI fix holds — see below). Pattern proven 3×.**

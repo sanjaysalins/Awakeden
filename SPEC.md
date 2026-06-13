@@ -300,7 +300,7 @@ STATE.md RESUME.md README.md *_PLAN.md *_BUDGET.md    status + strategy docs
 ## 11. Data Models (selected)
 
 - **TEXT** (`models.py`): `Beat`, `Draft`, `ThreadCandidate`/`Thread`,
-  `GateResult` (PASS/CONDITIONAL/FAIL), `AgentVerdict` (STRONG/CAUTION/REVISION),
+  `GateResult` (PASS/CONDITIONAL/FAIL), `AgentVerdict` (STRONG/CAUTION/REVISION NEEDED),
   `Review` (LOCKED/REVISE/REWORK).
 - **VISUAL** (`visual_models.py`): `SceneCandidate`, `Scene` (subject_block,
   mood_block, macro_elements, vignettes, viral_role, shot_kind, jesus_variant…),
