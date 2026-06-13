@@ -1,0 +1,18 @@
+{
+  "scene_index": 13,
+  "title": "Welcomed into the Family",
+  "scene_type": "single",
+  "framing": "mid",
+  "arc_position": "human-response",
+  "jesus_variant": "resurrection",
+  "viral_role": "build",
+  "pacing": "controlled",
+  "macro_elements": [
+    "a hand reaching to welcome",
+    "the newcomer drawn in",
+    "joyful open faces",
+    "the risen Christ soft beyond"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

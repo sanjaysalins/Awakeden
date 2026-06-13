@@ -1,0 +1,18 @@
+{
+  "scene_index": 10,
+  "title": "Calling You In",
+  "scene_type": "single",
+  "framing": "mid",
+  "arc_position": "closing-devotional",
+  "jesus_variant": "resurrection",
+  "viral_role": "close",
+  "pacing": "slower",
+  "macro_elements": [
+    "the open welcoming arms",
+    "the scarred open hands",
+    "the warm inviting face",
+    "the widening dawn light"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

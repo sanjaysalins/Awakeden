@@ -1,0 +1,18 @@
+{
+  "scene_index": 9,
+  "title": "The Wounded Hand on the Shoulder",
+  "scene_type": "single",
+  "framing": "close",
+  "arc_position": "symbolic-support",
+  "jesus_variant": "resurrection",
+  "viral_role": "build",
+  "pacing": "slower",
+  "macro_elements": [
+    "the healed nail-mark in the palm",
+    "the hand on the shoulder",
+    "the rough robe cloth",
+    "warm light on the join"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

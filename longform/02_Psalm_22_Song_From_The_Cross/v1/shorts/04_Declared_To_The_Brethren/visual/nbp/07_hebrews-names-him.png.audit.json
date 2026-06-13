@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "Greek letters on the page",
+      "actual": "the page reads as a pale codex surface without clearly legible Greek - non-failing (avoids garbled text); fingertip and bound book are correct"
+    }
+  ],
+  "banned_token_hits": []
+}

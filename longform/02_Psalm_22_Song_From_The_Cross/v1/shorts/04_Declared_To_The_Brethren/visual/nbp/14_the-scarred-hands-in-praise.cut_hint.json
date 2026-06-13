@@ -1,0 +1,18 @@
+{
+  "scene_index": 14,
+  "title": "The Scarred Hands in Praise",
+  "scene_type": "single",
+  "framing": "close",
+  "arc_position": "nt-gospel-link",
+  "jesus_variant": "resurrection",
+  "viral_role": "build",
+  "pacing": "slower",
+  "macro_elements": [
+    "the healed nail-marks in the palms",
+    "the lifted open hands",
+    "the clean white sleeves",
+    "warm dawn light on the hands"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

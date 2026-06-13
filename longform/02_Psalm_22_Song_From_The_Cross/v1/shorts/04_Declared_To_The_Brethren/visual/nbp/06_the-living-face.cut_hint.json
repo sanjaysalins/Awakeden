@@ -1,0 +1,17 @@
+{
+  "scene_index": 6,
+  "title": "The Living Face",
+  "scene_type": "single",
+  "framing": "close",
+  "arc_position": "revelation",
+  "jesus_variant": "resurrection",
+  "viral_role": "build",
+  "pacing": "slower",
+  "macro_elements": [
+    "the calm living eyes",
+    "the faint thorn-scar at the brow",
+    "warm dawn light on the cheek"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

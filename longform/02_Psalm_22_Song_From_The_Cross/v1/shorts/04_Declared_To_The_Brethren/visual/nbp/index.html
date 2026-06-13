@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Visual review — shorts / 04_Declared_To_The_Brethren / nbp</title>
+<style>
+  :root {
+    --bg: #18181b;
+    --card: #27272a;
+    --card-soft: #3f3f46;
+    --text: #e4e4e7;
+    --text-dim: #a1a1aa;
+    --accent: #fde68a;
+    --pass: #4ade80;
+    --fail: #f87171;
+    --warn: #fbbf24;
+    --border: #52525b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+    background: var(--bg); color: var(--text);
+    margin: 0; padding: 32px;
+    line-height: 1.45;
+  }
+  header {
+    max-width: 1280px; margin: 0 auto 32px;
+  }
+  h1 { font-size: 22px; margin: 0 0 8px; font-weight: 600; }
+  .subtitle { color: var(--text-dim); font-size: 13px; }
+  .grid { max-width: 1280px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+  }
+  .card .img-col {
+    background: #000;
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    padding: 12px;
+  }
+  .card img, .card video { max-width: 100%; max-height: 480px; border-radius: 4px; display: block; }
+  .media-badge {
+    position: absolute; top: 16px; left: 16px;
+    padding: 2px 8px; border-radius: 3px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0.04em;
+    font-family: ui-monospace, monospace;
+    pointer-events: none;
+  }
+  .media-badge.clip { background: rgba(74,222,128,0.9); color: #18181b; }
+  .media-badge.still { background: rgba(161,161,170,0.85); color: #18181b; }
+  .card .meta-col { padding: 20px 24px; }
+  .ref {
+    display: inline-block;
+    background: var(--accent);
+    color: #18181b;
+    font-weight: 700; font-size: 14px;
+    padding: 4px 10px; border-radius: 4px;
+    margin-right: 12px;
+    font-family: ui-monospace, "Cascadia Code", monospace;
+  }
+  .title { font-size: 18px; font-weight: 600; display: inline; }
+  .tags { margin: 10px 0 16px; }
+  .tag {
+    display: inline-block;
+    background: var(--card-soft);
+    color: var(--text-dim);
+    padding: 2px 8px; margin-right: 6px;
+    border-radius: 3px; font-size: 11px;
+    font-family: ui-monospace, monospace;
+  }
+  .verdict {
+    display: inline-block;
+    padding: 3px 10px; border-radius: 4px;
+    font-size: 12px; font-weight: 600;
+    font-family: ui-monospace, monospace;
+    margin-bottom: 16px;
+  }
+  .verdict.pass { background: rgba(74,222,128,0.15); color: var(--pass); border: 1px solid var(--pass); }
+  .verdict.fail { background: rgba(248,113,113,0.15); color: var(--fail); border: 1px solid var(--fail); }
+  .verdict.none { background: var(--card-soft); color: var(--text-dim); }
+  .section { margin: 14px 0; }
+  .section-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); margin-bottom: 4px; }
+  .section-body { font-size: 14px; color: var(--text); }
+  ul.issues { margin: 6px 0 0; padding-left: 20px; font-size: 13px; }
+  ul.issues li { margin: 4px 0; }
+  ul.issues .claim { color: var(--warn); }
+  ul.issues .actual { color: var(--text-dim); }
+  .filename {
+    font-family: ui-monospace, monospace; font-size: 11px;
+    color: var(--text-dim); margin-top: 12px;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Visual review — shorts / 04_Declared_To_The_Brethren / nbp</h1>
+  <div class="subtitle">14 rendered scene(s) via <code>nbp</code>. Scenes with a Kling clip play inline (looping, muted — unmute with the controls); reference any scene by its <code>#NN</code> badge.</div>
+</header>
+<div class="grid">
+<div class="card"><div class="img-col"><img src="01_the-empty-tomb.png" alt="Scene 1"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#01</span><span class="title">The Empty Tomb</span><div class="tags"><span class="tag">single</span> <span class="tag">wide</span> <span class="tag">opening-hook</span> <span class="tag">role=hook-open</span> <span class="tag">pacing=slower</span> <span class="tag">priority=1</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">an open rock-hewn tomb, the great round stone rolled aside, folded linen within, dawn light entering</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">dawning, quiet hope</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">Hook on the resurrection</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the rolled-aside round stone</li><li>the folded grave-linen</li><li>the dark empty doorway</li><li>dawn light on the threshold</li></ul></div><div class="filename">01_the-empty-tomb.png</div></div></div>
+<div class="card"><div class="img-col"><img src="02_the-psalm-turns.png" alt="Scene 2"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#02</span><span class="title">The Psalm Turns</span><div class="tags"><span class="tag">unified</span> <span class="tag">mid</span> <span class="tag">ot-echo</span> <span class="tag">role=build</span> <span class="tag">pacing=slower</span> <span class="tag">priority=6</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">an open Psalm scroll, the lower lines in shadow and the v22 lines in light, faint vignettes of the turn</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">the lifting of darkness</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the turn from anguish to praise</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the shadowed upper Hebrew lines</li><li>the lamplit lower lines</li><li>the warm break of light on the parchment</li><li>the curled scroll edge</li></ul></div><div class="filename">02_the-psalm-turns.png</div></div></div>
+<div class="card"><div class="img-col"><img src="03_i-will-declare-thy-name.png" alt="Scene 3"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#03</span><span class="title">I Will Declare Thy Name</span><div class="tags"><span class="tag">single</span> <span class="tag">close</span> <span class="tag">theological-centre</span> <span class="tag">role=pivot</span> <span class="tag">pacing=slower</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">extreme close on a Hebrew scroll line, a fingertip beneath it</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">quiet wonder</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the praise line</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the fingertip</li><li>the warmly lit Hebrew line</li><li>the fibrous parchment grain</li></ul></div><div class="filename">03_i-will-declare-thy-name.png</div></div></div>
+<div class="card"><div class="img-col"><img src="04_the-risen-christ.png" alt="Scene 4"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#04</span><span class="title">The Risen Christ</span><div class="tags"><span class="tag">single</span> <span class="tag">low-angle</span> <span class="tag">nt-gospel-link</span> <span class="tag">jesus=resurrection</span> <span class="tag">role=climax</span> <span class="tag">pacing=slower</span> <span class="tag">priority=2</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">the risen Christ standing alive, robed, scarred hands, dawn light</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">living, quiet triumph</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the living praising voice</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the open scarred hand</li><li>the calm living face</li><li>the clean white robe</li><li>soft dawn light around him</li></ul></div><div class="section"><div class="section-label">Audit issues</div><ul class="issues"><li><span class="claim">spec:</span> no halo<br><span class="actual">actual:</span> a soft warm backlight remains behind the head - much milder than the hard ring, reads as painted dawn glow; acceptable</li></ul></div><div class="filename">04_the-risen-christ.png</div></div></div>
+<div class="card"><div class="img-col"><img src="05_among-the-brethren.png" alt="Scene 5"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#05</span><span class="title">Among the Brethren</span><div class="tags"><span class="tag">unified</span> <span class="tag">mid</span> <span class="tag">nt-gospel-link</span> <span class="tag">jesus=resurrection</span> <span class="tag">role=build</span> <span class="tag">pacing=controlled</span> <span class="tag">priority=3</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">the risen Christ among a gathered group, declaring, vignettes of the gathering</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">joyful gathering</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">declaring the name among His own</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the lifted scarred hand</li><li>a face turned in dawning joy</li><li>the close-gathered group</li><li>the far cross behind</li></ul></div><div class="section"><div class="section-label">Audit issues</div><ul class="issues"><li><span class="claim">spec:</span> painted light only<br><span class="actual">actual:</span> a soft glory-light behind the risen head - acceptable for a resurrection scene, not a hard post-effect ring</li></ul></div><div class="filename">05_among-the-brethren.png</div></div></div>
+<div class="card"><div class="img-col"><img src="06_the-living-face.png" alt="Scene 6"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#06</span><span class="title">The Living Face</span><div class="tags"><span class="tag">single</span> <span class="tag">close</span> <span class="tag">revelation</span> <span class="tag">jesus=resurrection</span> <span class="tag">role=build</span> <span class="tag">pacing=slower</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">the risen Christ&#39;s face, alive and calm</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">peace beyond suffering</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the risen face</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the calm living eyes</li><li>the faint thorn-scar at the brow</li><li>warm dawn light on the cheek</li></ul></div><div class="filename">06_the-living-face.png</div></div></div>
+<div class="card"><div class="img-col"><img src="07_hebrews-names-him.png" alt="Scene 7"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#07</span><span class="title">Hebrews Names Him</span><div class="tags"><span class="tag">single</span> <span class="tag">close</span> <span class="tag">theological-centre</span> <span class="tag">role=build</span> <span class="tag">pacing=slower</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">an open Greek codex page, a fingertip beneath a line</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">solemn recognition</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the NT citation</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the fingertip on the line</li><li>the dark Greek letters</li><li>the pale vellum grain</li><li>the lamplight on the page</li></ul></div><div class="section"><div class="section-label">Audit issues</div><ul class="issues"><li><span class="claim">spec:</span> Greek letters on the page<br><span class="actual">actual:</span> the page reads as a pale codex surface without clearly legible Greek - non-failing (avoids garbled text); fingertip and bound book are correct</li></ul></div><div class="filename">07_hebrews-names-him.png</div></div></div>
+<div class="card"><div class="img-col"><img src="08_not-ashamed.png" alt="Scene 8"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#08</span><span class="title">Not Ashamed to Call Them Brethren</span><div class="tags"><span class="tag">unified</span> <span class="tag">mid</span> <span class="tag">nt-gospel-link</span> <span class="tag">jesus=resurrection</span> <span class="tag">role=build</span> <span class="tag">pacing=controlled</span> <span class="tag">priority=4</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">the risen Christ embracing a brother, vignettes of welcome</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">tender welcome</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the embrace into family</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the scarred hand on the shoulder</li><li>the two faces close in recognition</li><li>the kneeling man drawn up</li><li>the open doorway of light</li></ul></div><div class="filename">08_not-ashamed.png</div></div></div>
+<div class="card"><div class="img-col"><img src="09_the-wounded-hand-on-the-shoulder.png" alt="Scene 9"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#09</span><span class="title">The Wounded Hand on the Shoulder</span><div class="tags"><span class="tag">single</span> <span class="tag">close</span> <span class="tag">symbolic-support</span> <span class="tag">jesus=resurrection</span> <span class="tag">role=build</span> <span class="tag">pacing=slower</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">a scarred hand resting on a man&#39;s shoulder</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">claimed and welcomed</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the family touch</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the healed nail-mark in the palm</li><li>the hand on the shoulder</li><li>the rough robe cloth</li><li>warm light on the join</li></ul></div><div class="section"><div class="section-label">Audit issues</div><ul class="issues"><li><span class="claim">spec:</span> no halo<br><span class="actual">actual:</span> a soft glory-light behind the risen head (consistent across the resurrection scenes; traditional for the risen Christ)</li></ul></div><div class="filename">09_the-wounded-hand-on-the-shoulder.png</div></div></div>
+<div class="card"><div class="img-col"><img src="10_calling-you-in.png" alt="Scene 10"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#10</span><span class="title">Calling You In</span><div class="tags"><span class="tag">single</span> <span class="tag">mid</span> <span class="tag">closing-devotional</span> <span class="tag">jesus=resurrection</span> <span class="tag">role=close</span> <span class="tag">pacing=slower</span> <span class="tag">priority=5</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">the risen Christ, arms opening toward the viewer, scarred hands, dawn light</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">open, costly welcome</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the gospel-pivot hero close</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the open welcoming arms</li><li>the scarred open hands</li><li>the warm inviting face</li><li>the widening dawn light</li></ul></div><div class="section"><div class="section-label">Audit issues</div><ul class="issues"><li><span class="claim">spec:</span> no fantasy glow<br><span class="actual">actual:</span> a soft-edged resurrection glory-radiance behind the head - traditional for the risen Christ hero, not a hard post-effect ring; welcoming pose and scarred hands are exact</li></ul></div><div class="filename">10_calling-you-in.png</div></div></div>
+<div class="card"><div class="img-col"><img src="11_the-invitation-face.png" alt="Scene 11"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#11</span><span class="title">The Invitation</span><div class="tags"><span class="tag">single</span> <span class="tag">close</span> <span class="tag">revelation</span> <span class="tag">jesus=resurrection</span> <span class="tag">role=close</span> <span class="tag">pacing=slower</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">the risen Christ&#39;s face turned toward the viewer</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">warm invitation</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the face that invites</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the warm inviting eyes</li><li>the faint thorn-scar</li><li>soft dawn light on the cheek</li></ul></div><div class="filename">11_the-invitation-face.png</div></div></div>
+<div class="card"><div class="img-col"><img src="12_a-thousand-years-apart.png" alt="Scene 12"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#12</span><span class="title">A Thousand Years Apart</span><div class="tags"><span class="tag">unified</span> <span class="tag">wide</span> <span class="tag">ot-echo</span> <span class="tag">jesus=resurrection</span> <span class="tag">role=build</span> <span class="tag">pacing=slower</span> <span class="tag">priority=7</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">David at his scroll at left, the risen Christ among brethren at right</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">wonder fulfilled</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the turn fulfilled</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>David&#39;s lifting face</li><li>the scroll praise-line</li><li>the risen Christ among the family</li><li>the band of light between</li></ul></div><div class="filename">12_a-thousand-years-apart.png</div></div></div>
+<div class="card"><div class="img-col"><img src="13_welcomed-into-the-family.png" alt="Scene 13"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#13</span><span class="title">Welcomed into the Family</span><div class="tags"><span class="tag">single</span> <span class="tag">mid</span> <span class="tag">human-response</span> <span class="tag">jesus=resurrection</span> <span class="tag">role=build</span> <span class="tag">pacing=controlled</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">a gathered group drawing a newcomer into their midst</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">belonging</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the listener&#39;s place in the family</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>a hand reaching to welcome</li><li>the newcomer drawn in</li><li>joyful open faces</li><li>the risen Christ soft beyond</li></ul></div><div class="filename">13_welcomed-into-the-family.png</div></div></div>
+<div class="card"><div class="img-col"><img src="14_the-scarred-hands-in-praise.png" alt="Scene 14"><span class="media-badge still">still only</span></div><div class="meta-col"><span class="ref">#14</span><span class="title">The Scarred Hands in Praise</span><div class="tags"><span class="tag">single</span> <span class="tag">close</span> <span class="tag">nt-gospel-link</span> <span class="tag">jesus=resurrection</span> <span class="tag">role=build</span> <span class="tag">pacing=slower</span></div><div class="verdict pass">audit PASS</div><div class="section"><div class="section-label">Required visible elements</div><div class="section-body">the risen Christ&#39;s scarred hands lifted</div></div><div class="section"><div class="section-label">Emotional tone</div><div class="section-body">triumphant praise</div></div><div class="section"><div class="section-label">Purpose</div><div class="section-body">the praise of the risen One, in one detail</div></div><div class="section"><div class="section-label">Macro elements (Kling cut anchors)</div><ul class="issues"><li>the healed nail-marks in the palms</li><li>the lifted open hands</li><li>the clean white sleeves</li><li>warm dawn light on the hands</li></ul></div><div class="filename">14_the-scarred-hands-in-praise.png</div></div></div>
+</div>
+</body>
+</html>
