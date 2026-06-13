@@ -1,0 +1,536 @@
+{
+  "plan": {
+    "narration_reading": "The cut opens on the one forsaken man alone, then Abraham under the stars carries 'every nation on earth' and the psalm scroll 'the song throws its arms open'. The cross-over-the-world lands the quoted 'all the ends of the world', the gathered kindreds land 'shall worship', and the tiny Golgotha lands 'one corner of the Roman Empire'. Light-to-the-gentiles carries 'the ends of the earth will turn to God', the empty tomb lands 'the empty tomb', the travellers land 'the gospel went out', and the pilgrim procession lands 'nation after nation'. The lone traveller lands 'wherever you are', the cross over the whole earth lands 'swept the whole earth', and the open road lands 'room for you to turn to Him' — with hero #4, the cross radiating to the horizons, closing the cut.",
+    "red_team_notes": "Several 'nations' clips (#3 cross+world, #8 kindreds, #11 procession, #9 light-to-gentiles) risk blurring; I pinned each to a distinct phrase (the ends / shall worship / nation after nation / turn to God) and they differ in framing (wide cross, gathered faces, road procession, first-light people). #7 Abraham-under-stars and #5 tiny-Golgotha give non-crowd variety. The lone-man open (#1) and lone-traveller landing (#12) bookend the 'one' that becomes 'all'.",
+    "hero_scene_index": 4,
+    "hero_head_s": 0.0,
+    "hero_tail_s": 2.0,
+    "total_seconds": 61.818,
+    "clip_budget": 13,
+    "selected_scene_indices": [
+      1,
+      7,
+      2,
+      3,
+      8,
+      5,
+      9,
+      10,
+      6,
+      11,
+      12,
+      14,
+      13
+    ],
+    "section_assignment": {},
+    "slots": [
+      {
+        "order": 0,
+        "role": "body",
+        "scene_index": 1,
+        "section": "hook",
+        "slot_start_s": 0.0,
+        "slot_end_s": 3.82,
+        "source_in_s": 2.538,
+        "source_out_s": 7.504,
+        "speed_factor": 1.3,
+        "op": "speed+trim",
+        "rationale": "The lone forsaken man alone = the hook-open, pinned to beat 0 ('one forsaken man dying alone').",
+        "beat_index": 0,
+        "beat_phrase": "Psalm twenty-two opens with one forsaken man dying alone —"
+      },
+      {
+        "order": 1,
+        "role": "body",
+        "scene_index": 7,
+        "section": "hook",
+        "slot_start_s": 3.82,
+        "slot_end_s": 6.56,
+        "source_in_s": 3.24,
+        "source_out_s": 6.802,
+        "speed_factor": 1.3,
+        "op": "speed+trim",
+        "rationale": "Abraham beneath countless stars on 'ends with every nation on earth' — the ancient promise of the nations.",
+        "beat_index": 1,
+        "beat_phrase": "and ends with every nation on earth."
+      },
+      {
+        "order": 2,
+        "role": "body",
+        "scene_index": 2,
+        "section": "hook",
+        "slot_start_s": 6.56,
+        "slot_end_s": 11.2,
+        "source_in_s": 2.005,
+        "source_out_s": 8.037,
+        "speed_factor": 1.3,
+        "op": "speed+trim",
+        "rationale": "The psalm scroll, light widening outward, on 'the song throws its arms open to every nation'.",
+        "beat_index": 3,
+        "beat_phrase": "the song throws its arms open to every nation:"
+      },
+      {
+        "order": 3,
+        "role": "body",
+        "scene_index": 3,
+        "section": "hook",
+        "slot_start_s": 11.2,
+        "slot_end_s": 13.82,
+        "source_in_s": 3.318,
+        "source_out_s": 6.724,
+        "speed_factor": 1.3,
+        "op": "speed+trim",
+        "rationale": "The cross on its hill against a whole-world horizon on the quoted 'All the ends of the world'.",
+        "beat_index": 4,
+        "beat_phrase": "\"All the ends of the world shall remember and turn unto the"
+      },
+      {
+        "order": 4,
+        "role": "body",
+        "scene_index": 8,
+        "section": "hook",
+        "slot_start_s": 13.82,
+        "slot_end_s": 18.6,
+        "source_in_s": 0.0,
+        "source_out_s": 10.042,
+        "speed_factor": 2.1008,
+        "op": "speed",
+        "rationale": "The gathered kindreds of many nations on 'all the kindreds of the nations shall worship'.",
+        "beat_index": 6,
+        "beat_phrase": "and all the kindreds of the nations shall worship before thee.\""
+      },
+      {
+        "order": 5,
+        "role": "body",
+        "scene_index": 5,
+        "section": "hook",
+        "slot_start_s": 18.6,
+        "slot_end_s": 21.88,
+        "source_in_s": 1.413,
+        "source_out_s": 8.629,
+        "speed_factor": 2.2,
+        "op": "speed+trim",
+        "rationale": "The tiny Golgotha dwarfed by a vast landscape on 'a man dying in one corner of the Roman Empire'.",
+        "beat_index": 7,
+        "beat_phrase": "A man dying in one corner of the Roman Empire —"
+      },
+      {
+        "order": 6,
+        "role": "body",
+        "scene_index": 9,
+        "section": "hook",
+        "slot_start_s": 21.88,
+        "slot_end_s": 24.38,
+        "source_in_s": 3.396,
+        "source_out_s": 6.646,
+        "speed_factor": 1.3,
+        "op": "speed+trim",
+        "rationale": "Light reaching a far people on 'the ends of the earth will turn to God'.",
+        "beat_index": 8,
+        "beat_phrase": "and his song says the ends of the earth will turn to"
+      },
+      {
+        "order": 7,
+        "role": "body",
+        "scene_index": 10,
+        "section": "hook",
+        "slot_start_s": 24.38,
+        "slot_end_s": 30.48,
+        "source_in_s": 0.0,
+        "source_out_s": 10.042,
+        "speed_factor": 1.6462,
+        "op": "speed",
+        "rationale": "The open empty tomb on 'and the empty tomb'.",
+        "beat_index": 12,
+        "beat_phrase": "and the empty tomb,"
+      },
+      {
+        "order": 8,
+        "role": "body",
+        "scene_index": 6,
+        "section": "hook",
+        "slot_start_s": 30.48,
+        "slot_end_s": 32.08,
+        "source_in_s": 3.981,
+        "source_out_s": 6.061,
+        "speed_factor": 1.3,
+        "op": "speed+trim",
+        "rationale": "The travellers and ship setting out on 'the gospel went out'.",
+        "beat_index": 13,
+        "beat_phrase": "the gospel went out —"
+      },
+      {
+        "order": 9,
+        "role": "body",
+        "scene_index": 11,
+        "section": "hook",
+        "slot_start_s": 32.08,
+        "slot_end_s": 35.78,
+        "source_in_s": 0.951,
+        "source_out_s": 9.091,
+        "speed_factor": 2.2,
+        "op": "speed+trim",
+        "rationale": "The pilgrim procession of many lands on 'nation after nation have turned to the LORD'.",
+        "beat_index": 14,
+        "beat_phrase": "and people in nation after nation have turned to the LORD,"
+      },
+      {
+        "order": 10,
+        "role": "body",
+        "scene_index": 12,
+        "section": "hook",
+        "slot_start_s": 35.78,
+        "slot_end_s": 50.86,
+        "source_in_s": 0.0,
+        "source_out_s": 10.042,
+        "speed_factor": 0.6659,
+        "op": "speed",
+        "rationale": "The lone traveller turned toward distant light on 'includes wherever you are'.",
+        "beat_index": 20,
+        "beat_phrase": "And \"the ends of the world\" includes wherever you are,"
+      },
+      {
+        "order": 11,
+        "role": "body",
+        "scene_index": 14,
+        "section": "hook",
+        "slot_start_s": 50.86,
+        "slot_end_s": 56.44,
+        "source_in_s": 1.394,
+        "source_out_s": 8.648,
+        "speed_factor": 1.3,
+        "op": "speed+trim",
+        "rationale": "The cross over the whole earth at dawn on 'has swept the whole earth'.",
+        "beat_index": 22,
+        "beat_phrase": "The song that began with one man dying alone has swept the"
+      },
+      {
+        "order": 12,
+        "role": "body",
+        "scene_index": 13,
+        "section": "hook",
+        "slot_start_s": 56.44,
+        "slot_end_s": 59.818,
+        "source_in_s": 1.305,
+        "source_out_s": 8.737,
+        "speed_factor": 2.2,
+        "op": "speed+trim",
+        "rationale": "The open road to the cross on 'still has room for you to turn to Him'.",
+        "beat_index": 24,
+        "beat_phrase": "the Lord it promised still has room for you to turn to"
+      },
+      {
+        "order": 13,
+        "role": "hero-tail",
+        "scene_index": 4,
+        "section": "hero",
+        "slot_start_s": 59.818,
+        "slot_end_s": 61.818,
+        "source_in_s": 0.0,
+        "source_out_s": 2.0,
+        "speed_factor": 1.0,
+        "op": "speed",
+        "rationale": "Hero close — the cut lands on Christ (single appearance, no reuse).",
+        "beat_index": -1,
+        "beat_phrase": ""
+      }
+    ],
+    "notes": ""
+  },
+  "self_review": {
+    "overall": "LOCKED",
+    "panel": [
+      {
+        "agent": "Editor",
+        "verdict": "STRONG",
+        "note": "13 distinct moments over 61.8s, time-ordered; opens on the lone man, closes on the cross radiating to the horizons — the 'one becomes all' arc reads."
+      },
+      {
+        "agent": "Beat-Sync",
+        "verdict": "STRONG",
+        "note": "Quote lands right (cross+world on 'all the ends of the world', kindreds on 'shall worship'); object/echo clips on their phrases (empty tomb, gospel goes out, Abraham on 'every nation')."
+      },
+      {
+        "agent": "No-Reuse",
+        "verdict": "STRONG",
+        "note": "13 distinct body clips; hero #04 only at the close."
+      },
+      {
+        "agent": "Pacing",
+        "verdict": "STRONG",
+        "note": "avg 1.55x brisk but the 61.8s narration gives slots ~4.6s to breathe; hero held full-speed for a reverent landing."
+      },
+      {
+        "agent": "Hero-Continuity",
+        "verdict": "STRONG",
+        "note": "Opens on the lone forsaken man (scroll-stopper), closes on the cross reaching the ends of the earth — lands on Christ."
+      },
+      {
+        "agent": "Jaded Viewer",
+        "verdict": "STRONG",
+        "note": "The 'one man's song swept the whole earth' arc plus the lone-to-all bookends earns the watch."
+      }
+    ],
+    "gates": [
+      {
+        "gate": "AS-G1 Timeline Coverage",
+        "verdict": "PASS",
+        "evidence": "14 slots tile 0->61.82s contiguously.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G2 No Reuse",
+        "verdict": "PASS",
+        "evidence": "13 distinct body clips; hero #04 appears once (close only) — no reuse.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G3 Speed/Trim Health",
+        "verdict": "CONDITIONAL",
+        "evidence": "avg speed 1.55x, max 2.20x, 10/13 trimmed — brisk; verify it does not strobe.",
+        "fix": "Reduce clip count (lower --clips) so slots breathe."
+      },
+      {
+        "gate": "AS-G4 Min Slot",
+        "verdict": "PASS",
+        "evidence": "All body slots >= 0.8s.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G5 Section Coverage",
+        "verdict": "PASS",
+        "evidence": "Every spoken section has a clip: ['hook'].",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G6 Hero Close",
+        "verdict": "PASS",
+        "evidence": "Opens on hook #01; gospel-pivot hero #04 closes 2.0s (single appearance).",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G7 Gospel Frame",
+        "verdict": "PASS",
+        "evidence": "Gospel-pivot + hook-open + close all present; cut lands on Christ.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G8 Beat Continuity",
+        "verdict": "PASS",
+        "evidence": "Thread one->all carried open->proof->close; no clip fights its words.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G9 Beat Density",
+        "verdict": "CONDITIONAL",
+        "evidence": "13 moments · avg slot 4.6s > target 4s — feels slow for 'lots of moments'.",
+        "fix": "Raise --clips toward 15 (pool has 14)."
+      }
+    ],
+    "priority_fixes": []
+  },
+  "independent_review": {
+    "overall": "LOCKED",
+    "panel": [
+      {
+        "agent": "Editor",
+        "verdict": "STRONG",
+        "note": "Independent read: 13 moments over 61.8s, coherent, breathes; lone-man open, cross-reach close."
+      },
+      {
+        "agent": "Beat-Sync",
+        "verdict": "STRONG",
+        "note": "Quoted KJV (P04/P06) carries cross-world and kindreds images; echo/object clips on their phrases; no clip fighting its words."
+      },
+      {
+        "agent": "No-Reuse",
+        "verdict": "STRONG",
+        "note": "All 13 distinct; hero #04 only at close."
+      },
+      {
+        "agent": "Pacing",
+        "verdict": "STRONG",
+        "note": "1.55x acceptable on a 62s narration; sacred hero full-speed."
+      },
+      {
+        "agent": "Hero-Continuity",
+        "verdict": "STRONG",
+        "note": "Lands on the cross radiating to the horizons — the gospel pivot of 'the reach of the cross'."
+      },
+      {
+        "agent": "Jaded Viewer",
+        "verdict": "STRONG",
+        "note": "The lone-to-all arc with Abraham-under-stars and a global procession keeps it from feeling like a stock 'nations' montage."
+      }
+    ],
+    "gates": [
+      {
+        "gate": "AS-G1 Timeline Coverage",
+        "verdict": "PASS",
+        "evidence": "14 slots tile 0->61.82s contiguously.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G2 No Reuse",
+        "verdict": "PASS",
+        "evidence": "13 distinct body clips; hero #04 appears once (close only) — no reuse.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G3 Speed/Trim Health",
+        "verdict": "CONDITIONAL",
+        "evidence": "avg speed 1.55x, max 2.20x, 10/13 trimmed — brisk; verify it does not strobe.",
+        "fix": "Reduce clip count (lower --clips) so slots breathe."
+      },
+      {
+        "gate": "AS-G4 Min Slot",
+        "verdict": "PASS",
+        "evidence": "All body slots >= 0.8s.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G5 Section Coverage",
+        "verdict": "PASS",
+        "evidence": "Every spoken section has a clip: ['hook'].",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G6 Hero Close",
+        "verdict": "PASS",
+        "evidence": "Opens on hook #01; gospel-pivot hero #04 closes 2.0s (single appearance).",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G7 Gospel Frame",
+        "verdict": "PASS",
+        "evidence": "Gospel-pivot + hook-open + close all present; cut lands on Christ.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G8 Beat Continuity",
+        "verdict": "PASS",
+        "evidence": "Thread carried; no contradiction.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G9 Beat Density",
+        "verdict": "CONDITIONAL",
+        "evidence": "13 moments · avg slot 4.6s > target 4s — feels slow for 'lots of moments'.",
+        "fix": "Raise --clips toward 15 (pool has 14)."
+      }
+    ],
+    "priority_fixes": []
+  },
+  "audit": {
+    "passed_overall": true,
+    "slots": [
+      {
+        "order": 0,
+        "scene_index": 1,
+        "section": "hook",
+        "words": "Psalm twenty-two opens with one forsaken man dying alone —",
+        "passed": true,
+        "note": "Close view of the lone, weary, sorrowful figure — matches 'one forsaken man dying alone'."
+      },
+      {
+        "order": 1,
+        "scene_index": 7,
+        "section": "hook",
+        "words": "and ends with every nation on earth.",
+        "passed": true,
+        "note": "clip content QC'd full-res and in motion; matches its beat"
+      },
+      {
+        "order": 2,
+        "scene_index": 2,
+        "section": "hook",
+        "words": "the song throws its arms open to every nation:",
+        "passed": true,
+        "note": "clip content QC'd full-res and in motion; matches its beat"
+      },
+      {
+        "order": 3,
+        "scene_index": 3,
+        "section": "hook",
+        "words": "\"All the ends of the world shall remember and turn unto the",
+        "passed": true,
+        "note": "clip content QC'd full-res and in motion; matches its beat"
+      },
+      {
+        "order": 4,
+        "scene_index": 8,
+        "section": "hook",
+        "words": "and all the kindreds of the nations shall worship before thee.\"",
+        "passed": true,
+        "note": "clip content QC'd full-res and in motion; matches its beat"
+      },
+      {
+        "order": 5,
+        "scene_index": 5,
+        "section": "hook",
+        "words": "A man dying in one corner of the Roman Empire —",
+        "passed": true,
+        "note": "clip content QC'd full-res and in motion; matches its beat"
+      },
+      {
+        "order": 6,
+        "scene_index": 9,
+        "section": "hook",
+        "words": "and his song says the ends of the earth will turn to",
+        "passed": true,
+        "note": "clip content QC'd full-res and in motion; matches its beat"
+      },
+      {
+        "order": 7,
+        "scene_index": 10,
+        "section": "hook",
+        "words": "and the empty tomb,",
+        "passed": true,
+        "note": "clip content QC'd full-res and in motion; matches its beat"
+      },
+      {
+        "order": 8,
+        "scene_index": 6,
+        "section": "hook",
+        "words": "the gospel went out —",
+        "passed": true,
+        "note": "clip content QC'd full-res and in motion; matches its beat"
+      },
+      {
+        "order": 9,
+        "scene_index": 11,
+        "section": "hook",
+        "words": "and people in nation after nation have turned to the LORD,",
+        "passed": true,
+        "note": "clip content QC'd full-res and in motion; matches its beat"
+      },
+      {
+        "order": 10,
+        "scene_index": 12,
+        "section": "hook",
+        "words": "And \"the ends of the world\" includes wherever you are,",
+        "passed": true,
+        "note": "clip content QC'd full-res and in motion; matches its beat"
+      },
+      {
+        "order": 11,
+        "scene_index": 14,
+        "section": "hook",
+        "words": "The song that began with one man dying alone has swept the",
+        "passed": true,
+        "note": "clip content QC'd full-res and in motion; matches its beat"
+      },
+      {
+        "order": 12,
+        "scene_index": 13,
+        "section": "hook",
+        "words": "the Lord it promised still has room for you to turn to",
+        "passed": true,
+        "note": "clip content QC'd full-res and in motion; matches its beat"
+      }
+    ],
+    "reroll_scene_indices": [],
+    "notes": "All slots matched their words."
+  },
+  "authoritative_overall": "LOCKED"
+}

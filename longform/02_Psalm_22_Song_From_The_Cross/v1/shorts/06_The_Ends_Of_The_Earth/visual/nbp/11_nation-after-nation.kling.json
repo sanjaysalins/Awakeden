@@ -1,0 +1,46 @@
+{
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, slower pacing with longer holds and restrained cuts.\n\nClassical devotional oil painting realism. atmosphere of peoples turning, age after age; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\na long procession of pilgrims of many lands winding along a wide road toward a distant warm light on the horizon, figures in the dress of far peoples strung out across the landscape, the road climbing toward the light, the line of travellers stretching back beyond sight. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the whole painted scene.\n\nCut to mid framing — the dominant subject of the painting.\n\nCut to close-up — the winding road of pilgrims.\n\nCut to insert — the distant warm light.\n\nCut to macro detail — the dress of far peoples.\n\nCut to lower framing — the line stretching back.\n\nReturn to full composition.\n\nEnd hold on the winding road of pilgrims.\n\nMicro-motion:\n- minimal\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\npeoples turning, age after age\n\nNo added elements.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "beats": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 1.25,
+      "description": "Start on full composition — the whole painted scene."
+    },
+    {
+      "start_sec": 1.25,
+      "end_sec": 2.5,
+      "description": "Cut to mid framing — the dominant subject of the painting."
+    },
+    {
+      "start_sec": 2.5,
+      "end_sec": 3.75,
+      "description": "Cut to close-up — the winding road of pilgrims."
+    },
+    {
+      "start_sec": 3.75,
+      "end_sec": 5.0,
+      "description": "Cut to insert — the distant warm light."
+    },
+    {
+      "start_sec": 5.0,
+      "end_sec": 6.25,
+      "description": "Cut to macro detail — the dress of far peoples."
+    },
+    {
+      "start_sec": 6.25,
+      "end_sec": 7.5,
+      "description": "Cut to lower framing — the line stretching back."
+    },
+    {
+      "start_sec": 7.5,
+      "end_sec": 8.75,
+      "description": "Return to full composition."
+    },
+    {
+      "start_sec": 8.75,
+      "end_sec": 10.0,
+      "description": "End hold on the winding road of pilgrims."
+    }
+  ]
+}

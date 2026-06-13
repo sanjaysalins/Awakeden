@@ -13,7 +13,11 @@ FINAL: `C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\02_Psalm_22_Son
 - Synthed creation.json (resonance-not-citation guard kept) → 14-scene plan LOCKED (hero #4 the cross) → 14 NBP stills QC'd full-res (scene 6 re-rendered: had duplicate central Christ + legible 'PSALM' text; scene 14 re-rendered to a **bare cross at dawn** per user) → cross halo on 4/7 KEPT (user OK) → 14 clips animated (auto-serviced via `.agent_bridge/_05_servicer.py` — builds locked cut-plans from each scene's state-only subject_block+macro_elements) → assembled hero-4 → SFX bed → captioned.
 - **Servicer scripts** (reusable for #06–#08): `.agent_bridge/_05_servicer.py` (cut-plans+kling-audit), `.agent_bridge/_05_verify_servicer.py` (assembly slot-verify auto-pass after manual clip QC). Adapt the scene_plan path per short.
 
-### ▶ NEXT: #06 The Ends Of The Earth (22:27) · #07 The Body Foretold (22:14,17) · #08 I Thirst (22:15~Jn 19:28) — same loop, NOW WITH SFX BED. Then retrofit SFX onto #01–#04.
+### ✅✅ #06 "The Ends of the Earth" — FULLY DONE (assembled + SFX bed + captioned). 6 of 8 shorts complete.
+FINAL: `C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\02_Psalm_22_Song_From_The_Cross\v1\shorts\06_The_Ends_Of_The_Earth\assembly\viral_cut_sfx_captioned.mp4` (61.8s, opens on the lone forsaken man, lands on the cross radiating to the horizons hero #4; bed = world-wind + shofar to the nations + distant murmur of peoples + sea as the gospel goes out + warm dawn). Scene 1 NBP rendered a seated lone figure (NBP resists 'crucified' for 'alone'); accepted. Hero #4 light-burst held stable in Kling (anti-bloom negatives).
+- Generic servicers used: `.agent_bridge/_gen_servicer.py` (SHORT_DIR env), `.agent_bridge/_gen_verify_servicer.py` (ASM_LOG env; FIXED its done-detection — only exits on 'DONE — edit plan'). SFX builder `sfx_pilots/build_ps22_06.py`.
+
+### ▶ NEXT: #07 The Body Foretold (22:14,17) · #08 I Thirst (22:15~Jn 19:28) — same loop WITH SFX BED. Then retrofit SFX onto #01–#04.
 
 ## ═══════════ SESSION 2026-06-13c — PSALM 22 SHORT #04 FINISHED (14/14 clips + assembled + verified) ═══════════
 
