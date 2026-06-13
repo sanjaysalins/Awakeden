@@ -1,0 +1,63 @@
+{
+  "created_at": "2026-06-13T00:00:00",
+  "model": "claude-opus-4-7",
+  "review_model": "claude-sonnet-4-6",
+  "structure": {
+    "id": "gospel-five-beat",
+    "name": "Gospel Five-Beat",
+    "beats": ["hook", "point", "proof", "conviction", "landing"]
+  },
+  "series": {
+    "id": "jesus-in-ot",
+    "name": "Jesus in the Old Testament",
+    "brand": "SLK"
+  },
+  "episode": {
+    "title": "Declared to the Brethren",
+    "primary_ref": "Psalm 22:22"
+  },
+  "kjv_verified": true,
+  "kjv_text": "I will declare thy name unto my brethren: in the midst of the congregation will I praise thee.",
+  "thread": {
+    "thread": "Psalm 22 does not end at the cross — at verse 22 the forsaken sufferer turns from anguish to praise, standing alive in the midst of the congregation. Hebrews 2:12 takes that very opening line and puts it in the mouth of the RISEN Christ, and Hebrews 2:11 says He is not ashamed to call them brethren. Cross -> resurrection -> family: the risen Christ calls you in.",
+    "lever": "NT-confirmed OT echo (Hebrews 2:12 cites Ps 22:22 of the risen Christ; resurrection NT-warranted)",
+    "anchor_ref": "Psalm 22:22",
+    "anchor_detail": "the risen Christ alive on the far side of the cross, declaring the Father's name among His brethren, gathering a family",
+    "why_fresh": "the same psalm that records the forsaken cry turns at verse 22 to a living, praising voice — and Hebrews names that voice as the risen Jesus, not ashamed to call us brethren",
+    "gospel_landing": "the same Jesus who cried out forsaken now lives; the risen Christ is not ashamed to call His own brethren and is calling you into that family; come to Him",
+    "rationale": "the airtight Hebrews citation that completes the cross->resurrection arc, with a grace landing that brings the listener into the family",
+    "candidates": []
+  },
+  "draft": {
+    "title": "Declared to the Brethren",
+    "hook_type": "prophecy",
+    "beats": [
+      {
+        "id": "hook",
+        "text": "Most people stop reading Psalm twenty-two at the cross. Keep going — it doesn't end in a grave."
+      },
+      {
+        "id": "point",
+        "text": "But the cry doesn't stay forsaken. Later, the psalm turns — the same voice moves from anguish to praise: \"I will declare thy name unto my brethren: in the midst of the congregation will I praise thee.\""
+      },
+      {
+        "id": "proof",
+        "text": "Who is that praising voice? Hebrews takes that opening line — word for word — and puts it in the mouth of the risen Christ. The psalm's turn is Jesus, alive on the far side of the cross."
+      },
+      {
+        "id": "conviction",
+        "text": "And hear what He calls us. Hebrews says He is — \"not ashamed to call them brethren\" — brothers. Family."
+      },
+      {
+        "id": "landing",
+        "text": "The same Jesus who cried out forsaken now lives — and the risen Christ is not ashamed to call His own brethren. He is calling you into that family."
+      }
+    ]
+  },
+  "beat_ids": ["hook", "point", "proof", "conviction", "landing"],
+  "word_count": 153,
+  "char_count": 0,
+  "authoritative_review": "independent",
+  "review_overall": "LOCKED",
+  "unknown_speakers": []
+}

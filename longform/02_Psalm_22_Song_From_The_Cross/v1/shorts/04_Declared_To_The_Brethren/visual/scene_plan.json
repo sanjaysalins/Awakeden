@@ -1,0 +1,649 @@
+{
+  "plan": {
+    "visual_reading": "The arc opens on the empty tomb at dawn — 'it doesn't end in a grave' — then turns to the psalm scroll moving from the dark cross-lines to the bright praise of verse 22. The proof movement reveals the risen Christ alive, the One whose voice the praise-line becomes, and the Hebrews citation that names Him. The conviction is the risen Christ unashamed to call us brethren — His wounded hand on a brother's shoulder, the gathered family. The landing is the risen Christ with arms open, welcoming the listener in. The hero close is the welcoming risen Christ — the gospel-pivot of this resurrection short.",
+    "red_team_notes": "Jaded Viewer risk: a generic 'glowing risen Jesus' could read as kitsch — so the risen Christ keeps the marks of suffering (scarred hands), steady not floating, painted light not fantasy glow. Resurrection must be NT-warranted: the visual turn (cross -> empty tomb -> risen Christ among brethren) follows the Hebrews citation, not a bare-psalm over-read. Two scroll/David scenes (2,3,12) kept distinct. The hero is the WELCOMING risen Christ (gospel-pivot CTA), not the most triumphant pose. No bare-torso on the risen figure (robed, for clean animation).",
+    "scenes": [
+      {
+        "index": 1,
+        "slug": "the-empty-tomb",
+        "title": "The Empty Tomb",
+        "scene_type": "single",
+        "arc_position": "opening-hook",
+        "framing": "wide",
+        "purpose": "Hook on the resurrection",
+        "rationale": "'it doesn't end in a grave' — the empty tomb, not the cross",
+        "visible_elements": "an open rock-hewn tomb, the great round stone rolled aside, folded linen within, dawn light entering",
+        "emotional_tone": "dawning, quiet hope",
+        "subject_block": "an open rock-hewn tomb cut into a hillside, the great round stone rolled aside from the dark doorway, pale dawn light spilling across the threshold onto folded grave-linen left within, the garden in cool shadow beyond, no figure present",
+        "mood_block": "atmosphere of dawning, quiet hope after grief",
+        "jesus_variant": null,
+        "priority": 1,
+        "macro_elements": [
+          "the rolled-aside round stone",
+          "the folded grave-linen",
+          "the dark empty doorway",
+          "dawn light on the threshold"
+        ],
+        "pacing": "slower",
+        "viral_role": "hook-open",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 2,
+        "slug": "the-psalm-turns",
+        "title": "The Psalm Turns",
+        "scene_type": "unified",
+        "arc_position": "ot-echo",
+        "framing": "mid",
+        "purpose": "the turn from anguish to praise",
+        "rationale": "the scroll moves from the dark cross-lines to the bright praise of v22",
+        "visible_elements": "an open Psalm scroll, the lower lines in shadow and the v22 lines in light, faint vignettes of the turn",
+        "emotional_tone": "the lifting of darkness",
+        "subject_block": "an open Psalm scroll spread across pale stone, its upper lines of Hebrew sunk in cold shadow and its lower lines catching a warm break of light, subtle background vignettes fading into shadow suggesting a forsaken bowed figure, a turning toward light, a gathered congregation, and a standing praising figure",
+        "mood_block": "atmosphere of darkness lifting into praise",
+        "jesus_variant": null,
+        "priority": 6,
+        "macro_elements": [
+          "the shadowed upper Hebrew lines",
+          "the lamplit lower lines",
+          "the warm break of light on the parchment",
+          "the curled scroll edge"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "a forsaken bowed figure",
+          "a turning toward light",
+          "a gathered congregation",
+          "a standing praising figure"
+        ]
+      },
+      {
+        "index": 3,
+        "slug": "i-will-declare-thy-name",
+        "title": "I Will Declare Thy Name",
+        "scene_type": "single",
+        "arc_position": "theological-centre",
+        "framing": "close",
+        "purpose": "the praise line",
+        "rationale": "a 2s insert on Ps 22:22",
+        "visible_elements": "extreme close on a Hebrew scroll line, a fingertip beneath it",
+        "emotional_tone": "quiet wonder",
+        "subject_block": "an extreme close view of an open parchment, a single weathered fingertip at rest beneath one warmly lit line of ancient Hebrew script, the ink old and cracked, the parchment fibrous and lamplit, deep shadow at the edges",
+        "mood_block": "atmosphere of quiet, dawning wonder",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the fingertip",
+          "the warmly lit Hebrew line",
+          "the fibrous parchment grain"
+        ],
+        "pacing": "slower",
+        "viral_role": "pivot",
+        "shot_kind": "insert",
+        "vignettes": []
+      },
+      {
+        "index": 4,
+        "slug": "the-risen-christ",
+        "title": "The Risen Christ",
+        "scene_type": "single",
+        "arc_position": "nt-gospel-link",
+        "framing": "low-angle",
+        "purpose": "the living praising voice",
+        "rationale": "the risen Christ alive, the One whose voice the praise becomes",
+        "visible_elements": "the risen Christ standing alive, robed, scarred hands, dawn light",
+        "emotional_tone": "living, quiet triumph",
+        "subject_block": "the risen Christ standing alive from a low angle, robed in a clean white-and-deep-red garment, his bearded face calm and living, his open hands turned to show the healed scars of the nails, soft dawn light around him, the dark of the tomb receding behind, painted light only",
+        "mood_block": "atmosphere of living, quiet triumph",
+        "jesus_variant": "resurrection",
+        "priority": 2,
+        "macro_elements": [
+          "the open scarred hand",
+          "the calm living face",
+          "the clean white robe",
+          "soft dawn light around him"
+        ],
+        "pacing": "slower",
+        "viral_role": "climax",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 5,
+        "slug": "among-the-brethren",
+        "title": "Among the Brethren",
+        "scene_type": "unified",
+        "arc_position": "nt-gospel-link",
+        "framing": "mid",
+        "purpose": "declaring the name among His own",
+        "rationale": "the v22 praise in the midst of the congregation",
+        "visible_elements": "the risen Christ among a gathered group, declaring, vignettes of the gathering",
+        "emotional_tone": "joyful gathering",
+        "subject_block": "the risen Christ stands robed at the centre of a close-gathered group of men and women, his scarred hand lifted as he speaks the Father's name among them, their faces turned to him in dawning joy, subtle background vignettes fading into shadow suggesting the open scarred hands, a gathered congregation, lifted faces in praise, and the cross now far behind",
+        "mood_block": "atmosphere of a joyful, gathered family",
+        "jesus_variant": "resurrection",
+        "priority": 3,
+        "macro_elements": [
+          "the lifted scarred hand",
+          "a face turned in dawning joy",
+          "the close-gathered group",
+          "the far cross behind"
+        ],
+        "pacing": "controlled",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "the open scarred hands",
+          "a gathered congregation",
+          "lifted faces in praise",
+          "the cross now far behind"
+        ]
+      },
+      {
+        "index": 6,
+        "slug": "the-living-face",
+        "title": "The Living Face",
+        "scene_type": "single",
+        "arc_position": "revelation",
+        "framing": "close",
+        "purpose": "the risen face",
+        "rationale": "the marks of suffering past, alive and at peace",
+        "visible_elements": "the risen Christ's face, alive and calm",
+        "emotional_tone": "peace beyond suffering",
+        "subject_block": "a close reverent view of the risen Christ's face, the eyes calm and living, a faint scar at the brow where thorns had been, warm dawn light on the cheek against soft shadow, an expression of peace beyond suffering",
+        "mood_block": "atmosphere of peace beyond suffering",
+        "jesus_variant": "resurrection",
+        "priority": 0,
+        "macro_elements": [
+          "the calm living eyes",
+          "the faint thorn-scar at the brow",
+          "warm dawn light on the cheek"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 7,
+        "slug": "hebrews-names-him",
+        "title": "Hebrews Names Him",
+        "scene_type": "single",
+        "arc_position": "theological-centre",
+        "framing": "close",
+        "purpose": "the NT citation",
+        "rationale": "the Hebrews letter taking up the psalm's line",
+        "visible_elements": "an open Greek codex page, a fingertip beneath a line",
+        "emotional_tone": "solemn recognition",
+        "subject_block": "an extreme close view of an open early codex page of Greek letters, a single fingertip resting beneath one line, the ink dark on the pale vellum, a warm lamplight across the surface, deep shadow at the edges",
+        "mood_block": "atmosphere of solemn recognition",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the fingertip on the line",
+          "the dark Greek letters",
+          "the pale vellum grain",
+          "the lamplight on the page"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "insert",
+        "vignettes": []
+      },
+      {
+        "index": 8,
+        "slug": "not-ashamed",
+        "title": "Not Ashamed to Call Them Brethren",
+        "scene_type": "unified",
+        "arc_position": "nt-gospel-link",
+        "framing": "mid",
+        "purpose": "the embrace into family",
+        "rationale": "Heb 2:11 — not ashamed to call them brethren",
+        "visible_elements": "the risen Christ embracing a brother, vignettes of welcome",
+        "emotional_tone": "tender welcome",
+        "subject_block": "the risen Christ, robed, draws a kneeling man up into an embrace, his scarred hand on the man's shoulder, both faces close in tender recognition, subtle background vignettes fading into shadow suggesting the embrace, a wounded hand on a shoulder, a gathered welcoming family, and an open doorway of light",
+        "mood_block": "atmosphere of tender, unashamed welcome",
+        "jesus_variant": "resurrection",
+        "priority": 4,
+        "macro_elements": [
+          "the scarred hand on the shoulder",
+          "the two faces close in recognition",
+          "the kneeling man drawn up",
+          "the open doorway of light"
+        ],
+        "pacing": "controlled",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "the embrace",
+          "a wounded hand on a shoulder",
+          "a gathered welcoming family",
+          "an open doorway of light"
+        ]
+      },
+      {
+        "index": 9,
+        "slug": "the-wounded-hand-on-the-shoulder",
+        "title": "The Wounded Hand on the Shoulder",
+        "scene_type": "single",
+        "arc_position": "symbolic-support",
+        "framing": "close",
+        "purpose": "the family touch",
+        "rationale": "the scarred hand claiming a brother",
+        "visible_elements": "a scarred hand resting on a man's shoulder",
+        "emotional_tone": "claimed and welcomed",
+        "subject_block": "a close view of the risen Christ's scarred open hand resting on a weathered man's shoulder, the healed nail-mark visible in the palm, the rough cloth of the man's robe beneath, warm light on the joined figures against soft shadow",
+        "mood_block": "atmosphere of being claimed and welcomed",
+        "jesus_variant": "resurrection",
+        "priority": 0,
+        "macro_elements": [
+          "the healed nail-mark in the palm",
+          "the hand on the shoulder",
+          "the rough robe cloth",
+          "warm light on the join"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 10,
+        "slug": "calling-you-in",
+        "title": "Calling You In",
+        "scene_type": "single",
+        "arc_position": "closing-devotional",
+        "framing": "mid",
+        "purpose": "the gospel-pivot hero close",
+        "rationale": "the risen Christ with arms open, welcoming the listener into the family",
+        "visible_elements": "the risen Christ, arms opening toward the viewer, scarred hands, dawn light",
+        "emotional_tone": "open, costly welcome",
+        "subject_block": "the risen Christ stands robed in white and deep red, his arms opening toward the viewer in welcome, the healed scars open in his hands, a soft dawn light widening behind him, his living face warm and inviting, the gathered family soft in the shadow beside him",
+        "mood_block": "atmosphere of an open, living welcome into the family",
+        "jesus_variant": "resurrection",
+        "priority": 5,
+        "macro_elements": [
+          "the open welcoming arms",
+          "the scarred open hands",
+          "the warm inviting face",
+          "the widening dawn light"
+        ],
+        "pacing": "slower",
+        "viral_role": "close",
+        "shot_kind": "hero",
+        "vignettes": []
+      },
+      {
+        "index": 11,
+        "slug": "the-invitation-face",
+        "title": "The Invitation",
+        "scene_type": "single",
+        "arc_position": "revelation",
+        "framing": "close",
+        "purpose": "the face that invites",
+        "rationale": "the risen Christ's face turned toward the viewer",
+        "visible_elements": "the risen Christ's face turned toward the viewer",
+        "emotional_tone": "warm invitation",
+        "subject_block": "a close reverent view of the risen Christ's living face turned gently toward the viewer, the eyes warm and inviting, a faint scar at the brow, soft dawn light on the face against gentle shadow",
+        "mood_block": "atmosphere of warm, personal invitation",
+        "jesus_variant": "resurrection",
+        "priority": 0,
+        "macro_elements": [
+          "the warm inviting eyes",
+          "the faint thorn-scar",
+          "soft dawn light on the cheek"
+        ],
+        "pacing": "slower",
+        "viral_role": "close",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 12,
+        "slug": "a-thousand-years-apart",
+        "title": "A Thousand Years Apart",
+        "scene_type": "unified",
+        "arc_position": "ot-echo",
+        "framing": "wide",
+        "purpose": "the turn fulfilled",
+        "rationale": "David writing the praise-line and the risen Christ praising across a thousand years",
+        "visible_elements": "David at his scroll at left, the risen Christ among brethren at right",
+        "emotional_tone": "wonder fulfilled",
+        "subject_block": "a wide two-sided composition split by a band of light; at the left, aged David seated at a lamp over a scroll, his face lifting in dawning hope; at the right, across the divide, the risen Christ stands robed among a gathered family in dawn light, subtle background vignettes fading into shadow suggesting the praise-line of Hebrew, a lifting face, the gathered brethren, and the risen Christ",
+        "mood_block": "atmosphere of wonder fulfilled across a thousand years",
+        "jesus_variant": "resurrection",
+        "priority": 7,
+        "macro_elements": [
+          "David's lifting face",
+          "the scroll praise-line",
+          "the risen Christ among the family",
+          "the band of light between"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "the praise-line of Hebrew",
+          "a lifting face",
+          "the gathered brethren",
+          "the risen Christ"
+        ]
+      },
+      {
+        "index": 13,
+        "slug": "welcomed-into-the-family",
+        "title": "Welcomed into the Family",
+        "scene_type": "single",
+        "arc_position": "human-response",
+        "framing": "mid",
+        "purpose": "the listener's place in the family",
+        "rationale": "a newcomer welcomed into the gathered brethren",
+        "visible_elements": "a gathered group drawing a newcomer into their midst",
+        "emotional_tone": "belonging",
+        "subject_block": "a close-gathered group of men and women in warm dawn light turning to draw a newcomer into their midst, hands reaching to welcome, faces open in joy, the risen Christ soft in the light beyond them, deep shadow at the edges",
+        "mood_block": "atmosphere of belonging and welcome",
+        "jesus_variant": "resurrection",
+        "priority": 0,
+        "macro_elements": [
+          "a hand reaching to welcome",
+          "the newcomer drawn in",
+          "joyful open faces",
+          "the risen Christ soft beyond"
+        ],
+        "pacing": "controlled",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 14,
+        "slug": "the-scarred-hands-in-praise",
+        "title": "The Scarred Hands in Praise",
+        "scene_type": "single",
+        "arc_position": "nt-gospel-link",
+        "framing": "close",
+        "purpose": "the praise of the risen One, in one detail",
+        "rationale": "the scarred hands lifted in praise — death turned to life",
+        "visible_elements": "the risen Christ's scarred hands lifted",
+        "emotional_tone": "triumphant praise",
+        "subject_block": "a close view of the risen Christ's two open hands lifted in praise, the healed nail-marks clear in both palms, warm dawn light across them against soft shadow, the clean white sleeve falling back from the wrists",
+        "mood_block": "atmosphere of triumphant, scarred praise",
+        "jesus_variant": "resurrection",
+        "priority": 0,
+        "macro_elements": [
+          "the healed nail-marks in the palms",
+          "the lifted open hands",
+          "the clean white sleeves",
+          "warm dawn light on the hands"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      }
+    ],
+    "short_priority": [
+      1,
+      4,
+      5,
+      8,
+      10,
+      11,
+      2
+    ],
+    "candidates": [
+      {
+        "title": "The Empty Tomb",
+        "scene_type": "single",
+        "arc_position": "opening-hook",
+        "framing": "wide",
+        "purpose": "hook on the resurrection",
+        "rationale": "'it doesn't end in a grave'",
+        "visible_elements": "the empty tomb, stone rolled away, dawn light",
+        "emotional_tone": "dawning hope"
+      },
+      {
+        "title": "The Risen Christ",
+        "scene_type": "single",
+        "arc_position": "nt-gospel-link",
+        "framing": "low-angle",
+        "purpose": "the living voice",
+        "rationale": "the risen Christ alive",
+        "visible_elements": "the risen Christ standing, robed, scarred hands",
+        "emotional_tone": "living triumph"
+      },
+      {
+        "title": "Not Ashamed to Call Them Brethren",
+        "scene_type": "unified",
+        "arc_position": "nt-gospel-link",
+        "framing": "mid",
+        "purpose": "family",
+        "rationale": "Heb 2:11",
+        "visible_elements": "the risen Christ embracing a brother",
+        "emotional_tone": "welcome"
+      }
+    ],
+    "rationale": "Opened on the empty tomb (the resurrection hook), not the cross; kept the risen Christ marked with healed scars and lit by painted dawn light, not fantasy glow; grounded the resurrection turn in the Hebrews citation (scene 7) rather than a bare-psalm over-read; hero is the WELCOMING risen Christ (10), the gospel-pivot CTA that brings the listener into the family, not the most triumphant pose.",
+    "beat_coverage": {
+      "hook": [
+        1
+      ],
+      "point": [
+        2,
+        3
+      ],
+      "proof": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "conviction": [
+        8,
+        9
+      ],
+      "landing": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    "hero_candidate": 10
+  },
+  "self_review": {
+    "overall": "LOCKED",
+    "panel": [
+      {
+        "agent": "Scene Director",
+        "verdict": "STRONG",
+        "note": "Opens on the empty tomb (resurrection hook), not the cross; coherent turn -> risen Christ -> family."
+      },
+      {
+        "agent": "Theologian",
+        "verdict": "STRONG",
+        "note": "Resurrection grounded in the Hebrews citation (scene 7) not bare psalm; risen Christ keeps healed scars (Heb 2 brethren), no over-read."
+      },
+      {
+        "agent": "Visual Skeptic",
+        "verdict": "STRONG",
+        "note": "State-only, Kling-cuttable; no banned tokens; risen Christ robed (clean animation) and lit by painted dawn, not fantasy glow."
+      },
+      {
+        "agent": "Character-Consistency Checker",
+        "verdict": "CAUTION",
+        "note": "Resurrection-variant Christ across many scenes — render with the resurrection ref for face consistency."
+      },
+      {
+        "agent": "Editor",
+        "verdict": "STRONG",
+        "note": "Hero #10 is the welcoming risen Christ (gospel-pivot CTA), correctly not the most triumphant pose."
+      },
+      {
+        "agent": "Jaded Viewer",
+        "verdict": "CAUTION",
+        "note": "Several risen-Christ scenes risk sameness — framings (wide tomb, low-angle, mid welcome, close face) and the family scenes differentiate them."
+      }
+    ],
+    "gates": [
+      {
+        "gate": "SP-G1 Narration Coverage",
+        "verdict": "PASS",
+        "evidence": "every beat supported.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G2 Narration Alignment",
+        "verdict": "PASS",
+        "evidence": "Every beat id in ['hook', 'point', 'proof', 'conviction', 'landing'] has >=1 supporting scene.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G3 Freshness",
+        "verdict": "PASS",
+        "evidence": "the v22 turn + risen-Christ-among-brethren is fresh about the moment, orthodox in claim.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G4 Cliche Avoidance",
+        "verdict": "PASS",
+        "evidence": "empty-tomb open + scarred risen Christ, not a generic glowing Jesus.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G5 Prompt Conformance",
+        "verdict": "PASS",
+        "evidence": "All subject_block + mood_block content clear of the banned-token list.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G6 Type Discipline",
+        "verdict": "PASS",
+        "evidence": "every unified scene declares 3-5 vignettes (counts: #2=4, #5=4, #8=4, #12=4)",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G7 Gospel Frame",
+        "verdict": "PASS",
+        "evidence": "hero #10 risen Christ; lands on Christ.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G8 Composition Distribution",
+        "verdict": "PASS",
+        "evidence": "4 distinct framings; max 'close' at 6/14.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G9 Scene Mix & Gospel Frame",
+        "verdict": "PASS",
+        "evidence": "n=14: single=10, unified=4, nt-link=4, ot-echo=2",
+        "fix": ""
+      }
+    ],
+    "priority_fixes": []
+  },
+  "independent_review": {
+    "overall": "LOCKED",
+    "panel": [
+      {
+        "agent": "Scene Director",
+        "verdict": "STRONG",
+        "note": "Empty-tomb open; coherent resurrection-to-family arc."
+      },
+      {
+        "agent": "Theologian",
+        "verdict": "STRONG",
+        "note": "Hebrews-grounded resurrection; scarred risen Christ; no over-read, no severed Trinity. Sound."
+      },
+      {
+        "agent": "Visual Skeptic",
+        "verdict": "STRONG",
+        "note": "State-only, no banned tokens, painted dawn not fantasy glow, robed risen figure."
+      },
+      {
+        "agent": "Character-Consistency Checker",
+        "verdict": "CAUTION",
+        "note": "Render resurrection-Christ scenes with the resurrection ref."
+      },
+      {
+        "agent": "Editor",
+        "verdict": "STRONG",
+        "note": "Welcoming risen Christ hero #10 bookends; clean gospel frame."
+      },
+      {
+        "agent": "Jaded Viewer",
+        "verdict": "CAUTION",
+        "note": "Risen-Christ repetition mitigated by framing + the family scenes."
+      }
+    ],
+    "gates": [
+      {
+        "gate": "SP-G1 Narration Coverage",
+        "verdict": "PASS",
+        "evidence": "every beat supported.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G2 Narration Alignment",
+        "verdict": "PASS",
+        "evidence": "Every beat id in ['hook', 'point', 'proof', 'conviction', 'landing'] has >=1 supporting scene.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G3 Freshness",
+        "verdict": "PASS",
+        "evidence": "fresh about the moment, orthodox.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G4 Cliche Avoidance",
+        "verdict": "PASS",
+        "evidence": "no generic glowing-Jesus.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G5 Prompt Conformance",
+        "verdict": "PASS",
+        "evidence": "All subject_block + mood_block content clear of the banned-token list.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G6 Type Discipline",
+        "verdict": "PASS",
+        "evidence": "every unified scene declares 3-5 vignettes (counts: #2=4, #5=4, #8=4, #12=4)",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G7 Gospel Frame",
+        "verdict": "PASS",
+        "evidence": "hero #10 risen Christ; lands on Christ.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G8 Composition Distribution",
+        "verdict": "PASS",
+        "evidence": "4 distinct framings; max 'close' at 6/14.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G9 Scene Mix & Gospel Frame",
+        "verdict": "PASS",
+        "evidence": "n=14: single=10, unified=4, nt-link=4, ot-echo=2",
+        "fix": ""
+      }
+    ],
+    "priority_fixes": []
+  },
+  "paper_cohesion": {
+    "scope": "paper",
+    "passed": true,
+    "notes": "The set forms a coherent visual spine on the resurrection-turn thread: it opens on the empty tomb (1), shows the psalm turning from shadow to praise (2,3), reveals the risen Christ and the Hebrews citation that names Him (4,5,6,7), holds the unashamed welcome into family (8,9), and lands on the welcoming risen Christ calling the listener in (10,11,12,13,14). No theology drift: the resurrection is carried by the Hebrews citation (scene 7) and the structural psalm turn, not over-read from bare Psalm 22; the risen Christ keeps the healed scars (consistent with Heb 2's brethren who share His suffering-then-glory), and no scene severs the Trinity or claims universal salvation (the welcome is into the family of those who come to Him). Every narration beat is carried by a strong scene; hook->climax->close (empty tomb -> risen Christ among brethren -> arms open in welcome) is a clean spine. Hero #10 is the gospel-pivot risen Christ, so the cut lands on the living Christ and His invitation.",
+    "conflict_scenes": []
+  },
+  "authoritative_overall": "LOCKED"
+}
