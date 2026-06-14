@@ -1,7 +1,19 @@
 # STATE.md — progress tracker
 
 **Last updated:** 2026-06-14
-**Status (2026-06-14d):** PSALM 22 SHORTS BATCH **COMPLETE** — all 8 shorts now postable with ambient/SFX bed +
+**Status (2026-06-14e):** Built a **VALIDATION ENGINE** after a run of defects the pipeline should have caught
+(root cause: agent-mode shortcut servicers bypassing the real validators). NEW: `data/rules.json` (rule
+registry), `pipeline/validators.py` (deterministic cut-plan + criteria gates), `pipeline/clip_qc.py`
+(fail-closed per-clip QC), `pipeline/test_validation.py` + fixtures (66 tests green), `VALIDATION_ENGINE_PLAN.md`;
+closed the bypass in `.agent_bridge/_gen_servicer.py` (camera-only gated crop-cuts) + added a period/tone check
+to `verify_image`. Committed `e38da55` + `bbb423c`. REBUILT clean through the engine: **#07** (60.1s), **#08**
+(67.0s), **#01** (64.1s, garbled inscription removed), **#05** (43.9s, garbled Greek→illegible). AUDITED
+#02/#03/#04/#06: their "verse-on-a-scroll" scenes render **garbled Hebrew** (#02 sc3, #03 sc3, #04 sc3+sc7,
+#06 sc2) — fix queued (re-render writing as illegible marks; NOT started, metered). Crowds/faces period-clean.
+NEXT: fix those scrolls, then Upload-Kit batch / Types & Shadows slate. See RESUME.md top. Prior status below.
+
+**Last updated (prior):** 2026-06-14
+**Status (2026-06-14d):** PSALM 22 SHORTS BATCH complete — all 8 shorts postable with ambient/SFX bed +
 ivory captions (`…/shorts/<NN>/assembly/viral_cut_sfx_captioned.mp4`). This session: finished #07 (scene-11
 clip + assemble + SFX + caption); built #08 "I Thirst" end-to-end (creation.json → 14-scene plan LOCKED → 14
 NBP stills QC'd → 14 Kling clips → assemble hero=pierced-side living-water Christ → SFX → caption; Ps 69

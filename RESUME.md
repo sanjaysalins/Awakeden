@@ -1,6 +1,32 @@
 # RESUME.md — start here next session
 
-## ═══════════ SESSION 2026-06-14d (LATEST — PRODUCTION BATCH COMPLETE) — ALL 8 PSALM 22 SHORTS DONE (captioned + SFX bed) ═══════════
+## ═══════════ SESSION 2026-06-14e (LATEST) — VALIDATION ENGINE BUILT + #01/#05/#07/#08 REBUILT CLEAN + #02/#03/#04/#06 AUDITED ═══════════
+
+**Why this session pivoted:** a string of defects shipped that the pipeline SHOULD have caught (modern/horror/NSFW stills, clips animating things NOT in the image — bleeding toe, "lava" from a lamplit door, writing hand — a slow-zoom regression, garbled tituli/Hebrew). Root cause: the agent-mode shortcut servicers were BYPASSING the real validators. User asked to fix the SYSTEM first, with memory + regression validation. DONE + committed.**
+
+### ✅ THE VALIDATION ENGINE (committed `e38da55`; see `VALIDATION_ENGINE_PLAN.md` + memory `validation-engine`)
+- `data/rules.json` — machine-readable rule registry (still/clip/cut/text), each rule → validator + birthing memory + fixtures.
+- `pipeline/validators.py` — deterministic checks: `cutplan_viral` (≥6 crop-cut beats, not a slow zoom), `cutplan_image_grounded` (no rich-text injection; dangerous markers = `micro-motion`/`flame stirs`/`oil painting video clip` — NOT the harmless "Scene contains: painted tableau" boilerplate image_to_kling appends), `gate_cutplan`, `prompt_has_criteria`, `rules_integrity`.
+- `pipeline/clip_qc.py` — FAIL-CLOSED per-clip QC (frozen/no-morph/on-scene); a clip is UNVERIFIED until a passing `<clip>.clipqc.json` sidecar is written after a real look. `python -m pipeline.clip_qc "<short>"`.
+- `pipeline/test_validation.py` (14 tests) + `pipeline/validation_fixtures/` — today's misses as permanent regression cases. **Full repo suite = 66 tests green** (kjv 18 + cluster 13 + doctrine 8 + lock 13 + validation 14). Run all: `for m in test_kjv_strict test_cluster_gate test_doctrine_gate test_lock test_validation; do .venv\Scripts\python.exe -m pipeline.$m; done`
+- **Bypass closed:** `.agent_bridge/_gen_servicer.py` now builds a CAMERA-ONLY viral crop-cut plan (no subject_block injection) and fail-closes through `gate_cutplan` before any plan is written; `verify_image` gained a 6th check (period authenticity + reverent tone → modern/horror/NSFW fail).
+
+### ✅ REBUILT CLEAN THROUGH THE ENGINE (gated crop-cuts, text forbidden, SFX + ivory captions):
+- **#07 The Body Foretold** (60.1s) + **#08 I Thirst** (67.0s) — committed `e38da55`. Re-animated 8 slow-zoom clips, re-rendered 2 garbled-titulus stills (#07-01, #07-11).
+- **#01 The Crucifixion Foretold** (64.1s, sc10 garbled inscription removed) + **#05 He Hath Done This** (43.9s, sc5 garbled Greek → illegible marks) — committed `bbb423c`.
+- Final files: `…/shorts/<NN>/assembly/viral_cut_sfx_captioned.mp4`.
+
+### ▶▶ DO FIRST NEXT SESSION — fix the garbled-Hebrew SCROLLS in #02/#03/#04/#06 (audit done, fix NOT started; metered):
+The re-audit (contact sheets `…/shorts/_audit_sheets/`) found the **"verse-on-a-scroll" scenes render garbled Hebrew**:
+- 🔴 re-render (writing as ILLEGIBLE marks, like #05 sc5 — edit scene_plan subject_block to forbid legible/garbled letters): **#02 sc3** (let-him-deliver-him), **#03 sc3** (the-first-line), **#04 sc3** (i-will-declare-thy-name) + **#04 sc7** (hebrew-names-him), **#06 sc2** (the-song-opens-its-arms).
+- 🟡 check/likely-fix the David-at-lamp + thousand-years scrolls (sc2 / sc12 in #02/#03/#04) — smaller text, borderline.
+- 🟢 crowds/mockers/cross scenes are period-clean (no modern/horror).
+- **Process per fix:** edit scene_plan (forbid text) → delete still+clip → `cli_visual --no-animate` re-render + QC → re-animate (gated `_gen_servicer.py`, SHORT_DIR env) → `cli_assemble --hero <N> --replan --rebuild` (heroes: #02=?, #03=?, #04=7? confirm via edit_plan.plan.hero_scene_index; #06=4) → SFX (`sfx_pilots/build_ps22_0N.py`) → caption. Replay the jigsaw from the OLD `assembly/edit_plan.json`→`audit.slots` (order:scene:words).
+- **NEW recurring lesson:** any scene meant to SHOW written Scripture (scroll/titulus/codex/sign) renders garbled letters — DESIGN them to show writing only as illegible marks; never spec legible text. (Strengthen IMG-NOTEXT guidance / scene-plan discipline.)
+
+### THEN: the Upload-Kit batch (paused, needs footer handles) + the Types & Shadows long-form slate (see older blocks).
+
+## ═══════════ SESSION 2026-06-14d — PRODUCTION BATCH COMPLETE — ALL 8 PSALM 22 SHORTS DONE (captioned + SFX bed) ═══════════
 
 **Resumed "do everything left" → finished #07, built #08 end-to-end, retrofitted SFX onto #01–#04. ALL 8 Psalm 22 shorts are now postable (SFX bed + ivory captions). Metered spend ≈ $17 (#08: 14 NBP stills + 1 retry ~$7.50 + 14 Kling clips ~$9; #07 scene-11 clip $0.65). User has NOT ear-reviewed yet ("batch-review at end").**
 
