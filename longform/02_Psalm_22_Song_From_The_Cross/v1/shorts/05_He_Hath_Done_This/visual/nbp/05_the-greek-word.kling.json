@@ -1,46 +1,46 @@
 {
-  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, slower pacing with longer holds and restrained cuts.\n\nClassical devotional oil painting realism. atmosphere of one accomplished word; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\nan extreme close view of an early Greek codex page, a single line of dark Greek letters on pale vellum, a weathered fingertip at rest beneath the line, warm lamplight raking across the surface, the ink crisp, deep shadow at the page's outer edge, the lettering the still focus of the image. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the whole painted scene.\n\nCut to mid framing — the dominant subject of the painting.\n\nCut to close-up — the line of Greek letters.\n\nCut to insert — the fingertip beneath the word.\n\nCut to macro detail — the pale vellum grain.\n\nCut to lower framing — the raking lamplight.\n\nReturn to full composition.\n\nEnd hold on the line of Greek letters.\n\nMicro-motion:\n- minimal\n- flame stirs as painted light only\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\none accomplished word\n\nNo added elements.\n\n10.0s\n\n9:16",
-  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "prompt": "A still, finished Baroque devotional oil painting, treated as a fixed photograph. The ONLY motion is the CAMERA performing a sequence of hard crop-cuts and reframes WITHIN the fixed image — like a video editor cropping and punching into one static painting to make different framings. Nothing inside the painting itself moves, flows, brightens, bleeds, or appears: no figure, face, mouth, eye, hand, limb, or cloth moves; no liquid flows, drips or bleeds; no light spreads or appears; no fire, smoke, water, blood, or any new element is added. Every cut shows a different crop of the SAME frozen painting, with every brushstroke unchanged.\n\nCamera cut sequence (crop-only reframes, no invented content):\n- Open on the full painted composition — the whole still image in frame.\n- Cut to a mid framing — crop in toward the dominant painted subject.\n- Cut to a close-up — crop tight on the painted area showing the line of Greek letters.\n- Cut to a macro insert — crop right in on the painted area showing the fingertip beneath the word.\n- Cut to a detail — crop to the painted area showing the pale vellum grain.\n- Cut to a lower framing — crop to the painted area showing the raking lamplight.\n- Cut back to the full painted composition.\n- End on a held wide of the full painting.\n\n10.0s\n\n9:16\n\nScene contains:\nThe scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\n",
+  "negative_prompt": "no animated subject motion, no figures moving, no person moving, no face moving, no mouth moving, no eyes moving, no hand moving, no limb moving, no body motion, no cloth moving, no writing, no pen moving, no flowing liquid, no liquid appearing, no dripping, no bleeding, no blood appearing, no spreading blood, no pouring, no lava, no flowing light, no spreading light, no new light source, no glow added, no light rays added, no fire, no flame motion, no smoke, no water appearing, no atmospheric haze, no divine effects added, no morphing, no scene morphing, no facial morphing, no reinterpretation, no new elements, no added elements, no objects appearing, no element brightening, no smooth transitions, no motion blur, no text, no watermarks, no extra limbs, no flickering, no warping, no melting, no action, no subject performs any task, the painting is fixed and completely frozen, only the camera slowly moves",
   "beats": [
     {
       "start_sec": 0.0,
       "end_sec": 1.25,
-      "description": "Start on full composition — the whole painted scene."
+      "description": "Open on the full painted composition — the whole still image in frame."
     },
     {
       "start_sec": 1.25,
       "end_sec": 2.5,
-      "description": "Cut to mid framing — the dominant subject of the painting."
+      "description": "Cut to a mid framing — crop in toward the dominant painted subject."
     },
     {
       "start_sec": 2.5,
       "end_sec": 3.75,
-      "description": "Cut to close-up — the line of Greek letters."
+      "description": "Cut to a close-up — crop tight on the painted area showing the line of Greek letters."
     },
     {
       "start_sec": 3.75,
       "end_sec": 5.0,
-      "description": "Cut to insert — the fingertip beneath the word."
+      "description": "Cut to a macro insert — crop right in on the painted area showing the fingertip beneath the word."
     },
     {
       "start_sec": 5.0,
       "end_sec": 6.25,
-      "description": "Cut to macro detail — the pale vellum grain."
+      "description": "Cut to a detail — crop to the painted area showing the pale vellum grain."
     },
     {
       "start_sec": 6.25,
       "end_sec": 7.5,
-      "description": "Cut to lower framing — the raking lamplight."
+      "description": "Cut to a lower framing — crop to the painted area showing the raking lamplight."
     },
     {
       "start_sec": 7.5,
       "end_sec": 8.75,
-      "description": "Return to full composition."
+      "description": "Cut back to the full painted composition."
     },
     {
       "start_sec": 8.75,
       "end_sec": 10.0,
-      "description": "End hold on the line of Greek letters."
+      "description": "End on a held wide of the full painting."
     }
   ]
 }
