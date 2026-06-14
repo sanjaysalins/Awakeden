@@ -1,5 +1,15 @@
 # STATE.md — progress tracker
 
+**Last updated:** 2026-06-14
+**Status (2026-06-14d):** PSALM 22 SHORTS BATCH **COMPLETE** — all 8 shorts now postable with ambient/SFX bed +
+ivory captions (`…/shorts/<NN>/assembly/viral_cut_sfx_captioned.mp4`). This session: finished #07 (scene-11
+clip + assemble + SFX + caption); built #08 "I Thirst" end-to-end (creation.json → 14-scene plan LOCKED → 14
+NBP stills QC'd → 14 Kling clips → assemble hero=pierced-side living-water Christ → SFX → caption; Ps 69
+landmine guarded); retrofitted SFX beds onto #01–#04 (`sfx_pilots/build_ps22_01..04,07,08.py`). Fixed a
+mid-session Windows Store Python venv break (re-register the appx — memory `store-python-venv-break`). NEXT:
+user ear-review the 8 finals; then the paused Upload-Kit batch (needs footer handles) or the Types & Shadows
+long-form slate. See RESUME.md top. Prior status below.
+
 **Last updated:** 2026-06-06
 **Status (2026-06-06):** Big session — (1) **comprehensive production plan + tracker** built from data/series.json
 (red-team + 5-CLI panel): PRODUCTION_PLAN.md / PRODUCTION_TRACKER.html + BATCH_PLAN / ASSET_LIBRARY_PLAN / TODO;

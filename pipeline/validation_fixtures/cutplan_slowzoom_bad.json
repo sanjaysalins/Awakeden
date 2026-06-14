@@ -1,0 +1,9 @@
+{
+  "_fixture": "The over-correction regression (2026-06-14): a single slow push-in. Must FAIL CLIP-VIRAL.",
+  "prompt": "A still, finished Baroque devotional oil painting, held completely frozen. The camera performs ONE single, very slow, gentle push-in over the full ten seconds. Nothing inside the painting moves or changes in any way. It is a static photograph of a fixed oil painting; ONLY the camera slowly zooms in.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no animated subject motion, no morphing",
+  "beats": [
+    {"start_sec": 0.0, "end_sec": 5.0, "description": "Hold on the full frozen painting; a very slow push-in begins."},
+    {"start_sec": 5.0, "end_sec": 10.0, "description": "Continue the single slow gentle push-in toward the painted centre."}
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "a worn royal robe",
+      "actual": "the robe is rich crimson-and-gold rather than worn, but reads correctly as a king"
+    }
+  ],
+  "banned_token_hits": []
+}

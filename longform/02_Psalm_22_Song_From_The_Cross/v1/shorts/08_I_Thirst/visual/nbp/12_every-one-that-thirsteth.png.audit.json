@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "a robed figure at the upper-left edge",
+      "actual": "a partial bystander (blue robe) at the frame edge; not a competing central subject and not a duplicate Christ"
+    }
+  ],
+  "banned_token_hits": []
+}

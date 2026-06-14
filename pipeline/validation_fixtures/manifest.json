@@ -1,0 +1,45 @@
+{
+  "_README": "Regression fixtures for the validation engine. Deterministic fixtures (kind=cutplan) are unit-tested by pipeline/test_validation.py every change. Vision fixtures (kind=still|clip) are checked on-demand by validate_fixtures.py (costs a little, non-deterministic). 'asset' is a repo-relative path; null = asset to be (re)captured.",
+  "fixtures": {
+    "cutplan_slowzoom_bad": {
+      "kind": "cutplan", "rule": "CLIP-VIRAL", "expect": "fail",
+      "asset": "pipeline/validation_fixtures/cutplan_slowzoom_bad.json",
+      "note": "Single slow push-in (the over-correction) — must fail the viral check."
+    },
+    "cutplan_richtext_bad": {
+      "kind": "cutplan", "rule": "CLIP-IMAGE-GROUNDED", "expect": "fail",
+      "asset": "pipeline/validation_fixtures/cutplan_richtext_bad.json",
+      "note": "Rich subject_block injected (blood/lamplight) — seeds Kling hallucination."
+    },
+    "cutplan_cropcut_clean_good": {
+      "kind": "cutplan", "rule": "CLIP-VIRAL,CLIP-IMAGE-GROUNDED", "expect": "pass",
+      "asset": "pipeline/validation_fixtures/cutplan_cropcut_clean_good.json",
+      "note": "Fixed plan: viral crop-cuts + camera-only anti-invention prompt."
+    },
+    "still_velazquez_hero_good": {
+      "kind": "still", "rule": "IMG-SUBJECT,IMG-PERIOD,IMG-TONE,IMG-NOTEXT", "expect": "pass",
+      "asset": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/04_crushed-in-your-place.png",
+      "note": "Strong Velazquez-style crucifixion hero — period, reverent, anatomy sound."
+    },
+    "still_garbled_titulus_0701_bad": {
+      "kind": "still", "rule": "IMG-NOTEXT", "expect": "fail",
+      "asset": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/01_out-of-joint.png",
+      "note": "Full composition reveals a garbled-text titulus (AANEI/SOALFCE) — banned text. (Slated for re-render.)"
+    },
+    "still_modern_crowd_0706_bad": {
+      "kind": "still", "rule": "IMG-PERIOD", "expect": "fail",
+      "asset": null,
+      "note": "Original modern-faced crowd (07 scene 06 v1) was overwritten by the period-fix re-render; recapture the next time a modern-look defect appears."
+    },
+    "clip_lava_13_textplan_bad": {
+      "kind": "clip", "rule": "CLIP-FROZEN", "expect": "fail",
+      "asset": null,
+      "note": "The #07-13 clip animated from the old text cut-plan poured 'lava' from a lamplit door (invented motion). Overwritten by the camera-only re-animation; recapture next frozen-violation."
+    },
+    "clip_hero_14_good": {
+      "kind": "clip", "rule": "CLIP-FROZEN", "expect": "pass",
+      "asset": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/14_that-water-is-himself.mp4",
+      "note": "The living-water hero clip — crop-cut camera only, nothing in the painting moves."
+    }
+  }
+}

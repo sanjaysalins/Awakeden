@@ -52,3 +52,8 @@ _gitcheck.txt
 
 # Asset library (media — lives in _library/, backed up to Drive, regenerable via _build_plates.py)
 _library/
+
+# scratch run logs (per-run, regenerable)
+longform/**/_*.log
+.agent_bridge/_*.log
+*.stackdump

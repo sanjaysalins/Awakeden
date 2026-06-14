@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "deep shadow behind",
+      "actual": "a soft warm painterly backlight haloes the hair against the dark; it is a traditional Baroque rim-light, not an added hard glow, and the background is otherwise deep shadow"
+    }
+  ],
+  "banned_token_hits": []
+}

@@ -1,0 +1,13 @@
+{
+  "_fixture": "The hallucination-seeding original (2026-06-14): rich subject_block injected into the prompt (blood/lamplight/etc) which Kling animated. Must FAIL CLIP-IMAGE-GROUNDED (even though it has 8 beats).",
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, slower pacing with longer holds.\n\nClassical devotional oil painting realism. atmosphere of a thirst finally stilled; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\na worn open road leading toward a humble lit doorway at dusk, warm lamplight spilling across the threshold, a single olive tree beside the door. The scene is a painted tableau, a frozen moment. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition. Cut to mid framing. Cut to close-up of the warm lamplight. Cut to macro detail of the threshold. Return to full composition. End hold on the lit doorway.\n\nMicro-motion:\n- minimal\n- flame stirs as painted light only\n\nCamera:\n- crop-based reframing only\n\n10.0s\n\n9:16",
+  "negative_prompt": "no morphing, no new elements",
+  "beats": [
+    {"start_sec": 0.0, "end_sec": 1.6, "description": "Start on full composition."},
+    {"start_sec": 1.6, "end_sec": 3.3, "description": "Cut to mid framing."},
+    {"start_sec": 3.3, "end_sec": 5.0, "description": "Cut to close-up of the warm lamplight."},
+    {"start_sec": 5.0, "end_sec": 6.6, "description": "Cut to macro detail of the threshold."},
+    {"start_sec": 6.6, "end_sec": 8.3, "description": "Return to full composition."},
+    {"start_sec": 8.3, "end_sec": 10.0, "description": "End hold on the lit doorway."}
+  ]
+}

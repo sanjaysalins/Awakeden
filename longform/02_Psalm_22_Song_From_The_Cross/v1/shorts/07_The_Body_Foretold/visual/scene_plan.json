@@ -12,9 +12,9 @@
         "framing": "close",
         "purpose": "open on the wrenched, stretched body the psalm describes",
         "rationale": "the most arresting topic image — the dislocated stretch of a crucified body",
-        "visible_elements": "stretched taut arms, shoulders pulled from their sockets, drawn-long torso, fallen head",
+        "visible_elements": "stretched taut arms, shoulders pulled from their sockets, drawn-long torso, fallen head, a bare cross-top with no inscription",
         "emotional_tone": "a body wrenched out of joint",
-        "subject_block": "a crucified man seen from a low side angle, the arms stretched taut and straight along the dark beam, the shoulders pulled hard from their sockets by the hanging weight of the body, the torso drawn long, a thin torn loincloth at the hips, the head fallen to one side, deep shadow behind, the strain of every joint held in stillness",
+        "subject_block": "a crucified man seen from a low side angle, the arms stretched taut and straight along the dark beam, the shoulders pulled hard from their sockets by the hanging weight of the body, the torso drawn long, a thin torn loincloth at the hips, the head fallen to one side, deep shadow behind, the strain of every joint held in stillness, the top of the cross BARE with no titulus, no inscription board, no placard, no lettering and no text anywhere in the image",
         "mood_block": "atmosphere of a body wrenched out of joint",
         "jesus_variant": "passion",
         "priority": 2,
@@ -149,7 +149,7 @@
         "rationale": "the specific staring crowd, not a generic gathering",
         "visible_elements": "hard upward stares, a mocking lip, dangling pierced feet above them",
         "emotional_tone": "cold onlookers staring at a dying man",
-        "subject_block": "a cluster of onlookers standing below and gazing up with cold fixed stares, their faces hard and unmoved, one with a faint mocking curl to the lip, the lower edge of a cross and dangling pierced feet just visible above them, subtle background vignettes fading into shadow suggesting pointing hands, a turned indifferent back, a soldier's helmet, and a distant temple, the staring faces dominant and the rest half-dissolved",
+        "subject_block": "a tight cluster of weathered first-century Judean onlookers filling the whole scene, men and women in coarse ancient robes and rough head coverings, their sun-worn ancient faces gazing steeply upward with cold fixed stares, hard and unmoved, one lip curled in faint mockery, no central figure among them, only the upturned ancient faces crowding the frame, every face painted in solemn Old-Master style and none looking like a modern person, subtle background vignettes fading into shadow suggesting a turned indifferent back, a Roman soldier's helmet dim in the crowd, distant flat-roofed ancient dwellings, and the cold grey sky above",
         "mood_block": "atmosphere of cold onlookers staring at a dying man",
         "jesus_variant": "passion",
         "priority": 6,
@@ -163,10 +163,10 @@
         "viral_role": "build",
         "shot_kind": "standard",
         "vignettes": [
-          "pointing hands",
           "a turned indifferent back",
-          "a soldier's helmet",
-          "a distant temple"
+          "a Roman soldier's helmet",
+          "distant flat-roofed ancient dwellings",
+          "the cold grey sky"
         ]
       },
       {
@@ -180,7 +180,7 @@
         "rationale": "the mechanism of the dislocation, a distinct macro region",
         "visible_elements": "one rigid stretched arm, a distended shoulder joint, the nailed hand at the beam",
         "emotional_tone": "a body hung and pulled by its own weight",
-        "subject_block": "one arm and shoulder of the crucified man seen close, the arm stretched rigid and straight to the nailed hand at the beam, the shoulder joint pulled and distended by the dead weight of the hanging body, the tendons drawn, the skin taut over strained muscle, deep shadow beyond",
+        "subject_block": "one outstretched arm and shoulder of the crucified Christ seen very close, an ancient weathered first-century Judean man painted in solemn Old-Master style, the arm pulled rigid and straight along the dark beam to the nailed hand, the shoulder joint visibly pulled and distended from its socket by the dead hanging weight, the tendons of the neck and armpit drawn tight, the skin stretched taut over strained muscle, only the bearded jaw at the very edge of the frame, the mood reverent and grave, deep shadow beyond, not a modern face",
         "mood_block": "atmosphere of a body hung and pulled by its own weight",
         "jesus_variant": "passion",
         "priority": 0,
@@ -206,7 +206,7 @@
         "rationale": "a real NT-anchored echo tying the staring to the piercing",
         "visible_elements": "the pierced side with a thin flow, grieving upward-looking faces, a lowered spear",
         "emotional_tone": "looking upon the one they pierced",
-        "subject_block": "the pierced side of the crucified man seen near, a dark wound below the ribs with a thin flow, a small group below lifting their faces to look upon him, one woman's face stricken with grief, subtle background vignettes fading into shadow suggesting a mourning mother, a soldier's lowered spear, the looking crowd, and a distant temple, the pierced side and the upward-looking faces dominant",
+        "subject_block": "the pierced side of the crucified man seen near and large, a dark narrow wound below the ribs with a thin trail of blood and water, the bare torso filling most of the scene, only two or three upturned faces looking up from the lower shadow, one a grieving woman, subtle background vignettes fading into shadow suggesting a lowered spear, a dim mourning figure, the few looking faces, and the dark sky, the pierced side and the upward faces dominant and the rest half-dissolved",
         "mood_block": "atmosphere of looking upon the one they pierced",
         "jesus_variant": "passion",
         "priority": 4,
@@ -220,10 +220,10 @@
         "viral_role": "build",
         "shot_kind": "standard",
         "vignettes": [
-          "a mourning mother",
-          "a soldier's lowered spear",
-          "the looking crowd",
-          "a distant temple"
+          "a lowered spear",
+          "a dim mourning figure",
+          "the few looking faces",
+          "the dark sky"
         ]
       },
       {
@@ -292,9 +292,9 @@
         "framing": "close",
         "purpose": "the marks of a cross — the nailed hand",
         "rationale": "a single macro on the nail-wound, the literal mark",
-        "visible_elements": "a nailed hand against the beam, iron nail through the palm, dried dark blood",
+        "visible_elements": "a single nailed hand, an iron nail through the palm, half-curled fingers, the dark wooden beam",
         "emotional_tone": "the marks of a cross",
-        "subject_block": "a single nailed hand seen close against the dark wood of the beam, the iron nail driven through the palm, the fingers half-curled, dark blood dried around the wound, the grain of the rough timber beneath, deep shadow around the still hand",
+        "subject_block": "a single nailed hand seen close against the rough dark wood of the cross-beam, one square iron nail driven through the centre of the open palm, the fingers gently half-curled, a little dark dried blood around the nail, the grain of the rough timber behind, deep quiet shadow, only the hand and the wooden beam fill the image, no face, no figure, and no other hand, and NO inscription plate, NO titulus, NO lettering and NO text anywhere on the beam or in the image; only the hand and the bare wooden beam",
         "mood_block": "atmosphere of the marks of a cross",
         "jesus_variant": "passion",
         "priority": 0,
@@ -320,7 +320,7 @@
         "rationale": "the gospel of the landing made visible",
         "visible_elements": "the central cross, a freed figure rising with loosened hands, broken chains",
         "emotional_tone": "one crushed so another goes free",
-        "subject_block": "the cross at the centre with the crucified figure calm in completion, and below it a freed figure rising with loosened hands, subtle background vignettes fading into shadow suggesting broken chains, an open door with light beyond, a kneeling man set free, and an open scroll, the central cross dominant and the freedom it buys half-dissolved around it",
+        "subject_block": "the crucified Christ on the cross at the centre, calm in completion with the head bowed, and at the foot of the cross a single ancient first-century Judean labourer kneeling in relief in a coarse rough ancient tunic, his weathered ancient face lowered, his loosened wrists and broken iron shackles fallen open on the ground beside him, painted in solemn Old-Master style and clearly an ordinary ancient mortal, not a modern man and not a second holy figure, subtle background vignettes fading into shadow suggesting a snapped chain, a fallen iron fetter, the kneeling freed man, and the dim bare ground, the central cross dominant",
         "mood_block": "atmosphere of one crushed so another goes free",
         "jesus_variant": "passion",
         "priority": 7,
@@ -334,10 +334,10 @@
         "viral_role": "climax",
         "shot_kind": "standard",
         "vignettes": [
-          "broken chains",
-          "an open door with light beyond",
-          "a kneeling man set free",
-          "an open scroll"
+          "a snapped chain",
+          "a fallen iron fetter",
+          "the kneeling freed man",
+          "the dim bare ground"
         ]
       },
       {

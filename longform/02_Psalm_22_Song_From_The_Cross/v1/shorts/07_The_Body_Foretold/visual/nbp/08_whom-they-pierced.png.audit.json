@@ -1,5 +1,10 @@
 {
   "passed": true,
-  "issues": [],
+  "issues": [
+    {
+      "claim": "the crucified man",
+      "actual": "the figure reads as the displayed wounded Christ standing rather than stretched on the cross, but the pierced side is the clear dominant subject and a few onlookers look up, as intended"
+    }
+  ],
   "banned_token_hits": []
 }

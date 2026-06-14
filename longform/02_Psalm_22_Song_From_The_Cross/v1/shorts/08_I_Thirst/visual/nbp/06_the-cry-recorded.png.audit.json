@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "cracked lips parted around the dying word",
+      "actual": "the head is bowed so the mouth is not clearly read as parted; the crucified cry is conveyed by the whole posture"
+    },
+    {
+      "claim": "deep darkened sky",
+      "actual": "a soft painterly rim-light haloes the thorn-crowned head, consistent with the prior cross scenes"
+    }
+  ],
+  "banned_token_hits": []
+}

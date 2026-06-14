@@ -1,6 +1,29 @@
 # RESUME.md — start here next session
 
-## ═══════════ SESSION 2026-06-14c (LATEST — PRODUCTION BATCH) — #05 #06 COMPLETE w/ SFX · #07 stills+13/14 clips (scene 11 to redo) · #08 pending ═══════════
+## ═══════════ SESSION 2026-06-14d (LATEST — PRODUCTION BATCH COMPLETE) — ALL 8 PSALM 22 SHORTS DONE (captioned + SFX bed) ═══════════
+
+**Resumed "do everything left" → finished #07, built #08 end-to-end, retrofitted SFX onto #01–#04. ALL 8 Psalm 22 shorts are now postable (SFX bed + ivory captions). Metered spend ≈ $17 (#08: 14 NBP stills + 1 retry ~$7.50 + 14 Kling clips ~$9; #07 scene-11 clip $0.65). User has NOT ear-reviewed yet ("batch-review at end").**
+
+### ✅✅ ALL 8 PSALM 22 SHORTS — FINAL (each `…\shorts\<NN>\assembly\viral_cut_sfx_captioned.mp4`):
+- **#01 The Crucifixion Foretold** 64.1s · **#02 The Mockers' Words** 60.0s · **#03 The Forsaken Cry** 51.8s · **#04 Declared To The Brethren** 58.3s — **NEW this session: SFX beds retrofitted + re-captioned** (they had shipped narration-only). Per-short themed beds in `sfx_pilots\build_ps22_01..04.py`; spoken_script.txt written for #01–#03 from the captioned words.json.
+- **#05 He Hath Done This** 43.9s · **#06 The Ends Of The Earth** 61.8s — done prior session (SFX+caption).
+- **#07 The Body Foretold** 60.1s — **NEW: scene-11 clip rendered + QC'd, assembled (hero 4 = Velázquez crucifixion), SFX bed (`build_ps22_07.py`), captioned.**
+- **#08 I Thirst** 67.0s — **NEW: full loop from scratch** (creation.json synth'd → 14-scene plan LOCKED → 14 NBP stills rendered+QC'd by eye, 1 retry on scene 13 border defect → 14 Kling clips → assembled hero 14 = the pierced-side LIVING-WATER Christ, John 19:34 → SFX bed thirst→living-water `build_ps22_08.py` → captioned). Ps 69 landmine guarded throughout (no vinegar sponge depicted).
+
+### ▶▶ DO FIRST TOMORROW:
+1. **USER EAR-REVIEW the 8 finals** (esp. the 4 retrofitted beds #01–#04 + new #07/#08). Paths above. Tweak any bed if a sound feels off.
+2. **Upload Kit batch (Stage 5)** is STILL PAUSED awaiting user approval + the 6 footer handles in `data/upload_brand.json` (see session 14b below). Once approved + handles filled → `cli_upload.py "<v1>" --all-shorts` for the 8, then Isaiah 53 long.
+3. Optional next production: the **Types & Shadows long-form slate** (Passover audio render; Bronze Serpent final-review→lock→audio; then #3 Seed of the Woman) — see the 2026-06-12 + 06-09 blocks below.
+
+### 🆕 ENV GOTCHA fixed this session (memory `store-python-venv-break`): a **Windows Store Python auto-update** (3.13.13→3.13.14, pkg `3.13.3824.0`) orphaned BOTH venvs' `pyvenv.cfg` home alias mid-session → every `.venv\Scripts\python.exe` call failed "Unable to create process … cannot find the path". **FIX (no admin):** re-register the appx — PowerShell `$p=Get-AppxPackage PythonSoftwareFoundation.Python.3.13; Add-AppxPackage -DisableDevelopmentMode -Register (Join-Path $p.InstallLocation AppxManifest.xml)` → venvs work again. Sibling to the WMI fix.
+
+### LEARNINGS / NOTES:
+- **#08 scene 13 hit the NBP panel-BORDER defect** (painting on a wood panel, bare wood-grain at the bottom + thin edges) — failed at the image gate → retry rendered full-bleed clean. Watch this on every NBP scene.
+- **Gemini 503 (server-side) interrupted the #08 render twice** — render is idempotent, just re-run (resumes at the failed scene).
+- **Assembly bridge servicing recipe (proven again):** episode-fit `{"offtopic":[]}` → jigsaw (hand-pin by meaning, hero NOT in beat_assignment) → self-review LOCKED → independent LOCKED → `_gen_verify_servicer.py` (ASM_LOG env) auto-passes slot-verifies AFTER I QC the clips. The verify-servicer idles out in ~160s, so RELAUNCH it once the reel finishes and slot-verifies start.
+- **NOT committed** — text/json/scripts (creation.json, scene_plan.json, sfx builders 01/04/07/08, spoken_scripts, memories) are versioned-but-uncommitted; media is gitignored. Commit when ready.
+
+## ═══════════ SESSION 2026-06-14c — #05 #06 COMPLETE w/ SFX · #07 stills+13/14 clips (scene 11 to redo) · #08 pending ═══════════
 
 **Stopped by user ("save everything, update memory + resume, pick up tomorrow"). This is the PRODUCTION track (rendering the Psalm 22 shorts) — separate from the parallel Upload-Kit (14b) + panel-doctor (14) tracks below. Metered spend this session ≈ $35. Env HEALTHY. Kling ran SLOW tonight (~5 min/clip).**
 

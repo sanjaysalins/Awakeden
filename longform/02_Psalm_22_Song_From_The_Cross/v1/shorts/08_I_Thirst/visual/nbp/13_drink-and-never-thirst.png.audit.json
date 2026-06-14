@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "border fixed",
+      "actual": "now full-bleed, the oil painting fills the entire image; the reflection is a clean upright cross mirrored on the water as specified"
+    }
+  ],
+  "banned_token_hits": []
+}

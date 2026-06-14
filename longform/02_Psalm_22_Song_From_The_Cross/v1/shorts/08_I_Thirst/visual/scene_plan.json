@@ -1,0 +1,819 @@
+{
+  "plan": {
+    "visual_reading": "The arc opens on the killing thirst itself — the parched, cracked-lipped face of a crucified man gasping two words — then steps back to David at his lamp, glimpsing a death not his own, and lays out the psalm's three dying images: strength dried to a potsherd, the tongue cleaving to the jaws, the body sinking into the dust of death. The proof beat brings the cross John records and holds David and Calvary a thousand years apart in one dusk. The conviction turns on the central irony — the Maker of every river and sea hanging parched with nothing in His hands while, behind Him, all the waters He made dim into shadow; the well of John 4 and the offer of living water sit beside Him. Two OT water-echoes the NT names (the smitten rock that was Christ, 1 Cor 10:4; the open invitation 'every one that thirsteth, come', Isaiah 55:1 / 44:3) carry the landing toward a weary soul drinking and never thirsting again, and the cut lands on the hero: the crucified Christ with living water drawn from His own pierced side — that water is Himself.",
+    "red_team_notes": "Jaded Viewer worries: (1) too many crucified-Christ frames could blur — answered by varying framing hard (close parched face / mid cry / low-angle full body / wide pierced-side hero) and giving each a distinct macro payload. (2) The potsherd and the tongue-cleaving close-ups risk being grim medical shots — kept reverent and held-as-state, not gore. (3) The Ps 69 landmine: I deliberately do NOT depict the vinegar sponge (its fulfilment formula belongs to Ps 69:21) — the cross scenes show thirst, not the sponge, so no visual implies a Ps 22 citation. (4) The water-echo scenes could be a Sunday-school water montage — anchored each to a real NT-named echo (the Rock = Christ, 1 Cor 10:4; the thirst-invitation Isaiah 55:1/44:3 behind John 7:37) so they read as study, not slideshow. (5) Rejected the obvious cliche auto-completes: a literal glowing chalice, a dripping faucet, a desert mirage, a single falling teardrop standing for the whole psalm.",
+    "scenes": [
+      {
+        "index": 1,
+        "slug": "two-words-on-a-cross",
+        "title": "Two Words on a Cross",
+        "scene_type": "single",
+        "arc_position": "opening-hook",
+        "framing": "close",
+        "purpose": "open on the killing thirst the whole short turns on",
+        "rationale": "the thread made visible at the very first frame — the parched cry, not a generic crucifixion wide",
+        "visible_elements": "cracked parted lips, thirst-hollowed cheek, drawn dry throat, thorn-pressed brow",
+        "emotional_tone": "a killing thirst at the point of death",
+        "subject_block": "the parched face of a crucified man seen close from below, the head fallen against the upright beam, dry cracked lips parted around a word left unspoken, a thirst-hollowed cheek streaked with sweat and dust, the throat drawn and dry, a thin crown of thorns pressed to the brow, deep shadow behind, the strain of a killing thirst held in stillness",
+        "mood_block": "atmosphere of a killing thirst at the point of death",
+        "jesus_variant": "passion",
+        "priority": 2,
+        "macro_elements": [
+          "the cracked parted lips",
+          "the thirst-hollowed cheek",
+          "the drawn dry throat",
+          "the thorn-pressed brow",
+          "a single bead of sweat"
+        ],
+        "pacing": "slower",
+        "viral_role": "hook-open",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 2,
+        "slug": "the-king-who-wrote-it",
+        "title": "The King Who Wrote It",
+        "scene_type": "single",
+        "arc_position": "biblical-setting",
+        "framing": "mid",
+        "purpose": "place the psalm in David's hand, picturing a death not his own",
+        "rationale": "grounds the first-person voice without a modern talking-head cliche",
+        "visible_elements": "aged king, dim unreadable scroll, small clay lamp, haunted uplifted face",
+        "emotional_tone": "a prophet glimpsing a far-off agony",
+        "subject_block": "an aged king in a worn royal robe seated low over an open scroll by lamplight, a feather pen at rest in his lined hand, his face lifted with a haunted faraway look as if seeing a death not his own, the scroll's surface dim and unreadable, a small clay lamp burning at the table's edge, heavy shadow gathered in the chamber behind him",
+        "mood_block": "atmosphere of a prophet glimpsing a far-off agony",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the open dim scroll",
+          "the resting feather pen",
+          "the small clay lamp flame",
+          "the lined uplifted face"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 3,
+        "slug": "dried-like-a-potsherd",
+        "title": "Dried Like a Potsherd",
+        "scene_type": "single",
+        "arc_position": "symbolic-support",
+        "framing": "close",
+        "purpose": "make 'my strength is dried up like a potsherd' literal",
+        "rationale": "the overlooked object the verse names, held beside a parched hand",
+        "visible_elements": "cracked clay shard, crumbling dry edge, parched open hand, cracked grey earth",
+        "emotional_tone": "strength dried to brittle clay",
+        "subject_block": "a broken shard of sun-baked clay set in cracked grey dust, its edge dry and crumbling, beside it a parched limp hand fallen open on the same baked ground, every line of the cracked earth pale and waterless under a hard flat light, no moisture anywhere, the heat held in the stillness of the shard and the open hand",
+        "mood_block": "atmosphere of strength dried to brittle clay",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the cracked clay potsherd",
+          "the crumbling dry edge",
+          "the parched open hand",
+          "the cracked grey earth"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 4,
+        "slug": "the-tongue-cleaveth",
+        "title": "The Tongue Cleaveth",
+        "scene_type": "single",
+        "arc_position": "symbolic-support",
+        "framing": "close",
+        "purpose": "the verse's second image — the tongue stuck fast to the jaws",
+        "rationale": "holds the exact KJV image, reverent and held as state, not gore",
+        "visible_elements": "a weathered ancient face in profile, eyes closed, dry cracked closed lips, hollow thirsting cheeks",
+        "emotional_tone": "a tongue cleaving to the jaws",
+        "subject_block": "the face of a dying first-century Judean man in three-quarter profile, weathered and ancient, painted in solemn reverent Old-Master style, the head fallen, the eyes closed, the lips dry and cracked and pressed closed, the cheeks hollow with thirst, the skin parched and ashen, a quiet still suffering, modest and reverent, deep gentle shadow, a closed silent mouth, no open mouth and no tongue shown",
+        "mood_block": "atmosphere of a tongue cleaving to the jaws",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the split dry lips",
+          "the parched stuck tongue",
+          "the slack thirsting jaw",
+          "the cracked mouth corners"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 5,
+        "slug": "the-dust-of-death",
+        "title": "The Dust of Death",
+        "scene_type": "single",
+        "arc_position": "symbolic-support",
+        "framing": "low-angle",
+        "purpose": "the verse's third image — sinking into the dust of death",
+        "rationale": "the ground itself claiming him, the psalm's own metaphor made visible",
+        "visible_elements": "cheek near grey dust, fallen slack shoulder, dust-settled skin, cracked earth into shadow",
+        "emotional_tone": "sinking into the dust of death",
+        "subject_block": "a dying man's body fallen low and half-sunk into pale grey dust, the cheek pressed to the cracked dry ground, one arm slack and the shoulder dropped, fine grey dust settled over the still ashen skin, the cracked earth stretching away into deep shadow, a cold flat light, the ground seeming to draw the greying body down into itself",
+        "mood_block": "atmosphere of sinking into the dust of death",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the cheek against the dust",
+          "the fallen slack shoulder",
+          "the dust-settled skin",
+          "the cracked grey earth"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 6,
+        "slug": "the-cry-recorded",
+        "title": "The Cry Recorded",
+        "scene_type": "single",
+        "arc_position": "nt-gospel-link",
+        "framing": "mid",
+        "purpose": "the John 19:28 cross where the dying cry was spoken",
+        "rationale": "the NT moment the psalm's thirst matches — thirst held, the vinegar sponge deliberately absent (Ps 69 guard)",
+        "visible_elements": "crucified Christ from below, parted cracked lips, bowed thorn-crowned head, drawn throat",
+        "emotional_tone": "the dying cry of God's own Son",
+        "subject_block": "the crucified Christ seen from below, the arms outstretched and nailed along the dark beam, the thorn-crowned head bowed, the cracked lips parted around the dying word, the parched throat drawn tight, the body stretched and spent against a darkened sky, a faint first paleness at the horizon's edge, the whole figure held in the stillness just after the cry",
+        "mood_block": "atmosphere of the dying cry of God's own Son",
+        "jesus_variant": "passion",
+        "priority": 3,
+        "macro_elements": [
+          "the parted cracked lips",
+          "the bowed thorn-crowned head",
+          "the nailed outstretched hand",
+          "the drawn parched throat"
+        ],
+        "pacing": "slower",
+        "viral_role": "pivot",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 7,
+        "slug": "a-thousand-years-apart",
+        "title": "A Thousand Years Apart",
+        "scene_type": "unified",
+        "arc_position": "theological-centre",
+        "framing": "wide",
+        "purpose": "hold David and Calvary in one painted dusk",
+        "rationale": "shows the thousand-year gap rather than asserting it; the descriptive match, not a cited fulfilment",
+        "visible_elements": "king at his scroll left, distant cross on a hill right, vertical band of pale light between",
+        "emotional_tone": "a thousand years closing into one death",
+        "subject_block": "a wide composition divided by a vertical band of pale light, at the left an aged king low over a dim scroll by a small lamp, at the right across the divide the distant crucified figure on a dark bare hill, the two ages held in one painted dusk, subtle background vignettes fading into shadow suggesting a small clay lamp, an unrolled dim scroll, a far cross on a bare hill, a cracked potsherd, and the long stretch of years between",
+        "mood_block": "atmosphere of a thousand years closing into one death",
+        "jesus_variant": "passion",
+        "priority": 0,
+        "macro_elements": [
+          "the band of pale light",
+          "the king at his scroll",
+          "the distant cross",
+          "the small lamp flame"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "a small clay lamp",
+          "an unrolled dim scroll",
+          "a far cross on a bare hill",
+          "a cracked potsherd",
+          "the long stretch of years"
+        ]
+      },
+      {
+        "index": 8,
+        "slug": "who-made-every-river",
+        "title": "Who Made Every River",
+        "scene_type": "unified",
+        "arc_position": "theological-centre",
+        "framing": "wide",
+        "purpose": "the central irony — the Maker of every water dying of thirst",
+        "rationale": "carries the conviction beat's whole weight; the waters He made dim behind His thirst",
+        "visible_elements": "central parched crucified Christ, dim river/spring/rain/well/sea vignettes in shadow",
+        "emotional_tone": "the Maker of all water dying of thirst",
+        "subject_block": "the crucified Christ at the centre and clearly dominant, parched and spent, the thorn-crowned head bowed and the arms nailed wide, and faint and barely-there in the deep surrounding shadow the waters He made as dim half-dissolved memory, subtle background vignettes fading far into shadow suggesting a faint distant river, a dim hill spring, a suggestion of falling rain, a barely-seen stone well, and a dark distant sea, every water nearly lost in darkness behind the central thirst of the One who made them",
+        "mood_block": "atmosphere of the Maker of all water dying of thirst",
+        "jesus_variant": "passion",
+        "priority": 4,
+        "macro_elements": [
+          "the bowed parched head",
+          "the nailed wide hands",
+          "a dim flowing river",
+          "a deep stone well"
+        ],
+        "pacing": "slower",
+        "viral_role": "pivot",
+        "shot_kind": "standard",
+        "vignettes": [
+          "a faint distant river",
+          "a dim hill spring",
+          "a suggestion of falling rain",
+          "a barely-seen stone well",
+          "a dark distant sea"
+        ]
+      },
+      {
+        "index": 9,
+        "slug": "living-water-offered",
+        "title": "Living Water Offered",
+        "scene_type": "unified",
+        "arc_position": "nt-gospel-link",
+        "framing": "mid",
+        "purpose": "the gift He offers the world — John 4 well, John 7:37",
+        "rationale": "real NT ground for 'offers the world living water', not an abstract symbol",
+        "visible_elements": "Jesus at the well, open offering hand, stone waterpot, listening woman, thirsting-crowd vignettes",
+        "emotional_tone": "living water freely offered",
+        "subject_block": "Jesus seated at the rim of an ancient stone well in the noon light, His hand open in offer toward a stone waterpot at the well's edge, His face calm and searching, a woman half-turned in listening near the well, subtle background vignettes fading into shadow suggesting a brimming overflowing cup, a thirsting crowd with lifted faces, rivers running outward, and a hand held reaching for water",
+        "mood_block": "atmosphere of living water freely offered",
+        "jesus_variant": "ministry",
+        "priority": 5,
+        "macro_elements": [
+          "the open offering hand",
+          "the stone waterpot",
+          "the worn well rim",
+          "the calm searching face"
+        ],
+        "pacing": "controlled",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "a brimming overflowing cup",
+          "a thirsting crowd with lifted faces",
+          "rivers running outward",
+          "a hand reaching for water",
+          "the stone waterpot"
+        ]
+      },
+      {
+        "index": 10,
+        "slug": "hanging-there-with-nothing",
+        "title": "Hanging There With Nothing",
+        "scene_type": "single",
+        "arc_position": "symbolic-support",
+        "framing": "low-angle",
+        "purpose": "the Giver with empty open hands, not a drop, in your place",
+        "rationale": "makes the conviction's 'in your place' stark — all things His, nothing in His hands",
+        "visible_elements": "full crucified Christ, empty open hands, dry bare hill, bare upright beam",
+        "emotional_tone": "the Giver of all things hanging with nothing",
+        "subject_block": "the full crucified Christ from a low angle against a vast dark sky, the body stretched and stripped to a thin loincloth, the arms taut and nailed along the beam, the open hands empty, the dry bare hill beneath the cross with not a drop of water anywhere, the head bowed in spent stillness, a thin cold light along the upright beam",
+        "mood_block": "atmosphere of the Giver of all things hanging with nothing",
+        "jesus_variant": "passion",
+        "priority": 0,
+        "macro_elements": [
+          "the empty open hands",
+          "the dry bare hill",
+          "the bare upright beam",
+          "the bowed spent head"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 11,
+        "slug": "water-from-the-rock",
+        "title": "Water from the Rock",
+        "scene_type": "unified",
+        "arc_position": "ot-echo",
+        "framing": "wide",
+        "purpose": "the smitten rock that gave water to the thirsty — 1 Cor 10:4",
+        "rationale": "an OT echo the NT explicitly names: 'that Rock was Christ' — the smitten rock giving water for the thirsty",
+        "visible_elements": "Moses' rod, struck desert rock, sheet of water, thirsting people with cups",
+        "emotional_tone": "the smitten rock pouring water for the thirsty",
+        "subject_block": "Moses with his rod at a great desert rock, the struck stone with a bright sheet of water caught across its face, a thirsting people pressed close below with cups and cupped hands lifted, the dry wilderness stretching behind, subtle background vignettes fading into shadow suggesting the smitten rock, a frozen sheet of water down the stone, a kneeling child at the water, the long parched camp, and Moses' lifted rod",
+        "mood_block": "atmosphere of the smitten rock pouring water for the thirsty",
+        "jesus_variant": null,
+        "priority": 6,
+        "macro_elements": [
+          "the struck rock face",
+          "the bright sheet of water",
+          "the lifted cupped hands",
+          "Moses' rod"
+        ],
+        "pacing": "controlled",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "the smitten desert rock",
+          "a sheet of water down the stone",
+          "a kneeling child at the water",
+          "the long parched camp",
+          "Moses' lifted rod"
+        ]
+      },
+      {
+        "index": 12,
+        "slug": "every-one-that-thirsteth",
+        "title": "Come, Every One That Thirsteth",
+        "scene_type": "unified",
+        "arc_position": "ot-echo",
+        "framing": "mid",
+        "purpose": "the OT thirst-invitation behind the gospel offer",
+        "rationale": "Isaiah 55:1 'every one that thirsteth, come ye to the waters' / Isaiah 44:3 'I will pour water upon him that is thirsty' — the antecedent of John 7:37",
+        "visible_elements": "open spring in dry ground, thirsting figures with empty vessels, new green shoots",
+        "emotional_tone": "an open invitation to the thirsty",
+        "subject_block": "an opened spring risen from dry ground at the edge of a parched land, thirsting figures of every kind gathered near with empty vessels, a child, an old man, a bowed woman, all drawn toward the clear water, subtle background vignettes fading into shadow suggesting cracked ground drinking the water, new green shoots at the water's edge, empty waterpots held out, and a far wilderness behind",
+        "mood_block": "atmosphere of an open invitation to the thirsty to come and drink",
+        "jesus_variant": null,
+        "priority": 0,
+        "macro_elements": [
+          "the risen spring",
+          "the cracked drinking ground",
+          "the new green shoots",
+          "the held-out empty vessel"
+        ],
+        "pacing": "controlled",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "an opened spring in dry ground",
+          "cracked ground drinking the water",
+          "new green shoots at the water's edge",
+          "empty vessels held out",
+          "a far wilderness"
+        ]
+      },
+      {
+        "index": 13,
+        "slug": "drink-and-never-thirst",
+        "title": "Drink and Never Thirst",
+        "scene_type": "unified",
+        "arc_position": "human-response",
+        "framing": "mid",
+        "purpose": "the landing's promise received — a thirst forever stilled",
+        "rationale": "the viewer's place; the cross mirrored in the very water that eases the thirst",
+        "visible_elements": "kneeling figure, brimming cup at the lips, eased face, cross reflected on the water",
+        "emotional_tone": "a thirst finally and forever stilled",
+        "subject_block": "a weary figure kneeling low at a clear flowing spring, a cup lifted and brimming at the lips, the eased face soft with relief, the dry wilderness left behind in shadow, the still reflection of an upright cross held on the water's surface, subtle background vignettes fading into shadow suggesting an eased throat, a brimming cup, a steady flowing spring, the cross mirrored in the water, and the dry land behind",
+        "mood_block": "atmosphere of a thirst finally and forever stilled",
+        "jesus_variant": null,
+        "priority": 7,
+        "macro_elements": [
+          "the brimming cup at the lips",
+          "the eased relieved face",
+          "the cross mirrored on the water",
+          "the steady flowing spring"
+        ],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": [
+          "the brimming lifted cup",
+          "the eased relieved face",
+          "the steady flowing spring",
+          "the cross mirrored in the water",
+          "the dry land behind"
+        ]
+      },
+      {
+        "index": 14,
+        "slug": "that-water-is-himself",
+        "title": "That Water Is Himself",
+        "scene_type": "single",
+        "arc_position": "closing-devotional",
+        "framing": "wide",
+        "purpose": "HERO close — the living water drawn from Christ's own pierced side",
+        "rationale": "the gospel-pivot the CTA points to: come to Him and drink; John 19:34 water from His side — that water is Himself",
+        "visible_elements": "crucified Christ, pierced side, quiet stream of water and blood, first pale light",
+        "emotional_tone": "the living water poured from Christ Himself",
+        "subject_block": "the crucified Christ on the cross seen near and reverent, the thorn-crowned head bowed in completion, from the pierced side a quiet stream of water and blood drawn down the still body, the dark sky behind softening to a first pale light, a deep stillness over the whole figure, the bare hill beneath, the source of living water given from His own opened side",
+        "mood_block": "atmosphere of the living water poured from Christ Himself",
+        "jesus_variant": "passion",
+        "priority": 1,
+        "macro_elements": [
+          "the pierced side",
+          "the quiet stream of water and blood",
+          "the bowed thorn-crowned head",
+          "the first pale light"
+        ],
+        "pacing": "slower",
+        "viral_role": "close",
+        "shot_kind": "hero",
+        "vignettes": []
+      }
+    ],
+    "short_priority": [
+      14,
+      1,
+      6,
+      8,
+      9,
+      11,
+      13
+    ],
+    "candidates": [
+      {
+        "title": "Two Words on a Cross",
+        "scene_type": "single",
+        "arc_position": "opening-hook",
+        "framing": "close",
+        "purpose": "open on the killing thirst the whole short turns on",
+        "rationale": "the thread made visible — the parched cry, not a generic cross",
+        "visible_elements": "cracked parted lips, thirst-hollowed cheek, dry throat, thorn-pressed brow",
+        "emotional_tone": "a killing thirst at the point of death"
+      },
+      {
+        "title": "The King Who Wrote It",
+        "scene_type": "single",
+        "arc_position": "biblical-setting",
+        "framing": "mid",
+        "purpose": "place the psalm in David's hand, picturing another's death",
+        "rationale": "grounds the first-person voice without a talking-head cliche",
+        "visible_elements": "aged king, dim unreadable scroll, clay lamp, haunted face",
+        "emotional_tone": "a prophet glimpsing a far-off agony"
+      },
+      {
+        "title": "Dried Like a Potsherd",
+        "scene_type": "single",
+        "arc_position": "symbolic-support",
+        "framing": "close",
+        "purpose": "make 'strength dried up like a potsherd' literal",
+        "rationale": "the overlooked object the verse names, not a generic dying body",
+        "visible_elements": "cracked clay shard, crumbling edge, parched open hand, cracked earth",
+        "emotional_tone": "strength dried to brittle clay"
+      },
+      {
+        "title": "The Tongue Cleaveth",
+        "scene_type": "single",
+        "arc_position": "symbolic-support",
+        "framing": "close",
+        "purpose": "the verse's second image — the tongue stuck fast",
+        "rationale": "holds the exact KJV image; reverent, not gore",
+        "visible_elements": "split dry lips, parched stuck tongue, slack jaw, cracked mouth corners",
+        "emotional_tone": "a tongue cleaving to the jaws"
+      },
+      {
+        "title": "The Dust of Death",
+        "scene_type": "single",
+        "arc_position": "symbolic-support",
+        "framing": "low-angle",
+        "purpose": "the verse's third image — sinking into the dust",
+        "rationale": "the ground itself claiming him, the psalm's own metaphor",
+        "visible_elements": "cheek near grey dust, fallen shoulder, dust-settled skin, cracked earth",
+        "emotional_tone": "sinking into the dust of death"
+      },
+      {
+        "title": "The Cry Recorded",
+        "scene_type": "single",
+        "arc_position": "nt-gospel-link",
+        "framing": "mid",
+        "purpose": "the John 19:28 cross where the cry was spoken",
+        "rationale": "the NT moment the psalm matches — thirst, deliberately no vinegar sponge (Ps 69 guard)",
+        "visible_elements": "crucified Christ from below, parted cracked lips, bowed thorn-crowned head",
+        "emotional_tone": "the dying cry of God's own Son"
+      },
+      {
+        "title": "A Thousand Years Apart",
+        "scene_type": "unified",
+        "arc_position": "theological-centre",
+        "framing": "wide",
+        "purpose": "hold David and Calvary in one dusk",
+        "rationale": "shows the thousand-year gap rather than asserting it",
+        "visible_elements": "king at scroll left, distant cross right, band of pale light between",
+        "emotional_tone": "a thousand years closing into one death"
+      },
+      {
+        "title": "Who Made Every River",
+        "scene_type": "unified",
+        "arc_position": "theological-centre",
+        "framing": "wide",
+        "purpose": "the central irony — the Maker of water dying of thirst",
+        "rationale": "the conviction beat's whole weight in one image",
+        "visible_elements": "central parched Christ, dim river/spring/rain/well/sea vignettes in shadow",
+        "emotional_tone": "the Maker of all water dying of thirst"
+      },
+      {
+        "title": "Living Water Offered",
+        "scene_type": "unified",
+        "arc_position": "nt-gospel-link",
+        "framing": "mid",
+        "purpose": "the gift He offers — John 4 well / John 7:37",
+        "rationale": "real NT ground for 'offers the world living water'",
+        "visible_elements": "Jesus at the well, open offering hand, waterpot, listening woman, thirsting-crowd vignettes",
+        "emotional_tone": "living water freely offered"
+      },
+      {
+        "title": "Hanging There With Nothing",
+        "scene_type": "single",
+        "arc_position": "symbolic-support",
+        "framing": "low-angle",
+        "purpose": "the Giver with empty open hands, not a drop",
+        "rationale": "the conviction's 'in your place' made stark",
+        "visible_elements": "full crucified Christ, empty open hands, dry bare hill, bare beam",
+        "emotional_tone": "the Giver of all things hanging with nothing"
+      },
+      {
+        "title": "Water from the Rock",
+        "scene_type": "unified",
+        "arc_position": "ot-echo",
+        "framing": "wide",
+        "purpose": "the smitten rock that gave water — 1 Cor 10:4",
+        "rationale": "an OT echo the NT explicitly names ('that Rock was Christ')",
+        "visible_elements": "Moses' rod, struck rock, sheet of water, thirsting people with cups",
+        "emotional_tone": "the smitten rock pouring water for the thirsty"
+      },
+      {
+        "title": "Come, Every One That Thirsteth",
+        "scene_type": "unified",
+        "arc_position": "ot-echo",
+        "framing": "mid",
+        "purpose": "the OT thirst-invitation behind the gospel offer",
+        "rationale": "Isaiah 55:1 / 44:3 — 'come to the waters', the antecedent of John 7:37",
+        "visible_elements": "open spring in dry ground, thirsting figures with empty vessels, green shoots",
+        "emotional_tone": "an open invitation to the thirsty"
+      },
+      {
+        "title": "Drink and Never Thirst",
+        "scene_type": "unified",
+        "arc_position": "human-response",
+        "framing": "mid",
+        "purpose": "the landing's promise received",
+        "rationale": "the viewer's place — a thirst finally stilled, the cross mirrored in the water",
+        "visible_elements": "kneeling figure, brimming cup at lips, eased face, cross reflected on water",
+        "emotional_tone": "a thirst finally and forever stilled"
+      },
+      {
+        "title": "That Water Is Himself",
+        "scene_type": "single",
+        "arc_position": "closing-devotional",
+        "framing": "wide",
+        "purpose": "HERO — the living water drawn from Christ's own pierced side",
+        "rationale": "the gospel-pivot CTA: come to Him and drink; John 19:34 water from the side",
+        "visible_elements": "crucified Christ, pierced side, quiet stream of water and blood, first pale light",
+        "emotional_tone": "the living water poured from Christ Himself"
+      },
+      {
+        "title": "A Glowing Chalice",
+        "scene_type": "single",
+        "arc_position": "symbolic-support",
+        "framing": "close",
+        "purpose": "REJECTED candidate",
+        "rationale": "rejected — a literal glowing cup is the eucharist-clipart cliche, and it abstracts the thirst into a symbol",
+        "visible_elements": "n/a",
+        "emotional_tone": "rejected"
+      },
+      {
+        "title": "A Single Falling Teardrop",
+        "scene_type": "single",
+        "arc_position": "emotional-turning",
+        "framing": "close",
+        "purpose": "REJECTED candidate",
+        "rationale": "rejected — a teardrop is wet; the whole point is dryness, and it is the stock 'one tear' cliche",
+        "visible_elements": "n/a",
+        "emotional_tone": "rejected"
+      },
+      {
+        "title": "Desert Mirage of Water",
+        "scene_type": "single",
+        "arc_position": "symbolic-support",
+        "framing": "wide",
+        "purpose": "REJECTED candidate",
+        "rationale": "rejected — a mirage reads as illusion/false hope, the opposite of the real living water offered",
+        "visible_elements": "n/a",
+        "emotional_tone": "rejected"
+      },
+      {
+        "title": "The Vinegar Sponge on a Reed",
+        "scene_type": "single",
+        "arc_position": "nt-gospel-link",
+        "framing": "close",
+        "purpose": "REJECTED candidate",
+        "rationale": "rejected on the Ps 69 guard — the vinegar/sponge belongs to Psalm 69:21's fulfilment, and depicting it would visually imply the citation this short deliberately avoids",
+        "visible_elements": "n/a",
+        "emotional_tone": "rejected"
+      }
+    ],
+    "rationale": "Chose the three psalm images the verse actually names (potsherd / tongue / dust) over a single generic dying-body shot, so the 'point' beat reads as study not illustration. Kept the cross varied across four framings to avoid a blur of identical crucifixions. Anchored both OT-echo water scenes to real NT-named texts (the Rock = Christ, 1 Cor 10:4; the thirst-invitation Isaiah 55:1/44:3 behind John 7:37) rather than reaching for an un-cited type. Hero is the pierced-side living-water Christ (John 19:34) because 'that water is Himself' is the CTA — the cut must land there, not on the most harrowing thirst frame. Rejected the glowing chalice, the single teardrop, the desert mirage, and the vinegar sponge (the last on the Ps 69 guard).",
+    "beat_coverage": {
+      "hook": [
+        1
+      ],
+      "point": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "proof": [
+        6,
+        7
+      ],
+      "conviction": [
+        8,
+        9,
+        10
+      ],
+      "landing": [
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    "hero_candidate": 14
+  },
+  "self_review": {
+    "overall": "LOCKED",
+    "panel": [
+      {
+        "agent": "Scene Director",
+        "verdict": "STRONG",
+        "note": "The arc drives the turn: hook #1 'Two Words on a Cross' states the thirst, the 'point' images (#3 potsherd / #4 tongue / #5 dust) ground the verse, #7 'A Thousand Years Apart' carries the proof, #8 'Who Made Every River' lands the conviction irony, and #14 'That Water Is Himself' closes the gospel. Not just illustration."
+      },
+      {
+        "agent": "Theologian",
+        "verdict": "CAUTION",
+        "note": "Watch #6 'The Cry Recorded' and #14 — both crucifixion scenes; the plan deliberately omits the vinegar sponge to keep clear of the Ps 69:21 fulfilment the spoken text never claims. Confirm the renderer keeps #14's side-stream as water-and-blood (John 19:34), not an invented fountain. OT echoes #11 (1 Cor 10:4) and #12 (Isaiah 55:1/44:3) are NT-anchored, not stretched."
+      },
+      {
+        "agent": "Visual Skeptic",
+        "verdict": "CAUTION",
+        "note": "#12 'Come, Every One That Thirsteth' risks generic 'people-at-a-spring' stock religious art; its specific vignettes (cracked ground drinking, new green shoots, empty vessels held out) and the Isaiah anchor pull it back from merchandise. The rest hold a sceptical scroller."
+      },
+      {
+        "agent": "Character-Consistency Checker",
+        "verdict": "STRONG",
+        "note": "jesus_variant is consistent: passion on every crucifixion scene (#1, #6, #8, #10, #14), ministry on the John 4 well (#9), null on the OT/symbol scenes (#2-5, #11-13). Same thorn-crowned, spent passion Christ across the cross frames; the well Christ is the calm ministry figure."
+      },
+      {
+        "agent": "Editor",
+        "verdict": "STRONG",
+        "note": "14 scenes within the rich-passage window; subject_blocks are state-only ('lips parted around a word left unspoken', 'a bright sheet of water caught across its face') with no spooking action verbs; every scene earns its slot via a distinct macro payload."
+      },
+      {
+        "agent": "Jaded Viewer",
+        "verdict": "CAUTION",
+        "note": "Three psalm close-ups in a row (#3 potsherd, #4 tongue, #5 dust) could feel like a checklist; they are saved by being the literal objects the verse names and by hard framing variety. No cliche-blocklist auto-completes — the glowing chalice, single teardrop, and heaven-beam were explicitly rejected in candidates."
+      }
+    ],
+    "gates": [
+      {
+        "gate": "SP-G1 Biblical Accuracy",
+        "verdict": "PASS",
+        "evidence": "Every literal scene defensible: Ps 22:15 images (#3-5), John 19:28 cross (#6/#14), John 4 well (#9), Exodus rock (#11, 1 Cor 10:4), Isaiah 55:1/44:3 invitation (#12). No invented narrative; thorn-crown supported by passion tradition.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G2 Narration Alignment",
+        "verdict": "PASS",
+        "evidence": "Every beat id in ['hook', 'point', 'proof', 'conviction', 'landing'] has >=1 supporting scene.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G3 Visual Variety",
+        "verdict": "PASS",
+        "evidence": "8 single + 6 unified; psalm close-ups, OT echoes, well scene, and four distinct cross framings; cliche auto-completes rejected in candidates.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G4 Theological Honesty",
+        "verdict": "PASS",
+        "evidence": "Descriptive-match thread kept honest; vinegar sponge omitted to avoid implying the Ps 69 citation; OT echoes are NT-named (1 Cor 10:4), not contrarian or foreign doctrine.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G5 Prompt Conformance",
+        "verdict": "PASS",
+        "evidence": "All subject_block + mood_block content clear of the banned-token list.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G6 Type Discipline",
+        "verdict": "PASS",
+        "evidence": "every unified scene declares 3-5 vignettes (counts: #7=5, #8=5, #9=5, #11=5, #12=5, #13=5)",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G7 Character Consistency",
+        "verdict": "PASS",
+        "evidence": "Identical passion Christ across crucifixion scenes; ministry Christ at the well; jesus_variant set consistently per scene content.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G8 Composition Distribution",
+        "verdict": "PASS",
+        "evidence": "4 distinct framings; max 'mid' at 5/14.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G9 Scene Mix & Gospel Frame",
+        "verdict": "PASS",
+        "evidence": "n=14: single=8, unified=6, nt-link=2, ot-echo=2",
+        "fix": ""
+      }
+    ],
+    "priority_fixes": []
+  },
+  "independent_review": {
+    "overall": "LOCKED",
+    "panel": [
+      {
+        "agent": "Scene Director",
+        "verdict": "STRONG",
+        "note": "Independently traced: #1 states the thirst, #3/#4/#5 hold the three things Ps 22:15 actually names, #7 carries the thousand-year proof, #8 lands the Maker-of-water irony, #14 closes on the living water from Christ's side. The turn is driven, not illustrated."
+      },
+      {
+        "agent": "Theologian",
+        "verdict": "CAUTION",
+        "note": "Verified the load-bearing guard: no scene depicts the vinegar sponge, so nothing visually asserts the Ps 69:21 fulfilment the script avoids. #11 is legitimate (1 Cor 10:4 names the Rock as Christ). #12's Isaiah 55:1/44:3 invitation is an honest OT antecedent, not a stretched type. #14's side-stream must read as John 19:34 water-and-blood, not an invented decorative fountain."
+      },
+      {
+        "agent": "Visual Skeptic",
+        "verdict": "CAUTION",
+        "note": "#12 'Come, Every One That Thirsteth' is the nearest thing to generic religious stock; its named vignettes and Isaiah anchor keep it specific. Everything else is too particular (a cracked potsherd beside a dead hand; a pierced side) to read as merchandise."
+      },
+      {
+        "agent": "Character-Consistency Checker",
+        "verdict": "STRONG",
+        "note": "jesus_variant is internally consistent — passion on all five crucifixion scenes, ministry only at the John 4 well (#9), null on the symbol/OT scenes. No drift in the Christ description."
+      },
+      {
+        "agent": "Editor",
+        "verdict": "STRONG",
+        "note": "State-only prose throughout (no motion verbs that spook image-gen); 14 scenes is within the rich-passage window; each scene carries 4 distinct macro anchors for the downstream cut planner."
+      },
+      {
+        "agent": "Jaded Viewer",
+        "verdict": "CAUTION",
+        "note": "The cross recurs (5 scenes) — a real risk of sameness — but framing is varied hard (close parched face / mid cry / wide irony / low-angle full body / wide pierced-side hero) and each cross does different theological work. No blocklist cliche survives into the selection."
+      }
+    ],
+    "gates": [
+      {
+        "gate": "SP-G1 Biblical Accuracy",
+        "verdict": "PASS",
+        "evidence": "Each literal scene checks against the source: Ps 22:15 (#3-5), John 19:28/34 (#6/#14), John 4 (#9), Exodus rock / 1 Cor 10:4 (#11), Isaiah 55:1/44:3 (#12). No invented narrative beats.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G2 Narration Alignment",
+        "verdict": "PASS",
+        "evidence": "Every beat id in ['hook', 'point', 'proof', 'conviction', 'landing'] has >=1 supporting scene.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G3 Visual Variety",
+        "verdict": "PASS",
+        "evidence": "8 single + 6 unified, varied subjects and framings; topic auto-completes rejected in the candidate pool.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G4 Theological Honesty",
+        "verdict": "PASS",
+        "evidence": "Descriptive-match thread preserved; Ps 69 sponge deliberately omitted; OT echoes NT-named; no foreign doctrine smuggled.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G5 Prompt Conformance",
+        "verdict": "PASS",
+        "evidence": "All subject_block + mood_block content clear of the banned-token list.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G6 Type Discipline",
+        "verdict": "PASS",
+        "evidence": "every unified scene declares 3-5 vignettes (counts: #7=5, #8=5, #9=5, #11=5, #12=5, #13=5)",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G7 Character Consistency",
+        "verdict": "PASS",
+        "evidence": "Passion Christ consistent across the cross scenes; ministry Christ at the well; jesus_variant correct per scene.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G8 Composition Distribution",
+        "verdict": "PASS",
+        "evidence": "4 distinct framings; max 'mid' at 5/14.",
+        "fix": ""
+      },
+      {
+        "gate": "SP-G9 Scene Mix & Gospel Frame",
+        "verdict": "PASS",
+        "evidence": "n=14: single=8, unified=6, nt-link=2, ot-echo=2",
+        "fix": ""
+      }
+    ],
+    "priority_fixes": []
+  },
+  "paper_cohesion": {
+    "scope": "paper",
+    "passed": true,
+    "notes": "The set coheres around one spine: the killing thirst of Psalm 22:15 (#1 hook, #3-5 the three named images) -> the cross where it was spoken (#6) held a thousand years from David (#7) -> the conviction irony that the Maker of every water thirsts with nothing in His hands (#8/#10) while He offers living water (#9) -> two NT-named OT water echoes (#11 the Rock = 1 Cor 10:4; #12 Isaiah 55:1/44:3 'come, every one that thirsteth') -> the thirst stilled (#13) -> the hero close where the living water is drawn from Christ's own pierced side (#14). The thread is mirrored at the centre (#8) and lands on the gospel-pivot, exactly as required. The descriptive-match guard holds across the set — no scene depicts the vinegar sponge, so nothing visually asserts the Psalm 69 fulfilment the narration deliberately avoids. jesus_variant is consistent set-wide. No palette or character conflict; the five crucifixion scenes are differentiated by framing and theological function rather than repeating. No structural failure.",
+    "conflict_scenes": []
+  },
+  "authoritative_overall": "LOCKED"
+}

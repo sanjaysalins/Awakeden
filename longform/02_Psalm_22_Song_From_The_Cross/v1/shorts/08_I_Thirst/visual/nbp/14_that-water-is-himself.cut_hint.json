@@ -1,0 +1,18 @@
+{
+  "scene_index": 14,
+  "title": "That Water Is Himself",
+  "scene_type": "single",
+  "framing": "wide",
+  "arc_position": "closing-devotional",
+  "jesus_variant": "passion",
+  "viral_role": "close",
+  "pacing": "slower",
+  "macro_elements": [
+    "the pierced side",
+    "the quiet stream of water and blood",
+    "the bowed thorn-crowned head",
+    "the first pale light"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

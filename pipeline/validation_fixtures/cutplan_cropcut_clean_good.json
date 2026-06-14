@@ -1,0 +1,14 @@
+{
+  "_fixture": "The fixed cut-plan (2026-06-14 v2): viral crop-cuts + camera-only anti-invention prompt, NO rich-text injection. Must PASS CLIP-VIRAL and CLIP-IMAGE-GROUNDED.",
+  "prompt": "A still, finished Baroque devotional oil painting, treated as a fixed photograph. The ONLY motion is the CAMERA performing a sequence of hard crop-cuts and reframes WITHIN the fixed image, like a video editor cropping one static painting into different framings. Nothing inside the painting itself moves, flows, brightens, bleeds, or appears: no figure, face, hand, limb, or cloth moves; no liquid, light, fire, smoke, blood, or new element is added. Every cut shows a different crop of the SAME frozen painting.\n\nCamera cut sequence (crop-only reframes, no invented content):\n- Open on the full painted composition.\n- Cut to a mid framing.\n- Cut to a close-up.\n- Cut to a macro insert.\n- Cut to a detail.\n- Cut back to the full painted composition.\n- End on a held wide of the full painting.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no animated subject motion, no flowing liquid, no bleeding, no new elements, the painting is fixed and completely frozen, only the camera slowly moves",
+  "beats": [
+    {"start_sec": 0.0, "end_sec": 1.43, "description": "Open on the full painted composition."},
+    {"start_sec": 1.43, "end_sec": 2.86, "description": "Cut to a mid framing toward the dominant subject."},
+    {"start_sec": 2.86, "end_sec": 4.29, "description": "Cut to a close-up."},
+    {"start_sec": 4.29, "end_sec": 5.71, "description": "Cut to a macro insert."},
+    {"start_sec": 5.71, "end_sec": 7.14, "description": "Cut to a detail."},
+    {"start_sec": 7.14, "end_sec": 8.57, "description": "Cut back to the full painted composition."},
+    {"start_sec": 8.57, "end_sec": 10.0, "description": "End on a held wide of the full painting."}
+  ]
+}

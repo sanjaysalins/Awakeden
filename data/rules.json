@@ -1,0 +1,183 @@
+{
+  "_README": "Machine-readable rule registry for the validation engine. See VALIDATION_ENGINE_PLAN.md. Each rule: id, scope (still|clip|cut|text|audio), title, description, severity (fail|warn), check (deterministic|vision), validator (pointer to enforcement/test), memory (birthing memory slug), fixtures (manifest ids). Born 2026-06-14 after a session of misses the pipeline should have caught.",
+  "version": 1,
+  "updated": "2026-06-14",
+  "rules": [
+    {
+      "id": "IMG-SUBJECT",
+      "scope": "still",
+      "title": "Central subject identity matches the spec",
+      "description": "The dominant foreground subject must match the scene's subject_block (e.g. Jesus NAILED to the cross when the spec says crucified, not standing beside it; ministry vs passion variant correct).",
+      "severity": "fail",
+      "check": "vision",
+      "validator": "pipeline/visual_render.py::verify_image (check 1)",
+      "memory": "feedback-audit-stills-fullres",
+      "fixtures": ["still_velazquez_hero_good"]
+    },
+    {
+      "id": "IMG-ELEMENTS",
+      "scope": "still",
+      "title": "Required visible elements present",
+      "description": "Every concrete noun in visible_elements is recognisably present; for unified scenes, at most 1 named vignette may be missing.",
+      "severity": "fail",
+      "check": "vision",
+      "validator": "pipeline/visual_render.py::verify_image (checks 2-3)",
+      "memory": "feedback-visual-mix-and-jesus-frame",
+      "fixtures": []
+    },
+    {
+      "id": "IMG-ANATOMY",
+      "scope": "still",
+      "title": "Anatomy sound on foreground hands/faces/limbs",
+      "description": "Prominent hands have correct finger counts; no sixth finger, fused/melted fingers, malformed thumb, two left hands, extra/missing limb, warped/asymmetric face.",
+      "severity": "fail",
+      "check": "vision",
+      "validator": "pipeline/visual_render.py::verify_image (check 5)",
+      "memory": "feedback-audit-stills-fullres",
+      "fixtures": []
+    },
+    {
+      "id": "IMG-NOTEXT",
+      "scope": "still",
+      "title": "No visible/garbled text or banned tokens",
+      "description": "No legible or garbled lettering anywhere INCLUDING a titulus/scroll (audit the FULL still, not a crop); no border/canvas-edge/wooden-frame, comic panels, split-screen, modern items, photoreal/3D look. Born when a garbled 'AANEI/SOALFCE' titulus, hidden in a still's crop, surfaced at full zoom in the clip.",
+      "severity": "fail",
+      "check": "vision",
+      "validator": "pipeline/visual_render.py::verify_image (check 4) + config.VISUAL_BANNED_TOKENS",
+      "memory": "feedback-period-reverent-image-audit",
+      "fixtures": ["still_garbled_titulus_0701_bad"]
+    },
+    {
+      "id": "IMG-PERIOD",
+      "scope": "still",
+      "title": "Period-authentic Baroque (no modern look)",
+      "description": "Reads as a 17th-century Baroque devotional oil painting of the ANCIENT world. FAIL on modern/contemporary faces, hair, grooming, clothing, makeup, or a glossy photographic 'modern headshot' feel. Figures = weathered first-century Judeans painted by an Old Master.",
+      "severity": "fail",
+      "check": "vision",
+      "validator": "pipeline/visual_render.py::verify_image (check 6)",
+      "memory": "feedback-period-reverent-image-audit",
+      "fixtures": ["still_modern_crowd_0706_bad", "still_velazquez_hero_good"]
+    },
+    {
+      "id": "IMG-TONE",
+      "scope": "still",
+      "title": "Reverent tone (no horror, no NSFW)",
+      "description": "Reverent and devotional. FAIL on a horror-film tone (lurid gore, zombie/corpse-horror, ghoulish/grotesque faces, harsh modern-cinema lighting) or an NSFW feel (sexualised pose, an open-mouthed grimace that reads erotic/grotesque, exposure beyond a modest devotional loincloth).",
+      "severity": "fail",
+      "check": "vision",
+      "validator": "pipeline/visual_render.py::verify_image (check 6)",
+      "memory": "feedback-period-reverent-image-audit",
+      "fixtures": []
+    },
+    {
+      "id": "IMG-COHERENT",
+      "scope": "still",
+      "title": "Composition makes sense",
+      "description": "The depicted scene must be internally coherent / theologically sensible (e.g. NOT 'a standing man with only one hand nailed to a cross'; NOT a duplicate central Christ; NOT an inverted unified scene that becomes a Christ bust instead of the specced onlookers).",
+      "severity": "fail",
+      "check": "vision",
+      "validator": "pipeline/visual_render.py::verify_image (coherence; candidate new explicit check)",
+      "memory": "feedback-period-reverent-image-audit",
+      "fixtures": []
+    },
+    {
+      "id": "CLIP-IMAGE-GROUNDED",
+      "scope": "clip",
+      "title": "Cut-plan grounded in the IMAGE, not the scene text",
+      "description": "The Kling cut-plan must be built from the rendered image (or, if templated, must NOT inject the scene's rich subject_block nouns like blood/lamplight/first-light/pen). Feeding descriptive nouns made Kling animate them (bleeding toe, lava from a lamplit door, a writing hand).",
+      "severity": "fail",
+      "check": "deterministic",
+      "validator": "validation.validators::cutplan_image_grounded",
+      "memory": "feedback-kling-friendly-scene-plans",
+      "fixtures": ["cutplan_richtext_bad", "cutplan_cropcut_clean_good"]
+    },
+    {
+      "id": "CLIP-FROZEN",
+      "scope": "clip",
+      "title": "Frozen tableau — only the camera moves",
+      "description": "Nothing inside the painting moves, flows, brightens, bleeds, or appears: no figure/face/hand/limb/cloth motion, no liquid/light/fire/smoke/blood/new element. Only the camera crops/reframes.",
+      "severity": "fail",
+      "check": "vision",
+      "validator": "PythonProject1/jesus/image_to_kling.py::verify_cut_plan (Stage A.5) + on-demand clip vision check",
+      "memory": "feedback-kling-lowmotion-fix",
+      "fixtures": ["clip_lava_13_textplan_bad", "clip_hero_14_good"]
+    },
+    {
+      "id": "CLIP-VIRAL",
+      "scope": "clip",
+      "title": "Viral crop-cut edit (not a slow zoom)",
+      "description": "The cut-plan must use the dynamic crop-cut sequence (full -> mid -> close -> macro inserts -> return = >=6 beats), NOT a 1-2 beat single slow push-in. The viral feel comes from the crop-cuts; a slow zoom is a regression.",
+      "severity": "fail",
+      "check": "deterministic",
+      "validator": "validation.validators::cutplan_viral",
+      "memory": "feedback-natural-speed-more-clips",
+      "fixtures": ["cutplan_slowzoom_bad", "cutplan_cropcut_clean_good"]
+    },
+    {
+      "id": "CLIP-NOMORPH",
+      "scope": "clip",
+      "title": "No melting / morphing across the clip",
+      "description": "Faces, hands, and forms must stay stable from first to last frame; no melting, warping, halo-bloom, or morphing between crop-cuts.",
+      "severity": "fail",
+      "check": "vision",
+      "validator": "on-demand clip vision check (first/mid/last frame compare)",
+      "memory": "feedback-kling-lowmotion-fix",
+      "fixtures": []
+    },
+    {
+      "id": "CUT-HERO-CLOSE",
+      "scope": "cut",
+      "title": "Hero is the gospel-pivot and closes the cut",
+      "description": "The hero (cross / Christ / NT-gospel-link) bookends the cut and appears ONLY as the held closing still, never reused in the body.",
+      "severity": "fail",
+      "check": "deterministic",
+      "validator": "pipeline/assembly_engine.py::_check_as_g6 / _check_as_g2",
+      "memory": "feedback-still-bookend",
+      "fixtures": []
+    },
+    {
+      "id": "CUT-GOSPEL-FRAME",
+      "scope": "cut",
+      "title": "Cut lands on Christ",
+      "description": "The cut opens on a hook and lands on the gospel-pivot; at least one gospel-pivot frame survives.",
+      "severity": "fail",
+      "check": "deterministic",
+      "validator": "pipeline/assembly_engine.py::_check_as_g7",
+      "memory": "feedback-still-bookend",
+      "fixtures": []
+    },
+    {
+      "id": "TXT-KJV-STRICT",
+      "scope": "text",
+      "title": "KJV verbatim (punctuation-strict)",
+      "description": "Quoted Scripture matches the pinned KJV corpus exactly (interior punctuation included); ordered, non-overlapping ellipsis fragments.",
+      "severity": "fail",
+      "check": "deterministic",
+      "validator": "pipeline/kjv_strict.py + pipeline/test_kjv_strict.py",
+      "memory": "pipeline-verification-hardening",
+      "fixtures": []
+    },
+    {
+      "id": "TXT-CLUSTER",
+      "scope": "text",
+      "title": "No cross-artifact templating",
+      "description": "No repeated CTA shape or opener n-gram family across a cluster of sibling shorts.",
+      "severity": "fail",
+      "check": "deterministic",
+      "validator": "pipeline/cluster_gate.py + pipeline/test_cluster_gate.py",
+      "memory": "pipeline-verification-hardening",
+      "fixtures": []
+    },
+    {
+      "id": "TXT-DOCTRINE",
+      "scope": "text",
+      "title": "Doctrinal landmines",
+      "description": "Scan for known traps (broken-bones/John 19:36, died-of-thirst, thirst-fulfils-Ps22 [it is Ps 69:21], inability-concession, universalism, trinity-severed, works/fear/gain-loss). WARN-level; human is final guard.",
+      "severity": "warn",
+      "check": "deterministic",
+      "validator": "pipeline/doctrine_gate.py + pipeline/test_doctrine_gate.py",
+      "memory": "pipeline-verification-hardening",
+      "fixtures": []
+    }
+  ]
+}

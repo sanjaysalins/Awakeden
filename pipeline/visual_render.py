@@ -378,7 +378,19 @@ def _vision_call(scene: Scene, png_bytes: bytes) -> dict:
         "most common AI-render failure and it is a HARD FAIL on a hero/foreground "
         "subject (count the fingers on any prominent open hand). Background "
         "figures dissolving into shadow get more latitude — note but do not fail "
-        "on a slightly-off distant hand.\n\n"
+        "on a slightly-off distant hand.\n"
+        "6. **Period authenticity & reverent tone (CHECK THIS EXPLICITLY).** The "
+        "image must read as a 17th-century Baroque devotional OIL PAINTING of the "
+        "ANCIENT biblical world. FAIL (passed:false) on any of: faces/hair/grooming "
+        "that look like MODERN contemporary people or photo-portrait models; modern "
+        "or anachronistic clothing/haircuts/makeup; a glossy photographic 'modern "
+        "headshot' feel instead of painted Old-Master skin; a HORROR-film tone — "
+        "lurid gore, zombie/corpse-horror, ghoulish or grotesque faces, harsh "
+        "modern-cinema lighting; or an NSFW feel — a gratuitously sexualised pose, "
+        "an open-mouthed grimace that reads erotic or grotesque rather than "
+        "reverent, or exposure beyond a modest devotional loincloth. Figures must "
+        "look like weathered first-century Judeans painted by an Old Master, and "
+        "the mood must be reverent, not sensational. When in doubt on tone, FAIL.\n\n"
         f"BANNED VISIBLE ELEMENTS: {sorted(config.VISUAL_BANNED_TOKENS)}\n\n"
         "Return ONLY a JSON object (optionally inside a ```json fence):\n"
         "{\n"
@@ -389,9 +401,11 @@ def _vision_call(scene: Scene, png_bytes: bytes) -> dict:
         "Positional / wording / minor stylistic nits are NOT failures — list "
         "them as issues with passed=true. Pass only when the central subject "
         "is correct, the required elements are all present, the vignettes are "
-        "present (at most 1 missing), no banned token is visible, AND the "
+        "present (at most 1 missing), no banned token is visible, the "
         "foreground hands/faces/limbs are anatomically sound (correct finger "
-        "counts on any prominent hand)."
+        "counts on any prominent hand), AND the image reads as a reverent, "
+        "period-authentic Baroque devotional painting (not modern, not horror, "
+        "not NSFW)."
     )
     user_text = (
         f"SCENE {scene.index}: {scene.title}\n"
@@ -401,7 +415,7 @@ def _vision_call(scene: Scene, png_bytes: bytes) -> dict:
         f"REQUIRED VISIBLE ELEMENTS: {scene.visible_elements}\n"
         f"EMOTIONAL TONE: {scene.emotional_tone}"
         + vignette_lines
-        + "\nAudit the attached image against ALL four checks above."
+        + "\nAudit the attached image against ALL six checks above."
     )
     if config.agent_mode():
         from pipeline import agent_bridge

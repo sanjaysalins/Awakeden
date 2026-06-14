@@ -1,0 +1,63 @@
+{
+  "created_at": "2026-06-14T00:00:00",
+  "model": "claude-opus-4-7",
+  "review_model": "claude-sonnet-4-6",
+  "structure": {
+    "id": "gospel-five-beat",
+    "name": "Gospel Five-Beat",
+    "beats": ["hook", "point", "proof", "conviction", "landing"]
+  },
+  "series": {
+    "id": "jesus-in-ot",
+    "name": "Jesus in the Old Testament",
+    "brand": "SLK"
+  },
+  "episode": {
+    "title": "I Thirst",
+    "primary_ref": "Psalm 22:15"
+  },
+  "kjv_verified": true,
+  "kjv_text": "My strength is dried up like a potsherd; and my tongue cleaveth to my jaws; and thou hast brought me into the dust of death. ... I thirst.",
+  "thread": {
+    "thread": "Psalm 22:15 paints the killing thirst of a dying man -- strength dried up like a potsherd, tongue cleaving to the jaws, sinking into the dust of death -- written in the first person by David about someone else's death, about 1000 years before Jesus cried 'I thirst' on the cross (John 19:28). This is a DESCRIPTIVE match -- the psalm pictures the thirst behind that cry, it does NOT foretell or cite it (John 19:28's fulfilment formula is referred to Psalm 69:21, which is never quoted here). The gospel turn: the One who made every river and offers the world living water hung there with nothing, thirsting in your place, so you could drink and never thirst again -- and that water is Himself.",
+    "lever": "overlooked detail / descriptive match (Ps 22:15 paints the dying man's killing thirst, a thousand years early; NOT a cited verbal fulfilment -- the Ps 69:21 landmine is guarded, John's 'that the scripture might be fulfilled' clause is never quoted)",
+    "anchor_ref": "Psalm 22:15",
+    "anchor_detail": "the dying man's body giving out from thirst -- strength dried like a potsherd, tongue stuck fast to the jaws, sinking into the dust of death -- the picture Jesus then lived when He cried 'I thirst'",
+    "why_fresh": "the Giver of living water, who made every ocean, cried out in thirst -- and Psalm 22 had painted that exact dying thirst a thousand years before Rome's cross",
+    "gospel_landing": "the One who offers living water went dry in your place so you could drink and never thirst again; that water is Himself; come to Him and drink",
+    "rationale": "v15 (the thirst / dust of death) framed as an honest descriptive match -- the psalm paints the thirst, it does not cite the cry (Ps 69 landmine guarded) -- with a grace landing (He went dry in your place); distinct from short #7 (the body, v14/17) with no overlap of quoted spans",
+    "candidates": []
+  },
+  "draft": {
+    "title": "I Thirst",
+    "hook_type": "prophecy",
+    "beats": [
+      {
+        "id": "hook",
+        "text": "The One who made every ocean gasped two words on a cross: I thirst."
+      },
+      {
+        "id": "point",
+        "text": "Psalm twenty-two. David wrote it in the first person, but he was picturing someone else's death. Watch the body give out: \"My strength is dried up like a potsherd; and my tongue cleaveth to my jaws; and thou hast brought me into the dust of death.\""
+      },
+      {
+        "id": "proof",
+        "text": "Dried clay; a tongue stuck fast; a man sinking into the dust of death. Then John records the dying Jesus' cry: \"I thirst.\" Psalm twenty-two doesn't foretell that cry — it paints the thirst behind it, a thousand years before He felt it."
+      },
+      {
+        "id": "conviction",
+        "text": "And think who is thirsting: the One who made every river and spring, who offers the world living water — hanging there with nothing, in your place."
+      },
+      {
+        "id": "landing",
+        "text": "He went dry so that you could drink and never thirst again. The God who made every ocean cried out in thirst — so He could hand you the one water that never fails. And that water is Himself."
+      }
+    ]
+  },
+  "beat_ids": ["hook", "point", "proof", "conviction", "landing"],
+  "word_count": 171,
+  "char_count": 0,
+  "authoritative_review": "independent",
+  "review_overall": "LOCKED",
+  "unknown_speakers": []
+}
