@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>v2 test — reuse + ElevenLabs score (Zechariah 12:10)</title>
+<style>
+:root{--bg:#0e1116;--card:#171c24;--line:#252c38;--ink:#e7ecf3;--dim:#9aa7b8;--ok:#3ecf8e;--accent:#7aa2ff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,Segoe UI,Roboto,Arial,sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:28px 20px 60px}h1{font-size:25px;margin:0 0 4px}.sub{color:var(--dim);margin:0 0 22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:0 0 22px}
+.card h2{font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:var(--dim);margin:0 0 12px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}@media(max-width:820px){.grid{grid-template-columns:1fr}}
+.col{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.col header{padding:15px 18px;border-bottom:1px solid var(--line)}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 9px;border-radius:6px;margin-bottom:7px}
+.t1{background:rgba(122,162,255,.16);color:var(--accent)}.t2{background:rgba(62,207,142,.16);color:var(--ok)}
+.col h3{margin:2px 0;font-size:18px}.col .r{color:var(--dim);font-size:13px}
+video{width:100%;display:block;background:#000}
+.reuse{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{font-size:11.5px;padding:3px 8px;border-radius:999px;border:1px solid var(--line)}
+.chip.re{background:rgba(122,162,255,.12);color:var(--accent)}.chip.nw{background:rgba(62,207,142,.14);color:var(--ok)}
+b{color:var(--ink)}code{background:#10151d;border:1px solid var(--line);border-radius:5px;padding:1px 5px;font-size:12.5px}
+.foot{color:var(--dim);font-size:13px;margin-top:8px}
+</style></head><body><div class="wrap">
+<h1>Two tests on one new short — "The One They Pierced"</h1>
+<p class="sub">Zechariah 12:10 → John 19:37. Testing (1) <b>clip reuse</b> and (2) a <b>bespoke ElevenLabs score</b> on top of the SFX bed.</p>
+
+<div class="card">
+  <h2>Test 1 — clip reuse (cost saver)</h2>
+  <p>11 scenes, but only <b>4 were generated</b> — <b>7 reused</b> from clips already made (passion-neutral plates: the pierced side, the cross, the wounds, the mourning crowd, Christ's face, the dawn cross). Reuse respected the topical-fit rule (no story-specific clips imported).</p>
+  <div class="reuse">
+    <span class="chip nw">NEW · the spear</span><span class="chip re">reuse · pierced side (I Thirst)</span>
+    <span class="chip nw">NEW · Zechariah's vision</span><span class="chip re">reuse · the wounded one (Isaiah)</span>
+    <span class="chip re">reuse · the cross / HERO (Isaiah)</span><span class="chip re">reuse · the wounds (Isaiah)</span>
+    <span class="chip nw">NEW · John the eyewitness</span><span class="chip re">reuse · look & mourn (Mockers)</span>
+    <span class="chip nw">NEW · spirit of grace</span><span class="chip re">reuse · look at Him / face (Isaiah)</span>
+    <span class="chip re">reuse · and live / dawn cross (Isaiah)</span>
+  </div>
+  <p class="foot">Cost: ~$7 (4 new stills + 4 new clips) vs ~$22 for a full build — <b>~$15 saved by reuse</b>, on one short.</p>
+</div>
+
+<div class="card"><h2>Test 2 — the music (play both, compare by ear)</h2>
+<p>Same cut, same SFX/ambient bed. Left = <b>SFX only</b> (what we ship now). Right = <b>+ a bespoke ~70s ElevenLabs score</b> (reverent strings + distant choir, grieving → grace), ducked under the narration on top of the SFX.</p></div>
+
+<div class="grid">
+  <section class="col"><header><span class="tag t1">SFX bed only</span><h3>No music</h3><div class="r">narration + ambient/SFX</div></header>
+    <video controls preload="metadata" src="zechariah_12_10_pierced/v1/assembly/viral_cut_sfx_captioned.mp4"></video></section>
+  <section class="col"><header><span class="tag t2">+ ElevenLabs score</span><h3>With music</h3><div class="r">narration + SFX + bespoke 70s score</div></header>
+    <video controls preload="metadata" src="zechariah_12_10_pierced/v1/assembly/viral_cut_sfx_music_captioned.mp4"></video></section>
+</div>
+<p class="foot" style="margin-top:18px">Music: ElevenLabs <code>/v1/music</code> (<code>music_v1</code>), scope enabled — billed on a separate music quota (small). Both clips are 70s, ivory captions, same visuals.</p>
+</div></body></html>

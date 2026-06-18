@@ -1,0 +1,18 @@
+{
+ "audited": true,
+ "passed": true,
+ "png_sha256": "2ba2e85bbe5ca00ea1a1435a70cf4d0c7e983a6eda44fca5d6d09b23b6514d26",
+ "n_votes": 1,
+ "split": false,
+ "failed_dims": [],
+ "passes": {},
+ "fail_reasons": [],
+ "votes": [
+  {
+   "passed": true,
+   "dims_failed": [],
+   "reasons": []
+  }
+ ],
+ "note": "ensemble of 1 vote(s), any-fail"
+}

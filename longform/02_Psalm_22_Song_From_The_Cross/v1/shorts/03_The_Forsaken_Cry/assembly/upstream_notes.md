@@ -5,14 +5,13 @@ stages so the next episode's clips drop into the cut with less fighting.
 
 ## What was hard to fit this run
 
-- **#01 The Cry** — slot 4.1s, played 1.30x AND trimmed 47% (role=hook-open). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#05 My God, My God** — slot 1.4s, played 1.30x AND trimmed 82% (role=climax). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#12 A Thousand Years Apart** — slot 3.9s, played 1.30x AND trimmed 50% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#04 The Ninth Hour** — slot 1.1s, played 1.30x AND trimmed 86% (role=pivot). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#06 Darkness Over the Land** — slot 2.3s, played 1.30x AND trimmed 70% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#09 Bearing the Forsaking** — slot 2.3s, played 1.30x AND trimmed 70% (role=pivot). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#13 However Far You've Run** — slot 1.6s, played 2.20x AND trimmed 65% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#14 He Opened It from the Dark** — slot 1.6s, played 1.30x AND trimmed 80% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
+- **#05 My God, My God** — slot 1.4s, played 1.30x AND trimmed 63% (role=climax). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
+- **#09 Bearing the Forsaking** — slot 1.7s, played 1.30x AND trimmed 55% (role=pivot). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
+
+## Short single-clip windows that want a dedicated insert
+
+- Section **david** is only 1.4s and holds one clip (#05 My God, My God). Plan a purpose-built ~2s INSERT scene (a single macro detail) for this beat instead of squeezing a 10s clip.
+- Section **quote** is only 1.7s and holds one clip (#09 Bearing the Forsaking). Plan a purpose-built ~2s INSERT scene (a single macro detail) for this beat instead of squeezing a 10s clip.
 
 ## Standing 'design for the cut' rules
 

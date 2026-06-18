@@ -1,0 +1,18 @@
+{
+  "scene_index": 3,
+  "title": "I Will Declare Thy Name",
+  "scene_type": "single",
+  "framing": "close",
+  "arc_position": "theological-centre",
+  "jesus_variant": "resurrection",
+  "viral_role": "pivot",
+  "pacing": "slower",
+  "macro_elements": [
+    "the risen Christ's open proclaiming arms",
+    "His living joyful face",
+    "the gathered brethren turning toward Him",
+    "the golden dawn light behind"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

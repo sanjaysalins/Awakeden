@@ -1,0 +1,284 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: plan
+
+LENS — judge this PLAN on (be specific, cite the exact step/claim):
+- Feasibility against the real codebase / tools (does it assume things that exist?).
+- Hidden risks, false assumptions, single points of failure.
+- Over-engineering / premature building before the idea is proven.
+- Missing steps, edge cases, or verification gaps.
+- Reuse: does it duplicate tools that already exist instead of reusing them?
+- Cost / spend and whether it's justified.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block:
+
+VERDICT: PASS | REVISE | FAIL
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# SPEC — Intentional Still + Element-Gated Edit (Visual v3)
+
+> **Status: DRAFT for review (authored 2026-06-18).** This redesigns Stages 2–3
+> (VISUAL + ASSEMBLY) of `v2/SPEC.md`. It does NOT change Stages 0–1 (study/text),
+> 1b (audio), 4 (caption) or 5 (upload). Once approved + red-teamed + proven on
+> one short (#03 The Forsaken Cry), its invariants (INV-25..INV-28) merge into
+> `v2/SPEC.md` and this file becomes the supporting detail.
+>
+> Born from the 2026-06-18 conversation: the user's instinct that "the way we
+> create stills, plan the edit, then prompt the animation is very incorrect."
+
+---
+
+## 0. The problem (why today's visual stage ships bad clips)
+
+Today's `/animate` cut-plan **already tours the elements** of a painting
+("Scene contains: …face… crown of thorns… Cut to the mouth… the eyes… the tear…
+No added elements"). It has the **shape** of the gallery-tour we want. But it has
+**no teeth**:
+
+1. **The element list is free prose, never verified against the actual render.**
+   The cut-planner can name a "tear track" or "nailed hands" the painting may not
+   actually contain — and nothing checks the finished *clip* didn't invent a faceted
+   gem on a wound, garbled text, a floating head. (These exact defects shipped.)
+2. **Still, edit, and assembly are built in separate silos.** A still is rendered
+   into a pool; a generic cut-planner bolts motion on; the jigsaw fits clips to words
+   *last*. So a still may not even be *painted to support* a clean element-tour, and
+   the clip's gallery rhythm is destroyed by an arbitrary speed-up at jigsaw time.
+3. **Nothing designs the visual story to the narration, in order.** Scene mix is a
+   gate, not a directed sequence.
+
+**The fix:** make the element list a **structured, verified, LOCKED contract** that
+(a) is *declared* when the beat is designed, (b) is what the still is *prompted* to
+contain, (c) is *reconciled against the real render by vision* and locked, (d) is the
+**only** thing the edit may crop to, and (e) is what **every clip frame is checked
+against**. Then design the stills **to the narration, in order**, and **reuse first**.
+
+---
+
+## 1. The new flow (narration-first, designed-in-order)
+
+```
+STAGE 2 — VISUAL (redesigned)
+  A. MEASURE   narration seconds → target still/clip count (scale to length)
+  B. BEAT BOARD design the visual story IN ORDER: one beat per narration phrase,
+                 each tagged hero | multi-story, with intended subject + target secs
+                 (gospel-pivot hero reserved as the closing bookend)
+  C. REUSE-FIRST for each beat: query the catalogue (clips + stills) by concept +
+                 element-fit + topical-fit. Reuse a finished clip (loose, speed-to-fit)
+                 when the subject matches; else design a NEW still.
+  D. DECLARE    for each NEW still: write the element list it MUST contain
+                 (the contract), built to support a clean 5–7 element tour.
+  E. RENDER+LOCK render the still → VISION RECONCILE (every declared element present?
+                 any jarring extra? biblical-period + grounded-real + reverent?) →
+                 write element_manifest.json, png_sha256-bound, LOCKED.
+
+STAGE 2c — ANIMATE (element-gated)
+  F. EDIT       build the gallery-tour cut-plan from the LOCKED manifest ONLY —
+                 full → element → element → … → return → end-hold. Frozen tableau,
+                 camera-only. No element absent from the manifest. No writing.
+  G. RENDER+GATE render the ~10s clip → frame-by-frame ELEMENT GATE: sampled frames'
+                 content ⊆ locked elements (no new object class), frozen (frame-diff),
+                 no-morph. Fail-closed.
+
+STAGE 3 — ASSEMBLY (order-aware)
+  H. ASSEMBLE   lay clips in beat-board order, speed-to-fit each beat, hero bookend
+                 (open on the hook clip, CLOSE on the gospel-pivot Christ). Never reuse
+                 a clip twice in one cut. → /sfx → /caption.
+```
+
+The decisive change vs. today: **B–E happen before any animation, in narration order,
+and produce a verified contract** instead of a free-prose pool.
+
+---
+
+## 2. Clip-count math (scale to length)
+
+```
+target_stills = round(narration_seconds / 5)        # ~1 still per 5s on screen
+target_stills = clamp(target_stills, 6, 20)          # floor 6, ceiling 20
+mix:  ~50% hero (single strong subject) · ~50% multi-story (3–5 sub-vignettes)
+      ≥1 of each ALWAYS; the gospel-pivot hero is the closing bookend.
+each still → one ~10s source clip, sped/trimmed to fill its beat (so 12 stills
+pack a 60s cut with fast, intentional moments — "double it and speed up").
+```
+
+`#03 The Forsaken Cry`: 127 words ≈ ~54s → **target ≈ 11 stills** (≈ 5–6 hero,
+5–6 multi-story), closing on the Christ/cross gospel landing.
+
+---
+
+## 3. The element manifest — the binding contract (NEW artifact)
+
+One per still: `visual/<provider>/<stem>.png.manifest.json`. Extends the existing
+`coherence.json` sidecar (does not replace it).
+
+```jsonc
+{
+  "still_id": "03_the-cry",
+  "png_sha256": "…",                       // silently re-rendering the still busts the lock
+  "subject_type": "hero",                  // hero | multi-story
+  "beat_index": 0,                         // its place in the narration order
+  "elements": [                            // the gallery-tour targets
+    {"id":"full",  "label":"the crucified Christ's face lifted to a dark sky", "region":"full",          "verified":true},
+    {"id":"mouth", "label":"the open, crying mouth",                          "region":"center",        "verified":true},
+    {"id":"eyes",  "label":"anguished eyes searching the dark",               "region":"upper-center",  "verified":true},
+    {"id":"crown", "label":"crown of thorns on the brow",                     "region":"top",           "verified":true},
+    {"id":"tear",  "label":"a tear track down the cheek",                     "region":"center-left",   "verified":true}
+  ],
+  "period_real": {                         // the reality/period guard, verified by vision
+    "biblical_period": true,               // 1st-century, no modern faces/dress/props/buildings
+    "grounded_real":   true,               // realistic oil painting, NOT surreal/fantasy/AI-glitter
+    "reverent":        true,               // no horror/grotesque/NSFW tone
+    "baroque_oil":     true
+  },
+  "declared_by": "design",                 // step D wrote the intended list
+  "reconciled_by": "vision",               // step E confirmed against the real render
+  "locked": true
+}
+```
+
+**Contract rules (fail-closed):**
+- The **edit may target ONLY `elements[].id` where `verified:true`.** Anything else is
+  a CLIP-IMAGE-GROUNDED fail before render.
+- The **clip frame-check** samples N frames; each frame's detected object classes must
+  be ⊆ the locked element set (no new object — no gem, no extra figure, no text).
+- A still cannot LOCK unless every declared element reconciled `verified:true` **and**
+  all four `period_real` flags are true. Else it re-renders (or the missing element is
+  cut from the tour, by explicit human call).
+
+---
+
+## 4. The beat board — the directed visual story (NEW artifact)
+
+`visual/beat_board.json`: the narration in order, one beat per phrase, each pinned to
+a still and a role. This is what makes the stills "part of the story" instead of a
+jigsawed pool.
+
+```jsonc
+{
+  "narration_seconds": 54.3,
+  "target_stills": 11,
+  "beats": [
+    {"i":0, "phrase":"At the ninth hour Jesus cried…", "role":"hero",        "subject":"Christ's face crying out", "target_sec":5.0, "still":"03_the-cry"},
+    {"i":1, "phrase":"…the words of David's psalm…",   "role":"multi-story", "subject":"David + the dark hill",     "target_sec":4.5, "still":"02_davids-psalm"},
+    …
+    {"i":10,"phrase":"…it is finished.",               "role":"hero-bookend","subject":"the cross at dusk (LANDING)","target_sec":5.5, "still":"NN_the-finished-cross"}
+  ]
+}
+```
+
+Order is preserved at assembly (carry-forward "mostly in order + hero bookend").
+
+---
+
+## 5. The element-gated edit (the gallery tour)
+
+Carry forward the **locked Kling hard-cut recipe** (HF Kling pro, 9:16, frozen tableau,
+camera-only crop-cuts, anti-melt negatives — `feedback-shorts-generative-not-ffmpeg`).
+What changes: the cut-plan is **generated from the locked manifest**, not free macro prose.
+
+- **Hero still →** 5–7 cuts: `full → element → element → … → return → end-hold`. Each
+  cut crops to one locked element region. The audience is *forced* through the painting
+  like a gallery. (Christ-on-cross: full → hands → feet → face → wounds → return.)
+- **Multi-story still →** the cuts tour the locked sub-vignettes (each is an element).
+- **Forbidden:** any element not in the manifest; any subject motion; any writing
+  animation (`feedback-never-animate-writing` — design text as illegible marks or omit).
+
+---
+
+## 6. Reuse-first (loose, topical-fit, never-twice)
+
+Before designing any new still, query the catalogue (`clip_library/` 115 clean-reusable
++ `image_library/` + hero stills). Carry forward `feedback-no-reuse-beat-match` and
+`feedback-topical-fit-gate`:
+
+- **Reuse a finished CLIP loosely** — if the subject matches the beat, drop it in and
+  **speed/trim to fit** even though its motion was tuned to other words (user's call:
+  cost/speed over a perfect re-time).
+- A reused clip **carries its own already-locked manifest** (it was verified when made).
+- **Never reuse a clip twice inside one cut.** Reuse is *across* episodes only.
+- **Only topic-neutral plates travel** between unrelated episodes; story-specific clips
+  (this scene's specific staging) stay home. Topical-fit gate at the select step.
+- Reuse-first is the **default cost lever** — don't paint "Christ on the cross" 10×.
+
+---
+
+## 7. Verification & guards (the teeth — all fail-closed)
+
+| Gate | When | Checks | Failure |
+|---|---|---|---|
+| **STILL-RECONCILE** (new) | per render | every declared element present (vision) + no jarring extra | re-render or human-cut the element |
+| **PERIOD-REAL** (new) | per render | biblical-period · grounded-real (no surreal/glitter) · reverent · baroque-oil | re-render |
+| **IMG-COHERENT** (exists) | per render | no floating/giant head, broken anatomy, border/frame, garbled text | re-render |
+| **CLIP-ELEMENT-GATE** (new) | per clip | sampled frames' objects ⊆ locked elements (no invented object) | re-roll clip |
+| **CLIP-FROZEN / NOMORPH** (exists) | per clip | frame-diff spikes at cuts, ~0 between; no morphing | re-roll clip |
+| **NEVER-ANIMATE-WRITING** (exists) | plan-time | no scroll/titulus/sign animated | exclude / hold still |
+| **ASSEMBLY-ORDER** (new) | assembly | clips in beat-board order; hero closes on Christ; no within-cut repeat | re-plan |
+
+All behind a rollout flag (`JITB_REQUIRE_*`) until the shipped shorts carry manifests
+and a green-assemble regression passes — same discipline as the coherence rollout.
+
+---
+
+## 8. New invariants (merge into `v2/SPEC.md` §5 after approval)
+
+- **INV-25 — Element-manifest contract.** Every still carries a `png_sha256`-bound,
+  vision-reconciled, LOCKED element list. The edit may crop ONLY to verified elements;
+  every clip frame is checked ⊆ the locked set. No element list, no animation.
+- **INV-26 — Narration-first beat board.** Stills are designed to the narration in
+  order (scale-to-length, ~1 per 5s, hero/multi mix, gospel-pivot hero bookend), not
+  jigsawed from a blind pool.
+- **INV-27 — Period + reality verified per still.** biblical-period · grounded-real ·
+  reverent · baroque-oil, confirmed by vision, fail-closed.
+- **INV-28 — Reuse-first with topical-fit.** Query the catalogue before rendering;
+  reuse finished clips loosely (speed-to-fit); only topic-neutral plates travel; never
+  reuse a clip twice in one cut.
+
+---
+
+## 9. Where it plugs into existing code (surgical, reuse don't duplicate)
+
+| Step | File | Change |
+|---|---|---|
+| Beat board | `pipeline/visual_engine.py` (`discover_scenes`) | emit `beat_board.json` (ordered, scale-to-length, roles) |
+| Declare elements | `pipeline/visual_models.py` | add `ElementManifest`; scene carries declared elements |
+| Reconcile + lock | `pipeline/visual_render.py` (`verify_image`) | after render, vision-reconcile declared vs real → write manifest |
+| Element-gated edit | `image_to_kling` cut-planner / `.agent_bridge` servicer | consume the manifest (not free macro prose); forbid non-manifest elements |
+| Clip element-gate | `pipeline/clip_qc.py` | add frame-sample object-subset check vs manifest |
+| Period-real | `pipeline/coherence_gate.py` | the existing F1/F3 checks, surfaced as explicit PERIOD-REAL verdict in the manifest |
+| Reuse-first | `clip_library.py` (`find`) + `/scene-plan` step 0 | rank by concept + element-fit + topical-fit; default before render |
+| Assembly order | `pipeline/assembly_engine.py` | beat-board order + hero bookend + no within-cut repeat |
+| Tests | `pipeline/validators.py` + `test_*.py` + fixtures | element-gate + period-real + order checks; today's defects as fixtures |
+
+---
+
+## 10. Proof plan (#03 The Forsaken Cry — then batch)
+
+1. Build the new artifacts/gates above (mostly $0 — agent-mode + existing renders).
+2. Rebuild **#03** end-to-end on the new flow: beat board (11 beats) → reuse-first →
+   render gaps + reconcile-lock manifests → element-gated edits → order-assemble →
+   SFX → caption.
+3. **User signs off on #03** (by ear + eye).
+4. Then batch the remaining 7 Psalm 22 shorts + 3 pilots on the proven flow.
+5. Flip `JITB_REQUIRE_*` to 1 after all shipped shorts carry manifests + green regression.
+
+**Spend:** building + #03 is near-$0 (reuse-first + existing renders; only true gaps
+re-render at NBP $0.50 / HF $0.30 + Kling $0.65). Quote + ask before any batch render.
+
+---
+
+## 11. Open questions resolved (2026-06-18 conversation)
+
+- Edit unit = **5 cuts inside ONE clip** (not 5 separate clips).
+- Count = **scale to length** (~1 still / 5s, 6–20).
+- Reuse = **finished clips, loose, speed-to-fit**; topic-neutral only; never twice/cut.
+- Element list = **declare → render → vision reconcile → LOCK** (hard gate).
+- Mapping = **mostly in order + hero bookend.**
+- Rollout = **spec → prove on #03 → batch.**
+- Carried forward: close on Christ · biblical-period/reverent · no within-cut reuse.
+----- ARTIFACT END -----

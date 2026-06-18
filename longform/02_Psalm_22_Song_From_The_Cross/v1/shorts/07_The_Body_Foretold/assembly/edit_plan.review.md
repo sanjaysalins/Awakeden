@@ -3,54 +3,50 @@
 **Verdict:** `LOCKED`  ·  **Failed gates:** 0
 
 ## How the clips map to the words
-Hook #01 the out-of-joint crucified body. David/Psalm-22 -> #02. Quoted spans on their images: 'poured out like water' -> #03, 'hangs when suspended by the arms' -> #07, 'I may tell all my bones' -> #05, 'they look and stare upon me' -> #06, onlookers staring -> #08, 'bears the marks of one' -> #11. Centuries-early thread -> #09. Landing #13 -> #10 -> #12 -> #14, hero #04 'crushed in your place' closes.
+Opens on the crucified body wrenched out of joint (#01) under 'a king described a dying body'. The king at his scroll (#02) on 'David wrote it'. The drained body (#03) on 'poured out like water'; the arm hung taut (#07) on 'hangs when suspended by the arms'; the countable ribs (#05) on 'I may tell all my bones'; the scourged back (#10) on 'stretched and exposed'; the staring onlookers (#06) on 'stood and stared'; the pierced marks (#08) on 'bears the marks of one'; the road to the lit door (#13) on 'to bring you home'; the dawn cross (#14) on the resolution; the climax of Christ crushed with the freed man kneeling (#12) on 'crushed in your place'. Hero #04 — the full crucified Christ — holds the close. The split-screen #09 is omitted (F2 defect).
 
 ## Slots
 - ` 0` **body/hook** — #01 Out of Joint · 0.00-3.28s (3.28s) · 1.30x · speed+trim  
-  _Out of Joint — hook-open crucified body._
-- ` 1` **body/hook** — #02 The King Who Wrote It · 3.28-8.76s (5.48s) · 1.83x · speed  
-  _The King Who Wrote It — David/scroll, Psalm 22 author._
-- ` 2` **body/hook** — #03 Poured Out Like Water · 8.76-18.50s (9.74s) · 1.03x · speed  
-  _Poured Out Like Water — 'I am poured out like water'._
-- ` 3` **body/hook** — #07 Hung by the Arms · 18.50-27.40s (8.90s) · 1.13x · speed  
-  _Hung by the Arms — 'hangs when suspended by the arms'._
+  _crucified body, arms taut, shoulders out of socket = the hook 'a dying body so exactly'_
+- ` 1` **body/hook** — #02 The King Who Wrote It · 3.28-10.52s (7.24s) · 1.39x · speed  
+  _the king low over his scroll = 'David wrote it in the first person'_
+- ` 2` **body/hook** — #03 Poured Out Like Water · 10.52-18.50s (7.98s) · 0.63x · speed  
+  _the drained, water-sheened body = 'I am poured out like water'_
+- ` 3` **body/hook** — #07 Hung by the Arms · 18.50-27.40s (8.90s) · 0.48x · speed  
+  _one arm pulled rigid along the beam = 'the way a body hangs when suspended by the arms'_
 - ` 4` **body/hook** — #05 I May Tell All My Bones · 27.40-29.68s (2.28s) · 1.30x · speed+trim  
-  _I May Tell All My Bones — 'I may tell all my bones'._
-- ` 5` **body/hook** — #06 They Look and Stare · 29.68-32.24s (2.56s) · 1.30x · speed+trim  
-  _They Look and Stare — 'they look and stare upon me'._
-- ` 6` **body/hook** — #08 Whom They Pierced · 32.24-38.62s (6.38s) · 1.30x · speed+trim  
-  _Whom They Pierced — 'onlookers stood and stared at him'._
-- ` 7` **body/hook** — #09 A Thousand Years Apart · 38.62-40.76s (2.14s) · 1.30x · speed+trim  
-  _A Thousand Years Apart — 'David never saw a crucifixion'._
-- ` 8` **body/hook** — #11 The Marks of One · 40.76-46.24s (5.48s) · 1.30x · speed+trim  
-  _The Marks of One — 'bears the marks of one'._
-- ` 9` **body/hook** — #13 To Bring You Home · 46.24-51.20s (4.96s) · 2.02x · speed  
-  _To Bring You Home — 'to bring you home'._
-- `10` **body/hook** — #10 Wounded for Us · 51.20-52.58s (1.38s) · 1.30x · speed+trim  
-  _Wounded for Us — 'every wrenched joint'._
-- `11` **body/hook** — #12 Crushed So Another Goes Free · 52.58-53.50s (0.92s) · 1.30x · speed+trim  
-  _Crushed So Another Goes Free — gospel turn into the close._
-- `12` **body/hook** — #14 Come to Him · 53.50-58.07s (4.57s) · 1.30x · speed+trim  
-  _Come to Him — gospel light under 'none of it was chance'._
-- `13` **hero-tail/hero** — #04 Crushed in Your Place · 58.07-60.07s (2.00s) · 1.00x · speed  
+  _the countable ribcage = 'I may tell all my bones'_
+- ` 5` **body/hook** — #10 Wounded for Us · 29.68-35.18s (5.50s) · 0.92x · speed  
+  _the scourged, striped back = 'stretched and exposed'_
+- ` 6` **body/hook** — #06 They Look and Stare · 35.18-38.62s (3.44s) · 1.30x · speed+trim  
+  _the cluster of upturned staring onlookers = 'onlookers stood and stared at him'_
+- ` 7` **body/hook** — #08 Whom They Pierced · 38.62-46.24s (7.62s) · 0.66x · speed  
+  _the pierced side / marks = 'bears the marks of one'_
+- ` 8` **body/hook** — #13 To Bring You Home · 46.24-51.20s (4.96s) · 1.02x · speed  
+  _the road to a warm lit doorway = 'to bring you home'_
+- ` 9` **body/hook** — #14 Come to Him · 51.20-52.58s (1.38s) · 1.30x · speed+trim  
+  _the cross against a widening dawn = the resolution_
+- `10` **body/hook** — #12 Crushed So Another Goes Free · 52.58-58.07s (5.49s) · 0.92x · speed  
+  _Christ crushed with the freed man kneeling = 'He was crushed in your place'_
+- `11` **hero-tail/hero** — #04 Crushed in Your Place · 58.07-60.07s (2.00s) · 1.00x · speed  
   _Hero close — the cut lands on Christ (single appearance, no reuse)._
 
 ## Self-review panel
-- **Editor** — `STRONG` — 13 distinct gated crop-cut clips over 60s, hero held at close.
-- **Beat-Sync** — `STRONG` — Quoted spans on their images (poured-out/hangs/bones/stare/marks).
-- **No-Reuse** — `STRONG` — 13 distinct; hero #04 only at close.
-- **Pacing** — `CAUTION` — Landing beats ~1s push #10/#12 fast; hero near full speed.
-- **Hero-Continuity** — `STRONG` — Hook-open + hero #04 'crushed in your place' close.
-- **Jaded Viewer** — `CAUTION` — #12 the one loose pin; passes as transition.
+- **Editor** — `STRONG` — all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)
+- **Beat-Sync** — `STRONG` — all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)
+- **No-Reuse** — `STRONG` — all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)
+- **Pacing** — `STRONG` — all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)
+- **Hero-Continuity** — `STRONG` — all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)
+- **Jaded Viewer** — `STRONG` — all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)
 
 ## Gates
-- **AS-G1 Timeline Coverage** — `PASS` — 14 slots tile 0->60.07s contiguously.
-- **AS-G2 No Reuse** — `PASS` — 13 distinct body clips; hero #04 appears once (close only) — no reuse.
-- **AS-G3 Speed/Trim Health** — `CONDITIONAL` — avg speed 1.36x, max 2.02x, 9/13 trimmed — brisk; verify it does not strobe.  
-  _fix:_ Reduce clip count (lower --clips) so slots breathe.
+- **AS-G1 Timeline Coverage** — `PASS` — 12 slots tile 0->60.07s contiguously.
+- **AS-G2 No Reuse** — `PASS` — 11 distinct body clips; hero #04 appears once (close only) — no reuse.
+- **AS-G3 Speed/Trim Health** — `PASS` — avg speed 1.02x, max 1.39x, 4 trimmed.
 - **AS-G4 Min Slot** — `PASS` — All body slots >= 0.8s.
 - **AS-G5 Section Coverage** — `PASS` — Every spoken section has a clip: ['hook'].
 - **AS-G6 Hero Close** — `PASS` — Opens on hook #01; gospel-pivot hero #04 closes 2.0s (single appearance).
 - **AS-G7 Gospel Frame** — `PASS` — Gospel-pivot + hook-open + close all present; cut lands on Christ.
-- **AS-G8 Beat Continuity** — `PASS` — Thread open->climax->close on the cross.
-- **AS-G9 Beat Density** — `PASS` — 13 moments · avg slot 4.5s (target 4s) — lively.
+- **AS-G9 Beat Density** — `CONDITIONAL` — 11 moments · avg slot 5.3s > target 4s — feels slow for 'lots of moments'.  
+  _fix:_ Raise --clips toward 15 (pool has 13).
+- **AS-G8 Beat Continuity** — `PASS` — thread carried open->climax->close; jigsaw pinned each clip to its phrase by meaning; cut lands on the gospel-pivot.

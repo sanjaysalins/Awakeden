@@ -1,0 +1,47 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Animation bake-off — HF Kling pro vs direct-Kling</title>
+<style>
+body{background:#111;color:#eee;font-family:system-ui,Arial;margin:0;padding:24px}
+h1{font-size:20px}h2{font-size:16px;color:#ffd27f;margin-top:34px}
+.row{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start}
+.card{background:#1c1c1c;border:1px solid #333;border-radius:10px;padding:10px;width:300px}
+.card.win{border-color:#3a7;box-shadow:0 0 0 1px #3a7}
+video{width:280px;border-radius:6px;display:block;background:#000}
+.lab{font-weight:700;margin:6px 0}.meta{font-size:12px;color:#aaa;line-height:1.5}
+.src img{width:200px;border-radius:6px}
+table{border-collapse:collapse;margin-top:12px;font-size:13px}
+td,th{border:1px solid #333;padding:6px 12px;text-align:left}
+.good{color:#6d6}.bad{color:#f77}.note{font-size:13px;color:#ccc;max-width:900px;line-height:1.6}
+</style></head><body>
+<h1>🎬 Animation engine bake-off — same still · byte-identical prompt · same 5s</h1>
+<p class="note">#03 The Forsaken Cry. Two stills, fed an <b>identical</b> cut-plan prompt to both engines.
+Only the engine differs. Prompts saved beside this file (<code>*.prompt.txt</code>).</p>
+
+<h2>Still #01 — the cry (close-up hero)</h2>
+<div class="row">
+  <div class="card src"><div class="lab">source still</div><img src="../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/01_the-cry.png"></div>
+  <div class="card"><div class="lab">HF Kling pro</div><video src="01_the-cry_HF.mp4" controls loop muted></video><div class="meta">1076×1924 · 551s · ~$1.88<br>clean tour, faithful</div></div>
+  <div class="card"><div class="lab">direct-Kling</div><video src="01_the-cry_DIRECT.mp4" controls loop muted></video><div class="meta">716×1284 · 97s · ~$0.65<br>clean tour, faithful, tear-track reads</div></div>
+</div>
+<p class="note">On the close-up both are clean gallery tours (full → mouth → eyes → crown → throat). HF is higher-res; direct is crisp but lower-res, ~6× faster, ~3× cheaper. Roughly a tie on faithfulness here.</p>
+
+<h2>Still #04 — the ninth hour (wide crucifixion)</h2>
+<div class="row">
+  <div class="card src"><div class="lab">source still (NO titulus, plain beam)</div><img src="../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/04_the-ninth-hour.png"></div>
+  <div class="card win"><div class="lab">HF Kling pro ✅</div><video src="04_the-ninth-hour_HF.mp4" controls loop muted></video><div class="meta">1076×1924 · 564s · ~$1.88<br><span class="good">faithful — no invented sign, eclipse kept</span></div></div>
+  <div class="card"><div class="lab">direct-Kling ⚠️</div><video src="04_the-ninth-hour_DIRECT.mp4" controls loop muted></video><div class="meta">716×1284 · 72s · ~$0.65<br><span class="bad">HALLUCINATED a garbled "BINTX" titulus not in the still</span></div></div>
+</div>
+<p class="note">This is the decisive frame. The source has a <b>plain crossbeam, no sign</b>. HF kept it faithful.
+Direct-Kling <b>invented a titulus board with garbled letters</b> — the exact "garbled writing / invented element" defect the redesign exists to prevent.</p>
+
+<h2>Scorecard</h2>
+<table>
+<tr><th>Dimension</th><th>HF Kling pro</th><th>direct-Kling</th></tr>
+<tr><td>Resolution</td><td class="good">1076×1924 (near-1080p)</td><td class="bad">716×1284 (~720p)</td></tr>
+<tr><td>Cost / clip (5s)</td><td class="bad">~$1.88</td><td class="good">~$0.65 (3× cheaper)</td></tr>
+<tr><td>Render time</td><td class="bad">~9 min</td><td class="good">~1.5 min (6× faster)</td></tr>
+<tr><td>Faithfulness (#01)</td><td class="good">clean</td><td class="good">clean</td></tr>
+<tr><td>Faithfulness (#04)</td><td class="good">clean</td><td class="bad">invented garbled titulus</td></tr>
+<tr><td>Bare-torso cross</td><td class="bad">NSFW-blocks (needs fallback)</td><td class="good">renders it</td></tr>
+</table>
+<p class="note"><b>n = 1 sample/cell — not statistically robust.</b> But the direct-Kling titulus hallucination is real and on-brand-risk.</p>
+</body></html>

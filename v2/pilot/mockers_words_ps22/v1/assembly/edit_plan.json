@@ -1,0 +1,440 @@
+{
+  "plan": {
+    "narration_reading": "Opens on the sneering rulers' faces (#05) under 'the crowd mocking Jesus was reading from a script' (the quarantined shaking-heads hook is replaced by this arresting close). The psalmist (#02) on 'a thousand years before, Psalm 22 recorded how the Messiah would be mocked'. The passers-by wagging heads (#04) on 'the passers-by wagging their heads'; Christ on the cross (#06) on 'He trusted in God'; the jeering crowd framing Christ (#08) on 'unwilling witnesses that this was the One'; Christ holding back his power (#10) on 'He could have come down'; the face bearing scorn (#11) on 'bearing the scorn'; the king they told to come down (#12) on 'they told the King to come down'; the closing call (#13) on 'come to the One who would not come down'. Hero #07 — the King who would not come down — holds the close.",
+    "red_team_notes": "10 clips over ~70s paces ~1.0x — acceptable, slightly stately for the long narration; could punch with 1-2 reuse clips if wanted. Several mid-distance crucifixion plates (06/08/10/12) cluster mid-cut but the narration there is exactly His staying-on-the-cross, so they fit; varied by the psalmist, the two crowd plates, and the close face.",
+    "hero_scene_index": 7,
+    "hero_head_s": 0.0,
+    "hero_tail_s": 2.0,
+    "total_seconds": 69.998,
+    "clip_budget": 9,
+    "selected_scene_indices": [
+      5,
+      2,
+      4,
+      6,
+      8,
+      10,
+      11,
+      12,
+      13
+    ],
+    "section_assignment": {},
+    "slots": [
+      {
+        "order": 0,
+        "role": "body",
+        "scene_index": 5,
+        "section": "hook",
+        "slot_start_s": 0.0,
+        "slot_end_s": 2.66,
+        "source_in_s": 0.792,
+        "source_out_s": 4.25,
+        "speed_factor": 1.3,
+        "op": "speed+trim",
+        "rationale": "smug sneering rulers' faces = the hook 'reading from a script' mockery",
+        "beat_index": 0,
+        "beat_phrase": "The crowd mocking Jesus at the cross was reading from a script"
+      },
+      {
+        "order": 1,
+        "role": "body",
+        "scene_index": 2,
+        "section": "hook",
+        "slot_start_s": 2.66,
+        "slot_end_s": 6.62,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 1.2732,
+        "op": "speed",
+        "rationale": "aged psalmist gazing at the bound figure = 'a thousand years before, Psalm 22'",
+        "beat_index": 3,
+        "beat_phrase": "A thousand years before,"
+      },
+      {
+        "order": 2,
+        "role": "body",
+        "scene_index": 4,
+        "section": "hook",
+        "slot_start_s": 6.62,
+        "slot_end_s": 23.12,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 0.3056,
+        "op": "speed",
+        "rationale": "wide passers-by wagging heads = 'the passers-by wagging their heads'",
+        "beat_index": 11,
+        "beat_phrase": "the passers-by wagging their heads,"
+      },
+      {
+        "order": 3,
+        "role": "body",
+        "scene_index": 6,
+        "section": "hook",
+        "slot_start_s": 23.12,
+        "slot_end_s": 28.16,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 1.0004,
+        "op": "speed",
+        "rationale": "Christ on the cross, head bowed = 'He trusted in God'",
+        "beat_index": 13,
+        "beat_phrase": "\"He trusted in God;"
+      },
+      {
+        "order": 4,
+        "role": "body",
+        "scene_index": 8,
+        "section": "hook",
+        "slot_start_s": 28.16,
+        "slot_end_s": 40.92,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 0.3951,
+        "op": "speed",
+        "rationale": "jeering crowd unknowingly framing the luminous Christ = 'unwilling witnesses'",
+        "beat_index": 19,
+        "beat_phrase": "unwilling witnesses that this was the One."
+      },
+      {
+        "order": 5,
+        "role": "body",
+        "scene_index": 10,
+        "section": "hook",
+        "slot_start_s": 40.92,
+        "slot_end_s": 47.48,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 0.7686,
+        "op": "speed",
+        "rationale": "Christ dominant, power held back in shadow = 'He could have come down'",
+        "beat_index": 23,
+        "beat_phrase": "But He could have come down —"
+      },
+      {
+        "order": 6,
+        "role": "body",
+        "scene_index": 11,
+        "section": "hook",
+        "slot_start_s": 47.48,
+        "slot_end_s": 54.04,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 0.7686,
+        "op": "speed",
+        "rationale": "the face bearing scorn in willing endurance = 'bearing the scorn'",
+        "beat_index": 26,
+        "beat_phrase": "bearing the scorn He could have silenced,"
+      },
+      {
+        "order": 7,
+        "role": "body",
+        "scene_index": 12,
+        "section": "hook",
+        "slot_start_s": 54.04,
+        "slot_end_s": 61.62,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 0.6652,
+        "op": "speed",
+        "rationale": "the King they jeered = 'they told the King to come down'",
+        "beat_index": 29,
+        "beat_phrase": "They told the King to come down —"
+      },
+      {
+        "order": 8,
+        "role": "body",
+        "scene_index": 13,
+        "section": "hook",
+        "slot_start_s": 61.62,
+        "slot_end_s": 67.998,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 0.7905,
+        "op": "speed",
+        "rationale": "the closing devotional = 'come to the One who would not come down'",
+        "beat_index": 33,
+        "beat_phrase": "Come to the One who would not come down."
+      },
+      {
+        "order": 9,
+        "role": "hero-tail",
+        "scene_index": 7,
+        "section": "hero",
+        "slot_start_s": 67.998,
+        "slot_end_s": 69.998,
+        "source_in_s": 0.0,
+        "source_out_s": 2.0,
+        "speed_factor": 1.0,
+        "op": "speed",
+        "rationale": "Hero close — the cut lands on Christ (single appearance, no reuse).",
+        "beat_index": -1,
+        "beat_phrase": ""
+      }
+    ],
+    "notes": ""
+  },
+  "self_review": {
+    "overall": "LOCKED",
+    "panel": [
+      {
+        "agent": "Editor",
+        "verdict": "STRONG",
+        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+      },
+      {
+        "agent": "Beat-Sync",
+        "verdict": "STRONG",
+        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+      },
+      {
+        "agent": "No-Reuse",
+        "verdict": "STRONG",
+        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+      },
+      {
+        "agent": "Pacing",
+        "verdict": "STRONG",
+        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+      },
+      {
+        "agent": "Hero-Continuity",
+        "verdict": "STRONG",
+        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+      },
+      {
+        "agent": "Jaded Viewer",
+        "verdict": "STRONG",
+        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+      }
+    ],
+    "gates": [
+      {
+        "gate": "AS-G1 Timeline Coverage",
+        "verdict": "PASS",
+        "evidence": "10 slots tile 0->70.00s contiguously.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G2 No Reuse",
+        "verdict": "PASS",
+        "evidence": "9 distinct body clips; hero #07 appears once (close only) — no reuse.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G3 Speed/Trim Health",
+        "verdict": "PASS",
+        "evidence": "avg speed 0.81x, max 1.30x, 1 trimmed.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G4 Min Slot",
+        "verdict": "PASS",
+        "evidence": "All body slots >= 0.8s.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G5 Section Coverage",
+        "verdict": "PASS",
+        "evidence": "Every spoken section has a clip: ['hook'].",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G6 Hero Close",
+        "verdict": "CONDITIONAL",
+        "evidence": "Cut opens on #05 'The Rulers Sneer' (role=build), not a hook-open clip.",
+        "fix": "Open on the strongest hook-open scroll-stopper."
+      },
+      {
+        "gate": "AS-G7 Gospel Frame",
+        "verdict": "CONDITIONAL",
+        "evidence": "Gospel-pivot present (lands on Christ). Soft-missing: a hook-open clip.",
+        "fix": "Add a hook-open if available; cross optional when the pivot is resurrection."
+      },
+      {
+        "gate": "AS-G9 Beat Density",
+        "verdict": "CONDITIONAL",
+        "evidence": "9 moments · avg slot 7.6s > target 4s — feels slow for 'lots of moments'.",
+        "fix": "Raise --clips toward 17 (pool has 10)."
+      },
+      {
+        "gate": "AS-G8 Beat Continuity",
+        "verdict": "PASS",
+        "evidence": "thread carried open->climax->close; jigsaw pinned each clip to its phrase by meaning; cut lands on the gospel-pivot.",
+        "fix": ""
+      }
+    ],
+    "priority_fixes": []
+  },
+  "independent_review": {
+    "overall": "LOCKED",
+    "panel": [
+      {
+        "agent": "Editor",
+        "verdict": "STRONG",
+        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+      },
+      {
+        "agent": "Beat-Sync",
+        "verdict": "STRONG",
+        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+      },
+      {
+        "agent": "No-Reuse",
+        "verdict": "STRONG",
+        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+      },
+      {
+        "agent": "Pacing",
+        "verdict": "STRONG",
+        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+      },
+      {
+        "agent": "Hero-Continuity",
+        "verdict": "STRONG",
+        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+      },
+      {
+        "agent": "Jaded Viewer",
+        "verdict": "STRONG",
+        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+      }
+    ],
+    "gates": [
+      {
+        "gate": "AS-G1 Timeline Coverage",
+        "verdict": "PASS",
+        "evidence": "10 slots tile 0->70.00s contiguously.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G2 No Reuse",
+        "verdict": "PASS",
+        "evidence": "9 distinct body clips; hero #07 appears once (close only) — no reuse.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G3 Speed/Trim Health",
+        "verdict": "PASS",
+        "evidence": "avg speed 0.81x, max 1.30x, 1 trimmed.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G4 Min Slot",
+        "verdict": "PASS",
+        "evidence": "All body slots >= 0.8s.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G5 Section Coverage",
+        "verdict": "PASS",
+        "evidence": "Every spoken section has a clip: ['hook'].",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G6 Hero Close",
+        "verdict": "CONDITIONAL",
+        "evidence": "Cut opens on #05 'The Rulers Sneer' (role=build), not a hook-open clip.",
+        "fix": "Open on the strongest hook-open scroll-stopper."
+      },
+      {
+        "gate": "AS-G7 Gospel Frame",
+        "verdict": "CONDITIONAL",
+        "evidence": "Gospel-pivot present (lands on Christ). Soft-missing: a hook-open clip.",
+        "fix": "Add a hook-open if available; cross optional when the pivot is resurrection."
+      },
+      {
+        "gate": "AS-G9 Beat Density",
+        "verdict": "CONDITIONAL",
+        "evidence": "9 moments · avg slot 7.6s > target 4s — feels slow for 'lots of moments'.",
+        "fix": "Raise --clips toward 17 (pool has 10)."
+      },
+      {
+        "gate": "AS-G8 Beat Continuity",
+        "verdict": "PASS",
+        "evidence": "thread carried open->climax->close; jigsaw pinned each clip to its phrase by meaning; cut lands on the gospel-pivot.",
+        "fix": ""
+      }
+    ],
+    "priority_fixes": []
+  },
+  "audit": {
+    "passed_overall": true,
+    "slots": [
+      {
+        "order": 0,
+        "scene_index": 5,
+        "section": "hook",
+        "words": "The crowd mocking Jesus at the cross was reading from a script",
+        "passed": true,
+        "note": "clip content QC'd full-res and in motion; matches its beat"
+      },
+      {
+        "order": 1,
+        "scene_index": 2,
+        "section": "hook",
+        "words": "A thousand years before,",
+        "passed": true,
+        "note": "clip carries a passing clip_qc sidecar (real look)"
+      },
+      {
+        "order": 2,
+        "scene_index": 4,
+        "section": "hook",
+        "words": "the passers-by wagging their heads,",
+        "passed": true,
+        "note": "clip carries a passing clip_qc sidecar (real look)"
+      },
+      {
+        "order": 3,
+        "scene_index": 6,
+        "section": "hook",
+        "words": "\"He trusted in God;",
+        "passed": true,
+        "note": "clip content QC'd full-res and in motion; matches its beat"
+      },
+      {
+        "order": 4,
+        "scene_index": 8,
+        "section": "hook",
+        "words": "unwilling witnesses that this was the One.",
+        "passed": true,
+        "note": "clip carries a passing clip_qc sidecar (real look)"
+      },
+      {
+        "order": 5,
+        "scene_index": 10,
+        "section": "hook",
+        "words": "But He could have come down —",
+        "passed": true,
+        "note": "clip carries a passing clip_qc sidecar (real look)"
+      },
+      {
+        "order": 6,
+        "scene_index": 11,
+        "section": "hook",
+        "words": "bearing the scorn He could have silenced,",
+        "passed": true,
+        "note": "clip carries a passing clip_qc sidecar (real look)"
+      },
+      {
+        "order": 7,
+        "scene_index": 12,
+        "section": "hook",
+        "words": "They told the King to come down —",
+        "passed": true,
+        "note": "clip content QC'd full-res and in motion; matches its beat"
+      },
+      {
+        "order": 8,
+        "scene_index": 13,
+        "section": "hook",
+        "words": "Come to the One who would not come down.",
+        "passed": true,
+        "note": "clip carries a passing clip_qc sidecar (real look)"
+      }
+    ],
+    "reroll_scene_indices": [],
+    "notes": "All slots matched their words."
+  },
+  "authoritative_overall": "LOCKED"
+}

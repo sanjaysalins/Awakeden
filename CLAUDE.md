@@ -3,6 +3,37 @@
 Loaded at the start of every session. Reference material, not narrative.
 For current progress read `STATE.md`. For "what to do first tomorrow" read `RESUME.md`.
 
+> **THE CONTRACT:** `v2/SPEC.md` is the single binding source of truth — stages,
+> invariants (INV-1..INV-22), the full gate registry, the reuse manifest, the
+> cost model, and the A/B protocol. The per-stage skills in `.claude/skills/`
+> are the repeatable procedures that enforce it. When this file and `v2/SPEC.md`
+> disagree, the spec wins; update the spec, don't drift. (v1's reverse-engineered
+> `SPEC.md` is superseded.)
+
+## Engineering behavior (applies to every code AND pipeline change)
+
+Bias toward caution over speed. For trivial tasks, use judgment.
+
+**1. Think before acting.** State assumptions explicitly; if uncertain, ask. If
+multiple interpretations exist, present them — don't pick silently. If a simpler
+approach exists, say so. If something is unclear, stop and name it.
+
+**2. Simplicity first.** Minimum that solves the problem, nothing speculative. No
+features beyond what was asked, no abstractions for single-use code, no
+"flexibility" that wasn't requested, no error handling for impossible scenarios.
+If 200 lines could be 50, rewrite it.
+
+**3. Surgical changes.** Touch only what you must. Don't "improve" adjacent code,
+don't refactor what isn't broken, match existing style. Remove only the
+imports/vars YOUR change orphaned; mention pre-existing dead code, don't delete
+it. Every changed line should trace to the request.
+
+**4. Goal-driven execution.** Turn the task into a verifiable goal and loop until
+it passes (e.g. "add validation" → "write tests for invalid inputs, then make
+them pass"). For multi-step work, state a brief plan with a verify-check per step.
+For this engine the standing verify is: 0 FAIL gates + the full test suite green +
+(for any LOCK) the 5-CLI panel.
+
 ## What this project is
 
 A **gospel-short content engine** for 60-second YouTube Shorts. Takes a Bible
@@ -275,11 +306,17 @@ plan (architecture, a new pipeline/stage, a spend-bearing batch design — not t
 - Do NOT switch model IDs without the user. Default models: text = claude-opus-4-7;
   image = `nano_banana_2` (HF for shorts / NBP "Nano Banana Pro" for long-form).
   **Animation is SPLIT by format:**
-  - **Shorts → direct-Kling** (`image_to_kling.py`, `VIDEO_PROVIDER=kling`). Kling
-    executes the dynamic 8-beat viral cut-plan (full→mid→close→macro→return) *inside a
-    single clip*, turning a still into a viral edit clip — this is why shorts keep Kling.
-    Bake-off verdict (2026-05-29): direct-Kling's motion beat HF Kling 3.0 on the same
-    rich prompt; HF's NSFW filter also blocks the cross.
+  - **Shorts → HF Kling pro** (`_hf_animate_short.py`, `hf.exe generate create kling3_0
+    --mode pro --duration 5 --aspect_ratio 9:16`), executing the hard-cut gallery-tour
+    cut-plan (full→element→element→return) *inside a single clip*. **direct-Kling
+    (`image_to_kling.py`) is the FALLBACK ONLY for NSFW/bare-torso-cross stills HF
+    refuses.** Bake-off history: 2026-05-29 direct-Kling beat plain HF Kling 3.0 on the
+    OLD prompt; **2026-06-18 re-bake-off (same still + byte-identical gallery-tour prompt +
+    5s, `_bakeoff/compare.html`) flipped it — HF Kling pro rendered 1076×1924 and stayed
+    faithful, direct-Kling rendered 716×1284 and hallucinated a garbled "BINTX" titulus
+    not in the still.** So shorts default to HF-pro for quality/faithfulness; direct-Kling
+    keeps the NSFW cross. (Was "Shorts → direct-Kling"; the 2026-06-15 session had already
+    moved to HF-pro, now confirmed by the re-bake-off + the user.)
   - **Long-form (16:9 deep-dives) → veo3_1_lite** via HF (`VIDEO_PROVIDER=hybrid`,
     `VIDEO_HF_MODEL=veo3_1_lite`, `VIDEO_DURATION=8`). Bake-off verdict (2026-05-30):
     veo3_1_lite keeps the Baroque oil look without softening it to photoreal, across

@@ -1,0 +1,258 @@
+{
+  "_README": "Per finished short: flagged-bad stills it actually used (redo the clip), and the finished mp4 variants that must be reassembled after the redo.",
+  "shorts": [
+    {
+      "short": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold",
+      "needs_reassembly": true,
+      "bad_stills_used": [
+        {
+          "index": 10,
+          "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/10_the-plan-not-accident.png",
+          "clip": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/10_the-plan-not-accident.mp4",
+          "clip_exists": true
+        }
+      ],
+      "finished_variants": [
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/assembly/_OLD_directkling_final.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/assembly/_body_concat.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/assembly/viral_cut.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/assembly/viral_cut_captioned.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/assembly/viral_cut_sfx.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/assembly/viral_cut_sfx_captioned.mp4"
+      ]
+    },
+    {
+      "short": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words",
+      "needs_reassembly": true,
+      "bad_stills_used": [
+        {
+          "index": 7,
+          "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/07_the-jabbing-hands.png",
+          "clip": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/07_the-jabbing-hands.mp4",
+          "clip_exists": true
+        },
+        {
+          "index": 8,
+          "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/08_he-had-every-power.png",
+          "clip": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/08_he-had-every-power.mp4",
+          "clip_exists": true
+        },
+        {
+          "index": 9,
+          "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/09_twelve-legions-restrained.png",
+          "clip": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/09_twelve-legions-restrained.mp4",
+          "clip_exists": true
+        },
+        {
+          "index": 13,
+          "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/13_the-silent-king.png",
+          "clip": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/13_the-silent-king.mp4",
+          "clip_exists": true
+        },
+        {
+          "index": 14,
+          "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/14_the-hand-that-would-not-pull-free.png",
+          "clip": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/14_the-hand-that-would-not-pull-free.mp4",
+          "clip_exists": true
+        }
+      ],
+      "finished_variants": [
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/assembly/_OLD_directkling_final.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/assembly/_body_concat.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/assembly/viral_cut.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/assembly/viral_cut_captioned.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/assembly/viral_cut_sfx.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/assembly/viral_cut_sfx_captioned.mp4"
+      ]
+    },
+    {
+      "short": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry",
+      "needs_reassembly": true,
+      "bad_stills_used": [
+        {
+          "index": 14,
+          "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/14_he-opened-it-from-the-dark.png",
+          "clip": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/14_he-opened-it-from-the-dark.mp4",
+          "clip_exists": true
+        }
+      ],
+      "finished_variants": [
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/assembly/_OLD_directkling_final.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/assembly/_body_concat.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/assembly/viral_cut.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/assembly/viral_cut_captioned.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/assembly/viral_cut_sfx.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/assembly/viral_cut_sfx_captioned.mp4"
+      ]
+    },
+    {
+      "short": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren",
+      "needs_reassembly": false,
+      "bad_stills_used": [],
+      "finished_variants": [
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/assembly/_OLD_directkling_final.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/assembly/_body_concat.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/assembly/viral_cut.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/assembly/viral_cut_captioned.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/assembly/viral_cut_sfx.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/assembly/viral_cut_sfx_captioned.mp4"
+      ]
+    },
+    {
+      "short": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This",
+      "needs_reassembly": false,
+      "bad_stills_used": [],
+      "finished_variants": [
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/assembly/_OLD_directkling_final.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/assembly/_body_concat.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/assembly/viral_cut.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/assembly/viral_cut_sfx.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/assembly/viral_cut_sfx_captioned.mp4"
+      ]
+    },
+    {
+      "short": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth",
+      "needs_reassembly": false,
+      "bad_stills_used": [],
+      "finished_variants": [
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/assembly/_OLD_directkling_final.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/assembly/_body_concat.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/assembly/viral_cut.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/assembly/viral_cut_sfx.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/assembly/viral_cut_sfx_captioned.mp4"
+      ]
+    },
+    {
+      "short": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold",
+      "needs_reassembly": true,
+      "bad_stills_used": [
+        {
+          "index": 11,
+          "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/11_the-marks-of-one.png",
+          "clip": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/11_the-marks-of-one.mp4",
+          "clip_exists": true
+        }
+      ],
+      "finished_variants": [
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/assembly/_OLD_directkling_final.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/assembly/_body_concat.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/assembly/viral_cut.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/assembly/viral_cut_sfx.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/assembly/viral_cut_sfx_captioned.mp4"
+      ]
+    },
+    {
+      "short": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst",
+      "needs_reassembly": false,
+      "bad_stills_used": [],
+      "finished_variants": [
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/assembly/_OLD_directkling_final.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/assembly/_body_concat.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/assembly/viral_cut.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/assembly/viral_cut_sfx.mp4",
+        "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/assembly/viral_cut_sfx_captioned.mp4"
+      ]
+    },
+    {
+      "short": "v2/pilot/isaiah_53_5_with_his_stripes/v1",
+      "needs_reassembly": true,
+      "bad_stills_used": [
+        {
+          "index": 5,
+          "still": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/05_by-whose-stripes.png",
+          "clip": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/05_by-whose-stripes.mp4",
+          "clip_exists": true
+        },
+        {
+          "index": 11,
+          "still": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/11_aimed-at-you.png",
+          "clip": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/11_aimed-at-you.mp4",
+          "clip_exists": true
+        }
+      ],
+      "finished_variants": [
+        "v2/pilot/isaiah_53_5_with_his_stripes/v1/assembly/_body_concat.mp4",
+        "v2/pilot/isaiah_53_5_with_his_stripes/v1/assembly/viral_cut.mp4",
+        "v2/pilot/isaiah_53_5_with_his_stripes/v1/assembly/viral_cut_sfx.mp4",
+        "v2/pilot/isaiah_53_5_with_his_stripes/v1/assembly/viral_cut_sfx_captioned.mp4"
+      ]
+    },
+    {
+      "short": "v2/pilot/mockers_words_ps22/v1",
+      "needs_reassembly": true,
+      "bad_stills_used": [
+        {
+          "index": 1,
+          "still": "v2/pilot/mockers_words_ps22/v1/visual/nbp/01_the-shaking-heads.png",
+          "clip": "v2/pilot/mockers_words_ps22/v1/visual/nbp/01_the-shaking-heads.mp4",
+          "clip_exists": true
+        },
+        {
+          "index": 9,
+          "still": "v2/pilot/mockers_words_ps22/v1/visual/nbp/09_if-thou-be-the-son-of-god.png",
+          "clip": "v2/pilot/mockers_words_ps22/v1/visual/nbp/09_if-thou-be-the-son-of-god.mp4",
+          "clip_exists": true
+        },
+        {
+          "index": 14,
+          "still": "v2/pilot/mockers_words_ps22/v1/visual/nbp/14_come-to-the-one-who-would-not-come-down.png",
+          "clip": "v2/pilot/mockers_words_ps22/v1/visual/nbp/14_come-to-the-one-who-would-not-come-down.mp4",
+          "clip_exists": true
+        }
+      ],
+      "finished_variants": [
+        "v2/pilot/mockers_words_ps22/v1/assembly/_body_concat.mp4",
+        "v2/pilot/mockers_words_ps22/v1/assembly/viral_cut.mp4",
+        "v2/pilot/mockers_words_ps22/v1/assembly/viral_cut_sfx.mp4",
+        "v2/pilot/mockers_words_ps22/v1/assembly/viral_cut_sfx_captioned.mp4"
+      ]
+    },
+    {
+      "short": "v2/pilot/zechariah_12_10_pierced/v1",
+      "needs_reassembly": true,
+      "bad_stills_used": [
+        {
+          "index": 3,
+          "still": "v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/03_gods-staggering-word.png",
+          "clip": "v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/03_gods-staggering-word.mp4",
+          "clip_exists": true
+        },
+        {
+          "index": 6,
+          "still": "v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/06_whom-they-pierced.png",
+          "clip": "v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/06_whom-they-pierced.mp4",
+          "clip_exists": true
+        },
+        {
+          "index": 7,
+          "still": "v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/07_john-saw-it.png",
+          "clip": "v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/07_john-saw-it.mp4",
+          "clip_exists": true
+        },
+        {
+          "index": 10,
+          "still": "v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/10_look-at-him.png",
+          "clip": "v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/10_look-at-him.mp4",
+          "clip_exists": true
+        }
+      ],
+      "finished_variants": [
+        "v2/pilot/zechariah_12_10_pierced/v1/assembly/_body_concat.mp4",
+        "v2/pilot/zechariah_12_10_pierced/v1/assembly/viral_cut.mp4",
+        "v2/pilot/zechariah_12_10_pierced/v1/assembly/viral_cut_sfx.mp4",
+        "v2/pilot/zechariah_12_10_pierced/v1/assembly/viral_cut_sfx_captioned.mp4",
+        "v2/pilot/zechariah_12_10_pierced/v1/assembly/viral_cut_sfx_music.mp4",
+        "v2/pilot/zechariah_12_10_pierced/v1/assembly/viral_cut_sfx_music_captioned.mp4"
+      ]
+    }
+  ],
+  "reassembly_needed": [
+    "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold",
+    "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words",
+    "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry",
+    "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold",
+    "v2/pilot/isaiah_53_5_with_his_stripes/v1",
+    "v2/pilot/mockers_words_ps22/v1",
+    "v2/pilot/zechariah_12_10_pierced/v1"
+  ]
+}

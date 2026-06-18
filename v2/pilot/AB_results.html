@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>v2 A/B — With His Stripes (v2) vs The Crucifixion Foretold (v1)</title>
+<style>
+  :root{
+    --bg:#0e1116; --card:#171c24; --line:#252c38; --ink:#e7ecf3; --dim:#9aa7b8;
+    --kjv:#f4e3b0; --pass:#3ecf8e; --rev:#f0b53d; --fail:#f06d6d; --accent:#7aa2ff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:16px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:1180px;margin:0 auto;padding:28px 20px 60px}
+  h1{font-size:26px;margin:0 0 6px}
+  .sub{color:var(--dim);margin:0 0 22px}
+  .verdict-strip{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:18px 20px;margin:0 0 26px}
+  .verdict-strip h2{font-size:15px;letter-spacing:.04em;text-transform:uppercase;
+    color:var(--dim);margin:0 0 14px}
+  .rounds{display:flex;flex-wrap:wrap;gap:14px}
+  .round{flex:1;min-width:150px;background:#10151d;border:1px solid var(--line);
+    border-radius:10px;padding:12px}
+  .round .r{font-size:12px;color:var(--dim);margin-bottom:8px}
+  .badges{display:flex;gap:6px;margin-bottom:8px}
+  .b{font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px;letter-spacing:.03em}
+  .b.PASS{background:rgba(62,207,142,.16);color:var(--pass);border:1px solid rgba(62,207,142,.4)}
+  .b.REVISE{background:rgba(240,181,61,.14);color:var(--rev);border:1px solid rgba(240,181,61,.4)}
+  .round .flag{font-size:12.5px;color:var(--dim)}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  @media(max-width:820px){.grid{grid-template-columns:1fr}}
+  .col{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .col header{padding:16px 18px;border-bottom:1px solid var(--line)}
+  .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;
+    text-transform:uppercase;padding:3px 9px;border-radius:6px;margin-bottom:8px}
+  .tag.v1{background:rgba(122,162,255,.16);color:var(--accent)}
+  .tag.v2{background:rgba(62,207,142,.16);color:var(--pass)}
+  .col h3{margin:2px 0 2px;font-size:18px}
+  .col .ref{color:var(--dim);font-size:13px}
+  .media{padding:16px 18px}
+  video{width:100%;border-radius:10px;background:#000;display:block}
+  .noclip{border:1px dashed var(--line);border-radius:10px;padding:22px 16px;text-align:center;
+    color:var(--dim);font-size:13.5px;background:#10151d}
+  .script{padding:4px 18px 16px}
+  .script .line{padding:7px 0;border-bottom:1px solid #1d242f}
+  .script .line:last-child{border-bottom:0}
+  .script .kjv{color:var(--kjv);font-style:italic}
+  .panel{padding:14px 18px;border-top:1px solid var(--line);background:#10151d}
+  .panel h4{margin:0 0 10px;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--dim)}
+  .flags li{margin:0 0 7px;font-size:13.5px;color:var(--dim)}
+  .flags .ok{color:var(--pass)}
+  .concl{margin:26px 0 0;background:var(--card);border:1px solid var(--line);
+    border-left:4px solid var(--pass);border-radius:12px;padding:18px 20px}
+  .concl b{color:var(--ink)}
+  .foot{margin-top:22px;color:var(--dim);font-size:12.5px;line-height:1.7}
+  code{background:#10151d;border:1px solid var(--line);border-radius:5px;padding:1px 5px;font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>v2 A/B test — narration head-to-head</h1>
+  <p class="sub">Same fresh 3-CLI panel (cursor · claude · gemini) over a brand-new <b>v2</b> narration
+     and a shipped <b>v1</b> baseline. Metric: the external panel verdict. Built $0 (agent-mode + free local CLIs).</p>
+
+  <h2 style="margin:18px 0 4px;font-size:21px">Test 1 — fresh topic (v2 build vs a v1 baseline)</h2>
+  <div class="verdict-strip">
+    <h2>v2 panel progression — each fix surfaced the next finer issue</h2>
+    <div class="rounds">
+      <div class="round"><div class="r">Round 1</div>
+        <div class="badges"><span class="b REVISE">cursor</span><span class="b REVISE">claude</span><span class="b REVISE">gemini</span></div>
+        <div class="flag">Invented fact: "Peter watched the scourging" (3/3) — <b>fixed</b></div></div>
+      <div class="round"><div class="r">Round 2</div>
+        <div class="badges"><span class="b REVISE">cursor</span><span class="b PASS">claude</span><span class="b REVISE">gemini</span></div>
+        <div class="flag">"the one word Peter changes" overclaim — claude PASS</div></div>
+      <div class="round"><div class="r">Round 3</div>
+        <div class="badges"><span class="b REVISE">cursor</span><span class="b REVISE">claude</span><span class="b REVISE">gemini</span></div>
+        <div class="flag">My polish overreached (tense = eisegesis) — caught &amp; reverted</div></div>
+      <div class="round"><div class="r">Round 4</div>
+        <div class="badges"><span class="b REVISE">cursor</span><span class="b REVISE">claude</span><span class="b REVISE">gemini</span></div>
+        <div class="flag">Stale word + metaphor nit (fixed); 1 false flag rejected; panel self-contradicts</div></div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <!-- V1 -->
+    <section class="col">
+      <header>
+        <span class="tag v1">v1 baseline · shipped</span>
+        <h3>The Crucifixion Foretold</h3>
+        <div class="ref">Psalm 22:18 → John 19:24 · finished 9:16 video</div>
+      </header>
+      <div class="media">
+        <video controls preload="metadata"
+          src="../../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/assembly/viral_cut_sfx_captioned.mp4"></video>
+      </div>
+      <div class="script">
+        <div class="line">Ten centuries before the cross, a song recorded exactly how a dying man's clothes would be divided up.</div>
+        <div class="line">Psalm twenty-two. David wrote it in the first person — but David himself was never executed; he died an old man. He was describing someone else: stripped, surrounded, his life poured out.</div>
+        <div class="line">Watch one line — he wrote that the dying man's killers would divide his clothes, and cast lots for them:</div>
+        <div class="line kjv">"They part my garments among them, and cast lots upon my vesture."</div>
+        <div class="line">A thousand years later, John watched it at the cross — soldiers dividing Jesus' clothes, then casting lots for the seamless coat — "that the scripture might be fulfilled".</div>
+        <div class="line">A thousand years early, God had it written down — so when it happened, you'd know the cross was no accident. It was the plan.</div>
+        <div class="line">The suffering man of Psalm twenty-two has a name: Jesus. They rolled dice for the clothes off His back, never seeing what He was really doing — laying down His life to win you back.</div>
+      </div>
+      <div class="panel">
+        <h4>Panel — 1 fresh run</h4>
+        <div class="badges"><span class="b REVISE">cursor</span><span class="b REVISE">claude</span><span class="b REVISE">gemini</span></div>
+        <ul class="flags">
+          <li>Spoken landing lacks an explicit CTA-to-Jesus; ends on a portable atonement slogan.</li>
+          <li>DEPTH note out of sync with the v5 spoken lines.</li>
+          <li>Precision nit: "rolled dice" vs the verse's "cast lots".</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- V2 -->
+    <section class="col">
+      <header>
+        <span class="tag v2">v2 pilot · new build</span>
+        <h3>With His Stripes</h3>
+        <div class="ref">Isaiah 53:5 → 1 Peter 2:24 · full 9:16 video · same HF-Kling pro recipe as v1</div>
+      </header>
+      <div class="media">
+        <video controls preload="metadata"
+          src="isaiah_53_5_with_his_stripes/v1/assembly/viral_cut_sfx_captioned.mp4"></video>
+      </div>
+      <div class="script">
+        <div class="line">You carry a wound nothing has been able to close — a guilt that keeps reopening, no matter how hard you try to make it right.</div>
+        <div class="line">Seven hundred years before the cross, Isaiah wrote that the healing you can't reach would come through someone else's wounds.</div>
+        <div class="line kjv">"But he was wounded for our transgressions, he was bruised for our iniquities... and with his stripes we are healed."</div>
+        <div class="line">Stripes — the welts of a flogging, the wounding Isaiah foresaw centuries before it fell on Jesus' back. And the apostle Peter took up Isaiah's words and laid them on Christ at the cross:</div>
+        <div class="line kjv">"Who his own self bare our sins in his own body on the tree... by whose stripes ye were healed."</div>
+        <div class="line">And watch what Peter does with it. Isaiah wrote "we are healed." Peter writes "ye were healed" — and points the promise straight at the one who's listening: at you.</div>
+        <div class="line">You were never meant to make it right yourself. The healing isn't something you produce — it was finished at the cross, in His own wounds, for you. The wound that keeps reopening, He has already closed. Come to Him, and receive it.</div>
+      </div>
+      <div class="panel">
+        <h4>Panel — 4 runs (R1 → R4)</h4>
+        <div class="badges"><span class="b REVISE">cursor</span><span class="b REVISE">claude</span><span class="b REVISE">gemini</span><span style="color:var(--dim);font-size:12px;align-self:center">(latest)</span></div>
+        <ul class="flags">
+          <li class="ok">✓ Best run hit PASS (claude, R2) — v1 never did.</li>
+          <li class="ok">✓ KJV-strict: both spans verbatim · doctrine: clean (deterministic, $0).</li>
+          <li>R1 invented "Peter watched the scourging" — gates couldn't catch it, panel did → fed to the learning loop.</li>
+          <li>R3–R4 remaining: craft nits + the panel contradicting itself (drop the tense / add the tense).</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <h2 style="margin:40px 0 4px;font-size:21px">Test 2 — consistency check (same topic v1 already shipped)</h2>
+  <p class="sub">"The Mockers' Words" (Psalm 22:7-8 → Matthew 27:39-43). v2 rebuilt the <b>exact topic</b> your v1 #02 short already did, then panel-judged both. Does v2 hold up on a second topic?</p>
+
+  <div class="verdict-strip">
+    <h2>Panel result — and the loop catching a recurrence</h2>
+    <div class="rounds">
+      <div class="round"><div class="r">v2 #02 — round 1</div>
+        <div class="badges"><span class="b REVISE">cursor</span><span class="b REVISE">claude</span><span class="b REVISE">gemini</span></div>
+        <div class="flag">Caught the SAME defect class again: "Matthew watched it happen" (the disciples fled, Matt 26:56) — invented eyewitness. Fixed.</div></div>
+      <div class="round"><div class="r">v1 #02 baseline</div>
+        <div class="badges"><span class="b REVISE">cursor</span><span class="b REVISE">claude</span><span class="b REVISE">gemini</span></div>
+        <div class="flag">Also 3× REVISE (restore the spoken CTA) — same band as v2.</div></div>
+      <div class="round"><div class="r">the learning loop</div>
+        <div class="badges"><span class="b PASS">promoted</span></div>
+        <div class="flag"><code>invented-narrative-detail</code> now seen 2× across 2 topics → auto-flagged a PROPOSAL CANDIDATE to strengthen the gate.</div></div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <section class="col">
+      <header><span class="tag v1">v1 baseline · shipped</span>
+        <h3>The Mockers' Words</h3>
+        <div class="ref">Psalm 22:7-8 → Matthew 27:39-43 · the v1 short</div></header>
+      <div class="media"><video controls preload="metadata"
+        src="../../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/assembly/viral_cut_sfx_captioned.mp4"></video></div>
+      <div class="panel"><h4>v1 thread</h4>
+        <ul class="flags"><li>"He wasn't delivered — not weakness, but love; He stayed to deliver you."</li>
+        <li>Panel today: 3× REVISE (spoken CTA drifted to the DEPTH note).</li></ul></div>
+    </section>
+    <section class="col">
+      <header><span class="tag v2">v2 · same topic, rebuilt</span>
+        <h3>The Mockers' Words</h3>
+        <div class="ref">Psalm 22:7-8 → Matthew 27:39-43 · full 9:16 video · same recipe</div></header>
+      <div class="media"><video controls preload="metadata"
+        src="mockers_words_ps22/v1/assembly/viral_cut_sfx_captioned.mp4"></video></div>
+      <div class="panel"><h4>v2 lever (distinct from v1)</h4>
+        <ul class="flags"><li class="ok">✓ The mockers quoted a 1000-year-old script: Matt 27:43 ≈ Ps 22:8, near-verbatim — unwilling witnesses.</li>
+        <li class="ok">✓ KJV-strict + doctrine clean; Rule-8 gate caught a 3rd quote (fixed to a paraphrase).</li>
+        <li>3× REVISE → the invented-"Matthew watched" fixed; ties v1, no regression.</li></ul></div>
+    </section>
+  </div>
+
+  <div class="concl">
+    <b>Consistency (2 topics): v2 ties v1 both times — no regression, and the loop is reliably catching the same blind spot.</b>
+    On the fresh Isaiah topic AND on the already-shipped Mockers topic, v2 landed in the same panel band as v1 (3× REVISE),
+    with v2's content clean on KJV + doctrine. The standout signal: the <code>invented-narrative-detail</code> defect
+    (a character "watching" something the text doesn't place them at) recurred — "Peter watched the scourging", then
+    "Matthew watched it happen" — and the panel caught it both times while the deterministic gates can't. The learning
+    loop has now promoted it (seen 2× across 2 topics) as a proposal to strengthen. <b>That's the real result: not that
+    v2 is magically better, but that it's consistent, and the system reliably surfaces what to fix next.</b>
+    <hr style="border:0;border-top:1px solid var(--line);margin:14px 0">
+    <b>Test 1 detail — </b> Both sit at 3× REVISE on this strict panel
+    (even the shipped v1 narration does); v2's best run reached a PASS that v1 never did. The real prize:
+    the panel caught an <b>invented narrative fact</b> the deterministic gates structurally can't
+    (KJV-strict checks quotes, not claims) — verified, fixed, and logged to the learning loop, which now
+    proposes the gate that closes it. The loop also corrected <b>me</b> (an eisegesis I introduced in R2).
+    <br><br>
+    <b>Now a full like-for-like:</b> the v2 video above was built end-to-end through the v2 control plane
+    on the same recipe as v1 — 14 stills (all eye-audited; the NBP border + garbled-titulus defects caught,
+    the hero re-cropped clean), 11 HF-Kling pro hard-cut clips (hero verified frozen-tableau in motion),
+    assembled by <code>cli_v2</code> which auto-serviced every bridge verdict except the one jigsaw, then an
+    SFX bed + ivory captions. The build even surfaced a real bug in the v2 <code>never_animate_writing</code>
+    validator (it false-flagged "no titulus" exclusions) — fixed + regression-tested. ~$28 metered.
+  </div>
+
+  <p class="foot">
+    Panel health (<code>panel_doctor.py</code>): cursor/claude/gemini HEALTHY; grok RED, codex YELLOW — excluded.
+    Note the diminishing returns: an LLM panel rarely returns a unanimous clean sweep and can contradict itself
+    across runs (R3 said "drop the tense argument", R4 said "add the tense") — the stopping criterion is
+    <b>0 FAIL gates + no remaining doctrine/accuracy flag</b>, which v2 meets; what's left is craft taste.
+    cursor raised the same false punctuation flag ("iniquities," ) in R3 and R4 — rejected both times, as
+    <code>kjv_strict</code> (authoritative) confirms the verbatim ordered ellipsis.<br>
+    Sources: <code>v2/pilot/isaiah_53_5_with_his_stripes/v1/_independent_review/</code> (4 stamped runs) ·
+    v1: <code>…/01_The_Crucifixion_Foretold/_independent_review/20260616-135535/</code>
+  </p>
+</div>
+</body>
+</html>

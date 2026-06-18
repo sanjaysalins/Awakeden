@@ -1,0 +1,28 @@
+{
+ "audited": true,
+ "passed": false,
+ "png_sha256": "c0d4311e661e9ca2c4face3724c6a4778608c3b3d0b4ff074f10a1e987352250",
+ "n_votes": 1,
+ "split": false,
+ "failed_dims": [
+  "F2"
+ ],
+ "passes": {},
+ "fail_reasons": [
+  "Bright vertical band of light bisects the image into a split-screen diptych (left: David writing",
+  "right: Christ)"
+ ],
+ "votes": [
+  {
+   "passed": false,
+   "dims_failed": [
+    "F2"
+   ],
+   "reasons": [
+    "Bright vertical band of light bisects the image into a split-screen diptych (left: David writing",
+    "right: Christ)"
+   ]
+  }
+ ],
+ "note": "ensemble of 1 vote(s), any-fail"
+}

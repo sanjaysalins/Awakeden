@@ -5,14 +5,7 @@ stages so the next episode's clips drop into the cut with less fighting.
 
 ## What was hard to fit this run
 
-- **#01 The Dice in the Dust** — slot 2.0s, played 2.20x AND trimmed 55% (role=hook-open). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#02 David at the Lamp** — slot 3.3s, played 1.30x AND trimmed 57% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#04 The Line, Centuries Early** — slot 3.1s, played 1.30x AND trimmed 60% (role=pivot). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#03 A Death Not His Own** — needed 2.20x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
-- **#11 A Thousand Years Apart** — slot 3.8s, played 1.30x AND trimmed 50% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#08 The Whole Execution, Written Early** — slot 4.2s, played 1.30x AND trimmed 45% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#09 A Life Down to a Pile of Cloth** — needed 2.20x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
-- **#05 The Coat They Would Not Tear** — slot 2.6s, played 2.20x AND trimmed 42% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
+- **#01 The Dice in the Dust** — needed 2.20x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
 
 ## Standing 'design for the cut' rules
 

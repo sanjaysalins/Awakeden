@@ -1,0 +1,28 @@
+{
+ "still_id": "03_let-him-deliver-him",
+ "subject_type": "hero",
+ "role": "hero",
+ "elements": [
+  {
+   "id": "full",
+   "label": "reused: 13_for-the-very-people-throwing-it",
+   "region": null,
+   "verified": true
+  }
+ ],
+ "ambient_layer": [],
+ "period_real": {
+  "T1": "pass",
+  "T2": "pass",
+  "T3": "pass",
+  "T4": "pass",
+  "T5": "pass",
+  "T6": "pass"
+ },
+ "declared_by": "design",
+ "provenance": "fresh",
+ "lock_version": 1,
+ "png_sha256": "eb503f9c326bebaf8959d565227eeb1fa052065ee1fc17c3e9b985dcf28f6c9d",
+ "locked": true,
+ "note": "reuse-swap from v2\\pilot\\mockers_words_ps22\\v1\\visual\\nbp\\13_for-the-very-people-throwing-it.mp4"
+}

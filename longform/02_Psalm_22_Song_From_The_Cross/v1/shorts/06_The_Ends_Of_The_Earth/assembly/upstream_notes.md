@@ -5,16 +5,7 @@ stages so the next episode's clips drop into the cut with less fighting.
 
 ## What was hard to fit this run
 
-- **#01 One Man, Alone** — slot 3.8s, played 1.30x AND trimmed 51% (role=hook-open). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#07 In Thee All Nations Blessed** — slot 2.7s, played 1.30x AND trimmed 65% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#02 The Song Opens Its Arms** — slot 4.6s, played 1.30x AND trimmed 40% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#03 All the Ends of the World** — slot 2.6s, played 1.30x AND trimmed 66% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#08 Kindreds of the Nations** — needed 2.10x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
-- **#05 One Corner of the Empire** — needed 2.20x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
-- **#09 A Light to the Gentiles** — slot 2.5s, played 1.30x AND trimmed 68% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#06 The Gospel Goes Out** — slot 1.6s, played 1.30x AND trimmed 79% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#11 Nation After Nation** — needed 2.20x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
-- **#13 Room to Turn** — needed 2.20x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
+- **#07 In Thee All Nations Blessed** — slot 2.5s, played 1.30x AND trimmed 36% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
 
 ## Standing 'design for the cut' rules
 

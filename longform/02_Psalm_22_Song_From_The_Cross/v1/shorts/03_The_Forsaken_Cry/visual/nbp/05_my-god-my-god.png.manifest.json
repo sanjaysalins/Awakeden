@@ -1,0 +1,52 @@
+{
+ "still_id": "05_my-god-my-god",
+ "subject_type": "hero",
+ "role": "hero",
+ "elements": [
+  {
+   "id": "full",
+   "label": "My God, My God",
+   "region": null,
+   "verified": true
+  },
+  {
+   "id": "the-open-crying-mouth",
+   "label": "the open crying mouth",
+   "region": null,
+   "verified": true
+  },
+  {
+   "id": "the-upturned-searching-e",
+   "label": "the upturned searching eyes",
+   "region": null,
+   "verified": true
+  },
+  {
+   "id": "the-crown-of-thorns",
+   "label": "the crown of thorns",
+   "region": null,
+   "verified": true
+  },
+  {
+   "id": "the-cords-of-the-straine",
+   "label": "the cords of the strained neck",
+   "region": null,
+   "verified": true
+  }
+ ],
+ "ambient_layer": [],
+ "period_real": {
+  "T1": "pass",
+  "T2": "pass",
+  "T3": "pass",
+  "T4": "pass",
+  "T5": "pass",
+  "T6": "pass"
+ },
+ "declared_by": "design",
+ "provenance": "fresh",
+ "lock_version": 1,
+ "png_sha256": "bd93d6e824c9c5230e51f34bdb06fa5dc472aca3575660c5ef7c0cb7003a3b08",
+ "locked": true,
+ "note": "clean crying-face tour"
+}

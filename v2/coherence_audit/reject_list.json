@@ -1,0 +1,416 @@
+{
+  "_README": "Consolidated reject list. action=rebuild is metered (re-render+animate); action=reuse-canonical is $0 ($0 swap to a verified twin); action=redesign-illegible-or-exclude is a writing scene that must NOT be rebuilt+animated (never-animate-writing) — show illegible marks or drop it.",
+  "counts": {
+    "total_rejects": 29,
+    "by_user": 24,
+    "by_audit": 6,
+    "by_both": 1,
+    "rebuild": 20,
+    "reuse_canonical": 4,
+    "redesign_or_exclude": 5,
+    "used_in_finished_cuts": 17
+  },
+  "rejects": [
+    {
+      "still": "image_library/stills/exiled_nation_column_grey.png",
+      "concept": "exiled_nation_column_grey",
+      "flagged_by": [
+        "user"
+      ],
+      "dims": [],
+      "used_in_finished": [],
+      "clip": "image_library\\stills\\exiled_nation_column_grey.mp4",
+      "action": "rebuild",
+      "canonical_reuse": null
+    },
+    {
+      "still": "image_library/stills/glory_exalted_light_figure.png",
+      "concept": "glory_exalted_light_figure",
+      "flagged_by": [
+        "audit"
+      ],
+      "dims": [
+        "Image is split into three panels by two vertical dividing lines (triptych side-panels / split-screen)",
+        "not full-bleed"
+      ],
+      "used_in_finished": [],
+      "clip": "image_library\\stills\\glory_exalted_light_figure.mp4",
+      "action": "rebuild",
+      "canonical_reuse": null
+    },
+    {
+      "still": "image_library/stills/isa53_servant_bearing_weight.png",
+      "concept": "isa53_servant_bearing_weight",
+      "flagged_by": [
+        "user",
+        "audit"
+      ],
+      "dims": [
+        "Ornate gilded picture-frame surrounds the painting with empty grey triptych side-panels left and right",
+        "not full-bleed"
+      ],
+      "used_in_finished": [],
+      "clip": "image_library\\stills\\isa53_servant_bearing_weight.mp4",
+      "action": "rebuild",
+      "canonical_reuse": null
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/04_the-scroll-line.png",
+      "concept": "the-scroll-line",
+      "flagged_by": [
+        "audit"
+      ],
+      "dims": [
+        "Large garbled Hebrew-style gibberish lettering dominates the center of the image as its subject (a hand pointing to a scroll line)",
+        "the script is the focal point, not a small background scroll."
+      ],
+      "used_in_finished": [],
+      "clip": "longform\\02_Psalm_22_Song_From_The_Cross\\v1\\shorts\\01_The_Crucifixion_Foretold\\visual\\nbp\\04_the-scroll-line.mp4",
+      "action": "redesign-illegible-or-exclude",
+      "canonical_reuse": null
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/08_the-execution-foretold.png",
+      "concept": "the-execution-foretold",
+      "flagged_by": [
+        "user"
+      ],
+      "dims": [],
+      "used_in_finished": [],
+      "clip": "longform\\02_Psalm_22_Song_From_The_Cross\\v1\\shorts\\01_The_Crucifixion_Foretold\\visual\\nbp\\08_the-execution-foretold.mp4",
+      "action": "rebuild",
+      "canonical_reuse": null
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/10_the-plan-not-accident.png",
+      "concept": "the-plan-not-accident",
+      "flagged_by": [
+        "user"
+      ],
+      "dims": [],
+      "used_in_finished": [
+        "01_The_Crucifixion_Foretold"
+      ],
+      "clip": "longform\\02_Psalm_22_Song_From_The_Cross\\v1\\shorts\\01_The_Crucifixion_Foretold\\visual\\nbp\\10_the-plan-not-accident.mp4",
+      "action": "rebuild",
+      "canonical_reuse": null
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/11_a-thousand-years-apart.png",
+      "concept": "a-thousand-years-apart",
+      "flagged_by": [
+        "user"
+      ],
+      "dims": [],
+      "used_in_finished": [],
+      "clip": "longform\\02_Psalm_22_Song_From_The_Cross\\v1\\shorts\\01_The_Crucifixion_Foretold\\visual\\nbp\\11_a-thousand-years-apart.mp4",
+      "action": "reuse-canonical",
+      "canonical_reuse": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/06_a-thousand-years-apart.png"
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/07_the-jabbing-hands.png",
+      "concept": "the-jabbing-hands",
+      "flagged_by": [
+        "user"
+      ],
+      "dims": [],
+      "used_in_finished": [
+        "02_The_Mockers_Words"
+      ],
+      "clip": "longform\\02_Psalm_22_Song_From_The_Cross\\v1\\shorts\\02_The_Mockers_Words\\visual\\nbp\\07_the-jabbing-hands.mp4",
+      "action": "rebuild",
+      "canonical_reuse": null
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/08_he-had-every-power.png",
+      "concept": "he-had-every-power",
+      "flagged_by": [
+        "user"
+      ],
+      "dims": [],
+      "used_in_finished": [
+        "02_The_Mockers_Words"
+      ],
+      "clip": "longform\\02_Psalm_22_Song_From_The_Cross\\v1\\shorts\\02_The_Mockers_Words\\visual\\nbp\\08_he-had-every-power.mp4",
+      "action": "rebuild",
+      "canonical_reuse": null
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/09_twelve-legions-restrained.png",
+      "concept": "twelve-legions-restrained",
+      "flagged_by": [
+        "user"
+      ],
+      "dims": [],
+      "used_in_finished": [
+        "02_The_Mockers_Words"
+      ],
+      "clip": "longform\\02_Psalm_22_Song_From_The_Cross\\v1\\shorts\\02_The_Mockers_Words\\visual\\nbp\\09_twelve-legions-restrained.mp4",
+      "action": "rebuild",
+      "canonical_reuse": null
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/13_the-silent-king.png",
+      "concept": "the-silent-king",
+      "flagged_by": [
+        "user"
+      ],
+      "dims": [],
+      "used_in_finished": [
+        "02_The_Mockers_Words"
+      ],
+      "clip": "longform\\02_Psalm_22_Song_From_The_Cross\\v1\\shorts\\02_The_Mockers_Words\\visual\\nbp\\13_the-silent-king.mp4",
+      "action": "rebuild",
+      "canonical_reuse": null
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/14_the-hand-that-would-not-pull-free.png",
+      "concept": "the-hand-that-would-not-pull-free",
+      "flagged_by": [
+        "user"
+      ],
+      "dims": [],
+      "used_in_finished": [
+        "02_The_Mockers_Words"
+      ],
+      "clip": "longform\\02_Psalm_22_Song_From_The_Cross\\v1\\shorts\\02_The_Mockers_Words\\visual\\nbp\\14_the-hand-that-would-not-pull-free.mp4",
+      "action": "rebuild",
+      "canonical_reuse": null
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/12_a-thousand-years-apart.png",
+      "concept": "a-thousand-years-apart",
+      "flagged_by": [
+        "user"
+      ],
+      "dims": [],
+      "used_in_finished": [],
+      "clip": "longform\\02_Psalm_22_Song_From_The_Cross\\v1\\shorts\\03_The_Forsaken_Cry\\visual\\nbp\\12_a-thousand-years-apart.mp4",
+      "action": "reuse-canonical",
+      "canonical_reuse": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/06_a-thousand-years-apart.png"
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/14_he-opened-it-from-the-dark.png",
+      "concept": "he-opened-it-from-the-dark",
+      "flagged_by": [
+        "user"
+      ],
+      "dims": [],
+      "used_in_finished": [
+        "03_The_Forsaken_Cry"
+      ],
+      "clip": "longform\\02_Psalm_22_Song_From_The_Cross\\v1\\shorts\\03_The_Forsaken_Cry\\visual\\nbp\\14_he-opened-it-from-the-dark.mp4",
+      "action": "rebuild",
+      "canonical_reuse": null
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/12_a-thousand-years-apart.png",
+      "concept": "a-thousand-years-apart",
+      "flagged_by": [
+        "audit"
+      ],
+      "dims": [
+        "Hard vertical dividing line down the center splits the image into two panels (left: scribe with scroll",
+        "right: Christ with brethren) — a split-screen/diptych, not full-bleed"
+      ],
+      "used_in_finished": [],
+      "clip": "longform\\02_Psalm_22_Song_From_The_Cross\\v1\\shorts\\04_Declared_To_The_Brethren\\visual\\nbp\\12_a-thousand-years-apart.mp4",
+      "action": "redesign-illegible-or-exclude",
+      "canonical_reuse": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/06_a-thousand-years-apart.png"
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/03_the-fingertip-on-the-final-word.png",
+      "concept": "the-fingertip-on-the-final-word",
+      "flagged_by": [
+        "audit"
+      ],
+      "dims": [
+        "Large Hebrew-style script fills ~70% of the frame as the dominant subject",
+        "lettering is decorative/garbled and dominates the image rather than sitting as a small background scroll"
+      ],
+      "used_in_finished": [],
+      "clip": "longform\\02_Psalm_22_Song_From_The_Cross\\v1\\shorts\\05_He_Hath_Done_This\\visual\\nbp\\03_the-fingertip-on-the-final-word.mp4",
+      "action": "redesign-illegible-or-exclude",
+      "canonical_reuse": null
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/05_the-greek-word.png",
+      "concept": "the-greek-word",
+      "flagged_by": [
+        "user"
+      ],
+      "dims": [],
+      "used_in_finished": [],
+      "clip": "longform\\02_Psalm_22_Song_From_The_Cross\\v1\\shorts\\05_He_Hath_Done_This\\visual\\nbp\\05_the-greek-word.mp4",
+      "action": "redesign-illegible-or-exclude",
+      "canonical_reuse": null
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/09_a-thousand-years-apart.png",
+      "concept": "a-thousand-years-apart",
+      "flagged_by": [
+        "audit"
+      ],
+      "dims": [
+        "Bright vertical band of light bisects the image into a split-screen diptych (left: David writing",
+        "right: Christ)"
+      ],
+      "used_in_finished": [],
+      "clip": "longform\\02_Psalm_22_Song_From_The_Cross\\v1\\shorts\\07_The_Body_Foretold\\visual\\nbp\\09_a-thousand-years-apart.mp4",
+      "action": "redesign-illegible-or-exclude",
+      "canonical_reuse": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/06_a-thousand-years-apart.png"
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/11_the-marks-of-one.png",
+      "concept": "the-marks-of-one",
+      "flagged_by": [
+        "user"
+      ],
+      "dims": [],
+      "used_in_finished": [
+        "07_The_Body_Foretold"
+      ],
+      "clip": "longform\\02_Psalm_22_Song_From_The_Cross\\v1\\shorts\\07_The_Body_Foretold\\visual\\nbp\\11_the-marks-of-one.mp4",
+      "action": "rebuild",
+      "canonical_reuse": null
+    },
+    {
+      "still": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/05_by-whose-stripes.png",
+      "concept": "by-whose-stripes",
+      "flagged_by": [
+        "user"
+      ],
+      "dims": [],
+      "used_in_finished": [
+        "v2/pilot/isaiah_53_5_with_his_stripes/v1"
+      ],
+      "clip": "v2\\pilot\\isaiah_53_5_with_his_stripes\\v1\\visual\\nbp\\05_by-whose-stripes.mp4",
+      "action": "rebuild",
+      "canonical_reuse": null
+    },
+    {
+      "still": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/11_aimed-at-you.png",
+      "concept": "aimed-at-you",
+      "flagged_by": [
+        "user"
+      ],
+      "dims": [],
+      "used_in_finished": [
+        "v2/pilot/isaiah_53_5_with_his_stripes/v1"
+      ],
+      "clip": "v2\\pilot\\isaiah_53_5_with_his_stripes\\v1\\visual\\nbp\\11_aimed-at-you.mp4",
+      "action": "rebuild",
+      "canonical_reuse": null
+    },
+    {
+      "still": "v2/pilot/mockers_words_ps22/v1/visual/nbp/01_the-shaking-heads.png",
+      "concept": "the-shaking-heads",
+      "flagged_by": [
+        "user"
+      ],
+      "dims": [],
+      "used_in_finished": [
+        "v2/pilot/mockers_words_ps22/v1"
+      ],
+      "clip": "v2\\pilot\\mockers_words_ps22\\v1\\visual\\nbp\\01_the-shaking-heads.mp4",
+      "action": "reuse-canonical",
+      "canonical_reuse": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/01_the-shaking-heads.png"
+    },
+    {
+      "still": "v2/pilot/mockers_words_ps22/v1/visual/nbp/03_they-shoot-out-the-lip.png",
+      "concept": "they-shoot-out-the-lip",
+      "flagged_by": [
+        "user"
+      ],
+      "dims": [],
+      "used_in_finished": [],
+      "clip": "v2\\pilot\\mockers_words_ps22\\v1\\visual\\nbp\\03_they-shoot-out-the-lip.mp4",
+      "action": "rebuild",
+      "canonical_reuse": null
+    },
+    {
+      "still": "v2/pilot/mockers_words_ps22/v1/visual/nbp/09_if-thou-be-the-son-of-god.png",
+      "concept": "if-thou-be-the-son-of-god",
+      "flagged_by": [
+        "user"
+      ],
+      "dims": [],
+      "used_in_finished": [
+        "v2/pilot/mockers_words_ps22/v1"
+      ],
+      "clip": "v2\\pilot\\mockers_words_ps22\\v1\\visual\\nbp\\09_if-thou-be-the-son-of-god.mp4",
+      "action": "rebuild",
+      "canonical_reuse": null
+    },
+    {
+      "still": "v2/pilot/mockers_words_ps22/v1/visual/nbp/14_come-to-the-one-who-would-not-come-down.png",
+      "concept": "come-to-the-one-who-would-not-come-down",
+      "flagged_by": [
+        "user"
+      ],
+      "dims": [],
+      "used_in_finished": [
+        "v2/pilot/mockers_words_ps22/v1"
+      ],
+      "clip": "v2\\pilot\\mockers_words_ps22\\v1\\visual\\nbp\\14_come-to-the-one-who-would-not-come-down.mp4",
+      "action": "rebuild",
+      "canonical_reuse": null
+    },
+    {
+      "still": "v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/03_gods-staggering-word.png",
+      "concept": "gods-staggering-word",
+      "flagged_by": [
+        "user"
+      ],
+      "dims": [],
+      "used_in_finished": [
+        "v2/pilot/zechariah_12_10_pierced/v1"
+      ],
+      "clip": "v2\\pilot\\zechariah_12_10_pierced\\v1\\visual\\nbp\\03_gods-staggering-word.mp4",
+      "action": "rebuild",
+      "canonical_reuse": null
+    },
+    {
+      "still": "v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/06_whom-they-pierced.png",
+      "concept": "whom-they-pierced",
+      "flagged_by": [
+        "user"
+      ],
+      "dims": [],
+      "used_in_finished": [
+        "v2/pilot/zechariah_12_10_pierced/v1"
+      ],
+      "clip": "v2\\pilot\\zechariah_12_10_pierced\\v1\\visual\\nbp\\06_whom-they-pierced.mp4",
+      "action": "reuse-canonical",
+      "canonical_reuse": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/08_whom-they-pierced.png"
+    },
+    {
+      "still": "v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/07_john-saw-it.png",
+      "concept": "john-saw-it",
+      "flagged_by": [
+        "user"
+      ],
+      "dims": [],
+      "used_in_finished": [
+        "v2/pilot/zechariah_12_10_pierced/v1"
+      ],
+      "clip": "v2\\pilot\\zechariah_12_10_pierced\\v1\\visual\\nbp\\07_john-saw-it.mp4",
+      "action": "rebuild",
+      "canonical_reuse": null
+    },
+    {
+      "still": "v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/10_look-at-him.png",
+      "concept": "look-at-him",
+      "flagged_by": [
+        "user"
+      ],
+      "dims": [],
+      "used_in_finished": [
+        "v2/pilot/zechariah_12_10_pierced/v1"
+      ],
+      "clip": "v2\\pilot\\zechariah_12_10_pierced\\v1\\visual\\nbp\\10_look-at-him.mp4",
+      "action": "rebuild",
+      "canonical_reuse": null
+    }
+  ]
+}

@@ -231,6 +231,15 @@ def run_assembly(
 
     _sanity_table(plan, clips_by_index, log=log)
 
+    # Visual coherence chokepoint (INV-23), scoped to the SELECTED set (hero + body slots) so an
+    # unused pool still never blocks a good cut. Reports always; raises once JITB_REQUIRE_COHERENCE=1.
+    selected = {plan.hero_scene_index} | {s.scene_index for s in plan.body_slots}
+    _lock.require_visual_coherence(v1_folder, provider, scene_indices=selected)
+    # Human still-review gate (report-only until JITB_REQUIRE_STILL_REVIEW=1): the human is the
+    # authority on subtle defects the automated gate misses. Sign off via stills_review.html.
+    from pipeline import still_review as _sr
+    _sr.require_review(v1_folder, provider)
+
     # write paper artifacts (idempotent overwrite)
     log("\n[handoff] writing edit_plan.json + reviews + timeline + upstream_notes...")
     H.write_assembly_artifacts(v1_folder, segments, clips, plan,

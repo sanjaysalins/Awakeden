@@ -1,0 +1,21 @@
+{
+  "_doc": "Known Bible-narrative facts for the NARRATIVE-PRESENCE hard gate (defect class 'invented-narrative-detail', promoted 2026-06-16 after it recurred across 2 topics: 'Peter watched the scourging', 'Matthew watched it happen'). Each entry lists a character who was NOT an eyewitness present at an event, with the disproof reference. The gate FAILs a lock when the SPOKEN text asserts that character watching/seeing/standing-at that event. ZERO false positives by design: only the listed character+event pairings can fail, so a textually-true claim like 'John watched it at the cross' (John 19:26) never trips (John is not listed). The deterministic gate covers what the panel has taught us; the external panel remains the backstop for new cases. Add an entry each time the panel catches a new invented-presence claim.",
+  "version": 1,
+  "updated": "2026-06-16",
+  "not_present": [
+    {
+      "character": "Peter",
+      "aliases": ["peter", "simon peter"],
+      "presence_verbs": ["watch", "saw", "witness", "stood near", "stood by", "stood at the foot", "was there", "looked on", "near enough to", "stood and"],
+      "event_words": ["scourg", "flogg", "crucif", "the cross"],
+      "disproof": "Peter denied Christ in the high priest's courtyard and went out and wept before dawn (Matt 26:58, Luke 22:62); the disciples forsook him and fled (Matt 26:56). Peter was NOT an eyewitness at the Roman scourging or the crucifixion. Re-anchor on apostolic/Spirit-inspired testimony, not eyewitness proximity."
+    },
+    {
+      "character": "Matthew",
+      "aliases": ["matthew"],
+      "presence_verbs": ["watch", "saw it", "witness", "was there", "stood near", "looked on", "stood and"],
+      "event_words": ["scourg", "crucif", "the cross", "mock"],
+      "disproof": "The disciples forsook him and fled (Matt 26:56). Matthew's gospel RECORDS the scene; it does not claim he witnessed it. Write 'Matthew records / Matthew's gospel records', not 'Matthew watched'."
+    }
+  ]
+}

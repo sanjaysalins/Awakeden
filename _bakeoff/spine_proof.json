@@ -1,0 +1,33 @@
+{
+  "cases": [
+    {
+      "clip": "01_the-cry_HF",
+      "truth": "pass",
+      "gate": "pass"
+    },
+    {
+      "clip": "01_the-cry_DIRECT",
+      "truth": "pass",
+      "gate": "pass"
+    },
+    {
+      "clip": "04_the-ninth-hour_HF",
+      "truth": "pass",
+      "gate": "pass"
+    },
+    {
+      "clip": "04_the-ninth-hour_DIRECT",
+      "truth": "fail",
+      "gate": "fail"
+    }
+  ],
+  "calibration": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "tn": 3,
+    "precision": 1.0,
+    "recall": 1.0,
+    "discriminates": true
+  }
+}

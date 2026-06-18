@@ -3,54 +3,52 @@
 **Verdict:** `LOCKED`  ·  **Failed gates:** 0
 
 ## How the clips map to the words
-Pinned by meaning in time order. Open on #01 the shaking heads at 'they shook their heads and sneered the very taunt'; #02 David records on 'Psalm twenty-two'; #03 the written Hebrew line on 'even writes his tormentors' words'; #06 the shot-out lip on the KJV shaking-the-head taunt; #12 the David-to-cross diptych on 'A thousand years later'; #04 the crowd at the cross on 'Matthew records both'; #13 the wagging crowd on 'passers-by wagging their heads'; #05 the leaders jeering on 'the religious leaders jeering'; #07 the jabbing hands on 'let him deliver him now'; #14 the nailed hand on 'not because Jesus lacked the power to come down'; #08 on 'He had every power'; #09 the restrained legions on 'staying was the only way to deliver you'; #10 the face of love on 'It was love'. Hero #11 (the cross, 'He chose to stay, with you in view') closes the cut.
+12 body clips spread ~every 2-3 beats for a fast viral pace (max hold ~4-5s). Mockers/taunt open (#01), the dying-mocked-man (#07) + the prophet recording it (#02), the crowd flinging the taunt (#03), the crowd at the cross (#04), then Christ-on-the-cross under the jeers (#05 He-trusted, #09, #13 bearing the scorn, #08 crying face), the full crucifixion on 'He had every power' (#06), Christ's love (#10), and the lone figure toward the cross on 'with you in view' (#14). Hero #11 (In His Own Body, He chose to stay) closes.
 
 ## Slots
-- ` 0` **body/hook** — #01 The Shaking Heads · 0.00-3.12s (3.12s) · 2.20x · speed+trim  
-  _The shaking, jeering heads — the arresting hook under 'they shook their heads and sneered the very taunt'._
-- ` 1` **body/hook** — #02 David Records the Taunt · 3.12-8.16s (5.04s) · 1.30x · speed+trim  
-  _David records the taunt — 'Psalm twenty-two', the psalm being written._
-- ` 2` **body/hook** — #03 Let Him Deliver Him · 8.16-13.54s (5.38s) · 1.30x · speed+trim  
-  _The fingertip on the Hebrew line — 'even writes his tormentors' words'._
-- ` 3` **body/hook** — #06 They Shoot Out the Lip · 13.54-14.70s (1.16s) · 2.20x · speed+trim  
-  _The shot-out lip — the Ps 22:7 mockery gesture under 'they shake the head'._
-- ` 4` **body/hook** — #12 A Thousand Years Apart · 14.70-21.18s (6.48s) · 1.30x · speed+trim  
-  _The David-to-cross diptych — 'A thousand years later', the span itself._
-- ` 5` **body/hook** — #04 The Crowd at the Cross · 21.18-24.16s (2.98s) · 1.30x · speed+trim  
-  _The crowd at the cross — 'Matthew records both'._
-- ` 6` **body/hook** — #13 The Mockers and the Silent King · 24.16-25.98s (1.82s) · 1.30x · speed+trim  
-  _The wagging crowd's backs — 'the passers-by wagging their heads'._
-- ` 7` **body/hook** — #05 The Religious Leaders Jeer · 25.98-28.38s (2.40s) · 2.20x · speed+trim  
-  _The religious leaders sneering and pointing — 'the religious leaders jeering'._
-- ` 8` **body/hook** — #07 The Jabbing Hands · 28.38-31.96s (3.58s) · 2.20x · speed+trim  
-  _The jabbing hands flung up at the cross — 'let him deliver him now'._
-- ` 9` **body/hook** — #14 The Hand That Would Not Pull Free · 31.96-42.56s (10.60s) · 0.95x · speed  
-  _The nailed open hand that would not pull free — 'not because Jesus lacked the power to come down'._
-- `10` **body/hook** — #08 He Had Every Power · 42.56-47.06s (4.50s) · 1.30x · speed+trim  
-  _The sovereign low-angle Christ — 'He had every power'._
-- `11` **body/hook** — #09 Twelve Legions Restrained · 47.06-50.82s (3.76s) · 1.30x · speed+trim  
-  _The restrained legions / sheathed sword — 'staying was the only way to deliver you'._
-- `12` **body/hook** — #10 Looking Down in Love · 50.82-58.02s (7.20s) · 1.30x · speed+trim  
-  _The face looking down in love — 'It was love'._
-- `13` **hero-tail/hero** — #11 He Chose to Stay · 58.02-60.02s (2.00s) · 1.00x · speed  
+- ` 0` **body/hook** — #01 The Shaking Heads · 0.00-3.12s (3.12s) · 1.62x · speed  
+  _Jeering heads — hook under 'they shook their heads and sneered the taunt.'_
+- ` 1` **body/hook** — #07 The Jabbing Hands · 3.12-8.16s (5.04s) · 1.00x · speed  
+  _A mocked and DYING man — 'David, describing a mocked and dying man.'_
+- ` 2` **body/hook** — #02 David Records the Taunt · 8.16-13.54s (5.38s) · 0.94x · speed  
+  _The prophet recording the tormentors' words._
+- ` 3` **body/hook** — #03 Let Him Deliver Him · 13.54-18.20s (4.66s) · 1.08x · speed  
+  _The crowd flinging 'He trusted... let him deliver him.'_
+- ` 4` **body/hook** — #04 The Crowd at the Cross · 18.20-22.50s (4.30s) · 1.17x · speed  
+  _The wider crowd at the cross — 'passers-by wagging their heads.'_
+- ` 5` **body/hook** — #05 The Religious Leaders Jeer · 22.50-28.38s (5.88s) · 0.86x · speed  
+  _Christ on the cross under 'the religious leaders jeering: He trusted in God.'_
+- ` 6` **body/hook** — #09 Twelve Legions Restrained · 28.38-31.96s (3.58s) · 1.30x · speed+trim  
+  _Bowed Christ under 'let him deliver him now.'_
+- ` 7` **body/hook** — #13 The Mockers and the Silent King · 31.96-34.62s (2.66s) · 1.30x · speed+trim  
+  _Christ bearing the scorn — 'the same taunt.'_
+- ` 8` **body/hook** — #08 He Had Every Power · 34.62-39.64s (5.02s) · 1.00x · speed  
+  _Christ's cry under 'flung at Him by people who never saw... they sneered.'_
+- ` 9` **body/hook** — #06 They Shoot Out the Lip · 39.64-45.32s (5.68s) · 0.89x · speed  
+  _The full crucifixion under 'He had every power.'_
+- `10` **body/hook** — #10 Looking Down in Love · 45.32-53.72s (8.40s) · 0.60x · speed  
+  _Christ's face in love under 'It was love.'_
+- `11` **body/hook** — #14 The Hand That Would Not Pull Free · 53.72-58.02s (4.30s) · 1.17x · speed  
+  _The lone figure toward the distant cross under 'with you in view.'_
+- `12` **hero-tail/hero** — #11 He Chose to Stay · 58.02-60.02s (2.00s) · 1.00x · speed  
   _Hero close — the cut lands on Christ (single appearance, no reuse)._
 
 ## Self-review panel
-- **Editor** — `STRONG` — 13 clips at avg 1.55x over 60s — fast, lots of distinct moments; mockery front, conviction-to-landing crescendo at the back.
-- **Beat-Sync** — `STRONG` — Each clip on its phrase: shaking heads on the open, David on 'Psalm twenty-two', diptych on 'a thousand years later', nailed hand on 'lacked the power', #08 on 'He had every power', face on 'It was love', hero cross on 'He chose to stay'.
-- **No-Reuse** — `STRONG` — 13 distinct body clips; hero #11 once at close.
-- **Pacing** — `CAUTION` — Brisk (max 2.2x) by design for a viral edit; sacred frames near the close at lower speed.
-- **Hero-Continuity** — `STRONG` — Opens on the shaking-heads hook, closes on the cross (#11) after the face of love — lands on the gospel-pivot.
-- **Jaded Viewer** — `STRONG` — Mockery cold-open stops the scroll; the 'He had every power -> it was love -> He chose to stay' crescendo gives the landing weight.
+- **Editor** — `STRONG` — 12 distinct moments, fast cuts, no dead hold — viral pace.
+- **Beat-Sync** — `STRONG` — each clip under its words; passion crops track the taunt->he-stayed arc.
+- **No-Reuse** — `STRONG` — 12 distinct body clips; hero once.
+- **Pacing** — `STRONG` — avg 1.08x; sacred close near full speed.
+- **Hero-Continuity** — `STRONG` — jeering hook open; gospel-pivot Christ close.
+- **Jaded Viewer** — `STRONG` — punchy montage; minor crop flaws flash by under the speed.
 
 ## Gates
-- **AS-G1 Timeline Coverage** — `PASS` — 14 slots tile 0->60.02s contiguously.
-- **AS-G2 No Reuse** — `PASS` — 13 distinct body clips; hero #11 appears once (close only) — no reuse.
-- **AS-G3 Speed/Trim Health** — `CONDITIONAL` — avg speed 1.55x, max 2.20x, 12/13 trimmed — brisk; verify it does not strobe.  
-  _fix:_ Reduce clip count (lower --clips) so slots breathe.
+- **AS-G1 Timeline Coverage** — `PASS` — 13 slots tile 0->60.02s contiguously.
+- **AS-G2 No Reuse** — `PASS` — 12 distinct body clips; hero #11 appears once (close only) — no reuse.
+- **AS-G3 Speed/Trim Health** — `PASS` — avg speed 1.08x, max 1.62x, 2 trimmed.
 - **AS-G4 Min Slot** — `PASS` — All body slots >= 0.8s.
 - **AS-G5 Section Coverage** — `PASS` — Every spoken section has a clip: ['hook'].
 - **AS-G6 Hero Close** — `PASS` — Opens on hook #01; gospel-pivot hero #11 closes 2.0s (single appearance).
 - **AS-G7 Gospel Frame** — `PASS` — Gospel-pivot + hook-open + close all present; cut lands on Christ.
-- **AS-G8 Beat Continuity** — `PASS` — gesture+taunt -> 'a thousand years later' -> Matthew fulfilment -> 'He had every power / it was love / He chose to stay' carries open->climax->close; clips match beats.
-- **AS-G9 Beat Density** — `PASS` — 13 moments · avg slot 4.5s (target 4s) — lively.
+- **AS-G8 Beat Continuity** — `PASS` — taunt thread open->climax->close; clips match words.
+- **AS-G9 Beat Density** — `CONDITIONAL` — 12 moments · avg slot 4.8s > target 4s — feels slow for 'lots of moments'.  
+  _fix:_ Raise --clips toward 15 (pool has 13).

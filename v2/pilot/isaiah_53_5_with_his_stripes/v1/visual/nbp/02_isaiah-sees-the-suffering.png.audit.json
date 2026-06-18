@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "full-bleed",
+      "actual": "a faint thin canvas-edge line remains at the borders — minor, will be cropped by the 9:16 assembly + Kling crop-cuts"
+    }
+  ],
+  "banned_token_hits": []
+}

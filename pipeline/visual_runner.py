@@ -244,6 +244,15 @@ def create_visuals(
     )
     log(f"      {folder}")
 
+    # Reuse-before-regenerate: per-scene recommendation over the locked plan -> reuse_plan.json
+    # (coherence-verified + topical-fit + no-repeat). Report-only; the render stage can act on it.
+    log("[reuse] scanning the clip library for clean reusable clips...")
+    try:
+        from pipeline import clip_reuse
+        clip_reuse.reuse_plan(v1_folder, provider=provider, log=log)
+    except Exception as e:  # noqa - never let a reuse-scan advisory break planning
+        log(f"      ! reuse scan skipped: {e}")
+
     return _run_phase_bc(
         v1_folder=v1_folder, folder=folder, plan=plan,
         self_review=self_review, independent_review=independent_review,

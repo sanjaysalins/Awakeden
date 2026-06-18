@@ -1,0 +1,28 @@
+{
+ "audited": true,
+ "passed": false,
+ "png_sha256": "27f758d9d21ab231d733c8ced7960706c4cada2fe52a6a9a3f379e3b5a80a4bb",
+ "n_votes": 1,
+ "split": false,
+ "failed_dims": [
+  "F5"
+ ],
+ "passes": {},
+ "fail_reasons": [
+  "Large Hebrew-style script fills ~70% of the frame as the dominant subject",
+  "lettering is decorative/garbled and dominates the image rather than sitting as a small background scroll"
+ ],
+ "votes": [
+  {
+   "passed": false,
+   "dims_failed": [
+    "F5"
+   ],
+   "reasons": [
+    "Large Hebrew-style script fills ~70% of the frame as the dominant subject",
+    "lettering is decorative/garbled and dominates the image rather than sitting as a small background scroll"
+   ]
+  }
+ ],
+ "note": "ensemble of 1 vote(s), any-fail"
+}

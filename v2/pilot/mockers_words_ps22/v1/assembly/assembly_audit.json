@@ -1,0 +1,79 @@
+{
+  "passed_overall": true,
+  "slots": [
+    {
+      "order": 0,
+      "scene_index": 5,
+      "section": "hook",
+      "words": "The crowd mocking Jesus at the cross was reading from a script",
+      "passed": true,
+      "note": "clip content QC'd full-res and in motion; matches its beat"
+    },
+    {
+      "order": 1,
+      "scene_index": 2,
+      "section": "hook",
+      "words": "A thousand years before,",
+      "passed": true,
+      "note": "clip carries a passing clip_qc sidecar (real look)"
+    },
+    {
+      "order": 2,
+      "scene_index": 4,
+      "section": "hook",
+      "words": "the passers-by wagging their heads,",
+      "passed": true,
+      "note": "clip carries a passing clip_qc sidecar (real look)"
+    },
+    {
+      "order": 3,
+      "scene_index": 6,
+      "section": "hook",
+      "words": "\"He trusted in God;",
+      "passed": true,
+      "note": "clip content QC'd full-res and in motion; matches its beat"
+    },
+    {
+      "order": 4,
+      "scene_index": 8,
+      "section": "hook",
+      "words": "unwilling witnesses that this was the One.",
+      "passed": true,
+      "note": "clip carries a passing clip_qc sidecar (real look)"
+    },
+    {
+      "order": 5,
+      "scene_index": 10,
+      "section": "hook",
+      "words": "But He could have come down —",
+      "passed": true,
+      "note": "clip carries a passing clip_qc sidecar (real look)"
+    },
+    {
+      "order": 6,
+      "scene_index": 11,
+      "section": "hook",
+      "words": "bearing the scorn He could have silenced,",
+      "passed": true,
+      "note": "clip carries a passing clip_qc sidecar (real look)"
+    },
+    {
+      "order": 7,
+      "scene_index": 12,
+      "section": "hook",
+      "words": "They told the King to come down —",
+      "passed": true,
+      "note": "clip content QC'd full-res and in motion; matches its beat"
+    },
+    {
+      "order": 8,
+      "scene_index": 13,
+      "section": "hook",
+      "words": "Come to the One who would not come down.",
+      "passed": true,
+      "note": "clip carries a passing clip_qc sidecar (real look)"
+    }
+  ],
+  "reroll_scene_indices": [],
+  "notes": "All slots matched their words."
+}

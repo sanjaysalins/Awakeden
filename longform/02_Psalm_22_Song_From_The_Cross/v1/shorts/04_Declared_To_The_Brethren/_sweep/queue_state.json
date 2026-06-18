@@ -1,0 +1,92 @@
+{
+  "short": "04_Declared_To_The_Brethren",
+  "clips": 14,
+  "status": "swept",
+  "fails": [],
+  "rows": [
+    {
+      "scene": 1,
+      "clip": "01_the-empty-tomb",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 2,
+      "clip": "02_the-psalm-turns",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 3,
+      "clip": "03_risen-christ-proclaiming",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 4,
+      "clip": "04_the-risen-christ",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 5,
+      "clip": "05_among-the-brethren",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 6,
+      "clip": "06_the-living-face",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 7,
+      "clip": "07_hebrews-names-him",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 8,
+      "clip": "08_not-ashamed",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 9,
+      "clip": "09_the-wounded-hand-on-the-shoulder",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 10,
+      "clip": "10_calling-you-in",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 11,
+      "clip": "11_the-invitation-face",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 12,
+      "clip": "12_the-brethren-rejoicing",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 13,
+      "clip": "13_welcomed-into-the-family",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 14,
+      "clip": "14_the-scarred-hands-in-praise",
+      "state": "PASS",
+      "foreign": []
+    }
+  ]
+}

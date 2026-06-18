@@ -56,4 +56,5 @@ _library/
 # scratch run logs (per-run, regenerable)
 longform/**/_*.log
 .agent_bridge/_*.log
+/_*.log
 *.stackdump

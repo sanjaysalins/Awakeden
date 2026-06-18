@@ -1,0 +1,52 @@
+{
+ "still_id": "06_darkness-over-the-land",
+ "subject_type": "multi-story",
+ "role": "multi-story",
+ "elements": [
+  {
+   "id": "full",
+   "label": "Darkness Over the Land",
+   "region": null,
+   "verified": true
+  },
+  {
+   "id": "the-darkened-sun",
+   "label": "the darkened sun",
+   "region": null,
+   "verified": true
+  },
+  {
+   "id": "fleeing-figures-on-the-r",
+   "label": "fleeing figures on the road",
+   "region": null,
+   "verified": true
+  },
+  {
+   "id": "a-watching-centurion",
+   "label": "a watching centurion",
+   "region": null,
+   "verified": true
+  },
+  {
+   "id": "the-shadowed-city-walls",
+   "label": "the shadowed city walls",
+   "region": null,
+   "verified": true
+  }
+ ],
+ "ambient_layer": [],
+ "period_real": {
+  "T1": "pass",
+  "T2": "pass",
+  "T3": "pass",
+  "T4": "pass",
+  "T5": "pass",
+  "T6": "pass"
+ },
+ "declared_by": "design",
+ "provenance": "fresh",
+ "lock_version": 1,
+ "png_sha256": "5faf6057009e9563f6696bcbb740921378ec3eea7fa55caf0265ee0398957a7d",
+ "locked": true,
+ "note": "three crosses + eclipse; titulus small/background (OK per F5)"
+}

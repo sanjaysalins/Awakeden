@@ -15,6 +15,7 @@ import json, re, time, glob, os, sys
 ROOT = r"C:\Users\sanjay\PycharmProjects\JesusInTheBible"
 sys.path.insert(0, ROOT)
 from pipeline import validators as V  # deterministic cut-plan gate (CLIP-VIRAL + CLIP-IMAGE-GROUNDED)
+from pipeline import element_manifest as EM  # Visual v3: tour ONLY verified manifest elements
 REQ = os.path.join(ROOT, ".agent_bridge", "requests")
 RESP = os.path.join(ROOT, ".agent_bridge", "responses")
 NBP = os.path.join(ROOT, "longform", "02_Psalm_22_Song_From_The_Cross", "v1",
@@ -47,7 +48,7 @@ with open(PLAN, encoding="utf-8") as f:
 _scenes = PLANJSON["plan"]["scenes"] if "plan" in PLANJSON else PLANJSON["scenes"]
 SCENES = {s["index"]: s for s in _scenes}
 
-def build_cutplan(scene):
+def build_cutplan(scene, manifest=None):
     # VIRAL CROP-CUT cut-plan with ANTI-HALLUCINATION prompt (2026-06-14 v2):
     # KEEP the dynamic full->mid->close->macro->return crop sequence (camera-only
     # reframes = the viral edit feel), but do NOT feed the rich subject_block to Kling
@@ -55,7 +56,14 @@ def build_cutplan(scene):
     # made Kling ANIMATE things not in the image (bleeding toe, lava from a lamplit
     # door, a writing hand). The input PNG is the content; the prompt = camera cuts
     # within a FROZEN painting + a hard "nothing inside moves or is added" rule.
-    macros = scene.get("macro_elements", [])[:4]
+    # Visual v3 (INV-25): when a LOCKED manifest exists, tour ONLY its VERIFIED elements
+    # (others were cut from the tour at reconcile) so CLIP-MANIFEST-GROUNDED passes.
+    if manifest:
+        macros = [e["label"] for e in manifest.get("elements", [])
+                  if e.get("verified") and e.get("id") != "full"][:5]
+        macros = macros or scene.get("macro_elements", [])[:4]
+    else:
+        macros = scene.get("macro_elements", [])[:4]
     cuts = [
         "Open on the full painted composition — the whole still image in frame.",
         "Cut to a mid framing — crop in toward the dominant painted subject.",
@@ -130,8 +138,13 @@ while True:
             sc = SCENES.get(idx)
             if not sc:
                 continue
-            cp = build_cutplan(sc)
-            ok, problems = V.gate_cutplan(cp)   # fail-closed: never write a non-viral / un-grounded plan
+            # Visual v3: load the still's LOCKED element manifest (if any) so the tour is
+            # built from + gated against its verified elements. No manifest -> unchanged.
+            png = os.path.join(NBP, f"{idx:02d}_{sc.get('slug','')}.png")
+            man = EM.read(png) if os.path.exists(png) else None
+            man = man if (man and man.get("locked")) else None
+            cp = build_cutplan(sc, manifest=man)
+            ok, problems = V.gate_cutplan(cp, manifest=man)   # fail-closed: non-viral / un-grounded / off-manifest
             if not ok:
                 print("CUTPLAN GATE FAIL", base, "scene", idx, "->", "; ".join(problems), flush=True)
                 continue

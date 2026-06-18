@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "dim small figure above",
+      "actual": "the Christ above renders larger than specced but on-topic (John looking up at the crucified Christ); reverent"
+    }
+  ],
+  "banned_token_hits": []
+}

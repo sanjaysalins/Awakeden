@@ -448,9 +448,37 @@ write only the subject and mood blocks; the engine assembles the rest.
 ### Banned tokens in the per-scene blocks (SP-G5)
 
 Comic panel, split-screen, diagram, text overlay, caption, label, frame, border,
-canvas edge, wooden frame, fantasy glow, neon, lens flare, glowing aura, modern,
-wristwatch, eyeglasses, smartphone, photograph, photorealistic, 3D render,
-cartoon, anime, stained glass, lightsaber, gore, blood spatter.
+canvas edge, wooden frame, panel, diptych, triptych, vertical divider, fantasy glow,
+neon, lens flare, glowing aura, modern, flag, banner, logo, wristwatch, eyeglasses,
+smartphone, photograph, photorealistic, 3D render, cartoon, anime, stained glass,
+lightsaber, gore, blood spatter, gem, jewel, faceted, glossy bead, legible lettering,
+garbled script.
+
+### Render guardrails — T1–T6 (binding; born from real shipped defects)
+
+Distilled from a batch of stills that shipped broken (see `data/render_guardrails.md` +
+`_rejected_coherence/`). Every `subject_block` MUST obey these — they are the most common
+AI-render failures. The image gate (F1–F5) is only the backstop.
+
+- **T1 — No written Scripture as the subject.** Convey "the Word / the verse" through a
+  *gesture* (a hand on a closed book, a finger tracing an unseen line), NEVER as legible or
+  garbled lettering filling a scroll/book. If a scroll appears it is small, edge-on, or in
+  shadow with "no legible lettering — bare surface or abstract indistinct marks only."
+- **T2 — One full-bleed scene, never panels.** Render across-time ideas (e.g. David then ↔
+  Christ now) as a SINGLE unified scene — the second moment as a soft vision/memory behind
+  the first — NEVER two side-by-side panels. Spec "single full-bleed scene, edge to edge; no
+  frame, border, dividing line, diptych or triptych."
+- **T3 — Faces are the #1 risk.** Spec eyes explicitly: "both eyes level, same size, looking
+  the SAME direction; calm and sorrowful, not staring." Prefer downcast / closed eyes or a
+  3/4-turned head over a head-on wide-eyed gaze; prefer a MID-shot over an extreme tight face
+  close-up (tight crops magnify eye errors); mouth closed or barely parted (no bared-teeth
+  grimace). A gaunt, anguished, weeping Man-of-Sorrows face is GOOD — broken eyes are not.
+- **T4 — Sacred objects are the right material.** A crucifixion nail is a "rough, dull,
+  hand-forged IRON spike, dark grey, no shine" — never a gem/jewel/faceted bead.
+- **T5 — Crowds: ≤3 sharp faces.** Render at most three clearly-detailed faces; push the rest
+  into shadow, soft-focus, hoods, or back-turned. A crowd reads as a mass, not portraits.
+- **T6 — Strictly period.** Ancient Near East / first-century only; no modern flags, banners,
+  objects, dress, or hairstyles.
 
 ### Jesus character variants
 

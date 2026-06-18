@@ -1,0 +1,33 @@
+<!doctype html><meta charset=utf-8><title>Clip motion comparison</title>
+<style>
+body{background:#14110d;color:#e8e0cf;font-family:Segoe UI,system-ui,sans-serif;margin:0;padding:24px}
+h1{color:#f0d98a}h2{color:#f0d98a;margin-top:36px}
+.row{display:flex;gap:18px;flex-wrap:wrap}
+.col{background:#1e1a14;border-radius:10px;padding:10px;width:300px}
+.col video{width:280px;border-radius:8px;background:#000;display:block}
+.tag{font-weight:700;padding:4px 8px;border-radius:5px;color:#fff;display:inline-block;margin-bottom:8px}
+.note{font-size:13px;color:#c8bfa8;margin-top:6px;min-height:48px}
+.kling{background:#c0392b}.hf{background:#2e5e8c}.ff{background:#2e7d32}
+</style>
+<h1>Viral-clip motion comparison &mdash; same two stills, three methods</h1>
+<p style="color:#c8bfa8">All looping/muted. <span class=tag style="background:#c0392b">KLING (shipped)</span>=current direct-Kling viral punch-in &nbsp;
+<span class=tag style="background:#2e5e8c">HF KLING</span>=Higgsfield, gentle prompt &nbsp;
+<span class=tag style="background:#2e7d32">FFMPEG</span>=deterministic viral crop-cuts on the real pixels ($0).</p>
+
+<p style="color:#f0d98a"><b>WINNER candidate:</b> <span class=tag style="background:#7b3fa0">HF KLING (viral)</span> = Higgsfield Kling 3.0 with a real viral motion prompt (the skill's way).</p>
+
+<h2>Scene 04&middot;09 &mdash; the wounded hand on the shoulder</h2>
+<div class=row>
+ <div class=col><span class="tag kling">KLING (shipped)</span><video src="04_09_hand_KLING.mp4" muted loop controls></video><div class=note>Punch-in onto the hand &rarr; <b>mangled/extra fingers</b>. The hallucination.</div></div>
+ <div class=col><span class="tag" style="background:#7b3fa0">HF KLING (viral) &#11088;</span><video src="04_09_hand_HFVIRAL.mp4" muted loop controls></video><div class=note><b>Correct 5-finger wounded hand</b>, sharp, real viral punch-in. The fix.</div></div>
+ <div class=col><span class="tag ff">FFMPEG (benched, NSFW-only)</span><video src="04_09_hand_FFMPEG.mp4" muted loop controls></video><div class=note>Real pixels, no hallucination, $0 &mdash; but you dislike it. Reserved for NSFW.</div></div>
+ <div class=col><span class="tag hf">HF KLING (gentle)</span><video src="04_09_hand_HF.mp4" muted loop controls></video><div class=note>Reference: clean but only a slow push, not viral.</div></div>
+</div>
+
+<h2>Scene 06&middot;01 &mdash; one man alone</h2>
+<div class=row>
+ <div class=col><span class="tag kling">KLING (shipped)</span><video src="06_01_face_KLING.mp4" muted loop controls></video><div class=note>Face <b>morphs into a different figure</b> on the reframe.</div></div>
+ <div class=col><span class="tag" style="background:#7b3fa0">HF KLING (viral) &#11088;</span><video src="06_01_face_HFVIRAL.mp4" muted loop controls></video><div class=note><b>Face holds coherent</b> on the punch-in. Real viral camera. The fix.</div></div>
+ <div class=col><span class="tag ff">FFMPEG (benched, NSFW-only)</span><video src="06_01_face_FFMPEG.mp4" muted loop controls></video><div class=note>Real pixels, no hallucination, $0 &mdash; reserved for NSFW.</div></div>
+ <div class=col><span class="tag hf">HF KLING (gentle)</span><video src="06_01_face_HF.mp4" muted loop controls></video><div class=note>Reference: clean but only a slow push, not viral.</div></div>
+</div>

@@ -1,0 +1,144 @@
+[
+  {
+    "scene": 1,
+    "clip": "01_the-cry",
+    "gate": "PASS",
+    "shipped": true,
+    "do_not_use": false,
+    "foreign": [],
+    "note": "clean face tour; thorn-blood is in the still",
+    "still_locked": true
+  },
+  {
+    "scene": 2,
+    "clip": "02_davids-forsaken-psalm",
+    "gate": "FAIL",
+    "shipped": true,
+    "do_not_use": false,
+    "foreign": [
+      "garbled Hebrew scroll text toured into focus"
+    ],
+    "note": "scroll lettering pushed into frame (F5 + writing surface)",
+    "still_locked": false
+  },
+  {
+    "scene": 3,
+    "clip": "03_the-first-line",
+    "gate": "FAIL",
+    "shipped": true,
+    "do_not_use": false,
+    "foreign": [
+      "entire clip is a garbled Hebrew scroll macro"
+    ],
+    "note": "writing scene animated \u2014 flagrant never-animate-writing",
+    "still_locked": false
+  },
+  {
+    "scene": 4,
+    "clip": "04_the-ninth-hour",
+    "gate": "PASS",
+    "shipped": true,
+    "do_not_use": false,
+    "foreign": [],
+    "note": "faithful; no invented titulus (unlike the bake-off direct clip)",
+    "still_locked": true
+  },
+  {
+    "scene": 5,
+    "clip": "05_my-god-my-god",
+    "gate": "PASS",
+    "shipped": true,
+    "do_not_use": false,
+    "foreign": [],
+    "note": "clean crying-face tour",
+    "still_locked": true
+  },
+  {
+    "scene": 6,
+    "clip": "06_darkness-over-the-land",
+    "gate": "PASS",
+    "shipped": true,
+    "do_not_use": false,
+    "foreign": [],
+    "note": "three crosses + eclipse; titulus small/background (OK per F5)",
+    "still_locked": true
+  },
+  {
+    "scene": 7,
+    "clip": "07_the-same-words",
+    "gate": "FAIL",
+    "shipped": true,
+    "do_not_use": false,
+    "foreign": [
+      "garbled Hebrew scroll macro"
+    ],
+    "note": "writing surface toured to garbled letters",
+    "still_locked": false
+  },
+  {
+    "scene": 8,
+    "clip": "08_still-my-god",
+    "gate": "FAIL",
+    "shipped": true,
+    "do_not_use": false,
+    "foreign": [
+      "gold picture-frame border revealed"
+    ],
+    "note": "still is on a gilt frame/panel (F2 frame/border)",
+    "still_locked": false
+  },
+  {
+    "scene": 9,
+    "clip": "09_bearing-the-forsaking",
+    "gate": "PASS",
+    "shipped": true,
+    "do_not_use": false,
+    "foreign": [],
+    "note": "faithful (lamb/shackle in the still); manifest under-declares",
+    "still_locked": true
+  },
+  {
+    "scene": 10,
+    "clip": "10_so-you-never-will-be",
+    "gate": "FAIL",
+    "shipped": true,
+    "do_not_use": false,
+    "foreign": [
+      "floating half-body bust \u2014 figure cut off at the chest into a dark void, no grounded body"
+    ],
+    "note": "USER FLAG (gate missed): half-body Jesus floating \u2014 REPLACE the still",
+    "still_locked": false
+  },
+  {
+    "scene": 11,
+    "clip": "11_the-way-opened-from-the-dark",
+    "gate": "PASS",
+    "shipped": true,
+    "do_not_use": false,
+    "foreign": [],
+    "note": "clean; light-break is painted into the still",
+    "still_locked": true
+  },
+  {
+    "scene": 12,
+    "clip": "12_a-thousand-years-apart",
+    "gate": "FAIL",
+    "shipped": false,
+    "do_not_use": true,
+    "foreign": [
+      "garbled scroll + writing quill"
+    ],
+    "note": "scroll/writing toured \u2014 USER: DO NOT USE (never reuse/animate)",
+    "still_locked": false
+  },
+  {
+    "scene": 13,
+    "clip": "13_however-far-youve-run",
+    "gate": "PASS",
+    "shipped": true,
+    "do_not_use": false,
+    "foreign": [],
+    "note": "clean landing \u2014 lone figure to the cross on the horizon",
+    "still_locked": true
+  }
+]

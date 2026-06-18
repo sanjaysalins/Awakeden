@@ -1,0 +1,83 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: narration
+
+LENS — judge this NARRATION on (be specific, cite the exact line/phrase):
+- Doctrinal soundness: evangelical, biblically faithful; NO invented doctrine, NO contrarian/
+  clickbait/contested readings used to chase freshness.
+- KJV verbatim: every word inside quotation marks must be exact KJV. Flag any altered word.
+- Clarity on first hearing: a listener with zero Bible knowledge must follow it; no clever-but-
+  confusing conceit, no logic trick, no self-contradiction.
+- Grace-anchored conviction: NO fear / gain-loss / self-interest / works framing; the Spirit
+  convicts, the script invites.
+- Freshness = faithful depth: surprising about the TEXT, orthodox in the claim and the landing.
+- One thread spine from hook -> middle -> CTA (no thread-swapping).
+- Landing does NEW work (not a tired generic 'will you trust Him?' close).
+- Hook grips in the first ~5 seconds.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block:
+
+VERDICT: PASS | REVISE | FAIL
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# With His Stripes — Isaiah 53:5 short (v2 pilot, A/B build)
+
+- **Built via:** the v2 skill discipline (`/study` → `/narrate` → `/review`), agent-mode ($0).
+- **Spine (one thread):** Isaiah 53:5 promised healing through *someone else's* wounds 700 years
+  early; Peter — who stood near the scourging — quotes Isaiah's exact "stripes/healed" and says
+  it happened "in his own body on the tree," shifting the pronoun from "we" to "ye" to aim the
+  promise straight at the reader. The wounds were His; the healing is yours.
+- **Cross-ref (airtight):** Isaiah 53:5 → 1 Peter 2:24 (Peter quotes Isaiah verbatim and applies it to Christ).
+- **Format:** 9:16, ~60s, Gospel Five-Beat, grace-anchored CTA-to-Jesus.
+- **Doctrine guard:** "healed" = healed from sin/guilt (1 Pet 2:24 "bare our sins… live unto
+  righteousness"), NOT a physical-health / prosperity claim. Grace-anchored landing, no fear/gain-loss.
+
+---
+
+**[narrator]**
+You carry a wound nothing has been able to close — a guilt that keeps reopening, no matter how hard you try to be good enough.
+
+**[narrator]**
+Seven hundred years before the cross, Isaiah wrote that the healing you can't reach would come through someone else's wounds.
+
+**[narrator — KJV, Isaiah 53:5]**
+"But he was wounded for our transgressions, he was bruised for our iniquities... and with his stripes we are healed."
+
+**[narrator]**
+Stripes — the marks of a Roman scourge, written down centuries before Rome ever used one. And Peter, who stood near enough to watch that scourging, reached back to Isaiah's exact words:
+
+**[narrator — KJV, 1 Peter 2:24]**
+"Who his own self bare our sins in his own body on the tree... by whose stripes ye were healed."
+
+**[narrator]**
+Watch the one word Peter changes. Isaiah wrote "we." Peter writes "ye" — and aims it straight at you.
+
+**[narrator]**
+You were never meant to heal yourself. The stripes that mend you have already been borne — in His own body, on the tree. Come to Him.
+
+---
+
+## DEPTH & SOURCING  *(not spoken)*
+- **KJV verbatim** (self-verified via `pipeline/scripture.fetch_kjv`, 2026-06-16): Isaiah 53:5 and
+  1 Peter 2:24. Both quoted spans are ordered, non-overlapping ellipsis fragments of the exact verse.
+  - Isa 53:5 omits only "the chastisement of our peace was upon him;" (the "..." between iniquities and "and with his stripes").
+  - 1 Pet 2:24 omits only "that we, being dead to sins, should live unto righteousness:" (the "..." before "by whose stripes").
+- **The fresh, faithful lever:** Peter shifts Isaiah's pronoun — Isaiah 53:5 "with his stripes **we** are
+  healed" → 1 Peter 2:24 "by whose stripes **ye** were healed." Surprising about the *text* (the eyewitness
+  personalises the prophecy), never about the *truth*.
+- **"Stripes" = the Roman flagellum**, written ~700 years before Rome made scourging-then-crucifixion its
+  instrument. Descriptive predictive match, NT-cited (Peter applies it directly to Christ).
+- **Doctrine:** "healed" is healed from sin/guilt (1 Pet 2:24 names it: "bare our sins… should live unto
+  righteousness"), not a health claim. The sheep echo (Isa 53:6 / 1 Pet 2:25) underwrites the substitution.
+- **Grace-anchored landing:** the wounds are His, the healing is given ("already been borne"); "Come to Him."
+  No fear / gain-loss / manufactured pressure; the close does NEW work (the pronoun aimed at YOU).
+
+## VOICE PLAN
+- `narrator` only (all quoted Scripture is OT prophecy + epistle, narrator-voiced per the attribution rule).
+----- ARTIFACT END -----

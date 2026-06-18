@@ -1,0 +1,9 @@
+{
+ "audited": true,
+ "passed": false,
+ "foreign": [
+  "garbled scroll (do-not-use)"
+ ],
+ "split": false,
+ "note": "element-gate sweep (agent look)"
+}

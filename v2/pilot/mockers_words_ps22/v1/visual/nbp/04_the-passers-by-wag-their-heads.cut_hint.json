@@ -1,0 +1,18 @@
+{
+  "scene_index": 4,
+  "title": "The Passers-By Wag Their Heads",
+  "scene_type": "unified",
+  "framing": "wide",
+  "arc_position": "public-misunderstanding",
+  "jesus_variant": "passion",
+  "viral_role": "build",
+  "pacing": "controlled",
+  "macro_elements": [
+    "the wagged heads",
+    "a jabbing finger",
+    "the small dim cross",
+    "the dust-toned robes"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

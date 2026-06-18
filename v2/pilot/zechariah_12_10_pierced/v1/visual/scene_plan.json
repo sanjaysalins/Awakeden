@@ -1,0 +1,359 @@
+{
+  "plan": {
+    "visual_reading": "The spear that pierces -> the pierced side -> God's own word -> the wounded cross -> the eyewitness -> the look-and-mourn -> grace poured out -> look at Him and live. Hero #5 (the cross) bookends.",
+    "red_team_notes": "reuse build: 7 neutral passion plates reused (topical-fit), 4 new (spear, prophet, John, grace).",
+    "candidates": [],
+    "scenes": [
+      {
+        "index": 1,
+        "slug": "the-spear",
+        "title": "The Spear",
+        "scene_type": "single",
+        "arc_position": "opening-hook",
+        "framing": "mid",
+        "purpose": "The Spear",
+        "rationale": "new",
+        "visible_elements": "The Spear",
+        "emotional_tone": "atmosphere of an unwitting prophecy being finished",
+        "subject_block": "a Roman soldier in worn first-century armour at the foot of a rough cross, the iron spearhead just entered the side of the crucified Christ, a thin dark trail of blood and water at the wound, the soldier's weathered face turned up in unease, the dim cross looming above against a bruised darkening sky",
+        "mood_block": "atmosphere of an unwitting prophecy being finished",
+        "jesus_variant": "passion",
+        "priority": 2,
+        "macro_elements": [
+          "the iron spearhead at the side",
+          "the thin blood-and-water trail",
+          "the soldier's gauntleted hand",
+          "the looming dim cross"
+        ],
+        "vignettes": [],
+        "pacing": "controlled",
+        "viral_role": "hook-open",
+        "shot_kind": "standard",
+        "reuse_source": null
+      },
+      {
+        "index": 2,
+        "slug": "the-pierced-side",
+        "title": "The Pierced Side",
+        "scene_type": "single",
+        "arc_position": "theological-centre",
+        "framing": "close",
+        "purpose": "The Pierced Side",
+        "rationale": "reuse",
+        "visible_elements": "The Pierced Side",
+        "emotional_tone": "atmosphere of the pierced side",
+        "subject_block": "(reused)",
+        "mood_block": "atmosphere of the pierced side",
+        "jesus_variant": "passion",
+        "priority": 0,
+        "macro_elements": [
+          "the pierced side wound",
+          "the stream of blood and water",
+          "the still robed body",
+          "the dark beam"
+        ],
+        "vignettes": [],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "reuse_source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/14_that-water-is-himself.mp4"
+      },
+      {
+        "index": 3,
+        "slug": "gods-staggering-word",
+        "title": "God's Staggering Word",
+        "scene_type": "single",
+        "arc_position": "ot-echo",
+        "framing": "wide",
+        "purpose": "God's Staggering Word",
+        "rationale": "new",
+        "visible_elements": "God's Staggering Word",
+        "emotional_tone": "atmosphere of God's own staggering word",
+        "subject_block": "an aged first-century Hebrew prophet seen from the side in a coarse mantle, his lined face lifted and his eyes wide toward a dim far-off rise where a single pierced figure hangs small against a pale bruised sky, his weathered hand raised in awe, the foreground rocks dark, the distance hazed in prophetic light, no writing or scroll present anywhere",
+        "mood_block": "atmosphere of God's own staggering word",
+        "jesus_variant": "passion",
+        "priority": 0,
+        "macro_elements": [
+          "the prophet's lifted eyes",
+          "the raised hand",
+          "the dim pierced figure",
+          "the fold of the mantle"
+        ],
+        "vignettes": [],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "reuse_source": null
+      },
+      {
+        "index": 4,
+        "slug": "the-wounded-one",
+        "title": "The Wounded One",
+        "scene_type": "single",
+        "arc_position": "theological-centre",
+        "framing": "mid",
+        "purpose": "The Wounded One",
+        "rationale": "reuse",
+        "visible_elements": "The Wounded One",
+        "emotional_tone": "atmosphere of the wounded one",
+        "subject_block": "(reused)",
+        "mood_block": "atmosphere of the wounded one",
+        "jesus_variant": "passion",
+        "priority": 0,
+        "macro_elements": [
+          "the marked shoulder",
+          "the bound wrists",
+          "the bowed head",
+          "the rough post"
+        ],
+        "vignettes": [],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "reuse_source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/03_wounded-for-our-transgressions.mp4"
+      },
+      {
+        "index": 5,
+        "slug": "the-cross",
+        "title": "The Cross",
+        "scene_type": "single",
+        "arc_position": "nt-gospel-link",
+        "framing": "low-angle",
+        "purpose": "The Cross",
+        "rationale": "reuse",
+        "visible_elements": "The Cross",
+        "emotional_tone": "atmosphere of the finished cross",
+        "subject_block": "(reused)",
+        "mood_block": "atmosphere of the finished cross",
+        "jesus_variant": "passion",
+        "priority": 1,
+        "macro_elements": [
+          "the bowed thorn-crowned head",
+          "a nailed open hand",
+          "the still robed body",
+          "the grain of the beam"
+        ],
+        "vignettes": [],
+        "pacing": "slower",
+        "viral_role": "climax",
+        "shot_kind": "hero",
+        "reuse_source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/06_in-his-own-body-on-the-tree.mp4"
+      },
+      {
+        "index": 6,
+        "slug": "whom-they-pierced",
+        "title": "Whom They Pierced",
+        "scene_type": "single",
+        "arc_position": "symbolic-support",
+        "framing": "close",
+        "purpose": "Whom They Pierced",
+        "rationale": "reuse",
+        "visible_elements": "Whom They Pierced",
+        "emotional_tone": "atmosphere of the wounds",
+        "subject_block": "(reused)",
+        "mood_block": "atmosphere of the wounds",
+        "jesus_variant": "passion",
+        "priority": 0,
+        "macro_elements": [
+          "the raised welt-lines",
+          "the curve of the shoulder",
+          "the fallen strand of hair",
+          "the shadowed edge"
+        ],
+        "vignettes": [],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "reuse_source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/05_by-whose-stripes.mp4"
+      },
+      {
+        "index": 7,
+        "slug": "john-saw-it",
+        "title": "John Saw It",
+        "scene_type": "single",
+        "arc_position": "human-response",
+        "framing": "mid",
+        "purpose": "John Saw It",
+        "rationale": "new",
+        "visible_elements": "John Saw It",
+        "emotional_tone": "atmosphere of the eyewitness who saw and believed",
+        "subject_block": "a young first-century disciple standing at the foot of the cross, his face lifted in awe and grief toward the pierced Christ above, one open hand pressed to his own chest, the other half-raised, warm low light on his upturned face against deep shadow, the dim crucified figure small at the top of the beam",
+        "mood_block": "atmosphere of the eyewitness who saw and believed",
+        "jesus_variant": "passion",
+        "priority": 0,
+        "macro_elements": [
+          "the upturned awed face",
+          "the hand pressed to the chest",
+          "the half-raised hand",
+          "the dim pierced figure above"
+        ],
+        "vignettes": [],
+        "pacing": "slower",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "reuse_source": null
+      },
+      {
+        "index": 8,
+        "slug": "they-look-and-mourn",
+        "title": "They Look And Mourn",
+        "scene_type": "unified",
+        "arc_position": "human-response",
+        "framing": "wide",
+        "purpose": "They Look And Mourn",
+        "rationale": "reuse",
+        "visible_elements": "They Look And Mourn",
+        "emotional_tone": "atmosphere of looking and mourning",
+        "subject_block": "(reused)",
+        "mood_block": "atmosphere of looking and mourning",
+        "jesus_variant": "passion",
+        "priority": 0,
+        "macro_elements": [
+          "the upturned mourning faces",
+          "a softening face",
+          "the warm dawn ground",
+          "a loosening fist"
+        ],
+        "vignettes": [
+          "a clenched fist loosening",
+          "a bowed shamed head",
+          "an open empty hand",
+          "a far gathered company in dawn light"
+        ],
+        "pacing": "slower",
+        "viral_role": "pivot",
+        "shot_kind": "standard",
+        "reuse_source": "v2/pilot/mockers_words_ps22/v1/visual/nbp/13_for-the-very-people-throwing-it.mp4"
+      },
+      {
+        "index": 9,
+        "slug": "the-spirit-of-grace",
+        "title": "The Spirit Of Grace",
+        "scene_type": "single",
+        "arc_position": "revelation",
+        "framing": "mid",
+        "purpose": "The Spirit Of Grace",
+        "rationale": "new",
+        "visible_elements": "The Spirit Of Grace",
+        "emotional_tone": "atmosphere of the spirit of grace poured out",
+        "subject_block": "a soft steady shaft of warm light descending over a small group of bowed mourning first-century figures at the foot of a dim cross, the light resting on their lowered heads and open hands, their faces eased from grief toward hope, the surrounding ground falling into shadow, no sparkles or particles, only steady warm light",
+        "mood_block": "atmosphere of the spirit of grace poured out",
+        "jesus_variant": "passion",
+        "priority": 0,
+        "macro_elements": [
+          "the descending shaft of light",
+          "a bowed mourning head",
+          "an open lifted hand",
+          "the dim cross beyond"
+        ],
+        "vignettes": [],
+        "pacing": "slower",
+        "viral_role": "close",
+        "shot_kind": "standard",
+        "reuse_source": null
+      },
+      {
+        "index": 10,
+        "slug": "look-at-him",
+        "title": "Look At Him",
+        "scene_type": "single",
+        "arc_position": "revelation",
+        "framing": "close",
+        "purpose": "Look At Him",
+        "rationale": "reuse",
+        "visible_elements": "Look At Him",
+        "emotional_tone": "atmosphere of a gaze that gives life",
+        "subject_block": "(reused)",
+        "mood_block": "atmosphere of a gaze that gives life",
+        "jesus_variant": "passion",
+        "priority": 4,
+        "macro_elements": [
+          "the turned eyes",
+          "the thorn-marked brow",
+          "light on one cheek",
+          "the dark beam behind"
+        ],
+        "vignettes": [],
+        "pacing": "slower",
+        "viral_role": "close",
+        "shot_kind": "standard",
+        "reuse_source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/11_aimed-at-you.mp4"
+      },
+      {
+        "index": 11,
+        "slug": "and-live",
+        "title": "And Live",
+        "scene_type": "single",
+        "arc_position": "closing-devotional",
+        "framing": "wide",
+        "purpose": "And Live",
+        "rationale": "reuse",
+        "visible_elements": "And Live",
+        "emotional_tone": "atmosphere of breaking dawn life",
+        "subject_block": "(reused)",
+        "mood_block": "atmosphere of breaking dawn life",
+        "jesus_variant": "passion",
+        "priority": 5,
+        "macro_elements": [
+          "the lit upright beam",
+          "the bowed still body",
+          "the gold dawn horizon",
+          "the soft hill crest"
+        ],
+        "vignettes": [],
+        "pacing": "slower",
+        "viral_role": "close",
+        "shot_kind": "standard",
+        "reuse_source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/12_finished-at-the-cross.mp4"
+      }
+    ],
+    "short_priority": [
+      5,
+      1,
+      2,
+      7,
+      10,
+      11,
+      8,
+      9
+    ],
+    "hero_candidate": 5,
+    "rationale": "Hero = the cross (5). Reused 7 thread-neutral passion plates; generated only the 4 Zech-specific scenes.",
+    "beat_coverage": {
+      "hook": [
+        1
+      ],
+      "point": [
+        3
+      ],
+      "proof": [
+        2,
+        4,
+        5,
+        6,
+        7
+      ],
+      "conviction": [
+        8,
+        9
+      ],
+      "landing": [
+        10,
+        11
+      ]
+    }
+  },
+  "self_review": {
+    "overall": "LOCKED"
+  },
+  "independent_review": {
+    "overall": "LOCKED"
+  },
+  "paper_cohesion": {
+    "scope": "paper",
+    "passed": true,
+    "notes": "reuse build, thread carried, lands on Christ",
+    "conflict_scenes": []
+  },
+  "authoritative_overall": "LOCKED"
+}

@@ -1,0 +1,63 @@
+{
+  "short": "02_The_Mockers_Words",
+  "clips": 7,
+  "status": "swept",
+  "fails": [
+    "02_david-records-the-taunt",
+    "03_let-him-deliver-him",
+    "11_he-chose-to-stay",
+    "12_a-thousand-years-apart"
+  ],
+  "rows": [
+    {
+      "scene": 1,
+      "clip": "01_the-shaking-heads",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 2,
+      "clip": "02_david-records-the-taunt",
+      "state": "FAIL",
+      "foreign": [
+        "garbled scroll + animating quill"
+      ]
+    },
+    {
+      "scene": 3,
+      "clip": "03_let-him-deliver-him",
+      "state": "FAIL",
+      "foreign": [
+        "full-frame garbled Hebrew scroll"
+      ]
+    },
+    {
+      "scene": 4,
+      "clip": "04_the-crowd-at-the-cross",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 10,
+      "clip": "10_looking-down-in-love",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 11,
+      "clip": "11_he-chose-to-stay",
+      "state": "FAIL",
+      "foreign": [
+        "faceted GEM in the nailed palm (HERO clip)"
+      ]
+    },
+    {
+      "scene": 12,
+      "clip": "12_a-thousand-years-apart",
+      "state": "FAIL",
+      "foreign": [
+        "garbled scroll + animating quill"
+      ]
+    }
+  ]
+}

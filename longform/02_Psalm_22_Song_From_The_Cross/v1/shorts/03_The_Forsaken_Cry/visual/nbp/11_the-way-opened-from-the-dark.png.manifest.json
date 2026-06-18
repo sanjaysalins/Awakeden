@@ -1,0 +1,52 @@
+{
+ "still_id": "11_the-way-opened-from-the-dark",
+ "subject_type": "hero",
+ "role": "hero",
+ "elements": [
+  {
+   "id": "full",
+   "label": "The Way Opened from the Dark",
+   "region": null,
+   "verified": true
+  },
+  {
+   "id": "the-inclined-head",
+   "label": "the inclined head",
+   "region": null,
+   "verified": true
+  },
+  {
+   "id": "the-widening-break-of-pa",
+   "label": "the widening break of pale gold light",
+   "region": null,
+   "verified": true
+  },
+  {
+   "id": "an-outstretched-nailed-h",
+   "label": "an outstretched nailed hand",
+   "region": null,
+   "verified": true
+  },
+  {
+   "id": "the-dark-hill-below",
+   "label": "the dark hill below",
+   "region": null,
+   "verified": true
+  }
+ ],
+ "ambient_layer": [],
+ "period_real": {
+  "T1": "pass",
+  "T2": "pass",
+  "T3": "pass",
+  "T4": "pass",
+  "T5": "pass",
+  "T6": "pass"
+ },
+ "declared_by": "design",
+ "provenance": "fresh",
+ "lock_version": 1,
+ "png_sha256": "1be23d5734b387abea5b85783dd0f4487254a48b76771c9fec5b861082b136e3",
+ "locked": true,
+ "note": "clean; light-break is painted into the still"
+}

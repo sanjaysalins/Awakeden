@@ -1,0 +1,207 @@
+{
+  "_README": "Blind calibration targets + the HIDDEN machine verdict (for scoring only — not shown on the blind page).",
+  "seed": 7,
+  "n": 50,
+  "targets": [
+    {
+      "still": "image_library/stills/scroll_candlelight_hands.png",
+      "machine_passed": false
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/08_still-my-god.png",
+      "machine_passed": false
+    },
+    {
+      "still": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/06_in-his-own-body-on-the-tree.png",
+      "machine_passed": false
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/08_he-had-every-power.png",
+      "machine_passed": false
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/01_dice-in-the-dust.png",
+      "machine_passed": true
+    },
+    {
+      "still": "v2/pilot/mockers_words_ps22/v1/visual/nbp/02_a-script-a-thousand-years-old.png",
+      "machine_passed": false
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/07_the-bowed-head.png",
+      "machine_passed": true
+    },
+    {
+      "still": "_library/plates/stone-well/stone-well.png",
+      "machine_passed": true
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/08_not-ashamed.png",
+      "machine_passed": true
+    },
+    {
+      "still": "image_library/stills/exiled_nation_column_grey.png",
+      "machine_passed": true
+    },
+    {
+      "still": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/14_the-wound-he-closed.png",
+      "machine_passed": true
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/13_however-far-youve-run.png",
+      "machine_passed": true
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/08_whom-they-pierced.png",
+      "machine_passed": true
+    },
+    {
+      "still": "image_library/stills/christ_arm_of_the_lord_hand.png",
+      "machine_passed": true
+    },
+    {
+      "still": "image_library/stills/christ_reaching_hand_grace.png",
+      "machine_passed": true
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/11_a-thousand-years-apart.png",
+      "machine_passed": false
+    },
+    {
+      "still": "v2/pilot/mockers_words_ps22/v1/visual/nbp/14_come-to-the-one-who-would-not-come-down.png",
+      "machine_passed": false
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/02_a-people-not-yet-born.png",
+      "machine_passed": false
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/01_the-cry.png",
+      "machine_passed": false
+    },
+    {
+      "still": "v2/pilot/mockers_words_ps22/v1/visual/nbp/03_they-shoot-out-the-lip.png",
+      "machine_passed": false
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/02_davids-forsaken-psalm.png",
+      "machine_passed": false
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/13_welcomed-into-the-family.png",
+      "machine_passed": true
+    },
+    {
+      "still": "image_library/stills/isa53_servant_bearing_weight.png",
+      "machine_passed": false
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/12_a-thousand-years-apart.png",
+      "machine_passed": false
+    },
+    {
+      "still": "_library/plates/wilderness/wilderness.png",
+      "machine_passed": true
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/04_the-reach-of-the-cross.png",
+      "machine_passed": false
+    },
+    {
+      "still": "_library/plates/olive-grove/olive-grove.png",
+      "machine_passed": true
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/11_nation-after-nation.png",
+      "machine_passed": false
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/06_a-thousand-years-apart.png",
+      "machine_passed": true
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/08_who-made-every-river.png",
+      "machine_passed": true
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/06_soldiers-cast-lots.png",
+      "machine_passed": true
+    },
+    {
+      "still": "_library/plates/storm-sea/storm-sea.png",
+      "machine_passed": true
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/03_let-him-deliver-him.png",
+      "machine_passed": false
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/12_wherever-you-are.png",
+      "machine_passed": true
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/08_the-torn-veil.png",
+      "machine_passed": true
+    },
+    {
+      "still": "v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/04_the-wounded-one.png",
+      "machine_passed": true
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/04_the-tongue-cleaveth.png",
+      "machine_passed": true
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/03_i-will-declare-thy-name.png",
+      "machine_passed": false
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/06_shot-out-the-lip.png",
+      "machine_passed": false
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/02_david-at-the-lamp.png",
+      "machine_passed": false
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/13_to-bring-you-home.png",
+      "machine_passed": true
+    },
+    {
+      "still": "v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/09_the-spirit-of-grace.png",
+      "machine_passed": false
+    },
+    {
+      "still": "v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/11_and-live.png",
+      "machine_passed": false
+    },
+    {
+      "still": "v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/06_whom-they-pierced.png",
+      "machine_passed": false
+    },
+    {
+      "still": "_library/plates/dawn-sky/dawn-sky.png",
+      "machine_passed": true
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/03_poured-out-like-water.png",
+      "machine_passed": false
+    },
+    {
+      "still": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/08_all-we-like-sheep.png",
+      "machine_passed": true
+    },
+    {
+      "still": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/12_finished-at-the-cross.png",
+      "machine_passed": false
+    },
+    {
+      "still": "_library/plates/jerusalem-street/jerusalem-street.png",
+      "machine_passed": true
+    },
+    {
+      "still": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/14_laying-down-his-life.png",
+      "machine_passed": false
+    }
+  ]
+}

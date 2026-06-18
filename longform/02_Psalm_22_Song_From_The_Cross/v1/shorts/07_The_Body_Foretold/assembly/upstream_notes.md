@@ -6,13 +6,8 @@ stages so the next episode's clips drop into the cut with less fighting.
 ## What was hard to fit this run
 
 - **#01 Out of Joint** — slot 3.3s, played 1.30x AND trimmed 58% (role=hook-open). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#05 I May Tell All My Bones** — slot 2.3s, played 1.30x AND trimmed 70% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#06 They Look and Stare** — slot 2.6s, played 1.30x AND trimmed 67% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#09 A Thousand Years Apart** — slot 2.1s, played 1.30x AND trimmed 72% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#13 To Bring You Home** — needed 2.02x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
-- **#10 Wounded for Us** — slot 1.4s, played 1.30x AND trimmed 82% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#12 Crushed So Another Goes Free** — slot 0.9s, played 1.30x AND trimmed 88% (role=climax). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#14 Come to Him** — slot 4.6s, played 1.30x AND trimmed 41% (role=close). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
+- **#05 I May Tell All My Bones** — slot 2.3s, played 1.30x AND trimmed 41% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
+- **#14 Come to Him** — slot 1.4s, played 1.30x AND trimmed 64% (role=close). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
 
 ## Standing 'design for the cut' rules
 

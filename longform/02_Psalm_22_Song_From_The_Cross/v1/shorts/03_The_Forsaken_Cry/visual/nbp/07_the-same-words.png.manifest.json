@@ -1,0 +1,52 @@
+{
+ "still_id": "07_the-same-words",
+ "subject_type": "hero",
+ "role": "hero",
+ "elements": [
+  {
+   "id": "full",
+   "label": "The Same Words",
+   "region": null,
+   "verified": true
+  },
+  {
+   "id": "the-first-hebrew-line",
+   "label": "the first Hebrew line",
+   "region": null,
+   "verified": true
+  },
+  {
+   "id": "the-looming-dark-cross-b",
+   "label": "the looming dark cross beam",
+   "region": null,
+   "verified": true
+  },
+  {
+   "id": "the-worn-ink",
+   "label": "the worn ink",
+   "region": null,
+   "verified": true
+  },
+  {
+   "id": "the-pale-parchment-fibre",
+   "label": "the pale parchment fibre",
+   "region": null,
+   "verified": true
+  }
+ ],
+ "ambient_layer": [],
+ "period_real": {
+  "T1": "pass",
+  "T2": "pass",
+  "T3": "pass",
+  "T4": "pass",
+  "T5": "fail",
+  "T6": "pass"
+ },
+ "declared_by": "design",
+ "provenance": "fresh",
+ "lock_version": 1,
+ "png_sha256": "9324f9265eeb172cea6bc947c06cbdc2098197753956721fa1ab65af2851e427",
+ "locked": false,
+ "note": "writing surface toured to garbled letters"
+}

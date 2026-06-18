@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "no titulus text",
+      "actual": "small distant titulus with faint marks at the cross top — non-hero wide scene, animation crops the crowd not the titulus; acceptable"
+    },
+    {
+      "claim": "psalmist-hand vignette",
+      "actual": "not distinctly present; 3 of 4 vignettes (pointing finger, wagging heads, turned backs) clear"
+    }
+  ],
+  "banned_token_hits": []
+}

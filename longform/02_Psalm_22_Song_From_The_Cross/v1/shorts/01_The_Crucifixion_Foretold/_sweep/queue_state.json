@@ -1,0 +1,99 @@
+{
+  "short": "01_The_Crucifixion_Foretold",
+  "clips": 13,
+  "status": "swept",
+  "fails": [
+    "02_david-at-the-lamp",
+    "04_the-scroll-line",
+    "08_the-execution-foretold",
+    "10_the-plan-not-accident"
+  ],
+  "rows": [
+    {
+      "scene": 1,
+      "clip": "01_dice-in-the-dust",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 2,
+      "clip": "02_david-at-the-lamp",
+      "state": "FAIL",
+      "foreign": [
+        "garbled Hebrew scroll + writing quill"
+      ]
+    },
+    {
+      "scene": 3,
+      "clip": "03_a-death-not-his-own",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 4,
+      "clip": "04_the-scroll-line",
+      "state": "FAIL",
+      "foreign": [
+        "garbled Hebrew scroll macro"
+      ]
+    },
+    {
+      "scene": 5,
+      "clip": "05_the-seamless-coat",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 6,
+      "clip": "06_soldiers-cast-lots",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 7,
+      "clip": "07_the-cross-foretold",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 8,
+      "clip": "08_the-execution-foretold",
+      "state": "FAIL",
+      "foreign": [
+        "garbled Hebrew scroll macro"
+      ]
+    },
+    {
+      "scene": 9,
+      "clip": "09_stripped-garments-heap",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 10,
+      "clip": "10_the-plan-not-accident",
+      "state": "FAIL",
+      "foreign": [
+        "floating open book with garbled text"
+      ]
+    },
+    {
+      "scene": 12,
+      "clip": "12_dice-macro",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 13,
+      "clip": "13_his-name-is-jesus",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 14,
+      "clip": "14_laying-down-his-life",
+      "state": "PASS",
+      "foreign": []
+    }
+  ]
+}

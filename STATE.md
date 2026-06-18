@@ -1,5 +1,52 @@
 # STATE.md — progress tracker
 
+**Last updated:** 2026-06-17
+**Status (2026-06-17 PART 2):** MERGED the coherence system into the binding `v2/SPEC.md` (drift fixed:
+INV-23 coherence + INV-24 no-fabricated-verdicts, both **rollout-gated/reports-only**; gate vocabulary
+unified to **F1–F5**; IMG-COHERENT + STILL-REVIEW gate rows; side doc `COHERENCE_GATE_SPEC.md` retired
+to a SUPERSEDED build-log). Fixed the **clip_reuse bug** (clip-QC requirement excluded the whole bank →
+catalogue 34→**115** clean-reusable). **Reassembled ALL 7 videos that held a quarantined bad clip,
+CLEAN** — Psalm 22 #01/#02/#03/#07 (punchy) + the 3 v2 pilots Isaiah/Mockers-v2/Zech (clean but slower,
+accepted clean-over-punchy); old finals saved as `_PRE_COHERENCE.mp4`; total spend ≈ $3. Findings: NBP
+gems any prominent nail-wound (un-rebuildable → exclude); pilots too thin to be punchy without a real
+reuse-backfill. ~114 tests green. THEN the **MUSIC PHASE**: an AI panel (4 composer lenses → judge)
+designed a bespoke instrumental score brief per short (`music_designs.json`); generated + ducked +
+captioned all 11 via `sfx_pilots/add_music.py` → `viral_cut_sfx_music_captioned.mp4` + review page
+`music_review.html`. User feedback applied: level retuned −17→**−8dB + gentle duck** (was inaudible),
+and a **2.5s end-hold** added (hold last frame + score rings out) — PROVEN on #03 (54.33s). Eleven Music
+bills a SEPARATE invisible quota (no exact spend number). DO FIRST TOMORROW: re-run `music_batch.py` with
+`regen=True` to apply −8dB + 2.5s-tail to the OTHER 10, then USER EAR-REVIEW all 11. Rollout flags still OFF.
+See RESUME.md top (PART 2 → MUSIC PHASE). Prior status below.
+
+**Status (2026-06-17 PART 1):** Built a **STILL-COHERENCE / QUALITY GATE** after the user flagged many shipped
+stills as "not fit for use" (floating head, giant head, standing-not-hanging crucifixion, off/sickly
+faces, garbled scroll text, frames, modern props). New: `pipeline/coherence.py` (fail-closed sidecar +
+content-hash verdict sharing + k-vote ensemble/aggregate — byte-identical stills can no longer get
+different verdicts), `pipeline/coherence_gate.py` (vision gate, RETUNED to default-pass / fail only on
+clear F1–F5), `pipeline/dedup.py` (perceptual dedup + verified-only canonical reuse), enforcement
+chokepoint `lock.require_visual_coherence` (scoped to the selected cut; rollout flag
+`JITB_REQUIRE_COHERENCE` OFF until shipped shorts are backfilled), INV-24 closed 3 auto-bless doors,
+and `v2/coherence_audit/` tooling (provenance, reject_list, review page, blind calibration, quarantine).
+**Calibration:** over-strict first pass (87 fail, precision 0.08) → user blind-labeled 50 → retuned →
+**6 fail, precision 0.50**; reject list 93→29. **Quarantined 17 confirmed-bad stills** (+clips =102 files)
+to `_rejected_coherence/` (reversible) + pruned 11 dangling clip_library refs (136→125). **Wired
+guardrails T1–T6** into the constitution + banned tokens + `data/render_guardrails.md`. Red-teamed 2×;
+**100 tests green**. 7 shipped videos still contain the bad clips (reassembly deferred per user). NEXT:
+2 TODOs — periodic human still-review gate; clip-reuse optimization pipeline. See RESUME.md top. Prior status below.
+
+**Last updated (prior):** 2026-06-15
+**Status (2026-06-15):** LOCKED a new SHORTS ANIMATION RECIPE after the shipped clips showed hallucination
+(morphing hands/faces) + "dancing Jesus on the cross". Recipe = **HF Kling 3.0 `--mode pro` + a HARD-CUT
+CUT-PLAN prompt** (jump-cuts between crops of a frozen painting, targets from each scene's `macro_elements`;
+subject never moves) via tool `_hf_animate_short.py`. Bake-off ruled out: plain-zoom prompt (too basic),
+ffmpeg hard-cuts (jittery/lifeless — user reserves ffmpeg for NSFW only). Writing/scroll scenes are EXCLUDED
+from cuts (user's call). Rolled across all 8 shorts: **CLIPS RE-RENDERED for all 8**; **fully rebuilt + final
+(viral_cut_sfx_captioned.mp4): #03 (51.8s), #05 (43.9s), #06 (61.8s)**. **#01/#02/#04/#07/#08 = clips QC'd,
+still need assembly→SFX→caption** (see RESUME.md for exclude/hero per short + the bridge-servicing pipeline).
+#07 sc7 (bare-torso) HF-NSFW-blocked → ffmpeg (the sanctioned exception). Spend ~1270 HF cr (~$190); balance
+1036 cr. New memories: `feedback-shorts-generative-not-ffmpeg`, `feedback-never-animate-writing`. See RESUME.md
+top. Prior status below.
+
 **Last updated:** 2026-06-14
 **Status (2026-06-14e):** Built a **VALIDATION ENGINE** after a run of defects the pipeline should have caught
 (root cause: agent-mode shortcut servicers bypassing the real validators). NEW: `data/rules.json` (rule

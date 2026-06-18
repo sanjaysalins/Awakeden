@@ -1,0 +1,324 @@
+{
+  "threshold": 10,
+  "total_stills": 185,
+  "clusters": [
+    {
+      "slug": "a-thousand-years-apart",
+      "size": 7,
+      "canonical": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/06_a-thousand-years-apart.png",
+      "canonical_verified": true,
+      "members": [
+        {
+          "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/11_a-thousand-years-apart.png",
+          "coherence": "PASS",
+          "flagged_bad": true,
+          "is_canonical": false
+        },
+        {
+          "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/12_a-thousand-years-apart.png",
+          "coherence": "PASS",
+          "flagged_bad": false,
+          "is_canonical": false
+        },
+        {
+          "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/12_a-thousand-years-apart.png",
+          "coherence": "PASS",
+          "flagged_bad": true,
+          "is_canonical": false
+        },
+        {
+          "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/12_a-thousand-years-apart.png",
+          "coherence": "FAIL (Hard vertical dividing line down the center splits the image into two panels (left: scribe with scroll, right: Christ with brethren) — a split-screen/diptych, not full-bleed)",
+          "flagged_bad": false,
+          "is_canonical": false
+        },
+        {
+          "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/06_a-thousand-years-apart.png",
+          "coherence": "PASS",
+          "flagged_bad": false,
+          "is_canonical": true
+        },
+        {
+          "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/09_a-thousand-years-apart.png",
+          "coherence": "FAIL (Bright vertical band of light bisects the image into a split-screen diptych (left: David writing, right: Christ))",
+          "flagged_bad": false,
+          "is_canonical": false
+        },
+        {
+          "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/07_a-thousand-years-apart.png",
+          "coherence": "PASS",
+          "flagged_bad": false,
+          "is_canonical": false
+        }
+      ]
+    },
+    {
+      "slug": "whom-they-pierced",
+      "size": 3,
+      "canonical": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/08_whom-they-pierced.png",
+      "canonical_verified": true,
+      "members": [
+        {
+          "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/08_whom-they-pierced.png",
+          "coherence": "PASS",
+          "flagged_bad": false,
+          "is_canonical": true
+        },
+        {
+          "path": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/05_by-whose-stripes.png",
+          "coherence": "PASS",
+          "flagged_bad": true,
+          "is_canonical": false
+        },
+        {
+          "path": "v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/06_whom-they-pierced.png",
+          "coherence": "PASS",
+          "flagged_bad": true,
+          "is_canonical": false
+        }
+      ]
+    },
+    {
+      "slug": "the-shaking-heads",
+      "size": 2,
+      "canonical": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/01_the-shaking-heads.png",
+      "canonical_verified": true,
+      "members": [
+        {
+          "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/01_the-shaking-heads.png",
+          "coherence": "PASS",
+          "flagged_bad": false,
+          "is_canonical": true
+        },
+        {
+          "path": "v2/pilot/mockers_words_ps22/v1/visual/nbp/01_the-shaking-heads.png",
+          "coherence": "PASS",
+          "flagged_bad": true,
+          "is_canonical": false
+        }
+      ]
+    },
+    {
+      "slug": "bearing-the-scorn",
+      "size": 2,
+      "canonical": "v2/pilot/mockers_words_ps22/v1/visual/nbp/11_bearing-the-scorn.png",
+      "canonical_verified": true,
+      "members": [
+        {
+          "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/10_so-you-never-will-be.png",
+          "coherence": "PASS",
+          "flagged_bad": false,
+          "is_canonical": false
+        },
+        {
+          "path": "v2/pilot/mockers_words_ps22/v1/visual/nbp/11_bearing-the-scorn.png",
+          "coherence": "PASS",
+          "flagged_bad": false,
+          "is_canonical": true
+        }
+      ]
+    },
+    {
+      "slug": "the-empty-tomb",
+      "size": 2,
+      "canonical": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/01_the-empty-tomb.png",
+      "canonical_verified": true,
+      "members": [
+        {
+          "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/01_the-empty-tomb.png",
+          "coherence": "PASS",
+          "flagged_bad": false,
+          "is_canonical": true
+        },
+        {
+          "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/10_the-empty-tomb.png",
+          "coherence": "PASS",
+          "flagged_bad": false,
+          "is_canonical": false
+        }
+      ]
+    },
+    {
+      "slug": "the-invitation-face",
+      "size": 2,
+      "canonical": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/11_the-invitation-face.png",
+      "canonical_verified": true,
+      "members": [
+        {
+          "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/06_the-living-face.png",
+          "coherence": "PASS",
+          "flagged_bad": false,
+          "is_canonical": false
+        },
+        {
+          "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/11_the-invitation-face.png",
+          "coherence": "PASS",
+          "flagged_bad": false,
+          "is_canonical": true
+        }
+      ]
+    },
+    {
+      "slug": "the-king-who-wrote-it",
+      "size": 2,
+      "canonical": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/02_the-king-who-wrote-it.png",
+      "canonical_verified": true,
+      "members": [
+        {
+          "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/02_the-king-who-wrote-it.png",
+          "coherence": "PASS",
+          "flagged_bad": false,
+          "is_canonical": false
+        },
+        {
+          "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/02_the-king-who-wrote-it.png",
+          "coherence": "PASS",
+          "flagged_bad": false,
+          "is_canonical": true
+        }
+      ]
+    },
+    {
+      "slug": "hanging-there-with-nothing",
+      "size": 2,
+      "canonical": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/10_hanging-there-with-nothing.png",
+      "canonical_verified": true,
+      "members": [
+        {
+          "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/04_crushed-in-your-place.png",
+          "coherence": "PASS",
+          "flagged_bad": false,
+          "is_canonical": false
+        },
+        {
+          "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/10_hanging-there-with-nothing.png",
+          "coherence": "PASS",
+          "flagged_bad": false,
+          "is_canonical": true
+        }
+      ]
+    },
+    {
+      "slug": "that-water-is-himself",
+      "size": 2,
+      "canonical": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/14_that-water-is-himself.png",
+      "canonical_verified": true,
+      "members": [
+        {
+          "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/14_that-water-is-himself.png",
+          "coherence": "PASS",
+          "flagged_bad": false,
+          "is_canonical": true
+        },
+        {
+          "path": "v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/02_the-pierced-side.png",
+          "coherence": "PASS",
+          "flagged_bad": false,
+          "is_canonical": false
+        }
+      ]
+    },
+    {
+      "slug": "wounded-for-our-transgressions",
+      "size": 2,
+      "canonical": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/03_wounded-for-our-transgressions.png",
+      "canonical_verified": true,
+      "members": [
+        {
+          "path": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/03_wounded-for-our-transgressions.png",
+          "coherence": "PASS",
+          "flagged_bad": false,
+          "is_canonical": true
+        },
+        {
+          "path": "v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/04_the-wounded-one.png",
+          "coherence": "PASS",
+          "flagged_bad": false,
+          "is_canonical": false
+        }
+      ]
+    },
+    {
+      "slug": "in-his-own-body-on-the-tree",
+      "size": 2,
+      "canonical": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/06_in-his-own-body-on-the-tree.png",
+      "canonical_verified": true,
+      "members": [
+        {
+          "path": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/06_in-his-own-body-on-the-tree.png",
+          "coherence": "PASS",
+          "flagged_bad": false,
+          "is_canonical": true
+        },
+        {
+          "path": "v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/05_the-cross.png",
+          "coherence": "PASS",
+          "flagged_bad": false,
+          "is_canonical": false
+        }
+      ]
+    },
+    {
+      "slug": "aimed-at-you",
+      "size": 2,
+      "canonical": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/11_aimed-at-you.png",
+      "canonical_verified": true,
+      "members": [
+        {
+          "path": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/11_aimed-at-you.png",
+          "coherence": "PASS",
+          "flagged_bad": true,
+          "is_canonical": true
+        },
+        {
+          "path": "v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/10_look-at-him.png",
+          "coherence": "PASS",
+          "flagged_bad": true,
+          "is_canonical": false
+        }
+      ]
+    },
+    {
+      "slug": "finished-at-the-cross",
+      "size": 2,
+      "canonical": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/12_finished-at-the-cross.png",
+      "canonical_verified": true,
+      "members": [
+        {
+          "path": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/12_finished-at-the-cross.png",
+          "coherence": "PASS",
+          "flagged_bad": false,
+          "is_canonical": true
+        },
+        {
+          "path": "v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/11_and-live.png",
+          "coherence": "PASS",
+          "flagged_bad": false,
+          "is_canonical": false
+        }
+      ]
+    },
+    {
+      "slug": "for-the-very-people-throwing-it",
+      "size": 2,
+      "canonical": "v2/pilot/mockers_words_ps22/v1/visual/nbp/13_for-the-very-people-throwing-it.png",
+      "canonical_verified": true,
+      "members": [
+        {
+          "path": "v2/pilot/mockers_words_ps22/v1/visual/nbp/13_for-the-very-people-throwing-it.png",
+          "coherence": "PASS",
+          "flagged_bad": false,
+          "is_canonical": true
+        },
+        {
+          "path": "v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/08_they-look-and-mourn.png",
+          "coherence": "PASS",
+          "flagged_bad": false,
+          "is_canonical": false
+        }
+      ]
+    }
+  ],
+  "duplicate_stills": 34,
+  "avoidable_renders": 20
+}

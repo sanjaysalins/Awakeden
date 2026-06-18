@@ -7,15 +7,15 @@
       "section": "hook",
       "words": "The loneliest sentence Jesus ever spoke wasn't His own line —",
       "passed": true,
-      "note": "clip matches its beat (QC-passed upstream)"
+      "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
       "order": 1,
       "scene_index": 2,
       "section": "hook",
-      "words": "Psalm twenty-two opens in the voice of a forsaken man.",
+      "words": "David wrote it;",
       "passed": true,
-      "note": "clip matches its beat (QC-passed upstream)"
+      "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
       "order": 2,
@@ -23,87 +23,71 @@
       "section": "hook",
       "words": "David's very first line:",
       "passed": true,
-      "note": "clip matches its beat (QC-passed upstream)"
+      "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
       "order": 3,
-      "scene_index": 5,
-      "section": "hook",
-      "words": "\"My God, my God,",
-      "passed": true,
-      "note": "clip matches its beat (QC-passed upstream)"
-    },
-    {
-      "order": 4,
-      "scene_index": 12,
-      "section": "hook",
-      "words": "A thousand years later,",
-      "passed": true,
-      "note": "clip matches its beat (QC-passed upstream)"
-    },
-    {
-      "order": 5,
       "scene_index": 4,
       "section": "hook",
       "words": "at the ninth hour,",
       "passed": true,
-      "note": "clip matches its beat (QC-passed upstream)"
+      "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
-      "order": 6,
-      "scene_index": 6,
+      "order": 4,
+      "scene_index": 5,
       "section": "hook",
-      "words": "Jesus cried it from the cross:",
+      "words": "\"My God, my God,",
       "passed": true,
-      "note": "clip matches its beat (QC-passed upstream)"
+      "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
-      "order": 7,
+      "order": 5,
       "scene_index": 7,
       "section": "hook",
       "words": "The very same words.",
       "passed": true,
-      "note": "clip matches its beat (QC-passed upstream)"
+      "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
-      "order": 8,
+      "order": 6,
       "scene_index": 8,
       "section": "hook",
       "words": "even forsaken, He still calls God \"my God.\"",
       "passed": true,
-      "note": "clip matches its beat (QC-passed upstream)"
+      "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
-      "order": 9,
-      "scene_index": 9,
+      "order": 7,
+      "scene_index": 6,
       "section": "hook",
       "words": "It was the sinless Son taking our place,",
       "passed": true,
-      "note": "clip matches its beat (QC-passed upstream)"
+      "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
-      "order": 10,
+      "order": 8,
+      "scene_index": 9,
+      "section": "hook",
+      "words": "and bearing the forsaking that our sin deserved.",
+      "passed": true,
+      "note": "clip content QC'd full-res and in motion; matches its beat"
+    },
+    {
+      "order": 9,
       "scene_index": 10,
       "section": "hook",
       "words": "He was forsaken so that you never will be.",
       "passed": true,
-      "note": "clip matches its beat (QC-passed upstream)"
+      "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
-      "order": 11,
+      "order": 10,
       "scene_index": 13,
       "section": "hook",
       "words": "However far you've run,",
       "passed": true,
-      "note": "clip matches its beat (QC-passed upstream)"
-    },
-    {
-      "order": 12,
-      "scene_index": 14,
-      "section": "hook",
-      "words": "the way home is open —",
-      "passed": true,
-      "note": "clip matches its beat (QC-passed upstream)"
+      "note": "clip content QC'd full-res and in motion; matches its beat"
     }
   ],
   "reroll_scene_indices": [],

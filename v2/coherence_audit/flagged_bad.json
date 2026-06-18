@@ -1,0 +1,38 @@
+{
+  "_README": "User-flagged DEFINITELY-BAD stills (ground truth) — not fit for use. The calibration set the multi-dimension gate must catch, AND the Half-B reject list (redo clip + remove from cut + reassemble). Flagged 2026-06-17 across two passes; this is the union.",
+  "flagged_bad": [
+    "image_library/stills/exiled_nation_column_grey.png",
+    "image_library/stills/isa53_servant_bearing_weight.png",
+    "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/08_the-execution-foretold.png",
+    "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/10_the-plan-not-accident.png",
+    "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/11_a-thousand-years-apart.png",
+    "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/07_the-jabbing-hands.png",
+    "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/08_he-had-every-power.png",
+    "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/09_twelve-legions-restrained.png",
+    "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/13_the-silent-king.png",
+    "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/14_the-hand-that-would-not-pull-free.png",
+    "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/12_a-thousand-years-apart.png",
+    "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/14_he-opened-it-from-the-dark.png",
+    "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/05_the-greek-word.png",
+    "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/11_the-marks-of-one.png",
+    "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/05_by-whose-stripes.png",
+    "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/11_aimed-at-you.png",
+    "v2/pilot/mockers_words_ps22/v1/visual/nbp/01_the-shaking-heads.png",
+    "v2/pilot/mockers_words_ps22/v1/visual/nbp/03_they-shoot-out-the-lip.png",
+    "v2/pilot/mockers_words_ps22/v1/visual/nbp/09_if-thou-be-the-son-of-god.png",
+    "v2/pilot/mockers_words_ps22/v1/visual/nbp/14_come-to-the-one-who-would-not-come-down.png",
+    "v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/03_gods-staggering-word.png",
+    "v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/06_whom-they-pierced.png",
+    "v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/07_john-saw-it.png",
+    "v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/10_look-at-him.png"
+  ],
+  "defect_taxonomy": {
+    "D1_face_eyes": "Asymmetric/uneven eyes, divergent or dead gaze, sickly/bruised or grotesque expression that breaks reverence. THE most common miss; the body-only audit ignores faces. (gods-staggering-word, they-shoot-out-the-lip, aimed-at-you, look-at-him, whom-they-pierced, the-shaking-heads)",
+    "D2_garbled_text": "Garbled/fake lettering on a scroll/book/codex (Hebrew/Greek scribble). (the-greek-word, the-execution-foretold)",
+    "D3_frame_border": "Wooden picture-frame / triptych side-panels / canvas edge around the painting instead of full-bleed. (isa53_servant_bearing_weight)",
+    "D4_wrong_object": "Wrong object substituted — a black faceted GEM where an iron nail belongs. (the-marks-of-one)",
+    "D5_crowd_face_mush": "Secondary/background faces degrade into distortion in crowd scenes. (exiled_nation_column_grey, the-shaking-heads)",
+    "D6_body_pose": "Standing-not-hanging crucifixion / floating or detached limb (the body-coherence C1-C7 gate already catches these). (the-plan-not-accident, he-had-every-power, the-silent-king, the-jabbing-hands)",
+    "D7_hand_fingers": "Subtle malformed fingers/melted knuckles on a foreground hand. (the-marks-of-one, the-hand-that-would-not-pull-free)"
+  }
+}

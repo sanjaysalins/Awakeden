@@ -62,7 +62,7 @@
       },
       {
         "index": 3,
-        "slug": "i-will-declare-thy-name",
+        "slug": "risen-christ-proclaiming",
         "title": "I Will Declare Thy Name",
         "scene_type": "single",
         "arc_position": "theological-centre",
@@ -71,14 +71,15 @@
         "rationale": "a 2s insert on Ps 22:22",
         "visible_elements": "extreme close on a Hebrew scroll line, a fingertip beneath it",
         "emotional_tone": "quiet wonder",
-        "subject_block": "an extreme close view of an open parchment, a single weathered fingertip at rest beneath one warmly lit line of ancient Hebrew script, the ink old and cracked, the parchment fibrous and lamplit, deep shadow at the edges",
+        "subject_block": "the risen Christ in a clean white robe standing among His gathered brethren, arms opened wide in living proclamation, His face lifted and alive with quiet joy, a soft golden dawn light behind Him, first-century brethren in plain robes and bare feet turned toward Him in wonder; NO writing, NO text, NO scroll, NO gloves, NO modern dress; classical devotional Baroque oil painting, reverent, period-accurate; hands open in gesture, not nailed close-ups",
         "mood_block": "atmosphere of quiet, dawning wonder",
-        "jesus_variant": null,
+        "jesus_variant": "resurrection",
         "priority": 0,
         "macro_elements": [
-          "the fingertip",
-          "the warmly lit Hebrew line",
-          "the fibrous parchment grain"
+          "the risen Christ's open proclaiming arms",
+          "His living joyful face",
+          "the gathered brethren turning toward Him",
+          "the golden dawn light behind"
         ],
         "pacing": "slower",
         "viral_role": "pivot",
@@ -303,7 +304,7 @@
       },
       {
         "index": 12,
-        "slug": "a-thousand-years-apart",
+        "slug": "the-brethren-rejoicing",
         "title": "A Thousand Years Apart",
         "scene_type": "unified",
         "arc_position": "ot-echo",
@@ -312,15 +313,15 @@
         "rationale": "David writing the praise-line and the risen Christ praising across a thousand years",
         "visible_elements": "David at his scroll at left, the risen Christ among brethren at right",
         "emotional_tone": "wonder fulfilled",
-        "subject_block": "a wide two-sided composition split by a band of light; at the left, aged David seated at a lamp over a scroll, his face lifting in dawning hope; at the right, across the divide, the risen Christ stands robed among a gathered family in dawn light, subtle background vignettes fading into shadow suggesting the praise-line of Hebrew, a lifting face, the gathered brethren, and the risen Christ",
+        "subject_block": "a gathered family of first-century believers in simple robes and bare feet lifting their hands in joyful worship toward a radiant dawn light, the risen Christ standing small and luminous at the centre in white, warmth on their upturned faces; NO writing, NO text, NO scroll, NO gloves, NO modern dress; classical devotional Baroque oil painting, reverent, period-accurate",
         "mood_block": "atmosphere of wonder fulfilled across a thousand years",
         "jesus_variant": "resurrection",
         "priority": 7,
         "macro_elements": [
-          "David's lifting face",
-          "the scroll praise-line",
-          "the risen Christ among the family",
-          "the band of light between"
+          "the brethren lifting hands in joy",
+          "the luminous risen Christ at centre",
+          "the radiant dawn light",
+          "the warm upturned faces"
         ],
         "pacing": "slower",
         "viral_role": "build",

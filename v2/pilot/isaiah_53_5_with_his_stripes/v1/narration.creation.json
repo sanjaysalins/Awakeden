@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-06-16",
+  "model": "agent-mode (v2 skill build)",
+  "review_model": "panel: cursor,claude,gemini",
+  "structure": {
+    "id": "gospel-five-beat",
+    "name": "Gospel Five-Beat",
+    "beats": [
+      "hook",
+      "point",
+      "proof",
+      "conviction",
+      "landing"
+    ]
+  },
+  "series": {
+    "id": "jesus-in-ot",
+    "name": "Jesus in the Old Testament",
+    "brand": "SLK"
+  },
+  "episode": {
+    "title": "With His Stripes",
+    "primary_ref": "Isaiah 53:5"
+  },
+  "kjv_verified": true,
+  "kjv_text": {
+    "Isaiah 53:5": "But he was wounded for our transgressions, he was bruised for our iniquities: the chastisement of our peace was upon him; and with his stripes we are healed.",
+    "1 Peter 2:24": "Who his own self bare our sins in his own body on the tree, that we, being dead to sins, should live unto righteousness: by whose stripes ye were healed."
+  },
+  "thread": {
+    "primary_ref": "Isaiah 53:5",
+    "thread": "Isaiah 53:5 promised healing through SOMEONE ELSE'S wounds about 700 years before the cross; the apostle Peter takes up Isaiah's 'stripes/healed' line and lays it on Christ (1 Peter 2:24), shifting the pronoun we->ye to aim the promise at the reader. Healing = healed from sin/guilt (Peter names it: 'bare our sins ... live unto righteousness'), NOT a physical-health claim. Grace-anchored: the wounds were His, the healing already finished at the cross -- come to Him and receive it. Peter ECHOES/APPLIES Isaiah (the small shifts are the lever), not a verbatim quotation; no invented narrative detail (Peter was NOT an eyewitness to the scourging).",
+    "lever": "NT-confirmed OT echo (Isaiah 53:5 -> 1 Peter 2:24, with the we->ye personalisation)"
+  },
+  "draft": {
+    "title": "With His Stripes",
+    "hook_type": "felt-ache",
+    "beats": [
+      {
+        "id": "hook",
+        "text": "You carry a wound nothing has been able to close — a guilt that keeps reopening, no matter how hard you try to make it right."
+      },
+      {
+        "id": "point",
+        "text": "Seven hundred years before the cross, Isaiah wrote that the healing you can't reach would come through someone else's wounds."
+      },
+      {
+        "id": "proof",
+        "text": "\"But he was wounded for our transgressions, he was bruised for our iniquities... and with his stripes we are healed.\" Stripes — the welts of a flogging, the wounding Isaiah foresaw centuries before it fell on Jesus' back. And the apostle Peter took up Isaiah's words and laid them on Christ at the cross: \"Who his own self bare our sins in his own body on the tree... by whose stripes ye were healed.\""
+      },
+      {
+        "id": "conviction",
+        "text": "And watch what Peter does with it. Isaiah wrote \"we are healed.\" Peter writes \"ye were healed\" — and points the promise straight at the one who's listening: at you."
+      },
+      {
+        "id": "landing",
+        "text": "You were never meant to make it right yourself. The healing isn't something you produce — it was finished at the cross, in His own wounds, for you. The wound that keeps reopening, He has already closed. Come to Him, and receive it."
+      }
+    ]
+  },
+  "beat_ids": [
+    "hook",
+    "point",
+    "proof",
+    "conviction",
+    "landing"
+  ],
+  "word_count": 165,
+  "authoritative_review": "panel A/B (4 rounds); KJV-strict + doctrine clean; convergent fixes applied",
+  "review_overall": "LOCKED",
+  "unknown_speakers": []
+}

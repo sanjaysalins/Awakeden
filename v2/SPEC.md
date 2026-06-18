@@ -1,0 +1,317 @@
+# SPEC v2 — JesusInTheBible Content Engine (binding contract)
+
+> **This is the single source of truth.** It supersedes the root `SPEC.md`
+> (reverse-engineered v1 description) and absorbs the durable knowledge that
+> used to live scattered across ~70 memory files and the "Locked decisions"
+> block in `CLAUDE.md`. The per-stage **skills** in `.claude/skills/` are the
+> repeatable procedures; this spec is what they enforce. Every non-negotiable
+> here is backed by a **fail-closed validator** (no honor-system steps).
+>
+> Status/narrative live in `STATE.md` / `RESUME.md`. Behavioral + operational
+> context lives in `CLAUDE.md`. Authored 2026-06-16 (Phase 0 of the v2 plan).
+
+---
+
+## 1. Purpose
+
+Turn a Bible topic into finished, postable video:
+
+- **Shorts** — 60-second, 9:16 YouTube Shorts. Viral hook → KJV proof →
+  grace-anchored conviction → call-to-Jesus landing. **The first-class product.**
+- **Long-form** — 6–8 minute, 16:9 deep-dive films that research a passage and
+  feed the shorts (write the long first as the research foundation).
+
+Both run the same discipline: panel review, independent red-team, and
+fail-closed doctrinal/Scripture gates at every stage.
+
+---
+
+## 2. The Pipeline — Stages 0–5
+
+Each stage is independent, idempotent on LOCKED artifacts, resumable, and driven
+by one **skill**. Three **human approval gates** remain (audio, images, clips).
+
+```
+TOPIC
+  │  STAGE 0 — STUDY      /study      → pericope + locked thread (one spine)
+  ▼  STAGE 1 — TEXT       /narrate    → locked narration + voices.json
+  │     thread → draft tournament → self-review (G1..G8) → red-team → 5-CLI panel → LOCK
+  ▼  ── audio (reused) ── /voice      → duration-locked narration.mp3 (~59s short)
+  │     ═══════════════ HUMAN GATE 1: approve audio (by ear) ═══════════════
+  ▼  STAGE 2 — VISUAL
+  │     /scene-plan  → scene_plan.json (SP-G1..G9 + cohesion)
+  │     ═══════════ HUMAN GATE 2: approve images (reroll / exclude / hero) ═══
+  │     /stills      → PNG per scene + Vision audit (IMG-*) + cut_hint sidecar
+  │     /animate     → Kling clip per PNG (frozen tableau, camera-only)
+  ▼  STAGE 3 — ASSEMBLY  /assemble   → viral_cut.mp4 (+ /sfx bed)
+  │     timeline → jigsaw → AS-G1..G9 → render → per-slot verify
+  │     ═══════════════ HUMAN GATE 3: approve clips (exclude) ═══════════════
+  ▼  STAGE 4 — CAPTION   /caption    → viral_cut_sfx_captioned.mp4  (final clip)
+  ▼  STAGE 5 — UPLOAD    /upload     → upload_kit (title/desc/tags/hashtags, UK-G1..G6)
+OUTPUT
+```
+
+**Design for the cut:** Stage 2 reads the narration *timeline* and nominates the
+gospel-pivot hero + short insert shots up front, so clips are built to be
+assembled, not assembled after the fact.
+
+---
+
+## 3. Per-stage contract (the skill is the procedure; this is the contract)
+
+| Stage | Skill | Reused engine (call, don't rewrite) | Output artifact | Gates |
+|---|---|---|---|---|
+| 0 Study | `/study` | `pipeline/scripture.py`, `engine.discover_thread` | thread + pericope, KJV cache | KJV-fetch, one-thread-spine (INV-5) |
+| 1 Text | `/narrate` | `pipeline/engine.py`, `models.py`, `lock.py` | `narration.md`, `voices.json`, `creation.json` | G1–G8, KJV-strict, cluster, doctrine |
+| 1b Audio | `/voice` | `PythonProject1/jesus/narration/per_turn_synth.py` (subprocess) | `narration.mp3` (~59s, multi-voice) | duration-lock, voices routing |
+| 2a Scene | `/scene-plan` | `pipeline/visual_engine.py` | `visual/scene_plan.json` + cohesion | SP-G1–G9 |
+| 2b Stills | `/stills` | `pipeline/visual_render.py` | PNG/scene + `cut_hint.json` + gallery | IMG-SUBJECT/ELEMENTS/ANATOMY/NOTEXT/PERIOD/TONE/COHERENT |
+| 2c Animate | `/animate` | `PythonProject1/jesus/.../image_to_kling.py` + `SKILL_locked.md` | `.kling.json` + `.mp4`/clip | CLIP-VIRAL, CLIP-IMAGE-GROUNDED, CLIP-FROZEN, CLIP-NOMORPH, NEVER-ANIMATE-WRITING |
+| 3 Assembly | `/assemble` | `pipeline/assembly_engine.py` + `assembly_ffmpeg.py` | `viral_cut.mp4` + `index.html` | AS-G1–G9 |
+| 3b SFX | `/sfx` | `sfx_pilots/sfxlib.py` | `viral_cut_sfx.mp4` | reuse-from-library, sidechain-duck (INV-18) |
+| 4 Caption | `/caption` | `veed_io/caption.py` | `<clip>_captioned.mp4` | offline $0 ivory recipe (INV-16) |
+| 5 Upload | `/upload` | `pipeline/upload_gates.py` | `upload/upload_kit.{json,md}` | UK-G1–G6 |
+| x Review | `/review` | `independent_review.py` | `_independent_review/<stamp>/` | 5-CLI panel before any LOCK (INV-9) |
+| x Validate | `/validate` | `pipeline/validators.py` + `test_*.py` | green suite | rules_integrity + 114 tests (adds coherence/dedup/still-review/clip-reuse suites; CLIP-NOWRITING live; anchor-verse-unquoted + IMG-COHERENT fixtures still targets) |
+| x Cost | `/cost` | `pipeline/cost.py` | `data/spend_ledger.jsonl` | pre-flight estimate + ask-before-spend (INV-20) |
+| x Learn | `/learn` | `pipeline/learning.py` | `data/learning/` | defect ledger → propose-I-approve |
+
+---
+
+## 4. Gate registry (the teeth)
+
+Every gate is **deterministic** (a Python validator, fail-closed) or **panel**
+(a named LLM agent; LOCKED only when 0 gates FAIL). `D`=deterministic,
+`P`=panel, `A`=advisory (never FAILs).
+
+> Gates tagged **(Phase-1)** are v2 TARGETS not yet enforcing in code — building
+> them is Phase 1 of the v2 plan. Everything untagged is live in v1 today.
+> Gates tagged **(rollout-gated)** are wired in code but RUN report-only behind an env flag
+> (default OFF); they raise once the flag is flipped after the shipped catalogue is backfilled.
+> The header promise ("every non-negotiable has a fail-closed validator") holds for untagged
+> gates; rollout-gated ones are honest about not blocking yet.
+
+### TEXT — `pipeline/engine.py` (+ `kjv_strict.py`, `cluster_gate.py`, `doctrine_gate.py`)
+| Gate | Type | Checks |
+|---|---|---|
+| G1 Biblical Accuracy | D+P | KJV verbatim (punctuation-strict override) + claim sound in context |
+| G2 Relevance | P | hook names a real present ache |
+| G3 Conviction | P | holy tension, grace-anchored (no gain/loss/fear/shame) |
+| G4 CTA lands with Jesus | P | grace-gift not self-help; no grace-trap; does NEW work |
+| G5 Structure | D | five beats in order, in budget, ~450–550 words, proof carries KJV |
+| G6 Craft | P | standalone, plain prose, clean pacing |
+| G7 Freshness | P | non-obvious TRUE detail; thread carried; exegetically honest |
+| G8 The Five Questions (BINDING) | P | one idea / shown-not-explained / pierces + aimed at YOU / for a named audience / changes view of Christ / first-hearing test |
+| KJV-strict | D | exact-verbatim span match (`test_kjv_strict.py`) |
+| Cluster | D | no templated repetition across sibling artifacts (`test_cluster_gate.py`) |
+| Doctrine | D | landmine scan: broken-bones, died-of-thirst, inability-concession, universalism, trinity-severed, works/fear/gain-loss (`test_doctrine_gate.py`) |
+| Quote-count (Rule-8) | D | shorts carry ≤2 substantial KJV quotes (`lock.py::_rule8_findings`, live) |
+| **Narrative-presence** | D | refuse the lock if a known-absent Bible character is asserted as an eyewitness (`validators.narrative_presence` + `data/narrative_facts.json`, fail-closed, zero false-positive; panel backstops unlisted cases). Defect class `invented-narrative-detail` (INV-4), promoted 2026-06-16 |
+| **Anchor-verse-unquoted** (Phase-1) | D | currently an advisory stub (`lock.py::_anchor_findings` returns `[]`); to ENFORCE: a named proof-verse must be quoted verbatim |
+
+### SCENE PLAN — `pipeline/visual_engine.py`
+| Gate | Type | Checks |
+|---|---|---|
+| SP-G1 Biblical Accuracy | P | every literal scene defensible vs pericope |
+| SP-G2 Narration Alignment | D | every beat has ≥1 supporting scene |
+| SP-G3 Visual Variety | P | not repetitive; cliché blocklist |
+| SP-G4 Theological Honesty | P | symbolic scenes smuggle no foreign doctrine |
+| SP-G5 Prompt Conformance | D | no banned tokens in subject/mood blocks |
+| SP-G6 Type Discipline | D | unified scenes carry 3–5 named vignettes, never panels/arches/windows |
+| SP-G7 Character Consistency | P | Jesus/disciples identical; jesus_variant consistent |
+| SP-G8 Composition Distribution | D | ≥3 framings; none >50% of scenes |
+| SP-G9 Scene Mix & Gospel Frame | D | ≥1 unified + ≥1 Jesus/NT-link; ≥2 single; never 100% single |
+
+### STILLS (Vision audit) — `pipeline/visual_render.py::verify_image`
+| Rule | Type | Checks |
+|---|---|---|
+| IMG-SUBJECT | P-Vision | central subject identity matches spec |
+| IMG-ELEMENTS | P-Vision | required visible elements present |
+| IMG-ANATOMY | P-Vision | sound hands/faces/limbs |
+| IMG-NOTEXT | P-Vision | no legible/garbled text, titulus, banned tokens |
+| IMG-PERIOD | P-Vision | period-authentic Baroque, no modern look |
+| IMG-TONE | P-Vision | reverent; no horror, no NSFW |
+| IMG-COHERENT (rollout-gated) | P-Vision + D | blind default-PASS "fit for use" look — FAIL only on a CLEAR F1 modern/anachronism · F2 frame/border/split-screen · F3 broken face/grotesque expression · F4 impossible anatomy (floating head/limb, through-object, giant head) · F5 dominant garbled text. Fail-closed `*.coherence.json` sidecar (`audited∧passed∧hash`), k-vote hash-pooled `aggregate` for determinism. Validator: `coherence_gate.py` + `coherence.py`; chokepoint `lock.py::require_visual_coherence` (scoped to the selected cut), before `assembly_runner` loads clips, behind `JITB_REQUIRE_COHERENCE` (default OFF). Calibrated to precision 0.50 (INV-23). |
+| STILL-REVIEW (rollout-gated) | Human | a human sign-off (`still_review.py`, `.stills_reviewed` token bound to the still-set hash) — authority on the SUBTLE defects the F1-F5 look misses by design; busts on any still add/change. Chokepoint `lock`-style in `assembly_runner`, behind `JITB_REQUIRE_STILL_REVIEW` (default OFF). The 4th human gate. |
+
+> **Render guardrails T1–T6** (`data/render_guardrails.md`, baked into the constitution's VISUAL ARC):
+> the subject_block rules that PREVENT the F1–F5 defects up front (no text-as-subject, one full-bleed
+> scene, eyes level/downcast, iron-not-gem, ≤3 sharp crowd faces, strictly period). Prevention; the
+> gate is the backstop.
+
+### CLIP (animation) — `pipeline/validators.py` + clip QC
+| Rule | Type | Checks |
+|---|---|---|
+| CLIP-VIRAL | D | ≥6 crop-cut beats with framing variety, not a 1–2 beat slow zoom |
+| CLIP-IMAGE-GROUNDED | D | cut-plan has no rich-text injection + carries the anti-invention clause |
+| CLIP-FROZEN | P-Vision | only the camera moves; nothing in the painting moves |
+| CLIP-NOMORPH | P-Vision | faces/hands/forms stable frame-to-frame |
+| **NEVER-ANIMATE-WRITING** | D | reject any animated scene whose subject is a scroll/titulus/codex/sign with intended legible text (`validators.never_animate_writing` + rule CLIP-NOWRITING, live) (INV-17) |
+
+### ASSEMBLY — `pipeline/assembly_engine.py`
+| Gate | Type | Checks |
+|---|---|---|
+| AS-G1 Timeline Coverage | D | slots tile [0, total] contiguously |
+| AS-G2 No Reuse | D | each body clip once; hero close-only |
+| AS-G3 Speed/Trim Health | D/A | avg ≤2.0×; advisory on spikes |
+| AS-G4 Min Slot | D | each body slot ≥ 0.3s |
+| AS-G5 Section Coverage | D | every spoken section has a clip |
+| AS-G6 Hero Close | D | hero = gospel-pivot, bookends, single appearance |
+| AS-G7 Gospel Frame | D | cut lands on Christ; reverence speed cap on sacred |
+| AS-G8 Beat Continuity | P | thread carried open→climax→close, clips under right words |
+| AS-G9 Beat Density | A | flags slow cuts; never FAILs |
+
+### UPLOAD — `pipeline/upload_gates.py`
+| Gate | Type | Checks |
+|---|---|---|
+| UK-G1 Length | D | every field within each platform's ceiling |
+| UK-G2 KJV-strict | D | anchor verse verbatim if quoted |
+| UK-G3 Doctrine | D | no clickbait/overclaim tokens |
+| UK-G4 Brand | D | CTA-to-Jesus + footer present |
+| UK-G5 Platform | D | hashtag counts + no malformed tags/links |
+| UK-G6 No-Repeat | D | titles don't collide across platforms/siblings |
+
+---
+
+## 5. Invariants (binding — do not relitigate without the user)
+
+1. Viral-hook + CTA-to-Jesus 60s shorts — not the non-preachy "Attenborough" model.
+2. Gospel Five-Beat structure, timed (Hook→Point→Proof→Conviction→Landing).
+3. Grace-anchored conviction — no gain/loss / fear / manufactured pressure.
+4. Freshness = faithful depth — surprising about the *text*, never the *truth*.
+5. One thread spine hook→middle→CTA; reshape lines, never swap threads.
+6. KJV verbatim in script; attribution frames stay narrator voice.
+7. Multi-voice when the scene has speakers (parables: Jesus tells, characters speak).
+8. Independent red-team is standard at every stage; LOCKED only on 0 FAIL gates.
+9. External 5-CLI panel review is enforced before any LOCK (cursor + claude/gemini/codex/grok, no metered API).
+10. Binding visual scene mix (SP-G9); never 100% single; unified scenes carry 3–5 vignettes (SP-G6).
+11. Assembly hero = gospel-pivot; every cut closes on Christ (AS-G6/G7); reverence speed cap on sacred clips.
+12. Kling-friendly state-only language — frozen tableau, camera-only motion.
+13. Animation split: shorts = direct-Kling; long-form = veo3_1_lite/hybrid.
+14. Shorts are first-class — highest QC, native 9:16, never a cropped long still.
+15. Reuse downstream pipelines (narration_pipeline, per_turn_synth, image_to_kling) — subprocess, never duplicate.
+16. Caption is the final step on every finished clip (offline $0, ivory).
+17. **Never animate writing** — scroll/titulus/codex/sign render garbled under generative animation; design text as illegible marks, hold as a still, or give it only a deterministic ffmpeg push-in/Ken-Burns (never Kling) (from `feedback-never-animate-writing`).
+18. **Ambient/SFX bed by default** on every finished clip ($0 from `sound_library`, ear-gated) (from `feedback-ambient-sfx-default`).
+19. **Library reuse is topical-fit-gated AND clean-gated** — only thread-neutral plates cross episodes; story-specific stills never do; AND a clip is reusable only if its still is coherence-verified (INV-23) and clip-qc'd. The reuse DECISION goes through `clip_reuse.py` (`decide`/`reuse_plan`), a gated layer over `clip_library.py` — call it, not `clip_library.find`, for reuse decisions (from `feedback-topical-fit-gate`, `feedback-gate-calibration-human-authority`).
+20. **Ask before spending** — quote estimated metered spend and get explicit OK before any batch (from `ask-before-spending`).
+21. **Period-authentic + reverent image audit** — FAIL modern faces/dress, horror, NSFW (from `feedback-period-reverent-image-audit`).
+22. **Dyslexia UX** — review by ear, print full absolute paths, build an index/gallery for every batch (from `feedback-audio-first-review`, `feedback-show-full-paths`, `feedback-index-file-and-full-link`).
+23. **Still coherence (IMG-COHERENT) + human authority on the subtle** *(rollout-gated — reports-only until `JITB_REQUIRE_COHERENCE=1`/`JITB_REQUIRE_STILL_REVIEW=1` after the catalogue is backfilled)* — a still is fit for use unless it has a CLEAR F1–F5 defect (blind default-PASS gate, fail-closed `*.coherence.json` sidecar = `audited∧passed∧hash`, k-vote hash-pooled so byte-identical stills can never disagree). The automated gate catches the OBVIOUS at scale; a human still-review sign-off is authority on the SUBTLE. Calibrate against blind human labels before trusting the fail-rate (from `feedback-gate-calibration-human-authority`).
+24. **No fabricated verdicts** — no copy/reuse/servicer path may invent a passing audit/coherence/clip-qc verdict; it copies a REAL sidecar from the source or marks UNVERIFIED. (Closed in `clip_library.materialize`, `v2/pilot/_build_zech_reuse.py`, `v2/servicers/assembly_servicer.py`.)
+
+---
+
+## 6. Reuse manifest (v2 calls these; it does NOT rewrite them)
+
+| Subsystem | Entry point | Verdict |
+|---|---|---|
+| Audio | `PythonProject1/jesus/narration_pipeline.py` + `PythonProject1/jesus/narration/per_turn_synth.py` | REUSE-AS-IS |
+| Scripture | `pipeline/scripture.py` (+ `data/kjv_cache.json`) | REUSE-AS-IS |
+| Captions | `veed_io/{caption,aligner,serif_captions}.py` | REUSE-AS-IS |
+| 5-CLI panel | `independent_review.py`, `panel_doctor.py` | REUSE-AS-IS |
+| Media libraries | `_library/`, `image_library/`, `music_library/`, `sound_library/` + `cli_library.py` | REUSE-AS-IS |
+| **Clip library** (NEW 2026-06-16) | `clip_library/` (`index.json` ~125 clips by reference, post-coherence prune) + `clip_library.py` (`find`/`materialize`, the index/materialize layer) + `ingest_clips.py` | the bank |
+| **Reuse decision** (NEW 2026-06-17) | `clip_reuse.py` (`decide`/`decide_for_scene`/`reuse_plan`/`reuse_health`) over the library | the GATED reuse-first per INV-19 + INV-23 (coherence-verified ∧ clip-qc'd ∧ topical-fit ∧ no-repeat); `/scene-plan` step 0 auto-writes `visual/reuse_plan.json`. Reality: only ~34/125 indexed clips are clean-reusable post-gate |
+| **Dedup / canonical** (NEW 2026-06-17) | `dedup.py` (perceptual dHash clusters) → `v2/coherence_audit/canonical_concepts.json` | one canonical coherence-verified still per repeated concept (rebuild once, reuse everywhere); never advertises a failed still |
+| SFX beds | `sfx_pilots/sfxlib.py` (+ `build_ps22_0N.py` pattern) | REUSE-AS-IS |
+| Spend ledger | `pipeline/cost.py` (+ `data/spend_ledger.jsonl`) | REUSE-AS-IS |
+| Agent bridge | `pipeline/agent_bridge.py` (+ `.agent_bridge/`) | REUSE-AS-IS |
+| CLI orchestration | `cli_pipeline.py`, `pipeline/orchestrator.py` | **WRAP** (v2 `cli_v2.py` shim + state machine reused) |
+
+---
+
+## 7. Cost model + ceilings
+
+General metered estimate ~$23/episode (±30%): Kling ~$11 (48%) · images ~$5 (22%)
+· Opus planning ~$5–6 · audio ~$0.50 · Vision audits small. **In agent-mode the
+LLM lines drop to $0**, so a Psalm-22 short budgets to ~$17–18 (ceiling $25).
+
+- **Provider split (locked):** NBP $0.50 (Christ/face), HF `nano_banana_2` $0.30
+  (neutral plate), direct-Kling $0.65 (animation). Agent-mode LLM = $0.
+- **Cost levers:** exclude bad images at GATE 2 (never animate them) · Haiku for
+  coarse assembly verify · cached constitution prefix · library reuse.
+- **`/cost` runs `hf generate cost` pre-flight and blocks on INV-20** (ask first).
+
+---
+
+## 8. Agent bridge + deterministic servicer contract (toil reduction)
+
+`LLM_PROVIDER=agent` routes all engine LLM/Vision calls through the in-chat agent
+via `.agent_bridge/` files (zero metered API).
+
+**v2 servicer (LIVE — Phase 2 built 2026-06-16):** `v2/servicers/assembly_servicer.py`
++ `v2/cli_v2.py` auto-answer every *mechanical* assembly verdict so the human stops
+hand-writing them. Proven on a #08 dry-run: 14 requests auto-serviced, **1** left for
+the agent (the jigsaw). Pure decision logic in `v2/servicers/bridge_lib.py` (9 unit
+tests). Run: `.venv\Scripts\python.exe v2\cli_v2.py assemble "<v1>" <flags>`.
+
+| Bridge request | Auto-answer rule | Status |
+|---|---|---|
+| `assembly-episode-fit` | `{"offtopic": []}` when clips are scene-native | LIVE |
+| self-review / independent | LOCKED iff the request's deterministic pre-checks carry no FAIL (echoed; AS-G9 advisory; a FAIL is left for the human) | LIVE |
+| slot-verify | auto-PASS **only after** a passing `clip_qc` sidecar exists for the clip | LIVE (guard enforced) |
+| kling-audit | auto-PASS when the cut-plan passed `gate_cutplan` | LIVE (`_gen_servicer.py`) |
+| `jigsaw` (plan_edit) | semantic — pin clips by meaning, hero NOT in `beat_assignment` | **agent-only** (never auto) |
+
+**Genuine human gates stay human:** the jigsaw, audio ear-review, image pick/hero, clip QC.
+
+---
+
+## 9. A/B parity protocol (the acceptance test)
+
+For a **fresh topic**, build episode **A on v1** (today's `cli_pipeline.py`) and
+episode **B on v2** (the skills + this spec + consolidated guardrails). Then:
+
+1. Run the **5-CLI panel** (`independent_review.py`) on both narrations + plans.
+2. Compare: panel verdict, escaped-defect count (`learning.py`), metered cost
+   (`spend_ledger.jsonl`), and human-touch count.
+3. **v2 must tie-or-beat v1** on the panel, at **≤ cost** and **≤ touches**, with
+   **0 FAIL gates** and the **full test suite green**. If v2 loses, fix the
+   spec/skills and re-run before any cutover.
+
+Continuous improvement: `/learn` feeds panel misses back into proposed gate
+strengthening (propose-I-approve), closing the gap episode-over-episode.
+
+---
+
+## 10. Knowledge-migration index (memory → here)
+
+Hard knowledge became invariants; soft knowledge became per-skill guardrails;
+memory files become thin pointers. Representative map (full map in Phase 1):
+
+| Memory | Lands as |
+|---|---|
+| `feedback-never-animate-writing` | INV-17 + `/animate` + NEVER-ANIMATE-WRITING validator |
+| `feedback-ambient-sfx-default` | INV-18 + `/sfx` |
+| `feedback-topical-fit-gate` | INV-19 + `/stills` `/library` guardrail |
+| `ask-before-spending` | INV-20 + `/cost` |
+| `feedback-period-reverent-image-audit` | INV-21 + IMG-PERIOD/IMG-TONE |
+| `feedback-audio-first-review`, `feedback-show-full-paths`, `feedback-index-file-and-full-link` | INV-22 |
+| `locked-stills-provider-split` | §7 cost table + `/stills` |
+| `draft-tournament`, `clarity-over-cleverness`, `landing-not-tired` | `/narrate` + G7/G8 |
+| `feedback-no-reuse-beat-match`, `feedback-still-bookend` | AS-G2/G6 + `/assemble` |
+| `validation-engine`, `recursive-learning-system` | §4 + `/validate` + `/learn` |
+
+---
+
+## 11. Repo map (v2 additions)
+
+```
+v2/
+  SPEC.md            this contract
+  cli_v2.py          orchestration shim → drives reused engine via the bridge
+  servicers/         deterministic per-stage bridge servicers (§8)
+  parity/            A/B harness (§9)
+.claude/skills/<stage>/SKILL.md   one markdown skill per stage (§3)
+
+(reused, unchanged — see §6)
+pipeline/  PythonProject1/jesus/  veed_io/  sfx_pilots/  *_library/  independent_review.py
+data/  rules.json  learning/  spend_ledger.jsonl  kjv_*.json  constitution.md  render_guardrails.md (T1-T6)
+
+(coherence/quality system, NEW 2026-06-17 — INV-23/24)
+pipeline/  coherence.py  coherence_gate.py  dedup.py  clip_reuse.py  still_review.py  (+ test_*.py)
+v2/coherence_audit/   provenance.py · build_reject_list.py · build_review_page.py ·
+                      build_calibration_set.py · quarantine.py · *.json + *.html review pages
+_rejected_coherence/  quarantined bad stills (reversible, gate fixtures)
+```

@@ -27,13 +27,13 @@ Psalm twenty-two opens in the voice of a forsaken man. David wrote it; Jesus mad
 **[narrator]**
 David's very first line:
 
-**[narrator — KJV, Psalm 22:1]**
+**[david — KJV, Psalm 22:1]**
 "My God, my God, why hast thou forsaken me?"
 
 **[narrator]**
 A thousand years later, at the ninth hour, Jesus cried it from the cross:
 
-**[narrator — KJV, Matthew 27:46]**
+**[jesus — KJV, Matthew 27:46]**
 "My God, my God, why hast thou forsaken me?"
 
 **[narrator]**

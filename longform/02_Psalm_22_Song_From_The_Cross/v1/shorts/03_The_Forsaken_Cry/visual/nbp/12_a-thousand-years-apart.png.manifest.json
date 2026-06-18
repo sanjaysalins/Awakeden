@@ -1,0 +1,28 @@
+{
+ "still_id": "12_a-thousand-years-apart",
+ "subject_type": "hero",
+ "role": "hero",
+ "elements": [
+  {
+   "id": "full",
+   "label": "reused: 14_the-one-who-said-it-is-done",
+   "region": null,
+   "verified": true
+  }
+ ],
+ "ambient_layer": [],
+ "period_real": {
+  "T1": "pass",
+  "T2": "pass",
+  "T3": "pass",
+  "T4": "pass",
+  "T5": "pass",
+  "T6": "pass"
+ },
+ "declared_by": "design",
+ "provenance": "fresh",
+ "lock_version": 1,
+ "png_sha256": "c2298c1b1cf4075f5e35da1cdf675aa765b51856c40463135b56d38b34e3f6c2",
+ "locked": true,
+ "note": "reuse-swap from longform\\02_Psalm_22_Song_From_The_Cross\\v1\\shorts\\05_He_Hath_Done_This\\visual\\nbp\\14_the-one-who-said-it-is-done.mp4"
+}

@@ -64,9 +64,11 @@ def cutplan_viral(kling_json: dict) -> tuple[bool, str]:
     return True, f"viral crop-cut sequence ({len(beats)} beats, {framings} framings)"
 
 
-def gate_cutplan(kling_json: dict) -> tuple[bool, list[str]]:
+def gate_cutplan(kling_json: dict, manifest: dict | None = None) -> tuple[bool, list[str]]:
     """Submit-gate: a cut-plan may only be used if it is BOTH viral (crop-cuts) AND
-    image-grounded (no rich-text injection). Deterministic, $0, fail-closed. Wire this
+    image-grounded (no rich-text injection). When a locked element manifest is supplied
+    (Visual v3, INV-25), the plan must ALSO be manifest-grounded — every beat targets a
+    verified element, no invented writing surface. Deterministic, $0, fail-closed. Wire this
     in wherever a .kling.json is authored, BEFORE it reaches Kling."""
     problems: list[str] = []
     ok_v, r_v = cutplan_viral(kling_json)
@@ -75,6 +77,56 @@ def gate_cutplan(kling_json: dict) -> tuple[bool, list[str]]:
     ok_g, r_g = cutplan_image_grounded(kling_json)
     if not ok_g:
         problems.append(f"CLIP-IMAGE-GROUNDED: {r_g}")
+    if manifest is not None:
+        ok_m, r_m = cutplan_manifest_grounded(kling_json, manifest)
+        if not ok_m:
+            problems += [f"CLIP-MANIFEST-GROUNDED: {p}" for p in r_m]
+    return (not problems), problems
+
+
+# Generic full-frame / structural beat words that map to the whole composition (the "full"
+# element), not to a specific cropped element.
+_FRAMING_WORDS = {"full", "wide", "whole", "entire", "composition", "frame", "back",
+                  "return", "establishing", "overview", "tableau", "scene"}
+
+
+def _manifest_vocab(manifest: dict) -> tuple[set, set]:
+    """The legal target vocabulary = VERIFIED element ids + label keywords + ambient words."""
+    ids, words = set(), set()
+    for e in manifest.get("elements", []):
+        if not e.get("verified"):           # only verified elements are legal crop targets
+            continue
+        if e.get("id"):
+            ids.add(e["id"].lower())
+        words.update(re.findall(r"[a-z]{4,}", (e.get("label") or "").lower()))
+    for amb in manifest.get("ambient_layer", []):
+        words.update(re.findall(r"[a-z]{4,}", str(amb).lower()))
+    return ids, words
+
+
+def cutplan_manifest_grounded(kling_json: dict, manifest: dict) -> tuple[bool, list[str]]:
+    """CLIP-MANIFEST-GROUNDED (INV-25): every cut beat must target a VERIFIED manifest
+    element (by id or a label keyword) or be a generic full-frame beat. A beat that names a
+    writing surface (titulus/inscription/sign/scroll) absent from the manifest is the
+    invented-garbled-text seed (the 2026-06-18 bake-off 'BINTX' titulus) -> fail. Deterministic."""
+    if not manifest or not manifest.get("elements"):
+        return False, ["no manifest / no elements to ground against"]
+    ids, words = _manifest_vocab(manifest)
+    if not (ids or words):
+        return False, ["manifest has no VERIFIED elements — nothing the edit may target"]
+    allowed = ids | words | _FRAMING_WORDS
+    problems: list[str] = []
+    for i, b in enumerate(_beats(kling_json)):
+        desc = (b.get("description") or "").lower()
+        bad_writing = [t for t in _WRITING_SUBJECT
+                       if t in desc and t not in words and t not in ids]
+        if bad_writing:
+            problems.append(f"beat {i}: targets writing surface '{bad_writing[0]}' "
+                            "not in the manifest (invented-text seed)")
+            continue
+        toks = set(re.findall(r"[a-z]{3,}", desc))
+        if not (toks & allowed):
+            problems.append(f"beat {i}: '{desc[:48]}' targets no verified manifest element")
     return (not problems), problems
 
 
@@ -89,6 +141,88 @@ def cutplan_image_grounded(kling_json: dict) -> tuple[bool, str]:
     if not any(m in prompt for m in _FROZEN_MARKERS):
         return False, "prompt lacks the anti-invention clause (frozen / only the camera / nothing moves)"
     return True, "camera-only, image-grounded (no rich-text injection, anti-invention clause present)"
+
+
+# ---------------------------------------------------------------- never animate writing
+
+# A scene whose SUBJECT is a writing surface: generative animation (Kling) morphs the
+# letters into hallucinated garbled text (the recurring #02/#03/#04/#06 scroll defect).
+_WRITING_SUBJECT = ("scroll", "titulus", "codex", "inscription", "placard", "parchment",
+                    "manuscript", "stone tablet", "tablet of", "sign reading",
+                    "sign that reads", "lettering", "engraved words", "the words of the",
+                    "verse on", "written law", "open book", "scribe writing", "writing hand")
+# Phrases that prove the text was deliberately designed UN-readable (safe to animate / hold).
+_ILLEGIBLE_OK = ("illegible", "no legible", "unreadable", "no readable", "abstract mark",
+                 "indistinct mark", "blurred mark", "suggested marks", "non-letterforms")
+
+
+# Negated writing mentions ("no titulus", "without a scroll", "no lettering of any kind")
+# are an EXCLUSION, not a writing subject — strip them before scanning so an explicit
+# "no scroll present" does not false-flag the scene. (Found by the v2 Isaiah-53 build.)
+_NEG_WRITING_RE = re.compile(
+    r"\b(?:no|without|free of|not any|never|nor)\b[\w\s,]{0,30}?\b("
+    + "|".join(re.escape(t) for t in _WRITING_SUBJECT) + r")\b")
+
+
+def never_animate_writing(scene: dict) -> tuple[bool, str]:
+    """NEVER-ANIMATE-WRITING (INV-17): a scene whose subject is a writing surface
+    (scroll/titulus/codex/sign/inscription) must NOT go to generative animation — Kling
+    morphs the letters into garbled text. Hold it as a still, give it a deterministic
+    ffmpeg push-in, or exclude it from the cut. Returns ok=True when the scene is SAFE to
+    animate. Scan subject_block/title/mood; explicitly-illegible OR explicitly-excluded passes."""
+    text = " ".join(str(scene.get(k, "")) for k in ("subject_block", "title", "mood_block")).lower()
+    scrubbed = _NEG_WRITING_RE.sub(" ", text)   # drop "no scroll / no titulus" exclusions
+    hits = [t for t in _WRITING_SUBJECT if t in scrubbed]
+    if not hits:
+        return True, "no writing surface in subject — safe to animate"
+    if any(s in text for s in _ILLEGIBLE_OK):
+        return True, f"writing surface ({hits[0]}) explicitly designed illegible — safe"
+    return False, (f"writing subject ({', '.join(hits)}) with intended legible text — do NOT "
+                   "animate (hold as still / ffmpeg push-in / exclude from the cut)")
+
+
+# ---------------------------------------------------------------- narrative-presence gate
+
+_NARRATIVE_FACTS_PATH = ROOT / "data" / "narrative_facts.json"
+_PRESENCE_WINDOW = 75   # chars after a character name to look for a presence/perception verb
+
+
+def load_narrative_facts() -> list[dict]:
+    if not _NARRATIVE_FACTS_PATH.exists():
+        return []
+    return json.loads(_NARRATIVE_FACTS_PATH.read_text(encoding="utf-8")).get("not_present", [])
+
+
+def narrative_presence(spoken_text: str) -> tuple[bool, list[str]]:
+    """NARRATIVE-PRESENCE (hard gate, defect class 'invented-narrative-detail', INV-4).
+    FAIL the SPOKEN text when it asserts a known-absent Bible character watching/seeing/
+    standing-at an event the record places them away from (e.g. 'Peter watched the
+    scourging' — the disciples fled, Matt 26:56). Deterministic + fail-closed; ZERO false
+    positives — only the curated data/narrative_facts.json pairings can fail (a true claim
+    like 'John watched it at the cross' never trips, John not being listed). Pass ONLY the
+    spoken text (not DEPTH notes, which may discuss these as negative examples)."""
+    text = (spoken_text or "").lower()
+    fails: list[str] = []
+    for fact in load_narrative_facts():
+        events = fact.get("event_words", [])
+        if not any(ev in text for ev in events):
+            continue                      # the event isn't in view — nothing to flag
+        verbs = fact.get("presence_verbs", [])
+        for alias in fact.get("aliases", []):
+            pos = text.find(alias)
+            hit = False
+            while pos >= 0:
+                window = text[pos: pos + len(alias) + _PRESENCE_WINDOW]
+                if any(v in window for v in verbs):
+                    hit = True
+                    break
+                pos = text.find(alias, pos + len(alias))
+            if hit:
+                fails.append(
+                    f"NARRATIVE-PRESENCE: '{alias.title()}' asserted as watching/present at the "
+                    f"event (near '{events[0]}*') — {fact.get('disproof', '')}")
+                break                     # one fail per character is enough
+    return (not fails), fails
 
 
 # ---------------------------------------------------------------- prompt criteria guard

@@ -1,0 +1,58 @@
+{
+ "still_id": "01_the-cry",
+ "subject_type": "hero",
+ "role": "hook-open",
+ "elements": [
+  {
+   "id": "full",
+   "label": "the crucified Christ's face lifted to a dark sky",
+   "region": null,
+   "verified": true
+  },
+  {
+   "id": "mouth",
+   "label": "the open, crying mouth",
+   "region": null,
+   "verified": true
+  },
+  {
+   "id": "eyes",
+   "label": "anguished eyes searching the dark",
+   "region": null,
+   "verified": true
+  },
+  {
+   "id": "crown",
+   "label": "the crown of thorns on the brow",
+   "region": null,
+   "verified": true
+  },
+  {
+   "id": "tear",
+   "label": "a tear track down the cheek",
+   "region": null,
+   "verified": true
+  },
+  {
+   "id": "throat",
+   "label": "the strained throat and beard",
+   "region": null,
+   "verified": true
+  }
+ ],
+ "ambient_layer": [],
+ "period_real": {
+  "T1": "pass",
+  "T2": "pass",
+  "T3": "pass",
+  "T4": "pass",
+  "T5": "pass",
+  "T6": "pass"
+ },
+ "declared_by": "design",
+ "provenance": "fresh",
+ "lock_version": 1,
+ "png_sha256": "1c3ed40b4e2a52b5feab1e5912d688701711dc6cb458a58f0a73d5b4a634349c",
+ "locked": true,
+ "note": "clean face tour; thorn-blood is in the still"
+}

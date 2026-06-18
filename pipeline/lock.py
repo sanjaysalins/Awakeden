@@ -33,7 +33,8 @@ import json
 import os
 from pathlib import Path
 
-from pipeline import cluster_gate, doctrine_gate, kjv_strict
+from pipeline import cluster_gate, coherence, doctrine_gate, kjv_strict, validators
+from pipeline import clip_qc
 from pipeline import narration_parse as NP
 from pipeline.kjv_strict import _canon as _kjv_canon  # punctuation-PRESERVING
 
@@ -46,6 +47,81 @@ def require_lock_enabled() -> bool:
     if not enabled:
         print("  [lock] WARNING: JITB_REQUIRE_LOCK is OFF — lock enforcement bypassed.")
     return enabled
+
+
+# ---- visual coherence chokepoint (IMG-COHERENT, INV-23) ----------------------
+# The deterministic-gate teeth for the body-plausibility gate. Wired into the assembly path
+# BEFORE clips load, so a still/clip that never passed the coherence fan-out cannot reach the
+# cut (the orphan-check failure the red-team flagged: clip_qc/coherence are useless unless a
+# chokepoint nobody can skip actually calls them — see v2/COHERENCE_GATE_SPEC.md §A5).
+#
+# ROLLOUT: JITB_REQUIRE_COHERENCE defaults to "0" until Half B has audited the existing pool
+# (no coherence sidecars exist yet — hard-failing now would break every working short). While
+# OFF it still RUNS and prints exactly what WOULD block, so the gate is visible immediately;
+# it RAISES once flipped to "1" after the cleanup. Same shape as JITB_REQUIRE_LOCK.
+def require_coherence_enabled() -> bool:
+    return os.getenv("JITB_REQUIRE_COHERENCE", "0") not in ("0", "false", "no")
+
+
+def visual_coherence_blockers(v1_folder: Path, provider: str = "nbp",
+                              scene_indices: set[int] | None = None,
+                              exclude: set[int] | None = None) -> list[str]:
+    """Return the stills/clips that are NOT coherence-verified (still: passing *.coherence.json
+    bound to the file; clip: passing *.clipqc.json). Empty list == clean.
+
+    scene_indices (the set ACTUALLY SELECTED for the cut — hero + body slots) scopes the check
+    to what ships: an unused/unselected pool still must NOT block assembly. When None, falls back
+    to the whole render dir (minus `exclude`) — back-compat, intentionally stricter."""
+    exclude = exclude or set()
+    nbp = v1_folder / "visual" / provider
+    if not nbp.is_dir():
+        return [f"<no {provider} render dir at {nbp}>"]
+    out: list[str] = []
+
+    def _idx(p: Path) -> int | None:
+        head = p.name.split("_", 1)[0]
+        return int(head) if head.isdigit() else None
+
+    def _in_scope(p: Path) -> bool:
+        i = _idx(p)
+        if i is not None and i in exclude:
+            return False
+        if scene_indices is not None:           # only the selected cut
+            return i in scene_indices
+        return True                              # whole pool (back-compat)
+
+    for png in sorted(nbp.glob("*.png")):
+        if _in_scope(png) and not coherence.is_verified(png):
+            out.append(f"still {png.name}: {coherence.verdict_reason(png)}")
+    for mp4 in sorted(nbp.glob("*.mp4")):
+        if _in_scope(mp4) and not clip_qc.is_verified(mp4):
+            out.append(f"clip {mp4.name}: not clip_qc-verified")
+    return out
+
+
+def require_visual_coherence(v1_folder: Path, provider: str = "nbp",
+                             scene_indices: set[int] | None = None,
+                             exclude: set[int] | None = None) -> None:
+    """Fail-closed guard: refuse to assemble a cut from stills/clips that never passed the
+    coherence gate (INV-23). Scope to the SELECTED set via scene_indices. Always reports;
+    raises only when JITB_REQUIRE_COHERENCE is on."""
+    blockers = visual_coherence_blockers(v1_folder, provider, scene_indices, exclude)
+    if not blockers:
+        return
+    enabled = require_coherence_enabled()
+    head = (f"  [coherence] {len(blockers)} asset(s) NOT coherence-verified in {v1_folder.name}:")
+    print(head)
+    for b in blockers[:20]:
+        print(f"  [coherence]   - {b}")
+    if not enabled:
+        print("  [coherence] WARNING: JITB_REQUIRE_COHERENCE is OFF (rollout) — NOT blocking. "
+              "Flip to 1 after the Half-B audit to enforce.")
+        return
+    raise PermissionError(
+        f"REFUSING to assemble: {len(blockers)} asset(s) lack a passing coherence/clip-QC "
+        f"verdict (INV-23). Run the coherence gate first, or set JITB_REQUIRE_COHERENCE=0 to "
+        f"override (discouraged)."
+    )
 
 
 # ---- spoken-text hash (binds what is rendered) -------------------------------
@@ -164,6 +240,18 @@ def _anchor_findings(folder: Path, md: str) -> list[str]:
     return []  # advisory-only in Phase C; tightened when a manifest schema exists
 
 
+def _narrative_presence_findings(md: str) -> list[str]:
+    """Hard gate (defect class 'invented-narrative-detail'): block a lock that asserts a
+    known-absent Bible character watching/present at an event (e.g. 'Peter watched the
+    scourging'). Scans the SPOKEN text only (DEPTH notes may cite these as negatives)."""
+    try:
+        spoken = NP.parse(md).spoken_text
+    except NP.EmptyNarrationError:
+        return []
+    ok, fails = validators.narrative_presence(spoken)
+    return fails
+
+
 def _sibling_folders(folder: Path) -> list[Path]:
     parent = folder.parent
     return sorted(
@@ -186,6 +274,7 @@ def run_lock(folder: Path, *, form: str = "short", check_cluster: bool = True) -
         return {"ok": False, "folder": folder.name, "blocking": [f"parse: {e}"]}
     blocking += _rule8_findings(md, form)
     blocking += _anchor_findings(folder, md)
+    blocking += _narrative_presence_findings(md)
 
     # split-brain guard: the rendered tagged file must match the verified source
     pm = parity_mismatch(folder)
@@ -219,7 +308,7 @@ def run_lock(folder: Path, *, form: str = "short", check_cluster: bool = True) -
 
     ok = not blocking
     if ok:
-        checks = ["kjv_strict", "parity", "doctrine_scan"] + (["rule8"] if form == "short" else []) + \
+        checks = ["kjv_strict", "parity", "doctrine_scan", "narrative_presence"] + (["rule8"] if form == "short" else []) + \
                  (["cluster"] if check_cluster else [])
         write_lock(folder, checks=checks)
         register(folder, form=form)

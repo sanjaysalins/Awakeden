@@ -260,20 +260,19 @@ KLING_SKILL_PATH = Path(os.getenv(
 # ----------------------------------------------------------------------------
 # Video (animation) provider — image -> clip
 # ----------------------------------------------------------------------------
-# DIRECT-KLING is the default (2026-05-29 bake-off verdict): the user judged
-# direct-Kling's motion clearly better than HF Kling 3.0 — even when HF was fed the
-# SAME rich 8-beat cut-plan prompt. HF also isn't cheaper (~6.25cr/5s ≈ direct-Kling)
-# and its NSFW filter blocks the crucifixion platform-wide. So HF earns no place as
-# default. The hybrid/HF code stays available (VIDEO_PROVIDER=hybrid|hf) for future
-# re-evaluation (e.g. HF `pro` mode, or the variable-duration redesign), but `kling`
-# is primary. Tradeoff: direct-Kling is fixed ~10s, so the assembly speed/trim (with
-# the reverence cap) remains how clips are fit — the variable-duration win is parked.
+# SHORTS animation = HF Kling pro via `_hf_animate_short.py` (RE-BAKE-OFF 2026-06-18,
+# `_bakeoff/compare.html`): on the SAME still + a byte-identical gallery-tour prompt + 5s,
+# HF Kling pro rendered 1076×1924 and stayed faithful, while DIRECT-KLING rendered 716×1284
+# and HALLUCINATED a garbled "BINTX" titulus not in the still. So HF-pro is the shorts
+# default for quality/faithfulness; DIRECT-KLING (image_to_kling.py) is the FALLBACK only for
+# NSFW/bare-torso-cross stills HF refuses. (This FLIPPED the 2026-05-29 verdict, which used
+# the OLD prompt + plain HF Kling 3.0.) The VIDEO_PROVIDER knob below governs the ORCHESTRATOR
+# image->clip path (cli_pipeline / long-form fallback); shorts run the standalone HF-pro tool.
 VIDEO_PROVIDER = os.getenv("VIDEO_PROVIDER", "kling").strip().lower()
 # HF video model for the LONG-FORM pipeline only (image->clip via HFVideoProvider).
 # Bake-off (2026-05-30): veo3_1_lite keeps the Baroque oil look without softening it to
 # photoreal, across every scene type, at ~half Kling's credits — chosen for long-form.
-# seedance1_5 is the fallback (more dynamic but photoreal-softens). SHORTS are unaffected:
-# they use direct-Kling (VIDEO_PROVIDER=kling), which executes the viral 8-beat cut-plan.
+# seedance1_5 is the fallback (more dynamic but photoreal-softens).
 VIDEO_HF_MODEL = os.getenv("VIDEO_HF_MODEL", "veo3_1_lite")       # `higgsfield model list`
 VIDEO_HF_MODE = os.getenv("VIDEO_HF_MODE", "std")                 # std | pro | 4k
 VIDEO_HF_ASPECT = os.getenv("VIDEO_HF_ASPECT", "9:16")
@@ -403,6 +402,10 @@ VISUAL_BANNED_TOKENS = (
     "modern", "wristwatch", "eyeglasses", "smartphone", "photograph",
     "photorealistic", "3d render", "cartoon", "anime", "stained glass",
     "lightsaber", "gore", "blood spatter",
+    # render-guardrail additions (T2/T4 — clearly visible defects, low false-positive risk;
+    # negation-prone words like 'lettering'/'flag'/'panel' stay out of this substring check
+    # and are covered by the constitution rules + the vision gate F1-F5 instead).
+    "diptych", "triptych", "gem", "jewel", "faceted", "glossy bead",
 )
 
 

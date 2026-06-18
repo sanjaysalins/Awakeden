@@ -5,15 +5,7 @@ stages so the next episode's clips drop into the cut with less fighting.
 
 ## What was hard to fit this run
 
-- **#01 Two Words on a Cross** — slot 4.4s, played 1.30x AND trimmed 43% (role=hook-open). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#02 The King Who Wrote It** — needed 2.15x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
-- **#04 The Tongue Cleaveth** — slot 2.7s, played 2.20x AND trimmed 40% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#05 The Dust of Death** — needed 2.20x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
-- **#07 A Thousand Years Apart** — slot 4.8s, played 1.30x AND trimmed 38% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#09 Living Water Offered** — slot 3.1s, played 1.30x AND trimmed 60% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#10 Hanging There With Nothing** — slot 1.2s, played 1.30x AND trimmed 85% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#12 Come, Every One That Thirsteth** — slot 2.5s, played 1.30x AND trimmed 67% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#11 Water from the Rock** — slot 4.6s, played 1.30x AND trimmed 41% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
+- **#10 Hanging There With Nothing** — slot 1.2s, played 1.30x AND trimmed 70% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
 
 ## Standing 'design for the cut' rules
 

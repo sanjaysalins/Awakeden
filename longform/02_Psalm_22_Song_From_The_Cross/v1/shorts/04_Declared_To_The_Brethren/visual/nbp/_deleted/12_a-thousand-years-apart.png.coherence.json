@@ -1,0 +1,28 @@
+{
+ "audited": true,
+ "passed": false,
+ "png_sha256": "68096878e49a1d96852e23b7f88a58ad5227975f4760a8690b698aa75c48f23c",
+ "n_votes": 1,
+ "split": false,
+ "failed_dims": [
+  "F2"
+ ],
+ "passes": {},
+ "fail_reasons": [
+  "Hard vertical dividing line down the center splits the image into two panels (left: scribe with scroll",
+  "right: Christ with brethren) — a split-screen/diptych, not full-bleed"
+ ],
+ "votes": [
+  {
+   "passed": false,
+   "dims_failed": [
+    "F2"
+   ],
+   "reasons": [
+    "Hard vertical dividing line down the center splits the image into two panels (left: scribe with scroll",
+    "right: Christ with brethren) — a split-screen/diptych, not full-bleed"
+   ]
+  }
+ ],
+ "note": "ensemble of 1 vote(s), any-fail"
+}

@@ -5,18 +5,7 @@ stages so the next episode's clips drop into the cut with less fighting.
 
 ## What was hard to fit this run
 
-- **#01 The Psalm's Last Line** — needed 2.20x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
-- **#09 The Day Is Done** — needed 2.20x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
-- **#03 The Fingertip on the Final Word** — slot 4.1s, played 1.30x AND trimmed 47% (role=pivot). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#10 Hands at Rest** — slot 1.0s, played 1.30x AND trimmed 87% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#05 The Greek Word** — slot 4.5s, played 1.30x AND trimmed 42% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#07 The Bowed Head** — slot 2.1s, played 1.30x AND trimmed 73% (role=pivot). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#11 The Finished Work** — slot 2.6s, played 1.30x AND trimmed 67% (role=climax). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#06 A Thousand Years Apart** — slot 1.8s, played 1.30x AND trimmed 77% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#08 The Torn Veil** — slot 3.6s, played 1.30x AND trimmed 54% (role=pivot). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#12 Nothing Left to Carry** — slot 2.9s, played 2.20x AND trimmed 37% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#13 The Open Door Home** — slot 1.4s, played 2.20x AND trimmed 70% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#14 The One Who Said It Is Done** — slot 3.1s, played 1.30x AND trimmed 60% (role=close). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
+- **#13 The Open Door Home** — slot 1.5s, played 2.20x AND trimmed 36% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
 
 ## Standing 'design for the cut' rules
 

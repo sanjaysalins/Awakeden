@@ -1,0 +1,148 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: plan
+
+LENS — judge this PLAN on (be specific, cite the exact step/claim):
+- Feasibility against the real codebase / tools (does it assume things that exist?).
+- Hidden risks, false assumptions, single points of failure.
+- Over-engineering / premature building before the idea is proven.
+- Missing steps, edge cases, or verification gaps.
+- Reuse: does it duplicate tools that already exist instead of reusing them?
+- Cost / spend and whether it's justified.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block:
+
+VERDICT: PASS | REVISE | FAIL
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# PLAN — Fix every short (element-gate sweep + reuse-rebuild) + a reusable music library
+
+> **Status: DRAFT for review (2026-06-18).** Born from #03: the $0 element-gate sweep found
+> 5 defects that SHIPPED in a "clean" short, and reuse-from-catalogue rebuilt it for $0. This
+> plan scales that across all shipped shorts, lays the new music directive on each, and turns
+> the per-short metered score into a **reusable music palette** (extend `music_library/`).
+
+---
+
+## Goal
+
+1. Every shipped short **defect-free** — element-gate swept + reuse-rebuilt like #03.
+2. Each rebuilt cut carries the **new music directive** (−8 dB bed · 2.5 s end-hold · gentle duck).
+3. A **reusable Eleven-Music collection** (extends `music_library/`, source=`eleven`) so long-form
+   and future shorts **pull a score instead of paying to regenerate** — generate new only on no fit.
+
+---
+
+## The proven pattern (from #03, all $0 unless a render is truly needed)
+
+```
+per short:
+  1. element_manifest declare-short            (auto-declare manifests from the scene plan)
+  2. element-gate sweep                         (filmstrips + agent look -> sweep_review.html)
+  3. USER reviews the page                      (authority on the subtle — caught #03's floating bust)
+  4. reuse-rebuild the defects from the catalogue (clean coherence+element-gated clips),
+     exclude un-fixable writing scenes, cli_assemble (bridge-serviced, LOCKED)
+  5. re-sweep -> confirm clean
+```
+Cost: **$0 when reuse covers the holes** (it did for #03). A beat with NO clean reuse match needs
+either a fresh render (metered — quote per case) or exclusion (user's call, like #03's scrolls).
+
+---
+
+## Phase 1 — Sweep + reuse-rebuild ALL shipped shorts ($0 baseline)
+
+11 shorts: 8 Psalm-22 (#01–#08) + 3 v2 pilots (Isaiah 53:5, Mockers-v2, Zechariah).
+Order: **STRICT NUMERIC #01→#08, then the 3 pilots.** One short at a time (bridge requests are global).
+
+- Per short the USER reviews the sweep page and confirms reject ∪ flag (the calibration rule).
+- Reuse-first from the 120 clean catalogue clips; **every reuse is element-gated by eye first**
+  (the catalogue predates the gate — it hid a gem in "The Cry Recorded").
+- Deliverable per short: a clean `viral_cut.mp4` (music applied in Phase 3).
+
+**Known risk:** the catalogue itself isn't element-gate-clean. A one-time **catalogue element-gate
+sweep** (mark each clip's element-gate verdict, quarantine defects) is a worthwhile $0 sub-task so
+reuse never re-imports a hidden defect. Do it before/while sweeping the shorts.
+
+---
+
+## Phase 2 — Harvest the Eleven scores into a SEPARATE `eleven_music/` collection (mostly $0)
+
+Per the user's decision, build a dedicated `eleven_music/` collection (mirror the music_library
+tooling — `index.json` + ingest/approve/find_for_beat/qc — in the new dir; reuse the code
+patterns, keep the store separate from the Suno `music_library/`):
+
+1. **Ingest** the 11 generated `assembly/music.mp3` scores with `source="eleven"`,
+   `license="eleven-music"`, provenance = the short they were made for.
+2. **Tag** each from `music_designs.json`: lens (Minimalist-Ambient | Cinematic-Redemptive),
+   mood (grief/intimate, redemptive-arc), beat, doctrine-fit. Keep the winning `best_prompt`
+   so a near-match can be regenerated/extended later.
+3. **Audition-gate** (`approve.py`) — only takes the user approves by ear become selectable.
+4. `find_for_beat(beat, tags)` then returns the best eleven/suno score by fit (already built).
+
+Result: a small **palette** (≈ 2 lenses × a few moods) covering most short/long beats.
+
+---
+
+## Phase 3 — Apply music to every rebuilt cut (reuse-first → mostly $0)
+
+Per rebuilt short:
+- `find_for_beat` the best-fit **approved** score from the library → mix at the **new directive**
+  (`add_music.py` with gain −8, outro 2.5, gentle duck threshold 0.12 / ratio 2.5) → re-caption.
+- Generate a NEW score ONLY if the library has no fit → then **add it to the library** (so it's
+  reused next time). Metered (Eleven Music quota, invisible) — quote the count + ask first.
+- #03 (already rebuilt) gets its music re-applied here (its old music final is stale).
+
+This replaces "regenerate a bespoke score per short" (metered each) with **reuse after first gen**.
+
+---
+
+## Phase 4 — Wire the music library into LONG-FORM (and future shorts)
+
+- Long-form audio pipeline: pull per-movement scores from `music_library` via `find_for_beat`
+  (reuse-first, doctrine-gated), generate new only on no match, audition-gate, add back to the library.
+- Future shorts: `add_music` / the music batch consult `find_for_beat` before generating.
+- Net effect: the library turns recurring metered music spend into a **one-time palette cost** —
+  the same generate-once-reuse lever as `clip_library` / `sound_library` / `image_library`.
+
+---
+
+## Cost model
+
+| Phase | Cost |
+|---|---|
+| 1 Sweep + reuse-rebuild (11 shorts) | **$0** baseline; metered only for a beat with no clean reuse (quote per case) |
+| 1b Catalogue element-gate sweep | **$0** (agent look) |
+| 2 Harvest scores into the library | **$0** (existing files) |
+| 3 Apply music (reuse-first) | **$0** per reuse; metered only for genuinely new moods (then banked) |
+| 4 Long-form wiring | **$0** code + reuse |
+
+**Net:** mostly $0. The only metered spend is (a) any unavoidable fresh clip render in Phase 1
+and (b) genuinely-new music moods in Phase 3 — both quoted + approved before running.
+
+---
+
+## Decisions — RESOLVED (2026-06-18)
+
+1. **Sweep order:** STRICT NUMERIC #01→#08 → then the 3 pilots. One short at a time.
+2. **Music collection:** a SEPARATE `eleven_music/` collection (the user chose isolation over
+   extending `music_library/`). Mirror the proven music_library tooling (index/ingest/approve/
+   find_for_beat/qc) in the new dir — reuse the *code patterns*, keep the *store* separate.
+   (Tradeoff noted: some tooling duplication vs `music_library/`; isolation per the user.)
+3. **Music directive LOCKED as the standard** (library + every application): **−8 dB bed ·
+   2.5 s end-hold · gentle duck (threshold 0.12 / ratio 2.5)**.
+4. **Vet:** red-team (internal) + the external 5-CLI panel BEFORE executing (significant plan).
+
+---
+
+## Standing guardrails carried in
+
+Reject = gate ∪ human flag · calibrate the gate vs blind labels before any HARD enable ·
+ask-before-spending on every metered step · audition-gate every music take by ear (user is dyslexic) ·
+doctrine-gated music selection · reuse-first then render/generate.
+----- ARTIFACT END -----

@@ -1,0 +1,20 @@
+{
+  "_README": "concept slug -> canonical coherence-verified still to REUSE (rebuild once, reuse everywhere). Only VERIFIED canonicals are listed; concepts whose every copy failed the gate are in 'needs_rebuild'. Built by pipeline/dedup.py.",
+  "canonical": {
+    "a-thousand-years-apart": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/06_a-thousand-years-apart.png",
+    "whom-they-pierced": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/08_whom-they-pierced.png",
+    "the-shaking-heads": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/01_the-shaking-heads.png",
+    "bearing-the-scorn": "v2/pilot/mockers_words_ps22/v1/visual/nbp/11_bearing-the-scorn.png",
+    "the-empty-tomb": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/01_the-empty-tomb.png",
+    "the-invitation-face": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/11_the-invitation-face.png",
+    "the-king-who-wrote-it": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/02_the-king-who-wrote-it.png",
+    "hanging-there-with-nothing": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/10_hanging-there-with-nothing.png",
+    "that-water-is-himself": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/14_that-water-is-himself.png",
+    "wounded-for-our-transgressions": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/03_wounded-for-our-transgressions.png",
+    "in-his-own-body-on-the-tree": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/06_in-his-own-body-on-the-tree.png",
+    "aimed-at-you": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/11_aimed-at-you.png",
+    "finished-at-the-cross": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/12_finished-at-the-cross.png",
+    "for-the-very-people-throwing-it": "v2/pilot/mockers_words_ps22/v1/visual/nbp/13_for-the-very-people-throwing-it.png"
+  },
+  "needs_rebuild": []
+}

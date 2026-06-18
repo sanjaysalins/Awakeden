@@ -12,7 +12,9 @@
       "check": "vision",
       "validator": "pipeline/visual_render.py::verify_image (check 1)",
       "memory": "feedback-audit-stills-fullres",
-      "fixtures": ["still_velazquez_hero_good"]
+      "fixtures": [
+        "still_velazquez_hero_good"
+      ]
     },
     {
       "id": "IMG-ELEMENTS",
@@ -45,7 +47,9 @@
       "check": "vision",
       "validator": "pipeline/visual_render.py::verify_image (check 4) + config.VISUAL_BANNED_TOKENS",
       "memory": "feedback-period-reverent-image-audit",
-      "fixtures": ["still_garbled_titulus_0701_bad"]
+      "fixtures": [
+        "still_garbled_titulus_0701_bad"
+      ]
     },
     {
       "id": "IMG-PERIOD",
@@ -56,7 +60,10 @@
       "check": "vision",
       "validator": "pipeline/visual_render.py::verify_image (check 6)",
       "memory": "feedback-period-reverent-image-audit",
-      "fixtures": ["still_modern_crowd_0706_bad", "still_velazquez_hero_good"]
+      "fixtures": [
+        "still_modern_crowd_0706_bad",
+        "still_velazquez_hero_good"
+      ]
     },
     {
       "id": "IMG-TONE",
@@ -72,12 +79,12 @@
     {
       "id": "IMG-COHERENT",
       "scope": "still",
-      "title": "Composition makes sense",
-      "description": "The depicted scene must be internally coherent / theologically sensible (e.g. NOT 'a standing man with only one hand nailed to a cross'; NOT a duplicate central Christ; NOT an inverted unified scene that becomes a Christ bust instead of the specced onlookers).",
+      "title": "Fit for use — clear-defect gate (F1-F5, default-PASS)",
+      "description": "A blind, default-PASS look flags a still NOT FIT FOR USE only on a CLEAR, OBVIOUS defect. F1 MODERN/ANACHRONISM: modern/out-of-period object, dress, flag/banner, glossy photo-portrait look. F2 FRAME/BORDER: picture-frame, wooden border, canvas edge, triptych side-panel, split-screen (must be full-bleed). F3 BROKEN FACE: melted/warped/asymmetric face, merged faces, plainly malformed eyes, or a grotesque/unsettling expression (a gaunt/sorrowful/upward-gaze Man-of-Sorrows face PASSES). F4 IMPOSSIBLE ANATOMY: detached/floating head or limb, limb through a solid object, giant-head/tiny-body, extra/missing limb, obviously bad hand. F5 DOMINANT GARBLED TEXT: gibberish lettering dominating the frame as the subject (a small background scroll PASSES). Calibration retuned this from an over-strict C1-C7 'when unsure FAIL' design (precision 0.08 -> 0.50). Verdict is fail-closed via a *.coherence.json sidecar (audited AND passed AND png_sha256 match).",
       "severity": "fail",
       "check": "vision",
-      "validator": "pipeline/visual_render.py::verify_image (coherence; candidate new explicit check)",
-      "memory": "feedback-period-reverent-image-audit",
+      "validator": "pipeline/coherence_gate.py (blind default-PASS F1-F5 look) + pipeline/coherence.py (fail-closed sidecar, hash-bound is_verified, k-vote aggregate for bulk re-audit/determinism); enforced by pipeline/lock.py::require_visual_coherence (rollout-gated JITB_REQUIRE_COHERENCE, reports-only until shipped shorts backfilled)",
+      "memory": "feedback-gate-calibration-human-authority",
       "fixtures": []
     },
     {
@@ -89,7 +96,10 @@
       "check": "deterministic",
       "validator": "validation.validators::cutplan_image_grounded",
       "memory": "feedback-kling-friendly-scene-plans",
-      "fixtures": ["cutplan_richtext_bad", "cutplan_cropcut_clean_good"]
+      "fixtures": [
+        "cutplan_richtext_bad",
+        "cutplan_cropcut_clean_good"
+      ]
     },
     {
       "id": "CLIP-FROZEN",
@@ -100,7 +110,10 @@
       "check": "vision",
       "validator": "PythonProject1/jesus/image_to_kling.py::verify_cut_plan (Stage A.5) + on-demand clip vision check",
       "memory": "feedback-kling-lowmotion-fix",
-      "fixtures": ["clip_lava_13_textplan_bad", "clip_hero_14_good"]
+      "fixtures": [
+        "clip_lava_13_textplan_bad",
+        "clip_hero_14_good"
+      ]
     },
     {
       "id": "CLIP-VIRAL",
@@ -111,7 +124,10 @@
       "check": "deterministic",
       "validator": "validation.validators::cutplan_viral",
       "memory": "feedback-natural-speed-more-clips",
-      "fixtures": ["cutplan_slowzoom_bad", "cutplan_cropcut_clean_good"]
+      "fixtures": [
+        "cutplan_slowzoom_bad",
+        "cutplan_cropcut_clean_good"
+      ]
     },
     {
       "id": "CLIP-NOMORPH",
@@ -122,6 +138,17 @@
       "check": "vision",
       "validator": "on-demand clip vision check (first/mid/last frame compare)",
       "memory": "feedback-kling-lowmotion-fix",
+      "fixtures": []
+    },
+    {
+      "id": "CLIP-NOWRITING",
+      "scope": "clip",
+      "title": "Never animate a writing surface (INV-17)",
+      "description": "A scene whose subject is a writing surface (scroll/titulus/codex/sign/inscription/parchment) must NOT be sent to generative animation — Kling morphs the letters into garbled hallucinated text (the recurring #02/#03/#04/#06 scroll defect). Hold it as a still, give it a deterministic ffmpeg push-in, or exclude it from the cut. An explicitly-illegible design (abstract/indistinct marks) is safe.",
+      "severity": "fail",
+      "check": "deterministic",
+      "validator": "validation.validators::never_animate_writing",
+      "memory": "feedback-never-animate-writing",
       "fixtures": []
     },
     {
@@ -177,6 +204,39 @@
       "check": "deterministic",
       "validator": "pipeline/doctrine_gate.py + pipeline/test_doctrine_gate.py",
       "memory": "pipeline-verification-hardening",
+      "fixtures": []
+    },
+    {
+      "id": "IMG-MANIFEST",
+      "scope": "still",
+      "title": "Locked element manifest",
+      "description": "Every still carries a png_sha256-bound, vision-reconciled, LOCKED element manifest; only verified elements are tour-targetable. Silent re-render busts the lock.",
+      "severity": "fail",
+      "check": "deterministic",
+      "validator": "element_manifest.is_locked",
+      "memory": "visual-v3-intentional-still-spec",
+      "fixtures": []
+    },
+    {
+      "id": "CLIP-MANIFEST-GROUNDED",
+      "scope": "clip",
+      "title": "Cut-plan grounded to the manifest",
+      "description": "Every cut beat must target a VERIFIED manifest element; a beat naming a writing surface (titulus/inscription) absent from the manifest is the invented-garbled-text seed.",
+      "severity": "fail",
+      "check": "deterministic",
+      "validator": "validators.cutplan_manifest_grounded",
+      "memory": "visual-v3-intentional-still-spec",
+      "fixtures": []
+    },
+    {
+      "id": "CLIP-ELEMENT-GATE",
+      "scope": "clip",
+      "title": "No invented element in the clip",
+      "description": "Per-frame calibrated vision judgment (default-PASS, any-fail, hash-pooled): a clip fails on a CLEAR foreign object/figure/text not in the locked manifest (gem, extra figure, garbled titulus).",
+      "severity": "fail",
+      "check": "vision",
+      "validator": "clip_element_gate.is_verified",
+      "memory": "visual-v3-intentional-still-spec",
       "fixtures": []
     }
   ]

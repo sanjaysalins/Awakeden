@@ -79,6 +79,68 @@ def test_live_servicer_cutplan_is_viral_and_grounded():
     assert ok2, f"live servicer cut-plan not image-grounded: {r2}"
 
 
+# ---- CLIP-NOWRITING: never animate a writing surface (INV-17) ----------------
+
+def test_writing_scene_fails_animate():
+    scene = {"title": "The First Line, Centuries Early",
+             "subject_block": "an open scroll on a wooden table, the verse inscribed in dark Hebrew lettering across the parchment"}
+    ok, reason = V.never_animate_writing(scene)
+    assert not ok, f"a scroll/inscription scene must FAIL the animate guard; got pass ({reason})"
+
+
+def test_illegible_writing_scene_passes_animate():
+    scene = {"title": "The Titulus",
+             "subject_block": "a crucifixion titulus above the cross, the lettering reduced to abstract illegible marks, no readable words"}
+    ok, reason = V.never_animate_writing(scene)
+    assert ok, f"an explicitly-illegible titulus is safe to animate; got fail ({reason})"
+
+
+def test_normal_scene_passes_animate():
+    scene = {"title": "The Cross, Foretold",
+             "subject_block": "the crucified Christ lifted on a rough wooden cross against a darkening sky, head bowed"}
+    ok, reason = V.never_animate_writing(scene)
+    assert ok, f"a normal crucifixion scene has no writing subject; got fail ({reason})"
+
+
+def test_negated_writing_mention_passes_animate():
+    # explicitly EXCLUDING writing must not false-flag (found by the v2 Isaiah-53 build)
+    for sb in ("the top of the cross bare and plain with no inscription board and no titulus and no lettering of any kind",
+               "an aged prophet gazing at a dim far figure, no writing or scroll present"):
+        ok, reason = V.never_animate_writing({"title": "x", "subject_block": sb})
+        assert ok, f"an explicit 'no scroll/titulus' exclusion must pass; got fail ({reason})"
+
+
+# ---- NARRATIVE-PRESENCE hard gate (invented-narrative-detail) ----------------
+
+def test_narrative_presence_blocks_peter_watching():
+    ok, fails = V.narrative_presence(
+        "And Peter, who stood near enough to watch that scourging, reached back to Isaiah's words.")
+    assert not ok and any("Peter" in f for f in fails), fails
+
+
+def test_narrative_presence_blocks_matthew_watching():
+    ok, fails = V.narrative_presence(
+        "At the cross, Matthew watched it happen — the passers-by mocking and wagging their heads.")
+    assert not ok and any("Matthew" in f for f in fails), fails
+
+
+def test_narrative_presence_passes_fixed_versions():
+    # the corrected drafts must PASS (no false-positive block)
+    for spoken in (
+        "And the apostle Peter took up Isaiah's words and laid them on Christ at the cross.",
+        "At the cross, Matthew's gospel records it — the rulers sneering and the mockers wagging their heads.",
+    ):
+        ok, fails = V.narrative_presence(spoken)
+        assert ok, f"fixed draft wrongly blocked: {fails}"
+
+
+def test_narrative_presence_passes_true_eyewitness():
+    # John WAS at the cross (John 19:26) and is not listed -> never trips
+    ok, fails = V.narrative_presence(
+        "A thousand years later, John watched it at the cross — soldiers dividing Jesus' clothes.")
+    assert ok, f"a true eyewitness claim must pass; got {fails}"
+
+
 # ---- verify_image criteria guard --------------------------------------------
 
 def test_verify_image_has_period_tone_criteria():

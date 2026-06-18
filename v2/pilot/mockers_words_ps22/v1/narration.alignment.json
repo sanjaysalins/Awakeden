@@ -1,0 +1,1046 @@
+{
+  "backend": "whisper",
+  "model": "base",
+  "words": [
+    {
+      "text": "The",
+      "start": 0.0,
+      "end": 0.14
+    },
+    {
+      "text": "crowd",
+      "start": 0.14,
+      "end": 0.36
+    },
+    {
+      "text": "mocking",
+      "start": 0.36,
+      "end": 0.66
+    },
+    {
+      "text": "Jesus",
+      "start": 0.66,
+      "end": 1.02
+    },
+    {
+      "text": "at",
+      "start": 1.02,
+      "end": 1.24
+    },
+    {
+      "text": "the",
+      "start": 1.24,
+      "end": 1.38
+    },
+    {
+      "text": "cross",
+      "start": 1.38,
+      "end": 1.56
+    },
+    {
+      "text": "was",
+      "start": 1.56,
+      "end": 1.86
+    },
+    {
+      "text": "reading",
+      "start": 1.86,
+      "end": 2.1
+    },
+    {
+      "text": "from",
+      "start": 2.1,
+      "end": 2.28
+    },
+    {
+      "text": "a",
+      "start": 2.28,
+      "end": 2.38
+    },
+    {
+      "text": "script",
+      "start": 2.38,
+      "end": 2.66
+    },
+    {
+      "text": "—",
+      "start": 2.66,
+      "end": 2.66
+    },
+    {
+      "text": "they",
+      "start": 3.38,
+      "end": 3.5
+    },
+    {
+      "text": "just",
+      "start": 3.5,
+      "end": 3.64
+    },
+    {
+      "text": "didn't",
+      "start": 3.64,
+      "end": 3.88
+    },
+    {
+      "text": "know",
+      "start": 3.88,
+      "end": 4.06
+    },
+    {
+      "text": "it.",
+      "start": 4.06,
+      "end": 4.26
+    },
+    {
+      "text": "A",
+      "start": 5.04,
+      "end": 5.16
+    },
+    {
+      "text": "thousand",
+      "start": 5.16,
+      "end": 5.52
+    },
+    {
+      "text": "years",
+      "start": 5.52,
+      "end": 5.76
+    },
+    {
+      "text": "before,",
+      "start": 5.76,
+      "end": 6.22
+    },
+    {
+      "text": "Psalm",
+      "start": 6.62,
+      "end": 6.74
+    },
+    {
+      "text": "twenty-two",
+      "start": 6.74,
+      "end": 7.18
+    },
+    {
+      "text": "recorded",
+      "start": 7.18,
+      "end": 7.66
+    },
+    {
+      "text": "how",
+      "start": 7.66,
+      "end": 7.82
+    },
+    {
+      "text": "the",
+      "start": 7.82,
+      "end": 7.94
+    },
+    {
+      "text": "Messiah",
+      "start": 7.94,
+      "end": 8.24
+    },
+    {
+      "text": "would",
+      "start": 8.24,
+      "end": 8.52
+    },
+    {
+      "text": "be",
+      "start": 8.52,
+      "end": 8.64
+    },
+    {
+      "text": "mocked",
+      "start": 8.64,
+      "end": 9.06
+    },
+    {
+      "text": "—",
+      "start": 9.06,
+      "end": 9.06
+    },
+    {
+      "text": "the",
+      "start": 9.34,
+      "end": 9.62
+    },
+    {
+      "text": "gestures,",
+      "start": 9.62,
+      "end": 9.9
+    },
+    {
+      "text": "and",
+      "start": 10.42,
+      "end": 10.64
+    },
+    {
+      "text": "the",
+      "start": 10.64,
+      "end": 10.8
+    },
+    {
+      "text": "words.",
+      "start": 10.8,
+      "end": 11.0
+    },
+    {
+      "text": "\"...they",
+      "start": 12.12,
+      "end": 12.48
+    },
+    {
+      "text": "shake",
+      "start": 12.48,
+      "end": 12.72
+    },
+    {
+      "text": "the",
+      "start": 12.72,
+      "end": 12.9
+    },
+    {
+      "text": "head,",
+      "start": 12.9,
+      "end": 13.1
+    },
+    {
+      "text": "saying,",
+      "start": 13.26,
+      "end": 13.5
+    },
+    {
+      "text": "He",
+      "start": 13.5,
+      "end": 14.1
+    },
+    {
+      "text": "trusted",
+      "start": 14.1,
+      "end": 14.4
+    },
+    {
+      "text": "on",
+      "start": 14.4,
+      "end": 14.6
+    },
+    {
+      "text": "the",
+      "start": 14.6,
+      "end": 14.72
+    },
+    {
+      "text": "LORD",
+      "start": 14.72,
+      "end": 14.92
+    },
+    {
+      "text": "that",
+      "start": 14.92,
+      "end": 15.12
+    },
+    {
+      "text": "he",
+      "start": 15.12,
+      "end": 15.26
+    },
+    {
+      "text": "would",
+      "start": 15.26,
+      "end": 15.38
+    },
+    {
+      "text": "deliver",
+      "start": 15.38,
+      "end": 15.62
+    },
+    {
+      "text": "him:",
+      "start": 15.62,
+      "end": 15.92
+    },
+    {
+      "text": "let",
+      "start": 16.46,
+      "end": 16.76
+    },
+    {
+      "text": "him",
+      "start": 16.76,
+      "end": 16.92
+    },
+    {
+      "text": "deliver",
+      "start": 16.92,
+      "end": 17.2
+    },
+    {
+      "text": "him...\"",
+      "start": 17.2,
+      "end": 17.48
+    },
+    {
+      "text": "At",
+      "start": 18.12,
+      "end": 18.66
+    },
+    {
+      "text": "the",
+      "start": 18.66,
+      "end": 18.76
+    },
+    {
+      "text": "cross,",
+      "start": 18.76,
+      "end": 19.04
+    },
+    {
+      "text": "Matthew's",
+      "start": 19.46,
+      "end": 19.88
+    },
+    {
+      "text": "gospel",
+      "start": 19.88,
+      "end": 20.14
+    },
+    {
+      "text": "records",
+      "start": 20.14,
+      "end": 20.48
+    },
+    {
+      "text": "it",
+      "start": 20.48,
+      "end": 20.82
+    },
+    {
+      "text": "—",
+      "start": 20.82,
+      "end": 20.82
+    },
+    {
+      "text": "the",
+      "start": 21.14,
+      "end": 21.26
+    },
+    {
+      "text": "passers-by",
+      "start": 21.26,
+      "end": 21.88
+    },
+    {
+      "text": "wagging",
+      "start": 21.88,
+      "end": 22.34
+    },
+    {
+      "text": "their",
+      "start": 22.34,
+      "end": 22.5
+    },
+    {
+      "text": "heads,",
+      "start": 22.5,
+      "end": 22.86
+    },
+    {
+      "text": "the",
+      "start": 23.12,
+      "end": 23.2
+    },
+    {
+      "text": "rulers",
+      "start": 23.2,
+      "end": 23.42
+    },
+    {
+      "text": "sneering",
+      "start": 23.42,
+      "end": 24.1
+    },
+    {
+      "text": "nearly",
+      "start": 24.1,
+      "end": 24.58
+    },
+    {
+      "text": "line",
+      "start": 24.58,
+      "end": 24.96
+    },
+    {
+      "text": "for",
+      "start": 24.96,
+      "end": 25.28
+    },
+    {
+      "text": "line:",
+      "start": 25.28,
+      "end": 25.58
+    },
+    {
+      "text": "\"He",
+      "start": 26.52,
+      "end": 26.8
+    },
+    {
+      "text": "trusted",
+      "start": 26.8,
+      "end": 27.14
+    },
+    {
+      "text": "in",
+      "start": 27.14,
+      "end": 27.3
+    },
+    {
+      "text": "God;",
+      "start": 27.3,
+      "end": 27.52
+    },
+    {
+      "text": "let",
+      "start": 28.16,
+      "end": 28.24
+    },
+    {
+      "text": "him",
+      "start": 28.24,
+      "end": 28.4
+    },
+    {
+      "text": "deliver",
+      "start": 28.4,
+      "end": 28.68
+    },
+    {
+      "text": "him",
+      "start": 28.68,
+      "end": 28.88
+    },
+    {
+      "text": "now...",
+      "start": 28.88,
+      "end": 29.12
+    },
+    {
+      "text": "for",
+      "start": 29.58,
+      "end": 30.02
+    },
+    {
+      "text": "he",
+      "start": 30.02,
+      "end": 30.16
+    },
+    {
+      "text": "said,",
+      "start": 30.16,
+      "end": 30.44
+    },
+    {
+      "text": "I",
+      "start": 31.06,
+      "end": 31.22
+    },
+    {
+      "text": "am",
+      "start": 31.22,
+      "end": 31.36
+    },
+    {
+      "text": "the",
+      "start": 31.36,
+      "end": 31.48
+    },
+    {
+      "text": "Son",
+      "start": 31.48,
+      "end": 31.7
+    },
+    {
+      "text": "of",
+      "start": 31.7,
+      "end": 31.88
+    },
+    {
+      "text": "God.\"",
+      "start": 31.88,
+      "end": 32.12
+    },
+    {
+      "text": "They",
+      "start": 32.78,
+      "end": 33.22
+    },
+    {
+      "text": "thought",
+      "start": 33.22,
+      "end": 33.44
+    },
+    {
+      "text": "they",
+      "start": 33.44,
+      "end": 33.62
+    },
+    {
+      "text": "were",
+      "start": 33.62,
+      "end": 33.74
+    },
+    {
+      "text": "inventing",
+      "start": 33.74,
+      "end": 34.2
+    },
+    {
+      "text": "the",
+      "start": 34.2,
+      "end": 34.3
+    },
+    {
+      "text": "cruelty.",
+      "start": 34.3,
+      "end": 34.64
+    },
+    {
+      "text": "They",
+      "start": 35.4,
+      "end": 35.54
+    },
+    {
+      "text": "were",
+      "start": 35.54,
+      "end": 35.66
+    },
+    {
+      "text": "reciting",
+      "start": 35.66,
+      "end": 36.02
+    },
+    {
+      "text": "prophecy",
+      "start": 36.02,
+      "end": 36.54
+    },
+    {
+      "text": "—",
+      "start": 36.54,
+      "end": 36.54
+    },
+    {
+      "text": "unwilling",
+      "start": 37.38,
+      "end": 37.8
+    },
+    {
+      "text": "witnesses",
+      "start": 37.8,
+      "end": 38.2
+    },
+    {
+      "text": "that",
+      "start": 38.2,
+      "end": 38.6
+    },
+    {
+      "text": "this",
+      "start": 38.6,
+      "end": 38.92
+    },
+    {
+      "text": "was",
+      "start": 38.92,
+      "end": 39.5
+    },
+    {
+      "text": "the",
+      "start": 39.5,
+      "end": 39.66
+    },
+    {
+      "text": "One.",
+      "start": 39.66,
+      "end": 39.9
+    },
+    {
+      "text": "Save",
+      "start": 40.92,
+      "end": 41.14
+    },
+    {
+      "text": "yourself",
+      "start": 41.14,
+      "end": 41.48
+    },
+    {
+      "text": "and",
+      "start": 41.48,
+      "end": 41.68
+    },
+    {
+      "text": "come",
+      "start": 41.68,
+      "end": 41.84
+    },
+    {
+      "text": "down,",
+      "start": 41.84,
+      "end": 42.12
+    },
+    {
+      "text": "they",
+      "start": 42.46,
+      "end": 42.56
+    },
+    {
+      "text": "jeered",
+      "start": 42.56,
+      "end": 42.9
+    },
+    {
+      "text": "—",
+      "start": 42.9,
+      "end": 42.9
+    },
+    {
+      "text": "if",
+      "start": 43.22,
+      "end": 43.48
+    },
+    {
+      "text": "you",
+      "start": 43.48,
+      "end": 43.58
+    },
+    {
+      "text": "really",
+      "start": 43.58,
+      "end": 43.8
+    },
+    {
+      "text": "are",
+      "start": 43.8,
+      "end": 44.04
+    },
+    {
+      "text": "the",
+      "start": 44.04,
+      "end": 44.22
+    },
+    {
+      "text": "Son",
+      "start": 44.22,
+      "end": 44.36
+    },
+    {
+      "text": "of",
+      "start": 44.36,
+      "end": 44.48
+    },
+    {
+      "text": "God.",
+      "start": 44.48,
+      "end": 44.7
+    },
+    {
+      "text": "But",
+      "start": 45.44,
+      "end": 45.88
+    },
+    {
+      "text": "He",
+      "start": 45.88,
+      "end": 46.0
+    },
+    {
+      "text": "could",
+      "start": 46.0,
+      "end": 46.18
+    },
+    {
+      "text": "have",
+      "start": 46.18,
+      "end": 46.3
+    },
+    {
+      "text": "come",
+      "start": 46.3,
+      "end": 46.44
+    },
+    {
+      "text": "down",
+      "start": 46.44,
+      "end": 46.66
+    },
+    {
+      "text": "—",
+      "start": 46.66,
+      "end": 46.66
+    },
+    {
+      "text": "He",
+      "start": 47.48,
+      "end": 47.64
+    },
+    {
+      "text": "proved",
+      "start": 47.64,
+      "end": 48.04
+    },
+    {
+      "text": "He",
+      "start": 48.04,
+      "end": 48.14
+    },
+    {
+      "text": "was",
+      "start": 48.14,
+      "end": 48.26
+    },
+    {
+      "text": "the",
+      "start": 48.26,
+      "end": 48.38
+    },
+    {
+      "text": "Son",
+      "start": 48.38,
+      "end": 48.7
+    },
+    {
+      "text": "not",
+      "start": 48.7,
+      "end": 49.22
+    },
+    {
+      "text": "by",
+      "start": 49.22,
+      "end": 49.38
+    },
+    {
+      "text": "escaping",
+      "start": 49.38,
+      "end": 49.78
+    },
+    {
+      "text": "the",
+      "start": 49.78,
+      "end": 49.96
+    },
+    {
+      "text": "cross,",
+      "start": 49.96,
+      "end": 50.18
+    },
+    {
+      "text": "but",
+      "start": 50.84,
+      "end": 50.92
+    },
+    {
+      "text": "by",
+      "start": 50.92,
+      "end": 51.06
+    },
+    {
+      "text": "staying",
+      "start": 51.06,
+      "end": 51.4
+    },
+    {
+      "text": "on",
+      "start": 51.4,
+      "end": 51.6
+    },
+    {
+      "text": "it,",
+      "start": 51.6,
+      "end": 51.84
+    },
+    {
+      "text": "bearing",
+      "start": 52.34,
+      "end": 52.5
+    },
+    {
+      "text": "the",
+      "start": 52.5,
+      "end": 52.72
+    },
+    {
+      "text": "scorn",
+      "start": 52.72,
+      "end": 53.08
+    },
+    {
+      "text": "He",
+      "start": 53.08,
+      "end": 53.3
+    },
+    {
+      "text": "could",
+      "start": 53.3,
+      "end": 53.44
+    },
+    {
+      "text": "have",
+      "start": 53.44,
+      "end": 53.56
+    },
+    {
+      "text": "silenced,",
+      "start": 53.56,
+      "end": 54.04
+    },
+    {
+      "text": "for",
+      "start": 54.04,
+      "end": 54.5
+    },
+    {
+      "text": "the",
+      "start": 54.5,
+      "end": 54.58
+    },
+    {
+      "text": "very",
+      "start": 54.58,
+      "end": 54.8
+    },
+    {
+      "text": "people",
+      "start": 54.8,
+      "end": 55.14
+    },
+    {
+      "text": "throwing",
+      "start": 55.14,
+      "end": 55.5
+    },
+    {
+      "text": "it.",
+      "start": 55.5,
+      "end": 55.72
+    },
+    {
+      "text": "The",
+      "start": 56.22,
+      "end": 56.66
+    },
+    {
+      "text": "man",
+      "start": 56.66,
+      "end": 56.84
+    },
+    {
+      "text": "they",
+      "start": 56.84,
+      "end": 57.04
+    },
+    {
+      "text": "mocked",
+      "start": 57.04,
+      "end": 57.46
+    },
+    {
+      "text": "is",
+      "start": 57.46,
+      "end": 57.5
+    },
+    {
+      "text": "the",
+      "start": 57.5,
+      "end": 57.66
+    },
+    {
+      "text": "One",
+      "start": 57.66,
+      "end": 57.8
+    },
+    {
+      "text": "the",
+      "start": 57.8,
+      "end": 57.98
+    },
+    {
+      "text": "whole",
+      "start": 57.98,
+      "end": 58.16
+    },
+    {
+      "text": "song",
+      "start": 58.16,
+      "end": 58.5
+    },
+    {
+      "text": "was",
+      "start": 58.5,
+      "end": 58.72
+    },
+    {
+      "text": "about.",
+      "start": 58.72,
+      "end": 59.0
+    },
+    {
+      "text": "They",
+      "start": 59.74,
+      "end": 60.0
+    },
+    {
+      "text": "told",
+      "start": 60.0,
+      "end": 60.2
+    },
+    {
+      "text": "the",
+      "start": 60.2,
+      "end": 60.36
+    },
+    {
+      "text": "King",
+      "start": 60.36,
+      "end": 60.56
+    },
+    {
+      "text": "to",
+      "start": 60.56,
+      "end": 60.78
+    },
+    {
+      "text": "come",
+      "start": 60.78,
+      "end": 60.94
+    },
+    {
+      "text": "down",
+      "start": 60.94,
+      "end": 61.2
+    },
+    {
+      "text": "—",
+      "start": 61.2,
+      "end": 61.2
+    },
+    {
+      "text": "and",
+      "start": 61.62,
+      "end": 61.82
+    },
+    {
+      "text": "He",
+      "start": 61.82,
+      "end": 61.92
+    },
+    {
+      "text": "never",
+      "start": 61.92,
+      "end": 62.14
+    },
+    {
+      "text": "did.",
+      "start": 62.14,
+      "end": 62.36
+    },
+    {
+      "text": "He",
+      "start": 63.28,
+      "end": 63.44
+    },
+    {
+      "text": "stayed",
+      "start": 63.44,
+      "end": 63.7
+    },
+    {
+      "text": "under",
+      "start": 63.7,
+      "end": 63.98
+    },
+    {
+      "text": "their",
+      "start": 63.98,
+      "end": 64.14
+    },
+    {
+      "text": "scorn,",
+      "start": 64.14,
+      "end": 64.5
+    },
+    {
+      "text": "and",
+      "start": 64.5,
+      "end": 65.24
+    },
+    {
+      "text": "yours,",
+      "start": 65.24,
+      "end": 65.56
+    },
+    {
+      "text": "to",
+      "start": 65.56,
+      "end": 66.46
+    },
+    {
+      "text": "win",
+      "start": 66.46,
+      "end": 66.66
+    },
+    {
+      "text": "you.",
+      "start": 66.66,
+      "end": 67.0
+    },
+    {
+      "text": "Come",
+      "start": 68.0,
+      "end": 68.26
+    },
+    {
+      "text": "to",
+      "start": 68.26,
+      "end": 68.44
+    },
+    {
+      "text": "the",
+      "start": 68.44,
+      "end": 68.54
+    },
+    {
+      "text": "One",
+      "start": 68.54,
+      "end": 68.78
+    },
+    {
+      "text": "who",
+      "start": 68.78,
+      "end": 69.0
+    },
+    {
+      "text": "would",
+      "start": 69.0,
+      "end": 69.16
+    },
+    {
+      "text": "not",
+      "start": 69.16,
+      "end": 69.32
+    },
+    {
+      "text": "come",
+      "start": 69.32,
+      "end": 69.54
+    },
+    {
+      "text": "down.",
+      "start": 69.54,
+      "end": 69.86
+    }
+  ]
+}

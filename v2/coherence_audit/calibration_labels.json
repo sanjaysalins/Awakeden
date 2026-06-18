@@ -1,0 +1,8 @@
+{
+  "_README": "Human BLIND labels on the calibration sample (2026-06-17). 'bad' = judged not fit for use. Defects noted: exiled_nation=modern flag (anachronism), isa53_servant=picture frame, they-shoot-out-the-lip=grotesque/unsettling smile (D1 face).",
+  "bad": [
+    "image_library/stills/exiled_nation_column_grey.png",
+    "image_library/stills/isa53_servant_bearing_weight.png",
+    "v2/pilot/mockers_words_ps22/v1/visual/nbp/03_they-shoot-out-the-lip.png"
+  ]
+}

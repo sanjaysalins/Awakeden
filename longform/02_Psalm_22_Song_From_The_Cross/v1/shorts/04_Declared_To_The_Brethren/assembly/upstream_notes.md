@@ -5,15 +5,7 @@ stages so the next episode's clips drop into the cut with less fighting.
 
 ## What was hard to fit this run
 
-- **#01 The Empty Tomb** — needed 2.20x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
-- **#12 A Thousand Years Apart** — slot 3.9s, played 1.30x AND trimmed 49% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#03 I Will Declare Thy Name** — slot 1.9s, played 1.30x AND trimmed 75% (role=pivot). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#05 Among the Brethren** — slot 4.1s, played 1.30x AND trimmed 47% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#06 The Living Face** — slot 2.9s, played 1.30x AND trimmed 63% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#07 Hebrews Names Him** — slot 1.9s, played 1.30x AND trimmed 75% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#04 The Risen Christ** — slot 4.6s, played 1.30x AND trimmed 41% (role=climax). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#09 The Wounded Hand on the Shoulder** — slot 1.6s, played 1.30x AND trimmed 80% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
-- **#13 Welcomed into the Family** — slot 1.8s, played 1.30x AND trimmed 76% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
+- **#02 The Psalm Turns** — slot 2.4s, played 1.30x AND trimmed 38% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
 
 ## Standing 'design for the cut' rules
 

@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-06-16",
+  "model": "agent-mode (v2 skill build)",
+  "review_model": "gates+lock",
+  "structure": {
+    "id": "gospel-five-beat",
+    "name": "Gospel Five-Beat",
+    "beats": [
+      "hook",
+      "point",
+      "proof",
+      "conviction",
+      "landing"
+    ]
+  },
+  "series": {
+    "id": "jesus-in-ot",
+    "name": "Jesus in the Old Testament",
+    "brand": "SLK"
+  },
+  "episode": {
+    "title": "The One They Pierced",
+    "primary_ref": "Zechariah 12:10"
+  },
+  "kjv_verified": true,
+  "kjv_text": {
+    "Zechariah 12:10": "And I will pour upon the house of David, and upon the inhabitants of Jerusalem, the spirit of grace and of supplications: and they shall look upon me whom they have pierced, and they shall mourn for him, as one mourneth for his only son, and shall be in bitterness for him, as one that is in bitterness for his firstborn.",
+    "John 19:37": "And again another scripture saith, They shall look on him whom they pierced."
+  },
+  "thread": {
+    "primary_ref": "Zechariah 12:10",
+    "thread": "In Zechariah 12:10 the LORD, in the first person, says 'they shall look upon ME whom they have pierced' then 'mourn for HIM, as for his only son' -- the pierced one is God Himself, the Son, distinct from the Father who speaks. John, an eyewitness at the cross (John 19:35), cites it at the spear-piercing (John 19:34,37). God answers the piercing not with wrath but by pouring out the spirit of grace, so they look, mourn, and are forgiven. Look at Him and live. Trinitarian (no patripassianism/modalism); John's presence is text-supported (not an invented eyewitness).",
+    "lever": "NT-confirmed OT echo (Zech 12:10 -> John 19:37; the LORD's me->him->only-son deity shift)"
+  },
+  "draft": {
+    "title": "The One They Pierced",
+    "hook_type": "in-scene",
+    "beats": [
+      {
+        "id": "hook",
+        "text": "A Roman soldier drove a spear into a dead man's side to be sure He was gone. He had no idea he was finishing a sentence God wrote five centuries earlier."
+      },
+      {
+        "id": "point",
+        "text": "In Zechariah, God speaks in the first person about the day His people would pierce someone — and says something staggering:"
+      },
+      {
+        "id": "proof",
+        "text": "\"...they shall look upon me whom they have pierced, and they shall mourn for him, as one mourneth for his only son...\" Read it twice. God says they pierced Me — then, mourn for Him. The pierced man is somehow God Himself — God's own Son. At the cross, John watched the spear go in, and reached for that exact verse: \"They shall look on him whom they pierced.\""
+      },
+      {
+        "id": "conviction",
+        "text": "And here is the mercy: the God they pierced answers not with wrath, but with grace poured out — so that when they finally look, they don't just see what they did. They mourn, and they are forgiven."
+      },
+      {
+        "id": "landing",
+        "text": "The man on that cross was not a victim God failed to save. He was God, pierced for you. Look at Him — and live."
+      }
+    ]
+  },
+  "beat_ids": [
+    "hook",
+    "point",
+    "proof",
+    "conviction",
+    "landing"
+  ],
+  "word_count": 175,
+  "authoritative_review": "gates+lock (KJV-strict, doctrine, narrative-presence, Rule-8 all clean)",
+  "review_overall": "LOCKED",
+  "unknown_speakers": []
+}

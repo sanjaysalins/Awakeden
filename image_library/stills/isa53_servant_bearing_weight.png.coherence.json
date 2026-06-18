@@ -1,0 +1,28 @@
+{
+ "audited": true,
+ "passed": false,
+ "png_sha256": "b576946298dffb3af569f61e025ed88139b4df5268287e2c57080969594c95da",
+ "n_votes": 1,
+ "split": false,
+ "failed_dims": [
+  "F2"
+ ],
+ "passes": {},
+ "fail_reasons": [
+  "Ornate gilded picture-frame surrounds the painting with empty grey triptych side-panels left and right",
+  "not full-bleed"
+ ],
+ "votes": [
+  {
+   "passed": false,
+   "dims_failed": [
+    "F2"
+   ],
+   "reasons": [
+    "Ornate gilded picture-frame surrounds the painting with empty grey triptych side-panels left and right",
+    "not full-bleed"
+   ]
+  }
+ ],
+ "note": "ensemble of 1 vote(s), any-fail"
+}

@@ -11,22 +11,6 @@
     },
     {
       "order": 1,
-      "scene_index": 2,
-      "section": "hook",
-      "words": "a song recorded exactly how a dying man's clothes would be divided",
-      "passed": true,
-      "note": "clip content QC'd full-res and in motion; matches its beat"
-    },
-    {
-      "order": 2,
-      "scene_index": 4,
-      "section": "hook",
-      "words": "Psalm twenty-two.",
-      "passed": true,
-      "note": "clip content QC'd full-res and in motion; matches its beat"
-    },
-    {
-      "order": 3,
       "scene_index": 3,
       "section": "hook",
       "words": "but David himself was never executed;",
@@ -34,23 +18,7 @@
       "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
-      "order": 4,
-      "scene_index": 11,
-      "section": "hook",
-      "words": "He was describing someone else:",
-      "passed": true,
-      "note": "clip content QC'd full-res and in motion; matches its beat"
-    },
-    {
-      "order": 5,
-      "scene_index": 8,
-      "section": "hook",
-      "words": "stripped, surrounded, his life poured out.",
-      "passed": true,
-      "note": "clip content QC'd full-res and in motion; matches its beat"
-    },
-    {
-      "order": 6,
+      "order": 2,
       "scene_index": 9,
       "section": "hook",
       "words": "he wrote that the dying man's killers would divide his clothes,",
@@ -58,7 +26,7 @@
       "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
-      "order": 7,
+      "order": 3,
       "scene_index": 12,
       "section": "hook",
       "words": "and cast lots upon my vesture.\"",
@@ -66,15 +34,7 @@
       "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
-      "order": 8,
-      "scene_index": 6,
-      "section": "hook",
-      "words": "soldiers dividing Jesus' clothes,",
-      "passed": true,
-      "note": "clip content QC'd full-res and in motion; matches its beat"
-    },
-    {
-      "order": 9,
+      "order": 4,
       "scene_index": 5,
       "section": "hook",
       "words": "then casting lots for the seamless coat —",
@@ -82,15 +42,7 @@
       "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
-      "order": 10,
-      "scene_index": 10,
-      "section": "hook",
-      "words": "you'd know the cross was no accident.",
-      "passed": true,
-      "note": "clip content QC'd full-res and in motion; matches its beat"
-    },
-    {
-      "order": 11,
+      "order": 5,
       "scene_index": 13,
       "section": "hook",
       "words": "The suffering man of Psalm twenty-two has a name:",
@@ -98,10 +50,10 @@
       "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
-      "order": 12,
+      "order": 6,
       "scene_index": 14,
       "section": "hook",
-      "words": "They rolled dice for the clothes off His back,",
+      "words": "laying down His life to win you back.",
       "passed": true,
       "note": "clip content QC'd full-res and in motion; matches its beat"
     }

@@ -1,0 +1,55 @@
+{
+  "passed_overall": true,
+  "slots": [
+    {
+      "order": 0,
+      "scene_index": 1,
+      "section": "hook",
+      "words": "A Roman soldier drove a spear into a dead man's side to",
+      "passed": true,
+      "note": "clip carries a passing clip_qc sidecar (real look)"
+    },
+    {
+      "order": 1,
+      "scene_index": 2,
+      "section": "hook",
+      "words": "\"...they shall look upon me whom they have pierced,",
+      "passed": true,
+      "note": "clip carries a passing clip_qc sidecar (real look)"
+    },
+    {
+      "order": 2,
+      "scene_index": 4,
+      "section": "hook",
+      "words": "God says they pierced Me —",
+      "passed": true,
+      "note": "clip carries a passing clip_qc sidecar (real look)"
+    },
+    {
+      "order": 3,
+      "scene_index": 8,
+      "section": "hook",
+      "words": "\"They shall look on him whom they pierced.\"",
+      "passed": true,
+      "note": "clip carries a passing clip_qc sidecar (real look)"
+    },
+    {
+      "order": 4,
+      "scene_index": 9,
+      "section": "hook",
+      "words": "so that when they finally look,",
+      "passed": true,
+      "note": "clip content QC'd full-res and in motion; matches its beat"
+    },
+    {
+      "order": 5,
+      "scene_index": 11,
+      "section": "hook",
+      "words": "Look at Him —",
+      "passed": true,
+      "note": "clip carries a passing clip_qc sidecar (real look)"
+    }
+  ],
+  "reroll_scene_indices": [],
+  "notes": "All slots matched their words."
+}

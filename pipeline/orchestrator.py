@@ -179,11 +179,16 @@ def _reroll_images(v1: Path, provider: str, reroll: set[int], log) -> None:
     render_dir = v1 / "visual" / provider
     for s in plan.scenes:
         if s.index in reroll:
-            for suffix in (".png", ".png.audit.json"):
+            for suffix in (".png", ".png.audit.json", ".png.coherence.json"):
                 f = render_dir / f"{s.filename_stem}{suffix}"
                 if f.exists():
                     f.unlink()
                     log(f"      [reroll] deleted {f.name}")
+            # also drop the sibling clip's stale QC so a rebuilt still can't ride it
+            clipqc = render_dir / f"{s.filename_stem}.mp4.clipqc.json"
+            if clipqc.exists():
+                clipqc.unlink()
+                log(f"      [reroll] deleted {clipqc.name}")
     log("      re-rendering the deleted image(s)...")
     visual_runner.create_visuals(
         v1, provider=provider, short_only=False, animate=False,

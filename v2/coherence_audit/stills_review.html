@@ -1,0 +1,1563 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Stills review — flag the bad ones the pipeline missed</title>
+<style>
+ body{font-family:system-ui,Arial,sans-serif;margin:0;background:#14161a;color:#e8e6e0}
+ .bar{position:sticky;top:0;z-index:9;background:#0d0f12;border-bottom:1px solid #333;
+   padding:12px 18px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+ .bar b{font-size:18px} .count{font-size:20px;color:#ff5252;font-weight:700}
+ button{font-size:15px;padding:8px 14px;border-radius:8px;border:0;cursor:pointer;background:#2a6;color:#fff}
+ button.alt{background:#36c} .hint{color:#9a9;font-size:13px}
+ h2.grp{padding:6px 18px;margin:22px 0 6px;border-left:5px solid #555;font-size:17px}
+ .gn{color:#888;font-weight:400}
+ .row{display:flex;flex-wrap:wrap;gap:14px;padding:0 18px}
+ .card{width:300px;background:#1d2026;border:3px solid #2a2e36;border-radius:10px;overflow:hidden;
+   cursor:pointer;position:relative;transition:border-color .1s}
+ .card:hover{border-color:#567}
+ .card.flagged{border-color:#ff3b3b;box-shadow:0 0 0 2px #ff3b3b inset}
+ .imgwrap{background:#000;text-align:center} .card img{max-width:100%;display:block;margin:auto}
+ .meta{padding:8px 10px;font-size:12px}
+ .badge{display:inline-block;padding:2px 7px;border-radius:5px;margin:2px 4px 2px 0;font-weight:600}
+ .pass{background:#1c3;color:#031} .fail{background:#f44;color:#fff}
+ .pending{background:#888;color:#111} .none{background:#444;color:#bbb}
+ .why{color:#ffb3b3;margin:4px 0;font-size:11px}
+ .path{color:#7fa;word-break:break-all;font-family:monospace;font-size:10px;margin-top:5px;user-select:all}
+ .flagtag{position:absolute;top:6px;right:6px;background:#ff3b3b;color:#fff;font-weight:700;
+   padding:3px 8px;border-radius:6px;font-size:12px;display:none}
+ .card.flagged .flagtag{display:block}
+ #out{width:100%;height:120px;background:#0d0f12;color:#7fa;border:1px solid #333;font-family:monospace;display:none}
+</style></head><body>
+<div class="bar">
+  <b>Flag the BAD stills the pipeline missed</b>
+  <span class="count"><span id="n">0</span> flagged</span>
+  <button onclick="copyList()">Copy flagged paths</button>
+  <button class="alt" onclick="dl()">Download JSON</button>
+  <button class="alt" onclick="toggleOut()">Show/hide list</button>
+  <span class="hint">Click a card to flag/unflag. Red border = flagged. 168 stills total.</span>
+</div>
+<textarea id="out" readonly></textarea>
+<h2 class="grp">_library/plates <span class="gn">(1)</span></h2><div class="row"><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/_contact_sheet.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/_contact_sheet.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/_contact_sheet.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div></div><h2 class="grp">_library/plates/calm-shore <span class="gn">(1)</span></h2><div class="row"><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/calm-shore/calm-shore.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/calm-shore/calm-shore.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/calm-shore/calm-shore.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div></div><h2 class="grp">_library/plates/charcoal-fire <span class="gn">(1)</span></h2><div class="row"><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/charcoal-fire/charcoal-fire.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/charcoal-fire/charcoal-fire.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/charcoal-fire/charcoal-fire.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div></div><h2 class="grp">_library/plates/crowd <span class="gn">(1)</span></h2><div class="row"><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/crowd/crowd.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/crowd/crowd.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/crowd/crowd.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div></div><h2 class="grp">_library/plates/dawn-sky <span class="gn">(1)</span></h2><div class="row"><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/dawn-sky/dawn-sky.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/dawn-sky/dawn-sky.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/dawn-sky/dawn-sky.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div></div><h2 class="grp">_library/plates/empty-tomb <span class="gn">(1)</span></h2><div class="row"><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/empty-tomb/empty-tomb.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/empty-tomb/empty-tomb.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/empty-tomb/empty-tomb.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div></div><h2 class="grp">_library/plates/jerusalem-street <span class="gn">(1)</span></h2><div class="row"><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/jerusalem-street/jerusalem-street.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/jerusalem-street/jerusalem-street.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/jerusalem-street/jerusalem-street.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div></div><h2 class="grp">_library/plates/lamplit-room <span class="gn">(1)</span></h2><div class="row"><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/lamplit-room/lamplit-room.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/lamplit-room/lamplit-room.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/lamplit-room/lamplit-room.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div></div><h2 class="grp">_library/plates/olive-grove <span class="gn">(1)</span></h2><div class="row"><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/olive-grove/olive-grove.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/olive-grove/olive-grove.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/olive-grove/olive-grove.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div></div><h2 class="grp">_library/plates/stone-well <span class="gn">(1)</span></h2><div class="row"><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/stone-well/stone-well.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/stone-well/stone-well.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/stone-well/stone-well.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div></div><h2 class="grp">_library/plates/storm-sea <span class="gn">(1)</span></h2><div class="row"><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/storm-sea/storm-sea.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/storm-sea/storm-sea.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/storm-sea/storm-sea.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div></div><h2 class="grp">_library/plates/synagogue <span class="gn">(1)</span></h2><div class="row"><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/synagogue/synagogue.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/synagogue/synagogue.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/synagogue/synagogue.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div></div><h2 class="grp">_library/plates/wilderness <span class="gn">(1)</span></h2><div class="row"><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/wilderness/wilderness.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/wilderness/wilderness.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/_library/plates/wilderness/wilderness.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div></div><h2 class="grp">image_library/stills <span class="gn">(19)</span></h2><div class="row"><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/christ_arm_of_the_lord_hand.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/christ_arm_of_the_lord_hand.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/christ_arm_of_the_lord_hand.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/christ_crucified_dark_sky_golgotha.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/christ_crucified_dark_sky_golgotha.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/christ_crucified_dark_sky_golgotha.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/christ_crucified_robed_pierced.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/christ_crucified_robed_pierced.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/christ_crucified_robed_pierced.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/christ_reaching_hand_grace.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/christ_reaching_hand_grace.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/christ_reaching_hand_grace.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/christ_risen_glory_hero.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/christ_risen_glory_hero.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/christ_risen_glory_hero.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/christ_risen_morning_light.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/christ_risen_morning_light.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/christ_risen_morning_light.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/dawn_over_tomb_stone.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/dawn_over_tomb_stone.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/dawn_over_tomb_stone.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/isa53_despised_rejected.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/isa53_despised_rejected.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/isa53_despised_rejected.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/isa53_eunuch_chariot_gaza.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/isa53_eunuch_chariot_gaza.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/isa53_eunuch_chariot_gaza.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/isa53_marred_face.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/isa53_marred_face.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/isa53_marred_face.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/isa53_philip_meets_chariot.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/isa53_philip_meets_chariot.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/isa53_philip_meets_chariot.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/isa53_philip_preaches_jesus.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/isa53_philip_preaches_jesus.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/isa53_philip_preaches_jesus.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/isa53_servant_bearing_weight.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/isa53_servant_bearing_weight.png" alt=""></div>
+  <div class="meta">
+    <span class="badge fail">coherence: FAIL</span>
+    <span class="badge none">audit: —</span>
+    <div class="why">Ornate gilded picture-frame surrounds the painting with empty grey triptych side-panels left and right; not full-bleed</div>
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/isa53_servant_bearing_weight.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/isa53_servant_silent_trial.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/isa53_servant_silent_trial.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/isa53_servant_silent_trial.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/lamb_led_to_slaughter.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/lamb_led_to_slaughter.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/lamb_led_to_slaughter.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/rich_mans_tomb_dusk.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/rich_mans_tomb_dusk.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/rich_mans_tomb_dusk.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/scattered_sheep_hillside_dusk.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/scattered_sheep_hillside_dusk.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/scattered_sheep_hillside_dusk.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/scroll_candlelight_hands.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/scroll_candlelight_hands.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/scroll_candlelight_hands.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/wilderness_dusk_lone_figure.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/wilderness_dusk_lone_figure.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge none">audit: —</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/image_library/stills/wilderness_dusk_lone_figure.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div></div><h2 class="grp">v1 / 01_The_Crucifixion_Foretold <span class="gn">(13)</span></h2><div class="row"><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/01_dice-in-the-dust.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/01_dice-in-the-dust.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/01_dice-in-the-dust.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/02_david-at-the-lamp.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/02_david-at-the-lamp.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/02_david-at-the-lamp.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/03_a-death-not-his-own.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/03_a-death-not-his-own.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/03_a-death-not-his-own.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/04_the-scroll-line.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/04_the-scroll-line.png" alt=""></div>
+  <div class="meta">
+    <span class="badge fail">coherence: FAIL</span>
+    <span class="badge pass">audit: PASS</span>
+    <div class="why">Large garbled Hebrew-style gibberish lettering dominates the center of the image as its subject (a hand pointing to a scroll line); the script is the focal point, not a small background scroll.</div>
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/04_the-scroll-line.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/05_the-seamless-coat.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/05_the-seamless-coat.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/05_the-seamless-coat.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/06_soldiers-cast-lots.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/06_soldiers-cast-lots.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/06_soldiers-cast-lots.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/07_the-cross-foretold.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/07_the-cross-foretold.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/07_the-cross-foretold.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/08_the-execution-foretold.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/08_the-execution-foretold.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/08_the-execution-foretold.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/09_stripped-garments-heap.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/09_stripped-garments-heap.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/09_stripped-garments-heap.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/10_the-plan-not-accident.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/10_the-plan-not-accident.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/10_the-plan-not-accident.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/12_dice-macro.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/12_dice-macro.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/12_dice-macro.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/13_his-name-is-jesus.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/13_his-name-is-jesus.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/13_his-name-is-jesus.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/14_laying-down-his-life.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/14_laying-down-his-life.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/14_laying-down-his-life.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div></div><h2 class="grp">v1 / 02_The_Mockers_Words <span class="gn">(11)</span></h2><div class="row"><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/01_the-shaking-heads.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/01_the-shaking-heads.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/01_the-shaking-heads.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/02_david-records-the-taunt.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/02_david-records-the-taunt.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/02_david-records-the-taunt.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/03_let-him-deliver-him.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/03_let-him-deliver-him.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/03_let-him-deliver-him.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/04_the-crowd-at-the-cross.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/04_the-crowd-at-the-cross.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/04_the-crowd-at-the-cross.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/05_the-leaders-jeer.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/05_the-leaders-jeer.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/05_the-leaders-jeer.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/06_shot-out-the-lip.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/06_shot-out-the-lip.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/06_shot-out-the-lip.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/08_he-had-every-power.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/08_he-had-every-power.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/08_he-had-every-power.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/10_looking-down-in-love.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/10_looking-down-in-love.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/10_looking-down-in-love.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/11_he-chose-to-stay.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/11_he-chose-to-stay.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/11_he-chose-to-stay.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/12_a-thousand-years-apart.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/12_a-thousand-years-apart.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/12_a-thousand-years-apart.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/14_the-hand-that-would-not-pull-free.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/14_the-hand-that-would-not-pull-free.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/14_the-hand-that-would-not-pull-free.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div></div><h2 class="grp">v1 / 03_The_Forsaken_Cry <span class="gn">(13)</span></h2><div class="row"><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/01_the-cry.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/01_the-cry.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/01_the-cry.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/02_davids-forsaken-psalm.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/02_davids-forsaken-psalm.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/02_davids-forsaken-psalm.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/03_the-first-line.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/03_the-first-line.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/03_the-first-line.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/04_the-ninth-hour.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/04_the-ninth-hour.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/04_the-ninth-hour.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/05_my-god-my-god.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/05_my-god-my-god.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/05_my-god-my-god.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/06_darkness-over-the-land.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/06_darkness-over-the-land.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/06_darkness-over-the-land.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/07_the-same-words.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/07_the-same-words.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/07_the-same-words.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/08_still-my-god.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/08_still-my-god.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/08_still-my-god.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/09_bearing-the-forsaking.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/09_bearing-the-forsaking.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/09_bearing-the-forsaking.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/10_so-you-never-will-be.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/10_so-you-never-will-be.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/10_so-you-never-will-be.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/11_the-way-opened-from-the-dark.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/11_the-way-opened-from-the-dark.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/11_the-way-opened-from-the-dark.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/12_a-thousand-years-apart.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/12_a-thousand-years-apart.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/12_a-thousand-years-apart.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/13_however-far-youve-run.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/13_however-far-youve-run.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/13_however-far-youve-run.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div></div><h2 class="grp">v1 / 04_Declared_To_The_Brethren <span class="gn">(14)</span></h2><div class="row"><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/01_the-empty-tomb.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/01_the-empty-tomb.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/01_the-empty-tomb.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/02_the-psalm-turns.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/02_the-psalm-turns.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/02_the-psalm-turns.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/03_i-will-declare-thy-name.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/03_i-will-declare-thy-name.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/03_i-will-declare-thy-name.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/04_the-risen-christ.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/04_the-risen-christ.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/04_the-risen-christ.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/05_among-the-brethren.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/05_among-the-brethren.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/05_among-the-brethren.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/06_the-living-face.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/06_the-living-face.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/06_the-living-face.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/07_hebrews-names-him.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/07_hebrews-names-him.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/07_hebrews-names-him.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/08_not-ashamed.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/08_not-ashamed.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/08_not-ashamed.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/09_the-wounded-hand-on-the-shoulder.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/09_the-wounded-hand-on-the-shoulder.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/09_the-wounded-hand-on-the-shoulder.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/10_calling-you-in.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/10_calling-you-in.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/10_calling-you-in.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/11_the-invitation-face.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/11_the-invitation-face.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/11_the-invitation-face.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/12_a-thousand-years-apart.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/12_a-thousand-years-apart.png" alt=""></div>
+  <div class="meta">
+    <span class="badge fail">coherence: FAIL</span>
+    <span class="badge pass">audit: PASS</span>
+    <div class="why">Hard vertical dividing line down the center splits the image into two panels (left: scribe with scroll; right: Christ with brethren) — a split-screen/diptych, not full-bleed</div>
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/12_a-thousand-years-apart.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/13_welcomed-into-the-family.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/13_welcomed-into-the-family.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/13_welcomed-into-the-family.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/14_the-scarred-hands-in-praise.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/14_the-scarred-hands-in-praise.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/14_the-scarred-hands-in-praise.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div></div><h2 class="grp">v1 / 05_He_Hath_Done_This <span class="gn">(13)</span></h2><div class="row"><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/01_the-psalms-last-line.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/01_the-psalms-last-line.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/01_the-psalms-last-line.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/02_a-people-not-yet-born.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/02_a-people-not-yet-born.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/02_a-people-not-yet-born.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/03_the-fingertip-on-the-final-word.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/03_the-fingertip-on-the-final-word.png" alt=""></div>
+  <div class="meta">
+    <span class="badge fail">coherence: FAIL</span>
+    <span class="badge pass">audit: PASS</span>
+    <div class="why">Large Hebrew-style script fills ~70% of the frame as the dominant subject; lettering is decorative/garbled and dominates the image rather than sitting as a small background scroll</div>
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/03_the-fingertip-on-the-final-word.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/04_it-is-finished.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/04_it-is-finished.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/04_it-is-finished.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/06_a-thousand-years-apart.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/06_a-thousand-years-apart.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/06_a-thousand-years-apart.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/07_the-bowed-head.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/07_the-bowed-head.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/07_the-bowed-head.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/08_the-torn-veil.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/08_the-torn-veil.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/08_the-torn-veil.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/09_the-day-is-done.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/09_the-day-is-done.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/09_the-day-is-done.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/10_hands-at-rest.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/10_hands-at-rest.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/10_hands-at-rest.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/11_the-finished-work.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/11_the-finished-work.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/11_the-finished-work.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/12_nothing-left-to-carry.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/12_nothing-left-to-carry.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/12_nothing-left-to-carry.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/13_the-open-door-home.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/13_the-open-door-home.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/13_the-open-door-home.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/14_the-one-who-said-it-is-done.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/14_the-one-who-said-it-is-done.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/14_the-one-who-said-it-is-done.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div></div><h2 class="grp">v1 / 06_The_Ends_Of_The_Earth <span class="gn">(14)</span></h2><div class="row"><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/01_one-man-alone.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/01_one-man-alone.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/01_one-man-alone.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/02_the-song-opens-its-arms.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/02_the-song-opens-its-arms.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/02_the-song-opens-its-arms.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/03_all-the-ends-of-the-world.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/03_all-the-ends-of-the-world.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/03_all-the-ends-of-the-world.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/04_the-reach-of-the-cross.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/04_the-reach-of-the-cross.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/04_the-reach-of-the-cross.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/05_one-corner-of-the-empire.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/05_one-corner-of-the-empire.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/05_one-corner-of-the-empire.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/06_the-gospel-goes-out.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/06_the-gospel-goes-out.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/06_the-gospel-goes-out.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/07_in-thee-all-nations-blessed.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/07_in-thee-all-nations-blessed.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/07_in-thee-all-nations-blessed.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/08_kindreds-of-the-nations.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/08_kindreds-of-the-nations.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/08_kindreds-of-the-nations.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/09_a-light-to-the-gentiles.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/09_a-light-to-the-gentiles.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/09_a-light-to-the-gentiles.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/10_the-empty-tomb.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/10_the-empty-tomb.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/10_the-empty-tomb.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/11_nation-after-nation.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/11_nation-after-nation.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/11_nation-after-nation.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/12_wherever-you-are.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/12_wherever-you-are.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/12_wherever-you-are.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/13_room-to-turn.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/13_room-to-turn.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/13_room-to-turn.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/14_the-whole-earth-at-dawn.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/14_the-whole-earth-at-dawn.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/14_the-whole-earth-at-dawn.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div></div><h2 class="grp">v1 / 07_The_Body_Foretold <span class="gn">(13)</span></h2><div class="row"><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/01_out-of-joint.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/01_out-of-joint.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/01_out-of-joint.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/02_the-king-who-wrote-it.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/02_the-king-who-wrote-it.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/02_the-king-who-wrote-it.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/03_poured-out-like-water.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/03_poured-out-like-water.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/03_poured-out-like-water.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/04_crushed-in-your-place.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/04_crushed-in-your-place.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/04_crushed-in-your-place.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/05_i-may-tell-all-my-bones.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/05_i-may-tell-all-my-bones.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/05_i-may-tell-all-my-bones.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/06_they-look-and-stare.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/06_they-look-and-stare.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/06_they-look-and-stare.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/07_hung-by-the-arms.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/07_hung-by-the-arms.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/07_hung-by-the-arms.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/08_whom-they-pierced.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/08_whom-they-pierced.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/08_whom-they-pierced.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/09_a-thousand-years-apart.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/09_a-thousand-years-apart.png" alt=""></div>
+  <div class="meta">
+    <span class="badge fail">coherence: FAIL</span>
+    <span class="badge pass">audit: PASS</span>
+    <div class="why">Bright vertical band of light bisects the image into a split-screen diptych (left: David writing; right: Christ)</div>
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/09_a-thousand-years-apart.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/10_wounded-for-us.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/10_wounded-for-us.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/10_wounded-for-us.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/12_crushed-in-your-place-unified.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/12_crushed-in-your-place-unified.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/12_crushed-in-your-place-unified.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/13_to-bring-you-home.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/13_to-bring-you-home.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/13_to-bring-you-home.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/14_come-to-him.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/14_come-to-him.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/14_come-to-him.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div></div><h2 class="grp">v1 / 08_I_Thirst <span class="gn">(14)</span></h2><div class="row"><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/01_two-words-on-a-cross.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/01_two-words-on-a-cross.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/01_two-words-on-a-cross.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/02_the-king-who-wrote-it.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/02_the-king-who-wrote-it.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/02_the-king-who-wrote-it.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/03_dried-like-a-potsherd.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/03_dried-like-a-potsherd.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/03_dried-like-a-potsherd.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/04_the-tongue-cleaveth.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/04_the-tongue-cleaveth.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/04_the-tongue-cleaveth.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/05_the-dust-of-death.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/05_the-dust-of-death.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/05_the-dust-of-death.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/06_the-cry-recorded.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/06_the-cry-recorded.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/06_the-cry-recorded.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/07_a-thousand-years-apart.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/07_a-thousand-years-apart.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/07_a-thousand-years-apart.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/08_who-made-every-river.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/08_who-made-every-river.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/08_who-made-every-river.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/09_living-water-offered.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/09_living-water-offered.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/09_living-water-offered.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/10_hanging-there-with-nothing.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/10_hanging-there-with-nothing.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/10_hanging-there-with-nothing.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/11_water-from-the-rock.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/11_water-from-the-rock.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/11_water-from-the-rock.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/12_every-one-that-thirsteth.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/12_every-one-that-thirsteth.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/12_every-one-that-thirsteth.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/13_drink-and-never-thirst.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/13_drink-and-never-thirst.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/13_drink-and-never-thirst.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/14_that-water-is-himself.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/14_that-water-is-himself.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/14_that-water-is-himself.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div></div><h2 class="grp">v2/pilot/isaiah_53_5_with_his_stripes/v1 <span class="gn">(13)</span></h2><div class="row"><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/01_the-wound-that-wont-close.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/01_the-wound-that-wont-close.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/01_the-wound-that-wont-close.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/02_isaiah-sees-the-suffering.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/02_isaiah-sees-the-suffering.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/02_isaiah-sees-the-suffering.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/03_wounded-for-our-transgressions.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/03_wounded-for-our-transgressions.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/03_wounded-for-our-transgressions.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/04_as-a-lamb-to-the-slaughter.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/04_as-a-lamb-to-the-slaughter.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/04_as-a-lamb-to-the-slaughter.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/05_by-whose-stripes.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/05_by-whose-stripes.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/05_by-whose-stripes.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/06_in-his-own-body-on-the-tree.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/06_in-his-own-body-on-the-tree.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/06_in-his-own-body-on-the-tree.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/07_the-apostle-lays-it-on-christ.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/07_the-apostle-lays-it-on-christ.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/07_the-apostle-lays-it-on-christ.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/08_all-we-like-sheep.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/08_all-we-like-sheep.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/08_all-we-like-sheep.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/09_he-bare-our-sins.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/09_he-bare-our-sins.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/09_he-bare-our-sins.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/10_the-healed-believer.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/10_the-healed-believer.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/10_the-healed-believer.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/12_finished-at-the-cross.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/12_finished-at-the-cross.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/12_finished-at-the-cross.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/13_come-and-receive.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/13_come-and-receive.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/13_come-and-receive.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/14_the-wound-he-closed.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/14_the-wound-he-closed.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/14_the-wound-he-closed.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div></div><h2 class="grp">v2/pilot/mockers_words_ps22/v1 <span class="gn">(10)</span></h2><div class="row"><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/02_a-script-a-thousand-years-old.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/02_a-script-a-thousand-years-old.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/02_a-script-a-thousand-years-old.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/04_the-passers-by-wag-their-heads.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/04_the-passers-by-wag-their-heads.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/04_the-passers-by-wag-their-heads.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/05_the-rulers-sneer.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/05_the-rulers-sneer.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/05_the-rulers-sneer.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/06_he-trusted-in-god.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/06_he-trusted-in-god.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/06_he-trusted-in-god.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/07_the-king-who-would-not-come-down.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/07_the-king-who-would-not-come-down.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/07_the-king-who-would-not-come-down.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/08_unwilling-witnesses.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/08_unwilling-witnesses.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/08_unwilling-witnesses.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/10_he-could-have-come-down.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/10_he-could-have-come-down.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/10_he-could-have-come-down.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/11_bearing-the-scorn.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/11_bearing-the-scorn.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/11_bearing-the-scorn.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/12_the-king-they-told-to-come-down.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/12_the-king-they-told-to-come-down.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/12_the-king-they-told-to-come-down.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/13_for-the-very-people-throwing-it.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/13_for-the-very-people-throwing-it.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/mockers_words_ps22/v1/visual/nbp/13_for-the-very-people-throwing-it.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div></div><h2 class="grp">v2/pilot/zechariah_12_10_pierced/v1 <span class="gn">(8)</span></h2><div class="row"><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/01_the-spear.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/01_the-spear.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/01_the-spear.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/02_the-pierced-side.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/02_the-pierced-side.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/02_the-pierced-side.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/04_the-wounded-one.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/04_the-wounded-one.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/04_the-wounded-one.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/05_the-cross.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/05_the-cross.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/05_the-cross.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/06_whom-they-pierced.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/06_whom-they-pierced.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/06_whom-they-pierced.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/08_they-look-and-mourn.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/08_they-look-and-mourn.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/08_they-look-and-mourn.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/09_the-spirit-of-grace.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/09_the-spirit-of-grace.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/09_the-spirit-of-grace.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div><div class="card" data-path="C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/11_and-live.png" onclick="flag(this)">
+  <div class="imgwrap"><img loading="lazy" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/11_and-live.png" alt=""></div>
+  <div class="meta">
+    <span class="badge pass">coherence: PASS</span>
+    <span class="badge pass">audit: PASS</span>
+    
+    <div class="path">C:/Users/sanjay/PycharmProjects/JesusInTheBible/v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/11_and-live.png</div>
+  </div>
+  <div class="flagtag">🚩 BAD</div>
+</div></div>
+<script>
+ const flagged=new Set();
+ function flag(c){const p=c.dataset.path; if(c.classList.toggle('flagged'))flagged.add(p);else flagged.delete(p);
+   document.getElementById('n').textContent=flagged.size; render();}
+ function list(){return [...flagged].sort();}
+ function render(){document.getElementById('out').value=list().join('\n');}
+ function copyList(){navigator.clipboard.writeText(list().join('\n'));
+   alert(flagged.size+' path(s) copied. Paste them back to Claude.');}
+ function dl(){const b=new Blob([JSON.stringify({flagged_bad:list()},null,2)],{type:'application/json'});
+   const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='flagged_bad.json';a.click();}
+ function toggleOut(){const o=document.getElementById('out');o.style.display=o.style.display=='block'?'none':'block';render();}
+</script>
+</body></html>

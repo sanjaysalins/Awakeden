@@ -3,7 +3,7 @@
   "slots": [
     {
       "order": 0,
-      "scene_index": 1,
+      "scene_index": 7,
       "section": "hook",
       "words": "A psalm's last line and Jesus' last breath in John close on",
       "passed": true,
@@ -13,23 +13,23 @@
       "order": 1,
       "scene_index": 9,
       "section": "hook",
-      "words": "it is done.",
+      "words": "The psalm closes looking ahead —",
       "passed": true,
       "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
       "order": 2,
-      "scene_index": 2,
+      "scene_index": 11,
       "section": "hook",
-      "words": "accomplished, and told to a people not yet born.",
+      "words": "Its final line:",
       "passed": true,
       "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
       "order": 3,
-      "scene_index": 3,
+      "scene_index": 8,
       "section": "hook",
-      "words": "\"…that he hath done this.\"",
+      "words": "And as Jesus hung dying,",
       "passed": true,
       "note": "clip content QC'd full-res and in motion; matches its beat"
     },
@@ -37,52 +37,12 @@
       "order": 4,
       "scene_index": 10,
       "section": "hook",
-      "words": "Done.",
-      "passed": true,
-      "note": "clip content QC'd full-res and in motion; matches its beat"
-    },
-    {
-      "order": 5,
-      "scene_index": 5,
-      "section": "hook",
-      "words": "John records His final word:",
-      "passed": true,
-      "note": "clip content QC'd full-res and in motion; matches its beat"
-    },
-    {
-      "order": 6,
-      "scene_index": 7,
-      "section": "hook",
-      "words": "\"It is finished\".",
-      "passed": true,
-      "note": "clip content QC'd full-res and in motion; matches its beat"
-    },
-    {
-      "order": 7,
-      "scene_index": 11,
-      "section": "hook",
       "words": "Different words, in different tongues,",
       "passed": true,
       "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
-      "order": 8,
-      "scene_index": 6,
-      "section": "hook",
-      "words": "a thousand years apart —",
-      "passed": true,
-      "note": "clip content QC'd full-res and in motion; matches its beat"
-    },
-    {
-      "order": 9,
-      "scene_index": 8,
-      "section": "hook",
-      "words": "a finished work.",
-      "passed": true,
-      "note": "clip content QC'd full-res and in motion; matches its beat"
-    },
-    {
-      "order": 10,
+      "order": 5,
       "scene_index": 12,
       "section": "hook",
       "words": "So what's left for you to finish?",
@@ -90,15 +50,15 @@
       "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
-      "order": 11,
+      "order": 6,
       "scene_index": 13,
       "section": "hook",
-      "words": "only Someone to come home to:",
+      "words": "Nothing —",
       "passed": true,
       "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
-      "order": 12,
+      "order": 7,
       "scene_index": 14,
       "section": "hook",
       "words": "the One who said it is done.",

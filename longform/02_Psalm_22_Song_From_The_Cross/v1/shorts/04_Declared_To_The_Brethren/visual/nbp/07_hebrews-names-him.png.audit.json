@@ -1,10 +1,1 @@
-{
-  "passed": true,
-  "issues": [
-    {
-      "claim": "Greek letters on the page",
-      "actual": "the page reads as a pale codex surface without clearly legible Greek - non-failing (avoids garbled text); fingertip and bound book are correct"
-    }
-  ],
-  "banned_token_hits": []
-}
+{"passed": true, "issues": [], "banned_token_hits": [], "note": "reuse from 14_come-to-him.png"}

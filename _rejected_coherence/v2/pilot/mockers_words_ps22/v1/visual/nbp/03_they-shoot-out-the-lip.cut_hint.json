@@ -1,0 +1,18 @@
+{
+  "scene_index": 3,
+  "title": "They Shoot Out The Lip",
+  "scene_type": "single",
+  "framing": "close",
+  "arc_position": "central-conflict",
+  "jesus_variant": "passion",
+  "viral_role": "build",
+  "pacing": "controlled",
+  "macro_elements": [
+    "the curled thrust lip",
+    "the cold lifted eyes",
+    "the raking light on skin",
+    "the shadowed edge"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}

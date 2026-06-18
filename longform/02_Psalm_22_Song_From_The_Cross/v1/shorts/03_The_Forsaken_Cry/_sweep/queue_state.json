@@ -1,0 +1,93 @@
+{
+  "short": "03_The_Forsaken_Cry",
+  "clips": 13,
+  "status": "swept",
+  "fails": [
+    "03_the-first-line",
+    "07_the-same-words"
+  ],
+  "rows": [
+    {
+      "scene": 1,
+      "clip": "01_the-cry",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 2,
+      "clip": "02_davids-forsaken-psalm",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 3,
+      "clip": "03_the-first-line",
+      "state": "FAIL",
+      "foreign": [
+        "entire clip is a garbled Hebrew scroll macro"
+      ]
+    },
+    {
+      "scene": 4,
+      "clip": "04_the-ninth-hour",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 5,
+      "clip": "05_my-god-my-god",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 6,
+      "clip": "06_darkness-over-the-land",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 7,
+      "clip": "07_the-same-words",
+      "state": "FAIL",
+      "foreign": [
+        "garbled Hebrew scroll macro"
+      ]
+    },
+    {
+      "scene": 8,
+      "clip": "08_still-my-god",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 9,
+      "clip": "09_bearing-the-forsaking",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 10,
+      "clip": "10_so-you-never-will-be",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 11,
+      "clip": "11_the-way-opened-from-the-dark",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 12,
+      "clip": "12_a-thousand-years-apart",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 13,
+      "clip": "13_however-far-youve-run",
+      "state": "PASS",
+      "foreign": []
+    }
+  ]
+}

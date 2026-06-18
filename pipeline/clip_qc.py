@@ -30,7 +30,7 @@ CRITERIA = (
 )
 
 
-def extract_frames(mp4: Path, out_dir: Path, n: int = 5) -> list[Path]:
+def extract_frames(mp4: Path, out_dir: Path, n: int = 12) -> list[Path]:
     """Extract n frames spread across the clip (first .. last) for a real look."""
     out_dir.mkdir(parents=True, exist_ok=True)
     dur = _duration(mp4)

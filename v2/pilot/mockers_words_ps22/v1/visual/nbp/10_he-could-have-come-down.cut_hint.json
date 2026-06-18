@@ -1,0 +1,18 @@
+{
+  "scene_index": 10,
+  "title": "He Could Have Come Down",
+  "scene_type": "unified",
+  "framing": "mid",
+  "arc_position": "nt-gospel-link",
+  "jesus_variant": "passion",
+  "viral_role": "pivot",
+  "pacing": "slower",
+  "macro_elements": [
+    "the calm unbroken face",
+    "a nailed hand",
+    "the dark sky",
+    "dim restrained ranks"
+  ],
+  "consumed_by": "PythonProject1/jesus/image_to_kling.py (Stage A cut-plan director)",
+  "note": "Advisory metadata for the downstream Kling cut planner. The current image_to_kling.py reads only the image; V8 wiring will inject these hints into the cut-plan director prompt."
+}
