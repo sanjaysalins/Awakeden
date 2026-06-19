@@ -1,0 +1,92 @@
+{
+  "short": "06_The_Ends_Of_The_Earth",
+  "clips": 14,
+  "status": "in-progress",
+  "fails": [],
+  "rows": [
+    {
+      "scene": 1,
+      "clip": "01_one-man-alone",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 2,
+      "clip": "02_the-song-opens-its-arms",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 3,
+      "clip": "03_all-the-ends-of-the-world",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 4,
+      "clip": "04_the-reach-of-the-cross",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 5,
+      "clip": "05_one-corner-of-the-empire",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 6,
+      "clip": "06_the-gospel-goes-out",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 7,
+      "clip": "07_in-thee-all-nations-blessed",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 8,
+      "clip": "08_kindreds-of-the-nations",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 9,
+      "clip": "09_a-light-to-the-gentiles",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 10,
+      "clip": "10_the-empty-tomb",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 11,
+      "clip": "11_nation-after-nation",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 12,
+      "clip": "12_wherever-you-are",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 13,
+      "clip": "13_room-to-turn",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 14,
+      "clip": "14_the-whole-earth-at-dawn",
+      "state": "UNSWEPT",
+      "foreign": []
+    }
+  ]
+}

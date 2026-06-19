@@ -1,6 +1,19 @@
 # STATE.md — progress tracker
 
-**Last updated:** 2026-06-17
+**Last updated:** 2026-06-19
+**Status (2026-06-19):** FULL-TREATMENT SWEEP continued — **#04, #05, #06, #07 now at the new bar**
+(multi-voice + sweep/fix-defects + backfill-to-punchy + speed-to-fit + cinematic orchestral score +
+ivory caption). Locked **TWO new standards** (config defaults flipped + memories): (1) **SPEED-TO-FIT,
+NEVER TRIM** — `ASSEMBLY_SPEED_CAP` 2.2→4.0, `ASSEMBLY_REVERENCE_CAP` 1.3→3.0, and the **HERO CLOSE is
+now a whole sped clip in MOTION** (`ASSEMBLY_HERO_STILL` 1→0, hero-tail via `_slot_op`) — supersedes the
+freeze-on-Christ close; (2) **CINEMATIC-ORCHESTRAL SCORE** (full strings+horns+organ, sweeping, −8 dB,
+reverent/no-percussion) + score-shaping fix (Eleven Music ends its arc ~10s early on long narrations →
+reshape to fill the duration + duck the back half so the end settles, not surges). #06 sc03 still
+re-rendered (titulus removed); #07 sc07 re-animated via direct-Kling (crop-only plan), hero = the
+substitution clip. Finals + per-short review HTMLs at `C:/Users/sanjay/0N_*.{mp4,html}`. Spend ≈ $20.
+**NEXT: #08, then #01/#02, then 3 pilots; optional #03/#04 score top-up.** See RESUME.md top. Prior status below.
+
+**Last updated (prior):** 2026-06-17
 **Status (2026-06-17 PART 2):** MERGED the coherence system into the binding `v2/SPEC.md` (drift fixed:
 INV-23 coherence + INV-24 no-fabricated-verdicts, both **rollout-gated/reports-only**; gate vocabulary
 unified to **F1–F5**; IMG-COHERENT + STILL-REVIEW gate rows; side doc `COHERENCE_GATE_SPEC.md` retired

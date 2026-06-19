@@ -1,0 +1,9 @@
+{
+ "audited": true,
+ "passed": false,
+ "foreign": [
+  "split-panel-frame-bars"
+ ],
+ "split": false,
+ "note": "element-gate sweep (agent look)"
+}

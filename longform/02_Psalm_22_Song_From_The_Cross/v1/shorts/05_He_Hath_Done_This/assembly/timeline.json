@@ -3,8 +3,40 @@
     "index": 0,
     "section": "hook",
     "speaker": "narrator",
-    "text": "A psalm's last line and Jesus' last breath in John close on the very same note: it is done. The psalm closes looking ahead — to God's saving work, accomplished, and told to a people not yet born. Its final line: \"…that he hath done this.\" Done. And as Jesus hung dying, John records His final word: \"It is finished\". Different words, in different tongues, a thousand years apart — but the same note: a finished work. So what's left for you to finish? Nothing — only Someone to come home to: the One who said it is done.",
+    "text": "A psalm's last line and Jesus' last breath in John close on the very same note: it is done. The psalm closes looking ahead — to God's saving work, accomplished, and told to a people not yet born. Its final line:",
     "start_s": 0.0,
-    "end_s": 43.914
+    "end_s": 16.474
+  },
+  {
+    "index": 1,
+    "section": "scripture",
+    "speaker": "scripture",
+    "text": "\"…that he hath done this.\"",
+    "start_s": 16.874,
+    "end_s": 18.554
+  },
+  {
+    "index": 2,
+    "section": "bridge",
+    "speaker": "narrator",
+    "text": "Done. And as Jesus hung dying, John records His final word:",
+    "start_s": 18.554,
+    "end_s": 24.306
+  },
+  {
+    "index": 3,
+    "section": "quote",
+    "speaker": "jesus",
+    "text": "\"It is finished\".",
+    "start_s": 24.706,
+    "end_s": 25.826
+  },
+  {
+    "index": 4,
+    "section": "landing",
+    "speaker": "narrator",
+    "text": "Different words, in different tongues, a thousand years apart — but the same note: a finished work. So what's left for you to finish? Nothing — only Someone to come home to: the One who said it is done.",
+    "start_s": 25.826,
+    "end_s": 42.697
   }
 ]

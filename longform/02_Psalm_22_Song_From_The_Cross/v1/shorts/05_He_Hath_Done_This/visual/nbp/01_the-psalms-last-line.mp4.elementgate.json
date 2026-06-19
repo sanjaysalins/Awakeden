@@ -1,0 +1,10 @@
+{
+ "audited": true,
+ "passed": false,
+ "foreign": [
+  "garbled-hebrew-scroll",
+  "writing-scene"
+ ],
+ "split": false,
+ "note": "element-gate sweep (agent look)"
+}

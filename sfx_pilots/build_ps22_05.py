@@ -22,7 +22,7 @@ OUT = CUT.with_name("viral_cut_sfx.mp4")
 LAYERS = [
     layer("still", "air_hollow_desolate", "loop",    0.0, 43.9, -34.0, fout=3.0),
     layer("weight", "rumble_deep_sub",    "loop",   23.8,  5.4, -33.0, fin=1.5, fout=2.5),  # "It is finished"
-    layer("veil",  "veil_tearing",        "oneshot", 32.3,  4.0, -27.0),                     # torn veil -> "a finished work"
+    layer("veil",  "veil_tearing",        "oneshot", 24.6,  4.0, -27.0),                     # torn veil clip + "It is finished" (Matt 27:51 veil+quake)
     layer("dawn",  "dawn_morning_warm",   "loop",   35.4,  8.5, -34.0, filt="lowpass=f=3000", fin=3.0),  # come home
 ]
 

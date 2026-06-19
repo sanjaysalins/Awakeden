@@ -3,8 +3,40 @@
     "index": 0,
     "section": "hook",
     "speaker": "narrator",
-    "text": "Most people stop reading Psalm twenty-two at the cross. Keep going — it doesn't end in a grave. But the cry doesn't stay forsaken. Later, the psalm turns — the same voice moves from anguish to praise: \"I will declare thy name unto my brethren: in the midst of the congregation will I praise thee.\" Who is that praising voice? Hebrews takes that opening line — word for word — and puts it in the mouth of the risen Christ. The psalm's turn is Jesus, alive on the far side of the cross. And hear what He calls us. Hebrews says He is — \"not ashamed to call them brethren\" — brothers. Family. The same Jesus who cried out forsaken now lives — and the risen Christ is not ashamed to call His own brethren. He is calling you into that family.",
+    "text": "Most people stop reading Psalm twenty-two at the cross. Keep going — it doesn't end in a grave. But the cry doesn't stay forsaken. Later, the psalm turns — the same voice moves from anguish to praise:",
     "start_s": 0.0,
-    "end_s": 58.313
+    "end_s": 16.212
+  },
+  {
+    "index": 1,
+    "section": "quote",
+    "speaker": "jesus",
+    "text": "\"I will declare thy name unto my brethren: in the midst of the congregation will I praise thee.\"",
+    "start_s": 16.612,
+    "end_s": 21.812
+  },
+  {
+    "index": 2,
+    "section": "bridge",
+    "speaker": "narrator",
+    "text": "Who is that praising voice? Hebrews takes that opening line — word for word — and puts it in the mouth of the risen Christ. The psalm's turn is Jesus, alive on the far side of the cross. And hear what He calls us. Hebrews says He is —",
+    "start_s": 21.812,
+    "end_s": 41.197
+  },
+  {
+    "index": 3,
+    "section": "scripture",
+    "speaker": "scripture",
+    "text": "\"not ashamed to call them brethren\"",
+    "start_s": 41.597,
+    "end_s": 44.077
+  },
+  {
+    "index": 4,
+    "section": "landing",
+    "speaker": "narrator",
+    "text": "— brothers. Family. The same Jesus who cried out forsaken now lives — and the risen Christ is not ashamed to call His own brethren. He is calling you into that family.",
+    "start_s": 44.077,
+    "end_s": 58.955
   }
 ]

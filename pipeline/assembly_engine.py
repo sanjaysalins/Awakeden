@@ -419,14 +419,17 @@ def allocate(
             cursor += dur
             order += 1
 
-    # hero close (single appearance — the CTA landing on Christ, held as a still)
+    # hero close (single appearance — the CTA landing on Christ). The WHOLE hero clip is
+    # sped to fit the tail window (user 2026-06-19: "use the whole clip by running it
+    # faster", not a frozen still — see ASSEMBLY_HERO_STILL default flip).
     if hero is not None and hero_tail > 0:
+        h_sp, h_si, h_so, h_op = _slot_op(hero, hero_tail)
         slots.append(EditSlot(
             order=order, role="hero-tail", scene_index=hero.scene_index,
             section="hero", slot_start_s=round(total - hero_tail, 3), slot_end_s=round(total, 3),
-            source_in_s=0.0, source_out_s=min(hero_tail, hero.natural_duration_s),
-            speed_factor=1.0, op="speed",
-            rationale="Hero close — the cut lands on Christ (single appearance, no reuse).",
+            source_in_s=h_si, source_out_s=h_so,
+            speed_factor=h_sp, op=h_op,
+            rationale="Hero close — the whole hero clip sped to fit, landing on Christ (single appearance, no reuse).",
         ))
         order += 1
 

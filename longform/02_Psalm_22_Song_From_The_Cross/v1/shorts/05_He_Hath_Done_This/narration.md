@@ -29,13 +29,13 @@ A psalm's last line and Jesus' last breath in John close on the very same note: 
 **[narrator]**
 The psalm closes looking ahead — to God's saving work, accomplished, and told to a people not yet born. Its final line:
 
-**[narrator — KJV, Psalm 22:31]**
+**[scripture — KJV, Psalm 22:31]**
 "…that he hath done this."
 
 **[narrator]**
 Done. And as Jesus hung dying, John records His final word:
 
-**[narrator — KJV, John 19:30]**
+**[jesus — KJV, John 19:30]**
 "It is finished".
 
 **[narrator]**

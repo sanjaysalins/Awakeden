@@ -1,0 +1,28 @@
+{
+ "still_id": "19_looking-down-in-love",
+ "subject_type": "hero",
+ "role": "hero",
+ "elements": [
+  {
+   "id": "full",
+   "label": "reused: 10_looking-down-in-love",
+   "region": null,
+   "verified": true
+  }
+ ],
+ "ambient_layer": [],
+ "period_real": {
+  "T1": "pass",
+  "T2": "pass",
+  "T3": "pass",
+  "T4": "pass",
+  "T5": "pass",
+  "T6": "pass"
+ },
+ "declared_by": "design",
+ "provenance": "fresh",
+ "lock_version": 1,
+ "png_sha256": "a84d999af9483e64184760e2b3f6f62e88888cd7ae5f6cffcd1acfa85da898ef",
+ "locked": true,
+ "note": "reuse-swap from C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\shorts\\02_The_Mockers_Words\\visual\\nbp\\10_looking-down-in-love.mp4"
+}

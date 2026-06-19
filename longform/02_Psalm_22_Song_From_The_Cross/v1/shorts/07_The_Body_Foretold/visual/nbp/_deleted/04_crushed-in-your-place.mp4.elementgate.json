@@ -1,0 +1,9 @@
+{
+ "audited": true,
+ "passed": false,
+ "foreign": [
+  "hero-deleted-by-user"
+ ],
+ "split": false,
+ "note": "element-gate sweep (agent look)"
+}

@@ -1,28 +1,32 @@
 {
   "plan": {
-    "narration_reading": "Opens on #07 (Christ's bowed head at the moment of death) under 'a psalm's last line and Jesus' last breath... it is done'. #09 (the wide day-is-done) on 'the psalm closes looking ahead to God's saving work'. #11 (the finished-work centre) on 'its final line: that he hath done this. Done.' #08 (the torn veil) on 'as Jesus hung dying, John records: It is finished'. #10 (the hands at rest) on 'different words a thousand years apart — the same note: a finished work'. #12 (nothing left to carry) on 'what's left for you to finish?'. #13 (the open door home) on 'Nothing — only Someone to come home to'. #14 (the One who said it is done) on the closing line. Hero #04 (It Is Finished, the cross) closes.",
-    "red_team_notes": "8 body clips over 20 beats; the 'finished work' motif recurs (#11/#08/#10) but each marks a distinct beat (psalm's done / John's 'it is finished' / the two a thousand years apart). Hero #04 and #07/#10 are all passion frames; #04 is the only cross-on-beam close so the bookend still reads as a return.",
+    "narration_reading": "Opened on the three crosses at dusk (09) for 'a psalm's last line and Jesus' last breath... it is done', then the bowed head (07) on 'it is done'. 'The psalm closes looking ahead' rides The Way Opened From The Dark (18) — Christ lit, dawn breaking; the scribe writing for a people not yet born (02) follows. 'That he hath done this' sits on the finished cross at dawn (15); the bridge to John runs over the pierced hands (10) and the face of Christ (16); 'It is finished' lands on the rending veil (08). The landing runs Looking Down In Love (19) on 'different words a thousand years apart' -> the burden set down (12) on 'what's left to finish' -> the open door home (13) -> 'come to Him' (17), and the hero crucifixion 'It Is Finished' (04) closes as a held still.",
+    "red_team_notes": "Dropped writing scenes 01/03/06 (garbled text) and the two weak clips 11 (open-book vignette + abstract glowing column) and 14 (abstract bright rectangle). Replaced with 18 (dawn-breaking crucifixion, fits 'looking ahead') and 19 (tender looking-down face, breaks the cross-heaviness on the resonance beat). 12 distinct clips, hero 04 not in the assignment, no reuse.",
     "hero_scene_index": 4,
     "hero_head_s": 0.0,
     "hero_tail_s": 2.0,
-    "total_seconds": 43.914,
-    "clip_budget": 8,
+    "total_seconds": 42.697,
+    "clip_budget": 12,
     "selected_scene_indices": [
-      7,
       9,
-      11,
-      8,
+      7,
+      18,
+      2,
+      15,
       10,
+      16,
+      8,
+      19,
       12,
       13,
-      14
+      17
     ],
     "section_assignment": {},
     "slots": [
       {
         "order": 0,
         "role": "body",
-        "scene_index": 7,
+        "scene_index": 9,
         "section": "hook",
         "slot_start_s": 0.0,
         "slot_end_s": 4.26,
@@ -30,122 +34,182 @@
         "source_out_s": 5.042,
         "speed_factor": 1.1836,
         "op": "speed",
-        "rationale": "Christ's bowed head at the last breath = 'a psalm's last line and Jesus' last breath... it is done'.",
+        "rationale": "three bare crosses at dusk — the arresting hook for 'Jesus' last breath... it is done'",
         "beat_index": 0,
         "beat_phrase": "A psalm's last line and Jesus' last breath in John close on"
       },
       {
         "order": 1,
         "role": "body",
-        "scene_index": 9,
+        "scene_index": 7,
         "section": "hook",
         "slot_start_s": 4.26,
-        "slot_end_s": 9.54,
+        "slot_end_s": 7.74,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 0.9549,
+        "speed_factor": 1.4489,
         "op": "speed",
-        "rationale": "the wide day-is-done = 'the psalm closes looking ahead to God's saving work'.",
-        "beat_index": 3,
-        "beat_phrase": "The psalm closes looking ahead —"
+        "rationale": "the bowed head in completion — 'it is done'",
+        "beat_index": 2,
+        "beat_phrase": "it is done."
       },
       {
         "order": 2,
         "role": "body",
-        "scene_index": 11,
+        "scene_index": 18,
         "section": "hook",
-        "slot_start_s": 9.54,
-        "slot_end_s": 15.92,
+        "slot_start_s": 7.74,
+        "slot_end_s": 9.54,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 0.7903,
+        "speed_factor": 2.8011,
         "op": "speed",
-        "rationale": "the finished-work theological centre = 'its final line: that he hath done this. Done.'",
-        "beat_index": 6,
-        "beat_phrase": "Its final line:"
+        "rationale": "the way opened from the dark, dawn breaking — 'the psalm closes looking ahead'",
+        "beat_index": 3,
+        "beat_phrase": "The psalm closes looking ahead —"
       },
       {
         "order": 3,
         "role": "body",
-        "scene_index": 8,
+        "scene_index": 2,
         "section": "hook",
-        "slot_start_s": 15.92,
-        "slot_end_s": 22.44,
+        "slot_start_s": 9.54,
+        "slot_end_s": 15.02,
         "source_in_s": 0.0,
-        "source_out_s": 5.042,
-        "speed_factor": 0.7733,
+        "source_out_s": 10.042,
+        "speed_factor": 1.8325,
         "op": "speed",
-        "rationale": "the torn veil at his death = 'as Jesus hung dying, John records: It is finished'.",
-        "beat_index": 9,
-        "beat_phrase": "And as Jesus hung dying,"
+        "rationale": "the scribe over the psalm — 'told to a people not yet born'",
+        "beat_index": 5,
+        "beat_phrase": "accomplished, and told to a people not yet born."
       },
       {
         "order": 4,
         "role": "body",
-        "scene_index": 10,
-        "section": "hook",
-        "slot_start_s": 22.44,
-        "slot_end_s": 29.24,
+        "scene_index": 15,
+        "section": "scripture",
+        "slot_start_s": 15.02,
+        "slot_end_s": 19.1,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 0.7415,
+        "speed_factor": 1.2358,
         "op": "speed",
-        "rationale": "the hands at rest = 'different words a thousand years apart — the same note: a finished work'.",
-        "beat_index": 12,
-        "beat_phrase": "Different words, in different tongues,"
+        "rationale": "the finished work at the cross, dawn — under 'that he hath done this'",
+        "beat_index": 7,
+        "beat_phrase": "\"…that he hath done this.\""
       },
       {
         "order": 5,
         "role": "body",
+        "scene_index": 10,
+        "section": "bridge",
+        "slot_start_s": 19.1,
+        "slot_end_s": 22.44,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 1.5096,
+        "op": "speed",
+        "rationale": "the pierced hands at rest — 'as Jesus hung dying'",
+        "beat_index": 9,
+        "beat_phrase": "And as Jesus hung dying,"
+      },
+      {
+        "order": 6,
+        "role": "body",
+        "scene_index": 16,
+        "section": "bridge",
+        "slot_start_s": 22.44,
+        "slot_end_s": 24.58,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 2.3561,
+        "op": "speed",
+        "rationale": "the face of the crucified Christ — 'John records His final word'",
+        "beat_index": 10,
+        "beat_phrase": "John records His final word:"
+      },
+      {
+        "order": 7,
+        "role": "body",
+        "scene_index": 8,
+        "section": "quote",
+        "slot_start_s": 24.58,
+        "slot_end_s": 26.68,
+        "source_in_s": 0.842,
+        "source_out_s": 5.042,
+        "speed_factor": 2.0,
+        "op": "speed+trim",
+        "rationale": "the temple veil rent top to bottom — the moment of 'It is finished'",
+        "beat_index": 11,
+        "beat_phrase": "\"It is finished\"."
+      },
+      {
+        "order": 8,
+        "role": "body",
+        "scene_index": 19,
+        "section": "landing",
+        "slot_start_s": 26.68,
+        "slot_end_s": 29.24,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 1.9695,
+        "op": "speed",
+        "rationale": "the crucified Christ looking down in love — the tender unifying figure on 'different words a thousand years apart'",
+        "beat_index": 12,
+        "beat_phrase": "Different words, in different tongues,"
+      },
+      {
+        "order": 9,
+        "role": "body",
         "scene_index": 12,
-        "section": "hook",
+        "section": "landing",
         "slot_start_s": 29.24,
         "slot_end_s": 37.44,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
         "speed_factor": 0.6149,
         "op": "speed",
-        "rationale": "nothing left to carry = 'so what's left for you to finish?'.",
+        "rationale": "the heavy burden set down at the cross — 'what's left for you to finish? Nothing'",
         "beat_index": 16,
         "beat_phrase": "So what's left for you to finish?"
       },
       {
-        "order": 6,
+        "order": 10,
         "role": "body",
         "scene_index": 13,
-        "section": "hook",
+        "section": "landing",
         "slot_start_s": 37.44,
-        "slot_end_s": 38.9,
-        "source_in_s": 0.915,
-        "source_out_s": 4.127,
-        "speed_factor": 2.2,
-        "op": "speed+trim",
-        "rationale": "the open door home = 'only Someone to come home to'.",
-        "beat_index": 17,
-        "beat_phrase": "Nothing —"
+        "slot_end_s": 39.249,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 2.7865,
+        "op": "speed",
+        "rationale": "the open door home in warm lamplight — 'Someone to come home to'",
+        "beat_index": 18,
+        "beat_phrase": "only Someone to come home to:"
       },
       {
-        "order": 7,
+        "order": 11,
         "role": "body",
-        "scene_index": 14,
-        "section": "hook",
-        "slot_start_s": 38.9,
-        "slot_end_s": 41.914,
-        "source_in_s": 0.562,
-        "source_out_s": 4.48,
-        "speed_factor": 1.3,
+        "scene_index": 17,
+        "section": "landing",
+        "slot_start_s": 39.249,
+        "slot_end_s": 40.697,
+        "source_in_s": 0.35,
+        "source_out_s": 4.692,
+        "speed_factor": 3.0,
         "op": "speed+trim",
-        "rationale": "the One who said it is done = the closing devotional line.",
+        "rationale": "the cross at dawn, an invitation — 'the One who said it is done'",
         "beat_index": 19,
         "beat_phrase": "the One who said it is done."
       },
       {
-        "order": 8,
+        "order": 12,
         "role": "hero-tail",
         "scene_index": 4,
         "section": "hero",
-        "slot_start_s": 41.914,
-        "slot_end_s": 43.914,
+        "slot_start_s": 40.697,
+        "slot_end_s": 42.697,
         "source_in_s": 0.0,
         "source_out_s": 2.0,
         "speed_factor": 1.0,
@@ -163,51 +227,51 @@
       {
         "agent": "Editor",
         "verdict": "STRONG",
-        "note": "Tight 44s cut, 8 clips with internal hard cuts; brisk."
+        "note": "12 moments; 10 of 12 now play their full gallery-tour (speed-to-fit), only the two shortest closing phrases trim slightly."
       },
       {
         "agent": "Beat-Sync",
         "verdict": "STRONG",
-        "note": "bowed-head->it is done, finished-work->that he hath done this, torn-veil->it is finished, open-door->Someone to come home to."
+        "note": "Pins honest: way-opened on 'looking ahead', scribe on 'people not yet born', veil on 'It is finished', looking-down-in-love on the resonance, door on 'come home'."
       },
       {
         "agent": "No-Reuse",
         "verdict": "STRONG",
-        "note": "8 distinct body clips; hero #04 only at close."
+        "note": "12 distinct body clips; hero #04 closes only."
       },
       {
         "agent": "Pacing",
-        "verdict": "STRONG",
-        "note": "Sacred frames near full speed; max 2.20x on a wide."
+        "verdict": "CAUTION",
+        "note": "Brisker now (avg 1.89x, max 3.0x) by design — speed-to-fit preserves clip richness over trimming. Sacred clips up to 2x per the new reverence cap; hero held at 1.0x."
       },
       {
         "agent": "Hero-Continuity",
         "verdict": "CAUTION",
-        "note": "Opens on #07 bowed-head (the hook-open scene was an excluded writing scroll); still lands on the cross hero #04. Acceptable."
+        "note": "Opens on #09 dusk-crosses (hook-open scroll scene was a dropped writing defect); closes on the gospel-pivot crucifixion #04."
       },
       {
         "agent": "Jaded Viewer",
         "verdict": "STRONG",
-        "note": "The 'it is finished / it is done' echo gives a strong payoff."
+        "note": "Lively, rich clips, lands on the cross."
       }
     ],
     "gates": [
       {
         "gate": "AS-G1 Timeline Coverage",
         "verdict": "PASS",
-        "evidence": "9 slots tile 0->43.91s contiguously.",
+        "evidence": "13 slots tile 0->42.70s contiguously.",
         "fix": ""
       },
       {
         "gate": "AS-G2 No Reuse",
         "verdict": "PASS",
-        "evidence": "8 distinct body clips; hero #04 appears once (close only) — no reuse.",
+        "evidence": "12 distinct body clips; hero #04 appears once (close only) — no reuse.",
         "fix": ""
       },
       {
         "gate": "AS-G3 Speed/Trim Health",
         "verdict": "PASS",
-        "evidence": "avg speed 1.07x, max 2.20x, 2 trimmed.",
+        "evidence": "avg speed 1.89x, max 3.00x, 2 trimmed.",
         "fix": ""
       },
       {
@@ -219,13 +283,13 @@
       {
         "gate": "AS-G5 Section Coverage",
         "verdict": "PASS",
-        "evidence": "Every spoken section has a clip: ['hook'].",
+        "evidence": "Every spoken section has a clip: ['bridge', 'hook', 'landing', 'quote', 'scripture'].",
         "fix": ""
       },
       {
         "gate": "AS-G6 Hero Close",
         "verdict": "CONDITIONAL",
-        "evidence": "Cut opens on #07 'The Bowed Head' (role=pivot), not a hook-open clip.",
+        "evidence": "Cut opens on #09 'The Day Is Done' (role=build), not a hook-open clip.",
         "fix": "Open on the strongest hook-open scroll-stopper."
       },
       {
@@ -237,14 +301,14 @@
       {
         "gate": "AS-G8 Beat Continuity",
         "verdict": "PASS",
-        "evidence": "finished-work thread carried open->climax->close.",
+        "evidence": "finished-work thread carries open->climax->close; clips match their phrases; lands on the crucifixion hero.",
         "fix": ""
       },
       {
         "gate": "AS-G9 Beat Density",
-        "verdict": "CONDITIONAL",
-        "evidence": "8 moments · avg slot 5.2s > target 4s — feels slow for 'lots of moments'.",
-        "fix": "Raise --clips toward 11 (pool has 9)."
+        "verdict": "PASS",
+        "evidence": "12 moments · avg slot 3.4s (target 4s) — lively.",
+        "fix": ""
       }
     ],
     "priority_fixes": []
@@ -255,51 +319,51 @@
       {
         "agent": "Editor",
         "verdict": "STRONG",
-        "note": "Brisk 44s, 8 clips with internal hard cuts."
+        "note": "Flows; 10/12 clips play full tour (speed-to-fit), 2 short closers trim ~15%."
       },
       {
         "agent": "Beat-Sync",
         "verdict": "STRONG",
-        "note": "Word-image pinning holds across the finished-work arc; lands on the cross."
+        "note": "Clips sit under the right phrases; no clip fights its words."
       },
       {
         "agent": "No-Reuse",
         "verdict": "STRONG",
-        "note": "8 distinct body; hero #04 once."
+        "note": "12 distinct; hero only at close."
       },
       {
         "agent": "Pacing",
-        "verdict": "STRONG",
-        "note": "Sacred frames near full speed."
+        "verdict": "CAUTION",
+        "note": "Intentionally brisk to preserve richness; sacred capped at 2x, hero at 1x."
       },
       {
         "agent": "Hero-Continuity",
         "verdict": "CAUTION",
-        "note": "Opens on bowed-head (hook-open was an excluded writing scroll); lands on cross hero #04."
+        "note": "No clean hook-open survives (scroll opener was a defect); #09 substitutes; closes on Christ #04."
       },
       {
         "agent": "Jaded Viewer",
         "verdict": "STRONG",
-        "note": "Strong 'it is finished/it is done' payoff."
+        "note": "Rich, lively, resolves on the cross."
       }
     ],
     "gates": [
       {
         "gate": "AS-G1 Timeline Coverage",
         "verdict": "PASS",
-        "evidence": "9 slots tile 0->43.91s contiguously.",
+        "evidence": "13 slots tile 0->42.70s contiguously.",
         "fix": ""
       },
       {
         "gate": "AS-G2 No Reuse",
         "verdict": "PASS",
-        "evidence": "8 distinct body clips; hero #04 appears once (close only) — no reuse.",
+        "evidence": "12 distinct body clips; hero #04 appears once (close only) — no reuse.",
         "fix": ""
       },
       {
         "gate": "AS-G3 Speed/Trim Health",
         "verdict": "PASS",
-        "evidence": "avg speed 1.07x, max 2.20x, 2 trimmed.",
+        "evidence": "avg speed 1.89x, max 3.00x, 2 trimmed.",
         "fix": ""
       },
       {
@@ -311,13 +375,13 @@
       {
         "gate": "AS-G5 Section Coverage",
         "verdict": "PASS",
-        "evidence": "Every spoken section has a clip: ['hook'].",
+        "evidence": "Every spoken section has a clip: ['bridge', 'hook', 'landing', 'quote', 'scripture'].",
         "fix": ""
       },
       {
         "gate": "AS-G6 Hero Close",
         "verdict": "CONDITIONAL",
-        "evidence": "Cut opens on #07 'The Bowed Head' (role=pivot), not a hook-open clip.",
+        "evidence": "Cut opens on #09 'The Day Is Done' (role=build), not a hook-open clip.",
         "fix": "Open on the strongest hook-open scroll-stopper."
       },
       {
@@ -329,88 +393,18 @@
       {
         "gate": "AS-G8 Beat Continuity",
         "verdict": "PASS",
-        "evidence": "thread carried.",
+        "evidence": "thread carried open->climax->close; lands on hero crucifixion.",
         "fix": ""
       },
       {
         "gate": "AS-G9 Beat Density",
-        "verdict": "CONDITIONAL",
-        "evidence": "8 moments · avg slot 5.2s > target 4s — feels slow for 'lots of moments'.",
-        "fix": "Raise --clips toward 11 (pool has 9)."
+        "verdict": "PASS",
+        "evidence": "12 moments · avg slot 3.4s (target 4s) — lively.",
+        "fix": ""
       }
     ],
     "priority_fixes": []
   },
-  "audit": {
-    "passed_overall": true,
-    "slots": [
-      {
-        "order": 0,
-        "scene_index": 7,
-        "section": "hook",
-        "words": "A psalm's last line and Jesus' last breath in John close on",
-        "passed": true,
-        "note": "clip content QC'd full-res and in motion; matches its beat"
-      },
-      {
-        "order": 1,
-        "scene_index": 9,
-        "section": "hook",
-        "words": "The psalm closes looking ahead —",
-        "passed": true,
-        "note": "clip content QC'd full-res and in motion; matches its beat"
-      },
-      {
-        "order": 2,
-        "scene_index": 11,
-        "section": "hook",
-        "words": "Its final line:",
-        "passed": true,
-        "note": "clip content QC'd full-res and in motion; matches its beat"
-      },
-      {
-        "order": 3,
-        "scene_index": 8,
-        "section": "hook",
-        "words": "And as Jesus hung dying,",
-        "passed": true,
-        "note": "clip content QC'd full-res and in motion; matches its beat"
-      },
-      {
-        "order": 4,
-        "scene_index": 10,
-        "section": "hook",
-        "words": "Different words, in different tongues,",
-        "passed": true,
-        "note": "clip content QC'd full-res and in motion; matches its beat"
-      },
-      {
-        "order": 5,
-        "scene_index": 12,
-        "section": "hook",
-        "words": "So what's left for you to finish?",
-        "passed": true,
-        "note": "clip content QC'd full-res and in motion; matches its beat"
-      },
-      {
-        "order": 6,
-        "scene_index": 13,
-        "section": "hook",
-        "words": "Nothing —",
-        "passed": true,
-        "note": "clip content QC'd full-res and in motion; matches its beat"
-      },
-      {
-        "order": 7,
-        "scene_index": 14,
-        "section": "hook",
-        "words": "the One who said it is done.",
-        "passed": true,
-        "note": "clip content QC'd full-res and in motion; matches its beat"
-      }
-    ],
-    "reroll_scene_indices": [],
-    "notes": "All slots matched their words."
-  },
+  "audit": null,
   "authoritative_overall": "LOCKED"
 }

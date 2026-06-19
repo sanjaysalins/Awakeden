@@ -30,13 +30,13 @@ A king described a dying body so exactly it reads like an eyewitness account of 
 **[narrator]**
 Psalm twenty-two. David wrote it in the first person, but he was describing someone else's death, not his own. Watch the body of the dying man:
 
-**[narrator — KJV, Psalm 22:14]**
+**[david — KJV, Psalm 22:14]**
 "I am poured out like water, and all my bones are out of joint…"
 
 **[narrator]**
 Drained — and every joint pulled loose, the way a body hangs when it's suspended by the arms. And:
 
-**[narrator — KJV, Psalm 22:17]**
+**[david — KJV, Psalm 22:17]**
 "I may tell all my bones: they look and stare upon me."
 
 **[narrator]**

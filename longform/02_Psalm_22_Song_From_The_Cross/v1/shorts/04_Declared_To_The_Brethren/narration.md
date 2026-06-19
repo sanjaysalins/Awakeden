@@ -29,7 +29,7 @@ Most people stop reading Psalm twenty-two at the cross. Keep going — it doesn'
 **[narrator]**
 But the cry doesn't stay forsaken. Later, the psalm turns — the same voice moves from anguish to praise:
 
-**[narrator — KJV, Psalm 22:22]**
+**[jesus — KJV, Psalm 22:22]**
 "I will declare thy name unto my brethren: in the midst of the congregation will I praise thee."
 
 **[narrator]**
@@ -38,7 +38,7 @@ Who is that praising voice? Hebrews takes that opening line — word for word �
 **[narrator]**
 And hear what He calls us. Hebrews says He is —
 
-**[narrator — KJV, Hebrews 2:11]**
+**[scripture — KJV, Hebrews 2:11]**
 "not ashamed to call them brethren"
 
 **[narrator]**

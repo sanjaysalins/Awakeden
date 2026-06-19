@@ -1,0 +1,28 @@
+{
+ "still_id": "19_wounded-for-our-transgressions",
+ "subject_type": "hero",
+ "role": "hero",
+ "elements": [
+  {
+   "id": "full",
+   "label": "reused: 03_wounded-for-our-transgressions",
+   "region": null,
+   "verified": true
+  }
+ ],
+ "ambient_layer": [],
+ "period_real": {
+  "T1": "pass",
+  "T2": "pass",
+  "T3": "pass",
+  "T4": "pass",
+  "T5": "pass",
+  "T6": "pass"
+ },
+ "declared_by": "design",
+ "provenance": "fresh",
+ "lock_version": 1,
+ "png_sha256": "8cd1d536b7b81573f3e0b2ba4f373ff76ea34d037caf07528748ac131c97d10c",
+ "locked": true,
+ "note": "reuse-swap from C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\v2\\pilot\\isaiah_53_5_with_his_stripes\\v1\\visual\\nbp\\03_wounded-for-our-transgressions.mp4"
+}

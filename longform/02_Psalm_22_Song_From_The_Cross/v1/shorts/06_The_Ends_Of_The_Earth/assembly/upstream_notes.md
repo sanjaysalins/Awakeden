@@ -5,7 +5,8 @@ stages so the next episode's clips drop into the cut with less fighting.
 
 ## What was hard to fit this run
 
-- **#07 In Thee All Nations Blessed** — slot 2.5s, played 1.30x AND trimmed 36% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
+- **#09 A Light to the Gentiles** — needed 2.00x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
+- **#10 The Empty Tomb** — needed 3.00x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
 
 ## Standing 'design for the cut' rules
 

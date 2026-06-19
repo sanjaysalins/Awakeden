@@ -1,0 +1,11 @@
+{
+ "audited": true,
+ "passed": false,
+ "foreign": [
+  "abstract-bright-rectangle",
+  "barely-reads-as-cross",
+  "empty-sky"
+ ],
+ "split": false,
+ "note": "element-gate sweep (agent look)"
+}

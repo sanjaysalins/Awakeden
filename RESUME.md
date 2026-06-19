@@ -1,6 +1,35 @@
 # RESUME.md — start here next session
 
-## ═══════════ SESSION 2026-06-18 (CONTINUATION/LATEST) — #03 MULTI-VOICE + DRIVING SCORE + scene-12 fix; reuse_swap macro_elements bug closed ═══════════
+## ═══════════ SESSION 2026-06-19 (LATEST) — FULL-TREATMENT SWEEP #04/#05/#06/#07 + 2 NEW STANDARDS (speed-to-fit/no-trim + cinematic-orchestral score + motion hero) ═══════════
+
+**Carried the per-short "full treatment" across four more shorts and locked TWO new standards the user loved.** Each short: sweep clips (gate ∪ my eye + user review HTML) → fix/replace defects → **multi-voice** (narrator + jesus/scripture/david) → **backfill to punchy** → **speed-to-fit** → SFX bed → **cinematic orchestral score** → ivory caption.
+
+### ✅ DONE THIS SESSION — these 5 shorts now at the new bar (finals = `…/<short>/assembly/viral_cut_sfx_music_captioned.mp4`):
+- **#05 He Hath Done This** — multi-voice (narrator + jesus "It is finished" + scripture "that he hath done this"); 11→**12 clips** (removed weak 11/14, added *The Way Opened* + *Looking Down In Love* via the E+D pick); speed-to-fit; cinematic score. 42.7s.
+- **#06 The Ends Of The Earth** — multi-voice (narrator + scripture Ps 22:27); **re-rendered sc03 still** (garbled titulus → no-titulus guard); backfilled 11→**16 clips**; removed odd SFX (shofar + sea waves); cinematic score **reshaped to fill the duration + ducked end** (Eleven Music composed a ~58s arc that went silent ~10s early). 67.5s (kept natural).
+- **#07 The Body Foretold** — multi-voice (narrator + **david** Ps 22:14 + 22:17); **sc07 (bare-torso, HF-NSFW-blocked) re-animated via DIRECT-KLING** with a **crop-only cut plan** (1st pass hallucinated a "RIVERS" titulus + full body → re-ran forbidding "full composition"/widening → clean); user DELETED sc04(old hero)/09(frame-bars)/15 → new **hero = #12 "Crushed So Another Goes Free"** (the substitution, lands on "He was crushed in your place"); backfilled to **15 clips + hero**; cinematic score reshaped (peak at substitution, settle through close). 66.9s.
+- (#03 + #04 done in the prior session block below; #03's driving score the user approved, #04's Cinematic-Redemptive.)
+
+### 🆕 TWO NEW STANDARDS (config defaults flipped + memories saved) — apply to ALL remaining shorts automatically:
+1. **SPEED-TO-FIT, NEVER TRIM** ([[feedback-speed-to-fit-not-trim]]): user twice said "use the WHOLE clip by running it faster." `config.ASSEMBLY_SPEED_CAP` 2.2→**4.0**, `ASSEMBLY_REVERENCE_CAP` 1.3→**3.0**. Only sub-second beats still clip (unavoidable). AND the **HERO CLOSE is now a whole sped clip in MOTION** (not a frozen still): `ASSEMBLY_HERO_STILL` default 1→**0**, hero-tail routed through `_slot_op` in `assembly_engine.py`. SUPERSEDES the freeze-on-Christ close in `feedback-still-bookend`.
+2. **CINEMATIC-ORCHESTRAL SCORE** ([[feedback-cinematic-score-standard]]): full string section + horns + organ, sweeping crescendo, wide reverb; reverent, NO percussion, never bombastic; −8 dB + 2.5s end-hold. Reference prompt in `eleven_music/recipes.json` (slug `05-he-hath-done-this-cinematic-redemptive`).
+   - **Score-shaping lessons (folded into the memory):** Eleven Music composes a ~58-60s arc and goes SILENT ~10s before a 67-70s video ends ("cuts out too soon"), and peaks late. FIX (in the mix, $0): trim to the audible arc, `atempo`-stretch to fill the full duration, then **duck the back half** so it settles gently (not loud) at the close. Match the crest to the close: gentle-CTA close → settle; declarative close → can stay warm. Verify end vs mid with `volumedetect` (within ~1-2 dB).
+
+### ▶▶ DO FIRST NEXT SESSION:
+1. **Continue the full-treatment sweep: #08 I Thirst next**, then **#01 The Crucifixion Foretold**, **#02 The Mockers' Words**, then the 3 pilots (Isaiah 53:5 / Mockers-v2 / Zechariah 12:10). All are still single-narrator (need multi-voice) + predate the 2 new standards.
+2. **#03 + #04 score top-up** (optional): re-apply the cinematic-orchestral score + speed-to-fit reassembly so they match #05/#06/#07. (#03 has the user-approved driving score — ask before changing it.)
+3. Per short, the recipe is the block above: sweep → user reviews `C:/Users/sanjay/<NN>_clips_review.html` (self-contained, base64) → delete/replace defects (reuse_swap, FAIL-record deletions) → multi-voice wire+synth (`--natural`, keep natural length if a quote is long) → re-lock → `cli_assemble --replan --rebuild --clips <N>` (service the 4 bridges: episode-fit `{"offtopic":[]}` / jigsaw / self + independent LOCKED) → SFX (`build_ps22_0N.py`, extend loop durations to the new length) → cinematic score (`add_music --regen`, then reshape to fill+duck) → caption.
+4. The per-short review HTMLs + finals are at `C:/Users/sanjay/0N_*.{html,mp4}` for quick re-open.
+
+### 💰 SPEND THIS SESSION ≈ $20 (4 HF/Kling re-animates incl direct-Kling ×2 for sc07, 1 NBP still re-render, 4 multi-voice synths, ~6 Eleven Music score gens + regens). Backfills were $0 (reuse).
+
+### GOTCHAS:
+- **scene_plan.json encoding:** my early Python `open(p,'w')` edits wrote cp1252 (em-dashes → byte 0x97), which `reuse_swap` (strict utf-8) chokes on. ALWAYS write JSON with `encoding='utf-8'` (or it'll need a one-time cp1252→utf-8 re-save).
+- **reuse_swap shell args:** pass each `--swap "N=$R/abs/path.mp4"` explicitly (a bash loop building the arg string mangled it once).
+- **direct-Kling hallucinates a titulus** on wide/"full composition" cut-plans for cropped stills — give it a CROP-ONLY plan (forbid "full composition"/widening/sign/lettering).
+- Multi-voice **re-lock required** after relabeling speakers (`cli_lock.py` — words unchanged so it passes); cli_assemble refuses a stale lock.
+
+## ═══════════ SESSION 2026-06-18 (CONTINUATION) — #03 MULTI-VOICE + DRIVING SCORE + scene-12 fix; reuse_swap macro_elements bug closed ═══════════
 
 **Polish pass on #03 (The Forsaken Cry), all on top of the v3 spine block below.** #03 is now the proof short for the 4 STANDING RULES (punchy / last-word-linger / max multi-voice / layered mix) AND the new driving-score treatment.
 

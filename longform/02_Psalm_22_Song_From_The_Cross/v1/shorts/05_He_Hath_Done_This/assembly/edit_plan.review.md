@@ -3,46 +3,53 @@
 **Verdict:** `LOCKED`  ·  **Failed gates:** 0
 
 ## How the clips map to the words
-Opens on #07 (Christ's bowed head at the moment of death) under 'a psalm's last line and Jesus' last breath... it is done'. #09 (the wide day-is-done) on 'the psalm closes looking ahead to God's saving work'. #11 (the finished-work centre) on 'its final line: that he hath done this. Done.' #08 (the torn veil) on 'as Jesus hung dying, John records: It is finished'. #10 (the hands at rest) on 'different words a thousand years apart — the same note: a finished work'. #12 (nothing left to carry) on 'what's left for you to finish?'. #13 (the open door home) on 'Nothing — only Someone to come home to'. #14 (the One who said it is done) on the closing line. Hero #04 (It Is Finished, the cross) closes.
+Opened on the three crosses at dusk (09) for 'a psalm's last line and Jesus' last breath... it is done', then the bowed head (07) on 'it is done'. 'The psalm closes looking ahead' rides The Way Opened From The Dark (18) — Christ lit, dawn breaking; the scribe writing for a people not yet born (02) follows. 'That he hath done this' sits on the finished cross at dawn (15); the bridge to John runs over the pierced hands (10) and the face of Christ (16); 'It is finished' lands on the rending veil (08). The landing runs Looking Down In Love (19) on 'different words a thousand years apart' -> the burden set down (12) on 'what's left to finish' -> the open door home (13) -> 'come to Him' (17), and the hero crucifixion 'It Is Finished' (04) closes as a held still.
 
 ## Slots
-- ` 0` **body/hook** — #07 The Bowed Head · 0.00-4.26s (4.26s) · 1.18x · speed  
-  _Christ's bowed head at the last breath = 'a psalm's last line and Jesus' last breath... it is done'._
-- ` 1` **body/hook** — #09 The Day Is Done · 4.26-9.54s (5.28s) · 0.95x · speed  
-  _the wide day-is-done = 'the psalm closes looking ahead to God's saving work'._
-- ` 2` **body/hook** — #11 The Finished Work · 9.54-15.92s (6.38s) · 0.79x · speed  
-  _the finished-work theological centre = 'its final line: that he hath done this. Done.'_
-- ` 3` **body/hook** — #08 The Torn Veil · 15.92-22.44s (6.52s) · 0.77x · speed  
-  _the torn veil at his death = 'as Jesus hung dying, John records: It is finished'._
-- ` 4` **body/hook** — #10 Hands at Rest · 22.44-29.24s (6.80s) · 0.74x · speed  
-  _the hands at rest = 'different words a thousand years apart — the same note: a finished work'._
-- ` 5` **body/hook** — #12 Nothing Left to Carry · 29.24-37.44s (8.20s) · 0.61x · speed  
-  _nothing left to carry = 'so what's left for you to finish?'._
-- ` 6` **body/hook** — #13 The Open Door Home · 37.44-38.90s (1.46s) · 2.20x · speed+trim  
-  _the open door home = 'only Someone to come home to'._
-- ` 7` **body/hook** — #14 The One Who Said It Is Done · 38.90-41.91s (3.01s) · 1.30x · speed+trim  
-  _the One who said it is done = the closing devotional line._
-- ` 8` **hero-tail/hero** — #04 It Is Finished · 41.91-43.91s (2.00s) · 1.00x · speed  
+- ` 0` **body/hook** — #09 The Day Is Done · 0.00-4.26s (4.26s) · 1.18x · speed  
+  _three bare crosses at dusk — the arresting hook for 'Jesus' last breath... it is done'_
+- ` 1` **body/hook** — #07 The Bowed Head · 4.26-7.74s (3.48s) · 1.45x · speed  
+  _the bowed head in completion — 'it is done'_
+- ` 2` **body/hook** — #18 The Way Opened From The Dark · 7.74-9.54s (1.80s) · 2.80x · speed  
+  _the way opened from the dark, dawn breaking — 'the psalm closes looking ahead'_
+- ` 3` **body/hook** — #02 A People Not Yet Born · 9.54-15.02s (5.48s) · 1.83x · speed  
+  _the scribe over the psalm — 'told to a people not yet born'_
+- ` 4` **body/scripture** — #15 Finished At The Cross · 15.02-19.10s (4.08s) · 1.24x · speed  
+  _the finished work at the cross, dawn — under 'that he hath done this'_
+- ` 5` **body/bridge** — #10 Hands at Rest · 19.10-22.44s (3.34s) · 1.51x · speed  
+  _the pierced hands at rest — 'as Jesus hung dying'_
+- ` 6` **body/bridge** — #16 His Name Is Jesus · 22.44-24.58s (2.14s) · 2.36x · speed  
+  _the face of the crucified Christ — 'John records His final word'_
+- ` 7` **body/quote** — #08 The Torn Veil · 24.58-26.68s (2.10s) · 2.00x · speed+trim  
+  _the temple veil rent top to bottom — the moment of 'It is finished'_
+- ` 8` **body/landing** — #19 Looking Down In Love · 26.68-29.24s (2.56s) · 1.97x · speed  
+  _the crucified Christ looking down in love — the tender unifying figure on 'different words a thousand years apart'_
+- ` 9` **body/landing** — #12 Nothing Left to Carry · 29.24-37.44s (8.20s) · 0.61x · speed  
+  _the heavy burden set down at the cross — 'what's left for you to finish? Nothing'_
+- `10` **body/landing** — #13 The Open Door Home · 37.44-39.25s (1.81s) · 2.79x · speed  
+  _the open door home in warm lamplight — 'Someone to come home to'_
+- `11` **body/landing** — #17 Come To Him · 39.25-40.70s (1.45s) · 3.00x · speed+trim  
+  _the cross at dawn, an invitation — 'the One who said it is done'_
+- `12` **hero-tail/hero** — #04 It Is Finished · 40.70-42.70s (2.00s) · 1.00x · speed  
   _Hero close — the cut lands on Christ (single appearance, no reuse)._
 
 ## Self-review panel
-- **Editor** — `STRONG` — Tight 44s cut, 8 clips with internal hard cuts; brisk.
-- **Beat-Sync** — `STRONG` — bowed-head->it is done, finished-work->that he hath done this, torn-veil->it is finished, open-door->Someone to come home to.
-- **No-Reuse** — `STRONG` — 8 distinct body clips; hero #04 only at close.
-- **Pacing** — `STRONG` — Sacred frames near full speed; max 2.20x on a wide.
-- **Hero-Continuity** — `CAUTION` — Opens on #07 bowed-head (the hook-open scene was an excluded writing scroll); still lands on the cross hero #04. Acceptable.
-- **Jaded Viewer** — `STRONG` — The 'it is finished / it is done' echo gives a strong payoff.
+- **Editor** — `STRONG` — 12 moments; 10 of 12 now play their full gallery-tour (speed-to-fit), only the two shortest closing phrases trim slightly.
+- **Beat-Sync** — `STRONG` — Pins honest: way-opened on 'looking ahead', scribe on 'people not yet born', veil on 'It is finished', looking-down-in-love on the resonance, door on 'come home'.
+- **No-Reuse** — `STRONG` — 12 distinct body clips; hero #04 closes only.
+- **Pacing** — `CAUTION` — Brisker now (avg 1.89x, max 3.0x) by design — speed-to-fit preserves clip richness over trimming. Sacred clips up to 2x per the new reverence cap; hero held at 1.0x.
+- **Hero-Continuity** — `CAUTION` — Opens on #09 dusk-crosses (hook-open scroll scene was a dropped writing defect); closes on the gospel-pivot crucifixion #04.
+- **Jaded Viewer** — `STRONG` — Lively, rich clips, lands on the cross.
 
 ## Gates
-- **AS-G1 Timeline Coverage** — `PASS` — 9 slots tile 0->43.91s contiguously.
-- **AS-G2 No Reuse** — `PASS` — 8 distinct body clips; hero #04 appears once (close only) — no reuse.
-- **AS-G3 Speed/Trim Health** — `PASS` — avg speed 1.07x, max 2.20x, 2 trimmed.
+- **AS-G1 Timeline Coverage** — `PASS` — 13 slots tile 0->42.70s contiguously.
+- **AS-G2 No Reuse** — `PASS` — 12 distinct body clips; hero #04 appears once (close only) — no reuse.
+- **AS-G3 Speed/Trim Health** — `PASS` — avg speed 1.89x, max 3.00x, 2 trimmed.
 - **AS-G4 Min Slot** — `PASS` — All body slots >= 0.8s.
-- **AS-G5 Section Coverage** — `PASS` — Every spoken section has a clip: ['hook'].
-- **AS-G6 Hero Close** — `CONDITIONAL` — Cut opens on #07 'The Bowed Head' (role=pivot), not a hook-open clip.  
+- **AS-G5 Section Coverage** — `PASS` — Every spoken section has a clip: ['bridge', 'hook', 'landing', 'quote', 'scripture'].
+- **AS-G6 Hero Close** — `CONDITIONAL` — Cut opens on #09 'The Day Is Done' (role=build), not a hook-open clip.  
   _fix:_ Open on the strongest hook-open scroll-stopper.
 - **AS-G7 Gospel Frame** — `CONDITIONAL` — Gospel-pivot present (lands on Christ). Soft-missing: a hook-open clip.  
   _fix:_ Add a hook-open if available; cross optional when the pivot is resurrection.
-- **AS-G8 Beat Continuity** — `PASS` — finished-work thread carried open->climax->close.
-- **AS-G9 Beat Density** — `CONDITIONAL` — 8 moments · avg slot 5.2s > target 4s — feels slow for 'lots of moments'.  
-  _fix:_ Raise --clips toward 11 (pool has 9).
+- **AS-G8 Beat Continuity** — `PASS` — finished-work thread carries open->climax->close; clips match their phrases; lands on the crucifixion hero.
+- **AS-G9 Beat Density** — `PASS` — 12 moments · avg slot 3.4s (target 4s) — lively.

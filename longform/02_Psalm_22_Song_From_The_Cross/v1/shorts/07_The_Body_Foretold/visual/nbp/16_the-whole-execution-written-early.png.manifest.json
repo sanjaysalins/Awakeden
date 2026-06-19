@@ -1,0 +1,28 @@
+{
+ "still_id": "16_the-whole-execution-written-early",
+ "subject_type": "hero",
+ "role": "hero",
+ "elements": [
+  {
+   "id": "full",
+   "label": "reused: 08_the-execution-foretold",
+   "region": null,
+   "verified": true
+  }
+ ],
+ "ambient_layer": [],
+ "period_real": {
+  "T1": "pass",
+  "T2": "pass",
+  "T3": "pass",
+  "T4": "pass",
+  "T5": "pass",
+  "T6": "pass"
+ },
+ "declared_by": "design",
+ "provenance": "fresh",
+ "lock_version": 1,
+ "png_sha256": "08badd4a8f39facdd06e7385ee0e726bb6b59cfefbb5cc343c81a3d86d81891d",
+ "locked": true,
+ "note": "reuse-swap from C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\shorts\\01_The_Crucifixion_Foretold\\visual\\nbp\\08_the-execution-foretold.mp4"
+}

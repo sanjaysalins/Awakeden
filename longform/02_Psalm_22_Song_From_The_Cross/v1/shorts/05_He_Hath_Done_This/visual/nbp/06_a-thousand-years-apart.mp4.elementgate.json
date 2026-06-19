@@ -1,0 +1,10 @@
+{
+ "audited": true,
+ "passed": false,
+ "foreign": [
+  "split-panel-light-bars",
+  "writing-scene"
+ ],
+ "split": false,
+ "note": "element-gate sweep (agent look)"
+}

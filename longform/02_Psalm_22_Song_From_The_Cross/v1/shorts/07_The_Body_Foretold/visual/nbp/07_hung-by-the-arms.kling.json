@@ -1,46 +1,41 @@
 {
-  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, slower pacing with longer holds and restrained cuts.\n\nClassical devotional oil painting realism. atmosphere of a body hung and pulled by its own weight; visible brushwork, craquelure, aged varnish throughout.\n\nScene contains:\none outstretched arm and shoulder of the crucified Christ seen very close, an ancient weathered first-century Judean man painted in solemn Old-Master style, the arm pulled rigid and straight along the dark beam to the nailed hand, the shoulder joint visibly pulled and distended from its socket by the dead hanging weight, the tendons of the neck and armpit drawn tight, the skin stretched taut over strained muscle, only the bearded jaw at the very edge of the frame, the mood reverent and grave, deep shadow beyond, not a modern face. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on full composition — the whole painted scene.\n\nCut to mid framing — the dominant subject of the painting.\n\nCut to close-up — the rigid stretched arm.\n\nCut to insert — the distended shoulder joint.\n\nCut to macro detail — the nailed hand at the beam.\n\nCut to lower framing — the drawn tendons.\n\nReturn to full composition.\n\nEnd hold on the rigid stretched arm.\n\nMicro-motion:\n- minimal\n\nCamera:\n- crop-based reframing only\n- no invented movement\n\nEmotion:\na body hung and pulled by its own weight\n\nNo added elements.\n\n10.0s\n\n9:16",
-  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the still image",
+  "prompt": "Vertical 9:16 cinematic devotional oil painting video clip, slower pacing with longer holds and restrained cuts.\n\nClassical devotional oil painting realism. Deep chiaroscuro, a single warm light across pale flesh against a near-black ground, aged cracked-varnish surface.\n\nScene contains:\nA CLOSE cropped view of the upper body only — the pale lean chest and ribs, one bare arm extended upward to a dark wooden beam, and a turned sorrowful bruised face framed by dark hair at the left. The lower body, legs and feet are entirely OUTSIDE the frame and are never shown. There is no sign, no board, no plaque and no lettering anywhere. The scene is a painted tableau — a frozen moment, not an action. Nothing moves; this is a still painting.\n\nScene:\nStart on the full framed crop — the turned face and bare chest against the dark ground.\n\nCut to mid framing within the crop — the turned sorrowful face beneath dark hair.\n\nCut to close-up — the bruised cheek and downcast eyes.\n\nCut to insert — the lean ribcage and sternum, each bone defined.\n\nCut to macro detail — the shoulder where the arm meets the chest, drawn taut.\n\nCut to mid framing — the bare forearm extended up to the dark beam.\n\nReturn to the opening framed crop — the turned face and bare chest.\n\nEnd hold on the turned face against the dark ground.\n\nCamera:\n- crop-based reframing only within the existing close image\n- no invented movement, no widening beyond the existing frame\n\nEmotion:\nQuiet, reverent, the stillness of a body given over.\n\nNo added elements. No full-body view. No cross sign or lettering.\n\n10.0s\n\n9:16",
+  "negative_prompt": "no camera invention, no zoom invented, no pan invented, no push-in invented, no dolly, no tracking, no rotation, no widening beyond the frame, no full body invented, no legs invented, no feet invented, no sign, no board, no plaque, no lettering, no inscription, no animated subject motion, no figures moving, no morphing, no scene morphing, no facial morphing, no glow added, no light rays added beyond what is painted, no atmospheric haze, no scene enhancement, no divine effects added, no smooth transitions, no motion blur, no reinterpretation, no new elements, no text, no watermarks, no extra limbs, no flickering, no warping, no animation, no action, no subject performs any task, no body motion, no limbs moving, the painting is fixed and frozen, only the camera reframes within the existing close still",
   "beats": [
     {
-      "start_sec": 0.0,
-      "end_sec": 1.25,
-      "description": "Start on full composition — the whole painted scene."
+      "start_sec": 0,
+      "end_sec": 1.43,
+      "description": "Full framed crop — turned face and bare chest"
     },
     {
-      "start_sec": 1.25,
-      "end_sec": 2.5,
-      "description": "Cut to mid framing — the dominant subject of the painting."
+      "start_sec": 1.43,
+      "end_sec": 2.86,
+      "description": "Mid framing — the sorrowful face beneath dark hair"
     },
     {
-      "start_sec": 2.5,
-      "end_sec": 3.75,
-      "description": "Cut to close-up — the rigid stretched arm."
+      "start_sec": 2.86,
+      "end_sec": 4.29,
+      "description": "Close-up — bruised cheek and downcast eyes"
     },
     {
-      "start_sec": 3.75,
-      "end_sec": 5.0,
-      "description": "Cut to insert — the distended shoulder joint."
+      "start_sec": 4.29,
+      "end_sec": 5.71,
+      "description": "Insert — lean ribcage and sternum"
     },
     {
-      "start_sec": 5.0,
-      "end_sec": 6.25,
-      "description": "Cut to macro detail — the nailed hand at the beam."
+      "start_sec": 5.71,
+      "end_sec": 7.14,
+      "description": "Macro — shoulder drawn taut"
     },
     {
-      "start_sec": 6.25,
-      "end_sec": 7.5,
-      "description": "Cut to lower framing — the drawn tendons."
+      "start_sec": 7.14,
+      "end_sec": 8.57,
+      "description": "Mid framing — bare forearm up to the beam"
     },
     {
-      "start_sec": 7.5,
-      "end_sec": 8.75,
-      "description": "Return to full composition."
-    },
-    {
-      "start_sec": 8.75,
-      "end_sec": 10.0,
-      "description": "End hold on the rigid stretched arm."
+      "start_sec": 8.57,
+      "end_sec": 10,
+      "description": "Return to opening crop; end hold on the turned face"
     }
   ]
 }

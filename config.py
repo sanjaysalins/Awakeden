@@ -292,15 +292,16 @@ VIDEO_HF_GEN_TIMEOUT = int(os.getenv("VIDEO_HF_GEN_TIMEOUT", "900"))  # seconds
 # clips to fill and keeps sacred frames slow. Override with `cli_assemble.py --clips`.
 ASSEMBLY_CLIP_BUDGET = int(os.getenv("ASSEMBLY_CLIP_BUDGET", "14"))
 
-# Hard speed cap. 2.2x (not 2.5x) because low-motion oil-painting clips read
-# "too fast" sooner than action footage. Clips needing more are trimmed-past-cap.
-ASSEMBLY_SPEED_CAP = float(os.getenv("ASSEMBLY_SPEED_CAP", "2.2"))
+# Hard speed cap. SPEED-TO-FIT (user 2026-06-19, reaffirmed): ALWAYS speed a clip to fit
+# its slot to show the WHOLE clip — never trim. Raised 2.2 -> 3.0 -> 4.0 so even short
+# slots play the whole gallery-tour (faster) instead of cutting any of it.
+ASSEMBLY_SPEED_CAP = float(os.getenv("ASSEMBLY_SPEED_CAP", "4.0"))
 
-# Reverence cap: sacred clips (Christ / cross / resurrection / climax / close) must
-# not be sped past this — accelerating a crucifixion or the gospel landing into a
-# fast-cut "viral" feel fights the grace-anchored tone (constitution). Exceeding it
-# is a hard gate FAIL, not a warning.
-ASSEMBLY_REVERENCE_CAP = float(os.getenv("ASSEMBLY_REVERENCE_CAP", "1.3"))
+# Reverence cap: sacred clips (Christ / cross / resurrection / climax / close). Was 1.3
+# (gentle), but that was the main cause of sacred clips being trimmed (losing richness).
+# User chose speed-to-fit-everything (2026-06-19): raised 1.3 -> 2.0 -> 3.0 so sacred
+# clips (incl. the moving hero close) also play their WHOLE tour sped to fit, never cut.
+ASSEMBLY_REVERENCE_CAP = float(os.getenv("ASSEMBLY_REVERENCE_CAP", "3.0"))
 
 # No slot shorter than this (seconds) — avoids subliminal flashes.
 ASSEMBLY_MIN_SLOT = float(os.getenv("ASSEMBLY_MIN_SLOT", "0.8"))
@@ -342,11 +343,11 @@ ASSEMBLY_HERO_TAIL = float(os.getenv("ASSEMBLY_HERO_TAIL", "2.0"))
 #   "hero" — legacy: the hero bookends BOTH the open and the close (loop feel).
 ASSEMBLY_OPEN_MODE = os.getenv("ASSEMBLY_OPEN_MODE", "hook").strip().lower()
 
-# Render the HERO bookend(s) as a frozen STILL (default ON) instead of the animated hero
-# clip. In "hook" open mode this affects only the CLOSING hero hold (a clean, reverent CTA
-# freeze on Christ); in "hero" mode it affects both ends. Set ASSEMBLY_HERO_STILL=0 for a
-# moving hero close/open.
-ASSEMBLY_HERO_STILL = os.getenv("ASSEMBLY_HERO_STILL", "1") not in ("0", "false", "False", "")
+# Render the HERO bookend(s) as a frozen STILL instead of the animated hero clip.
+# USER 2026-06-19: default flipped to 0 (MOTION) — the close should show the WHOLE hero
+# clip sped to fit its slot, not a frozen still ("use the whole clip by running it faster").
+# Set ASSEMBLY_HERO_STILL=1 to restore the legacy reverent freeze-on-Christ close.
+ASSEMBLY_HERO_STILL = os.getenv("ASSEMBLY_HERO_STILL", "0") not in ("0", "false", "False", "")
 
 # Default hero scene index (0 = let the planner choose; must be climax/kiss-family).
 ASSEMBLY_HERO_SCENE = int(os.getenv("ASSEMBLY_HERO_SCENE", "0"))

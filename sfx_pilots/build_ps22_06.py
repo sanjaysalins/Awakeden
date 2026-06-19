@@ -18,11 +18,10 @@ CUT = Path(r"C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\02_Psalm_2
 OUT = CUT.with_name("viral_cut_sfx.mp4")
 
 LAYERS = [
-    layer("world",  "wind_desert_bleak",     "loop",    0.0, 61.8, -34.0, fout=3.0),
-    layer("nations","shofar_blast",          "oneshot", 7.8,  6.0, -28.0, filt="lowpass=f=2500"),  # song opens to every nation
+    layer("world",  "wind_desert_bleak",     "loop",    0.0, 67.5, -34.0, fout=3.0),
     layer("peoples","crowd_murmur_distant",  "loop",   14.5, 26.0, -35.0, fin=2.5, fout=3.0),       # kindreds -> nation after nation
-    layer("sea",    "sea_waves_shore",       "loop",   29.0,  9.5, -35.0, filt="lowpass=f=2200", fin=2.0, fout=2.5),  # gospel goes out
-    layer("dawn",   "dawn_morning_warm",     "loop",   47.0, 14.8, -34.0, filt="lowpass=f=3000", fin=3.0),  # worldwide turning / come home
+    layer("dawn",   "dawn_morning_warm",     "loop",   47.0, 20.5, -34.0, filt="lowpass=f=3000", fin=3.0),  # worldwide turning / come home (extended to 67.5s)
+    # REMOVED (user 2026-06-19): shofar_blast (odd for "every nation") + sea_waves ("gospel goes out" had no water imagery) — didn't make sense.
 ]
 
 if __name__ == "__main__":

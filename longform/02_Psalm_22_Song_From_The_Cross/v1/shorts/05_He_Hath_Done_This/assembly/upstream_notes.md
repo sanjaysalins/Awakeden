@@ -5,7 +5,15 @@ stages so the next episode's clips drop into the cut with less fighting.
 
 ## What was hard to fit this run
 
-- **#13 The Open Door Home** — slot 1.5s, played 2.20x AND trimmed 36% (role=build). Design as a HELD tableau with one dominant motion so it survives ~2x and reads in ~2-3s.
+- **#18 The Way Opened From The Dark** — needed 2.80x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
+- **#16 His Name Is Jesus** — needed 2.36x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
+- **#08 The Torn Veil** — needed 2.00x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
+- **#13 The Open Door Home** — needed 2.79x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
+- **#17 Come To Him** — needed 3.00x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
+
+## Short single-clip windows that want a dedicated insert
+
+- Section **quote** is only 2.1s and holds one clip (#08 The Torn Veil). Plan a purpose-built ~2s INSERT scene (a single macro detail) for this beat instead of squeezing a 10s clip.
 
 ## Standing 'design for the cut' rules
 

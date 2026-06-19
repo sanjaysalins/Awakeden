@@ -68,10 +68,10 @@
     {
       "slug": "05-he-hath-done-this-cinematic-redemptive",
       "title": "05_He_Hath_Done_This",
-      "lens": "Cinematic-Redemptive",
+      "lens": "Cinematic-Orchestral",
       "mood": "",
       "beat": "",
-      "prompt": "Solo instrumental, reverent and sacred — no vocals, no lyrics, no choir, no drums, no percussion, no beat. Open on a bare, aching solo cello over a held church-organ pedal note, slow and weighted, like a final breath drawn on a cross, hollow with grief. A lone piano enters with two falling notes, each phrase trailing into silence over a low sustained string drone, holding the weight of a thousand-year promise. Near the midpoint, a single warm clarinet or viola line crosses over the cello like an answer arriving from far off — the two voices a thousand years apart sounding the same note. From there, warm sustained strings gather into a slow, holy swell underpinned by a faint pipe-organ pedal note — never triumphalist, more a tide of relief — as the harmony lifts from minor ache into a settled, open major resolve where grace breaks in. Close gently: the swell eases back to the solo piano and one last sustained string chord that simply rests, glowing and open — finished, at peace — a quiet \"come home\" rather than a fanfare.",
+      "prompt": "A cinematic orchestral instrumental score — reverent and sacred, no vocals, no lyrics, no choir, no drums, no percussion of any kind. Open on a lone cello over a deep sustained string-section drone and a faint church-organ pedal note, vast and filmic — the hollow weight of a final breath drawn on a cross, set in a great echoing space. A solo piano enters with two slow falling notes; beneath it low strings and a soft sustained horn swell deepen and widen the room. Near the midpoint, a warm viola line crosses over the cello like an answer arriving from far off — two voices a thousand years apart sounding the same note — and the full string section begins to gather underneath. From there build a slow, sweeping cinematic crescendo: layered warm strings rising in long bowed phrases, a glowing sustained horn line, and the pipe-organ opening beneath into a broad, holy, golden swell — epic and deeply moving, an overwhelming tide of relief and completion, yet never a triumphalist fanfare and never bombastic. Let it crest on a full, sustained, radiant major chord that feels like the whole sky opening over the finished work, then ease gently back to a solo piano and one last glowing sustained string chord that simply rests — finished, at peace, a cinematic 'come home.' Rich orchestral depth, wide stereo image, warm cinematic reverb and air throughout.",
       "gain_db": -8.0,
       "outro_s": 2.5,
       "duck_threshold": 0.12,
@@ -79,7 +79,7 @@
       "model_id": "music_v1",
       "status": "proposed",
       "provenance": "05_He_Hath_Done_This",
-      "notes": "baked mp3 on disk (provenance)"
+      "notes": "USER-APPROVED 2026-06-19 — full orchestral cinematic treatment (string section + horns + organ, sweeping crescendo, wide reverb); the NEW STANDARD for shorts, supersedes the sparse solo version."
     },
     {
       "slug": "06-the-ends-of-the-earth-cinematic-redemptive",

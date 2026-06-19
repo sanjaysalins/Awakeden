@@ -1,7 +1,7 @@
 {
   "short": "04_Declared_To_The_Brethren",
   "clips": 14,
-  "status": "swept",
+  "status": "in-progress",
   "fails": [],
   "rows": [
     {
@@ -19,7 +19,7 @@
     {
       "scene": 3,
       "clip": "03_risen-christ-proclaiming",
-      "state": "PASS",
+      "state": "UNSWEPT",
       "foreign": []
     },
     {
@@ -73,7 +73,7 @@
     {
       "scene": 12,
       "clip": "12_the-brethren-rejoicing",
-      "state": "PASS",
+      "state": "UNSWEPT",
       "foreign": []
     },
     {

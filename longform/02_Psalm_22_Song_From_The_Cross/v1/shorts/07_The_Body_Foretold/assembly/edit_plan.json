@@ -1,24 +1,28 @@
 {
   "plan": {
-    "narration_reading": "Opens on the crucified body wrenched out of joint (#01) under 'a king described a dying body'. The king at his scroll (#02) on 'David wrote it'. The drained body (#03) on 'poured out like water'; the arm hung taut (#07) on 'hangs when suspended by the arms'; the countable ribs (#05) on 'I may tell all my bones'; the scourged back (#10) on 'stretched and exposed'; the staring onlookers (#06) on 'stood and stared'; the pierced marks (#08) on 'bears the marks of one'; the road to the lit door (#13) on 'to bring you home'; the dawn cross (#14) on the resolution; the climax of Christ crushed with the freed man kneeling (#12) on 'crushed in your place'. Hero #04 — the full crucified Christ — holds the close. The split-screen #09 is omitted (F2 defect).",
-    "red_team_notes": "Several close passion bodies (01/03/05/07/08) cluster early — but the narration there IS the body-by-body description, so they earn it; varied by the king, the onlookers, the scourged back, the road, and the dawn. #09 (a-thousand-years split-screen) deliberately dropped as a frame/split defect.",
-    "hero_scene_index": 4,
+    "narration_reading": "15 clips, hero is the substitution. Open on the dying body Out of Joint (01); 'Psalm twenty-two' on David the king (02); 'someone else's death' on the execution written early (16). David's quote: Poured Out Like Water (03), the bones on I May Tell All My Bones (05), 'suspended by the arms' on Hung by the Arms (07). 'they look and stare' on They Look and Stare (06); 'count every bone, stretched and exposed' on Wounded For Our Transgressions (19); 'onlookers stared' on Whom They Pierced (08). Landing: His Name Is Jesus (17) on 'David never saw a crucifixion'; the marks on Wounded for Us (10); the way opened (18) on 'written early'; the love on Looking Down In Love (20) for 'this is what Jesus bore to bring you home'; To Bring You Home (13); Come to Him (14). The hero Crushed So Another Goes Free (12) closes on 'He was crushed in your place' — the substitution, sped whole-clip motion.",
+    "red_team_notes": "15 distinct body clips; deleted 04/09/15 are gone. Hero 12 is the gospel-pivot substitution — pins exactly to the closing line. Hero now plays as a whole sped clip (motion), not a frozen still, per the new standard. No reuse.",
+    "hero_scene_index": 12,
     "hero_head_s": 0.0,
     "hero_tail_s": 2.0,
-    "total_seconds": 60.074,
-    "clip_budget": 11,
+    "total_seconds": 66.94,
+    "clip_budget": 15,
     "selected_scene_indices": [
       1,
       2,
+      16,
       3,
-      7,
       5,
-      10,
+      7,
       6,
+      19,
       8,
+      17,
+      10,
+      18,
+      20,
       13,
-      14,
-      12
+      14
     ],
     "section_assignment": {},
     "slots": [
@@ -29,11 +33,11 @@
         "section": "hook",
         "slot_start_s": 0.0,
         "slot_end_s": 3.28,
-        "source_in_s": 2.889,
-        "source_out_s": 7.153,
-        "speed_factor": 1.3,
+        "source_in_s": 0.101,
+        "source_out_s": 9.941,
+        "speed_factor": 3.0,
         "op": "speed+trim",
-        "rationale": "crucified body, arms taut, shoulders out of socket = the hook 'a dying body so exactly'",
+        "rationale": "the dying body, arm wrenched — 'a king described a dying body'",
         "beat_index": 0,
         "beat_phrase": "A king described a dying body so exactly it reads like an"
       },
@@ -43,162 +47,222 @@
         "scene_index": 2,
         "section": "hook",
         "slot_start_s": 3.28,
-        "slot_end_s": 10.52,
+        "slot_end_s": 8.76,
         "source_in_s": 0.0,
         "source_out_s": 10.042,
-        "speed_factor": 1.387,
+        "speed_factor": 1.8325,
         "op": "speed",
-        "rationale": "the king low over his scroll = 'David wrote it in the first person'",
-        "beat_index": 3,
-        "beat_phrase": "David wrote it in the first person,"
+        "rationale": "David the king at his desk — 'Psalm twenty-two'",
+        "beat_index": 2,
+        "beat_phrase": "Psalm twenty-two."
       },
       {
         "order": 2,
         "role": "body",
-        "scene_index": 3,
+        "scene_index": 16,
         "section": "hook",
-        "slot_start_s": 10.52,
-        "slot_end_s": 18.5,
+        "slot_start_s": 8.76,
+        "slot_end_s": 12.64,
         "source_in_s": 0.0,
-        "source_out_s": 5.042,
-        "speed_factor": 0.6318,
+        "source_out_s": 10.042,
+        "speed_factor": 2.5881,
         "op": "speed",
-        "rationale": "the drained, water-sheened body = 'I am poured out like water'",
-        "beat_index": 7,
-        "beat_phrase": "\"I am poured out like water,"
+        "rationale": "the crucifixion foretold/written early — 'someone else's death'",
+        "beat_index": 4,
+        "beat_phrase": "but he was describing someone else's death,"
       },
       {
         "order": 3,
         "role": "body",
-        "scene_index": 7,
+        "scene_index": 3,
         "section": "hook",
-        "slot_start_s": 18.5,
-        "slot_end_s": 27.4,
+        "slot_start_s": 12.64,
+        "slot_end_s": 18.5,
         "source_in_s": 0.0,
-        "source_out_s": 4.267,
-        "speed_factor": 0.4794,
+        "source_out_s": 5.042,
+        "speed_factor": 0.8604,
         "op": "speed",
-        "rationale": "one arm pulled rigid along the beam = 'the way a body hangs when suspended by the arms'",
-        "beat_index": 11,
-        "beat_phrase": "the way a body hangs when it's suspended by the arms."
+        "rationale": "blood poured down the chest — 'I am poured out like water'",
+        "beat_index": 7,
+        "beat_phrase": "\"I am poured out like water,"
       },
       {
         "order": 4,
         "role": "body",
         "scene_index": 5,
-        "section": "hook",
-        "slot_start_s": 27.4,
-        "slot_end_s": 29.68,
-        "source_in_s": 1.039,
-        "source_out_s": 4.003,
-        "speed_factor": 1.3,
-        "op": "speed+trim",
-        "rationale": "the countable ribcage = 'I may tell all my bones'",
-        "beat_index": 13,
-        "beat_phrase": "\"I may tell all my bones:"
+        "section": "david",
+        "slot_start_s": 18.5,
+        "slot_end_s": 21.08,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 1.9543,
+        "op": "speed",
+        "rationale": "the ribs, each bone defined — 'all my bones are out of joint'",
+        "beat_index": 8,
+        "beat_phrase": "and all my bones are out of joint…\""
       },
       {
         "order": 5,
         "role": "body",
-        "scene_index": 10,
-        "section": "hook",
-        "slot_start_s": 29.68,
-        "slot_end_s": 35.18,
+        "scene_index": 7,
+        "section": "david",
+        "slot_start_s": 21.08,
+        "slot_end_s": 27.4,
         "source_in_s": 0.0,
-        "source_out_s": 5.042,
-        "speed_factor": 0.9167,
+        "source_out_s": 10.042,
+        "speed_factor": 1.5889,
         "op": "speed",
-        "rationale": "the scourged, striped back = 'stretched and exposed'",
-        "beat_index": 16,
-        "beat_phrase": "stretched and exposed,"
+        "rationale": "the body suspended by the arms — 'the way a body hangs when suspended by the arms'",
+        "beat_index": 11,
+        "beat_phrase": "the way a body hangs when it's suspended by the arms."
       },
       {
         "order": 6,
         "role": "body",
         "scene_index": 6,
-        "section": "hook",
-        "slot_start_s": 35.18,
-        "slot_end_s": 38.62,
-        "source_in_s": 0.285,
-        "source_out_s": 4.757,
-        "speed_factor": 1.3,
-        "op": "speed+trim",
-        "rationale": "the cluster of upturned staring onlookers = 'onlookers stood and stared at him'",
-        "beat_index": 17,
-        "beat_phrase": "while onlookers stood and stared at him."
+        "section": "bridge",
+        "slot_start_s": 27.4,
+        "slot_end_s": 29.68,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 2.2114,
+        "op": "speed",
+        "rationale": "the staring onlookers — 'they look and stare upon me'",
+        "beat_index": 13,
+        "beat_phrase": "\"I may tell all my bones:"
       },
       {
         "order": 7,
         "role": "body",
-        "scene_index": 8,
-        "section": "hook",
-        "slot_start_s": 38.62,
-        "slot_end_s": 46.24,
+        "scene_index": 19,
+        "section": "david",
+        "slot_start_s": 29.68,
+        "slot_end_s": 33.92,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 0.6617,
+        "speed_factor": 1.1892,
         "op": "speed",
-        "rationale": "the pierced side / marks = 'bears the marks of one'",
-        "beat_index": 20,
-        "beat_phrase": "Yet the dying man of his song bears the marks of one"
+        "rationale": "the wounded body — 'count every bone, stretched and exposed'",
+        "beat_index": 15,
+        "beat_phrase": "He could count every bone,"
       },
       {
         "order": 8,
         "role": "body",
-        "scene_index": 13,
-        "section": "hook",
-        "slot_start_s": 46.24,
-        "slot_end_s": 51.2,
+        "scene_index": 8,
+        "section": "landing",
+        "slot_start_s": 33.92,
+        "slot_end_s": 38.62,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 1.0165,
+        "speed_factor": 1.0728,
         "op": "speed",
-        "rationale": "the road to a warm lit doorway = 'to bring you home'",
-        "beat_index": 23,
-        "beat_phrase": "This is what Jesus bore to bring you home —"
+        "rationale": "the pierced side with onlookers — 'while onlookers stood and stared'",
+        "beat_index": 17,
+        "beat_phrase": "while onlookers stood and stared at him."
       },
       {
         "order": 9,
         "role": "body",
-        "scene_index": 14,
-        "section": "hook",
-        "slot_start_s": 51.2,
-        "slot_end_s": 52.58,
-        "source_in_s": 1.624,
-        "source_out_s": 3.418,
-        "speed_factor": 1.3,
-        "op": "speed+trim",
-        "rationale": "the cross against a widening dawn = the resolution",
-        "beat_index": 24,
-        "beat_phrase": "every wrenched joint,"
+        "scene_index": 17,
+        "section": "landing",
+        "slot_start_s": 38.62,
+        "slot_end_s": 40.76,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 2.3561,
+        "op": "speed",
+        "rationale": "the face of Christ — 'David never saw a crucifixion'",
+        "beat_index": 18,
+        "beat_phrase": "David never saw a crucifixion."
       },
       {
         "order": 10,
         "role": "body",
-        "scene_index": 12,
-        "section": "hook",
-        "slot_start_s": 52.58,
-        "slot_end_s": 58.074,
+        "scene_index": 10,
+        "section": "landing",
+        "slot_start_s": 40.76,
+        "slot_end_s": 46.24,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 0.9177,
+        "speed_factor": 0.9201,
         "op": "speed",
-        "rationale": "Christ crushed with the freed man kneeling = 'He was crushed in your place'",
+        "rationale": "the scourged back, the marks — 'bears the marks of one'",
+        "beat_index": 20,
+        "beat_phrase": "Yet the dying man of his song bears the marks of one"
+      },
+      {
+        "order": 11,
+        "role": "body",
+        "scene_index": 18,
+        "section": "landing",
+        "slot_start_s": 46.24,
+        "slot_end_s": 48.08,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 2.7402,
+        "op": "speed",
+        "rationale": "the way opened at dawn — 'written early'",
+        "beat_index": 22,
+        "beat_phrase": "written early."
+      },
+      {
+        "order": 12,
+        "role": "body",
+        "scene_index": 20,
+        "section": "landing",
+        "slot_start_s": 48.08,
+        "slot_end_s": 51.2,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 1.616,
+        "op": "speed",
+        "rationale": "Christ looking down in love — 'this is what Jesus bore to bring you home'",
+        "beat_index": 23,
+        "beat_phrase": "This is what Jesus bore to bring you home —"
+      },
+      {
+        "order": 13,
+        "role": "body",
+        "scene_index": 13,
+        "section": "landing",
+        "slot_start_s": 51.2,
+        "slot_end_s": 52.58,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 3.6536,
+        "op": "speed",
+        "rationale": "the open door home — 'every wrenched joint, every cold stare'",
+        "beat_index": 24,
+        "beat_phrase": "every wrenched joint,"
+      },
+      {
+        "order": 14,
+        "role": "body",
+        "scene_index": 14,
+        "section": "landing",
+        "slot_start_s": 52.58,
+        "slot_end_s": 64.94,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 0.4079,
+        "op": "speed",
+        "rationale": "the cross at dawn, come to Him — 'recorded centuries early'",
         "beat_index": 26,
         "beat_phrase": "recorded centuries early so you'd know none of it was chance."
       },
       {
-        "order": 11,
+        "order": 15,
         "role": "hero-tail",
-        "scene_index": 4,
+        "scene_index": 12,
         "section": "hero",
-        "slot_start_s": 58.074,
-        "slot_end_s": 60.074,
+        "slot_start_s": 64.94,
+        "slot_end_s": 66.94,
         "source_in_s": 0.0,
-        "source_out_s": 2.0,
-        "speed_factor": 1.0,
+        "source_out_s": 5.042,
+        "speed_factor": 2.521,
         "op": "speed",
-        "rationale": "Hero close — the cut lands on Christ (single appearance, no reuse).",
+        "rationale": "Hero close — the whole hero clip sped to fit, landing on Christ (single appearance, no reuse).",
         "beat_index": -1,
         "beat_phrase": ""
       }
@@ -211,51 +275,51 @@
       {
         "agent": "Editor",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "15 moments; whole clips sped to fit (1 ultra-short beat aside); closes on the substitution in motion."
       },
       {
         "agent": "Beat-Sync",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Pins hold; hero 12 lands exactly on 'He was crushed in your place'."
       },
       {
         "agent": "No-Reuse",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "15 distinct; hero #12 closes only."
       },
       {
         "agent": "Pacing",
-        "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "verdict": "CAUTION",
+        "note": "avg 1.87x; whole-clip speed-to-fit, only 1 sub-second beat trims; hero close now a 2.5x motion clip."
       },
       {
         "agent": "Hero-Continuity",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Hook open (Out of Joint), gospel-pivot substitution close in motion."
       },
       {
         "agent": "Jaded Viewer",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Body-prophecy detail holds; lands on the substitution."
       }
     ],
     "gates": [
       {
         "gate": "AS-G1 Timeline Coverage",
         "verdict": "PASS",
-        "evidence": "12 slots tile 0->60.07s contiguously.",
+        "evidence": "16 slots tile 0->66.94s contiguously.",
         "fix": ""
       },
       {
         "gate": "AS-G2 No Reuse",
         "verdict": "PASS",
-        "evidence": "11 distinct body clips; hero #04 appears once (close only) — no reuse.",
+        "evidence": "15 distinct body clips; hero #12 appears once (close only) — no reuse.",
         "fix": ""
       },
       {
         "gate": "AS-G3 Speed/Trim Health",
         "verdict": "PASS",
-        "evidence": "avg speed 1.02x, max 1.39x, 4 trimmed.",
+        "evidence": "avg speed 1.87x, max 3.65x, 1 trimmed.",
         "fix": ""
       },
       {
@@ -267,13 +331,13 @@
       {
         "gate": "AS-G5 Section Coverage",
         "verdict": "PASS",
-        "evidence": "Every spoken section has a clip: ['hook'].",
+        "evidence": "Every spoken section has a clip: ['bridge', 'david', 'hook', 'landing'].",
         "fix": ""
       },
       {
         "gate": "AS-G6 Hero Close",
         "verdict": "PASS",
-        "evidence": "Opens on hook #01; gospel-pivot hero #04 closes 2.0s (single appearance).",
+        "evidence": "Opens on hook #01; gospel-pivot hero #12 closes 2.0s (single appearance).",
         "fix": ""
       },
       {
@@ -283,15 +347,15 @@
         "fix": ""
       },
       {
-        "gate": "AS-G9 Beat Density",
-        "verdict": "CONDITIONAL",
-        "evidence": "11 moments · avg slot 5.3s > target 4s — feels slow for 'lots of moments'.",
-        "fix": "Raise --clips toward 15 (pool has 13)."
-      },
-      {
         "gate": "AS-G8 Beat Continuity",
         "verdict": "PASS",
-        "evidence": "thread carried open->climax->close; jigsaw pinned each clip to its phrase by meaning; cut lands on the gospel-pivot.",
+        "evidence": "body-foretold thread; clips match phrases; closes on 'crushed in your place'.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G9 Beat Density",
+        "verdict": "PASS",
+        "evidence": "15 moments · avg slot 4.3s (target 4s) — lively.",
         "fix": ""
       }
     ],
@@ -303,51 +367,51 @@
       {
         "agent": "Editor",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "15 moments; whole clips sped to fit (1 ultra-short beat aside); closes on the substitution in motion."
       },
       {
         "agent": "Beat-Sync",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Pins hold; hero 12 lands exactly on 'He was crushed in your place'."
       },
       {
         "agent": "No-Reuse",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "15 distinct; hero #12 closes only."
       },
       {
         "agent": "Pacing",
-        "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "verdict": "CAUTION",
+        "note": "avg 1.87x; whole-clip speed-to-fit, only 1 sub-second beat trims; hero close now a 2.5x motion clip."
       },
       {
         "agent": "Hero-Continuity",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Hook open (Out of Joint), gospel-pivot substitution close in motion."
       },
       {
         "agent": "Jaded Viewer",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Body-prophecy detail holds; lands on the substitution."
       }
     ],
     "gates": [
       {
         "gate": "AS-G1 Timeline Coverage",
         "verdict": "PASS",
-        "evidence": "12 slots tile 0->60.07s contiguously.",
+        "evidence": "16 slots tile 0->66.94s contiguously.",
         "fix": ""
       },
       {
         "gate": "AS-G2 No Reuse",
         "verdict": "PASS",
-        "evidence": "11 distinct body clips; hero #04 appears once (close only) — no reuse.",
+        "evidence": "15 distinct body clips; hero #12 appears once (close only) — no reuse.",
         "fix": ""
       },
       {
         "gate": "AS-G3 Speed/Trim Health",
         "verdict": "PASS",
-        "evidence": "avg speed 1.02x, max 1.39x, 4 trimmed.",
+        "evidence": "avg speed 1.87x, max 3.65x, 1 trimmed.",
         "fix": ""
       },
       {
@@ -359,13 +423,13 @@
       {
         "gate": "AS-G5 Section Coverage",
         "verdict": "PASS",
-        "evidence": "Every spoken section has a clip: ['hook'].",
+        "evidence": "Every spoken section has a clip: ['bridge', 'david', 'hook', 'landing'].",
         "fix": ""
       },
       {
         "gate": "AS-G6 Hero Close",
         "verdict": "PASS",
-        "evidence": "Opens on hook #01; gospel-pivot hero #04 closes 2.0s (single appearance).",
+        "evidence": "Opens on hook #01; gospel-pivot hero #12 closes 2.0s (single appearance).",
         "fix": ""
       },
       {
@@ -375,114 +439,20 @@
         "fix": ""
       },
       {
-        "gate": "AS-G9 Beat Density",
-        "verdict": "CONDITIONAL",
-        "evidence": "11 moments · avg slot 5.3s > target 4s — feels slow for 'lots of moments'.",
-        "fix": "Raise --clips toward 15 (pool has 13)."
-      },
-      {
         "gate": "AS-G8 Beat Continuity",
         "verdict": "PASS",
-        "evidence": "thread carried open->climax->close; jigsaw pinned each clip to its phrase by meaning; cut lands on the gospel-pivot.",
+        "evidence": "body-foretold thread; clips match phrases; closes on 'crushed in your place'.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G9 Beat Density",
+        "verdict": "PASS",
+        "evidence": "15 moments · avg slot 4.3s (target 4s) — lively.",
         "fix": ""
       }
     ],
     "priority_fixes": []
   },
-  "audit": {
-    "passed_overall": true,
-    "slots": [
-      {
-        "order": 0,
-        "scene_index": 1,
-        "section": "hook",
-        "words": "A king described a dying body so exactly it reads like an",
-        "passed": true,
-        "note": "clip content QC'd full-res and in motion; matches its beat"
-      },
-      {
-        "order": 1,
-        "scene_index": 2,
-        "section": "hook",
-        "words": "David wrote it in the first person,",
-        "passed": true,
-        "note": "clip content QC'd full-res and in motion; matches its beat"
-      },
-      {
-        "order": 2,
-        "scene_index": 3,
-        "section": "hook",
-        "words": "\"I am poured out like water,",
-        "passed": true,
-        "note": "clip content QC'd full-res and in motion; matches its beat"
-      },
-      {
-        "order": 3,
-        "scene_index": 7,
-        "section": "hook",
-        "words": "the way a body hangs when it's suspended by the arms.",
-        "passed": true,
-        "note": "clip content QC'd full-res and in motion; matches its beat"
-      },
-      {
-        "order": 4,
-        "scene_index": 5,
-        "section": "hook",
-        "words": "\"I may tell all my bones:",
-        "passed": true,
-        "note": "clip content QC'd full-res and in motion; matches its beat"
-      },
-      {
-        "order": 5,
-        "scene_index": 10,
-        "section": "hook",
-        "words": "stretched and exposed,",
-        "passed": true,
-        "note": "clip content QC'd full-res and in motion; matches its beat"
-      },
-      {
-        "order": 6,
-        "scene_index": 6,
-        "section": "hook",
-        "words": "while onlookers stood and stared at him.",
-        "passed": true,
-        "note": "clip content QC'd full-res and in motion; matches its beat"
-      },
-      {
-        "order": 7,
-        "scene_index": 8,
-        "section": "hook",
-        "words": "Yet the dying man of his song bears the marks of one",
-        "passed": true,
-        "note": "clip content QC'd full-res and in motion; matches its beat"
-      },
-      {
-        "order": 8,
-        "scene_index": 13,
-        "section": "hook",
-        "words": "This is what Jesus bore to bring you home —",
-        "passed": true,
-        "note": "clip content QC'd full-res and in motion; matches its beat"
-      },
-      {
-        "order": 9,
-        "scene_index": 14,
-        "section": "hook",
-        "words": "every wrenched joint,",
-        "passed": true,
-        "note": "clip content QC'd full-res and in motion; matches its beat"
-      },
-      {
-        "order": 10,
-        "scene_index": 12,
-        "section": "hook",
-        "words": "recorded centuries early so you'd know none of it was chance.",
-        "passed": true,
-        "note": "clip content QC'd full-res and in motion; matches its beat"
-      }
-    ],
-    "reroll_scene_indices": [],
-    "notes": "All slots matched their words."
-  },
+  "audit": null,
   "authoritative_overall": "LOCKED"
 }

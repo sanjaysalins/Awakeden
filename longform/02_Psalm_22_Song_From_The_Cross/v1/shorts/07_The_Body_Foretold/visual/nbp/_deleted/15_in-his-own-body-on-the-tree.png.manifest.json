@@ -1,0 +1,28 @@
+{
+ "still_id": "15_in-his-own-body-on-the-tree",
+ "subject_type": "hero",
+ "role": "hero",
+ "elements": [
+  {
+   "id": "full",
+   "label": "reused: 06_in-his-own-body-on-the-tree",
+   "region": null,
+   "verified": true
+  }
+ ],
+ "ambient_layer": [],
+ "period_real": {
+  "T1": "pass",
+  "T2": "pass",
+  "T3": "pass",
+  "T4": "pass",
+  "T5": "pass",
+  "T6": "pass"
+ },
+ "declared_by": "design",
+ "provenance": "fresh",
+ "lock_version": 1,
+ "png_sha256": "e90a22b481c344b3544bd2b445069be2c93831fcc134644eca311f9ed05a5020",
+ "locked": true,
+ "note": "reuse-swap from C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\v2\\pilot\\isaiah_53_5_with_his_stripes\\v1\\visual\\nbp\\06_in-his-own-body-on-the-tree.mp4"
+}

@@ -1,0 +1,127 @@
+{
+  "short": "05_He_Hath_Done_This",
+  "clips": 16,
+  "status": "in-progress",
+  "fails": [
+    "01_the-psalms-last-line",
+    "03_the-fingertip-on-the-final-word",
+    "06_a-thousand-years-apart",
+    "11_the-finished-work",
+    "14_the-one-who-said-it-is-done"
+  ],
+  "rows": [
+    {
+      "scene": 1,
+      "clip": "01_the-psalms-last-line",
+      "state": "FAIL",
+      "foreign": [
+        "garbled-hebrew-scroll",
+        "writing-scene"
+      ]
+    },
+    {
+      "scene": 2,
+      "clip": "02_a-people-not-yet-born",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 3,
+      "clip": "03_the-fingertip-on-the-final-word",
+      "state": "FAIL",
+      "foreign": [
+        "garbled-hebrew-text-zoom",
+        "writing-scene"
+      ]
+    },
+    {
+      "scene": 4,
+      "clip": "04_it-is-finished",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 6,
+      "clip": "06_a-thousand-years-apart",
+      "state": "FAIL",
+      "foreign": [
+        "split-panel-light-bars",
+        "writing-scene"
+      ]
+    },
+    {
+      "scene": 7,
+      "clip": "07_the-bowed-head",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 8,
+      "clip": "08_the-torn-veil",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 9,
+      "clip": "09_the-day-is-done",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 10,
+      "clip": "10_hands-at-rest",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 11,
+      "clip": "11_the-finished-work",
+      "state": "FAIL",
+      "foreign": [
+        "open-book-vignette",
+        "abstract-glowing-column",
+        "weak"
+      ]
+    },
+    {
+      "scene": 12,
+      "clip": "12_nothing-left-to-carry",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 13,
+      "clip": "13_the-open-door-home",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 14,
+      "clip": "14_the-one-who-said-it-is-done",
+      "state": "FAIL",
+      "foreign": [
+        "abstract-bright-rectangle",
+        "barely-reads-as-cross",
+        "empty-sky"
+      ]
+    },
+    {
+      "scene": 15,
+      "clip": "15_finished-at-the-cross",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 16,
+      "clip": "16_his-name-is-jesus",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 17,
+      "clip": "17_come-to-him",
+      "state": "PASS",
+      "foreign": []
+    }
+  ]
+}

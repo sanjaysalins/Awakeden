@@ -1,0 +1,11 @@
+{
+ "audited": true,
+ "passed": false,
+ "foreign": [
+  "open-book-vignette",
+  "abstract-glowing-column",
+  "weak"
+ ],
+ "split": false,
+ "note": "element-gate sweep (agent look)"
+}

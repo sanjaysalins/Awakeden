@@ -28,7 +28,7 @@ Psalm twenty-two opens with one forsaken man dying alone — and ends with every
 **[narrator]**
 After the suffering, the song throws its arms open to every nation:
 
-**[narrator — KJV, Psalm 22:27]**
+**[scripture — KJV, Psalm 22:27]**
 "All the ends of the world shall remember and turn unto the LORD: and all the kindreds of the nations shall worship before thee."
 
 **[narrator]**

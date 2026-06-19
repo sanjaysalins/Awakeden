@@ -19,11 +19,11 @@ CUT = Path(r"C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\02_Psalm_2
 OUT = CUT.with_name("viral_cut_sfx.mp4")
 
 LAYERS = [
-    layer("hollow", "air_hollow_desolate",   "loop",    0.0, 60.0, -34.0, fout=3.0),                          # desolation under the dying body
+    layer("hollow", "air_hollow_desolate",   "loop",    0.0, 67.0, -34.0, fout=3.0),                          # desolation under the dying body (extended to 67s)
     layer("weight", "rumble_deep_sub",       "loop",   14.0, 26.0, -37.0, filt="lowpass=f=600",  fin=3.0, fout=4.0),  # poured out / out of joint
     layer("stare",  "crowd_murmur_distant",  "loop",   28.5,  9.5, -35.0, filt="lowpass=f=2000", fin=2.0, fout=2.5),  # they look and stare upon me
     layer("nail",   "nail_strike_single",    "oneshot", 43.9,  3.0, -26.0, filt="lowpass=f=2600"),            # bears the marks of one (nailed hand)
-    layer("dawn",   "dawn_morning_warm",     "loop",   48.0, 12.5, -33.0, filt="lowpass=f=3000", fin=3.0),    # to bring you home / gospel landing
+    layer("dawn",   "dawn_morning_warm",     "loop",   48.0, 19.0, -33.0, filt="lowpass=f=3000", fin=3.0),    # to bring you home / gospel landing (extended to 67s)
 ]
 
 if __name__ == "__main__":
