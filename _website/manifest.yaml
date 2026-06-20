@@ -64,8 +64,8 @@ items:
     cluster_order: 2
     public_status: in_production
     featured: false
-    preview_approved: false
-    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/07_the-jabbing-hands.png"
+    preview_approved: true
+    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/13_the-silent-king.png"
     youtube_id: null
     public_hook: "The crowd mocked Him. They repeated words David had written a thousand years earlier."
     public_blurb: >
