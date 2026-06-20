@@ -19,10 +19,10 @@
 ---
 
 **[narrator]**
-The loneliest sentence Jesus ever spoke wasn't His own line — He was quoting.
+From the cross, Jesus did not speak His own words first — He cried a psalm David had written a thousand years before.
 
 **[narrator]**
-Psalm twenty-two opens in the voice of a forsaken man. David wrote it; Jesus made it His own.
+Psalm twenty-two opens in the voice of a forsaken man; Jesus made it His own.
 
 **[narrator]**
 David's very first line:

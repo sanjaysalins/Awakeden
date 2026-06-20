@@ -1,4 +1,4 @@
-<speaker name="narrator">A psalm's last line and Jesus' last breath in John close on the very same note: it is done. The psalm closes looking ahead — to God's saving work, accomplished, and told to a people not yet born. Its final line:</speaker>
+<speaker name="narrator">Two final words, ten centuries apart, carry the very same note: a finished work. Psalm twenty-two closes looking ahead — to God's saving work, accomplished, and told to a people not yet born. Its final line:</speaker>
 <speaker name="scripture">"…that he hath done this."</speaker>
 <speaker name="narrator">Done. And as Jesus hung dying, John records His final word:</speaker>
 <speaker name="jesus">"It is finished".</speaker>

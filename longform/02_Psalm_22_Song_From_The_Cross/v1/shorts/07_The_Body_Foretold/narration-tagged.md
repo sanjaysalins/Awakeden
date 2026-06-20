@@ -2,4 +2,4 @@
 <speaker name="david">"I am poured out like water, and all my bones are out of joint…"</speaker>
 <speaker name="narrator">Drained — and every joint pulled loose, the way a body hangs when it's suspended by the arms. And:</speaker>
 <speaker name="david">"I may tell all my bones: they look and stare upon me."</speaker>
-<speaker name="narrator">He could count every bone, stretched and exposed, while onlookers stood and stared at him. David never saw a crucifixion. Rome would not make it its instrument for centuries. Yet the dying man of his song bears the marks of one — written early. This is what Jesus bore to bring you home — every wrenched joint, every cold stare, recorded centuries early so you'd know none of it was chance. He was crushed in your place.</speaker>
+<speaker name="narrator">He could count every bone, stretched and exposed, while onlookers stood and stared at him. David never saw a cross — Rome had not taken it up yet — yet his psalm names a body pulled apart and stared at. Jesus bore that song on the tree, willingly — and He still brings sinners home.</speaker>

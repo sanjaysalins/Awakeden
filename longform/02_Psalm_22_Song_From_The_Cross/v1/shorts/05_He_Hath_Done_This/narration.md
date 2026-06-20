@@ -24,10 +24,10 @@
 ---
 
 **[narrator]**
-A psalm's last line and Jesus' last breath in John close on the very same note: it is done.
+Two final words, ten centuries apart, carry the very same note: a finished work.
 
 **[narrator]**
-The psalm closes looking ahead — to God's saving work, accomplished, and told to a people not yet born. Its final line:
+Psalm twenty-two closes looking ahead — to God's saving work, accomplished, and told to a people not yet born. Its final line:
 
 **[scripture — KJV, Psalm 22:31]**
 "…that he hath done this."

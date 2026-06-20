@@ -43,10 +43,10 @@ Drained — and every joint pulled loose, the way a body hangs when it's suspend
 He could count every bone, stretched and exposed, while onlookers stood and stared at him.
 
 **[narrator]**
-David never saw a crucifixion. Rome would not make it its instrument for centuries. Yet the dying man of his song bears the marks of one — written early.
+David never saw a cross — Rome had not taken it up yet — yet his psalm names a body pulled apart and stared at.
 
 **[narrator]**
-This is what Jesus bore to bring you home — every wrenched joint, every cold stare, recorded centuries early so you'd know none of it was chance. He was crushed in your place.
+Jesus bore that song on the tree, willingly — and He still brings sinners home.
 
 ---
 

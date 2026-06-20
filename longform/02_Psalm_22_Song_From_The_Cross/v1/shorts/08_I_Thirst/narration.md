@@ -29,23 +29,23 @@ The One who made every ocean gasped two words on a cross: I thirst.
 **[narrator]**
 Psalm twenty-two. David wrote it in the first person, but he was picturing someone else's death. Watch the body give out:
 
-**[narrator — KJV, Psalm 22:15]**
+**[david — KJV, Psalm 22:15]**
 "My strength is dried up like a potsherd; and my tongue cleaveth to my jaws; and thou hast brought me into the dust of death."
 
 **[narrator]**
 Dried clay; a tongue stuck fast; a man sinking into the dust of death. Then John records the dying Jesus' cry:
 
-**[narrator — KJV, John 19:28]**
+**[jesus — KJV, John 19:28]**
 "I thirst."
 
 **[narrator]**
-Psalm twenty-two doesn't foretell that cry — it paints the thirst behind it, a thousand years before He felt it.
+Psalm twenty-two does not foretell that cry — it paints the thirst behind it, a thousand years before He felt it.
 
 **[narrator]**
-And think who is thirsting: the One who made every river and spring, who offers the world living water — hanging there with nothing, in your place.
+The One who offers the world living water hung there dry, in your place.
 
 **[narrator]**
-He went dry so that you could drink and never thirst again. The God who made every ocean cried out in thirst — so He could hand you the one water that never fails. And that water is Himself.
+Come to Him. That water is Himself.
 
 ---
 

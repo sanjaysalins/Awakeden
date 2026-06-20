@@ -24,10 +24,10 @@
 ---
 
 **[narrator]**
-Most people stop reading Psalm twenty-two at the cross. Keep going — it doesn't end in a grave.
+Psalm twenty-two starts forsaken — but it does not end at the cross.
 
 **[narrator]**
-But the cry doesn't stay forsaken. Later, the psalm turns — the same voice moves from anguish to praise:
+Before the psalm closes, the same voice moves from anguish to praise in the congregation:
 
 **[jesus — KJV, Psalm 22:22]**
 "I will declare thy name unto my brethren: in the midst of the congregation will I praise thee."
