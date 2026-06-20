@@ -3,6 +3,18 @@
 Master checklist so good ideas don't get lost. Grouped by theme. `[ ]` open · `[x]` done · `[~]` in progress.
 Keep this current; it complements `STATE.md` (status) and `RESUME.md` (what to do first next session).
 
+> **NEW 2026-06-20 — `pipeline/hook_gate.py` added (committed 9891b0b).** The hook + 60s-budget quality gate
+> (the Gospel Five-Beat was defined in structures.json but never ENFORCED). It caught **4 of 8 locked Psalm-22
+> shorts running 67-73s** (over the 60s budget) + slow/missing-Christ landings. Reuses doctrine_gate +
+> narration_parse + independent_review (`--judge`). Run `.venv\Scripts\python.exe -m pipeline.hook_gate
+> "<short folder>" [--strict|--judge]`; tests `-m pipeline.test_hook_gate` (7/7).
+> - [ ] **Wire hook_gate into `lock.run_lock()` as ADVISORY** (like doctrine_gate; don't hard-block — 4 locked
+>   shorts would fail the duration check).
+> - [ ] **Run `--judge` scroll-test** across the 8 Psalm-22 shorts; tighten the slow hooks.
+> - [ ] **Publish/Upload-Kit HARDENING** (the "Furgiven treatment", deferred): a grace + anti-slop LINT on
+>   upload copy (reuse doctrine_gate + UK-G3 + no em-dash/curly/ellipsis), a copy-button `PUBLISH_INDEX.html`,
+>   and a judge->cherry-pick->redteam loop on the copy — built ON `upload_engine`/`upload_gates`, not a parallel system.
+
 ## 🎬 Production — next actions (PROOF-FIRST order, per the panel)
 - [ ] **Publish Isaiah 53** — it's captioned/ready. Build upload kit (title/desc/hashtags/thumbnail), post to YT (+TT/FB/IG), link the short cuts. PROVE the publish loop once. **← Priority #1**
 - [ ] **Finish Psalm 22 long** end-to-end: author `scene_plan.json` → red-team → panel → stills → clips → assemble → caption → publish (the 2nd template; validates the episode-generic drivers).
