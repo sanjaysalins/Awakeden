@@ -1,7 +1,29 @@
 # RESUME.md — start here next session
 
-## ⚡ FRESH-SESSION QUICK-START (read this first — 2026-06-20 handoff)
-**Where we are:** the v2 sweep is COMPLETE (8 Psalm-22 shorts + Isaiah/Mockers/Zechariah pilots = 11 items at the new bar). We then planned a **FIX-ALL program** to bring the rest of the catalogue (42 narrations audited) to the v2 bar. Plan was **red-teamed** → real cost is ~$340-580 not ~$165-205 (own-world topics can't reuse the passion-only clip library), so user **revised scope to "Phase A + reuse-cheap first, ~$50, defer own-world."**
+## ⚡ FRESH-SESSION QUICK-START (read this first — 2026-06-21 handoff)
+
+### ═══ WHAT'S DONE — everything is shipped ═══
+- **All 8 Psalm 22 shorts (#01–#08):** fully finished (multi-voice, cinematic score, SFX, caption, publish packs) and committed.
+- **Stage 6 publish packs:** all 8 shorts have `publish/` folders (youtube_short.md · tiktok.md · facebook.md · instagram.md · captions.srt · PUBLISH_INDEX.html) committed in `a617573` + `1655c56`.
+- **FIX-ALL Phase A:** Well + Door + Fire all DONE (`C:/Users/sanjay/{WELL,DOOR,FIRE}_FINAL.mp4`).
+- **Gaza Road (#25):** DONE (`C:/Users/sanjay/GAZA_FINAL.mp4`, 64.4s, 8 clips). Spend ≈ $7.
+
+### ═══ DO FIRST NEXT SESSION ═══
+1. **Fill brand handles** → `data/upload_brand.json` (all FILL_ME): channel_name, youtube/tiktok/facebook/instagram handles + URLs, website. Then re-run `cli_publish.py` with `--no-panel` on any short to stamp the footer into the .md files, OR hand-edit each `publish/*.md` footer line. Do this once before posting anything.
+2. **#02 sc08 faint titulus** — open decision: keep `he-could-have-come-down` (faint illegible titulus at cross-top) or swap to a clean clip.
+3. **Post** the 8 Psalm 22 shorts using the publish packs. Platforms: YouTube Shorts / TikTok / Facebook / Instagram.
+4. **Website (awakeden.com):** run `python _website/build_catalog.py` + `cd _website && python -m http.server 8080` → preview → Netlify deploy.
+5. **FIX-ALL Phase B/C** (18 audio-only + 4 text-only episodes) — deferred, own budget.
+
+### ═══ KEY FILES ═══
+- Publish packs: `longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/<NN_Name>/publish/`
+- Brand config: `C:\Users\sanjay\PycharmProjects\JesusInTheBible\data\upload_brand.json`
+- Finals: `C:/Users/sanjay/{01_Crucifixion_Foretold,02_Mockers_Words,08_I_Thirst,WELL,DOOR,FIRE,GAZA}_FINAL.mp4`
+- PUBLISH_INDEX for each short (clickable): `file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/<NN>/publish/PUBLISH_INDEX.html`
+
+---
+
+**Where we were (2026-06-20):** the v2 sweep is COMPLETE (8 Psalm-22 shorts + Isaiah/Mockers/Zechariah pilots = 11 items at the new bar). FIX-ALL Phase A done. Gaza Road done. Publish packs done for all 8 shorts.
 
 ### ═══ 2026-06-20 PART 2 — PHASE A COMPLETE (Well + Door + Fire all DONE) ═══
 **3 finals shipped this part** (recipe: reformat narration.md+tagged to v2 speaker-labels [words FROZEN, MP3 untouched] → lock → assemble hf --no-verify [service 4-6 bridges] → SFX bed → Cinematic-Orchestral score [~$2 metered each, auto-approved Phase A] → ivory caption → copy):

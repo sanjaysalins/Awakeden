@@ -1,11 +1,12 @@
 # STATE.md — progress tracker
 
-**Last updated:** 2026-06-20
-**Status (2026-06-20 LATEST):** **v2 SWEEP COMPLETE — Isaiah (76.5s) + Mockers-v2 (71.5s) + Zechariah (69.5s) all DONE.**
-All 11 original-scope items at the new bar. Then scoped the FULL catalogue (42 narrations, `CONTENT_AUDIT.html`:
-10 v2-done / 10 old-bar video / 18 audio-only / 4 text-only) + got approval for the **FIX-ALL v2 program**
-(`v2/FIX_ALL_V2_PLAN.md`, triage-first, reuse-first, ~$300 ceiling). NEXT = Phase 0 triage (cull dupes/superseded:
-Smitten=Isaiah-done, two Door takes, Who-Do-You-Say vs List-of-Dead-Men, orphan #05). Pilots ≈ $7.50. Prior status below.
+**Last updated:** 2026-06-21
+**Status (2026-06-21 LATEST):** **ALL 8 PSALM 22 SHORTS FULLY SHIPPED + PUBLISH PACKS DONE.**
+Stage 6 publisher (`cli_publish.py`) built + red-teamed + committed. All 8 shorts (#01–#08) have complete
+publish packs (youtube_short / tiktok / facebook / instagram .md files + captions.srt + PUBLISH_INDEX.html).
+FIX-ALL Phase A complete: Well + Door + Fire all DONE. Gaza Road (#25) DONE (64.4s, $7 spend).
+**NEXT:** fill `data/upload_brand.json` handles → post the 8 shorts → website Netlify deploy.
+Open: #02 sc08 faint titulus (keep/swap). Phase B/C deferred. Prior status below.
 
 **Status (2026-06-20 earlier):** 3-pilot sweep mid-flight (Isaiah + Mockers done).
 Isaiah: narrator 1.08x, softer + full Cinematic-Orchestral score (user set the rule: score must move the listener
