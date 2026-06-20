@@ -33,7 +33,7 @@ import json
 import os
 from pathlib import Path
 
-from pipeline import cluster_gate, coherence, doctrine_gate, kjv_strict, validators
+from pipeline import cluster_gate, coherence, doctrine_gate, hook_gate, kjv_strict, validators
 from pipeline import clip_qc
 from pipeline import narration_parse as NP
 from pipeline.kjv_strict import _canon as _kjv_canon  # punctuation-PRESERVING
@@ -306,14 +306,22 @@ def run_lock(folder: Path, *, form: str = "short", check_cluster: bool = True) -
     # doctrine-landmine scan (WARN, non-blocking — surfaced for the human audio guard)
     doctrine = doctrine_gate.scan(NP.parse(md).spoken_text)
 
+    # hook + 60s-budget quality scan (ADVISORY — surfaced, never blocks the lock; some already-locked
+    # shorts overrun 60s. Enforce hard via `-m pipeline.hook_gate <folder> --strict` when authoring. 2026-06-20)
+    try:
+        hres = hook_gate.check(folder, form=form)
+        hook = {"blocking": hres["blocking"], "warnings": hres["warnings"], "info": hres["info"]}
+    except Exception as e:  # a quirky meta must never crash the lock
+        hook = {"blocking": [], "warnings": [f"hook_gate error: {e}"], "info": {}}
+
     ok = not blocking
     if ok:
-        checks = ["kjv_strict", "parity", "doctrine_scan", "narrative_presence"] + (["rule8"] if form == "short" else []) + \
-                 (["cluster"] if check_cluster else [])
+        checks = ["kjv_strict", "parity", "doctrine_scan", "hook_scan", "narrative_presence"] + \
+                 (["rule8"] if form == "short" else []) + (["cluster"] if check_cluster else [])
         write_lock(folder, checks=checks)
         register(folder, form=form)
     return {"ok": ok, "folder": folder.name, "blocking": blocking,
-            "warnings": cluster_skipped, "doctrine": doctrine}
+            "warnings": cluster_skipped, "doctrine": doctrine, "hook": hook}
 
 
 def write_lock(folder: Path, *, checks: list[str] | None = None) -> None:

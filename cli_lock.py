@@ -41,10 +41,18 @@ def main(argv: list[str]) -> int:
     rep = L.run_lock(folder, form=args.form, check_cluster=not args.no_cluster)
     for d in rep.get("doctrine", []):
         print(f"  [DOCTRINE WARN] {d['landmine']}: '{d['matched']}' — {d['note']}")
+    hook = rep.get("hook", {})
+    for b in hook.get("blocking", []):
+        print(f"  [HOOK ADVISORY] {b}")            # advisory in lock; enforce via hook_gate --strict when authoring
+    for w in hook.get("warnings", []):
+        print(f"  [HOOK WARN] {w}")
     if rep["ok"]:
         msg = "all checks passed; wrote .locked + registered."
         if rep.get("doctrine"):
             msg += f" ({len(rep['doctrine'])} doctrine WARNING(s) above — human review advised, not blocking)"
+        n_hook = len(hook.get("blocking", [])) + len(hook.get("warnings", []))
+        if n_hook:
+            msg += f" ({n_hook} hook advisory note(s) above — tighten the hook/60s budget, not blocking)"
         print(f"[LOCKED] {rep['folder']} — {msg}")
         return 0
     print(f"[BLOCKED] {rep['folder']} — {len(rep['blocking'])} blocking finding(s):")
