@@ -1,0 +1,221 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: upload
+
+LENS — judge this UPLOAD-METADATA KIT (titles / descriptions / tags /
+hashtags for YouTube, TikTok, Facebook, Instagram). Be specific, cite the exact
+platform + phrase:
+- HOOKY BUT HONEST: does any title clickbait, sensationalise, or overclaim doctrine
+  or history? A curiosity hook is fine ONLY if it is true to the text. Flag any lie
+  or bait-and-switch (metadata promising what the video doesn't deliver).
+- KJV verbatim: any quoted verse must be exact KJV. Flag an altered word.
+- Doctrine: evangelical, Christ-pointing, no fear / gain-loss / works framing.
+- Platform fit: right tone + a strong FIRST line for TikTok/Instagram; long-form vs
+  short framing correct; hashtag counts sane; tags are real search keywords.
+- SEO honesty: keywords/tags are relevant to the actual content (no tag-stuffing).
+- Forgettable / templated titles that won't earn the click honestly.
+- Brand: CTA-to-Jesus present; footer/links not mangled.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block:
+
+VERDICT: PASS | REVISE | FAIL
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# Upload Kit — The Mockers' Own Words
+
+**Status:** RED-TEAMED  ·  **Gates:** FAILURES ❌
+**Video:** `C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\02_Psalm_22_Song_From_The_Cross\v1\shorts\02_The_Mockers_Words\assembly\viral_cut_sfx_captioned.mp4`
+**Format:** short  ·  **Series:** Jesus in the Old Testament  ·  **Anchor:** Psalm 22:7-8
+
+> Copy each block straight into the platform's upload form. Title, description,
+> tags and hashtags are pre-checked, red-teamed and panel-reviewed.
+
+## ✔ Verification
+
+✅ **UK-G1 length** — all fields within hard limits
+❌ **UK-G2 KJV-strict** — youtube_long: quoted verse not verbatim KJV; youtube_short: quoted verse not verbatim KJV
+✅ **UK-G3 doctrine** — no clickbait/overclaim tokens
+✅ **UK-G4 brand** — footer + CTA-to-Jesus present
+✅ **UK-G5 platform** — hashtag counts + link rules OK
+✅ **UK-G6 no-repeat** — no title collisions with siblings
+❌ **UK-G7 lint** — youtube_short: AI-slop typography (em-dash (write '-' or rephrase)) — write plain ASCII; youtube_long: AI-slop typography (em-dash (write '-' or rephrase)) — write plain ASCII; youtube_long: anchor ref 'psalm' not in the first 157 chars (front-load the verse/hook before the 'more' fold); facebook: AI-slop typography (em-dash (write '-' or rephrase)) — write plain ASCII
+
+### Red-team (in-engine hostile auditor)
+
+```
+VERDICT: REVISE
+
+Two real problems; rest is clean.
+
+1. **YouTube Short / YouTube Long description — "exact taunt" + partial Matthew quote.**
+   The descriptions call "let him deliver him now" the "exact taunt" (YT Short) and quote Matthew 27:43 accurately in substance — but Matthew 27:43 KJV reads in full: "He trusted in God; let him deliver him now, if he will have him: for he said, I am the Son of God." Calling a truncated rendering "exact" is a precision failure. A skeptic WILL clip this. Fix: drop "exact" → "the same taunt" OR extend the Matthew quote to show the fuller correspondence. The Psalm 22 → Matthew parallel is real and undisputed; don't weaken it with a precision error.
+
+2. **YouTube Long description — "David wasn't writing a song about himself."**
+   Psalm 22 IS a Davidic lament (headed "A Psalm of David" — context a reader will know); it's read as simultaneously Davidic AND messianic. Flatly stating David wasn't writing about himself is a slight overclaim that a careful reader will dispute and that invites a "debunking" comment thread. Fix: "David was writing more than a personal lament — he recorded a scene he couldn't have witnessed" or simply let the correspondence stand without the negative claim.
+
+Everything else is solid:
+- KJV quotes are verbatim in all three platforms that carry them (YouTube Short, YouTube Long, Facebook). ✓
+- TikTok hook ("At the cross they shook their heads…") is punchy and accurate as a first line. ✓
+- The thread (gesture + taunt, Psalm 22:7-8 → Matt 27:39,43) is consistently carried across platforms. ✓
+- No gain/loss or fear framing; CTA is grace-anchored ("He chose to stay… because staying was the only way to deliver you"). ✓
+- No composer names, no "official audio" language, no ToS landmines. ✓
+- Hashtag mix is appropriate and not spammy. ✓
+- Instagram/TikTok correctly have no title. ✓
+
+Minimum fix to pass: (1) Change "exact taunt" → "same taunt" in YT Short and YT Long descriptions. (2) Soften the "David wasn't writing about himself" line in YT Long.
+```
+
+## Title options (chosen first)
+
+1. **They Sneered the Prophecy They Were Fulfilling** ⟵ CHOSEN  
+   _angle: Dramatic irony — the mockers unknowingly recited a 1000-year-old psalm as they taunted Jesus at the cross_
+2. **A Psalm Wrote the Mockers' Words 1,000 Years Before the Cross**  
+   _angle: Predictive accuracy — David recorded gesture and taunt before the mockers were born_
+3. **The Crowd at the Cross Was Quoting Psalm 22 Without Knowing It**  
+   _angle: Unknowing fulfillment — same taunt, same wagging heads, a millennium apart_
+4. **He Could Have Come Down — But Love Kept Him There**  
+   _angle: CTA-first — frames the staying as love, not weakness_
+
+## YouTube (Short)
+
+**TITLE** (copy):
+```
+They Sneered the Prophecy They Were Fulfilling
+```
+_46 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+At the cross they shook their heads and sneered a taunt — one a psalm had recorded a thousand years earlier.
+
+Psalm 22:7-8 (KJV): "they shake the head, saying, He trusted on the LORD that he would deliver him: let him deliver him."
+
+Matthew 27 records both: the wagging heads (v.39) and the exact taunt — "let him deliver him now" (v.43). Same gesture. Same words. A millennium apart.
+
+They thought they were mocking a failed messiah. They were unknowingly reciting the prophecy that marked Him as the One.
+
+He could have come down. He chose to stay — not from weakness, but because staying was the only way to deliver you.
+
+Subscribe to walk through the whole Bible and meet Jesus on every page. ✝
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_766 characters_
+
+**TAGS** (copy — paste into the keyword/tags field):
+```
+psalm 22, jesus cross, bible prophecy, old testament prophecy, matthew 27, jesus fulfills prophecy, bible shorts, christian shorts, kjv bible, messianic prophecy, crucifixion, mockers
+```
+
+**HASHTAGS** (copy):
+```
+#Psalm22 #BibleProphecy #JesusInTheBible #KJV #ChristianShorts
+```
+
+---
+## YouTube (Long-form 16:9)
+
+**TITLE** (copy):
+```
+Psalm 22 Wrote the Mockers' Words 1,000 Years Before the Cross
+```
+_62 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+At the cross, the crowd shook their heads and sneered: "He trusted in God — let him deliver him now." They thought they were improvising a taunt. They were reciting a psalm written a thousand years before they were born.
+
+Psalm 22:7-8 (KJV): "they shake the head, saying, He trusted on the LORD that he would deliver him: let him deliver him."
+
+David wasn't writing a song about himself. He was recording a scene he hadn't witnessed yet — the gesture (wagging the head), the specific taunt, the exact words. Then in Matthew 27:39 and 27:43, both appear at the cross, word for word.
+
+The mockers thought they were exposing a fraud. They were authenticating the Messiah.
+
+He had every power to come down. He stayed — because staying was the only way to deliver you. That's not weakness. That's the love the cross was always about.
+
+Psalm 22 | Matthew 27 | KJV
+
+Subscribe to walk through the whole Bible and meet Jesus on every page. ✝
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_1000 characters_
+
+**TAGS** (copy — paste into the keyword/tags field):
+```
+psalm 22, messianic prophecy, jesus fulfills prophecy, bible prophecy fulfilled, old testament prophecy, matthew 27, crucifixion prophecy, kjv bible, jesus cross, christian apologetics, bible study, who is jesus, jesus in the old testament, mockers at the cross
+```
+
+**HASHTAGS** (copy):
+```
+#Psalm22 #BibleProphecy #JesusInTheBible #KJV #MessianicProphecy
+```
+
+---
+## TikTok
+
+**DESCRIPTION / CAPTION** (copy):
+```
+At the cross they shook their heads and sneered the exact taunt Psalm 22 had recorded 1,000 years before. Same gesture. Same words. Psalm 22:7-8 → Matthew 27:39,43. They thought they were mocking. They were marking Him.
+
+Subscribe to walk through the whole Bible and meet Jesus on every page. ✝
+```
+_294 characters_
+
+**HASHTAGS** (copy):
+```
+#Psalm22 #BibleProphecy #Jesus #KJV #ChristianTikTok #BibleFacts
+```
+
+---
+## Facebook (Reel/Video)
+
+**TITLE** (copy):
+```
+They Sneered the Prophecy They Were Fulfilling
+```
+_46 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+Psalm 22:7-8 records the mockers' words — the head-shaking, the exact taunt — written a thousand years before the cross.
+
+"they shake the head, saying, He trusted on the LORD that he would deliver him: let him deliver him."
+
+Matthew 27 records both at Calvary, word for word. The crowd didn't know they were reciting a prophecy. He stayed on that cross not from weakness — but because leaving would have meant leaving you.
+
+Subscribe to walk through the whole Bible and meet Jesus on every page. ✝
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_565 characters_
+
+**HASHTAGS** (copy):
+```
+#Psalm22 #Jesus #BibleProphecy #KJV #Faith
+```
+
+---
+## Instagram (Reel)
+
+**DESCRIPTION / CAPTION** (copy):
+```
+They shook their heads and sneered the exact taunt Psalm 22 had written 1,000 years before. Same gesture. Same words. They thought they were mocking a failure. They were marking the Messiah. He could have come down. He chose you instead.
+
+Subscribe to walk through the whole Bible and meet Jesus on every page. ✝
+```
+_312 characters_
+
+**HASHTAGS** (copy):
+```
+#Psalm22 #BibleProphecy #Jesus #KJV #Christian #Faith #BibleVerse #OldTestament #Prophecy #JesusChrist
+```
+
+---
+----- ARTIFACT END -----
