@@ -19,7 +19,7 @@ import re
 from pathlib import Path
 
 import config
-from pipeline import scripture
+from pipeline import doctrine_gate, scripture
 from pipeline.upload_models import GateResult, PlatformMeta, SourceFacts, UploadKit
 
 _SPECS_PATH = config.DATA_DIR / "platform_specs.json" if hasattr(config, "DATA_DIR") else Path("data/platform_specs.json")
@@ -148,6 +148,40 @@ def _check_norepeat(kit: UploadKit, sibling_titles: list[str]) -> GateResult:
     return GateResult("UK-G6", "no-repeat", not problems, "; ".join(problems) or "no title collisions with siblings")
 
 
+# AI-slop typography (house rule: plain ASCII only — em/en-dash, ellipsis glyph and curly quotes are the
+# #1 tell that copy was machine-written). KJV quotes in JITB use straight quotes, so this never fights them.
+_SLOP_CHARS = {
+    "—": "em-dash (write '-' or rephrase)", "–": "en-dash",
+    "…": "ellipsis glyph (write ...)",
+    "“": "curly quote", "”": "curly quote",
+    "‘": "curly quote", "’": "curly apostrophe",
+}
+# grace-anchored conviction is binding in PUBLISHED copy too, not just the narration.
+_GRACE_LANDMINES = {"fear-pressure", "gain-loss", "works-selfhelp"}
+
+
+def _check_lint(kit: UploadKit, specs: dict) -> GateResult:
+    """UK-G7 — plain-ASCII (anti-slop) + grace-anchored copy + the verse front-loaded before the fold.
+    Reuses doctrine_gate for the fear/gain-loss/self-effort landmines (no second banlist)."""
+    problems: list[str] = []
+    ref = (kit.source.anchor_ref or "").strip()
+    book = re.split(r"\s*\d", ref, 1)[0].strip().lower() if ref else ""
+    for p in kit.platforms:
+        blob = f"{p.title}\n{p.description}"
+        hit = next((why for ch, why in _SLOP_CHARS.items() if ch in blob), None)
+        if hit:
+            problems.append(f"{p.platform}: AI-slop typography ({hit}) — write plain ASCII")
+        for f in doctrine_gate.scan(blob):
+            if f["landmine"] in _GRACE_LANDMINES:
+                problems.append(f"{p.platform}: grace violation [{f['landmine']}] '{f['matched']}'")
+        if book and p.platform in ("youtube_short", "youtube_long", "facebook"):
+            if book not in p.description[:157].lower():
+                problems.append(f"{p.platform}: anchor ref '{book}' not in the first 157 chars "
+                                f"(front-load the verse/hook before the 'more' fold)")
+    return GateResult("UK-G7", "lint", not problems,
+                      "; ".join(problems) or "plain ASCII, grace-anchored, verse front-loaded")
+
+
 def run_all(kit: UploadKit, brand: dict, sibling_titles: list[str] | None = None) -> list[GateResult]:
     specs = load_specs()
     gates = [
@@ -157,6 +191,7 @@ def run_all(kit: UploadKit, brand: dict, sibling_titles: list[str] | None = None
         _check_brand(kit, specs, brand),
         _check_platform(kit, specs),
         _check_norepeat(kit, sibling_titles or []),
+        _check_lint(kit, specs),
     ]
     return gates
 
