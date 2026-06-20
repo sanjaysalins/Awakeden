@@ -82,6 +82,7 @@ def _find_video(media_dir: Path, fmt: str) -> str:
     if fmt == "short":
         a = media_dir / "assembly"
         cands = [
+            a / "viral_cut_sfx_music_captioned.mp4",   # best: sfx + music layer
             a / "viral_cut_sfx_captioned.mp4",
             a / "viral_cut_captioned.mp4",
             a / "viral_cut_sfx.mp4",

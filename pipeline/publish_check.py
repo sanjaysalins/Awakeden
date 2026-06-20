@@ -47,7 +47,7 @@ _TOS_BANLIST = [
 
 def _check_tos(kit, fails: list[str]) -> None:
     for p in kit.platforms:
-        blob = f"{p.title}\n{p.description}".lower()
+        blob = "\n".join([p.title, p.description] + p.tags + p.hashtags).lower()
         for term in _TOS_BANLIST:
             if term in blob:
                 fails.append(f"{p.platform}: ToS/banlist term present -> '{term}' (strip it)")

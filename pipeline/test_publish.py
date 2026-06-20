@@ -31,6 +31,11 @@ def test_ts() -> None:
     ok(pp._ts(1.5) == "00:00:01,500", "_ts(1.5)")
     ok(pp._ts(65.25) == "00:01:05,250", "_ts(65.25)")
     ok(pp._ts(-3) == "00:00:00,000", "_ts negative clamps to 0")
+    # carry case: 0.9996s rounds to 1000ms which must NOT emit ',1000'
+    result = pp._ts(0.9996)
+    ok("," not in result.split(",")[1] or len(result.split(",")[1]) == 3,
+       f"_ts carry: no 4-digit ms field (got {result!r})")
+    ok(result == "00:00:01,000", f"_ts(0.9996) -> 00:00:01,000 (got {result!r})")
 
 
 # ---- build_srt -------------------------------------------------------------
@@ -104,6 +109,24 @@ def test_long_has_chapters_pinned() -> None:
     ok("## PINNED_COMMENT" in md, "long carries PINNED_COMMENT")
 
 
+# ---- final_video_and_words priority ----------------------------------------
+def test_final_video_priority() -> None:
+    import json as _json
+    with tempfile.TemporaryDirectory() as d:
+        a = Path(d) / "assembly"
+        a.mkdir()
+        # create lower-priority file first; function must still prefer the higher one
+        lower = a / "viral_cut_sfx_captioned.mp4"
+        lower.write_bytes(b"x")
+        best = a / "viral_cut_sfx_music_captioned.mp4"
+        best.write_bytes(b"x")
+        words = best.with_suffix(".words.json")
+        words.write_text(_json.dumps([{"w": "hi", "start": 0, "end": 0.5}]))
+        v, w = pp.final_video_and_words(d)
+    ok("viral_cut_sfx_music_captioned" in v, f"priority: sfx_music wins (got {v!r})")
+    ok(w.endswith(".words.json"), "words.json found alongside best video")
+
+
 # ---- placeholder + chapter regex ------------------------------------------
 def test_placeholder() -> None:
     ok(pp._is_placeholder(""), "empty is placeholder")
@@ -120,7 +143,8 @@ def test_chapter_ts_re() -> None:
 def main() -> int:
     for fn in [test_ts, test_build_srt, test_build_srt_max_chars_split,
                test_render_parse_roundtrip, test_caption_platform_uses_caption_label,
-               test_long_has_chapters_pinned, test_placeholder, test_chapter_ts_re]:
+               test_long_has_chapters_pinned, test_final_video_priority,
+               test_placeholder, test_chapter_ts_re]:
         fn()
     print(f"\npublish tests: {_PASS} passed, {_FAIL} failed")
     return 1 if _FAIL else 0
