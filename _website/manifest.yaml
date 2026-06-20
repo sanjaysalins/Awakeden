@@ -469,7 +469,7 @@ items:
     kind: short
     title: "What Manner of Man"
     ref: "Matthew 8:26"
-    series_id: questions-jesus-asked
+    series_id: miracles-of-jesus
     cluster: null
     public_status: in_production
     featured: false
@@ -537,9 +537,9 @@ items:
 
   - slug: the-shepherd-in-the-gap
     kind: short
-    title: "The Shepherd In The Gap"
+    title: "The Shepherd in the Gap"
     ref: "John 10:11"
-    series_id: jesus-in-ot
+    series_id: i-am-sayings
     cluster: null
     public_status: in_production
     featured: false
@@ -551,9 +551,9 @@ items:
 
   - slug: the-hunger-bread-cant-fill
     kind: short
-    title: "The Hunger Bread Cant Fill"
+    title: "The Hunger Bread Can't Fill"
     ref: "John 6:35"
-    series_id: jesus-in-ot
+    series_id: i-am-sayings
     cluster: null
     public_status: in_production
     featured: false
@@ -567,7 +567,7 @@ items:
     kind: short
     title: "Manna Fulfilled"
     ref: "John 6:49"
-    series_id: jesus-in-ot
+    series_id: i-am-sayings
     cluster: null
     public_status: in_production
     featured: false
@@ -581,7 +581,7 @@ items:
     kind: short
     title: "In No Wise Cast Out"
     ref: "John 6:37"
-    series_id: jesus-in-ot
+    series_id: i-am-sayings
     cluster: null
     public_status: in_production
     featured: false
