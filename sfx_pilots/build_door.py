@@ -22,7 +22,6 @@ LAYERS = [
     layer("night",    "wind_desert_bleak",  "loop",     0.0, 12.0, -39.0, fin=2.0, fout=4.0),                  # night at the shut door
     layer("shut_door","door_gate_creak",    "oneshot",  0.8,  2.6, -33.0, filt="lowpass=f=2600"),              # the great closed door
     layer("wall",     "rumble_deep_sub",    "loop",     3.0, 12.0, -40.0, filt="lowpass=f=600", fin=2.0, fout=4.0),  # the unreachable high wall
-    layer("choir",    "heavenly_choir_soft","loop",    19.4, 10.0, -35.0, fin=3.0, fout=4.0),                  # I am the door / pasture opens
     layer("open_door","door_gate_creak",    "oneshot", 43.2,  2.6, -28.0, filt="lowpass=f=3200"),              # the door is already open
     layer("pasture",  "flock_sheep_field",  "loop",    46.0, 12.0, -37.0, filt="lowpass=f=4500", fin=2.0, fout=4.0),  # gathered, safe, and fed
     layer("dawn",     "dawn_morning_warm",  "loop",    53.0,  7.0, -34.0, filt="lowpass=f=3400", fin=3.0),     # the pasture was waiting — come

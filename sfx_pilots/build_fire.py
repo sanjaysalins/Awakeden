@@ -24,7 +24,6 @@ LAYERS = [
     layer("shore",    "sea_waves_shore",     "loop",     6.5, 11.0, -38.0, filt="lowpass=f=4000", fin=2.0, fout=3.0),  # dawn on the Galilee shore
     layer("lamb",     "flock_sheep_field",   "oneshot", 21.4,  3.2, -30.0),                                            # Feed my lambs
     layer("fire2",    "fire_crackling",      "oneshot", 43.4,  4.0, -32.0),                                            # the empty place by the fire
-    layer("choir",    "heavenly_choir_soft", "loop",    46.5, 11.0, -34.0, fin=3.0, fout=4.0),                         # the re-commission / grace
     layer("dawn",     "dawn_morning_warm",   "loop",    52.0,  7.0, -35.0, filt="lowpass=f=3400", fin=3.0),            # close — He is asking you now
 ]
 

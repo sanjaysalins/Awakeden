@@ -21,7 +21,6 @@ LAYERS = [
     layer("desert", "wind_desert_bleak",   "loop",     0.0, 13.0, -38.0, fin=2.0, fout=4.0),                   # the Gaza road
     layer("lamb",   "flock_sheep_field",   "oneshot", 10.5,  6.0, -33.0, filt="lowpass=f=4000"),               # the silent lamb
     layer("hollow", "air_hollow_desolate", "loop",    17.0, 18.0, -39.0, fin=3.0, fout=4.0),                   # the wounds + the question
-    layer("choir",  "heavenly_choir_soft", "loop",    39.5, 15.0, -34.0, fin=3.0, fout=4.0),                   # the silent Lamb named Jesus
     layer("dawn",   "dawn_morning_warm",   "loop",    54.0,  8.0, -34.0, filt="lowpass=f=3400", fin=3.0),      # come to Him
 ]
 

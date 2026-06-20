@@ -22,7 +22,6 @@ LAYERS = [
     layer("noon_wind", "wind_desert_bleak",  "loop",     0.0, 10.0, -39.0, fin=2.0, fout=4.0),                 # well at noon
     layer("well",      "river_well_water",   "loop",     0.0, 18.0, -34.0, filt="lowpass=f=4000", fin=2.0, fout=3.0),  # the well / thirst
     layer("spring",    "river_well_water",   "loop",    18.0,  8.0, -30.0, fin=1.5, fout=3.0),                 # living water springing up
-    layer("choir",     "heavenly_choir_soft","loop",    26.5, 11.0, -35.0, fin=3.0, fout=4.0),                 # everlasting life / risen Christ
     layer("waterpot",  "waterpot_drop_run",  "oneshot", 37.4,  3.2, -25.0),                                    # she dropped her waterpot and ran
     layer("door",      "door_gate_creak",    "oneshot", 50.5,  2.2, -31.0, filt="lowpass=f=3000"),             # He still offers it
     layer("dawn",      "dawn_morning_warm",  "loop",    52.0,  7.0, -34.0, filt="lowpass=f=3400", fin=3.0),    # the same grace — come
