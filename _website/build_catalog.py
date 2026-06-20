@@ -265,7 +265,12 @@ def render_work_page(item: dict, config: dict) -> str:
 
     site_url = site["url"].rstrip("/")
     page_url = f"{site_url}/work/{item['slug']}.html"
-    og_img = f"{site_url}/assets/og-cover.jpg"
+    og_card = SITE_DIR / "assets" / "og" / f"{item['slug']}.jpg"
+    og_img = (
+        f"{site_url}/assets/og/{item['slug']}.jpg"
+        if og_card.is_file()
+        else f"{site_url}/assets/og-cover.jpg"
+    )
     title_full = f"{item['title']} | {brand['wordmark']} {brand['series']}"
     ld_json = json.dumps(
         {
