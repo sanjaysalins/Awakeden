@@ -51,6 +51,10 @@ _website/COPY_REWRITE.md
 *.gif
 *.bmp
 *.tiff
+
+# Re-allow committed Awakeden site previews (MUST come after the media ignores) ──
+!_website/assets/previews/
+!_website/assets/previews/**
 *.mp3
 *.wav
 *.m4a

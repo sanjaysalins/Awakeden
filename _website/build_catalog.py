@@ -213,6 +213,11 @@ def build_preview(item: dict, warnings: list[str]) -> str | None:
         except OSError as e:
             warnings.append(f"{slug}: preview copy failed ({e})")
 
+    # PNG source unavailable (e.g. Netlify CI has no local media tree): reuse a
+    # previously committed .webp if one exists, rather than downgrading to SVG.
+    if webp.is_file():
+        return f"assets/previews/{slug}.webp"
+
     if src and src.suffix.lower() == ".png" and not src.is_file():
         warnings.append(f"{slug}: preview_source missing on disk ({src_str}); SVG fallback")
 
