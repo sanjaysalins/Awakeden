@@ -31,8 +31,8 @@ items:
     public_status: in_production
     featured: true
     featured_order: 2
-    preview_approved: false
-    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/visual/scene_plan.json"
+    preview_approved: true
+    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/19_wounded-for-our-transgressions.png"
     youtube_id: null
     public_hook: "David wrote the crucifixion a thousand years before Rome invented it."
     public_blurb: >
@@ -82,7 +82,7 @@ items:
     featured: true
     featured_order: 3
     preview_approved: true
-    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/11_come-to-him.png"
+    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/09_bearing-the-forsaking.png"
     youtube_id: null
     public_hook: "The loneliest line Jesus spoke from the cross was a quote from Psalm 22."
     public_blurb: >
@@ -98,7 +98,7 @@ items:
     public_status: studio_complete
     featured: false
     preview_approved: true
-    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/12_room-to-turn.png"
+    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/04_the-risen-christ.png"
     youtube_id: null
     public_hook: "The psalm moves from forsaken to declaring God's name to the congregation."
     public_blurb: >
@@ -130,7 +130,7 @@ items:
     public_status: studio_complete
     featured: false
     preview_approved: true
-    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/08_the-nations-turn.png"
+    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/14_the-whole-earth-at-dawn.png"
     youtube_id: null
     public_hook: "All the ends of the world shall remember and turn unto the Lord."
     public_blurb: >
@@ -146,7 +146,7 @@ items:
     public_status: studio_complete
     featured: false
     preview_approved: true
-    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/12_crushed-so-another-goes-free.png"
+    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/20_looking-down-in-love.png"
     youtube_id: null
     public_hook: "I am poured out like water. David described a body the cross would fulfil."
     public_blurb: >
@@ -162,7 +162,7 @@ items:
     public_status: studio_complete
     featured: false
     preview_approved: true
-    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/13_room-to-turn.png"
+    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/14_that-water-is-himself.png"
     youtube_id: null
     public_hook: "Two words from the cross. David wrote the thirst a thousand years before."
     public_blurb: >
