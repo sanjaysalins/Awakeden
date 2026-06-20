@@ -263,6 +263,23 @@ def render_work_page(item: dict, config: dict) -> str:
     if item.get("cluster") == "psalm-22":
         cluster_link = '<p class="work-cluster"><a href="../series/psalm-22.html">Part of Psalm 22: From the Cross</a></p>'
 
+    site_url = site["url"].rstrip("/")
+    page_url = f"{site_url}/work/{item['slug']}.html"
+    og_img = f"{site_url}/assets/og-cover.jpg"
+    title_full = f"{item['title']} | {brand['wordmark']} {brand['series']}"
+    ld_json = json.dumps(
+        {
+            "@context": "https://schema.org",
+            "@type": "CreativeWork",
+            "name": item["title"],
+            "description": item.get("public_hook", "").strip(),
+            "url": page_url,
+            "image": og_img,
+            "isPartOf": {"@type": "WebSite", "name": "Awakeden Series", "url": f"{site_url}/"},
+        },
+        ensure_ascii=False,
+    )
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -270,7 +287,22 @@ def render_work_page(item: dict, config: dict) -> str:
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{html.escape(item['title'])} | {html.escape(brand['wordmark'])} {html.escape(brand['series'])}</title>
   <meta name="description" content="{hook}">
-  <link rel="canonical" href="{site['url']}/work/{html.escape(item['slug'])}.html">
+  <link rel="canonical" href="{page_url}">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#f4eee1">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Awakeden Series">
+  <meta property="og:title" content="{html.escape(title_full)}">
+  <meta property="og:description" content="{hook}">
+  <meta property="og:url" content="{page_url}">
+  <meta property="og:image" content="{og_img}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{html.escape(title_full)}">
+  <meta name="twitter:description" content="{hook}">
+  <meta name="twitter:image" content="{og_img}">
+  <script type="application/ld+json">{ld_json}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">

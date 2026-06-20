@@ -2,7 +2,7 @@ site:
   url: "https://awakeden.com"
   name: "Awakeden Series"
   mode: prelaunch
-  noindex: true
+  noindex: false
   scripture_note: "Scripture quoted from the King James Version (KJV), public domain."
 
 brand:

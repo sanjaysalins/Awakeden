@@ -52,9 +52,10 @@ _website/COPY_REWRITE.md
 *.bmp
 *.tiff
 
-# Re-allow committed Awakeden site previews (MUST come after the media ignores) ──
+# Re-allow committed Awakeden site previews + share image (MUST come after the media ignores) ──
 !_website/assets/previews/
 !_website/assets/previews/**
+!_website/assets/og-cover.jpg
 *.mp3
 *.wav
 *.m4a
