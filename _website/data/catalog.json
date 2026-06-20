@@ -179,15 +179,16 @@
       "series_id": "jesus-in-ot",
       "cluster": "psalm-22",
       "cluster_order": 2,
-      "public_status": "in_production",
+      "public_status": "studio_complete",
       "featured": false,
       "preview_approved": true,
-      "preview_source": "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/13_the-silent-king.png",
+      "preview_source": "../v2/pilot/mockers_words_ps22/v1/visual/nbp/07_the-king-who-would-not-come-down.png",
+      "study_source": "../v2/pilot/mockers_words_ps22/v1",
       "youtube_id": null,
       "public_hook": "The crowd mocked Him. They repeated words David had written a thousand years earlier.",
       "public_blurb": "David wrote the mockers' gesture and their taunt. Matthew records both at the cross.\n",
-      "status_label": "In production",
-      "status_class": "status-production",
+      "status_label": "Studio complete",
+      "status_class": "status-complete",
       "preview": "assets/previews/ps22-02-mockers-words.webp",
       "show_video": false,
       "kind_label": "Short"
@@ -294,6 +295,28 @@
       "status_label": "Studio complete",
       "status_class": "status-complete",
       "preview": "assets/previews/ps22-08-i-thirst.webp",
+      "show_video": false,
+      "kind_label": "Short"
+    },
+    {
+      "slug": "zechariah-12-10-pierced",
+      "kind": "short",
+      "title": "The One They Pierced",
+      "ref": "Zechariah 12:10",
+      "series_id": "jesus-in-ot",
+      "cluster": null,
+      "cluster_order": null,
+      "public_status": "studio_complete",
+      "featured": false,
+      "preview_approved": true,
+      "preview_source": "../v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/06_whom-they-pierced.png",
+      "study_source": "../v2/pilot/zechariah_12_10_pierced/v1",
+      "youtube_id": null,
+      "public_hook": "A Roman soldier drove a spear into a dead man's side to be sure He was gone. He had no idea he was finishing a sentence God wrote five centuries earlier.",
+      "public_blurb": "Zechariah 12:10. The LORD says they shall look upon me whom they have pierced, then mourn for him as for an only son. John cites it at the spear. The pierced one is God himself, the Son. Look at Him and live.\n",
+      "status_label": "Studio complete",
+      "status_class": "status-complete",
+      "preview": "assets/previews/zechariah-12-10-pierced.webp",
       "show_video": false,
       "kind_label": "Short"
     },
@@ -919,10 +942,10 @@
     }
   ],
   "stats": {
-    "total": 41,
+    "total": 42,
     "live": 0,
-    "studio_complete": 8,
-    "in_production": 29,
+    "studio_complete": 10,
+    "in_production": 28,
     "planned": 4
   }
 }

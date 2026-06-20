@@ -78,6 +78,12 @@ STUDY_SETTING = {
         "before the cross. They describe a man wounded for the sins of others, whose suffering "
         "becomes the means of their healing."
     ),
+    "zechariah": (
+        "Zechariah prophesied in Jerusalem after the return from exile, around five hundred years "
+        "before the cross, while the people rebuilt the temple. Chapter 12 looks past their own day "
+        "to a deliverance of Jerusalem, where God says its people will look on one they have pierced "
+        "and mourn for him as for an only son."
+    ),
 }
 STOP_HEADINGS = ("depth", "voice", "sourcing", "ledger", "footnote", "sources", "notes")
 
