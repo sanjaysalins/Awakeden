@@ -6,11 +6,8 @@
 [build.environment]
   PYTHON_VERSION = "3.12"
 
-[[redirects]]
-  from = "https://awakeden.com/*"
-  to = "https://www.awakeden.com/:splat"
-  status = 301
-  force = true
+# Canonical domain is the apex (awakeden.com); Netlify auto-redirects www -> apex.
+# Do NOT add an apex -> www rule here: it fights Netlify's redirect and loops.
 
 # Don't serve build/source files at the site root (publish dir is _website/.)
 [[redirects]]
