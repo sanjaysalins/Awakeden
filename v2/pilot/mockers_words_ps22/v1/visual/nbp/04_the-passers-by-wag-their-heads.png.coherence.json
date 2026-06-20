@@ -1,18 +1,12 @@
 {
  "audited": true,
  "passed": true,
- "png_sha256": "80aeee107a8c31a73f578b814dd811c4c1ad834e7b29bfe2922531041264b295",
+ "png_sha256": "c51a601d5ba88e521159a709f610f88db5397b0b9089822d5540893799a47d19",
  "n_votes": 1,
  "split": false,
  "failed_dims": [],
  "passes": {},
  "fail_reasons": [],
- "votes": [
-  {
-   "passed": true,
-   "dims_failed": [],
-   "reasons": []
-  }
- ],
- "note": "ensemble of 1 vote(s), any-fail"
+ "votes": [],
+ "note": "copied coherence verdict from 04_the-crowd-at-the-cross.png"
 }

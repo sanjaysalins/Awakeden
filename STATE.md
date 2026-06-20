@@ -1,7 +1,63 @@
 # STATE.md — progress tracker
 
-**Last updated:** 2026-06-19
-**Status (2026-06-19):** FULL-TREATMENT SWEEP continued — **#04, #05, #06, #07 now at the new bar**
+**Last updated:** 2026-06-20
+**Status (2026-06-20 LATEST):** **v2 SWEEP COMPLETE — Isaiah (76.5s) + Mockers-v2 (71.5s) + Zechariah (69.5s) all DONE.**
+All 11 original-scope items at the new bar. Then scoped the FULL catalogue (42 narrations, `CONTENT_AUDIT.html`:
+10 v2-done / 10 old-bar video / 18 audio-only / 4 text-only) + got approval for the **FIX-ALL v2 program**
+(`v2/FIX_ALL_V2_PLAN.md`, triage-first, reuse-first, ~$300 ceiling). NEXT = Phase 0 triage (cull dupes/superseded:
+Smitten=Isaiah-done, two Door takes, Who-Do-You-Say vs List-of-Dead-Men, orphan #05). Pilots ≈ $7.50. Prior status below.
+
+**Status (2026-06-20 earlier):** 3-pilot sweep mid-flight (Isaiah + Mockers done).
+Isaiah: narrator 1.08x, softer + full Cinematic-Orchestral score (user set the rule: score must move the listener
+deeply); fixed a stale-alignment bug (regen narration.alignment.json after any length change). Mockers-v2: multi-voice
+(narrator+david+mocker), narrator 1.087x, replaced 4 titulus FAIL clips + backfilled to 18 from clean #02 set,
+cinematic-orchestral score, shofar dropped. Finals: `C:/Users/sanjay/ISAIAH_53_5_FINAL.mp4` + `MOCKERS_V2_FINAL.mp4`.
+NEXT: Zechariah (same recipe). New memories: alignment-cache-staleness; cinematic-score bar raised. Prior status below.
+
+**Status (2026-06-20 earlier):** ISAIAH 53:5 first pass (81.2s).
+Parallel-swept all 3 pilots (subagents). Isaiah: backfilled 10→16 clips ($0 reuse), user DELETED + blacklisted
+2 full-body clips (`05_by-whose-stripes`, `06_in-his-own-body`, pruned from clip_library 122→120) → replaced
+scene5←`10_wounded-for-us`, hero scene6←`08_whom-they-pierced`; re-assembled (15 slots eye-verified, LOCKED 0-rev,
+worst hold 10.8s) → SFX → cinematic-redemptive score (~$2) → ivory caption. **FINAL = `C:/Users/sanjay/
+ISAIAH_53_5_FINAL.mp4`.** **NEXT: Mockers-v2 + Zechariah** (single-narrator → multi-voice; Mockers FAILs 04/08/10/12,
+Zech FAILs 01/06/11). Mockers-v2 + Zechariah
+still single-narrator + have FAIL clips (Mockers 04/08/10/12 titulus+gems; Zech 01/06/11). Also: installed
+**mattpocock/skills** (33 skills in `.claude/skills/`, cleaned the `--all` 47-dir mess) + ran domain-modeling demo →
+**`CONTEXT.md`** glossary. Slices pages: `C:/Users/sanjay/ISAIAH_strips.html`. See RESUME.md top. Prior status below.
+
+**Status (2026-06-20 prior):** **Awakeden.com static prelaunch site scaffolded in `_website/`** (manifest-driven catalogue, Netlify + Cloudflare plan, 10 catalogue items, plain copy pass). Not deployed yet; run `build_catalog.py` + local server to preview. **Production:** #02 Mockers full-treatment DONE + titulus clip recalled from #08/#01; **ALL 8 Psalm-22 shorts at new bar**; **NEXT: 3 pilots** + optional #02 sc08 titulus decision. See RESUME.md top. Prior status below.
+
+**Status (2026-06-20, production):** **#02 "The Mockers' Words" full-treatment + recalled a titulus clip from #08/#01.**
+Swept #02 (sc07 wrong-clip, sc08 grotesque mouth, sc12 = writing/INRI-titulus FAIL). The sc12 clip had been
+reused as a backfill into #08 sc07 + #01 sc11 → **replaced in both** (#08←a-death-not-his-own, #01←david-records),
+re-rendered/SFX/re-mixed/captioned, both finals refreshed. #02: replaced sc07←rulers-sneer + sc08←he-could-have-
+come-down (pilot), excluded sc12, **multi-voice (narrator + david + MOCKER `[mocking]`)**, 12 clips + hero 11
+(~5.3s/slot), LOCKED, SFX, cinematic score (reshaped), caption. **FINAL = `…/02_The_Mockers_Words/assembly/
+viral_cut_sfx_music_captioned.mp4` (67.5s)**, copy `C:/Users/sanjay/02_Mockers_Words_FINAL.mp4`. OPEN: #02 sc08
+has a faint illegible titulus (user to keep/swap). Spend ≈ $2.50. **ALL 8 Psalm-22 shorts (#01–#08) now done at
+the new bar; NEXT: the 3 pilots.** See RESUME.md top. Prior status below.
+
+**Status (2026-06-19, prior):** FULL-TREATMENT SWEEP **#01 "The Crucifixion Foretold" now at the new bar.**
+Swept clean (only the 4 garbled-writing scrolls flagged, already excluded) → multi-voice (narrator + david
+Ps 22:18) → **backfilled to PUNCHY** (filled the scroll slots + 1 new slot with 6 clean reuse clips →
+14 clips + hero ≈ 5.0s/slot) → reassembled LOCKED → SFX → cinematic-orchestral score (reshaped to fill+settle)
+→ ivory caption. **FINAL = `…/01_The_Crucifixion_Foretold/assembly/viral_cut_sfx_music_captioned.mp4` (75.0s)**,
+copy `C:/Users/sanjay/01_Crucifixion_Foretold_FINAL.mp4`. GOTCHA: reuse_swap keeps the OLD filename when you
+change a slot's scene_plan slug → assembler silently excludes it; rename `NN_*` files to the new slug (or don't
+change the slug). Spend ≈ $2.50. **#01, #03–#08 now done; NEXT: #02, then 3 pilots.** See RESUME.md top. Prior status below.
+
+**Status (2026-06-19, prior):** FULL-TREATMENT SWEEP **#08 "I Thirst" now at the new bar.** Swept all 14
+clips by eye → reuse-replaced 5 defective (2 gem-nails sc06/sc10 + frame-morph sc01 / grotesque-mouth sc04 /
+empty-void-crane sc07, $0 reuse) → multi-voice (narrator + david Ps 22:15 + jesus "I thirst") → reassembled
+LOCKED → SFX → cinematic-orchestral score (reshaped to fill+settle) → ivory caption. **Caught + fixed an
+INVERTED CROSS** — kept-slot 13's `drink-and-never-thirst` showed a cross reflected in water (= upside-down
+cross) for ~4s under the landing captions; the element-gate + still-review had PASSED it, only the animated
+frame revealed it → replaced with `room-to-turn` (upright dawn-cross). New memory `feedback-cross-in-water-
+inverted`. **FINAL = `…/08_I_Thirst/assembly/viral_cut_sfx_music_captioned.mp4` (73.4s)**, copy at
+`C:/Users/sanjay/08_I_Thirst_FINAL.mp4`. Spend ≈ $2.50. **#03–#08 now done; NEXT: #01, #02, then 3 pilots.**
+See RESUME.md top. Prior status below.
+
+**Status (2026-06-19, prior):** FULL-TREATMENT SWEEP — **#04, #05, #06, #07 now at the new bar**
 (multi-voice + sweep/fix-defects + backfill-to-punchy + speed-to-fit + cinematic orchestral score +
 ivory caption). Locked **TWO new standards** (config defaults flipped + memories): (1) **SPEED-TO-FIT,
 NEVER TRIM** — `ASSEMBLY_SPEED_CAP` 2.2→4.0, `ASSEMBLY_REVERENCE_CAP` 1.3→3.0, and the **HERO CLOSE is

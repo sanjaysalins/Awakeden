@@ -1,21 +1,32 @@
 {
   "plan": {
-    "narration_reading": "Opens on the weathered man with the wound that won't close (#01) under the hook. The wandering sheep + bowed figure (#08) on 'Isaiah wrote the healing would come through someone else'. The scourged back (#03) on 'wounded for our transgressions'. The apostle laying Isaiah's words on Christ (#07) on 'Peter took up Isaiah's words'; Christ bearing our sins (#09) on 'bare our sins in his own body'. The open welcoming hands (#13) on 'points the promise straight at you'. The dawn cross of completion (#12) on 'it was finished at the cross'; the same man now healed, scar closed (#14) on 'He has already closed'. Hero #06 — Christ in his own body on the tree — holds the close. Spread every ~4 beats so no slot drags.",
-    "red_team_notes": "9 clips over ~70s still paces ~0.8-1.3x (a pilot, thinner than ideal) but spread evenly to avoid 12-16s holds. #13 has healed nail-marks (palms up) — resurrection-welcome, not a wound close-up, so no gem risk.",
+    "narration_reading": "All 20 clips, full-coverage timeline (board now reaches 74s). Proof: man(#01), sheep(#08), scourged(#03), close wound(#05), poured-out(#17), hung(#16), ninth-hour(#15), crushed-substitution(#23), cry(#18), apostle(#07), bare-our-sins(#09). Pivot face(#11). Landing spread evenly to the end: reach-of-cross(#22), man-at-peace(#14), it-is-finished(#20), finished-at-cross(#12), come-to-him(#19), room-to-turn(#21), open-hands CTA(#13) on the final 'Come to Him, and receive it'. Hero pierced-Christ(#06) closes.",
+    "red_team_notes": "Alignment regenerated so the CTA clips now land on the real closing words (no stale-tail hold). Avg ~3.7s/slot, lively. Cross/wound-heavy intrinsic to Isaiah 53; bookend + sheep vary it.",
     "hero_scene_index": 6,
     "hero_head_s": 0.0,
     "hero_tail_s": 2.0,
-    "total_seconds": 70.003,
-    "clip_budget": 8,
+    "total_seconds": 74.024,
+    "clip_budget": 19,
     "selected_scene_indices": [
       1,
       8,
       3,
+      5,
+      17,
+      16,
+      15,
+      23,
+      18,
       7,
       9,
-      13,
+      11,
+      22,
+      14,
+      20,
       12,
-      14
+      19,
+      21,
+      13
     ],
     "section_assignment": {},
     "slots": [
@@ -25,12 +36,12 @@
         "scene_index": 1,
         "section": "hook",
         "slot_start_s": 0.0,
-        "slot_end_s": 2.88,
+        "slot_end_s": 2.98,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 1.7507,
+        "speed_factor": 1.6919,
         "op": "speed",
-        "rationale": "man with a hand pressed over an unhealed wound = the hook 'a wound nothing can close'",
+        "rationale": "unhealed man — hook",
         "beat_index": 0,
         "beat_phrase": "You carry a wound nothing has been able to close —"
       },
@@ -39,118 +50,283 @@
         "role": "body",
         "scene_index": 8,
         "section": "hook",
-        "slot_start_s": 2.88,
-        "slot_end_s": 12.36,
+        "slot_start_s": 2.98,
+        "slot_end_s": 9.9,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 0.5319,
+        "speed_factor": 0.7286,
         "op": "speed",
-        "rationale": "scattered sheep + a figure bowed under weight = 'healing through someone else' (Isaiah)",
-        "beat_index": 4,
-        "beat_phrase": "Isaiah wrote that the healing you can't reach would come through someone"
+        "rationale": "sheep OT echo",
+        "beat_index": 3,
+        "beat_phrase": "Seven hundred years before the cross,"
       },
       {
         "order": 2,
         "role": "body",
         "scene_index": 3,
         "section": "hook",
-        "slot_start_s": 12.36,
-        "slot_end_s": 16.84,
+        "slot_start_s": 9.9,
+        "slot_end_s": 12.94,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 1.1254,
+        "speed_factor": 1.6586,
         "op": "speed",
-        "rationale": "the scourged, welted back = 'wounded for our transgressions'",
-        "beat_index": 6,
-        "beat_phrase": "\"But he was wounded for our transgressions,"
+        "rationale": "scourged Christ",
+        "beat_index": 4,
+        "beat_phrase": "Isaiah wrote that the healing you can't reach would come through someone"
       },
       {
         "order": 3,
         "role": "body",
-        "scene_index": 7,
-        "section": "hook",
-        "slot_start_s": 16.84,
-        "slot_end_s": 32.74,
+        "scene_index": 5,
+        "section": "isaiah",
+        "slot_start_s": 12.94,
+        "slot_end_s": 16.98,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 0.3171,
+        "speed_factor": 1.248,
         "op": "speed",
-        "rationale": "the apostle turning Isaiah's words toward the cross = 'Peter took up Isaiah's words'",
-        "beat_index": 12,
-        "beat_phrase": "And the apostle Peter took up Isaiah's words and laid them on"
+        "rationale": "close wound",
+        "beat_index": 6,
+        "beat_phrase": "\"But he was wounded for our transgressions,"
       },
       {
         "order": 4,
         "role": "body",
-        "scene_index": 9,
-        "section": "hook",
-        "slot_start_s": 32.74,
-        "slot_end_s": 37.84,
+        "scene_index": 17,
+        "section": "isaiah",
+        "slot_start_s": 16.98,
+        "slot_end_s": 19.24,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 0.9886,
+        "speed_factor": 2.231,
         "op": "speed",
-        "rationale": "Christ bearing the burdens laid on him = 'bare our sins in his own body'",
-        "beat_index": 14,
-        "beat_phrase": "\"Who his own self bare our sins in his own body on"
+        "rationale": "poured-out",
+        "beat_index": 7,
+        "beat_phrase": "he was bruised for our iniquities..."
       },
       {
         "order": 5,
         "role": "body",
-        "scene_index": 13,
-        "section": "hook",
-        "slot_start_s": 37.84,
-        "slot_end_s": 52.68,
+        "scene_index": 16,
+        "section": "isaiah",
+        "slot_start_s": 19.24,
+        "slot_end_s": 22.9,
         "source_in_s": 0.0,
-        "source_out_s": 5.042,
-        "speed_factor": 0.3398,
+        "source_out_s": 10.042,
+        "speed_factor": 2.7437,
         "op": "speed",
-        "rationale": "open welcoming hands with healed marks = 'points the promise straight at you'",
-        "beat_index": 20,
-        "beat_phrase": "and points the promise straight at the one who's listening:"
+        "rationale": "hung by the arms — with his stripes",
+        "beat_index": 8,
+        "beat_phrase": "and with his stripes we are healed.\""
       },
       {
         "order": 6,
         "role": "body",
-        "scene_index": 12,
-        "section": "hook",
-        "slot_start_s": 52.68,
-        "slot_end_s": 60.66,
-        "source_in_s": 0.0,
-        "source_out_s": 5.042,
-        "speed_factor": 0.6318,
-        "op": "speed",
-        "rationale": "the dawn cross of completion = 'it was finished at the cross'",
-        "beat_index": 24,
-        "beat_phrase": "it was finished at the cross,"
+        "scene_index": 15,
+        "section": "bridge",
+        "slot_start_s": 22.9,
+        "slot_end_s": 24.1,
+        "source_in_s": 0.721,
+        "source_out_s": 4.321,
+        "speed_factor": 3.0,
+        "op": "speed+trim",
+        "rationale": "ninth-hour",
+        "beat_index": 9,
+        "beat_phrase": "Stripes —"
       },
       {
         "order": 7,
         "role": "body",
-        "scene_index": 14,
-        "section": "hook",
-        "slot_start_s": 60.66,
-        "slot_end_s": 68.003,
+        "scene_index": 23,
+        "section": "bridge",
+        "slot_start_s": 24.1,
+        "slot_end_s": 25.96,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 0.6866,
+        "speed_factor": 2.7108,
         "op": "speed",
-        "rationale": "the same man, scar now closed and at peace = 'He has already closed'",
+        "rationale": "crushed-in-your-place substitution",
+        "beat_index": 10,
+        "beat_phrase": "the welts of a flogging,"
+      },
+      {
+        "order": 8,
+        "role": "body",
+        "scene_index": 18,
+        "section": "bridge",
+        "slot_start_s": 25.96,
+        "slot_end_s": 30.24,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 1.178,
+        "op": "speed",
+        "rationale": "the cry",
+        "beat_index": 11,
+        "beat_phrase": "the wounding Isaiah foresaw centuries before it fell on Jesus' back."
+      },
+      {
+        "order": 9,
+        "role": "body",
+        "scene_index": 7,
+        "section": "bridge",
+        "slot_start_s": 30.24,
+        "slot_end_s": 33.56,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 1.5187,
+        "op": "speed",
+        "rationale": "apostle — Peter took up Isaiah's words",
+        "beat_index": 12,
+        "beat_phrase": "And the apostle Peter took up Isaiah's words and laid them on"
+      },
+      {
+        "order": 10,
+        "role": "body",
+        "scene_index": 9,
+        "section": "peter",
+        "slot_start_s": 33.56,
+        "slot_end_s": 39.3,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 0.8784,
+        "op": "speed",
+        "rationale": "bare our sins in his own body",
+        "beat_index": 14,
+        "beat_phrase": "\"Who his own self bare our sins in his own body on"
+      },
+      {
+        "order": 11,
+        "role": "body",
+        "scene_index": 11,
+        "section": "peter",
+        "slot_start_s": 39.3,
+        "slot_end_s": 43.3,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 1.2605,
+        "op": "speed",
+        "rationale": "face to viewer — ye were healed",
+        "beat_index": 16,
+        "beat_phrase": "by whose stripes ye were healed.\""
+      },
+      {
+        "order": 12,
+        "role": "body",
+        "scene_index": 22,
+        "section": "landing",
+        "slot_start_s": 43.3,
+        "slot_end_s": 48.7,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 0.9337,
+        "op": "speed",
+        "rationale": "radiant crucified Christ",
+        "beat_index": 18,
+        "beat_phrase": "Isaiah wrote \"we are healed.\""
+      },
+      {
+        "order": 13,
+        "role": "body",
+        "scene_index": 14,
+        "section": "landing",
+        "slot_start_s": 48.7,
+        "slot_end_s": 54.58,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 0.8575,
+        "op": "speed",
+        "rationale": "man at peace",
+        "beat_index": 20,
+        "beat_phrase": "and points the promise straight at the one who's listening:"
+      },
+      {
+        "order": 14,
+        "role": "body",
+        "scene_index": 20,
+        "section": "landing",
+        "slot_start_s": 54.58,
+        "slot_end_s": 59.48,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 1.029,
+        "op": "speed",
+        "rationale": "it is finished, dawn",
+        "beat_index": 22,
+        "beat_phrase": "You were never meant to make it right yourself."
+      },
+      {
+        "order": 15,
+        "role": "body",
+        "scene_index": 12,
+        "section": "landing",
+        "slot_start_s": 59.48,
+        "slot_end_s": 63.3,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 1.3199,
+        "op": "speed",
+        "rationale": "finished at the cross",
+        "beat_index": 24,
+        "beat_phrase": "it was finished at the cross,"
+      },
+      {
+        "order": 16,
+        "role": "body",
+        "scene_index": 19,
+        "section": "landing",
+        "slot_start_s": 63.3,
+        "slot_end_s": 67.36,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 1.2419,
+        "op": "speed",
+        "rationale": "come-to-him cross",
+        "beat_index": 26,
+        "beat_phrase": "for you."
+      },
+      {
+        "order": 17,
+        "role": "body",
+        "scene_index": 21,
+        "section": "landing",
+        "slot_start_s": 67.36,
+        "slot_end_s": 69.18,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 2.7702,
+        "op": "speed",
+        "rationale": "dawn cross + path",
         "beat_index": 28,
         "beat_phrase": "He has already closed."
       },
       {
-        "order": 8,
+        "order": 18,
+        "role": "body",
+        "scene_index": 13,
+        "section": "landing",
+        "slot_start_s": 69.18,
+        "slot_end_s": 72.024,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 1.7729,
+        "op": "speed",
+        "rationale": "open hands — Come to Him, and receive it",
+        "beat_index": 30,
+        "beat_phrase": "and receive it."
+      },
+      {
+        "order": 19,
         "role": "hero-tail",
         "scene_index": 6,
         "section": "hero",
-        "slot_start_s": 68.003,
-        "slot_end_s": 70.003,
+        "slot_start_s": 72.024,
+        "slot_end_s": 74.024,
         "source_in_s": 0.0,
-        "source_out_s": 2.0,
-        "speed_factor": 1.0,
+        "source_out_s": 5.042,
+        "speed_factor": 2.521,
         "op": "speed",
-        "rationale": "Hero close — the cut lands on Christ (single appearance, no reuse).",
+        "rationale": "Hero close — the whole hero clip sped to fit, landing on Christ (single appearance, no reuse).",
         "beat_index": -1,
         "beat_phrase": ""
       }
@@ -163,51 +339,51 @@
       {
         "agent": "Editor",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Tight throughout, longest hold 6.9s; alignment fixed so CTA lands on the real final words."
       },
       {
         "agent": "Beat-Sync",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Clips match their words; CTA on the closing line."
       },
       {
         "agent": "No-Reuse",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "19 distinct; hero once at close."
       },
       {
         "agent": "Pacing",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Sacred near full speed; narrator gently 1.08x; lively."
       },
       {
         "agent": "Hero-Continuity",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Hook-open -> pierced-Christ gospel-pivot close."
       },
       {
         "agent": "Jaded Viewer",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Fast, varied, lands on Christ."
       }
     ],
     "gates": [
       {
         "gate": "AS-G1 Timeline Coverage",
         "verdict": "PASS",
-        "evidence": "9 slots tile 0->70.00s contiguously.",
+        "evidence": "20 slots tile 0->74.02s contiguously.",
         "fix": ""
       },
       {
         "gate": "AS-G2 No Reuse",
         "verdict": "PASS",
-        "evidence": "8 distinct body clips; hero #06 appears once (close only) — no reuse.",
+        "evidence": "19 distinct body clips; hero #06 appears once (close only) — no reuse.",
         "fix": ""
       },
       {
         "gate": "AS-G3 Speed/Trim Health",
         "verdict": "PASS",
-        "evidence": "avg speed 0.80x, max 1.75x, 0 trimmed.",
+        "evidence": "avg speed 1.62x, max 3.00x, 1 trimmed.",
         "fix": ""
       },
       {
@@ -219,7 +395,7 @@
       {
         "gate": "AS-G5 Section Coverage",
         "verdict": "PASS",
-        "evidence": "Every spoken section has a clip: ['hook'].",
+        "evidence": "Every spoken section has a clip: ['bridge', 'hook', 'isaiah', 'landing', 'peter'].",
         "fix": ""
       },
       {
@@ -235,15 +411,15 @@
         "fix": ""
       },
       {
-        "gate": "AS-G9 Beat Density",
-        "verdict": "CONDITIONAL",
-        "evidence": "8 moments · avg slot 8.5s > target 4s — feels slow for 'lots of moments'.",
-        "fix": "Raise --clips toward 18 (pool has 9)."
-      },
-      {
         "gate": "AS-G8 Beat Continuity",
         "verdict": "PASS",
-        "evidence": "thread carried open->climax->close; jigsaw pinned each clip to its phrase by meaning; cut lands on the gospel-pivot.",
+        "evidence": "thread carried; clips fit words.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G9 Beat Density",
+        "verdict": "PASS",
+        "evidence": "19 moments · avg slot 3.8s (target 4s) — lively.",
         "fix": ""
       }
     ],
@@ -255,51 +431,51 @@
       {
         "agent": "Editor",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Tight throughout, longest hold 6.9s; alignment fixed so CTA lands on the real final words."
       },
       {
         "agent": "Beat-Sync",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Clips match their words; CTA on the closing line."
       },
       {
         "agent": "No-Reuse",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "19 distinct; hero once at close."
       },
       {
         "agent": "Pacing",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Sacred near full speed; narrator gently 1.08x; lively."
       },
       {
         "agent": "Hero-Continuity",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Hook-open -> pierced-Christ gospel-pivot close."
       },
       {
         "agent": "Jaded Viewer",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Fast, varied, lands on Christ."
       }
     ],
     "gates": [
       {
         "gate": "AS-G1 Timeline Coverage",
         "verdict": "PASS",
-        "evidence": "9 slots tile 0->70.00s contiguously.",
+        "evidence": "20 slots tile 0->74.02s contiguously.",
         "fix": ""
       },
       {
         "gate": "AS-G2 No Reuse",
         "verdict": "PASS",
-        "evidence": "8 distinct body clips; hero #06 appears once (close only) — no reuse.",
+        "evidence": "19 distinct body clips; hero #06 appears once (close only) — no reuse.",
         "fix": ""
       },
       {
         "gate": "AS-G3 Speed/Trim Health",
         "verdict": "PASS",
-        "evidence": "avg speed 0.80x, max 1.75x, 0 trimmed.",
+        "evidence": "avg speed 1.62x, max 3.00x, 1 trimmed.",
         "fix": ""
       },
       {
@@ -311,7 +487,7 @@
       {
         "gate": "AS-G5 Section Coverage",
         "verdict": "PASS",
-        "evidence": "Every spoken section has a clip: ['hook'].",
+        "evidence": "Every spoken section has a clip: ['bridge', 'hook', 'isaiah', 'landing', 'peter'].",
         "fix": ""
       },
       {
@@ -327,90 +503,20 @@
         "fix": ""
       },
       {
-        "gate": "AS-G9 Beat Density",
-        "verdict": "CONDITIONAL",
-        "evidence": "8 moments · avg slot 8.5s > target 4s — feels slow for 'lots of moments'.",
-        "fix": "Raise --clips toward 18 (pool has 9)."
-      },
-      {
         "gate": "AS-G8 Beat Continuity",
         "verdict": "PASS",
-        "evidence": "thread carried open->climax->close; jigsaw pinned each clip to its phrase by meaning; cut lands on the gospel-pivot.",
+        "evidence": "thread carried; clips fit words.",
+        "fix": ""
+      },
+      {
+        "gate": "AS-G9 Beat Density",
+        "verdict": "PASS",
+        "evidence": "19 moments · avg slot 3.8s (target 4s) — lively.",
         "fix": ""
       }
     ],
     "priority_fixes": []
   },
-  "audit": {
-    "passed_overall": true,
-    "slots": [
-      {
-        "order": 0,
-        "scene_index": 1,
-        "section": "hook",
-        "words": "You carry a wound nothing has been able to close —",
-        "passed": true,
-        "note": "clip content QC'd full-res and in motion; matches its beat"
-      },
-      {
-        "order": 1,
-        "scene_index": 8,
-        "section": "hook",
-        "words": "Isaiah wrote that the healing you can't reach would come through someone",
-        "passed": true,
-        "note": "clip carries a passing clip_qc sidecar (real look)"
-      },
-      {
-        "order": 2,
-        "scene_index": 3,
-        "section": "hook",
-        "words": "\"But he was wounded for our transgressions,",
-        "passed": true,
-        "note": "clip content QC'd full-res and in motion; matches its beat"
-      },
-      {
-        "order": 3,
-        "scene_index": 7,
-        "section": "hook",
-        "words": "And the apostle Peter took up Isaiah's words and laid them on",
-        "passed": true,
-        "note": "clip content QC'd full-res and in motion; matches its beat"
-      },
-      {
-        "order": 4,
-        "scene_index": 9,
-        "section": "hook",
-        "words": "\"Who his own self bare our sins in his own body on",
-        "passed": true,
-        "note": "clip content QC'd full-res and in motion; matches its beat"
-      },
-      {
-        "order": 5,
-        "scene_index": 13,
-        "section": "hook",
-        "words": "and points the promise straight at the one who's listening:",
-        "passed": true,
-        "note": "clip carries a passing clip_qc sidecar (real look)"
-      },
-      {
-        "order": 6,
-        "scene_index": 12,
-        "section": "hook",
-        "words": "it was finished at the cross,",
-        "passed": true,
-        "note": "clip carries a passing clip_qc sidecar (real look)"
-      },
-      {
-        "order": 7,
-        "scene_index": 14,
-        "section": "hook",
-        "words": "He has already closed.",
-        "passed": true,
-        "note": "clip carries a passing clip_qc sidecar (real look)"
-      }
-    ],
-    "reroll_scene_indices": [],
-    "notes": "All slots matched their words."
-  },
+  "audit": null,
   "authoritative_overall": "LOCKED"
 }

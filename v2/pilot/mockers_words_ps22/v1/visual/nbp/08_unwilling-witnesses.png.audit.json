@@ -1,10 +1,1 @@
-{
-  "passed": true,
-  "issues": [
-    {
-      "claim": "no titulus text",
-      "actual": "small garbled titulus on the central + far cross; non-hero scene, animation crops the jeering fists/faces/luminous Christ, not the board; acceptable"
-    }
-  ],
-  "banned_token_hits": []
-}
+{"passed": true, "issues": [], "banned_token_hits": [], "note": "reuse from 08_he-had-every-power.png"}

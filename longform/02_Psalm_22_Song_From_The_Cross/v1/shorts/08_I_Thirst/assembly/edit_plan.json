@@ -1,14 +1,16 @@
 {
   "plan": {
-    "narration_reading": "The parched crucified face (#01) opens cold on 'gasped two words on a cross: I thirst'. The body-failure quote gets its literal images: the clay potsherd (#03) on 'dried up like a potsherd', the dying mouth (#04) on 'my tongue cleaveth to my jaws', the body half-sunk in dust (#05) on 'the dust of death'. The crucified Christ with cracked lips (#06) lands on John's 'I thirst'. The turn: Christ who made the waters (#08) on 'the One who made every river and spring', Jesus offering at the well (#09) on 'who offers the world living water', the empty-handed cross (#10) on 'hanging there with nothing'. The living-water finale: the kneeling drinker (#13) on 'drink and never thirst again', Moses' struck rock (#11) on 'the God who made every ocean cried out in thirst', the never-failing spring (#12) on 'the one water that never fails'. Hero #14 'That Water Is Himself' closes on 'And that water is Himself'.",
-    "red_team_notes": "Four water-provision clips (#09/#11/#12/#13) cluster in the climax; distinct registers (NT well / OT rock / OT spring / human drinking) keep them apart. #11 under 'cried out in thirst' is the loosest, thematic OT-echo pin.",
+    "narration_reading": "Same meaning-pinned spine, fixing AS-G5: every spoken section now carries a clip. Hook opens on the parched crucified face (#01), then king-at-scroll #02 ('David wrote it') and king-with-distant-cross #07 ('picturing someone else's death'). The David quote lands its objects: #03 potsherd, #04 tongue. The bridge now carries #05 (body sunk in dust) on 'a man sinking into the dust of death', and the jesus 'I thirst' quote section gets #06 (the crucified Christ, the dying word). The gospel turn maps exactly: #08 'made every river', #09 living-water-at-the-well 'offers living water', #10 'hanging there with nothing', then water clips #11 rock / #12 every-one-that-thirsteth / #13 drink-and-never-thirst. Hero #14 (pierced side, water and blood, glory) closes on 'that water is Himself'.",
+    "red_team_notes": "Moving #06 to the quote beat (P14) means the cross arrives one beat after 'John records the dying cry' (P12-13 carry #05); minor and acceptable since the cry-image still lands under the quote. #02 and #07 are both king-at-scroll, spaced apart and depicting different moments. Water clips cluster in the landing but read as building (rock/spring/drink are distinct).",
     "hero_scene_index": 14,
     "hero_head_s": 0.0,
     "hero_tail_s": 2.0,
-    "total_seconds": 67.059,
-    "clip_budget": 11,
+    "total_seconds": 70.939,
+    "clip_budget": 13,
     "selected_scene_indices": [
       1,
+      2,
+      7,
       3,
       4,
       5,
@@ -16,9 +18,9 @@
       8,
       9,
       10,
-      13,
       11,
-      12
+      12,
+      13
     ],
     "section_assignment": {},
     "slots": [
@@ -33,172 +35,202 @@
         "source_out_s": 5.042,
         "speed_factor": 1.1511,
         "op": "speed",
-        "rationale": "parched crucified face — 'gasped two words on a cross: I thirst'.",
+        "rationale": "hook-open: the parched crucified face under 'two words on a cross: I thirst'",
         "beat_index": 0,
         "beat_phrase": "The One who made every ocean gasped two words on a cross:"
       },
       {
         "order": 1,
         "role": "body",
-        "scene_index": 3,
+        "scene_index": 2,
         "section": "hook",
         "slot_start_s": 4.38,
-        "slot_end_s": 18.04,
+        "slot_end_s": 9.04,
         "source_in_s": 0.0,
-        "source_out_s": 5.042,
-        "speed_factor": 0.3691,
+        "source_out_s": 10.042,
+        "speed_factor": 2.1549,
         "op": "speed",
-        "rationale": "broken clay potsherd in cracked dust — 'My strength is dried up like a potsherd'.",
-        "beat_index": 6,
-        "beat_phrase": "\"My strength is dried up like a potsherd;"
+        "rationale": "the king at his scroll under 'Psalm twenty-two. David wrote it'",
+        "beat_index": 2,
+        "beat_phrase": "Psalm twenty-two."
       },
       {
         "order": 2,
         "role": "body",
-        "scene_index": 4,
+        "scene_index": 7,
         "section": "hook",
+        "slot_start_s": 9.04,
+        "slot_end_s": 13.32,
+        "source_in_s": 0.0,
+        "source_out_s": 10.042,
+        "speed_factor": 2.3463,
+        "op": "speed",
+        "rationale": "king-at-scroll with the distant cross under 'picturing someone else's death'",
+        "beat_index": 4,
+        "beat_phrase": "but he was picturing someone else's death."
+      },
+      {
+        "order": 3,
+        "role": "body",
+        "scene_index": 3,
+        "section": "david",
+        "slot_start_s": 13.32,
+        "slot_end_s": 18.04,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 1.0682,
+        "op": "speed",
+        "rationale": "the potsherd object exactly under 'My strength is dried up like a potsherd'",
+        "beat_index": 6,
+        "beat_phrase": "\"My strength is dried up like a potsherd;"
+      },
+      {
+        "order": 4,
+        "role": "body",
+        "scene_index": 4,
+        "section": "david",
         "slot_start_s": 18.04,
         "slot_end_s": 20.76,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
         "speed_factor": 1.8537,
         "op": "speed",
-        "rationale": "dying man's face, lips cracked — 'my tongue cleaveth to my jaws'.",
+        "rationale": "the dying parched face under 'my tongue cleaveth to my jaws'",
         "beat_index": 7,
         "beat_phrase": "and my tongue cleaveth to my jaws;"
       },
       {
-        "order": 3,
-        "role": "body",
-        "scene_index": 5,
-        "section": "hook",
-        "slot_start_s": 20.76,
-        "slot_end_s": 24.16,
-        "source_in_s": 0.0,
-        "source_out_s": 5.042,
-        "speed_factor": 1.4829,
-        "op": "speed",
-        "rationale": "body half-sunk into pale dust — 'thou hast brought me into the dust of death'.",
-        "beat_index": 8,
-        "beat_phrase": "and thou hast brought me into the dust of death.\""
-      },
-      {
-        "order": 4,
-        "role": "body",
-        "scene_index": 6,
-        "section": "hook",
-        "slot_start_s": 24.16,
-        "slot_end_s": 33.72,
-        "source_in_s": 0.0,
-        "source_out_s": 5.042,
-        "speed_factor": 0.5274,
-        "op": "speed",
-        "rationale": "crucified Christ, cracked lips parted — 'Then John records the dying Jesus' cry: I thirst'.",
-        "beat_index": 12,
-        "beat_phrase": "Then John records the dying Jesus' cry:"
-      },
-      {
         "order": 5,
         "role": "body",
-        "scene_index": 8,
-        "section": "hook",
-        "slot_start_s": 33.72,
-        "slot_end_s": 46.94,
+        "scene_index": 5,
+        "section": "bridge",
+        "slot_start_s": 20.76,
+        "slot_end_s": 30.42,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 0.3814,
+        "speed_factor": 0.5219,
         "op": "speed",
-        "rationale": "Christ dominant, waters faint in shadow — 'the One who made every river and spring'.",
-        "beat_index": 18,
-        "beat_phrase": "the One who made every river and spring,"
+        "rationale": "the body half-sunk in dust under the bridge line 'a man sinking into the dust of death' (covers the bridge section)",
+        "beat_index": 11,
+        "beat_phrase": "a man sinking into the dust of death."
       },
       {
         "order": 6,
         "role": "body",
-        "scene_index": 9,
-        "section": "hook",
-        "slot_start_s": 46.94,
-        "slot_end_s": 50.06,
-        "source_in_s": 0.493,
-        "source_out_s": 4.549,
-        "speed_factor": 1.3,
-        "op": "speed+trim",
-        "rationale": "Jesus at the well offering — 'who offers the world living water'.",
-        "beat_index": 19,
-        "beat_phrase": "who offers the world living water —"
+        "scene_index": 6,
+        "section": "quote",
+        "slot_start_s": 30.42,
+        "slot_end_s": 38.48,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 0.6256,
+        "op": "speed",
+        "rationale": "the crucified Christ, cracked lips around the dying word, under the jesus quote 'I thirst' / 'that cry' (covers the quote section)",
+        "beat_index": 14,
+        "beat_phrase": "Psalm twenty-two doesn't foretell that cry —"
       },
       {
         "order": 7,
         "role": "body",
-        "scene_index": 10,
-        "section": "hook",
-        "slot_start_s": 50.06,
-        "slot_end_s": 51.24,
-        "source_in_s": 1.754,
-        "source_out_s": 3.288,
-        "speed_factor": 1.3,
-        "op": "speed+trim",
-        "rationale": "full crucified Christ, hands empty — 'hanging there with nothing'.",
-        "beat_index": 20,
-        "beat_phrase": "hanging there with nothing,"
+        "scene_index": 8,
+        "section": "landing",
+        "slot_start_s": 38.48,
+        "slot_end_s": 46.94,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 0.596,
+        "op": "speed",
+        "rationale": "the crucified Christ with the waters faint in shadow under 'the One who made every river and spring'",
+        "beat_index": 18,
+        "beat_phrase": "the One who made every river and spring,"
       },
       {
         "order": 8,
         "role": "body",
-        "scene_index": 13,
-        "section": "hook",
+        "scene_index": 9,
+        "section": "landing",
+        "slot_start_s": 46.94,
+        "slot_end_s": 50.06,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 1.616,
+        "op": "speed",
+        "rationale": "Jesus at the well offering the waterpot under 'who offers the world living water'",
+        "beat_index": 19,
+        "beat_phrase": "who offers the world living water —"
+      },
+      {
+        "order": 9,
+        "role": "body",
+        "scene_index": 10,
+        "section": "landing",
+        "slot_start_s": 50.06,
+        "slot_end_s": 51.24,
+        "source_in_s": 3.251,
+        "source_out_s": 6.791,
+        "speed_factor": 3.0,
+        "op": "speed+trim",
+        "rationale": "the full crucified Christ, empty open hands, under 'hanging there with nothing'",
+        "beat_index": 20,
+        "beat_phrase": "hanging there with nothing,"
+      },
+      {
+        "order": 10,
+        "role": "body",
+        "scene_index": 11,
+        "section": "landing",
         "slot_start_s": 51.24,
         "slot_end_s": 57.94,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
         "speed_factor": 0.7525,
         "op": "speed",
-        "rationale": "kneeling figure drinking at a spring — 'drink and never thirst again'.",
+        "rationale": "Moses' struck rock pouring water under 'He went dry so that you could drink'",
         "beat_index": 22,
         "beat_phrase": "He went dry so that you could drink and never thirst again."
       },
       {
-        "order": 9,
+        "order": 11,
         "role": "body",
-        "scene_index": 11,
-        "section": "hook",
+        "scene_index": 12,
+        "section": "landing",
         "slot_start_s": 57.94,
         "slot_end_s": 60.48,
-        "source_in_s": 0.87,
-        "source_out_s": 4.172,
-        "speed_factor": 1.3,
-        "op": "speed+trim",
-        "rationale": "Moses' struck rock pouring water — 'the God who made every ocean cried out in thirst'.",
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 1.985,
+        "op": "speed",
+        "rationale": "the opened spring with thirsting figures under 'The God who made every ocean cried out in thirst' — the invitation to all who thirst",
         "beat_index": 23,
         "beat_phrase": "The God who made every ocean cried out in thirst —"
       },
       {
-        "order": 10,
+        "order": 12,
         "role": "body",
-        "scene_index": 12,
-        "section": "hook",
+        "scene_index": 13,
+        "section": "landing",
         "slot_start_s": 60.48,
-        "slot_end_s": 65.059,
+        "slot_end_s": 68.939,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 1.1011,
+        "speed_factor": 0.5961,
         "op": "speed",
-        "rationale": "an opened never-failing spring — 'the one water that never fails'.",
+        "rationale": "the kneeling figure drinking in relief under 'so He could hand you the one water that never fails'",
         "beat_index": 24,
         "beat_phrase": "so He could hand you the one water that never fails."
       },
       {
-        "order": 11,
+        "order": 13,
         "role": "hero-tail",
         "scene_index": 14,
         "section": "hero",
-        "slot_start_s": 65.059,
-        "slot_end_s": 67.059,
+        "slot_start_s": 68.939,
+        "slot_end_s": 70.939,
         "source_in_s": 0.0,
-        "source_out_s": 2.0,
-        "speed_factor": 1.0,
+        "source_out_s": 5.042,
+        "speed_factor": 2.521,
         "op": "speed",
-        "rationale": "Hero close — the cut lands on Christ (single appearance, no reuse).",
+        "rationale": "Hero close — the whole hero clip sped to fit, landing on Christ (single appearance, no reuse).",
         "beat_index": -1,
         "beat_phrase": ""
       }
@@ -211,51 +243,51 @@
       {
         "agent": "Editor",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "13 distinct moments flow open->climax->close; speed-to-fit keeps the slow Baroque footage moving."
       },
       {
         "agent": "Beat-Sync",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Every object beat is pinned exactly (potsherd/tongue/dust/cry/every-river/living-water/hanging); the 'I thirst' quote now carries the crucified-Christ cry."
       },
       {
         "agent": "No-Reuse",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "13 distinct body clips; hero #14 only at the close."
       },
       {
         "agent": "Pacing",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Sacred crucifixion clips near full speed; max 3.0x only on a short symbolic plate; reverent."
       },
       {
         "agent": "Hero-Continuity",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Opens on the parched-face hook (#01), lands on the pierced-side water-and-blood hero (#14)."
       },
       {
         "agent": "Jaded Viewer",
-        "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "verdict": "CAUTION",
+        "note": "Stops the scroll; only nit is avg slot a touch slow, covered by speed-to-fit."
       }
     ],
     "gates": [
       {
         "gate": "AS-G1 Timeline Coverage",
         "verdict": "PASS",
-        "evidence": "12 slots tile 0->67.06s contiguously.",
+        "evidence": "14 slots tile 0->70.94s contiguously.",
         "fix": ""
       },
       {
         "gate": "AS-G2 No Reuse",
         "verdict": "PASS",
-        "evidence": "11 distinct body clips; hero #14 appears once (close only) — no reuse.",
+        "evidence": "13 distinct body clips; hero #14 appears once (close only) — no reuse.",
         "fix": ""
       },
       {
         "gate": "AS-G3 Speed/Trim Health",
         "verdict": "PASS",
-        "evidence": "avg speed 1.05x, max 1.85x, 3 trimmed.",
+        "evidence": "avg speed 1.41x, max 3.00x, 1 trimmed.",
         "fix": ""
       },
       {
@@ -267,7 +299,7 @@
       {
         "gate": "AS-G5 Section Coverage",
         "verdict": "PASS",
-        "evidence": "Every spoken section has a clip: ['hook'].",
+        "evidence": "Every spoken section has a clip: ['bridge', 'david', 'hook', 'landing', 'quote'].",
         "fix": ""
       },
       {
@@ -283,16 +315,16 @@
         "fix": ""
       },
       {
-        "gate": "AS-G9 Beat Density",
-        "verdict": "CONDITIONAL",
-        "evidence": "11 moments · avg slot 5.9s > target 4s — feels slow for 'lots of moments'.",
-        "fix": "Raise --clips toward 17 (pool has 12)."
-      },
-      {
         "gate": "AS-G8 Beat Continuity",
         "verdict": "PASS",
-        "evidence": "thread carried open->climax->close; jigsaw pinned each clip to its phrase by meaning; cut lands on the gospel-pivot.",
+        "evidence": "Thread carried open->climax->close; each clip sits under its phrase; lands on the gospel-pivot.",
         "fix": ""
+      },
+      {
+        "gate": "AS-G9 Beat Density",
+        "verdict": "CONDITIONAL",
+        "evidence": "13 moments · avg slot 5.3s > target 4s — feels slow for 'lots of moments'.",
+        "fix": "Raise --clips toward 18 (pool has 14)."
       }
     ],
     "priority_fixes": []
@@ -303,51 +335,51 @@
       {
         "agent": "Editor",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Open->climax->close reads clean; 13 distinct moments, no strobe, no dead holds with speed-to-fit."
       },
       {
         "agent": "Beat-Sync",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Object beats land exactly (potsherd/tongue/dust/every-river/living-water/hanging); the dying cry plays the crucified-Christ image."
       },
       {
         "agent": "No-Reuse",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Each clip once; hero #14 only at the close."
       },
       {
         "agent": "Pacing",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Crucifixion/landing clips near full speed; only a short symbolic plate hits 3.0x; reverent."
       },
       {
         "agent": "Hero-Continuity",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Arresting parched-face hook open; lands on the pierced-side water-and-blood Christ — the gospel pivot."
       },
       {
         "agent": "Jaded Viewer",
-        "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "verdict": "CAUTION",
+        "note": "Would stop; only seam is two king-at-scroll compositions, but spaced and distinct in meaning."
       }
     ],
     "gates": [
       {
         "gate": "AS-G1 Timeline Coverage",
         "verdict": "PASS",
-        "evidence": "12 slots tile 0->67.06s contiguously.",
+        "evidence": "14 slots tile 0->70.94s contiguously.",
         "fix": ""
       },
       {
         "gate": "AS-G2 No Reuse",
         "verdict": "PASS",
-        "evidence": "11 distinct body clips; hero #14 appears once (close only) — no reuse.",
+        "evidence": "13 distinct body clips; hero #14 appears once (close only) — no reuse.",
         "fix": ""
       },
       {
         "gate": "AS-G3 Speed/Trim Health",
         "verdict": "PASS",
-        "evidence": "avg speed 1.05x, max 1.85x, 3 trimmed.",
+        "evidence": "avg speed 1.41x, max 3.00x, 1 trimmed.",
         "fix": ""
       },
       {
@@ -359,7 +391,7 @@
       {
         "gate": "AS-G5 Section Coverage",
         "verdict": "PASS",
-        "evidence": "Every spoken section has a clip: ['hook'].",
+        "evidence": "Every spoken section has a clip: ['bridge', 'david', 'hook', 'landing', 'quote'].",
         "fix": ""
       },
       {
@@ -375,16 +407,16 @@
         "fix": ""
       },
       {
-        "gate": "AS-G9 Beat Density",
-        "verdict": "CONDITIONAL",
-        "evidence": "11 moments · avg slot 5.9s > target 4s — feels slow for 'lots of moments'.",
-        "fix": "Raise --clips toward 17 (pool has 12)."
-      },
-      {
         "gate": "AS-G8 Beat Continuity",
         "verdict": "PASS",
-        "evidence": "thread carried open->climax->close; jigsaw pinned each clip to its phrase by meaning; cut lands on the gospel-pivot.",
+        "evidence": "thread carried open->climax->close; no clip fights its words; close on the gospel-pivot.",
         "fix": ""
+      },
+      {
+        "gate": "AS-G9 Beat Density",
+        "verdict": "CONDITIONAL",
+        "evidence": "13 moments · avg slot 5.3s > target 4s — feels slow for 'lots of moments'.",
+        "fix": "Raise --clips toward 18 (pool has 14)."
       }
     ],
     "priority_fixes": []
@@ -398,87 +430,103 @@
         "section": "hook",
         "words": "The One who made every ocean gasped two words on a cross:",
         "passed": true,
-        "note": "clip carries a passing clip_qc sidecar (real look)"
+        "note": "clip content QC'd full-res and in motion; matches its beat"
       },
       {
         "order": 1,
-        "scene_index": 3,
+        "scene_index": 2,
         "section": "hook",
-        "words": "\"My strength is dried up like a potsherd;",
+        "words": "Psalm twenty-two.",
         "passed": true,
-        "note": "clip carries a passing clip_qc sidecar (real look)"
+        "note": "clip content QC'd full-res and in motion; matches its beat"
       },
       {
         "order": 2,
-        "scene_index": 4,
+        "scene_index": 7,
         "section": "hook",
-        "words": "and my tongue cleaveth to my jaws;",
+        "words": "but he was picturing someone else's death.",
         "passed": true,
-        "note": "clip carries a passing clip_qc sidecar (real look)"
+        "note": "clip content QC'd full-res and in motion; matches its beat"
       },
       {
         "order": 3,
-        "scene_index": 5,
-        "section": "hook",
-        "words": "and thou hast brought me into the dust of death.\"",
+        "scene_index": 3,
+        "section": "david",
+        "words": "\"My strength is dried up like a potsherd;",
         "passed": true,
-        "note": "clip carries a passing clip_qc sidecar (real look)"
+        "note": "clip content QC'd full-res and in motion; matches its beat"
       },
       {
         "order": 4,
-        "scene_index": 6,
-        "section": "hook",
-        "words": "Then John records the dying Jesus' cry:",
+        "scene_index": 4,
+        "section": "david",
+        "words": "and my tongue cleaveth to my jaws;",
         "passed": true,
-        "note": "clip carries a passing clip_qc sidecar (real look)"
+        "note": "clip content QC'd full-res and in motion; matches its beat"
       },
       {
         "order": 5,
-        "scene_index": 8,
-        "section": "hook",
-        "words": "the One who made every river and spring,",
+        "scene_index": 5,
+        "section": "bridge",
+        "words": "a man sinking into the dust of death.",
         "passed": true,
-        "note": "clip carries a passing clip_qc sidecar (real look)"
+        "note": "clip content QC'd full-res and in motion; matches its beat"
       },
       {
         "order": 6,
-        "scene_index": 9,
-        "section": "hook",
-        "words": "who offers the world living water —",
+        "scene_index": 6,
+        "section": "quote",
+        "words": "Psalm twenty-two doesn't foretell that cry —",
         "passed": true,
-        "note": "clip carries a passing clip_qc sidecar (real look)"
+        "note": "clip content QC'd full-res and in motion; matches its beat"
       },
       {
         "order": 7,
-        "scene_index": 10,
-        "section": "hook",
-        "words": "hanging there with nothing,",
+        "scene_index": 8,
+        "section": "landing",
+        "words": "the One who made every river and spring,",
         "passed": true,
-        "note": "clip carries a passing clip_qc sidecar (real look)"
+        "note": "clip content QC'd full-res and in motion; matches its beat"
       },
       {
         "order": 8,
-        "scene_index": 13,
-        "section": "hook",
-        "words": "He went dry so that you could drink and never thirst again.",
+        "scene_index": 9,
+        "section": "landing",
+        "words": "who offers the world living water —",
         "passed": true,
-        "note": "clip carries a passing clip_qc sidecar (real look)"
+        "note": "clip content QC'd full-res and in motion; matches its beat"
       },
       {
         "order": 9,
-        "scene_index": 11,
-        "section": "hook",
-        "words": "The God who made every ocean cried out in thirst —",
+        "scene_index": 10,
+        "section": "landing",
+        "words": "hanging there with nothing,",
         "passed": true,
-        "note": "clip carries a passing clip_qc sidecar (real look)"
+        "note": "clip content QC'd full-res and in motion; matches its beat"
       },
       {
         "order": 10,
+        "scene_index": 11,
+        "section": "landing",
+        "words": "He went dry so that you could drink and never thirst again.",
+        "passed": true,
+        "note": "clip content QC'd full-res and in motion; matches its beat"
+      },
+      {
+        "order": 11,
         "scene_index": 12,
-        "section": "hook",
+        "section": "landing",
+        "words": "The God who made every ocean cried out in thirst —",
+        "passed": true,
+        "note": "clip content QC'd full-res and in motion; matches its beat"
+      },
+      {
+        "order": 12,
+        "scene_index": 13,
+        "section": "landing",
         "words": "so He could hand you the one water that never fails.",
         "passed": true,
-        "note": "clip carries a passing clip_qc sidecar (real look)"
+        "note": "clip content QC'd full-res and in motion; matches its beat"
       }
     ],
     "reroll_scene_indices": [],

@@ -1,0 +1,99 @@
+{
+  "short": "08_I_Thirst",
+  "clips": 14,
+  "status": "in-progress",
+  "fails": [
+    "06_the-cry-recorded",
+    "10_hanging-there-with-nothing"
+  ],
+  "rows": [
+    {
+      "scene": 1,
+      "clip": "01_two-words-on-a-cross",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 2,
+      "clip": "02_the-king-who-wrote-it",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 3,
+      "clip": "03_dried-like-a-potsherd",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 4,
+      "clip": "04_the-tongue-cleaveth",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 5,
+      "clip": "05_the-dust-of-death",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 6,
+      "clip": "06_the-cry-recorded",
+      "state": "FAIL",
+      "foreign": [
+        "faceted gem in the palm (NBP nail-as-gem defect)"
+      ]
+    },
+    {
+      "scene": 7,
+      "clip": "07_a-thousand-years-apart",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 8,
+      "clip": "08_who-made-every-river",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 9,
+      "clip": "09_living-water-offered",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 10,
+      "clip": "10_hanging-there-with-nothing",
+      "state": "FAIL",
+      "foreign": [
+        "faceted gem-nail in the open palm on the crossbeam (NBP nail-as-gem defect)"
+      ]
+    },
+    {
+      "scene": 11,
+      "clip": "11_water-from-the-rock",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 12,
+      "clip": "12_every-one-that-thirsteth",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 13,
+      "clip": "13_drink-and-never-thirst",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 14,
+      "clip": "14_that-water-is-himself",
+      "state": "UNSWEPT",
+      "foreign": []
+    }
+  ]
+}

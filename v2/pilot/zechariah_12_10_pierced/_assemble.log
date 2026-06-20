@@ -1,0 +1,181 @@
+
+########################################################################
+#  LLM_PROVIDER=agent  � engine LLM calls route to the in-chat agent
+#  (Claude Code / Max subscription) via the file bridge. NO metered API.
+#  bridge dir : C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge
+#  RUN ME IN THE BACKGROUND and service requests from chat:
+#    new requests appear in   C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\requests
+#    write each reply to      C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\responses/<id>.txt
+#  For an unattended run with the metered API instead: set LLM_PROVIDER=api
+########################################################################
+
+================================================================
+  Salt and Light Kingdom — assembly stage
+================================================================
+  v1:        v2\pilot\zechariah_12_10_pierced\v1
+  provider:  nbp
+  clips:     15
+  speed cap: 4.00x
+  reel:      True   verify: False
+================================================================
+[A1] Building narration timeline from per-turn audio...
+      ! tagged chunks (5) != turn files (4); aligning by speaker where possible.
+      (timeline total 59.999s -> pinned to narration.mp3 67.039s)
+[A1b] Forced-alignment + phrase board (beat-accurate matching)...
+      [align] reuse narration.alignment.json (184 words)
+      [phrases] 31 beats from 184 aligned words
+
+=== PHRASE BOARD (31 beats) ===
+  P00 [    hook/narrator]   0.00-  3.06s (3.06s) A Roman soldier drove a spear into a dead man's side to
+  P01 [    hook/narrator]   3.06-  4.06s (1.00s) be sure He was gone.
+  P02 [    hook/narrator]   5.06-  8.16s (3.10s) He had no idea he was finishing a sentence God wrote five
+  P03 [    hook/narrator]   8.16-  9.16s (1.00s) centuries earlier.
+  P04 [    hook/narrator]  10.64- 13.80s (3.16s) In Zechariah, God speaks in the first person about the day His
+  P05 [    hook/narrator]  13.80- 14.96s (1.16s) people would pierce someone —
+  P06 [    hook/narrator]  15.62- 17.34s (1.72s) and says something staggering:
+  P07 [  bridge/narrator]  17.84- 20.36s (2.52s) "...they shall look upon me whom they have pierced,
+  P08 [  bridge/narrator]  20.36- 21.98s (1.62s) and they shall mourn for him,
+  P09 [  bridge/narrator]  21.98- 24.44s (2.46s) as one mourneth for his only son..."
+  P10 [  bridge/narrator]  24.64- 25.16s (0.52s) Read it twice.
+  P11 [  bridge/narrator]  25.82- 27.54s (1.72s) God says they pierced Me —
+  P12 [  bridge/narrator]  28.06- 29.42s (1.36s) then, mourn for Him.
+  P13 [  bridge/narrator]  30.54- 32.54s (2.00s) The pierced man is somehow God Himself —
+  P14 [    john/john   ]  33.14- 34.24s (1.10s) God's own Son.
+  P15 [    john/john   ]  35.34- 35.92s (0.58s) At the cross,
+  P16 [ landing/narrator]  36.48- 38.04s (1.56s) John watched the spear go in,
+  P17 [ landing/narrator]  38.04- 39.92s (1.88s) and reached for that exact verse:
+  P18 [ landing/narrator]  40.68- 43.04s (2.36s) "They shall look on him whom they pierced."
+  P19 [ landing/narrator]  43.04- 44.08s (1.04s) And here is the mercy:
+  P20 [ landing/narrator]  45.06- 47.30s (2.24s) the God they pierced answers not with wrath,
+  P21 [ landing/narrator]  47.30- 49.24s (1.94s) but with grace poured out —
+  P22 [ landing/narrator]  49.96- 51.32s (1.36s) so that when they finally look,
+  P23 [ landing/narrator]  51.32- 53.08s (1.76s) they don't just see what they did.
+  P24 [ landing/narrator]  53.78- 56.02s (2.24s) They mourn, and they are forgiven.
+  P25 [ landing/narrator]  56.94- 60.24s (3.30s) The man on that cross was not a victim God failed to
+  P26 [ landing/narrator]  60.24- 60.58s (0.34s) save.
+  P27 [ landing/narrator]  61.32- 62.20s (0.88s) He was God,
+  P28 [ landing/narrator]  62.82- 63.74s (0.92s) pierced for you.
+  P29 [ landing/narrator]  64.72- 65.48s (0.76s) Look at Him —
+  P30 [ landing/narrator]  65.48- 66.78s (1.30s) and live.
+
+========================================================================
+  AGENT-BRIDGE REQUEST 0001_2fcdca  [text]  assembly-episode-fit
+  prompt : C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\requests\0001_2fcdca.request.md
+  REPLY  -> write the raw model output to: C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\responses\0001_2fcdca.txt
+  (engine is blocked, polling every 1.5s up to 3600s)
+========================================================================
+
+
+=== NARRATION BOARD ===
+  [    hook]   0.00- 17.50s (17.50s) narrator: A Roman soldier drove a spear into a dead man's side to be s...
+  [  bridge]  17.50- 33.15s (15.64s) narrator: Read it twice. God says they pierced Me — then, mourn for Hi...
+  [    john]  33.55- 36.10s ( 2.56s) john: "They shall look on him whom they pierced."
+  [ landing]  36.10- 67.04s (30.93s) narrator: And here is the mercy: the God they pierced answers not with...
+  total: 67.039s
+
+=== CLIPS (15) ===
+  * #01 The Spear                          hook-open  controlled   5.04s
+  * #02 The Pierced Side                   build      slower       5.04s
+    #03 God's Staggering Word              build      slower       5.04s
+    #04 The Wounded One                    build      slower       5.04s
+  * #05 The Cross                          climax     slower       5.04s
+    #06 Whom They Pierced                  build      slower       5.04s
+  * #07 John Saw It                        build      slower      10.04s
+  * #08 They Look And Mourn                pivot      slower       5.04s
+  * #09 The Spirit Of Grace                close      slower       5.04s
+  * #10 Look At Him                        close      slower       5.04s
+  * #11 And Live                           close      slower       5.04s
+  * #12 The Ninth Hour                     build      faster       5.04s
+  * #13 It Is Finished                     close      faster       5.04s
+  * #14 Crushed In Your Place              build      faster       5.04s
+  * #15 Room To Turn                       close      faster       5.04s
+
+[A2] Jigsaw matching (beat mode, budget=15, hero_pref=5)...
+
+========================================================================
+  AGENT-BRIDGE REQUEST 0002_c9625e  [text]  text
+  prompt : C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\requests\0002_c9625e.request.md
+  REPLY  -> write the raw model output to: C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\responses\0002_c9625e.txt
+  (engine is blocked, polling every 1.5s up to 3600s)
+========================================================================
+
+  …still waiting on agent reply for 0002_c9625e (text)
+  …still waiting on agent reply for 0002_c9625e (text)
+      reading: All 15 clips. Hook on the spear/wounded body (#01 poured-out) and the pierced side (#02). The LORD's 'look upon me whom ...
+[A3] Self-review (panel + AS-G1..G9 deterministic + AS-G8 beat continuity)...
+
+========================================================================
+  AGENT-BRIDGE REQUEST 0003_ad23e3  [text]  text
+  prompt : C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\requests\0003_ad23e3.request.md
+  REPLY  -> write the raw model output to: C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\responses\0003_ad23e3.txt
+  (engine is blocked, polling every 1.5s up to 3600s)
+========================================================================
+
+      LOCKED (0 FAIL)
+[A4] INDEPENDENT red-team audit (authoritative)...
+
+========================================================================
+  AGENT-BRIDGE REQUEST 0004_d45b3f  [text]  text
+  prompt : C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\requests\0004_d45b3f.request.md
+  REPLY  -> write the raw model output to: C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\responses\0004_d45b3f.txt
+  (engine is blocked, polling every 1.5s up to 3600s)
+========================================================================
+
+      independent: LOCKED (0 FAIL)
+
+      --- SANITY TABLE (per section) ---
+      section   clips   window  avgslot  avgspd  trimmed
+      hook          3   13.80s    4.60s   1.18x    0/3
+      bridge        4   19.34s    4.83s   1.60x    1/4
+      john          1    2.20s    2.20s   2.29x    0/1
+      landing       6   29.70s    4.95s   1.11x    0/6
+      OVERALL: 14 clips · avg 1.35x · max 3.00x
+  [coherence] 11 asset(s) NOT coherence-verified in v1:
+  [coherence]   - clip 01_the-spear.mp4: not clip_qc-verified
+  [coherence]   - clip 03_gods-staggering-word.mp4: not clip_qc-verified
+  [coherence]   - clip 05_the-cross.mp4: not clip_qc-verified
+  [coherence]   - clip 06_whom-they-pierced.mp4: not clip_qc-verified
+  [coherence]   - clip 07_john-saw-it.mp4: not clip_qc-verified
+  [coherence]   - clip 10_look-at-him.mp4: not clip_qc-verified
+  [coherence]   - clip 11_and-live.mp4: not clip_qc-verified
+  [coherence]   - clip 12_the-ninth-hour.mp4: not clip_qc-verified
+  [coherence]   - clip 13_it-is-finished.mp4: not clip_qc-verified
+  [coherence]   - clip 14_crushed-in-your-place.mp4: not clip_qc-verified
+  [coherence]   - clip 15_room-to-turn.mp4: not clip_qc-verified
+  [coherence] WARNING: JITB_REQUIRE_COHERENCE is OFF (rollout) — NOT blocking. Flip to 1 after the Half-B audit to enforce.
+  [still-review] v1: NOT signed off — no .stills_reviewed sign-off
+  [still-review] WARNING: JITB_REQUIRE_STILL_REVIEW is OFF (rollout) — not blocking. Regenerate stills_review.html, eyeball it, then: python -m pipeline.still_review "v2\pilot\zechariah_12_10_pierced\v1" --sign-off
+
+[handoff] writing edit_plan.json + reviews + timeline + upstream_notes...
+
+[B1] Rendering the 60s viral cut...
+      [seg  0] body       #01 3.06s @ 1.65x (speed)
+      [seg  1] body       #02 5.10s @ 0.99x (speed)
+      [seg  2] body       #03 5.64s @ 0.89x (speed)
+      [seg  3] body       #06 6.56s @ 0.77x (speed)
+      [seg  4] body       #08 1.62s @ 3.00x (speed+trim)
+      [seg  5] body       #07 6.08s @ 1.65x (speed)
+      [seg  6] body       #14 5.08s @ 0.99x (speed)
+      [seg  7] body       #04 2.20s @ 2.29x (speed)
+      [seg  8] body       #10 2.70s @ 1.87x (speed)
+      [seg  9] body       #12 5.00s @ 1.01x (speed)
+      [seg 10] body       #09 4.26s @ 1.18x (speed)
+      [seg 11] body       #13 6.48s @ 0.78x (speed)
+      [seg 12] body       #11 6.46s @ 0.78x (speed)
+      [seg 13] body       #15 4.80s @ 1.05x (speed)
+      [seg 14] hero-tail  #05 2.00s @ 2.52x (speed)
+      [concat] 15 segments -> _body_concat.mp4
+      [mux] narration -> viral_cut.mp4
+      viral cut: v2\pilot\zechariah_12_10_pierced\v1\assembly\viral_cut.mp4  (67.03s)
+[B2] Rendering the all-takes reel...
+      [reel] concat 15 clips -> all_takes_reel.mp4
+      reel: v2\pilot\zechariah_12_10_pierced\v1\assembly\all_takes_reel.mp4  (80.50s)
+
+[done] index: v2\pilot\zechariah_12_10_pierced\v1\assembly\index.html
+
+================================================================
+  DONE — edit plan: LOCKED  (0 revision(s))
+  viral cut: v2\pilot\zechariah_12_10_pierced\v1\assembly\viral_cut.mp4
+  reel:      v2\pilot\zechariah_12_10_pierced\v1\assembly\all_takes_reel.mp4
+  review:    v2\pilot\zechariah_12_10_pierced\v1\assembly\index.html
+================================================================

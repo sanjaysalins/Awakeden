@@ -1,10 +1,1 @@
-{
-  "passed": true,
-  "issues": [
-    {
-      "claim": "no titulus",
-      "actual": "small garbled titulus at top — non-hero, not a crop target; King-stillness + dawn read well"
-    }
-  ],
-  "banned_token_hits": []
-}
+{"passed": true, "issues": [], "banned_token_hits": [], "note": "reuse from 13_the-silent-king.png"}

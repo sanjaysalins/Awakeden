@@ -1,18 +1,12 @@
 {
  "audited": true,
  "passed": true,
- "png_sha256": "2ba2e85bbe5ca00ea1a1435a70cf4d0c7e983a6eda44fca5d6d09b23b6514d26",
+ "png_sha256": "72e78153838561f626633c3e8f96693c0fa5d4e35f8a2320a49f949cf4c37ab6",
  "n_votes": 1,
  "split": false,
  "failed_dims": [],
  "passes": {},
  "fail_reasons": [],
- "votes": [
-  {
-   "passed": true,
-   "dims_failed": [],
-   "reasons": []
-  }
- ],
- "note": "ensemble of 1 vote(s), any-fail"
+ "votes": [],
+ "note": "copied coherence verdict from 04_the-ninth-hour.png"
 }

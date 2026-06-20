@@ -20,7 +20,7 @@ A Roman soldier drove a spear into a dead man's side to be sure He was gone. He 
 **[narrator]**
 In Zechariah, God speaks in the first person about the day His people would pierce someone — and says something staggering:
 
-**[narrator — KJV, Zechariah 12:10]**
+**[the_lord — KJV, Zechariah 12:10]**
 "...they shall look upon me whom they have pierced, and they shall mourn for him, as one mourneth for his only son..."
 
 **[narrator]**
@@ -29,7 +29,7 @@ Read it twice. God says they pierced Me — then, mourn for Him. The pierced man
 **[narrator]**
 At the cross, John watched the spear go in, and reached for that exact verse:
 
-**[narrator — KJV, John 19:37]**
+**[john — KJV, John 19:37]**
 "They shall look on him whom they pierced."
 
 **[narrator]**
@@ -56,5 +56,7 @@ The man on that cross was not a victim God failed to save. He was God, pierced f
   look-mourn-forgiven; no fear / gain-loss; CTA does new work ("Look at Him — and live").
 
 ## VOICE PLAN
-- `narrator` only (the LORD's words in Zech are OT prophecy, narrator-voiced per the attribution rule;
-  could optionally use a `the_LORD` voice on the Zech 12:10 first-person line — narrator kept for the short).
+- Multi-voice (3): `narrator` + `the_lord` (Zechariah 12:10, the LORD's own first-person line — the divine
+  voice on "they pierced ME" underscores the deity of the pierced Son) + `john` (John 19:37, the eyewitness
+  apostle citing it at the spear). The same solemn voice that has carried Christ elsewhere voices the LORD
+  here — the One speaking is the One pierced.

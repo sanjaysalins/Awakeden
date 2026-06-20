@@ -5,7 +5,9 @@ stages so the next episode's clips drop into the cut with less fighting.
 
 ## What was hard to fit this run
 
-- (nothing fought the cut — clips fit cleanly.)
+- **#04 The Passers-By Wag Their Heads** — needed 2.55x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
+- **#06 He Trusted In God** — needed 2.50x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
+- **#17 Twelve Legions Restrained** — needed 3.00x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
 
 ## Standing 'design for the cut' rules
 

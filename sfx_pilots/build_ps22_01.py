@@ -19,12 +19,12 @@ CUT = Path(r"C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\02_Psalm_2
 OUT = CUT.with_name("viral_cut_sfx.mp4")
 
 LAYERS = [
-    layer("hollow", "air_hollow_desolate",  "loop",    0.0, 64.1, -34.0, fout=3.0),                          # gravity of the cross
-    layer("weight", "rumble_deep_sub",      "loop",   14.0, 22.0, -38.0, filt="lowpass=f=600", fin=3.0, fout=4.0),  # life poured out
-    layer("lots",   "coins_clinking",       "oneshot",25.2,  5.0, -27.0, filt="lowpass=f=3000"),             # cast lots upon my vesture (25.4)
-    layer("crowd",  "crowd_murmur_distant", "loop",   33.0,  7.0, -35.0, filt="lowpass=f=2200", fin=2.0, fout=2.5),  # John at the cross / soldiers
-    layer("dice",   "coins_clinking",       "oneshot",56.5,  3.0, -26.0, filt="lowpass=f=3000"),             # they rolled dice (56.9)
-    layer("dawn",   "dawn_morning_warm",    "loop",   50.0, 14.1, -33.0, filt="lowpass=f=3000", fin=3.0),    # it was the plan / to win you back
+    layer("hollow", "air_hollow_desolate",  "loop",    0.0, 72.5, -34.0, fout=3.0),                          # gravity of the cross
+    layer("weight", "rumble_deep_sub",      "loop",   14.0, 24.0, -38.0, filt="lowpass=f=600", fin=3.0, fout=4.0),  # life poured out (14->38)
+    layer("lots",   "coins_clinking",       "oneshot",29.0,  5.0, -27.0, filt="lowpass=f=3000"),             # cast lots upon my vesture (P12 28.98)
+    layer("crowd",  "crowd_murmur_distant", "loop",   33.0,  8.0, -35.0, filt="lowpass=f=2200", fin=2.0, fout=2.5),  # John at the cross / soldiers (33->41)
+    layer("dice",   "coins_clinking",       "oneshot",56.8,  3.0, -26.0, filt="lowpass=f=3000"),             # they rolled dice (P26 56.70)
+    layer("dawn",   "dawn_morning_warm",    "loop",   52.0, 20.5, -33.0, filt="lowpass=f=3000", fin=3.0),    # the plan / to win you back (52->72.5)
 ]
 
 if __name__ == "__main__":

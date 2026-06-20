@@ -39,13 +39,13 @@ At the cross they shook their heads and sneered the very taunt a psalm had recor
 **[narrator]**
 Psalm twenty-two. David, describing a mocked and dying man, even writes his tormentors' words:
 
-**[narrator — KJV, Psalm 22:7-8]**
+**[david — KJV, Psalm 22:7-8]**
 "…they shake the head, saying, He trusted on the LORD that he would deliver him: let him deliver him…"
 
 **[narrator]**
 A thousand years later, at the cross, Matthew records both — the passers-by wagging their heads, and the religious leaders jeering:
 
-**[narrator — KJV, Matthew 27:43]**
+**[mocker — KJV, Matthew 27:43]**
 "He trusted in God; let him deliver him now…"
 
 **[narrator]**

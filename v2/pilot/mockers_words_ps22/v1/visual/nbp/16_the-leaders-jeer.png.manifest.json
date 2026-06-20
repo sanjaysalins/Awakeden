@@ -1,0 +1,28 @@
+{
+ "still_id": "16_the-leaders-jeer",
+ "subject_type": "hero",
+ "role": "hero",
+ "elements": [
+  {
+   "id": "full",
+   "label": "reused: 06_he-trusted-in-god",
+   "region": null,
+   "verified": true
+  }
+ ],
+ "ambient_layer": [],
+ "period_real": {
+  "T1": "pass",
+  "T2": "pass",
+  "T3": "pass",
+  "T4": "pass",
+  "T5": "pass",
+  "T6": "pass"
+ },
+ "declared_by": "design",
+ "provenance": "fresh",
+ "lock_version": 1,
+ "png_sha256": "83519f42f0eff09480290fdb6e07ef075b2818850ac932ad95a56c29ca6e962a",
+ "locked": true,
+ "note": "reuse-swap from C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\shorts\\02_The_Mockers_Words\\visual\\nbp\\05_the-leaders-jeer.mp4"
+}

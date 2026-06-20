@@ -35,7 +35,7 @@ Psalm twenty-two. David wrote it in the first person — but David himself was n
 **[narrator]**
 Watch one line — he wrote that the dying man's killers would divide his clothes, and cast lots for them:
 
-**[narrator — KJV, Psalm 22:18]**
+**[david — KJV, Psalm 22:18]**
 "They part my garments among them, and cast lots upon my vesture."
 
 **[narrator]**

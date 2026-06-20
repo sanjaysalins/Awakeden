@@ -1,0 +1,28 @@
+{
+ "still_id": "09_if-thou-be-the-son-of-god",
+ "subject_type": "hero",
+ "role": "hero",
+ "elements": [
+  {
+   "id": "full",
+   "label": "reused: 05_the-rulers-sneer",
+   "region": null,
+   "verified": true
+  }
+ ],
+ "ambient_layer": [],
+ "period_real": {
+  "T1": "pass",
+  "T2": "pass",
+  "T3": "pass",
+  "T4": "pass",
+  "T5": "pass",
+  "T6": "pass"
+ },
+ "declared_by": "design",
+ "provenance": "fresh",
+ "lock_version": 1,
+ "png_sha256": "a4b294288dd046794e0920ba5ad2e52abd1509e4ecd1d8221a2a0727864b52fc",
+ "locked": true,
+ "note": "reuse-swap from C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\shorts\\02_The_Mockers_Words\\visual\\nbp\\07_the-jabbing-hands.mp4"
+}

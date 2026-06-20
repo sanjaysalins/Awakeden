@@ -7,15 +7,15 @@
       "section": "hook",
       "words": "You carry a wound nothing has been able to close —",
       "passed": true,
-      "note": "clip content QC'd full-res and in motion; matches its beat"
+      "note": "bowed man, hand on the wound — hook"
     },
     {
       "order": 1,
       "scene_index": 8,
       "section": "hook",
-      "words": "Isaiah wrote that the healing you can't reach would come through someone",
+      "words": "Seven hundred years before the cross,",
       "passed": true,
-      "note": "clip carries a passing clip_qc sidecar (real look)"
+      "note": "scattered sheep + laden figure + far cross — Isa 53:6 echo"
     },
     {
       "order": 2,
@@ -23,47 +23,103 @@
       "section": "hook",
       "words": "\"But he was wounded for our transgressions,",
       "passed": true,
-      "note": "clip content QC'd full-res and in motion; matches its beat"
+      "note": "scourged Christ, welted back, reverent"
     },
     {
       "order": 3,
-      "scene_index": 7,
-      "section": "hook",
-      "words": "And the apostle Peter took up Isaiah's words and laid them on",
+      "scene_index": 5,
+      "section": "isaiah",
+      "words": "he was bruised for our iniquities...",
       "passed": true,
-      "note": "clip content QC'd full-res and in motion; matches its beat"
+      "note": "scourged Christ from behind, welted back — wounded for us"
     },
     {
       "order": 4,
-      "scene_index": 9,
-      "section": "hook",
-      "words": "\"Who his own self bare our sins in his own body on",
+      "scene_index": 16,
+      "section": "isaiah",
+      "words": "and with his stripes we are healed.\"",
       "passed": true,
-      "note": "clip content QC'd full-res and in motion; matches its beat"
+      "note": "Christ hung by the arms on the cross"
     },
     {
       "order": 5,
-      "scene_index": 13,
-      "section": "hook",
-      "words": "and points the promise straight at the one who's listening:",
+      "scene_index": 15,
+      "section": "bridge",
+      "words": "the welts of a flogging,",
       "passed": true,
-      "note": "clip carries a passing clip_qc sidecar (real look)"
+      "note": "clothed Christ on the cross, eclipse — the ninth hour"
     },
     {
       "order": 6,
-      "scene_index": 12,
-      "section": "hook",
-      "words": "it was finished at the cross,",
+      "scene_index": 18,
+      "section": "bridge",
+      "words": "the wounding Isaiah foresaw centuries before it fell on Jesus' back.",
       "passed": true,
-      "note": "clip carries a passing clip_qc sidecar (real look)"
+      "note": "thorn-crowned Christ crying out — the wounding that fell on Jesus"
     },
     {
       "order": 7,
-      "scene_index": 14,
-      "section": "hook",
-      "words": "He has already closed.",
+      "scene_index": 7,
+      "section": "bridge",
+      "words": "And the apostle Peter took up Isaiah's words and laid them on",
       "passed": true,
-      "note": "clip carries a passing clip_qc sidecar (real look)"
+      "note": "apostle hands holding a cross — laid it on Christ"
+    },
+    {
+      "order": 8,
+      "scene_index": 9,
+      "section": "bridge",
+      "words": "\"Who his own self bare our sins in his own body on",
+      "passed": true,
+      "note": "crucified Christ + mourners + yoke vignette — bare our sins"
+    },
+    {
+      "order": 9,
+      "scene_index": 11,
+      "section": "peter",
+      "words": "by whose stripes ye were healed.\"",
+      "passed": true,
+      "note": "Christ face turned to viewer — ye were healed"
+    },
+    {
+      "order": 10,
+      "scene_index": 17,
+      "section": "landing",
+      "words": "Peter writes \"ye were healed\" —",
+      "passed": true,
+      "note": "spent Christ face — poured out, ye were healed"
+    },
+    {
+      "order": 11,
+      "scene_index": 14,
+      "section": "landing",
+      "words": "You were never meant to make it right yourself.",
+      "passed": true,
+      "note": "man at peace, eased face — never meant to make it right yourself"
+    },
+    {
+      "order": 12,
+      "scene_index": 12,
+      "section": "landing",
+      "words": "it was finished at the cross,",
+      "passed": true,
+      "note": "Christ at the cross, light breaking — it was finished"
+    },
+    {
+      "order": 13,
+      "scene_index": 19,
+      "section": "landing",
+      "words": "The wound that keeps reopening,",
+      "passed": true,
+      "note": "Christ before the dawn cross — He has already closed it"
+    },
+    {
+      "order": 14,
+      "scene_index": 13,
+      "section": "landing",
+      "words": "Come to Him,",
+      "passed": true,
+      "note": "open scarred hands extended — Come to Him, receive it"
     }
   ],
   "reroll_scene_indices": [],

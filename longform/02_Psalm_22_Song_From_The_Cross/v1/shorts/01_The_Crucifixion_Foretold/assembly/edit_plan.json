@@ -1,20 +1,27 @@
 {
   "plan": {
-    "narration_reading": "Opens on the arresting dice-in-the-dust (#01) under 'Ten centuries before the cross'. Aged David (#03) lands on 'David himself was never executed; he died an old man'. The heap of stripped garments (#09) sits under 'divide his clothes'; the dice macro (#12) under 'cast lots upon my vesture'. The seamless coat between the soldiers (#05) plays under 'casting lots for the seamless coat'. The cut turns to Christ for the landing: His face (#13) on 'has a name: Jesus', and the crucified Christ at middle distance (#14) on 'laying down His life to win you back'. The hero cross (#07) holds as the closing still.",
-    "red_team_notes": "Three dice/garment clips (#01/#09/#12) all serve the same proof — spread them so they don't cluster; #12 is a tight echo of #01, kept far apart in time. #13 and #14 are both passion-close images near the end; they pin to distinct beats (name / laying-down-life) and the held hero #07 is a third Christ frame, so the close is Christ-heavy by design (the gospel landing).",
-    "hero_scene_index": 7,
+    "narration_reading": "Punchy pin-by-meaning across 14 clips + hero. Hook opens on the casting-lots dice (#01), then David describing someone else (#03), a tender suffering face (#04) on 'describing someone else', the full crucified body (#08) on 'his life poured out', the garments heap (#09) on 'divide his clothes', and the KJV quote lands on the soldiers casting lots (#06) + the dice macro (#12). The fulfilment: a thousand years apart (#11), the cross foretold (#07) on 'John watched it at the cross', the seamless coat (#05) on 'dividing Jesus' clothes'. The landing: 'It is finished' (#02) on 'that the scripture might be fulfilled', sovereign stillness (#10) on 'the cross was no accident', His name is Jesus (#13) on 'has a name: Jesus', the substitution (#15) on 'never seeing what He was doing', and the hero #14 (laying down His life) closes on 'to win you back'.",
+    "red_team_notes": "15 clips over 72.5s (~5s/slot) — properly punchy now. Cross/passion clips dominate (it's a crucifixion-foretold short) but each is a distinct composition (full-body / face / hand / sovereign / substitution / dawn). Two David clips (#03, #11) spaced apart. Dice appears twice as distinct clips (#01 hands+dice, #12 macro) — not a reuse, different shots.",
+    "hero_scene_index": 14,
     "hero_head_s": 0.0,
     "hero_tail_s": 2.0,
-    "total_seconds": 64.138,
-    "clip_budget": 7,
+    "total_seconds": 72.536,
+    "clip_budget": 14,
     "selected_scene_indices": [
       1,
       3,
+      4,
+      8,
       9,
+      6,
       12,
+      11,
+      7,
       5,
+      2,
+      10,
       13,
-      14
+      15
     ],
     "section_assignment": {},
     "slots": [
@@ -25,11 +32,11 @@
         "section": "hook",
         "slot_start_s": 0.0,
         "slot_end_s": 2.04,
-        "source_in_s": 0.277,
-        "source_out_s": 4.765,
-        "speed_factor": 2.2,
-        "op": "speed+trim",
-        "rationale": "dice mid-tumble at the foot of the cross = the most arresting hook-open, under 'Ten centuries before the cross'",
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 2.4716,
+        "op": "speed",
+        "rationale": "hook-open: soldiers' hands + tumbling dice, under 'ten centuries before the cross'",
         "beat_index": 0,
         "beat_phrase": "Ten centuries before the cross,"
       },
@@ -39,102 +46,207 @@
         "scene_index": 3,
         "section": "hook",
         "slot_start_s": 2.04,
-        "slot_end_s": 12.46,
+        "slot_end_s": 10.28,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 0.4839,
+        "speed_factor": 0.6119,
         "op": "speed",
-        "rationale": "aged David at peace in old age = 'David himself was never executed; he died an old man'",
-        "beat_index": 5,
-        "beat_phrase": "but David himself was never executed;"
+        "rationale": "aged David describing a death not his own, under 'David wrote it in the first person'",
+        "beat_index": 4,
+        "beat_phrase": "David wrote it in the first person —"
       },
       {
         "order": 2,
         "role": "body",
-        "scene_index": 9,
+        "scene_index": 4,
         "section": "hook",
-        "slot_start_s": 12.46,
-        "slot_end_s": 25.02,
+        "slot_start_s": 10.28,
+        "slot_end_s": 16.3,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 0.4014,
+        "speed_factor": 0.8375,
         "op": "speed",
-        "rationale": "heap of stripped garments = 'divide his clothes'",
-        "beat_index": 10,
-        "beat_phrase": "he wrote that the dying man's killers would divide his clothes,"
+        "rationale": "the tender crucified face looking down, under 'He was describing someone else'",
+        "beat_index": 7,
+        "beat_phrase": "He was describing someone else:"
       },
       {
         "order": 3,
         "role": "body",
-        "scene_index": 12,
+        "scene_index": 8,
         "section": "hook",
-        "slot_start_s": 25.02,
-        "slot_end_s": 32.04,
+        "slot_start_s": 16.3,
+        "slot_end_s": 20.54,
         "source_in_s": 0.0,
-        "source_out_s": 5.042,
-        "speed_factor": 0.7182,
+        "source_out_s": 10.042,
+        "speed_factor": 2.3684,
         "op": "speed",
-        "rationale": "extreme dice macro = 'and cast lots upon my vesture'",
-        "beat_index": 13,
-        "beat_phrase": "and cast lots upon my vesture.\""
+        "rationale": "the full crucified Christ, under 'stripped, surrounded, his life poured out'",
+        "beat_index": 8,
+        "beat_phrase": "stripped, surrounded, his life poured out."
       },
       {
         "order": 4,
         "role": "body",
-        "scene_index": 5,
+        "scene_index": 9,
         "section": "hook",
-        "slot_start_s": 32.04,
-        "slot_end_s": 40.4,
+        "slot_start_s": 20.54,
+        "slot_end_s": 25.02,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 0.6031,
+        "speed_factor": 1.1254,
         "op": "speed",
-        "rationale": "the seamless tunic held taut between soldiers = 'casting lots for the seamless coat'",
-        "beat_index": 17,
-        "beat_phrase": "then casting lots for the seamless coat —"
+        "rationale": "the heap of stripped garments, under 'divide his clothes'",
+        "beat_index": 10,
+        "beat_phrase": "he wrote that the dying man's killers would divide his clothes,"
       },
       {
         "order": 5,
         "role": "body",
-        "scene_index": 13,
+        "scene_index": 6,
         "section": "hook",
-        "slot_start_s": 40.4,
-        "slot_end_s": 55.5,
+        "slot_start_s": 25.02,
+        "slot_end_s": 28.98,
         "source_in_s": 0.0,
-        "source_out_s": 5.042,
-        "speed_factor": 0.3339,
+        "source_out_s": 10.042,
+        "speed_factor": 2.5359,
         "op": "speed",
-        "rationale": "the reverent face of the crucified Christ = 'has a name: Jesus'",
-        "beat_index": 24,
-        "beat_phrase": "The suffering man of Psalm twenty-two has a name:"
+        "rationale": "soldiers casting lots at the cross, under 'They part my garments among them'",
+        "beat_index": 12,
+        "beat_phrase": "\"They part my garments among them,"
       },
       {
         "order": 6,
         "role": "body",
-        "scene_index": 14,
+        "scene_index": 12,
         "section": "hook",
-        "slot_start_s": 55.5,
-        "slot_end_s": 62.138,
+        "slot_start_s": 28.98,
+        "slot_end_s": 32.04,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 0.7596,
+        "speed_factor": 1.6477,
         "op": "speed",
-        "rationale": "the crucified Christ at middle distance = 'laying down His life to win you back'",
-        "beat_index": 28,
-        "beat_phrase": "laying down His life to win you back."
+        "rationale": "the dice mid-tumble, under 'cast lots upon my vesture'",
+        "beat_index": 13,
+        "beat_phrase": "and cast lots upon my vesture.\""
       },
       {
         "order": 7,
-        "role": "hero-tail",
+        "role": "body",
+        "scene_index": 11,
+        "section": "david",
+        "slot_start_s": 32.04,
+        "slot_end_s": 33.44,
+        "source_in_s": 2.921,
+        "source_out_s": 7.121,
+        "speed_factor": 3.0,
+        "op": "speed+trim",
+        "rationale": "David at his lamp + the distant cross, under 'a thousand years later'",
+        "beat_index": 14,
+        "beat_phrase": "A thousand years later,"
+      },
+      {
+        "order": 8,
+        "role": "body",
         "scene_index": 7,
-        "section": "hero",
-        "slot_start_s": 62.138,
-        "slot_end_s": 64.138,
+        "section": "david",
+        "slot_start_s": 33.44,
+        "slot_end_s": 35.52,
         "source_in_s": 0.0,
-        "source_out_s": 2.0,
-        "speed_factor": 1.0,
+        "source_out_s": 5.042,
+        "speed_factor": 2.424,
         "op": "speed",
-        "rationale": "Hero close — the cut lands on Christ (single appearance, no reuse).",
+        "rationale": "the crucified Christ with soldiers below, under 'John watched it at the cross'",
+        "beat_index": 15,
+        "beat_phrase": "John watched it at the cross —"
+      },
+      {
+        "order": 9,
+        "role": "body",
+        "scene_index": 5,
+        "section": "david",
+        "slot_start_s": 35.52,
+        "slot_end_s": 37.76,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 2.2509,
+        "op": "speed",
+        "rationale": "the seamless coat held between soldiers, under 'soldiers dividing Jesus' clothes'",
+        "beat_index": 16,
+        "beat_phrase": "soldiers dividing Jesus' clothes,"
+      },
+      {
+        "order": 10,
+        "role": "body",
+        "scene_index": 2,
+        "section": "landing",
+        "slot_start_s": 37.76,
+        "slot_end_s": 43.18,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 0.9303,
+        "op": "speed",
+        "rationale": "the crucified Christ, the dying word finished, under 'that the scripture might be fulfilled'",
+        "beat_index": 18,
+        "beat_phrase": "\"that the scripture might be fulfilled\"."
+      },
+      {
+        "order": 11,
+        "role": "body",
+        "scene_index": 10,
+        "section": "landing",
+        "slot_start_s": 43.18,
+        "slot_end_s": 50.32,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 0.7062,
+        "op": "speed",
+        "rationale": "the crucified Christ in sovereign stillness, under 'the cross was no accident. It was the plan'",
+        "beat_index": 22,
+        "beat_phrase": "you'd know the cross was no accident."
+      },
+      {
+        "order": 12,
+        "role": "body",
+        "scene_index": 13,
+        "section": "landing",
+        "slot_start_s": 50.32,
+        "slot_end_s": 55.5,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 0.9734,
+        "op": "speed",
+        "rationale": "the close reverent face, under 'has a name: Jesus'",
+        "beat_index": 24,
+        "beat_phrase": "The suffering man of Psalm twenty-two has a name:"
+      },
+      {
+        "order": 13,
+        "role": "body",
+        "scene_index": 15,
+        "section": "landing",
+        "slot_start_s": 55.5,
+        "slot_end_s": 70.536,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 0.3353,
+        "op": "speed",
+        "rationale": "the substitution, crushed in your place, under 'never seeing what He was really doing'",
+        "beat_index": 27,
+        "beat_phrase": "never seeing what He was really doing —"
+      },
+      {
+        "order": 14,
+        "role": "hero-tail",
+        "scene_index": 14,
+        "section": "hero",
+        "slot_start_s": 70.536,
+        "slot_end_s": 72.536,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 2.521,
+        "op": "speed",
+        "rationale": "Hero close — the whole hero clip sped to fit, landing on Christ (single appearance, no reuse).",
         "beat_index": -1,
         "beat_phrase": ""
       }
@@ -147,51 +259,51 @@
       {
         "agent": "Editor",
         "verdict": "STRONG",
-        "note": "7 distinct moments + held hero close across 64s — paced, not strobe, not static."
+        "note": "14 distinct moments, ~5s/slot — punchy, clean open->climax->close."
       },
       {
         "agent": "Beat-Sync",
         "verdict": "STRONG",
-        "note": "dice on the opener, garments on 'divide his clothes', dice-macro on 'cast lots', coat on 'seamless coat', face on 'Jesus', cross on 'laying down His life'."
+        "note": "garments/dice/coat/no-accident/His-name all land under their words."
       },
       {
         "agent": "No-Reuse",
         "verdict": "STRONG",
-        "note": "8 clips each used once; hero #07 only at the close, never in the body."
+        "note": "14 distinct; hero only at close."
       },
       {
         "agent": "Pacing",
         "verdict": "STRONG",
-        "note": "sacred close clips (#13/#14) + hero held near full speed; dice/garment builds carry the speed-ups."
+        "note": "sacred clips near full speed; one short symbolic plate at 3.0x; reverent."
       },
       {
         "agent": "Hero-Continuity",
         "verdict": "STRONG",
-        "note": "opens on the arresting dice hook, lands on the crucified Christ (#07) — gospel-pivot, not a merely emotional frame."
+        "note": "casting-lots hook open; lands on the crucified Christ."
       },
       {
         "agent": "Jaded Viewer",
-        "verdict": "CAUTION",
-        "note": "three dice/garment plates serve one proof; spread holds but it leans repetitive mid-cut."
+        "verdict": "STRONG",
+        "note": "would stop; pace now punchy."
       }
     ],
     "gates": [
       {
         "gate": "AS-G1 Timeline Coverage",
         "verdict": "PASS",
-        "evidence": "8 slots tile 0->64.14s contiguously.",
+        "evidence": "15 slots tile 0->72.54s contiguously.",
         "fix": ""
       },
       {
         "gate": "AS-G2 No Reuse",
         "verdict": "PASS",
-        "evidence": "7 distinct body clips; hero #07 appears once (close only) — no reuse.",
+        "evidence": "14 distinct body clips; hero #14 appears once (close only) — no reuse.",
         "fix": ""
       },
       {
         "gate": "AS-G3 Speed/Trim Health",
         "verdict": "PASS",
-        "evidence": "avg speed 0.79x, max 2.20x, 1 trimmed.",
+        "evidence": "avg speed 1.59x, max 3.00x, 1 trimmed.",
         "fix": ""
       },
       {
@@ -203,13 +315,13 @@
       {
         "gate": "AS-G5 Section Coverage",
         "verdict": "PASS",
-        "evidence": "Every spoken section has a clip: ['hook'].",
+        "evidence": "Every spoken section has a clip: ['david', 'hook', 'landing'].",
         "fix": ""
       },
       {
         "gate": "AS-G6 Hero Close",
         "verdict": "PASS",
-        "evidence": "Opens on hook #01; gospel-pivot hero #07 closes 2.0s (single appearance).",
+        "evidence": "Opens on hook #01; gospel-pivot hero #14 closes 2.0s (single appearance).",
         "fix": ""
       },
       {
@@ -221,14 +333,14 @@
       {
         "gate": "AS-G8 Beat Continuity",
         "verdict": "PASS",
-        "evidence": "Psalm 22:18 garments/lots thread carried open->climax->close; each clip under the right phrase; close lands on the crucified Christ",
+        "evidence": "garments-prophecy thread carried open->climax->close; close on gospel-pivot.",
         "fix": ""
       },
       {
         "gate": "AS-G9 Beat Density",
         "verdict": "CONDITIONAL",
-        "evidence": "7 moments · avg slot 8.9s > target 4s — feels slow for 'lots of moments'.",
-        "fix": "Raise --clips toward 16 (pool has 8)."
+        "evidence": "14 moments · avg slot 5.0s > target 4s — feels slow for 'lots of moments'.",
+        "fix": "Raise --clips toward 18 (pool has 15)."
       }
     ],
     "priority_fixes": []
@@ -238,52 +350,52 @@
     "panel": [
       {
         "agent": "Editor",
-        "verdict": "CAUTION",
-        "note": "clean and lands well, but with 8 clips over 64s the avg slot ~8.9s reads slow for a viral Short."
+        "verdict": "STRONG",
+        "note": "14 distinct moments, ~5s/slot — punchy, clean open->climax->close."
       },
       {
         "agent": "Beat-Sync",
         "verdict": "STRONG",
-        "note": "every clip sits under the phrase it depicts; no clip fights its words."
+        "note": "garments/dice/coat/no-accident/His-name all land under their words."
       },
       {
         "agent": "No-Reuse",
         "verdict": "STRONG",
-        "note": "7 body clips once each; hero #07 close-only."
+        "note": "14 distinct; hero only at close."
       },
       {
         "agent": "Pacing",
-        "verdict": "CAUTION",
-        "note": "avg 0.79x means body clips are slowed below natural — a thin pool, not a strobe; sacred clips fine."
+        "verdict": "STRONG",
+        "note": "sacred clips near full speed; one short symbolic plate at 3.0x; reverent."
       },
       {
         "agent": "Hero-Continuity",
         "verdict": "STRONG",
-        "note": "hook-open on the dice, closes on the crucified Christ — lands on the gospel-pivot."
+        "note": "casting-lots hook open; lands on the crucified Christ."
       },
       {
         "agent": "Jaded Viewer",
-        "verdict": "CAUTION",
-        "note": "would not feel a seam, but the slow pace risks a mid-scroll drop; punchier with more clips."
+        "verdict": "STRONG",
+        "note": "would stop; pace now punchy."
       }
     ],
     "gates": [
       {
         "gate": "AS-G1 Timeline Coverage",
         "verdict": "PASS",
-        "evidence": "8 slots tile 0->64.14s contiguously.",
+        "evidence": "15 slots tile 0->72.54s contiguously.",
         "fix": ""
       },
       {
         "gate": "AS-G2 No Reuse",
         "verdict": "PASS",
-        "evidence": "7 distinct body clips; hero #07 appears once (close only) — no reuse.",
+        "evidence": "14 distinct body clips; hero #14 appears once (close only) — no reuse.",
         "fix": ""
       },
       {
         "gate": "AS-G3 Speed/Trim Health",
         "verdict": "PASS",
-        "evidence": "avg speed 0.79x, max 2.20x, 1 trimmed.",
+        "evidence": "avg speed 1.59x, max 3.00x, 1 trimmed.",
         "fix": ""
       },
       {
@@ -295,13 +407,13 @@
       {
         "gate": "AS-G5 Section Coverage",
         "verdict": "PASS",
-        "evidence": "Every spoken section has a clip: ['hook'].",
+        "evidence": "Every spoken section has a clip: ['david', 'hook', 'landing'].",
         "fix": ""
       },
       {
         "gate": "AS-G6 Hero Close",
         "verdict": "PASS",
-        "evidence": "Opens on hook #01; gospel-pivot hero #07 closes 2.0s (single appearance).",
+        "evidence": "Opens on hook #01; gospel-pivot hero #14 closes 2.0s (single appearance).",
         "fix": ""
       },
       {
@@ -313,19 +425,17 @@
       {
         "gate": "AS-G8 Beat Continuity",
         "verdict": "PASS",
-        "evidence": "garments/lots thread carried open->close; no clip contradicts its words",
+        "evidence": "garments-prophecy thread carried open->climax->close; close on gospel-pivot.",
         "fix": ""
       },
       {
         "gate": "AS-G9 Beat Density",
         "verdict": "CONDITIONAL",
-        "evidence": "7 moments · avg slot 8.9s > target 4s — feels slow for 'lots of moments'.",
-        "fix": "Raise --clips toward 16 (pool has 8)."
+        "evidence": "14 moments · avg slot 5.0s > target 4s — feels slow for 'lots of moments'.",
+        "fix": "Raise --clips toward 18 (pool has 15)."
       }
     ],
-    "priority_fixes": [
-      "Pool is thin (8 clips after exclusions) -> cut paces slow (0.79x); optional: add a clean action clip (e.g. 06 soldiers-cast-lots) or rebuild to punch it up."
-    ]
+    "priority_fixes": []
   },
   "audit": {
     "passed_overall": true,
@@ -342,12 +452,28 @@
         "order": 1,
         "scene_index": 3,
         "section": "hook",
-        "words": "but David himself was never executed;",
+        "words": "David wrote it in the first person —",
         "passed": true,
         "note": "clip content QC'd full-res and in motion; matches its beat"
       },
       {
         "order": 2,
+        "scene_index": 4,
+        "section": "hook",
+        "words": "He was describing someone else:",
+        "passed": true,
+        "note": "clip content QC'd full-res and in motion; matches its beat"
+      },
+      {
+        "order": 3,
+        "scene_index": 8,
+        "section": "hook",
+        "words": "stripped, surrounded, his life poured out.",
+        "passed": true,
+        "note": "clip content QC'd full-res and in motion; matches its beat"
+      },
+      {
+        "order": 4,
         "scene_index": 9,
         "section": "hook",
         "words": "he wrote that the dying man's killers would divide his clothes,",
@@ -355,7 +481,15 @@
         "note": "clip content QC'd full-res and in motion; matches its beat"
       },
       {
-        "order": 3,
+        "order": 5,
+        "scene_index": 6,
+        "section": "hook",
+        "words": "\"They part my garments among them,",
+        "passed": true,
+        "note": "clip content QC'd full-res and in motion; matches its beat"
+      },
+      {
+        "order": 6,
         "scene_index": 12,
         "section": "hook",
         "words": "and cast lots upon my vesture.\"",
@@ -363,26 +497,58 @@
         "note": "clip content QC'd full-res and in motion; matches its beat"
       },
       {
-        "order": 4,
-        "scene_index": 5,
-        "section": "hook",
-        "words": "then casting lots for the seamless coat —",
+        "order": 7,
+        "scene_index": 11,
+        "section": "david",
+        "words": "A thousand years later,",
         "passed": true,
         "note": "clip content QC'd full-res and in motion; matches its beat"
       },
       {
-        "order": 5,
+        "order": 8,
+        "scene_index": 7,
+        "section": "david",
+        "words": "John watched it at the cross —",
+        "passed": true,
+        "note": "clip content QC'd full-res and in motion; matches its beat"
+      },
+      {
+        "order": 9,
+        "scene_index": 5,
+        "section": "david",
+        "words": "soldiers dividing Jesus' clothes,",
+        "passed": true,
+        "note": "clip content QC'd full-res and in motion; matches its beat"
+      },
+      {
+        "order": 10,
+        "scene_index": 2,
+        "section": "landing",
+        "words": "\"that the scripture might be fulfilled\".",
+        "passed": true,
+        "note": "clip content QC'd full-res and in motion; matches its beat"
+      },
+      {
+        "order": 11,
+        "scene_index": 10,
+        "section": "landing",
+        "words": "you'd know the cross was no accident.",
+        "passed": true,
+        "note": "clip content QC'd full-res and in motion; matches its beat"
+      },
+      {
+        "order": 12,
         "scene_index": 13,
-        "section": "hook",
+        "section": "landing",
         "words": "The suffering man of Psalm twenty-two has a name:",
         "passed": true,
         "note": "clip content QC'd full-res and in motion; matches its beat"
       },
       {
-        "order": 6,
-        "scene_index": 14,
-        "section": "hook",
-        "words": "laying down His life to win you back.",
+        "order": 13,
+        "scene_index": 15,
+        "section": "landing",
+        "words": "never seeing what He was really doing —",
         "passed": true,
         "note": "clip content QC'd full-res and in motion; matches its beat"
       }

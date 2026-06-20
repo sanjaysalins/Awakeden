@@ -19,13 +19,13 @@ The crowd mocking Jesus at the cross was reading from a script — they just did
 **[narrator]**
 A thousand years before, Psalm twenty-two recorded how the Messiah would be mocked — the gestures, and the words.
 
-**[narrator — KJV, Psalm 22:7-8]**
+**[david — KJV, Psalm 22:7-8]**
 "...they shake the head, saying, He trusted on the LORD that he would deliver him: let him deliver him..."
 
 **[narrator]**
 At the cross, Matthew's gospel records it — the passers-by wagging their heads, the rulers sneering nearly line for line:
 
-**[narrator — KJV, Matthew 27:43]**
+**[mocker — KJV, Matthew 27:43]**
 "He trusted in God; let him deliver him now... for he said, I am the Son of God."
 
 **[narrator]**
@@ -55,4 +55,6 @@ The man they mocked is the One the whole song was about. They told the King to c
   beyond the text (e.g. no asserting any individual mocker's later conversion).
 
 ## VOICE PLAN
-- `narrator` only (all quoted Scripture is OT psalm + the mockers' recorded words, narrator-voiced per the attribution rule).
+- Multi-voice (3): `narrator` + `david` (Psalm 22:7-8, the prophesied taunt) + `mocker` (Matthew 27:43,
+  the taunt fulfilled at the cross, `[mocking]` delivery). The contrast — the same words prophesied vs
+  jeered — is the point. Matches shipped #02's voicing.

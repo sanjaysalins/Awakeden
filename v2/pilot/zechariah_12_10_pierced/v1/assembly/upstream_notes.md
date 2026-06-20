@@ -5,7 +5,12 @@ stages so the next episode's clips drop into the cut with less fighting.
 
 ## What was hard to fit this run
 
-- (nothing fought the cut — clips fit cleanly.)
+- **#08 They Look And Mourn** — needed 3.00x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
+- **#04 The Wounded One** — needed 2.29x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
+
+## Short single-clip windows that want a dedicated insert
+
+- Section **john** is only 2.2s and holds one clip (#04 The Wounded One). Plan a purpose-built ~2s INSERT scene (a single macro detail) for this beat instead of squeezing a 10s clip.
 
 ## Standing 'design for the cut' rules
 

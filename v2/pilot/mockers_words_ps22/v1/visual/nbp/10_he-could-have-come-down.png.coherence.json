@@ -1,18 +1,12 @@
 {
  "audited": true,
  "passed": true,
- "png_sha256": "243bc143c501253749b8458ed23b47f2daed356767fb5669437a5acd3070fba8",
+ "png_sha256": "d97931bfc19298e6d92de917149aada1875135b9e04dcc0084378d407d44133a",
  "n_votes": 1,
  "split": false,
  "failed_dims": [],
  "passes": {},
  "fail_reasons": [],
- "votes": [
-  {
-   "passed": true,
-   "dims_failed": [],
-   "reasons": []
-  }
- ],
- "note": "ensemble of 1 vote(s), any-fail"
+ "votes": [],
+ "note": "copied coherence verdict from 11_he-chose-to-stay.png"
 }

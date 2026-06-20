@@ -268,10 +268,10 @@
         "jesus_variant": "passion",
         "priority": 4,
         "macro_elements": [
-          "the turned eyes",
-          "the thorn-marked brow",
-          "light on one cheek",
-          "the dark beam behind"
+          "the crucified Christ's face lifted to a dark sky",
+          "the open, crying mouth",
+          "anguished eyes searching the dark",
+          "the crown of thorns on the brow"
         ],
         "vignettes": [],
         "pacing": "slower",
@@ -305,6 +305,110 @@
         "viral_role": "close",
         "shot_kind": "standard",
         "reuse_source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/12_finished-at-the-cross.mp4"
+      },
+      {
+        "index": 12,
+        "slug": "the-ninth-hour",
+        "title": "The Ninth Hour",
+        "scene_type": "single",
+        "arc_position": "proof",
+        "framing": "mid",
+        "purpose": "backfill for punch (reuse)",
+        "rationale": "reuse-backfill",
+        "visible_elements": "the crucified Christ under a darkened sky",
+        "emotional_tone": "reverent",
+        "subject_block": "the crucified Christ under a darkened sky",
+        "mood_block": "atmosphere of the pierced One and grace",
+        "jesus_variant": "passion",
+        "priority": 3,
+        "macro_elements": [
+          "the full crucified figure on the cross, arms outstretched",
+          "the upturned anguished face",
+          "the nailed hand bound at the crossbeam",
+          "the eclipse ring of light in the dark sky"
+        ],
+        "pacing": "faster",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 13,
+        "slug": "it-is-finished",
+        "title": "It Is Finished",
+        "scene_type": "single",
+        "arc_position": "proof",
+        "framing": "mid",
+        "purpose": "backfill for punch (reuse)",
+        "rationale": "reuse-backfill",
+        "visible_elements": "dawn light breaking, the finished work",
+        "emotional_tone": "reverent",
+        "subject_block": "dawn light breaking, the finished work",
+        "mood_block": "atmosphere of the pierced One and grace",
+        "jesus_variant": "passion",
+        "priority": 3,
+        "macro_elements": [
+          "the cross",
+          "the pierced body",
+          "the light",
+          "the sky"
+        ],
+        "pacing": "faster",
+        "viral_role": "close",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 14,
+        "slug": "crushed-in-your-place",
+        "title": "Crushed In Your Place",
+        "scene_type": "single",
+        "arc_position": "proof",
+        "framing": "mid",
+        "purpose": "backfill for punch (reuse)",
+        "rationale": "reuse-backfill",
+        "visible_elements": "the crucified Christ above a freed man, broken chains",
+        "emotional_tone": "reverent",
+        "subject_block": "the crucified Christ above a freed man, broken chains",
+        "mood_block": "atmosphere of the pierced One and grace",
+        "jesus_variant": "passion",
+        "priority": 3,
+        "macro_elements": [
+          "the cross",
+          "the pierced body",
+          "the light",
+          "the sky"
+        ],
+        "pacing": "faster",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 15,
+        "slug": "room-to-turn",
+        "title": "Room To Turn",
+        "scene_type": "single",
+        "arc_position": "proof",
+        "framing": "mid",
+        "purpose": "backfill for punch (reuse)",
+        "rationale": "reuse-backfill",
+        "visible_elements": "the cross at dawn with a path winding toward it",
+        "emotional_tone": "reverent",
+        "subject_block": "the cross at dawn with a path winding toward it",
+        "mood_block": "atmosphere of the pierced One and grace",
+        "jesus_variant": "passion",
+        "priority": 3,
+        "macro_elements": [
+          "the cross",
+          "the pierced body",
+          "the light",
+          "the sky"
+        ],
+        "pacing": "faster",
+        "viral_role": "close",
+        "shot_kind": "standard",
+        "vignettes": []
       }
     ],
     "short_priority": [
@@ -315,7 +419,11 @@
       10,
       11,
       8,
-      9
+      9,
+      12,
+      13,
+      14,
+      15
     ],
     "hero_candidate": 5,
     "rationale": "Hero = the cross (5). Reused 7 thread-neutral passion plates; generated only the 4 Zech-specific scenes.",

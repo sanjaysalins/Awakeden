@@ -1,0 +1,48 @@
+
+########################################################################
+#  LLM_PROVIDER=agent  — engine LLM calls route to the in-chat agent
+#  (Claude Code / Max subscription) via the file bridge. NO metered API.
+#  bridge dir : C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge
+#  RUN ME IN THE BACKGROUND and service requests from chat:
+#    new requests appear in   C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\requests
+#    write each reply to      C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\responses/<id>.txt
+#  For an unattended run with the metered API instead: set LLM_PROVIDER=api
+########################################################################
+
+[image-to-kling] 1 image(s) 
+
+[1/1] 05_of-whom-speaketh-the-prophet.png
+   generating cut plan...
+
+========================================================================
+  AGENT-BRIDGE REQUEST 0001_07459f  [vision]  kling-director:05_of-whom-speaketh-the-prophet.png
+  prompt : C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\requests\0001_07459f.request.md
+  image  : C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\images\0001_07459f.jpg
+  REPLY  -> write the raw model output to: C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\responses\0001_07459f.txt
+  (engine is blocked, polling every 1.5s up to 3600s)
+========================================================================
+
+  …still waiting on agent reply for 0001_07459f (kling-director:05_of-whom-speaketh-the-prophet.png)
+     saved: prompt=1259 beats=7
+   auditing cut plan against source...
+
+========================================================================
+  AGENT-BRIDGE REQUEST 0002_d5b3ba  [vision]  kling-audit:05_of-whom-speaketh-the-prophet.png
+  prompt : C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\requests\0002_d5b3ba.request.md
+  image  : C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\images\0002_d5b3ba.jpg
+  REPLY  -> write the raw model output to: C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\responses\0002_d5b3ba.txt
+  (engine is blocked, polling every 1.5s up to 3600s)
+========================================================================
+
+  …still waiting on agent reply for 0002_d5b3ba (kling-audit:05_of-whom-speaketh-the-prophet.png)
+     audit: passed=True issues=0
+   submitting to Kling...
+     submitting Kling task...
+     task_id=897399332939370553, polling...
+   [task 897399332939...] status=submitted
+   [task 897399332939...] status=processing
+   [task 897399332939...] status=succeed
+     downloading https://v16-kling-fdl.klingai.com/bs2/upload-ylab-stunt-sgp/...
+     saved: 05_of-whom-speaketh-the-prophet.mp4
+
+done

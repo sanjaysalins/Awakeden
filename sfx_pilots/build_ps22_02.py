@@ -19,12 +19,12 @@ CUT = Path(r"C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\02_Psalm_2
 OUT = CUT.with_name("viral_cut_sfx.mp4")
 
 LAYERS = [
-    layer("hollow", "air_hollow_desolate",  "loop",    0.0, 60.0, -35.0, fout=3.0),                          # hollow base
-    layer("jeer",   "crowd_murmur_distant", "loop",    0.0, 30.0, -35.0, filt="lowpass=f=2000", fout=3.0),   # the mocking through the first half
-    layer("taunt1", "crowd_shout_mob",      "oneshot",24.0,  4.5, -30.0, filt="lowpass=f=1800"),             # passers-by wagging / leaders jeering (24.2)
-    layer("taunt2", "crowd_shout_mob",      "oneshot",38.0,  2.5, -31.0, filt="lowpass=f=1800"),             # 'let him deliver him', they sneered (39.7)
-    layer("weight", "rumble_deep_sub",      "loop",   40.5,  9.0, -38.0, filt="lowpass=f=600", fin=3.0, fout=4.0),  # he wasn't delivered
-    layer("love",   "dawn_morning_warm",    "loop",   53.0,  7.0, -33.0, filt="lowpass=f=3000", fin=3.0),    # it was love / chose to stay with you
+    layer("hollow", "air_hollow_desolate",  "loop",    0.0, 65.0, -35.0, fout=3.0),                          # hollow base
+    layer("jeer",   "crowd_murmur_distant", "loop",    0.0, 32.0, -35.0, filt="lowpass=f=2000", fout=3.0),   # the mocking through the first half
+    layer("taunt1", "crowd_shout_mob",      "oneshot",24.5,  5.0, -30.0, filt="lowpass=f=1800"),             # wagging/jeering + the live taunt (P11-P14, 24-31)
+    layer("taunt2", "crowd_shout_mob",      "oneshot",38.3,  2.5, -31.0, filt="lowpass=f=1800"),             # 'let him deliver him', they sneered (P18 38.0)
+    layer("weight", "rumble_deep_sub",      "loop",   41.0,  9.0, -38.0, filt="lowpass=f=600", fin=3.0, fout=4.0),  # he wasn't delivered (41-50)
+    layer("love",   "dawn_morning_warm",    "loop",   53.5, 11.5, -33.0, filt="lowpass=f=3000", fin=3.0),    # it was love / chose to stay with you (53.5-65)
 ]
 
 if __name__ == "__main__":

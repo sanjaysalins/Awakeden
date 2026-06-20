@@ -1,0 +1,68 @@
+{
+  "short": "v1",
+  "clips": 10,
+  "status": "in-progress",
+  "fails": [],
+  "rows": [
+    {
+      "scene": 1,
+      "clip": "01_the-wound-that-wont-close",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 3,
+      "clip": "03_wounded-for-our-transgressions",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 5,
+      "clip": "05_by-whose-stripes",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 6,
+      "clip": "06_in-his-own-body-on-the-tree",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 7,
+      "clip": "07_the-apostle-lays-it-on-christ",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 8,
+      "clip": "08_all-we-like-sheep",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 9,
+      "clip": "09_he-bare-our-sins",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 12,
+      "clip": "12_finished-at-the-cross",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 13,
+      "clip": "13_come-and-receive",
+      "state": "UNSWEPT",
+      "foreign": []
+    },
+    {
+      "scene": 14,
+      "clip": "14_the-wound-he-closed",
+      "state": "UNSWEPT",
+      "foreign": []
+    }
+  ]
+}

@@ -22,8 +22,7 @@ LAYERS = [
     layer("scorn",  "crowd_shout_mob",     "loop",    0.0, 20.0, -33.0, filt="lowpass=f=3200", fin=1.5, fout=5.0),  # the mockery
     layer("murmur", "crowd_murmur_distant","loop",   18.0, 22.0, -35.0, filt="lowpass=f=2800", fin=3.0, fout=4.0),  # the recited taunt
     layer("weight", "rumble_deep_sub",     "loop",   12.0, 16.0, -38.0, filt="lowpass=f=600", fin=3.0, fout=4.0),   # the enduring Christ
-    layer("shofar", "shofar_blast",        "oneshot",45.4,  4.0, -28.0, filt="lowpass=f=2600"),                     # He could have come down (held power)
-    layer("grace",  "score_reverent_grace","loop",   55.0, 15.0, -34.0, fin=3.0, fout=4.0),                          # the King who stayed
+    layer("grace",  "score_reverent_grace","loop",   55.0, 14.0, -34.0, fin=3.0, fout=4.0),                          # the King who stayed (shofar dropped — user disliked it on #06)
     layer("dawn",   "dawn_morning_warm",   "loop",   62.0,  8.0, -33.0, filt="lowpass=f=3200", fin=3.0),            # come to Him
 ]
 

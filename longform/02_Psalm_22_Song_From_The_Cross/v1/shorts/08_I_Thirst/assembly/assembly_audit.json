@@ -7,87 +7,103 @@
       "section": "hook",
       "words": "The One who made every ocean gasped two words on a cross:",
       "passed": true,
-      "note": "clip carries a passing clip_qc sidecar (real look)"
+      "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
       "order": 1,
-      "scene_index": 3,
+      "scene_index": 2,
       "section": "hook",
-      "words": "\"My strength is dried up like a potsherd;",
+      "words": "Psalm twenty-two.",
       "passed": true,
-      "note": "clip carries a passing clip_qc sidecar (real look)"
+      "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
       "order": 2,
-      "scene_index": 4,
+      "scene_index": 7,
       "section": "hook",
-      "words": "and my tongue cleaveth to my jaws;",
+      "words": "but he was picturing someone else's death.",
       "passed": true,
-      "note": "clip carries a passing clip_qc sidecar (real look)"
+      "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
       "order": 3,
-      "scene_index": 5,
-      "section": "hook",
-      "words": "and thou hast brought me into the dust of death.\"",
+      "scene_index": 3,
+      "section": "david",
+      "words": "\"My strength is dried up like a potsherd;",
       "passed": true,
-      "note": "clip carries a passing clip_qc sidecar (real look)"
+      "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
       "order": 4,
-      "scene_index": 6,
-      "section": "hook",
-      "words": "Then John records the dying Jesus' cry:",
+      "scene_index": 4,
+      "section": "david",
+      "words": "and my tongue cleaveth to my jaws;",
       "passed": true,
-      "note": "clip carries a passing clip_qc sidecar (real look)"
+      "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
       "order": 5,
-      "scene_index": 8,
-      "section": "hook",
-      "words": "the One who made every river and spring,",
+      "scene_index": 5,
+      "section": "bridge",
+      "words": "a man sinking into the dust of death.",
       "passed": true,
-      "note": "clip carries a passing clip_qc sidecar (real look)"
+      "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
       "order": 6,
-      "scene_index": 9,
-      "section": "hook",
-      "words": "who offers the world living water —",
+      "scene_index": 6,
+      "section": "quote",
+      "words": "Psalm twenty-two doesn't foretell that cry —",
       "passed": true,
-      "note": "clip carries a passing clip_qc sidecar (real look)"
+      "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
       "order": 7,
-      "scene_index": 10,
-      "section": "hook",
-      "words": "hanging there with nothing,",
+      "scene_index": 8,
+      "section": "landing",
+      "words": "the One who made every river and spring,",
       "passed": true,
-      "note": "clip carries a passing clip_qc sidecar (real look)"
+      "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
       "order": 8,
-      "scene_index": 13,
-      "section": "hook",
-      "words": "He went dry so that you could drink and never thirst again.",
+      "scene_index": 9,
+      "section": "landing",
+      "words": "who offers the world living water —",
       "passed": true,
-      "note": "clip carries a passing clip_qc sidecar (real look)"
+      "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
       "order": 9,
-      "scene_index": 11,
-      "section": "hook",
-      "words": "The God who made every ocean cried out in thirst —",
+      "scene_index": 10,
+      "section": "landing",
+      "words": "hanging there with nothing,",
       "passed": true,
-      "note": "clip carries a passing clip_qc sidecar (real look)"
+      "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
       "order": 10,
+      "scene_index": 11,
+      "section": "landing",
+      "words": "He went dry so that you could drink and never thirst again.",
+      "passed": true,
+      "note": "clip content QC'd full-res and in motion; matches its beat"
+    },
+    {
+      "order": 11,
       "scene_index": 12,
-      "section": "hook",
+      "section": "landing",
+      "words": "The God who made every ocean cried out in thirst —",
+      "passed": true,
+      "note": "clip content QC'd full-res and in motion; matches its beat"
+    },
+    {
+      "order": 12,
+      "scene_index": 13,
+      "section": "landing",
       "words": "so He could hand you the one water that never fails.",
       "passed": true,
-      "note": "clip carries a passing clip_qc sidecar (real look)"
+      "note": "clip content QC'd full-res and in motion; matches its beat"
     }
   ],
   "reroll_scene_indices": [],

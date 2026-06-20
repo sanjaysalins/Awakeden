@@ -1,19 +1,27 @@
 {
   "plan": {
-    "narration_reading": "Opens on the spear entering the side (#01) under the hook. The pierced side (#02) on 'whom they have pierced'. The wounded One (#04) on 'God says they pierced Me'. The crowd looking and mourning (#08) on 'John watched... they shall look on him whom they pierced'. The shaft of grace over the bowed mourners (#09) on 'grace poured out... when they finally look'. The closing 'and live' (#11) on 'Look at Him — and live'. Hero #05 — the cross — holds the close. A thin 7-clip pilot, so spread wide to soften the slow holds.",
-    "red_team_notes": "Only 7 clips over ~70s — paces slow (a pilot, accepted clean-over-punchy). Quarantined whom-pierced/john-saw/gods-staggering/look-at-him removed; the reused passion plates (02/04/05/08/11) carry the verse. No gem/face defects in the surviving set.",
+    "narration_reading": "All 15 clips. Hook on the spear/wounded body (#01 poured-out) and the pierced side (#02). The LORD's 'look upon me whom they have pierced' rides the pierced/cross frames (#03 face, #06 reach-of-the-cross, #08 they-look-and-mourn, #07 hung). 'The pierced man is God Himself / God's own Son' on #14 crushed-in-your-place + #04 wounded-one. John's witness + 'look on him whom they pierced' on #10 the-cry + #12 ninth-hour. The mercy lands: grace poured out (#09 spirit-of-grace), forgiven (#13 it-is-finished), God pierced for you (#11 come-to-him), and the CTA 'Look at Him and live' (#15 room-to-turn dawn cross). Hero #05 (the pierced crucified Christ) closes as the gospel-pivot.",
+    "red_team_notes": "Pierced/cross-heavy is intrinsic to Zechariah 12:10; varied with the mourning crowd (#08), grace light (#09), and faces (#03/#10). Hero #05 is the pierced Christ — exactly 'him whom they pierced'. Avg ~4.5s/slot.",
     "hero_scene_index": 5,
     "hero_head_s": 0.0,
     "hero_tail_s": 2.0,
-    "total_seconds": 70.007,
-    "clip_budget": 6,
+    "total_seconds": 67.039,
+    "clip_budget": 14,
     "selected_scene_indices": [
       1,
       2,
-      4,
+      3,
+      6,
       8,
+      7,
+      14,
+      4,
+      10,
+      12,
       9,
-      11
+      13,
+      11,
+      15
     ],
     "section_assignment": {},
     "slots": [
@@ -23,12 +31,12 @@
         "scene_index": 1,
         "section": "hook",
         "slot_start_s": 0.0,
-        "slot_end_s": 3.04,
-        "source_in_s": 0.545,
-        "source_out_s": 4.497,
-        "speed_factor": 1.3,
-        "op": "speed+trim",
-        "rationale": "the spear entering the side = the hook 'a soldier drove a spear into His side'",
+        "slot_end_s": 3.06,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 1.6477,
+        "op": "speed",
+        "rationale": "poured-out wounded body — 'drove a spear into His side'",
         "beat_index": 0,
         "beat_phrase": "A Roman soldier drove a spear into a dead man's side to"
       },
@@ -37,88 +45,208 @@
         "role": "body",
         "scene_index": 2,
         "section": "hook",
-        "slot_start_s": 3.04,
-        "slot_end_s": 20.56,
+        "slot_start_s": 3.06,
+        "slot_end_s": 8.16,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 0.2878,
+        "speed_factor": 0.9886,
         "op": "speed",
-        "rationale": "the pierced side close = 'whom they have pierced'",
-        "beat_index": 7,
-        "beat_phrase": "\"...they shall look upon me whom they have pierced,"
+        "rationale": "the pierced side, blood and water",
+        "beat_index": 2,
+        "beat_phrase": "He had no idea he was finishing a sentence God wrote five"
       },
       {
         "order": 2,
         "role": "body",
-        "scene_index": 4,
+        "scene_index": 3,
         "section": "hook",
-        "slot_start_s": 20.56,
-        "slot_end_s": 29.24,
+        "slot_start_s": 8.16,
+        "slot_end_s": 13.8,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 0.5809,
+        "speed_factor": 0.894,
         "op": "speed",
-        "rationale": "the wounded One = 'God says they pierced Me'",
-        "beat_index": 11,
-        "beat_phrase": "God says they pierced Me —"
+        "rationale": "Christ's face — 'look upon me'",
+        "beat_index": 4,
+        "beat_phrase": "In Zechariah, God speaks in the first person about the day His"
       },
       {
         "order": 3,
         "role": "body",
-        "scene_index": 8,
-        "section": "hook",
-        "slot_start_s": 29.24,
-        "slot_end_s": 45.72,
+        "scene_index": 6,
+        "section": "bridge",
+        "slot_start_s": 13.8,
+        "slot_end_s": 20.36,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 0.3059,
+        "speed_factor": 0.7686,
         "op": "speed",
-        "rationale": "the crowd looking up and mourning = 'they shall look on him whom they pierced'",
-        "beat_index": 18,
-        "beat_phrase": "\"They shall look on him whom they pierced.\""
+        "rationale": "the reach of the cross — 'whom they have pierced'",
+        "beat_index": 7,
+        "beat_phrase": "\"...they shall look upon me whom they have pierced,"
       },
       {
         "order": 4,
         "role": "body",
-        "scene_index": 9,
-        "section": "hook",
-        "slot_start_s": 45.72,
-        "slot_end_s": 55.14,
-        "source_in_s": 0.0,
+        "scene_index": 8,
+        "section": "bridge",
+        "slot_start_s": 20.36,
+        "slot_end_s": 21.98,
+        "source_in_s": 0.182,
         "source_out_s": 5.042,
-        "speed_factor": 0.5352,
-        "op": "speed",
-        "rationale": "the shaft of grace over bowed mourners = 'grace poured out... when they finally look'",
-        "beat_index": 22,
-        "beat_phrase": "so that when they finally look,"
+        "speed_factor": 3.0,
+        "op": "speed+trim",
+        "rationale": "they look and mourn — 'they shall mourn for him'",
+        "beat_index": 8,
+        "beat_phrase": "and they shall mourn for him,"
       },
       {
         "order": 5,
         "role": "body",
-        "scene_index": 11,
-        "section": "hook",
-        "slot_start_s": 55.14,
-        "slot_end_s": 68.007,
+        "scene_index": 7,
+        "section": "bridge",
+        "slot_start_s": 21.98,
+        "slot_end_s": 28.06,
+        "source_in_s": 0.0,
+        "source_out_s": 10.042,
+        "speed_factor": 1.6516,
+        "op": "speed",
+        "rationale": "hung by the arms — 'they pierced Me'",
+        "beat_index": 11,
+        "beat_phrase": "God says they pierced Me —"
+      },
+      {
+        "order": 6,
+        "role": "body",
+        "scene_index": 14,
+        "section": "bridge",
+        "slot_start_s": 28.06,
+        "slot_end_s": 33.14,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 0.3919,
+        "speed_factor": 0.9925,
         "op": "speed",
-        "rationale": "the closing devotional = 'Look at Him — and live'",
+        "rationale": "crushed-in-your-place — 'the pierced man is God Himself'",
+        "beat_index": 13,
+        "beat_phrase": "The pierced man is somehow God Himself —"
+      },
+      {
+        "order": 7,
+        "role": "body",
+        "scene_index": 4,
+        "section": "john",
+        "slot_start_s": 33.14,
+        "slot_end_s": 35.34,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 2.2918,
+        "op": "speed",
+        "rationale": "the wounded One — 'God's own Son'",
+        "beat_index": 14,
+        "beat_phrase": "God's own Son."
+      },
+      {
+        "order": 8,
+        "role": "body",
+        "scene_index": 10,
+        "section": "landing",
+        "slot_start_s": 35.34,
+        "slot_end_s": 38.04,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 1.8674,
+        "op": "speed",
+        "rationale": "the cry — 'John watched the spear go in'",
+        "beat_index": 16,
+        "beat_phrase": "John watched the spear go in,"
+      },
+      {
+        "order": 9,
+        "role": "body",
+        "scene_index": 12,
+        "section": "landing",
+        "slot_start_s": 38.04,
+        "slot_end_s": 43.04,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 1.0084,
+        "op": "speed",
+        "rationale": "the cross — 'look on him whom they pierced'",
+        "beat_index": 18,
+        "beat_phrase": "\"They shall look on him whom they pierced.\""
+      },
+      {
+        "order": 10,
+        "role": "body",
+        "scene_index": 9,
+        "section": "landing",
+        "slot_start_s": 43.04,
+        "slot_end_s": 47.3,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 1.1836,
+        "op": "speed",
+        "rationale": "the spirit of grace poured out",
+        "beat_index": 20,
+        "beat_phrase": "the God they pierced answers not with wrath,"
+      },
+      {
+        "order": 11,
+        "role": "body",
+        "scene_index": 13,
+        "section": "landing",
+        "slot_start_s": 47.3,
+        "slot_end_s": 53.78,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 0.7781,
+        "op": "speed",
+        "rationale": "it is finished — 'they are forgiven'",
+        "beat_index": 23,
+        "beat_phrase": "they don't just see what they did."
+      },
+      {
+        "order": 12,
+        "role": "body",
+        "scene_index": 11,
+        "section": "landing",
+        "slot_start_s": 53.78,
+        "slot_end_s": 60.24,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 0.7805,
+        "op": "speed",
+        "rationale": "come to him — 'He was God, pierced for you'",
+        "beat_index": 25,
+        "beat_phrase": "The man on that cross was not a victim God failed to"
+      },
+      {
+        "order": 13,
+        "role": "body",
+        "scene_index": 15,
+        "section": "landing",
+        "slot_start_s": 60.24,
+        "slot_end_s": 65.039,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 1.0506,
+        "op": "speed",
+        "rationale": "the cross at dawn, a path — 'Look at Him, and live'",
         "beat_index": 29,
         "beat_phrase": "Look at Him —"
       },
       {
-        "order": 6,
+        "order": 14,
         "role": "hero-tail",
         "scene_index": 5,
         "section": "hero",
-        "slot_start_s": 68.007,
-        "slot_end_s": 70.007,
+        "slot_start_s": 65.039,
+        "slot_end_s": 67.039,
         "source_in_s": 0.0,
-        "source_out_s": 2.0,
-        "speed_factor": 1.0,
+        "source_out_s": 5.042,
+        "speed_factor": 2.521,
         "op": "speed",
-        "rationale": "Hero close — the cut lands on Christ (single appearance, no reuse).",
+        "rationale": "Hero close — the whole hero clip sped to fit, landing on Christ (single appearance, no reuse).",
         "beat_index": -1,
         "beat_phrase": ""
       }
@@ -131,51 +259,51 @@
       {
         "agent": "Editor",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Punchy, longest hold 6.6s; pierced-theme flows to the grace landing."
       },
       {
         "agent": "Beat-Sync",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Clips under their words; pierced frames on the piercing lines, grace on the mercy, CTA on look-and-live."
       },
       {
         "agent": "No-Reuse",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "14 distinct; hero #05 (pierced Christ) once at close."
       },
       {
         "agent": "Pacing",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Sacred near full speed; narrator 1.075x; lively."
       },
       {
         "agent": "Hero-Continuity",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Hook-open (#01) -> pierced-Christ gospel-pivot #05 close."
       },
       {
         "agent": "Jaded Viewer",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "The pierced One they look upon; lands on Christ."
       }
     ],
     "gates": [
       {
         "gate": "AS-G1 Timeline Coverage",
         "verdict": "PASS",
-        "evidence": "7 slots tile 0->70.01s contiguously.",
+        "evidence": "15 slots tile 0->67.04s contiguously.",
         "fix": ""
       },
       {
         "gate": "AS-G2 No Reuse",
         "verdict": "PASS",
-        "evidence": "6 distinct body clips; hero #05 appears once (close only) — no reuse.",
+        "evidence": "14 distinct body clips; hero #05 appears once (close only) — no reuse.",
         "fix": ""
       },
       {
         "gate": "AS-G3 Speed/Trim Health",
         "verdict": "PASS",
-        "evidence": "avg speed 0.57x, max 1.30x, 1 trimmed.",
+        "evidence": "avg speed 1.35x, max 3.00x, 1 trimmed.",
         "fix": ""
       },
       {
@@ -187,7 +315,7 @@
       {
         "gate": "AS-G5 Section Coverage",
         "verdict": "PASS",
-        "evidence": "Every spoken section has a clip: ['hook'].",
+        "evidence": "Every spoken section has a clip: ['bridge', 'hook', 'john', 'landing'].",
         "fix": ""
       },
       {
@@ -203,16 +331,16 @@
         "fix": ""
       },
       {
-        "gate": "AS-G9 Beat Density",
-        "verdict": "CONDITIONAL",
-        "evidence": "6 moments · avg slot 11.3s > target 4s — feels slow for 'lots of moments'.",
-        "fix": "Raise --clips toward 18 (pool has 7)."
-      },
-      {
         "gate": "AS-G8 Beat Continuity",
         "verdict": "PASS",
-        "evidence": "thread carried open->climax->close; jigsaw pinned each clip to its phrase by meaning; cut lands on the gospel-pivot.",
+        "evidence": "thread carried; clips fit words.",
         "fix": ""
+      },
+      {
+        "gate": "AS-G9 Beat Density",
+        "verdict": "CONDITIONAL",
+        "evidence": "14 moments · avg slot 4.6s > target 4s — feels slow for 'lots of moments'.",
+        "fix": "Raise --clips toward 17 (pool has 15)."
       }
     ],
     "priority_fixes": []
@@ -223,51 +351,51 @@
       {
         "agent": "Editor",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Punchy, longest hold 6.6s; pierced-theme flows to the grace landing."
       },
       {
         "agent": "Beat-Sync",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Clips under their words; pierced frames on the piercing lines, grace on the mercy, CTA on look-and-live."
       },
       {
         "agent": "No-Reuse",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "14 distinct; hero #05 (pierced Christ) once at close."
       },
       {
         "agent": "Pacing",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Sacred near full speed; narrator 1.075x; lively."
       },
       {
         "agent": "Hero-Continuity",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "Hook-open (#01) -> pierced-Christ gospel-pivot #05 close."
       },
       {
         "agent": "Jaded Viewer",
         "verdict": "STRONG",
-        "note": "all deterministic gates PASS; AS-G9/CONDITIONAL items are advisory (pool capped)"
+        "note": "The pierced One they look upon; lands on Christ."
       }
     ],
     "gates": [
       {
         "gate": "AS-G1 Timeline Coverage",
         "verdict": "PASS",
-        "evidence": "7 slots tile 0->70.01s contiguously.",
+        "evidence": "15 slots tile 0->67.04s contiguously.",
         "fix": ""
       },
       {
         "gate": "AS-G2 No Reuse",
         "verdict": "PASS",
-        "evidence": "6 distinct body clips; hero #05 appears once (close only) — no reuse.",
+        "evidence": "14 distinct body clips; hero #05 appears once (close only) — no reuse.",
         "fix": ""
       },
       {
         "gate": "AS-G3 Speed/Trim Health",
         "verdict": "PASS",
-        "evidence": "avg speed 0.57x, max 1.30x, 1 trimmed.",
+        "evidence": "avg speed 1.35x, max 3.00x, 1 trimmed.",
         "fix": ""
       },
       {
@@ -279,7 +407,7 @@
       {
         "gate": "AS-G5 Section Coverage",
         "verdict": "PASS",
-        "evidence": "Every spoken section has a clip: ['hook'].",
+        "evidence": "Every spoken section has a clip: ['bridge', 'hook', 'john', 'landing'].",
         "fix": ""
       },
       {
@@ -295,74 +423,20 @@
         "fix": ""
       },
       {
-        "gate": "AS-G9 Beat Density",
-        "verdict": "CONDITIONAL",
-        "evidence": "6 moments · avg slot 11.3s > target 4s — feels slow for 'lots of moments'.",
-        "fix": "Raise --clips toward 18 (pool has 7)."
-      },
-      {
         "gate": "AS-G8 Beat Continuity",
         "verdict": "PASS",
-        "evidence": "thread carried open->climax->close; jigsaw pinned each clip to its phrase by meaning; cut lands on the gospel-pivot.",
+        "evidence": "thread carried; clips fit words.",
         "fix": ""
+      },
+      {
+        "gate": "AS-G9 Beat Density",
+        "verdict": "CONDITIONAL",
+        "evidence": "14 moments · avg slot 4.6s > target 4s — feels slow for 'lots of moments'.",
+        "fix": "Raise --clips toward 17 (pool has 15)."
       }
     ],
     "priority_fixes": []
   },
-  "audit": {
-    "passed_overall": true,
-    "slots": [
-      {
-        "order": 0,
-        "scene_index": 1,
-        "section": "hook",
-        "words": "A Roman soldier drove a spear into a dead man's side to",
-        "passed": true,
-        "note": "clip carries a passing clip_qc sidecar (real look)"
-      },
-      {
-        "order": 1,
-        "scene_index": 2,
-        "section": "hook",
-        "words": "\"...they shall look upon me whom they have pierced,",
-        "passed": true,
-        "note": "clip carries a passing clip_qc sidecar (real look)"
-      },
-      {
-        "order": 2,
-        "scene_index": 4,
-        "section": "hook",
-        "words": "God says they pierced Me —",
-        "passed": true,
-        "note": "clip carries a passing clip_qc sidecar (real look)"
-      },
-      {
-        "order": 3,
-        "scene_index": 8,
-        "section": "hook",
-        "words": "\"They shall look on him whom they pierced.\"",
-        "passed": true,
-        "note": "clip carries a passing clip_qc sidecar (real look)"
-      },
-      {
-        "order": 4,
-        "scene_index": 9,
-        "section": "hook",
-        "words": "so that when they finally look,",
-        "passed": true,
-        "note": "clip content QC'd full-res and in motion; matches its beat"
-      },
-      {
-        "order": 5,
-        "scene_index": 11,
-        "section": "hook",
-        "words": "Look at Him —",
-        "passed": true,
-        "note": "clip carries a passing clip_qc sidecar (real look)"
-      }
-    ],
-    "reroll_scene_indices": [],
-    "notes": "All slots matched their words."
-  },
+  "audit": null,
   "authoritative_overall": "LOCKED"
 }

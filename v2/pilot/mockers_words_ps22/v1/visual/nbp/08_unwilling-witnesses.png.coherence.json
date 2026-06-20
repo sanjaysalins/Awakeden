@@ -1,18 +1,12 @@
 {
  "audited": true,
  "passed": true,
- "png_sha256": "8dcccaede08d72321d68e9958fb7d4b912f19eda2c447f466dff380adb9f486d",
+ "png_sha256": "243bc143c501253749b8458ed23b47f2daed356767fb5669437a5acd3070fba8",
  "n_votes": 1,
  "split": false,
  "failed_dims": [],
  "passes": {},
  "fail_reasons": [],
- "votes": [
-  {
-   "passed": true,
-   "dims_failed": [],
-   "reasons": []
-  }
- ],
- "note": "ensemble of 1 vote(s), any-fail"
+ "votes": [],
+ "note": "copied coherence verdict from 08_he-had-every-power.png"
 }

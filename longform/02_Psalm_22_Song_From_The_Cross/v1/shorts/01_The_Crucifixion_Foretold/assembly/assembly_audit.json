@@ -13,12 +13,28 @@
       "order": 1,
       "scene_index": 3,
       "section": "hook",
-      "words": "but David himself was never executed;",
+      "words": "David wrote it in the first person —",
       "passed": true,
       "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
       "order": 2,
+      "scene_index": 4,
+      "section": "hook",
+      "words": "He was describing someone else:",
+      "passed": true,
+      "note": "clip content QC'd full-res and in motion; matches its beat"
+    },
+    {
+      "order": 3,
+      "scene_index": 8,
+      "section": "hook",
+      "words": "stripped, surrounded, his life poured out.",
+      "passed": true,
+      "note": "clip content QC'd full-res and in motion; matches its beat"
+    },
+    {
+      "order": 4,
       "scene_index": 9,
       "section": "hook",
       "words": "he wrote that the dying man's killers would divide his clothes,",
@@ -26,7 +42,15 @@
       "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
-      "order": 3,
+      "order": 5,
+      "scene_index": 6,
+      "section": "hook",
+      "words": "\"They part my garments among them,",
+      "passed": true,
+      "note": "clip content QC'd full-res and in motion; matches its beat"
+    },
+    {
+      "order": 6,
       "scene_index": 12,
       "section": "hook",
       "words": "and cast lots upon my vesture.\"",
@@ -34,26 +58,58 @@
       "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
-      "order": 4,
-      "scene_index": 5,
-      "section": "hook",
-      "words": "then casting lots for the seamless coat —",
+      "order": 7,
+      "scene_index": 11,
+      "section": "david",
+      "words": "A thousand years later,",
       "passed": true,
       "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
-      "order": 5,
+      "order": 8,
+      "scene_index": 7,
+      "section": "david",
+      "words": "John watched it at the cross —",
+      "passed": true,
+      "note": "clip content QC'd full-res and in motion; matches its beat"
+    },
+    {
+      "order": 9,
+      "scene_index": 5,
+      "section": "david",
+      "words": "soldiers dividing Jesus' clothes,",
+      "passed": true,
+      "note": "clip content QC'd full-res and in motion; matches its beat"
+    },
+    {
+      "order": 10,
+      "scene_index": 2,
+      "section": "landing",
+      "words": "\"that the scripture might be fulfilled\".",
+      "passed": true,
+      "note": "clip content QC'd full-res and in motion; matches its beat"
+    },
+    {
+      "order": 11,
+      "scene_index": 10,
+      "section": "landing",
+      "words": "you'd know the cross was no accident.",
+      "passed": true,
+      "note": "clip content QC'd full-res and in motion; matches its beat"
+    },
+    {
+      "order": 12,
       "scene_index": 13,
-      "section": "hook",
+      "section": "landing",
       "words": "The suffering man of Psalm twenty-two has a name:",
       "passed": true,
       "note": "clip content QC'd full-res and in motion; matches its beat"
     },
     {
-      "order": 6,
-      "scene_index": 14,
-      "section": "hook",
-      "words": "laying down His life to win you back.",
+      "order": 13,
+      "scene_index": 15,
+      "section": "landing",
+      "words": "never seeing what He was really doing —",
       "passed": true,
       "note": "clip content QC'd full-res and in motion; matches its beat"
     }

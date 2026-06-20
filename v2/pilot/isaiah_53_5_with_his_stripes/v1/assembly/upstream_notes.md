@@ -5,7 +5,11 @@ stages so the next episode's clips drop into the cut with less fighting.
 
 ## What was hard to fit this run
 
-- (nothing fought the cut — clips fit cleanly.)
+- **#17 Poured Out Like Water** — needed 2.23x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
+- **#16 Hung By The Arms** — needed 2.74x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
+- **#15 The Ninth Hour** — needed 3.00x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
+- **#23 Crushed In Your Place** — needed 2.71x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
+- **#21 Room To Turn** — needed 2.77x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
 
 ## Standing 'design for the cut' rules
 

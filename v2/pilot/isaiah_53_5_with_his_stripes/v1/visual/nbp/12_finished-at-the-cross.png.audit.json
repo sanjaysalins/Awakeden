@@ -1,10 +1,1 @@
-{
-  "passed": true,
-  "issues": [
-    {
-      "claim": "far gathered church",
-      "actual": "the church vignette reads with a slightly later-style tower — soft background echo, acceptable; all 4 vignettes present"
-    }
-  ],
-  "banned_token_hits": []
-}
+{"passed": true, "issues": [], "banned_token_hits": [], "note": "reuse from 11_the-way-opened-from-the-dark.png"}

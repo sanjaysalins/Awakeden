@@ -24,9 +24,9 @@ LAYERS = [
     layer("weight", "rumble_deep_sub",     "loop",   13.0, 17.0, -38.0, filt="lowpass=f=600", fin=3.0, fout=4.0), # under the stripes / wounds
     layer("flock",  "flock_sheep_field",   "loop",    7.0,  7.0, -37.0, filt="lowpass=f=3000", fin=2.0, fout=3.0),# 'all we like sheep'
     layer("nail",   "nail_strike_single",  "oneshot",34.8,  3.0, -25.0),                                          # 'in his own body on the tree'
-    layer("veil",   "veil_tearing",        "oneshot",59.2,  3.0, -27.0, filt="lowpass=f=3500"),                   # 'it was finished at the cross'
-    layer("grace",  "score_reverent_grace","loop",   53.0, 17.0, -34.0, fin=3.0, fout=4.0),                       # the grace landing
-    layer("dawn",   "dawn_morning_warm",   "loop",   60.0, 10.0, -33.0, filt="lowpass=f=3200", fin=3.0),          # come to Him, receive it
+    layer("veil",   "veil_tearing",        "oneshot",62.0,  3.0, -27.0, filt="lowpass=f=3500"),                   # 'it was finished at the cross' (74s timeline)
+    layer("grace",  "score_reverent_grace","loop",   53.0, 21.0, -34.0, fin=3.0, fout=4.0),                       # the grace landing -> end
+    layer("dawn",   "dawn_morning_warm",   "loop",   63.0, 11.0, -33.0, filt="lowpass=f=3200", fin=3.0),          # come to Him, receive it
 ]
 
 if __name__ == "__main__":

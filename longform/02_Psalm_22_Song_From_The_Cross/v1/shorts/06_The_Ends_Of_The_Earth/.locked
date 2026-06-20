@@ -1,10 +1,11 @@
 {
   "version": 1,
-  "spoken_sha256": "5a05468149674da51768ae5afcf1c224cc81f18aa8e591ec2658f7076768dc27",
+  "spoken_sha256": "12c226df04c8f62f17152e8cbc1a506424e7dc907d7433888d7f1f0ebc1e92bb",
   "checks_run": [
     "kjv_strict",
     "parity",
     "doctrine_scan",
+    "hook_scan",
     "narrative_presence",
     "rule8",
     "cluster"

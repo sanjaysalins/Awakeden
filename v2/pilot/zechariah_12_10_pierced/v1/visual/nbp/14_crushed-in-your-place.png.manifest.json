@@ -1,0 +1,28 @@
+{
+ "still_id": "14_crushed-in-your-place",
+ "subject_type": "hero",
+ "role": "hero",
+ "elements": [
+  {
+   "id": "full",
+   "label": "reused: 12_crushed-in-your-place-unified",
+   "region": null,
+   "verified": true
+  }
+ ],
+ "ambient_layer": [],
+ "period_real": {
+  "T1": "pass",
+  "T2": "pass",
+  "T3": "pass",
+  "T4": "pass",
+  "T5": "pass",
+  "T6": "pass"
+ },
+ "declared_by": "design",
+ "provenance": "fresh",
+ "lock_version": 1,
+ "png_sha256": "f3939ef1abd64e83a8afc8604313d7ae47f6d03a68ff0dd368077ee171d53e5c",
+ "locked": true,
+ "note": "reuse-swap from C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\shorts\\07_The_Body_Foretold\\visual\\nbp\\12_crushed-in-your-place-unified.mp4"
+}

@@ -1,7 +1,7 @@
 # Upload Kit — The Ends of the Earth
 
-**Status:** SAMPLE (agent-authored, gates only — red-team + panel pending your OK)  ·  **Gates:** ALL PASS ✅
-**Video:** `C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\02_Psalm_22_Song_From_The_Cross\v1\shorts\06_The_Ends_Of_The_Earth\assembly\viral_cut_sfx_captioned.mp4`
+**Status:** RED-TEAMED  ·  **Gates:** ALL PASS ✅
+**Video:** `C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\02_Psalm_22_Song_From_The_Cross\v1\shorts\06_The_Ends_Of_The_Earth\assembly\viral_cut_sfx_music_captioned.mp4`
 **Format:** short  ·  **Series:** Jesus in the Old Testament  ·  **Anchor:** Psalm 22:27
 
 > Copy each block straight into the platform's upload form. Title, description,
@@ -15,54 +15,73 @@
 ✅ **UK-G4 brand** — footer + CTA-to-Jesus present
 ✅ **UK-G5 platform** — hashtag counts + link rules OK
 ✅ **UK-G6 no-repeat** — no title collisions with siblings
+✅ **UK-G7 lint** — plain ASCII, grace-anchored, verse front-loaded
 
 ### Red-team (in-engine hostile auditor)
 
 ```
-(not run for the sample — will run the in-engine hostile auditor + full external panel after you approve the format)
+VERDICT: PASS
+
+Kit is clean. The key integrity challenge here is not overclaiming a specific NT citation for Psalm 22:27, and the copy handles it correctly throughout.
+
+- KJV quote is verbatim on all platforms that carry it ("All the ends of the world shall remember and turn unto the LORD: and all the kindreds of the nations shall worship before thee."). ✓
+- The thread is correctly framed as thematic/historical ("the gospel has swept the whole earth") not as a specific NT verse citation. No platform claims Psalm 22:27 is "cited" or "fulfilled" in a specific NT verse. ✓
+- YouTube Long description says "history is its long fulfillment" - this is appropriate for a thematic/historical claim rather than a proof-text citation. ✓
+- Title "Psalm 22 Opens with One Dying Man and Ends with Every Nation on Earth" is a factual description of the psalm's arc. ✓
+- "A dying man in one corner of the Roman Empire" - historically accurate framing of the crucifixion's geographic context. ✓
+- No em-dashes in any field. ✓
+- CTA is grace-anchored: "The Lord the song promised still has room for you." No fear/gain-loss framing. ✓
+- TikTok first line is accurate and punchy. ✓
+- No ToS banlist terms. ✓
+- Instagram/TikTok carry no title. ✓
+- No overclaim: the copy does not assert that Psalm 22:27 is "fulfilled" by a specific NT event - it notes that the gospel spread historically, which is undisputed fact. ✓
 ```
 
 ## Title options (chosen first)
 
-1. **A Dying Man's Song Foretold the Whole World Turning to God (Psalm 22)** ⟵ CHOSEN  
-   _angle: prophecy-from-the-cross: the forsaken sufferer's own song predicts a global turning_
-2. **Psalm 22 Ends With a Promise No One Expects**  
-   _angle: curiosity gap, honest: the despair psalm closes on worldwide worship_
-3. **The Forsaken Cry That Reached Every Nation**  
-   _angle: scope contrast: one man alone -> all the ends of the earth_
-4. **Why the Saddest Psalm Doesn't End in Despair**  
-   _angle: reframe: the arc from forsaken to the nations worshipping_
+1. **Psalm 22 Opens with One Dying Man and Ends with Every Nation on Earth** ⟵ CHOSEN  
+   _angle: The dramatic arc from one forsaken man to every nation - the contrast is the hook_
+2. **He Died in One Corner of the Roman Empire. His Song Said the Ends of the Earth Would Turn.**  
+   _angle: Vivid historical specificity - the improbability is the point_
+3. **The Cross Was Never a Local Tragedy - It Was for the Nations**  
+   _angle: Scope reframe - pulls the listener in as one of the nations_
+4. **A Forsaken Man's Song Foresaw the Gospel Reaching Every Nation**  
+   _angle: Foreknowledge angle - the psalm's own vision came true_
 
 ## YouTube (Short)
 
 **TITLE** (copy):
 ```
-A Dying Man's Song Foretold the Whole World Turning to God (Psalm 22)
+Psalm 22 Opens with One Dying Man and Ends with Every Nation on Earth
 ```
 _69 characters_
 
 **DESCRIPTION / CAPTION** (copy):
 ```
-Psalm 22 opens with a man forsaken and dying alone — and ends with every nation on earth turning to God. The same song that cried “My God, my God, why hast thou forsaken me?” closes on a promise of worldwide worship. From that cross and the empty tomb, the gospel did go out to nation after nation.
+Psalm 22 opens with one forsaken man dying alone. Then it ends with something that should have been impossible.
 
-“All the ends of the world shall remember and turn unto the LORD: and all the kindreds of the nations shall worship before thee.” (Psalm 22:27, KJV)
+Psalm 22:27 (KJV): "All the ends of the world shall remember and turn unto the LORD: and all the kindreds of the nations shall worship before thee."
 
-The ends of the world include wherever you are. There is still room to turn to Him.
+A dying man's song, written in one corner of the Roman Empire, forecasting every nation on earth turning to God.
+
+It sounded impossible. But from that cross and the empty tomb, the gospel went out - and people in nation after nation have turned to the LORD, worshipping the One who died and rose.
+
+The cross was never a local tragedy. It was for the nations. And the ends of the world includes wherever you are. The Lord the song promised still has room for you.
 
 Subscribe to walk through the whole Bible and meet Jesus on every page. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
-_676 characters_
+_868 characters_
 
 **TAGS** (copy — paste into the keyword/tags field):
 ```
-Psalm 22, Psalm 22 explained, Bible prophecy, Jesus in the Old Testament, Psalm 22 Jesus, gospel to the nations, Bible shorts, KJV, Christian shorts, all the ends of the world, messianic psalm
+psalm 22, gospel to all nations, great commission, bible prophecy, messianic psalm, old testament prophecy, kjv bible, bible shorts, christian shorts, jesus in the old testament, ends of the world, nations
 ```
 
 **HASHTAGS** (copy):
 ```
-#Psalm22 #Bible #Jesus #Gospel #Scripture
+#Psalm22 #BibleProphecy #JesusInTheBible #KJV #ChristianShorts
 ```
 
 ---
@@ -70,32 +89,40 @@ Psalm 22, Psalm 22 explained, Bible prophecy, Jesus in the Old Testament, Psalm 
 
 **TITLE** (copy):
 ```
-Psalm 22: The Forsaken Cry That Foretold the Whole World Turning to God
+Psalm 22: From One Forsaken Man to Every Nation on Earth
 ```
-_71 characters_
+_56 characters_
 
 **DESCRIPTION / CAPTION** (copy):
 ```
-Psalm 22 begins with the cry of a man forsaken and dying alone, yet it does not end there. By verse 27 the same song looks out and sees every family of every nation turning to the LORD. In this study we trace the psalm's own arc — from the forsaken sufferer to the worship of the nations — and how, from the cross and the empty tomb, the gospel went out to the ends of the earth.
+Psalm 22 contains one of the most dramatic pivots in all of Scripture.
 
-“All the ends of the world shall remember and turn unto the LORD: and all the kindreds of the nations shall worship before thee.” (Psalm 22:27, KJV)
+It opens with one man dying forsaken, surrounded by enemies, stripped and mocked. Then, after the suffering, the psalm throws its arms open to the entire world:
 
-Wherever you are is one of the ends of the world this verse promised. There is still room to turn to Him.
+Psalm 22:27 (KJV): "All the ends of the world shall remember and turn unto the LORD: and all the kindreds of the nations shall worship before thee."
+
+A dying man in one corner of the Roman Empire, writing that every nation on earth would turn to God. It sounded impossible.
+
+But from that cross and the empty tomb, the gospel went out. Nation after nation, century after century, people in every kindred of the earth have turned to the LORD - worshipping the One who died and rose. This was the psalm's own vision, and history is its long fulfillment.
+
+The cross was never a local tragedy. It was designed for the nations. And the ends of the world includes wherever you are right now. The Lord the song promised still has room for you to turn to Him.
+
+Psalm 22 | The Great Commission | KJV
 
 Subscribe to walk through the whole Bible and meet Jesus on every page. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
-_779 characters_
+_1167 characters_
 
 **TAGS** (copy — paste into the keyword/tags field):
 ```
-Psalm 22, Psalm 22 explained, Psalm 22 Bible study, messianic psalm, Bible prophecy fulfilled, Jesus in the Old Testament, gospel to the nations, Great Commission, KJV Bible, Christian Bible study, Old Testament Jesus, all the ends of the world shall remember
+psalm 22, gospel to all nations, great commission, bible prophecy, messianic psalm, old testament prophecy, kjv bible, jesus in the old testament, christian apologetics, bible study, nations, kindreds, ends of the earth, global gospel
 ```
 
 **HASHTAGS** (copy):
 ```
-#Psalm22 #BibleStudy #Jesus #Gospel #Scripture
+#Psalm22 #BibleProphecy #JesusInTheBible #KJV #MessianicProphecy
 ```
 
 ---
@@ -103,15 +130,15 @@ Psalm 22, Psalm 22 explained, Psalm 22 Bible study, messianic psalm, Bible proph
 
 **DESCRIPTION / CAPTION** (copy):
 ```
-Psalm 22 opens with a man dying alone, forsaken — and ends with every nation on earth turning to God. The saddest psalm closes on worldwide worship.
+Psalm 22 opens with one forsaken man dying alone. Then verse 27 says all the ends of the world will turn to the LORD. A dying man in one corner of the Roman Empire - and the gospel has swept the whole earth. The ends of the world includes wherever you are.
 
 Subscribe to walk through the whole Bible and meet Jesus on every page. ✝
 ```
-_223 characters_
+_331 characters_
 
 **HASHTAGS** (copy):
 ```
-#Psalm22 #Bible #Jesus #Gospel #fyp
+#Psalm22 #BibleProphecy #Jesus #KJV #ChristianTikTok #BibleFacts
 ```
 
 ---
@@ -119,27 +146,27 @@ _223 characters_
 
 **TITLE** (copy):
 ```
-A Dying Man's Song Foretold the Whole World Turning to God
+Psalm 22 Opens with One Dying Man and Ends with Every Nation on Earth
 ```
-_58 characters_
+_69 characters_
 
 **DESCRIPTION / CAPTION** (copy):
 ```
-Psalm 22 opens with a man forsaken and dying alone — and ends with every nation on earth turning to God. From the cross and the empty tomb, the gospel went out to the ends of the earth.
+Psalm 22 opens with one forsaken man dying alone. Then verse 27 ends with this:
 
-“All the ends of the world shall remember and turn unto the LORD: and all the kindreds of the nations shall worship before thee.” (Psalm 22:27, KJV)
+Psalm 22:27 (KJV): "All the ends of the world shall remember and turn unto the LORD: and all the kindreds of the nations shall worship before thee."
 
-The ends of the world include wherever you are. There is still room to turn to Him.
+A dying man in one corner of the Roman Empire, and the gospel has swept the whole earth since. The cross was never a local tragedy. It was for the nations. And the ends of the world includes wherever you are.
 
 Subscribe to walk through the whole Bible and meet Jesus on every page. ✝
 
 Scripture quoted from the King James Version (KJV), public domain.
 ```
-_563 characters_
+_582 characters_
 
 **HASHTAGS** (copy):
 ```
-#Psalm22 #Bible #Jesus #Gospel
+#Psalm22 #Jesus #BibleProphecy #KJV #Faith
 ```
 
 ---
@@ -147,15 +174,15 @@ _563 characters_
 
 **DESCRIPTION / CAPTION** (copy):
 ```
-Psalm 22 opens with a man dying alone, forsaken — and ends with every nation on earth turning to God. The saddest psalm closes on worldwide worship.
+Psalm 22 opens with one forsaken man dying alone and ends with every nation on earth turning to God. The cross was never a local tragedy. It was for the nations. The ends of the world includes wherever you are.
 
 Subscribe to walk through the whole Bible and meet Jesus on every page. ✝
 ```
-_223 characters_
+_285 characters_
 
 **HASHTAGS** (copy):
 ```
-#Psalm22 #Bible #Jesus #Gospel #Scripture #Faith #Christian
+#Psalm22 #BibleProphecy #Jesus #KJV #Christian #Faith #BibleVerse #OldTestament #Prophecy #JesusChrist
 ```
 
 ---

@@ -1,11 +1,8 @@
 {
   "short": "02_The_Mockers_Words",
-  "clips": 7,
+  "clips": 14,
   "status": "swept",
   "fails": [
-    "02_david-records-the-taunt",
-    "03_let-him-deliver-him",
-    "11_he-chose-to-stay",
     "12_a-thousand-years-apart"
   ],
   "rows": [
@@ -18,22 +15,48 @@
     {
       "scene": 2,
       "clip": "02_david-records-the-taunt",
-      "state": "FAIL",
-      "foreign": [
-        "garbled scroll + animating quill"
-      ]
+      "state": "PASS",
+      "foreign": []
     },
     {
       "scene": 3,
       "clip": "03_let-him-deliver-him",
-      "state": "FAIL",
-      "foreign": [
-        "full-frame garbled Hebrew scroll"
-      ]
+      "state": "PASS",
+      "foreign": []
     },
     {
       "scene": 4,
       "clip": "04_the-crowd-at-the-cross",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 5,
+      "clip": "05_the-leaders-jeer",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 6,
+      "clip": "06_shot-out-the-lip",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 7,
+      "clip": "07_the-jabbing-hands",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 8,
+      "clip": "08_he-had-every-power",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 9,
+      "clip": "09_twelve-legions-restrained",
       "state": "PASS",
       "foreign": []
     },
@@ -46,10 +69,8 @@
     {
       "scene": 11,
       "clip": "11_he-chose-to-stay",
-      "state": "FAIL",
-      "foreign": [
-        "faceted GEM in the nailed palm (HERO clip)"
-      ]
+      "state": "PASS",
+      "foreign": []
     },
     {
       "scene": 12,
@@ -58,6 +79,18 @@
       "foreign": [
         "garbled scroll + animating quill"
       ]
+    },
+    {
+      "scene": 13,
+      "clip": "13_the-silent-king",
+      "state": "PASS",
+      "foreign": []
+    },
+    {
+      "scene": 14,
+      "clip": "14_the-hand-that-would-not-pull-free",
+      "state": "PASS",
+      "foreign": []
     }
   ]
 }

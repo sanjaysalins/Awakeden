@@ -1,0 +1,195 @@
+
+########################################################################
+#  LLM_PROVIDER=agent  � engine LLM calls route to the in-chat agent
+#  (Claude Code / Max subscription) via the file bridge. NO metered API.
+#  bridge dir : C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge
+#  RUN ME IN THE BACKGROUND and service requests from chat:
+#    new requests appear in   C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\requests
+#    write each reply to      C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\responses/<id>.txt
+#  For an unattended run with the metered API instead: set LLM_PROVIDER=api
+########################################################################
+
+================================================================
+  Salt and Light Kingdom — assembly stage
+================================================================
+  v1:        v2\pilot\isaiah_53_5_with_his_stripes\v1
+  provider:  nbp
+  clips:     20
+  speed cap: 4.00x
+  reel:      True   verify: False
+================================================================
+[A1] Building narration timeline from per-turn audio...
+[A1b] Forced-alignment + phrase board (beat-accurate matching)...
+      [align] reuse narration.alignment.json (193 words)
+      [phrases] 31 beats from 193 aligned words
+
+=== PHRASE BOARD (31 beats) ===
+  P00 [    hook/narrator]   0.00-  2.22s (2.22s) You carry a wound nothing has been able to close —
+  P01 [    hook/narrator]   2.98-  4.40s (1.42s) a guilt that keeps reopening,
+  P02 [    hook/narrator]   4.80-  6.54s (1.74s) no matter how hard you try to make it right.
+  P03 [    hook/narrator]   7.74-  9.30s (1.56s) Seven hundred years before the cross,
+  P04 [    hook/narrator]   9.90- 12.94s (3.04s) Isaiah wrote that the healing you can't reach would come through someone
+  P05 [    hook/narrator]  12.94- 13.66s (0.72s) else's wounds.
+  P06 [  isaiah/isaiah ]  14.26- 16.46s (2.20s) "But he was wounded for our transgressions,
+  P07 [  isaiah/isaiah ]  16.98- 18.64s (1.66s) he was bruised for our iniquities...
+  P08 [  isaiah/isaiah ]  19.24- 21.76s (2.52s) and with his stripes we are healed."
+  P09 [  bridge/narrator]  22.90- 23.40s (0.50s) Stripes —
+  P10 [  bridge/narrator]  24.10- 25.32s (1.22s) the welts of a flogging,
+  P11 [  bridge/narrator]  25.96- 29.62s (3.66s) the wounding Isaiah foresaw centuries before it fell on Jesus' back.
+  P12 [  bridge/narrator]  30.24- 33.56s (3.32s) And the apostle Peter took up Isaiah's words and laid them on
+  P13 [  bridge/narrator]  33.56- 34.46s (0.90s) Christ at the cross:
+  P14 [   peter/peter  ]  35.30- 39.30s (4.00s) "Who his own self bare our sins in his own body on
+  P15 [   peter/peter  ]  39.30- 39.82s (0.52s) the tree...
+  P16 [   peter/peter  ]  40.84- 42.94s (2.10s) by whose stripes ye were healed."
+  P17 [ landing/narrator]  43.30- 44.86s (1.56s) And watch what Peter does with it.
+  P18 [ landing/narrator]  45.84- 47.76s (1.92s) Isaiah wrote "we are healed."
+  P19 [ landing/narrator]  48.70- 50.66s (1.96s) Peter writes "ye were healed" —
+  P20 [ landing/narrator]  51.34- 53.80s (2.46s) and points the promise straight at the one who's listening:
+  P21 [ landing/narrator]  54.58- 55.28s (0.70s) at you.
+  P22 [ landing/narrator]  56.32- 58.60s (2.28s) You were never meant to make it right yourself.
+  P23 [ landing/narrator]  59.48- 61.08s (1.60s) The healing isn't something you produce —
+  P24 [ landing/narrator]  62.02- 63.30s (1.28s) it was finished at the cross,
+  P25 [ landing/narrator]  63.30- 65.10s (1.80s) in His own wounds,
+  P26 [ landing/narrator]  65.10- 66.22s (1.12s) for you.
+  P27 [ landing/narrator]  67.36- 68.94s (1.58s) The wound that keeps reopening,
+  P28 [ landing/narrator]  69.48- 70.92s (1.44s) He has already closed.
+  P29 [ landing/narrator]  71.42- 72.48s (1.06s) Come to Him,
+  P30 [ landing/narrator]  72.48- 74.00s (1.52s) and receive it.
+      ! scene 2 (Isaiah Sees It Coming) has no .mp4 at 02_isaiah-sees-the-suffering.mp4; skipping
+      ! scene 4 (As A Lamb, Silent) has no .mp4 at 04_as-a-lamb-to-the-slaughter.mp4; skipping
+      ! scene 10 (The Healed Believer) has no .mp4 at 10_the-healed-believer.mp4; skipping
+
+========================================================================
+  AGENT-BRIDGE REQUEST 0001_1d1676  [text]  assembly-episode-fit
+  prompt : C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\requests\0001_1d1676.request.md
+  REPLY  -> write the raw model output to: C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\responses\0001_1d1676.txt
+  (engine is blocked, polling every 1.5s up to 3600s)
+========================================================================
+
+
+=== NARRATION BOARD ===
+  [    hook]   0.00- 13.90s (13.90s) narrator: You carry a wound nothing has been able to close — a guilt t...
+  [  isaiah]  14.30- 22.86s ( 8.56s) isaiah: "But he was wounded for our transgressions, he was bruised f...
+  [  bridge]  22.86- 34.76s (11.90s) narrator: Stripes — the welts of a flogging, the wounding Isaiah fores...
+  [   peter]  35.16- 43.16s ( 8.00s) peter: "Who his own self bare our sins in his own body on the tree....
+  [ landing]  43.16- 74.02s (30.87s) narrator: And watch what Peter does with it. Isaiah wrote "we are heal...
+  total: 74.024s
+
+=== CLIPS (20) ===
+  * #01 The Wound That Won't Close         hook-open  slower       5.04s
+  * #03 Wounded For Our Transgressions     build      slower       5.04s
+  * #05 Wounded For Us                     build      slower       5.04s
+  * #06 Whom They Pierced                  climax     slower       5.04s
+    #07 The Apostle Lays It On Christ      build      controlled   5.04s
+    #08 All We Like Sheep                  build      slower       5.04s
+    #09 He Bare Our Sins                   pivot      slower       5.04s
+  * #11 Aimed At You                       pivot      slower       5.04s
+  * #12 Finished At The Cross              close      slower       5.04s
+  * #13 Come And Receive                   close      slower       5.04s
+  * #14 The Wound He Closed                close      slower       5.04s
+  * #15 The Ninth Hour                     build      faster       5.04s
+  * #16 Hung By The Arms                   build      faster      10.04s
+  * #17 Poured Out Like Water              build      faster       5.04s
+  * #18 The Cry Of The Cross               pivot      faster       5.04s
+  * #19 Come To Him                        close      faster       5.04s
+  * #20 It Is Finished                     close      faster       5.04s
+  * #21 Room To Turn                       close      faster       5.04s
+  * #22 The Reach Of The Cross             close      faster       5.04s
+  * #23 Crushed In Your Place              close      faster       5.04s
+
+[A2] Jigsaw matching (beat mode, budget=20, hero_pref=6)...
+
+========================================================================
+  AGENT-BRIDGE REQUEST 0002_6e2a88  [text]  text
+  prompt : C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\requests\0002_6e2a88.request.md
+  REPLY  -> write the raw model output to: C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\responses\0002_6e2a88.txt
+  (engine is blocked, polling every 1.5s up to 3600s)
+========================================================================
+
+  …still waiting on agent reply for 0002_6e2a88 (text)
+      reading: All 20 clips, full-coverage timeline (board now reaches 74s). Proof: man(#01), sheep(#08), scourged(#03), close wound(#0...
+[A3] Self-review (panel + AS-G1..G9 deterministic + AS-G8 beat continuity)...
+
+========================================================================
+  AGENT-BRIDGE REQUEST 0003_0ee52f  [text]  text
+  prompt : C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\requests\0003_0ee52f.request.md
+  REPLY  -> write the raw model output to: C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\responses\0003_0ee52f.txt
+  (engine is blocked, polling every 1.5s up to 3600s)
+========================================================================
+
+      LOCKED (0 FAIL)
+[A4] INDEPENDENT red-team audit (authoritative)...
+
+========================================================================
+  AGENT-BRIDGE REQUEST 0004_947139  [text]  text
+  prompt : C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\requests\0004_947139.request.md
+  REPLY  -> write the raw model output to: C:\Users\sanjay\PycharmProjects\JesusInTheBible\.agent_bridge\responses\0004_947139.txt
+  (engine is blocked, polling every 1.5s up to 3600s)
+========================================================================
+
+      independent: LOCKED (0 FAIL)
+
+      --- SANITY TABLE (per section) ---
+      section   clips   window  avgslot  avgspd  trimmed
+      hook          3   12.94s    4.31s   1.36x    0/3
+      isaiah        3    9.96s    3.32s   2.07x    0/3
+      bridge        4   10.66s    2.67s   2.10x    1/4
+      peter         2    9.74s    4.87s   1.07x    0/2
+      landing       7   28.72s    4.10s   1.42x    0/7
+      OVERALL: 19 clips · avg 1.62x · max 3.00x
+  [coherence] 13 asset(s) NOT coherence-verified in v1:
+  [coherence]   - clip 05_wounded-for-us.mp4: not clip_qc-verified
+  [coherence]   - clip 06_whom-they-pierced.mp4: not clip_qc-verified
+  [coherence]   - clip 11_aimed-at-you.mp4: not clip_qc-verified
+  [coherence]   - clip 12_finished-at-the-cross.mp4: not clip_qc-verified
+  [coherence]   - clip 15_the-ninth-hour.mp4: not clip_qc-verified
+  [coherence]   - clip 16_hung-by-the-arms.mp4: not clip_qc-verified
+  [coherence]   - clip 17_poured-out-like-water.mp4: not clip_qc-verified
+  [coherence]   - clip 18_the-cry-of-the-cross.mp4: not clip_qc-verified
+  [coherence]   - clip 19_come-to-him.mp4: not clip_qc-verified
+  [coherence]   - clip 20_it-is-finished.mp4: not clip_qc-verified
+  [coherence]   - clip 21_room-to-turn.mp4: not clip_qc-verified
+  [coherence]   - clip 22_the-reach-of-the-cross.mp4: not clip_qc-verified
+  [coherence]   - clip 23_crushed-in-your-place.mp4: not clip_qc-verified
+  [coherence] WARNING: JITB_REQUIRE_COHERENCE is OFF (rollout) — NOT blocking. Flip to 1 after the Half-B audit to enforce.
+  [still-review] v1: NOT signed off — no .stills_reviewed sign-off
+  [still-review] WARNING: JITB_REQUIRE_STILL_REVIEW is OFF (rollout) — not blocking. Regenerate stills_review.html, eyeball it, then: python -m pipeline.still_review "v2\pilot\isaiah_53_5_with_his_stripes\v1" --sign-off
+
+[handoff] writing edit_plan.json + reviews + timeline + upstream_notes...
+
+[B1] Rendering the 60s viral cut...
+      [seg  0] body       #01 2.98s @ 1.69x (speed)
+      [seg  1] body       #08 6.92s @ 0.73x (speed)
+      [seg  2] body       #03 3.04s @ 1.66x (speed)
+      [seg  3] body       #05 4.04s @ 1.25x (speed)
+      [seg  4] body       #17 2.26s @ 2.23x (speed)
+      [seg  5] body       #16 3.66s @ 2.74x (speed)
+      [seg  6] body       #15 1.20s @ 3.00x (speed+trim)
+      [seg  7] body       #23 1.86s @ 2.71x (speed)
+      [seg  8] body       #18 4.28s @ 1.18x (speed)
+      [seg  9] body       #07 3.32s @ 1.52x (speed)
+      [seg 10] body       #09 5.74s @ 0.88x (speed)
+      [seg 11] body       #11 4.00s @ 1.26x (speed)
+      [seg 12] body       #22 5.40s @ 0.93x (speed)
+      [seg 13] body       #14 5.88s @ 0.86x (speed)
+      [seg 14] body       #20 4.90s @ 1.03x (speed)
+      [seg 15] body       #12 3.82s @ 1.32x (speed)
+      [seg 16] body       #19 4.06s @ 1.24x (speed)
+      [seg 17] body       #21 1.82s @ 2.77x (speed)
+      [seg 18] body       #13 2.84s @ 1.77x (speed)
+      [seg 19] hero-tail  #06 2.00s @ 2.52x (speed)
+      [concat] 20 segments -> _body_concat.mp4
+      [mux] narration -> viral_cut.mp4
+      viral cut: v2\pilot\isaiah_53_5_with_his_stripes\v1\assembly\viral_cut.mp4  (74.02s)
+[B2] Rendering the all-takes reel...
+      [reel] concat 20 clips -> all_takes_reel.mp4
+      reel: v2\pilot\isaiah_53_5_with_his_stripes\v1\assembly\all_takes_reel.mp4  (105.66s)
+
+[done] index: v2\pilot\isaiah_53_5_with_his_stripes\v1\assembly\index.html
+
+================================================================
+  DONE — edit plan: LOCKED  (0 revision(s))
+  viral cut: v2\pilot\isaiah_53_5_with_his_stripes\v1\assembly\viral_cut.mp4
+  reel:      v2\pilot\isaiah_53_5_with_his_stripes\v1\assembly\all_takes_reel.mp4
+  review:    v2\pilot\isaiah_53_5_with_his_stripes\v1\assembly\index.html
+================================================================

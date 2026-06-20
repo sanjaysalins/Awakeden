@@ -20,11 +20,11 @@ CUT = Path(r"C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\02_Psalm_2
 OUT = CUT.with_name("viral_cut_sfx.mp4")
 
 LAYERS = [
-    layer("wind",   "wind_desert_bleak",   "loop",    0.0, 67.0, -34.0, fout=3.0),                          # parched wilderness under it all
-    layer("hollow", "air_hollow_desolate", "loop",   13.0, 18.0, -37.0, filt="lowpass=f=3000", fin=3.0, fout=4.0),  # the dying-body images
-    layer("dust",   "rumble_deep_sub",     "loop",   20.0, 11.0, -38.0, filt="lowpass=f=600", fin=3.0, fout=4.0),   # the dust of death
-    layer("water",  "river_well_water",    "loop",   45.0, 12.0, -32.0, filt="lowpass=f=2500", fin=2.5, fout=3.0),  # every river / living water / drink
-    layer("dawn",   "dawn_morning_warm",   "loop",   56.0, 11.0, -33.0, filt="lowpass=f=3000", fin=3.0),    # that water is Himself
+    layer("wind",   "wind_desert_bleak",   "loop",    0.0, 70.9, -34.0, fout=3.0),                          # parched wilderness under it all
+    layer("hollow", "air_hollow_desolate", "loop",   13.0, 21.0, -37.0, filt="lowpass=f=3000", fin=3.0, fout=4.0),  # the dying-body images (13->34)
+    layer("dust",   "rumble_deep_sub",     "loop",   20.0, 14.0, -38.0, filt="lowpass=f=600", fin=3.0, fout=4.0),   # the dust of death (20->34)
+    layer("water",  "river_well_water",    "loop",   44.0, 20.0, -32.0, filt="lowpass=f=2500", fin=2.5, fout=3.0),  # every river / living water / drink (44->64)
+    layer("dawn",   "dawn_morning_warm",   "loop",   62.0,  8.9, -33.0, filt="lowpass=f=3000", fin=3.0),    # that water is Himself (62->71)
 ]
 
 if __name__ == "__main__":

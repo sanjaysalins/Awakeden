@@ -386,6 +386,110 @@
         "viral_role": "close",
         "shot_kind": "standard",
         "vignettes": []
+      },
+      {
+        "index": 15,
+        "slug": "david-records-the-taunt",
+        "title": "David Records The Taunt",
+        "scene_type": "single",
+        "arc_position": "proof",
+        "framing": "mid",
+        "purpose": "backfill for punch (reuse)",
+        "rationale": "reuse-backfill",
+        "visible_elements": "the psalmist recording the prophecy of the mockers' words",
+        "emotional_tone": "reverent",
+        "subject_block": "the psalmist recording the prophecy of the mockers' words",
+        "mood_block": "atmosphere of the mockery and the King who stayed",
+        "jesus_variant": "passion",
+        "priority": 3,
+        "macro_elements": [
+          "the cross",
+          "the crowd",
+          "the marked body",
+          "the sky"
+        ],
+        "pacing": "faster",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 16,
+        "slug": "the-leaders-jeer",
+        "title": "The Leaders Jeer",
+        "scene_type": "single",
+        "arc_position": "proof",
+        "framing": "mid",
+        "purpose": "backfill for punch (reuse)",
+        "rationale": "reuse-backfill",
+        "visible_elements": "robed rulers sneering up at the cross",
+        "emotional_tone": "reverent",
+        "subject_block": "robed rulers sneering up at the cross",
+        "mood_block": "atmosphere of the mockery and the King who stayed",
+        "jesus_variant": "passion",
+        "priority": 3,
+        "macro_elements": [
+          "the cross",
+          "the crowd",
+          "the marked body",
+          "the sky"
+        ],
+        "pacing": "faster",
+        "viral_role": "build",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 17,
+        "slug": "twelve-legions-restrained",
+        "title": "Twelve Legions Restrained",
+        "scene_type": "single",
+        "arc_position": "proof",
+        "framing": "mid",
+        "purpose": "backfill for punch (reuse)",
+        "rationale": "reuse-backfill",
+        "visible_elements": "Christ on the cross, restrained power, angels held back",
+        "emotional_tone": "reverent",
+        "subject_block": "Christ on the cross, restrained power, angels held back",
+        "mood_block": "atmosphere of the mockery and the King who stayed",
+        "jesus_variant": "passion",
+        "priority": 3,
+        "macro_elements": [
+          "the cross",
+          "the crowd",
+          "the marked body",
+          "the sky"
+        ],
+        "pacing": "faster",
+        "viral_role": "pivot",
+        "shot_kind": "standard",
+        "vignettes": []
+      },
+      {
+        "index": 18,
+        "slug": "looking-down-in-love",
+        "title": "Looking Down In Love",
+        "scene_type": "single",
+        "arc_position": "proof",
+        "framing": "mid",
+        "purpose": "backfill for punch (reuse)",
+        "rationale": "reuse-backfill",
+        "visible_elements": "the face of Christ looking down in love",
+        "emotional_tone": "reverent",
+        "subject_block": "the face of Christ looking down in love",
+        "mood_block": "atmosphere of the mockery and the King who stayed",
+        "jesus_variant": "passion",
+        "priority": 3,
+        "macro_elements": [
+          "the cross",
+          "the crowd",
+          "the marked body",
+          "the sky"
+        ],
+        "pacing": "faster",
+        "viral_role": "close",
+        "shot_kind": "standard",
+        "vignettes": []
       }
     ],
     "short_priority": [
@@ -396,7 +500,11 @@
       14,
       3,
       5,
-      13
+      13,
+      15,
+      16,
+      17,
+      18
     ],
     "candidates": [
       {

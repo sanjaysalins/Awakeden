@@ -3,8 +3,40 @@
     "index": 0,
     "section": "hook",
     "speaker": "narrator",
-    "text": "The One who made every ocean gasped two words on a cross: I thirst. Psalm twenty-two. David wrote it in the first person, but he was picturing someone else's death. Watch the body give out: \"My strength is dried up like a potsherd; and my tongue cleaveth to my jaws; and thou hast brought me into the dust of death.\" Dried clay; a tongue stuck fast; a man sinking into the dust of death. Then John records the dying Jesus' cry: \"I thirst.\" Psalm twenty-two doesn't foretell that cry — it paints the thirst behind it, a thousand years before He felt it. And think who is thirsting: the One who made every river and spring, who offers the world living water — hanging there with nothing, in your place. He went dry so that you could drink and never thirst again. The God who made every ocean cried out in thirst — so He could hand you the one water that never fails. And that water is Himself.",
+    "text": "The One who made every ocean gasped two words on a cross: I thirst. Psalm twenty-two. David wrote it in the first person, but he was picturing someone else's death. Watch the body give out:",
     "start_s": 0.0,
-    "end_s": 67.059
+    "end_s": 15.513
+  },
+  {
+    "index": 1,
+    "section": "david",
+    "speaker": "david",
+    "text": "\"My strength is dried up like a potsherd; and my tongue cleaveth to my jaws; and thou hast brought me into the dust of death.\"",
+    "start_s": 15.913,
+    "end_s": 24.953
+  },
+  {
+    "index": 2,
+    "section": "bridge",
+    "speaker": "narrator",
+    "text": "Dried clay; a tongue stuck fast; a man sinking into the dust of death. Then John records the dying Jesus' cry:",
+    "start_s": 24.953,
+    "end_s": 34.545
+  },
+  {
+    "index": 3,
+    "section": "quote",
+    "speaker": "jesus",
+    "text": "\"I thirst.\"",
+    "start_s": 34.945,
+    "end_s": 37.025
+  },
+  {
+    "index": 4,
+    "section": "landing",
+    "speaker": "narrator",
+    "text": "Psalm twenty-two doesn't foretell that cry — it paints the thirst behind it, a thousand years before He felt it. And think who is thirsting: the One who made every river and spring, who offers the world living water — hanging there with nothing, in your place. He went dry so that you could drink and never thirst again. The God who made every ocean cried out in thirst — so He could hand you the one water that never fails. And that water is Himself.",
+    "start_s": 37.025,
+    "end_s": 70.939
   }
 ]

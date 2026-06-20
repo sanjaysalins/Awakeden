@@ -5,7 +5,14 @@ stages so the next episode's clips drop into the cut with less fighting.
 
 ## What was hard to fit this run
 
-- (nothing fought the cut — clips fit cleanly.)
+- **#06 They Shoot Out the Lip** — needed 2.77x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
+- **#07 The Religious Leaders Sneer** — needed 2.10x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
+- **#05 The Religious Leaders Jeer** — needed 3.19x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
+- **#08 He Had Every Power** — needed 2.90x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
+
+## Short single-clip windows that want a dedicated insert
+
+- Section **mocker** is only 1.6s and holds one clip (#05 The Religious Leaders Jeer). Plan a purpose-built ~2s INSERT scene (a single macro detail) for this beat instead of squeezing a 10s clip.
 
 ## Standing 'design for the cut' rules
 

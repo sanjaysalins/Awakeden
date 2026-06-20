@@ -5,7 +5,12 @@ stages so the next episode's clips drop into the cut with less fighting.
 
 ## What was hard to fit this run
 
-- **#01 The Dice in the Dust** — needed 2.20x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
+- **#01 The Dice in the Dust** — needed 2.47x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
+- **#08 Hung By The Arms** — needed 2.37x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
+- **#06 Cast Lots at the Cross** — needed 2.54x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
+- **#11 A Thousand Years Apart** — needed 3.00x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
+- **#07 The Cross, Foretold** — needed 2.42x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
+- **#05 The Coat They Would Not Tear** — needed 2.25x. Slow the Kling motion / front-load the payload so the speed-up looks intentional.
 
 ## Standing 'design for the cut' rules
 

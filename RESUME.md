@@ -1,6 +1,205 @@
 # RESUME.md — start here next session
 
-## ═══════════ SESSION 2026-06-19 (LATEST) — FULL-TREATMENT SWEEP #04/#05/#06/#07 + 2 NEW STANDARDS (speed-to-fit/no-trim + cinematic-orchestral score + motion hero) ═══════════
+## ⚡ FRESH-SESSION QUICK-START (read this first — 2026-06-20 handoff)
+**Where we are:** the v2 sweep is COMPLETE (8 Psalm-22 shorts + Isaiah/Mockers/Zechariah pilots = 11 items at the new bar). We then planned a **FIX-ALL program** to bring the rest of the catalogue (42 narrations audited) to the v2 bar. Plan was **red-teamed** → real cost is ~$340-580 not ~$165-205 (own-world topics can't reuse the passion-only clip library), so user **revised scope to "Phase A + reuse-cheap first, ~$50, defer own-world."**
+
+### ═══ 2026-06-20 PART 2 — PHASE A COMPLETE (Well + Door + Fire all DONE) ═══
+**3 finals shipped this part** (recipe: reformat narration.md+tagged to v2 speaker-labels [words FROZEN, MP3 untouched] → lock → assemble hf --no-verify [service 4-6 bridges] → SFX bed → Cinematic-Orchestral score [~$2 metered each, auto-approved Phase A] → ivory caption → copy):
+- **WELL** (Woman at the Well, John 4) → `C:/Users/sanjay/WELL_FINAL.mp4` (61.5s). 11 clips, hero #11 Christ cupping living water. Recipe slug `08-the-well-that-never-runs-dry-cinematic-orchestral`. SFX `sfx_pilots/build_well.py`.
+- **DOOR** (32 The Door Was a Body, John 10:9) → `C:/Users/sanjay/DOOR_FINAL.mp4` (63.1s). 12 clips, hero #12 Christ-in-the-open-door. 1 revise (broke a 16s hold→~7s; landing under-clipped at 11 body clips — optional future reuse-backfill). SFX `build_door.py`, recipe `32-the-door-was-a-body-cinematic-orchestral`.
+- **FIRE** (16 The Fire Jesus Built, John 21:15-17) → `C:/Users/sanjay/FIRE_FINAL.mp4` (61.5s). **Rule-8 WAIVED** (user-approved): 3 substantial KJV quotes in the frozen John 21 dialogue > 2 cap; assembled with `JITB_REQUIRE_LOCK=0` so **NO .locked written** (parity+KJV verify OK; only Rule-8 fails). 12 clips, hero #5 Christ-at-the-fire; close = re-commission→nail-wound→the fire. SFX `build_fire.py`, recipe `16-the-fire-jesus-built-cinematic-orchestral`.
+- **GOTCHA confirmed:** old episodes' narration.md (prose) AND narration-tagged.md (only the quote `<speaker>`-wrapped) BOTH need rewriting to v2 — the tagged file must wrap EVERY block or the lock parser drops narrator text → parity split-brain. KJV-strict uses ordered-substring (`_ordered_in`) so partial spans ("Feed my sheep.") pass if you cite the right verse. `add_music --script` wants a FILE PATH, not the text.
+
+**▶ ISAIAH PAIR — user calls made (2026-06-20 PART 2):**
+- **21 The Pronouns: SKIP — never made** (folder does not exist anywhere). User: leave it.
+- **25 The Question on the Gaza Road** (`.../25 The Question on the Gaza Road/v1`): user chose **FULL BUILD**.
+  - ✅ **TEXT + AUDIO DONE + LOCKED.** Rebuilt the narration (was banned "Will you trust Him?" CTA + single-narrator + heavy 1.30x atempo). Ran the 5-CLI panel **5 rounds** — it caught a REAL accuracy error (Acts 8:32 records the eunuch reading Isaiah **53:7-8 / the silent lamb**, NOT 53:5; quote fixed to Acts 8:32 + full Acts 8:34 with "I pray thee,"), fixed the KJV interior-elision, the wrong `[isaiah]`→`[official]` read-aloud speaker tag, removed benefit/gain clauses (land on WHO the Lamb is), turned the question onto the viewer. Multi-voice (narrator + official). Trimmed 188→**156 words**. Re-synthed **61.96s @ gentle 0.98x atempo**, alignment regen'd, `cli_lock` LOCKED. (~$0.50 synth spent.)
+  - ✅ **SCENE PLAN BUILT + LOCKED** (cohesion PASS), `.../v1/visual/scene_plan.json` (12 scenes). Serviced 6 bridge calls (discover/review/revise[removed banned 'frame' token in sc5/11/12]/re-review/independent/cohesion). Hero = #12 (the Lamb / Christ face). reuse_plan.json: engine auto-matched 7 reuse / 5 generate BUT ~4 of its "reuses" are passion/cross clips FORCE-matched into own-world narrative slots (sc5 the-question got a crucifixion clip, sc6 Philip got a cross, sc7 Isaiah-writing got hung-by-the-arms, sc9 rejoicing got a christ-face) = topical-fit violations to REJECT.
+  - ✅ **DONE → `C:/Users/sanjay/GAZA_FINAL.mp4` (64.4s).** Leaner cut: 4 own-world NBP renders (sc1 eunuch, sc2 lamb, sc5 question, sc6 Philip — sc6 retried once for a 17thC ruff anachronism the period-audit caught) + 4 reuse (sc3 wounds, sc4 cross, sc10 portrait, sc12 hero looking-down-in-love). Dropped sc7/8/9/11 (sc8 had no coherence-verified RISEN christ-face). Animation cut-plans kept the scroll script un-morphed (push-in, not macro). **GOTCHA caught:** cli_visual's animate phase re-animates reuse slots (no .kling.json sidecar) → killed it mid-run + animated only sc5/sc6 via direct image_to_kling, leaving the reuse mp4s intact (saved ~$2.6). SFX `build_gaza.py` + Cinematic-Orchestral score (recipe `25-the-question...`) + caption. Lands on a 17s reverent Christ-face hold (#10) then a thorn-passion close — coherent, lands on Christ. Lean pacing (8 clips/62s); optional future $0 reuse-backfill to punch it up. Spend ≈ $7 (slightly over the $5-6 est. — the sc6 retry).
+  - ▶ **(superseded — done above) USER CHOSE LEANER RENDER (~$5-6).** Plan was:
+    - **RENDER own-world (NBP for style-match with the NBP reuses): sc1 eunuch-reads, sc2 the-lamb, sc5 the-question, sc6 philip.** (4 stills+Kling ≈ $4.6.)
+    - **REUSE faithful passion (reuse_swap, $0): sc3 wounded ← 04_the-reach-of-the-cross · sc4 cross ← 13_his-name-is-jesus · sc10 portrait ← 04_it-is-finished · sc8 risen-face ← pick a clean christ-face (e.g. 06_the-living-face) · sc12 HERO ← a strong christ-face (e.g. 10_looking-down-in-love).** (sc8/12 the engine marked 'generate' wrongly — reuse a christ-face instead.)
+    - **DROP from the cut: sc7 (Isaiah writing), sc9 (rejoicing), sc11 (scroll-question)** — own-world, non-essential, saves renders. → 9-clip cut.
+    - Then: cli_assemble hf→ wait NBP clips so assemble `--provider nbp`; SFX (write build_gaza.py: desert wind + scroll/parchment + lamb + choir + dawn); **Cinematic-Orchestral score (~$2, QUOTE/already in the ~$5-6 approval)**; caption → `C:/Users/sanjay/GAZA_FINAL.mp4`.
+    - **COMMITMENT: show exact pre-flight render cost before firing the paid NBP renders.** Spend approved ≈ $5-6.
+    - ✅ **reuse_plan.json CORRECTED on disk (red-team fix 2026-06-20):** the engine's auto-plan had force-matched cross/passion clips into own-world scenes (sc5/6/7/9) AND had a stale/missing path for sc10. Now: generate = sc1,2,5,6 (render NBP) + sc7,9,11 (drop, not in short_priority); reuse (all paths validated to exist) = sc3←04_the-reach-of-the-cross · sc4←13_his-name-is-jesus · sc8←06_the-living-face (risen) · sc10←05_He_Hath_Done_This/04_it-is-finished · sc12 HERO←02_The_Mockers_Words/10_looking-down-in-love. At render: set scene_plan short_priority to [1,2,5,6,12,3,4,8,10] (drop 7,9,11) → 9-clip cut.
+
+**▶ (original) DO FIRST was: finish WOMAN AT THE WELL — NOW DONE (PART 2 above).**
+
+**Key docs:** program plan = `v2/FIX_ALL_V2_PLAN.md` (red-team + revised scope) · catalogue audit = `C:/Users/sanjay/CONTENT_AUDIT.html` · finals = `C:/Users/sanjay/{ISAIAH_53_5,MOCKERS_V2,ZECHARIAH,02_Mockers_Words,01_Crucifixion_Foretold,08_I_Thirst}_FINAL.mp4`.
+
+**Standing rules locked this session:** (1) every score = full **Cinematic-Orchestral** + must move the listener deeply ([[feedback-cinematic-score-standard]]); (2) gentle narrator atempo ~1.08x is OK to tighten ([[feedback-natural-speed-more-clips]]); (3) **regen `narration.alignment.json` (force=True) after ANY audio-length change** before re-assembling ([[alignment-cache-staleness]]); (4) old episodes need narration.md reformatted to v2 speaker-labels + first-time `cli_lock.py` before assemble. Budget ceiling ~$300 (program), spent ≈ $10 this session.
+
+**Recipe per episode (proven on 3 pilots):** sweep clips (subagent) → fix defects reuse-first → multi-voice synth (if needed) → regen alignment → re-lock → backfill-punchy → `cli_assemble --no-verify` (own-world clips = full Vision verify) → SFX → Cinematic-Orchestral score (metered ~$2) → caption → copy to `C:/Users/sanjay/<NAME>_FINAL.mp4`. Bridge servicing (episode-fit `{"offtopic":[]}` / jigsaw / self+independent LOCKED / slot-verifies) routes to the agent — service `.agent_bridge/requests/`.
+
+---
+
+## ═══════════ SESSION 2026-06-20 (LATEST) — v2 SWEEP COMPLETE (3 pilots done) + FIX-ALL PROGRAM approved + skills/CONTENT ═══════════
+
+**v2 SWEEP COMPLETE: ISAIAH 53:5 (76.5s), MOCKERS-V2 (71.5s), ZECHARIAH 12:10 (69.5s) all DONE — all 11 original-scope items now at the new bar.** Finals: `C:/Users/sanjay/{ISAIAH_53_5,MOCKERS_V2,ZECHARIAH}_FINAL.mp4`. THEN scoped the whole catalogue (audit: `C:/Users/sanjay/CONTENT_AUDIT.html`, 42 narrations) + wrote+got-approval for the **FIX-ALL v2 program** (`v2/FIX_ALL_V2_PLAN.md`, ~$300 ceiling). NEXT = Phase 0 triage (free). Also: installed mattpocock skills + CONTEXT.md domain glossary. New STANDING rule: score = full Cinematic-Orchestral + move deeply. Pilots ≈ $7.50 this session.
+
+### ✅ DONE THIS SESSION
+- **Parallel sweep of all 3 pilots (subagents, $0):** Isaiah (3-voice already locked, 78.7s, no hard fails — only flags), Mockers-v2 (SINGLE-narrator, 70s, **4 FAIL: 04/08/10/12 titulus+gems**), Zechariah (SINGLE-narrator, 70s, **3 FAIL: 01 titulus / 06 face-melt / 11 church-steeple**, hero #05 transient melt). Mockers + Zech still need multi-voice.
+- **ISAIAH clips fixed (all $0 reuse):** filled sc11 (Christ-face) + replaced drift sc12, backfilled 10→16 clips (added scenes 15-19). Assembled once (16-clip, all 15 slots Vision-verified by my eye, LOCKED) → then user reviewed slices.
+- **🔴 USER DELETED + BLACKLISTED 2 Isaiah clips:** `05_by-whose-stripes` + `06_in-his-own-body-on-the-tree` (full-body figures) → moved to `visual/nbp/_deleted/` + DO_NOT_USE markers + **pruned from clip_library (122→120)**. Never reuse.
+- **ISAIAH replacements swapped in ($0):** scene 5 ← `10_wounded-for-us` (close wound), scene 6 (HERO) ← `08_whom-they-pierced` (pierced Christ — user confirmed bare-torso OK). Slugs renamed so deleted names are gone. Coherence+manifest+elemgate PASS. **Isaiah is now 16 clips, whole.**
+- **Slices review pages built:** `C:/Users/sanjay/ISAIAH_slices.html` + `C:/Users/sanjay/ISAIAH_strips.html` (full filmstrip per clip).
+- **Verified the "78.7s = 8.7s dead air" assumption was WRONG:** the tail is real spoken CTA (−20dB). **Do NOT trim** — it would cut "Come to Him, and receive it." Long landing holds came from the jigsaw phrase board ending at 69.98 (not dead air); fix = re-pin clips into 70-78s, not trimming.
+- **mattpocock/skills installed:** `npx skills add mattpocock/skills` — first run with `--all` carpet-bombed 47 agent dirs; cleaned to `.claude` only. **All 33 skills kept** in `.claude/skills/` + `skills-lock.json` (untracked). Useful here: diagnosing-bugs, tdd, grilling, codebase-design, domain-modeling, git-guardrails. TS/issue-tracker ones are poor fit.
+- **domain-modeling demo → `CONTEXT.md`** (root): ubiquitous-language glossary (Thread, Hero, Gallery-Tour, Vignette, Element manifest, Neutral plate, Speed-to-fit…). Surfaced one vocab/code tension: glossary says Hero≠climax but scene_plan tags hero `viral_role:"climax"`.
+
+### ✅ ISAIAH 53:5 FULLY DONE (81.2s) — `C:/Users/sanjay/ISAIAH_53_5_FINAL.mp4`
+Re-assembled with new hero (whom-they-pierced, scene 6) + spread landing (worst hold 10.8s, was 15s); all 15 slots Vision-verified by eye; LOCKED 0-rev. SFX bed (`build_v2_stripes.py`) → cinematic-redemptive score (`add_music --regen --gain -8`, reshaped fill+settle, recipe `isaiah-53-5...` ~$2 metered) → ivory caption (189 words, script-aligned). Final = `…/isaiah_53_5_with_his_stripes/v1/assembly/viral_cut_sfx_music_captioned.mp4`.
+
+### ✅ MOCKERS-V2 FULLY DONE (71.5s) — `C:/Users/sanjay/MOCKERS_V2_FINAL.mp4`
+Multi-voice (narrator + david Ps 22:7-8 + mocker Matt 27:43 `[mocking]`); narrator 1.087x (target 69); alignment regen'd; re-locked. Replaced 4 titulus FAILs (04/08/10/12, blacklisted from clip_library) + backfilled to **18 clips** from the clean shipped #02 set (all eye-verified). Assembled 18-clip --no-verify (longest hold 7.6s, hero #07 the-king-who-would-not-come-down, LOCKED 0-rev). SFX (`build_v2_mockers.py`, dropped the shofar) → **Cinematic-Orchestral** score (recipe upgraded from sparse, `add_music --regen --gain -11`, ~$2) → ivory caption. Spend ≈ $2.50.
+
+### ✅ ZECHARIAH 12:10 DONE (69.5s) — `C:/Users/sanjay/ZECHARIAH_FINAL.mp4` — **v2 SWEEP COMPLETE (11 items)**
+3-voice (narrator + the_lord UzI1NsMEV3ni5JRkRSls on Zech 12:10 + john puDRtQWF8NtQiPMJygTb on John 19:37); narrator 1.075x (target 67); alignment regen'd + re-locked. Replaced 3 FAILs (01 titulus / 06 face-melt / 11 steeple), hero swapped to the pierced Christ (#07 whom-they-pierced), backfilled to 15 clips (all reuse, eye-verified this session). Assembled --no-verify (hold 6.6s, LOCKED). SFX (`build_v2_zech.py`) → Cinematic-Orchestral score (recipe upgraded, ~$2) → caption. Pilots this session ≈ $7.50.
+
+### ▶▶ DO FIRST NEXT SESSION — finish WOMAN AT THE WELL (started, defects fixed, blocked on lock-parity)
+**Folder:** `C:/Users/sanjay/PycharmProjects/PythonProject1/jesus/narration/08 The Well That Never Runs Dry/v1` (has v2 `visual/scene_plan.json`, clips in `visual/hf/`, audio already 59.0s + 2-voice narrator+jesus — NO re-synth needed).
+- DONE: swept 11 clips (9 clean). **2 FAILs fixed ($0 reuse):** scene 8 `08_18-the-cost-of-free-mercy` (gem nail-wound) ← `it-is-finished`; scene 10 `10_come-across-the-threshold` (modern dress/door) ← `come-to-him`. Defects gone; clip pool clean.
+- 🔴 BLOCKER: `cli_lock.py` fails **parity** — narration.md is OLD prose format (no speaker labels) ≠ narration-tagged.md. FIX: reformat narration.md to v2 labels (`**[narrator]**` / `**[jesus — KJV, John 4:14]**`) using the SAME words as narration-tagged.md (words unchanged = text-frozen, no red-team/panel needed — it's a format-parity fix). Then `cli_lock.py "<v1>" --form short`.
+- THEN: `cli_assemble "<v1>" --provider hf --no-verify --rebuild --replan` (audio unchanged → alignment still valid, NO regen). Hero = a Christ clip (05 risen / 11 christ-offers / 08 it-is-finished). Service bridges. → SFX (write `sfx_pilots/build_well.py`, water/well ambience) → **Cinematic-Orchestral** score (write a "living water" recipe, ~$2 metered) → caption. Copy final to `C:/Users/sanjay/WELL_FINAL.mp4`.
+- NOTE (carry to ALL old-episode Phase-A/B rebuilds): old narrations need (a) narration.md reformatted to v2 labels for parity, (b) first-time `cli_lock.py`. Budget that friction.
+
+### (revised scope reference) Phase A + reuse-cheap (RED-TEAMED; ~$50)
+**Phase 0 triage + RED-TEAM both DONE.** Red-team caught the big one: "reuse-first" FAILS for own-world topics (library is 100% passion; topical-fit gate forbids cross-use) → real full-program cost ~$340-580, NOT $165-205. **User revised scope to "Phase A + reuse-cheap first (~$50), defer own-world."** Details + guardrails in `v2/FIX_ALL_V2_PLAN.md` (RED-TEAM + REVISED SCOPE sections).
+- **DO NOW (~$50):** Phase A 3 old-bar videos (visuals exist → upgrade only): `08 The Well That Never Runs Dry`, `16 The Fire Jesus Built`, `32_The_Door_Was_a_Body` (KEEP FOLKLORE-FREE). + reuse-cheap Isaiah-passion audio-only: `21 The Pronouns`, `25 The Question on the Gaza Road`. Folders in `PythonProject1/jesus/narration/<space-named>/` (v1 may be the folder itself — check).
+- **Per-episode recipe** = sweep defects reuse-first → multi-voice synth → **regen alignment** ([[alignment-cache-staleness]]) → re-lock → backfill-punchy → assemble (`--no-verify` ONLY for confirmed-clip episodes; own-world = full Vision audit) → SFX → **Cinematic-Orchestral score** ([[feedback-cinematic-score-standard]]) → caption.
+- **GUARDRAILS:** text-touched episode → red-team + KJV-strict + panel before re-lock; `Who Do You Say I Am` text is modern-English not KJV (drop or full re-lock); $200 stop-loss; `/validate` after each LOCK.
+- **DEFER (own-world ~$23-30 each, separate budget):** prodigal 09, Jonah 23, Bethesda 22/26/29, storm 28, Light 31, Bread 34/35/36.
+
+### (done) FIX-ALL PROGRAM, Phase 0 TRIAGE
+Plan: `v2/FIX_ALL_V2_PLAN.md` (APPROVED, ~$300 ceiling, phase-to-phase, log to ledger). Audit page: `C:/Users/sanjay/CONTENT_AUDIT.html` (42 narrations: 10 v2-done, 10 old-bar video, 18 audio-only, 4 text-only).
+1. **Phase 0 triage** ($0): cull dupes/superseded/orphans (e.g. "30 Smitten of God"=Isaiah 53:5 already done; "07 I AM the Door" vs "32 The Door Was a Body"; "Who Do You Say I Am" vs "27 A List of Dead Men"; "05 He Said It Under the Lamps" orphan). Produce confirmed target list (~22-26) + firm budget. User approves the cull.
+2. **Phase A** (10 old-bar videos, ~$2.50-5 each): per-episode recipe = sweep → fix defects reuse-first → multi-voice synth → regen alignment → re-lock → backfill-punchy → assemble --no-verify → SFX → Cinematic-Orchestral score → caption. (Woman at the Well, Fire/John 21:17, Kiss/Prodigal, Door, + others.)
+3. **Phase B** (18 audio-only) then **Phase C** (4 text-only). Reuse-first from the clip library.
+- Standing: every score full Cinematic-Orchestral + move deeply; regen alignment after any length change; per-pilot recipe is the 3 pilots' proven flow.
+
+### (superseded) the LAST pilot (Zechariah)
+1. **Zechariah 12:10** (`v2/pilot/zechariah_12_10_pierced/v1`): SINGLE-narrator → wire multi-voice (narrator + Scripture voice for Zech 12:10 / John 19:37) + synth (~$0.50; clear `_turns` first; then `per_turn_synth --target ~<natural*0.92> --pre-quote-pause 0.4 --no-gate` for ~1.08x narrator; **then `assembly_align.align(force=True)` + `cli_lock.py`**). Fix FAIL clips **01** (titulus) / **06** (face-melt) / **11** (church-steeple), recheck hero **05** (transient melt). Backfill to ~16-18 (only 8 clips now) — reuse from #07/#08/#02/#03 passion+pierced clips. Assemble `--clips <N> --no-verify` (eye-verify new clips first) → SFX (`build_v2_zech.py`, retime to new length) → **Cinematic-Orchestral** score (upgrade recipe `zechariah...` from sparse, ~$2) → caption.
+2. Quote the metered (synth + score ≈ $2.50) before spending.
+3. STANDING: score must be full Cinematic-Orchestral + move the listener deeply ([[feedback-cinematic-score-standard]]); regen alignment after any audio-length change ([[alignment-cache-staleness]]).
+
+### 🔴 NEW GOTCHA (caught on Isaiah): `narration.alignment.json` is cached/idempotent. If you change narration length (re-synth, narrator atempo, trim), the assembler KEEPS the stale word-board → clips mis-time + a long tail-hold appears. FIX after any audio-length change: `python -c "from pathlib import Path; from pipeline import assembly_align; assembly_align.align(Path('<v1>'), force=True)"` (free, local whisper) BEFORE re-assembling. This stale board was the real cause of Isaiah's long final hold.
+### NARRATOR SPEED: gentle ~1.08x is allowed (Door eps used 1.03-1.04; heavy >1.30 is banned). Apply via `per_turn_synth <v1> --target <N> --pre-quote-pause 0.4 --no-gate` (reuses cached turns = $0, no API). Isaiah final ran narrator 1.083x (target 74) → 76.5s.
+
+### GOTCHA carried: reuse_swap into a NEW slot needs the scene index to already exist in scene_plan (append scenes first). It re-points macro_elements + relocks manifest. Deleted-clip slugs: rename the scene_plan slug BEFORE swapping (delete old files first) so it creates `NN_<newslug>.*`.
+
+## ═══════════ SESSION 2026-06-20 — AWAKEDEN.COM `_website/` (static prelaunch site) ═══════════
+
+**Built the public prelaunch site for www.awakeden.com** (static HTML, Netlify-ready). Psalm-22 production sweep paused for this; all `_website/` work is on disk, uncommitted unless you commit separately.
+
+### ✅ DONE THIS SESSION (website)
+- **Planned + red-teamed** prelaunch/postlaunch catalogue site (manifest-driven public truth, Awakeden-only, YouTube embeds at launch). Domain: **www.awakeden.com** (Cloudflare DNS → GitHub → Netlify).
+- **Scaffolded `_website/`:** `manifest.yaml`, `config.yaml`, `build_catalog.py`, `netlify.toml`, `index.html`, `catalogue.html`, `about.html`, `roadmap.html`, `series/psalm-22.html`, `work/*.html` (10 generated), `data/catalog.json`, CSS/JS (kinetic ticker, mosaic, cards).
+- **Fixed local preview:** relative asset paths + `assets/js/site.js` base helper (must use `python -m http.server 8080` in `_website/`, not file://).
+- **Copy pass:** stripped em dashes, arrow entities, and AI marketing slop; plain KJV-adjacent tone in `manifest.yaml` + static pages.
+- **`.gitignore`:** exception for `_website/assets/previews/**` so WebP thumbs can be committed for Netlify (source PNGs still gitignored).
+
+### ▶▶ DO FIRST NEXT SESSION (website — optional, when ready)
+1. **Local check:** `python _website/build_catalog.py` then `cd _website && python -m http.server 8080` → http://127.0.0.1:8080/ (Ctrl+F5).
+2. **Commit previews:** run build locally, `git add _website/` (incl. `assets/previews/*.webp` if generated), commit when happy.
+3. **Netlify:** connect repo, base `_website`, add `www.awakeden.com` + apex; Cloudflare SSL Full (strict).
+4. **When YouTube live:** set `youtube_id` per item in `manifest.yaml`, flip `config.yaml` `site.mode: live`, `noindex: false`.
+
+### ▶▶ DO FIRST NEXT SESSION (production — still primary)
+1. **User ear/eye-review #02 final** + refreshed #08/#01 finals; decide #02 sc08 faint titulus (keep / swap).
+2. **Full-treatment sweep: the 3 pilots** (Isaiah 53:5 / Mockers-v2 / Zechariah 12:10). #01–#08 all done.
+
+### 💰 SPEND THIS SESSION (website): $0 (static files only).
+
+---
+
+## ═══════════ SESSION 2026-06-20 (PRODUCTION, END OF DAY) — score-shaping baked as default + #02 finished + Isaiah pilot started ═══════════
+
+**Stopped here for the day.** All work saved on disk (uncommitted). Background processes stopped, agent-bridge cleared.
+
+### ✅ DONE THIS PART
+- **SCORE-SHAPING is now the DEFAULT** (user-locked): baked the reshape into `sfx_pilots/add_music.py` → new `reshape_music()` runs automatically on every fresh `--regen` score. It (a) auto-detects Eleven Music's early fade, stretches the audible arc to FILL the full length, and (b) applies an **ease-down envelope — loudest at the mid-turn, settling into a soft close** (the "crest-at-the-turn, settle-the-close" rule). Backs up the raw gen as `<stem>_eleven_raw.mp3`. Params: `hold_frac=0.70`, `floor=0.12`. (Reused scores via `--regen`-off are untouched.) `add_music.py` parses clean.
+- **#02 "The Mockers' Words" FULLY DONE** (was loud-at-end + had a cut-hand hero):
+  - User flagged the **hero (#11 he-chose-to-stay) had a CUT/SEVERED hand** → deleted, swapped the clean **`07_the-king-who-would-not-come-down`** (pilot) as the new hero (full crucified Christ, no titulus, fits "He chose to stay"). Re-rendered (no replan), re-SFX, re-captioned.
+  - User flagged the **score too loud at the end** → re-shaped to ease down from the mid-turn (peak −20.6 at 44s → close −23.6 → tail −47). This is the shaping now baked as default.
+  - **FINAL = `…/02_The_Mockers_Words/assembly/viral_cut_sfx_music_captioned.mp4` (67.5s)**, copy `C:/Users/sanjay/02_Mockers_Words_FINAL.mp4`. Old cut-hand hero in `visual/nbp/_pre_reuse/`.
+  - OPEN (user deferred): #02 **sc08** (`he-could-have-come-down`) has a FAINT illegible titulus at the cross-top — keep vs swap to `07_the-king…` (but that's now the hero, so a different clean clip) — decide next session.
+- **ISAIAH 53:5 PILOT STARTED (paused mid-build):**
+  - Swept all 10 clips (review page `C:/Users/sanjay/ISAIAH_clips_review.html`). Mostly clean (scourging/wound imagery, apt) — **1 FLAG: sc01 `the-wound-that-wont-close`** (grotesque-ish old-apostle face macro + a literal glowing chest-wound). No gems/titulus/writing/cut-hands.
+  - **Multi-voice (3) DONE + LOCKED:** narrator + **isaiah** (`UzI1NsMEV3ni5JRkRSls`, solemn-prophet, matches #30 precedent) on Isa 53:5 + **peter** (`puDRtQWF8NtQiPMJygTb`) on 1 Pet 2:24. Natural = **78.69s** (long).
+  - **NOT done:** the clip decisions (I asked, user wanted to clarify first — see below), backfill, assemble, SFX, score, caption.
+
+### ▶▶ DO FIRST NEXT SESSION (resume Isaiah)
+1. **Resolve the two paused Isaiah questions with the user** (they wanted to clarify before answering):
+   (a) **sc01** (grotesque-ish wound-apostle) — keep or reuse-replace?
+   (b) **Punch vs pool:** Isaiah narration is **78.69s** but the pool is only **10 clips (~8.7s/slot = slow)**. To make it punchy (~5s/slot) needs **heavy reuse-backfill (~6 clean passion/wound clips into new scene slots)**. Confirm how aggressive (heavy ~16 / moderate ~13 / keep 10).
+2. Then finish Isaiah: backfill (mind the reuse_swap rename gotcha — keep slug=filename, only edit title/subject) → `cli_assemble --replan --rebuild` (hero candidates: `13_come-and-receive` open-wounded-hands OR `06_in-his-own-body` — the landing "Come to Him, receive it") → SFX (write `sfx_pilots/build_isaiah.py`) → score (`add_music --regen` — reshape now AUTO) → caption.
+3. Then the other 2 pilots: **Mockers-v2** (`v2/pilot/mockers_words_ps22/v1`) + **Zechariah 12:10** (`v2/pilot/zechariah_12_10_pierced/v1`). Same recipe.
+4. Optional: #02 sc08 faint-titulus swap.
+
+### NOTES
+- All 8 Psalm-22 shorts (#01–#08) are DONE at the new bar. Pilots are the last of the full-treatment sweep.
+- Finals for quick re-open: `C:/Users/sanjay/0N_*_FINAL.mp4` (01/02/08) + `C:/Users/sanjay/0N_*.{html}` review pages; Isaiah review `C:/Users/sanjay/ISAIAH_clips_review.html`.
+- Spend today (production) ≈ $5 (#02 + #01 + #08 fixes/synths/scores across the day; Isaiah synth ~$0.50, no Isaiah score yet).
+
+## ═══════════ SESSION 2026-06-19/20 — #02 MOCKERS' WORDS full-treatment + titulus-clip recall from #08/#01 ═══════════
+
+**#02 "The Mockers' Words" now at the new bar, AND fixed a titulus-clip that had leaked into #08/#01.**
+
+### ✅ DONE THIS SESSION
+- **#02 swept (my eye, all 14):** found sc07 = WRONG clip (a David-deathbed/"a-death-not-his-own", not mockers-jabbing) + sc08 grotesque open-mouth + **sc12 = writing/titulus FAIL** (David scroll text + an INRI titulus). Review page `C:/Users/sanjay/02_clips_review.html`.
+- **🔴 RECALLED the titulus clip from #08 + #01:** sc12 `12_a-thousand-years-apart` (the one with the INRI titulus) had been REUSED as a backfill into **#08 sc07** and **#01 sc11**. User: replace in both. Swapped #08 sc07 ← `a-death-not-his-own` (#01, David+vision, clean) and #01 sc11 ← `david-records-the-taunt` (#02, clean), re-rendered (no replan), re-SFX, re-mixed (reused scores), re-captioned. **Both finals refreshed** (`C:/Users/sanjay/08_I_Thirst_FINAL.mp4`, `…/01_Crucifixion_Foretold_FINAL.mp4`).
+- **#02 full-treatment:** replaced sc07 ← `05_the-rulers-sneer` (pilot, leaders pointing) + sc08 ← `10_he-could-have-come-down` (pilot, Christ+angels/legions), excluded sc12. **Multi-voice (3): narrator + david (Ps 22:7-8) + MOCKER (`SOYHLrjzK2X1ezoPC6cr` "Harry-Fierce-Warrior", `[mocking]` tag) on the Matt 27:43 taunt.** 65.0s. 12 clips + hero 11 (he-chose-to-stay) ≈ 5.3s/slot (punchy, no backfill). LOCKED, SFX, cinematic-orchestral score (reshaped fill+settle), ivory caption. **FINAL = `…/02_The_Mockers_Words/assembly/viral_cut_sfx_music_captioned.mp4` (67.5s)**, copy `C:/Users/sanjay/02_Mockers_Words_FINAL.mp4`.
+- ⚠️ **OPEN flag:** #02 sc08 (`he-could-have-come-down`) has a FAINT illegible titulus at the cross-top — user to decide keep vs swap to the clean `07_the-king-who-would-not-come-down` (pilot). Also its nailed hands read slightly gem-like.
+
+### 💰 SPEND THIS SESSION ≈ $2.50 (1 #02 synth + 1 #02 score; #08/#01 re-mixes reused their scores = $0).
+
+### ▶▶ DO FIRST NEXT SESSION
+1. **User ear/eye-review #02 final** + the refreshed #08/#01 finals. Decide the #02 sc08 faint-titulus (keep / swap to king-who-would-not-come-down).
+2. **Continue: the 3 pilots** (Isaiah 53:5 / Mockers-v2 / Zechariah 12:10) — last of the full-treatment sweep. (#01–#08 now ALL done.)
+3. **Carry forward the titulus lesson:** several library "a-thousand-years-apart" + pilot clips carry an INRI titulus or scroll text → element-gate FAIL; pull a paused frame before reusing any David/cross/"a-thousand" clip. See gotcha below + [[feedback-never-animate-writing]].
+
+### GOTCHA (still live): reuse_swap keeps the OLD filename when you change a slot's scene_plan slug → assembler silently excludes it. For #08/#01/#02 fixes I kept the slug = filename (only updated title/subject_block) to avoid it. If you DO change a slug, rename `NN_*` files to match.
+
+## ═══════════ SESSION 2026-06-19 — FULL-TREATMENT SWEEP #01 CRUCIFIXION FORETOLD (backfill-to-punchy) ═══════════
+
+**#01 "The Crucifixion Foretold" now at the new bar.** Sweep (clean — only the 4 garbled-writing scrolls flagged, already excluded) → multi-voice → backfill-to-punchy → reassemble → SFX → cinematic-orchestral score → ivory caption. **FINAL = `…/01_The_Crucifixion_Foretold/assembly/viral_cut_sfx_music_captioned.mp4` (75.0s)** + copy `C:/Users/sanjay/01_Crucifixion_Foretold_FINAL.mp4`.
+
+### ✅ DONE THIS SESSION (#01)
+- **Swept 13 clips (my eye).** All defects = the 4 garbled-Hebrew writing scrolls (sc02/04/08/10) — already excluded; the 9 shipped clips clean. Review page `C:/Users/sanjay/01_clips_review.html`. (Hero sc14 nailed-hand mark — user said KEEP, reads as a nail.)
+- **Multi-voice:** narrator + **david** (Ps 22:18 "They part my garments…"). No characters speak in #01, so 2-voice. Re-synth `--natural` = 72.5s, re-locked.
+- **Backfilled to PUNCHY (user chose backfill):** filled the 4 scroll slots + 1 new slot (15) with clean reuse — sc02←`it-is-finished`, sc04←`looking-down-in-love`, sc08←`hung-by-the-arms`, sc10←`the-ninth-hour`, sc11←`a-thousand-years-apart`, sc15←`crushed-in-your-place`. **14 clips + hero ≈ 5.0s/slot** (was 7.1s). Hero 14 (laying-down-his-life, dawn cross).
+- **Reassembled LOCKED (0 FAIL)**, 15 verifies PASS. SFX bed re-timed to 72.5s. **Cinematic-orchestral score** (metered ~$2): generated, Eleven died ~63s → reshaped (stretch audible arc to fill 75s + steep tail settle, mirroring #08) so the close rings out softly. Ivory caption.
+
+### ⚠️ GOTCHA HIT (carry forward): **reuse_swap keeps the OLD filename when you change a slot's scene_plan slug.** If you edit `scene_plan.json` slug for a backfilled slot (to align subject), the mp4/png/sidecars stay named `NN_oldslug.*`, but the assembler matches by `NN_<slug>.mp4` → the clip is silently EXCLUDED from the pool. FIX = rename all `NN_oldslug.*` → `NN_newslug.*` (mp4+png+all sidecars; manifest is sha-keyed so safe), OR don't change the slug (keep slug=filename, only edit subject_block/title). Cost me one wasted assembly pass on #01.
+
+### 💰 SPEND THIS SESSION ≈ $2.50 (multi-voice synth ~$0.50 + 1 cinematic score ~$2). Backfill/assembly/SFX/remix = $0.
+
+### ▶▶ DO FIRST NEXT SESSION
+1. **User ear/eye-review #01 final** (`C:/Users/sanjay/01_Crucifixion_Foretold_FINAL.mp4`) — confirm look + score level + the punchy pace.
+2. **Continue the full-treatment sweep: #02 The Mockers' Words next**, then the 3 pilots (Isaiah 53:5 / Mockers-v2 / Zechariah 12:10). (#01, #03–#08 now done.)
+3. Recipe per short unchanged: sweep (eye + user HTML) → reuse-replace/backfill defects (mind the rename gotcha) → multi-voice → re-lock → `cli_assemble --replan --rebuild` (service 4 bridges) → SFX (`build_ps22_0N.py`, retime) → cinematic score (`add_music --regen` then reshape to fill+settle) → caption. Pull a paused mid-frame of any cross-near-water clip ([[feedback-cross-in-water-inverted]]).
+
+## ═══════════ SESSION 2026-06-19 — FULL-TREATMENT SWEEP #08 I THIRST (+ inverted-cross-in-water catch) ═══════════
+
+**#08 "I Thirst" now at the new bar.** Full treatment: clip sweep (my eye on all 14 filmstrips + user review HTML) → reuse-replaced 5 defective clips → multi-voice → reassemble → SFX → cinematic-orchestral score → ivory caption. **FINAL = `…/08_I_Thirst/assembly/viral_cut_sfx_music_captioned.mp4` (73.4s)** + copy at `C:/Users/sanjay/08_I_Thirst_FINAL.mp4`.
+
+### ✅ DONE THIS SESSION (#08)
+- **Swept 14 clips (my eye).** 2 FAIL gem-nails (sc06 `the-cry-recorded`, sc10 `hanging-there-with-nothing`) + 4 my-eye FLAGs. User chose **kill 1,4,7 (keep 2)** + reuse-first $0. Review page `C:/Users/sanjay/08_clips_review.html`.
+- **Reuse-replaced 5 slots ($0, element-gated, manifests re-locked):** sc01←`04_the-ninth-hour` (#03), sc04←`10_looking-down-in-love` (#02), sc06←`04_it-is-finished` (#05), sc07←`12_a-thousand-years-apart` (#02), sc10←`07_hung-by-the-arms` (#07). Old clips → `visual/nbp/_pre_reuse/`.
+- **Multi-voice:** narrator `LSi9zNCeliLuhIGGS0By` + **david** `puDRtQWF8NtQiPMJygTb` (Ps 22:15) + **jesus** `UzI1NsMEV3ni5JRkRSls` ("I thirst"). Relabeled narration.md + narration-tagged.md + voices.json, re-synth `--natural` = 70.94s, re-locked.
+- **Reassembled LOCKED (0 FAIL)** hero 14, all 14 verifies PASS. Serviced the 4 bridges (episode-fit `{"offtopic":[]}` / jigsaw / self+independent). One AS-G5 quote-section FAIL on first jigsaw → fixed (moved #06 onto the jesus 'I thirst' beat, #05 onto the bridge beat).
+- **🔴 CAUGHT AN INVERTED CROSS** on the close eye-check: kept-slot 13 `drink-and-never-thirst` shows a cross **reflected in water = upside-down cross** for ~4s under the climactic captions. The gate + still-review had PASSED it; only the animated/paused frame revealed it. **Replaced sc13 ← `13_room-to-turn` (#06)** — a clean UPRIGHT dawn-cross with a path (also corrects the symbol). Re-rendered (no replan, locked plan), re-SFX, re-mix, re-caption. New memory [[feedback-cross-in-water-inverted]].
+- **SFX bed** re-timed to 70.94s (thirst→living-water arc, all reuse $0). **Cinematic-orchestral score** (metered ~$2, Eleven Music): generated, then **reshaped in the mix** (Eleven died ~62s → trim audible arc 0-62s, atempo-stretch to fill 73.4s, taper back half to settle) so the close rings out (mid −21.2dB ≈ end −21.3dB). Ivory caption (166 words). Raw score backed up at `assembly/music_eleven_raw.mp3`.
+
+### 💰 SPEND THIS SESSION ≈ $2.50 (multi-voice synth ~$0.50 + 1 cinematic score gen ~$2). All swaps/assembly/SFX/remix = $0 (reuse + agent-bridge + reused music).
+
+### ▶▶ DO FIRST NEXT SESSION
+1. **User ear/eye-review #08 final** (`C:/Users/sanjay/08_I_Thirst_FINAL.mp4`) — confirm look + score level + the new upright-cross landing.
+2. **Continue the full-treatment sweep: #01 The Crucifixion Foretold next**, then **#02 The Mockers' Words**, then the 3 pilots (Isaiah 53:5 / Mockers-v2 / Zechariah 12:10). All still single-narrator + predate the standards. (#03–#08 now done.)
+3. Per short, the recipe is unchanged (block below): sweep (eye + user HTML) → reuse-replace defects → multi-voice → re-lock → `cli_assemble --replan --rebuild` (service the 4 bridges) → SFX (`build_ps22_0N.py`, retime to the new length) → cinematic score (`add_music --regen`, then reshape to fill+duck) → caption. **And pull a paused mid-frame of any cross-near-water clip** ([[feedback-cross-in-water-inverted]]).
+
+## ═══════════ SESSION 2026-06-19 — FULL-TREATMENT SWEEP #04/#05/#06/#07 + 2 NEW STANDARDS (speed-to-fit/no-trim + cinematic-orchestral score + motion hero) ═══════════
 
 **Carried the per-short "full treatment" across four more shorts and locked TWO new standards the user loved.** Each short: sweep clips (gate ∪ my eye + user review HTML) → fix/replace defects → **multi-voice** (narrator + jesus/scripture/david) → **backfill to punchy** → **speed-to-fit** → SFX bed → **cinematic orchestral score** → ivory caption.
 

@@ -3,8 +3,40 @@
     "index": 0,
     "section": "hook",
     "speaker": "narrator",
-    "text": "At the cross they shook their heads and sneered the very taunt a psalm had recorded a thousand years before. Psalm twenty-two. David, describing a mocked and dying man, even writes his tormentors' words: \"…they shake the head, saying, He trusted on the LORD that he would deliver him: let him deliver him…\" A thousand years later, at the cross, Matthew records both — the passers-by wagging their heads, and the religious leaders jeering: \"He trusted in God; let him deliver him now…\" The same gesture. The same taunt — flung at Him by people who never saw what they were echoing. \"Let him deliver him,\" they sneered. And He wasn't delivered — not because Jesus lacked the power to come down; He had every power. He stayed because staying was the only way to deliver you. They thought weakness pinned Him to that cross. It was love. He could have come down in an instant — He chose to stay, with you in view.",
+    "text": "At the cross they shook their heads and sneered the very taunt a psalm had recorded a thousand years before. Psalm twenty-two. David, describing a mocked and dying man, even writes his tormentors' words:",
     "start_s": 0.0,
-    "end_s": 60.015
+    "end_s": 12.795
+  },
+  {
+    "index": 1,
+    "section": "david",
+    "speaker": "david",
+    "text": "\"…they shake the head, saying, He trusted on the LORD that he would deliver him: let him deliver him…\"",
+    "start_s": 13.195,
+    "end_s": 19.515
+  },
+  {
+    "index": 2,
+    "section": "bridge",
+    "speaker": "narrator",
+    "text": "A thousand years later, at the cross, Matthew records both — the passers-by wagging their heads, and the religious leaders jeering:",
+    "start_s": 19.515,
+    "end_s": 27.025
+  },
+  {
+    "index": 3,
+    "section": "mocker",
+    "speaker": "mocker",
+    "text": "\"He trusted in God; let him deliver him now…\"",
+    "start_s": 27.425,
+    "end_s": 31.025
+  },
+  {
+    "index": 4,
+    "section": "landing",
+    "speaker": "narrator",
+    "text": "The same gesture. The same taunt — flung at Him by people who never saw what they were echoing. \"Let him deliver him,\" they sneered. And He wasn't delivered — not because Jesus lacked the power to come down; He had every power. He stayed because staying was the only way to deliver you. They thought weakness pinned Him to that cross. It was love. He could have come down in an instant — He chose to stay, with you in view.",
+    "start_s": 31.025,
+    "end_s": 65.018
   }
 ]

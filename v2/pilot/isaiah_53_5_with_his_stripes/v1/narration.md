@@ -19,13 +19,13 @@ You carry a wound nothing has been able to close — a guilt that keeps reopenin
 **[narrator]**
 Seven hundred years before the cross, Isaiah wrote that the healing you can't reach would come through someone else's wounds.
 
-**[narrator — KJV, Isaiah 53:5]**
+**[isaiah — KJV, Isaiah 53:5]**
 "But he was wounded for our transgressions, he was bruised for our iniquities... and with his stripes we are healed."
 
 **[narrator]**
 Stripes — the welts of a flogging, the wounding Isaiah foresaw centuries before it fell on Jesus' back. And the apostle Peter took up Isaiah's words and laid them on Christ at the cross:
 
-**[narrator — KJV, 1 Peter 2:24]**
+**[peter — KJV, 1 Peter 2:24]**
 "Who his own self bare our sins in his own body on the tree... by whose stripes ye were healed."
 
 **[narrator]**

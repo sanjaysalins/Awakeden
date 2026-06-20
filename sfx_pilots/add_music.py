@@ -8,7 +8,7 @@ captioned. METERED (Eleven Music) — gated behind --yes; reports the credit del
 Outputs beside the cut: music.mp3, viral_cut_sfx_music.mp4, viral_cut_sfx_music_captioned.mp4
 """
 from __future__ import annotations
-import argparse, subprocess, sys
+import argparse, re, shutil, subprocess, sys
 from pathlib import Path
 import requests
 
@@ -35,6 +35,46 @@ def dur(p):
     out = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
                           "-of", "default=nw=1:nk=1", str(p)], capture_output=True, text=True).stdout.strip()
     return float(out)
+
+
+def _mean_db(path, ss, d):
+    out = subprocess.run(["ffmpeg", "-hide_banner", "-ss", str(ss), "-t", str(d), "-i", str(path),
+                          "-af", "volumedetect", "-f", "null", "-"], capture_output=True, text=True).stderr
+    m = re.search(r"mean_volume:\s*(-?[0-9.]+) dB", out)
+    return float(m.group(1)) if m else None
+
+
+def reshape_music(music: Path, total: float, *, floor: float = 0.12, hold_frac: float = 0.70):
+    """DEFAULT score-shaping (user-locked 2026-06-20). Eleven Music crests late and fades to
+    near-silence ~10s early. Reshape the raw gen IN PLACE so (a) the audible arc is stretched to
+    FILL the full length and (b) the loudest point is the mid-turn, easing DOWN through the close
+    so the score settles under the final words instead of blaring (the gentle-CTA 'settle the
+    close' rule). Backs up the raw gen as <stem>_eleven_raw.mp3 (idempotent: reused on reruns)."""
+    raw = music.with_name(music.stem + "_eleven_raw.mp3")
+    if not raw.exists():
+        shutil.copy2(music, raw)
+    draw = dur(raw)
+    # 1. find the audible end: last 2s window above -30 dB (Eleven often dies ~10s early)
+    aud_end, t = draw, max(4.0, draw - 2.0)
+    while t > draw * 0.55:
+        m = _mean_db(raw, t, 2.0)
+        if m is not None and m > -30.0:
+            aud_end = min(draw, t + 2.0)
+            break
+        t -= 2.0
+    aud_end = max(aud_end, draw * 0.6)            # never trim more than ~40%
+    tempo = max(0.5, min(1.0, aud_end / total))   # stretch the arc to fill the whole length
+    hold = hold_frac * total                      # full until here, then steady ease-down
+    span = max(1.0, total - hold)
+    vol = f"if(lt(t,{hold:.2f}),1, max({floor},1-{1 - floor:.2f}*(t-{hold:.2f})/{span:.2f}))"
+    af = (f"atrim=0:{aud_end:.2f},asetpts=PTS-STARTPTS,atempo={tempo:.4f},"
+          f"volume='{vol}':eval=frame")
+    tmp = music.with_suffix(".reshaped.mp3")
+    subprocess.run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", str(raw),
+                    "-af", af, "-t", f"{total + 0.2:.2f}", str(tmp)], check=True)
+    tmp.replace(music)
+    print(f"[reshape] audible 0-{aud_end:.0f}s -> filled {total:.0f}s (atempo {tempo:.3f}); "
+          f"ease-down from {hold:.0f}s to floor {floor} (crest at the turn, settle the close)")
 
 
 def build_one(folder, prompt, gain=-8.0, script=None, yes=False, regen=False, outro=2.5):
@@ -64,6 +104,7 @@ def build_one(folder, prompt, gain=-8.0, script=None, yes=False, regen=False, ou
         if r.status_code != 200:
             print(f"{RED}[music] FAILED [{r.status_code}]: {r.text[:300]}{RST}"); return False
         music.write_bytes(r.content); print(f"[music] ok -> {music}")
+        reshape_music(music, glen)   # DEFAULT: fill the early fade + ease the close (user-locked)
 
     out = asm / "viral_cut_sfx_music.mp4"
     return _mix_and_caption(src, music, out, D, gain, script, outro)

@@ -1376,36 +1376,6 @@
       "fullres_confirmed": "2026-06-16: clean (no garbled titulus, sound anatomy, reverent)"
     },
     {
-      "slug": "05_by-whose-stripes",
-      "source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/05_by-whose-stripes.mp4",
-      "title": "By Whose Stripes",
-      "episode": "isaiah_53_5_with_his_stripes",
-      "duration": 5.04,
-      "tags": [
-        "wounds"
-      ],
-      "scope": "neutral",
-      "jesus_variant": "passion",
-      "preferred": true,
-      "fullres_confirmed": "2026-06-16: clean (no garbled titulus, sound anatomy, reverent)"
-    },
-    {
-      "slug": "06_in-his-own-body-on-the-tree",
-      "source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/06_in-his-own-body-on-the-tree.mp4",
-      "title": "In His Own Body, On The Tree",
-      "episode": "isaiah_53_5_with_his_stripes",
-      "duration": 5.04,
-      "tags": [
-        "cross",
-        "christ-face",
-        "dawn-cross"
-      ],
-      "scope": "neutral",
-      "jesus_variant": "passion",
-      "preferred": true,
-      "fullres_confirmed": "2026-06-16: clean (no garbled titulus, sound anatomy, reverent)"
-    },
-    {
       "slug": "07_the-apostle-lays-it-on-christ",
       "source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/07_the-apostle-lays-it-on-christ.mp4",
       "title": "The Apostle Lays It On Christ",
@@ -1499,21 +1469,6 @@
       "preferred": false
     },
     {
-      "slug": "04_the-passers-by-wag-their-heads",
-      "source": "v2/pilot/mockers_words_ps22/v1/visual/nbp/04_the-passers-by-wag-their-heads.mp4",
-      "title": "The Passers-By Wag Their Heads",
-      "episode": "mockers_words_ps22",
-      "duration": 5.04,
-      "tags": [
-        "cross",
-        "mockers",
-        "prophet"
-      ],
-      "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
-    },
-    {
       "slug": "05_the-rulers-sneer",
       "source": "v2/pilot/mockers_words_ps22/v1/visual/nbp/05_the-rulers-sneer.mp4",
       "title": "The Rulers Sneer",
@@ -1559,53 +1514,9 @@
       "preferred": false
     },
     {
-      "slug": "08_unwilling-witnesses",
-      "source": "v2/pilot/mockers_words_ps22/v1/visual/nbp/08_unwilling-witnesses.mp4",
-      "title": "Unwilling Witnesses",
-      "episode": "mockers_words_ps22",
-      "duration": 5.04,
-      "tags": [
-        "cross",
-        "mockers",
-        "prophet"
-      ],
-      "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
-    },
-    {
-      "slug": "10_he-could-have-come-down",
-      "source": "v2/pilot/mockers_words_ps22/v1/visual/nbp/10_he-could-have-come-down.mp4",
-      "title": "He Could Have Come Down",
-      "episode": "mockers_words_ps22",
-      "duration": 5.04,
-      "tags": [
-        "cross"
-      ],
-      "scope": "specific",
-      "jesus_variant": "passion",
-      "review": "reclassified neutral->specific on spot-review (story-bound: David/writing/diptych/mockers/scroll/book)",
-      "preferred": false
-    },
-    {
       "slug": "11_bearing-the-scorn",
       "source": "v2/pilot/mockers_words_ps22/v1/visual/nbp/11_bearing-the-scorn.mp4",
       "title": "Bearing The Scorn",
-      "episode": "mockers_words_ps22",
-      "duration": 5.04,
-      "tags": [
-        "cross",
-        "christ-face",
-        "mockers"
-      ],
-      "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
-    },
-    {
-      "slug": "12_the-king-they-told-to-come-down",
-      "source": "v2/pilot/mockers_words_ps22/v1/visual/nbp/12_the-king-they-told-to-come-down.mp4",
-      "title": "The King They Told To Come Down",
       "episode": "mockers_words_ps22",
       "duration": 5.04,
       "tags": [
