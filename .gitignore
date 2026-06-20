@@ -34,8 +34,9 @@ _gitcheck.txt
 !_website/assets/previews/
 !_website/assets/previews/**
 
-# ── Awakeden internal review logs — never commit/deploy (Netlify publish dir is _website/.) ──
+# ── Awakeden internal docs/logs — never commit/deploy (Netlify publish dir is _website/.) ──
 _website/_independent_review/
+_website/COPY_REWRITE.md
 
 # ── Media (per repo policy — code/data/docs only, no media) ────
 *.mp4
