@@ -1,0 +1,33 @@
+site:
+  url: "https://www.awakeden.com"
+  name: "Awakeden Series"
+  mode: prelaunch
+  noindex: true
+  scripture_note: "Scripture quoted from the King James Version (KJV), public domain."
+
+brand:
+  wordmark: "Awakeden"
+  series: "Series"
+  tagline: "Finding Jesus in the whole Bible. Every encounter, every prophecy, every promise."
+  mission: >
+    Awakeden is a video series about finding Jesus in the whole Bible, Old Testament and New,
+    the same Lord in both. He is the thread running through all of it: the encounters, the
+    prophecies, the promises kept. We go a little deeper into the text to meet Him, and ask what
+    it means for life now. Some series focus on one window: the Old Testament, His miracles, the
+    questions He asked, the people who met Him. Serious about the Bible. Clear about the gospel.
+    Made to draw you in, not wear you down.
+
+social:
+  youtube:
+    handle: ""
+    url: ""
+  tiktok:
+    handle: ""
+    url: ""
+  instagram:
+    handle: ""
+    url: ""
+
+launch:
+  cta_label: "Launching on YouTube soon"
+  cta_enabled: false

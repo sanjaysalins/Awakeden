@@ -1,0 +1,201 @@
+# Public catalogue. Human-edited source of truth for www.awakeden.com
+# public_status: planned | in_production | studio_complete | live
+# preview_approved: must be true before a preview image is shown on the public site
+
+items:
+  - slug: isaiah-53-suffering-servant
+    kind: long
+    title: "Isaiah 53: The Suffering Servant"
+    ref: "Isaiah 53:5"
+    series_id: jesus-in-ot
+    cluster: null
+    cluster_order: null
+    public_status: studio_complete
+    featured: true
+    featured_order: 1
+    preview_approved: true
+    preview_source: "../v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/12_finished-at-the-cross.png"
+    youtube_id: null
+    public_hook: "Seven hundred years before the cross, Isaiah wrote of a wound that would heal ours."
+    public_blurb: >
+      Long-form on Isaiah 53. The Suffering Servant, wounded for our transgressions, fulfilled
+      in the New Testament. The first Awakeden deep-dive slated for release.
+
+  - slug: psalm-22-from-the-cross
+    kind: long
+    title: "Psalm 22: The Song From the Cross"
+    ref: "Psalm 22:16"
+    series_id: jesus-in-ot
+    cluster: psalm-22
+    cluster_order: 0
+    public_status: in_production
+    featured: true
+    featured_order: 2
+    preview_approved: false
+    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/visual/scene_plan.json"
+    youtube_id: null
+    public_hook: "David wrote the crucifixion a thousand years before Rome invented it."
+    public_blurb: >
+      One locked long-form study on Psalm 22, cut into eight gospel shorts. Each short follows
+      one beat from the psalm Jesus lived out on the cross.
+
+  - slug: ps22-01-crucifixion-foretold
+    kind: short
+    title: "The Crucifixion Foretold"
+    ref: "Psalm 22:18"
+    series_id: jesus-in-ot
+    cluster: psalm-22
+    cluster_order: 1
+    public_status: studio_complete
+    featured: false
+    preview_approved: true
+    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/14_laying-down-his-life.png"
+    youtube_id: null
+    public_hook: "Ten centuries before the cross, a psalm said a dying man's clothes would be divided."
+    public_blurb: >
+      Psalm 22:18. They part my garments and cast lots. John records the soldiers doing exactly that.
+
+  - slug: ps22-02-mockers-words
+    kind: short
+    title: "The Mockers' Words"
+    ref: "Psalm 22:7-8"
+    series_id: jesus-in-ot
+    cluster: psalm-22
+    cluster_order: 2
+    public_status: in_production
+    featured: false
+    preview_approved: false
+    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/07_the-jabbing-hands.png"
+    youtube_id: null
+    public_hook: "The crowd mocked Him. They repeated words David had written a thousand years earlier."
+    public_blurb: >
+      David wrote the mockers' gesture and their taunt. Matthew records both at the cross.
+
+  - slug: ps22-03-forsaken-cry
+    kind: short
+    title: "The Forsaken Cry"
+    ref: "Psalm 22:1"
+    series_id: jesus-in-ot
+    cluster: psalm-22
+    cluster_order: 3
+    public_status: studio_complete
+    featured: true
+    featured_order: 3
+    preview_approved: true
+    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/11_come-to-him.png"
+    youtube_id: null
+    public_hook: "The loneliest line Jesus spoke from the cross was a quote from Psalm 22."
+    public_blurb: >
+      My God, my God, why hast thou forsaken me? David wrote it. Jesus cried it from the cross.
+
+  - slug: ps22-04-declared-to-brethren
+    kind: short
+    title: "Declared to the Brethren"
+    ref: "Psalm 22:22"
+    series_id: jesus-in-ot
+    cluster: psalm-22
+    cluster_order: 4
+    public_status: studio_complete
+    featured: false
+    preview_approved: true
+    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/12_room-to-turn.png"
+    youtube_id: null
+    public_hook: "The psalm moves from forsaken to declaring God's name to the congregation."
+    public_blurb: >
+      Psalm 22:22. I will declare thy name unto my brethren. Hebrews applies it to the risen Christ.
+
+  - slug: ps22-05-he-hath-done-this
+    kind: short
+    title: "He Hath Done This"
+    ref: "Psalm 22:31"
+    series_id: jesus-in-ot
+    cluster: psalm-22
+    cluster_order: 5
+    public_status: studio_complete
+    featured: false
+    preview_approved: true
+    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/04_it-is-finished.png"
+    youtube_id: null
+    public_hook: "It is finished. The psalm said He would declare it to a people yet unborn."
+    public_blurb: >
+      The closing line of Psalm 22, that he hath done this, lands on Christ's finished work.
+
+  - slug: ps22-06-ends-of-the-earth
+    kind: short
+    title: "The Ends of the Earth"
+    ref: "Psalm 22:27"
+    series_id: jesus-in-ot
+    cluster: psalm-22
+    cluster_order: 6
+    public_status: studio_complete
+    featured: false
+    preview_approved: true
+    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/08_the-nations-turn.png"
+    youtube_id: null
+    public_hook: "All the ends of the world shall remember and turn unto the Lord."
+    public_blurb: >
+      Psalm 22:27. The nations turning to worship, fulfilled through Christ.
+
+  - slug: ps22-07-body-foretold
+    kind: short
+    title: "The Body Foretold"
+    ref: "Psalm 22:14-17"
+    series_id: jesus-in-ot
+    cluster: psalm-22
+    cluster_order: 7
+    public_status: studio_complete
+    featured: false
+    preview_approved: true
+    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/12_crushed-so-another-goes-free.png"
+    youtube_id: null
+    public_hook: "I am poured out like water. David described a body the cross would fulfil."
+    public_blurb: >
+      Poured out, bones out of joint, hands and feet pierced. The psalm's language fits the crucifixion.
+
+  - slug: ps22-08-i-thirst
+    kind: short
+    title: "I Thirst"
+    ref: "Psalm 22:15"
+    series_id: jesus-in-ot
+    cluster: psalm-22
+    cluster_order: 8
+    public_status: studio_complete
+    featured: false
+    preview_approved: true
+    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/13_room-to-turn.png"
+    youtube_id: null
+    public_hook: "Two words from the cross. David wrote the thirst a thousand years before."
+    public_blurb: >
+      My tongue cleaveth to my jaws. The psalm's thirst, fulfilled in Jesus' cry from the cross.
+
+roadmap:
+  - slug: questions-jesus-asked
+    title: "Questions Jesus Asked"
+    ref: "Series"
+    note: "The questions He put to people, and still puts to us. Who do you say I am? Why are you afraid?"
+  - slug: miracles-of-jesus
+    title: "The Miracles of Jesus"
+    ref: "Series"
+    note: "What each sign showed about who He is, and what it asks of us now."
+  - slug: people-who-encountered-jesus
+    title: "People Who Encountered Jesus"
+    ref: "Series"
+    note: "The men and women who met Him in the Gospels and walked away changed."
+  - slug: titles-of-jesus
+    title: "Titles of Jesus"
+    ref: "Series"
+    note: "The names Scripture gives Him, and what each one reveals."
+  - slug: i-am-sayings
+    title: "The I AM Sayings"
+    ref: "Series"
+    note: "I am the bread of life, the light of the world, the door, the good shepherd, the resurrection, the way, the true vine."
+  - slug: kingdom-of-god
+    title: "The Kingdom of God"
+    ref: "Series"
+    note: "What Jesus meant by the kingdom, and how it changes the way we live today."
+
+clusters:
+  psalm-22:
+    title: "Psalm 22: From the Cross"
+    subtitle: "Eight shorts from one long-form study"
+    slug: psalm-22

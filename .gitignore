@@ -30,6 +30,13 @@ _video_bakeoff/
 _probe*.txt
 _gitcheck.txt
 
+# ── Awakeden site previews (committed for Netlify; production PNGs stay gitignored) ──
+!_website/assets/previews/
+!_website/assets/previews/**
+
+# ── Awakeden internal review logs — never commit/deploy (Netlify publish dir is _website/.) ──
+_website/_independent_review/
+
 # ── Media (per repo policy — code/data/docs only, no media) ────
 *.mp4
 *.mov

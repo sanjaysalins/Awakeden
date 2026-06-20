@@ -1,0 +1,30 @@
+[build]
+  base = "_website"
+  command = "pip install -r requirements.txt && python build_catalog.py"
+  publish = "."
+
+[build.environment]
+  PYTHON_VERSION = "3.12"
+
+[[redirects]]
+  from = "https://awakeden.com/*"
+  to = "https://www.awakeden.com/:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/assets/previews/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
