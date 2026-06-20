@@ -58,6 +58,8 @@ _website/COPY_REWRITE.md
 !_website/assets/og-cover.jpg
 !_website/assets/og/
 !_website/assets/og/**
+!_website/assets/study/
+!_website/assets/study/**
 *.mp3
 *.wav
 *.m4a
