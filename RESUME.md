@@ -1,5 +1,64 @@
 # RESUME.md — start here next session
 
+## ⚡⚡ LATEST HANDOFF — LONG-FORM v2 (2026-06-21, NEWEST) — READ THIS FIRST ⚡⚡
+
+> This session = the **LONG-FORM (16:9) v2 treatment** track. (The "EVENING" block just below is a
+> separate SHORTS track — both are current; this one is what to review tomorrow for the LONG format.)
+
+### ═══ WHAT'S DONE THIS SESSION (long-form) ═══
+- **#01 ISAIAH 53 — FULLY DONE.** Added the missing Cinematic-Orchestral score (it never had one; the old
+  `narration.immersive_cinematic.mp3` was byte-identical to the immersive = SFX-only). Built
+  `longform/_add_score_lf.py` = chain approved **Suno** tracks from `music_library/clips/` at **$0** +
+  sidechain-duck + `+faststart`. Arc `lonely_searching_a → sacred_grace_rise_a`, **−11 dB** (user wanted
+  softer). Re-captioned. FINAL: `…/longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/Isaiah53_16x9_FINAL.mp4`
+  (6:47). **User: "score is good."**
+- **#02 PSALM 22 — FULLY DONE (full visual pipeline, ~$34).** 24-scene animation-aware plan (split 3 longest
+  → windows ≤~22s), NBP stills, veo3_1_lite (24 base + 6 cont for 3 directional scenes), assemble → score →
+  caption. **User: "score and animation is absolutely stunning."** Post-review fixes: 5 stills redone (#03
+  cross-shadow not printed, #07 nails added, #12 no "?", #18 scroll-turn not lute, #20 risen-face not
+  storm-face) + S21 re-animated restrained (no glitter blow-out) + **DUAL-SCORE FIXED** (pulled the
+  `heavenly_choir_soft` pad from `_soundstage_ps22.py` → rebuilt choir-free immersive → re-assembled).
+  FINAL: `…/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/Psalm22_16x9_FINAL.mp4` (7:00).
+- **Tooling now episode-generic:** `longform/_animate_directional.py` (cont-clips read directional+camera+atmos
+  from the scene plan; was Isaiah-hardcoded) · `longform/_add_score_lf.py` (per-episode `EPISODES` recipe dict).
+- **New memories:** [[longform-score-from-suno-library]] (incl. the choir-pad dual-score trap — CHECK the other
+  episodes' soundstages before scoring) · [[longform-animation-aware-still-design]].
+
+### ═══ ▶▶ DO FIRST TOMORROW — REVIEW PASSOVER LAMB (#03) ═══
+**Script is revised (v1.3) + panel-cleared, AWAITING YOUR EAR-REVIEW:**
+1. **Revised 3-voice reading** (narrator + Scripture + God), ~9 min:
+   `file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/03_The_Passover_Lamb/v1/_SCRIPT_READING.mp3`
+   Panel-verdict reading (3:20):
+   `file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/03_The_Passover_Lamb/v1/_PANEL_VERDICT.mp3`
+2. **What happened:** external 5-CLI panel → **4/5 REVISE** (claude/cursor/codex/grok convergent; gemini env-fail).
+   No doctrine errors, no fabricated KJV. Applied **all 6 fixes** (KJV-strict ellipses · M7 landing
+   de-contradicted · M1↔M2 bridge · M4 timing softened · M5 reordered strongest-first · "whole assembly"
+   demoted). **KJV re-verified — all 14 quotes verbatim.** Script = `narration.md` v1.3; panel saved at
+   `…/03_The_Passover_Lamb/v1/_independent_review/20260621-203026/`.
+3. **If it lands → say "lock it":** `cli_lock.py` → audio (~$1–2 ElevenLabs, multi-voice) → full visual
+   pipeline (~$30, same flow as Psalm 22). Add a Passover recipe to `_add_score_lf.py EPISODES`.
+
+### ═══ THEN: #04 BRONZE SERPENT ═══
+- Still a DRAFT — **you wanted to read it first:**
+  `file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/04_The_Bronze_Serpent/v1/narration.md`
+  Same flow: red-team + 5-CLI panel → you approve → lock → audio → visual.
+
+### ═══ LONG-FORM STATUS BOARD ═══
+| # | Episode | Status |
+|---|---|---|
+| 01 | Isaiah 53 | ✅ DONE (scored + captioned) |
+| 02 | Psalm 22 | ✅ DONE (full visual + score + captions) |
+| 03 | Passover Lamb | script v1.3 revised + panel-cleared → **awaiting ear-review → lock → build** |
+| 04 | Bronze Serpent | draft → read first → red-team/panel → build |
+
+### ═══ OPEN / OPTIONAL (long-form) ═══
+- Psalm 22 score closer uses `sacred_grace_rise_b` (a *pending* Suno audition take, same recipe as `_a`,
+  longer so it covers the final CTA) — swap to `_a` if you prefer (leaves last ~12s lighter).
+- Copy the two long-form finals to Desktop (offered, not done): Isaiah53 + Psalm22.
+- Long-form contract/skills: `v2/LONGFORM_SPEC.md` + `.claude/skills/{narrate,scene-plan,animate,assemble}-long/`.
+
+---
+
 ## ⚡⚡ LATEST HANDOFF (2026-06-21 EVENING — read this FIRST) ⚡⚡
 
 > **DO TOMORROW:** review the shorts finished today (links below). User is reviewing for the SHORTS.
