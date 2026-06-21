@@ -24,6 +24,12 @@ Turn a Bible topic into finished, postable video:
 Both run the same discipline: panel review, independent red-team, and
 fail-closed doctrinal/Scripture gates at every stage.
 
+> **Long-form contract:** `v2/LONGFORM_SPEC.md` is the binding contract for the 16:9
+> deep-dives — it defines LF-G1..G8 (text), LF-SP-G1..G9 (scene plan), LF-CLIP-*
+> (veo3 animation), LF-AS-G1..G6 (assembly), and LF-INV-1..8 (long-form invariants).
+> All INV-1..24 in this file also apply to long-form unless overridden there.
+> Stage skills for long-form: `/narrate-long`, `/scene-plan-long`, `/animate-long`, `/assemble-long`.
+
 ---
 
 ## 2. The Pipeline — Stages 0–5
@@ -187,7 +193,7 @@ Every gate is **deterministic** (a Python validator, fail-closed) or **panel**
 10. Binding visual scene mix (SP-G9); never 100% single; unified scenes carry 3–5 vignettes (SP-G6).
 11. Assembly hero = gospel-pivot; every cut closes on Christ (AS-G6/G7); reverence speed cap on sacred clips.
 12. Kling-friendly state-only language — frozen tableau, camera-only motion.
-13. Animation split: shorts = direct-Kling; long-form = veo3_1_lite/hybrid.
+13. Animation split: shorts = direct-Kling (HF Kling pro); long-form = veo3_1_lite/hybrid. Veo3 gates and prompt discipline defined in `v2/LONGFORM_SPEC.md` §4 (LF-CLIP-*).
 14. Shorts are first-class — highest QC, native 9:16, never a cropped long still.
 15. Reuse downstream pipelines (narration_pipeline, per_turn_synth, image_to_kling) — subprocess, never duplicate.
 16. Caption is the final step on every finished clip (offline $0, ivory).
