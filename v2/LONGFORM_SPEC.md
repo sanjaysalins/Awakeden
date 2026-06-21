@@ -94,10 +94,18 @@ Total: ~330–500s (~6–8 min). Trim words before compressing the voice.
 
 ### SCENE PLAN — Stage 2a (`/scene-plan-long`)
 
+> **Schema note:** The long-form pipeline uses a DIFFERENT `scene_plan.json` format
+> from the shorts engine (`pipeline/visual_engine.py`). Long-form format (proven on Isaiah 53):
+> `{scenes: [{id, mvt, t:[start, end], title, camera, atmos, sfx, directional, ...}]}`.
+> Lives at `visual_16x9/scene_plan.json`. It is hand-authored or produced by a dedicated
+> long-form scene plan script — NOT output by `pipeline/visual_engine.py` (which writes
+> the shorts `ScenePlan` format with `slug/subject_block/shot_kind`). The two formats are
+> incompatible; do not mix them.
+
 | Gate | Type | Checks |
 |---|---|---|
 | LF-SP-G1 Biblical Accuracy | P | Every literal scene defensible vs pericope |
-| **LF-SP-G2 Movement Coverage** | **D** | Every movement (M1–M7) has ≥2 scenes; no movement is visually skipped |
+| **LF-SP-G2 Movement Coverage** | **D (Phase-1)** | Every movement (M1–M7) has ≥2 scenes; no movement is visually skipped. Requires `mvt` field on each scene in `visual_16x9/scene_plan.json`. No Python validator yet — checked manually until Phase-1 implementation adds `validators.lf_movement_coverage()`. |
 | LF-SP-G3 Visual Variety | P | Not repetitive; long-form cliché blocklist (see §clichés) |
 | LF-SP-G4 Theological Honesty | P | Symbolic scenes carry no foreign doctrine |
 | LF-SP-G5 Prompt Conformance | D | No banned tokens in subject/mood blocks (same T1–T6 → SPEC §4) |
@@ -121,8 +129,9 @@ Total: ~330–500s (~6–8 min). Trim words before compressing the voice.
 **Same providers:** NBP ($0.50) for Christ/face scenes; HF `nano_banana_2` ($0.30) for neutral plates. Same T1–T6 guardrails.
 
 **Veo3-aware still design** (additional requirement):
-- Every still must specify 1–2 **`atmospheric_elements`** — subtle features veo3 can animate without inventing new content (torch flame, fabric fold, dust mote, cloud drift, water ripple). Add these to the `subject_block`.
+- Every still's `subject_block` prose must include 1–2 **atmospheric motion hints** — subtle features veo3 can animate without inventing new content (e.g. "a torch casts flickering light on the stone walls", "desert fabric stirs in a dry wind", "dust motes drift in a shaft of light through the opening"). These hints are written INTO the existing `subject_block` field; there is no separate schema key.
 - Avoid stills where the ONLY interesting feature is human movement (running, pointing, dramatic gesture) — veo3 will animate it, violating LF-CLIP-NOLOCOMOT.
+- When authoring the veo3 prompt in `/animate-long`, extract the atmospheric hint from the `subject_block` prose — it is not stored as a separate field.
 
 ### CLIP (veo3 animation) — Stage 2c (`/animate-long`)
 
@@ -159,12 +168,14 @@ Painterly atmospheric life only.
 | LF-AS-G1 Timeline Coverage | D | Scene windows tile [0, audio_dur] contiguously; no gap > 0.5s |
 | LF-AS-G2 No Reuse | D | Each clip (or boomerang of a clip) appears for exactly one scene window; no clip reused across scene slots |
 | **LF-AS-G3 Pacing Health** | D/A | Avg playback rate ≤1.3× (voice sets the pace, clips fill it); never speed a clip > 2.0×; flag freeze-holds > 15s as advisory |
-| **LF-AS-G4 Movement Coverage** | D | Every M1–M7 movement has ≥1 clip in the final cut; no movement is silent-black |
+| **LF-AS-G4 Movement Coverage** | D (Phase-1) | Every M1–M7 movement has ≥1 clip in the final cut; no movement is silent-black. Requires `mvt` on each scene in the assembled cut. Verified manually until `validators.lf_assembly_coverage()` is implemented. |
 | **LF-AS-G5 Hero = Christ-at-centre** | D | Hero scene = the substitution/exchange/cross scene (from M6); it is the visual peak; it must appear within the final 90s of the cut |
 | LF-AS-G6 Gospel Frame | D | Opening clip = The Picture (M1, an OT scene); closing clip = The Invitation (M7 or hero); cut ends on Christ — never on a crowd, symbol, or landscape alone |
 
 **Assembly tool:** `longform/_assemble_16x9.py` (boomerang + directional chain, $0 ffmpeg).
 **Output:** `visual_16x9/<film_name>_16x9.mp4`, 1920×1080 30fps.
+
+> **Critical:** Do NOT use `pipeline/assembly_engine.py` or `cli_assemble.py` for long-form. Those are the shorts assemblers (9:16, 60s, AS-G1..G9). The long-form assembler is `longform/_assemble_16x9.py` exclusively.
 
 ### SFX / SCORE — Stage 3b
 
@@ -188,7 +199,7 @@ Same `/caption` skill as shorts. For long-form, **WhisperX phoneme forced-align 
 
 | # | Invariant |
 |---|---|
-| LF-INV-1 | **Longs-first funnel** — the long is the research foundation; shorts on this topic are distilled from it. Never write a Types & Shadows short before its long is LOCKED. |
+| LF-INV-1 | **Longs-first funnel** — for new Types & Shadows topics, the long is the research foundation; shorts on this topic are distilled from it. Never write a new Types & Shadows short before its long is LOCKED. (Does not apply retroactively to pre-spec content such as Psalm 22 shorts or Isaiah 53 which predated this rule.) |
 | LF-INV-2 | **7-movement spine is the structural contract** (not Gospel-Five-Beat). All 7 movements must be present, in order, gated by LF-G5. |
 | LF-INV-3 | **veo3_1_lite is the long-form animation model** (INV-13 override for long-form). Do not feed it a crop-cut plan. Hybrid fallback (→direct-Kling) for NSFW-blocked scenes. |
 | LF-INV-4 | **20–25 scenes for 6–8 min.** Calibrate: `ceil(audio_dur / 20)` scenes as the floor; cap at 25. |
