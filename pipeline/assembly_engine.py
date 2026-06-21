@@ -819,6 +819,14 @@ def _check_g4_min_slot(plan: EditPlan) -> GateResult:
 
 def _check_g5_section_coverage(plan: EditPlan, segments: list[NarrationSegment]) -> GateResult:
     covered = {s.section for s in plan.body_slots}
+    # Credit any section a body slot's window VISUALLY overlaps. A very short
+    # connector section (e.g. a two-word "Peter answered," bridge) can be too short
+    # to win its own phrase-beat, so no slot is *tagged* with it — yet it is on-screen
+    # covered by the clip spanning that time. Coverage is visual, not tag-matching.
+    for slot in plan.body_slots:
+        for seg in segments:
+            if seg.start_s < slot.slot_end_s and seg.end_s > slot.slot_start_s:
+                covered.add(seg.section)
     # The hero close still covers the tail window — credit the section(s) it sits over
     # (the hero is no longer a body clip, so its landing section is covered by the close).
     if plan.hero_tail_s > 0 and segments:

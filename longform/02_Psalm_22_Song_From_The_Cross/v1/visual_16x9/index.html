@@ -1,0 +1,242 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Psalm 22 — The Song From the Cross — 16:9 stills</title>
+<style>
+  :root{color-scheme:dark}
+  body{margin:0;background:#14110d;color:#e9e0cf;font:15px/1.4 -apple-system,Segoe UI,Roboto,sans-serif}
+  header{padding:16px 20px;border-bottom:1px solid #332b20;position:sticky;top:0;background:#14110dee;backdrop-filter:blur(6px);z-index:5}
+  h1{margin:0;font-size:18px;font-weight:600}
+  .sub{color:#9c8e74;font-size:13px;margin-top:3px}
+  .controls{margin-top:8px}
+  .controls button{background:#2a2318;color:#e9e0cf;border:1px solid #4a3f2c;border-radius:6px;padding:5px 11px;cursor:pointer;font-size:13px}
+  .controls button.on{background:#6b5836;border-color:#8a724a}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;padding:18px}
+  .card{margin:0;background:#1d1810;border:1px solid #332b20;border-radius:10px;overflow:hidden;cursor:zoom-in;transition:transform .08s,border-color .12s}
+  .card:hover{transform:translateY(-2px);border-color:#7a6238}
+  .thumbwrap{aspect-ratio:16/9;background:#000;overflow:hidden}
+  .thumbwrap img{width:100%;height:100%;object-fit:cover;display:block}
+  figcaption{padding:8px 10px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .num{font-weight:700;color:#e7c98a}
+  .ttl{flex:1 1 100%;order:3;color:#cdbf9f;font-size:13px}
+  .meta{flex:1 1 100%;order:4;color:#80745c;font-size:11px}
+  .badge{font-size:10px;padding:2px 6px;border-radius:20px;letter-spacing:.04em}
+  .badge.redone{background:#5a3e1f;color:#ffd89b}
+  .badge.kept{background:#26331f;color:#a9d191}
+  body.only-redone .card.kepthide{display:none}
+  /* lightbox */
+  #lb{position:fixed;inset:0;background:#000000ee;display:none;align-items:center;justify-content:center;z-index:20;flex-direction:column}
+  #lb.show{display:flex}
+  #lb img{max-width:96vw;max-height:84vh;object-fit:contain;box-shadow:0 0 40px #000}
+  #lbcap{margin-top:10px;color:#e9e0cf;font-size:15px}
+  #lbcap .num{color:#e7c98a;font-weight:700;margin-right:8px}
+  .nav{position:fixed;top:0;height:100%;width:18%;display:flex;align-items:center;cursor:pointer;color:#fff7;font-size:40px;user-select:none}
+  .nav:hover{color:#fff}
+  #prev{left:0;justify-content:flex-start;padding-left:18px}
+  #next{right:0;justify-content:flex-end;padding-right:18px}
+  #close{position:fixed;top:12px;right:18px;color:#fff9;font-size:30px;cursor:pointer;z-index:21}
+  .hint{color:#80745c;font-size:12px;margin-top:4px}
+</style></head><body>
+<header>
+  <h1>Psalm 22 — The Song From the Cross · long-form 16:9 stills</h1>
+  <div class="sub">24 scenes · <b style="color:#ffd89b">0 redone</b> · 24 kept · click any tile to zoom</div>
+  <div class="controls">
+    <button id="bAll" class="on" onclick="filt(false)">Show all</button>
+    <button id="bRedone" onclick="filt(true)">Only redone</button>
+  </div>
+</header>
+<main class="grid" id="grid">
+    <figure class="card" onclick="openLb(0)">
+      <div class="thumbwrap"><img loading="lazy" src="01_the_ninth_hour_the_cry.png" alt="The ninth hour, the cry"></div>
+      <figcaption><span class="num">#01</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">The ninth hour, the cry</span>
+        <span class="meta">M1 The Cry · 0–12s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(1)">
+      <div class="thumbwrap"><img loading="lazy" src="02_a_thousand_years_before_david_s_scroll.png" alt="A thousand years before, David&#x27;s scroll"></div>
+      <figcaption><span class="num">#02</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">A thousand years before, David&#x27;s scroll</span>
+        <span class="meta">M1 The Cry · 12–35s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(2)">
+      <div class="thumbwrap"><img loading="lazy" src="03_this_is_psalm_twenty_two_the_page_and_th.png" alt="This is Psalm twenty-two (the page and the cross)"></div>
+      <figcaption><span class="num">#03</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">This is Psalm twenty-two (the page and the cross)</span>
+        <span class="meta">M1 The Cry · 35–45s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(3)">
+      <div class="thumbwrap"><img loading="lazy" src="04_the_king_who_died_old_in_his_bed.png" alt="The king who died old in his bed"></div>
+      <figcaption><span class="num">#04</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">The king who died old in his bed</span>
+        <span class="meta">M2 A Death David Never Died · 45–66s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(4)">
+      <div class="thumbwrap"><img loading="lazy" src="05_a_worm_a_reproach_stripped_and_mocked.png" alt="A worm, a reproach (stripped and mocked)"></div>
+      <figcaption><span class="num">#05</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">A worm, a reproach (stripped and mocked)</span>
+        <span class="meta">M2 A Death David Never Died · 66–77s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(5)">
+      <div class="thumbwrap"><img loading="lazy" src="06_let_him_deliver_him_the_mockers.png" alt="Let him deliver him (the mockers)"></div>
+      <figcaption><span class="num">#06</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">Let him deliver him (the mockers)</span>
+        <span class="meta">M2 A Death David Never Died · 77–96s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(6)">
+      <div class="thumbwrap"><img loading="lazy" src="07_poured_out_like_water_bones_out_of_joint.png" alt="Poured out like water (bones out of joint)"></div>
+      <figcaption><span class="num">#07</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">Poured out like water (bones out of joint)</span>
+        <span class="meta">M3 The Wounds Written Early · 96–111s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(7)">
+      <div class="thumbwrap"><img loading="lazy" src="08_my_tongue_cleaveth_the_dust_of_death_i_t.png" alt="My tongue cleaveth (the dust of death, I thirst)"></div>
+      <figcaption><span class="num">#08</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">My tongue cleaveth (the dust of death, I thirst)</span>
+        <span class="meta">M3 The Wounds Written Early · 111–125s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(8)">
+      <div class="thumbwrap"><img loading="lazy" src="09_they_pierced_my_hands_and_my_feet.png" alt="They pierced my hands and my feet"></div>
+      <figcaption><span class="num">#09</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">They pierced my hands and my feet</span>
+        <span class="meta">M3 The Wounds Written Early · 125–146s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(9)">
+      <div class="thumbwrap"><img loading="lazy" src="10_they_part_my_garments_soldiers_cast_lots.png" alt="They part my garments (soldiers cast lots)"></div>
+      <figcaption><span class="num">#10</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">They part my garments (soldiers cast lots)</span>
+        <span class="meta">M3 The Wounds Written Early · 146–167s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(10)">
+      <div class="thumbwrap"><img loading="lazy" src="11_an_honest_objection_the_scholar_weighs_t.png" alt="An honest objection (the scholar weighs the text)"></div>
+      <figcaption><span class="num">#11</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">An honest objection (the scholar weighs the text)</span>
+        <span class="meta">M4 The Honest Question · 167–182s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(11)">
+      <div class="thumbwrap"><img loading="lazy" src="12_the_disputed_word_like_a_lion_they_pierc.png" alt="The disputed word (like a lion / they pierced)"></div>
+      <figcaption><span class="num">#12</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">The disputed word (like a lion / they pierced)</span>
+        <span class="meta">M4 The Honest Question · 182–193s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(12)">
+      <div class="thumbwrap"><img loading="lazy" src="13_concede_it_cleanly_the_convergence_still.png" alt="Concede it cleanly (the convergence still stands)"></div>
+      <figcaption><span class="num">#13</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">Concede it cleanly (the convergence still stands)</span>
+        <span class="meta">M4 The Honest Question · 193–216s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(13)">
+      <div class="thumbwrap"><img loading="lazy" src="14_the_greek_old_testament_translated_centu.png" alt="The Greek Old Testament (translated centuries early)"></div>
+      <figcaption><span class="num">#14</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">The Greek Old Testament (translated centuries early)</span>
+        <span class="meta">M4 The Honest Question · 216–234s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(14)">
+      <div class="thumbwrap"><img loading="lazy" src="15_back_to_the_cross_the_storm_over_jerusal.png" alt="Back to the cross (the storm over Jerusalem)"></div>
+      <figcaption><span class="num">#15</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">Back to the cross (the storm over Jerusalem)</span>
+        <span class="meta">M5 He Quoted the Whole Song · 234–251s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(15)">
+      <div class="thumbwrap"><img loading="lazy" src="16_so_when_jesus_cried_push_to_the_face.png" alt="So when Jesus cried (push to the face)"></div>
+      <figcaption><span class="num">#16</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">So when Jesus cried (push to the face)</span>
+        <span class="meta">M5 He Quoted the Whole Song · 251–260s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(16)">
+      <div class="thumbwrap"><img loading="lazy" src="17_this_one_is_about_me_crane_from_cross_to.png" alt="This one is about me (crane from cross to soldiers)"></div>
+      <figcaption><span class="num">#17</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">This one is about me (crane from cross to soldiers)</span>
+        <span class="meta">M5 He Quoted the Whole Song · 260–283s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(17)">
+      <div class="thumbwrap"><img loading="lazy" src="18_most_people_stop_here_but_the_song_turns.png" alt="Most people stop here (but the song turns)"></div>
+      <figcaption><span class="num">#18</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">Most people stop here (but the song turns)</span>
+        <span class="meta">M6 The Turn · 283–302s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(18)">
+      <div class="thumbwrap"><img loading="lazy" src="19_i_will_declare_thy_name_the_risen_worshi.png" alt="I will declare thy name (the risen worshipper)"></div>
+      <figcaption><span class="num">#19</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">I will declare thy name (the risen worshipper)</span>
+        <span class="meta">M6 The Turn · 302–320s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(19)">
+      <div class="thumbwrap"><img loading="lazy" src="20_he_heard_the_risen_face_the_scars.png" alt="He heard (the risen face, the scars)"></div>
+      <figcaption><span class="num">#20</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">He heard (the risen face, the scars)</span>
+        <span class="meta">M6 The Turn · 320–334s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(20)">
+      <div class="thumbwrap"><img loading="lazy" src="21_the_ends_of_the_earth_stream_home.png" alt="The ends of the earth stream home"></div>
+      <figcaption><span class="num">#21</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">The ends of the earth stream home</span>
+        <span class="meta">M6 The Turn · 334–355s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(21)">
+      <div class="thumbwrap"><img loading="lazy" src="22_he_hath_done_this_a_finished_work.png" alt="He hath done this (a finished work)"></div>
+      <figcaption><span class="num">#22</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">He hath done this (a finished work)</span>
+        <span class="meta">M7 He Hath Done This · 355–371s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(22)">
+      <div class="thumbwrap"><img loading="lazy" src="23_it_is_finished_the_parting_storm.png" alt="It is finished (the parting storm)"></div>
+      <figcaption><span class="num">#23</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">It is finished (the parting storm)</span>
+        <span class="meta">M7 He Hath Done This · 371–393s</span></figcaption>
+    </figure>
+    <figure class="card" onclick="openLb(23)">
+      <div class="thumbwrap"><img loading="lazy" src="24_come_and_join_his_name_grace_reaches_you.png" alt="Come and join (His name, grace reaches you) HERO close"></div>
+      <figcaption><span class="num">#24</span>
+        <span class="badge kept">kept</span>
+        <span class="ttl">Come and join (His name, grace reaches you) HERO close</span>
+        <span class="meta">M7 He Hath Done This · 393–418s</span></figcaption>
+    </figure></main>
+
+<div id="lb" onclick="if(event.target.id==='lb')closeLb()">
+  <span id="close" onclick="closeLb()">✕</span>
+  <span id="prev" class="nav" onclick="step(-1)">‹</span>
+  <span id="next" class="nav" onclick="step(1)">›</span>
+  <img id="lbimg" src="">
+  <div id="lbcap"></div>
+  <div class="hint">← → to move · Esc to close</div>
+</div>
+
+<script>
+const S = [{"src": "01_the_ninth_hour_the_cry.png", "n": 1, "title": "The ninth hour, the cry", "mvt": "M1 The Cry", "redone": false}, {"src": "02_a_thousand_years_before_david_s_scroll.png", "n": 2, "title": "A thousand years before, David's scroll", "mvt": "M1 The Cry", "redone": false}, {"src": "03_this_is_psalm_twenty_two_the_page_and_th.png", "n": 3, "title": "This is Psalm twenty-two (the page and the cross)", "mvt": "M1 The Cry", "redone": false}, {"src": "04_the_king_who_died_old_in_his_bed.png", "n": 4, "title": "The king who died old in his bed", "mvt": "M2 A Death David Never Died", "redone": false}, {"src": "05_a_worm_a_reproach_stripped_and_mocked.png", "n": 5, "title": "A worm, a reproach (stripped and mocked)", "mvt": "M2 A Death David Never Died", "redone": false}, {"src": "06_let_him_deliver_him_the_mockers.png", "n": 6, "title": "Let him deliver him (the mockers)", "mvt": "M2 A Death David Never Died", "redone": false}, {"src": "07_poured_out_like_water_bones_out_of_joint.png", "n": 7, "title": "Poured out like water (bones out of joint)", "mvt": "M3 The Wounds Written Early", "redone": false}, {"src": "08_my_tongue_cleaveth_the_dust_of_death_i_t.png", "n": 8, "title": "My tongue cleaveth (the dust of death, I thirst)", "mvt": "M3 The Wounds Written Early", "redone": false}, {"src": "09_they_pierced_my_hands_and_my_feet.png", "n": 9, "title": "They pierced my hands and my feet", "mvt": "M3 The Wounds Written Early", "redone": false}, {"src": "10_they_part_my_garments_soldiers_cast_lots.png", "n": 10, "title": "They part my garments (soldiers cast lots)", "mvt": "M3 The Wounds Written Early", "redone": false}, {"src": "11_an_honest_objection_the_scholar_weighs_t.png", "n": 11, "title": "An honest objection (the scholar weighs the text)", "mvt": "M4 The Honest Question", "redone": false}, {"src": "12_the_disputed_word_like_a_lion_they_pierc.png", "n": 12, "title": "The disputed word (like a lion / they pierced)", "mvt": "M4 The Honest Question", "redone": false}, {"src": "13_concede_it_cleanly_the_convergence_still.png", "n": 13, "title": "Concede it cleanly (the convergence still stands)", "mvt": "M4 The Honest Question", "redone": false}, {"src": "14_the_greek_old_testament_translated_centu.png", "n": 14, "title": "The Greek Old Testament (translated centuries early)", "mvt": "M4 The Honest Question", "redone": false}, {"src": "15_back_to_the_cross_the_storm_over_jerusal.png", "n": 15, "title": "Back to the cross (the storm over Jerusalem)", "mvt": "M5 He Quoted the Whole Song", "redone": false}, {"src": "16_so_when_jesus_cried_push_to_the_face.png", "n": 16, "title": "So when Jesus cried (push to the face)", "mvt": "M5 He Quoted the Whole Song", "redone": false}, {"src": "17_this_one_is_about_me_crane_from_cross_to.png", "n": 17, "title": "This one is about me (crane from cross to soldiers)", "mvt": "M5 He Quoted the Whole Song", "redone": false}, {"src": "18_most_people_stop_here_but_the_song_turns.png", "n": 18, "title": "Most people stop here (but the song turns)", "mvt": "M6 The Turn", "redone": false}, {"src": "19_i_will_declare_thy_name_the_risen_worshi.png", "n": 19, "title": "I will declare thy name (the risen worshipper)", "mvt": "M6 The Turn", "redone": false}, {"src": "20_he_heard_the_risen_face_the_scars.png", "n": 20, "title": "He heard (the risen face, the scars)", "mvt": "M6 The Turn", "redone": false}, {"src": "21_the_ends_of_the_earth_stream_home.png", "n": 21, "title": "The ends of the earth stream home", "mvt": "M6 The Turn", "redone": false}, {"src": "22_he_hath_done_this_a_finished_work.png", "n": 22, "title": "He hath done this (a finished work)", "mvt": "M7 He Hath Done This", "redone": false}, {"src": "23_it_is_finished_the_parting_storm.png", "n": 23, "title": "It is finished (the parting storm)", "mvt": "M7 He Hath Done This", "redone": false}, {"src": "24_come_and_join_his_name_grace_reaches_you.png", "n": 24, "title": "Come and join (His name, grace reaches you) HERO close", "mvt": "M7 He Hath Done This", "redone": false}];
+let cur = 0;
+const lb=document.getElementById('lb'), lbimg=document.getElementById('lbimg'), lbcap=document.getElementById('lbcap');
+function openLb(i){cur=i;render();lb.classList.add('show');}
+function closeLb(){lb.classList.remove('show');}
+function step(d){cur=(cur+d+S.length)%S.length;render();}
+function render(){const s=S[cur];lbimg.src=s.src;
+  lbcap.innerHTML='<span class="num">#'+String(s.n).padStart(2,'0')+'</span>'+s.title+' — <span style="color:#9c8e74">'+s.mvt+(s.redone?' · redone':'')+'</span>';}
+function filt(only){document.body.classList.toggle('only-redone',only);
+  document.getElementById('bRedone').classList.toggle('on',only);
+  document.getElementById('bAll').classList.toggle('on',!only);}
+// tag kept cards for filtering
+document.querySelectorAll('.card').forEach((c,i)=>{if(!S[i].redone)c.classList.add('kepthide');});
+document.addEventListener('keydown',e=>{if(!lb.classList.contains('show'))return;
+  if(e.key==='Escape')closeLb();else if(e.key==='ArrowRight')step(1);else if(e.key==='ArrowLeft')step(-1);});
+</script></body></html>

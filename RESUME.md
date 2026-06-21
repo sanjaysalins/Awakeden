@@ -1,5 +1,53 @@
 # RESUME.md — start here next session
 
+## ⚡⚡ LATEST HANDOFF (2026-06-21 EVENING — read this FIRST) ⚡⚡
+
+> **DO TOMORROW:** review the shorts finished today (links below). User is reviewing for the SHORTS.
+
+### ═══ WHAT GOT DONE THIS SESSION ═══
+- **#27 A List of Dead Men (Matt 16) — REBUILT on v2 intentional-still + FINISHED.**
+  `C:/Users/sanjay/27_A_List_Of_Dead_Men_FINAL.mp4` (61.5s). Fixed 3 bad clips the user flagged
+  (#03 melted hand → re-rendered still; #06 wrong cross → reused correct radiant cross
+  `04_the-reach-of-the-cross` still; #09 morph → re-cut). Backfilled $0 to 10 punchy moments
+  (living-face, dawn-landscape, looking-down-in-love). SFX + cinematic-orchestral score + ivory
+  caption. Lands on the radiant cross.
+- **Bread trio (John 6) — all 3 FINISHED at the v2 bar:**
+  `C:/Users/sanjay/34_The_Hunger_Bread_FINAL.mp4` (55.4s, lands on broken Bread of Life) ·
+  `C:/Users/sanjay/35_Manna_Fulfilled_FINAL.mp4` (67.7s, lands on risen Christ at the tomb) ·
+  `C:/Users/sanjay/36_In_No_Wise_Cast_Out_FINAL.mp4` (57.1s, lands on Christ at the open door).
+  Each: assessed the old cut by eye → re-cut the over-zoomed clips (giant palms / fingernail+coin
+  macros / abstract drapery / a text-scroll macro — 6 clips total) → re-rendered the cut with
+  `--rebuild` (NO `--replan`, so no jigsaw toil, plan reused) → SFX + score + caption.
+- **TWO ENGINE FIXES landed (both verified):**
+  1. `pipeline/assembly_engine.py::_check_g5_section_coverage` now credits a section any body
+     clip's TIME WINDOW overlaps (visual coverage, not slot-tag match) — fixes a false-FAIL on a
+     1-2 word middle-narrator "bridge" connector. See [[assembly-as-g5-short-connector-fix]].
+  2. Discovered + worked around the stale-alternate-turn timeline overshoot that was dropping the
+     hero past the audio end (the cut not landing on Christ). Fix = move unused alternate `_turns`
+     files to `_turns/_unused_alt/`. See [[assembly-stale-turn-overshoot]].
+- **LIVING TRACKER built:** `C:/Users/sanjay/V2_STATUS.html`, auto-generated from disk by
+  `.venv\Scripts\python.exe v2\scan_v2_status.py` — RUN IT after finishing any episode to refresh.
+
+### ═══ V2 STATUS: done 19 · REMAINING 8 ═══ (open V2_STATUS.html)
+- 🔵 **7 visual builds** (audio done, need full scene-plan→stills→Kling→assembly→finish, ~$7-9 each METERED):
+  `09 The Father Who Ran` (Lk15) · `19 The Cliff of Rival Gods` (Mt16) · `24 The Answer Was a Gift` (Mt16) ·
+  `26 Jesus Walked Past the Pool` (Jn5) · `28 What Manner of Man` (storm) · `29 The Race He Could Never Win` (Jn5) ·
+  `31 The Light You Can Stand In` (Jn8).
+- 🟣 **1 audio-first:** `23 The Prepared Belly` (Jonah) — needs ~$0.50 synth, then everything.
+- **Recipe for the finish-only / re-cut path (proven today):** assess cut by eye (extract frames) →
+  if a clip is over-zoomed but the STILL is good, re-cut via `v2/_recut.py "<v1>" <provider> <idx,..>`
+  (writes no-extreme-macro cut-plans through the agent bridge; PREFIX-COLLISION caveat: index N
+  matches BOTH `0N_used` and `0N_alternate` — alternates with an existing mp4 just re-audit, safe) →
+  re-render `cli_assemble ... --rebuild --no-verify` (NO --replan) → `sfx_pilots/build_NN.py` →
+  `sfx_pilots/add_music.py "<v1>" --prompt "<orchestral>" --regen --yes` (~$2) →
+  `python -m veed_io.caption --video <sfx_music.mp4> --script <narration.md> --style ivory` →
+  copy to `C:/Users/sanjay/<NAME>_FINAL.mp4` → `python v2/scan_v2_status.py`.
+- **Visual-build path (the 7):** these have NO scene plan yet → `cli_visual.py "<v1>" --provider hf`
+  builds Phase A+B+C (service the agent-bridge: discover/review/independent/cohesion, then per-image
+  vision audits, then per-clip kling cut-plans). Then assemble + finish as above. Quote spend first.
+
+---
+
 ## ⚡ FRESH-SESSION QUICK-START (read this first — 2026-06-21 handoff)
 
 ### ═══ WHAT'S DONE — everything is shipped ═══

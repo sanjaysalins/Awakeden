@@ -4,32 +4,33 @@ FORWARD from it, then chain (each clip's last frame seeds the next) until the
 scene window is covered. Continuation clips -> <stem>_cont1.mp4, _cont2.mp4 ...
 The assembler concats [orig, cont1, cont2, ...] forward-only (no reverse).
 
-  python longform/_animate_directional.py            # full batch (10 clips)
-  python longform/_animate_directional.py --only 13 --n 1   # TEST: 1 cont clip for S13
+EPISODE-GENERIC: pass an episode slug/dir (bare = Isaiah, back-compat). The set of
+directional scenes and their continuing-motion phrase are read from the scene plan
+(scene.directional + scene.camera + scene.atmos), not a hardcoded table.
+
+  python longform/_animate_directional.py "<episode>"            # full batch
+  python longform/_animate_directional.py "<episode>" --only 13 --n 1   # TEST
 """
 import sys, time, json, re, math, argparse, subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 import config
 from pipeline import video_render
+from _episode import resolve  # noqa: E402
 
 config.VIDEO_HF_MODEL = "veo3_1_lite"
 config.VIDEO_HF_ASPECT = "16:9"
 
-OUT = ROOT / "longform" / "01_Isaiah_53_Suffering_Servant" / "v1" / "visual_16x9"
 CLIP_SECONDS = 8
 
-# directional scene id -> phrase describing the CONTINUING forward motion
-CONT = {
-    8:  "the flock keeps grazing and slowly drifting, grass and cloth moving in the wind, the camera continuing its slow pan across the hillside",
-    9:  "the lamb continues being led gently forward along the path, a slow steady onward movement, soft dust and sorrowful light",
-    11: "the procession keeps walking forward, the long column steadily advancing, lowered banners swaying, dust rising, the camera tracking with them",
-    13: "the chariot and horses keep moving forward along the dry road, wheels turning, hooves stepping, dust trailing, the camera tracking smoothly alongside",
-    14: "the meeting continues, the traveler settling alongside the chariot, faint gestures, warm low sun and drifting dust, a slow continued push-in",
-    20: "the tender moment continues, the pierced hand held out steady, the kneeling figure receiving it, a faint halo glow, a very slow continued push-in",
-}
+
+def cont_motion(s):
+    """The continuing forward motion for a directional scene, from the plan."""
+    return (f"continue the camera move — {s.get('camera', 'a slow steady onward movement')}; "
+            f"{s.get('atmos', 'subtle atmosphere only')}")
 
 
 def base(atmos):
@@ -54,11 +55,15 @@ def last_frame(clip: Path, png: Path):
 
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("episode", nargs="?", help="episode slug/dir (bare = Isaiah)")
     ap.add_argument("--only", type=int, help="run a single scene id")
     ap.add_argument("--n", type=int, help="cap continuation clips (test)")
     args = ap.parse_args()
 
-    plan = {s["id"]: s for s in json.loads((OUT/"scene_plan.json").read_text(encoding="utf-8"))["scenes"]}
+    ep = resolve(sys.argv)
+    OUT = ep.out
+    plan = {s["id"]: s for s in ep.scenes}
+    CONT = {s["id"]: cont_motion(s) for s in ep.scenes if s.get("directional")}
     vp = video_render.HFVideoProvider()
     ids = [args.only] if args.only else sorted(CONT)
     made = 0

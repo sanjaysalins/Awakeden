@@ -56,13 +56,15 @@ PLAN = [
     # ── M5 CROSS AGAIN (~246 - ~286s): forsaken 256.6, divided 270.8
     L("cross5",    "air_hollow_desolate", "loop", 246.0,  40.0, -34.0, fin=4.0, fout=5.0),
     L("divide",    "coins_clinking",      "oneshot", 0.0,  4.0,  -28.0),     # soldiers divided them up           (TIME SET BELOW)
-    # ── M6 THE TURN (~288 - ~355s): death -> life. warmth carries to the end; choir = the worship peak
+    # ── M6 THE TURN (~288 - ~355s): death -> life. warmth carries to the end.
+    # NOTE: the heavenly_choir_soft pads (M6 "choir" + M7 "join") were REMOVED 2026-06-21 —
+    # they are a sustained MUSICAL bed and clashed with the Suno orchestral score added later
+    # = "dual scores" (user caught it). The score is the SINGLE musical bed; SFX bed is ambience
+    # only (see memory feedback-no-choir-pad-under-score). The orchestral swell now carries the turn.
     L("turn_warm", "dawn_morning_warm",   "loop", 288.0, 130.0, -31.0, filt="lowpass=f=3200", fin=5.0, fout=6.0),
-    L("choir",     "heavenly_choir_soft", "loop", 300.0,  78.0, -34.0, fin=6.0, fout=8.0),   # the worshipping congregation (borderline-musical; offer to pull)
     L("nations",   "shofar_blast",        "oneshot", 0.0,  6.0,  -27.0, filt="lowpass=f=2500"),  # all the ends of the world (TIME SET BELOW)
-    # ── M7 HE HATH DONE THIS / landing (~355 - 418s): finished, then warm welcome; congregation choir returns
+    # ── M7 HE HATH DONE THIS / landing (~355 - 418s): finished, then warm welcome.
     L("finished",  "veil_tearing",        "oneshot", 0.0,  5.0,  -26.0),     # It is finished                     (TIME SET BELOW)
-    L("join",      "heavenly_choir_soft", "loop", 404.0,  14.0, -35.0, fin=4.0, fout=4.0),   # come and join the ones who praise him
 ]
 
 # anchor times patched in from alignment.json at runtime (word -> layer label)

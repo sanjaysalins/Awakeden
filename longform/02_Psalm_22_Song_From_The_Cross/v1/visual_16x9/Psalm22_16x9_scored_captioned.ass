@@ -1,0 +1,821 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Serif,Inter,51,&H00D8F0F4,&H00D8F0F4,&H00101214,&H64000000,0,0,0,0,100,100,0,0,1,0,1,1,126,40,259,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.10,0:00:00.80,Serif,,0,0,0,,{\an1\pos(259,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}hour,
+Dialogue: 1,0:00:00.10,0:00:00.80,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs110\i0\b1\1c&H00D8F0F4}ninth
+Dialogue: 1,0:00:00.10,0:00:00.80,Serif,,0,0,0,,{\an1\pos(126,824)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}At {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:00:01.12,0:00:02.17,Serif,,0,0,0,,{\an1\pos(297,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}cross
+Dialogue: 1,0:00:01.12,0:00:02.17,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}Roman
+Dialogue: 1,0:00:01.12,0:00:02.17,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}nailed {\fs51\i0\b0\1c&H00D8F0F4}to {\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:00:02.21,0:00:03.02,Serif,,0,0,0,,{\an1\pos(327,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}to {\fs63\i1\b0\1c&H00D8F0F4}fill {\fs51\i0\b0\1c&H00D8F0F4}his
+Dialogue: 1,0:00:02.21,0:00:03.02,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs138\i0\b1\1c&H00D8F0F4}unable
+Dialogue: 1,0:00:02.21,0:00:03.02,Serif,,0,0,0,,{\an1\pos(126,804)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}and
+Dialogue: 1,0:00:03.06,0:00:03.66,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}lungs,
+Dialogue: 1,0:00:04.00,0:00:05.33,Serif,,0,0,0,,{\an1\pos(385,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}gathered {\fs51\i0\b0\1c&H00D8F0F4}his
+Dialogue: 1,0:00:04.00,0:00:05.33,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs133\i0\b1\1c&H00D8F0F4}Nazareth
+Dialogue: 1,0:00:04.00,0:00:05.33,Serif,,0,0,0,,{\an1\pos(126,807)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}Jesus {\fs51\i0\b0\1c&H00D8F0F4}of
+Dialogue: 1,0:00:05.38,0:00:06.87,Serif,,0,0,0,,{\an1\pos(373,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}and {\fs63\i1\b0\1c&H00D8F0F4}cried {\fs51\i0\b0\1c&H00D8F0F4}out {\fs51\i0\b0\1c&H00D8F0F4}into
+Dialogue: 1,0:00:05.38,0:00:06.87,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs127\i0\b1\1c&H00D8F0F4}strength
+Dialogue: 1,0:00:06.91,0:00:07.51,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}dark.
+Dialogue: 1,0:00:06.91,0:00:07.51,Serif,,0,0,0,,{\an1\pos(126,805)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:00:07.86,0:00:08.46,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}God,
+Dialogue: 1,0:00:07.86,0:00:08.46,Serif,,0,0,0,,{\an1\pos(126,805)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}"My
+Dialogue: 1,0:00:08.54,0:00:09.14,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs104\i0\b1\1c&H00D8F0F4}God,
+Dialogue: 1,0:00:08.54,0:00:09.14,Serif,,0,0,0,,{\an1\pos(126,828)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}my
+Dialogue: 1,0:00:09.52,0:00:11.37,Serif,,0,0,0,,{\an1\pos(226,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}hast {\fs51\i0\b0\1c&H00D8F0F4}thou {\fs63\i1\b0\1c&H00D8F0F4}forsaken {\fs51\i0\b0\1c&H00D8F0F4}me?"
+Dialogue: 1,0:00:09.52,0:00:11.37,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs138\i0\b1\1c&H00D8F0F4}why
+Dialogue: 1,0:00:12.03,0:00:13.36,Serif,,0,0,0,,{\an1\pos(223,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}anguish
+Dialogue: 1,0:00:12.03,0:00:13.36,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs133\i0\b1\1c&H00D8F0F4}raw
+Dialogue: 1,0:00:12.03,0:00:13.36,Serif,,0,0,0,,{\an1\pos(126,807)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}We {\fs63\i1\b0\1c&H00D8F0F4}hear
+Dialogue: 1,0:00:14.03,0:00:14.85,Serif,,0,0,0,,{\an1\pos(207,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}forsaken.
+Dialogue: 1,0:00:14.03,0:00:14.85,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs112\i0\b1\1c&H00D8F0F4}man
+Dialogue: 1,0:00:14.03,0:00:14.85,Serif,,0,0,0,,{\an1\pos(126,822)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:00:15.90,0:00:16.53,Serif,,0,0,0,,{\an1\pos(227,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}it {\fs51\i0\b0\1c&H00D8F0F4}is {\fs63\i1\b0\1c&H00D8F0F4}that.
+Dialogue: 1,0:00:15.90,0:00:16.53,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs139\i0\b1\1c&H00D8F0F4}And
+Dialogue: 1,0:00:17.50,0:00:18.20,Serif,,0,0,0,,{\an1\pos(250,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:00:17.50,0:00:18.20,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs128\i0\b1\1c&H00D8F0F4}also
+Dialogue: 1,0:00:17.50,0:00:18.20,Serif,,0,0,0,,{\an1\pos(126,811)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}But {\fs51\i0\b0\1c&H00D8F0F4}it {\fs51\i0\b0\1c&H00D8F0F4}is
+Dialogue: 1,0:00:18.23,0:00:18.83,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}quotation.
+Dialogue: 1,0:00:19.64,0:00:20.77,Serif,,0,0,0,,{\an1\pos(275,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}had {\fs51\i0\b0\1c&H00D8F0F4}been
+Dialogue: 1,0:00:19.64,0:00:20.77,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs123\i0\b1\1c&H00D8F0F4}words
+Dialogue: 1,0:00:19.64,0:00:20.77,Serif,,0,0,0,,{\an1\pos(126,814)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}Those {\fs63\i1\b0\1c&H00D8F0F4}exact
+Dialogue: 1,0:00:20.79,0:00:21.39,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}down,
+Dialogue: 1,0:00:20.79,0:00:21.39,Serif,,0,0,0,,{\an1\pos(126,805)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}written
+Dialogue: 1,0:00:21.59,0:00:22.46,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}person,
+Dialogue: 1,0:00:21.59,0:00:22.46,Serif,,0,0,0,,{\an1\pos(126,812)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}in {\fs51\i0\b0\1c&H00D8F0F4}the {\fs63\i1\b0\1c&H00D8F0F4}first
+Dialogue: 1,0:00:22.80,0:00:24.18,Serif,,0,0,0,,{\an1\pos(391,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}years {\fs51\i0\b0\1c&H00D8F0F4}before
+Dialogue: 1,0:00:22.80,0:00:24.18,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}thousand
+Dialogue: 1,0:00:22.80,0:00:24.18,Serif,,0,0,0,,{\an1\pos(126,805)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}almost {\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:00:24.23,0:00:24.83,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}morning
+Dialogue: 1,0:00:24.23,0:00:24.83,Serif,,0,0,0,,{\an1\pos(126,805)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}that
+Dialogue: 1,0:00:25.55,0:00:26.46,Serif,,0,0,0,,{\an1\pos(256,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}who {\fs63\i1\b0\1c&H00D8F0F4}died
+Dialogue: 1,0:00:25.55,0:00:26.46,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs134\i0\b1\1c&H00D8F0F4}king
+Dialogue: 1,0:00:25.55,0:00:26.46,Serif,,0,0,0,,{\an1\pos(126,807)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}by {\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:00:26.66,0:00:27.87,Serif,,0,0,0,,{\an1\pos(213,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}and {\fs63\i1\b0\1c&H00D8F0F4}safe {\fs51\i0\b0\1c&H00D8F0F4}in {\fs51\i0\b0\1c&H00D8F0F4}his
+Dialogue: 1,0:00:26.66,0:00:27.87,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs120\i0\b1\1c&H00D8F0F4}old
+Dialogue: 1,0:00:27.93,0:00:28.53,Serif,,0,0,0,,{\an1\pos(212,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}bed.
+Dialogue: 1,0:00:27.93,0:00:28.53,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs119\i0\b1\1c&H00D8F0F4}own
+Dialogue: 1,0:00:28.33,0:00:28.98,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}God,
+Dialogue: 1,0:00:28.33,0:00:28.98,Serif,,0,0,0,,{\an1\pos(126,805)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}"My
+Dialogue: 1,0:00:29.16,0:00:29.76,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}God,
+Dialogue: 1,0:00:29.16,0:00:29.76,Serif,,0,0,0,,{\an1\pos(126,805)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}my
+Dialogue: 1,0:00:29.75,0:00:30.93,Serif,,0,0,0,,{\an1\pos(354,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}me?
+Dialogue: 1,0:00:29.75,0:00:30.93,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs117\i0\b1\1c&H00D8F0F4}forsaken
+Dialogue: 1,0:00:29.75,0:00:30.93,Serif,,0,0,0,,{\an1\pos(126,819)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}why {\fs51\i0\b0\1c&H00D8F0F4}hast {\fs51\i0\b0\1c&H00D8F0F4}thou
+Dialogue: 1,0:00:31.66,0:00:32.57,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs134\i0\b1\1c&H00D8F0F4}far
+Dialogue: 1,0:00:31.66,0:00:32.57,Serif,,0,0,0,,{\an1\pos(126,807)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}why {\fs51\i0\b0\1c&H00D8F0F4}art {\fs63\i1\b0\1c&H00D8F0F4}thou {\fs51\i0\b0\1c&H00D8F0F4}so
+Dialogue: 1,0:00:32.61,0:00:33.21,Serif,,0,0,0,,{\an1\pos(364,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}me,
+Dialogue: 1,0:00:32.61,0:00:33.21,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs140\i0\b1\1c&H00D8F0F4}helping
+Dialogue: 1,0:00:32.61,0:00:33.21,Serif,,0,0,0,,{\an1\pos(126,803)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}from
+Dialogue: 1,0:00:33.68,0:00:34.39,Serif,,0,0,0,,{\an1\pos(290,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}of
+Dialogue: 1,0:00:33.68,0:00:34.39,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs135\i0\b1\1c&H00D8F0F4}words
+Dialogue: 1,0:00:33.68,0:00:34.39,Serif,,0,0,0,,{\an1\pos(126,806)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}and {\fs51\i0\b0\1c&H00D8F0F4}from {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:00:34.43,0:00:35.76,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}Psalm
+Dialogue: 1,0:00:34.43,0:00:35.76,Serif,,0,0,0,,{\an1\pos(126,805)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}my {\fs63\i1\b0\1c&H00D8F0F4}roaring?" {\fs51\i0\b0\1c&H00D8F0F4}This {\fs51\i0\b0\1c&H00D8F0F4}is
+Dialogue: 1,0:00:35.80,0:00:36.40,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}twenty-two.
+Dialogue: 1,0:00:37.87,0:00:38.88,Serif,,0,0,0,,{\an1\pos(272,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}did
+Dialogue: 1,0:00:37.87,0:00:38.88,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs120\i0\b1\1c&H00D8F0F4}Jesus
+Dialogue: 1,0:00:37.87,0:00:38.88,Serif,,0,0,0,,{\an1\pos(126,817)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}And {\fs51\i0\b0\1c&H00D8F0F4}the {\fs63\i1\b0\1c&H00D8F0F4}dying
+Dialogue: 1,0:00:38.92,0:00:39.64,Serif,,0,0,0,,{\an1\pos(278,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}for {\fs51\i0\b0\1c&H00D8F0F4}it {\fs51\i0\b0\1c&H00D8F0F4}by
+Dialogue: 1,0:00:38.92,0:00:39.64,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs125\i0\b1\1c&H00D8F0F4}reach
+Dialogue: 1,0:00:38.92,0:00:39.64,Serif,,0,0,0,,{\an1\pos(126,813)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}not
+Dialogue: 1,0:00:39.64,0:00:40.24,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}accident.
+Dialogue: 1,0:00:40.98,0:00:42.13,Serif,,0,0,0,,{\an1\pos(400,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}within
+Dialogue: 1,0:00:40.98,0:00:42.13,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}everyone
+Dialogue: 1,0:00:40.98,0:00:42.13,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}He {\fs51\i0\b0\1c&H00D8F0F4}was {\fs63\i1\b0\1c&H00D8F0F4}telling
+Dialogue: 1,0:00:42.21,0:00:43.72,Serif,,0,0,0,,{\an1\pos(366,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}where {\fs51\i0\b0\1c&H00D8F0F4}to {\fs51\i0\b0\1c&H00D8F0F4}look.
+Dialogue: 1,0:00:42.21,0:00:43.72,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}exactly
+Dialogue: 1,0:00:42.21,0:00:43.72,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}earshot
+Dialogue: 1,0:00:44.85,0:00:46.04,Serif,,0,0,0,,{\an1\pos(286,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}wrote {\fs51\i0\b0\1c&H00D8F0F4}this {\fs51\i0\b0\1c&H00D8F0F4}song.
+Dialogue: 1,0:00:44.85,0:00:46.04,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs132\i0\b1\1c&H00D8F0F4}David
+Dialogue: 1,0:00:44.85,0:00:46.04,Serif,,0,0,0,,{\an1\pos(126,808)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}King
+Dialogue: 1,0:00:46.80,0:00:47.41,Serif,,0,0,0,,{\an1\pos(297,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}it {\fs63\i1\b0\1c&H00D8F0F4}in {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:00:46.80,0:00:47.41,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}wrote
+Dialogue: 1,0:00:46.80,0:00:47.41,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}He
+Dialogue: 1,0:00:47.41,0:00:48.91,Serif,,0,0,0,,{\an1\pos(280,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}person {\fs51\i0\b0\1c&H00D8F0F4}I,
+Dialogue: 1,0:00:47.41,0:00:48.91,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs127\i0\b1\1c&H00D8F0F4}first
+Dialogue: 1,0:00:49.42,0:00:50.02,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}me,
+Dialogue: 1,0:00:50.28,0:00:50.88,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}my
+Dialogue: 1,0:00:51.53,0:00:52.30,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs134\i0\b1\1c&H00D8F0F4}happening
+Dialogue: 1,0:00:51.53,0:00:52.30,Serif,,0,0,0,,{\an1\pos(126,807)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}as {\fs51\i0\b0\1c&H00D8F0F4}if {\fs51\i0\b0\1c&H00D8F0F4}it {\fs63\i1\b0\1c&H00D8F0F4}were
+Dialogue: 1,0:00:52.34,0:00:52.98,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs138\i0\b1\1c&H00D8F0F4}body.
+Dialogue: 1,0:00:52.34,0:00:52.98,Serif,,0,0,0,,{\an1\pos(126,804)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}to {\fs63\i1\b0\1c&H00D8F0F4}his {\fs51\i0\b0\1c&H00D8F0F4}own
+Dialogue: 1,0:00:53.81,0:00:54.92,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}strangeness:
+Dialogue: 1,0:00:53.81,0:00:54.92,Serif,,0,0,0,,{\an1\pos(126,812)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}But {\fs63\i1\b0\1c&H00D8F0F4}here {\fs51\i0\b0\1c&H00D8F0F4}is {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:00:55.75,0:00:57.10,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs133\i0\b1\1c&H00D8F0F4}near
+Dialogue: 1,0:00:55.75,0:00:57.10,Serif,,0,0,0,,{\an1\pos(126,807)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}David {\fs63\i1\b0\1c&H00D8F0F4}himself {\fs51\i0\b0\1c&H00D8F0F4}never {\fs51\i0\b0\1c&H00D8F0F4}came
+Dialogue: 1,0:00:57.12,0:00:57.80,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs139\i0\b1\1c&H00D8F0F4}one
+Dialogue: 1,0:00:57.12,0:00:57.80,Serif,,0,0,0,,{\an1\pos(126,803)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}a {\fs63\i1\b0\1c&H00D8F0F4}death {\fs51\i0\b0\1c&H00D8F0F4}like {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:00:57.80,0:00:58.40,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs128\i0\b1\1c&H00D8F0F4}describes.
+Dialogue: 1,0:00:57.80,0:00:58.40,Serif,,0,0,0,,{\an1\pos(126,811)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}he
+Dialogue: 1,0:00:59.41,0:01:00.80,Serif,,0,0,0,,{\an1\pos(406,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}is
+Dialogue: 1,0:00:59.41,0:01:00.80,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs128\i0\b1\1c&H00D8F0F4}describes
+Dialogue: 1,0:00:59.41,0:01:00.80,Serif,,0,0,0,,{\an1\pos(126,811)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}Because {\fs51\i0\b0\1c&H00D8F0F4}what {\fs51\i0\b0\1c&H00D8F0F4}he
+Dialogue: 1,0:01:00.82,0:01:01.71,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}execution.
+Dialogue: 1,0:01:00.82,0:01:01.71,Serif,,0,0,0,,{\an1\pos(126,812)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}a {\fs63\i1\b0\1c&H00D8F0F4}public
+Dialogue: 1,0:01:02.71,0:01:03.42,Serif,,0,0,0,,{\an1\pos(206,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}stripped,
+Dialogue: 1,0:01:02.71,0:01:03.42,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs110\i0\b1\1c&H00D8F0F4}man
+Dialogue: 1,0:01:02.71,0:01:03.42,Serif,,0,0,0,,{\an1\pos(126,824)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}A
+Dialogue: 1,0:01:03.78,0:01:04.38,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}surrounded,
+Dialogue: 1,0:01:04.60,0:01:05.53,Serif,,0,0,0,,{\an1\pos(302,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}to {\fs63\i1\b0\1c&H00D8F0F4}death.
+Dialogue: 1,0:01:04.60,0:01:05.53,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs121\i0\b1\1c&H00D8F0F4}mocked
+Dialogue: 1,0:01:04.60,0:01:05.53,Serif,,0,0,0,,{\an1\pos(126,816)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}and
+Dialogue: 1,0:01:05.53,0:01:06.60,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs125\i0\b1\1c&H00D8F0F4}worm,
+Dialogue: 1,0:01:05.53,0:01:06.60,Serif,,0,0,0,,{\an1\pos(126,813)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}"But {\fs51\i0\b0\1c&H00D8F0F4}I {\fs63\i1\b0\1c&H00D8F0F4}am {\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:01:06.92,0:01:07.52,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs104\i0\b1\1c&H00D8F0F4}man;
+Dialogue: 1,0:01:06.92,0:01:07.52,Serif,,0,0,0,,{\an1\pos(126,828)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}and {\fs51\i0\b0\1c&H00D8F0F4}no
+Dialogue: 1,0:01:07.95,0:01:08.78,Serif,,0,0,0,,{\an1\pos(367,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}of {\fs63\i1\b0\1c&H00D8F0F4}men,
+Dialogue: 1,0:01:07.95,0:01:08.78,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs124\i0\b1\1c&H00D8F0F4}reproach
+Dialogue: 1,0:01:07.95,0:01:08.78,Serif,,0,0,0,,{\an1\pos(126,814)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:01:09.08,0:01:10.17,Serif,,0,0,0,,{\an1\pos(398,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}of {\fs51\i0\b0\1c&H00D8F0F4}the {\fs63\i1\b0\1c&H00D8F0F4}people.
+Dialogue: 1,0:01:09.08,0:01:10.17,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs140\i0\b1\1c&H00D8F0F4}despised
+Dialogue: 1,0:01:09.08,0:01:10.17,Serif,,0,0,0,,{\an1\pos(126,803)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}and
+Dialogue: 1,0:01:11.16,0:01:11.98,Serif,,0,0,0,,{\an1\pos(225,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}they {\fs51\i0\b0\1c&H00D8F0F4}that {\fs63\i1\b0\1c&H00D8F0F4}see {\fs51\i0\b0\1c&H00D8F0F4}me
+Dialogue: 1,0:01:11.16,0:01:11.98,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}All
+Dialogue: 1,0:01:12.05,0:01:12.89,Serif,,0,0,0,,{\an1\pos(278,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}me {\fs51\i0\b0\1c&H00D8F0F4}to {\fs51\i0\b0\1c&H00D8F0F4}scorn:
+Dialogue: 1,0:01:12.05,0:01:12.89,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs125\i0\b1\1c&H00D8F0F4}laugh
+Dialogue: 1,0:01:12.89,0:01:13.96,Serif,,0,0,0,,{\an1\pos(269,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}out {\fs51\i0\b0\1c&H00D8F0F4}the {\fs51\i0\b0\1c&H00D8F0F4}lip,
+Dialogue: 1,0:01:12.89,0:01:13.96,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs118\i0\b1\1c&H00D8F0F4}shoot
+Dialogue: 1,0:01:12.89,0:01:13.96,Serif,,0,0,0,,{\an1\pos(126,818)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}they
+Dialogue: 1,0:01:14.21,0:01:15.13,Serif,,0,0,0,,{\an1\pos(267,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}the {\fs63\i1\b0\1c&H00D8F0F4}head…" {\fs51\i0\b0\1c&H00D8F0F4}And
+Dialogue: 1,0:01:14.21,0:01:15.13,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs116\i0\b1\1c&H00D8F0F4}shake
+Dialogue: 1,0:01:14.21,0:01:15.13,Serif,,0,0,0,,{\an1\pos(126,819)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}they
+Dialogue: 1,0:01:15.20,0:01:16.07,Serif,,0,0,0,,{\an1\pos(305,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}to {\fs63\i1\b0\1c&H00D8F0F4}what {\fs51\i0\b0\1c&H00D8F0F4}the {\fs51\i0\b0\1c&H00D8F0F4}mockers
+Dialogue: 1,0:01:15.20,0:01:16.07,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs123\i0\b1\1c&H00D8F0F4}listen
+Dialogue: 1,0:01:16.19,0:01:16.86,Serif,,0,0,0,,{\an1\pos(328,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}say:
+Dialogue: 1,0:01:16.19,0:01:16.86,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs104\i0\b1\1c&H00D8F0F4}actually
+Dialogue: 1,0:01:16.86,0:01:17.91,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs128\i0\b1\1c&H00D8F0F4}LORD
+Dialogue: 1,0:01:16.86,0:01:17.91,Serif,,0,0,0,,{\an1\pos(126,811)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}"He {\fs63\i1\b0\1c&H00D8F0F4}trusted {\fs51\i0\b0\1c&H00D8F0F4}on {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:01:17.95,0:01:18.80,Serif,,0,0,0,,{\an1\pos(366,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}him:
+Dialogue: 1,0:01:17.95,0:01:18.80,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}deliver
+Dialogue: 1,0:01:17.95,0:01:18.80,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}that {\fs51\i0\b0\1c&H00D8F0F4}he {\fs63\i1\b0\1c&H00D8F0F4}would
+Dialogue: 1,0:01:19.47,0:01:20.15,Serif,,0,0,0,,{\an1\pos(334,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}him,
+Dialogue: 1,0:01:19.47,0:01:20.15,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs122\i0\b1\1c&H00D8F0F4}deliver
+Dialogue: 1,0:01:19.47,0:01:20.15,Serif,,0,0,0,,{\an1\pos(126,815)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}let {\fs51\i0\b0\1c&H00D8F0F4}him
+Dialogue: 1,0:01:20.39,0:01:21.48,Serif,,0,0,0,,{\an1\pos(411,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}in {\fs51\i0\b0\1c&H00D8F0F4}him."
+Dialogue: 1,0:01:20.39,0:01:21.48,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs130\i0\b1\1c&H00D8F0F4}delighted
+Dialogue: 1,0:01:20.39,0:01:21.48,Serif,,0,0,0,,{\an1\pos(126,810)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}seeing {\fs51\i0\b0\1c&H00D8F0F4}he
+Dialogue: 1,0:01:21.58,0:01:22.81,Serif,,0,0,0,,{\an1\pos(292,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}was {\fs51\i0\b0\1c&H00D8F0F4}a {\fs63\i1\b0\1c&H00D8F0F4}soldier {\fs51\i0\b0\1c&H00D8F0F4}and
+Dialogue: 1,0:01:21.58,0:01:22.81,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs137\i0\b1\1c&H00D8F0F4}David
+Dialogue: 1,0:01:22.86,0:01:23.63,Serif,,0,0,0,,{\an1\pos(261,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}who {\fs63\i1\b0\1c&H00D8F0F4}died {\fs51\i0\b0\1c&H00D8F0F4}of
+Dialogue: 1,0:01:22.86,0:01:23.63,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs139\i0\b1\1c&H00D8F0F4}king
+Dialogue: 1,0:01:22.86,0:01:23.63,Serif,,0,0,0,,{\an1\pos(126,803)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:01:23.70,0:01:24.30,Serif,,0,0,0,,{\an1\pos(212,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}age
+Dialogue: 1,0:01:23.70,0:01:24.30,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs119\i0\b1\1c&H00D8F0F4}old
+Dialogue: 1,0:01:24.59,0:01:25.76,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}jeering
+Dialogue: 1,0:01:24.59,0:01:25.76,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}never {\fs51\i0\b0\1c&H00D8F0F4}stripped {\fs63\i1\b0\1c&H00D8F0F4}before {\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:01:25.80,0:01:26.40,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}crowd,
+Dialogue: 1,0:01:26.58,0:01:27.39,Serif,,0,0,0,,{\an1\pos(283,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}executed {\fs51\i0\b0\1c&H00D8F0F4}at {\fs51\i0\b0\1c&H00D8F0F4}all.
+Dialogue: 1,0:01:26.58,0:01:27.39,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs129\i0\b1\1c&H00D8F0F4}never
+Dialogue: 1,0:01:28.71,0:01:29.44,Serif,,0,0,0,,{\an1\pos(297,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}death {\fs51\i0\b0\1c&H00D8F0F4}is {\fs51\i0\b0\1c&H00D8F0F4}he
+Dialogue: 1,0:01:28.71,0:01:29.44,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}whose
+Dialogue: 1,0:01:28.71,0:01:29.44,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}So
+Dialogue: 1,0:01:29.46,0:01:30.06,Serif,,0,0,0,,{\an1\pos(457,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}in
+Dialogue: 1,0:01:29.46,0:01:30.06,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}describing
+Dialogue: 1,0:01:30.49,0:01:31.09,Serif,,0,0,0,,{\an1\pos(216,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}voice
+Dialogue: 1,0:01:30.49,0:01:31.09,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs124\i0\b1\1c&H00D8F0F4}own
+Dialogue: 1,0:01:30.49,0:01:31.09,Serif,,0,0,0,,{\an1\pos(126,814)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}his
+Dialogue: 1,0:01:31.58,0:01:32.75,Serif,,0,0,0,,{\an1\pos(430,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}that {\fs51\i0\b0\1c&H00D8F0F4}he
+Dialogue: 1,0:01:31.58,0:01:32.75,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs139\i0\b1\1c&H00D8F0F4}certainty
+Dialogue: 1,0:01:31.58,0:01:32.75,Serif,,0,0,0,,{\an1\pos(126,803)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}with {\fs63\i1\b0\1c&H00D8F0F4}such
+Dialogue: 1,0:01:32.79,0:01:33.54,Serif,,0,0,0,,{\an1\pos(263,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}as {\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:01:32.79,0:01:33.54,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}down
+Dialogue: 1,0:01:32.79,0:01:33.54,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}writes {\fs51\i0\b0\1c&H00D8F0F4}it
+Dialogue: 1,0:01:33.54,0:01:34.14,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}fact?
+Dialogue: 1,0:01:34.98,0:01:36.28,Serif,,0,0,0,,{\an1\pos(256,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}the {\fs51\i0\b0\1c&H00D8F0F4}song {\fs51\i0\b0\1c&H00D8F0F4}turns {\fs63\i1\b0\1c&H00D8F0F4}forensic.
+Dialogue: 1,0:01:34.98,0:01:36.28,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs134\i0\b1\1c&H00D8F0F4}Then
+Dialogue: 1,0:01:36.76,0:01:38.05,Serif,,0,0,0,,{\an1\pos(400,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}like {\fs63\i1\b0\1c&H00D8F0F4}poetry
+Dialogue: 1,0:01:36.76,0:01:38.05,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}sounding
+Dialogue: 1,0:01:36.76,0:01:38.05,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}It {\fs51\i0\b0\1c&H00D8F0F4}stops
+Dialogue: 1,0:01:38.09,0:01:39.02,Serif,,0,0,0,,{\an1\pos(400,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}like {\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:01:38.09,0:01:39.02,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}sounding
+Dialogue: 1,0:01:38.09,0:01:39.02,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}and {\fs63\i1\b0\1c&H00D8F0F4}starts
+Dialogue: 1,0:01:39.08,0:01:40.23,Serif,,0,0,0,,{\an1\pos(351,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}statement {\fs51\i0\b0\1c&H00D8F0F4}from {\fs51\i0\b0\1c&H00D8F0F4}a {\fs63\i1\b0\1c&H00D8F0F4}cross
+Dialogue: 1,0:01:39.08,0:01:40.23,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs132\i0\b1\1c&H00D8F0F4}witness
+Dialogue: 1,0:01:40.29,0:01:41.16,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs132\i0\b1\1c&H00D8F0F4}invented
+Dialogue: 1,0:01:40.29,0:01:41.16,Serif,,0,0,0,,{\an1\pos(126,808)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}that {\fs63\i1\b0\1c&H00D8F0F4}would {\fs51\i0\b0\1c&H00D8F0F4}not {\fs51\i0\b0\1c&H00D8F0F4}be
+Dialogue: 1,0:01:41.16,0:01:41.76,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs128\i0\b1\1c&H00D8F0F4}centuries.
+Dialogue: 1,0:01:41.16,0:01:41.76,Serif,,0,0,0,,{\an1\pos(126,811)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}for
+Dialogue: 1,0:01:41.82,0:01:42.77,Serif,,0,0,0,,{\an1\pos(310,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}out {\fs51\i0\b0\1c&H00D8F0F4}like
+Dialogue: 1,0:01:41.82,0:01:42.77,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}poured
+Dialogue: 1,0:01:41.82,0:01:42.77,Serif,,0,0,0,,{\an1\pos(126,812)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}"I {\fs63\i1\b0\1c&H00D8F0F4}am
+Dialogue: 1,0:01:42.83,0:01:43.43,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}water,
+Dialogue: 1,0:01:43.63,0:01:44.44,Serif,,0,0,0,,{\an1\pos(283,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}are
+Dialogue: 1,0:01:43.63,0:01:44.44,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs129\i0\b1\1c&H00D8F0F4}bones
+Dialogue: 1,0:01:43.63,0:01:44.44,Serif,,0,0,0,,{\an1\pos(126,810)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}and {\fs63\i1\b0\1c&H00D8F0F4}all {\fs51\i0\b0\1c&H00D8F0F4}my
+Dialogue: 1,0:01:44.46,0:01:45.06,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs124\i0\b1\1c&H00D8F0F4}joint…"
+Dialogue: 1,0:01:44.46,0:01:45.06,Serif,,0,0,0,,{\an1\pos(126,814)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}out {\fs51\i0\b0\1c&H00D8F0F4}of
+Dialogue: 1,0:01:47.09,0:01:47.90,Serif,,0,0,0,,{\an1\pos(249,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}of {\fs51\i0\b0\1c&H00D8F0F4}a {\fs63\i1\b0\1c&H00D8F0F4}man
+Dialogue: 1,0:01:47.09,0:01:47.90,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs127\i0\b1\1c&H00D8F0F4}body
+Dialogue: 1,0:01:47.09,0:01:47.90,Serif,,0,0,0,,{\an1\pos(126,812)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}The
+Dialogue: 1,0:01:47.96,0:01:48.81,Serif,,0,0,0,,{\an1\pos(243,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}up {\fs51\i0\b0\1c&H00D8F0F4}by {\fs63\i1\b0\1c&H00D8F0F4}his {\fs51\i0\b0\1c&H00D8F0F4}arms
+Dialogue: 1,0:01:47.96,0:01:48.81,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs121\i0\b1\1c&H00D8F0F4}hung
+Dialogue: 1,0:01:49.27,0:01:50.68,Serif,,0,0,0,,{\an1\pos(327,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}pulling {\fs51\i0\b0\1c&H00D8F0F4}apart {\fs51\i0\b0\1c&H00D8F0F4}under
+Dialogue: 1,0:01:49.27,0:01:50.68,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs138\i0\b1\1c&H00D8F0F4}joints
+Dialogue: 1,0:01:49.27,0:01:50.68,Serif,,0,0,0,,{\an1\pos(126,804)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:01:50.72,0:01:51.32,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs111\i0\b1\1c&H00D8F0F4}weight.
+Dialogue: 1,0:01:50.72,0:01:51.32,Serif,,0,0,0,,{\an1\pos(126,823)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}his {\fs63\i1\b0\1c&H00D8F0F4}own
+Dialogue: 1,0:01:51.00,0:01:52.66,Serif,,0,0,0,,{\an1\pos(340,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}to {\fs51\i0\b0\1c&H00D8F0F4}my
+Dialogue: 1,0:01:51.00,0:01:52.66,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs110\i0\b1\1c&H00D8F0F4}cleaveth
+Dialogue: 1,0:01:51.00,0:01:52.66,Serif,,0,0,0,,{\an1\pos(126,824)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}"…my {\fs63\i1\b0\1c&H00D8F0F4}tongue
+Dialogue: 1,0:01:52.72,0:01:53.32,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}jaws;
+Dialogue: 1,0:01:53.51,0:01:54.37,Serif,,0,0,0,,{\an1\pos(332,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}me
+Dialogue: 1,0:01:53.51,0:01:54.37,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs121\i0\b1\1c&H00D8F0F4}brought
+Dialogue: 1,0:01:53.51,0:01:54.37,Serif,,0,0,0,,{\an1\pos(126,816)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}and {\fs63\i1\b0\1c&H00D8F0F4}thou {\fs51\i0\b0\1c&H00D8F0F4}hast
+Dialogue: 1,0:01:54.41,0:01:55.62,Serif,,0,0,0,,{\an1\pos(256,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}the {\fs51\i0\b0\1c&H00D8F0F4}dust {\fs51\i0\b0\1c&H00D8F0F4}of {\fs63\i1\b0\1c&H00D8F0F4}death."
+Dialogue: 1,0:01:54.41,0:01:55.62,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs134\i0\b1\1c&H00D8F0F4}into
+Dialogue: 1,0:01:55.77,0:01:56.57,Serif,,0,0,0,,{\an1\pos(357,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}thirst
+Dialogue: 1,0:01:55.77,0:01:56.57,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}killing
+Dialogue: 1,0:01:55.77,0:01:56.57,Serif,,0,0,0,,{\an1\pos(126,805)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}A
+Dialogue: 1,0:01:57.19,0:01:57.79,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs117\i0\b1\1c&H00D8F0F4}cross,
+Dialogue: 1,0:01:57.19,0:01:57.79,Serif,,0,0,0,,{\an1\pos(126,819)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}on {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:01:58.00,0:01:59.11,Serif,,0,0,0,,{\an1\pos(255,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}records {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:01:58.00,0:01:59.11,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs133\i0\b1\1c&H00D8F0F4}John
+Dialogue: 1,0:01:58.00,0:01:59.11,Serif,,0,0,0,,{\an1\pos(126,807)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}the {\fs51\i0\b0\1c&H00D8F0F4}apostle
+Dialogue: 1,0:01:59.11,0:01:59.71,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}cry:
+Dialogue: 1,0:01:59.17,0:01:59.77,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs104\i0\b1\1c&H00D8F0F4}thirst.
+Dialogue: 1,0:01:59.17,0:01:59.77,Serif,,0,0,0,,{\an1\pos(126,828)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}I
+Dialogue: 1,0:02:01.62,0:02:02.56,Serif,,0,0,0,,{\an1\pos(261,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}the {\fs63\i1\b0\1c&H00D8F0F4}song {\fs51\i0\b0\1c&H00D8F0F4}says {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:02:01.62,0:02:02.56,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs139\i0\b1\1c&H00D8F0F4}Then
+Dialogue: 1,0:02:02.61,0:02:03.69,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs120\i0\b1\1c&H00D8F0F4}business
+Dialogue: 1,0:02:02.61,0:02:03.69,Serif,,0,0,0,,{\an1\pos(126,817)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}thing {\fs51\i0\b0\1c&H00D8F0F4}it {\fs51\i0\b0\1c&H00D8F0F4}has {\fs51\i0\b0\1c&H00D8F0F4}no
+Dialogue: 1,0:02:03.74,0:02:04.49,Serif,,0,0,0,,{\an1\pos(359,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}this {\fs63\i1\b0\1c&H00D8F0F4}early:
+Dialogue: 1,0:02:03.74,0:02:04.49,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs137\i0\b1\1c&H00D8F0F4}knowing
+Dialogue: 1,0:02:04.49,0:02:05.81,Serif,,0,0,0,,{\an1\pos(321,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}pierced {\fs51\i0\b0\1c&H00D8F0F4}my {\fs63\i1\b0\1c&H00D8F0F4}hands {\fs51\i0\b0\1c&H00D8F0F4}and
+Dialogue: 1,0:02:04.49,0:02:05.81,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs134\i0\b1\1c&H00D8F0F4}"…they
+Dialogue: 1,0:02:05.89,0:02:07.45,Serif,,0,0,0,,{\an1\pos(347,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}hands {\fs51\i0\b0\1c&H00D8F0F4}and
+Dialogue: 1,0:02:05.89,0:02:07.45,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs130\i0\b1\1c&H00D8F0F4}Pierced
+Dialogue: 1,0:02:05.89,0:02:07.45,Serif,,0,0,0,,{\an1\pos(126,810)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}my {\fs51\i0\b0\1c&H00D8F0F4}feet."
+Dialogue: 1,0:02:07.45,0:02:08.06,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}feet.
+Dialogue: 1,0:02:09.04,0:02:10.21,Serif,,0,0,0,,{\an1\pos(396,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}years
+Dialogue: 1,0:02:09.04,0:02:10.21,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs139\i0\b1\1c&H00D8F0F4}thousand
+Dialogue: 1,0:02:09.04,0:02:10.21,Serif,,0,0,0,,{\an1\pos(126,803)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}David {\fs51\i0\b0\1c&H00D8F0F4}lived {\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:02:10.27,0:02:11.82,Serif,,0,0,0,,{\an1\pos(256,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}turned {\fs63\i1\b0\1c&H00D8F0F4}crucifixion {\fs51\i0\b0\1c&H00D8F0F4}into
+Dialogue: 1,0:02:10.27,0:02:11.82,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs134\i0\b1\1c&H00D8F0F4}Rome
+Dialogue: 1,0:02:10.27,0:02:11.82,Serif,,0,0,0,,{\an1\pos(126,807)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}before
+Dialogue: 1,0:02:11.82,0:02:12.42,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs128\i0\b1\1c&H00D8F0F4}science;
+Dialogue: 1,0:02:11.82,0:02:12.42,Serif,,0,0,0,,{\an1\pos(126,811)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:02:12.79,0:02:14.14,Serif,,0,0,0,,{\an1\pos(216,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}people {\fs51\i0\b0\1c&H00D8F0F4}never {\fs51\i0\b0\1c&H00D8F0F4}executed
+Dialogue: 1,0:02:12.79,0:02:14.14,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs124\i0\b1\1c&H00D8F0F4}own
+Dialogue: 1,0:02:12.79,0:02:14.14,Serif,,0,0,0,,{\an1\pos(126,814)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}his
+Dialogue: 1,0:02:14.18,0:02:14.78,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs104\i0\b1\1c&H00D8F0F4}way.
+Dialogue: 1,0:02:14.18,0:02:14.78,Serif,,0,0,0,,{\an1\pos(126,828)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}that
+Dialogue: 1,0:02:15.19,0:02:15.99,Serif,,0,0,0,,{\an1\pos(332,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}on
+Dialogue: 1,0:02:15.19,0:02:15.99,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}reason
+Dialogue: 1,0:02:15.19,0:02:15.99,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}There {\fs51\i0\b0\1c&H00D8F0F4}was {\fs51\i0\b0\1c&H00D8F0F4}no
+Dialogue: 1,0:02:16.09,0:02:16.90,Serif,,0,0,0,,{\an1\pos(292,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}for {\fs51\i0\b0\1c&H00D8F0F4}him {\fs51\i0\b0\1c&H00D8F0F4}to {\fs63\i1\b0\1c&H00D8F0F4}picture
+Dialogue: 1,0:02:16.09,0:02:16.90,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs137\i0\b1\1c&H00D8F0F4}earth
+Dialogue: 1,0:02:16.93,0:02:17.91,Serif,,0,0,0,,{\an1\pos(219,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}fixed {\fs51\i0\b0\1c&H00D8F0F4}to {\fs63\i1\b0\1c&H00D8F0F4}wood
+Dialogue: 1,0:02:16.93,0:02:17.91,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs128\i0\b1\1c&H00D8F0F4}man
+Dialogue: 1,0:02:16.93,0:02:17.91,Serif,,0,0,0,,{\an1\pos(126,811)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:02:17.93,0:02:18.90,Serif,,0,0,0,,{\an1\pos(297,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}and {\fs51\i0\b0\1c&H00D8F0F4}feet
+Dialogue: 1,0:02:17.93,0:02:18.90,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}hands
+Dialogue: 1,0:02:17.93,0:02:18.90,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}through {\fs51\i0\b0\1c&H00D8F0F4}his
+Dialogue: 1,0:02:19.51,0:02:20.15,Serif,,0,0,0,,{\an1\pos(274,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}it {\fs51\i0\b0\1c&H00D8F0F4}is,
+Dialogue: 1,0:02:19.51,0:02:20.15,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs122\i0\b1\1c&H00D8F0F4}there
+Dialogue: 1,0:02:19.51,0:02:20.15,Serif,,0,0,0,,{\an1\pos(126,815)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}yet
+Dialogue: 1,0:02:20.51,0:02:21.11,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs104\i0\b1\1c&H00D8F0F4}ink,
+Dialogue: 1,0:02:20.51,0:02:21.11,Serif,,0,0,0,,{\an1\pos(126,828)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}in
+Dialogue: 1,0:02:21.28,0:02:22.00,Serif,,0,0,0,,{\an1\pos(424,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}early.
+Dialogue: 1,0:02:21.28,0:02:22.00,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}centuries
+Dialogue: 1,0:02:23.05,0:02:23.78,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs123\i0\b1\1c&H00D8F0F4}going,
+Dialogue: 1,0:02:23.05,0:02:23.78,Serif,,0,0,0,,{\an1\pos(126,814)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}And {\fs51\i0\b0\1c&H00D8F0F4}it {\fs63\i1\b0\1c&H00D8F0F4}keeps
+Dialogue: 1,0:02:24.14,0:02:25.33,Serif,,0,0,0,,{\an1\pos(260,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}to {\fs51\i0\b0\1c&H00D8F0F4}the {\fs63\i1\b0\1c&H00D8F0F4}smallest {\fs51\i0\b0\1c&H00D8F0F4}detail:
+Dialogue: 1,0:02:24.14,0:02:25.33,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs138\i0\b1\1c&H00D8F0F4}down
+Dialogue: 1,0:02:25.33,0:02:26.62,Serif,,0,0,0,,{\an1\pos(379,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}among
+Dialogue: 1,0:02:25.33,0:02:26.62,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs130\i0\b1\1c&H00D8F0F4}garments
+Dialogue: 1,0:02:25.33,0:02:26.62,Serif,,0,0,0,,{\an1\pos(126,810)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}"They {\fs51\i0\b0\1c&H00D8F0F4}part {\fs51\i0\b0\1c&H00D8F0F4}my
+Dialogue: 1,0:02:26.66,0:02:27.26,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}them,
+Dialogue: 1,0:02:27.06,0:02:28.02,Serif,,0,0,0,,{\an1\pos(239,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}upon {\fs51\i0\b0\1c&H00D8F0F4}my
+Dialogue: 1,0:02:27.06,0:02:28.02,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs116\i0\b1\1c&H00D8F0F4}lots
+Dialogue: 1,0:02:27.06,0:02:28.02,Serif,,0,0,0,,{\an1\pos(126,819)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}and {\fs63\i1\b0\1c&H00D8F0F4}cast
+Dialogue: 1,0:02:28.16,0:02:29.69,Serif,,0,0,0,,{\an1\pos(373,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}gambling {\fs51\i0\b0\1c&H00D8F0F4}for {\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:02:28.16,0:02:29.69,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs127\i0\b1\1c&H00D8F0F4}Soldiers
+Dialogue: 1,0:02:28.16,0:02:29.69,Serif,,0,0,0,,{\an1\pos(126,812)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}vesture."
+Dialogue: 1,0:02:29.72,0:02:30.59,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs104\i0\b1\1c&H00D8F0F4}clothes.
+Dialogue: 1,0:02:29.72,0:02:30.59,Serif,,0,0,0,,{\an1\pos(126,828)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}dead {\fs51\i0\b0\1c&H00D8F0F4}man's
+Dialogue: 1,0:02:31.78,0:02:32.38,Serif,,0,0,0,,{\an1\pos(261,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}to {\fs51\i0\b0\1c&H00D8F0F4}the {\fs63\i1\b0\1c&H00D8F0F4}foot {\fs51\i0\b0\1c&H00D8F0F4}of
+Dialogue: 1,0:02:31.78,0:02:32.38,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs139\i0\b1\1c&H00D8F0F4}Turn
+Dialogue: 1,0:02:32.38,0:02:32.98,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}cross,
+Dialogue: 1,0:02:32.38,0:02:32.98,Serif,,0,0,0,,{\an1\pos(126,805)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:02:33.07,0:02:33.85,Serif,,0,0,0,,{\an1\pos(253,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}tells {\fs51\i0\b0\1c&H00D8F0F4}you {\fs51\i0\b0\1c&H00D8F0F4}it
+Dialogue: 1,0:02:33.07,0:02:33.85,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs131\i0\b1\1c&H00D8F0F4}John
+Dialogue: 1,0:02:33.07,0:02:33.85,Serif,,0,0,0,,{\an1\pos(126,809)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}and
+Dialogue: 1,0:02:33.89,0:02:34.49,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}happened:
+Dialogue: 1,0:02:34.25,0:02:35.29,Serif,,0,0,0,,{\an1\pos(277,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}be
+Dialogue: 1,0:02:34.25,0:02:35.29,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs124\i0\b1\1c&H00D8F0F4}might
+Dialogue: 1,0:02:34.25,0:02:35.29,Serif,,0,0,0,,{\an1\pos(126,814)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}"…that {\fs51\i0\b0\1c&H00D8F0F4}the {\fs63\i1\b0\1c&H00D8F0F4}scripture
+Dialogue: 1,0:02:35.33,0:02:35.93,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}fulfilled,
+Dialogue: 1,0:02:35.85,0:02:36.45,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}saith,
+Dialogue: 1,0:02:35.85,0:02:36.45,Serif,,0,0,0,,{\an1\pos(126,805)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}which
+Dialogue: 1,0:02:36.63,0:02:37.81,Serif,,0,0,0,,{\an1\pos(340,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}among
+Dialogue: 1,0:02:36.63,0:02:37.81,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}raiment
+Dialogue: 1,0:02:36.63,0:02:37.81,Serif,,0,0,0,,{\an1\pos(126,812)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}They {\fs51\i0\b0\1c&H00D8F0F4}parted {\fs51\i0\b0\1c&H00D8F0F4}my
+Dialogue: 1,0:02:37.87,0:02:38.47,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}them,
+Dialogue: 1,0:02:38.33,0:02:39.54,Serif,,0,0,0,,{\an1\pos(332,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}they
+Dialogue: 1,0:02:38.33,0:02:39.54,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs121\i0\b1\1c&H00D8F0F4}vesture
+Dialogue: 1,0:02:38.33,0:02:39.54,Serif,,0,0,0,,{\an1\pos(126,816)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}and {\fs51\i0\b0\1c&H00D8F0F4}for {\fs63\i1\b0\1c&H00D8F0F4}my
+Dialogue: 1,0:02:39.56,0:02:40.96,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}Roman
+Dialogue: 1,0:02:39.56,0:02:40.96,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}did {\fs51\i0\b0\1c&H00D8F0F4}cast {\fs63\i1\b0\1c&H00D8F0F4}lots." {\fs51\i0\b0\1c&H00D8F0F4}The
+Dialogue: 1,0:02:41.02,0:02:42.36,Serif,,0,0,0,,{\an1\pos(394,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}gambling {\fs51\i0\b0\1c&H00D8F0F4}for {\fs51\i0\b0\1c&H00D8F0F4}his {\fs51\i0\b0\1c&H00D8F0F4}clothes
+Dialogue: 1,0:02:41.02,0:02:42.36,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs138\i0\b1\1c&H00D8F0F4}soldiers
+Dialogue: 1,0:02:42.42,0:02:43.45,Serif,,0,0,0,,{\an1\pos(435,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}a {\fs63\i1\b0\1c&H00D8F0F4}script.
+Dialogue: 1,0:02:42.42,0:02:43.45,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}following
+Dialogue: 1,0:02:42.42,0:02:43.45,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}were {\fs51\i0\b0\1c&H00D8F0F4}not
+Dialogue: 1,0:02:44.04,0:02:45.17,Serif,,0,0,0,,{\an1\pos(423,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}one {\fs51\i0\b0\1c&H00D8F0F4}anyway.
+Dialogue: 1,0:02:44.04,0:02:45.17,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs122\i0\b1\1c&H00D8F0F4}fulfilling
+Dialogue: 1,0:02:44.04,0:02:45.17,Serif,,0,0,0,,{\an1\pos(126,815)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}They {\fs51\i0\b0\1c&H00D8F0F4}were
+Dialogue: 1,0:02:46.27,0:02:46.87,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}Now
+Dialogue: 1,0:02:46.91,0:02:47.74,Serif,,0,0,0,,{\an1\pos(292,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}objection,
+Dialogue: 1,0:02:46.91,0:02:47.74,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs114\i0\b1\1c&H00D8F0F4}honest
+Dialogue: 1,0:02:46.91,0:02:47.74,Serif,,0,0,0,,{\an1\pos(126,821)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}an
+Dialogue: 1,0:02:48.10,0:02:48.90,Serif,,0,0,0,,{\an1\pos(375,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}a {\fs63\i1\b0\1c&H00D8F0F4}straight
+Dialogue: 1,0:02:48.10,0:02:48.90,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs128\i0\b1\1c&H00D8F0F4}deserves
+Dialogue: 1,0:02:48.10,0:02:48.90,Serif,,0,0,0,,{\an1\pos(126,811)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}and {\fs51\i0\b0\1c&H00D8F0F4}it
+Dialogue: 1,0:02:48.94,0:02:49.54,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}answer,
+Dialogue: 1,0:02:49.56,0:02:50.20,Serif,,0,0,0,,{\an1\pos(269,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}pitch.
+Dialogue: 1,0:02:49.56,0:02:50.20,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs118\i0\b1\1c&H00D8F0F4}sales
+Dialogue: 1,0:02:49.56,0:02:50.20,Serif,,0,0,0,,{\an1\pos(126,818)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}not {\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:02:51.19,0:02:52.25,Serif,,0,0,0,,{\an1\pos(318,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}will {\fs63\i1\b0\1c&H00D8F0F4}say:
+Dialogue: 1,0:02:51.19,0:02:52.25,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs132\i0\b1\1c&H00D8F0F4}reader
+Dialogue: 1,0:02:51.19,0:02:52.25,Serif,,0,0,0,,{\an1\pos(126,808)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}A {\fs51\i0\b0\1c&H00D8F0F4}careful
+Dialogue: 1,0:02:52.42,0:02:53.13,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs133\i0\b1\1c&H00D8F0F4}poetry.
+Dialogue: 1,0:02:52.42,0:02:53.13,Serif,,0,0,0,,{\an1\pos(126,807)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}this {\fs51\i0\b0\1c&H00D8F0F4}is
+Dialogue: 1,0:02:53.57,0:02:54.38,Serif,,0,0,0,,{\an1\pos(222,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}who
+Dialogue: 1,0:02:53.57,0:02:54.38,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs132\i0\b1\1c&H00D8F0F4}man
+Dialogue: 1,0:02:53.57,0:02:54.38,Serif,,0,0,0,,{\an1\pos(126,808)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}David {\fs51\i0\b0\1c&H00D8F0F4}is {\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:02:54.44,0:02:56.35,Serif,,0,0,0,,{\an1\pos(283,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}images {\fs51\i0\b0\1c&H00D8F0F4}dogs,
+Dialogue: 1,0:02:54.44,0:02:56.35,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs129\i0\b1\1c&H00D8F0F4}vivid
+Dialogue: 1,0:02:54.44,0:02:56.35,Serif,,0,0,0,,{\an1\pos(126,810)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}reached {\fs51\i0\b0\1c&H00D8F0F4}for
+Dialogue: 1,0:02:56.35,0:02:57.99,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs125\i0\b1\1c&H00D8F0F4}enemies
+Dialogue: 1,0:02:56.35,0:02:57.99,Serif,,0,0,0,,{\an1\pos(126,813)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}a {\fs63\i1\b0\1c&H00D8F0F4}lion {\fs51\i0\b0\1c&H00D8F0F4}when {\fs51\i0\b0\1c&H00D8F0F4}his
+Dialogue: 1,0:02:58.05,0:02:58.65,Serif,,0,0,0,,{\an1\pos(357,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}him.
+Dialogue: 1,0:02:58.05,0:02:58.65,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}pressed
+Dialogue: 1,0:02:59.26,0:03:00.32,Serif,,0,0,0,,{\an1\pos(217,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}word,
+Dialogue: 1,0:02:59.26,0:03:00.32,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs125\i0\b1\1c&H00D8F0F4}one
+Dialogue: 1,0:02:59.26,0:03:00.32,Serif,,0,0,0,,{\an1\pos(126,813)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}And {\fs51\i0\b0\1c&H00D8F0F4}on {\fs51\i0\b0\1c&H00D8F0F4}that
+Dialogue: 1,0:03:00.63,0:03:01.23,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}pierced,
+Dialogue: 1,0:03:01.29,0:03:02.49,Serif,,0,0,0,,{\an1\pos(366,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}scholarly
+Dialogue: 1,0:03:01.29,0:03:02.49,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}genuine
+Dialogue: 1,0:03:01.29,0:03:02.49,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}there {\fs51\i0\b0\1c&H00D8F0F4}is {\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:03:02.51,0:03:03.11,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}dispute:
+Dialogue: 1,0:03:03.66,0:03:04.97,Serif,,0,0,0,,{\an1\pos(458,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}Hebrew {\fs51\i0\b0\1c&H00D8F0F4}text {\fs51\i0\b0\1c&H00D8F0F4}can
+Dialogue: 1,0:03:03.66,0:03:04.97,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs124\i0\b1\1c&H00D8F0F4}traditional
+Dialogue: 1,0:03:03.66,0:03:04.97,Serif,,0,0,0,,{\an1\pos(126,814)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:03:05.01,0:03:05.81,Serif,,0,0,0,,{\an1\pos(263,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}as {\fs63\i1\b0\1c&H00D8F0F4}like {\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:03:05.01,0:03:05.81,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}read
+Dialogue: 1,0:03:05.01,0:03:05.81,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}be
+Dialogue: 1,0:03:05.81,0:03:07.27,Serif,,0,0,0,,{\an1\pos(257,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}at {\fs51\i0\b0\1c&H00D8F0F4}my {\fs63\i1\b0\1c&H00D8F0F4}hands {\fs51\i0\b0\1c&H00D8F0F4}and
+Dialogue: 1,0:03:05.81,0:03:07.27,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs135\i0\b1\1c&H00D8F0F4}lion
+Dialogue: 1,0:03:07.31,0:03:09.30,Serif,,0,0,0,,{\an1\pos(299,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}than {\fs51\i0\b0\1c&H00D8F0F4}they {\fs51\i0\b0\1c&H00D8F0F4}pierced.
+Dialogue: 1,0:03:07.31,0:03:09.30,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs119\i0\b1\1c&H00D8F0F4}rather
+Dialogue: 1,0:03:07.31,0:03:09.30,Serif,,0,0,0,,{\an1\pos(126,817)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}feet
+Dialogue: 1,0:03:10.15,0:03:11.13,Serif,,0,0,0,,{\an1\pos(259,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}question,
+Dialogue: 1,0:03:10.15,0:03:11.13,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs137\i0\b1\1c&H00D8F0F4}real
+Dialogue: 1,0:03:10.15,0:03:11.13,Serif,,0,0,0,,{\an1\pos(126,805)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}That {\fs51\i0\b0\1c&H00D8F0F4}is {\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:03:11.40,0:03:12.14,Serif,,0,0,0,,{\an1\pos(328,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}raised.
+Dialogue: 1,0:03:11.40,0:03:12.14,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs104\i0\b1\1c&H00D8F0F4}honestly
+Dialogue: 1,0:03:12.71,0:03:13.66,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs128\i0\b1\1c&H00D8F0F4}cleanly.
+Dialogue: 1,0:03:12.71,0:03:13.66,Serif,,0,0,0,,{\an1\pos(126,811)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}So {\fs63\i1\b0\1c&H00D8F0F4}concede {\fs51\i0\b0\1c&H00D8F0F4}it
+Dialogue: 1,0:03:14.27,0:03:15.38,Serif,,0,0,0,,{\an1\pos(255,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}pierced {\fs51\i0\b0\1c&H00D8F0F4}off {\fs51\i0\b0\1c&H00D8F0F4}the {\fs63\i1\b0\1c&H00D8F0F4}table
+Dialogue: 1,0:03:14.27,0:03:15.38,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs133\i0\b1\1c&H00D8F0F4}Take
+Dialogue: 1,0:03:15.42,0:03:16.02,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}entirely,
+Dialogue: 1,0:03:16.10,0:03:16.79,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs122\i0\b1\1c&H00D8F0F4}moment.
+Dialogue: 1,0:03:16.10,0:03:16.79,Serif,,0,0,0,,{\an1\pos(126,815)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}just {\fs51\i0\b0\1c&H00D8F0F4}for {\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:03:17.47,0:03:18.28,Serif,,0,0,0,,{\an1\pos(255,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}with
+Dialogue: 1,0:03:17.47,0:03:18.28,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs133\i0\b1\1c&H00D8F0F4}left
+Dialogue: 1,0:03:17.47,0:03:18.28,Serif,,0,0,0,,{\an1\pos(126,807)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}You {\fs51\i0\b0\1c&H00D8F0F4}are {\fs63\i1\b0\1c&H00D8F0F4}still
+Dialogue: 1,0:03:18.32,0:03:19.51,Serif,,0,0,0,,{\an1\pos(217,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}stripped {\fs51\i0\b0\1c&H00D8F0F4}and {\fs63\i1\b0\1c&H00D8F0F4}mocked
+Dialogue: 1,0:03:18.32,0:03:19.51,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs125\i0\b1\1c&H00D8F0F4}man
+Dialogue: 1,0:03:18.32,0:03:19.51,Serif,,0,0,0,,{\an1\pos(126,813)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:03:19.51,0:03:20.11,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}death,
+Dialogue: 1,0:03:19.51,0:03:20.11,Serif,,0,0,0,,{\an1\pos(126,805)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}to
+Dialogue: 1,0:03:20.42,0:03:21.42,Serif,,0,0,0,,{\an1\pos(297,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}out {\fs51\i0\b0\1c&H00D8F0F4}of {\fs63\i1\b0\1c&H00D8F0F4}joint,
+Dialogue: 1,0:03:20.42,0:03:21.42,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}bones
+Dialogue: 1,0:03:20.42,0:03:21.42,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}his
+Dialogue: 1,0:03:21.89,0:03:22.67,Serif,,0,0,0,,{\an1\pos(295,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}of {\fs63\i1\b0\1c&H00D8F0F4}thirst,
+Dialogue: 1,0:03:21.89,0:03:22.67,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs139\i0\b1\1c&H00D8F0F4}dying
+Dialogue: 1,0:03:23.18,0:03:24.43,Serif,,0,0,0,,{\an1\pos(351,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}away {\fs51\i0\b0\1c&H00D8F0F4}by
+Dialogue: 1,0:03:23.18,0:03:24.43,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs132\i0\b1\1c&H00D8F0F4}gambled
+Dialogue: 1,0:03:23.18,0:03:24.43,Serif,,0,0,0,,{\an1\pos(126,808)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}his {\fs63\i1\b0\1c&H00D8F0F4}clothing
+Dialogue: 1,0:03:24.47,0:03:25.33,Serif,,0,0,0,,{\an1\pos(332,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}him
+Dialogue: 1,0:03:24.47,0:03:25.33,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}killed
+Dialogue: 1,0:03:24.47,0:03:25.33,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}the {\fs63\i1\b0\1c&H00D8F0F4}people {\fs51\i0\b0\1c&H00D8F0F4}who
+Dialogue: 1,0:03:26.00,0:03:26.94,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs104\i0\b1\1c&H00D8F0F4}first-person,
+Dialogue: 1,0:03:26.00,0:03:26.94,Serif,,0,0,0,,{\an1\pos(126,828)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}written
+Dialogue: 1,0:03:27.37,0:03:28.45,Serif,,0,0,0,,{\an1\pos(250,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}who {\fs63\i1\b0\1c&H00D8F0F4}suffered
+Dialogue: 1,0:03:27.37,0:03:28.45,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs128\i0\b1\1c&H00D8F0F4}king
+Dialogue: 1,0:03:27.37,0:03:28.45,Serif,,0,0,0,,{\an1\pos(126,811)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}by {\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:03:28.55,0:03:29.15,Serif,,0,0,0,,{\an1\pos(263,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}of {\fs51\i0\b0\1c&H00D8F0F4}it.
+Dialogue: 1,0:03:28.55,0:03:29.15,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}none
+Dialogue: 1,0:03:30.03,0:03:31.17,Serif,,0,0,0,,{\an1\pos(221,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}disputed {\fs63\i1\b0\1c&H00D8F0F4}word {\fs51\i0\b0\1c&H00D8F0F4}does {\fs51\i0\b0\1c&H00D8F0F4}not
+Dialogue: 1,0:03:30.03,0:03:31.17,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs130\i0\b1\1c&H00D8F0F4}One
+Dialogue: 1,0:03:31.21,0:03:31.81,Serif,,0,0,0,,{\an1\pos(291,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}that.
+Dialogue: 1,0:03:31.21,0:03:31.81,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}carry
+Dialogue: 1,0:03:32.17,0:03:33.06,Serif,,0,0,0,,{\an1\pos(477,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}does.
+Dialogue: 1,0:03:32.17,0:03:33.06,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs131\i0\b1\1c&H00D8F0F4}convergence
+Dialogue: 1,0:03:32.17,0:03:33.06,Serif,,0,0,0,,{\an1\pos(126,809)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}The
+Dialogue: 1,0:03:33.91,0:03:34.82,Serif,,0,0,0,,{\an1\pos(238,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}itself:
+Dialogue: 1,0:03:33.91,0:03:34.82,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs115\i0\b1\1c&H00D8F0F4}word
+Dialogue: 1,0:03:33.91,0:03:34.82,Serif,,0,0,0,,{\an1\pos(126,820)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}And {\fs51\i0\b0\1c&H00D8F0F4}on {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:03:35.35,0:03:37.07,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs138\i0\b1\1c&H00D8F0F4}translated
+Dialogue: 1,0:03:35.35,0:03:37.07,Serif,,0,0,0,,{\an1\pos(126,804)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}the {\fs51\i0\b0\1c&H00D8F0F4}Greek {\fs63\i1\b0\1c&H00D8F0F4}Old {\fs51\i0\b0\1c&H00D8F0F4}Testament
+Dialogue: 1,0:03:37.12,0:03:38.38,Serif,,0,0,0,,{\an1\pos(286,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}scholars {\fs51\i0\b0\1c&H00D8F0F4}almost {\fs51\i0\b0\1c&H00D8F0F4}two
+Dialogue: 1,0:03:37.12,0:03:38.38,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs110\i0\b1\1c&H00D8F0F4}Jewish
+Dialogue: 1,0:03:37.12,0:03:38.38,Serif,,0,0,0,,{\an1\pos(126,824)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}by
+Dialogue: 1,0:03:38.47,0:03:39.94,Serif,,0,0,0,,{\an1\pos(415,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}before {\fs51\i0\b0\1c&H00D8F0F4}Jesus {\fs51\i0\b0\1c&H00D8F0F4}was {\fs63\i1\b0\1c&H00D8F0F4}born
+Dialogue: 1,0:03:38.47,0:03:39.94,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs132\i0\b1\1c&H00D8F0F4}centuries
+Dialogue: 1,0:03:40.50,0:03:41.64,Serif,,0,0,0,,{\an1\pos(344,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}read {\fs51\i0\b0\1c&H00D8F0F4}it {\fs51\i0\b0\1c&H00D8F0F4}they {\fs63\i1\b0\1c&H00D8F0F4}dug,
+Dialogue: 1,0:03:40.50,0:03:41.64,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs128\i0\b1\1c&H00D8F0F4}already
+Dialogue: 1,0:03:41.97,0:03:42.57,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs104\i0\b1\1c&H00D8F0F4}pierced.
+Dialogue: 1,0:03:41.97,0:03:42.57,Serif,,0,0,0,,{\an1\pos(126,828)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}or
+Dialogue: 1,0:03:43.21,0:03:44.06,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs131\i0\b1\1c&H00D8F0F4}Christian
+Dialogue: 1,0:03:43.21,0:03:44.06,Serif,,0,0,0,,{\an1\pos(126,809)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}This {\fs51\i0\b0\1c&H00D8F0F4}is {\fs63\i1\b0\1c&H00D8F0F4}not {\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:03:44.16,0:03:45.20,Serif,,0,0,0,,{\an1\pos(391,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}in {\fs51\i0\b0\1c&H00D8F0F4}after {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:03:44.16,0:03:45.20,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}smuggled
+Dialogue: 1,0:03:44.16,0:03:45.20,Serif,,0,0,0,,{\an1\pos(126,805)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}edit
+Dialogue: 1,0:03:45.20,0:03:45.80,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}fact.
+Dialogue: 1,0:03:46.11,0:03:46.91,Serif,,0,0,0,,{\an1\pos(366,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}was {\fs63\i1\b0\1c&H00D8F0F4}there,
+Dialogue: 1,0:03:46.11,0:03:46.91,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}reading
+Dialogue: 1,0:03:46.11,0:03:46.91,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}The
+Dialogue: 1,0:03:47.11,0:03:47.86,Serif,,0,0,0,,{\an1\pos(278,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}hands,
+Dialogue: 1,0:03:47.11,0:03:47.86,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs104\i0\b1\1c&H00D8F0F4}Jewish
+Dialogue: 1,0:03:47.11,0:03:47.86,Serif,,0,0,0,,{\an1\pos(126,828)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}in
+Dialogue: 1,0:03:48.22,0:03:49.21,Serif,,0,0,0,,{\an1\pos(426,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}before {\fs63\i1\b0\1c&H00D8F0F4}there {\fs51\i0\b0\1c&H00D8F0F4}was {\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:03:48.22,0:03:49.21,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs137\i0\b1\1c&H00D8F0F4}centuries
+Dialogue: 1,0:03:49.22,0:03:49.94,Serif,,0,0,0,,{\an1\pos(287,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}to {\fs63\i1\b0\1c&H00D8F0F4}defend.
+Dialogue: 1,0:03:49.22,0:03:49.94,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs133\i0\b1\1c&H00D8F0F4}cross
+Dialogue: 1,0:03:50.85,0:03:51.98,Serif,,0,0,0,,{\an1\pos(449,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}a {\fs51\i0\b0\1c&H00D8F0F4}death
+Dialogue: 1,0:03:50.85,0:03:51.98,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs133\i0\b1\1c&H00D8F0F4}describing
+Dialogue: 1,0:03:50.85,0:03:51.98,Serif,,0,0,0,,{\an1\pos(126,807)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}David {\fs51\i0\b0\1c&H00D8F0F4}is
+Dialogue: 1,0:03:52.14,0:03:52.93,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs108\i0\b1\1c&H00D8F0F4}own.
+Dialogue: 1,0:03:52.14,0:03:52.93,Serif,,0,0,0,,{\an1\pos(126,825)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}that {\fs51\i0\b0\1c&H00D8F0F4}is {\fs51\i0\b0\1c&H00D8F0F4}not {\fs63\i1\b0\1c&H00D8F0F4}his
+Dialogue: 1,0:03:53.57,0:03:54.38,Serif,,0,0,0,,{\an1\pos(332,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}us {\fs63\i1\b0\1c&H00D8F0F4}back {\fs51\i0\b0\1c&H00D8F0F4}to
+Dialogue: 1,0:03:53.57,0:03:54.38,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}brings
+Dialogue: 1,0:03:53.57,0:03:54.38,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}Which
+Dialogue: 1,0:03:54.40,0:03:55.00,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}cross,
+Dialogue: 1,0:03:54.40,0:03:55.00,Serif,,0,0,0,,{\an1\pos(126,805)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:03:55.34,0:03:56.32,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs123\i0\b1\1c&H00D8F0F4}screamed
+Dialogue: 1,0:03:55.34,0:03:56.32,Serif,,0,0,0,,{\an1\pos(126,814)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}and {\fs51\i0\b0\1c&H00D8F0F4}to {\fs63\i1\b0\1c&H00D8F0F4}why {\fs51\i0\b0\1c&H00D8F0F4}that
+Dialogue: 1,0:03:56.38,0:03:57.61,Serif,,0,0,0,,{\an1\pos(364,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}so {\fs51\i0\b0\1c&H00D8F0F4}much.
+Dialogue: 1,0:03:56.38,0:03:57.61,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs140\i0\b1\1c&H00D8F0F4}matters
+Dialogue: 1,0:03:56.38,0:03:57.61,Serif,,0,0,0,,{\an1\pos(126,803)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}cry
+Dialogue: 1,0:03:58.39,0:03:59.80,Serif,,0,0,0,,{\an1\pos(521,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}Jew {\fs51\i0\b0\1c&H00D8F0F4}quoted
+Dialogue: 1,0:03:58.39,0:03:59.80,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs125\i0\b1\1c&H00D8F0F4}first-century
+Dialogue: 1,0:03:58.39,0:03:59.80,Serif,,0,0,0,,{\an1\pos(126,813)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}When {\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:03:59.82,0:04:00.54,Serif,,0,0,0,,{\an1\pos(260,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}of {\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:03:59.82,0:04:00.54,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs138\i0\b1\1c&H00D8F0F4}line
+Dialogue: 1,0:03:59.82,0:04:00.54,Serif,,0,0,0,,{\an1\pos(126,804)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}the {\fs63\i1\b0\1c&H00D8F0F4}opening
+Dialogue: 1,0:04:00.54,0:04:01.14,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}psalm,
+Dialogue: 1,0:04:01.16,0:04:02.26,Serif,,0,0,0,,{\an1\pos(330,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}reaching {\fs51\i0\b0\1c&H00D8F0F4}for
+Dialogue: 1,0:04:01.16,0:04:02.26,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs140\i0\b1\1c&H00D8F0F4}rarely
+Dialogue: 1,0:04:01.16,0:04:02.26,Serif,,0,0,0,,{\an1\pos(126,803)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}he {\fs51\i0\b0\1c&H00D8F0F4}was
+Dialogue: 1,0:04:02.31,0:04:03.03,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs113\i0\b1\1c&H00D8F0F4}line.
+Dialogue: 1,0:04:02.31,0:04:03.03,Serif,,0,0,0,,{\an1\pos(126,821)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}just {\fs63\i1\b0\1c&H00D8F0F4}one
+Dialogue: 1,0:04:03.80,0:04:04.74,Serif,,0,0,0,,{\an1\pos(327,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}way {\fs51\i0\b0\1c&H00D8F0F4}to
+Dialogue: 1,0:04:03.80,0:04:04.74,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs118\i0\b1\1c&H00D8F0F4}natural
+Dialogue: 1,0:04:03.80,0:04:04.74,Serif,,0,0,0,,{\an1\pos(126,818)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}The {\fs51\i0\b0\1c&H00D8F0F4}most
+Dialogue: 1,0:04:04.78,0:04:05.52,Serif,,0,0,0,,{\an1\pos(263,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}it {\fs63\i1\b0\1c&H00D8F0F4}was {\fs51\i0\b0\1c&H00D8F0F4}as {\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:04:04.78,0:04:05.52,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}hear
+Dialogue: 1,0:04:05.54,0:04:06.66,Serif,,0,0,0,,{\an1\pos(334,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}to {\fs51\i0\b0\1c&H00D8F0F4}the {\fs51\i0\b0\1c&H00D8F0F4}whole {\fs63\i1\b0\1c&H00D8F0F4}song
+Dialogue: 1,0:04:05.54,0:04:06.66,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs122\i0\b1\1c&H00D8F0F4}pointer
+Dialogue: 1,0:04:07.27,0:04:08.37,Serif,,0,0,0,,{\an1\pos(363,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:04:07.27,0:04:08.37,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs139\i0\b1\1c&H00D8F0F4}pulling
+Dialogue: 1,0:04:07.27,0:04:08.37,Serif,,0,0,0,,{\an1\pos(126,803)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}the {\fs51\i0\b0\1c&H00D8F0F4}first {\fs63\i1\b0\1c&H00D8F0F4}verse
+Dialogue: 1,0:04:08.37,0:04:08.97,Serif,,0,0,0,,{\an1\pos(314,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}psalm {\fs51\i0\b0\1c&H00D8F0F4}into {\fs51\i0\b0\1c&H00D8F0F4}the {\fs63\i1\b0\1c&H00D8F0F4}room.
+Dialogue: 1,0:04:08.37,0:04:08.97,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs129\i0\b1\1c&H00D8F0F4}entire
+Dialogue: 1,0:04:10.58,0:04:13.09,Serif,,0,0,0,,{\an1\pos(255,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}Jesus {\fs51\i0\b0\1c&H00D8F0F4}cried {\fs51\i0\b0\1c&H00D8F0F4}"My
+Dialogue: 1,0:04:10.58,0:04:13.09,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs133\i0\b1\1c&H00D8F0F4}when
+Dialogue: 1,0:04:10.58,0:04:13.09,Serif,,0,0,0,,{\an1\pos(126,807)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}So
+Dialogue: 1,0:04:13.21,0:04:13.81,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}God,
+Dialogue: 1,0:04:14.11,0:04:14.83,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs104\i0\b1\1c&H00D8F0F4}God,
+Dialogue: 1,0:04:14.11,0:04:14.83,Serif,,0,0,0,,{\an1\pos(126,828)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}my
+Dialogue: 1,0:04:15.56,0:04:17.49,Serif,,0,0,0,,{\an1\pos(363,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}me?"
+Dialogue: 1,0:04:15.56,0:04:17.49,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs122\i0\b1\1c&H00D8F0F4}forsaken
+Dialogue: 1,0:04:15.56,0:04:17.49,Serif,,0,0,0,,{\an1\pos(126,815)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}why {\fs51\i0\b0\1c&H00D8F0F4}hast {\fs51\i0\b0\1c&H00D8F0F4}thou
+Dialogue: 1,0:04:18.03,0:04:19.10,Serif,,0,0,0,,{\an1\pos(324,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}voicing
+Dialogue: 1,0:04:18.03,0:04:19.10,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}merely
+Dialogue: 1,0:04:18.03,0:04:19.10,Serif,,0,0,0,,{\an1\pos(126,805)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}he {\fs51\i0\b0\1c&H00D8F0F4}was {\fs51\i0\b0\1c&H00D8F0F4}not
+Dialogue: 1,0:04:19.14,0:04:19.74,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}pain.
+Dialogue: 1,0:04:19.14,0:04:19.74,Serif,,0,0,0,,{\an1\pos(126,805)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}his
+Dialogue: 1,0:04:20.23,0:04:21.35,Serif,,0,0,0,,{\an1\pos(366,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}himself {\fs51\i0\b0\1c&H00D8F0F4}as
+Dialogue: 1,0:04:20.23,0:04:21.35,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}placing
+Dialogue: 1,0:04:20.23,0:04:21.35,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}He {\fs51\i0\b0\1c&H00D8F0F4}was
+Dialogue: 1,0:04:21.39,0:04:23.00,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs128\i0\b1\1c&H00D8F0F4}twenty-two.
+Dialogue: 1,0:04:21.39,0:04:23.00,Serif,,0,0,0,,{\an1\pos(126,811)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}the {\fs51\i0\b0\1c&H00D8F0F4}I {\fs51\i0\b0\1c&H00D8F0F4}of {\fs63\i1\b0\1c&H00D8F0F4}Psalm
+Dialogue: 1,0:04:23.79,0:04:24.39,Serif,,0,0,0,,{\an1\pos(270,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}line.
+Dialogue: 1,0:04:23.79,0:04:24.39,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs119\i0\b1\1c&H00D8F0F4}Every
+Dialogue: 1,0:04:25.03,0:04:26.04,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}wounded
+Dialogue: 1,0:04:25.03,0:04:26.04,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}He {\fs51\i0\b0\1c&H00D8F0F4}was {\fs63\i1\b0\1c&H00D8F0F4}claiming {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:04:26.07,0:04:26.88,Serif,,0,0,0,,{\an1\pos(297,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}as {\fs51\i0\b0\1c&H00D8F0F4}his {\fs63\i1\b0\1c&H00D8F0F4}own,
+Dialogue: 1,0:04:26.07,0:04:26.88,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}hands
+Dialogue: 1,0:04:27.22,0:04:28.54,Serif,,0,0,0,,{\an1\pos(332,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}as
+Dialogue: 1,0:04:27.22,0:04:28.54,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs121\i0\b1\1c&H00D8F0F4}clothes
+Dialogue: 1,0:04:27.22,0:04:28.54,Serif,,0,0,0,,{\an1\pos(126,816)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}and {\fs51\i0\b0\1c&H00D8F0F4}the {\fs63\i1\b0\1c&H00D8F0F4}gambled
+Dialogue: 1,0:04:28.58,0:04:29.18,Serif,,0,0,0,,{\an1\pos(212,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}own
+Dialogue: 1,0:04:28.58,0:04:29.18,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs119\i0\b1\1c&H00D8F0F4}his
+Dialogue: 1,0:04:29.58,0:04:30.63,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs138\i0\b1\1c&H00D8F0F4}below
+Dialogue: 1,0:04:29.58,0:04:30.63,Serif,,0,0,0,,{\an1\pos(126,804)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}even {\fs51\i0\b0\1c&H00D8F0F4}as {\fs51\i0\b0\1c&H00D8F0F4}the {\fs63\i1\b0\1c&H00D8F0F4}soldiers
+Dialogue: 1,0:04:30.67,0:04:31.42,Serif,,0,0,0,,{\an1\pos(342,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}them {\fs51\i0\b0\1c&H00D8F0F4}up,
+Dialogue: 1,0:04:30.67,0:04:31.42,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs127\i0\b1\1c&H00D8F0F4}divided
+Dialogue: 1,0:04:30.67,0:04:31.42,Serif,,0,0,0,,{\an1\pos(126,812)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}him
+Dialogue: 1,0:04:31.74,0:04:33.09,Serif,,0,0,0,,{\an1\pos(357,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}as {\fs51\i0\b0\1c&H00D8F0F4}verse {\fs51\i0\b0\1c&H00D8F0F4}eighteen {\fs63\i1\b0\1c&H00D8F0F4}said
+Dialogue: 1,0:04:31.74,0:04:33.09,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}exactly
+Dialogue: 1,0:04:33.09,0:04:33.69,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}would.
+Dialogue: 1,0:04:33.09,0:04:33.69,Serif,,0,0,0,,{\an1\pos(126,805)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}they
+Dialogue: 1,0:04:34.37,0:04:35.32,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}song
+Dialogue: 1,0:04:34.37,0:04:35.32,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}He {\fs51\i0\b0\1c&H00D8F0F4}took {\fs51\i0\b0\1c&H00D8F0F4}the {\fs63\i1\b0\1c&H00D8F0F4}whole
+Dialogue: 1,0:04:35.40,0:04:36.04,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs104\i0\b1\1c&H00D8F0F4}himself,
+Dialogue: 1,0:04:35.40,0:04:36.04,Serif,,0,0,0,,{\an1\pos(126,828)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}onto
+Dialogue: 1,0:04:36.45,0:04:37.05,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}loud,
+Dialogue: 1,0:04:36.45,0:04:37.05,Serif,,0,0,0,,{\an1\pos(126,805)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}out
+Dialogue: 1,0:04:37.15,0:04:37.93,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs108\i0\b1\1c&H00D8F0F4}witnesses.
+Dialogue: 1,0:04:37.15,0:04:37.93,Serif,,0,0,0,,{\an1\pos(126,825)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}in {\fs63\i1\b0\1c&H00D8F0F4}front {\fs51\i0\b0\1c&H00D8F0F4}of
+Dialogue: 1,0:04:38.68,0:04:39.37,Serif,,0,0,0,,{\an1\pos(366,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}us:
+Dialogue: 1,0:04:38.68,0:04:39.37,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}telling
+Dialogue: 1,0:04:38.68,0:04:39.37,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}He {\fs51\i0\b0\1c&H00D8F0F4}was
+Dialogue: 1,0:04:40.08,0:04:41.43,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs125\i0\b1\1c&H00D8F0F4}me.
+Dialogue: 1,0:04:40.08,0:04:41.43,Serif,,0,0,0,,{\an1\pos(126,813)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}this {\fs51\i0\b0\1c&H00D8F0F4}one {\fs51\i0\b0\1c&H00D8F0F4}is {\fs63\i1\b0\1c&H00D8F0F4}about
+Dialogue: 1,0:04:42.46,0:04:43.69,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs140\i0\b1\1c&H00D8F0F4}reading
+Dialogue: 1,0:04:42.46,0:04:43.69,Serif,,0,0,0,,{\an1\pos(126,803)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}But {\fs51\i0\b0\1c&H00D8F0F4}most {\fs63\i1\b0\1c&H00D8F0F4}people {\fs51\i0\b0\1c&H00D8F0F4}stop
+Dialogue: 1,0:04:43.73,0:04:45.07,Serif,,0,0,0,,{\an1\pos(464,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}at {\fs51\i0\b0\1c&H00D8F0F4}the {\fs51\i0\b0\1c&H00D8F0F4}cross.
+Dialogue: 1,0:04:43.73,0:04:45.07,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs139\i0\b1\1c&H00D8F0F4}twenty-two
+Dialogue: 1,0:04:43.73,0:04:45.07,Serif,,0,0,0,,{\an1\pos(126,803)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}Psalm
+Dialogue: 1,0:04:45.74,0:04:46.55,Serif,,0,0,0,,{\an1\pos(242,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}there,
+Dialogue: 1,0:04:45.74,0:04:46.55,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs120\i0\b1\1c&H00D8F0F4}stop
+Dialogue: 1,0:04:45.74,0:04:46.55,Serif,,0,0,0,,{\an1\pos(126,817)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}And {\fs51\i0\b0\1c&H00D8F0F4}if {\fs51\i0\b0\1c&H00D8F0F4}you
+Dialogue: 1,0:04:46.91,0:04:47.86,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs113\i0\b1\1c&H00D8F0F4}important
+Dialogue: 1,0:04:46.91,0:04:47.86,Serif,,0,0,0,,{\an1\pos(126,821)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}you {\fs63\i1\b0\1c&H00D8F0F4}miss {\fs51\i0\b0\1c&H00D8F0F4}the {\fs51\i0\b0\1c&H00D8F0F4}most
+Dialogue: 1,0:04:47.86,0:04:48.46,Serif,,0,0,0,,{\an1\pos(252,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}it.
+Dialogue: 1,0:04:47.86,0:04:48.46,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs104\i0\b1\1c&H00D8F0F4}about
+Dialogue: 1,0:04:47.86,0:04:48.46,Serif,,0,0,0,,{\an1\pos(126,828)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}thing
+Dialogue: 1,0:04:49.20,0:04:50.25,Serif,,0,0,0,,{\an1\pos(257,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}does {\fs51\i0\b0\1c&H00D8F0F4}not {\fs63\i1\b0\1c&H00D8F0F4}end
+Dialogue: 1,0:04:49.20,0:04:50.25,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs135\i0\b1\1c&H00D8F0F4}song
+Dialogue: 1,0:04:49.20,0:04:50.25,Serif,,0,0,0,,{\an1\pos(126,806)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}The
+Dialogue: 1,0:04:50.29,0:04:50.89,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs127\i0\b1\1c&H00D8F0F4}grave.
+Dialogue: 1,0:04:50.29,0:04:50.89,Serif,,0,0,0,,{\an1\pos(126,812)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}in {\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:04:51.46,0:04:52.11,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs119\i0\b1\1c&H00D8F0F4}through,
+Dialogue: 1,0:04:51.46,0:04:52.11,Serif,,0,0,0,,{\an1\pos(126,817)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}Halfway
+Dialogue: 1,0:04:52.13,0:04:52.91,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}turns
+Dialogue: 1,0:04:52.13,0:04:52.91,Serif,,0,0,0,,{\an1\pos(126,805)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}it
+Dialogue: 1,0:04:53.41,0:04:54.01,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}violently,
+Dialogue: 1,0:04:54.29,0:04:56.48,Serif,,0,0,0,,{\an1\pos(447,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}from {\fs63\i1\b0\1c&H00D8F0F4}death {\fs51\i0\b0\1c&H00D8F0F4}to {\fs51\i0\b0\1c&H00D8F0F4}life.
+Dialogue: 1,0:04:54.29,0:04:56.48,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs132\i0\b1\1c&H00D8F0F4}gloriously
+Dialogue: 1,0:04:57.43,0:04:58.43,Serif,,0,0,0,,{\an1\pos(284,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}that {\fs51\i0\b0\1c&H00D8F0F4}cried
+Dialogue: 1,0:04:57.43,0:04:58.43,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs130\i0\b1\1c&H00D8F0F4}voice
+Dialogue: 1,0:04:57.43,0:04:58.43,Serif,,0,0,0,,{\an1\pos(126,810)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}The {\fs63\i1\b0\1c&H00D8F0F4}same
+Dialogue: 1,0:04:58.45,0:05:00.31,Serif,,0,0,0,,{\an1\pos(371,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}stands {\fs51\i0\b0\1c&H00D8F0F4}up {\fs51\i0\b0\1c&H00D8F0F4}in
+Dialogue: 1,0:04:58.45,0:05:00.31,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}suddenly
+Dialogue: 1,0:04:58.45,0:05:00.31,Serif,,0,0,0,,{\an1\pos(126,812)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}"forsaken"
+Dialogue: 1,0:05:00.31,0:05:01.22,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}worshipping
+Dialogue: 1,0:05:00.31,0:05:01.22,Serif,,0,0,0,,{\an1\pos(126,812)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}the {\fs63\i1\b0\1c&H00D8F0F4}middle {\fs51\i0\b0\1c&H00D8F0F4}of {\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:05:01.28,0:05:01.88,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}crowd:
+Dialogue: 1,0:05:01.56,0:05:02.68,Serif,,0,0,0,,{\an1\pos(345,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}thy {\fs63\i1\b0\1c&H00D8F0F4}name
+Dialogue: 1,0:05:01.56,0:05:02.68,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs129\i0\b1\1c&H00D8F0F4}declare
+Dialogue: 1,0:05:01.56,0:05:02.68,Serif,,0,0,0,,{\an1\pos(126,810)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}"I {\fs51\i0\b0\1c&H00D8F0F4}will
+Dialogue: 1,0:05:02.72,0:05:03.32,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}brethren:
+Dialogue: 1,0:05:02.72,0:05:03.32,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}unto {\fs63\i1\b0\1c&H00D8F0F4}my
+Dialogue: 1,0:05:04.01,0:05:04.61,Serif,,0,0,0,,{\an1\pos(262,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}of {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:05:04.01,0:05:04.61,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs112\i0\b1\1c&H00D8F0F4}midst
+Dialogue: 1,0:05:04.01,0:05:04.61,Serif,,0,0,0,,{\an1\pos(126,822)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}in {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:05:04.62,0:05:06.47,Serif,,0,0,0,,{\an1\pos(532,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}will {\fs51\i0\b0\1c&H00D8F0F4}I {\fs63\i1\b0\1c&H00D8F0F4}praise {\fs51\i0\b0\1c&H00D8F0F4}thee."
+Dialogue: 1,0:05:04.62,0:05:06.47,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs139\i0\b1\1c&H00D8F0F4}congregation
+Dialogue: 1,0:05:06.47,0:05:07.71,Serif,,0,0,0,,{\an1\pos(239,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}man {\fs51\i0\b0\1c&H00D8F0F4}declares {\fs51\i0\b0\1c&H00D8F0F4}nothing.
+Dialogue: 1,0:05:06.47,0:05:07.71,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs116\i0\b1\1c&H00D8F0F4}dead
+Dialogue: 1,0:05:06.47,0:05:07.71,Serif,,0,0,0,,{\an1\pos(126,819)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}A
+Dialogue: 1,0:05:08.80,0:05:09.68,Serif,,0,0,0,,{\an1\pos(289,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}that {\fs51\i0\b0\1c&H00D8F0F4}cried
+Dialogue: 1,0:05:08.80,0:05:09.68,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs134\i0\b1\1c&H00D8F0F4}voice
+Dialogue: 1,0:05:08.80,0:05:09.68,Serif,,0,0,0,,{\an1\pos(126,807)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}Yet {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:05:09.70,0:05:11.30,Serif,,0,0,0,,{\an1\pos(279,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}in
+Dialogue: 1,0:05:09.70,0:05:11.30,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}alive
+Dialogue: 1,0:05:09.70,0:05:11.30,Serif,,0,0,0,,{\an1\pos(126,812)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}"forsaken" {\fs63\i1\b0\1c&H00D8F0F4}now {\fs51\i0\b0\1c&H00D8F0F4}stands
+Dialogue: 1,0:05:11.32,0:05:12.00,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}congregation,
+Dialogue: 1,0:05:11.32,0:05:12.00,Serif,,0,0,0,,{\an1\pos(126,805)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:05:12.48,0:05:13.08,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}praising.
+Dialogue: 1,0:05:14.16,0:05:14.93,Serif,,0,0,0,,{\an1\pos(263,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}that {\fs51\i0\b0\1c&H00D8F0F4}as
+Dialogue: 1,0:05:14.16,0:05:14.93,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}read
+Dialogue: 1,0:05:14.16,0:05:14.93,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}You {\fs63\i1\b0\1c&H00D8F0F4}could
+Dialogue: 1,0:05:14.99,0:05:15.93,Serif,,0,0,0,,{\an1\pos(310,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}from {\fs51\i0\b0\1c&H00D8F0F4}the {\fs51\i0\b0\1c&H00D8F0F4}edge
+Dialogue: 1,0:05:14.99,0:05:15.93,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}rescue
+Dialogue: 1,0:05:14.99,0:05:15.93,Serif,,0,0,0,,{\an1\pos(126,812)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}mere
+Dialogue: 1,0:05:15.98,0:05:17.47,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs135\i0\b1\1c&H00D8F0F4}Jesus
+Dialogue: 1,0:05:15.98,0:05:17.47,Serif,,0,0,0,,{\an1\pos(126,806)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}of {\fs63\i1\b0\1c&H00D8F0F4}death {\fs51\i0\b0\1c&H00D8F0F4}except {\fs51\i0\b0\1c&H00D8F0F4}that
+Dialogue: 1,0:05:17.51,0:05:18.62,Serif,,0,0,0,,{\an1\pos(263,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}onto
+Dialogue: 1,0:05:17.51,0:05:18.62,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}song
+Dialogue: 1,0:05:17.51,0:05:18.62,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}took {\fs51\i0\b0\1c&H00D8F0F4}this {\fs63\i1\b0\1c&H00D8F0F4}whole
+Dialogue: 1,0:05:18.66,0:05:19.26,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}himself,
+Dialogue: 1,0:05:19.43,0:05:20.33,Serif,,0,0,0,,{\an1\pos(395,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}puts
+Dialogue: 1,0:05:19.43,0:05:20.33,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs123\i0\b1\1c&H00D8F0F4}Testament
+Dialogue: 1,0:05:19.43,0:05:20.33,Serif,,0,0,0,,{\an1\pos(126,814)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}and {\fs51\i0\b0\1c&H00D8F0F4}the {\fs63\i1\b0\1c&H00D8F0F4}New
+Dialogue: 1,0:05:20.37,0:05:21.16,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs127\i0\b1\1c&H00D8F0F4}line,
+Dialogue: 1,0:05:20.37,0:05:21.16,Serif,,0,0,0,,{\an1\pos(126,812)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}this {\fs63\i1\b0\1c&H00D8F0F4}very
+Dialogue: 1,0:05:21.18,0:05:22.35,Serif,,0,0,0,,{\an1\pos(327,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}thy {\fs63\i1\b0\1c&H00D8F0F4}name
+Dialogue: 1,0:05:21.18,0:05:22.35,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs118\i0\b1\1c&H00D8F0F4}declare
+Dialogue: 1,0:05:21.18,0:05:22.35,Serif,,0,0,0,,{\an1\pos(126,818)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}"I {\fs51\i0\b0\1c&H00D8F0F4}will
+Dialogue: 1,0:05:22.45,0:05:23.66,Serif,,0,0,0,,{\an1\pos(242,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}my {\fs63\i1\b0\1c&H00D8F0F4}brethren," {\fs51\i0\b0\1c&H00D8F0F4}in {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:05:22.45,0:05:23.66,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs120\i0\b1\1c&H00D8F0F4}unto
+Dialogue: 1,0:05:23.70,0:05:24.30,Serif,,0,0,0,,{\an1\pos(297,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}of {\fs51\i0\b0\1c&H00D8F0F4}the {\fs51\i0\b0\1c&H00D8F0F4}risen {\fs63\i1\b0\1c&H00D8F0F4}Christ.
+Dialogue: 1,0:05:23.70,0:05:24.30,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}mouth
+Dialogue: 1,0:05:25.79,0:05:26.94,Serif,,0,0,0,,{\an1\pos(383,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}man {\fs51\i0\b0\1c&H00D8F0F4}of {\fs51\i0\b0\1c&H00D8F0F4}verse
+Dialogue: 1,0:05:25.79,0:05:26.94,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs132\i0\b1\1c&H00D8F0F4}forsaken
+Dialogue: 1,0:05:25.79,0:05:26.94,Serif,,0,0,0,,{\an1\pos(126,808)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}The
+Dialogue: 1,0:05:27.12,0:05:28.35,Serif,,0,0,0,,{\an1\pos(316,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}worshipper
+Dialogue: 1,0:05:27.12,0:05:28.35,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs130\i0\b1\1c&H00D8F0F4}living
+Dialogue: 1,0:05:27.12,0:05:28.35,Serif,,0,0,0,,{\an1\pos(126,810)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}one {\fs51\i0\b0\1c&H00D8F0F4}and {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:05:28.61,0:05:29.50,Serif,,0,0,0,,{\an1\pos(252,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}person,
+Dialogue: 1,0:05:28.61,0:05:29.50,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs130\i0\b1\1c&H00D8F0F4}same
+Dialogue: 1,0:05:28.61,0:05:29.50,Serif,,0,0,0,,{\an1\pos(126,810)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}are {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:05:29.80,0:05:30.57,Serif,,0,0,0,,{\an1\pos(222,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}side {\fs51\i0\b0\1c&H00D8F0F4}of
+Dialogue: 1,0:05:29.80,0:05:30.57,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs132\i0\b1\1c&H00D8F0F4}far
+Dialogue: 1,0:05:29.80,0:05:30.57,Serif,,0,0,0,,{\an1\pos(126,808)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}on {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:05:30.61,0:05:32.08,Serif,,0,0,0,,{\an1\pos(229,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}did {\fs51\i0\b0\1c&H00D8F0F4}not
+Dialogue: 1,0:05:30.61,0:05:32.08,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}God
+Dialogue: 1,0:05:30.61,0:05:32.08,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}death {\fs63\i1\b0\1c&H00D8F0F4}because
+Dialogue: 1,0:05:32.12,0:05:32.79,Serif,,0,0,0,,{\an1\pos(291,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}him {\fs51\i0\b0\1c&H00D8F0F4}in {\fs51\i0\b0\1c&H00D8F0F4}the {\fs63\i1\b0\1c&H00D8F0F4}dust:
+Dialogue: 1,0:05:32.12,0:05:32.79,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}leave
+Dialogue: 1,0:05:32.79,0:05:33.86,Serif,,0,0,0,,{\an1\pos(411,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}hath {\fs51\i0\b0\1c&H00D8F0F4}he {\fs63\i1\b0\1c&H00D8F0F4}hid {\fs51\i0\b0\1c&H00D8F0F4}his
+Dialogue: 1,0:05:32.79,0:05:33.86,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs130\i0\b1\1c&H00D8F0F4}"…neither
+Dialogue: 1,0:05:33.93,0:05:34.53,Serif,,0,0,0,,{\an1\pos(263,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}from {\fs51\i0\b0\1c&H00D8F0F4}him;
+Dialogue: 1,0:05:33.93,0:05:34.53,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}face
+Dialogue: 1,0:05:34.90,0:05:35.76,Serif,,0,0,0,,{\an1\pos(280,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}unto
+Dialogue: 1,0:05:34.90,0:05:35.76,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs127\i0\b1\1c&H00D8F0F4}cried
+Dialogue: 1,0:05:34.90,0:05:35.76,Serif,,0,0,0,,{\an1\pos(126,812)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}but {\fs51\i0\b0\1c&H00D8F0F4}when {\fs51\i0\b0\1c&H00D8F0F4}he
+Dialogue: 1,0:05:35.80,0:05:36.40,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}him,
+Dialogue: 1,0:05:36.51,0:05:37.36,Serif,,0,0,0,,{\an1\pos(239,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:05:36.51,0:05:37.36,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs116\i0\b1\1c&H00D8F0F4}then
+Dialogue: 1,0:05:36.51,0:05:37.36,Serif,,0,0,0,,{\an1\pos(126,819)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}he {\fs63\i1\b0\1c&H00D8F0F4}heard." {\fs51\i0\b0\1c&H00D8F0F4}And
+Dialogue: 1,0:05:37.42,0:05:38.83,Serif,,0,0,0,,{\an1\pos(260,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}throws {\fs51\i0\b0\1c&H00D8F0F4}its {\fs51\i0\b0\1c&H00D8F0F4}arms {\fs51\i0\b0\1c&H00D8F0F4}open
+Dialogue: 1,0:05:37.42,0:05:38.83,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs138\i0\b1\1c&H00D8F0F4}song
+Dialogue: 1,0:05:38.93,0:05:39.86,Serif,,0,0,0,,{\an1\pos(316,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}world:
+Dialogue: 1,0:05:38.93,0:05:39.86,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs130\i0\b1\1c&H00D8F0F4}entire
+Dialogue: 1,0:05:38.93,0:05:39.86,Serif,,0,0,0,,{\an1\pos(126,810)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}to {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:05:39.86,0:05:40.77,Serif,,0,0,0,,{\an1\pos(244,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}the {\fs63\i1\b0\1c&H00D8F0F4}ends {\fs51\i0\b0\1c&H00D8F0F4}of {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:05:39.86,0:05:40.77,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs122\i0\b1\1c&H00D8F0F4}"All
+Dialogue: 1,0:05:40.81,0:05:42.16,Serif,,0,0,0,,{\an1\pos(289,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}shall {\fs63\i1\b0\1c&H00D8F0F4}remember {\fs51\i0\b0\1c&H00D8F0F4}and {\fs51\i0\b0\1c&H00D8F0F4}turn
+Dialogue: 1,0:05:40.81,0:05:42.16,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs134\i0\b1\1c&H00D8F0F4}world
+Dialogue: 1,0:05:42.16,0:05:42.94,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs104\i0\b1\1c&H00D8F0F4}LORD:
+Dialogue: 1,0:05:42.16,0:05:42.94,Serif,,0,0,0,,{\an1\pos(126,828)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}unto {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:05:43.38,0:05:44.25,Serif,,0,0,0,,{\an1\pos(367,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}of
+Dialogue: 1,0:05:43.38,0:05:44.25,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs124\i0\b1\1c&H00D8F0F4}kindreds
+Dialogue: 1,0:05:43.38,0:05:44.25,Serif,,0,0,0,,{\an1\pos(126,814)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}and {\fs63\i1\b0\1c&H00D8F0F4}all {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:05:44.29,0:05:45.90,Serif,,0,0,0,,{\an1\pos(347,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}shall {\fs51\i0\b0\1c&H00D8F0F4}worship {\fs51\i0\b0\1c&H00D8F0F4}before
+Dialogue: 1,0:05:44.29,0:05:45.90,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs130\i0\b1\1c&H00D8F0F4}nations
+Dialogue: 1,0:05:44.29,0:05:45.90,Serif,,0,0,0,,{\an1\pos(126,810)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:05:45.90,0:05:47.21,Serif,,0,0,0,,{\an1\pos(297,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}that {\fs63\i1\b0\1c&H00D8F0F4}opens
+Dialogue: 1,0:05:45.90,0:05:47.21,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}psalm
+Dialogue: 1,0:05:45.90,0:05:47.21,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}thee." {\fs51\i0\b0\1c&H00D8F0F4}The
+Dialogue: 1,0:05:47.25,0:05:48.84,Serif,,0,0,0,,{\an1\pos(218,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}forsaken {\fs63\i1\b0\1c&H00D8F0F4}man {\fs51\i0\b0\1c&H00D8F0F4}closes
+Dialogue: 1,0:05:47.25,0:05:48.84,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs127\i0\b1\1c&H00D8F0F4}one
+Dialogue: 1,0:05:47.25,0:05:48.84,Serif,,0,0,0,,{\an1\pos(126,812)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}with
+Dialogue: 1,0:05:48.88,0:05:50.28,Serif,,0,0,0,,{\an1\pos(386,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}home.
+Dialogue: 1,0:05:48.88,0:05:50.28,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs119\i0\b1\1c&H00D8F0F4}streaming
+Dialogue: 1,0:05:48.88,0:05:50.28,Serif,,0,0,0,,{\an1\pos(126,817)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}with {\fs51\i0\b0\1c&H00D8F0F4}the {\fs63\i1\b0\1c&H00D8F0F4}nations
+Dialogue: 1,0:05:51.25,0:05:52.09,Serif,,0,0,0,,{\an1\pos(292,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:05:51.25,0:05:52.09,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs137\i0\b1\1c&H00D8F0F4}never
+Dialogue: 1,0:05:51.25,0:05:52.09,Serif,,0,0,0,,{\an1\pos(126,805)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}The {\fs63\i1\b0\1c&H00D8F0F4}cross {\fs51\i0\b0\1c&H00D8F0F4}was
+Dialogue: 1,0:05:52.17,0:05:52.84,Serif,,0,0,0,,{\an1\pos(226,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}of {\fs51\i0\b0\1c&H00D8F0F4}the {\fs63\i1\b0\1c&H00D8F0F4}song.
+Dialogue: 1,0:05:52.17,0:05:52.84,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs137\i0\b1\1c&H00D8F0F4}end
+Dialogue: 1,0:05:53.13,0:05:53.73,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}hinge.
+Dialogue: 1,0:05:53.13,0:05:53.73,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}It {\fs51\i0\b0\1c&H00D8F0F4}was {\fs63\i1\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:05:54.65,0:05:55.47,Serif,,0,0,0,,{\an1\pos(255,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}last
+Dialogue: 1,0:05:54.65,0:05:55.47,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs133\i0\b1\1c&H00D8F0F4}very
+Dialogue: 1,0:05:54.65,0:05:55.47,Serif,,0,0,0,,{\an1\pos(126,807)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}Look {\fs51\i0\b0\1c&H00D8F0F4}at {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:05:55.57,0:05:56.40,Serif,,0,0,0,,{\an1\pos(259,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}David {\fs63\i1\b0\1c&H00D8F0F4}writes.
+Dialogue: 1,0:05:55.57,0:05:56.40,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs137\i0\b1\1c&H00D8F0F4}line
+Dialogue: 1,0:05:57.06,0:05:57.73,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs127\i0\b1\1c&H00D8F0F4}wounds,
+Dialogue: 1,0:05:57.06,0:05:57.73,Serif,,0,0,0,,{\an1\pos(126,812)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}After {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:05:58.05,0:05:58.73,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}turn,
+Dialogue: 1,0:05:58.05,0:05:58.73,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}after {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:05:59.38,0:06:00.34,Serif,,0,0,0,,{\an1\pos(246,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}closes {\fs51\i0\b0\1c&H00D8F0F4}on {\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:05:59.38,0:06:00.34,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs124\i0\b1\1c&H00D8F0F4}song
+Dialogue: 1,0:05:59.38,0:06:00.34,Serif,,0,0,0,,{\an1\pos(126,814)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:06:00.37,0:06:01.60,Serif,,0,0,0,,{\an1\pos(404,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}accomplished
+Dialogue: 1,0:06:00.37,0:06:01.60,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs127\i0\b1\1c&H00D8F0F4}something
+Dialogue: 1,0:06:00.37,0:06:01.60,Serif,,0,0,0,,{\an1\pos(126,812)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}note {\fs51\i0\b0\1c&H00D8F0F4}of
+Dialogue: 1,0:06:02.10,0:06:03.02,Serif,,0,0,0,,{\an1\pos(244,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}finished:
+Dialogue: 1,0:06:02.10,0:06:03.02,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs122\i0\b1\1c&H00D8F0F4}work
+Dialogue: 1,0:06:02.10,0:06:03.02,Serif,,0,0,0,,{\an1\pos(126,815)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:06:03.02,0:06:04.33,Serif,,0,0,0,,{\an1\pos(255,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}this." {\fs51\i0\b0\1c&H00D8F0F4}A
+Dialogue: 1,0:06:03.02,0:06:04.33,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs133\i0\b1\1c&H00D8F0F4}done
+Dialogue: 1,0:06:03.02,0:06:04.33,Serif,,0,0,0,,{\an1\pos(126,807)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}"…he {\fs51\i0\b0\1c&H00D8F0F4}hath
+Dialogue: 1,0:06:04.34,0:06:05.10,Serif,,0,0,0,,{\an1\pos(400,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}years {\fs63\i1\b0\1c&H00D8F0F4}later,
+Dialogue: 1,0:06:04.34,0:06:05.10,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}thousand
+Dialogue: 1,0:06:05.34,0:06:05.94,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs120\i0\b1\1c&H00D8F0F4}cross,
+Dialogue: 1,0:06:05.34,0:06:05.94,Serif,,0,0,0,,{\an1\pos(126,817)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}on {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:06:06.16,0:06:07.36,Serif,,0,0,0,,{\an1\pos(297,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}Jesus {\fs51\i0\b0\1c&H00D8F0F4}reaches {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:06:06.16,0:06:07.36,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}dying
+Dialogue: 1,0:06:06.16,0:06:07.36,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:06:07.38,0:06:07.98,Serif,,0,0,0,,{\an1\pos(258,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}note.
+Dialogue: 1,0:06:07.38,0:06:07.98,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}same
+Dialogue: 1,0:06:08.70,0:06:09.62,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs129\i0\b1\1c&H00D8F0F4}vinegar,
+Dialogue: 1,0:06:08.70,0:06:09.62,Serif,,0,0,0,,{\an1\pos(126,810)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}He {\fs63\i1\b0\1c&H00D8F0F4}receives {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:06:09.79,0:06:10.39,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs104\i0\b1\1c&H00D8F0F4}says:
+Dialogue: 1,0:06:09.79,0:06:10.39,Serif,,0,0,0,,{\an1\pos(126,828)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}and
+Dialogue: 1,0:06:10.96,0:06:12.09,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs111\i0\b1\1c&H00D8F0F4}finished."
+Dialogue: 1,0:06:10.96,0:06:12.09,Serif,,0,0,0,,{\an1\pos(126,823)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}"It {\fs63\i1\b0\1c&H00D8F0F4}is
+Dialogue: 1,0:06:12.57,0:06:13.17,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}Done.
+Dialogue: 1,0:06:13.36,0:06:14.19,Serif,,0,0,0,,{\an1\pos(254,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}this.
+Dialogue: 1,0:06:13.36,0:06:14.19,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs132\i0\b1\1c&H00D8F0F4}done
+Dialogue: 1,0:06:13.36,0:06:14.19,Serif,,0,0,0,,{\an1\pos(126,808)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}He {\fs63\i1\b0\1c&H00D8F0F4}hath
+Dialogue: 1,0:06:15.16,0:06:15.95,Serif,,0,0,0,,{\an1\pos(221,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}ends
+Dialogue: 1,0:06:15.16,0:06:15.95,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs130\i0\b1\1c&H00D8F0F4}two
+Dialogue: 1,0:06:15.16,0:06:15.95,Serif,,0,0,0,,{\an1\pos(126,810)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}So {\fs51\i0\b0\1c&H00D8F0F4}hold {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:06:15.97,0:06:16.77,Serif,,0,0,0,,{\an1\pos(256,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}together.
+Dialogue: 1,0:06:15.97,0:06:16.77,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs134\i0\b1\1c&H00D8F0F4}song
+Dialogue: 1,0:06:15.97,0:06:16.77,Serif,,0,0,0,,{\an1\pos(126,807)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}of {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:06:16.77,0:06:17.38,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}The
+Dialogue: 1,0:06:17.36,0:06:18.69,Serif,,0,0,0,,{\an1\pos(252,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}on {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:06:17.36,0:06:18.69,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs130\i0\b1\1c&H00D8F0F4}real
+Dialogue: 1,0:06:17.36,0:06:18.69,Serif,,0,0,0,,{\an1\pos(126,810)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}cry {\fs51\i0\b0\1c&H00D8F0F4}was
+Dialogue: 1,0:06:18.73,0:06:19.98,Serif,,0,0,0,,{\an1\pos(259,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:06:18.73,0:06:19.98,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs137\i0\b1\1c&H00D8F0F4}bore
+Dialogue: 1,0:06:18.73,0:06:19.98,Serif,,0,0,0,,{\an1\pos(126,805)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}cross {\fs51\i0\b0\1c&H00D8F0F4}he {\fs63\i1\b0\1c&H00D8F0F4}truly
+Dialogue: 1,0:06:20.02,0:06:21.13,Serif,,0,0,0,,{\an1\pos(378,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}that {\fs63\i1\b0\1c&H00D8F0F4}our {\fs51\i0\b0\1c&H00D8F0F4}sin {\fs51\i0\b0\1c&H00D8F0F4}had
+Dialogue: 1,0:06:20.02,0:06:21.13,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs115\i0\b1\1c&H00D8F0F4}forsaking
+Dialogue: 1,0:06:21.21,0:06:21.81,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}earned,
+Dialogue: 1,0:06:21.82,0:06:22.52,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs108\i0\b1\1c&H00D8F0F4}place.
+Dialogue: 1,0:06:21.82,0:06:22.52,Serif,,0,0,0,,{\an1\pos(126,825)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}in {\fs63\i1\b0\1c&H00D8F0F4}our
+Dialogue: 1,0:06:23.21,0:06:24.13,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs122\i0\b1\1c&H00D8F0F4}psalm
+Dialogue: 1,0:06:23.21,0:06:24.13,Serif,,0,0,0,,{\an1\pos(126,815)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}And {\fs51\i0\b0\1c&H00D8F0F4}yet {\fs51\i0\b0\1c&H00D8F0F4}the {\fs63\i1\b0\1c&H00D8F0F4}same
+Dialogue: 1,0:06:24.18,0:06:25.04,Serif,,0,0,0,,{\an1\pos(273,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}you {\fs63\i1\b0\1c&H00D8F0F4}how {\fs51\i0\b0\1c&H00D8F0F4}it {\fs51\i0\b0\1c&H00D8F0F4}ends:
+Dialogue: 1,0:06:24.18,0:06:25.04,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs121\i0\b1\1c&H00D8F0F4}tells
+Dialogue: 1,0:06:25.67,0:06:26.51,Serif,,0,0,0,,{\an1\pos(228,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}did {\fs51\i0\b0\1c&H00D8F0F4}not {\fs63\i1\b0\1c&H00D8F0F4}hide {\fs51\i0\b0\1c&H00D8F0F4}his
+Dialogue: 1,0:06:25.67,0:06:26.51,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs140\i0\b1\1c&H00D8F0F4}God
+Dialogue: 1,0:06:26.57,0:06:27.17,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}face,
+Dialogue: 1,0:06:27.16,0:06:27.76,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}heard,
+Dialogue: 1,0:06:27.16,0:06:27.76,Serif,,0,0,0,,{\an1\pos(126,805)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}he
+Dialogue: 1,0:06:28.04,0:06:28.64,Serif,,0,0,0,,{\an1\pos(316,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}him {\fs63\i1\b0\1c&H00D8F0F4}up.
+Dialogue: 1,0:06:28.04,0:06:28.64,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs130\i0\b1\1c&H00D8F0F4}raised
+Dialogue: 1,0:06:28.04,0:06:28.64,Serif,,0,0,0,,{\an1\pos(126,810)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}he
+Dialogue: 1,0:06:29.31,0:06:30.66,Serif,,0,0,0,,{\an1\pos(371,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}fell {\fs51\i0\b0\1c&H00D8F0F4}on {\fs51\i0\b0\1c&H00D8F0F4}him
+Dialogue: 1,0:06:29.31,0:06:30.66,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs112\i0\b1\1c&H00D8F0F4}forsaking
+Dialogue: 1,0:06:29.31,0:06:30.66,Serif,,0,0,0,,{\an1\pos(126,822)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}The
+Dialogue: 1,0:06:30.76,0:06:31.49,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs138\i0\b1\1c&H00D8F0F4}never
+Dialogue: 1,0:06:30.76,0:06:31.49,Serif,,0,0,0,,{\an1\pos(126,804)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}so {\fs51\i0\b0\1c&H00D8F0F4}that {\fs51\i0\b0\1c&H00D8F0F4}it {\fs63\i1\b0\1c&H00D8F0F4}would
+Dialogue: 1,0:06:31.70,0:06:32.30,Serif,,0,0,0,,{\an1\pos(246,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}on {\fs63\i1\b0\1c&H00D8F0F4}you.
+Dialogue: 1,0:06:31.70,0:06:32.30,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs124\i0\b1\1c&H00D8F0F4}fall
+Dialogue: 1,0:06:32.95,0:06:33.92,Serif,,0,0,0,,{\an1\pos(359,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}hands {\fs51\i0\b0\1c&H00D8F0F4}were
+Dialogue: 1,0:06:32.95,0:06:33.92,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs137\i0\b1\1c&H00D8F0F4}wounded
+Dialogue: 1,0:06:32.95,0:06:33.92,Serif,,0,0,0,,{\an1\pos(126,805)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}And {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:06:33.96,0:06:35.05,Serif,,0,0,0,,{\an1\pos(263,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}enough {\fs51\i0\b0\1c&H00D8F0F4}to {\fs51\i0\b0\1c&H00D8F0F4}reach
+Dialogue: 1,0:06:33.96,0:06:35.05,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}wide
+Dialogue: 1,0:06:33.96,0:06:35.05,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}spread
+Dialogue: 1,0:06:35.10,0:06:35.94,Serif,,0,0,0,,{\an1\pos(255,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}of {\fs51\i0\b0\1c&H00D8F0F4}the {\fs63\i1\b0\1c&H00D8F0F4}earth
+Dialogue: 1,0:06:35.10,0:06:35.94,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs133\i0\b1\1c&H00D8F0F4}ends
+Dialogue: 1,0:06:35.10,0:06:35.94,Serif,,0,0,0,,{\an1\pos(126,807)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:06:36.40,0:06:37.00,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs104\i0\b1\1c&H00D8F0F4}kindred,
+Dialogue: 1,0:06:36.40,0:06:37.00,Serif,,0,0,0,,{\an1\pos(126,828)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}every
+Dialogue: 1,0:06:37.23,0:06:37.83,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs104\i0\b1\1c&H00D8F0F4}nation,
+Dialogue: 1,0:06:37.23,0:06:37.83,Serif,,0,0,0,,{\an1\pos(126,828)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}every
+Dialogue: 1,0:06:38.09,0:06:38.69,Serif,,0,0,0,,{\an1\pos(400,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}far {\fs63\i1\b0\1c&H00D8F0F4}off.
+Dialogue: 1,0:06:38.09,0:06:38.69,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}everyone
+Dialogue: 1,0:06:39.70,0:06:40.71,Serif,,0,0,0,,{\an1\pos(338,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}you.
+Dialogue: 1,0:06:39.70,0:06:40.71,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs109\i0\b1\1c&H00D8F0F4}includes
+Dialogue: 1,0:06:39.70,0:06:40.71,Serif,,0,0,0,,{\an1\pos(126,824)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}That
+Dialogue: 1,0:06:41.36,0:06:42.00,Serif,,0,0,0,,{\an1\pos(188,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}not {\fs63\i1\b0\1c&H00D8F0F4}have {\fs51\i0\b0\1c&H00D8F0F4}to
+Dialogue: 1,0:06:41.36,0:06:42.00,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs129\i0\b1\1c&H00D8F0F4}do
+Dialogue: 1,0:06:41.36,0:06:42.00,Serif,,0,0,0,,{\an1\pos(126,810)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}You
+Dialogue: 1,0:06:42.05,0:06:43.56,Serif,,0,0,0,,{\an1\pos(326,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}before
+Dialogue: 1,0:06:42.05,0:06:43.56,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs137\i0\b1\1c&H00D8F0F4}saving
+Dialogue: 1,0:06:42.05,0:06:43.56,Serif,,0,0,0,,{\an1\pos(126,805)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}make {\fs63\i1\b0\1c&H00D8F0F4}yourself {\fs51\i0\b0\1c&H00D8F0F4}worth
+Dialogue: 1,0:06:43.56,0:06:44.16,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs136\i0\b1\1c&H00D8F0F4}come.
+Dialogue: 1,0:06:43.56,0:06:44.16,Serif,,0,0,0,,{\an1\pos(126,805)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}you
+Dialogue: 1,0:06:44.58,0:06:45.41,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs123\i0\b1\1c&H00D8F0F4}point
+Dialogue: 1,0:06:44.58,0:06:45.41,Serif,,0,0,0,,{\an1\pos(126,814)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}That {\fs51\i0\b0\1c&H00D8F0F4}is {\fs51\i0\b0\1c&H00D8F0F4}the {\fs63\i1\b0\1c&H00D8F0F4}whole
+Dialogue: 1,0:06:45.45,0:06:46.24,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs130\i0\b1\1c&H00D8F0F4}twenty-two:
+Dialogue: 1,0:06:45.45,0:06:46.24,Serif,,0,0,0,,{\an1\pos(126,810)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}of {\fs63\i1\b0\1c&H00D8F0F4}Psalm
+Dialogue: 1,0:06:46.98,0:06:47.85,Serif,,0,0,0,,{\an1\pos(263,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}not {\fs51\i0\b0\1c&H00D8F0F4}with {\fs63\i1\b0\1c&H00D8F0F4}what
+Dialogue: 1,0:06:46.98,0:06:47.85,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}ends
+Dialogue: 1,0:06:46.98,0:06:47.85,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}it
+Dialogue: 1,0:06:47.87,0:06:48.48,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs128\i0\b1\1c&H00D8F0F4}do,
+Dialogue: 1,0:06:47.87,0:06:48.48,Serif,,0,0,0,,{\an1\pos(126,811)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}you {\fs63\i1\b0\1c&H00D8F0F4}must
+Dialogue: 1,0:06:48.80,0:06:49.59,Serif,,0,0,0,,{\an1\pos(242,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}he {\fs63\i1\b0\1c&H00D8F0F4}hath
+Dialogue: 1,0:06:48.80,0:06:49.59,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs120\i0\b1\1c&H00D8F0F4}what
+Dialogue: 1,0:06:48.80,0:06:49.59,Serif,,0,0,0,,{\an1\pos(126,817)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}but {\fs51\i0\b0\1c&H00D8F0F4}with
+Dialogue: 1,0:06:49.63,0:06:50.23,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}done
+Dialogue: 1,0:06:50.55,0:06:51.66,Serif,,0,0,0,,{\an1\pos(508,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}it {\fs63\i1\b0\1c&H00D8F0F4}ends
+Dialogue: 1,0:06:50.55,0:06:51.66,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs131\i0\b1\1c&H00D8F0F4}congregation
+Dialogue: 1,0:06:50.55,0:06:51.66,Serif,,0,0,0,,{\an1\pos(126,809)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}and {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:06:51.74,0:06:52.84,Serif,,0,0,0,,{\an1\pos(210,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}room {\fs51\i0\b0\1c&H00D8F0F4}for
+Dialogue: 1,0:06:51.74,0:06:52.84,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs115\i0\b1\1c&H00D8F0F4}has
+Dialogue: 1,0:06:51.74,0:06:52.84,Serif,,0,0,0,,{\an1\pos(126,820)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}in {\fs51\i0\b0\1c&H00D8F0F4}still
+Dialogue: 1,0:06:52.86,0:06:53.46,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}you.
+Dialogue: 1,0:06:53.79,0:06:54.82,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}reaching
+Dialogue: 1,0:06:53.79,0:06:54.82,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}The {\fs63\i1\b0\1c&H00D8F0F4}song {\fs51\i0\b0\1c&H00D8F0F4}has {\fs51\i0\b0\1c&H00D8F0F4}been
+Dialogue: 1,0:06:54.88,0:06:55.99,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs139\i0\b1\1c&H00D8F0F4}time.
+Dialogue: 1,0:06:54.88,0:06:55.99,Serif,,0,0,0,,{\an1\pos(126,803)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}toward {\fs51\i0\b0\1c&H00D8F0F4}you {\fs51\i0\b0\1c&H00D8F0F4}the {\fs51\i0\b0\1c&H00D8F0F4}whole
+Dialogue: 1,0:06:56.61,0:06:57.52,Serif,,0,0,0,,{\an1\pos(250,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}the {\fs51\i0\b0\1c&H00D8F0F4}ones
+Dialogue: 1,0:06:56.61,0:06:57.52,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs128\i0\b1\1c&H00D8F0F4}join
+Dialogue: 1,0:06:56.61,0:06:57.52,Serif,,0,0,0,,{\an1\pos(126,811)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}Come {\fs51\i0\b0\1c&H00D8F0F4}and
+Dialogue: 1,0:06:57.58,0:06:58.21,Serif,,0,0,0,,{\an1\pos(332,936)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}him.
+Dialogue: 1,0:06:57.58,0:06:58.21,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs141\i0\b1\1c&H00D8F0F4}praise
+Dialogue: 1,0:06:57.58,0:06:58.21,Serif,,0,0,0,,{\an1\pos(126,802)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}who

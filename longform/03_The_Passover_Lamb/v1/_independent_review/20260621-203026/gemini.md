@@ -1,0 +1,4 @@
+# Independent review — gemini (FAILED, 15s)
+
+(no output; exit 1; stderr: Warning: Windows 10 detected. Some UI features like smooth scrolling may be degraded. Windows 11 is recommended for the best experience.
+Warning: 256-color support not detected. Using a terminal with )
