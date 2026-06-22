@@ -38,6 +38,16 @@ EPISODES: dict[str, dict] = {
         "gain_db": -11.0,
         "outro_s": 2.5,
     },
+    # Passover Lamb (509.5s) — ancient Egypt night + the lamb + the strange detail (M1-M3,
+    # searching/solemn) -> the centuries-early cross-match + the honest objection (M4-M5,
+    # holy weight) -> the exchange + invitation + risen-Christ hero close (M6-M7, grace rising).
+    # 3 segments cover the full 509.5s; grace-rise lands on the M7 invitation/hero.
+    "03_The_Passover_Lamb": {
+        "segments": ["lonely_searching_a", "glory_holy_stillness_a", "sacred_grace_rise_b"],
+        "xfade_s": 6.0,
+        "gain_db": -11.0,
+        "outro_s": 2.5,
+    },
 }
 
 

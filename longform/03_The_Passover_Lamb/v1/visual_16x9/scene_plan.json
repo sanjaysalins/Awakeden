@@ -1,0 +1,444 @@
+{
+ "format": "16:9 long-form deep-dive",
+ "episode": "The Passover Lamb — Exodus 12 fulfilled in Christ",
+ "audio": "narration.mp3 — 509.5s (natural pace, 3-voice); scene t[] tile the turn timeline",
+ "image_provider": "nbp (Nano Banana Pro, Baroque oil)",
+ "animation": {
+  "model": "veo3_1_lite",
+  "aspect": "16:9",
+  "duration": 8,
+  "note": "robed cross scenes; veo NSFW -> direct-Kling fallback"
+ },
+ "fill_design": "ANIMATION-AWARE: windows kept <=~25s; STATIC scenes use boomerang so each still is composed DEEP + atmosphere-dominant; long/reveal scenes marked directional.",
+ "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork",
+ "rule": "the device is ONE portrait a thousand years apart: the Exodus lamb (spotless, inspected, blood on a frame of wood, not one bone broken) is fulfilled at the cross; every quote's visual matches its narration cue; the cut CLOSES on the risen Christ (hero S25).",
+ "film_name": "Passover_Lamb_16x9.mp4",
+ "style_tail": "no text, no modern or medieval or European dress (no tailored jackets, collars, buttons, lapels, hoods, pinafores), no iron stoves or modern tools, authentic ancient biblical-period setting and clothing, cinematic 16:9 widescreen composition",
+ "scenes": [
+  {
+   "id": 1,
+   "mvt": "M1 The Picture",
+   "t": [
+    0.0,
+    13.4
+   ],
+   "title": "The over-specified instructions (foreshadow)",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, DEEP layered composition centred on a low guttering clay oil lamp and an aged Israelite scribe's weathered hand resting still beside it; an unrolled parchment lies mostly in shadow at the edge, its marks only a faint illegible texture, never the focus; in the far shadowed background, almost unnoticed, a plain wooden doorway of two uprights and a beam catching one thin shaft of pale light; the whole image hushed and expectant, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "parchment_rustle + lamp_flame_soft",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "the lamp flame guttering, a thread of smoke rising, dust motes adrift in the light",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false
+  },
+  {
+   "id": 2,
+   "mvt": "M1 The Picture",
+   "t": [
+    13.4,
+    33.9
+   ],
+   "title": "The last night in Egypt — kill a lamb",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, DEEP unified composition dominated by the intimate foreground: a poor Israelite family in simple linen close and large in warm lamplight, the father gently holding a young spotless lamb as the children watch, faces tender and grave; the low mud-brick doorway of their house just behind them; only a small distant glimpse of the dark Egyptian city far beyond through the doorway, kept tiny and faint; reverent and intimate, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "wind_night_low + distant_murmur",
+   "camera": "locked, faint drift",
+   "atmos": "night air stirring the lamp and the family's robes, the lamb's slow breathing, drifting dust",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false
+  },
+  {
+   "id": 3,
+   "mvt": "M1 The Picture",
+   "t": [
+    33.9,
+    53.2
+   ],
+   "title": "One lamb, described before a firstborn died",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, intimate close composition: an ancient Israelite shepherd-father, a bearded man in a simple ankle-length undyed handwoven wool tunic with a plain rectangular mantle over one shoulder and a cloth belt, bare-headed, NO hood NO collar NO modern clothing, cradling a single flawless white lamb against deep Rembrandt shadow, one warm shaft of golden lamplight falling across the lamb's clean unblemished wool and the man's tender weathered face, the lamb calm and unafraid, quiet and weighty as though the animal were a portrait of someone yet to come, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "lamb_soft + lamp_flame_soft",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "lamplight flickering warm across the wool, soft dust motes, the lamb's breath gently moving",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false
+  },
+  {
+   "id": 4,
+   "mvt": "M2 The Problem",
+   "t": [
+    53.2,
+    78.0
+   ],
+   "title": "I will pass through — death over Egypt",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, vast and ominous yet restrained NOT graphic: a great cold shadow sweeping low over the moonlit rooftops of an ancient Egyptian city at the dead of midnight, pale silver moonlight raking the flat mud-brick roofs and silent streets, a sense of unseen judgment moving across every house, deep blue-black darkness, no visible figures of horror, only weight and dread and stillness, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "wind_desolate + rumble_deep_sub",
+   "camera": "locked, slow breathing drift",
+   "atmos": "thin cloud sliding across the moon, cold mist creeping low over the rooftops, faint dust",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false
+  },
+  {
+   "id": 5,
+   "mvt": "M2 The Problem",
+   "t": [
+    78.0,
+    102.9
+   ],
+   "title": "Only a blood-marked door turns death aside",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, DEEP composition, the threshold the heart of the frame: a humble ancient doorway at night, two side posts and an upper beam, a father's hand reaching up with a bunch of hyssop to strike dark blood across the wood; warm safe lamplight glowing within the house behind him where his family waits; beyond the door a cold dark street under judgment; the marked doorway the one line between life and death, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "wind_night_low + cloth_rustle",
+   "camera": "slow push toward the doorway",
+   "atmos": "the interior lamplight wavering, the hyssop and cloak stirring, a wisp of smoke",
+   "fill": "forward_slow",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false
+  },
+  {
+   "id": 6,
+   "mvt": "M3 The Strange Detail",
+   "t": [
+    102.9,
+    121.6
+   ],
+   "title": "Without blemish — the flawless one chosen",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, pastoral but solemn: at dawn an ancient Israelite shepherd, a bearded man in a simple ankle-length undyed handwoven wool tunic and a rough rectangular mantle over one shoulder with a plain cloth belt, bare-headed, NO tailored jacket NO collar NO buckled satchel NO modern clothing, gently lifting and inspecting a single spotless young male lamb from among a dim huddled flock in a rough stone fold, his hands deliberate as he checks it for any flaw, one shaft of pale gold morning light singling out the chosen lamb's clean white wool against the shadowed others, reverent and tender, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "flock_soft + dawn_birds_faint",
+   "camera": "locked, faint drift",
+   "atmos": "soft dawn light strengthening, breath and dust in the cold air, wool and straw stirring",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false
+  },
+  {
+   "id": 7,
+   "mvt": "M3 The Strange Detail",
+   "t": [
+    121.6,
+    146.4
+   ],
+   "title": "Kept four days, lived with, found faultless",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, DEEP unified ancient-Israelite domestic interior, a humble Bronze-Age dwelling of rough mud-brick walls lit by small clay oil lamps: in the warm foreground the spotless lamb lying among the family's young children who watch over it, the children in simple undyed linen tunics; in the midground the mother in a plain ankle-length tunic and a cloth head-covering kneeling beside a low clay oven with earthenware jars and woven baskets nearby; faint scored tally-marks on the mud wall counting the passing days; NO European cottage NO iron stove or skillet NO modern dress; tender and intimate, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "hearth_fire_soft + children_faint",
+   "camera": "locked, faint breathing drift",
+   "atmos": "hearth flames flickering warm, lamp smoke rising, the lamb's slow breathing, dust in the light",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false
+  },
+  {
+   "id": 8,
+   "mvt": "M3 The Strange Detail",
+   "t": [
+    146.4,
+    167.6
+   ],
+   "title": "The whole nation at the same twilight",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, vast unified twilight composition: a wide elevated view over a whole ancient Israelite quarter at the same blood-orange dusk, countless low rooftops and lamplit doorways receding into the haze, a faint figure at each distant threshold at the very same appointed hour, smoke of many fires rising together into the deepening sky, a sense of one nation acting as one, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "evening_wind + distant_crowd_soft",
+   "camera": "locked, slow drift",
+   "atmos": "dusk light deepening, many threads of smoke rising and bending, slow low cloud",
+   "fill": "forward_slow",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false
+  },
+  {
+   "id": 9,
+   "mvt": "M3 The Strange Detail",
+   "t": [
+    167.6,
+    191.7
+   ],
+   "title": "Blood struck on the two posts and the beam",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, stark and close: a single ancient doorway of bare timber filling the frame at night, two upright posts and one heavy beam across the top, fresh dark blood roughly daubed and smeared with a bunch of hyssop across both posts and the upper beam, irregular streaks and drips running down the rough grain, NO cross shapes NO symbols NO neat marks — only rough thrown blood, one low warm clay oil lamp throwing the timber and the wet blood into sharp relief, deep shadow all around, hushed and weighty, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "lamp_flame_soft + wind_night_low",
+   "camera": "very slow push onto the doorframe",
+   "atmos": "lamplight wavering across the wet blood and grain, a thread of smoke, faint dust",
+   "fill": "forward_slow",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false
+  },
+  {
+   "id": 10,
+   "mvt": "M3 The Strange Detail",
+   "t": [
+    191.7,
+    213.9
+   ],
+   "title": "Not one bone broken — when I see the blood",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, solemn still-life composition: a whole roasted Passover lamb laid out unbroken on a plain wooden board in warm lamplight, entirely intact with not a single bone broken, bitter herbs and unleavened bread beside it, and beyond the low table the blood-marked doorframe just visible in the shadow; reverent, weighty, the centre of the night, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "hearth_embers + lamp_flame_soft",
+   "camera": "locked, faint breathing drift",
+   "atmos": "embers glowing and fading, lamp smoke curling, warm light pulsing gently",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false
+  },
+  {
+   "id": 11,
+   "mvt": "M4 The Centuries-Early Match",
+   "t": [
+    213.9,
+    240.7
+   ],
+   "title": "Fourteen centuries later — the Passover cross",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, restrained NOT graphic, WIDE cinematic tableau, NO foreground portrait NO standing figure: a hill outside the walls of first-century Jerusalem at the ninth hour seen wide and distant, three crosses on the crest in silhouette against a bruised darkening sky as the dominant subject, the central cross bearing a small distant crucified robed figure, the holy city spread below with the smoke of countless Passover sacrifices rising from the temple, cold shafts of storm-light breaking through cloud, reverent and sombre, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "wind_desolate + distant_temple_low",
+   "camera": "locked, slow drift",
+   "atmos": "storm cloud rolling, temple smoke rising far below, shafts of light shifting, dust adrift",
+   "fill": "forward_slow",
+   "jesus": true,
+   "jesus_variant": null,
+   "directional": false
+  },
+  {
+   "id": 12,
+   "mvt": "M4 The Centuries-Early Match",
+   "t": [
+    240.7,
+    256.7
+   ],
+   "title": "They brake not his legs",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, reverent and restrained: at the foot of the cross Roman soldiers in 1st-century iron and leather pausing before the central robed crucified figure, having just broken the legs of the two beside him, now staying their hand at the third because he is already dead, the moment hushed and strange, cold light on the soldiers' armour, the central figure serene in death, robed at the waist NOT bare, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "wind_low + armor_clink_faint",
+   "camera": "locked, faint drift",
+   "atmos": "cold wind stirring cloaks and a soldier's plume, thin cloud, dust in the shaft of light",
+   "fill": "boomerang",
+   "jesus": true,
+   "jesus_variant": "passion",
+   "directional": false
+  },
+  {
+   "id": 13,
+   "mvt": "M4 The Centuries-Early Match",
+   "t": [
+    256.7,
+    282.0
+   ],
+   "title": "Christ our passover — the same frame of wood",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, DEEP unified echo composition: on one side, half in shadow, an ancient blood-marked Israelite doorway — two upright wooden posts and a beam across the top; on the other, lit by warm light, the robed crucified Christ on the wooden cross — its upright and crossbeam quietly rhyming with the doorway's posts and beam, the same frame of bloodied wood a thousand years apart; a serene reverent visual rhyme, the Lamb of God, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "wind_low + choir_distant_faint",
+   "camera": "locked, slow drift",
+   "atmos": "warm light pulsing across the cross, faint smoke, slow cloud, dust motes drifting",
+   "fill": "boomerang",
+   "jesus": true,
+   "jesus_variant": "passion",
+   "directional": false
+  },
+  {
+   "id": 14,
+   "mvt": "M4 The Centuries-Early Match",
+   "t": [
+    282.0,
+    304.2
+   ],
+   "title": "Found faultless, killed anyway",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, tense and weighty: the robed Christ standing bound and silent before Pilate in a cold stone Roman hall, the Roman governor turning aside with a troubled gesture as if to say he finds no fault in him, hard side-light falling on Christ's calm unblemished face, deep shadow and a few watching figures behind, reverent and grave, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "hall_echo_low + crowd_murmur_faint",
+   "camera": "locked, faint drift",
+   "atmos": "a brazier flame flickering, cold light shifting, robes stirring faintly, dust in the air",
+   "fill": "boomerang",
+   "jesus": true,
+   "jesus_variant": "passion",
+   "directional": false
+  },
+  {
+   "id": 15,
+   "mvt": "M5 The Honest Objection",
+   "t": [
+    304.2,
+    317.3
+   ],
+   "title": "Be fair to the doubt",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, sober and searching: a solitary figure seated alone in deep shadow, head bowed into one hand in honest unresolved doubt, lit by a single low lamp; around him, dim and receding into the dark, the faint half-seen shapes of many different ancient cultures' stone sacrificial altars — the objection that every people killed animals — pressing in as unanswered questions; nothing written anywhere in view, only the weight of a hard honest question, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "lamp_flame_soft + low_drone",
+   "camera": "locked, faint breathing drift",
+   "atmos": "lamp flame wavering, smoke rising, the shadows and dust stirring gently",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false
+  },
+  {
+   "id": 16,
+   "mvt": "M5 The Honest Objection",
+   "t": [
+    317.3,
+    341.0
+   ],
+   "title": "Weigh the details — strongest first",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, symbolic DEEP composition: a balanced set of old bronze scales in warm lamplight, on one pan a small carved lamb and on the other a single iron nail, held in even weight; behind, dim and layered, a row of moon-phase discs (no numerals, no writing) and a shadowed blood-marked doorway receding into the dark; the convergence of many threads quietly resolving, reverent and contemplative, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "lamp_flame_soft + low_drone",
+   "camera": "locked, slow drift",
+   "atmos": "lamplight pulsing, the scales barely settling, smoke and dust adrift",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false
+  },
+  {
+   "id": 17,
+   "mvt": "M5 The Honest Objection",
+   "t": [
+    341.0,
+    365.3
+   ],
+   "title": "A design stepping into the light",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, luminous and resolving, NOT a doorway: broad warm shafts of golden dawn light breaking at a low angle through a dim ancient stone hall, sweeping across drifting dust to reveal a quiet still-life half-hidden in the shadow — a spotless lamb and a single nail lying together on stone — a long-hidden design at last stepping into the open, reverent, hopeful, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "wind_soft + light_swell_low",
+   "camera": "very slow push into the light",
+   "atmos": "the shafts of light strengthening and breathing, fine dust drifting through the beams",
+   "fill": "forward_slow",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false
+  },
+  {
+   "id": 18,
+   "mvt": "M6 The Exchange",
+   "t": [
+    365.3,
+    382.3
+   ],
+   "title": "A life for a life — the lamb instead",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, DEEP unified composition, tender and grave: in the warm foreground a slain Passover lamb lying still on the stone threshold; just behind it a young firstborn child sleeping safe and unharmed in lamplight in the mother's arms; the blood-marked doorframe above them; the exchange made plain — the lamb in the child's place, death already fallen on the substitute, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "lamp_flame_soft + heartbeat_low",
+   "camera": "locked, faint breathing drift",
+   "atmos": "lamplight wavering warm, the child's slow breathing, a thread of smoke, dust in the light",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false
+  },
+  {
+   "id": 19,
+   "mvt": "M6 The Exchange",
+   "t": [
+    382.3,
+    393.1
+   ],
+   "title": "That is the cross — the substitute given",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, reverent and clear: the robed Christ CRUCIFIED — both arms outstretched and NAILED to the crossbeam, wrists fastened to the wood, his body hanging on the cross, head bowed, NOT standing, NOT leaning on or embracing the cross; seen three-quarter against a vast dark sky, one shaft of warm light breaking across him, given by the Father as the substitute in the sinner's place, sombre and worshipful, deep Rembrandt shadow, robed at the waist NOT bare, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "wind_low + choir_distant_faint",
+   "camera": "locked, faint breathing drift",
+   "atmos": "warm light pulsing across the figure and shadow, robes and dust stirring gently",
+   "fill": "boomerang",
+   "jesus": true,
+   "jesus_variant": "passion",
+   "directional": false
+  },
+  {
+   "id": 20,
+   "mvt": "M6 The Exchange",
+   "t": [
+    393.1,
+    414.3
+   ],
+   "title": "The precious blood — cost everything",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, intimate and worshipful, ONE single unified close-up of a HAND ONLY filling the frame, NO face NO portrait NO split NO diptych NO second panel: a single open human hand, palm upward in warm low light, a clear dark nail-wound through the centre of the palm, the hand anatomically correct with exactly five fingers, the cuff of a plain undyed robe at the wrist, deep shadow all around, a sense of infinite cost held out as free gift, tender and sacred, restrained NOT graphic, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "low_drone + choir_distant_faint",
+   "camera": "locked, faint breathing drift",
+   "atmos": "warm light pulsing across the wound, faint smoke, dust drifting slowly",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false
+  },
+  {
+   "id": 21,
+   "mvt": "M7 The Invitation",
+   "t": [
+    414.3,
+    440.6
+   ],
+   "title": "It had to be applied to the door",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, close and decisive: a hand grasping a bunch of hyssop dipped in blood, in the act of striking it across the grain of an ancient doorpost, warm lamplight on the wet red blood and the rough wood, the basin of blood waiting below no longer unused but applied, deep shadow around, weighty and personal, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "cloth_rustle + lamp_flame_soft",
+   "camera": "locked, faint drift",
+   "atmos": "lamplight flickering on the wet blood, the hyssop leaves trembling, a wisp of smoke",
+   "fill": "forward_slow",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false
+  },
+  {
+   "id": 22,
+   "mvt": "M7 The Invitation",
+   "t": [
+    440.6,
+    456.6
+   ],
+   "title": "Held out to you — Christ in the open door",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, warm and inviting, the DOORWAY the heart of the frame echoing the Passover door: the risen robed Christ standing framed within an ancient wooden doorway of two posts and a beam, behind him radiant golden light pouring out through the opening into the surrounding dark, his figure seen at a gentle distance in the lit threshold rather than close, the same frame of wood that once bore the blood now flung open in welcome, tender and personal, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "light_swell_low + choir_warm_soft",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "the warm golden light glowing softly and steadily through the doorway, the robe stirring almost imperceptibly",
+   "fill": "boomerang",
+   "jesus": true,
+   "jesus_variant": "resurrection",
+   "directional": false
+  },
+  {
+   "id": 23,
+   "mvt": "M7 The Invitation",
+   "t": [
+    456.6,
+    477.7
+   ],
+   "title": "From inside the house — security outside them",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, DEEP intimate interior composition: inside a dark Israelite house on the night of judgment, a family huddled together in a small pool of lamplight, faces neither brave nor certain, only trusting; the door before them faintly edged with the glow of the blood they cannot even see from within; their whole safety resting on the marked door outside, hushed and tender, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "wind_night_low + heartbeat_low",
+   "camera": "locked, faint breathing drift",
+   "atmos": "the lamp flame wavering over the faces, the door-glow pulsing faintly, slow drifting dust",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false
+  },
+  {
+   "id": 24,
+   "mvt": "M7 The Invitation",
+   "t": [
+    477.7,
+    494.0
+   ],
+   "title": "When I see the blood — not yours, His",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, luminous and resolving: an ancient doorway of two wooden posts and a beam, its blood-marked timber bathed now in strong warm golden light, the dark blood on the posts and beam glowing rich and alive, deep shadow giving way wholly to light, the gospel of Exodus made plain, reverent and hopeful, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "light_swell_low + wind_soft",
+   "camera": "very slow push into the light",
+   "atmos": "the golden light strengthening and breathing, dust drifting up through the glow",
+   "fill": "forward_slow",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false
+  },
+  {
+   "id": 25,
+   "mvt": "M7 The Invitation",
+   "t": [
+    494.0,
+    509.5
+   ],
+   "title": "Rest under the blood of the Lamb (HERO close)",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, NOT smooth modern devotional art, NO doorway, full-bleed close hero: the risen glorified Christ filling the frame in warm radiant golden light, a dark-haired bearded man with a serene tender face turned toward the viewer, reaching one open pierced hand gently forward in welcome, a clear nail-wound scar visible in the centre of the open palm, deep Rembrandt shadow behind, luminous and merciful, the gospel-pivot hero image that closes the film on Christ, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "choir_warm_soft + light_swell_low",
+   "camera": "very slow reverent push-in toward the open hand",
+   "atmos": "the warm golden light glowing softly and steadily, the robe and hair stirring almost imperceptibly",
+   "fill": "forward_slow",
+   "jesus": true,
+   "jesus_variant": "resurrection",
+   "directional": false
+  }
+ ]
+}

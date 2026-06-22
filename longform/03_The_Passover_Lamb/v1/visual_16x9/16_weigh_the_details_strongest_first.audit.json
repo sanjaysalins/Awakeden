@@ -1,0 +1,14 @@
+{
+ "passed": true,
+ "issues": [
+  {
+   "claim": "shadowed blood-marked doorway receding into the dark",
+   "actual": "a dark fireplace-like recess is present behind the scales with a small mark above the lintel, but it reads more as a hearth than a clearly blood-marked doorway"
+  },
+  {
+   "claim": "warm lamplight source",
+   "actual": "an oil lamp is present at left, though it reads slightly anachronistic in shape (more 19th-century kerosene than ancient oil lamp)"
+  }
+ ],
+ "banned_token_hits": []
+}

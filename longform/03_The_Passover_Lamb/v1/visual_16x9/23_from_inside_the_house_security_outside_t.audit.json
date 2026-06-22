@@ -1,0 +1,10 @@
+{
+ "passed": true,
+ "issues": [
+  {
+   "claim": "door faintly edged with the glow of the blood they cannot even see from within",
+   "actual": "door is edged with warm glow as required, though subtle"
+  }
+ ],
+ "banned_token_hits": []
+}

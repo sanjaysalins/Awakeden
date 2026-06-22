@@ -1,0 +1,18 @@
+{
+ "passed": true,
+ "issues": [
+  {
+   "claim": "having just broken the legs of the two beside him",
+   "actual": "the two thieves on side crosses are shown but their broken legs are not clearly depicted (legs largely cropped/in shadow)"
+  },
+  {
+   "claim": "central crucified figure",
+   "actual": "Jesus reads as standing/posed against the cross rather than clearly nailed; no visible nails or wounds, though pose and serene bowed head are consistent with the moment"
+  },
+  {
+   "claim": "Roman soldiers pausing, staying their hand",
+   "actual": "soldiers are present in 1st-century armour with clubs/helmets; the 'staying the hand' gesture is implied through quiet stances rather than an explicit raised-then-lowered motion"
+  }
+ ],
+ "banned_token_hits": []
+}

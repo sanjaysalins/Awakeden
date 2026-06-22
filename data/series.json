@@ -795,6 +795,26 @@
           "theme": "I AM at the burning bush — the name Jesus claims for Himself, and they took up stones"
         }
       ]
+    },
+    {
+      "id": "parables",
+      "name": "Parables of Jesus",
+      "brand": "SLK",
+      "concept": "Jesus' parables read for the one truth they were told to land — grace, the kingdom, the heart of the Father — never moralized into self-help.",
+      "hook_pattern": "overturn the familiar reading -> the real point Jesus makes -> who God is in it",
+      "cta_pattern": "Come to the Father/King the parable reveals.",
+      "guardrails": "Don't moralize a parable into a to-do list. Keep the gospel point (grace, the Father, the kingdom) central; the parable serves Christ, not behavior tips.",
+      "episodes": [
+        {
+          "title": "The Father Who Ran",
+          "primary_ref": "Luke 15:20",
+          "refs": [
+            "Luke 15:11-32",
+            "Luke 15:20"
+          ],
+          "theme": "The father runs first — grace moves before repentance is finished"
+        }
+      ]
     }
   ]
 }

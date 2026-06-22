@@ -1,0 +1,10 @@
+{
+ "passed": true,
+ "issues": [
+  {
+   "claim": "a single nail lying with the lamb",
+   "actual": "two nails are visible on the stone rather than a single nail"
+  }
+ ],
+ "banned_token_hits": []
+}

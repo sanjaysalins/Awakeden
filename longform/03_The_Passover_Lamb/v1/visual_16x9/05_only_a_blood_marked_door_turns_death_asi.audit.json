@@ -1,0 +1,14 @@
+{
+ "passed": true,
+ "issues": [
+  {
+   "claim": "blood on lintel and both side posts",
+   "actual": "blood visible on lintel and one post clearly; left post has a blood mark but less defined as a doorpost stripe"
+  },
+  {
+   "claim": "father's hand with hyssop",
+   "actual": "hand and hyssop present, anatomically sound; arm foreshortening is dramatic but acceptable"
+  }
+ ],
+ "banned_token_hits": []
+}

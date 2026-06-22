@@ -1,0 +1,14 @@
+{
+ "passed": true,
+ "issues": [
+  {
+   "claim": "hard Caravaggio chiaroscuro",
+   "actual": "lighting is moody but somewhat softer/more diffuse than hard Caravaggio cut-light"
+  },
+  {
+   "claim": "Pilate's hands well-formed",
+   "actual": "Pilate's extended right hand has slightly elongated/awkward fingers, but finger count appears correct"
+  }
+ ],
+ "banned_token_hits": []
+}

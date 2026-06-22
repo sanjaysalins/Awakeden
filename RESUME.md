@@ -1,6 +1,65 @@
 # RESUME.md — start here next session
 
-## ⚡⚡ LATEST HANDOFF — LONG-FORM v2 (2026-06-21, NEWEST) — READ THIS FIRST ⚡⚡
+## ⚡⚡⚡ LATEST HANDOFF — #03 PASSOVER LAMB FULLY DONE (2026-06-22, NEWEST) — READ FIRST ⚡⚡⚡
+
+### ═══ WHAT GOT DONE TODAY (long-form #03) ═══
+**#03 The Passover Lamb — FULLY DONE, full long-form pipeline, ~$33.**
+FINAL: `C:/Users/sanjay/PASSOVER_LAMB_FINAL.mp4` (8:32) ·
+work copy `…/longform/03_The_Passover_Lamb/v1/visual_16x9/Passover_Lamb_16x9_scored_sfx_captioned.mp4`.
+- **Locked** v1.3 (`cli_lock --form long`; all 14 KJV quotes self-verified verbatim).
+- **3-voice audio** (narrator + scripture + god), natural pace, 509.5s. Built via
+  `_build_audio_inputs.py` → narration-tagged.md + voices.json + narration.spoken.txt
+  (word-parity machine-verified vs the approved prose; god = Ex 12:12/12:13 first-person).
+- **Scene plan** = `_build_scene_plan.py` (25 scenes, content-matched windows from the turn
+  timeline, binding mix, red-teamed: fixed Π-frame-isn't-a-✝ over-claim + S15 objection + S22/S25 dup).
+- **25 stills** (NBP Baroque) — ALL period-audited (see the NEW GATE below).
+- **Clips**: 22 veo3 (`_animate_16x9.py`) + 3 reverent ffmpeg push-ins for HF-NSFW false-positives
+  (S02/S05/S07 — children/blood tripped HF's filter). Glitter blow-out on the hero fixed
+  (steady-light prompt + anti-glitter clause baked into `_animate_16x9.py`).
+- **Assembled** `_assemble_16x9.py` (boomerang for ambient + NEW `forward_slow` mode for 8
+  one-way-motion clips so blood/pushes never run backwards). Lands on the risen-Christ hero.
+- **Score** `_add_score_lf.py` (added a `03_The_Passover_Lamb` recipe: lonely_searching →
+  glory_holy_stillness → sacred_grace_rise_b, -11dB).
+- **SFX** `_sfx_passover.py` (16-cue choir-free ambient bed under the score — NO dual-score).
+- **Captions** ivory, WhisperX, 1351/1351 words aligned.
+
+### ═══ ENGINE CHANGES LANDED TODAY (reusable for #04+) ═══
+- **PERIOD GATE on long-form stills** (user standing rule): `_render_images_16x9.py` now runs
+  `visual_render.verify_image` (check #6 = period/reverent) after each render, writes
+  `<stem>.audit.json`, fail-closed, default ON (`--no-audit` to skip). Run metered with
+  `LLM_PROVIDER=anthropic` (~$0.01/img) for an autonomous sweep. + a biblical-period guard in
+  the scene-plan style_tail. Memory: `feedback-stills-biblical-period-gate`. It caught 7 real
+  fails the human gallery missed (European dress, blood-painted-as-crosses, standing-Jesus
+  portrait instead of crucifixion, melted hands, diptych).
+- **`forward_slow` fill mode** in `_assemble_16x9.py` (forward-only, time-stretched; for clips
+  whose motion is one-way). + global anti-glitter clause in the animate base prompt.
+- **Fixed the direct-Kling fallback path bug** in `pipeline/video_render.py` (passed a relative
+  PNG path to a subprocess run in a different cwd → now `.resolve()`d).
+- **GOTCHA:** run `_assemble_16x9.py` / Kling fallback with an ABSOLUTE episode path (ffmpeg
+  concat resolves seg paths relative to the concat file → breaks on a relative arg).
+
+### ═══ ▶▶ DO FIRST TOMORROW ═══
+1. **#03 options (user's choice):** build a **publish pack** (`/publish` or `cli_publish.py`) for
+   #03, and/or copy the final to Desktop. (#03 itself is DONE.)
+2. **#04 THE BRONZE SERPENT — next build.** Still a DRAFT; user wanted to read/hear it first:
+   `file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/04_The_Bronze_Serpent/v1/narration.md`
+   Flow = ear-review → red-team + 5-CLI panel → "lock it" → SAME pipeline as #03 (the `_build_*`
+   + `_render/_animate/_assemble/_add_score` drivers are now episode-generic; add a `04_*` recipe
+   to `_add_score_lf.py EPISODES` + write `_sfx_*` cues + `_build_scene_plan.py` for it).
+3. Per-episode recipe is proven on #03 — reuse the period gate + test-gates (stills + animation)
+   + the human gates (audio / images / clips).
+
+### ═══ LONG-FORM STATUS BOARD ═══
+| # | Episode | Status |
+|---|---|---|
+| 01 | Isaiah 53 | ✅ DONE |
+| 02 | Psalm 22 | ✅ DONE |
+| 03 | Passover Lamb | ✅ DONE (2026-06-22) — `C:/Users/sanjay/PASSOVER_LAMB_FINAL.mp4` |
+| 04 | Bronze Serpent | draft → read first → red-team/panel → build (NEXT) |
+
+---
+
+## ⚡⚡ PRIOR HANDOFF — LONG-FORM v2 (2026-06-21) ⚡⚡
 
 > This session = the **LONG-FORM (16:9) v2 treatment** track. (The "EVENING" block just below is a
 > separate SHORTS track — both are current; this one is what to review tomorrow for the LONG format.)
@@ -48,7 +107,7 @@
 |---|---|---|
 | 01 | Isaiah 53 | ✅ DONE (scored + captioned) |
 | 02 | Psalm 22 | ✅ DONE (full visual + score + captions) |
-| 03 | Passover Lamb | script v1.3 revised + panel-cleared → **awaiting ear-review → lock → build** |
+| 03 | Passover Lamb | ✅ DONE (2026-06-22) — locked → 3-voice audio → 25 period-audited stills → veo3+ffmpeg clips → assembled (boomerang + forward_slow) → score → choir-free SFX → captions. `C:/Users/sanjay/PASSOVER_LAMB_FINAL.mp4` (8:32) |
 | 04 | Bronze Serpent | draft → read first → red-team/panel → build |
 
 ### ═══ OPEN / OPTIONAL (long-form) ═══

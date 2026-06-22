@@ -26,7 +26,9 @@ DURATION = int(anim.get("duration", 8))
 def base(move, atmos):
     return (f"Cinematic {move}. Keep it a FROZEN Baroque oil painting tableau — preserve the "
             f"exact faces, hands and composition, NO morphing of faces or hands, NO new elements, "
-            f"NO invented body motion. Only {atmos}.")
+            f"NO invented body motion. Only {atmos}. "
+            f"NO sparkles, NO glitter, NO floating golden particles, NO light-bloom or lens flare "
+            f"— steady warm light only.")
 
 
 # TEST GATE: a calm scene + a directional scene (generic analog of Isaiah's [2,13]).

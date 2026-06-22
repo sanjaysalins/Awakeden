@@ -51,7 +51,18 @@ for i, s in enumerate(scenes):
         raise SystemExit(f"missing clip: {clip}")
     scene_mp4 = WORK / f"scene_{s['id']:02d}.mp4"
 
-    if s.get("directional"):
+    if s.get("fill") == "forward_slow":
+        # FORWARD-ONLY, time-stretched to fill the window (no reverse → no causal motion
+        # running backwards like blood un-striking; no mid-motion freeze). For clips whose
+        # motion is one-way: rising smoke, mist, a strike, or a camera push.
+        A = WORK / f"a_{s['id']:02d}.mp4"
+        scaled(clip, A)
+        cdur = dur(A)
+        factor = max(1.0, D / cdur)
+        run(["ffmpeg","-y","-i",str(A),"-vf",f"setpts={factor:.4f}*PTS,fps={FPS}",
+             "-t",f"{D:.3f}","-an",*ENC,str(scene_mp4)])
+        print(f"  scene {s['id']:02d}  win={D:5.1f}s  SLOW-FWD x{factor:4.2f} (no reverse)  {s['title'][:30]}")
+    elif s.get("directional"):
         # forward-only: original + chained continuation clips, concat, trim/pad to window
         parts = [clip] + sorted(OUT.glob(f"{stem}_cont*.mp4"))
         scaled_parts = []

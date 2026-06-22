@@ -1,0 +1,14 @@
+{
+ "passed": true,
+ "issues": [
+  {
+   "claim": "NO foreground portrait NO standing figure",
+   "actual": "Several small standing figures (mourners/onlookers) are visible in the foreground and midground; however they are scaled as distant staffage, not foreground portraits, and do not dominate the composition"
+  },
+  {
+   "claim": "central cross bearing a small distant crucified robed figure",
+   "actual": "Crucified figure present on central cross, but a standing robed figure is also placed at the foot of the cross which is not specified"
+  }
+ ],
+ "banned_token_hits": []
+}

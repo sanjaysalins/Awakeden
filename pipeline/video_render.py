@@ -193,12 +193,13 @@ class KlingDirectProvider(VideoProvider):
         env["KLING_SKILL_PATH"] = str(config.KLING_SKILL_PATH)
         env["PYTHONIOENCODING"] = "utf-8"
         config.inject_agent_env(env)
+        png_abs = png_path.resolve()  # subprocess runs in PythonProject1 cwd — pass an absolute path
         result = subprocess.run(
-            [config.NARRATION_PYTHON, str(script), str(png_path), "--skip-audit"],
+            [config.NARRATION_PYTHON, str(script), str(png_abs), "--skip-audit"],
             cwd=str(config.NARRATION_PROJECT_DIR.parent), env=env,
             capture_output=True, text=True, encoding="utf-8", errors="replace",
         )
-        produced = png_path.with_suffix(".mp4")
+        produced = png_abs.with_suffix(".mp4")
         if not produced.exists():
             raise VideoGenError(
                 f"direct-Kling produced no mp4 for {png_path.name} "
