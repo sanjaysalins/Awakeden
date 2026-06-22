@@ -1,6 +1,34 @@
 # RESUME.md — start here next session
 
-## ⚡⚡⚡ LATEST HANDOFF — #03 PASSOVER LAMB FULLY DONE (2026-06-22, NEWEST) — READ FIRST ⚡⚡⚡
+## ⚡⚡ LATEST HANDOFF — SHORT-FORM #09 DONE (2026-06-22 PM, NEWEST) — READ FIRST ⚡⚡
+
+> This session = the **SHORT-FORM** track (separate from the long-form #03 block below; both current).
+
+### ═══ ▶▶ DO FIRST TOMORROW ═══
+**Ear/eye-review the #09 final** (the intimate score + clean captions were both rebuilt at the user's request at end of session):
+`file:///C:/Users/sanjay/09_The_Father_Who_Ran_FINAL.mp4` (60s)
+If it lands, #09 is shippable (publish pack via /publish when ready).
+
+### ═══ #09 THE FATHER WHO RAN (Luke 15:20, prodigal) — FULLY DONE ═══
+- **Re-voiced multi-voice** (narrator + dedicated **Scripture voice** `puDRtQWF8NtQiPMJygTb` on the Luke 15:20 quote — was single-narrator). Re-synthed ~60s @ gentle **1.05x** narrator, alignment regen'd (force), **LOCKED**. narration.md reformatted to v2 `**[speaker]**` labels for parity.
+- **Full visual build:** 16-scene plan (LOCKED + cohesion PASS) → **10 own-world NBP stills + 1 reused cross** (`04_it-is-finished`) → all Kling-animated + Vision-verified by eye.
+- **10-moment punchy cut** (first cut was a slow 7-moment / 15s-hold / 2s-hero → backfilled scenes **5/9/16** + re-pinned). Then on user flags re-rendered **08** (bare-torso → **fully clothed** reverent embrace) + **10** (duplicate hand + defined god → **vague hooded shadow + clean hands**).
+- **Intimate/tender score** (user rejected the first reverent take as "wrong feel entirely" → regenerated **solo piano + cello + soft strings, no brass/organ**, −13dB). SFX bed (dusty-road wind → footsteps → dawn, **no choir**). Captions rebuilt clean.
+- **FINAL:** `C:/Users/sanjay/09_The_Father_Who_Ran_FINAL.mp4`. Clip-strips page: `C:/Users/sanjay/09_CLIPS_strips.html` (new `v2/_build_clip_strips.py`). Spend ≈ **$16** (over the ~$8 est. due to user-directed punch-up + 2 re-renders).
+
+### ═══ 🔴 GOTCHAS LOGGED (carry forward) ═══
+1. **`parables` series was MISSING from `data/series.json`** → visual runner crashed `Unknown series id: parables`. **FIXED: added a `parables` entry** (committed `db35b48`). Other parable episodes now build.
+2. **`add_music.py --script` MUST get a CLEAN spoken-text file, NOT `narration.md`.** The v2 narration.md (header + `**[speaker]**` labels) inflated the caption align (167→**224** words) and **jumbled the open**. Fix = write `narration.spoken.txt` (spoken lines only), pass THAT (167→167 exact). Shorts trap, sibling to [[veed-io-whisperx-longform-timing]].
+3. **Reuse engine force-matches passion/cross clips into own-world scenes** (Gaza rule): for #09 it auto-"reused" crucifixion clips into son-on-road / grace / embrace. **Reject all but topical-fit** — only the real cross scene (#11) reused a crucifixion clip; rest generated own-world.
+
+### ═══ V2 STATUS: done 20 · REMAINING 7 ═══ (open `C:/Users/sanjay/V2_STATUS.html`)
+- 🔵 **6 visual builds** (audio done): `19 Cliff of Rival Gods` · `24 The Answer Was a Gift` · `26 Jesus Walked Past the Pool` · `28 What Manner of Man` (storm) · `29 The Race He Could Never Win` · `31 The Light You Can Stand In`.
+- 🟣 **1 audio-first:** `23 The Prepared Belly` (Jonah) — ~$0.50 synth first.
+- **Next quick wins:** `31 The Light You Can Stand In` or `28 What Manner of Man`. Proven recipe (from #09): re-voice if single-narrator → /scene-plan → /stills (GATE 2) → /animate → /assemble (GATE 3, backfill to ~10 moments) → SFX (no choir) → score (clean spoken.txt for caption) → caption → copy FINAL → `python v2/scan_v2_status.py`.
+
+---
+
+## ⚡⚡⚡ LATEST HANDOFF — #03 PASSOVER LAMB FULLY DONE (2026-06-22, long-form) ⚡⚡⚡
 
 ### ═══ WHAT GOT DONE TODAY (long-form #03) ═══
 **#03 The Passover Lamb — FULLY DONE, full long-form pipeline, ~$33.**
