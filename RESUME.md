@@ -1,5 +1,32 @@
 # RESUME.md — start here next session
 
+## ⚡⚡ SHORT-FORM HANDOFF — #31 THE LIGHT YOU CAN STAND IN (2026-06-23, NEWEST short-form) — READ FIRST ⚡⚡
+
+> Separate track from the #04 long-form block just below (both current). This session = the SHORT-FORM #31 build.
+
+### ═══ ▶▶ DO FIRST TOMORROW — FINISH #31 (cut is DONE, only the finish remains) ═══
+The viral cut is built, reviewed, and LOCKED. **Remaining = the finish stage only:**
+1. **SFX bed** — write `sfx_pilots/build_31.py` (light/temple/stones ambience, dawn at the close; **NO choir pad** [[feedback-no-choir-pad-under-score]]).
+2. **Cinematic-orchestral score** — `sfx_pilots/add_music.py "<v1>" --prompt "<orchestral>" --regen --yes` (~$2 metered; write a "light of the world / I-am" recipe, full orchestral per [[feedback-cinematic-score-standard]]). **The ending-linger the user asked for is AUTOMATIC** — add_music's `outro` defaults to **2.5s**: it holds the last frame (the open-armed risen Christ) + rings the score out over the tail, so "where the guilty get to stand" lands on Him. Just run it.
+3. **Caption** — write `narration.spoken.txt` (CLEAN spoken lines only, per [[feedback-caption-clean-spoken-script]]) → `python -m veed_io.caption --video <sfx_music.mp4> --script narration.spoken.txt --style ivory`.
+4. Copy → `C:/Users/sanjay/31_The_Light_You_Can_Stand_In_FINAL.mp4` → `python v2/scan_v2_status.py`.
+- v1 folder: `C:/Users/sanjay/PycharmProjects/PythonProject1/jesus/narration/31 The Light You Can Stand In/v1`
+- Cut: `…/v1/assembly/viral_cut.mp4` (59.0s). Clip-strips: `C:/Users/sanjay/31_CLIPS_strips.html`.
+
+### ═══ WHAT GOT DONE (#31) ═══
+- **Audio** settled (2-voice narrator+jesus, 59.0s, 1.23x — user OK'd) → **LOCKED**. narration.md/tagged reformatted to v2 speaker-labels for parity.
+- **Scene plan** 16 scenes (John 8:12 "I am the Light"), thread = *the light that emptied the courtyard is the one you can stand in*; self-review + independent + cohesion all LOCKED.
+- **13-clip cut** (NBP Baroque), 12 body + risen-Christ hero **still** close (`ASSEMBLY_HERO_STILL=1` so it lands held on Christ, not panning to grave-cloths). Opens on the **mob hook** (a ring of accusers w/ raised stones around the cowering woman in the light). Christ beats = 4 distinct images: face → standing radiant → cross → risen.
+- **Heavy iteration on the clips (user-driven):** dropped the bland hand-hook → rebuilt as the mob/circle; re-rendered 06 + 14 as proper **viral edits** (were bland/dancing); **deleted 08** (nail-less cross) → replaced with a clean **catalogue cross w/ wounds** (`04_the-reach-of-the-cross`) at the "light of life" beat; dropped redundant 16 (double-face).
+- **Spend ≈ $19** (16 NBP stills + ~16 Kling incl. re-renders).
+
+### ═══ 🔧 ENGINE WORK THIS SESSION (committed; reusable for all shorts) ═══
+- **NEW `pipeline/clip_anim_qc.py`** — slices each clip into a FILMSTRIP + Vision-reviews the SEQUENCE for **wasted crops / "dancing" / off-subject endings / morph**; fail-closed `<clip>.animqc.json` + `_animqc_review.html`. Run: `python -m pipeline.clip_anim_qc "<v1>" [--scenes ...]`. Now a standard /animate step.
+- **`_hf_animate_short.py` — CURATED-ANCHOR viral gallery** (`_curate_anchors`): crops ONLY to expressive anchors (face/eyes/hands/woman/key-object), NEVER feet/fabric/floor/empty. `choose_anim_mode` → gallery for figures (push-in only for anchor-less plates). **LESSON: "dancing" = bad crop anchors; the fix is anchor curation, NOT a push-in (push-in is bland, user rejected it).** Memories: [[clip-anim-qc-and-mode]], [[library-lacks-living-christ]].
+- Skill `.claude/skills/animate/SKILL.md` updated with both.
+
+---
+
 ## ⚡⚡⚡ LATEST HANDOFF — #04 BRONZE SERPENT FULLY DONE (2026-06-23, long-form) — READ FIRST ⚡⚡⚡
 
 ### ═══ WHAT GOT DONE (long-form #04 The Bronze Serpent) ═══
