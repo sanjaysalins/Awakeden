@@ -1,0 +1,505 @@
+{
+ "format": "16:9 long-form deep-dive",
+ "episode": "The Bronze Serpent — Numbers 21 fulfilled in Christ (John 3:14)",
+ "audio": "narration.mp3 — 467.6s (natural pace, 4-voice); scene t[] tile the turn timeline",
+ "image_provider": "nbp (Nano Banana Pro, Baroque oil)",
+ "animation": {
+  "model": "veo3_1_lite",
+  "aspect": "16:9",
+  "duration": 8,
+  "note": "all crosses robed -> veo NSFW-safe; bronze serpent is STILL metal (never animate it)"
+ },
+ "fill_design": "ANIMATION-AWARE: the bronze serpent + every subject are FROZEN; only ambient (heat/dust/light/cloth) moves. boomerang scenes use a LOCKED camera; one-way pushes are forward_slow so they never reverse.",
+ "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork",
+ "rule": "the device is ONE thing lifted up: the bronze serpent raised on a pole (the likeness of the curse, look-and-live) is fulfilled in the Son of man lifted up on the cross (John 3:14); every quote's visual matches its narration cue; the cut CLOSES on the risen Christ (hero S21).",
+ "film_name": "Bronze_Serpent_16x9.mp4",
+ "style_tail": "no text, no legible writing, no modern or medieval or European dress (no tailored jackets, collars, buttons, lapels, hoods, pinafores), no modern tools, authentic ancient biblical-period setting and clothing, cinematic 16:9 widescreen composition",
+ "scenes": [
+  {
+   "id": 1,
+   "mvt": "M1 The Picture",
+   "t": [
+    0.0,
+    16.4
+   ],
+   "title": "A whole camp dying of snakebite (hook)",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, WIDE desolate tableau: a Bronze-Age Israelite wilderness camp (~1400 BC) of goat-hair tents in a sun-baked desert of rock and dust, people in simple undyed handwoven wool tunics and rough mantles, bare-headed or in plain cloth head-cloths, NO modern NO medieval NO European dress at harsh noon, several Israelites fallen and stricken on the hot ground among the tents, others kneeling over them in dread and grief, a few coppery-red desert serpents low among the rocks half-lost in shadow, kept small and peripheral, NOT a writhing mass and NOT the focus; the mood plague-stricken and hopeless under a vast bleached sky, restrained NOT gory, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "wind_desert_dry + distant_moan_low",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "heat-shimmer rising off the rock, fine dust drifting on the wind, tent cloth and robes stirring faintly",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 16.4
+  },
+  {
+   "id": 2,
+   "mvt": "M1 The Picture",
+   "t": [
+    16.4,
+    43.3
+   ],
+   "title": "Worn down, they despise the bread of heaven",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, DEEP unified composition: in the warm foreground a weary Bronze-Age Israelite wilderness camp (~1400 BC) of goat-hair tents in a sun-baked desert of rock and dust, people in simple undyed handwoven wool tunics and rough mantles, bare-headed or in plain cloth head-cloths, NO modern NO medieval NO European dress, gaunt faces hard with bitterness, a man turning away in contempt from pale flakes of manna scattered on the ground at dawn; in the midground the long dusty caravan of the wilderness journey trailing back toward distant barren hills; tents, water-skins and woven baskets around them; weary and resentful, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "wind_desert_dry + camp_murmur_faint",
+   "camera": "a very slow, steady cinematic push-in",
+   "atmos": "dawn light strengthening over the dust, manna flakes and robes stirring in a thin breeze, heat-haze",
+   "fill": "forward_slow",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": true,
+   "window_s": 26.9
+  },
+  {
+   "id": 3,
+   "mvt": "M1 The Picture",
+   "t": [
+    43.3,
+    53.8
+   ],
+   "title": "The LORD sent fiery serpents — and people died",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, ominous and weighty, restrained NOT gory: dusk falling over the Bronze-Age Israelite wilderness camp (~1400 BC) of goat-hair tents in a sun-baked desert of rock and dust, people in simple undyed handwoven wool tunics and rough mantles, bare-headed or in plain cloth head-cloths, NO modern NO medieval NO European dress, the ground itself seeming to turn against them — a few coppery-red desert serpents low among the rocks half-lost in shadow, kept small and peripheral, NOT a writhing mass and NOT the focus emerging from the rocks and tent-shadows, people drawing back in terror, one figure sinking to the sand clutching a bitten foot; cold blue shadow against the last red light, dread and judgment, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "wind_desert_dry + low_rumble_sub",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "the last red light fading, dust and sand sifting in the wind, robes and tent cloth stirring",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 10.5
+  },
+  {
+   "id": 4,
+   "mvt": "M2 The Problem",
+   "t": [
+    53.8,
+    63.5
+   ],
+   "title": "The venom is already inside",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, intimate close composition: a single bitten Israelite man lying in lamplit shadow inside a goat-hair tent, his face pale and sweat-sheened, one hand pressed to the dark swollen serpent-bite on his arm, his eyes open and afraid — the poison already in his blood, nothing he can do to stop it; undyed wool tunic, NO modern dress, deep Rembrandt shadow, tender and grave, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "tent_wind_low + breath_shallow",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "the low lamp flame wavering over his face, a thread of smoke rising, the tent cloth breathing in the wind",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 9.7
+  },
+  {
+   "id": 5,
+   "mvt": "M2 The Problem",
+   "t": [
+    63.5,
+    73.5
+   ],
+   "title": "They beg Moses: take the serpents away",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, DEEP composition: a crowd of desperate Bronze-Age Israelite wilderness camp (~1400 BC) of goat-hair tents in a sun-baked desert of rock and dust, people in simple undyed handwoven wool tunics and rough mantles, bare-headed or in plain cloth head-cloths, NO modern NO medieval NO European dress pressing toward Moses, a bearded elder in a plain mantle, their hands outstretched in pleading and confession, faces upturned and stricken; behind them the stricken camp in shadow; Moses listening grave and still; the people begging for the snakes to be taken away, reverent and urgent, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "crowd_plead_soft + wind_desert_dry",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "dust drifting through a shaft of hard light, robes and mantles stirring, heat-haze rising",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 10.0
+  },
+  {
+   "id": 27,
+   "mvt": "M2 The Problem",
+   "t": [
+    73.5,
+    103.2
+   ],
+   "title": "Their confession is real — but they reach outward",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, DEEP composition, grave: a crowd of stricken Bronze-Age Israelite wilderness camp (~1400 BC) of goat-hair tents in a sun-baked desert of rock and dust, people in simple undyed handwoven wool tunics and rough mantles, bare-headed or in plain cloth head-cloths, NO modern NO medieval NO European dress on their knees in confession, hands lifted and reaching OUTWARD into the dark toward the edge of the camp — begging for the danger outside to be taken away — while the unhealed serpent-bites still mark their arms; their plea aimed at their circumstances, not the poison already within; sober, weighty, no text, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "crowd_plead_soft + wind_night_low",
+   "camera": "a very slow, steady cinematic push-in",
+   "atmos": "dust and cold night air drifting through the lamplight over the kneeling crowd, robes and raised hands stirring faintly",
+   "fill": "forward_slow",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": true,
+   "window_s": 29.7
+  },
+  {
+   "id": 6,
+   "mvt": "M3 The Strange Detail",
+   "t": [
+    103.2,
+    111.9
+   ],
+   "title": "God does not do what they asked",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, solemn and hushed: Moses alone kneeling in a pool of pale light on the desert floor at the edge of the Bronze-Age Israelite wilderness camp (~1400 BC) of goat-hair tents in a sun-baked desert of rock and dust, people in simple undyed handwoven wool tunics and rough mantles, bare-headed or in plain cloth head-cloths, NO modern NO medieval NO European dress, head lifted as if listening, a great stillness and a strange holy weight around him, the camp dim and waiting behind; the command not yet seen, only awaited; reverent, expectant, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "wind_desert_low + drone_holy_faint",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "a shaft of pale light strengthening on Moses, fine dust adrift, his mantle stirring faintly",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 8.7
+  },
+  {
+   "id": 7,
+   "mvt": "M3 The Strange Detail",
+   "t": [
+    111.9,
+    121.1
+   ],
+   "title": "Make a fiery serpent, set it on a pole",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, close and weighty, firelit: at a low forge-fire in the desert night Moses' weathered hands lifting a STILL cast-bronze serpent sculpture — gleaming lifeless polished bronze metal coiled and fixed at the top of a tall rough wooden pole, plainly an inert metal artifact, NOT a living snake, NOT writhing, NOT moving — the freshly cast metal serpent gleaming dull gold in the firelight as it is bound to the head of the wooden pole; the cure being shaped in the very image of the curse; deep shadow, undyed wool sleeves, reverent and strange, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "forge_fire_low + hammer_faint",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "the forge-fire glowing and pulsing warm over the bronze, embers and smoke rising, the still metal catching the light",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 9.2
+  },
+  {
+   "id": 22,
+   "mvt": "M3 The Strange Detail",
+   "t": [
+    121.1,
+    143.9
+   ],
+   "title": "The cure is shaped like the curse",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, contemplative CLOSE study, NO wide landscape NO crowd: a STILL cast-bronze serpent sculpture — gleaming lifeless polished bronze metal coiled and fixed at the top of a tall rough wooden pole, plainly an inert metal artifact, NOT a living snake, NOT writhing, NOT moving filling much of the frame, the gleaming cast-bronze coils and the serpent's head catching a single shaft of warm gold light against deep shadow and a dim desert sky — the strange beauty of a cure shaped in the very image of the curse; reverent, weighty, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "wind_open_desert + drone_holy_faint",
+   "camera": "a very slow, steady cinematic push-in",
+   "atmos": "heat-haze and fine dust drifting slowly past the still bronze, the warm light gleaming and breathing across the metal — the bronze itself perfectly still",
+   "fill": "forward_slow",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": true,
+   "window_s": 22.8
+  },
+  {
+   "id": 8,
+   "mvt": "M3 The Strange Detail",
+   "t": [
+    143.9,
+    156.6
+   ],
+   "title": "The serpent lifted up on the pole (signature)",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, WIDE awe-struck tableau, the raised pole the heart of the frame: a STILL cast-bronze serpent sculpture — gleaming lifeless polished bronze metal coiled and fixed at the top of a tall rough wooden pole, plainly an inert metal artifact, NOT a living snake, NOT writhing, NOT moving raised HIGH against a vast open desert sky at golden hour, the tall pole standing over the Bronze-Age Israelite wilderness camp (~1400 BC) of goat-hair tents in a sun-baked desert of rock and dust, people in simple undyed handwoven wool tunics and rough mantles, bare-headed or in plain cloth head-cloths, NO modern NO medieval NO European dress, the gleaming bronze serpent silhouetted and catching the low gold light; small dim figures of the stricken below at the foot of the pole; the one thing lifted up for all to see, reverent and arresting, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "wind_open_desert + drone_holy_low",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "heat-haze and dust rising past the still bronze, low cloud drifting behind the pole, robes stirring far below — the bronze serpent itself perfectly still",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 12.7
+  },
+  {
+   "id": 9,
+   "mvt": "M3 The Strange Detail",
+   "t": [
+    156.6,
+    159.0
+   ],
+   "title": "Look, and live — a dying man lifts his eyes",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, intimate and decisive: a bitten Israelite collapsed on the desert ground in the foreground, weak and dying, slowly lifting his face and eyes UPWARD toward the off-frame lifted pole, one shaft of gold light falling on his upturned face the instant he looks; the cure costing him nothing but the turn of his eyes; undyed wool, deep shadow, tender and urgent, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "wind_desert_low + breath_relief_faint",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "the shaft of light strengthening on his face, fine dust drifting up through the beam, his mantle stirring",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 2.4
+  },
+  {
+   "id": 10,
+   "mvt": "M3 The Strange Detail",
+   "t": [
+    159.0,
+    171.5
+   ],
+   "title": "And Moses made a serpent of brass (the camp looks)",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, DEEP unified composition: across the whole Bronze-Age Israelite wilderness camp (~1400 BC) of goat-hair tents in a sun-baked desert of rock and dust, people in simple undyed handwoven wool tunics and rough mantles, bare-headed or in plain cloth head-cloths, NO modern NO medieval NO European dress at golden hour, scattered stricken people all turning and lifting their eyes toward the distant raised pole bearing a STILL cast-bronze serpent sculpture — gleaming lifeless polished bronze metal coiled and fixed at the top of a tall rough wooden pole, plainly an inert metal artifact, NOT a living snake, NOT writhing, NOT moving; some rising restored, some still reaching from the ground, the lifted bronze small but luminous in the far midground; one nation of the dying turning to look; reverent, hopeful, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "wind_open_desert + crowd_soft",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "golden dusk light deepening, dust and heat-haze drifting across the camp, robes and tents stirring in the wind",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 12.5
+  },
+  {
+   "id": 11,
+   "mvt": "M4 The Centuries-Early Match",
+   "t": [
+    171.5,
+    203.7
+   ],
+   "title": "Nicodemus comes to Jesus by night",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, intimate first-century Judea night interior: the living robed Christ seated in warm lamplight in quiet conversation with Nicodemus, an older bearded Pharisee in a plain mantle leaning in to listen; a single clay oil lamp between them, deep shadow all around, the city dark beyond a low stone window; reverent, searching, intimate, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "night_low + lamp_flame_soft",
+   "camera": "a very slow, steady cinematic push-in",
+   "atmos": "the oil lamp flame wavering between them, a thin thread of smoke rising, shadows breathing on the stone wall",
+   "fill": "forward_slow",
+   "jesus": true,
+   "jesus_variant": "ministry",
+   "directional": true,
+   "window_s": 32.2
+  },
+  {
+   "id": 23,
+   "mvt": "M4 The Centuries-Early Match",
+   "t": [
+    203.7,
+    220.0
+   ],
+   "title": "Not a preacher's picture — Jesus Himself",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, intimate reverent CLOSE of the living robed Christ in warm first-century lamplight, his face calm and certain, one open hand raised calmly near his chest in unhurried teaching — the hand anatomically correct with exactly five natural fingers, no fused, extra, elongated or distorted fingers — his steady eyes toward the listener, the One who Himself names the wilderness pole as a picture of His own cross; deep Rembrandt shadow behind, NO crowd, NO text, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "night_low + lamp_flame_soft",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "the lamplight wavering warm across his face, a thin thread of smoke rising, the shadow breathing gently behind him",
+   "fill": "boomerang",
+   "jesus": true,
+   "jesus_variant": "ministry",
+   "directional": false,
+   "window_s": 16.3
+  },
+  {
+   "id": 12,
+   "mvt": "M4 The Centuries-Early Match",
+   "t": [
+    220.0,
+    227.7
+   ],
+   "title": "Even so must the Son of man be lifted up",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, DEEP unified echo composition: on one side, half in shadow, a STILL cast-bronze serpent sculpture — gleaming lifeless polished bronze metal coiled and fixed at the top of a tall rough wooden pole, plainly an inert metal artifact, NOT a living snake, NOT writhing, NOT moving on its pole against a desert sky; on the other, lit by warm light, the robed Christ CRUCIFIED — both arms outstretched and NAILED to the crossbeam, wrists fastened to the wood, body hanging, head bowed, NOT standing NOT leaning on the cross, robed at the waist NOT bare, hands anatomically correct with five fingers against a darkening sky — the tall pole and the upright of the cross quietly rhyming, the serpent lifted up a thousand years before the Son of man lifted up; a serene reverent visual rhyme, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "wind_low + choir_distant_faint",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "warm light pulsing across the cross, heat-haze drifting past the still bronze, slow cloud, dust motes adrift",
+   "fill": "boomerang",
+   "jesus": true,
+   "jesus_variant": "passion",
+   "directional": false,
+   "window_s": 7.7
+  },
+  {
+   "id": 13,
+   "mvt": "M4 The Centuries-Early Match",
+   "t": [
+    227.7,
+    239.2
+   ],
+   "title": "Lifted up — signifying what death He should die",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, restrained WIDE cinematic tableau, NO foreground portrait: a hill outside the walls of first-century Jerusalem at the ninth hour seen wide and distant, the robed Christ CRUCIFIED — both arms outstretched and NAILED to the crossbeam, wrists fastened to the wood, body hanging, head bowed, NOT standing NOT leaning on the cross, robed at the waist NOT bare, hands anatomically correct with five fingers on the central cross on the crest as the dominant subject, silhouetted against a vast bruised darkening sky, cold shafts of storm-light breaking through cloud, the city dim below; sombre, reverent, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "wind_desolate + distant_city_low",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "storm cloud rolling slowly behind the cross, shafts of light shifting, dust and cold mist adrift",
+   "fill": "boomerang",
+   "jesus": true,
+   "jesus_variant": "passion",
+   "directional": false,
+   "window_s": 11.5
+  },
+  {
+   "id": 14,
+   "mvt": "M4 The Centuries-Early Match",
+   "t": [
+    239.2,
+    253.0
+   ],
+   "title": "For God so loved the world",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, luminous and tender, WIDE cinematic tableau, NO foreground figure NO portrait NO close-up person: a vast darkened world at the ninth hour — open wilderness and a distant first-century city under a great storm-dark sky — with broad warm shafts of golden light breaking through the heavy clouds and pouring down across the whole land onto a small distant cross on its far hill, the darkness giving way to a deep tender radiance, the love of God breaking over the whole world; reverent, hopeful, deep Rembrandt shadow at the edges, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "light_swell_low + choir_warm_soft",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "the shafts of golden light strengthening and breathing, fine dust drifting up through the beams, slow cloud",
+   "fill": "boomerang",
+   "jesus": true,
+   "jesus_variant": "passion",
+   "directional": false,
+   "window_s": 13.8
+  },
+  {
+   "id": 15,
+   "mvt": "M5 The Honest Objection",
+   "t": [
+    253.0,
+    274.9
+   ],
+   "title": "Hezekiah breaks the brazen serpent",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, weighty and resolute, first-century-earlier ancient Judah: a godly bearded king in a plain robe swinging a heavy stone maul to STRIKE and shatter an old bronze serpent-on-a-pole idol in a dim temple court, fragments of broken bronze flying, a thin haze of incense the people had wrongly burned to it drifting in the shadow; NO legible text anywhere; the relic smashed so none mistake the sign for the Saviour, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "stone_strike + incense_hiss_faint",
+   "camera": "a very slow, steady cinematic push-in",
+   "atmos": "incense smoke drifting and curling in the shafts of light, dust hanging in the air, a brazier flame wavering",
+   "fill": "forward_slow",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": true,
+   "window_s": 21.9
+  },
+  {
+   "id": 24,
+   "mvt": "M5 The Honest Objection",
+   "t": [
+    274.9,
+    289.9
+   ],
+   "title": "Looking was never magic — it was trust",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, sober and clear, DEEP composition: in a dim ancient stone temple court the shattered fragments of the broken bronze serpent lie scattered on the floor in shadow; above and beyond them a humble bare-headed Israelite turns his face away from the lifeless relic and lifts his eyes UPWARD into a single shaft of pale heavenly light — trust aimed where God told them to aim it, not at the metal; reverent, no legible text, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "lamp_flame_soft + low_drone",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "the shaft of light strengthening on his upturned face, fine dust and a wisp of incense smoke drifting through the beam",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 15.0
+  },
+  {
+   "id": 16,
+   "mvt": "M5 The Honest Objection",
+   "t": [
+    289.9,
+    316.4
+   ],
+   "title": "The likeness of the curse, lifted up",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, DEEP unified composition holding the two together: half in shadow a STILL cast-bronze serpent sculpture — gleaming lifeless polished bronze metal coiled and fixed at the top of a tall rough wooden pole, plainly an inert metal artifact, NOT a living snake, NOT writhing, NOT moving on its desert pole — the likeness of the very thing that was killing them; lit on the other side the robed Christ CRUCIFIED — both arms outstretched and NAILED to the crossbeam, wrists fastened to the wood, body hanging, head bowed, NOT standing NOT leaning on the cross, robed at the waist NOT bare, hands anatomically correct with five fingers, the One made a curse in our place hanging on the tree; the same shape lifted up, the serpent-image and the sinless Son in solemn rhyme; reverent, grave, worshipful, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "wind_low + drone_holy_faint",
+   "camera": "a very slow, steady cinematic push-in",
+   "atmos": "warm light pulsing across the cross, heat-haze past the still bronze, dust and slow cloud drifting",
+   "fill": "forward_slow",
+   "jesus": true,
+   "jesus_variant": "passion",
+   "directional": true,
+   "window_s": 26.5
+  },
+  {
+   "id": 17,
+   "mvt": "M5 The Honest Objection",
+   "t": [
+    316.4,
+    341.1
+   ],
+   "title": "Made a curse for us — on the tree",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, sombre and worshipful, three-quarter view: the robed Christ CRUCIFIED — both arms outstretched and NAILED to the crossbeam, wrists fastened to the wood, body hanging, head bowed, NOT standing NOT leaning on the cross, robed at the waist NOT bare, hands anatomically correct with five fingers seen against a vast dark sky, one shaft of warm light breaking across the bowed head and the nailed outstretched arms, the curse of the law fallen wholly on the lifted sinless One; deep Rembrandt shadow, reverent, restrained NOT graphic, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "wind_low + choir_distant_faint",
+   "camera": "a very slow, steady cinematic push-in",
+   "atmos": "warm light pulsing across the figure and the shadow, robes and dust stirring gently, slow cloud",
+   "fill": "forward_slow",
+   "jesus": true,
+   "jesus_variant": "passion",
+   "directional": true,
+   "window_s": 24.7
+  },
+  {
+   "id": 25,
+   "mvt": "M6 The Exchange",
+   "t": [
+    341.1,
+    366.1
+   ],
+   "title": "We are all bitten — the cure outside us",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, DEEP intimate composition, tender and grave: in the foreground a bitten dying Israelite on the desert ground, weak and unable to heal himself, his hand open and empty; far beyond and above him, small and luminous against the dark, the robed Christ CRUCIFIED — both arms outstretched and NAILED to the crossbeam, wrists fastened to the wood, body hanging, head bowed, NOT standing NOT leaning on the cross, robed at the waist NOT bare, hands anatomically correct with five fingers on its distant cross — the cure never inside the dying man but hanging entirely outside him; reverent, no text, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "low_drone + choir_distant_faint",
+   "camera": "a very slow, steady cinematic push-in",
+   "atmos": "fine dust drifting up through a shaft of light toward the distant cross, the dying man's mantle and the desert air stirring faintly",
+   "fill": "forward_slow",
+   "jesus": true,
+   "jesus_variant": "passion",
+   "directional": true,
+   "window_s": 25.0
+  },
+  {
+   "id": 18,
+   "mvt": "M6 The Exchange",
+   "t": [
+    366.1,
+    382.6
+   ],
+   "title": "The curse fell on the lifted One",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, intimate and grave, DEEP composition: in the foreground a bitten dying Israelite on the desert ground lifting his eyes; far beyond and above him, luminous against the dark, the robed Christ CRUCIFIED — both arms outstretched and NAILED to the crossbeam, wrists fastened to the wood, body hanging, head bowed, NOT standing NOT leaning on the cross, robed at the waist NOT bare, hands anatomically correct with five fingers — the curse the man could never neutralise fallen instead on the lifted Son, the cure entirely outside the dying man; tender, weighty, the exchange made plain, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "low_drone + choir_distant_faint",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "warm light strengthening on the distant cross, dust drifting up through the light, the man's mantle stirring",
+   "fill": "boomerang",
+   "jesus": true,
+   "jesus_variant": "passion",
+   "directional": false,
+   "window_s": 16.5
+  },
+  {
+   "id": 19,
+   "mvt": "M7 The Invitation",
+   "t": [
+    382.6,
+    412.3
+   ],
+   "title": "The cure was a look",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, intimate and kind: a weak dying Israelite, too weak to stand, lying back on the desert ground and simply lifting his eyes upward into a breaking shaft of warm light, his weathered face filling with relief — the one thing a dying man can still do; undyed wool, deep shadow giving way to light, tender and hopeful, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "wind_desert_low + light_swell_faint",
+   "camera": "a very slow, steady cinematic push-in",
+   "atmos": "the shaft of warm light strengthening on his face, fine dust drifting up through the beam, his robe stirring",
+   "fill": "forward_slow",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": true,
+   "window_s": 29.7
+  },
+  {
+   "id": 26,
+   "mvt": "M7 The Invitation",
+   "t": [
+    412.3,
+    436.6
+   ],
+   "title": "You do not have to climb, pay, or be strong",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, intimate and tender, ONE single unified close-up of an open EMPTY human hand filling the frame, NO face NO portrait NO figure: a weak open upturned human hand with nothing in it, the plain undyed cuff of a wool robe at the wrist, lifted gently into a breaking shaft of warm gold light, the hand anatomically correct with five fingers — nothing to offer, nothing to brew or earn, only the empty-handed reach of faith; deep shadow, no text, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "light_swell_low + wind_soft",
+   "camera": "a very slow, steady cinematic push-in",
+   "atmos": "the shaft of warm light strengthening across the open palm, fine dust drifting up slowly through the beam",
+   "fill": "forward_slow",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": true,
+   "window_s": 24.3
+  },
+  {
+   "id": 20,
+   "mvt": "M7 The Invitation",
+   "t": [
+    436.6,
+    448.5
+   ],
+   "title": "Whosoever — a nation turns its eyes up",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, DEEP unified composition, hopeful: across the whole Bronze-Age Israelite wilderness camp (~1400 BC) of goat-hair tents in a sun-baked desert of rock and dust, people in simple undyed handwoven wool tunics and rough mantles, bare-headed or in plain cloth head-cloths, NO modern NO medieval NO European dress at golden hour, many different people — young and old, strong and dying — all turning and lifting their eyes together toward the off-frame lifted One, faces catching the warm gold light as they look; the invitation as wide as 'whosoever'; reverent, welcoming, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "wind_open_desert + choir_warm_soft",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "golden light deepening across the upturned faces, dust and heat-haze drifting, robes stirring in the wind",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 11.9
+  },
+  {
+   "id": 21,
+   "mvt": "M7 The Invitation",
+   "t": [
+    448.5,
+    467.6
+   ],
+   "title": "Look to the One lifted up (HERO close)",
+   "subject_block": "a single seamless full-bleed Baroque oil painting, hard Caravaggio chiaroscuro, NOT smooth modern devotional art, full-bleed close hero: the risen glorified Christ filling the frame in warm radiant golden light, a dark-haired bearded man with a serene tender face turned toward the viewer, reaching one open pierced hand gently forward in welcome, a clear nail-wound scar in the centre of the open palm, the hand anatomically correct with five fingers, deep Rembrandt shadow behind; the gospel-pivot hero image that closes the film on the One lifted up, one continuous image, no frame, no panels, no border, no text",
+   "sfx": "choir_warm_soft + light_swell_low",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "the warm golden light glowing softly and steadily, the robe and hair stirring almost imperceptibly",
+   "fill": "boomerang",
+   "jesus": true,
+   "jesus_variant": "resurrection",
+   "directional": false,
+   "window_s": 19.1
+  }
+ ]
+}

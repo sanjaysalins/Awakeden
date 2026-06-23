@@ -1,37 +1,40 @@
 {
-  "_doc": "Central clip library (by reference). Build via ingest_clips.py. Spot-review the 'neutral' set before trusting cross-episode auto-reuse.",
-  "version": 1,
+  "_doc": "Central clip library (by reference). Build via ingest_clips.py. Spot-review the 'neutral' set before trusting cross-episode auto-reuse. Reuse must match aspect (9:16 shorts vs 16:9 long-form).",
+  "version": 2,
   "clips": [
     {
       "slug": "01_dice-in-the-dust",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/01_dice-in-the-dust.mp4",
       "title": "The Dice in the Dust",
       "episode": "01_The_Crucifixion_Foretold",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "dice-garments",
         "soldier"
       ],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
-      "slug": "02_david-at-the-lamp",
-      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/02_david-at-the-lamp.mp4",
-      "title": "David at the Lamp",
+      "slug": "02_it-is-finished",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/02_it-is-finished.mp4",
+      "title": "It Is Finished",
       "episode": "01_The_Crucifixion_Foretold",
-      "duration": 10.04,
-      "tags": [],
-      "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross"
+      ],
+      "scope": "neutral",
+      "jesus_variant": null
     },
     {
       "slug": "03_a-death-not-his-own",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/03_a-death-not-his-own.mp4",
       "title": "A Death Not His Own",
       "episode": "01_The_Crucifixion_Foretold",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "wounded-body",
@@ -40,39 +43,42 @@
         "soldier"
       ],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
-      "slug": "04_the-scroll-line",
-      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/04_the-scroll-line.mp4",
-      "title": "The Line, Centuries Early",
+      "slug": "04_looking-down-in-love",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/04_looking-down-in-love.mp4",
+      "title": "Looking Down In Love",
       "episode": "01_The_Crucifixion_Foretold",
-      "duration": 10.04,
-      "tags": [],
-      "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross",
+        "christ-face"
+      ],
+      "scope": "neutral",
+      "jesus_variant": null
     },
     {
       "slug": "05_the-seamless-coat",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/05_the-seamless-coat.mp4",
       "title": "The Coat They Would Not Tear",
       "episode": "01_The_Crucifixion_Foretold",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "dice-garments",
         "soldier"
       ],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "06_soldiers-cast-lots",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/06_soldiers-cast-lots.mp4",
       "title": "Cast Lots at the Cross",
       "episode": "01_The_Crucifixion_Foretold",
+      "aspect": "9:16",
       "duration": 10.04,
       "tags": [
         "cross",
@@ -80,14 +86,14 @@
         "soldier"
       ],
       "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "07_the-cross-foretold",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/07_the-cross-foretold.mp4",
       "title": "The Cross, Foretold",
       "episode": "01_The_Crucifixion_Foretold",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
@@ -95,40 +101,41 @@
         "soldier"
       ],
       "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
-      "slug": "08_the-execution-foretold",
-      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/08_the-execution-foretold.mp4",
-      "title": "The Whole Execution, Written Early",
+      "slug": "08_hung-by-the-arms",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/08_hung-by-the-arms.mp4",
+      "title": "Hung By The Arms",
       "episode": "01_The_Crucifixion_Foretold",
+      "aspect": "9:16",
       "duration": 10.04,
       "tags": [
-        "wounded-body"
+        "cross",
+        "dice-garments"
       ],
-      "scope": "neutral",
-      "jesus_variant": null,
-      "preferred": false
+      "scope": "specific",
+      "jesus_variant": null
     },
     {
       "slug": "09_stripped-garments-heap",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/09_stripped-garments-heap.mp4",
       "title": "A Life Down to a Pile of Cloth",
       "episode": "01_The_Crucifixion_Foretold",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "dice-garments"
       ],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "10_the-plan-not-accident",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/10_the-plan-not-accident.mp4",
       "title": "No Accident - the Plan",
       "episode": "01_The_Crucifixion_Foretold",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
@@ -137,43 +144,57 @@
         "soldier"
       ],
       "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "11_a-thousand-years-apart",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/11_a-thousand-years-apart.mp4",
+      "title": "A Thousand Years Apart",
+      "episode": "01_The_Crucifixion_Foretold",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross",
+        "dice-garments",
+        "soldier"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
     },
     {
       "slug": "12_dice-macro",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/12_dice-macro.mp4",
       "title": "Chance Rolls Out a Certainty",
       "episode": "01_The_Crucifixion_Foretold",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "dice-garments",
         "soldier"
       ],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "13_his-name-is-jesus",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/13_his-name-is-jesus.mp4",
       "title": "His Name Is Jesus",
       "episode": "01_The_Crucifixion_Foretold",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
         "christ-face"
       ],
       "scope": "neutral",
-      "jesus_variant": "passion",
-      "preferred": true,
-      "fullres_confirmed": "2026-06-16: clean (no garbled titulus, sound anatomy, reverent)"
+      "jesus_variant": "passion"
     },
     {
       "slug": "14_laying-down-his-life",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/14_laying-down-his-life.mp4",
       "title": "Laying Down His Life",
       "episode": "01_The_Crucifixion_Foretold",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
@@ -181,95 +202,161 @@
         "soldier"
       ],
       "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "15_crushed-in-your-place",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/15_crushed-in-your-place.mp4",
+      "title": "Crushed In Your Place",
+      "episode": "01_The_Crucifixion_Foretold",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross"
+      ],
+      "scope": "neutral",
+      "jesus_variant": "passion"
     },
     {
       "slug": "01_the-shaking-heads",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/01_the-shaking-heads.mp4",
       "title": "The Shaking Heads",
       "episode": "02_The_Mockers_Words",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
         "mockers"
       ],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "02_david-records-the-taunt",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/02_david-records-the-taunt.mp4",
       "title": "David Records the Taunt",
       "episode": "02_The_Mockers_Words",
-      "duration": 10.04,
+      "aspect": "9:16",
+      "duration": 5.04,
       "tags": [
         "cross"
       ],
-      "scope": "specific",
-      "jesus_variant": null,
-      "review": "reclassified neutral->specific on spot-review (story-bound: David/writing/diptych/mockers/scroll/book)",
-      "preferred": false
+      "scope": "neutral",
+      "jesus_variant": null
     },
     {
       "slug": "03_let-him-deliver-him",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/03_let-him-deliver-him.mp4",
       "title": "Let Him Deliver Him",
       "episode": "02_The_Mockers_Words",
-      "duration": 10.04,
+      "aspect": "9:16",
+      "duration": 5.04,
       "tags": [],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "04_the-crowd-at-the-cross",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/04_the-crowd-at-the-cross.mp4",
       "title": "The Crowd at the Cross",
       "episode": "02_The_Mockers_Words",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
         "mockers"
       ],
       "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "05_the-leaders-jeer",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/05_the-leaders-jeer.mp4",
+      "title": "The Religious Leaders Jeer",
+      "episode": "02_The_Mockers_Words",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross",
+        "mockers",
+        "rulers"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "06_shot-out-the-lip",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/06_shot-out-the-lip.mp4",
+      "title": "They Shoot Out the Lip",
+      "episode": "02_The_Mockers_Words",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "mockers"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "07_the-jabbing-hands",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/07_the-jabbing-hands.mp4",
+      "title": "The Religious Leaders Sneer",
+      "episode": "02_The_Mockers_Words",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "mockers"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
     },
     {
       "slug": "08_he-had-every-power",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/08_he-had-every-power.mp4",
       "title": "He Had Every Power",
       "episode": "02_The_Mockers_Words",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross"
+      ],
+      "scope": "neutral",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "09_twelve-legions-restrained",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/09_twelve-legions-restrained.mp4",
+      "title": "Twelve Legions Restrained",
+      "episode": "02_The_Mockers_Words",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
-        "mockers"
+        "nailed-hand"
       ],
-      "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
+      "scope": "neutral",
+      "jesus_variant": "passion"
     },
     {
       "slug": "10_looking-down-in-love",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/10_looking-down-in-love.mp4",
       "title": "Looking Down in Love",
       "episode": "02_The_Mockers_Words",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
         "christ-face"
       ],
       "scope": "neutral",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "11_he-chose-to-stay",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/11_he-chose-to-stay.mp4",
       "title": "He Chose to Stay",
       "episode": "02_The_Mockers_Words",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
@@ -277,80 +364,106 @@
         "dice-garments"
       ],
       "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "12_a-thousand-years-apart",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/12_a-thousand-years-apart.mp4",
       "title": "A Thousand Years Apart",
       "episode": "02_The_Mockers_Words",
+      "aspect": "9:16",
       "duration": 10.04,
       "tags": [
         "cross"
       ],
+      "scope": "neutral",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "13_the-silent-king",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/13_the-silent-king.mp4",
+      "title": "The Mockers and the Silent King",
+      "episode": "02_The_Mockers_Words",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross",
+        "mockers"
+      ],
       "scope": "specific",
-      "jesus_variant": "passion",
-      "review": "reclassified neutral->specific on spot-review (story-bound: David/writing/diptych/mockers/scroll/book)",
-      "preferred": false
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "14_the-hand-that-would-not-pull-free",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/02_The_Mockers_Words/visual/nbp/14_the-hand-that-would-not-pull-free.mp4",
+      "title": "The Hand That Would Not Pull Free",
+      "episode": "02_The_Mockers_Words",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross",
+        "nailed-hand"
+      ],
+      "scope": "neutral",
+      "jesus_variant": "passion"
     },
     {
       "slug": "01_the-cry",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/01_the-cry.mp4",
       "title": "The Cry",
       "episode": "03_The_Forsaken_Cry",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
         "christ-face"
       ],
       "scope": "neutral",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "02_davids-forsaken-psalm",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/02_davids-forsaken-psalm.mp4",
       "title": "David's Forsaken Psalm",
       "episode": "03_The_Forsaken_Cry",
-      "duration": 10.04,
+      "aspect": "9:16",
+      "duration": 5.04,
       "tags": [
         "cross"
       ],
-      "scope": "specific",
-      "jesus_variant": null,
-      "review": "reclassified neutral->specific on spot-review (story-bound: David/writing/diptych/mockers/scroll/book)",
-      "preferred": false
+      "scope": "neutral",
+      "jesus_variant": null
     },
     {
       "slug": "03_the-first-line",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/03_the-first-line.mp4",
       "title": "The First Line",
       "episode": "03_The_Forsaken_Cry",
+      "aspect": "9:16",
       "duration": 10.04,
       "tags": [],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "04_the-ninth-hour",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/04_the-ninth-hour.mp4",
       "title": "The Ninth Hour",
       "episode": "03_The_Forsaken_Cry",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross"
       ],
       "scope": "neutral",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "05_my-god-my-god",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/05_my-god-my-god.mp4",
       "title": "My God, My God",
       "episode": "03_The_Forsaken_Cry",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
@@ -358,41 +471,40 @@
         "mourners"
       ],
       "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "06_darkness-over-the-land",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/06_darkness-over-the-land.mp4",
       "title": "Darkness Over the Land",
       "episode": "03_The_Forsaken_Cry",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross"
       ],
       "scope": "neutral",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "07_the-same-words",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/07_the-same-words.mp4",
       "title": "The Same Words",
       "episode": "03_The_Forsaken_Cry",
+      "aspect": "9:16",
       "duration": 10.04,
       "tags": [
         "cross"
       ],
-      "scope": "specific",
-      "jesus_variant": null,
-      "review": "reclassified neutral->specific on spot-review (story-bound: David/writing/diptych/mockers/scroll/book)",
-      "preferred": false
+      "scope": "neutral",
+      "jesus_variant": null
     },
     {
       "slug": "08_still-my-god",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/08_still-my-god.mp4",
       "title": "Still 'My God'",
       "episode": "03_The_Forsaken_Cry",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
@@ -400,27 +512,27 @@
         "mourners"
       ],
       "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "09_bearing-the-forsaking",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/09_bearing-the-forsaking.mp4",
       "title": "Bearing the Forsaking",
       "episode": "03_The_Forsaken_Cry",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross"
       ],
       "scope": "neutral",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "10_so-you-never-will-be",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/10_so-you-never-will-be.mp4",
       "title": "So You Never Will Be",
       "episode": "03_The_Forsaken_Cry",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
@@ -428,88 +540,89 @@
         "mourners"
       ],
       "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "11_the-way-opened-from-the-dark",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/11_the-way-opened-from-the-dark.mp4",
       "title": "The Way Opened from the Dark",
       "episode": "03_The_Forsaken_Cry",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
         "dawn-cross"
       ],
       "scope": "neutral",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "12_a-thousand-years-apart",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/12_a-thousand-years-apart.mp4",
       "title": "A Thousand Years Apart",
       "episode": "03_The_Forsaken_Cry",
-      "duration": 10.04,
+      "aspect": "9:16",
+      "duration": 5.04,
       "tags": [
         "cross"
       ],
-      "scope": "specific",
-      "jesus_variant": "passion",
-      "review": "reclassified neutral->specific on spot-review (story-bound: David/writing/diptych/mockers/scroll/book)",
-      "preferred": false
+      "scope": "neutral",
+      "jesus_variant": "passion"
     },
     {
       "slug": "13_however-far-youve-run",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/13_however-far-youve-run.mp4",
       "title": "However Far You've Run",
       "episode": "03_The_Forsaken_Cry",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "01_the-empty-tomb",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/01_the-empty-tomb.mp4",
       "title": "The Empty Tomb",
       "episode": "04_Declared_To_The_Brethren",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "tomb"
       ],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "02_the-psalm-turns",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/02_the-psalm-turns.mp4",
       "title": "The Psalm Turns",
       "episode": "04_Declared_To_The_Brethren",
-      "duration": 10.04,
+      "aspect": "9:16",
+      "duration": 5.04,
       "tags": [],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
-      "slug": "03_i-will-declare-thy-name",
-      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/03_i-will-declare-thy-name.mp4",
+      "slug": "03_risen-christ-proclaiming",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/03_risen-christ-proclaiming.mp4",
       "title": "I Will Declare Thy Name",
       "episode": "04_Declared_To_The_Brethren",
-      "duration": 10.04,
-      "tags": [],
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "risen"
+      ],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": "resurrection"
     },
     {
       "slug": "04_the-risen-christ",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/04_the-risen-christ.mp4",
       "title": "The Risen Christ",
       "episode": "04_Declared_To_The_Brethren",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "dice-garments",
@@ -517,542 +630,619 @@
         "risen"
       ],
       "scope": "specific",
-      "jesus_variant": "resurrection",
-      "preferred": false
+      "jesus_variant": "resurrection"
     },
     {
       "slug": "05_among-the-brethren",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/05_among-the-brethren.mp4",
       "title": "Among the Brethren",
       "episode": "04_Declared_To_The_Brethren",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
         "risen"
       ],
       "scope": "specific",
-      "jesus_variant": "resurrection",
-      "preferred": false
+      "jesus_variant": "resurrection"
     },
     {
       "slug": "06_the-living-face",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/06_the-living-face.mp4",
       "title": "The Living Face",
       "episode": "04_Declared_To_The_Brethren",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "christ-face",
         "risen"
       ],
       "scope": "specific",
-      "jesus_variant": "resurrection",
-      "preferred": false
+      "jesus_variant": "resurrection"
     },
     {
       "slug": "07_hebrews-names-him",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/07_hebrews-names-him.mp4",
       "title": "Hebrews Names Him",
       "episode": "04_Declared_To_The_Brethren",
-      "duration": 10.04,
+      "aspect": "9:16",
+      "duration": 5.04,
       "tags": [],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "08_not-ashamed",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/08_not-ashamed.mp4",
       "title": "Not Ashamed to Call Them Brethren",
       "episode": "04_Declared_To_The_Brethren",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "wounds",
         "risen"
       ],
       "scope": "specific",
-      "jesus_variant": "resurrection",
-      "preferred": false
+      "jesus_variant": "resurrection"
     },
     {
       "slug": "09_the-wounded-hand-on-the-shoulder",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/09_the-wounded-hand-on-the-shoulder.mp4",
       "title": "The Wounded Hand on the Shoulder",
       "episode": "04_Declared_To_The_Brethren",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "wounds",
         "risen"
       ],
       "scope": "specific",
-      "jesus_variant": "resurrection",
-      "preferred": false
+      "jesus_variant": "resurrection"
     },
     {
       "slug": "10_calling-you-in",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/10_calling-you-in.mp4",
       "title": "Calling You In",
       "episode": "04_Declared_To_The_Brethren",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "risen"
       ],
       "scope": "specific",
-      "jesus_variant": "resurrection",
-      "preferred": false
+      "jesus_variant": "resurrection"
     },
     {
       "slug": "11_the-invitation-face",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/11_the-invitation-face.mp4",
       "title": "The Invitation",
       "episode": "04_Declared_To_The_Brethren",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "risen"
       ],
       "scope": "specific",
-      "jesus_variant": "resurrection",
-      "preferred": false
+      "jesus_variant": "resurrection"
     },
     {
-      "slug": "12_a-thousand-years-apart",
-      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/12_a-thousand-years-apart.mp4",
+      "slug": "12_the-brethren-rejoicing",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/12_the-brethren-rejoicing.mp4",
       "title": "A Thousand Years Apart",
       "episode": "04_Declared_To_The_Brethren",
-      "duration": 10.04,
+      "aspect": "9:16",
+      "duration": 5.04,
       "tags": [
-        "risen"
+        "risen",
+        "mourners"
       ],
       "scope": "specific",
-      "jesus_variant": "resurrection",
-      "preferred": false
+      "jesus_variant": "resurrection"
     },
     {
       "slug": "13_welcomed-into-the-family",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/13_welcomed-into-the-family.mp4",
       "title": "Welcomed into the Family",
       "episode": "04_Declared_To_The_Brethren",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "risen"
       ],
       "scope": "specific",
-      "jesus_variant": "resurrection",
-      "preferred": false
+      "jesus_variant": "resurrection"
     },
     {
       "slug": "14_the-scarred-hands-in-praise",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/14_the-scarred-hands-in-praise.mp4",
       "title": "The Scarred Hands in Praise",
       "episode": "04_Declared_To_The_Brethren",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "risen"
       ],
       "scope": "specific",
-      "jesus_variant": "resurrection",
-      "preferred": false
+      "jesus_variant": "resurrection"
     },
     {
       "slug": "01_the-psalms-last-line",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/01_the-psalms-last-line.mp4",
       "title": "The Psalm's Last Line",
       "episode": "05_He_Hath_Done_This",
+      "aspect": "9:16",
       "duration": 10.04,
       "tags": [],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "02_a-people-not-yet-born",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/02_a-people-not-yet-born.mp4",
       "title": "A People Not Yet Born",
       "episode": "05_He_Hath_Done_This",
+      "aspect": "9:16",
       "duration": 10.04,
       "tags": [
         "rulers"
       ],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "03_the-fingertip-on-the-final-word",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/03_the-fingertip-on-the-final-word.mp4",
       "title": "The Fingertip on the Final Word",
       "episode": "05_He_Hath_Done_This",
+      "aspect": "9:16",
       "duration": 10.04,
       "tags": [],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "04_it-is-finished",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/04_it-is-finished.mp4",
       "title": "It Is Finished",
       "episode": "05_He_Hath_Done_This",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross"
       ],
       "scope": "neutral",
-      "jesus_variant": "passion",
-      "preferred": true,
-      "fullres_confirmed": "2026-06-16: clean (no garbled titulus, sound anatomy, reverent)"
+      "jesus_variant": "passion"
     },
     {
       "slug": "06_a-thousand-years-apart",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/06_a-thousand-years-apart.mp4",
       "title": "A Thousand Years Apart",
       "episode": "05_He_Hath_Done_This",
+      "aspect": "9:16",
       "duration": 10.04,
       "tags": [
         "rulers"
       ],
       "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "07_the-bowed-head",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/07_the-bowed-head.mp4",
       "title": "The Bowed Head",
       "episode": "05_He_Hath_Done_This",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross"
       ],
       "scope": "neutral",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "08_the-torn-veil",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/08_the-torn-veil.mp4",
       "title": "The Torn Veil",
       "episode": "05_He_Hath_Done_This",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "09_the-day-is-done",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/09_the-day-is-done.mp4",
       "title": "The Day Is Done",
       "episode": "05_He_Hath_Done_This",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "10_hands-at-rest",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/10_hands-at-rest.mp4",
       "title": "Hands at Rest",
       "episode": "05_He_Hath_Done_This",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "dice-garments"
       ],
       "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
-    },
-    {
-      "slug": "11_the-finished-work",
-      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/11_the-finished-work.mp4",
-      "title": "The Finished Work",
-      "episode": "05_He_Hath_Done_This",
-      "duration": 5.04,
-      "tags": [
-        "cross"
-      ],
-      "scope": "neutral",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "12_nothing-left-to-carry",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/12_nothing-left-to-carry.mp4",
       "title": "Nothing Left to Carry",
       "episode": "05_He_Hath_Done_This",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "13_the-open-door-home",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/13_the-open-door-home.mp4",
       "title": "The Open Door Home",
       "episode": "05_He_Hath_Done_This",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
-      "slug": "14_the-one-who-said-it-is-done",
-      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/14_the-one-who-said-it-is-done.mp4",
-      "title": "The One Who Said It Is Done",
+      "slug": "15_finished-at-the-cross",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/15_finished-at-the-cross.mp4",
+      "title": "Finished At The Cross",
       "episode": "05_He_Hath_Done_This",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
         "dawn-cross"
       ],
       "scope": "neutral",
-      "jesus_variant": null,
-      "preferred": true,
-      "fullres_confirmed": "2026-06-16: clean (no garbled titulus, sound anatomy, reverent)"
+      "jesus_variant": null
+    },
+    {
+      "slug": "16_his-name-is-jesus",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/16_his-name-is-jesus.mp4",
+      "title": "His Name Is Jesus",
+      "episode": "05_He_Hath_Done_This",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross"
+      ],
+      "scope": "neutral",
+      "jesus_variant": null
+    },
+    {
+      "slug": "17_come-to-him",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/17_come-to-him.mp4",
+      "title": "Come To Him",
+      "episode": "05_He_Hath_Done_This",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross"
+      ],
+      "scope": "neutral",
+      "jesus_variant": null
+    },
+    {
+      "slug": "18_the-way-opened-from-the-dark",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/18_the-way-opened-from-the-dark.mp4",
+      "title": "The Way Opened From The Dark",
+      "episode": "05_He_Hath_Done_This",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross"
+      ],
+      "scope": "neutral",
+      "jesus_variant": null
+    },
+    {
+      "slug": "19_looking-down-in-love",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/19_looking-down-in-love.mp4",
+      "title": "Looking Down In Love",
+      "episode": "05_He_Hath_Done_This",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross"
+      ],
+      "scope": "neutral",
+      "jesus_variant": null
     },
     {
       "slug": "01_one-man-alone",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/01_one-man-alone.mp4",
       "title": "One Man, Alone",
       "episode": "06_The_Ends_Of_The_Earth",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross"
       ],
       "scope": "neutral",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "02_the-song-opens-its-arms",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/02_the-song-opens-its-arms.mp4",
       "title": "The Song Opens Its Arms",
       "episode": "06_The_Ends_Of_The_Earth",
+      "aspect": "9:16",
       "duration": 10.04,
       "tags": [],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "03_all-the-ends-of-the-world",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/03_all-the-ends-of-the-world.mp4",
       "title": "All the Ends of the World",
       "episode": "06_The_Ends_Of_The_Earth",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross"
       ],
       "scope": "neutral",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "04_the-reach-of-the-cross",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/04_the-reach-of-the-cross.mp4",
       "title": "The Reach of the Cross",
       "episode": "06_The_Ends_Of_The_Earth",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
         "dawn-cross"
       ],
       "scope": "neutral",
-      "jesus_variant": "passion",
-      "preferred": true,
-      "fullres_confirmed": "2026-06-16: clean (no garbled titulus, sound anatomy, reverent)"
+      "jesus_variant": "passion"
     },
     {
       "slug": "05_one-corner-of-the-empire",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/05_one-corner-of-the-empire.mp4",
       "title": "One Corner of the Empire",
       "episode": "06_The_Ends_Of_The_Earth",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "soldier"
       ],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "06_the-gospel-goes-out",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/06_the-gospel-goes-out.mp4",
       "title": "The Gospel Goes Out",
       "episode": "06_The_Ends_Of_The_Earth",
+      "aspect": "9:16",
       "duration": 10.04,
       "tags": [],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "07_in-thee-all-nations-blessed",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/07_in-thee-all-nations-blessed.mp4",
       "title": "In Thee All Nations Blessed",
       "episode": "06_The_Ends_Of_The_Earth",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "08_kindreds-of-the-nations",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/08_kindreds-of-the-nations.mp4",
       "title": "Kindreds of the Nations",
       "episode": "06_The_Ends_Of_The_Earth",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "09_a-light-to-the-gentiles",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/09_a-light-to-the-gentiles.mp4",
       "title": "A Light to the Gentiles",
       "episode": "06_The_Ends_Of_The_Earth",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "10_the-empty-tomb",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/10_the-empty-tomb.mp4",
       "title": "The Empty Tomb",
       "episode": "06_The_Ends_Of_The_Earth",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "tomb"
       ],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "11_nation-after-nation",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/11_nation-after-nation.mp4",
       "title": "Nation After Nation",
       "episode": "06_The_Ends_Of_The_Earth",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "12_wherever-you-are",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/12_wherever-you-are.mp4",
       "title": "Wherever You Are",
       "episode": "06_The_Ends_Of_The_Earth",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "13_room-to-turn",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/13_room-to-turn.mp4",
       "title": "Room to Turn",
       "episode": "06_The_Ends_Of_The_Earth",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross"
       ],
       "scope": "neutral",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "14_the-whole-earth-at-dawn",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/14_the-whole-earth-at-dawn.mp4",
       "title": "The Whole Earth at Dawn",
       "episode": "06_The_Ends_Of_The_Earth",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross"
       ],
       "scope": "neutral",
-      "jesus_variant": null,
-      "preferred": true,
-      "fullres_confirmed": "2026-06-16: clean (no garbled titulus, sound anatomy, reverent)"
+      "jesus_variant": null
+    },
+    {
+      "slug": "15_among-the-brethren",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/15_among-the-brethren.mp4",
+      "title": "Among the Brethren",
+      "episode": "06_The_Ends_Of_The_Earth",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "16_not-ashamed-to-call-them-brethren",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/16_not-ashamed-to-call-them-brethren.mp4",
+      "title": "Not Ashamed to Call Them Brethren",
+      "episode": "06_The_Ends_Of_The_Earth",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "17_the-way-opened-from-the-dark",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/17_the-way-opened-from-the-dark.mp4",
+      "title": "The Way Opened from the Dark",
+      "episode": "06_The_Ends_Of_The_Earth",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "18_so-you-never-will-be",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/18_so-you-never-will-be.mp4",
+      "title": "So You Never Will Be",
+      "episode": "06_The_Ends_Of_The_Earth",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "19_his-name-is-jesus",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/19_his-name-is-jesus.mp4",
+      "title": "His Name Is Jesus",
+      "episode": "06_The_Ends_Of_The_Earth",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [],
+      "scope": "specific",
+      "jesus_variant": null
     },
     {
       "slug": "01_out-of-joint",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/01_out-of-joint.mp4",
       "title": "Out of Joint",
       "episode": "07_The_Body_Foretold",
+      "aspect": "9:16",
       "duration": 10.04,
       "tags": [
         "cross"
       ],
       "scope": "neutral",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "02_the-king-who-wrote-it",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/02_the-king-who-wrote-it.mp4",
       "title": "The King Who Wrote It",
       "episode": "07_The_Body_Foretold",
+      "aspect": "9:16",
       "duration": 10.04,
       "tags": [],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "03_poured-out-like-water",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/03_poured-out-like-water.mp4",
       "title": "Poured Out Like Water",
       "episode": "07_The_Body_Foretold",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
         "wounded-body"
       ],
       "scope": "neutral",
-      "jesus_variant": "passion",
-      "preferred": false
-    },
-    {
-      "slug": "04_crushed-in-your-place",
-      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/04_crushed-in-your-place.mp4",
-      "title": "Crushed in Your Place",
-      "episode": "07_The_Body_Foretold",
-      "duration": 5.04,
-      "tags": [
-        "cross",
-        "dice-garments"
-      ],
-      "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "05_i-may-tell-all-my-bones",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/05_i-may-tell-all-my-bones.mp4",
       "title": "I May Tell All My Bones",
       "episode": "07_The_Body_Foretold",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross"
       ],
       "scope": "neutral",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "06_they-look-and-stare",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/06_they-look-and-stare.mp4",
       "title": "They Look and Stare",
       "episode": "07_The_Body_Foretold",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "mockers",
@@ -1061,28 +1251,28 @@
         "mourners"
       ],
       "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "07_hung-by-the-arms",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/07_hung-by-the-arms.mp4",
       "title": "Hung by the Arms",
       "episode": "07_The_Body_Foretold",
-      "duration": 4.27,
+      "aspect": "9:16",
+      "duration": 10.04,
       "tags": [
         "cross",
         "nailed-hand"
       ],
       "scope": "neutral",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "08_whom-they-pierced",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/08_whom-they-pierced.mp4",
       "title": "Whom They Pierced",
       "episode": "07_The_Body_Foretold",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
@@ -1090,173 +1280,220 @@
         "mourners"
       ],
       "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
-    },
-    {
-      "slug": "09_a-thousand-years-apart",
-      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/09_a-thousand-years-apart.mp4",
-      "title": "A Thousand Years Apart",
-      "episode": "07_The_Body_Foretold",
-      "duration": 10.04,
-      "tags": [
-        "cross"
-      ],
-      "scope": "specific",
-      "jesus_variant": "passion",
-      "review": "reclassified neutral->specific on spot-review (story-bound: David/writing/diptych/mockers/scroll/book)",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "10_wounded-for-us",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/10_wounded-for-us.mp4",
       "title": "Wounded for Us",
       "episode": "07_The_Body_Foretold",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "wounds",
         "dice-garments"
       ],
       "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "12_crushed-in-your-place-unified",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/12_crushed-in-your-place-unified.mp4",
       "title": "Crushed So Another Goes Free",
       "episode": "07_The_Body_Foretold",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross"
       ],
       "scope": "neutral",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "13_to-bring-you-home",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/13_to-bring-you-home.mp4",
       "title": "To Bring You Home",
       "episode": "07_The_Body_Foretold",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "14_come-to-him",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/14_come-to-him.mp4",
       "title": "Come to Him",
       "episode": "07_The_Body_Foretold",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
         "dawn-cross"
       ],
       "scope": "neutral",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "16_the-whole-execution-written-early",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/16_the-whole-execution-written-early.mp4",
+      "title": "The Whole Execution Written Early",
+      "episode": "07_The_Body_Foretold",
+      "aspect": "9:16",
+      "duration": 10.04,
+      "tags": [],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "17_his-name-is-jesus",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/17_his-name-is-jesus.mp4",
+      "title": "His Name Is Jesus",
+      "episode": "07_The_Body_Foretold",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross"
+      ],
+      "scope": "neutral",
+      "jesus_variant": null
+    },
+    {
+      "slug": "18_the-way-opened-from-the-dark",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/18_the-way-opened-from-the-dark.mp4",
+      "title": "The Way Opened From The Dark",
+      "episode": "07_The_Body_Foretold",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross"
+      ],
+      "scope": "neutral",
+      "jesus_variant": null
+    },
+    {
+      "slug": "19_wounded-for-our-transgressions",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/19_wounded-for-our-transgressions.mp4",
+      "title": "Wounded For Our Transgressions",
+      "episode": "07_The_Body_Foretold",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "wounds"
+      ],
+      "scope": "neutral",
+      "jesus_variant": null
+    },
+    {
+      "slug": "20_looking-down-in-love",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/20_looking-down-in-love.mp4",
+      "title": "Looking Down In Love",
+      "episode": "07_The_Body_Foretold",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross"
+      ],
+      "scope": "neutral",
+      "jesus_variant": null
     },
     {
       "slug": "01_two-words-on-a-cross",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/01_two-words-on-a-cross.mp4",
       "title": "Two Words on a Cross",
       "episode": "08_I_Thirst",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross"
       ],
       "scope": "neutral",
-      "jesus_variant": "passion",
-      "preferred": true,
-      "fullres_confirmed": "2026-06-16: clean (no garbled titulus, sound anatomy, reverent)"
+      "jesus_variant": "passion"
     },
     {
       "slug": "02_the-king-who-wrote-it",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/02_the-king-who-wrote-it.mp4",
       "title": "The King Who Wrote It",
       "episode": "08_I_Thirst",
+      "aspect": "9:16",
       "duration": 10.04,
       "tags": [],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "03_dried-like-a-potsherd",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/03_dried-like-a-potsherd.mp4",
       "title": "Dried Like a Potsherd",
       "episode": "08_I_Thirst",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "thirst-water"
       ],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "04_the-tongue-cleaveth",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/04_the-tongue-cleaveth.mp4",
       "title": "The Tongue Cleaveth",
       "episode": "08_I_Thirst",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "thirst-water"
       ],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "05_the-dust-of-death",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/05_the-dust-of-death.mp4",
       "title": "The Dust of Death",
       "episode": "08_I_Thirst",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "thirst-water"
       ],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "06_the-cry-recorded",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/06_the-cry-recorded.mp4",
       "title": "The Cry Recorded",
       "episode": "08_I_Thirst",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
         "christ-face"
       ],
       "scope": "neutral",
-      "jesus_variant": "passion",
-      "preferred": true,
-      "fullres_confirmed": "2026-06-16: clean (no garbled titulus, sound anatomy, reverent)"
+      "jesus_variant": "passion"
     },
     {
       "slug": "07_a-thousand-years-apart",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/07_a-thousand-years-apart.mp4",
       "title": "A Thousand Years Apart",
       "episode": "08_I_Thirst",
-      "duration": 10.04,
+      "aspect": "9:16",
+      "duration": 5.04,
       "tags": [
         "cross",
         "thirst-water"
       ],
       "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "08_who-made-every-river",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/08_who-made-every-river.mp4",
       "title": "Who Made Every River",
       "episode": "08_I_Thirst",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
@@ -1264,79 +1501,79 @@
         "thirst-water"
       ],
       "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "09_living-water-offered",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/09_living-water-offered.mp4",
       "title": "Living Water Offered",
       "episode": "08_I_Thirst",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "thirst-water"
       ],
       "scope": "specific",
-      "jesus_variant": "ministry",
-      "preferred": false
+      "jesus_variant": "ministry"
     },
     {
       "slug": "10_hanging-there-with-nothing",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/10_hanging-there-with-nothing.mp4",
       "title": "Hanging There With Nothing",
       "episode": "08_I_Thirst",
-      "duration": 5.04,
+      "aspect": "9:16",
+      "duration": 10.04,
       "tags": [
         "cross",
         "dice-garments"
       ],
       "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "11_water-from-the-rock",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/11_water-from-the-rock.mp4",
       "title": "Water from the Rock",
       "episode": "08_I_Thirst",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "12_every-one-that-thirsteth",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/12_every-one-that-thirsteth.mp4",
       "title": "Come, Every One That Thirsteth",
       "episode": "08_I_Thirst",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "thirst-water"
       ],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "13_drink-and-never-thirst",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/13_drink-and-never-thirst.mp4",
       "title": "Drink and Never Thirst",
       "episode": "08_I_Thirst",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
         "thirst-water"
       ],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "14_that-water-is-himself",
       "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/14_that-water-is-himself.mp4",
       "title": "That Water Is Himself",
       "episode": "08_I_Thirst",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
@@ -1346,40 +1583,66 @@
         "mourners"
       ],
       "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "01_the-wound-that-wont-close",
       "source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/01_the-wound-that-wont-close.mp4",
       "title": "The Wound That Won't Close",
       "episode": "isaiah_53_5_with_his_stripes",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "03_wounded-for-our-transgressions",
       "source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/03_wounded-for-our-transgressions.mp4",
       "title": "Wounded For Our Transgressions",
       "episode": "isaiah_53_5_with_his_stripes",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "wounds",
         "wounded-body"
       ],
       "scope": "neutral",
-      "jesus_variant": "passion",
-      "preferred": true,
-      "fullres_confirmed": "2026-06-16: clean (no garbled titulus, sound anatomy, reverent)"
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "05_wounded-for-us",
+      "source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/05_wounded-for-us.mp4",
+      "title": "Wounded For Us",
+      "episode": "isaiah_53_5_with_his_stripes",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "wounds"
+      ],
+      "scope": "neutral",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "06_whom-they-pierced",
+      "source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/06_whom-they-pierced.mp4",
+      "title": "Whom They Pierced",
+      "episode": "isaiah_53_5_with_his_stripes",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "pierced-side",
+        "mourners"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
     },
     {
       "slug": "07_the-apostle-lays-it-on-christ",
       "source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/07_the-apostle-lays-it-on-christ.mp4",
       "title": "The Apostle Lays It On Christ",
       "episode": "isaiah_53_5_with_his_stripes",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
@@ -1387,106 +1650,277 @@
         "apostle"
       ],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "08_all-we-like-sheep",
       "source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/08_all-we-like-sheep.mp4",
       "title": "All We Like Sheep",
       "episode": "isaiah_53_5_with_his_stripes",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "sheep"
       ],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
     },
     {
       "slug": "09_he-bare-our-sins",
       "source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/09_he-bare-our-sins.mp4",
       "title": "He Bare Our Sins",
       "episode": "isaiah_53_5_with_his_stripes",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
         "mourners"
       ],
       "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "11_aimed-at-you",
+      "source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/11_aimed-at-you.mp4",
+      "title": "Aimed At You",
+      "episode": "isaiah_53_5_with_his_stripes",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross",
+        "christ-face"
+      ],
+      "scope": "neutral",
+      "jesus_variant": "passion"
     },
     {
       "slug": "12_finished-at-the-cross",
       "source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/12_finished-at-the-cross.mp4",
       "title": "Finished At The Cross",
       "episode": "isaiah_53_5_with_his_stripes",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
         "dawn-cross"
       ],
       "scope": "neutral",
-      "jesus_variant": "passion",
-      "preferred": true,
-      "fullres_confirmed": "2026-06-16: clean (no garbled titulus, sound anatomy, reverent)"
+      "jesus_variant": "passion"
     },
     {
       "slug": "13_come-and-receive",
       "source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/13_come-and-receive.mp4",
       "title": "Come And Receive",
       "episode": "isaiah_53_5_with_his_stripes",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [],
       "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "14_the-wound-he-closed",
       "source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/14_the-wound-he-closed.mp4",
       "title": "The Wound He Closed",
       "episode": "isaiah_53_5_with_his_stripes",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [],
       "scope": "specific",
-      "jesus_variant": null,
-      "preferred": false
+      "jesus_variant": null
+    },
+    {
+      "slug": "15_the-ninth-hour",
+      "source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/15_the-ninth-hour.mp4",
+      "title": "The Ninth Hour",
+      "episode": "isaiah_53_5_with_his_stripes",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross"
+      ],
+      "scope": "neutral",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "16_hung-by-the-arms",
+      "source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/16_hung-by-the-arms.mp4",
+      "title": "Hung By The Arms",
+      "episode": "isaiah_53_5_with_his_stripes",
+      "aspect": "9:16",
+      "duration": 10.04,
+      "tags": [
+        "cross"
+      ],
+      "scope": "neutral",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "17_poured-out-like-water",
+      "source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/17_poured-out-like-water.mp4",
+      "title": "Poured Out Like Water",
+      "episode": "isaiah_53_5_with_his_stripes",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "wounds",
+        "wounded-body"
+      ],
+      "scope": "neutral",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "18_the-cry-of-the-cross",
+      "source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/18_the-cry-of-the-cross.mp4",
+      "title": "The Cry Of The Cross",
+      "episode": "isaiah_53_5_with_his_stripes",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross",
+        "christ-face"
+      ],
+      "scope": "neutral",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "19_come-to-him",
+      "source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/19_come-to-him.mp4",
+      "title": "Come To Him",
+      "episode": "isaiah_53_5_with_his_stripes",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross"
+      ],
+      "scope": "neutral",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "20_it-is-finished",
+      "source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/20_it-is-finished.mp4",
+      "title": "It Is Finished",
+      "episode": "isaiah_53_5_with_his_stripes",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "dawn-cross"
+      ],
+      "scope": "neutral",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "21_room-to-turn",
+      "source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/21_room-to-turn.mp4",
+      "title": "Room To Turn",
+      "episode": "isaiah_53_5_with_his_stripes",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "22_the-reach-of-the-cross",
+      "source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/22_the-reach-of-the-cross.mp4",
+      "title": "The Reach Of The Cross",
+      "episode": "isaiah_53_5_with_his_stripes",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross"
+      ],
+      "scope": "neutral",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "23_crushed-in-your-place",
+      "source": "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/23_crushed-in-your-place.mp4",
+      "title": "Crushed In Your Place",
+      "episode": "isaiah_53_5_with_his_stripes",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross"
+      ],
+      "scope": "neutral",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "01_the-shaking-heads",
+      "source": "v2/pilot/mockers_words_ps22/v1/visual/nbp/01_the-shaking-heads.mp4",
+      "title": "The Shaking Heads",
+      "episode": "mockers_words_ps22",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "mockers"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
     },
     {
       "slug": "02_a-script-a-thousand-years-old",
       "source": "v2/pilot/mockers_words_ps22/v1/visual/nbp/02_a-script-a-thousand-years-old.mp4",
       "title": "A Script, A Thousand Years Old",
       "episode": "mockers_words_ps22",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "mockers",
         "prophet"
       ],
       "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "03_they-shoot-out-the-lip",
+      "source": "v2/pilot/mockers_words_ps22/v1/visual/nbp/03_they-shoot-out-the-lip.mp4",
+      "title": "They Shoot Out The Lip",
+      "episode": "mockers_words_ps22",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "mockers"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "04_the-passers-by-wag-their-heads",
+      "source": "v2/pilot/mockers_words_ps22/v1/visual/nbp/04_the-passers-by-wag-their-heads.mp4",
+      "title": "The Passers-By Wag Their Heads",
+      "episode": "mockers_words_ps22",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross",
+        "mockers",
+        "prophet"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
     },
     {
       "slug": "05_the-rulers-sneer",
       "source": "v2/pilot/mockers_words_ps22/v1/visual/nbp/05_the-rulers-sneer.mp4",
       "title": "The Rulers Sneer",
       "episode": "mockers_words_ps22",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "mockers",
         "rulers"
       ],
       "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "06_he-trusted-in-god",
       "source": "v2/pilot/mockers_words_ps22/v1/visual/nbp/06_he-trusted-in-god.mp4",
       "title": "He Trusted In God",
       "episode": "mockers_words_ps22",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
@@ -1494,14 +1928,14 @@
         "mockers"
       ],
       "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
     },
     {
       "slug": "07_the-king-who-would-not-come-down",
       "source": "v2/pilot/mockers_words_ps22/v1/visual/nbp/07_the-king-who-would-not-come-down.mp4",
       "title": "The King Who Would Not Come Down",
       "episode": "mockers_words_ps22",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
@@ -1510,14 +1944,56 @@
         "mockers"
       ],
       "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "08_unwilling-witnesses",
+      "source": "v2/pilot/mockers_words_ps22/v1/visual/nbp/08_unwilling-witnesses.mp4",
+      "title": "Unwilling Witnesses",
+      "episode": "mockers_words_ps22",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross",
+        "mockers",
+        "prophet"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "09_if-thou-be-the-son-of-god",
+      "source": "v2/pilot/mockers_words_ps22/v1/visual/nbp/09_if-thou-be-the-son-of-god.mp4",
+      "title": "If Thou Be The Son Of God",
+      "episode": "mockers_words_ps22",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross",
+        "mockers"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "10_he-could-have-come-down",
+      "source": "v2/pilot/mockers_words_ps22/v1/visual/nbp/10_he-could-have-come-down.mp4",
+      "title": "He Could Have Come Down",
+      "episode": "mockers_words_ps22",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross"
+      ],
+      "scope": "neutral",
+      "jesus_variant": "passion"
     },
     {
       "slug": "11_bearing-the-scorn",
       "source": "v2/pilot/mockers_words_ps22/v1/visual/nbp/11_bearing-the-scorn.mp4",
       "title": "Bearing The Scorn",
       "episode": "mockers_words_ps22",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
@@ -1525,14 +2001,29 @@
         "mockers"
       ],
       "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "12_the-king-they-told-to-come-down",
+      "source": "v2/pilot/mockers_words_ps22/v1/visual/nbp/12_the-king-they-told-to-come-down.mp4",
+      "title": "The King They Told To Come Down",
+      "episode": "mockers_words_ps22",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross",
+        "christ-face",
+        "mockers"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
     },
     {
       "slug": "13_for-the-very-people-throwing-it",
       "source": "v2/pilot/mockers_words_ps22/v1/visual/nbp/13_for-the-very-people-throwing-it.mp4",
       "title": "For The Very People Throwing It",
       "episode": "mockers_words_ps22",
+      "aspect": "9:16",
       "duration": 5.04,
       "tags": [
         "cross",
@@ -1540,10 +2031,1762 @@
         "mourners"
       ],
       "scope": "specific",
-      "jesus_variant": "passion",
-      "preferred": false
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "14_come-to-the-one-who-would-not-come-down",
+      "source": "v2/pilot/mockers_words_ps22/v1/visual/nbp/14_come-to-the-one-who-would-not-come-down.mp4",
+      "title": "Come To The One Who Would Not Come Down",
+      "episode": "mockers_words_ps22",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "dawn-cross",
+        "mockers"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "15_david-records-the-taunt",
+      "source": "v2/pilot/mockers_words_ps22/v1/visual/nbp/15_david-records-the-taunt.mp4",
+      "title": "David Records The Taunt",
+      "episode": "mockers_words_ps22",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "mockers",
+        "prophet"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "16_the-leaders-jeer",
+      "source": "v2/pilot/mockers_words_ps22/v1/visual/nbp/16_the-leaders-jeer.mp4",
+      "title": "The Leaders Jeer",
+      "episode": "mockers_words_ps22",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross",
+        "mockers"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "17_twelve-legions-restrained",
+      "source": "v2/pilot/mockers_words_ps22/v1/visual/nbp/17_twelve-legions-restrained.mp4",
+      "title": "Twelve Legions Restrained",
+      "episode": "mockers_words_ps22",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [
+        "cross"
+      ],
+      "scope": "neutral",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "18_looking-down-in-love",
+      "source": "v2/pilot/mockers_words_ps22/v1/visual/nbp/18_looking-down-in-love.mp4",
+      "title": "Looking Down In Love",
+      "episode": "mockers_words_ps22",
+      "aspect": "9:16",
+      "duration": 5.04,
+      "tags": [],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "01_the_wilderness_the_prophet",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/01_the_wilderness_the_prophet.mp4",
+      "title": "The wilderness, the prophet",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dawn-cross",
+        "prophet"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "01_the_wilderness_the_prophet.prev.bak",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/01_the_wilderness_the_prophet.prev.bak.mp4",
+      "title": "The wilderness, the prophet",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dawn-cross",
+        "prophet"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "02_the_scroll_the_question",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/02_the_scroll_the_question.mp4",
+      "title": "The scroll, the question",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "02_the_scroll_the_question.prev.bak",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/02_the_scroll_the_question.prev.bak.mp4",
+      "title": "The scroll, the question",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "03_behold_my_servant_glory",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/03_behold_my_servant_glory.mp4",
+      "title": "Behold my servant (glory)",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "03_behold_my_servant_glory.prev.bak",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/03_behold_my_servant_glory.prev.bak.mp4",
+      "title": "Behold my servant (glory)",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "04_the_picture_breaks_the_marred_face",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/04_the_picture_breaks_the_marred_face.mp4",
+      "title": "The picture breaks (the marred face)",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "wounds",
+        "risen"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "04_the_picture_breaks_the_marred_face.prev.bak",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/04_the_picture_breaks_the_marred_face.prev.bak.mp4",
+      "title": "The picture breaks (the marred face)",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "wounds",
+        "risen"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "05_despised_and_rejected",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/05_despised_and_rejected.mp4",
+      "title": "Despised and rejected",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "05_despised_and_rejected.prev.bak",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/05_despised_and_rejected.prev.bak.mp4",
+      "title": "Despised and rejected",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "06_wounded_for_our_transgressions_the_cross",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/06_wounded_for_our_transgressions_the_cross.mp4",
+      "title": "Wounded for our transgressions (the cross beat)",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "cross",
+        "wounds",
+        "dice-garments",
+        "risen"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "07_the_chastisement_of_our_peace",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/07_the_chastisement_of_our_peace.mp4",
+      "title": "The chastisement of our peace",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "07_the_chastisement_of_our_peace.prev.bak",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/07_the_chastisement_of_our_peace.prev.bak.mp4",
+      "title": "The chastisement of our peace",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "08_all_we_like_sheep_have_gone_astray",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/08_all_we_like_sheep_have_gone_astray.mp4",
+      "title": "All we like sheep have gone astray",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "sheep"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "08_all_we_like_sheep_have_gone_astray_cont1",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/08_all_we_like_sheep_have_gone_astray_cont1.mp4",
+      "title": "All we like sheep have gone astray",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "sheep"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "09_a_lamb_to_the_slaughter",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/09_a_lamb_to_the_slaughter.mp4",
+      "title": "A lamb to the slaughter",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "lamb",
+        "sheep"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "09_a_lamb_to_the_slaughter_cont1",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/09_a_lamb_to_the_slaughter_cont1.mp4",
+      "title": "A lamb to the slaughter",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "lamb",
+        "sheep"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "09_a_lamb_to_the_slaughter_cont2",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/09_a_lamb_to_the_slaughter_cont2.mp4",
+      "title": "A lamb to the slaughter",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "lamb",
+        "sheep"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "10_he_opened_not_his_mouth",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/10_he_opened_not_his_mouth.mp4",
+      "title": "He opened not his mouth",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "10_he_opened_not_his_mouth.prev.bak",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/10_he_opened_not_his_mouth.prev.bak.mp4",
+      "title": "He opened not his mouth",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "11_the_nation_the_servant_israel",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/11_the_nation_the_servant_israel.mp4",
+      "title": "The nation, the servant Israel",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "11_the_nation_the_servant_israel_cont1",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/11_the_nation_the_servant_israel_cont1.mp4",
+      "title": "The nation, the servant Israel",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "11_the_nation_the_servant_israel_cont2",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/11_the_nation_the_servant_israel_cont2.mp4",
+      "title": "The nation, the servant Israel",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "12_a_rich_man_s_tomb_the_sinless_one",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/12_a_rich_man_s_tomb_the_sinless_one.mp4",
+      "title": "A rich man's tomb, the sinless one",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "tomb",
+        "risen",
+        "mourners"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "12_a_rich_man_s_tomb_the_sinless_one.prev.bak",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/12_a_rich_man_s_tomb_the_sinless_one.prev.bak.mp4",
+      "title": "A rich man's tomb, the sinless one",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "tomb",
+        "risen",
+        "mourners"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "13_the_ethiopian_in_his_chariot",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/13_the_ethiopian_in_his_chariot.mp4",
+      "title": "The Ethiopian in his chariot",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "13_the_ethiopian_in_his_chariot_cont1",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/13_the_ethiopian_in_his_chariot_cont1.mp4",
+      "title": "The Ethiopian in his chariot",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "13_the_ethiopian_in_his_chariot_cont2",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/13_the_ethiopian_in_his_chariot_cont2.mp4",
+      "title": "The Ethiopian in his chariot",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "14_philip_comes_alongside",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/14_philip_comes_alongside.mp4",
+      "title": "Philip comes alongside",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "14_philip_comes_alongside_cont1",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/14_philip_comes_alongside_cont1.mp4",
+      "title": "Philip comes alongside",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "15_preached_unto_him_jesus",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/15_preached_unto_him_jesus.mp4",
+      "title": "Preached unto him Jesus",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments",
+        "risen"
+      ],
+      "scope": "specific",
+      "jesus_variant": "resurrection"
+    },
+    {
+      "slug": "16_it_pleased_the_lord_the_cross_dark_sky",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/16_it_pleased_the_lord_the_cross_dark_sky.mp4",
+      "title": "It pleased the LORD (the cross, dark sky)",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "cross",
+        "dawn-cross",
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "16_it_pleased_the_lord_the_cross_dark_sky.prev.bak",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/16_it_pleased_the_lord_the_cross_dark_sky.prev.bak.mp4",
+      "title": "It pleased the LORD (the cross, dark sky)",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "cross",
+        "dawn-cross",
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "17_the_chapter_turns_toward_morning",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/17_the_chapter_turns_toward_morning.mp4",
+      "title": "The chapter turns toward morning",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dawn-cross",
+        "tomb"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "17_the_chapter_turns_toward_morning.prev.bak",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/17_the_chapter_turns_toward_morning.prev.bak.mp4",
+      "title": "The chapter turns toward morning",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dawn-cross",
+        "tomb"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "18_he_shall_be_satisfied_the_risen_servant",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/18_he_shall_be_satisfied_the_risen_servant.mp4",
+      "title": "He shall be satisfied (the risen Servant)",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [],
+      "scope": "specific",
+      "jesus_variant": "resurrection"
+    },
+    {
+      "slug": "18_he_shall_be_satisfied_the_risen_servant.prev.bak",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/18_he_shall_be_satisfied_the_risen_servant.prev.bak.mp4",
+      "title": "He shall be satisfied (the risen Servant)",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [],
+      "scope": "specific",
+      "jesus_variant": "resurrection"
+    },
+    {
+      "slug": "19_the_arm_of_the_lord_is_a_person",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/19_the_arm_of_the_lord_is_a_person.mp4",
+      "title": "The arm of the LORD is a person",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "pierced-side"
+      ],
+      "scope": "neutral",
+      "jesus_variant": "resurrection"
+    },
+    {
+      "slug": "19_the_arm_of_the_lord_is_a_person.prev.bak",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/19_the_arm_of_the_lord_is_a_person.prev.bak.mp4",
+      "title": "The arm of the LORD is a person",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "pierced-side"
+      ],
+      "scope": "neutral",
+      "jesus_variant": "resurrection"
+    },
+    {
+      "slug": "20_it_has_your_name_grace_reaches_out",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/20_it_has_your_name_grace_reaches_out.mp4",
+      "title": "It has your name (grace reaches out)",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 19.5,
+      "tags": [],
+      "scope": "specific",
+      "jesus_variant": "resurrection"
+    },
+    {
+      "slug": "20_it_has_your_name_grace_reaches_out.prev.bak",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/20_it_has_your_name_grace_reaches_out.prev.bak.mp4",
+      "title": "It has your name (grace reaches out)",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [],
+      "scope": "specific",
+      "jesus_variant": "resurrection"
+    },
+    {
+      "slug": "21_his_name_is_jesus_hero_close",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/21_his_name_is_jesus_hero_close.mp4",
+      "title": "His name is Jesus (HERO close)",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "risen"
+      ],
+      "scope": "specific",
+      "jesus_variant": "resurrection"
+    },
+    {
+      "slug": "21_his_name_is_jesus_hero_close.prev.bak",
+      "source": "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9/21_his_name_is_jesus_hero_close.prev.bak.mp4",
+      "title": "His name is Jesus (HERO close)",
+      "episode": "01_Isaiah_53_Suffering_Servant",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "risen"
+      ],
+      "scope": "specific",
+      "jesus_variant": "resurrection"
+    },
+    {
+      "slug": "01_the_ninth_hour_the_cry",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/01_the_ninth_hour_the_cry.mp4",
+      "title": "The ninth hour, the cry",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dawn-cross",
+        "dice-garments",
+        "mourners"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "02_a_thousand_years_before_david_s_scroll",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/02_a_thousand_years_before_david_s_scroll.mp4",
+      "title": "A thousand years before, David's scroll",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "03_this_is_psalm_twenty_two_the_page_and_th",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/03_this_is_psalm_twenty_two_the_page_and_th.mp4",
+      "title": "This is Psalm twenty-two (the page and the cross)",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "cross",
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "04_the_king_who_died_old_in_his_bed",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/04_the_king_who_died_old_in_his_bed.mp4",
+      "title": "The king who died old in his bed",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "05_a_worm_a_reproach_stripped_and_mocked",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/05_a_worm_a_reproach_stripped_and_mocked.mp4",
+      "title": "A worm, a reproach (stripped and mocked)",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "mockers",
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "06_let_him_deliver_him_the_mockers",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/06_let_him_deliver_him_the_mockers.mp4",
+      "title": "Let him deliver him (the mockers)",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "mockers",
+        "dice-garments",
+        "mourners"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "07_poured_out_like_water_bones_out_of_joint",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/07_poured_out_like_water_bones_out_of_joint.mp4",
+      "title": "Poured out like water (bones out of joint)",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "cross",
+        "wounded-body",
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "08_my_tongue_cleaveth_the_dust_of_death_i_t",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/08_my_tongue_cleaveth_the_dust_of_death_i_t.mp4",
+      "title": "My tongue cleaveth (the dust of death, I thirst)",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments",
+        "thirst-water"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "09_they_pierced_my_hands_and_my_feet",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/09_they_pierced_my_hands_and_my_feet.mp4",
+      "title": "They pierced my hands and my feet",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "cross",
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "10_they_part_my_garments_soldiers_cast_lots",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/10_they_part_my_garments_soldiers_cast_lots.mp4",
+      "title": "They part my garments (soldiers cast lots)",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments",
+        "soldier"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "11_an_honest_objection_the_scholar_weighs_t",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/11_an_honest_objection_the_scholar_weighs_t.mp4",
+      "title": "An honest objection (the scholar weighs the text)",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "12_the_disputed_word_like_a_lion_they_pierc",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/12_the_disputed_word_like_a_lion_they_pierc.mp4",
+      "title": "The disputed word (like a lion / they pierced)",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "13_concede_it_cleanly_the_convergence_still",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/13_concede_it_cleanly_the_convergence_still.mp4",
+      "title": "Concede it cleanly (the convergence still stands)",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "mockers",
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "13_concede_it_cleanly_the_convergence_still_cont1",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/13_concede_it_cleanly_the_convergence_still_cont1.mp4",
+      "title": "Concede it cleanly (the convergence still stands)",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "mockers",
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "13_concede_it_cleanly_the_convergence_still_cont2",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/13_concede_it_cleanly_the_convergence_still_cont2.mp4",
+      "title": "Concede it cleanly (the convergence still stands)",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "mockers",
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "14_the_greek_old_testament_translated_centu",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/14_the_greek_old_testament_translated_centu.mp4",
+      "title": "The Greek Old Testament (translated centuries early)",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "cross",
+        "rulers",
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "15_back_to_the_cross_the_storm_over_jerusal",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/15_back_to_the_cross_the_storm_over_jerusal.mp4",
+      "title": "Back to the cross (the storm over Jerusalem)",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "cross",
+        "dawn-cross",
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "16_so_when_jesus_cried_push_to_the_face",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/16_so_when_jesus_cried_push_to_the_face.mp4",
+      "title": "So when Jesus cried (push to the face)",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "cross",
+        "dawn-cross",
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "17_this_one_is_about_me_crane_from_cross_to",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/17_this_one_is_about_me_crane_from_cross_to.mp4",
+      "title": "This one is about me (crane from cross to soldiers)",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "cross",
+        "wounds",
+        "dice-garments",
+        "soldier"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "17_this_one_is_about_me_crane_from_cross_to_cont1",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/17_this_one_is_about_me_crane_from_cross_to_cont1.mp4",
+      "title": "This one is about me (crane from cross to soldiers)",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "cross",
+        "wounds",
+        "dice-garments",
+        "soldier"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "17_this_one_is_about_me_crane_from_cross_to_cont2",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/17_this_one_is_about_me_crane_from_cross_to_cont2.mp4",
+      "title": "This one is about me (crane from cross to soldiers)",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "cross",
+        "wounds",
+        "dice-garments",
+        "soldier"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "18_most_people_stop_here_but_the_song_turns",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/18_most_people_stop_here_but_the_song_turns.mp4",
+      "title": "Most people stop here (but the song turns)",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dawn-cross",
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "19_i_will_declare_thy_name_the_risen_worshi",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/19_i_will_declare_thy_name_the_risen_worshi.mp4",
+      "title": "I will declare thy name (the risen worshipper)",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": "resurrection"
+    },
+    {
+      "slug": "20_he_heard_the_risen_face_the_scars",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/20_he_heard_the_risen_face_the_scars.mp4",
+      "title": "He heard (the risen face, the scars)",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments",
+        "thirst-water"
+      ],
+      "scope": "specific",
+      "jesus_variant": "resurrection"
+    },
+    {
+      "slug": "21_the_ends_of_the_earth_stream_home",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/21_the_ends_of_the_earth_stream_home.mp4",
+      "title": "The ends of the earth stream home",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "21_the_ends_of_the_earth_stream_home_cont1",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/21_the_ends_of_the_earth_stream_home_cont1.mp4",
+      "title": "The ends of the earth stream home",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "21_the_ends_of_the_earth_stream_home_cont2",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/21_the_ends_of_the_earth_stream_home_cont2.mp4",
+      "title": "The ends of the earth stream home",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "22_he_hath_done_this_a_finished_work",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/22_he_hath_done_this_a_finished_work.mp4",
+      "title": "He hath done this (a finished work)",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "23_it_is_finished_the_parting_storm",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/23_it_is_finished_the_parting_storm.mp4",
+      "title": "It is finished (the parting storm)",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "cross",
+        "dawn-cross",
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "24_come_and_join_his_name_grace_reaches_you",
+      "source": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9/24_come_and_join_his_name_grace_reaches_you.mp4",
+      "title": "Come and join (His name, grace reaches you) HERO close",
+      "episode": "02_Psalm_22_Song_From_The_Cross",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments",
+        "risen"
+      ],
+      "scope": "specific",
+      "jesus_variant": "resurrection"
+    },
+    {
+      "slug": "01_the_over_specified_instructions_foreshad",
+      "source": "longform/03_The_Passover_Lamb/v1/visual_16x9/01_the_over_specified_instructions_foreshad.mp4",
+      "title": "The over-specified instructions (foreshadow)",
+      "episode": "03_The_Passover_Lamb",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "rulers",
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "02_the_last_night_in_egypt_kill_a_lamb",
+      "source": "longform/03_The_Passover_Lamb/v1/visual_16x9/02_the_last_night_in_egypt_kill_a_lamb.mp4",
+      "title": "The last night in Egypt — kill a lamb",
+      "episode": "03_The_Passover_Lamb",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "lamb",
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "03_one_lamb_described_before_a_firstborn_di",
+      "source": "longform/03_The_Passover_Lamb/v1/visual_16x9/03_one_lamb_described_before_a_firstborn_di.mp4",
+      "title": "One lamb, described before a firstborn died",
+      "episode": "03_The_Passover_Lamb",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "rulers",
+        "dice-garments",
+        "sheep"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "04_i_will_pass_through_death_over_egypt",
+      "source": "longform/03_The_Passover_Lamb/v1/visual_16x9/04_i_will_pass_through_death_over_egypt.mp4",
+      "title": "I will pass through — death over Egypt",
+      "episode": "03_The_Passover_Lamb",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "05_only_a_blood_marked_door_turns_death_asi",
+      "source": "longform/03_The_Passover_Lamb/v1/visual_16x9/05_only_a_blood_marked_door_turns_death_asi.mp4",
+      "title": "Only a blood-marked door turns death aside",
+      "episode": "03_The_Passover_Lamb",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "06_without_blemish_the_flawless_one_chosen",
+      "source": "longform/03_The_Passover_Lamb/v1/visual_16x9/06_without_blemish_the_flawless_one_chosen.mp4",
+      "title": "Without blemish — the flawless one chosen",
+      "episode": "03_The_Passover_Lamb",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments",
+        "sheep"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "07_kept_four_days_lived_with_found_faultles",
+      "source": "longform/03_The_Passover_Lamb/v1/visual_16x9/07_kept_four_days_lived_with_found_faultles.mp4",
+      "title": "Kept four days, lived with, found faultless",
+      "episode": "03_The_Passover_Lamb",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments",
+        "thirst-water"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "08_the_whole_nation_at_the_same_twilight",
+      "source": "longform/03_The_Passover_Lamb/v1/visual_16x9/08_the_whole_nation_at_the_same_twilight.mp4",
+      "title": "The whole nation at the same twilight",
+      "episode": "03_The_Passover_Lamb",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "09_blood_struck_on_the_two_posts_and_the_be",
+      "source": "longform/03_The_Passover_Lamb/v1/visual_16x9/09_blood_struck_on_the_two_posts_and_the_be.mp4",
+      "title": "Blood struck on the two posts and the beam",
+      "episode": "03_The_Passover_Lamb",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "10_not_one_bone_broken_when_i_see_the_blood",
+      "source": "longform/03_The_Passover_Lamb/v1/visual_16x9/10_not_one_bone_broken_when_i_see_the_blood.mp4",
+      "title": "Not one bone broken — when I see the blood",
+      "episode": "03_The_Passover_Lamb",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "11_fourteen_centuries_later_the_passover_cr",
+      "source": "longform/03_The_Passover_Lamb/v1/visual_16x9/11_fourteen_centuries_later_the_passover_cr.mp4",
+      "title": "Fourteen centuries later — the Passover cross",
+      "episode": "03_The_Passover_Lamb",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "cross",
+        "dawn-cross",
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "12_they_brake_not_his_legs",
+      "source": "longform/03_The_Passover_Lamb/v1/visual_16x9/12_they_brake_not_his_legs.mp4",
+      "title": "They brake not his legs",
+      "episode": "03_The_Passover_Lamb",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "cross",
+        "dice-garments",
+        "soldier"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "13_christ_our_passover_the_same_frame_of_wo",
+      "source": "longform/03_The_Passover_Lamb/v1/visual_16x9/13_christ_our_passover_the_same_frame_of_wo.mp4",
+      "title": "Christ our passover — the same frame of wood",
+      "episode": "03_The_Passover_Lamb",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "cross",
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "14_found_faultless_killed_anyway",
+      "source": "longform/03_The_Passover_Lamb/v1/visual_16x9/14_found_faultless_killed_anyway.mp4",
+      "title": "Found faultless, killed anyway",
+      "episode": "03_The_Passover_Lamb",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments",
+        "soldier"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "15_be_fair_to_the_doubt",
+      "source": "longform/03_The_Passover_Lamb/v1/visual_16x9/15_be_fair_to_the_doubt.mp4",
+      "title": "Be fair to the doubt",
+      "episode": "03_The_Passover_Lamb",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "16_weigh_the_details_strongest_first",
+      "source": "longform/03_The_Passover_Lamb/v1/visual_16x9/16_weigh_the_details_strongest_first.mp4",
+      "title": "Weigh the details — strongest first",
+      "episode": "03_The_Passover_Lamb",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "17_a_design_stepping_into_the_light",
+      "source": "longform/03_The_Passover_Lamb/v1/visual_16x9/17_a_design_stepping_into_the_light.mp4",
+      "title": "A design stepping into the light",
+      "episode": "03_The_Passover_Lamb",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dawn-cross",
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "18_a_life_for_a_life_the_lamb_instead",
+      "source": "longform/03_The_Passover_Lamb/v1/visual_16x9/18_a_life_for_a_life_the_lamb_instead.mp4",
+      "title": "A life for a life — the lamb instead",
+      "episode": "03_The_Passover_Lamb",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "19_that_is_the_cross_the_substitute_given",
+      "source": "longform/03_The_Passover_Lamb/v1/visual_16x9/19_that_is_the_cross_the_substitute_given.mp4",
+      "title": "That is the cross — the substitute given",
+      "episode": "03_The_Passover_Lamb",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "cross",
+        "dawn-cross",
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "20_the_precious_blood_cost_everything",
+      "source": "longform/03_The_Passover_Lamb/v1/visual_16x9/20_the_precious_blood_cost_everything.mp4",
+      "title": "The precious blood — cost everything",
+      "episode": "03_The_Passover_Lamb",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "21_it_had_to_be_applied_to_the_door",
+      "source": "longform/03_The_Passover_Lamb/v1/visual_16x9/21_it_had_to_be_applied_to_the_door.mp4",
+      "title": "It had to be applied to the door",
+      "episode": "03_The_Passover_Lamb",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "22_held_out_to_you_christ_in_the_open_door",
+      "source": "longform/03_The_Passover_Lamb/v1/visual_16x9/22_held_out_to_you_christ_in_the_open_door.mp4",
+      "title": "Held out to you — Christ in the open door",
+      "episode": "03_The_Passover_Lamb",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": "resurrection"
+    },
+    {
+      "slug": "23_from_inside_the_house_security_outside_t",
+      "source": "longform/03_The_Passover_Lamb/v1/visual_16x9/23_from_inside_the_house_security_outside_t.mp4",
+      "title": "From inside the house — security outside them",
+      "episode": "03_The_Passover_Lamb",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "24_when_i_see_the_blood_not_yours_his",
+      "source": "longform/03_The_Passover_Lamb/v1/visual_16x9/24_when_i_see_the_blood_not_yours_his.mp4",
+      "title": "When I see the blood — not yours, His",
+      "episode": "03_The_Passover_Lamb",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "25_rest_under_the_blood_of_the_lamb_hero_cl",
+      "source": "longform/03_The_Passover_Lamb/v1/visual_16x9/25_rest_under_the_blood_of_the_lamb_hero_cl.mp4",
+      "title": "Rest under the blood of the Lamb (HERO close)",
+      "episode": "03_The_Passover_Lamb",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": "resurrection"
+    },
+    {
+      "slug": "01_a_whole_camp_dying_of_snakebite_hook",
+      "source": "longform/04_The_Bronze_Serpent/v1/visual_16x9/01_a_whole_camp_dying_of_snakebite_hook.mp4",
+      "title": "A whole camp dying of snakebite (hook)",
+      "episode": "04_The_Bronze_Serpent",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "02_worn_down_they_despise_the_bread_of_heav",
+      "source": "longform/04_The_Bronze_Serpent/v1/visual_16x9/02_worn_down_they_despise_the_bread_of_heav.mp4",
+      "title": "Worn down, they despise the bread of heaven",
+      "episode": "04_The_Bronze_Serpent",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "03_the_lord_sent_fiery_serpents_and_people_",
+      "source": "longform/04_The_Bronze_Serpent/v1/visual_16x9/03_the_lord_sent_fiery_serpents_and_people_.mp4",
+      "title": "The LORD sent fiery serpents — and people died",
+      "episode": "04_The_Bronze_Serpent",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "04_the_venom_is_already_inside",
+      "source": "longform/04_The_Bronze_Serpent/v1/visual_16x9/04_the_venom_is_already_inside.mp4",
+      "title": "The venom is already inside",
+      "episode": "04_The_Bronze_Serpent",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "05_they_beg_moses_take_the_serpents_away",
+      "source": "longform/04_The_Bronze_Serpent/v1/visual_16x9/05_they_beg_moses_take_the_serpents_away.mp4",
+      "title": "They beg Moses: take the serpents away",
+      "episode": "04_The_Bronze_Serpent",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments",
+        "mourners"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "06_god_does_not_do_what_they_asked",
+      "source": "longform/04_The_Bronze_Serpent/v1/visual_16x9/06_god_does_not_do_what_they_asked.mp4",
+      "title": "God does not do what they asked",
+      "episode": "04_The_Bronze_Serpent",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "07_make_a_fiery_serpent_set_it_on_a_pole",
+      "source": "longform/04_The_Bronze_Serpent/v1/visual_16x9/07_make_a_fiery_serpent_set_it_on_a_pole.mp4",
+      "title": "Make a fiery serpent, set it on a pole",
+      "episode": "04_The_Bronze_Serpent",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "08_the_serpent_lifted_up_on_the_pole_signat",
+      "source": "longform/04_The_Bronze_Serpent/v1/visual_16x9/08_the_serpent_lifted_up_on_the_pole_signat.mp4",
+      "title": "The serpent lifted up on the pole (signature)",
+      "episode": "04_The_Bronze_Serpent",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "09_look_and_live_a_dying_man_lifts_his_eyes",
+      "source": "longform/04_The_Bronze_Serpent/v1/visual_16x9/09_look_and_live_a_dying_man_lifts_his_eyes.mp4",
+      "title": "Look, and live — a dying man lifts his eyes",
+      "episode": "04_The_Bronze_Serpent",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments",
+        "mourners"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "10_and_moses_made_a_serpent_of_brass_the_ca",
+      "source": "longform/04_The_Bronze_Serpent/v1/visual_16x9/10_and_moses_made_a_serpent_of_brass_the_ca.mp4",
+      "title": "And Moses made a serpent of brass (the camp looks)",
+      "episode": "04_The_Bronze_Serpent",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "11_nicodemus_comes_to_jesus_by_night",
+      "source": "longform/04_The_Bronze_Serpent/v1/visual_16x9/11_nicodemus_comes_to_jesus_by_night.mp4",
+      "title": "Nicodemus comes to Jesus by night",
+      "episode": "04_The_Bronze_Serpent",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": "ministry"
+    },
+    {
+      "slug": "12_even_so_must_the_son_of_man_be_lifted_up",
+      "source": "longform/04_The_Bronze_Serpent/v1/visual_16x9/12_even_so_must_the_son_of_man_be_lifted_up.mp4",
+      "title": "Even so must the Son of man be lifted up",
+      "episode": "04_The_Bronze_Serpent",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "cross",
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "13_lifted_up_signifying_what_death_he_shoul",
+      "source": "longform/04_The_Bronze_Serpent/v1/visual_16x9/13_lifted_up_signifying_what_death_he_shoul.mp4",
+      "title": "Lifted up — signifying what death He should die",
+      "episode": "04_The_Bronze_Serpent",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "cross",
+        "wide-cross"
+      ],
+      "scope": "neutral",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "14_for_god_so_loved_the_world",
+      "source": "longform/04_The_Bronze_Serpent/v1/visual_16x9/14_for_god_so_loved_the_world.mp4",
+      "title": "For God so loved the world",
+      "episode": "04_The_Bronze_Serpent",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "cross",
+        "wide-world-light"
+      ],
+      "scope": "neutral",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "15_hezekiah_breaks_the_brazen_serpent",
+      "source": "longform/04_The_Bronze_Serpent/v1/visual_16x9/15_hezekiah_breaks_the_brazen_serpent.mp4",
+      "title": "Hezekiah breaks the brazen serpent",
+      "episode": "04_The_Bronze_Serpent",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "16_the_likeness_of_the_curse_lifted_up",
+      "source": "longform/04_The_Bronze_Serpent/v1/visual_16x9/16_the_likeness_of_the_curse_lifted_up.mp4",
+      "title": "The likeness of the curse, lifted up",
+      "episode": "04_The_Bronze_Serpent",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "cross",
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "17_made_a_curse_for_us_on_the_tree",
+      "source": "longform/04_The_Bronze_Serpent/v1/visual_16x9/17_made_a_curse_for_us_on_the_tree.mp4",
+      "title": "Made a curse for us — on the tree",
+      "episode": "04_The_Bronze_Serpent",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "cross",
+        "crucified"
+      ],
+      "scope": "neutral",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "18_the_curse_fell_on_the_lifted_one",
+      "source": "longform/04_The_Bronze_Serpent/v1/visual_16x9/18_the_curse_fell_on_the_lifted_one.mp4",
+      "title": "The curse fell on the lifted One",
+      "episode": "04_The_Bronze_Serpent",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "cross",
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "19_the_cure_was_a_look",
+      "source": "longform/04_The_Bronze_Serpent/v1/visual_16x9/19_the_cure_was_a_look.mp4",
+      "title": "The cure was a look",
+      "episode": "04_The_Bronze_Serpent",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "20_whosoever_a_nation_turns_its_eyes_up",
+      "source": "longform/04_The_Bronze_Serpent/v1/visual_16x9/20_whosoever_a_nation_turns_its_eyes_up.mp4",
+      "title": "Whosoever — a nation turns its eyes up",
+      "episode": "04_The_Bronze_Serpent",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "21_look_to_the_one_lifted_up_hero_close",
+      "source": "longform/04_The_Bronze_Serpent/v1/visual_16x9/21_look_to_the_one_lifted_up_hero_close.mp4",
+      "title": "Look to the One lifted up (HERO close)",
+      "episode": "04_The_Bronze_Serpent",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "christ-face",
+        "risen-hero"
+      ],
+      "scope": "neutral",
+      "jesus_variant": "resurrection"
+    },
+    {
+      "slug": "22_the_cure_is_shaped_like_the_curse",
+      "source": "longform/04_The_Bronze_Serpent/v1/visual_16x9/22_the_cure_is_shaped_like_the_curse.mp4",
+      "title": "The cure is shaped like the curse",
+      "episode": "04_The_Bronze_Serpent",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "23_not_a_preacher_s_picture_jesus_himself",
+      "source": "longform/04_The_Bronze_Serpent/v1/visual_16x9/23_not_a_preacher_s_picture_jesus_himself.mp4",
+      "title": "Not a preacher's picture — Jesus Himself",
+      "episode": "04_The_Bronze_Serpent",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "christ-face",
+        "ministry-living"
+      ],
+      "scope": "neutral",
+      "jesus_variant": "ministry"
+    },
+    {
+      "slug": "24_looking_was_never_magic_it_was_trust",
+      "source": "longform/04_The_Bronze_Serpent/v1/visual_16x9/24_looking_was_never_magic_it_was_trust.mp4",
+      "title": "Looking was never magic — it was trust",
+      "episode": "04_The_Bronze_Serpent",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "25_we_are_all_bitten_the_cure_outside_us",
+      "source": "longform/04_The_Bronze_Serpent/v1/visual_16x9/25_we_are_all_bitten_the_cure_outside_us.mp4",
+      "title": "We are all bitten — the cure outside us",
+      "episode": "04_The_Bronze_Serpent",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "cross",
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": "passion"
+    },
+    {
+      "slug": "26_you_do_not_have_to_climb_pay_or_be_stron",
+      "source": "longform/04_The_Bronze_Serpent/v1/visual_16x9/26_you_do_not_have_to_climb_pay_or_be_stron.mp4",
+      "title": "You do not have to climb, pay, or be strong",
+      "episode": "04_The_Bronze_Serpent",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments",
+        "mourners"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
+    },
+    {
+      "slug": "27_their_confession_is_real_but_they_reach_",
+      "source": "longform/04_The_Bronze_Serpent/v1/visual_16x9/27_their_confession_is_real_but_they_reach_.mp4",
+      "title": "Their confession is real — but they reach outward",
+      "episode": "04_The_Bronze_Serpent",
+      "aspect": "16:9",
+      "duration": 8.0,
+      "tags": [
+        "dice-garments"
+      ],
+      "scope": "specific",
+      "jesus_variant": null
     }
-  ],
-  "_curated": "2026-06-16 spot-review + dedup: 8 reclassified, best-of-cluster marked preferred",
-  "_fullres_review": "13 preferred clips full-res confirmed 2026-06-16 (0 demotions)"
+  ]
 }

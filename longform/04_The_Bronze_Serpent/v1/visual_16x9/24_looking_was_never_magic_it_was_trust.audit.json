@@ -1,0 +1,14 @@
+{
+ "passed": true,
+ "issues": [
+  {
+   "claim": "shattered fragments of the broken bronze serpent lie scattered on the floor",
+   "actual": "The floor shows snake-like forms and some broken shards, but the serpents read more as intact coils than as clearly shattered fragments; the 'brokenness' is only partially conveyed by a few pottery-like pieces among them."
+  },
+  {
+   "claim": "ancient stone temple court",
+   "actual": "Setting reads as a dim stone hall with columns; acceptable but generic rather than overtly temple-like."
+  }
+ ],
+ "banned_token_hits": []
+}

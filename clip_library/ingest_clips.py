@@ -18,11 +18,21 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 OUT = Path(__file__).resolve().parent / "index.json"
 
-# Source episodes to ingest (skip the zechariah consumer — it's made of reused copies).
+# Shorts (9:16) sources — clips live in <visual>/nbp/*.mp4 (skip the zechariah consumer,
+# it's made of reused copies).
 SOURCES = (
     "longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/*/visual",
     "v2/pilot/isaiah_53_5_with_his_stripes/v1/visual",
     "v2/pilot/mockers_words_ps22/v1/visual",
+)
+# Long-form (16:9) sources — clips live DIRECTLY in <visual_16x9>/[0-9][0-9]_*.mp4 next to
+# scene_plan.json (no nbp/ subdir). These feed cross-episode reuse into OTHER long-forms;
+# aspect is tracked so a 9:16 short clip is never offered into a 16:9 film (and vice versa).
+LONGFORM_SOURCES = (
+    "longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9",
+    "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9",
+    "longform/03_The_Passover_Lamb/v1/visual_16x9",
+    "longform/04_The_Bronze_Serpent/v1/visual_16x9",
 )
 
 # tag -> substrings (searched in subject_block + title, lowercased)
@@ -51,6 +61,19 @@ SPECIFIC = {
 }
 
 
+# Human spot-review override (the topical-fit human check the auto-tagger can't make).
+# slug -> tags. These long-form clips are eye-verified as GENERIC Christ/passion (not tied to
+# their episode's story), so they are safe to reuse into OTHER 16:9 long-forms. Forced neutral.
+REVIEWED_REUSABLE = {
+    # #04 Bronze Serpent — own-world episode, but these 5 are generic enough to seed the bank:
+    "23_not_a_preacher_s_picture_jesus_himself":     ["christ-face", "ministry-living"],   # fills the no-living-Christ gap
+    "17_made_a_curse_for_us_on_the_tree":            ["cross", "crucified"],
+    "21_look_to_the_one_lifted_up_hero_close":       ["christ-face", "risen-hero"],
+    "13_lifted_up_signifying_what_death_he_shoul":   ["cross", "wide-cross"],
+    "14_for_god_so_loved_the_world":                 ["cross", "wide-world-light"],
+}
+
+
 def _probe(p: Path) -> float:
     try:
         r = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
@@ -66,7 +89,9 @@ def _scenes(visual_dir: Path) -> dict[int, dict]:
         return {}
     d = json.loads(sp.read_text(encoding="utf-8"))
     scenes = d.get("plan", {}).get("scenes") if "plan" in d else d.get("scenes")
-    return {s["index"]: s for s in (scenes or [])}
+    # shorts use s["index"]; long-form (16:9) builders use s["id"]
+    return {(s.get("index") if s.get("index") is not None else s.get("id")): s
+            for s in (scenes or [])}
 
 
 def _tags_scope(scene: dict) -> tuple[list[str], str]:
@@ -82,35 +107,49 @@ def _tags_scope(scene: dict) -> tuple[list[str], str]:
     return tags, scope
 
 
-def main():
-    clips = []
-    for pat in SOURCES:
+def _ingest(clips, patterns, clip_dir, aspect):
+    """Append clips for a set of glob patterns. clip_dir='nbp' (shorts) or '' (long-form,
+    clips sit directly in the visual dir). aspect tags the clip so reuse can filter by format."""
+    for pat in patterns:
         for vis in glob.glob(str(ROOT / pat)):
             vis = Path(vis)
             scenes = _scenes(vis)
             episode = vis.parent.name if vis.parent.name != "v1" else vis.parents[1].name
-            for mp4 in sorted((vis / "nbp").glob("[0-9][0-9]_*.mp4")):
+            search = (vis / clip_dir) if clip_dir else vis
+            for mp4 in sorted(search.glob("[0-9][0-9]_*.mp4")):
                 idx = int(mp4.stem[:2])
                 scene = scenes.get(idx, {})
                 tags, scope = _tags_scope(scene)
+                if mp4.stem in REVIEWED_REUSABLE:        # human spot-review override
+                    tags, scope = REVIEWED_REUSABLE[mp4.stem], "neutral"
                 clips.append({
                     "slug": mp4.stem,
                     "source": str(mp4.relative_to(ROOT)).replace("\\", "/"),
                     "title": scene.get("title", mp4.stem[3:].replace("-", " ").title()),
                     "episode": episode,
+                    "aspect": aspect,
                     "duration": _probe(mp4),
                     "tags": tags,
                     "scope": scope,
                     "jesus_variant": scene.get("jesus_variant"),
                 })
+
+
+def main():
+    clips = []
+    _ingest(clips, SOURCES, "nbp", "9:16")
+    _ingest(clips, LONGFORM_SOURCES, "", "16:9")
     OUT.write_text(json.dumps({"_doc": "Central clip library (by reference). Build via ingest_clips.py. "
-                               "Spot-review the 'neutral' set before trusting cross-episode auto-reuse.",
-                               "version": 1, "clips": clips}, ensure_ascii=False, indent=2), encoding="utf-8")
-    neutral = [c for c in clips if c["scope"] == "neutral"]
+                               "Spot-review the 'neutral' set before trusting cross-episode auto-reuse. "
+                               "Reuse must match aspect (9:16 shorts vs 16:9 long-form).",
+                               "version": 2, "clips": clips}, ensure_ascii=False, indent=2), encoding="utf-8")
     from collections import Counter
-    tagc = Counter(t for c in neutral for t in c["tags"])
-    print(f"indexed {len(clips)} clips ({len(neutral)} neutral / {len(clips)-len(neutral)} specific)")
-    print("neutral reusable by tag:", dict(tagc))
+    for asp in ("9:16", "16:9"):
+        sub = [c for c in clips if c["aspect"] == asp]
+        neutral = [c for c in sub if c["scope"] == "neutral"]
+        tagc = Counter(t for c in neutral for t in c["tags"])
+        print(f"[{asp}] indexed {len(sub)} clips ({len(neutral)} neutral / {len(sub)-len(neutral)} specific)")
+        print(f"       neutral reusable by tag: {dict(tagc)}")
 
 
 if __name__ == "__main__":

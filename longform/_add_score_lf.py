@@ -48,6 +48,17 @@ EPISODES: dict[str, dict] = {
         "gain_db": -11.0,
         "outro_s": 2.5,
     },
+    # Bronze Serpent (467.6s) — the dying camp + the venom + the strange cure on the pole
+    # (M1-M3, lonely/searching) -> the centuries-early cross-match + Nicodemus + the honest
+    # objection / Hezekiah (M4-M5, holy weight) -> the exchange + the look + whosoever + the
+    # risen-Christ hero close (M6-M7, grace rising). Same proven 3-segment arc as #03; grace
+    # lands on the M7 invitation/hero. Full cinematic-orchestral, no choir pad (SFX carries ambience).
+    "04_The_Bronze_Serpent": {
+        "segments": ["lonely_searching_a", "glory_holy_stillness_a", "sacred_grace_rise_b"],
+        "xfade_s": 6.0,
+        "gain_db": -11.0,
+        "outro_s": 2.5,
+    },
 }
 
 

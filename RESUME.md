@@ -1,6 +1,60 @@
 # RESUME.md — start here next session
 
-## ⚡⚡ LATEST HANDOFF — SHORT-FORM #09 DONE (2026-06-22 PM, NEWEST) — READ FIRST ⚡⚡
+## ⚡⚡⚡ LATEST HANDOFF — #04 BRONZE SERPENT FULLY DONE (2026-06-23, long-form) — READ FIRST ⚡⚡⚡
+
+### ═══ WHAT GOT DONE (long-form #04 The Bronze Serpent) ═══
+**#04 — FULLY DONE, full long-form pipeline.** FINAL: `C:/Users/sanjay/BRONZE_SERPENT_FINAL.mp4` (7:50).
+- **Re-paneled v1.2 → v1.4 + LOCKED.** Re-ran the 5-CLI panel on the post-fix text (claude/codex/cursor
+  all REVISE, convergent; gemini/grok env-failed). Verified flags myself: fixed Gal 3:13 → "being made a
+  curse" (verbatim), M2 honors the "We have sinned" confession before the pivot, M4 "always→by Jesus' own
+  word", hook leads with the dying camp, trimmed M6→M7. Then **user wanted the landing sharper** → re-closed
+  on the SUFFICIENCY of the cross ("the cure was never inside you… what He has done on that cross is enough"),
+  dropped the "look, and live" tag. Panel saved `…/v1/_independent_review/20260623-093738/`.
+- **4-voice audio (7:48):** narrator + scripture + **god** (Num 21:8) + **jesus** (John 3:14-15, 12:32) —
+  distinct ids (god `UzI1…`, jesus `tlETan7…`). `_build_audio_inputs.py` (0 word-drift verified).
+- **27-scene plan** (`_build_scene_plan.py`): windows TILED TO THE REAL AUDIO TIMELINE (ffprobe of `_turns`,
+  embedded `TURN_END`), fill = forward_slow push for >20s windows (no yo-yo), boomerang ≤20s. Bronze serpent
+  designed as STILL cast-metal (veo can't slither it); all crosses robed (veo-safe). 6 scenes added after
+  measuring windows were too long with 21 (→27). S14 rerolled ×2 (drift) → wide world-under-light; S23
+  rerolled (hand).
+- **27 NBP stills** (all period-audited / eye-checked) + **27 veo3_1_lite clips** (3 animation passes — see
+  the HF concurrent-limit gotcha below). Test-gated the animation (bronze frozen ✓, pushes don't morph ✓).
+- **Assembled** (`_assemble_16x9.py`, ABSOLUTE path — relative breaks the concat) → **score** (`_add_score_lf.py`,
+  added a `04_The_Bronze_Serpent` recipe, same 3-segment arc as #03, −11dB) → **choir-free SFX** (`_sfx_bronze.py`,
+  15 cues) → **ivory captions** (WhisperX, 1269/1269 aligned). Lands on the risen-Christ hero.
+
+### ═══ ENGINE / STRATEGY CHANGES LANDED (reusable for #05+) ═══
+- **LONG-FORM CLIP REUSE BANK (user's standing strategy):** `clip_library/ingest_clips.py` is now **v2 /
+  aspect-aware** — indexes both 9:16 shorts (`<visual>/nbp/`) AND 16:9 long-form (`<visual_16x9>/`, scene id
+  from `s["id"]`); each clip has an `aspect` field (**reuse must match aspect**). Auto-tagger is shorts-tuned +
+  conservative → use the **`REVIEWED_REUSABLE`** override (human spot-review encoded). #04 seeded **5 reusable**
+  16:9 clips incl. the **living-ministry Christ (S23)** that fills the long-standing no-living-Christ gap.
+  Memory: [[longform-clip-reuse-bank]]. **GOAL: each new long-form gets cheaper as the bank grows.**
+- 🔴 **HF veo CONCURRENT-JOB LIMIT (4):** a batch animation fails en masse with `hf kling failed (3) /
+  concurrent_jobs_limit:4` when a timed-out job lingers server-side. NOT NSFW/credits. Drain queue
+  (`hf generate list`) + re-run `--approved` (idempotent). Memory: [[hf-veo-concurrent-job-limit]].
+
+### ═══ ▶▶ DO FIRST TOMORROW ═══
+1. **Ear/eye-review #04 final:** `C:/Users/sanjay/BRONZE_SERPENT_FINAL.mp4` (7:50). Review pages:
+   `C:/Users/sanjay/BRONZE_SERPENT_stills.html` · `…_clipstrips.html` (motion QC).
+2. **OPEN (user said "good for the moment"):** S13 has veo glitter-specks ("snow"); optional re-animate with a
+   steady-light prompt (no falling particles) if it bugs on review.
+3. **#04 options:** publish pack (`/publish`), copy to Desktop. Then **#05 next** — the reuse bank now pays off.
+
+### ═══ LONG-FORM STATUS BOARD ═══
+| # | Episode | Status |
+|---|---|---|
+| 01 | Isaiah 53 | ✅ DONE |
+| 02 | Psalm 22 | ✅ DONE |
+| 03 | Passover Lamb | ✅ DONE |
+| 04 | Bronze Serpent | ✅ DONE (2026-06-23) — `C:/Users/sanjay/BRONZE_SERPENT_FINAL.mp4` (7:50) |
+| 05 | (pick next — Types & Shadows slate) | reuse bank seeded; own-world episodes feed it |
+
+---
+
+## ⚡⚡ PRIOR HANDOFF — SHORT-FORM #09 DONE (2026-06-22 PM) ⚡⚡
+
+> This session = the **SHORT-FORM** track (separate from the long-form #03 block below; both current).
 
 > This session = the **SHORT-FORM** track (separate from the long-form #03 block below; both current).
 

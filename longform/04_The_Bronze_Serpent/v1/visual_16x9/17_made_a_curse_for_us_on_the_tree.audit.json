@@ -1,0 +1,14 @@
+{
+ "passed": true,
+ "issues": [
+  {
+   "claim": "wrists fastened to the wood (nailed)",
+   "actual": "wrists are bound with rope; small dark nail-heads visible in palms, so nailing is implied but the dominant fastening reads as rope"
+  },
+  {
+   "claim": "body hanging, head bowed",
+   "actual": "head is bowed but the body reads as upright/standing rather than hanging with full weight on the arms"
+  }
+ ],
+ "banned_token_hits": []
+}

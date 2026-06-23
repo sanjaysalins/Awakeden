@@ -1,7 +1,19 @@
 # STATE.md — progress tracker
 
-**Last updated:** 2026-06-21
-**Status (2026-06-21 LATEST):** **ALL 8 PSALM 22 SHORTS FULLY SHIPPED + PUBLISH PACKS DONE.**
+**Last updated:** 2026-06-23
+**Status (2026-06-23 LATEST):** **#04 THE BRONZE SERPENT FULLY DONE (long-form, 7:50).**
+`C:/Users/sanjay/BRONZE_SERPENT_FINAL.mp4`. Re-paneled v1.2→v1.4 + locked (sharpened landing onto the
+sufficiency of the cross) → 4-voice audio (narrator+scripture+god+jesus) → 27-scene plan (windows tiled to
+the REAL audio timeline; forward-slow push for long windows, no yo-yo; bronze = still metal) → 27 NBP stills
+(period-audited) → 27 veo3 clips (3 passes; HF concurrent-job-limit gotcha) → assemble → cinematic-orchestral
+score → choir-free SFX → ivory captions (1269/1269). **NEW: long-form CLIP REUSE BANK** — `ingest_clips.py`
+now aspect-aware (9:16 vs 16:9) + a human REVIEWED_REUSABLE override; #04 seeded 5 reusable 16:9 clips incl.
+the living-ministry Christ (fills the no-living-Christ gap). Standing goal: grow the bank so each long-form
+costs less. Memories: [[longform-clip-reuse-bank]], [[hf-veo-concurrent-job-limit]]. Open: S13 veo
+glitter-specks (user OK'd for now). **NEXT: review #04, then #05.** Long-form board: 01/02/03/04 all DONE.
+Prior status below.
+
+**Status (2026-06-21 prior):** **ALL 8 PSALM 22 SHORTS FULLY SHIPPED + PUBLISH PACKS DONE.**
 Stage 6 publisher (`cli_publish.py`) built + red-teamed + committed. All 8 shorts (#01–#08) have complete
 publish packs (youtube_short / tiktok / facebook / instagram .md files + captions.srt + PUBLISH_INDEX.html).
 FIX-ALL Phase A complete: Well + Door + Fire all DONE. Gaza Road (#25) DONE (64.4s, $7 spend).

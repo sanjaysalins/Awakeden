@@ -1,0 +1,14 @@
+{
+ "passed": true,
+ "issues": [
+  {
+   "claim": "Moses' weathered hands lifting a still cast-bronze serpent",
+   "actual": "Present, though serpent's head is raised in a slightly lively pose; still reads as a metal sculpture"
+  },
+  {
+   "claim": "close and weighty framing on Moses",
+   "actual": "Moses' face is largely cropped above the frame; only beard and hands visible"
+  }
+ ],
+ "banned_token_hits": []
+}

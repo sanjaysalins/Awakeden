@@ -1,0 +1,14 @@
+{
+ "passed": true,
+ "issues": [
+  {
+   "claim": "a man turning away in contempt from pale flakes of manna",
+   "actual": "figures sit around a campfire with manna flakes scattered on the ground; no single figure clearly turns away in contempt, though the central elder looks weary/bitter"
+  },
+  {
+   "claim": "dawn lighting",
+   "actual": "lighting reads more as overcast dusk with a shaft of light, not clearly dawn"
+  }
+ ],
+ "banned_token_hits": []
+}

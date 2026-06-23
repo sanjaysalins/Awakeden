@@ -31,22 +31,70 @@ CUT_BASE = ("A still finished Baroque oil painting on flat canvas, filmed as a H
             "no dissolves): ")
 CUT_TAIL = (" Between cuts the image holds perfectly still. No subject motion, no limbs moving, "
             "no morphing, no smooth zoom, no dissolve — every crop is the same frozen painting. "
+            "CROP ONLY TO EXPRESSIVE FOCAL POINTS — the FACE, the EYES, the HANDS, and the key named "
+            "object. NEVER crop to feet, a plain swath of robe or fabric folds, bare floor or pavement, "
+            "a blank wall, empty background, or empty sky — those are wasted crops. Every crop must show "
+            "the subject's face/hands or a meaningful named detail. "
             "CRITICAL — INVENT NOTHING: show ONLY what is already painted in this exact image. Do "
             "NOT add or generate any new hand, finger, limb, nail, wound, face, figure, halo, object, "
             "or detail that is not literally present in the still. Each crop is a plain rectangular "
-            "section of the existing painting — nothing outside the original is created. If a tighter "
-            "crop would reveal an area that is not clearly painted (e.g. a hand or edge), do NOT "
-            "invent it — stay on the full wide instead.")
+            "section of the existing painting. If a tighter crop would reveal an area that is not clearly "
+            "painted, do NOT invent it — stay on the full wide instead.")
 _CUT_VERBS = ["CUT to a tight close-up of {}.", "CUT to a macro crop of {}.",
               "CUT to a detail of {}.", "CUT to {}."]
 
+# anchor curation (2026-06-23): the gallery-tour is only as good as its crop
+# targets. EXPRESSIVE anchors (a face, eyes, hands, a flame, a tear, a named
+# object) make a punchy viral edit; GENERIC ones (robe/fabric/floor/pillar/sky/
+# background) crop to nothing and make a full figure "dance" (caught on #31 #06,
+# whose macros were face/hand/STONES/ROBE/PILLARS). Rank good anchors first, drop
+# the wasted ones, so even a single full-figure portrait tours face->hand->full.
+_GOOD_ANCHOR = ("face", "eyes", "eye", "hand", "hands", "finger", "fingertip", "tear",
+                "flame", "lamp", "wound", "footprint", "chain", "box", "chest", "veil",
+                "scroll", "stone", "lips", "mouth", "wrist", "feet of",
+                # the human subject of the scene is always a focal point, not a wasted crop
+                "woman", "child", "cowering", "kneeling", "the accused")
+_WASTED_ANCHOR = ("robe", "fabric", "drapery", "linen", "pillar", "column", "floor",
+                  "pavement", "background", "sky", "landscape", "horizon", "wall",
+                  "shadow", "haze", "dust", "pool of light", "edge of light", "tiles")
+
+def _curate_anchors(macros: list[str]) -> list[str]:
+    good = [m for m in macros if any(g in m.lower() for g in _GOOD_ANCHOR)
+            and not any(w in m.lower() for w in _WASTED_ANCHOR)]
+    if good:
+        return good[:3]
+    # nothing expressive listed -> tour the face + hands generically rather than fabric
+    return ["the subject's face", "the subject's hands"]
+
 def viral_prompt(scene: dict) -> str:
-    macros = [m for m in scene.get("macro_elements", []) if m][:4]
+    macros = _curate_anchors([m for m in scene.get("macro_elements", []) if m])
     cuts = ["Open on the full painting wide."]
     for i, m in enumerate(macros):
         cuts.append(_CUT_VERBS[i % len(_CUT_VERBS)].format(m))
     cuts.append("CUT back to the full wide.")
     return CUT_BASE + " ".join(cuts) + CUT_TAIL
+
+
+# PUSH-IN prompt (2026-06-23): the WINNER for single full-figure subjects (a
+# standing/seated person, a Christ portrait). The gallery-tour hard-cut crops
+# such a frame into a foot / a swath of robe / an empty corner so the figure
+# "dances" (caught on #31 scene 06). One slow continuous push-in holds the
+# subject. Mode is chosen by pipeline.clip_anim_qc.choose_anim_mode.
+PUSHIN_BASE = ("A still finished Baroque oil painting on flat canvas, filmed as ONE slow, steady, "
+               "continuous push-in toward ")
+PUSHIN_TAIL = (". The painting itself never moves, breathes, brightens or changes; only the camera "
+               "slowly, smoothly zooms in, keeping the subject centred and whole the entire time. "
+               "No hard cuts, no dissolves, no crop-jumps, no morphing, no subject motion, no limbs "
+               "moving. INVENT NOTHING: show ONLY what is already painted in this exact image; do not "
+               "add or generate any hand, finger, limb, face, halo, object or detail that is not "
+               "literally present. The final frame still holds the whole subject.")
+
+def pushin_prompt(scene: dict) -> str:
+    # the dominant subject to keep centred (first macro is usually the face/centre)
+    macros = [m for m in scene.get("macro_elements", []) if m]
+    focus = macros[0] if macros else "the central figure"
+    return (PUSHIN_BASE + f"the main subject of the painting, easing gently toward {focus}, "
+            "keeping the whole figure in frame" + PUSHIN_TAIL)
 
 def hf_animate(png: Path, out: Path, prompt: str, duration: int) -> bool:
     cmd = [str(HF), "generate", "create", "kling3_0", "--start-image", str(png),
@@ -100,8 +148,14 @@ def main():
             old = bak / out.name
             if not old.exists(): out.replace(old)
             else: out.unlink()
-        pr = viral_prompt(by_idx.get(idx, {}))
-        print(f"-- scene {idx:>2} {png.stem[3:]:34} [{role.get(idx,'build')}]")
+        sc = by_idx.get(idx, {})
+        try:
+            from pipeline.clip_anim_qc import choose_anim_mode
+            mode = choose_anim_mode(sc)
+        except Exception:
+            mode = "gallery"
+        pr = pushin_prompt(sc) if mode == "pushin" else viral_prompt(sc)
+        print(f"-- scene {idx:>2} {png.stem[3:]:34} [{role.get(idx,'build')}] mode={mode}")
         ok = hf_animate(png, out, pr, a.duration)
         if not ok:
             print(f"   -> HF blocked/failed; ffmpeg fallback (NSFW-only path)")

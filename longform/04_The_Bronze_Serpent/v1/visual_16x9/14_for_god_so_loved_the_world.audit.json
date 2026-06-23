@@ -1,0 +1,10 @@
+{
+ "passed": true,
+ "issues": [
+  {
+   "claim": "small distant cross on its far hill",
+   "actual": "cross is present but the figure on it is rendered with a slightly elongated/awkward anatomy though small in scale"
+  }
+ ],
+ "banned_token_hits": []
+}
