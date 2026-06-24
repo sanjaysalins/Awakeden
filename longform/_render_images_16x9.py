@@ -24,8 +24,18 @@ ep.out.mkdir(exist_ok=True)
 config.VISUAL_STYLE_BASE = ep.style_base or config.VISUAL_STYLE_BASE
 config.VISUAL_STYLE_TAIL = ep.style_tail
 visual_render.NBPProvider.ASPECT_RATIO = "16:9"
+visual_render.HFProvider.ASPECT = "16:9"
 
-prov = visual_render.NBPProvider()
+# Provider switch: NBP (default, long-form standard — attaches the Christ ref) or HF
+# (Higgsfield nano_banana_2 fallback, e.g. when the Gemini project spend cap is hit).
+USE_HF = "--provider" in sys.argv and sys.argv[sys.argv.index("--provider") + 1] == "hf"
+if USE_HF:
+    prov = visual_render.HFProvider()
+    PROVIDER_TAG = "hf"
+    print("[provider] HF (Higgsfield nano_banana_2), 16:9 — NBP fallback")
+else:
+    prov = visual_render.NBPProvider()
+    PROVIDER_TAG = "nbp"
 lib = ImageLibrary()
 EP_SLUG = ep.slug
 
@@ -106,7 +116,10 @@ for s in ep.scenes:
         t = time.time()
         png.write_bytes(prov.generate(scene))
         print(f"       ok ({png.stat().st_size:,} b, {time.time()-t:.0f}s) -> {png.name}")
-        cost.record_nbp(ep.slug, "long", "stills", note=f"#{s['id']:02d} {s['title'][:36]}")
+        if PROVIDER_TAG == "hf":
+            cost.record_hf(ep.slug, "long", "stills", config.HF_MODEL_ID, note=f"#{s['id']:02d} {s['title'][:36]}")
+        else:
+            cost.record_nbp(ep.slug, "long", "stills", note=f"#{s['id']:02d} {s['title'][:36]}")
         bank(s, png)
         ok += 1
         if DO_AUDIT:

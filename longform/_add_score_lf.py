@@ -59,6 +59,17 @@ EPISODES: dict[str, dict] = {
         "gain_db": -11.0,
         "outro_s": 2.5,
     },
+    # Seed of the Woman (503.3s) — Eden, the fall, the first promise spoken into the serpent's
+    # curse (M1-M3, lonely/searching) -> the centuries-early match "made of a woman" + the honest
+    # objection (M4-M5, holy weight) -> the head/heel exchange + the cross + the empty tomb + the
+    # invitation/risen-Christ hero close (M6-M7, grace rising). Same proven 3-segment arc as #03/#04;
+    # grace lands on the M7 invitation/hero. Full cinematic-orchestral, no choir pad (SFX = ambience).
+    "05_The_Seed_Of_The_Woman": {
+        "segments": ["lonely_searching_a", "glory_holy_stillness_a", "sacred_grace_rise_b"],
+        "xfade_s": 6.0,
+        "gain_db": -11.0,
+        "outro_s": 2.5,
+    },
 }
 
 

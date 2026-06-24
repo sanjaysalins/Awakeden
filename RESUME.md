@@ -1,17 +1,116 @@
 # RESUME.md — start here next session
 
+## ⚡⚡⚡ LATEST HANDOFF — #05 THE SEED OF THE WOMAN FULLY DONE (2026-06-24, long-form) — READ FIRST ⚡⚡⚡
+
+**#05 The Seed of the Woman (Genesis 3:15, the protoevangelium) — FULLY DONE, full long-form pipeline.**
+FINAL: `C:/Users/sanjay/SEED_OF_THE_WOMAN_FINAL.mp4` (8:26). Built this session end-to-end from scratch.
+
+### ═══ WHAT GOT DONE (#05) ═══
+- **Text (Stage 0+1):** `/study` → thread spine **panel-vetted** (the 5-CLI panel FLIPPED my A+B pick to
+  **C-led** = "the first promise of rescue is spoken into the serpent's curse, before Adam/Eve are sentenced;
+  the woman's seed crushes by being wounded — the cross"). Drafted the 7 movements; ran the panel **twice**
+  (incl. a clean UNBIASED re-run — see the memory below) → v1.2; all 15 KJV quotes verbatim; `cli_lock --form long`.
+- **Audio (1b):** 3-voice (narrator + scripture + **the_LORD** on Gen 3:9 + 3:15), natural pace, **8:23**,
+  0 word-drift. `_build_audio_inputs.py`. (Re-synthed once after the v1.2 panel fixes — paid twice; lesson logged.)
+- **Scene plan (2a):** `_build_scene_plan.py`, **25 scenes** tiled to the real turn timeline (503.4s). Panel-reviewed
+  (cut 26→25 cap, merged the heel pair, 2 crucifixions not 3, removed a scroll, fixed atmos/pose bugs).
+- **Stills (2b):** **25 Nano Banana Pro** (HF CLI `nano_banana_2` = NBP — bypasses the Gemini cap, see memory),
+  hard **period-oil** prompt (impasto/canvas/aged-varnish, anti-CGI), anti-pillarbox, correct crucifixion pose,
+  primeval Eden clothing, hero w/ nail-wound. Eye-checked.
+- **Animation (2c):** 22 veo3 + 2 Kling (loincloth crosses S19/S20) + 1 ffmpeg push-in (S12 manger — veo NSFW-refused
+  the newborn). **SLOW-BOOMERANG** locked into `_assemble_16x9.py` (single reverent drift, no brisk loops).
+- **Assembly (3):** 8:23 film, lands on the risen-Christ hero (verified).
+- **Finish (4):** `_add_score_lf.py` (added `05_*` recipe, 3-segment arc, −11dB) → `_sfx_seed.py` (13 choir-free
+  cues) → ivory captions (WhisperX, **1346/1346** aligned) → copied FINAL → `scan_v2_status.py` (done=21).
+
+### ═══ ENGINE / LESSONS LANDED THIS SESSION (reusable) ═══
+- 🟢 **NBP via the HF CLI bypasses the Gemini spend cap.** `config.HF_MODEL_ID='nano_banana_2'` resolves on the HF
+  CLI to **"Nano Banana Pro"** — the rule-compliant model, billed via HF credits, NOT the capped Gemini API. When
+  the direct google.genai NBPProvider 429s ("monthly spending cap"), render with `--provider hf` (added a switch to
+  `_render_images_16x9.py`). The flatness people blame on "HF" was actually the PROMPT, not the model.
+- 🟢 **Cinematic ≠ digital: hard-anchor the oil medium.** "cinematic/film-grade/volumetric" pushes NBP toward a
+  glossy CGI render; fix = STYLE_BASE "authentic 17th-c. Baroque oil on canvas, heavy impasto, canvas weave, aged
+  craquelure, Caravaggio/Rembrandt" + STYLE_TAIL "NOT a photograph, NOT CGI, NOT smooth digital". Keep the dramatic
+  COMPOSITION, anchor the MEDIUM.
+- 🟢 **Anti-pillarbox:** NBP renders "an oil painting" as a *framed canvas on a wall* (matte bars) unless CLOSE says
+  "FULL-BLEED, fills the entire 16:9 frame edge to edge, NOT a framed canvas, NO matte/letterbox/pillarbox bars".
+- 🟢 **Robed cross → standing figure; loincloth → proper hanging crucifixion.** For a correct nailed/suspended pose
+  use the loincloth (bare torso) + "feet off the ground, body hanging" — accept veo NSFW → Kling fallback for those.
+- 🟢 **Slow-boomerang** (`_assemble_16x9.py`): slow the clip so ONE forward+reverse fills the window (factor=(D/2)/cdur,
+  never <1) — a single reverent drift, no mechanical loops. User-approved pacing; now the long-form default.
+- 🔴 **Unbiased panel** (NEW memory `feedback-unbiased-panel`): give the panel a CLEAN artifact (strip the status/
+  applied-fix notes, no `--context` framing) and run it BEFORE the metered audio synth — a primed panel is theatre,
+  and re-paneling after synth pays for audio twice (both happened on #05).
+- 🟡 HF batch hits a transient concurrency cap ("hf CLI failed (3)") — idempotent re-run fills the missing.
+
+### ═══ ▶▶ DO FIRST TOMORROW (#05) ═══
+1. **Ear/eye-review #05 FINAL:** `C:/Users/sanjay/SEED_OF_THE_WOMAN_FINAL.mp4` (8:26). Review pages:
+   `…/v1/visual_16x9/_GALLERY.html` (stills) · `…/_CLIP_STRIPS.html` (motion).
+2. **Options:** publish pack (`/publish`); copy-to-Desktop done. Then **#06 next** (Day of Atonement / Scapegoat,
+   Lev 16 — the next Types & Shadows slate item) — the period-oil prompt set + slow-boomerang are now dialed in.
+
+### ═══ LONG-FORM STATUS BOARD ═══
+| # | Episode | Status |
+|---|---|---|
+| 01 | Isaiah 53 | ✅ DONE |
+| 02 | Psalm 22 | ✅ DONE |
+| 03 | Passover Lamb | ✅ DONE |
+| 04 | Bronze Serpent | ✅ DONE |
+| 05 | Seed of the Woman | ✅ DONE (2026-06-24) — `C:/Users/sanjay/SEED_OF_THE_WOMAN_FINAL.mp4` (8:26) |
+| 06 | Day of Atonement / Scapegoat (Lev 16) | next |
+
+---
+
 ## ⚡⚡ SHORT-FORM HANDOFF — #31 THE LIGHT YOU CAN STAND IN (2026-06-23, NEWEST short-form) — READ FIRST ⚡⚡
 
 > Separate track from the #04 long-form block just below (both current). This session = the SHORT-FORM #31 build.
 
-### ═══ ▶▶ DO FIRST TOMORROW — FINISH #31 (cut is DONE, only the finish remains) ═══
-The viral cut is built, reviewed, and LOCKED. **Remaining = the finish stage only:**
-1. **SFX bed** — write `sfx_pilots/build_31.py` (light/temple/stones ambience, dawn at the close; **NO choir pad** [[feedback-no-choir-pad-under-score]]).
-2. **Cinematic-orchestral score** — `sfx_pilots/add_music.py "<v1>" --prompt "<orchestral>" --regen --yes` (~$2 metered; write a "light of the world / I-am" recipe, full orchestral per [[feedback-cinematic-score-standard]]). **The ending-linger the user asked for is AUTOMATIC** — add_music's `outro` defaults to **2.5s**: it holds the last frame (the open-armed risen Christ) + rings the score out over the tail, so "where the guilty get to stand" lands on Him. Just run it.
-3. **Caption** — write `narration.spoken.txt` (CLEAN spoken lines only, per [[feedback-caption-clean-spoken-script]]) → `python -m veed_io.caption --video <sfx_music.mp4> --script narration.spoken.txt --style ivory`.
+### ═══ ✅✅ #31 DONE + LOCKED (2026-06-24) — FINAL 70.5s ═══
+**FINAL: `C:/Users/sanjay/31_The_Light_You_Can_Stand_In_FINAL.mp4` (70.5s). User: "lock it in, #31 is done."**
+Long user-driven revision: richer panel-cleared ending (Jesus as actor + "go and sin no more" + John 8:12
+"follow Him into the light of life") → gentle pace nudged to 1.48×/68s for punch → clips: blacklisted
+hallucinated `02`, generated own-world emptied-court + menorah via HF (NBP capped), swapped 3 identical
+frontal-Christ faces (`04`/`08`/`16`) for varied catalogue clips (wounded-hand / king-crucifixion /
+looking-down), flagged wandering `it-is-finished` do_not_reuse → score = music_library chained bed
+(lonely_searching → sacred_grace_rise, swell sliced from quiet intro to peak LATE), −11 dB + ratio-6 voice-duck
+→ whisperx captions (faster_whisper drifts on sped audio). Composers in scratchpad (`compose_31_plan.py` v1,
+`compose_31_v2.py` v2-DON'T, library-bed ffmpeg in this RESUME history). Memories:
+[[panel-generation-mode-for-endings]], [[elevenlabs-music-composition-plan]]. **NEXT: a new short** — one of the
+5 remaining visual builds. Clip slices page: `C:/Users/sanjay/31_CLIPS_strips.html`.
+
+<details><summary>(prior #31 finish handoff — superseded)</summary>
+
+### ═══ #31 first finish (2026-06-24) — 77.5s ═══
+**FINAL: `C:/Users/sanjay/31_The_Light_You_Can_Stand_In_FINAL.mp4` (77.5s).** First finish shipped at 61.5s;
+user review caught TWO things, both fixed:
+1. **Clip 08 weird AI sunburst glow** → swapped for a clean catalogue crucifixion (`04_it-is-finished`,
+   wounded hand, no glow). Old backed up to `…/v1/visual/nbp/_glow_replaced/`. (The other 13 clips are clean.)
+2. **Ending felt unfinished / hanging** → ran the 5-CLI panel in GENERATION mode (`_panel_ending.py`, reuses
+   `independent_review.py` plumbing, $0) to PROPOSE richer landings → synthesized + re-paneled 3 rounds
+   (REVISE→fix each) to **3 PASS**. Final landing: Jesus as actor + His command "go, and sin no more" + lands
+   on John 8:12 "follow Him into the light of life"; dropped the loose "pardons it / names Himself over it"
+   body line the panel flagged. Re-voiced at user's **gentle 1.30×** (75.0s) → align force-regen → re-lock →
+   re-assemble (nbp, hero-still) → SFX retimed → **score REGENERATED for 75s** (~$2) → captions → copied.
+- 🔴 **GOTCHA: `per_turn_synth.py` caches turns by INDEX, not content** — editing a turn's text and re-running
+  REUSES the stale mp3. Must **delete `_turns/NN_<speaker>.mp3` (+ `__atempo`) for the changed turn** to force
+  re-synth (cheap: only that turn re-renders; quotes/other narrator turns stay cached). Sharper than the known
+  "clear stale _turns" note.
+- 🟡 **OPEN for user ear/eye review:** (a) score crescendo may DRAG — ElevenLabs Music caps ~58s audible so it
+  was stretched atempo 0.742 to fill 78s (tail volume-eased); (b) cross #08 sits in a **~16s slow hold** (gentle
+  1.30× voice + 75s + only 14 clips ≈ 65s material = under-clipped, several segs <1×). If draggy: $0 pace-nudge
+  to ~1.45×/68s, OR ~$2-3 to generate ~3 more John 8 clips for punch.
+**▶▶ DO FIRST: ear/eye-review the #31 final, decide on (a)/(b) above.** Then next short = one of the 5 remaining visual builds.
+
+<details><summary>(original #31 finish handoff — now done)</summary>
+
+1. **SFX bed** — `sfx_pilots/build_31.py` (light/temple/stones ambience, dawn at the close; **NO choir pad** [[feedback-no-choir-pad-under-score]]).
+2. **Cinematic-orchestral score** — `sfx_pilots/add_music.py "<v1>" --prompt "<orchestral>" --regen --yes` (~$2 metered; full orchestral per [[feedback-cinematic-score-standard]]). Ending-linger AUTOMATIC (add_music `outro` defaults to **2.5s**).
+3. **Caption** — `narration.spoken.txt` (CLEAN spoken lines, per [[feedback-caption-clean-spoken-script]]) → `python -m veed_io.caption --video <sfx_music.mp4> --script narration.spoken.txt --style ivory`.
 4. Copy → `C:/Users/sanjay/31_The_Light_You_Can_Stand_In_FINAL.mp4` → `python v2/scan_v2_status.py`.
+</details>
 - v1 folder: `C:/Users/sanjay/PycharmProjects/PythonProject1/jesus/narration/31 The Light You Can Stand In/v1`
-- Cut: `…/v1/assembly/viral_cut.mp4` (59.0s). Clip-strips: `C:/Users/sanjay/31_CLIPS_strips.html`.
+- Cut: `…/v1/assembly/viral_cut.mp4`. Clip-strips: `C:/Users/sanjay/31_CLIPS_strips.html`.
+</details>
 
 ### ═══ WHAT GOT DONE (#31) ═══
 - **Audio** settled (2-voice narrator+jesus, 59.0s, 1.23x — user OK'd) → **LOCKED**. narration.md/tagged reformatted to v2 speaker-labels for parity.

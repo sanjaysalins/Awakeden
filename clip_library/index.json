@@ -811,7 +811,9 @@
         "cross"
       ],
       "scope": "neutral",
-      "jesus_variant": "passion"
+      "jesus_variant": "passion",
+      "do_not_reuse": true,
+      "do_not_reuse_reason": "wandering animation drifts off the cross to empty dark hills (wasted crops); flagged on #31 2026-06-24"
     },
     {
       "slug": "06_a-thousand-years-apart",

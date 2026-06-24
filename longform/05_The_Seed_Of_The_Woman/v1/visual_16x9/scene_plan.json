@@ -1,0 +1,469 @@
+{
+ "format": "16:9 long-form deep-dive",
+ "episode": "The Seed of the Woman — Genesis 3:15 (the protoevangelium) fulfilled in Christ",
+ "audio": "narration.mp3 — 503.4s (natural pace, 3-voice); scene t[] tile the turn timeline",
+ "image_provider": "nbp (Nano Banana Pro, Baroque oil)",
+ "animation": {
+  "model": "veo3_1_lite",
+  "aspect": "16:9",
+  "duration": 8,
+  "note": "the serpent is ALWAYS still/peripheral (veo morphs live snakes); God shown only as light; all crosses robed -> veo NSFW-safe; almost all scenes boomerang (locked cam) so long windows never freeze"
+ },
+ "fill_design": "ANIMATION-AWARE: every subject (serpent, couple, cross, risen Christ) is FROZEN; only ambient (mist/light/dust/cloud/cloth) moves. Almost all scenes BOOMERANG on a LOCKED camera (no end-of-push freeze, no continuation-clip cost); forward_slow only on S9 + S25.",
+ "style_base": "an authentic seventeenth-century Baroque oil painting on canvas by an old master in the manner of Caravaggio, Rembrandt and Rubens — HEAVY visible impasto brushstrokes and palette-knife texture, the weave of the canvas and faint aged craquelure varnish showing through, deep tenebrist chiaroscuro, warm painted shafts of light, muted earthen oil pigments; the grand dramatic scale and composition of cinema but rendered WHOLLY as a hand-painted museum oil masterpiece, reverent sacred art",
+ "rule": "ONE spine: the first promise of rescue is spoken into the serpent's curse, before Adam/Eve are sentenced (the woman's seed who crushes by being wounded); the head/heel exchange is the cross; every quote's visual matches its narration cue; the film CLOSES on the risen Christ (hero S25).",
+ "film_name": "Seed_Of_The_Woman_16x9.mp4",
+ "style_tail": "hand-painted oil on canvas with bold visible brushwork, NOT a photograph, NOT a smooth digital render, NOT CGI, NOT glossy 3D, NOT airbrushed, no text, no legible writing, no modern or medieval or European dress (no tailored jackets, collars, buttons, lapels, hoods, pinafores), no modern tools, authentic ancient biblical-period setting and clothing, dramatic 16:9 composition",
+ "scenes": [
+  {
+   "id": 1,
+   "mvt": "M1 The Picture",
+   "t": [
+    0.0,
+    11.8
+   ],
+   "title": "Something has gone terribly wrong (hook)",
+   "subject_block": "a single seamless full-bleed Baroque oil painting in the grand old-master manner, hard tenebrist Caravaggio chiaroscuro, masterful dramatic composition, warm painted shafts of light and deep layered atmospheric depth, thick visible oil brushwork, intimate and ominous: the first man and the first woman, primeval Adam and Eve, covered ONLY in rough primitive fig-leaf aprons and untailored animal-skin wraps, bare-armed and bare-shouldered, long loose unkempt hair, NO woven robe NO mantle NO veil NO head-covering NO halo, NO medieval or devotional dress, ancient and unadorned, deep shadow crouched and HIDING low among the deep shadowed trees of the primeval garden of Eden at the dawn of the world — lush ancient trees heavy with leaf, deep ferns and pristine undergrowth, a still river and low ground-mist, timeless and untouched, NO modern NO medieval NO European anything at dusk, their faces turned away in shame and fear, a first chill of guilt over a once-perfect garden, the warm light they are shrinking from glimmering beyond the trunks; tender, grave, one continuous FULL-BLEED image that fills the ENTIRE 16:9 frame edge to edge — NOT a framed canvas, NOT a painting hung on a wall, NO picture frame, NO canvas edge, NO surrounding matte or letterbox or pillarbox bars, NO border, no panels, no text",
+   "sfx": "garden_birdsong_uneasy + wind_leaves_low",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "ground-mist drifting between the trunks, leaves and ferns stirring faintly, far light breathing",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 11.8
+  },
+  {
+   "id": 2,
+   "mvt": "M1 The Picture",
+   "t": [
+    11.8,
+    31.3
+   ],
+   "title": "They heard the voice of the LORD — Where art thou",
+   "subject_block": "a single seamless full-bleed Baroque oil painting in the grand old-master manner, hard tenebrist Caravaggio chiaroscuro, masterful dramatic composition, warm painted shafts of light and deep layered atmospheric depth, thick visible oil brushwork, WIDE reverent tableau: the primeval garden of Eden at the dawn of the world — lush ancient trees heavy with leaf, deep ferns and pristine undergrowth, a still river and low ground-mist, timeless and untouched, NO modern NO medieval NO European anything in the cool of the day, the unseen presence of the LORD shown ONLY as a great shaft of warm holy light breaking through the trees, God never depicted as a face or a figure, only radiance and light moving through the garden, and in the shadowed foreground the first man and the first woman, primeval Adam and Eve, covered ONLY in rough primitive fig-leaf aprons and untailored animal-skin wraps, bare-armed and bare-shouldered, long loose unkempt hair, NO woven robe NO mantle NO veil NO head-covering NO halo, NO medieval or devotional dress, ancient and unadorned, deep shadow pressed back behind a great tree, hiding from the approaching radiance; the holy light searching the garden for them; awe and dread, one continuous FULL-BLEED image that fills the ENTIRE 16:9 frame edge to edge — NOT a framed canvas, NOT a painting hung on a wall, NO picture frame, NO canvas edge, NO surrounding matte or letterbox or pillarbox bars, NO border, no panels, no text",
+   "sfx": "wind_leaves_low + drone_holy_faint",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "the great shaft of light strengthening and breathing through the trees, ground-mist and dust motes adrift",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 19.5
+  },
+  {
+   "id": 3,
+   "mvt": "M1 The Picture",
+   "t": [
+    31.3,
+    53.0
+   ],
+   "title": "The blame goes round — the serpent beguiled me",
+   "subject_block": "a single seamless full-bleed Baroque oil painting in the grand old-master manner, hard tenebrist Caravaggio chiaroscuro, masterful dramatic composition, warm painted shafts of light and deep layered atmospheric depth, thick visible oil brushwork, DEEP unified composition, grave: in the warm foreground the man and the woman half-turned in mutual blame, hands low and accusing, while a single serpent low among the roots and shadow, coiled and STILL, kept small and peripheral, plainly inert, NOT writhing NOT moving NOT the focus lies half-hidden among the roots in the dark below them; the once-whole harmony of the primeval garden of Eden at the dawn of the world — lush ancient trees heavy with leaf, deep ferns and pristine undergrowth, a still river and low ground-mist, timeless and untouched, NO modern NO medieval NO European anything unravelling, the three caught in one chain of blame under the fading light; sombre, reverent, one continuous FULL-BLEED image that fills the ENTIRE 16:9 frame edge to edge — NOT a framed canvas, NOT a painting hung on a wall, NO picture frame, NO canvas edge, NO surrounding matte or letterbox or pillarbox bars, NO border, no panels, no text",
+   "sfx": "wind_leaves_low + low_unease_drone",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "ground-mist creeping low over the roots, leaves stirring, the light dimming and breathing",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 21.7
+  },
+  {
+   "id": 4,
+   "mvt": "M2 The Problem",
+   "t": [
+    53.0,
+    67.5
+   ],
+   "title": "Judgment must fall — death enters the world",
+   "subject_block": "a single seamless full-bleed Baroque oil painting in the grand old-master manner, hard tenebrist Caravaggio chiaroscuro, masterful dramatic composition, warm painted shafts of light and deep layered atmospheric depth, thick visible oil brushwork, sombre WIDE tableau: the primeval garden of Eden at the dawn of the world — lush ancient trees heavy with leaf, deep ferns and pristine undergrowth, a still river and low ground-mist, timeless and untouched, NO modern NO medieval NO European anything now under a darkening, heavier sky, the first long shadows falling across the garden, the first man and the first woman, primeval Adam and Eve, covered ONLY in rough primitive fig-leaf aprons and untailored animal-skin wraps, bare-armed and bare-shouldered, long loose unkempt hair, NO woven robe NO mantle NO veil NO head-covering NO halo, NO medieval or devotional dress, ancient and unadorned, deep shadow small and exposed at the edge of the trees as the warmth withdraws — innocence gone, a cold new mortality entering a world that was deathless; restrained, weighty, one continuous FULL-BLEED image that fills the ENTIRE 16:9 frame edge to edge — NOT a framed canvas, NOT a painting hung on a wall, NO picture frame, NO canvas edge, NO surrounding matte or letterbox or pillarbox bars, NO border, no panels, no text",
+   "sfx": "wind_rising_low + drone_low_sub",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "the sky darkening and cloud drifting in, ground-mist thickening, cold air stirring the leaves",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 14.5
+  },
+  {
+   "id": 5,
+   "mvt": "M2 The Problem",
+   "t": [
+    67.5,
+    81.0
+   ],
+   "title": "They took the creature's word against the Creator",
+   "subject_block": "a single seamless full-bleed Baroque oil painting in the grand old-master manner, hard tenebrist Caravaggio chiaroscuro, masterful dramatic composition, warm painted shafts of light and deep layered atmospheric depth, thick visible oil brushwork, intimate close composition: the man and the woman half-lit in deep shadow, faces lowered and stricken with the dawning weight of what they have done, a single serpent low among the roots and shadow, coiled and STILL, kept small and peripheral, plainly inert, NOT writhing NOT moving NOT the focus coiled still and watchful in the dark nearby — the terrible bargain already made, trust given to the creature over the Maker; tender, grave, deep Rembrandt shadow, one continuous FULL-BLEED image that fills the ENTIRE 16:9 frame edge to edge — NOT a framed canvas, NOT a painting hung on a wall, NO picture frame, NO canvas edge, NO surrounding matte or letterbox or pillarbox bars, NO border, no panels, no text",
+   "sfx": "wind_low + breath_shallow",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "the low light wavering over their faces, faint mist and dust drifting, leaves barely stirring",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 13.5
+  },
+  {
+   "id": 6,
+   "mvt": "M2 The Problem",
+   "t": [
+    81.0,
+    94.5
+   ],
+   "title": "No human way back — rescue must come from God",
+   "subject_block": "a single seamless full-bleed Baroque oil painting in the grand old-master manner, hard tenebrist Caravaggio chiaroscuro, masterful dramatic composition, warm painted shafts of light and deep layered atmospheric depth, thick visible oil brushwork, WIDE and desolate: the first man and the first woman, primeval Adam and Eve, covered ONLY in rough primitive fig-leaf aprons and untailored animal-skin wraps, bare-armed and bare-shouldered, long loose unkempt hair, NO woven robe NO mantle NO veil NO head-covering NO halo, NO medieval or devotional dress, ancient and unadorned, deep shadow very small at the mouth of the primeval garden of Eden at the dawn of the world — lush ancient trees heavy with leaf, deep ferns and pristine undergrowth, a still river and low ground-mist, timeless and untouched, NO modern NO medieval NO European anything, standing before the vast darkening wilderness beyond the garden's edge, their backs to the last warm light, no road back the way they came — if rescue comes it must come from God's side of the breach; lonely, reverent, hopeful undertone, one continuous FULL-BLEED image that fills the ENTIRE 16:9 frame edge to edge — NOT a framed canvas, NOT a painting hung on a wall, NO picture frame, NO canvas edge, NO surrounding matte or letterbox or pillarbox bars, NO border, no panels, no text",
+   "sfx": "wind_open_low + drone_holy_faint",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "cloud drifting over the far wilderness, ground-mist at the garden edge, robes and leaves stirring",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 13.5
+  },
+  {
+   "id": 7,
+   "mvt": "M3 The Strange Detail",
+   "t": [
+    94.5,
+    108.2
+   ],
+   "title": "Watch closely — God turns to the serpent",
+   "subject_block": "a single seamless full-bleed Baroque oil painting in the grand old-master manner, hard tenebrist Caravaggio chiaroscuro, masterful dramatic composition, warm painted shafts of light and deep layered atmospheric depth, thick visible oil brushwork, hushed and weighty: the unseen presence of the LORD shown ONLY as a great shaft of warm holy light breaking through the trees, God never depicted as a face or a figure, only radiance and light bending low toward a single serpent low among the roots and shadow, coiled and STILL, kept small and peripheral, plainly inert, NOT writhing NOT moving NOT the focus coiled still at the foot of a great tree in deep shadow, the man and woman dim and waiting behind — the holy light turning first to the enemy, not yet to the guilty pair; a strange expectant stillness, reverent, one continuous FULL-BLEED image that fills the ENTIRE 16:9 frame edge to edge — NOT a framed canvas, NOT a painting hung on a wall, NO picture frame, NO canvas edge, NO surrounding matte or letterbox or pillarbox bars, NO border, no panels, no text",
+   "sfx": "wind_low + drone_holy_faint",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "the shaft of light strengthening on the still serpent and roots, ground-mist and dust adrift",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 13.7
+  },
+  {
+   "id": 8,
+   "mvt": "M3 The Strange Detail",
+   "t": [
+    108.2,
+    130.2
+   ],
+   "title": "Cursed above all — the serpent's judgment",
+   "subject_block": "a single seamless full-bleed Baroque oil painting in the grand old-master manner, hard tenebrist Caravaggio chiaroscuro, masterful dramatic composition, warm painted shafts of light and deep layered atmospheric depth, thick visible oil brushwork, solemn close composition: a single serpent low among the roots and shadow, coiled and STILL, kept small and peripheral, plainly inert, NOT writhing NOT moving NOT the focus low in the dust at the base of the tree, half-lit by the descending holy radiance, pressed low toward the ground under the weight of the curse — brought down into the dust; the enemy humbled, the pure curse before the promise; deep shadow, grave, NOT gory, one continuous FULL-BLEED image that fills the ENTIRE 16:9 frame edge to edge — NOT a framed canvas, NOT a painting hung on a wall, NO picture frame, NO canvas edge, NO surrounding matte or letterbox or pillarbox bars, NO border, no panels, no text",
+   "sfx": "drone_low + wind_leaves_low",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "the radiance pulsing over the still serpent, fine dust and mist drifting low along the ground",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 22.0
+  },
+  {
+   "id": 9,
+   "mvt": "M3 The Strange Detail",
+   "t": [
+    130.2,
+    140.2
+   ],
+   "title": "I will put enmity — her seed shall bruise (the promise)",
+   "subject_block": "a single seamless full-bleed Baroque oil painting in the grand old-master manner, hard tenebrist Caravaggio chiaroscuro, masterful dramatic composition, warm painted shafts of light and deep layered atmospheric depth, thick visible oil brushwork, the SIGNATURE protoevangelium image, reverent and arresting: the first woman, primeval Eve, covered ONLY in a rough fig-leaf and animal-skin wrap, bare-armed and bare-shouldered, long loose hair, NO woven robe NO mantle NO veil NO head-covering NO halo, ancient and unadorned standing small in a strong warm shaft of holy light, looking down toward a single serpent low among the roots and shadow, coiled and STILL, kept small and peripheral, plainly inert, NOT writhing NOT moving NOT the focus coiled low in the foreground shadow, the shaft of light falling like a drawn line of enmity between the woman and the serpent — the promised crushing of the serpent foretold, not yet done; deep shadow, the light breaking the darkness, worshipful and weighty, one continuous FULL-BLEED image that fills the ENTIRE 16:9 frame edge to edge — NOT a framed canvas, NOT a painting hung on a wall, NO picture frame, NO canvas edge, NO surrounding matte or letterbox or pillarbox bars, NO border, no panels, no text",
+   "sfx": "drone_holy_low + light_swell_faint",
+   "camera": "a very slow, steady cinematic push-in",
+   "atmos": "the shaft of holy light strengthening and breathing, fine dust motes drifting up through the beam",
+   "fill": "forward_slow",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": true,
+   "window_s": 10.0
+  },
+  {
+   "id": 10,
+   "mvt": "M3 The Strange Detail",
+   "t": [
+    140.2,
+    158.5
+   ],
+   "title": "Before a word to Eve or Adam — grace gets the first word",
+   "subject_block": "a single seamless full-bleed Baroque oil painting in the grand old-master manner, hard tenebrist Caravaggio chiaroscuro, masterful dramatic composition, warm painted shafts of light and deep layered atmospheric depth, thick visible oil brushwork, DEEP unified composition, hopeful undertone in deep shadow: the first man and the first woman, primeval Adam and Eve, covered ONLY in rough primitive fig-leaf aprons and untailored animal-skin wraps, bare-armed and bare-shouldered, long loose unkempt hair, NO woven robe NO mantle NO veil NO head-covering NO halo, NO medieval or devotional dress, ancient and unadorned, deep shadow still waiting unsentenced in the dim midground, while over the serpent in the foreground a warm promise-light has already broken — the order made visible, mercy spoken into the curse before the sentence falls on the man or the woman; reverent, tender, one continuous FULL-BLEED image that fills the ENTIRE 16:9 frame edge to edge — NOT a framed canvas, NOT a painting hung on a wall, NO picture frame, NO canvas edge, NO surrounding matte or letterbox or pillarbox bars, NO border, no panels, no text",
+   "sfx": "drone_holy_faint + wind_low",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "the promise-light strengthening across the scene, ground-mist and dust drifting, leaves stirring faintly",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 18.3
+  },
+  {
+   "id": 11,
+   "mvt": "M4 The Centuries-Early Match",
+   "t": [
+    158.5,
+    183.4
+   ],
+   "title": "Her seed — strangely specific",
+   "subject_block": "a single seamless full-bleed Baroque oil painting in the grand old-master manner, hard tenebrist Caravaggio chiaroscuro, masterful dramatic composition, warm painted shafts of light and deep layered atmospheric depth, thick visible oil brushwork, contemplative CLOSE study: the first woman, primeval Eve, covered ONLY in a rough fig-leaf and animal-skin wrap, bare-armed and bare-shouldered, long loose hair, NO woven robe NO mantle NO veil NO head-covering NO halo, ancient and unadorned half-lit in deep shadow, one hand resting low at her side, the warm light gathered on her alone against the surrounding dark — the hope of the world narrowing strangely to the woman's seed; reverent, quiet, weighty, one continuous FULL-BLEED image that fills the ENTIRE 16:9 frame edge to edge — NOT a framed canvas, NOT a painting hung on a wall, NO picture frame, NO canvas edge, NO surrounding matte or letterbox or pillarbox bars, NO border, no panels, no text",
+   "sfx": "drone_holy_faint + wind_low",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "the gathered light breathing softly over the figure, fine dust motes adrift in the shadow",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 24.9
+  },
+  {
+   "id": 12,
+   "mvt": "M4 The Centuries-Early Match",
+   "t": [
+    183.4,
+    202.7
+   ],
+   "title": "Made of a woman — the child arrives",
+   "subject_block": "a single seamless full-bleed Baroque oil painting in the grand old-master manner, hard tenebrist Caravaggio chiaroscuro, masterful dramatic composition, warm painted shafts of light and deep layered atmospheric depth, thick visible oil brushwork, intimate and tender, 1st-century Judea: a young mother in a dim humble ancient interior cradling a newborn infant close, wrapped in plain cloth, warm low lamplight on the child, deep Rembrandt shadow, reverent and tender, no halo, no modern dress — the long-promised seed of the woman come at last, the fulness of time; the single warm lamp the only light in the deep shadow, the newborn the heart of the frame; reverent, hushed, holy, one continuous FULL-BLEED image that fills the ENTIRE 16:9 frame edge to edge — NOT a framed canvas, NOT a painting hung on a wall, NO picture frame, NO canvas edge, NO surrounding matte or letterbox or pillarbox bars, NO border, no panels, no text",
+   "sfx": "lamp_flame_soft + night_low",
+   "camera": "a very slow, steady cinematic push-in",
+   "atmos": "the lamp flame wavering warm over the child, a thin thread of smoke rising, shadow breathing",
+   "fill": "forward_slow",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": true,
+   "window_s": 19.3
+  },
+  {
+   "id": 13,
+   "mvt": "M4 The Centuries-Early Match",
+   "t": [
+    202.7,
+    226.8
+   ],
+   "title": "Not a citation — a trajectory (the honest beat)",
+   "subject_block": "a single seamless full-bleed Baroque oil painting in the grand old-master manner, hard tenebrist Caravaggio chiaroscuro, masterful dramatic composition, warm painted shafts of light and deep layered atmospheric depth, thick visible oil brushwork, DEEP unified composition holding the long arc: on one side, half in deep shadow, the dim garden of Eden with its still serpent; on the other, far and small, the silhouette of a single hill catching the first pale light beyond rolling country — the whole story bending from the garden toward what is coming, a quiet visual trajectory not a proof; reverent, contemplative, one continuous FULL-BLEED image that fills the ENTIRE 16:9 frame edge to edge — NOT a framed canvas, NOT a painting hung on a wall, NO picture frame, NO canvas edge, NO surrounding matte or letterbox or pillarbox bars, NO border, no panels, no text",
+   "sfx": "drone_low + wind_distant",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "slow cloud drifting over the far hill, ground-mist over the dim garden, dust motes adrift",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 24.1
+  },
+  {
+   "id": 14,
+   "mvt": "M4 The Centuries-Early Match",
+   "t": [
+    226.8,
+    252.9
+   ],
+   "title": "The works of the devil destroyed",
+   "subject_block": "a single seamless full-bleed Baroque oil painting in the grand old-master manner, hard tenebrist Caravaggio chiaroscuro, masterful dramatic composition, warm painted shafts of light and deep layered atmospheric depth, thick visible oil brushwork, weighty and hopeful, DEEP unified composition, NO cross in frame: low in deep shadow an inert lifeless serpent crushed and still on the ground, plainly dead, NOT moving NOT writhing, the old serpent named the Devil now lifeless; and breaking down over it from above a great broad shaft of warm victory-light driving back the darkness — the works of the devil undone, the enemy defeated; reverent, awe-struck, one continuous FULL-BLEED image that fills the ENTIRE 16:9 frame edge to edge — NOT a framed canvas, NOT a painting hung on a wall, NO picture frame, NO canvas edge, NO surrounding matte or letterbox or pillarbox bars, NO border, no panels, no text",
+   "sfx": "drone_holy_low + light_swell_faint",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "the victory-light strengthening and breathing down over the still serpent, fine dust drifting up through the beam",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 26.1
+  },
+  {
+   "id": 15,
+   "mvt": "M5 The Honest Objection",
+   "t": [
+    252.9,
+    275.0
+   ],
+   "title": "A fair skeptic — reading Jesus in",
+   "subject_block": "a single seamless full-bleed Baroque oil painting in the grand old-master manner, hard tenebrist Caravaggio chiaroscuro, masterful dramatic composition, warm painted shafts of light and deep layered atmospheric depth, thick visible oil brushwork, sober and clear, intimate: a single thoughtful bare-headed ancient man seated alone on a stone in a shaft of pale light in deep shadow, chin resting on his hand, brow furrowed as he weighs a hard question, hands otherwise empty, no props; the honest doubt given room; reverent, restrained, no text, one continuous FULL-BLEED image that fills the ENTIRE 16:9 frame edge to edge — NOT a framed canvas, NOT a painting hung on a wall, NO picture frame, NO canvas edge, NO surrounding matte or letterbox or pillarbox bars, NO border, no panels, no text",
+   "sfx": "low_drone + wind_faint",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "the pale shaft of light breathing over the figure, fine dust motes drifting slowly through the beam",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 22.1
+  },
+  {
+   "id": 16,
+   "mvt": "M5 The Honest Objection",
+   "t": [
+    275.0,
+    296.7
+   ],
+   "title": "We follow the line out from within",
+   "subject_block": "a single seamless full-bleed Baroque oil painting in the grand old-master manner, hard tenebrist Caravaggio chiaroscuro, masterful dramatic composition, warm painted shafts of light and deep layered atmospheric depth, thick visible oil brushwork, DEEP unified composition, contemplative: a dim continuous landscape running from the shadowed garden of Eden on one side, through low hills, toward a far faint dawn-light gathering on the horizon — a single unbroken line followed out from within the story itself, not forced from outside; reverent, quiet, one continuous FULL-BLEED image that fills the ENTIRE 16:9 frame edge to edge — NOT a framed canvas, NOT a painting hung on a wall, NO picture frame, NO canvas edge, NO surrounding matte or letterbox or pillarbox bars, NO border, no panels, no text",
+   "sfx": "drone_low + wind_distant",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "slow cloud and ground-mist drifting along the landscape, the far dawn-light breathing",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 21.7
+  },
+  {
+   "id": 17,
+   "mvt": "M5 The Honest Objection",
+   "t": [
+    296.7,
+    319.9
+   ],
+   "title": "Under His feet — the church shares the victory",
+   "subject_block": "a single seamless full-bleed Baroque oil painting in the grand old-master manner, hard tenebrist Caravaggio chiaroscuro, masterful dramatic composition, warm painted shafts of light and deep layered atmospheric depth, thick visible oil brushwork, DEEP unified composition, hopeful: a small company of ordinary ancient people standing together in a broad warm shaft of light that pours down from a faint robed cross on a distant hill beyond them, the dim still serpent far back in the shadow behind — the people sharing the victory only because they stand on the ground the One won first; reverent, no text, one continuous FULL-BLEED image that fills the ENTIRE 16:9 frame edge to edge — NOT a framed canvas, NOT a painting hung on a wall, NO picture frame, NO canvas edge, NO surrounding matte or letterbox or pillarbox bars, NO border, no panels, no text",
+   "sfx": "drone_holy_low + crowd_soft",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "the broad shaft of light strengthening over the standing people, fine dust and ground-mist drifting",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 23.2
+  },
+  {
+   "id": 18,
+   "mvt": "M6 The Exchange",
+   "t": [
+    319.9,
+    345.1
+   ],
+   "title": "Head and heel — two wounds, not equal",
+   "subject_block": "a single seamless full-bleed Baroque oil painting in the grand old-master manner, hard tenebrist Caravaggio chiaroscuro, masterful dramatic composition, warm painted shafts of light and deep layered atmospheric depth, thick visible oil brushwork, the heel/head exchange held in one unified frame, intimate and grave: a single bare human heel in warm light bearing a dark serpent-bite wound, pressed down upon the crushed still head of an inert lifeless serpent crushed and still on the ground, plainly dead, NOT moving NOT writhing in deep shadow below — the costly bruise to the heel and the crushing blow to the head, the two unequal wounds made plain; restrained NOT gory, deep Rembrandt shadow, one continuous FULL-BLEED image that fills the ENTIRE 16:9 frame edge to edge — NOT a framed canvas, NOT a painting hung on a wall, NO picture frame, NO canvas edge, NO surrounding matte or letterbox or pillarbox bars, NO border, no panels, no text",
+   "sfx": "drone_low + light_swell_faint",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "the warm light wavering over the wounded heel, fine dust motes adrift, shadow breathing",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 25.2
+  },
+  {
+   "id": 19,
+   "mvt": "M6 The Exchange",
+   "t": [
+    345.1,
+    369.4
+   ],
+   "title": "That is the cross — bearing what we had earned",
+   "subject_block": "a single seamless full-bleed Baroque oil painting in the grand old-master manner, hard tenebrist Caravaggio chiaroscuro, masterful dramatic composition, warm painted shafts of light and deep layered atmospheric depth, thick visible oil brushwork, sombre and worshipful three-quarter view: Christ CRUCIFIED and SUSPENDED HIGH on a TALL wooden cross, lifted well above the ground — both arms stretched wide and NAILED through the wrists along the crossbeam, the FEET nailed together and lifted CLEAR off the ground, the whole body HANGING and sagging downward by the nails, head fallen onto the chest, a cloth wound about the waist and hips; NOT standing, NOT on the ground, NOT leaning against the cross; hands anatomically correct with five fingers against a vast dark sky at the ninth hour, one shaft of warm light breaking across the bowed head and the nailed outstretched arms — the Son bearing the death that was our wages, stepping into the very judgment we deserved; deep Rembrandt shadow, reverent, restrained NOT graphic, one continuous FULL-BLEED image that fills the ENTIRE 16:9 frame edge to edge — NOT a framed canvas, NOT a painting hung on a wall, NO picture frame, NO canvas edge, NO surrounding matte or letterbox or pillarbox bars, NO border, no panels, no text",
+   "sfx": "wind_desolate + choir_distant_faint",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "storm cloud drifting slowly behind the cross, the warm shaft of light breathing, cold mist adrift",
+   "fill": "boomerang",
+   "jesus": true,
+   "jesus_variant": "passion",
+   "directional": false,
+   "window_s": 24.3
+  },
+  {
+   "id": 20,
+   "mvt": "M6 The Exchange",
+   "t": [
+    369.4,
+    392.0
+   ],
+   "title": "The turn — through death He broke the serpent's head",
+   "subject_block": "a single seamless full-bleed Baroque oil painting in the grand old-master manner, hard tenebrist Caravaggio chiaroscuro, masterful dramatic composition, warm painted shafts of light and deep layered atmospheric depth, thick visible oil brushwork, the turn made visible, EPIC monumental WIDE tableau: Christ CRUCIFIED and SUSPENDED HIGH on a TALL wooden cross, lifted well above the ground — both arms stretched wide and NAILED through the wrists along the crossbeam, the FEET nailed together and lifted CLEAR off the ground, the whole body HANGING and sagging downward by the nails, head fallen onto the chest, a cloth wound about the waist and hips; NOT standing, NOT on the ground, NOT leaning against the cross; hands anatomically correct with five fingers lifted HIGH and CENTRAL and towering on the crest of a barren hill, dominant against a vast luminous sky of breaking storm-cloud shot through with great shafts of warm golden god-light, sweeping atmospheric distance falling away below; small and far in the deep shadow at the foot of the hill an inert lifeless serpent crushed and still on the ground, plainly dead, NOT moving NOT writhing crushed and lifeless — the blow that looked like the serpent winning is the blow that broke his head; awe-inspiring, monumental, sombre turning to dawning hope, one continuous FULL-BLEED image that fills the ENTIRE 16:9 frame edge to edge — NOT a framed canvas, NOT a painting hung on a wall, NO picture frame, NO canvas edge, NO surrounding matte or letterbox or pillarbox bars, NO border, no panels, no text",
+   "sfx": "low_drone + light_swell_low",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "warm light strengthening down over the distant cross, slow storm-cloud parting, dust drifting up through the beams",
+   "fill": "boomerang",
+   "jesus": true,
+   "jesus_variant": "passion",
+   "directional": false,
+   "window_s": 22.6
+  },
+  {
+   "id": 21,
+   "mvt": "M6 The Exchange",
+   "t": [
+    392.0,
+    415.1
+   ],
+   "title": "The One whose heel was struck rose (the empty tomb)",
+   "subject_block": "a single seamless full-bleed Baroque oil painting in the grand old-master manner, hard tenebrist Caravaggio chiaroscuro, masterful dramatic composition, warm painted shafts of light and deep layered atmospheric depth, thick visible oil brushwork, luminous and hopeful, 1st-century Judea at dawn: the open empty rock tomb in a garden, the great stone rolled aside, the dark doorway spilling warm radiant light, folded grave-cloths within catching the glow, no figure in the doorway — the heel that was struck has risen, the enemy's head will never lift again; reverent, dawn-bright, one continuous FULL-BLEED image that fills the ENTIRE 16:9 frame edge to edge — NOT a framed canvas, NOT a painting hung on a wall, NO picture frame, NO canvas edge, NO surrounding matte or letterbox or pillarbox bars, NO border, no panels, no text",
+   "sfx": "dawn_birdsong_soft + light_swell_low",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "broad warm dawn light strengthening from the tomb doorway, fine dust and mist drifting, leaves stirring",
+   "fill": "boomerang",
+   "jesus": true,
+   "jesus_variant": "resurrection",
+   "directional": false,
+   "window_s": 23.1
+  },
+  {
+   "id": 22,
+   "mvt": "M7 The Invitation",
+   "t": [
+    415.1,
+    440.0
+   ],
+   "title": "Where it was spoken — into the enemy's curse",
+   "subject_block": "a single seamless full-bleed Baroque oil painting in the grand old-master manner, hard tenebrist Caravaggio chiaroscuro, masterful dramatic composition, warm painted shafts of light and deep layered atmospheric depth, thick visible oil brushwork, DEEP unified composition mirroring the hook: the dim garden of Eden with the first man and the first woman, primeval Adam and Eve, covered ONLY in rough primitive fig-leaf aprons and untailored animal-skin wraps, bare-armed and bare-shouldered, long loose unkempt hair, NO woven robe NO mantle NO veil NO head-covering NO halo, NO medieval or devotional dress, ancient and unadorned, deep shadow waiting in shadow and a single serpent low among the roots and shadow, coiled and STILL, kept small and peripheral, plainly inert, NOT writhing NOT moving NOT the focus still in the dark, while a warm promise-light already breaks over the scene and runs forward toward a distant gathering dawn — the oldest promise spoken into the curse, in the enemy's hearing, before the guilty were sentenced; reverent, tender, one continuous FULL-BLEED image that fills the ENTIRE 16:9 frame edge to edge — NOT a framed canvas, NOT a painting hung on a wall, NO picture frame, NO canvas edge, NO surrounding matte or letterbox or pillarbox bars, NO border, no panels, no text",
+   "sfx": "drone_holy_faint + wind_low",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "the promise-light strengthening across the garden toward the far dawn, ground-mist and dust adrift",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 24.9
+  },
+  {
+   "id": 23,
+   "mvt": "M7 The Invitation",
+   "t": [
+    440.0,
+    466.5
+   ],
+   "title": "The serpent still whispers — but the promise was kept",
+   "subject_block": "a single seamless full-bleed Baroque oil painting in the grand old-master manner, hard tenebrist Caravaggio chiaroscuro, masterful dramatic composition, warm painted shafts of light and deep layered atmospheric depth, thick visible oil brushwork, intimate and grave: a lone figure in deep shadow at the edge of the trees, half-turned toward a breaking warm light, a single serpent low among the roots and shadow, coiled and STILL, kept small and peripheral, plainly inert, NOT writhing NOT moving NOT the focus still and dim in the dark behind — the old lie still hissed (God is against you, stay hidden) against the warm light of a promise already kept; tender, hopeful, deep Rembrandt shadow, one continuous FULL-BLEED image that fills the ENTIRE 16:9 frame edge to edge — NOT a framed canvas, NOT a painting hung on a wall, NO picture frame, NO canvas edge, NO surrounding matte or letterbox or pillarbox bars, NO border, no panels, no text",
+   "sfx": "wind_low + drone_holy_faint",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "the warm light strengthening and breathing through the trees, ground-mist and dust drifting low",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 26.5
+  },
+  {
+   "id": 24,
+   "mvt": "M7 The Invitation",
+   "t": [
+    466.5,
+    485.0
+   ],
+   "title": "Step out from behind the trees",
+   "subject_block": "a single seamless full-bleed Baroque oil painting in the grand old-master manner, hard tenebrist Caravaggio chiaroscuro, masterful dramatic composition, warm painted shafts of light and deep layered atmospheric depth, thick visible oil brushwork, intimate and kind: a single human figure standing at the edge of the deep tree-shadow facing a broad breaking shaft of warm golden light, face lifted into the light, hands open and empty at the sides — not healed first, not strong, simply out of hiding; the dying do not heal themselves; tender, hopeful, one continuous FULL-BLEED image that fills the ENTIRE 16:9 frame edge to edge — NOT a framed canvas, NOT a painting hung on a wall, NO picture frame, NO canvas edge, NO surrounding matte or letterbox or pillarbox bars, NO border, no panels, no text",
+   "sfx": "light_swell_faint + wind_soft",
+   "camera": "locked, the faintest breathing drift",
+   "atmos": "the broad shaft of warm light strengthening, fine dust motes drifting up through the beam, leaves stirring",
+   "fill": "boomerang",
+   "jesus": false,
+   "jesus_variant": null,
+   "directional": false,
+   "window_s": 18.5
+  },
+  {
+   "id": 25,
+   "mvt": "M7 The Invitation",
+   "t": [
+    485.0,
+    503.4
+   ],
+   "title": "Be found by Him (HERO close)",
+   "subject_block": "a single seamless full-bleed Baroque oil painting in the grand old-master manner, hard tenebrist Caravaggio chiaroscuro, masterful dramatic composition, warm painted shafts of light and deep layered atmospheric depth, thick visible oil brushwork, NOT smooth modern devotional art, full-bleed close hero: the risen glorified Christ filling the frame in warm radiant golden light, a dark-haired bearded man with a serene tender face turned toward the viewer, reaching one open pierced hand gently forward in welcome, a CLEAR dark nail-wound scar visibly piercing the centre of the open palm (prominent and unmistakable), the hand anatomically correct with five fingers, deep Rembrandt shadow behind — the rescue God named from the very beginning, the gospel-pivot hero that closes the film on the risen Christ, one continuous FULL-BLEED image that fills the ENTIRE 16:9 frame edge to edge — NOT a framed canvas, NOT a painting hung on a wall, NO picture frame, NO canvas edge, NO surrounding matte or letterbox or pillarbox bars, NO border, no panels, no text",
+   "sfx": "choir_warm_soft + light_swell_low",
+   "camera": "a very slow, steady cinematic push-in",
+   "atmos": "the warm golden light glowing softly and steadily, the robe and hair stirring almost imperceptibly",
+   "fill": "forward_slow",
+   "jesus": true,
+   "jesus_variant": "resurrection",
+   "directional": true,
+   "window_s": 18.4
+  }
+ ]
+}

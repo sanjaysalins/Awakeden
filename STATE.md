@@ -1,7 +1,52 @@
 # STATE.md — progress tracker
 
-**Last updated:** 2026-06-23
-**Status (2026-06-23 LATEST):** **#04 THE BRONZE SERPENT FULLY DONE (long-form, 7:50).**
+**Last updated:** 2026-06-24
+**Status (2026-06-24 LATEST):** **#05 THE SEED OF THE WOMAN (Gen 3:15) — long-form FULLY DONE (8:26).**
+`C:/Users/sanjay/SEED_OF_THE_WOMAN_FINAL.mp4`. Built end-to-end this session: C-led thread (panel flipped my pick),
+v1.2 locked (panel ×2 incl. unbiased re-run), 3-voice audio (the_LORD on Gen 3:9+3:15), 25-scene plan, **25 Nano
+Banana Pro period-oil stills** (HF CLI = NBP, bypasses the Gemini cap), 22 veo3 + 2 Kling + 1 ffmpeg-push clips,
+**slow-boomerang** assembly, 3-segment score + 13-cue choir-free SFX + WhisperX captions (1346/1346). Lands on the
+risen Christ. Long-form board: 01/02/03/04/05 all DONE; **#06 = Day of Atonement (Lev 16) next**. Key lessons (see
+RESUME top + memory `feedback-unbiased-panel`): NBP-via-HF dodges the cap; hard-anchor the oil medium (not "cinematic");
+anti-pillarbox CLOSE; loincloth→correct crucifixion (Kling fallback); panel a CLEAN artifact BEFORE the metered synth.
+
+**Status (2026-06-24 prior):** **#31 "THE LIGHT YOU CAN STAND IN" (short) DONE + LOCKED (70.5s).**
+`C:/Users/sanjay/31_The_Light_You_Can_Stand_In_FINAL.mp4`. Deep user-driven revision pass:
+(1) **Ending** felt hanging → ran the 5-CLI panel in GENERATION mode (`_panel_ending.py`) → synthesized
++ re-paneled 3 rounds to 3 PASS: Jesus as actor + His command "go, and sin no more" + lands on John 8:12
+"follow Him into the light of life". (2) **Pace** = user chose gentle 1.30× then nudged to 1.48×/68s for punch.
+(3) **Clips** — blacklisted hallucinated `02` (floor-fire); GENERATED own-world emptied-court + menorah via **HF**
+(NBP/Gemini hit its monthly spend cap); swapped 3 near-identical frontal-Christ faces (`04`/`08`/`16`) for varied
+catalogue clips (wounded-hand-on-shoulder / king-who-would-not-come-down crucifixion / looking-down-in-love),
+kept `06` radiant + `09` risen; flagged the wandering `it-is-finished` do_not_reuse. (4) **Score** — after bland
+ElevenLabs prose + a vocals-injecting music_v2, settled on a **music_library chained bed** (lonely_searching →
+sacred_grace_rise, swell sliced from the track's quiet intro so it peaks LATE on the risen close), mixed −11 dB
+with a ratio-6 voice-duck so narration stays clear over the climax. (5) **Captions** — faster_whisper drifts on
+1.3×-sped audio → use **`--aligner whisperx`** (phoneme forced-align) for synced captions. NEW memories:
+[[panel-generation-mode-for-endings]], [[elevenlabs-music-composition-plan]]. **NEXT short-form options:** the 5
+remaining visual builds (`19 Cliff of Rival Gods` · `24 The Answer Was a Gift` · `26 Jesus Walked Past the Pool` ·
+`28 What Manner of Man` · `29 The Race He Could Never Win`) + 1 audio-first (`23 The Prepared Belly`).
+Prior status below.
+
+**Status (2026-06-24 earlier):** **#31 first finish (77.5s).**
+`C:/Users/sanjay/31_The_Light_You_Can_Stand_In_FINAL.mp4`. First finish shipped at 61.5s; user review caught
+TWO things → REVISED: (1) **clip 08 had a weird AI sunburst glow** → swapped for a clean catalogue crucifixion
+(`04_it-is-finished`, wounded hand, no glow; old one backed to `visual/nbp/_glow_replaced/`); (2) **the ending
+felt unfinished/hanging** → ran the 5-CLI panel in GENERATION mode (`_panel_ending.py`) to propose richer
+landings, synthesized + re-paneled 3× (each round REVISE→fix) until 3 PASS. Final landing = Jesus as actor +
+His command "go, and sin no more" + lands on John 8:12 "follow Him into the light of life" (dropped the loose
+"pardons it / names Himself over it" body line the panel flagged). Re-voiced at the user's chosen **gentle 1.30×**
+pace (75.0s; per_turn_synth caches by INDEX not content → must DELETE the changed turn's _turns mp3 to force
+re-synth) → align force-regen → re-lock → re-assemble (nbp, hero-still) → SFX retimed → **score REGENERATED for
+75s** (~$2; ElevenLabs Music caps ~58s audible → stretched atempo 0.742, tail volume-eased) → ivory captions.
+**OPEN for user ear/eye review:** (a) score crescendo may drag from the 26% stretch; (b) cross #08 sits in a
+~16s slow hold (gentle-voice + 75s + only 14 clips = under-clipped) — offered $0 pace-nudge or ~$2-3 clip
+backfill if draggy. Spend this pass ≈ $2.5 (re-synth + score regen). NEXT short-form options: the 5 remaining
+visual builds (`19 Cliff of Rival Gods` · `24 The Answer Was a Gift` · `26 Jesus Walked Past the Pool` ·
+`28 What Manner of Man` · `29 The Race He Could Never Win`) + 1 audio-first (`23 The Prepared Belly`).
+Prior status below.
+
+**Status (2026-06-23 prior):** **#04 THE BRONZE SERPENT FULLY DONE (long-form, 7:50).**
 `C:/Users/sanjay/BRONZE_SERPENT_FINAL.mp4`. Re-paneled v1.2→v1.4 + locked (sharpened landing onto the
 sufficiency of the cross) → 4-voice audio (narrator+scripture+god+jesus) → 27-scene plan (windows tiled to
 the REAL audio timeline; forward-slow push for long windows, no yo-yo; bronze = still metal) → 27 NBP stills

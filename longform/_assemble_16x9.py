@@ -1,7 +1,8 @@
 """Assemble the 16:9 long-form film: sequence each veo clip into its narration time
 window, mux the immersive (or plain) narration audio. EPISODE-GENERIC: pass an episode
 slug/dir as the first arg (bare = Isaiah). Two fill modes (no frozen ken-burns hold):
-  - camera-only / static scenes -> seamless BOOMERANG (forward + reverse, looped).
+  - camera-only / static scenes -> SLOW seamless BOOMERANG: the clip is slowed so a single
+    forward+reverse drift fills the whole window (reverent, no brisk repeated loops).
   - DIRECTIONAL scenes (per-scene `directional:true`; reverse looks comical) -> FORWARD-only
     concat of the original clip + chained continuation clips (<stem>_contN.mp4).
 Output: 1920x1080 30fps + the episode's audio -> <film_name>. ffmpeg only ($0)."""
@@ -84,23 +85,31 @@ for i, s in enumerate(scenes):
                  "-t",f"{D:.3f}","-an",*ENC,str(scene_mp4)])
         print(f"  scene {s['id']:02d}  win={D:5.1f}s  FORWARD {len(parts)} clip(s) ({fdur:.0f}s)  {s['title'][:30]}")
     else:
-        # camera-only / static: seamless boomerang (forward + reverse, looped)
+        # camera-only / static: SLOW seamless boomerang — slow the clip so ONE forward+reverse
+        # ping-pong fills the whole window (a single reverent drift out and back; no brisk
+        # repeated loops). factor = (D/2)/cdur, never below 1.0 (never speed the clip up).
         A = WORK / f"a_{s['id']:02d}.mp4"
         scaled(clip, A)
         cdur = dur(A)
         if D <= cdur + 0.05:
             run(["ffmpeg","-y","-i",str(A),"-t",f"{D:.3f}","-an",*ENC,str(scene_mp4)])
-            loops = 0
+            label = "trim"
         else:
+            factor = max(1.0, (D / 2.0) / cdur)   # slow each half to ~D/2; never speed up
+            Aslow = A
+            if factor > 1.001:
+                Aslow = WORK / f"aslow_{s['id']:02d}.mp4"
+                run(["ffmpeg","-y","-i",str(A),"-vf",f"setpts={factor:.4f}*PTS,fps={FPS}","-an",*ENC,str(Aslow)])
             B = WORK / f"b_{s['id']:02d}.mp4"
-            run(["ffmpeg","-y","-i",str(A),"-vf","reverse","-an",*ENC,str(B)])
+            run(["ffmpeg","-y","-i",str(Aslow),"-vf","reverse","-an",*ENC,str(B)])
             unit = WORK / f"unit_{s['id']:02d}.mp4"
             cat = WORK / f"cat_{s['id']:02d}.txt"
-            cat.write_text(f"file '{A.as_posix()}'\nfile '{B.as_posix()}'\n", encoding="utf-8")
+            cat.write_text(f"file '{Aslow.as_posix()}'\nfile '{B.as_posix()}'\n", encoding="utf-8")
             run(["ffmpeg","-y","-f","concat","-safe","0","-i",str(cat),"-c","copy",str(unit)])
+            # slowed unit ≈ D; if factor capped at 1.0 (D<2·cdur) the unit is 2·cdur>D, trim to D
             run(["ffmpeg","-y","-stream_loop","-1","-i",str(unit),"-t",f"{D:.3f}","-an",*ENC,str(scene_mp4)])
-            loops = D / (2*cdur)
-        print(f"  scene {s['id']:02d}  win={D:5.1f}s  pingpong x{loops:4.1f}  {s['title'][:30]}")
+            label = f"slow-boomerang x{factor:4.2f} (single drift)"
+        print(f"  scene {s['id']:02d}  win={D:5.1f}s  {label}  {s['title'][:30]}")
     seg_paths.append(scene_mp4)
 
 seg_list = WORK / "segments.txt"

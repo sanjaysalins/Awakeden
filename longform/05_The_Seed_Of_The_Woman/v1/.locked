@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "spoken_sha256": "c05731d162f0287c8236ea2232b4771ab8478ddc743a41e12da12756c9aada00",
+  "checks_run": [
+    "kjv_strict",
+    "parity",
+    "doctrine_scan",
+    "hook_scan",
+    "narrative_presence",
+    "cluster"
+  ],
+  "require_lock_env": "1"
+}

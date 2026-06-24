@@ -1,0 +1,365 @@
+{
+  "folder": "v1",
+  "stage": "per_turn_synth",
+  "mode": "dialogue_per_turn_with_narrator_atempo",
+  "generated_at": "2026-06-24T11:21:50Z",
+  "model_id": "eleven_v3",
+  "output_format": "mp3_44100_128",
+  "target_seconds": 700.0,
+  "natural_total_seconds": 493.04,
+  "narrator_natural_seconds": 419.76,
+  "quote_total_seconds": 73.28,
+  "narrator_atempo_factor": 1.0,
+  "pre_quote_pause_seconds": 0.4,
+  "post_quote_pause_seconds": 0.4,
+  "pause_total_seconds": 10.4,
+  "final_total_seconds": 503.251,
+  "delta_vs_target_seconds": -196.749,
+  "turns": [
+    {
+      "index": 0,
+      "speaker": "narrator",
+      "chars": 191,
+      "natural_seconds": 11.76,
+      "final_seconds": 11.754,
+      "atempo_applied": true
+    },
+    {
+      "index": 1,
+      "speaker": "scripture",
+      "chars": 192,
+      "natural_seconds": 11.76,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 2,
+      "speaker": "narrator",
+      "chars": 80,
+      "natural_seconds": 6.96,
+      "final_seconds": 11.76,
+      "atempo_applied": true
+    },
+    {
+      "index": 3,
+      "speaker": "god",
+      "chars": 17,
+      "natural_seconds": 1.04,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 4,
+      "speaker": "narrator",
+      "chars": 98,
+      "natural_seconds": 5.68,
+      "final_seconds": 6.948,
+      "atempo_applied": true
+    },
+    {
+      "index": 5,
+      "speaker": "scripture",
+      "chars": 41,
+      "natural_seconds": 3.2,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 6,
+      "speaker": "narrator",
+      "chars": 159,
+      "natural_seconds": 10.16,
+      "final_seconds": 1.04,
+      "atempo_applied": true
+    },
+    {
+      "index": 7,
+      "speaker": "narrator",
+      "chars": 199,
+      "natural_seconds": 14.56,
+      "final_seconds": 0.4,
+      "atempo_applied": true
+    },
+    {
+      "index": 8,
+      "speaker": "narrator",
+      "chars": 416,
+      "natural_seconds": 26.96,
+      "final_seconds": 5.677,
+      "atempo_applied": true
+    },
+    {
+      "index": 9,
+      "speaker": "narrator",
+      "chars": 75,
+      "natural_seconds": 4.64,
+      "final_seconds": 0.4,
+      "atempo_applied": true
+    },
+    {
+      "index": 10,
+      "speaker": "narrator",
+      "chars": 130,
+      "natural_seconds": 9.12,
+      "final_seconds": 3.2,
+      "atempo_applied": true
+    },
+    {
+      "index": 11,
+      "speaker": "scripture",
+      "chars": 140,
+      "natural_seconds": 10.16,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 12,
+      "speaker": "narrator",
+      "chars": 176,
+      "natural_seconds": 11.04,
+      "final_seconds": 10.156,
+      "atempo_applied": true
+    },
+    {
+      "index": 13,
+      "speaker": "god",
+      "chars": 144,
+      "natural_seconds": 9.2,
+      "final_seconds": 14.55,
+      "atempo_applied": false
+    },
+    {
+      "index": 14,
+      "speaker": "narrator",
+      "chars": 257,
+      "natural_seconds": 18.24,
+      "final_seconds": 26.952,
+      "atempo_applied": true
+    },
+    {
+      "index": 15,
+      "speaker": "narrator",
+      "chars": 355,
+      "natural_seconds": 24.88,
+      "final_seconds": 4.635,
+      "atempo_applied": true
+    },
+    {
+      "index": 16,
+      "speaker": "scripture",
+      "chars": 105,
+      "natural_seconds": 7.36,
+      "final_seconds": 9.109,
+      "atempo_applied": false
+    },
+    {
+      "index": 17,
+      "speaker": "narrator",
+      "chars": 83,
+      "natural_seconds": 5.2,
+      "final_seconds": 0.4,
+      "atempo_applied": true
+    },
+    {
+      "index": 18,
+      "speaker": "scripture",
+      "chars": 77,
+      "natural_seconds": 5.2,
+      "final_seconds": 10.16,
+      "atempo_applied": false
+    },
+    {
+      "index": 19,
+      "speaker": "narrator",
+      "chars": 314,
+      "natural_seconds": 24.08,
+      "final_seconds": 0.4,
+      "atempo_applied": true
+    },
+    {
+      "index": 20,
+      "speaker": "scripture",
+      "chars": 48,
+      "natural_seconds": 2.96,
+      "final_seconds": 11.033,
+      "atempo_applied": false
+    },
+    {
+      "index": 21,
+      "speaker": "narrator",
+      "chars": 12,
+      "natural_seconds": 0.72,
+      "final_seconds": 0.4,
+      "atempo_applied": true
+    },
+    {
+      "index": 22,
+      "speaker": "scripture",
+      "chars": 95,
+      "natural_seconds": 6.16,
+      "final_seconds": 9.2,
+      "atempo_applied": false
+    },
+    {
+      "index": 23,
+      "speaker": "narrator",
+      "chars": 49,
+      "natural_seconds": 3.68,
+      "final_seconds": 0.4,
+      "atempo_applied": true
+    },
+    {
+      "index": 24,
+      "speaker": "scripture",
+      "chars": 66,
+      "natural_seconds": 4.32,
+      "final_seconds": 18.23,
+      "atempo_applied": false
+    },
+    {
+      "index": 25,
+      "speaker": "narrator",
+      "chars": 104,
+      "natural_seconds": 5.84,
+      "final_seconds": 24.872,
+      "atempo_applied": true
+    },
+    {
+      "index": 26,
+      "speaker": "narrator",
+      "chars": 116,
+      "natural_seconds": 7.04,
+      "final_seconds": 0.4,
+      "atempo_applied": true
+    },
+    {
+      "index": 27,
+      "speaker": "narrator",
+      "chars": 543,
+      "natural_seconds": 36.8,
+      "final_seconds": 7.36,
+      "atempo_applied": true
+    },
+    {
+      "index": 28,
+      "speaker": "narrator",
+      "chars": 47,
+      "natural_seconds": 2.72,
+      "final_seconds": 0.4,
+      "atempo_applied": true
+    },
+    {
+      "index": 29,
+      "speaker": "scripture",
+      "chars": 17,
+      "natural_seconds": 1.12,
+      "final_seconds": 5.197,
+      "atempo_applied": false
+    },
+    {
+      "index": 30,
+      "speaker": "narrator",
+      "chars": 242,
+      "natural_seconds": 18.56,
+      "final_seconds": 0.4,
+      "atempo_applied": true
+    },
+    {
+      "index": 31,
+      "speaker": "narrator",
+      "chars": 107,
+      "natural_seconds": 6.96,
+      "final_seconds": 5.2,
+      "atempo_applied": true
+    },
+    {
+      "index": 32,
+      "speaker": "scripture",
+      "chars": 59,
+      "natural_seconds": 4.48,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 33,
+      "speaker": "narrator",
+      "chars": 151,
+      "natural_seconds": 12.96,
+      "final_seconds": 24.075,
+      "atempo_applied": true
+    },
+    {
+      "index": 34,
+      "speaker": "narrator",
+      "chars": 238,
+      "natural_seconds": 17.2,
+      "final_seconds": 0.4,
+      "atempo_applied": true
+    },
+    {
+      "index": 35,
+      "speaker": "scripture",
+      "chars": 90,
+      "natural_seconds": 6.32,
+      "final_seconds": 2.96,
+      "atempo_applied": false
+    },
+    {
+      "index": 36,
+      "speaker": "narrator",
+      "chars": 599,
+      "natural_seconds": 45.68,
+      "final_seconds": 0.4,
+      "atempo_applied": true
+    },
+    {
+      "index": 37,
+      "speaker": "narrator",
+      "chars": 65,
+      "natural_seconds": 4.56,
+      "final_seconds": 0.714,
+      "atempo_applied": true
+    },
+    {
+      "index": 38,
+      "speaker": "narrator",
+      "chars": 363,
+      "natural_seconds": 25.92,
+      "final_seconds": 0.4,
+      "atempo_applied": true
+    },
+    {
+      "index": 39,
+      "speaker": "narrator",
+      "chars": 280,
+      "natural_seconds": 20.88,
+      "final_seconds": 6.16,
+      "atempo_applied": true
+    },
+    {
+      "index": 40,
+      "speaker": "narrator",
+      "chars": 502,
+      "natural_seconds": 36.96,
+      "final_seconds": 0.4,
+      "atempo_applied": true
+    }
+  ],
+  "speakers": {
+    "narrator": {
+      "voice_id": "LSi9zNCeliLuhIGGS0By",
+      "audio_tag": null
+    },
+    "scripture": {
+      "voice_id": "puDRtQWF8NtQiPMJygTb",
+      "audio_tag": null
+    },
+    "god": {
+      "voice_id": "UzI1NsMEV3ni5JRkRSls",
+      "audio_tag": null
+    }
+  },
+  "settings": {
+    "stability": 0.65
+  }
+}

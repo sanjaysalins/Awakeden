@@ -1,0 +1,188 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: narration
+
+LENS — judge this NARRATION on (be specific, cite the exact line/phrase):
+- Doctrinal soundness: evangelical, biblically faithful; NO invented doctrine, NO contrarian/
+  clickbait/contested readings used to chase freshness.
+- KJV verbatim: every word inside quotation marks must be exact KJV. Flag any altered word.
+- Clarity on first hearing: a listener with zero Bible knowledge must follow it; no clever-but-
+  confusing conceit, no logic trick, no self-contradiction.
+- Grace-anchored conviction: NO fear / gain-loss / self-interest / works framing; the Spirit
+  convicts, the script invites.
+- Freshness = faithful depth: surprising about the TEXT, orthodox in the claim and the landing.
+- One thread spine from hook -> middle -> CTA (no thread-swapping).
+- Landing does NEW work (not a tired generic 'will you trust Him?' close).
+- Hook grips in the first ~5 seconds.
+
+ADDITIONAL CONTEXT / BRIEF:
+# LOCKED THREAD SPINE — Long-form #05: The Seed of the Woman (Genesis 3:15)
+
+**Locked 2026-06-24** after `/study` + 5-CLI panel (3/5 returned: cursor / claude / codex — all
+REVISE, convergent; gemini + grok env-failed). Panel flipped the original A+B recommendation;
+the convergent killer flag was verified by hand (see below). Slate position: Types & Shadows **#3**,
+built as episode folder **#05** (handoff note — folder number ≠ slate number, as with #03/#04).
+
+---
+
+## THE LOCKED SPINE (C-led)
+
+> **"God's very first promise of rescue is spoken to the serpent — hidden inside a curse,
+> before Adam or Eve are even sentenced. And it tells the whole story in advance: a deliverer
+> is coming, the woman's seed, who will crush the enemy by taking the enemy's own deadly blow."**
+
+ONE spine, hook → landing mirror intact:
+- **HOOK (M3):** the first word of grace in the whole Bible is addressed **to the enemy** —
+  airtight, rests on the *plain narrative order* of Gen 3 (unassailable; the panel's lowest-risk,
+  freshest beat).
+- **LANDING (M7):** the promise kept — the serpent's head crushed at the cross. The question the
+  hook opens ("who is this promised crusher, and how does He win?") is paid off at the close.
+- **"Her seed" (Candidate A)** is demoted to a *supporting clue* inside M4 — an unusual messianic
+  hint, NOT a virgin-birth grammatical proof.
+- **The wound that wins (Candidate B)** is the M6 exchange + the landing.
+
+---
+
+## 7-movement map (with panel fixes baked in)
+
+1. **The Picture** — Eden, the fall, the LORD God walking in the garden in the cool of the day,
+   the sentence begins. KJV Gen 3:8–13.
+2. **The Problem** — guilt, hiding, exposure, the coming death. (Do NOT over-claim a settled
+   "serpent's dominion" the Genesis text doesn't yet state — bondage-to-death is fine.)
+3. **The Strange Detail (HOOK)** — God turns to the *serpent* first, and the first thing out of
+   His mouth in the curse is a **promise of rescue**. Grace is preached to the enemy before the
+   guilty couple are sentenced (3:16–19 come *after* 3:15).
+4. **The Centuries-Early Match** — walk Gen 3:15 against the NT *honestly as trajectory/echo, not
+   as a verbatim quote* (no NT writer quotes Gen 3:15 — unlike Bronze Serpent, where Jesus names
+   the type himself). "Her seed" = an unusual messianic clue → Gal 4:4 "made of a woman", Luke 1:35.
+   The serpent's later identification as Satan (Rev 12:9, 1 John 3:8) is **canonical theology**,
+   stated as such — not read back into the Eden text as if Genesis names Satan.
+5. **The Honest Objection (M5 — steel-man the STRONGEST real pushback):**
+   - "No NT writer actually quotes Genesis 3:15 — you're reading Jesus in." (the killer)
+   - "*Zera* is collective — humanity/Israel/the church, not one man." (Rom 16:20 "under **your**
+     feet" = corporate.)
+   - "'The woman' is just Eve; 'her seed' need not imply abnormal paternity." (other women get
+     "seed" too — Gen 16:10 Hagar, Gen 24:60 Rebekah — VERIFIED.)
+   - "It's only a snake curse; Satan isn't named here."
+   **Answer honestly:** the singular individual emerges from the canonical trajectory + the NT's
+   *application* (not citation); the head-wound/heel-wound asymmetry; the whole-canon arc that
+   turns here.
+6. **The Exchange (M6 — must name PENAL substitution, not victory-metaphor alone):** the heel-wound
+   is real and costly (the cross — death, sin borne), and through that very death the head is
+   crushed (Heb 2:14 "through death... destroy him that had the power of death"; Col 2:15). Guard
+   with resurrection/consummation nuance — Rom 16:20 keeps a future/ongoing dimension ("shortly").
+   Do NOT flatten it into "Satan struck and that was the win" — name what Christ *bore*.
+7. **The Invitation (M7)** — come to the One whose bruised heel broke the serpent's head;
+   grace-anchored, the Spirit convicts, the script invites specifically (no recycled "Will you
+   trust Him?"; no fear/gain-loss).
+
+---
+
+## HARD CONSTRAINTS carried into the draft (panel-derived, fail-closed)
+
+- **KJV-strict:** Gen 3:15 reads **"it shall bruise thy head, and thou shalt bruise his heel."**
+  Use "it" — never smuggle "he shall bruise" into the script unless explicitly marked as
+  translation comparison. Per-verse attribution when quoting across 3:14/3:15. Mark every ellipsis.
+- **No false uniqueness / no eisegesis:** strip "only/everywhere/always" from the "her seed" beat.
+  Sinlessness is NOT a genetics workaround ("not of a fallen father's line" is OUT — Mary is also
+  fallen). "Her seed" is a clue, not a proof of the virgin birth from Hebrew grammar.
+- **Honest M4/M5:** Gen 3:15 is fulfilled by *trajectory + NT application*, NOT a verbatim NT quote.
+  Never claim "the NT's own explicit application/citation" of this verse.
+- **Multi-voice (INV-7):** Gen 3:14–15 is direct divine speech → tag **the_LORD** its own voice
+  (as Bronze Serpent did for Num 21:8). Narrator + Scripture-reading voice + the_LORD.
+- **Demoted to spinoff shorts (not the long spine):** Candidate D ("enmity as mercy") and the pure
+  "her seed = virgin birth" angle. C is now the long-form spine, so the spinoff "first gospel in
+  the curse" short overlaps the long's hook — fine; the distinct shorts are "her seed", "heel vs
+  head", "serpent-crusher promised in Eden".
+
+---
+
+## Pinned KJV corpus (verbatim, fetched from data/kjv_cache.json)
+
+- **Gen 3:8–20** (pericope) — see _thread_decision_brief.md for the full block.
+- **Gen 3:15** — "And I will put enmity between thee and the woman, and between thy seed and her
+  seed; it shall bruise thy head, and thou shalt bruise his heel."
+- **Gal 4:4** · **Rom 16:20** · **Heb 2:14** · **Col 2:15** · **1 John 3:8** · **Luke 1:35** ·
+  **Rev 12:9–11** (quote in full at lock, no ellipsis labeled "verbatim").
+
+Panel raw reviews: `_independent_review/20260624-101655/{cursor,CLAUDE,codex}.md` + INDEX.md.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block:
+
+VERDICT: PASS | REVISE | FAIL
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# The Seed of the Woman — long-form narration (DRAFT v1)
+
+**Series:** types-shadows (#3) · **Format:** 16:9, ~6–8 min, 7-movement spine
+**Core text:** Genesis 3:8–19 (the protoevangelium, 3:15) · **NT trajectory (not verbatim quotation):** Galatians 4:4 · Romans 16:20 · Hebrews 2:14 · Colossians 2:15 · 1 John 3:8 · Revelation 12:9–11 · Luke 1:35
+**Thread (one spine, hook→landing — C-led, panel-locked):** When the world breaks in Eden, God's very first word of consequence is not a threat to the guilty couple — it is a promise of rescue, spoken *to the serpent*, hidden inside his curse, before Adam or Eve are sentenced. And that promise tells the whole story in advance: a deliverer is coming, the woman's seed, who will crush the enemy by taking the enemy's own deadly blow. The hook (the first gospel, preached to the snake) is paid off at the landing (the serpent's head crushed at the cross, and his end still "shortly" coming).
+
+**Status:** DRAFT v1.1 — thread LOCKED via `/study` + 5-CLI panel (`_thread_LOCKED.md`; panel flipped the original A+B pick to C-led, raw reviews in `_independent_review\20260624-101655\`). **Narration 5-CLI panel DONE** (`_independent_review\20260624-105959\`: cursor/claude/codex/grok all REVISE, convergent; gemini env-failed). Applied all convergent fixes: (1) Col 2:15 → restored leading **"And"** (KJV-exact); (2) chronology — M3 now anchors the hook to the *sentencing* order (3:15 before the sentences on Eve/Adam), not "first words after the fall"; removed M2's premature Gen 3:19 quote; (3) M5 — added the 4th steel-man objection ("her seed" is ordinary — Hagar/Rebekah) + softened the NT-tracing overclaim; (4) M7 — dropped the banned generic "trust Him" close, re-landed on the serpent-addressed promise ("step out from behind the trees… be found by Him"), kept the already/not-yet ("end is now only a matter of time"); (5) M4 — dropped the singular-"it" grammar lean, added Luke 1:35, softened "reaches back/money in the bank"; (6) M2 — removed "joined the rebellion/changed sides" (no Satan read into the Eden moment). Panel constraints baked in: (1) C-led — hook rests on the plain narrative order, not a contestable grammar claim; (2) "her seed" is an *unusual clue*, NOT a virgin-birth grammatical proof — no "only/everywhere/always", no sinlessness-via-bypassing-male-descent; (3) M4/M5 are honest that **no NT writer quotes Gen 3:15 verbatim** — trajectory + NT application, never "explicit citation"; (4) KJV-strict **"it shall bruise thy head"** (never "he"); (5) M6 names the **penal** exchange (sin/death borne), with resurrection + a future ("shortly") dimension, not combat-metaphor alone; (6) serpent = Satan stated as **canonical** theology (Rev 12:9), not read back into the Eden text. Multi-voice: **the_LORD** voices Gen 3:14–15. PENDING: in-engine red-team → 5-CLI panel on the finished text → KJV-strict lock (`--form long`) → audio. Bracketed `[ ]` lines are delivery notes, not spoken.
+
+---
+
+## Movement 1 — The Picture
+
+Something has just gone terribly wrong in the garden. The two people God made have believed a lie, eaten what He forbade, and now — for the first time in the world — they are hiding from Him.
+
+**"And they heard the voice of the LORD God walking in the garden in the cool of the day: and Adam and his wife hid themselves from the presence of the LORD God amongst the trees of the garden."**
+
+And God comes looking. Not with armies, not yet with judgment — with a question. **"Where art thou?"** Then the blame goes around the circle. The man blames the woman, and the woman blames the serpent: **"The serpent beguiled me, and I did eat."** Everything good is coming apart in real time. This is the moment the rest of the Bible exists to answer — and God's answer begins in the most unexpected place.
+
+## Movement 2 — The Problem
+
+And judgment has to fall. Eden cannot simply carry on as if nothing happened. Innocence is gone, death has entered, and the people made for God's presence are now afraid of it, crouched in the trees.
+
+But underneath the fear is a deeper trouble. In trusting the serpent over their Maker, the man and the woman have taken the creature's word against the Creator's. And there is no human way back. You cannot un-eat the fruit, or argue your way back into the garden, or stop the death that has now entered the world. If rescue is going to come, it has to come from God's side of the breach — or it does not come at all.
+
+## Movement 3 — The Strange Detail
+
+Now here is the thing almost everyone reads straight past — and once you see it, you cannot unsee it.
+
+When God begins to pronounce the sentence, He does not turn to Adam first. He does not turn to Eve first. He turns to the *serpent*. **"And the LORD God said unto the serpent, Because thou hast done this, thou art cursed above all cattle, and above every beast of the field."** And the very first words of that judgment are not aimed at the guilty couple at all. They are a promise — fired straight over the serpent's head:
+
+**"And I will put enmity between thee and the woman, and between thy seed and her seed; it shall bruise thy head, and thou shalt bruise his heel."**
+
+Let that land. Before God says one word to Eve about sorrow, before one word to Adam about thorns and dust — both of which come *after* this — the first promise of the gospel in the Bible is spoken into the enemy's curse: a deliverer is coming who will crush him.
+
+## Movement 4 — The Centuries-Early Match
+
+And the promise is strangely specific. It speaks of **"her seed"** — the woman's offspring. That is an unusual way to put it; across the rest of Scripture a line is most often traced through fathers. Here the hope hangs on the woman's seed. It is a clue, not a proof — but it is a clue that lights up when the New Testament tells how the Saviour finally came.
+
+**"But when the fulness of the time was come, God sent forth his Son, made of a woman, made under the law."** *Made of a woman.* And the angel's word to Mary names what kind of child she carried: **"that holy thing which shall be born of thee shall be called the Son of God."**
+
+Now be honest about what kind of match this is. No New Testament writer ever stops, quotes Genesis 3:15 word for word, and says "fulfilled today." This is not a citation; it is a trajectory — the whole story bending toward one point. What the New Testament *does* do is name the players. The serpent? **"that old serpent, called the Devil, and Satan."** The mission? **"For this purpose the Son of God was manifested, that he might destroy the works of the devil."** And the crushing itself? Paul writes to a church: **"And the God of peace shall bruise Satan under your feet shortly."** Page three planted a promise — and the rest of the Bible reads like its answer.
+
+## Movement 5 — The Honest Objection
+
+Now slow down, because there are real objections here, and they deserve a real answer — not a dodge.
+
+First: *you are reading Jesus into a snake story.* And it is true — no verse quotes this line outright. Second: *the word "seed" is collective; it just means descendants — humanity in general beating back evil. Even Paul says Satan is crushed under "your feet," the church's, not one man's.* Third: *the serpent here is only a serpent; Genesis never says "Satan."* And a fourth, sharper still: *"her seed" is nothing remarkable — Scripture speaks of a woman's "seed" elsewhere too; this is just Eve and her ordinary children.* On the surface, every one of those is fair.
+
+So here is the honest answer. The case does not stand on a single Hebrew word or one clever proof-text. It is true that "her seed" can simply mean descendants — which is exactly why we never rest the whole case on that phrase. The case rests on the trajectory of the whole canon — the same canon whose later writers call that serpent the Devil, say the Son was sent to destroy his works, and place a woman's child at the heart of the rescue. And yes — the church does crush Satan, but only under the feet of the One who crushed him first. You do not have to force any of this. You only have to follow the line that runs from Eden to the cross.
+
+## Movement 6 — The Exchange
+
+And here the promise turns out to cost far more than it first sounds. Look again at *how* the deliverer wins: **"it shall bruise thy head, and thou shalt bruise his heel."** Two wounds — but they are not equal. The serpent strikes the heel: real, agonizing, the kind of strike that can kill. The seed crushes the head: final.
+
+That is the cross. The strike to the heel is Calvary — and it was no glancing blow. The Son of God hung there bearing what we had earned; the death that was our wages fell on Him. He stepped into the very judgment we deserved and took it: **"that through death he might destroy him that had the power of death, that is, the devil."**
+
+Do you see the turn? The blow that looked like the serpent winning — the death of the Son — was the blow that crushed the serpent's head. And the empty tomb proved it: **"And having spoiled principalities and powers, he made a shew of them openly, triumphing over them in it."** The heel that was bruised got up. The head that was crushed will never rise to win. He is a beaten enemy already — though his final end, in God's word, is still coming "shortly": defeated at the cross, finished forever at the King's return.
+
+## Movement 7 — The Invitation
+
+So here is the oldest promise in the world, and it is still open.
+
+Think about where it was spoken. Not over an altar, not from a mountain — into a curse, in the hearing of the enemy, while two guilty people stood waiting to be sentenced. Before there was a temple, a prophet, or a single drop of sacrificial blood, God had already named the future: a deliverer who would crush the serpent and set his prisoners free.
+
+And the serpent still whispers his oldest lie — that God is against you, that your safest move is to stay hidden in the trees. But that promise has been kept. The deliverer came; the heel was struck on a cross; the serpent's head is broken — and his end is now only a matter of time.
+
+So you do not have to climb your own way back into the garden. You do not have to get clean first, feel strong, or be sure your faith is large enough — the dying do not heal themselves, and they were never asked to. The promise was made in your enemy's hearing, long before you ever took his side. So step out from behind the trees: the One whose heel was struck to break the serpent's hold is not waiting to sentence you — He is the rescue God named from the very beginning. Come out, and be found by Him.
+----- ARTIFACT END -----
