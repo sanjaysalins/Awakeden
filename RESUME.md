@@ -1,5 +1,55 @@
 # RESUME.md — start here next session
 
+## ⚡⚡ SHORT-FORM HANDOFF — #28 WHAT MANNER OF MAN (storm) — ✅ DONE + LOCKED (2026-06-25) ⚡⚡
+
+> Separate track from the #05 long-form block below. #28 is now LOCKED; pick the next short below.
+
+### ═══ ✅ #28 DONE + LOCKED (2026-06-25) ═══
+**FINAL: `C:/Users/sanjay/28_What_Manner_Of_Man_FINAL.mp4` (63.5s).** User: "lock #28 in." Both user-flagged
+fixes applied (asleep crops + landing hold); text+audio+video all locked. Board auto-detects done=22
+(`viral_cut_sfx_music_captioned.mp4` on disk). **▶▶ DO FIRST — pick the next short:** `19 Cliff of Rival Gods` ·
+`24 The Answer Was a Gift` · `26 Jesus Walked Past the Pool` · `29 The Race He Could Never Win` (+ `23 The
+Prepared Belly`, audio-first). Open `C:/Users/sanjay/V2_STATUS.html`. (Accepted nits on #28, no rebuild: ~11s
+hold on the OT-echo **waves** clip #10; slight Christ-face drift scene-to-scene — HF doesn't anchor faces.)
+
+### ═══ WHAT GOT DONE (#28, 2026-06-24) ═══
+- **Text REVISED + re-voiced + LOCKED.** The 5-CLI panel (run BEFORE building visuals) caught real issues:
+  faith-contradiction (quoted "O ye of little faith" then said "never about whether your faith holds"), a
+  factual error ("before they believed a word" vs Matt 8:25 "Lord, save us"), and no CTA / never named Jesus.
+  Fixed → conviction reframed (faith = Who holds the boat, not your grip) + landing names **Jesus** + grace CTA;
+  codex's "God Himself, asleep" → **"God in the flesh"** (Ps 121:4 doctrinal tighten). Re-voiced fresh **61.05s,
+  3-voice** (narrator+jesus+disciples), gentle 1.29× → align force-regen → `cli_lock` ALL PASS.
+- **Scene plan = 15 scenes, ALL $0 AGENT-MODE** (serviced the bridge via a subagent: discover→review→revise→
+  re-review→independent→cohesion; independent LOCKED, cohesion PASS). 10 single / 5 unified / 2 NT-link
+  (Col 1:16-17) / 2 OT-echo (Ps 107 + Job 38). Hero = #12 the-lord-the-wind-obeys (ministry-scoped sovereign
+  Christ, NOT resurrection — panel caught the over-reach).
+- 🔴 **KEY LESSON — CHECK FOR PRIOR BUILDS FIRST.** I rendered 15 fresh HF stills (~$5) THEN found
+  **"02 Why are you afraid" v3** = a near-complete prior build of the SAME passage (Matt 8) with 13 animated
+  storm clips mapping ~1:1. User caught it ("don't we have these already?"). → went **HYBRID (option C):**
+  animated 2-3 fresh standouts (hook #1 + hero #12 + re-animated asleep #02) + REUSED 11 prior v3 clips ($0).
+  Net Kling ≈ **$3** instead of ~$8. **ALSO: the engine's auto reuse_plan.json force-matches PASSION clips into
+  own-world scenes (asleep→cross-Christ, terror→crucifixion) — REJECT those (Gaza rule).** The valid storm reuse
+  came from the prior episode, not the catalogue.
+- **Assembled** (budget 14, 13 clips, hero #12 still-close) → **storm SFX bed** (`sfx_pilots/build_28.py`,
+  tempest→calm, no choir) → **music_library chained bed** (lonely_searching → sacred_grace_rise, swell sliced
+  from the quiet intro to peak late, −11 dB + ratio-6 voice-duck) → **whisperx captions** (194/194). Fixes pass:
+  re-animated fresh asleep (varied anchors, not face-zoom) + budget-14 replan dropped the landing 14s→9.7s.
+- **Tool fix (reusable):** `_panel_ending.py` was HARDCODED to #31's John 8 thread → made **episode-generic**
+  (derives the thread from the pasted narration). Committed-worthy.
+- Stills pool (15 fresh, ~$5) is a bonus bank in `…/28 What Manner of Man/v1/visual/hf/` (excluded #14
+  "deep" = tentacle-swirl + letterboxed; #3 terror unused). Clip mapping + reuse sources are in this session's
+  history. Spend this session ≈ $8 (text re-voice $0.5 + 15 stills $5 + 3 fresh Kling $3 — note the $5 stills
+  were largely avoidable had I checked priors first).
+
+### ═══ SHORTS BOARD (v2): done 22 ═══ (open `C:/Users/sanjay/V2_STATUS.html`)
+Remaining short-form visual builds: `19 Cliff of Rival Gods` · `24 The Answer Was a Gift` · `26 Jesus Walked
+Past the Pool` · `29 The Race He Could Never Win` (+ `23 The Prepared Belly`, audio-first). **#28 = the newest,
+awaiting final video approval.** Proven recipe: panel the text FIRST (before any visual spend) → revise/re-voice/
+lock → /scene-plan ($0 agent-mode) → **CHECK FOR PRIOR BUILDS of the same passage** → hybrid (reuse + few fresh
+standouts) → assemble (budget 14) → SFX + music_library bed + whisperx caption → copy FINAL.
+
+---
+
 ## ⚡⚡⚡ LATEST HANDOFF — #05 THE SEED OF THE WOMAN FULLY DONE (2026-06-24, long-form) — READ FIRST ⚡⚡⚡
 
 **#05 The Seed of the Woman (Genesis 3:15, the protoevangelium) — FULLY DONE, full long-form pipeline.**

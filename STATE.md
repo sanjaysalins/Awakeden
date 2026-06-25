@@ -10,6 +10,17 @@ risen Christ. Long-form board: 01/02/03/04/05 all DONE; **#06 = Day of Atonement
 RESUME top + memory `feedback-unbiased-panel`): NBP-via-HF dodges the cap; hard-anchor the oil medium (not "cinematic");
 anti-pillarbox CLOSE; loincloth→correct crucifixion (Kling fallback); panel a CLEAN artifact BEFORE the metered synth.
 
+**Status (2026-06-25 SHORT-FORM):** **#28 "WHAT MANNER OF MAN" (storm, Matt 8) — DONE + LOCKED (63.5s).**
+User: "lock #28 in" (2026-06-25). `C:/Users/sanjay/28_What_Manner_Of_Man_FINAL.mp4`; board auto-detects done=22.
+Next short = 19/24/26/29 (+23 audio-first). Build recap: Text+audio
+REVISED (panel caught faith-contradiction + Matt 8:25 error + no-CTA → fixed, named Jesus, "God in the flesh")
++ re-voiced 3-voice 61s + LOCKED. Scene plan 15 scenes ALL $0 agent-mode (independent LOCKED, cohesion PASS;
+hero #12 sovereign Christ, ministry-scoped). 🔴 KEY LESSON: rendered 15 fresh stills (~$5) THEN found prior
+**"02 Why are you afraid" v3** = same passage w/ 13 animated storm clips → went HYBRID (2-3 fresh standouts +
+11 reuse, net Kling ~$3); CHECK FOR PRIOR BUILDS before rendering. Assembled (budget 14) → storm SFX +
+music_library bed + whisperx captions; fixed asleep crops (re-animated fresh) + landing hold (14s→9.7s). Tool
+fix: `_panel_ending.py` made episode-generic. See RESUME.md SHORT-FORM HANDOFF top. Prior short-form status below.
+
 **Status (2026-06-24 prior):** **#31 "THE LIGHT YOU CAN STAND IN" (short) DONE + LOCKED (70.5s).**
 `C:/Users/sanjay/31_The_Light_You_Can_Stand_In_FINAL.mp4`. Deep user-driven revision pass:
 (1) **Ending** felt hanging → ran the 5-CLI panel in GENERATION mode (`_panel_ending.py`) → synthesized
