@@ -221,16 +221,18 @@ def _kjv_findings(md: str) -> list[str]:
 
 
 def _rule8_findings(md: str, form: str) -> list[str]:
-    """Rule-8: a 60s short can't pace >2 SUBSTANTIAL KJV quotes (KJV reads at a fixed
+    """Rule-8: a 60s short can't pace >3 SUBSTANTIAL KJV quotes (KJV reads at a fixed
     speed). Short re-echoes (<5 words, e.g. 'my God.', 'Let him deliver him,') add
-    negligible time and are NOT counted — only spans of >=5 words."""
+    negligible time and are NOT counted — only spans of >=5 words. Cap raised 2->3
+    (2026-06-25, user): a tight quoted EXCHANGE (question / confession / reply) paces
+    in 59s — proven on #24 'The Answer Was a Gift' (Matt 16:15-17). A 4th still blocks."""
     if form != "short":
         return []
     spans = [s for s in NP.quoted_spans_with_refs(md)
              if s["klass"] in ("tagged_kjv", "inline_kjv")
              and len(NP.normalize(s["text"]).split()) >= 5]
-    if len(spans) > 2:
-        return [f"Rule-8: {len(spans)} substantial KJV quote spans (>2) — a 60s short can't pace that many"]
+    if len(spans) > 3:
+        return [f"Rule-8: {len(spans)} substantial KJV quote spans (>3) — a 60s short can't pace that many"]
     return []
 
 

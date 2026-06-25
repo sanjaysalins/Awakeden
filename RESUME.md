@@ -1,9 +1,24 @@
 # RESUME.md — start here next session
 
-## ⚡⚡ SHORT-FORM HANDOFF — #19 THE CLIFF OF RIVAL GODS — ✅ DONE + LOCKED (2026-06-25) ⚡⚡
+## ⚡⚡ SHORT-FORM HANDOFF — #24 THE ANSWER WAS A GIFT — ✅ DONE + LOCKED (2026-06-25) ⚡⚡
 
-> Newest short. #19 LOCKED. **▶▶ DO FIRST — pick the next short:** `24 The Answer Was a Gift` · `26 Jesus Walked
-> Past the Pool` · `29 The Race He Could Never Win` (+ `23 The Prepared Belly`, audio-first). Open `C:/Users/sanjay/V2_STATUS.html` (done=23).
+> Newest short. #24 LOCKED. **▶▶ DO FIRST — pick the next short:** `26 Jesus Walked Past the Pool` ·
+> `29 The Race He Could Never Win` (+ `23 The Prepared Belly`, audio-first). Open `C:/Users/sanjay/V2_STATUS.html` (done=24).
+
+### ═══ ✅ #24 DONE + LOCKED (2026-06-25) ═══
+**FINAL: `C:/Users/sanjay/24_The_Answer_Was_A_Gift_FINAL.mp4` (61.5s).** Peter's confession as a GIFT (Matt 16:15-17);
+lands on the living Christ ("come to the Christ the Father is showing you"). 🟢 **NEW STANDING DIRECTION (user): break the
+repetitive Baroque-portrait-head look — REUSE a few clips + build really CINEMATIC, EPIC stills to animate.** #24 proved the
+recipe: 4 EPIC wide vistas (sea-of-voices poll w/ cloud-visions / heavens-torn-open / chariots-of-fire / colossal hand-of-God)
+as majestic PUSH-INS + 4 intimate figures + reused #19 environment ($0); dropped the Christ-face macros. Apply on every short
+from now: epic compositions (scale/torn-skies/multitudes/fire), not portrait after portrait. Gate change this episode:
+**Rule-8 cap raised 2→3** (a quoted exchange paces in 59s; test added). Infra gotchas: HF 502 on animate → retry on Kling
+(never settle for the ffmpeg fallback); cli_lock/cli_assemble WMI import-hang → kill+retry; run a parallel short on a DEDICATED
+`.agent_bridge_<NN>` when the user's long-form is also using the bridge.
+
+## ⚡⚡ #19 THE CLIFF OF RIVAL GODS — ✅ DONE + LOCKED (2026-06-25) ⚡⚡
+
+> #19 LOCKED; see below + the board for remaining shorts.
 
 ### ═══ ✅ #19 DONE + LOCKED (2026-06-25) ═══
 **FINAL: `C:/Users/sanjay/19_The_Cliff_Of_Rival_Gods_FINAL.mp4` (62.5s).** Caesarea Philippi (Matt 16:13-15) — the cliff

@@ -84,6 +84,7 @@ def test_kjv_misquote_blocks_lock():
 
 
 def test_rule8_too_many_quotes_blocks_short():
+    # cap raised 2->3 (2026-06-25): 4 substantial KJV quotes still blocks a 60s short
     d = Path(tempfile.mkdtemp()) / "s"
     d.mkdir()
     (d / "narration.md").write_text(
@@ -91,9 +92,25 @@ def test_rule8_too_many_quotes_blocks_short():
         '**[narrator — KJV, Psalm 23:1]**\n"The LORD is my shepherd; I shall not want."\n\n'
         '**[narrator — KJV, Psalm 23:2]**\n"He maketh me to lie down in green pastures."\n\n'
         '**[narrator — KJV, Psalm 23:3]**\n"He restoreth my soul: he leadeth me in the paths of righteousness."\n\n'
+        '**[narrator — KJV, Psalm 23:4]**\n"Yea, though I walk through the valley of the shadow of death, I will fear no evil."\n\n'
         '**[narrator]**\nA distinct close.\n\n---\n## DEPTH\nx\n', encoding="utf-8")
     rep = L.run_lock(d, form="short", check_cluster=False)
     assert not rep["ok"] and any("Rule-8" in b for b in rep["blocking"]), rep["blocking"]
+
+
+def test_rule8_three_quotes_allowed_short():
+    # cap raised 2->3 (2026-06-25, user): a tight quoted EXCHANGE of 3 substantial KJV
+    # quotes paces in 59s (proven on #24) — must NOT be Rule-8 blocked
+    d = Path(tempfile.mkdtemp()) / "s3"
+    d.mkdir()
+    (d / "narration.md").write_text(
+        '# T\n---\n**[narrator]**\nUnique opener that sets the scene plainly.\n\n'
+        '**[jesus — KJV, Psalm 23:1]**\n"The LORD is my shepherd; I shall not want."\n\n'
+        '**[narrator — KJV, Psalm 23:2]**\n"He maketh me to lie down in green pastures."\n\n'
+        '**[jesus — KJV, Psalm 23:3]**\n"He restoreth my soul: he leadeth me in the paths of righteousness."\n\n'
+        '**[narrator]**\nA distinct close that lands the point.\n\n---\n## DEPTH\nx\n', encoding="utf-8")
+    rep = L.run_lock(d, form="short", check_cluster=False)
+    assert not any("Rule-8" in b for b in rep.get("blocking", [])), rep.get("blocking")
 
 
 def test_long_form_not_rule8_blocked():

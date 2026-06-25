@@ -25,7 +25,19 @@ risen Christ. Long-form board: 01/02/03/04/05 all DONE; **#06 = Day of Atonement
 RESUME top + memory `feedback-unbiased-panel`): NBP-via-HF dodges the cap; hard-anchor the oil medium (not "cinematic");
 anti-pillarbox CLOSE; loincloth→correct crucifixion (Kling fallback); panel a CLEAN artifact BEFORE the metered synth.
 
-**Status (2026-06-25 SHORT-FORM):** **#19 "THE CLIFF OF RIVAL GODS" (Caesarea Philippi, Matt 16:13-15) — DONE + LOCKED (62.5s).**
+**Status (2026-06-25 SHORT-FORM):** **#24 "THE ANSWER WAS A GIFT" (Peter's confession, Matt 16:15-17) — DONE + LOCKED (61.5s).**
+User: "lock it in once captioned." `C:/Users/sanjay/24_The_Answer_Was_A_Gift_FINAL.mp4`; board done=24. 🟢 NEW DIRECTION (user): stills
+were getting REPETITIVE (Baroque portrait-head every episode) → "reuse a few + build really CINEMATIC, EPIC stills." Built 4
+EPIC wide vistas (sea-of-voices poll w/ cloud-visions of Baptist+Elijah / heavens-torn-open light-shaft / a mountainside of
+chariots-of-fire / colossal hand-of-God pointing to the Son) animated as majestic PUSH-INS, + 4 intimate figures + reused #19's
+cliff/cave/question ($0). Dropped the Christ-face-macro repeats. Lessons folded: vector-ready stills, name the idol culture
+(no Buddha), epic-vista push-ins don't morph the hands-of-God. Gate work: parity re-format + **raised Rule-8 cap 2→3** (user
+call — a tight quoted EXCHANGE paces in 59s; regression test added, 4 still blocks). Two transient infra gotchas this session:
+HF 502s on animate (retry on Kling, NOT ffmpeg) + WMI import-hang on cli_lock/cli_assemble (kill+retry clears it); ran #24 on a
+DEDICATED bridge (.agent_bridge_24) to avoid colliding with the user's parallel #06 long-form. Finish: build_24.py SFX +
+build_24_music.py (lonely→sacred_grace) + whisperx caption (172/172). Next short = 26/29 (+23 audio-first). Prior (#19) below.
+
+**Status (2026-06-25 SHORT-FORM prior):** **#19 "THE CLIFF OF RIVAL GODS" (Caesarea Philippi, Matt 16:13-15) — DONE + LOCKED (62.5s).**
 User: "lock #19 in." `C:/Users/sanjay/19_The_Cliff_Of_Rival_Gods_FINAL.mp4`; board done=23. Visual build $0 agent-mode
 (scene plan 15 scenes, panel+independent+cohesion). Hybrid reuse was a BUST — 2 of 3 #27 reuse clips failed clip-anim-QC
 (foot-dancing turn + a crucifixion-mismatch road), kept only the question; built 12 fresh HF stills + animated.
