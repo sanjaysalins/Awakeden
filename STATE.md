@@ -1,7 +1,22 @@
 # STATE.md — progress tracker
 
-**Last updated:** 2026-06-24
-**Status (2026-06-24 LATEST):** **#05 THE SEED OF THE WOMAN (Gen 3:15) — long-form FULLY DONE (8:26).**
+**Last updated:** 2026-06-25
+**Status (2026-06-25 LATEST):** **#06 THE TWO GOATS (Day of Atonement, Lev 16) — long-form IN PROGRESS.**
+Built this session: `/study` → B-led thread (one sin offering, two goats = price PAID + sin CARRIED AWAY, fulfilled
+once-for-all in Christ; grafts hands-on-head transfer / "He sat down" / "without the gate"). Narration **v1.2 LOCKED**
+(`longform/06_Day_Of_Atonement/v1/narration.md`, 1400 words, 18 KJV quotes verbatim incl. Lev 17:11; **panel ×2** —
+fixed M2 attribution Heb9:22→Lev17:11, M4 outside-camp precision, debt/bill→biblical categories, Lev16:30 real-but-
+not-final, M7 names the gospel RESPONSE, tabernacle≠temple, no-ark-behind-torn-veil). **3-voice audio approved**
+(narration.mp3, 8:53, narrator+scripture+the_LORD on the Lev16:2 split). **Scene plan v2 LOCKED** (25 scenes tiled to
+532.6s; panel-fixed: locomotion→frozen, S22 recomposed, S14→silhouette, named vignettes, hero flag). **Stills:
+test-gate APPROVED** (S6 goats + S19 cross + S25 hero) — **S19/S25 REGENERATED distinct from #05** (user: "so similar
+to yesterday"): S19 dawn-gold low-angle (not storm-hilltop), S25 = living Christ INSIDE the torn veil (Heb 10:20),
+NOT the reused #05 hero. **Batch of remaining 22 stills RENDERING** (HF nano_banana_2, ~$10). DO FIRST: review the
+stills gallery (GATE 2) → animate (veo3 + Kling-fallback for S12/S19 bare-torso crosses) → assemble → score → SFX →
+caption. Lessons: NBP-via-HF-CLI bypasses Gemini cap; the period_audit hangs on the agent-bridge (use --no-audit +
+review by eye); don't reuse the same cross/risen-hero across consecutive episodes. Prior #05 status below.
+
+**Status (2026-06-24):** **#05 THE SEED OF THE WOMAN (Gen 3:15) — long-form FULLY DONE (8:26).**
 `C:/Users/sanjay/SEED_OF_THE_WOMAN_FINAL.mp4`. Built end-to-end this session: C-led thread (panel flipped my pick),
 v1.2 locked (panel ×2 incl. unbiased re-run), 3-voice audio (the_LORD on Gen 3:9+3:15), 25-scene plan, **25 Nano
 Banana Pro period-oil stills** (HF CLI = NBP, bypasses the Gemini cap), 22 veo3 + 2 Kling + 1 ffmpeg-push clips,
@@ -10,7 +25,20 @@ risen Christ. Long-form board: 01/02/03/04/05 all DONE; **#06 = Day of Atonement
 RESUME top + memory `feedback-unbiased-panel`): NBP-via-HF dodges the cap; hard-anchor the oil medium (not "cinematic");
 anti-pillarbox CLOSE; loincloth→correct crucifixion (Kling fallback); panel a CLEAN artifact BEFORE the metered synth.
 
-**Status (2026-06-25 SHORT-FORM):** **#28 "WHAT MANNER OF MAN" (storm, Matt 8) — DONE + LOCKED (63.5s).**
+**Status (2026-06-25 SHORT-FORM):** **#19 "THE CLIFF OF RIVAL GODS" (Caesarea Philippi, Matt 16:13-15) — DONE + LOCKED (62.5s).**
+User: "lock #19 in." `C:/Users/sanjay/19_The_Cliff_Of_Rival_Gods_FINAL.mp4`; board done=23. Visual build $0 agent-mode
+(scene plan 15 scenes, panel+independent+cohesion). Hybrid reuse was a BUST — 2 of 3 #27 reuse clips failed clip-anim-QC
+(foot-dancing turn + a crucifixion-mismatch road), kept only the question; built 12 fresh HF stills + animated.
+🔴 TWO user catches → standing memories: (1) **stills must be animation-clean / vector-ready** — first 9 were dense/busy
+(dozens of tiny idols, 8-face crowds) → re-prompted to one dominant subject + ≤3 faces + negative space + re-rendered
+(`feedback-animation-clean-stills`); (2) **idol scenes must NAME the culture** — scene 14 rendered BUDDHA statues (generic
+"idol-niches" prompt defaults Eastern) → deleted permanently + regenerated Greco-Roman (Pan + draped figures)
+(`feedback-idols-must-be-period-culture`). Also: an 18.8s landing hold (pool too small) → backfilled scenes 4/8/9 → 13-clip
+punchy cut. Finish: cliff-wind/cave SFX (`build_19.py`) + lonely→sacred_grace music chain (`build_19_music.py`, $0) +
+whisperx caption (166/166). Parity fix: re-formatted narration.md/-tagged.md to v2 labeled format to pass cli_lock.
+Next short = 24/26/29 (+23 audio-first). Prior short-form (#28) below.
+
+**Status (2026-06-25 SHORT-FORM prior):** **#28 "WHAT MANNER OF MAN" (storm, Matt 8) — DONE + LOCKED (63.5s).**
 User: "lock #28 in" (2026-06-25). `C:/Users/sanjay/28_What_Manner_Of_Man_FINAL.mp4`; board auto-detects done=22.
 Next short = 19/24/26/29 (+23 audio-first). Build recap: Text+audio
 REVISED (panel caught faith-contradiction + Matt 8:25 error + no-CTA → fixed, named Jesus, "God in the flesh")

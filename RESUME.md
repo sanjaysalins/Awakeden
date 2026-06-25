@@ -1,8 +1,25 @@
 # RESUME.md — start here next session
 
-## ⚡⚡ SHORT-FORM HANDOFF — #28 WHAT MANNER OF MAN (storm) — ✅ DONE + LOCKED (2026-06-25) ⚡⚡
+## ⚡⚡ SHORT-FORM HANDOFF — #19 THE CLIFF OF RIVAL GODS — ✅ DONE + LOCKED (2026-06-25) ⚡⚡
 
-> Separate track from the #05 long-form block below. #28 is now LOCKED; pick the next short below.
+> Newest short. #19 LOCKED. **▶▶ DO FIRST — pick the next short:** `24 The Answer Was a Gift` · `26 Jesus Walked
+> Past the Pool` · `29 The Race He Could Never Win` (+ `23 The Prepared Belly`, audio-first). Open `C:/Users/sanjay/V2_STATUS.html` (done=23).
+
+### ═══ ✅ #19 DONE + LOCKED (2026-06-25) ═══
+**FINAL: `C:/Users/sanjay/19_The_Cliff_Of_Rival_Gods_FINAL.mp4` (62.5s).** Caesarea Philippi (Matt 16:13-15) — the cliff
+of dead gods at His back; lands on the living Christ ("Father, open my eyes to your Son"). Full $0 agent-mode build.
+**TWO user catches became standing memories — apply on every short:** (1) `feedback-animation-clean-stills` — design stills
+VECTOR-READY (one dominant subject, ≤3 faces, crowds→shadow, negative space, no tiny repeated detail/text) or Kling crop-cuts
+morph them; the style scaffold is fine, dense subject_blocks are the failure. (2) `feedback-idols-must-be-period-culture` —
+NAME the idol culture (Greco-Roman/Pan for Caesarea Philippi) or the model defaults to BUDDHA statues (caught + deleted on
+scene 14). **Reuse lesson:** the auto reuse_plan force-matched Psalm-22 PASSION clips into ministry scenes (rejected, Gaza
+rule); even the #27 same-scene reuse mostly failed clip-anim-QC (foot-dancing + a crucifixion-mismatch) — verify reuse clips
+by filmstrip QC, don't trust the index. Recipe: $0 scene-plan → vector-ready stills → animate → clip-anim-QC → backfill if a
+landing hold appears → assemble → `sfx_pilots/build_19.py` SFX + `build_19_music.py` (lonely→sacred_grace chain) + whisperx caption.
+
+## ⚡⚡ #28 WHAT MANNER OF MAN (storm) — ✅ DONE + LOCKED (2026-06-25) ⚡⚡
+
+> #28 is LOCKED; see board for remaining shorts.
 
 ### ═══ ✅ #28 DONE + LOCKED (2026-06-25) ═══
 **FINAL: `C:/Users/sanjay/28_What_Manner_Of_Man_FINAL.mp4` (63.5s).** User: "lock #28 in." Both user-flagged
