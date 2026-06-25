@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "format": "eyewitness",
+  "form": "long",
+  "spoken_sha256": "7c0a8b5b2008f62846275f7a1a4cff4d6390a2aa6ed8d2249fa785d4f75840c9",
+  "gates_run": [
+    "EW-G1",
+    "EW-G2",
+    "EW-G3",
+    "EW-G4",
+    "EW-G5",
+    "EW-G6",
+    "EW-G11",
+    "EW-G12"
+  ]
+}

@@ -38,6 +38,23 @@ def scaled(src, dst):
          "-vf",f"scale={W}:{H}:force_original_aspect_ratio=decrease,pad={W}:{H}:(ow-iw)/2:(oh-ih)/2,fps={FPS},format=yuv420p",
          "-an",*ENC,str(dst)])
 
+KB_RANGE = 0.07   # subtle Ken Burns: 7% slow zoom over the window (push-in or pull-out)
+
+def ken_burns(src, dst, D, push_in):
+    """Layer a SUBTLE Ken Burns camera move over a finished scene clip — on TOP of the veo
+    atmospherics + boomerang — so even quiet scenes carry continuous motion (user-approved).
+    Alternated push-in / pull-out per scene so the film never feels like one monotonous push."""
+    frames = max(2, int(round(D * FPS)))
+    inc = KB_RANGE / frames
+    hi = 1.0 + KB_RANGE
+    if push_in:
+        z = f"z='min(zoom+{inc:.6f},{hi:.4f})'"
+    else:  # start zoomed, ease out to 1.0
+        z = f"z='if(lte(on,1),{hi:.4f},max(zoom-{inc:.6f},1.0))'"
+    vf = (f"scale={W*2}:{H*2},zoompan={z}:d=1:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':"
+          f"fps={FPS}:s={W}x{H}")
+    run(["ffmpeg","-y","-i",str(src),"-vf",vf,"-an",*ENC,str(dst)])
+
 audio_dur = dur(AUDIO)
 scenes = ep.scenes
 print(f"{ep.slug}: audio {audio_dur:.1f}s · {len(scenes)} scenes · boomerang + directional-chain")
@@ -110,7 +127,13 @@ for i, s in enumerate(scenes):
             run(["ffmpeg","-y","-stream_loop","-1","-i",str(unit),"-t",f"{D:.3f}","-an",*ENC,str(scene_mp4)])
             label = f"slow-boomerang x{factor:4.2f} (single drift)"
         print(f"  scene {s['id']:02d}  win={D:5.1f}s  {label}  {s['title'][:30]}")
-    seg_paths.append(scene_mp4)
+
+    # layer a subtle Ken Burns over the finished scene clip (alternate push-in / pull-out)
+    scene_kb = WORK / f"scenekb_{s['id']:02d}.mp4"
+    push_in = (s["id"] % 2 == 1)
+    ken_burns(scene_mp4, scene_kb, D, push_in)
+    print(f"           + Ken Burns {'push-in' if push_in else 'pull-out'}")
+    seg_paths.append(scene_kb)
 
 seg_list = WORK / "segments.txt"
 seg_list.write_text("".join(f"file '{p.as_posix()}'\n" for p in seg_paths), encoding="utf-8")

@@ -1,6 +1,28 @@
 # STATE.md — progress tracker
 
 **Last updated:** 2026-06-25
+**Status (2026-06-25 LATEST-2):** **AWAKEDEN EYEWITNESS FORMAT launched + a 9-LONG narration backlog built autonomously.**
+Project re-branded **Awakeden** ([[awakeden-brand]]). New SIGNATURE format = first-person biblical witness tells their
+story + CTA on Jesus ([[eyewitness-format]]); foundation `v2/EYEWITNESS_FOUNDATION.md` + binding `v2/EYEWITNESS_SPEC.md`.
+Built the FULL pipeline: 4 skills (`/witness`,`/witness-voice`,`/witness-world`,`/witness-cut`), deterministic gates
+`pipeline/eyewitness_gates.py` (EW-G1..G6,G11,G12) + `cli_witness_lock.py` (+cluster, speaker-bound hash, require_lock) +
+`data/eyewitness_rules.json` + `pipeline/test_eyewitness.py` (49 tests green) + `independent_review.py --type
+eyewitness-short|eyewitness-long`. **RED-TEAMED ×2** → hardened (EW-G11 no invented words-of-God; EW-G1 fail-closed
+passage.txt; EW-G12 reveal-names-Christ + ban "at last I understood"; fear/gain-loss CTA scan; first-person DENSITY;
+cluster; every bypass re-verified to BLOCK). **9 eyewitness LONGS drafted→gated→LOCKED ($0):** EW01 Aaron/Two Goats
+(panel×2 + VOICED 9:04), EW02 Abraham, EW03 Joseph, EW04 Bronze Serpent, EW05 Jonah (panel-revised+re-locked),
+EW06 Noah, EW07 Isaiah, EW08 Passover-father, EW09 Boaz. **ALL 9 LONGS panel-revised (5-CLI eyewitness-long) + re-locked
++ READY** (fix-subagents caught real errors: Noah's 1 Pet 3:21 baptismal-regeneration cut, Boaz's Ruth 4:8 shoe-custom,
+Isaiah's justice-scandal wrestling; Passover codex-FAIL = stricter-than-spec named-witness reading, EW-INV-1 permits
+the labelled composite). **+ 9 eyewitness SHORTS** (one per long, B1→B3→B6→B7, ~220-320w) drafted→gated→LOCKED ($0;
+short-panels pending). Parallelized via ~25 subagents. **Assembler now bakes BOOMERANG + Ken Burns** (alternating
+push/pull, `_assemble_16x9.py`). **#06 essay baseline: FILM ASSEMBLED** — `…/visual_16x9/The_Two_Goats_16x9.mp4`
+(25 stills + veo3/Ken-Burns animation + narration; S18 hit the HF concurrency cap, idempotent-refilled). DO NEXT:
+finish #06 (score/sfx/caption — leave the score for the user's EAR per cinematic-score-standard); run the eyewitness-SHORT
+panels + fixes on the 9 shorts; then the slate's metered production (voice/stills/animation) — ALL GATED for the user.
+Caveat: the backlog is AI-drafted + AI-panel-revised (longs) / gate-locked (shorts) — needs the user's eye before metered
+production. Prior #06 status below.
+
 **Status (2026-06-25 LATEST):** **#06 THE TWO GOATS (Day of Atonement, Lev 16) — long-form IN PROGRESS.**
 Built this session: `/study` → B-led thread (one sin offering, two goats = price PAID + sin CARRIED AWAY, fulfilled
 once-for-all in Christ; grafts hands-on-head transfer / "He sat down" / "without the gate"). Narration **v1.2 LOCKED**

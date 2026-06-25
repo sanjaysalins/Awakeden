@@ -1,5 +1,47 @@
 # RESUME.md — start here next session
 
+## ⚡⚡⚡ TOMORROW START HERE — AWAKEDEN EYEWITNESS BATCH (2026-06-25 night) ⚡⚡⚡
+
+**The big pivot:** the project is now branded **Awakeden**, and we built + launched its SIGNATURE format —
+the **eyewitness** (a biblical witness tells their story first-person, lands the CTA on Jesus). The 1:49
+Aaron pilot won the user over completely ("I am in love with this"). Foundation: `v2/EYEWITNESS_FOUNDATION.md`
+(roadmap) + `v2/EYEWITNESS_SPEC.md` (binding contract). Memories: [[awakeden-brand]], [[eyewitness-format]].
+
+**What's BUILT (all $0, all gate-locked):**
+- **Full pipeline:** skills `/witness` `/witness-voice` `/witness-world` `/witness-cut`; gates
+  `pipeline/eyewitness_gates.py` (EW-G1..G6,G11,G12) + `cli_witness_lock.py` (cluster, speaker-bound hash,
+  `require_lock`) + `data/eyewitness_rules.json`; tests `pipeline/test_eyewitness.py` (**49 green**); panel
+  `independent_review.py --type eyewitness-short|eyewitness-long`. **RED-TEAMED ×2 + hardened** (EW-G11 no
+  invented words-of-God; EW-G1 fail-closed `passage.txt`; EW-G12 reveal-names-Christ + ban "at last I
+  understood"; fear/gain-loss CTA scan; first-person DENSITY; cluster — every bypass re-verified to BLOCK).
+- **18 NARRATIONS in `longform/EW01..EW09/v1/` (long) + `…/v1/short/` (short):** Aaron(Two Goats), Abraham,
+  Joseph, Bronze Serpent(Moses), Jonah, Noah, Isaiah, Passover-father, Boaz. **All 9 LONGS panel-revised +
+  re-locked.** All 9 SHORTS gate-locked (short-panels NOT yet run). Aaron long **VOICED** (`EW01_Two_Goats/v1/
+  narration.mp3`, 9:04, 2-voice: Aaron=deep voice UzI1Ns…, scripture).
+- **#06 essay baseline FILM assembled:** `longform/06_Day_Of_Atonement/v1/visual_16x9/The_Two_Goats_16x9.mp4`
+  (25 NBP stills + veo3 animation + the NEW **boomerang + Ken Burns** finish baked into `_assemble_16x9.py`,
+  alternating push/pull). 3 bare-torso crosses (S12/S14/S19) are static-still Ken-Burns (veo NSFW + Kling
+  bridge-hang avoided). Still needs score/SFX/caption.
+
+**▶▶ DO FIRST TOMORROW (in order):**
+1. **Review the gold standard by EAR/EYE:** Aaron long narration `longform/EW01_Two_Goats/v1/narration.md` +
+   the voiced `narration.mp3` (9:04). Decide if the eyewitness LONG lands. Spot-check 1-2 others (Abraham/Jonah).
+2. **Finish #06 essay baseline** (the A/B vs eyewitness): add score (leave to the user's EAR — cinematic-orchestral,
+   NO sparse, NO choir pad per [[feedback-cinematic-score-standard]]/[[feedback-no-choir-pad-under-score]]) → SFX
+   (sound_library) → whisperx caption. Then watch #06 vs the eyewitness Aaron and decide which format leads.
+3. **Run the 9 eyewitness-SHORT panels** (`independent_review.py --type eyewitness-short` on a clean artifact) +
+   apply convergent fixes (the long fix-passes are the template).
+4. **THEN metered production** (gated, ~$15-20/long): per witness → `/witness-world` (reuse #06 stills/clips for
+   the Two Goats eyewitness; own-world the rest) → `/witness-cut`. Quote spend, get OK first ([[feedback-ask-before-spending]]).
+
+**OPEN DECISIONS for the user:** (a) does eyewitness REPLACE the essay long as primary? (b) shorts = eyewitness-calm
+OR punchy-cut-from-long (conflicts with [[feedback-always-punchier]] — unresolved). (c) slate order / cadence.
+**CAVEAT:** the 18 are AI-drafted + AI-panel-revised(longs)/gate-locked(shorts) — need the user's eye before metered
+production. The red-team's strategy flag stands: prove ONE eyewitness long end-to-end (Aaron) before committing the
+whole slate's metered budget.
+
+---
+
 ## ⚡⚡ SHORT-FORM HANDOFF — #24 THE ANSWER WAS A GIFT — ✅ DONE + LOCKED (2026-06-25) ⚡⚡
 
 > Newest short. #24 LOCKED. **▶▶ DO FIRST — pick the next short:** `26 Jesus Walked Past the Pool` ·

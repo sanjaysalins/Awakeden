@@ -1,0 +1,94 @@
+# The Two Goats — Awakeden eyewitness (long)
+**Witness:** the high priest of Israel · **Core text:** Leviticus 16
+
+---
+## Beat 1 — I was there
+I am the high priest of Israel. Once a year — only once — I went where no other man on earth was permitted to go.
+
+On that one morning I laid aside my garments of gold and glory. I washed my body with water, and I put on plain white linen, like a servant, like a man with nothing to boast of. And then I walked toward the veil with my heart in my throat. Behind that heavy curtain was the mercy seat, and above it, in the cloud, the presence of the living God. I went in alone. The whole nation stood outside, holding its breath — and every year, as the curtain fell shut behind me, I was not certain I would come out alive.
+
+## Beat 2 — The world
+You must understand what it was to carry this office. Two of Aaron's own sons had died in that holy place, for coming before the LORD in a way He had not commanded. I had buried men who served at that altar. So when the LORD gave His warning, I did not take it lightly. I heard it in my bones every time I reached for the veil.
+
+**[the LORD]** **"Speak unto Aaron thy brother, that he come not at all times into the holy place within the vail before the mercy seat, which is upon the ark; that he die not: for I will appear in the cloud upon the mercy seat."**
+
+That was my whole life — to stand in the gap between a guilty people and a holy God, and not be consumed. For the law I served was plain, and it ran red through everything I did:
+
+**"it is the blood that maketh an atonement for the soul."**
+
+Something innocent had to die, or none of us could draw near. A year's worth of our sin lay heavy on the people and on the very place where God met us, and somebody had to answer for it. That somebody, on that day, was me.
+
+## Beat 3 — The act
+Let me tell you what I did with my own hands, for I did it forty times in my life and I could do it in the dark.
+
+They brought me two goats for the people's sin offering, and I cast lots over them:
+
+**"And Aaron shall cast lots upon the two goats; one lot for the LORD, and the other lot for the scapegoat."**
+
+The first goat I killed. I took its blood in a basin and carried it where no ordinary man could follow — through the veil, into the thick dark, and I sprinkled it before the mercy seat.
+
+**"Then shall he kill the goat of the sin offering, that is for the people, and bring his blood within the vail."**
+
+But the second goat I did not kill. I laid both my hands upon its living head, and I confessed over it — out of my own mouth, name by name, sin by sin — all the wrong of all the people.
+
+**"And Aaron shall lay both his hands upon the head of the live goat, and confess over him all the iniquities of the children of Israel, and all their transgressions in all their sins, putting them upon the head of the goat, and shall send him away by the hand of a fit man into the wilderness."**
+
+And then I stood at the edge of the camp and watched it go, smaller and smaller, carrying it all away into a land where no one would ever find it.
+
+**"And the goat shall bear upon him all their iniquities unto a land not inhabited."**
+
+## Beat 4 — The strange detail
+Here is the thing that never let me rest. It was one sin offering — yet it took two goats.
+
+**"And he shall take of the congregation of the children of Israel two kids of the goats for a sin offering."**
+
+Two goats, for a single offering. One I killed; the other I sent away alive. And I asked myself, year upon year: why two? Why not put both to death? Why not drive both away? One goat died to pay; the other lived to carry it off — as though God were showing us two things at once that no single creature could hold. I performed it faithfully, and the riddle of it followed me home every time.
+
+## Beat 5 — The wrestling
+And I will be honest with you, for an honest man must be honest before God. As the years wore on, a hard thought began to press on me, one I dared not speak aloud at the altar.
+
+It never finished. That was the trouble. Every year I came back and did the whole thing again — the same blood, the same two goats, the same confession over the same people for the same sins.
+
+**"there is a remembrance again made of sins every year."**
+
+A cure you must take again every year is not truly a cure; it is a reminder that you are still sick. And in my old age the thought grew sharper, until I could no longer pretend not to think it:
+
+**"For it is not possible that the blood of bulls and of goats should take away sins."**
+
+I began to fear that I was only drawing a picture, year upon year — a true and holy picture, but only a picture — of an atonement my own hands could never finally make. I was pointing at something. I did not yet know what.
+
+## Beat 6 — The reveal
+I did not see the answer in my own day. I tell you now from the far side of my life, by the light that came long after I had laid down my office, what every Day of Atonement was always reaching toward.
+
+There came a Man who was led outside the city wall to die — outside, just as the offering was always carried outside the camp.
+
+**"Wherefore Jesus also, that he might sanctify the people with his own blood, suffered without the gate."**
+
+And He was both my goats. He was the slain goat, the blood that paid the price, carried in once and for all where my basin of blood was only a shadow:
+
+**"but by his own blood he entered in once into the holy place, having obtained eternal redemption for us."**
+
+And He was the living goat, the One who carried the guilt away — the iniquity laid upon Him exactly as I had laid the people's sin upon the head of the goat I sent into the wild:
+
+**"and the LORD hath laid on him the iniquity of us all."**
+
+That is why there were two. One could never show it all. He is the true High Priest, and He did the one thing I never could. I always stood at my work, for it was never finished; there was no chair behind that veil. But this Priest, this Jesus, finished it — and He sat down.
+
+**"But this man, after he had offered one sacrifice for sins for ever, sat down on the right hand of God."**
+
+And the veil itself — the curtain I trembled before, that shut every man but one out, one day in the year — was torn open from the top the very hour He died, by no human hand.
+
+**"And, behold, the veil of the temple was rent in twain from the top to the bottom."**
+
+## Beat 7 — The invitation
+So hear me, you who are still afraid of the dark behind the curtain. Do not come to me. Do not come to a goat, or a yearly altar, or a priest in linen who is himself a dying man and must wash before he dares draw near. Come to Jesus — the true and final High Priest.
+
+He paid the price in His own blood, and He carried your sin away — not held down for another year, but gone, as far as the east is from the west.
+
+**"As far as the east is from the west, so far hath he removed our transgressions from us."**
+
+The curtain I trembled before is torn. The way in is thrown wide open, and not for one man one day a year, but for you.
+
+**"Having therefore, brethren, boldness to enter into the holiest by the blood of Jesus."**
+
+You do not need a priest like me to go in for you any longer. Come to Him yourself, and trust the One who finished what I only ever began. The work is done. Your sin is carried away. Come — and be carried clean.

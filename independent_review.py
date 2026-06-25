@@ -96,6 +96,35 @@ platform + phrase:
 - Forgettable / templated titles that won't earn the click honestly.
 - Brand: CTA-to-Jesus present; footer/links not mangled."""
 
+LENS_EYEWITNESS = """LENS — judge this AWAKEDEN EYEWITNESS NARRATION (a named biblical
+witness recounts a moment they lived, then it turns to reveal Christ). Be specific,
+cite the exact line/phrase:
+- KJV verbatim + attribution (EW-INV-4): every word inside `**"..."**` quotes must be
+  exact KJV, and the speaker must be attributed before quoting. Flag any altered word or
+  misattributed quote.
+- CTA-on-Jesus (EW-INV-2): the close must name Jesus/Christ and invite to Him,
+  grace-anchored — NO fear / gain-loss / self-interest / manufactured pressure; NO tired
+  bare 'will you trust Him?' template; the response (faith / come / turn / receive) must be
+  NAMED, not vague.
+- The REVEAL is earned (EW-G7): the type->Christ turn is SHOWN from the text the witness
+  lived, not merely asserted ('and at last I understood…' must be earned, not announced).
+- The WRESTLING is the real steel-man (EW-G8): the witness's honest doubt/question is the
+  genuine strongest objection, internalized in their own voice — not a strawman.
+- Doctrine sound (EW-G9): evangelical, biblically faithful; the SUBSTITUTION is named
+  (the penalty + what Christ bore); NO supersession; no invented/contrarian reading.
+- VOICE / character (EW-G10): a consistent, characterful FIRST-PERSON witness — not the
+  detached essay narrator wearing a costume.
+- First-hearing clarity: a listener with zero Bible knowledge must follow it.
+- The hook grips in the first lines; the spine holds — ONE witness, ONE thread, no swap."""
+
+LENS_EYEWITNESS_SHORT = (LENS_EYEWITNESS + """
+- SHORT form: is it TIGHT (~90s, ~220-320 spoken words) and does the SINGLE moment land —
+  no sag, no second thread crowding the one witnessed moment?""")
+
+LENS_EYEWITNESS_LONG = (LENS_EYEWITNESS + """
+- LONG form: do the added beats / dialogue / interior wrestling EARN the runtime (~9-11 min),
+  or does the piece SAG — padding, repetition, a beat that adds no new turn?""")
+
 REVIEW_TEMPLATE = """You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
 are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
 
@@ -177,7 +206,9 @@ def run_one(name: str, prompt: str, outdir: Path) -> tuple[str, bool, str, float
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("artifact", help="path to the finished narration/plan file")
-    ap.add_argument("--type", dest="kind", choices=["narration", "plan", "upload"], required=True)
+    ap.add_argument("--type", dest="kind",
+                    choices=["narration", "plan", "upload", "eyewitness-short", "eyewitness-long"],
+                    required=True)
     ap.add_argument("--providers", default="cursor,claude,gemini,codex,grok")
     ap.add_argument("--context", default="", help="extra brief, or a path to one")
     ap.add_argument("--red-team", dest="red_team", action="store_true",
@@ -200,7 +231,9 @@ def main() -> int:
         ctx = Path(ctx).read_text(encoding="utf-8").strip()
     ctx_block = f"\nADDITIONAL CONTEXT / BRIEF:\n{ctx}\n" if ctx else ""
 
-    lens = {"narration": LENS_NARRATION, "plan": LENS_PLAN, "upload": LENS_UPLOAD}[args.kind]
+    lens = {"narration": LENS_NARRATION, "plan": LENS_PLAN, "upload": LENS_UPLOAD,
+            "eyewitness-short": LENS_EYEWITNESS_SHORT,
+            "eyewitness-long": LENS_EYEWITNESS_LONG}[args.kind]
     if args.red_team:
         lens = ("RED-TEAM LENS — you are a HOSTILE adversary. Assume it is flawed and PROVE it. "
                 "Hunt doctrinal error, Scripture misquote/overclaim, cheesy/tired lines, and anything "

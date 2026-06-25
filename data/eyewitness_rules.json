@@ -1,0 +1,66 @@
+{
+  "version": 2,
+  "doc": "Rule registry for the Awakeden eyewitness format (v2/EYEWITNESS_SPEC.md). Consumed by pipeline/eyewitness_gates.py (EW-G1..G6,G11,G12) and cli_witness_lock.py (+cluster). Deterministic, fail-closed. v2 adds the red-team doctrine + teeth fixes.",
+  "forms": {
+    "short": {"word_min": 220, "word_max": 320, "first_person_floor": 5, "first_person_density_min": 4.0},
+    "long":  {"word_min": 1300, "word_max": 1650, "first_person_floor": 25, "first_person_density_min": 4.0}
+  },
+  "beats_long": [
+    {"n": 1, "name": "I was there",        "role": "hook"},
+    {"n": 2, "name": "The world",          "role": "world"},
+    {"n": 3, "name": "The act",            "role": "act"},
+    {"n": 4, "name": "The strange detail", "role": "detail"},
+    {"n": 5, "name": "The wrestling",      "role": "wrestling"},
+    {"n": 6, "name": "The reveal",         "role": "reveal"},
+    {"n": 7, "name": "The invitation",     "role": "invitation"}
+  ],
+  "required_roles_short": ["hook", "act", "reveal", "invitation"],
+  "role_keywords": {
+    "hook":       ["i was there", "i saw", "i remember", "i stood"],
+    "world":      ["the world", "who we were", "the weight"],
+    "act":        ["the act", "the ritual", "the event", "my own hands"],
+    "detail":     ["strange detail", "the detail", "never understood"],
+    "wrestling":  ["the wrestling", "the doubt", "the question", "i doubted"],
+    "reveal":     ["the reveal", "i understood", "at last", "and then i knew"],
+    "invitation": ["the invitation", "come", "the calling"]
+  },
+  "invitation_verbs": ["come", "turn", "trust", "receive", "believe", "follow"],
+  "jesus_tokens": ["jesus", "christ"],
+  "type_fulfillment_cues": ["shadow", "pointed", "foreshadow", "fulfil", "fulfill", "the true", "the real", "it was him", "it was christ", "it was jesus", "all of it was", "stood for", "a picture of", "pointing"],
+  "banned_cta_templates": [
+    "will you trust him",
+    "will you trust jesus",
+    "will you trust christ",
+    "will you follow him",
+    "will you believe",
+    "will you choose him",
+    "the choice is yours",
+    "what will you do with jesus",
+    "what will you do with him"
+  ],
+  "fear_gainloss_lexicon": [
+    "lose everything", "you will lose", "you'll lose", "face wrath", "wrath and ruin",
+    "safe bet", "smart move", "secure your reward", "secure your place",
+    "before it's too late", "before it is too late", "before the door is shut",
+    "you will burn", "you'll burn", "don't miss out", "do not miss out",
+    "miss your chance", "last chance", "act now", "while you still can",
+    "or you will perish forever", "eternity in hell awaits"
+  ],
+  "divine_speaker_roles": [
+    "the lord", "lord", "the_lord", "god", "the god", "yhwh", "jehovah",
+    "jesus", "christ", "the holy ghost", "holy ghost"
+  ],
+  "banned_spoken_phrases": [
+    "at last i understood",
+    "and at last i understood",
+    "i understood at the last",
+    "at the last i understood",
+    "finally i understood",
+    "at last i knew",
+    "and at last i knew",
+    "then at last i understood"
+  ],
+  "first_person_markers": ["i", "i'm", "i've", "i'll", "i'd", "my", "me", "mine", "myself"],
+  "cast": {"min_voices": 2},
+  "cluster": {"ngram": 5, "max_shared_ngrams": 6, "skeleton_phrases": ["i was there", "the way in is open", "come to jesus", "and the lord said unto"]}
+}
