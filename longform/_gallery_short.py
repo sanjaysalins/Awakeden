@@ -81,7 +81,7 @@ if __name__ == "__main__":
      (VT/"variants/s3_blood_veil.png", ["the bronze basin of blood","the priest's raised hand","the golden glow beyond the veil"], "04_blood_veil.mp4"),
      (VT/"variants/s4_hands_confess.png", ["the priest's hands pressed on the goat's head","the priest's bowed face","the goat's eye"], "05_confess.mp4"),
      (VT/"variants/s5_scapegoat_desert.png", ["the small distant goat in the waste","the watching man's back","the empty desert horizon"], "06_scapegoat.mp4"),
-     (turn_png,                 ["the face of the crucified Christ","the tearing temple veil","the broken light piercing the dark"], "07_turn.mp4"),
+     (turn_png,                 ["the face of the crucified Christ","the nail-pierced hand","the wood of the cross"], "07_turn.mp4"),
      (VT/"christ.png",          ["the face of the risen Christ","his hand extended in welcome","the torn veil opening to light"], "08_punch.mp4"),
     ]
 

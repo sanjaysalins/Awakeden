@@ -1,0 +1,313 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>EW01 — clip motion review</title>
+<style>
+  body{margin:0;background:#11131a;color:#e8e6e0;font-family:system-ui,Segoe UI,sans-serif}
+  header{position:sticky;top:0;z-index:10;background:#1a1d27;border-bottom:1px solid #333;
+    padding:14px 20px;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+  header h1{margin:0 0 6px;font-size:18px}
+  header p{margin:0;color:#9aa;font-size:13px}
+  .out{margin-top:10px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .out b{font-size:22px;color:#ffd479}
+  #list{font-size:20px;color:#ff8a8a;font-weight:700;letter-spacing:1px}
+  button{background:#2a2f3d;color:#e8e6e0;border:1px solid #444;border-radius:6px;
+    padding:7px 12px;cursor:pointer;font-size:13px}
+  button:hover{background:#353b4c}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;padding:20px}
+  .card{background:#1a1d27;border:1px solid #2c3140;border-radius:10px;overflow:hidden;
+    transition:.15s}
+  .card.marked{border-color:#ff5a5a;box-shadow:0 0 0 2px #ff5a5a55}
+  .head{display:flex;align-items:center;gap:8px;padding:8px 10px}
+  .num{font-weight:700;color:#ffd479}
+  .badge{font-size:11px;padding:2px 8px;border-radius:20px;text-transform:uppercase;letter-spacing:.5px}
+  .badge.warn{background:#5a3a1a;color:#ffce8a}
+  .badge.ok{background:#1f3a2a;color:#8ce0a8}
+  .tw{margin-left:auto;color:#888;font-size:12px}
+  video{width:100%;display:block;background:#000;aspect-ratio:16/9}
+  .title{padding:8px 10px;font-size:13px;color:#cfd2da;min-height:34px}
+  .mark{display:flex;align-items:center;gap:8px;padding:8px 10px;border-top:1px solid #2c3140;
+    cursor:pointer;font-size:13px;color:#bbb}
+  .mark input{width:18px;height:18px}
+</style></head><body>
+<header>
+  <h1>EW01 Two Goats — clip motion review</h1>
+  <p>Each video is the <b>exact segment in the film</b> (boomerang + Ken Burns baked in). Watch for motion running backwards. Tick any that need other treatment. <b>orange = boomerang</b> (reverse-risk) · green = already forward-only.</p>
+  <div class="out">
+    <span>Marked for fix:</span> <span id="list">none</span>
+    <button onclick="copyList()">Copy numbers</button>
+    <button onclick="playAll()">▶ play all</button>
+    <button onclick="clearAll()">clear marks</button>
+  </div>
+</header>
+<div class="grid">
+    <div class="card" data-id="1">
+      <div class="head">
+        <span class="num">#01</span>
+        <span class="badge warn">boomerang</span>
+        <span class="tw">0s–20s</span>
+      </div>
+      <video src="_assembly/scenekb_01.mp4" muted loop preload="metadata" playsinline controls></video>
+      <div class="title">Once a year, only once</div>
+      <label class="mark"><input type="checkbox" class="cb" value="1"> needs other treatment</label>
+    </div>
+    <div class="card" data-id="2">
+      <div class="head">
+        <span class="num">#02</span>
+        <span class="badge warn">boomerang</span>
+        <span class="tw">20s–39s</span>
+      </div>
+      <video src="_assembly/scenekb_02.mp4" muted loop preload="metadata" playsinline controls></video>
+      <div class="title">I laid aside gold and glory</div>
+      <label class="mark"><input type="checkbox" class="cb" value="2"> needs other treatment</label>
+    </div>
+    <div class="card" data-id="3">
+      <div class="head">
+        <span class="num">#03</span>
+        <span class="badge warn">boomerang</span>
+        <span class="tw">39s–58s</span>
+      </div>
+      <video src="_assembly/scenekb_03.mp4" muted loop preload="metadata" playsinline controls></video>
+      <div class="title">Plain white linen, like a servant</div>
+      <label class="mark"><input type="checkbox" class="cb" value="3"> needs other treatment</label>
+    </div>
+    <div class="card" data-id="4">
+      <div class="head">
+        <span class="num">#04</span>
+        <span class="badge warn">boomerang</span>
+        <span class="tw">58s–78s</span>
+      </div>
+      <video src="_assembly/scenekb_04.mp4" muted loop preload="metadata" playsinline controls></video>
+      <div class="title">I went in alone</div>
+      <label class="mark"><input type="checkbox" class="cb" value="4"> needs other treatment</label>
+    </div>
+    <div class="card" data-id="5">
+      <div class="head">
+        <span class="num">#05</span>
+        <span class="badge warn">boomerang</span>
+        <span class="tw">78s–99s</span>
+      </div>
+      <video src="_assembly/scenekb_05.mp4" muted loop preload="metadata" playsinline controls></video>
+      <div class="title">That he die not — the cloud upon the mercy seat</div>
+      <label class="mark"><input type="checkbox" class="cb" value="5"> needs other treatment</label>
+    </div>
+    <div class="card" data-id="6">
+      <div class="head">
+        <span class="num">#06</span>
+        <span class="badge ok">forward_slow</span>
+        <span class="tw">99s–121s</span>
+      </div>
+      <video src="_assembly/scenekb_06.mp4" muted loop preload="metadata" playsinline controls></video>
+      <div class="title">I buried two of my own sons</div>
+      <label class="mark"><input type="checkbox" class="cb" value="6"> needs other treatment</label>
+    </div>
+    <div class="card" data-id="7">
+      <div class="head">
+        <span class="num">#07</span>
+        <span class="badge ok">forward_slow</span>
+        <span class="tw">121s–144s</span>
+      </div>
+      <video src="_assembly/scenekb_07.mp4" muted loop preload="metadata" playsinline controls></video>
+      <div class="title">They brought me two goats, and I cast lots</div>
+      <label class="mark"><input type="checkbox" class="cb" value="7"> needs other treatment</label>
+    </div>
+    <div class="card" data-id="8">
+      <div class="head">
+        <span class="num">#08</span>
+        <span class="badge ok">forward_slow</span>
+        <span class="tw">144s–167s</span>
+      </div>
+      <video src="_assembly/scenekb_08.mp4" muted loop preload="metadata" playsinline controls></video>
+      <div class="title">The first goat I killed — blood within the vail</div>
+      <label class="mark"><input type="checkbox" class="cb" value="8"> needs other treatment</label>
+    </div>
+    <div class="card" data-id="9">
+      <div class="head">
+        <span class="num">#09</span>
+        <span class="badge warn">boomerang</span>
+        <span class="tw">167s–191s</span>
+      </div>
+      <video src="_assembly/scenekb_09.mp4" muted loop preload="metadata" playsinline controls></video>
+      <div class="title">Both my hands upon the live goat</div>
+      <label class="mark"><input type="checkbox" class="cb" value="9"> needs other treatment</label>
+    </div>
+    <div class="card" data-id="10">
+      <div class="head">
+        <span class="num">#10</span>
+        <span class="badge warn">boomerang</span>
+        <span class="tw">191s–214s</span>
+      </div>
+      <video src="_assembly/scenekb_10.mp4" muted loop preload="metadata" playsinline controls></video>
+      <div class="title">I watched it go — a land not inhabited</div>
+      <label class="mark"><input type="checkbox" class="cb" value="10"> needs other treatment</label>
+    </div>
+    <div class="card" data-id="11">
+      <div class="head">
+        <span class="num">#11</span>
+        <span class="badge warn">boomerang</span>
+        <span class="tw">214s–240s</span>
+      </div>
+      <video src="_assembly/scenekb_11.mp4" muted loop preload="metadata" playsinline controls></video>
+      <div class="title">One offering — yet it took two goats</div>
+      <label class="mark"><input type="checkbox" class="cb" value="11"> needs other treatment</label>
+    </div>
+    <div class="card" data-id="12">
+      <div class="head">
+        <span class="num">#12</span>
+        <span class="badge warn">boomerang</span>
+        <span class="tw">240s–265s</span>
+      </div>
+      <video src="_assembly/scenekb_12.mp4" muted loop preload="metadata" playsinline controls></video>
+      <div class="title">Why two? — two things at once</div>
+      <label class="mark"><input type="checkbox" class="cb" value="12"> needs other treatment</label>
+    </div>
+    <div class="card" data-id="13">
+      <div class="head">
+        <span class="num">#13</span>
+        <span class="badge warn">boomerang</span>
+        <span class="tw">265s–289s</span>
+      </div>
+      <video src="_assembly/scenekb_13.mp4" muted loop preload="metadata" playsinline controls></video>
+      <div class="title">The people went home clean</div>
+      <label class="mark"><input type="checkbox" class="cb" value="13"> needs other treatment</label>
+    </div>
+    <div class="card" data-id="14">
+      <div class="head">
+        <span class="num">#14</span>
+        <span class="badge warn">boomerang</span>
+        <span class="tw">289s–314s</span>
+      </div>
+      <video src="_assembly/scenekb_14.mp4" muted loop preload="metadata" playsinline controls></video>
+      <div class="title">Every year I came back and did it again</div>
+      <label class="mark"><input type="checkbox" class="cb" value="14"> needs other treatment</label>
+    </div>
+    <div class="card" data-id="15">
+      <div class="head">
+        <span class="num">#15</span>
+        <span class="badge warn">boomerang</span>
+        <span class="tw">314s–338s</span>
+      </div>
+      <video src="_assembly/scenekb_15.mp4" muted loop preload="metadata" playsinline controls></video>
+      <div class="title">I was only ever pointing — a sign</div>
+      <label class="mark"><input type="checkbox" class="cb" value="15"> needs other treatment</label>
+    </div>
+    <div class="card" data-id="16">
+      <div class="head">
+        <span class="num">#16</span>
+        <span class="badge warn">boomerang</span>
+        <span class="tw">338s–361s</span>
+      </div>
+      <video src="_assembly/scenekb_16.mp4" muted loop preload="metadata" playsinline controls></video>
+      <div class="title">A shadow waits for the body — the body came</div>
+      <label class="mark"><input type="checkbox" class="cb" value="16"> needs other treatment</label>
+    </div>
+    <div class="card" data-id="17">
+      <div class="head">
+        <span class="num">#17</span>
+        <span class="badge warn">boomerang</span>
+        <span class="tw">361s–383s</span>
+      </div>
+      <video src="_assembly/scenekb_17.mp4" muted loop preload="metadata" playsinline controls></video>
+      <div class="title">By his own blood he entered in once</div>
+      <label class="mark"><input type="checkbox" class="cb" value="17"> needs other treatment</label>
+    </div>
+    <div class="card" data-id="18">
+      <div class="head">
+        <span class="num">#18</span>
+        <span class="badge warn">boomerang</span>
+        <span class="tw">383s–406s</span>
+      </div>
+      <video src="_assembly/scenekb_18.mp4" muted loop preload="metadata" playsinline controls></video>
+      <div class="title">The LORD laid on him the iniquity of us all</div>
+      <label class="mark"><input type="checkbox" class="cb" value="18"> needs other treatment</label>
+    </div>
+    <div class="card" data-id="19">
+      <div class="head">
+        <span class="num">#19</span>
+        <span class="badge warn">boomerang</span>
+        <span class="tw">406s–428s</span>
+      </div>
+      <video src="_assembly/scenekb_19.mp4" muted loop preload="metadata" playsinline controls></video>
+      <div class="title">He suffered without the gate</div>
+      <label class="mark"><input type="checkbox" class="cb" value="19"> needs other treatment</label>
+    </div>
+    <div class="card" data-id="20">
+      <div class="head">
+        <span class="num">#20</span>
+        <span class="badge ok">forward_slow</span>
+        <span class="tw">428s–451s</span>
+      </div>
+      <video src="_assembly/scenekb_20.mp4" muted loop preload="metadata" playsinline controls></video>
+      <div class="title">He sat down — the veil rent from the top</div>
+      <label class="mark"><input type="checkbox" class="cb" value="20"> needs other treatment</label>
+    </div>
+    <div class="card" data-id="21">
+      <div class="head">
+        <span class="num">#21</span>
+        <span class="badge warn">boomerang</span>
+        <span class="tw">451s–478s</span>
+      </div>
+      <video src="_assembly/scenekb_21.mp4" muted loop preload="metadata" playsinline controls></video>
+      <div class="title">Do not come to me, or a goat, or an altar</div>
+      <label class="mark"><input type="checkbox" class="cb" value="21"> needs other treatment</label>
+    </div>
+    <div class="card" data-id="22">
+      <div class="head">
+        <span class="num">#22</span>
+        <span class="badge warn">boomerang</span>
+        <span class="tw">478s–504s</span>
+      </div>
+      <video src="_assembly/scenekb_22.mp4" muted loop preload="metadata" playsinline controls></video>
+      <div class="title">Come to Jesus — carried as far as east from west</div>
+      <label class="mark"><input type="checkbox" class="cb" value="22"> needs other treatment</label>
+    </div>
+    <div class="card" data-id="23">
+      <div class="head">
+        <span class="num">#23</span>
+        <span class="badge ok">forward_slow</span>
+        <span class="tw">504s–531s</span>
+      </div>
+      <video src="_assembly/scenekb_23.mp4" muted loop preload="metadata" playsinline controls></video>
+      <div class="title">The way is thrown wide open</div>
+      <label class="mark"><input type="checkbox" class="cb" value="23"> needs other treatment</label>
+    </div>
+    <div class="card" data-id="24">
+      <div class="head">
+        <span class="num">#24</span>
+        <span class="badge warn">boomerang</span>
+        <span class="tw">531s–558s</span>
+      </div>
+      <video src="_assembly/scenekb_24.mp4" muted loop preload="metadata" playsinline controls></video>
+      <div class="title">Boldness to enter into the holiest</div>
+      <label class="mark"><input type="checkbox" class="cb" value="24"> needs other treatment</label>
+    </div>
+    <div class="card" data-id="25">
+      <div class="head">
+        <span class="num">#25</span>
+        <span class="badge warn">boomerang</span>
+        <span class="tw">558s–584s</span>
+      </div>
+      <video src="_assembly/scenekb_25.mp4" muted loop preload="metadata" playsinline controls></video>
+      <div class="title">Will you come in? — be carried clean</div>
+      <label class="mark"><input type="checkbox" class="cb" value="25"> needs other treatment</label>
+    </div></div>
+<script>
+const KEY='ew01_motion_marks';
+const cbs=[...document.querySelectorAll('.cb')];
+function load(){try{return JSON.parse(localStorage.getItem(KEY))||[]}catch(e){return[]}}
+function save(a){localStorage.setItem(KEY,JSON.stringify(a))}
+function refresh(){
+  const m=cbs.filter(c=>c.checked).map(c=>+c.value).sort((a,b)=>a-b);
+  document.getElementById('list').textContent=m.length?m.join(', '):'none';
+  save(m);
+  cbs.forEach(c=>c.closest('.card').classList.toggle('marked',c.checked));
+}
+const saved=load();
+cbs.forEach(c=>{c.checked=saved.includes(+c.value);c.addEventListener('change',refresh)});
+refresh();
+function copyList(){
+  const m=cbs.filter(c=>c.checked).map(c=>+c.value).sort((a,b)=>a-b).join(', ');
+  navigator.clipboard.writeText(m).then(()=>alert('Copied: '+(m||'none')));
+}
+function clearAll(){cbs.forEach(c=>c.checked=false);refresh()}
+function playAll(){document.querySelectorAll('video').forEach(v=>v.play())}
+</script>
+</body></html>

@@ -19,8 +19,12 @@
 
 ### ▶▶ DO NEXT (in order)
 1. **User reviews EW01 + EW02 shorts** (links above). If approved →
-2. **BATCH EW03–EW09** (~$70, ~5 hrs): for each EP, transcribe its painting table from `gallery_plan.md` into the `EPISODES` dict in
-   `_gallery_build_episode.py`, then `python longform/_gallery_build_episode.py <EP>`. Idempotent + 502-hardened. Reuse the bank.
+2. **BATCH EW03–EW09** (~$70, ~5 hrs): for each EP, transcribe into the `EPISODES` dict in `_gallery_build_episode.py`: its
+   **World Bible** (period+place · lighting · no-modern/no-stray-bearded-men negatives), its **continuity CAST** (a character sheet per
+   recurring person — derived from the narration: who/what recurs), and its **painting table with per-painting cast**. Then
+   `python longform/_gallery_build_episode.py <EP>`. The builder generates ONE reference per cast member + attaches it to every scene
+   (`nano_banana_2 --image`) → CONSISTENT faces/period/world (no drifting witness, no stray bearded men). Idempotent + 502-hardened.
+   Reuse the bank. (Best: have the design agents derive cast+world into each `gallery_plan.md` first.)
 3. **Per-episode render cautions** (from the plans): EW04 serpent = bronze-on-wood, NOT occult/medical · EW06 Noah upright cross, no
    water reflection · EW08 Passover death-shadow abstract, NOT a demon · EW07 Isaiah use the GENERIC crux (christ_turn has 2 goats).
    QC each: lands on the living Christ + no invented flame (Kling turns torn-veil light into fire — trim it).

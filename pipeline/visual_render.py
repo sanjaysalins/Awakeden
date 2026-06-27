@@ -239,13 +239,19 @@ class HFProvider(ImageProvider):
         # `openai_hazel` doesn't support 9:16 — substitute (per run_batch.sh).
         self._aspect = "2:3" if self._model == "openai_hazel" else self.ASPECT
 
-    def generate(self, scene: Scene, audit_feedback: str = "") -> bytes:
+    def generate(self, scene: Scene, audit_feedback: str = "", extra_ref_paths=None) -> bytes:
         prompt = assemble_final_prompt(
             scene,
             character_block=_character_block_for(scene.jesus_variant),
         )
         if audit_feedback:
             prompt = f"{prompt}\n\nRevise to fix prior content-audit issues: {audit_feedback}"
+
+        # nano_banana_2 takes reference images via --image (auto-uploaded local path);
+        # used for character/world consistency (a locked Aaron/Christ face per scene).
+        ref_flags: list = []
+        for rp in (extra_ref_paths or []):
+            ref_flags += ["--image", str(rp)]
 
         # Subprocess the CLI synchronously with --wait. UTF-8 to survive em
         # dashes / curly quotes the Baroque prompts use.
@@ -254,6 +260,7 @@ class HFProvider(ImageProvider):
                 self._cli, "generate", "create", self._model,
                 "--prompt", prompt,
                 "--aspect_ratio", self._aspect,
+                *ref_flags,
                 "--wait",
             ],
             capture_output=True,

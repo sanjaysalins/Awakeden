@@ -1,104 +1,181 @@
-"""Generalized Awakeden SHORT builder (gallery hard-cut engine). Renders an episode's NEW
-stills + gallery clips, reuses the shared Christ bank (risen-Christ landing + living close +
-generic crucifixion), and assembles: speed-to-fit racing middle + breathing living-Christ
-close + dread->hope music + kinetic captions. Run:  _gallery_build_episode.py <EPISODE>"""
-import sys, time, subprocess, importlib
+"""Generalized Awakeden SHORT builder (gallery hard-cut engine) with WORLD + CAST +
+REFERENCE-LOCK for cross-still consistency. Per episode: a World Bible (period+place,
+lighting, no-modern/no-stray-bearded-men negatives) + a continuity CAST; one reference image
+is generated per recurring character and ATTACHED (nano_banana_2 --image) to every scene
+they appear in, so the same person/world holds across all stills. Then renders gallery clips,
+reuses the Christ bank, and assembles (speed-to-fit racing middle + breathing living-Christ
+close + dread->hope music + kinetic captions). Run:  _gallery_build_episode.py <EPISODE>"""
+import sys, time, subprocess, importlib, urllib.request
 from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT)); sys.path.insert(0, str(ROOT/"longform"))
 import config
-from pipeline.visual_models import Scene
-from pipeline import visual_render
+from pipeline.visual_render import _HF_URL_RE
 gs = importlib.import_module("_gallery_short")   # gallery_prompt + make_clip
 
-config.VISUAL_STYLE_BASE = ("Baroque oil painting, dramatic chiaroscuro, Caravaggio and "
-    "Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted "
-    "earth tones, fine visible brushwork")
-config.VISUAL_STYLE_TAIL = "no text, no modern elements, vertical 9:16 composition"
+STYLE = ("Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, "
+    "fine visible brushwork, reverent sacred art")
+TAIL = "no text, vertical 9:16 composition"
 
 # ---- shared reuse bank ----
 EW01 = ROOT/"longform/EW01_Two_Goats/v1/short"
-CHRIST_LANDING = EW01/"visual_9x16_test/christ.png"
 PUNCH_CLIP = EW01/"gallery_clips/08_punch.mp4"
 LIVING_CHRIST = EW01/"gallery_clips/living_christ.mp4"
+CHRIST_LANDING = EW01/"visual_9x16_test/christ.png"   # reusable risen-Christ ref + still
 BANK = ROOT/"longform/_shorts_bank"; BANK.mkdir(exist_ok=True)
 GENERIC_CRUX = BANK/"crucifixion_generic.png"
 GENERIC_CRUX_SUBJ = ("Christ crucified upon the cross at the moment of his death on a dark "
-    "barren hill, the sky darkened with a shaft of broken light piercing behind him; his "
-    "head bowed beneath a crown of thorns, his nail-pierced hands outstretched on the wooden "
-    "beam, a wound in his side; an upright cross, no other figures, no water, reverent and "
-    "dignified, deep shadow")
-CRUX_ELEMS = ["Christ's bowed face and crown of thorns","the nail-pierced hand","the wood of the cross","the wound in his side"]
+    "barren hill, broken light piercing behind him; head bowed beneath a crown of thorns, "
+    "nail-pierced hands on the wooden beam; an upright cross, no other figures, no water, "
+    "reverent and dignified")
+CRUX_ELEMS = ["Christ's bowed face and crown of thorns","the nail-pierced hand","the wood of the cross"]
 
-# ---- episode painting tables: (slug, subject_core | "CRUX" | "PUNCH", [elements], kind) ----
+# ---- nano_banana_2 render with optional reference images ----
+def hf_image(prompt, refs=()):
+    cmd = [str(config.HF_CLI_PATH), "generate", "create", "nano_banana_2",
+           "--prompt", prompt, "--aspect_ratio", "9:16", "--wait"]
+    for r in refs: cmd += ["--image", str(r)]
+    res = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8",
+                         errors="replace", timeout=600)
+    m = _HF_URL_RE.search(res.stdout or "")
+    if not m: raise RuntimeError(f"no image URL: {(res.stdout or res.stderr or '')[-400:]}")
+    req = urllib.request.Request(m.group(0), headers={"User-Agent":"JITB/1.0"})
+    with urllib.request.urlopen(req, timeout=120) as resp: return resp.read()
+
+# ---- episode tables: world bible + continuity cast + paintings(with cast) ----
 EPISODES = {
- "EW02_Abraham": [
-  ("01_hook", "An aged shepherd-patriarch alone in a dim tent at night, a clay lamp throwing warm light across his weathered face; one hand cradling a sleeping infant boy against his chest, the other resting on a sheathed sacrificial knife on a low table; a shaft of cold moonlight through the tent flap points toward a dark distant mountain; one dominant figure, deep negative space",
-    ["Abraham's stricken weathered face","the sleeping infant's face","Abraham's hand on the sheathed knife","the dark mountain through the tent flap"], "fast"),
-  ("02_wood", "A young man bowed under a heavy bundle of split firewood lashed across his shoulders, climbing a rocky mountain path at dawn; his aged father a step behind carrying fire and a knife, head lowered in grief; two figures only, vast empty hillside, the boy's burden the bright focal mass",
-    ["the bundle of wood on Isaac's back","Isaac's straining young face","Abraham's grieving lowered eyes","the knife and fire-pot in Abraham's hand"], "fast"),
-  ("03_lamb", "Father and son paused on the mountain path, the boy turned back looking up into his father's face, lips parted in a question; the old man's face breaking with sorrow, one hand half-raised toward heaven; warm low side-light on both faces, the slope falling into shadow",
-    ["Isaac's questioning upturned face","Abraham's anguished eyes","Abraham's hand raised toward heaven","the empty path ahead vanishing into dark"], "fast"),
-  ("04_altar", "A boy bound with rope lying upon a rough stone altar stacked with firewood, eyes open and trusting; his father standing over him with a knife raised high in a trembling fist; a sudden burst of golden light tearing the upper sky with an outstretched radiant hand of restraint within it, the knife caught at the top of its arc",
-    ["the raised knife frozen at its peak","Abraham's trembling fist on the hilt","Isaac's bound trusting face","the radiant restraining hand in the torn light"], "fast"),
-  ("05_ram", "A single ram caught fast by its curling horns in the dense branches of a desert thicket, struggling in a pool of warm light, a thin line of blood at its flank; behind it the empty altar and the freed boy embraced by his father in soft shadow; the ram the bright dominant subject",
-    ["the ram's horns tangled in the thicket","the ram's straining eye","the wound at the ram's flank","the freed boy in his father's arms behind"], "fast"),
-  ("06_waiting", "An old man descending a mountain at dusk, his rescued son walking ahead into the valley, the father pausing to look back up at the bare dark summit with a searching unfinished expression, one empty open hand at his side; long amber dusk light, deep negative sky",
-    ["Abraham's searching backward gaze","his empty open hand","the bare dark summit behind","the son walking ahead into the valley"], "fast"),
-  ("07_turn", "CRUX", CRUX_ELEMS, "crux"),
-  ("08_punch", "PUNCH", ["the risen Christ's living face","his extended open hand","the torn veil doorway light","the pierced wrist"], "punch"),
- ],
+ "EW02_Abraham": {
+  "world": {
+   "period_place": ("Setting: the Patriarchal age, Middle Bronze Age Canaan and the stony hill "
+      "country toward Moriah, about 2000 BC — black goat-hair tents, rocky scrubland, stony hill "
+      "paths, a desert thicket; ancient and pre-Iron-Age"),
+   "lighting": ("warm low chiaroscuro, deep shadow with a single dominant warm light per scene; "
+      "muted ochre/umber/bone earth tones, consistent across every painting"),
+   "negatives": ("STRICTLY no modern or anachronistic elements; no Greco-Roman/medieval/European "
+      "objects, no metal armour, no eyeglasses. Abraham is the ONLY elderly grey-bearded man — do "
+      "NOT add other old bearded men; background figures are younger and clearly Bronze-Age Semitic"),
+  },
+  "characters": {
+   "abraham": ("ABRAHAM: an aged Semitic patriarch about one hundred years old, lean and upright, "
+      "long flowing iron-grey beard, deeply lined sun-darkened face, deep-set sorrowful brown eyes, "
+      "plain undyed coarse-wool robe and simple draped head-cloth"),
+   "isaac": ("ISAAC: a strong Hebrew youth of about twenty, dark wavy hair and a short dark beard, "
+      "smooth olive skin, plain undyed linen tunic"),
+  },
+  "paintings": [
+   ("01_hook", ["abraham"], "Abraham (the man in the reference image) alone in a dim goat-hair tent at night, a clay lamp lighting his weathered face, cradling a sleeping swaddled infant against his chest, his other hand resting on a sheathed knife on a low table; a shaft of moonlight through the tent flap points to a dark distant mountain",
+     ["Abraham's stricken face","the sleeping infant's face","Abraham's hand on the sheathed knife"], "fast"),
+   ("02_wood", ["abraham","isaac"], "the youth Isaac (from the reference) bowed under a heavy bundle of split firewood on his shoulders, climbing a rocky path at dawn; Abraham (from the reference) a step behind carrying fire and a knife, head lowered in grief; two figures, vast hillside",
+     ["the bundle of wood on Isaac's back","Isaac's young face","Abraham's grieving eyes"], "fast"),
+   ("03_lamb", ["abraham","isaac"], "the youth Isaac (from the reference) turned back looking up into Abraham's face with a question; Abraham (from the reference) breaking with sorrow, one hand half-raised to heaven; warm side-light on both faces",
+     ["Isaac's questioning upturned face","Abraham's anguished eyes","Abraham's hand raised to heaven"], "fast"),
+   ("04_altar", ["abraham","isaac"], "the youth Isaac (from the reference) bound with rope on a rough stone altar of firewood, eyes trusting; Abraham (from the reference) over him with a knife raised in a trembling fist; a burst of golden light tears the sky with a radiant restraining hand",
+     ["the raised knife at its peak","Abraham's trembling fist","Isaac's bound trusting face"], "fast"),
+   ("05_ram", ["abraham","isaac"], "a single ram caught by its horns in a desert thicket, a thin line of blood at its flank, the dominant subject; behind it the youth Isaac (from the reference) embraced by Abraham (from the reference) in soft shadow",
+     ["the ram's horns in the thicket","the ram's straining eye","the freed Isaac in Abraham's arms"], "fast"),
+   ("06_waiting", ["abraham","isaac"], "Abraham (from the reference) descending a mountain at dusk, the youth Isaac (from the reference) walking ahead into the valley; Abraham pausing to look back up at the bare dark summit, one empty open hand at his side; amber dusk",
+     ["Abraham's searching backward gaze","his empty open hand","the bare dark summit"], "fast"),
+   ("07_turn", [], "CRUX", CRUX_ELEMS, "crux"),
+   ("08_punch", [], "PUNCH", ["the risen Christ's living face","his extended open hand","the torn veil doorway light"], "punch"),
+  ],
+ },
+ "EW03_Joseph": {
+  "world": {
+   "period_place": ("Setting: ancient biblical period across two worlds — the patriarchs' Canaan "
+      "(a dry desert stone cistern, scrubland under a bruised sky) and the stone-columned court of "
+      "Egypt; everything ancient and pre-modern"),
+   "lighting": ("warm low chiaroscuro, deep shadow with a single dominant warm light per scene, "
+      "muted ochre and umber earth tones, consistent across every painting"),
+   "negatives": ("STRICTLY no modern or anachronistic elements; no European/medieval objects, no "
+      "eyeglasses, no modern fabric; background figures are clearly ancient Near-Eastern or "
+      "Egyptian; do not multiply identical old bearded men"),
+  },
+  "characters": {
+   "joseph": ("JOSEPH: the SAME young Hebrew man of about twenty-five in every scene — dark hair, "
+      "fine features, smooth olive skin, a short neat dark beard; his DRESS changes by scene (a "
+      "plain undyed Canaanite robe when young, fine white Egyptian linen with a broad gold collar "
+      "when he is the vizier) but it is always the same man's face"),
+  },
+  "ref_images": {"christ": str(CHRIST_LANDING)},
+  "paintings": [
+   ("01_pit", ["joseph"], "A young Hebrew man, Joseph (from the reference), thrown down into a dry desert stone cistern, his hands grasping the stone rim from below, his upturned betrayed face the one lit point; above him in warm low sun the hard shadowed silhouettes of his older brothers, one stretching a fist of silver coins toward an unseen merchant; deep negative space of empty pit-wall",
+     ["Joseph's upturned betrayed face","his hands clutching the stone rim","the brother's fist of silver coins"], "fast"),
+   ("02_bowing", ["joseph"], "The stone-columned throne hall of Egypt's governor; gaunt road-worn Hebrew brothers kneel low with faces to the floor holding out empty grain-sacks; above them on a dais a robed Egyptian ruler — Joseph (from the reference), now in fine white Egyptian linen and a broad gold collar — watches in silence, his face the only one turned toward us; one shaft of high window-light; attendants in shadow",
+     ["the kneeling brothers' bowed faces","the ruler Joseph's still watching face","the begging hands lifting toward the throne"], "fast"),
+   ("03_descent", ["joseph"], "A single dark canvas of four soft-edged vignettes bleeding into one another, a descent then a climb: a hand spilling silver pieces; a falsely-accused man turning from a pointing accuser; a chained figure in a dungeon's barred shaft of light; and the same man Joseph (from the reference) risen, standing at the right hand of an enthroned Pharaoh with a signet ring on his finger; each vignette a memory-soft pool of light in darkness, no panels",
+     ["the hand spilling the silver pieces","the chained hands in the dungeon light","the signet ring on Joseph's finger"], "fast"),
+   ("04_betrayals", ["joseph","christ"], "One canvas, two soft-edged vignettes across a band of shadow: upper and smaller, young Joseph (from the reference) handed away as a clutch of silver coins changes hands; lower and larger, in a torch-lit olive garden, a robed disciple presses a kiss while a fist of silver coins glints, and Jesus (from the Christ reference) stands calm, sorrowful and bound at the centre light",
+     ["Joseph's clutch of silver in the upper memory","the silver coins in the betrayer's fist","the betrayer's kiss against Jesus' cheek","Jesus' calm bound face"], "fast"),
+   ("05_cross", ["christ"], "A darkened Golgotha at the ninth hour; an upright cross stands central against a torn blackened sky, the crucified Christ (from the Christ reference) with head bowed; a soldier's fallen iron nail and hammer in the foreground gloom; the earth opening below into deepest shadow, a low edge of dawn-grey light bleeding at the horizon; one dominant hero subject, vast negative sky",
+     ["Christ's bowed head and face","the nail-pierced hand","the fallen iron nail in the foreground"], "crux"),
+   ("06_calls", ["christ"], "REUSE_CHRIST",
+     ["the risen Christ's face","the extended open hand","the wound in the wrist"], "fast"),
+   ("07_armswide", ["christ"], "The risen Christ (from the Christ reference) seen frontally, both arms thrown wide in an open embrace, no weapon anywhere, open empty hands showing the nail-marks, blood-tokened but glorified; a single ragged kneeling figure at the lower edge in shadow looking up; warm light pours from Christ over the kneeler; one dominant hero, deep negative space",
+     ["Christ's open nail-marked hands","his face turned in welcome","the wide-thrown arms","the kneeling figure's upturned face"], "fast"),
+   ("08_punch", [], "PUNCH", ["the risen Christ's living face","his extended open hand","the torn veil doorway light"], "punch"),
+  ],
+ },
 }
 
 EP = sys.argv[1] if len(sys.argv) > 1 else "EW02_Abraham"
-paintings = EPISODES[EP]
+spec = EPISODES[EP]; W = spec["world"]
 SHORT = ROOT/"longform"/EP/"v1"/"short"
 OUT = SHORT/"gallery_clips"; OUT.mkdir(exist_ok=True)
+REFS = OUT/"_refs"; REFS.mkdir(exist_ok=True)
 VO = SHORT/"narration.mp3"; SPOKEN = SHORT/"narration.spoken.txt"
 ML = ROOT/"music_library/clips"; T = OUT/"_t"; T.mkdir(exist_ok=True)
 NORM = "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,setsar=1"
 def run(c): subprocess.run(c, check=True)
 def dur(f):
-    o = subprocess.run(["ffprobe","-v","error","-show_entries","format=duration",
-        "-of","default=nk=1:nw=1",str(f)],capture_output=True,text=True).stdout.strip()
+    o = subprocess.run(["ffprobe","-v","error","-show_entries","format=duration","-of",
+        "default=nk=1:nw=1",str(f)],capture_output=True,text=True).stdout.strip()
     return float(o) if o else 0.0
 
-# ---- 0: shared generic crucifixion (render once into the bank) ----
-if not GENERIC_CRUX.exists():
-    sc = Scene(index=0, slug="crux", title="crucifixion", scene_type="single", arc_position="turn",
-        framing="wide", purpose="generic cross", rationale="bank", visible_elements="Christ on the cross",
-        emotional_tone="grief, awe", subject_block=GENERIC_CRUX_SUBJ, mood_block="reverent, period, vertical", jesus_variant=None)
-    print("[bank] generic crucifixion ...", flush=True)
-    GENERIC_CRUX.write_bytes(visual_render.HFProvider().generate(sc))
+def scene_prompt(subject):
+    return (f"{STYLE}. {W['period_place']}. {W['lighting']}. SCENE: {subject}. {W['negatives']}. {TAIL}")
 
-# ---- 1: render NEW stills + clips ----
-prov = visual_render.HFProvider()
-clips = []   # (slug, clip_path, kind)
-for slug, subj, elems, kind in paintings:
+# ---- 0a: shared generic crucifixion (bank) ----
+if not GENERIC_CRUX.exists():
+    print("[bank] generic crucifixion ...", flush=True)
+    GENERIC_CRUX.write_bytes(hf_image(f"{STYLE}. {GENERIC_CRUX_SUBJ}. no modern elements. {TAIL}"))
+
+# ---- 0b: one REFERENCE per recurring character (cached) ----
+refp = {}
+for name, desc in spec.get("characters", {}).items():     # generated references
+    p = REFS/f"{name}.png"
+    if not p.exists():
+        print(f"[ref] {EP} {name} ...", flush=True)
+        p.write_bytes(hf_image(f"{STYLE}. A single clear full-length character portrait. {desc}. "
+            f"Standing in neutral warm light against a plain dark background, face clearly visible. "
+            f"{W['negatives']}. {TAIL}"))
+    refp[name] = p
+for name, path in spec.get("ref_images", {}).items():     # existing references (e.g. christ)
+    refp[name] = Path(path)
+
+# ---- 1: render stills (world + attached refs) + gallery clips ----
+clips = []
+for slug, cast, subj, elems, kind in spec["paintings"]:
     if kind == "punch":
-        clips.append((slug, PUNCH_CLIP, kind)); continue   # reuse landing clip
-    png = OUT/f"{slug}.png"
-    if subj == "CRUX":
-        png = GENERIC_CRUX
-    elif not png.exists():
-        sc = Scene(index=0, slug=slug, title=slug, scene_type="single", arc_position="body",
-            framing="medium", purpose=slug, rationale="ep", visible_elements=subj[:160],
-            emotional_tone="reverent", subject_block=subj, mood_block="reverent, period, vertical", jesus_variant=None)
-        print(f"[still] {EP} {slug} ...", flush=True); png.write_bytes(prov.generate(sc))
+        clips.append((slug, PUNCH_CLIP, kind)); continue
+    if subj == "CRUX":         png = GENERIC_CRUX           # shared generic cross
+    elif subj == "REUSE_CHRIST": png = CHRIST_LANDING        # reuse the risen-Christ landing still
+    else:
+        png = OUT/f"{slug}.png"
+        if not png.exists():
+            print(f"[still] {EP} {slug} refs={cast} ...", flush=True)
+            png.write_bytes(hf_image(scene_prompt(subj), [refp[c] for c in cast]))
     clip = OUT/f"{slug}.mp4"
-    for _attempt in range(3):                       # retry transient HF 502s
-        if gs.make_clip(png, elems, clip, 10) and clip.exists():
-            break
+    for _ in range(3):
+        if gs.make_clip(png, elems, clip, 10) and clip.exists(): break
     if not clip.exists():
-        print(f"[WARN] {slug} clip missing after retries — skipping from cut")
-        continue
+        print(f"[WARN] {slug} clip missing — skipped"); continue
     clips.append((slug, clip, kind))
 
 # ---- 2: assemble (fast middle compressed, crux breathes, punch tour + living hold) ----
-VOL = dur(VO)
-PUNCH_TOUR, LIVING_HOLD, CRUX_WIN = 6.0, 11.0, 10.0
+VOL = dur(VO); PUNCH_TOUR, LIVING_HOLD, CRUX_WIN = 6.0, 11.0, 10.0
+LINGER = 2.5   # hold the living Christ + music this long AFTER the last word, then cut
 n_fast = sum(1 for _,_,k in clips if k == "fast")
-fast_win = (VOL - PUNCH_TOUR - LIVING_HOLD - CRUX_WIN) / n_fast
+fast_win = (VOL - PUNCH_TOUR - LIVING_HOLD - CRUX_WIN) / max(n_fast,1)
 segfiles = []
 for i,(slug, clip, kind) in enumerate(clips):
     o = T/f"s{i:02d}.mp4"
@@ -106,7 +183,7 @@ for i,(slug, clip, kind) in enumerate(clips):
         run(["ffmpeg","-y","-loglevel","error","-t",f"{PUNCH_TOUR}","-i",str(clip),"-vf",NORM,"-an",
              "-c:v","libx264","-pix_fmt","yuv420p","-preset","veryfast",str(o)]); segfiles.append(o)
         h = T/"hold.mp4"; ld = dur(LIVING_CHRIST)
-        run(["ffmpeg","-y","-loglevel","error","-i",str(LIVING_CHRIST),"-vf",f"{NORM},setpts=PTS*{LIVING_HOLD/ld:.5f}",
+        run(["ffmpeg","-y","-loglevel","error","-i",str(LIVING_CHRIST),"-vf",f"{NORM},setpts=PTS*{(LIVING_HOLD+LINGER)/ld:.5f}",
              "-an","-c:v","libx264","-pix_fmt","yuv420p","-r","30",str(h)]); segfiles.append(h)
     else:
         win = CRUX_WIN if kind == "crux" else fast_win
@@ -120,11 +197,13 @@ print(f"video {dur(silent):.1f}s  vo {VOL:.1f}s")
 
 run(["ffmpeg","-y","-loglevel","error","-i",str(ML/"lonely_searching_a.mp3"),"-i",str(ML/"sacred_grace_rise_a.mp3"),
      "-filter_complex","[0:a][1:a]acrossfade=d=3:c1=tri:c2=tri[arc]","-map","[arc]",str(T/"arc.mp3")])
-bed = T/"bed.mp3"; run(["ffmpeg","-y","-loglevel","error","-stream_loop","-1","-i",str(T/"arc.mp3"),"-t",f"{VOL+1:.2f}","-c","copy",str(bed)])
+bed = T/"bed.mp3"; run(["ffmpeg","-y","-loglevel","error","-stream_loop","-1","-i",str(T/"arc.mp3"),"-t",f"{VOL+LINGER+1:.2f}","-c","copy",str(bed)])
 muxed = OUT/f"{EP}_short_nocap.mp4"
 run(["ffmpeg","-y","-loglevel","error","-i",str(silent),"-i",str(VO),"-i",str(bed),
-     "-filter_complex","[1:a]volume=1.0[vo];[2:a]volume=0.18[mu];[vo][mu]amix=inputs=2:duration=first[a]",
-     "-map","0:v","-map","[a]","-t",f"{VOL:.2f}","-c:v","libx264","-pix_fmt","yuv420p","-c:a","aac",str(muxed)])
+     "-filter_complex",
+     f"[1:a]volume=1.0[vo];[2:a]volume=0.18[mu];[vo][mu]amix=inputs=2:duration=longest[mix];"
+     f"[mix]afade=t=out:st={VOL:.2f}:d={LINGER:.2f}[a]",   # music tapers over the linger, then cut
+     "-map","0:v","-map","[a]","-t",f"{VOL+LINGER:.2f}","-c:v","libx264","-pix_fmt","yuv420p","-c:a","aac",str(muxed)])
 out = OUT/f"{EP}_short.mp4"
 print("[caption] impact ...")
 r = subprocess.run([str(ROOT/".venv/Scripts/python.exe"),"-m","veed_io.caption","--video",str(muxed),
