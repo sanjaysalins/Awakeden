@@ -1,6 +1,9 @@
 # STATE.md — progress tracker
 
-**Last updated:** 2026-06-26
+**Last updated:** 2026-06-27
+**Status (2026-06-27 PM — SHORTS ENGINE):** **Awakeden eyewitness SHORT "gallery hard-cut" visual engine DESIGNED + LOCKED + BAKED (with the user). 2 finished shorts; EW03–09 plans designed; render batch pending (~$70).**
+A short = a guided GALLERY WALK of rich Baroque paintings (one per beat); the eye sees the WHOLE then HARD-CUTS to NAMED elements; punch = the tour sped up. 🔴 The MODEL renders each tight framing at FULL RES (Kling 3.0 pro 9:16) — NEVER ffmpeg-crop+upscale (=blur). Winning prompt = TIMECODED cut schedule. Overshoot→speed-to-fit; wide bookend + breathing LIVING-Christ close. **DONE:** EW01 short (`.../EW01_Two_Goats/v1/short/gallery_clips/ew01_short_v2.mp4`) + EW02 Abraham short (generalization PROOF passed). **Plans:** `longform/EW0*/v1/short/gallery_plan.md` for EW02–09. **Engine:** `longform/_gallery_short.py` + `longform/_gallery_build_episode.py` (idempotent, 502-hardened; EPISODES dict only has EW02 populated — transcribe EW03–09 from plans before batch). **Reuse bank:** `_shorts_bank/crucifixion_generic.png` + EW01 christ.png landing + living_christ.mp4. Memory: [[shorts-gallery-hardcut-engine]]. Earlier same session: long-form period-doc look validated+baked ([[longform-period-documentary-look]], [[veo-camera-palette]]); scene-plan-long enforces the GREEN palette. **Full pickup: RESUME.md top.**
+
 **Status (2026-06-26 VISUAL):** **EW01 Two Goats LONG-FORM visual build DONE through CLIPS (stills + animation; stopped before assembly).**
 Generalized the proven slice pattern → `longform/_build_two_goats_visual.py` (HF-ONLY 16:9 Baroque stills + veo3_1_lite, slice_NN naming,
 idempotent, CAM map+GLITTER+LOCK, directional 20/23 = minimal-move + no-tear lock, reuse #10 from test_hero). **TEST-GATE passed** (scene 4 calm +

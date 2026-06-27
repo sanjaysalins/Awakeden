@@ -1,6 +1,39 @@
 # RESUME.md — start here next session
 
-## ⚡⚡⚡ TOMORROW START HERE — (2026-06-27) — EW01 FILM DONE + 18 NARRATIONS VOICED ⚡⚡⚡
+## ⚡⚡⚡ TOMORROW START HERE — (2026-06-27 PM) — SHORTS GALLERY ENGINE LOCKED + EW01/EW02 SHORTS BUILT ⚡⚡⚡
+
+**This session = designed + LOCKED the Awakeden SHORT visual engine WITH the user, built 2 finished shorts, designed plans for the other 7.**
+
+### ✅ What got done
+1. **SHORTS "gallery hard-cut" ENGINE — designed with the user, locked + baked.** A short = a guided GALLERY WALK of rich Baroque
+   paintings (one per beat); the eye sees the WHOLE then HARD-CUTS to NAMED elements; punch = the same tour sped up. 🔴 The MODEL
+   renders each tight framing at FULL RES (Kling 3.0 pro 9:16) — NEVER ffmpeg-crop+upscale (=blur). Winning prompt = TIMECODED cut
+   schedule. Overshoot→speed-to-fit. Wide bookend + breathing LIVING-Christ close. Memory: [[shorts-gallery-hardcut-engine]].
+   Engine code: `longform/_gallery_short.py` (gallery_prompt + make_clip) + `longform/_gallery_build_episode.py` (generalized
+   builder; idempotent; hardened with 3× HTTP-502 retry).
+2. **EW01 Two Goats SHORT = DONE** → `longform/EW01_Two_Goats/v1/short/gallery_clips/ew01_short_v2.mp4` (70s; flame fixed, tight middle, living-Christ close).
+3. **EW02 Abraham SHORT = DONE — engine GENERALIZATION PROOF PASSED** → `longform/EW02_Abraham/v1/short/gallery_clips/EW02_Abraham_short.mp4` (73s).
+4. **EW03–EW09 painting PLANS designed** (8 parallel agents) → one `longform/EW0*/v1/short/gallery_plan.md` per episode. Doctrinal/render cautions captured in each.
+5. **Reuse bank seeded:** risen-Christ landing `EW01/.../visual_9x16_test/christ.png`, living-Christ close `EW01/.../gallery_clips/living_christ.mp4`, generic crucifixion `longform/_shorts_bank/crucifixion_generic.png` — reuse across ALL episodes.
+6. (Earlier this session) **Long-form period-documentary look VALIDATED + baked** ([[longform-period-documentary-look]], [[veo-camera-palette]]); `scene-plan-long` skill now enforces the GREEN camera palette.
+
+### ▶▶ DO NEXT (in order)
+1. **User reviews EW01 + EW02 shorts** (links above). If approved →
+2. **BATCH EW03–EW09** (~$70, ~5 hrs): for each EP, transcribe its painting table from `gallery_plan.md` into the `EPISODES` dict in
+   `_gallery_build_episode.py`, then `python longform/_gallery_build_episode.py <EP>`. Idempotent + 502-hardened. Reuse the bank.
+3. **Per-episode render cautions** (from the plans): EW04 serpent = bronze-on-wood, NOT occult/medical · EW06 Noah upright cross, no
+   water reflection · EW08 Passover death-shadow abstract, NOT a demon · EW07 Isaiah use the GENERIC crux (christ_turn has 2 goats).
+   QC each: lands on the living Christ + no invented flame (Kling turns torn-veil light into fire — trim it).
+4. Then per finished short: `/sfx` + `/caption` (already burned) + `/publish`; ingest new paintings/clips into the 9:16 reuse banks.
+
+### ⚠️ Note
+- **`_gallery_build_episode.py` EPISODES dict only has EW02 fully populated.** EW03–09 need their painting tables transcribed from the
+  `gallery_plan.md` files before running (the DESIGN is done; the transcription into the dict isn't).
+- Kling 502s are transient — builder retries 3×; if a clip is still missing it's skipped from the cut (just re-run to fill, idempotent).
+
+---
+
+## (prev session) — EW01 FILM DONE + 18 NARRATIONS VOICED — 2026-06-27
 
 **Yesterday (2026-06-26/27) was a huge session. Two big outcomes + 5 new standing rules.**
 
