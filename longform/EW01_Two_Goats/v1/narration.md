@@ -80,14 +80,16 @@ And the veil I trembled before — the curtain that shut every man but one out, 
 **"And, behold, the veil of the temple was rent in twain from the top to the bottom."**
 
 ## Beat 7 — The invitation
-So hear me. Do not come to me. Do not come to a goat, or a yearly altar, or a priest in linen who is himself a dying man and must wash before he dares draw near. Come to Jesus — the High Priest who finished it.
+So hear me — and be still a moment, for this is the thing I waited my whole life to understand.
 
-If you will come to Him, your sin is not held down for another year — it is carried away, as far as the east is from the west, for so the Psalm had promised long before:
+Do not come to me. Do not come to a goat, or a yearly altar, or a priest in linen who is himself a dying man and must wash before he dares draw near. Year after year I carried the blood in past that veil, and year after year I came back to do it all again, because none of it ever stayed done. He can. Come to Jesus — the High Priest who finished it.
+
+If you will come to Him, your sin is not held down for another year — it is carried away, into a land not inhabited, as far as the east is from the west, never to be counted against you again, for so the Psalm had promised long before:
 
 **"As far as the east is from the west, so far hath he removed our transgressions from us."**
 
-The curtain I trembled before is torn. The way in is thrown wide open — and not for one man one day a year, but for you:
+Sit with that a moment. The curtain I trembled before — the one that shut every man but one outside, one day a year — was torn from top to bottom the hour He died, and no hand will ever sew it shut again. The way in is thrown wide open, and not for one man one day a year, but for you:
 
 **"Having therefore, brethren, boldness to enter into the holiest by the blood of Jesus."**
 
-You do not need a priest like me to go in for you any longer. Come to Him yourself, and trust the One who finished what I only ever began. Come — and be carried clean.
+You do not need a priest like me to go in for you any longer. So I ask you the question I asked myself behind that veil, every year, with my heart in my throat — only now there is no fear left in it: will you come in? Not when you are clean enough, not next year, not by your own blood — but now, on His. Trust the One who finished what I only ever foreshadowed. Walk in — the holiest is open, and Jesus is already inside.

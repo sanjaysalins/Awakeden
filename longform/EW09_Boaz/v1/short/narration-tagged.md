@@ -1,0 +1,7 @@
+<!-- AUTO-BUILT from narration.md by _build_eyewitness_audio.py — eyewitness SHORT.
+     voices: witness, scripture (witness != the_LORD; God 2 on divine lines).
+     Words FROZEN; only speaker tags added; verified == the LOCKED narration.md. -->
+
+<speaker name="witness">A penniless foreign widow asked me to redeem her — to buy back all she had lost — though it would cost me my own inheritance. In our law the goel — the near kinsman — could redeem a dead man's land and take his widow to raise his name. The land was Elimelech's, my kinsman, dead in Moab. One stood nearer than I; but when he heard redeeming meant a Moabitess and his money poured into another's name, he walked — it would mar his inheritance. So I paid the full price at the gate, and gained Ruth as my bride — joy worth every coin. Long after, One came from David's line, born in my Bethlehem — a greater Kinsman than I. He took our flesh, paid not silver but His own blood; the curse we owed fell on Him. Scripture says:</speaker>
+<speaker name="scripture">Christ hath redeemed us from the curse of the law, being made a curse for us.</speaker>
+<speaker name="witness">He takes the poor outsider for His bride. So if you feel poor, far off, a stranger with nothing to bring — good. The redeemed never pay. Let the Kinsman who bought you with His own blood take you home as His bride. His name is Jesus. Receive your Redeemer.</speaker>

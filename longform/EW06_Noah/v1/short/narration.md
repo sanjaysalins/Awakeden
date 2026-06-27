@@ -1,24 +1,24 @@
 # The One Door — Awakeden eyewitness (short)
-**Witness:** Noah  ·  **Core text:** Genesis 6–7  ·  **Type→fulfillment:** the ark's one door, and the LORD who shut him in — a shadow of Christ the only door of salvation, who bore the flood of judgment so all inside Him come through alive
-**Status:** v1 — Awakeden eyewitness SHORT cut from the locked long. Spine = the one door / "the LORD shut him in" → Jesus the door (John 10:9). Cross-time reveal SIGNPOSTED (Noah sees "by a light that came long after I was laid in the ground"). Substitution named (wrath broke over the wood/Christ instead). Noah saved INSIDE, never the savior. [Jesus] line = verbatim KJV only.
+**Witness:** Noah  ·  **Core text:** Genesis 6–7 → John 10:9
+**Status:** v2 — PUNCHY hook-first short, recut from the locked long. 4 beats. Spine = the ark's ONE door / "the LORD shut him in" → Jesus the one door (John 10:9). Refuge vs substitution kept DISTINCT: the ark carried Noah safely THROUGH the judgment (the wood bore him above the flood, never struck by wrath); Christ BORE the wrath in our place (the just for the unjust). Noah saved INSIDE, never the savior — he never closed his own door; no invented "hand reaching in" (Gen 7:16 = the LORD shut him in). Cross-time reveal SIGNPOSTED ("a light fell that I never saw"). ONE bold KJV quote, verbatim, [Jesus] tag. Grace-anchored welcome — no fear/countdown.
 ---
 
-## Beat 1 — I was there
+## Beat 1 — Hook
 
-I am Noah. I built a box of timber on dry ground, hammering a hundred years while my neighbours laughed — and I am the only man still standing when the laughing stopped. I stood just inside one door, and watched a hand that was not mine reach in and pull it shut.
+I built a boat on dry land for a hundred years while everyone laughed — and mine was the only house left when the laughing stopped.
 
-## Beat 3 — The act
+## Beat 2 — The strange thing
 
-God gave me one instruction I turned over more than any other: **"the door of the ark shalt thou set in the side thereof"**. One door — not a row of them, one. And when my house was inside and the sky darkened, a thing happened that I did not do: **"and the LORD shut him in"**. I built the whole ark with these hands; the one thing I never did was close the door. The sealing was His, not mine — so I could never say I saved myself.
+That ark had one door — not a row, one. And when my whole house was safe inside, the LORD shut me in. I built the whole ark, but never closed that door. So I could never say I saved myself.
 
-## Beat 6 — The reveal
+## Beat 3 — The turn
 
-I see it now, by a light that came long after I was laid in the ground. There came a Man, Jesus, who said:
+Long after I was laid in the ground, a light fell that I never saw. A Man named Jesus said:
 
 **[Jesus]** **"I am the door: by me if any man enter in, he shall be saved"**
 
-He is the door I cut into the ark's side — the only way in. The ark was Him: a refuge with judgment thundering on every side. The wrath that should have drowned me broke over the wood, and it bore me up. So it was with Christ — the judgment my sin had earned broke over Him, the just for the unjust, that everyone shut inside Him comes through alive.
+He is the one door — my ark, only its shadow. The flood that drowned the world only lifted my ark; the wood carried me safe through the judgment. But Christ did more. The wrath my sin had earned did not pass over Him; it broke over Him, the just for the unjust, so all shut inside Him come through alive.
 
-## Beat 7 — The invitation
+## Beat 4 — The punch
 
-Hear an old man who rode out the end of the world inside a door he never deserved. Do not trust the man who swung the hammer; trust the Ark Himself. There is still one door, thrown wide open. Come to Jesus — the Ark and the open door — and let Him be your refuge. Come, and be carried clean through.
+Do not come to me — I could not even shut my own door; the LORD did that. But His door still stands wide: nothing to build, nothing to bring. Jesus is the one door. Step inside, and be carried clean through the storm.

@@ -1,0 +1,57 @@
+{
+  "folder": "short",
+  "stage": "per_turn_synth",
+  "mode": "dialogue_per_turn_with_narrator_atempo",
+  "generated_at": "2026-06-26T13:37:42Z",
+  "model_id": "eleven_v3",
+  "output_format": "mp3_44100_128",
+  "target_seconds": 150.0,
+  "natural_total_seconds": 74.88,
+  "narrator_natural_seconds": 0.0,
+  "quote_total_seconds": 74.88,
+  "narrator_atempo_factor": 1.0,
+  "pre_quote_pause_seconds": 0.3,
+  "post_quote_pause_seconds": 0.25,
+  "pause_total_seconds": 1.65,
+  "final_total_seconds": 76.53,
+  "delta_vs_target_seconds": -73.47,
+  "turns": [
+    {
+      "index": 0,
+      "speaker": "witness",
+      "chars": 706,
+      "natural_seconds": 53.52,
+      "final_seconds": 0.3,
+      "atempo_applied": false
+    },
+    {
+      "index": 1,
+      "speaker": "scripture",
+      "chars": 24,
+      "natural_seconds": 1.92,
+      "final_seconds": 53.52,
+      "atempo_applied": false
+    },
+    {
+      "index": 2,
+      "speaker": "witness",
+      "chars": 249,
+      "natural_seconds": 19.44,
+      "final_seconds": 0.25,
+      "atempo_applied": false
+    }
+  ],
+  "speakers": {
+    "witness": {
+      "voice_id": "UzI1NsMEV3ni5JRkRSls",
+      "audio_tag": null
+    },
+    "scripture": {
+      "voice_id": "puDRtQWF8NtQiPMJygTb",
+      "audio_tag": null
+    }
+  },
+  "settings": {
+    "stability": 0.6
+  }
+}

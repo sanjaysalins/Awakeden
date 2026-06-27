@@ -86,8 +86,12 @@ My lamb's unbroken bones had been pointing across the centuries to His. And the 
 This was the substitution my doorpost had been whispering all my life, and I never heard it. The firstborn stood under sentence; the lamb died in his place. We all stand under sentence; the Lamb of God died in ours. Not a bone of Him broken. His blood upon the wood.
 
 ## Beat 7 — The invitation
-So hear me, you who listen from so far beyond my night. Do not look to a lamb, or a painted door, or a frightened father like me, who only did what he was told. Look to Jesus, the Lamb that God Himself has provided.
+So hear me — before you turn away, be still a moment.
 
-It is not enough only to know that He died for sinners. Come to Him, and make His blood your own the way I made the lamb's my own — by trusting Him, hiding behind Him as my children hid behind that door. Then the judgment will pass over you, not because you are good, but because He is your Lamb — and you will find you were never running from the dark so much as coming home to Him.
+With these two hands I struck the blood on the wood, and shut my children behind that door; a lamb lay dead where my own son should have lain. Something spotless died so my boy could live. I did not earn it — I only hid behind the blood.
 
-Come inside, and trust the Lamb who was slain for you. Hide your life in Him, and rest — as I never could on that long night — in a deliverance that will never need to be done again.
+That lamb was only the shadow. The blood that truly shelters is His — the Lamb God provided, Jesus, poured out on a cross I never saw. No one who comes to His door is ever turned away.
+
+Sit with that.
+
+So I ask you the question I carried through that whole long night — only now there is no fear left in it, only welcome: will you make His blood your own, as I made the lamb's, and hide behind Him as my children hid behind that door? Not because you are good — I was not — but because He is the Lamb slain for you, His door open. Come home to Jesus, and rest in a deliverance that need never be done again.

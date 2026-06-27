@@ -101,14 +101,16 @@ What I could only do with bread, He did with His own blood. I told my brothers t
 
 ## Beat 7 — The invitation
 
-So hear me, you who listen so far away, so long after. I said to my trembling brothers, fear not — for though they had sold me, I was made their rescue, not their judge.
+So hear me now, you who listen long after — be still with me a moment.
+
+I know what it cost. When my betrayers knelt before me, I held bread, not a sword — and forgiveness was the heaviest thing my hands ever lifted. I could feed them, but I could not lift the guilt off one soul. I could not. He can.
+
+You have wronged Him too — we are the brothers who sold Him. Yet He does not wait with a sword, but stands with arms thrown wide, the marks still in them.
+
+Sit with that. He carried your guilt down where my hands could never reach — into death itself — and rose holding pardon for the hands that nailed Him.
+
+So I leave you the question my life kept asking — now with no sword behind it, no fear:
 
 **"Fear not: for am I in the place of God?"**
 
-Now hear that same word from a far greater Brother. You have wronged Him — every one of us has; we are the brothers who sold Him and turned our backs. But He is not waiting for you with a sword. He stands holding bread, His arms thrown wide, calling the very ones who betrayed Him to come home and be fed and forgiven.
-
-Do not come to me; I am only the shadow. Come to Jesus, who is the substance. He has carried your guilt where my hands could never reach, and to every weary and heavy-laden soul He says:
-
-**"Come unto me, all ye that labour and are heavy laden, and I will give you rest."**
-
-Come to Him. Trust the Brother who was sold for you, who was raised for you, who forgives you still. Come — and be kept alive forever.
+I was only the shadow; He is the substance. Trust Jesus, the Brother who holds out bread, not a sword — not when you are clean enough, but now, as you are.

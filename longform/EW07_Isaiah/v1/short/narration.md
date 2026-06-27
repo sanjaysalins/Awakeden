@@ -1,27 +1,19 @@
 # The Suffering Servant — Awakeden eyewitness (short)
-**Witness:** Isaiah the prophet, son of Amoz  ·  **Core text:** Isaiah 53:5–6  ·  **Type→fulfillment:** the Servant wounded for our transgressions, fulfilled in Christ crucified and risen (Acts 8:35)
-**Status:** v1 — Awakeden eyewitness SHORT (B1→B3→B6→B7). Isaiah is the SEER who wrote the vision without knowing the Servant's name (signposted cross-time reflective device, EW-INV-11); he is NOT the Servant. No invented divine speech. All bold quotes verbatim vs passage.txt (Isa 53:5/53:6 + Acts 8:35). Substitution named; no supersession; no "at last I understood."
+**Witness:** Isaiah the prophet, son of Amoz  ·  **Core text:** Isaiah 53:5–6 → Acts 8:35  ·  **Type→fulfillment:** the Servant wounded for our transgressions, fulfilled in Christ and named on the desert road (Acts 8:35)
+**Status:** v1 — Awakeden eyewitness SHORT, PUNCHY hook-first (Hook → strange thing → turn → punch). Isaiah is the SEER of the VISION who wrote it without knowing the Servant's name (signposted cross-time reflective device, EW-INV-11); he is NOT the Servant and never stood at the cross/road/tomb. Vision/scroll/report framing throughout. EXACTLY ONE bold KJV quote (Acts 8:35 fragment "preached unto him Jesus." — verbatim vs passage.txt line 21). Substitution named; grace-anchored; no supersession; no "at last I understood"; no banned "will you…?" CTA. Lands explicitly on Jesus.
 ---
-## Beat 1 — I was there
-I am Isaiah, son of Amoz, who prophesied in Judah. The LORD laid a vision on me I never understood, and I wrote it word for word. I saw a Servant, and grief came over me, for I could not yet tell his name.
+## Beat 1 — Hook
+I wrote down a man's execution seven hundred years before it happened — and I went to my grave never knowing his name.
 
-## Beat 3 — The act
-I watched him come up despised, wanted by no one. The blows fell — and every wound was ours, not his own:
+## Beat 2 — The strange thing
+In the vision the LORD laid on me, a Servant came despised and wounded — but every wound was ours, not his own. He had done no wrong; I had. Yet I watched the LORD lay the guilt of us all — sheep gone astray, each turned his own way — onto a Servant who carried none of it. I wrote it word for word, though I could not make it lie quiet in me.
 
-**"But he was wounded for our transgressions, he was bruised for our iniquities: the chastisement of our peace was upon him; and with his stripes we are healed."**
-
-Wounded for ours. The LORD pressed it plainer — we were the straying sheep, and he bore us away:
-
-**"All we like sheep have gone astray; we have turned every one to his own way; and the LORD hath laid on him the iniquity of us all."**
-
-He laid our guilt on a Servant who had none. I wrote it, not knowing the One it was about.
-
-## Beat 6 — The reveal
-I tell you now from the far side of my days, by the light that came seven hundred years after me — by One whose name I was never given to write. They led a Man away to be killed, and he opened not his mouth; and the death I watched turn to life ended in an empty tomb. My scroll was carried down a desert road, where Philip read my words and
+## Beat 3 — The turn
+Centuries after my hand fell still, my scroll was carried down a desert road, and a stranger read my words aloud and asked the very question I had asked: of whom speaketh the prophet this? Then Philip sat beside him, began at my own words, and
 
 **"preached unto him Jesus."**
 
-That was his name. Jesus — the Servant, the arm of the LORD made bare.
+That was the name I was never given.
 
-## Beat 7 — The invitation
-So hear me. The same hand I watched gather our iniquity is open toward you still. You were never made to carry your wandering home — he has already borne it. Come to Jesus; believe the report I wrote. The strength of God came down as a wounded Servant, and he has finished it. Trust the One wounded for your transgressions, and be healed by his stripes.
+## Beat 4 — The punch
+The report is true, and the Servant has a name. You were never made to carry your wandering home — He has borne it already. Believe the words I bled to write: His name is Jesus, and by His stripes you are healed.

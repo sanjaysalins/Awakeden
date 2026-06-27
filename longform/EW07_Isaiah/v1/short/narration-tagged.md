@@ -1,0 +1,7 @@
+<!-- AUTO-BUILT from narration.md by _build_eyewitness_audio.py — eyewitness SHORT.
+     voices: witness, scripture (witness != the_LORD; God 2 on divine lines).
+     Words FROZEN; only speaker tags added; verified == the LOCKED narration.md. -->
+
+<speaker name="witness">I wrote down a man's execution seven hundred years before it happened — and I went to my grave never knowing his name. In the vision the LORD laid on me, a Servant came despised and wounded — but every wound was ours, not his own. He had done no wrong; I had. Yet I watched the LORD lay the guilt of us all — sheep gone astray, each turned his own way — onto a Servant who carried none of it. I wrote it word for word, though I could not make it lie quiet in me. Centuries after my hand fell still, my scroll was carried down a desert road, and a stranger read my words aloud and asked the very question I had asked: of whom speaketh the prophet this? Then Philip sat beside him, began at my own words, and</speaker>
+<speaker name="scripture">preached unto him Jesus.</speaker>
+<speaker name="witness">That was the name I was never given. The report is true, and the Servant has a name. You were never made to carry your wandering home — He has borne it already. Believe the words I bled to write: His name is Jesus, and by His stripes you are healed.</speaker>

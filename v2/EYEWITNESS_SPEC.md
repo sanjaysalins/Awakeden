@@ -62,6 +62,15 @@ Told *as the witness*. LONG hits all 7, in order. SHORT compresses to **B1 → B
 - Banned as spoken text: the templated reveal stinger **"at last I understood"** (vary the turn).
 
 ## 3. Invariants (EW-INV — never violate)
+
+> **🔒 TWO NON-NEGOTIABLES (user, 2026-06-26) — above everything below:**
+> **(A) Sound doctrine, proven BOTH ways.** Doctrine must be sound and grounded in
+> the Bible, and verified BOTH independently (red-team/self-check) AND by the 5-CLI
+> panel — never one alone; reject if EITHER flags a real doctrinal/grounding error.
+> Strengthens EW-INV-4/7 and §10. **(B) The whole Bible, through Jesus.** Read the
+> entire canon (OT + NT) with Christ as the lens; every piece traces its thread to
+> and lands on Jesus (EW-INV-2/3). The spine, never optional.
+
 - **EW-INV-1 First-person witness.** Narration is spoken in first person by a named biblical
   witness (or a justified, labelled composite), never the detached essay narrator.
 - **EW-INV-2 CTA on Jesus.** The close names **Jesus/Christ** and invites to Him;

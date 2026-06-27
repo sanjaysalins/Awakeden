@@ -1,0 +1,193 @@
+{
+  "folder": "v1",
+  "stage": "per_turn_synth",
+  "mode": "dialogue_per_turn_with_narrator_atempo",
+  "generated_at": "2026-06-26T13:49:57Z",
+  "model_id": "eleven_v3",
+  "output_format": "mp3_44100_128",
+  "target_seconds": 900.0,
+  "natural_total_seconds": 603.84,
+  "narrator_natural_seconds": 0.0,
+  "quote_total_seconds": 603.84,
+  "narrator_atempo_factor": 1.0,
+  "pre_quote_pause_seconds": 0.4,
+  "post_quote_pause_seconds": 0.3,
+  "pause_total_seconds": 13.3,
+  "final_total_seconds": 617.14,
+  "delta_vs_target_seconds": -282.86,
+  "turns": [
+    {
+      "index": 0,
+      "speaker": "witness",
+      "chars": 984,
+      "natural_seconds": 72.56,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 1,
+      "speaker": "the_LORD",
+      "chars": 140,
+      "natural_seconds": 12.0,
+      "final_seconds": 72.56,
+      "atempo_applied": false
+    },
+    {
+      "index": 2,
+      "speaker": "witness",
+      "chars": 341,
+      "natural_seconds": 23.44,
+      "final_seconds": 0.3,
+      "atempo_applied": false
+    },
+    {
+      "index": 3,
+      "speaker": "scripture",
+      "chars": 121,
+      "natural_seconds": 9.84,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 4,
+      "speaker": "witness",
+      "chars": 413,
+      "natural_seconds": 27.44,
+      "final_seconds": 12.0,
+      "atempo_applied": false
+    },
+    {
+      "index": 5,
+      "speaker": "scripture",
+      "chars": 31,
+      "natural_seconds": 2.56,
+      "final_seconds": 0.3,
+      "atempo_applied": false
+    },
+    {
+      "index": 6,
+      "speaker": "witness",
+      "chars": 388,
+      "natural_seconds": 25.04,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 7,
+      "speaker": "scripture",
+      "chars": 54,
+      "natural_seconds": 4.16,
+      "final_seconds": 23.44,
+      "atempo_applied": false
+    },
+    {
+      "index": 8,
+      "speaker": "witness",
+      "chars": 206,
+      "natural_seconds": 14.48,
+      "final_seconds": 0.3,
+      "atempo_applied": false
+    },
+    {
+      "index": 9,
+      "speaker": "the_LORD",
+      "chars": 102,
+      "natural_seconds": 9.12,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 10,
+      "speaker": "witness",
+      "chars": 192,
+      "natural_seconds": 12.72,
+      "final_seconds": 9.84,
+      "atempo_applied": false
+    },
+    {
+      "index": 11,
+      "speaker": "scripture",
+      "chars": 25,
+      "natural_seconds": 1.92,
+      "final_seconds": 0.3,
+      "atempo_applied": false
+    },
+    {
+      "index": 12,
+      "speaker": "witness",
+      "chars": 1001,
+      "natural_seconds": 72.08,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 13,
+      "speaker": "scripture",
+      "chars": 78,
+      "natural_seconds": 5.52,
+      "final_seconds": 27.44,
+      "atempo_applied": false
+    },
+    {
+      "index": 14,
+      "speaker": "witness",
+      "chars": 1325,
+      "natural_seconds": 98.16,
+      "final_seconds": 0.3,
+      "atempo_applied": false
+    },
+    {
+      "index": 15,
+      "speaker": "jesus",
+      "chars": 59,
+      "natural_seconds": 6.24,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 16,
+      "speaker": "witness",
+      "chars": 349,
+      "natural_seconds": 26.64,
+      "final_seconds": 2.56,
+      "atempo_applied": false
+    },
+    {
+      "index": 17,
+      "speaker": "scripture",
+      "chars": 279,
+      "natural_seconds": 20.96,
+      "final_seconds": 0.3,
+      "atempo_applied": false
+    },
+    {
+      "index": 18,
+      "speaker": "witness",
+      "chars": 1852,
+      "natural_seconds": 158.96,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    }
+  ],
+  "speakers": {
+    "witness": {
+      "voice_id": "UzI1NsMEV3ni5JRkRSls",
+      "audio_tag": null
+    },
+    "scripture": {
+      "voice_id": "puDRtQWF8NtQiPMJygTb",
+      "audio_tag": null
+    },
+    "the_LORD": {
+      "voice_id": "BvKkUzf75BfURv388O3G",
+      "audio_tag": null
+    },
+    "jesus": {
+      "voice_id": "tlETan7Okc4pzjD0z62P",
+      "audio_tag": null
+    }
+  },
+  "settings": {
+    "stability": 0.65
+  }
+}

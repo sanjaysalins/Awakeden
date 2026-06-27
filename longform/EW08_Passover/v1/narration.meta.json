@@ -1,0 +1,269 @@
+{
+  "folder": "v1",
+  "stage": "per_turn_synth",
+  "mode": "dialogue_per_turn_with_narrator_atempo",
+  "generated_at": "2026-06-26T10:17:42Z",
+  "model_id": "eleven_v3",
+  "output_format": "mp3_44100_128",
+  "target_seconds": 900.0,
+  "natural_total_seconds": 581.36,
+  "narrator_natural_seconds": 0.0,
+  "quote_total_seconds": 581.36,
+  "narrator_atempo_factor": 1.0,
+  "pre_quote_pause_seconds": 0.4,
+  "post_quote_pause_seconds": 0.3,
+  "pause_total_seconds": 20.3,
+  "final_total_seconds": 601.66,
+  "delta_vs_target_seconds": -298.34,
+  "turns": [
+    {
+      "index": 0,
+      "speaker": "witness",
+      "chars": 1025,
+      "natural_seconds": 74.8,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 1,
+      "speaker": "the_LORD",
+      "chars": 103,
+      "natural_seconds": 8.32,
+      "final_seconds": 74.8,
+      "atempo_applied": false
+    },
+    {
+      "index": 2,
+      "speaker": "witness",
+      "chars": 479,
+      "natural_seconds": 33.36,
+      "final_seconds": 0.3,
+      "atempo_applied": false
+    },
+    {
+      "index": 3,
+      "speaker": "scripture",
+      "chars": 102,
+      "natural_seconds": 6.88,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 4,
+      "speaker": "witness",
+      "chars": 65,
+      "natural_seconds": 3.84,
+      "final_seconds": 8.32,
+      "atempo_applied": false
+    },
+    {
+      "index": 5,
+      "speaker": "scripture",
+      "chars": 60,
+      "natural_seconds": 4.16,
+      "final_seconds": 0.3,
+      "atempo_applied": false
+    },
+    {
+      "index": 6,
+      "speaker": "witness",
+      "chars": 357,
+      "natural_seconds": 25.44,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 7,
+      "speaker": "scripture",
+      "chars": 77,
+      "natural_seconds": 5.2,
+      "final_seconds": 33.36,
+      "atempo_applied": false
+    },
+    {
+      "index": 8,
+      "speaker": "witness",
+      "chars": 109,
+      "natural_seconds": 6.32,
+      "final_seconds": 0.3,
+      "atempo_applied": false
+    },
+    {
+      "index": 9,
+      "speaker": "scripture",
+      "chars": 123,
+      "natural_seconds": 8.64,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 10,
+      "speaker": "witness",
+      "chars": 206,
+      "natural_seconds": 13.92,
+      "final_seconds": 6.88,
+      "atempo_applied": false
+    },
+    {
+      "index": 11,
+      "speaker": "scripture",
+      "chars": 67,
+      "natural_seconds": 4.16,
+      "final_seconds": 0.3,
+      "atempo_applied": false
+    },
+    {
+      "index": 12,
+      "speaker": "witness",
+      "chars": 154,
+      "natural_seconds": 9.44,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 13,
+      "speaker": "the_LORD",
+      "chars": 95,
+      "natural_seconds": 8.24,
+      "final_seconds": 3.84,
+      "atempo_applied": false
+    },
+    {
+      "index": 14,
+      "speaker": "witness",
+      "chars": 361,
+      "natural_seconds": 23.68,
+      "final_seconds": 0.3,
+      "atempo_applied": false
+    },
+    {
+      "index": 15,
+      "speaker": "scripture",
+      "chars": 176,
+      "natural_seconds": 12.64,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 16,
+      "speaker": "witness",
+      "chars": 228,
+      "natural_seconds": 15.52,
+      "final_seconds": 4.16,
+      "atempo_applied": false
+    },
+    {
+      "index": 17,
+      "speaker": "scripture",
+      "chars": 37,
+      "natural_seconds": 2.32,
+      "final_seconds": 0.3,
+      "atempo_applied": false
+    },
+    {
+      "index": 18,
+      "speaker": "witness",
+      "chars": 697,
+      "natural_seconds": 51.2,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 19,
+      "speaker": "scripture",
+      "chars": 50,
+      "natural_seconds": 3.2,
+      "final_seconds": 25.44,
+      "atempo_applied": false
+    },
+    {
+      "index": 20,
+      "speaker": "witness",
+      "chars": 1154,
+      "natural_seconds": 92.0,
+      "final_seconds": 0.3,
+      "atempo_applied": false
+    },
+    {
+      "index": 21,
+      "speaker": "scripture",
+      "chars": 80,
+      "natural_seconds": 7.92,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 22,
+      "speaker": "witness",
+      "chars": 346,
+      "natural_seconds": 22.24,
+      "final_seconds": 5.2,
+      "atempo_applied": false
+    },
+    {
+      "index": 23,
+      "speaker": "scripture",
+      "chars": 82,
+      "natural_seconds": 5.6,
+      "final_seconds": 0.3,
+      "atempo_applied": false
+    },
+    {
+      "index": 24,
+      "speaker": "witness",
+      "chars": 116,
+      "natural_seconds": 9.12,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 25,
+      "speaker": "scripture",
+      "chars": 33,
+      "natural_seconds": 2.32,
+      "final_seconds": 6.32,
+      "atempo_applied": false
+    },
+    {
+      "index": 26,
+      "speaker": "witness",
+      "chars": 367,
+      "natural_seconds": 26.08,
+      "final_seconds": 0.3,
+      "atempo_applied": false
+    },
+    {
+      "index": 27,
+      "speaker": "scripture",
+      "chars": 40,
+      "natural_seconds": 3.68,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 28,
+      "speaker": "witness",
+      "chars": 1164,
+      "natural_seconds": 91.12,
+      "final_seconds": 8.64,
+      "atempo_applied": false
+    }
+  ],
+  "speakers": {
+    "witness": {
+      "voice_id": "UzI1NsMEV3ni5JRkRSls",
+      "audio_tag": null
+    },
+    "scripture": {
+      "voice_id": "puDRtQWF8NtQiPMJygTb",
+      "audio_tag": null
+    },
+    "the_LORD": {
+      "voice_id": "BvKkUzf75BfURv388O3G",
+      "audio_tag": null
+    }
+  },
+  "settings": {
+    "stability": 0.65
+  }
+}

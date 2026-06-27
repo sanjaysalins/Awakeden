@@ -1,6 +1,92 @@
 # STATE.md — progress tracker
 
-**Last updated:** 2026-06-25
+**Last updated:** 2026-06-26
+**Status (2026-06-26 VISUAL):** **EW01 Two Goats LONG-FORM visual build DONE through CLIPS (stills + animation; stopped before assembly).**
+Generalized the proven slice pattern → `longform/_build_two_goats_visual.py` (HF-ONLY 16:9 Baroque stills + veo3_1_lite, slice_NN naming,
+idempotent, CAM map+GLITTER+LOCK, directional 20/23 = minimal-move + no-tear lock, reuse #10 from test_hero). **TEST-GATE passed** (scene 4 calm +
+20 directional/Christ; caught + fixed a gold-frame pillarbox → added full-bleed/anti-frame to STYLE_TAIL). **All 25 stills rendered + eye-reviewed**
+(uniform 2752×1536=16:9, period Baroque, full-bleed, reverent HF-Christ). 2 transient 502s retried; **2 real defects rerolled via surgical
+scene_plan subject tweaks:** #16 (literal cross in OT tabernacle → cross-SHADOW only) + #24 (European-peasant dress → ancient Near-Eastern robes).
+**All 25 clips animated + end-frame-QC'd:** NO morph (Christ faces/hands intact), cross-shadow #16 stayed a shadow, veil 20/23 no fabric tear.
+2 transient 502/504s retried. **OPEN (assembly session): veo GLITTER** — faint golden particles on bright-light Christ scenes despite the kill
+negative (moderate on #17, faint 18/22/23/24/25; known veo behavior — fix = ffmpeg push-in for glory scenes per [[feedback-veo-no-glitter-glow]]).
+Galleries: `visual_16x9/_stills_gallery.html` + `_clips_gallery.html`. Spend ≈ $21 (stills ~$8 + clips ~$13). **USER FIXES (2026-06-26):**
+(a) **#17** glitter — veo re-animate made it WORSE (more particles; confirms negatives don't work) → fixed with a deterministic **ffmpeg
+slow push-in** (z 1.0→1.08, glitter-free, faithful to the still) per [[feedback-veo-no-glitter-glow]]; (b) **#18 re-rendered BLOOD-FREE** (user: the slain goat dripping blood was too graphic) — surgical subject tweak → goat lies AT REST on the
+altar (no blood/gore), Christ central, scapegoat departing, cross of light; animated with the same deterministic ffmpeg push-in (glitter-free,
+since it's a bright Christ glory scene). **Full 25 clips** (slice_NN; #17 + #18 = ffmpeg push-ins, the other 23 = veo3_1_lite; faint glitter
+remains on 22/23/24/25, user-accepted). **ASSEMBLED + FULLY FINISHED (user said proceed):** `_assemble_16x9.py` (abs path — relative arg breaks
+concat -safe 0; set directional 2/7/20/23→boomerang so gentle clips don't freeze; orig backed up) → 9:49 film landing on the living Christ →
+**SCORE** (`_add_score_lf.py` EW01 entry: lonely_searching→glory_holy_stillness→sacred_grace_rise, −11dB, no choir pad) → **SFX** (new
+`EW01_Two_Goats/_sfx_two_goats.py`, 13 choir-free cues incl. veil-tear at the rending + dawn resolve) → **CAPTIONS** (veed_io whisperx ivory,
+1613 words force-aligned). **FINAL (v1 picture-cut): `…_scored_sfx_captioned.mp4`.**
+**THEN (user feedback) — 2 fixes re-finished:** (a) **PHYSICS** — user caught that the assembler BOOMERANGS static scenes (forward+REVERSE),
+running one-way motion backwards (lot-stones leap out of the bowl, blood un-pours, veil un-tears). Built `physics_motion_check.py`
+([[physics-motion-check]], standing gate) → flagged scenes **6/7/8/20/23** → set `fill=forward_slow` → re-assembled (those scenes now SLOW-FWD,
+no reverse). (b) **EPIC SCORE** — user wanted it more epic; the music_library is gentle-only so generated a **fresh cinematic-orchestral score
+via ElevenLabs Music** (the old music-scope blocker is RESOLVED — /v1/music returns audio): `epic_atonement_ascent_a` + `epic_atonement_triumph_a`
+(2×4:55, in music_library, REUSABLE), swell peaks at the reveal ~5:40, −9dB. Re-finished score→sfx→caption. **FINAL: `C:/Users/sanjay/EW01_TWO_GOATS_FINAL.mp4`
+(9:51, 1080p, 192MB).** **OPEN: the user's EAR on the epic score** (only open item). **EW01 Two Goats long-form = DONE (pending score ear-check).**
+Other 8 longs + 9 shorts = narration+voice done, NO visuals yet (produce like EW01, run physics_motion_check before assembling). Prior status below.
+**Status (2026-06-26):** **TWO NON-NEGOTIABLES locked + 9 eyewitness-SHORT panels run + doctrine fixes applied.**
+🔒 User set two HARD rules (memory [[nonneg-doctrine-and-christ-lens]], also in CLAUDE.md Locked-decisions + v2/EYEWITNESS_SPEC.md §3):
+(A) doctrine must be SOUND + Bible-grounded, proven BOTH independently AND by the panel (never one alone); (B) read the WHOLE
+Bible through Jesus — every piece points to + lands on Christ. **Ran the 5-CLI eyewitness-short panel on all 9 shorts**
+(cursor+claude+codex+grok; gemini down). **Unanimous REVISE** (EW08 a codex FAIL). One shared fingerprint = the shorts carry the
+LONGS' PRE-revision weaknesses (drafted before the longs were panel-revised): wrestling absent (EW-G8), reveal announced-not-earned
+(EW-G7), first-hearing clarity. **Decision (user): fix DOCTRINE now, DEFER craft** until the format call (calm vs punchy-cut-from-long)
+is settled. **Verified every flag myself, then applied 6 doctrine/grounding fixes ($0):** EW04 "dying man"→Moses + deleted fabricated
+"dying child" (no child in Num 21); EW06 "only man standing"→"only house" (8 souls); EW07 dropped Isaiah's empty-tomb eyewitness
+over-claim; EW08 framed the NT "Christ our passover" quote (was Paul in an OT mouth); EW01 framed the Heb 10:19 NT quote + "finished
+what I only began"→"foreshadowed" (anti-supersession); EW03 fixed universalism ("saved the ones who slew Him"→"opened salvation even
+to") + named substitution plainly. **All 6 re-pass run_gates (deterministic) ALL PASS.** Answered 2 panel over-reaches (NOT obeyed):
+EW08 "unnamed father" = spec-permitted labelled composite (EW-INV-1); "cut the by-the-light signpost" = EW-INV-11 REQUIRES it (keep+earn).
+EW02/EW05/EW09 had NO hard doctrine error (substitution already named) → left for the craft pass.
+**THEN (same session) — BIG REVISION PASS on all 18 (user-directed):** user reviewed the Aaron long gold standard by ear → 3 calls:
+(1) **3-voice cast** (witness + Scripture-reader + a DISTINCT God voice for divine [the LORD]/[Jesus] lines only — note the current
+"witness" voice UzI1Ns… is the OLD HF god voice, so the new God voice must be a different ID, picked at synth); (2) **deepen the CTA**
+on ALL 18 — more convicting + CONTEMPLATIVE, "felt in the BONES", grace-anchored (new standing rule [[feedback-cta-felt-in-bones]],
+calibrated + approved on Aaron: stilling pause + cost-made-felt + "sit with that" beat + the witness's lived question turned to the
+listener, no fear); (3) **full craft pass on the 9 shorts** (add genuine wrestling + earn the reveal). Executed via ~17 subagents,
+I verified every result myself. **All 9 LONG CTAs deepened** (Aaron by hand; 8 via subagents) then trimmed back under the 1650 ceiling
+(EW-G3) — also fixed EW07 "will you believe"=banned-CTA-template + EW08 a fabricated John 6:37 the subagent added. **All 9 SHORTS got
+wrestling + earned reveal + deepened CTA** (kept the required cross-time signpost; EW04 close needed an invitation verb). **ALL 18 PASS every deterministic gate.** **5-CLI panel ran on all 18** → I digested all (per-witness subagents), VERIFIED every convergent
+flag myself, then **fixed 8 real doctrine/grounding items** the panel caught: EW01 Aaron CTA "carried sin back out" (Lev 16 mechanism —
+scapegoat carries away, not Aaron); EW04 Moses "made to be the curse that was killing us"→"made a curse for us" + short "+in our place";
+EW06 Noah fabricated "a hand reached in" → "the LORD shut me in", refuge-vs-substitution made DISTINCT (ark carries THROUGH judgment / Christ
+BORE wrath), door/ark spine harmonized; EW07 Isaiah removed fabricated Philip-biography + posthumous empty-tomb over-claim (resurrection now =
+the Spirit's testimony, vision framing) + de-templated the "will you trust the report" CTA; EW09 Boaz "gained me nothing"→gains the bride
+(typology); EW05 Jonah "the sea swallowed"→"the great fish" + named what Christ bore. **ANSWERED (not obeyed) the over-reaches:** grok's
+"KJV not verbatim" (EW-G1 gate confirms verbatim; grok hallucinated), EW08 codex FAIL "must be named witness" (spec permits labelled
+composite), EW05 "feared mercy too wide=anachronism" (Jonah 4:2 grounds it). **ALL 18 re-pass gates → ALL 18 LOCKED** (cli_witness_lock,
+EW-G1..G6, .locked written). **NON-NEGOTIABLE met: doctrine proven BOTH independently (my check + deterministic gates) AND by the panel.**
+**ALL 18 VOICED (3-voice) — DONE** ([[feedback-ask-before-spending]] OK given). User picked **God 2** (`BvKkUzf75BfURv388O3G`) as the distinct
+`[the LORD]` voice (the only gravitas "god" voice UzI1Ns IS Aaron/witness); cast = **witness UzI1Ns + scripture puDRtQWF + the_LORD God 2 +
+jesus tlETan7 (+ kinsman LSi9z on EW09)**, approved by ear via a 5-candidate sample page. Built a GENERIC 3-voice tagger
+**`longform/_build_eyewitness_audio.py`** (routes `[the LORD]`→God2 / `[Jesus]`→jesus / bare quote→scripture / prose→witness; span-based so
+INLINE quotes split out; skips letter-less fragments; fail-closed on lock + 0 word-drift). Synthed via per_turn_synth `--natural` (no stretch),
+3 parallel groups. **All 18 mp3s on disk:** longs 9:44–10:16, shorts 2:04–2:10 (calm natural pace — NOTE: shorts run ~2min not ~90s; calm-vs-punchy
+still unresolved). Two transient fails fixed: EW09 long (lone em-dash block → builder patched) + EW01 short (130s ceiling too tight → roomier
+`--target`). Spend ≈ **~90k ElevenLabs chars** (~$20-35 / credit-based). **Review page: `longform/_EYEWITNESS_AUDIO_INDEX.html`** (all 18, clickable).
+**THEN (same session) — SHORTS REDESIGNED PUNCHY (user direction):** user said the ~2-min calm shorts make people switch off; shorts need a
+DIFFERENT structure = great HOOK + great END + a middle that races. New standing rule [[eyewitness-short-punchy-structure]]: 4 beats
+**Hook → the strange thing → the turn → the punch**, ~150-200w / ~60-75s, ONE tight verbatim quote, hook-first. Proved on Aaron (user approved
+pace+structure: voice `--natural` then ffmpeg **atempo=1.12**). Retuned gates: `data/eyewitness_rules.json` forms.short **220-320 → 120-210** +
+role_keywords extended for the punchy headers. **All 9 shorts rewritten punchy** (~190-205w, via subagents) → gate-pass → I verified doctrine →
+**5-CLI panel** → fixed 3 real grounding flags (EW02 "I had promised a lamb"→Gen 22:8 "God would provide"; EW06 "flood never struck my ark"
+self-contradiction→"only lifted my ark"; EW09 hook "knelt at my feet" fabrication→"came to me"); ANSWERED the pervasive "wrestling absent" (the
+steel-man is a LONG-form beat, intentionally cut for the punchy short) + terse quote-attribution (gate-passed). **All 9 re-locked + re-voiced
+PUNCHY: 1:01-1:15** (was ~2:05-2:10). Calm versions kept as `narration.calm.md`.
+**THEN — REPETITIVE ENDINGS fixed + a NEW CROSS-PIECE GATE (user caught 'come to jesus' on every piece):** the per-piece panel/gates are
+BLIND to repetition ACROSS a set, and EW-G4's narrow verb mandate CAUSED it. Built **`corpus_diversity.py`** (deterministic $0 cross-piece
+staleness check: dominant closing verb >40%, near-dup closes/hooks, repeated closing 3-grams; judges the CLOSING SENTENCE's verb). It PASSED
+the (now-varied) shorts AND immediately flagged the LONGS (8/9 'come to jesus'). **Widened EW-G4 invitation_verbs** to 14 (added look/enter/
+hide/walk/step/return/rest/behold). **Rewrote all 9 SHORT endings + 6 repetitive LONG endings to distinct moves/verbs** (walk/receive/trust/
+look/turn/step/believe/hide/—), re-gated + re-locked; re-voiced the 9 shorts (full) + the 6 longs (final turn only, cheap). **corpus_diversity
+now PASSES both sets.** Memories: [[corpus-diversity-gate]] (+ way-of-working: run it over any batch before calling it done; a phrase-mandating
+gate must offer a wide palette), [[eyewitness-short-punchy-structure]]. Index refreshed. **NEXT (user): listen + approve; then metered VISUAL
+production** per witness (`/witness-world` reuse-first + `/witness-cut`) — gated, quote spend first. Prior status below.
+
 **Status (2026-06-25 LATEST-2):** **AWAKEDEN EYEWITNESS FORMAT launched + a 9-LONG narration backlog built autonomously.**
 Project re-branded **Awakeden** ([[awakeden-brand]]). New SIGNATURE format = first-person biblical witness tells their
 story + CTA on Jesus ([[eyewitness-format]]); foundation `v2/EYEWITNESS_FOUNDATION.md` + binding `v2/EYEWITNESS_SPEC.md`.

@@ -35,7 +35,7 @@ So I went up to the gate. And when that nearer kinsman would not pay the price, 
 ## Beat 4 — The strange detail
 But here is the thing that never let me rest, the riddle I turned over for the rest of my days.
 
-Redemption was not free — it cost the redeemer everything, and bought him nothing. The field I bought did not enlarge my estate; the law said it must raise up the dead man's name, not mine. By every reckoning a careful man keeps, I gave and got back only an empty field and a foreigner's poverty.
+Redemption was not free — it cost the redeemer everything. The field I bought did not enlarge my estate; the law said it must raise up the dead man's name, not mine. By every cold reckoning a careful man keeps, I spent myself and gained no profit — nothing but her. And she was worth it all.
 
 That is why the nearer kinsman walked away. He could do arithmetic. When he learned that to redeem the land he must also take the widow and pour his money into a name not his own, he said it plainly:
 
@@ -70,8 +70,8 @@ And then He did the thing I understand best, for I lived it. He did not redeem u
 A Moabitess in the line of the Messiah — the outsider brought all the way in. I had no idea, in that gate, that I was sketching the gospel.
 
 ## Beat 7 — The invitation
-So hear me. If you have ever felt like that woman in my field — poor, far off, a stranger with nothing to bring — this word is for you.
+So hear me — be still. If you have ever felt like that woman in my field — poor, a stranger with nothing to bring — this is for you.
 
-Do not come to me. I am only the shadow, dust in a gate long ago. Come to Jesus, the true Redeemer, the near Kinsman who has the right and the riches and the willing heart to buy you back. He has already paid the whole price at His own cost — only His was His blood. You cannot earn it; the redeemed never pay. You have only to receive what He has done and let Him make you His own.
+Do not come to me; I am only the shadow. But weigh redemption's cost. I paid silver and my name for a widow's poverty; Jesus paid His own blood, marred where the nearer kinsman would not be. The curse you could not carry, He bore for you. He leaves you not alone, but gives you His name and brings you home as His bride. Sit with that.
 
-Come to Him. Trust the Kinsman who would not count the cost; let Him spread His covering over you, call you home, and give you His name. Come — and be redeemed.
+The redeemed never pay. So I ask you what I once asked at that gate, now without fear: will you let the Redeemer pay what you cannot, and be His own? Come to Jesus, the true Kinsman-Redeemer. Be redeemed.

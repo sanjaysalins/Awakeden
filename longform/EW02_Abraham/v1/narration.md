@@ -74,16 +74,14 @@ On my mountain, the ram died in the stead of my son, and my boy walked down free
 **"He that spared not his own Son, but delivered him up for us all, how shall he not with him also freely give us all things?"**
 
 ## Beat 7 — The invitation
-So hear an old man who once climbed that hill with everything he loved on his back. Do not look to me. I was only the father in the shadow, and my hand was stopped before it fell. Look instead to the Father whose hand was not stopped, and to the Son who let the wood be laid on Him and chose not to come down.
+Be still with an old man a moment.
 
-The lamb God promised has been provided. He is no longer a riddle on a mountain path — He has a name, and His name is Jesus.
+Do not look to me — only the father in the shadow, my hand stopped before it fell. I felt what it costs to raise a knife over the son you love, yet I paid it only in figure: a ram died in Isaac's stead, my boy walked home.
 
-Come to Him. Not because you are driven, but because you are wanted — for this is the love I only ever saw in figure, now given in full, as Scripture says:
+On His mountain the Father did not stay His hand — He gave His beloved Son, who carried the wood and did not come down, the Lamb I never found. His name is Jesus.
+
+Sit with that. What I was spared, He was not; He bore it so you need not. Come to Him not driven but wanted — the love I saw in figure, now given in full:
 
 **"For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life."**
 
-The mountain still carries the name I gave it, Jehovah-jireh — the LORD will provide. And the word over it has come true past anything I could have hoped:
-
-**"In the mount of the LORD it shall be seen."**
-
-Come and see. Trust the Son who was not spared, and be carried home.
+So I leave you the question I carried up that hill, the fear gone now: where is the lamb? Will you let Him be your substitute — not when worthy, but now, freely? Lay your knife down, and receive Him — and be carried home.

@@ -233,6 +233,14 @@ they're never animated; `VISION_AUDIT_MODEL`=Haiku for the coarse assembly verif
 
 ## Locked decisions (do not relitigate without the user)
 
+- **🔒 NON-NEGOTIABLE — sound doctrine, proven BOTH ways** (user, 2026-06-26):
+  every piece's doctrine must be SOUND and GROUNDED IN THE BIBLE, and verified
+  BOTH independently (my own red-team/self-check) AND by the 5-CLI panel — never
+  one alone. A clean self-check is not enough; a panel PASS is not enough on its
+  own. Reject if EITHER flags a real doctrinal/grounding error.
+- **🔒 NON-NEGOTIABLE — the whole Bible, through Jesus** (user, 2026-06-26): the
+  series reads the ENTIRE canon (OT + NT) with Christ as the lens; every piece
+  traces its thread to and LANDS ON Jesus. This is the spine, never optional.
 - **Model: viral-hook + CTA-to-Jesus 60s shorts** — NOT the non-preachy/no-CTA
   "Attenborough" model.
 - **Structure: Gospel Five-Beat** (Hook→Point→Proof→Conviction→Landing, timed).

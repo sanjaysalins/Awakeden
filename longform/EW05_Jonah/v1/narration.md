@@ -72,8 +72,12 @@ And there was more in His words, for He spoke of a wicked city too:
 I fled to keep mercy from Nineveh — and Nineveh heard, and turned, and was spared. And I will not lie to you, even now: when I saw that city spared, I was not glad. I went out and sat down in my anger, hot enough to wish myself dead, and God left me there with a question I could not answer. I never did fully make my peace with it in the days I was given. That was the scandal I could not stomach — and it was the very gospel I had been made to picture: mercy reaching the worst of cities, the worst of sinners, the man at the bottom of the sea. A greater than Jonah has come, and His mercy runs lower and farther than mine ever could — or ever wanted it to.
 
 ## Beat 7 — The invitation
-So hear me — me, of all people, who ran from grace and was hunted down by it in the deep. Do not run the road I ran. The mercy you fear is too good to be true, the mercy I tried to outrun, is held out to you now in Jesus Christ — the One the grave could not keep.
+Be still, the way the sea went still over my head. Do not come to me; I am the sign, never the Saviour — only the man the deep gave back.
 
-If you are in the belly of your own dark tonight, cast out of sight, sure you have fallen too far and brought the storm on your own head — hear me: that is exactly how far His mercy reaches. Nineveh was not too wicked. The floor of the sea was not too deep. Your sin is not too great. Turn from your own way, as that whole hard city turned, and come to Him. Trust the One who went down into death in your place and came up on the third day — and lives to bring you up out of your own deep.
+I ran from grace because I knew how wide it was, and the cold dark took me. Three days I lay in the deep, and the mercy I had fled came down and carried me home. I did not climb; I was carried. He went down innocent for sin that was mine, and the grave could no more keep Him than the deep could keep me. He rose, and lives.
 
-Come up out of the deep. Come to Jesus — and live.
+Sit with that. The mercy was never too small — always too wide. Wide enough for Nineveh, and to reach me where I had gone to die.
+
+So I ask you what I could not answer in my own lifetime — now with no fear left in it. You who are sure you have fallen too far: that is how far His mercy reaches. Will you stop running, and let it carry you up?
+
+Turn to Jesus, who rose from your dark, and live.

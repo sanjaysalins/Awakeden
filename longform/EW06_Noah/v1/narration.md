@@ -1,13 +1,13 @@
 # The One Door — Awakeden eyewitness (long)
 **Witness:** Noah, who built the ark and rode out the end of the world · **Core text:** Genesis 6–8 · **Type→fulfillment:** the ark with its one door, and the LORD who shut him in — a shadow of Christ the only refuge, the one door of salvation, who bore the flood of judgment so all inside Him come through alive
-**Status:** v1.1 — Awakeden eyewitness LONG. the_LORD voices Gen 6:13 / 7:1 / 9:13, Jesus voices John 10:9 (verbatim KJV only, EW-INV-11a; narrative + NT scripture prose-framed to the scripture voice, per the gold-piece convention). Cross-time reveal (Beat 6) SIGNPOSTED — Noah sees by "the light that came long after," never claims he knew Christ in his moment. The type = the ONE DOOR + "the LORD shut him in" (safe inside while judgment falls). Substitution named (the wrath fell on the Ark instead). Noah saved INSIDE, never the savior — he did not shut his own door. Panel ×1 (eyewitness-long: all 3 REVISE) applied: 1 Pet 3:21 extended to its "good conscience / by the resurrection" qualifier (kills baptismal-regeneration reading); Beat 5 wrestling recast to face the theodicy (is it right a whole world drowns) answered by grace, not only survivor-guilt; divine speech (Gen 6:13, 9:13) given [the LORD] tags; Gen 7:23 scripture-framed; door-refrain trimmed (Beats 4/6/7); invented "beam"/"fists on the walls" removed.
+**Status:** v1.1 — Awakeden eyewitness LONG. the_LORD voices Gen 6:13 / 7:1 / 9:13, Jesus voices John 10:9 (verbatim KJV only, EW-INV-11a; narrative + NT scripture prose-framed to the scripture voice, per the gold-piece convention). Cross-time reveal (Beat 6) SIGNPOSTED — Noah sees by "the light that came long after," never claims he knew Christ in his moment. The type = the ONE DOOR + "the LORD shut him in" (safe inside while judgment falls). Refuge vs substitution kept DISTINCT: the ark carried Noah safely THROUGH/above the judgment (never struck by wrath); Christ BORE the wrath in our place (the just for the unjust). Noah saved INSIDE, never the savior — he did not shut his own door. Panel ×1 (eyewitness-long: all 3 REVISE) applied: 1 Pet 3:21 extended to its "good conscience / by the resurrection" qualifier (kills baptismal-regeneration reading); Beat 5 wrestling recast to face the theodicy (is it right a whole world drowns) answered by grace, not only survivor-guilt; divine speech (Gen 6:13, 9:13) given [the LORD] tags; Gen 7:23 scripture-framed; door-refrain trimmed (Beats 4/6/7); invented "beam"/"fists on the walls" removed.
 ---
 
 ## Beat 1 — I was there
 
 I am Noah. I am the old man who built a great box of timber on dry ground, hammering at it for a hundred years while my neighbours laughed — and I am the only man still standing when the laughing stopped.
 
-I heard a rain begin that did not cease for forty days, and felt the whole groaning world go silent beneath my feet. And I stood just inside one door — a single door, cut into the side of that ark — and watched a hand that was not my hand reach in and pull it shut. Let me tell you how I came to be behind that door, and what I have since learned it was always meant to show.
+I heard a rain begin that did not cease for forty days, and felt the whole groaning world go silent beneath my feet. And I stood just inside one door — a single door, cut into the side of that ark — and the LORD shut me in — the one thing I never did with my own hands. Let me tell you how I came to be behind that door, and what I have since learned it was always meant to show.
 
 ## Beat 2 — The world
 
@@ -67,16 +67,18 @@ The door. He is the door I cut into the side of the ark — the one and only way
 
 **"The like figure whereunto even baptism doth also now save us (not the putting away of the filth of the flesh, but the answer of a good conscience toward God,) by the resurrection of Jesus Christ"**
 
-A figure — a likeness, not the saving thing itself. It was never the water that saved, then or now, but the answer of a heart turned to God and the rising of Christ from the dead. My ark was the shadow; He is the substance that cast it. And here is the deepest thing of all, which I could only feel in the dark and never name. The waters that should have drowned me broke over that wood instead, and the wood bore me up. So it was with Him: the wrath that my sin had earned did not pass Him by — it broke over Him, and He bore it down into death, the just for the unjust, that everyone shut inside Him might come through untouched. He was sealed into the dark and rose into a world washed new, as I came out upon a clean earth.
+A figure — a likeness, not the saving thing itself. It was never the water that saved, then or now, but the answer of a heart turned to God and the rising of Christ from the dead. My ark was the shadow; He is the substance that cast it. And here is the deepest thing of all, which I could only feel in the dark and never name. The flood that drowned the world did not strike my ark; it bore me safe above the judgment. But the wrath that my sin had earned did not pass Him by — it fell on Him, not the wood, and He bore it down into death, the just for the unjust, that everyone shut inside Him might come through untouched. He was sealed into the dark and rose into a world washed new, as I came out upon a clean earth.
 
 And remember this, for it is the heart of all my comfort: the hand that holds a soul safe inside Christ is His own, never ours — we come in, and He keeps us.
 
 ## Beat 7 — The invitation
 
-So hear an old man who rode out the end of one world inside a door he never deserved. Do not trust the man who swung the hammer; I was only a passenger like the rest. Trust the Ark Himself. There is still only one door, and it stands thrown wide open now. You have nothing to build and nothing to boast of. You have only to come inside. Come to Jesus — the Ark, and the open door — and let Him be the refuge the storm breaks over in your place.
+So hear an old man who rode out the end of one world inside a door he never deserved. Before you turn away, be still.
 
-When the waters were spent and the ground was dry, God set His bow above us in the sky and gave His word:
+Do not come to me. I was only a passenger, no purer than the drowning I heard; I could not close my own door. But there is One who can.
 
-**[the LORD]** **"I do set my bow in the cloud"**
+Weigh what it cost. The ark did not bear the wrath — it bore me through the judgment. But Jesus bore the wrath itself: the judgment my sin had earned fell on Him, the just for the unjust, that every soul shut inside Him comes through alive.
 
-— a banner of mercy arched over a washed-clean world, the sign of a God who keeps covenant on the far side of righteous judgment. That same mercy holds the door open to you now. Come in to Christ, and trust the hand that shuts the door behind you — gentler than mine ever was, and surer; once it has sealed you safe inside, it will never let you go. Come — and be carried clean through.
+Sit with that. When the flood was spent, God hung His bow over a washed world — pure mercy, holding the door open to you now: nothing to build, nothing to bring.
+
+So I turn to you the question I carried in the dark — who am I, that I should be drawn inside and live? — only now there is no fear left in it. There is still one door, thrown wide open. Will you come in? Step in through Jesus — the Ark, the open door — and be carried clean through, not on your strength but on His.

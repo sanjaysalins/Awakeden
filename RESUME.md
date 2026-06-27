@@ -1,6 +1,40 @@
 # RESUME.md — start here next session
 
-## ⚡⚡⚡ TOMORROW START HERE — AWAKEDEN EYEWITNESS BATCH (2026-06-25 night) ⚡⚡⚡
+## ⚡⚡⚡ TOMORROW START HERE — (2026-06-27) — EW01 FILM DONE + 18 NARRATIONS VOICED ⚡⚡⚡
+
+**Yesterday (2026-06-26/27) was a huge session. Two big outcomes + 5 new standing rules.**
+
+### ✅ What got finished
+1. **All 18 eyewitness narrations REVISED → LOCKED → VOICED (3-voice).** 9 longs (CTA deepened, contemplative/felt-in-bones)
+   + 9 shorts (REDESIGNED **punchy** hook→strange→turn→punch, ~70s). Ran the 5-CLI panel ×2, fixed every real doctrine flag,
+   answered the over-reaches. Then the user caught the endings were ALL "come to Jesus" → **varied all 18 endings**
+   (walk/receive/trust/look/turn/step/believe/hide/receive) + widened EW-G4 verbs. 3-voice = witness + scripture + **God 2**
+   (`BvKkUzf75BfURv388O3G`) on `[the LORD]` + jesus `tlETan7`. Review page: `longform/_EYEWITNESS_AUDIO_INDEX.html`.
+2. **EW01 The Two Goats LONG-FORM FILM = FULLY DONE.** `C:/Users/sanjay/EW01_TWO_GOATS_FINAL.mp4` (9:51, 1080p). 25 HF Baroque
+   stills (3 rerolled) → 25 clips (veo3_1_lite + 2 ffmpeg push-ins for glitter) → assembly (boomerang+KenBurns) → **EPIC score**
+   (freshly generated via ElevenLabs Music: `epic_atonement_ascent_a`→`epic_atonement_triumph_a`, swell at the reveal, −9dB) →
+   SFX (13 choir-free cues) → whisperx captions. **physics fix applied** (forward_slow on 6/7/8/20/23 so the lot-stones/blood/veil
+   don't run backwards). Build script `longform/_build_two_goats_visual.py`. **NEEDS the user's EAR on the epic score.**
+
+### 🔒 5 NEW STANDING RULES (memories) — apply going forward
+- [[nonneg-doctrine-and-christ-lens]] — doctrine sound + Bible-grounded, proven BOTH independently AND by the panel; whole-Bible-through-Jesus.
+- [[eyewitness-short-punchy-structure]] — shorts are punchy hook-first (~70s), NOT compressed longs; voice --natural then ffmpeg atempo=1.12.
+- [[feedback-cta-felt-in-bones]] — closing CTA must be convicting + contemplative, felt in the bones (grace-anchored).
+- [[corpus-diversity-gate]] — run `corpus_diversity.py` over a BATCH before calling it done (per-piece review is blind to sameness).
+- [[physics-motion-check]] — run `physics_motion_check.py` before assembling any long-form (boomerang reverses one-way motion).
+
+### ▶▶ DO TOMORROW (in order)
+1. **Listen to `EW01_TWO_GOATS_FINAL.mp4`** — judge the EPIC score by ear (the only open item on it). If not epic enough, regen
+   the triumph half longer/bigger; if great, EW01 ships.
+2. **The other 8 eyewitness LONGS + 9 SHORTS are narration+VOICE done but have NO VISUALS yet.** Produce them like EW01:
+   `/scene-plan-long` (or reuse the EW01 pattern) → `/stills` (HF, period-doc Baroque) → `/animate-long` (veo3 + run **physics_motion_check**
+   first) → assemble → score (reuse the epic library or gen per-episode) → sfx → caption. Each ~$18-22, GATED (quote spend, test-gate first).
+3. Shorts visual production = the punchy 9 (eyewitness short visual pipeline / `/witness-world` + `/witness-cut`).
+**Caveat:** the narrations are AI-drafted + AI-panel-revised + gate-locked — still want the user's eye/ear before each metered visual batch.
+
+---
+
+## ⚡⚡⚡ (prior) TOMORROW START HERE — AWAKEDEN EYEWITNESS BATCH (2026-06-25 night) ⚡⚡⚡
 
 **The big pivot:** the project is now branded **Awakeden**, and we built + launched its SIGNATURE format —
 the **eyewitness** (a biblical witness tells their story first-person, lands the CTA on Jesus). The 1:49

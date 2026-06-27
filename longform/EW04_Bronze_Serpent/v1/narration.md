@@ -63,7 +63,7 @@ For there came a Teacher in Israel, and to a man who sought Him by night He spok
 
 There it was. My serpent was never the point of it. It was a shadow, and a shadow waits for the body that casts it. The body came. They lifted Jesus up upon a Roman pole of wood, where every eye could find Him — the very picture my bronze had held up in the wilderness.
 
-And mark why it had to be a serpent — the cursed thing, the killer's own image. For when they hung Him there, the spotless Son of God was made to be the curse that was killing us. For so the apostle wrote of Him:
+And mark why it had to be a serpent — the cursed thing, the killer's own image. For when they hung Him there, the spotless Son of God was made a curse for us. For so the apostle wrote of Him:
 
 **"being made a curse for us: for it is written, Cursed is every one that hangeth on a tree:"**
 
@@ -76,10 +76,12 @@ And the riddle of the look was answered too. It was never the bronze; it was the
 **"For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life."**
 
 ## Beat 7 — The invitation
-So hear me, you who are bitten — and that is every one of us, for the venom of sin is in us all, and we are dying of it the same. Do not despair of it. The cure has been lifted up.
+So hear me — be still. Do not rush past this as my people rushed past the manna.
 
-Do not look to me; I was only the man who raised the pole. Do not look to the bronze, nor to any relic, nor to your own strength to climb up out of the poison — you cannot, and you were never asked to. Lift your eyes to Jesus, lifted up for you, and believe on Him.
+I watched a camp dying. Strong men tried to walk the fire off and fell; none was healed by his own hands. The venom was in the blood, and the blood could not put it out. That is you. That is me. You cannot climb out of the poison — you were never asked to.
 
-You do not have to clean the wound first. You do not have to be strong enough, or worthy enough, or to understand it all as I did not understand it. The dying child in our camp knew enough to turn his head. Turn yours. Look to the Son of man lifted up; trust the One who was made your curse and carried it clean away.
+Jesus was lifted up where every dying eye could find Him — the least, the last, the child who can only turn his head.
 
-Look, and live. Come to Him — lifted up for you — and the death lets go its hold.
+Sit with that. The cure is not in you, and never had to be. It is lifted up in plain sight, and costs you nothing but a look.
+
+So I ask what I once asked every man bitten in our wilderness — only now there is no fear left in it: will you lift your eyes and look? Not to the bronze, nor to me — but to Jesus, who was made your curse and carried it clean away. Look to Him, and live.

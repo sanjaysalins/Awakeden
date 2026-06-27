@@ -70,6 +70,17 @@ EPISODES: dict[str, dict] = {
         "gain_db": -11.0,
         "outro_s": 2.5,
     },
+    # EW01 Two Goats (589.2s) — EPIC cinematic-orchestral (freshly generated, ElevenLabs Music):
+    # ASCENT (solemn Day-of-Atonement weight, the ritual that never finishes) -> xfade ~289s ->
+    # TRIUMPH (a vast swell that peaks right at the reveal ~340s "the body came / He sat down",
+    # then resolves into radiant grace for the close). Full strings+horns+organ, no choir, no
+    # percussion. -9dB (more present than the gentle library) under the narration sidechain-duck.
+    "EW01_Two_Goats": {
+        "segments": ["epic_atonement_ascent_a", "epic_atonement_triumph_a"],
+        "xfade_s": 6.0,
+        "gain_db": -9.0,
+        "outro_s": 2.5,
+    },
 }
 
 

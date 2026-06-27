@@ -75,3 +75,7 @@ longform/**/_*.log
 .agent_bridge/_*.log
 /_*.log
 *.stackdump
+
+# session work dirs (throwaway)
+_assembly/
+_sfx_work/
