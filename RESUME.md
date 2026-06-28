@@ -1,6 +1,46 @@
 # RESUME.md — start here next session
 
-## ⚡⚡⚡ TOMORROW START HERE — (2026-06-27 PM) — SHORTS GALLERY ENGINE LOCKED + EW01/EW02 SHORTS BUILT ⚡⚡⚡
+## ⚡⚡⚡ TOMORROW START HERE — (2026-06-28) — CONSISTENCY + ENDING BAKED · EW02/EW03 BUILT · PER-SLICE QC IN PROGRESS ⚡⚡⚡
+
+**This session: baked character/world CONSISTENCY + a natural ENDING into the shorts engine, built EW02 + EW03, and started an automated per-slice clip-QC.**
+
+### ✅ What got done
+1. **World Bible + REFERENCE-LOCK consistency — baked into `longform/_gallery_build_episode.py`.** Per episode: a World Bible (period/place,
+   lighting, no-modern / no-stray-bearded-men negatives) + a continuity CAST; ONE reference image per recurring character is generated and
+   ATTACHED to every scene via `nano_banana_2 --image` (input_images) → faces/world hold across stills ("the boy" stays the same boy).
+   Two tiers: prompt-lock (type/period) + reference-lock (face). `nano_banana_2` IS Nano Banana Pro — takes refs + 4k, no Gemini key needed.
+   Memory: [[shorts-gallery-hardcut-engine]].
+2. **Natural ENDING — baked + default for all:** living-Christ LINGER (2.5s) after the last word + MUSIC FADE-OUT → clean cut (no abrupt cut-off).
+3. **EW02 Abraham = DONE + reference-locked** (consistent Abraham + Isaac) → `.../EW02_Abraham/v1/short/gallery_clips/EW02_Abraham_short.mp4`.
+4. **EW03 Joseph = BUILT but has 3 defects to fix (below)** → `.../EW03_Joseph/v1/short/gallery_clips/EW03_Joseph_short.mp4`. Joseph face-locked; Christ face-locked to `christ.png`.
+5. **#07 crucifixion morph fixed** (dropped the side-wound element).
+6. **Per-slice clip-QC STARTED** — `longform/_clip_slice_qc.py` slices each clip into 1s frames → per-clip filmstrip (`longform/_clip_slice_qc.html`). Used to find EW03's defects (but a montage-glance is TOO COARSE — see next).
+
+### 🔴 EW03 DEFECTS to fix (the engine produced bad Christ-wound framings)
+- **05_cross**: a DISEMBODIED hand nailed to the rocky GROUND (the "nail-pierced hand" element morphed) → regen.
+- **06_calls**: DOUBLED Christ face + FLAME on the wrist wound + feet crop → regen.
+- **02_bowing**: clip MISSING (a 502 during build, silently skipped → the bowing-brothers beat is ABSENT) → re-run to fill (idempotent).
+- ROOT CAUSE = wound / nail-hand TIGHT framings keep morphing (side-wound→flesh, nail-hand→ground, wound→flame). PREVENTION: for Christ/crux
+  scenes drop the wound + nail-hand elements; tour only face / cross / arms / composition (safe anchors).
+
+### ▶▶ DO NEXT (in order)
+1. **Build the AUTOMATED per-slice vision QC** (the manual montage-glance MISSED 05_cross's ground-hand + 06_calls's flame-wound — the user caught
+   them, I didn't). Per slice at FULL res → cheap Claude-Vision (Haiku, `config.VISION_AUDIT_MODEL`) call with the rubric → `{ok, issue, severity}`
+   → auto-omit + write `<clip>.sliceqc.json`. RUBRIC must include: morphed/**DOUBLED** face/hands · **DISEMBODIED/misplaced anatomy** (hand on
+   ground) · invented **FLAME/fire/glow** (on wounds) · off-subject crop (feet/fabric/empty) · invented/duplicated element · garbled · incoherent ·
+   anachronism · **MISSING** clip. VALIDATE: it must independently flag EW03 **05_cross + 06_calls + 02_bowing**. Reuse the repo's Vision audit infra.
+2. **Fix PREVENTION in `_gallery_build_episode.py`** — drop wound/nail-hand tight elements for Christ/crux scenes; safe anchors only.
+3. **Regen EW03's bad clips** (02_bowing missing + 05_cross + 06_calls, safe elements) + re-assemble + re-QC.
+4. **Continue BATCH EW04–EW09** (~$70): per EP transcribe World Bible + continuity CAST + painting table into the `EPISODES` dict, then
+   `python longform/_gallery_build_episode.py <EP>`. EW02 + EW03 are the templates.
+
+### Parked
+- The **+5 punch-count** upgrade (8→12 clips for the 7+5 math) — not yet applied to any short.
+- EW01 uses the OLDER assembler (`_gallery_short_assemble2.py`) — give it the linger+fade ending when convenient.
+
+---
+
+## (prev session) — SHORTS GALLERY ENGINE LOCKED + EW01/EW02 — 2026-06-27 PM
 
 **This session = designed + LOCKED the Awakeden SHORT visual engine WITH the user, built 2 finished shorts, designed plans for the other 7.**
 
