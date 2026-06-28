@@ -1,6 +1,56 @@
 # RESUME.md — start here next session
 
-## ⚡⚡⚡ TOMORROW START HERE — (2026-06-28) — CONSISTENCY + ENDING BAKED · EW02/EW03 BUILT · PER-SLICE QC IN PROGRESS ⚡⚡⚡
+## ⚡⚡⚡ TOMORROW START HERE — LONG-FORM TRACK — (2026-06-28) — EW01 LONG-FORM RE-BUILT: WORLD-CONSISTENT STILLS + NEW SCORE ⚡⚡⚡
+
+> Two parallel tracks ran today. THIS section = the LONG-FORM (16:9 film) track. The SHORTS track is the next section below.
+
+**This session = fixed the two things the user flagged on the finished EW01 long-form (bad pipe-organ score + reverse-walking clips),
+and in doing so built a reusable WORLD-CONSISTENCY system for long-form stills. The film is fully re-built end-to-end.**
+
+### ✅ What got done
+1. **EW01 LONG-FORM FULLY RE-BUILT** → `C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\EW01_Two_Goats\v1\visual_16x9\EW01_Two_Goats_16x9_scored_sfx_captioned.mp4`
+   (1920×1080 · 591.7s · 192MB). 25 world-consistent stills → 25 veo3_1_lite clips → assembly (boomerang+KenBurns) → NEW score → SFX (13 cues) → whisperx captions.
+2. **WORLD BIBLE consistency system (NEW, reusable across episodes).** Root cause of the user's 3 complaints (Aaron/setting drifting,
+   subtle modern elements, NBP's stray old-bearded-man bleed) = long-form stills were prompted in isolation, no character/world lock. FIX:
+   - `scene_plan.json` now carries a top-level `world` block (era · place · light · palette · style · period_negatives · cast) +
+     per-scene `refs` arrays. Backed up at `scene_plan.pre_world.json`. Human-readable `_WORLD_BIBLE.md` alongside.
+   - **`longform/_render_world.py`** (NEW, episode-generic) — reads the `world` block, folds it into the style base/tail, renders
+     locked cast anchors to `_anchors/<name>.png`, attaches per-scene refs via HF `--image` (face/world lock). Flags:
+     `--anchors --scenes N,N --force --force-anchors --no-audit --provider nbp`. 3× retry on transient HF empty responses.
+   - `pipeline/visual_render.py` — added `extra_ref_paths` to `HFProvider.generate` (wires `--image <ref>` into the hf CLI command).
+   - **`longform/_sig_crop.py`** (NEW) — deterministic bottom-6%-crop+rescale to kill nano_banana's hallucinated painter signatures.
+   - **`longform/_world_gallery.py`** (NEW) — builds `_world_gallery.html` review page (green face-lock tags).
+   - Aaron = **plain white linen** (Lev 16:4, user-locked) via a rendered anchor; Christ = **simple white/glory robe** (user choice)
+     via `image_library/stills/christ_risen_face_scars.png`. Memory: [[feedback-episode-world-consistency]].
+   - NOTE: this is the LONG-FORM analog of the SHORTS reference-lock the other track baked into `_gallery_build_episode.py` — same idea, different driver.
+3. **Animation-aware stills (user rule).** Every still designed STATIC/arrested (no figures mid-stride) so the assembler's BOOMERANG
+   never runs anyone backwards. Verified by EYE on the 7 physics-flagged clips (#3/12/13/17/18/22/24) via boomerang frame-strips — all planted.
+   Folded into [[longform-animation-aware-still-design]] ("no figures mid-locomotion").
+4. **NEW EW01 SCORE — replaced the rejected pipe-organ epic.** User auditioned 3 ~28s samples (V1 period-led / V2 orchestra-lifted /
+   V3 shofar-spine) and chose a **V1+V3 blend**: period instruments lead (frame drums + ney + lyre) with a ram's-horn SHOFAR spine,
+   c.1400 BC, orchestra swelling under; ascent → triumph (reveal ~340s) → grace. Two ElevenLabs Music tracks
+   `music_library/clips/ew01_ancient_epic_ascent.mp3` + `ew01_ancient_epic_triumph.mp3`, wired into `longform/_add_score_lf.py`
+   (EW01 recipe, −9dB, replaced `epic_atonement_*`). (V2 orchestra-lifted is a keeper too — bank it.)
+
+### ▶▶ DO NEXT (in order) — long-form track
+1. **User watches the final EW01 film** (link above). Open item: **moderate glitter/sparkle bloom on #13 & #18** (veo particle issue) —
+   user may want those two re-animated (~$1.30, delete their mp4s + re-run `_animate_16x9.py EW01_Two_Goats --approved`). The OLD
+   `C:/Users/sanjay/EW01_TWO_GOATS_FINAL.mp4` is now SUPERSEDED by the scored_sfx_captioned mp4 above.
+2. **If approved → ROLL the World Bible system to EW02–EW09 LONG-FORM** (8 films, ~$160-180, gated). Per episode: author the `world` block
+   + per-scene `refs` in that episode's `scene_plan.json`, write `_WORLD_BIBLE.md`, then `python longform/_render_world.py <EP> --anchors`
+   → review gallery → render scenes → `_sig_crop.py` → `_animate_16x9.py --test` → eyeball boomerang strips → `--approved` →
+   `_assemble_16x9.py` → `_add_score_lf.py` (author a per-episode score recipe) → `_sfx_*.py` → caption.
+3. NOTE: long-form EW02–09 scene plans likely don't exist yet (only EW01 has a `visual_16x9/scene_plan.json`). The shorts pipeline is the separate track below.
+
+### ⚠️ Notes — long-form track
+- Old raw clips backed up at `longform/EW01_Two_Goats/v1/visual_16x9/_old_clips_prefix/`. `.animation_look_approved` marker is set (re-runs skip the gate; delete to re-gate).
+- HF veo 502s are transient — `_animate_16x9.py` is idempotent; re-run `--approved` to fill any missing clip (4 failed first pass this session, all retried clean).
+- ElevenLabs Music drew from a separate quota (character-credit delta 0 on the 28s samples; ~4515 on the two full tracks).
+- Audition/preview artifacts live in this session's scratchpad (`score_audition/audition.html`, `EW01_full_score_preview.mp3`) — re-gen from `gen_ew01_score.py` if needed.
+
+---
+
+## ⚡⚡⚡ TOMORROW START HERE — SHORTS TRACK — (2026-06-28) — CONSISTENCY + ENDING BAKED · EW02/EW03 BUILT · PER-SLICE QC IN PROGRESS ⚡⚡⚡
 
 **This session: baked character/world CONSISTENCY + a natural ENDING into the shorts engine, built EW02 + EW03, and started an automated per-slice clip-QC.**
 
