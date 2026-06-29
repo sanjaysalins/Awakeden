@@ -1,4 +1,4 @@
-<speaker name="narrator">From the cross, Jesus did not speak His own words first — He cried a psalm David had written a thousand years before. Psalm twenty-two opens in the voice of a forsaken man; Jesus made it His own. David's very first line:</speaker>
+<speaker name="narrator">From the cross, in His darkest hour, Jesus reached for words already written — a psalm David had penned a thousand years before. Psalm twenty-two opens in the voice of a forsaken man; Jesus made it His own. David's very first line:</speaker>
 <speaker name="david">"My God, my God, why hast thou forsaken me?"</speaker>
 <speaker name="narrator">A thousand years later, at the ninth hour, Jesus cried it from the cross:</speaker>
 <speaker name="jesus">"My God, my God, why hast thou forsaken me?"</speaker>

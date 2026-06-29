@@ -19,7 +19,7 @@
 ---
 
 **[narrator]**
-From the cross, Jesus did not speak His own words first — He cried a psalm David had written a thousand years before.
+From the cross, in His darkest hour, Jesus reached for words already written — a psalm David had penned a thousand years before.
 
 **[narrator]**
 Psalm twenty-two opens in the voice of a forsaken man; Jesus made it His own.

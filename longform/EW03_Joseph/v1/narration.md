@@ -9,7 +9,7 @@ I am Joseph, son of Jacob. And I stood at the right hand of Egypt's throne, with
 
 For thirteen years before that, I had been a slave and a prisoner, sold by my own blood and left to rot in a dungeon. And now princes bowed as my chariot passed.
 
-But on that day, ten travel-worn men came begging me for grain, not knowing the ruler they bowed to. They were my brothers — the very brothers who had sold me, whose faces I had carried in the dark for half my life. And when I could hold it in no longer, I sent every Egyptian out of the room, and I wept aloud until the house of Pharaoh heard me, and I said the words they had dreaded for twenty years:
+But on that day, my travel-worn brothers came begging me for grain, not knowing the ruler they bowed to — the very brothers who had sold me, whose faces I had carried in the dark for half my life. And when I could hold it in no longer, I sent every Egyptian out of the room, and I wept aloud until the house of Pharaoh heard me, and I said the words they had dreaded for twenty years:
 
 **"I am Joseph your brother, whom ye sold into Egypt."**
 

@@ -1,0 +1,18 @@
+{
+  "name": "MOSES",
+  "kind": "character",
+  "canonical": "Moses, an aged Hebrew prophet and shepherd-leader of about eighty, weathered sun-darkened olive skin, a deeply lined noble face, long flowing grey hair and a full thick grey beard, deep-set wise weary eyes, wrapped in a rough heavy desert mantle over a simple robe, holding a tall plain wooden shepherd's staff",
+  "tags": [
+    "moses",
+    "prophet",
+    "wilderness",
+    "law",
+    "old-testament",
+    "witness",
+    "elder"
+  ],
+  "style": "inked",
+  "anchor": "characters/MOSES.png",
+  "first_used": "EW04_Bronze_Serpent",
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

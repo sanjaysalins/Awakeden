@@ -1,0 +1,16 @@
+{
+  "name": "JESUS",
+  "kind": "character",
+  "canonical": "Jesus of Nazareth, a Jewish man of about thirty, warm olive-brown skin, a calm noble face, long dark brown hair parted in the middle to the shoulders, a full dark brown beard, deep compassionate brown eyes; face + full standing body anchor grid (head about one-seventh of standing height)",
+  "tags": [
+    "jesus",
+    "christ",
+    "new-testament",
+    "hero",
+    "messiah"
+  ],
+  "style": "inked",
+  "anchor": "characters/JESUS.png",
+  "first_used": "EW04_Bronze_Serpent",
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

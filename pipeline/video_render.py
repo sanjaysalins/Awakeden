@@ -20,6 +20,7 @@ generate at-length and retire the speed-up hack.
 """
 from __future__ import annotations
 
+import json
 import os
 import re
 import subprocess
@@ -40,7 +41,7 @@ _NSFW_RE = re.compile(r"nsfw", re.IGNORECASE)
 #   - --mode/--sound are Kling-only flags; other models reject them.
 #   - duration is a fixed per-model allow-list; we snap to the nearest legal value
 #     (e.g. VIDEO_DURATION=10 -> 8 for veo, whose legal set is 4/6/8).
-_HF_NEEDS_IMAGE_FLAG = {"minimax_hailuo", "kling2_6", "veo3_1"}
+_HF_NEEDS_IMAGE_FLAG = {"minimax_hailuo", "kling2_6", "veo3_1", "cinematic_studio_video_v2"}
 _HF_KLING_FLAGS = {"kling3_0", "kling2_6"}
 _HF_DURATIONS = {
     "veo3_1_lite": (4, 6, 8),
@@ -49,6 +50,7 @@ _HF_DURATIONS = {
     "minimax_hailuo": (6, 10),
     "seedance1_5": (4, 8, 12),
     "seedance_2_0": (4, 8, 12),
+    "cinematic_studio_video_v2": (5,),   # graphic-novel anim model (POC default 5s)
 }
 
 
@@ -142,7 +144,7 @@ class HFVideoProvider(VideoProvider):
         self._cli = str(config.HF_CLI_PATH)
 
     def animate(self, png_path: Path, out_mp4: Path, prompt: str, duration: int) -> Path:
-        model = config.VIDEO_HF_MODEL
+        model = config.anim_model()
         media_flag = "--image" if model in _HF_NEEDS_IMAGE_FLAG else "--start-image"
         cmd = [
             self._cli, "generate", "create", model,
@@ -261,6 +263,8 @@ def animate_clip(
     dur = duration or config.VIDEO_DURATION
     log(f"      [{provider.name}] animating {png_path.name} ({dur}s)...")
     result = provider.animate(png_path, out_mp4, prompt, dur)
+    out_mp4.with_suffix(".style.json").write_text(
+        json.dumps(config.style_provenance(), indent=2), encoding="utf-8")
     log(f"      -> {result.name}")
     return result
 
@@ -277,7 +281,14 @@ def animate_scenes(
     skips any clip already on disk. `indices` restricts to those scene indices
     (e.g. the non-excluded set). Returns the count animated this run."""
     import json
+    from pipeline import bible_kb
     from pipeline.visual_models import ScenePlan
+
+    # /bible-check chokepoint: don't spend animation credits unless the piece's
+    # biblical accuracy is GREEN. Grandfather-safe — a piece with no _bible_check/
+    # is skipped with a notice; BIBLE_GATE=off bypasses; BIBLE_GATE=strict enforces
+    # even on un-checked pieces. Mirrors longform/_animate_16x9.py's gate call.
+    bible_kb.gate(Path(v1_folder), stage="animate")
 
     plan_path = v1_folder / "visual" / "scene_plan.json"
     if not plan_path.exists():

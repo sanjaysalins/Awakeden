@@ -1,0 +1,146 @@
+{
+  "slug": "priestly-garments",
+  "name": "priestly-garments",
+  "facts": [
+    {
+      "claim": "For the atonement service the high priest wore the holy LINEN garments - coat, breeches, girdle and mitre - and removed them again afterward.",
+      "bucket": "specified",
+      "scripture": [
+        "Leviticus 16:4",
+        "Leviticus 16:23"
+      ],
+      "kjv_text": "[Leviticus 16:4] He shall put on the holy linen coat, and he shall have the linen breeches upon his flesh, and shall be girded with a linen girdle, and with the linen mitre shall he be attired: these are holy garments; therefore shall he wash his flesh in water, and so put them on.\n[Leviticus 16:23] And Aaron shall come into the tabernacle of the congregation, and shall put off the linen garments, which he put on when he went into the holy place, and shall leave them there:",
+      "historical_note": "",
+      "visual_directive": "Within the rite Aaron is in plain linen. The COLOUR of the linen is not stated by Scripture (undyed is the natural reading); do not treat whiteness as a doctrine.",
+      "banned_anachronisms": [
+        "a golden breastplate or jewelled ephod worn at or within the veil during the service"
+      ],
+      "verified": true,
+      "entity": "priestly-garments"
+    },
+    {
+      "claim": "Aaron's ordinary high-priestly garments (ephod, breastplate, robe, etc.) are described in Exodus 28; the inner Day-of-Atonement actions are done in linen, so no gold is worn for the inner blood/incense/scapegoat acts or within the veil.",
+      "bucket": "constrained",
+      "scripture": [
+        "Exodus 28:2",
+        "Exodus 28:4",
+        "Leviticus 16:4"
+      ],
+      "kjv_text": "[Exodus 28:2] And thou shalt make holy garments for Aaron thy brother for glory and for beauty.\n[Exodus 28:4] And these are the garments which they shall make; a breastplate, and an ephod, and a robe, and a broidered coat, a mitre, and a girdle: and they shall make holy garments for Aaron thy brother, and his sons, that he may minister unto me in the priest’s office.\n[Leviticus 16:4] He shall put on the holy linen coat, and he shall have the linen breeches upon his flesh, and shall be girded with a linen girdle, and with the linen mitre shall he be attired: these are holy garments; therefore shall he wash his flesh in water, and so put them on.",
+      "historical_note": "Aaron changing into linen for the inner rite and back into his garments afterward is grounded in Lev 16:4 + 16:23-24. That he wears gold in the court before the rite is narrative/traditional staging, not stated by Leviticus 16; multiple gold/linen changes through the day are Mishnaic (Yoma) tradition.",
+      "visual_directive": "No gold for the inner atonement actions / within the veil; ordinary garments only outside those acts.",
+      "banned_anachronisms": [
+        "gold vestments shown within the veil / inner sanctum / during the inner atonement acts"
+      ],
+      "verified": true,
+      "entity": "priestly-garments"
+    },
+    {
+      "claim": "Aaron in his gold vestments in the open court before the rite is narrative/traditional staging, NOT a fact Leviticus 16 states (the chapter opens with the linen change); only the no-gold-within-the-rite rule is binding.",
+      "bucket": "free",
+      "scripture": [
+        "Leviticus 16:4"
+      ],
+      "kjv_text": "[Leviticus 16:4] He shall put on the holy linen coat, and he shall have the linen breeches upon his flesh, and shall be girded with a linen girdle, and with the linen mitre shall he be attired: these are holy garments; therefore shall he wash his flesh in water, and so put them on.",
+      "historical_note": "Gold-before-the-rite is Mishnaic (Yoma) tradition / a narration device, not stated by Leviticus 16.",
+      "visual_directive": "Acceptable as licence in the court here; gold must never appear within the rite (see world fact).",
+      "banned_anachronisms": [],
+      "verified": true,
+      "entity": "priestly-garments"
+    },
+    {
+      "claim": "The high priest's garments included an ephod, a breastplate set with twelve stones, and a plate of pure gold upon the mitre.",
+      "bucket": "specified",
+      "scripture": [
+        "Exodus 28:4",
+        "Exodus 28:15",
+        "Exodus 28:21",
+        "Exodus 28:36",
+        "Exodus 28:37"
+      ],
+      "kjv_text": "[Exodus 28:4] And these are the garments which they shall make; a breastplate, and an ephod, and a robe, and a broidered coat, a mitre, and a girdle: and they shall make holy garments for Aaron thy brother, and his sons, that he may minister unto me in the priest’s office.\n[Exodus 28:15] And thou shalt make the breastplate of judgment with cunning work; after the work of the ephod thou shalt make it; of gold, of blue, and of purple, and of scarlet, and of fine twined linen, shalt thou make it.\n[Exodus 28:21] And the stones shall be with the names of the children of Israel, twelve, according to their names, like the engravings of a signet; every one with his name shall they be according to the twelve tribes.\n[Exodus 28:36] And thou shalt make a plate of pure gold, and grave upon it, like the engravings of a signet, HOLINESS TO THE LORD.\n[Exodus 28:37] And thou shalt put it on a blue lace, that it may be upon the mitre; upon the forefront of the mitre it shall be.",
+      "historical_note": "",
+      "visual_directive": "Among the laid-aside gold: a breastplate (twelve set stones), an ephod, and the flat gold plate of the mitre are all faithful.",
+      "banned_anachronisms": [
+        "a European/royal-style crown (the correct item is a flat gold plate/frontlet on the mitre)",
+        "a plain gold breastplate with no stones or colour (it is twelve set stones on a blue/purple/scarlet field, Ex 28:15,21)"
+      ],
+      "verified": true,
+      "entity": "priestly-garments"
+    },
+    {
+      "claim": "For the service he put on holy linen garments, having first washed his flesh in water.",
+      "bucket": "specified",
+      "scripture": [
+        "Leviticus 16:4"
+      ],
+      "kjv_text": "[Leviticus 16:4] He shall put on the holy linen coat, and he shall have the linen breeches upon his flesh, and shall be girded with a linen girdle, and with the linen mitre shall he be attired: these are holy garments; therefore shall he wash his flesh in water, and so put them on.",
+      "historical_note": "",
+      "visual_directive": "Plain folded linen waiting beside the laid-aside gold (the change follows washing).",
+      "banned_anachronisms": [],
+      "verified": true,
+      "entity": "priestly-garments"
+    },
+    {
+      "claim": "For the service the high priest wore holy linen garments, including a linen mitre on the head.",
+      "bucket": "specified",
+      "scripture": [
+        "Leviticus 16:4"
+      ],
+      "kjv_text": "[Leviticus 16:4] He shall put on the holy linen coat, and he shall have the linen breeches upon his flesh, and shall be girded with a linen girdle, and with the linen mitre shall he be attired: these are holy garments; therefore shall he wash his flesh in water, and so put them on.",
+      "historical_note": "",
+      "visual_directive": "Aaron in plain linen with a linen mitre/head covering at the veil (colour not specified by Scripture).",
+      "banned_anachronisms": [
+        "gold vestments at the veil",
+        "bare head"
+      ],
+      "verified": true,
+      "entity": "priestly-garments"
+    },
+    {
+      "claim": "He performed the rite in linen (donning stated at Lev 16:4; it continues through the rite).",
+      "bucket": "constrained",
+      "scripture": [
+        "Leviticus 16:4"
+      ],
+      "kjv_text": "[Leviticus 16:4] He shall put on the holy linen coat, and he shall have the linen breeches upon his flesh, and shall be girded with a linen girdle, and with the linen mitre shall he be attired: these are holy garments; therefore shall he wash his flesh in water, and so put them on.",
+      "historical_note": "",
+      "visual_directive": "Plain linen sleeves / garment.",
+      "banned_anachronisms": [
+        "gold vestments"
+      ],
+      "verified": true,
+      "entity": "priestly-garments"
+    },
+    {
+      "claim": "He performed the rite in linen; the blood vessel/basin itself is artistic licence.",
+      "bucket": "constrained",
+      "scripture": [
+        "Leviticus 16:4"
+      ],
+      "kjv_text": "[Leviticus 16:4] He shall put on the holy linen coat, and he shall have the linen breeches upon his flesh, and shall be girded with a linen girdle, and with the linen mitre shall he be attired: these are holy garments; therefore shall he wash his flesh in water, and so put them on.",
+      "historical_note": "Scripture does not name the vessel's material/shape; the basin is licence.",
+      "visual_directive": "Plain linen; any plausible blood vessel.",
+      "banned_anachronisms": [
+        "gold vestments within the veil"
+      ],
+      "verified": true,
+      "entity": "priestly-garments"
+    },
+    {
+      "claim": "He performed the rite in linen.",
+      "bucket": "constrained",
+      "scripture": [
+        "Leviticus 16:4"
+      ],
+      "kjv_text": "[Leviticus 16:4] He shall put on the holy linen coat, and he shall have the linen breeches upon his flesh, and shall be girded with a linen girdle, and with the linen mitre shall he be attired: these are holy garments; therefore shall he wash his flesh in water, and so put them on.",
+      "historical_note": "",
+      "visual_directive": "Plain linen garment.",
+      "banned_anachronisms": [
+        "gold vestments"
+      ],
+      "verified": true,
+      "entity": "priestly-garments"
+    }
+  ]
+}

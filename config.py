@@ -273,7 +273,7 @@ VIDEO_PROVIDER = os.getenv("VIDEO_PROVIDER", "kling").strip().lower()
 # Bake-off (2026-05-30): veo3_1_lite keeps the Baroque oil look without softening it to
 # photoreal, across every scene type, at ~half Kling's credits — chosen for long-form.
 # seedance1_5 is the fallback (more dynamic but photoreal-softens).
-VIDEO_HF_MODEL = os.getenv("VIDEO_HF_MODEL", "veo3_1_lite")       # `higgsfield model list`
+VIDEO_HF_MODEL = os.getenv("VIDEO_HF_MODEL")  # None => use the style registry's anim model; a driver assigning config.VIDEO_HF_MODEL, or the env var, overrides it (see anim_model()).
 VIDEO_HF_MODE = os.getenv("VIDEO_HF_MODE", "std")                 # std | pro | 4k
 VIDEO_HF_ASPECT = os.getenv("VIDEO_HF_ASPECT", "9:16")
 VIDEO_HF_SOUND = os.getenv("VIDEO_HF_SOUND", "off")              # narration muxed separately
@@ -393,6 +393,126 @@ VISUAL_STYLE_TAIL = (
     "craquelure, pure Flemish Baroque style only, no text, no modern elements, "
     "no fantasy glow, no excess drama --ar 9:16"
 )
+
+# ----------------------------------------------------------------------------
+# VISUAL STYLE selector (Phase 0 of the inked-style migration).
+#
+# The image content audit (verify_image -> _vision_call check #6) used to HARD-
+# CODE "must read as a 17th-century Baroque oil painting" — which would FAIL
+# every good frame of the new inked graphic-novel style. The audit's style check
+# is now selected by VISUAL_STYLE so the same auditor judges whichever look a
+# piece was rendered in. Default stays "baroque" for back-compat with the
+# existing long-form corpus; the new pipeline sets VISUAL_STYLE=graphic_novel.
+# Style versions: "baroque" (old oil-painting) | "graphic_novel" (new inked look).
+# ----------------------------------------------------------------------------
+VISUAL_STYLE = os.getenv("VISUAL_STYLE", "baroque").strip().lower()
+
+# check-#6 rubric text, per style. Each is the "period authenticity & tone"
+# paragraph the auditor applies. The structure (HARD FAIL on modern/horror/NSFW,
+# reverent ancient biblical world) is shared; only the *medium* differs.
+STYLE_AUDIT_RUBRIC = {
+    "baroque": (
+        "6. **Period authenticity & reverent tone (CHECK THIS EXPLICITLY).** The "
+        "image must read as a 17th-century Baroque devotional OIL PAINTING of the "
+        "ANCIENT biblical world. FAIL (passed:false) on any of: faces/hair/grooming "
+        "that look like MODERN contemporary people or photo-portrait models; modern "
+        "or anachronistic clothing/haircuts/makeup; a glossy photographic 'modern "
+        "headshot' feel instead of painted Old-Master skin; a HORROR-film tone — "
+        "lurid gore, zombie/corpse-horror, ghoulish or grotesque faces, harsh "
+        "modern-cinema lighting; or an NSFW feel — a gratuitously sexualised pose, "
+        "an open-mouthed grimace that reads erotic or grotesque rather than "
+        "reverent, or exposure beyond a modest devotional loincloth. Figures must "
+        "look like weathered first-century Judeans painted by an Old Master, and "
+        "the mood must be reverent, not sensational. When in doubt on tone, FAIL.\n\n"
+    ),
+    "graphic_novel": (
+        "6. **Style fidelity, period authenticity & reverent tone (CHECK THIS "
+        "EXPLICITLY).** The image must read as an INKED BIBLICAL GRAPHIC-NOVEL / "
+        "cinematic-manga ILLUSTRATION of the ANCIENT biblical world: bold clean "
+        "black ink linework and outlines, flat cel-shaded comic colour, hand-drawn "
+        "2D artwork, dramatic ink shadows. FAIL (passed:false) on any of: a "
+        "PHOTOREALISTIC or glossy 3D-RENDER look; a soft airbrushed photo / "
+        "'modern headshot' feel with no visible ink linework; an OIL-PAINTING / "
+        "painterly-brushstroke look (that is the OLD style, wrong for this piece); "
+        "faces/hair/grooming/clothing that look like MODERN contemporary people "
+        "rather than ancient Near-Eastern figures; a HORROR-film tone — lurid gore, "
+        "zombie/corpse-horror, ghoulish or grotesque faces; or an NSFW feel — a "
+        "gratuitously sexualised pose or exposure beyond a modest loincloth. The "
+        "linework must be clearly present and the figures must read as ancient "
+        "first-century Judeans, reverent not sensational. When in doubt on tone, "
+        "FAIL.\n\n"
+    ),
+}
+
+# Short human-readable name of the required medium, spliced into the audit's
+# closing pass-criteria sentence so it matches the selected style.
+STYLE_MEDIUM_PHRASE = {
+    "baroque": "reverent, period-authentic Baroque devotional painting",
+    "graphic_novel": "reverent, period-authentic inked biblical graphic-novel illustration",
+}
+
+# Graphic-novel style prompt halves (mirror the validated EW04 POC look). Used by
+# assemble_final_prompt when VISUAL_STYLE=graphic_novel. The Baroque halves above
+# (VISUAL_STYLE_BASE / VISUAL_STYLE_TAIL) are the "baroque" version.
+VISUAL_STYLE_BASE_GN = (
+    "Inked biblical graphic-novel / cinematic-manga illustration, bold clean "
+    "black ink linework and outlines, flat cel-shaded comic colour, hand-drawn "
+    "2D artwork, dramatic ink shadows,"
+)
+VISUAL_STYLE_TAIL_GN = (
+    "reverent and holy atmosphere, ancient Near-Eastern period-accurate, strong "
+    "visible ink lines, no oil-painting brushstrokes, not photorealistic, not a "
+    "glossy 3D render, not soft airbrushed anime, no text, no lettering, no "
+    "panels, no speech bubbles, no watermark --ar 9:16"
+)
+
+# ----------------------------------------------------------------------------
+# STYLE REGISTRY — the single source of truth for what each style version uses.
+# Flipping VISUAL_STYLE selects style prompt + still model + anim model + audit.
+# Only 4 code paths read this (assemble_final_prompt, the still provider,
+# video_render, the audit); every other stage is style-agnostic.
+# ----------------------------------------------------------------------------
+STYLE_REGISTRY = {
+    "baroque": {                                  # old oil-painting way (default)
+        "style_base": VISUAL_STYLE_BASE,
+        "style_tail": VISUAL_STYLE_TAIL,
+        "still_model": ("hf", "nano_banana_2"),
+        "anim_model": ("hf", "veo3_1_lite"),
+        "audit_rubric": STYLE_AUDIT_RUBRIC["baroque"],
+        "audit_medium": STYLE_MEDIUM_PHRASE["baroque"],
+    },
+    "graphic_novel": {                            # new inked graphic-novel way
+        "style_base": VISUAL_STYLE_BASE_GN,
+        "style_tail": VISUAL_STYLE_TAIL_GN,
+        "still_model": ("hf", "seedream_v4_5"),
+        "anim_model": ("hf", "cinematic_studio_video_v2"),
+        "audit_rubric": STYLE_AUDIT_RUBRIC["graphic_novel"],
+        "audit_medium": STYLE_MEDIUM_PHRASE["graphic_novel"],
+    },
+}
+
+
+def style() -> dict:
+    """The active style record (defaults to baroque if VISUAL_STYLE is unknown)."""
+    return STYLE_REGISTRY.get(VISUAL_STYLE, STYLE_REGISTRY["baroque"])
+
+
+def still_model() -> str:
+    """Still model id for the active style. HF_MODEL_ID env still overrides (A/B)."""
+    return os.getenv("HF_MODEL_ID") or style()["still_model"][1]
+
+
+def anim_model() -> str:
+    """Animation model id for the active style. Honors a driver-assigned or env
+    `VIDEO_HF_MODEL` (the long-form animators set it per-episode); falls back to
+    the active style's registry model when unset."""
+    return VIDEO_HF_MODEL or style()["anim_model"][1]
+
+
+def style_provenance() -> dict:
+    """Stamp written beside each rendered still/clip so we always know which
+    style version produced a file."""
+    return {"style": VISUAL_STYLE, "still_model": still_model(), "anim_model": anim_model()}
 
 # Banned tokens checked by SP-G5 against `subject_block` + `mood_block`.
 # Lower-case substring match; case-insensitive at check time.

@@ -1,0 +1,14 @@
+{
+  "passed": false,
+  "specified_violations": [],
+  "constrained_violations": [
+    {
+      "claim": "The holy place was lit by the golden lampstand (candlestick), not by ad-hoc hanging lamps.",
+      "actual": "The scene is lit by multiple hanging oil lamps on chains, not the seven-branched golden lampstand."
+    }
+  ],
+  "notes": "Linen + mitre correct (specified ok); Aaron alone at the veil; the veil is a dark embroidered curtain, not plain white (ok). The contradiction is the lighting: hanging oil lamps are shown as the light source instead of the golden lampstand.",
+  "skipped": false,
+  "image_sha256": "1241769b8a548ba28b5d8a990d4a6436609254aea7120c836b84c0eb37dc4696",
+  "facts_sha256": "182dcb2c0f864f7a165f87c1147f49b4b43f6d371cbcc104b0872784328d365c"
+}

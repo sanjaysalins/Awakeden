@@ -1,0 +1,17 @@
+{
+  "piece_id": "EW07_Isaiah__v1__short",
+  "path": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW07_Isaiah\\v1\\short\\narration.md",
+  "form": "short",
+  "verdict": "CLEAN",
+  "summary": "Isaiah-as-seer short is KJV-verbatim clean, narratively grounded in Isa 52:13-53:12 + Acts 8, and lands soundly and grace-anchored on the substitutionary atonement of Jesus.",
+  "findings": [
+    {
+      "severity": "stylistic",
+      "beat": "Beat 3 — The turn",
+      "quote_or_claim": "a stranger read my words aloud and asked the very question I had asked: of whom speaketh the prophet this?",
+      "problem": "The question 'of whom speaketh the prophet this?' is the Ethiopian eunuch's (Acts 8:34), not a question Isaiah is recorded asking. Attributing it as 'the very question I had asked' is a poetic identification. It is defensible (Isa 53:1 'Who hath believed our report?'; 1 Pet 1:10-11 the prophets inquired) and the words themselves are verbatim KJV, so it is a creative flourish rather than a fact-inversion; noted for transparency only and does not change the verdict.",
+      "scripture_ref": "Acts 8:34; Isa 53:1; 1 Pet 1:10-11",
+      "proposed_fix_text": "a stranger read my words aloud and asked aloud the question my own report had always raised: of whom speaketh the prophet this?"
+    }
+  ]
+}

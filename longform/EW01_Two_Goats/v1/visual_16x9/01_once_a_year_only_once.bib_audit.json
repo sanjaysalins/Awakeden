@@ -1,0 +1,14 @@
+{
+  "passed": false,
+  "specified_violations": [],
+  "constrained_violations": [
+    {
+      "claim": "The ark of the covenant with the mercy seat stayed WITHIN the most holy place, behind the veil - never out in the open court before the people.",
+      "actual": "The golden ark with cherubim and carrying poles is shown OUT in the open courtyard before the crowd, with fire/incense burning on it."
+    }
+  ],
+  "notes": "Tent (not stone) is correct; gold vestments are in the open court (acceptable as licence here), no gold within the veil. The real contradiction: the ark is depicted in the open court before the people instead of behind the veil. With the ark fact now present, this scene correctly FAILS.",
+  "skipped": false,
+  "image_sha256": "c88d8f3733811be38b10114560f2ecff9e22f65e1eb90b357e9fbdc34ec7eb6c",
+  "facts_sha256": "b74c76959f80f5e2fb83347ea399289d5b20177d7bd0dd3a42a917bb617b11f8"
+}

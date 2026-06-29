@@ -1,0 +1,57 @@
+{
+  "EW06_Noah__v1": {
+    "severity": "narrative-fact",
+    "scripture_ref": "Gen 6:15",
+    "note": "300 cubits is the ark's LENGTH (height was 30); 'climbed into the sky' wrongly made it vertical.",
+    "before": "Three hundred cubits it climbed into the sky on dry land",
+    "after": "Three hundred cubits it stretched across the dry land",
+    "files": [
+      "EW06_Noah/v1/narration.md",
+      "EW06_Noah/v1/narration-tagged.md",
+      "EW06_Noah/v1/narration.spoken.txt"
+    ],
+    "relock_needed": true,
+    "revoice_needed": true
+  },
+  "EW03_Joseph__v1": {
+    "severity": "narrative-fact",
+    "scripture_ref": "Gen 42:3-4; 45:1-4",
+    "note": "The 'I am Joseph' reveal (Gen 45) was on the SECOND visit with all eleven brothers present (Benjamin included); 'ten' belongs to the first visit. Dropped the false count.",
+    "before": "But on that day, ten travel-worn men came begging me for grain, not knowing the ruler they bowed to. They were my brothers \u2014 the very brothers who had sold me, whose faces I had carried in the dark for half my life.",
+    "after": "But on that day, my travel-worn brothers came begging me for grain, not knowing the ruler they bowed to \u2014 the very brothers who had sold me, whose faces I had carried in the dark for half my life.",
+    "files": [
+      "EW03_Joseph/v1/narration.md",
+      "EW03_Joseph/v1/narration-tagged.md",
+      "EW03_Joseph/v1/narration.spoken.txt"
+    ],
+    "relock_needed": true,
+    "revoice_needed": true
+  },
+  "EW01_Two_Goats__v1__short": {
+    "severity": "narrative-fact",
+    "scripture_ref": "Lev 16:21-22",
+    "note": "Lev 16:21 has the scapegoat sent away 'by the hand of a fit man' \u2014 the high priest did not personally drive it out. Same Aaron-overclaim family as the prior Lev 10 catch.",
+    "before": "confessed every sin of the people over it, and drove it into the desert to be lost.",
+    "after": "confessed every sin of the people over it, and sent it away into the desert to be lost.",
+    "files": [
+      "EW01_Two_Goats/v1/short/narration.md",
+      "EW01_Two_Goats/v1/short/narration-tagged.md",
+      "EW01_Two_Goats/v1/short/narration.spoken.txt"
+    ],
+    "relock_needed": true,
+    "revoice_needed": true
+  },
+  "02_Psalm_22_Song_From_The_Cross__v1__shorts__03_The_Forsaken_Cry": {
+    "severity": "narrative-fact",
+    "scripture_ref": "Matt 27:46 (cf. Luke 23:34)",
+    "note": "'did not speak His own words first' implies the dereliction cry was Jesus' opening word from the cross; Luke 23:34 ('Father, forgive them') precedes it. Reworded to keep the hook (borrowed words) without the false order. All 4 panel reviewers confirmed. Re-verify panel then flagged that 'not His own' undercuts inspiration (1 Pet 1:11 \u2014 Spirit of Christ in the prophets) and fought 'made it His own'; refined to the neutral 'reached for words already written' hook.",
+    "before": "From the cross, Jesus did not speak His own words first \u2014 He cried a psalm David had written a thousand years before.",
+    "after": "From the cross, in His darkest hour, Jesus reached for words already written \u2014 a psalm David had penned a thousand years before.",
+    "files": [
+      "02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/narration.md",
+      "02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/narration-tagged.md"
+    ],
+    "relock_needed": true,
+    "revoice_needed": true
+  }
+}

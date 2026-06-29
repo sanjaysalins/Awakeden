@@ -1,0 +1,212 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: biblical-facts
+
+LENS — judge this BIBLICAL FACT SHEET (the Scripture-cited facts about
+location / time / place / customs / characters that a set of devotional paintings must
+honour). Be specific, cite the exact fact + reference:
+- CITATION TRUTH (most important): for every fact, does the quoted KJV text (shown under
+  each fact) ACTUALLY support the claim? Flag any claim the cited verse does NOT state, any
+  over-reach beyond what the verse says, and any citation that looks wrong/misapplied.
+- NO INVENTED FACTS: nothing asserted as biblical that Scripture does not actually say.
+  Tradition or commonplace-but-unbiblical detail (e.g. a number, a colour, an object the
+  text never mentions) must NOT be in the 'specified' bucket.
+- BUCKETS ARE HONEST: 'specified' = the Bible explicitly states this visual fact; 'constrained'
+  = not stated but a depiction could contradict the text; 'free' = artistic licence. Flag any
+  fact in the wrong bucket (especially licence dressed up as 'specified').
+- HISTORY STAYS SECONDARY: any historical_note must never override or contradict Scripture; flag
+  any that does, or that is presented as if it were biblical.
+- CHRIST-LENS INTACT: the facts must not distort the passage's witness to Christ / its typology.
+- COVERAGE: are there obvious, checkable biblical facts about these scenes that are MISSING
+  (a specified detail the painting could easily get wrong and no fact guards it)?
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block:
+
+VERDICT: PASS | REVISE | FAIL
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# Biblical fact sheet — EW01_Two_Goats
+
+Source narration: narration.md
+Source scene plan: scene_plan.json
+
+Buckets: **specified** = the Bible states this visual fact (image MUST match) · **constrained** = the image must not contradict it · **free** = artistic licence.
+
+## World facts (apply to every scene)
+- **[CONSTRAINED]** The sanctuary was the portable Tabernacle - a tent of curtains and skin coverings, not a stone temple or building.
+  - Scripture: Exodus 26:1, Exodus 26:14, Exodus 40:2
+  - KJV: [Exodus 26:1] Moreover thou shalt make the tabernacle with ten curtains of fine twined linen, and blue, and purple, and scarlet: with cherubims of cunning work shalt thou make them.
+  - KJV: [Exodus 26:14] And thou shalt make a covering for the tent of rams’ skins dyed red, and a covering above of badgers skins.
+  - KJV: [Exodus 40:2] On the first day of the first month shalt thou set up the tabernacle of the tent of the congregation.
+  - Visual: A tent of woven curtains with skin coverings, fabric walls and a curtained court.
+  - Must NOT show: stone temple or cathedral architecture; carved stone columns or masonry walls; a built sanctuary of stone
+- **[SPECIFIED]** For the atonement service the high priest wore the holy LINEN garments - coat, breeches, girdle and mitre - not his gold vestments (which he removes for the service and resumes afterward).
+  - Scripture: Leviticus 16:4, Leviticus 16:23, Leviticus 16:24
+  - KJV: [Leviticus 16:4] He shall put on the holy linen coat, and he shall have the linen breeches upon his flesh, and shall be girded with a linen girdle, and with the linen mitre shall he be attired: these are holy garments; therefore shall he wash his flesh in water, and so put them on.
+  - KJV: [Leviticus 16:23] And Aaron shall come into the tabernacle of the congregation, and shall put off the linen garments, which he put on when he went into the holy place, and shall leave them there:
+  - KJV: [Leviticus 16:24] And he shall wash his flesh with water in the holy place, and put on his garments, and come forth, and offer his burnt offering, and the burnt offering of the people, and make an atonement for himself, and for the people.
+  - Visual: When at or within the veil, Aaron is in simple plain linen (the colour of the linen is not stated by Scripture; undyed is the natural reading) - NO gold breastplate or ephod during the service.
+  - Must NOT show: golden breastplate or jewelled ephod worn at or within the veil during the service; coloured/embroidered priestly robes for the inner atonement service
+- **[CONSTRAINED]** The high priest's ordinary garments (worn before and after the linen service) were the gold vestments described in Exodus 28.
+  - Scripture: Exodus 28:2, Exodus 28:4
+  - KJV: [Exodus 28:2] And thou shalt make holy garments for Aaron thy brother for glory and for beauty.
+  - KJV: [Exodus 28:4] And these are the garments which they shall make; a breastplate, and an ephod, and a robe, and a broidered coat, a mitre, and a girdle: and they shall make holy garments for Aaron thy brother, and his sons, that he may minister unto me in the priest’s office.
+  - Historical (secondary): The high priest changing into linen for the inner service and back into his garments afterward is grounded in Lev 16:4 + 16:23-24; multiple gold/linen changes through the day are later Mishnaic (Yoma) tradition, not Scripture.
+  - Visual: Gold high-priestly vestments are acceptable ONLY outside the inner rite (the open court, before/after the service).
+  - Must NOT show: gold vestments shown within the veil / inner sanctum / during the atonement service
+- **[SPECIFIED]** Two kids of the goats were taken together for the people's single sin offering on the Day of Atonement.
+  - Scripture: Leviticus 16:5, Leviticus 16:7
+  - KJV: [Leviticus 16:5] And he shall take of the congregation of the children of Israel two kids of the goats for a sin offering, and one ram for a burnt offering.
+  - KJV: [Leviticus 16:7] And he shall take the two goats, and present them before the LORD at the door of the tabernacle of the congregation.
+  - Visual: When the goats appear, show TWO goats together (young goats).
+  - Must NOT show: a single goat for the people's sin offering; a lamb or bull substituted for the goats
+- **[SPECIFIED]** Aaron cast lots upon the two goats - one lot for the LORD and one for the scapegoat.
+  - Scripture: Leviticus 16:8
+  - KJV: [Leviticus 16:8] And Aaron shall cast lots upon the two goats; one lot for the LORD, and the other lot for the scapegoat.
+  - Visual: The act of casting lots over the two goats (the lot mechanics - stones, vessel - are artistic licence, not specified).
+  - Must NOT show: a goat already slain at the lot-casting moment
+- **[CONSTRAINED]** The ark of the covenant with the mercy seat stayed WITHIN the most holy place, behind the veil - never out in the open court before the people, and it is not an altar.
+  - Scripture: Exodus 26:33, Exodus 26:34, Leviticus 16:2
+  - KJV: [Exodus 26:33] And thou shalt hang up the vail under the taches, that thou mayest bring in thither within the vail the ark of the testimony: and the vail shall divide unto you between the holy place and the most holy.
+  - KJV: [Exodus 26:34] And thou shalt put the mercy seat upon the ark of the testimony in the most holy place.
+  - KJV: [Leviticus 16:2] And the LORD said unto Moses, Speak unto Aaron thy brother, that he come not at all times into the holy place within the vail before the mercy seat, which is upon the ark; that he die not: for I will appear in the cloud upon the mercy seat.
+  - Visual: If the ark appears it is behind the veil in shadow, inside the tent.
+  - Must NOT show: the ark shown in the open courtyard before the crowd; the ark used as an altar with fire/incense on it; the ark outside the tent
+- **[SPECIFIED]** The high priest entered the most holy place only once a year - on the Day of Atonement.
+  - Scripture: Leviticus 16:2, Leviticus 16:34
+  - KJV: [Leviticus 16:2] And the LORD said unto Moses, Speak unto Aaron thy brother, that he come not at all times into the holy place within the vail before the mercy seat, which is upon the ark; that he die not: for I will appear in the cloud upon the mercy seat.
+  - KJV: [Leviticus 16:34] And this shall be an everlasting statute unto you, to make an atonement for the children of Israel for all their sins once a year. And he did as the LORD commanded Moses.
+  - Visual: The rite is the one annual entry, not generic daily priestly routine.
+  - Must NOT show: a casual/repeated entry behind the veil
+- **[CONSTRAINED]** The two-goat rite has TWO halves: the goat for the LORD (chosen by lot) was KILLED as a sin offering and its blood was brought within the veil and sprinkled on the mercy seat - the 'price paid' half alongside the live scapegoat that carries sin away.
+  - Scripture: Leviticus 16:9, Leviticus 16:15, Leviticus 16:16
+  - KJV: [Leviticus 16:9] And Aaron shall bring the goat upon which the LORD’S lot fell, and offer him for a sin offering.
+  - KJV: [Leviticus 16:15] Then shall he kill the goat of the sin offering, that is for the people, and bring his blood within the vail, and do with that blood as he did with the blood of the bullock, and sprinkle it upon the mercy seat, and before the mercy seat:
+  - KJV: [Leviticus 16:16] And he shall make an atonement for the holy place, because of the uncleanness of the children of Israel, and because of their transgressions in all their sins: and so shall he do for the tabernacle of the congregation, that remaineth among them in the midst of their uncleanness.
+  - Visual: Across the set, guard BOTH halves - do not depict only the live scapegoat and silently drop the slain goat / blood within the veil (the substitution the Christ-type rests on).
+  - Must NOT show: a depiction implying the live goat alone accomplished atonement
+
+## Scene 1 — Once a year, only once
+*Depicts:* The high priest Aaron, small in golden vestments, stands alone before the towering curtained Tabernacle court at first light; behind and below him a vast hushed multitude of Israelites kept in shadow; immense pale sky; the sacred tent dominant and severe.
+
+- **[CONSTRAINED]** Here in the open court before the service, Aaron may wear his ordinary gold high-priestly vestments; gold must NOT appear within the inner atonement (the service required linen).
+  - Scripture: Exodus 28:2, Leviticus 16:4, Leviticus 16:23
+  - KJV: [Exodus 28:2] And thou shalt make holy garments for Aaron thy brother for glory and for beauty.
+  - KJV: [Leviticus 16:4] He shall put on the holy linen coat, and he shall have the linen breeches upon his flesh, and shall be girded with a linen girdle, and with the linen mitre shall he be attired: these are holy garments; therefore shall he wash his flesh in water, and so put them on.
+  - KJV: [Leviticus 16:23] And Aaron shall come into the tabernacle of the congregation, and shall put off the linen garments, which he put on when he went into the holy place, and shall leave them there:
+  - Visual: Gold ordinary vestments acceptable in the open court at first light, before the linen change.
+  - Must NOT show: gold vestments shown within the veil / inner sanctum
+- **[CONSTRAINED]** The court and sanctuary are a curtained tent, not a stone building.
+  - Scripture: Exodus 27:9, Exodus 26:1
+  - KJV: [Exodus 27:9] And thou shalt make the court of the tabernacle: for the south side southward there shall be hangings for the court of fine twined linen of an hundred cubits long for one side:
+  - KJV: [Exodus 26:1] Moreover thou shalt make the tabernacle with ten curtains of fine twined linen, and blue, and purple, and scarlet: with cherubims of cunning work shalt thou make them.
+  - Visual: A great curtained Tabernacle court of hangings, not stone walls.
+  - Must NOT show: stone temple facade; cathedral or palace architecture
+- **[CONSTRAINED]** The ark of the covenant belongs behind the veil in the most holy place, not out in the open court before the crowd.
+  - Scripture: Exodus 26:33, Leviticus 16:2
+  - KJV: [Exodus 26:33] And thou shalt hang up the vail under the taches, that thou mayest bring in thither within the vail the ark of the testimony: and the vail shall divide unto you between the holy place and the most holy.
+  - KJV: [Leviticus 16:2] And the LORD said unto Moses, Speak unto Aaron thy brother, that he come not at all times into the holy place within the vail before the mercy seat, which is upon the ark; that he die not: for I will appear in the cloud upon the mercy seat.
+  - Visual: Do not place the ark in the open courtyard; it stays behind the veil.
+  - Must NOT show: the ark in the open court; the ark used as a fire/incense altar
+
+## Scene 2 — I laid aside gold and glory
+*Depicts:* Still-life: a golden breastplate, ephod and priestly garments laid upon a worn stone bench in a single shaft of light; two weathered hands releasing the gold; plain folded white linen waiting beside it. No face, hands only.
+
+- **[SPECIFIED]** The high priest's garments included an ephod and a breastplate, the breastplate set with gold and twelve stones.
+  - Scripture: Exodus 28:4, Exodus 28:15, Exodus 28:21
+  - KJV: [Exodus 28:4] And these are the garments which they shall make; a breastplate, and an ephod, and a robe, and a broidered coat, a mitre, and a girdle: and they shall make holy garments for Aaron thy brother, and his sons, that he may minister unto me in the priest’s office.
+  - KJV: [Exodus 28:15] And thou shalt make the breastplate of judgment with cunning work; after the work of the ephod thou shalt make it; of gold, of blue, and of purple, and of scarlet, and of fine twined linen, shalt thou make it.
+  - KJV: [Exodus 28:21] And the stones shall be with the names of the children of Israel, twelve, according to their names, like the engravings of a signet; every one with his name shall they be according to the twelve tribes.
+  - Visual: Among the laid-aside garments, a breastplate (twelve set stones) and an ephod are faithful objects to show.
+  - Must NOT show: modern jewellery; a metal crown in place of the linen mitre
+- **[SPECIFIED]** For the service he put on holy linen garments, having first washed.
+  - Scripture: Leviticus 16:4
+  - KJV: [Leviticus 16:4] He shall put on the holy linen coat, and he shall have the linen breeches upon his flesh, and shall be girded with a linen girdle, and with the linen mitre shall he be attired: these are holy garments; therefore shall he wash his flesh in water, and so put them on.
+  - Visual: Plain folded linen waiting beside the laid-aside gold (the change follows washing).
+  - Must NOT show: the atonement linen shown as dyed/coloured cloth
+- **[CONSTRAINED]** Furnishings should read as portable tabernacle, not permanent stone temple furniture.
+  - Scripture: Exodus 26:1
+  - KJV: [Exodus 26:1] Moreover thou shalt make the tabernacle with ten curtains of fine twined linen, and blue, and purple, and scarlet: with cherubims of cunning work shalt thou make them.
+  - Visual: The surface the garments rest on should read as portable/wood, not carved masonry.
+  - Must NOT show: a carved stone/masonry bench implying a permanent temple
+
+## Scene 3 — Plain white linen, like a servant
+*Depicts:* Aaron, now in plain white linen, standing still before a great heavy veil at the end of a dim colonnaded passage, seen from behind, his head slightly bowed at the threshold; hanging oil lamps light the heavy curtain; he stands arrested at the veil, not walking; his back to us.
+
+- **[SPECIFIED]** For the service the high priest wore holy linen garments, including a linen mitre on the head.
+  - Scripture: Leviticus 16:4
+  - KJV: [Leviticus 16:4] He shall put on the holy linen coat, and he shall have the linen breeches upon his flesh, and shall be girded with a linen girdle, and with the linen mitre shall he be attired: these are holy garments; therefore shall he wash his flesh in water, and so put them on.
+  - Visual: Aaron in plain linen with a linen mitre/head covering at the veil.
+  - Must NOT show: gold vestments at the veil; bare head
+- **[SPECIFIED]** When the high priest goes in to make atonement in the holy place, no man is in the tabernacle until he comes out - he is alone for the inner atonement (this governs the inner sanctum, not the outer court).
+  - Scripture: Leviticus 16:17
+  - KJV: [Leviticus 16:17] And there shall be no man in the tabernacle of the congregation when he goeth in to make an atonement in the holy place, until he come out, and have made an atonement for himself, and for his household, and for all the congregation of Israel.
+  - Visual: Aaron alone at the inner threshold; no other priest inside with him.
+  - Must NOT show: other priests beside him at the veil / inside the tent during atonement
+- **[SPECIFIED]** The veil was woven of blue, purple, scarlet and fine twined linen with cherubim - a coloured embroidered curtain, not a wall or door, and not plain white.
+  - Scripture: Exodus 26:31, Exodus 26:33
+  - KJV: [Exodus 26:31] And thou shalt make a vail of blue, and purple, and scarlet, and fine twined linen of cunning work: with cherubims shall it be made:
+  - KJV: [Exodus 26:33] And thou shalt hang up the vail under the taches, that thou mayest bring in thither within the vail the ark of the testimony: and the vail shall divide unto you between the holy place and the most holy.
+  - Visual: The veil shows blue/purple/scarlet and cherubim as a great hanging embroidered curtain.
+  - Must NOT show: a plain white veil; a wooden or stone door in place of the veil; stone colonnade / masonry hall (it is a tent)
+
+## Scene 7 — They brought me two goats, and I cast lots
+*Depicts:* Two goats standing close together before the bronze altar; Aaron's weathered hands in plain white linen sleeves holding two small marked lot-stones over a bronze vessel, the moment held still; the markings only illegible scratches, not readable text; the tabernacle court behind in shadow; Aaron alone, no other priests.
+
+- **[SPECIFIED]** Two kids of the goats stood together for the people's sin offering.
+  - Scripture: Leviticus 16:5, Leviticus 16:7
+  - KJV: [Leviticus 16:5] And he shall take of the congregation of the children of Israel two kids of the goats for a sin offering, and one ram for a burnt offering.
+  - KJV: [Leviticus 16:7] And he shall take the two goats, and present them before the LORD at the door of the tabernacle of the congregation.
+  - Visual: TWO goats together before the priest.
+  - Must NOT show: only one goat; a sheep or bull in the goats' place
+- **[SPECIFIED]** Aaron cast lots upon the two goats - one lot for the LORD and one for the scapegoat.
+  - Scripture: Leviticus 16:8
+  - KJV: [Leviticus 16:8] And Aaron shall cast lots upon the two goats; one lot for the LORD, and the other lot for the scapegoat.
+  - Visual: The act of casting lots over the two goats.
+  - Must NOT show: a goat already slain at the lot-casting moment
+- **[SPECIFIED]** He performed this in holy linen.
+  - Scripture: Leviticus 16:4
+  - KJV: [Leviticus 16:4] He shall put on the holy linen coat, and he shall have the linen breeches upon his flesh, and shall be girded with a linen girdle, and with the linen mitre shall he be attired: these are holy garments; therefore shall he wash his flesh in water, and so put them on.
+  - Visual: Plain linen sleeves / garment.
+  - Must NOT show: gold vestments
+- **[CONSTRAINED]** The goats were presented at the door of the tabernacle (in the court) - not specifically at the bronze altar.
+  - Scripture: Leviticus 16:7
+  - KJV: [Leviticus 16:7] And he shall take the two goats, and present them before the LORD at the door of the tabernacle of the congregation.
+  - Visual: Location is the court / door of the tent; an altar nearby is licence, not a required placement.
+- **[FREE]** The form of the lots (stones, a vessel, their markings) is artistic licence - Scripture says only that he cast lots.
+  - Scripture: Leviticus 16:8
+  - KJV: [Leviticus 16:8] And Aaron shall cast lots upon the two goats; one lot for the LORD, and the other lot for the scapegoat.
+  - Visual: Any plausible lot device; keep any markings illegible (no readable text).
+  - Must NOT show: readable text on the lots
+
+## Scene 9 — Both my hands upon the live goat
+*Depicts:* Aaron in plain white linen laying both hands upon the head of a living goat, his own head bowed low in confession, the moment held still; a single robed attendant waits quietly at the edge; beyond the camp gate the open wilderness lies pale and vast; Aaron in profile, half-shadowed; no other priests.
+
+- **[SPECIFIED]** Aaron laid BOTH his hands upon the head of the LIVE goat and confessed the people's sins over it.
+  - Scripture: Leviticus 16:21
+  - KJV: [Leviticus 16:21] And Aaron shall lay both his hands upon the head of the live goat, and confess over him all the iniquities of the children of Israel, and all their transgressions in all their sins, putting them upon the head of the goat, and shall send him away by the hand of a fit man into the wilderness:
+  - Visual: Both of Aaron's hands pressed on the head of a living, standing goat; head bowed in confession.
+  - Must NOT show: one hand only; the goat slain / lying dead; hands raised off the goat
+- **[SPECIFIED]** The live goat was sent away by the hand of a fit man into the wilderness, a land not inhabited.
+  - Scripture: Leviticus 16:21, Leviticus 16:22
+  - KJV: [Leviticus 16:21] And Aaron shall lay both his hands upon the head of the live goat, and confess over him all the iniquities of the children of Israel, and all their transgressions in all their sins, putting them upon the head of the goat, and shall send him away by the hand of a fit man into the wilderness:
+  - KJV: [Leviticus 16:22] And the goat shall bear upon him all their iniquities unto a land not inhabited: and he shall let go the goat in the wilderness.
+  - Visual: A man ('a fit man') to lead the goat away; open wilderness beyond the camp. The man's robe/position is artistic licence.
+  - Must NOT show: the goat being killed here rather than sent away alive
+- **[SPECIFIED]** He performed this in holy linen.
+  - Scripture: Leviticus 16:4
+  - KJV: [Leviticus 16:4] He shall put on the holy linen coat, and he shall have the linen breeches upon his flesh, and shall be girded with a linen girdle, and with the linen mitre shall he be attired: these are holy garments; therefore shall he wash his flesh in water, and so put them on.
+  - Visual: Plain linen garment.
+  - Must NOT show: gold vestments
+- **[CONSTRAINED]** The scapegoat is sent away AFTER the high priest has ended reconciling the holy place (it is not simultaneous with the inner blood/veil work).
+  - Scripture: Leviticus 16:20
+  - KJV: [Leviticus 16:20] And when he hath made an end of reconciling the holy place, and the tabernacle of the congregation, and the altar, he shall bring the live goat:
+  - Visual: The live-goat moment reads as its own step, outside the tent, after the inner service.
+  - Must NOT show: the live-goat confession shown inside the most holy place / at the mercy seat
+----- ARTIFACT END -----

@@ -37,8 +37,8 @@ def assemble_final_prompt(
     tail. Trailing punctuation on per-scene blocks is normalised so the
     result reads as one continuous sentence — image models are sensitive to
     broken cadence."""
-    base = style_base if style_base is not None else config.VISUAL_STYLE_BASE
-    tail = style_tail if style_tail is not None else config.VISUAL_STYLE_TAIL
+    base = style_base if style_base is not None else config.style()["style_base"]
+    tail = style_tail if style_tail is not None else config.style()["style_tail"]
     subject = scene.subject_block.strip().rstrip(",.")
     mood = scene.mood_block.strip().rstrip(",.")
     middle = subject
@@ -235,7 +235,7 @@ class HFProvider(ImageProvider):
                 "and run `hf auth login` if not already authenticated."
             )
         self._cli = str(config.HF_CLI_PATH)
-        self._model = config.HF_MODEL_ID
+        self._model = config.still_model()
         # `openai_hazel` doesn't support 9:16 — substitute (per run_batch.sh).
         self._aspect = "2:3" if self._model == "openai_hazel" else self.ASPECT
 
@@ -356,6 +356,11 @@ def _vision_call(scene: Scene, png_bytes: bytes) -> dict:
     if scene.vignettes:
         vignette_lines = "\n".join(f"  - {v}" for v in scene.vignettes)
         vignette_lines = f"\nREQUIRED BACKGROUND VIGNETTES (unified scene; each must be present and recognisable):\n{vignette_lines}\n"
+    # Style-selected check #6 rubric + medium phrase (Phase 0: de-hardcode Baroque).
+    style_rubric = config.STYLE_AUDIT_RUBRIC.get(
+        config.VISUAL_STYLE, config.STYLE_AUDIT_RUBRIC["baroque"])
+    medium = config.STYLE_MEDIUM_PHRASE.get(
+        config.VISUAL_STYLE, config.STYLE_MEDIUM_PHRASE["baroque"])
     role = (
         "You are an INDEPENDENT visual content auditor. The user wrote a scene "
         "spec; an image model rendered an image. Verify EVERY required element "
@@ -386,18 +391,7 @@ def _vision_call(scene: Scene, png_bytes: bytes) -> dict:
         "subject (count the fingers on any prominent open hand). Background "
         "figures dissolving into shadow get more latitude — note but do not fail "
         "on a slightly-off distant hand.\n"
-        "6. **Period authenticity & reverent tone (CHECK THIS EXPLICITLY).** The "
-        "image must read as a 17th-century Baroque devotional OIL PAINTING of the "
-        "ANCIENT biblical world. FAIL (passed:false) on any of: faces/hair/grooming "
-        "that look like MODERN contemporary people or photo-portrait models; modern "
-        "or anachronistic clothing/haircuts/makeup; a glossy photographic 'modern "
-        "headshot' feel instead of painted Old-Master skin; a HORROR-film tone — "
-        "lurid gore, zombie/corpse-horror, ghoulish or grotesque faces, harsh "
-        "modern-cinema lighting; or an NSFW feel — a gratuitously sexualised pose, "
-        "an open-mouthed grimace that reads erotic or grotesque rather than "
-        "reverent, or exposure beyond a modest devotional loincloth. Figures must "
-        "look like weathered first-century Judeans painted by an Old Master, and "
-        "the mood must be reverent, not sensational. When in doubt on tone, FAIL.\n\n"
+        + style_rubric +
         f"BANNED VISIBLE ELEMENTS: {sorted(config.VISUAL_BANNED_TOKENS)}\n\n"
         "Return ONLY a JSON object (optionally inside a ```json fence):\n"
         "{\n"
@@ -410,9 +404,8 @@ def _vision_call(scene: Scene, png_bytes: bytes) -> dict:
         "is correct, the required elements are all present, the vignettes are "
         "present (at most 1 missing), no banned token is visible, the "
         "foreground hands/faces/limbs are anatomically sound (correct finger "
-        "counts on any prominent hand), AND the image reads as a reverent, "
-        "period-authentic Baroque devotional painting (not modern, not horror, "
-        "not NSFW)."
+        "counts on any prominent hand), AND the image reads as a "
+        f"{medium} (not modern, not horror, not NSFW)."
     )
     user_text = (
         f"SCENE {scene.index}: {scene.title}\n"
@@ -557,6 +550,8 @@ def render_scene(
         png_bytes = provider.generate(scene, audit_feedback=feedback)
         elapsed = time.monotonic() - t0
         png_path.write_bytes(png_bytes)
+        (out_dir / f"{stem}.style.json").write_text(
+            json.dumps(config.style_provenance(), indent=2), encoding="utf-8")
         log(f"        rendered {len(png_bytes):,} bytes in {elapsed:.1f}s -> {png_path.name}")
         log(f"        auditing with Claude Vision...")
         audit = verify_image(scene, png_bytes)

@@ -42,6 +42,11 @@ gate_ids, gate_stop, gate_banner = apply_test_gate(
     qc_hint="Watch the WHOLE clip (>=6 frames): living motion, no morph/glitter, no comical reverse.",
 )
 
+# Fail-closed: don't pay to animate stills that contradict Scripture (going-forward;
+# grandfathered/escape-hatch logic lives in bible_kb.gate). BIBLE_GATE=off to bypass.
+from pipeline import bible_kb  # noqa: E402
+bible_kb.gate(ep.v1, stage="animate")
+
 vp = video_render.HFVideoProvider()
 kling = None
 ok = fail = skip = 0

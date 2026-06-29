@@ -1,0 +1,119 @@
+[gate] skipped (--no-gate)
+[parse] 35 turn(s):
+  [00] witness     697 chars
+  [01] scripture    50 chars
+  [02] witness     122 chars
+  [03] scripture   130 chars
+  [04] witness      80 chars
+  [05] scripture   137 chars
+  [06] witness     232 chars
+  [07] scripture   173 chars
+  [08] witness     265 chars
+  [09] scripture    81 chars
+  [10] witness     137 chars
+  [11] scripture    92 chars
+  [12] witness     112 chars
+  [13] scripture   181 chars
+  [14] witness      70 chars
+  [15] scripture    58 chars
+  [16] witness     183 chars
+  [17] scripture   113 chars
+  [18] witness     380 chars
+  [19] scripture   183 chars
+  [20] witness    1626 chars
+  [21] scripture   135 chars
+  [22] witness     542 chars
+  [23] scripture    51 chars
+  [24] witness     111 chars
+  [25] scripture   132 chars
+  [26] witness     296 chars
+  [27] scripture   129 chars
+  [28] witness     153 chars
+  [29] scripture    53 chars
+  [30] witness     285 chars
+  [31] scripture    94 chars
+  [32] witness     695 chars
+  [33] scripture    39 chars
+  [34] witness     155 chars
+[render] [00] witness (UzI1NsMEV3ni5JRkRSls) ... ok (719,351 bytes)
+[skip ] 01_scripture.mp3 exists
+[skip ] 02_witness.mp3 exists
+[skip ] 03_scripture.mp3 exists
+[skip ] 04_witness.mp3 exists
+[skip ] 05_scripture.mp3 exists
+[skip ] 06_witness.mp3 exists
+[skip ] 07_scripture.mp3 exists
+[skip ] 08_witness.mp3 exists
+[skip ] 09_scripture.mp3 exists
+[skip ] 10_witness.mp3 exists
+[skip ] 11_scripture.mp3 exists
+[skip ] 12_witness.mp3 exists
+[skip ] 13_scripture.mp3 exists
+[skip ] 14_witness.mp3 exists
+[skip ] 15_scripture.mp3 exists
+[skip ] 16_witness.mp3 exists
+[skip ] 17_scripture.mp3 exists
+[skip ] 18_witness.mp3 exists
+[skip ] 19_scripture.mp3 exists
+[skip ] 20_witness.mp3 exists
+[skip ] 21_scripture.mp3 exists
+[skip ] 22_witness.mp3 exists
+[skip ] 23_scripture.mp3 exists
+[skip ] 24_witness.mp3 exists
+[skip ] 25_scripture.mp3 exists
+[skip ] 26_witness.mp3 exists
+[skip ] 27_scripture.mp3 exists
+[skip ] 28_witness.mp3 exists
+[skip ] 29_scripture.mp3 exists
+[skip ] 30_witness.mp3 exists
+[skip ] 31_scripture.mp3 exists
+[skip ] 32_witness.mp3 exists
+[skip ] 33_scripture.mp3 exists
+[skip ] 34_witness.mp3 exists
+
+[probe] natural durations:
+  QUOTE witness     44.88s
+  QUOTE scripture    4.16s
+  QUOTE witness      8.56s
+  QUOTE scripture    9.52s
+  QUOTE witness      4.08s
+  QUOTE scripture    8.24s
+  QUOTE witness     18.16s
+  QUOTE scripture   12.32s
+  QUOTE witness     17.12s
+  QUOTE scripture    5.04s
+  QUOTE witness      8.40s
+  QUOTE scripture    6.08s
+  QUOTE witness      6.40s
+  QUOTE scripture   14.00s
+  QUOTE witness      4.00s
+  QUOTE scripture    4.00s
+  QUOTE witness     16.00s
+  QUOTE scripture    7.20s
+  QUOTE witness     25.68s
+  QUOTE scripture   13.76s
+  QUOTE witness    118.00s
+  QUOTE scripture   13.12s
+  QUOTE witness     35.68s
+  QUOTE scripture    4.16s
+  QUOTE witness      8.56s
+  QUOTE scripture    9.12s
+  QUOTE witness     20.56s
+  QUOTE scripture    9.68s
+  QUOTE witness     10.72s
+  QUOTE scripture    3.28s
+  QUOTE witness     19.20s
+  QUOTE scripture    7.84s
+  QUOTE witness     56.56s
+  QUOTE scripture    2.72s
+  QUOTE witness     12.72s
+  TOTAL natural: 569.52s (narrator 0.00s + quotes 569.52s)
+
+[plan] NATURAL mode — atempo locked 1.0 (no stretch). natural total=594.02s vs ceiling 900.0s
+[ok] under the 900.0s ceiling by 305.98s — leaving it natural.
+
+[plan] target=900.0s  quote_total=569.52s  pauses=24.50s (35 quote(s) × pre=0.4s+post=0.3s)  narrator_target=305.98s  atempo=1.0000
+
+[concat] 105 segments  total=594.02s (target 900.0s, delta -305.98s)
+[done] wrote C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\EW03_Joseph\v1\narration.mp3  duration=594.02s
+[done] wrote C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\EW03_Joseph\v1\narration.meta.json

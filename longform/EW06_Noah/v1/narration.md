@@ -27,7 +27,7 @@ Let me tell you what I built with these two hands, for I laboured at it until my
 
 **"Make thee an ark of gopher wood"**
 
-So I cut the gopher wood and sealed it within and without with pitch, that the rising waters might find no crack to creep through. Three hundred cubits it climbed into the sky on dry land — a mountain of timber where no sea had ever rolled — and the people came to gawk at the madman and his boat. I had one instruction I turned over more than any other, for our lives would hang upon it:
+So I cut the gopher wood and sealed it within and without with pitch, that the rising waters might find no crack to creep through. Three hundred cubits it stretched across the dry land — a mountain of timber where no sea had ever rolled — and the people came to gawk at the madman and his boat. I had one instruction I turned over more than any other, for our lives would hang upon it:
 
 **"the door of the ark shalt thou set in the side thereof"**
 

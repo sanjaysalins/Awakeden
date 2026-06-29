@@ -46,8 +46,10 @@ TOPIC
   │     ═══════════════ HUMAN GATE 1: approve audio (by ear) ═══════════════
   ▼  STAGE 2 — VISUAL
   │     /scene-plan  → scene_plan.json (SP-G1..G9 + cohesion)
+  │     /bible-check → scene_facts.json (Scripture-cited facts: BC-G1..G4) — facts DRIVE + CHECK the stills
   │     ═══════════ HUMAN GATE 2: approve images (reroll / exclude / hero) ═══
-  │     /stills      → PNG per scene + Vision audit (IMG-*) + cut_hint sidecar
+  │     /stills      → PNG per scene + Vision audit (IMG-*) + bible audit (BC-G4) + cut_hint sidecar
+  │     ── bible-gate (fail-closed) ── no green Bible-Check = no animate spend ──
   │     /animate     → Kling clip per PNG (frozen tableau, camera-only)
   ▼  STAGE 3 — ASSEMBLY  /assemble   → viral_cut.mp4 (+ /sfx bed)
   │     timeline → jigsaw → AS-G1..G9 → render → per-slot verify
@@ -71,14 +73,15 @@ assembled, not assembled after the fact.
 | 1 Text | `/narrate` | `pipeline/engine.py`, `models.py`, `lock.py` | `narration.md`, `voices.json`, `creation.json` | G1–G8, KJV-strict, cluster, doctrine |
 | 1b Audio | `/voice` | `PythonProject1/jesus/narration/per_turn_synth.py` (subprocess) | `narration.mp3` (~59s, multi-voice) | duration-lock, voices routing |
 | 2a Scene | `/scene-plan` | `pipeline/visual_engine.py` | `visual/scene_plan.json` + cohesion | SP-G1–G9 |
-| 2b Stills | `/stills` | `pipeline/visual_render.py` | PNG/scene + `cut_hint.json` + gallery | IMG-SUBJECT/ELEMENTS/ANATOMY/NOTEXT/PERIOD/TONE/COHERENT |
+| 2a+ Bible-Check | `/bible-check` | `pipeline/bible_kb.py`, `bib_validate.py`, `bible_gate.py`, `scripture.py` | `_bible_check/scene_facts.json` (sha-bound) + `fact_sheet.md` + `bible_check.status.json` + per-still `.bib_audit.json` | BC-G1–G4 + chokepoint (INV-25) |
+| 2b Stills | `/stills` | `pipeline/visual_render.py` (+ `bible_kb.enrich_for_scene`) | PNG/scene + `cut_hint.json` + gallery | IMG-SUBJECT/ELEMENTS/ANATOMY/NOTEXT/PERIOD/TONE/COHERENT + BC-G4 |
 | 2c Animate | `/animate` | `PythonProject1/jesus/.../image_to_kling.py` + `SKILL_locked.md` | `.kling.json` + `.mp4`/clip | CLIP-VIRAL, CLIP-IMAGE-GROUNDED, CLIP-FROZEN, CLIP-NOMORPH, NEVER-ANIMATE-WRITING |
 | 3 Assembly | `/assemble` | `pipeline/assembly_engine.py` + `assembly_ffmpeg.py` | `viral_cut.mp4` + `index.html` | AS-G1–G9 |
 | 3b SFX | `/sfx` | `sfx_pilots/sfxlib.py` | `viral_cut_sfx.mp4` | reuse-from-library, sidechain-duck (INV-18) |
 | 4 Caption | `/caption` | `veed_io/caption.py` | `<clip>_captioned.mp4` | offline $0 ivory recipe (INV-16) |
 | 5 Upload | `/upload` | `pipeline/upload_gates.py` | `upload/upload_kit.{json,md}` | UK-G1–G6 |
 | x Review | `/review` | `independent_review.py` | `_independent_review/<stamp>/` | 5-CLI panel before any LOCK (INV-9) |
-| x Validate | `/validate` | `pipeline/validators.py` + `test_*.py` | green suite | rules_integrity + 114 tests (adds coherence/dedup/still-review/clip-reuse suites; CLIP-NOWRITING live; anchor-verse-unquoted + IMG-COHERENT fixtures still targets) |
+| x Validate | `/validate` | `pipeline/validators.py` + `test_*.py` + `test_bible_kb*.py` | green suite | rules_integrity + 114 tests + 31 Bible-Check tests (adds coherence/dedup/still-review/clip-reuse + BC-G1/BC-G2/chokepoint hash-binding suites; CLIP-NOWRITING live; anchor-verse-unquoted + IMG-COHERENT fixtures still targets) |
 | x Cost | `/cost` | `pipeline/cost.py` | `data/spend_ledger.jsonl` | pre-flight estimate + ask-before-spend (INV-20) |
 | x Learn | `/learn` | `pipeline/learning.py` | `data/learning/` | defect ledger → propose-I-approve |
 
@@ -127,6 +130,18 @@ Every gate is **deterministic** (a Python validator, fail-closed) or **panel**
 | SP-G7 Character Consistency | P | Jesus/disciples identical; jesus_variant consistent |
 | SP-G8 Composition Distribution | D | ≥3 framings; none >50% of scenes |
 | SP-G9 Scene Mix & Gospel Frame | D | ≥1 unified + ≥1 Jesus/NT-link; ≥2 single; never 100% single |
+
+### BIBLE-CHECK — `pipeline/bible_kb.py` (+ `bib_validate.py`, `bible_gate.py`, `scripture.py`)
+Scripture-cited fact cards (location/time/place/customs/characters) that DRIVE the still
+prompt (`enrich_for_scene`) and CHECK the image. Buckets: **specified** (Bible states it →
+fail-closed) · **constrained** (must not contradict) · **free** (licence, not checked).
+| Gate | Type | Checks |
+|---|---|---|
+| BC-G1 Citation integrity | D | every `specified` fact resolves to verbatim KJV (fetched, not generated); an unverifiable `specified` fact auto-downgrades — can't gate a pass on a guess |
+| BC-G2 Over-reach | D ($0) | a `specified` claim naming a COLOUR/NUMBER/MATERIAL absent from its cited KJV is flagged (negation-aware) — catches the "white linen" class with no LLM. `test_bible_kb_regression.py` |
+| BC-G3 Facts panel | P | 5-CLI adversarial review of the clean `fact_sheet.md` (`independent_review.py --type biblical-facts`); convergent flags verified vs KJV; verdict oscillates → binding bar = no doctrinal/citation error, not unanimous PASS |
+| BC-G4 Image-vs-facts | P-Vision (fail-closed) | each still honours its specified (MUST match) + constrained (must not contradict) facts; image silent on a fact = NOT a violation. Writes a **hash-bound** `.bib_audit.json` (image sha + facts sha) — anti-stale/anti-tamper. Calibrated vs blind labels (`bible_calibrate.py`, INV-23) |
+| Chokepoint | D | `bible_kb.gate(v1, stage)` — GREEN only if facts current (scene_plan sha unchanged) + every rendered still covered + passed, hash-current `.bib_audit.json` + 0 unverified `specified` + over_reach clean. Fail-closed before animate; going-forward (grandfather/`BIBLE_GATE` off/strict/warn). Writes `bible_check.status.json` |
 
 ### STILLS (Vision audit) — `pipeline/visual_render.py::verify_image`
 | Rule | Type | Checks |
@@ -205,6 +220,7 @@ Every gate is **deterministic** (a Python validator, fail-closed) or **panel**
 22. **Dyslexia UX** — review by ear, print full absolute paths, build an index/gallery for every batch (from `feedback-audio-first-review`, `feedback-show-full-paths`, `feedback-index-file-and-full-link`).
 23. **Still coherence (IMG-COHERENT) + human authority on the subtle** *(rollout-gated — reports-only until `JITB_REQUIRE_COHERENCE=1`/`JITB_REQUIRE_STILL_REVIEW=1` after the catalogue is backfilled)* — a still is fit for use unless it has a CLEAR F1–F5 defect (blind default-PASS gate, fail-closed `*.coherence.json` sidecar = `audited∧passed∧hash`, k-vote hash-pooled so byte-identical stills can never disagree). The automated gate catches the OBVIOUS at scale; a human still-review sign-off is authority on the SUBTLE. Calibrate against blind human labels before trusting the fail-rate (from `feedback-gate-calibration-human-authority`).
 24. **No fabricated verdicts** — no copy/reuse/servicer path may invent a passing audit/coherence/clip-qc verdict; it copies a REAL sidecar from the source or marks UNVERIFIED. (Closed in `clip_library.materialize`, `v2/pilot/_build_zech_reuse.py`, `v2/servicers/assembly_servicer.py`.)
+25. **Biblically driven + checked stills (Bible-Check)** *(going-forward — `BIBLE_GATE` grandfathers pieces with no `_bible_check/`; flip `strict` to enforce the back-catalogue)* — every still is driven by Scripture-cited FACT CARDS (specified/constrained/free; KJV fetched verbatim, never generated) and CHECKED both ways: the FACTS by the 5-CLI panel (BC-G3, no doctrinal/citation error) and the IMAGE by a fail-closed Vision audit (BC-G4) bound by content hash to the PNG + facts. No still that contradicts a `specified`/`constrained` fact gets animated or shipped (`bible_kb.gate`, fail-closed before animate). The deterministic teeth (BC-G1 citation integrity, BC-G2 over-reach) are $0 and in `/validate`; the image gate is calibrated vs blind labels before its fail-rate is trusted (INV-23). Scripture is binding; historical notes are secondary and never override it (from `bible-kb-accuracy-pipeline`, `bible-kb-panel-calibration`; design in `v2/BIBLE_GATE_DESIGN.md`).
 
 ---
 
@@ -320,4 +336,15 @@ pipeline/  coherence.py  coherence_gate.py  dedup.py  clip_reuse.py  still_revie
 v2/coherence_audit/   provenance.py · build_reject_list.py · build_review_page.py ·
                       build_calibration_set.py · quarantine.py · *.json + *.html review pages
 _rejected_coherence/  quarantined bad stills (reversible, gate fixtures)
+
+(Bible-Check — biblical-accuracy of the stills, NEW 2026-06-29 — INV-25)
+pipeline/bible_kb.py   engine: KB load · derive · KJV-hydrate · over_reach_scan · verify_biblical_accuracy ·
+                       enrich_for_scene (facts DRIVE prompts) · check_status/gate/assert_green (chokepoint)
+bib_validate.py        driver (derive → facts-panel → image-audit → report)   bible_gate.py   fail-closed CLI
+bible_calibrate.py     image-audit calibration vs blind labels
+bible_kb/   characters/ places/ objects/ customs/ eras/   (cited fact bank, grows from verified output)
+            _calibration/labels.json   README.md
+test_bible_kb.py  test_bible_kb_regression.py   (31 tests, in /validate)
+v2/BIBLE_GATE_DESIGN.md   the 3-layer enforcement + regression design (panel-reviewed)
+<v1>/_bible_check/   scene_facts.json (sha-bound) · fact_sheet.md · bible_check.status.json · index.html
 ```

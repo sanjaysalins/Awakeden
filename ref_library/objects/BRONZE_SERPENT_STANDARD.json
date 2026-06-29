@@ -1,0 +1,17 @@
+{
+  "name": "BRONZE_SERPENT_STANDARD",
+  "kind": "object",
+  "canonical": "a tall straight rough-hewn bare wooden pole planted upright, with a single cast bronze serpent MOUNTED ON TOP at the very summit \u2014 its body raised and its head lifted high like a banner. The long lower shaft is completely BARE plain wood; the serpent does NOT spiral, wind or coil down the pole. A serpent SET UPON a pole (Num 21:8), lifted up \u2014 NOT a snake-wrapped staff, NOT the Rod of Asclepius, NOT a medical caduceus, NOT an occult charm",
+  "tags": [
+    "bronze-serpent",
+    "standard",
+    "pole",
+    "numbers-21",
+    "wilderness",
+    "type-of-christ"
+  ],
+  "style": "inked",
+  "anchor": "objects/BRONZE_SERPENT_STANDARD.png",
+  "first_used": "EW04_Bronze_Serpent",
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

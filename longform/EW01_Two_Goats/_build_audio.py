@@ -16,9 +16,10 @@ SRC = V1 / "narration.md"
 VOICES = {
     "witness":   {"voice_id": "UzI1NsMEV3ni5JRkRSls", "audio_tag": None},  # Aaron — deep/weathered
     "scripture": {"voice_id": "puDRtQWF8NtQiPMJygTb", "audio_tag": None},  # dedicated KJV reader
+    "the_LORD":  {"voice_id": "BvKkUzf75BfURv388O3G", "audio_tag": None},  # divine voice (Lev 16:2)
 }
 
-_TAG = re.compile(r"^\s*\*\*\[[^\]]+\]\*\*\s*")     # leading **[Speaker]**
+_TAG = re.compile(r"^\s*\*\*\[([^\]]+)\]\*\*\s*")    # leading **[Speaker]** (captures the speaker)
 _QUOTE = re.compile(r'^\*\*"(.+)"\*\*$')             # a bold KJV quote line
 
 
@@ -27,10 +28,13 @@ def _voice_and_text(line: str):
     if not s or s == "---" or s.startswith("## ") or s.startswith("# ") or s.startswith("**Witness:**") \
        or s.startswith("**Status:**") or s.startswith("**Core text"):
         return None
-    s = _TAG.sub("", s)                              # drop any **[Speaker]** tag (the LORD line -> its quote)
+    m_tag = _TAG.match(s)                            # a **[Speaker]** tag routes the quote to that voice
+    speaker = m_tag.group(1).strip().replace(" ", "_") if m_tag else None  # "the LORD" -> "the_LORD"
+    s = _TAG.sub("", s)
     m = _QUOTE.match(s)
     if m:
-        return ("scripture", m.group(1).strip())
+        voice = speaker if speaker in VOICES else "scripture"   # named speaker, else the KJV reader
+        return (voice, m.group(1).strip())
     text = re.sub(r"[*_`]", "", s).strip()           # witness prose: strip emphasis markers
     return ("witness", text) if text else None
 

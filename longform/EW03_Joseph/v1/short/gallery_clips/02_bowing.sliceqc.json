@@ -1,0 +1,33 @@
+{
+  "clip": "02_bowing.mp4",
+  "n_slices": 4,
+  "omit": false,
+  "n_high": 0,
+  "issues": [],
+  "slices": [
+    {
+      "ok": true,
+      "issue": "",
+      "severity": "none",
+      "slice": 0
+    },
+    {
+      "ok": true,
+      "issue": "",
+      "severity": "none",
+      "slice": 1
+    },
+    {
+      "ok": true,
+      "issue": "",
+      "severity": "none",
+      "slice": 2
+    },
+    {
+      "ok": false,
+      "issue": "off-subject crop: empty stone floor + light shaft, no face/hands/key-object in frame",
+      "severity": "low",
+      "slice": 3
+    }
+  ]
+}

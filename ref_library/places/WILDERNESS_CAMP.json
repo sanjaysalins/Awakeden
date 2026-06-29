@@ -1,0 +1,18 @@
+{
+  "name": "WILDERNESS_CAMP",
+  "kind": "place",
+  "canonical": "an ancient Israelite wilderness encampment at dusk in the rocky Sinai desert: scattered rough goat-hair tents, low firelight, bare rocky sand, distant barren hills under a heavy dim sky",
+  "tags": [
+    "wilderness",
+    "camp",
+    "sinai",
+    "desert",
+    "encampment",
+    "exodus",
+    "dusk"
+  ],
+  "style": "inked",
+  "anchor": "places/WILDERNESS_CAMP.png",
+  "first_used": "EW04_Bronze_Serpent",
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

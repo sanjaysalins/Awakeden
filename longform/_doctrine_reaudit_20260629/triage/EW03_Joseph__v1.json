@@ -1,0 +1,17 @@
+{
+  "piece_id": "EW03_Joseph__v1",
+  "path": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW03_Joseph\\v1\\narration.md",
+  "form": "long",
+  "verdict": "FIX",
+  "summary": "All 18 KJV quotes verify verbatim and the Christ-typology/grace-anchored CTA are doctrinally sound, but the Beat 1 revelation scene contradicts the source by placing the 'I am Joseph' disclosure before 'ten' brothers when Scripture has eleven (Benjamin included) present at that moment.",
+  "findings": [
+    {
+      "severity": "narrative-fact",
+      "beat": "Beat 1 — 'But on that day, ten travel-worn men came begging me for grain... And when I could hold it in no longer... I am Joseph your brother, whom ye sold into Egypt.'",
+      "quote_or_claim": "But on that day, ten travel-worn men came begging me for grain, not knowing the ruler they bowed to. They were my brothers ... And when I could hold it in no longer, I sent every Egyptian out of the room ... I am Joseph your brother, whom ye sold into Egypt.",
+      "problem": "The narration telescopes two separate visits and carries the count 'ten' into the revelation scene. The 'I am Joseph your brother' disclosure (Gen 45:1-4) happened on the SECOND journey, with all ELEVEN brothers present, including Benjamin (Gen 43:15-16; 44:14). The 'ten' brethren without Benjamin describes the FIRST grain-buying visit (Gen 42:3-4), at which no disclosure occurred. Stating that Joseph revealed himself to 'ten' men contradicts the text, which has eleven present at that saying.",
+      "scripture_ref": "Gen 42:3-4; 43:15-16; 45:1-4",
+      "proposed_fix_text": "But on that day, my brothers came begging me for grain, not knowing the ruler they bowed to — the very brothers who had sold me, whose faces I had carried in the dark for half my life. And when I could hold it in no longer, I sent every Egyptian out of the room, and I wept aloud until the house of Pharaoh heard me, and I said the words they had dreaded for twenty years:"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "JERUSALEM_NIGHT_INTERIOR",
+  "kind": "place",
+  "canonical": "the interior of an ancient Jerusalem stone house at night: plain dressed-stone walls, a low stone ledge, a single small clay oil lamp casting warm light into deep darkness, simple period furnishings",
+  "tags": [
+    "jerusalem",
+    "interior",
+    "night",
+    "stone-house",
+    "oil-lamp",
+    "intimate"
+  ],
+  "style": "inked",
+  "anchor": "places/JERUSALEM_NIGHT_INTERIOR.png",
+  "first_used": "EW04_Bronze_Serpent",
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

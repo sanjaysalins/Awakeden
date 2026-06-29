@@ -1,0 +1,77 @@
+{
+  "_doc": "Blind-labelled calibration set for the IMAGE audit (Layer 2). Each item pairs a REAL rendered still with a fact + a human 'expected' verdict (pass = image honours the fact; fail = image violates it). We run the audit and measure precision/recall so we trust the gate's fail-rate (per feedback-gate-calibration-human-authority). 'fail' items are the positives the gate must CATCH.",
+  "items": [
+    {
+      "id": "two-goats-PASS",
+      "image": "longform/EW01_Two_Goats/v1/visual_16x9/07_they_brought_me_two_goats_and_i_cast_lot.png",
+      "scene_title": "They brought me two goats, and I cast lots",
+      "subject": "Two goats before the priest; Aaron in linen casting lots over a bronze vessel.",
+      "facts": [{"claim": "Two goats are present together for the people's sin offering.", "bucket": "specified", "scripture": ["Leviticus 16:7"]}],
+      "expected": "pass",
+      "note": "Image clearly shows two goats."
+    },
+    {
+      "id": "one-goat-FAIL",
+      "image": "longform/EW01_Two_Goats/v1/visual_16x9/07_they_brought_me_two_goats_and_i_cast_lot.png",
+      "scene_title": "They brought me two goats, and I cast lots",
+      "subject": "Two goats before the priest; Aaron in linen casting lots over a bronze vessel.",
+      "facts": [{"claim": "Exactly ONE single goat is present for the people's sin offering.", "bucket": "specified", "scripture": ["Leviticus 16:7"]}],
+      "expected": "fail",
+      "note": "Image shows TWO goats, so a 'one goat' fact must FAIL."
+    },
+    {
+      "id": "both-hands-PASS",
+      "image": "longform/EW01_Two_Goats/v1/visual_16x9/09_both_my_hands_upon_the_live_goat.png",
+      "scene_title": "Both my hands upon the live goat",
+      "subject": "Aaron in linen, both hands on the head of a living goat, confessing.",
+      "facts": [{"claim": "The priest lays BOTH hands on the head of a LIVE (standing) goat.", "bucket": "specified", "scripture": ["Leviticus 16:21"]}],
+      "expected": "pass",
+      "note": "Image shows both hands on a live goat."
+    },
+    {
+      "id": "slain-goat-FAIL",
+      "image": "longform/EW01_Two_Goats/v1/visual_16x9/09_both_my_hands_upon_the_live_goat.png",
+      "scene_title": "Both my hands upon the live goat",
+      "subject": "Aaron in linen, both hands on the head of a living goat, confessing.",
+      "facts": [{"claim": "The goat is already SLAIN, lying dead on the ground.", "bucket": "specified", "scripture": ["Leviticus 16:21"]}],
+      "expected": "fail",
+      "note": "Image shows a LIVE standing goat, so a 'slain/dead goat' fact must FAIL."
+    },
+    {
+      "id": "ark-in-court-FAIL",
+      "image": "longform/EW01_Two_Goats/v1/visual_16x9/01_once_a_year_only_once.png",
+      "scene_title": "Once a year, only once",
+      "subject": "Aaron before the Tabernacle tent at first light; a crowd in the court.",
+      "facts": [{"claim": "The ark of the covenant stays WITHIN the most holy place behind the veil - it is NOT out in the open court before the people.", "bucket": "constrained", "scripture": ["Exodus 26:33", "Leviticus 16:2"]}],
+      "expected": "fail",
+      "note": "This still actually shows the golden ark out in the open courtyard - a real contradiction the gate must catch."
+    },
+    {
+      "id": "tent-not-temple-PASS",
+      "image": "longform/EW01_Two_Goats/v1/visual_16x9/01_once_a_year_only_once.png",
+      "scene_title": "Once a year, only once",
+      "subject": "Aaron before the Tabernacle tent at first light; a crowd in the court.",
+      "facts": [{"claim": "The sanctuary is a curtained TENT, not a stone temple.", "bucket": "constrained", "scripture": ["Exodus 26:1", "Exodus 40:2"]}],
+      "expected": "pass",
+      "note": "Image shows a tent of curtains and skins, not stone."
+    },
+    {
+      "id": "linen-at-veil-PASS",
+      "image": "longform/EW01_Two_Goats/v1/visual_16x9/03_plain_white_linen_like_a_servant.png",
+      "scene_title": "Plain linen, like a servant",
+      "subject": "Aaron in plain linen before the veil, from behind.",
+      "facts": [{"claim": "The priest is in plain linen garments (not gold) at the veil.", "bucket": "specified", "scripture": ["Leviticus 16:4"]}],
+      "expected": "pass",
+      "note": "Image shows white/undyed linen, no gold."
+    },
+    {
+      "id": "gold-at-veil-FAIL",
+      "image": "longform/EW01_Two_Goats/v1/visual_16x9/03_plain_white_linen_like_a_servant.png",
+      "scene_title": "Plain linen, like a servant",
+      "subject": "Aaron in plain linen before the veil, from behind.",
+      "facts": [{"claim": "The priest wears the GOLD breastplate and jewelled ephod at the veil.", "bucket": "specified", "scripture": ["Leviticus 16:4"]}],
+      "expected": "fail",
+      "note": "Image shows plain linen, so a 'gold at the veil' fact must FAIL."
+    }
+  ]
+}

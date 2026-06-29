@@ -1,0 +1,23 @@
+[gate] skipped (--no-gate)
+[parse] 3 turn(s):
+  [00] witness     589 chars
+  [01] scripture    53 chars
+  [02] witness     320 chars
+[render] [00] witness (UzI1NsMEV3ni5JRkRSls) ... ok (734,398 bytes)
+[skip ] 01_scripture.mp3 exists
+[skip ] 02_witness.mp3 exists
+
+[probe] natural durations:
+  QUOTE witness     45.84s
+  QUOTE scripture    3.84s
+  QUOTE witness     27.52s
+  TOTAL natural: 77.20s (narrator 0.00s + quotes 77.20s)
+
+[plan] NATURAL mode — atempo locked 1.0 (no stretch). natural total=78.85s vs ceiling 150.0s
+[ok] under the 150.0s ceiling by 71.15s — leaving it natural.
+
+[plan] target=150.0s  quote_total=77.20s  pauses=1.65s (3 quote(s) × pre=0.3s+post=0.25s)  narrator_target=71.15s  atempo=1.0000
+
+[concat] 9 segments  total=78.85s (target 150.0s, delta -71.15s)
+[done] wrote C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\EW01_Two_Goats\v1\short\narration.mp3  duration=78.85s
+[done] wrote C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\EW01_Two_Goats\v1\short\narration.meta.json

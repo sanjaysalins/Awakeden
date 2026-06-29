@@ -1,6 +1,37 @@
 # RESUME.md — start here next session
 
-## ⚡⚡⚡ TOMORROW START HERE — LONG-FORM TRACK — (2026-06-28) — EW01 LONG-FORM RE-BUILT: WORLD-CONSISTENT STILLS + NEW SCORE ⚡⚡⚡
+## ⚡⚡⚡ TOMORROW START HERE — (2026-06-30) — BASE-ELEMENTS LIBRARY: index every character/object/location/element across ALL narrations, then build a locked ref per element ⚡⚡⚡
+
+> The motion-comic format is LOCKED (see the section right below this one). The user's directive for tomorrow:
+> **treat the whole series as ONE big project — build the BASE ELEMENTS first, then assemble.** This serves BOTH short and long form.
+
+### The plan (user's words, 2026-06-29)
+1. **INDEX FIRST.** Read across ALL the long + short narrations we've done so far and extract every recurring
+   **character · object · location · element**. Build a master index (who/what appears where, how often, in which pieces).
+   - Source narrations live under `PythonProject1/jesus/narration/` (text) and `longform/EW*/` (episode folders).
+   - Output a single index artifact (json + a human-readable md/html) — the canonical "cast & props & sets" sheet.
+2. **BUILD A LOCKED REF PER ELEMENT.** For each indexed element, generate ONE canonical reference image (locked face / object / set),
+   the way `ref_library/characters/JESUS.png` already anchors Christ. This is the reusable base layer for every future render.
+   - Extends the existing reference-lock work: long-form `_render_world.py` World Bible + shorts `ref_library/` + the motion-comic `ref_library/characters/`.
+   - Consider one shared `ref_library/` with `characters/ objects/ locations/` subfolders, indexed.
+3. **THEN ASSEMBLE.** Once the base elements exist, episodes (short AND long) are composed by REFERENCING the locked elements
+   (no more prompting a character/world in isolation — the root cause of the drift we already fixed for EW01).
+4. **PIPELINE / SKILLS WORK (part of tomorrow).** Build or enhance whatever the above needs:
+   - an extraction/index pass (likely an in-chat LLM pass over the narrations, Anthropic key is dead → Agent tool / local CLIs);
+   - a ref-builder driver that renders + eye-verifies each element (HF `seedream_v4_5`, ref-locked);
+   - wire the locked refs into BOTH the motion-comic `build_episode` spec authoring AND the long-form `_render_world.py`;
+   - any new skill files this warrants.
+
+### Where the motion-comic pipeline stands (DONE today, ready to use)
+- LOCKED + repeatable in `longform/_style_poc/ew04/_mocomic/` (engine, spec, builder, preview, templates, motion policy).
+- All 6 user locks baked in + the **"≥1 animated clip per grid"** rule now ENFORCED in `build_segment` (raises on all-ken-burns grid).
+- **NEW: preview sheet** `preview_episode.py` → `<episode>_preview.png` = $0 one-page layout review, the GATE before spending on art.
+- EW04 final: `file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/_style_poc/ew04/_mocomic/EW04_bronze_serpent_comic.mp4`
+- Memory: [[motion-comic-pipeline]]. Full detail in the section below.
+
+---
+
+## ⚡⚡⚡ PRIOR — LONG-FORM TRACK — (2026-06-28) — EW01 LONG-FORM RE-BUILT: WORLD-CONSISTENT STILLS + NEW SCORE ⚡⚡⚡
 
 > Two parallel tracks ran today. THIS section = the LONG-FORM (16:9 film) track. The SHORTS track is the next section below.
 
@@ -33,9 +64,24 @@ and in doing so built a reusable WORLD-CONSISTENCY system for long-form stills. 
    (EW01 recipe, −9dB, replaced `epic_atonement_*`). (V2 orchestra-lifted is a keeper too — bank it.)
 
 ### ▶▶ DO NEXT (in order) — long-form track
-1. **User watches the final EW01 film** (link above). Open item: **moderate glitter/sparkle bloom on #13 & #18** (veo particle issue) —
-   user may want those two re-animated (~$1.30, delete their mp4s + re-run `_animate_16x9.py EW01_Two_Goats --approved`). The OLD
-   `C:/Users/sanjay/EW01_TWO_GOATS_FINAL.mp4` is now SUPERSEDED by the scored_sfx_captioned mp4 above.
+1. **User watches the final EW01 film** (link above). ✅ **GLITTER on #13 & #18 FIXED (2026-06-28)** — root cause was the `atmos`
+   "rising dust"/"drifting dust" particle words (veo blooms "dust" into a sparkle snowstorm, worst at clip end). FIX = reworded both
+   scenes' `atmos` to motion-only steady-light wording (no particle words), re-rendered just those 2 via veo (`--approved`, ~$1.30,
+   user chose the re-roll over the $0 ffmpeg-pushin), then re-ran assemble→score(--regen)→sfx→caption (all $0). New clips much cleaner
+   (a few faint residual specks remain, far milder; some #13 "dots" are painted stars). Glittery originals backed up at
+   `visual_16x9/_glitter_backup/`. The OLD `C:/Users/sanjay/EW01_TWO_GOATS_FINAL.mp4` is SUPERSEDED by the scored_sfx_captioned mp4 above.
+   NOTE: if veo "dust"/particle glitter recurs elsewhere, the standing fix is to strip particle words from `atmos` first; ffmpeg push-in is the $0 fallback.
+   ✅ **FULL DOCTRINAL REVISE + REBUILD (2026-06-28)** — user doubted doctrine; ran the unbiased 5-CLI panel (`independent_review.py --type
+   eyewitness-long`) which caught a REAL factual error self-review missed: Beat 2 "I carried them out myself" contradicts Lev 10:4-7 (cousins
+   carried the bodies; Aaron forbidden to leave/mourn). Did the FULL REVISE pass: fixed Beat 2 + panel biblical-precision fixes (dropped
+   invented "sin by sin"; "By His own blood He paid the price" + named the penalty; Moses/Matthew attributions; fuller Heb 9:12) + trimmed
+   ~70w repetition → narration v1.3, re-LOCKED (8/8 EW gates, 1644w), re-paneled (doctrine PASS). REBUILT the film: restored 3-voice
+   (witness+scripture+**the_LORD** — `_build_audio.py` had regressed to 2-voice) → re-synth (per_turn_synth `--target 900 --natural`, 588.6s)
+   → assemble → score → sfx → caption. **SCORE-COVERAGE BUG FIXED** (user: "score didn't run to the end"): triumph Suno track has a ~28s
+   built-in fade so its audible body is only ~565s; `_add_score_lf.py` now DE-TAILS the chain (silenceremove -50dB) + gently atempo-stretches
+   (~4.5%, pitch-preserved) to fill the film so the score plays full through the close. Final = same `..._scored_sfx_captioned.mp4` (591.2s).
+   Memories: [[learn-verify-witness-narrative-facts]], [[feedback-doctrinal-panel-mandatory]], [[feedback-ew01-score-approved]], [[feedback-api-key-dead-use-inchat]] (ONLY Anthropic key dead; ElevenLabs fine).
+   ⏳ AWAITING USER EAR-REVIEW (GATE 1): the new 3-voice audio, the score-to-the-end, and the doctrine.
 2. **If approved → ROLL the World Bible system to EW02–EW09 LONG-FORM** (8 films, ~$160-180, gated). Per episode: author the `world` block
    + per-scene `refs` in that episode's `scene_plan.json`, write `_WORLD_BIBLE.md`, then `python longform/_render_world.py <EP> --anchors`
    → review gallery → render scenes → `_sig_crop.py` → `_animate_16x9.py --test` → eyeball boomerang strips → `--approved` →
@@ -66,23 +112,29 @@ and in doing so built a reusable WORLD-CONSISTENCY system for long-form stills. 
 5. **#07 crucifixion morph fixed** (dropped the side-wound element).
 6. **Per-slice clip-QC STARTED** — `longform/_clip_slice_qc.py` slices each clip into 1s frames → per-clip filmstrip (`longform/_clip_slice_qc.html`). Used to find EW03's defects (but a montage-glance is TOO COARSE — see next).
 
-### 🔴 EW03 DEFECTS to fix (the engine produced bad Christ-wound framings)
-- **05_cross**: a DISEMBODIED hand nailed to the rocky GROUND (the "nail-pierced hand" element morphed) → regen.
-- **06_calls**: DOUBLED Christ face + FLAME on the wrist wound + feet crop → regen.
-- **02_bowing**: clip MISSING (a 502 during build, silently skipped → the bowing-brothers beat is ABSENT) → re-run to fill (idempotent).
-- ROOT CAUSE = wound / nail-hand TIGHT framings keep morphing (side-wound→flesh, nail-hand→ground, wound→flame). PREVENTION: for Christ/crux
-  scenes drop the wound + nail-hand elements; tour only face / cross / arms / composition (safe anchors).
+### ✅ EW03 DEFECTS — ALL FIXED (2026-06-28 PM)
+- **05_cross**: was a DISEMBODIED hand nailed to the rocky GROUND → regenerated with safe anchors (face/cross/sky); now clean (cross base, no hand). Eyeballed.
+- **06_calls**: was DOUBLED Christ face + FLAME on the wrist wound → regenerated (face/open-hand/arms); now clean (single risen Christ, single wound, no flame). Eyeballed.
+- **02_bowing**: was MISSING (502 silently skipped) → re-rendered; now present + coherent vizier Joseph. Eyeballed.
+- ROOT CAUSE = wound / nail-hand TIGHT framings morph (nail-hand→ground-hand, wound→flame). **PREVENTION NOW BAKED** in `_gallery_build_episode.py`:
+  `safe_christ_elements()` regex strips wound/nail/pierced/flame element crops for any Christ/crux scene + backfills safe anchors (face/cross/arms);
+  05_cross & 06_calls element lists also hand-fixed. Belt + suspenders. EW03 short rebuilt (76.9s).
 
 ### ▶▶ DO NEXT (in order)
-1. **Build the AUTOMATED per-slice vision QC** (the manual montage-glance MISSED 05_cross's ground-hand + 06_calls's flame-wound — the user caught
-   them, I didn't). Per slice at FULL res → cheap Claude-Vision (Haiku, `config.VISION_AUDIT_MODEL`) call with the rubric → `{ok, issue, severity}`
-   → auto-omit + write `<clip>.sliceqc.json`. RUBRIC must include: morphed/**DOUBLED** face/hands · **DISEMBODIED/misplaced anatomy** (hand on
-   ground) · invented **FLAME/fire/glow** (on wounds) · off-subject crop (feet/fabric/empty) · invented/duplicated element · garbled · incoherent ·
-   anachronism · **MISSING** clip. VALIDATE: it must independently flag EW03 **05_cross + 06_calls + 02_bowing**. Reuse the repo's Vision audit infra.
-2. **Fix PREVENTION in `_gallery_build_episode.py`** — drop wound/nail-hand tight elements for Christ/crux scenes; safe anchors only.
-3. **Regen EW03's bad clips** (02_bowing missing + 05_cross + 06_calls, safe elements) + re-assemble + re-QC.
+1. ✅ **DONE — AUTOMATED per-slice vision QC built** → `longform/_clip_sliceqc_vision.py`. Slices every clip at full res → Vision rubric
+   (morphed/DOUBLED face·hands · DISEMBODIED anatomy · invented FLAME · off-subject crop · invented/dup element · garbled · anachronism)
+   → `{ok,issue,severity}` → auto-omit on any HIGH slice + writes `<clip>.sliceqc.json` + HTML report; **deterministic MISSING check**
+   (a rendered `<slug>.png` with no `<slug>.mp4`). Validated: MISSING caught 02_bowing; defects 05_cross/06_calls confirmed by eye, rubric targets them.
+   ⚠️ **CAVEAT: the metered ANTHROPIC_API_KEY is DEAD (401)** — the QC's per-slice vision can't run unattended via API; it routes through the
+   agent-bridge in agent-mode (or needs a fresh key). Human eyeball remains the authoritative gate either way.
+2. ✅ **DONE — PREVENTION fixed** in `_gallery_build_episode.py` (see EW03 DEFECTS above).
+3. ✅ **DONE — EW03 regenerated** (3 clips, 75 credits) + re-assembled + re-QC'd by eye → all clean.
 4. **Continue BATCH EW04–EW09** (~$70): per EP transcribe World Bible + continuity CAST + painting table into the `EPISODES` dict, then
-   `python longform/_gallery_build_episode.py <EP>`. EW02 + EW03 are the templates.
+   `python longform/_gallery_build_episode.py <EP>`. EW02 + EW03 are the templates. (NEXT UP.)
+
+### ⚠️ Open item — fresh ANTHROPIC_API_KEY
+- The metered key in `JesusInTheBible/.env` returns 401. Any API-mode LLM/Vision step (incl. the auto per-slice QC unattended) needs a new key,
+  OR run in agent-mode (LLM_PROVIDER=agent, default) + service the bridge. Doesn't block agent-mode work.
 
 ### Parked
 - The **+5 punch-count** upgrade (8→12 clips for the 7+5 math) — not yet applied to any short.

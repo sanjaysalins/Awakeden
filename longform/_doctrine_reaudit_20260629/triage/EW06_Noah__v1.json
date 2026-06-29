@@ -1,0 +1,17 @@
+{
+  "piece_id": "EW06_Noah__v1",
+  "path": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW06_Noah\\v1\\narration.md",
+  "form": "long",
+  "verdict": "FIX",
+  "summary": "All ten Scripture quotes are KJV-verbatim and the Christ-as-the-one-door type with its grace-anchored, fear-free CTA is doctrinally sound; the only error is a dimensional one — the 300 cubits is described as the ark's vertical height when Gen 6:15 makes it the length (height was 30 cubits).",
+  "findings": [
+    {
+      "severity": "narrative-fact",
+      "beat": "Beat 3 — The act",
+      "quote_or_claim": "Three hundred cubits it climbed into the sky on dry land — a mountain of timber where no sea had ever rolled",
+      "problem": "The phrase 'climbed into the sky' attributes the 300-cubit measurement to the ark's vertical height. Gen 6:15 makes 300 cubits the LENGTH of the ark; the height was only thirty cubits and the breadth fifty. Describing the ark as towering 300 cubits into the sky inverts the dimension given in the source text.",
+      "scripture_ref": "Gen 6:15",
+      "proposed_fix_text": "Three hundred cubits it stretched across the dry land — a mountain of timber where no sea had ever rolled — and the people came to gawk at the madman and his boat."
+    }
+  ]
+}

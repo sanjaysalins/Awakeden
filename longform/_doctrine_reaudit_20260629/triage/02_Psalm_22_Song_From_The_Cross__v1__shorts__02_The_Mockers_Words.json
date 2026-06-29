@@ -1,0 +1,17 @@
+{
+  "piece_id": "02_Psalm_22_Song_From_The_Cross__v1__shorts__02_The_Mockers_Words",
+  "path": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\shorts\\02_The_Mockers_Words\\narration.md",
+  "form": "short",
+  "verdict": "CLEAN",
+  "summary": "Both Scripture quotes match the KJV word-for-word, the two mocking groups are correctly attributed (passers-by Matt 27:39 / religious leaders Matt 27:41-43), and the landing is sound voluntary-substitution doctrine that lands on Christ with a grace-anchored CTA.",
+  "findings": [
+    {
+      "severity": "stylistic",
+      "beat": "David's quote, Beat 'Psalm twenty-two...'",
+      "quote_or_claim": "…they shake the head, saying, He trusted on the LORD that he would deliver him: let him deliver him…",
+      "problem": "The narration inserts a comma after 'head' ('shake the head, saying') whereas the project's kjv_cache.json (bible-api source) reads 'shake the head saying' with no comma. This is a documented punctuation-only choice (the authoritative 1769 KJV has the comma); every WORD matches verbatim, so it is not a verbatim error — noted for completeness only.",
+      "scripture_ref": "Psalm 22:7-8",
+      "proposed_fix_text": "No change required; words match KJV verbatim. Comma reflects the authoritative 1769 KJV punctuation, not the cache's stripped form."
+    }
+  ]
+}

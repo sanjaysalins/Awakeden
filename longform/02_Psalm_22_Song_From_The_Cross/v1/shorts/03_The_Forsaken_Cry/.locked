@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "spoken_sha256": "318576b95cb97fba16184a5d56f39e080f0b996d870c6f9fe3c8472f176d3249",
+  "spoken_sha256": "f491dc04120635cd1808d97a344b20567de612ec7d7a736aff432d93e973c655",
   "checks_run": [
     "kjv_strict",
     "parity",

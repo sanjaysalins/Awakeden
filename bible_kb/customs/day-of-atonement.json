@@ -1,0 +1,306 @@
+{
+  "slug": "day-of-atonement",
+  "name": "The Day of Atonement (Leviticus 16)",
+  "facts": [
+    {
+      "claim": "Two goats were taken together for the people's single sin offering on the Day of Atonement.",
+      "bucket": "specified",
+      "scripture": [
+        "Leviticus 16:5",
+        "Leviticus 16:7"
+      ],
+      "kjv_text": "[Leviticus 16:5] And he shall take of the congregation of the children of Israel two kids of the goats for a sin offering, and one ram for a burnt offering.\n[Leviticus 16:7] And he shall take the two goats, and present them before the LORD at the door of the tabernacle of the congregation.",
+      "historical_note": "",
+      "visual_directive": "When the goats appear, show TWO goats together.",
+      "banned_anachronisms": [
+        "a single goat for the people's sin offering",
+        "a lamb or bull substituted for the goats"
+      ],
+      "verified": true,
+      "entity": "day-of-atonement"
+    },
+    {
+      "claim": "Aaron cast lots upon the two goats - one lot for the LORD and one for the scapegoat.",
+      "bucket": "specified",
+      "scripture": [
+        "Leviticus 16:8"
+      ],
+      "kjv_text": "[Leviticus 16:8] And Aaron shall cast lots upon the two goats; one lot for the LORD, and the other lot for the scapegoat.",
+      "historical_note": "",
+      "visual_directive": "The act of casting lots over the two goats.",
+      "banned_anachronisms": [
+        "a goat already slain at the lot-casting moment"
+      ],
+      "verified": true,
+      "entity": "day-of-atonement"
+    },
+    {
+      "claim": "Atonement within the veil is the once-a-year Day of Atonement rite; the high priest may not come into the holy place within the veil at other times.",
+      "bucket": "specified",
+      "scripture": [
+        "Leviticus 16:2",
+        "Leviticus 16:34"
+      ],
+      "kjv_text": "[Leviticus 16:2] And the LORD said unto Moses, Speak unto Aaron thy brother, that he come not at all times into the holy place within the vail before the mercy seat, which is upon the ark; that he die not: for I will appear in the cloud upon the mercy seat.\n[Leviticus 16:34] And this shall be an everlasting statute unto you, to make an atonement for the children of Israel for all their sins once a year. And he did as the LORD commanded Moses.",
+      "historical_note": "",
+      "visual_directive": "The rite reads as the solemn annual Day of Atonement, not generic daily priestly routine.",
+      "banned_anachronisms": [
+        "a casual/repeated entry behind the veil as ordinary routine"
+      ],
+      "verified": true,
+      "entity": "day-of-atonement"
+    },
+    {
+      "claim": "The goat for the LORD (chosen by lot) was killed as a sin offering and its blood brought within the veil and sprinkled upon and before the mercy seat - the slain-goat half of the rite, alongside the live scapegoat sent away.",
+      "bucket": "constrained",
+      "scripture": [
+        "Leviticus 16:9",
+        "Leviticus 16:15"
+      ],
+      "kjv_text": "[Leviticus 16:9] And Aaron shall bring the goat upon which the LORD’S lot fell, and offer him for a sin offering.\n[Leviticus 16:15] Then shall he kill the goat of the sin offering, that is for the people, and bring his blood within the vail, and do with that blood as he did with the blood of the bullock, and sprinkle it upon the mercy seat, and before the mercy seat:",
+      "historical_note": "Theologically (a secondary note, not a visual fact) this slain half is the 'price paid' alongside the scapegoat's 'sin carried away' - the substitution the Christ-type rests on. Across the set, do not depict only the live scapegoat and silently drop the slain goat / blood within the veil.",
+      "visual_directive": "Somewhere in the set, show the LORD's goat slain and its blood carried within the veil to the mercy seat.",
+      "banned_anachronisms": [
+        "a depiction implying the live goat alone accomplished atonement"
+      ],
+      "verified": true,
+      "entity": "day-of-atonement"
+    },
+    {
+      "claim": "Aaron first brought a bullock as a sin offering for HIMSELF and his house, and its blood within the veil, before the people's goat - he mediates, he is not the substitute.",
+      "bucket": "constrained",
+      "scripture": [
+        "Leviticus 16:6",
+        "Leviticus 16:11",
+        "Leviticus 16:14"
+      ],
+      "kjv_text": "[Leviticus 16:6] And Aaron shall offer his bullock of the sin offering, which is for himself, and make an atonement for himself, and for his house.\n[Leviticus 16:11] And Aaron shall bring the bullock of the sin offering, which is for himself, and shall make an atonement for himself, and for his house, and shall kill the bullock of the sin offering which is for himself:\n[Leviticus 16:14] And he shall take of the blood of the bullock, and sprinkle it with his finger upon the mercy seat eastward; and before the mercy seat shall he sprinkle of the blood with his finger seven times.",
+      "historical_note": "",
+      "visual_directive": "Guard against implying the two goats are the whole blood ritual; Aaron's own bullock comes first.",
+      "banned_anachronisms": [
+        "a depiction implying Aaron needed no offering for his own sin"
+      ],
+      "verified": true,
+      "entity": "day-of-atonement"
+    },
+    {
+      "claim": "Within the veil Aaron took a censer of burning coals and sweet incense so that the cloud of incense covered the mercy seat; separately, the LORD said He would appear in the cloud upon the mercy seat.",
+      "bucket": "constrained",
+      "scripture": [
+        "Leviticus 16:12",
+        "Leviticus 16:13",
+        "Leviticus 16:2"
+      ],
+      "kjv_text": "[Leviticus 16:12] And he shall take a censer full of burning coals of fire from off the altar before the LORD, and his hands full of sweet incense beaten small, and bring it within the vail:\n[Leviticus 16:13] And he shall put the incense upon the fire before the LORD, that the cloud of the incense may cover the mercy seat that is upon the testimony, that he die not:\n[Leviticus 16:2] And the LORD said unto Moses, Speak unto Aaron thy brother, that he come not at all times into the holy place within the vail before the mercy seat, which is upon the ark; that he die not: for I will appear in the cloud upon the mercy seat.",
+      "historical_note": "The incense cloud (16:13) and the divine cloud of the LORD's appearing (16:2) are distinct.",
+      "visual_directive": "Inner-sanctum scenes should show the incense cloud / censer over the mercy seat.",
+      "banned_anachronisms": [
+        "the mercy seat approached within the veil with no incense cloud where the inner moment is depicted"
+      ],
+      "verified": true,
+      "entity": "day-of-atonement"
+    },
+    {
+      "claim": "When the high priest goes in to make atonement in the holy place, no man is in the TABERNACLE (the whole tent) until he comes out; this does not govern the outer court.",
+      "bucket": "specified",
+      "scripture": [
+        "Leviticus 16:17"
+      ],
+      "kjv_text": "[Leviticus 16:17] And there shall be no man in the tabernacle of the congregation when he goeth in to make an atonement in the holy place, until he come out, and have made an atonement for himself, and for his household, and for all the congregation of Israel.",
+      "historical_note": "",
+      "visual_directive": "Aaron alone inside the tent during the atonement; no other priest within.",
+      "banned_anachronisms": [
+        "other priests inside the tent during the atonement"
+      ],
+      "verified": true,
+      "entity": "day-of-atonement"
+    },
+    {
+      "claim": "Two goats stood together for the people's sin offering.",
+      "bucket": "specified",
+      "scripture": [
+        "Leviticus 16:5",
+        "Leviticus 16:7"
+      ],
+      "kjv_text": "[Leviticus 16:5] And he shall take of the congregation of the children of Israel two kids of the goats for a sin offering, and one ram for a burnt offering.\n[Leviticus 16:7] And he shall take the two goats, and present them before the LORD at the door of the tabernacle of the congregation.",
+      "historical_note": "",
+      "visual_directive": "TWO goats together before the priest.",
+      "banned_anachronisms": [
+        "only one goat",
+        "a sheep or bull in the goats' place"
+      ],
+      "verified": true,
+      "entity": "day-of-atonement"
+    },
+    {
+      "claim": "Also taken for the day was one ram for a burnt offering (besides Aaron's own ram).",
+      "bucket": "constrained",
+      "scripture": [
+        "Leviticus 16:5",
+        "Leviticus 16:3"
+      ],
+      "kjv_text": "[Leviticus 16:5] And he shall take of the congregation of the children of Israel two kids of the goats for a sin offering, and one ram for a burnt offering.\n[Leviticus 16:3] Thus shall Aaron come into the holy place: with a young bullock for a sin offering, and a ram for a burnt offering.",
+      "historical_note": "",
+      "visual_directive": "If sacrificial animals are shown at the door/altar, do not omit or substitute the ram.",
+      "banned_anachronisms": [
+        "substituting another animal for the ram"
+      ],
+      "verified": true,
+      "entity": "day-of-atonement"
+    },
+    {
+      "claim": "The goats were presented at the door of the tabernacle (in the court) - not specifically at the bronze altar.",
+      "bucket": "constrained",
+      "scripture": [
+        "Leviticus 16:7"
+      ],
+      "kjv_text": "[Leviticus 16:7] And he shall take the two goats, and present them before the LORD at the door of the tabernacle of the congregation.",
+      "historical_note": "",
+      "visual_directive": "Location is the court / door of the tent; an altar nearby is licence.",
+      "banned_anachronisms": [],
+      "verified": true,
+      "entity": "day-of-atonement"
+    },
+    {
+      "claim": "The form of the lots (stones, a vessel, the bronze basin, their markings) is artistic licence - Scripture says only that he cast lots.",
+      "bucket": "free",
+      "scripture": [
+        "Leviticus 16:8"
+      ],
+      "kjv_text": "[Leviticus 16:8] And Aaron shall cast lots upon the two goats; one lot for the LORD, and the other lot for the scapegoat.",
+      "historical_note": "Keeping the marks illegible is a PRODUCTION rule (never render readable text, which generative animation garbles), not a biblical claim.",
+      "visual_directive": "Any plausible lot device; keep markings illegible per the production no-text rule.",
+      "banned_anachronisms": [],
+      "verified": true,
+      "entity": "day-of-atonement"
+    },
+    {
+      "claim": "The goat for the LORD (the lot) was killed as the people's sin offering.",
+      "bucket": "specified",
+      "scripture": [
+        "Leviticus 16:9",
+        "Leviticus 16:15"
+      ],
+      "kjv_text": "[Leviticus 16:9] And Aaron shall bring the goat upon which the LORD’S lot fell, and offer him for a sin offering.\n[Leviticus 16:15] Then shall he kill the goat of the sin offering, that is for the people, and bring his blood within the vail, and do with that blood as he did with the blood of the bullock, and sprinkle it upon the mercy seat, and before the mercy seat:",
+      "historical_note": "",
+      "visual_directive": "This goat is slain (the slain half of the two-goat rite).",
+      "banned_anachronisms": [
+        "the scapegoat (live goat) shown being killed - it is the LORD's goat that is slain"
+      ],
+      "verified": true,
+      "entity": "day-of-atonement"
+    },
+    {
+      "claim": "Its blood was brought within the veil and sprinkled with the finger upon the mercy seat, and before the mercy seat seven times (as he did with the bullock's blood).",
+      "bucket": "specified",
+      "scripture": [
+        "Leviticus 16:15",
+        "Leviticus 16:14"
+      ],
+      "kjv_text": "[Leviticus 16:15] Then shall he kill the goat of the sin offering, that is for the people, and bring his blood within the vail, and do with that blood as he did with the blood of the bullock, and sprinkle it upon the mercy seat, and before the mercy seat:\n[Leviticus 16:14] And he shall take of the blood of the bullock, and sprinkle it with his finger upon the mercy seat eastward; and before the mercy seat shall he sprinkle of the blood with his finger seven times.",
+      "historical_note": "",
+      "visual_directive": "Blood carried within the veil and sprinkled with the finger toward the mercy seat in the inner darkness.",
+      "banned_anachronisms": [
+        "blood poured on an outdoor altar instead of within the veil for this act"
+      ],
+      "verified": true,
+      "entity": "day-of-atonement"
+    },
+    {
+      "claim": "Aaron's own bullock blood for himself and his house came first, before the people's goat blood.",
+      "bucket": "constrained",
+      "scripture": [
+        "Leviticus 16:11",
+        "Leviticus 16:14"
+      ],
+      "kjv_text": "[Leviticus 16:11] And Aaron shall bring the bullock of the sin offering, which is for himself, and shall make an atonement for himself, and for his house, and shall kill the bullock of the sin offering which is for himself:\n[Leviticus 16:14] And he shall take of the blood of the bullock, and sprinkle it with his finger upon the mercy seat eastward; and before the mercy seat shall he sprinkle of the blood with his finger seven times.",
+      "historical_note": "Guards the mediator-not-substitute truth: Aaron atoned for his own sin first.",
+      "visual_directive": "If sequence is implied, the bullock blood precedes the goat blood.",
+      "banned_anachronisms": [],
+      "verified": true,
+      "entity": "day-of-atonement"
+    },
+    {
+      "claim": "The inner approach to the mercy seat is veiled by a cloud of incense from the censer.",
+      "bucket": "constrained",
+      "scripture": [
+        "Leviticus 16:12",
+        "Leviticus 16:13"
+      ],
+      "kjv_text": "[Leviticus 16:12] And he shall take a censer full of burning coals of fire from off the altar before the LORD, and his hands full of sweet incense beaten small, and bring it within the vail:\n[Leviticus 16:13] And he shall put the incense upon the fire before the LORD, that the cloud of the incense may cover the mercy seat that is upon the testimony, that he die not:",
+      "historical_note": "",
+      "visual_directive": "Incense cloud over/before the mercy seat in the inner dark.",
+      "banned_anachronisms": [
+        "the mercy-seat moment with no incense cloud",
+        "the mercy seat shown clearly with only a wisp of smoke - the cloud must substantially cover/obscure it (Lev 16:13, 'that he die not')"
+      ],
+      "verified": true,
+      "entity": "day-of-atonement"
+    },
+    {
+      "claim": "Aaron laid BOTH his hands upon the head of the LIVE goat and confessed the people's sins over it.",
+      "bucket": "specified",
+      "scripture": [
+        "Leviticus 16:21"
+      ],
+      "kjv_text": "[Leviticus 16:21] And Aaron shall lay both his hands upon the head of the live goat, and confess over him all the iniquities of the children of Israel, and all their transgressions in all their sins, putting them upon the head of the goat, and shall send him away by the hand of a fit man into the wilderness:",
+      "historical_note": "",
+      "visual_directive": "Both of Aaron's hands pressed on the head of a living goat, confessing. (Exact posture - standing, bowed head - is artistic licence.)",
+      "banned_anachronisms": [
+        "one hand only",
+        "the goat slain / lying dead",
+        "hands raised off the goat",
+        "a sheep or ram in the live goat's place"
+      ],
+      "verified": true,
+      "entity": "day-of-atonement"
+    },
+    {
+      "claim": "The live goat was sent away by the hand of a fit man into the wilderness, a land not inhabited.",
+      "bucket": "specified",
+      "scripture": [
+        "Leviticus 16:21",
+        "Leviticus 16:22"
+      ],
+      "kjv_text": "[Leviticus 16:21] And Aaron shall lay both his hands upon the head of the live goat, and confess over him all the iniquities of the children of Israel, and all their transgressions in all their sins, putting them upon the head of the goat, and shall send him away by the hand of a fit man into the wilderness:\n[Leviticus 16:22] And the goat shall bear upon him all their iniquities unto a land not inhabited: and he shall let go the goat in the wilderness.",
+      "historical_note": "",
+      "visual_directive": "A man ('a fit man') to lead the goat away; open wilderness. The man's dress/position is artistic licence.",
+      "banned_anachronisms": [
+        "the goat being killed here rather than sent away alive"
+      ],
+      "verified": true,
+      "entity": "day-of-atonement"
+    },
+    {
+      "claim": "Scripture names no marker on the scapegoat; a scarlet thread/cloth on its head is later tradition (Mishnah Yoma), not biblical, and must not be shown as if Scripture-stated.",
+      "bucket": "constrained",
+      "scripture": [
+        "Leviticus 16:21",
+        "Leviticus 16:22"
+      ],
+      "kjv_text": "[Leviticus 16:21] And Aaron shall lay both his hands upon the head of the live goat, and confess over him all the iniquities of the children of Israel, and all their transgressions in all their sins, putting them upon the head of the goat, and shall send him away by the hand of a fit man into the wilderness:\n[Leviticus 16:22] And the goat shall bear upon him all their iniquities unto a land not inhabited: and he shall let go the goat in the wilderness.",
+      "historical_note": "The scarlet thread is Mishnaic (Yoma) tradition, not in Leviticus 16.",
+      "visual_directive": "No scarlet thread/marker tied to the scapegoat as a biblical detail.",
+      "banned_anachronisms": [
+        "a scarlet thread or cloth on the scapegoat's head presented as biblical"
+      ],
+      "verified": true,
+      "entity": "day-of-atonement"
+    },
+    {
+      "claim": "The scapegoat is sent away AFTER the high priest has ended reconciling the holy place, the tabernacle and the altar (not simultaneous with the inner blood/veil work).",
+      "bucket": "constrained",
+      "scripture": [
+        "Leviticus 16:20"
+      ],
+      "kjv_text": "[Leviticus 16:20] And when he hath made an end of reconciling the holy place, and the tabernacle of the congregation, and the altar, he shall bring the live goat:",
+      "historical_note": "",
+      "visual_directive": "The live-goat moment reads as its own step, outside the tent, after the inner service.",
+      "banned_anachronisms": [
+        "the live-goat confession shown inside the most holy place / at the mercy seat"
+      ],
+      "verified": true,
+      "entity": "day-of-atonement"
+    }
+  ]
+}

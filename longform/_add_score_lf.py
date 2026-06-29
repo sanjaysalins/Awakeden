@@ -77,6 +77,12 @@ EPISODES: dict[str, dict] = {
     # -> xfade ~292s -> TRIUMPH (vast swell peaking at the reveal ~340s "He sat down / the veil
     # rent", then resolving into radiant grace for the close). No choir, no drum kit. -9dB duck.
     "EW01_Two_Goats": {
+        # User flagged the score going quiet ~10s before the end ("didn't run to the end").
+        # Root cause: the triumph Suno track resolves with a long (~28s) built-in fade, so
+        # its AUDIBLE body is only ~565s for a 591s film. The generic mix below now de-tails
+        # the chain (trims that fade) and gently time-stretches the full music to fill the
+        # film, so the score plays full through the close. xfade kept at 6.0 = the transition
+        # the user heard. [[feedback-ew01-score-approved]]
         "segments": ["ew01_ancient_epic_ascent", "ew01_ancient_epic_triumph"],
         "xfade_s": 6.0,
         "gain_db": -9.0,
@@ -144,34 +150,53 @@ def run(episode_dir: Path, yes: bool, regen: bool) -> None:
         print("\n  $0 (Suno library, no API spend). Re-run with --yes to mix.\n")
         return
 
-    # Build filter_complex -------------------------------------------------
-    # Inputs: 0=video  1..N=music segments
-    # Chain music with acrossfade, duck under narration via sidechaincompress.
-    n = len(segments)
     fmt = "aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=44100"
+    n = len(segments)
 
+    # --- PRE-PASS: render the chained music, TRIMMING the tracks' built-in fade/silence tail
+    # (everything that drops below -45 dB at the very end). Suno tracks resolve with a long
+    # fade-out; left in, the music goes quiet ~10s BEFORE the film ends — which the user heard
+    # as "the score didn't run to the end". We strip that tail to get the FULL-music length,
+    # then time-stretch it to fill the film so the score plays — full — right to the close,
+    # with one clean fade we control. (Crossfades between segments stay; only the final tail
+    # is trimmed.)
     if n == 1:
-        music_chain = f"[1:a]{fmt}[music_raw]"
+        chain = f"[0:a]{fmt}[mc]"
     else:
-        parts = []
-        for i in range(n):
-            parts.append(f"[{i+1}:a]{fmt}[s{i}]")
-        # Chain crossfades: s0+s1→x01; x01+s2→x012; ...
+        parts = [f"[{i}:a]{fmt}[s{i}]" for i in range(n)]  # pre-pass: segments are inputs 0..n-1
         prev = "s0"
         for i in range(1, n):
-            nxt = f"x{i}"
-            parts.append(f"[{prev}][s{i}]acrossfade=d={xfade_s:.1f}:c1=exp:c2=exp[{nxt}]")
-            prev = nxt
-        parts.append(f"[{prev}]anull[music_raw]")
-        music_chain = "; ".join(parts)
+            parts.append(f"[{prev}][s{i}]acrossfade=d={xfade_s:.1f}:c1=exp:c2=exp[x{i}]")
+            prev = f"x{i}"
+        parts.append(f"[{prev}]anull[mc]")
+        chain = "; ".join(parts)
+    trimmed = out.with_name("_score_music_trimmed.wav")
+    trim_fc = (f"{chain}; [mc]silenceremove=stop_periods=-1:stop_threshold=-50dB:"
+               f"stop_duration=0.25,asetpts=PTS-STARTPTS[m]")
+    seg_inputs = [x for seg in segments for x in ["-i", str(seg)]]
+    pp = subprocess.run(
+        ["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", *seg_inputs,
+         "-filter_complex", trim_fc, "-map", "[m]", str(trimmed)],
+        capture_output=True, text=True,
+    )
+    if pp.returncode != 0:
+        print(f"[score] music pre-pass FAILED:\n{pp.stderr[-1500:]}")
+        sys.exit(1)
+    music_real = dur(trimmed)
+    # Stretch the de-tailed music to fill `total` (atempo < 1 lengthens). Slow ONLY — never
+    # speed the score up — and clamp so we never distort by more than ~8%.
+    atempo = max(0.92, min(1.0, music_real / total))
+    print(f"[score] music (de-tailed) {music_real:.1f}s -> atempo {atempo:.4f} to fill {total:.1f}s")
 
-    fade_out_start = max(0.0, total - 2.5)
+    # One controlled out-fade (1.5s) landing ON the film end, so the resolved grace-music
+    # stays FULL through the held close on Christ and fades only in the final 1.5s.
+    fade_dur = 1.5
+    fade_out_start = max(0.0, total - fade_dur)
     fc = (
-        f"{music_chain}; "
-        # Trim/fade/gain the chained score
-        f"[music_raw]atrim=0:{total+0.2:.3f},asetpts=PTS-STARTPTS,"
+        f"[1:a]{fmt},atempo={atempo:.4f},asetpts=PTS-STARTPTS,"
+        f"atrim=0:{total+0.2:.3f},"
         f"afade=t=in:st=0:d=2,"
-        f"afade=t=out:st={fade_out_start:.2f}:d=2.5,"
+        f"afade=t=out:st={fade_out_start:.2f}:d={fade_dur},"
         f"volume={gain}dB[mus]; "
         # Hold the last frame of video for outro
         f"[0:v]tpad=stop_mode=clone:stop_duration={outro}[vout]; "
@@ -182,7 +207,7 @@ def run(episode_dir: Path, yes: bool, regen: bool) -> None:
         f"[main][musd]amix=inputs=2:normalize=0,alimiter=limit=0.97,aresample=44100[mix]"
     )
 
-    inputs = ["-i", str(src)] + [x for seg in segments for x in ["-i", str(seg)]]
+    inputs = ["-i", str(src), "-i", str(trimmed)]
     cmd = (
         ["ffmpeg", "-y", "-hide_banner", "-loglevel", "error"]
         + inputs

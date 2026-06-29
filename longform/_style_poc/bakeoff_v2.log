@@ -1,0 +1,64 @@
+
+[gen ] seedance1_5 <- crowd_market ...
+[ok  ] seedance1_5 crowd_market -> V__seedance1_5__crowd_market.mp4
+
+[gen ] cinematic_studio_video_v2 <- crowd_market ...
+[ok  ] cinematic_studio_video_v2 crowd_market -> V__cinematic_studio_video_v2__crowd_market.mp4
+
+[gen ] minimax_hailuo <- crowd_market ...
+[ok  ] minimax_hailuo crowd_market -> V__minimax_hailuo__crowd_market.mp4
+
+[gen ] seedance1_5 <- night_fire ...
+[ok  ] seedance1_5 night_fire -> V__seedance1_5__night_fire.mp4
+
+[gen ] cinematic_studio_video_v2 <- night_fire ...
+[ok  ] cinematic_studio_video_v2 night_fire -> V__cinematic_studio_video_v2__night_fire.mp4
+
+[gen ] minimax_hailuo <- night_fire ...
+[ok  ] minimax_hailuo night_fire -> V__minimax_hailuo__night_fire.mp4
+
+[gen ] seedance1_5 <- lamp_room ...
+[ok  ] seedance1_5 lamp_room -> V__seedance1_5__lamp_room.mp4
+
+[gen ] cinematic_studio_video_v2 <- lamp_room ...
+[ok  ] cinematic_studio_video_v2 lamp_room -> V__cinematic_studio_video_v2__lamp_room.mp4
+
+[gen ] minimax_hailuo <- lamp_room ...
+[ok  ] minimax_hailuo lamp_room -> V__minimax_hailuo__lamp_room.mp4
+
+[gen ] seedance1_5 <- noon_close ...
+[ok  ] seedance1_5 noon_close -> V__seedance1_5__noon_close.mp4
+
+[gen ] cinematic_studio_video_v2 <- noon_close ...
+[ok  ] cinematic_studio_video_v2 noon_close -> V__cinematic_studio_video_v2__noon_close.mp4
+
+[gen ] minimax_hailuo <- noon_close ...
+[ok  ] minimax_hailuo noon_close -> V__minimax_hailuo__noon_close.mp4
+
+[gen ] seedance1_5 <- walking ...
+[ok  ] seedance1_5 walking -> V__seedance1_5__walking.mp4
+
+[gen ] cinematic_studio_video_v2 <- walking ...
+[ok  ] cinematic_studio_video_v2 walking -> V__cinematic_studio_video_v2__walking.mp4
+
+[gen ] minimax_hailuo <- walking ...
+[ok  ] minimax_hailuo walking -> V__minimax_hailuo__walking.mp4
+
+DONE 15/15 clips in C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\_style_poc\bakeoff_v2
+{
+  "seedance1_5__crowd_market": "ok",
+  "cinematic_studio_video_v2__crowd_market": "ok",
+  "minimax_hailuo__crowd_market": "ok",
+  "seedance1_5__night_fire": "ok",
+  "cinematic_studio_video_v2__night_fire": "ok",
+  "minimax_hailuo__night_fire": "ok",
+  "seedance1_5__lamp_room": "ok",
+  "cinematic_studio_video_v2__lamp_room": "ok",
+  "minimax_hailuo__lamp_room": "ok",
+  "seedance1_5__noon_close": "ok",
+  "cinematic_studio_video_v2__noon_close": "ok",
+  "minimax_hailuo__noon_close": "ok",
+  "seedance1_5__walking": "ok",
+  "cinematic_studio_video_v2__walking": "ok",
+  "minimax_hailuo__walking": "ok"
+}

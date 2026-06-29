@@ -1,0 +1,160 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: plan
+
+LENS — judge this PLAN on (be specific, cite the exact step/claim):
+- Feasibility against the real codebase / tools (does it assume things that exist?).
+- Hidden risks, false assumptions, single points of failure.
+- Over-engineering / premature building before the idea is proven.
+- Missing steps, edge cases, or verification gaps.
+- Reuse: does it duplicate tools that already exist instead of reusing them?
+- Cost / spend and whether it's justified.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block:
+
+VERDICT: PASS | REVISE | FAIL
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# Inked-Style Default Pipeline — Guardrail Plan (for panel review)
+
+**Status:** PROPOSAL, pre-build. Validated the inked graphic-novel art style on EW04
+Bronze Serpent (a full 60s short: stills + animation + score + SFX + captions). The
+style is approved to replace the Baroque oil-painting look going forward — **but not
+until these guardrails exist.** This document is the plan; it is being sent to the
+independent 5-CLI panel BEFORE any building, per the project's enforced-review rule.
+
+## Context
+
+- **Style:** inked biblical graphic-novel / cinematic manga — bold clean black ink
+  linework, flat cel-shaded comic colour, hand-drawn 2D, dramatic ink shadows,
+  reverent, ancient Near-Eastern period-accurate. Models: stills = `seedream_v4_5`
+  (1 credit), animation = `cinematic_studio_video_v2` (7.5 credits / 5s clip).
+- **Happy-path cost:** ~93.5 credits for an 11-beat 60s short (animation = 88%).
+- **The EW04 POC was hand-driven scripts.** It BYPASSED the repo's existing
+  authenticity pipeline (`bible_kb`) and used the reference index (`ref_library`)
+  only loosely. Every accuracy defect this session (caduceus serpent-pole,
+  inaccurate crucifixion nails, a snake tattoo on a neck, roped wrists) was caught
+  by a human Reading the frames — NOT by any gate. That is the gap this plan closes.
+
+## The four guardrails the user asked for
+
+### 1. Consistency — a global reference index with real reference cards
+- `ref_library/` already exists (`characters/ objects/ places/` + `catalogue.json`),
+  each entity = canonical visual text + an anchor PNG + tags + shape negatives.
+- **Gaps:** (a) grids are thin — JESUS has front-face + front-body only; need ¾ +
+  profile + an expression row + costume variants so every angle stays on-model.
+  (b) Cards are written *after* a render (`first_used` is set post-hoc), so the
+  index does not yet *gate* anything. (c) No lookup-before-render step.
+- **Fix:** the renderer must QUERY the index first. Entity has a card → pass its
+  anchor as `--image`. No card → **mint the grid, get human approval, register it,
+  THEN render scenes.** Coverage rule: no named reusable person/object/place is ever
+  drawn without a registered card. (This directly kills the "generic old-bearded-man
+  bleed" failure mode from the oil-painting era.)
+
+### 2. Authenticity — route every piece through the existing `bible_kb` pipeline
+- `bible_kb` (`pipeline/bible_kb.py` + `bib_validate.py` + `bible_gate.py`) already
+  enforces two locked truths: **facts are sound** (5-CLI panel) and **pictures obey
+  them** (Vision audit, fail-closed). Per scene it DERIVEs fact cards (location, time,
+  era, customs, characters) pinned to Scripture, HYDRATEs verbatim KJV, PANELs the
+  facts, folds `visual_directive`s into the prompt via `enrich_for_scene()` BEFORE
+  rendering, then AUDITs each still against SPECIFIED (hard-fail) + CONSTRAINED facts.
+  `bible_gate.py` blocks animate/lock until the bible-check is green. `bible_kb/` is a
+  growth-only KB (`characters/ places/ objects/ customs/ eras/`).
+- **Fix:** the inked default pipeline RUNS `bible_kb` on every piece (not optional,
+  not bypassable). EW04's eyeball-only accuracy is the cautionary tale.
+
+### 3. Animation subtlety — per-beat motion presets
+- `cinematic_studio_video_v2` over-animates faces/mouths on dialogue beats (confirmed
+  on EW04). Fix = two presets tagged per beat:
+  - **SUBTLE** (talking / intimate) → locked camera, micro-motion only (breath, lamp
+    flicker, cloth drift). The figure stays still — same frozen-tableau discipline as
+    the locked Kling shorts skill. **Default for any talking beat.**
+  - **DYNAMIC** (action / establishing) → push-ins, drift, atmosphere.
+
+### 4. Learnings to bake in (from EW04, firsthand)
+1. **Trigger-word trap** — `seedream` literalizes nouns: "serpent" → a snake on a
+   neck, "snake pole" → a caduceus coil, "nail/spike+head" → a crossguarded dagger.
+   Fix = a **prompt lint**: ban the trigger noun, describe the *result* physically,
+   force shape negatives. (Object cards' "NOT a caduceus" lines already prove this.)
+2. **Stale-clip hazard** — when a still is re-fixed *after* its clip was animated, the
+   clip silently keeps the old still (cost a full rebuild this session). Fix =
+   **content-hash idempotence**: re-animate iff the source still's hash changed, not
+   merely "file exists."
+3. **Eyeball gate stays** — the Vision audit passed the caduceus, the nails, the
+   roped wrists. Keep the human Read gate + a per-object **known-failure checklist**.
+4. **Reuse is the cost engine** — animation is 88% of credits; each reused clip saves
+   ~7.5 cr. But match the *moment* (living vs crucified Christ; a cross-Christ reused
+   into a ministry slot is a topical-fit violation).
+5. **Target audio length up front** — EW04 came out 0.5s short and needed a stretch.
+6. **Minterpolate beats clone-hold freezes** for long contemplative holds.
+
+## Key architectural decision (user-approved): UNIFY THE TWO CARD SYSTEMS BY SLUG
+
+`bible_kb/` (what must be TRUE) and `ref_library/` (how it must LOOK) are two halves
+of the same entity, today living apart but both already keyed by entity slug
+(`MOSES`, `BRONZE_SERPENT_STANDARD`). Unify them: one record per slug carries both its
+scriptural truth and its locked look.
+
+Proposed unified card (one file per slug, `kind` ∈ character|object|place|custom):
+```json
+{
+  "slug": "MOSES",
+  "kind": "character",
+  "look": {
+    "canonical": "<visual description>",
+    "anchor": "characters/MOSES.png",
+    "grid": ["face_front", "face_3q", "profile", "body", "expressions[]"],
+    "style": "inked"
+  },
+  "truth": {
+    "era": "Wilderness wanderings",
+    "scripture": ["Numbers 21:4-9"],
+    "customs": [],
+    "visual_directive": "<what the painting should show>",
+    "banned_anachronisms": ["no caduceus", "no medieval/European dress"],
+    "verified": true
+  },
+  "provenance": { "first_used": "EW04_Bronze_Serpent", "tags": [] }
+}
+```
+The render step pulls `look.anchor` as `--image` (consistency) AND `truth.*` via
+`enrich_for_scene()` (authenticity). The audit checks BOTH halves against the same
+record. Migration: merge the existing `ref_library` cards with `bible_kb` entities by
+slug; preserve both PNGs and citations; nothing is regenerated.
+
+## Consolidated pipeline flow (the inked default)
+```
+Scene plan
+  → bible_kb DERIVE + PANEL          (facts sound — guardrail 2)
+  → unified-card LOOKUP per entity   (consistency — guardrail 1)
+        no card? → mint grid + human approve + register, THEN render
+  → render still = enrich_for_scene() directives + card anchors as --image
+        + prompt-lint: ban trigger nouns, force shape negatives  (learning 1)
+  → audit still BOTH ways: facts (bible_kb Vision) + identity (matches grid)
+  → human Read gate on the failure-motif checklist  (learning 3)
+  → bible_gate: must be green before animate
+  → animate with per-beat motion preset  (guardrail 3)
+        talking/intimate = SUBTLE; action = DYNAMIC
+        content-hash idempotence  (learning 2)
+  → assemble to mp3 length; minterpolate long holds  (learnings 5,6)
+```
+
+## Open questions / risks for the panel
+- Is unify-by-slug the right call, or does coupling "truth" and "look" in one file
+  create churn (a look reroll touching a verified-facts file)? Alternative: separate
+  files cross-referenced by slug with a single lookup API.
+- Coverage rule (no render without a registered card) could stall first-use of a new
+  entity. Is "mint-on-first-encounter with a human approval gate" acceptable latency?
+- SUBTLE-preset wording for `cinematic_studio_video_v2` is unproven — needs a paid
+  test beat before rollout (test-gate-before-batch rule).
+- Does routing every short through `bible_kb` (built for long-form) fit the shorts'
+  punchier cadence and budget, or does it need a lighter shorts profile?
+- Anything in the EW04 learnings that is over-fit to one episode and shouldn't be a
+  standing rule?
+----- ARTIFACT END -----

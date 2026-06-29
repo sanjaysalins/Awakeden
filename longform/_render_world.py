@@ -29,6 +29,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import config
 from pipeline.visual_models import Scene
 from pipeline import visual_render
+from pipeline import bible_kb  # noqa: E402
 from pipeline import cost  # noqa: E402
 from _episode import resolve, slugof  # noqa: E402
 
@@ -137,11 +138,16 @@ for s in ep.scenes:
     missing = [str(p) for p in refs if not p.exists()]
     if missing:
         print(f"[warn] scene {s['id']:02d} refs MISSING: {missing} — render anchors first"); fail += 1; continue
+    # FACTS DRIVE THE PROMPT: fold this scene's cited biblical visual directives into
+    # the subject_block (no-op if no _bible_check fact sheet exists — going-forward).
+    subj, _banned = bible_kb.enrich_for_scene(ep.v1, s["id"], s["subject_block"])
+    if subj != s["subject_block"]:
+        print(f"       [bible] enriched subject with cited directives")
     scene = Scene(index=s["id"], slug=slugof(s["title"]), title=s["title"],
                   scene_type="single", arc_position=s.get("mvt", ""), framing=s.get("framing", "cinematic wide"),
                   purpose=s["title"], rationale=s.get("mvt", ""),
                   visible_elements=s["subject_block"][:200], emotional_tone=s.get("mvt", ""),
-                  subject_block=s["subject_block"], mood_block="reverent, sacred, solemn, Baroque",
+                  subject_block=subj, mood_block="reverent, sacred, solemn, Baroque",
                   jesus_variant=s.get("jesus_variant"))
     if png.exists() and not FORCE:
         print(f"[skip] {png.name}"); skip += 1; continue

@@ -1,0 +1,107 @@
+# Plan — "Comic that teens & adults read" look + best-model bake-off (Awakeden)
+
+## The goal (from the user)
+Find a **comic style that teens AND adults love to read**, that:
+1. can be **animated** (survives Kling image-to-video without melting/morphing),
+2. **fits reverent first-person biblical narration** (Awakeden "Eyewitness" format — a Bible
+   witness tells their story, lands on Jesus), and
+3. is rendered by the **best available image model** for that style.
+
+Two unknowns to solve, not one: the **STYLE** *and* the **MODEL**. So this is a STYLE × MODEL
+bake-off, run cheaply in two rounds instead of a full grid.
+
+## What we already learned (prior POC, same scratchpad)
+- 6 looks tested as stills + 3 animated. **Flat/graphic mediums survive Kling best** (ink + charcoal
+  held; photoreal & clay risk melt/uncanny).
+- **Reverence is the real gate, not slop.** Claymation Christ went toy/bug-eyed in motion — a "cute"
+  sacred face kills the piece. Any comic style must pass the **Christ-face reverence gate**.
+- So the comic look we want is a **MATURE / "read-by-adults" comic**, never a kids' cape comic.
+
+## STYLE candidates (4) — descriptive strings only (named studios get IP-filtered)
+Chosen because each is a comic adults *read*, is historically/period-friendly, and is flat enough
+to animate. (D-ink graphic novel is already proven and acts as the control.)
+
+| Key | The lane (reference, not a prompt token) | Why it fits reverent Bible content |
+|-----|------------------------------------------|------------------------------------|
+| **PG** Painted graphic-novel realism | Alex Ross / "Kingdom Come" fully-painted comic | Gravitas + grandeur; adults' "serious" comic; reverent by default |
+| **MI** Mature brush-ink manga (seinen) | "Vagabond" sumi brush-ink + screentone | Historical, meditative, brush-ink = ancient feel; huge teen+adult base |
+| **NR** Noir high-contrast graphic novel | "Sin City" / "Blacksad" black-spot ink + 1 accent color | Bold, striking, ultra motion-safe; dramatic for betrayal/pit/cross |
+| **BD** European painted bande dessinée | "Blueberry" / Hermann clear-line + watercolor | Mature historical-adventure comic; warm period palette |
+
+Format note: render **full-bleed single "splash" frames**, NOT multi-panel pages — Kling morphs
+gutters/panels into garbled grids (engine memory: no panels/frame). The "comic" reads in the
+linework + color + drama of one image, animated as a slow cut, with caption text added later.
+
+Anti-slop + anti-childish + reverence tail on every prompt:
+"mature reverent dignified tone, period-accurate ancient Near East / Egypt, no modern objects;
+NOT childish, NOT a cape superhero comic, NOT a cute mascot, no goofy expression, emotionally
+truthful face; adult graphic-novel gravitas."
+
+## MODEL candidates (5) — the user's "which model is best" lever
+| Model (hf job_set_type) | Why test it for comics |
+|-------------------------|------------------------|
+| `recraft_v4_1` | Illustration/vector specialist — built for clean comic & graphic styles |
+| `seedream_v4_5` | ByteDance — strongest anime/manga stylization in field |
+| `flux_2` | FLUX.2 — widest art-style range, strong painted-comic & ink |
+| `nano_banana_2` (Nano Banana Pro) | Best prompt-adherence + **accepts a ref image → character-lock across scenes** |
+| `gpt_image_2` | Proven baseline (used in prior rounds) — instruction following |
+
+Character-consistency note: a comic series needs the SAME face every scene. Only `nano_banana_2`
+(refs) and Higgsfield `text2image_soul_v2` (trained Soul) give true cross-scene face-lock. That is a
+tie-breaker, not the first cut.
+
+## The bake-off (two rounds, cost-controlled)
+
+### Round 1 — MODEL shootout (find the best renderer)
+- Fix ONE style = **PG painted graphic-novel** (the safest reverent comic).
+- Fix ONE subject = **Christ-face** (the reverence gate — if a model can't do a reverent painted
+  Christ, it's out).
+- Render across the **5 models** = **5 stills**.
+- Judge: comic-fidelity + reverence + period + face quality. Keep the **top 2 models**.
+- Cost: ~5 × ~7cr ≈ **~35cr**.
+
+### Round 2 — STYLE shootout (find the best comic look)
+- Use the **Round-1 winning model**.
+- Render the **4 styles × 2 subjects** (joseph_pit morph/emotion test + christ_face reverence gate)
+  = **8 stills**.
+- Judge against the existing FACES.html gallery, apples-to-apples with the 6 prior looks.
+- Cost: ~8 × ~7cr ≈ **~56cr** (model-dependent).
+
+### Round 3 — motion confirm (only the single winner)
+- Animate the winning style+subject in Kling pro 5s (the real test: does THIS comic survive motion).
+- Cost: ~**12.5cr**.
+
+**Total ≈ 35 + 56 + 12.5 ≈ ~104cr.** Budget remaining ≈143cr → fits, ~39cr reserve.
+(Trim: drop a model or a style to stay leaner.)
+
+## Adversarial reflection (my own, pre-panel)
+1. **Reverence > novelty.** The whole bet fails if a "cool comic" trivializes Christ. Christ-face is
+   the hard gate in BOTH rounds; cool-Joseph + cute-Christ = style rejected. (Proven risk: clay-Christ.)
+2. **"Comic" can read juvenile.** Mitigated by choosing only *adult-read* comics (painted realism,
+   seinen brush-ink, noir, BD) + an explicit anti-cape / anti-mascot guard. Still the #1 risk.
+3. **Motion is where stylized dies.** Round 3 is mandatory before any rollout claim — a still that
+   looks great can melt to photoreal in Kling. Flat styles (NR noir, MI ink) are the safer motion bets.
+4. **Character consistency across a 6-8 scene short.** Single splash tests don't prove face-lock.
+   If we adopt a comic look, the production model likely must be `nano_banana_2` (ref-locked) even if
+   another model wins a one-off still — note this in the verdict, don't let a no-ref model win blind.
+5. **Strategic fork (unchanged).** This is the *popular-reach* bet vs the *premium charcoal/Baroque*
+   lane that already differentiates Awakeden in apologetics. The bake-off informs the bet; the USER
+   owns which lane to ship. Charcoal already passed reverence+motion — comic must clearly beat it to
+   justify switching, not just "also be nice."
+6. **Model cost varies.** nano_banana_2 (Pro) ≈ higher cr than gpt_image; confirm per-model `hf
+   generate cost` before Round 2 so the budget math is real, not assumed-flat at 7cr.
+7. **Text/lettering trap.** Do NOT bake speech bubbles or caption lettering into the image — Kling
+   garbles text and the engine adds captions deterministically later. Comic *look*, no comic *words*.
+
+## Open question for the panel (what I'm asking the 4 CLIs)
+- Of the 4 comic styles, which best serves **reverent first-person Bible narration for a teen+adult
+  audience** without becoming juvenile or irreverent?
+- Of the 5 models, which is **best for that comic style** + for **same-face consistency across a
+  multi-scene short**?
+- Any failure mode or better style/model we've missed?
+
+## Execute (after go)
+1. `render_comic.py` Round 1 (5 models, PG style, Christ) → review full-res myself → pick top 2.
+2. Round 2 (winning model, 4 styles × 2 subjects) → extend FACES.html → review.
+3. Round 3 (winner) → Kling 5s → review start/end frames for melt/morph.
+All scratchpad-only, idempotent, full-res self-review (never trust the SDK audit), spend logged.

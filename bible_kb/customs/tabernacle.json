@@ -1,0 +1,145 @@
+{
+  "slug": "tabernacle",
+  "name": "tabernacle",
+  "facts": [
+    {
+      "claim": "The sanctuary was the portable Tabernacle - a tent of curtains and skin coverings, not a stone temple or building.",
+      "bucket": "constrained",
+      "scripture": [
+        "Exodus 26:1",
+        "Exodus 26:14",
+        "Exodus 40:2"
+      ],
+      "kjv_text": "[Exodus 26:1] Moreover thou shalt make the tabernacle with ten curtains of fine twined linen, and blue, and purple, and scarlet: with cherubims of cunning work shalt thou make them.\n[Exodus 26:14] And thou shalt make a covering for the tent of rams’ skins dyed red, and a covering above of badgers skins.\n[Exodus 40:2] On the first day of the first month shalt thou set up the tabernacle of the tent of the congregation.",
+      "historical_note": "",
+      "visual_directive": "A tent of woven curtains with skin coverings, fabric walls and a curtained court.",
+      "banned_anachronisms": [
+        "stone temple or cathedral architecture",
+        "carved stone columns or masonry walls",
+        "a built sanctuary of stone"
+      ],
+      "verified": true,
+      "entity": "tabernacle"
+    },
+    {
+      "claim": "The ark of the covenant with the mercy seat stayed WITHIN the most holy place, behind the veil - never out in the open court before the people. (The censer cloud covering the mercy seat is correct; what is wrong is treating the ark itself as a burning altar.)",
+      "bucket": "constrained",
+      "scripture": [
+        "Exodus 26:33",
+        "Exodus 26:34",
+        "Leviticus 16:2"
+      ],
+      "kjv_text": "[Exodus 26:33] And thou shalt hang up the vail under the taches, that thou mayest bring in thither within the vail the ark of the testimony: and the vail shall divide unto you between the holy place and the most holy.\n[Exodus 26:34] And thou shalt put the mercy seat upon the ark of the testimony in the most holy place.\n[Leviticus 16:2] And the LORD said unto Moses, Speak unto Aaron thy brother, that he come not at all times into the holy place within the vail before the mercy seat, which is upon the ark; that he die not: for I will appear in the cloud upon the mercy seat.",
+      "historical_note": "",
+      "visual_directive": "If the ark appears it is behind the veil in shadow, inside the tent; incense cloud over the mercy seat is fine.",
+      "banned_anachronisms": [
+        "the ark shown in the open courtyard before the crowd",
+        "the ark itself used as a burning fire-altar",
+        "the ark outside the tent"
+      ],
+      "verified": true,
+      "entity": "tabernacle"
+    },
+    {
+      "claim": "The mercy seat was a gold lid bearing two cherubim of beaten gold, their wings stretched upward and their faces toward each other.",
+      "bucket": "specified",
+      "scripture": [
+        "Exodus 25:18",
+        "Exodus 25:20"
+      ],
+      "kjv_text": "[Exodus 25:18] And thou shalt make two cherubims of gold, of beaten work shalt thou make them, in the two ends of the mercy seat.\n[Exodus 25:20] And the cherubim shall stretch forth their wings on high, covering the mercy seat with their wings, and their faces shall look one to another; toward the mercy seat shall the faces of the cherubims be.",
+      "historical_note": "",
+      "visual_directive": "If the mercy seat reads at all, show two facing gold cherubim with upswept wings on a gold lid.",
+      "banned_anachronisms": [
+        "a plain gold slab",
+        "a single cherub",
+        "winged figures facing outward"
+      ],
+      "verified": true,
+      "entity": "tabernacle"
+    },
+    {
+      "claim": "The court and sanctuary are a curtained tent, not a stone building.",
+      "bucket": "constrained",
+      "scripture": [
+        "Exodus 27:9",
+        "Exodus 26:1"
+      ],
+      "kjv_text": "[Exodus 27:9] And thou shalt make the court of the tabernacle: for the south side southward there shall be hangings for the court of fine twined linen of an hundred cubits long for one side:\n[Exodus 26:1] Moreover thou shalt make the tabernacle with ten curtains of fine twined linen, and blue, and purple, and scarlet: with cherubims of cunning work shalt thou make them.",
+      "historical_note": "",
+      "visual_directive": "A great curtained Tabernacle court of hangings, not stone walls.",
+      "banned_anachronisms": [
+        "stone temple facade",
+        "cathedral or palace architecture"
+      ],
+      "verified": true,
+      "entity": "tabernacle"
+    },
+    {
+      "claim": "The ark belongs behind the veil in the most holy place, not out in the open court before the crowd.",
+      "bucket": "constrained",
+      "scripture": [
+        "Exodus 26:33",
+        "Leviticus 16:2"
+      ],
+      "kjv_text": "[Exodus 26:33] And thou shalt hang up the vail under the taches, that thou mayest bring in thither within the vail the ark of the testimony: and the vail shall divide unto you between the holy place and the most holy.\n[Leviticus 16:2] And the LORD said unto Moses, Speak unto Aaron thy brother, that he come not at all times into the holy place within the vail before the mercy seat, which is upon the ark; that he die not: for I will appear in the cloud upon the mercy seat.",
+      "historical_note": "",
+      "visual_directive": "Do not place the ark in the open courtyard; it stays behind the veil.",
+      "banned_anachronisms": [
+        "the ark in the open court",
+        "the ark used as a fire/incense altar"
+      ],
+      "verified": true,
+      "entity": "tabernacle"
+    },
+    {
+      "claim": "The 'laying aside the gold' still-life (bench, hands releasing the gold, folded linen) is narrative staging - Lev 16:4 states the washing and linen donning, not this tableau.",
+      "bucket": "free",
+      "scripture": [
+        "Leviticus 16:4"
+      ],
+      "kjv_text": "[Leviticus 16:4] He shall put on the holy linen coat, and he shall have the linen breeches upon his flesh, and shall be girded with a linen girdle, and with the linen mitre shall he be attired: these are holy garments; therefore shall he wash his flesh in water, and so put them on.",
+      "historical_note": "",
+      "visual_directive": "Staging is licence; keep furnishings portable/wood (tent, not temple).",
+      "banned_anachronisms": [
+        "a carved stone/masonry bench implying a permanent temple"
+      ],
+      "verified": true,
+      "entity": "tabernacle"
+    },
+    {
+      "claim": "The veil was woven of blue, purple, scarlet and fine twined linen with cherubim - a coloured embroidered curtain, not a wall or door, and not plain white.",
+      "bucket": "specified",
+      "scripture": [
+        "Exodus 26:31",
+        "Exodus 26:33"
+      ],
+      "kjv_text": "[Exodus 26:31] And thou shalt make a vail of blue, and purple, and scarlet, and fine twined linen of cunning work: with cherubims shall it be made:\n[Exodus 26:33] And thou shalt hang up the vail under the taches, that thou mayest bring in thither within the vail the ark of the testimony: and the vail shall divide unto you between the holy place and the most holy.",
+      "historical_note": "",
+      "visual_directive": "The veil shows blue/purple/scarlet and cherubim as a great hanging embroidered curtain.",
+      "banned_anachronisms": [
+        "a plain white veil",
+        "a wooden or stone door in place of the veil",
+        "stone colonnade / masonry hall (it is a tent)"
+      ],
+      "verified": true,
+      "entity": "tabernacle"
+    },
+    {
+      "claim": "The holy place was lit by the golden lampstand (candlestick), not by ad-hoc hanging lamps.",
+      "bucket": "constrained",
+      "scripture": [
+        "Exodus 25:31",
+        "Exodus 27:20"
+      ],
+      "kjv_text": "[Exodus 25:31] And thou shalt make a candlestick of pure gold: of beaten work shall the candlestick be made: his shaft, and his branches, his bowls, his knops, and his flowers, shall be of the same.\n[Exodus 27:20] And thou shalt command the children of Israel, that they bring thee pure oil olive beaten for the light, to cause the lamp to burn always.",
+      "historical_note": "",
+      "visual_directive": "Light from the seven-branched golden lampstand.",
+      "banned_anachronisms": [
+        "multiple ad-hoc hanging oil lamps as the light source"
+      ],
+      "verified": true,
+      "entity": "tabernacle"
+    }
+  ]
+}

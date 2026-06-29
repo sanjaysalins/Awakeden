@@ -61,6 +61,9 @@ def main():
     args = ap.parse_args()
 
     ep = resolve(sys.argv)
+    # Fail-closed: bible-check must be green before spending on animation (going-forward).
+    from pipeline import bible_kb
+    bible_kb.gate(ep.v1, stage="animate-directional")
     OUT = ep.out
     plan = {s["id"]: s for s in ep.scenes}
     CONT = {s["id"]: cont_motion(s) for s in ep.scenes if s.get("directional")}

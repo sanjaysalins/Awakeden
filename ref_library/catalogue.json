@@ -1,0 +1,105 @@
+[
+  {
+    "name": "JESUS",
+    "kind": "character",
+    "canonical": "Jesus of Nazareth, a Jewish man of about thirty, warm olive-brown skin, a calm noble face, long dark brown hair parted in the middle to the shoulders, a full dark brown beard, deep compassionate brown eyes; face + full standing body anchor grid (head about one-seventh of standing height)",
+    "tags": [
+      "jesus",
+      "christ",
+      "new-testament",
+      "hero",
+      "messiah"
+    ],
+    "style": "inked",
+    "anchor": "characters/JESUS.png",
+    "first_used": "EW04_Bronze_Serpent",
+    "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+  },
+  {
+    "name": "MOSES",
+    "kind": "character",
+    "canonical": "Moses, an aged Hebrew prophet and shepherd-leader of about eighty, weathered sun-darkened olive skin, a deeply lined noble face, long flowing grey hair and a full thick grey beard, deep-set wise weary eyes, wrapped in a rough heavy desert mantle over a simple robe, holding a tall plain wooden shepherd's staff",
+    "tags": [
+      "moses",
+      "prophet",
+      "wilderness",
+      "law",
+      "old-testament",
+      "witness",
+      "elder"
+    ],
+    "style": "inked",
+    "anchor": "characters/MOSES.png",
+    "first_used": "EW04_Bronze_Serpent",
+    "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+  },
+  {
+    "name": "NICODEMUS",
+    "kind": "character",
+    "canonical": "Nicodemus, an older Jewish Pharisee and teacher of about sixty, a thoughtful dignified face, greying dark beard and hair, a lined brow and deep searching eyes, wearing the fine layered robes and prayer-shawl of a respected rabbi",
+    "tags": [
+      "nicodemus",
+      "pharisee",
+      "rabbi",
+      "seeker",
+      "new-testament",
+      "elder"
+    ],
+    "style": "inked",
+    "anchor": "characters/NICODEMUS.png",
+    "first_used": "EW04_Bronze_Serpent",
+    "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+  },
+  {
+    "name": "BRONZE_SERPENT_STANDARD",
+    "kind": "object",
+    "canonical": "a tall straight rough-hewn bare wooden pole planted upright, with a single cast bronze serpent MOUNTED ON TOP at the very summit \u2014 its body raised and its head lifted high like a banner. The long lower shaft is completely BARE plain wood; the serpent does NOT spiral, wind or coil down the pole. A serpent SET UPON a pole (Num 21:8), lifted up \u2014 NOT a snake-wrapped staff, NOT the Rod of Asclepius, NOT a medical caduceus, NOT an occult charm",
+    "tags": [
+      "bronze-serpent",
+      "standard",
+      "pole",
+      "numbers-21",
+      "wilderness",
+      "type-of-christ"
+    ],
+    "style": "inked",
+    "anchor": "objects/BRONZE_SERPENT_STANDARD.png",
+    "first_used": "EW04_Bronze_Serpent",
+    "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+  },
+  {
+    "name": "JERUSALEM_NIGHT_INTERIOR",
+    "kind": "place",
+    "canonical": "the interior of an ancient Jerusalem stone house at night: plain dressed-stone walls, a low stone ledge, a single small clay oil lamp casting warm light into deep darkness, simple period furnishings",
+    "tags": [
+      "jerusalem",
+      "interior",
+      "night",
+      "stone-house",
+      "oil-lamp",
+      "intimate"
+    ],
+    "style": "inked",
+    "anchor": "places/JERUSALEM_NIGHT_INTERIOR.png",
+    "first_used": "EW04_Bronze_Serpent",
+    "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+  },
+  {
+    "name": "WILDERNESS_CAMP",
+    "kind": "place",
+    "canonical": "an ancient Israelite wilderness encampment at dusk in the rocky Sinai desert: scattered rough goat-hair tents, low firelight, bare rocky sand, distant barren hills under a heavy dim sky",
+    "tags": [
+      "wilderness",
+      "camp",
+      "sinai",
+      "desert",
+      "encampment",
+      "exodus",
+      "dusk"
+    ],
+    "style": "inked",
+    "anchor": "places/WILDERNESS_CAMP.png",
+    "first_used": "EW04_Bronze_Serpent",
+    "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+  }
+]

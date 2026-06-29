@@ -1,0 +1,17 @@
+{
+  "piece_id": "02_Psalm_22_Song_From_The_Cross__v1__shorts__05_He_Hath_Done_This",
+  "path": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\shorts\\05_He_Hath_Done_This\\narration.md",
+  "form": "short",
+  "verdict": "CLEAN",
+  "summary": "Both KJV quotes (Ps 22:31, John 19:30) are verbatim-exact, the Ps22-to-cross link is explicitly framed as thematic resonance (not citation), and the grace-anchored CTA lands squarely on Christ.",
+  "findings": [
+    {
+      "severity": "stylistic",
+      "beat": "Beat 1 / Beat 4 — \"the very same note: a finished work\" then \"but the same note: a finished work\"",
+      "quote_or_claim": "carry the very same note: a finished work ... but the same note: a finished work",
+      "problem": "The phrase \"the same note: a finished work\" repeats nearly verbatim in the opening and the climax line; mild echo, not a doctrinal issue.",
+      "scripture_ref": "n/a",
+      "proposed_fix_text": "Optional: vary the climax, e.g. \"different words, different tongues, a thousand years apart — yet one finished work.\""
+    }
+  ]
+}

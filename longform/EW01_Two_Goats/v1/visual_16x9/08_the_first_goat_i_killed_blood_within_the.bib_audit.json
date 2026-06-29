@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "specified_violations": [],
+  "constrained_violations": [],
+  "notes": "Faithful. Aaron in plain linen, within the veil, sprinkles blood from a bronze basin toward the mercy seat (specified blood-within-the-veil satisfied). The mercy seat shows TWO golden cherubim facing each other with wings upswept (matches the mercy-seat fact). Incense smoke is present (constrained ok, though the cloud only partially veils the seat). The ark is inside the most holy place, not in the open court; the outer court with the bronze altar is visible beyond. No clear contradiction.",
+  "skipped": false,
+  "image_sha256": "aec27958e67d49df3db64bc962a378e8e24c0f6940a9c87fd615fa839c3ec1af",
+  "facts_sha256": "cbe7e84bc2763f27a3de781ebb9970b5ef19be96c283197564fa12335d04bd4b"
+}

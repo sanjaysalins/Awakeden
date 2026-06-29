@@ -30,6 +30,22 @@ GENERIC_CRUX_SUBJ = ("Christ crucified upon the cross at the moment of his death
     "reverent and dignified")
 CRUX_ELEMS = ["Christ's bowed face and crown of thorns","the nail-pierced hand","the wood of the cross"]
 
+# ---- PREVENTION: Christ/crux scenes must not tour wound / nail-hand TIGHT crops ----
+# Kling repaints a tight wound/nail-hand framing into a hallucination (a nail-pierced hand
+# morphs into a SEVERED hand on the ground; a wrist wound sprouts a FLAME). Tour only safe
+# anchors: face / cross / arms / composition. Caught on EW03 05_cross + 06_calls (2026-06-28).
+import re as _re
+_RISKY_CHRIST_ELEM = _re.compile(r"nail-pierced|nail-mark|\bnail\b|\bpierced\b|\bwound\b|\bflame\b", _re.I)
+SAFE_CRUX_ANCHORS  = ["Christ's bowed face and crown of thorns","the upright wooden cross","the torn darkened sky"]
+SAFE_RISEN_ANCHORS = ["the risen Christ's face","the extended open welcoming hand","the wide-open arms"]
+def safe_christ_elements(elems, is_crux):
+    """Drop wound/nail tight crops for Christ scenes; backfill safe anchors (>=3, <=4)."""
+    kept = [e for e in elems if not _RISKY_CHRIST_ELEM.search(e)]
+    for f in (SAFE_CRUX_ANCHORS if is_crux else SAFE_RISEN_ANCHORS):
+        if len(kept) >= 3: break
+        if f not in kept: kept.append(f)
+    return kept[:4]
+
 # ---- nano_banana_2 render with optional reference images ----
 def hf_image(prompt, refs=()):
     cmd = [str(config.HF_CLI_PATH), "generate", "create", "nano_banana_2",
@@ -101,15 +117,15 @@ EPISODES = {
    ("01_pit", ["joseph"], "A young Hebrew man, Joseph (from the reference), thrown down into a dry desert stone cistern, his hands grasping the stone rim from below, his upturned betrayed face the one lit point; above him in warm low sun the hard shadowed silhouettes of his older brothers, one stretching a fist of silver coins toward an unseen merchant; deep negative space of empty pit-wall",
      ["Joseph's upturned betrayed face","his hands clutching the stone rim","the brother's fist of silver coins"], "fast"),
    ("02_bowing", ["joseph"], "The stone-columned throne hall of Egypt's governor; gaunt road-worn Hebrew brothers kneel low with faces to the floor holding out empty grain-sacks; above them on a dais a robed Egyptian ruler — Joseph (from the reference), now in fine white Egyptian linen and a broad gold collar — watches in silence, his face the only one turned toward us; one shaft of high window-light; attendants in shadow",
-     ["the kneeling brothers' bowed faces","the ruler Joseph's still watching face","the begging hands lifting toward the throne"], "fast"),
+     ["the ruler Joseph's still watching face","a single kneeling brother's bowed head off to one side","the shaft of high window-light on the stone floor"], "fast"),
    ("03_descent", ["joseph"], "A single dark canvas of four soft-edged vignettes bleeding into one another, a descent then a climb: a hand spilling silver pieces; a falsely-accused man turning from a pointing accuser; a chained figure in a dungeon's barred shaft of light; and the same man Joseph (from the reference) risen, standing at the right hand of an enthroned Pharaoh with a signet ring on his finger; each vignette a memory-soft pool of light in darkness, no panels",
      ["the hand spilling the silver pieces","the chained hands in the dungeon light","the signet ring on Joseph's finger"], "fast"),
    ("04_betrayals", ["joseph","christ"], "One canvas, two soft-edged vignettes across a band of shadow: upper and smaller, young Joseph (from the reference) handed away as a clutch of silver coins changes hands; lower and larger, in a torch-lit olive garden, a robed disciple presses a kiss while a fist of silver coins glints, and Jesus (from the Christ reference) stands calm, sorrowful and bound at the centre light",
      ["Joseph's clutch of silver in the upper memory","the silver coins in the betrayer's fist","the betrayer's kiss against Jesus' cheek","Jesus' calm bound face"], "fast"),
    ("05_cross", ["christ"], "A darkened Golgotha at the ninth hour; an upright cross stands central against a torn blackened sky, the crucified Christ (from the Christ reference) with head bowed; a soldier's fallen iron nail and hammer in the foreground gloom; the earth opening below into deepest shadow, a low edge of dawn-grey light bleeding at the horizon; one dominant hero subject, vast negative sky",
-     ["Christ's bowed head and face","the nail-pierced hand","the fallen iron nail in the foreground"], "crux"),
+     ["Christ's bowed head and face","the upright wooden cross","the torn black sky"], "crux"),
    ("06_calls", ["christ"], "REUSE_CHRIST",
-     ["the risen Christ's face","the extended open hand","the wound in the wrist"], "fast"),
+     ["the risen Christ's face","the extended open welcoming hand","the wide-open arms"], "fast"),
    ("07_armswide", ["christ"], "The risen Christ (from the Christ reference) seen frontally, both arms thrown wide in an open embrace, no weapon anywhere, open empty hands showing the nail-marks, blood-tokened but glorified; a single ragged kneeling figure at the lower edge in shadow looking up; warm light pours from Christ over the kneeler; one dominant hero, deep negative space",
      ["Christ's open nail-marked hands","his face turned in welcome","the wide-thrown arms","the kneeling figure's upturned face"], "fast"),
    ("08_punch", [], "PUNCH", ["the risen Christ's living face","his extended open hand","the torn veil doorway light"], "punch"),
@@ -164,9 +180,12 @@ for slug, cast, subj, elems, kind in spec["paintings"]:
         if not png.exists():
             print(f"[still] {EP} {slug} refs={cast} ...", flush=True)
             png.write_bytes(hf_image(scene_prompt(subj), [refp[c] for c in cast]))
+    is_crux = (kind == "crux") or (subj == "CRUX")
+    is_christ = is_crux or (subj == "REUSE_CHRIST") or ("christ" in cast)
+    use_elems = safe_christ_elements(elems, is_crux) if is_christ else elems
     clip = OUT/f"{slug}.mp4"
     for _ in range(3):
-        if gs.make_clip(png, elems, clip, 10) and clip.exists(): break
+        if gs.make_clip(png, use_elems, clip, 10) and clip.exists(): break
     if not clip.exists():
         print(f"[WARN] {slug} clip missing — skipped"); continue
     clips.append((slug, clip, kind))

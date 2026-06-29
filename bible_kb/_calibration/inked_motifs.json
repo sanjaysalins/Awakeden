@@ -1,0 +1,17 @@
+{
+  "created": "2026-06-29",
+  "style": "graphic_novel",
+  "auditor": "pipeline/inked_audit.py (ICONOGRAPHY_TRAPS)",
+  "method": "blind independent vision passes over neutrally-renamed frames; each applied the real build_audit_prompt() for its trap; ground truth set by human inspection of the source frames",
+  "summary": "Defect recall 3/3 (caduceus, dagger-nails, neck-snake all FAILED with correct reasons). No hallucinated failures. The one flagged 'good' frame (the approved fixed cross) is a legitimate STRICT TRUE CATCH: hands grip the beam rather than being pierced open. The auditor caught a residual issue the human gate accepted.",
+  "open_decision": "Cross-hands bar: a nail+blood IS present but the hands are clenched/gripping, not open-pierced. Either soften the 'nails' trap so gripping-WITH-nail-and-blood passes (only no-nail gripping fails), or keep the strict rule and re-render the cross to open pierced palms (the round-4 intent that didn't fully land).",
+  "frames": [
+    {"id": "A", "src": "longform/_style_poc/ew04/stills/03b_serpent_atop_sky.png", "trap": "caduceus", "label": "good", "verdict": "pass", "trap_hits": [], "correct": true},
+    {"id": "B", "src": "longform/_style_poc/ew04/stills/03_bronze_lifted.png", "trap": "caduceus", "label": "bad", "verdict": "fail", "trap_hits": ["caduceus"], "correct": true},
+    {"id": "C", "src": "longform/_style_poc/jesus/_old3_JESUS__cross__a.png", "trap": "nails", "label": "bad", "verdict": "fail", "trap_hits": ["nails"], "correct": true},
+    {"id": "D", "src": "longform/_style_poc/jesus/JESUS__cross__a.png", "trap": "nails", "label": "good(approved)", "verdict": "fail", "trap_hits": ["nails"], "correct": "strict-true-catch", "note": "feet correctly nailed; hands clenched/gripping the beam with nail+blood beside the curled hand, not driven through an open palm. Human gate accepted this; auditor flagged it."},
+    {"id": "E", "src": "longform/_style_poc/ew04/stills/04b_face_to_life.png", "trap": "body_snake", "label": "good", "verdict": "pass", "trap_hits": [], "correct": true},
+    {"id": "F", "src": "longform/_style_poc/ew04/stills/_old_04b_face_to_life.png", "trap": "body_snake", "label": "bad", "verdict": "fail", "trap_hits": ["body_snake"], "correct": true},
+    {"id": "G", "src": "longform/_style_poc/jesus/JESUS__cross__a.png", "trap": "nails", "label": "re-rendered (round-5, open pierced palms)", "verdict": "pass", "trap_hits": [], "correct": true, "note": "Held-the-line re-render after D failed. Open flat pierced palms now; blind auditor passes. Old gripping-hands still moved to _old5_JESUS__cross__a.png. The gate works as a gate: blocked D, passes G."}
+  ]
+}

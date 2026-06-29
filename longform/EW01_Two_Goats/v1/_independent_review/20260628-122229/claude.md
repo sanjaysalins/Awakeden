@@ -1,0 +1,17 @@
+# Independent review — claude (OK, 101s)
+
+I read the whole piece against the eyewitness-long lens and checked every quote against KJV. The Scripture is clean — I verified all of them: Lev 16:2, 16:8, 16:15, 16:21, 16:22, 16:5, 17:11, Heb 10:3, 10:4, 9:12, 13:12, 10:12, Isa 53:6, Matt 27:51, Ps 103:12, Heb 10:19 are all verbatim, and the divine-speech tag `[the LORD]` on Lev 16:2 is correctly attributed. That part is genuinely strong. But there are real problems.
+
+**1. Factual error in the witness's own account (the serious one).** Beat 2: *"Nadab and Abihu, my boys, died in that holy place... I carried them out myself."* Aaron did **not** carry them out. Leviticus 10:4–5 has Moses summon Aaron's cousins — *"Mishael and Elzaphan, the sons of Uzziel"* — to *"carry your brethren... out of the camp,"* and v6–7 specifically **forbids Aaron from mourning or leaving the door**. The whole point of that passage is that Aaron was restrained from touching his sons' bodies. "I carried them out myself" inverts the text. On this project's "Bible-grounded, proven both ways" standard, that's a real miss, not a flourish. Fix the line (e.g., "I watched my cousins carry them out, and was forbidden even to mourn").
+
+**2. Back-third repetition / sag.** The veil-torn beat lands twice, nearly word-for-word: Beat 6 — *"torn from the top the very hour He died, by no human hand"* + the Matt 27:51 quote; Beat 7 — *"torn from top to bottom the hour He died, and no hand will ever sew it shut."* Likewise the "year after year, never stayed done" refrain runs in Beat 5, again in Beat 6, and a third time in Beat 7 (*"year after year I carried the blood in... year after year I came back to do it all again"*). Beat 7 re-narrates the arc the reveal already delivered. One of those passes should be cut so the invitation adds a *new* turn rather than re-treading. This is the main thing keeping it from a tight ~10 min.
+
+**3. Minor — sourcing of the "cleansed from all our sins" line.** Beat 5: *"the LORD Himself had said that on that day we were cleansed from all our sins before Him"* leans on Lev 16:30 but is left as paraphrase. It's fine unquoted, but since the witness explicitly attributes it to the LORD's own speech, consider tightening so it doesn't read as a near-quote that isn't one.
+
+What's working and should be preserved: the two-goats riddle is set up in Beat 4 and the reveal in Beat 6 genuinely *answers both halves* (price paid / guilt carried) from the text — the turn is earned, not announced. The wrestling (*"it never stayed finished... a cleansing you must make again every year is true, but it is not done"*) is the actual strongest objection, the one Hebrews itself raises — a real steel-man, not a strawman. Substitution is named (one goat dies, one carries off; both in one Priest). CTA is grace-anchored and fresh (*"will you come in? Not when you are clean enough... but now, on His"*) — it dodges the tired "will you trust Him?" template. Voice is consistently Aaron.
+
+VERDICT: REVISE
+TOP FIXES:
+1. Correct the factual error in Beat 2 — Aaron did not carry Nadab and Abihu out; his cousins Mishael and Elzaphan did (Lev 10:4–5) and Aaron was forbidden to mourn. Rewrite the line.
+2. Cut the back-third repetition — the veil-torn beat and the "year after year, never stayed done" refrain each land 2–3 times; tighten Beat 7 so the invitation delivers a new turn, not a re-narration.
+3. Resolve the Lev 16:30 paraphrase in Beat 5 so an attributed "the LORD Himself had said" line doesn't read as an almost-quote that isn't verbatim.

@@ -125,6 +125,24 @@ LENS_EYEWITNESS_LONG = (LENS_EYEWITNESS + """
 - LONG form: do the added beats / dialogue / interior wrestling EARN the runtime (~9-11 min),
   or does the piece SAG — padding, repetition, a beat that adds no new turn?""")
 
+LENS_BIBLICAL_FACTS = """LENS — judge this BIBLICAL FACT SHEET (the Scripture-cited facts about
+location / time / place / customs / characters that a set of devotional paintings must
+honour). Be specific, cite the exact fact + reference:
+- CITATION TRUTH (most important): for every fact, does the quoted KJV text (shown under
+  each fact) ACTUALLY support the claim? Flag any claim the cited verse does NOT state, any
+  over-reach beyond what the verse says, and any citation that looks wrong/misapplied.
+- NO INVENTED FACTS: nothing asserted as biblical that Scripture does not actually say.
+  Tradition or commonplace-but-unbiblical detail (e.g. a number, a colour, an object the
+  text never mentions) must NOT be in the 'specified' bucket.
+- BUCKETS ARE HONEST: 'specified' = the Bible explicitly states this visual fact; 'constrained'
+  = not stated but a depiction could contradict the text; 'free' = artistic licence. Flag any
+  fact in the wrong bucket (especially licence dressed up as 'specified').
+- HISTORY STAYS SECONDARY: any historical_note must never override or contradict Scripture; flag
+  any that does, or that is presented as if it were biblical.
+- CHRIST-LENS INTACT: the facts must not distort the passage's witness to Christ / its typology.
+- COVERAGE: are there obvious, checkable biblical facts about these scenes that are MISSING
+  (a specified detail the painting could easily get wrong and no fact guards it)?"""
+
 REVIEW_TEMPLATE = """You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
 are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
 
@@ -207,7 +225,8 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("artifact", help="path to the finished narration/plan file")
     ap.add_argument("--type", dest="kind",
-                    choices=["narration", "plan", "upload", "eyewitness-short", "eyewitness-long"],
+                    choices=["narration", "plan", "upload", "eyewitness-short", "eyewitness-long",
+                             "biblical-facts"],
                     required=True)
     ap.add_argument("--providers", default="cursor,claude,gemini,codex,grok")
     ap.add_argument("--context", default="", help="extra brief, or a path to one")
@@ -233,7 +252,8 @@ def main() -> int:
 
     lens = {"narration": LENS_NARRATION, "plan": LENS_PLAN, "upload": LENS_UPLOAD,
             "eyewitness-short": LENS_EYEWITNESS_SHORT,
-            "eyewitness-long": LENS_EYEWITNESS_LONG}[args.kind]
+            "eyewitness-long": LENS_EYEWITNESS_LONG,
+            "biblical-facts": LENS_BIBLICAL_FACTS}[args.kind]
     if args.red_team:
         lens = ("RED-TEAM LENS — you are a HOSTILE adversary. Assume it is flawed and PROVE it. "
                 "Hunt doctrinal error, Scripture misquote/overclaim, cheesy/tired lines, and anything "

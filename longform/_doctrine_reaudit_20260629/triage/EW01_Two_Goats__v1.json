@@ -1,0 +1,17 @@
+{
+  "piece_id": "EW01_Two_Goats__v1",
+  "path": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\narration.md",
+  "form": "long",
+  "verdict": "CLEAN",
+  "summary": "The previously-found Leviticus 10 narrative-fact error is now corrected (cousins carried out Nadab/Abihu, Aaron forbidden to mourn or leave the door); all 16 KJV quotes are verbatim against the source, the two-goat typology is sound, and the piece lands on Christ with a grace-anchored CTA.",
+  "findings": [
+    {
+      "severity": "stylistic",
+      "beat": "Beat 6 — The reveal",
+      "quote_or_claim": "Stack of consecutive NT/OT proof-quotes (Heb 10:3, Heb 10:4, Heb 9:12, Isa 53:6, Heb 13:12, Heb 10:12, Matt 27:51)",
+      "problem": "Beat 6 leans heavily on a dense chain of back-to-back signposted cross-time Scripture quotes (the EW-INV-11 device); doctrinally and verbatim clean, but pacing-heavy — the second panel flagged this as a craft/quote-density concern, not a doctrinal one. Does not change the verdict.",
+      "scripture_ref": "n/a (craft only)",
+      "proposed_fix_text": "Optional: break the quote run with one short line of Aaron's own reflection between the Heb 13:12 \"without the gate\" quote and the Heb 10:12 \"sat down\" quote to let the reveal breathe."
+    }
+  ]
+}

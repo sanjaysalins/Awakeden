@@ -1,0 +1,52 @@
+{
+  "episode": "EW04_bronze_serpent",
+  "anim_dir": "../anim",
+  "prefix": "EW04__",
+  "audio": "../cut/EW04_bronze_serpent_scored_captioned.mp4",
+  "note": "motion: static=boomerang | directional/talk=slow forward (no reverse/freeze). bias=[bx,by] keeps the key element in frame. Red bar = highlighted Scripture only. Captions kept clean (no em-dash / curly quotes). Templates rotate; heroes stay full.",
+  "beats": [
+    {"t": [0.0, 8.2], "tpl": "two_v",
+     "clips": [{"slug": "01b_moses_close", "motion": "talk", "bias": [0.20, 0.40]},
+               {"slug": "01_hook_moses", "motion": "static", "bias": [0.5, 0.45]}],
+     "cap": {"type": "caption", "text": "My people were dying of snakebite."}},
+
+    {"t": [8.2, 14.8], "tpl": "stack_h",
+     "clips": [{"slug": "02_judgment_plague", "motion": "directional", "bias": [0.42, 0.74]},
+               {"slug": "02b_serpents_spread", "motion": "directional", "bias": [0.5, 0.60]}],
+     "cap": {"type": "caption", "text": "The venom was the judgment our sin had earned."}},
+
+    {"t": [14.8, 18.6], "tpl": "full",
+     "clips": [{"slug": "01b_moses_close", "motion": "talk", "bias": [0.32, 0.42]}],
+     "cap": {"type": "caption", "text": "I begged Him. He would not."}},
+
+    {"t": [18.6, 24.1], "tpl": "big_inset",
+     "clips": [{"slug": "03b_serpent_atop_sky", "motion": "static", "bias": [0.5, 0.30]},
+               {"slug": "04b_face_to_life", "motion": "static", "bias": [0.5, 0.35]}],
+     "cap": {"type": "caption", "text": "Forge the very thing killing us, and lift it high."}},
+
+    {"t": [24.1, 27.7], "tpl": "full",
+     "clips": [{"slug": "04b_face_to_life", "motion": "static", "bias": [0.5, 0.38]}],
+     "cap": {"type": "caption", "text": "The bitten had only to look, and live."}},
+
+    {"t": [27.7, 36.8], "tpl": "split_v",
+     "clips": [{"slug": "05_night_teacher", "motion": "talk"}],
+     "cap": {"type": "caption", "text": "From the far side of my life, the Teacher answered:"}},
+
+    {"t": [36.8, 43.5], "tpl": "full",
+     "clips": [{"slug": "05b_jesus_speaks", "motion": "talk", "bias": [0.5, 0.40]}],
+     "cap": {"type": "redletter", "speaker": "JESUS", "ref": "JOHN 3",
+             "text": "And as Moses lifted up the serpent in the wilderness, even so must the Son of man be lifted up."}},
+
+    {"t": [43.5, 52.6], "tpl": "full",
+     "clips": [{"slug": "06_cross_lifted", "motion": "static", "bias": [0.5, 0.35]}],
+     "cap": {"type": "caption", "text": "They lifted Jesus on a Roman pole, bearing our judgment."}},
+
+    {"t": [52.6, 62.7], "tpl": "triptych_v",
+     "clips": [{"slug": "08_bitten_multitude", "motion": "static"}],
+     "cap": {"type": "caption", "text": "You who are bitten, that is every one of us."}},
+
+    {"t": [62.7, 68.12], "tpl": "full",
+     "clips": [{"slug": "07_risen_christ", "motion": "static", "bias": [0.5, 0.40]}],
+     "cap": {"type": "caption", "text": "Lift your eyes to Jesus. Look, and live."}}
+  ]
+}

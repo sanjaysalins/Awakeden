@@ -1,0 +1,17 @@
+{
+  "name": "NICODEMUS",
+  "kind": "character",
+  "canonical": "Nicodemus, an older Jewish Pharisee and teacher of about sixty, a thoughtful dignified face, greying dark beard and hair, a lined brow and deep searching eyes, wearing the fine layered robes and prayer-shawl of a respected rabbi",
+  "tags": [
+    "nicodemus",
+    "pharisee",
+    "rabbi",
+    "seeker",
+    "new-testament",
+    "elder"
+  ],
+  "style": "inked",
+  "anchor": "characters/NICODEMUS.png",
+  "first_used": "EW04_Bronze_Serpent",
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

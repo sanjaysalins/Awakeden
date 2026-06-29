@@ -1,0 +1,17 @@
+{
+  "piece_id": "02_Psalm_22_Song_From_The_Cross__v1__shorts__03_The_Forsaken_Cry",
+  "path": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\shorts\\03_The_Forsaken_Cry\\narration.md",
+  "form": "short",
+  "verdict": "FIX",
+  "summary": "Both Scripture quotes are KJV-verbatim and the doctrine/Christ-landing is sound, but the opening line implies the cry of dereliction was Jesus' first utterance from the cross, which contradicts the gospel record.",
+  "findings": [
+    {
+      "severity": "narrative-fact",
+      "beat": "Beat 1 (hook) — 'From the cross, Jesus did not speak His own words first — He cried a psalm David had written a thousand years before.'",
+      "quote_or_claim": "From the cross, Jesus did not speak His own words first — He cried a psalm David had written a thousand years before.",
+      "problem": "The phrase 'did not speak His own words first' reads as a chronological claim that the cry of dereliction (Matt 27:46) was Jesus' opening utterance from the cross. In the harmonized gospel record the dereliction cry is the FOURTH of the seven sayings; 'Father, forgive them' (Luke 23:34) and the word to the penitent thief ('To day shalt thou be with me in paradise', Luke 23:43) precede it. Matthew/Mark record only this cry, so 'first' is not supportable. The intended point is that the cry was borrowed Scripture rather than original speech — fix the wording so it does not assert a false order.",
+      "scripture_ref": "Matt 27:46 (cf. Luke 23:34, 23:43 — earlier sayings)",
+      "proposed_fix_text": "From the cross, Jesus cried words that were not His own — a psalm David had written a thousand years before."
+    }
+  ]
+}

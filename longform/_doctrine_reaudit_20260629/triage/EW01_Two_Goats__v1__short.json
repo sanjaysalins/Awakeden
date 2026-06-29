@@ -1,0 +1,17 @@
+{
+  "piece_id": "EW01_Two_Goats__v1__short",
+  "path": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\short\\narration.md",
+  "form": "short",
+  "verdict": "FIX",
+  "summary": "KJV quote and Christ-landing are clean, but Aaron's first-person claim to have driven the scapegoat into the desert contradicts Lev 16:21, where a fit man (not Aaron) leads it away.",
+  "findings": [
+    {
+      "severity": "narrative-fact",
+      "beat": "Beat 2 — 'I laid my hands on its head, confessed every sin of the people over it, and drove it into the desert to be lost.'",
+      "quote_or_claim": "and drove it into the desert to be lost",
+      "problem": "The high priest did NOT personally drive/lead the scapegoat into the wilderness. Lev 16:21 says Aaron lays hands and confesses, then 'shall send him away by the hand of a fit man into the wilderness' — a designated fit man does the driving out. The first-person 'I... drove it into the desert' inverts who performed the act, the same class of fact-error flagged previously (the Lev 10 'I carried them out myself' inversion). Aaron's own actions were the laying-on of hands and confession; the sending-out was executed by the fit man.",
+      "scripture_ref": "Lev 16:21-22",
+      "proposed_fix_text": "The second I did not kill — I laid my hands on its head, confessed every sin of the people over it, and sent it away into the desert to be lost."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "piece_id": "EW05_Jonah__v1",
+  "path": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW05_Jonah\\v1\\narration.md",
+  "form": "long",
+  "verdict": "CLEAN",
+  "summary": "All 13 quoted Scriptures (Jonah 1:2, 1:9, 1:12, 1:15, 1:17, 2:2, 2:4, 2:6, 2:9, 2:10 and Matthew 12:39-41) are KJV-verbatim, every narrative fact matches Jonah 1-4, and the substitution/resurrection doctrine soundly lands on Christ with a grace-anchored, fear-free CTA.",
+  "findings": [
+    {
+      "severity": "stylistic",
+      "beat": "Beat 2 / Beat 5",
+      "quote_or_claim": "the seat of the people who slaughtered mine ... the very people who had butchered mine",
+      "problem": "Interpretive backstory not stated in the book of Jonah (and arguably anachronistic, since Assyria's major destruction of Israel post-dates Jonah son of Amittai's ministry). It does NOT contradict the text — it is a defensible, historically-grounded homiletic motivation for Jonah's flight, and the narration correctly grounds his actual stated reason in Jonah 4:2 ('I knew Him to be gracious and slow to anger'). Noted for transparency only; does not force a FIX.",
+      "scripture_ref": "Jonah 4:2; cf. 2 Kings 17:5-6",
+      "proposed_fix_text": "(optional, if tightening to text) the great and cruel city of my enemies"
+    }
+  ]
+}

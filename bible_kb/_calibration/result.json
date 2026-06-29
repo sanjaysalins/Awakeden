@@ -1,0 +1,75 @@
+{
+  "tp": 4,
+  "fp": 0,
+  "tn": 4,
+  "fn": 0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "accuracy": 1.0,
+  "rows": [
+    {
+      "id": "two-goats-PASS",
+      "expected": "pass",
+      "predicted": "pass",
+      "ok": true,
+      "tag": "TN",
+      "notes": "Two goats (one dark, one light) stand together before Aaron - the specified two-goats fact is satisfied."
+    },
+    {
+      "id": "one-goat-FAIL",
+      "expected": "fail",
+      "predicted": "fail",
+      "ok": true,
+      "tag": "TP (caught)",
+      "notes": "The image shows two goats, contradicting the 'exactly one goat' specified fact."
+    },
+    {
+      "id": "both-hands-PASS",
+      "expected": "pass",
+      "predicted": "pass",
+      "ok": true,
+      "tag": "TN",
+      "notes": "Aaron presses BOTH hands on the head of a living, standing goat - the specified fact is satisfied."
+    },
+    {
+      "id": "slain-goat-FAIL",
+      "expected": "fail",
+      "predicted": "fail",
+      "ok": true,
+      "tag": "TP (caught)",
+      "notes": "Image shows a living standing goat, contradicting the 'already slain/dead' fact."
+    },
+    {
+      "id": "ark-in-court-FAIL",
+      "expected": "fail",
+      "predicted": "fail",
+      "ok": true,
+      "tag": "TP (caught)",
+      "notes": "Real contradiction: the ark is depicted in the open court before the people, not behind the veil."
+    },
+    {
+      "id": "tent-not-temple-PASS",
+      "expected": "pass",
+      "predicted": "pass",
+      "ok": true,
+      "tag": "TN",
+      "notes": "The sanctuary is a curtained tent with skin coverings on poles and fabric court hangings - a tent, not stone. No contradiction."
+    },
+    {
+      "id": "linen-at-veil-PASS",
+      "expected": "pass",
+      "predicted": "pass",
+      "ok": true,
+      "tag": "TN",
+      "notes": "Aaron is in plain linen robe and linen mitre at the veil, no gold - the specified fact is satisfied."
+    },
+    {
+      "id": "gold-at-veil-FAIL",
+      "expected": "fail",
+      "predicted": "fail",
+      "ok": true,
+      "tag": "TP (caught)",
+      "notes": "Image shows plain linen, contradicting the 'gold breastplate/ephod at the veil' fact."
+    }
+  ]
+}
