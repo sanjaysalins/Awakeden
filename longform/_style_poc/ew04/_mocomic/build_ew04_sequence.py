@@ -70,9 +70,9 @@ PAGES = [
      [K("04b_face_to_life", 0.5, 0.34, 1.10)],
      cap("The bitten had only to look, and live.")),
 
-    (27.7, 36.8, "06_grid_2x3",
-     [KW(0.5, 0.42), K("05_night_teacher", 0.5, 0.40), K("03b_serpent_atop_sky", 0.5, 0.30),
-      V("05_night_teacher"), K("06_cross_lifted", 0.5, 0.35), V("05b_jesus_speaks")],
+    (27.7, 36.8, "06_grid_2x3",                       # cells: [col, hero, kb, kb, kb, col]
+     [V("05_night_teacher"), KW(0.5, 0.42), K("03b_serpent_atop_sky", 0.5, 0.30),
+      K("06_cross_lifted", 0.5, 0.35), K("04b_face_to_life", 0.5, 0.32), V("05b_jesus_speaks")],
      cap("From the far side of my life, the Teacher answered:")),
 
     (36.8, 43.5, "01_full_bleed",

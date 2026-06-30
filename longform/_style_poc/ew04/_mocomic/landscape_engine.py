@@ -108,10 +108,20 @@ def t_polyptych():
 
 
 def t_grid_2x3():
-    r1, r2 = rows(content(), 2)
-    rects = cols(r1, 3) + cols(r2, 3)
-    fids = ["hero", "kb", "kb", "col", "kb", "col"]
-    return dict(veo=1, cap="corner", cells=[C(r, f) for r, f in zip(rects, fids)])
+    """Montage: two full-height 9:16 clip RAILS book-end a hero+3-still centre, so the reuse
+    clips drop in NATIVE (true 9:16, zero crop) instead of a landscape grid cell with cream gaps."""
+    x0, y0, w, h = content()
+    lrail = (x0, y0, RAIL_W, h)
+    rrail = (x0 + w - RAIL_W, y0, RAIL_W, h)
+    cx = x0 + RAIL_W + G
+    cw = w - 2 * (RAIL_W + G)                      # centre column width
+    hero = (cx, y0, cw, _even(round(cw * 9 / 16)))  # 16:9 hero on top
+    sub = (cx, hero[1] + hero[3] + G, cw, y0 + h - (hero[1] + hero[3] + G))
+    top, bot = split_h(sub, (sub[3] - G) / 2)       # 2 small kb + 1 wide kb below
+    kbL, kbR = cols(top, 2)
+    cells = [C(lrail, "col"), C(hero, "hero"), C(kbL, "kb"),
+             C(kbR, "kb"), C(bot, "kb"), C(rrail, "col")]
+    return dict(veo=1, cap="corner", cells=cells)
 
 
 def t_big_inset():
