@@ -1,5 +1,14 @@
 # RESUME.md — start here next session
 
+> **⚡ ACTIVE THREAD (2026-06-30) — BATCH-BY-VISUAL-WORLD + CLUSTER 1 PILOT.** We now produce the whole
+> corpus grouped by **shared visual world** (not series): `BATCH_PLAN.md` (7 clusters) + `batches/batch_manifest.json`.
+> Building the FIRST cross piece — **"Father, forgive them" (Luke 23:34), inked motion-comic 9:16 short** — as a
+> PILOT to lock the inked look before batching the other ~8 cross shorts. **State + exact next steps:**
+> `batches/cluster_01_cross/CLUSTER1_PILOT_RESUME.md`. Status: narration LOCKED (3 panel passes), 57s multi-voice
+> audio DONE+approved, 7 inked stills RENDERED+eyeballed (look validated). NEXT: re-roll stills 05+07, then
+> animate (~$13, get OK), then composite comic furniture + assemble. Memories: [[awakeden-batch-by-visual-world]],
+> [[seedream-no-negative-channel]].
+
 > **SIDE THREAD (2026-06-30):** built a 16:9 **long-form landscape motion-comic TEMPLATE** (proof of how a
 > long-form page is assembled — NOT a pivot; shorts+longs both continue). Full self-contained writeup +
 > red-team + pending decisions in
