@@ -1,0 +1,18 @@
+{
+  "name": "BETHLEHEM",
+  "kind": "place",
+  "canonical": "the ancient hill town of Bethlehem, house of bread: clustered flat-roofed limestone dwellings stacked up a ridge above terraced barley fields, dusty lanes and low stone walls, warm late-afternoon light over the Judean hills, humble and timeless",
+  "tags": [
+    "bethlehem",
+    "town",
+    "judea",
+    "limestone",
+    "hills",
+    "barley"
+  ],
+  "style": "inked",
+  "anchor": "places/BETHLEHEM.png",
+  "first_used": "EW09_Boaz",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "SICK_MULTITUDE",
+  "kind": "character",
+  "canonical": "A great multitude of sick and infirm folk waiting along the edge of the pool of Bethesda. Ragged ancient Judean lame, halt and withered men and women with gaunt sun-worn weary faces, some lying on thin reed mats, some leaning on worn wooden crutches and walking-staves, some reaching feebly toward the water. Stone colonnade and still pool water behind, weary heavy light.",
+  "tags": [
+    "multitude",
+    "sick",
+    "blind",
+    "lame",
+    "bethesda",
+    "porches"
+  ],
+  "style": "inked",
+  "anchor": "characters/SICK_MULTITUDE.png",
+  "first_used": "26 Jesus Walked Past the Pool",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

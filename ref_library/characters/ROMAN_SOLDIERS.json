@@ -1,0 +1,18 @@
+{
+  "name": "ROMAN_SOLDIERS",
+  "kind": "character",
+  "canonical": "first-century Roman legionaries, hard sun-weathered men in segmented lorica armour over red tunics, crested or plain iron helmets, red cloaks, leather greaves and hobnailed sandals, bearing short swords, spears and shields, faces stern and impassive",
+  "tags": [
+    "roman",
+    "soldiers",
+    "legionaries",
+    "lorica",
+    "group",
+    "armour"
+  ],
+  "style": "inked",
+  "anchor": "characters/ROMAN_SOLDIERS.png",
+  "first_used": "02_Psalm_22",
+  "count": 3,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

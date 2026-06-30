@@ -1,0 +1,18 @@
+{
+  "name": "OUTSIDER_BROUGHT_IN",
+  "kind": "motif",
+  "canonical": "the foreign Moabite woman, once a stranger outside the covenant, led in and grafted into the line of Israel and brought all the way home as a welcomed bride",
+  "tags": [
+    "ruth",
+    "outsider",
+    "grafted-in",
+    "moabitess",
+    "bride",
+    "belonging"
+  ],
+  "style": "inked",
+  "anchor": "motifs/OUTSIDER_BROUGHT_IN.png",
+  "first_used": "EW09_Boaz",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "PHILIP_THE_APOSTLE",
+  "kind": "character",
+  "canonical": "Philip the apostle of Bethsaida (one of the Twelve, NOT Philip the evangelist), a thoughtful, questioning Galilean of about thirty, lean and of medium height with light-olive skin, a high-browed studious clean-featured face and searching narrowed eyes that seem mid-question, neatly combed short dark-brown hair and a short close-cropped brown beard, dressed in a plain olive-green tunic and a soft grey-brown mantle drawn over one shoulder, one hand lifted thoughtfully as if reasoning a point",
+  "tags": [
+    "philip",
+    "apostle",
+    "bethsaida",
+    "questioning",
+    "thoughtful",
+    "twelve"
+  ],
+  "style": "inked",
+  "anchor": "characters/PHILIP_THE_APOSTLE.png",
+  "first_used": "gospels",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

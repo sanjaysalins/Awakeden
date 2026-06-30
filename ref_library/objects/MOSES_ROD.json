@@ -1,0 +1,18 @@
+{
+  "name": "MOSES_ROD",
+  "kind": "object",
+  "canonical": "a long straight rough shepherd's staff of weathered olive wood, plain and unadorned, worn smooth by the hand \u2014 the rod of Moses' wilderness works, NOT a snake-wrapped staff, NOT an ornate royal sceptre",
+  "tags": [
+    "rod",
+    "staff",
+    "shepherd",
+    "wood",
+    "moses",
+    "plain"
+  ],
+  "style": "inked",
+  "anchor": "objects/MOSES_ROD.png",
+  "first_used": "EW04_Bronze_Serpent",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "COSTLY_REDEMPTION",
+  "kind": "motif",
+  "canonical": "the kinsman-redeemer at the city gate spending his own wealth to redeem both the dead man land and his widow, to raise up the name of the dead upon his inheritance (Ruth 4:5-10), at real cost to himself",
+  "tags": [
+    "boaz",
+    "redeemer",
+    "kinsman",
+    "cost",
+    "buy-back",
+    "love"
+  ],
+  "style": "inked",
+  "anchor": "motifs/COSTLY_REDEMPTION.png",
+  "first_used": "EW09_Boaz",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

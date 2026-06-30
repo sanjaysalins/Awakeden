@@ -1,0 +1,18 @@
+{
+  "name": "STAYED_HAND",
+  "kind": "motif",
+  "canonical": "Aged Abraham, grey-bearded in a simple robe, kneeling alone on a rocky summit, his face and one open empty hand lifted high toward a radiant break of holy light above, overcome with relief and awe. Close before him a single ram is caught fast by its curled horns in a low thicket of dry branches. The moment the LORD provided the ram as the substitute. Rocky Moriah summit, plain wilderness, reverent, no other figures.",
+  "tags": [
+    "abraham",
+    "knife",
+    "stayed",
+    "moriah",
+    "rescue",
+    "voice"
+  ],
+  "style": "inked",
+  "anchor": "motifs/STAYED_HAND.png",
+  "first_used": "EW02_Abraham",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

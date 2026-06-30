@@ -1,0 +1,18 @@
+{
+  "name": "ROBE",
+  "kind": "object",
+  "canonical": "the finest festal robe of the house, a long flowing outer garment of rich dyed cloth with woven border-bands, laid out to drape over a returning son's shoulders. A best ceremonial mantle of honour \u2014 NOT a plain peasant tunic, NOT a modern coat or bathrobe; the costliest robe",
+  "tags": [
+    "robe",
+    "festal",
+    "garment",
+    "honour",
+    "finest",
+    "mantle"
+  ],
+  "style": "inked",
+  "anchor": "objects/ROBE.png",
+  "first_used": "09 The Father Who Ran",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

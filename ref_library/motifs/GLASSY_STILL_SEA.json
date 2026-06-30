@@ -1,0 +1,18 @@
+{
+  "name": "GLASSY_STILL_SEA",
+  "kind": "motif",
+  "canonical": "a wide open SEA stilled flat to a mirror-smooth sheet of water stretching to the far horizon under a clearing sky, one small wooden fishing boat resting motionless upon the glassy water at Christ's word \u2014 real open sea to the horizon, NOT a tiled floor, NOT an indoor glass floor, NOT dry land",
+  "tags": [
+    "sea",
+    "calm",
+    "miracle",
+    "stilled",
+    "command",
+    "wonder"
+  ],
+  "style": "inked",
+  "anchor": "motifs/GLASSY_STILL_SEA.png",
+  "first_used": "28 What Manner of Man",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

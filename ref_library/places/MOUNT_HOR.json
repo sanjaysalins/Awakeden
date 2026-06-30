@@ -1,0 +1,18 @@
+{
+  "name": "MOUNT_HOR",
+  "kind": "place",
+  "canonical": "Mount Hor on the bitter desert road: a stark rocky desert mountain of bare sun-scorched stone rising from a wasteland of dust and shattered rock, a thin hard wind and a pale glaring sky, a desolate height on the edge of the wilderness wandering",
+  "tags": [
+    "mount-hor",
+    "mountain",
+    "desert",
+    "rocky",
+    "barren",
+    "wilderness"
+  ],
+  "style": "inked",
+  "anchor": "places/MOUNT_HOR.png",
+  "first_used": "EW04_Bronze_Serpent",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

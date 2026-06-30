@@ -1,0 +1,4780 @@
+{
+  "built": "2026-06-30T01:33:26",
+  "n_batches": 6,
+  "n_pieces": 66,
+  "n_elements": 235,
+  "elements": [
+    {
+      "name": "JESUS",
+      "kind": "character",
+      "role": "divine",
+      "count": 66,
+      "appearances": [
+        "01_Isaiah_53",
+        "02 Why are you afraid",
+        "02_Psalm_22",
+        "03_Passover_Lamb",
+        "04 psalms 22 part 2",
+        "04_Bronze_Serpent",
+        "05 He Said It Under the Lamps",
+        "05_Seed_Of_The_Woman",
+        "06 I AM the Light of the World",
+        "06_Day_Of_Atonement",
+        "07 I AM the Door — The Shepherd Who Became the Gate",
+        "08 The Well That Never Runs Dry",
+        "09 The Father Who Ran",
+        "10 The Line He Never Got to Say",
+        "11 The Confession He Never Finished",
+        "12 The Kiss That Cut Off the Bargain",
+        "16 The Fire Jesus Built",
+        "18 He Never Said Yes",
+        "19 The Cliff of Rival Gods",
+        "20 He Was Asleep in the Storm",
+        "21 The Pronouns That Preached the Gospel",
+        "22 He Never Answered Jesus",
+        "23 The Prepared Belly",
+        "24 The Answer Was a Gift",
+        "25 The Question on the Gaza Road",
+        "26 Jesus Walked Past the Pool",
+        "27 A List of Dead Men",
+        "28 What Manner of Man",
+        "29 The Race He Could Never Win",
+        "30 Smitten of God",
+        "31 The Light You Can Stand In",
+        "32_The_Door_Was_a_Body",
+        "33_The_Shepherd_In_The_Gap",
+        "34_The_Hunger_Bread_Cant_Fill",
+        "35_Manna_Fulfilled",
+        "36_In_No_Wise_Cast_Out",
+        "EW01_Two_Goats",
+        "EW01_Two_Goats_short",
+        "EW02_Abraham",
+        "EW02_Abraham_short",
+        "EW03_Joseph",
+        "EW03_Joseph_short",
+        "EW04_Bronze_Serpent",
+        "EW04_Bronze_Serpent_short",
+        "EW05_Jonah",
+        "EW05_Jonah_short",
+        "EW06_Noah",
+        "EW06_Noah_short",
+        "EW07_Isaiah",
+        "EW07_Isaiah_short",
+        "EW08_Passover",
+        "EW08_Passover_short",
+        "EW09_Boaz",
+        "EW09_Boaz_short",
+        "Who Do You Say I Am",
+        "isaiah_53_5_with_his_stripes",
+        "mockers_words_ps22",
+        "ps22_short_01_Crucifixion_Foretold",
+        "ps22_short_02_Mockers_Words",
+        "ps22_short_03_Forsaken_Cry",
+        "ps22_short_04_Declared_To_The_Brethren",
+        "ps22_short_05_He_Hath_Done_This",
+        "ps22_short_06_The_Ends_Of_The_Earth",
+        "ps22_short_07_The_Body_Foretold",
+        "ps22_short_08_I_Thirst",
+        "zechariah_12_10_pierced"
+      ],
+      "forms": {
+        "long": 15,
+        "short": 51
+      },
+      "descriptors": [
+        "Christ the true High Priest; ancient Judean man, robe, the risen/crucified Lord, reverent Baroque light",
+        "Christ, the Lamb God provided; ancient Judean man teaching in Jerusalem, the only begotten Son",
+        "Christ sold for thirty pieces, condemned, raised to God's right hand; ancient Judean man, the risen Saviour",
+        "Christ the Son of man, lifted up on the cross as the serpent was lifted; ancient Judean man, the Teacher",
+        "Christ who named the sign of Jonah, three days in the heart of the earth, risen; ancient Judean man",
+        "Christ the door of salvation, the true Ark who bore the wrath; ancient Judean man, risen Lord",
+        "Christ the Suffering Servant, despised and rejected, led as a lamb to slaughter, risen; ancient Judean man",
+        "Christ our Passover, the Lamb without blemish, slain, not a bone broken; ancient Judean man on the cross",
+        "Christ the true Kinsman-Redeemer of David's house, who gave His blood and takes a bride; ancient Judean man",
+        "Christ, robed Galilean man, the substance behind the type",
+        "Christ the Lamb of God carrying His own wood up the hill",
+        "Christ the greater Brother, arms thrown wide, pierced hands",
+        "the Son of man lifted up on the cross, made a curse for us",
+        "Christ who names the sign, three days in the heart of the earth, risen",
+        "Christ who declares 'I am the door', the just for the unjust",
+        "the Suffering Servant, wounded for our transgressions, named on the road",
+        "Christ our passover, the spotless Lamb, bones unbroken, blood poured out",
+        "the greater Kinsman of David's line, redeeming with His own blood",
+        "the suffering Servant, robe stripped, face marred and beaten past recognising, crown of thorns, body scourged",
+        "Jesus of Nazareth nailed to a Roman cross at the ninth hour, crown of thorns, body stretched, crying out",
+        "Christ crucified at Passover, the true Passover Lamb, no bone broken",
+        "the Son of man lifted up on the cross, bearing the curse, drawing all men",
+        "the promised seed of the woman, the deliverer who crushes the serpent's head at the cross",
+        "Christ the great High Priest and offering in one, who by his own blood entered once for all and sat down",
+        "robed Galilean teacher, calm amid the storm, hand raised to rebuke wind and sea",
+        "crucified Christ, hands and feet pierced, crown of thorns",
+        "robed Galilean teacher standing beneath the temple lamps, hand raised, declaring",
+        "robed Galilean teacher standing amid the burning temple fires, claiming the Light",
+        "robed Galilean teacher, arms stretched as the living door, John 10 claim",
+        "robed Galilean teacher seated at the well in noonday sun, offering living water",
+        "robed Galilean teacher telling the parable, gentle gesture",
+        "robed Galilean teacher recounting the parable",
+        "robed Galilean teacher telling the story",
+        "robed Galilean teacher narrating the parable",
+        "risen Christ on the shore at dawn, tending the fire, questioning Peter",
+        "robed Galilean teacher walking straight to the crippled man, asking 'Wilt thou be made whole?'",
+        "robed Galilean teacher before the pagan cliff, demanding a verdict from the twelve",
+        "Galilean teacher asleep in the stern, then rising to rebuke the storm",
+        "suffering Christ, wounded and bruised, stripes on his back, foretold by Isaiah",
+        "robed Galilean teacher standing over the sick man, commanding 'Rise'",
+        "robed Galilean teacher, calm authority, facing a crowd",
+        "robed Galilean teacher, turning to ask a question",
+        "the silent suffering Lamb, robed Christ",
+        "robed Galilean teacher standing over a bedridden man",
+        "living Christ, robed Galilean teacher, face turned toward viewer",
+        "robed Christ asleep in the stern, then standing to rebuke the storm",
+        "robed Galilean teacher finding the forgotten invalid",
+        "suffering Christ on the cross, wounded and bruised",
+        "robed Christ standing in light beside the accused woman",
+        "robed Christ, the great I AM, holding a door open",
+        "robed Christ as shepherd lying down in the gap of the fold",
+        "robed Christ offering himself as the bread of life",
+        "robed Christ, the living bread come down from heaven",
+        "robed Christ welcoming the one who comes, arms open",
+        "robed Galilean teacher making the question personal",
+        "the suffering man of Psalm 22, Christ stripped and dying on the cross, ancient Judean man",
+        "Christ hanging on the cross under the crowd's scorn, ancient Judean man",
+        "Christ crying from the cross at the ninth hour, 'My God, my God', ancient Judean man",
+        "the risen Christ alive on the far side of the cross, not ashamed to call them brethren, ancient Judean man",
+        "Christ hanging dying on the cross, saying 'It is finished', the finished saving work, ancient Judean man",
+        "Christ who died and rose, worshipped by the nations, ancient Judean man",
+        "Christ's body suspended on the cross, bones out of joint, stretched and exposed, ancient Judean man",
+        "the dying Christ on the cross gasping 'I thirst', the Giver of living water hung dry, ancient Judean man",
+        "Christ scourged and wounded, bearing our sins in his own body on the tree, ancient Judean man",
+        "Christ staying on the cross under the crowd's scorn, the Son of God who would not come down, ancient Judean man",
+        "the pierced Son of God dead on the cross, God pierced for us, ancient Judean man"
+      ],
+      "has_anchor": true,
+      "anchor": "characters/JESUS.png"
+    },
+    {
+      "name": "THE_LORD",
+      "kind": "character",
+      "role": "divine",
+      "count": 22,
+      "appearances": [
+        "01_Isaiah_53",
+        "03_Passover_Lamb",
+        "04_Bronze_Serpent",
+        "05_Seed_Of_The_Woman",
+        "06_Day_Of_Atonement",
+        "23 The Prepared Belly",
+        "32_The_Door_Was_a_Body",
+        "EW01_Two_Goats",
+        "EW01_Two_Goats_short",
+        "EW02_Abraham",
+        "EW02_Abraham_short",
+        "EW04_Bronze_Serpent",
+        "EW04_Bronze_Serpent_short",
+        "EW05_Jonah",
+        "EW05_Jonah_short",
+        "EW06_Noah",
+        "EW06_Noah_short",
+        "EW07_Isaiah",
+        "EW07_Isaiah_short",
+        "EW08_Passover",
+        "EW08_Passover_short",
+        "zechariah_12_10_pierced"
+      ],
+      "forms": {
+        "long": 12,
+        "short": 10
+      },
+      "descriptors": [
+        "the invisible divine presence in the cloud above the mercy seat; rendered as radiant cloud/light, never a body",
+        "the divine voice commanding the offering; radiant presence, never embodied",
+        "the divine voice commanding the bronze serpent; radiant presence, never embodied",
+        "the divine voice sending Jonah to Nineveh; radiant presence, never embodied",
+        "the divine voice warning of the flood and shutting the door; radiant presence, never embodied",
+        "the divine voice declaring the Servant exalted and satisfied; radiant presence, never embodied",
+        "the divine voice passing through Egypt to smite the firstborn; radiant presence, never embodied",
+        "the unseen divine presence beyond the veil",
+        "the divine voice that stays Abraham's hand",
+        "the divine voice commanding the bronze serpent",
+        "God whose mercy Jonah flees, sender of the storm",
+        "God who shuts Noah in the ark",
+        "God who lays the vision on Isaiah and the guilt on the Servant",
+        "God who alone looks on the blood and passes over",
+        "the unseen presence and voice of God pointing to His Servant, light from above",
+        "the unseen voice and presence of God passing through Egypt in judgment",
+        "the unseen voice of God commanding Moses, presence over the wilderness camp",
+        "the voice of the LORD God walking in the garden in the cool of the day, pronouncing the promise",
+        "the presence of God in the cloud upon the mercy seat, voice commanding Moses",
+        "unseen divine presence and voice of God",
+        "unseen holy divine presence, the I AM name too holy to speak",
+        "God speaking in the first person, 'they shall look upon me whom they have pierced'; radiant presence, never embodied"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "KING_DAVID",
+      "kind": "character",
+      "role": "speaker",
+      "count": 10,
+      "appearances": [
+        "02_Psalm_22",
+        "04 psalms 22 part 2",
+        "mockers_words_ps22",
+        "ps22_short_01_Crucifixion_Foretold",
+        "ps22_short_02_Mockers_Words",
+        "ps22_short_03_Forsaken_Cry",
+        "ps22_short_04_Declared_To_The_Brethren",
+        "ps22_short_06_The_Ends_Of_The_Earth",
+        "ps22_short_07_The_Body_Foretold",
+        "ps22_short_08_I_Thirst"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 9
+      },
+      "descriptors": [
+        "young shepherd-king David in royal robe with a harp, writing the psalm a thousand years early",
+        "ancient Israelite king with harp, writing on a scroll by lamplight",
+        "ancient Israelite shepherd-king with harp, writing the psalm a thousand years early by lamplight",
+        "ancient Israelite king writing the mocked sufferer's taunt on a scroll a thousand years early",
+        "ancient Israelite king penning the forsaken man's opening cry a thousand years early",
+        "ancient Israelite king writing the psalm's turn from anguish to praise",
+        "ancient Israelite king whose dying song foresaw a worldwide turning to the LORD",
+        "ancient Israelite king describing the dying body so exactly it reads like an eyewitness account",
+        "ancient Israelite king picturing the dying man's killing thirst, strength dried like a potsherd",
+        "ancient Israelite king recording the Messiah's mockery, gestures and words, a thousand years before"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "MOCKING_CROWD",
+      "kind": "character",
+      "role": "crowd",
+      "count": 8,
+      "appearances": [
+        "01_Isaiah_53",
+        "02_Psalm_22",
+        "04 psalms 22 part 2",
+        "EW06_Noah",
+        "EW06_Noah_short",
+        "mockers_words_ps22",
+        "ps22_short_02_Mockers_Words",
+        "ps22_short_07_The_Body_Foretold"
+      ],
+      "forms": {
+        "long": 3,
+        "short": 5
+      },
+      "descriptors": [
+        "the violent corrupt generation who laughed at the boat on dry ground",
+        "the laughing onlookers of the old world",
+        "ancient onlookers turning their faces away in scorn and rejection",
+        "a jeering ancient crowd shooting out the lip, shaking the head, laughing him to scorn",
+        "jeering ancient crowd, fingers pointed, faces twisted in scorn",
+        "passers-by wagging their heads and religious leaders sneering at the cross, ancient Judeans",
+        "onlookers standing and staring at the stretched, exposed body, ancient Judeans",
+        "passers-by wagging heads and rulers sneering 'let him deliver him now', unwitting prophets, ancient Judeans"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "THE_FATHER",
+      "kind": "character",
+      "role": "other",
+      "count": 8,
+      "appearances": [
+        "09 The Father Who Ran",
+        "10 The Line He Never Got to Say",
+        "11 The Confession He Never Finished",
+        "12 The Kiss That Cut Off the Bargain",
+        "24 The Answer Was a Gift",
+        "27 A List of Dead Men",
+        "36_In_No_Wise_Cast_Out",
+        "Who Do You Say I Am"
+      ],
+      "forms": {
+        "short": 8
+      },
+      "descriptors": [
+        "elderly robed father with flowing beard, robe hiked, running with open arms",
+        "elderly robed father running, falling on the son's neck, kissing him",
+        "elderly robed father embracing and kissing the son, interrupting his speech",
+        "elderly robed father running and kissing the ragged son, silencing the bargain",
+        "unseen divine presence of God the Father in heaven",
+        "unseen divine presence of God the Father",
+        "unseen divine presence of God the Father who gives",
+        "unseen divine presence revealing Christ"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "DISCIPLES",
+      "kind": "character",
+      "role": "crowd",
+      "count": 7,
+      "appearances": [
+        "02 Why are you afraid",
+        "19 The Cliff of Rival Gods",
+        "20 He Was Asleep in the Storm",
+        "24 The Answer Was a Gift",
+        "27 A List of Dead Men",
+        "28 What Manner of Man",
+        "Who Do You Say I Am"
+      ],
+      "forms": {
+        "short": 7
+      },
+      "descriptors": [
+        "terrified ancient fishermen in soaked tunics, gripping the gunwale",
+        "the twelve gathered, ancient Galilean men facing Jesus' question",
+        "panicked ancient fishermen screaming, water past their knees",
+        "twelve robed first-century Galilean men gathered",
+        "twelve robed first-century Galilean men",
+        "terrified first-century fishermen, soaked, bracing in the boat"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "ISAIAH",
+      "kind": "character",
+      "role": "witness",
+      "count": 6,
+      "appearances": [
+        "01_Isaiah_53",
+        "21 The Pronouns That Preached the Gospel",
+        "30 Smitten of God",
+        "EW07_Isaiah",
+        "EW07_Isaiah_short",
+        "isaiah_53_5_with_his_stripes"
+      ],
+      "forms": {
+        "long": 2,
+        "short": 4
+      },
+      "descriptors": [
+        "the prophet son of Amoz, robed seer of Judah, writing the vision with a trembling hand",
+        "the prophet son of Amoz, writing the vision by hand",
+        "an ancient Hebrew prophet in Jerusalem, robed, writing on a scroll by lamplight",
+        "ancient Hebrew prophet in robes writing the suffering-servant prophecy on a scroll",
+        "ancient Hebrew prophet, robed, writing the prophecy",
+        "the prophet son of Amoz writing the suffering-servant prophecy seven hundred years early on a scroll"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "MOSES",
+      "kind": "character",
+      "role": "speaker",
+      "count": 6,
+      "appearances": [
+        "03_Passover_Lamb",
+        "04_Bronze_Serpent",
+        "EW01_Two_Goats",
+        "EW04_Bronze_Serpent",
+        "EW04_Bronze_Serpent_short",
+        "EW08_Passover"
+      ],
+      "forms": {
+        "long": 5,
+        "short": 1
+      },
+      "descriptors": [
+        "Aaron's brother, robed prophet of the wilderness, weathered staff-bearer",
+        "aged leader of Israel, weathered prophet with staff, who forged the bronze serpent",
+        "the prophet bringing Pharaoh's refusal and the LORD's word (referenced)",
+        "aged prophet leading Israel, staff in hand in the wilderness",
+        "Moses delivering God's Passover instructions to Israel, robed elder with staff",
+        "Moses raising the bronze serpent on a pole in the desert, robed elder with staff"
+      ],
+      "has_anchor": true,
+      "anchor": "characters/MOSES.png"
+    },
+    {
+      "name": "PETER",
+      "kind": "character",
+      "role": "speaker",
+      "count": 6,
+      "appearances": [
+        "16 The Fire Jesus Built",
+        "21 The Pronouns That Preached the Gospel",
+        "24 The Answer Was a Gift",
+        "27 A List of Dead Men",
+        "Who Do You Say I Am",
+        "isaiah_53_5_with_his_stripes"
+      ],
+      "forms": {
+        "short": 6
+      },
+      "descriptors": [
+        "weathered fisherman, grieved and humbled, kneeling by the fire",
+        "weathered apostle who knew his own denial, testifying to the trade",
+        "robust bearded fisherman disciple, earnest",
+        "robust bearded fisherman disciple confessing",
+        "the apostle Peter, weathered Galilean fisherman, taking up Isaiah's stripes/healed line and laying it on Christ"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "CROWD",
+      "kind": "character",
+      "role": "crowd",
+      "count": 5,
+      "appearances": [
+        "23 The Prepared Belly",
+        "24 The Answer Was a Gift",
+        "27 A List of Dead Men",
+        "30 Smitten of God",
+        "Who Do You Say I Am"
+      ],
+      "forms": {
+        "short": 5
+      },
+      "descriptors": [
+        "ancient Judean onlookers demanding a sign",
+        "ancient Judean populace murmuring opinions",
+        "ancient Judean populace offering names",
+        "ancient onlookers at the crucifixion, misjudging",
+        "ancient Judean populace with secondhand opinions"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "ISRAELITE_CROWD",
+      "kind": "character",
+      "role": "crowd",
+      "count": 5,
+      "appearances": [
+        "35_Manna_Fulfilled",
+        "EW01_Two_Goats",
+        "EW01_Two_Goats_short",
+        "EW04_Bronze_Serpent",
+        "EW04_Bronze_Serpent_short"
+      ],
+      "forms": {
+        "long": 2,
+        "short": 3
+      },
+      "descriptors": [
+        "the whole nation of Israel waiting outside the tabernacle, ancient Hebrew tunics, holding breath",
+        "the wilderness multitude of Israel, dying of snakebite, lifting their eyes; ancient Hebrew tunics",
+        "the assembled people of Israel whose sins are confessed",
+        "the bitten, dying people of Israel in the camp",
+        "ancient Hebrew wanderers gathering bread in the desert dawn"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "ROMAN_SOLDIERS",
+      "kind": "character",
+      "role": "other",
+      "count": 5,
+      "appearances": [
+        "02_Psalm_22",
+        "03_Passover_Lamb",
+        "04 psalms 22 part 2",
+        "ps22_short_01_Crucifixion_Foretold",
+        "zechariah_12_10_pierced"
+      ],
+      "forms": {
+        "long": 2,
+        "short": 3
+      },
+      "descriptors": [
+        "Roman legionaries at the foot of the cross casting lots, helmets and red cloaks",
+        "Roman soldiers at the cross breaking the legs of the other two, stopping at Jesus",
+        "first-century Roman legionaries in lorica armor, crouched casting lots",
+        "Roman legionaries at the foot of the cross dividing Jesus' clothes, helmets and red cloaks",
+        "the Roman soldier who drove the spear into the dead man's side, helmet and armor"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "ETHIOPIAN_EUNUCH",
+      "kind": "character",
+      "role": "other",
+      "count": 4,
+      "appearances": [
+        "01_Isaiah_53",
+        "25 The Question on the Gaza Road",
+        "EW07_Isaiah",
+        "EW07_Isaiah_short"
+      ],
+      "forms": {
+        "long": 2,
+        "short": 2
+      },
+      "descriptors": [
+        "the stranger from Ethiopia in a chariot reading Isaiah's scroll aloud",
+        "the stranger reading the scroll aloud on the desert road",
+        "an Ethiopian court official in rich robes seated in a chariot, holding a scroll",
+        "Ethiopian court official in rich robes seated in a chariot, reading a scroll"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "LAME_MAN_OF_BETHESDA",
+      "kind": "character",
+      "role": "witness",
+      "count": 4,
+      "appearances": [
+        "18 He Never Said Yes",
+        "22 He Never Answered Jesus",
+        "26 Jesus Walked Past the Pool",
+        "29 The Race He Could Never Win"
+      ],
+      "forms": {
+        "short": 4
+      },
+      "descriptors": [
+        "emaciated man crippled 38 years lying on a mat by the pool",
+        "man sick 38 years on a mat, giving excuses, then rising",
+        "emaciated invalid lying on a mat, infirm thirty-eight years",
+        "emaciated invalid lying weak by the pool, infirm thirty-eight years"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "PHILIP",
+      "kind": "character",
+      "role": "speaker",
+      "count": 4,
+      "appearances": [
+        "01_Isaiah_53",
+        "25 The Question on the Gaza Road",
+        "EW07_Isaiah",
+        "EW07_Isaiah_short"
+      ],
+      "forms": {
+        "long": 2,
+        "short": 2
+      },
+      "descriptors": [
+        "Philip the evangelist who preached Jesus from the scroll on the desert road",
+        "the evangelist who sits beside the stranger and preaches Jesus",
+        "a first-century Jewish disciple in simple tunic walking alongside a chariot on a desert road",
+        "first-century robed evangelist walking beside the chariot"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "PRODIGAL_SON",
+      "kind": "character",
+      "role": "other",
+      "count": 4,
+      "appearances": [
+        "09 The Father Who Ran",
+        "10 The Line He Never Got to Say",
+        "11 The Confession He Never Finished",
+        "12 The Kiss That Cut Off the Bargain"
+      ],
+      "forms": {
+        "short": 4
+      },
+      "descriptors": [
+        "ragged barefoot young man, filthy and gaunt, walking home slowly",
+        "ragged young man, rehearsed speech on his lips, head bowed",
+        "ragged young man mid-confession, mouth open, speech cut off",
+        "ragged young man in rags, rehearsed hired-servant line unspoken"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SHEEP_FLOCK",
+      "kind": "character",
+      "role": "crowd",
+      "count": 4,
+      "appearances": [
+        "07 I AM the Door — The Shepherd Who Became the Gate",
+        "16 The Fire Jesus Built",
+        "33_The_Shepherd_In_The_Gap",
+        "EW07_Isaiah_short"
+      ],
+      "forms": {
+        "short": 4
+      },
+      "descriptors": [
+        "sheep gone astray, each turned to his own way",
+        "huddled flock of sheep inside a stone fold at night",
+        "flock of lambs and sheep entrusted to Peter, grazing nearby",
+        "flock of sheep within the stone fold at night"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "AARON",
+      "kind": "character",
+      "role": "witness",
+      "count": 3,
+      "appearances": [
+        "06_Day_Of_Atonement",
+        "EW01_Two_Goats",
+        "EW01_Two_Goats_short"
+      ],
+      "forms": {
+        "long": 2,
+        "short": 1
+      },
+      "descriptors": [
+        "Israel's first high priest, aged, on the Day of Atonement stripped of gold to plain white linen tunic, barefoot, solemn",
+        "Israel's first high priest in linen ephod and breastplate, bearded",
+        "the high priest Aaron in plain white linen, casting lots and laying hands on the goat"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "ISRAELITE_HOUSEHOLD",
+      "kind": "character",
+      "role": "crowd",
+      "count": 3,
+      "appearances": [
+        "03_Passover_Lamb",
+        "EW08_Passover",
+        "EW08_Passover_short"
+      ],
+      "forms": {
+        "long": 2,
+        "short": 1
+      },
+      "descriptors": [
+        "the wife and children of the household, ancient Hebrew slaves, gathered behind the door",
+        "humble Hebrew dwelling on the night of judgment",
+        "a Hebrew slave family sheltering inside their home on the last night in Egypt"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "JONAH",
+      "kind": "character",
+      "role": "witness",
+      "count": 3,
+      "appearances": [
+        "23 The Prepared Belly",
+        "EW05_Jonah",
+        "EW05_Jonah_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 2
+      },
+      "descriptors": [
+        "prophet of Israel, son of Amittai, storm-soaked and sea-weed-wrapped, fleeing then delivered",
+        "Hebrew prophet, son of Amittai, storm-soaked and fleeing",
+        "ancient Hebrew prophet, robed, weathered, terrified"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SCRIBES_PHARISEES",
+      "kind": "character",
+      "role": "crowd",
+      "count": 3,
+      "appearances": [
+        "31 The Light You Can Stand In",
+        "EW05_Jonah",
+        "EW05_Jonah_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 2
+      },
+      "descriptors": [
+        "the scribes and Pharisees who demanded a sign of Jesus (referenced)",
+        "the scribes who demand a sign of Jesus",
+        "scribes and Pharisees filing out, oldest first, dropping stones"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "WORSHIPPING_CONGREGATION",
+      "kind": "character",
+      "role": "crowd",
+      "count": 3,
+      "appearances": [
+        "02_Psalm_22",
+        "ps22_short_04_Declared_To_The_Brethren",
+        "ps22_short_06_The_Ends_Of_The_Earth"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 2
+      },
+      "descriptors": [
+        "a great gathered congregation of the nations turning to worship the LORD",
+        "the gathered congregation of brethren among whom the risen One declares God's name",
+        "all the kindreds of the nations turning and worshipping before the LORD, a great gathered multitude"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "ABRAHAM",
+      "kind": "character",
+      "role": "witness",
+      "count": 2,
+      "appearances": [
+        "EW02_Abraham",
+        "EW02_Abraham_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "ancient patriarch, very old, weathered bearded man, heavy-hearted, robe and headcloth",
+        "aged patriarch, friend of God, knife in hand on the mountain"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "BOAZ",
+      "kind": "character",
+      "role": "witness",
+      "count": 2,
+      "appearances": [
+        "EW09_Boaz",
+        "EW09_Boaz_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "mighty man of wealth of Bethlehem, dignified landowner in fine robe, the kinsman-redeemer",
+        "mighty man of wealth of Bethlehem, kinsman-redeemer"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "CITY_ELDERS",
+      "kind": "character",
+      "role": "crowd",
+      "count": 2,
+      "appearances": [
+        "EW09_Boaz",
+        "EW09_Boaz_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "the ten elders called as witnesses at the city gate, robed townsmen",
+        "the elders witnessing the redemption at the gate"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "FIRSTBORN_SON",
+      "kind": "character",
+      "role": "other",
+      "count": 2,
+      "appearances": [
+        "EW08_Passover",
+        "EW08_Passover_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "the father's firstborn boy asleep in the inner room, under sentence, spared by the blood",
+        "the father's firstborn child sheltered through the night"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "FIT_MAN",
+      "kind": "character",
+      "role": "other",
+      "count": 2,
+      "appearances": [
+        "06_Day_Of_Atonement",
+        "EW01_Two_Goats"
+      ],
+      "forms": {
+        "long": 2
+      },
+      "descriptors": [
+        "the appointed man who leads the live goat away into the wilderness, simple robe",
+        "the appointed man who leads the live scapegoat away into the wilderness"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "ISAAC",
+      "kind": "character",
+      "role": "speaker",
+      "count": 2,
+      "appearances": [
+        "EW02_Abraham",
+        "EW02_Abraham_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "Abraham's only beloved son, a young man, carrying the wood up the mountain",
+        "Abraham's only beloved son, wood bound on his back"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "JOHN_THE_BAPTIST",
+      "kind": "character",
+      "role": "speaker",
+      "count": 2,
+      "appearances": [
+        "EW02_Abraham",
+        "EW02_Abraham_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "the man John who pointed at Jesus, Behold the Lamb of God; rough prophet",
+        "the man who points to the Lamb of God"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "JOSEPH",
+      "kind": "character",
+      "role": "witness",
+      "count": 2,
+      "appearances": [
+        "EW03_Joseph",
+        "EW03_Joseph_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "son of Jacob; first a youth in a bright coat, later governor of Egypt in fine linen and gold chain at Pharaoh's right hand",
+        "son of Jacob, raised to governor of Egypt in fine linen and gold collar"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "JOSEPHS_BROTHERS",
+      "kind": "character",
+      "role": "crowd",
+      "count": 2,
+      "appearances": [
+        "EW03_Joseph",
+        "EW03_Joseph_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "the ten older brothers who hated and sold Joseph, then bowed begging grain",
+        "Jacob's sons who sold him, bowing for bread"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "JUDAS",
+      "kind": "character",
+      "role": "other",
+      "count": 2,
+      "appearances": [
+        "EW03_Joseph",
+        "EW03_Joseph_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "the disciple who sold Jesus for thirty pieces of silver (referenced)",
+        "the disciple who sold Jesus for thirty pieces of silver"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "NEARER_KINSMAN",
+      "kind": "character",
+      "role": "speaker",
+      "count": 2,
+      "appearances": [
+        "EW09_Boaz",
+        "EW09_Boaz_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "the nearer kinsman who refused to redeem lest he mar his inheritance, drew off his shoe",
+        "the closer relative who refuses to redeem and walks away"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "NICODEMUS",
+      "kind": "character",
+      "role": "other",
+      "count": 2,
+      "appearances": [
+        "04_Bronze_Serpent",
+        "EW04_Bronze_Serpent"
+      ],
+      "forms": {
+        "long": 2
+      },
+      "descriptors": [
+        "the man who sought Jesus by night, to whom He spoke of the serpent (referenced)",
+        "a Jewish religious leader coming to Jesus by night, robed, in lamplit dark"
+      ],
+      "has_anchor": true,
+      "anchor": "characters/NICODEMUS.png"
+    },
+    {
+      "name": "NOAH",
+      "kind": "character",
+      "role": "witness",
+      "count": 2,
+      "appearances": [
+        "EW06_Noah",
+        "EW06_Noah_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "ancient old man, long-bearded, who built the ark; weathered carpenter-patriarch",
+        "aged righteous patriarch, builder of the ark"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "PASSOVER_FATHER",
+      "kind": "character",
+      "role": "witness",
+      "count": 2,
+      "appearances": [
+        "EW08_Passover",
+        "EW08_Passover_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "an archetypal father of Israel on Passover night, no name, mud-brick house, bloodstained hands",
+        "archetypal Israelite father of a household on the Passover night"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "PHARAOH",
+      "kind": "character",
+      "role": "speaker",
+      "count": 2,
+      "appearances": [
+        "EW03_Joseph",
+        "EW03_Joseph_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "the king of Egypt who set Joseph over all the land, enthroned in Egyptian regalia",
+        "Egyptian king at whose right hand Joseph is raised"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "RUTH",
+      "kind": "character",
+      "role": "speaker",
+      "count": 2,
+      "appearances": [
+        "EW09_Boaz",
+        "EW09_Boaz_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "the Moabitess widow, poor foreign gleaner in humble dress, gathering barley scraps",
+        "penniless Moabite widow, the foreign bride redeemed"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SAILORS",
+      "kind": "character",
+      "role": "crowd",
+      "count": 2,
+      "appearances": [
+        "EW05_Jonah",
+        "EW05_Jonah_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "the pagan mariners of the Joppa ship crying each to his god, casting lots, throwing cargo",
+        "pagan mariners casting lots on the pitching ship"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SICK_MULTITUDE",
+      "kind": "character",
+      "role": "crowd",
+      "count": 2,
+      "appearances": [
+        "26 Jesus Walked Past the Pool",
+        "29 The Race He Could Never Win"
+      ],
+      "forms": {
+        "short": 2
+      },
+      "descriptors": [
+        "crowd of blind and lame waiting by the pool",
+        "crowd of blind and lame on the five porches"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "ADAM",
+      "kind": "character",
+      "role": "witness",
+      "count": 1,
+      "appearances": [
+        "05_Seed_Of_The_Woman"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the first man, ashamed and hiding among the trees of Eden, fig-leaf covering"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "ADULTEROUS_WOMAN",
+      "kind": "character",
+      "role": "other",
+      "count": 1,
+      "appearances": [
+        "31 The Light You Can Stand In"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "ancient Judean woman, accused, alone, head bowed"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "ANGEL_OF_THE_LORD",
+      "kind": "character",
+      "role": "divine",
+      "count": 1,
+      "appearances": [
+        "EW02_Abraham"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the voice that tore open the sky to stay Abraham's hand; light from heaven"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "DYING_CAMP",
+      "kind": "character",
+      "role": "crowd",
+      "count": 1,
+      "appearances": [
+        "04_Bronze_Serpent"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the Israelite camp of snakebitten, dying wilderness wanderers"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "EGYPTIANS",
+      "kind": "character",
+      "role": "crowd",
+      "count": 1,
+      "appearances": [
+        "EW08_Passover"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the Egyptian households without the blood, firstborn dead, wailing in the night"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "EVE",
+      "kind": "character",
+      "role": "witness",
+      "count": 1,
+      "appearances": [
+        "05_Seed_Of_The_Woman"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the first woman, the woman whose seed is promised, hiding with Adam in Eden"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "HEZEKIAH",
+      "kind": "character",
+      "role": "other",
+      "count": 1,
+      "appearances": [
+        "04_Bronze_Serpent"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the godly king Hezekiah breaking the bronze serpent in pieces"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "ISHMAELITE_CARAVAN",
+      "kind": "character",
+      "role": "crowd",
+      "count": 1,
+      "appearances": [
+        "EW03_Joseph"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the traders bound for Egypt who bought Joseph, camels and desert merchants"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "ISRAEL_NATION",
+      "kind": "character",
+      "role": "crowd",
+      "count": 1,
+      "appearances": [
+        "06_Day_Of_Atonement"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the whole nation of Israel holding its breath on the Day of Atonement"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "JACOB",
+      "kind": "character",
+      "role": "other",
+      "count": 1,
+      "appearances": [
+        "EW03_Joseph"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "Israel, Joseph's aged father who loved him best, patriarch in robes"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "JOHN_THE_APOSTLE",
+      "kind": "character",
+      "role": "speaker",
+      "count": 1,
+      "appearances": [
+        "zechariah_12_10_pierced"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "the apostle John, eyewitness at the cross, citing Zechariah's verse at the spear-piercing; first-century robed disciple"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "JUDAH",
+      "kind": "character",
+      "role": "speaker",
+      "count": 1,
+      "appearances": [
+        "EW03_Joseph"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "one of Joseph's brothers who set the price to sell him, rough shepherd"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "MARY",
+      "kind": "character",
+      "role": "other",
+      "count": 1,
+      "appearances": [
+        "05_Seed_Of_The_Woman"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "Mary receiving the angel's word, the woman of whom the Son of God is born"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "NAOMI",
+      "kind": "character",
+      "role": "other",
+      "count": 1,
+      "appearances": [
+        "EW09_Boaz"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "Ruth's bitter widowed mother-in-law, returned empty from Moab, aged Hebrew woman"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "NINEVITES",
+      "kind": "character",
+      "role": "crowd",
+      "count": 1,
+      "appearances": [
+        "EW05_Jonah"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the people of the great cruel city Nineveh who repented; Assyrian dress"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "NOAHS_HOUSEHOLD",
+      "kind": "character",
+      "role": "crowd",
+      "count": 1,
+      "appearances": [
+        "EW06_Noah"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the eight souls: Noah, his wife, three sons and three sons' wives, ancient robes"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "PILATE",
+      "kind": "character",
+      "role": "other",
+      "count": 1,
+      "appearances": [
+        "03_Passover_Lamb"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the Roman governor Pilate declaring he found no fault, in toga and authority"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SAMARITAN_WOMAN",
+      "kind": "character",
+      "role": "witness",
+      "count": 1,
+      "appearances": [
+        "08 The Well That Never Runs Dry"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "ancient Samaritan woman with veil and waterpot, weary, then running joyfully"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SARAH",
+      "kind": "character",
+      "role": "other",
+      "count": 1,
+      "appearances": [
+        "EW02_Abraham"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "Abraham's aged wife who bore Isaac past age (referenced)"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SEEKER_AT_THE_DOOR",
+      "kind": "character",
+      "role": "other",
+      "count": 1,
+      "appearances": [
+        "36_In_No_Wise_Cast_Out"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "ashamed person hesitating at the threshold, rehearsing"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SERPENT",
+      "kind": "character",
+      "role": "other",
+      "count": 1,
+      "appearances": [
+        "05_Seed_Of_The_Woman"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the cursed serpent in Eden, the old serpent the Devil and Satan, coiled and beguiling"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SHEPHERD",
+      "kind": "character",
+      "role": "other",
+      "count": 1,
+      "appearances": [
+        "07 I AM the Door — The Shepherd Who Became the Gate"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "ancient Near-Eastern shepherd in rough cloak lying across the pen opening"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SUBSTITUTE_RAM",
+      "kind": "character",
+      "role": "other",
+      "count": 1,
+      "appearances": [
+        "EW02_Abraham_short"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "ram caught in a thicket, dying in Isaac's place"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "TWO_SERVANTS",
+      "kind": "character",
+      "role": "crowd",
+      "count": 1,
+      "appearances": [
+        "EW02_Abraham"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the two young men left at the foot of the mountain with the ass"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "CROSS",
+      "kind": "object",
+      "role": null,
+      "count": 33,
+      "appearances": [
+        "01_Isaiah_53",
+        "02 Why are you afraid",
+        "02_Psalm_22",
+        "03_Passover_Lamb",
+        "04 psalms 22 part 2",
+        "04_Bronze_Serpent",
+        "05 He Said It Under the Lamps",
+        "05_Seed_Of_The_Woman",
+        "06 I AM the Light of the World",
+        "06_Day_Of_Atonement",
+        "07 I AM the Door — The Shepherd Who Became the Gate",
+        "21 The Pronouns That Preached the Gospel",
+        "30 Smitten of God",
+        "EW01_Two_Goats",
+        "EW02_Abraham",
+        "EW03_Joseph",
+        "EW04_Bronze_Serpent",
+        "EW04_Bronze_Serpent_short",
+        "EW07_Isaiah",
+        "EW08_Passover",
+        "EW09_Boaz",
+        "EW09_Boaz_short",
+        "isaiah_53_5_with_his_stripes",
+        "mockers_words_ps22",
+        "ps22_short_01_Crucifixion_Foretold",
+        "ps22_short_02_Mockers_Words",
+        "ps22_short_03_Forsaken_Cry",
+        "ps22_short_04_Declared_To_The_Brethren",
+        "ps22_short_05_He_Hath_Done_This",
+        "ps22_short_06_The_Ends_Of_The_Earth",
+        "ps22_short_07_The_Body_Foretold",
+        "ps22_short_08_I_Thirst",
+        "zechariah_12_10_pierced"
+      ],
+      "forms": {
+        "long": 13,
+        "short": 20
+      },
+      "descriptors": [
+        "the Roman cross of Christ outside the city gate",
+        "the cross of wood Christ carried up His hill, no substitute coming",
+        "the cross where the men drove the nails and Christ prayed forgiveness",
+        "the Roman pole of wood where Jesus was lifted up to be looked at",
+        "the cross where the Servant was wounded, bruised, numbered with transgressors",
+        "the cross where Jesus died, His legs left unbroken",
+        "the cross where Christ was made a curse to redeem His bride (the curse borne)",
+        "the Roman cross on which Jesus is lifted up",
+        "the cross where Christ is made a curse for us",
+        "a rough wooden Roman cross on a barren hill",
+        "a rough wooden Roman cross raised against a darkened sky",
+        "the wooden Roman cross at Golgotha at Passover",
+        "the Roman cross on which the Son of man is lifted up",
+        "the cross where the heel is struck and the serpent's head is crushed",
+        "the cross outside the gate where Jesus suffered, fulfilling both goats",
+        "distant rugged wooden cross on a hill, foreshadowed",
+        "rugged wooden Roman cross raised at Golgotha",
+        "rugged wooden cross, Christ carrying the world's darkness",
+        "rugged wooden cross where the Light carried guilt",
+        "wooden cross, arms stretched like the door between sheep and death",
+        "rugged wooden cross at Calvary where the trade was finished",
+        "rough wooden Roman cross on a barren hill",
+        "the Roman cross where Jesus was lifted up, rough wooden beams against the sky",
+        "the Roman cross where Jesus stayed under their jeering",
+        "the Roman cross of Christ in His darkest hour",
+        "the Roman cross the forsaken One passed through before rising",
+        "the Roman cross where Jesus' work was finished",
+        "the Roman cross in one corner of the empire whose reach swept the whole earth",
+        "the Roman cross where the body hangs suspended by the arms",
+        "the Roman cross where the One who made the oceans hung thirsting",
+        "the cross/tree where Christ bore our sins in His own body",
+        "the Roman cross the mockers told the King to come down from",
+        "the Roman cross where the pierced Son hung, fulfilling the sentence written five centuries early"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SCROLL",
+      "kind": "object",
+      "role": null,
+      "count": 11,
+      "appearances": [
+        "01_Isaiah_53",
+        "02_Psalm_22",
+        "04 psalms 22 part 2",
+        "21 The Pronouns That Preached the Gospel",
+        "mockers_words_ps22",
+        "ps22_short_01_Crucifixion_Foretold",
+        "ps22_short_02_Mockers_Words",
+        "ps22_short_03_Forsaken_Cry",
+        "ps22_short_05_He_Hath_Done_This",
+        "ps22_short_07_The_Body_Foretold",
+        "ps22_short_08_I_Thirst"
+      ],
+      "forms": {
+        "long": 2,
+        "short": 9
+      },
+      "descriptors": [
+        "an unrolled ancient parchment scroll of Isaiah's prophecy with Hebrew script",
+        "an ancient scroll of the Psalms in Hebrew script",
+        "aged parchment scroll of the Psalms, Hebrew script",
+        "aged parchment scroll of Isaiah with Hebrew script, pronouns highlighted",
+        "aged parchment scroll of Psalm 22 in Hebrew script, written down a thousand years early",
+        "aged parchment scroll of Psalm 22 recording the tormentors' words",
+        "aged parchment scroll of Psalm 22's first forsaken line in Hebrew script",
+        "aged parchment scroll of Psalm 22 closing on its final line, 'that he hath done this'",
+        "aged parchment scroll of Psalm 22 picturing the pulled-apart, stared-at body",
+        "aged parchment scroll of Psalm 22 painting the thirst of the dust of death",
+        "aged parchment scroll of Psalm 22, the script the crowd was unknowingly reading"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "CASTING_LOTS",
+      "kind": "object",
+      "role": null,
+      "count": 5,
+      "appearances": [
+        "02_Psalm_22",
+        "04 psalms 22 part 2",
+        "EW05_Jonah",
+        "EW05_Jonah_short",
+        "ps22_short_01_Crucifixion_Foretold"
+      ],
+      "forms": {
+        "long": 2,
+        "short": 3
+      },
+      "descriptors": [
+        "the lots cast by the sailors that fell upon Jonah",
+        "lots thrown that fall on Jonah",
+        "a discarded seamless robe and thrown casting-lots / dice on the ground",
+        "garments piled on the ground, dice or lots being thrown for the robe",
+        "the divided garments piled on the ground and lots/dice thrown for the seamless coat"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "ISAIAH_SCROLL",
+      "kind": "object",
+      "role": null,
+      "count": 5,
+      "appearances": [
+        "25 The Question on the Gaza Road",
+        "30 Smitten of God",
+        "EW07_Isaiah",
+        "EW07_Isaiah_short",
+        "isaiah_53_5_with_his_stripes"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 4
+      },
+      "descriptors": [
+        "the written scroll of Isaiah's vision, carried down the desert road, read aloud",
+        "the written scroll of Isaiah's vision, carried south",
+        "ancient seven-hundred-year-old parchment scroll, Hebrew text",
+        "ancient parchment scroll of Isaiah 53, Hebrew text",
+        "ancient parchment scroll of Isaiah's vision, 'he was wounded for our transgressions', Hebrew text"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "STORM_TOSSED_SHIP",
+      "kind": "object",
+      "role": null,
+      "count": 4,
+      "appearances": [
+        "23 The Prepared Belly",
+        "28 What Manner of Man",
+        "EW05_Jonah",
+        "EW05_Jonah_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 3
+      },
+      "descriptors": [
+        "the merchant ship bound away from Nineveh, sails torn in the tempest",
+        "ancient sailing vessel tossed in the tempest",
+        "small ancient wooden vessel in heaving black sea",
+        "small ancient wooden fishing boat pitching on black waves"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "BLOOD",
+      "kind": "object",
+      "role": null,
+      "count": 3,
+      "appearances": [
+        "EW01_Two_Goats",
+        "EW01_Two_Goats_short",
+        "EW08_Passover"
+      ],
+      "forms": {
+        "long": 2,
+        "short": 1
+      },
+      "descriptors": [
+        "atoning blood in a basin, sprinkled before the mercy seat",
+        "the lamb's blood caught in a basin, struck on the doorframe to turn away judgment",
+        "basin of goat's blood carried within the veil"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "BLOOD_BASIN",
+      "kind": "object",
+      "role": null,
+      "count": 3,
+      "appearances": [
+        "03_Passover_Lamb",
+        "EW01_Two_Goats",
+        "EW08_Passover"
+      ],
+      "forms": {
+        "long": 3
+      },
+      "descriptors": [
+        "shallow vessel holding the goat's blood carried within the veil",
+        "the bason holding the lamb's blood",
+        "a basin holding the lamb's blood, hyssop branch beside it"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "BLOOD_ON_DOORPOST",
+      "kind": "object",
+      "role": null,
+      "count": 3,
+      "appearances": [
+        "03_Passover_Lamb",
+        "EW08_Passover",
+        "EW08_Passover_short"
+      ],
+      "forms": {
+        "long": 2,
+        "short": 1
+      },
+      "descriptors": [
+        "the doorframe painted with blood on the two side posts and the lintel beam, red in torchlight",
+        "lamb's blood struck on the doorposts and lintel",
+        "lamb's blood struck on the two side posts and upper door post of a Hebrew home"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "BRONZE_SERPENT_STANDARD",
+      "kind": "object",
+      "role": null,
+      "count": 3,
+      "appearances": [
+        "04_Bronze_Serpent",
+        "EW04_Bronze_Serpent",
+        "EW04_Bronze_Serpent_short"
+      ],
+      "forms": {
+        "long": 3,
+        "short": 2
+      },
+      "descriptors": [
+        "a serpent of brass/bronze forged in the likeness of the killer, lifted on a pole",
+        "the wooden pole driven into the sand holding the bronze serpent high",
+        "forged bronze snake coiled on a tall wooden pole",
+        "the upright standard the bronze serpent is raised on",
+        "a bronze serpent fashioned in the likeness of the fiery snakes, raised high on a wooden pole"
+      ],
+      "has_anchor": true,
+      "anchor": "objects/BRONZE_SERPENT_STANDARD.png"
+    },
+    {
+      "name": "FIERY_SERPENTS",
+      "kind": "object",
+      "role": "other",
+      "count": 3,
+      "appearances": [
+        "04_Bronze_Serpent",
+        "EW04_Bronze_Serpent",
+        "EW04_Bronze_Serpent_short"
+      ],
+      "forms": {
+        "long": 2,
+        "short": 1
+      },
+      "descriptors": [
+        "venomous fiery snakes sent among the people, biting, burning like coals",
+        "venomous desert snakes striking the people",
+        "fiery venomous desert serpents biting the people among the rocks"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "GREAT_FISH",
+      "kind": "object",
+      "role": "other",
+      "count": 3,
+      "appearances": [
+        "23 The Prepared Belly",
+        "EW05_Jonah",
+        "EW05_Jonah_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 2
+      },
+      "descriptors": [
+        "the great fish/whale the LORD prepared to swallow Jonah, his ark of keeping in the deep",
+        "the great fish that swallows Jonah whole",
+        "vast dark sea-creature, gaping mouth in storm waters"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "LAMB",
+      "kind": "object",
+      "role": null,
+      "count": 3,
+      "appearances": [
+        "01_Isaiah_53",
+        "03_Passover_Lamb",
+        "EW07_Isaiah"
+      ],
+      "forms": {
+        "long": 3
+      },
+      "descriptors": [
+        "the lamb led dumb to the slaughter, the silent sheep before her shearers",
+        "a silent unblemished lamb led to slaughter, white wool, head bowed",
+        "a spotless male lamb of the first year, without blemish, kept four days then slain"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SCAPEGOAT",
+      "kind": "object",
+      "role": "other",
+      "count": 3,
+      "appearances": [
+        "06_Day_Of_Atonement",
+        "EW01_Two_Goats",
+        "EW01_Two_Goats_short"
+      ],
+      "forms": {
+        "long": 2,
+        "short": 1
+      },
+      "descriptors": [
+        "the live second goat with hands laid on its head, sent away into the wilderness",
+        "the second live goat bearing confessed sin, driven to the wilderness",
+        "the live scapegoat bearing all the iniquities, driven into a land not inhabited"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SLAIN_GOAT",
+      "kind": "object",
+      "role": "other",
+      "count": 3,
+      "appearances": [
+        "06_Day_Of_Atonement",
+        "EW01_Two_Goats",
+        "EW01_Two_Goats_short"
+      ],
+      "forms": {
+        "long": 2,
+        "short": 1
+      },
+      "descriptors": [
+        "the first goat, killed as the LORD's sin offering, its blood taken in a basin",
+        "the first goat killed for sin, its blood gathered",
+        "the goat of the sin offering, killed, its blood carried behind the veil"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SLEEPING_MAT",
+      "kind": "object",
+      "role": null,
+      "count": 3,
+      "appearances": [
+        "22 He Never Answered Jesus",
+        "26 Jesus Walked Past the Pool",
+        "29 The Race He Could Never Win"
+      ],
+      "forms": {
+        "short": 3
+      },
+      "descriptors": [
+        "worn straw sleeping mat the man lay on and took up",
+        "thin woven bed-mat the invalid carries away",
+        "thin woven bed-mat the healed man takes up"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "TEMPLE_VEIL",
+      "kind": "object",
+      "role": null,
+      "count": 3,
+      "appearances": [
+        "06_Day_Of_Atonement",
+        "EW01_Two_Goats",
+        "EW01_Two_Goats_short"
+      ],
+      "forms": {
+        "long": 2,
+        "short": 1
+      },
+      "descriptors": [
+        "heavy thick woven curtain before the holy of holies; later torn top to bottom",
+        "thick embroidered curtain before the holy of holies",
+        "the great curtain sealing the Most Holy Place, later torn from top to bottom"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "ALTAR",
+      "kind": "object",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "EW02_Abraham",
+        "EW02_Abraham_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "the stone altar Abraham built on Moriah with wood laid in order",
+        "rough rock altar built on the mountain"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "ARK_OF_THE_COVENANT",
+      "kind": "object",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "06_Day_Of_Atonement",
+        "EW01_Two_Goats"
+      ],
+      "forms": {
+        "long": 2
+      },
+      "descriptors": [
+        "gold-overlaid acacia chest beneath the mercy seat",
+        "the ark of the covenant with the golden mercy seat, God's presence above it"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "BOAT",
+      "kind": "object",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "02 Why are you afraid",
+        "20 He Was Asleep in the Storm"
+      ],
+      "forms": {
+        "short": 2
+      },
+      "descriptors": [
+        "small wooden first-century Galilean fishing boat, single sail, low rail",
+        "small wooden Galilean fishing boat swamped, waves over the rail"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "BREAD",
+      "kind": "object",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "34_The_Hunger_Bread_Cant_Fill",
+        "35_Manna_Fulfilled"
+      ],
+      "forms": {
+        "short": 2
+      },
+      "descriptors": [
+        "loaf of ancient unleavened bread, the bread of life",
+        "loaf of bread, the living bread / Christ's flesh given"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "BUNDLE_OF_WOOD",
+      "kind": "object",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "EW02_Abraham",
+        "EW02_Abraham_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "the split wood of the burnt offering, laid on Isaac's shoulders",
+        "the wood for the offering laid on the son's back"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "CHARIOT",
+      "kind": "object",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "01_Isaiah_53",
+        "25 The Question on the Gaza Road"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "an ancient horse-drawn travelling chariot on a dusty Judean road",
+        "ancient horse-drawn travelling chariot on a desert road"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "CUSHION",
+      "kind": "object",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "02 Why are you afraid",
+        "20 He Was Asleep in the Storm"
+      ],
+      "forms": {
+        "short": 2
+      },
+      "descriptors": [
+        "worn leather stern cushion where Jesus slept",
+        "leather cushion in the stern where Jesus slept unafraid"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "DRY_PIT",
+      "kind": "object",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "EW03_Joseph",
+        "EW03_Joseph_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "the empty waterless well/cistern Joseph was cast into",
+        "empty cistern pit Joseph is thrown into"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "MANNA",
+      "kind": "object",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "35_Manna_Fulfilled",
+        "EW04_Bronze_Serpent"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "the despised light bread that fell faithfully each morning",
+        "white bread-flakes raining from heaven onto the desert floor"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "NOAHS_ARK",
+      "kind": "object",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "EW06_Noah",
+        "EW06_Noah_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "a vast box of gopher wood sealed with pitch, three hundred cubits, mountain of timber on dry land",
+        "vast wooden vessel built on dry land"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "ONE_DOOR",
+      "kind": "object",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "EW06_Noah",
+        "EW06_Noah_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "the single door cut into the side of the ark, the only way in",
+        "the single shut door, refuge for all inside, type of Christ"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "PASSOVER_LAMB",
+      "kind": "object",
+      "role": "other",
+      "count": 2,
+      "appearances": [
+        "EW08_Passover",
+        "EW08_Passover_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "a young male lamb without blemish, kept four days, slain at twilight",
+        "spotless lamb slain, not a bone broken"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "RAM_IN_THICKET",
+      "kind": "object",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "EW02_Abraham",
+        "EW02_Abraham_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "a full-grown ram caught fast by its horns in a thicket, the substitute",
+        "the provided substitute caught in the bush, the picture of the cross-bearer"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "RICH_MANS_TOMB",
+      "kind": "object",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "01_Isaiah_53",
+        "EW07_Isaiah"
+      ],
+      "forms": {
+        "long": 2
+      },
+      "descriptors": [
+        "the grave made with the rich, the Servant's burial",
+        "a rich man's rock-hewn burial tomb with a stone at the entrance"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "RING",
+      "kind": "object",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "09 The Father Who Ran",
+        "10 The Line He Never Got to Say"
+      ],
+      "forms": {
+        "short": 2
+      },
+      "descriptors": [
+        "golden signet ring placed on the son's hand",
+        "golden signet ring restored to the son"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "ROBE",
+      "kind": "object",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "09 The Father Who Ran",
+        "10 The Line He Never Got to Say"
+      ],
+      "forms": {
+        "short": 2
+      },
+      "descriptors": [
+        "finest festal robe laid over the son's shoulders",
+        "fine festal robe for the returning son"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "ROMAN_NAIL",
+      "kind": "object",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "01_Isaiah_53",
+        "02_Psalm_22"
+      ],
+      "forms": {
+        "long": 2
+      },
+      "descriptors": [
+        "an iron Roman crucifixion nail, dark forged metal",
+        "iron nails driven through pierced hands and feet"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "TEMPLE_LAMPS",
+      "kind": "object",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "05 He Said It Under the Lamps",
+        "06 I AM the Light of the World"
+      ],
+      "forms": {
+        "short": 2
+      },
+      "descriptors": [
+        "four giant golden menorah-lampstands blazing in the temple court at Feast of Tabernacles",
+        "four giant golden lampstands ablaze in the temple court at night"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "THICKET",
+      "kind": "object",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "EW02_Abraham",
+        "EW02_Abraham_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "dense scrub bushes on the mountaintop holding the ram",
+        "tangled bramble holding the ram by its horns"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "TWENTY_PIECES_SILVER",
+      "kind": "object",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "EW03_Joseph",
+        "EW03_Joseph_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "the slave-price coins paid for Joseph",
+        "coins of betrayal — twenty for Joseph, thirty for Christ"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "WOLF",
+      "kind": "object",
+      "role": "other",
+      "count": 2,
+      "appearances": [
+        "07 I AM the Door — The Shepherd Who Became the Gate",
+        "33_The_Shepherd_In_The_Gap"
+      ],
+      "forms": {
+        "short": 2
+      },
+      "descriptors": [
+        "menacing wolf in the dark beyond the fold, eyes gleaming",
+        "predatory wolf prowling at the gap in the dark"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "ANIMAL_PAIRS",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW06_Noah"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the living creatures coming two by two into the ark"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "ARK_DOOR",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW06_Noah_short"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "the single great door in the ark's side"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "BINDING_KNIFE",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW02_Abraham"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the sacrificial knife in Abraham's hand, raised to slay his son"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "BLOOD_BEHIND_VEIL",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "06_Day_Of_Atonement"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the sprinkled blood of the slain goat brought within the veil onto the mercy seat"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "CAESAR_TEMPLE",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "19 The Cliff of Rival Gods"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "gleaming white marble Greco-Roman temple of Caesar on the heights"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "CHARCOAL_FIRE",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "16 The Fire Jesus Built"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "low charcoal fire of coals smoking on the lakeshore at dawn"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "COAT_OF_MANY_COLOURS",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW03_Joseph"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the long bright ornate tunic of his father's love, stripped off and torn"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "DOORWAY",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "03_Passover_Lamb"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "a wooden doorway frame — two uprights and a crossbeam — marked in blood"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "DROPPED_STONES",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "31 The Light You Can Stand In"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "judgment stones falling into the dust, abandoned"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "EGYPTIAN_CHARIOT",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW03_Joseph"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the governor's chariot before which princes bowed"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "FIRE_TORCH",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW02_Abraham"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the fire/coals Abraham carried up the mountain for the offering"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "FORBIDDEN_FRUIT",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "05_Seed_Of_The_Woman"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the forbidden fruit, bitten, in the broken innocence of Eden"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "GLEANED_BARLEY",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW09_Boaz"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the barley scraps Ruth gathered behind the reapers in the field"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "GOLDEN_CALF_DUST",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW04_Bronze_Serpent"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the ground-to-powder golden calf, referenced as the graven-image dread"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "GOPHER_WOOD",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW06_Noah"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the cut gopher-wood timbers sealed within and without with pitch"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "GRAIN_AND_BREAD",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW03_Joseph_short"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "stored Egyptian grain and loaves of life-giving bread"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "GRAIN_SACKS",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW03_Joseph"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the stored bread/grain of Egypt under Joseph's seal during famine"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "HARP",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "02_Psalm_22"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "David's wooden lyre / harp of ancient Israel"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "HIGH_PRIEST_GOLD_GARMENTS",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW01_Two_Goats"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the laid-aside garments of gold and glory, breastplate and ephod"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "HIGH_PRIEST_LINEN_GARMENT",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW01_Two_Goats"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "plain white linen tunic of the Day of Atonement, servant-simple, no gold"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "HOUSE_DOOR",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW08_Passover_short"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "the household doorway marked with blood"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "HYSSOP_BRANCH",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW08_Passover"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the bunch of hyssop dipped in blood to strike the lintel and posts"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "MERCY_SEAT",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW01_Two_Goats"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "gold lid of the ark with cherubim, in the thick dark of the holy of holies"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "MOSES_ROD",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW04_Bronze_Serpent"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "Moses' staff/rod of his wilderness works"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "PAGAN_SHRINE",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "19 The Cliff of Rival Gods"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "rock cliff honeycombed with niches, Pan's grotto and idol shrines at Caesarea Philippi"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "PARCEL_OF_LAND",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW09_Boaz"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "Elimelech's parcel of land bought back, the widow's only hope"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "PRISON_CHAINS",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW03_Joseph"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the dungeon irons of Joseph's false imprisonment"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "RAINBOW",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW06_Noah"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "God's bow hung over the washed world, mercy over judgment"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "REDEEMERS_SHOE",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW09_Boaz"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the plucked-off shoe given to seal the redemption by the old custom"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "REDEMPTION_PRICE",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW09_Boaz_short"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "the full price of silver paid at the gate"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "ROMAN_SPEAR",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "zechariah_12_10_pierced"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "the Roman lance driven into Christ's side to be sure He was dead, iron point and shaft"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SACRIFICIAL_KNIFE",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW02_Abraham_short"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "raised ancient blade in the father's hand"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SHAMEFUL_RECORD",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "36_In_No_Wise_Cast_Out"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "scroll or ledger of past sins, already read and accepted"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SPREAD_SKIRT",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW09_Boaz"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the corner of Boaz's garment/skirt spread over Ruth as token of covering and redemption"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "THE_ASS",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW02_Abraham"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the saddled donkey left below with the servants"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "THIRTY_PIECES_SILVER",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW03_Joseph"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the coins Judas took for Jesus (the deeper parallel)"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "TREES_OF_GARDEN",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "05_Seed_Of_The_Woman"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the dense trees of the garden amongst which Adam and Eve hide"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "VINEGAR_SPONGE",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "02_Psalm_22"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "a sponge of sour vinegar on a reed lifted to the cross"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "WATERPOT",
+      "kind": "object",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "08 The Well That Never Runs Dry"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "clay waterpot dropped at the well's edge"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "WILDERNESS",
+      "kind": "location",
+      "role": null,
+      "count": 7,
+      "appearances": [
+        "05 He Said It Under the Lamps",
+        "06 I AM the Light of the World",
+        "06_Day_Of_Atonement",
+        "35_Manna_Fulfilled",
+        "EW01_Two_Goats",
+        "EW01_Two_Goats_short",
+        "EW04_Bronze_Serpent"
+      ],
+      "forms": {
+        "long": 3,
+        "short": 4
+      },
+      "descriptors": [
+        "the uninhabited desert land the scapegoat is sent into, barren wastes",
+        "the barren desert road compassing Edom, the dying camp in the dust",
+        "barren wilderness where the scapegoat is lost",
+        "the desert waste into which the scapegoat is driven, a land not inhabited",
+        "vast dark Sinai wilderness, Israel encamped under the night sky",
+        "dark Sinai desert, Israel journeying beneath the fire",
+        "vast barren desert under morning sky"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "STORM_SEA",
+      "kind": "location",
+      "role": null,
+      "count": 5,
+      "appearances": [
+        "02 Why are you afraid",
+        "20 He Was Asleep in the Storm",
+        "23 The Prepared Belly",
+        "28 What Manner of Man",
+        "EW05_Jonah"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 4
+      },
+      "descriptors": [
+        "the great storm-tossed sea rearing up to break the ship; towering waves",
+        "black raging Sea of Galilee at night, towering whitecaps, lashing rain",
+        "violent night sea, towering waves crashing over the boat",
+        "dark heaving ocean under stormwracked sky",
+        "Sea of Galilee in violent tempest, black water over the rail"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "DESERT_ROAD",
+      "kind": "location",
+      "role": null,
+      "count": 4,
+      "appearances": [
+        "01_Isaiah_53",
+        "25 The Question on the Gaza Road",
+        "EW07_Isaiah",
+        "EW07_Isaiah_short"
+      ],
+      "forms": {
+        "long": 2,
+        "short": 2
+      },
+      "descriptors": [
+        "the wilderness road where the eunuch's chariot rolled and Philip joined him",
+        "the lonely desert road from Jerusalem to Gaza",
+        "a sunbaked desert road from Jerusalem toward Gaza",
+        "dusty desert road from Jerusalem to Gaza"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "POOL_OF_BETHESDA",
+      "kind": "location",
+      "role": null,
+      "count": 4,
+      "appearances": [
+        "18 He Never Said Yes",
+        "22 He Never Answered Jesus",
+        "26 Jesus Walked Past the Pool",
+        "29 The Race He Could Never Win"
+      ],
+      "forms": {
+        "short": 4
+      },
+      "descriptors": [
+        "five-porch colonnaded pool in Jerusalem crowded with the sick, troubled water",
+        "five-porched Jerusalem pool crowded with the sick, colonnades, troubled water",
+        "ancient stone pool with five porches, stirring water",
+        "ancient stone pool with five porches packed with the sick"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "ROAD",
+      "kind": "location",
+      "role": null,
+      "count": 4,
+      "appearances": [
+        "09 The Father Who Ran",
+        "10 The Line He Never Got to Say",
+        "11 The Confession He Never Finished",
+        "12 The Kiss That Cut Off the Bargain"
+      ],
+      "forms": {
+        "short": 4
+      },
+      "descriptors": [
+        "long dusty road across open fields toward the father's house",
+        "dusty road home across open country at dusk",
+        "long dusty road home, father closing the distance",
+        "dusty open road home where the father runs to meet him"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "TEMPLE",
+      "kind": "location",
+      "role": null,
+      "count": 4,
+      "appearances": [
+        "05 He Said It Under the Lamps",
+        "06 I AM the Light of the World",
+        "31 The Light You Can Stand In",
+        "EW02_Abraham"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 3
+      },
+      "descriptors": [
+        "the place in Jerusalem where Jesus stood teaching generations later",
+        "Herod's temple court at night, golden stone, crowds gathered",
+        "Herod's temple court at night, golden stone, watching crowd",
+        "ancient Jerusalem temple courtyard in dawn light"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "WILDERNESS_CAMP",
+      "kind": "location",
+      "role": null,
+      "count": 4,
+      "appearances": [
+        "04_Bronze_Serpent",
+        "EW01_Two_Goats",
+        "EW04_Bronze_Serpent",
+        "EW04_Bronze_Serpent_short"
+      ],
+      "forms": {
+        "long": 3,
+        "short": 1
+      },
+      "descriptors": [
+        "the edge of the Israelite camp, tents, where the slain goat's body is burned outside",
+        "the tents of Israel with the serpent pole raised in the midst",
+        "Israel's desert encampment under judgment",
+        "Israel's tent encampment in the barren Sinai wilderness near the end of the wandering"
+      ],
+      "has_anchor": true,
+      "anchor": "places/WILDERNESS_CAMP.png"
+    },
+    {
+      "name": "SHORE",
+      "kind": "location",
+      "role": null,
+      "count": 3,
+      "appearances": [
+        "16 The Fire Jesus Built",
+        "EW05_Jonah",
+        "EW06_Noah_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 2
+      },
+      "descriptors": [
+        "the beach where the fish vomited Jonah out, drenched and breathing",
+        "the dry ground where the ark is built before the rain",
+        "misty Sea of Galilee shoreline at sunrise, boat drawn up, nets"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "BELLY_OF_THE_FISH",
+      "kind": "location",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "EW05_Jonah",
+        "EW05_Jonah_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "the cold dark interior of the great fish, the belly of hell, three days entombed",
+        "the dark interior of the fish, buried alive three days"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "BETHLEHEM",
+      "kind": "location",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "EW09_Boaz",
+        "EW09_Boaz_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "the town of Bethlehem, house of bread, from which David and Christ would come",
+        "the town of Boaz and of David's line, birthplace of Christ"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "CITY_GATE",
+      "kind": "location",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "EW09_Boaz",
+        "EW09_Boaz_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "the Bethlehem city gate where Boaz sat in the dust and sealed the redemption before witnesses",
+        "the Bethlehem gate where the bargain is sealed"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "EGYPTIAN_DUNGEON",
+      "kind": "location",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "EW03_Joseph",
+        "EW03_Joseph_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "the dark dungeon beneath Egypt where Joseph was held",
+        "dark prison cell of false condemnation"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "EGYPT_THRONE_ROOM",
+      "kind": "location",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "EW03_Joseph",
+        "EW03_Joseph_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "Pharaoh's palace hall, Egyptian columns, Joseph at the right hand of the throne",
+        "Pharaoh's court where Joseph stands at the right hand"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "FLOOD_WATERS",
+      "kind": "location",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "EW06_Noah",
+        "EW06_Noah_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "the rising waters of judgment drowning the whole earth, forty days of rain",
+        "the rising waters that drown the world and lift the ark"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "GOLGOTHA",
+      "kind": "location",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "02_Psalm_22",
+        "30 Smitten of God"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "the rocky execution hill outside Jerusalem under a dark sky",
+        "barren execution hill outside the city walls"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "GREEN_PASTURE",
+      "kind": "location",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "32_The_Door_Was_a_Body",
+        "33_The_Shepherd_In_The_Gap"
+      ],
+      "forms": {
+        "short": 2
+      },
+      "descriptors": [
+        "lush waiting pasture beyond the door, safety and feeding",
+        "open pasture beyond the fold"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "HOLY_OF_HOLIES",
+      "kind": "location",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "EW01_Two_Goats",
+        "EW01_Two_Goats_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "the innermost chamber of the tabernacle, thick darkness, cloud of presence",
+        "innermost sanctuary behind the veil"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "JERUSALEM_CITY",
+      "kind": "location",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "01_Isaiah_53",
+        "03_Passover_Lamb"
+      ],
+      "forms": {
+        "long": 2
+      },
+      "descriptors": [
+        "ancient Jerusalem of stone walls and dwellings, ~700 BC",
+        "the hill outside Jerusalem at Passover, lambs being killed across the city"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "MOUNT_MORIAH",
+      "kind": "location",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "EW02_Abraham",
+        "EW02_Abraham_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "the mountain in the land of Moriah seen afar off, place of the offering",
+        "the mountain in the land of Moriah, place of offering"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SHEEPFOLD",
+      "kind": "location",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "07 I AM the Door — The Shepherd Who Became the Gate",
+        "33_The_Shepherd_In_The_Gap"
+      ],
+      "forms": {
+        "short": 2
+      },
+      "descriptors": [
+        "ancient dry-stone sheep pen with one narrow gap, no gate",
+        "ancient hillside stone sheep-pen with a gap, no gate"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "BARLEY_FIELD",
+      "kind": "location",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW09_Boaz"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "Boaz's barley fields stretching to the hills where Ruth gleaned"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "CLIFF",
+      "kind": "location",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "19 The Cliff of Rival Gods"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "towering rock cliff with the dark cave-mouth 'Gates of Hades' at its base"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "DOTHAN_FIELD",
+      "kind": "location",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW03_Joseph"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the open field/hills where the brothers seized Joseph"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "EDEN_GARDEN",
+      "kind": "location",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "05_Seed_Of_The_Woman"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the garden of Eden at dusk, lush trees, the cool of the day, paradise spoiled"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "EGYPT_DWELLINGS",
+      "kind": "location",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "03_Passover_Lamb"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the mud-brick slave dwellings of Israel in Egypt on the night of the exodus"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "EGYPT_STREETS_NIGHT",
+      "kind": "location",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW08_Passover"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the streets of Egypt at midnight, the cry going up house by house"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "FAMINE_LAND",
+      "kind": "location",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW03_Joseph"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the famine-stricken earth, cracked ground, nations seeking bread"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "GRAIN_FIELD",
+      "kind": "location",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW09_Boaz_short"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "Boaz's barley harvest field where Ruth gleans"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "JERUSALEM_NIGHT_INTERIOR",
+      "kind": "location",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "04_Bronze_Serpent"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "a dim lamplit room at night where Nicodemus meets Jesus"
+      ],
+      "has_anchor": true,
+      "anchor": "places/JERUSALEM_NIGHT_INTERIOR.png"
+    },
+    {
+      "name": "JUDAH_WATCHMAN_HEIGHT",
+      "kind": "location",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW07_Isaiah"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "Isaiah's land of Judah trembling between empires, the watchman's vantage"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "MOUNTAIN_FOOT",
+      "kind": "location",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW02_Abraham"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the base of the mountain where servants and ass waited"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "MOUNT_HOR",
+      "kind": "location",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW04_Bronze_Serpent"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the mountain they came up from on the bitter road"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "MUDBRICK_HOUSE",
+      "kind": "location",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW08_Passover"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the slave family's mud-brick dwelling in the land of bondage, shut for the night"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "NINEVEH",
+      "kind": "location",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW05_Jonah"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the great wicked Assyrian city, vast walls and gates"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SAMARIA_TOWN",
+      "kind": "location",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "08 The Well That Never Runs Dry"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "ancient Samaritan village of mud-brick houses on a hill"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "STORMY_SEA",
+      "kind": "location",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW05_Jonah_short"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "the raging deep that swallows the ship's course"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "TABERNACLE_DOOR",
+      "kind": "location",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW01_Two_Goats"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the entrance of the wilderness tabernacle where Aaron stood"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "TABERNACLE_INTERIOR",
+      "kind": "location",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "06_Day_Of_Atonement"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the inner Most Holy Place of the tabernacle, lamplit, the curtain and ark"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "THRESHING_FLOOR",
+      "kind": "location",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW09_Boaz"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the night threshing floor where Ruth lay at Boaz's feet"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "WASHED_EARTH",
+      "kind": "location",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW06_Noah"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the clean new world Noah stepped out upon after the flood receded"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "WELL",
+      "kind": "location",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "08 The Well That Never Runs Dry"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "ancient stone Jacob's well at Sychar under harsh noon light"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "EMPTY_TOMB",
+      "kind": "element",
+      "role": null,
+      "count": 8,
+      "appearances": [
+        "05_Seed_Of_The_Woman",
+        "06 I AM the Light of the World",
+        "23 The Prepared Belly",
+        "EW03_Joseph_short",
+        "EW05_Jonah",
+        "EW05_Jonah_short",
+        "ps22_short_04_Declared_To_The_Brethren",
+        "ps22_short_06_The_Ends_Of_The_Earth"
+      ],
+      "forms": {
+        "long": 2,
+        "short": 6
+      },
+      "descriptors": [
+        "Christ's grave in the heart of the earth that could not hold Him",
+        "the grave brought lower than any pit, then raised",
+        "the grave the deep could not hold, resurrection on the third day",
+        "the empty rock tomb, stone rolled away, that put the victory beyond doubt",
+        "rolled-away stone, empty rock tomb glowing with dawn light",
+        "rock-hewn burial cave, stone rolled away, dark mouth",
+        "the rock-hewn tomb opened, the risen Christ alive beyond the grave",
+        "the empty tomb from which the gospel went out to the nations"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "STRIPES_AND_WOUNDS",
+      "kind": "element",
+      "role": null,
+      "count": 4,
+      "appearances": [
+        "21 The Pronouns That Preached the Gospel",
+        "30 Smitten of God",
+        "EW07_Isaiah_short",
+        "isaiah_53_5_with_his_stripes"
+      ],
+      "forms": {
+        "short": 4
+      },
+      "descriptors": [
+        "the Servant's healing stripes borne in our place",
+        "close-up of a scourged, striped back bearing the wounds",
+        "scourge-marks and pierced wounds borne for another's sin",
+        "the welts of a flogging on Christ's back, the wounding by which we are healed"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "LOOK_AND_LIVE",
+      "kind": "element",
+      "role": null,
+      "count": 3,
+      "appearances": [
+        "EW04_Bronze_Serpent",
+        "EW04_Bronze_Serpent_short",
+        "zechariah_12_10_pierced"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 2
+      },
+      "descriptors": [
+        "the dying bitten man lifting his eyes to the bronze and being healed by a look alone",
+        "bitten eyes lifting toward the raised serpent in faith",
+        "the gaze of the mourning, forgiven people lifted to the pierced One, 'look at Him and live'"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "MAN_CAST_INTO_SEA",
+      "kind": "element",
+      "role": null,
+      "count": 3,
+      "appearances": [
+        "23 The Prepared Belly",
+        "EW05_Jonah",
+        "EW05_Jonah_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 2
+      },
+      "descriptors": [
+        "one man given up to the deep and the storm falling silent over all the rest",
+        "Jonah hurled overboard into the swallowing dark",
+        "figure thrown into drowning waters to save the rest"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "PILLAR_OF_FIRE",
+      "kind": "element",
+      "role": null,
+      "count": 3,
+      "appearances": [
+        "05 He Said It Under the Lamps",
+        "06 I AM the Light of the World",
+        "31 The Light You Can Stand In"
+      ],
+      "forms": {
+        "short": 3
+      },
+      "descriptors": [
+        "towering column of divine fire glowing over the desert",
+        "towering pillar of divine fire leading Israel through the dark",
+        "remembered divine pillar of fire, light of God's presence"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "RENT_VEIL",
+      "kind": "element",
+      "role": null,
+      "count": 3,
+      "appearances": [
+        "06_Day_Of_Atonement",
+        "EW01_Two_Goats",
+        "EW01_Two_Goats_short"
+      ],
+      "forms": {
+        "long": 2,
+        "short": 1
+      },
+      "descriptors": [
+        "the temple curtain rent in two from top to bottom by no human hand",
+        "the temple curtain rent from top to bottom",
+        "the temple veil torn in twain from the top to the bottom, the way thrown open from above"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "ARM_OF_THE_LORD",
+      "kind": "element",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "01_Isaiah_53",
+        "EW07_Isaiah"
+      ],
+      "forms": {
+        "long": 2
+      },
+      "descriptors": [
+        "the bared arm of the LORD, expected as a warrior-king but revealed as a body broken low",
+        "a strong outstretched divine arm of light reaching down from heaven, the saving strength of God"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "BLOOD_MARKED_DOOR",
+      "kind": "element",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "EW08_Passover",
+        "EW08_Passover_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "the applied blood seen by the destroyer, the judgment passing over the marked house",
+        "the sheltering blood-struck doorway judgment passes over"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "DARKENED_SKY",
+      "kind": "element",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "02_Psalm_22",
+        "ps22_short_03_Forsaken_Cry"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "a supernatural darkness over the land at the ninth hour",
+        "the sky darkened at the ninth hour over the cross, deep gloom of the dereliction"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "DEATH_PASSING_OVER",
+      "kind": "element",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "03_Passover_Lamb",
+        "EW08_Passover"
+      ],
+      "forms": {
+        "long": 2
+      },
+      "descriptors": [
+        "the destroyer/death walking the street and passing the blood-marked door",
+        "the shadow of the death-judgment passing over a blood-marked door in the dark"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "LAYING_ON_OF_HANDS",
+      "kind": "element",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "06_Day_Of_Atonement",
+        "EW01_Two_Goats_short"
+      ],
+      "forms": {
+        "short": 1,
+        "long": 1
+      },
+      "descriptors": [
+        "priest's hands pressed on the goat's head transferring guilt",
+        "the high priest's two hands pressed on the live goat's head, transferring confessed sin"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "OPEN_DOOR",
+      "kind": "element",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "32_The_Door_Was_a_Body",
+        "36_In_No_Wise_Cast_Out"
+      ],
+      "forms": {
+        "short": 2
+      },
+      "descriptors": [
+        "single open doorway of light, the only way in",
+        "unlocked open doorway, never barred to the one who comes"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "PIERCED_HANDS_AND_FEET",
+      "kind": "element",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "02_Psalm_22",
+        "04 psalms 22 part 2"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "close motif of pierced, bleeding hands and feet, bones out of joint",
+        "close-up of nail-pierced hands and feet, blood at the wounds"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "POINTING_HAND_OF_GOD",
+      "kind": "element",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "24 The Answer Was a Gift",
+        "Who Do You Say I Am"
+      ],
+      "forms": {
+        "short": 2
+      },
+      "descriptors": [
+        "shaft of heavenly light pointing, revelation from above",
+        "heavenly light of revelation opening the eyes"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SCAPEGOAT_DEPARTING",
+      "kind": "element",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "EW01_Two_Goats",
+        "EW01_Two_Goats_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "the live goat growing smaller, vanishing into the empty wilderness carrying sin away",
+        "lone goat vanishing into the empty desert carrying sin away"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "STIRRING_WATER",
+      "kind": "element",
+      "role": null,
+      "count": 2,
+      "appearances": [
+        "26 Jesus Walked Past the Pool",
+        "29 The Race He Could Never Win"
+      ],
+      "forms": {
+        "short": 2
+      },
+      "descriptors": [
+        "rippling pool water, false hope of healing",
+        "rippling pool water, the unreachable race"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SUFFERING_SERVANT",
+      "kind": "element",
+      "role": "other",
+      "count": 2,
+      "appearances": [
+        "EW07_Isaiah",
+        "EW07_Isaiah_short"
+      ],
+      "forms": {
+        "long": 1,
+        "short": 1
+      },
+      "descriptors": [
+        "the marred Man of sorrows, no beauty, wounded for our transgressions, despised and rejected",
+        "the despised, wounded Servant of the vision bearing our guilt"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "BROTHERS_BOWING",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW03_Joseph"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the brothers kneeling before the unrecognized ruler, the dream fulfilled"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "BRUISED_HEEL_CRUSHED_HEAD",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "05_Seed_Of_The_Woman"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the dual wound motif — the serpent striking the heel, the seed crushing the serpent's head"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "COSTLY_REDEMPTION",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW09_Boaz"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the redeemer spending himself for a poor outsider, gaining no profit but her"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "DREAM_SHEAVES_STARS",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW03_Joseph"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "Joseph's dreams: sheaves bowing to his sheaf, sun moon and eleven stars bowing"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "FACES_OF_DEAD_PROPHETS",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "27 A List of Dead Men"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "shadowy portraits of John the Baptist, Elias, Jeremias from the past"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "FORGIVING_EMBRACE",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW03_Joseph"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the betrayed one holding out bread not a sword, weeping forgiveness over his betrayers"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "GLASSY_STILL_SEA",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "28 What Manner of Man"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "sea suddenly calmed to glass after Christ's command"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "GRAVE",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "35_Manna_Fulfilled"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "tomb / death the manna could not prevent, defeated by the Bread"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "INIQUITY_LAID_ON_HIM",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW07_Isaiah"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the LORD laying the guilt of us all, like straying sheep, upon one innocent Servant"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "LIFTED_UP_CURSE",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW04_Bronze_Serpent"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the cursed thing/serpent lifted high, the image of the killer, fulfilled in Christ made a curse"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "LIFTED_UP_GAZE",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "04_Bronze_Serpent"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "dying eyes turning upward to look at the lifted serpent / lifted Christ and live"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "LIGHT_FROM_HEAVEN",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW06_Noah_short"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "a later light falling that Noah never saw"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "LIGHT_OF_THE_WORLD",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "31 The Light You Can Stand In"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "radiant divine light surrounding Christ, light of life"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "MERCY_TOO_WIDE",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW05_Jonah"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "grace reaching the worst of cities and the man at the bottom of the sea"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "NEHUSHTAN_BROKEN",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW04_Bronze_Serpent"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the later-idolized bronze serpent broken to pieces by the good king of Judah"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "OUTSIDER_BROUGHT_IN",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW09_Boaz"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the foreign Moabitess grafted into Israel's line, the stranger brought all the way home as bride"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "OUTSTRETCHED_PIERCED_HANDS",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW03_Joseph_short"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "Christ's open wounded arms offering blood not a sword"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "PROVIDED_LAMB",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW02_Abraham"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the promised lamb God would provide, unfulfilled on Moriah, found in Christ"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "RAISED_TO_RIGHT_HAND",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW03_Joseph"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "lifting from the pit/prison to the throne; God exalting His servant to power"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "REDEEMER_AND_BRIDE",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW09_Boaz_short"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "the kinsman taking the poor outsider home as his bride"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "REFUGE_THROUGH_JUDGMENT",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW06_Noah"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the ark bearing those inside safe above/through the flood, untouched by wrath"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SACRIFICIAL_LAMB",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "25 The Question on the Gaza Road"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "silent lamb led to slaughter, dumb before the shearer"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SEATED_PRIEST",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW01_Two_Goats"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the finished Priest sitting down at the right hand of God, the work complete"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SERPENT_LIFTED_HIGH",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW04_Bronze_Serpent_short"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "the bronze image raised above the camp against the sky"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SHEEP_GONE_ASTRAY",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "01_Isaiah_53"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "scattered sheep wandering off in every direction across the hills, each its own way"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SHEPHERD_AS_DOOR",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "33_The_Shepherd_In_The_Gap"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "shepherd's body lying across the gap, the living door"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SHUT_IN_BY_GOD",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW06_Noah"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the LORD's own hand closing the ark door, the sealing Noah never did himself"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SON_CARRYING_WOOD",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW02_Abraham"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the beloved son bearing the very wood of his own offering up the hill"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SOUL_HUNGER",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "34_The_Hunger_Bread_Cant_Fill"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "deep inner emptiness no created thing can fill"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "STAYED_HAND",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW02_Abraham"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the raised knife-hand stopped at the last moment by the voice from heaven"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "SUBSTITUTION",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW02_Abraham"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the ram dying in the stead of the son; the swap of victim"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "THE_VISION",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW07_Isaiah_short"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "the prophetic vision of the execution seen 700 years ahead"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "THREE_DAYS_DARKNESS",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "23 The Prepared Belly"
+      ],
+      "forms": {
+        "short": 1
+      },
+      "descriptors": [
+        "motif of three days and nights in the deep / heart of the earth"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "THREE_DAYS_DEEP",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW05_Jonah"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the three days and nights buried alive in the deep then given back alive, sign of resurrection"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "TWO_LOTS",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW01_Two_Goats"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the casting of lots over the two goats, one for the LORD, one for the scapegoat"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "UNBROKEN_BONE",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "EW08_Passover"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "the lamb whose bones must not be broken, fulfilled in Christ's unbroken legs"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    },
+    {
+      "name": "WOUNDS_BORNE",
+      "kind": "element",
+      "role": null,
+      "count": 1,
+      "appearances": [
+        "01_Isaiah_53"
+      ],
+      "forms": {
+        "long": 1
+      },
+      "descriptors": [
+        "stripe-wounds and bruises on the Servant's body glowing with substitution, sins laid upon him"
+      ],
+      "has_anchor": false,
+      "anchor": null
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "MARY",
+  "kind": "character",
+  "canonical": "Mary, the young virgin mother, a gentle Hebrew maiden of about sixteen with smooth olive skin and dark hair veiled under a soft undyed earth-toned head-mantle, a serene humble face and downcast reverent eyes, dressed in a simple modest robe of muted homespun earth tones (NO Marian blue), her hands folded at her breast",
+  "tags": [
+    "mary",
+    "virgin",
+    "mother",
+    "veiled",
+    "undyed",
+    "humble"
+  ],
+  "style": "inked",
+  "anchor": "characters/MARY.png",
+  "first_used": "05_Seed_Of_The_Woman",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "THE_LORD",
+  "kind": "character",
+  "canonical": "the unseen presence of the LORD shown only as overwhelming radiant golden light above the mercy seat, a towering pillar of glory and shadow, billowing luminous cloud and rays breaking from within, never a human face or body",
+  "tags": [
+    "lord",
+    "glory",
+    "shekinah",
+    "radiant-light",
+    "divine-presence",
+    "pillar"
+  ],
+  "style": "inked",
+  "anchor": "characters/THE_LORD.png",
+  "first_used": "01_Isaiah_53",
+  "count": 21,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

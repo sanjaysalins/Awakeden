@@ -1,0 +1,18 @@
+{
+  "name": "WELL",
+  "kind": "place",
+  "canonical": "ancient Jacob's well outside Sychar at noon: a low round mouth of worn stone over a deep shaft on a dusty open plain, deep and dark with nothing to draw with at its rim, dry scrub and distant tan hills around it under a harsh white midday sun and short hard shadows",
+  "tags": [
+    "well",
+    "jacobs-well",
+    "sychar",
+    "stone",
+    "noon",
+    "samaria"
+  ],
+  "style": "inked",
+  "anchor": "places/WELL.png",
+  "first_used": "08 The Well That Never Runs Dry",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

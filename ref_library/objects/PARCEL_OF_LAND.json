@@ -1,0 +1,18 @@
+{
+  "name": "PARCEL_OF_LAND",
+  "kind": "object",
+  "canonical": "a small dry plot of stony Judean farmland on a hillside, low boundary stones and parched furrows under open sky \u2014 a family field to be redeemed, NOT a fenced modern farm, NOT a green lawn",
+  "tags": [
+    "land",
+    "field",
+    "parcel",
+    "judean",
+    "stony",
+    "boundary"
+  ],
+  "style": "inked",
+  "anchor": "objects/PARCEL_OF_LAND.png",
+  "first_used": "EW09_Boaz",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "EGYPT_STREETS_NIGHT",
+  "kind": "place",
+  "canonical": "the streets of an ancient Egyptian city at midnight: deserted dust lanes between high mud-brick walls and shadowed doorways, a few guttering torches, a heavy oppressive darkness pressing over the silent houses as the night of judgment falls",
+  "tags": [
+    "egypt",
+    "streets",
+    "night",
+    "city",
+    "mud-brick",
+    "judgment"
+  ],
+  "style": "inked",
+  "anchor": "places/EGYPT_STREETS_NIGHT.png",
+  "first_used": "EW08_Passover",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

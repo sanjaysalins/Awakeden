@@ -1,0 +1,18 @@
+{
+  "name": "PHILIP",
+  "kind": "character",
+  "canonical": "Philip the evangelist, a lean travel-hardened first-century Jewish disciple of about forty, sun-warmed olive skin, an earnest open eager face, dark hair and a neatly trimmed dark beard, dressed in a simple coarse sand-coloured tunic and mantle with a leather satchel and worn sandals, striding the desert road beside the chariot",
+  "tags": [
+    "philip",
+    "evangelist",
+    "disciple",
+    "desert-road",
+    "satchel",
+    "preacher"
+  ],
+  "style": "inked",
+  "anchor": "characters/PHILIP.png",
+  "first_used": "01_Isaiah_53",
+  "count": 4,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

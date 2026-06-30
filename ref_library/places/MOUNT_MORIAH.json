@@ -1,0 +1,18 @@
+{
+  "name": "MOUNT_MORIAH",
+  "kind": "place",
+  "canonical": "the mountain in the land of Moriah seen afar off: a lone rocky summit rising above barren ridges, bare grey stone and scattered thornbrush on its slopes, a hard clear sky overhead, the appointed high place of the offering, solemn and remote",
+  "tags": [
+    "moriah",
+    "mountain",
+    "summit",
+    "rocky",
+    "offering",
+    "remote"
+  ],
+  "style": "inked",
+  "anchor": "places/MOUNT_MORIAH.png",
+  "first_used": "EW02_Abraham",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

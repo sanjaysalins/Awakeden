@@ -1,0 +1,18 @@
+{
+  "name": "SCAPEGOAT_DEPARTING",
+  "kind": "motif",
+  "canonical": "a lone goat growing smaller as it wanders away into the vast empty wilderness under a wide sky, carrying the people's confessed sin out and away, never to return",
+  "tags": [
+    "scapegoat",
+    "wilderness",
+    "sin-bearing",
+    "departure",
+    "atonement",
+    "removal"
+  ],
+  "style": "inked",
+  "anchor": "motifs/SCAPEGOAT_DEPARTING.png",
+  "first_used": "EW01_Two_Goats",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "SHEEP_GONE_ASTRAY",
+  "kind": "motif",
+  "canonical": "scattered sheep wandering off in every direction across the bare hills, each one turned to its own way, straying farther and farther from the fold",
+  "tags": [
+    "sheep",
+    "astray",
+    "scattered",
+    "isaiah",
+    "wandering",
+    "lost"
+  ],
+  "style": "inked",
+  "anchor": "motifs/SHEEP_GONE_ASTRAY.png",
+  "first_used": "01_Isaiah_53",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

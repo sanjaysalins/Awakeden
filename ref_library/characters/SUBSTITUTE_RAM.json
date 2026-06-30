@@ -1,0 +1,18 @@
+{
+  "name": "SUBSTITUTE_RAM",
+  "kind": "character",
+  "canonical": "the substitute ram of Moriah, a strong adult male ram with thick curling cream-and-tawny wool and great spiraling horns, dark patient eyes, caught fast by its horns in a dense thorny thicket upon the rocky mountain slope, struggling in Isaac's place",
+  "tags": [
+    "ram",
+    "moriah",
+    "substitute",
+    "thicket",
+    "horns",
+    "sacrifice"
+  ],
+  "style": "inked",
+  "anchor": "characters/SUBSTITUTE_RAM.png",
+  "first_used": "EW02_Abraham_short",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

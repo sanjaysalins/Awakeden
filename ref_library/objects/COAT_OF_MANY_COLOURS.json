@@ -1,0 +1,18 @@
+{
+  "name": "COAT_OF_MANY_COLOURS",
+  "kind": "object",
+  "canonical": "a long ankle-length ornate tunic of hand-woven wool in rich bands of crimson, ochre, indigo and saffron stripes, with full sleeves \u2014 a costly ancient Hebrew robe of favour, here torn and bloodstained, NOT a modern patchwork coat, NOT a short jacket",
+  "tags": [
+    "tunic",
+    "robe",
+    "colours",
+    "striped",
+    "torn",
+    "wool"
+  ],
+  "style": "inked",
+  "anchor": "objects/COAT_OF_MANY_COLOURS.png",
+  "first_used": "EW03_Joseph",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "SAILORS",
+  "kind": "character",
+  "canonical": "the pagan mariners of the Joppa ship, a knot of weather-beaten ancient Near-Eastern seamen with sun-blackened skin, wild salt-matted hair and beards, fear-stricken faces, wearing rough kilted tunics and sashes soaked through, ropes and amulets at their belts, terrified hands flinging cargo overboard and casting lots on the heaving deck of a small wooden Phoenician sailing vessel",
+  "tags": [
+    "sailors",
+    "mariners",
+    "pagan",
+    "jonah",
+    "ship",
+    "storm"
+  ],
+  "style": "inked",
+  "anchor": "characters/SAILORS.png",
+  "first_used": "EW05_Jonah",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "DARKENED_SKY",
+  "kind": "motif",
+  "canonical": "an unnatural midday darkness blanketing the whole land from the sixth hour to the ninth hour, the sun blotted out and the hills swallowed in an eerie supernatural gloom",
+  "tags": [
+    "darkness",
+    "ninth-hour",
+    "crucifixion",
+    "sky",
+    "judgment",
+    "eerie"
+  ],
+  "style": "inked",
+  "anchor": "motifs/DARKENED_SKY.png",
+  "first_used": "02_Psalm_22",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

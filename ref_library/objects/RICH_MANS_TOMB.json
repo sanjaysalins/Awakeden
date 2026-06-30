@@ -1,0 +1,18 @@
+{
+  "name": "RICH_MANS_TOMB",
+  "kind": "object",
+  "canonical": "a rich man's rock-hewn burial tomb cut into a hillside, a square dark entrance with a great round disc-shaped sealing stone rolled in its channel beside it. A first-century well-made Judean garden tomb \u2014 NOT a modern headstone or graveyard, NOT a built mausoleum, NOT an earthen grave",
+  "tags": [
+    "tomb",
+    "rock-hewn",
+    "burial",
+    "stone",
+    "sepulchre",
+    "rich"
+  ],
+  "style": "inked",
+  "anchor": "objects/RICH_MANS_TOMB.png",
+  "first_used": "01_Isaiah_53",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

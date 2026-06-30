@@ -1,0 +1,18 @@
+{
+  "name": "RAM_IN_THICKET",
+  "kind": "object",
+  "canonical": "a full-grown ram caught fast by its curled horns in a tangle of dense thornbush, struggling and held, the provided substitute. A mature horned male sheep snagged in scrub \u2014 NOT a young lamb, NOT a freely standing animal; clearly trapped by the horns in the thicket",
+  "tags": [
+    "ram",
+    "thicket",
+    "horns",
+    "substitute",
+    "caught",
+    "moriah"
+  ],
+  "style": "inked",
+  "anchor": "objects/RAM_IN_THICKET.png",
+  "first_used": "EW02_Abraham",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

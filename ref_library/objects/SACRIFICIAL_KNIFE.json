@@ -1,0 +1,18 @@
+{
+  "name": "SACRIFICIAL_KNIFE",
+  "kind": "object",
+  "canonical": "an ancient bronze sacrificial blade with a worn wooden handle, raised in a hand, the dull metal catching light \u2014 a primitive flint-and-bronze knife, NOT a modern steel knife, NOT a sword",
+  "tags": [
+    "knife",
+    "blade",
+    "bronze",
+    "sacrifice",
+    "raised",
+    "ancient"
+  ],
+  "style": "inked",
+  "anchor": "objects/SACRIFICIAL_KNIFE.png",
+  "first_used": "EW02_Abraham_short",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

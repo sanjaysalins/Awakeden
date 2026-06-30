@@ -1,0 +1,18 @@
+{
+  "name": "JOHN_THE_BAPTIST",
+  "kind": "character",
+  "canonical": "John the Baptist, a rugged wilderness prophet of about thirty, sun-darkened weathered olive skin, a fierce lean hungry face, long wild matted dark hair and an untrimmed shaggy dark beard, clothed in a rough camel's-hair garment with a wide leather girdle about his loins, one sinewy arm outstretched pointing",
+  "tags": [
+    "john-baptist",
+    "prophet",
+    "wilderness",
+    "camel-hair",
+    "pointing",
+    "rugged"
+  ],
+  "style": "inked",
+  "anchor": "characters/JOHN_THE_BAPTIST.png",
+  "first_used": "EW02_Abraham",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

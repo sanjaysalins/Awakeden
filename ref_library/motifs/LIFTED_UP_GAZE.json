@@ -1,0 +1,18 @@
+{
+  "name": "LIFTED_UP_GAZE",
+  "kind": "motif",
+  "canonical": "dying snake-bitten eyes in the wilderness dust turning and lifting upward toward a single cast-bronze serpent SET UPON THE VERY TOP of a tall straight BARE wooden pole, its bronze body and head lifted high like a banner; the long lower shaft is plain bare wood and the serpent does NOT coil, spiral, wind or wrap around the pole \u2014 NOT a snake-wound staff, NOT a caduceus or Rod of Asclepius, NOT a spear-tip or flag/banner-topped standard, the single upward gaze of faith by which the bitten live",
+  "tags": [
+    "bronze-serpent",
+    "gaze",
+    "faith",
+    "upward",
+    "life",
+    "look"
+  ],
+  "style": "inked",
+  "anchor": "motifs/LIFTED_UP_GAZE.png",
+  "first_used": "04_Bronze_Serpent",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

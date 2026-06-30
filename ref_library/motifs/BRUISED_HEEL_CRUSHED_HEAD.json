@@ -1,0 +1,18 @@
+{
+  "name": "BRUISED_HEEL_CRUSHED_HEAD",
+  "kind": "motif",
+  "canonical": "the dual wound motif at the dust of the ground, the serpent striking and bruising the heel of the promised seed while that same heel crushes the serpent's head beneath it",
+  "tags": [
+    "genesis",
+    "serpent",
+    "seed",
+    "victory",
+    "wound",
+    "promise"
+  ],
+  "style": "inked",
+  "anchor": "motifs/BRUISED_HEEL_CRUSHED_HEAD.png",
+  "first_used": "05_Seed_Of_The_Woman",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

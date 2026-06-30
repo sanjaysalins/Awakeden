@@ -1,0 +1,18 @@
+{
+  "name": "SACRIFICIAL_LAMB",
+  "kind": "motif",
+  "canonical": "a silent white lamb led unresisting to the slaughter, dumb before its shearers, head lowered in quiet submission as it goes to be offered up",
+  "tags": [
+    "lamb",
+    "slaughter",
+    "silent",
+    "isaiah",
+    "sacrifice",
+    "submission"
+  ],
+  "style": "inked",
+  "anchor": "motifs/SACRIFICIAL_LAMB.png",
+  "first_used": "25 The Question on the Gaza Road",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

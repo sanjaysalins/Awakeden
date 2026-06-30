@@ -1,0 +1,36 @@
+{
+  "n_images": 244,
+  "blank_or_failed": [],
+  "near_duplicates": [
+    {
+      "kind": "characters",
+      "a": "AARON",
+      "b": "JOSEPH",
+      "hamming": 1
+    },
+    {
+      "kind": "characters",
+      "a": "AARON",
+      "b": "PHARAOH",
+      "hamming": 4
+    },
+    {
+      "kind": "characters",
+      "a": "JOSEPH",
+      "b": "PHARAOH",
+      "hamming": 3
+    },
+    {
+      "kind": "objects",
+      "a": "BINDING_KNIFE",
+      "b": "BRONZE_SERPENT_STANDARD",
+      "hamming": 3
+    },
+    {
+      "kind": "objects",
+      "a": "GOPHER_WOOD",
+      "b": "HIGH_PRIEST_GOLD_GARMENTS",
+      "hamming": 4
+    }
+  ]
+}

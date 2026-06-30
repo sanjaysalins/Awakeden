@@ -1,0 +1,18 @@
+{
+  "name": "SCRIBES_PHARISEES",
+  "kind": "character",
+  "canonical": "the scribes and Pharisees, robed first-century Jewish religious leaders of mixed older ages, olive-skinned dignified faces, greying dark beards, wearing fine layered robes, broad prayer-shawls with fringed tassels and phylacteries, severe and self-assured",
+  "tags": [
+    "scribes",
+    "pharisees",
+    "rabbis",
+    "religious-leaders",
+    "group",
+    "jewish"
+  ],
+  "style": "inked",
+  "anchor": "characters/SCRIBES_PHARISEES.png",
+  "first_used": "31 The Light You Can Stand In",
+  "count": 3,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "SHEPHERD_AS_DOOR",
+  "kind": "motif",
+  "canonical": "A shepherd seated upright in the open gateway gap of a round stone-walled sheepfold, his own body filling the entrance and blocking the only way in, shepherd's staff across his knees, calm watchful face. Behind him inside the fold a flock of sheep resting safely. Beyond, an open dusk hillside. He himself is the living door of the fold. Warm low light, reverent.",
+  "tags": [
+    "shepherd",
+    "door",
+    "sheepfold",
+    "gap",
+    "body",
+    "protection"
+  ],
+  "style": "inked",
+  "anchor": "motifs/SHEPHERD_AS_DOOR.png",
+  "first_used": "33_The_Shepherd_In_The_Gap",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

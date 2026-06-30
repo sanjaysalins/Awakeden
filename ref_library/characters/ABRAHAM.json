@@ -1,0 +1,18 @@
+{
+  "name": "ABRAHAM",
+  "kind": "character",
+  "canonical": "Abraham the patriarch, a very old Hebrew nomad well past a hundred years, tall and gaunt with deeply weathered sun-blackened bronze skin and hollow cheeks, a grave heavy-hearted lined face and sorrowful resolute eyes, long flowing white hair and a thin wind-blown white beard, robed in a dust-grey striped Chaldean desert mantle and a head-cloth bound with dark cord, a curved flint knife at his rope girdle",
+  "tags": [
+    "abraham",
+    "patriarch",
+    "nomad",
+    "very-old",
+    "flint-knife",
+    "mountain"
+  ],
+  "style": "inked",
+  "anchor": "characters/ABRAHAM.png",
+  "first_used": "EW02_Abraham",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

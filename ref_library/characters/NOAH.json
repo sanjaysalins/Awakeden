@@ -1,0 +1,18 @@
+{
+  "name": "NOAH",
+  "kind": "character",
+  "canonical": "Noah, an exceedingly aged antediluvian patriarch of great years, weathered sun-browned skin deeply furrowed, a very long flowing white beard and long white hair, calm righteous deep-set eyes, broad work-hardened carpenter's hands, clad in a coarse undyed woven tunic and rough goat-hair mantle, a wooden adze or mallet at his belt and pitch-stained forearms from building the ark",
+  "tags": [
+    "noah",
+    "patriarch",
+    "ark",
+    "carpenter",
+    "very-old",
+    "white-beard"
+  ],
+  "style": "inked",
+  "anchor": "characters/NOAH.png",
+  "first_used": "EW06_Noah",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

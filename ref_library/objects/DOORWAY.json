@@ -1,0 +1,18 @@
+{
+  "name": "DOORWAY",
+  "kind": "object",
+  "canonical": "a plain mud-brick house doorway with two rough wooden side-posts and a wooden lintel beam across the top, the timber and stone smeared with streaks of red lamb's blood \u2014 an ancient Hebrew dwelling entrance, NOT a panelled modern door, NOT a hinged carved gate",
+  "tags": [
+    "doorway",
+    "lintel",
+    "doorposts",
+    "blood",
+    "mudbrick",
+    "frame"
+  ],
+  "style": "inked",
+  "anchor": "objects/DOORWAY.png",
+  "first_used": "03_Passover_Lamb",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

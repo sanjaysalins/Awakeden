@@ -1,0 +1,18 @@
+{
+  "name": "GOPHER_WOOD",
+  "kind": "object",
+  "canonical": "stacked rough-hewn beams of dense ancient gopher-wood timber, the cut faces and joints coated dark with sticky black pitch within and without \u2014 ancient hand-adzed structural timbers, NOT sawn modern planks, NOT painted lumber",
+  "tags": [
+    "gopherwood",
+    "timber",
+    "beams",
+    "pitch",
+    "rough",
+    "wood"
+  ],
+  "style": "inked",
+  "anchor": "objects/GOPHER_WOOD.png",
+  "first_used": "EW06_Noah",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

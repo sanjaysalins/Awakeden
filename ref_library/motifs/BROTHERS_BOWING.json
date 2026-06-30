@@ -1,0 +1,18 @@
+{
+  "name": "BROTHERS_BOWING",
+  "kind": "motif",
+  "canonical": "the brothers kneeling low with faces to the ground before the robed Egyptian ruler they do not recognize as their own, the long-ago dream of bowing sheaves quietly fulfilled",
+  "tags": [
+    "joseph",
+    "bowing",
+    "brothers",
+    "dream-fulfilled",
+    "egypt",
+    "reversal"
+  ],
+  "style": "inked",
+  "anchor": "motifs/BROTHERS_BOWING.png",
+  "first_used": "EW03_Joseph",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

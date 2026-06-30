@@ -1,0 +1,18 @@
+{
+  "name": "JONAH",
+  "kind": "character",
+  "canonical": "Jonah the prophet, son of Amittai, a Hebrew man of about fifty, weathered olive skin, a haggard storm-worn face, soaked dark hair and a dripping tangled beard, wide terrified eyes, robed in a sodden coarse tunic and mantle clinging wet, strands of sea-weed wrapped about him",
+  "tags": [
+    "jonah",
+    "prophet",
+    "storm-soaked",
+    "hebrew",
+    "amittai",
+    "fleeing"
+  ],
+  "style": "inked",
+  "anchor": "characters/JONAH.png",
+  "first_used": "23 The Prepared Belly",
+  "count": 3,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

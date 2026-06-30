@@ -1,0 +1,18 @@
+{
+  "name": "VINEGAR_SPONGE",
+  "kind": "object",
+  "canonical": "a single soft rounded porous natural sea-sponge, dark brown and dripping wet, soaked through with sour vinegar, lashed with cord directly onto the very TIP of one long slender bare reed stalk and raised upward \u2014 the wet sponge IS the only object on the end of the reed. ABSOLUTELY CRITICAL: there is NO cup, NO wine glass, NO tumbler, NO goblet, NO chalice, NO bowl, NO vessel, NO jar, NO container and NO drinking vessel of ANY kind anywhere on, in, near or embedded in the sponge or reed; nothing holds liquid; no glass; the reed tip carries ONLY the bare soaked sponge, nothing else. NOT a modern square cleaning sponge",
+  "tags": [
+    "sponge",
+    "vinegar",
+    "reed",
+    "sour",
+    "cross",
+    "raised"
+  ],
+  "style": "inked",
+  "anchor": "objects/VINEGAR_SPONGE.png",
+  "first_used": "02_Psalm_22",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

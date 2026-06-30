@@ -1,0 +1,18 @@
+{
+  "name": "STRIPES_AND_WOUNDS",
+  "kind": "motif",
+  "canonical": "The suffering Servant seen from behind, head bowed, his bare back heavily bruised all over from scourging. The skin is smooth, continuous and unbroken, darkly discoloured in large soft blotches of deep red and deep purple, swollen and tender, with a few faint smears of dried blood. Only deep bruising and discolouration on whole even skin. Plain bare shoulders and arms. Dim temple-courtyard light behind. Reverent and modest.",
+  "tags": [
+    "scourging",
+    "stripes",
+    "servant",
+    "substitution",
+    "wounds",
+    "healing"
+  ],
+  "style": "inked",
+  "anchor": "motifs/STRIPES_AND_WOUNDS.png",
+  "first_used": "21 The Pronouns That Preached the Gospel",
+  "count": 3,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

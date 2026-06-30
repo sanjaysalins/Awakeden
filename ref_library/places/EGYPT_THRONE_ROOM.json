@@ -1,0 +1,18 @@
+{
+  "name": "EGYPT_THRONE_ROOM",
+  "kind": "place",
+  "canonical": "the throne hall of Pharaoh's palace in ancient Egypt: a vast columned chamber of painted lotus-capital pillars, polished stone floors and hieroglyph-carved walls, the empty raised throne and dais set in shafts of warm temple light, gold accents and royal grandeur",
+  "tags": [
+    "egypt",
+    "throne",
+    "palace",
+    "pharaoh",
+    "columns",
+    "hall"
+  ],
+  "style": "inked",
+  "anchor": "places/EGYPT_THRONE_ROOM.png",
+  "first_used": "EW03_Joseph",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

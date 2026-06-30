@@ -1,0 +1,18 @@
+{
+  "name": "SUBSTITUTION",
+  "kind": "motif",
+  "canonical": "the caught ram led to the altar to die in the very place of the spared son, the swapped victim taking the bound one's place upon the wood",
+  "tags": [
+    "abraham",
+    "ram",
+    "substitution",
+    "altar",
+    "in-place-of",
+    "atonement"
+  ],
+  "style": "inked",
+  "anchor": "motifs/SUBSTITUTION.png",
+  "first_used": "EW02_Abraham",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

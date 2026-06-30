@@ -1,0 +1,18 @@
+{
+  "name": "SEATED_PRIEST",
+  "kind": "motif",
+  "canonical": "Christ our great High Priest, His atoning work finished, seated down in rest at the right hand of God \u2014 the seated posture (unlike the Levitical priests who stood daily, never sitting) declaring the offering finished forever",
+  "tags": [
+    "priest",
+    "seated",
+    "finished",
+    "right-hand",
+    "rest",
+    "atonement"
+  ],
+  "style": "inked",
+  "anchor": "motifs/SEATED_PRIEST.png",
+  "first_used": "EW01_Two_Goats",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

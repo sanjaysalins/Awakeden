@@ -1,0 +1,18 @@
+{
+  "name": "SUFFERING_SERVANT",
+  "kind": "motif",
+  "canonical": "the marred Man of sorrows standing despised and rejected, no form or beauty in him, his face worn with grief and his body wounded for the transgressions of others",
+  "tags": [
+    "servant",
+    "man-of-sorrows",
+    "isaiah",
+    "despised",
+    "wounded",
+    "substitution"
+  ],
+  "style": "inked",
+  "anchor": "motifs/SUFFERING_SERVANT.png",
+  "first_used": "EW07_Isaiah",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

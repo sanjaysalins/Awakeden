@@ -1,0 +1,18 @@
+{
+  "name": "PHARAOH",
+  "kind": "character",
+  "canonical": "Pharaoh, the king of Egypt, a regal clean-shaven man with smooth bronze skin and kohl-lined eyes, wearing the striped blue-and-gold nemes headcloth with a rearing golden uraeus cobra at the brow, a broad jewelled usekh collar of lapis and carnelian across his bare chest, a pleated white linen shendyt kilt and gold armlets, enthroned in regal Egyptian splendour holding a crook and flail",
+  "tags": [
+    "pharaoh",
+    "egypt",
+    "king",
+    "nemes",
+    "uraeus",
+    "throne"
+  ],
+  "style": "inked",
+  "anchor": "characters/PHARAOH.png",
+  "first_used": "EW03_Joseph",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

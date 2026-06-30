@@ -1,0 +1,18 @@
+{
+  "name": "JAMES_SON_OF_ALPHAEUS",
+  "kind": "character",
+  "canonical": "James the son of Alphaeus, called 'James the less', the youngest and smallest of the Twelve, a slight short-statured youth of about the early twenties with smooth fair-olive skin and a boyish earnest unlined face, sparse soft beginnings of a light-brown beard barely shadowing his jaw, short curly light-brown hair, dressed in a simple undyed homespun tunic and a plain pale-tan mantle a touch too large for his small frame, a quiet modest gaze",
+  "tags": [
+    "james-less",
+    "alphaeus",
+    "apostle",
+    "young",
+    "small",
+    "modest"
+  ],
+  "style": "inked",
+  "anchor": "characters/JAMES_SON_OF_ALPHAEUS.png",
+  "first_used": "gospels",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

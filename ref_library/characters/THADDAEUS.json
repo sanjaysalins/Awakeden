@@ -1,0 +1,18 @@
+{
+  "name": "THADDAEUS",
+  "kind": "character",
+  "canonical": "Thaddaeus, also called Judas the son of James, a gentle warm-natured apostle of about forty with soft sun-warmed olive skin and a kind round mild face, calm tender compassionate eyes and a gentle settled mouth, greying wavy brown hair thinning at the crown and a soft rounded grizzled grey-brown beard, dressed in a warm earthen ochre-brown tunic and a soft tan head-cloth bound simply across his brow, both hands resting peaceably at his breast",
+  "tags": [
+    "thaddaeus",
+    "judas-of-james",
+    "apostle",
+    "gentle",
+    "kind",
+    "warm"
+  ],
+  "style": "inked",
+  "anchor": "characters/THADDAEUS.png",
+  "first_used": "gospels",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

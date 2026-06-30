@@ -1,0 +1,18 @@
+{
+  "name": "DISCIPLES",
+  "kind": "character",
+  "canonical": "the twelve disciples, first-century Galilean Jewish men of mixed ages, weathered olive-skinned faces, dark beards and hair, several rugged fishermen among them, dressed in simple coarse homespun tunics and mantles with rope girdles and leather sandals",
+  "tags": [
+    "disciples",
+    "twelve",
+    "galilean",
+    "fishermen",
+    "group",
+    "apostles"
+  ],
+  "style": "inked",
+  "anchor": "characters/DISCIPLES.png",
+  "first_used": "02 Why are you afraid",
+  "count": 7,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

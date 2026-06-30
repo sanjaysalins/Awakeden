@@ -1,0 +1,18 @@
+{
+  "name": "SLAIN_GOAT",
+  "kind": "character",
+  "canonical": "the slain goat of the sin offering, a young Near-Eastern male goat with smooth dark-and-white hair and small horns, lying killed beside the bronze altar of the tabernacle, its lifeblood gathered into a bronze basin to be carried behind the veil, set against the smoke and gold of the tabernacle court",
+  "tags": [
+    "goat",
+    "sin-offering",
+    "slain",
+    "blood",
+    "atonement",
+    "sacrifice"
+  ],
+  "style": "inked",
+  "anchor": "characters/SLAIN_GOAT.png",
+  "first_used": "06_Day_Of_Atonement",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

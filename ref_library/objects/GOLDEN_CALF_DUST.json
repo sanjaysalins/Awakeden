@@ -1,0 +1,18 @@
+{
+  "name": "GOLDEN_CALF_DUST",
+  "kind": "object",
+  "canonical": "a small molten-gold idol of a young bull-calf, ground and crushed to glinting gold powder strewed upon water to be drunk \u2014 a graven image reduced to dust, NOT an intact statue, NOT a full-grown ox",
+  "tags": [
+    "calf",
+    "idol",
+    "gold",
+    "dust",
+    "graven",
+    "crushed"
+  ],
+  "style": "inked",
+  "anchor": "objects/GOLDEN_CALF_DUST.png",
+  "first_used": "EW04_Bronze_Serpent",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

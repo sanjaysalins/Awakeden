@@ -1,0 +1,18 @@
+{
+  "name": "LIGHT_FROM_HEAVEN",
+  "kind": "motif",
+  "canonical": "a later radiance breaking down from the opened sky upon the old world, a light of grace falling that Noah in his own day never lived to see",
+  "tags": [
+    "noah",
+    "light",
+    "heaven",
+    "grace",
+    "foreshadow",
+    "dawn"
+  ],
+  "style": "inked",
+  "anchor": "motifs/LIGHT_FROM_HEAVEN.png",
+  "first_used": "EW06_Noah_short",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

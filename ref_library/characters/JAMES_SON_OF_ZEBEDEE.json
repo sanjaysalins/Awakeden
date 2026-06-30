@@ -1,0 +1,18 @@
+{
+  "name": "JAMES_SON_OF_ZEBEDEE",
+  "kind": "character",
+  "canonical": "James the son of Zebedee, John's elder brother and a 'son of thunder', a powerfully built Galilean of about thirty-five, broad-shouldered and tall with sun-darkened ruddy-olive skin, a bold square-jawed commanding face with strong dark brows, thick jet-black hair pushed back and a full dense black beard, a firm resolute set to his mouth, dressed in a rust-red mantle over a coarse ochre tunic with a thick leather belt, one strong hand resting at his side. His eyes are ORDINARY natural dark-brown human eyes \u2014 NOT glowing, NOT luminous, NOT red, NOT orange, NOT yellow, NOT supernatural in any way; a normal calm human gaze",
+  "tags": [
+    "james",
+    "zebedee",
+    "son-of-thunder",
+    "apostle",
+    "bold",
+    "strong"
+  ],
+  "style": "inked",
+  "anchor": "characters/JAMES_SON_OF_ZEBEDEE.png",
+  "first_used": "gospels",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

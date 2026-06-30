@@ -1,0 +1,18 @@
+{
+  "name": "KING_DAVID",
+  "kind": "character",
+  "canonical": "David the shepherd-king of Israel, a younger Hebrew man of about thirty, ruddy sun-warmed olive skin, a strong handsome face, dark wavy hair and a short dark beard, a simple gold circlet and a royal robe over his tunic, cradling a wooden lyre or bent writing a scroll by lamplight",
+  "tags": [
+    "david",
+    "king",
+    "shepherd",
+    "harp",
+    "psalmist",
+    "ruddy"
+  ],
+  "style": "inked",
+  "anchor": "characters/KING_DAVID.png",
+  "first_used": "02_Psalm_22",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

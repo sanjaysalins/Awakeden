@@ -1,0 +1,18 @@
+{
+  "name": "WORSHIPPING_CONGREGATION",
+  "kind": "character",
+  "canonical": "a great congregation of the nations turning to worship the LORD, a vast multitude of peoples of many ancient nations in varied earth-toned robes, head-coverings and mantles, faces of every kindred lifted in awe and reverence, hands raised together as the whole gathered throng bows toward the LORD",
+  "tags": [
+    "congregation",
+    "nations",
+    "worship",
+    "multitude",
+    "praise",
+    "throng"
+  ],
+  "style": "inked",
+  "anchor": "characters/WORSHIPPING_CONGREGATION.png",
+  "first_used": "02_Psalm_22",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

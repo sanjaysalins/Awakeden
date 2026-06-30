@@ -1,0 +1,18 @@
+{
+  "name": "STORM_SEA",
+  "kind": "place",
+  "canonical": "the Sea of Galilee in violent night tempest: black heaving water reared into towering whitecaps, lashing rain and wind-driven spray, a low churning sky split by faint lightning, no shore in sight, the deep raging and breaking white in the dark",
+  "tags": [
+    "sea",
+    "storm",
+    "galilee",
+    "night",
+    "waves",
+    "tempest"
+  ],
+  "style": "inked",
+  "anchor": "places/STORM_SEA.png",
+  "first_used": "02 Why are you afraid",
+  "count": 5,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

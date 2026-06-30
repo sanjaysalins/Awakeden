@@ -1,0 +1,18 @@
+{
+  "name": "FIRE_TORCH",
+  "kind": "object",
+  "canonical": "a clay firepan holding live orange coals and small flames carried by hand, glowing embers with curling smoke \u2014 the kept ember-fire borne up the mountain for the offering, NOT a flaming wooden torch, NOT a modern lantern",
+  "tags": [
+    "firepan",
+    "coals",
+    "embers",
+    "flame",
+    "fire",
+    "carried"
+  ],
+  "style": "inked",
+  "anchor": "objects/FIRE_TORCH.png",
+  "first_used": "EW02_Abraham",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

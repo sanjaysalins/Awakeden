@@ -1,0 +1,18 @@
+{
+  "name": "TEMPLE",
+  "kind": "place",
+  "canonical": "the courts of Herod's temple in ancient Jerusalem at night: vast polished golden-stone pavements and towering colonnaded walls, great pillars and broad steps lit by the warm glow of standing lamps and torches against deep darkness, sacred and grand",
+  "tags": [
+    "temple",
+    "jerusalem",
+    "herod",
+    "courtyard",
+    "night",
+    "golden-stone"
+  ],
+  "style": "inked",
+  "anchor": "places/TEMPLE.png",
+  "first_used": "05 He Said It Under the Lamps",
+  "count": 4,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

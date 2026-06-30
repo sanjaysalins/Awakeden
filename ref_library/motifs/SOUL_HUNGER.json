@@ -1,0 +1,18 @@
+{
+  "name": "SOUL_HUNGER",
+  "kind": "motif",
+  "canonical": "a lone figure seated amid heaps of plenty and food yet hollow-eyed and empty, an aching inner soul-hunger that no earthly bread or possession can ever fill \u2014 reverent, fully clothed",
+  "tags": [
+    "hunger",
+    "emptiness",
+    "longing",
+    "bread-of-life",
+    "soul",
+    "ache"
+  ],
+  "style": "inked",
+  "anchor": "motifs/SOUL_HUNGER.png",
+  "first_used": "34_The_Hunger_Bread_Cant_Fill",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

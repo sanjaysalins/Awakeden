@@ -1,0 +1,18 @@
+{
+  "name": "EDEN_GARDEN",
+  "kind": "place",
+  "canonical": "the garden of Eden in the cool of the day: lush deep-green trees heavy with fruit, winding clear streams and soft mossy banks, flowering thickets and dappled golden dusk light, a paradise of abundance now shadowed by a faint encroaching gloom",
+  "tags": [
+    "eden",
+    "garden",
+    "paradise",
+    "lush",
+    "dusk",
+    "trees"
+  ],
+  "style": "inked",
+  "anchor": "places/EDEN_GARDEN.png",
+  "first_used": "05_Seed_Of_The_Woman",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

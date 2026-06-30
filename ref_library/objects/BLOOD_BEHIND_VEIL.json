@@ -1,0 +1,18 @@
+{
+  "name": "BLOOD_BEHIND_VEIL",
+  "kind": "object",
+  "canonical": "dark sacrificial blood sprinkled upon the golden mercy seat within the Holy of Holies, fresh red drops glistening on the gleaming gold lid between the cherubim. The atoning blood brought inside the veil \u2014 NOT a basin of blood, NOT a smear on a doorpost; blood marked on the golden mercy seat",
+  "tags": [
+    "blood",
+    "mercy-seat",
+    "veil",
+    "atonement",
+    "sprinkled",
+    "gold"
+  ],
+  "style": "inked",
+  "anchor": "objects/BLOOD_BEHIND_VEIL.png",
+  "first_used": "06_Day_Of_Atonement",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

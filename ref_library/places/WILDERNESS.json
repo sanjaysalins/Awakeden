@@ -1,0 +1,18 @@
+{
+  "name": "WILDERNESS",
+  "kind": "place",
+  "canonical": "a vast uninhabited Sinai desert waste under a wide barren sky: rolling stony dunes and cracked sunbleached ground stretching to distant lifeless hills, scattered thornscrub, a thin haze of dust on the wind, no shelter and no water, the desolate land into which the scapegoat is driven",
+  "tags": [
+    "wilderness",
+    "desert",
+    "barren",
+    "sinai",
+    "desolate",
+    "wasteland"
+  ],
+  "style": "inked",
+  "anchor": "places/WILDERNESS.png",
+  "first_used": "05 He Said It Under the Lamps",
+  "count": 7,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

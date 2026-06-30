@@ -1,0 +1,18 @@
+{
+  "name": "LAME_MAN_OF_BETHESDA",
+  "kind": "character",
+  "canonical": "the lame man of Bethesda, an emaciated invalid infirm thirty-eight years, gaunt sun-worn olive skin stretched over thin limbs, a haggard hollow-cheeked bearded face, sparse matted grey-streaked hair, dressed in a threadbare tattered tunic, lying helpless on a rough straw mat",
+  "tags": [
+    "lame-man",
+    "invalid",
+    "bethesda",
+    "mat",
+    "infirm",
+    "emaciated"
+  ],
+  "style": "inked",
+  "anchor": "characters/LAME_MAN_OF_BETHESDA.png",
+  "first_used": "18 He Never Said Yes",
+  "count": 4,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

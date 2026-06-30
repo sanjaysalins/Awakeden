@@ -1,0 +1,18 @@
+{
+  "name": "SIMON_THE_ZEALOT",
+  "kind": "character",
+  "canonical": "Simon the Zealot, the former zealous freedom-fighter, a hard wiry intense man of about forty with deeply sun-blackened leathery olive skin and a fierce lean hawk-featured face, intense dark human eyes (normal eyes, NOT glowing, NOT red) under heavy black brows and a tightly clenched jaw, close-cropped black hair and a sharp forked black beard, a faded scar across one cheekbone, dressed in a dark olive-and-charcoal tunic with a worn leather baldric crossing his chest, a coiled intensity in his taut bearing",
+  "tags": [
+    "simon",
+    "zealot",
+    "apostle",
+    "fierce",
+    "intense",
+    "former-rebel"
+  ],
+  "style": "inked",
+  "anchor": "characters/SIMON_THE_ZEALOT.png",
+  "first_used": "gospels",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "ISHMAELITE_CARAVAN",
+  "kind": "character",
+  "canonical": "the Ishmaelite trading caravan bound for Egypt, a line of swarthy desert merchants with sun-darkened faces and dark beards, wrapped in striped flowing robes and head-cloths bound with cord, leading laden camels strung with bales of spicery, balm and myrrh across the shimmering desert sand",
+  "tags": [
+    "ishmaelite",
+    "caravan",
+    "merchants",
+    "camels",
+    "traders",
+    "desert"
+  ],
+  "style": "inked",
+  "anchor": "characters/ISHMAELITE_CARAVAN.png",
+  "first_used": "EW03_Joseph",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

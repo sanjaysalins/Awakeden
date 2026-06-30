@@ -1,0 +1,18 @@
+{
+  "name": "NINEVEH",
+  "kind": "place",
+  "canonical": "the great wicked Assyrian city of Nineveh: colossal fortified walls and massive winged-bull gates of carved stone, ziggurat temples and crowded flat-roofed quarters beyond, banners and idols, a hard imposing grandeur under a heavy oppressive sky",
+  "tags": [
+    "nineveh",
+    "assyria",
+    "city",
+    "walls",
+    "gates",
+    "fortified"
+  ],
+  "style": "inked",
+  "anchor": "places/NINEVEH.png",
+  "first_used": "EW05_Jonah",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

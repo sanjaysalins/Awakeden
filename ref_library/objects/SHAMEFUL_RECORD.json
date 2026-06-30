@@ -1,0 +1,18 @@
+{
+  "name": "SHAMEFUL_RECORD",
+  "kind": "object",
+  "canonical": "an unrolled ancient parchment scroll or ledger covered in dense dark handwritten marks, the script illegible \u2014 a record of past sins, NOT printed modern text, NOT a bound paper book",
+  "tags": [
+    "scroll",
+    "ledger",
+    "parchment",
+    "record",
+    "illegible",
+    "sins"
+  ],
+  "style": "inked",
+  "anchor": "objects/SHAMEFUL_RECORD.png",
+  "first_used": "36_In_No_Wise_Cast_Out",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

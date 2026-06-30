@@ -1,0 +1,18 @@
+{
+  "name": "POINTING_HAND_OF_GOD",
+  "kind": "motif",
+  "canonical": "a single shaft of heavenly light breaking down through cloud onto an upturned face, the unseen revealing touch of God opening blind eyes to the truth from above",
+  "tags": [
+    "revelation",
+    "light",
+    "heaven",
+    "insight",
+    "calling",
+    "above"
+  ],
+  "style": "inked",
+  "anchor": "motifs/POINTING_HAND_OF_GOD.png",
+  "first_used": "24 The Answer Was a Gift",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

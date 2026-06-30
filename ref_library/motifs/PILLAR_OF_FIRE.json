@@ -1,0 +1,18 @@
+{
+  "name": "PILLAR_OF_FIRE",
+  "kind": "motif",
+  "canonical": "a towering column of living divine fire rising into the night sky over the desert camp, casting warm wavering light across the sand and the tents of Israel, the visible presence of God leading His people through the dark",
+  "tags": [
+    "fire",
+    "presence",
+    "exodus",
+    "guidance",
+    "night",
+    "glory"
+  ],
+  "style": "inked",
+  "anchor": "motifs/PILLAR_OF_FIRE.png",
+  "first_used": "05 He Said It Under the Lamps",
+  "count": 3,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

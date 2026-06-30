@@ -1,0 +1,18 @@
+{
+  "name": "BUNDLE_OF_WOOD",
+  "kind": "object",
+  "canonical": "a bound bundle of split firewood for the burnt offering, rough dry branches lashed together with cord, sized to be carried on a young man's shoulders. The wood Isaac bore up Moriah \u2014 NOT finished lumber or planks, NOT a tidy fireplace stack",
+  "tags": [
+    "wood",
+    "bundle",
+    "firewood",
+    "offering",
+    "isaac",
+    "burden"
+  ],
+  "style": "inked",
+  "anchor": "objects/BUNDLE_OF_WOOD.png",
+  "first_used": "EW02_Abraham",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

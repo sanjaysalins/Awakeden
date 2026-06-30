@@ -1,0 +1,18 @@
+{
+  "name": "RUTH",
+  "kind": "character",
+  "canonical": "Ruth, a young Moabite widow of about twenty-five, sun-warmed olive skin and dark hair bound under a worn russet head-veil, gentle steadfast eyes in a weary lovely face, dressed in a patched and dusty coarse-woven robe of faded earthen tones girded for labour, bare forearms and dirt-stained hands clutching a gleaned sheaf of barley scraps in a humble field",
+  "tags": [
+    "ruth",
+    "moabite",
+    "widow",
+    "gleaner",
+    "barley",
+    "veiled"
+  ],
+  "style": "inked",
+  "anchor": "characters/RUTH.png",
+  "first_used": "EW09_Boaz",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

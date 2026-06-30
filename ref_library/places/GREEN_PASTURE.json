@@ -1,0 +1,18 @@
+{
+  "name": "GREEN_PASTURE",
+  "kind": "place",
+  "canonical": "an open green pasture beyond the fold: gentle grassy hillsides rolling down to a quiet still stream, scattered shade trees and wildflowers, soft warm light over abundant feeding-ground, a place of safety and rest under a calm sky",
+  "tags": [
+    "pasture",
+    "green",
+    "meadow",
+    "stream",
+    "rest",
+    "pastoral"
+  ],
+  "style": "inked",
+  "anchor": "places/GREEN_PASTURE.png",
+  "first_used": "32_The_Door_Was_a_Body",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

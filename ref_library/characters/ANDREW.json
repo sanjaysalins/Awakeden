@@ -1,0 +1,18 @@
+{
+  "name": "ANDREW",
+  "kind": "character",
+  "canonical": "Andrew the apostle, Simon Peter's brother and a lifelong Galilean fisherman of about forty-five, deeply sun-bronzed weather-cracked olive skin, a broad open friendly face creased by squinting at the sea, thick salt-and-pepper wavy hair worn loose to the jaw and a full untrimmed grizzled grey-brown beard, a coil of fishing net slung over one shoulder, dressed in a coarse undyed cream fisherman's tunic kilted up at the knees with a wide rope girdle, bare weathered forearms and net-callused hands",
+  "tags": [
+    "andrew",
+    "apostle",
+    "fisherman",
+    "galilean",
+    "net",
+    "weathered"
+  ],
+  "style": "inked",
+  "anchor": "characters/ANDREW.png",
+  "first_used": "gospels",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

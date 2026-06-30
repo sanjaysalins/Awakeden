@@ -1,0 +1,18 @@
+{
+  "name": "TABERNACLE_INTERIOR",
+  "kind": "place",
+  "canonical": "the inner Most Holy Place of the wilderness tabernacle within the veil: NO lampstand here (the lampstand stood outside in the Holy Place), the golden ark and overshadowing cherubim lit only by the dim glow of the divine Presence and drifting incense smoke, deep sacred shadow all around",
+  "tags": [
+    "tabernacle",
+    "interior",
+    "most-holy",
+    "ark",
+    "lamplit",
+    "veil"
+  ],
+  "style": "inked",
+  "anchor": "places/TABERNACLE_INTERIOR.png",
+  "first_used": "06_Day_Of_Atonement",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

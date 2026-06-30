@@ -1,0 +1,18 @@
+{
+  "name": "HIGH_PRIEST_LINEN_GARMENT",
+  "kind": "object",
+  "canonical": "a plain undyed white linen tunic, sash, breeches and turban-mitre, simple and servant-humble, with no gold and no jewels \u2014 the Day of Atonement linen the high priest wore into the holy place, NOT the gold ephod and breastplate, NOT an ornate robe",
+  "tags": [
+    "linen",
+    "tunic",
+    "white",
+    "plain",
+    "atonement",
+    "humble"
+  ],
+  "style": "inked",
+  "anchor": "objects/HIGH_PRIEST_LINEN_GARMENT.png",
+  "first_used": "EW01_Two_Goats",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

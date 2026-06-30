@@ -1,0 +1,18 @@
+{
+  "name": "PIERCED_HANDS_AND_FEET",
+  "kind": "motif",
+  "canonical": "a reverent close motif of the RISEN Christ's healed hands AND feet together, each hand bearing ONE single round HEALED SCAR through the centre of the palm and each foot bearing ONE single round HEALED SCAR, every mark a smooth dark closed-over old scar where a nail once passed long ago, fully healed with the skin grown over, flat and flush with the surface; there is absolutely NO nail, NO metal, NO spike, NO thorn, NO stud, NO pin, NO screw, NO tack, NO bolt and NOTHING metallic in, on, or above any wound; nothing protrudes, sticks up, or rises out of any mark; NO fresh blood; the fingers and toes are smooth and whole apart from the single healed scar; held in solemn dim light; reverent, not gory, not gratuitous",
+  "tags": [
+    "crucifixion",
+    "nail-wounds",
+    "hands",
+    "feet",
+    "psalm22",
+    "suffering"
+  ],
+  "style": "inked",
+  "anchor": "motifs/PIERCED_HANDS_AND_FEET.png",
+  "first_used": "02_Psalm_22",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "HARP",
+  "kind": "object",
+  "canonical": "a small ancient Israelite lyre (kinnor) of warm wood, a wooden frame with a soundbox and a span of taut strings across two upright arms and a yoke-bar \u2014 a hand-held shepherd's lyre, NOT a tall orchestral concert harp, NOT a modern pedal harp",
+  "tags": [
+    "lyre",
+    "kinnor",
+    "harp",
+    "strings",
+    "wood",
+    "david"
+  ],
+  "style": "inked",
+  "anchor": "objects/HARP.png",
+  "first_used": "02_Psalm_22",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

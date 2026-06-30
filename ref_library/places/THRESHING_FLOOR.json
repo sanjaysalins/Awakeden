@@ -1,0 +1,18 @@
+{
+  "name": "THRESHING_FLOOR",
+  "kind": "place",
+  "canonical": "an ancient hilltop threshing floor at night: a broad flat circle of swept hard-packed stone open to the wind, heaped winnowed grain and scattered straw at its edge, a winnowing fork leaning by the pile, cool blue moonlight over the quiet harvest ground",
+  "tags": [
+    "threshing-floor",
+    "harvest",
+    "night",
+    "grain",
+    "moonlight",
+    "hilltop"
+  ],
+  "style": "inked",
+  "anchor": "places/THRESHING_FLOOR.png",
+  "first_used": "EW09_Boaz",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

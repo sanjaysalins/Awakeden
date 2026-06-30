@@ -1,0 +1,18 @@
+{
+  "name": "BARLEY_FIELD",
+  "kind": "place",
+  "canonical": "the barley fields of Boaz at harvest: broad swathes of ripe golden grain bending in the breeze and stretching to the Judean hills, cut sheaves and stubble rows, low stone boundary walls, warm full sunlight over the gleaning ground",
+  "tags": [
+    "barley",
+    "field",
+    "harvest",
+    "golden",
+    "judea",
+    "gleaning"
+  ],
+  "style": "inked",
+  "anchor": "places/BARLEY_FIELD.png",
+  "first_used": "EW09_Boaz",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

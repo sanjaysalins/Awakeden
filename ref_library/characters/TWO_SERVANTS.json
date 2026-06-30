@@ -1,0 +1,18 @@
+{
+  "name": "TWO_SERVANTS",
+  "kind": "character",
+  "canonical": "the two young servants of Abraham left at the mountain's foot, a pair of lean ancient Hebrew youths with sun-browned skin and short dark beards, clad in coarse undyed wool tunics girded with rope and simple head-cloths, waiting beside a tethered grey donkey on the barren rocky ground below",
+  "tags": [
+    "servants",
+    "young-men",
+    "abraham",
+    "donkey",
+    "moriah",
+    "waiting"
+  ],
+  "style": "inked",
+  "anchor": "characters/TWO_SERVANTS.png",
+  "first_used": "EW02_Abraham",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

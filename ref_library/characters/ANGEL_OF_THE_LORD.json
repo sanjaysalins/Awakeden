@@ -1,0 +1,18 @@
+{
+  "name": "ANGEL_OF_THE_LORD",
+  "kind": "character",
+  "canonical": "the Angel of the LORD, a radiant towering CREATED heavenly messenger of awesome presence and NO wings (a sent angel, NOT a depiction of God Himself \u2014 theophany/identity-as-God scenes use glory-light instead), a luminous beardless youthful face framed by light-touched flowing hair, robed in shining white-and-gold raiment, brilliant radiance pouring around him from a torn-open sky",
+  "tags": [
+    "angel",
+    "lord",
+    "heavenly",
+    "radiant",
+    "wingless",
+    "light"
+  ],
+  "style": "inked",
+  "anchor": "characters/ANGEL_OF_THE_LORD.png",
+  "first_used": "EW02_Abraham",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

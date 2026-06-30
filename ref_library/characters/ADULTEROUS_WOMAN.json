@@ -1,0 +1,18 @@
+{
+  "name": "ADULTEROUS_WOMAN",
+  "kind": "character",
+  "canonical": "the woman taken in adultery, a young ancient Judean woman of about twenty with smooth olive skin and long loose dishevelled black hair falling across her face, a tear-streaked cheek and head bowed low in shame, her plain dust-brown robe disordered and slipping from one bare shoulder, kneeling alone and trembling on the dusty temple stone",
+  "tags": [
+    "woman",
+    "adultery",
+    "accused",
+    "shame",
+    "judean",
+    "young"
+  ],
+  "style": "inked",
+  "anchor": "characters/ADULTEROUS_WOMAN.png",
+  "first_used": "31 The Light You Can Stand In",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

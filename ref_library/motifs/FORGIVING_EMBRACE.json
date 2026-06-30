@@ -1,0 +1,18 @@
+{
+  "name": "FORGIVING_EMBRACE",
+  "kind": "motif",
+  "canonical": "the betrayed brother holding out bread instead of a sword, weeping openly as he gathers his guilty betrayers into a forgiving embrace rather than the vengeance he could take",
+  "tags": [
+    "joseph",
+    "forgiveness",
+    "embrace",
+    "weeping",
+    "mercy",
+    "reconciliation"
+  ],
+  "style": "inked",
+  "anchor": "motifs/FORGIVING_EMBRACE.png",
+  "first_used": "EW03_Joseph",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

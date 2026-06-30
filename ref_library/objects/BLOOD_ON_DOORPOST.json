@@ -1,0 +1,18 @@
+{
+  "name": "BLOOD_ON_DOORPOST",
+  "kind": "object",
+  "canonical": "a humble Hebrew house doorway with fresh lamb's blood struck across the two side posts and the upper lintel beam, red streaks gleaming wet in torchlight, the centre opening left clear. Blood marked on the THREE timbers of the frame \u2014 the two uprights and the top beam, NOT the threshold or floor, NOT a painted cross-shape, NOT a modern door",
+  "tags": [
+    "doorpost",
+    "lintel",
+    "blood",
+    "passover",
+    "doorway",
+    "hebrew"
+  ],
+  "style": "inked",
+  "anchor": "objects/BLOOD_ON_DOORPOST.png",
+  "first_used": "03_Passover_Lamb",
+  "count": 3,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

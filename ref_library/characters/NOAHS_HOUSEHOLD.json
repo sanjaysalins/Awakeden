@@ -1,0 +1,18 @@
+{
+  "name": "NOAHS_HOUSEHOLD",
+  "kind": "character",
+  "canonical": "the eight souls of Noah's household, aged Noah and his elderly wife with his three grown sons and their three young wives, an ancient Near-Eastern family of weathered olive skin and dark or greying hair, clad in coarse undyed and earth-toned woven robes and head-coverings, gathered close together as one family",
+  "tags": [
+    "noah",
+    "household",
+    "eight",
+    "family",
+    "ark",
+    "robes"
+  ],
+  "style": "inked",
+  "anchor": "characters/NOAHS_HOUSEHOLD.png",
+  "first_used": "EW06_Noah",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

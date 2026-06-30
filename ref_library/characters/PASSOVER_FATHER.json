@@ -1,0 +1,18 @@
+{
+  "name": "PASSOVER_FATHER",
+  "kind": "character",
+  "canonical": "an archetypal Israelite father of a household on Passover night, a Hebrew man of about forty with weathered olive skin, a dark beard streaked grey, urgent solemn eyes, wearing a simple undyed wool tunic girded at the waist with a leather belt and a head-cloth, sandals on his feet and a staff in hand ready for travel, his hands and forearms marked with lamb's blood from striking the doorposts of his mud-brick dwelling",
+  "tags": [
+    "passover",
+    "father",
+    "israelite",
+    "blood",
+    "household",
+    "exodus"
+  ],
+  "style": "inked",
+  "anchor": "characters/PASSOVER_FATHER.png",
+  "first_used": "EW08_Passover",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

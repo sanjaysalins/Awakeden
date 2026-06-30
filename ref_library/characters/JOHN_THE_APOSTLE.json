@@ -1,0 +1,18 @@
+{
+  "name": "JOHN_THE_APOSTLE",
+  "kind": "character",
+  "canonical": "John the apostle, the youngest disciple, a Galilean fisherman of about thirty, smooth olive skin, a soft only-lightly-bearded gentle face, dark wavy shoulder-length hair, earnest tender eyes, in a simple homespun cream tunic and mantle \u2014 the beloved disciple who stood at the cross",
+  "tags": [
+    "john",
+    "apostle",
+    "disciple",
+    "beloved",
+    "youngest",
+    "gospel"
+  ],
+  "style": "inked",
+  "anchor": "characters/JOHN_THE_APOSTLE.png",
+  "first_used": "zechariah_12_10_pierced",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

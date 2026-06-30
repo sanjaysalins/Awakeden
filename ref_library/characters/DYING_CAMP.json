@@ -1,0 +1,18 @@
+{
+  "name": "DYING_CAMP",
+  "kind": "character",
+  "canonical": "the snakebitten Israelite camp in the wilderness, a sprawl of dusty goat-hair tents and stricken Hebrew wanderers in coarse earth-toned robes, gaunt fevered faces and writhing fallen bodies clutching swollen serpent-bitten limbs, the dying and grieving strewn across the cracked desert ground under a harsh sky",
+  "tags": [
+    "camp",
+    "israelite",
+    "wilderness",
+    "serpent",
+    "dying",
+    "tents"
+  ],
+  "style": "inked",
+  "anchor": "characters/DYING_CAMP.png",
+  "first_used": "04_Bronze_Serpent",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

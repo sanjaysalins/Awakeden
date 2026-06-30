@@ -1,0 +1,18 @@
+{
+  "name": "UNBROKEN_BONE",
+  "kind": "motif",
+  "canonical": "the roasted Passover lamb held whole and entire, not one of its bones broken, the strict command honored that finds its fulfillment in Christ's own unbroken legs",
+  "tags": [
+    "passover",
+    "lamb",
+    "unbroken-bone",
+    "whole",
+    "command",
+    "fulfillment"
+  ],
+  "style": "inked",
+  "anchor": "motifs/UNBROKEN_BONE.png",
+  "first_used": "EW08_Passover",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

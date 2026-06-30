@@ -1,0 +1,17 @@
+{
+  "name": "BLOOD",
+  "kind": "object",
+  "canonical": "fresh dark-red sacrificial blood pooled in a shallow vessel, glistening and thick, the atoning blood of the offering ready to be sprinkled or struck. Deep crimson lifeblood of a slain lamb or goat \u2014 NOT bright cartoon red, NOT wine, NOT a violent gory spatter",
+  "tags": [
+    "blood",
+    "sacrifice",
+    "atonement",
+    "crimson",
+    "offering"
+  ],
+  "style": "inked",
+  "anchor": "objects/BLOOD.png",
+  "first_used": "EW01_Two_Goats",
+  "count": 3,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

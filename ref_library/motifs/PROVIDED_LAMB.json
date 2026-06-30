@@ -1,0 +1,18 @@
+{
+  "name": "PROVIDED_LAMB",
+  "kind": "motif",
+  "canonical": "the lamb that God Himself would provide for the offering, longed for and unseen on the height of Moriah, the promise left open until it is found at last in Christ",
+  "tags": [
+    "abraham",
+    "lamb",
+    "moriah",
+    "provision",
+    "promise",
+    "type"
+  ],
+  "style": "inked",
+  "anchor": "motifs/PROVIDED_LAMB.png",
+  "first_used": "EW02_Abraham",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

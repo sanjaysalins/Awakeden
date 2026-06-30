@@ -1,0 +1,18 @@
+{
+  "name": "MERCY_TOO_WIDE",
+  "kind": "motif",
+  "canonical": "the reach of God's grace stretching impossibly wide: a vast beam of warm light pouring down from a great walled city high above all the way to a single lone figure sunk deep at the very bottom of the sea, grace reaching wider and lower than either deserves",
+  "tags": [
+    "jonah",
+    "mercy",
+    "grace",
+    "nineveh",
+    "reach",
+    "compassion"
+  ],
+  "style": "inked",
+  "anchor": "motifs/MERCY_TOO_WIDE.png",
+  "first_used": "EW05_Jonah",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

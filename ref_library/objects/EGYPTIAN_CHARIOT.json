@@ -1,0 +1,18 @@
+{
+  "name": "EGYPTIAN_CHARIOT",
+  "kind": "object",
+  "canonical": "a light two-wheeled ancient Egyptian chariot of gilded wood with a curved front rail and spoked wheels, a yoke-pole for horses extending forward \u2014 a governor's processional chariot, NOT a Roman war chariot, NOT a heavy cart or wagon",
+  "tags": [
+    "chariot",
+    "egyptian",
+    "wheels",
+    "gilded",
+    "yoke",
+    "ancient"
+  ],
+  "style": "inked",
+  "anchor": "objects/EGYPTIAN_CHARIOT.png",
+  "first_used": "EW03_Joseph",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

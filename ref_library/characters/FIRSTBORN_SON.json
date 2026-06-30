@@ -1,0 +1,18 @@
+{
+  "name": "FIRSTBORN_SON",
+  "kind": "character",
+  "canonical": "the firstborn son of a Hebrew household, a young boy of about ten, smooth olive skin, dark tousled hair, a calm gentle face, dressed in a simple coarse cream tunic, standing safe and well within the lamplit inner room of his home",
+  "tags": [
+    "firstborn",
+    "son",
+    "boy",
+    "hebrew",
+    "passover",
+    "sleeping"
+  ],
+  "style": "inked",
+  "anchor": "characters/FIRSTBORN_SON.png",
+  "first_used": "EW08_Passover",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "EGYPTIAN_DUNGEON",
+  "kind": "place",
+  "canonical": "a dark dungeon beneath ancient Egypt: a cramped pit of rough mud-brick and hewn stone deep underground, heavy shadows broken by a single thin shaft of light from a high barred opening, damp walls and bare earthen floor, a cold cell of false condemnation",
+  "tags": [
+    "dungeon",
+    "egypt",
+    "prison",
+    "mud-brick",
+    "dark",
+    "underground"
+  ],
+  "style": "inked",
+  "anchor": "places/EGYPTIAN_DUNGEON.png",
+  "first_used": "EW03_Joseph",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

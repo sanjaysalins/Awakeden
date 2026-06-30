@@ -1,0 +1,18 @@
+{
+  "name": "REFUGE_THROUGH_JUDGMENT",
+  "kind": "motif",
+  "canonical": "the great wooden ark riding high and unharmed above the drowning floodwaters, bearing all those sealed inside safely through the very judgment that destroys the world",
+  "tags": [
+    "noah",
+    "ark",
+    "flood",
+    "refuge",
+    "judgment",
+    "salvation"
+  ],
+  "style": "inked",
+  "anchor": "motifs/REFUGE_THROUGH_JUDGMENT.png",
+  "first_used": "EW06_Noah",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

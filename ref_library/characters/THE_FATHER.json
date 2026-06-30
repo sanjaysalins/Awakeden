@@ -1,0 +1,18 @@
+{
+  "name": "THE_FATHER",
+  "kind": "character",
+  "canonical": "the father of the prodigal, an aged Near-Eastern patriarch of about seventy, sun-darkened olive skin, a deeply lined dignified face, long flowing white hair and a full white beard, brimming tearful eyes, wearing a long fine layered robe of warm ochre and a head-cloth with the hem hiked up in his hand as he runs with both arms flung wide open",
+  "tags": [
+    "father",
+    "patriarch",
+    "prodigal",
+    "near-eastern",
+    "running",
+    "fine-robe"
+  ],
+  "style": "inked",
+  "anchor": "characters/THE_FATHER.png",
+  "first_used": "09 The Father Who Ran",
+  "count": 8,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

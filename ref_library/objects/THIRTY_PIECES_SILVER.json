@@ -1,0 +1,18 @@
+{
+  "name": "THIRTY_PIECES_SILVER",
+  "kind": "object",
+  "canonical": "thirty crude hammered ancient silver coins counted out and heaped together, irregular and tarnished \u2014 the betrayal-price of Christ, NOT minted modern coins, NOT gold coins",
+  "tags": [
+    "silver",
+    "thirty",
+    "coins",
+    "betrayal",
+    "hammered",
+    "ancient"
+  ],
+  "style": "inked",
+  "anchor": "objects/THIRTY_PIECES_SILVER.png",
+  "first_used": "EW03_Joseph",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "GRAIN_AND_BREAD",
+  "kind": "object",
+  "canonical": "a mound of golden threshed wheat grain beside round flat dark-crusted loaves of ancient unleavened bread \u2014 stored Egyptian grain and life-giving loaves, NOT modern sliced loaves, NOT risen bakery bread",
+  "tags": [
+    "grain",
+    "bread",
+    "loaves",
+    "wheat",
+    "egyptian",
+    "store"
+  ],
+  "style": "inked",
+  "anchor": "objects/GRAIN_AND_BREAD.png",
+  "first_used": "EW03_Joseph_short",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}
