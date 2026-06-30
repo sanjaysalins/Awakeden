@@ -1,0 +1,8 @@
+<speaker name="narrator">Nails through his hands. Soldiers at his feet, gambling for his clothes. And from the cross comes a word no one expected — not a curse.</speaker>
+<speaker name="narrator">It is a prayer. As they divide his clothing, Jesus prays for the very people putting him to death.</speaker>
+<speaker name="jesus">Father, forgive them; for they know not what they do.</speaker>
+<speaker name="narrator">Luke records it as they gambled:</speaker>
+<speaker name="scripture">And they parted his raiment, and cast lots.</speaker>
+<speaker name="narrator">"They know not what they do" does not excuse the sin; it intercedes for the sinner.</speaker>
+<speaker name="narrator">And the sin that put him there was ours too. He gave himself willingly — and the Lord who prayed for his executioners still lives to make intercession for sinners.</speaker>
+<speaker name="narrator">This is the gospel: while we were yet sinners, Christ died for us — pleading mercy before we knew we needed it. That mercy is held out to you now: come, and receive it by faith.</speaker>
