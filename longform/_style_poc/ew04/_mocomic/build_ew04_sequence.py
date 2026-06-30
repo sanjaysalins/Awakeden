@@ -12,13 +12,15 @@ upgrade lever). This proves the pipeline + pacing on real audio.
 
   .venv\\Scripts\\python.exe longform/_style_poc/ew04/_mocomic/build_ew04_sequence.py
 """
-import importlib.util, subprocess
+import argparse, importlib.util, subprocess, sys
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 HERE = Path(__file__).resolve().parent
 le_spec = importlib.util.spec_from_file_location("le", HERE / "landscape_engine.py")
 le = importlib.util.module_from_spec(le_spec); le_spec.loader.exec_module(le)
+lv_spec = importlib.util.spec_from_file_location("lv", HERE / "landscape_validate.py")
+lv = importlib.util.module_from_spec(lv_spec); lv_spec.loader.exec_module(lv)
 
 STILLS = HERE.parent / "stills"
 ANIM = HERE.parent / "anim"
@@ -209,6 +211,17 @@ def build_page(i, t0, t1, tname, assets, capspec):
 
 
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--force", action="store_true", help="build even if a deterministic gate FAILs")
+    ap.add_argument("--narration", help="locked narration to check captions against (LV-G5)")
+    args = ap.parse_args()
+
+    # --- pre-flight: deterministic validation gates (LANDSCAPE_VALIDATION.md) ---
+    ntext = Path(args.narration).read_text(encoding="utf-8") if args.narration else None
+    if lv._print(lv.validate(PAGES, le.TEMPLATES, AUDIO, ntext, le.lt.sanitize)) and not args.force:
+        print("BUILD ABORTED -- fix the FAIL gate(s), or pass --force to build anyway.\n")
+        sys.exit(1)
+
     pages = [build_page(i, *p) for i, p in enumerate(PAGES)]
     lst = TMP / "concat.txt"
     lst.write_text("".join(f"file '{p.as_posix()}'\n" for p in pages), encoding="utf-8")
