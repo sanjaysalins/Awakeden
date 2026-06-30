@@ -1,5 +1,12 @@
 # RESUME.md — start here next session
 
+> **SIDE THREAD (2026-06-30):** built a 16:9 **long-form landscape motion-comic TEMPLATE** (proof of how a
+> long-form page is assembled — NOT a pivot; shorts+longs both continue). Full self-contained writeup +
+> red-team + pending decisions in
+> `longform/_style_poc/ew04/_mocomic/LANDSCAPE_RESUME.md`.
+> Deliverable: `_landscape/EW04_landscape_sequence.mp4`. Memory: [[ew04-landscape-template-scope]].
+> Secondary to the base-elements directive below.
+
 ## ⚡⚡⚡ TOMORROW START HERE — (2026-06-30) — BASE-ELEMENTS LIBRARY: index every character/object/location/element across ALL narrations, then build a locked ref per element ⚡⚡⚡
 
 > The motion-comic format is LOCKED (see the section right below this one). The user's directive for tomorrow:
