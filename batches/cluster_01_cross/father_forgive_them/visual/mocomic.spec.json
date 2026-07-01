@@ -1,0 +1,21 @@
+{
+  "_doc": "Motion-comic furniture spec for 'Father, forgive them'. Beats are on the TRUE per-turn audio timeline (probed from _turns/__atempo files, sums to 57.15s — NOT the scrambled meta). Each beat = one inked clip (tpl full) + a caption or a red Scripture/red-letter bar. Captions are condensed narration; the two red bars are the ONLY highlighted holy text (Jesus' prayer + the KJV cast-lots quote). Motion 'static' => engine boomerang-fills a hold; other motions => slow-forward fill (no reverse).",
+  "episode": "father_forgive_them",
+  "clips_dir": "nbp",
+  "audio": "../audio/narration.mp3",
+  "beats": [
+    {"t": [0.00, 2.40],  "tpl": "full", "clips": [{"slug": "01b_nailed_hands", "motion": "pushin"}],   "cap": {"type": "caption", "text": "Nails through his hands."}},
+    {"t": [2.40, 6.00],  "tpl": "full", "clips": [{"slug": "01c_soldiers_gamble", "motion": "pushin"}], "cap": {"type": "caption", "text": "Soldiers at his feet, gambling for his clothes."}},
+    {"t": [6.00, 10.31], "tpl": "full", "clips": [{"slug": "01_golgotha_hook", "motion": "pullback"}],  "cap": {"type": "caption", "text": "A word no one expected."}},
+    {"t": [10.31, 16.94],"tpl": "full", "clips": [{"slug": "02_jesus_prays", "motion": "pushin"}],      "cap": {"type": "caption", "text": "It is a prayer - for the very people killing him."}},
+    {"t": [16.94, 22.06],"tpl": "full", "clips": [{"slug": "03_prayer_close", "motion": "static"}],      "cap": {"type": "redletter", "text": "Father, forgive them; for they know not what they do.", "speaker": "JESUS", "ref": "Luke 23:34"}},
+    {"t": [22.06, 24.22],"tpl": "full", "clips": [{"slug": "04_cast_lots", "motion": "pushin"}],         "cap": {"type": "caption", "text": "Luke records it as they gambled:"}},
+    {"t": [24.22, 26.78],"tpl": "full", "clips": [{"slug": "04_cast_lots", "motion": "pushin"}],         "cap": {"type": "redletter", "text": "And they parted his raiment, and cast lots.", "speaker": "SCRIPTURE", "ref": "Luke 23:34"}},
+    {"t": [26.78, 32.37],"tpl": "full", "clips": [{"slug": "05_pierced_hand", "motion": "pushin"}],      "cap": {"type": "caption", "text": "It does not excuse the sin. It intercedes for the sinner."}},
+    {"t": [32.37, 35.40],"tpl": "full", "clips": [{"slug": "06b_our_sin", "motion": "pushin"}],          "cap": {"type": "caption", "text": "The sin that put him there was ours too."}},
+    {"t": [35.40, 37.30],"tpl": "full", "clips": [{"slug": "06_cross_over_us", "motion": "pushin"}],     "cap": {"type": "caption", "text": "He gave himself willingly."}},
+    {"t": [37.30, 42.84],"tpl": "full", "clips": [{"slug": "06c_intercession_lives", "motion": "pushin"}], "cap": {"type": "caption", "text": "He still lives to intercede for sinners."}},
+    {"t": [42.84, 51.90],"tpl": "full", "clips": [{"slug": "07b_gospel_wide", "motion": "dolly"}],       "cap": {"type": "caption", "text": "While we were yet sinners, Christ died for us."}},
+    {"t": [51.90, 57.15],"tpl": "full", "clips": [{"slug": "07_risen_hero", "motion": "static"}],        "cap": {"type": "caption", "text": "Come, and receive it by faith."}}
+  ]
+}

@@ -1,0 +1,31 @@
+================================================================================
+AWAKEDEN — most problematic image-gen prompts (for external testing)
+Model we use: seedream_v4_5 (Higgsfield / hf.exe), aspect 9:16, quality "high", NO reference image.
+Bake-off co-winner with working ref-lock we may switch to: nano_banana (Gemini, base — NOT nano_banana_2).
+The strings below are the FULL prompt exactly as sent (subject + style tail + single-image tail).
+================================================================================
+
+
+########################################################################
+# #1  THE WORST — pierced-hand close-up  (slug: 05_pierced_hand)
+# Fails: the wound renders as a clean symmetric CIRCLE/DOT, not a torn wound;
+#        the second hand becomes a clenched FIST or duplicates; sometimes a lone/severed hand.
+########################################################################
+
+A CLOSE shot of the crucified Christ's face and outstretched wounded hand (the SAME man throughout: a bearded man in his early thirties with a calm Near-Eastern face, a lean face with high cheekbones and a slightly aquiline nose, warm olive skin, deep brown eyes, a short dark full beard and long dark wavy hair parted in the middle): his head lifted, his near hand OPEN and flat, palm forward, reaching toward the viewer, showing a dark ragged pierced hole in the centre of the open palm with dark red blood running toward the wrist; his other arm rests along the wooden crossbeam, its hand also OPEN and flat with a matching pierced wound. A dark storm sky, one warm shaft of light across his face and the wounded open hand. Reverent, merciful. Drawn in INKED BIBLICAL GRAPHIC-NOVEL / cinematic manga ILLUSTRATION style: bold clean black ink linework and outlines, flat cel-shaded comic colour, hand-drawn 2D artwork, dramatic ink shadows. NOT a photograph, NOT photorealistic, NOT a glossy 3D render, NOT soft airbrushed anime — strong visible ink lines. Reverent and holy atmosphere, ancient Near-Eastern period-accurate, mature teen-and-up tone. ABSOLUTELY NO text, letters, words, numbers, captions, labels, titles, inscriptions, speech bubbles, scrolls of legible writing, watermark or signature ANYWHERE in the image — any surface that could bear writing (scrolls, tablets, coins, signs, pediments, banners) must be left blank or show only vague illegible non-letter texture. ONE single uninterrupted full-bleed illustration filling the entire frame — absolutely NO split screen, NO side panel, NO inset, NO grid, NO border or divider of any kind.
+
+
+########################################################################
+# #2  nailed-hands macro  (slug: 01b_nailed_hands)
+# Fails: reads as SEVERED / cut-off hands (no body); OR grows proud cube-stud "nails".
+########################################################################
+
+A stark close macro of BOTH of the crucified Christ's hands, OPEN and flat against the dark rough wooden crossbeam, palms facing the viewer, fingers relaxed and gently parted, a dark ragged pierced wound in the CENTRE of each open palm with dark red blood running down toward the wrists. Behind, a black storm sky. Reverent, visceral. Drawn in INKED BIBLICAL GRAPHIC-NOVEL / cinematic manga ILLUSTRATION style: bold clean black ink linework and outlines, flat cel-shaded comic colour, hand-drawn 2D artwork, dramatic ink shadows. NOT a photograph, NOT photorealistic, NOT a glossy 3D render, NOT soft airbrushed anime — strong visible ink lines. Reverent and holy atmosphere, ancient Near-Eastern period-accurate, mature teen-and-up tone. ABSOLUTELY NO text, letters, words, numbers, captions, labels, titles, inscriptions, speech bubbles, scrolls of legible writing, watermark or signature ANYWHERE in the image — any surface that could bear writing (scrolls, tablets, coins, signs, pediments, banners) must be left blank or show only vague illegible non-letter texture. ONE single uninterrupted full-bleed illustration filling the entire frame — absolutely NO split screen, NO side panel, NO inset, NO grid, NO border or divider of any kind.
+
+
+########################################################################
+# #3  crucified praying, full figure  (slug: 02_jesus_prays)
+# Fails: grows FOUR ARMS (a raised pair AND an outstretched pair).
+########################################################################
+
+the SAME man throughout: a bearded man in his early thirties with a calm Near-Eastern face, a lean face with high cheekbones and a slightly aquiline nose, warm olive skin, deep brown eyes, a short dark full beard and long dark wavy hair parted in the middle, crucified on a wooden cross, his body hanging with EXACTLY TWO arms — one arm stretched straight out to each side ALONG the horizontal crossbeam, both hands OPEN and flat against the beam, palms forward, fingers relaxed, a dark pierced wound in the centre of each open palm. His head is lifted and tilted back toward heaven, his lips parting as he speaks a prayer. A single warm shaft of light across his face. A dark storm sky behind; far below, small Roman soldiers gather his garment. Correct human anatomy — only two arms and two hands. Reverent, merciful. Drawn in INKED BIBLICAL GRAPHIC-NOVEL / cinematic manga ILLUSTRATION style: bold clean black ink linework and outlines, flat cel-shaded comic colour, hand-drawn 2D artwork, dramatic ink shadows. NOT a photograph, NOT photorealistic, NOT a glossy 3D render, NOT soft airbrushed anime — strong visible ink lines. Reverent and holy atmosphere, ancient Near-Eastern period-accurate, mature teen-and-up tone. ABSOLUTELY NO text, letters, words, numbers, captions, labels, titles, inscriptions, speech bubbles, scrolls of legible writing, watermark or signature ANYWHERE in the image — any surface that could bear writing (scrolls, tablets, coins, signs, pediments, banners) must be left blank or show only vague illegible non-letter texture. ONE single uninterrupted full-bleed illustration filling the entire frame — absolutely NO split screen, NO side panel, NO inset, NO grid, NO border or divider of any kind.
