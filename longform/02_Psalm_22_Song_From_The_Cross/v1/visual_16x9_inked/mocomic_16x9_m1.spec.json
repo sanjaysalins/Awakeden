@@ -1,0 +1,22 @@
+{
+  "_doc": "M1 slice (0-44.9s) rebuilt the SHORT's way: multi-panel comic GRIDS via the LOCKED comic_engine.py (now 16:9-capable via set_page), a DISTINCT still per panel, `full` reserved for the two sacred red-letter singles. Same beats/captions as m1_fastcut.json so it is an apples-to-apples A/B vs the flat full-frame fastcut. Templates chosen for WIDE 16:9 stills (big_inset/stack_h/quad preserve horizontal comp; two_v/triptych_v avoided — they crop wide stills to a vertical strip). $0 static preview: existing 21 stills only, no Kling. narration.mp3 reused.",
+  "audio": "../narration.mp3",
+  "total": 44.9,
+  "_motion_note": "animated clips carry a directional motion (pushin/pullback) so comic_engine slow-forwards them; scribe_over_manuscripts stays static (writing -> ken-burns, never Kling-animated).",
+  "beats": [
+    {"t": [0.0, 4.2],   "tpl": "big_inset", "clips": [{"slug": "cry_ninth_hour", "motion": "pullback"}, {"slug": "crane_cross_soldiers", "motion": "pushin"}],
+      "cap": {"type": "caption", "text": "At the ninth hour.", "kw": "NINTH HOUR"}},
+    {"t": [4.2, 9.0],   "tpl": "two_v",     "clips": [{"slug": "crane_cross_soldiers", "motion": "pushin", "cam": "arc"}, {"slug": "pierced_hands_feet", "motion": "pushin"}],
+      "cap": {"type": "caption", "text": "Nailed to a Roman cross, he cried into the dark.", "kw": "NAILED"}},
+    {"t": [9.0, 16.0],  "tpl": "full",      "clips": [{"slug": "cry_ninth_hour", "motion": "pullback", "cam": "arc"}],
+      "cap": {"type": "redletter", "text": "My God, my God, why hast thou forsaken me?", "speaker": "JESUS", "ref": "Matthew 27:46"}},
+    {"t": [16.0, 22.5], "tpl": "two_v",     "clips": [{"slug": "david_psalmist", "motion": "pushin", "cam": "arc"}, {"slug": "scribe_over_manuscripts", "motion": "static"}],
+      "cap": {"type": "caption", "text": "Written down a thousand years before.", "kw": "A THOUSAND YEARS"}},
+    {"t": [22.5, 30.0], "tpl": "big_inset", "clips": [{"slug": "david_old_deathbed", "motion": "pushin", "cam": "swoop"}, {"slug": "david_psalmist", "motion": "pushin"}],
+      "cap": {"type": "caption", "text": "By a king who died old and safe in his own bed.", "kw": "DIED OLD"}},
+    {"t": [30.0, 38.0], "tpl": "full",      "clips": [{"slug": "convergence_on_cross", "motion": "pushin", "cam": "swoop"}],
+      "cap": {"type": "redletter", "text": "Why art thou so far from helping me?", "speaker": "PSALM 22", "ref": "v.1"}},
+    {"t": [38.0, 44.9], "tpl": "quad",      "clips": [{"slug": "pierced_hands_feet", "motion": "pushin"}, {"slug": "poured_out_bones", "motion": "pushin"}, {"slug": "mockers_wag_heads", "motion": "pushin"}, {"slug": "storm_over_jerusalem", "motion": "pushin", "cam": "arc"}],
+      "cap": {"type": "caption", "text": "This is Psalm twenty-two.", "kw": "PSALM 22"}}
+  ]
+}

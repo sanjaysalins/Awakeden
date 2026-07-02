@@ -1,0 +1,14 @@
+{
+  "keep": [
+    0.12,
+    0.06,
+    0.88,
+    0.98
+  ],
+  "focus": [
+    0.5,
+    0.46
+  ],
+  "pad": 0.06,
+  "note": "central cross + temple, symmetric"
+}

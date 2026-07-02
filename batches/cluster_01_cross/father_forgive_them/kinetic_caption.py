@@ -38,24 +38,30 @@ def _wrap(draw, words, font, maxw):
     return lines
 
 
-def render_states(text, kw, out_dir, stem):
-    """Return (paths, box_top, box_h). paths[k] shows the first k+1 words (cumulative)."""
+def render_states(text, kw, out_dir, stem, page=(PAGE_W, PAGE_H)):
+    """Return (paths, box_top, box_h). paths[k] shows the first k+1 words (cumulative).
+    page=(W,H): 9:16 (1080x1920, default) or 16:9 landscape (1920x1080). Font/box scale by width."""
+    pw, ph = page
+    # Scale furniture by canvas HEIGHT (9:16 baseline 1920) — height governs how tall the box
+    # reads. Scaling by WIDTH ballooned the box on 16:9 (1920 wide / 1080 tall). 9:16 -> 1.0 (unchanged).
+    sc = ph / 1920.0
+    fsz, pad, margin = round(FSZ * sc), round(PAD * sc), round(MARGIN * sc)
     text = _san(text).upper()
     kwset = {w.strip(".,;:!?") for w in _san(kw).upper().split()} if kw else set()
-    font = ImageFont.truetype(FONT, FSZ)
+    font = ImageFont.truetype(FONT, fsz)
     dummy = ImageDraw.Draw(Image.new("RGBA", (4, 4)))
     words = text.split()
-    maxw = PAGE_W - 2 * MARGIN - 2 * PAD
+    maxw = pw - 2 * margin - 2 * pad
     lines = _wrap(dummy, words, font, maxw)
-    lh = FSZ + 14
-    box_h = len(lines) * lh + 2 * PAD
-    top = PAGE_H - box_h - 56
-    left, right = MARGIN, PAGE_W - MARGIN
+    lh = fsz + round(14 * sc)
+    box_h = len(lines) * lh + 2 * pad
+    top = ph - box_h - round(56 * sc)
+    left, right = margin, pw - margin
 
     # precompute a fixed layout: (x, y, word, color) for every word
-    layout, y = [], top + PAD
+    layout, y = [], top + pad
     for ln in lines:
-        x = left + PAD + 4
+        x = left + pad + round(4 * sc)
         for w in ln:
             color = RED if w.strip(".,;:!?") in kwset else INK
             layout.append((x, y, w, color))
@@ -64,9 +70,10 @@ def render_states(text, kw, out_dir, stem):
 
     paths = []
     for k in range(1, len(layout) + 1):
-        img = Image.new("RGBA", (PAGE_W, PAGE_H), (0, 0, 0, 0))
+        img = Image.new("RGBA", (pw, ph), (0, 0, 0, 0))
         d = ImageDraw.Draw(img)
-        d.rounded_rectangle([left, top, right, top + box_h], radius=16, fill=PARCH, outline=INK, width=8)
+        d.rounded_rectangle([left, top, right, top + box_h], radius=round(16 * sc),
+                            fill=PARCH, outline=INK, width=round(8 * sc))
         for (x, y, w, color) in layout[:k]:
             d.text((x, y), w, font=font, fill=color)
         p = out_dir / f"_kc_{stem}_{k:02d}.png"

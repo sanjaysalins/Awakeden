@@ -1,0 +1,14 @@
+{
+  "keep": [
+    0.05,
+    0.1,
+    0.95,
+    0.92
+  ],
+  "focus": [
+    0.5,
+    0.34
+  ],
+  "pad": 0.06,
+  "note": "two mockers L&R, Christ small centre (wide)"
+}

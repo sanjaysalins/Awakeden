@@ -1,0 +1,13 @@
+{
+  "_doc": "FAST-CUT 16:9 mocomic — M1 slice (0-44.9s) proof. Short-style: quick full-frame beats cutting every ~5-7s, distinct image each, kinetic captions, a red Scripture bar, punch on the hook. Pool-only ($0, existing 16:9 stills as ken-burns). If the RHYTHM feels like the short, scale to the full ~60-beat film.",
+  "narration": "../narration.mp3",
+  "beats": [
+    {"t": [0.0, 4.2],   "img": "cry_ninth_hour",        "motion": "punch",  "cap": {"type":"caption","text":"At the ninth hour.","kw":"NINTH HOUR"}},
+    {"t": [4.2, 9.0],   "img": "crane_cross_soldiers",  "motion": "push",   "cap": {"type":"caption","text":"Nailed to a Roman cross, he cried into the dark.","kw":"NAILED"}},
+    {"t": [9.0, 16.0],  "img": "cry_ninth_hour",        "motion": "push",   "cap": {"type":"redletter","text":"My God, my God, why hast thou forsaken me?","speaker":"JESUS","ref":"Matthew 27:46"}},
+    {"t": [16.0, 22.5], "img": "david_psalmist",        "motion": "push",   "cap": {"type":"caption","text":"Written down a thousand years before.","kw":"A THOUSAND YEARS"}},
+    {"t": [22.5, 30.0], "img": "david_old_deathbed",    "motion": "push",   "cap": {"type":"caption","text":"By a king who died old and safe in his own bed.","kw":"DIED OLD"}},
+    {"t": [30.0, 38.0], "img": "convergence_on_cross",  "motion": "push",   "cap": {"type":"redletter","text":"Why art thou so far from helping me?","speaker":"PSALM 22","ref":"v.1"}},
+    {"t": [38.0, 44.9], "img": "storm_over_jerusalem",  "motion": "push",   "cap": {"type":"caption","text":"This is Psalm twenty-two.","kw":"PSALM 22"}}
+  ]
+}

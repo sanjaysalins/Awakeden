@@ -1,0 +1,260 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Psalm 22 — Stills Review</title>
+<style>
+ body{font-family:system-ui,Arial,sans-serif;margin:0;background:#f4f2ec;color:#1a1712}
+ header{position:sticky;top:0;background:#1a1712;color:#f4f2ec;padding:14px 20px;z-index:10;box-shadow:0 2px 8px #0006}
+ header h1{margin:0 0 4px;font-size:20px} header p{margin:0;font-size:14px;opacity:.85}
+ .bar{display:flex;gap:12px;align-items:center;margin-top:10px}
+ button{font-size:16px;padding:10px 18px;border:0;border-radius:8px;background:#c8321a;color:#fff;cursor:pointer;font-weight:700}
+ button:hover{background:#a8280f} .count{font-size:15px;font-weight:700}
+ .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(440px,1fr));gap:18px;padding:20px}
+ .card{background:#fff;border:2px solid #ddd;border-radius:12px;overflow:hidden;transition:border-color .15s}
+ .card.flagged{border-color:#c8321a;box-shadow:0 0 0 3px #c8321a33}
+ .imgwrap{background:#000;aspect-ratio:16/9} .imgwrap img{width:100%;height:100%;object-fit:contain;display:block}
+ .meta{padding:8px 12px;font-size:15px} .ctx{font-size:12px;color:#666;margin-top:3px}
+ .badge{font-size:11px;padding:2px 7px;border-radius:10px;background:#e5e0d5;margin-left:6px}
+ .badge.new{background:#1f7a34;color:#fff} .badge.miss{background:#c8321a;color:#fff}
+ label.redo{display:flex;align-items:center;gap:8px;padding:6px 12px;font-size:16px;font-weight:700;cursor:pointer}
+ label.redo input{width:22px;height:22px}
+ textarea.note{width:calc(100% - 24px);margin:0 12px 12px;min-height:52px;font-size:15px;padding:8px;border:1px solid #ccc;border-radius:6px;font-family:inherit}
+ #out{width:100%;min-height:120px;font-size:14px;margin-top:10px;display:none;padding:10px;border-radius:8px;font-family:ui-monospace,monospace}
+</style></head><body>
+<header>
+  <h1>Psalm 22 — Stills Review (35 stills)</h1>
+  <p>Tick <b>REDO</b> and type a note on any still you want changed. Then click <b>Copy my notes</b> and paste them back to me.</p>
+  <div class="bar"><button onclick="collect()">📋 Copy my notes</button><span class="count" id="cnt">0 flagged</span></div>
+  <textarea id="out" readonly></textarea>
+</header>
+<div class="grid">
+    <div class="card" data-slug="cry_ninth_hour">
+      <div class="imgwrap"><img loading="lazy" src="cry_ninth_hour.png" alt="cry_ninth_hour"></div>
+      <div class="meta"><b>1. cry_ninth_hour</b> <span class="badge">reuse</span><div class="ctx">beat 1 · At the ninth hour.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="crane_cross_soldiers">
+      <div class="imgwrap"><img loading="lazy" src="crane_cross_soldiers.png" alt="crane_cross_soldiers"></div>
+      <div class="meta"><b>2. crane_cross_soldiers</b> <span class="badge">reuse</span><div class="ctx">beat 1 · At the ninth hour.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="pierced_hands_feet">
+      <div class="imgwrap"><img loading="lazy" src="pierced_hands_feet.png" alt="pierced_hands_feet"></div>
+      <div class="meta"><b>3. pierced_hands_feet</b> <span class="badge">reuse</span><div class="ctx">beat 2 · Nailed to a Roman cross, he cried into the dark.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="david_psalmist">
+      <div class="imgwrap"><img loading="lazy" src="david_psalmist.png" alt="david_psalmist"></div>
+      <div class="meta"><b>4. david_psalmist</b> <span class="badge">reuse</span><div class="ctx">beat 4 · Written down a thousand years before.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="scribe_over_manuscripts">
+      <div class="imgwrap"><img loading="lazy" src="scribe_over_manuscripts.png" alt="scribe_over_manuscripts"></div>
+      <div class="meta"><b>5. scribe_over_manuscripts</b> <span class="badge">reuse</span><div class="ctx">beat 4 · Written down a thousand years before.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="david_old_deathbed">
+      <div class="imgwrap"><img loading="lazy" src="david_old_deathbed.png" alt="david_old_deathbed"></div>
+      <div class="meta"><b>6. david_old_deathbed</b> <span class="badge">reuse</span><div class="ctx">beat 5 · By a king who died old and safe in his own bed.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="convergence_on_cross">
+      <div class="imgwrap"><img loading="lazy" src="convergence_on_cross.png" alt="convergence_on_cross"></div>
+      <div class="meta"><b>7. convergence_on_cross</b> <span class="badge">reuse</span><div class="ctx">beat 6 · Why art thou so far from helping me?</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="poured_out_bones">
+      <div class="imgwrap"><img loading="lazy" src="poured_out_bones.png" alt="poured_out_bones"></div>
+      <div class="meta"><b>8. poured_out_bones</b> <span class="badge">reuse</span><div class="ctx">beat 7 · This is Psalm twenty-two.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="mockers_wag_heads">
+      <div class="imgwrap"><img loading="lazy" src="mockers_wag_heads.png" alt="mockers_wag_heads"></div>
+      <div class="meta"><b>9. mockers_wag_heads</b> <span class="badge">reuse</span><div class="ctx">beat 7 · This is Psalm twenty-two.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="storm_over_jerusalem">
+      <div class="imgwrap"><img loading="lazy" src="storm_over_jerusalem.png" alt="storm_over_jerusalem"></div>
+      <div class="meta"><b>10. storm_over_jerusalem</b> <span class="badge">reuse</span><div class="ctx">beat 7 · This is Psalm twenty-two.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="david_hands_lyre">
+      <div class="imgwrap"><img loading="lazy" src="david_hands_lyre.png" alt="david_hands_lyre"></div>
+      <div class="meta"><b>11. david_hands_lyre</b> <span class="badge new">NEW</span><div class="ctx">beat 8 · David wrote it as if it happened to his own body.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="worm_reproach">
+      <div class="imgwrap"><img loading="lazy" src="worm_reproach.png" alt="worm_reproach"></div>
+      <div class="meta"><b>12. worm_reproach</b> <span class="badge">reuse</span><div class="ctx">beat 9 · But I am a worm, and no man; a reproach of men, and despised of the people.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="worm_lowest">
+      <div class="imgwrap"><img loading="lazy" src="worm_lowest.png" alt="worm_lowest"></div>
+      <div class="meta"><b>13. worm_lowest</b> <span class="badge new">NEW</span><div class="ctx">beat 9 · But I am a worm, and no man; a reproach of men, and despised of the people.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="mocker_faces_trio">
+      <div class="imgwrap"><img loading="lazy" src="mocker_faces_trio.png" alt="mocker_faces_trio"></div>
+      <div class="meta"><b>14. mocker_faces_trio</b> <span class="badge new">NEW</span><div class="ctx">beat 10 · He trusted on the LORD that he would deliver him: let him deliver him.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="thirst_dust">
+      <div class="imgwrap"><img loading="lazy" src="thirst_dust.png" alt="thirst_dust"></div>
+      <div class="meta"><b>15. thirst_dust</b> <span class="badge">reuse</span><div class="ctx">beat 12 · My tongue cleaveth to my jaws; and thou hast brought me into the dust of death.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="cry_face_tears">
+      <div class="imgwrap"><img loading="lazy" src="cry_face_tears.png" alt="cry_face_tears"></div>
+      <div class="meta"><b>16. cry_face_tears</b> <span class="badge new">NEW</span><div class="ctx">beat 12 · My tongue cleaveth to my jaws; and thou hast brought me into the dust of death.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="pierced_feet">
+      <div class="imgwrap"><img loading="lazy" src="pierced_feet.png" alt="pierced_feet"></div>
+      <div class="meta"><b>17. pierced_feet</b> <span class="badge new">NEW</span><div class="ctx">beat 13 · They pierced my hands and my feet.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="lots_dice_closeup">
+      <div class="imgwrap"><img loading="lazy" src="lots_dice_closeup.png" alt="lots_dice_closeup"></div>
+      <div class="meta"><b>18. lots_dice_closeup</b> <span class="badge new">NEW</span><div class="ctx">beat 14 · They part my garments among them, and cast lots upon my vesture.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="scholar_hand_on_text">
+      <div class="imgwrap"><img loading="lazy" src="scholar_hand_on_text.png" alt="scholar_hand_on_text"></div>
+      <div class="meta"><b>19. scholar_hand_on_text</b> <span class="badge new">NEW</span><div class="ctx">beat 16 · An honest objection deserves a straight answer.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="disputed_word_marks">
+      <div class="imgwrap"><img loading="lazy" src="disputed_word_marks.png" alt="disputed_word_marks"></div>
+      <div class="meta"><b>20. disputed_word_marks</b> <span class="badge">reuse</span><div class="ctx">beat 17 · On one word, pierced, there is a real dispute.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="two_scrolls_compared">
+      <div class="imgwrap"><img loading="lazy" src="two_scrolls_compared.png" alt="two_scrolls_compared"></div>
+      <div class="meta"><b>21. two_scrolls_compared</b> <span class="badge new">NEW</span><div class="ctx">beat 17 · On one word, pierced, there is a real dispute.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="greek_ot_scroll">
+      <div class="imgwrap"><img loading="lazy" src="greek_ot_scroll.png" alt="greek_ot_scroll"></div>
+      <div class="meta"><b>22. greek_ot_scroll</b> <span class="badge">reuse</span><div class="ctx">beat 19 · The Greek Old Testament already read it: pierced.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="cross_hill_pullback">
+      <div class="imgwrap"><img loading="lazy" src="cross_hill_pullback.png" alt="cross_hill_pullback"></div>
+      <div class="meta"><b>23. cross_hill_pullback</b> <span class="badge new">NEW</span><div class="ctx">beat 20 · Back to the cross, and why that cry matters.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="face_anguish_closeup">
+      <div class="imgwrap"><img loading="lazy" src="face_anguish_closeup.png" alt="face_anguish_closeup"></div>
+      <div class="meta"><b>24. face_anguish_closeup</b> <span class="badge new">NEW</span><div class="ctx">beat 21 · He placed himself as the I of Psalm twenty-two.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="the_turn">
+      <div class="imgwrap"><img loading="lazy" src="the_turn.png" alt="the_turn"></div>
+      <div class="meta"><b>25. the_turn</b> <span class="badge">reuse</span><div class="ctx">beat 23 · The song does not end in a grave. It turns.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="empty_tomb_open">
+      <div class="imgwrap"><img loading="lazy" src="empty_tomb_open.png" alt="empty_tomb_open"></div>
+      <div class="meta"><b>26. empty_tomb_open</b> <span class="badge new">NEW</span><div class="ctx">beat 23 · The song does not end in a grave. It turns.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="risen_worshipper">
+      <div class="imgwrap"><img loading="lazy" src="risen_worshipper.png" alt="risen_worshipper"></div>
+      <div class="meta"><b>27. risen_worshipper</b> <span class="badge">reuse</span><div class="ctx">beat 24 · I will declare thy name unto my brethren: in the midst of the congregation will I praise t</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="risen_hands_raised">
+      <div class="imgwrap"><img loading="lazy" src="risen_hands_raised.png" alt="risen_hands_raised"></div>
+      <div class="meta"><b>28. risen_hands_raised</b> <span class="badge new">NEW</span><div class="ctx">beat 24 · I will declare thy name unto my brethren: in the midst of the congregation will I praise t</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="ends_of_earth">
+      <div class="imgwrap"><img loading="lazy" src="ends_of_earth.png" alt="ends_of_earth"></div>
+      <div class="meta"><b>29. ends_of_earth</b> <span class="badge">reuse</span><div class="ctx">beat 26 · All the ends of the world shall remember and turn unto the LORD.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="nations_streaming_wide">
+      <div class="imgwrap"><img loading="lazy" src="nations_streaming_wide.png" alt="nations_streaming_wide"></div>
+      <div class="meta"><b>30. nations_streaming_wide</b> <span class="badge new">NEW</span><div class="ctx">beat 26 · All the ends of the world shall remember and turn unto the LORD.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="finished_work">
+      <div class="imgwrap"><img loading="lazy" src="finished_work.png" alt="finished_work"></div>
+      <div class="meta"><b>31. finished_work</b> <span class="badge">reuse</span><div class="ctx">beat 27 · It is finished.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="parting_storm_light">
+      <div class="imgwrap"><img loading="lazy" src="parting_storm_light.png" alt="parting_storm_light"></div>
+      <div class="meta"><b>32. parting_storm_light</b> <span class="badge">reuse</span><div class="ctx">beat 28 · The forsaking fell on him so it would never fall on you.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="kneeling_at_cross">
+      <div class="imgwrap"><img loading="lazy" src="kneeling_at_cross.png" alt="kneeling_at_cross"></div>
+      <div class="meta"><b>33. kneeling_at_cross</b> <span class="badge new">NEW</span><div class="ctx">beat 28 · The forsaking fell on him so it would never fall on you.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="risen_hero_come">
+      <div class="imgwrap"><img loading="lazy" src="risen_hero_come.png" alt="risen_hero_come"></div>
+      <div class="meta"><b>34. risen_hero_come</b> <span class="badge">reuse</span><div class="ctx">beat 29 · Come and join the ones who praise him.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div>
+    <div class="card" data-slug="hand_reaching_closeup">
+      <div class="imgwrap"><img loading="lazy" src="hand_reaching_closeup.png" alt="hand_reaching_closeup"></div>
+      <div class="meta"><b>35. hand_reaching_closeup</b> <span class="badge new">NEW</span><div class="ctx">beat 29 · Come and join the ones who praise him.</div></div>
+      <label class="redo"><input type="checkbox" class="chk"> <span>REDO this still</span></label>
+      <textarea class="note" placeholder="Notes: what's wrong / what to change..."></textarea>
+    </div></div>
+<script>
+ function refresh(){
+   let n=0;
+   document.querySelectorAll('.card').forEach(c=>{
+     const on=c.querySelector('.chk').checked || c.querySelector('.note').value.trim();
+     c.classList.toggle('flagged', !!on); if(on) n++;
+   });
+   document.getElementById('cnt').textContent = n+' flagged';
+ }
+ document.addEventListener('input', refresh);
+ function collect(){
+   const lines=[];
+   document.querySelectorAll('.card').forEach(c=>{
+     const note=c.querySelector('.note').value.trim();
+     if(c.querySelector('.chk').checked || note)
+       lines.push('- '+c.dataset.slug+': '+(note||'redo'));
+   });
+   const txt = lines.length ? 'REDO NOTES:\n'+lines.join('\n') : 'No stills flagged.';
+   const out=document.getElementById('out'); out.style.display='block'; out.value=txt;
+   navigator.clipboard && navigator.clipboard.writeText(txt);
+   out.select();
+ }
+</script></body></html>

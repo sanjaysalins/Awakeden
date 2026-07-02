@@ -96,10 +96,11 @@ def pushin_prompt(scene: dict) -> str:
     return (PUSHIN_BASE + f"the main subject of the painting, easing gently toward {focus}, "
             "keeping the whole figure in frame" + PUSHIN_TAIL)
 
-def hf_animate(png: Path, out: Path, prompt: str, duration: int) -> bool:
+def hf_animate(png: Path, out: Path, prompt: str, duration: int, aspect_ratio: str = "9:16") -> bool:
+    # aspect_ratio defaults to 9:16 (shorts); pass "16:9" for long-form motion-comic (MOTIONCOMIC_SPEC MC-R2)
     cmd = [str(HF), "generate", "create", "kling3_0", "--start-image", str(png),
            "--prompt", prompt, "--duration", str(duration), "--mode", "pro",
-           "--sound", "off", "--aspect_ratio", "9:16", "--wait"]
+           "--sound", "off", "--aspect_ratio", aspect_ratio, "--wait"]
     r = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8")
     blob = (r.stdout or "") + (r.stderr or "")
     m = re.search(r'https?://[^\s"]+\.mp4', blob)

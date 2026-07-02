@@ -25,6 +25,18 @@ from PIL import Image, ImageDraw, ImageFont
 PAGE_W, PAGE_H, FPS = 1080, 1920, 30
 M, G, BORDER = 30, 22, 10
 TOP_BAND_H, BOT_BAR_H = 188, 196
+
+
+def set_page(w, h):
+    """Retarget the canvas aspect for this process (e.g. 16:9 long-form landscape).
+    Additive + non-breaking: the default is 1080x1920 (9:16), so a 9:16 build that never
+    calls this is byte-identical. Templates + furniture + segment math all read PAGE_W/PAGE_H
+    as module globals at call time, so reassigning them here retargets the whole engine.
+    Band reserves scale to the new height so the caption furniture stays proportionate."""
+    global PAGE_W, PAGE_H, TOP_BAND_H, BOT_BAR_H
+    PAGE_W, PAGE_H = w, h
+    TOP_BAND_H = round(h * 188 / 1920)
+    BOT_BAR_H = round(h * 196 / 1920)
 PAPER = (252, 249, 241)
 INK = (18, 14, 8, 255)
 PARCH = (245, 234, 208, 255)
