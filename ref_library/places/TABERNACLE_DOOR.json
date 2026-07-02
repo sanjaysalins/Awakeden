@@ -1,0 +1,18 @@
+{
+  "name": "TABERNACLE_DOOR",
+  "kind": "place",
+  "canonical": "the entrance of the wilderness tabernacle: the open doorway in the linen-curtained outer court, embroidered blue-and-scarlet hangings drawn back on acacia posts, the bronze altar and laver beyond on bare desert sand, warm daylight at the threshold of the sanctuary",
+  "tags": [
+    "tabernacle",
+    "door",
+    "entrance",
+    "curtain",
+    "court",
+    "wilderness"
+  ],
+  "style": "inked",
+  "anchor": "places/TABERNACLE_DOOR.png",
+  "first_used": "EW01_Two_Goats",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "THREE_DAYS_DEEP",
+  "kind": "motif",
+  "canonical": "three days and three nights buried alive in the swallowing dark of the deep, then given back living to the light, the prophet's ordeal standing as the sign of resurrection",
+  "tags": [
+    "jonah",
+    "three-days",
+    "deep",
+    "buried-alive",
+    "resurrection",
+    "sign"
+  ],
+  "style": "inked",
+  "anchor": "motifs/THREE_DAYS_DEEP.png",
+  "first_used": "EW05_Jonah",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "ANIMAL_PAIRS",
+  "kind": "object",
+  "canonical": "living creatures going up into the ark in an orderly procession \u2014 clean beasts and fowls by sevens and the unclean by pairs (Gen 7:2-3), walking calmly side by side, NOT a chaotic single herd, NOT cartoon zoo animals",
+  "tags": [
+    "animals",
+    "pairs",
+    "two-by-two",
+    "ark",
+    "creatures",
+    "noah"
+  ],
+  "style": "inked",
+  "anchor": "objects/ANIMAL_PAIRS.png",
+  "first_used": "EW06_Noah",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

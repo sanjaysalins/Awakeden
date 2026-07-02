@@ -1,0 +1,18 @@
+{
+  "name": "PAUL",
+  "kind": "character",
+  "canonical": "Paul of Tarsus, formerly Saul the Pharisee (the apostle to the Gentiles, NOT one of the Twelve), a short stocky strong-built man of about forty-five with light-olive skin, a high balding domed forehead with the hair receded to a fringe, a strong heavy prominent brow over piercing penetrating eyes, a long pointed greying dark-brown beard with natural human hair colour (never green or unnatural tints), a learned commanding intensity to his lined scholarly face, dressed in a plain dark-brown traveller's mantle over an undyed tunic, gripping a rolled parchment scroll in one hand",
+  "tags": [
+    "paul",
+    "saul",
+    "apostle",
+    "tarsus",
+    "pharisee",
+    "scroll"
+  ],
+  "style": "inked",
+  "anchor": "characters/PAUL.png",
+  "first_used": "gospels",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "HYSSOP_BRANCH",
+  "kind": "object",
+  "canonical": "a small bundled bunch of leafy green hyssop sprigs tied at the stem, the leaves and tips dripping dark red where dipped in blood \u2014 a humble cleansing herb used as a brush, NOT a long staff, NOT a leafy tree branch",
+  "tags": [
+    "hyssop",
+    "branch",
+    "herb",
+    "bunch",
+    "blood",
+    "leaves"
+  ],
+  "style": "inked",
+  "anchor": "objects/HYSSOP_BRANCH.png",
+  "first_used": "EW08_Passover",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

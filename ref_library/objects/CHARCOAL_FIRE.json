@@ -1,0 +1,18 @@
+{
+  "name": "CHARCOAL_FIRE",
+  "kind": "object",
+  "canonical": "a low heap of glowing charcoal coals burning on bare lakeshore sand at dawn, thin grey smoke rising, a few black-and-orange embers among grey ash \u2014 a small open ground fire of coals, NOT a built fire-pit, NOT logs or a bonfire",
+  "tags": [
+    "charcoal",
+    "coals",
+    "fire",
+    "embers",
+    "smoke",
+    "ash"
+  ],
+  "style": "inked",
+  "anchor": "objects/CHARCOAL_FIRE.png",
+  "first_used": "16 The Fire Jesus Built",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

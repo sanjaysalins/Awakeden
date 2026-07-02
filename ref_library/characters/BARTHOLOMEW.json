@@ -1,0 +1,18 @@
+{
+  "name": "BARTHOLOMEW",
+  "kind": "character",
+  "canonical": "Bartholomew, also called Nathanael, the guileless true Israelite 'in whom is no guile', a wiry man of about thirty-five with warm mid-olive skin, a candid honest open face with clear steady frank eyes and an easy half-smile, dark brown curling hair to the nape and a moderate softly-curled chestnut beard, dressed in a striped cream-and-brown woven mantle over a plain undyed tunic with a folded head-cloth resting on his shoulders, hands open and unguarded",
+  "tags": [
+    "bartholomew",
+    "nathanael",
+    "apostle",
+    "guileless",
+    "israelite",
+    "honest"
+  ],
+  "style": "inked",
+  "anchor": "characters/BARTHOLOMEW.png",
+  "first_used": "gospels",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

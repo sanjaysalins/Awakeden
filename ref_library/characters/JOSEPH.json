@@ -1,0 +1,18 @@
+{
+  "name": "JOSEPH",
+  "kind": "character",
+  "canonical": "Joseph, son of Jacob, raised to governor of Egypt, a Hebrew man of about thirty-five, smooth olive-brown skin, a composed noble clean-shaven Egyptian-court face, dark hair under a fine headdress, robed in fine white linen with a broad gold collar and signet ring at Pharaoh's right hand",
+  "tags": [
+    "joseph",
+    "governor",
+    "egypt",
+    "linen",
+    "gold-collar",
+    "hebrew"
+  ],
+  "style": "inked",
+  "anchor": "characters/JOSEPH.png",
+  "first_used": "EW03_Joseph",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

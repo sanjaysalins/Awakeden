@@ -1,0 +1,18 @@
+{
+  "name": "CUSHION",
+  "kind": "object",
+  "canonical": "a worn leather stern cushion, a single stuffed hide pillow darkened with use, resting in the back of a fishing boat where a man might lay his head. The helmsman's cushion Jesus slept on \u2014 NOT a soft modern throw pillow, NOT embroidered fabric",
+  "tags": [
+    "cushion",
+    "leather",
+    "stern",
+    "pillow",
+    "boat",
+    "worn"
+  ],
+  "style": "inked",
+  "anchor": "objects/CUSHION.png",
+  "first_used": "02 Why are you afraid",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

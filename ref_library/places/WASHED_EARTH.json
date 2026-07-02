@@ -1,0 +1,18 @@
+{
+  "name": "WASHED_EARTH",
+  "kind": "place",
+  "canonical": "the clean new world after the flood receded: glistening rain-washed hillsides of fresh wet earth and bright new green, pools and rivulets draining away, low scattered mist lifting under a clearing sky touched by a faint rainbow, a world made new and still",
+  "tags": [
+    "washed-earth",
+    "post-flood",
+    "renewal",
+    "green",
+    "mist",
+    "rainbow"
+  ],
+  "style": "inked",
+  "anchor": "places/WASHED_EARTH.png",
+  "first_used": "EW06_Noah",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "INIQUITY_LAID_ON_HIM",
+  "kind": "motif",
+  "canonical": "scattered straying sheep wandering above, and below them one bowed innocent Servant bearing a heavy dark burden settling down upon his shoulders alone \u2014 the guilt of us all laid on him",
+  "tags": [
+    "isaiah",
+    "iniquity",
+    "servant",
+    "laid-on",
+    "sheep",
+    "substitution"
+  ],
+  "style": "inked",
+  "anchor": "motifs/INIQUITY_LAID_ON_HIM.png",
+  "first_used": "EW07_Isaiah",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

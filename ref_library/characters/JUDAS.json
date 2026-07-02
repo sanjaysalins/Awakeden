@@ -1,0 +1,18 @@
+{
+  "name": "JUDAS",
+  "kind": "character",
+  "canonical": "Judas Iscariot, a first-century Jewish disciple of about thirty-five, a lean restless build, olive skin and a shadowed furtive narrow face, oiled dark hair and a thin pointed dark beard, dressed in a plain coarse tunic and mantle of muddy green, a small bulging bag of silver coins clutched white-knuckled in one hand",
+  "tags": [
+    "judas",
+    "iscariot",
+    "disciple",
+    "betrayer",
+    "silver",
+    "furtive"
+  ],
+  "style": "inked",
+  "anchor": "characters/JUDAS.png",
+  "first_used": "EW03_Joseph",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

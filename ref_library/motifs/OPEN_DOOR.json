@@ -1,0 +1,18 @@
+{
+  "name": "OPEN_DOOR",
+  "kind": "motif",
+  "canonical": "a single open doorway standing alone, light pouring out from within across the threshold, never barred or locked, the one waiting way of entrance for whoever comes",
+  "tags": [
+    "door",
+    "entrance",
+    "light",
+    "welcome",
+    "way",
+    "open"
+  ],
+  "style": "inked",
+  "anchor": "motifs/OPEN_DOOR.png",
+  "first_used": "32_The_Door_Was_a_Body",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

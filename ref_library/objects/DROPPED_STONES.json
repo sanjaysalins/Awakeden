@@ -1,0 +1,18 @@
+{
+  "name": "DROPPED_STONES",
+  "kind": "object",
+  "canonical": "rough execution stones left lying unthrown on the dusty temple ground, abandoned where the accusers dropped them and went away \u2014 the stones no hand would now cast (John 8:7-9)",
+  "tags": [
+    "stones",
+    "rocks",
+    "dropped",
+    "dust",
+    "abandoned",
+    "grey"
+  ],
+  "style": "inked",
+  "anchor": "objects/DROPPED_STONES.png",
+  "first_used": "31 The Light You Can Stand In",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

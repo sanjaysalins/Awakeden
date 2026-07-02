@@ -1,0 +1,18 @@
+{
+  "name": "MAN_CAST_INTO_SEA",
+  "kind": "motif",
+  "canonical": "a lone robed figure hurled from the heaving deck of a wooden ship into the dark swallowing waves, his body sinking into the churning waters, while above and around him the violent storm falls suddenly still and the rest are spared",
+  "tags": [
+    "jonah",
+    "storm",
+    "sea",
+    "sacrifice",
+    "overboard",
+    "stilled-waters"
+  ],
+  "style": "inked",
+  "anchor": "motifs/MAN_CAST_INTO_SEA.png",
+  "first_used": "23 The Prepared Belly",
+  "count": 3,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

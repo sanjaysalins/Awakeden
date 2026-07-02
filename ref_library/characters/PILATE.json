@@ -1,0 +1,18 @@
+{
+  "name": "PILATE",
+  "kind": "character",
+  "canonical": "Pontius Pilate, the Roman governor of Judea, a clean-shaven Roman man of middle years with pale-bronze skin, a stern hawk-nosed patrician face and short cropped greying hair, wearing a plain undyed white Roman governor's toga over a tunic (an equestrian prefect \u2014 NO senatorial purple stripe), an official ring on his hand, standing in cold imperial authority",
+  "tags": [
+    "pilate",
+    "roman",
+    "governor",
+    "toga",
+    "no-purple",
+    "authority"
+  ],
+  "style": "inked",
+  "anchor": "characters/PILATE.png",
+  "first_used": "03_Passover_Lamb",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

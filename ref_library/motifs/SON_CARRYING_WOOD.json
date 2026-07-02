@@ -1,0 +1,18 @@
+{
+  "name": "SON_CARRYING_WOOD",
+  "kind": "motif",
+  "canonical": "the beloved son climbing the hill of Moriah with the heavy bundle of wood for his own offering bound across his shoulders, bearing up the very wood of his sacrifice",
+  "tags": [
+    "abraham",
+    "isaac",
+    "wood",
+    "moriah",
+    "son",
+    "type"
+  ],
+  "style": "inked",
+  "anchor": "motifs/SON_CARRYING_WOOD.png",
+  "first_used": "EW02_Abraham",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

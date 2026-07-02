@@ -1,0 +1,18 @@
+{
+  "name": "BINDING_KNIFE",
+  "kind": "object",
+  "canonical": "an ancient sacrificial knife, a short bronze or flint blade with a worn wooden or bone handle, raised in a patriarch's hand to slay the offering. The knife of the binding of Isaac \u2014 NOT a modern steel kitchen knife, NOT a sword or dagger; a primitive ritual slaughter-blade",
+  "tags": [
+    "knife",
+    "blade",
+    "sacrifice",
+    "bronze",
+    "abraham",
+    "binding"
+  ],
+  "style": "inked",
+  "anchor": "objects/BINDING_KNIFE.png",
+  "first_used": "EW02_Abraham",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

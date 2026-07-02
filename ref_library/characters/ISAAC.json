@@ -1,0 +1,18 @@
+{
+  "name": "ISAAC",
+  "kind": "character",
+  "canonical": "Isaac, Abraham's beloved son of promise, a strong gentle young Hebrew man, smooth sun-warmed olive skin, a trusting open face, dark hair and a soft young first beard, in a simple undyed tunic, a heavy bundle of split wood bound on his back as he climbs the mountain",
+  "tags": [
+    "isaac",
+    "son-of-promise",
+    "young-man",
+    "hebrew",
+    "wood",
+    "sacrifice"
+  ],
+  "style": "inked",
+  "anchor": "characters/ISAAC.png",
+  "first_used": "EW02_Abraham",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

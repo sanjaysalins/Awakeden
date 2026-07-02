@@ -1,0 +1,18 @@
+{
+  "name": "GRAVE",
+  "kind": "motif",
+  "canonical": "a dark rock-cut sepulchre and its sealing stone in shadow, the grave that the wilderness manna could never keep its eaters from, now broken open and defeated by the true Bread",
+  "tags": [
+    "grave",
+    "death",
+    "manna",
+    "tomb",
+    "defeat",
+    "bread-of-life"
+  ],
+  "style": "inked",
+  "anchor": "motifs/GRAVE.png",
+  "first_used": "35_Manna_Fulfilled",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

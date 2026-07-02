@@ -1,0 +1,18 @@
+{
+  "name": "HOLY_OF_HOLIES",
+  "kind": "place",
+  "canonical": "the innermost chamber of the wilderness tabernacle behind the veil: a small windowless sanctuary wrapped in thick darkness, the heavy embroidered curtain drawn across, the golden ark dim within a hovering cloud of presence, a sacred and dreadful stillness",
+  "tags": [
+    "holy-of-holies",
+    "tabernacle",
+    "veil",
+    "ark",
+    "sanctuary",
+    "darkness"
+  ],
+  "style": "inked",
+  "anchor": "places/HOLY_OF_HOLIES.png",
+  "first_used": "EW01_Two_Goats",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

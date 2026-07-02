@@ -1,0 +1,87 @@
+{
+  "_doc": "INKED 16:9 gravitas-test SLICE for the Psalm-22 long pilot (MOTIONCOMIC_SPEC v1.1, [LONG] provisional). 3 scenes spanning the arc (cry -> messianic wound -> risen land-on-Christ), adapted from the existing Baroque visual_16x9/scene_plan.json (#1, #9, #24). Purpose: judge whether the inked graphic-novel look holds reverent gravitas over a long, via an A/B against the already-rendered Baroque clips (01/09/24 .mp4). Reuses the LOCKED narration.mp3 (audio $0). NOT the full 24-scene plan — that is only built if this slice wins the gravitas A/B.",
+  "header": {
+    "format": "16:9",
+    "style": "graphic_novel",
+    "provider": "byteplus_seedream_4_5",
+    "animation": {
+      "model": "hf_kling3_0_pro",
+      "aspect": "16:9",
+      "duration": 5
+    },
+    "episode": "02_Psalm_22_Song_From_The_Cross",
+    "audio_seconds": 418.2,
+    "audio": "../narration.mp3",
+    "note": "slice only samples 3 of 24 scenes for the A/B; page_seconds/full-cost derived only if it proceeds"
+  },
+  "scenes": [
+    {
+      "index": 1,
+      "slug": "cry_ninth_hour",
+      "src_baroque": 1,
+      "beat": "M1 The Cry",
+      "t_start": 0.0,
+      "t_end": 12.0,
+      "subject_type": "christ_hero",
+      "christ_ref": true,
+      "ref": "risen_face",
+      "concept": "the crucified Christ crying out against a vast black noon sky",
+      "bible_ref": "Matthew 27:46; Psalm 22:1",
+      "prompt_seed": "inked biblical graphic-novel, a wide cinematic hero shot: the crucified Christ - a dark-haired bearded man in his early thirties, calm Near-Eastern face - seen close and intimate against a vast black thunderous noon sky, his head tipped back as he cries out with his last strength, robed at the waist, a single shaft of pale light breaking through the storm onto his face and bare shoulders; bold black ink outlines, cel-flat color, dramatic cross-hatched deep shadow, reverent, epic, 1st-century",
+      "macro_elements": [
+        "upturned crying face",
+        "shaft of light",
+        "black storm sky",
+        "cross beam"
+      ],
+      "motion": "pullback",
+      "why": "cold-open hero: does an inked cross-cry carry the same weight as the Baroque plate?",
+      "reuse": "new"
+    },
+    {
+      "index": 9,
+      "slug": "pierced_hands_feet",
+      "src_baroque": 9,
+      "beat": "M3 The Wounds Written Early",
+      "t_start": 124.8,
+      "t_end": 145.6,
+      "subject_type": "christ_detail",
+      "christ_ref": false,
+      "ref": null,
+      "concept": "a nail-pierced hand in sharp focus, 'they pierced my hands and my feet'",
+      "bible_ref": "Psalm 22:16; John 20:25",
+      "prompt_seed": "inked biblical graphic-novel, a wide macro: a nail-pierced hand in sharp focus catching one shaft of light, the hand anatomically correct with five distinct separated fingers and a clearly separate thumb, a single large hand-forged square iron Roman nail driven straight through the centre of the open palm deep into a dark rough wooden beam, dark red blood welling around the iron and running down the wrist; bold black ink outlines, cel-flat color, cross-hatched shadow, reverent, 1st-century",
+      "macro_elements": [
+        "pierced palm",
+        "iron nail",
+        "wooden beam",
+        "welling blood"
+      ],
+      "motion": "pushin",
+      "why": "the messianic wound (Ps 22:16 fulfilled) - live crucifixion nail, not a risen scar; tests the wound render at 16:9",
+      "reuse": "new"
+    },
+    {
+      "index": 24,
+      "slug": "risen_hero_come",
+      "src_baroque": 24,
+      "beat": "M7 He Hath Done This",
+      "t_start": 393.2,
+      "t_end": 418.2,
+      "subject_type": "christ_risen",
+      "christ_ref": true,
+      "ref": "risen_face",
+      "concept": "the risen Christ reaching an open pierced hand toward the viewer (the CTA landing)",
+      "bible_ref": "Psalm 22:31; John 19:30; Hebrews 2:12",
+      "prompt_seed": "inked biblical graphic-novel, a wide hero close: the risen Christ - a dark-haired bearded man with a serene glorified face - in warm radiant golden light, reaching one open hand gently toward the viewer, a faint thin old scar line across the centre of the palm; bold black ink outlines, cel-flat color, reverent, inviting, 1st-century",
+      "macro_elements": [
+        "serene risen face",
+        "open hand with healed nail-print",
+        "warm golden glow"
+      ],
+      "motion": "pushin",
+      "why": "land-on-Christ close (MC-G10) + the corrected wound rule MC-R1 (visible healed nail-PRINT, John 20:25-27) - the highest-stakes gravitas test",
+      "reuse": "new"
+    }
+  ]
+}

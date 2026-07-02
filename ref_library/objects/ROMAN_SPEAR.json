@@ -1,0 +1,18 @@
+{
+  "name": "ROMAN_SPEAR",
+  "kind": "object",
+  "canonical": "a Roman legionary lancea spear, a long straight ash-wood shaft tipped with a leaf-shaped forged iron head, plain and battle-worn \u2014 the spear that pierced the Saviour side (John 19:34), NOT a modern blade",
+  "tags": [
+    "spear",
+    "roman",
+    "lancea",
+    "piercing",
+    "crucifixion",
+    "john-19"
+  ],
+  "style": "inked",
+  "anchor": "objects/ROMAN_SPEAR.png",
+  "first_used": "zechariah_12_10_pierced",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "SEEKER_AT_THE_DOOR",
+  "kind": "character",
+  "canonical": "a seeker hesitating at the threshold, an ancient Near-Eastern figure of indeterminate middle years with olive skin and a downcast ashamed face, shoulders hunched and head lowered, wrapped in a plain travel-worn earth-toned robe and head-cloth, one hesitant hand half-raised at the dim open doorway of a stone dwelling",
+  "tags": [
+    "seeker",
+    "threshold",
+    "ashamed",
+    "doorway",
+    "hesitant",
+    "humble"
+  ],
+  "style": "inked",
+  "anchor": "characters/SEEKER_AT_THE_DOOR.png",
+  "first_used": "36_In_No_Wise_Cast_Out",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "MATTHEW",
+  "kind": "character",
+  "canonical": "Matthew the apostle, the former tax-collector of Capernaum once prosperous and now plainly dressed, a man of about forty with smoother well-kept light-olive skin softer than the fishermen's, a shrewd intelligent clean-lined face with alert watchful eyes, neatly groomed dark hair and a trimmed short dark beard, his once-fine garments now reduced to a simple muted blue-grey robe of good but worn cloth, a small reed pen and a folded writing-tablet tucked at his belt as a relic of his counting-table",
+  "tags": [
+    "matthew",
+    "apostle",
+    "tax-collector",
+    "scribe",
+    "former-wealth",
+    "pen"
+  ],
+  "style": "inked",
+  "anchor": "characters/MATTHEW.png",
+  "first_used": "gospels",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "STIRRING_WATER",
+  "kind": "motif",
+  "canonical": "the troubled surface of a stone pool of Bethesda rippling and stirring, ringed by the waiting sick, the troubled water believed to heal the first to step in",
+  "tags": [
+    "bethesda",
+    "pool",
+    "water",
+    "false-hope",
+    "ripple",
+    "waiting"
+  ],
+  "style": "inked",
+  "anchor": "motifs/STIRRING_WATER.png",
+  "first_used": "26 Jesus Walked Past the Pool",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

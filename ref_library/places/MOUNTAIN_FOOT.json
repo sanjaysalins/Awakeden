@@ -1,0 +1,18 @@
+{
+  "name": "MOUNTAIN_FOOT",
+  "kind": "place",
+  "canonical": "the base of a barren mountain in the land of Moriah: a stony lower slope of scattered boulders and dry thornscrub where a waiting party might rest, the great rock rising steeply above, a hard clear sky and quiet shadow at the foot of the height",
+  "tags": [
+    "mountain",
+    "foot",
+    "base",
+    "moriah",
+    "rocky",
+    "slope"
+  ],
+  "style": "inked",
+  "anchor": "places/MOUNTAIN_FOOT.png",
+  "first_used": "EW02_Abraham",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

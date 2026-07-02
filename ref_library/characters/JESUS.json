@@ -5,12 +5,14 @@
   "tags": [
     "jesus",
     "christ",
-    "new-testament",
-    "hero",
-    "messiah"
+    "messiah",
+    "judean",
+    "anchor",
+    "savior"
   ],
   "style": "inked",
   "anchor": "characters/JESUS.png",
-  "first_used": "EW04_Bronze_Serpent",
+  "first_used": "01_Isaiah_53",
+  "count": 55,
   "notes": "Pass `anchor` as --image to lock identity/world across scenes."
 }

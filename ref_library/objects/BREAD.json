@@ -1,0 +1,17 @@
+{
+  "name": "BREAD",
+  "kind": "object",
+  "canonical": "a single round flat loaf of ancient Near-Eastern bread, pale and dense, hand-formed and flat \u2014 the plain daily bread of the ancient Near East, NOT a modern risen sliced loaf, NOT a baguette or bagel",
+  "tags": [
+    "bread",
+    "unleavened",
+    "loaf",
+    "flatbread",
+    "ancient"
+  ],
+  "style": "inked",
+  "anchor": "objects/BREAD.png",
+  "first_used": "34_The_Hunger_Bread_Cant_Fill",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "RING",
+  "kind": "object",
+  "canonical": "a golden signet ring, a heavy ancient band with a flat engraved seal-face bearing the mark of the household's authority. The father's signet restored to the son \u2014 NOT a modern jewelled wedding ring, NOT a plain thin band; a seal-ring of authority",
+  "tags": [
+    "ring",
+    "signet",
+    "gold",
+    "seal",
+    "authority",
+    "son"
+  ],
+  "style": "inked",
+  "anchor": "objects/RING.png",
+  "first_used": "09 The Father Who Ran",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

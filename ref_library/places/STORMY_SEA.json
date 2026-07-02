@@ -1,0 +1,18 @@
+{
+  "name": "STORMY_SEA",
+  "kind": "place",
+  "canonical": "the raging open deep that swallows a ship's course: vast black storm-driven swells heaving to the horizon, foam streaking off the wave-crests in a howling wind, a low bruised sky of torn cloud, the sea wild and merciless with no land in sight",
+  "tags": [
+    "sea",
+    "storm",
+    "deep",
+    "waves",
+    "raging",
+    "open-water"
+  ],
+  "style": "inked",
+  "anchor": "places/STORMY_SEA.png",
+  "first_used": "EW05_Jonah_short",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "NEARER_KINSMAN",
+  "kind": "character",
+  "canonical": "the nearer kinsman who refused to redeem, a stocky Hebrew townsman of Bethlehem of middle age, sun-worn olive skin, a guarded calculating bearded face with darting eyes, dark hair greying, robed in a drab grey-brown layered mantle and head-cloth, stooping to draw off his sandal as he turns evasively away",
+  "tags": [
+    "kinsman",
+    "nearer",
+    "refuser",
+    "bethlehem",
+    "sandal",
+    "stocky"
+  ],
+  "style": "inked",
+  "anchor": "characters/NEARER_KINSMAN.png",
+  "first_used": "EW09_Boaz",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

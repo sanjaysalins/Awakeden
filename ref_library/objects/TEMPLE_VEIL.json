@@ -1,0 +1,18 @@
+{
+  "name": "TEMPLE_VEIL",
+  "kind": "object",
+  "canonical": "the great heavy temple curtain before the Holy of Holies \u2014 thick woven linen of blue, purple and scarlet with cherubim figured into it, hanging full from ceiling to floor, massive and sealing. The barrier veil of the sanctuary \u2014 NOT a thin household drape, NOT a modern theatre curtain; shown whole and intact (its tearing is a separate moment)",
+  "tags": [
+    "veil",
+    "curtain",
+    "temple",
+    "cherubim",
+    "holy",
+    "linen"
+  ],
+  "style": "inked",
+  "anchor": "objects/TEMPLE_VEIL.png",
+  "first_used": "06_Day_Of_Atonement",
+  "count": 3,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

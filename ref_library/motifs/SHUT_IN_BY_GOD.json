@@ -1,0 +1,18 @@
+{
+  "name": "SHUT_IN_BY_GOD",
+  "kind": "motif",
+  "canonical": "the great pitch-sealed ark door drawn shut and sealed fast as if by unseen power from outside, the shutting-in that Noah never performed (the LORD shut him in, Gen 7:16) \u2014 shown by light and providence, NO human hand or figure of God",
+  "tags": [
+    "noah",
+    "ark",
+    "door",
+    "sealed",
+    "shut-in",
+    "divine-hand"
+  ],
+  "style": "inked",
+  "anchor": "motifs/SHUT_IN_BY_GOD.png",
+  "first_used": "EW06_Noah",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

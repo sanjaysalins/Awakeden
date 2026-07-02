@@ -1,0 +1,18 @@
+{
+  "name": "RAINBOW",
+  "kind": "object",
+  "canonical": "a soft full arc of rainbow colours bending across a washed clearing sky over a rain-soaked world, faint and luminous \u2014 God's bow of the covenant, NOT a neon or cartoon rainbow, NOT a double prism band",
+  "tags": [
+    "rainbow",
+    "bow",
+    "arc",
+    "sky",
+    "covenant",
+    "colours"
+  ],
+  "style": "inked",
+  "anchor": "objects/RAINBOW.png",
+  "first_used": "EW06_Noah",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "FLOOD_WATERS",
+  "kind": "place",
+  "canonical": "the rising waters of the great flood drowning the whole earth: a boundless grey expanse of storm-churned water beneath an unbroken curtain of driving rain, the last drowned hilltops vanishing, no land and no horizon, judgment poured out over the world",
+  "tags": [
+    "flood",
+    "waters",
+    "judgment",
+    "rain",
+    "deluge",
+    "grey"
+  ],
+  "style": "inked",
+  "anchor": "places/FLOOD_WATERS.png",
+  "first_used": "EW06_Noah",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

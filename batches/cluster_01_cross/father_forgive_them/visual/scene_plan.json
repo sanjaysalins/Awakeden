@@ -1,0 +1,81 @@
+{
+  "_doc": "Motion-comic scene plan for the 12-panel 'Father, forgive them' short. Reading order = narration order (see visual_beats.md). Each scene: png (the actual lettered file in nbp/), motion (single-direction move suited to a motion comic + later PIL furniture), macro_elements (crop/focus anchors), viral_role. STYLE = inked graphic-novel (NOT Baroque oil) — the animate driver builds an inked motion prompt so Kling does not repaint the ink.",
+  "plan": {
+    "style": "inked-graphic-novel",
+    "audio_seconds": 57.15,
+    "scenes": [
+      {
+        "index": 1, "png": "01b_nailed_hands", "beat": "HOOK",
+        "motion": "pushin", "viral_role": "hook-open",
+        "focus": "the nailed hands and the iron spikes through the palms",
+        "macro_elements": ["the pierced hands", "the iron spikes", "the dark cross-beam", "the running blood"]
+      },
+      {
+        "index": 2, "png": "01c_soldiers_gamble", "beat": "HOOK",
+        "motion": "pushin", "viral_role": "build",
+        "focus": "the soldiers' faces bent over their game",
+        "macro_elements": ["the soldiers' bent faces", "the casting hands", "the carved lots", "the foot of the cross"]
+      },
+      {
+        "index": 3, "png": "01_golgotha_hook", "beat": "HOOK",
+        "motion": "pullback", "viral_role": "build",
+        "focus": "the whole cross under the storm sky",
+        "macro_elements": ["the cross under storm sky", "the lifted figure", "the small soldiers below", "the black clouds"]
+      },
+      {
+        "index": 4, "png": "02_jesus_prays", "beat": "POINT",
+        "motion": "pushin", "viral_role": "build",
+        "focus": "Christ's face, head lifted, lips parting to speak",
+        "macro_elements": ["Christ's lifted face", "the parting lips", "the lifted eyes", "the cross-beam"]
+      },
+      {
+        "index": 5, "png": "03_prayer_close", "beat": "POINT",
+        "motion": "hold", "viral_role": "build",
+        "focus": "Christ's face, eyes lifted to heaven",
+        "macro_elements": ["Christ's face", "the eyes lifted to heaven", "the brow"]
+      },
+      {
+        "index": 6, "png": "04_cast_lots", "beat": "PROOF",
+        "motion": "pushin", "viral_role": "build",
+        "focus": "the hands casting the carved lots over the heaped robe",
+        "macro_elements": ["the casting hands", "the carved lots", "the seamless robe heaped", "the candlelight"]
+      },
+      {
+        "index": 7, "png": "05_pierced_hand", "beat": "PROOF",
+        "motion": "pushin", "viral_role": "build",
+        "focus": "the open pierced hand, blood at the entry",
+        "macro_elements": ["the open pierced hand", "the pierced palm", "the outstretched arm", "the wounded wrist"]
+      },
+      {
+        "index": 8, "png": "06b_our_sin", "beat": "CONVICTION",
+        "motion": "pushin", "viral_role": "build",
+        "focus": "the bowed figures under the cross's long shadow",
+        "macro_elements": ["the bowed figures", "the long cross-shadow", "the shadowed faces"]
+      },
+      {
+        "index": 9, "png": "06_cross_over_us", "beat": "CONVICTION",
+        "motion": "pushin", "viral_role": "build",
+        "focus": "up the planted cross toward the light",
+        "macro_elements": ["the planted cross", "the kneeling figure at the foot", "the shaft of light", "the lifted figure"]
+      },
+      {
+        "index": 10, "png": "06c_intercession_lives", "beat": "CONVICTION",
+        "motion": "pushin", "viral_role": "build",
+        "focus": "the risen Christ, both scarred hands lifted in intercession",
+        "macro_elements": ["the risen face", "the scarred lifted hands", "the warm light"]
+      },
+      {
+        "index": 11, "png": "07b_gospel_wide", "beat": "LANDING",
+        "motion": "dolly", "viral_role": "build",
+        "focus": "the risen Christ stepping toward us out of golden light, arms beginning to open",
+        "macro_elements": ["the risen Christ stepping forward", "the opening arms", "the golden light", "the flowing robe"]
+      },
+      {
+        "index": 12, "png": "07_risen_hero", "beat": "LANDING",
+        "motion": "hold", "viral_role": "close",
+        "focus": "the risen face at peace and the scarred open hand reaching to the viewer",
+        "macro_elements": ["the risen face at peace", "the scarred reaching hand", "the calm eyes"]
+      }
+    ]
+  }
+}

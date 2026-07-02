@@ -1,0 +1,18 @@
+{
+  "name": "BELLY_OF_THE_FISH",
+  "kind": "place",
+  "canonical": "the cold dark interior of the great fish: a cavernous slick chamber of ribbed flesh and dripping membrane, faint sickly phosphorescence in deep gloom, tangled weeds and brine pooling below, a suffocating tomb-like enclosure, the belly of the deep",
+  "tags": [
+    "fish",
+    "belly",
+    "dark",
+    "interior",
+    "tomb",
+    "deep"
+  ],
+  "style": "inked",
+  "anchor": "places/BELLY_OF_THE_FISH.png",
+  "first_used": "EW05_Jonah",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

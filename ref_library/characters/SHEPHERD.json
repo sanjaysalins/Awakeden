@@ -1,0 +1,18 @@
+{
+  "name": "SHEPHERD",
+  "kind": "character",
+  "canonical": "an ancient Near-Eastern shepherd, a sturdy Hebrew herdsman of about forty with sun-darkened olive skin and a dark weather-worn beard, kind watchful eyes, wrapped in a rough undyed cream goat-hair cloak over a coarse brown girded tunic and a simple head-cloth, a worn leather sling at his belt, standing watchful among his flock with a tall crooked staff in hand",
+  "tags": [
+    "shepherd",
+    "herdsman",
+    "sheepfold",
+    "gate",
+    "cloak",
+    "sling"
+  ],
+  "style": "inked",
+  "anchor": "characters/SHEPHERD.png",
+  "first_used": "07 I AM the Door \u2014 The Shepherd Who Became the Gate",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

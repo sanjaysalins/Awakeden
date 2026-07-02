@@ -1,0 +1,18 @@
+{
+  "name": "PETER",
+  "kind": "character",
+  "canonical": "Peter the apostle, a robust weathered Galilean fisherman of about fifty, sun-darkened olive skin, a broad earnest face, thick greying dark hair and a full curly grey-flecked beard, strong calloused hands, wearing a coarse homespun tunic and mantle with a rope girdle",
+  "tags": [
+    "peter",
+    "apostle",
+    "fisherman",
+    "galilean",
+    "disciple",
+    "weathered"
+  ],
+  "style": "inked",
+  "anchor": "characters/PETER.png",
+  "first_used": "16 The Fire Jesus Built",
+  "count": 5,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

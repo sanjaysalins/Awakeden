@@ -1,0 +1,18 @@
+{
+  "name": "CROSS",
+  "kind": "object",
+  "canonical": "a tall rough-hewn unfinished wooden Roman execution cross, two heavy hand-split timbers fixed in a plain T or Latin shape, the upright planted into the ground and the crossbeam lashed and pegged across it, bark-flecked and splintered, weathered grey-brown. A first-century instrument of death \u2014 NOT a smooth polished modern crucifix, NOT a gilded or jewelled church cross, NOT a thin geometric symbol; no figure of Christ on it (bare cross)",
+  "tags": [
+    "cross",
+    "wood",
+    "roman",
+    "crucifixion",
+    "rough-hewn",
+    "execution"
+  ],
+  "style": "inked",
+  "anchor": "objects/CROSS.png",
+  "first_used": "01_Isaiah_53",
+  "count": 22,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "ROAD",
+  "kind": "place",
+  "canonical": "a long dusty country road home at dusk: a worn track crossing open fields and golden stubble toward a distant farmstead, low fences and scattered trees, the warm fading light of evening laid long across the land, quiet and waiting",
+  "tags": [
+    "road",
+    "fields",
+    "dusk",
+    "country",
+    "homeward",
+    "open"
+  ],
+  "style": "inked",
+  "anchor": "places/ROAD.png",
+  "first_used": "09 The Father Who Ran",
+  "count": 4,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

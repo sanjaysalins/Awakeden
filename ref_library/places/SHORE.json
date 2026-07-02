@@ -1,0 +1,18 @@
+{
+  "name": "SHORE",
+  "kind": "place",
+  "canonical": "a misty Sea of Galilee shoreline at sunrise: pale wet sand and smooth shore stones meeting still grey water, soft golden light breaking through low morning haze, distant quiet hills, a calm and washed stillness over the beach",
+  "tags": [
+    "shore",
+    "galilee",
+    "sunrise",
+    "beach",
+    "mist",
+    "calm"
+  ],
+  "style": "inked",
+  "anchor": "places/SHORE.png",
+  "first_used": "16 The Fire Jesus Built",
+  "count": 3,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "ARK_OF_THE_COVENANT",
+  "kind": "object",
+  "canonical": "a gold-overlaid acacia-wood covenant chest with carrying-rings and poles, crowned by the golden mercy seat and two facing cherubim with wings outstretched above it. The sacred Ark of the Covenant \u2014 NOT Noah's wooden barge-ship, NOT a plain treasure box; a gleaming gold cherubim-topped chest",
+  "tags": [
+    "ark",
+    "covenant",
+    "gold",
+    "acacia",
+    "cherubim",
+    "chest"
+  ],
+  "style": "inked",
+  "anchor": "objects/ARK_OF_THE_COVENANT.png",
+  "first_used": "EW01_Two_Goats",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

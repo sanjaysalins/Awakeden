@@ -1,0 +1,18 @@
+{
+  "name": "CASTING_LOTS",
+  "kind": "object",
+  "canonical": "small marked casting-lots \u2014 rough bone or wooden dice and a scatter of flat inscribed pebbles \u2014 thrown and lying on bare ground, mid-decision, the ancient way of letting chance fall. A handful of crude period gaming-lots tossed down \u2014 NOT modern numbered playing dice, NOT a board game, NOT cards",
+  "tags": [
+    "lots",
+    "dice",
+    "bone",
+    "casting",
+    "chance",
+    "ancient"
+  ],
+  "style": "inked",
+  "anchor": "objects/CASTING_LOTS.png",
+  "first_used": "02_Psalm_22",
+  "count": 4,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

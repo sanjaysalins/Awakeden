@@ -1,0 +1,18 @@
+{
+  "name": "DREAM_SHEAVES_STARS",
+  "kind": "motif",
+  "canonical": "Joseph's two separate dreams: eleven sheaves of grain bowing low to one upright sheaf, and the sun, moon and eleven stars bending in homage above",
+  "tags": [
+    "joseph",
+    "dream",
+    "sheaves",
+    "stars",
+    "homage",
+    "prophecy"
+  ],
+  "style": "inked",
+  "anchor": "motifs/DREAM_SHEAVES_STARS.png",
+  "first_used": "EW03_Joseph",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

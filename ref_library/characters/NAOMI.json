@@ -1,0 +1,18 @@
+{
+  "name": "NAOMI",
+  "kind": "character",
+  "canonical": "Naomi, an aged Hebrew widow with weathered olive skin and a deeply lined sorrowful face, grey hair bound beneath a worn dark mourning-veil, eyes hollowed with grief and bitterness, wrapped in a faded threadbare robe and shawl of muted grey-brown, her empty work-worn hands held open",
+  "tags": [
+    "naomi",
+    "widow",
+    "bitter",
+    "aged",
+    "veiled",
+    "mourning"
+  ],
+  "style": "inked",
+  "anchor": "characters/NAOMI.png",
+  "first_used": "EW09_Boaz",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

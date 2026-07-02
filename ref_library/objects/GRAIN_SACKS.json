@@ -1,0 +1,18 @@
+{
+  "name": "GRAIN_SACKS",
+  "kind": "object",
+  "canonical": "coarse woven sacks bulging with golden wheat grain, tied at the necks and stacked in a storehouse, some open spilling grain \u2014 the stored harvest of Egypt under famine, NOT modern paper sacks, NOT plastic bags",
+  "tags": [
+    "sacks",
+    "grain",
+    "burlap",
+    "storehouse",
+    "wheat",
+    "famine"
+  ],
+  "style": "inked",
+  "anchor": "objects/GRAIN_SACKS.png",
+  "first_used": "EW03_Joseph",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

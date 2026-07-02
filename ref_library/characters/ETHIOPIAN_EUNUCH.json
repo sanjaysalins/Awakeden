@@ -1,0 +1,18 @@
+{
+  "name": "ETHIOPIAN_EUNUCH",
+  "kind": "character",
+  "canonical": "the Ethiopian eunuch, a dignified African court official of Candace's treasury, deep dark-brown skin, a smooth full-cheeked clean-shaven noble face, richly dressed in fine layered robes of saffron and indigo and a jewelled gold headdress, seated upright in an ornate chariot holding an unrolled prophet's scroll covered only in faint vague illegible ancient script",
+  "tags": [
+    "eunuch",
+    "ethiopian",
+    "official",
+    "chariot",
+    "scroll",
+    "african"
+  ],
+  "style": "inked",
+  "anchor": "characters/ETHIOPIAN_EUNUCH.png",
+  "first_used": "01_Isaiah_53",
+  "count": 4,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

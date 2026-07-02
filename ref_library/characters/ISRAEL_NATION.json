@@ -1,0 +1,18 @@
+{
+  "name": "ISRAEL_NATION",
+  "kind": "character",
+  "canonical": "the whole nation of Israel at the Day of Atonement, a vast assembled throng of ancient Hebrews in earth-toned and undyed wool robes and head-coverings, hushed solemn faces of every age turned in breath-held expectation toward the tabernacle, the multitude stretching back across the desert encampment",
+  "tags": [
+    "israel",
+    "nation",
+    "congregation",
+    "atonement",
+    "throng",
+    "hebrew"
+  ],
+  "style": "inked",
+  "anchor": "characters/ISRAEL_NATION.png",
+  "first_used": "06_Day_Of_Atonement",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

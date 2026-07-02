@@ -1,0 +1,18 @@
+{
+  "name": "JUDAH_WATCHMAN_HEIGHT",
+  "kind": "place",
+  "canonical": "a high watchman's vantage over the land of Judah: a rocky hilltop lookout above terraced valleys and distant walled towns trembling between empires, far smoke on the horizon, a wide tense sky and long shadows over the kingdom seen from above",
+  "tags": [
+    "judah",
+    "watchman",
+    "height",
+    "vantage",
+    "hilltop",
+    "valley"
+  ],
+  "style": "inked",
+  "anchor": "places/JUDAH_WATCHMAN_HEIGHT.png",
+  "first_used": "EW07_Isaiah",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "FACES_OF_DEAD_PROPHETS",
+  "kind": "motif",
+  "canonical": "shadowy translucent portraits of John the Baptist, Elias and Jeremias rising faintly from the dim past, the prophets of old the people guessed Christ to be (John beheaded, Elijah taken up alive, Jeremiah long dead)",
+  "tags": [
+    "prophets",
+    "john-baptist",
+    "elias",
+    "jeremias",
+    "shadows",
+    "identity"
+  ],
+  "style": "inked",
+  "anchor": "motifs/FACES_OF_DEAD_PROPHETS.png",
+  "first_used": "27 A List of Dead Men",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "SPREAD_SKIRT",
+  "kind": "object",
+  "canonical": "the outstretched corner of a man's woven woollen robe, its hem and fringe spread wide as a covering \u2014 the kinsman's garment-corner of covering and redemption, NOT a skirt of clothing, NOT a blanket",
+  "tags": [
+    "garment",
+    "hem",
+    "corner",
+    "covering",
+    "robe",
+    "redemption"
+  ],
+  "style": "inked",
+  "anchor": "objects/SPREAD_SKIRT.png",
+  "first_used": "EW09_Boaz",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

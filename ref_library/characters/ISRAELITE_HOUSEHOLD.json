@@ -1,0 +1,18 @@
+{
+  "name": "ISRAELITE_HOUSEHOLD",
+  "kind": "character",
+  "canonical": "A household of ancient Hebrew folk standing together at the doorway of their stone house: bearded robed men, veiled women and grey elders side by side, all in modest coarse desert robes, mantles and headcloths over dust-worn olive skin, dignified, reverent and fully dressed, an ordinary warm day",
+  "tags": [
+    "household",
+    "family",
+    "hebrew",
+    "passover",
+    "slaves",
+    "group"
+  ],
+  "style": "inked",
+  "anchor": "characters/ISRAELITE_HOUSEHOLD.png",
+  "first_used": "03_Passover_Lamb",
+  "count": 3,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

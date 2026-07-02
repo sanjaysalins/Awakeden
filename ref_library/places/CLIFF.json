@@ -1,0 +1,18 @@
+{
+  "name": "CLIFF",
+  "kind": "place",
+  "canonical": "a towering rock cliff at Caesarea Philippi: a sheer wall of pale weathered limestone rising high, a great dark pagan cave-shrine gaping at its base, tumbled boulders and dry scrub below, cold shadow at the rock face",
+  "tags": [
+    "cliff",
+    "rock",
+    "cave",
+    "gates-of-hades",
+    "caesarea-philippi",
+    "limestone"
+  ],
+  "style": "inked",
+  "anchor": "places/CLIFF.png",
+  "first_used": "19 The Cliff of Rival Gods",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

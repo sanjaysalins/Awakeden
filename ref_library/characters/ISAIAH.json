@@ -1,0 +1,18 @@
+{
+  "name": "ISAIAH",
+  "kind": "character",
+  "canonical": "Isaiah the prophet, son of Amoz, an aged Hebrew seer of Judah of about sixty, weathered olive skin, a grave lean lined face, long iron-grey hair and a full grey beard, intent reverent eyes and ink-stained fingers, robed in a coarse undyed sackcloth-brown prophet's mantle and head-cloth, bent over an unrolled scroll writing the vision by hand with a reed pen",
+  "tags": [
+    "isaiah",
+    "prophet",
+    "seer",
+    "scroll",
+    "scribe",
+    "judah"
+  ],
+  "style": "inked",
+  "anchor": "characters/ISAIAH.png",
+  "first_used": "01_Isaiah_53",
+  "count": 5,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

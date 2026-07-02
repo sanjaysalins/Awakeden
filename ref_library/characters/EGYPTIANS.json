@@ -1,0 +1,18 @@
+{
+  "name": "EGYPTIANS",
+  "kind": "character",
+  "canonical": "a group of ancient Egyptian nobles and citizens standing in a row in a lamplit Egyptian hall, bronze skin, formal striped headdresses and broad collars, in fine long pleated white linen robes, dignified, modest and fully clothed",
+  "tags": [
+    "egyptians",
+    "plague",
+    "firstborn",
+    "wailing",
+    "passover",
+    "grief"
+  ],
+  "style": "inked",
+  "anchor": "characters/EGYPTIANS.png",
+  "first_used": "EW08_Passover",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

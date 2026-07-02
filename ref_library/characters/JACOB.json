@@ -1,0 +1,18 @@
+{
+  "name": "JACOB",
+  "kind": "character",
+  "canonical": "Jacob, called Israel, an aged Hebrew patriarch with weathered deeply-lined olive skin, a long flowing white beard and white hair, tender grieving deep-set eyes, wrapped in a layered patriarchal mantle of bold muted earthen stripes over a long robe, leaning heavily on a worn wooden staff and favouring his lamed thigh",
+  "tags": [
+    "jacob",
+    "israel",
+    "patriarch",
+    "striped-mantle",
+    "limp",
+    "father"
+  ],
+  "style": "inked",
+  "anchor": "characters/JACOB.png",
+  "first_used": "EW03_Joseph",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

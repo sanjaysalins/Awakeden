@@ -1,0 +1,18 @@
+{
+  "name": "MUDBRICK_HOUSE",
+  "kind": "place",
+  "canonical": "a slave family's mud-brick dwelling in the land of bondage, shut for the night: a single cramped earthen room with rough plastered walls and a low timber-beamed roof, a packed dirt floor and a barred plank door, faint lamplight in close darkness",
+  "tags": [
+    "mud-brick",
+    "house",
+    "dwelling",
+    "interior",
+    "bondage",
+    "night"
+  ],
+  "style": "inked",
+  "anchor": "places/MUDBRICK_HOUSE.png",
+  "first_used": "EW08_Passover",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

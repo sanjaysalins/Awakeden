@@ -1,0 +1,18 @@
+{
+  "name": "GREAT_FISH",
+  "kind": "object",
+  "canonical": "a vast dark sea-creature breaching the storm-black deep, its enormous gaping mouth open to swallow a man whole, immense and shadowed, scales or smooth hide glistening. The great fish the LORD prepared (Jonah 1:17) \u2014 a single colossal beast, NOT a friendly cartoon whale, NOT a sea-monster with horns, awe and dread not whimsy",
+  "tags": [
+    "fish",
+    "whale",
+    "leviathan",
+    "jonah",
+    "sea",
+    "great"
+  ],
+  "style": "inked",
+  "anchor": "objects/GREAT_FISH.png",
+  "first_used": "23 The Prepared Belly",
+  "count": 3,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

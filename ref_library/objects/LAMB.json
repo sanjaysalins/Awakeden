@@ -1,0 +1,18 @@
+{
+  "name": "LAMB",
+  "kind": "object",
+  "canonical": "a silent young unblemished lamb with clean white wool, head bowed and meek, a spotless male of the first year led without struggle. The sacrificial Lamb of Scripture \u2014 NOT a fluffy modern toy lamb, NOT a cartoon, NOT a grown horned ram; gentle, real, and pure",
+  "tags": [
+    "lamb",
+    "white",
+    "unblemished",
+    "sacrifice",
+    "meek",
+    "wool"
+  ],
+  "style": "inked",
+  "anchor": "objects/LAMB.png",
+  "first_used": "01_Isaiah_53",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

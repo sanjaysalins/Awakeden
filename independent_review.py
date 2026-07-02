@@ -38,7 +38,7 @@ PROVIDERS = {
     },
     "claude": {
         "command": "claude", "args": ["-p"], "mode": "stdin",
-        "prefix": "", "timeout": 300,
+        "prefix": "", "timeout": 600,
     },
     "gemini": {
         "command": "gemini", "args": ["--approval-mode", "plan", "--output-format", "text"],

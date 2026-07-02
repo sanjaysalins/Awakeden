@@ -1,0 +1,18 @@
+{
+  "name": "DEATH_PASSING_OVER",
+  "kind": "motif",
+  "canonical": "the dark shadow of the destroyer moving silently down a night street of Egypt, halting at and passing over a single blood-marked doorway that stands untouched in the gloom",
+  "tags": [
+    "passover",
+    "destroyer",
+    "shadow",
+    "judgment",
+    "spared",
+    "night"
+  ],
+  "style": "inked",
+  "anchor": "motifs/DEATH_PASSING_OVER.png",
+  "first_used": "03_Passover_Lamb",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

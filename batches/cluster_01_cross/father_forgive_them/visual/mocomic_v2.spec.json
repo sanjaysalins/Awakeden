@@ -1,0 +1,280 @@
+{
+  "_doc": "Motion-comic spec v2.1 for 'Father, forgive them' — EW04-STYLE: every grid page holds MULTIPLE DISTINCT stills/clips (one per panel), NOT one still sliced into boxes. fill_each templates (two_v/stack_h/big_inset/quad) pair related shots (wound+hammer, gamblers+robe, prophecy+fulfillment, a 4-up guilt montage); `full` is reserved for the true hero singles only (the red-letter prayer, the risen mediator, the CTA landing). True 8-turn timeline (57.15s). Two red-letter bars = the only highlighted holy text. Once Kling clips exist, at least one panel per grid becomes an animated clip for the stills+clips mix.",
+  "episode": "father_forgive_them",
+  "audio": "../audio/narration.mp3",
+  "beats": [
+    {
+      "t": [
+        0.0,
+        3.4
+      ],
+      "tpl": "big_inset",
+      "clips": [
+        {
+          "slug": "nail_through_hand_punch",
+          "motion": "pushin"
+        },
+        {
+          "slug": "executioner_ignorance",
+          "motion": "pushin"
+        }
+      ],
+      "cap": {
+        "type": "caption",
+        "text": "Nails through his hands.",
+        "kw": "NAILS"
+      }
+    },
+    {
+      "t": [
+        3.4,
+        7.0
+      ],
+      "tpl": "two_v",
+      "clips": [
+        {
+          "slug": "soldiers_gambling_establish",
+          "motion": "dolly"
+        },
+        {
+          "slug": "seamless_robe_lots_cast",
+          "motion": "pullback"
+        }
+      ],
+      "cap": {
+        "type": "caption",
+        "text": "Soldiers at his feet, gambling for his clothes.",
+        "kw": "GAMBLING"
+      }
+    },
+    {
+      "t": [
+        7.0,
+        10.31
+      ],
+      "tpl": "stack_h",
+      "clips": [
+        {
+          "slug": "crowd_mocking_punch",
+          "motion": "pullback"
+        },
+        {
+          "slug": "face_on_cross_speaks",
+          "motion": "pushin"
+        }
+      ],
+      "cap": {
+        "type": "caption",
+        "text": "A word no one expected. Not a curse.",
+        "kw": "NOT A CURSE"
+      }
+    },
+    {
+      "t": [
+        10.31,
+        16.94
+      ],
+      "tpl": "big_inset",
+      "clips": [
+        {
+          "slug": "face_on_cross_speaks",
+          "motion": "pushin"
+        },
+        {
+          "slug": "us_under_cross_shadow",
+          "motion": "dolly"
+        }
+      ],
+      "cap": {
+        "type": "caption",
+        "text": "It is a prayer. Jesus prays for the very people putting him to death.",
+        "kw": "PRAYER"
+      }
+    },
+    {
+      "t": [
+        16.94,
+        22.06
+      ],
+      "tpl": "full",
+      "clips": [
+        {
+          "slug": "father_forgive_them_face",
+          "motion": "static"
+        }
+      ],
+      "cap": {
+        "type": "redletter",
+        "text": "Father, forgive them; for they know not what they do.",
+        "speaker": "JESUS",
+        "ref": "Luke 23:34"
+      }
+    },
+    {
+      "t": [
+        22.06,
+        24.22
+      ],
+      "tpl": "two_v",
+      "clips": [
+        {
+          "slug": "psalm22_scroll_david",
+          "motion": "pushin"
+        },
+        {
+          "slug": "seamless_robe_lots_cast",
+          "motion": "pullback"
+        }
+      ],
+      "cap": {
+        "type": "caption",
+        "text": "Luke records it as they gambled:",
+        "kw": "GAMBLED"
+      }
+    },
+    {
+      "t": [
+        24.22,
+        28.0
+      ],
+      "tpl": "stack_h",
+      "clips": [
+        {
+          "slug": "seamless_robe_lots_cast",
+          "motion": "pullback"
+        },
+        {
+          "slug": "psalm22_scroll_david",
+          "motion": "pushin"
+        }
+      ],
+      "cap": {
+        "type": "redletter",
+        "text": "And they parted his raiment, and cast lots.",
+        "speaker": "SCRIPTURE",
+        "ref": "Luke 23:34"
+      }
+    },
+    {
+      "t": [
+        28.0,
+        32.37
+      ],
+      "tpl": "big_inset",
+      "clips": [
+        {
+          "slug": "executioner_ignorance",
+          "motion": "pushin"
+        },
+        {
+          "slug": "nail_through_hand",
+          "motion": "pushin"
+        }
+      ],
+      "cap": {
+        "type": "caption",
+        "text": "It does not excuse the sin; it intercedes for the sinner.",
+        "kw": "INTERCEDES"
+      }
+    },
+    {
+      "t": [
+        32.37,
+        36.2
+      ],
+      "tpl": "full",
+      "clips": [
+        {
+          "slug": "golgotha_hill_wide",
+          "motion": "pushin"
+        }
+      ],
+      "cap": {
+        "type": "caption",
+        "text": "The sin that put him there was ours too.",
+        "kw": "OURS"
+      }
+    },
+    {
+      "t": [
+        36.2,
+        39.8
+      ],
+      "tpl": "stack_h",
+      "clips": [
+        {
+          "slug": "willing_offering",
+          "motion": "static"
+        },
+        {
+          "slug": "darkness_veil_torn",
+          "motion": "pullback"
+        }
+      ],
+      "cap": {
+        "type": "caption",
+        "text": "He gave himself willingly.",
+        "kw": "WILLINGLY"
+      }
+    },
+    {
+      "t": [
+        39.8,
+        42.84
+      ],
+      "tpl": "full",
+      "clips": [
+        {
+          "slug": "risen_interceding_christ",
+          "motion": "pushin"
+        }
+      ],
+      "cap": {
+        "type": "caption",
+        "text": "He still lives to make intercession for sinners.",
+        "kw": "LIVES"
+      }
+    },
+    {
+      "t": [
+        42.84,
+        48.5
+      ],
+      "tpl": "big_inset",
+      "clips": [
+        {
+          "slug": "darkness_veil_torn",
+          "motion": "pullback"
+        },
+        {
+          "slug": "willing_offering",
+          "motion": "static"
+        }
+      ],
+      "cap": {
+        "type": "redletter",
+        "text": "While we were yet sinners, Christ died for us.",
+        "speaker": "SCRIPTURE",
+        "ref": "Romans 5:8"
+      }
+    },
+    {
+      "t": [
+        48.5,
+        57.15
+      ],
+      "tpl": "full",
+      "clips": [
+        {
+          "slug": "risen_mercy_hand_held_out",
+          "motion": "static"
+        }
+      ],
+      "cap": {
+        "type": "caption",
+        "text": "Come, and receive it by faith.",
+        "kw": "FAITH"
+      }
+    }
+  ]
+}

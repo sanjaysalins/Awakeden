@@ -1,0 +1,1656 @@
+{
+  "_doc": "GLOBAL asset index — every still/clip we produce, rich metadata for cross-piece reuse. Redo'd assets are DELETED from disk and DE-INDEXED, never kept here.",
+  "version": 1,
+  "assets": [
+    {
+      "type": "still",
+      "media": "image",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "source": "seedream_v4_5",
+      "used_in": [
+        "father_forgive_them"
+      ],
+      "id": "fft_03_prayer_close",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/nbp/03_prayer_close.png",
+      "beat": 3,
+      "beat_role": "red-letter",
+      "title": "Father, forgive them (close)",
+      "subject": "intimate close of the crucified Christ's face, eyes lifted to heaven in prayer, sorrow and mercy together, a shaft of light across His features",
+      "characters": [
+        "JESUS(passion)"
+      ],
+      "elements": [
+        "shaft-of-light"
+      ],
+      "setting": "the cross (close)",
+      "mood": "tender, holy",
+      "doctrine": "the red-letter prayer 'Father, forgive them; for they know not what they do'",
+      "reuse_scope": "neutral",
+      "tags": [
+        "christ-face",
+        "close-up",
+        "praying",
+        "red-letter",
+        "mercy"
+      ],
+      "created": "2026-06-30"
+    },
+    {
+      "type": "still",
+      "media": "image",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "source": "seedream_v4_5",
+      "used_in": [
+        "father_forgive_them"
+      ],
+      "id": "fft_06_cross_over_us",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/nbp/06_cross_over_us.png",
+      "beat": 6,
+      "beat_role": "CONVICTION",
+      "title": "The cross over us",
+      "subject": "the cross from a low angle against a breaking storm sky, Christ high upon it, the upright planted firmly in the rocky hilltop; one ordinary figure kneels at the foot, a shaft of light between them",
+      "characters": [
+        "JESUS(passion)"
+      ],
+      "elements": [
+        "CROSS",
+        "kneeling-figure",
+        "hilltop",
+        "shaft-of-light"
+      ],
+      "setting": "Golgotha hilltop, low angle",
+      "mood": "humbling, weighty",
+      "doctrine": "the sin that put Him there was ours too; the One who prayed for His killers still lives to intercede",
+      "reuse_scope": "neutral",
+      "tags": [
+        "cross-from-below",
+        "kneeling",
+        "conviction",
+        "hilltop",
+        "grounded",
+        "light-shaft"
+      ],
+      "created": "2026-07-01"
+    },
+    {
+      "type": "still",
+      "media": "image",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "source": "seedream_v4_5",
+      "used_in": [
+        "father_forgive_them"
+      ],
+      "id": "fft_07_risen_hero",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/nbp/07_risen_hero.png",
+      "beat": 7,
+      "beat_role": "LANDING",
+      "title": "The risen Christ — mercy held out (HERO)",
+      "subject": "the risen Christ in warm golden morning light, clean flowing robes, glorified face at peace, one open hand with a round healed scar reaching toward the viewer in welcome",
+      "characters": [
+        "JESUS(resurrection)"
+      ],
+      "elements": [
+        "healed-scar",
+        "golden-light"
+      ],
+      "setting": "resurrection morning",
+      "mood": "warm, inviting, triumphant",
+      "doctrine": "'While we were yet sinners, Christ died for us' — the gospel invitation to receive it by faith (Rom 5:8)",
+      "reuse_scope": "hero",
+      "tags": [
+        "risen-christ",
+        "resurrection",
+        "reaching-hand",
+        "healed-scar",
+        "hero",
+        "gospel-invitation",
+        "living-christ"
+      ],
+      "created": "2026-07-01"
+    },
+    {
+      "type": "still",
+      "media": "image",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "source": "seedream_v4_5",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them"
+      ],
+      "id": "fft_06b_our_sin",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/nbp/06b_our_sin.png",
+      "beat": 6,
+      "beat_role": "CONVICTION",
+      "title": "Our sin — the shadow of the cross",
+      "subject": "the long dark shadow of the cross falls over a group of ordinary ancient figures with bowed heads",
+      "characters": [
+        "ROMAN_SOLDIERS"
+      ],
+      "elements": [
+        "CROSS-shadow",
+        "bowed-figures",
+        "hilltop"
+      ],
+      "setting": "Golgotha hilltop (overhead)",
+      "mood": "convicting, somber",
+      "doctrine": "the sin that put him there was ours too",
+      "reuse_scope": "neutral",
+      "tags": [
+        "cross-shadow",
+        "crowd",
+        "conviction",
+        "shared-guilt"
+      ]
+    },
+    {
+      "type": "still",
+      "media": "image",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "source": "seedream_v4_5",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them"
+      ],
+      "id": "fft_07b_gospel_wide",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/nbp/07b_gospel_wide.png",
+      "beat": 7,
+      "beat_role": "LANDING",
+      "title": "Gospel wide — risen Christ in the doorway",
+      "subject": "the risen Christ standing in a light-flooded doorway, arms open in welcome, feet planted",
+      "characters": [
+        "JESUS(resurrection)"
+      ],
+      "elements": [
+        "doorway",
+        "golden-light"
+      ],
+      "setting": "resurrection / tomb doorway",
+      "mood": "inviting, triumphant",
+      "doctrine": "while we were yet sinners, Christ died for us (Rom 5:8)",
+      "reuse_scope": "hero",
+      "tags": [
+        "risen-christ",
+        "doorway",
+        "open-arms",
+        "gospel-invitation",
+        "living-christ",
+        "wide"
+      ]
+    },
+    {
+      "type": "still",
+      "media": "image",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "source": "seedream_v4_5",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them"
+      ],
+      "id": "fft_06c_intercession_lives",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/nbp/06c_intercession_lives.png",
+      "beat": 6,
+      "beat_role": "CONVICTION",
+      "title": "The living Christ interceding",
+      "subject": "the living risen Christ standing in warm light, both scarred hands lifted in intercession",
+      "characters": [
+        "JESUS(resurrection)"
+      ],
+      "elements": [
+        "healed-scar",
+        "golden-light"
+      ],
+      "setting": "risen / interceding",
+      "mood": "alive, merciful",
+      "doctrine": "the Lord who prayed for his executioners still lives to make intercession (Heb 7:25)",
+      "reuse_scope": "hero",
+      "tags": [
+        "living-christ",
+        "intercession",
+        "risen",
+        "hands-lifted",
+        "bridge"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "used_in": [
+        "father_forgive_them"
+      ],
+      "beat": 3,
+      "beat_role": "red-letter",
+      "title": "Father, forgive them (close)",
+      "subject": "intimate close of the crucified Christ's face, eyes lifted to heaven in prayer, sorrow and mercy together, a shaft of light across His features",
+      "characters": [
+        "JESUS(passion)"
+      ],
+      "elements": [
+        "shaft-of-light"
+      ],
+      "setting": "the cross (close)",
+      "mood": "tender, holy",
+      "doctrine": "the red-letter prayer 'Father, forgive them; for they know not what they do'",
+      "reuse_scope": "neutral",
+      "tags": [
+        "christ-face",
+        "close-up",
+        "praying",
+        "red-letter",
+        "mercy",
+        "clip",
+        "motion-comic",
+        "hold"
+      ],
+      "created": "2026-07-01",
+      "id": "fft_03_prayer_close_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/nbp/03_prayer_close.mp4",
+      "source": "kling3_0-pro",
+      "motion": "hold",
+      "duration_s": 5.04,
+      "still_id": "fft_03_prayer_close"
+    },
+    {
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them"
+      ],
+      "beat": 6,
+      "beat_role": "CONVICTION",
+      "title": "Our sin — the shadow of the cross",
+      "subject": "the long dark shadow of the cross falls over a group of ordinary ancient figures with bowed heads",
+      "characters": [
+        "ROMAN_SOLDIERS"
+      ],
+      "elements": [
+        "CROSS-shadow",
+        "bowed-figures",
+        "hilltop"
+      ],
+      "setting": "Golgotha hilltop (overhead)",
+      "mood": "convicting, somber",
+      "doctrine": "the sin that put him there was ours too",
+      "reuse_scope": "neutral",
+      "tags": [
+        "cross-shadow",
+        "crowd",
+        "conviction",
+        "shared-guilt",
+        "clip",
+        "motion-comic",
+        "pushin"
+      ],
+      "id": "fft_06b_our_sin_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/nbp/06b_our_sin.mp4",
+      "source": "kling3_0-pro",
+      "motion": "pushin",
+      "duration_s": 5.04,
+      "still_id": "fft_06b_our_sin"
+    },
+    {
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "used_in": [
+        "father_forgive_them"
+      ],
+      "beat": 6,
+      "beat_role": "CONVICTION",
+      "title": "The cross over us",
+      "subject": "the cross from a low angle against a breaking storm sky, Christ high upon it, the upright planted firmly in the rocky hilltop; one ordinary figure kneels at the foot, a shaft of light between them",
+      "characters": [
+        "JESUS(passion)"
+      ],
+      "elements": [
+        "CROSS",
+        "kneeling-figure",
+        "hilltop",
+        "shaft-of-light"
+      ],
+      "setting": "Golgotha hilltop, low angle",
+      "mood": "humbling, weighty",
+      "doctrine": "the sin that put Him there was ours too; the One who prayed for His killers still lives to intercede",
+      "reuse_scope": "neutral",
+      "tags": [
+        "cross-from-below",
+        "kneeling",
+        "conviction",
+        "hilltop",
+        "grounded",
+        "light-shaft",
+        "clip",
+        "motion-comic",
+        "pushin"
+      ],
+      "created": "2026-07-01",
+      "id": "fft_06_cross_over_us_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/nbp/06_cross_over_us.mp4",
+      "source": "kling3_0-pro",
+      "motion": "pushin",
+      "duration_s": 5.04,
+      "still_id": "fft_06_cross_over_us"
+    },
+    {
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them"
+      ],
+      "beat": 6,
+      "beat_role": "CONVICTION",
+      "title": "The living Christ interceding",
+      "subject": "the living risen Christ standing in warm light, both scarred hands lifted in intercession",
+      "characters": [
+        "JESUS(resurrection)"
+      ],
+      "elements": [
+        "healed-scar",
+        "golden-light"
+      ],
+      "setting": "risen / interceding",
+      "mood": "alive, merciful",
+      "doctrine": "the Lord who prayed for his executioners still lives to make intercession (Heb 7:25)",
+      "reuse_scope": "hero",
+      "tags": [
+        "living-christ",
+        "intercession",
+        "risen",
+        "hands-lifted",
+        "bridge",
+        "clip",
+        "motion-comic",
+        "pushin"
+      ],
+      "id": "fft_06c_intercession_lives_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/nbp/06c_intercession_lives.mp4",
+      "source": "kling3_0-pro",
+      "motion": "pushin",
+      "duration_s": 5.04,
+      "still_id": "fft_06c_intercession_lives"
+    },
+    {
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them"
+      ],
+      "beat": 7,
+      "beat_role": "LANDING",
+      "title": "Gospel wide — risen Christ in the doorway",
+      "subject": "the risen Christ standing in a light-flooded doorway, arms open in welcome, feet planted",
+      "characters": [
+        "JESUS(resurrection)"
+      ],
+      "elements": [
+        "doorway",
+        "golden-light"
+      ],
+      "setting": "resurrection / tomb doorway",
+      "mood": "inviting, triumphant",
+      "doctrine": "while we were yet sinners, Christ died for us (Rom 5:8)",
+      "reuse_scope": "hero",
+      "tags": [
+        "risen-christ",
+        "doorway",
+        "open-arms",
+        "gospel-invitation",
+        "living-christ",
+        "wide",
+        "clip",
+        "motion-comic",
+        "dolly"
+      ],
+      "id": "fft_07b_gospel_wide_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/nbp/07b_gospel_wide.mp4",
+      "source": "kling3_0-pro",
+      "motion": "dolly",
+      "duration_s": 5.04,
+      "still_id": "fft_07b_gospel_wide"
+    },
+    {
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "used_in": [
+        "father_forgive_them"
+      ],
+      "beat": 7,
+      "beat_role": "LANDING",
+      "title": "The risen Christ — mercy held out (HERO)",
+      "subject": "the risen Christ in warm golden morning light, clean flowing robes, glorified face at peace, one open hand with a round healed scar reaching toward the viewer in welcome",
+      "characters": [
+        "JESUS(resurrection)"
+      ],
+      "elements": [
+        "healed-scar",
+        "golden-light"
+      ],
+      "setting": "resurrection morning",
+      "mood": "warm, inviting, triumphant",
+      "doctrine": "'While we were yet sinners, Christ died for us' — the gospel invitation to receive it by faith (Rom 5:8)",
+      "reuse_scope": "hero",
+      "tags": [
+        "risen-christ",
+        "resurrection",
+        "reaching-hand",
+        "healed-scar",
+        "hero",
+        "gospel-invitation",
+        "living-christ",
+        "clip",
+        "motion-comic",
+        "hold"
+      ],
+      "created": "2026-07-01",
+      "id": "fft_07_risen_hero_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/nbp/07_risen_hero.mp4",
+      "source": "kling3_0-pro",
+      "motion": "hold",
+      "duration_s": 5.04,
+      "still_id": "fft_07_risen_hero"
+    },
+    {
+      "id": "fft_nail_through_hand",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/nail_close_45.png",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "HOOK",
+      "beat_role": "christ_detail",
+      "title": "A forged square iron nail driven through an open palm against dark cross-wood.",
+      "subject": "A forged square iron nail driven through an open palm against dark cross-wood.",
+      "bible_ref": "Psalm 22:16; Luke 23:33",
+      "macro_elements": [
+        "nail head",
+        "pierced palm",
+        "curled fingers",
+        "grain of the wood",
+        "thin dark trickle"
+      ],
+      "mood": "reverent",
+      "reuse_scope": "specific",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "christ_detail",
+        "hook"
+      ],
+      "prompt": "inked biblical graphic-novel close-up of a single forged square iron nail through the center of an open human palm pressed to dark rough cross-wood, one dominant subject, bold black ink linework, flat cel-shaded muted crimson and grey, reverent, cinematic-manga, 1st-century, dramatic side light",
+      "source": "byteplus_seedream_4_5_ref_locked",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ]
+    },
+    {
+      "id": "fft_soldiers_gambling_establish",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/reshoot/01c_soldiers_gamble.png",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "HOOK",
+      "beat_role": "context_scene",
+      "title": "Wide at the foot of the cross: the whole crucified figure above, Roman soldiers crouched below casting lots — establishes THAT this is a crucifixion.",
+      "subject": "Wide at the foot of the cross: the whole crucified figure above, Roman soldiers crouched below casting lots — establishes THAT this is a crucifixion.",
+      "bible_ref": "Luke 23:33-34; Psalm 22:18",
+      "macro_elements": [
+        "whole cross + crucified figure",
+        "crouched soldiers",
+        "cast pebbles",
+        "folded garment",
+        "dusty ground"
+      ],
+      "mood": "reverent",
+      "reuse_scope": "neutral",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "context_scene",
+        "hook"
+      ],
+      "prompt": "inked biblical graphic-novel wide of a crucifixion on a bleak hill: the full crucified man on a tall wooden cross, head bowed, arms nailed along the beam, and at the foot two or three 1st-century Roman soldiers crouched in the dust casting a few pale rounded pebbles over a folded woven garment, one dominant grouping, bold black ink, flat cel-shaded ochre and iron-grey, reverent, dark storm sky, period-accurate",
+      "source": "byteplus_seedream_4_5_ref_locked",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ]
+    },
+    {
+      "id": "fft_crowd_mocking",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/reshoot/crowd_mocking.png",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "HOOK",
+      "beat_role": "context_scene",
+      "title": "A shadowed crowd mocking — shaking heads, shot-out lips — the scorn a curse was expected to answer.",
+      "subject": "A shadowed crowd mocking — shaking heads, shot-out lips — the scorn a curse was expected to answer.",
+      "bible_ref": "Psalm 22:7; Luke 23:35",
+      "macro_elements": [
+        "jeering upturned faces",
+        "shaken heads",
+        "scornful mouth",
+        "dark crowd mass",
+        "pale sky gap"
+      ],
+      "mood": "reverent",
+      "reuse_scope": "neutral",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "context_scene",
+        "hook"
+      ],
+      "prompt": "inked biblical graphic-novel of a 1st-century crowd mocking, with only THREE distinct foreground mockers, each a clearly DIFFERENT person — a grizzled grey-bearded old elder, a younger clean-shaven man, and a heavy middle-aged man with a dark beard — jeering upward with open scornful mouths and pointing hands, in dusty earth-toned head-wraps and coarse tunics; behind them the rest of the crowd is a DARK FEATURELESS SILHOUETTE MASS with no individual faces, bold black ink, flat cel-shaded dusk palette, reverent tone despite the scorn, tension",
+      "source": "byteplus_seedream_4_5_ref_locked",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ]
+    },
+    {
+      "id": "fft_face_on_cross_speaks",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/reshoot/02_jesus_prays.png",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "POINT",
+      "beat_role": "christ_hero",
+      "title": "Christ's face and shoulders on the cross, arms along the crossbeam, lips just parting to speak instead of curse.",
+      "subject": "Christ's face and shoulders on the cross, arms along the crossbeam, lips just parting to speak instead of curse.",
+      "bible_ref": "Luke 23:34",
+      "macro_elements": [
+        "parting lips",
+        "lowered eyes",
+        "arms on crossbeam",
+        "strained jaw",
+        "dim sky"
+      ],
+      "mood": "reverent",
+      "reuse_scope": "specific",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "christ_hero",
+        "point"
+      ],
+      "prompt": "inked biblical graphic-novel of the face, shoulders and outstretched arms of the crucified Christ on the wooden crossbeam, eyes lowered with compassion, lips just parting to speak, one dominant subject, bold black ink linework, flat cel-shaded warm skin against a dim storm sky, reverent, cinematic, 1st-century, soft rim light",
+      "source": "byteplus_seedream_4_5_ref_locked",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ]
+    },
+    {
+      "id": "fft_father_forgive_them_face",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/reshoot/03_prayer_close.png",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "POINT",
+      "beat_role": "christ_detail",
+      "title": "Extreme reverent close of Christ's praying face — the red-letter 'Father, forgive them' anchor.",
+      "subject": "Extreme reverent close of Christ's praying face — the red-letter 'Father, forgive them' anchor.",
+      "bible_ref": "Luke 23:34",
+      "macro_elements": [
+        "lifting eyes",
+        "eased brow",
+        "parted lips mid-prayer",
+        "space above head for red-letter"
+      ],
+      "mood": "reverent",
+      "reuse_scope": "specific",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "christ_detail",
+        "point"
+      ],
+      "prompt": "inked biblical graphic-novel intimate close of the crucified Christ's face in prayer, eyes lifting past the frame toward the light, brow easing, one dominant subject, bold black ink, flat cel-shaded warm tones, reverent, cinematic-manga, negative space above for later caption furniture",
+      "source": "byteplus_seedream_4_5_ref_locked",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ]
+    },
+    {
+      "id": "fft_psalm22_scroll_david",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/reshoot/psalm22_scroll_david.png",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "PROOF",
+      "beat_role": "ot_echo",
+      "title": "David the psalmist's hand over an ancient scroll, foretelling the parted garments a thousand years early.",
+      "subject": "David the psalmist's hand over an ancient scroll, foretelling the parted garments a thousand years early.",
+      "bible_ref": "Psalm 22:18",
+      "macro_elements": [
+        "aged hand",
+        "unrolled scroll edge",
+        "illegible ink marks",
+        "young white lamb",
+        "clay oil lamp"
+      ],
+      "mood": "reverent",
+      "reuse_scope": "neutral",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "ot_echo",
+        "proof"
+      ],
+      "prompt": "inked biblical graphic-novel of an aged hand of an ancient Hebrew psalmist resting on a half-unrolled scroll seen at a steep raking side-angle so the parchment is strongly foreshortened and its writing reads only as faint indistinct rhythmic horizontal ink strokes with no separate letters and no alphabet; a young white lamb lying quietly in FRONT of the scroll as the clear focal subject (the foreshadowed sacrifice), a small clay oil lamp casting warm amber light, one dominant subject, bold black ink of the SAME line-weight and reverence as the Golgotha scenes, flat cel-shaded amber lamplight, reverent, 1st-millennium-BC",
+      "source": "byteplus_seedream_4_5_ref_locked",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ]
+    },
+    {
+      "id": "fft_seamless_robe_lots_cast",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/reshoot/04_cast_lots.png",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "PROOF",
+      "beat_role": "context_scene",
+      "title": "A soldier lifts the seamless robe as the lots fall — the prophecy fulfilled in real time.",
+      "subject": "A soldier lifts the seamless robe as the lots fall — the prophecy fulfilled in real time.",
+      "bible_ref": "Luke 23:34; Psalm 22:18",
+      "macro_elements": [
+        "held-up seamless robe",
+        "thrown lots landing",
+        "intent crouched soldier",
+        "dust",
+        "woven hem"
+      ],
+      "mood": "reverent",
+      "reuse_scope": "neutral",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "context_scene",
+        "proof"
+      ],
+      "prompt": "inked biblical graphic-novel of a seamless woven robe held up in one Roman soldier's hand while two or three clearly-thrown pale lots land in the dust below, the gambling read unmistakable through the soldiers' intent crouch, one dominant subject, bold black ink, flat cel-shaded ochre and grey, reverent, low angle, 1st-century",
+      "source": "byteplus_seedream_4_5_ref_locked",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ]
+    },
+    {
+      "id": "fft_executioner_ignorance",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/reshoot/executioner_ignorance.png",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "PROOF",
+      "beat_role": "context_scene",
+      "title": "A single executioner mid-deed — hand still on the mallet — hard-faced and unknowing: the guilty sinner he intercedes FOR.",
+      "subject": "A single executioner mid-deed — hand still on the mallet — hard-faced and unknowing: the guilty sinner he intercedes FOR.",
+      "bible_ref": "Acts 3:17; 1 Corinthians 2:8",
+      "macro_elements": [
+        "hand on the mallet",
+        "furrowed brow",
+        "stubbled jaw",
+        "helmet rim",
+        "hard-set eyes"
+      ],
+      "mood": "reverent",
+      "reuse_scope": "neutral",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "context_scene",
+        "proof"
+      ],
+      "prompt": "inked biblical graphic-novel close of a single weathered 1st-century Roman executioner still at his work, one hand gripping a heavy iron mallet, brow furrowed in hard duty, unaware of who he kills, ordinary grey daylight (not glorified light), one dominant subject, bold black ink, flat cel-shaded dusty tones, reverent, cinematic",
+      "source": "byteplus_seedream_4_5_ref_locked",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ]
+    },
+    {
+      "id": "fft_us_under_cross_shadow",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/reshoot/06b_our_sin.png",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "CONVICTION",
+      "beat_role": "human_us",
+      "title": "Ordinary bowed figures kneeling small under the long cross-shadow — the sin was ours too.",
+      "subject": "Ordinary bowed figures kneeling small under the long cross-shadow — the sin was ours too.",
+      "bible_ref": "Romans 5:8",
+      "macro_elements": [
+        "bowed heads",
+        "kneeling shoulders",
+        "cross-shaped shadow",
+        "dust ground",
+        "clasped hands"
+      ],
+      "mood": "reverent",
+      "reuse_scope": "neutral",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "human_us",
+        "conviction"
+      ],
+      "prompt": "inked biblical graphic-novel of two or three ordinary bowed figures kneeling small in the dust as the long shadow of a cross falls across them, one dominant grouping, bold black ink, flat cel-shaded muted earth tones, reverent, wide, the cross implied only by its shadow",
+      "source": "byteplus_seedream_4_5_ref_locked",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ]
+    },
+    {
+      "id": "fft_willing_offering",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/reshoot/06_cross_over_us.png",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "CONVICTION",
+      "beat_role": "christ_hero",
+      "title": "Christ on the cross, head bowed in willing surrender under real strain — no one takes his life from him.",
+      "subject": "Christ on the cross, head bowed in willing surrender under real strain — no one takes his life from him.",
+      "bible_ref": "John 10:18",
+      "macro_elements": [
+        "bowed head",
+        "taut sinews",
+        "nailed hands on beam",
+        "labouring chest",
+        "cross beam"
+      ],
+      "mood": "reverent",
+      "reuse_scope": "specific",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "christ_hero",
+        "conviction"
+      ],
+      "prompt": "inked biblical graphic-novel of the crucified Christ, head bowed low in willing surrender yet his body under real strain and suffering, sinews taut, given not taken, one dominant subject, bold black ink linework, flat cel-shaded warm-grey, reverent, cinematic, dim storm sky, 1st-century",
+      "source": "byteplus_seedream_4_5_ref_locked",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ]
+    },
+    {
+      "id": "fft_risen_interceding_christ",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/reshoot/risen_interceding_christ.png",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "CONVICTION",
+      "beat_role": "christ_risen",
+      "title": "The risen Christ as the great high priest / Mediator — profile, wounded hands lifted toward the light of heaven, pleading, a small shadowed sinner kneeling below whom he intercedes for.",
+      "subject": "The risen Christ as the great high priest / Mediator — profile, wounded hands lifted toward the light of heaven, pleading, a small shadowed sinner kneeling below whom he intercedes for.",
+      "bible_ref": "Hebrews 7:25; Romans 8:34",
+      "macro_elements": [
+        "wounded hands lifted to heaven",
+        "print of the nail in the palm",
+        "pleading upward face",
+        "shaft of heavenly light",
+        "small kneeling sinner below"
+      ],
+      "mood": "reverent",
+      "reuse_scope": "specific",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "christ_risen",
+        "conviction"
+      ],
+      "prompt": "inked biblical graphic-novel of the risen Christ as the great high priest interceding at the throne of heaven: standing in three-quarter view, both open hands lifted upward, the centre of each open palm marked by a single old HEALED scar — a thin dark closed mark lying flush and flat within the skin in the same warm skin tone, long-healed; fingers relaxed with plain natural fingertips, his bearded face lifted in earnest pleading toward a high radiant heavenly light above (the light only, no figure in it), and low behind him a single small shadowed kneeling sinner he stands between and pleads for, Christ the one dominant subject, flowing robe, bold black ink, flat cel-shaded warm gold and deep shadow, hard-edged light shaft from above, reverent, cinematic, 1st-century",
+      "source": "byteplus_seedream_4_5_ref_locked",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ]
+    },
+    {
+      "id": "fft_darkness_veil_torn",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/reshoot/darkness_veil_torn.png",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "LANDING",
+      "beat_role": "symbolic",
+      "title": "The land under three hours of darkness and the temple veil torn from top to bottom — his death opens the way.",
+      "subject": "The land under three hours of darkness and the temple veil torn from top to bottom — his death opens the way.",
+      "bible_ref": "Luke 23:44-45; Matthew 27:51",
+      "macro_elements": [
+        "veil torn top-to-bottom",
+        "the rent opening",
+        "dark holy place beyond",
+        "heavy woven cloth",
+        "deep darkness"
+      ],
+      "mood": "reverent",
+      "reuse_scope": "neutral",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "symbolic",
+        "landing"
+      ],
+      "prompt": "inked biblical graphic-novel of a great heavy temple veil torn from top to bottom down its middle under a sky of deep darkness, the rent opening into a shadowed empty holy place beyond, only the torn way opened, one dominant subject, bold black ink, flat cel-shaded near-monochrome dark palette, reverent, awe, 1st-century",
+      "source": "byteplus_seedream_4_5_ref_locked",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ]
+    },
+    {
+      "id": "fft_risen_mercy_hand_held_out",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/reshoot/07_risen_hero.png",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "LANDING",
+      "beat_role": "christ_risen",
+      "title": "The risen Christ, the nail-printed hand extended toward the viewer — that mercy held out now, come and receive it.",
+      "subject": "The risen Christ, the nail-printed hand extended toward the viewer — that mercy held out now, come and receive it.",
+      "bible_ref": "Romans 5:8; Hebrews 7:25",
+      "macro_elements": [
+        "extended open hand",
+        "print of the nail",
+        "inviting eyes",
+        "warm backlight",
+        "space for CTA caption"
+      ],
+      "mood": "reverent",
+      "reuse_scope": "hero",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "christ_risen",
+        "landing"
+      ],
+      "prompt": "inked biblical graphic-novel of the risen Christ facing forward, one open hand bearing the clear dark print of the nail extended warmly toward the viewer, gentle inviting gaze, warm light behind him (hard-edged, not a soft bloom), one dominant subject, bold black ink linework, flat cel-shaded gold and amber, reverent, cinematic, negative space for closing caption",
+      "source": "byteplus_seedream_4_5_ref_locked",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ]
+    },
+    {
+      "id": "fft_golgotha_hill_wide",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/reshoot/golgotha_hill_wide.png",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "CONVICTION",
+      "beat_role": "human_us",
+      "title": "Golgotha hill wide - three crosses, shaft of light, the crowd small at the foot",
+      "subject": "epic wide of Golgotha, three crosses, storm sky, us kneeling below",
+      "bible_ref": "Luke 23:33",
+      "macro_elements": [
+        "three crosses",
+        "shaft of light",
+        "storm clouds",
+        "crowd at foot",
+        "rocky hill"
+      ],
+      "mood": "epic reverent",
+      "reuse_scope": "neutral",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "golgotha",
+        "wide",
+        "epic",
+        "human_us",
+        "establishing"
+      ],
+      "source": "byteplus_seedream_4_5",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ]
+    },
+    {
+      "id": "fft_nail_through_hand_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/clips/nail_through_hand.mp4",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "HOOK",
+      "beat_role": "christ_detail",
+      "title": "A forged square iron nail driven through an open palm against dark cross-wood.",
+      "subject": "A forged square iron nail driven through an open palm against dark cross-wood.",
+      "bible_ref": "Psalm 22:16; Luke 23:33",
+      "macro_elements": [
+        "nail head",
+        "pierced palm",
+        "curled fingers",
+        "grain of the wood",
+        "thin dark trickle"
+      ],
+      "mood": "reverent",
+      "reuse_scope": "specific",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "christ_detail",
+        "hook"
+      ],
+      "prompt": "inked biblical graphic-novel close-up of a single forged square iron nail through the center of an open human palm pressed to dark rough cross-wood, one dominant subject, bold black ink linework, flat cel-shaded muted crimson and grey, reverent, cinematic-manga, 1st-century, dramatic side light",
+      "source": "byteplus_seedream_4_5_ref_locked",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ],
+      "duration": 5.04,
+      "animation": "hf_kling3_0_pro_9x16_5s",
+      "motion": "camera-only push/pull"
+    },
+    {
+      "id": "fft_soldiers_gambling_establish_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/clips/soldiers_gambling_establish.mp4",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "HOOK",
+      "beat_role": "context_scene",
+      "title": "Wide at the foot of the cross: the whole crucified figure above, Roman soldiers crouched below casting lots — establishes THAT this is a crucifixion.",
+      "subject": "Wide at the foot of the cross: the whole crucified figure above, Roman soldiers crouched below casting lots — establishes THAT this is a crucifixion.",
+      "bible_ref": "Luke 23:33-34; Psalm 22:18",
+      "macro_elements": [
+        "whole cross + crucified figure",
+        "crouched soldiers",
+        "cast pebbles",
+        "folded garment",
+        "dusty ground"
+      ],
+      "mood": "reverent",
+      "reuse_scope": "neutral",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "context_scene",
+        "hook"
+      ],
+      "prompt": "inked biblical graphic-novel wide of a crucifixion on a bleak hill: the full crucified man on a tall wooden cross, head bowed, arms nailed along the beam, and at the foot two or three 1st-century Roman soldiers crouched in the dust casting a few pale rounded pebbles over a folded woven garment, one dominant grouping, bold black ink, flat cel-shaded ochre and iron-grey, reverent, dark storm sky, period-accurate",
+      "source": "byteplus_seedream_4_5_ref_locked",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ],
+      "duration": 5.04,
+      "animation": "hf_kling3_0_pro_9x16_5s",
+      "motion": "camera-only push/pull"
+    },
+    {
+      "id": "fft_crowd_mocking_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/clips/crowd_mocking.mp4",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "HOOK",
+      "beat_role": "context_scene",
+      "title": "A shadowed crowd mocking — shaking heads, shot-out lips — the scorn a curse was expected to answer.",
+      "subject": "A shadowed crowd mocking — shaking heads, shot-out lips — the scorn a curse was expected to answer.",
+      "bible_ref": "Psalm 22:7; Luke 23:35",
+      "macro_elements": [
+        "jeering upturned faces",
+        "shaken heads",
+        "scornful mouth",
+        "dark crowd mass",
+        "pale sky gap"
+      ],
+      "mood": "reverent",
+      "reuse_scope": "neutral",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "context_scene",
+        "hook"
+      ],
+      "prompt": "inked biblical graphic-novel of a 1st-century crowd mocking, with only THREE distinct foreground mockers, each a clearly DIFFERENT person — a grizzled grey-bearded old elder, a younger clean-shaven man, and a heavy middle-aged man with a dark beard — jeering upward with open scornful mouths and pointing hands, in dusty earth-toned head-wraps and coarse tunics; behind them the rest of the crowd is a DARK FEATURELESS SILHOUETTE MASS with no individual faces, bold black ink, flat cel-shaded dusk palette, reverent tone despite the scorn, tension",
+      "source": "byteplus_seedream_4_5_ref_locked",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ],
+      "duration": 5.04,
+      "animation": "hf_kling3_0_pro_9x16_5s",
+      "motion": "camera-only push/pull"
+    },
+    {
+      "id": "fft_face_on_cross_speaks_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/clips/face_on_cross_speaks.mp4",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "POINT",
+      "beat_role": "christ_hero",
+      "title": "Christ's face and shoulders on the cross, arms along the crossbeam, lips just parting to speak instead of curse.",
+      "subject": "Christ's face and shoulders on the cross, arms along the crossbeam, lips just parting to speak instead of curse.",
+      "bible_ref": "Luke 23:34",
+      "macro_elements": [
+        "parting lips",
+        "lowered eyes",
+        "arms on crossbeam",
+        "strained jaw",
+        "dim sky"
+      ],
+      "mood": "reverent",
+      "reuse_scope": "specific",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "christ_hero",
+        "point"
+      ],
+      "prompt": "inked biblical graphic-novel of the face, shoulders and outstretched arms of the crucified Christ on the wooden crossbeam, eyes lowered with compassion, lips just parting to speak, one dominant subject, bold black ink linework, flat cel-shaded warm skin against a dim storm sky, reverent, cinematic, 1st-century, soft rim light",
+      "source": "byteplus_seedream_4_5_ref_locked",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ],
+      "duration": 5.04,
+      "animation": "hf_kling3_0_pro_9x16_5s",
+      "motion": "camera-only push/pull"
+    },
+    {
+      "id": "fft_father_forgive_them_face_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/clips/father_forgive_them_face.mp4",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "POINT",
+      "beat_role": "christ_detail",
+      "title": "Extreme reverent close of Christ's praying face — the red-letter 'Father, forgive them' anchor.",
+      "subject": "Extreme reverent close of Christ's praying face — the red-letter 'Father, forgive them' anchor.",
+      "bible_ref": "Luke 23:34",
+      "macro_elements": [
+        "lifting eyes",
+        "eased brow",
+        "parted lips mid-prayer",
+        "space above head for red-letter"
+      ],
+      "mood": "reverent",
+      "reuse_scope": "specific",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "christ_detail",
+        "point"
+      ],
+      "prompt": "inked biblical graphic-novel intimate close of the crucified Christ's face in prayer, eyes lifting past the frame toward the light, brow easing, one dominant subject, bold black ink, flat cel-shaded warm tones, reverent, cinematic-manga, negative space above for later caption furniture",
+      "source": "byteplus_seedream_4_5_ref_locked",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ],
+      "duration": 5.04,
+      "animation": "hf_kling3_0_pro_9x16_5s",
+      "motion": "camera-only push/pull"
+    },
+    {
+      "id": "fft_psalm22_scroll_david_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/clips/psalm22_scroll_david.mp4",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "PROOF",
+      "beat_role": "ot_echo",
+      "title": "David the psalmist's hand over an ancient scroll, foretelling the parted garments a thousand years early.",
+      "subject": "David the psalmist's hand over an ancient scroll, foretelling the parted garments a thousand years early.",
+      "bible_ref": "Psalm 22:18",
+      "macro_elements": [
+        "aged hand",
+        "unrolled scroll edge",
+        "illegible ink marks",
+        "young white lamb",
+        "clay oil lamp"
+      ],
+      "mood": "reverent",
+      "reuse_scope": "neutral",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "ot_echo",
+        "proof"
+      ],
+      "prompt": "inked biblical graphic-novel of an aged hand of an ancient Hebrew psalmist resting on a half-unrolled scroll seen at a steep raking side-angle so the parchment is strongly foreshortened and its writing reads only as faint indistinct rhythmic horizontal ink strokes with no separate letters and no alphabet; a young white lamb lying quietly in FRONT of the scroll as the clear focal subject (the foreshadowed sacrifice), a small clay oil lamp casting warm amber light, one dominant subject, bold black ink of the SAME line-weight and reverence as the Golgotha scenes, flat cel-shaded amber lamplight, reverent, 1st-millennium-BC",
+      "source": "byteplus_seedream_4_5_ref_locked",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ],
+      "duration": 5.04,
+      "animation": "hf_kling3_0_pro_9x16_5s",
+      "motion": "camera-only push/pull"
+    },
+    {
+      "id": "fft_seamless_robe_lots_cast_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/clips/seamless_robe_lots_cast.mp4",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "PROOF",
+      "beat_role": "context_scene",
+      "title": "A soldier lifts the seamless robe as the lots fall — the prophecy fulfilled in real time.",
+      "subject": "A soldier lifts the seamless robe as the lots fall — the prophecy fulfilled in real time.",
+      "bible_ref": "Luke 23:34; Psalm 22:18",
+      "macro_elements": [
+        "held-up seamless robe",
+        "thrown lots landing",
+        "intent crouched soldier",
+        "dust",
+        "woven hem"
+      ],
+      "mood": "reverent",
+      "reuse_scope": "neutral",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "context_scene",
+        "proof"
+      ],
+      "prompt": "inked biblical graphic-novel of a seamless woven robe held up in one Roman soldier's hand while two or three clearly-thrown pale lots land in the dust below, the gambling read unmistakable through the soldiers' intent crouch, one dominant subject, bold black ink, flat cel-shaded ochre and grey, reverent, low angle, 1st-century",
+      "source": "byteplus_seedream_4_5_ref_locked",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ],
+      "duration": 5.04,
+      "animation": "hf_kling3_0_pro_9x16_5s",
+      "motion": "camera-only push/pull"
+    },
+    {
+      "id": "fft_executioner_ignorance_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/clips/executioner_ignorance.mp4",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "PROOF",
+      "beat_role": "context_scene",
+      "title": "A single executioner mid-deed — hand still on the mallet — hard-faced and unknowing: the guilty sinner he intercedes FOR.",
+      "subject": "A single executioner mid-deed — hand still on the mallet — hard-faced and unknowing: the guilty sinner he intercedes FOR.",
+      "bible_ref": "Acts 3:17; 1 Corinthians 2:8",
+      "macro_elements": [
+        "hand on the mallet",
+        "furrowed brow",
+        "stubbled jaw",
+        "helmet rim",
+        "hard-set eyes"
+      ],
+      "mood": "reverent",
+      "reuse_scope": "neutral",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "context_scene",
+        "proof"
+      ],
+      "prompt": "inked biblical graphic-novel close of a single weathered 1st-century Roman executioner still at his work, one hand gripping a heavy iron mallet, brow furrowed in hard duty, unaware of who he kills, ordinary grey daylight (not glorified light), one dominant subject, bold black ink, flat cel-shaded dusty tones, reverent, cinematic",
+      "source": "byteplus_seedream_4_5_ref_locked",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ],
+      "duration": 5.04,
+      "animation": "hf_kling3_0_pro_9x16_5s",
+      "motion": "camera-only push/pull"
+    },
+    {
+      "id": "fft_us_under_cross_shadow_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/clips/us_under_cross_shadow.mp4",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "CONVICTION",
+      "beat_role": "human_us",
+      "title": "Ordinary bowed figures kneeling small under the long cross-shadow — the sin was ours too.",
+      "subject": "Ordinary bowed figures kneeling small under the long cross-shadow — the sin was ours too.",
+      "bible_ref": "Romans 5:8",
+      "macro_elements": [
+        "bowed heads",
+        "kneeling shoulders",
+        "cross-shaped shadow",
+        "dust ground",
+        "clasped hands"
+      ],
+      "mood": "reverent",
+      "reuse_scope": "neutral",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "human_us",
+        "conviction"
+      ],
+      "prompt": "inked biblical graphic-novel of two or three ordinary bowed figures kneeling small in the dust as the long shadow of a cross falls across them, one dominant grouping, bold black ink, flat cel-shaded muted earth tones, reverent, wide, the cross implied only by its shadow",
+      "source": "byteplus_seedream_4_5_ref_locked",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ],
+      "duration": 5.04,
+      "animation": "hf_kling3_0_pro_9x16_5s",
+      "motion": "camera-only push/pull"
+    },
+    {
+      "id": "fft_willing_offering_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/clips/willing_offering.mp4",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "CONVICTION",
+      "beat_role": "christ_hero",
+      "title": "Christ on the cross, head bowed in willing surrender under real strain — no one takes his life from him.",
+      "subject": "Christ on the cross, head bowed in willing surrender under real strain — no one takes his life from him.",
+      "bible_ref": "John 10:18",
+      "macro_elements": [
+        "bowed head",
+        "taut sinews",
+        "nailed hands on beam",
+        "labouring chest",
+        "cross beam"
+      ],
+      "mood": "reverent",
+      "reuse_scope": "specific",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "christ_hero",
+        "conviction"
+      ],
+      "prompt": "inked biblical graphic-novel of the crucified Christ, head bowed low in willing surrender yet his body under real strain and suffering, sinews taut, given not taken, one dominant subject, bold black ink linework, flat cel-shaded warm-grey, reverent, cinematic, dim storm sky, 1st-century",
+      "source": "byteplus_seedream_4_5_ref_locked",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ],
+      "duration": 5.04,
+      "animation": "hf_kling3_0_pro_9x16_5s",
+      "motion": "camera-only push/pull"
+    },
+    {
+      "id": "fft_risen_interceding_christ_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/clips/risen_interceding_christ.mp4",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "CONVICTION",
+      "beat_role": "christ_risen",
+      "title": "The risen Christ as the great high priest / Mediator — profile, wounded hands lifted toward the light of heaven, pleading, a small shadowed sinner kneeling below whom he intercedes for.",
+      "subject": "The risen Christ as the great high priest / Mediator — profile, wounded hands lifted toward the light of heaven, pleading, a small shadowed sinner kneeling below whom he intercedes for.",
+      "bible_ref": "Hebrews 7:25; Romans 8:34",
+      "macro_elements": [
+        "wounded hands lifted to heaven",
+        "print of the nail in the palm",
+        "pleading upward face",
+        "shaft of heavenly light",
+        "small kneeling sinner below"
+      ],
+      "mood": "reverent",
+      "reuse_scope": "specific",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "christ_risen",
+        "conviction"
+      ],
+      "prompt": "inked biblical graphic-novel of the risen Christ as the great high priest interceding at the throne of heaven: standing in three-quarter view, both open hands lifted upward, the centre of each open palm marked by a single old HEALED scar — a thin dark closed mark lying flush and flat within the skin in the same warm skin tone, long-healed; fingers relaxed with plain natural fingertips, his bearded face lifted in earnest pleading toward a high radiant heavenly light above (the light only, no figure in it), and low behind him a single small shadowed kneeling sinner he stands between and pleads for, Christ the one dominant subject, flowing robe, bold black ink, flat cel-shaded warm gold and deep shadow, hard-edged light shaft from above, reverent, cinematic, 1st-century",
+      "source": "byteplus_seedream_4_5_ref_locked",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ],
+      "duration": 5.04,
+      "animation": "hf_kling3_0_pro_9x16_5s",
+      "motion": "camera-only push/pull"
+    },
+    {
+      "id": "fft_darkness_veil_torn_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/clips/darkness_veil_torn.mp4",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "LANDING",
+      "beat_role": "symbolic",
+      "title": "The land under three hours of darkness and the temple veil torn from top to bottom — his death opens the way.",
+      "subject": "The land under three hours of darkness and the temple veil torn from top to bottom — his death opens the way.",
+      "bible_ref": "Luke 23:44-45; Matthew 27:51",
+      "macro_elements": [
+        "veil torn top-to-bottom",
+        "the rent opening",
+        "dark holy place beyond",
+        "heavy woven cloth",
+        "deep darkness"
+      ],
+      "mood": "reverent",
+      "reuse_scope": "neutral",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "symbolic",
+        "landing"
+      ],
+      "prompt": "inked biblical graphic-novel of a great heavy temple veil torn from top to bottom down its middle under a sky of deep darkness, the rent opening into a shadowed empty holy place beyond, only the torn way opened, one dominant subject, bold black ink, flat cel-shaded near-monochrome dark palette, reverent, awe, 1st-century",
+      "source": "byteplus_seedream_4_5_ref_locked",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ],
+      "duration": 5.04,
+      "animation": "hf_kling3_0_pro_9x16_5s",
+      "motion": "camera-only push/pull"
+    },
+    {
+      "id": "fft_risen_mercy_hand_held_out_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/clips/risen_mercy_hand_held_out.mp4",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "LANDING",
+      "beat_role": "christ_risen",
+      "title": "The risen Christ, the nail-printed hand extended toward the viewer — that mercy held out now, come and receive it.",
+      "subject": "The risen Christ, the nail-printed hand extended toward the viewer — that mercy held out now, come and receive it.",
+      "bible_ref": "Romans 5:8; Hebrews 7:25",
+      "macro_elements": [
+        "extended open hand",
+        "print of the nail",
+        "inviting eyes",
+        "warm backlight",
+        "space for CTA caption"
+      ],
+      "mood": "reverent",
+      "reuse_scope": "hero",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "christ_risen",
+        "landing"
+      ],
+      "prompt": "inked biblical graphic-novel of the risen Christ facing forward, one open hand bearing the clear dark print of the nail extended warmly toward the viewer, gentle inviting gaze, warm light behind him (hard-edged, not a soft bloom), one dominant subject, bold black ink linework, flat cel-shaded gold and amber, reverent, cinematic, negative space for closing caption",
+      "source": "byteplus_seedream_4_5_ref_locked",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ],
+      "duration": 5.04,
+      "animation": "hf_kling3_0_pro_9x16_5s",
+      "motion": "camera-only push/pull"
+    },
+    {
+      "id": "fft_golgotha_hill_wide_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/father_forgive_them/visual/_byteplus/clips/golgotha_hill_wide.mp4",
+      "aspect": "9:16",
+      "style": "inked-graphic-novel",
+      "cluster": "cluster_01_cross",
+      "piece": "father_forgive_them",
+      "piece_title": "Father, forgive them",
+      "verse": "Luke 23:34",
+      "beat": "CONVICTION",
+      "beat_role": "human_us",
+      "title": "Golgotha hill wide - three crosses, shaft of light, the crowd small at the foot",
+      "subject": "epic wide of Golgotha, three crosses, storm sky, us kneeling below",
+      "bible_ref": "Luke 23:33",
+      "macro_elements": [
+        "three crosses",
+        "shaft of light",
+        "storm clouds",
+        "crowd at foot",
+        "rocky hill"
+      ],
+      "mood": "epic reverent",
+      "reuse_scope": "neutral",
+      "tags": [
+        "cross",
+        "crucifixion",
+        "luke23",
+        "golgotha",
+        "wide",
+        "epic",
+        "human_us",
+        "establishing"
+      ],
+      "source": "byteplus_seedream_4_5",
+      "created": "2026-07-01",
+      "used_in": [
+        "father_forgive_them_short"
+      ],
+      "duration": 5.04,
+      "animation": "hf_kling3_0_pro_9x16_5s",
+      "motion": "camera-only push/pull"
+    }
+  ]
+}

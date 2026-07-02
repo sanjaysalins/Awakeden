@@ -1,0 +1,18 @@
+{
+  "name": "PAGAN_SHRINE",
+  "kind": "object",
+  "canonical": "a tall red rock cliff face honeycombed with carved arched niches holding Greco-Roman idols, the grotto of Pan at Caesarea Philippi \u2014 a pagan Hellenistic shrine wall, NOT a Buddhist statue, NOT a Hebrew altar",
+  "tags": [
+    "shrine",
+    "niches",
+    "cliff",
+    "pan",
+    "greco-roman",
+    "idols"
+  ],
+  "style": "inked",
+  "anchor": "objects/PAGAN_SHRINE.png",
+  "first_used": "19 The Cliff of Rival Gods",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

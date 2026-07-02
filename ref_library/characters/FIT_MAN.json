@@ -1,0 +1,18 @@
+{
+  "name": "FIT_MAN",
+  "kind": "character",
+  "canonical": "the fit man appointed to lead away the live goat, a wiry sinewy ancient Hebrew man of middle age, deeply sun-burnt leathery brown skin, a plain short black beard and close-cropped hair bound under a coarse head-cloth, dressed in a dust-ochre coarse tunic with a rope girdle, gripping the cord of the scapegoat in a calloused fist as he strides into the wilderness",
+  "tags": [
+    "fit-man",
+    "scapegoat",
+    "hebrew",
+    "wilderness",
+    "wiry",
+    "appointed"
+  ],
+  "style": "inked",
+  "anchor": "characters/FIT_MAN.png",
+  "first_used": "06_Day_Of_Atonement",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

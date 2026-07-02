@@ -1,0 +1,18 @@
+{
+  "name": "ADAM",
+  "kind": "character",
+  "canonical": "Adam, the first man, a strong athletic young figure with warm sun-bronzed skin, tousled dark-brown hair and a short dark beard, a noble face now stricken with shame and eyes cast down, his bare muscular body covered only by a rough girdle of sewn green fig leaves about his loins, crouching half-hidden among the lush trees of Eden",
+  "tags": [
+    "adam",
+    "first-man",
+    "eden",
+    "shame",
+    "fig-leaf",
+    "hiding"
+  ],
+  "style": "inked",
+  "anchor": "characters/ADAM.png",
+  "first_used": "05_Seed_Of_The_Woman",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

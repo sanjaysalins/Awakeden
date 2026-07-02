@@ -1,0 +1,186 @@
+{
+  "_doc": "Machine-readable batch plan. Groups every long + short by SHARED VISUAL WORLD so final stills + animated clips are built once per cluster and reused. Companion to BATCH_PLAN.md and the base-elements directive. Build order = the recommended sequence. asset_status is the reuse-vs-create audit against ref_library / clip_library / image_library as of 2026-06-30.",
+  "version": 1,
+  "generated": "2026-06-30",
+  "libraries": {
+    "ref_library": { "kind": "locked inked identity anchors", "count": 245, "chars": 76, "objects": 74, "places": 41, "motifs": 54, "note": "every EW witness + cast + objects + places already locked; pass as --image" },
+    "clip_library": { "kind": "reusable animated clips by reference", "count": 284, "by_aspect": { "9:16": 159, "16:9": 125 }, "note": "reuse must match aspect; spot-review 'neutral' scope" },
+    "image_library": { "kind": "finished baroque-oil stills", "count": 46, "aspect": "16:9", "note": "almost all Cross/Passion/Resurrection (Isaiah53 + Psalm22)" },
+    "music_library": { "kind": "scoring stems" },
+    "sound_library": { "kind": "SFX/ambience beds", "count": 30 }
+  },
+  "style_note": "Banked Cross/Passion stills+clips are baroque-oil (NBP). Current default per memory is inked graphic-novel + motion-comic. STYLE per batch is a user decision before any render — reuse baroque (cheapest, consistent with the built passion slate) vs rebuild inked.",
+  "clusters": [
+    {
+      "id": 1,
+      "build_order": 1,
+      "world": "The Cross / Golgotha",
+      "rationale": "Best-resourced + highest leverage; every piece in the engine lands on Christ, so the cross/risen frames are reused everywhere.",
+      "shared_elements": [
+        "christ on cross (passion)", "Golgotha hill / wide Jerusalem", "crown of thorns",
+        "titulus (HOLD as still - never animate writing)", "Roman soldiers casting lots", "nail-pierced hand", "Roman spear",
+        "garments + lots/dice", "temple veil -> rent veil", "Pilate", "mocking crowd",
+        "it-is-finished cross", "risen Christ hero (resurrection)"
+      ],
+      "ref_anchors": ["JESUS", "THE_LORD", "CROSS", "GOLGOTHA", "ROMAN_SOLDIERS", "ROMAN_NAIL", "ROMAN_SPEAR", "TEMPLE_VEIL", "RENT_VEIL", "VINEGAR_SPONGE", "MOCKING_CROWD", "PILATE", "THIRTY_PIECES_SILVER", "EMPTY_TOMB"],
+      "banked_stills_16x9": ["christ_crucified_dark_sky_golgotha", "christ_it_is_finished_cross", "christ_crucified_wide_jerusalem", "christ_cross_soldiers_below", "christ_pierced_hand_nail", "christ_crucified_strained_body", "soldiers_cast_lots_garments", "mockers_at_foot_of_cross", "stripped_man_mocking_crowd", "christ_parched_thirst_face", "christ_risen_face_scars", "christ_risen_reaching_hand_hero"],
+      "banked_clips_9x16_episodes": ["01_The_Crucifixion_Foretold", "02_The_Mockers_Words", "03_The_Forsaken_Cry", "05_He_Hath_Done_This", "07_The_Body_Foretold", "08_I_Thirst", "mockers_words_ps22"],
+      "longs": [
+        { "id": "01_Isaiah_53", "title": "The Suffering Servant", "status": "built" },
+        { "id": "02_Psalm_22", "title": "Song From The Cross", "status": "built" },
+        { "id": "EW07_Isaiah", "title": "The Suffering Servant (eyewitness)", "status": "narration+refs, visual not built" }
+      ],
+      "shorts": [
+        { "title": "The Crucifixion Foretold (Ps22)", "series": "jesus-in-ot", "status": "built" },
+        { "title": "Pierced for Our Transgressions (Zech 12:10)", "series": "jesus-in-ot", "status": "planned" },
+        { "title": "Thirty Pieces of Silver (Zech 11)", "series": "jesus-in-ot", "status": "planned" },
+        { "title": "Father, forgive them (Luke 23:34)", "series": "words-from-cross", "status": "planned" },
+        { "title": "Today you will be with me in paradise (Luke 23:43)", "series": "words-from-cross", "status": "planned" },
+        { "title": "Woman, behold your son (John 19:26)", "series": "words-from-cross", "status": "planned" },
+        { "title": "My God, why hast thou forsaken me (Matt 27:46 / Ps 22)", "series": "words-from-cross", "status": "built (Ps22 short)" },
+        { "title": "I thirst (John 19:28 / Ps 69:21)", "series": "words-from-cross", "status": "built (08_I_Thirst)" },
+        { "title": "It is finished (John 19:30)", "series": "words-from-cross", "status": "planned" },
+        { "title": "Father, into thy hands (Luke 23:46)", "series": "words-from-cross", "status": "planned" },
+        { "title": "It is finished (last-week)", "series": "last-week", "status": "planned" },
+        { "title": "The thief on the cross (Luke 23:43)", "series": "encounters", "status": "planned" },
+        { "title": "Could you not watch one hour (Matt 26:40, Gethsemane)", "series": "questions-jesus-asked", "status": "planned" }
+      ],
+      "net_new_to_build": ["Pierced (Zech 12:10)", "Thirty Pieces of Silver", "Father forgive them", "Today/paradise (thief)", "Woman behold your son", "It is finished", "Into thy hands", "thief on cross", "Could you not watch one hour"],
+      "create_new_stills": ["Pilate handing over / washing hands", "thirty pieces of silver thrown down / potter's field", "Mary + John at the cross (Woman behold your son)", "Father-into-thy-hands commit spirit", "Gethsemane sleeping disciples (watch one hour)", "temple veil rending"]
+    },
+    {
+      "id": 2,
+      "build_order": 2,
+      "world": "Resurrection / Empty Tomb",
+      "rationale": "Immediate sibling of the Cross (Golgotha -> tomb); unlocks all of Resurrection on Trial + the risen-Christ close every piece needs.",
+      "shared_elements": ["empty tomb interior + rolling stone", "risen Christ w/ wounds", "upper room / Thomas", "Galilee beach + charcoal fire", "the great fish (Jonah)", "dawn over tomb"],
+      "ref_anchors": ["JESUS", "THOMAS", "PETER", "DISCIPLES", "EMPTY_TOMB", "GREAT_FISH", "ROMAN_SOLDIERS", "RICH_MANS_TOMB"],
+      "banked_stills_16x9": ["dawn_over_tomb_stone", "rich_mans_tomb_dusk", "christ_risen_glory_hero", "christ_risen_morning_light", "christ_risen_in_congregation"],
+      "longs": [{ "id": "EW05_Jonah", "title": "The Sign of Jonah", "status": "narration+refs" }],
+      "shorts": [
+        { "title": "The Swoon Theory", "series": "resurrection-trial", "status": "planned" },
+        { "title": "The Stolen Body Theory", "series": "resurrection-trial", "status": "planned" },
+        { "title": "Women as first witnesses", "series": "resurrection-trial", "status": "planned" },
+        { "title": "Paul's early creed", "series": "resurrection-trial", "status": "planned" },
+        { "title": "Would they die for a lie?", "series": "resurrection-trial", "status": "planned" },
+        { "title": "The conversion of Paul", "series": "resurrection-trial", "status": "planned" },
+        { "title": "Thomas after the resurrection", "series": "encounters", "status": "planned" },
+        { "title": "Peter restored on the beach", "series": "encounters", "status": "planned" },
+        { "title": "Why are you troubled (Luke 24)", "series": "questions-jesus-asked", "status": "planned" },
+        { "title": "The empty tomb", "series": "last-week", "status": "planned" },
+        { "title": "I AM the Resurrection and the Life (Lazarus)", "series": "i-am", "status": "planned" },
+        { "title": "Raising Lazarus", "series": "miracles-signs", "status": "planned" },
+        { "title": "The Sign of Jonah", "series": "jesus-in-ot", "status": "planned" },
+        { "title": "Jonah - three days and nights", "series": "types-shadows", "status": "planned" }
+      ]
+    },
+    {
+      "id": 3,
+      "build_order": 3,
+      "world": "Wilderness / Exodus / Moses",
+      "rationale": "EW01 + EW04 already built in this world; harvest their clips into clip_library, then extend.",
+      "shared_elements": ["desert camp + multitude", "Moses", "Aaron (white linen)", "tabernacle / Holy of Holies", "bronze serpent on pole", "Passover lamb + blood doorposts", "manna", "the rock", "burning bush"],
+      "ref_anchors": ["MOSES", "AARON", "ISRAELITE_CROWD", "TABERNACLE_INTERIOR", "HOLY_OF_HOLIES", "BRONZE_SERPENT_STANDARD", "MOSES_ROD", "ALTAR", "SCAPEGOAT", "MERCY_SEAT", "PASSOVER_LAMB", "BLOOD_ON_DOORPOST", "MUDBRICK_HOUSE", "EGYPT_STREETS_NIGHT", "HYSSOP_BRANCH"],
+      "longs": [
+        { "id": "EW01_Two_Goats", "title": "The Two Goats (Day of Atonement)", "status": "built (visual_16x9)" },
+        { "id": "EW04_Bronze_Serpent", "title": "Look and Live", "status": "built (motion-comic + landscape template)" },
+        { "id": "EW08_Passover", "title": "The Passover Lamb", "status": "narration+refs" }
+      ],
+      "shorts": [
+        { "title": "The Passover Lamb", "series": "types-shadows", "status": "planned" },
+        { "title": "The Bronze Serpent", "series": "types-shadows", "status": "planned" },
+        { "title": "Manna", "series": "types-shadows", "status": "planned" },
+        { "title": "The Rock in the Wilderness", "series": "types-shadows", "status": "planned" },
+        { "title": "The Day of Atonement / scapegoat", "series": "types-shadows", "status": "planned" },
+        { "title": "The Lamb of God (Exodus 12)", "series": "jesus-in-ot", "status": "planned" },
+        { "title": "The Great I AM (Exodus 3, burning bush)", "series": "jesus-in-ot", "status": "planned" },
+        { "title": "I AM the Bread of Life (manna)", "series": "i-am", "status": "planned" }
+      ]
+    },
+    {
+      "id": 4,
+      "build_order": 4,
+      "world": "Genesis / Patriarchs",
+      "rationale": "EW02/03/06 longs drive it; all anchors exist.",
+      "shared_elements": ["Moriah + altar + ram", "Joseph's coat / pit / Egypt throne", "the ark + one door + flood + rainbow", "Eden + serpent + Adam/Eve"],
+      "ref_anchors": ["ABRAHAM", "ISAAC", "JACOB", "JOSEPH", "JOSEPHS_BROTHERS", "ADAM", "EVE", "NOAH", "SERPENT", "RAM_IN_THICKET", "COAT_OF_MANY_COLOURS", "MOUNT_MORIAH", "DOTHAN_FIELD", "EGYPT_THRONE_ROOM", "EDEN_GARDEN", "NOAHS_ARK", "ARK_DOOR", "FLOOD_WATERS", "RAINBOW"],
+      "longs": [
+        { "id": "EW02_Abraham", "title": "Abraham and the Lamb", "status": "short built; long narration+refs" },
+        { "id": "EW03_Joseph", "title": "Joseph", "status": "short built; long narration+refs" },
+        { "id": "EW06_Noah", "title": "The One Door", "status": "narration+refs" }
+      ],
+      "shorts": [
+        { "title": "Melchizedek", "series": "types-shadows", "status": "planned" },
+        { "title": "Adam - the last Adam", "series": "types-shadows", "status": "planned" },
+        { "title": "The Seed of the Woman (Gen 3:15)", "series": "jesus-in-ot", "status": "planned" }
+      ]
+    },
+    {
+      "id": 5,
+      "build_order": 5,
+      "world": "Galilean Ministry (I AM / miracles / encounters / parables / questions)",
+      "rationale": "Biggest harvest (~24 shorts) but BLOCKED on a living/ministry Christ; build that ref + a few neutral ministry plates first.",
+      "blocker": "Catalogue has ONLY crucified/passion Christ (memory: library-lacks-living-christ). Build a living-ministry Christ reference + Galilee/synagogue/crowd plates BEFORE batching. Independent of clusters 1-4 so can be built early in parallel.",
+      "shared_elements": ["living/ministry Christ face", "Galilee shore + fishing boat", "crowds", "synagogue", "well", "sheep + shepherd", "pool of Bethesda", "storm on the sea"],
+      "ref_anchors": ["JESUS", "DISCIPLES", "PETER", "NICODEMUS", "SAMARITAN_WOMAN", "ADULTEROUS_WOMAN", "LAME_MAN_OF_BETHESDA", "SHEPHERD", "SHEEP_FLOCK", "BOAT", "WELL", "POOL_OF_BETHESDA", "SICK_MULTITUDE", "PRODIGAL_SON"],
+      "shorts": [
+        { "title": "I AM the Light of the World", "series": "i-am", "status": "planned" },
+        { "title": "I AM the Door", "series": "i-am", "status": "planned" },
+        { "title": "I AM the Good Shepherd", "series": "i-am", "status": "planned" },
+        { "title": "I AM the Way, the Truth, and the Life", "series": "i-am", "status": "planned" },
+        { "title": "I AM the True Vine", "series": "i-am", "status": "planned" },
+        { "title": "Nicodemus by night", "series": "encounters", "status": "planned" },
+        { "title": "The woman at the well", "series": "encounters", "status": "planned" },
+        { "title": "The rich young ruler", "series": "encounters", "status": "planned" },
+        { "title": "Zacchaeus in the tree", "series": "encounters", "status": "planned" },
+        { "title": "The woman caught in adultery", "series": "encounters", "status": "planned" },
+        { "title": "Water to wine at Cana", "series": "miracles-signs", "status": "planned" },
+        { "title": "Feeding the 5000", "series": "miracles-signs", "status": "planned" },
+        { "title": "Walking on water", "series": "miracles-signs", "status": "planned" },
+        { "title": "Healing the man born blind", "series": "miracles-signs", "status": "planned" },
+        { "title": "Calming the storm", "series": "miracles-signs", "status": "planned" },
+        { "title": "Healing the paralytic with forgiveness", "series": "miracles-signs", "status": "planned" },
+        { "title": "Who Do You Say I Am", "series": "questions-jesus-asked", "status": "planned" },
+        { "title": "Why Are You Afraid", "series": "questions-jesus-asked", "status": "planned" },
+        { "title": "Do You Want to Be Made Well", "series": "questions-jesus-asked", "status": "planned" },
+        { "title": "Do You Love Me", "series": "questions-jesus-asked", "status": "planned" },
+        { "title": "What Do You Want Me to Do for You", "series": "questions-jesus-asked", "status": "planned" },
+        { "title": "Why Do You Call Me Lord", "series": "questions-jesus-asked", "status": "planned" },
+        { "title": "Where Is Your Faith", "series": "questions-jesus-asked", "status": "planned" },
+        { "title": "Have You Not Read", "series": "questions-jesus-asked", "status": "planned" },
+        { "title": "The Father Who Ran (prodigal)", "series": "parables", "status": "planned" }
+      ]
+    },
+    {
+      "id": 6,
+      "build_order": 6,
+      "world": "Nativity / Bethlehem",
+      "rationale": "Smallest set; EW09 Boaz shares the Bethlehem location.",
+      "shared_elements": ["Bethlehem town", "manger", "star", "Mary", "shepherds", "barley field + city gate (Boaz)"],
+      "ref_anchors": ["BETHLEHEM", "MARY", "BOAZ", "RUTH", "NAOMI", "CITY_GATE", "BARLEY_FIELD", "THRESHING_FLOOR"],
+      "longs": [{ "id": "EW09_Boaz", "title": "The Kinsman-Redeemer", "status": "narration+refs" }],
+      "shorts": [
+        { "title": "Born in Bethlehem (Micah 5)", "series": "jesus-in-ot", "status": "planned" },
+        { "title": "Born of a Virgin - Immanuel (Isaiah 7)", "series": "jesus-in-ot", "status": "planned" },
+        { "title": "Immanuel", "series": "names-titles", "status": "planned" },
+        { "title": "Wonderful, Counsellor, Prince of Peace (Isaiah 9)", "series": "names-titles", "status": "planned" }
+      ]
+    },
+    {
+      "id": 7,
+      "build_order": 7,
+      "world": "Throne / Titles (Revelation / Daniel)",
+      "rationale": "Smallest, most singular heavenly world; do with Nativity as a final build-out.",
+      "doctrine_note": "Depict the GLORIFIED Christ / the Lamb, never the Father.",
+      "shared_elements": ["heavenly throne + glory", "Lion / Lamb", "Son of man on clouds", "glorified Christ"],
+      "ref_anchors": ["JESUS", "THE_LORD", "KING_DAVID"],
+      "shorts": [
+        { "title": "Logos / The Word", "series": "names-titles", "status": "planned" },
+        { "title": "Son of Man (Daniel 7)", "series": "names-titles", "status": "planned" },
+        { "title": "Alpha and Omega", "series": "names-titles", "status": "planned" },
+        { "title": "King of Kings and Lord of Lords", "series": "names-titles", "status": "planned" },
+        { "title": "The Lion of the tribe of Judah", "series": "names-titles", "status": "planned" }
+      ]
+    }
+  ]
+}

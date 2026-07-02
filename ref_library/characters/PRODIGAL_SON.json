@@ -1,0 +1,18 @@
+{
+  "name": "PRODIGAL_SON",
+  "kind": "character",
+  "canonical": "the prodigal son, a ragged barefoot young Hebrew man of about twenty, gaunt sunburnt olive skin, a hollow weary downcast face, matted dark hair and a scraggly young beard, dressed in filthy torn rags, head bowed as he trudges home",
+  "tags": [
+    "prodigal",
+    "son",
+    "ragged",
+    "young-man",
+    "hebrew",
+    "returning"
+  ],
+  "style": "inked",
+  "anchor": "characters/PRODIGAL_SON.png",
+  "first_used": "09 The Father Who Ran",
+  "count": 4,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

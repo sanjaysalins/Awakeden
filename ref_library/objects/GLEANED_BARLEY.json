@@ -1,0 +1,18 @@
+{
+  "name": "GLEANED_BARLEY",
+  "kind": "object",
+  "canonical": "a small gathered handful of golden barley stalks with bearded grain heads, loose ears scattered on the stubble of a harvested field \u2014 the leftover scraps a gleaner gathers behind reapers, NOT a full sheaf, NOT modern wheat",
+  "tags": [
+    "barley",
+    "grain",
+    "gleanings",
+    "stalks",
+    "field",
+    "harvest"
+  ],
+  "style": "inked",
+  "anchor": "objects/GLEANED_BARLEY.png",
+  "first_used": "EW09_Boaz",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

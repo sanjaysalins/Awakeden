@@ -1,0 +1,18 @@
+{
+  "name": "NEHUSHTAN_BROKEN",
+  "kind": "motif",
+  "canonical": "the once-healing bronze serpent, long since turned into an idol, smashed to broken pieces by the hand of the good king of Judah as worshippers look on",
+  "tags": [
+    "nehushtan",
+    "idol",
+    "broken",
+    "reform",
+    "bronze-serpent",
+    "judah"
+  ],
+  "style": "inked",
+  "anchor": "motifs/NEHUSHTAN_BROKEN.png",
+  "first_used": "EW04_Bronze_Serpent",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

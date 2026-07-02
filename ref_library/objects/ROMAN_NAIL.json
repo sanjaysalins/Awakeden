@@ -1,0 +1,18 @@
+{
+  "name": "ROMAN_NAIL",
+  "kind": "object",
+  "canonical": "a single large iron Roman crucifixion nail, a hand-forged dark spike some five to seven inches long with a thick squared shank tapering to a brutal point and a rough flat head, pitted and rust-dark. The nail driven through hands and feet \u2014 NOT a modern smooth wire nail, NOT a small carpentry tack",
+  "tags": [
+    "nail",
+    "iron",
+    "roman",
+    "crucifixion",
+    "forged",
+    "spike"
+  ],
+  "style": "inked",
+  "anchor": "objects/ROMAN_NAIL.png",
+  "first_used": "01_Isaiah_53",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

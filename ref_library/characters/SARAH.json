@@ -1,0 +1,18 @@
+{
+  "name": "SARAH",
+  "kind": "character",
+  "canonical": "Sarah, Abraham's aged wife, an elderly Hebrew matriarch with finely wrinkled fair-olive skin and a gentle dignified face, silvered hair bound beneath a soft pale head-mantle, kind knowing eyes, wrapped in a flowing modest robe of warm cream and muted rose over undyed linen",
+  "tags": [
+    "sarah",
+    "matriarch",
+    "aged",
+    "abraham",
+    "wife",
+    "veiled"
+  ],
+  "style": "inked",
+  "anchor": "characters/SARAH.png",
+  "first_used": "EW02_Abraham",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "FIERY_SERPENTS",
+  "kind": "object",
+  "canonical": "venomous desert vipers writhing low among bare rocks and sand, lean and reddish-bronze, mouths open and striking, their bite burning like fire. Living biting wilderness snakes of the Numbers plague \u2014 NOT a single bronze idol, NOT cartoon snakes, NOT a coiled staff serpent",
+  "tags": [
+    "serpents",
+    "snakes",
+    "fiery",
+    "venomous",
+    "desert",
+    "biting"
+  ],
+  "style": "inked",
+  "anchor": "objects/FIERY_SERPENTS.png",
+  "first_used": "04_Bronze_Serpent",
+  "count": 3,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

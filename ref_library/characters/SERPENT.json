@@ -1,0 +1,18 @@
+{
+  "name": "SERPENT",
+  "kind": "character",
+  "canonical": "the cursed serpent of Eden, a great sinuous ancient snake with iridescent dark-green and bronze scales catching a cold gleam, a flat wedge-shaped head with slit cunning eyes and a flickering forked tongue, coiled low and beguiling among the shadowed roots and foliage of the garden",
+  "tags": [
+    "serpent",
+    "eden",
+    "satan",
+    "cursed",
+    "coiled",
+    "tempter"
+  ],
+  "style": "inked",
+  "anchor": "characters/SERPENT.png",
+  "first_used": "05_Seed_Of_The_Woman",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "EMPTY_TOMB",
+  "kind": "motif",
+  "canonical": "the open mouth of a rock-hewn garden tomb at dawn, the great round sealing stone rolled fully aside, the linen grave-clothes lying empty on the cold stone shelf with the napkin folded apart by itself (John 20:6-7), a shaft of soft golden resurrection light falling into the vacant chamber",
+  "tags": [
+    "resurrection",
+    "tomb",
+    "rolled-stone",
+    "grave-clothes",
+    "dawn-light",
+    "victory"
+  ],
+  "style": "inked",
+  "anchor": "motifs/EMPTY_TOMB.png",
+  "first_used": "05_Seed_Of_The_Woman",
+  "count": 6,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}

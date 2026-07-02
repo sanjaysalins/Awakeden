@@ -1,0 +1,18 @@
+{
+  "name": "SCAPEGOAT",
+  "kind": "character",
+  "canonical": "the live scapegoat of the Day of Atonement, a lone shaggy Near-Eastern male goat with rough tawny-and-white hair, curved horns and dark sorrowful eyes, driven solitary across a barren cracked-earth wilderness bearing the confessed iniquities into a land not inhabited",
+  "tags": [
+    "scapegoat",
+    "goat",
+    "atonement",
+    "wilderness",
+    "scarlet",
+    "azazel"
+  ],
+  "style": "inked",
+  "anchor": "characters/SCAPEGOAT.png",
+  "first_used": "06_Day_Of_Atonement",
+  "count": 2,
+  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+}
