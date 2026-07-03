@@ -1,26 +1,26 @@
 # Abraham and the Lamb — Awakeden eyewitness (long)
 **Witness:** Abraham, called the friend of God · **Core text:** Genesis 22 · **Type→fulfillment:** the binding of Isaac on Moriah — the only beloved son carries the wood up the mountain and a substitute dies in his stead; a shadow of the Father giving His only Son, the Lamb that God Himself would provide
-**Status:** v1 — Awakeden eyewitness LONG. the_LORD voices Gen 22:2; the angel of the LORD voices Gen 22:12 (verbatim KJV only); Isaac voices Gen 22:7; Jesus voices John 8:56 (verbatim KJV only). Cross-time reveal (Beat 6) is a SIGNPOSTED reflective device (EW-INV-11) — Abraham sees Christ's day "by the light that came long after," never claims he knew the crucifixion in his moment. Substitution named (the ram died in Isaac's stead → Christ in ours). Abraham = the father in the shadow, hand stayed; he is NOT cast as the substitute (Isaac/the ram type the offered Son; Abraham types the Father). No supersession. The "lamb-not-ram" riddle is the freshness hook (Gen 22:8 promised a lamb; 22:13 a ram is provided; the Lamb comes in John 1:29).
+**Status:** v1 — Awakeden eyewitness LONG. the_LORD voices Gen 22:2; the angel of the LORD voices Gen 22:12 (verbatim KJV only); Isaac voices Gen 22:7; Jesus voices John 8:56 (verbatim KJV only). Cross-time reveal (Beat 6) is a SIGNPOSTED reflective device (EW-INV-11) — Abraham sees Christ's day "by the light that came long after," never claims he knew the crucifixion in his moment. Substitution named (the ram died in Isaac's stead → Christ in ours). Abraham = the father in the shadow, hand stayed; he is NOT cast as the substitute (Isaac/the ram type the offered Son; Abraham types the Father). No supersession. The "lamb-not-ram" riddle is the freshness hook (Gen 22:8 promised a lamb; 22:13 a ram is provided; the Lamb comes in John 1:29). **v1.1 (2026-07-03): re-paneled on the repaired FULL 5/5 panel** (`_independent_review\20260703-061532\`, all REVISE, no doctrinal blocker — NOTE the panel read a STALE `_panel_clean.md`; the Gen 22:8 splice / angel-tag / Rom 8:32 attribution flags were already fixed). Applied the 3 still-real fixes: (1) Beat 1 "waited a hundred years for the boy" → "lived a hundred years before God gave me the boy" (Gen 21:5-accurate — he waited 25 from the promise); (2) Beat 4 "I had promised the boy a lamb" → "I had told the boy God would provide a lamb" (the promise was God's); (3) Beat 7 John 3:16 now attributed ("the word written of Him") before the quote (EW-INV-4). **v1.2 (2026-07-03): round-2 panel on the fixed text** (`_independent_review\20260703-083505\`: gemini PASS, rest REVISE, no doctrinal blocker). Applied the convergent fixes: (a) Beat 6 "the lamb I had **promised** Isaac" → "**named to** Isaac" (consistency with the v1.1 Beat-4 fix — cursor+grok caught the echo); (b) Gen 22:2 voice tag **[the LORD]** → **[God]** + Beat 2 "the LORD had told me" → "God had told me" (Gen 22:1 / 21:12 both attribute to God — claude+codex; re-cast at re-synth); (c) "first time in all my years I heard Him speak the word love" → bounded to His spoken words ("In all the words He had ever spoken to me…"); (d) Beat 7 close reworked — "Lay your knife down" dropped (gemini: flips the symbol — the knife was Abraham's OBEDIENCE) → "You need not climb your own mountain, nor bring your own offering… receive Him"; the question now correctly belongs to Isaac on the road and is carried DOWN the mountain. Remaining REVISE items are structural preferences (beat reorder, deeper wrestling, trim recap) — parked for the user.  Word-budget trim to re-lock (EW-G3: 1663>1650): Beat 3/4 lead-ins compressed (-15w, no quote/doctrine change) -> 1646, LOCKED 2026-07-03. **AUDIO RE-SYNTHED 2026-07-03 (panel-fix text, turn-level reuse).**
 ---
 
 ## Beat 1 — I was there
 I am Abraham. The world remembers me as the friend of God and the father of all who believe. But I want to tell you about three days I walked with fire and a knife in my own hands, and my only son at my side — not knowing whether I would carry him back down the mountain or leave him on it.
 
-I was old. I had waited a hundred years for the boy who walked beside me, and the God I had trusted with my whole life had asked me to take that boy up a hill and give him back. On the third day I lifted up my eyes and saw the place afar off. I have stood at many altars. I never once climbed toward one with a heart as heavy as I carried that morning.
+I was old. I had lived a hundred years before God gave me the boy who walked beside me, and the God I had trusted with my whole life had asked me to take that boy up a hill and give him back. On the third day I lifted up my eyes and saw the place afar off. I have stood at many altars. I never once climbed toward one with a heart as heavy as I carried that morning.
 
 ## Beat 2 — The world
 You must understand who that boy was to me. I had no other. Sarah bore him when she was long past age and I was as good as dead already; and we named him Isaac — laughter — because God had turned the grief of our old years into joy.
 
-And he was not only my son. He was the promise. Every word God had sworn to me hung on this one life, for the LORD had told me plainly that in Isaac shall my seed be called. Through this boy, all the families of the earth would be blessed. Kill him, and the promise died with him.
+And he was not only my son. He was the promise. Every word God had sworn to me hung on this one life, for God had told me plainly that in Isaac shall my seed be called. Through this boy, all the families of the earth would be blessed. Kill him, and the promise died with him.
 
 So when the voice came again, it asked for the one thing that held my whole life together:
 
-**[the LORD]** **"Take now thy son, thine only son Isaac, whom thou lovest, and get thee into the land of Moriah; and offer him there for a burnt offering upon one of the mountains which I will tell thee of."**
+**[God]** **"Take now thy son, thine only son Isaac, whom thou lovest, and get thee into the land of Moriah; and offer him there for a burnt offering upon one of the mountains which I will tell thee of."**
 
-Thine only son. Whom thou lovest. That was the first time in all my years of walking with God that I heard Him speak the word love — and He spoke it over the son He was asking me to lay down.
+Thine only son. Whom thou lovest. In all the words He had ever spoken to me, I had never once heard the word love — until He spoke it over the son He was asking me to lay down.
 
 ## Beat 3 — The act
-Let me tell you what I did, for I have gone back over it ten thousand times since. I rose up early; I would not let the morning catch me arguing with God. I split the wood myself, saddled the ass, took two young men and Isaac, and set out for the place He had named. Three days I carried that command in my chest like a stone I could not set down.
+I have gone back over that morning ten thousand times since. I rose up early; I would not let the morning catch me arguing with God. I split the wood myself, saddled the ass, took two young men and Isaac, and set out for the place He had named. Three days I carried that command in my chest like a stone I could not set down.
 
 At the foot of the mountain I left the servants behind, and I said a thing I did not fully understand even as it left my mouth:
 
@@ -35,7 +35,7 @@ At the top I built the altar with these hands and laid the wood in order. And th
 **"And Abraham stretched forth his hand, and took the knife to slay his son."**
 
 ## Beat 4 — The strange detail
-But come back down the hill with me a moment, for there is one thing said on that path I could never get past as long as I lived. My boy was no fool. As we climbed he saw the fire in my hand. He felt the wood on his own back. He saw everything an offering needs — and he saw the one thing missing:
+But come back down the path with me, for one thing was said there I could never get past. My boy was no fool. As we climbed he saw the fire in my hand. He felt the wood on his own back. He saw everything an offering needs — and he saw the one thing missing:
 
 **[Isaac]** **"Behold the fire and the wood: but where is the lamb for a burnt offering?"**
 
@@ -47,7 +47,7 @@ God will provide a lamb. Hold on to that word — for here is the riddle that fo
 
 **[the angel of the LORD]** **"Lay not thine hand upon the lad, neither do thou any thing unto him: for now I know that thou fearest God, seeing thou hast not withheld thy son, thine only son from me."**
 
-And I lifted up my eyes, and behind me, caught fast in a thicket by his horns, was a ram. A full-grown ram. I took him and offered him up gladly in the stead of my son, and Isaac stood up alive. But hear me — I had promised the boy a lamb, and God had given a ram. I came down that mountain delivered, and still, somehow, waiting. The lamb I had named had not yet been brought.
+And I lifted up my eyes, and behind me, caught fast in a thicket by his horns, was a ram. A full-grown ram. I took him and offered him up gladly in the stead of my son, and Isaac stood up alive. But hear me — I had told the boy God would provide a lamb, and God had given a ram. I came down that mountain delivered, and still, somehow, waiting. The lamb I had named had not yet been brought.
 
 ## Beat 5 — The wrestling
 And I will not pretend the climb was simple faith with no war underneath it. Weigh what He had asked. The same God who swore the promise would run through Isaac was now telling me to end Isaac's life. If the boy died, the oath died with him. It made no sense that the God who cannot lie would command the death of His own word.
@@ -65,7 +65,7 @@ The Son Himself named it. Generations after me, a Man stood teaching in Jerusale
 
 **[Jesus]** **"Your father Abraham rejoiced to see my day: and he saw it, and was glad."**
 
-That Man was Jesus. And I tell you, the day I glimpsed from afar on Moriah was His. For God did at last, in flesh and blood, what He stayed my hand from doing in shadow. He too had a Son — an only Son, a beloved Son — who carried the wood of His own offering up a hill in that same country, exactly as I had bound the wood onto Isaac. Only this time no voice came out of heaven to stop the hand, and no ram was caught in the thicket to die in His place. There was no substitute for Him, because He was the substitute. The lamb I had promised Isaac and never found on my mountain — God provided Him on His, and a man named John pointed straight at Him and spoke the words I had been waiting on for two thousand years:
+That Man was Jesus. And I tell you, the day I glimpsed from afar on Moriah was His. For God did at last, in flesh and blood, what He stayed my hand from doing in shadow. He too had a Son — an only Son, a beloved Son — who carried the wood of His own offering up a hill in that same country, exactly as I had bound the wood onto Isaac. Only this time no voice came out of heaven to stop the hand, and no ram was caught in the thicket to die in His place. There was no substitute for Him, because He was the substitute. The lamb I had named to Isaac and never found on my mountain — God provided Him on His, and a man named John pointed straight at Him and spoke the words I had been waiting on for two thousand years:
 
 **"Behold the Lamb of God, which taketh away the sin of the world."**
 
@@ -80,8 +80,8 @@ Do not look to me — only the father in the shadow, my hand stopped before it f
 
 On His mountain the Father did not stay His hand — He gave His beloved Son, who carried the wood and did not come down, the Lamb I never found. His name is Jesus.
 
-Sit with that. What I was spared, He was not; He bore it so you need not. Come to Him not driven but wanted — the love I saw in figure, now given in full:
+Sit with that. What I was spared, He was not; He bore it so you need not. Come to Him not driven but wanted — for the word written of Him gives in full the love I saw only in figure:
 
 **"For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life."**
 
-So I leave you the question I carried up that hill, the fear gone now: where is the lamb? Will you let Him be your substitute — not when worthy, but now, freely? Lay your knife down, and receive Him — and be carried home.
+So I leave you the question my son asked on the road — the question I carried back down the mountain and all my days: where is the lamb? He has been provided. You need not climb your own mountain, nor bring your own offering — not when worthy, but now, freely: receive Him, and be carried home.

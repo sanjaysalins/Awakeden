@@ -32,18 +32,24 @@ from pathlib import Path
 # ---- provider invocation (mirrors the user's ai-panel config) ----------------
 # mode: "stdin" => prompt piped on stdin; "file" => prompt written, path put in args via {prompt_file}
 PROVIDERS = {
-    "cursor": {  # PRIMARY — the user's chosen independent reviewer
-        "command": "cursor-agent", "args": ["-p", "--mode", "ask"], "mode": "stdin",
+    # Model pinned per voice so panel diversity is DETERMINISTIC (5 distinct families:
+    # Cursor/Composer, Anthropic, Google, OpenAI, xAI) — never silently collapsed by a
+    # CLI changing its default model.
+    "cursor": {  # PRIMARY — Cursor's own Composer model (= the default that earned 98% OK)
+        "command": "cursor-agent",
+        "args": ["-p", "--mode", "ask", "--model", "composer-2.5-fast"], "mode": "stdin",
         "prefix": "", "timeout": 300,
     },
     "claude": {
         "command": "claude", "args": ["-p"], "mode": "stdin",
         "prefix": "", "timeout": 600,
     },
-    "gemini": {
-        "command": "gemini", "args": ["--approval-mode", "plan", "--output-format", "text"],
-        "mode": "stdin", "timeout": 300,
-        "prefix": "You are a critical reviewer. Output your critique text only. Do not run tools or ask for approval.",
+    "gemini": {  # Google voice ROUTED VIA cursor-agent: the native gemini CLI free tier
+        # was killed 2026 ("IneligibleTierError: migrate to Antigravity") and had a 48%
+        # fail rate. cursor's subscription serves gemini-3.1-pro headlessly today.
+        "command": "cursor-agent",
+        "args": ["-p", "--mode", "ask", "--model", "gemini-3.1-pro"], "mode": "stdin",
+        "prefix": "", "timeout": 300,
     },
     "codex": {
         "command": "codex", "args": ["exec", "--sandbox", "read-only"], "mode": "stdin",
@@ -52,13 +58,20 @@ PROVIDERS = {
     "grok": {
         "command": "grok", "args": [
             "--no-auto-update", "--prompt-file", "{prompt_file}",
-            "--permission-mode", "dontAsk", "--max-turns", "4", "--disable-web-search",
+            # max-turns raised 4->8: grok spends turns reading files to fact-check, then
+            # hit the cap BEFORE emitting the review (35% of runs died with only a
+            # preamble line). The rules also demand the VERDICT block in the final reply.
+            "--permission-mode", "dontAsk", "--max-turns", "8", "--disable-web-search",
             "--disallowed-tools", "run_terminal_cmd,search_replace,write,web_fetch,web_search",
-            "--rules", "You are a critical reviewer. Output your critique text only. Do not edit files or run shell commands.",
+            "--rules", "You are a critical reviewer. Output your critique text only. Do not edit files or run shell commands. You MUST finish with the full review ending in the VERDICT block — never stop after a status line.",
             "--output-format", "plain",
         ], "mode": "file", "prefix": "", "timeout": 360,
     },
 }
+
+# A panel run with fewer OK voices than this (capped at the number requested) is
+# DEGRADED — the script exits 3 so callers fail closed instead of locking on it.
+MIN_HEALTHY = 4
 
 # ---- review lenses -----------------------------------------------------------
 LENS_NARRATION = """LENS — judge this NARRATION on (be specific, cite the exact line/phrase):
@@ -71,8 +84,12 @@ LENS_NARRATION = """LENS — judge this NARRATION on (be specific, cite the exac
   convicts, the script invites.
 - Freshness = faithful depth: surprising about the TEXT, orthodox in the claim and the landing.
 - One thread spine from hook -> middle -> CTA (no thread-swapping).
-- Landing does NEW work (not a tired generic 'will you trust Him?' close).
-- Hook grips in the first ~5 seconds."""
+- SCORE THE HOOK 1-10 (state the number): would a stranger stop scrolling in the first
+  ~5 seconds? A template open ("Did you know / Imagine / What if I told you") caps at 5.
+- SCORE THE LANDING 1-10 (state the number): is the closing CTA built from THIS piece's
+  own image/verb, and does it land in the bones? Ask: "could this exact final sentence
+  end a DIFFERENT piece?" If yes ("Come to Jesus", "turn to Him", "look to Jesus"), it is
+  a stock closer — cap at 5. Anything under 8 on either score = VERDICT REVISE."""
 
 LENS_PLAN = """LENS — judge this PLAN on (be specific, cite the exact step/claim):
 - Feasibility against the real codebase / tools (does it assume things that exist?).
@@ -115,7 +132,11 @@ cite the exact line/phrase:
 - VOICE / character (EW-G10): a consistent, characterful FIRST-PERSON witness — not the
   detached essay narrator wearing a costume.
 - First-hearing clarity: a listener with zero Bible knowledge must follow it.
-- The hook grips in the first lines; the spine holds — ONE witness, ONE thread, no swap."""
+- The hook grips in the first lines; the spine holds — ONE witness, ONE thread, no swap.
+- SCORE THE HOOK 1-10 and SCORE THE LANDING 1-10 (state both numbers): the hook must stop
+  a stranger scrolling; the landing must be built from THIS witness's own moment/verb —
+  if the exact final sentence could end a different piece, it is stock: cap at 5.
+  Under 8 on either = VERDICT REVISE."""
 
 LENS_EYEWITNESS_SHORT = (LENS_EYEWITNESS + """
 - SHORT form: is it TIGHT (~90s, ~220-320 spoken words) and does the SINGLE moment land —
@@ -151,9 +172,10 @@ ARTIFACT TYPE: {kind}
 {lens}
 {context}
 Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
-Then end your reply with EXACTLY this block:
+Then end your reply with EXACTLY this block (on the VERDICT line write exactly ONE word —
+PASS or REVISE or FAIL — never the list of options):
 
-VERDICT: PASS | REVISE | FAIL
+VERDICT: <PASS or REVISE or FAIL>
 TOP FIXES:
 1. <most important fix>
 2. <second>
@@ -280,8 +302,10 @@ def main() -> int:
             (outdir / f"{name}.md").write_text(
                 f"# Independent review — {name} ({'OK' if ok else 'FAILED'}, {dur:.0f}s)\n\n{out}\n",
                 encoding="utf-8")
-            print(f"  [{'ok ' if ok else 'FAIL'}] {name:<7} {dur:5.0f}s  "
-                  f"{'verdict: ' + out.split('VERDICT:')[-1].strip()[:40] if 'VERDICT:' in out else out[:50]}")
+            line = (f"  [{'ok ' if ok else 'FAIL'}] {name:<7} {dur:5.0f}s  "
+                    f"{'verdict: ' + out.split('VERDICT:')[-1].strip()[:40] if 'VERDICT:' in out else out[:50]}")
+            # console may be cp1252 — never let a fancy character kill the run
+            print(line.encode("ascii", "replace").decode("ascii"))
 
     # index
     idx = [f"# Independent review index — {art.name} ({args.kind})", f"stamp: {stamp}", ""]
@@ -289,8 +313,17 @@ def main() -> int:
         ok, out, dur = results.get(n, (False, "(missing)", 0))
         verdict = out.split("VERDICT:")[-1].split("\n")[0].strip() if "VERDICT:" in out else "—"
         idx.append(f"- **{n}** — {'OK' if ok else 'FAILED'} ({dur:.0f}s) — verdict: {verdict} — `{n}.md`")
+    healthy = sum(1 for ok, _, _ in results.values() if ok)
+    quorum = min(MIN_HEALTHY, len(names))
+    idx.append(f"\nhealthy voices: {healthy}/{len(names)} (quorum {quorum})"
+               + ("" if healthy >= quorum else " — **DEGRADED PANEL — do not lock on this run**"))
     (outdir / "INDEX.md").write_text("\n".join(idx) + "\n", encoding="utf-8")
     print(f"[review] done -> {outdir / 'INDEX.md'}")
+    if healthy < quorum:
+        print(f"[review] DEGRADED PANEL: only {healthy}/{len(names)} voices answered "
+              f"(quorum {quorum}). Fix the dead reviewers and re-run — do NOT lock on this.",
+              file=sys.stderr)
+        return 3
     return 0
 
 

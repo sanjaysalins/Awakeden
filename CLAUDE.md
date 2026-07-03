@@ -180,6 +180,10 @@ pipeline/video_render.py      VideoProvider ABC + HFVideoProvider (hf kling3_0, 
                                 integer duration, NSFW→raise) + KlingDirectProvider (image_to_kling fallback)
                                 + HybridVideoProvider (HF→fallback on NSFW). animate_scenes(); VIDEO_PROVIDER=hybrid
 
+narration_gate.py             $0 EARNED hook+landing gate (run BEFORE spend on every new
+                                narration): FAILs stock closers ("come to Jesus" family)
+                                unless the piece's own KJV uses the verb, unearned landings,
+                                template hooks; WARNs corpus-stale closer verbs
 README.md                     user-facing docs
 ```
 

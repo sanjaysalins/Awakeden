@@ -2,7 +2,9 @@
      3-voice long-form read: narrator (default) · scripture (KJV narration/NT quotes) ·
      god (Gen 3:9 + 3:15, the LORD's own speech).
      Words are FROZEN — this file only adds speaker tags; spoken text is verified
-     equal to the LOCKED narration.md. -->
+     equal to the LOCKED narration.md.
+     2026-07-03: hand-mirrored the v1.3 panel fixes (M4 Luke 1:35 "therefore also" +
+     "would carry"; M6 "final end is certain") — verified word-equal to narration.md v1.3. -->
 
 <speaker name="narrator">Something has just gone terribly wrong in the garden. The two people God made have believed a lie, eaten what He forbade, and now — for the first time in the world — they are hiding from Him.</speaker>
 
@@ -31,8 +33,8 @@
 <speaker name="narrator">And the promise is strangely specific. It speaks of "her seed" — the woman's offspring. That is an unusual way to put it; across the rest of Scripture a line is most often traced through fathers. Here the hope hangs on the woman's seed. It is a clue, not a proof — but it is a clue that lights up when the New Testament tells how the Saviour finally came.</speaker>
 
 <speaker name="scripture">"But when the fulness of the time was come, God sent forth his Son, made of a woman, made under the law."</speaker>
-<speaker name="narrator">Made of a woman. And the angel's word to Mary names what kind of child she carried:</speaker>
-<speaker name="scripture">"that holy thing which shall be born of thee shall be called the Son of God."</speaker>
+<speaker name="narrator">Made of a woman. And the angel's word to Mary names what kind of child she would carry:</speaker>
+<speaker name="scripture">"therefore also that holy thing which shall be born of thee shall be called the Son of God."</speaker>
 
 <speaker name="narrator">Now be honest about what kind of match this is. No New Testament writer ever stops, quotes Genesis 3:15 word for word, and declares it fulfilled in so many words. This is not a citation; it is a trajectory — the whole story bending toward one point. What the New Testament does do is name the players. The serpent?</speaker>
 <speaker name="scripture">"that old serpent, called the Devil, and Satan."</speaker>
@@ -57,7 +59,7 @@
 <speaker name="narrator">That is the cross. The strike to the heel is Calvary — and it was no glancing blow. The Son of God hung there bearing what we had earned; the death that was our wages fell on Him. He stepped into the very judgment we deserved and took it:</speaker>
 <speaker name="scripture">"that through death he might destroy him that had the power of death, that is, the devil."</speaker>
 
-<speaker name="narrator">Do you see the turn? The blow that looked like the serpent winning — the death of the Son — was the blow that crushed his head. The victory was won in the cross itself, not in spite of it: "And having spoiled principalities and powers, he made a shew of them openly, triumphing over them in it." And the empty tomb three days later put it beyond all doubt — the One whose heel was struck rose. The serpent's head will never lift to win again. He is a beaten enemy already — though his final end, in God's word, is still coming "shortly": defeated at the cross, finished forever at the King's return.</speaker>
+<speaker name="narrator">Do you see the turn? The blow that looked like the serpent winning — the death of the Son — was the blow that crushed his head. The victory was won in the cross itself, not in spite of it: "And having spoiled principalities and powers, he made a shew of them openly, triumphing over them in it." And the empty tomb three days later put it beyond all doubt — the One whose heel was struck rose. The serpent's head will never lift to win again. He is a beaten enemy already — and his final end is certain: defeated at the cross, finished forever at the King's return.</speaker>
 
 <speaker name="narrator">So here is the oldest promise in the world, and it is still open.</speaker>
 
