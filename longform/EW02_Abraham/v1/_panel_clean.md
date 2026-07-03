@@ -18,7 +18,7 @@ So when the voice came again, it asked for the one thing that held my whole life
 Thine only son. Whom thou lovest. In all the words He had ever spoken to me, I had never once heard the word love — until He spoke it over the son He was asking me to lay down.
 
 ## Beat 3 — The act
-Let me tell you what I did, for I have gone back over it ten thousand times since. I rose up early; I would not let the morning catch me arguing with God. I split the wood myself, saddled the ass, took two young men and Isaac, and set out for the place He had named. Three days I carried that command in my chest like a stone I could not set down.
+I have gone back over that morning ten thousand times since. I rose up early; I would not let the morning catch me arguing with God. I split the wood myself, saddled the ass, took two young men and Isaac, and set out for the place He had named. Three days I carried that command in my chest like a stone I could not set down.
 
 At the foot of the mountain I left the servants behind, and I said a thing I did not fully understand even as it left my mouth:
 
@@ -33,7 +33,7 @@ At the top I built the altar with these hands and laid the wood in order. And th
 **"And Abraham stretched forth his hand, and took the knife to slay his son."**
 
 ## Beat 4 — The strange detail
-But come back down the hill with me a moment, for there is one thing said on that path I could never get past as long as I lived. My boy was no fool. As we climbed he saw the fire in my hand. He felt the wood on his own back. He saw everything an offering needs — and he saw the one thing missing:
+But come back down the path with me, for one thing was said there I could never get past. My boy was no fool. As we climbed he saw the fire in my hand. He felt the wood on his own back. He saw everything an offering needs — and he saw the one thing missing:
 
 **[Isaac]** **"Behold the fire and the wood: but where is the lamb for a burnt offering?"**
 

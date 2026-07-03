@@ -60,7 +60,7 @@ You were never meant to close that wound yourself. The healing was finished at t
   your healing."). Response named (bring/let), healing OFFERED not pre-declared (claude: "ye" addresses
   believers — don't tell the listener their wound is closed before they come). The we/ye beat now frames
   Peter honestly (writing to people who had come to Christ) instead of "points straight at you" as a
-  textual claim. AUDIO (if any) NOW STALE — text changed.
+  textual claim. AUDIO RE-SYNTHED 2026-07-03 (74.0s, narrator atempo 1.30 — at the punchy cap; alignment regenerated).
 
 ## VOICE PLAN
 - `narrator` only (all quoted Scripture is OT prophecy + epistle, narrator-voiced per the attribution rule).

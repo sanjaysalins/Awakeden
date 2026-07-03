@@ -61,7 +61,7 @@ The man they mocked is the One the whole song was about. They told the King to c
   yours" softened to "theirs, and ours" (codex+cursor: the pivot read abrupt/accusatory); the close now
   resolves the SCRIPT thread (the song's unread ending, Ps 22:27) while keeping "Come to the One who would
   not come down" (claude scored it 9/10; gemini's stock-verdict answered by tying it to the script image).
-  No fear / gain-loss / manufactured pressure. AUDIO (if any) NOW STALE — text changed 2026-07-03.
+  No fear / gain-loss / manufactured pressure. AUDIO RE-SYNTHED 2026-07-03 (target re-set 69s->78s: the fixed text is longer and 69s forced narrator atempo 1.44 over the 1.30 rush cap; at 78s atempo=1.21, punchy and clean; alignment regenerated).
 - **No invented narrative detail:** the crowd/rulers/passers-by are exactly Matthew's record; no claim
   beyond the text (e.g. no asserting any individual mocker's later conversion).
 

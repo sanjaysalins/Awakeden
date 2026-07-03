@@ -5,967 +5,1107 @@
     {
       "text": "You",
       "start": 0.0,
-      "end": 0.18
+      "end": 0.14
     },
     {
       "text": "carry",
-      "start": 0.18,
-      "end": 0.42
+      "start": 0.14,
+      "end": 0.36
     },
     {
       "text": "a",
-      "start": 0.42,
-      "end": 0.62
+      "start": 0.36,
+      "end": 0.52
     },
     {
       "text": "wound",
-      "start": 0.62,
-      "end": 0.88
+      "start": 0.52,
+      "end": 0.7
     },
     {
       "text": "nothing",
-      "start": 1.08,
-      "end": 1.3
+      "start": 0.9,
+      "end": 1.08
     },
     {
       "text": "has",
-      "start": 1.3,
-      "end": 1.48
+      "start": 1.08,
+      "end": 1.24
     },
     {
       "text": "been",
-      "start": 1.48,
-      "end": 1.62
+      "start": 1.24,
+      "end": 1.34
     },
     {
       "text": "able",
-      "start": 1.62,
-      "end": 1.8
+      "start": 1.34,
+      "end": 1.5
     },
     {
       "text": "to",
-      "start": 1.8,
-      "end": 1.9
+      "start": 1.5,
+      "end": 1.6
     },
     {
       "text": "close",
-      "start": 1.9,
-      "end": 2.22
+      "start": 1.6,
+      "end": 1.84
     },
     {
       "text": "—",
-      "start": 2.22,
-      "end": 2.22
+      "start": 1.84,
+      "end": 1.84
     },
     {
       "text": "a",
-      "start": 2.98,
-      "end": 3.16
+      "start": 2.5,
+      "end": 2.64
     },
     {
       "text": "guilt",
-      "start": 3.16,
-      "end": 3.46
+      "start": 2.64,
+      "end": 2.88
     },
     {
       "text": "that",
-      "start": 3.46,
-      "end": 3.68
+      "start": 2.88,
+      "end": 3.08
     },
     {
       "text": "keeps",
-      "start": 3.68,
-      "end": 3.9
+      "start": 3.08,
+      "end": 3.24
     },
     {
       "text": "reopening,",
-      "start": 3.9,
-      "end": 4.4
+      "start": 3.24,
+      "end": 3.66
     },
     {
       "text": "no",
-      "start": 4.8,
-      "end": 4.88
+      "start": 4.0,
+      "end": 4.08
     },
     {
       "text": "matter",
-      "start": 4.88,
-      "end": 5.02
+      "start": 4.08,
+      "end": 4.2
     },
     {
       "text": "how",
-      "start": 5.02,
-      "end": 5.3
+      "start": 4.2,
+      "end": 4.44
     },
     {
       "text": "hard",
-      "start": 5.3,
-      "end": 5.6
+      "start": 4.44,
+      "end": 4.68
     },
     {
       "text": "you",
-      "start": 5.6,
-      "end": 5.74
+      "start": 4.68,
+      "end": 4.78
     },
     {
       "text": "try",
-      "start": 5.74,
-      "end": 5.92
+      "start": 4.78,
+      "end": 4.94
     },
     {
       "text": "to",
-      "start": 5.92,
-      "end": 6.02
+      "start": 4.94,
+      "end": 5.02
     },
     {
       "text": "make",
-      "start": 6.02,
-      "end": 6.16
+      "start": 5.02,
+      "end": 5.14
     },
     {
       "text": "it",
-      "start": 6.16,
-      "end": 6.28
+      "start": 5.14,
+      "end": 5.26
     },
     {
       "text": "right.",
-      "start": 6.28,
-      "end": 6.54
+      "start": 5.26,
+      "end": 5.46
     },
     {
       "text": "Seven",
-      "start": 7.74,
-      "end": 7.99
+      "start": 6.48,
+      "end": 6.67
     },
     {
       "text": "hundred",
-      "start": 7.99,
-      "end": 8.24
+      "start": 6.67,
+      "end": 6.86
     },
     {
       "text": "years",
-      "start": 8.24,
-      "end": 8.54
+      "start": 6.86,
+      "end": 7.12
     },
     {
       "text": "before",
-      "start": 8.54,
-      "end": 8.88
+      "start": 7.12,
+      "end": 7.4
     },
     {
       "text": "the",
-      "start": 8.88,
-      "end": 9.06
+      "start": 7.4,
+      "end": 7.56
     },
     {
       "text": "cross,",
-      "start": 9.06,
-      "end": 9.3
+      "start": 7.56,
+      "end": 7.76
     },
     {
       "text": "Isaiah",
-      "start": 9.9,
-      "end": 10.06
+      "start": 8.36,
+      "end": 8.36
     },
     {
       "text": "wrote",
-      "start": 10.06,
-      "end": 10.38
+      "start": 8.36,
+      "end": 8.68
     },
     {
       "text": "that",
-      "start": 10.38,
-      "end": 10.6
+      "start": 8.68,
+      "end": 8.84
     },
     {
       "text": "the",
-      "start": 10.6,
-      "end": 10.72
+      "start": 8.84,
+      "end": 8.96
     },
     {
       "text": "healing",
-      "start": 10.72,
-      "end": 11.0
+      "start": 8.96,
+      "end": 9.18
     },
     {
       "text": "you",
-      "start": 11.0,
-      "end": 11.28
+      "start": 9.18,
+      "end": 9.4
     },
     {
       "text": "can't",
-      "start": 11.28,
-      "end": 11.64
+      "start": 9.4,
+      "end": 9.7
     },
     {
       "text": "reach",
-      "start": 11.64,
-      "end": 11.78
+      "start": 9.7,
+      "end": 9.82
     },
     {
       "text": "would",
-      "start": 11.78,
-      "end": 12.2
+      "start": 9.82,
+      "end": 10.18
     },
     {
       "text": "come",
-      "start": 12.2,
-      "end": 12.38
+      "start": 10.18,
+      "end": 10.34
     },
     {
       "text": "through",
-      "start": 12.38,
-      "end": 12.62
+      "start": 10.34,
+      "end": 10.52
     },
     {
       "text": "someone",
-      "start": 12.62,
-      "end": 12.94
+      "start": 10.52,
+      "end": 10.8
     },
     {
       "text": "else's",
-      "start": 12.94,
-      "end": 13.34
+      "start": 10.8,
+      "end": 11.12
     },
     {
       "text": "wounds.",
-      "start": 13.34,
-      "end": 13.66
+      "start": 11.12,
+      "end": 11.42
     },
     {
       "text": "\"But",
-      "start": 14.26,
-      "end": 14.5
+      "start": 11.96,
+      "end": 12.18
     },
     {
       "text": "he",
-      "start": 14.5,
-      "end": 14.66
+      "start": 12.18,
+      "end": 12.32
     },
     {
       "text": "was",
-      "start": 14.66,
-      "end": 14.82
+      "start": 12.32,
+      "end": 12.52
     },
     {
       "text": "wounded",
-      "start": 14.82,
-      "end": 15.18
+      "start": 12.52,
+      "end": 12.9
     },
     {
       "text": "for",
-      "start": 15.18,
-      "end": 15.42
+      "start": 12.9,
+      "end": 13.14
     },
     {
       "text": "our",
-      "start": 15.42,
-      "end": 15.62
+      "start": 13.14,
+      "end": 13.34
     },
     {
       "text": "transgressions,",
-      "start": 15.62,
-      "end": 16.46
+      "start": 13.34,
+      "end": 14.24
     },
     {
       "text": "he",
-      "start": 16.98,
-      "end": 17.1
+      "start": 14.76,
+      "end": 14.94
     },
     {
       "text": "was",
-      "start": 17.1,
-      "end": 17.26
+      "start": 14.94,
+      "end": 15.12
     },
     {
       "text": "bruised",
-      "start": 17.26,
-      "end": 17.72
+      "start": 15.12,
+      "end": 15.68
     },
     {
       "text": "for",
-      "start": 17.72,
-      "end": 17.9
+      "start": 15.68,
+      "end": 15.86
     },
     {
       "text": "our",
-      "start": 17.9,
-      "end": 18.16
+      "start": 15.86,
+      "end": 16.1
     },
     {
-      "text": "iniquities...",
-      "start": 18.16,
-      "end": 18.64
-    },
-    {
-      "text": "and",
-      "start": 19.24,
-      "end": 19.48
-    },
-    {
-      "text": "with",
-      "start": 19.48,
-      "end": 19.64
-    },
-    {
-      "text": "his",
-      "start": 19.64,
-      "end": 19.86
-    },
-    {
-      "text": "stripes",
-      "start": 19.86,
-      "end": 20.22
-    },
-    {
-      "text": "we",
-      "start": 20.86,
-      "end": 21.14
-    },
-    {
-      "text": "are",
-      "start": 21.14,
-      "end": 21.34
-    },
-    {
-      "text": "healed.\"",
-      "start": 21.34,
-      "end": 21.76
-    },
-    {
-      "text": "Stripes",
-      "start": 22.9,
-      "end": 23.4
-    },
-    {
-      "text": "—",
-      "start": 23.4,
-      "end": 23.4
+      "text": "iniquities:",
+      "start": 16.1,
+      "end": 16.6
     },
     {
       "text": "the",
-      "start": 24.1,
-      "end": 24.28
+      "start": 17.42,
+      "end": 17.84
     },
     {
-      "text": "welts",
-      "start": 24.28,
-      "end": 24.52
+      "text": "chastisement",
+      "start": 17.84,
+      "end": 18.26
     },
     {
       "text": "of",
-      "start": 24.52,
-      "end": 24.74
+      "start": 18.26,
+      "end": 18.44
     },
     {
-      "text": "a",
-      "start": 24.74,
-      "end": 24.88
+      "text": "our",
+      "start": 18.44,
+      "end": 18.6
     },
     {
-      "text": "flogging,",
-      "start": 24.88,
-      "end": 25.32
+      "text": "peace",
+      "start": 18.6,
+      "end": 18.9
+    },
+    {
+      "text": "was",
+      "start": 18.9,
+      "end": 19.1
+    },
+    {
+      "text": "upon",
+      "start": 19.1,
+      "end": 19.44
+    },
+    {
+      "text": "him;",
+      "start": 19.44,
+      "end": 19.68
+    },
+    {
+      "text": "and",
+      "start": 20.36,
+      "end": 20.56
+    },
+    {
+      "text": "with",
+      "start": 20.56,
+      "end": 20.7
+    },
+    {
+      "text": "his",
+      "start": 20.7,
+      "end": 20.9
+    },
+    {
+      "text": "stripes",
+      "start": 20.9,
+      "end": 21.32
+    },
+    {
+      "text": "we",
+      "start": 21.88,
+      "end": 22.06
+    },
+    {
+      "text": "are",
+      "start": 22.06,
+      "end": 22.22
+    },
+    {
+      "text": "healed.\"",
+      "start": 22.22,
+      "end": 22.6
+    },
+    {
+      "text": "Stripes",
+      "start": 23.76,
+      "end": 24.18
+    },
+    {
+      "text": "—",
+      "start": 24.18,
+      "end": 24.18
     },
     {
       "text": "the",
-      "start": 25.96,
-      "end": 26.06
+      "start": 24.18,
+      "end": 24.92
+    },
+    {
+      "text": "welts",
+      "start": 24.92,
+      "end": 25.22
+    },
+    {
+      "text": "of",
+      "start": 25.22,
+      "end": 25.34
+    },
+    {
+      "text": "a",
+      "start": 25.34,
+      "end": 25.42
+    },
+    {
+      "text": "flogging,",
+      "start": 25.42,
+      "end": 25.82
+    },
+    {
+      "text": "the",
+      "start": 26.26,
+      "end": 26.42
     },
     {
       "text": "wounding",
-      "start": 26.06,
-      "end": 26.52
+      "start": 26.42,
+      "end": 26.82
     },
     {
       "text": "Isaiah",
-      "start": 26.52,
-      "end": 26.8
+      "start": 26.82,
+      "end": 26.96
     },
     {
       "text": "foresaw",
-      "start": 26.8,
-      "end": 27.38
+      "start": 26.96,
+      "end": 27.52
     },
     {
       "text": "centuries",
-      "start": 27.38,
-      "end": 27.82
+      "start": 27.52,
+      "end": 27.88
     },
     {
       "text": "before",
-      "start": 27.82,
+      "start": 27.88,
       "end": 28.24
     },
     {
       "text": "it",
       "start": 28.24,
-      "end": 28.42
+      "end": 28.4
     },
     {
       "text": "fell",
-      "start": 28.42,
-      "end": 28.62
+      "start": 28.4,
+      "end": 28.56
     },
     {
       "text": "on",
-      "start": 28.62,
-      "end": 28.84
+      "start": 28.56,
+      "end": 28.74
     },
     {
       "text": "Jesus'",
-      "start": 28.84,
-      "end": 29.36
+      "start": 28.74,
+      "end": 28.94
     },
     {
       "text": "back.",
-      "start": 29.36,
-      "end": 29.62
+      "start": 29.14,
+      "end": 29.46
     },
     {
       "text": "And",
-      "start": 30.24,
-      "end": 30.82
+      "start": 29.84,
+      "end": 30.36
     },
     {
       "text": "the",
-      "start": 30.82,
-      "end": 30.9
+      "start": 30.36,
+      "end": 30.46
     },
     {
       "text": "apostle",
-      "start": 30.9,
-      "end": 31.36
+      "start": 30.46,
+      "end": 30.84
     },
     {
       "text": "Peter",
-      "start": 31.36,
-      "end": 31.62
+      "start": 30.84,
+      "end": 31.06
     },
     {
       "text": "took",
-      "start": 31.62,
-      "end": 31.92
+      "start": 31.06,
+      "end": 31.32
     },
     {
       "text": "up",
-      "start": 31.92,
-      "end": 32.14
+      "start": 31.32,
+      "end": 31.46
     },
     {
       "text": "Isaiah's",
-      "start": 32.14,
-      "end": 32.56
+      "start": 31.46,
+      "end": 31.84
     },
     {
       "text": "words",
-      "start": 32.56,
-      "end": 32.76
+      "start": 31.84,
+      "end": 32.0
     },
     {
       "text": "and",
-      "start": 32.76,
-      "end": 33.02
+      "start": 32.0,
+      "end": 32.22
     },
     {
       "text": "laid",
-      "start": 33.02,
-      "end": 33.18
+      "start": 32.22,
+      "end": 32.36
     },
     {
       "text": "them",
-      "start": 33.18,
-      "end": 33.4
+      "start": 32.36,
+      "end": 32.54
     },
     {
       "text": "on",
-      "start": 33.4,
-      "end": 33.56
+      "start": 32.54,
+      "end": 32.66
     },
     {
       "text": "Christ",
-      "start": 33.56,
-      "end": 33.84
+      "start": 32.66,
+      "end": 32.92
     },
     {
       "text": "at",
-      "start": 33.84,
-      "end": 34.06
+      "start": 32.92,
+      "end": 33.1
     },
     {
       "text": "the",
-      "start": 34.06,
-      "end": 34.14
+      "start": 33.1,
+      "end": 33.18
     },
     {
       "text": "cross:",
-      "start": 34.14,
-      "end": 34.46
+      "start": 33.18,
+      "end": 33.42
     },
     {
       "text": "\"Who",
-      "start": 35.3,
-      "end": 35.42
+      "start": 34.18,
+      "end": 34.3
     },
     {
       "text": "his",
-      "start": 35.62,
-      "end": 35.76
+      "start": 34.3,
+      "end": 34.56
     },
     {
       "text": "own",
-      "start": 35.76,
-      "end": 36.04
+      "start": 34.56,
+      "end": 34.88
     },
     {
       "text": "self",
-      "start": 36.04,
-      "end": 36.54
+      "start": 34.88,
+      "end": 35.38
     },
     {
       "text": "bare",
-      "start": 36.94,
-      "end": 37.02
+      "start": 35.38,
+      "end": 35.66
     },
     {
       "text": "our",
-      "start": 37.02,
-      "end": 37.32
+      "start": 35.66,
+      "end": 36.0
     },
     {
       "text": "sins",
-      "start": 37.32,
-      "end": 37.76
+      "start": 36.0,
+      "end": 36.4
     },
     {
       "text": "in",
-      "start": 37.76,
-      "end": 38.14
+      "start": 36.4,
+      "end": 36.84
     },
     {
       "text": "his",
-      "start": 38.14,
-      "end": 38.3
+      "start": 36.84,
+      "end": 37.04
     },
     {
       "text": "own",
-      "start": 38.3,
-      "end": 38.6
+      "start": 37.04,
+      "end": 37.34
     },
     {
       "text": "body",
-      "start": 38.6,
-      "end": 38.96
+      "start": 37.34,
+      "end": 37.7
     },
     {
       "text": "on",
-      "start": 38.96,
-      "end": 39.3
+      "start": 37.7,
+      "end": 37.96
     },
     {
       "text": "the",
-      "start": 39.3,
-      "end": 39.42
+      "start": 37.96,
+      "end": 38.08
     },
     {
-      "text": "tree...",
-      "start": 39.42,
-      "end": 39.82
-    },
-    {
-      "text": "by",
-      "start": 40.84,
-      "end": 40.96
-    },
-    {
-      "text": "whose",
-      "start": 40.96,
-      "end": 41.2
-    },
-    {
-      "text": "stripes",
-      "start": 41.2,
-      "end": 41.72
-    },
-    {
-      "text": "ye",
-      "start": 41.72,
-      "end": 42.4
-    },
-    {
-      "text": "were",
-      "start": 42.4,
-      "end": 42.56
-    },
-    {
-      "text": "healed.\"",
-      "start": 42.56,
-      "end": 42.94
-    },
-    {
-      "text": "And",
-      "start": 43.3,
-      "end": 43.36
-    },
-    {
-      "text": "watch",
-      "start": 43.36,
-      "end": 43.66
-    },
-    {
-      "text": "what",
-      "start": 43.66,
-      "end": 43.82
-    },
-    {
-      "text": "Peter",
-      "start": 43.82,
-      "end": 44.06
-    },
-    {
-      "text": "does",
-      "start": 44.06,
-      "end": 44.38
-    },
-    {
-      "text": "with",
-      "start": 44.38,
-      "end": 44.54
-    },
-    {
-      "text": "it.",
-      "start": 44.54,
-      "end": 44.86
-    },
-    {
-      "text": "Isaiah",
-      "start": 45.84,
-      "end": 46.32
-    },
-    {
-      "text": "wrote",
-      "start": 46.32,
-      "end": 46.74
-    },
-    {
-      "text": "\"we",
-      "start": 47.14,
-      "end": 47.22
-    },
-    {
-      "text": "are",
-      "start": 47.22,
-      "end": 47.34
-    },
-    {
-      "text": "healed.\"",
-      "start": 47.34,
-      "end": 47.76
-    },
-    {
-      "text": "Peter",
-      "start": 48.7,
-      "end": 48.9
-    },
-    {
-      "text": "writes",
-      "start": 48.9,
-      "end": 49.22
-    },
-    {
-      "text": "\"ye",
-      "start": 49.82,
-      "end": 49.98
-    },
-    {
-      "text": "were",
-      "start": 49.98,
-      "end": 50.22
-    },
-    {
-      "text": "healed\"",
-      "start": 50.22,
-      "end": 50.66
-    },
-    {
-      "text": "—",
-      "start": 50.66,
-      "end": 50.66
-    },
-    {
-      "text": "and",
-      "start": 51.34,
-      "end": 51.48
-    },
-    {
-      "text": "points",
-      "start": 51.48,
-      "end": 51.78
-    },
-    {
-      "text": "the",
-      "start": 51.78,
-      "end": 51.98
-    },
-    {
-      "text": "promise",
-      "start": 51.98,
-      "end": 52.32
-    },
-    {
-      "text": "straight",
-      "start": 52.32,
-      "end": 52.74
-    },
-    {
-      "text": "at",
-      "start": 52.74,
-      "end": 52.9
-    },
-    {
-      "text": "the",
-      "start": 52.9,
-      "end": 53.0
-    },
-    {
-      "text": "one",
-      "start": 53.0,
-      "end": 53.16
-    },
-    {
-      "text": "who's",
-      "start": 53.16,
-      "end": 53.46
-    },
-    {
-      "text": "listening:",
-      "start": 53.46,
-      "end": 53.8
-    },
-    {
-      "text": "at",
-      "start": 54.58,
-      "end": 55.02
-    },
-    {
-      "text": "you.",
-      "start": 55.02,
-      "end": 55.28
-    },
-    {
-      "text": "You",
-      "start": 56.32,
-      "end": 56.9
-    },
-    {
-      "text": "were",
-      "start": 56.9,
-      "end": 57.0
-    },
-    {
-      "text": "never",
-      "start": 57.0,
-      "end": 57.26
-    },
-    {
-      "text": "meant",
-      "start": 57.26,
-      "end": 57.5
-    },
-    {
-      "text": "to",
-      "start": 57.5,
-      "end": 57.7
-    },
-    {
-      "text": "make",
-      "start": 57.7,
-      "end": 57.86
-    },
-    {
-      "text": "it",
-      "start": 57.86,
-      "end": 58.0
-    },
-    {
-      "text": "right",
-      "start": 58.0,
-      "end": 58.12
-    },
-    {
-      "text": "yourself.",
-      "start": 58.12,
-      "end": 58.6
-    },
-    {
-      "text": "The",
-      "start": 59.48,
-      "end": 59.62
-    },
-    {
-      "text": "healing",
-      "start": 59.62,
-      "end": 59.92
-    },
-    {
-      "text": "isn't",
-      "start": 59.92,
-      "end": 60.26
-    },
-    {
-      "text": "something",
-      "start": 60.26,
-      "end": 60.6
-    },
-    {
-      "text": "you",
-      "start": 60.6,
-      "end": 60.78
-    },
-    {
-      "text": "produce",
-      "start": 60.78,
-      "end": 61.08
-    },
-    {
-      "text": "—",
-      "start": 61.08,
-      "end": 61.08
-    },
-    {
-      "text": "it",
-      "start": 62.02,
-      "end": 62.26
-    },
-    {
-      "text": "was",
-      "start": 62.26,
-      "end": 62.38
-    },
-    {
-      "text": "finished",
-      "start": 62.38,
-      "end": 62.78
-    },
-    {
-      "text": "at",
-      "start": 62.78,
-      "end": 62.94
-    },
-    {
-      "text": "the",
-      "start": 62.94,
-      "end": 63.02
-    },
-    {
-      "text": "cross,",
-      "start": 63.02,
-      "end": 63.3
-    },
-    {
-      "text": "in",
-      "start": 63.3,
-      "end": 64.18
-    },
-    {
-      "text": "His",
-      "start": 64.18,
-      "end": 64.36
-    },
-    {
-      "text": "own",
-      "start": 64.36,
-      "end": 64.68
-    },
-    {
-      "text": "wounds,",
-      "start": 64.68,
-      "end": 65.1
-    },
-    {
-      "text": "for",
-      "start": 65.1,
-      "end": 65.94
-    },
-    {
-      "text": "you.",
-      "start": 65.94,
-      "end": 66.22
-    },
-    {
-      "text": "The",
-      "start": 67.36,
-      "end": 67.62
-    },
-    {
-      "text": "wound",
-      "start": 67.62,
-      "end": 67.98
+      "text": "tree,",
+      "start": 38.08,
+      "end": 38.42
     },
     {
       "text": "that",
-      "start": 67.98,
-      "end": 68.2
+      "start": 39.08,
+      "end": 39.28
     },
     {
-      "text": "keeps",
-      "start": 68.2,
-      "end": 68.44
+      "text": "we,",
+      "start": 39.28,
+      "end": 39.6
     },
     {
-      "text": "reopening,",
-      "start": 68.44,
-      "end": 68.94
+      "text": "being",
+      "start": 39.94,
+      "end": 40.18
     },
     {
-      "text": "He",
-      "start": 69.48,
-      "end": 69.58
-    },
-    {
-      "text": "has",
-      "start": 69.58,
-      "end": 69.76
-    },
-    {
-      "text": "already",
-      "start": 69.76,
-      "end": 70.24
-    },
-    {
-      "text": "closed.",
-      "start": 70.24,
-      "end": 70.92
-    },
-    {
-      "text": "Come",
-      "start": 71.42,
-      "end": 72.08
+      "text": "dead",
+      "start": 40.18,
+      "end": 40.42
     },
     {
       "text": "to",
-      "start": 72.08,
-      "end": 72.32
+      "start": 40.42,
+      "end": 40.64
     },
     {
-      "text": "Him,",
-      "start": 72.32,
-      "end": 72.48
+      "text": "sins,",
+      "start": 40.64,
+      "end": 41.12
+    },
+    {
+      "text": "should",
+      "start": 41.58,
+      "end": 41.7
+    },
+    {
+      "text": "live",
+      "start": 41.7,
+      "end": 42.06
+    },
+    {
+      "text": "unto",
+      "start": 42.06,
+      "end": 42.5
+    },
+    {
+      "text": "righteousness:",
+      "start": 42.5,
+      "end": 43.06
+    },
+    {
+      "text": "by",
+      "start": 43.84,
+      "end": 44.02
+    },
+    {
+      "text": "whose",
+      "start": 44.02,
+      "end": 44.26
+    },
+    {
+      "text": "stripes",
+      "start": 44.26,
+      "end": 44.76
+    },
+    {
+      "text": "ye",
+      "start": 44.76,
+      "end": 45.46
+    },
+    {
+      "text": "were",
+      "start": 45.46,
+      "end": 45.9
+    },
+    {
+      "text": "healed.\"",
+      "start": 45.9,
+      "end": 46.34
+    },
+    {
+      "text": "Isaiah",
+      "start": 46.52,
+      "end": 46.7
+    },
+    {
+      "text": "said",
+      "start": 46.7,
+      "end": 47.06
+    },
+    {
+      "text": "\"we",
+      "start": 47.06,
+      "end": 47.36
+    },
+    {
+      "text": "are",
+      "start": 47.36,
+      "end": 47.8
+    },
+    {
+      "text": "healed.\"",
+      "start": 47.8,
+      "end": 48.12
+    },
+    {
+      "text": "Peter,",
+      "start": 49.08,
+      "end": 49.4
+    },
+    {
+      "text": "writing",
+      "start": 49.7,
+      "end": 49.82
+    },
+    {
+      "text": "to",
+      "start": 49.82,
+      "end": 49.94
+    },
+    {
+      "text": "people",
+      "start": 49.94,
+      "end": 50.12
+    },
+    {
+      "text": "who",
+      "start": 50.12,
+      "end": 50.26
+    },
+    {
+      "text": "had",
+      "start": 50.26,
+      "end": 50.34
+    },
+    {
+      "text": "come",
+      "start": 50.34,
+      "end": 50.46
+    },
+    {
+      "text": "to",
+      "start": 50.46,
+      "end": 50.56
+    },
+    {
+      "text": "Christ,",
+      "start": 50.56,
+      "end": 50.84
+    },
+    {
+      "text": "could",
+      "start": 50.96,
+      "end": 51.04
+    },
+    {
+      "text": "say",
+      "start": 51.04,
+      "end": 51.28
+    },
+    {
+      "text": "\"ye",
+      "start": 51.28,
+      "end": 51.72
+    },
+    {
+      "text": "were",
+      "start": 51.72,
+      "end": 52.08
+    },
+    {
+      "text": "healed\"",
+      "start": 52.08,
+      "end": 52.52
+    },
+    {
+      "text": "—",
+      "start": 52.52,
+      "end": 52.52
+    },
+    {
+      "text": "for",
+      "start": 52.52,
+      "end": 53.32
+    },
+    {
+      "text": "them",
+      "start": 53.32,
+      "end": 53.56
+    },
+    {
+      "text": "it",
+      "start": 53.86,
+      "end": 53.92
+    },
+    {
+      "text": "was",
+      "start": 53.92,
+      "end": 54.02
+    },
+    {
+      "text": "already",
+      "start": 54.02,
+      "end": 54.26
+    },
+    {
+      "text": "done.",
+      "start": 54.26,
+      "end": 54.56
+    },
+    {
+      "text": "Not",
+      "start": 55.24,
+      "end": 55.46
+    },
+    {
+      "text": "guilt",
+      "start": 55.46,
+      "end": 55.62
+    },
+    {
+      "text": "managed:",
+      "start": 55.62,
+      "end": 56.06
+    },
+    {
+      "text": "sins",
+      "start": 56.62,
+      "end": 56.78
+    },
+    {
+      "text": "borne,",
+      "start": 56.78,
+      "end": 57.12
+    },
+    {
+      "text": "carried",
+      "start": 57.54,
+      "end": 57.72
+    },
+    {
+      "text": "away",
+      "start": 57.72,
+      "end": 57.96
+    },
+    {
+      "text": "in",
+      "start": 57.96,
+      "end": 58.2
+    },
+    {
+      "text": "His",
+      "start": 58.2,
+      "end": 58.38
+    },
+    {
+      "text": "body,",
+      "start": 58.38,
+      "end": 58.7
+    },
+    {
+      "text": "so",
+      "start": 59.12,
+      "end": 59.28
+    },
+    {
+      "text": "a",
+      "start": 59.28,
+      "end": 59.36
+    },
+    {
+      "text": "new",
+      "start": 59.36,
+      "end": 59.52
+    },
+    {
+      "text": "life",
+      "start": 59.52,
+      "end": 59.78
+    },
+    {
+      "text": "could",
+      "start": 59.78,
+      "end": 59.92
+    },
+    {
+      "text": "start",
+      "start": 59.92,
+      "end": 60.1
+    },
+    {
+      "text": "clean.",
+      "start": 60.1,
+      "end": 60.38
+    },
+    {
+      "text": "You",
+      "start": 61.18,
+      "end": 61.38
+    },
+    {
+      "text": "were",
+      "start": 61.38,
+      "end": 61.46
+    },
+    {
+      "text": "never",
+      "start": 61.46,
+      "end": 61.66
+    },
+    {
+      "text": "meant",
+      "start": 61.66,
+      "end": 61.84
+    },
+    {
+      "text": "to",
+      "start": 61.84,
+      "end": 62.0
+    },
+    {
+      "text": "close",
+      "start": 62.0,
+      "end": 62.16
+    },
+    {
+      "text": "that",
+      "start": 62.16,
+      "end": 62.36
+    },
+    {
+      "text": "wound",
+      "start": 62.36,
+      "end": 62.52
+    },
+    {
+      "text": "yourself.",
+      "start": 62.52,
+      "end": 62.92
+    },
+    {
+      "text": "The",
+      "start": 63.54,
+      "end": 63.64
+    },
+    {
+      "text": "healing",
+      "start": 63.64,
+      "end": 63.84
+    },
+    {
+      "text": "was",
+      "start": 63.84,
+      "end": 64.02
+    },
+    {
+      "text": "finished",
+      "start": 64.02,
+      "end": 64.32
+    },
+    {
+      "text": "at",
+      "start": 64.32,
+      "end": 64.48
+    },
+    {
+      "text": "the",
+      "start": 64.48,
+      "end": 64.56
+    },
+    {
+      "text": "cross,",
+      "start": 64.56,
+      "end": 64.78
+    },
+    {
+      "text": "carried",
+      "start": 65.28,
+      "end": 65.54
+    },
+    {
+      "text": "in",
+      "start": 65.54,
+      "end": 65.88
+    },
+    {
+      "text": "His",
+      "start": 65.88,
+      "end": 66.02
+    },
+    {
+      "text": "own",
+      "start": 66.02,
+      "end": 66.18
+    },
+    {
+      "text": "wounds.",
+      "start": 66.18,
+      "end": 66.56
+    },
+    {
+      "text": "So",
+      "start": 67.42,
+      "end": 67.7
+    },
+    {
+      "text": "bring",
+      "start": 67.7,
+      "end": 67.88
+    },
+    {
+      "text": "Him",
+      "start": 67.88,
+      "end": 68.06
+    },
+    {
+      "text": "the",
+      "start": 68.06,
+      "end": 68.24
+    },
+    {
+      "text": "guilt",
+      "start": 68.24,
+      "end": 68.44
+    },
+    {
+      "text": "that",
+      "start": 68.44,
+      "end": 68.6
+    },
+    {
+      "text": "keeps",
+      "start": 68.6,
+      "end": 68.78
+    },
+    {
+      "text": "reopening,",
+      "start": 68.78,
+      "end": 69.18
     },
     {
       "text": "and",
-      "start": 72.48,
-      "end": 73.32
+      "start": 69.74,
+      "end": 69.8
     },
     {
-      "text": "receive",
-      "start": 73.32,
-      "end": 73.72
+      "text": "let",
+      "start": 69.8,
+      "end": 69.9
     },
     {
-      "text": "it.",
-      "start": 73.72,
-      "end": 74.0
+      "text": "His",
+      "start": 69.9,
+      "end": 70.12
+    },
+    {
+      "text": "wounds",
+      "start": 70.12,
+      "end": 70.46
+    },
+    {
+      "text": "close",
+      "start": 70.46,
+      "end": 70.78
+    },
+    {
+      "text": "yours.",
+      "start": 70.78,
+      "end": 71.1
+    },
+    {
+      "text": "His",
+      "start": 71.96,
+      "end": 72.16
+    },
+    {
+      "text": "stripes",
+      "start": 72.16,
+      "end": 72.52
+    },
+    {
+      "text": "—",
+      "start": 72.52,
+      "end": 72.52
+    },
+    {
+      "text": "your",
+      "start": 73.16,
+      "end": 73.46
+    },
+    {
+      "text": "healing.",
+      "start": 73.46,
+      "end": 73.84
     }
   ]
 }
