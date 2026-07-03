@@ -5,38 +5,54 @@
     "speaker": "narrator",
     "text": "The crowd mocking Jesus at the cross was reading from a script — they just didn't know it. A thousand years before, Psalm twenty-two recorded how the Messiah would be mocked — the gestures, and the words.",
     "start_s": 0.0,
-    "end_s": 11.27
+    "end_s": 10.228
   },
   {
     "index": 1,
     "section": "david",
     "speaker": "david",
     "text": "\"...they shake the head, saying, He trusted on the LORD that he would deliver him: let him deliver him...\"",
-    "start_s": 11.67,
-    "end_s": 17.83
+    "start_s": 10.628,
+    "end_s": 16.948
   },
   {
     "index": 2,
     "section": "bridge",
     "speaker": "narrator",
     "text": "At the cross, Matthew's gospel records it — the passers-by wagging their heads, the rulers sneering nearly line for line:",
-    "start_s": 17.83,
-    "end_s": 25.277
+    "start_s": 16.948,
+    "end_s": 23.26
   },
   {
     "index": 3,
     "section": "mocker",
     "speaker": "mocker",
-    "text": "\"He trusted in God; let him deliver him now... for he said, I am the Son of God.\"",
-    "start_s": 25.677,
-    "end_s": 33.277
+    "text": "\"He trusted in God; let him deliver him now, if he will have him: for he said, I am the Son of God.\"",
+    "start_s": 23.66,
+    "end_s": 31.9
   },
   {
     "index": 4,
+    "section": "bridge",
+    "speaker": "narrator",
+    "text": "They thought they were inventing the cruelty. They were reciting prophecy — unwilling witnesses that this was the One. And they threw one more taunt at Him:",
+    "start_s": 31.9,
+    "end_s": 41.027
+  },
+  {
+    "index": 5,
+    "section": "mocker",
+    "speaker": "mocker",
+    "text": "\"save thyself. If thou be the Son of God, come down from the cross.\"",
+    "start_s": 41.427,
+    "end_s": 46.307
+  },
+  {
+    "index": 6,
     "section": "landing",
     "speaker": "narrator",
-    "text": "They thought they were inventing the cruelty. They were reciting prophecy — unwilling witnesses that this was the One. Save yourself and come down, they jeered — if you really are the Son of God. But He could have come down — He proved He was the Son not by escaping the cross, but by staying on it, bearing the scorn He could have silenced, for the very people throwing it. The man they mocked is the One the whole song was about. They told the King to come down — and He never did. He stayed under their scorn, and yours, to win you. Come to the One who would not come down.",
-    "start_s": 33.277,
-    "end_s": 69.038
+    "text": "But He could have come down. He showed He was the Son not by escaping the cross, but by staying on it — bearing the scorn He could have silenced, for the very people throwing it. The man they mocked is the One the whole song was about. They told the King to come down — and He never did. He stayed under scorn — theirs, and ours — to win the scorners. And they were reading from a script they never finished: the song ends with all the ends of the world turning to Him. Turn, and come to the One who would not come down.",
+    "start_s": 46.307,
+    "end_s": 78.017
   }
 ]

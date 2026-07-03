@@ -19,11 +19,13 @@ CUT = Path(r"C:\Users\sanjay\PycharmProjects\JesusInTheBible\v2\pilot"
 OUT = CUT.with_name("viral_cut_sfx.mp4")
 
 LAYERS = [
-    layer("scorn",  "crowd_shout_mob",     "loop",    0.0, 20.0, -33.0, filt="lowpass=f=3200", fin=1.5, fout=5.0),  # the mockery
-    layer("murmur", "crowd_murmur_distant","loop",   18.0, 22.0, -35.0, filt="lowpass=f=2800", fin=3.0, fout=4.0),  # the recited taunt
-    layer("weight", "rumble_deep_sub",     "loop",   12.0, 16.0, -38.0, filt="lowpass=f=600", fin=3.0, fout=4.0),   # the enduring Christ
-    layer("grace",  "score_reverent_grace","loop",   55.0, 14.0, -34.0, fin=3.0, fout=4.0),                          # the King who stayed (shofar dropped — user disliked it on #06)
-    layer("dawn",   "dawn_morning_warm",   "loop",   62.0,  8.0, -33.0, filt="lowpass=f=3200", fin=3.0),            # come to Him
+    # 2026-07-03: cue times remapped to the RE-CUT 78s phrase board (panel-fixed text;
+    # was a 69s cut — the full Matt 27:43 + verbatim 27:40 taunt shifted every beat).
+    layer("scorn",  "crowd_shout_mob",     "loop",    0.0, 23.0, -33.0, filt="lowpass=f=3200", fin=1.5, fout=5.0),  # the mockery: hook + David's taunt + bridge (0-23.3s)
+    layer("murmur", "crowd_murmur_distant","loop",   22.0, 24.0, -35.0, filt="lowpass=f=2800", fin=3.0, fout=4.0),  # the recited taunts, both mocker quotes (23.7-46.3s)
+    layer("weight", "rumble_deep_sub",     "loop",   24.0, 22.0, -38.0, filt="lowpass=f=600", fin=3.0, fout=4.0),   # the enduring Christ under the taunts
+    layer("grace",  "score_reverent_grace","loop",   60.0, 18.0, -34.0, fin=3.0, fout=4.0),                          # 'He stayed under scorn... to win the scorners' -> end (P33 63.1s)
+    layer("dawn",   "dawn_morning_warm",   "loop",   68.0, 10.0, -33.0, filt="lowpass=f=3200", fin=3.0),            # the unfinished script -> 'Turn, and come' (P36 68.3s)
 ]
 
 if __name__ == "__main__":

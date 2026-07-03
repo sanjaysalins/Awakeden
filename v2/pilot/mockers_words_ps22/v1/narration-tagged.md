@@ -1,5 +1,5 @@
 <speaker name="narrator">The crowd mocking Jesus at the cross was reading from a script — they just didn't know it. A thousand years before, Psalm twenty-two recorded how the Messiah would be mocked — the gestures, and the words.</speaker>
-<speaker name="david">"...they shake the head saying, He trusted on the LORD that he would deliver him: let him deliver him..."</speaker>
+<speaker name="david">"...they shake the head, saying, He trusted on the LORD that he would deliver him: let him deliver him..."</speaker>
 <speaker name="narrator">At the cross, Matthew's gospel records it — the passers-by wagging their heads, the rulers sneering nearly line for line:</speaker>
 <speaker name="mocker">"He trusted in God; let him deliver him now, if he will have him: for he said, I am the Son of God."</speaker>
 <speaker name="narrator">They thought they were inventing the cruelty. They were reciting prophecy — unwilling witnesses that this was the One. And they threw one more taunt at Him:</speaker>

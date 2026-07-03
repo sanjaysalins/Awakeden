@@ -20,7 +20,7 @@ The crowd mocking Jesus at the cross was reading from a script — they just did
 A thousand years before, Psalm twenty-two recorded how the Messiah would be mocked — the gestures, and the words.
 
 **[david — KJV, Psalm 22:7-8]**
-"...they shake the head saying, He trusted on the LORD that he would deliver him: let him deliver him..."
+"...they shake the head, saying, He trusted on the LORD that he would deliver him: let him deliver him..."
 
 **[narrator]**
 At the cross, Matthew's gospel records it — the passers-by wagging their heads, the rulers sneering nearly line for line:
@@ -48,7 +48,7 @@ The man they mocked is the One the whole song was about. They told the King to c
 ## DEPTH & SOURCING  *(not spoken)*
 - **KJV verbatim** (re-verified vs data/kjv_cache.json, 2026-07-03, after the repaired-panel run
   `_independent_review\20260703-101710\`): Psalm 22:7-8 and Matthew 27:40,43.
-  - Ps 22:7-8 span omits the opening "All they that see me laugh me to scorn: they shoot out the lip," and the closing "seeing he delighted in him." Panel fix: removed an INVENTED comma ("shake the head, saying" → KJV "shake the head saying").
+  - Ps 22:7-8 span omits the opening "All they that see me laugh me to scorn: they shoot out the lip," and the closing "seeing he delighted in him." ⚠️ COMMA RULING (2026-07-03): the panel (cursor+grok) flagged "shake the head, saying" as an invented comma and it was briefly removed — WRONGLY. The pinned 1769 corpus (`data/kjv_corpus.json`, the kjv_strict authority) reads "they shake the head, {saying}," — the COMMA IS TRUE KJV; the bible-api `kjv_cache.json` entry had dropped it (documented corruption, kjv_strict.py header). Comma restored; cli_lock (punctuation-strict) is the authority over both the cache and the panel on KJV punctuation.
   - Matt 27:43 now quoted FULL ("if he will have him" restored) — the old elision made the narrator's "nearly line for line" claim untrue of the quote as heard.
   - Matt 27:40 taunt now VERBATIM KJV ("save thyself. If thou be the Son of God, come down from the cross."), mocker-voiced — replaces the old paraphrase, and earns the closer's "come down" inside quoted Scripture (claude's fix).
   - Landing paraphrase of Ps 22:27 uses the KJV's own "ends of the WORLD" (not "earth").
