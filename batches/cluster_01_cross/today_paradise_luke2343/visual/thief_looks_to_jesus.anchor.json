@@ -1,0 +1,14 @@
+{
+  "keep": [
+    0.02,
+    0.05,
+    0.98,
+    0.95
+  ],
+  "focus": [
+    0.7,
+    0.5
+  ],
+  "pad": 0.05,
+  "note": "over shoulder to far cross"
+}

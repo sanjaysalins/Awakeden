@@ -1,0 +1,13 @@
+<speaker name="narrator">Thirty silver coins hit the temple floor. Each one lands on a mark written five hundred years early.</speaker>
+<speaker name="narrator">Five centuries before, Zechariah asked Israel for his shepherd's wages.</speaker>
+<speaker name="scripture">So they weighed for my price thirty pieces of silver.</speaker>
+<speaker name="narrator">Thirty shekels. The law's price for a slave. The LORD took it personally.</speaker>
+<speaker name="scripture">A goodly price that I was prised at of them.</speaker>
+<speaker name="narrator">And Zechariah threw them where the LORD said.</speaker>
+<speaker name="scripture">And I took the thirty pieces of silver, and cast them to the potter in the house of the LORD.</speaker>
+<speaker name="narrator">Then Judas sold Jesus for the same sum.</speaker>
+<speaker name="scripture">And he cast down the pieces of silver in the temple, and departed.</speaker>
+<speaker name="narrator">Cast down. In the temple. The priests took it. Blood money. It bought the potter's field.</speaker>
+<speaker name="narrator">Nobody was trying to fulfil prophecy. Every coin found its mark.</speaker>
+<speaker name="narrator">The cross was no accident. Jesus let himself be weighed like a slave.</speaker>
+<speaker name="narrator">The silver bought a field for the dead. His blood bought you back. Stop weighing out your own price. Receive his price, and go free.</speaker>

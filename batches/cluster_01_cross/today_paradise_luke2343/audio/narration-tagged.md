@@ -1,0 +1,13 @@
+<speaker name="narrator">Two criminals died beside Jesus that afternoon. Same nails. Same hill. Same distance. Opposite eternities.</speaker>
+<speaker name="narrator">Both guilty. Both just as close. Both spoke.</speaker>
+<speaker name="mocker">If thou be Christ, save thyself and us.</speaker>
+<speaker name="narrator">A taunt, not a prayer.</speaker>
+<speaker name="narrator">The other thief rebuked him.</speaker>
+<speaker name="thief">And we indeed justly; for we receive the due reward of our deeds: but this man hath done nothing amiss.</speaker>
+<speaker name="narrator">A confession. A verdict: innocent. Then one request.</speaker>
+<speaker name="thief">Lord, remember me when thou comest into thy kingdom.</speaker>
+<speaker name="jesus">Verily I say unto thee, To day shalt thou be with me in paradise.</speaker>
+<speaker name="narrator">He asked for someday. Jesus gave him that same afternoon.</speaker>
+<speaker name="narrator">No merit. Just repentance and trust.</speaker>
+<speaker name="narrator">We are all one of those two men.</speaker>
+<speaker name="narrator">Ask what the thief asked. Remember me. Then hear his answer. With me. Today. Paradise.</speaker>

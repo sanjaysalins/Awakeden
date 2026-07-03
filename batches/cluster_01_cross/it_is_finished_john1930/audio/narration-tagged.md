@@ -1,0 +1,13 @@
+<speaker name="narrator">The first time the Bible says finished, nothing was broken yet.</speaker>
+<speaker name="scripture">Thus the heavens and the earth were finished, and all the host of them.</speaker>
+<speaker name="narrator">Creation complete. God rested. He does not leave work half done.</speaker>
+<speaker name="narrator">When sin wrecked that world, the Son came down to mend it. The Bible says of Jesus:</speaker>
+<speaker name="scripture">All things were made by him.</speaker>
+<speaker name="narrator">The hands that finished creation came to finish redemption. Before the cross, he prayed.</speaker>
+<speaker name="jesus">I have glorified thee on the earth: I have finished the work which thou gavest me to do.</speaker>
+<speaker name="narrator">He carried it to the end.</speaker>
+<speaker name="scripture">When Jesus therefore had received the vinegar, he said, It is finished: and he bowed his head, and gave up the ghost.</speaker>
+<speaker name="narrator">Two finished works. One Workman. He finished creation, and rested. He finished redemption, and rested in the tomb through the sabbath. And on the first day, morning came.</speaker>
+<speaker name="narrator">You were never asked to finish it. You are asked to rest in it.</speaker>
+<speaker name="narrator">He bowed his head so you could lift yours.</speaker>
+<speaker name="narrator">The work is finished. Enter his rest.</speaker>

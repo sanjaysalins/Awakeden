@@ -1,0 +1,387 @@
+{
+ "dod": {
+  "median_beat_s": 3.58,
+  "max_beat_s": 6.07,
+  "held_gt6s": [
+   6.07
+  ],
+  "slams": 2,
+  "kling_or_punch_or_slam_pct": 100,
+  "tier1_pct": 6,
+  "reuse_violations": [],
+  "tier3_or_flagged_beats": [
+   3,
+   14,
+   15
+  ],
+  "standard_3b": {
+   "stills_over_2_uses": {},
+   "stills_fullbleed_twice": {},
+   "fullbleed_beat_pct": 88,
+   "slop_caption_beats": []
+  },
+  "ramps": 1,
+  "whips": 2,
+  "flash_inserts": 1,
+  "cut_ticks": true,
+  "beats": 16
+ },
+ "beats": [
+  {
+   "beat": 1,
+   "t": [
+    0.0,
+    3.78
+   ],
+   "dur": 3.766667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "disciples_sleeping"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 2,
+   "t": [
+    3.78,
+    6.82
+   ],
+   "dur": 3.066667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "gethsemane_olives_night"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 3,
+   "t": [
+    6.82,
+    9.36
+   ],
+   "dur": 2.533333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "jesus_leads_three"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 3,
+    "style": "band",
+    "flag": true
+   }
+  },
+  {
+   "beat": 4,
+   "t": [
+    9.36,
+    11.0
+   ],
+   "dur": 1.633333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "jesus_prays_night"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 5,
+   "t": [
+    11.0,
+    17.05
+   ],
+   "dur": 6.066667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "cup_moonlight"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 6,
+   "t": [
+    17.05,
+    22.3
+   ],
+   "dur": 5.233333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "jesus_praying_close"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 7,
+   "t": [
+    22.3,
+    26.99
+   ],
+   "dur": 4.7,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "sleeping_peter_close"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 8,
+   "t": [
+    26.99,
+    29.79
+   ],
+   "dur": 2.8,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "jesus_stands_over_sleepers"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 9,
+   "t": [
+    29.79,
+    32.55
+   ],
+   "dur": 2.733333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "risen_mercy_hand"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 10,
+   "t": [
+    32.55,
+    37.45
+   ],
+   "dur": 4.933333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "kneeling_lamp_prayer"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 11,
+   "t": [
+    37.45,
+    42.0
+   ],
+   "dur": 4.533333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "weak_flesh_hands"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 12,
+   "t": [
+    42.0,
+    45.9
+   ],
+   "dur": 3.9,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "same_prayer_again"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 13,
+   "t": [
+    45.9,
+    48.72
+   ],
+   "dur": 2.833333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "face_on_cross"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 14,
+   "t": [
+    48.72,
+    51.5
+   ],
+   "dur": 2.766667,
+   "tpl": "stack_h",
+   "slams": 1,
+   "slugs": [
+    "disciples_sleeping",
+    "gethsemane_olives_night"
+   ],
+   "sources": [
+    "kling",
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 3,
+    "style": "scrim",
+    "flag": true
+   }
+  },
+  {
+   "beat": 15,
+   "t": [
+    51.5,
+    54.9
+   ],
+   "dur": 3.4,
+   "tpl": "stack_h",
+   "slams": 1,
+   "slugs": [
+    "jesus_praying_close",
+    "cup_moonlight"
+   ],
+   "sources": [
+    "kling",
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 3,
+    "style": "scrim",
+    "flag": true
+   }
+  },
+  {
+   "beat": 16,
+   "t": [
+    54.9,
+    59.0
+   ],
+   "dur": 4.1,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "us_under_cross_shadow"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  }
+ ]
+}

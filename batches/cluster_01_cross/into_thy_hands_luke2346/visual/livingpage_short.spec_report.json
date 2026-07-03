@@ -1,0 +1,335 @@
+{
+ "dod": {
+  "median_beat_s": 4.18,
+  "max_beat_s": 6.03,
+  "held_gt6s": [
+   6.03
+  ],
+  "slams": 0,
+  "kling_or_punch_or_slam_pct": 86,
+  "tier1_pct": 0,
+  "reuse_violations": [],
+  "tier3_or_flagged_beats": [],
+  "standard_3b": {
+   "stills_over_2_uses": {},
+   "stills_fullbleed_twice": {},
+   "fullbleed_beat_pct": 100,
+   "slop_caption_beats": []
+  },
+  "ramps": 1,
+  "whips": 2,
+  "flash_inserts": 2,
+  "cut_ticks": true,
+  "beats": 14
+ },
+ "beats": [
+  {
+   "beat": 1,
+   "t": [
+    0.0,
+    4.16
+   ],
+   "dur": 4.166667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "golgotha_hill_wide"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 2,
+   "t": [
+    4.16,
+    9.3
+   ],
+   "dur": 5.133333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "child_sleeping_lamp"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 3,
+   "t": [
+    9.3,
+    14.6
+   ],
+   "dur": 5.3,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "psalm_scroll_night"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 4,
+   "t": [
+    14.6,
+    17.98
+   ],
+   "dur": 3.366667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "face_on_cross"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 5,
+   "t": [
+    17.98,
+    21.25
+   ],
+   "dur": 3.3,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "bowed_head_finished"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 6,
+   "t": [
+    21.25,
+    25.2
+   ],
+   "dur": 3.933333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "hands_of_light_open"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 7,
+   "t": [
+    25.2,
+    29.4
+   ],
+   "dur": 4.2,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "father_hand_childs_hand"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 8,
+   "t": [
+    29.4,
+    33.1
+   ],
+   "dur": 3.7,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "father_lamp_doorway"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 9,
+   "t": [
+    33.1,
+    39.15
+   ],
+   "dur": 6.033333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "nail_through_hand"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 10,
+   "t": [
+    39.15,
+    41.8
+   ],
+   "dur": 2.666667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "father_holds_sleeping_child"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 11,
+   "t": [
+    41.8,
+    43.58
+   ],
+   "dur": 1.766667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "first_day_morning"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 12,
+   "t": [
+    43.58,
+    48.3
+   ],
+   "dur": 4.733333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "child_waking_dawn"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 13,
+   "t": [
+    48.3,
+    53.95
+   ],
+   "dur": 5.633333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "child_eyes_closing"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 14,
+   "t": [
+    53.95,
+    59.03
+   ],
+   "dur": 5.1,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "cross_at_dawn"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  }
+ ]
+}

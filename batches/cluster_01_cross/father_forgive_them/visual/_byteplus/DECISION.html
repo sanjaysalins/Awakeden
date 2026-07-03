@@ -1,0 +1,92 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Father, forgive them — engine decision: BytePlus Seedream 4.5 + ref-lock</title>
+<style>
+ body{background:#14110d;color:#f3ead6;font-family:system-ui,Arial;margin:0;padding:28px;max-width:1500px}
+ h1{font-size:24px;margin:0 0 4px} h2{font-size:18px;color:#e8c069;margin:34px 0 6px;border-bottom:1px solid #3a3226;padding-bottom:6px}
+ p.note{color:#a89b7d;font-size:14px;margin:2px 0 16px;line-height:1.5}
+ .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+ .card{background:#1e1a13;border:1px solid #3a3226;border-radius:10px;overflow:hidden}
+ .card img{width:100%;display:block}
+ .cap{padding:8px 11px;font-size:13px;line-height:1.4}
+ .cap b{color:#fff}
+ .win{border:2px solid #e8c069}
+ .tag{display:inline-block;font-size:11px;padding:1px 8px;border-radius:8px;margin-left:6px}
+ .t-win{background:#3a2f17;color:#e8c069} .t-good{background:#1f3a22;color:#7fd18b} .t-bad{background:#3a1f1f;color:#e08a8a}
+ table{border-collapse:collapse;margin:8px 0 4px;font-size:14px}
+ td,th{border:1px solid #3a3226;padding:7px 12px;text-align:left}
+ th{color:#c9b892}
+</style></head><body>
+
+<h1>"Father, forgive them" — new still engine decision</h1>
+<p class="note">Question on the table: lock <b>BytePlus Seedream 4.5 + reference-lock</b> as the new still engine and re-shoot the pilot. Everything below is the evidence.</p>
+
+<h2>1 · THE NAIL TEST — the shot the old set never had</h2>
+<p class="note">You said: "I am not seeing the nails yet on the cross." The old Higgsfield path only ever drew a hole or a cube-stud. BytePlus renders a real hand-forged Roman nail through the palm into the wood. <b>nail_close_45 is the winner.</b></p>
+<div class="grid">
+ <div class="card win"><img src="nail_close_45.png"><div class="cap"><b>nail_close · 4.5</b> <span class="tag t-win">WINNER</span><br>real square iron nail through the open palm into the beam · torn wound · blood true</div></div>
+ <div class="card"><img src="nail_wide_45.png"><div class="cap"><b>nail_wide · 4.5</b> <span class="tag t-good">hero</span><br>full figure, nail + lifted praying face, face-locked</div></div>
+ <div class="card"><img src="nail_close_40.png"><div class="cap"><b>nail_close · 4.0</b> <span class="tag t-good">good</span><br>nail + torn wound read; face-lock a touch softer</div></div>
+ <div class="card"><img src="nail_close_50lite.png"><div class="cap"><b>nail_close · 5.0-lite</b><br>fine but drifts softer/painterly</div></div>
+</div>
+
+<h2>2 · THE THREE WORST PROMPTS — old engine vs new (4.5 ref-locked)</h2>
+<p class="note">These are the prompts that failed hardest on Higgsfield (dot-wounds / fists / severed hands / four arms). Shown here on BytePlus 4.5 + ref-lock. These asked for <i>wounds</i>, so they show torn holes — the nail version above is a separate beat.</p>
+<div class="grid">
+ <div class="card"><img src="bakeoff/4_5__pierced_hand__ref.png"><div class="cap"><b>pierced_hand · 4.5 ref</b> <span class="tag t-good">fixed</span><br>locked face · torn wound not a dot · clean anatomy</div></div>
+ <div class="card"><img src="bakeoff/4_5__nailed_hands__ref.png"><div class="cap"><b>nailed_hands · 4.5 ref</b> <span class="tag t-good">fixed</span><br>both hands · torn holes · no fists/severed/studs</div></div>
+ <div class="card"><img src="bakeoff/4_5__jesus_prays__ref.png"><div class="cap"><b>jesus_prays · 4.5 ref</b> <span class="tag t-good">fixed</span><br>EXACTLY two arms (four-arms gone) · face-locked</div></div>
+</div>
+
+<h2>3 · Full bake-off grid — 4.0 vs 4.5 vs 5.0-lite · no-ref vs ref-lock</h2>
+<p class="note">All 18 renders, so you can see the model + ref-lock difference for yourself.</p>
+<div class="grid">
+ <div class="card"><img src="bakeoff/4_0__pierced_hand__noref.png"><div class="cap"><b>pierced · 4.0 · no-ref</b></div></div>
+ <div class="card"><img src="bakeoff/4_5__pierced_hand__noref.png"><div class="cap"><b>pierced · 4.5 · no-ref</b></div></div>
+ <div class="card"><img src="bakeoff/5_0lite__pierced_hand__noref.png"><div class="cap"><b>pierced · 5.0lite · no-ref</b></div></div>
+ <div class="card"><img src="bakeoff/4_0__pierced_hand__ref.png"><div class="cap"><b>pierced · 4.0 · ref</b></div></div>
+ <div class="card"><img src="bakeoff/4_5__pierced_hand__ref.png"><div class="cap"><b>pierced · 4.5 · ref</b></div></div>
+ <div class="card"><img src="bakeoff/5_0lite__pierced_hand__ref.png"><div class="cap"><b>pierced · 5.0lite · ref</b></div></div>
+
+ <div class="card"><img src="bakeoff/4_0__nailed_hands__noref.png"><div class="cap"><b>nailed · 4.0 · no-ref</b></div></div>
+ <div class="card"><img src="bakeoff/4_5__nailed_hands__noref.png"><div class="cap"><b>nailed · 4.5 · no-ref</b></div></div>
+ <div class="card"><img src="bakeoff/5_0lite__nailed_hands__noref.png"><div class="cap"><b>nailed · 5.0lite · no-ref</b></div></div>
+ <div class="card"><img src="bakeoff/4_0__nailed_hands__ref.png"><div class="cap"><b>nailed · 4.0 · ref</b></div></div>
+ <div class="card"><img src="bakeoff/4_5__nailed_hands__ref.png"><div class="cap"><b>nailed · 4.5 · ref</b></div></div>
+ <div class="card"><img src="bakeoff/5_0lite__nailed_hands__ref.png"><div class="cap"><b>nailed · 5.0lite · ref</b></div></div>
+
+ <div class="card"><img src="bakeoff/4_0__jesus_prays__noref.png"><div class="cap"><b>prays · 4.0 · no-ref</b></div></div>
+ <div class="card"><img src="bakeoff/4_5__jesus_prays__noref.png"><div class="cap"><b>prays · 4.5 · no-ref</b></div></div>
+ <div class="card"><img src="bakeoff/5_0lite__jesus_prays__noref.png"><div class="cap"><b>prays · 5.0lite · no-ref</b></div></div>
+ <div class="card"><img src="bakeoff/4_0__jesus_prays__ref.png"><div class="cap"><b>prays · 4.0 · ref</b></div></div>
+ <div class="card"><img src="bakeoff/4_5__jesus_prays__ref.png"><div class="cap"><b>prays · 4.5 · ref</b></div></div>
+ <div class="card"><img src="bakeoff/5_0lite__jesus_prays__ref.png"><div class="cap"><b>prays · 5.0lite · ref</b></div></div>
+</div>
+
+<h2>4 · Old pilot 12 (Higgsfield) — what we're replacing</h2>
+<p class="note">Problems: no nails (only holes), 4 different Jesus faces, dog-bone "lots" + a power-pole in 01c/04, soft-drift on the risen shots.</p>
+<div class="grid">
+ <div class="card"><img src="../nbp/01_golgotha_hook.png"><div class="cap"><b>1 · golgotha_hook</b> <span class="tag t-bad">hole not nail</span></div></div>
+ <div class="card"><img src="../nbp/01b_nailed_hands.png"><div class="cap"><b>1b · nailed_hands</b> <span class="tag t-bad">hole not nail</span></div></div>
+ <div class="card"><img src="../nbp/01c_soldiers_gamble.png"><div class="cap"><b>1c · soldiers_gamble</b> <span class="tag t-bad">dog-bones + power-pole</span></div></div>
+ <div class="card"><img src="../nbp/02_jesus_prays.png"><div class="cap"><b>2 · jesus_prays</b></div></div>
+ <div class="card"><img src="../nbp/03_prayer_close.png"><div class="cap"><b>3 · prayer_close</b> <span class="tag t-bad">soft drift</span></div></div>
+ <div class="card"><img src="../nbp/04_cast_lots.png"><div class="cap"><b>4 · cast_lots</b> <span class="tag t-bad">dog-bones + power-pole</span></div></div>
+ <div class="card"><img src="../nbp/05_pierced_hand.png"><div class="cap"><b>5 · pierced_hand</b> <span class="tag t-bad">bandaged, messy hole</span></div></div>
+ <div class="card"><img src="../nbp/06_cross_over_us.png"><div class="cap"><b>6 · cross_over_us</b></div></div>
+ <div class="card"><img src="../nbp/06b_our_sin.png"><div class="cap"><b>6b · our_sin</b></div></div>
+ <div class="card"><img src="../nbp/06c_intercession_lives.png"><div class="cap"><b>6c · intercession</b> <span class="tag t-bad">different face</span></div></div>
+ <div class="card"><img src="../nbp/07b_gospel_wide.png"><div class="cap"><b>7b · gospel_wide</b> <span class="tag t-bad">different face</span></div></div>
+ <div class="card"><img src="../nbp/07_risen_hero.png"><div class="cap"><b>7 · risen_hero</b> <span class="tag t-bad">young/soft, off-face</span></div></div>
+</div>
+
+<h2>Decision</h2>
+<table>
+ <tr><th></th><th>Old 12 (Higgsfield)</th><th>New (BytePlus 4.5 + ref)</th></tr>
+ <tr><td>Nails</td><td>none — only holes</td><td><b>real nail on demand</b></td></tr>
+ <tr><td>Face</td><td>4 different Jesuses</td><td><b>one locked face</b></td></tr>
+ <tr><td>Anatomy</td><td>fists / 4-arms / severed</td><td>clean</td></tr>
+ <tr><td>Style</td><td>drifts soft on risen shots</td><td>consistent flat-ink</td></tr>
+ <tr><td>Cost</td><td>~$0.15/img</td><td>~$0.03–0.04/img</td></tr>
+</table>
+<p class="note" style="margin-top:16px"><b>Recommendation:</b> lock BytePlus Seedream 4.5 + ref-lock, use the nail shot as the crucifixion punch, and re-shoot all 12 on the new engine before any animation.</p>
+</body></html>

@@ -1651,6 +1651,4791 @@
       "duration": 5.04,
       "animation": "hf_kling3_0_pro_9x16_5s",
       "motion": "camera-only push/pull"
+    },
+    {
+      "id": "ps22_dogs_encompass",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/dogs_encompass.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "Psalm 22:16a — For dogs have compassed me (narration: 'vivid images — dogs, a lion')",
+      "shot": "GROUND_LEVEL",
+      "subject_signature": "vivid-image:dogs-circling",
+      "christ_visible": false,
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_lion_gape",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/lion_gape.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "Psalm 22:13 — they gaped upon me with their mouths, as a ravening and a roaring lion",
+      "shot": "CLOSE_PORTRAIT",
+      "subject_signature": "vivid-image:lion-roar",
+      "christ_visible": false,
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_hung_by_arms",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/hung_by_arms.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "Psalm 22:14 — all my bones are out of joint (narration: 'a man hung up by his arms — the joints pulling apart under his own weight')",
+      "shot": "SILHOUETTE",
+      "subject_signature": "crucified-silhouette:weight-sag",
+      "christ_visible": true,
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_garment_tug",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/garment_tug.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "John 19:24 / Psalm 22:18 — they parted my raiment among them (soldiers gambling for a dead man's clothes)",
+      "shot": "MACRO_DETAIL",
+      "subject_signature": "lots:garment-tug",
+      "christ_visible": false,
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_first_century_reader",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/first_century_reader.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "the first verse pulling the entire psalm into the room — how a first-century Jew quoted Scripture",
+      "shot": "FULL_FIGURE",
+      "subject_signature": "scholarship:psalm-quoted-aloud",
+      "christ_visible": false,
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_vinegar_sponge",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/vinegar_sponge.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "John 19:29-30 — he receives the vinegar (just before 'It is finished')",
+      "shot": "LOW_ANGLE",
+      "subject_signature": "passion:vinegar-sponge-reed",
+      "christ_visible": false,
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_dawn_empty_cross",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/dawn_empty_cross.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "the hinge — the cross was never the end of the song (the turn from death to life)",
+      "shot": "WIDE_ESTABLISH",
+      "subject_signature": "cross:dawn-hinge",
+      "christ_visible": false,
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_kindreds_bowing",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/kindreds_bowing.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "Psalm 22:27 — all the kindreds of the nations shall worship before thee",
+      "shot": "WIDE_MULTITUDE",
+      "subject_signature": "multitude:kindreds-bowing-ring",
+      "christ_visible": false,
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_pierced_feet_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/pierced_feet.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_lots_dice_closeup_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/lots_dice_closeup.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_cross_hill_pullback_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/cross_hill_pullback.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_face_anguish_closeup_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/face_anguish_closeup.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_thirst_dust_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/thirst_dust.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_the_turn_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/the_turn.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_risen_hero_come_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/risen_hero_come.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_empty_tomb_open_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/empty_tomb_open.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_parting_storm_light_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/parting_storm_light.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_risen_worshipper_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/risen_worshipper.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_finished_work_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/finished_work.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_golgotha_three_crosses_ridge",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/golgotha_three_crosses_ridge.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "the witness statement from a cross (Ps 22 read forensically)",
+      "shot": "GROUND_LEVEL",
+      "subject_signature": "crosses:ridge-silhouette-trio",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_ninth_hour_darkness",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/ninth_hour_darkness.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "Matthew 27:45 - darkness over the land at the ninth hour",
+      "shot": "WIDE_ESTABLISH",
+      "subject_signature": "sky:darkened-sun-city",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_roman_nails_pouch",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/roman_nails_pouch.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "the crucifixion nails (Ps 22:16)",
+      "shot": "MACRO_DETAIL",
+      "subject_signature": "nails:pouch-spill",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_david_scroll_sealed",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/david_scroll_sealed.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "David wrote this song (Ps 22 title)",
+      "shot": "MACRO_DETAIL",
+      "subject_signature": "scroll:sealed-signet",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_jerusalem_night_lyre",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/jerusalem_night_lyre.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "David composing under the night sky",
+      "shot": "WIDE_ESTABLISH",
+      "subject_signature": "david:rooftop-distant-night",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_execution_stakes_field",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/execution_stakes_field.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "a public execution (the death David describes)",
+      "shot": "WIDE_ESTABLISH",
+      "subject_signature": "execution:empty-stakes-field",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_mockers_below_cross_low",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/mockers_below_cross_low.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "Psalm 22:8 - the mockers' taunt hurled up at the cross",
+      "shot": "OVER_SHOULDER",
+      "subject_signature": "mockers:shoulders-up-at-cross",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_spit_shout_macro",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/spit_shout_macro.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "Psalm 22:7 - they shoot out the lip (the jeer itself)",
+      "shot": "CLOSE_PORTRAIT",
+      "subject_signature": "mocker:single-jeer-profile",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_old_king_hands_rings",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/old_king_hands_rings.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "a king who died of old age (contrast with the psalm's death)",
+      "shot": "MACRO_DETAIL",
+      "subject_signature": "david:aged-hands-rings",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_shepherd_boy_sling",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/shepherd_boy_sling.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "David the soldier-king's real life (never executed)",
+      "shot": "FULL_FIGURE",
+      "subject_signature": "david:young-shepherd-sling",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_war_helmet_spear_rest",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/war_helmet_spear_rest.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "a soldier and a king (his battles ended in peace)",
+      "shot": "MACRO_DETAIL",
+      "subject_signature": "soldier:arms-at-rest",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_wrists_bound_beam_macro",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/wrists_bound_beam_macro.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "a man fixed to wood through his hands (Ps 22:16)",
+      "shot": "MACRO_DETAIL",
+      "subject_signature": "wound:wrist-lashed-beam",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_ribs_stretched_macro",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/ribs_stretched_macro.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "Psalm 22:14 - all my bones are out of joint",
+      "shot": "CLOSE_PORTRAIT",
+      "subject_signature": "body:ribcage-strain",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_clay_potsherd_dust",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clay_potsherd_dust.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "Psalm 22:15 - my strength is dried up like a potsherd",
+      "shot": "MACRO_DETAIL",
+      "subject_signature": "thirst:potsherd",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_water_spilled_stone",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/water_spilled_stone.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "Psalm 22:14 - I am poured out like water",
+      "shot": "MACRO_DETAIL",
+      "subject_signature": "poured:water-on-stone",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_sponge_vinegar_jar",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/sponge_vinegar_jar.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "John 19:29 - a vessel full of vinegar",
+      "shot": "MACRO_DETAIL",
+      "subject_signature": "vinegar:jar-and-sponge",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_dice_cup_shadow",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/dice_cup_shadow.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "Psalm 22:18 - they cast lots",
+      "shot": "MACRO_DETAIL",
+      "subject_signature": "lots:cup-tipping",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_vesture_seamless_folded",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/vesture_seamless_folded.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "John 19:23-24 - the coat without seam",
+      "shot": "MACRO_DETAIL",
+      "subject_signature": "vesture:folded-topdown",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_john_at_cross_foot",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/john_at_cross_foot.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "John 19:35 - he that saw it bare record",
+      "shot": "FULL_FIGURE",
+      "subject_signature": "witness:john-at-foot",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_scholars_debate_two",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/scholars_debate_two.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "a genuine scholarly dispute, honestly raised",
+      "shot": "INTERIOR_SCENE",
+      "subject_signature": "scholarship:two-in-dispute",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_quill_ink_drop",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/quill_ink_drop.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "yet there it is, in ink, centuries early",
+      "shot": "MACRO_DETAIL",
+      "subject_signature": "ink:reed-pen-drop",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_hebrew_scroll_edge_light",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/hebrew_scroll_edge_light.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "the traditional Hebrew text (the disputed reading)",
+      "shot": "MACRO_DETAIL",
+      "subject_signature": "scroll:edge-curl",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_lion_shadow_wall",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/lion_shadow_wall.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "Psalm 22:13 - as a ravening and a roaring lion",
+      "shot": "SILHOUETTE",
+      "subject_signature": "lion:shadow-on-wall",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_alexandria_harbor_night",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/alexandria_harbor_night.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "the Septuagint translated in Alexandria, two centuries before",
+      "shot": "WIDE_ESTABLISH",
+      "subject_signature": "city:alexandria-harbor",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_seventy_scribes_lamps",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/seventy_scribes_lamps.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "translated by Jewish scholars (the Seventy)",
+      "shot": "INTERIOR_SCENE",
+      "subject_signature": "scholarship:rows-of-scribes",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_roads_converge_valley",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/roads_converge_valley.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "one disputed word does not carry it; the convergence does",
+      "shot": "HIGH_CRANE",
+      "subject_signature": "symbol:roads-to-one-point",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_cry_profile_dark",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/cry_profile_dark.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "Matthew 27:46 - Jesus cried with a loud voice",
+      "shot": "SILHOUETTE",
+      "subject_signature": "christ-cry:profile-rim-light",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_synagogue_listeners_lean",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/synagogue_listeners_lean.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "how a first-century Jew heard a psalm quoted",
+      "shot": "INTERIOR_SCENE",
+      "subject_signature": "listeners:leaning-in",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_hill_crowd_watching_storm",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/hill_crowd_watching_storm.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "out loud, in front of witnesses",
+      "shot": "WIDE_MULTITUDE",
+      "subject_signature": "witnesses:dark-ring-storm",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_tear_track_macro",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/tear_track_macro.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "this one is about me (the personal claim)",
+      "shot": "MACRO_DETAIL",
+      "subject_signature": "face:single-eye-tear",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_substitute_shadow",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/substitute_shadow.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "he bore the forsaking in our place (substitution)",
+      "shot": "HIGH_CRANE",
+      "subject_signature": "substitution:shadow-over-people",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_grave_clothes_folded_macro",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/grave_clothes_folded_macro.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "John 20:7 - the linen clothes lying folded",
+      "shot": "MACRO_DETAIL",
+      "subject_signature": "resurrection:folded-linen",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_stone_rolled_groove",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/stone_rolled_groove.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "the stone rolled away (the grave could not hold him)",
+      "shot": "MACRO_DETAIL",
+      "subject_signature": "resurrection:stone-in-groove",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_congregation_hands_lifted",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/congregation_hands_lifted.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "in the midst of the congregation will I praise thee (Ps 22:22)",
+      "shot": "WIDE_MULTITUDE",
+      "subject_signature": "congregation:hands-lifted-rear",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_morning_birds_hill",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/morning_birds_hill.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "the hinge from night to morning",
+      "shot": "WIDE_ESTABLISH",
+      "subject_signature": "dawn:birds-rising",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_threshold_open_door",
+      "kind": "still",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/threshold_open_door.png",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "concept": "the congregation it ends in still has room for you (the invitation)",
+      "shot": "GROUND_LEVEL",
+      "subject_signature": "invitation:open-door-light",
+      "provider": "byteplus_seedream_4_5"
+    },
+    {
+      "id": "ps22_worm_reproach_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/worm_reproach.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_scholar_hand_on_text_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/scholar_hand_on_text.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_mocker_faces_trio_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/mocker_faces_trio.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_worm_lowest_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/worm_lowest.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_dogs_encompass_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/dogs_encompass.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_lion_gape_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/lion_gape.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_kindreds_bowing_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/kindreds_bowing.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_nations_streaming_wide_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/nations_streaming_wide.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_dawn_empty_cross_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/dawn_empty_cross.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_kneeling_at_cross_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/kneeling_at_cross.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_hand_reaching_closeup_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/hand_reaching_closeup.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_vinegar_sponge_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/vinegar_sponge.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_cry_face_tears_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/cry_face_tears.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_risen_hands_raised_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/risen_hands_raised.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_david_hands_lyre_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/david_hands_lyre.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_garment_tug_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/garment_tug.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_ends_of_earth_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/ends_of_earth.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_cry_profile_dark_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/cry_profile_dark.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_wrists_bound_beam_macro_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/wrists_bound_beam_macro.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_substitute_shadow_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/substitute_shadow.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_mockers_below_cross_low_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/mockers_below_cross_low.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_john_at_cross_foot_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/john_at_cross_foot.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "id": "ps22_golgotha_three_crosses_ridge_clip",
+      "kind": "clip",
+      "path": "longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/golgotha_three_crosses_ridge.mp4",
+      "style": "graphic_novel_inked",
+      "aspect": "16:9",
+      "duration_s": 5,
+      "piece": "02_Psalm_22_Song_From_The_Cross",
+      "motion": "ink camera-only",
+      "provider": "hf_kling3_pro"
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "pierced_zech1210",
+      "piece_title": "Pierced (Zechariah 12:10)",
+      "verse": "Zechariah 12:10",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-02",
+      "id": "pz_spear_thrust_up",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/pierced_zech1210/visual/spear_thrust_up.png",
+      "title": "Roman soldier thrusts spear up at the crucified Christ",
+      "subject": "Roman soldier thrusts spear up at the crucified Christ",
+      "characters": [
+        "soldier",
+        "Christ"
+      ],
+      "elements": [
+        "spear",
+        "cross",
+        "storm sky"
+      ],
+      "setting": "Golgotha, storm",
+      "palette": "inked cel-flat, storm greys to warm gold",
+      "mood": "prophetic, pierced, grace",
+      "doctrine": "the piercing of John 19:34/Zech 12:10",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "pilot",
+        "zech1210"
+      ],
+      "used_in": [
+        "pierced_zech1210 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "pierced_zech1210",
+      "piece_title": "Pierced (Zechariah 12:10)",
+      "verse": "Zechariah 12:10",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-02",
+      "id": "pz_zechariah_night_scroll",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/pierced_zech1210/visual/zechariah_night_scroll.png",
+      "title": "prophet Zechariah under night stars with scroll",
+      "subject": "prophet Zechariah under night stars with scroll",
+      "characters": [
+        "Zechariah"
+      ],
+      "elements": [
+        "scroll",
+        "stars",
+        "rooftop",
+        "city"
+      ],
+      "setting": "Judean rooftop, night",
+      "palette": "inked cel-flat, storm greys to warm gold",
+      "mood": "prophetic, pierced, grace",
+      "doctrine": "the prophecy given ~500 BC",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "pilot",
+        "zech1210"
+      ],
+      "used_in": [
+        "pierced_zech1210 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "pierced_zech1210",
+      "piece_title": "Pierced (Zechariah 12:10)",
+      "verse": "Zechariah 12:10",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-02",
+      "id": "pz_mourners_only_son",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/pierced_zech1210/visual/mourners_only_son.png",
+      "title": "father and mother collapsed in grief beside a shrouded bier",
+      "subject": "father and mother collapsed in grief beside a shrouded bier",
+      "characters": [
+        "father",
+        "mother"
+      ],
+      "elements": [
+        "bier",
+        "shroud",
+        "torches"
+      ],
+      "setting": "stone courtyard, night",
+      "palette": "inked cel-flat, storm greys to warm gold",
+      "mood": "prophetic, pierced, grace",
+      "doctrine": "mourning as for an only son (Zech 12:10)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "pilot",
+        "zech1210"
+      ],
+      "used_in": [
+        "pierced_zech1210 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "pierced_zech1210",
+      "piece_title": "Pierced (Zechariah 12:10)",
+      "verse": "Zechariah 12:10",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-02",
+      "id": "pz_john_watching",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/pierced_zech1210/visual/john_watching.png",
+      "title": "young disciple John flinching at the foot of the cross",
+      "subject": "young disciple John flinching at the foot of the cross",
+      "characters": [
+        "John"
+      ],
+      "elements": [
+        "cloak",
+        "storm light"
+      ],
+      "setting": "foot of the cross",
+      "palette": "inked cel-flat, storm greys to warm gold",
+      "mood": "prophetic, pierced, grace",
+      "doctrine": "the eyewitness of John 19:35-37",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "pilot",
+        "zech1210"
+      ],
+      "used_in": [
+        "pierced_zech1210 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "pierced_zech1210",
+      "piece_title": "Pierced (Zechariah 12:10)",
+      "verse": "Zechariah 12:10",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-02",
+      "id": "pz_blood_water_wood",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/pierced_zech1210/visual/blood_water_wood.png",
+      "title": "macro: water and blood run down the cross's wood grain",
+      "subject": "macro: water and blood run down the cross's wood grain",
+      "characters": [],
+      "elements": [
+        "blood",
+        "water",
+        "wood grain",
+        "stone"
+      ],
+      "setting": "base of the cross",
+      "palette": "inked cel-flat, storm greys to warm gold",
+      "mood": "prophetic, pierced, grace",
+      "doctrine": "blood and water of John 19:34",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "pilot",
+        "zech1210"
+      ],
+      "used_in": [
+        "pierced_zech1210 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "pierced_zech1210",
+      "piece_title": "Pierced (Zechariah 12:10)",
+      "verse": "Zechariah 12:10",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-02",
+      "id": "pz_grace_poured_sky",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/pierced_zech1210/visual/grace_poured_sky.png",
+      "title": "golden light pours like a waterfall through broken storm clouds onto a stone city",
+      "subject": "golden light pours like a waterfall through broken storm clouds onto a stone city",
+      "characters": [],
+      "elements": [
+        "light waterfall",
+        "storm clouds",
+        "city"
+      ],
+      "setting": "sky over Jerusalem",
+      "palette": "inked cel-flat, storm greys to warm gold",
+      "mood": "prophetic, pierced, grace",
+      "doctrine": "I will pour the spirit of grace (Zech 12:10a)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "pilot",
+        "zech1210"
+      ],
+      "used_in": [
+        "pierced_zech1210 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "pierced_zech1210",
+      "piece_title": "Pierced (Zechariah 12:10)",
+      "verse": "Zechariah 12:10",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-02",
+      "id": "pz_look_up_faces",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/pierced_zech1210/visual/look_up_faces.png",
+      "title": "three upturned tearful 1st-century faces catching warm light",
+      "subject": "three upturned tearful 1st-century faces catching warm light",
+      "characters": [
+        "onlookers"
+      ],
+      "elements": [
+        "tears",
+        "warm light"
+      ],
+      "setting": "half-light",
+      "palette": "inked cel-flat, storm greys to warm gold",
+      "mood": "prophetic, pierced, grace",
+      "doctrine": "they shall look upon me and mourn",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "pilot",
+        "zech1210"
+      ],
+      "used_in": [
+        "pierced_zech1210 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "pierced_zech1210",
+      "piece_title": "Pierced (Zechariah 12:10)",
+      "verse": "Zechariah 12:10",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-02",
+      "id": "pz_spear_thrust_up_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/pierced_zech1210/visual/clips/spear_thrust_up.mp4",
+      "title": "Roman soldier thrusts spear up at the crucified Christ (Kling push-in)",
+      "subject": "Roman soldier thrusts spear up at the crucified Christ",
+      "characters": [
+        "soldier",
+        "Christ"
+      ],
+      "elements": [
+        "spear",
+        "cross",
+        "storm sky"
+      ],
+      "setting": "Golgotha, storm",
+      "doctrine": "the piercing of John 19:34/Zech 12:10",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "pilot",
+        "zech1210",
+        "kling"
+      ],
+      "used_in": [
+        "pierced_zech1210 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "pierced_zech1210",
+      "piece_title": "Pierced (Zechariah 12:10)",
+      "verse": "Zechariah 12:10",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-02",
+      "id": "pz_zechariah_night_scroll_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/pierced_zech1210/visual/clips/zechariah_night_scroll.mp4",
+      "title": "prophet Zechariah under night stars with scroll (Kling push-in)",
+      "subject": "prophet Zechariah under night stars with scroll",
+      "characters": [
+        "Zechariah"
+      ],
+      "elements": [
+        "scroll",
+        "stars",
+        "rooftop",
+        "city"
+      ],
+      "setting": "Judean rooftop, night",
+      "doctrine": "the prophecy given ~500 BC",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "pilot",
+        "zech1210",
+        "kling"
+      ],
+      "used_in": [
+        "pierced_zech1210 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "pierced_zech1210",
+      "piece_title": "Pierced (Zechariah 12:10)",
+      "verse": "Zechariah 12:10",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-02",
+      "id": "pz_mourners_only_son_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/pierced_zech1210/visual/clips/mourners_only_son.mp4",
+      "title": "father and mother collapsed in grief beside a shrouded bier (Kling push-in)",
+      "subject": "father and mother collapsed in grief beside a shrouded bier",
+      "characters": [
+        "father",
+        "mother"
+      ],
+      "elements": [
+        "bier",
+        "shroud",
+        "torches"
+      ],
+      "setting": "stone courtyard, night",
+      "doctrine": "mourning as for an only son (Zech 12:10)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "pilot",
+        "zech1210",
+        "kling"
+      ],
+      "used_in": [
+        "pierced_zech1210 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "pierced_zech1210",
+      "piece_title": "Pierced (Zechariah 12:10)",
+      "verse": "Zechariah 12:10",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-02",
+      "id": "pz_look_up_faces_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/pierced_zech1210/visual/clips/look_up_faces.mp4",
+      "title": "three upturned tearful 1st-century faces catching warm light (Kling push-in)",
+      "subject": "three upturned tearful 1st-century faces catching warm light",
+      "characters": [
+        "onlookers"
+      ],
+      "elements": [
+        "tears",
+        "warm light"
+      ],
+      "setting": "half-light",
+      "doctrine": "they shall look upon me and mourn",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "pilot",
+        "zech1210",
+        "kling"
+      ],
+      "used_in": [
+        "pierced_zech1210 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "pierced_zech1210",
+      "piece_title": "Pierced (Zechariah 12:10)",
+      "verse": "Zechariah 12:10",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-02",
+      "id": "pz_grace_poured_sky_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/pierced_zech1210/visual/clips/grace_poured_sky.mp4",
+      "title": "golden light pours like a waterfall through broken storm clouds onto a stone city (Kling push-in)",
+      "subject": "golden light pours like a waterfall through broken storm clouds onto a stone city",
+      "characters": [],
+      "elements": [
+        "light waterfall",
+        "storm clouds",
+        "city"
+      ],
+      "setting": "sky over Jerusalem",
+      "doctrine": "I will pour the spirit of grace (Zech 12:10a)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "pilot",
+        "zech1210",
+        "kling"
+      ],
+      "used_in": [
+        "pierced_zech1210 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "pierced_zech1210",
+      "piece_title": "Pierced (Zechariah 12:10)",
+      "verse": "Zechariah 12:10",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-02",
+      "id": "pz_blood_water_wood_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/pierced_zech1210/visual/clips/blood_water_wood.mp4",
+      "title": "macro: water and blood run down the cross's wood grain (Kling push-in)",
+      "subject": "macro: water and blood run down the cross's wood grain",
+      "characters": [],
+      "elements": [
+        "blood",
+        "water",
+        "wood grain",
+        "stone"
+      ],
+      "setting": "base of the cross",
+      "doctrine": "blood and water of John 19:34",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "pilot",
+        "zech1210",
+        "kling"
+      ],
+      "used_in": [
+        "pierced_zech1210 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "thirty_pieces_zech11",
+      "piece_title": "Thirty Pieces of Silver (Zechariah 11:12-13)",
+      "verse": "Zechariah 11:12-13",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "tp_thirty_coins_scatter",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/thirty_pieces_zech11/visual/thirty_coins_scatter.png",
+      "title": "silver coins scattering across the torchlit temple floor",
+      "subject": "silver coins scattering across the torchlit temple floor",
+      "characters": [],
+      "elements": [
+        "coins",
+        "temple floor",
+        "torch"
+      ],
+      "setting": "temple court, night",
+      "palette": "inked cel-flat, torch ambers and temple stone",
+      "mood": "prophetic ledger, betrayal, ransom",
+      "doctrine": "the thirty pieces cast down (Matt 27:5)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "zech11",
+        "thirty-pieces"
+      ],
+      "used_in": [
+        "thirty_pieces_zech11 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "thirty_pieces_zech11",
+      "piece_title": "Thirty Pieces of Silver (Zechariah 11:12-13)",
+      "verse": "Zechariah 11:12-13",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "tp_coin_on_scroll",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/thirty_pieces_zech11/visual/coin_on_scroll.png",
+      "title": "a silver coin resting on an ancient scroll by lamplight",
+      "subject": "a silver coin resting on an ancient scroll by lamplight",
+      "characters": [],
+      "elements": [
+        "coin",
+        "scroll",
+        "oil lamp"
+      ],
+      "setting": "scribe's table",
+      "palette": "inked cel-flat, torch ambers and temple stone",
+      "mood": "prophetic ledger, betrayal, ransom",
+      "doctrine": "the price written five centuries early (Zech 11:12)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "zech11",
+        "thirty-pieces"
+      ],
+      "used_in": [
+        "thirty_pieces_zech11 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "thirty_pieces_zech11",
+      "piece_title": "Thirty Pieces of Silver (Zechariah 11:12-13)",
+      "verse": "Zechariah 11:12-13",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "tp_weighing_scales_silver",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/thirty_pieces_zech11/visual/weighing_scales_silver.png",
+      "title": "hands weighing silver pieces on a hanging balance",
+      "subject": "hands weighing silver pieces on a hanging balance",
+      "characters": [],
+      "elements": [
+        "balance scale",
+        "silver",
+        "torch"
+      ],
+      "setting": "stone chamber",
+      "palette": "inked cel-flat, torch ambers and temple stone",
+      "mood": "prophetic ledger, betrayal, ransom",
+      "doctrine": "so they weighed for my price (Zech 11:12)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "zech11",
+        "thirty-pieces"
+      ],
+      "used_in": [
+        "thirty_pieces_zech11 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "thirty_pieces_zech11",
+      "piece_title": "Thirty Pieces of Silver (Zechariah 11:12-13)",
+      "verse": "Zechariah 11:12-13",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "tp_potter_at_wheel",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/thirty_pieces_zech11/visual/potter_at_wheel.png",
+      "title": "a potter's clay hands shaping a vessel on a stone wheel",
+      "subject": "a potter's clay hands shaping a vessel on a stone wheel",
+      "characters": [
+        "potter"
+      ],
+      "elements": [
+        "wheel",
+        "clay vessel"
+      ],
+      "setting": "workshop",
+      "palette": "inked cel-flat, torch ambers and temple stone",
+      "mood": "prophetic ledger, betrayal, ransom",
+      "doctrine": "cast it unto the potter (Zech 11:13)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "zech11",
+        "thirty-pieces"
+      ],
+      "used_in": [
+        "thirty_pieces_zech11 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "thirty_pieces_zech11",
+      "piece_title": "Thirty Pieces of Silver (Zechariah 11:12-13)",
+      "verse": "Zechariah 11:12-13",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "tp_judas_bag_priests",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/thirty_pieces_zech11/visual/judas_bag_priests.png",
+      "title": "Judas head bowed clutching the money bag, priests watching",
+      "subject": "Judas head bowed clutching the money bag, priests watching",
+      "characters": [
+        "Judas",
+        "priests"
+      ],
+      "elements": [
+        "money bag",
+        "coins",
+        "torches"
+      ],
+      "setting": "temple chamber",
+      "palette": "inked cel-flat, torch ambers and temple stone",
+      "mood": "prophetic ledger, betrayal, ransom",
+      "doctrine": "the covenant for thirty pieces (Matt 26:15)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "zech11",
+        "thirty-pieces"
+      ],
+      "used_in": [
+        "thirty_pieces_zech11 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "thirty_pieces_zech11",
+      "piece_title": "Thirty Pieces of Silver (Zechariah 11:12-13)",
+      "verse": "Zechariah 11:12-13",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "tp_judas_casting_coins",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/thirty_pieces_zech11/visual/judas_casting_coins.png",
+      "title": "Judas hurling the silver across the temple hall, priests recoiling",
+      "subject": "Judas hurling the silver across the temple hall, priests recoiling",
+      "characters": [
+        "Judas",
+        "priests"
+      ],
+      "elements": [
+        "coins mid-air",
+        "temple columns"
+      ],
+      "setting": "temple hall",
+      "palette": "inked cel-flat, torch ambers and temple stone",
+      "mood": "prophetic ledger, betrayal, ransom",
+      "doctrine": "he cast down the pieces of silver (Matt 27:5)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "zech11",
+        "thirty-pieces"
+      ],
+      "used_in": [
+        "thirty_pieces_zech11 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "thirty_pieces_zech11",
+      "piece_title": "Thirty Pieces of Silver (Zechariah 11:12-13)",
+      "verse": "Zechariah 11:12-13",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "tp_zechariah_casting",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/thirty_pieces_zech11/visual/zechariah_casting.png",
+      "title": "the prophet flinging silver coins toward a potter's stall at night",
+      "subject": "the prophet flinging silver coins toward a potter's stall at night",
+      "characters": [
+        "Zechariah"
+      ],
+      "elements": [
+        "coins mid-air",
+        "potter's stall",
+        "torches"
+      ],
+      "setting": "temple court, night",
+      "palette": "inked cel-flat, torch ambers and temple stone",
+      "mood": "prophetic ledger, betrayal, ransom",
+      "doctrine": "I took the thirty pieces and cast them (Zech 11:13)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "zech11",
+        "thirty-pieces"
+      ],
+      "used_in": [
+        "thirty_pieces_zech11 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "thirty_pieces_zech11",
+      "piece_title": "Thirty Pieces of Silver (Zechariah 11:12-13)",
+      "verse": "Zechariah 11:12-13",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "tp_potters_field",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/thirty_pieces_zech11/visual/potters_field.png",
+      "title": "a bleak clay field strewn with broken pottery under a grey sky",
+      "subject": "a bleak clay field strewn with broken pottery under a grey sky",
+      "characters": [],
+      "elements": [
+        "pottery shards",
+        "clay field"
+      ],
+      "setting": "potter's field",
+      "palette": "inked cel-flat, torch ambers and temple stone",
+      "mood": "prophetic ledger, betrayal, ransom",
+      "doctrine": "the field of blood (Matt 27:7-8)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "zech11",
+        "thirty-pieces"
+      ],
+      "used_in": [
+        "thirty_pieces_zech11 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "thirty_pieces_zech11",
+      "piece_title": "Thirty Pieces of Silver (Zechariah 11:12-13)",
+      "verse": "Zechariah 11:12-13",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "tp_silver_and_blood",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/thirty_pieces_zech11/visual/silver_and_blood.png",
+      "title": "worn silver coins on pale stone with a dark red stream between them",
+      "subject": "worn silver coins on pale stone with a dark red stream between them",
+      "characters": [],
+      "elements": [
+        "coins",
+        "blood stream",
+        "stone"
+      ],
+      "setting": "temple floor",
+      "palette": "inked cel-flat, torch ambers and temple stone",
+      "mood": "prophetic ledger, betrayal, ransom",
+      "doctrine": "the price of blood (Matt 27:6)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "zech11",
+        "thirty-pieces"
+      ],
+      "used_in": [
+        "thirty_pieces_zech11 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "thirty_pieces_zech11",
+      "piece_title": "Thirty Pieces of Silver (Zechariah 11:12-13)",
+      "verse": "Zechariah 11:12-13",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "tp_thirty_coins_scatter_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/thirty_pieces_zech11/visual/clips/thirty_coins_scatter.mp4",
+      "title": "silver coins scattering across the torchlit temple floor (Kling push-in)",
+      "subject": "silver coins scattering across the torchlit temple floor",
+      "characters": [],
+      "elements": [
+        "coins",
+        "temple floor",
+        "torch"
+      ],
+      "setting": "temple court, night",
+      "doctrine": "the thirty pieces cast down (Matt 27:5)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "zech11",
+        "kling"
+      ],
+      "used_in": [
+        "thirty_pieces_zech11 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "thirty_pieces_zech11",
+      "piece_title": "Thirty Pieces of Silver (Zechariah 11:12-13)",
+      "verse": "Zechariah 11:12-13",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "tp_weighing_scales_silver_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/thirty_pieces_zech11/visual/clips/weighing_scales_silver.mp4",
+      "title": "hands weighing silver pieces on a hanging balance (Kling push-in)",
+      "subject": "hands weighing silver pieces on a hanging balance",
+      "characters": [],
+      "elements": [
+        "balance scale",
+        "silver",
+        "torch"
+      ],
+      "setting": "stone chamber",
+      "doctrine": "so they weighed for my price (Zech 11:12)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "zech11",
+        "kling"
+      ],
+      "used_in": [
+        "thirty_pieces_zech11 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "thirty_pieces_zech11",
+      "piece_title": "Thirty Pieces of Silver (Zechariah 11:12-13)",
+      "verse": "Zechariah 11:12-13",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "tp_judas_bag_priests_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/thirty_pieces_zech11/visual/clips/judas_bag_priests.mp4",
+      "title": "Judas head bowed clutching the money bag, priests watching (Kling push-in)",
+      "subject": "Judas head bowed clutching the money bag, priests watching",
+      "characters": [
+        "Judas",
+        "priests"
+      ],
+      "elements": [
+        "money bag",
+        "coins",
+        "torches"
+      ],
+      "setting": "temple chamber",
+      "doctrine": "the covenant for thirty pieces (Matt 26:15)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "zech11",
+        "kling"
+      ],
+      "used_in": [
+        "thirty_pieces_zech11 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "thirty_pieces_zech11",
+      "piece_title": "Thirty Pieces of Silver (Zechariah 11:12-13)",
+      "verse": "Zechariah 11:12-13",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "tp_judas_casting_coins_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/thirty_pieces_zech11/visual/clips/judas_casting_coins.mp4",
+      "title": "Judas hurling the silver across the temple hall, priests recoiling (Kling push-in)",
+      "subject": "Judas hurling the silver across the temple hall, priests recoiling",
+      "characters": [
+        "Judas",
+        "priests"
+      ],
+      "elements": [
+        "coins mid-air",
+        "temple columns"
+      ],
+      "setting": "temple hall",
+      "doctrine": "he cast down the pieces of silver (Matt 27:5)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "zech11",
+        "kling"
+      ],
+      "used_in": [
+        "thirty_pieces_zech11 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "thirty_pieces_zech11",
+      "piece_title": "Thirty Pieces of Silver (Zechariah 11:12-13)",
+      "verse": "Zechariah 11:12-13",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "tp_potter_at_wheel_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/thirty_pieces_zech11/visual/clips/potter_at_wheel.mp4",
+      "title": "a potter's clay hands shaping a vessel on a stone wheel (Kling push-in)",
+      "subject": "a potter's clay hands shaping a vessel on a stone wheel",
+      "characters": [
+        "potter"
+      ],
+      "elements": [
+        "wheel",
+        "clay vessel"
+      ],
+      "setting": "workshop",
+      "doctrine": "cast it unto the potter (Zech 11:13)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "zech11",
+        "kling"
+      ],
+      "used_in": [
+        "thirty_pieces_zech11 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "thirty_pieces_zech11",
+      "piece_title": "Thirty Pieces of Silver (Zechariah 11:12-13)",
+      "verse": "Zechariah 11:12-13",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "tp_silver_and_blood_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/thirty_pieces_zech11/visual/clips/silver_and_blood.mp4",
+      "title": "worn silver coins on pale stone with a dark red stream between them (Kling push-in)",
+      "subject": "worn silver coins on pale stone with a dark red stream between them",
+      "characters": [],
+      "elements": [
+        "coins",
+        "blood stream",
+        "stone"
+      ],
+      "setting": "temple floor",
+      "doctrine": "the price of blood (Matt 27:6)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "zech11",
+        "kling"
+      ],
+      "used_in": [
+        "thirty_pieces_zech11 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "today_paradise_luke2343",
+      "piece_title": "Today in Paradise (Luke 23:43)",
+      "verse": "Luke 23:39-43",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "tpd_mocker_thief_face",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/today_paradise_luke2343/visual/mocker_thief_face.png",
+      "title": "the railing thief snarling from his cross",
+      "subject": "the railing thief snarling from his cross",
+      "characters": [
+        "mocker thief"
+      ],
+      "elements": [
+        "ropes",
+        "storm"
+      ],
+      "setting": "Golgotha",
+      "palette": "inked cel-flat, storm greys to paradise gold",
+      "mood": "two responses, mercy, paradise",
+      "doctrine": "the mocker's taunt (Luke 23:39)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "luke2343",
+        "thief"
+      ],
+      "used_in": [
+        "today_paradise_luke2343 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "today_paradise_luke2343",
+      "piece_title": "Today in Paradise (Luke 23:43)",
+      "verse": "Luke 23:39-43",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "tpd_penitent_thief_face",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/today_paradise_luke2343/visual/penitent_thief_face.png",
+      "title": "the penitent thief bound and tearful, head turned",
+      "subject": "the penitent thief bound and tearful, head turned",
+      "characters": [
+        "penitent thief"
+      ],
+      "elements": [
+        "ropes",
+        "tears"
+      ],
+      "setting": "Golgotha",
+      "palette": "inked cel-flat, storm greys to paradise gold",
+      "mood": "two responses, mercy, paradise",
+      "doctrine": "the confession (Luke 23:40-41)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "luke2343",
+        "thief"
+      ],
+      "used_in": [
+        "today_paradise_luke2343 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "today_paradise_luke2343",
+      "piece_title": "Today in Paradise (Luke 23:43)",
+      "verse": "Luke 23:39-43",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "tpd_thief_looks_to_jesus",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/today_paradise_luke2343/visual/thief_looks_to_jesus.png",
+      "title": "over the thief's shoulder toward the crucified Christ",
+      "subject": "over the thief's shoulder toward the crucified Christ",
+      "characters": [
+        "penitent thief",
+        "Christ"
+      ],
+      "elements": [
+        "two crosses",
+        "storm"
+      ],
+      "setting": "Golgotha",
+      "palette": "inked cel-flat, storm greys to paradise gold",
+      "mood": "two responses, mercy, paradise",
+      "doctrine": "Lord, remember me (Luke 23:42)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "luke2343",
+        "thief"
+      ],
+      "used_in": [
+        "today_paradise_luke2343 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "today_paradise_luke2343",
+      "piece_title": "Today in Paradise (Luke 23:43)",
+      "verse": "Luke 23:39-43",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "tpd_jesus_turns_to_thief",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/today_paradise_luke2343/visual/jesus_turns_to_thief.png",
+      "title": "thorn-crowned Christ turning his head in compassion",
+      "subject": "thorn-crowned Christ turning his head in compassion",
+      "characters": [
+        "Christ"
+      ],
+      "elements": [
+        "crown of thorns",
+        "cross"
+      ],
+      "setting": "Golgotha",
+      "palette": "inked cel-flat, storm greys to paradise gold",
+      "mood": "two responses, mercy, paradise",
+      "doctrine": "To day shalt thou be with me (Luke 23:43)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "luke2343",
+        "thief"
+      ],
+      "used_in": [
+        "today_paradise_luke2343 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "today_paradise_luke2343",
+      "piece_title": "Today in Paradise (Luke 23:43)",
+      "verse": "Luke 23:39-43",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "tpd_two_thieves_wide",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/today_paradise_luke2343/visual/two_thieves_wide.png",
+      "title": "three crucified men on a stormy hilltop, middle cross taller",
+      "subject": "three crucified men on a stormy hilltop, middle cross taller",
+      "characters": [
+        "Christ",
+        "two thieves"
+      ],
+      "elements": [
+        "three crosses",
+        "storm"
+      ],
+      "setting": "Golgotha wide",
+      "palette": "inked cel-flat, storm greys to paradise gold",
+      "mood": "two responses, mercy, paradise",
+      "doctrine": "crucified with the malefactors (Luke 23:33)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "luke2343",
+        "thief"
+      ],
+      "used_in": [
+        "today_paradise_luke2343 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "today_paradise_luke2343",
+      "piece_title": "Today in Paradise (Luke 23:43)",
+      "verse": "Luke 23:39-43",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "tpd_confession_face_hands",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/today_paradise_luke2343/visual/confession_face_hands.png",
+      "title": "the bound thief's face pressed by his roped fist, eyes shut",
+      "subject": "the bound thief's face pressed by his roped fist, eyes shut",
+      "characters": [
+        "penitent thief"
+      ],
+      "elements": [
+        "rope",
+        "beam"
+      ],
+      "setting": "Golgotha close",
+      "palette": "inked cel-flat, storm greys to paradise gold",
+      "mood": "two responses, mercy, paradise",
+      "doctrine": "we indeed justly (Luke 23:41)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "luke2343",
+        "thief"
+      ],
+      "used_in": [
+        "today_paradise_luke2343 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "today_paradise_luke2343",
+      "piece_title": "Today in Paradise (Luke 23:43)",
+      "verse": "Luke 23:39-43",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "tpd_kingdom_light_clouds",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/today_paradise_luke2343/visual/kingdom_light_clouds.png",
+      "title": "a shaft of pale light opening in heavy storm clouds",
+      "subject": "a shaft of pale light opening in heavy storm clouds",
+      "characters": [],
+      "elements": [
+        "light shaft",
+        "storm clouds",
+        "hills"
+      ],
+      "setting": "sky",
+      "palette": "inked cel-flat, storm greys to paradise gold",
+      "mood": "two responses, mercy, paradise",
+      "doctrine": "when thou comest into thy kingdom (Luke 23:42)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "luke2343",
+        "thief"
+      ],
+      "used_in": [
+        "today_paradise_luke2343 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "today_paradise_luke2343",
+      "piece_title": "Today in Paradise (Luke 23:43)",
+      "verse": "Luke 23:39-43",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "tpd_answer_light_profile",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/today_paradise_luke2343/visual/answer_light_profile.png",
+      "title": "thorn-crowned profile calm against breaking light",
+      "subject": "thorn-crowned profile calm against breaking light",
+      "characters": [
+        "Christ"
+      ],
+      "elements": [
+        "crown of thorns",
+        "light break"
+      ],
+      "setting": "Golgotha",
+      "palette": "inked cel-flat, storm greys to paradise gold",
+      "mood": "two responses, mercy, paradise",
+      "doctrine": "Verily I say unto thee (Luke 23:43)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "luke2343",
+        "thief"
+      ],
+      "used_in": [
+        "today_paradise_luke2343 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "today_paradise_luke2343",
+      "piece_title": "Today in Paradise (Luke 23:43)",
+      "verse": "Luke 23:39-43",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "tpd_paradise_dawn",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/today_paradise_luke2343/visual/paradise_dawn.png",
+      "title": "dawn garden with a robed figure in the light on the hilltop",
+      "subject": "dawn garden with a robed figure in the light on the hilltop",
+      "characters": [
+        "Christ figure"
+      ],
+      "elements": [
+        "olive trees",
+        "cypress",
+        "dawn light",
+        "garden path"
+      ],
+      "setting": "paradise garden",
+      "palette": "inked cel-flat, storm greys to paradise gold",
+      "mood": "two responses, mercy, paradise",
+      "doctrine": "with me in paradise (Luke 23:43)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "luke2343",
+        "thief"
+      ],
+      "used_in": [
+        "today_paradise_luke2343 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "today_paradise_luke2343",
+      "piece_title": "Today in Paradise (Luke 23:43)",
+      "verse": "Luke 23:39-43",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "tpd_mocker_thief_face_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/today_paradise_luke2343/visual/clips/mocker_thief_face.mp4",
+      "title": "the railing thief snarling from his cross (Kling push-in)",
+      "subject": "the railing thief snarling from his cross",
+      "characters": [
+        "mocker thief"
+      ],
+      "elements": [
+        "ropes",
+        "storm"
+      ],
+      "setting": "Golgotha",
+      "doctrine": "the mocker's taunt (Luke 23:39)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "luke2343",
+        "kling"
+      ],
+      "used_in": [
+        "today_paradise_luke2343 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "today_paradise_luke2343",
+      "piece_title": "Today in Paradise (Luke 23:43)",
+      "verse": "Luke 23:39-43",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "tpd_penitent_thief_face_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/today_paradise_luke2343/visual/clips/penitent_thief_face.mp4",
+      "title": "the penitent thief bound and tearful, head turned (Kling push-in)",
+      "subject": "the penitent thief bound and tearful, head turned",
+      "characters": [
+        "penitent thief"
+      ],
+      "elements": [
+        "ropes",
+        "tears"
+      ],
+      "setting": "Golgotha",
+      "doctrine": "the confession (Luke 23:40-41)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "luke2343",
+        "kling"
+      ],
+      "used_in": [
+        "today_paradise_luke2343 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "today_paradise_luke2343",
+      "piece_title": "Today in Paradise (Luke 23:43)",
+      "verse": "Luke 23:39-43",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "tpd_thief_looks_to_jesus_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/today_paradise_luke2343/visual/clips/thief_looks_to_jesus.mp4",
+      "title": "over the thief's shoulder toward the crucified Christ (Kling push-in)",
+      "subject": "over the thief's shoulder toward the crucified Christ",
+      "characters": [
+        "penitent thief",
+        "Christ"
+      ],
+      "elements": [
+        "two crosses",
+        "storm"
+      ],
+      "setting": "Golgotha",
+      "doctrine": "Lord, remember me (Luke 23:42)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "luke2343",
+        "kling"
+      ],
+      "used_in": [
+        "today_paradise_luke2343 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "today_paradise_luke2343",
+      "piece_title": "Today in Paradise (Luke 23:43)",
+      "verse": "Luke 23:39-43",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "tpd_jesus_turns_to_thief_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/today_paradise_luke2343/visual/clips/jesus_turns_to_thief.mp4",
+      "title": "thorn-crowned Christ turning his head in compassion (Kling push-in)",
+      "subject": "thorn-crowned Christ turning his head in compassion",
+      "characters": [
+        "Christ"
+      ],
+      "elements": [
+        "crown of thorns",
+        "cross"
+      ],
+      "setting": "Golgotha",
+      "doctrine": "To day shalt thou be with me (Luke 23:43)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "luke2343",
+        "kling"
+      ],
+      "used_in": [
+        "today_paradise_luke2343 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "today_paradise_luke2343",
+      "piece_title": "Today in Paradise (Luke 23:43)",
+      "verse": "Luke 23:39-43",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "tpd_paradise_dawn_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/today_paradise_luke2343/visual/clips/paradise_dawn.mp4",
+      "title": "dawn garden with a robed figure in the light on the hilltop (Kling push-in)",
+      "subject": "dawn garden with a robed figure in the light on the hilltop",
+      "characters": [
+        "Christ figure"
+      ],
+      "elements": [
+        "olive trees",
+        "cypress",
+        "dawn light",
+        "garden path"
+      ],
+      "setting": "paradise garden",
+      "doctrine": "with me in paradise (Luke 23:43)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "luke2343",
+        "kling"
+      ],
+      "used_in": [
+        "today_paradise_luke2343 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "today_paradise_luke2343",
+      "piece_title": "Today in Paradise (Luke 23:43)",
+      "verse": "Luke 23:39-43",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "tpd_two_thieves_wide_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/today_paradise_luke2343/visual/clips/two_thieves_wide.mp4",
+      "title": "three crucified men on a stormy hilltop, middle cross taller (Kling push-in)",
+      "subject": "three crucified men on a stormy hilltop, middle cross taller",
+      "characters": [
+        "Christ",
+        "two thieves"
+      ],
+      "elements": [
+        "three crosses",
+        "storm"
+      ],
+      "setting": "Golgotha wide",
+      "doctrine": "crucified with the malefactors (Luke 23:33)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "luke2343",
+        "kling"
+      ],
+      "used_in": [
+        "today_paradise_luke2343 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "woman_behold_john1926",
+      "piece_title": "Woman Behold Thy Son (John 19:26)",
+      "verse": "John 19:25-27 + Luke 2:35",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "wb_simeon_baby_temple",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/woman_behold_john1926/visual/simeon_baby_temple.png",
+      "title": "aged Simeon lifting the swaddled infant in temple light",
+      "subject": "aged Simeon lifting the swaddled infant in temple light",
+      "characters": [
+        "Simeon",
+        "infant Jesus",
+        "Mary"
+      ],
+      "elements": [
+        "temple columns",
+        "light shaft"
+      ],
+      "setting": "temple",
+      "palette": "inked cel-flat, temple gold to storm grey to dusk warm",
+      "mood": "a mother's wound, the Son who sees it",
+      "doctrine": "Simeon's blessing (Luke 2:28,34)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "john1926",
+        "mary"
+      ],
+      "used_in": [
+        "woman_behold_john1926 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "woman_behold_john1926",
+      "piece_title": "Woman Behold Thy Son (John 19:26)",
+      "verse": "John 19:25-27 + Luke 2:35",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "wb_mary_infant_shadow",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/woman_behold_john1926/visual/mary_infant_shadow.png",
+      "title": "young Mary clutching the infant, a cold sword-line shadow across her robe",
+      "subject": "young Mary clutching the infant, a cold sword-line shadow across her robe",
+      "characters": [
+        "Mary",
+        "infant Jesus"
+      ],
+      "elements": [
+        "sword shadow",
+        "temple stone"
+      ],
+      "setting": "temple",
+      "palette": "inked cel-flat, temple gold to storm grey to dusk warm",
+      "mood": "a mother's wound, the Son who sees it",
+      "doctrine": "a sword shall pierce thy own soul (Luke 2:35)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "john1926",
+        "mary"
+      ],
+      "used_in": [
+        "woman_behold_john1926 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "woman_behold_john1926",
+      "piece_title": "Woman Behold Thy Son (John 19:26)",
+      "verse": "John 19:25-27 + Luke 2:35",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "wb_mary_at_cross",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/woman_behold_john1926/visual/mary_at_cross.png",
+      "title": "veiled Mary looking up from the foot of the cross",
+      "subject": "veiled Mary looking up from the foot of the cross",
+      "characters": [
+        "Mary",
+        "Christ crucified"
+      ],
+      "elements": [
+        "cross",
+        "storm light"
+      ],
+      "setting": "Golgotha",
+      "palette": "inked cel-flat, temple gold to storm grey to dusk warm",
+      "mood": "a mother's wound, the Son who sees it",
+      "doctrine": "there stood by the cross his mother (John 19:25)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "john1926",
+        "mary"
+      ],
+      "used_in": [
+        "woman_behold_john1926 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "woman_behold_john1926",
+      "piece_title": "Woman Behold Thy Son (John 19:26)",
+      "verse": "John 19:25-27 + Luke 2:35",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "wb_jesus_looks_down",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/woman_behold_john1926/visual/jesus_looks_down.png",
+      "title": "thorn-crowned Christ looking down in compassion from the cross",
+      "subject": "thorn-crowned Christ looking down in compassion from the cross",
+      "characters": [
+        "Christ"
+      ],
+      "elements": [
+        "crown of thorns",
+        "storm sky"
+      ],
+      "setting": "Golgotha",
+      "palette": "inked cel-flat, temple gold to storm grey to dusk warm",
+      "mood": "a mother's wound, the Son who sees it",
+      "doctrine": "when Jesus saw his mother (John 19:26)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "john1926",
+        "mary"
+      ],
+      "used_in": [
+        "woman_behold_john1926 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "woman_behold_john1926",
+      "piece_title": "Woman Behold Thy Son (John 19:26)",
+      "verse": "John 19:25-27 + Luke 2:35",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "wb_mary_and_john",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/woman_behold_john1926/visual/mary_and_john.png",
+      "title": "the beloved disciple wrapping his arm around grieving Mary at the cross foot",
+      "subject": "the beloved disciple wrapping his arm around grieving Mary at the cross foot",
+      "characters": [
+        "Mary",
+        "John"
+      ],
+      "elements": [
+        "cross base",
+        "storm light"
+      ],
+      "setting": "Golgotha",
+      "palette": "inked cel-flat, temple gold to storm grey to dusk warm",
+      "mood": "a mother's wound, the Son who sees it",
+      "doctrine": "the disciple standing by, whom he loved (John 19:26)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "john1926",
+        "mary"
+      ],
+      "used_in": [
+        "woman_behold_john1926 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "woman_behold_john1926",
+      "piece_title": "Woman Behold Thy Son (John 19:26)",
+      "verse": "John 19:25-27 + Luke 2:35",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "wb_john_leads_home",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/woman_behold_john1926/visual/john_leads_home.png",
+      "title": "John gently leading Mary along a dusk road toward a walled town gate",
+      "subject": "John gently leading Mary along a dusk road toward a walled town gate",
+      "characters": [
+        "Mary",
+        "John"
+      ],
+      "elements": [
+        "town gate",
+        "dusk road",
+        "bare hill behind"
+      ],
+      "setting": "road from Golgotha",
+      "palette": "inked cel-flat, temple gold to storm grey to dusk warm",
+      "mood": "a mother's wound, the Son who sees it",
+      "doctrine": "took her unto his own home (John 19:27)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "john1926",
+        "mary"
+      ],
+      "used_in": [
+        "woman_behold_john1926 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "woman_behold_john1926",
+      "piece_title": "Woman Behold Thy Son (John 19:26)",
+      "verse": "John 19:25-27 + Luke 2:35",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "wb_simeon_baby_temple_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/woman_behold_john1926/visual/clips/simeon_baby_temple.mp4",
+      "title": "aged Simeon lifting the swaddled infant in temple light (Kling push-in)",
+      "subject": "aged Simeon lifting the swaddled infant in temple light",
+      "characters": [
+        "Simeon",
+        "infant Jesus",
+        "Mary"
+      ],
+      "elements": [
+        "temple columns",
+        "light shaft"
+      ],
+      "setting": "temple",
+      "doctrine": "Simeon's blessing (Luke 2:28,34)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "john1926",
+        "kling"
+      ],
+      "used_in": [
+        "woman_behold_john1926 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "woman_behold_john1926",
+      "piece_title": "Woman Behold Thy Son (John 19:26)",
+      "verse": "John 19:25-27 + Luke 2:35",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "wb_mary_at_cross_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/woman_behold_john1926/visual/clips/mary_at_cross.mp4",
+      "title": "veiled Mary looking up from the foot of the cross (Kling push-in)",
+      "subject": "veiled Mary looking up from the foot of the cross",
+      "characters": [
+        "Mary",
+        "Christ crucified"
+      ],
+      "elements": [
+        "cross",
+        "storm light"
+      ],
+      "setting": "Golgotha",
+      "doctrine": "there stood by the cross his mother (John 19:25)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "john1926",
+        "kling"
+      ],
+      "used_in": [
+        "woman_behold_john1926 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "woman_behold_john1926",
+      "piece_title": "Woman Behold Thy Son (John 19:26)",
+      "verse": "John 19:25-27 + Luke 2:35",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "wb_jesus_looks_down_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/woman_behold_john1926/visual/clips/jesus_looks_down.mp4",
+      "title": "thorn-crowned Christ looking down in compassion from the cross (Kling push-in)",
+      "subject": "thorn-crowned Christ looking down in compassion from the cross",
+      "characters": [
+        "Christ"
+      ],
+      "elements": [
+        "crown of thorns",
+        "storm sky"
+      ],
+      "setting": "Golgotha",
+      "doctrine": "when Jesus saw his mother (John 19:26)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "john1926",
+        "kling"
+      ],
+      "used_in": [
+        "woman_behold_john1926 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "woman_behold_john1926",
+      "piece_title": "Woman Behold Thy Son (John 19:26)",
+      "verse": "John 19:25-27 + Luke 2:35",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "wb_mary_and_john_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/woman_behold_john1926/visual/clips/mary_and_john.mp4",
+      "title": "the beloved disciple wrapping his arm around grieving Mary at the cross foot (Kling push-in)",
+      "subject": "the beloved disciple wrapping his arm around grieving Mary at the cross foot",
+      "characters": [
+        "Mary",
+        "John"
+      ],
+      "elements": [
+        "cross base",
+        "storm light"
+      ],
+      "setting": "Golgotha",
+      "doctrine": "the disciple standing by, whom he loved (John 19:26)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "john1926",
+        "kling"
+      ],
+      "used_in": [
+        "woman_behold_john1926 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "woman_behold_john1926",
+      "piece_title": "Woman Behold Thy Son (John 19:26)",
+      "verse": "John 19:25-27 + Luke 2:35",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "wb_john_leads_home_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/woman_behold_john1926/visual/clips/john_leads_home.mp4",
+      "title": "John gently leading Mary along a dusk road toward a walled town gate (Kling push-in)",
+      "subject": "John gently leading Mary along a dusk road toward a walled town gate",
+      "characters": [
+        "Mary",
+        "John"
+      ],
+      "elements": [
+        "town gate",
+        "dusk road",
+        "bare hill behind"
+      ],
+      "setting": "road from Golgotha",
+      "doctrine": "took her unto his own home (John 19:27)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "john1926",
+        "kling"
+      ],
+      "used_in": [
+        "woman_behold_john1926 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "watch_one_hour_matt2640",
+      "piece_title": "Could Ye Not Watch One Hour (Matt 26:40)",
+      "verse": "Matthew 26:36-46",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "wo_gethsemane_olives_night",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/watch_one_hour_matt2640/visual/gethsemane_olives_night.png",
+      "title": "moonlit olive grove on the hillside above the city wall",
+      "subject": "moonlit olive grove on the hillside above the city wall",
+      "characters": [],
+      "elements": [
+        "olive trees",
+        "moon",
+        "city wall"
+      ],
+      "setting": "Gethsemane",
+      "palette": "inked cel-flat, deep blue night, moon silver, lamp warm",
+      "mood": "the lonely watch, weak flesh, mercy",
+      "doctrine": "Gethsemane, the night before the cross",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "matt2640",
+        "gethsemane"
+      ],
+      "used_in": [
+        "watch_one_hour_matt2640 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "watch_one_hour_matt2640",
+      "piece_title": "Could Ye Not Watch One Hour (Matt 26:40)",
+      "verse": "Matthew 26:36-46",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "wo_disciples_sleeping",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/watch_one_hour_matt2640/visual/disciples_sleeping.png",
+      "title": "three robed men slumped asleep against olive roots at night",
+      "subject": "three robed men slumped asleep against olive roots at night",
+      "characters": [
+        "Peter",
+        "James",
+        "John"
+      ],
+      "elements": [
+        "olive tree",
+        "cloaks",
+        "moonlight"
+      ],
+      "setting": "Gethsemane",
+      "palette": "inked cel-flat, deep blue night, moon silver, lamp warm",
+      "mood": "the lonely watch, weak flesh, mercy",
+      "doctrine": "findeth them asleep (Matt 26:40)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "matt2640",
+        "gethsemane"
+      ],
+      "used_in": [
+        "watch_one_hour_matt2640 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "watch_one_hour_matt2640",
+      "piece_title": "Could Ye Not Watch One Hour (Matt 26:40)",
+      "verse": "Matthew 26:36-46",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "wo_jesus_stands_over_sleepers",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/watch_one_hour_matt2640/visual/jesus_stands_over_sleepers.png",
+      "title": "Jesus standing in sorrowful tenderness over three sleeping men",
+      "subject": "Jesus standing in sorrowful tenderness over three sleeping men",
+      "characters": [
+        "Christ",
+        "disciples"
+      ],
+      "elements": [
+        "olive tree",
+        "moonlight"
+      ],
+      "setting": "Gethsemane",
+      "palette": "inked cel-flat, deep blue night, moon silver, lamp warm",
+      "mood": "the lonely watch, weak flesh, mercy",
+      "doctrine": "could ye not watch with me one hour (Matt 26:40)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "matt2640",
+        "gethsemane"
+      ],
+      "used_in": [
+        "watch_one_hour_matt2640 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "watch_one_hour_matt2640",
+      "piece_title": "Could Ye Not Watch One Hour (Matt 26:40)",
+      "verse": "Matthew 26:36-46",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "wo_cup_moonlight",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/watch_one_hour_matt2640/visual/cup_moonlight.png",
+      "title": "a plain stone cup on a flat rock in cold moonlight",
+      "subject": "a plain stone cup on a flat rock in cold moonlight",
+      "characters": [],
+      "elements": [
+        "stone cup",
+        "flat rock",
+        "olive shadows"
+      ],
+      "setting": "Gethsemane",
+      "palette": "inked cel-flat, deep blue night, moon silver, lamp warm",
+      "mood": "the lonely watch, weak flesh, mercy",
+      "doctrine": "let this cup pass from me (Matt 26:39)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "matt2640",
+        "gethsemane"
+      ],
+      "used_in": [
+        "watch_one_hour_matt2640 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "watch_one_hour_matt2640",
+      "piece_title": "Could Ye Not Watch One Hour (Matt 26:40)",
+      "verse": "Matthew 26:36-46",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "wo_jesus_praying_close",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/watch_one_hour_matt2640/visual/jesus_praying_close.png",
+      "title": "anguished praying face, eyes shut tight, clasped hands, moonlit",
+      "subject": "anguished praying face, eyes shut tight, clasped hands, moonlit",
+      "characters": [
+        "Christ"
+      ],
+      "elements": [
+        "clasped hands",
+        "sweat",
+        "moon rim light"
+      ],
+      "setting": "Gethsemane",
+      "palette": "inked cel-flat, deep blue night, moon silver, lamp warm",
+      "mood": "the lonely watch, weak flesh, mercy",
+      "doctrine": "nevertheless not as I will (Matt 26:39)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "matt2640",
+        "gethsemane"
+      ],
+      "used_in": [
+        "watch_one_hour_matt2640 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "watch_one_hour_matt2640",
+      "piece_title": "Could Ye Not Watch One Hour (Matt 26:40)",
+      "verse": "Matthew 26:36-46",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "wo_jesus_leads_three",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/watch_one_hour_matt2640/visual/jesus_leads_three.png",
+      "title": "a robed man leading three companions up a moonlit garden path, from behind",
+      "subject": "a robed man leading three companions up a moonlit garden path, from behind",
+      "characters": [
+        "Christ",
+        "disciples"
+      ],
+      "elements": [
+        "moonlit path",
+        "olive trees"
+      ],
+      "setting": "Gethsemane",
+      "palette": "inked cel-flat, deep blue night, moon silver, lamp warm",
+      "mood": "the lonely watch, weak flesh, mercy",
+      "doctrine": "tarry ye here, and watch with me (Matt 26:38)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "matt2640",
+        "gethsemane"
+      ],
+      "used_in": [
+        "watch_one_hour_matt2640 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "watch_one_hour_matt2640",
+      "piece_title": "Could Ye Not Watch One Hour (Matt 26:40)",
+      "verse": "Matthew 26:36-46",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "wo_sleeping_peter_close",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/watch_one_hour_matt2640/visual/sleeping_peter_close.png",
+      "title": "older bearded fisherman fast asleep against an olive trunk, mouth slack",
+      "subject": "older bearded fisherman fast asleep against an olive trunk, mouth slack",
+      "characters": [
+        "Peter"
+      ],
+      "elements": [
+        "olive trunk",
+        "cloak",
+        "moonlight"
+      ],
+      "setting": "Gethsemane",
+      "palette": "inked cel-flat, deep blue night, moon silver, lamp warm",
+      "mood": "the lonely watch, weak flesh, mercy",
+      "doctrine": "saith unto Peter (Matt 26:40)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "matt2640",
+        "gethsemane"
+      ],
+      "used_in": [
+        "watch_one_hour_matt2640 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "watch_one_hour_matt2640",
+      "piece_title": "Could Ye Not Watch One Hour (Matt 26:40)",
+      "verse": "Matthew 26:36-46",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "wo_kneeling_lamp_prayer",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/watch_one_hour_matt2640/visual/kneeling_lamp_prayer.png",
+      "title": "robed figure kneeling in prayer beside a small clay lamp in a dark room",
+      "subject": "robed figure kneeling in prayer beside a small clay lamp in a dark room",
+      "characters": [
+        "us"
+      ],
+      "elements": [
+        "clay oil lamp",
+        "stone room",
+        "night window"
+      ],
+      "setting": "night interior",
+      "palette": "inked cel-flat, deep blue night, moon silver, lamp warm",
+      "mood": "the lonely watch, weak flesh, mercy",
+      "doctrine": "Watch and pray (Matt 26:41)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "matt2640",
+        "gethsemane"
+      ],
+      "used_in": [
+        "watch_one_hour_matt2640 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "watch_one_hour_matt2640",
+      "piece_title": "Could Ye Not Watch One Hour (Matt 26:40)",
+      "verse": "Matthew 26:36-46",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "wo_same_prayer_again",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/watch_one_hour_matt2640/visual/same_prayer_again.png",
+      "title": "kneeling man bowed low to the ground in prayer among olives, side view",
+      "subject": "kneeling man bowed low to the ground in prayer among olives, side view",
+      "characters": [
+        "Christ"
+      ],
+      "elements": [
+        "olive trees",
+        "moonlight",
+        "bowed prayer"
+      ],
+      "setting": "Gethsemane",
+      "palette": "inked cel-flat, deep blue night, moon silver, lamp warm",
+      "mood": "the lonely watch, weak flesh, mercy",
+      "doctrine": "he returned to the same prayer (Matt 26:42)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "matt2640",
+        "gethsemane"
+      ],
+      "used_in": [
+        "watch_one_hour_matt2640 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "watch_one_hour_matt2640",
+      "piece_title": "Could Ye Not Watch One Hour (Matt 26:40)",
+      "verse": "Matthew 26:36-46",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "wo_weak_flesh_hands",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/watch_one_hour_matt2640/visual/weak_flesh_hands.png",
+      "title": "rough weathered hands clasped tight and trembling against dark wool",
+      "subject": "rough weathered hands clasped tight and trembling against dark wool",
+      "characters": [
+        "us"
+      ],
+      "elements": [
+        "clasped hands",
+        "dark cloak"
+      ],
+      "setting": "night",
+      "palette": "inked cel-flat, deep blue night, moon silver, lamp warm",
+      "mood": "the lonely watch, weak flesh, mercy",
+      "doctrine": "the flesh is weak (Matt 26:41)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "matt2640",
+        "gethsemane"
+      ],
+      "used_in": [
+        "watch_one_hour_matt2640 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "watch_one_hour_matt2640",
+      "piece_title": "Could Ye Not Watch One Hour (Matt 26:40)",
+      "verse": "Matthew 26:36-46",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "wo_gethsemane_olives_night_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/watch_one_hour_matt2640/visual/clips/gethsemane_olives_night.mp4",
+      "title": "moonlit olive grove on the hillside above the city wall (Kling push-in)",
+      "subject": "moonlit olive grove on the hillside above the city wall",
+      "characters": [],
+      "elements": [
+        "olive trees",
+        "moon",
+        "city wall"
+      ],
+      "setting": "Gethsemane",
+      "doctrine": "Gethsemane, the night before the cross",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "matt2640",
+        "kling"
+      ],
+      "used_in": [
+        "watch_one_hour_matt2640 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "watch_one_hour_matt2640",
+      "piece_title": "Could Ye Not Watch One Hour (Matt 26:40)",
+      "verse": "Matthew 26:36-46",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "wo_disciples_sleeping_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/watch_one_hour_matt2640/visual/clips/disciples_sleeping.mp4",
+      "title": "three robed men slumped asleep against olive roots at night (Kling push-in)",
+      "subject": "three robed men slumped asleep against olive roots at night",
+      "characters": [
+        "Peter",
+        "James",
+        "John"
+      ],
+      "elements": [
+        "olive tree",
+        "cloaks",
+        "moonlight"
+      ],
+      "setting": "Gethsemane",
+      "doctrine": "findeth them asleep (Matt 26:40)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "matt2640",
+        "kling"
+      ],
+      "used_in": [
+        "watch_one_hour_matt2640 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "watch_one_hour_matt2640",
+      "piece_title": "Could Ye Not Watch One Hour (Matt 26:40)",
+      "verse": "Matthew 26:36-46",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "wo_jesus_stands_over_sleepers_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/watch_one_hour_matt2640/visual/clips/jesus_stands_over_sleepers.mp4",
+      "title": "Jesus standing in sorrowful tenderness over three sleeping men (Kling push-in)",
+      "subject": "Jesus standing in sorrowful tenderness over three sleeping men",
+      "characters": [
+        "Christ",
+        "disciples"
+      ],
+      "elements": [
+        "olive tree",
+        "moonlight"
+      ],
+      "setting": "Gethsemane",
+      "doctrine": "could ye not watch with me one hour (Matt 26:40)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "matt2640",
+        "kling"
+      ],
+      "used_in": [
+        "watch_one_hour_matt2640 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "watch_one_hour_matt2640",
+      "piece_title": "Could Ye Not Watch One Hour (Matt 26:40)",
+      "verse": "Matthew 26:36-46",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "wo_cup_moonlight_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/watch_one_hour_matt2640/visual/clips/cup_moonlight.mp4",
+      "title": "a plain stone cup on a flat rock in cold moonlight (Kling push-in)",
+      "subject": "a plain stone cup on a flat rock in cold moonlight",
+      "characters": [],
+      "elements": [
+        "stone cup",
+        "flat rock",
+        "olive shadows"
+      ],
+      "setting": "Gethsemane",
+      "doctrine": "let this cup pass from me (Matt 26:39)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "matt2640",
+        "kling"
+      ],
+      "used_in": [
+        "watch_one_hour_matt2640 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "watch_one_hour_matt2640",
+      "piece_title": "Could Ye Not Watch One Hour (Matt 26:40)",
+      "verse": "Matthew 26:36-46",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "wo_jesus_praying_close_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/watch_one_hour_matt2640/visual/clips/jesus_praying_close.mp4",
+      "title": "anguished praying face, eyes shut tight, clasped hands, moonlit (Kling push-in)",
+      "subject": "anguished praying face, eyes shut tight, clasped hands, moonlit",
+      "characters": [
+        "Christ"
+      ],
+      "elements": [
+        "clasped hands",
+        "sweat",
+        "moon rim light"
+      ],
+      "setting": "Gethsemane",
+      "doctrine": "nevertheless not as I will (Matt 26:39)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "matt2640",
+        "kling"
+      ],
+      "used_in": [
+        "watch_one_hour_matt2640 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "watch_one_hour_matt2640",
+      "piece_title": "Could Ye Not Watch One Hour (Matt 26:40)",
+      "verse": "Matthew 26:36-46",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "wo_jesus_leads_three_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/watch_one_hour_matt2640/visual/clips/jesus_leads_three.mp4",
+      "title": "a robed man leading three companions up a moonlit garden path, from behind (Kling push-in)",
+      "subject": "a robed man leading three companions up a moonlit garden path, from behind",
+      "characters": [
+        "Christ",
+        "disciples"
+      ],
+      "elements": [
+        "moonlit path",
+        "olive trees"
+      ],
+      "setting": "Gethsemane",
+      "doctrine": "tarry ye here, and watch with me (Matt 26:38)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "matt2640",
+        "kling"
+      ],
+      "used_in": [
+        "watch_one_hour_matt2640 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "watch_one_hour_matt2640",
+      "piece_title": "Could Ye Not Watch One Hour (Matt 26:40)",
+      "verse": "Matthew 26:36-46",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "wo_sleeping_peter_close_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/watch_one_hour_matt2640/visual/clips/sleeping_peter_close.mp4",
+      "title": "older bearded fisherman fast asleep against an olive trunk, mouth slack (Kling push-in)",
+      "subject": "older bearded fisherman fast asleep against an olive trunk, mouth slack",
+      "characters": [
+        "Peter"
+      ],
+      "elements": [
+        "olive trunk",
+        "cloak",
+        "moonlight"
+      ],
+      "setting": "Gethsemane",
+      "doctrine": "saith unto Peter (Matt 26:40)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "matt2640",
+        "kling"
+      ],
+      "used_in": [
+        "watch_one_hour_matt2640 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "watch_one_hour_matt2640",
+      "piece_title": "Could Ye Not Watch One Hour (Matt 26:40)",
+      "verse": "Matthew 26:36-46",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "wo_kneeling_lamp_prayer_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/watch_one_hour_matt2640/visual/clips/kneeling_lamp_prayer.mp4",
+      "title": "robed figure kneeling in prayer beside a small clay lamp in a dark room (Kling push-in)",
+      "subject": "robed figure kneeling in prayer beside a small clay lamp in a dark room",
+      "characters": [
+        "us"
+      ],
+      "elements": [
+        "clay oil lamp",
+        "stone room",
+        "night window"
+      ],
+      "setting": "night interior",
+      "doctrine": "Watch and pray (Matt 26:41)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "matt2640",
+        "kling"
+      ],
+      "used_in": [
+        "watch_one_hour_matt2640 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "watch_one_hour_matt2640",
+      "piece_title": "Could Ye Not Watch One Hour (Matt 26:40)",
+      "verse": "Matthew 26:36-46",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "wo_same_prayer_again_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/watch_one_hour_matt2640/visual/clips/same_prayer_again.mp4",
+      "title": "kneeling man bowed low to the ground in prayer among olives, side view (Kling push-in)",
+      "subject": "kneeling man bowed low to the ground in prayer among olives, side view",
+      "characters": [
+        "Christ"
+      ],
+      "elements": [
+        "olive trees",
+        "moonlight",
+        "bowed prayer"
+      ],
+      "setting": "Gethsemane",
+      "doctrine": "he returned to the same prayer (Matt 26:42)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "matt2640",
+        "kling"
+      ],
+      "used_in": [
+        "watch_one_hour_matt2640 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "watch_one_hour_matt2640",
+      "piece_title": "Could Ye Not Watch One Hour (Matt 26:40)",
+      "verse": "Matthew 26:36-46",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "wo_weak_flesh_hands_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/watch_one_hour_matt2640/visual/clips/weak_flesh_hands.mp4",
+      "title": "rough weathered hands clasped tight and trembling against dark wool (Kling push-in)",
+      "subject": "rough weathered hands clasped tight and trembling against dark wool",
+      "characters": [
+        "us"
+      ],
+      "elements": [
+        "clasped hands",
+        "dark cloak"
+      ],
+      "setting": "night",
+      "doctrine": "the flesh is weak (Matt 26:41)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "matt2640",
+        "kling"
+      ],
+      "used_in": [
+        "watch_one_hour_matt2640 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "into_thy_hands_luke2346",
+      "piece_title": "Father Into Thy Hands (Luke 23:46)",
+      "verse": "Luke 23:46 + Psalm 31:5",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "ith_child_sleeping_lamp",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/into_thy_hands_luke2346/visual/child_sleeping_lamp.png",
+      "title": "small child asleep under a wool blanket by a low clay lamp",
+      "subject": "small child asleep under a wool blanket by a low clay lamp",
+      "characters": [
+        "child"
+      ],
+      "elements": [
+        "oil lamp",
+        "woven mat",
+        "mother silhouette"
+      ],
+      "setting": "night interior",
+      "palette": "inked cel-flat, lamp warm to storm dark to dawn gold",
+      "mood": "bedtime prayer, trust, the strong hands",
+      "doctrine": "an evening prayer a child could learn",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "luke2346",
+        "child"
+      ],
+      "used_in": [
+        "into_thy_hands_luke2346 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "into_thy_hands_luke2346",
+      "piece_title": "Father Into Thy Hands (Luke 23:46)",
+      "verse": "Luke 23:46 + Psalm 31:5",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "ith_psalm_scroll_night",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/into_thy_hands_luke2346/visual/psalm_scroll_night.png",
+      "title": "open scroll of faded script beside a burning clay oil lamp",
+      "subject": "open scroll of faded script beside a burning clay oil lamp",
+      "characters": [],
+      "elements": [
+        "scroll",
+        "oil lamp",
+        "night table"
+      ],
+      "setting": "night interior",
+      "palette": "inked cel-flat, lamp warm to storm dark to dawn gold",
+      "mood": "bedtime prayer, trust, the strong hands",
+      "doctrine": "Into thine hand I commit my spirit (Ps 31:5)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "luke2346",
+        "child"
+      ],
+      "used_in": [
+        "into_thy_hands_luke2346 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "into_thy_hands_luke2346",
+      "piece_title": "Father Into Thy Hands (Luke 23:46)",
+      "verse": "Luke 23:46 + Psalm 31:5",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "ith_father_holds_sleeping_child",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/into_thy_hands_luke2346/visual/father_holds_sleeping_child.png",
+      "title": "bearded father cradling his sleeping child by lamplight",
+      "subject": "bearded father cradling his sleeping child by lamplight",
+      "characters": [
+        "father",
+        "child"
+      ],
+      "elements": [
+        "lamplight",
+        "shoulder cradle"
+      ],
+      "setting": "night interior",
+      "palette": "inked cel-flat, lamp warm to storm dark to dawn gold",
+      "mood": "bedtime prayer, trust, the strong hands",
+      "doctrine": "like a child falling asleep in his father's arms",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "luke2346",
+        "child"
+      ],
+      "used_in": [
+        "into_thy_hands_luke2346 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "into_thy_hands_luke2346",
+      "piece_title": "Father Into Thy Hands (Luke 23:46)",
+      "verse": "Luke 23:46 + Psalm 31:5",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "ith_hands_of_light_open",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/into_thy_hands_luke2346/visual/hands_of_light_open.png",
+      "title": "vast gentle hands of golden light opening through parted storm clouds",
+      "subject": "vast gentle hands of golden light opening through parted storm clouds",
+      "characters": [],
+      "elements": [
+        "hands of light",
+        "storm clouds",
+        "rays"
+      ],
+      "setting": "sky",
+      "palette": "inked cel-flat, lamp warm to storm dark to dawn gold",
+      "mood": "bedtime prayer, trust, the strong hands",
+      "doctrine": "Father, into thy hands I commend my spirit (Luke 23:46)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "luke2346",
+        "child"
+      ],
+      "used_in": [
+        "into_thy_hands_luke2346 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "into_thy_hands_luke2346",
+      "piece_title": "Father Into Thy Hands (Luke 23:46)",
+      "verse": "Luke 23:46 + Psalm 31:5",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "ith_child_waking_dawn",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/into_thy_hands_luke2346/visual/child_waking_dawn.png",
+      "title": "child stirring awake as dawn light pours through a small window",
+      "subject": "child stirring awake as dawn light pours through a small window",
+      "characters": [
+        "child"
+      ],
+      "elements": [
+        "dawn window",
+        "waking eyes"
+      ],
+      "setting": "morning interior",
+      "palette": "inked cel-flat, lamp warm to storm dark to dawn gold",
+      "mood": "bedtime prayer, trust, the strong hands",
+      "doctrine": "death loses its last word",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "luke2346",
+        "child"
+      ],
+      "used_in": [
+        "into_thy_hands_luke2346 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "into_thy_hands_luke2346",
+      "piece_title": "Father Into Thy Hands (Luke 23:46)",
+      "verse": "Luke 23:46 + Psalm 31:5",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "ith_father_hand_childs_hand",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/into_thy_hands_luke2346/visual/father_hand_childs_hand.png",
+      "title": "a child's hand resting inside a large weathered father's hand, lamp beside",
+      "subject": "a child's hand resting inside a large weathered father's hand, lamp beside",
+      "characters": [
+        "father",
+        "child"
+      ],
+      "elements": [
+        "hands",
+        "clay oil lamp"
+      ],
+      "setting": "night interior",
+      "palette": "inked cel-flat, lamp warm to storm dark to dawn gold",
+      "mood": "bedtime prayer, trust, the strong hands",
+      "doctrine": "He begins with Father",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "luke2346",
+        "child"
+      ],
+      "used_in": [
+        "into_thy_hands_luke2346 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "into_thy_hands_luke2346",
+      "piece_title": "Father Into Thy Hands (Luke 23:46)",
+      "verse": "Luke 23:46 + Psalm 31:5",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "ith_father_lamp_doorway",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/into_thy_hands_luke2346/visual/father_lamp_doorway.png",
+      "title": "robed father holding a clay oil lamp in a stone doorway at night",
+      "subject": "robed father holding a clay oil lamp in a stone doorway at night",
+      "characters": [
+        "father"
+      ],
+      "elements": [
+        "oil lamp",
+        "doorway",
+        "threshold light"
+      ],
+      "setting": "stone house",
+      "palette": "inked cel-flat, lamp warm to storm dark to dawn gold",
+      "mood": "bedtime prayer, trust, the strong hands",
+      "doctrine": "Not judge. Not stranger. Father",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "luke2346",
+        "child"
+      ],
+      "used_in": [
+        "into_thy_hands_luke2346 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "into_thy_hands_luke2346",
+      "piece_title": "Father Into Thy Hands (Luke 23:46)",
+      "verse": "Luke 23:46 + Psalm 31:5",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "ith_child_eyes_closing",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/into_thy_hands_luke2346/visual/child_eyes_closing.png",
+      "title": "child's peaceful face eyes closed, a father's hand on the blanket, lamp low",
+      "subject": "child's peaceful face eyes closed, a father's hand on the blanket, lamp low",
+      "characters": [
+        "father",
+        "child"
+      ],
+      "elements": [
+        "blanket",
+        "oil lamp",
+        "resting hand"
+      ],
+      "setting": "night interior",
+      "palette": "inked cel-flat, lamp warm to storm dark to dawn gold",
+      "mood": "bedtime prayer, trust, the strong hands",
+      "doctrine": "close your eyes in those same hands",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "luke2346",
+        "child"
+      ],
+      "used_in": [
+        "into_thy_hands_luke2346 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "into_thy_hands_luke2346",
+      "piece_title": "Father Into Thy Hands (Luke 23:46)",
+      "verse": "Luke 23:46 + Psalm 31:5",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "ith_cross_at_dawn",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/into_thy_hands_luke2346/visual/cross_at_dawn.png",
+      "title": "empty wooden cross on a rocky hilltop against a golden sunrise",
+      "subject": "empty wooden cross on a rocky hilltop against a golden sunrise",
+      "characters": [],
+      "elements": [
+        "empty cross",
+        "sunrise",
+        "hilltop"
+      ],
+      "setting": "Golgotha at dawn",
+      "palette": "inked cel-flat, lamp warm to storm dark to dawn gold",
+      "mood": "bedtime prayer, trust, the strong hands",
+      "doctrine": "He keeps the morning",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "luke2346",
+        "child"
+      ],
+      "used_in": [
+        "into_thy_hands_luke2346 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "into_thy_hands_luke2346",
+      "piece_title": "Father Into Thy Hands (Luke 23:46)",
+      "verse": "Luke 23:46 + Psalm 31:5",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "ith_child_sleeping_lamp_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/into_thy_hands_luke2346/visual/clips/child_sleeping_lamp.mp4",
+      "title": "small child asleep under a wool blanket by a low clay lamp (Kling push-in)",
+      "subject": "small child asleep under a wool blanket by a low clay lamp",
+      "characters": [
+        "child"
+      ],
+      "elements": [
+        "oil lamp",
+        "woven mat",
+        "mother silhouette"
+      ],
+      "setting": "night interior",
+      "doctrine": "an evening prayer a child could learn",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "luke2346",
+        "kling"
+      ],
+      "used_in": [
+        "into_thy_hands_luke2346 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "into_thy_hands_luke2346",
+      "piece_title": "Father Into Thy Hands (Luke 23:46)",
+      "verse": "Luke 23:46 + Psalm 31:5",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "ith_father_holds_sleeping_child_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/into_thy_hands_luke2346/visual/clips/father_holds_sleeping_child.mp4",
+      "title": "bearded father cradling his sleeping child by lamplight (Kling push-in)",
+      "subject": "bearded father cradling his sleeping child by lamplight",
+      "characters": [
+        "father",
+        "child"
+      ],
+      "elements": [
+        "lamplight",
+        "shoulder cradle"
+      ],
+      "setting": "night interior",
+      "doctrine": "like a child falling asleep in his father's arms",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "luke2346",
+        "kling"
+      ],
+      "used_in": [
+        "into_thy_hands_luke2346 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "into_thy_hands_luke2346",
+      "piece_title": "Father Into Thy Hands (Luke 23:46)",
+      "verse": "Luke 23:46 + Psalm 31:5",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "ith_hands_of_light_open_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/into_thy_hands_luke2346/visual/clips/hands_of_light_open.mp4",
+      "title": "vast gentle hands of golden light opening through parted storm clouds (Kling push-in)",
+      "subject": "vast gentle hands of golden light opening through parted storm clouds",
+      "characters": [],
+      "elements": [
+        "hands of light",
+        "storm clouds",
+        "rays"
+      ],
+      "setting": "sky",
+      "doctrine": "Father, into thy hands I commend my spirit (Luke 23:46)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "luke2346",
+        "kling"
+      ],
+      "used_in": [
+        "into_thy_hands_luke2346 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "into_thy_hands_luke2346",
+      "piece_title": "Father Into Thy Hands (Luke 23:46)",
+      "verse": "Luke 23:46 + Psalm 31:5",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "ith_child_waking_dawn_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/into_thy_hands_luke2346/visual/clips/child_waking_dawn.mp4",
+      "title": "child stirring awake as dawn light pours through a small window (Kling push-in)",
+      "subject": "child stirring awake as dawn light pours through a small window",
+      "characters": [
+        "child"
+      ],
+      "elements": [
+        "dawn window",
+        "waking eyes"
+      ],
+      "setting": "morning interior",
+      "doctrine": "death loses its last word",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "luke2346",
+        "kling"
+      ],
+      "used_in": [
+        "into_thy_hands_luke2346 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "into_thy_hands_luke2346",
+      "piece_title": "Father Into Thy Hands (Luke 23:46)",
+      "verse": "Luke 23:46 + Psalm 31:5",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "ith_father_hand_childs_hand_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/into_thy_hands_luke2346/visual/clips/father_hand_childs_hand.mp4",
+      "title": "a child's hand resting inside a large weathered father's hand, lamp beside (Kling push-in)",
+      "subject": "a child's hand resting inside a large weathered father's hand, lamp beside",
+      "characters": [
+        "father",
+        "child"
+      ],
+      "elements": [
+        "hands",
+        "clay oil lamp"
+      ],
+      "setting": "night interior",
+      "doctrine": "He begins with Father",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "luke2346",
+        "kling"
+      ],
+      "used_in": [
+        "into_thy_hands_luke2346 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "into_thy_hands_luke2346",
+      "piece_title": "Father Into Thy Hands (Luke 23:46)",
+      "verse": "Luke 23:46 + Psalm 31:5",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "ith_child_eyes_closing_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/into_thy_hands_luke2346/visual/clips/child_eyes_closing.mp4",
+      "title": "child's peaceful face eyes closed, a father's hand on the blanket, lamp low (Kling push-in)",
+      "subject": "child's peaceful face eyes closed, a father's hand on the blanket, lamp low",
+      "characters": [
+        "father",
+        "child"
+      ],
+      "elements": [
+        "blanket",
+        "oil lamp",
+        "resting hand"
+      ],
+      "setting": "night interior",
+      "doctrine": "close your eyes in those same hands",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "luke2346",
+        "kling"
+      ],
+      "used_in": [
+        "into_thy_hands_luke2346 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "into_thy_hands_luke2346",
+      "piece_title": "Father Into Thy Hands (Luke 23:46)",
+      "verse": "Luke 23:46 + Psalm 31:5",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "ith_cross_at_dawn_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/into_thy_hands_luke2346/visual/clips/cross_at_dawn.mp4",
+      "title": "empty wooden cross on a rocky hilltop against a golden sunrise (Kling push-in)",
+      "subject": "empty wooden cross on a rocky hilltop against a golden sunrise",
+      "characters": [],
+      "elements": [
+        "empty cross",
+        "sunrise",
+        "hilltop"
+      ],
+      "setting": "Golgotha at dawn",
+      "doctrine": "He keeps the morning",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "luke2346",
+        "kling"
+      ],
+      "used_in": [
+        "into_thy_hands_luke2346 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "it_is_finished_john1930",
+      "piece_title": "It Is Finished (John 19:30)",
+      "verse": "John 19:30 + Gen 2:1 + John 1:3 + John 17:4",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "iif_eden_garden_finished",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/it_is_finished_john1930/visual/eden_garden_finished.png",
+      "title": "pristine garden valley at golden dawn, creation complete",
+      "subject": "pristine garden valley at golden dawn, creation complete",
+      "characters": [],
+      "elements": [
+        "rivers",
+        "flowering trees",
+        "mountains"
+      ],
+      "setting": "Eden",
+      "palette": "inked cel-flat, Eden gold to storm dark to dawn gold",
+      "mood": "two finished works, rest",
+      "doctrine": "the heavens and the earth were finished (Gen 2:1)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "john1930",
+        "creation"
+      ],
+      "used_in": [
+        "it_is_finished_john1930 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "it_is_finished_john1930",
+      "piece_title": "It Is Finished (John 19:30)",
+      "verse": "John 19:30 + Gen 2:1 + John 1:3 + John 17:4",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "iif_seventh_day_light",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/it_is_finished_john1930/visual/seventh_day_light.png",
+      "title": "golden evening calm over young hills and still water",
+      "subject": "golden evening calm over young hills and still water",
+      "characters": [],
+      "elements": [
+        "golden light",
+        "hills",
+        "still water"
+      ],
+      "setting": "young earth",
+      "palette": "inked cel-flat, Eden gold to storm dark to dawn gold",
+      "mood": "two finished works, rest",
+      "doctrine": "God rested (Gen 2:2)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "john1930",
+        "creation"
+      ],
+      "used_in": [
+        "it_is_finished_john1930 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "it_is_finished_john1930",
+      "piece_title": "It Is Finished (John 19:30)",
+      "verse": "John 19:30 + Gen 2:1 + John 1:3 + John 17:4",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "iif_jesus_prays_night",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/it_is_finished_john1930/visual/jesus_prays_night.png",
+      "title": "Jesus kneeling in prayer among olive trees, face lifted to the moon",
+      "subject": "Jesus kneeling in prayer among olive trees, face lifted to the moon",
+      "characters": [
+        "Christ"
+      ],
+      "elements": [
+        "olive trees",
+        "moon",
+        "flat rock"
+      ],
+      "setting": "Gethsemane",
+      "palette": "inked cel-flat, Eden gold to storm dark to dawn gold",
+      "mood": "two finished works, rest",
+      "doctrine": "I have finished the work (John 17:4)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "john1930",
+        "creation"
+      ],
+      "used_in": [
+        "it_is_finished_john1930 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "it_is_finished_john1930",
+      "piece_title": "It Is Finished (John 19:30)",
+      "verse": "John 19:30 + Gen 2:1 + John 1:3 + John 17:4",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "iif_vinegar_sponge_reed",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/it_is_finished_john1930/visual/vinegar_sponge_reed.png",
+      "title": "sponge on a reed lifted toward the crucified Christ, from below",
+      "subject": "sponge on a reed lifted toward the crucified Christ, from below",
+      "characters": [
+        "Christ crucified"
+      ],
+      "elements": [
+        "sponge",
+        "reed",
+        "cross"
+      ],
+      "setting": "Golgotha",
+      "palette": "inked cel-flat, Eden gold to storm dark to dawn gold",
+      "mood": "two finished works, rest",
+      "doctrine": "had received the vinegar (John 19:30)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "john1930",
+        "creation"
+      ],
+      "used_in": [
+        "it_is_finished_john1930 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "it_is_finished_john1930",
+      "piece_title": "It Is Finished (John 19:30)",
+      "verse": "John 19:30 + Gen 2:1 + John 1:3 + John 17:4",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "iif_bowed_head_finished",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/it_is_finished_john1930/visual/bowed_head_finished.png",
+      "title": "thorn-crowned Christ, head bowed in stillness, at peace",
+      "subject": "thorn-crowned Christ, head bowed in stillness, at peace",
+      "characters": [
+        "Christ crucified"
+      ],
+      "elements": [
+        "crown of thorns",
+        "parting storm"
+      ],
+      "setting": "Golgotha",
+      "palette": "inked cel-flat, Eden gold to storm dark to dawn gold",
+      "mood": "two finished works, rest",
+      "doctrine": "he bowed his head, and gave up the ghost (John 19:30)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "john1930",
+        "creation"
+      ],
+      "used_in": [
+        "it_is_finished_john1930 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "it_is_finished_john1930",
+      "piece_title": "It Is Finished (John 19:30)",
+      "verse": "John 19:30 + Gen 2:1 + John 1:3 + John 17:4",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "iif_tomb_stone_sealed",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/it_is_finished_john1930/visual/tomb_stone_sealed.png",
+      "title": "great round stone sealing the rock-cut tomb at dusk",
+      "subject": "great round stone sealing the rock-cut tomb at dusk",
+      "characters": [],
+      "elements": [
+        "round stone",
+        "tomb",
+        "dusk hillside"
+      ],
+      "setting": "garden tomb",
+      "palette": "inked cel-flat, Eden gold to storm dark to dawn gold",
+      "mood": "two finished works, rest",
+      "doctrine": "rested in the tomb through the sabbath",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "john1930",
+        "creation"
+      ],
+      "used_in": [
+        "it_is_finished_john1930 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "it_is_finished_john1930",
+      "piece_title": "It Is Finished (John 19:30)",
+      "verse": "John 19:30 + Gen 2:1 + John 1:3 + John 17:4",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "iif_first_day_morning",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/it_is_finished_john1930/visual/first_day_morning.png",
+      "title": "dawn light bursting from the open garden tomb, stone rolled aside",
+      "subject": "dawn light bursting from the open garden tomb, stone rolled aside",
+      "characters": [],
+      "elements": [
+        "open tomb",
+        "rolled stone",
+        "dawn gold"
+      ],
+      "setting": "garden tomb",
+      "palette": "inked cel-flat, Eden gold to storm dark to dawn gold",
+      "mood": "two finished works, rest",
+      "doctrine": "on the first day, morning came (Luke 24:1)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "john1930",
+        "creation"
+      ],
+      "used_in": [
+        "it_is_finished_john1930 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "it_is_finished_john1930",
+      "piece_title": "It Is Finished (John 19:30)",
+      "verse": "John 19:30 + Gen 2:1 + John 1:3 + John 17:4",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "iif_hands_shaping_light",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/it_is_finished_john1930/visual/hands_shaping_light.png",
+      "title": "two strong hands cupping a sphere of golden light in starry darkness",
+      "subject": "two strong hands cupping a sphere of golden light in starry darkness",
+      "characters": [],
+      "elements": [
+        "hands",
+        "light sphere",
+        "stars"
+      ],
+      "setting": "creation",
+      "palette": "inked cel-flat, Eden gold to storm dark to dawn gold",
+      "mood": "two finished works, rest",
+      "doctrine": "All things were made by him (John 1:3)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "john1930",
+        "creation"
+      ],
+      "used_in": [
+        "it_is_finished_john1930 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "it_is_finished_john1930",
+      "piece_title": "It Is Finished (John 19:30)",
+      "verse": "John 19:30 + Gen 2:1 + John 1:3 + John 17:4",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "iif_carpenter_bench_rest",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/it_is_finished_john1930/visual/carpenter_bench_rest.png",
+      "title": "carpenter's bench with a finished stool, tools laid down at rest",
+      "subject": "carpenter's bench with a finished stool, tools laid down at rest",
+      "characters": [],
+      "elements": [
+        "workbench",
+        "stool",
+        "tools",
+        "shavings"
+      ],
+      "setting": "workshop",
+      "palette": "inked cel-flat, Eden gold to storm dark to dawn gold",
+      "mood": "two finished works, rest",
+      "doctrine": "He does not leave work half done",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "john1930",
+        "creation"
+      ],
+      "used_in": [
+        "it_is_finished_john1930 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "it_is_finished_john1930",
+      "piece_title": "It Is Finished (John 19:30)",
+      "verse": "John 19:30 + Gen 2:1 + John 1:3 + John 17:4",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "iif_man_lifting_face_dawn",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/it_is_finished_john1930/visual/man_lifting_face_dawn.png",
+      "title": "a weathered man lifting his face into warm dawn light, at peace",
+      "subject": "a weathered man lifting his face into warm dawn light, at peace",
+      "characters": [
+        "us"
+      ],
+      "elements": [
+        "dawn light",
+        "lifted face"
+      ],
+      "setting": "dawn",
+      "palette": "inked cel-flat, Eden gold to storm dark to dawn gold",
+      "mood": "two finished works, rest",
+      "doctrine": "He bowed his head so you could lift yours",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "john1930",
+        "creation"
+      ],
+      "used_in": [
+        "it_is_finished_john1930 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "it_is_finished_john1930",
+      "piece_title": "It Is Finished (John 19:30)",
+      "verse": "John 19:30 + Gen 2:1 + John 1:3 + John 17:4",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "iif_eden_garden_finished_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/it_is_finished_john1930/visual/clips/eden_garden_finished.mp4",
+      "title": "pristine garden valley at golden dawn, creation complete (Kling push-in)",
+      "subject": "pristine garden valley at golden dawn, creation complete",
+      "characters": [],
+      "elements": [
+        "rivers",
+        "flowering trees",
+        "mountains"
+      ],
+      "setting": "Eden",
+      "doctrine": "the heavens and the earth were finished (Gen 2:1)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "john1930",
+        "kling"
+      ],
+      "used_in": [
+        "it_is_finished_john1930 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "it_is_finished_john1930",
+      "piece_title": "It Is Finished (John 19:30)",
+      "verse": "John 19:30 + Gen 2:1 + John 1:3 + John 17:4",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "iif_jesus_prays_night_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/it_is_finished_john1930/visual/clips/jesus_prays_night.mp4",
+      "title": "Jesus kneeling in prayer among olive trees, face lifted to the moon (Kling push-in)",
+      "subject": "Jesus kneeling in prayer among olive trees, face lifted to the moon",
+      "characters": [
+        "Christ"
+      ],
+      "elements": [
+        "olive trees",
+        "moon",
+        "flat rock"
+      ],
+      "setting": "Gethsemane",
+      "doctrine": "I have finished the work (John 17:4)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "john1930",
+        "kling"
+      ],
+      "used_in": [
+        "it_is_finished_john1930 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "it_is_finished_john1930",
+      "piece_title": "It Is Finished (John 19:30)",
+      "verse": "John 19:30 + Gen 2:1 + John 1:3 + John 17:4",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "iif_vinegar_sponge_reed_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/it_is_finished_john1930/visual/clips/vinegar_sponge_reed.mp4",
+      "title": "sponge on a reed lifted toward the crucified Christ, from below (Kling push-in)",
+      "subject": "sponge on a reed lifted toward the crucified Christ, from below",
+      "characters": [
+        "Christ crucified"
+      ],
+      "elements": [
+        "sponge",
+        "reed",
+        "cross"
+      ],
+      "setting": "Golgotha",
+      "doctrine": "had received the vinegar (John 19:30)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "john1930",
+        "kling"
+      ],
+      "used_in": [
+        "it_is_finished_john1930 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "it_is_finished_john1930",
+      "piece_title": "It Is Finished (John 19:30)",
+      "verse": "John 19:30 + Gen 2:1 + John 1:3 + John 17:4",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "iif_bowed_head_finished_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/it_is_finished_john1930/visual/clips/bowed_head_finished.mp4",
+      "title": "thorn-crowned Christ, head bowed in stillness, at peace (Kling push-in)",
+      "subject": "thorn-crowned Christ, head bowed in stillness, at peace",
+      "characters": [
+        "Christ crucified"
+      ],
+      "elements": [
+        "crown of thorns",
+        "parting storm"
+      ],
+      "setting": "Golgotha",
+      "doctrine": "he bowed his head, and gave up the ghost (John 19:30)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "john1930",
+        "kling"
+      ],
+      "used_in": [
+        "it_is_finished_john1930 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "it_is_finished_john1930",
+      "piece_title": "It Is Finished (John 19:30)",
+      "verse": "John 19:30 + Gen 2:1 + John 1:3 + John 17:4",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "iif_tomb_stone_sealed_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/it_is_finished_john1930/visual/clips/tomb_stone_sealed.mp4",
+      "title": "great round stone sealing the rock-cut tomb at dusk (Kling push-in)",
+      "subject": "great round stone sealing the rock-cut tomb at dusk",
+      "characters": [],
+      "elements": [
+        "round stone",
+        "tomb",
+        "dusk hillside"
+      ],
+      "setting": "garden tomb",
+      "doctrine": "rested in the tomb through the sabbath",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "john1930",
+        "kling"
+      ],
+      "used_in": [
+        "it_is_finished_john1930 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "it_is_finished_john1930",
+      "piece_title": "It Is Finished (John 19:30)",
+      "verse": "John 19:30 + Gen 2:1 + John 1:3 + John 17:4",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "iif_first_day_morning_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/it_is_finished_john1930/visual/clips/first_day_morning.mp4",
+      "title": "dawn light bursting from the open garden tomb, stone rolled aside (Kling push-in)",
+      "subject": "dawn light bursting from the open garden tomb, stone rolled aside",
+      "characters": [],
+      "elements": [
+        "open tomb",
+        "rolled stone",
+        "dawn gold"
+      ],
+      "setting": "garden tomb",
+      "doctrine": "on the first day, morning came (Luke 24:1)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "john1930",
+        "kling"
+      ],
+      "used_in": [
+        "it_is_finished_john1930 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "it_is_finished_john1930",
+      "piece_title": "It Is Finished (John 19:30)",
+      "verse": "John 19:30 + Gen 2:1 + John 1:3 + John 17:4",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "iif_hands_shaping_light_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/it_is_finished_john1930/visual/clips/hands_shaping_light.mp4",
+      "title": "two strong hands cupping a sphere of golden light in starry darkness (Kling push-in)",
+      "subject": "two strong hands cupping a sphere of golden light in starry darkness",
+      "characters": [],
+      "elements": [
+        "hands",
+        "light sphere",
+        "stars"
+      ],
+      "setting": "creation",
+      "doctrine": "All things were made by him (John 1:3)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "john1930",
+        "kling"
+      ],
+      "used_in": [
+        "it_is_finished_john1930 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "it_is_finished_john1930",
+      "piece_title": "It Is Finished (John 19:30)",
+      "verse": "John 19:30 + Gen 2:1 + John 1:3 + John 17:4",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "iif_carpenter_bench_rest_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/it_is_finished_john1930/visual/clips/carpenter_bench_rest.mp4",
+      "title": "carpenter's bench with a finished stool, tools laid down at rest (Kling push-in)",
+      "subject": "carpenter's bench with a finished stool, tools laid down at rest",
+      "characters": [],
+      "elements": [
+        "workbench",
+        "stool",
+        "tools",
+        "shavings"
+      ],
+      "setting": "workshop",
+      "doctrine": "He does not leave work half done",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "john1930",
+        "kling"
+      ],
+      "used_in": [
+        "it_is_finished_john1930 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "it_is_finished_john1930",
+      "piece_title": "It Is Finished (John 19:30)",
+      "verse": "John 19:30 + Gen 2:1 + John 1:3 + John 17:4",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "iif_man_lifting_face_dawn_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/it_is_finished_john1930/visual/clips/man_lifting_face_dawn.mp4",
+      "title": "a weathered man lifting his face into warm dawn light, at peace (Kling push-in)",
+      "subject": "a weathered man lifting his face into warm dawn light, at peace",
+      "characters": [
+        "us"
+      ],
+      "elements": [
+        "dawn light",
+        "lifted face"
+      ],
+      "setting": "dawn",
+      "doctrine": "He bowed his head so you could lift yours",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "john1930",
+        "kling"
+      ],
+      "used_in": [
+        "it_is_finished_john1930 short"
+      ]
     }
   ]
 }

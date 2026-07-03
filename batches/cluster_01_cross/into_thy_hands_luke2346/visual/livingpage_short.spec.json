@@ -1,0 +1,72 @@
+{
+ "_doc": "FATHER INTO THY HANDS (Luke 23:46 + Psalm 31:5) 9:16 SHORT - living page. 14 beats / 59.03s. Bedtime-prayer angle: dying-man hook with child flash-insert, Psalm 31:5 scroll bar (dyncam, writing), heartbeat 14.6-21.3 STOPS on 'Father', border-break on the prayer itself, psalm callback insert under the redemption beat, child/father metaphor spine, cross_at_dawn close.",
+ "audio": "../audio/narration.mp3",
+ "total": 59.03,
+ "cut_ticks": true,
+ "heartbeat": {"from": 14.6, "to": 21.3, "gain": -9, "bpm": 64},
+ "beats": [
+  {"t": [0.0, 4.16], "tpl": "full", "punch": true, "ramp": true,
+   "sfx": [["impact_low_boom", 0.1, -12]],
+   "inserts": [{"at": 3.36, "slug": "child_sleeping_lamp", "frames": 4}],
+   "clips": [{"slug": "golgotha_hill_wide", "motion": "pushin"}],
+   "takeover": {"panel": 0, "start": 2.1, "zoom": 1.3},
+   "cap": {"type": "caption", "text": "A dying man's last words", "kw": "A CHILD'S PRAYER"}},
+
+  {"t": [4.16, 9.3], "tpl": "full",
+   "sfx": [["wind_desert_bleak", 4.25, -18]],
+   "clips": [{"slug": "child_sleeping_lamp", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "Words a child could learn for the dark", "kw": "FOR THE DARK"}},
+
+  {"t": [9.3, 14.6], "tpl": "full",
+   "clips": [{"slug": "psalm_scroll_night", "motion": "static", "cam": "arc"}],
+   "cap": {"type": "redletter", "text": "Into thine hand I commit my spirit: thou hast redeemed me, O LORD God of truth.", "speaker": "DAVID", "ref": "PSALM 31:5"}},
+
+  {"t": [14.6, 17.98], "tpl": "full",
+   "clips": [{"slug": "face_on_cross", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "The three hours of darkness have passed", "kw": "DARKNESS"}},
+
+  {"t": [17.98, 21.25], "tpl": "full", "whip": true,
+   "clips": [{"slug": "bowed_head_finished", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "With his last breath, he prays those evening words", "kw": "LAST BREATH"}},
+
+  {"t": [21.25, 25.2], "tpl": "full",
+   "border_break": {"at": 21.3},
+   "clips": [{"slug": "hands_of_light_open", "motion": "pushin"}],
+   "cap": {"type": "redletter", "text": "Father, into thy hands I commend my spirit.", "speaker": "JESUS", "ref": "LUKE 23:46b"}},
+
+  {"t": [25.2, 29.4], "tpl": "full",
+   "clips": [{"slug": "father_hand_childs_hand", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "He begins with a word the Psalm does not have", "kw": "FATHER"}},
+
+  {"t": [29.4, 33.1], "tpl": "full",
+   "clips": [{"slug": "father_lamp_doorway", "motion": "static", "cam": "arc"}],
+   "cap": {"type": "caption", "text": "Not judge. Not stranger. Father", "kw": "NOT STRANGER"}},
+
+  {"t": [33.1, 39.15], "tpl": "full", "punch": true,
+   "inserts": [{"at": 34.75, "slug": "psalm_scroll_night", "frames": 4}],
+   "clips": [{"slug": "nail_through_hand", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "On that cross, he was buying that redemption", "kw": "REDEEMED"}},
+
+  {"t": [39.15, 41.8], "tpl": "full",
+   "clips": [{"slug": "father_holds_sleeping_child", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "He dies like a child falling asleep in his father's arms", "kw": "ASLEEP"}},
+
+  {"t": [41.8, 43.58], "tpl": "full", "whip": true,
+   "clips": [{"slug": "first_day_morning", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "On the third day, morning came", "kw": "MORNING"}},
+
+  {"t": [43.58, 48.3], "tpl": "full",
+   "clips": [{"slug": "child_waking_dawn", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "Death loses its last word over everyone who is his", "kw": "DEATH LOSES"}},
+
+  {"t": [48.3, 53.95], "tpl": "full",
+   "clips": [{"slug": "child_eyes_closing", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "Not because death is small. Because the hands are strong", "kw": "STRONG"}},
+
+  {"t": [53.95, 59.03], "tpl": "full",
+   "sfx": [["dawn_morning_warm", 54.05, -15]],
+   "clips": [{"slug": "cross_at_dawn", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "Commend your spirit to the Father. He keeps the morning", "kw": "HE KEEPS THE MORNING"}}
+ ]
+}
+

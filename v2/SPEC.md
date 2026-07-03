@@ -28,6 +28,16 @@ fail-closed doctrinal/Scripture gates at every stage.
 > deep-dives — it defines LF-G1..G8 (text), LF-SP-G1..G9 (scene plan), LF-CLIP-*
 > (veo3 animation), LF-AS-G1..G6 (assembly), and LF-INV-1..8 (long-form invariants).
 > All INV-1..24 in this file also apply to long-form unless overridden there.
+>
+> **Motion-comic contract:** `v2/MOTIONCOMIC_SPEC.md` (v1.1) is the pattern for the
+> **inked graphic-novel motion-comic** visual line — recipe MC-R1..R10, gates
+> MC-G1..G10, the `format`-discriminated schema, the format deltas, and a
+> derived (zero-reuse-for-the-first-long) cost model. It **refines INV-13** (inked
+> art → Kling camera-only, not veo3, which morphs ink). **SHORT (9:16) rows are
+> binding** (proven by the LOCKED Cluster 1 pilot); **all `[LONG]` (16:9) rows are
+> PROVISIONAL** until one manual long pilot passes the doctrinal panel + 4-lens
+> review + a gravitas A/B — the **Baroque-plate + veo3** long path stays the DEFAULT
+> for reverent exegetical deep-dives. Revised after a 4-reviewer red-team (2026-07-01).
 > Stage skills for long-form: `/narrate-long`, `/scene-plan-long`, `/animate-long`, `/assemble-long`.
 
 ---
