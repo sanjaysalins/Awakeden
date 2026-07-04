@@ -13,8 +13,8 @@ items:
     public_status: studio_complete
     featured: true
     featured_order: 1
-    preview_approved: true
-    preview_source: "../v2/pilot/isaiah_53_5_with_his_stripes/v1/visual/nbp/12_finished-at-the-cross.png"
+    preview_approved: false
+    preview_source: null
     youtube_id: null
     public_hook: "Seven hundred years before the cross, Isaiah wrote of a wound that would heal ours."
     public_blurb: >
@@ -32,7 +32,7 @@ items:
     featured: true
     featured_order: 2
     preview_approved: true
-    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/19_wounded-for-our-transgressions.png"
+    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/livingpage_poster.png"
     study_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1"
     youtube_id: null
     public_hook: "David wrote the crucifixion a thousand years before Rome nailed anyone to a cross."
@@ -66,8 +66,8 @@ items:
     cluster_order: 2
     public_status: studio_complete
     featured: false
-    preview_approved: true
-    preview_source: "../v2/pilot/mockers_words_ps22/v1/visual/nbp/07_the-king-who-would-not-come-down.png"
+    preview_approved: false
+    preview_source: null
     study_source: "../v2/pilot/mockers_words_ps22/v1"
     youtube_id: null
     public_hook: "The crowd mocked Him. They repeated words David had written a thousand years earlier."
@@ -101,8 +101,8 @@ items:
     cluster_order: 4
     public_status: studio_complete
     featured: false
-    preview_approved: true
-    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/04_Declared_To_The_Brethren/visual/nbp/04_the-risen-christ.png"
+    preview_approved: false
+    preview_source: null
     youtube_id: null
     public_hook: "The psalm moves from forsaken to declaring God's name to the congregation."
     public_blurb: >
@@ -117,8 +117,8 @@ items:
     cluster_order: 5
     public_status: studio_complete
     featured: false
-    preview_approved: true
-    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/05_He_Hath_Done_This/visual/nbp/04_it-is-finished.png"
+    preview_approved: false
+    preview_source: null
     youtube_id: null
     public_hook: "It is finished. The psalm said He would declare it to a people yet unborn."
     public_blurb: >
@@ -133,8 +133,8 @@ items:
     cluster_order: 6
     public_status: studio_complete
     featured: false
-    preview_approved: true
-    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/06_The_Ends_Of_The_Earth/visual/nbp/14_the-whole-earth-at-dawn.png"
+    preview_approved: false
+    preview_source: null
     youtube_id: null
     public_hook: "All the ends of the world shall remember and turn unto the Lord."
     public_blurb: >
@@ -149,8 +149,8 @@ items:
     cluster_order: 7
     public_status: studio_complete
     featured: false
-    preview_approved: true
-    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/20_looking-down-in-love.png"
+    preview_approved: false
+    preview_source: null
     youtube_id: null
     public_hook: "I am poured out like water. David described a body the cross would fulfil."
     public_blurb: >

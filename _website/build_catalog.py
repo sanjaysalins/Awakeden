@@ -297,8 +297,15 @@ def select_study_figures(study_source, slug, reading, is_long, exclude_slug="") 
     return placement
 
 
+# All existing study stills are Baroque oil paintings - archived off the site
+# (archive/website_baroque/). Flip back on when inked plates exist per piece.
+STUDY_FIGURES_ENABLED = False
+
+
 def build_study_figures(study_source, slug, reading, is_long, warnings, exclude_slug="") -> dict:
     """Render each placed painting: a floated cutout (text-wrap) if one exists, else a plate."""
+    if not STUDY_FIGURES_ENABLED:
+        return {}
     placement = select_study_figures(study_source, slug, reading, is_long, exclude_slug)
     if not placement:
         return {}
