@@ -46,8 +46,9 @@ MIN_HEALTHY = 4  # a panel run with fewer than this many OK reviewers is "degrad
 
 # A tiny artifact the live smoke test reviews — clean, should come back PASS-ish.
 SMOKE_PROMPT = (
-    "You are a reviewer. Reply with one short sentence, then EXACTLY this block:\n"
-    "VERDICT: PASS | REVISE | FAIL\nTOP FIXES:\n1. <fix>\n\n"
+    "You are a reviewer. Reply with one short sentence, then EXACTLY this block "
+    "(write exactly ONE word on the VERDICT line — PASS or REVISE or FAIL):\n"
+    "VERDICT: <PASS or REVISE or FAIL>\nTOP FIXES:\n1. <fix>\n\n"
     "----- ARTIFACT START -----\n"
     "For God so loved the world, that he gave his only begotten Son.\n"
     "----- ARTIFACT END -----\n"

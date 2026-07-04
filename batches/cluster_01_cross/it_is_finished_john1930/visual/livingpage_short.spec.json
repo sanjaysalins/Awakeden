@@ -1,0 +1,86 @@
+{
+ "_doc": "IT IS FINISHED (John 19:30 + Gen 2:1 + John 1:3a + John 17:4) 9:16 SHORT - living page. 17 beats / 59.09s. Creation-rhyme: Eden hook with ramp+takeover, Gen 2:1 bar, creation-hands bar, Gethsemane prayer bar, heartbeat 31.8-35.33 STOPS on 'It is finished', border-break on the word itself, creation+cross stack for 'Two finished works', tomb sabbath rest, first-day morning, cross_at_dawn close.",
+ "audio": "../audio/narration.mp3",
+ "total": 59.09,
+ "cut_ticks": true,
+ "heartbeat": {"from": 31.8, "to": 35.33, "gain": -9, "bpm": 64},
+ "beats": [
+  {"t": [0.0, 3.4], "tpl": "full", "punch": true, "ramp": true,
+   "sfx": [["impact_low_boom", 0.1, -12]],
+   "clips": [{"slug": "eden_garden_finished", "motion": "pushin"}],
+   "takeover": {"panel": 0, "start": 1.8, "zoom": 1.3},
+   "cap": {"type": "caption", "text": "Nothing was broken yet", "kw": "NOTHING BROKEN"}},
+
+  {"t": [3.4, 7.03], "tpl": "full",
+   "clips": [{"slug": "seventh_day_light", "motion": "static", "cam": "arc"}],
+   "cap": {"type": "redletter", "text": "Thus the heavens and the earth were finished, and all the host of them.", "speaker": "GENESIS", "ref": "2:1"}},
+
+  {"t": [7.03, 12.0], "tpl": "full",
+   "clips": [{"slug": "carpenter_bench_rest", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "God rested. He does not leave work half done", "kw": "HALF DONE"}},
+
+  {"t": [12.0, 15.55], "tpl": "full", "whip": true,
+   "sfx": [["air_hollow_desolate", 12.1, -18]],
+   "clips": [{"slug": "golgotha_hill_wide", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "When sin wrecked that world, the Son came down to mend it", "kw": "TO MEND IT"}},
+
+  {"t": [15.55, 19.1], "tpl": "full",
+   "clips": [{"slug": "hands_shaping_light", "motion": "pushin"}],
+   "cap": {"type": "redletter", "text": "All things were made by him.", "speaker": "JOHN", "ref": "1:3a"}},
+
+  {"t": [19.1, 22.6], "tpl": "full", "punch": true,
+   "clips": [{"slug": "nail_through_hand", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "The hands that finished creation came to finish redemption", "kw": "THE SAME HANDS"}},
+
+  {"t": [22.6, 24.4], "tpl": "full",
+   "sfx": [["wind_desert_bleak", 22.7, -18]],
+   "clips": [{"slug": "gethsemane_olives_night", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "Before the cross, he prayed", "kw": "HE PRAYED"}},
+
+  {"t": [24.4, 30.2], "tpl": "full",
+   "clips": [{"slug": "jesus_prays_night", "motion": "pushin"}],
+   "cap": {"type": "redletter", "text": "I have glorified thee on the earth: I have finished the work which thou gavest me to do.", "speaker": "JESUS", "ref": "JOHN 17:4"}},
+
+  {"t": [30.2, 31.8], "tpl": "full", "whip": true,
+   "clips": [{"slug": "us_under_cross_shadow", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "He carried it to the end", "kw": "TO THE END"}},
+
+  {"t": [31.8, 36.85], "tpl": "full",
+   "border_break": {"at": 35.35},
+   "clips": [{"slug": "vinegar_sponge_reed", "motion": "pushin"}],
+   "cap": {"type": "redletter", "text": "When Jesus therefore had received the vinegar, he said, It is finished:", "speaker": "JOHN", "ref": "19:30a"}},
+
+  {"t": [36.85, 39.85], "tpl": "full",
+   "clips": [{"slug": "bowed_head_finished", "motion": "pushin"}],
+   "cap": {"type": "redletter", "text": "and he bowed his head, and gave up the ghost.", "speaker": "JOHN", "ref": "19:30b"}},
+
+  {"t": [39.85, 43.08], "tpl": "stack_h",
+   "clips": [
+    {"slug": "eden_garden_finished", "motion": "pushin", "zoom": 1.25, "at": 39.85, "slide": "left"},
+    {"slug": "face_on_cross", "motion": "pushin", "zoom": 1.22, "at": 41.4, "slide": "right"}],
+   "cap": {"type": "caption", "text": "Two finished works. One Workman", "kw": "ONE WORKMAN"}},
+
+  {"t": [43.08, 48.75], "tpl": "full",
+   "inserts": [{"at": 47.0, "slug": "eden_garden_finished", "frames": 4}],
+   "clips": [{"slug": "tomb_stone_sealed", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "He rested in the tomb through the sabbath", "kw": "RESTED"}},
+
+  {"t": [48.75, 51.5], "tpl": "full", "whip": true,
+   "sfx": [["dawn_morning_warm", 48.85, -15]],
+   "clips": [{"slug": "first_day_morning", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "On the first day, morning came", "kw": "MORNING CAME"}},
+
+  {"t": [51.5, 54.45], "tpl": "full",
+   "clips": [{"slug": "risen_mercy_hand", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "You were never asked to finish it", "kw": "REST IN IT"}},
+
+  {"t": [54.45, 56.45], "tpl": "full",
+   "clips": [{"slug": "man_lifting_face_dawn", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "He bowed his head so you could lift yours", "kw": "LIFT YOURS"}},
+
+  {"t": [56.45, 59.09], "tpl": "full",
+   "clips": [{"slug": "cross_at_dawn", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "The work is finished. Enter his rest", "kw": "ENTER HIS REST"}}
+ ]
+}
+

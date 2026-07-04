@@ -1,30 +1,26 @@
 {
   "plan": {
-    "narration_reading": "All 18 clips. Hook on the shaking heads (#01); the prophecy beat shows the psalmist + record (#02, #15). David's quoted taunt rides the mocking gestures (#03 shoot-out-the-lip, #16 leaders-jeer). The bridge moves to the cross (#04 crowd-at-cross) and the mockers (#09 jabbing, #05 rulers-sneer). The mocker's quoted taunt sits on Christ Himself (#06 he-trusted-in-god, #08 he-had-every-power = 'I am the Son of God'). The landing turns: unwilling witnesses + love (#18 looking-down, #13 for-the-very-people), restrained power (#17 twelve-legions), 'He could have come down' (#10), bearing the scorn by staying (#11), the King they told to come down (#12), and the CTA (#14 come-to-the-one). Hero #07 (the King who would not come down) closes as the gospel-pivot.",
-    "red_team_notes": "Mocker-heavy front + cross-heavy back, both intrinsic to the passage; varied between crowd/ruler faces, nailed hands, and Christ frames. Hero #07 is the bare-cross King, lands on Christ. Avg ~4s/slot, lively.",
-    "hero_scene_index": 7,
+    "narration_reading": "The cut opens on the jeering faces under 'The crowd mocking Jesus... was reading from a script', then the psalmist seeing the far-off figure under 'A thousand years before'. David's quote plays over the mocking gesture itself (#03 shoot-out-the-lip), and Matthew's fulfillment gets its two literal pins: passers-by wagging heads (#04) and the sneering rulers (#05), with the crucified 'He Trusted In God' (#06) under the mocker's verse. 'Reciting prophecy — unwilling witnesses' carries the crowd-backs-before-the-luminous-Christ (#08); the second taunt gets the open-mouthed jeerer (#09). The landing walks restraint to mercy: 'He could have come down' (#10), 'bearing the scorn' (#11), mercy on the upturned faces 'for the very people throwing it' (#13), the sovereign low-angle King under 'They told the King to come down — and He never did' (#07), and Christ's face looking down in love under 'theirs, and ours'. The hero close is #14 — the cross against widening gold dawn — held under 'Turn, and come to the One who would not come down', a stronger on-thread close than the #07 preference because it IS the invitation image; #07 serves the cut better pinned to its own line at P31.",
+    "red_team_notes": "Dropping #12/#15/#16/#17 loses the twelve-legions restraint image, which was the most theologically distinctive clip — but it reads Gethsemane (Matt 26:53) more than the cross and #10 already carries restrained power. #05 and #16 are near-duplicates; kept the closer view. The landing is 31.7s over 5 clips + hero — the P36-P39 script-never-finished beat rides the hero's run-in; if the allocator squeezes the hero below ~3s the 'Turn, and come' close will flash.",
+    "hero_scene_index": 14,
     "hero_head_s": 0.0,
     "hero_tail_s": 2.0,
-    "total_seconds": 69.038,
-    "clip_budget": 17,
+    "total_seconds": 78.017,
+    "clip_budget": 13,
     "selected_scene_indices": [
       1,
       2,
-      15,
       3,
-      16,
       4,
-      9,
       5,
       6,
       8,
-      18,
-      13,
-      17,
+      9,
       10,
       11,
-      12,
-      14
+      13,
+      7,
+      18
     ],
     "section_assignment": {},
     "slots": [
@@ -34,12 +30,12 @@
         "scene_index": 1,
         "section": "hook",
         "slot_start_s": 0.0,
-        "slot_end_s": 2.76,
+        "slot_end_s": 2.48,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 1.8268,
+        "speed_factor": 2.0331,
         "op": "speed",
-        "rationale": "the shaking heads — the crowd mocking, hook",
+        "rationale": "Jeering cluster of faces at the upright — the mocking crowd of the hook line.",
         "beat_index": 0,
         "beat_phrase": "The crowd mocking Jesus at the cross was reading from a script"
       },
@@ -48,248 +44,188 @@
         "role": "body",
         "scene_index": 2,
         "section": "hook",
-        "slot_start_s": 2.76,
-        "slot_end_s": 6.44,
+        "slot_start_s": 2.48,
+        "slot_end_s": 5.96,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 1.3701,
+        "speed_factor": 1.4489,
         "op": "speed",
-        "rationale": "the psalmist — 'Psalm recorded how the Messiah would be mocked'",
+        "rationale": "The psalmist gazing at a dim far-off bound figure — 'A thousand years before, Psalm twenty-two recorded'.",
         "beat_index": 3,
         "beat_phrase": "A thousand years before,"
       },
       {
         "order": 2,
         "role": "body",
-        "scene_index": 15,
-        "section": "hook",
-        "slot_start_s": 6.44,
-        "slot_end_s": 9.52,
-        "source_in_s": 0.0,
-        "source_out_s": 5.042,
-        "speed_factor": 1.637,
-        "op": "speed",
-        "rationale": "david records the taunt — the prophecy written",
-        "beat_index": 4,
-        "beat_phrase": "Psalm twenty-two recorded how the Messiah would be mocked —"
-      },
-      {
-        "order": 3,
-        "role": "body",
         "scene_index": 3,
         "section": "david",
-        "slot_start_s": 9.52,
-        "slot_end_s": 12.92,
+        "slot_start_s": 5.96,
+        "slot_end_s": 11.6,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 1.4829,
+        "speed_factor": 0.894,
         "op": "speed",
-        "rationale": "they shoot out the lip — 'they shake the head'",
+        "rationale": "The shot-out lip and shaken head filling frame — Ps 22:7's own gesture under David's words.",
         "beat_index": 6,
         "beat_phrase": "\"...they shake the head,"
       },
       {
-        "order": 4,
-        "role": "body",
-        "scene_index": 16,
-        "section": "david",
-        "slot_start_s": 12.92,
-        "slot_end_s": 16.84,
-        "source_in_s": 0.0,
-        "source_out_s": 5.042,
-        "speed_factor": 1.2862,
-        "op": "speed",
-        "rationale": "the leaders jeer — 'He trusted on the LORD'",
-        "beat_index": 7,
-        "beat_phrase": "saying, He trusted on the LORD that he would deliver him:"
-      },
-      {
-        "order": 5,
+        "order": 3,
         "role": "body",
         "scene_index": 4,
         "section": "bridge",
-        "slot_start_s": 16.84,
-        "slot_end_s": 18.82,
+        "slot_start_s": 11.6,
+        "slot_end_s": 21.1,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 2.5465,
+        "speed_factor": 0.5307,
         "op": "speed",
-        "rationale": "the crowd at the cross — 'At the cross'",
-        "beat_index": 9,
-        "beat_phrase": "At the cross,"
-      },
-      {
-        "order": 6,
-        "role": "body",
-        "scene_index": 9,
-        "section": "bridge",
-        "slot_start_s": 18.82,
-        "slot_end_s": 23.02,
-        "source_in_s": 0.0,
-        "source_out_s": 5.042,
-        "speed_factor": 1.2005,
-        "op": "speed",
-        "rationale": "jabbing/mockers — 'passers-by wagging'",
+        "rationale": "Passers-by wagging heads at the cross — Matthew 27:39 verbatim image under its phrase.",
         "beat_index": 11,
         "beat_phrase": "the passers-by wagging their heads,"
       },
       {
-        "order": 7,
+        "order": 4,
         "role": "body",
         "scene_index": 5,
         "section": "bridge",
-        "slot_start_s": 23.02,
-        "slot_end_s": 25.7,
+        "slot_start_s": 21.1,
+        "slot_end_s": 23.7,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 1.8813,
+        "speed_factor": 1.9392,
         "op": "speed",
-        "rationale": "the rulers sneer — 'the rulers sneering line for line'",
+        "rationale": "The rulers' smug contempt — 'the rulers sneering nearly line for line'.",
         "beat_index": 12,
         "beat_phrase": "the rulers sneering nearly line for line:"
       },
       {
-        "order": 8,
+        "order": 5,
         "role": "body",
         "scene_index": 6,
         "section": "mocker",
-        "slot_start_s": 25.7,
-        "slot_end_s": 27.72,
+        "slot_start_s": 23.7,
+        "slot_end_s": 25.66,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 2.496,
+        "speed_factor": 2.5724,
         "op": "speed",
-        "rationale": "he trusted in God — the mocker's taunt on Christ",
+        "rationale": "The crucified Christ under darkened noon — on-screen while the mocker speaks 'He trusted in God'.",
         "beat_index": 13,
         "beat_phrase": "\"He trusted in God;"
       },
       {
-        "order": 9,
+        "order": 6,
         "role": "body",
         "scene_index": 8,
-        "section": "mocker",
-        "slot_start_s": 27.72,
-        "slot_end_s": 30.84,
+        "section": "bridge",
+        "slot_start_s": 25.66,
+        "slot_end_s": 36.28,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 1.616,
+        "speed_factor": 0.4748,
         "op": "speed",
-        "rationale": "he had every power — 'I am the Son of God'",
-        "beat_index": 15,
-        "beat_phrase": "for he said,"
+        "rationale": "The crowd's dark backs before the luminous Christ — 'reciting prophecy — unwilling witnesses that this was the One'.",
+        "beat_index": 19,
+        "beat_phrase": "They were reciting prophecy —"
+      },
+      {
+        "order": 7,
+        "role": "body",
+        "scene_index": 9,
+        "section": "mocker",
+        "slot_start_s": 36.28,
+        "slot_end_s": 43.16,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 0.7328,
+        "op": "speed",
+        "rationale": "The open-mouthed jeerer beneath the looming cross — the 'come down from the cross' taunt.",
+        "beat_index": 22,
+        "beat_phrase": "\"save thyself."
+      },
+      {
+        "order": 8,
+        "role": "body",
+        "scene_index": 10,
+        "section": "landing",
+        "slot_start_s": 43.16,
+        "slot_end_s": 47.86,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 1.0728,
+        "op": "speed",
+        "rationale": "Calm unbroken Christ with faint restrained power in the shadows — 'But He could have come down'.",
+        "beat_index": 25,
+        "beat_phrase": "But He could have come down."
+      },
+      {
+        "order": 9,
+        "role": "body",
+        "scene_index": 11,
+        "section": "landing",
+        "slot_start_s": 47.86,
+        "slot_end_s": 53.74,
+        "source_in_s": 0.0,
+        "source_out_s": 5.042,
+        "speed_factor": 0.8575,
+        "op": "speed",
+        "rationale": "The willing-endurance face, jaw set — 'bearing the scorn He could have silenced'.",
+        "beat_index": 28,
+        "beat_phrase": "bearing the scorn He could have silenced,"
       },
       {
         "order": 10,
         "role": "body",
-        "scene_index": 18,
+        "scene_index": 13,
         "section": "landing",
-        "slot_start_s": 30.84,
-        "slot_end_s": 35.64,
+        "slot_start_s": 53.74,
+        "slot_end_s": 56.16,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 1.0504,
+        "speed_factor": 2.0835,
         "op": "speed",
-        "rationale": "looking down in love — unwilling witnesses",
-        "beat_index": 17,
-        "beat_phrase": "They thought they were inventing the cruelty."
+        "rationale": "Christ looking down in mercy on upturned scornful faces, one softening — 'for the very people throwing it'.",
+        "beat_index": 29,
+        "beat_phrase": "for the very people throwing it."
       },
       {
         "order": 11,
         "role": "body",
-        "scene_index": 13,
+        "scene_index": 7,
         "section": "landing",
-        "slot_start_s": 35.64,
-        "slot_end_s": 40.98,
+        "slot_start_s": 56.16,
+        "slot_end_s": 61.48,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 0.9442,
+        "speed_factor": 0.9477,
         "op": "speed",
-        "rationale": "for the very people throwing it",
-        "beat_index": 19,
-        "beat_phrase": "unwilling witnesses that this was the One."
+        "rationale": "The low-angle sovereign King in stillness — 'They told the King to come down — and He never did'.",
+        "beat_index": 31,
+        "beat_phrase": "They told the King to come down —"
       },
       {
         "order": 12,
         "role": "body",
-        "scene_index": 17,
+        "scene_index": 18,
         "section": "landing",
-        "slot_start_s": 40.98,
-        "slot_end_s": 42.64,
-        "source_in_s": 0.062,
+        "slot_start_s": 61.48,
+        "slot_end_s": 76.017,
+        "source_in_s": 0.0,
         "source_out_s": 5.042,
-        "speed_factor": 3.0,
-        "op": "speed+trim",
-        "rationale": "twelve legions restrained — 'save yourself and come down'",
-        "beat_index": 20,
-        "beat_phrase": "Save yourself and come down,"
+        "speed_factor": 0.3468,
+        "op": "speed",
+        "rationale": "The face looking down in love — 'He stayed under scorn — theirs, and ours'.",
+        "beat_index": 34,
+        "beat_phrase": "theirs, and ours —"
       },
       {
         "order": 13,
-        "role": "body",
-        "scene_index": 10,
-        "section": "landing",
-        "slot_start_s": 42.64,
-        "slot_end_s": 47.68,
-        "source_in_s": 0.0,
-        "source_out_s": 5.042,
-        "speed_factor": 1.0004,
-        "op": "speed",
-        "rationale": "he could have come down",
-        "beat_index": 23,
-        "beat_phrase": "But He could have come down —"
-      },
-      {
-        "order": 14,
-        "role": "body",
-        "scene_index": 11,
-        "section": "landing",
-        "slot_start_s": 47.68,
-        "slot_end_s": 51.9,
-        "source_in_s": 0.0,
-        "source_out_s": 5.042,
-        "speed_factor": 1.1948,
-        "op": "speed",
-        "rationale": "bearing the scorn by staying",
-        "beat_index": 25,
-        "beat_phrase": "but by staying on it,"
-      },
-      {
-        "order": 15,
-        "role": "body",
-        "scene_index": 12,
-        "section": "landing",
-        "slot_start_s": 51.9,
-        "slot_end_s": 59.4,
-        "source_in_s": 0.0,
-        "source_out_s": 5.042,
-        "speed_factor": 0.6723,
-        "op": "speed",
-        "rationale": "the King they told to come down",
-        "beat_index": 28,
-        "beat_phrase": "The man they mocked is the One the whole song was about."
-      },
-      {
-        "order": 16,
-        "role": "body",
-        "scene_index": 14,
-        "section": "landing",
-        "slot_start_s": 59.4,
-        "slot_end_s": 67.038,
-        "source_in_s": 0.0,
-        "source_out_s": 5.042,
-        "speed_factor": 0.6601,
-        "op": "speed",
-        "rationale": "come to the One who would not come down — CTA",
-        "beat_index": 31,
-        "beat_phrase": "He stayed under their scorn,"
-      },
-      {
-        "order": 17,
         "role": "hero-tail",
-        "scene_index": 7,
+        "scene_index": 14,
         "section": "hero",
-        "slot_start_s": 67.038,
-        "slot_end_s": 69.038,
+        "slot_start_s": 76.017,
+        "slot_end_s": 78.017,
         "source_in_s": 0.0,
         "source_out_s": 5.042,
         "speed_factor": 2.521,
@@ -302,56 +238,56 @@
     "notes": ""
   },
   "self_review": {
-    "overall": "LOCKED",
+    "overall": "REVISE",
     "panel": [
       {
         "agent": "Editor",
-        "verdict": "STRONG",
-        "note": "Punchy, longest hold 7.6s; mocker front + cross landing flow."
+        "verdict": "REVISION NEEDED",
+        "note": "Slot 12 (#18) holds 14.54s at 0.35x across six landing beats — a third of the landing on one near-frozen image; slot 6 (#08) also runs 10.6s at 0.47x."
       },
       {
         "agent": "Beat-Sync",
         "verdict": "STRONG",
-        "note": "Clips under their words; david taunt on gestures, mocker taunt on Christ, CTA on come-to-the-One."
+        "note": "Every pin matches its words — wagging heads, sneering rulers, the jeerer under the taunt, mercy on the throwers. No clip fights its phrase."
       },
       {
         "agent": "No-Reuse",
         "verdict": "STRONG",
-        "note": "17 distinct; hero #07 once at close."
+        "note": "13 distinct + hero #14 once at the close."
       },
       {
         "agent": "Pacing",
-        "verdict": "STRONG",
-        "note": "Sacred near full speed; narrator gently 1.087x; lively."
+        "verdict": "CAUTION",
+        "note": "#06 (the crucified Christ) plays at 2.57x — the fastest clip in the cut is a sacred frame; hero again lands at 2.52x in a 2s window."
       },
       {
         "agent": "Hero-Continuity",
         "verdict": "STRONG",
-        "note": "Hook-open (#01 shaking-heads) -> gospel-pivot King #07 close."
+        "note": "Opens on the jeering faces, closes on the dawn cross under 'Turn, and come to the One who would not come down' — lands on Christ."
       },
       {
         "agent": "Jaded Viewer",
-        "verdict": "STRONG",
-        "note": "Mocking faces + the King who stays; lands on Christ."
+        "verdict": "REVISION NEEDED",
+        "note": "From 61.5s to 76s nothing changes on screen while four distinct spoken turns play — the script-never-finished payoff line has no image change to carry it."
       }
     ],
     "gates": [
       {
         "gate": "AS-G1 Timeline Coverage",
         "verdict": "PASS",
-        "evidence": "18 slots tile 0->69.04s contiguously.",
+        "evidence": "14 slots tile 0->78.02s contiguously.",
         "fix": ""
       },
       {
         "gate": "AS-G2 No Reuse",
         "verdict": "PASS",
-        "evidence": "17 distinct body clips; hero #07 appears once (close only) — no reuse.",
+        "evidence": "13 distinct body clips; hero #14 appears once (close only) — no reuse.",
         "fix": ""
       },
       {
         "gate": "AS-G3 Speed/Trim Health",
         "verdict": "PASS",
-        "evidence": "avg speed 1.52x, max 3.00x, 1 trimmed.",
+        "evidence": "avg speed 1.23x, max 2.57x, 0 trimmed.",
         "fix": ""
       },
       {
@@ -369,7 +305,7 @@
       {
         "gate": "AS-G6 Hero Close",
         "verdict": "PASS",
-        "evidence": "Opens on hook #01; gospel-pivot hero #07 closes 2.0s (single appearance).",
+        "evidence": "Opens on hook #01; gospel-pivot hero #14 closes 2.0s (single appearance).",
         "fix": ""
       },
       {
@@ -379,71 +315,75 @@
         "fix": ""
       },
       {
-        "gate": "AS-G8 Beat Continuity",
-        "verdict": "PASS",
-        "evidence": "thread carried; clips fit words.",
-        "fix": ""
+        "gate": "AS-G9 Beat Density",
+        "verdict": "CONDITIONAL",
+        "evidence": "13 moments · avg slot 5.8s > target 4s — feels slow for 'lots of moments'.",
+        "fix": "Raise --clips toward 20 (pool has 18)."
       },
       {
-        "gate": "AS-G9 Beat Density",
+        "gate": "AS-G8 Beat Continuity",
         "verdict": "PASS",
-        "evidence": "17 moments · avg slot 3.9s (target 4s) — lively.",
+        "evidence": "Thread carried hook->climax->close; no pin contradicts its words.",
         "fix": ""
       }
     ],
-    "priority_fixes": []
+    "priority_fixes": [
+      "Re-pin #02 from P03 to P36 — the psalmist-and-script image belongs under 'they were reading from a script they never finished' (the hook thread's payoff), and it breaks the 14.5s #18 hold into two moments. #01 then carries the whole hook (P00-P05) at a punchy ~1.7x.",
+      "This also shortens #18 to the 'theirs, and ours — to win the scorners' window (~7s), a defensible reverent hold.",
+      "Keep #06's window as wide as its beat allows (2.57x on the crucified Christ is the cut's fastest clip — sacred frames should be its slowest)."
+    ]
   },
   "independent_review": {
-    "overall": "LOCKED",
+    "overall": "REVISE",
     "panel": [
       {
         "agent": "Editor",
-        "verdict": "STRONG",
-        "note": "Punchy, longest hold 7.6s; mocker front + cross landing flow."
+        "verdict": "REVISION NEEDED",
+        "note": "61.5s→76.0s is one clip at 0.35x — six spoken beats, no image change; a quarter of the runtime is a freeze-frame in all but name."
       },
       {
         "agent": "Beat-Sync",
         "verdict": "STRONG",
-        "note": "Clips under their words; david taunt on gestures, mocker taunt on Christ, CTA on come-to-the-One."
+        "note": "Pins are literal and honest throughout — wagging heads, sneering rulers, the jeer under the taunt, mercy over 'the very people throwing it'."
       },
       {
         "agent": "No-Reuse",
         "verdict": "STRONG",
-        "note": "17 distinct; hero #07 once at close."
+        "note": "13 distinct body clips, hero once at the close."
       },
       {
         "agent": "Pacing",
-        "verdict": "STRONG",
-        "note": "Sacred near full speed; narrator gently 1.087x; lively."
+        "verdict": "REVISION NEEDED",
+        "note": "Speed extremes land on the wrong clips: the crucified Christ (#06) is the fastest at 2.57x while a static love-gaze (#18) is slowest at 0.35x; hero flashes at 2.52x."
       },
       {
         "agent": "Hero-Continuity",
         "verdict": "STRONG",
-        "note": "Hook-open (#01 shaking-heads) -> gospel-pivot King #07 close."
+        "note": "Jeer-open is a real scroll-stopper; dawn-cross hero under 'Turn, and come to the One who would not come down' lands squarely on Christ."
       },
       {
         "agent": "Jaded Viewer",
-        "verdict": "STRONG",
-        "note": "Mocking faces + the King who stays; lands on Christ."
+        "verdict": "REVISION NEEDED",
+        "note": "I would feel the screen die at the 62-second mark — exactly where the hook's script-thread pays off with no picture to show for it."
       }
     ],
     "gates": [
       {
         "gate": "AS-G1 Timeline Coverage",
         "verdict": "PASS",
-        "evidence": "18 slots tile 0->69.04s contiguously.",
+        "evidence": "14 slots tile 0->78.02s contiguously.",
         "fix": ""
       },
       {
         "gate": "AS-G2 No Reuse",
         "verdict": "PASS",
-        "evidence": "17 distinct body clips; hero #07 appears once (close only) — no reuse.",
+        "evidence": "13 distinct body clips; hero #14 appears once (close only) — no reuse.",
         "fix": ""
       },
       {
         "gate": "AS-G3 Speed/Trim Health",
         "verdict": "PASS",
-        "evidence": "avg speed 1.52x, max 3.00x, 1 trimmed.",
+        "evidence": "avg speed 1.23x, max 2.57x, 0 trimmed.",
         "fix": ""
       },
       {
@@ -461,7 +401,7 @@
       {
         "gate": "AS-G6 Hero Close",
         "verdict": "PASS",
-        "evidence": "Opens on hook #01; gospel-pivot hero #07 closes 2.0s (single appearance).",
+        "evidence": "Opens on hook #01; gospel-pivot hero #14 closes 2.0s (single appearance).",
         "fix": ""
       },
       {
@@ -471,20 +411,24 @@
         "fix": ""
       },
       {
-        "gate": "AS-G8 Beat Continuity",
-        "verdict": "PASS",
-        "evidence": "thread carried; clips fit words.",
-        "fix": ""
+        "gate": "AS-G9 Beat Density",
+        "verdict": "CONDITIONAL",
+        "evidence": "13 moments · avg slot 5.8s > target 4s — feels slow for 'lots of moments'.",
+        "fix": "Raise --clips toward 20 (pool has 18)."
       },
       {
-        "gate": "AS-G9 Beat Density",
+        "gate": "AS-G8 Beat Continuity",
         "verdict": "PASS",
-        "evidence": "17 moments · avg slot 3.9s (target 4s) — lively.",
+        "evidence": "The script thread runs hook->fulfillment->restraint->invitation and the close is the gospel-pivot. No pin contradicts its words — the failure is rhythm, not meaning.",
         "fix": ""
       }
     ],
-    "priority_fixes": []
+    "priority_fixes": [
+      "Move #02 (the psalmist and his script) from P03 to P36 'they were reading from a script they never finished' — it is the thread's payoff image and it halves the dead tail; let #01 carry the whole hook P00-P05.",
+      "With #02 at P36, #18 holds only 'theirs, and ours — to win the scorners' (~7s) — reverent, not dead.",
+      "Widen the hero window if the allocator permits (2.0s at 2.52x undersells the closing line)."
+    ]
   },
   "audit": null,
-  "authoritative_overall": "LOCKED"
+  "authoritative_overall": "REVISE"
 }

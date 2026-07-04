@@ -78,6 +78,13 @@ def final_video_and_words(media_dir: str | Path) -> tuple[str, str]:
     """Best finished captioned video + its sibling <stem>.words.json (both '' if absent)."""
     a = Path(media_dir).resolve() / "assembly"
     if not a.is_dir():
+        # batch living-page layout: visual/<slug>_scored.mp4 + audio/alignment.json
+        # (alignment.json is the same [{w,start,end},...] shape build_srt expects)
+        root = Path(media_dir).resolve()
+        scored = sorted((root / "visual").glob("*_scored.mp4")) if (root / "visual").is_dir() else []
+        if scored:
+            words = root / "audio" / "alignment.json"
+            return str(scored[0].resolve()), (str(words) if words.is_file() else "")
         return "", ""
     for name in _FINAL_VIDEO_ORDER:
         v = a / name

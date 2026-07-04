@@ -81,6 +81,11 @@ def _find_video(media_dir: Path, fmt: str) -> str:
     cands: list[Path] = []
     if fmt == "short":
         a = media_dir / "assembly"
+        if not a.is_dir() and (media_dir / "visual").is_dir():
+            # batch living-page layout: batches/<cluster>/<slug>/visual/<slug>_scored.mp4
+            scored = sorted((media_dir / "visual").glob("*_scored.mp4"))
+            if scored:
+                return str(scored[0].resolve())
         cands = [
             a / "viral_cut_sfx_music_captioned.mp4",   # best: sfx + music layer
             a / "viral_cut_sfx_captioned.mp4",
@@ -106,8 +111,54 @@ def _first_sentence(text: str) -> str:
     return t[:160].strip()
 
 
+def _harvest_batch_facts(d: Path) -> SourceFacts:
+    """Living-page batch piece (batches/<cluster>/<slug>/): narration.md +
+    audio/narration.spoken.txt + visual/<slug>_scored.mp4. Facts come from an
+    explicit publish_meta.json beside narration.md (deterministic — no header
+    parsing heuristics), with the narration.md H1 as the title fallback."""
+    meta: dict = {}
+    pm = d / "publish_meta.json"
+    if pm.is_file():
+        meta = json.loads(pm.read_text(encoding="utf-8"))
+    h1 = ""
+    md = d / "narration.md"
+    if md.is_file():
+        for ln in md.read_text(encoding="utf-8").splitlines():
+            if ln.startswith("# "):
+                h1 = ln[2:].strip()
+                break
+    title = meta.get("title") or (h1.split("—")[0].strip() if h1 else d.name)
+    anchor_ref = meta.get("anchor_ref", "")
+    anchor_kjv = (meta.get("anchor_kjv") or "").strip()
+    if not anchor_kjv and anchor_ref:
+        anchor_kjv = (scripture.fetch_kjv(anchor_ref) or "").strip()
+    spoken = ""
+    for p in (d / "audio" / "narration.spoken.txt", d / "narration.md"):
+        if p.is_file():
+            spoken = p.read_text(encoding="utf-8")
+            break
+    return SourceFacts(
+        media_dir=str(d),
+        video_path=_find_video(d, "short"),
+        format="short",
+        series_name=meta.get("series", "Awakeden"),
+        brand=meta.get("brand", "Awakeden"),
+        episode_title=title,
+        anchor_ref=anchor_ref,
+        anchor_kjv=anchor_kjv,
+        kjv_verified=bool(meta.get("kjv_verified", True)),
+        thread=meta.get("thread", ""),
+        thread_lever=meta.get("lever", ""),
+        hook_line=_first_sentence(spoken) if spoken else "",
+        spoken_script=" ".join(spoken.split())[:4000],
+        beats=[],
+    )
+
+
 def harvest_facts(media_dir: str) -> SourceFacts:
     d = Path(media_dir).resolve()
+    if not (d / "narration.creation.json").is_file() and (d / "visual").is_dir():
+        return _harvest_batch_facts(d)          # batch living-page layout
     creation = json.loads((d / "narration.creation.json").read_text(encoding="utf-8"))
     fmt = "short" if "shorts" in d.parts else "long"
 

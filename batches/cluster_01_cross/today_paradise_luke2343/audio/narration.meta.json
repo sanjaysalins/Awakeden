@@ -1,0 +1,145 @@
+{
+  "folder": "audio",
+  "stage": "per_turn_synth",
+  "mode": "dialogue_per_turn_with_narrator_atempo",
+  "generated_at": "2026-07-03T08:49:02Z",
+  "model_id": "eleven_v3",
+  "output_format": "mp3_44100_128",
+  "target_seconds": 59.0,
+  "natural_total_seconds": 65.04,
+  "narrator_natural_seconds": 43.36,
+  "quote_total_seconds": 21.68,
+  "narrator_atempo_factor": 1.2139,
+  "pre_quote_pause_seconds": 0.4,
+  "post_quote_pause_seconds": 0.0,
+  "pause_total_seconds": 1.6,
+  "final_total_seconds": 59.071,
+  "delta_vs_target_seconds": 0.071,
+  "turns": [
+    {
+      "index": 0,
+      "speaker": "narrator",
+      "chars": 106,
+      "natural_seconds": 9.44,
+      "final_seconds": 7.79,
+      "atempo_applied": true
+    },
+    {
+      "index": 1,
+      "speaker": "narrator",
+      "chars": 44,
+      "natural_seconds": 4.48,
+      "final_seconds": 3.692,
+      "atempo_applied": true
+    },
+    {
+      "index": 2,
+      "speaker": "mocker",
+      "chars": 39,
+      "natural_seconds": 3.28,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 3,
+      "speaker": "narrator",
+      "chars": 22,
+      "natural_seconds": 2.08,
+      "final_seconds": 3.28,
+      "atempo_applied": true
+    },
+    {
+      "index": 4,
+      "speaker": "narrator",
+      "chars": 28,
+      "natural_seconds": 1.76,
+      "final_seconds": 1.725,
+      "atempo_applied": true
+    },
+    {
+      "index": 5,
+      "speaker": "thief",
+      "chars": 103,
+      "natural_seconds": 7.92,
+      "final_seconds": 1.452,
+      "atempo_applied": false
+    },
+    {
+      "index": 6,
+      "speaker": "narrator",
+      "chars": 52,
+      "natural_seconds": 5.84,
+      "final_seconds": 0.4,
+      "atempo_applied": true
+    },
+    {
+      "index": 7,
+      "speaker": "thief",
+      "chars": 52,
+      "natural_seconds": 4.0,
+      "final_seconds": 7.92,
+      "atempo_applied": false
+    },
+    {
+      "index": 8,
+      "speaker": "jesus",
+      "chars": 65,
+      "natural_seconds": 6.48,
+      "final_seconds": 4.822,
+      "atempo_applied": false
+    },
+    {
+      "index": 9,
+      "speaker": "narrator",
+      "chars": 57,
+      "natural_seconds": 4.24,
+      "final_seconds": 0.4,
+      "atempo_applied": true
+    },
+    {
+      "index": 10,
+      "speaker": "narrator",
+      "chars": 36,
+      "natural_seconds": 2.96,
+      "final_seconds": 4.0,
+      "atempo_applied": true
+    },
+    {
+      "index": 11,
+      "speaker": "narrator",
+      "chars": 32,
+      "natural_seconds": 2.0,
+      "final_seconds": 0.4,
+      "atempo_applied": true
+    },
+    {
+      "index": 12,
+      "speaker": "narrator",
+      "chars": 86,
+      "natural_seconds": 10.56,
+      "final_seconds": 6.48,
+      "atempo_applied": true
+    }
+  ],
+  "speakers": {
+    "narrator": {
+      "voice_id": "LSi9zNCeliLuhIGGS0By",
+      "audio_tag": null
+    },
+    "mocker": {
+      "voice_id": "SOYHLrjzK2X1ezoPC6cr",
+      "audio_tag": "[mocking]"
+    },
+    "thief": {
+      "voice_id": "puDRtQWF8NtQiPMJygTb",
+      "audio_tag": null
+    },
+    "jesus": {
+      "voice_id": "tlETan7Okc4pzjD0z62P",
+      "audio_tag": null
+    }
+  },
+  "settings": {
+    "stability": 0.65
+  }
+}

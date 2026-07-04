@@ -1,10 +1,10 @@
 # The Passover Lamb — Awakeden eyewitness (long)
 **Witness:** A father of a household in Israel on the night of the Passover (representative/archetypal — every household, not one named man) · **Core text:** Exodus 12 · **Type→fulfillment:** a spotless lamb slain, its blood struck on the doorposts to turn away judgment, not a bone broken — fulfilled in Christ our passover (1 Cor 5:7; John 19:33,36; 1 Pet 1:19)
-**Status:** v1 draft — Awakeden eyewitness LONG. Archetypal witness, signposted in Beat 1 (no invented name/biography — he stands for every household). the_LORD voices Exo 12:12 + 12:13 (verbatim KJV only, EW-G11). Cross-time reveal (Beat 6) is a SIGNPOSTED reflective device (EW-INV-11): the father sees by later light, never claims he knew of Christ in his moment. Substitution named (firstborn under sentence → lamb dies in his place → Christ the Lamb in ours). The type is the BLOOD that turns away judgment ("when I see the blood"), the spotless lamb, the unbroken bone. No supersession.
+**Status:** v1 draft — Awakeden eyewitness LONG. Archetypal witness, signposted in Beat 1 (no invented name/biography — he stands for every household). the_LORD voices Exo 12:12 + 12:13 (verbatim KJV only, EW-G11). Cross-time reveal (Beat 6) is a SIGNPOSTED reflective device (EW-INV-11): the father sees by later light, never claims he knew of Christ in his moment. Substitution named (firstborn under sentence → lamb dies in his place → Christ the Lamb in ours). The type is the BLOOD that turns away judgment ("when I see the blood"), the spotless lamb, the unbroken bone. No supersession. **v1.1 (2026-07-03): re-paneled on the repaired FULL 5/5 panel** (`_independent_review\20260703-061736\`, all REVISE, no doctrinal blocker — NOTE the panel read a STALE `_panel_clean.md`; the Ex 12:30 heard-speech / 1 Pet 1:19 splice / fear-CTA flags were already fixed, and cursor's "altered Ex 12:23" claim was a FALSE ALARM, verified verbatim vs the KJV cache). Applied the 3 still-real fixes: (1) Beat 3 — Ex 12:6 now attributed ("for the command had said") before the quote (EW-INV-4); (2) Beat 4 — dropped "feast after feast" (witness over-claim: Ex 12:46 came with the ordinance and wilderness Passovers lapsed until Gilgal); (3) Beat 6 — 1 Cor 5:7 now attributed ("the Scripture written after me declares it outright"). **v1.2 (2026-07-03): round-2 panel on the fixed text** (`_independent_review\20260703-083704\`: all REVISE, no doctrinal blocker). Applied the convergent fixes: (a) Beat 5 "still we keep this feast year after year" (anachronism on the FIRST night — cursor+claude) → "the LORD had commanded us to keep this night as a feast for ever" (Ex 12:14, given before midnight); (b) Beat 6 "Without blemish, without spot — the very wordS of my own command" → "Without blemish — the very word" (Ex 12:5 says only "without blemish"; "without spot" is Peter's — claude+codex); (c) Beat 4 Ex 12:23 now attributed ("as Moses had told us from the LORD" — Ex 12:21-23 is Moses to the elders). 🔒 **USER DECISION (2026-07-03): the anonymous ARCHETYPAL witness STAYS — do not rename.** 3 panel voices (gemini/codex/claude) wanted a named witness; the user ruled: keep the archetype. The Beat-1 signpost ("I will not give you my name — I withhold it on purpose, for I was not one man only") is the answer to that flag; future panels raising it are answered, not actioned.  Word-budget trim to re-lock (EW-G3: 1678>1650): Beat 1 signpost tightened (archetype KEPT), Beat 6/7 recap lines cut (-30w; also 'without spot'->'without blemish' in his own pick, Ex 12:5) -> 1648, LOCKED 2026-07-03. **AUDIO RE-SYNTHED 2026-07-03 (panel-fix text, turn-level reuse).**
 ---
 
 ## Beat 1 — I was there
-I was a father in Israel, in a mud-brick house in the land of our slavery, on the night the LORD passed over Egypt. I will not give you my name — I withhold it on purpose, for I was not one man only. There was such a father behind every door in Israel that night, every man of us bent over a slain lamb. Let me stand for them all; let me be every father of Israel on that night. I had a wife, and children asleep in the inner room, and a firstborn son — my strength, the boy who carried my name. And I had been told that before the sun rose, death would walk down our street, and would not pass our house unless I did a strange and bloody thing with my own two hands.
+I was a father in Israel, in a mud-brick house in the land of our slavery, on the night the LORD passed over Egypt. I will not give you my name — I withhold it on purpose, for I was not one man only. There was such a father behind every door in Israel that night, every man of us bent over a slain lamb. Let me stand for them all. I had a wife, and children asleep in the inner room, and a firstborn son — my strength, the boy who carried my name. And I had been told that before the sun rose, death would walk down our street, and would not pass our house unless I did a strange and bloody thing with my own two hands.
 
 ## Beat 2 — The world
 You must understand what we were: slaves, with whips on our backs and no power to save so much as our own sons. Nine times God had struck Egypt, and Pharaoh would not let us go. Now Moses came back from Pharaoh, and the word he carried could fall on any house — even mine. For the LORD had said that on this last night He Himself would go out into the dark:
@@ -24,7 +24,7 @@ And it could not be a poor or broken thing. It had to be perfect:
 
 **"Your lamb shall be without blemish, a male of the first year"**
 
-So I searched my flock and took the best I had — a young male without spot — and I brought him into the house. Four days he lived under my roof. My children fed him. He was no stranger to us when the evening came; that is what made it hard. And on the fourteenth day, at twilight, with all Israel doing the same in every house, I took him, and I killed him:
+So I searched my flock and took the best I had — a young male without blemish — and I brought him into the house. Four days he lived under my roof. My children fed him. He was no stranger to us when the evening came; that is what made it hard. And on the fourteenth day, at twilight, with all Israel doing the same in every house, I took him, and I killed him — for the command had said:
 
 **"the whole assembly of the congregation of Israel shall kill it in the evening"**
 
@@ -43,7 +43,7 @@ We were not saved by being good. We were saved by being inside, under the blood.
 ## Beat 4 — The strange detail
 Two things in that command I never understood; they followed me to my grave.
 
-The first was this: why must I put the blood on the outside? God knew which houses were ours without a drop of paint on my door. Yet He would not pass over my house merely because the lamb lay dead in my kitchen; He would pass over because the blood was struck where it could be seen:
+The first was this: why must I put the blood on the outside? God knew which houses were ours without a drop of paint on my door. Yet He would not pass over my house merely because the lamb lay dead in my kitchen; He would pass over because the blood was struck where it could be seen — as Moses had told us from the LORD:
 
 **"when he seeth the blood upon the lintel, and on the two side posts, the LORD will pass over the door, and will not suffer the destroyer to come in unto your houses to smite you"**
 
@@ -53,7 +53,7 @@ And the second thing was stranger still. When the LORD gave the law of this lamb
 
 **"neither shall ye break a bone thereof"**
 
-I could not fathom it. The creature was already dead and roasting on the fire — what could it matter to God whether a single bone was cracked? But the command stood, feast after feast: the lamb is slain, yet not a bone of him is broken. I obeyed it. I did not see why.
+I could not fathom it. The creature was already dead and roasting on the fire — what could it matter to God whether a single bone was cracked? But the command stood: the lamb is slain, yet not a bone of him is broken. I obeyed it. I did not see why.
 
 ## Beat 5 — The wrestling
 That night, when the dark came down, a doubt sat in my chest beside the fear. How could the blood of a lamb stand in for the life of my son? What was a pen animal to the God who made heaven and earth, that a smear of its blood should turn aside His own judgment?
@@ -62,7 +62,7 @@ Then midnight came. And I heard it — not in my house, but across the whole of 
 
 **"there was not a house where there was not one dead"**
 
-In every home without the blood, a firstborn lay still. I heard the grief of Egypt go up street by street, mothers weeping over sons as dear to them as mine — and in my own room my boy was breathing softly in his sleep. I did not earn that difference. A lamb had died in his place, and the blood of it was on my door. The judgment was real; I heard it pass me by in the screaming. Something had to die, or my son would have. But even as I wept with relief, my old doubt did not quiet — it deepened: a lamb dies, and still we keep this feast year after year. Was this small creature the end of it, or only a sign, pointing at something I could not yet see?
+In every home without the blood, a firstborn lay still. I heard the grief of Egypt go up street by street, mothers weeping over sons as dear to them as mine — and in my own room my boy was breathing softly in his sleep. I did not earn that difference. A lamb had died in his place, and the blood of it was on my door. The judgment was real; I heard it pass me by in the screaming. Something had to die, or my son would have. But even as I wept with relief, my old doubt did not quiet — it deepened: a lamb had died, and the LORD had commanded us to keep this night as a feast for ever, generation after generation. Was this small creature the end of it, or only a sign, pointing at something I could not yet see?
 
 ## Beat 6 — The reveal
 I did not learn the answer in my lifetime. I tell you it now from the far side of my days, by a light that fell long after my night was over. I did not know His name when I painted my door. But I know now what my trembling hands were truly doing.
@@ -71,7 +71,7 @@ There came another Lamb. Only now do I see that my lamb without blemish was His 
 
 **"with the precious blood of Christ, as of a lamb without blemish and without spot"**
 
-Without blemish, without spot — the very words of my own command, now spoken of a Man. He was the spotless one that my four short days with a young lamb had only foreshadowed. And when they put Him to death, the soldiers came to break the legs of the crucified, to hasten their dying — but when they came to Him, the Scripture says, they stopped:
+Without blemish — the very word of my own command, now spoken of a Man. He was the spotless one that my four short days with a young lamb had only foreshadowed. The soldiers came to break the legs of the crucified, to hasten their dying — but when they came to Him, the Scripture says, they stopped:
 
 **"when they came to Jesus, and saw that he was dead already, they brake not his legs"**
 
@@ -79,16 +79,16 @@ Not one bone. The riddle that had followed me to my grave was answered on a hill
 
 **"A bone of him shall not be broken"**
 
-My lamb's unbroken bones had been pointing across the centuries to His. And the blood — the blood that had to be struck where the judgment could see it — was His blood, poured out and reckoned to everyone who comes to shelter beneath it. He is my true Passover; the death I deserved fell on Him instead, just as the death that hung over my son had fallen on the lamb:
+My lamb's unbroken bones had been pointing across the centuries to His. And the blood — the blood that had to be struck where the judgment could see it — was His blood, poured out and reckoned to everyone who comes to shelter beneath it. He is my true Passover; the death I deserved fell on Him instead, just as the death that hung over my son had fallen on the lamb — and the Scripture written after me declares it outright:
 
 **"Christ our passover is sacrificed for us"**
 
 This was the substitution my doorpost had been whispering all my life, and I never heard it. The firstborn stood under sentence; the lamb died in his place. We all stand under sentence; the Lamb of God died in ours. Not a bone of Him broken. His blood upon the wood.
 
 ## Beat 7 — The invitation
-So hear me — before you turn away, be still a moment.
+Hear me — be still a moment.
 
-With these two hands I struck the blood on the wood, and shut my children behind that door; a lamb lay dead where my own son should have lain. Something spotless died so my boy could live. I did not earn it — I only hid behind the blood.
+With these two hands I struck the blood on the wood, and shut my children behind that door; a lamb lay dead where my own son should have lain. I did not earn it — I only hid behind the blood.
 
 That lamb was only the shadow. The blood that truly shelters is His — the Lamb God provided, Jesus, poured out on a cross I never saw. No one who comes to His door is ever turned away.
 

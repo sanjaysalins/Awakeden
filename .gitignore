@@ -79,3 +79,9 @@ longform/**/_*.log
 # session work dirs (throwaway)
 _assembly/
 _sfx_work/
+
+# local design comps demo media (served pages are the real site)
+_website/_redesign/_media/
+
+# archived (off-site) content, kept on disk only
+archive/

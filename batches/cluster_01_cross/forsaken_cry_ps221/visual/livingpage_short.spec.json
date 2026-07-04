@@ -1,0 +1,66 @@
+{
+ "_doc": "THE FORSAKEN CRY (Ps 22:1 / Matt 27:46) 9:16 SHORT - living page re-roll of the legacy Ps22 short #3. 13 beats / 58.18s. Same-words echo: David bar (Ps 22:1) then Jesus bar (Matt 27:46) verbatim identical, heartbeat 22.6-27.15 STOPS on the cry, border-break on the cry, mercy turn to the open way home, cross_at_dawn close.",
+ "audio": "../audio/narration.mp3",
+ "total": 58.18,
+ "cut_ticks": true,
+ "heartbeat": {"from": 22.6, "to": 27.15, "gain": -9, "bpm": 64},
+ "beats": [
+  {"t": [0.0, 4.92], "tpl": "full", "punch": true, "ramp": true,
+   "sfx": [["impact_low_boom", 0.1, -12]],
+   "clips": [{"slug": "darkness_veil_torn", "motion": "pushin"}],
+   "takeover": {"panel": 0, "start": 2.4, "zoom": 1.3},
+   "cap": {"type": "caption", "text": "Jesus reached for words already written", "kw": "ALREADY WRITTEN"}},
+
+  {"t": [4.92, 9.8], "tpl": "full",
+   "clips": [{"slug": "david_writing_psalm", "motion": "static", "cam": "arc"}],
+   "cap": {"type": "caption", "text": "A psalm David had penned a thousand years before", "kw": "A THOUSAND YEARS"}},
+
+  {"t": [9.8, 15.05], "tpl": "full",
+   "clips": [{"slug": "golgotha_hill_wide", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "It opens in the voice of a forsaken man. Jesus made it His own", "kw": "FORSAKEN"}},
+
+  {"t": [15.05, 17.82], "tpl": "full", "whip": true,
+   "clips": [{"slug": "us_under_cross_shadow", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "David's very first line", "kw": "THE FIRST LINE"}},
+
+  {"t": [17.82, 22.6], "tpl": "full",
+   "clips": [{"slug": "psalm_scroll_night", "motion": "static", "cam": "arc"}],
+   "cap": {"type": "redletter", "text": "My God, my God, why hast thou forsaken me?", "speaker": "DAVID", "ref": "PSALM 22:1"}},
+
+  {"t": [22.6, 27.15], "tpl": "full",
+   "sfx": [["air_hollow_desolate", 22.7, -17]],
+   "clips": [{"slug": "ninth_hour_darkness", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "At the ninth hour, Jesus cried it from the cross", "kw": "THE NINTH HOUR"}},
+
+  {"t": [27.15, 31.9], "tpl": "full",
+   "border_break": {"at": 27.2},
+   "clips": [{"slug": "bowed_head_finished", "motion": "pushin"}],
+   "cap": {"type": "redletter", "text": "My God, my God, why hast thou forsaken me?", "speaker": "JESUS", "ref": "MATT 27:46"}},
+
+  {"t": [31.9, 34.45], "tpl": "full",
+   "clips": [{"slug": "look_up_faces", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "The very same words", "kw": "THE SAME WORDS"}},
+
+  {"t": [34.45, 40.56], "tpl": "full",
+   "clips": [{"slug": "face_on_cross", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "No cry of lost faith. Even forsaken, He still calls God my God", "kw": "MY GOD"}},
+
+  {"t": [40.56, 47.9], "tpl": "full", "punch": true,
+   "inserts": [{"at": 45.2, "slug": "ninth_hour_darkness", "frames": 4}],
+   "clips": [{"slug": "risen_mercy_hand", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "The sinless Son, bearing the forsaking our sin deserved", "kw": "IN OUR PLACE"}},
+
+  {"t": [47.9, 51.7], "tpl": "full",
+   "clips": [{"slug": "grace_poured_sky", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "He was forsaken so that you never will be", "kw": "NEVER FORSAKEN"}},
+
+  {"t": [51.7, 55.6], "tpl": "full",
+   "clips": [{"slug": "father_lamp_doorway", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "However far you have run, the way home is open", "kw": "THE WAY HOME"}},
+
+  {"t": [55.6, 58.18], "tpl": "full",
+   "sfx": [["dawn_morning_warm", 55.7, -15]],
+   "clips": [{"slug": "cross_at_dawn", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "He opened it from the dark", "kw": "FROM THE DARK"}}
+ ]
+}

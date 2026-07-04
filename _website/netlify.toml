@@ -1,6 +1,6 @@
 [build]
   base = "_website"
-  command = "pip install -r requirements.txt && python build_catalog.py"
+  command = "pip install -r requirements.txt && python build_catalog.py && python build_readpage.py --html-only"
   publish = "."
 
 [build.environment]
@@ -9,9 +9,50 @@
 # Canonical domain is the apex (awakeden.com); Netlify auto-redirects www -> apex.
 # Do NOT add an apex -> www rule here: it fights Netlify's redirect and loops.
 
+# The old roadmap page is superseded by The Plan tracker
+[[redirects]]
+  from = "/roadmap.html"
+  to = "/plan.html"
+  status = 301
+  force = true
+
+# Never serve internal review artifacts
+[[redirects]]
+  from = "/_independent_review/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+# Never serve the local design comps / demo media
+[[redirects]]
+  from = "/_redesign/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
 # Don't serve build/source files at the site root (publish dir is _website/.)
 [[redirects]]
   from = "/build_catalog.py"
+  to = "/404.html"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/build_readpage.py"
+  to = "/404.html"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/import_catalogue.py"
+  to = "/404.html"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/make_cutouts.py"
+  to = "/404.html"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/make_og_cards.py"
   to = "/404.html"
   status = 404
   force = true

@@ -2,17 +2,17 @@
 
 ---
 ## Beat 1 — I was there
-I was a father in Israel, in a mud-brick house in the land of our slavery, on the night the LORD passed over Egypt. I will not give you my name. I was not the only one — there was such a father behind every door in Israel that night, every man of us over a slain lamb. Let me stand for them all. I had a wife, and children asleep in the inner room, and a firstborn son — my first, my strength, the boy who carried my name. And I had been told that before the sun rose, death would walk down our street, and would not pass our house unless I did a strange and bloody thing with my own two hands.
+I was a father in Israel, in a mud-brick house in the land of our slavery, on the night the LORD passed over Egypt. I will not give you my name — I withhold it on purpose, for I was not one man only. There was such a father behind every door in Israel that night, every man of us bent over a slain lamb. Let me stand for them all. I had a wife, and children asleep in the inner room, and a firstborn son — my strength, the boy who carried my name. And I had been told that before the sun rose, death would walk down our street, and would not pass our house unless I did a strange and bloody thing with my own two hands.
 
 ## Beat 2 — The world
-You must understand what we were. We were slaves — a people with whips on our backs and no power to save so much as our own sons. Nine times God had struck Egypt, and Pharaoh would not let us go. Now Moses came back from Pharaoh with his face set like flint, and the word he carried could fall on any house — even mine. For the LORD had said that on this last night He Himself would go out into the dark:
+You must understand what we were: slaves, with whips on our backs and no power to save so much as our own sons. Nine times God had struck Egypt, and Pharaoh would not let us go. Now Moses came back from Pharaoh, and the word he carried could fall on any house — even mine. For the LORD had said that on this last night He Himself would go out into the dark:
 
 **[the LORD]** **"I will pass through the land of Egypt this night, and will smite all the firstborn in the land of Egypt"**
 
-The firstborn. My son. And I had no innocence to plead. I knew my own heart; I was no better than the Egyptian in the next field. If the judgment went by who deserved it, my door had no claim on mercy. And yet the same God who spoke the threat had, in the same breath, given a way for the blow to pass me by.
+The firstborn. My son. And I had no innocence to plead. I knew my own heart; I was no better than any Egyptian. If the judgment went by who deserved it, my door had no claim on mercy. And yet the same God who spoke the threat had, in the same breath, given a way for the blow to pass me by.
 
 ## Beat 3 — The act
-Let me tell you what I did, for I did every part of it with my own hands, and I have never forgotten a single step.
+I did every part of it with my own hands, and I have never forgotten a single step.
 
 First I went out and chose a lamb — not any lamb. The command had come down through Moses from the LORD:
 
@@ -22,7 +22,7 @@ And it could not be a poor or broken thing. It had to be perfect:
 
 **"Your lamb shall be without blemish, a male of the first year"**
 
-So I searched my flock and took the best I had — a young male without spot — and I brought him into the house. Four days he lived under my roof. My children fed him. He was no stranger to us when the evening came; that is what made it hard. And on the fourteenth day, at twilight, with all Israel doing the same in every house, I took him, and I killed him:
+So I searched my flock and took the best I had — a young male without blemish — and I brought him into the house. Four days he lived under my roof. My children fed him. He was no stranger to us when the evening came; that is what made it hard. And on the fourteenth day, at twilight, with all Israel doing the same in every house, I took him, and I killed him — for the command had said:
 
 **"the whole assembly of the congregation of Israel shall kill it in the evening"**
 
@@ -41,7 +41,7 @@ We were not saved by being good. We were saved by being inside, under the blood.
 ## Beat 4 — The strange detail
 Two things in that command I never understood; they followed me to my grave.
 
-The first was this: why must I put the blood on the outside? God knew which houses were ours. He knew my heart and my children's names without a drop of paint on my door. Yet He would not pass over my house merely because the lamb lay dead in my kitchen; He would pass over because the blood was struck where it could be seen:
+The first was this: why must I put the blood on the outside? God knew which houses were ours without a drop of paint on my door. Yet He would not pass over my house merely because the lamb lay dead in my kitchen; He would pass over because the blood was struck where it could be seen — as Moses had told us from the LORD:
 
 **"when he seeth the blood upon the lintel, and on the two side posts, the LORD will pass over the door, and will not suffer the destroyer to come in unto your houses to smite you"**
 
@@ -51,43 +51,45 @@ And the second thing was stranger still. When the LORD gave the law of this lamb
 
 **"neither shall ye break a bone thereof"**
 
-I could not fathom it. The creature was already dead, already roasting on the fire — what could it matter to God whether a single bone was cracked? But the command stood, year upon year as we kept the feast: the lamb is slain, yet not a bone of him is broken. I obeyed it. I did not see why.
+I could not fathom it. The creature was already dead and roasting on the fire — what could it matter to God whether a single bone was cracked? But the command stood: the lamb is slain, yet not a bone of him is broken. I obeyed it. I did not see why.
 
 ## Beat 5 — The wrestling
-And I will be honest with you, as a man must be honest before God. That night, when the dark came down, a doubt sat in my chest beside the fear. How could the blood of a lamb stand in for the life of my son? What was a pen animal to the God who made heaven and earth, that a smear of its blood should turn aside His own judgment?
+That night, when the dark came down, a doubt sat in my chest beside the fear. How could the blood of a lamb stand in for the life of my son? What was a pen animal to the God who made heaven and earth, that a smear of its blood should turn aside His own judgment?
 
-Then midnight came. And I heard it — not in my house, but across the whole of Egypt — a cry such as I had never heard:
+Then midnight came. And I heard it — not in my house, but across the whole of Egypt — a cry such as I had never heard. The record of that night would say it plainly:
 
 **"there was not a house where there was not one dead"**
 
-In every home without the blood, the firstborn lay dead. And in mine, my son was breathing softly in his sleep. The difference was not that I was righteous. The difference was a lamb that had died in his place, and the blood of it on my door. The judgment was real; I heard it pass me by in the screaming. Something had to die, or my son would have died. A life for a life. But even as I wept with relief, the doubt only deepened: a lamb dies, and we keep this feast again year after year — was this small creature the end of it, or only a sign, pointing at something I could not yet see?
+In every home without the blood, a firstborn lay still. I heard the grief of Egypt go up street by street, mothers weeping over sons as dear to them as mine — and in my own room my boy was breathing softly in his sleep. I did not earn that difference. A lamb had died in his place, and the blood of it was on my door. The judgment was real; I heard it pass me by in the screaming. Something had to die, or my son would have. But even as I wept with relief, my old doubt did not quiet — it deepened: a lamb had died, and the LORD had commanded us to keep this night as a feast for ever, generation after generation. Was this small creature the end of it, or only a sign, pointing at something I could not yet see?
 
 ## Beat 6 — The reveal
-I did not learn the answer in my lifetime. I tell you it now from the far side of my days, by a light that fell long after my night, in words written in an age I never saw. I did not know His name when I painted my door. But I know now what my trembling hands were truly doing.
+I did not learn the answer in my lifetime. I tell you it now from the far side of my days, by a light that fell long after my night was over. I did not know His name when I painted my door. But I know now what my trembling hands were truly doing.
 
-There came another Lamb. The command that my lamb be without blemish was a shadow, and a shadow waits for the body that casts it. The body came — a Man named Jesus, and the word written of Him says He was
+There came another Lamb. Only now do I see that my lamb without blemish was His shadow — and a shadow is cast only by a body that comes after. The body came: a Man named Jesus. The word written of Him says we were redeemed not with silver or gold, but
 
-**"the precious blood of Christ, as of a lamb without blemish and without spot"**
+**"with the precious blood of Christ, as of a lamb without blemish and without spot"**
 
-He was the spotless male of the first year I had held only four short days. And when they put Him to death, the soldiers came to break the legs of the crucified, to hasten death — but when they came to Him they stopped:
+Without blemish — the very word of my own command, now spoken of a Man. He was the spotless one that my four short days with a young lamb had only foreshadowed. The soldiers came to break the legs of the crucified, to hasten their dying — but when they came to Him, the Scripture says, they stopped:
 
 **"when they came to Jesus, and saw that he was dead already, they brake not his legs"**
 
-Not one bone. The riddle that had followed me to my grave was answered on a hill I never saw:
+Not one bone. The riddle that had followed me to my grave was answered on a hill I never saw, and it stands written:
 
 **"A bone of him shall not be broken"**
 
-My lamb's unbroken bones had been pointing across the centuries to His. And the blood — the blood that had to be struck where the judgment could see it — was His blood, poured out and applied to everyone who shelters under it. He is the true Passover, and the death I deserved fell on Him instead, exactly as the death my son deserved had fallen on the lamb:
+My lamb's unbroken bones had been pointing across the centuries to His. And the blood — the blood that had to be struck where the judgment could see it — was His blood, poured out and reckoned to everyone who comes to shelter beneath it. He is my true Passover; the death I deserved fell on Him instead, just as the death that hung over my son had fallen on the lamb — and the Scripture written after me declares it outright:
 
 **"Christ our passover is sacrificed for us"**
 
-This is the substitution my doorpost had been whispering all along. The firstborn stood under sentence; the lamb died in his place. We all stand under sentence; the Lamb of God died in ours. Not a bone of Him broken. His blood upon the wood.
+This was the substitution my doorpost had been whispering all my life, and I never heard it. The firstborn stood under sentence; the lamb died in his place. We all stand under sentence; the Lamb of God died in ours. Not a bone of Him broken. His blood upon the wood.
 
 ## Beat 7 — The invitation
-So hear me, you who listen from so far beyond my night. Do not look to a lamb, or a painted door, or a frightened father like me, who only did what he was told. Look to Jesus, the Lamb that God Himself has provided.
+Hear me — be still a moment.
 
-The lesson of my night was never that the lamb was enough simply by being killed. The blood had to be applied — struck on the door, claimed, taken as your own. So it is with Him. It is not enough only to know that He died. Come, and take His blood for your own; shelter under it as I sheltered my children, and the judgment that is real — as real as the cry I heard at midnight — will pass over you, not because you are good, but because He is your Lamb:
+With these two hands I struck the blood on the wood, and shut my children behind that door; a lamb lay dead where my own son should have lain. I did not earn it — I only hid behind the blood.
 
-**"Christ our passover is sacrificed for us"**
+That lamb was only the shadow. The blood that truly shelters is His — the Lamb God provided, Jesus, poured out on a cross I never saw. No one who comes to His door is ever turned away.
 
-Come inside, and trust the Lamb who was slain for you. Stand under His blood, and be passed over — and rest, as I never could on that long night, in a deliverance that will never need to be done again.
+Sit with that.
+
+So I ask you the question I carried through that whole long night — only now there is no fear left in it, only welcome: will you make His blood your own, as I made the lamb's, and hide behind Him as my children hid behind that door? Not because you are good — I was not — but because He is the Lamb slain for you, His door open. Come home to Jesus, and rest in a deliverance that need never be done again.

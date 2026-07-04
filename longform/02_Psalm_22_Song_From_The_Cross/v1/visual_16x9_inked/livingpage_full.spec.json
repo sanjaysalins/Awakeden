@@ -1,0 +1,2373 @@
+{
+ "_doc": "LIVING PAGE - FULL FILM (0-418.2s, 99 beats, 7 movements). Word-timed slams (alignment.json), takeover dive, BORDER-BREAK on 'it turns', synthesized heartbeat building from 'A thousand years later' and STOPPING DEAD on 'It is finished', sacred red-letter beats perfectly still, reuse rule >=8 beats + different crop (zoom'd macro reuses). All red-letter text verbatim KJV as quoted by the LOCKED narration. V3: distinct-image upgrade (max 2 uses/still, never 2x full-bleed), de-slopped captions, partial tags, story SFX.",
+ "audio": "../narration.mp3",
+ "total": 418.2,
+ "heartbeat": {
+  "from": 364.26,
+  "to": 371.51,
+  "gain": -9
+ },
+ "beats": [
+  {
+   "t": [
+    0.0,
+    4.0
+   ],
+   "tpl": "big_inset",
+   "clips": [
+    {
+     "slug": "crane_cross_soldiers",
+     "motion": "pushin"
+    },
+    {
+     "slug": "pierced_hands_feet",
+     "motion": "pushin",
+     "at": 1.1,
+     "slide": "right",
+     "sfx": "nail_strike_single"
+    }
+   ],
+   "takeover": {
+    "panel": 1,
+    "start": 3.0,
+    "zoom": 1.5
+   },
+   "cap": {
+    "type": "caption",
+    "text": "At the ninth hour. nailed to a Roman cross",
+    "kw": "NAILED"
+   }
+  },
+  {
+   "t": [
+    4.0,
+    7.84
+   ],
+   "tpl": "full",
+   "punch": true,
+   "sfx": [
+    [
+     "thunder_low_roll",
+     4.02,
+     -8
+    ]
+   ],
+   "clips": [
+    {
+     "slug": "storm_over_jerusalem",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He cried out into the dark",
+    "kw": "CRIED OUT"
+   }
+  },
+  {
+   "t": [
+    7.84,
+    11.9
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "cry_ninth_hour",
+     "motion": "pullback"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "My God, my God, why hast thou forsaken me?",
+    "speaker": "JESUS",
+    "ref": "Matthew 27:46"
+   }
+  },
+  {
+   "t": [
+    11.9,
+    17.3
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "face_anguish_closeup",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Raw anguish. a man forsaken",
+    "kw": "FORSAKEN"
+   }
+  },
+  {
+   "t": [
+    17.3,
+    19.5
+   ],
+   "tpl": "two_v",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "first_century_reader",
+     "motion": "static",
+     "cam": "arc",
+     "at": 17.47,
+     "slide": "left"
+    },
+    {
+     "slug": "disputed_word_marks",
+     "motion": "static",
+     "cam": "arc",
+     "at": 18.21,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "But it is also a quotation",
+    "kw": "QUOTATION"
+   }
+  },
+  {
+   "t": [
+    19.5,
+    25.4
+   ],
+   "tpl": "big_inset",
+   "clips": [
+    {
+     "slug": "scribe_over_manuscripts",
+     "motion": "static",
+     "cam": "arc"
+    },
+    {
+     "slug": "two_scrolls_compared",
+     "motion": "static",
+     "cam": "arc",
+     "at": 20.78,
+     "slide": "up",
+     "flash": false
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Written almost a thousand years before that morning",
+    "kw": "A THOUSAND YEARS"
+   }
+  },
+  {
+   "t": [
+    25.4,
+    28.31
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "david_old_deathbed",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "By a king who died old, safe in his own bed",
+    "kw": "DIED OLD"
+   }
+  },
+  {
+   "t": [
+    28.31,
+    35.0
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "convergence_on_cross",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "My God, my God, why hast thou forsaken me? why art thou so far from helping me, and from the words of my roaring?",
+    "speaker": "PSALM 22",
+    "ref": "v.1"
+   }
+  },
+  {
+   "t": [
+    35.0,
+    37.84
+   ],
+   "tpl": "quad",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "pierced_feet",
+     "motion": "pushin",
+     "at": 35.11,
+     "slide": "left"
+    },
+    {
+     "slug": "poured_out_bones",
+     "motion": "pushin",
+     "at": 35.43,
+     "slide": "right"
+    },
+    {
+     "slug": "mockers_wag_heads",
+     "motion": "pushin",
+     "at": 35.79,
+     "slide": "left"
+    },
+    {
+     "slug": "lots_dice_closeup",
+     "motion": "pushin",
+     "at": 36.35,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "This is Psalm twenty-two",
+    "kw": "PSALM TWENTY-TWO"
+   },
+   "sfx": [
+    [
+     "rumble_deep_sub",
+     35.0,
+     -16
+    ]
+   ]
+  },
+  {
+   "t": [
+    37.84,
+    40.9
+   ],
+   "tpl": "hero_frac3",
+   "clips": [
+    {
+     "slug": "crane_cross_soldiers",
+     "motion": "pushin"
+    }
+   ],
+   "anchors": [
+    [
+     1.0,
+     0.5,
+     0.5
+    ],
+    [
+     2.1,
+     0.52,
+     0.12
+    ],
+    [
+     2.4,
+     0.95,
+     0.95
+    ]
+   ],
+   "panel_at": [
+    37.84,
+    38.34,
+    39.63
+   ],
+   "panel_slide": [
+    "left",
+    "left",
+    "up"
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He did not reach for it by accident",
+    "kw": "NOT BY ACCIDENT"
+   }
+  },
+  {
+   "t": [
+    40.9,
+    44.85
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "cross_hill_pullback",
+     "motion": "pullback"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Telling everyone exactly where to look",
+    "kw": "WHERE TO LOOK"
+   }
+  },
+  {
+   "t": [
+    44.85,
+    47.98
+   ],
+   "tpl": "big_inset",
+   "clips": [
+    {
+     "slug": "david_psalmist",
+     "motion": "pushin"
+    },
+    {
+     "slug": "david_scroll_sealed",
+     "motion": "static",
+     "at": 45.36,
+     "slide": "up",
+     "flash": false
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "King David wrote this song",
+    "kw": "KING DAVID"
+   }
+  },
+  {
+   "t": [
+    47.98,
+    53.8
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "worm_reproach",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "As if it were happening to his own body",
+    "kw": "HIS OWN BODY"
+   }
+  },
+  {
+   "t": [
+    53.8,
+    59.42
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "execution_stakes_field",
+     "motion": "static",
+     "cam": "arc"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "David never came near a death like this",
+    "kw": "NEVER"
+   }
+  },
+  {
+   "t": [
+    59.42,
+    62.7
+   ],
+   "tpl": "quad",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "roman_nails_pouch",
+     "motion": "static",
+     "cam": "arc",
+     "at": 59.91,
+     "slide": "left"
+    },
+    {
+     "slug": "hung_by_arms",
+     "motion": "static",
+     "cam": "arc",
+     "zoom": 1.25,
+     "at": 60.71,
+     "slide": "right"
+    },
+    {
+     "slug": "storm_over_jerusalem",
+     "motion": "pushin",
+     "zoom": 1.3,
+     "at": 60.89,
+     "slide": "left"
+    },
+    {
+     "slug": "garment_tug",
+     "motion": "pushin",
+     "zoom": 1.15,
+     "at": 61.21,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "A public execution",
+    "kw": "EXECUTION"
+   }
+  },
+  {
+   "t": [
+    62.7,
+    65.54
+   ],
+   "tpl": "full",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "mocker_faces_trio",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Stripped, surrounded, mocked to death",
+    "kw": "MOCKED"
+   }
+  },
+  {
+   "t": [
+    65.54,
+    71.15
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "worm_lowest",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "But I am a worm, and no man; a reproach of men, and despised of the people.",
+    "speaker": "PSALM 22",
+    "ref": "v.6"
+   },
+   "sfx": [
+    [
+     "air_hollow_desolate",
+     65.6,
+     -17
+    ]
+   ]
+  },
+  {
+   "t": [
+    71.15,
+    75.06
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "mockers_wag_heads",
+     "motion": "pushin",
+     "zoom": 1.2
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "All they that see me laugh me to scorn: they shoot out the lip, they shake the head",
+    "speaker": "PSALM 22",
+    "ref": "v.7a"
+   },
+   "sfx": [
+    [
+     "crowd_murmur_distant",
+     71.2,
+     -16
+    ]
+   ]
+  },
+  {
+   "t": [
+    75.06,
+    76.83
+   ],
+   "tpl": "full",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "spit_shout_macro",
+     "motion": "static",
+     "cam": "arc"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Listen to what the mockers say",
+    "kw": "LISTEN"
+   },
+   "sfx": [
+    [
+     "crowd_shout_mob",
+     75.1,
+     -15
+    ]
+   ]
+  },
+  {
+   "t": [
+    76.83,
+    81.56
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "mockers_below_cross_low",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "He trusted on the LORD that he would deliver him: let him deliver him, seeing he delighted in him.",
+    "speaker": "THE MOCKERS",
+    "ref": "Psalm 22:8"
+   }
+  },
+  {
+   "t": [
+    81.56,
+    84.59
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "david_old_deathbed",
+     "motion": "pushin"
+    },
+    {
+     "slug": "old_king_hands_rings",
+     "motion": "static",
+     "cam": "arc",
+     "at": 83.68,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "A soldier. a king. died of old age",
+    "kw": "OLD AGE"
+   }
+  },
+  {
+   "t": [
+    84.59,
+    88.71
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "shepherd_boy_sling",
+     "motion": "static",
+     "cam": "arc",
+     "at": 85.13,
+     "slide": "left"
+    },
+    {
+     "slug": "war_helmet_spear_rest",
+     "motion": "static",
+     "cam": "arc",
+     "at": 86.84,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Never stripped, never executed at all",
+    "kw": "NEVER"
+   }
+  },
+  {
+   "t": [
+    88.71,
+    91.55
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "scholars_debate_two",
+     "motion": "static",
+     "cam": "arc"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "So whose death is he describing?",
+    "kw": "WHOSE DEATH"
+   }
+  },
+  {
+   "t": [
+    91.55,
+    94.97
+   ],
+   "tpl": "full",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "scribe_over_manuscripts",
+     "motion": "static",
+     "cam": "arc",
+     "zoom": 1.2
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He writes it down as a fact",
+    "kw": "A FACT"
+   }
+  },
+  {
+   "t": [
+    94.97,
+    98.08
+   ],
+   "tpl": "two_v",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "water_spilled_stone",
+     "motion": "static",
+     "cam": "arc",
+     "at": 95.52,
+     "slide": "left"
+    },
+    {
+     "slug": "seventy_scribes_lamps",
+     "motion": "static",
+     "cam": "arc",
+     "at": 95.78,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The song turns forensic",
+    "kw": "FORENSIC"
+   }
+  },
+  {
+   "t": [
+    98.08,
+    101.81
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "golgotha_three_crosses_ridge",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "A witness statement from a cross",
+    "kw": "WITNESS"
+   }
+  },
+  {
+   "t": [
+    101.81,
+    107.09
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "hung_by_arms",
+     "motion": "static",
+     "cam": "arc"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "I am poured out like water, and all my bones are out of joint",
+    "speaker": "PSALM 22",
+    "ref": "v.14a"
+   },
+   "sfx": [
+    [
+     "air_hollow_desolate",
+     101.9,
+     -17
+    ]
+   ]
+  },
+  {
+   "t": [
+    107.09,
+    110.94
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "poured_out_bones",
+     "motion": "pushin",
+     "zoom": 1.12
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The joints pulling apart under his own weight",
+    "kw": "PULLING APART"
+   }
+  },
+  {
+   "t": [
+    110.94,
+    115.6
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "cry_face_tears",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "my tongue cleaveth to my jaws; and thou hast brought me into the dust of death.",
+    "speaker": "PSALM 22",
+    "ref": "v.15b"
+   }
+  },
+  {
+   "t": [
+    115.6,
+    121.5
+   ],
+   "tpl": "full",
+   "cap_at": 4.5,
+   "clips": [
+    {
+     "slug": "thirst_dust",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "I thirst.",
+    "speaker": "JESUS",
+    "ref": "John 19:28"
+   }
+  },
+  {
+   "t": [
+    121.5,
+    126.48
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "pierced_hands_feet",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "they pierced my hands and my feet.",
+    "speaker": "PSALM 22",
+    "ref": "v.16b"
+   }
+  },
+  {
+   "t": [
+    126.48,
+    129.03
+   ],
+   "tpl": "full",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "pierced_feet",
+     "motion": "pushin",
+     "zoom": 1.15
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Pierced hands and feet",
+    "kw": "PIERCED"
+   }
+  },
+  {
+   "t": [
+    129.03,
+    134.33
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "jerusalem_night_lyre",
+     "motion": "static",
+     "cam": "arc"
+    },
+    {
+     "slug": "roman_nails_pouch",
+     "motion": "static",
+     "cam": "arc",
+     "zoom": 1.2,
+     "at": 131.1,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "A thousand years before Rome made crucifixion a science",
+    "kw": "ROME"
+   }
+  },
+  {
+   "t": [
+    134.33,
+    139.48
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "wrists_bound_beam_macro",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "A man fixed to wood. through hands and feet",
+    "kw": "FIXED TO WOOD"
+   }
+  },
+  {
+   "t": [
+    139.48,
+    143.02
+   ],
+   "tpl": "two_v",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "disputed_word_marks",
+     "motion": "pushin",
+     "cam": "arc",
+     "zoom": 1.2,
+     "at": 139.66,
+     "slide": "left"
+    },
+    {
+     "slug": "lion_shadow_wall",
+     "motion": "pushin",
+     "cam": "arc",
+     "at": 140.51,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "There it is. in ink. centuries early",
+    "kw": "IN INK"
+   }
+  },
+  {
+   "t": [
+    143.02,
+    148.71
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "garment_tug",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "They part my garments among them, and cast lots upon my vesture.",
+    "speaker": "PSALM 22",
+    "ref": "v.18"
+   }
+  },
+  {
+   "t": [
+    148.71,
+    151.75
+   ],
+   "tpl": "full",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "lots_dice_closeup",
+     "motion": "pushin",
+     "zoom": 1.15
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Gambling for a dead man's clothes",
+    "kw": "GAMBLING"
+   },
+   "sfx": [
+    [
+     "coins_clinking",
+     148.8,
+     -14
+    ]
+   ]
+  },
+  {
+   "t": [
+    151.75,
+    154.24
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "john_at_cross_foot",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "John tells you it happened",
+    "kw": "JOHN"
+   }
+  },
+  {
+   "t": [
+    154.24,
+    160.55
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "hill_crowd_watching_storm",
+     "motion": "static",
+     "cam": "arc"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "that the scripture might be fulfilled, which saith, They parted my raiment among them, and for my vesture they did cast lots.",
+    "speaker": "JOHN",
+    "ref": "19:24b"
+   }
+  },
+  {
+   "t": [
+    160.55,
+    166.25
+   ],
+   "tpl": "full",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "dice_cup_shadow",
+     "motion": "pushin",
+     "cam": "arc",
+     "zoom": 1.2
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Not following a script. fulfilling one",
+    "kw": "FULFILLING"
+   }
+  },
+  {
+   "t": [
+    166.25,
+    171.18
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "scholar_hand_on_text",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "An honest objection deserves a straight answer",
+    "kw": "HONEST"
+   }
+  },
+  {
+   "t": [
+    171.18,
+    175.95
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "first_century_reader",
+     "motion": "static",
+     "cam": "arc",
+     "zoom": 1.15
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "A careful reader will say it. This is poetry",
+    "kw": "POETRY"
+   }
+  },
+  {
+   "t": [
+    175.95,
+    179.24
+   ],
+   "tpl": "full",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "dogs_encompass",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Vivid images. dogs, a lion",
+    "kw": "VIVID IMAGES"
+   },
+   "sfx": [
+    [
+     "wind_desert_bleak",
+     176.0,
+     -14
+    ]
+   ]
+  },
+  {
+   "t": [
+    179.24,
+    183.65
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "hebrew_scroll_edge_light",
+     "motion": "static",
+     "cam": "arc"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "One word, pierced. a genuine dispute",
+    "kw": "ONE WORD"
+   }
+  },
+  {
+   "t": [
+    183.65,
+    187.96
+   ],
+   "tpl": "full",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "lion_gape",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Or like a lion at my hands and feet",
+    "kw": "LIKE A LION"
+   },
+   "sfx": [
+    [
+     "rumble_deep_sub",
+     183.7,
+     -13
+    ]
+   ]
+  },
+  {
+   "t": [
+    187.96,
+    192.69
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "lion_shadow_wall",
+     "motion": "static",
+     "cam": "arc"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "A real question, honestly raised",
+    "kw": "HONESTLY"
+   }
+  },
+  {
+   "t": [
+    192.69,
+    197.46
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "scholars_debate_two",
+     "motion": "static",
+     "cam": "arc",
+     "zoom": 1.2,
+     "at": 193.2,
+     "slide": "left"
+    },
+    {
+     "slug": "quill_ink_drop",
+     "motion": "pushin",
+     "cam": "arc",
+     "at": 194.56,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "So concede it. take pierced off the table",
+    "kw": "OFF THE TABLE"
+   }
+  },
+  {
+   "t": [
+    197.46,
+    201.87
+   ],
+   "tpl": "two_v",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "worm_reproach",
+     "motion": "pushin",
+     "zoom": 1.15,
+     "at": 198.68,
+     "slide": "left"
+    },
+    {
+     "slug": "ribs_stretched_macro",
+     "motion": "static",
+     "cam": "arc",
+     "at": 200.58,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Stripped. mocked. bones out of joint",
+    "kw": "STRIPPED"
+   }
+  },
+  {
+   "t": [
+    201.87,
+    205.98
+   ],
+   "tpl": "two_v",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "clay_potsherd_dust",
+     "motion": "static",
+     "cam": "arc",
+     "at": 202.35,
+     "slide": "left"
+    },
+    {
+     "slug": "vesture_seamless_folded",
+     "motion": "static",
+     "cam": "arc",
+     "at": 203.72,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Dying of thirst. clothes gambled away",
+    "kw": "GAMBLED"
+   }
+  },
+  {
+   "t": [
+    205.98,
+    209.5
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "david_hands_lyre",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Written by a king who suffered none of it",
+    "kw": "NONE OF IT"
+   }
+  },
+  {
+   "t": [
+    209.5,
+    213.89
+   ],
+   "tpl": "full",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "roads_converge_valley",
+     "motion": "static",
+     "cam": "arc"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "One word does not carry it. the convergence does",
+    "kw": "CONVERGENCE"
+   }
+  },
+  {
+   "t": [
+    213.89,
+    219.19
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "alexandria_harbor_night",
+     "motion": "static",
+     "cam": "arc"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Translated by Jewish scholars almost two centuries before Jesus",
+    "kw": "TWO CENTURIES"
+   }
+  },
+  {
+   "t": [
+    219.19,
+    223.2
+   ],
+   "tpl": "full",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "greek_ot_scroll",
+     "motion": "static",
+     "cam": "arc"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The reading was already there: pierced",
+    "kw": "ALREADY"
+   }
+  },
+  {
+   "t": [
+    223.2,
+    226.1
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "scholar_hand_on_text",
+     "motion": "static",
+     "at": 223.64,
+     "slide": "left"
+    },
+    {
+     "slug": "water_spilled_stone",
+     "motion": "static",
+     "cam": "arc",
+     "zoom": 1.2,
+     "at": 224.43,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Not a Christian edit after the fact",
+    "kw": "NOT"
+   }
+  },
+  {
+   "t": [
+    226.1,
+    229.9
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "seventy_scribes_lamps",
+     "motion": "static",
+     "cam": "arc"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "In Jewish hands, centuries before",
+    "kw": "JEWISH HANDS"
+   }
+  },
+  {
+   "t": [
+    229.9,
+    233.57
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "ribs_stretched_macro",
+     "motion": "static",
+     "cam": "arc",
+     "zoom": 1.2
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "A death that is not his own",
+    "kw": "NOT HIS OWN"
+   }
+  },
+  {
+   "t": [
+    233.57,
+    238.39
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "cross_hill_pullback",
+     "motion": "pullback",
+     "at": 234.49,
+     "slide": "left"
+    },
+    {
+     "slug": "kneeling_at_cross",
+     "motion": "pushin",
+     "at": 235.36,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Back to the cross. why that cry matters",
+    "kw": "THE CROSS"
+   }
+  },
+  {
+   "t": [
+    238.39,
+    243.77
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "jerusalem_night_lyre",
+     "motion": "static",
+     "cam": "arc",
+     "zoom": 1.15
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Quoting the opening line of a psalm",
+    "kw": "OPENING LINE"
+   }
+  },
+  {
+   "t": [
+    243.77,
+    247.26
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "david_hands_lyre",
+     "motion": "static",
+     "at": 244.18,
+     "slide": "left"
+    },
+    {
+     "slug": "congregation_hands_lifted",
+     "motion": "static",
+     "cam": "arc",
+     "at": 245.89,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "A pointer to the whole song",
+    "kw": "THE WHOLE SONG"
+   }
+  },
+  {
+   "t": [
+    247.26,
+    250.57
+   ],
+   "tpl": "two_v",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "synagogue_listeners_lean",
+     "motion": "static",
+     "cam": "arc",
+     "at": 248.31,
+     "slide": "left"
+    },
+    {
+     "slug": "alexandria_harbor_night",
+     "motion": "static",
+     "cam": "arc",
+     "zoom": 1.2,
+     "at": 248.42,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The first verse pulls the entire psalm into the room",
+    "kw": "PULLS"
+   }
+  },
+  {
+   "t": [
+    250.57,
+    258.02
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "cry_profile_dark",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "My God, my God, why hast thou forsaken me?",
+    "speaker": "JESUS",
+    "ref": "Matthew 27:46"
+   }
+  },
+  {
+   "t": [
+    258.02,
+    263.79
+   ],
+   "tpl": "two_v",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "face_anguish_closeup",
+     "motion": "pushin",
+     "at": 260.5,
+     "slide": "left"
+    },
+    {
+     "slug": "cry_face_tears",
+     "motion": "pushin",
+     "at": 261.26,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Placing himself as the I of Psalm twenty-two",
+    "kw": "THE I"
+   }
+  },
+  {
+   "t": [
+    263.79,
+    269.56
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "wrists_bound_beam_macro",
+     "motion": "pushin",
+     "zoom": 1.2,
+     "at": 265.62,
+     "slide": "left"
+    },
+    {
+     "slug": "dice_cup_shadow",
+     "motion": "static",
+     "cam": "arc",
+     "at": 267.42,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The wounded hands. the gambled clothes. his own",
+    "kw": "HIS OWN"
+   },
+   "sfx": [
+    [
+     "coins_clinking",
+     267.4,
+     -16
+    ]
+   ]
+  },
+  {
+   "t": [
+    269.56,
+    274.35
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "vesture_seamless_folded",
+     "motion": "static",
+     "cam": "arc",
+     "zoom": 1.2,
+     "at": 271.71,
+     "slide": "left"
+    },
+    {
+     "slug": "john_at_cross_foot",
+     "motion": "pushin",
+     "zoom": 1.15,
+     "at": 272.56,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Exactly as verse eighteen said they would",
+    "kw": "VERSE EIGHTEEN"
+   }
+  },
+  {
+   "t": [
+    274.35,
+    278.67
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "hill_crowd_watching_storm",
+     "motion": "static",
+     "cam": "arc",
+     "zoom": 1.2,
+     "at": 276.46,
+     "slide": "left"
+    },
+    {
+     "slug": "spit_shout_macro",
+     "motion": "static",
+     "cam": "arc",
+     "zoom": 1.2,
+     "at": 277.14,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The whole song. out loud. before witnesses",
+    "kw": "WITNESSES"
+   }
+  },
+  {
+   "t": [
+    278.67,
+    282.45
+   ],
+   "tpl": "full",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "tear_track_macro",
+     "motion": "static",
+     "cam": "arc"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "This one is about me",
+    "kw": "ABOUT ME"
+   }
+  },
+  {
+   "t": [
+    282.45,
+    286.88
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "golgotha_three_crosses_ridge",
+     "motion": "pushin",
+     "zoom": 1.15,
+     "at": 283.19,
+     "slide": "left"
+    },
+    {
+     "slug": "ninth_hour_darkness",
+     "motion": "static",
+     "cam": "arc",
+     "at": 284.02,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Most people stop reading at the cross",
+    "kw": "STOP"
+   }
+  },
+  {
+   "t": [
+    286.88,
+    289.19
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "synagogue_listeners_lean",
+     "motion": "static",
+     "cam": "arc",
+     "zoom": 1.15
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "You miss the most important thing about it",
+    "kw": "MISS"
+   }
+  },
+  {
+   "t": [
+    289.19,
+    292.4
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "empty_tomb_open",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The song does not end in a grave",
+    "kw": "NOT END"
+   },
+   "sfx": [
+    [
+     "stone_roll_tomb",
+     289.3,
+     -12
+    ]
+   ]
+  },
+  {
+   "t": [
+    292.4,
+    296.21
+   ],
+   "tpl": "full",
+   "border_break": {
+    "at": 292.5
+   },
+   "clips": [
+    {
+     "slug": "the_turn",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "It turns. from death to life",
+    "kw": "TURNS"
+   }
+  },
+  {
+   "t": [
+    296.21,
+    301.56
+   ],
+   "tpl": "full",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "risen_worshipper",
+     "motion": "pullback"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The forsaken voice stands up in the congregation",
+    "kw": "STANDS UP"
+   }
+  },
+  {
+   "t": [
+    301.56,
+    306.21
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "risen_hands_raised",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "I will declare thy name unto my brethren: in the midst of the congregation will I praise thee.",
+    "speaker": "PSALM 22",
+    "ref": "v.22 (Hebrews 2:12)"
+   }
+  },
+  {
+   "t": [
+    306.21,
+    308.79
+   ],
+   "tpl": "full",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "clay_potsherd_dust",
+     "motion": "static",
+     "cam": "arc",
+     "zoom": 1.25
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "A dead man declares nothing",
+    "kw": "NOTHING"
+   }
+  },
+  {
+   "t": [
+    308.79,
+    314.15
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "kindreds_bowing",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Alive in the congregation, praising",
+    "kw": "ALIVE"
+   }
+  },
+  {
+   "t": [
+    314.15,
+    319.42
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "two_scrolls_compared",
+     "motion": "static",
+     "cam": "arc",
+     "zoom": 1.2,
+     "at": 315.2,
+     "slide": "left"
+    },
+    {
+     "slug": "david_scroll_sealed",
+     "motion": "static",
+     "cam": "arc",
+     "zoom": 1.15,
+     "at": 317.16,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Mere rescue from the edge of death?",
+    "kw": "MERE RESCUE"
+   }
+  },
+  {
+   "t": [
+    319.42,
+    323.47
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "finished_work",
+     "motion": "pushin",
+     "at": 319.62,
+     "slide": "left"
+    },
+    {
+     "slug": "grave_clothes_folded_macro",
+     "motion": "static",
+     "cam": "arc",
+     "at": 320.16,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The New Testament puts this line in the mouth of the risen Christ",
+    "kw": "RISEN CHRIST"
+   }
+  },
+  {
+   "t": [
+    323.47,
+    327.47
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "cry_ninth_hour",
+     "motion": "pullback",
+     "at": 325.8,
+     "slide": "left"
+    },
+    {
+     "slug": "risen_hero_come",
+     "motion": "pushin",
+     "at": 326.61,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The forsaken man and the living worshipper. the same person",
+    "kw": "THE SAME PERSON"
+   }
+  },
+  {
+   "t": [
+    327.47,
+    332.88
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "empty_tomb_open",
+     "motion": "pushin",
+     "at": 328.19,
+     "slide": "left"
+    },
+    {
+     "slug": "stone_rolled_groove",
+     "motion": "static",
+     "cam": "arc",
+     "at": 331.49,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "God did not leave him in the dust",
+    "kw": "NOT LEAVE"
+   }
+  },
+  {
+   "t": [
+    332.88,
+    337.04
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "parting_storm_light",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "neither hath he hid his face from him; but when he cried unto him, he heard.",
+    "speaker": "PSALM 22",
+    "ref": "v.24b"
+   }
+  },
+  {
+   "t": [
+    337.04,
+    339.87
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "congregation_hands_lifted",
+     "motion": "static",
+     "cam": "arc",
+     "zoom": 1.15
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The song throws its arms open to the world",
+    "kw": "OPEN"
+   }
+  },
+  {
+   "t": [
+    339.87,
+    346.24
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "ends_of_earth",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "All the ends of the world shall remember and turn unto the LORD: and all the kindreds of the nations shall worship before thee.",
+    "speaker": "PSALM 22",
+    "ref": "v.27"
+   }
+  },
+  {
+   "t": [
+    346.24,
+    351.22
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "nations_streaming_wide",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The nations streaming home",
+    "kw": "STREAMING HOME"
+   }
+  },
+  {
+   "t": [
+    351.22,
+    354.64
+   ],
+   "tpl": "full",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "dawn_empty_cross",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Never the end. it was the hinge",
+    "kw": "THE HINGE"
+   },
+   "sfx": [
+    [
+     "dawn_morning_warm",
+     351.3,
+     -14
+    ]
+   ]
+  },
+  {
+   "t": [
+    354.64,
+    359.38
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "david_psalmist",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The very last line David writes",
+    "kw": "LAST LINE"
+   }
+  },
+  {
+   "t": [
+    359.38,
+    364.26
+   ],
+   "tpl": "full",
+   "cap_at": 3.6,
+   "clips": [
+    {
+     "slug": "old_king_hands_rings",
+     "motion": "static",
+     "cam": "arc"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "he hath done this.",
+    "speaker": "PSALM 22",
+    "ref": "v.31b"
+   }
+  },
+  {
+   "t": [
+    364.26,
+    368.7
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "convergence_on_cross",
+     "motion": "pushin",
+     "at": 364.62,
+     "slide": "left"
+    },
+    {
+     "slug": "roads_converge_valley",
+     "motion": "static",
+     "cam": "arc",
+     "zoom": 1.2,
+     "at": 365.33,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "A thousand years later. the same note",
+    "kw": "SAME NOTE"
+   }
+  },
+  {
+   "t": [
+    368.7,
+    370.94
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "vinegar_sponge",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He receives the vinegar",
+    "kw": "VINEGAR"
+   }
+  },
+  {
+   "t": [
+    370.94,
+    375.14
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "finished_work",
+     "motion": "pushin",
+     "zoom": 1.12
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "It is finished.",
+    "speaker": "JESUS",
+    "ref": "John 19:30"
+   }
+  },
+  {
+   "t": [
+    375.14,
+    377.23
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "ninth_hour_darkness",
+     "motion": "static",
+     "cam": "arc",
+     "zoom": 1.2,
+     "at": 375.47,
+     "slide": "left"
+    },
+    {
+     "slug": "morning_birds_hill",
+     "motion": "static",
+     "cam": "arc",
+     "at": 375.97,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Hold the two ends of the song together",
+    "kw": "TWO ENDS"
+   }
+  },
+  {
+   "t": [
+    377.23,
+    382.2
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "substitute_shadow",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He bore the forsaking our sin earned. in our place",
+    "kw": "IN OUR PLACE"
+   }
+  },
+  {
+   "t": [
+    382.2,
+    385.65
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "parting_storm_light",
+     "motion": "pushin",
+     "at": 382.61,
+     "slide": "left"
+    },
+    {
+     "slug": "grave_clothes_folded_macro",
+     "motion": "static",
+     "cam": "arc",
+     "zoom": 1.2,
+     "at": 383.81,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The same psalm tells you how it ends",
+    "kw": "HOW IT ENDS"
+   }
+  },
+  {
+   "t": [
+    385.65,
+    388.5
+   ],
+   "tpl": "two_v",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "the_turn",
+     "motion": "pushin",
+     "zoom": 1.1,
+     "at": 385.85,
+     "slide": "left"
+    },
+    {
+     "slug": "risen_hands_raised",
+     "motion": "static",
+     "at": 386.42,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He heard. he raised him up",
+    "kw": "RAISED"
+   }
+  },
+  {
+   "t": [
+    388.5,
+    392.96
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "kneeling_at_cross",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "So it would never fall on you",
+    "kw": "NEVER FALL ON YOU"
+   }
+  },
+  {
+   "t": [
+    392.96,
+    396.38
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "hand_reaching_closeup",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Hands spread wide enough to reach you",
+    "kw": "WIDE ENOUGH"
+   }
+  },
+  {
+   "t": [
+    396.38,
+    400.4
+   ],
+   "tpl": "quad",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "kindreds_bowing",
+     "motion": "pushin",
+     "zoom": 1.2,
+     "at": 396.6,
+     "slide": "left"
+    },
+    {
+     "slug": "nations_streaming_wide",
+     "motion": "pushin",
+     "zoom": 1.15,
+     "at": 397.42,
+     "slide": "right"
+    },
+    {
+     "slug": "ends_of_earth_faces",
+     "motion": "static",
+     "cam": "arc",
+     "at": 398.08,
+     "slide": "left"
+    },
+    {
+     "slug": "ends_of_earth",
+     "motion": "pushin",
+     "zoom": 1.15,
+     "at": 399.67,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Every kindred. every nation. that includes you",
+    "kw": "YOU"
+   },
+   "sfx": [
+    [
+     "crowd_murmur_distant",
+     396.4,
+     -16
+    ]
+   ]
+  },
+  {
+   "t": [
+    400.4,
+    404.56
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "threshold_open_door",
+     "motion": "static",
+     "cam": "arc"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "You do not have to make yourself worth saving before you come",
+    "kw": "BEFORE YOU COME"
+   },
+   "sfx": [
+    [
+     "footsteps_dirt_approach",
+     400.5,
+     -16
+    ]
+   ]
+  },
+  {
+   "t": [
+    404.56,
+    410.53
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "stone_rolled_groove",
+     "motion": "static",
+     "cam": "arc"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Not what you must do. what he hath done",
+    "kw": "HE HATH DONE"
+   }
+  },
+  {
+   "t": [
+    410.53,
+    416.4
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "risen_worshipper",
+     "motion": "pullback",
+     "at": 411.33,
+     "slide": "left"
+    },
+    {
+     "slug": "morning_birds_hill",
+     "motion": "static",
+     "cam": "arc",
+     "zoom": 1.2,
+     "at": 412.02,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The congregation still has room for you",
+    "kw": "ROOM FOR YOU"
+   },
+   "sfx": [
+    [
+     "crowd_murmur_distant",
+     410.6,
+     -17
+    ]
+   ]
+  },
+  {
+   "t": [
+    416.4,
+    418.2
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "risen_hero_come",
+     "motion": "pushin",
+     "zoom": 1.15
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Come",
+    "kw": "COME"
+   }
+  }
+ ]
+}

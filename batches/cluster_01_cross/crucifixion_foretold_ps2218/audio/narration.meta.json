@@ -1,0 +1,57 @@
+{
+  "folder": "01_The_Crucifixion_Foretold",
+  "stage": "per_turn_synth",
+  "mode": "dialogue_per_turn_with_narrator_atempo",
+  "generated_at": "2026-06-19T18:41:09Z",
+  "model_id": "eleven_v3",
+  "output_format": "mp3_44100_128",
+  "target_seconds": 59.0,
+  "natural_total_seconds": 72.16,
+  "narrator_natural_seconds": 67.12,
+  "quote_total_seconds": 5.04,
+  "narrator_atempo_factor": 1.0,
+  "pre_quote_pause_seconds": 0.4,
+  "post_quote_pause_seconds": 0.0,
+  "pause_total_seconds": 0.4,
+  "final_total_seconds": 72.536,
+  "delta_vs_target_seconds": 13.536,
+  "turns": [
+    {
+      "index": 0,
+      "speaker": "narrator",
+      "chars": 395,
+      "natural_seconds": 31.6,
+      "final_seconds": 31.591,
+      "atempo_applied": true
+    },
+    {
+      "index": 1,
+      "speaker": "david",
+      "chars": 66,
+      "natural_seconds": 5.04,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 2,
+      "speaker": "narrator",
+      "chars": 479,
+      "natural_seconds": 35.52,
+      "final_seconds": 5.04,
+      "atempo_applied": true
+    }
+  ],
+  "speakers": {
+    "narrator": {
+      "voice_id": "LSi9zNCeliLuhIGGS0By",
+      "audio_tag": null
+    },
+    "david": {
+      "voice_id": "puDRtQWF8NtQiPMJygTb",
+      "audio_tag": null
+    }
+  },
+  "settings": {
+    "stability": 0.65
+  }
+}

@@ -1,0 +1,426 @@
+{
+ "_doc": "PIERCED (Zech 12:10) 9:16 SHORT - living-page pilot per LIVINGPAGE_STANDARD 6/7. 16 beats / 59.04s, word-timed slams, takeover on the spear thrust, BORDER-BREAK on 'I will pour' (the heavens rend and grace pours through the frame), sacred bars still, distinct image per beat (reuse only >=8 gap + diff crop). All bars verbatim KJV vs kjv_cache. PUNCH PASS v2: speed ramps (hook+CTA), whip-cuts, flash-frame inserts, cut ticks.",
+ "audio": "../audio/narration.mp3",
+ "total": 59.04,
+ "cut_ticks": true,
+ "beats": [
+  {
+   "t": [
+    0.0,
+    2.94
+   ],
+   "tpl": "full",
+   "punch": true,
+   "ramp": true,
+   "inserts": [
+    {
+     "at": 0.95,
+     "slug": "nail_through_hand",
+     "frames": 4
+    }
+   ],
+   "sfx": [
+    [
+     "impact_low_boom",
+     0.1,
+     -12
+    ]
+   ],
+   "clips": [
+    {
+     "slug": "spear_thrust_up",
+     "motion": "pushin"
+    }
+   ],
+   "takeover": {
+    "panel": 0,
+    "start": 1.79,
+    "zoom": 1.35
+   },
+   "cap": {
+    "type": "caption",
+    "text": "A Roman soldier raised his spear",
+    "kw": "SPEAR"
+   }
+  },
+  {
+   "t": [
+    2.94,
+    6.2
+   ],
+   "tpl": "full",
+   "whip": true,
+   "inserts": [
+    {
+     "at": 4.4,
+     "slug": "spear_thrust_up",
+     "frames": 4
+    }
+   ],
+   "clips": [
+    {
+     "slug": "zechariah_night_scroll",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "And finished a sentence God started writing",
+    "kw": "GOD"
+   }
+  },
+  {
+   "t": [
+    6.2,
+    12.06
+   ],
+   "tpl": "big_inset",
+   "clips": [
+    {
+     "slug": "prophet_scroll",
+     "motion": "static",
+     "cam": "arc"
+    },
+    {
+     "slug": "nail_through_hand",
+     "motion": "pushin",
+     "at": 10.41,
+     "slide": "up",
+     "sfx": "nail_strike_single"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The LORD himself is speaking",
+    "kw": "THE LORD"
+   }
+  },
+  {
+   "t": [
+    12.06,
+    18.46
+   ],
+   "tpl": "full",
+   "sfx": [
+    [
+     "air_hollow_desolate",
+     12.1,
+     -17
+    ]
+   ],
+   "clips": [
+    {
+     "slug": "face_on_cross",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "and they shall look upon me whom they have pierced, and they shall mourn for him, as one mourneth for his only son",
+    "speaker": "THE LORD",
+    "ref": "12:10b"
+   }
+  },
+  {
+   "t": [
+    18.46,
+    21.59
+   ],
+   "tpl": "stack_h",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "blood_water_wood",
+     "motion": "pushin",
+     "at": 18.64,
+     "slide": "left"
+    },
+    {
+     "slug": "mourners_only_son",
+     "motion": "pushin",
+     "at": 19.83,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Look upon ME. Mourn for HIM",
+    "kw": "ME HIM"
+   }
+  },
+  {
+   "t": [
+    21.59,
+    24.29
+   ],
+   "tpl": "stack_h",
+   "whip": true,
+   "clips": [
+    {
+     "slug": "us_under_cross_shadow",
+     "motion": "pushin"
+    },
+    {
+     "slug": "crowd_mocking",
+     "motion": "pushin",
+     "at": 23.44,
+     "slide": "up",
+     "flash": false
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The LORD himself, come in the flesh",
+    "kw": "IN THE FLESH"
+   }
+  },
+  {
+   "t": [
+    24.29,
+    26.45
+   ],
+   "tpl": "full",
+   "punch": true,
+   "sfx": [
+    [
+     "impact_low_boom",
+     24.35,
+     -13
+    ]
+   ],
+   "clips": [
+    {
+     "slug": "john_watching",
+     "motion": "static",
+     "cam": "arc"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "John watched the spear go in",
+    "kw": "JOHN"
+   }
+  },
+  {
+   "t": [
+    26.45,
+    30.54
+   ],
+   "tpl": "full",
+   "cap_at": 2.02,
+   "clips": [
+    {
+     "slug": "golgotha_hill_wide",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "They shall look on him whom they pierced.",
+    "speaker": "JOHN",
+    "ref": "19:37b"
+   }
+  },
+  {
+   "t": [
+    30.54,
+    32.62
+   ],
+   "tpl": "full",
+   "whip": true,
+   "clips": [
+    {
+     "slug": "soldiers_gambling",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The soldier saw a dying man",
+    "kw": "DYING MAN"
+   }
+  },
+  {
+   "t": [
+    32.62,
+    36.05
+   ],
+   "tpl": "stack_h",
+   "clips": [
+    {
+     "slug": "seamless_robe_lots",
+     "motion": "pushin"
+    },
+    {
+     "slug": "spear_thrust_up",
+     "motion": "pushin",
+     "zoom": 1.15,
+     "at": 33.12,
+     "slide": "up",
+     "flash": false
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "John saw God keeping his own word",
+    "kw": "HIS OWN WORD"
+   }
+  },
+  {
+   "t": [
+    36.05,
+    38.08
+   ],
+   "tpl": "stack_h",
+   "clips": [
+    {
+     "slug": "zechariah_night_scroll",
+     "motion": "pushin",
+     "at": 36.19,
+     "slide": "left"
+    },
+    {
+     "slug": "prophet_scroll",
+     "motion": "static",
+     "cam": "arc",
+     "zoom": 1.2
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Hear how the promise begins",
+    "kw": "THE PROMISE"
+   }
+  },
+  {
+   "t": [
+    38.08,
+    43.84
+   ],
+   "tpl": "full",
+   "border_break": {
+    "at": 38.3
+   },
+   "clips": [
+    {
+     "slug": "grace_poured_sky",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "I will pour upon the house of David, and upon the inhabitants of Jerusalem, the spirit of grace and of supplications",
+    "speaker": "THE LORD",
+    "ref": "12:10a"
+   }
+  },
+  {
+   "t": [
+    43.84,
+    46.11
+   ],
+   "tpl": "full",
+   "whip": true,
+   "clips": [
+    {
+     "slug": "look_up_faces",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He gives the tears he asks for",
+    "kw": "TEARS"
+   }
+  },
+  {
+   "t": [
+    46.11,
+    48.87
+   ],
+   "tpl": "stack_h",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "face_on_cross",
+     "motion": "pushin",
+     "at": 47.77,
+     "slide": "left"
+    },
+    {
+     "slug": "blood_water_wood",
+     "motion": "pushin",
+     "zoom": 1.2
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He did not send a stranger. He came himself",
+    "kw": "HE CAME HIMSELF"
+   }
+  },
+  {
+   "t": [
+    48.87,
+    52.33
+   ],
+   "tpl": "full",
+   "ramp": true,
+   "clips": [
+    {
+     "slug": "nail_through_hand",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Do what the verse says. Look at him",
+    "kw": "LOOK"
+   }
+  },
+  {
+   "t": [
+    52.33,
+    57.52
+   ],
+   "tpl": "full",
+   "sfx": [
+    [
+     "dawn_morning_warm",
+     52.4,
+     -15
+    ]
+   ],
+   "clips": [
+    {
+     "slug": "mourners_only_son",
+     "motion": "pushin",
+     "zoom": 1.12
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Grace turns looking into mourning, and mourning into trust",
+    "kw": "TRUST"
+   }
+  },
+  {
+   "t": [
+    57.52,
+    59.04
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "risen_mercy_hand",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Look, and live",
+    "kw": "LIVE"
+   }
+  }
+ ]
+}

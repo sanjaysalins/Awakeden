@@ -2,7 +2,9 @@
      4-voice long-form read: narrator (default) · scripture (KJV narration/prophets) ·
      god (Num 21:8 first-person command) · jesus (John 3:14-15 + 12:32, His own words).
      Words are FROZEN — this file only adds speaker tags; spoken text is verified
-     equal to the LOCKED narration.md. -->
+     equal to the LOCKED narration.md.
+     2026-07-03: hand-mirrored the v1.5 panel fixes (M2 Num 21:7 full span + request-vs-
+     confession rewording; M6 "might live") — verified word-equal to narration.md v1.5. -->
 
 <speaker name="narrator">A whole camp is dying of snakebite — and God's remedy is not to kill the snakes, or heal the wounds, or hand out an antidote. He tells them to look at a piece of metal on a pole. Look, and live. It is one of the strangest cures in the Bible.</speaker>
 
@@ -16,8 +18,8 @@
 <speaker name="narrator">Picture the camp. The venom is already moving, and there is nothing a bitten man can do to stop it — he cannot run from a poison inside his own blood.</speaker>
 
 <speaker name="narrator">And notice what the people ask for. They come to Moses and confess:</speaker>
-<speaker name="scripture">"We have sinned… pray unto the LORD, that he take away the serpents from us."</speaker>
-<speaker name="narrator">Their confession is real — but look at the cure they imagine: take away the serpents, make the threat go away. That would not save a single person already bitten; the venom is already in the blood. Even their honest confession reached only for the danger outside. And that is the human problem in miniature: we admit we have sinned, and still we beg God mostly to change our circumstances — when the poison is already within.</speaker>
+<speaker name="scripture">"We have sinned, for we have spoken against the LORD, and against thee; pray unto the LORD, that he take away the serpents from us."</speaker>
+<speaker name="narrator">Their confession is real — they name the sin itself. But look at the cure they ask for: take away the serpents, make the threat go away. That would not save a single person already bitten; the venom is already in the blood. Even as they confess, their request reaches only for the danger outside. And that is the human problem in miniature: we admit we have sinned, and still we beg God mostly to change our circumstances — when the poison is already within.</speaker>
 
 <speaker name="narrator">Now watch what God actually does — because He does not do what they asked.</speaker>
 
@@ -64,7 +66,7 @@
 
 <speaker name="narrator">That is the cross. We are all bitten; the poison of sin is already in us, and no self-improvement reaches it. So God lifted up His Son, who</speaker>
 <speaker name="scripture">"his own self bare our sins in his own body on the tree."</speaker>
-<speaker name="narrator">The curse fell on the lifted One, so that it would pass by everyone who looks to Him.</speaker>
+<speaker name="narrator">The curse fell on the lifted One, so that everyone who looks to Him might live.</speaker>
 
 <speaker name="narrator">It cost the bitten Israelite nothing but a turn of the eyes. It cost the Son everything.</speaker>
 

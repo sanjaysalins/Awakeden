@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Awakeden - The Inkwell</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#0e0d0b;
+    --paper-2:#141210;
+    --ink:#f0eadb;
+    --ink-dim:#9b9483;
+    --red:#c1332a;
+    --red-deep:#8a1d15;
+    --gold:#c9a45c;
+    --border-w:3px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Archivo',sans-serif;
+    font-size:16px;
+    line-height:1.55;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--red);color:var(--ink)}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+
+  /* ---------- shared ink vocabulary ---------- */
+  .display{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;line-height:.92;letter-spacing:.01em}
+  .eyebrow{
+    font-size:.72rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;
+    color:var(--ink-dim);
+  }
+  .eyebrow .tick{color:var(--red)}
+  .halftone{position:relative}
+  .halftone::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:radial-gradient(circle, rgba(240,234,219,.10) 1px, transparent 1.6px);
+    background-size:7px 7px;
+    mask-image:linear-gradient(115deg, rgba(0,0,0,.9), transparent 55%);
+    -webkit-mask-image:linear-gradient(115deg, rgba(0,0,0,.9), transparent 55%);
+  }
+  .torn{
+    clip-path:polygon(
+      0% 2.2%, 3% .4%, 7% 1.8%, 12% .2%, 18% 1.6%, 25% .5%, 33% 1.9%, 41% .3%,
+      50% 1.5%, 58% .4%, 66% 1.8%, 74% .3%, 82% 1.6%, 90% .5%, 96% 1.9%, 100% .8%,
+      99.6% 8%, 100% 16%, 99.4% 25%, 100% 36%, 99.5% 48%, 100% 60%, 99.4% 72%, 100% 84%, 99.6% 93%,
+      100% 98.2%, 96% 99.6%, 89% 98.4%, 81% 99.7%, 72% 98.3%, 62% 99.6%, 52% 98.5%,
+      42% 99.7%, 33% 98.3%, 24% 99.6%, 16% 98.4%, 9% 99.7%, 3% 98.5%, 0% 99.2%,
+      .5% 91%, 0% 80%, .6% 68%, 0% 55%, .5% 42%, 0% 30%, .6% 18%, 0% 9%
+    );
+  }
+  .redbar{
+    background:var(--red);
+    color:var(--ink);
+    font-family:'Anton',sans-serif;text-transform:uppercase;
+    padding:.85rem 1.4rem;
+    box-shadow:6px 6px 0 rgba(0,0,0,.55);
+    border:2px solid rgba(240,234,219,.25);
+  }
+  .btn{
+    display:inline-block;font-family:'Anton',sans-serif;text-transform:uppercase;
+    font-size:1.05rem;letter-spacing:.06em;padding:.9rem 1.9rem;
+    border:var(--border-w) solid var(--ink);
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease;
+  }
+  .btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+  .btn-red{background:var(--red);border-color:var(--red);box-shadow:6px 6px 0 var(--ink)}
+  .btn-red:hover{transform:translate(-2px,-2px);box-shadow:9px 9px 0 var(--ink)}
+  .btn-ghost{background:transparent;color:var(--ink);box-shadow:6px 6px 0 var(--red-deep)}
+  .btn-ghost:hover{background:var(--ink);color:var(--paper);transform:translate(-2px,-2px);box-shadow:9px 9px 0 var(--red-deep)}
+
+  /* ---------- nav ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(14,13,11,.94);
+    backdrop-filter:blur(6px);
+    border-bottom:2px solid var(--ink);
+  }
+  .nav-inner{
+    max-width:1280px;margin:0 auto;padding:.8rem 2rem;
+    display:flex;align-items:center;gap:2.5rem;
+  }
+  .wordmark{font-family:'Anton',sans-serif;font-size:1.7rem;text-transform:uppercase;letter-spacing:.04em;line-height:1}
+  .wordmark em{font-style:normal;color:var(--red)}
+  .wordmark small{
+    display:block;font-family:'Archivo',sans-serif;font-weight:700;
+    font-size:.52rem;letter-spacing:.34em;color:var(--ink-dim);margin-top:.15rem;
+  }
+  nav{margin-left:auto;display:flex;gap:1.8rem;align-items:center}
+  nav a{
+    font-weight:700;font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;
+    padding:.35rem 0;border-bottom:2px solid transparent;
+    transition:border-color .15s ease,color .15s ease;
+  }
+  nav a:hover{border-color:var(--red);color:#fff}
+  .nav-kjv{
+    font-size:.6rem;font-weight:700;letter-spacing:.26em;color:var(--paper);
+    background:var(--red);padding:.35rem .6rem;border:0;
+  }
+
+  /* ---------- hero cover ---------- */
+  .hero{
+    position:relative;
+    max-width:1280px;margin:0 auto;
+    padding:4.5rem 2rem 6.5rem;
+    display:grid;
+    grid-template-columns:minmax(0,7fr) minmax(0,5fr);
+    gap:0;
+    align-items:center;
+  }
+  .hero::after{ /* faint oversized issue number ghosted into the black paper */
+    content:"No.1";
+    position:absolute;right:-1rem;bottom:-3.2rem;z-index:0;
+    font-family:'Anton',sans-serif;font-size:clamp(8rem,22vw,19rem);
+    color:transparent;-webkit-text-stroke:1px rgba(240,234,219,.07);
+    pointer-events:none;line-height:1;
+  }
+  .hero-copy{position:relative;z-index:3;padding-right:3.5rem}
+  .hero-tag{display:flex;align-items:center;gap:.8rem;margin-bottom:1.6rem}
+  .hero-tag .rule{flex:0 0 3rem;height:2px;background:var(--red)}
+  .hero-title{
+    font-size:clamp(3.2rem,8.5vw,7.4rem);
+    margin:0 0 1.4rem;
+  }
+  .hero-title .row{display:block}
+  .hero-title .jesus{
+    color:var(--red);
+    text-shadow:4px 4px 0 rgba(0,0,0,.7);
+  }
+  .hero-title .whole{
+    color:transparent;-webkit-text-stroke:2px var(--ink);
+  }
+  .hero-sub{
+    font-family:'Anton',sans-serif;text-transform:uppercase;
+    font-size:clamp(1rem,2vw,1.45rem);letter-spacing:.14em;
+    color:var(--ink-dim);margin-bottom:1.6rem;
+  }
+  .hero-sub b{color:var(--ink);font-weight:400}
+  .hero-blurb{max-width:34rem;color:var(--ink-dim);font-size:1.02rem;margin-bottom:2.2rem}
+  .hero-blurb strong{color:var(--ink)}
+  .hero-ctas{display:flex;gap:1.2rem;flex-wrap:wrap}
+
+  .hero-cover{
+    position:relative;z-index:2;
+    justify-self:end;
+    width:min(100%,420px);
+    transform:rotate(2.2deg);
+    transition:transform .35s ease;
+  }
+  .hero-cover:hover{transform:rotate(.6deg) translateY(-4px)}
+  .cover-frame{
+    position:relative;
+    border:6px solid var(--ink);
+    box-shadow:14px 14px 0 var(--red-deep), 14px 14px 0 2px rgba(0,0,0,.4);
+    background:#000;
+  }
+  .cover-frame img{width:100%;aspect-ratio:9/16;object-fit:cover;filter:contrast(1.05) saturate(.92)}
+  .cover-frame::after{ /* halftone shadow eating the lower corner */
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:radial-gradient(circle, rgba(0,0,0,.55) 1.2px, transparent 1.7px);
+    background-size:6px 6px;
+    mask-image:linear-gradient(200deg, transparent 62%, #000 100%);
+    -webkit-mask-image:linear-gradient(200deg, transparent 62%, #000 100%);
+  }
+  .cover-plate{
+    position:absolute;top:-1.1rem;left:-1.4rem;z-index:4;
+    background:var(--paper);border:2px solid var(--ink);
+    padding:.45rem .8rem;
+    font-size:.6rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
+    transform:rotate(-2deg);
+  }
+  .cover-plate span{color:var(--gold)}
+  .hero-redbar{
+    position:absolute;z-index:5;
+    left:-20%;bottom:14%;
+    width:116%;
+    transform:rotate(-2deg);
+    font-size:clamp(.95rem,1.6vw,1.25rem);
+    letter-spacing:.03em;
+  }
+  .hero-redbar .who{
+    display:block;font-family:'Archivo',sans-serif;font-weight:700;
+    font-size:.58rem;letter-spacing:.3em;margin-top:.35rem;color:rgba(240,234,219,.75);
+  }
+
+  /* ---------- section chrome ---------- */
+  section{position:relative}
+  .section-head{
+    max-width:1280px;margin:0 auto;padding:0 2rem;
+    display:flex;align-items:baseline;gap:1.6rem;flex-wrap:wrap;
+  }
+  .section-head h2{font-size:clamp(2.2rem,5vw,4rem)}
+  .section-head h2 em{font-style:normal;color:var(--red)}
+  .section-head .count{
+    font-family:'Anton',sans-serif;font-size:1rem;color:var(--paper);
+    background:var(--ink);padding:.2rem .6rem;transform:translateY(-.4rem)
+  }
+  .section-head p{flex-basis:100%;max-width:44rem;color:var(--ink-dim);margin-top:.6rem}
+
+  /* ---------- issues rail ---------- */
+  .issues{padding:5.5rem 0 4rem;border-top:2px solid var(--ink)}
+  .rail{
+    display:grid;
+    grid-auto-flow:column;
+    grid-auto-columns:262px;
+    gap:2.2rem;
+    overflow-x:auto;
+    padding:3rem 2rem 3.5rem;
+    max-width:1280px;margin:0 auto;
+    scroll-snap-type:x proximity;
+    scrollbar-color:var(--red) var(--paper-2);
+  }
+  .rail::-webkit-scrollbar{height:8px}
+  .rail::-webkit-scrollbar-track{background:var(--paper-2)}
+  .rail::-webkit-scrollbar-thumb{background:var(--red)}
+  .issue{
+    scroll-snap-align:start;
+    position:relative;
+    background:var(--paper-2);
+    border:var(--border-w) solid var(--ink);
+    box-shadow:8px 8px 0 rgba(0,0,0,.6);
+    transition:transform .22s ease, box-shadow .22s ease;
+  }
+  .issue:nth-child(odd){transform:rotate(-1.4deg)}
+  .issue:nth-child(even){transform:rotate(1.2deg) translateY(10px)}
+  .issue:hover{transform:rotate(0) translateY(-6px);box-shadow:12px 12px 0 var(--red-deep);z-index:3}
+  .issue:focus-within{transform:rotate(0) translateY(-6px);box-shadow:12px 12px 0 var(--red-deep)}
+  .issue a{display:block}
+  .issue a:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+  .issue-img{position:relative;background:#000}
+  .issue-img img{width:100%;aspect-ratio:9/14;object-fit:cover;object-position:top;filter:saturate(.9) contrast(1.04)}
+  .issue-img::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(180deg, transparent 68%, rgba(14,13,11,.88) 100%);
+  }
+  .issue-no{
+    position:absolute;top:-.95rem;left:-.95rem;z-index:4;
+    font-family:'Anton',sans-serif;font-size:1.15rem;line-height:1;
+    background:var(--red);color:var(--ink);
+    padding:.5rem .55rem .4rem;
+    border:2px solid var(--ink);
+    box-shadow:4px 4px 0 rgba(0,0,0,.6);
+  }
+  .issue-body{padding:1rem 1.1rem 1.25rem;border-top:var(--border-w) solid var(--ink)}
+  .issue-body h3{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:1.3rem;line-height:1;margin-bottom:.4rem}
+  .issue-ref{font-size:.62rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--red);margin-bottom:.55rem}
+  .issue-hook{font-size:.82rem;color:var(--ink-dim);line-height:1.5}
+  .rail-hint{
+    max-width:1280px;margin:0 auto;padding:0 2rem;
+    font-size:.66rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-dim);
+  }
+  .rail-hint b{color:var(--red)}
+
+  /* ---------- collected editions ---------- */
+  .editions{padding:5.5rem 0 6rem;border-top:2px solid var(--ink)}
+  .ed-grid{
+    max-width:1280px;margin:3.2rem auto 0;padding:0 2rem;
+    display:grid;grid-template-columns:1fr 1fr;gap:2.6rem;
+  }
+  .ed-card{
+    position:relative;
+    background:var(--paper-2);
+    border:var(--border-w) solid var(--ink);
+    box-shadow:10px 10px 0 rgba(0,0,0,.6);
+    transition:transform .22s ease, box-shadow .22s ease;
+  }
+  .ed-card:nth-child(odd){transform:rotate(-.6deg)}
+  .ed-card:nth-child(even){transform:rotate(.6deg) translateY(8px)}
+  .ed-card:hover,.ed-card:focus-within{transform:rotate(0) translateY(-5px);box-shadow:14px 14px 0 var(--red-deep);z-index:3}
+  .ed-card a{display:block}
+  .ed-card a:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+  .ed-img{position:relative;background:#000}
+  .ed-img img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center 30%;filter:saturate(.9) contrast(1.05)}
+  .ed-img::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(180deg, transparent 55%, rgba(14,13,11,.85) 100%);
+  }
+  .ed-badge{
+    position:absolute;top:-1rem;left:1.3rem;z-index:4;
+    background:var(--paper);border:2px solid var(--ink);
+    padding:.4rem .75rem;
+    font-size:.6rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;
+    box-shadow:4px 4px 0 rgba(0,0,0,.6);
+  }
+  .ed-badge b{color:var(--gold);font-weight:700}
+  .ed-card.studio .ed-badge{border-style:dashed}
+  .ed-card.studio .ed-img img{filter:grayscale(.5) contrast(1.05) brightness(.82)}
+  .ed-body{padding:1.3rem 1.5rem 1.6rem;border-top:var(--border-w) solid var(--ink)}
+  .ed-body h3{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:1.85rem;line-height:1;margin:.35rem 0 .6rem}
+  .ed-runtime{
+    display:inline-block;margin-left:.8rem;
+    font-family:'Archivo',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.26em;
+    color:var(--ink-dim);vertical-align:middle;
+  }
+  .ed-blurb{font-size:.92rem;color:var(--ink-dim);line-height:1.55;max-width:32rem}
+
+  /* ---------- the double red-letter bar ---------- */
+  .redletter{
+    border-top:2px solid var(--ink);
+    border-bottom:2px solid var(--ink);
+    background:
+      radial-gradient(circle at 20% 10%, rgba(193,51,42,.10), transparent 45%),
+      var(--paper-2);
+    padding:6rem 2rem;
+    overflow:hidden;
+  }
+  .redletter::before{
+    mask-image:none;-webkit-mask-image:none;
+    opacity:.5;
+  }
+  .rl-inner{max-width:960px;margin:0 auto;position:relative;z-index:2}
+  .rl-label{
+    text-align:center;margin-bottom:3.2rem;
+  }
+  .rl-label .eyebrow{color:var(--ink)}
+  .rl-quote{
+    display:block;
+    font-family:'Anton',sans-serif;text-transform:uppercase;
+    font-size:clamp(1.35rem,3.6vw,2.6rem);
+    line-height:1.12;
+    color:var(--ink);
+    background:var(--red);
+    border:2px solid rgba(240,234,219,.3);
+    box-shadow:8px 8px 0 rgba(0,0,0,.55);
+    padding:1.4rem 2rem 1.2rem;
+  }
+  .rl-quote .cite{
+    display:block;font-family:'Archivo',sans-serif;font-weight:700;
+    font-size:.66rem;letter-spacing:.32em;margin-top:.9rem;
+    color:rgba(240,234,219,.8);
+  }
+  .rl-row{position:relative}
+  .rl-row.first .rl-quote{transform:rotate(-1.1deg)}
+  .rl-row.second .rl-quote{transform:rotate(1deg)}
+  .rl-bridge{
+    display:flex;flex-direction:column;align-items:center;gap:.55rem;
+    padding:2.2rem 0;
+  }
+  .rl-bridge .stem{width:2px;height:2.6rem;background:var(--ink);opacity:.5}
+  .rl-bridge .years{
+    font-family:'Anton',sans-serif;text-transform:uppercase;font-size:.95rem;letter-spacing:.3em;
+    color:var(--gold);
+  }
+  .rl-note{
+    text-align:center;margin-top:3rem;color:var(--ink-dim);font-size:.95rem;
+    max-width:36rem;margin-left:auto;margin-right:auto;
+  }
+  .rl-note strong{color:var(--ink)}
+
+  /* ---------- the plan ---------- */
+  .plan{padding:6rem 0 6.5rem}
+  .plan-grid{
+    max-width:1280px;margin:3rem auto 0;padding:0 2rem;
+    display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;
+  }
+  .plan-card{
+    background:var(--paper-2);
+    border:var(--border-w) solid var(--ink);
+    box-shadow:8px 8px 0 rgba(0,0,0,.6);
+    padding:1.8rem 1.6rem 2rem;
+    position:relative;
+  }
+  .plan-card.now{border-color:var(--red);box-shadow:8px 8px 0 var(--red-deep)}
+  .plan-status{
+    display:inline-block;font-family:'Anton',sans-serif;text-transform:uppercase;
+    font-size:.85rem;letter-spacing:.14em;
+    padding:.3rem .7rem;margin-bottom:1.2rem;
+    border:2px solid var(--ink);
+  }
+  .plan-card.now .plan-status{background:var(--red);border-color:var(--red)}
+  .plan-card h3{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:1.7rem;line-height:1;margin-bottom:.9rem}
+  .plan-card p{color:var(--ink-dim);font-size:.92rem;margin-bottom:1.1rem}
+  .plan-card ul{list-style:none}
+  .plan-card li{
+    font-size:.85rem;padding:.5rem 0 .5rem 1.3rem;position:relative;
+    border-top:1px solid rgba(240,234,219,.12);
+  }
+  .plan-card li::before{
+    content:"";position:absolute;left:0;top:1rem;
+    width:.55rem;height:.55rem;background:var(--red);
+  }
+  .plan-card.studio li::before{background:transparent;border:2px solid var(--ink-dim);top:.9rem}
+  .plan-card.next li::before{background:transparent;border:2px dashed var(--ink-dim);top:.9rem}
+
+  /* ---------- footer ---------- */
+  footer{
+    border-top:2px solid var(--ink);
+    background:var(--paper-2);
+    padding:3.5rem 2rem 2.5rem;
+  }
+  .foot-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:2.5rem}
+  .foot-mission{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:1.5rem;line-height:1.1;max-width:22rem}
+  .foot-mission em{font-style:normal;color:var(--red)}
+  .foot-col h4{font-size:.66rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:1rem}
+  .foot-col a{display:block;font-size:.9rem;padding:.3rem 0;color:var(--ink)}
+  .foot-col a:hover{color:var(--red)}
+  .foot-note{
+    max-width:1280px;margin:3rem auto 0;padding-top:1.4rem;
+    border-top:1px solid rgba(240,234,219,.15);
+    display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;
+    font-size:.72rem;color:var(--ink-dim);
+  }
+  .foot-note .red{color:var(--red);font-weight:700}
+
+  /* ---------- motion + responsive ---------- */
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{transition:none!important;animation:none!important}
+    html{scroll-behavior:auto}
+    .issue:nth-child(odd),.issue:nth-child(even){transform:none}
+  }
+  @media (max-width:980px){
+    .hero{grid-template-columns:1fr;padding-bottom:5rem}
+    .hero-cover{justify-self:center;margin-top:3.5rem;width:min(100%,360px)}
+    .hero-redbar{left:-6%;width:112%}
+    .plan-grid{grid-template-columns:1fr}
+    .ed-grid{grid-template-columns:1fr}
+    .foot-inner{grid-template-columns:1fr;gap:2rem}
+    .hero::after{right:0;bottom:-2rem}
+  }
+  @media (max-width:640px){
+    .nav-inner{padding:.7rem 1rem;gap:1rem;flex-wrap:wrap}
+    nav{gap:1rem;flex-wrap:wrap}
+    .nav-kjv{display:none}
+    .hero{padding:3rem 1.25rem 4rem}
+    .section-head,.rail-hint{padding:0 1.25rem}
+    .rail{padding:2.5rem 1.25rem 3rem;grid-auto-columns:230px;gap:1.6rem}
+    .redletter{padding:4.5rem 1.25rem}
+    footer{padding:3rem 1.25rem 2rem}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a class="wordmark" href="#top">Awaked<em>e</em>n<small>Comic Bible Shorts</small></a>
+    <nav aria-label="Main">
+      <a href="#issues">Catalogue</a>
+      <a href="#issues">Read</a>
+      <a href="#plan">The Plan</a>
+      <a href="#about">About</a>
+    </nav>
+    <span class="nav-kjv">KJV &middot; Red Letter</span>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO: the cover ================= -->
+  <section class="hero halftone" id="about" aria-label="Awakeden">
+    <div class="hero-copy">
+      <div class="hero-tag">
+        <span class="rule" aria-hidden="true"></span>
+        <span class="eyebrow">Hand-inked <span class="tick">&#9670;</span> Old Testament to New <span class="tick">&#9670;</span> 9:16 panels</span>
+      </div>
+      <h1 class="hero-title display">
+        <span class="row">Finding</span>
+        <span class="row"><span class="jesus">Jesus</span> in the</span>
+        <span class="row whole">whole Bible,</span>
+        <span class="row">one panel</span>
+        <span class="row">at a time.</span>
+      </h1>
+      <p class="hero-sub">Comic Bible shorts, inked on black paper. <b>Every piece lands on Jesus.</b></p>
+      <p class="hero-blurb">
+        Genesis to Revelation, drawn as it reads: strange, urgent, true.
+        Scripture is quoted <strong>verbatim from the King James Version</strong> and always
+        printed in red. The ink is ours. The words are not.
+      </p>
+      <div class="hero-ctas">
+        <a class="btn btn-red" href="#issues">Read the comics</a>
+        <a class="btn btn-ghost" href="#plan">Coming to YouTube</a>
+      </div>
+    </div>
+
+    <div class="hero-cover">
+      <div class="cover-plate">Awakeden Comics &middot; <span>No. 1</span> &middot; First Printing</div>
+      <div class="cover-frame torn">
+        <img src="../assets/study/read/ps22-01-crucifixion-foretold/beat_01.jpg"
+             alt="Inked panel: soldiers' hands casting lots for a garment beneath the cross" loading="eager">
+      </div>
+      <blockquote class="hero-redbar redbar">
+        &ldquo;They part my garments among them, and cast lots upon my vesture.&rdquo;
+        <span class="who">Psalm 22:18 &middot; written ten centuries before the cross</span>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ================= LATEST ISSUES ================= -->
+  <section class="issues" id="issues" aria-label="Latest issues">
+    <div class="section-head">
+      <h2 class="display">Latest <em>issues</em></h2>
+      <span class="count">Cluster 1 &middot; The Cross</span>
+      <p>Ten issues, read in the order the night unfolded: from the garden where three
+         fishermen fell asleep, to the hill where the last word was a bedtime prayer.</p>
+    </div>
+
+    <div class="rail" role="list">
+
+      <article class="issue" role="listitem">
+        <span class="issue-no" aria-hidden="true">#01</span>
+        <a href="../study/could-ye-not-watch-one-hour.html">
+          <div class="issue-img"><img src="../assets/study/read/could-ye-not-watch-one-hour/beat_01.jpg" alt="Could Ye Not Watch One Hour, panel one" loading="lazy"></div>
+          <div class="issue-body">
+            <h3>Could Ye Not Watch One Hour</h3>
+            <p class="issue-ref">Matthew 26:40</p>
+            <p class="issue-hook">Jesus asked three fishermen for one thing. They failed inside an hour.</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="issue" role="listitem">
+        <span class="issue-no" aria-hidden="true">#02</span>
+        <a href="../study/thirty-pieces-of-silver.html">
+          <div class="issue-img"><img src="../assets/study/read/thirty-pieces-of-silver/beat_01.jpg" alt="Thirty Pieces of Silver, panel one" loading="lazy"></div>
+          <div class="issue-body">
+            <h3>Thirty Pieces of Silver</h3>
+            <p class="issue-ref">Zechariah 11:13</p>
+            <p class="issue-hook">Zechariah named the price of betrayal five centuries before Judas counted it out.</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="issue" role="listitem">
+        <span class="issue-no" aria-hidden="true">#03</span>
+        <a href="../study/ps22-01-crucifixion-foretold.html">
+          <div class="issue-img"><img src="../assets/study/read/ps22-01-crucifixion-foretold/beat_02.jpg" alt="The Crucifixion Foretold, panel two" loading="lazy"></div>
+          <div class="issue-body">
+            <h3>The Crucifixion Foretold</h3>
+            <p class="issue-ref">Psalm 22:18</p>
+            <p class="issue-hook">Ten centuries before the cross, a song recorded exactly how a dying man's clothes would be divided.</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="issue" role="listitem">
+        <span class="issue-no" aria-hidden="true">#04</span>
+        <a href="../study/ps22-03-forsaken-cry.html">
+          <div class="issue-img"><img src="../assets/study/read/ps22-03-forsaken-cry/beat_01.jpg" alt="The Forsaken Cry, panel one" loading="lazy"></div>
+          <div class="issue-body">
+            <h3>The Forsaken Cry</h3>
+            <p class="issue-ref">Psalm 22:1</p>
+            <p class="issue-hook">Jesus reached for words already written.</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="issue" role="listitem">
+        <span class="issue-no" aria-hidden="true">#05</span>
+        <a href="../study/today-in-paradise.html">
+          <div class="issue-img"><img src="../assets/study/read/today-in-paradise/beat_01.jpg" alt="Today in Paradise, panel one" loading="lazy"></div>
+          <div class="issue-body">
+            <h3>Today in Paradise</h3>
+            <p class="issue-ref">Luke 23:43</p>
+            <p class="issue-hook">Two thieves. Same cross. Two answers.</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="issue" role="listitem">
+        <span class="issue-no" aria-hidden="true">#06</span>
+        <a href="../study/woman-behold-thy-son.html">
+          <div class="issue-img"><img src="../assets/study/read/woman-behold-thy-son/beat_01.jpg" alt="Woman Behold Thy Son, panel one" loading="lazy"></div>
+          <div class="issue-body">
+            <h3>Woman Behold Thy Son</h3>
+            <p class="issue-ref">John 19:26</p>
+            <p class="issue-hook">One dark sentence.</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="issue" role="listitem">
+        <span class="issue-no" aria-hidden="true">#07</span>
+        <a href="../study/ps22-08-i-thirst.html">
+          <div class="issue-img"><img src="../assets/study/read/ps22-08-i-thirst/beat_01.jpg" alt="I Thirst, panel one" loading="lazy"></div>
+          <div class="issue-body">
+            <h3>I Thirst</h3>
+            <p class="issue-ref">John 19:28</p>
+            <p class="issue-hook">The One who made every ocean gasped two words.</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="issue" role="listitem">
+        <span class="issue-no" aria-hidden="true">#08</span>
+        <a href="../study/it-is-finished.html">
+          <div class="issue-img"><img src="../assets/study/read/it-is-finished/beat_17.jpg" alt="It Is Finished, final panel" loading="lazy"></div>
+          <div class="issue-body">
+            <h3>It Is Finished</h3>
+            <p class="issue-ref">John 19:30</p>
+            <p class="issue-hook">Nothing was broken yet.</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="issue" role="listitem">
+        <span class="issue-no" aria-hidden="true">#09</span>
+        <a href="../study/father-into-thy-hands.html">
+          <div class="issue-img"><img src="../assets/study/read/father-into-thy-hands/beat_01.jpg" alt="Father Into Thy Hands, panel one" loading="lazy"></div>
+          <div class="issue-body">
+            <h3>Father Into Thy Hands</h3>
+            <p class="issue-ref">Luke 23:46</p>
+            <p class="issue-hook">A dying man's last words were a child's bedtime prayer.</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="issue" role="listitem">
+        <span class="issue-no" aria-hidden="true">#10</span>
+        <a href="../study/zechariah-12-10-pierced.html">
+          <div class="issue-img"><img src="../assets/study/read/zechariah-12-10-pierced/beat_01.jpg" alt="The One They Pierced, panel one" loading="lazy"></div>
+          <div class="issue-body">
+            <h3>The One They Pierced</h3>
+            <p class="issue-ref">Zechariah 12:10</p>
+            <p class="issue-hook">Five centuries early, God said they would look on the one they pierced. And mourn.</p>
+          </div>
+        </a>
+      </article>
+
+    </div>
+    <p class="rail-hint"><b>&#9654;</b> Drag or scroll the rail &middot; every panel opens the full issue</p>
+  </section>
+
+  <!-- ================= COLLECTED EDITIONS ================= -->
+  <section class="editions" aria-label="Collected editions">
+    <div class="section-head">
+      <h2 class="display">Collected <em>editions</em></h2>
+      <span class="count">Long-form &middot; 16:9</span>
+      <p>The issues are the single pages. The editions are the whole book:
+         nine to twelve minute inked films that walk one prophecy end to end.</p>
+    </div>
+
+    <div class="ed-grid">
+      <article class="ed-card">
+        <a href="#plan">
+          <span class="ed-badge"><b>Edition 01</b></span>
+          <div class="ed-img">
+            <img src="../assets/study/read/ps22-01-crucifixion-foretold/beat_01.jpg"
+                 alt="Psalm 22: The Song From the Cross, collected edition frame" loading="lazy">
+          </div>
+          <div class="ed-body">
+            <p class="issue-ref">Psalm 22</p>
+            <h3>Psalm 22: The Song From the Cross<span class="ed-runtime">10 min</span></h3>
+            <p class="ed-blurb">The full study behind eight of the issues. A ten-minute inked film.</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="ed-card studio">
+        <a href="#plan">
+          <span class="ed-badge"><b>Edition 02</b> &middot; In the studio</span>
+          <div class="ed-img">
+            <img src="../assets/study/read/zechariah-12-10-pierced/beat_01.jpg"
+                 alt="Isaiah 53: The Suffering Servant, collected edition frame" loading="lazy">
+          </div>
+          <div class="ed-body">
+            <p class="issue-ref">Isaiah 53</p>
+            <h3>Isaiah 53: The Suffering Servant</h3>
+            <p class="ed-blurb">Seven hundred years before the cross, a wound that heals ours.</p>
+          </div>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= DOUBLE RED-LETTER BAR ================= -->
+  <section class="redletter halftone" aria-label="The same words, a thousand years apart">
+    <div class="rl-inner">
+      <div class="rl-label">
+        <p class="eyebrow">The red-letter bar <span class="tick">&#9670;</span> the same words, twice</p>
+      </div>
+
+      <div class="rl-row first">
+        <blockquote class="rl-quote">
+          &ldquo;My God, my God, why hast thou forsaken me?&rdquo;
+          <span class="cite">David &middot; Psalm 22:1</span>
+        </blockquote>
+      </div>
+
+      <div class="rl-bridge" aria-hidden="true">
+        <span class="stem"></span>
+        <span class="years">One thousand years</span>
+        <span class="stem"></span>
+      </div>
+
+      <div class="rl-row second">
+        <blockquote class="rl-quote">
+          &ldquo;My God, my God, why hast thou forsaken me?&rdquo;
+          <span class="cite">Jesus &middot; Matthew 27:46</span>
+        </blockquote>
+      </div>
+
+      <p class="rl-note">A shepherd wrote it. The Shepherd prayed it.
+        <strong>This is why we read the whole Bible:</strong> the Old Testament keeps
+        speaking lines that only make sense at the cross.</p>
+    </div>
+  </section>
+
+  <!-- ================= THE PLAN ================= -->
+  <section class="plan" id="plan" aria-label="The plan">
+    <div class="section-head">
+      <h2 class="display">The <em>plan</em></h2>
+      <p>The whole Bible, cluster by cluster. We ink one visual world at a time,
+         and every world points the same direction.</p>
+    </div>
+
+    <div class="plan-grid">
+      <div class="plan-card now">
+        <span class="plan-status">Out now</span>
+        <h3>Cluster 1<br>The Cross</h3>
+        <p>Ten issues from Gethsemane to the last breath. Read them free, in story order.</p>
+        <ul>
+          <li>10 hand-inked issues, complete</li>
+          <li>Every Old Testament echo traced to Calvary</li>
+          <li>KJV verbatim, red-letter throughout</li>
+        </ul>
+      </div>
+      <div class="plan-card studio">
+        <span class="plan-status">In the studio</span>
+        <h3>Motion<br>comics</h3>
+        <p>The same panels, alive: slamming frames, voiced Scripture, a score that goes dark to grace.</p>
+        <ul>
+          <li>Word-timed panel animation</li>
+          <li>Multi-voice reads - narrator, Scripture, speakers</li>
+          <li>Cinematic score and inked sound design</li>
+        </ul>
+      </div>
+      <div class="plan-card next">
+        <span class="plan-status">Next</span>
+        <h3>Coming to<br>YouTube</h3>
+        <p>Sixty-second motion-comic shorts, then long-form deep dives into the shadows of the Old Testament.</p>
+        <ul>
+          <li>Shorts channel - one issue, one minute</li>
+          <li>Deep dives - types and shadows, drawn out</li>
+          <li>New clusters: the Psalms, the Prophets, the Patriarchs</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="foot-inner">
+    <p class="foot-mission display">Finding <em>Jesus</em> in the whole Bible, one panel at a time.</p>
+    <div class="foot-col">
+      <h4>Site</h4>
+      <a href="#issues">Catalogue</a>
+      <a href="#issues">Read</a>
+      <a href="#plan">The Plan</a>
+      <a href="#about">About</a>
+    </div>
+    <div class="foot-col">
+      <h4>The Rule of the Ink</h4>
+      <a href="#about">Scripture verbatim, always</a>
+      <a href="#about">Red letters, never grey</a>
+      <a href="#about">Edgy ink, reverent heart</a>
+    </div>
+  </div>
+  <div class="foot-note">
+    <span>Scripture quoted from the <span class="red">King James Version</span>, public domain. Quoted verbatim; printed in red.</span>
+    <span>&copy; Awakeden &middot; awakeden.com</span>
+  </div>
+</footer>
+
+</body>
+</html>

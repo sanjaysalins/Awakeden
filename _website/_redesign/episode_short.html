@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Awakeden - The Crucifixion Foretold - Watch the Short</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0c0e12;
+  --panel:#14171d;
+  --panel-2:#191d24;
+  --line:rgba(255,255,255,.08);
+  --bone:#eceae4;
+  --slate:#9aa0ab;
+  --red:#c1121f;
+  --red-bright:#e5303d;
+  --gold:#c8a55e;
+  --radius:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--ink);
+  color:var(--bone);
+  font-family:'Inter',system-ui,sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  overflow-x:clip;
+}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--red);color:#fff}
+
+.display{
+  font-family:'Archivo Black',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:-.015em;
+  line-height:.95;
+}
+.eyebrow{
+  font-size:.72rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--slate);
+}
+.eyebrow .dot{color:var(--red-bright)}
+
+/* ---------- NAV ---------- */
+.nav{
+  position:fixed;inset:0 0 auto 0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.9rem clamp(1rem,4vw,3rem);
+  background:linear-gradient(to bottom,rgba(12,14,18,.92),rgba(12,14,18,.72));
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.wordmark{
+  font-family:'Archivo Black',sans-serif;
+  font-size:1.05rem;letter-spacing:.14em;text-transform:uppercase;
+}
+.wordmark em{
+  font-style:normal;color:var(--red-bright);
+  text-shadow:0 0 16px rgba(229,48,61,.5);
+}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{
+  font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--slate);position:relative;padding:.25rem 0;transition:color .25s;
+}
+.nav-links a::after{
+  content:"";position:absolute;left:0;bottom:0;height:2px;width:0;
+  background:var(--red-bright);transition:width .3s cubic-bezier(.22,1,.36,1);
+}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--bone)}
+.nav-links a:hover::after,.nav-links a:focus-visible::after{width:100%}
+.nav-cta{
+  font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:.6rem 1.1rem;border:1px solid var(--red);border-radius:999px;
+  color:#fff;background:rgba(193,18,31,.15);transition:background .25s,box-shadow .25s;
+}
+.nav-cta:hover,.nav-cta:focus-visible{background:var(--red);box-shadow:0 0 24px rgba(193,18,31,.45)}
+@media(max-width:760px){.nav-links{display:none}}
+
+/* ---------- WAYS-IN SWITCHER ---------- */
+.ways{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  margin-top:57px;
+  border-bottom:1px solid var(--line);
+  background:#0a0c0f;
+}
+.way{
+  text-align:center;padding:1rem .6rem .95rem;
+  border-bottom:3px solid transparent;
+  transition:background .25s,border-color .25s;
+}
+.way .k{
+  display:block;font-size:.6rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:.25rem;
+}
+.way .t{
+  font-size:.82rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--slate);transition:color .25s;
+}
+.way:hover .t,.way:focus-visible .t{color:var(--bone)}
+.way.active{
+  border-bottom-color:var(--red-bright);
+  background:linear-gradient(to top,rgba(193,18,31,.12),transparent 70%);
+}
+.way.active .t{color:var(--bone)}
+@media(max-width:640px){
+  .way .k{display:none}
+  .way .t{font-size:.66rem;letter-spacing:.08em}
+}
+
+/* ---------- BUTTONS ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-size:.85rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:.95rem 1.7rem;border-radius:8px;
+  transition:transform .25s,box-shadow .25s,background .25s,border-color .25s;
+}
+.btn:active{transform:scale(.97)}
+.btn-red{
+  background:var(--red);color:#fff;
+  box-shadow:0 6px 30px rgba(193,18,31,.35);
+}
+.btn-red:hover,.btn-red:focus-visible{background:var(--red-bright);box-shadow:0 8px 40px rgba(229,48,61,.5);transform:translateY(-2px)}
+.btn-ghost{
+  border:1px solid rgba(236,234,228,.25);color:var(--bone);background:rgba(255,255,255,.03);
+}
+.btn-ghost:hover,.btn-ghost:focus-visible{border-color:var(--gold);transform:translateY(-2px)}
+
+/* ---------- STAGE ---------- */
+.stage{
+  position:relative;isolation:isolate;overflow:hidden;
+  padding:clamp(2.5rem,5vw,4.5rem) clamp(1rem,5vw,4rem) clamp(3rem,6vw,5rem);
+}
+.stage-bg{
+  position:absolute;inset:-6%;z-index:-2;
+  background:url("../assets/study/read/ps22-01-crucifixion-foretold/beat_01.jpg") center 20%/cover no-repeat;
+  filter:blur(30px) saturate(.7) brightness(.32);
+  transform:scale(1.08);
+}
+.stage-shade{
+  position:absolute;inset:0;z-index:-1;
+  background:
+    linear-gradient(to right,rgba(12,14,18,.55) 0%,rgba(12,14,18,.9) 55%,rgba(12,14,18,.97) 100%),
+    linear-gradient(to top,var(--ink) 0%,transparent 35%);
+}
+.stage-grid{
+  display:grid;grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);
+  gap:clamp(2rem,5vw,4.5rem);align-items:center;
+  max-width:1240px;margin:0 auto;
+}
+.phone{
+  position:relative;justify-self:center;width:min(100%,350px);
+  aspect-ratio:9/16;border-radius:20px;overflow:hidden;
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 30px 80px rgba(0,0,0,.7),0 0 0 7px rgba(12,14,18,.75),0 0 60px rgba(193,18,31,.12);
+  background:#000;
+}
+.phone video{width:100%;height:100%;object-fit:cover}
+.phone .tag{
+  position:absolute;top:.8rem;left:.8rem;pointer-events:none;
+  font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  background:rgba(12,14,18,.8);border:1px solid rgba(255,255,255,.18);
+  padding:.3rem .6rem;border-radius:4px;backdrop-filter:blur(6px);
+}
+.copy .eyebrow{margin-bottom:1.1rem;display:block}
+.copy h1{
+  font-size:clamp(2rem,4.6vw,3.6rem);
+  margin-bottom:1rem;text-shadow:0 8px 40px rgba(0,0,0,.6);
+}
+.copy h1 .red{color:var(--red-bright)}
+.refchip{
+  display:inline-block;
+  font-size:.74rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  background:var(--red);color:#fff;
+  padding:.35rem .8rem;border-radius:4px;
+  margin-bottom:1.1rem;
+  box-shadow:0 0 26px rgba(193,18,31,.35);
+}
+.hook{
+  max-width:34rem;color:#c8ccd4;font-size:clamp(1rem,1.4vw,1.15rem);
+  margin-bottom:1.8rem;
+}
+
+/* claim chain */
+.chain{
+  display:flex;align-items:stretch;gap:.6rem;flex-wrap:wrap;
+  margin-bottom:2rem;
+}
+.chain .step{
+  flex:1 1 160px;min-width:150px;
+  background:linear-gradient(180deg,var(--panel-2),var(--panel));
+  border:1px solid var(--line);border-radius:10px;
+  padding:.85rem 1rem;
+}
+.chain .step .k{
+  display:block;font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:.2rem;
+}
+.chain .step .v{font-size:.78rem;color:var(--slate);line-height:1.45}
+.chain .arrow{
+  align-self:center;color:var(--gold);font-size:1rem;flex:0 0 auto;
+}
+@media(max-width:560px){
+  .chain{flex-direction:column}
+  .chain .arrow{transform:rotate(90deg);align-self:flex-start;margin-left:1rem}
+}
+
+/* scripture bars */
+.bars{margin-bottom:2.2rem;display:grid;gap:1.4rem}
+.bar .speaker{
+  display:inline-block;
+  font-size:.66rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;
+  color:#fff;background:var(--red);
+  padding:.35rem .9rem;border-radius:3px;margin-bottom:.6rem;
+  box-shadow:0 0 24px rgba(193,18,31,.28);
+}
+.bar .speaker.gold{background:transparent;border:1px solid rgba(200,165,94,.5);color:var(--gold);box-shadow:none}
+.bar .kjv{
+  font-family:'Archivo Black',sans-serif;text-transform:uppercase;
+  font-size:clamp(.98rem,1.9vw,1.3rem);line-height:1.3;letter-spacing:.01em;
+  color:var(--red-bright);
+  text-shadow:0 0 30px rgba(193,18,31,.28);
+  max-width:36rem;
+}
+.ctas{display:flex;gap:1rem;flex-wrap:wrap}
+
+@media(max-width:900px){
+  .stage-grid{grid-template-columns:1fr}
+  .phone{width:min(80%,320px)}
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+  border-top:1px solid var(--line);
+  display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;
+  padding:1.6rem clamp(1rem,5vw,3rem);
+  font-size:.75rem;color:var(--slate);letter-spacing:.08em;
+}
+footer .links{display:flex;gap:1.4rem}
+footer a:hover{color:var(--bone)}
+
+:focus-visible{outline:2px solid var(--red-bright);outline-offset:3px;border-radius:4px}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <a class="wordmark" href="motion.html">AWAK<em>EDEN</em></a>
+  <div class="nav-links">
+    <a href="motion.html#catalogue">Catalogue</a>
+    <a href="motion.html#read">Read</a>
+    <a href="motion.html#plan">The Plan</a>
+    <a href="motion.html#about">About</a>
+  </div>
+  <a class="nav-cta" href="episode_study.html">Start reading</a>
+</nav>
+
+<!-- THREE WAYS IN -->
+<nav class="ways" aria-label="Three ways into this piece">
+  <a class="way active" href="episode_short.html" aria-current="page">
+    <span class="k">60 seconds</span>
+    <span class="t">Watch the Short</span>
+  </a>
+  <a class="way" href="episode_film.html">
+    <span class="k">7 minutes</span>
+    <span class="t">Sit with the Film</span>
+  </a>
+  <a class="way" href="episode_study.html">
+    <span class="k">No clock</span>
+    <span class="t">Read the Whole Study</span>
+  </a>
+</nav>
+
+<!-- STAGE -->
+<main class="stage">
+  <div class="stage-bg" aria-hidden="true"></div>
+  <div class="stage-shade" aria-hidden="true"></div>
+  <div class="stage-grid">
+
+    <div class="phone">
+      <video controls preload="none" poster="_media/short_poster.jpg" playsinline
+             aria-label="The Crucifixion Foretold, the 60-second short">
+        <source src="_media/short_crucifixion_foretold.mp4" type="video/mp4">
+      </video>
+      <span class="tag">The short &middot; 60s &middot; scored + captioned</span>
+    </div>
+
+    <div class="copy">
+      <span class="eyebrow">Watch the short <span class="dot">&middot;</span> Cluster 1: The Cross</span>
+      <h1 class="display">The Crucifixion<br><span class="red">Foretold</span></h1>
+      <span class="refchip">PS 22:18 &middot; KJV</span>
+      <p class="hook">Ten centuries before the cross, a song recorded exactly how a dying man's clothes would be divided up.</p>
+
+      <div class="chain" role="list" aria-label="The claim in three steps">
+        <div class="step" role="listitem">
+          <span class="k">Psalm 22:18</span>
+          <span class="v">Written about 1000 BC</span>
+        </div>
+        <span class="arrow" aria-hidden="true">&#9656;</span>
+        <div class="step" role="listitem">
+          <span class="k">The Cross</span>
+          <span class="v">Soldiers divide garments AND cast lots</span>
+        </div>
+        <span class="arrow" aria-hidden="true">&#9656;</span>
+        <div class="step" role="listitem">
+          <span class="k">John 19:24</span>
+          <span class="v">"that the scripture might be fulfilled."</span>
+        </div>
+      </div>
+
+      <div class="bars">
+        <div class="bar">
+          <span class="speaker gold">David - Psalm 22:18</span>
+          <p class="kjv">They part my garments among them, and cast lots upon my vesture.</p>
+        </div>
+        <div class="bar">
+          <span class="speaker">John - 19:24b</span>
+          <p class="kjv">that the scripture might be fulfilled.</p>
+        </div>
+      </div>
+
+      <div class="ctas">
+        <a class="btn btn-ghost" href="episode_film.html">Sit with the film &#9656;</a>
+        <a class="btn btn-red" href="episode_study.html">Read the whole study</a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <span class="wordmark" style="font-size:.85rem">AWAK<em>EDEN</em></span>
+  <div class="links">
+    <a href="motion.html#catalogue">Catalogue</a>
+    <a href="motion.html#read">Read</a>
+    <a href="motion.html#plan">The Plan</a>
+    <a href="motion.html#about">About</a>
+  </div>
+  <span>Every panel lands on Jesus.</span>
+</footer>
+
+<script>
+(function(){
+  /* Some dev servers (python SimpleHTTP) don't support HTTP ranges and
+     Chrome's media pipeline stalls at readyState 0. Fallback: fetch the
+     file as a blob (instant on localhost) and swap it in. */
+  var v = document.querySelector('.phone video');
+  var srcUrl = v.querySelector('source').getAttribute('src');
+  var blobUrl = null, fetching = false;
+  v.addEventListener('play', function(){
+    setTimeout(function(){
+      if (blobUrl || fetching || v.readyState >= 1) return;
+      fetching = true;
+      fetch(srcUrl).then(function(r){ return r.blob(); }).then(function(b){
+        blobUrl = URL.createObjectURL(b);
+        v.preload = 'auto';
+        v.src = blobUrl;
+        v.load();
+        v.addEventListener('loadedmetadata', function(){ v.play(); }, {once:true});
+      });
+    }, 1500);
+  });
+})();
+</script>
+
+</body>
+</html>

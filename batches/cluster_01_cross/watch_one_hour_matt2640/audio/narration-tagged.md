@@ -1,0 +1,13 @@
+<speaker name="narrator">Jesus asked three fishermen for one thing. They failed inside an hour.</speaker>
+<speaker name="narrator">Gethsemane. The night before the cross.</speaker>
+<speaker name="jesus">tarry ye here, and watch with me.</speaker>
+<speaker name="narrator">Then he stepped away to pray.</speaker>
+<speaker name="jesus">O my Father, if it be possible, let this cup pass from me: nevertheless not as I will, but as thou wilt.</speaker>
+<speaker name="scripture">And he cometh unto the disciples, and findeth them asleep, and saith unto Peter,</speaker>
+<speaker name="jesus">What, could ye not watch with me one hour?</speaker>
+<speaker name="narrator">Not a curse. A diagnosis full of mercy.</speaker>
+<speaker name="jesus">Watch and pray, that ye enter not into temptation: the spirit indeed is willing, but the flesh is weak.</speaker>
+<speaker name="narrator">He returned to the same prayer.</speaker>
+<speaker name="narrator">The cup he asked to pass, he drank. On the cross. For you.</speaker>
+<speaker name="narrator">So bring him the weak flesh he already knows. When you cannot watch, pray anyway. He is watching.</speaker>
+<speaker name="narrator">He watched that hour alone. Now no hour of yours is watched alone.</speaker>

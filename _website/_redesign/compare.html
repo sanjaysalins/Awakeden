@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Awakeden redesign - three directions side by side</title>
+<style>
+  body{margin:0;background:#17140f;color:#efe7d8;font-family:system-ui,Segoe UI,Arial,sans-serif}
+  header{padding:18px 24px;display:flex;gap:18px;align-items:baseline;flex-wrap:wrap}
+  h1{font-size:20px;margin:0}
+  .hint{color:#a3937a;font-size:13px}
+  .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:0 10px 14px;height:calc(100vh - 120px)}
+  .col{display:flex;flex-direction:column;min-width:0}
+  .col h2{font-size:14px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;display:flex;justify-content:space-between;align-items:center}
+  .col h2 a{color:#e0b45a;font-size:12px;text-decoration:none}
+  .col h2 a:hover{text-decoration:underline}
+  .tag{font-size:11px;color:#a3937a;font-weight:400;letter-spacing:0}
+  iframe{flex:1;width:100%;border:1px solid #3a3226;border-radius:8px;background:#000}
+  @media (max-width:1100px){.cols{grid-template-columns:1fr;height:auto}.col iframe{height:70vh}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Awakeden - three redesign directions</h1>
+  <span class="hint">Each column is the LIVE page (scroll inside it). Open full-screen with the gold links.</span>
+</header>
+<div class="cols">
+  <div class="col">
+    <h2>1. The Inkwell <span class="tag">black-paper noir</span> <a href="inkwell.html" target="_blank">open full &rarr;</a></h2>
+    <iframe src="inkwell.html" title="The Inkwell"></iframe>
+  </div>
+  <div class="col">
+    <h2>2. Saturday Pulp <span class="tag">newsprint cover</span> <a href="pulp.html" target="_blank">open full &rarr;</a></h2>
+    <iframe src="pulp.html" title="Saturday Pulp"></iframe>
+  </div>
+  <div class="col">
+    <h2>3. Motion Panel <span class="tag">cinematic app</span> <a href="motion.html" target="_blank">open full &rarr;</a></h2>
+    <iframe src="motion.html" title="Motion Panel"></iframe>
+  </div>
+</div>
+</body>
+</html>

@@ -37,6 +37,8 @@ EPISODES: dict[str, dict] = {
         "xfade_s": 6.0,
         "gain_db": -11.0,
         "outro_s": 2.5,
+        # dip the score under the heartbeat-stop window so "It is finished." lands in near-silence
+        "dips": [[363.5, 373.5, 0.25]],
     },
     # Passover Lamb (509.5s) — ancient Egypt night + the lamb + the strange detail (M1-M3,
     # searching/solemn) -> the centuries-early cross-match + the honest objection (M4-M5,
@@ -192,12 +194,18 @@ def run(episode_dir: Path, yes: bool, regen: bool) -> None:
     # stays FULL through the held close on Christ and fades only in the final 1.5s.
     fade_dur = 1.5
     fade_out_start = max(0.0, total - fade_dur)
+    # optional per-episode volume dips [[t0, t1, frac], ...] — e.g. clear the room for a
+    # sacred stop (Psalm 22 heartbeat-stop). Additive: episodes without "dips" are unchanged.
+    dips = "".join(
+        f",volume=volume={frac}:enable='between(t,{t0},{t1})'"
+        for t0, t1, frac in recipe.get("dips", [])
+    )
     fc = (
         f"[1:a]{fmt},atempo={atempo:.4f},asetpts=PTS-STARTPTS,"
         f"atrim=0:{total+0.2:.3f},"
         f"afade=t=in:st=0:d=2,"
         f"afade=t=out:st={fade_out_start:.2f}:d={fade_dur},"
-        f"volume={gain}dB[mus]; "
+        f"volume={gain}dB{dips}[mus]; "
         # Hold the last frame of video for outro
         f"[0:v]tpad=stop_mode=clone:stop_duration={outro}[vout]; "
         # Split narration+SFX into main (output) and key (sidechain trigger)

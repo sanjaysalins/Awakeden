@@ -1,0 +1,14 @@
+<speaker name="narrator">An old man in the temple held a baby and told the mother one dark sentence.</speaker>
+<speaker name="scripture">Yea, a sword shall pierce through thy own soul also.</speaker>
+<speaker name="narrator">Simeon told Mary. Some thirty years later, the sword lands.</speaker>
+<speaker name="scripture">Now there stood by the cross of Jesus his mother.</speaker>
+<speaker name="narrator">Close enough to watch her son die. Jesus looks down, sees her wound, and turns to bind it.</speaker>
+<speaker name="scripture">When Jesus therefore saw his mother, and the disciple standing by, whom he loved, he saith unto his mother,</speaker>
+<speaker name="jesus">Woman, behold thy son!</speaker>
+<speaker name="scripture">Then saith he to the disciple,</speaker>
+<speaker name="jesus">Behold thy mother!</speaker>
+<speaker name="scripture">And from that hour that disciple took her unto his own home.</speaker>
+<speaker name="narrator">He gave her the disciple he loved. A son. A home.</speaker>
+<speaker name="narrator">While judgment fell on him, he cared for someone else. That is who is dying there.</speaker>
+<speaker name="narrator">Your wound is not invisible to him. He sees it from the cross.</speaker>
+<speaker name="narrator">Stand where Mary stood. The Son who saw her will behold you, and bind what the sword tore.</speaker>

@@ -1,0 +1,62 @@
+{
+ "_doc": "I THIRST (John 19:28 / Ps 22:15) 9:16 SHORT - living page re-roll of the legacy Ps22 short #8. 12 beats / 55.74s. Ocean-maker hook, Ps 22:15 bar split over potsherd + scroll, heartbeat 26.45-35.1 STOPS on 'I thirst', border-break on the cry, living-water turn, earned closer 'Bring Him your thirst - and drink'. Ps69 landmine guard: descriptive match framing kept verbatim from the audited narration.",
+ "audio": "../audio/narration.mp3",
+ "total": 55.74,
+ "cut_ticks": true,
+ "heartbeat": {"from": 26.45, "to": 35.1, "gain": -9, "bpm": 64},
+ "beats": [
+  {"t": [0.0, 4.9], "tpl": "full", "punch": true, "ramp": true,
+   "sfx": [["sea_waves_shore", 0.15, -16]],
+   "clips": [{"slug": "ocean_creation_wide", "motion": "pushin"}],
+   "takeover": {"panel": 0, "start": 2.4, "zoom": 1.3},
+   "cap": {"type": "caption", "text": "The One who made every ocean gasped two words", "kw": "EVERY OCEAN"}},
+
+  {"t": [4.9, 8.6], "tpl": "full", "whip": true,
+   "clips": [{"slug": "face_on_cross", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "I thirst. Psalm twenty-two", "kw": "I THIRST"}},
+
+  {"t": [8.6, 13.0], "tpl": "full",
+   "clips": [{"slug": "david_writing_psalm", "motion": "static", "cam": "arc"}],
+   "cap": {"type": "caption", "text": "David wrote it, but he was picturing someone else's death", "kw": "SOMEONE ELSE'S DEATH"}},
+
+  {"t": [13.0, 15.2], "tpl": "full",
+   "clips": [{"slug": "us_under_cross_shadow", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "Watch the body give out", "kw": "THE BODY"}},
+
+  {"t": [15.2, 22.4], "tpl": "full",
+   "clips": [{"slug": "potsherd_dry_clay", "motion": "pushin"}],
+   "cap": {"type": "redletter", "text": "My strength is dried up like a potsherd; and my tongue cleaveth to my jaws;", "speaker": "DAVID", "ref": "PSALM 22:15"}},
+
+  {"t": [22.4, 26.45], "tpl": "full",
+   "clips": [{"slug": "psalm_scroll_night", "motion": "static", "cam": "arc"}],
+   "cap": {"type": "redletter", "text": "and thou hast brought me into the dust of death.", "speaker": "DAVID", "ref": "PSALM 22:15"}},
+
+  {"t": [26.45, 32.6], "tpl": "full",
+   "sfx": [["wind_desert_bleak", 26.55, -18]],
+   "clips": [{"slug": "bowed_head_finished", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "Dried clay. A tongue stuck fast. A man sinking into the dust of death", "kw": "THE DUST OF DEATH"}},
+
+  {"t": [32.6, 36.7], "tpl": "full",
+   "border_break": {"at": 35.15},
+   "clips": [{"slug": "vinegar_sponge_reed", "motion": "pushin"}],
+   "cap": {"type": "redletter", "text": "I thirst.", "speaker": "JESUS", "ref": "JOHN 19:28"}},
+
+  {"t": [36.7, 44.0], "tpl": "full",
+   "clips": [{"slug": "jesus_praying_close", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "The psalm does not foretell that cry. It paints the thirst behind it", "kw": "A THOUSAND YEARS BEFORE"}},
+
+  {"t": [44.0, 49.4], "tpl": "full", "punch": true,
+   "inserts": [{"at": 47.7, "slug": "face_on_cross", "frames": 4}],
+   "clips": [{"slug": "living_water_stream", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "The One who offers living water hung there dry, in your place", "kw": "LIVING WATER"}},
+
+  {"t": [49.4, 53.3], "tpl": "full",
+   "clips": [{"slug": "risen_mercy_hand", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "Bring Him your thirst, and drink", "kw": "BRING YOUR THIRST"}},
+
+  {"t": [53.3, 55.74], "tpl": "full",
+   "sfx": [["dawn_morning_warm", 53.4, -15]],
+   "clips": [{"slug": "cross_at_dawn", "motion": "pushin"}],
+   "cap": {"type": "caption", "text": "That water is Himself", "kw": "HIMSELF"}}
+ ]
+}

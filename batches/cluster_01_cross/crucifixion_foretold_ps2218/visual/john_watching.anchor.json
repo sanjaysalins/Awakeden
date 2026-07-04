@@ -1,0 +1,14 @@
+{
+  "keep": [
+    0.2,
+    0.35,
+    0.95,
+    0.98
+  ],
+  "focus": [
+    0.6,
+    0.55
+  ],
+  "pad": 0.05,
+  "note": "john lower-right, cross upper-left"
+}

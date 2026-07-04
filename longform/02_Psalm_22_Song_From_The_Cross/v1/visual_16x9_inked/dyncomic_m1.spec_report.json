@@ -1,0 +1,356 @@
+{
+ "dod": {
+  "median_beat_s": 3.97,
+  "max_beat_s": 6.7,
+  "held_beats_gt6s": 1,
+  "kling_or_punch_pct": 82,
+  "reuse_violations": [],
+  "tier3_or_flagged_beats": [],
+  "tier1_pct": 36,
+  "beats": 11
+ },
+ "beats": [
+  {
+   "beat": 1,
+   "t": [
+    0.0,
+    4.0
+   ],
+   "dur": 4.0,
+   "tpl": "big_inset",
+   "slugs": [
+    "pierced_hands_feet",
+    "crane_cross_soldiers"
+   ],
+   "sources": [
+    "kling",
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "cls": "kinetic",
+    "style": "scrim",
+    "box": [
+     36,
+     896,
+     956,
+     136
+    ],
+    "flag": false,
+    "reason": "tier2 lower scrim (clears cores)",
+    "keep_overlap_pct_of_box": 57
+   }
+  },
+  {
+   "beat": 2,
+   "t": [
+    4.0,
+    7.84
+   ],
+   "dur": 3.833333,
+   "tpl": "full",
+   "slugs": [
+    "storm_over_jerusalem"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "cls": "kinetic",
+    "style": "scrim",
+    "box": [
+     36,
+     944,
+     666,
+     88
+    ],
+    "flag": false,
+    "reason": "tier2 lower scrim (clears cores)",
+    "keep_overlap_pct_of_box": 94
+   }
+  },
+  {
+   "beat": 3,
+   "t": [
+    7.84,
+    11.9
+   ],
+   "dur": 4.066667,
+   "tpl": "full",
+   "slugs": [
+    "cry_ninth_hour"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "cls": "redletter",
+    "style": "band",
+    "box": [
+     36,
+     902,
+     1848,
+     154
+    ],
+    "flag": false,
+    "reason": "tier2 band",
+    "keep_overlap_pct_of_box": 72
+   }
+  },
+  {
+   "beat": 4,
+   "t": [
+    11.9,
+    17.3
+   ],
+   "dur": 5.4,
+   "tpl": "full",
+   "slugs": [
+    "face_anguish_closeup"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "cls": "kinetic",
+    "style": "scrim",
+    "box": [
+     36,
+     944,
+     754,
+     88
+    ],
+    "flag": false,
+    "reason": "tier2 lower scrim (clears cores)",
+    "keep_overlap_pct_of_box": 100
+   }
+  },
+  {
+   "beat": 5,
+   "t": [
+    17.3,
+    19.5
+   ],
+   "dur": 2.2,
+   "tpl": "two_v",
+   "slugs": [
+    "scribe_over_manuscripts",
+    "two_scrolls_compared"
+   ],
+   "sources": [
+    "dyncam",
+    "dyncam"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 1,
+    "cls": "kinetic",
+    "style": "box",
+    "box": [
+     1206,
+     40,
+     678,
+     88
+    ],
+    "flag": false,
+    "reason": "tier1 @ 42% width",
+    "keep_overlap_pct_of_box": 0
+   }
+  },
+  {
+   "beat": 6,
+   "t": [
+    19.5,
+    25.4
+   ],
+   "dur": 5.9,
+   "tpl": "big_inset",
+   "slugs": [
+    "david_psalmist",
+    "david_hands_lyre"
+   ],
+   "sources": [
+    "kling",
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "cls": "kinetic",
+    "style": "box",
+    "box": [
+     36,
+     40,
+     698,
+     136
+    ],
+    "flag": false,
+    "reason": "tier1 @ 42% width",
+    "keep_overlap_pct_of_box": 0
+   }
+  },
+  {
+   "beat": 7,
+   "t": [
+    25.4,
+    28.31
+   ],
+   "dur": 2.9,
+   "tpl": "full",
+   "slugs": [
+    "david_old_deathbed"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "cls": "kinetic",
+    "style": "box",
+    "box": [
+     36,
+     40,
+     774,
+     136
+    ],
+    "flag": false,
+    "reason": "tier1 @ 42% width",
+    "keep_overlap_pct_of_box": 0
+   }
+  },
+  {
+   "beat": 8,
+   "t": [
+    28.31,
+    35.0
+   ],
+   "dur": 6.7,
+   "tpl": "full",
+   "slugs": [
+    "convergence_on_cross"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "cls": "redletter",
+    "style": "band",
+    "box": [
+     36,
+     844,
+     1848,
+     212
+    ],
+    "flag": false,
+    "reason": "tier2 band",
+    "keep_overlap_pct_of_box": 91
+   }
+  },
+  {
+   "beat": 9,
+   "t": [
+    35.0,
+    37.84
+   ],
+   "dur": 2.833333,
+   "tpl": "quad",
+   "slugs": [
+    "pierced_feet",
+    "poured_out_bones",
+    "mockers_wag_heads",
+    "lots_dice_closeup"
+   ],
+   "sources": [
+    "dyncam",
+    "kling",
+    "kling",
+    "dyncam"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "cls": "kinetic",
+    "style": "scrim",
+    "box": [
+     36,
+     944,
+     656,
+     88
+    ],
+    "flag": false,
+    "reason": "tier2 lower scrim (clears cores)",
+    "keep_overlap_pct_of_box": 79
+   }
+  },
+  {
+   "beat": 10,
+   "t": [
+    37.84,
+    40.9
+   ],
+   "dur": 3.066667,
+   "tpl": "hero_frac3",
+   "slugs": [
+    "crane_cross_soldiers"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "cls": "kinetic",
+    "style": "box",
+    "box": [
+     1419,
+     896,
+     465,
+     136
+    ],
+    "flag": false,
+    "reason": "tier1 @ 27% width",
+    "keep_overlap_pct_of_box": 0
+   }
+  },
+  {
+   "beat": 11,
+   "t": [
+    40.9,
+    44.85
+   ],
+   "dur": 3.966667,
+   "tpl": "full",
+   "slugs": [
+    "cross_hill_pullback"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "cls": "kinetic",
+    "style": "scrim",
+    "box": [
+     36,
+     896,
+     853,
+     136
+    ],
+    "flag": false,
+    "reason": "tier2 lower scrim (clears cores)",
+    "keep_overlap_pct_of_box": 86
+   }
+  }
+ ]
+}

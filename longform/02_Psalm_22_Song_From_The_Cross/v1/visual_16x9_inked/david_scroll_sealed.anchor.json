@@ -1,0 +1,14 @@
+{
+  "keep": [
+    0.1,
+    0.1,
+    0.95,
+    0.9
+  ],
+  "focus": [
+    0.55,
+    0.45
+  ],
+  "pad": 0.05,
+  "note": "scroll+seal hand centre-right; candle top-right"
+}
