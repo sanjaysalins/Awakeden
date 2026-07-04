@@ -31,6 +31,58 @@
     "cta_label": "Launching on YouTube soon",
     "cta_enabled": false
   },
+  "series": [
+    {
+      "slug": "jesus-in-ot",
+      "title": "Jesus in the Old Testament",
+      "note": "Prophecies and patterns written centuries early - Psalm 22, Isaiah 53, Zechariah - and the New Testament pointing back at them."
+    },
+    {
+      "slug": "eyewitness",
+      "title": "Eyewitness: Old Testament Shadows",
+      "note": "The Bible's own witnesses tell it first-person - the high priest with the two goats, Abraham on Moriah, a father in Egypt on Passover night. Every shadow lands on Jesus."
+    },
+    {
+      "slug": "words-from-cross",
+      "title": "Words from the Cross",
+      "note": "The seven last words of Jesus, and the night before - one piece per word."
+    },
+    {
+      "slug": "questions-jesus-asked",
+      "title": "Questions Jesus Asked",
+      "note": "The questions He put to people, and still puts to us. Who do you say I am? Why are you afraid?"
+    },
+    {
+      "slug": "i-am-sayings",
+      "title": "The I AM Sayings",
+      "note": "I am the bread of life, the light of the world, the door, the good shepherd, the resurrection, the way, the true vine."
+    },
+    {
+      "slug": "parables-of-jesus",
+      "title": "The Parables of Jesus",
+      "note": "The stories He told, and the God they reveal: the Father who runs, the kingdom hidden in plain sight."
+    },
+    {
+      "slug": "miracles-of-jesus",
+      "title": "The Miracles of Jesus",
+      "note": "What each sign showed about who He is, and what it asks of us now."
+    },
+    {
+      "slug": "people-who-encountered-jesus",
+      "title": "People Who Encountered Jesus",
+      "note": "The men and women who met Him in the Gospels and walked away changed."
+    },
+    {
+      "slug": "titles-of-jesus",
+      "title": "Titles of Jesus",
+      "note": "The names Scripture gives Him, and what each one reveals."
+    },
+    {
+      "slug": "kingdom-of-god",
+      "title": "The Kingdom of God",
+      "note": "What Jesus meant by the kingdom, and how it changes the way we live today."
+    }
+  ],
   "clusters": {
     "psalm-22": {
       "title": "Psalm 22: From the Cross",
@@ -1039,13 +1091,173 @@
       "preview": "assets/previews/who-do-you-say-i-am.svg",
       "show_video": false,
       "kind_label": "Short"
+    },
+    {
+      "slug": "ew-two-goats",
+      "kind": "long",
+      "title": "The Two Goats",
+      "ref": "Leviticus 16:8",
+      "series_id": "eyewitness",
+      "cluster": null,
+      "cluster_order": null,
+      "public_status": "in_production",
+      "featured": false,
+      "preview_approved": false,
+      "youtube_id": null,
+      "public_hook": "Two goats, one lot, and sin carried away into the wilderness - told by the priest who was there.",
+      "public_blurb": "The Day of Atonement, first-person. The high priest walks you through the two goats, and where the whole pattern points.",
+      "status_label": "In production",
+      "status_class": "status-production",
+      "preview": "assets/previews/ew-two-goats.svg",
+      "show_video": false,
+      "kind_label": "Long-form"
+    },
+    {
+      "slug": "ew-abraham-moriah",
+      "kind": "long",
+      "title": "Abraham on Moriah",
+      "ref": "Genesis 22:8",
+      "series_id": "eyewitness",
+      "cluster": null,
+      "cluster_order": null,
+      "public_status": "in_production",
+      "featured": false,
+      "preview_approved": false,
+      "youtube_id": null,
+      "public_hook": "Abraham climbed the mountain with wood on his son's back. He tells what happened when God provided.",
+      "public_blurb": "Genesis 22, first-person. My son, God will provide himself a lamb. A father tells the hardest walk in the Old Testament.",
+      "status_label": "In production",
+      "status_class": "status-production",
+      "preview": "assets/previews/ew-abraham-moriah.svg",
+      "show_video": false,
+      "kind_label": "Long-form"
+    },
+    {
+      "slug": "ew-bronze-serpent",
+      "kind": "long",
+      "title": "The Bronze Serpent",
+      "ref": "Numbers 21:8",
+      "series_id": "eyewitness",
+      "cluster": null,
+      "cluster_order": null,
+      "public_status": "in_production",
+      "featured": false,
+      "preview_approved": false,
+      "youtube_id": null,
+      "public_hook": "A serpent of brass on a pole, and everyone who looked at it lived. A witness tells the day looking was enough.",
+      "public_blurb": "Numbers 21, first-person. Jesus himself points back at this one: as Moses lifted up the serpent, so must the Son of man be lifted up.",
+      "status_label": "In production",
+      "status_class": "status-production",
+      "preview": "assets/previews/ew-bronze-serpent.svg",
+      "show_video": false,
+      "kind_label": "Long-form"
+    },
+    {
+      "slug": "ew-joseph",
+      "kind": "long",
+      "title": "Joseph, Betrayed to Save",
+      "ref": "Genesis 45:5",
+      "series_id": "eyewitness",
+      "cluster": null,
+      "cluster_order": null,
+      "public_status": "planned",
+      "featured": false,
+      "preview_approved": false,
+      "youtube_id": null,
+      "public_hook": "Sold by his brothers, raised up to save them. Joseph tells the story that points past itself.",
+      "public_blurb": "Genesis 37-45, first-person. God sent me before you to preserve life. The betrayed brother who became the rescuer.",
+      "status_label": "Planned",
+      "status_class": "status-planned",
+      "preview": "assets/previews/ew-joseph.svg",
+      "show_video": false,
+      "kind_label": "Long-form"
+    },
+    {
+      "slug": "ew-jonah",
+      "kind": "long",
+      "title": "Jonah, Three Days in the Deep",
+      "ref": "Jonah 1:17",
+      "series_id": "eyewitness",
+      "cluster": null,
+      "cluster_order": null,
+      "public_status": "planned",
+      "featured": false,
+      "preview_approved": false,
+      "youtube_id": null,
+      "public_hook": "Three days and three nights inside the fish. Jonah tells it - and Jesus called it the only sign He would give.",
+      "public_blurb": "Jonah 1-2, first-person. The prophet who ran, the deep that held him, and the sign Jesus claimed for Himself.",
+      "status_label": "Planned",
+      "status_class": "status-planned",
+      "preview": "assets/previews/ew-jonah.svg",
+      "show_video": false,
+      "kind_label": "Long-form"
+    },
+    {
+      "slug": "ew-noah",
+      "kind": "long",
+      "title": "Noah, the Night God Shut the Door",
+      "ref": "Genesis 7:16",
+      "series_id": "eyewitness",
+      "cluster": null,
+      "cluster_order": null,
+      "public_status": "planned",
+      "featured": false,
+      "preview_approved": false,
+      "youtube_id": null,
+      "public_hook": "One ark, one door, and the LORD shut him in. Noah tells the night the rain began.",
+      "public_blurb": "Genesis 6-8, first-person. One door through the water, shut by God's own hand.",
+      "status_label": "Planned",
+      "status_class": "status-planned",
+      "preview": "assets/previews/ew-noah.svg",
+      "show_video": false,
+      "kind_label": "Long-form"
+    },
+    {
+      "slug": "ew-isaiah",
+      "kind": "long",
+      "title": "Isaiah, the Man Who Saw It",
+      "ref": "Isaiah 53:1",
+      "series_id": "eyewitness",
+      "cluster": null,
+      "cluster_order": null,
+      "public_status": "planned",
+      "featured": false,
+      "preview_approved": false,
+      "youtube_id": null,
+      "public_hook": "Who hath believed our report? Isaiah tells the vision that made him write of a servant wounded for us.",
+      "public_blurb": "Isaiah 53, from the prophet's side of the page. Seven hundred years early, he wrote what he was shown.",
+      "status_label": "Planned",
+      "status_class": "status-planned",
+      "preview": "assets/previews/ew-isaiah.svg",
+      "show_video": false,
+      "kind_label": "Long-form"
+    },
+    {
+      "slug": "ew-passover-father",
+      "kind": "long",
+      "title": "The Passover Father",
+      "ref": "Exodus 12:13",
+      "series_id": "eyewitness",
+      "cluster": null,
+      "cluster_order": null,
+      "public_status": "planned",
+      "featured": false,
+      "preview_approved": false,
+      "youtube_id": null,
+      "public_hook": "A father in Egypt tells the night blood on a doorframe stood between his firstborn and death.",
+      "public_blurb": "Exodus 12, first-person. When I see the blood, I will pass over you. The night the lamb died instead.",
+      "status_label": "Planned",
+      "status_class": "status-planned",
+      "preview": "assets/previews/ew-passover-father.svg",
+      "show_video": false,
+      "kind_label": "Long-form"
     }
   ],
   "stats": {
-    "total": 49,
+    "total": 57,
     "live": 0,
     "studio_complete": 17,
-    "in_production": 28,
-    "planned": 4
+    "in_production": 31,
+    "planned": 9
   }
 }

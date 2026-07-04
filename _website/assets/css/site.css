@@ -690,6 +690,18 @@ a{color:inherit;text-decoration:none}
   display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
   gap:1.5rem;
 }
+/* series shelves: the grid container switches to stacked shelf sections */
+.card-grid.shelved{display:block}
+.shelf{margin:0 0 3.4rem}
+.shelf-head{margin-bottom:1.2rem;border-bottom:1px solid var(--line);padding-bottom:.7rem}
+.shelf-head h3{
+  font-family:'Archivo Black',sans-serif;text-transform:uppercase;
+  font-size:clamp(1.05rem,2vw,1.45rem);letter-spacing:.01em;color:var(--bone);margin:0 0 .3rem;
+}
+.shelf-note{color:var(--slate);font-size:.92rem;max-width:46rem;margin:0}
+.shelf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem}
+.shelf-coming{color:var(--slate);font-size:.9rem;border:1px dashed var(--line);border-radius:8px;padding:1rem 1.2rem;max-width:24rem}
+.shelf-empty .shelf-head{border-bottom:none;margin-bottom:.6rem;padding-bottom:0}
 .card-grid .card{
   position:relative;display:block;color:inherit;
   background:var(--panel);

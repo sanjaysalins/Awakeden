@@ -76,6 +76,7 @@ def chrome_top(title: str, desc: str, canonical: str, og_image: str) -> str:
   <meta name="twitter:card" content="summary_large_image">
   <style>
     main.page{{padding-top:5.5rem}}
+    .plan-series{{font-size:.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#c8a55e;margin:1.1rem 0 .45rem}}
     .strip{{max-width:560px;margin:0 auto;padding:0 12px}}
     .strip figure{{margin:0 0 30px}}
     .strip img{{width:100%;border-radius:8px;display:block;border:1px solid rgba(255,255,255,.07);box-shadow:0 10px 34px rgba(0,0,0,.5)}}
@@ -217,7 +218,7 @@ PLAN_GROUPS = [
 ]
 
 
-def render_plan(items: list[dict], read_slugs: set[str]) -> str:
+def render_plan(items: list[dict], read_slugs: set[str], series: list[dict] | None = None) -> str:
     parts = [chrome_top("The Plan", "What is out, what is in the studio, and what is next on Awakeden.",
                         "https://awakeden.com/plan.html",
                         "https://awakeden.com/assets/og-cover.jpg")]
@@ -228,11 +229,24 @@ def render_plan(items: list[dict], read_slugs: set[str]) -> str:
     parts.append('<div class="page-hero"><h1>The Plan</h1>'
                  '<p class="hero-lead">We build in the open. Finished pieces bank up before '
                  'release; the schedule slips before a quality gate ever does.</p></div>')
+    series_order = [s["slug"] for s in (series or [])]
+    series_title = {s["slug"]: s["title"] for s in (series or [])}
+
+    def by_series(rows: list[dict]) -> list[dict]:
+        return sorted(rows, key=lambda i: (
+            series_order.index(i.get("series_id")) if i.get("series_id") in series_order else 99,
+            i.get("cluster_order") or 99))
+
     parts.append('<div class="plan-cols">')
     for label, statuses, note in PLAN_GROUPS:
-        rows = [i for i in items if i.get("public_status") in statuses]
+        rows = by_series([i for i in items if i.get("public_status") in statuses])
         parts.append(f'<div class="plan-col"><h2>{esc(label)}</h2><p class="plan-note">{esc(note)}</p>')
+        last_series = None
         for i in rows:
+            sid = i.get("series_id")
+            if sid != last_series:
+                parts.append(f'<p class="plan-series">{esc(series_title.get(sid, sid or ""))}</p>')
+                last_series = sid
             t = esc(i["title"])
             body = f'<div class="t">{t}</div><div class="r">{esc(i.get("ref", ""))}</div>'
             slug = i["slug"]
@@ -284,7 +298,7 @@ def main() -> int:
     pages.sort(key=lambda p: p["title"])
     (READ_DIR / "index.html").write_text(render_read_index(pages), encoding="utf-8")
     (SITE_DIR / "plan.html").write_text(
-        render_plan(items, {p["slug"] for p in pages}), encoding="utf-8")
+        render_plan(items, {p["slug"] for p in pages}, manifest.get("series")), encoding="utf-8")
     print(f"built read/index.html ({len(pages)} strips) + plan.html")
     return 0
 

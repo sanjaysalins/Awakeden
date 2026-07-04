@@ -128,6 +128,8 @@
     el.classList.add("loaded");
   }
 
+  var SERIES = []; // ordered shelves from catalog.json (manifest `series:`)
+
   function renderGrid(items, el, filter) {
     if (!el) return;
     var list = items.slice();
@@ -141,7 +143,46 @@
         return true;
       });
     }
-    el.innerHTML = list.map(card).join("");
+    if (SERIES.length) {
+      var known = {};
+      SERIES.forEach(function (s) { known[s.slug] = true; });
+      var shelves = SERIES.map(function (s) {
+        var rows = list.filter(function (i) { return i.series_id === s.slug; });
+        return { s: s, rows: rows };
+      });
+      var leftovers = list.filter(function (i) { return !known[i.series_id]; });
+      if (leftovers.length) {
+        shelves.push({ s: { title: "More", note: "" }, rows: leftovers });
+      }
+      el.classList.add("shelved");
+      el.innerHTML = shelves
+        .map(function (sh) {
+          if (!sh.rows.length) {
+            if (filter && filter !== "all") return "";
+            return (
+              '<section class="shelf shelf-empty"><div class="shelf-head"><h3>' +
+              esc(sh.s.title) +
+              '</h3><p class="shelf-note">' +
+              esc(sh.s.note || "") +
+              '</p></div><p class="shelf-coming">Coming - on the slate.</p></section>'
+            );
+          }
+          return (
+            '<section class="shelf"><div class="shelf-head"><h3>' +
+            esc(sh.s.title) +
+            '</h3><p class="shelf-note">' +
+            esc(sh.s.note || "") +
+            "</p></div>" +
+            '<div class="shelf-grid">' +
+            sh.rows.map(card).join("") +
+            "</div></section>"
+          );
+        })
+        .join("");
+    } else {
+      el.classList.remove("shelved");
+      el.innerHTML = list.map(card).join("");
+    }
     el.classList.add("loaded");
     if (window.awakedenReveal) window.awakedenReveal();
   }
@@ -239,6 +280,7 @@
       })
       .then(function (data) {
         var items = data.items || [];
+        SERIES = data.series || [];
         renderTicker(items, document.getElementById("ticker"));
         renderStats(data.stats, document.getElementById("stats"));
         renderFeatured(items, document.getElementById("featured-grid"));
