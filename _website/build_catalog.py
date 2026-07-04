@@ -157,7 +157,11 @@ def parse_reading(md_text: str) -> list[dict]:
             text = " ".join(content).strip()
             km = re.search(r"KJV,\s*(.+)", tag)
             if km:
-                blocks.append({"type": "scripture", "ref": km.group(1).strip(), "text": slopless(text.strip('"'))})
+                # narration may put terminal punctuation OUTSIDE the closing quote
+                # ("It is finished".) to mark a KJV elision - keep only the quoted words
+                qt = re.sub(r'^"', "", text.strip())
+                qt = re.sub(r'"\s*[.,;:]?\s*$', "", qt).strip()
+                blocks.append({"type": "scripture", "ref": km.group(1).strip(), "text": slopless(qt)})
             elif text:
                 blocks.append({"type": "prose", "text": slopless(text)})
             continue
@@ -548,7 +552,7 @@ def build_preview(item: dict, warnings: list[str]) -> str | None:
     if src and src.name == "scene_plan.json":
         src = find_hero_png_from_scene_plan(src) or src
 
-    if src and src.suffix.lower() == ".png" and src.is_file() and Image:
+    if src and src.suffix.lower() in (".png", ".jpg", ".jpeg") and src.is_file() and Image:
         try:
             im = Image.open(src).convert("RGB")
             im.thumbnail((540, 960), Image.Resampling.LANCZOS)
@@ -557,12 +561,12 @@ def build_preview(item: dict, warnings: list[str]) -> str | None:
         except OSError as e:
             warnings.append(f"{slug}: preview copy failed ({e})")
 
-    # PNG source unavailable (e.g. Netlify CI has no local media tree): reuse a
+    # Source unavailable (e.g. Netlify CI has no local media tree): reuse a
     # previously committed .webp if one exists, rather than downgrading to SVG.
     if webp.is_file():
         return f"assets/previews/{slug}.webp"
 
-    if src and src.suffix.lower() == ".png" and not src.is_file():
+    if src and src.suffix.lower() in (".png", ".jpg", ".jpeg") and not src.is_file():
         warnings.append(f"{slug}: preview_source missing on disk ({src_str}); SVG fallback")
 
     write_svg_preview(slug, item["title"], item.get("ref", ""), svg)
@@ -627,7 +631,7 @@ def render_work_page(item: dict, config: dict, warnings: list) -> str:
         if og_card.is_file()
         else f"{site_url}/assets/og-cover.jpg"
     )
-    title_full = f"{item['title']} | {brand['wordmark']} {brand['series']}"
+    title_full = f"{item['title']} | {brand['wordmark']}"
     ld_json = json.dumps(
         {
             "@context": "https://schema.org",
@@ -636,7 +640,7 @@ def render_work_page(item: dict, config: dict, warnings: list) -> str:
             "description": item.get("public_hook", "").strip(),
             "url": page_url,
             "image": og_img,
-            "isPartOf": {"@type": "WebSite", "name": "Awakeden Series", "url": f"{site_url}/"},
+            "isPartOf": {"@type": "WebSite", "name": "Awakeden", "url": f"{site_url}/"},
         },
         ensure_ascii=False,
     )
@@ -646,13 +650,13 @@ def render_work_page(item: dict, config: dict, warnings: list) -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{html.escape(item['title'])} | {html.escape(brand['wordmark'])} {html.escape(brand['series'])}</title>
+  <title>{html.escape(item['title'])} | {html.escape(brand['wordmark'])}</title>
   <meta name="description" content="{hook}">
   <link rel="canonical" href="{page_url}">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <meta name="theme-color" content="#f4eee1">
+  <meta name="theme-color" content="#0c0e12">
   <meta property="og:type" content="article">
-  <meta property="og:site_name" content="Awakeden Series">
+  <meta property="og:site_name" content="Awakeden">
   <meta property="og:title" content="{html.escape(title_full)}">
   <meta property="og:description" content="{hook}">
   <meta property="og:url" content="{page_url}">
@@ -666,21 +670,21 @@ def render_work_page(item: dict, config: dict, warnings: list) -> str:
   <script type="application/ld+json">{ld_json}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/site.css">
 </head>
 <body>
-  <div class="grain" aria-hidden="true"></div>
-  <header class="site-header">
-    <a class="wordmark" href="../index.html"><span class="wordmark-main">{html.escape(brand['wordmark'])}</span> <span class="wordmark-sub">{html.escape(brand['series'])}</span></a>
-    <nav class="site-nav">
+  <nav class="nav" aria-label="Main">
+    <a class="wordmark" href="../index.html">AWAK<em>EDEN</em></a>
+    <div class="nav-links">
       <a href="../catalogue.html">Catalogue</a>
-      <a href="../series/psalm-22.html">Psalm 22</a>
-      <a href="../roadmap.html">Roadmap</a>
+      <a href="../read/index.html">Read</a>
+      <a href="../plan.html">The Plan</a>
       <a href="../about.html">About</a>
-    </nav>
-  </header>
-  <main class="work-page">
+    </div>
+    <a class="nav-cta" href="../read/index.html">Start reading</a>
+  </nav>
+  <main class="work-page" style="padding-top:5.5rem">
     <div class="work-hero">
       <div class="work-poster{" ken-burns" if preview else ""}">
         {"<img src='../" + preview.lstrip("/") + "' alt=''>" if preview else "<div class='work-poster-fallback'></div>"}
@@ -702,7 +706,8 @@ def render_work_page(item: dict, config: dict, warnings: list) -> str:
     <p><a class="text-link" href="../catalogue.html">Back to catalogue</a></p>
   </main>
   <footer class="site-footer">
-    <p>{html.escape(site.get('scripture_note', ''))}</p>
+    <p><span class="wordmark" style="font-size:.85rem">AWAK<em>EDEN</em></span></p>
+    <p>{html.escape(site.get('scripture_note', ''))} The ink is ours. The words are His.</p>
     <p class="footer-url">{html.escape(site['url'])}</p>
   </footer>
   <script src="../assets/js/motion.js" defer></script>
@@ -712,7 +717,12 @@ def render_work_page(item: dict, config: dict, warnings: list) -> str:
 
 def write_sitemap(config: dict, items: list[dict]) -> None:
     base = config["site"]["url"].rstrip("/")
-    urls = ["/", "/catalogue.html", "/about.html", "/roadmap.html", "/series/psalm-22.html"]
+    urls = ["/", "/catalogue.html", "/about.html", "/plan.html", "/series/psalm-22.html",
+            "/read/index.html"]
+    # read pages: any manifest item wired to a read_source with frames on disk
+    urls += [f"/read/{i['slug']}.html" for i in items
+             if i.get("read_source")
+             and (SITE_DIR / "assets" / "study" / "read" / i["slug"] / "beat_01.jpg").is_file()]
     urls += [f"/work/{i['slug']}.html" for i in items]
     lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u in urls:
@@ -737,6 +747,9 @@ def main() -> int:
 
     items = [enrich_item(raw, config, warnings) for raw in manifest.get("items", [])]
     items.sort(key=lambda x: (not x.get("featured"), x.get("featured_order") or 99, x.get("cluster_order") or 99))
+    # catalog.json is publicly fetchable: strip build-internal source pointers there
+    INTERNAL_FIELDS = ("read_source", "read_spec", "read_video", "study_source", "preview_source")
+    public_items = [{k: v for k, v in it.items() if k not in INTERNAL_FIELDS} for it in items]
 
     catalog = {
         "generated": date.today().isoformat(),
@@ -746,7 +759,7 @@ def main() -> int:
         "launch": config.get("launch", {}),
         "clusters": manifest.get("clusters", {}),
         "roadmap": manifest.get("roadmap", []),
-        "items": items,
+        "items": public_items,
         "stats": {
             "total": len(items),
             "live": sum(1 for i in items if i["public_status"] == "live"),

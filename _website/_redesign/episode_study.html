@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Awakeden - The Crucifixion Foretold - Read the Whole Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0c0e12;
+  --panel:#14171d;
+  --panel-2:#191d24;
+  --line:rgba(255,255,255,.08);
+  --bone:#eceae4;
+  --slate:#9aa0ab;
+  --red:#c1121f;
+  --red-bright:#e5303d;
+  --gold:#c8a55e;
+  --radius:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--ink);
+  color:var(--bone);
+  font-family:'Inter',system-ui,sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  overflow-x:clip;
+}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--red);color:#fff}
+
+.display{
+  font-family:'Archivo Black',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:-.015em;
+  line-height:.95;
+}
+.eyebrow{
+  font-size:.72rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--slate);
+}
+.eyebrow .dot{color:var(--red-bright)}
+
+/* ---------- NAV ---------- */
+.nav{
+  position:fixed;inset:0 0 auto 0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.9rem clamp(1rem,4vw,3rem);
+  background:linear-gradient(to bottom,rgba(12,14,18,.92),rgba(12,14,18,.72));
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.wordmark{
+  font-family:'Archivo Black',sans-serif;
+  font-size:1.05rem;letter-spacing:.14em;text-transform:uppercase;
+}
+.wordmark em{
+  font-style:normal;color:var(--red-bright);
+  text-shadow:0 0 16px rgba(229,48,61,.5);
+}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{
+  font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--slate);position:relative;padding:.25rem 0;transition:color .25s;
+}
+.nav-links a::after{
+  content:"";position:absolute;left:0;bottom:0;height:2px;width:0;
+  background:var(--red-bright);transition:width .3s cubic-bezier(.22,1,.36,1);
+}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--bone)}
+.nav-links a:hover::after,.nav-links a:focus-visible::after{width:100%}
+.nav-cta{
+  font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:.6rem 1.1rem;border:1px solid var(--red);border-radius:999px;
+  color:#fff;background:rgba(193,18,31,.15);transition:background .25s,box-shadow .25s;
+}
+.nav-cta:hover,.nav-cta:focus-visible{background:var(--red);box-shadow:0 0 24px rgba(193,18,31,.45)}
+@media(max-width:760px){.nav-links{display:none}}
+
+/* ---------- WAYS-IN SWITCHER ---------- */
+.ways{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  margin-top:57px;
+  border-bottom:1px solid var(--line);
+  background:#0a0c0f;
+}
+.way{
+  text-align:center;padding:1rem .6rem .95rem;
+  border-bottom:3px solid transparent;
+  transition:background .25s,border-color .25s;
+}
+.way .k{
+  display:block;font-size:.6rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:.25rem;
+}
+.way .t{
+  font-size:.82rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--slate);transition:color .25s;
+}
+.way:hover .t,.way:focus-visible .t{color:var(--bone)}
+.way.active{
+  border-bottom-color:var(--red-bright);
+  background:linear-gradient(to top,rgba(193,18,31,.12),transparent 70%);
+}
+.way.active .t{color:var(--bone)}
+@media(max-width:640px){
+  .way .k{display:none}
+  .way .t{font-size:.66rem;letter-spacing:.08em}
+}
+
+/* ---------- BUTTONS ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-size:.85rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:.95rem 1.7rem;border-radius:8px;
+  transition:transform .25s,box-shadow .25s,background .25s,border-color .25s;
+}
+.btn:active{transform:scale(.97)}
+.btn-red{
+  background:var(--red);color:#fff;
+  box-shadow:0 6px 30px rgba(193,18,31,.35);
+}
+.btn-red:hover,.btn-red:focus-visible{background:var(--red-bright);box-shadow:0 8px 40px rgba(229,48,61,.5);transform:translateY(-2px)}
+.btn-ghost{
+  border:1px solid rgba(236,234,228,.25);color:var(--bone);background:rgba(255,255,255,.03);
+}
+.btn-ghost:hover,.btn-ghost:focus-visible{border-color:var(--gold);transform:translateY(-2px)}
+
+/* ---------- TITLE BLOCK ---------- */
+.masthead{
+  text-align:center;
+  padding:clamp(3rem,6vw,5rem) clamp(1rem,5vw,3rem) clamp(2rem,4vw,3rem);
+}
+.masthead .eyebrow{display:block;margin-bottom:1.2rem}
+.masthead h1{
+  font-size:clamp(2.2rem,5.5vw,4.2rem);
+  margin-bottom:1.1rem;
+}
+.masthead h1 .red{color:var(--red-bright)}
+.refchip{
+  display:inline-block;
+  font-size:.74rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  background:var(--red);color:#fff;
+  padding:.35rem .8rem;border-radius:4px;
+  box-shadow:0 0 26px rgba(193,18,31,.35);
+}
+.readmeta{
+  margin-top:1rem;
+  font-size:.74rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--slate);
+}
+.readmeta .dot{color:var(--gold)}
+
+/* ---------- THE READING ---------- */
+.reading{
+  max-width:680px;margin:0 auto;
+  padding:clamp(1rem,3vw,2rem) clamp(1rem,4vw,2rem) clamp(3rem,6vw,4.5rem);
+}
+.reading-head{
+  text-align:center;margin-bottom:2.6rem;
+}
+.reading-head .rule{
+  width:1px;height:44px;margin:0 auto 1rem;
+  background:linear-gradient(to bottom,transparent,var(--gold));
+}
+.beat{margin:0 0 3.4rem}
+.beat .no{
+  display:block;text-align:center;
+  font-size:.62rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:.7rem;
+}
+.beat img{
+  width:100%;border-radius:12px;
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 24px 60px rgba(0,0,0,.55);
+}
+.beat figcaption{
+  margin-top:.9rem;text-align:center;
+  font-size:.97rem;color:#c8ccd4;
+  max-width:32rem;margin-left:auto;margin-right:auto;
+}
+.beat.l{transform:translateX(-14px) rotate(-.4deg)}
+.beat.r{transform:translateX(14px) rotate(.4deg)}
+@media(max-width:720px){
+  .beat.l,.beat.r{transform:none}
+}
+
+/* scripture beats: still and reverent */
+.beat.scripture{
+  transform:none;
+  margin:4.2rem 0;
+  padding:2rem 0 2.4rem;
+  border-top:1px solid rgba(200,165,94,.3);
+  border-bottom:1px solid rgba(200,165,94,.3);
+  background:radial-gradient(80% 90% at 50% 50%,rgba(193,18,31,.06),transparent 70%);
+}
+.beat.scripture img{
+  box-shadow:0 24px 70px rgba(0,0,0,.6),0 0 50px rgba(193,18,31,.1);
+}
+.beat.scripture .bar{
+  text-align:center;margin-top:1.4rem;
+}
+.speaker{
+  display:inline-block;
+  font-size:.68rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;
+  color:#fff;background:var(--red);
+  padding:.38rem 1rem;border-radius:3px;margin-bottom:.8rem;
+  box-shadow:0 0 24px rgba(193,18,31,.28);
+}
+.speaker.gold{background:transparent;border:1px solid rgba(200,165,94,.5);color:var(--gold);box-shadow:none}
+.kjv{
+  display:block;
+  font-family:'Archivo Black',sans-serif;text-transform:uppercase;
+  font-size:clamp(1.05rem,2.6vw,1.5rem);line-height:1.3;letter-spacing:.01em;
+  color:var(--red-bright);
+  text-shadow:0 0 30px rgba(193,18,31,.3);
+  max-width:34rem;margin:0 auto;
+}
+
+/* ---------- STUDY BLOCKS ---------- */
+.study{
+  max-width:900px;margin:0 auto;
+  padding:0 clamp(1rem,4vw,2rem) clamp(3rem,6vw,5rem);
+  display:grid;gap:1.4rem;
+}
+.block{
+  background:linear-gradient(180deg,var(--panel-2),var(--panel));
+  border:1px solid var(--line);border-radius:var(--radius);
+  padding:1.8rem 1.8rem 1.7rem;
+}
+.block .kicker{
+  display:block;
+  font-size:.64rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1rem;
+}
+.block p{font-size:.95rem;color:#c8ccd4}
+.block p b{color:var(--bone)}
+.block .aside{font-size:.82rem;color:var(--slate);margin-top:.8rem}
+.block .aside a{color:var(--gold);border-bottom:1px solid rgba(200,165,94,.4)}
+.block .aside a:hover{color:var(--bone)}
+
+/* the thread */
+.thread-grid{
+  display:grid;grid-template-columns:1fr auto 1fr;gap:1.2rem;align-items:stretch;
+  margin-bottom:1rem;
+}
+.thread-card{
+  background:rgba(12,14,18,.5);
+  border:1px solid var(--line);border-radius:10px;
+  padding:1.1rem 1.2rem;
+}
+.thread-card .tk{
+  display:block;font-size:.6rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--slate);margin-bottom:.35rem;
+}
+.thread-card h3{
+  font-family:'Archivo Black',sans-serif;text-transform:uppercase;
+  font-size:1.05rem;letter-spacing:.01em;margin-bottom:.3rem;
+}
+.thread-card.nt h3{color:var(--red-bright)}
+.thread-card p{font-size:.8rem;color:var(--slate)}
+.thread-link{
+  align-self:center;display:flex;flex-direction:column;align-items:center;gap:.4rem;
+  color:var(--gold);
+}
+.thread-link .rule{width:44px;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent)}
+.thread-link .lbl{font-size:.58rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase}
+@media(max-width:640px){
+  .thread-grid{grid-template-columns:1fr}
+  .thread-link .rule{width:1px;height:30px;background:linear-gradient(to bottom,transparent,var(--gold),transparent)}
+}
+
+/* honest scholarship */
+.block.honest{
+  border-color:rgba(200,165,94,.4);
+  background:
+    radial-gradient(120% 100% at 0% 0%,rgba(200,165,94,.07),transparent 55%),
+    linear-gradient(180deg,var(--panel-2),var(--panel));
+}
+
+/* landing */
+.landing{
+  text-align:center;
+  background:
+    radial-gradient(90% 120% at 50% 0%,rgba(193,18,31,.08),transparent 60%),
+    #08090c;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:clamp(3.5rem,8vw,6rem) clamp(1rem,5vw,3rem);
+}
+.landing .eyebrow{display:block;margin-bottom:1.8rem}
+.landing .line{
+  font-family:'Archivo Black',sans-serif;text-transform:uppercase;
+  font-size:clamp(1.3rem,3.4vw,2.1rem);line-height:1.25;letter-spacing:.01em;
+  max-width:40rem;margin:0 auto;
+}
+.landing .line .red{color:var(--red-bright);text-shadow:0 0 30px rgba(193,18,31,.35)}
+
+/* keep going */
+.keep{
+  max-width:1100px;margin:0 auto;
+  padding:clamp(3rem,6vw,4.5rem) clamp(1rem,4vw,2rem);
+}
+.keep h2{
+  font-family:'Archivo Black',sans-serif;text-transform:uppercase;
+  font-size:clamp(1.2rem,2.4vw,1.8rem);letter-spacing:.01em;
+  margin-bottom:1.4rem;
+}
+.keep h2 .thin{color:var(--slate);font-family:'Inter';font-weight:400;font-size:.8em}
+.keep-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.keep-card{
+  position:relative;display:block;aspect-ratio:16/10;
+  border-radius:12px;overflow:hidden;
+  border:1px solid rgba(255,255,255,.1);
+  background:var(--panel);
+  transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s,border-color .35s;
+}
+.keep-card:hover,.keep-card:focus-visible{
+  transform:scale(1.03) translateY(-3px);
+  border-color:rgba(229,48,61,.5);
+  box-shadow:0 18px 50px rgba(0,0,0,.6),0 0 26px rgba(193,18,31,.16);
+}
+.keep-card img{
+  width:100%;height:100%;object-fit:cover;object-position:center 22%;
+  transition:transform .5s cubic-bezier(.22,1,.36,1);
+}
+.keep-card:hover img{transform:scale(1.06)}
+.keep-card .shade{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(8,9,12,.92) 0%,rgba(8,9,12,.35) 45%,transparent 70%);
+}
+.keep-card .meta{position:absolute;left:1rem;right:1rem;bottom:.9rem}
+.keep-card .meta .k{
+  display:block;font-size:.58rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:.25rem;
+}
+.keep-card .meta h3{
+  font-family:'Archivo Black',sans-serif;text-transform:uppercase;
+  font-size:.95rem;line-height:1.15;letter-spacing:.01em;
+}
+@media(max-width:760px){.keep-grid{grid-template-columns:1fr}}
+
+/* ---------- FOOTER ---------- */
+footer{
+  border-top:1px solid var(--line);
+  display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;
+  padding:1.6rem clamp(1rem,5vw,3rem);
+  font-size:.75rem;color:var(--slate);letter-spacing:.08em;
+}
+footer .links{display:flex;gap:1.4rem}
+footer a:hover{color:var(--bone)}
+
+:focus-visible{outline:2px solid var(--red-bright);outline-offset:3px;border-radius:4px}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <a class="wordmark" href="motion.html">AWAK<em>EDEN</em></a>
+  <div class="nav-links">
+    <a href="motion.html#catalogue">Catalogue</a>
+    <a href="motion.html#read">Read</a>
+    <a href="motion.html#plan">The Plan</a>
+    <a href="motion.html#about">About</a>
+  </div>
+  <a class="nav-cta" href="#reading">Start reading</a>
+</nav>
+
+<!-- THREE WAYS IN -->
+<nav class="ways" aria-label="Three ways into this piece">
+  <a class="way" href="episode_short.html">
+    <span class="k">60 seconds</span>
+    <span class="t">Watch the Short</span>
+  </a>
+  <a class="way" href="episode_film.html">
+    <span class="k">7 minutes</span>
+    <span class="t">Sit with the Film</span>
+  </a>
+  <a class="way active" href="episode_study.html" aria-current="page">
+    <span class="k">No clock</span>
+    <span class="t">Read the Whole Study</span>
+  </a>
+</nav>
+
+<!-- TITLE BLOCK -->
+<header class="masthead">
+  <span class="eyebrow">Read the whole study <span class="dot">&middot;</span> Cluster 1: The Cross</span>
+  <h1 class="display">The Crucifixion<br><span class="red">Foretold</span></h1>
+  <span class="refchip">PS 22:18 &middot; KJV</span>
+  <p class="readmeta">~4 min read <span class="dot">&middot;</span> 14 hand-inked panels <span class="dot">&middot;</span> KJV, word for word</p>
+</header>
+
+<!-- THE READING -->
+<section class="reading" id="reading" aria-label="The reading: fourteen panels">
+  <div class="reading-head">
+    <div class="rule" aria-hidden="true"></div>
+    <span class="eyebrow">The reading</span>
+  </div>
+
+  <figure class="beat l">
+    <span class="no">Panel 01</span>
+    <img src="../assets/study/read/ps22-01-crucifixion-foretold/beat_01.jpg" alt="Panel 1: hands cast lots beneath the cross" loading="lazy">
+    <figcaption>A song recorded exactly how a dying man's clothes would be divided</figcaption>
+  </figure>
+
+  <figure class="beat r">
+    <span class="no">Panel 02</span>
+    <img src="../assets/study/read/ps22-01-crucifixion-foretold/beat_02.jpg" alt="Panel 2: the psalm named" loading="lazy">
+    <figcaption>Psalm twenty-two</figcaption>
+  </figure>
+
+  <figure class="beat l">
+    <span class="no">Panel 03</span>
+    <img src="../assets/study/read/ps22-01-crucifixion-foretold/beat_03.jpg" alt="Panel 3: David in old age" loading="lazy">
+    <figcaption>David wrote it. But David was never executed. He died an old man</figcaption>
+  </figure>
+
+  <figure class="beat r">
+    <span class="no">Panel 04</span>
+    <img src="../assets/study/read/ps22-01-crucifixion-foretold/beat_04.jpg" alt="Panel 4: the psalm describes someone else" loading="lazy">
+    <figcaption>He was describing someone else</figcaption>
+  </figure>
+
+  <figure class="beat l">
+    <span class="no">Panel 05</span>
+    <img src="../assets/study/read/ps22-01-crucifixion-foretold/beat_05.jpg" alt="Panel 5: stripped and surrounded" loading="lazy">
+    <figcaption>Stripped, surrounded, his life poured out</figcaption>
+  </figure>
+
+  <figure class="beat r">
+    <span class="no">Panel 06</span>
+    <img src="../assets/study/read/ps22-01-crucifixion-foretold/beat_06.jpg" alt="Panel 6: killers divide the clothes and cast lots" loading="lazy">
+    <figcaption>The dying man's killers would divide his clothes, and cast lots</figcaption>
+  </figure>
+
+  <figure class="beat scripture">
+    <span class="no">Panel 07 &middot; Scripture</span>
+    <img src="../assets/study/read/ps22-01-crucifixion-foretold/beat_07.jpg" alt="Panel 7: the words of Psalm 22:18" loading="lazy">
+    <figcaption class="bar">
+      <span class="speaker gold">David - Psalm 22:18</span>
+      <span class="kjv">They part my garments among them, and cast lots upon my vesture.</span>
+    </figcaption>
+  </figure>
+
+  <figure class="beat l">
+    <span class="no">Panel 08</span>
+    <img src="../assets/study/read/ps22-01-crucifixion-foretold/beat_08.jpg" alt="Panel 8: John watches at the cross" loading="lazy">
+    <figcaption>A thousand years later, John watched it at the cross</figcaption>
+  </figure>
+
+  <figure class="beat scripture">
+    <span class="no">Panel 09 &middot; Scripture</span>
+    <img src="../assets/study/read/ps22-01-crucifixion-foretold/beat_09.jpg" alt="Panel 9: the words of John 19:24" loading="lazy">
+    <figcaption class="bar">
+      <span class="speaker">John - 19:24b</span>
+      <span class="kjv">that the scripture might be fulfilled.</span>
+    </figcaption>
+  </figure>
+
+  <figure class="beat r">
+    <span class="no">Panel 10</span>
+    <img src="../assets/study/read/ps22-01-crucifixion-foretold/beat_10.jpg" alt="Panel 10: written down in advance" loading="lazy">
+    <figcaption>God had it written down, so you would know the cross was no accident</figcaption>
+  </figure>
+
+  <figure class="beat l">
+    <span class="no">Panel 11</span>
+    <img src="../assets/study/read/ps22-01-crucifixion-foretold/beat_11.jpg" alt="Panel 11: the plan" loading="lazy">
+    <figcaption>It was the plan</figcaption>
+  </figure>
+
+  <figure class="beat r">
+    <span class="no">Panel 12</span>
+    <img src="../assets/study/read/ps22-01-crucifixion-foretold/beat_12.jpg" alt="Panel 12: the suffering man has a name" loading="lazy">
+    <figcaption>The suffering man of Psalm twenty-two has a name: Jesus</figcaption>
+  </figure>
+
+  <figure class="beat l">
+    <span class="no">Panel 13</span>
+    <img src="../assets/study/read/ps22-01-crucifixion-foretold/beat_13.jpg" alt="Panel 13: dice rolled for His clothes" loading="lazy">
+    <figcaption>They rolled dice for the clothes off His back</figcaption>
+  </figure>
+
+  <figure class="beat r">
+    <span class="no">Panel 14</span>
+    <img src="../assets/study/read/ps22-01-crucifixion-foretold/beat_14.jpg" alt="Panel 14: laying down His life" loading="lazy">
+    <figcaption>Laying down His life to win you back</figcaption>
+  </figure>
+</section>
+
+<!-- STUDY BLOCKS -->
+<section class="study" aria-label="The study">
+
+  <div class="block">
+    <span class="kicker">The thread &middot; Old Testament to New</span>
+    <div class="thread-grid">
+      <div class="thread-card">
+        <span class="tk">Old Testament</span>
+        <h3>Psalm 22:18</h3>
+        <p>David, about 1000 BC. The garments divided, the lots cast, written as if from inside the scene.</p>
+      </div>
+      <div class="thread-link" aria-hidden="true">
+        <div class="rule"></div>
+        <span class="lbl">One thousand years</span>
+        <div class="rule"></div>
+      </div>
+      <div class="thread-card nt">
+        <span class="tk">New Testament</span>
+        <h3>John 19:24</h3>
+        <p>John stands at the cross and names the fulfilment outright, citing the psalm word for word.</p>
+      </div>
+    </div>
+    <p><b>The New Testament itself points back at the verse.</b></p>
+  </div>
+
+  <div class="block honest">
+    <span class="kicker">Honest scholarship</span>
+    <p>Why we didn't quote "they pierced my hands and my feet" (Psalm 22:16): the Hebrew text of that word is genuinely disputed. This piece rests its whole case on the undisputed garments verse - which John 19:24 cites outright.</p>
+    <p class="aside">The deeper treatment lives in <a href="episode_film.html">the film</a>.</p>
+  </div>
+
+  <div class="block">
+    <span class="kicker">Context</span>
+    <p>David died an old man in his bed (1 Kings 2:10). The psalm is first-person, but it describes a death David never died.</p>
+  </div>
+
+</section>
+
+<!-- WHERE IT LANDS -->
+<section class="landing" aria-label="Where it lands">
+  <span class="eyebrow">Where it lands</span>
+  <p class="line">Promised a thousand years before He came, and <span class="red">given for you.</span></p>
+</section>
+
+<!-- KEEP GOING -->
+<section class="keep">
+  <h2>Keep going <span class="thin">/ the other two ways in</span></h2>
+  <div class="keep-grid">
+
+    <a class="keep-card" href="episode_short.html">
+      <img src="_media/short_poster.jpg" alt="Watch the short" loading="lazy">
+      <div class="shade"></div>
+      <div class="meta">
+        <span class="k">60 seconds</span>
+        <h3>Watch the Short</h3>
+      </div>
+    </a>
+
+    <a class="keep-card" href="episode_film.html">
+      <img src="_media/film_poster.jpg" alt="Sit with the film" loading="lazy">
+      <div class="shade"></div>
+      <div class="meta">
+        <span class="k">7 minutes</span>
+        <h3>Sit with the Film</h3>
+      </div>
+    </a>
+
+    <a class="keep-card" href="motion.html#catalogue">
+      <img src="../assets/study/read/today-in-paradise/beat_01.jpg" alt="More from Cluster 1: The Cross" loading="lazy">
+      <div class="shade"></div>
+      <div class="meta">
+        <span class="k">The catalogue</span>
+        <h3>More from Cluster 1: The Cross</h3>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  <span class="wordmark" style="font-size:.85rem">AWAK<em>EDEN</em></span>
+  <div class="links">
+    <a href="motion.html#catalogue">Catalogue</a>
+    <a href="motion.html#read">Read</a>
+    <a href="motion.html#plan">The Plan</a>
+    <a href="motion.html#about">About</a>
+  </div>
+  <span>Every panel lands on Jesus.</span>
+</footer>
+
+</body>
+</html>

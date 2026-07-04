@@ -252,9 +252,9 @@
       })
       .catch(function (err) {
         console.error(err);
-        var stats = document.getElementById("stats");
-        if (stats) {
-          stats.innerHTML =
+        var box = document.getElementById("catalogue-grid") || document.getElementById("stats");
+        if (box) {
+          box.innerHTML =
             '<p class="load-error">Catalogue could not load. Run <code>python build_catalog.py</code> and use a local server (not file://).</p>';
         }
       });

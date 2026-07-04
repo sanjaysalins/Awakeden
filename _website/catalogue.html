@@ -3,45 +3,55 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Catalogue | Awakeden Series</title>
+  <title>Catalogue | Awakeden</title>
   <link rel="canonical" href="https://awakeden.com/catalogue.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/site.css">
-  <meta name="description" content="The Awakeden catalogue: long-form Bible studies and shorts on finding Jesus across Scripture. In production, in the studio, and on the way. First up, Isaiah 53 and Psalm 22.">
+  <meta name="description" content="The Awakeden catalogue: hand-inked Bible studies, films and shorts on finding Jesus across Scripture. In production, in the studio, and on the way.">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <meta name="theme-color" content="#f4eee1">
+  <meta name="theme-color" content="#0c0e12">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Awakeden Series">
-  <meta property="og:title" content="Catalogue | Awakeden Series">
-  <meta property="og:description" content="Long-form Bible studies and shorts on finding Jesus across Scripture. First up, Isaiah 53 and Psalm 22.">
+  <meta property="og:site_name" content="Awakeden">
+  <meta property="og:title" content="Catalogue | Awakeden">
+  <meta property="og:description" content="Hand-inked Bible studies, films and shorts on finding Jesus across Scripture. First up, Isaiah 53 and Psalm 22.">
   <meta property="og:url" content="https://awakeden.com/catalogue.html">
   <meta property="og:image" content="https://awakeden.com/assets/og-cover.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Catalogue | Awakeden Series">
-  <meta name="twitter:description" content="Long-form Bible studies and shorts on finding Jesus across Scripture.">
+  <meta name="twitter:title" content="Catalogue | Awakeden">
+  <meta name="twitter:description" content="Hand-inked Bible studies, films and shorts on finding Jesus across Scripture.">
   <meta name="twitter:image" content="https://awakeden.com/assets/og-cover.jpg">
 </head>
 <body>
-  <div class="ambient" aria-hidden="true"><div class="grain"></div><div class="light-leak"></div><div class="mesh"></div></div>
-  <header class="site-header">
-    <a class="wordmark" href="index.html"><span class="wordmark-main">Awakeden</span> <span class="wordmark-sub">Series</span></a>
-    <nav class="site-nav">
-      <a href="catalogue.html" aria-current="page">Catalogue</a>
-      <a href="series/psalm-22.html">Psalm 22</a>
-      <a href="roadmap.html">Roadmap</a>
-      <a href="about.html">About</a>
-    </nav>
-  </header>
-  <div class="ticker-wrap"><div class="ticker-fade ticker-fade--left"></div><div class="ticker" id="ticker"></div><div class="ticker-fade ticker-fade--right"></div></div>
-  <div class="page-hero">
-    <h1>Catalogue</h1>
-    <p class="hero-lead">What we are making, what is in the studio, and what is still to come.</p>
+
+<nav class="nav" aria-label="Main">
+  <a class="wordmark" href="index.html">AWAK<em>EDEN</em></a>
+  <div class="nav-links">
+    <a href="catalogue.html" aria-current="page">Catalogue</a>
+    <a href="read/index.html">Read</a>
+    <a href="plan.html">The Plan</a>
+    <a href="about.html">About</a>
   </div>
-  <div class="section">
+  <a class="nav-cta" href="read/index.html">Start reading</a>
+</nav>
+
+<div class="ticker-wrap" aria-live="polite">
+  <div class="ticker-fade ticker-fade--left"></div>
+  <div class="ticker" id="ticker"></div>
+  <div class="ticker-fade ticker-fade--right"></div>
+</div>
+
+<div class="page-hero">
+  <p class="eyebrow">Every piece <span class="dot">&#9670;</span> lands on Jesus</p>
+  <h1 class="display">The Catalogue</h1>
+  <p class="hero-lead">What is out, what is in the studio, and what is still to come.</p>
+</div>
+
+<div class="section" style="padding-top:1rem">
+  <div class="wrap">
     <div class="filters">
       <button type="button" class="filter-btn active" data-filter="all">All</button>
       <button type="button" class="filter-btn" data-filter="long">Long-form</button>
@@ -51,9 +61,21 @@
     </div>
     <div class="card-grid" id="catalogue-grid"><div class="card skeleton-card"></div><div class="card skeleton-card"></div></div>
   </div>
-  <footer class="site-footer"><p>Scripture quoted from the King James Version (KJV), public domain.</p><p class="footer-url">https://awakeden.com</p></footer>
-  <script src="assets/js/site.js"></script>
-  <script src="assets/js/motion.js" defer></script>
-  <script src="assets/js/catalog.js" defer></script>
+</div>
+
+<footer class="footer">
+  <span class="wordmark" style="font-size:.85rem">AWAK<em>EDEN</em></span>
+  <div class="links">
+    <a href="index.html">Home</a>
+    <a href="read/index.html">Read</a>
+    <a href="plan.html">The Plan</a>
+    <a href="about.html">About</a>
+  </div>
+  <span>Scripture quoted from the King James Version (KJV), public domain.</span>
+</footer>
+
+<script src="assets/js/site.js"></script>
+<script src="assets/js/motion.js" defer></script>
+<script src="assets/js/catalog.js" defer></script>
 </body>
 </html>

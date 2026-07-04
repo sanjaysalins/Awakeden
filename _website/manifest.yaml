@@ -35,7 +35,7 @@ items:
     preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/07_The_Body_Foretold/visual/nbp/19_wounded-for-our-transgressions.png"
     study_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1"
     youtube_id: null
-    public_hook: "David wrote the crucifixion a thousand years before Rome invented it."
+    public_hook: "David wrote the crucifixion a thousand years before Rome nailed anyone to a cross."
     public_blurb: >
       One locked long-form study on Psalm 22, cut into eight gospel shorts. Each short follows
       one beat from the psalm Jesus lived out on the cross.
@@ -50,8 +50,9 @@ items:
     public_status: studio_complete
     featured: false
     preview_approved: true
-    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/01_The_Crucifixion_Foretold/visual/nbp/14_laying-down-his-life.png"
+    preview_source: "assets/study/read/ps22-01-crucifixion-foretold/beat_01.jpg"
     youtube_id: null
+    read_source: "../batches/cluster_01_cross/crucifixion_foretold_ps2218"
     public_hook: "Ten centuries before the cross, a psalm said a dying man's clothes would be divided."
     public_blurb: >
       Psalm 22:18. They part my garments and cast lots. John records the soldiers doing exactly that.
@@ -84,8 +85,9 @@ items:
     featured: true
     featured_order: 3
     preview_approved: true
-    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/03_The_Forsaken_Cry/visual/nbp/09_bearing-the-forsaking.png"
+    preview_source: "assets/study/read/ps22-03-forsaken-cry/beat_01.jpg"
     youtube_id: null
+    read_source: "../batches/cluster_01_cross/forsaken_cry_ps221"
     public_hook: "The loneliest line Jesus spoke from the cross was a quote from Psalm 22."
     public_blurb: >
       My God, my God, why hast thou forsaken me? David wrote it. Jesus cried it from the cross.
@@ -164,8 +166,9 @@ items:
     public_status: studio_complete
     featured: false
     preview_approved: true
-    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/shorts/08_I_Thirst/visual/nbp/14_that-water-is-himself.png"
+    preview_source: "assets/study/read/ps22-08-i-thirst/beat_01.jpg"
     youtube_id: null
+    read_source: "../batches/cluster_01_cross/i_thirst_john1928"
     public_hook: "Two words from the cross. David wrote the thirst a thousand years before."
     public_blurb: >
       My tongue cleaveth to my jaws. The psalm's thirst, fulfilled in Jesus' cry from the cross.
@@ -175,14 +178,15 @@ items:
     title: "The One They Pierced"
     ref: "Zechariah 12:10"
     series_id: jesus-in-ot
-    cluster: null
-    cluster_order: null
+    cluster: cluster-01-cross
+    cluster_order: 12
     public_status: studio_complete
     featured: false
     preview_approved: true
-    preview_source: "../v2/pilot/zechariah_12_10_pierced/v1/visual/nbp/06_whom-they-pierced.png"
+    preview_source: "assets/study/read/zechariah-12-10-pierced/beat_01.jpg"
     study_source: "../v2/pilot/zechariah_12_10_pierced/v1"
     youtube_id: null
+    read_source: "../batches/cluster_01_cross/pierced_zech1210"
     public_hook: "A Roman soldier drove a spear into a dead man's side to be sure He was gone. He had no idea he was finishing a sentence God wrote five centuries earlier."
     public_blurb: >
       Zechariah 12:10. The LORD says they shall look upon me whom they have pierced, then mourn for him as for
@@ -192,7 +196,7 @@ items:
 
   - slug: why-are-you-afraid
     kind: short
-    title: "Why are you afraid"
+    title: "Why Are You Afraid?"
     ref: "Matthew 8:26"
     series_id: questions-jesus-asked
     cluster: null
@@ -453,8 +457,8 @@ items:
     preview_approved: false
     preview_source: null
     youtube_id: null
-    public_hook: "Seven hundred years before Rome invented crucifixion, a Jewish prophet described it, and on the Gaza road, an African official is reading that scroll aloud."
-    public_blurb: "Seven hundred years before Rome invented crucifixion, a Jewish prophet described it, and on the Gaza road, an African official is reading that scroll aloud."
+    public_hook: "Seven hundred years before the cross, a Jewish prophet described a death like it, and on the Gaza road, an African official is reading that scroll aloud."
+    public_blurb: "Seven hundred years before the cross, a Jewish prophet described a death like it, and on the Gaza road, an African official is reading that scroll aloud."
 
   - slug: jesus-walked-past-the-pool
     kind: short
@@ -624,6 +628,121 @@ items:
     public_hook: "Everyone has an opinion about Jesus."
     public_blurb: "Everyone has an opinion about Jesus."
 
+  # ---- Cluster 1: The Cross (living-page inked comic shorts, 2026-07) ----
+  - slug: father-forgive-them
+    kind: short
+    title: "Father, Forgive Them"
+    ref: "Luke 23:34"
+    series_id: words-from-cross
+    cluster: cluster-01-cross
+    cluster_order: 1
+    public_status: studio_complete
+    featured: false
+    preview_approved: true
+    preview_source: "assets/study/read/father-forgive-them/beat_01.jpg"
+    youtube_id: null
+    read_source: "../batches/cluster_01_cross/father_forgive_them"
+    read_spec: "visual/mocomic_v2.spec.json"
+    read_video: "visual/_byteplus/father_forgive_them_mocomic_v2_scored.mp4"
+    public_hook: "The first word from the cross is a prayer for the men driving the nails."
+    public_blurb: "Luke 23:34. While the soldiers divided his garments, Jesus prayed forgiveness over them. The first word from the cross, drawn panel by panel."
+
+  - slug: thirty-pieces-of-silver
+    kind: short
+    title: "Thirty Pieces of Silver"
+    ref: "Zechariah 11:13"
+    series_id: jesus-in-ot
+    cluster: cluster-01-cross
+    cluster_order: 2
+    public_status: studio_complete
+    featured: false
+    preview_approved: true
+    preview_source: "assets/study/read/thirty-pieces-of-silver/beat_01.jpg"
+    youtube_id: null
+    read_source: "../batches/cluster_01_cross/thirty_pieces_zech11"
+    public_hook: "Zechariah priced the betrayal five hundred years early: thirty pieces of silver, thrown down in the house of the LORD."
+    public_blurb: "Zechariah 11:12-13 names the price, the contempt, and the temple floor. Judas fulfilled every word of it. The prophecy that priced the Messiah."
+
+  - slug: today-in-paradise
+    kind: short
+    title: "Today in Paradise"
+    ref: "Luke 23:43"
+    series_id: words-from-cross
+    cluster: cluster-01-cross
+    cluster_order: 3
+    public_status: studio_complete
+    featured: false
+    preview_approved: true
+    preview_source: "assets/study/read/today-in-paradise/beat_01.jpg"
+    youtube_id: null
+    read_source: "../batches/cluster_01_cross/today_paradise_luke2343"
+    public_hook: "Two thieves. Same cross. Two answers."
+    public_blurb: "Luke 23:39-43. One thief railed, one asked to be remembered, and Jesus answered with a promise dated TODAY. The second word from the cross."
+
+  - slug: woman-behold-thy-son
+    kind: short
+    title: "Woman, Behold Thy Son"
+    ref: "John 19:26"
+    series_id: words-from-cross
+    cluster: cluster-01-cross
+    cluster_order: 4
+    public_status: studio_complete
+    featured: false
+    preview_approved: true
+    preview_source: "assets/study/read/woman-behold-thy-son/beat_01.jpg"
+    youtube_id: null
+    read_source: "../batches/cluster_01_cross/woman_behold_john1926"
+    public_hook: "Simeon promised Mary a sword. At the cross, Jesus watched it land, and gave her a son."
+    public_blurb: "Luke 2:35 meets John 19:26-27. The sword Simeon foretold pierces Mary at Golgotha, and the dying Jesus binds her wound with a son and a home."
+
+  - slug: it-is-finished
+    kind: short
+    title: "It Is Finished"
+    ref: "John 19:30"
+    series_id: words-from-cross
+    cluster: cluster-01-cross
+    cluster_order: 5
+    public_status: studio_complete
+    featured: false
+    preview_approved: true
+    preview_source: "assets/study/read/it-is-finished/beat_01.jpg"
+    youtube_id: null
+    read_source: "../batches/cluster_01_cross/it_is_finished_john1930"
+    public_hook: "The first time the Bible says finished, nothing was broken yet."
+    public_blurb: "Genesis 2:1 and John 19:30. Two finished works, one Workman: He finished creation and rested; He finished redemption and rose. Enter his rest."
+
+  - slug: father-into-thy-hands
+    kind: short
+    title: "Father, Into Thy Hands"
+    ref: "Luke 23:46"
+    series_id: words-from-cross
+    cluster: cluster-01-cross
+    cluster_order: 6
+    public_status: studio_complete
+    featured: false
+    preview_approved: true
+    preview_source: "assets/study/read/father-into-thy-hands/beat_01.jpg"
+    youtube_id: null
+    read_source: "../batches/cluster_01_cross/into_thy_hands_luke2346"
+    public_hook: "A dying man's last words. And they were a child's bedtime prayer."
+    public_blurb: "Psalm 31:5 was an evening prayer a child could learn. Luke 23:46: with his last breath Jesus prayed it, and added one word: Father."
+
+  - slug: could-ye-not-watch-one-hour
+    kind: short
+    title: "Could Ye Not Watch One Hour"
+    ref: "Matthew 26:40"
+    series_id: questions-jesus-asked
+    cluster: cluster-01-cross
+    cluster_order: 7
+    public_status: studio_complete
+    featured: false
+    preview_approved: true
+    preview_source: "assets/study/read/could-ye-not-watch-one-hour/beat_01.jpg"
+    youtube_id: null
+    read_source: "../batches/cluster_01_cross/watch_one_hour_matt2640"
+    public_hook: "Jesus asked three fishermen for one thing. They failed inside an hour."
+    public_blurb: "Matthew 26:36-46. Gethsemane, the cup, the sleeping disciples, and the mercy in the question. He watched that hour alone so no hour of yours is watched alone."
+
 roadmap:
   - slug: questions-jesus-asked
     title: "Questions Jesus Asked"
@@ -659,3 +778,7 @@ clusters:
     title: "Psalm 22: From the Cross"
     subtitle: "Eight shorts from one long-form study"
     slug: psalm-22
+  cluster-01-cross:
+    title: "The Cross"
+    subtitle: "Eleven hand-inked shorts from Golgotha - the words from the cross and the prophecies that walked there"
+    slug: cluster-01-cross
