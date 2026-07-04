@@ -1,0 +1,14 @@
+{
+  "keep": [
+    0.3,
+    0.1,
+    0.85,
+    0.95
+  ],
+  "focus": [
+    0.55,
+    0.35
+  ],
+  "pad": 0.05,
+  "note": "boy centre-right; hills free left"
+}

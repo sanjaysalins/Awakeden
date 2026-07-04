@@ -1,0 +1,182 @@
+{
+ "dod": {
+  "median_beat_s": 3.97,
+  "max_beat_s": 6.7,
+  "slams": 10,
+  "kling_or_punch_or_slam_pct": 100,
+  "beats": 11
+ },
+ "beats": [
+  {
+   "beat": 1,
+   "dur": 4.0,
+   "tpl": "big_inset",
+   "slams": 1,
+   "sources": [
+    "kling",
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 2,
+   "dur": 3.833333,
+   "tpl": "full",
+   "slams": 0,
+   "sources": [
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 3,
+   "dur": 4.066667,
+   "tpl": "full",
+   "slams": 0,
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 4,
+   "dur": 5.4,
+   "tpl": "full",
+   "slams": 0,
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 5,
+   "dur": 2.2,
+   "tpl": "two_v",
+   "slams": 2,
+   "sources": [
+    "dyncam",
+    "dyncam"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 6,
+   "dur": 5.9,
+   "tpl": "big_inset",
+   "slams": 1,
+   "sources": [
+    "kling",
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 7,
+   "dur": 2.9,
+   "tpl": "full",
+   "slams": 0,
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 8,
+   "dur": 6.7,
+   "tpl": "full",
+   "slams": 0,
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 9,
+   "dur": 2.833333,
+   "tpl": "quad",
+   "slams": 4,
+   "sources": [
+    "kling",
+    "kling",
+    "kling",
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 10,
+   "dur": 3.066667,
+   "tpl": "hero_frac3",
+   "slams": 2,
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 11,
+   "dur": 3.966667,
+   "tpl": "full",
+   "slams": 0,
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  }
+ ]
+}

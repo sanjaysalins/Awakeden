@@ -1,0 +1,55 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Psalm 22 — DYNAMIC comic M1 slice review</title>
+<style>
+body{background:#141210;color:#eee;font-family:Segoe UI,Arial,sans-serif;margin:24px;max-width:1280px}
+h1{font-size:22px}h2{font-size:17px;margin-top:28px;color:#e8c46a}
+video{width:100%;max-width:1280px;border:2px solid #444;border-radius:6px}
+table{border-collapse:collapse;font-size:14px;margin-top:8px}
+td,th{border:1px solid #3a352e;padding:6px 12px;text-align:left}
+th{background:#26221c}.ok{color:#7fd27f;font-weight:700}.warn{color:#e8b04a;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+.grid figure{margin:0}.grid img{width:100%;border:1px solid #444;border-radius:4px}
+figcaption{font-size:12.5px;color:#bbb;padding:3px 2px}
+.note{font-size:13.5px;color:#c9c2b6;line-height:1.5}
+</style></head><body>
+<h1>Psalm 22 (16:9 long) — DYNAMIC graphic-comic REBUILD — M1 slice (0:00–0:45)</h1>
+<p class="note">The v2 spec's first slice: caption tier-solver + compact kinetic boxes + translucent red-letter bands
+(no opaque slab), ~4s median beats cut on the words, edit-punch on active beats, real Kling clips + $0 dynamic-cam.
+Compare against the old slideshow (<i>mocomic_16x9_full.spec_preview.mp4</i>) and the locked short.</p>
+
+<h2>▶ The slice</h2>
+<video controls src="dyncomic_m1.spec_preview.mp4"></video>
+
+<h2>Definition of Done (spec §5) — measured</h2>
+<table>
+<tr><th>Check</th><th>Bar</th><th>M1 slice</th><th></th></tr>
+<tr><td>Median beat</td><td>&le; 6s</td><td>3.95s (11 beats / 44.85s)</td><td class="ok">PASS</td></tr>
+<tr><td>Held beats</td><td>&le;2, none &gt;8s</td><td>1 (the Psalm-22:1 red-letter hero, 6.7s)</td><td class="ok">PASS</td></tr>
+<tr><td>Kinetic captions</td><td>§5.2 says 0% keep-box overlap; §R1 allows Tier-2 scrims</td><td>4× Tier-1 (measured 0% keep overlap) · 5× Tier-2 soft translucent scrims — 0% overlap with every MOTION-INFLATED face/core box, but they do sit over inflated keep boxes (57–100% of the box area, measured per beat in the report). R1 vs §5.2 needs YOUR call — see chat.</td><td class="warn">user decision</td></tr>
+<tr><td>Red-letter</td><td>plaque/translucent band, no opaque slab</td><td>2× translucent gradient-top band, mixed-case KJV (locked red-bar look) + red tag chip, within the bottom 25%</td><td class="ok">PASS</td></tr>
+<tr><td>Still reuse</td><td>&ge;8 beats AND different crop (both halves now machine-checked)</td><td>0 violations (the red-team caught pierced_hands_feet reused at the same crop in the quad — replaced with the pierced-FEET macro)</td><td class="ok">PASS</td></tr>
+<tr><td>Cut accuracy</td><td>cuts land on the words</td><td>worst cumulative boundary error 0.017s (frame-snapped windows + frame-exact segments; was drifting +0.25s before the red-team)</td><td class="ok">PASS</td></tr>
+<tr><td>Motion</td><td>every beat moves, &ge;40% Kling/punch</td><td>100% moving · 82% Kling-or-punch (8 Kling beats, 4 punch)</td><td class="ok">PASS</td></tr>
+<tr><td>Doctrine</td><td>KJV verbatim, 0 errors</td><td>Red bars verbatim (Mt 27:46, Ps 22:1) · caption fixed to "almost a thousand years" · 5-CLI panel runs at the FULL-film pass</td><td class="ok">self-check PASS</td></tr>
+<tr><td>Christ-centric share</td><td>&le;55% across the FULL film</td><td>64% in this slice (it is the crucifixion hook movement; M2–M7 dilute)</td><td class="warn">note</td></tr>
+</table>
+
+<h2>One frame per beat</h2>
+<div class="grid">
+<figure><img src="_dyncomic_work/_audit/beat_2.0.jpg"><figcaption>B1 · 4.0s · PUNCH · nail macro + crane inset · scrim caption</figcaption></figure>
+<figure><img src="_dyncomic_work/_audit/beat_5.5.jpg"><figcaption>B2 · 3.8s · PUNCH · storm over Jerusalem (Kling)</figcaption></figure>
+<figure><img src="_dyncomic_work/_audit/beat_9.8.jpg"><figcaption>B3 · 4.1s · red-letter band · Matthew 27:46 (Kling)</figcaption></figure>
+<figure><img src="_dyncomic_work/_audit/beat_14.5.jpg"><figcaption>B4 · 5.4s · anguish macro ($0 dyncam swoop)</figcaption></figure>
+<figure><img src="_dyncomic_work/_audit/beat_18.4.jpg"><figcaption>B5 · 2.2s · PUNCH · "a quotation" · Tier-1 box</figcaption></figure>
+<figure><img src="_dyncomic_work/_audit/beat_22.5.jpg"><figcaption>B6 · 5.9s · David hero + lyre inset · Tier-1 in the sky</figcaption></figure>
+<figure><img src="_dyncomic_work/_audit/beat_27.0.jpg"><figcaption>B7 · 2.9s · died old, safe in bed (Kling) · Tier-1</figcaption></figure>
+<figure><img src="_dyncomic_work/_audit/beat_31.5.jpg"><figcaption>B8 · 6.7s · held sacred · Psalm 22:1 band (Kling)</figcaption></figure>
+<figure><img src="_dyncomic_work/_audit/beat_36.5.jpg"><figcaption>B9 · 2.8s · PUNCH · quad reveal "THIS IS PSALM 22" (feet macro — no crop reuse)</figcaption></figure>
+<figure><img src="_dyncomic_work/_audit/beat_39.5.jpg"><figcaption>B10 · 3.1s · hero fracture: wide / face / soldiers gambling</figcaption></figure>
+<figure><img src="_dyncomic_work/_audit/beat_43.0.jpg"><figcaption>B11 · 4.0s · where to look ($0 dyncam swoop)</figcaption></figure>
+</div>
+
+<h2>What's next (waiting on sign-off)</h2>
+<p class="note">Scale to M2–M7 (~70 beats) → render ~15–20 new grounded stills (~$1) + Tier-3 caption-room re-renders →
+~6–10 new Kling heroes (&le;$7 of the $15 cap; HF may 500 — dyncam fallback ships) → composite → score + SFX →
+full DoD + 5-CLI doctrine panel.</p>
+</body></html>

@@ -6436,6 +6436,416 @@
       "used_in": [
         "it_is_finished_john1930 short"
       ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "crucifixion_foretold_ps2218",
+      "piece_title": "The Crucifixion Foretold (Ps 22:18)",
+      "verse": "Psalm 22:18 + John 19:24",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "cf_david_writing_psalm",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/crucifixion_foretold_ps2218/visual/david_writing_psalm.png",
+      "title": "aged King David writing the psalm by lamplight, harp beside",
+      "subject": "aged King David writing the psalm by lamplight, harp beside",
+      "characters": [
+        "David"
+      ],
+      "elements": [
+        "scroll",
+        "oil lamp",
+        "harp",
+        "crown"
+      ],
+      "setting": "night chamber",
+      "palette": "inked cel-flat, lamplight gold to storm grey",
+      "mood": "prophecy written, prophecy fulfilled",
+      "doctrine": "David wrote it in the first person (Ps 22:1)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "ps2218",
+        "prophecy"
+      ],
+      "used_in": [
+        "crucifixion_foretold_ps2218 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "crucifixion_foretold_ps2218",
+      "piece_title": "The Crucifixion Foretold (Ps 22:18)",
+      "verse": "Psalm 22:18 + John 19:24",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "cf_lots_cup_close",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/crucifixion_foretold_ps2218/visual/lots_cup_close.png",
+      "title": "leather cup with two knucklebone lots spilled on stone, garment beside",
+      "subject": "leather cup with two knucklebone lots spilled on stone, garment beside",
+      "characters": [],
+      "elements": [
+        "knucklebone lots",
+        "leather cup",
+        "woven garment"
+      ],
+      "setting": "Golgotha",
+      "palette": "inked cel-flat, lamplight gold to storm grey",
+      "mood": "prophecy written, prophecy fulfilled",
+      "doctrine": "cast lots upon my vesture (Ps 22:18)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "ps2218",
+        "prophecy"
+      ],
+      "used_in": [
+        "crucifixion_foretold_ps2218 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "crucifixion_foretold_ps2218",
+      "piece_title": "The Crucifixion Foretold (Ps 22:18)",
+      "verse": "Psalm 22:18 + John 19:24",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "cf_lots_cup_close_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/crucifixion_foretold_ps2218/visual/clips/lots_cup_close.mp4",
+      "title": "leather cup with two knucklebone lots spilled on stone, garment beside (Kling push-in)",
+      "subject": "leather cup with two knucklebone lots spilled on stone, garment beside",
+      "characters": [],
+      "elements": [
+        "knucklebone lots",
+        "leather cup",
+        "woven garment"
+      ],
+      "setting": "Golgotha",
+      "doctrine": "cast lots upon my vesture (Ps 22:18)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "ps2218",
+        "kling"
+      ],
+      "used_in": [
+        "crucifixion_foretold_ps2218 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "forsaken_cry_ps221",
+      "piece_title": "The Forsaken Cry (Ps 22:1 / Matt 27:46)",
+      "verse": "Psalm 22:1 + Matthew 27:46",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "fc_ninth_hour_darkness",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/forsaken_cry_ps221/visual/ninth_hour_darkness.png",
+      "title": "three distant crosses under a sky gone black, dim swallowed sun",
+      "subject": "three distant crosses under a sky gone black, dim swallowed sun",
+      "characters": [],
+      "elements": [
+        "three crosses",
+        "darkened sun",
+        "black clouds"
+      ],
+      "setting": "Golgotha",
+      "palette": "inked cel-flat, near-black with pale sun",
+      "mood": "the dereliction, darkness at noon",
+      "doctrine": "darkness over all the land, the ninth hour (Matt 27:45-46)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "ps221",
+        "darkness"
+      ],
+      "used_in": [
+        "forsaken_cry_ps221 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "forsaken_cry_ps221",
+      "piece_title": "The Forsaken Cry (Ps 22:1 / Matt 27:46)",
+      "verse": "Psalm 22:1 + Matthew 27:46",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "fc_ninth_hour_darkness_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/forsaken_cry_ps221/visual/clips/ninth_hour_darkness.mp4",
+      "title": "three distant crosses under a sky gone black, dim swallowed sun (Kling push-in)",
+      "subject": "three distant crosses under a sky gone black, dim swallowed sun",
+      "characters": [],
+      "elements": [
+        "three crosses",
+        "darkened sun",
+        "black clouds"
+      ],
+      "setting": "Golgotha",
+      "doctrine": "darkness over all the land, the ninth hour (Matt 27:45-46)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "ps221",
+        "kling"
+      ],
+      "used_in": [
+        "forsaken_cry_ps221 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "forsaken_cry_ps221",
+      "piece_title": "The Forsaken Cry (Ps 22:1 / Matt 27:46)",
+      "verse": "Psalm 22:1 + Matthew 27:46",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "fc_father_lamp_doorway_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/forsaken_cry_ps221/visual/clips/father_lamp_doorway.mp4",
+      "title": "father with lamp in doorway (Kling push-in)",
+      "subject": "robed father holding a clay oil lamp in a stone doorway at night",
+      "characters": [
+        "father"
+      ],
+      "elements": [
+        "oil lamp",
+        "doorway",
+        "threshold light"
+      ],
+      "setting": "stone house",
+      "doctrine": "the way home is open",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "kling"
+      ],
+      "used_in": [
+        "forsaken_cry_ps221 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "i_thirst_john1928",
+      "piece_title": "I Thirst (John 19:28 / Ps 22:15)",
+      "verse": "John 19:28 + Psalm 22:15",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "it_ocean_creation_wide",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/i_thirst_john1928/visual/ocean_creation_wide.png",
+      "title": "vast curling ocean wave under golden dawn, spray in the light",
+      "subject": "vast curling ocean wave under golden dawn, spray in the light",
+      "characters": [],
+      "elements": [
+        "great wave",
+        "dawn sun",
+        "spray"
+      ],
+      "setting": "open sea",
+      "palette": "inked cel-flat, dawn gold / parched tan / water blue",
+      "mood": "the Maker thirsting, living water offered",
+      "doctrine": "All things were made by him (John 1:3)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "john1928",
+        "thirst"
+      ],
+      "used_in": [
+        "i_thirst_john1928 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "i_thirst_john1928",
+      "piece_title": "I Thirst (John 19:28 / Ps 22:15)",
+      "verse": "John 19:28 + Psalm 22:15",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "it_potsherd_dry_clay",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/i_thirst_john1928/visual/potsherd_dry_clay.png",
+      "title": "broken dry clay shard on cracked parched earth",
+      "subject": "broken dry clay shard on cracked parched earth",
+      "characters": [],
+      "elements": [
+        "potsherd",
+        "cracked earth"
+      ],
+      "setting": "desert",
+      "palette": "inked cel-flat, dawn gold / parched tan / water blue",
+      "mood": "the Maker thirsting, living water offered",
+      "doctrine": "my strength is dried up like a potsherd (Ps 22:15)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "john1928",
+        "thirst"
+      ],
+      "used_in": [
+        "i_thirst_john1928 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "i_thirst_john1928",
+      "piece_title": "I Thirst (John 19:28 / Ps 22:15)",
+      "verse": "John 19:28 + Psalm 22:15",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-03",
+      "id": "it_living_water_stream",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_01_cross/i_thirst_john1928/visual/living_water_stream.png",
+      "title": "clear spring pouring over mossy rocks, sunlight in the water",
+      "subject": "clear spring pouring over mossy rocks, sunlight in the water",
+      "characters": [],
+      "elements": [
+        "spring water",
+        "mossy rocks",
+        "sparkle"
+      ],
+      "setting": "spring",
+      "palette": "inked cel-flat, dawn gold / parched tan / water blue",
+      "mood": "the Maker thirsting, living water offered",
+      "doctrine": "living water (John 4:14 / 7:37)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "john1928",
+        "thirst"
+      ],
+      "used_in": [
+        "i_thirst_john1928 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "i_thirst_john1928",
+      "piece_title": "I Thirst (John 19:28 / Ps 22:15)",
+      "verse": "John 19:28 + Psalm 22:15",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "it_ocean_creation_wide_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/i_thirst_john1928/visual/clips/ocean_creation_wide.mp4",
+      "title": "vast curling ocean wave under golden dawn, spray in the light (Kling push-in)",
+      "subject": "vast curling ocean wave under golden dawn, spray in the light",
+      "characters": [],
+      "elements": [
+        "great wave",
+        "dawn sun",
+        "spray"
+      ],
+      "setting": "open sea",
+      "doctrine": "All things were made by him (John 1:3)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "john1928",
+        "kling"
+      ],
+      "used_in": [
+        "i_thirst_john1928 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "i_thirst_john1928",
+      "piece_title": "I Thirst (John 19:28 / Ps 22:15)",
+      "verse": "John 19:28 + Psalm 22:15",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "it_potsherd_dry_clay_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/i_thirst_john1928/visual/clips/potsherd_dry_clay.mp4",
+      "title": "broken dry clay shard on cracked parched earth (Kling push-in)",
+      "subject": "broken dry clay shard on cracked parched earth",
+      "characters": [],
+      "elements": [
+        "potsherd",
+        "cracked earth"
+      ],
+      "setting": "desert",
+      "doctrine": "my strength is dried up like a potsherd (Ps 22:15)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "john1928",
+        "kling"
+      ],
+      "used_in": [
+        "i_thirst_john1928 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_01_cross",
+      "piece": "i_thirst_john1928",
+      "piece_title": "I Thirst (John 19:28 / Ps 22:15)",
+      "verse": "John 19:28 + Psalm 22:15",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-03",
+      "id": "it_living_water_stream_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_01_cross/i_thirst_john1928/visual/clips/living_water_stream.mp4",
+      "title": "clear spring pouring over mossy rocks, sunlight in the water (Kling push-in)",
+      "subject": "clear spring pouring over mossy rocks, sunlight in the water",
+      "characters": [],
+      "elements": [
+        "spring water",
+        "mossy rocks",
+        "sparkle"
+      ],
+      "setting": "spring",
+      "doctrine": "living water (John 4:14 / 7:37)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "john1928",
+        "kling"
+      ],
+      "used_in": [
+        "i_thirst_john1928 short"
+      ]
     }
   ]
 }

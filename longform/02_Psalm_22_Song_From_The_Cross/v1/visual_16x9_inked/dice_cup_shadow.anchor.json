@@ -1,0 +1,14 @@
+{
+  "keep": [
+    0.15,
+    0.05,
+    0.9,
+    0.85
+  ],
+  "focus": [
+    0.5,
+    0.4
+  ],
+  "pad": 0.05,
+  "note": "hand+cup centre, die falling; shadow lower"
+}

@@ -1,0 +1,294 @@
+{
+ "_doc": "LIVING PAGE v3 test - M1 (0-44.85s) staged like a master motion-comic: panels SLAM onto the page on the exact words (alignment.json), takeover camera dives into the nail panel, sacred red-letter beats stay perfectly still for contrast, slams land with sound_library booms. Same narration, same KJV bars as the v2 slice.",
+ "audio": "../narration.mp3",
+ "total": 44.85,
+ "beats": [
+  {
+   "t": [
+    0.0,
+    4.0
+   ],
+   "tpl": "big_inset",
+   "clips": [
+    {
+     "slug": "crane_cross_soldiers",
+     "motion": "pushin"
+    },
+    {
+     "slug": "pierced_hands_feet",
+     "motion": "pushin",
+     "at": 1.1,
+     "slide": "right",
+     "sfx": "nail_strike_single"
+    }
+   ],
+   "takeover": {
+    "panel": 1,
+    "start": 3.0,
+    "zoom": 1.5
+   },
+   "cap": {
+    "type": "caption",
+    "text": "At the ninth hour - nailed to a Roman cross",
+    "kw": "NAILED"
+   }
+  },
+  {
+   "t": [
+    4.0,
+    7.84
+   ],
+   "tpl": "full",
+   "punch": true,
+   "sfx": [
+    [
+     "thunder_low_roll",
+     4.02,
+     -8
+    ]
+   ],
+   "clips": [
+    {
+     "slug": "storm_over_jerusalem",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He cried out into the dark",
+    "kw": "CRIED OUT"
+   }
+  },
+  {
+   "t": [
+    7.84,
+    11.9
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "cry_ninth_hour",
+     "motion": "pullback"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "My God, my God, why hast thou forsaken me?",
+    "speaker": "JESUS",
+    "ref": "Matthew 27:46"
+   }
+  },
+  {
+   "t": [
+    11.9,
+    17.3
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "face_anguish_closeup",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Raw anguish - a man forsaken",
+    "kw": "FORSAKEN"
+   }
+  },
+  {
+   "t": [
+    17.3,
+    19.5
+   ],
+   "tpl": "two_v",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "scribe_over_manuscripts",
+     "motion": "static",
+     "cam": "arc",
+     "at": 17.47,
+     "slide": "left"
+    },
+    {
+     "slug": "two_scrolls_compared",
+     "motion": "static",
+     "cam": "arc",
+     "at": 18.21,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "But it is also a quotation",
+    "kw": "QUOTATION"
+   }
+  },
+  {
+   "t": [
+    19.5,
+    25.4
+   ],
+   "tpl": "big_inset",
+   "clips": [
+    {
+     "slug": "david_psalmist",
+     "motion": "pushin"
+    },
+    {
+     "slug": "david_hands_lyre",
+     "motion": "static",
+     "cam": "arc",
+     "at": 20.78,
+     "slide": "up",
+     "flash": false
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Written almost a thousand years before that morning",
+    "kw": "A THOUSAND YEARS"
+   }
+  },
+  {
+   "t": [
+    25.4,
+    28.31
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "david_old_deathbed",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "By a king who died old, safe in his own bed",
+    "kw": "DIED OLD"
+   }
+  },
+  {
+   "t": [
+    28.31,
+    35.0
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "convergence_on_cross",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "My God, my God, why hast thou forsaken me? why art thou so far from helping me, and from the words of my roaring?",
+    "speaker": "PSALM 22",
+    "ref": "v.1"
+   }
+  },
+  {
+   "t": [
+    35.0,
+    37.84
+   ],
+   "tpl": "quad",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "pierced_feet",
+     "motion": "pushin",
+     "at": 35.11,
+     "slide": "left"
+    },
+    {
+     "slug": "poured_out_bones",
+     "motion": "pushin",
+     "at": 35.43,
+     "slide": "right"
+    },
+    {
+     "slug": "mockers_wag_heads",
+     "motion": "pushin",
+     "at": 35.79,
+     "slide": "left"
+    },
+    {
+     "slug": "lots_dice_closeup",
+     "motion": "pushin",
+     "at": 36.35,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "This is Psalm twenty-two",
+    "kw": "PSALM TWENTY-TWO"
+   }
+  },
+  {
+   "t": [
+    37.84,
+    40.9
+   ],
+   "tpl": "hero_frac3",
+   "clips": [
+    {
+     "slug": "crane_cross_soldiers",
+     "motion": "pushin"
+    }
+   ],
+   "anchors": [
+    [
+     1.0,
+     0.5,
+     0.5
+    ],
+    [
+     2.1,
+     0.52,
+     0.12
+    ],
+    [
+     2.4,
+     0.95,
+     0.95
+    ]
+   ],
+   "panel_at": [
+    37.84,
+    38.34,
+    39.63
+   ],
+   "panel_slide": [
+    "left",
+    "left",
+    "up"
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He did not reach for it by accident",
+    "kw": "NOT BY ACCIDENT"
+   }
+  },
+  {
+   "t": [
+    40.9,
+    44.85
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "cross_hill_pullback",
+     "motion": "pullback"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Telling everyone exactly where to look",
+    "kw": "WHERE TO LOOK"
+   }
+  }
+ ]
+}

@@ -1,0 +1,277 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: plan
+
+LENS — judge this PLAN on (be specific, cite the exact step/claim):
+- Feasibility against the real codebase / tools (does it assume things that exist?).
+- Hidden risks, false assumptions, single points of failure.
+- Over-engineering / premature building before the idea is proven.
+- Missing steps, edge cases, or verification gaps.
+- Reuse: does it duplicate tools that already exist instead of reusing them?
+- Cost / spend and whether it's justified.
+
+ADDITIONAL CONTEXT / BRIEF:
+This is a NEW binding spec (v2/MOTIONCOMIC_SPEC.md) defining the inked graphic-novel motion-comic build pattern for BOTH 9:16 shorts and 16:9 long-form, distilled from the just-LOCKED Cluster 1 pilot. It extends v2/SPEC.md + v2/LONGFORM_SPEC.md (do not fork a parallel system). Key claim under review: it REFINES INV-13 so inked art animates with Kling camera-only (not veo3, which morphs ink), and it promotes the landscape_engine.py POC to production for long-form. Review the ARCHITECTURE + whether it truly reuses vs duplicates, the gate/validation design, the cost model, and any doctrinal/brand risk of the format.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block:
+
+VERDICT: PASS | REVISE | FAIL
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# MOTION-COMIC SPEC v1 — the inked graphic-novel build pattern (binding, long + short)
+
+> **Relationship to the contract.** This is the binding pattern for the **inked
+> graphic-novel motion-comic** visual line, for BOTH formats: 9:16 shorts and
+> 16:9 long-form deep-dives. It extends `v2/SPEC.md` (master) and
+> `v2/LONGFORM_SPEC.md` (long-form). All invariants INV-1..25 apply unless
+> overridden here; where this spec and those conflict **for motion-comic work**,
+> this spec wins. Per-stage skills in `.claude/skills/` are the procedures; this
+> is what they enforce. Every non-negotiable is backed by a gate (below), not an
+> honor-system step.
+>
+> Authored 2026-07-01, distilled from the **Cluster 1 pilot** — "Father, forgive
+> them" (Luke 23:34), the first LOCKED inked motion-comic short
+> (`batches/cluster_01_cross/father_forgive_them/`). Memory:
+> `cluster1-pilot-locked-recipe`.
+
+---
+
+## 1. Purpose & scope
+
+One visual language — **flat inked graphic-novel art, held by camera-only motion,
+laid into comic-book grids with kinetic captions** — produced the same way at two
+sizes:
+
+- **Short** — 9:16, ~60s, the viral first-class product (INV-14).
+- **Long** — 16:9, 6–8 min deep-dive, the research foundation (LF-INV-1); a
+  sequence of comic *pages* rather than a single-topic short.
+
+Both run the same STUDY→…→LOCK discipline (panel + red-team + fail-closed gates).
+This spec adds the motion-comic-specific recipe (MC-R*), gates (MC-G*), and the
+format deltas between 9:16 and 16:9.
+
+The **Baroque-oil plate + veo3** long-form path (`_render_images_16x9.py` /
+`_animate_16x9.py`) remains valid for documentary-realist episodes; it is a
+SEPARATE visual line. Motion-comic episodes use THIS spec. Choose the line per
+episode in the scene plan header (`style: graphic_novel | baroque`).
+
+---
+
+## 2. The pipeline (both formats)
+
+Same stage spine as `v2/SPEC.md §2`, with the motion-comic tools bound at each
+visual stage. `[SHORT]`/`[LONG]` mark where the two differ.
+
+```
+0 STUDY        /study            KJV pericope + one thread spine (INV-5)
+1 TEXT         /narrate|-long    draft tournament + G1..G8 + red-team + 5-CLI panel + LOCK
+1b VOICE       /voice            duration-locked multi-voice mp3 (per_turn_synth / eyewitness)
+   ── HUMAN GATE 1 (audio, by ear — INV-22) ──
+2a SCENE-PLAN  /scene-plan|-long subject-typed scene_plan.json (schema §5); SP-G* + MC-G1/G2
+2a+ BIBLE-CHECK /bible-check     BC-G1..G4 fact cards + chokepoint (INV-25)
+2b STILLS      /stills           BytePlus Seedream 4.5 ref-lock (MC-R1); IMG-* Vision audit + MC-G3
+   ── HUMAN GATE 2 (images) ──
+2c ANIMATE     /animate|-long    Kling camera-only ink (MC-R2); CLIP-* gates
+2d COMIC       (new) /comic      comic engine + kinetic captions (MC-R3/R4); MC-G2/G5
+3 AUDIO        /sfx + score      $0 score + placed SFX + clearing/reverb/bell/thinned-CTA (MC-R5)
+   ── HUMAN GATE 3 (clips/cut) ──
+3b REVIEW      /review           5-CLI panel + the 3-LENS adversarial pass (MC-G7) before LOCK
+4 CAPTION      /caption          kinetic captions are BUILT-IN at 2d; /caption only for burned-in fallback
+5 UPLOAD       /upload           UK-G1..G6
+```
+
+`[SHORT]` 2c animates every scene; `[LONG]` 2c animates only the **hero cell per
+page** (MC-R7 cost model) — other cells are native-reuse clips or ken-burns
+stills.
+
+---
+
+## 3. The LOCKED recipe — motion-comic rules (MC-R*)
+
+Each rule is enforced by a gate (§4) or a code default. Provenance in brackets.
+
+- **MC-R1 — Stills: BytePlus Seedream 4.5 + ref-lock.**
+  Model `seedream-4-5-251128`. Ref-lock passion beats to a bare-torso reference,
+  risen beats to the risen-face reference; **context / ot_echo / human_us /
+  symbolic render with NO Christ ref** (face-bleed fix). Wounds on the glorified
+  body are a **flat healed scar, described positively** ("healed scar flush and
+  level with the skin", same skin tone) — never "open hole / red", which renders
+  a red pill. BytePlus has **no negative channel**: name only end-states, never a
+  noun-to-forbid. Size is the ONLY format knob (`1440x2560` short / `2560x1440`
+  long). [pilot; `seedream-no-negative-channel`; `feedback-stills-biblical-period-gate`]
+
+- **MC-R2 — Animation: Kling camera-only, invent nothing (INK_BASE).**
+  HF Kling 3.0 pro, `--aspect_ratio` per format, 5s. The INK_BASE prompt keeps the
+  flat ink: "finished inked panel, only the camera moves, invent nothing, no
+  morph, no subject motion, no new lines." Test ONE clip before the batch. HF
+  502 / no-url is transient → idempotent re-run. **This overrides INV-13 for the
+  inked line: inked art → Kling camera-only (veo3 morphs ink). Baroque → veo3.**
+  [pilot; refines INV-13]
+
+- **MC-R3 — Comic assembly: distinct clip per panel, template variety.**
+  Use the comic engine (`comic_engine.py` 9:16 / `landscape_engine.py` 16:9).
+  Every grid panel holds a **distinct** still/clip — NEVER one still sliced into
+  boxes. `full` reserved for true hero singles. Include ≥1 **cinematic epic wide**
+  (dwarfing scale) to break close-up monotony. [pilot Tier-1; `feedback-cinematic-epic-stills`]
+
+- **MC-R4 — Kinetic captions + static red Scripture bars.**
+  Plain captions **cascade word-by-word** with the payload keyword in RED; the
+  box snaps in. **Scripture / red-letter bars stay STATIC** (sacred anchors, not
+  TikTok text) and hold the KJV verbatim + speaker + ref. Caption text is
+  de-slopped (em-dash→hyphen, curly→straight). [pilot Tier-2]
+
+- **MC-R5 — Audio: $0 score + placed SFX + the four dynamics moves.**
+  Score = chain music_library Suno excerpts with a dark→grace arc landing on the
+  CTA; **loudness-match** the excerpts (no section rides over the voice). SFX
+  placed at true beat times ($0 sound_library, INV-18), no choir pad. Apply the
+  four dynamics moves: (a) **clear a hole** — dip music+SFX to near-silence so the
+  pivotal line lands in a cleared room; (b) **gated reverb** on the sacred/Scripture
+  line only; (c) a **soft low bell** on the key word; (d) **thin the CTA** — ease
+  DOWN to intimacy, never swell (INV-3, `feedback-cta-felt-in-bones`,
+  `feedback-no-choir-pad-under-score`). Narration always sits on top. [pilot Tier-1/2]
+
+- **MC-R6 — Motion punch on active beats only.**
+  Edit-level ffmpeg zoom-snap (open tight, snap out) on the ACTIVE beats (impact /
+  crowd); sacred + reflective beats keep the slow push — the contrast is what
+  reads as reverent. $0, no re-render, no morph risk. [pilot Tier-2]
+
+- **MC-R7 `[LONG]` — ≤1 paid hero per page + native-9:16 reuse.**
+  Each landscape page has one **hero** cell (the single Kling-animated inked wide),
+  plus cells that are **existing 9:16 clips dropped NATIVE (zero crop)** in a 9:16
+  rail, or ken-burns stills ($0). Paid pages alternate with free pages so per-episode
+  animation spend stays flat. [`landscape_engine.py`; `ew04-landscape-template-scope`]
+
+- **MC-R8 — Every artifact registered for reuse.**
+  Every still/clip → `asset_index.json` `fft_<slug>` with rich metadata; redo'd
+  assets deleted + de-indexed (no reject pool). The reuse bank is the batch's
+  economic engine (INV-19). [🔒 `global-asset-index`]
+
+- **MC-R9 — Never animate legible script/writing.**
+  Scrolls/codices render as indistinct strokes, or animate toward a non-text focal
+  element (the lamb). BytePlus writes gibberish Hebrew on scrolls even when told
+  "illegible"; for an OT-echo, period Hebrew is acceptable IF the camera pushes to
+  a non-text subject. [INV-17; pilot scroll]
+
+---
+
+## 4. Gate registry (MC-G*)
+
+Types: **D** deterministic (fail-closed), **P** panel/LLM, **A** advisory. Status:
+**wired** (auto in the run) / **manual** (run by discipline). New gates ship as
+`render_lint/rules.json` (advisory prompt-time) or `data/rules.json` +
+`pipeline/validators.py` + a fixture/test (fail-closed), per the two-rule-base
+convention.
+
+| Gate | Checks | Type | Home | Status |
+|---|---|---|---|---|
+| **MC-G1 Subject variety** | Christ-centric ≤60%, ≥1 ot_echo, ≥40% depth layers, ≤2 consecutive Christ | D | `render_lint/verify.py::check_scene_subjects` | wire into /scene-plan + orchestrator |
+| **MC-G2 Template variety** | ≥5 distinct templates, `full` ≤40%, no adjacent repeat, distinct-clip-per-panel | D | `render_lint/verify.py::check_comic_spec` | wire into /comic |
+| **MC-G3 Wound/period/anatomy** | healed-scar continuity across risen scenes; period; anatomy; no gibberish text | P-Vision + D | `verify_image` (IMG-*) + new `check_wound_continuity` | extend IMG-* audit |
+| **MC-G4 No gibberish script** | no legible pseudo-alphabet on animated scrolls/signs | D | `render_lint` rule `never-animate-writing` + camera-to-non-text | advisory, wired at /animate |
+| **MC-G5 Kinetic captions present** | every plain caption is kinetic; every Scripture quote is a static red bar w/ verbatim + ref | D | new `check_captions` over mocomic spec | wire into /comic |
+| **MC-G6 Audio dynamics** | loudness-matched score sections; a clearing on the pivotal line; thinned (not swelling) CTA; narration peak on top; no choir pad | D + A | new `check_audio_mix` (loudness windows) | wire into /sfx |
+| **MC-G7 3-lens adversarial review** | retention + art-direction + sound/soul adversarial pass; convergent flags hand-verified | P | `/review` (Agent-tool, $0) — reuses `independent_review` discipline | manual before LOCK |
+| **MC-G8 Epic-wide present** | ≥1 dwarfing-scale wide in the plan (variety) | D | fold into MC-G1 report | wire into /scene-plan |
+| **MC-G9 `[LONG]` Hero budget** | ≤1 paid hero (veo/Kling) per page; reuse cells are coherence+clipqc'd + native-aspect | D | `landscape_validate.py` + `clip_reuse.py` | wire into /comic-long |
+
+Existing gates that still apply unchanged: all TEXT (KJV-strict, cluster,
+doctrine, Rule-8), SP-G1..G9, BC-G1..G4, IMG-*, CLIP-*, AS-* (short) / LF-AS-*
+(long), UK-*. This spec ADDS MC-G1..G9; it removes none.
+
+---
+
+## 5. Unified scene-plan + comic-spec schema
+
+The join key across every stage is **`slug`**. Both JSONs are already
+format-agnostic; format lives in a header, not the geometry.
+
+**`scene_plan.json`** (content source of truth — one entry per still):
+`header{ format: "9:16"|"16:9", style: "graphic_novel", provider: "byteplus",
+animation{model,aspect,duration}, audio_seconds }` +
+`scenes[]{ index, slug, beat, t_start, t_end, subject_type
+(christ_hero|christ_detail|christ_risen|context_scene|ot_echo|human_us|symbolic),
+christ_ref(bool), concept, bible_ref, prompt_seed, macro_elements[], motion
+(pushin|pullback|dolly|static|hold), why, reuse }`.
+
+**`mocomic.spec.json`** (layout track — one entry per comic page/beat):
+`{ format, episode, audio, beats[]{ t:[start,end], tpl, clips[]{slug, motion,
+fidelity(hero|col|kb) `[LONG]`}, cap{ type(caption|redletter), text, kw |
+speaker+ref } } }`.
+
+`[LONG]` adds `fidelity` per cell (MC-R7) and a landscape `tpl` set.
+
+---
+
+## 6. Format deltas (9:16 short ↔ 16:9 long)
+
+| Axis | Short 9:16 | Long 16:9 |
+|---|---|---|
+| Canvas | 1080×1920 | 1920×1080 (comic engine renders 2560×1440 → down) |
+| Image size | `1440x2560` | `2560x1440` |
+| Kling aspect | `9:16` | `16:9` |
+| Comic engine | `comic_engine.py` | `landscape_engine.py` (hero/col/kb fidelity) |
+| Template mix | vertical stacks (`two_v`, `stack_h`, `big_inset`, `quad`) | wide rails/bands (`hero_rail`, `band_of_three`, `big_inset`, native-9:16 rails) |
+| Caption geometry | bottom third, 1080-wide wrap | lower band, 1920-wide wrap, larger font scale |
+| Animation scope | every scene (Kling) | ≤1 hero/page (MC-R7); rest reuse/kenburns |
+| Narration | ~60s, 5-beat | 6–8 min, 7-movement (M1..M7) |
+| Score | 2 Suno excerpts, dark→grace | multi-segment chain (`_add_score_lf` recipe) |
+
+**Code parameterization required (backward-compatible, default 9:16):**
+`PAGE_W/PAGE_H` → params threaded through `comic_engine`/`kinetic_caption` (two
+copies unified); `byteplus_seedream` SIZE param (already a function arg — only the
+CLI default is portrait); `_hf_animate_short.hf_animate` gains an `aspect_ratio`
+arg (today hardcoded `9:16` at line ~102). `add_music_sfx.py` is aspect-clean —
+only its timestamps are episode-specific.
+
+---
+
+## 7. Cost model (motion-comic)
+
+- **Short:** ~13 stills BytePlus (~$0.04 ea ≈ $0.5) + ~13 Kling clips (~$0.65 ea ≈
+  $8.5) + audio $0 + Opus/agent LLM $0 (in-chat) ≈ **~$9–10**.
+- **Long (16:9, MC-R7):** ~10–14 pages. Only the hero cell per page is paid Kling
+  (~10–14 × $0.65 ≈ **$7–9**) + new landscape stills for heroes (~$0.5) + reuse
+  cells $0 + score/SFX $0 ≈ **~$8–10** animation, well under the veo3 Baroque long.
+  `/cost` runs `hf generate cost` pre-flight; ASK before spend (INV-20).
+
+---
+
+## 8. The orchestrator (to build)
+
+One format-aware CLI wraps the proven stage scripts (no re-implementation, INV-15),
+with the 3 human gates and the wired gates above:
+
+```
+cli_motioncomic.py <topic|v1-folder> --format short|long [--continue] [--reroll ...]
+                   [--exclude ...] [--plan-only] [--no-spend]
+```
+- Detects position from artifacts (like `pipeline/orchestrator.py`), resumes.
+- SHORT path chains the pilot scripts (parameterized). LONG path chains
+  `-long` narration/voice + BytePlus 16:9 stills + Kling-16:9 hero anim +
+  `landscape_engine` comic + long audio (score chain + SFX + the four dynamics
+  moves) + caption.
+- Runs MC-G1/G2/G5/G6/G8 automatically at their stages; surfaces MC-G3 Vision +
+  MC-G7 panel for human sign-off; ASK-before-spend at each metered stage.
+- Writes `pipeline.state.json` (format, provider, hero, excluded).
+
+Build order: (1) parameterize the 3 hardcoded spots; (2) generalize the pilot
+scripts into `pipeline/motioncomic/` stage modules; (3) promote `landscape_engine`
++ a `build_mocomic_long` driver; (4) the orchestrator; (5) wire MC-G* ; (6) pilot
+the cross-cluster long through it.
+
+---
+
+## 9. A/B & learning
+
+Pilot the cross-cluster long on this spec; run the 5-CLI panel + the 3-lens
+adversarial pass; log escaped defects (`learning.py`) + metered cost
+(`spend_ledger.jsonl`) + human touches. `/learn` promotes any escaped defect into
+`render_lint/rules.json` (prompt lesson) or `data/rules.json` + a validator (hard
+block), and reflects it here as a new MC-R / MC-G row. Propose-I-approve.
+----- ARTIFACT END -----

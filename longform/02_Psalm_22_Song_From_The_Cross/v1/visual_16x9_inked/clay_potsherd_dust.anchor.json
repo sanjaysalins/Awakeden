@@ -1,0 +1,14 @@
+{
+  "keep": [
+    0.1,
+    0.15,
+    0.95,
+    0.9
+  ],
+  "focus": [
+    0.5,
+    0.5
+  ],
+  "pad": 0.05,
+  "note": "broken bowl centre; dust margins"
+}

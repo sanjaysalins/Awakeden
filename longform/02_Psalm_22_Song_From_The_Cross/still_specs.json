@@ -1,108 +1,568 @@
 {
   "_doc": "GROUNDED still specs — the fix for lazy/repetitive prompting. Each still is derived from its NARRATION beat + a cited Bible verse-detail, given a DISTINCT shot_type + a subject_signature (for dedup), a pinned arm/hand position for any Christ figure (kills the recurring prayer-hand-from-chest default), and a distinct_from note vs its former look-alike. still_validate.py checks this file BEFORE any render: duplicate signatures, over-repeated shot_type, missing verse grounding, biblical-accuracy rule hits, prayer-hand guard, poison tokens.",
-  "shot_taxonomy": ["WIDE_ESTABLISH","WIDE_MULTITUDE","BIRDSEYE","HIGH_CRANE","LOW_ANGLE","CLOSE_PORTRAIT","MACRO_DETAIL","SILHOUETTE","OVER_SHOULDER","GROUND_LEVEL","INTERIOR_SCENE","FULL_FIGURE"],
+  "shot_taxonomy": [
+    "WIDE_ESTABLISH",
+    "WIDE_MULTITUDE",
+    "BIRDSEYE",
+    "HIGH_CRANE",
+    "LOW_ANGLE",
+    "CLOSE_PORTRAIT",
+    "MACRO_DETAIL",
+    "SILHOUETTE",
+    "OVER_SHOULDER",
+    "GROUND_LEVEL",
+    "INTERIOR_SCENE",
+    "FULL_FIGURE"
+  ],
   "specs": {
     "poured_out_bones": {
-      "beat": 11, "verse": "Psalm 22:14 — I am poured out like water, and all my bones are out of joint",
-      "shot": "LOW_ANGLE", "signature": "crucified-christ:joints-strained", "arms": "both nailed wide overhead, wrenched taut",
+      "beat": 11,
+      "verse": "Psalm 22:14 — I am poured out like water, and all my bones are out of joint",
+      "shot": "LOW_ANGLE",
+      "signature": "crucified-christ:joints-strained",
+      "arms": "both nailed wide overhead, wrenched taut",
       "distinct_from": "bones_wasted_body (that is a rib MACRO, no figure) and convergence_on_cross (front symmetric)",
       "prompt": "a dramatic LOW-ANGLE looking steeply UP the cross of Christ ({CH}) from the ground, his full weight dragging DOWN so both arms are stretched wide and taut along the horizontal crossbeam and the shoulders pull from their sockets, each hand open and flat against the beam far apart with a dark pierced wound in the centre of each open palm, head fallen back against the black sky; the strained dislocated joints are the clear focus; reverent, 1st-century"
     },
     "pierced_feet": {
-      "beat": 13, "verse": "Psalm 22:16 — they pierced my hands and my feet",
-      "shot": "MACRO_DETAIL", "signature": "wound:pierced-feet", "arms": "n/a (feet only)",
+      "beat": 13,
+      "verse": "Psalm 22:16 — they pierced my hands and my feet",
+      "shot": "MACRO_DETAIL",
+      "signature": "wound:pierced-feet",
+      "arms": "n/a (feet only)",
       "distinct_from": "pierced_hands_feet (that is the pierced HAND) — this is the feet, one nail per foot",
       "prompt": "a close view of two bare feet set side by side flat on a rough wooden beam, a separate long slender iron crucifixion nail driven straight down through EACH foot — two nails, one per foot — each with only a small nail-head showing flush on the skin and a thin shaft going into the wood, dark blood welling around each puncture and running down the grain; plain thin spikes, reverent, 1st-century"
     },
     "greek_ot_scroll": {
-      "beat": 19, "verse": "the Septuagint (Greek OT) already read 'they pierced', translated by Jewish scholars ~2 centuries before Christ",
-      "shot": "INTERIOR_SCENE", "signature": "scholarship:greek-translation-scene", "arms": "n/a",
+      "beat": 19,
+      "verse": "the Septuagint (Greek OT) already read 'they pierced', translated by Jewish scholars ~2 centuries before Christ",
+      "shot": "INTERIOR_SCENE",
+      "signature": "scholarship:greek-translation-scene",
+      "arms": "n/a",
       "distinct_from": "scribe_over_manuscripts (a lone scribe writing), disputed_word_marks (a macro of one mark), two_scrolls_compared (two scrolls) — this is a WIDE scene of scholars translating",
       "prompt": "inside a dim ancient Hellenistic-era library lit ONLY by a few small flickering clay oil lamps with warm uneven flame-light and deep pooling shadows, several Jewish scholars in period Judean robes bent together over a long unrolled papyrus scroll, gesturing in discussion as they translate it, shelves stacked with rolled scrolls fading into darkness behind them; the scroll surface only soft indistinct texture with no legible letters; ancient scholarship centuries before the cross; antiquity"
     },
     "risen_hands_raised": {
-      "beat": 24, "verse": "Psalm 22:24 — when he cried unto him, he heard (answered)",
-      "shot": "CLOSE_PORTRAIT", "signature": "risen-christ:answered-intimate", "arms": "both open hands raised only to shoulder height, healed scar in each palm",
+      "beat": 24,
+      "verse": "Psalm 22:24 — when he cried unto him, he heard (answered)",
+      "shot": "CLOSE_PORTRAIT",
+      "signature": "risen-christ:answered-intimate",
+      "arms": "both open hands raised only to shoulder height, healed scar in each palm",
       "distinct_from": "risen_worshipper (WIDE, among a congregation) — this is an intimate close of the face, no crowd",
       "prompt": "a CLOSE intimate view of the risen Christ ({CH}) with face lifted and eyes gently lowered in deep peace, both open hands raised only to shoulder height, a single closed healed scar flat in the centre of each palm, bathed in soft warm light, entirely alone and serene, no crowd; the quiet of answered prayer; 1st-century"
     },
     "nations_streaming_wide": {
-      "beat": 26, "verse": "Psalm 22:27 — all the kindreds of the nations shall worship before thee",
-      "shot": "BIRDSEYE", "signature": "multitude:roads-converging-diverse", "arms": "n/a",
+      "beat": 26,
+      "verse": "Psalm 22:27 — all the kindreds of the nations shall worship before thee",
+      "shot": "BIRDSEYE",
+      "signature": "multitude:roads-converging-diverse",
+      "arms": "n/a",
       "distinct_from": "ends_of_earth (a ground-level multitude flowing to a cross) — this is a bird's-eye of converging roads emphasising national diversity",
       "prompt": "a sweeping BIRD'S-EYE view of many roads winding across the whole land inward from every distant horizon, each road crowded with peoples of visibly different nations and dress, all converging toward one hill of warm light at the centre; the diversity of the streaming kindreds is the subject; epic, dawn light"
     },
     "kneeling_at_cross": {
-      "beat": 28, "verse": "the personal invitation — the forsaking fell on him so it would never fall on you",
-      "shot": "GROUND_LEVEL", "signature": "response:kneeling-faces-intimate", "arms": "n/a",
+      "beat": 28,
+      "verse": "the personal invitation — the forsaking fell on him so it would never fall on you",
+      "shot": "GROUND_LEVEL",
+      "signature": "response:kneeling-faces-intimate",
+      "arms": "n/a",
       "distinct_from": "parting_storm_light (a WIDE atmospheric cross as the storm parts) — this is an intimate ground-level shot of upturned faces",
       "prompt": "a low view looking UP a single rough wooden cross that TOWERS tall and fills the height of the frame, three small kneeling figures gathered tiny at its base far below, dwarfed by the great height of the cross above them, warm breaking light behind; correct monumental scale, the cross vast and the people small; 1st-century"
     },
     "hand_reaching_closeup": {
-      "beat": 29, "verse": "the CTA — come and join the ones who praise him (the reaching, scarred hand)",
-      "shot": "MACRO_DETAIL", "signature": "invitation:hand-only-macro", "arms": "one open right hand, healed scar centre-palm, filling the frame",
+      "beat": 29,
+      "verse": "the CTA — come and join the ones who praise him (the reaching, scarred hand)",
+      "shot": "MACRO_DETAIL",
+      "signature": "invitation:hand-only-macro",
+      "arms": "one open right hand, healed scar centre-palm, filling the frame",
       "distinct_from": "risen_hero_come (a FULL risen figure reaching) — this is an extreme macro of ONLY the hand, no face",
       "prompt": "an EXTREME close-up of a single open right hand filling the entire frame, reaching straight toward the viewer out of warm golden light, a single closed healed scar in the very centre of the open palm, fingers spread in open invitation; only the hand — no face, no body; inviting, personal; 1st-century"
     },
     "david_hands_lyre": {
-      "beat": 8, "verse": "Psalm 22 authorship — David wrote it first-person, as his own body",
-      "shot": "OVER_SHOULDER", "signature": "david:hands-lyre-playing", "arms": "both weathered hands cradling and plucking the lyre strings",
+      "beat": 8,
+      "verse": "Psalm 22 authorship — David wrote it first-person, as his own body",
+      "shot": "OVER_SHOULDER",
+      "signature": "david:hands-lyre-playing",
+      "arms": "both weathered hands cradling and plucking the lyre strings",
       "distinct_from": "david_psalmist (a wide of David seated singing) — this is close over the shoulder onto the playing hands",
       "prompt": "a close OVER-THE-SHOULDER view onto the aged shepherd-king David's weathered hands cradling and plucking the strings of a wooden lyre by warm lamplight, his singing profile just visible beyond, the strings catching the light; Iron-Age Israelite; 1st-millennium-BC"
     },
     "mocker_faces_trio": {
-      "beat": 10, "verse": "Psalm 22:7 — they shoot out the lip, they shake the head",
-      "shot": "CLOSE_PORTRAIT", "signature": "mockers:jeering-trio", "arms": "n/a (faces only)",
+      "beat": 10,
+      "verse": "Psalm 22:7 — they shoot out the lip, they shake the head",
+      "shot": "CLOSE_PORTRAIT",
+      "signature": "mockers:jeering-trio",
+      "arms": "n/a (faces only)",
       "distinct_from": "mockers_wag_heads (a wide knot at the foot of the cross) — this is a tight trio of cruel faces",
       "prompt": "three DISTINCTLY DIFFERENT 1st-century men close in the foreground sneering with cruel contempt at someone below — one old and gaunt with a long grey beard, one broad and heavy-jowled, one lean and young with a thin beard — each a clearly different face, lips curled back, teeth bared in derision, cold hostile eyes, a dark blurred crowd behind; dusty earth tones; antiquity"
     },
     "lots_dice_closeup": {
-      "beat": 14, "verse": "Psalm 22:18 / John 19:24 — they cast lots upon my vesture",
-      "shot": "OVER_SHOULDER", "signature": "lots:knucklebones-cast", "arms": "rough soldiers' hands casting the lots",
+      "beat": 14,
+      "verse": "Psalm 22:18 / John 19:24 — they cast lots upon my vesture",
+      "shot": "OVER_SHOULDER",
+      "signature": "lots:knucklebones-cast",
+      "arms": "rough soldiers' hands casting the lots",
       "distinct_from": "crane_cross_soldiers (a wide down the cross to the soldiers) — this is a macro of the lots themselves",
       "prompt": "a close OVER-THE-SHOULDER macro of rough Roman soldiers' hands casting small carved animal knucklebones onto a folded seamless robe on the stony ground; dusty, warm hard light; 1st-century"
     },
     "scholar_hand_on_text": {
-      "beat": 16, "verse": "the honest objection — a genuine scholarly dispute over the word 'pierced'",
-      "shot": "CLOSE_PORTRAIT", "signature": "scholarship:weighing-objection", "arms": "one hand hovering thoughtfully over the parchment",
+      "beat": 16,
+      "verse": "the honest objection — a genuine scholarly dispute over the word 'pierced'",
+      "shot": "CLOSE_PORTRAIT",
+      "signature": "scholarship:weighing-objection",
+      "arms": "one hand hovering thoughtfully over the parchment",
       "distinct_from": "scribe_over_manuscripts (a scribe writing) — this is a scholar pausing to weigh a difficulty",
       "prompt": "a CLOSE view of a thoughtful bearded Near-Eastern scholar pausing over a spread parchment by lamplight, his brow furrowed in honest doubt, one hand hovering above the text as he weighs a difficulty, the parchment only soft indistinct texture; antiquity, period robes"
     },
     "two_scrolls_compared": {
-      "beat": 17, "verse": "the disputed word — two textual readings set against each other",
-      "shot": "HIGH_CRANE", "signature": "scholarship:two-texts-compared", "arms": "n/a",
+      "beat": 17,
+      "verse": "the disputed word — two textual readings set against each other",
+      "shot": "HIGH_CRANE",
+      "signature": "scholarship:two-texts-compared",
+      "arms": "n/a",
       "distinct_from": "greek_ot_scroll (a wide translation scene) — this is a top-down of two texts side by side",
       "prompt": "a HIGH top-down view of two aged parchment scrolls unrolled side by side on a dark wooden table in warm lamplight, one older and darker than the other, their surfaces only soft indistinct texture; the quiet comparison of two texts; antiquity"
     },
     "cross_hill_pullback": {
-      "beat": 20, "verse": "back to the cross — why that cry matters",
-      "shot": "WIDE_ESTABLISH", "signature": "cross:lone-hill-wide", "arms": "n/a",
+      "beat": 20,
+      "verse": "back to the cross — why that cry matters",
+      "shot": "WIDE_ESTABLISH",
+      "signature": "cross:lone-hill-wide",
+      "arms": "n/a",
       "distinct_from": "storm_over_jerusalem (the city + three crosses) — this is a single stark cross wide on the hill",
       "prompt": "a WIDE establishing view of a single rough wooden cross standing stark on a rocky hill under a vast brooding sky, small against the land, one pale shaft of light breaking onto it from the torn clouds; epic, 1st-century"
     },
     "face_anguish_closeup": {
-      "beat": 21, "verse": "Psalm 22:1 — the forsaken cry, as Jesus claims the whole psalm",
-      "shot": "CLOSE_PORTRAIT", "signature": "christ-face:shouting-cry", "arms": "n/a (face only)",
+      "beat": 21,
+      "verse": "Psalm 22:1 — the forsaken cry, as Jesus claims the whole psalm",
+      "shot": "CLOSE_PORTRAIT",
+      "signature": "christ-face:shouting-cry",
+      "arms": "n/a (face only)",
       "distinct_from": "cry_face_tears (a quiet single tear, eyes lowered) — this is the open-mouthed SHOUT, eyes flung to heaven",
       "prompt": "an extreme CLOSE-UP of the crucified Christ's ({CH}) face flung upward and mouth wide open in a full-throated cry to heaven, brow knotted, the tendons of the neck taut, a hard shaft of light across the face; the shout is the subject; reverent, 1st-century"
     },
     "cry_face_tears": {
-      "beat": 12, "verse": "Psalm 22:15 — brought into the dust of death (the killing thirst)",
-      "shot": "CLOSE_PORTRAIT", "signature": "christ-face:thirst-tear", "arms": "n/a (face only)",
+      "beat": 12,
+      "verse": "Psalm 22:15 — brought into the dust of death (the killing thirst)",
+      "shot": "CLOSE_PORTRAIT",
+      "signature": "christ-face:thirst-tear",
+      "arms": "n/a (face only)",
       "distinct_from": "face_anguish_closeup (an open-mouthed shout) — this is quiet: parched cracked lips, a single tear, eyes half-lowered",
       "prompt": "an extreme CLOSE-UP of the crucified Christ's ({CH}) face gone quiet in the dust of death, the lips cracked and parched, the eyes half-lowered and glazed, a single tear tracking through the grime, the head sunk low; a shaft of light across the face; restrained, reverent, 1st-century"
     },
     "worm_lowest": {
-      "beat": 9, "verse": "Psalm 22:6 — But I am a worm, and no man; a reproach of men",
-      "shot": "FULL_FIGURE", "signature": "christ:bowed-despised", "arms": "both arms hanging limp at his sides",
+      "beat": 9,
+      "verse": "Psalm 22:6 — But I am a worm, and no man; a reproach of men",
+      "shot": "FULL_FIGURE",
+      "signature": "christ:bowed-despised",
+      "arms": "both arms hanging limp at his sides",
       "distinct_from": "the crucified stills — this figure is NOT on the cross: a stripped man bowed and broken with reproach",
       "prompt": "the suffering Christ ({CH}) stripped to a plain loincloth, standing bowed and broken with head hung low and shoulders sunk, both arms hanging limp at his sides, utterly despised and alone in deep shadow; dark, 1st-century"
     },
     "empty_tomb_open": {
-      "beat": 23, "verse": "the turn — the song does not end in a grave; it turns from death to life",
-      "shot": "INTERIOR_SCENE", "signature": "resurrection:empty-tomb-interior", "arms": "n/a",
+      "beat": 23,
+      "verse": "the turn — the song does not end in a grave; it turns from death to life",
+      "shot": "INTERIOR_SCENE",
+      "signature": "resurrection:empty-tomb-interior",
+      "arms": "n/a",
       "distinct_from": "storm/cross stills — this is the dark interior of the emptied tomb, no figure",
       "prompt": "inside a dark empty rock-hewn tomb chamber, a bare stone burial ledge with folded white linen grave-cloths resting on it, a soft shaft of pale dawn light falling across the empty ledge from the open entrance; still, hopeful, 1st-century"
+    },
+    "dogs_encompass": {
+      "beat": 31,
+      "verse": "Psalm 22:16a — For dogs have compassed me (narration: 'vivid images — dogs, a lion')",
+      "shot": "GROUND_LEVEL",
+      "signature": "vivid-image:dogs-circling",
+      "arms": "n/a",
+      "distinct_from": "mockers_wag_heads (human mockers) — this is the psalm's animal image: wild dogs circling at night",
+      "prompt": "a GROUND-LEVEL night view of a pack of lean wild dogs circling in a tightening ring around a bare patch of moonlit stony ground, every animal fully canine with heavy four-toed canine forepaws planted in the dust, eyes catching the pale light as the ring closes inward; ancient Judean wilderness menace; 1st-millennium-BC"
+    },
+    "lion_gape": {
+      "beat": 32,
+      "verse": "Psalm 22:13 — they gaped upon me with their mouths, as a ravening and a roaring lion",
+      "shot": "CLOSE_PORTRAIT",
+      "signature": "vivid-image:lion-roar",
+      "arms": "n/a",
+      "distinct_from": "dogs_encompass (a circling pack, wide) — this is one great lion head, close, mid-roar",
+      "prompt": "a CLOSE view of a great lion mid-roar in deep shadow, wild mane, jaws gaping wide with the teeth catching one hard sliver of light, hot breath hazing in the cold air; raw ancient menace; 1st-millennium-BC"
+    },
+    "hung_by_arms": {
+      "beat": 33,
+      "verse": "Psalm 22:14 — all my bones are out of joint (narration: 'a man hung up by his arms — the joints pulling apart under his own weight')",
+      "shot": "SILHOUETTE",
+      "signature": "crucified-silhouette:weight-sag",
+      "arms": "both arms stretched high and taut overhead to the crossbeam, the body sagging from the wrists",
+      "distinct_from": "poured_out_bones (a lit low-angle figure with a visible face) — this is a stark backlit SILHOUETTE, no facial detail at all",
+      "prompt": "a stark SILHOUETTE against a bruised storm sky: the pure black shape of a man hanging on a cross, both arms stretched high and taut to the crossbeam, the whole body sagging heavily downward from the wrists so the shoulders wrench upward, ragged torn clouds behind; the dragging weight is the subject; 1st-century"
+    },
+    "garment_tug": {
+      "beat": 34,
+      "verse": "John 19:24 / Psalm 22:18 — they parted my raiment among them (soldiers gambling for a dead man's clothes)",
+      "shot": "MACRO_DETAIL",
+      "signature": "lots:garment-tug",
+      "arms": "two soldiers' rough fists gripping opposite ends of the folded robe",
+      "distinct_from": "lots_dice_closeup (the knucklebones being cast) — this is the ROBE itself pulled taut between two fists",
+      "prompt": "a tight view of two Roman soldiers' rough fists gripping opposite ends of a folded seamless woven robe, pulling it taut between them above a scatter of small carved knucklebones on the stony ground, dust hanging in the hard light; the tug-of-war over the garment is the subject; 1st-century"
+    },
+    "first_century_reader": {
+      "beat": 35,
+      "verse": "the first verse pulling the entire psalm into the room — how a first-century Jew quoted Scripture",
+      "shot": "FULL_FIGURE",
+      "signature": "scholarship:psalm-quoted-aloud",
+      "arms": "one hand lifted as he recites, the other steadying the unrolled scroll",
+      "distinct_from": "greek_ot_scroll (scholars translating at a table) and scribe_over_manuscripts (a lone scribe writing) — this is a reader RECITING ALOUD to listeners",
+      "prompt": "a 1st-century Judean man standing in a small stone synagogue holding an unrolled scroll, one hand lifted as he recites aloud from memory, a few seated listeners leaning in around him in warm lamplight, the scroll surface only soft indistinct texture; the spoken word filling the room; 1st-century"
+    },
+    "vinegar_sponge": {
+      "beat": 36,
+      "verse": "John 19:29-30 — he receives the vinegar (just before 'It is finished')",
+      "shot": "LOW_ANGLE",
+      "signature": "passion:vinegar-sponge-reed",
+      "arms": "a single arm lifting the long reed upward",
+      "distinct_from": "pierced_hands_feet / pierced_feet (the wounds) — this is the offered sponge on the reed, no figure on the cross visible",
+      "prompt": "a LOW view up into a darkening sky: a single bare arm lifting a long reed with a soaked sponge bound at its tip, raised up toward the rough wood of a cross edging into the top of the frame, drops falling back against the failing light; the offered vinegar is the subject; 1st-century"
+    },
+    "dawn_empty_cross": {
+      "beat": 37,
+      "verse": "the hinge — the cross was never the end of the song (the turn from death to life)",
+      "shot": "WIDE_ESTABLISH",
+      "signature": "cross:dawn-hinge",
+      "arms": "n/a",
+      "distinct_from": "cross_hill_pullback (a brooding grey storm wide) — this is DAWN: the storm rolling away, warm gold flooding the land",
+      "prompt": "a WIDE view of a single rough wooden cross on its rocky hill at DAWN, the storm rolling away behind it and warm gold light flooding across the land from the horizon, long soft shadows and a clearing sky; the hinge from night to morning; 1st-century"
+    },
+    "kindreds_bowing": {
+      "beat": 38,
+      "verse": "Psalm 22:27 — all the kindreds of the nations shall worship before thee",
+      "shot": "WIDE_MULTITUDE",
+      "signature": "multitude:kindreds-bowing-ring",
+      "arms": "n/a",
+      "distinct_from": "nations_streaming_wide (a bird's-eye of converging roads) and ends_of_earth (a multitude flowing to the cross) — this is a RING of worshippers already arrived, bowing low together",
+      "prompt": "a wide view of a great ring of worshippers from visibly many nations in the varied dress of distant ancient lands, all bowing low together toward a warm rising light at the centre of the frame, robes of many colours, faces hidden in reverence; the bowed circle of the kindreds is the subject; epic dawn"
+    },
+    "golgotha_three_crosses_ridge": {
+      "beat": 26,
+      "verse": "the witness statement from a cross (Ps 22 read forensically)",
+      "shot": "GROUND_LEVEL",
+      "signature": "crosses:ridge-silhouette-trio",
+      "arms": "n/a",
+      "prompt": "a GROUND-LEVEL view across dark scrubland to a low ridge where three crosses stand small and stark against a vast bruised storm sky, one shaft of cold light striking the middle cross; epic emptiness; 1st-century",
+      "distinct_from": "storm_over_jerusalem (city+temple wide) and cross_hill_pullback (single cross) - this is THREE crosses tiny on a ridge"
+    },
+    "ninth_hour_darkness": {
+      "beat": 2,
+      "verse": "Matthew 27:45 - darkness over the land at the ninth hour",
+      "shot": "WIDE_ESTABLISH",
+      "signature": "sky:darkened-sun-city",
+      "arms": "n/a",
+      "prompt": "a WIDE view over flat-roofed 1st-century Jerusalem houses and square Herodian stone watchtowers as an unnatural darkness swallows the midday sun, a dim ring of light in a black-green sky, birds scattering; dread; 1st-century",
+      "distinct_from": "storm_over_jerusalem (temple + crosses) - this is the DARKENED SUN over rooftops, no cross"
+    },
+    "roman_nails_pouch": {
+      "beat": 1,
+      "verse": "the crucifixion nails (Ps 22:16)",
+      "shot": "MACRO_DETAIL",
+      "signature": "nails:pouch-spill",
+      "arms": "a soldier's hand tipping the pouch",
+      "prompt": "a MACRO of a worn leather pouch tipped by a soldier's rough hand, long slender iron nails with small square heads spilling out across a flat stone in hard light; plain thin spikes; 1st-century",
+      "distinct_from": "pierced_hands_feet (a nail IN a hand) - these are loose nails spilling from a pouch"
+    },
+    "david_scroll_sealed": {
+      "beat": 12,
+      "verse": "David wrote this song (Ps 22 title)",
+      "shot": "MACRO_DETAIL",
+      "signature": "scroll:sealed-signet",
+      "arms": "one ringed hand pressing a clay seal",
+      "prompt": "a MACRO of an aged royal hand with a signet ring pressing a small clay seal onto the tie of a freshly rolled papyrus scroll by lamplight, the papyrus surface only soft indistinct texture; 1st-millennium-BC",
+      "distinct_from": "two_scrolls_compared (two open scrolls) - this is ONE rolled scroll being SEALED"
+    },
+    "jerusalem_night_lyre": {
+      "beat": 13,
+      "verse": "David composing under the night sky",
+      "shot": "WIDE_ESTABLISH",
+      "signature": "david:rooftop-distant-night",
+      "arms": "n/a",
+      "prompt": "a WIDE moonlit view of ancient stone rooftops and a city wall, one small distant figure seated on a high rooftop corner with a lyre against the starfield; lonely and quiet; 1st-millennium-BC",
+      "distinct_from": "david_psalmist (close, face visible) - this is a tiny DISTANT figure in a wide night city"
+    },
+    "execution_stakes_field": {
+      "beat": 15,
+      "verse": "a public execution (the death David describes)",
+      "shot": "WIDE_ESTABLISH",
+      "signature": "execution:empty-stakes-field",
+      "arms": "n/a",
+      "prompt": "a WIDE bleak view in muted warm earth colors of a rocky execution ground outside a pale stone city wall, several empty upright wooden stakes and crossbeams against a heavy grey-gold sky, dark birds circling far off; dread, no figures; cel-flat color; 1st-century",
+      "distinct_from": "golgotha_three_crosses_ridge (three crosses on a ridge) - this is an EMPTY execution ground of bare stakes"
+    },
+    "mockers_below_cross_low": {
+      "beat": 20,
+      "verse": "Psalm 22:8 - the mockers' taunt hurled up at the cross",
+      "shot": "OVER_SHOULDER",
+      "signature": "mockers:shoulders-up-at-cross",
+      "arms": "one mocker's arm flung up in derision",
+      "prompt": "an OVER-THE-SHOULDER view from behind two jeering men in 1st-century robes, one arm flung up in derision, looking steeply UP toward the crucified figure high on the cross against the dark sky above them; hostile energy below, stillness above; 1st-century",
+      "distinct_from": "mockers_wag_heads (frontal faces w/ Christ small centre) - this is from BEHIND the mockers looking UP"
+    },
+    "spit_shout_macro": {
+      "beat": 16,
+      "verse": "Psalm 22:7 - they shoot out the lip (the jeer itself)",
+      "shot": "CLOSE_PORTRAIT",
+      "signature": "mocker:single-jeer-profile",
+      "arms": "n/a",
+      "prompt": "a hard CLOSE profile of one 1st-century man mid-jeer, lip curled and teeth bared, spittle flecks catching the light against a dark blurred crowd; ugly contempt; 1st-century",
+      "distinct_from": "mocker_faces_trio (three faces frontal) - this is ONE jeering profile, extreme close"
+    },
+    "old_king_hands_rings": {
+      "beat": 21,
+      "verse": "a king who died of old age (contrast with the psalm's death)",
+      "shot": "MACRO_DETAIL",
+      "signature": "david:aged-hands-rings",
+      "arms": "two aged hands at rest on a woven blanket",
+      "prompt": "a MACRO of two aged royal hands at rest on a woven blanket, gold rings loose on thin fingers, warm lamplight, utterly peaceful; a safe death; 1st-millennium-BC",
+      "distinct_from": "david_old_deathbed (the wide deathbed scene) - this is only the resting HANDS"
+    },
+    "shepherd_boy_sling": {
+      "beat": 22,
+      "verse": "David the soldier-king's real life (never executed)",
+      "shot": "FULL_FIGURE",
+      "signature": "david:young-shepherd-sling",
+      "arms": "one hand swinging a leather sling at his side",
+      "prompt": "a FULL-FIGURE view of a young shepherd on a green hillside among sheep, a leather sling swinging loose from one hand, morning light; vigorous life; 1st-millennium-BC",
+      "distinct_from": "david_psalmist (the aged singer) - this is YOUNG David the shepherd"
+    },
+    "war_helmet_spear_rest": {
+      "beat": 22,
+      "verse": "a soldier and a king (his battles ended in peace)",
+      "shot": "MACRO_DETAIL",
+      "signature": "soldier:arms-at-rest",
+      "arms": "n/a",
+      "prompt": "a MACRO of an old dented bronze helmet and a tall spear leaned together against a stone wall by a bed, dust motes in a warm shaft of light; wars long over; 1st-millennium-BC",
+      "distinct_from": "old_king_hands_rings (hands on blanket) - this is the retired WEAPONS by the wall"
+    },
+    "wrists_bound_beam_macro": {
+      "beat": 34,
+      "verse": "a man fixed to wood through his hands (Ps 22:16)",
+      "shot": "MACRO_DETAIL",
+      "signature": "wound:wrist-lashed-beam",
+      "arms": "one wrist lashed and nailed to the rough beam, tendons taut",
+      "prompt": "a MACRO of a single forearm and wrist lashed with cord and nailed to a rough wooden beam, the tendons taut under the skin, a thin dark line of blood in the wood grain, storm light; no face; 1st-century",
+      "distinct_from": "pierced_hands_feet (open palm with nail) - this is the LASHED WRIST from the side, tendons straining"
+    },
+    "ribs_stretched_macro": {
+      "beat": 28,
+      "verse": "Psalm 22:14 - all my bones are out of joint",
+      "shot": "CLOSE_PORTRAIT",
+      "signature": "body:ribcage-strain",
+      "arms": "n/a (torso only)",
+      "prompt": "a CLOSE side-lit view of a gaunt man's bare chest as he hangs with arms high out of frame, every rib pressing visibly through the taut skin as ridged lines of light and shadow, hard chiaroscuro; reverent, no face; 1st-century",
+      "distinct_from": "poured_out_bones (full low-angle figure) - this is ONLY the strained ribcage, side view"
+    },
+    "clay_potsherd_dust": {
+      "beat": 29,
+      "verse": "Psalm 22:15 - my strength is dried up like a potsherd",
+      "shot": "MACRO_DETAIL",
+      "signature": "thirst:potsherd",
+      "arms": "n/a",
+      "prompt": "a MACRO of a single cracked shard of dry clay pottery lying in pale dust, hairline cracks spreading, heat shimmer; utter dryness; 1st-century",
+      "distinct_from": "thirst_dust (the parched face) - this is the psalm's POTSHERD image itself, no figure"
+    },
+    "water_spilled_stone": {
+      "beat": 48,
+      "verse": "Psalm 22:14 - I am poured out like water",
+      "shot": "MACRO_DETAIL",
+      "signature": "poured:water-on-stone",
+      "arms": "n/a",
+      "prompt": "a MACRO of clear water spilling from a tipped clay jar across worn flagstones, the thin sheet of water catching one line of light as it runs away into the cracks; loss; 1st-century",
+      "distinct_from": "poured_out_bones (the crucified figure) - this is the WATER image literal: a jar poured out"
+    },
+    "sponge_vinegar_jar": {
+      "beat": 30,
+      "verse": "John 19:29 - a vessel full of vinegar",
+      "shot": "MACRO_DETAIL",
+      "signature": "vinegar:jar-and-sponge",
+      "arms": "n/a",
+      "prompt": "a MACRO of a squat clay jar of dark vinegar with a rough dry sponge and a long reed lying beside it on stony ground, hard afternoon light; waiting; 1st-century",
+      "distinct_from": "vinegar_sponge (the sponge lifted on the reed) - this is the jar and sponge on the GROUND, before"
+    },
+    "dice_cup_shadow": {
+      "beat": 37,
+      "verse": "Psalm 22:18 - they cast lots",
+      "shot": "MACRO_DETAIL",
+      "signature": "lots:cup-tipping",
+      "arms": "one soldier's hand tipping the horn cup",
+      "prompt": "a MACRO of a soldier's hand tipping a horn dice-cup, small carved knucklebones caught mid-fall above the stone, long hard shadows; the moment before they land; 1st-century",
+      "distinct_from": "lots_dice_closeup (bones already cast on the robe) - this is the CUP TIPPING, bones mid-air"
+    },
+    "vesture_seamless_folded": {
+      "beat": 64,
+      "verse": "John 19:23-24 - the coat without seam",
+      "shot": "MACRO_DETAIL",
+      "signature": "vesture:folded-topdown",
+      "arms": "n/a",
+      "prompt": "a MACRO top-down of a single seamless woven robe folded in a neat square on stony ground, one small carved knucklebone resting on it, dust in the light; the prize of the lot; 1st-century",
+      "distinct_from": "garment_tug (fists pulling the robe) - this is the robe FOLDED and still, top-down"
+    },
+    "john_at_cross_foot": {
+      "beat": 38,
+      "verse": "John 19:35 - he that saw it bare record",
+      "shot": "FULL_FIGURE",
+      "signature": "witness:john-at-foot",
+      "arms": "both hands clutched to his chest as he looks up",
+      "prompt": "a FULL-FIGURE view in warm cel-flat dusk colors of a young 1st-century disciple standing at the foot of the towering cross, wind pulling at his cloak, both hands clutched to his chest as he looks steeply up, the cross base and lower beam framing him; the witness; 1st-century",
+      "distinct_from": "kneeling_at_cross (tiny kneelers at the base) - this is ONE standing young witness, mid shot"
+    },
+    "scholars_debate_two": {
+      "beat": 46,
+      "verse": "a genuine scholarly dispute, honestly raised",
+      "shot": "INTERIOR_SCENE",
+      "signature": "scholarship:two-in-dispute",
+      "arms": "one scholar's hand raised mid-point, the other's palm open on the table",
+      "prompt": "an INTERIOR view of two Near-Eastern scholars facing each other across a lamplit table stacked with rolled scrolls, one hand raised mid-argument, the other open in honest concession, warm flame light and deep shadow; respectful dispute; antiquity",
+      "distinct_from": "greek_ot_scroll (a row of translators) and scholar_hand_on_text (one scholar alone) - this is TWO scholars in face-to-face dispute"
+    },
+    "quill_ink_drop": {
+      "beat": 35,
+      "verse": "yet there it is, in ink, centuries early",
+      "shot": "MACRO_DETAIL",
+      "signature": "ink:reed-pen-drop",
+      "arms": "one hand lifting the reed pen",
+      "prompt": "a MACRO of a hand lifting a reed pen from a small clay inkwell, one dark drop of ink falling back, lamplight glinting on the wet nib; the act of writing; antiquity",
+      "distinct_from": "disputed_word_marks (marks on parchment) - this is the PEN and the ink drop, no writing visible"
+    },
+    "hebrew_scroll_edge_light": {
+      "beat": 44,
+      "verse": "the traditional Hebrew text (the disputed reading)",
+      "shot": "MACRO_DETAIL",
+      "signature": "scroll:edge-curl",
+      "arms": "n/a",
+      "prompt": "a MACRO of the curling edge of an ancient darkened scroll lifting slightly in lamplight, the surface only soft indistinct texture, fibres and cracks catching the flame glow; age itself; antiquity",
+      "distinct_from": "disputed_word_marks (a spread with marks) - this is only the curling EDGE of one ancient scroll"
+    },
+    "lion_shadow_wall": {
+      "beat": 45,
+      "verse": "Psalm 22:13 - as a ravening and a roaring lion",
+      "shot": "SILHOUETTE",
+      "signature": "lion:shadow-on-wall",
+      "arms": "n/a",
+      "prompt": "the huge SHADOW of a prowling lion cast across a torchlit mud-brick wall at night, the beast itself unseen, torch flame guttering low in the corner; menace implied; 1st-millennium-BC",
+      "distinct_from": "lion_gape (the roaring head itself) - this is only the SHADOW on a wall"
+    },
+    "alexandria_harbor_night": {
+      "beat": 52,
+      "verse": "the Septuagint translated in Alexandria, two centuries before",
+      "shot": "WIDE_ESTABLISH",
+      "signature": "city:alexandria-harbor",
+      "arms": "n/a",
+      "prompt": "a WIDE dusk view of an ancient Mediterranean harbor city, moored ships and colonnaded quays, a great lighthouse tower with its fire burning against the last light; Hellenistic Egypt; antiquity",
+      "distinct_from": "storm_over_jerusalem (Jerusalem + temple) - this is the Greek HARBOR city with the lighthouse"
+    },
+    "seventy_scribes_lamps": {
+      "beat": 52,
+      "verse": "translated by Jewish scholars (the Seventy)",
+      "shot": "INTERIOR_SCENE",
+      "signature": "scholarship:rows-of-scribes",
+      "arms": "n/a",
+      "prompt": "an INTERIOR wide of a long Hellenistic hall where rows of Jewish scribes work at low tables, each under his own small oil lamp, dozens of warm points of light in the gloom, scroll surfaces only soft texture; the great translation; antiquity",
+      "distinct_from": "greek_ot_scroll (a knot of scholars at one table) - this is ROWS of many scribes under many lamps"
+    },
+    "roads_converge_valley": {
+      "beat": 51,
+      "verse": "one disputed word does not carry it; the convergence does",
+      "shot": "HIGH_CRANE",
+      "signature": "symbol:roads-to-one-point",
+      "arms": "n/a",
+      "prompt": "a HIGH view of five pale footpaths descending different dark hillsides and meeting at a single sunlit crossing point on the valley floor; the lines converge on one place; timeless ancient land",
+      "distinct_from": "nations_streaming_wide (crowded roads to a hill of light) - these are EMPTY paths converging in a valley"
+    },
+    "cry_profile_dark": {
+      "beat": 61,
+      "verse": "Matthew 27:46 - Jesus cried with a loud voice",
+      "shot": "SILHOUETTE",
+      "signature": "christ-cry:profile-rim-light",
+      "arms": "n/a (head and shoulders only)",
+      "prompt": "a stark SILHOUETTE profile of the crucified Christ's head thrown back mid-cry against a black sky, one hard rim of cold light tracing the brow, open mouth and beard, all else darkness; the cry itself; 1st-century",
+      "distinct_from": "cry_ninth_hour (lit full figure) and face_anguish_closeup (lit frontal face) - this is a black rim-lit PROFILE"
+    },
+    "synagogue_listeners_lean": {
+      "beat": 58,
+      "verse": "how a first-century Jew heard a psalm quoted",
+      "shot": "INTERIOR_SCENE",
+      "signature": "listeners:leaning-in",
+      "arms": "n/a",
+      "prompt": "an INTERIOR of a small stone synagogue where seated listeners lean forward into the lamplight toward an unseen reader, rapt weathered faces half-lit, deep warm shadow behind; the pull of the word; 1st-century",
+      "distinct_from": "first_century_reader (the reader himself) - this is the LISTENERS leaning toward him"
+    },
+    "hill_crowd_watching_storm": {
+      "beat": 65,
+      "verse": "out loud, in front of witnesses",
+      "shot": "WIDE_MULTITUDE",
+      "signature": "witnesses:dark-ring-storm",
+      "arms": "n/a",
+      "prompt": "a WIDE view of a dark ring of onlookers gathered on a slope beneath a swirling storm sky, all faces turned toward a distant lit rise where a cross stands small, dust blowing through; the watching crowd; 1st-century",
+      "distinct_from": "mockers_wag_heads (close mocking pair) and kneeling_at_cross (kneelers at base) - this is a wide DARK RING of witnesses under storm"
+    },
+    "tear_track_macro": {
+      "beat": 66,
+      "verse": "this one is about me (the personal claim)",
+      "shot": "MACRO_DETAIL",
+      "signature": "face:single-eye-tear",
+      "arms": "n/a",
+      "prompt": "an EXTREME MACRO of a single human eye, lash-shadowed, one tear cutting a clean track through dust on the skin, a tiny reflection of a cross in the wet of the eye; intimate; 1st-century",
+      "distinct_from": "cry_face_tears (whole face) - this is ONE EYE ONLY with the cross reflected in it"
+    },
+    "substitute_shadow": {
+      "beat": 90,
+      "verse": "he bore the forsaking in our place (substitution)",
+      "shot": "HIGH_CRANE",
+      "signature": "substitution:shadow-over-people",
+      "arms": "n/a",
+      "prompt": "a HIGH view at dawn of a small huddled group of ordinary people on pale ground, the long dark shadow of an unseen cross falling across the ground BESIDE them, leaving them standing in clean light; it fell on him, not them; 1st-century",
+      "distinct_from": "kneeling_at_cross (kneeling AT the cross) - here the cross is unseen and its SHADOW spares the people"
+    },
+    "grave_clothes_folded_macro": {
+      "beat": 78,
+      "verse": "John 20:7 - the linen clothes lying folded",
+      "shot": "MACRO_DETAIL",
+      "signature": "resurrection:folded-linen",
+      "arms": "n/a",
+      "prompt": "a MACRO of a single linen cloth folded FLAT into a small neat square lying low on the bare cut stone ledge, the ledge otherwise empty, a shaft of pale dawn light across the weave, dust motes rising; absence as victory; 1st-century",
+      "distinct_from": "empty_tomb_open (the whole tomb interior) - this is only the FOLDED LINEN close up"
+    },
+    "stone_rolled_groove": {
+      "beat": 73,
+      "verse": "the stone rolled away (the grave could not hold him)",
+      "shot": "MACRO_DETAIL",
+      "signature": "resurrection:stone-in-groove",
+      "arms": "n/a",
+      "prompt": "a MACRO along the carved stone groove of a tomb entrance, the great round sealing stone rolled fully OPEN at the groove's end, morning light flooding through the gap it left; the open way; 1st-century",
+      "distinct_from": "empty_tomb_open (interior with ledge) - this is the ROLLED STONE in its groove from outside"
+    },
+    "congregation_hands_lifted": {
+      "beat": 74,
+      "verse": "in the midst of the congregation will I praise thee (Ps 22:22)",
+      "shot": "WIDE_MULTITUDE",
+      "signature": "congregation:hands-lifted-rear",
+      "arms": "many hands lifted high toward the light",
+      "prompt": "a WIDE view from BEHIND a packed congregation of 1st-century worshippers, dozens of hands lifted high toward a warm light source ahead, robes and prayer shawls edge-lit; corporate praise; 1st-century",
+      "distinct_from": "kindreds_bowing (a bowing ring seen frontally) - this is from BEHIND, hands LIFTED not bowed"
+    },
+    "morning_birds_hill": {
+      "beat": 83,
+      "verse": "the hinge from night to morning",
+      "shot": "WIDE_ESTABLISH",
+      "signature": "dawn:birds-rising",
+      "arms": "n/a",
+      "prompt": "a WIDE view of birds rising in a loose spiral off a rocky hilltop into first light, the empty cross small at the crest, long soft dawn shadows down the slope; release; 1st-century",
+      "distinct_from": "dawn_empty_cross (static dawn wide) - this one is defined by the RISING BIRDS"
+    },
+    "threshold_open_door": {
+      "beat": 96,
+      "verse": "the congregation it ends in still has room for you (the invitation)",
+      "shot": "GROUND_LEVEL",
+      "signature": "invitation:open-door-light",
+      "arms": "n/a",
+      "prompt": "a GROUND-LEVEL view up a worn stone path to an ancient open doorway at dusk, warm firelight and moving shadows of a gathering spilling out across the threshold toward the viewer, the door standing wide; room inside; 1st-century",
+      "distinct_from": "hand_reaching_closeup (the scarred hand) - this is the OPEN DOOR with light spilling out"
     }
   }
 }

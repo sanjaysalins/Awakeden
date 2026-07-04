@@ -1,0 +1,246 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: plan
+
+LENS — judge this PLAN on (be specific, cite the exact step/claim):
+- Feasibility against the real codebase / tools (does it assume things that exist?).
+- Hidden risks, false assumptions, single points of failure.
+- Over-engineering / premature building before the idea is proven.
+- Missing steps, edge cases, or verification gaps.
+- Reuse: does it duplicate tools that already exist instead of reusing them?
+- Cost / spend and whether it's justified.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block (on the VERDICT line write exactly ONE word —
+PASS or REVISE or FAIL — never the list of options):
+
+VERDICT: <PASS or REVISE or FAIL>
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# AWAKEDEN RELEASE PLAN — from validated pilots to a publishing engine (v1)
+
+> Date: 2026-07-03 · Decided with the user (objective / cadence / website scope / platform
+> all chosen explicitly). Companion to `BATCH_PLAN.md` (the 7-cluster build slate),
+> `v2/EYEWITNESS_FOUNDATION.md` (the signature format) and `v2/LIVINGPAGE_STANDARD.md`
+> (the craft bar). This doc governs WHAT ships, WHEN, WHERE, and what the website is FOR.
+
+---
+
+## 1. The objective (decided: MINISTRY REACH FIRST)
+
+**The mission (user, 2026-07-03 — this is the spine of everything):**
+*Finding Jesus in the whole Bible — Old Testament and New. How people SAW him, and how
+events LED to him. The end of every piece is the same: the viewer finds and knows Jesus
+better, from both Testaments, with fresh perspective — fully and completely grounded
+and rooted in the Bible.*
+
+**One line for the public:** *Awakeden — finding Jesus in the whole Bible, one panel at a time.*
+
+Three lenses every piece uses (they ARE the content styles we've validated):
+1. **He is THERE** — Jesus in the OT: shadows, types, prophecies (Zech 12:10, Psalm 22,
+   the two goats, the bronze serpent...).
+2. **They SAW him** — through people's eyes: eyewitnesses, the thief, Mary, Simeon,
+   Peter in the garden (the POV/eyewitness device).
+3. **It LED to him** — events and threads that walk forward to Christ (thirty pieces of
+   silver, Passover → the cross, creation → "It is finished").
+
+- **Optimize for:** watch-through, shares, and the CTA landing on Christ. Every piece
+  lands on Jesus (non-negotiable, unchanged). Fresh perspective is always about the
+  TEXT, never a new "truth" — grounded in the Bible is the whole game.
+- **Second:** a platform-proof home base — awakeden.com + an email list. YouTube can
+  change the rules; the list and the site cannot be taken away.
+- **Last:** revenue (AdSense/memberships) exists only to fund production. It never
+  shapes the CTA, the doctrine, or the cadence. Grace-anchored stays law.
+
+**Success metrics (checked monthly):**
+1. Average % watched on shorts (target: >70% at 60s) and swipe-away rate in first 3s.
+2. Shares + saves per 1k views (the "worth passing on" signal).
+3. Site sessions on Read-pages + email signups.
+4. Slate health: pieces published vs. pieces in the bank (never publish the last piece —
+   keep ≥3 weeks of runway banked).
+
+## 2. Positioning (what we project)
+
+- **The lane:** hand-inked graphic-novel Bible storytelling with word-timed comic
+  choreography, verbatim KJV red-letter bars, and sound doctrine. Not AI-slop POV
+  content, not lecture essays — a consistent COMIC UNIVERSE of Scripture.
+- **The promise a viewer learns to trust:** every short is 60 seconds, every panel is
+  drawn, every quote is the actual Bible, and every story ends at Jesus — and you will
+  keep seeing Jesus in places of Scripture you never noticed him before (both Testaments).
+- **The website's framing follows the mission, not the format:** the site already says
+  "Find Jesus in the whole Bible" — that stays THE headline; the comic identity is how,
+  not what.
+- **Voice:** reverent, punchy, never clickbait about the TRUTH (freshness lives in the
+  entry point, orthodoxy in the claim — unchanged from v2/SPEC).
+
+## 3. The two products (both validated)
+
+| | Living-page SHORT | Inked LONG |
+|---|---|---|
+| Pilot | Cluster 1: 8 Cross shorts (LOCKED d6e294b) | Psalm 22 16:9 living-page + EW eyewitness longs |
+| Shape | 9:16 · ~60s · hook→turn→CTA · punch grammar | 16:9 · 9–12 min · 7-movement / eyewitness spine |
+| Cost | ~$4–5 MEASURED (cluster-1 ledger: ~$31/6 pieces; falls with reuse) | ~$20–40 |
+
+*Cost note (panel-checked): the legacy "~$23/episode" model in CLAUDE.md is the old
+Baroque pipeline (API Opus planning + ~16 fresh Kling clips per piece). The living-page
+short is ledgered at ~$4–5 because planning is in-chat, stills are ~$0.05, and reuse
+covers a growing share of clips. Budget on the measured number, watch it per cluster.*
+| Role | The snack/trailer — discovery | The meal — depth, retention, the site anchor |
+
+Rule carried from BATCH_PLAN: **write the long first** where a cluster has one; distill
+shorts from it. Reuse is same-format only (9:16↔9:16, 16:9↔16:9); Christ refs cross everything.
+
+## 4. Topics = the 7-world slate (~71 pieces, already mapped)
+
+Build+release order (reuse compounds in this order):
+1. **The Cross** — **8 of ~14 shorts banked** (BATCH_PLAN sizes this world at ~14 + the
+   EW07 Isaiah long). The remaining ~6 Cross shorts are the FIRST build task: the
+   Golgotha set is already built, so they are the cheapest runway that exists (~$4 each).
+2. **Resurrection / Empty Tomb** (~13 shorts + EW05 Jonah long) — Golgotha assets feed in.
+3. **Wilderness / Exodus** (~8 shorts; EW01/EW04/EW08 longs exist — harvest their clips first).
+4. **Genesis / Patriarchs** (~3 shorts; EW02/03/06 longs drive it).
+5. **Galilean Ministry** (~24 shorts — the biggest harvest). PRECURSOR: build the
+   living-ministry Christ ref + neutral plates EARLY and in parallel (the one real blocker).
+6. **Nativity / Bethlehem** (~4 shorts + EW09 Boaz).
+7. **Throne / Titles** (~5 shorts).
+
+Corpus-diversity gate runs per BATCH (hooks, closers, subject mix) — sameness is the
+scale killer, and per-piece gates are blind to it.
+
+## 5. Release plan (decided: 3 SHORTS/WEEK + 1 LONG/MONTH)
+
+- **Cadence:** Mon/Wed/Fri short (consistent slots); one long per month; the long's
+  cluster shorts publish around it (the short is the long's trailer).
+- **Runway rule (hard):** ≥3 weeks of finished pieces banked (≥9 shorts + the current
+  month's long) BEFORE launch and at all times after. 8 banked = 2.67 weeks — NOT enough.
+  **We do not launch until the remaining Cross shorts top the bank past 9** (they are the
+  cheapest builds in the whole slate — set already exists). Panel-caught, fixed.
+- **Order within a cluster:** strongest hook first (pull viewers into the world), the
+  hero/landing piece (e.g. It Is Finished) mid-run, close the cluster with the piece
+  that best bridges to the NEXT cluster (e.g. first_day_morning → Resurrection).
+- **A/B discipline (Shorts-real):** YouTube does NOT support title/thumbnail A/B for
+  Shorts — the A/B unit is the HOOK itself (first 3s). Where a hook is contested, cut
+  two hook variants of the same piece and publish the loser lane on TikTok only; compare
+  3-second retention. Weekly analytics entry (manual, ~15 min): append per-piece
+  {hook_style, pct_watched_avg, swipe_3s, shares_per_1k} to
+  `data/learning/yt_analytics.jsonl` → feeds the C0 gate weights. Named step, named file.
+
+## 6. Platform strategy (decided: YOUTUBE-FIRST)
+
+- **YouTube = home channel:** Shorts (3/wk) + longs (1/mo) on ONE channel so shorts
+  feed long-form watch time. End screens + pinned comments → awakeden.com Read-page.
+- **Same-day cross-posts:** TikTok, Instagram Reels, Facebook Reels (same file, native
+  captions already burned in). No bespoke edits per platform in phase 1.
+- **The site is the destination**, not a mirror: every video description links its
+  Read-page ("Read this as a comic → awakeden.com/...").
+- **Every release goes through the existing gate machinery:** `/upload` (verified
+  metadata, deterministic gates) → `/publish` (per-platform copy + captions.srt +
+  PUBLISH_INDEX.html, UK-G1..G7). No ad-hoc hand-written descriptions — the Read-page
+  link is added to the /publish description TEMPLATE once, then flows to every piece.
+
+## 7. Website v2 (decided: COMIC READ-PAGES + PUBLIC TRACKER)
+
+The insight: **every piece is already a comic.** `livingpage_short.spec.json` holds the
+beats, captions, and red-letter bars; the stills are the panels. So the site publishes
+each piece twice — Watch (video embed) and **Read (auto-generated scrollable comic
+strip: panels + captions + Scripture bars + verse links)**.
+
+- **Build, don't hand-author:** extend `_website/build_catalog.py` with a
+  `build_readpage.py` that walks a piece folder (`livingpage_short.spec.json` — exists
+  in all 7 cluster-1 pieces, panel-verified — + `visual/*.png`) → static Read-page.
+  Panels are the existing stills (web-sized copies).
+- **Scope honestly (panel-caught):** the red-letter bars/captions exist as spec JSON +
+  PIL video rendering; the web version is a CSS re-implementation, not a copy-paste.
+  Read-page v1 = panels + captions/bars as styled HTML text (clean, readable, fast to
+  ship). Pixel-matched comic typography is a later polish pass, not a launch blocker.
+  Ship order: tracker first, Read-pages v1 second.
+- **The Plan page (public tracker):** auto-built from `batches/batch_manifest.json` +
+  `asset_index.json` + a small `publish_log.json` → three columns: OUT (linked) /
+  IN PRODUCTION / NEXT. Being open about the roadmap is itself content.
+- **Home:** latest piece + the one-line mission + email capture (simple provider embed).
+- **About / What we believe:** KJV, the whole Bible through Jesus, grace-anchored CTA.
+- **Identity refresh, not relaunch:** update copy + hero art from Baroque-era wording to
+  the inked comic identity. Keep the existing Netlify pipeline, typography, structure.
+- Out of scope for now (phase 3+): full offline reader, per-world hub deep pages,
+  memberships.
+
+## 8. Reuse economics (why this gets cheaper)
+
+- Cluster 1 seeded 50 registered stills + 42 clips. Every cluster ingests its art into
+  `asset_index.json`/`clip_library` on completion (already standard).
+- Expected cost curve per short: ~$5 (cluster 1) → ~$3–4 (cluster 2, Golgotha reuse) →
+  lower as neutral plates accumulate. Kling clips are the spend; stills are pennies —
+  never ration stills (standing rule).
+- The living-ministry Christ ref unlocks 24 Ministry shorts — highest-leverage single
+  asset left to build.
+
+## 9. Quality law (unchanged, restated so release pressure never erodes it)
+
+C0 earned-hook gate before any spend · doctrine proven BOTH ways (red-team + 5-CLI
+panel, clean artifact) · KJV verbatim with clause-boundary tags · living-page DoD gates
+(0 reuse violations, motion floor, median beat) · every still eye-audited · sacred bars
+never slam · release cadence NEVER overrides a failed gate — slip the schedule, not the gate.
+
+## 10. Step-by-step (the way forward)
+
+**Phase 0 — prep (week 0, BEFORE launch):**
+1. Panel-review this plan (5-CLI) → fold verdicts → user sign-off. *(round 1 done —
+   degraded panel 2/5, both REVISE; all real findings folded, see §12)*
+2. **Build the remaining ~6 Cross shorts** (cheapest builds in the slate — set exists).
+   This is what satisfies the ≥3-week runway rule; launch is GATED on ≥9 banked.
+3. YouTube channel dress: banner/avatar/about in the inked identity; playlists per world.
+4. `publish_log.json` schema + first entries; wire the Read-page link into the
+   /publish description template.
+5. Website v2: The Plan tracker first, Read-page v1 generator second → deploy.
+
+**Phase 1 — launch (weeks 1–3):**
+6. Publish Cross shorts Mon/Wed/Fri via /upload + /publish; cross-post same day.
+7. Meanwhile write + build the **EW05 Jonah long** (Cluster 2's foundation — long-first
+   rule holds, it just lives OUTSIDE the launch-week crunch; it ships as month-2's long,
+   not month-1's). Cross's own EW07 Isaiah long is the month-1 long candidate if ready;
+   otherwise month 1 ships shorts only — cadence over crunch.
+8. Weekly analytics entry starts with the first published week (named step, §5).
+
+**Phase 2 — rhythm (months 2–3):**
+9. Distill + build the ~13 Resurrection shorts from the Jonah long; publish 3/wk;
+   Jonah long ships as the monthly long.
+10. Build Cluster 3 (harvest EW01/EW04 clips first) + the living-Christ ref in parallel.
+11. First analytics review: hooks vs. watch-through → tune the C0 gate weights.
+
+**Phase 3 — scale (months 3–6):**
+10. Clusters 4–5 (Ministry mass-production once the living-Christ ref lands).
+11. Site: per-world hub pages + anything the analytics say readers want.
+12. Revisit monetization ONLY if it funds production without touching the CTA.
+
+## 11. Risks (named so we watch them)
+
+- **Sameness at scale** → batch-level corpus diversity gate, rotating hook archetypes.
+- **Doctrine drift under speed** → the panel is mandatory; slip schedule, never the gate.
+- **Platform risk** → the site + list from day one; videos always link home.
+- **Solo-operator burnout** → the 3+1 cadence is chosen BECAUSE it is sustainable; the
+  runway rule (≥3 weeks banked) absorbs life happening.
+- **Copyright/notes:** KJV is public domain; music from our own Suno library; all art
+  generated in-house — keep it that way (no third-party assets).
+
+## 12. Panel record (independent review — ENFORCED)
+
+**Round 1 (2026-07-03, `v2/_independent_review/20260703-135242`):** degraded panel —
+2/5 voices (claude, gemini; cursor/codex/grok timed out). Both REVISE. Disposition:
+- **Fixed:** day-one runway violation (launch now gated on ≥9 banked; remaining ~6 Cross
+  shorts scheduled first) · "Cross DONE" overclaim (8 of ~14) · Cluster-2 long-first
+  collision with launch week (Jonah long moved out of the crunch, ships month 2) ·
+  Shorts title/thumbnail A/B replaced with hook-level A/B + named weekly analytics step ·
+  publishing routed through /upload + /publish gates · Read-page scope honesty (CSS
+  re-render, tracker ships first).
+- **Answered (verified false / by-design):** gemini's "livingpage_short.spec.json is
+  hallucinated" — the file exists in all 7 cluster-1 pieces (CLAUDE.md's file map
+  predates the living-page pipeline) · gemini's "$23/episode contradiction" — $4–5 is
+  the MEASURED cluster-1 ledger; $23 is the legacy Baroque/API model (note added §3) ·
+  "website is premature" — explicit user decision (scope kept small, tracker-first).
+- **Round 2 pending:** re-run for quorum (≥4/5) after fixes; do not LOCK on round 1.
+----- ARTIFACT END -----

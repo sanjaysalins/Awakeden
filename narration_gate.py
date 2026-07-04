@@ -52,12 +52,33 @@ TEMPLATE_HOOKS = (r"^did you know\b", r"^what if i told you\b", r"^imagine\b",
                   r"^have you ever\b", r"^we all know\b", r"^picture this\b")
 
 
+def _two_line_tagged(raw: list[str]) -> list[str]:
+    """Legacy format: a bare **[speaker ...]** label line, spoken text on the NEXT
+    line(s). Normalize to single '[speaker] text' lines."""
+    out, i = [], 0
+    while i < len(raw):
+        m = re.match(r"^\*\*\[([^\]]+)\]\*\*:?\s*$", raw[i])
+        if m:
+            j = i + 1
+            while j < len(raw) and not raw[j]:
+                j += 1
+            if j < len(raw) and not raw[j].startswith(("#", "-", ">", "|", "**[")):
+                tag = re.sub(r"[^a-z_ ]", " ", m.group(1).lower()).split()[0] or "narrator"
+                out.append(f"[{tag}] {raw[j].strip('\"').strip()}")
+                i = j + 1
+                continue
+        i += 1
+    return out
+
+
 def _spoken(md: str) -> str:
     """Strip headers/labels/markdown down to the spoken text. If the file uses [speaker]
     tags, ONLY tagged lines are spoken (metadata headers like 'Series: ...' never leak
     into the hook)."""
     raw = [ln.strip() for ln in md.splitlines()]
     tagged = [ln for ln in raw if re.match(r"^\[[a-z_ ]+\]\s*\S", ln, flags=re.I)]
+    if not tagged:
+        tagged = _two_line_tagged(raw)
     lines = []
     for ln in (tagged or raw):
         if not ln or ln.startswith("#") or ln.startswith(">") or ln.startswith("|"):
@@ -89,8 +110,12 @@ def _quotes(text: str) -> str:
 def _scripture(md: str) -> str:
     """In multi-voice pieces the KJV is spoken by non-narrator voices ([scripture],
     [jesus], [david]...) with no quote marks — those lines ARE the piece's material."""
+    raw = [ln.strip() for ln in md.splitlines()]
+    lines = [ln for ln in raw if re.match(r"^\[[a-z_ ]+\]\s*\S", ln, flags=re.I)]
+    if not lines:
+        lines = _two_line_tagged(raw)
     out = []
-    for ln in md.splitlines():
+    for ln in lines:
         m = re.match(r"^\[([a-z_ ]+)\]\s*(\S.*)$", ln.strip(), flags=re.I)
         if m and m.group(1).strip().lower() != "narrator":
             out.append(m.group(2))
@@ -157,9 +182,11 @@ def gate(path: Path, stale: dict[str, int] | None = None) -> int:
     if "error" in r:
         print(f"[??] {r['error']}")
         return 2
+    def _safe(s):
+        return s.encode("ascii", "replace").decode()
     print(f"\n=== {path}")
-    print(f"  hook   : {r['hook'][:110]}")
-    print(f"  closer : {r['closer'][:110]}")
+    print(f"  hook   : {_safe(r['hook'][:110])}")
+    print(f"  closer : {_safe(r['closer'][:110])}")
     fails = 0
     for level, msg in r["findings"]:
         print(f"  [{level}] {msg}")

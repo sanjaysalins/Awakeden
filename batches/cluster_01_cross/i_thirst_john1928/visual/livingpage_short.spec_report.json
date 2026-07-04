@@ -1,0 +1,293 @@
+{
+ "dod": {
+  "median_beat_s": 4.25,
+  "max_beat_s": 7.3,
+  "held_gt6s": [
+   7.3,
+   7.2,
+   6.13
+  ],
+  "slams": 0,
+  "kling_or_punch_or_slam_pct": 83,
+  "tier1_pct": 0,
+  "reuse_violations": [],
+  "tier3_or_flagged_beats": [],
+  "standard_3b": {
+   "stills_over_2_uses": {},
+   "stills_fullbleed_twice": {},
+   "fullbleed_beat_pct": 100,
+   "slop_caption_beats": []
+  },
+  "ramps": 1,
+  "whips": 1,
+  "flash_inserts": 1,
+  "cut_ticks": true,
+  "beats": 12
+ },
+ "beats": [
+  {
+   "beat": 1,
+   "t": [
+    0.0,
+    4.9
+   ],
+   "dur": 4.9,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "ocean_creation_wide"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 2,
+   "t": [
+    4.9,
+    8.6
+   ],
+   "dur": 3.7,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "face_on_cross"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 3,
+   "t": [
+    8.6,
+    13.0
+   ],
+   "dur": 4.4,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "david_writing_psalm"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 4,
+   "t": [
+    13.0,
+    15.2
+   ],
+   "dur": 2.2,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "us_under_cross_shadow"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 5,
+   "t": [
+    15.2,
+    22.4
+   ],
+   "dur": 7.2,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "potsherd_dry_clay"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 6,
+   "t": [
+    22.4,
+    26.45
+   ],
+   "dur": 4.066667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "psalm_scroll_night"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 7,
+   "t": [
+    26.45,
+    32.6
+   ],
+   "dur": 6.133333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "bowed_head_finished"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 8,
+   "t": [
+    32.6,
+    36.7
+   ],
+   "dur": 4.1,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "vinegar_sponge_reed"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 9,
+   "t": [
+    36.7,
+    44.0
+   ],
+   "dur": 7.3,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "jesus_praying_close"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 10,
+   "t": [
+    44.0,
+    49.4
+   ],
+   "dur": 5.4,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "living_water_stream"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 11,
+   "t": [
+    49.4,
+    53.3
+   ],
+   "dur": 3.9,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "risen_mercy_hand"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 12,
+   "t": [
+    53.3,
+    55.74
+   ],
+   "dur": 2.433333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "cross_at_dawn"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  }
+ ]
+}
