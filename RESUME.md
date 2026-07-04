@@ -1,5 +1,39 @@
 # RESUME.md — start here next session
 
+## ⚡⚡⚡ NEXT SESSION START HERE (user, 2026-07-04) — FULL STILLS HALLUCINATION REVIEW, ALL SHORTS + LONGS ⚡⚡⚡
+
+> **User's directive:** "resume a review of all the short and long form we have done so far —
+> there are loads of stills that have very bad hallucination and need to be redone."
+
+**Why it's urgent:** the website is LIVE (awakeden.com, inked skin) and the read pages publish
+FRAMES from the finished videos — any hallucinated still is now publicly readable panel by panel.
+
+**Sweep inventory (everything finished so far):**
+1. `batches/cluster_01_cross/*` — the 11 Cross shorts (pilot + 7 roll + 3 re-rolls). Stills in
+   each piece's `visual/` + review sheets (`_CLUSTER1_ROLL_REVIEW.html`, per-piece `_LIVINGPAGE_PILOT_REVIEW.html`).
+2. `longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/` — the 7-min living-page film
+   (99 beats; `_LIVINGPAGE_FULL_REVIEW.html`).
+3. `longform/EW01_Two_Goats`, `longform/EW04_Bronze_Serpent`, `longform/01_Isaiah_53*`, other EW/long trees.
+4. `v2/pilot/*` pieces still referenced by the site (mockers_words, zechariah_12_10, isaiah_53_5).
+
+**Method (review THEN spend):**
+- EYE-audit contact sheets / Read-tool every still yourself (never trust the SDK audit alone —
+  memories [[feedback-kling-skip-audit]], [[always-independent-red-team]]).
+- Cross-check with `render_lint` + vision audit where wired ([[render-quality-loop]]).
+- Build ONE redo ledger (piece · still slug · defect · severity · public-facing?) BEFORE any re-render.
+- Known hallucination causes to hunt: dense prompts ([[byteplus-lean-prompting]]), named-noun draws
+  (sunglasses/dominoes/gibberish text — [[seedream-no-negative-channel]]), Kling morphs on writing,
+  anachronisms (candles, wrong idols), anatomy (hands), garbled titulus text.
+- Redo flow: re-render still ([[feedback-no-lazy-still-prompting]] → still_validate GREEN → render_grounded)
+  → delete+deindex the bad asset ([[global-asset-index]]) → rebuild affected video beats (`--only`)
+  → re-score → re-extract website frames (`build_readpage.py`) → gates → commit.
+
+**Also pending:** the series-shelves website commit `4f5d853` is on the branch, NOT yet pushed to
+main/live — user approved the design ("this is better") but has not said "push it live" yet.
+
+---
+
+
 > **⚡ ACTIVE THREAD (2026-06-30) — BATCH-BY-VISUAL-WORLD + CLUSTER 1 PILOT.** We now produce the whole
 > corpus grouped by **shared visual world** (not series): `BATCH_PLAN.md` (7 clusters) + `batches/batch_manifest.json`.
 > Building the FIRST cross piece — **"Father, forgive them" (Luke 23:34), inked motion-comic 9:16 short** — as a
