@@ -1,35 +1,202 @@
 # RESUME.md — start here next session
 
-## ⚡⚡⚡ NEXT SESSION START HERE (user, 2026-07-04) — FULL STILLS HALLUCINATION REVIEW, ALL SHORTS + LONGS ⚡⚡⚡
+## ⚡⚡⚡ NEXT SESSION START HERE (updated 2026-07-05 EOD) — PSALM-22 LONG-FORM: CAMERA-VARIETY REBUILD IN FLIGHT ⚡⚡⚡
 
-> **User's directive:** "resume a review of all the short and long form we have done so far —
+> **Where we are (2026-07-05):** finished the Psalm-22 long-form stills redo AND upgraded the
+> $0 motion engine so the film is no longer "bland Ken-Burns everywhere." User feedback:
+> *"prolonged use of just ken burns looks a bit too bland… a combination over a few stills will
+> be useful, they all are good."* → built + applied a **drift / hard-cut tour / parallax** mix.
+
+### ✅ DONE 2026-07-05
+1. **substitute_shadow** clip fixed — Kling ran the shadow the wrong way (shrank as sun set), so
+   REVERSED the clip → shadow now GROWS, people stay frozen. Installed as `clips/substitute_shadow.mp4`,
+   beat 90 `cam:"push"` removed → uses the live clip. **All 5 of the user's redo notes now closed**
+   (crane hands+stones, pierced_feet, wrists hand, kindreds_bowing, substitute_shadow).
+2. **NEW $0 camera-variety engine** (reusable, first-class in the builder via the `cam:` field):
+   - `dynamic_cam.py` now dispatches TWO new moves beside arc/swoop/push:
+     - `tour` = hard-cut gallery tour (full→detail→detail→full, ~1.25s cuts + micro-push). Optional
+       `<slug>.tour.json` = list of `[fx,fy,zoom]` framings; else auto-derives from anchor focus.
+     - `parallax` = rembg 2.5D (foreground cutout pushes faster + counter-drifts vs the background).
+       Best on a CLEAR figure-vs-bg; DON'T use on wide vistas (rembg can't separate) or text stills.
+   - `caption_layout.py SRC_SCALE` got `dyncam_tour` (1.34) + `dyncam_parallax` (1.30).
+   - tour.json sidecars authored: `hung_by_arms, mocker_faces_trio, tear_track_macro, david_hands_lyre, ribs_stretched_macro`.
+   - Memory: [[longform-camera-variety-moves]].
+3. **Applied the combination across the WHOLE film** — `livingpage_full.spec.json` was all-`arc`;
+   now **26 swoop · 26 push · 23 arc · 7 tour · 5 parallax**. tour=faces/detail macros
+   (b16,27,34,50,66,85 + ribs 56); parallax=clear figures (b8 convergence, b24 scribe, b42 reader,
+   b61 cry, b99 risen_hero); grids/wides/scrolls=varied drift (never tour a scroll).
+4. Film was rebuilt+re-scored TWICE earlier today (substitute_shadow, then the demo stretch) — the
+   scored output pipeline works: promote preview → `v1/visual_16x9/LivingPage_Psalm22_16x9.mp4`,
+   then `_add_score_lf.py ... --regen` → `LivingPage_Psalm22_16x9_scored.mp4` (grace arc lands on CTA).
+
+### ▶▶ TOMORROW — FIRST STEPS (the full rebuild was IN FLIGHT at EOD)
+1. **Confirm the full rebuild finished** (was bg task `bexfjhcza`, `--clips` no `--only`). If not, re-run:
+   `.venv\Scripts\python.exe longform/02_Psalm_22_Song_From_The_Cross/build_livingpage_16x9.py --spec livingpage_full.spec.json --clips`
+   (output `v1/visual_16x9_inked/livingpage_full.spec_preview.mp4`). Spec is SAVED so this is safe to re-run.
+2. **EYEBALL the new-move beats** (look yourself, per [[always-independent-red-team]]): parallax beats
+   b8/b24/b42/b61/b99 for any rembg HALO or GHOST-double in motion; tour beats for bad punches. Fix any
+   bad slug (swap its `cam` to a drift, or fix its `.tour.json`), clear that `seg_NN.mp4`, rebuild `--only NN`.
+3. **RE-SCORE** (user asked): `cp visual_16x9_inked/livingpage_full.spec_preview.mp4 visual_16x9/LivingPage_Psalm22_16x9.mp4`
+   then `.venv\Scripts\python.exe longform/_add_score_lf.py longform/02_Psalm_22_Song_From_The_Cross --yes --regen`.
+4. Read-page frames = still a NO-OP for this film (the long-form has no read strip; only the shorts do).
+5. **THEN** return to the big backlog below — the 84-still **Cross-shorts** hallucination redo (NOT started).
+
+---
+
+## ⚡⚡ EARLIER TASK (updated 2026-07-04) — STILLS HALLUCINATION REVIEW: AUDIT DONE, REDO NOT STARTED ⚡⚡
+
+> **User's directive (2026-07-04):** "resume a review of all the short and long form we have done so far —
 > there are loads of stills that have very bad hallucination and need to be redone."
 
 **Why it's urgent:** the website is LIVE (awakeden.com, inked skin) and the read pages publish
 FRAMES from the finished videos — any hallucinated still is now publicly readable panel by panel.
 
-**Sweep inventory (everything finished so far):**
-1. `batches/cluster_01_cross/*` — the 11 Cross shorts (pilot + 7 roll + 3 re-rolls). Stills in
-   each piece's `visual/` + review sheets (`_CLUSTER1_ROLL_REVIEW.html`, per-piece `_LIVINGPAGE_PILOT_REVIEW.html`).
-2. `longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/` — the 7-min living-page film
-   (99 beats; `_LIVINGPAGE_FULL_REVIEW.html`).
-3. `longform/EW01_Two_Goats`, `longform/EW04_Bronze_Serpent`, `longform/01_Isaiah_53*`, other EW/long trees.
-4. `v2/pilot/*` pieces still referenced by the site (mockers_words, zechariah_12_10, isaiah_53_5).
+### ✅ DONE THIS SESSION — full eye-audit of items 1+2 (233 stills) + independent 2nd-pass verify + VISUAL gallery ($0, no re-renders yet)
 
-**Method (review THEN spend):**
-- EYE-audit contact sheets / Read-tool every still yourself (never trust the SDK audit alone —
-  memories [[feedback-kling-skip-audit]], [[always-independent-red-team]]).
-- Cross-check with `render_lint` + vision audit where wired ([[render-quality-loop]]).
-- Build ONE redo ledger (piece · still slug · defect · severity · public-facing?) BEFORE any re-render.
-- Known hallucination causes to hunt: dense prompts ([[byteplus-lean-prompting]]), named-noun draws
-  (sunglasses/dominoes/gibberish text — [[seedream-no-negative-channel]]), Kling morphs on writing,
-  anachronisms (candles, wrong idols), anatomy (hands), garbled titulus text.
-- Redo flow: re-render still ([[feedback-no-lazy-still-prompting]] → still_validate GREEN → render_grounded)
-  → delete+deindex the bad asset ([[global-asset-index]]) → rebuild affected video beats (`--only`)
-  → re-score → re-extract website frames (`build_readpage.py`) → gates → commit.
+**VISUAL REDO GALLERY (open this first — actual images embedded, for eyeball inspection):**
+`file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/_STILLS_REDO_GALLERY.html`
 
-**Also pending:** the series-shelves website commit `4f5d853` is on the branch, NOT yet pushed to
-main/live — user approved the design ("this is better") but has not said "push it live" yet.
+**Text ledger (first-pass detail, all 233 incl. minors):**
+`file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/_STILLS_HALLUCINATION_REDO_LEDGER.html`
+
+Every still in the 11 Cross shorts + the Psalm 22 long-form film was Read directly (never trusted
+the SDK sidecar audits — memories [[feedback-kling-skip-audit]], [[always-independent-red-team]]).
+First pass: 3 CRITICAL · 61 MAJOR · 58 MINOR. Then an INDEPENDENT adversarial 2nd pass re-read every
+flagged still and confirmed/refuted each against the pixels.
+
+**THEN a 3rd pass — RED-TEAM of the review itself:** re-read the ~170 stills the review had
+CLEARED (never skeptically re-checked) + a doctrine/history red-team of the redo instructions.
+It found ~30 MORE redo-worthy defects the first two passes MISSED — biggest misses were in pieces
+called "clean" (woman_behold was rated cleanest, hid 7). Doctrine red-team ruled the redo
+instructions SAFE after one fix (thirty_pieces zech skyline: "Herodian"→Zerubbabel-era) and
+CONFIRMED "nail through the palm" is correct (John 20:25/27), keep it.
+
+**FINAL REDO LIST (all 3 passes): 84 stills to redo — 6 CRITICAL · 78 MAJOR** (+ ~26 minors shown, not counted).
+(10 first-pass over-calls were DROPPED; the red-team then ADDED 30 redo-worthy + 26 minor from the
+cleared pile — a near-doubling. Several defects live in SHARED reuse-bank stills — us_under_cross_shadow,
+risen_mercy_hand, gethsemane_olives_night, darkness_veil_torn recur across pieces — fix once, propagate.
+CROWN-OF-THORNS continuity is broken corpus-wide: standardize crown-PRESENT on every cross frame.)
+
+**The 6 CRITICAL (redo first):**
+1. `father_forgive_them/visual/nbp/04_cast_lots.png` — empty centre cross + shrouded corpse on ground, 5 crosses, telegraph poles, dog-bone lots.
+2. `it_is_finished_john1930/visual/vinegar_sponge_reed.png` — sponge misses His mouth entirely (points at sky), black-coal sponge on garish yellow bamboo.
+3. `crucifixion_foretold_ps2218/visual/face_on_cross.png` — hero hands both garbled (block-nail on palm + fused mitten fingers).
+4. `crucifixion_foretold_ps2218/visual/soldiers_gambling.png` — RED-TEAM: floating nails on top of the beam, not driven through (missed by first 2 passes).
+5. `pierced_zech1210/visual/spear_thrust_up.png` — impossible praying-hands limb; spear never touches His side.
+6. `thirty_pieces_zech11/visual/zechariah_night_scroll.png` — Dome of the Rock + minaret in c.520 BC skyline.
+
+**Notable red-team finds (public shorts):** BATMAN bat-wing logo on the thirty-pieces coins
+(`thirty_coins_scatter`, `silver_and_blood`); church cross-steeples in period skylines
+(`grace_poured_sky`, longform `ninth_hour_darkness`); Greek-Parthenon temples (`gethsemane_olives_night`
+in 2 pieces); Hokusai "Great Wave" + anime style-drift stills; medieval-European David
+(`shepherd_boy_sling`); a Christ-lookalike standing in the sinner crowd (`us_under_cross_shadow`, 4 pieces).
+
+**⚡ PIPELINE FIX DONE (2026-07-04) — Layers 1-3 built so this can't recur** (see `PIPELINE_GATES.md`):
+- L1 fail-closed vision gate + upgraded checklist (`render_lint/verify.py --gate/--worklist/--record`)
+- L2 prompt autofix (`render_lint/autofix.py` — candle→lamp, dominoes→astragali, dome/minaret→stone, style-drift stripped)
+- L3 composed ship gate + shared-still propagation (`ship_gate.py --check/--shared/--propagate`) + 11 new rules.json traps.
+- **KEY: shared stills are BYTE-IDENTICAL copies** — `ship_gate.py --shared` shows 26 shared slugs
+  (face_on_cross & risen_mercy_hand each = 1 file in 9 pieces, golgotha_hill_wide in 8). So the redo
+  has huge overlap: FIX EACH UNIQUE STILL ONCE → `--propagate` to all copies. Unique count << 84.
+
+## ⏸️ STOP POINT — 2026-07-04 EOD (Cross-shorts still redo). Pick up here tomorrow.
+
+**DONE today (all eye-audited PASS, ~65 BytePlus renders, ~$5–15):**
+1. **Pipeline hardened so this can't recur** — L1 fail-closed vision gate (`render_lint/verify.py --gate/--worklist/--record`), L2 prompt autofix (`render_lint/autofix.py`), L3 ship gate + shared-still propagation (`ship_gate.py`), 11 new `rules.json` traps, wired into all 6 finishing skills, and `verify_image` fail-open→closed. Doc: `PIPELINE_GATES.md`. Memory: [[stills-fail-closed-vision-gate]].
+2. **STYLE root-cause fix** in `batches/cluster_01_cross/father_forgive_them/byteplus_seedream.py` — pulled the negative block ("NO text… NOT anime") that was DRAWING gibberish + anime drift; now pure-positive. This is why re-renders now come out clean.
+3. **16 shared stills → 56 copies** (byte-identical across pieces; `ship_gate.py --propagate`). Contact sheet: `file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/_SHARED_REDO_BATCH1.html`. face_on_cross re-locked as REF_JESUS (face user-confirmed, eyes de-glowed).
+4. **25 shorts NON-shared per-piece stills** — all placed + PASS-recorded into their piece `visual/` (or `visual/nbp/` for the pilot). Includes both CRITICALs (`04_cast_lots`, `spear_thrust_up`), the Batman-coin scenes, watch_one_hour set, etc.
+
+**✅ DONE (2026-07-05) — LONG-FORM Psalm-22, all 18 fresh 16:9 stills audited + placed + PASS-recorded**
+into `longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/<slug>.png`. Every one eye-audited
+full-res (never the SDK sidecar). Final gallery: `file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/_LF_PSALM22_REDO_AUDIT.html`.
+- **ROOT-CAUSE FIX:** the pervasive stray gold coin (Star-of-David coin, a **Bitcoin ₿** coin, a coin
+  loaded into David's sling instead of a stone) came from the word **"coin"** in the shared `STYLE`
+  string in `batches/cluster_01_cross/father_forgive_them/byteplus_seedream.py` — a classic
+  [[seedream-no-negative-channel]] leak (naming a noun to keep it "plain" DRAWS it). Removed → now
+  purely adjectival ("Every surface is plain, bare and unmarked"). Kills coin AND stray scrolls across
+  ALL future short+long renders. First-pass re-roll cleared 11/13; a 2nd targeted pass fixed the last 2
+  (ninth_hour minarets+dome, first_century codex→scroll). Also fixed: amber-glow hero eyes → downcast,
+  risen palm "round scar"→faint flat mark, jerusalem_night_lyre minaret+telegraph-poles. Re-roll scripts
+  in this session's scratchpad (`reroll_longform.py`, `reroll2_longform.py`).
+- **✅ FULL-FOLDER SHIP GATE NOW GREEN (2026-07-05):** audited the rest of the cut. The live cut =
+  `livingpage_full.spec.json` (79 slugs). Swept the 61 remaining cut-stills via 6 parallel vision
+  auditors, then eye-verified every flag myself. **55 passed, 6 had defects → re-rolled + fixed:**
+  `cry_profile_dark` (gibberish titulus→blank), `david_hands_lyre` (candle→clay lamp),
+  `execution_stakes_field` (cross-finial+telegraph-poles→plain), `john_at_cross_foot` (churchyard
+  pedestal+anime→planted cross, realistic), `mocker_faces_trio` (anime+Christ-lookalike→3 distinct
+  ordinary mockers), `wrists_bound_beam_macro` (floating nail→rope only). Also audited the 2 non-cut
+  leftovers (`livingpage_poster`, `sponge_vinegar_jar` — both clean). `render_lint.verify --gate` =
+  **GREEN, 78/78 PASS, clear to animate/assemble.** Re-roll script: scratchpad `reroll3_longform.py`.
+- **✅ FILM REBUILT (2026-07-05):** `build_livingpage_16x9.py --spec livingpage_full.spec.json --clips`
+  → `v1/visual_16x9_inked/livingpage_full.spec_preview.mp4` (~7 min, 99 beats, narration + SFX slams +
+  burned-in kinetic captions). The 24 changed stills propagated in via **$0 dynamic_cam** — I moved the
+  12 stale Kling clips (animated from the OLD hallucinated stills) to `clips/_stale_from_bad_stills/`
+  and cleared stale `_dyncam_work` caches so the build regenerated motion from the FIXED stills.
+  Spot-verified 5 changed beats IN the film (mocker_trio, david_lyre, execution_stakes, shepherd_sling,
+  risen_hero) — all correct. Captions burned-in by the build; no separate veed pass needed.
+- **▶▶ REMAINING (both $0):** (1) **score** the film — `longform/_add_score_lf.py` (music_library Suno
+  chain, dark→grace arc, grace lands on the CTA); (2) **re-extract website read-page frames** —
+  `_website/build_readpage.py` (the read pages publish frames from the film, now stale). Optional paid
+  follow-up: re-animate the 4 hero crucifixion beats (crane/convergence/risen/cry) with generative
+  motion instead of dynamic_cam, if richer motion is wanted.
+
+**▶▶ THEN — the video REBUILDS (the big remaining downstream work):** every fixed still needs its Kling clip re-animated → each affected cut re-assembled → re-scored → re-captioned → website read-page frames re-extracted (`build_readpage.py`). The ship gate now BLOCKS animate/assemble on any piece whose stills aren't all GREEN, so it'll enforce order.
+
+**RENDER RECIPE (reuse tomorrow):** `BYTEPLUS_IMG_MODEL=seedream-4-5-251128` + `byteplus_seedream.py --prompt "…" --name X --size 1440x2560` (shorts 9:16) / `--size 2560x1440` (longform 16:9) / `--ref <face_on_cross.png>` for Christ-face consistency. Output → `visual/_byteplus/X.png`, then place into the piece + `--record --verdict PASS`. Shared stills use `ship_gate.py --propagate <fixed.png>`.
+**WINNING PROMPT TACTICS (hard-won):** pure-positive only; coins = "smooth featureless polished silver discs" (drop the word 'coin' → kills faces/emblems); every surface "bare/empty, nothing on it" (kills hallucinated coins + gibberish scrolls); lots = "pale rounded lot-stones" (NOT 'knucklebone' → dog-bones); describe the WOUND not the nail; risen wound = "faint pale flat healed patch" (NOT 'scar/round' → disc/gem); eyes "downcast/half-closed" to avoid the amber glow; skylines positive-period, never name dome/minaret/gothic.
+
+**Downstream per redone still:** re-render still → re-animate its ONE Kling clip → re-assemble that
+cut → re-score → re-caption → re-extract website read-page frames. (Gallery generator:
+scratchpad `build_redo_gallery.py` + `redo_gallery_data.json` + `redteam_adds.json`; per-piece
+1st-pass reports in scratchpad `audit_reports/`; red-team log in scratchpad `verify2/redteam_findings.md`.)
+
+**The 3 CRITICAL (redo these first, all in PUBLIC shorts with live read pages):**
+1. `batches/cluster_01_cross/father_forgive_them/visual/nbp/04_cast_lots.png` — five crosses, the
+   CENTER cross is empty while lots are being cast (scripturally wrong — He hung alive), lots drawn
+   as cartoon dog-bones, crossarms read as telegraph poles.
+2. `batches/cluster_01_cross/pierced_zech1210/visual/spear_thrust_up.png` — duplicated limb: a second
+   pair of praying hands appears mid-chest alongside the nailed arm; spear tip floats above his head,
+   never touches his side.
+3. `batches/cluster_01_cross/thirty_pieces_zech11/visual/zechariah_night_scroll.png` — Dome of the Rock
+   + minaret in a c.520 BC Jerusalem night skyline (~1,100 years too early).
+
+**Two root causes to fix ONCE at the prompt/ref level before redoing anything piece-by-piece**
+(see the ledger's closing note for the full list of 6 patterns):
+- **Bent/floating nail hands** — biggest repeat defect, nearly every crucifixion close-up across all
+  11 shorts. `it_is_finished_john1930/visual/nail_through_hand.png` is proof the model CAN render it
+  right — good redo reference image.
+- **Candle instead of clay oil lamp** — hit 14+ times (night-writing/scribe scenes, both shorts and
+  the long-form). Known trap, memory [[byteplus-lean-prompting]] / candle-trap notes — needs the
+  "clay oil lamp, wick in spout, never a candle/lantern" constraint reinforced in that scene family's
+  prompt template.
+
+### ▶▶ TODO — next session, in order
+
+- [ ] Re-render the 5 CRITICALs above (redo flow below), then re-animate + re-assemble those pieces.
+- [ ] Decide fix-once-at-the-prompt-level for the nail-hands defect and the candle-trap defect
+      (touches most of the 49 majors) vs. redoing each still individually — cheaper to fix the shared
+      prompt/ref piece first, then re-roll. Use `it_is_finished/visual/nail_through_hand.png` as the
+      correct-nail reference (2nd pass confirmed it's right).
+- [ ] Work down the 49 verified MAJORs in the gallery, piece by piece — each card has the exact
+      one-line redo instruction from the 2nd pass.
+- [ ] Cross-check ONE open continuity item before spending: today_paradise `thief_looks_to_jesus`
+      is nailed — if sibling thief stills use rope, re-render for consistency.
+- [ ] MINORs — user call on whether they ship as-is or get swept in with the majors (not in the 54 count).
+- [ ] **Still not audited** (original sweep inventory items 3+4 — NOT started yet):
+      - `longform/EW01_Two_Goats`
+      - `longform/EW04_Bronze_Serpent`
+      - `longform/01_Isaiah_53_Suffering_Servant`
+      - `v2/pilot/*` (mockers_words_ps22, zechariah_12_10_pierced, isaiah_53_5_with_his_stripes)
+- [ ] Redo flow per fixed still: re-render ([[feedback-no-lazy-still-prompting]] → still_validate GREEN
+      → render_grounded) → delete+deindex the bad asset ([[global-asset-index]]) → rebuild affected
+      video beats (`--only`) → re-score → re-extract website frames (`build_readpage.py`) → gates → commit.
+- [ ] The Psalm 22 long-form film is NOT yet public (site `public_status: in_production`, no
+      `youtube_id`) — lower urgency than the 11 shorts, which are all LIVE right now.
+
+**Also pending (unrelated, still true):** the series-shelves website commit `4f5d853` is on the
+branch, NOT yet pushed to main/live — user approved the design ("this is better") but has not said
+"push it live" yet.
 
 ---
 

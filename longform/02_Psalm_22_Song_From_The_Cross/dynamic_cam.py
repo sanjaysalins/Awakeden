@@ -54,7 +54,82 @@ def _project(corner_xy, yaw, pitch, scale, focus):
     return X, Y
 
 
+def _ease(t):
+    return 0.5 - 0.5 * math.cos(math.pi * max(0.0, min(1.0, t)))
+
+
+def _encode(frames_dir, dest):
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-framerate", str(FPS),
+                    "-i", str(frames_dir / "f%04d.png"), "-c:v", "libx264", "-crf", "18",
+                    "-pix_fmt", "yuv420p", str(dest)], check=True)
+    return dest
+
+
+def _tour_shots(still, focus):
+    """Hard-cut framings for a gallery tour. A `<slug>.tour.json` sidecar (list of
+    [fx,fy,zoom]) wins; else auto-derive a full -> punch -> lateral -> full tour from focus."""
+    import json
+    tp = still.with_name(still.stem + ".tour.json")
+    if tp.exists():
+        return [tuple(s) for s in json.loads(tp.read_text())]
+    fx, fy = focus
+    lx = min(0.82, max(0.18, fx + 0.20))
+    return [(0.5, 0.46, 1.0), (fx, fy, 2.0), (lx, fy, 1.9), (0.5, 0.46, 1.0)]
+
+
+def _render_tour(still, dur, focus, dest):
+    """Hard-cut gallery tour: cut between framings on a ~1.25s beat, micro-push each shot."""
+    img = Image.open(still).convert("RGB").resize((OUT_W, OUT_H), Image.LANCZOS)
+    shots = _tour_shots(still, focus)
+    n = max(1, int(dur * FPS))
+    per = max(1, int(1.25 * FPS))                       # frames per shot (hard cut)
+    fd = WORK / f"{still.stem}_tour_frames"; fd.mkdir(exist_ok=True)
+    for i in range(n):
+        shot = min(len(shots) - 1, i // per)
+        local = (i - shot * per) / per
+        fx, fy, z0 = shots[shot]
+        z = z0 * (1.0 + 0.05 * _ease(local))            # micro push-in within the shot
+        cw, ch = OUT_W / z, OUT_H / z
+        cx, cy = fx * OUT_W, fy * OUT_H
+        left = min(max(cx - cw / 2, 0), OUT_W - cw)
+        top = min(max(cy - ch / 2, 0), OUT_H - ch)
+        crop = img.crop((int(left), int(top), int(left + cw), int(top + ch))).resize((OUT_W, OUT_H), Image.LANCZOS)
+        crop.save(fd / f"f{i:04d}.png")
+    return _encode(fd, dest)
+
+
+def _render_parallax(still, dur, focus, dest):
+    """2.5D depth: rembg the subject, push the background slowly, move the foreground
+    faster + counter-drift so the drawing gains real depth. Zero repaint."""
+    from rembg import remove
+    base_img = Image.open(still).convert("RGB").resize((OUT_W, OUT_H), Image.LANCZOS)
+    cut = remove(base_img).convert("RGBA").resize((OUT_W, OUT_H), Image.LANCZOS)
+    n = max(1, int(dur * FPS))
+    fd = WORK / f"{still.stem}_parallax_frames"; fd.mkdir(exist_ok=True)
+    for i in range(n):
+        t = i / (n - 1) if n > 1 else 0.0
+        e = _ease(t)
+        bz = 1.0 + 0.06 * e                             # background: slow push
+        bg = base_img.resize((int(OUT_W * bz), int(OUT_H * bz)), Image.LANCZOS)
+        bdx = int((bg.width - OUT_W) * (0.5 + 0.08 * (e - 0.5) * 2))
+        bdy = int((bg.height - OUT_H) * 0.5)
+        frame = bg.crop((bdx, bdy, bdx + OUT_W, bdy + OUT_H)).convert("RGBA")
+        fz = 1.0 + 0.14 * e                             # foreground: bigger push + counter-drift
+        fg = cut.resize((int(OUT_W * fz), int(OUT_H * fz)), Image.LANCZOS)
+        fdx = int((fg.width - OUT_W) * focus[0] - OUT_W * 0.03 * (e - 0.5) * 2)
+        fdy = int((fg.height - OUT_H) * focus[1])
+        fdx = min(max(fdx, 0), fg.width - OUT_W)
+        fdy = min(max(fdy, 0), fg.height - OUT_H)
+        frame.alpha_composite(fg.crop((fdx, fdy, fdx + OUT_W, fdy + OUT_H)))
+        frame.convert("RGB").save(fd / f"f{i:04d}.png")
+    return _encode(fd, dest)
+
+
 def render_move(still: Path, move: str, dur: float, focus, dest: Path) -> Path:
+    if move == "tour":
+        return _render_tour(still, dur, focus, dest)
+    if move == "parallax":
+        return _render_parallax(still, dur, focus, dest)
     src_img = Image.open(still).convert("RGB").resize((OUT_W, OUT_H), Image.LANCZOS)
     src_quad = [(0, 0), (OUT_W, 0), (OUT_W, OUT_H), (0, OUT_H)]
     corners = [(-1, -1), (1, -1), (1, 1), (-1, 1)]
