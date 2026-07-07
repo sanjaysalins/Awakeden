@@ -1,0 +1,144 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Crop + animation review — today_paradise_luke2343</title>
+<style>
+ body{background:#0f0f11;color:#eee;font-family:system-ui,Arial,sans-serif;margin:0;padding:20px 24px 120px}
+ h1{font-size:20px;margin:0 0 2px} .sub{color:#9aa;font-size:13px;margin-bottom:18px}
+ .card{background:#191920;border:1px solid #333;border-radius:12px;padding:14px;margin:0 0 20px;display:flex;gap:18px;flex-wrap:wrap}
+ .col{flex:1;min-width:300px}
+ .slug{font-family:monospace;color:#7ec8ff;font-size:15px}
+ .beats{color:#888;font-size:12px;margin:2px 0 8px}
+ .cropwrap{position:relative;display:inline-block;line-height:0;user-select:none;-webkit-user-select:none}
+ .cropwrap img{max-width:100%;width:340px;border-radius:6px;display:block;-webkit-user-drag:none;user-select:none;pointer-events:none}
+ .ov{position:absolute;inset:0;pointer-events:none}
+ .keepbox{position:absolute;border:2px solid #48e;background:rgba(64,140,255,.16);box-sizing:border-box;pointer-events:auto;cursor:move}
+ .handle{position:absolute;width:18px;height:18px;background:#48e;border:2px solid #fff;border-radius:4px;pointer-events:auto;cursor:nwse-resize}
+ .h-nw{left:-10px;top:-10px} .h-se{right:-10px;bottom:-10px}
+ .focusdot{position:absolute;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;background:#ffcc33;border:2px solid #000;box-shadow:0 0 0 2px #ffcc33;pointer-events:auto;cursor:grab}
+ video{max-width:100%;width:340px;border-radius:6px;display:block;background:#000}
+ .readout{font-family:monospace;font-size:12px;color:#9c9;margin:6px 0}
+ .btns button{font-size:12px;margin:0 6px 6px 0;padding:4px 9px;border-radius:6px;border:1px solid #555;background:#26262e;color:#eee;cursor:pointer}
+ .btns button.on{background:#48e;border-color:#48e;color:#fff}
+ textarea.notes{width:100%;box-sizing:border-box;height:56px;background:#111;color:#eee;border:1px solid #444;border-radius:6px;padding:6px;font-size:13px;margin-top:6px}
+ label.chk{display:inline-block;margin:4px 14px 4px 0;font-size:13px}
+ .mode{font-size:12px;color:#c94;margin:4px 0}
+ .noclip{color:#c66;font-size:13px;padding:20px 0}
+ #bar{position:fixed;left:0;right:0;bottom:0;background:#1c1c24;border-top:1px solid #444;padding:10px 24px;display:flex;gap:12px;align-items:center}
+ #bar button{font-size:14px;padding:8px 16px;border-radius:8px;border:none;background:#3a7;color:#fff;cursor:pointer}
+ #out{position:fixed;inset:5% 5% 5% 5%;background:#111;border:1px solid #555;border-radius:10px;padding:16px;display:none;z-index:9;flex-direction:column}
+ #out textarea{flex:1;width:100%;box-sizing:border-box;background:#0a0a0a;color:#8f8;font-family:monospace;font-size:12px;border:1px solid #333;border-radius:6px;padding:10px}
+ #out .row{display:flex;gap:10px;margin-top:10px}
+ #out button{font-size:14px;padding:8px 16px;border-radius:8px;border:none;cursor:pointer}
+</style></head><body>
+<h1>Crop + animation review — today_paradise_luke2343</h1>
+<div class="sub">Per still: <b>drag inside the blue box to MOVE it</b>, drag a <b>white corner</b> to resize (the box = what must stay in frame). Drag the <b>gold dot</b> to move the focus point. Flag redo. Add notes. Then <b>Export</b> at the bottom and paste back to me.</div>
+<div id="app"></div>
+
+<div id="bar">
+  <button onclick="exportAll()">⬇ Export feedback (copy this back to me)</button>
+  <span class="sub" style="margin:0">Only scenes you change (crop moved / redo checked / notes) are exported.</span>
+</div>
+<div id="out">
+  <b>Paste this whole block back into the chat:</b>
+  <textarea id="outtext" readonly></textarea>
+  <div class="row"><button style="background:#3a7;color:#fff" onclick="copyOut()">Copy to clipboard</button>
+  <button style="background:#555;color:#fff" onclick="document.getElementById('out').style.display='none'">Close</button></div>
+</div>
+
+<script>
+const SCENES = [{"slug": "golgotha_hill_wide", "beats": ["1:full", "13:stack_h"], "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/golgotha_hill_wide.png", "clip": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/clips/golgotha_hill_wide.mp4", "keep": [0.1, 0.1, 0.9, 0.9], "focus": [0.5, 0.4], "note": "three crosses wide, us below"}, {"slug": "nail_through_hand", "beats": ["2:stack_h", "12:stack_h"], "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/nail_through_hand.png", "clip": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/clips/nail_through_hand.mp4", "keep": [0.08, 0.15, 0.92, 0.85], "focus": [0.5, 0.45], "note": "nail+palm centre"}, {"slug": "us_under_cross_shadow", "beats": ["2:stack_h", "14:stack_h"], "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/us_under_cross_shadow.png", "clip": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/clips/us_under_cross_shadow.mp4", "keep": [0.08, 0.15, 0.92, 0.95], "focus": [0.5, 0.6], "note": "cross shadow falls to huddle"}, {"slug": "thief_looks_to_jesus", "beats": ["3:full", "12:stack_h"], "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/thief_looks_to_jesus.png", "clip": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/clips/thief_looks_to_jesus.mp4", "keep": [0.02, 0.05, 0.98, 0.95], "focus": [0.7, 0.5], "note": "over shoulder to far cross"}, {"slug": "mocker_thief_face", "beats": ["4:full", "13:stack_h"], "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/mocker_thief_face.png", "clip": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/clips/mocker_thief_face.mp4", "keep": [0.03, 0.03, 0.97, 0.95], "focus": [0.42, 0.3], "note": "snarling face upper left, ropes"}, {"slug": "crowd_mocking", "beats": ["5:full"], "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/crowd_mocking.png", "clip": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/clips/crowd_mocking.mp4", "keep": [0.03, 0.05, 0.97, 0.95], "focus": [0.5, 0.55], "note": "three mockers + pointing crowd"}, {"slug": "penitent_thief_face", "beats": ["6:full", "14:stack_h"], "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/penitent_thief_face.png", "clip": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/clips/penitent_thief_face.mp4", "keep": [0.03, 0.05, 0.97, 0.97], "focus": [0.62, 0.3], "note": "tearful turned face upper right"}, {"slug": "two_thieves_wide", "beats": ["7:full"], "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/two_thieves_wide.png", "clip": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/clips/two_thieves_wide.mp4", "keep": [0.02, 0.05, 0.98, 0.95], "focus": [0.5, 0.4], "note": "three crosses from behind"}, {"slug": "confession_face_hands", "beats": ["8:full"], "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/confession_face_hands.png", "clip": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/clips/confession_face_hands.mp4", "keep": [0.05, 0.05, 0.95, 0.95], "focus": [0.5, 0.4], "note": "face by roped fist"}, {"slug": "kingdom_light_clouds", "beats": ["9:full"], "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/kingdom_light_clouds.png", "clip": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/clips/kingdom_light_clouds.mp4", "keep": [0.02, 0.03, 0.98, 0.97], "focus": [0.5, 0.35], "note": "light shaft in storm"}, {"slug": "jesus_turns_to_thief", "beats": ["10:full"], "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/jesus_turns_to_thief.png", "clip": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/clips/jesus_turns_to_thief.mp4", "keep": [0.03, 0.05, 0.97, 0.95], "focus": [0.62, 0.42], "note": "thorn-crowned face turned"}, {"slug": "risen_mercy_hand", "beats": ["11:full"], "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/risen_mercy_hand.png", "clip": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/clips/risen_mercy_hand.mp4", "keep": [0.1, 0.02, 0.9, 0.98], "focus": [0.5, 0.35], "note": "risen face + offered hand"}, {"slug": "answer_light_profile", "beats": ["15:full"], "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/answer_light_profile.png", "clip": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/clips/answer_light_profile.mp4", "keep": [0.03, 0.05, 0.97, 0.95], "focus": [0.5, 0.38], "note": "calm profile in light break"}, {"slug": "paradise_dawn", "beats": ["16:full"], "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/paradise_dawn.png", "clip": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/clips/paradise_dawn.mp4", "keep": [0.02, 0.03, 0.98, 0.97], "focus": [0.5, 0.25], "note": "figure in dawn light at hilltop"}];
+const state = {};   // slug -> {keep:[..], focus:[..], redo_anim, redo_still, notes}
+SCENES.forEach(s=>{ state[s.slug] = {keep:s.keep.slice(), focus:s.focus.slice(), orig_keep:s.keep.slice(), orig_focus:s.focus.slice(), redo_anim:false, redo_still:false, notes:""}; });
+
+function fmt(a){return a.map(x=>x.toFixed(3)).join(", ");}
+
+function render(){
+  const app=document.getElementById('app');
+  app.innerHTML='';
+  SCENES.forEach(s=>{
+    const st=state[s.slug];
+    const card=document.createElement('div'); card.className='card';
+    card.innerHTML=`
+      <div class="col">
+        <div class="slug">${s.slug}</div>
+        <div class="beats">beats ${s.beats.join(' · ')} — ${s.note?('“'+s.note+'”'):''}</div>
+        <div class="cropwrap" data-slug="${s.slug}">
+          <img src="${s.png}" draggable="false">
+          <div class="ov">
+            <div class="keepbox"><div class="handle h-nw"></div><div class="handle h-se"></div></div>
+            <div class="focusdot"></div>
+          </div>
+        </div>
+        <div class="readout" id="ro-${s.slug}"></div>
+        <div class="btns">
+          <button data-act="reset" data-slug="${s.slug}">Reset crop</button>
+        </div>
+      </div>
+      <div class="col">
+        ${s.clip?`<video src="${s.clip}" controls loop muted playsinline></video>`:`<div class="noclip">— no clip (dynamic-cam fallback) —</div>`}
+        <div>
+          <label class="chk"><input type="checkbox" data-flag="redo_anim" data-slug="${s.slug}"> ⟳ redo animation</label>
+          <label class="chk"><input type="checkbox" data-flag="redo_still" data-slug="${s.slug}"> ⟳ redo still</label>
+        </div>
+        <textarea class="notes" data-slug="${s.slug}" placeholder="notes for this scene (what's wrong / how to fix)"></textarea>
+      </div>`;
+    app.appendChild(card);
+    drawBox(s.slug); readout(s.slug);
+  });
+  wire();
+}
+function drawBox(slug){
+  const wrap=document.querySelector(`.cropwrap[data-slug="${slug}"]`); if(!wrap)return;
+  const k=state[slug].keep, f=state[slug].focus;
+  const box=wrap.querySelector('.keepbox'), dot=wrap.querySelector('.focusdot');
+  box.style.left=(k[0]*100)+'%'; box.style.top=(k[1]*100)+'%';
+  box.style.width=((k[2]-k[0])*100)+'%'; box.style.height=((k[3]-k[1])*100)+'%';
+  dot.style.left=(f[0]*100)+'%'; dot.style.top=(f[1]*100)+'%';
+}
+function readout(slug){ const st=state[slug];
+  document.getElementById('ro-'+slug).textContent = `keep [${fmt(st.keep)}]   focus [${fmt(st.focus)}]`; }
+
+const r2=v=>+v.toFixed(3);
+let active=null;   // {slug, kind:'move'|'nw'|'se'|'focus', ox, oy}
+function relTo(slug,e){ const wrap=document.querySelector(`.cropwrap[data-slug="${slug}"]`); const r=wrap.getBoundingClientRect();
+  return [Math.min(1,Math.max(0,(e.clientX-r.left)/r.width)), Math.min(1,Math.max(0,(e.clientY-r.top)/r.height))]; }
+function wire(){
+  document.querySelectorAll('.btns button').forEach(b=>b.onclick=()=>{
+    const slug=b.dataset.slug;
+    state[slug].keep=state[slug].orig_keep.slice(); state[slug].focus=state[slug].orig_focus.slice(); drawBox(slug); readout(slug);
+  });
+  document.querySelectorAll('input[data-flag]').forEach(c=>c.onchange=()=>{ state[c.dataset.slug][c.dataset.flag]=c.checked; });
+  document.querySelectorAll('textarea.notes').forEach(t=>t.oninput=()=>{ state[t.dataset.slug].notes=t.value; });
+  document.querySelectorAll('.cropwrap').forEach(wrap=>{
+    const slug=wrap.dataset.slug;
+    const box=wrap.querySelector('.keepbox'), dot=wrap.querySelector('.focusdot');
+    box.addEventListener('mousedown',e=>{ if(e.target.classList.contains('handle'))return; e.preventDefault();
+      const [x,y]=relTo(slug,e); const k=state[slug].keep; active={slug,kind:'move',ox:x-k[0],oy:y-k[1]}; });
+    wrap.querySelector('.h-nw').addEventListener('mousedown',e=>{ e.preventDefault(); active={slug,kind:'nw'}; });
+    wrap.querySelector('.h-se').addEventListener('mousedown',e=>{ e.preventDefault(); active={slug,kind:'se'}; });
+    dot.addEventListener('mousedown',e=>{ e.preventDefault(); active={slug,kind:'focus'}; });
+  });
+  document.addEventListener('mousemove',e=>{
+    if(!active)return; const st=state[active.slug]; const [x,y]=relTo(active.slug,e); let k=st.keep;
+    if(active.kind==='focus'){ st.focus=[r2(x),r2(y)]; }
+    else if(active.kind==='move'){ const w=k[2]-k[0],h=k[3]-k[1]; let nx=Math.min(1-w,Math.max(0,x-active.ox)), ny=Math.min(1-h,Math.max(0,y-active.oy)); st.keep=[r2(nx),r2(ny),r2(nx+w),r2(ny+h)]; }
+    else if(active.kind==='nw'){ st.keep=[r2(Math.min(x,k[2]-0.05)),r2(Math.min(y,k[3]-0.05)),k[2],k[3]]; }
+    else if(active.kind==='se'){ st.keep=[k[0],k[1],r2(Math.max(x,k[0]+0.05)),r2(Math.max(y,k[1]+0.05))]; }
+    drawBox(active.slug); readout(active.slug);
+  });
+  document.addEventListener('mouseup',()=>{ active=null; });
+}
+function exportAll(){
+  const changed=[];
+  SCENES.forEach(s=>{ const st=state[s.slug];
+    const cropMoved = JSON.stringify(st.keep)!==JSON.stringify(st.orig_keep) || JSON.stringify(st.focus)!==JSON.stringify(st.orig_focus);
+    if(cropMoved||st.redo_anim||st.redo_still||st.notes.trim()){
+      changed.push({slug:s.slug, redo_animation:st.redo_anim, redo_still:st.redo_still,
+        new_keep: cropMoved?st.keep:undefined, new_focus: cropMoved?st.focus:undefined, notes:st.notes.trim()||undefined});
+    }});
+  const txt = "TODAY_PARADISE REVIEW FEEDBACK\n" + JSON.stringify(changed,null,2);
+  document.getElementById('outtext').value = txt;
+  document.getElementById('out').style.display='flex';
+}
+function copyOut(){ const t=document.getElementById('outtext'); t.select(); document.execCommand('copy'); }
+render();
+</script></body></html>

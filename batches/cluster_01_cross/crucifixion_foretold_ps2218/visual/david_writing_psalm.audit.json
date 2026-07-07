@@ -1,0 +1,14 @@
+{
+  "image": "david_writing_psalm.png",
+  "verdict": "PASS",
+  "flags": [
+    "Celtic harp->ancient lyre",
+    "medieval crown->bare head",
+    "codex->scroll",
+    "candle->clay saucer oil lamp",
+    "no coins",
+    "RESIDUAL feather quill (should be reed pen) - model quill-bias, minor"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

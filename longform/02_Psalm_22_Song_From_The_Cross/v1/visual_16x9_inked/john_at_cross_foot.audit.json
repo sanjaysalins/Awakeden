@@ -1,0 +1,10 @@
+{
+  "image": "john_at_cross_foot.png",
+  "verdict": "PASS",
+  "flags": [
+    "eye-audited 2026-07-05 cut sweep",
+    "redo (defect fixed)"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

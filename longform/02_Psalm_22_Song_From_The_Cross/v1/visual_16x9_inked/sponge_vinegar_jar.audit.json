@@ -1,0 +1,10 @@
+{
+  "image": "sponge_vinegar_jar.png",
+  "verdict": "PASS",
+  "flags": [
+    "audited 2026-07-05",
+    "clean (not in current cut)"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

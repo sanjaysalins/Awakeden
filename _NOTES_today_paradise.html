@@ -1,0 +1,38 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Notes — today_paradise stills</title>
+<style>
+ body{background:#0f0f11;color:#eee;font-family:system-ui,Arial,sans-serif;margin:0;padding:18px 22px 96px}
+ h1{font-size:20px;margin:0 0 4px} .sub{color:#9aa;font-size:13px;margin-bottom:16px}
+ .card{background:#191920;border:1px solid #333;border-radius:12px;padding:14px;margin:0 0 16px;display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start}
+ .card.hasnote{border-color:#f5c451}
+ .slug{font-family:monospace;color:#7ec8ff;font-size:15px;margin-bottom:6px}
+ img{width:360px;max-width:100%;border-radius:6px;display:block;background:#000}
+ .right{flex:1;min-width:280px}
+ textarea{width:100%;box-sizing:border-box;height:150px;background:#111;color:#eee;border:1px solid #444;border-radius:8px;padding:10px;font-size:15px;line-height:1.4}
+ #bar{position:fixed;left:0;right:0;bottom:0;background:#1c1c24;border-top:1px solid #444;padding:12px 22px;display:flex;gap:14px;align-items:center}
+ #bar button{font-size:15px;padding:9px 18px;border-radius:8px;border:none;background:#3a7;color:#fff;cursor:pointer}
+ #out{position:fixed;inset:5%;background:#111;border:1px solid #555;border-radius:10px;padding:16px;display:none;z-index:9;flex-direction:column}
+ #out textarea{flex:1;height:auto;background:#0a0a0a;color:#8f8;font-family:monospace;font-size:13px}
+ #out .row{display:flex;gap:10px;margin-top:10px} #out button{font-size:15px;padding:9px 18px;border-radius:8px;border:none;cursor:pointer}
+</style></head><body>
+<h1>Notes — today_paradise stills</h1>
+<div class="sub">Type notes under any still (leave the rest blank). Then hit <b>Export notes</b> at the bottom, Copy, and paste back to me.</div>
+<div id="app"></div>
+<div id="bar"><button onclick="ex()">⬇ Export notes</button><span class="sub" style="margin:0">only stills you write notes on are exported</span></div>
+<div id="out"><b>Paste this back to me:</b><textarea id="ot" readonly></textarea>
+<div class="row"><button style="background:#3a7;color:#fff" onclick="cp()">Copy</button>
+<button style="background:#555;color:#fff" onclick="document.getElementById('out').style.display='none'">Close</button></div></div>
+<script>
+const S=[{"slug": "answer_light_profile", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/answer_light_profile.png"}, {"slug": "confession_face_hands", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/confession_face_hands.png"}, {"slug": "crowd_mocking", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/crowd_mocking.png"}, {"slug": "golgotha_hill_wide", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/golgotha_hill_wide.png"}, {"slug": "jesus_turns_to_thief", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/jesus_turns_to_thief.png"}, {"slug": "kingdom_light_clouds", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/kingdom_light_clouds.png"}, {"slug": "mocker_thief_face", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/mocker_thief_face.png"}, {"slug": "nail_through_hand", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/nail_through_hand.png"}, {"slug": "paradise_dawn", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/paradise_dawn.png"}, {"slug": "penitent_thief_face", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/penitent_thief_face.png"}, {"slug": "risen_mercy_hand", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/risen_mercy_hand.png"}, {"slug": "thief_looks_to_jesus", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/thief_looks_to_jesus.png"}, {"slug": "two_thieves_wide", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/two_thieves_wide.png"}, {"slug": "us_under_cross_shadow", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/us_under_cross_shadow.png"}]; const notes={};
+const app=document.getElementById('app');
+S.forEach(s=>{notes[s.slug]="";
+ const c=document.createElement('div');c.className='card';c.id='c-'+s.slug;
+ c.innerHTML=`<img src="${s.png}"><div class="right"><div class="slug">${s.slug}</div>
+  <textarea data-s="${s.slug}" placeholder="notes for ${s.slug} — what's wrong / how to fix"></textarea></div>`;
+ app.appendChild(c);});
+document.querySelectorAll('textarea[data-s]').forEach(t=>t.oninput=()=>{
+ notes[t.dataset.s]=t.value; document.getElementById('c-'+t.dataset.s).className='card'+(t.value.trim()?' hasnote':'');});
+function ex(){const o=S.map(s=>({slug:s.slug,notes:notes[s.slug].trim()})).filter(x=>x.notes);
+ document.getElementById('ot').value="TODAY_PARADISE STILL NOTES\n"+JSON.stringify(o,null,2);
+ document.getElementById('out').style.display='flex';}
+function cp(){const t=document.getElementById('ot');t.select();document.execCommand('copy');}
+</script></body></html>

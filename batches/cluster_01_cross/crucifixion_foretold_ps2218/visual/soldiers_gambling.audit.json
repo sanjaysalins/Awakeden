@@ -1,0 +1,12 @@
+{
+  "image": "soldiers_gambling.png",
+  "verdict": "PASS",
+  "flags": [
+    "lot-STONES not dog-bones",
+    "no coins",
+    "soldiers + robe",
+    "inked"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

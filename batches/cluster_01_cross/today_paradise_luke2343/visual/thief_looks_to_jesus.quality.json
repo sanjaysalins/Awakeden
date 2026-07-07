@@ -1,0 +1,14 @@
+{
+  "slug": "thief_looks_to_jesus",
+  "hash": "6662dff3571db8c0",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true
+  },
+  "notes": "ROPED wrists+feet, head lifted to Christ, clean ground. Indep-review PASS + eye.",
+  "reviewer": "in-chat-agent"
+}

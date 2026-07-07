@@ -1,0 +1,11 @@
+{
+  "image": "david_old_deathbed.png",
+  "verdict": "PASS",
+  "flags": [
+    "eye-audited 2026-07-05 LF redo v2",
+    "coin fix + tweaks",
+    "clean"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

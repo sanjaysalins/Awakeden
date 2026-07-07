@@ -1,0 +1,11 @@
+{
+  "image": "prophet_scroll.png",
+  "verdict": "PASS",
+  "flags": [
+    "gibberish scroll->blank scroll",
+    "lamb + prophet + clay lamp",
+    "inked"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

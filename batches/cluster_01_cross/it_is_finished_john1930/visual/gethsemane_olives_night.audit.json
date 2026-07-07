@@ -1,0 +1,12 @@
+{
+  "image": "gethsemane_olives_night.png",
+  "verdict": "PASS",
+  "flags": [
+    "UPRIGHT normal view (was tilted)",
+    "Greek temple gone -> stone wall + houses",
+    "border cropped",
+    "inked"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

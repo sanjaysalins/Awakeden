@@ -1,0 +1,12 @@
+{
+  "image": "spear_thrust_up.png",
+  "verdict": "PASS",
+  "flags": [
+    "CRIT: impossible praying-hands limb -> arms outstretched on beam",
+    "spear now pierces His SIDE w/ blood+water (was floating past head)",
+    "face matches anchor",
+    "inked"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

@@ -1,0 +1,14 @@
+{
+  "slug": "paradise_dawn",
+  "hash": "69a5aa07d26f0f18",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true
+  },
+  "notes": "garden hilltop in dawn light, clean",
+  "reviewer": "in-chat-agent"
+}

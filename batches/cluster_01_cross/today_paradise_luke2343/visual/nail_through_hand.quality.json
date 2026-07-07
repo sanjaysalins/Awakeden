@@ -1,0 +1,14 @@
+{
+  "slug": "nail_through_hand",
+  "hash": "9321abd2d5b0e979",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true
+  },
+  "notes": "v2 locked-formula prompt: whole scene + camera + all-connected chain + focus/retention; face visible, hand nailed to beam in full context.",
+  "reviewer": "in-chat-agent"
+}

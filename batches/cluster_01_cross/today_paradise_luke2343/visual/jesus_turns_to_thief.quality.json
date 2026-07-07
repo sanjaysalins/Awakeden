@@ -1,0 +1,14 @@
+{
+  "slug": "jesus_turns_to_thief",
+  "hash": "f16d50da0874bbee",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true
+  },
+  "notes": "Christ face turned in compassion, clean",
+  "reviewer": "in-chat-agent"
+}

@@ -1,0 +1,719 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Psalm 22 long — redo notes</title>
+<style>
+ body{background:#14120e;color:#f0ece3;font-family:system-ui,Arial;margin:0;padding:0 20px 60px}
+ .bar{position:sticky;top:0;background:#14120e;padding:16px 0;z-index:9;border-bottom:1px solid #3a352b}
+ h1{font-size:22px;margin:0 0 6px}
+ .hint{color:#b9ab8c;font-size:14px;margin:0 0 10px;line-height:1.5}
+ .btn{font-size:16px;font-weight:700;padding:10px 18px;border-radius:8px;border:0;cursor:pointer;background:#2f6b34;color:#fff;margin-right:8px}
+ .btn.r{background:#c6472e} .btn.b{background:#37507a}
+ .count{margin-left:6px;color:#ffd86b;font-weight:700}
+ .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:18px;margin-top:18px}
+ .card{background:#211d16;border-radius:10px;overflow:hidden;border:1px solid #33301f}
+ .card.flagged{border-color:#c6472e;box-shadow:0 0 0 2px #c6472e55}
+ .card img{width:100%;display:block;cursor:zoom-in}
+ .meta{padding:10px 12px}
+ .slug{font-weight:700;font-size:15px}
+ .times{color:#9b8f74;font-size:12.5px;margin:2px 0 8px}
+ .chk{display:inline-block;font-size:13px;font-weight:600;margin-right:14px;cursor:pointer;user-select:none}
+ .chk input{transform:scale(1.3);margin-right:5px;vertical-align:middle}
+ textarea.note{width:100%;box-sizing:border-box;margin-top:8px;min-height:52px;background:#171410;color:#f0ece3;border:1px solid #44402f;border-radius:6px;padding:7px;font-size:14px;font-family:inherit;resize:vertical}
+ dialog{border:1px solid #44402f;background:#0c0b08;color:#f0ece3;padding:16px;max-width:92vw;width:680px;border-radius:10px}
+ dialog textarea{width:100%;box-sizing:border-box;height:300px;background:#171410;color:#f0ece3;border:1px solid #44402f;border-radius:6px;padding:9px;font-size:14px;font-family:monospace}
+ dialog#zoom{width:auto;padding:0;background:#000} dialog#zoom img{max-width:94vw;max-height:92vh;display:block}
+ .x{float:right;font-size:24px;cursor:pointer;color:#fff}
+</style></head><body>
+<div class="bar">
+ <h1>Psalm 22 long-form — redo review (79 stills)</h1>
+ <p class="hint">Tick <b>redo STILL</b> / <b>redo ANIMATION</b> on any card and type what's wrong. Click a picture to zoom. Notes auto-save. When done click <b>💾 Save notes to file</b> — it downloads <b>ps22_redo_notes.txt</b> to your Downloads folder and I'll read it straight from there.</p>
+ <button class="btn" onclick="saveFile()">💾 Save notes to file</button>
+ <button class="btn b" onclick="showText()">👁 Show / copy notes</button>
+ <button class="btn r" onclick="scrollFlagged()">▼ jump to flagged</button>
+ <span class="count" id="count"></span>
+</div>
+<div class="grid"><div class="card" data-slug="crane_cross_soldiers">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/crane_cross_soldiers.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">crane_cross_soldiers</div>
+        <div class="times">appears @ 0s, 38s &nbsp;·&nbsp; beat 1, 10</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="pierced_hands_feet">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/pierced_hands_feet.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">pierced_hands_feet</div>
+        <div class="times">appears @ 0s, 122s &nbsp;·&nbsp; beat 1, 31</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="storm_over_jerusalem">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/storm_over_jerusalem.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">storm_over_jerusalem</div>
+        <div class="times">appears @ 4s, 59s &nbsp;·&nbsp; beat 2, 15</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="cry_ninth_hour">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/cry_ninth_hour.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">cry_ninth_hour</div>
+        <div class="times">appears @ 8s, 324s &nbsp;·&nbsp; beat 3, 77</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="face_anguish_closeup">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/face_anguish_closeup.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">face_anguish_closeup</div>
+        <div class="times">appears @ 12s, 258s &nbsp;·&nbsp; beat 4, 62</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="first_century_reader">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/first_century_reader.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">first_century_reader</div>
+        <div class="times">appears @ 17s, 171s &nbsp;·&nbsp; beat 5, 42</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="disputed_word_marks">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/disputed_word_marks.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">disputed_word_marks</div>
+        <div class="times">appears @ 17s, 140s &nbsp;·&nbsp; beat 5, 35</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="scribe_over_manuscripts">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/scribe_over_manuscripts.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">scribe_over_manuscripts</div>
+        <div class="times">appears @ 20s, 92s &nbsp;·&nbsp; beat 6, 24</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="two_scrolls_compared">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/two_scrolls_compared.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">two_scrolls_compared</div>
+        <div class="times">appears @ 20s, 314s &nbsp;·&nbsp; beat 6, 75</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="david_old_deathbed">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/david_old_deathbed.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">david_old_deathbed</div>
+        <div class="times">appears @ 25s, 82s &nbsp;·&nbsp; beat 7, 21</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="convergence_on_cross">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/convergence_on_cross.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">convergence_on_cross</div>
+        <div class="times">appears @ 28s, 364s &nbsp;·&nbsp; beat 8, 86</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="pierced_feet">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/pierced_feet.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">pierced_feet</div>
+        <div class="times">appears @ 35s, 126s &nbsp;·&nbsp; beat 9, 32</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="poured_out_bones">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/poured_out_bones.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">poured_out_bones</div>
+        <div class="times">appears @ 35s, 107s &nbsp;·&nbsp; beat 9, 28</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="mockers_wag_heads">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/mockers_wag_heads.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">mockers_wag_heads</div>
+        <div class="times">appears @ 35s, 71s &nbsp;·&nbsp; beat 9, 18</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="lots_dice_closeup">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/lots_dice_closeup.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">lots_dice_closeup</div>
+        <div class="times">appears @ 35s, 149s &nbsp;·&nbsp; beat 9, 37</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="cross_hill_pullback">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/cross_hill_pullback.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">cross_hill_pullback</div>
+        <div class="times">appears @ 41s, 234s &nbsp;·&nbsp; beat 11, 57</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="david_psalmist">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/david_psalmist.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">david_psalmist</div>
+        <div class="times">appears @ 45s, 355s &nbsp;·&nbsp; beat 12, 84</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="david_scroll_sealed">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/david_scroll_sealed.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">david_scroll_sealed</div>
+        <div class="times">appears @ 45s, 314s &nbsp;·&nbsp; beat 12, 75</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="worm_reproach">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/worm_reproach.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">worm_reproach</div>
+        <div class="times">appears @ 48s, 198s &nbsp;·&nbsp; beat 13, 48</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="execution_stakes_field">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/execution_stakes_field.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">execution_stakes_field</div>
+        <div class="times">appears @ 54s &nbsp;·&nbsp; beat 14</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="roman_nails_pouch">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/roman_nails_pouch.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">roman_nails_pouch</div>
+        <div class="times">appears @ 59s, 129s &nbsp;·&nbsp; beat 15, 33</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="hung_by_arms">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/hung_by_arms.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">hung_by_arms</div>
+        <div class="times">appears @ 59s, 102s &nbsp;·&nbsp; beat 15, 27</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="garment_tug">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/garment_tug.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">garment_tug</div>
+        <div class="times">appears @ 59s, 143s &nbsp;·&nbsp; beat 15, 36</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="mocker_faces_trio">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/mocker_faces_trio.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">mocker_faces_trio</div>
+        <div class="times">appears @ 63s &nbsp;·&nbsp; beat 16</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="worm_lowest">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/worm_lowest.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">worm_lowest</div>
+        <div class="times">appears @ 66s &nbsp;·&nbsp; beat 17</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="spit_shout_macro">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/spit_shout_macro.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">spit_shout_macro</div>
+        <div class="times">appears @ 75s, 274s &nbsp;·&nbsp; beat 19, 65</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="mockers_below_cross_low">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/mockers_below_cross_low.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">mockers_below_cross_low</div>
+        <div class="times">appears @ 77s &nbsp;·&nbsp; beat 20</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="old_king_hands_rings">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/old_king_hands_rings.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">old_king_hands_rings</div>
+        <div class="times">appears @ 82s, 359s &nbsp;·&nbsp; beat 21, 85</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="shepherd_boy_sling">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/shepherd_boy_sling.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">shepherd_boy_sling</div>
+        <div class="times">appears @ 85s &nbsp;·&nbsp; beat 22</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="war_helmet_spear_rest">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/war_helmet_spear_rest.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">war_helmet_spear_rest</div>
+        <div class="times">appears @ 85s &nbsp;·&nbsp; beat 22</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="scholars_debate_two">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/scholars_debate_two.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">scholars_debate_two</div>
+        <div class="times">appears @ 89s, 193s &nbsp;·&nbsp; beat 23, 47</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="water_spilled_stone">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/water_spilled_stone.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">water_spilled_stone</div>
+        <div class="times">appears @ 95s, 223s &nbsp;·&nbsp; beat 25, 54</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="seventy_scribes_lamps">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/seventy_scribes_lamps.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">seventy_scribes_lamps</div>
+        <div class="times">appears @ 95s, 226s &nbsp;·&nbsp; beat 25, 55</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="golgotha_three_crosses_ridge">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/golgotha_three_crosses_ridge.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">golgotha_three_crosses_ridge</div>
+        <div class="times">appears @ 98s, 282s &nbsp;·&nbsp; beat 26, 67</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="cry_face_tears">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/cry_face_tears.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">cry_face_tears</div>
+        <div class="times">appears @ 111s, 258s &nbsp;·&nbsp; beat 29, 62</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="thirst_dust">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/thirst_dust.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">thirst_dust</div>
+        <div class="times">appears @ 116s &nbsp;·&nbsp; beat 30</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="jerusalem_night_lyre">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/jerusalem_night_lyre.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">jerusalem_night_lyre</div>
+        <div class="times">appears @ 129s, 238s &nbsp;·&nbsp; beat 33, 58</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="wrists_bound_beam_macro">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/wrists_bound_beam_macro.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">wrists_bound_beam_macro</div>
+        <div class="times">appears @ 134s, 264s &nbsp;·&nbsp; beat 34, 63</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="lion_shadow_wall">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/lion_shadow_wall.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">lion_shadow_wall</div>
+        <div class="times">appears @ 140s, 188s &nbsp;·&nbsp; beat 35, 46</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="john_at_cross_foot">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/john_at_cross_foot.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">john_at_cross_foot</div>
+        <div class="times">appears @ 152s, 270s &nbsp;·&nbsp; beat 38, 64</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="hill_crowd_watching_storm">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/hill_crowd_watching_storm.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">hill_crowd_watching_storm</div>
+        <div class="times">appears @ 154s, 274s &nbsp;·&nbsp; beat 39, 65</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="dice_cup_shadow">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/dice_cup_shadow.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">dice_cup_shadow</div>
+        <div class="times">appears @ 161s, 264s &nbsp;·&nbsp; beat 40, 63</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="scholar_hand_on_text">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/scholar_hand_on_text.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">scholar_hand_on_text</div>
+        <div class="times">appears @ 166s, 223s &nbsp;·&nbsp; beat 41, 54</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="dogs_encompass">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/dogs_encompass.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">dogs_encompass</div>
+        <div class="times">appears @ 176s &nbsp;·&nbsp; beat 43</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="hebrew_scroll_edge_light">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/hebrew_scroll_edge_light.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">hebrew_scroll_edge_light</div>
+        <div class="times">appears @ 179s &nbsp;·&nbsp; beat 44</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="lion_gape">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/lion_gape.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">lion_gape</div>
+        <div class="times">appears @ 184s &nbsp;·&nbsp; beat 45</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="quill_ink_drop">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/quill_ink_drop.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">quill_ink_drop</div>
+        <div class="times">appears @ 193s &nbsp;·&nbsp; beat 47</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="ribs_stretched_macro">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/ribs_stretched_macro.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">ribs_stretched_macro</div>
+        <div class="times">appears @ 198s, 230s &nbsp;·&nbsp; beat 48, 56</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="clay_potsherd_dust">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clay_potsherd_dust.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">clay_potsherd_dust</div>
+        <div class="times">appears @ 202s, 306s &nbsp;·&nbsp; beat 49, 73</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="vesture_seamless_folded">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/vesture_seamless_folded.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">vesture_seamless_folded</div>
+        <div class="times">appears @ 202s, 270s &nbsp;·&nbsp; beat 49, 64</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="david_hands_lyre">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/david_hands_lyre.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">david_hands_lyre</div>
+        <div class="times">appears @ 206s, 244s &nbsp;·&nbsp; beat 50, 59</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="roads_converge_valley">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/roads_converge_valley.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">roads_converge_valley</div>
+        <div class="times">appears @ 210s, 364s &nbsp;·&nbsp; beat 51, 86</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="alexandria_harbor_night">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/alexandria_harbor_night.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">alexandria_harbor_night</div>
+        <div class="times">appears @ 214s, 247s &nbsp;·&nbsp; beat 52, 60</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="greek_ot_scroll">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/greek_ot_scroll.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">greek_ot_scroll</div>
+        <div class="times">appears @ 219s &nbsp;·&nbsp; beat 53</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="kneeling_at_cross">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/kneeling_at_cross.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">kneeling_at_cross</div>
+        <div class="times">appears @ 234s, 388s &nbsp;·&nbsp; beat 57, 93</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="congregation_hands_lifted">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/congregation_hands_lifted.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">congregation_hands_lifted</div>
+        <div class="times">appears @ 244s, 337s &nbsp;·&nbsp; beat 59, 80</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="synagogue_listeners_lean">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/synagogue_listeners_lean.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">synagogue_listeners_lean</div>
+        <div class="times">appears @ 247s, 287s &nbsp;·&nbsp; beat 60, 68</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="cry_profile_dark">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/cry_profile_dark.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">cry_profile_dark</div>
+        <div class="times">appears @ 251s &nbsp;·&nbsp; beat 61</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="tear_track_macro">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/tear_track_macro.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">tear_track_macro</div>
+        <div class="times">appears @ 279s &nbsp;·&nbsp; beat 66</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="ninth_hour_darkness">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/ninth_hour_darkness.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">ninth_hour_darkness</div>
+        <div class="times">appears @ 282s, 375s &nbsp;·&nbsp; beat 67, 89</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="empty_tomb_open">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/empty_tomb_open.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">empty_tomb_open</div>
+        <div class="times">appears @ 289s, 328s &nbsp;·&nbsp; beat 69, 78</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="the_turn">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/the_turn.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">the_turn</div>
+        <div class="times">appears @ 292s, 386s &nbsp;·&nbsp; beat 70, 92</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="risen_worshipper">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/risen_worshipper.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">risen_worshipper</div>
+        <div class="times">appears @ 296s, 410s &nbsp;·&nbsp; beat 71, 98</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="risen_hands_raised">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/risen_hands_raised.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">risen_hands_raised</div>
+        <div class="times">appears @ 302s, 386s &nbsp;·&nbsp; beat 72, 92</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="kindreds_bowing">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/kindreds_bowing.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">kindreds_bowing</div>
+        <div class="times">appears @ 309s, 396s &nbsp;·&nbsp; beat 74, 95</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="finished_work">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/finished_work.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">finished_work</div>
+        <div class="times">appears @ 319s, 371s &nbsp;·&nbsp; beat 76, 88</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="grave_clothes_folded_macro">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/grave_clothes_folded_macro.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">grave_clothes_folded_macro</div>
+        <div class="times">appears @ 319s, 382s &nbsp;·&nbsp; beat 76, 91</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="risen_hero_come">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/risen_hero_come.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">risen_hero_come</div>
+        <div class="times">appears @ 324s, 416s &nbsp;·&nbsp; beat 77, 99</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="stone_rolled_groove">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/stone_rolled_groove.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">stone_rolled_groove</div>
+        <div class="times">appears @ 328s, 405s &nbsp;·&nbsp; beat 78, 97</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="parting_storm_light">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/parting_storm_light.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">parting_storm_light</div>
+        <div class="times">appears @ 333s, 382s &nbsp;·&nbsp; beat 79, 91</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="ends_of_earth">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/ends_of_earth.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">ends_of_earth</div>
+        <div class="times">appears @ 340s, 396s &nbsp;·&nbsp; beat 81, 95</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="nations_streaming_wide">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/nations_streaming_wide.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">nations_streaming_wide</div>
+        <div class="times">appears @ 346s, 396s &nbsp;·&nbsp; beat 82, 95</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="dawn_empty_cross">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/dawn_empty_cross.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">dawn_empty_cross</div>
+        <div class="times">appears @ 351s &nbsp;·&nbsp; beat 83</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="vinegar_sponge">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/vinegar_sponge.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">vinegar_sponge</div>
+        <div class="times">appears @ 369s &nbsp;·&nbsp; beat 87</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="morning_birds_hill">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/morning_birds_hill.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">morning_birds_hill</div>
+        <div class="times">appears @ 375s, 410s &nbsp;·&nbsp; beat 89, 98</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="substitute_shadow">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/substitute_shadow.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">substitute_shadow</div>
+        <div class="times">appears @ 377s &nbsp;·&nbsp; beat 90</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="hand_reaching_closeup">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/hand_reaching_closeup.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">hand_reaching_closeup</div>
+        <div class="times">appears @ 393s &nbsp;·&nbsp; beat 94</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="ends_of_earth_faces">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/ends_of_earth_faces.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">ends_of_earth_faces</div>
+        <div class="times">appears @ 396s &nbsp;·&nbsp; beat 95</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div><div class="card" data-slug="threshold_open_door">
+      <img src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/threshold_open_door.png" loading="lazy">
+      <div class="meta">
+        <div class="slug">threshold_open_door</div>
+        <div class="times">appears @ 400s &nbsp;·&nbsp; beat 96</div>
+        <label class="chk"><input type="checkbox" class="redoStill"> redo STILL</label>
+        <label class="chk"><input type="checkbox" class="redoAnim"> redo ANIMATION</label>
+        <textarea class="note" placeholder="notes — what's wrong / what to change"></textarea>
+      </div></div></div>
+<dialog id="zoom"><span class="x" onclick="document.getElementById('zoom').close()">✕</span><img id="zoomimg"></dialog>
+<dialog id="txt"><span class="x" onclick="document.getElementById('txt').close()">✕</span>
+ <p style="margin:0 0 8px">Press <b>Ctrl+C</b> to copy (text is already selected), or use 💾 Save notes to file.</p>
+ <textarea id="txtarea" readonly></textarea></dialog>
+<script>
+const KEY="ps22_redo_notes_v1";
+const store=JSON.parse(localStorage.getItem(KEY)||"{}");
+function save(){
+  const o={};
+  document.querySelectorAll(".card").forEach(c=>{
+    const s=c.dataset.slug, n=c.querySelector(".note").value.trim(),
+      st=c.querySelector(".redoStill").checked, an=c.querySelector(".redoAnim").checked;
+    if(n||st||an) o[s]={n,st,an};
+    c.classList.toggle("flagged", !!(n||st||an));
+  });
+  localStorage.setItem(KEY, JSON.stringify(o));
+  const k=Object.keys(o).length;
+  document.getElementById("count").textContent = k? k+" flagged" : "";
+}
+document.querySelectorAll(".card").forEach(c=>{
+  const s=c.dataset.slug, d=store[s];
+  if(d){ c.querySelector(".note").value=d.n||""; c.querySelector(".redoStill").checked=!!d.st; c.querySelector(".redoAnim").checked=!!d.an; }
+  c.querySelectorAll("input,textarea").forEach(el=>el.addEventListener("input",save));
+  c.querySelector("img").addEventListener("click",()=>{document.getElementById("zoomimg").src=c.querySelector("img").src;document.getElementById("zoom").showModal();});
+});
+save();
+function buildText(){
+  const lines=["REDO NOTES - Psalm 22 long-form",""];
+  document.querySelectorAll(".card").forEach(c=>{
+    const s=c.dataset.slug, n=c.querySelector(".note").value.trim(),
+      st=c.querySelector(".redoStill").checked, an=c.querySelector(".redoAnim").checked;
+    if(!(n||st||an)) return;
+    const tag = st&&an?"STILL+ANIM":st?"STILL":an?"ANIM":"NOTE";
+    lines.push("["+tag+"] "+s+" - "+(n||"(no note)"));
+  });
+  return lines.length>2 ? lines.join("
+") : "";
+}
+function saveFile(){
+  const t=buildText();
+  if(!t){alert("Nothing flagged yet - tick a box or type a note first.");return;}
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(new Blob([t],{type:"text/plain"}));
+  a.download="ps22_redo_notes.txt"; document.body.appendChild(a); a.click(); a.remove();
+}
+function showText(){
+  const t=buildText();
+  if(!t){alert("Nothing flagged yet.");return;}
+  const ta=document.getElementById("txtarea"); ta.value=t;
+  document.getElementById("txt").showModal(); ta.focus(); ta.select();
+  try{document.execCommand("copy");}catch(e){}
+}
+function scrollFlagged(){const f=document.querySelector(".card.flagged"); if(f) f.scrollIntoView({behavior:"smooth",block:"center"}); else alert("Nothing flagged yet.");}
+</script></body></html>

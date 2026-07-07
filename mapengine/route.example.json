@@ -1,0 +1,14 @@
+{
+  "_note": "Exodus waypoints. Coords are normalized fractions of the base map (x=0 left..1 right, y=0 top..1 bottom), read by eye off base_map.png (5120x2880). label_dx/dy nudge the text off the pin, also normalized.",
+  "title": "THE EXODUS",
+  "subtitle": "from Egypt  to  the Promised Land",
+  "config": { "caravan_scale": 1.5 },
+  "waypoints": [
+    { "name": "RAMESES",        "x": 0.300, "y": 0.820, "label_dx":  0.000, "label_dy":  0.055 },
+    { "name": "RED SEA CROSSING","x": 0.600, "y": 0.720, "label_dx":  0.000, "label_dy": -0.055,
+      "sea_parting": { "cx": 0.645, "cy": 0.790, "length": 0.40, "gap": 0.045 } },
+    { "name": "MOUNT SINAI",     "x": 0.665, "y": 0.830, "label_dx":  0.010, "label_dy":  0.055 },
+    { "name": "KADESH-BARNEA",   "x": 0.690, "y": 0.410, "label_dx":  0.020, "label_dy":  0.050 },
+    { "name": "CANAAN",          "x": 0.760, "y": 0.300, "label_dx":  0.030, "label_dy":  0.000 }
+  ]
+}

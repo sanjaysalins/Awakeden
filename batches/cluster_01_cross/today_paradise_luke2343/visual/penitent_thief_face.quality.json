@@ -1,0 +1,14 @@
+{
+  "slug": "penitent_thief_face",
+  "hash": "a868b26125cdeb14",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true
+  },
+  "notes": "ROPED wrist (no wound/blob), nose fine, bowed. Indep-review PASS + eye.",
+  "reviewer": "in-chat-agent"
+}

@@ -447,19 +447,22 @@ def verify_image(scene: Scene, png_bytes: bytes) -> ImageAudit:
     the scene's required visible_elements? Any banned tokens visible?
 
     If the Anthropic API is unavailable (notably an account USAGE CAP), do NOT
-    crash the whole render — log it and return a SKIPPED audit flagged for human
-    review, so HF renders still complete. The image is marked needs-review, not
-    silently passed-clean."""
+    crash the whole render — log it and return a NEEDS-EYE audit (passed=False),
+    so HF renders still complete but the image is NOT counted clean. FAIL-CLOSED:
+    an audit we could not run must never pass. The real audit then happens via the
+    render_lint vision-Agent gate (ship_gate.py --check) before the piece ships."""
     try:
         data = _vision_call(scene, png_bytes)
         return ImageAudit.from_json(data)
     except Exception as e:
         msg = str(e)
         if "usage limit" in msg.lower() or "usage limits" in msg.lower() or "regain access" in msg.lower():
-            print(f"        ! Vision audit SKIPPED (Anthropic usage cap) — review {scene.filename_stem} by eye")
+            print(f"        ! Vision audit UNAVAILABLE (Anthropic usage cap) — {scene.filename_stem} marked NEEDS-EYE (NOT passed)")
             return ImageAudit(
-                passed=True,
-                issues=[{"claim": "AUDIT SKIPPED", "actual": "Anthropic API usage cap — verify this image by eye"}],
+                passed=False,  # FAIL-CLOSED: a check we couldn't run is not a pass
+                issues=[{"claim": "AUDIT_SKIPPED_NEEDS_EYE",
+                         "actual": "Anthropic vision API unavailable — audit this image via the "
+                                   "render_lint vision-Agent gate (ship_gate.py --check) before it ships"}],
                 banned_token_hits=[],
             )
         raise
@@ -561,6 +564,11 @@ def render_scene(
         last_audit = audit
         if audit.passed:
             log(f"        audit PASS")
+            return png_path, audit
+        # Vision API unavailable -> NEEDS-EYE: keep the render but don't burn a retry
+        # on a check we can't run; the render_lint gate audits it before ship.
+        if any("AUDIT_SKIPPED" in (i.get("claim") or "") for i in audit.issues):
+            log(f"        audit UNAVAILABLE -> {stem} marked NEEDS-EYE; gate via ship_gate.py --check before ship")
             return png_path, audit
         feedback = _audit_feedback_text(audit)
         log(f"        audit FAIL — {feedback or 'no specific feedback'}")

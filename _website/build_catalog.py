@@ -764,6 +764,7 @@ def main() -> int:
         "brand": config["brand"],
         "social": config.get("social", {}),
         "launch": config.get("launch", {}),
+        "series": manifest.get("series", []),
         "clusters": manifest.get("clusters", {}),
         "roadmap": manifest.get("roadmap", []),
         "items": public_items,

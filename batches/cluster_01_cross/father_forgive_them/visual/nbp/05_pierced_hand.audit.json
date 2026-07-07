@@ -1,0 +1,10 @@
+{
+  "image": "05_pierced_hand.png",
+  "verdict": "PASS",
+  "flags": [
+    "tan sports-tape wrap removed -> open hand with pierced wound",
+    "face-ref consistent"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

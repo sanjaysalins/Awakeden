@@ -1,0 +1,9 @@
+{
+  "image": "thirty_coins_scatter.png",
+  "verdict": "PASS",
+  "flags": [
+    "Batman/portrait/gibberish coins -> smooth blank silver discs"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

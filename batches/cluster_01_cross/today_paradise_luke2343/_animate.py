@@ -22,7 +22,7 @@ INK_BASE = ("A finished inked graphic-novel comic panel — flat printed art wit
 MOTION = {
     "mocker_thief_face":    "ONE slow, steady, continuous push-in toward the shouting man's twisted face",
     "penitent_thief_face":  "ONE slow, steady, continuous push-in toward the bound man's tearful turned face",
-    "thief_looks_to_jesus": "ONE slow, steady, continuous push-in past the man's shoulder toward the far cross",
+    "thief_looks_to_jesus": "ONE slow, steady, continuous push-in toward the penitent thief on his cross, drifting toward the distant cross of Christ beyond",
     "jesus_turns_to_thief": "ONE slow, steady, continuous push-in toward the thorn-crowned face turned in compassion",
     "paradise_dawn":        "ONE slow, steady, continuous push-in up the garden path toward the figure in the dawn light",
     "two_thieves_wide":     "ONE slow, steady, continuous push-in up the hill toward the three crosses against the storm",

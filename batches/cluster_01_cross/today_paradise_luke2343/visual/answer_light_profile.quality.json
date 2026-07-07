@@ -1,0 +1,14 @@
+{
+  "slug": "answer_light_profile",
+  "hash": "3e44abff4086f9c8",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true
+  },
+  "notes": "Christ profile in light, clean",
+  "reviewer": "in-chat-agent"
+}

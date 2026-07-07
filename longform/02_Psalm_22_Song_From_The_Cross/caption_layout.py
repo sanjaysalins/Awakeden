@@ -46,6 +46,7 @@ CORE_FRAC = 0.45                     # core box = this fraction of the keep box,
 # push 1.12); Kling INK camera moves are gentler. Keep AND core boxes are inflated about
 # the panel centre by the source's worst-case factor before any clearance test.
 SRC_SCALE = {"dyncam_arc": 1.32, "dyncam_swoop": 1.40, "dyncam_push": 1.34,
+             "dyncam_tour": 1.34, "dyncam_parallax": 1.30,
              "kling": 1.15, "still": 1.02}
 
 _SLOP = {"—": "-", "–": "-", "―": "-", "‘": "'", "’": "'", "“": '"', "”": '"', "…": "..."}

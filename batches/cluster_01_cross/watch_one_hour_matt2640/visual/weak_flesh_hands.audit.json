@@ -1,0 +1,10 @@
+{
+  "image": "weak_flesh_hands.png",
+  "verdict": "PASS",
+  "flags": [
+    "muddy 6-finger read -> clean 5 fingers per hand",
+    "inked"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

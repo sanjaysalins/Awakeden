@@ -1,0 +1,14 @@
+{
+  "slug": "golgotha_hill_wide",
+  "hash": "9da5750424e46941",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true
+  },
+  "notes": "Christ on cross over the town, clean",
+  "reviewer": "in-chat-agent"
+}

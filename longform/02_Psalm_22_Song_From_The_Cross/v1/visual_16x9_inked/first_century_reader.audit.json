@@ -1,0 +1,11 @@
+{
+  "image": "first_century_reader.png",
+  "verdict": "PASS",
+  "flags": [
+    "eye-audited 2026-07-05 LF redo v3",
+    "minaret/codex fixed",
+    "clean"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

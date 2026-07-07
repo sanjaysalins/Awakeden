@@ -1,0 +1,14 @@
+{
+  "slug": "confession_face_hands",
+  "hash": "510cf696a1e58dbd",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true
+  },
+  "notes": "v3: CORRECT crucifixion pose (arms out along beam, wrists roped at ends), head bowed penitent, bald older, no wound, no drape/fist. Indep-review PASS + eye. Fixed the impossible drape-over-beam pose.",
+  "reviewer": "in-chat-agent"
+}

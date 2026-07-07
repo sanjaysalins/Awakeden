@@ -1,0 +1,10 @@
+{
+  "image": "wrists_bound_beam_macro.png",
+  "verdict": "PASS",
+  "flags": [
+    "eye-audited 2026-07-05 user redo notes",
+    "fixed"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

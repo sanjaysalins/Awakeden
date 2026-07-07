@@ -1,0 +1,12 @@
+{
+  "image": "07b_gospel_wide.png",
+  "verdict": "PASS",
+  "flags": [
+    "blue/purple gem wounds -> pale healed patches",
+    "round stone rolled away",
+    "empty tomb",
+    "inked"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

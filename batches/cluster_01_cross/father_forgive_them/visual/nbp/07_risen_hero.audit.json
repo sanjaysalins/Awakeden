@@ -1,0 +1,11 @@
+{
+  "image": "07_risen_hero.png",
+  "verdict": "PASS",
+  "flags": [
+    "wafer-disc scar -> round healed nail-scar on open hand",
+    "risen",
+    "face-ref"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

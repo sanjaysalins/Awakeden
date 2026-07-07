@@ -1,0 +1,10 @@
+{
+  "image": "two_thieves_wide.png",
+  "verdict": "PASS",
+  "flags": [
+    "guy-wires + corpse-grey removed -> 3 bare crosses, consistent tone",
+    "inked"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

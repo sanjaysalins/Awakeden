@@ -6,8 +6,8 @@
    6.4
   ],
   "slams": 7,
-  "kling_or_punch_or_slam_pct": 100,
-  "tier1_pct": 12,
+  "kling_or_punch_or_slam_pct": 94,
+  "tier1_pct": 6,
   "reuse_violations": [],
   "tier3_or_flagged_beats": [
    4,
@@ -15,6 +15,7 @@
    6,
    9,
    10,
+   11,
    14
   ],
   "standard_3b": {
@@ -65,7 +66,7 @@
     "zechariah_night_scroll"
    ],
    "sources": [
-    "kling"
+    "dyncam"
    ],
    "punch": false,
    "cap": {
@@ -272,14 +273,14 @@
     "prophet_scroll"
    ],
    "sources": [
-    "kling",
+    "dyncam",
     "dyncam"
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "box",
-    "flag": false
+    "tier": 3,
+    "style": "scrim",
+    "flag": true
    }
   },
   {

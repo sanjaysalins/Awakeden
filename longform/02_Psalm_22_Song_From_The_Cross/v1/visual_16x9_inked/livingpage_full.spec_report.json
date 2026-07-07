@@ -9,13 +9,23 @@
    6.3
   ],
   "slams": 69,
-  "kling_or_punch_or_slam_pct": 84,
+  "kling_or_punch_or_slam_pct": 75,
   "tier1_pct": 21,
   "reuse_violations": [],
   "tier3_or_flagged_beats": [
    68,
    85
   ],
+  "standard_3b": {
+   "stills_over_2_uses": {},
+   "stills_fullbleed_twice": {},
+   "fullbleed_beat_pct": 66,
+   "slop_caption_beats": []
+  },
+  "ramps": 0,
+  "whips": 0,
+  "flash_inserts": 0,
+  "cut_ticks": false,
   "beats": 99
  },
  "beats": [
@@ -33,7 +43,7 @@
     "pierced_hands_feet"
    ],
    "sources": [
-    "kling",
+    "dyncam",
     "kling"
    ],
    "punch": false,
@@ -56,7 +66,7 @@
     "storm_over_jerusalem"
    ],
    "sources": [
-    "kling"
+    "dyncam"
    ],
    "punch": true,
    "cap": {
@@ -170,7 +180,7 @@
     "david_old_deathbed"
    ],
    "sources": [
-    "kling"
+    "dyncam"
    ],
    "punch": false,
    "cap": {
@@ -192,7 +202,7 @@
     "convergence_on_cross"
    ],
    "sources": [
-    "kling"
+    "dyncam"
    ],
    "punch": false,
    "cap": {
@@ -217,7 +227,7 @@
     "lots_dice_closeup"
    ],
    "sources": [
-    "kling",
+    "dyncam",
     "kling",
     "kling",
     "kling"
@@ -242,7 +252,7 @@
     "crane_cross_soldiers"
    ],
    "sources": [
-    "kling"
+    "dyncam"
    ],
    "punch": false,
    "cap": {
@@ -359,7 +369,7 @@
    "sources": [
     "dyncam",
     "dyncam",
-    "kling",
+    "dyncam",
     "kling"
    ],
    "punch": true,
@@ -382,7 +392,7 @@
     "mocker_faces_trio"
    ],
    "sources": [
-    "kling"
+    "dyncam"
    ],
    "punch": true,
    "cap": {
@@ -493,7 +503,7 @@
     "old_king_hands_rings"
    ],
    "sources": [
-    "kling",
+    "dyncam",
     "dyncam"
    ],
    "punch": false,
@@ -740,7 +750,7 @@
     "pierced_feet"
    ],
    "sources": [
-    "kling"
+    "dyncam"
    ],
    "punch": true,
    "cap": {
@@ -786,7 +796,7 @@
     "wrists_bound_beam_macro"
    ],
    "sources": [
-    "kling"
+    "dyncam"
    ],
    "punch": false,
    "cap": {
@@ -876,7 +886,7 @@
     "john_at_cross_foot"
    ],
    "sources": [
-    "kling"
+    "dyncam"
    ],
    "punch": false,
    "cap": {
@@ -942,7 +952,7 @@
     "scholar_hand_on_text"
    ],
    "sources": [
-    "kling"
+    "dyncam"
    ],
    "punch": false,
    "cap": {
@@ -1146,7 +1156,7 @@
     "david_hands_lyre"
    ],
    "sources": [
-    "kling"
+    "dyncam"
    ],
    "punch": false,
    "cap": {
@@ -1235,7 +1245,7 @@
     "water_spilled_stone"
    ],
    "sources": [
-    "kling",
+    "dyncam",
     "dyncam"
    ],
    "punch": false,
@@ -1349,7 +1359,7 @@
     "congregation_hands_lifted"
    ],
    "sources": [
-    "kling",
+    "dyncam",
     "dyncam"
    ],
    "punch": false,
@@ -1396,7 +1406,7 @@
     "cry_profile_dark"
    ],
    "sources": [
-    "kling"
+    "dyncam"
    ],
    "punch": false,
    "cap": {
@@ -1443,7 +1453,7 @@
     "dice_cup_shadow"
    ],
    "sources": [
-    "kling",
+    "dyncam",
     "dyncam"
    ],
    "punch": false,
@@ -1468,7 +1478,7 @@
    ],
    "sources": [
     "dyncam",
-    "kling"
+    "dyncam"
    ],
    "punch": false,
    "cap": {
@@ -1692,7 +1702,7 @@
     "kindreds_bowing"
    ],
    "sources": [
-    "kling"
+    "dyncam"
    ],
    "punch": false,
    "cap": {
@@ -1764,7 +1774,7 @@
    ],
    "sources": [
     "kling",
-    "kling"
+    "dyncam"
    ],
    "punch": false,
    "cap": {
@@ -1965,7 +1975,7 @@
     "roads_converge_valley"
    ],
    "sources": [
-    "kling",
+    "dyncam",
     "dyncam"
    ],
    "punch": false,
@@ -2173,7 +2183,7 @@
     "ends_of_earth"
    ],
    "sources": [
-    "kling",
+    "dyncam",
     "kling",
     "dyncam",
     "kling"
@@ -2266,7 +2276,7 @@
     "risen_hero_come"
    ],
    "sources": [
-    "kling"
+    "dyncam"
    ],
    "punch": false,
    "cap": {
