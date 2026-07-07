@@ -1,0 +1,11 @@
+{
+  "image": "coin_on_scroll.png",
+  "verdict": "PASS",
+  "flags": [
+    "candle -> clay lamp",
+    "gibberish scroll -> sealed closed scroll",
+    "blank disc"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

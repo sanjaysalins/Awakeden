@@ -1,0 +1,16 @@
+---
+pid: 30836
+cwd: "C:\Users\sanjay\PycharmProjects\JesusInTheBible"
+command: "Select-String -Path \"C:\\Users\\sanjay\\.grok\\bin\\grok.exe\" -Pattern \"mouseReporting|mouse_reporting|mouseHover\" -Encoding byte -ErrorAction SilentlyContinue; if (-not $?) { [System.IO.File]::ReadAllBytes(\"C:\\Users\\sanjay\\.grok\\bin\\grok.exe\") | ForEach-Object {} }; findstr /C:\"mouseReporting\" /C:\"mouse_reporting\" /C:\"mouse_hover\" \"C:\\Users\\sanjay\\.grok\\bin\\grok.exe\" 2>$null"
+started_at: 2026-07-04T15:29:01.869Z
+running_for_ms: 505002   
+---
+Select-String : Cannot validate argument on parameter 'Encoding'. The argument "byte" does not belong to the set 
+"unicode,utf7,utf8,utf32,ascii,bigendianunicode,default,oem" specified by the ValidateSet attribute. Supply an 
+argument that is in the set and then try the command again.
+At line:1 char:121
++ ... rn "mouseReporting|mouse_reporting|mouseHover" -Encoding byte -ErrorA ...
++                                                              ~~~~
+    + CategoryInfo          : InvalidData: (:) [Select-String], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationError,Microsoft.PowerShell.Commands.SelectStringCommand
+ 

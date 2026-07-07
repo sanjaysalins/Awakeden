@@ -1,0 +1,13 @@
+{
+  "image": "02_jesus_prays.png",
+  "verdict": "PASS",
+  "flags": [
+    "stud-sphere wounds -> torn pierced wounds",
+    "arms on beam",
+    "face lifted in prayer",
+    "face matches anchor",
+    "inked (mild amber eye tint)"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

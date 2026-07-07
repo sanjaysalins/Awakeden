@@ -1,0 +1,10 @@
+{
+  "image": "hill_crowd_watching_storm.png",
+  "verdict": "PASS",
+  "flags": [
+    "audited 2026-07-05 cut sweep (agent + spot-verify)",
+    "clean"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

@@ -1,0 +1,13 @@
+{
+  "image": "psalm_scroll_night.png",
+  "verdict": "PASS",
+  "flags": [
+    "gibberish scroll->blank scroll",
+    "candle-wick->clay saucer oil lamp",
+    "no coins",
+    "bare table",
+    "inked"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

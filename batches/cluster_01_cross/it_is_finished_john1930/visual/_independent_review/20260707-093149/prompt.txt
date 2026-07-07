@@ -1,0 +1,86 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: biblical-facts
+
+LENS — judge this BIBLICAL FACT SHEET (the Scripture-cited facts about
+location / time / place / customs / characters that a set of devotional paintings must
+honour). Be specific, cite the exact fact + reference:
+- CITATION TRUTH (most important): for every fact, does the quoted KJV text (shown under
+  each fact) ACTUALLY support the claim? Flag any claim the cited verse does NOT state, any
+  over-reach beyond what the verse says, and any citation that looks wrong/misapplied.
+- NO INVENTED FACTS: nothing asserted as biblical that Scripture does not actually say.
+  Tradition or commonplace-but-unbiblical detail (e.g. a number, a colour, an object the
+  text never mentions) must NOT be in the 'specified' bucket.
+- BUCKETS ARE HONEST: 'specified' = the Bible explicitly states this visual fact; 'constrained'
+  = not stated but a depiction could contradict the text; 'free' = artistic licence. Flag any
+  fact in the wrong bucket (especially licence dressed up as 'specified').
+- HISTORY STAYS SECONDARY: any historical_note must never override or contradict Scripture; flag
+  any that does, or that is presented as if it were biblical.
+- CHRIST-LENS INTACT: the facts must not distort the passage's witness to Christ / its typology.
+- COVERAGE: are there obvious, checkable biblical facts about these scenes that are MISSING
+  (a specified detail the painting could easily get wrong and no fact guards it)?
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block (on the VERDICT line write exactly ONE word —
+PASS or REVISE or FAIL — never the list of options):
+
+VERDICT: <PASS or REVISE or FAIL>
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# Vinegar-Sponge Still — Biblical Fact Sheet (for the 5-CLI accuracy panel)
+
+**Scene slug:** `vinegar_sponge_reed` — used in the shorts `i_thirst` (John 19:28) and `it_is_finished` (John 19:30).
+
+**Depiction being judged (the rendered still):** The crucified, thorn-crowned Christ hangs on his cross (near hand nailed through the palm). A Roman soldier in helmet and armour stands below and reaches up a **leafy green branch of hyssop** bearing a **pale porous sea-sponge soaked in vinegar**, pressing the sponge gently to Christ's lips. Dark storm sky; barren 1st-century Judea.
+
+**Rule for this project:** every still must be biblically accurate; ONLY faces / character look are free artistic licence — everything else (objects, actions, plant/material, who does the action, setting, period) must be Scripture-driven.
+
+---
+
+## SPECIFIED facts (Bible explicitly states this visual fact → the image MUST match)
+
+**S1 — A sponge filled with vinegar was put upon hyssop and put to His mouth.**
+> John 19:29 (KJV): "Now there was set a vessel full of vinegar: and they filled a spunge with vinegar, and put it upon hyssop, and put it to his mouth."
+
+**S2 — Jesus received the vinegar, then said, It is finished.**
+> John 19:30 (KJV): "When Jesus therefore had received the vinegar, he said, It is finished: and he bowed his head, and gave up the ghost."
+
+**S3 — Jesus wore a crown of thorns.**
+> John 19:2 (KJV): "And the soldiers platted a crown of thorns, and put it on his head, and they put on him a purple robe,"
+
+---
+
+## CONSTRAINED facts (not stated exactly, but the depiction could contradict the text)
+
+**C1 — WHO lifted the sponge.** Our image shows a **Roman soldier**. The nearest accounts say "one of them" — i.e. one of the bystanders standing there who were mocking; Luke separately has soldiers offering vinegar during the earlier mocking.
+> Matthew 27:47-48 (KJV): "Some of them that stood there, when they heard that, said, This man calleth for Elias. And straightway one of them ran, and took a spunge, and filled it with vinegar, and put it on a reed, and gave him to drink."
+> Mark 15:36 (KJV): "And one ran and filled a spunge full of vinegar, and put it on a reed, and gave him to drink, saying, Let alone; let us see whether Elias will come to take him down."
+> Luke 23:36 (KJV): "And the soldiers also mocked him, coming to him, and offering him vinegar,"
+
+**C2 — Reed vs hyssop.** The Synoptics say the sponge was on a **reed**; John says **hyssop**. Both these shorts quote John, and our image shows **hyssop** (a green plant), not a bare reed.
+> Matthew 27:48 (KJV): "...and put it on a reed, and gave him to drink."
+> Mark 15:36 (KJV): "...and put it on a reed..."
+> John 19:29 (KJV): "...and put it upon hyssop..."
+
+**C3 — Setting: crucifixion under darkness.**
+> Luke 23:44 (KJV): "And it was about the sixth hour, and there was a darkness over all the earth until the ninth hour."
+
+---
+
+## FREE (artistic licence — NOT to be checked)
+- The soldier's face/appearance and Christ's facial features (character look is free).
+- The exact shape of the sponge, precise cloud/storm forms, exact framing.
+
+---
+
+## Questions for the panel
+1. Does the depiction honour Scripture on the SPECIFIED facts (sponge + vinegar + on hyssop + to His mouth)?
+2. **C1:** Is depicting a **Roman soldier** (rather than an unspecified bystander) a fair, non-contradictory reading, or should it be a bystander?
+3. **C2:** Is rendering hyssop as a **large laurel-like leafy branch** acceptable, or does biblical hyssop (a small-leaved herb, likely Syrian marjoram) make our branch inaccurate?
+4. Any other citation error, over-reach, or accuracy problem?
+----- ARTIFACT END -----

@@ -1,0 +1,45 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Psalm-22 Long-form — 18 stills redo DONE</title>
+<style>
+ body{background:#15130f;color:#eee;font-family:system-ui,Arial;margin:0;padding:24px}
+ h1{font-size:22px;margin:0 0 4px} .sub{color:#b3a58a;margin:0 0 20px;font-size:14px;line-height:1.5}
+ .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
+ .card{background:#201d17;border-radius:10px;overflow:hidden;border:1px solid #33301f}
+ .card img{width:100%;display:block}
+ .meta{padding:9px 11px}
+ .slug{font-weight:600;font-size:13px}
+ .note{font-size:12.5px;color:#d9cbb0;margin-top:3px;line-height:1.35}
+ .badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px;margin-bottom:5px;background:#1e4620;color:#8fe39a}
+</style></head><body>
+<h1>Psalm-22 long-form — all 18 stills redone &amp; PASS ✅ (2026-07-05)</h1>
+<p class="sub">Every still eye-audited full-res, replaced, and PASS-recorded into <code>visual_16x9_inked/</code>.
+Root cause of the stray coins (Star-of-David, Bitcoin ₿, coin-in-sling) was the word "coin" in the shared STYLE string — <b>removed at source</b>, so it can't recur in any future short or long render.</p>
+<div class="grid" id="g"></div>
+<script>
+const D="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/";
+const P=[
+ ["crane_cross_soldiers","Overhead crucifixion, eyes now downcast (glow fixed), wounds clean, lots = pale stones."],
+ ["convergence_on_cross","Front crucifixion, eyes closed now, both palm wounds clean."],
+ ["pierced_feet","Single iron nail through the feet, correct anatomy."],
+ ["storm_over_jerusalem","Three crosses over Herod's temple, period-plausible."],
+ ["risen_hero_come","Risen Christ, coins gone, wound now a faint pale healed mark (no disc)."],
+ ["ninth_hour_darkness","Walled city under darkness — minarets/dome removed (2nd pass)."],
+ ["jerusalem_night_lyre","David on the rooftop — minaret + telegraph poles removed."],
+ ["david_old_deathbed","Coins + gibberish-Hebrew wall scrolls gone; bare stone."],
+ ["david_scroll_sealed","Signet ring + wax seal + cord. Period-correct."],
+ ["old_king_hands_rings","Two hands, correct anatomy, gold bands, oil lamp."],
+ ["shepherd_boy_sling","Sling pouch now empty (no coin), period-correct boy."],
+ ["first_century_reader","Now a long unrolling scroll with a roller, not a codex (2nd pass)."],
+ ["synagogue_listeners_lean","Floor clean, no coins; men leaning in by lamplight."],
+ ["scribe_over_manuscripts","No coin, correct clay oil lamp, indistinct script."],
+ ["scholar_hand_on_text","No coin, blank parchment, lamp."],
+ ["quill_ink_drop","Reed pen + ink drop + correct clay oil lamp."],
+ ["hebrew_scroll_edge_light","No coin, blank scroll edge in warm light."],
+ ["disputed_word_marks","Blank aged scroll + lamp."],
+];
+for(const [slug,note] of P){
+ document.getElementById("g").insertAdjacentHTML("beforeend",
+  `<div class="card"><img src="${D}${slug}.png" loading="lazy">
+   <div class="meta"><span class="badge">CLEAN — PLACED</span>
+   <div class="slug">${slug}</div><div class="note">${note}</div></div></div>`);
+}
+</script></body></html>

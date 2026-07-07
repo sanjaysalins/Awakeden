@@ -1,0 +1,10 @@
+{
+  "image": "look_up_faces.png",
+  "verdict": "PASS",
+  "flags": [
+    "3 cloned Jesus faces -> 3 distinct mourners (old man/young woman/youth)",
+    "inked"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

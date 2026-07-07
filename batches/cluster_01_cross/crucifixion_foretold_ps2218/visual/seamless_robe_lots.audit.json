@@ -1,0 +1,12 @@
+{
+  "image": "seamless_robe_lots.png",
+  "verdict": "PASS",
+  "flags": [
+    "robe = flat empty cloth (was corpse-read)",
+    "lot-stones not dog-bones",
+    "Christ on cross (was empty)",
+    "inked"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

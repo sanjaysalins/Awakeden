@@ -1,0 +1,11 @@
+{
+  "image": "06c_intercession_lives.png",
+  "verdict": "PASS",
+  "flags": [
+    "metal-disc wound -> faint pale flat healed patch",
+    "risen",
+    "face-ref"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

@@ -4,7 +4,7 @@
   "max_beat_s": 5.8,
   "held_gt6s": [],
   "slams": 3,
-  "kling_or_punch_or_slam_pct": 100,
+  "kling_or_punch_or_slam_pct": 83,
   "tier1_pct": 6,
   "reuse_violations": [],
   "tier3_or_flagged_beats": [
@@ -40,7 +40,7 @@
     "thirty_coins_scatter"
    ],
    "sources": [
-    "kling"
+    "dyncam"
    ],
    "punch": true,
    "cap": {
@@ -84,7 +84,7 @@
     "zechariah_night_scroll"
    ],
    "sources": [
-    "kling"
+    "dyncam"
    ],
    "punch": false,
    "cap": {
@@ -106,7 +106,7 @@
     "weighing_scales_silver"
    ],
    "sources": [
-    "kling"
+    "dyncam"
    ],
    "punch": false,
    "cap": {
@@ -150,7 +150,7 @@
     "prophet_scroll"
    ],
    "sources": [
-    "kling"
+    "dyncam"
    ],
    "punch": false,
    "cap": {
@@ -261,7 +261,7 @@
     "coin_on_scroll"
    ],
    "sources": [
-    "kling",
+    "dyncam",
     "dyncam"
    ],
    "punch": false,
@@ -284,7 +284,7 @@
     "silver_and_blood"
    ],
    "sources": [
-    "kling"
+    "dyncam"
    ],
    "punch": true,
    "cap": {
@@ -307,8 +307,8 @@
     "zechariah_night_scroll"
    ],
    "sources": [
-    "kling",
-    "kling"
+    "dyncam",
+    "dyncam"
    ],
    "punch": false,
    "cap": {

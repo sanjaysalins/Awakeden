@@ -1,0 +1,10 @@
+{
+  "image": "01c_soldiers_gamble.png",
+  "verdict": "PASS",
+  "flags": [
+    "dog-bone lots + telegraph pole -> lot-stones, period",
+    "inked"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

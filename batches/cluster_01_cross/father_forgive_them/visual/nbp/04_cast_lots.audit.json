@@ -1,0 +1,13 @@
+{
+  "image": "04_cast_lots.png",
+  "verdict": "PASS",
+  "flags": [
+    "CRIT: 5 crosses->3, empty centre->Christ alive on centre",
+    "dog-bone lots->lot-stones",
+    "shrouded corpse->folded robe",
+    "telegraph poles removed",
+    "inked"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

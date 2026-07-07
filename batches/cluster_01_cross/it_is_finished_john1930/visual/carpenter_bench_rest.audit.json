@@ -1,0 +1,10 @@
+{
+  "image": "carpenter_bench_rest.png",
+  "verdict": "PASS",
+  "flags": [
+    "modern bench-vise removed -> bare bench + period tools",
+    "inked"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

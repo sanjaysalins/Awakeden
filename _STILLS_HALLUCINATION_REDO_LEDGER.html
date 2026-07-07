@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Stills Hallucination Redo Ledger</title>
+<style>
+  :root{
+    --bg:#0f1115; --panel:#171a21; --border:#2a2f3a; --text:#e8e8ec; --muted:#9aa0ab;
+    --crit:#ff4d4f; --major:#ffa93f; --minor:#f4d35e; --clean:#4caf7d;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#f6f7f9; --panel:#ffffff; --border:#dde1e6; --text:#1b1e24; --muted:#5b6270; }
+  }
+  *{box-sizing:border-box;}
+  body{background:var(--bg); color:var(--text); font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif; margin:0; padding:24px 20px 80px;}
+  h1{font-size:1.5rem; margin:0 0 4px;}
+  .sub{color:var(--muted); margin:0 0 20px; font-size:0.95rem;}
+  .summary{display:flex; gap:12px; flex-wrap:wrap; margin-bottom:24px;}
+  .card{background:var(--panel); border:1px solid var(--border); border-radius:10px; padding:14px 18px; min-width:120px;}
+  .card .n{font-size:1.6rem; font-weight:700;}
+  .card .l{color:var(--muted); font-size:0.8rem; text-transform:uppercase; letter-spacing:.04em;}
+  .card.crit .n{color:var(--crit);} .card.major .n{color:var(--major);} .card.minor .n{color:var(--minor);}
+  .filters{display:flex; gap:8px; margin-bottom:16px; flex-wrap:wrap;}
+  .filters button{background:var(--panel); border:1px solid var(--border); color:var(--text); padding:6px 14px; border-radius:20px; cursor:pointer; font-size:0.85rem;}
+  .filters button.active{border-color:var(--text);}
+  .piece{background:var(--panel); border:1px solid var(--border); border-radius:12px; margin-bottom:18px; overflow:hidden;}
+  .piece-head{padding:12px 18px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; border-bottom:1px solid var(--border);}
+  .piece-head h2{font-size:1.05rem; margin:0;}
+  .badge{display:inline-block; padding:2px 9px; border-radius:12px; font-size:0.72rem; font-weight:600; margin-left:8px;}
+  .pub{background:rgba(255,77,79,0.15); color:var(--crit); border:1px solid var(--crit);}
+  .notpub{background:rgba(76,175,125,0.15); color:var(--clean); border:1px solid var(--clean);}
+  .counts{font-size:0.8rem; color:var(--muted);}
+  table{width:100%; border-collapse:collapse; font-size:0.88rem;}
+  th{text-align:left; padding:8px 18px; color:var(--muted); font-weight:600; font-size:0.75rem; text-transform:uppercase; letter-spacing:.03em; border-bottom:1px solid var(--border);}
+  td{padding:8px 18px; border-bottom:1px solid var(--border); vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  .slug{font-family:Consolas,monospace; font-size:0.85rem; white-space:nowrap;}
+  .sev{font-weight:700; white-space:nowrap;}
+  .sev.CRITICAL{color:var(--crit);} .sev.MAJOR{color:var(--major);} .sev.MINOR{color:var(--minor);} .sev.CLEAN{color:var(--clean);}
+  tr.row-CLEAN{display:none;}
+  .note{background:var(--panel); border:1px dashed var(--border); border-radius:10px; padding:14px 18px; margin-top:20px; color:var(--muted); font-size:0.85rem;}
+  a{color:inherit;}
+</style>
+</head>
+<body>
+
+<h1>Stills Hallucination Redo Ledger</h1>
+<p class="sub">All 11 Cross shorts (batches/cluster_01_cross) + Psalm 22 long-form living-page film (longform/02_Psalm_22_Song_From_The_Cross). Eye-audited directly by Read tool, not the SDK sidecars. Findings only — nothing re-rendered yet.</p>
+
+<div class="summary">
+  <div class="card crit"><div class="n">3</div><div class="l">Critical</div></div>
+  <div class="card major"><div class="n">61</div><div class="l">Major</div></div>
+  <div class="card minor"><div class="n">58</div><div class="l">Minor</div></div>
+  <div class="card"><div class="n">233 / 233</div><div class="l">Stills read</div></div>
+</div>
+
+<div class="filters">
+  <button data-f="all" class="active">All</button>
+  <button data-f="CRITICAL">Critical only</button>
+  <button data-f="MAJOR">Major + up</button>
+  <button data-f="MINOR">Everything incl. minor</button>
+</div>
+
+<!-- ===================== CLUSTER 1: THE CROSS (11 shorts, ALL PUBLIC) ===================== -->
+
+<div class="piece">
+  <div class="piece-head">
+    <h2>father_forgive_them <span class="badge pub">PUBLIC — read/father-forgive-them.html</span> <span class="badge pub">PILOT</span></h2>
+    <span class="counts">12 read · 1 critical · 5 major · 5 minor</span>
+  </div>
+  <table><tr><th>Still</th><th>Severity</th><th>Defect</th></tr>
+  <tr class="row-MAJOR"><td class="slug">01_golgotha_hook</td><td class="sev MINOR">MINOR</td><td>No nails/ropes anywhere — hands lie open on top of the beam, feet unnailed; body reads standing not hanging. Cross-topped rooftop in skyline (church-like).</td></tr>
+  <tr class="row-MAJOR"><td class="slug">01b_nailed_hands</td><td class="sev MAJOR">MAJOR</td><td>Cross geometry wrong: two horizontal crossbeams. Both palms presented side-by-side at center of upright — anatomically impossible. No nails despite the beat title.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">01c_soldiers_gamble</td><td class="sev MAJOR">MAJOR</td><td>Lots are ~12 cartoon dog-bone shapes, not dice/knucklebones. Rooftop mast reads as telegraph pole; soldier's chest harness has a cross-shaped fitting.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">02_jesus_prays</td><td class="sev MAJOR">MAJOR</td><td>Both palm wounds are glossy black hemispheres — stud/gem/button defect. Wrists roped (not nailed) yet wounds already exist.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">03_prayer_close</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">04_cast_lots</td><td class="sev CRITICAL">CRITICAL</td><td>Center cross EMPTY while lots are cast (scripturally wrong — He hung alive); FIVE crosses instead of three; crossarms read as telegraph poles with wires + a wire-fence line; garbled mesh patch on upright. Lots = cartoon dog-bones.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">05_pierced_hand</td><td class="sev MAJOR">MAJOR</td><td>Hand/wrist wrapped in tan tape/bandage strips — modern sports-tape look. Nail hole = oversized clean-edged drilled disc.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">06_cross_over_us</td><td class="sev MINOR">MINOR</td><td>Hands claw-grip beam ends like hooks, no nails visible.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">06b_our_sin</td><td class="sev MINOR">MINOR</td><td>Cross shadow projects upward into the sky; two unexplained upright human shadow-silhouettes in the crowd.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">06c_intercession_lives</td><td class="sev MINOR">MINOR</td><td>Nail scar = smooth pale circular disc (pill/patch read).</td></tr>
+  <tr class="row-MAJOR"><td class="slug">07_risen_hero</td><td class="sev MINOR">MINOR</td><td>Scar = pale disc ringed by dashed stitch-dots (patch/button read); tiny AI signature squiggle.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">07b_gospel_wide</td><td class="sev MAJOR">MAJOR</td><td>"Tomb" opening is a hinged paneled wooden door with metal handle/hinges — medieval/house door, not a rolled-stone tomb. Open palms show no wounds (inconsistent with 06c/07).</td></tr>
+  </table>
+</div>
+
+<div class="piece">
+  <div class="piece-head">
+    <h2>pierced_zech1210 <span class="badge pub">PUBLIC — read/zechariah-12-10-pierced.html</span></h2>
+    <span class="counts">17 read · 1 critical · 4 major · 8 minor</span>
+  </div>
+  <table><tr><th>Still</th><th>Severity</th><th>Defect</th></tr>
+  <tr class="row-MAJOR"><td class="slug">golgotha_hill_wide</td><td class="sev MINOR">MINOR</td><td>Garbled black claw-like cluster of nail shapes across toes; wrists double-bound rope+nail.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">nail_through_hand</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">soldiers_gambling</td><td class="sev MINOR">MINOR</td><td>Nails planted into crossbeam BESIDE each hand, not through palms.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">crowd_mocking</td><td class="sev MINOR">MINOR</td><td>Two stray black ink blobs on right mocker's sleeve/robe.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">face_on_cross</td><td class="sev MAJOR">MAJOR</td><td>Left palm nail bent ~90°, lies sideways across palm; right hand nail sticks up loose between fingers, hand floats unpinned.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">seamless_robe_lots</td><td class="sev MINOR">MINOR</td><td>Continuity: cross in background is EMPTY while soldiers cast lots — lots were cast while He hung on it.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">prophet_scroll</td><td class="sev MAJOR">MAJOR</td><td>Scroll carries large legible-looking pseudo-Hebrew gibberish (top half). Lamp correct.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">us_under_cross_shadow</td><td class="sev MINOR">MINOR</td><td>Cross shadow floats vertically in the sky; center mourner swallowed into shadow column.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">risen_mercy_hand</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">darkness_veil_torn</td><td class="sev MINOR">MINOR</td><td>Only monochrome frame in a colored set (may be intentional).</td></tr>
+  <tr class="row-MAJOR"><td class="slug">spear_thrust_up</td><td class="sev CRITICAL">CRITICAL</td><td>Extra/duplicated limb: left arm stretched up-left and nailed, yet a PAIR of praying hands pressed palm-to-palm with nail + dripping blood at chest-right — impossible pose. Spear tip far above his head pointing at sky, never touches his side. Unusable.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">zechariah_night_scroll</td><td class="sev MAJOR">MAJOR</td><td>Jerusalem skyline c.520 BC features golden dome (reads Dome of the Rock) + minaret-like tower — Islamic-era skyline ~1100 yrs early.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">mourners_only_son</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">john_watching</td><td class="sev MINOR">MINOR</td><td>Thin gold chain reads as modern jewelry.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">blood_water_wood</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">grace_poured_sky</td><td class="sev MINOR">MINOR</td><td>Church bell-tower with cross finial in ancient skyline.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">look_up_faces</td><td class="sev MAJOR">MAJOR</td><td>All three stacked faces = SAME cloned Jesus-like face x3.</td></tr>
+  </table>
+</div>
+
+<div class="piece">
+  <div class="piece-head">
+    <h2>thirty_pieces_zech11 <span class="badge pub">PUBLIC — read/thirty-pieces-of-silver.html</span></h2>
+    <span class="counts">15 read · 1 critical · 4 major · 6 minor</span>
+  </div>
+  <table><tr><th>Still</th><th>Severity</th><th>Defect</th></tr>
+  <tr class="row-MAJOR"><td class="slug">thirty_coins_scatter</td><td class="sev MINOR">MINOR</td><td>Coin rims carry semi-legible gibberish pseudo-lettering.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">coin_on_scroll</td><td class="sev MAJOR">MAJOR</td><td>Wax candle in metal candlestick (candle trap; must be clay oil lamp). Scroll has legible pseudo-Hebrew gibberish.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">weighing_scales_silver</td><td class="sev MAJOR">MAJOR</td><td>Impossible object: balance has only ONE pan — chains from both beam ends converge into a single central bowl.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">potter_at_wheel</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">judas_casting_coins</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">potters_field</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">judas_bag_priests</td><td class="sev MINOR">MINOR</td><td>Elder's clasped hands are fused mush; Judas clutches loose coins AND a tied pouch simultaneously.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">zechariah_casting</td><td class="sev MINOR">MINOR</td><td>Buried jar has faint pseudo-letter scratch marks; coins hang in unnaturally long floating arc.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">silver_and_blood</td><td class="sev MINOR">MINOR</td><td>Coin rims semi-legible gibberish; deformed bitten-out edge.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">zechariah_night_scroll</td><td class="sev CRITICAL">CRITICAL</td><td>Jerusalem skyline dominated by golden Dome-of-the-Rock-style dome + minaret-like tower — Islamic architecture ~1,100 years after Zechariah (~520 BC). Named anachronism trap.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">prophet_scroll</td><td class="sev MAJOR">MAJOR</td><td>Large prominent legible-looking pseudo-Hebrew filling scroll at hero size.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">face_on_cross</td><td class="sev MAJOR">MAJOR</td><td>Neither hand fixed to cross: left palm nail bent, lies sideways like a hook; right hand nail protrudes into open air, hand floats in front of beam.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">blood_water_wood</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">risen_mercy_hand</td><td class="sev MINOR">MINOR</td><td>Nail-print = thin red slash not puncture; hand chirality slightly suspect.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">nail_through_hand</td><td class="sev MINOR">MINOR</td><td>Cord around wrist has round metal ball clasp, doesn't wrap the beam — reads as bracelet.</td></tr>
+  </table>
+</div>
+
+<div class="piece">
+  <div class="piece-head">
+    <h2>forsaken_cry_ps221 <span class="badge pub">PUBLIC — read/ps22-03-forsaken-cry.html</span></h2>
+    <span class="counts">13 read · 0 critical · 7 major · 3 minor</span>
+  </div>
+  <table><tr><th>Still</th><th>Severity</th><th>Defect</th></tr>
+  <tr class="row-MAJOR"><td class="slug">golgotha_hill_wide</td><td class="sev MAJOR">MAJOR</td><td>Nail hardware garbled at all three fixing points: left palm bent nail with oversized diamond head across palm; right hand twisted black clamp-like mass; feet have black claw-like spikes between mushy toes.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">face_on_cross</td><td class="sev MAJOR">MAJOR</td><td>Left palm: nail bent into an L, lies flat across palm, doesn't pierce. Right hand: nail floats vertically between fingertips, attached to nothing.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">us_under_cross_shadow</td><td class="sev MINOR">MINOR</td><td>Cross shadow cast onto the sky; center-rear mourner dissolves into shadow column.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">risen_mercy_hand</td><td class="sev MINOR">MINOR</td><td>Nail wound reads as thin red slash/scratch, not a nail print.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">darkness_veil_torn</td><td class="sev MINOR">MINOR</td><td>Temple veil hangs OUTDOORS on a rope between open-air colonnades; Egyptian-lotus capitals.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">grace_poured_sky</td><td class="sev MAJOR">MAJOR</td><td>Church bell-tower with CROSS finial on dome in period Jerusalem.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">look_up_faces</td><td class="sev MAJOR">MAJOR</td><td>Three upturned faces are near-identical clones of the SAME bearded man (ref face duplicated x3).</td></tr>
+  <tr class="row-MAJOR"><td class="slug">bowed_head_finished</td><td class="sev MAJOR">MAJOR</td><td>Left palm nail bent sideways, fat diamond head across palm; right-hand nail floats in FRONT of curled fingers with blood dripping from mid-air. Crown of thorns inconsistent with other stills in the piece.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">psalm_scroll_night</td><td class="sev MAJOR">MAJOR</td><td>Prominent legible pseudo-Hebrew gibberish fills half the frame; lamp wick drawn as thick candle-like column.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">father_lamp_doorway</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">cross_at_dawn</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">david_writing_psalm</td><td class="sev MAJOR">MAJOR</td><td>White wax candle burning on a clay jug (candle trap); medieval European crown; modern Celtic-style harp; AI signature squiggle.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">ninth_hour_darkness</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  </table>
+</div>
+
+<div class="piece">
+  <div class="piece-head">
+    <h2>i_thirst_john1928 <span class="badge pub">PUBLIC — read/ps22-08-i-thirst.html</span></h2>
+    <span class="counts">12 read · 0 critical · 5 major · 2 minor</span>
+  </div>
+  <table><tr><th>Still</th><th>Severity</th><th>Defect</th></tr>
+  <tr class="row-MAJOR"><td class="slug">face_on_cross</td><td class="sev MAJOR">MAJOR</td><td>Left palm nail BENT ~90°, lies flat across palm; right hand fingers GRIP the nail shaft, no piercing. No crown of thorns (inconsistent with bowed_head_finished).</td></tr>
+  <tr class="row-MAJOR"><td class="slug">us_under_cross_shadow</td><td class="sev MINOR">MINOR</td><td>Cross shadow painted onto sky, no cross casting it; center mourner dissolves into shadow column.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">risen_mercy_hand</td><td class="sev MINOR">MINOR</td><td>Nail-print = thin red slash, reads as knife cut.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">bowed_head_finished</td><td class="sev MAJOR">MAJOR</td><td>Left palm nail bent sideways across palm; right-hand nail floats in FRONT of curled fingers, blood drip hanging mid-air. Crown present here (inconsistent with siblings).</td></tr>
+  <tr class="row-MAJOR"><td class="slug">vinegar_sponge_reed</td><td class="sev MAJOR">MAJOR</td><td>Same bent-nail + gripped-nail hand defects; sponge charcoal-BLACK (should be tan/brown), raised past face not to mouth.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">psalm_scroll_night</td><td class="sev MAJOR">MAJOR</td><td>Dense legible-looking pseudo-Hebrew gibberish across whole frame; lamp burns from ribbed CANDLE-like wick column mid-bowl instead of spout.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">jesus_praying_close</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">cross_at_dawn</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">david_writing_psalm</td><td class="sev MAJOR">MAJOR</td><td>White wax candle on clay jug (candle trap). Gibberish signature scrawl; lumpy mismatched wall shadow; European-medieval crown.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">ocean_creation_wide</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">potsherd_dry_clay</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">living_water_stream</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  </table>
+</div>
+
+<div class="piece">
+  <div class="piece-head">
+    <h2>into_thy_hands_luke2346 <span class="badge pub">PUBLIC — read/father-into-thy-hands.html</span></h2>
+    <span class="counts">14 read · 0 critical · 5 major · 5 minor</span>
+  </div>
+  <table><tr><th>Still</th><th>Severity</th><th>Defect</th></tr>
+  <tr class="row-MAJOR"><td class="slug">golgotha_hill_wide</td><td class="sev MAJOR">MAJOR</td><td>Ankles rope-bound + garbled cluster of 4-5 dark nail-spikes fanned through toes; left palm nail shaft runs sideways across palm to wrist; right hand blobby.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">nail_through_hand</td><td class="sev MINOR">MINOR</td><td>Nail mid-shaft has ribbed/threaded section — reads modern machine-screw thread.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">face_on_cross</td><td class="sev MAJOR">MAJOR</td><td>Left palm: nail head perched on palm, bent shaft angling sideways — lying across palm not through. Right hand: fingers curl up, nail floats between fingertips, no entry wound. No crown of thorns.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">bowed_head_finished</td><td class="sev MAJOR">MAJOR</td><td>Same two nail defects close-range; crown of thorns present here (only still that has it).</td></tr>
+  <tr class="row-MAJOR"><td class="slug">child_sleeping_lamp</td><td class="sev MINOR">MINOR</td><td>Flame rises from a dark candle-stub wick standing upright in CENTER of open bowl (candle-in-a-bowl trap).</td></tr>
+  <tr class="row-MAJOR"><td class="slug">psalm_scroll_night</td><td class="sev MAJOR">MAJOR</td><td>Entire scroll covered in legible-looking pseudo-Hebrew nonsense, center-frame in focus. Lamp candle-wick mid-bowl.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">father_holds_sleeping_child</td><td class="sev MAJOR">MAJOR</td><td>Background light = glass-chimney hurricane/kerosene lamp on turned pedestal stand — 19th-century anachronism, clearly visible and glowing.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">hands_of_light_open</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">child_waking_dawn</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">first_day_morning</td><td class="sev MINOR">MINOR</td><td>Rolled-away stone is a full sphere/boulder, not a disc rolling-stone.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">father_lamp_doorway</td><td class="sev CLEAN">CLEAN</td><td>The only lamp in the set done right — spout wick.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">cross_at_dawn</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">father_hand_childs_hand</td><td class="sev MINOR">MINOR</td><td>Lamp: pale candle-like wick standing in center of oil, not in spout.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">child_eyes_closing</td><td class="sev MINOR">MINOR</td><td>Same central candle-style wick in open bowl; adult hand 4 fingers thumb hidden (passable).</td></tr>
+  </table>
+</div>
+
+<div class="piece">
+  <div class="piece-head">
+    <h2>it_is_finished_john1930 <span class="badge pub">PUBLIC — read/it-is-finished.html</span></h2>
+    <span class="counts">17 read · 0 critical · 3 major · 9 minor</span>
+  </div>
+  <table><tr><th>Still</th><th>Severity</th><th>Defect</th></tr>
+  <tr class="row-MAJOR"><td class="slug">golgotha_hill_wide</td><td class="sev MINOR">MINOR</td><td>Feet: cluster of 4-5 black spikes fans around overlapped feet; right hand small mush of rope + fingers.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">nail_through_hand</td><td class="sev CLEAN">CLEAN</td><td>Proves the model CAN render the nail correctly — good redo seed.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">face_on_cross</td><td class="sev MAJOR">MAJOR</td><td>Neither nail pierces: left palm bent L-nail lying flat across palm; right hand nail floats in front of fingers as if loosely gripped.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">us_under_cross_shadow</td><td class="sev MINOR">MINOR</td><td>Cross shadow projected upward onto sky/clouds; center mourner fully darkened near-silhouette.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">risen_mercy_hand</td><td class="sev MINOR">MINOR</td><td>Palm wound = thin horizontal slash/scar, not round nail puncture.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">seventh_day_light</td><td class="sev MINOR">MINOR</td><td>Water-hills-water-hills tiling repeat; garbled signature scribble bottom-right.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">jesus_prays_night</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">bowed_head_finished</td><td class="sev MAJOR">MAJOR</td><td>Left palm bent nail lying flat on palm beside wound; right hand nail standing between curled fingers, blood dripping from fingertips.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">tomb_stone_sealed</td><td class="sev MINOR">MINOR</td><td>Wide dark gap right of rolling stone — "sealed" tomb reads ajar.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">eden_garden_finished</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">vinegar_sponge_reed</td><td class="sev MAJOR">MAJOR</td><td>Nail defects again; sponge = jet-black porous lump on absurdly long segmented bamboo pole pointing past head into sky.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">gethsemane_olives_night</td><td class="sev MINOR">MINOR</td><td>Jerusalem skyline has Greek pedimented Parthenon-style temple facade.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">first_day_morning</td><td class="sev MINOR">MINOR</td><td>Sunbeam enters doorway through solid rock above lintel — impossible geometry.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">cross_at_dawn</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">hands_shaping_light</td><td class="sev MINOR">MINOR</td><td>Curled fingertips above orb read at first glance as two EXTRA hands (four-hand impression); resolves correct on close look.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">man_lifting_face_dawn</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">carpenter_bench_rest</td><td class="sev MINOR">MINOR</td><td>Iron screw-handle vise (19th-century) on bench front; spearhead-shaped ambiguous tool.</td></tr>
+  </table>
+</div>
+
+<div class="piece">
+  <div class="piece-head">
+    <h2>today_paradise_luke2343 <span class="badge pub">PUBLIC — read/today-in-paradise.html</span></h2>
+    <span class="counts">14 read · 0 critical · 3 major · 7 minor</span>
+  </div>
+  <table><tr><th>Still</th><th>Severity</th><th>Defect</th></tr>
+  <tr class="row-MAJOR"><td class="slug">answer_light_profile</td><td class="sev MINOR">MINOR</td><td>Jesus wears full yellow robe over both shoulders while on cross — inconsistent with other stills (stripped to loincloth).</td></tr>
+  <tr class="row-MAJOR"><td class="slug">confession_face_hands</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">crowd_mocking</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">golgotha_hill_wide</td><td class="sev MAJOR">MAJOR</td><td>Feet pinned by cluster of 4-5 black spikes fanned across toes; wrists carry dark twisted barbed-looking bands.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">jesus_turns_to_thief</td><td class="sev MAJOR">MAJOR</td><td>Left-palm nail bent ~90°, shaft lying flat along palm; right hand rests on separate near-vertical beam with nail protruding from knuckle side — impossible cross geometry.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">kingdom_light_clouds</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">mocker_thief_face</td><td class="sev MINOR">MINOR</td><td>Open screaming mouth shows two fang-like canines.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">nail_through_hand</td><td class="sev MINOR">MINOR</td><td>Thin dark cord with bead-like knob around wrist attaches to nothing.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">paradise_dawn</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">penitent_thief_face</td><td class="sev MINOR">MINOR</td><td>Crossbeam lashed above head but arms NOT on it — roped around chest instead.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">risen_mercy_hand</td><td class="sev MINOR">MINOR</td><td>Nail wound = long horizontal slash/scratch, not round puncture.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">thief_looks_to_jesus</td><td class="sev MAJOR">MAJOR</td><td>Thief's nailed hand: nail lies diagonally flat across palm, doesn't pierce — looks glued on. Contradicts other stills where thieves are roped not nailed.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">two_thieves_wide</td><td class="sev MINOR">MINOR</td><td>Left thief rendered corpse-grey/white while Jesus + right thief are warm skin-toned; thin guy-wire-like lines brace outer crosses.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">us_under_cross_shadow</td><td class="sev MINOR">MINOR</td><td>Cross shadow painted onto sky with no cross present to cast it.</td></tr>
+  </table>
+</div>
+
+<div class="piece">
+  <div class="piece-head">
+    <h2>watch_one_hour_matt2640 <span class="badge pub">PUBLIC — read/could-ye-not-watch-one-hour.html</span></h2>
+    <span class="counts">15 read · 0 critical · 6 major · 6 minor</span>
+  </div>
+  <table><tr><th>Still</th><th>Severity</th><th>Defect</th></tr>
+  <tr class="row-MAJOR"><td class="slug">golgotha_hill_wide</td><td class="sev MAJOR">MAJOR</td><td>Feet clamped in black multi-pronged spike mass; left palm nail bent sideways, oversized head lying flat.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">face_on_cross</td><td class="sev MAJOR">MAJOR</td><td>Left palm: nail lies diagonally across palm over fingers. Right hand: open/lifted off beam, nail head near fingertips — neither hand fastened.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">us_under_cross_shadow</td><td class="sev MINOR">MINOR</td><td>Cross floats as dark silhouette in sky continuing as shadow column to ground.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">risen_mercy_hand</td><td class="sev MINOR">MINOR</td><td>Palm wound = thin scratch/slash not nail-print.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">jesus_prays_night</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">gethsemane_olives_night</td><td class="sev MINOR">MINOR</td><td>Skyline has Greek Parthenon-style pedimented colonnade temple.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">disciples_sleeping</td><td class="sev MAJOR">MAJOR</td><td>Silver glitter/sequin speckle artifact over sleepers' shawls + tree trunk highlight — known glitter failure.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">jesus_stands_over_sleepers</td><td class="sev MAJOR">MAJOR</td><td>Foreground sleeper wears closed brown leather shoe with modern heel/sole (modern loafer).</td></tr>
+  <tr class="row-MAJOR"><td class="slug">cup_moonlight</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">jesus_praying_close</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">jesus_leads_three</td><td class="sev MINOR">MINOR</td><td>Third disciple = undefined solid-black blob figure, no face/feet.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">sleeping_peter_close</td><td class="sev MAJOR">MAJOR</td><td>Character drift: elderly white-hair/full-white-beard man here vs dark-haired middle-aged men elsewhere — if meant to be Peter, ages ~30 years between cuts.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">kneeling_lamp_prayer</td><td class="sev MINOR">MINOR</td><td>Lone star dot in area that should be interior wall/ceiling — room reads half open-to-sky.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">same_prayer_again</td><td class="sev MINOR">MINOR</td><td>Flat tan sandal shape half-under bare foot with garbled sole/toe overlap.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">weak_flesh_hands</td><td class="sev MAJOR">MAJOR</td><td>Extra digit: wrapping hand shows four nailed fingers + a fifth curled knuckle-digit + thumb = six digits, full-frame close-up.</td></tr>
+  </table>
+</div>
+
+<div class="piece">
+  <div class="piece-head">
+    <h2>crucifixion_foretold_ps2218 <span class="badge pub">PUBLIC — read/ps22-01-crucifixion-foretold.html</span></h2>
+    <span class="counts">12 read · 0 critical · 4 major · 5 minor</span>
+  </div>
+  <table><tr><th>Still</th><th>Severity</th><th>Defect</th></tr>
+  <tr class="row-MAJOR"><td class="slug">golgotha_hill_wide</td><td class="sev MAJOR">MAJOR</td><td>Ankles wrapped in twisted nail/shackle rings, black spike cluster under toes; right hand bent black hook around fingers; left palm nail ON palm, shaft along wrist.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">soldiers_gambling</td><td class="sev MINOR">MINOR</td><td>Nails planted vertically in crossbeam BESIDE each hand, not through palms.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">crowd_mocking</td><td class="sev MINOR">MINOR</td><td>Two disembodied floating pointing hands emerge from black silhouette crowd; stray ink blobs on robe.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">face_on_cross</td><td class="sev MAJOR">MAJOR</td><td>Left palm nail bent L-shaped hook lying sideways across palm; right hand nail floats in front of slightly fused fingers.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">seamless_robe_lots</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">us_under_cross_shadow</td><td class="sev MINOR">MINOR</td><td>Cross shadow painted onto the SKY + along ground simultaneously.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">risen_mercy_hand</td><td class="sev MINOR">MINOR</td><td>Nail wound = thin red slash/scratch, not round nail print.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">john_watching</td><td class="sev CLEAN">CLEAN</td><td>Nit: gold cord reads as necklace.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">jesus_looks_down</td><td class="sev MINOR">MINOR</td><td>Right hand mushy — four sausage fingers, nail perched at base. Continuity: ONLY still in set with crown of thorns.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">psalm_scroll_night</td><td class="sev MAJOR">MAJOR</td><td>Scroll (⅔ of frame) covered in legible-looking pseudo-Hebrew gibberish.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">david_writing_psalm</td><td class="sev MAJOR">MAJOR</td><td>White wax CANDLE on clay jug (candle trap); European/Celtic frame harp not lyre.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">lots_cup_close</td><td class="sev CLEAN">CLEAN</td><td>Knucklebones period-correct.</td></tr>
+  </table>
+</div>
+
+<div class="piece">
+  <div class="piece-head">
+    <h2>woman_behold_john1926 <span class="badge pub">PUBLIC — read/woman-behold-thy-son.html</span></h2>
+    <span class="counts">11 read · 0 critical · 1 major · 0 minor — cleanest piece in the cluster</span>
+  </div>
+  <table><tr><th>Still</th><th>Severity</th><th>Defect</th></tr>
+  <tr class="row-MAJOR"><td class="slug">face_on_cross</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">golgotha_hill_wide</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">jesus_looks_down</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">john_leads_home</td><td class="sev MAJOR">MAJOR</td><td>Background skyline shows a tall bell-tower/campanile topped with a Latin cross + a smaller cross-topped spire — European/medieval church architecture.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">mary_and_john</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">mary_at_cross</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">mary_infant_shadow</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">nail_through_hand</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">risen_mercy_hand</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">simeon_baby_temple</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  <tr class="row-MAJOR"><td class="slug">us_under_cross_shadow</td><td class="sev CLEAN">CLEAN</td><td>—</td></tr>
+  </table>
+</div>
+
+<!-- ===================== LONGFORM: PSALM 22 LIVING-PAGE FILM (81 stills, NOT yet public) ===================== -->
+
+<div class="piece">
+  <div class="piece-head">
+    <h2>Psalm 22: Song From The Cross (longform) <span class="badge notpub">NOT YET PUBLIC — site status = in_production, no youtube_id</span></h2>
+    <span class="counts">81 / 81 read — ALL DONE · 0 critical · 14 major · 2 minor</span>
+  </div>
+  <table><tr><th>Still</th><th>Severity</th><th>Defect</th></tr>
+  <tr class="row-MAJOR"><td class="slug">crane_cross_soldiers</td><td class="sev MAJOR">MAJOR</td><td>Nail through left palm is drawn as a modern hex-head bolt with threaded shaft (visible thread ridges, hexagonal bolt-head) — reads as hardware-store bolt, not a period iron spike. Most prominent element in the shot.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">david_hands_lyre</td><td class="sev MAJOR">MAJOR</td><td>Wax candle burning in a dish/candlestick, bottom right (candle trap).</td></tr>
+  <tr class="row-MAJOR"><td class="slug">david_old_deathbed</td><td class="sev MAJOR">MAJOR</td><td>Glass-globed hurricane-style lantern on the floor (Victorian/modern lantern with glass chimney), not a period clay oil lamp.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">david_scroll_sealed</td><td class="sev MAJOR">MAJOR</td><td>Wax candle in a dish, top right (candle trap).</td></tr>
+  <tr class="row-MAJOR"><td class="slug">disputed_word_marks</td><td class="sev MAJOR">MAJOR</td><td>Glass-paned lantern with a handle, top-right corner — modern carriage-lantern look, not a clay oil lamp.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">execution_stakes_field</td><td class="sev MAJOR">MAJOR</td><td>City wall topped with European-medieval-style crenellations and a turret bearing a small Christian cross finial — wrong architecture/culture for Herodian-period Jerusalem.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">first_century_reader</td><td class="sev MAJOR">MAJOR</td><td>Two wall-mounted sconces holding lit wax candles flank the reader on both sides (candle trap).</td></tr>
+  <tr class="row-MAJOR"><td class="slug">lion_gape</td><td class="sev MINOR">MINOR</td><td>Bright glowing ember/light-shaft visible inside lion's open mouth/throat — reads like breathing fire/light.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">quill_ink_drop</td><td class="sev MAJOR">MAJOR</td><td>Lit tapered wax candle with dripping wax next to scribe's hand (candle trap).</td></tr>
+  <tr class="row-MAJOR"><td class="slug">risen_hero_come</td><td class="sev MAJOR">MAJOR</td><td>Raised palm's scar reads as a red X-shaped cut/stitch mark, not a round nail-pierce wound (X-stitches trap).</td></tr>
+  <tr class="row-MAJOR"><td class="slug">scholar_hand_on_text</td><td class="sev MAJOR">MAJOR</td><td>Lit wax candle in metal candlestick with visible drip on desk (candle trap).</td></tr>
+  <tr class="row-MAJOR"><td class="slug">scholars_debate_two</td><td class="sev MAJOR">MAJOR</td><td>Lit wax candle in dark candlestick holder between two scholars (candle trap).</td></tr>
+  <tr class="row-MAJOR"><td class="slug">scribe_over_manuscripts</td><td class="sev MAJOR">MAJOR</td><td>Lit wax candle in candlestick to scribe's left (candle trap).</td></tr>
+  <tr class="row-MAJOR"><td class="slug">storm_over_jerusalem</td><td class="sev MAJOR">MAJOR</td><td>Bottom-right cityscape has a small building with golden/onion dome resembling Dome of the Rock.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">synagogue_listeners_lean</td><td class="sev MAJOR">MAJOR</td><td>(1) Lit wax candle in tall candlestick (candle trap); (2) arched window has diamond-lattice leaded-glass — European Gothic church window.</td></tr>
+  <tr class="row-MAJOR"><td class="slug">wrists_bound_beam_macro</td><td class="sev MINOR">MINOR</td><td>Dark jagged shape beside nail/blood at wrist crease — ambiguous (torn skin/splinter vs extra appendage).</td></tr>
+  </table>
+</div>
+
+<div class="note">
+  <strong>Status: FULL SWEEP COMPLETE.</strong> All 233 stills across the 11 Cross shorts + the Psalm 22 long-form film have now been eye-audited directly (Read tool, not sidecars). Nothing has been re-rendered yet — this is the findings-only pass called for in RESUME.md before any redo spend.
+  <br><br>
+  <strong>Recurring root causes across the whole corpus</strong> (fix once at the prompt/ref level, clears dozens of instances):
+  <ol>
+    <li><strong>Bent/floating nail hands</strong> — the single biggest repeat defect. Nearly every crucifixion close-up (face_on_cross, bowed_head_finished, vinegar_sponge_reed, golgotha_hill_wide across almost all 11 pieces) shows a nail lying flat/bent across the palm or floating in front of fingers instead of piercing through. <code>it_is_finished_john1930/nail_through_hand.png</code> proves the model CAN render it correctly — good redo reference.</li>
+    <li><strong>Candle-vs-clay-oil-lamp trap</strong> — hit 14+ times across night-writing/scribe scenes (psalm_scroll_night in 4 shorts, david_writing_psalm in 3 shorts, coin_on_scroll, child_sleeping_lamp, plus 8 hits in the long-form: quill_ink_drop, david_hands_lyre, david_old_deathbed, david_scroll_sealed, disputed_word_marks, first_century_reader, scholar_hand_on_text, scholars_debate_two, scribe_over_manuscripts, synagogue_listeners_lean). This is the single most repeated defect in the whole corpus — reinforce "clay oil lamp, wick in spout, never a candle/lantern" in every scribe/night-reading scene prompt.</li>
+    <li><strong>Legible gibberish Hebrew/text on scrolls</strong> — psalm_scroll_night (x4), prophet_scroll (x2), coin rims, zechariah scrolls. Any close-up scroll draws real-looking letterforms in nonsense sequences.</li>
+    <li><strong>Dome of the Rock / Islamic-era skyline</strong> — zechariah_night_scroll (2 pieces) + storm_over_jerusalem (longform) — the named anachronism trap keeps recurring in period-Jerusalem night skylines.</li>
+    <li><strong>Cloned/duplicated faces</strong> — look_up_faces in both forsaken_cry and pierced_zech1210 shows the same Jesus-like face repeated 3x for a crowd of onlookers.</li>
+    <li><strong>Church steeple/cross-finial towers</strong> in period skylines — grace_poured_sky (2 pieces), john_leads_home, golgotha_hook.</li>
+  </ol>
+</div>
+
+<script>
+document.querySelectorAll('.filters button').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.f;
+    document.querySelectorAll('table tr').forEach(tr=>{
+      if(tr.querySelector('th')) return;
+      const sevCell = tr.querySelector('.sev');
+      if(!sevCell) return;
+      const sev = sevCell.textContent.trim();
+      let show = true;
+      if(f==='CRITICAL') show = sev==='CRITICAL';
+      else if(f==='MAJOR') show = sev==='CRITICAL' || sev==='MAJOR';
+      else if(f==='MINOR') show = true;
+      else if(f==='all') show = sev!=='CLEAN';
+      tr.style.display = show ? '' : 'none';
+    });
+  });
+});
+</script>
+
+</body>
+</html>

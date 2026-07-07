@@ -370,6 +370,8 @@ def main():
     ap.add_argument("--only", default="", help="rebuild only these beat numbers (e.g. 3,17); others reuse existing segs")
     ap.add_argument("--pool", default="", help="visual pool dir (default: this episode's). Graduation seam: any piece can use the engine")
     ap.add_argument("--page", default="", help="WxH, e.g. 1080x1920 for a 9:16 short (default 1920x1080)")
+    ap.add_argument("--no-ticks", action="store_true", help="drop the per-cut tick SFX (the 1900Hz snap); slams/whooshes/heartbeat stay")
+    ap.add_argument("--skip-stills-gate", action="store_true", help="bypass the fail-closed stills human-gate (only when deliberately skipping review)")
     a = ap.parse_args()
     global POOL, WORK, DYN, PAGE
     if a.pool:
@@ -386,6 +388,13 @@ def main():
         base.dc.OUT_W, base.dc.OUT_H = w, h  # dynamic_cam runtime seam (file untouched)
         if h > w:                            # portrait: caption furniture scaled to the shorts look
             cl.BASE_H = 1560                 # kinetic ~47px on a 1080-wide page (matches the locked short)
+    if not a.lint and not a.skip_stills_gate:      # #1 fail-closed STILLS HUMAN-GATE (grandfathered if no gate.json)
+        import sys as _sys
+        if str(ROOT) not in _sys.path:
+            _sys.path.insert(0, str(ROOT))
+        import stills_gate
+        if stills_gate.check(POOL, stage="build") != 0:
+            _sys.exit(3)
     spec = json.loads((POOL / a.spec).read_text(encoding="utf-8"))
     for p, q in zip(spec["beats"], spec["beats"][1:]):
         assert p["t"][1] > p["t"][0] and abs(p["t"][1] - q["t"][0]) < 1e-6, f"beats not contiguous at {p['t']}"
@@ -517,7 +526,7 @@ def main():
             src = e["sfx"] if "sfx" in e else TICK
             sfx_events.append((e["at"], src, e.get("gain", -13), 0.25, 0.08))
         cp = b.get("cap")
-        if (spec.get("cut_ticks") and i > 1 and not bb
+        if (spec.get("cut_ticks") and not a.no_ticks and i > 1 and not bb
                 and not (cp and cp["type"] == "redletter")):
             sfx_events.append((t0, TICK, spec.get("tick_gain", -19), 0.2, 0.06))
         for ev in b.get("sfx", []):

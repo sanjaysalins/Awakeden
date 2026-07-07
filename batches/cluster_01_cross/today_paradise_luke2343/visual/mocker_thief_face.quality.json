@@ -1,0 +1,14 @@
+{
+  "slug": "mocker_thief_face",
+  "hash": "d97b3379397d1fbc",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true
+  },
+  "notes": "v2: hard-faced SHORT-hair criminal (no longer a Jesus-lookalike), arm out along beam, roped, no wound. Indep-review PASS + eye.",
+  "reviewer": "in-chat-agent"
+}

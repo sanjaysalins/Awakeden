@@ -1,0 +1,11 @@
+{
+  "image": "weighing_scales_silver.png",
+  "verdict": "PASS",
+  "flags": [
+    "impossible one-pan balance -> two pans",
+    "plain coins",
+    "inked"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

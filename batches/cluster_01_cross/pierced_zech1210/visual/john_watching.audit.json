@@ -1,0 +1,12 @@
+{
+  "image": "john_watching.png",
+  "verdict": "PASS",
+  "flags": [
+    "anime face->inked",
+    "empty cross->Christ with crown + open pierced hands (nails correct)",
+    "hallucinated titulus-scroll + heraldic coin removed via tight frame",
+    "storm sky"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

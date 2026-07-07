@@ -1,0 +1,10 @@
+{
+  "image": "john_leads_home.png",
+  "verdict": "PASS",
+  "flags": [
+    "church campanile + Latin crosses -> plain limestone town",
+    "no coin"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

@@ -1,0 +1,10 @@
+{
+  "image": "jesus_stands_over_sleepers.png",
+  "verdict": "PASS",
+  "flags": [
+    "modern shoe -> sandals",
+    "hallucinated coin + gibberish scroll removed (bare ground)"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

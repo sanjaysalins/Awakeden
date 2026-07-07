@@ -1,0 +1,10 @@
+{
+  "image": "disciples_sleeping.png",
+  "verdict": "PASS",
+  "flags": [
+    "glitter/sequin speckle removed -> matte cloth",
+    "inked"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

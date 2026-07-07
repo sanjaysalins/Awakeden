@@ -249,6 +249,87 @@
       "message": "frame/border wording draws a picture-frame pillarbox inside the image",
       "fix": "'ONE single full-bleed illustration filling the entire frame, no border or divider'",
       "provenance": "EW01 gold-frame pillarbox fix"
+    },
+    {
+      "id": "no-brand-or-modern-logo",
+      "axis": "anti-hallucination", "severity": "block", "check": "llm", "stage": "still",
+      "message": "a coin / shield / seal / banner renders a MODERN BRAND or POP-CULTURE emblem (a Batman bat-wing, a corporate mark) or a neoclassical Western portrait, instead of a period device",
+      "fix": "PURE-POSITIVE and keep it small/soft: 'a small worn ancient silver coin, a faint indistinct archaic head in low relief, edges corroded' — never describe a crest / emblem / logo / detailed face; a legible modern device on a prop is the tell",
+      "provenance": "corpus red-team 2026-07-04: thirty_pieces Batman bat-wing on the coins (thirty_coins_scatter, silver_and_blood)"
+    },
+    {
+      "id": "no-style-drift-keep-house-ink",
+      "axis": "composition", "severity": "block", "check": "regex", "stage": "still",
+      "pattern": "\\b(anime|manga|chibi|cel[- ]?shad\\w*|ukiyo[- ]?e|hokusai|woodblock|water ?colou?r|photoreal\\w*|photo[- ]?realistic|3d ?render|pixar|disney|baroque oil|oil painting|impasto)\\b", "flags": "i",
+      "message": "naming a foreign art style pulls the still off the inked graphic-novel house look; even unprompted, individual stills drift into anime/cel-shade, ukiyo-e/Hokusai wave, watercolour, photoreal, or soft painterly Baroque and read as a different artist beside their siblings",
+      "fix": "use ONLY the project INK style string verbatim; never name another medium/artist; post-render, reject any still that does not match the bold-black-ink line look of the set (a whole-scene Hokusai 'Great Wave' or glossy anime face = redo)",
+      "provenance": "corpus red-team 2026-07-04: ocean_creation_wide (Hokusai), risen_mercy_hand/john_watching/mary_infant_shadow (anime cel-shade), david/shepherd stills (painterly)"
+    },
+    {
+      "id": "no-classical-or-islamic-or-medieval-skyline",
+      "axis": "biblical", "severity": "block", "check": "regex", "stage": "still",
+      "pattern": "\\b(parthenon|acropolis|corinthian|ionic|doric|pediment|colonnade|onion dome|golden dome|dome of the rock|minaret|gothic|pointed arch|leaded glass|lattice glass|crenellat\\w*|castellat\\w*|battlement|campanile|bell[- ]?tower)\\b", "flags": "i",
+      "message": "period-Jerusalem skylines drift wrong-culture: a Greek/Parthenon colonnade+pediment temple, an Islamic golden onion dome (Dome of the Rock) or minaret, or a medieval Gothic/crenellated/leaded-glass building — all centuries out of place",
+      "fix": "describe ONLY period architecture: flat-roofed pale limestone houses, plain stone walls, round/flat Roman arches, unglazed window openings; the temple is the plain Second-Temple stone platform (Zerubbabel-era for pre-exilic prophets, Herodian for the crucifixion) — never a dome, minaret, pointed arch, colonnade-and-pediment, or battlement",
+      "provenance": "corpus red-team 2026-07-04: gethsemane_olives_night (Greek temple x2 pieces), zechariah_night_scroll + storm_over_jerusalem (Dome of the Rock/minaret), synagogue_listeners_lean + ninth_hour_darkness (Gothic/leaded-glass/castellated)"
+    },
+    {
+      "id": "no-glass-or-metal-lantern",
+      "axis": "biblical", "severity": "block", "check": "regex", "stage": "still",
+      "pattern": "\\b(lantern|hurricane lamp|kerosene|oil lamp with a? ?glass|glass ?(?:globe|chimney)|carriage lamp|sconce|chamberstick|candlestick)\\b", "flags": "i",
+      "message": "night/scribe scenes light by a modern GLASS hurricane/kerosene/carriage lantern or a wax candle in a candlestick — anachronistic; even a correct clay lamp is drawn with the wick standing in the CENTRE of the bowl like a candle",
+      "fix": "a single low clay oil lamp: 'a small pinched-spout clay oil lamp, a low warm flame at its rim/spout' — never glass, never a chimney/globe, never a candlestick, never a central upright wick",
+      "provenance": "corpus red-team 2026-07-04: candle/lantern trap corpus-wide (david_old_deathbed, disputed_word_marks, old_king_hands_rings glass lanterns; child_eyes_closing/child_sleeping_lamp central-wick hybrids); complements no-freestanding-candle-outdoors"
+    },
+    {
+      "id": "only-one-christ-never-in-the-crowd",
+      "axis": "biblical", "severity": "block", "check": "llm", "stage": "still",
+      "message": "a second Christ-lookalike (white robe, long centre-parted hair, beard) is drawn STANDING AMONG the mourner / 'us' / sinner crowd, while Christ is also the figure on the cross — two Christs, and doctrinally He is the one lifted up, not one of the guilty crowd",
+      "fix": "the crowd/'us' figures are ordinary distinct people (vary age, build, hair, dress); reserve the Christ face+robe for the single Christ subject; when the beat is people beneath the cross, give them common tunics and covered heads, never the Christ likeness",
+      "provenance": "corpus red-team 2026-07-04: us_under_cross_shadow Christ-double in 4 pieces (a shared reuse-bank still)"
+    },
+    {
+      "id": "no-cloned-face-or-faceless-blob",
+      "axis": "character", "severity": "warn", "check": "llm", "stage": "still",
+      "message": "a crowd renders as the SAME face repeated (identical beard/nose/hairline) or drops a faceless dark void/blob figure at a focal point",
+      "fix": "give each visible crowd member distinct features (age/build/hair/expression); push true background figures to clean silhouettes at the EDGES, never a featureless blob in the centre; keep <=3 detailed faces and let the rest be shadow",
+      "provenance": "corpus red-team 2026-07-04: us_under_cross_shadow cloned trio + centre faceless void; look_up_faces three cloned Jesus faces"
+    },
+    {
+      "id": "crucifixion-continuity-crown-and-occupied-cross",
+      "axis": "biblical", "severity": "warn", "check": "llm", "stage": "still",
+      "message": "within one piece the crucified Christ is INCONSISTENT — crowned with thorns in one cut and bare-headed in the sibling cut; or the central cross is drawn EMPTY during a beat where He is still hanging (casting lots, mocking, the ninth-hour darkness)",
+      "fix": "standardise crown-of-thorns PRESENT on EVERY cross frame in a piece (add it where missing, never strip it); during any hanging beat the central cross must bear Christ — a bare cross is only legitimate at dawn/empty-tomb beats",
+      "provenance": "corpus red-team 2026-07-04: crown present/absent split across forsaken_cry/i_thirst/into_thy_hands/woman_behold/crucifixion_foretold; empty-cross-during-lots in seamless_robe_lots (2 pieces)"
+    },
+    {
+      "id": "one-fixing-method-per-body",
+      "axis": "physics", "severity": "warn", "check": "llm", "stage": "still",
+      "message": "the SAME crucified body is fixed two ways at once — a nail through one hand but the other wrist and/or the feet lashed with rope/cord",
+      "fix": "commit to ONE method for the whole body: if nailed, nail both hands and the feet (no rope on wrists/ankles); if the scene needs binding, rope all points — never mix nail on one hand and rope on the other",
+      "provenance": "corpus red-team 2026-07-04: golgotha_hill_wide nailed-one-side/roped-the-other in into_thy_hands/forsaken_cry/pierced_zech1210/woman_behold"
+    },
+    {
+      "id": "no-finery-on-a-stripped-victim",
+      "axis": "biblical", "severity": "warn", "check": "llm", "stage": "still",
+      "message": "a crucified figure (Christ or a thief) wears an ornate embroidered robe, gold-trim cuffs, or jewellery — but a crucifixion victim was stripped",
+      "fix": "the crucified body wears only a plain undyed loincloth; no robe, no gold trim, no collar, no jewellery, no coloured finery",
+      "provenance": "corpus red-team 2026-07-04: today_paradise confession_face_hands ornate red robe + gold cuff on a roped man"
+    },
+    {
+      "id": "no-modern-footwear-or-gear",
+      "axis": "biblical", "severity": "warn", "check": "llm", "stage": "still",
+      "message": "modern objects slip in on figures/props: a closed rounded shoe/loafer (feet should be open leather sandals), athletic tape wrapping a hand, a wristwatch, eyeglasses, a screw bench-vise on a workbench, or a telegraph/utility pole with strung wire on a rooftop",
+      "fix": "feet wear open strap sandals or are bare; a carpenter's bench uses wooden pegs/holdfasts (no metal screw-vise); rooftops carry only period masts/none, no wires; hands are bare skin with wounds, never taped",
+      "provenance": "corpus red-team 2026-07-04: jesus_stands_over_sleepers/jesus_leads_three loafers, 05_pierced_hand sports-tape, carpenter_bench_rest screw-vise, 04/01c telegraph poles"
+    },
+    {
+      "id": "bones-and-lots-not-cartoon",
+      "axis": "anti-hallucination", "severity": "warn", "check": "regex", "stage": "still",
+      "pattern": "\\b(bones?|skeleton|rib cage|dog[- ]?treat)\\b", "flags": "i",
+      "message": "the word 'bones' (e.g. Ps 22 'all my bones are out of joint') renders as cartoon double-knobbed dog-treat bone icons; the same icon shows up for 'lots'",
+      "fix": "for the body: show the wasted torso/ribs THROUGH the skin ('gaunt, every rib visible under stretched skin'), not loose bones on the ground; for lots: 'small carved animal knucklebones (astragali) in the dust' — never a cartoon dog-bone shape",
+      "provenance": "corpus red-team 2026-07-04: garment_tug + lots_dice_closeup dog-treat bones; complements lots-are-knucklebones-not-dominoes"
     }
   ]
 }

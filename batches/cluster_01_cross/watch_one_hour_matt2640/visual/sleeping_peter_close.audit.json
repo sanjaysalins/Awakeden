@@ -1,0 +1,10 @@
+{
+  "image": "sleeping_peter_close.png",
+  "verdict": "PASS",
+  "flags": [
+    "age drift fixed -> dark-haired middle-aged",
+    "inked"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

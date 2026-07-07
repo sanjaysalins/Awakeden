@@ -1,0 +1,14 @@
+{
+  "slug": "two_thieves_wide",
+  "hash": "c2fa9a1715c18084",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true
+  },
+  "notes": "three crosses on the hill, clean",
+  "reviewer": "in-chat-agent"
+}

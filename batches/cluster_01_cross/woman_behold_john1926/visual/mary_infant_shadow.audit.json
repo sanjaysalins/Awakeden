@@ -1,0 +1,10 @@
+{
+  "image": "mary_infant_shadow.png",
+  "verdict": "PASS",
+  "flags": [
+    "anime/cel-shade -> inked",
+    "Mary + infant + cross shadow"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

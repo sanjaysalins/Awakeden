@@ -1,0 +1,9 @@
+{
+  "image": "father_holds_sleeping_child.png",
+  "verdict": "PASS",
+  "flags": [
+    "hurricane lamp + hoodie + painterly + coin -> clay lamp, plain blanket, inked, bare ledge"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

@@ -1,6 +1,101 @@
 # RESUME.md — start here next session
 
-## ⚡⚡⚡ NEXT SESSION START HERE (updated 2026-07-05 EOD) — PSALM-22 LONG-FORM: CAMERA-VARIETY REBUILD IN FLIGHT ⚡⚡⚡
+## ⚡⚡⚡ NEXT SESSION START HERE (updated 2026-07-06 EOD) — CROSS-SHORTS: FULLY ANIMATED + BEEP-FREE; finish vinegar rebuild + redo 3 today_paradise stills ⚡⚡⚡
+
+> **Where we are (2026-07-06):** the 11 Cross shorts got a huge quality pass. Stills all audited + green,
+> heroes given epic cinematic Kling moves, EVERY non-writing still now Kling-animated, the annoying cut-tick
+> beep removed. Two small fix jobs remain (below). Review gallery (all 11 videos):
+> `file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/_CROSS_SHORTS_REBUILT.html`
+
+### ✅ DONE TODAY (2026-07-06)
+1. **Stills audit + fixes (all 11 shorts GREEN).** Eye-audited 47 un-audited main stills + 14 pilot
+   `_byteplus` stills full-res (parallel vision agents + I verified every FAIL). **7 re-rendered + eye-verified:**
+   - main: `lots_cup_close` (dog-bones→stones), `06_cross_over_us` (fists→open nailed hands+crown),
+     `thief_looks_to_jesus` (nailed→roped), `mary_and_john` (empty cross→crucified Christ)
+   - pilot published set (`_byteplus/reshoot/`, drives the LIVE v2 video — NOT the `nbp/` set):
+     `01c_soldiers_gamble` (fists+floating nails), `psalm22_scroll_david` (pseudo-Hebrew→illegible),
+     `willing_offering`/`06_cross_over_us` (fists+hallucinated signature).
+   - Clean stills PASS-recorded via `render_lint.write_audit`. `ship_gate.py --check` = 11/11 GREEN.
+2. **Epic cinematic Kling heroes (6).** Upgraded `face_on_cross, risen_mercy_hand, golgotha_hill_wide,
+   darkness_veil_torn, spear_thrust_up, mary_and_john` from flat push-ins to bold moves (arc-crane / push-through
+   / rise / sweep). **Verified: epic AND faithful, zero morph.** User: "this is amazing". A literal 360/orbit
+   on a flat inked panel MORPHS (invents hidden sides) — use partial arc + crane, NOT a full spin.
+3. **Every non-writing still now Kling-animated.** Rendered the 23 remaining non-writing stills (~$15),
+   QC'd 23/23 zero-morph (busy scenes → gentle push-in). **8 writing stills (scrolls/coins) STAY static** —
+   Kling garbles text ([[feedback-never-animate-writing]]).
+4. **Beep removed.** The "beeping" = the living-page **1900 Hz cut-tick** (`make_tick`, fired on every cut).
+   Added a reusable **`--no-ticks`** flag to `build_livingpage_16x9.py`; all 10 rebuilt with it. Slams/whooshes/
+   heartbeat/music kept. Pilot never had it (its only tone is a low reverent bell).
+5. Pilot (`father_forgive_them`) is a SEPARATE build: live video = `visual/_byteplus/father_forgive_them_mocomic_v2_scored.mp4`
+   (built by `build_mocomic_v2.py --clips` → `add_music_sfx.py`), draws from `_byteplus/reshoot/` stills +
+   `_byteplus/clips/`. The `nbp/` set + `_mocomic.mp4` are the OLD v1, NOT published. Pilot fully fixed+rebuilt today.
+
+### ▶▶ TOMORROW — FIRST STEP (today_paradise + vinegar all DONE 2026-07-07)
+1c. ✅ **today_paradise thief stills re-fixed AGAIN + VINEGAR redone to hyssop-reed (2026-07-07 PM).**
+   User review pass: `penitent_thief_face` → distinct bald OLDER criminal face (not Christ);
+   `thief_looks_to_jesus` → penitent thief on his OWN cross, dusty Golgotha, both crosses clear (was bench-press).
+   **VINEGAR (`vinegar_sponge_reed`, used in `i_thirst` + `it_is_finished`) fully redone**: reed→**hyssop on a
+   long reed**, offerer (soldier) at the BASE reaching UP to the elevated Christ, deep darkness (not storm),
+   Christ stripped to loincloth. **Proven BOTH ways**: my eye-audit + the **5-CLI biblical-facts panel**
+   (`independent_review.py --type biblical-facts`, 2x) — substance clean (John 19:29 hyssop, Matt/Mark reed
+   harmonized, Luke 23:44-45 darkness, soldier defensible per John 19:23). All 3 stills PASS-audited,
+   re-animated (zero-morph), all 3 shorts rebuilt + re-scored + website frames refreshed. New standing rule
+   locked: [[every-still-biblically-driven]] + fact card [[crucifixion-still-facts]]. ~$5 spend this session.
+   NOTE: living-page batch pieces are NOT yet wired into `bib_validate` (it keys on scene_plan.json, they use
+   livingpage_short.spec.json) — wiring that is an open follow-up. The 4 `_byteplus/vinegar_*` experiment PNGs
+   are unreferenced leftovers (user flagged for deletion earlier) — safe to delete, not yet done.
+1b. ✅ **3 today_paradise stills REDONE + re-animated + rebuilt (2026-07-07).** Fixed via
+   `today_paradise_luke2343/_render_stills.py` (seedream-4-5, positive-only prompts): `penitent_thief_face`
+   (pole→thief on a single CROSS, close face, wrist roped to crossbeam), `thief_looks_to_jesus`
+   (pole→arms roped OUT along his crossbeam, eyeline to distant single Christ-cross; dropped the ref so
+   the thief has no crown), `jesus_turns_to_thief` (TWO crosses→Christ on ONE cross, thorn-crowned).
+   Eye-verified full-res + PASS-audited + re-animated (zero-morph push-ins) + short rebuilt + re-scored +
+   website frames refreshed. jesus_turns_to_thief lands on the Luke 23:43b pivot line. ~$2.55 spend.
+   Scored: `file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/today_paradise_luke2343/visual/today_paradise_luke2343_scored.mp4`
+0. ✅ **VINEGAR NSFW FIX — COMPLETE (2026-07-06 EOD).** User flagged `vinegar_sponge_reed` as NSFW (dark
+   blob-on-shaft at the mouth read crudely). Re-rendered the still → clear **pale porous sea-sponge on a reed
+   held by a soldier**, wider framing; re-animated as a **PULL-BACK** (push-in re-tightens into the crude macro);
+   installed to both `i_thirst_john1928` + `it_is_finished_john1930` clips; both rebuilt (0 fail) + website frames
+   refreshed. Eye-verified clean. Nothing left here.
+1. **REDO 3 `today_paradise_luke2343` stills + their animations** (user feedback 2026-07-06, gallery
+   `file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/_TODAY_PARADISE_STILLS.html`):
+   - **`thief_looks_to_jesus`** — the thief is bound with rope to a **POLE/stake**; he should be **crucified on a
+     CROSS**, arms roped OUT along a crossbeam (roped is correct for consistency — but on a cross shape, not a pole),
+     head turned to Christ on the adjacent cross.
+   - **`penitent_thief_face`** — same defect: bound to a pole; redo as the thief on a **CROSS** (arms out, roped).
+   - **`jesus_turns_to_thief`** — **Jesus appears on TWO crosses instead of one**; redo with Christ on ONE cross
+     turning toward the thief.
+   - Recipe per still: re-render via `batches/cluster_01_cross/father_forgive_them/byteplus_seedream.py`
+     (`BYTEPLUS_IMG_MODEL=seedream-4-5-251128`, `--ref ../crucifixion_foretold_ps2218/visual/face_on_cross.png`
+     for Christ consistency, `--size 1440x2560`) → eye-verify → place into `today_paradise_luke2343/visual/<slug>.png`
+     + `render_lint.write_audit PASS` → re-animate the clip (`_hf_animate_short.hf_animate`, gentle move) →
+     install to `today_paradise/visual/clips/<slug>.mp4` → rebuild.
+3. **Rebuild today_paradise:** `build_livingpage_16x9.py --pool batches/cluster_01_cross/today_paradise_luke2343/visual
+   --spec livingpage_short.spec.json --clips --page 1080x1920 --no-ticks` → then `today_paradise_luke2343/_score.py`
+   → then `_website/build_readpage.py --force`.
+
+### 🔧 REUSABLE RECIPE (rebuilt the scratchpad drivers if the temp dir is gone)
+- **Per-piece short rebuild** (move stale non-hero clips aside → build → score): for piece `<P>`,
+  `build_livingpage_16x9.py --pool batches/cluster_01_cross/<P>/visual --spec livingpage_short.spec.json --clips --page 1080x1920 --no-ticks`
+  then `batches/cluster_01_cross/<P>/_score.py`. A missing `clips/<slug>.mp4` auto-falls-back to $0 dynamic-cam.
+  HERO clips (kept, never moved to dyncam): face_on_cross, risen_mercy_hand, golgotha_hill_wide, darkness_veil_torn,
+  spear_thrust_up, mary_and_john, bowed_head_finished, thief_looks_to_jesus, grace_poured_sky, look_up_faces.
+- **Kling animate one still**: `_hf_animate_short.hf_animate(png, out, prompt, 5, aspect_ratio="9:16")` — faithful
+  wrapper ("the inked artwork never redraws/morphs; ONLY the camera moves"). Gentle push-in on busy/multi-figure.
+- **Cost:** ~$0.65/Kling clip · ~$0.10-0.30/BytePlus still. Session spend so far ≈ **$27** (7 stills + ~31 clips).
+- **⚠️ shorts are 9:16; long-form is 16:9** — these clips DON'T reuse cross-aspect. A 16:9 long-form animation pass
+  is a SEPARATE job (user may ask — price it). The reusable cross-aspect asset is the STILL, not the clip.
+
+### ⏸️ STILL OPEN (not started, lower priority)
+- The **4-still composition rethink** (06_cross_over_us→crowd-under-shadow, lots→robe+lots action, thief→two-cross
+  eyeline, mary→tight faces) — PAUSED when we pivoted to hero animation. The epic hero animation + these
+  today_paradise redos partly address it; revisit if the user still wants the composition changes.
+- **16:9 long-form animation pass** (see cost caveat above).
+- The Cross-shorts changes are **not committed / not pushed** — on branch `cluster1-pilot-lock-father-forgive-them`.
+
+---
+
+## ⚡⚡ PRIOR (2026-07-05 EOD) — PSALM-22 LONG-FORM: CAMERA-VARIETY REBUILD IN FLIGHT ⚡⚡
 
 > **Where we are (2026-07-05):** finished the Psalm-22 long-form stills redo AND upgraded the
 > $0 motion engine so the film is no longer "bland Ken-Burns everywhere." User feedback:

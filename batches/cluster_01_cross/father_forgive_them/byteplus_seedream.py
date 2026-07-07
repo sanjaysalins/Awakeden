@@ -31,15 +31,16 @@ def _load_key() -> str:
 BASE = os.getenv("BYTEPLUS_BASE_URL", "https://ark.ap-southeast.bytepluses.com/api/v3")
 MODEL = os.getenv("BYTEPLUS_IMG_MODEL", "seedream-4-0-250828")
 
-STYLE = (" Drawn in INKED BIBLICAL GRAPHIC-NOVEL / cinematic manga ILLUSTRATION style: bold clean "
-         "black ink linework and outlines, flat cel-shaded comic colour, hand-drawn 2D artwork, "
-         "dramatic ink shadows. NOT a photograph, NOT photorealistic, NOT a glossy 3D render, NOT "
-         "soft airbrushed anime — strong visible ink lines. Reverent and holy atmosphere, ancient "
-         "Near-Eastern period-accurate, mature teen-and-up tone. ABSOLUTELY NO text, letters, words, "
-         "numbers, captions, labels, titles, inscriptions, speech bubbles, scrolls of legible writing, "
-         "watermark or signature ANYWHERE in the image.")
-ONE = (" ONE single uninterrupted full-bleed illustration filling the entire frame — absolutely NO "
-       "split screen, NO side panel, NO inset, NO grid, NO border or divider of any kind.")
+# PURE-POSITIVE style (2026-07-04): the old STYLE named "NO text / scrolls of legible writing" and
+# "NOT anime / NOT photoreal" to forbid them — which by the seedream no-negative-channel rule is what
+# DREW the gibberish scrolls + the anime/photoreal style drift across the cluster. Positives only now;
+# writing surfaces are left UNMENTIONED (the text-free style) so the model doesn't paint letters.
+STYLE = (" Drawn in an INKED BIBLICAL GRAPHIC-NOVEL illustration style: bold clean black ink linework "
+         "and outlines, flat cel-shaded comic colour, hand-drawn 2D artwork on matte paper, dramatic "
+         "ink shadows, strong visible hand-inked lines. Reverent and holy atmosphere, ancient "
+         "Near-Eastern period-accurate, mature teen-and-up tone. Every surface is plain, bare and "
+         "unmarked.")
+ONE = " ONE single full-bleed illustration filling the entire frame, no border or divider."
 
 PROMPTS = {
     "1": ("pierced_hand",

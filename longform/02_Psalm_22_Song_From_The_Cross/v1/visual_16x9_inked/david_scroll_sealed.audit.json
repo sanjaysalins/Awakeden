@@ -1,0 +1,10 @@
+{
+  "image": "david_scroll_sealed.png",
+  "verdict": "PASS",
+  "flags": [
+    "eye-audited 2026-07-05 LF redo",
+    "clean"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

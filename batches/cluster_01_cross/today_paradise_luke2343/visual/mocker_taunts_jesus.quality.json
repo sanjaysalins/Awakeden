@@ -1,0 +1,14 @@
+{
+  "slug": "mocker_taunts_jesus",
+  "hash": "a979ab9d04f92575",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true
+  },
+  "notes": "Both crucified (correct pose, arms up-out roped/nailed, hanging). Mocker snarls at sombre Christ; Christ LARGE + clearly NAILED (wound+blood); mocker ROPED clean hands, no blood. Replaces the mob (taunt was the fellow criminal, Luke 23:39). Indep-review + user approved.",
+  "reviewer": "in-chat-agent"
+}

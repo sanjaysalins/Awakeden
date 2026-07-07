@@ -1,0 +1,14 @@
+{
+  "slug": "crowd_mocking",
+  "hash": "c094e59181768b6f",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true
+  },
+  "notes": "hostile varied mob, no clown-nose, no Jesus-lookalike. Indep-review PASS + eye.",
+  "reviewer": "in-chat-agent"
+}
