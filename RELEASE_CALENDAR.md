@@ -27,7 +27,23 @@ Public one-liner (unchanged): *Awakeden — finding Jesus in the whole Bible, on
 | **S6 UNTO US** (aim: December) | Nativity: Bethlehem, the manger, Boaz the redeemer | ~4 shorts + EW09 Boaz | narration voiced |
 | **S7 THE THRONE** | Titles & the reigning Christ | ~5 shorts | planned |
 
-## SEASON 1 — THE CROSS (4 weeks, Mon/Wed/Fri)
+## CADENCE (user, 2026-07-08): LAUNCH BULK, then 8 shorts + 2-3 longs / month
+
+- **Launch day bulk drop:** 6 Cross shorts (Pierced, Thirty Pieces, Crucifixion Foretold,
+  Watch One Hour, Father Forgive Them, Today in Paradise) + the Psalm 22 long + the
+  "Season 1 - The Cross" playlist. The channel opens with the whole first act; leaves
+  18 shorts + 5 longs banked (>2 months runway).
+- **Month 1 (post-launch):** Forsaken Cry, I Thirst, Woman Behold, It Is Finished,
+  Into Thy Hands, Sign of Jonah (pivot) + 2 new Resurrection builds = 8 shorts.
+  Longs: Isaiah 53 (mid) + EW01 Two Goats (end). Build: EW05 Jonah film + 4 Resurrection shorts.
+- **Month 2 (He Is Risen):** 8 Resurrection shorts (reuse-first ~$2 each).
+  Longs: EW05 Jonah film (mid) + Passover Lamb (end).
+- **Month 3 (Risen closes -> Shadows opens):** Lazarus pair + Paul creed + 5 Shadows
+  distills. Longs: Bronze Serpent + Seed of the Woman.
+- **Month 4 (Shadows):** Exodus distills; longs EW08/EW04 films (build) or held EW01.
+- December = hold Season 6 (Nativity) for its month.
+
+## SEASON 1 — THE CROSS (weekly detail, original 3/wk draft below for reference)
 
 Ordering follows the Passion narrative itself (prophecy → garden → the seven words in
 canonical order → finished), which also satisfies the plan's hook-first/hero-mid/bridge-last
