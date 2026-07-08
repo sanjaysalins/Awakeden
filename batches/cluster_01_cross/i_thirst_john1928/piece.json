@@ -51,7 +51,23 @@
     "cta_dip": [
       "49.4",
       "0.5"
-    ]
+    ],
+    "dips_meta": [
+      {
+        "phrase": "\"My strength is dried up like a potsherd; and my tongue cleaveth to my jaws; and thou hast brought me into the dust of death.\"",
+        "pre": 0.01,
+        "post": 0.14
+      },
+      {
+        "phrase": "Then John records the dying Jesus' cry: \"I thirst.\"",
+        "pre": 0.01,
+        "post": 0.15
+      }
+    ],
+    "cta_meta": {
+      "phrase": "Bring Him your thirst — and drink. That water is Himself.",
+      "pre": 1.04
+    }
   },
   "register": {
     "id_prefix": "it",

@@ -51,6 +51,9 @@ def locate(vfolder: Path) -> dict:
         vfolder / "visual_16x9" / "scene_plan.json",
         vfolder / "visual" / "scene_plan.json",
         vfolder / "scene_plan.json",
+        # living-page batch pieces (cluster shorts) — beats spec instead of scene plan
+        vfolder / "visual" / "livingpage_short.spec.json",
+        vfolder / "visual" / "mocomic_v2.spec.json",
     ):
         if cand.exists():
             scene_plan = cand
@@ -59,9 +62,14 @@ def locate(vfolder: Path) -> dict:
     return {"narration": narration, "scene_plan": scene_plan, "images_dir": images_dir}
 
 
-def find_png(images_dir: Path, sid: int) -> Path | None:
+def find_png(images_dir: Path, sid: int, title: str = "") -> Path | None:
     hits = sorted(images_dir.glob(f"{sid:02d}_*.png"))
-    return hits[0] if hits else None
+    if hits:
+        return hits[0]
+    # living-page batch stills are named by slug (the scene title), not NN_ prefixed
+    if title and (images_dir / f"{title}.png").exists():
+        return images_dir / f"{title}.png"
+    return None
 
 
 def _write_facts(facts_path: Path, ep, scene_plan) -> None:
@@ -134,7 +142,7 @@ def write_html(ep: bible_kb.EpisodeFacts, audits: dict[int, bible_kb.BiblicalAud
 
     rows = []
     for s in ep.scenes:
-        png = find_png(images_dir, s.sid)
+        png = find_png(images_dir, s.sid, s.title)
         img = f"<img src='file:///{esc(str(png).replace(chr(92), '/'))}'>" if png else "<div class=noimg>no PNG</div>"
         a = audits.get(s.sid)
         if a is None:
@@ -269,7 +277,7 @@ def main() -> int:
     audits: dict[int, bible_kb.BiblicalAudit] = {}
     if not args.facts_only:
         for s in ep.scenes:
-            png = find_png(loc["images_dir"], s.sid)
+            png = find_png(loc["images_dir"], s.sid, s.title)
             if not png:
                 print(f"  scene {s.sid}: no PNG — skipped")
                 continue

@@ -93,7 +93,23 @@
     "cta_dip": [
       "54.45",
       "0.5"
-    ]
+    ],
+    "dips_meta": [
+      {
+        "phrase": "I have glorified thee on the earth: I have finished the work which thou gavest me to do.",
+        "pre": 0.27,
+        "post": 0.11
+      },
+      {
+        "phrase": "When Jesus therefore had received the vinegar, he said, It is finished: and he bowed his head, and gave up the ghost.",
+        "pre": 0.03,
+        "post": 0.08
+      }
+    ],
+    "cta_meta": {
+      "phrase": "He bowed his head so you could lift yours. The work is finished. Enter his rest.",
+      "pre": 0.08
+    }
   },
   "register": {
     "id_prefix": "iif",

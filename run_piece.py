@@ -76,7 +76,32 @@ def stills_bodies(piece_dir: Path, pj: dict, bp=None) -> dict[str, tuple[dict, P
     return out
 
 
-def run_stills(piece_dir: Path, pj: dict, *, render: bool, force: bool, only: set[str]) -> int:
+def reuse_check(piece_dir: Path, slug: str, job: dict) -> Path | None:
+    """REUSE PRE-FLIGHT (P1-3): before paying for a render, find an identical,
+    PASS-audited render of this slug in a sibling piece (same raw prompt + same
+    resolved ref). Shared plates used to be paid for 5-8x across the cluster."""
+    from render_lint.verify import _sidecar_verdict
+    my_ref = (piece_dir / job["ref"]).resolve() if job.get("ref") else None
+    for sib in sorted(piece_dir.parent.iterdir()):
+        if sib == piece_dir or not (sib / "piece.json").is_file():
+            continue
+        try:
+            sjob = load_piece(sib)["stills"]["jobs"].get(slug)
+        except Exception:  # noqa - a malformed sibling manifest must not block a render
+            continue
+        if not sjob or sjob["prompt"] != job["prompt"]:
+            continue
+        sib_ref = (sib / sjob["ref"]).resolve() if sjob.get("ref") else None
+        if sib_ref != my_ref:
+            continue
+        png = sib / "visual" / f"{slug}.png"
+        if png.exists() and _sidecar_verdict(png) == "PASS":
+            return png
+    return None
+
+
+def run_stills(piece_dir: Path, pj: dict, *, render: bool, force: bool, only: set[str],
+               no_reuse: bool = False) -> int:
     from render_lint import arm_audit, lint
     jobs = pj["stills"]["jobs"]
     block = False
@@ -90,8 +115,14 @@ def run_stills(piece_dir: Path, pj: dict, *, render: bool, force: bool, only: se
     if block:
         sys.exit("BLOCKED by lint")
     if not render:
-        n = len([s for s in jobs if not only or s in only])
-        print(f"\n$0 dry-run. --render to spend (~${n * SEEDREAM_USD_PER_IMG:.2f}).")
+        pending = [s for s in jobs if (not only or s in only)
+                   and not (piece_dir / "visual" / f"{s}.png").exists()]
+        reusable = [] if no_reuse else \
+            [s for s in pending if reuse_check(piece_dir, s, jobs[s])]
+        paid = len(pending) - len(reusable)
+        print(f"\n$0 dry-run. --render to spend (~${paid * SEEDREAM_USD_PER_IMG:.2f}"
+              + (f"; {len(reusable)} reusable from siblings: {reusable}" if reusable else "")
+              + ").")
         return 0
 
     from pipeline import cost
@@ -107,6 +138,18 @@ def run_stills(piece_dir: Path, pj: dict, *, render: bool, force: bool, only: se
         if dest.exists() and not force:
             print(f"[skip] {slug}")
             continue
+        if not no_reuse:
+            src = reuse_check(piece_dir, slug, jobs[slug])
+            if src is not None:
+                from render_lint.verify import write_audit
+                dest.write_bytes(src.read_bytes())
+                write_audit(dest, "PASS", [f"reused byte-identical from {src}"],
+                            reviewer=f"reuse:{src.parent.parent.name}")
+                cost.record(pj["piece"], "still", "stills", "reuse", pj["stills"]["model"], 1,
+                            est_usd=0.0, note=f"{dest.name} reused from "
+                            f"{src.parent.parent.name} (saved ~${SEEDREAM_USD_PER_IMG})")
+                print(f"{slug:24} -> reused from {src.parent.parent.name} ($0)")
+                continue
         req = urllib.request.Request(
             BASE_URL, data=json.dumps(body).encode(),
             headers={"Authorization": f"Bearer {bp._load_key()}",
@@ -138,6 +181,31 @@ def animate_prompts(pj: dict) -> dict[str, str]:
     return {slug: base.format(move=move) for slug, move in an["moves"].items()}
 
 
+def clip_src_hash(still: Path, prompt: str, duration: int, aspect_ratio: str) -> str:
+    """Content hash binding a clip to exactly what produced it. Any change to the
+    still bytes, the motion prompt, or the render params re-renders that clip."""
+    import hashlib
+    h = hashlib.sha256()
+    h.update(still.read_bytes())
+    h.update(prompt.encode("utf-8"))
+    h.update(f"|{duration}|{aspect_ratio}".encode())
+    return h.hexdigest()
+
+
+def _clip_state(still: Path, out: Path, prompt: str, an: dict) -> str:
+    """'fresh' (hash matches) | 'stale' (source changed) | 'unhashed' (pre-P1 clip,
+    judged by mtime: clip older than its still = stale) | 'missing'."""
+    if not (out.exists() and out.stat().st_size > 0):
+        return "missing"
+    sha_file = out.with_suffix(".src.sha")
+    if sha_file.exists():
+        want = clip_src_hash(still, prompt, an["duration"], an["aspect_ratio"])
+        return "fresh" if sha_file.read_text(encoding="utf-8").strip() == want else "stale"
+    # grandfathered clip with no sidecar — the still being newer means it was re-rendered
+    # after this clip (the exact shape of the 6 pending audit-fix clips)
+    return "stale" if still.exists() and still.stat().st_mtime > out.stat().st_mtime else "unhashed"
+
+
 def run_animate(piece_dir: Path, pj: dict, *, only: set[str]) -> int:
     if not pj.get("animate"):
         print("(no animate section — this piece's clips come from elsewhere)")
@@ -151,12 +219,179 @@ def run_animate(piece_dir: Path, pj: dict, *, only: set[str]) -> int:
         if only and slug not in only:
             continue
         still, out = pool / f"{slug}.png", clips / f"{slug}.mp4"
-        if out.exists() and out.stat().st_size > 0:
-            print(f"[skip] {slug}")
+        state = _clip_state(still, out, prompt, an)
+        if state == "fresh":
+            print(f"[skip] {slug} (hash-current)")
             continue
+        if state == "unhashed":
+            print(f"[skip] {slug} (pre-hash clip, still older than clip — run --stage "
+                  f"hash-backfill to bind it)")
+            continue
+        if state == "stale":
+            stale_dir = clips / "_stale_from_bad_stills"
+            stale_dir.mkdir(exist_ok=True)
+            dest = stale_dir / out.name
+            if dest.exists():
+                dest.unlink()
+            out.replace(dest)
+            print(f"[stale] {slug} — old clip moved to {stale_dir.name}/, re-rendering")
         ok = hf_animate(still, out, prompt, an["duration"], aspect_ratio=an["aspect_ratio"])
+        if ok:
+            out.with_suffix(".src.sha").write_text(
+                clip_src_hash(still, prompt, an["duration"], an["aspect_ratio"]),
+                encoding="utf-8")
         print(f"SAVED {slug}" if ok else f"FAILED {slug}")
     print("DONE")
+    return 0
+
+
+def run_hash_backfill(piece_dir: Path, pj: dict) -> int:
+    """One-time: bind existing clips that are demonstrably current (clip newer than its
+    still) to their source hash. Clips older than their still are reported STALE and
+    left unhashed — animate will re-render them. Clips with no entry in animate.moves
+    (borrowed from a sibling / animated ad hoc) can't be hash-bound but their
+    still-newer-than-clip staleness is still reported."""
+    pool = piece_dir / "visual"
+    an = pj.get("animate")
+    n_ok = n_stale = 0
+    moves = animate_prompts(pj)
+    for slug, prompt in moves.items():
+        still, out = pool / f"{slug}.png", pool / "clips" / f"{slug}.mp4"
+        if not (out.exists() and still.exists()):
+            continue
+        if out.with_suffix(".src.sha").exists():
+            continue
+        if still.stat().st_mtime > out.stat().st_mtime:
+            print(f"[STALE] {slug}: still is newer than clip — re-animate it")
+            n_stale += 1
+            continue
+        out.with_suffix(".src.sha").write_text(
+            clip_src_hash(still, prompt, an["duration"], an["aspect_ratio"]),
+            encoding="utf-8")
+        print(f"[bound] {slug}")
+        n_ok += 1
+    clips_dir = pool / "clips"
+    if clips_dir.is_dir():
+        for mp4 in sorted(clips_dir.glob("*.mp4")):
+            if mp4.stem in moves:
+                continue
+            png = pool / f"{mp4.stem}.png"
+            if png.exists() and png.stat().st_mtime > mp4.stat().st_mtime:
+                print(f"[STALE:unmanaged] {mp4.stem}: still is newer than clip and no "
+                      f"animate.moves entry — re-animate by hand or add a move")
+                n_stale += 1
+    print(f"backfill: {n_ok} bound, {n_stale} stale")
+    return 0
+
+
+# ---------------------------------------------------------------- score retiming
+# The dip windows in piece.json are hand-tuned absolute seconds bound to ONE synth of
+# the narration. A re-voice silently desyncs them (the engine audit's biggest silent-
+# desync risk). enrich-dips stores WHAT each window covers (the spoken phrase + the
+# hand-tuned pre/post padding, derived from the current alignment); retime recomputes
+# the windows from those phrases against a fresh audio/alignment.json.
+def _load_alignment(piece_dir: Path) -> list[dict] | None:
+    p = piece_dir / "audio" / "alignment.json"
+    if not p.is_file():
+        return None
+    return json.loads(p.read_text(encoding="utf-8"))
+
+
+def _norm_word(w: str) -> str:
+    import re
+    return re.sub(r"[^a-z']", "", w.lower())
+
+
+def _words_in_window(align: list[dict], a: float, b: float) -> list[dict]:
+    return [w for w in align if a <= (w["start"] + w["end"]) / 2 <= b]
+
+
+def _find_span(align: list[dict], phrase: str) -> tuple[float, float]:
+    """Start/end of the phrase as a contiguous normalized word run. Fails loud if the
+    phrase no longer exists (the narration text changed — retune by hand)."""
+    want = [_norm_word(w) for w in phrase.split() if _norm_word(w)]
+    have = [_norm_word(w["w"]) for w in align]
+    for i in range(len(have) - len(want) + 1):
+        if have[i:i + len(want)] == want:
+            return align[i]["start"], align[i + len(want) - 1]["end"]
+    raise SystemExit(f"retime: phrase not found in fresh alignment: {phrase!r} — "
+                     f"the narration changed; re-enrich or hand-tune this dip")
+
+
+def run_enrich_dips(piece_dir: Path, pj: dict) -> int:
+    """One-time per piece: attach phrase + padding meta under each dip window."""
+    align = _load_alignment(piece_dir)
+    if align is None:
+        print("(no audio/alignment.json — cannot enrich)")
+        return 1
+    sc = pj["score"]
+    if sc.get("dips_meta"):
+        print("(already enriched)")
+        return 0
+    metas = []
+    for a_s, b_s, _v in sc["dips"]:
+        a, b = float(a_s), float(b_s)
+        words = _words_in_window(align, a, b)
+        if not words:
+            raise SystemExit(f"enrich: no words inside dip [{a},{b}]")
+        phrase = " ".join(w["w"] for w in words)
+        metas.append({"phrase": phrase,
+                      "pre": round(words[0]["start"] - a, 2),
+                      "post": round(b - words[-1]["end"], 2)})
+    cta_a = float(sc["cta_dip"][0])
+    cta_words = _words_in_window(align, cta_a, sc["base_seconds"] + sc["outro_hold"])
+    sc["dips_meta"] = metas
+    sc["cta_meta"] = {"phrase": " ".join(w["w"] for w in cta_words),
+                      "pre": round(cta_words[0]["start"] - cta_a, 2) if cta_words else 0.0}
+    (piece_dir / "piece.json").write_text(
+        json.dumps(pj, indent=2, ensure_ascii=False), encoding="utf-8")
+    for m in metas:
+        print(f"  dip: pre={m['pre']:+.2f} post={m['post']:+.2f}  \"{m['phrase'][:70]}\"")
+    print(f"  cta: pre={sc['cta_meta']['pre']:+.2f}  \"{sc['cta_meta']['phrase'][:70]}\"")
+    return 0
+
+
+def retime_score(piece_dir: Path, pj: dict) -> dict:
+    """Recompute base_seconds + every dip window from the piece's stored phrases
+    against the CURRENT audio/alignment.json + narration.mp3. Returns the new score
+    dict (does not write)."""
+    align = _load_alignment(piece_dir)
+    sc = dict(pj["score"])
+    if align is None or not sc.get("dips_meta"):
+        raise SystemExit("retime: needs audio/alignment.json and enriched dips_meta "
+                         "(run --stage enrich-dips first)")
+    mp3 = piece_dir / "audio" / "narration.mp3"
+    if not mp3.is_file():
+        raise SystemExit(f"retime: {mp3} missing — synth the narration first")
+    r = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                        "-of", "csv=p=0", str(mp3)], capture_output=True, text=True)
+    sc["base_seconds"] = round(float(r.stdout.strip()), 2)
+    total = sc["base_seconds"] + sc["outro_hold"]
+    # pre/post were stored as (word_start - window_start) / (window_end - word_end),
+    # so the window re-derives as [span_start - pre, span_end + post]
+    new_dips = []
+    for (_a, _b, vol), meta in zip(sc["dips"], sc["dips_meta"]):
+        s, e = _find_span(align, meta["phrase"])
+        new_dips.append([f"{s - meta['pre']:.2f}", f"{e + meta['post']:.2f}", vol])
+    sc["dips"] = new_dips
+    s, _e = _find_span(align, sc["cta_meta"]["phrase"])
+    sc["cta_dip"] = [f"{s - sc['cta_meta']['pre']:.2f}", sc["cta_dip"][1]]
+    if float(sc["dark_trim_end"]) > total:
+        print(f"  ! dark_trim_end {sc['dark_trim_end']} exceeds new total {total:.2f} — check the crossfade point")
+    return sc
+
+
+def run_retime(piece_dir: Path, pj: dict) -> int:
+    old = pj["score"]
+    new = retime_score(piece_dir, pj)
+    print(f"  base_seconds: {old['base_seconds']} -> {new['base_seconds']}")
+    for (oa, ob, _), (na, nb, _) in zip(old["dips"], new["dips"]):
+        print(f"  dip: [{oa},{ob}] -> [{na},{nb}]")
+    print(f"  cta: {old['cta_dip'][0]} -> {new['cta_dip'][0]}")
+    pj["score"] = new
+    (piece_dir / "piece.json").write_text(
+        json.dumps(pj, indent=2, ensure_ascii=False), encoding="utf-8")
+    print("piece.json retimed — re-run --stage score")
     return 0
 
 
@@ -192,6 +427,12 @@ def score_cmd(piece_dir: Path, pj: dict) -> list[str]:
 
 
 def run_score(piece_dir: Path, pj: dict) -> int:
+    # staleness guard: a re-synth after the windows were set means they may be desynced
+    align = piece_dir / "audio" / "alignment.json"
+    manifest = piece_dir / "piece.json"
+    if align.is_file() and align.stat().st_mtime > manifest.stat().st_mtime:
+        print("  ! audio/alignment.json is NEWER than piece.json — the dip windows may "
+              "be desynced. Run --stage retime first.")
     r = subprocess.run(score_cmd(piece_dir, pj), capture_output=True, text=True)
     if r.returncode:
         sys.exit(f"score failed:\n{r.stderr[-800:]}")
@@ -256,10 +497,13 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description="manifest-driven living-page piece runner")
     ap.add_argument("piece", help="piece folder containing piece.json")
     ap.add_argument("--stage", required=True,
-                    choices=["stills", "animate", "score", "register", "all"])
+                    choices=["stills", "animate", "score", "register", "all",
+                             "hash-backfill", "enrich-dips", "retime"])
     ap.add_argument("--render", action="store_true", help="stills: actually spend")
     ap.add_argument("--force", action="store_true", help="stills: re-render existing")
     ap.add_argument("--only", default="", help="comma slugs subset")
+    ap.add_argument("--no-reuse", action="store_true",
+                    help="stills: always render, never copy a sibling's identical PASS still")
     a = ap.parse_args(argv)
     piece_dir = Path(a.piece).resolve()
     pj = load_piece(piece_dir)
@@ -268,13 +512,20 @@ def main(argv=None) -> int:
     for st in stages:
         print(f"== {pj['piece']} :: {st} ==")
         if st == "stills":
-            run_stills(piece_dir, pj, render=a.render, force=a.force, only=only)
+            run_stills(piece_dir, pj, render=a.render, force=a.force, only=only,
+                       no_reuse=a.no_reuse)
         elif st == "animate":
             run_animate(piece_dir, pj, only=only)
         elif st == "score":
             run_score(piece_dir, pj)
         elif st == "register":
             run_register(piece_dir, pj)
+        elif st == "hash-backfill":
+            run_hash_backfill(piece_dir, pj)
+        elif st == "enrich-dips":
+            run_enrich_dips(piece_dir, pj)
+        elif st == "retime":
+            run_retime(piece_dir, pj)
     return 0
 
 

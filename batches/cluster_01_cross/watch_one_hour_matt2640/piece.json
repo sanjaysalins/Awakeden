@@ -94,7 +94,23 @@
     "cta_dip": [
       "54.9",
       "0.5"
-    ]
+    ],
+    "dips_meta": [
+      {
+        "phrase": "O my Father, if it be possible, let this cup pass from me: nevertheless not as I will, but as thou wilt.",
+        "pre": 0.01,
+        "post": 0.43
+      },
+      {
+        "phrase": "What, could ye not watch with me one hour?",
+        "pre": 0.1,
+        "post": 0.18
+      }
+    ],
+    "cta_meta": {
+      "phrase": "He watched that hour alone. Now no hour of yours is watched alone.",
+      "pre": 0.04
+    }
   },
   "register": {
     "id_prefix": "wo",

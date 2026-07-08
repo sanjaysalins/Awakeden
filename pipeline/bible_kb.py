@@ -187,11 +187,54 @@ def _kb_digest(kb: dict[str, dict]) -> str:
 
 
 # ---------------------------------------------------------------------------
-# Scene-plan loading — tolerant of BOTH the short (index/slug) and long-form
-# (id/title/subject_block) scene_plan.json shapes.
+# Scene-plan loading — tolerant of the short (index/slug) and long-form
+# (id/title/subject_block) scene_plan.json shapes AND the living-page batch
+# spec (livingpage_short.spec.json: beats -> still slugs; the visual content
+# description comes from the sibling piece.json still prompts).
 # ---------------------------------------------------------------------------
+def _scenes_from_livingpage_spec(spec_path: Path, d: dict) -> list[dict]:
+    """One scene per unique STILL slug used by the beats (the still, not the beat,
+    is the unit the biblical audit checks). subject_block = the piece.json render
+    prompt for that slug (what the image was actually generated from); caption
+    texts of the beats that use it are appended as context."""
+    piece_json = spec_path.parents[1] / "piece.json"
+    jobs, reg = {}, {}
+    if piece_json.is_file():
+        pj = json.loads(piece_json.read_text(encoding="utf-8"))
+        jobs = (pj.get("stills") or {}).get("jobs") or {}
+        reg = (pj.get("register") or {}).get("stills") or {}
+    order: list[str] = []
+    caps: dict[str, list[str]] = {}
+    for beat in d.get("beats") or []:
+        sources = list(beat.get("clips") or []) + list(beat.get("panels") or [])
+        cap = ((beat.get("cap") or {}).get("text") or "").strip()
+        for src in sources:
+            slug = (src.get("slug") or "").strip() if isinstance(src, dict) else str(src)
+            if not slug:
+                continue
+            if slug not in order:
+                order.append(slug)
+            if cap:
+                caps.setdefault(slug, []).append(cap)
+    out = []
+    for i, slug in enumerate(order):
+        prompt = (jobs.get(slug) or {}).get("prompt", "")
+        subject = prompt or (reg.get(slug) or {}).get("subject", "")
+        ctx = "; ".join(dict.fromkeys(caps.get(slug, [])))
+        out.append({
+            "id": i + 1,
+            "title": slug,
+            "subject_block": (subject + (f" (narration beat: {ctx})" if ctx else "")).strip(),
+            "scene_type": "livingpage_still",
+            "refs": [],
+        })
+    return out
+
+
 def load_scene_list(scene_plan_path: Path) -> list[dict]:
     d = json.loads(Path(scene_plan_path).read_text(encoding="utf-8"))
+    if "beats" in d and not d.get("scenes"):
+        return _scenes_from_livingpage_spec(Path(scene_plan_path), d)
     raw = d.get("scenes") or []
     out: list[dict] = []
     for i, s in enumerate(raw):

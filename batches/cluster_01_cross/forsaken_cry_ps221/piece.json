@@ -43,7 +43,23 @@
     "cta_dip": [
       "51.7",
       "0.5"
-    ]
+    ],
+    "dips_meta": [
+      {
+        "phrase": "\"My God, my God, why hast thou forsaken me?\"",
+        "pre": 0.01,
+        "post": 0.33
+      },
+      {
+        "phrase": "\"My God, my God, why hast thou forsaken me?\"",
+        "pre": 0.0,
+        "post": 0.47
+      }
+    ],
+    "cta_meta": {
+      "phrase": "However far you've run, the way home is open — and He opened it from the dark.",
+      "pre": 0.56
+    }
   },
   "register": {
     "id_prefix": "fc",

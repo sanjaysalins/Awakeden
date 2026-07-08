@@ -87,7 +87,23 @@
     "cta_dip": [
       "54.75",
       "0.5"
-    ]
+    ],
+    "dips_meta": [
+      {
+        "phrase": "So they weighed for my price thirty pieces of silver.",
+        "pre": 0.0,
+        "post": 0.04
+      },
+      {
+        "phrase": "And I took the thirty pieces of silver, and cast them to the potter in the house of the LORD.",
+        "pre": -0.0,
+        "post": 0.16
+      }
+    ],
+    "cta_meta": {
+      "phrase": "Stop weighing out your own price. Receive his price, and go free.",
+      "pre": 0.0
+    }
   },
   "register": {
     "id_prefix": "tp",

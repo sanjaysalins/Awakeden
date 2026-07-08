@@ -47,7 +47,23 @@
     "cta_dip": [
       "63.3",
       "0.5"
-    ]
+    ],
+    "dips_meta": [
+      {
+        "phrase": "\"They part my garments among them, and cast lots upon my vesture.\"",
+        "pre": 0.01,
+        "post": 0.11
+      },
+      {
+        "phrase": "soldiers dividing Jesus' clothes, then casting lots for the seamless coat — \"that the scripture might be fulfilled\".",
+        "pre": 0.07,
+        "post": 0.09
+      }
+    ],
+    "cta_meta": {
+      "phrase": "They rolled dice for the clothes off His back, never seeing what He was really doing — laying down His life to win you back.",
+      "pre": 0.57
+    }
   },
   "register": {
     "id_prefix": "cf",

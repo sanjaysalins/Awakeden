@@ -73,7 +73,23 @@
     "cta_dip": [
       "53.16",
       "0.5"
-    ]
+    ],
+    "dips_meta": [
+      {
+        "phrase": "Yea, a sword shall pierce through thy own soul also.",
+        "pre": 0.0,
+        "post": 0.1
+      },
+      {
+        "phrase": "When Jesus therefore saw his mother, and the disciple standing by, whom he loved, he saith unto his mother, Woman, behold thy son!",
+        "pre": -0.0,
+        "post": 0.6
+      }
+    ],
+    "cta_meta": {
+      "phrase": "Stand where Mary stood. The Son who saw her will behold you, and bind what the sword tore.",
+      "pre": 0.0
+    }
   },
   "register": {
     "id_prefix": "wb",

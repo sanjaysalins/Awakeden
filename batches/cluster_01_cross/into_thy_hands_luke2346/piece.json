@@ -87,7 +87,23 @@
     "cta_dip": [
       "53.95",
       "0.5"
-    ]
+    ],
+    "dips_meta": [
+      {
+        "phrase": "Into thine hand I commit my spirit: thou hast redeemed me, O LORD God of truth.",
+        "pre": 0.04,
+        "post": 0.12
+      },
+      {
+        "phrase": "Father, into thy hands I commend my spirit.",
+        "pre": 0.05,
+        "post": 0.1
+      }
+    ],
+    "cta_meta": {
+      "phrase": "Commend your spirit to the Father, tonight and every night. He keeps the morning.",
+      "pre": 0.06
+    }
   },
   "register": {
     "id_prefix": "ith",

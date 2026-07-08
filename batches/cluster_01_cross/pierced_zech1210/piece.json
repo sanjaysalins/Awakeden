@@ -74,7 +74,18 @@
     "cta_dip": [
       "48.87",
       "0.5"
-    ]
+    ],
+    "dips_meta": [
+      {
+        "phrase": "and they shall look upon me whom they have pierced, and they shall mourn for him, as one mourneth for his only son",
+        "pre": 0.0,
+        "post": 0.16
+      }
+    ],
+    "cta_meta": {
+      "phrase": "So do what the verse says. Look at him. Let the grace he pours turn looking into mourning, and mourning into trust. Look, and live.",
+      "pre": 0.0
+    }
   },
   "register": {
     "id_prefix": "pz",
