@@ -73,6 +73,37 @@ OUTPUT
 gospel-pivot hero + short insert shots up front, so clips are built to be
 assembled, not assembled after the fact.
 
+### 2L. The LIVING-PAGE lane (motion-comic batch shorts — the lane that ships today)
+
+The cluster shorts (batches/, Awakeden living-page standard) replace stages 2–3
+with the manifest-driven lane below. **Entry points:** `cli_livingpage.py "<piece>"
+[--continue]` (resumable position board; auto-runs $0 steps only) and
+`run_piece.py "<piece>" --stage <stage>` (the per-stage runner). Per-piece data
+lives in **`piece.json`** (still prompts/refs, animate moves, score params + dip
+phrases, register metadata) — one tested runner, zero per-piece scripts.
+
+```
+narration.md + audio/ (Stage 0-1b, unchanged — incl. HUMAN GATE 1)
+  ▼  beats spec      livingpage_short.spec.json  (word-timed choreography, /livingpage)
+  ▼  manifest        piece.json                  (authored once; new pieces start here)
+  ▼  run_piece --stage stills --render           [PAID seedream ~$0.05/still]
+  │     lint (regex + structural) → guard_prompt autofix → reuse pre-flight
+  │     → render → pending-FAIL audit sidecar (LP-ARM) → ledger row
+  │  ══ HUMAN GATE 2: stills_gate.py --build → rubric + adversarial review → --approve ══
+  │     + bib_validate (reads the spec; BC-G1/G2 $0)
+  ▼  run_piece --stage animate                   [PAID HF kling3_0 pro ~$0.65/clip]
+  │     PASS-sidecar gate → budget ceiling → render → .src.sha hash-bind → ledger
+  │     (flow_check pre-filter: PASS skips vision NOMORPH; ESCALATE → vision QC)
+  ▼  build_livingpage_16x9 --clips --no-ticks    ($0 ffmpeg; refuses on a red stills gate)
+  ▼  run_piece --stage score                     ($0; warns when alignment newer → --stage retime)
+  ▼  run_piece --stage register                  ($0 asset_index rows)
+  ▼  website (_website/build_readpage.py) → /publish
+```
+
+The Baroque scene-plan lane above stays the contract for `cli_pipeline.py`
+episodes (long-form + legacy shorts); the two lanes share Stage 0–1b and the
+upload/caption tail.
+
 ---
 
 ## 3. Per-stage contract (the skill is the procedure; this is the contract)
@@ -86,6 +117,7 @@ assembled, not assembled after the fact.
 | 2a+ Bible-Check | `/bible-check` | `pipeline/bible_kb.py`, `bib_validate.py`, `bible_gate.py`, `scripture.py` | `_bible_check/scene_facts.json` (sha-bound) + `fact_sheet.md` + `bible_check.status.json` + per-still `.bib_audit.json` | BC-G1–G4 + chokepoint (INV-25) |
 | 2b Stills | `/stills` | `pipeline/visual_render.py` (+ `bible_kb.enrich_for_scene`) | PNG/scene + `cut_hint.json` + gallery | IMG-SUBJECT/ELEMENTS/ANATOMY/NOTEXT/PERIOD/TONE/COHERENT + BC-G4 |
 | 2c Animate | `/animate` | `PythonProject1/jesus/.../image_to_kling.py` + `SKILL_locked.md` | `.kling.json` + `.mp4`/clip | CLIP-VIRAL, CLIP-IMAGE-GROUNDED, CLIP-FROZEN, CLIP-NOMORPH, NEVER-ANIMATE-WRITING |
+| 2L Living-page | `/livingpage` | `run_piece.py` + `cli_livingpage.py` + `build_livingpage_16x9.py` + `stills_gate.py` + `render_lint/` + `pipeline/flow_check.py` | `piece.json` → stills+clips (+`.src.sha`) → `spec_preview.mp4` → `<piece>_scored.mp4` | LP-* registry (§4) |
 | 3 Assembly | `/assemble` | `pipeline/assembly_engine.py` + `assembly_ffmpeg.py` | `viral_cut.mp4` + `index.html` | AS-G1–G9 |
 | 3b SFX | `/sfx` | `sfx_pilots/sfxlib.py` | `viral_cut_sfx.mp4` | reuse-from-library, sidechain-duck (INV-18) |
 | 4 Caption | `/caption` | `veed_io/caption.py` | `<clip>_captioned.mp4` | offline $0 ivory recipe (INV-16) |
@@ -202,6 +234,24 @@ fail-closed) · **constrained** (must not contradict) · **free** (licence, not 
 | UK-G5 Platform | D | hashtag counts + no malformed tags/links |
 | UK-G6 No-Repeat | D | titles don't collide across platforms/siblings |
 
+### LIVING-PAGE lane — `run_piece.py` + `render_lint/` + `stills_gate.py` + `pipeline/flow_check.py` (all LIVE 2026-07-08)
+`H` = human gate. Every LP-D gate is wired into the runner itself — a bespoke
+script cannot skip them because there are no bespoke scripts left.
+
+| Gate | Type | Checks |
+|---|---|---|
+| LP-LINT | D/A | rules.json regex + structural `lean-prompt-band` (18–50 words) + `scene-then-camera-closeup` (body-part close-up must name the whole scene); `guard_prompt` auto-positivizes poison tokens before EVERY paid call |
+| LP-ARM | D | every rendered PNG gets a pending-FAIL audit sidecar at write time — a still with no verdict cannot go green (the 84-unaudited-stills fix, structural) |
+| LP-EARNED | D | `narration_gate` blocks the LOCK on stock closers / unearned landings / template hooks (unmarked-verbatim-KJV counts as the piece's material) |
+| LP-STILLS-GATE | H+P | `stills_gate.py` 5-axis rubric + independent adversarial reviewer + hash-bound human `--approve` BEFORE animate/build (HUMAN GATE 2) |
+| LP-BC | D | `bib_validate` reads `livingpage_short.spec.json` (one scene per still slug; subject = the render prompt) — BC-G1 citation integrity + BC-G2 over-reach run $0 on batch pieces |
+| LP-STILL-PASS | D | `hf_animate` refuses a production still without a PASS sidecar (`JITB_SKIP_STILL_GATE=1` override, discouraged) |
+| LP-BUDGET | D | `cost.check_budget` ceiling ($25/short) pre-flights every Kling call; a ledger row per clip AND per still (reuse rows at $0) |
+| LP-CLIP-HASH | D | `.src.sha` binds each clip to (still bytes + prompt + duration + aspect); stale → auto-retired to `_stale_from_bad_stills/` + re-rendered |
+| LP-FLOWQC | D/A | `flow_check` homography + edge-residual pre-filter: PASS (bulletproof, incl. slow-dissolve anchors) skips the vision NOMORPH call; ESCALATE → vision QC (fail-open) |
+| LP-ENGINE-PLAN | A | `choose_engine` value rule (legible-text→static · grid/inset→dyncam · hook/close/sacred/long-hold→kling) + projected-$ vs ceiling |
+| LP-RETIME | D | score dip windows carry their spoken phrase + pads; `--stage retime` re-syncs after a re-voice; score warns when alignment is newer than the manifest |
+
 ---
 
 ## 5. Invariants (binding — do not relitigate without the user)
@@ -261,8 +311,14 @@ LLM lines drop to $0**, so a Psalm-22 short budgets to ~$17–18 (ceiling $25).
 
 - **Provider split (locked):** NBP $0.50 (Christ/face), HF `nano_banana_2` $0.30
   (neutral plate), direct-Kling $0.65 (animation). Agent-mode LLM = $0.
-- **Cost levers:** exclude bad images at GATE 2 (never animate them) · Haiku for
-  coarse assembly verify · cached constitution prefix · library reuse.
+- **Living-page lane (inked batch shorts):** BytePlus `seedream-4-5` ~$0.05/still ·
+  HF `kling3_0 --mode pro` ~$0.65/clip · everything else $0 ffmpeg/PIL. A finished
+  piece runs ~$3–6. The $25/short ceiling is ENFORCED IN CODE at the Kling
+  chokepoint (`cost.check_budget`, 2026-07-08), not advisory.
+- **Cost levers:** exclude bad images at GATE 2 (never animate them) · reuse
+  pre-flight copies an identical sibling PASS still for $0 · `choose_engine`
+  policy (static/dyncam/kling by value) · `flow_check` PASS skips a vision call ·
+  Haiku for coarse assembly verify · cached constitution prefix · library reuse.
 - **`/cost` runs `hf generate cost` pre-flight and blocks on INV-20** (ask first).
 
 ---
@@ -357,4 +413,16 @@ bible_kb/   characters/ places/ objects/ customs/ eras/   (cited fact bank, grow
 test_bible_kb.py  test_bible_kb_regression.py   (31 tests, in /validate)
 v2/BIBLE_GATE_DESIGN.md   the 3-layer enforcement + regression design (panel-reviewed)
 <v1>/_bible_check/   scene_facts.json (sha-bound) · fact_sheet.md · bible_check.status.json · index.html
+
+(LIVING-PAGE lane engine, NEW 2026-07-08 — replaced the per-piece script quartets)
+run_piece.py           manifest runner: stills/animate/score/register + hash-backfill ·
+                       enrich-dips/retime · engine-plan · reuse pre-flight (byte-parity-proven vs the quartets)
+cli_livingpage.py      resumable position board + --continue ($0 steps auto; paid/human printed)
+pipeline/flow_check.py deterministic morph pre-filter (homography + edge residual + slow-dissolve anchors)
+narration_gate.py      earned hook/landing — BLOCKING in pipeline/lock.py since 2026-07-08
+stills_gate.py  ship_gate.py  render_lint/   (5-axis human gate · shared-still map · lint/autofix/verify sidecars)
+<piece>/piece.json     the per-piece manifest (prompts/refs · moves · score+dip phrases · register rows)
+<piece>/visual/clips/*.src.sha   clip↔(still+prompt) hash bindings
+archive/quartets/      the retired _render_stills/_animate/_score/_register scripts + migration tools
+pipeline/test_run_piece.py  test_cli_livingpage.py  test_flow_check.py  test_cost.py  test_render_guard.py
 ```
