@@ -90,6 +90,17 @@ def final_video_and_words(media_dir: str | Path) -> tuple[str, str]:
                 if hits:
                     words = root / "audio" / "alignment.json"
                     return str(hits[0].resolve()), (str(words) if words.is_file() else "")
+        # inked long-form v1: visual_16x9/*_sfx.mp4 outranks legacy *_captioned.mp4
+        v16 = root / "visual_16x9"
+        if v16.is_dir():
+            for pat in ("*_sfx.mp4", "*_captioned.mp4"):
+                hits = sorted(v16.glob(pat))
+                if hits:
+                    for w in (root / "audio" / "alignment.json",
+                              hits[0].with_suffix(".words.json")):
+                        if w.is_file():
+                            return str(hits[0].resolve()), str(w)
+                    return str(hits[0].resolve()), ""
         return "", ""
     for name in _FINAL_VIDEO_ORDER:
         v = a / name

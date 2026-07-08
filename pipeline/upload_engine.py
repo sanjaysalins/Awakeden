@@ -99,7 +99,10 @@ def _find_video(media_dir: Path, fmt: str) -> str:
         ]
     else:
         v = media_dir / "visual_16x9"
-        cands = sorted(v.glob("*_captioned.mp4")) + sorted(v.glob("*.mp4"))
+        # inked living-page longs carry their text as comic boxes: the bare *_sfx.mp4
+        # (e.g. LivingPage_*_scored_sfx.mp4) outranks a legacy *_captioned.mp4
+        cands = (sorted(v.glob("*_sfx.mp4")) + sorted(v.glob("*_captioned.mp4"))
+                 + sorted(v.glob("*.mp4")))
     for c in cands:
         if Path(c).is_file():
             return str(Path(c).resolve())
@@ -115,11 +118,12 @@ def _first_sentence(text: str) -> str:
     return t[:160].strip()
 
 
-def _harvest_batch_facts(d: Path) -> SourceFacts:
-    """Living-page batch piece (batches/<cluster>/<slug>/): narration.md +
-    audio/narration.spoken.txt + visual/<slug>_scored.mp4. Facts come from an
-    explicit publish_meta.json beside narration.md (deterministic — no header
-    parsing heuristics), with the narration.md H1 as the title fallback."""
+def _harvest_batch_facts(d: Path, fmt: str = "short") -> SourceFacts:
+    """Living-page batch piece (batches/<cluster>/<slug>/) OR an inked long-form v1
+    folder without narration.creation.json: narration.md + audio/spoken text + the
+    policy-final video. Facts come from an explicit publish_meta.json beside
+    narration.md (deterministic — no header parsing heuristics), with the
+    narration.md H1 as the title fallback."""
     meta: dict = {}
     pm = d / "publish_meta.json"
     if pm.is_file():
@@ -143,8 +147,8 @@ def _harvest_batch_facts(d: Path) -> SourceFacts:
             break
     return SourceFacts(
         media_dir=str(d),
-        video_path=_find_video(d, "short"),
-        format="short",
+        video_path=_find_video(d, fmt),
+        format=fmt,
         series_name=meta.get("series", "Awakeden"),
         brand=meta.get("brand", "Awakeden"),
         episode_title=title,
@@ -162,7 +166,9 @@ def _harvest_batch_facts(d: Path) -> SourceFacts:
 def harvest_facts(media_dir: str) -> SourceFacts:
     d = Path(media_dir).resolve()
     if not (d / "narration.creation.json").is_file() and (d / "visual").is_dir():
-        return _harvest_batch_facts(d)          # batch living-page layout
+        return _harvest_batch_facts(d, "short")   # batch living-page layout
+    if not (d / "narration.creation.json").is_file() and (d / "visual_16x9").is_dir():
+        return _harvest_batch_facts(d, "long")    # inked long-form v1 (publish_meta.json)
     creation = json.loads((d / "narration.creation.json").read_text(encoding="utf-8"))
     fmt = "short" if "shorts" in d.parts else "long"
 

@@ -1,0 +1,199 @@
+{
+  "status": "RED-TEAMED",
+  "created_at": "",
+  "source": {
+    "media_dir": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1",
+    "video_path": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9\\LivingPage_Psalm22_16x9_scored_sfx.mp4",
+    "format": "long",
+    "series_name": "Jesus in the Old Testament",
+    "brand": "Awakeden",
+    "episode_title": "Psalm 22: The Song From the Cross",
+    "anchor_ref": "Psalm 22:1",
+    "anchor_kjv": "My God, my God, why hast thou forsaken me? why art thou so far from helping me, and from the words of my roaring?",
+    "kjv_verified": true,
+    "thread": "David's psalm records the crucifixion in the first person a thousand years early - Jesus quotes its first line from the cross and fulfils it to the last verse: he hath done this / It is finished",
+    "thread_lever": "NT-confirmed OT echo",
+    "hook_line": "# Psalm 22 — The Song From the Cross (LONG-FORM #2) - **Series root:** Jesus in the Old Testament (Awakeden) — long-form deep-dive - **Passage:** Psalm 22 (Davi",
+    "spoken_script": "# Psalm 22 — The Song From the Cross (LONG-FORM #2) - **Series root:** Jesus in the Old Testament (Awakeden) — long-form deep-dive - **Passage:** Psalm 22 (David, ~1000 BC) — with NT fulfilment in Matthew 27, John 19, Hebrews 2 - **Format:** 16:9, ~7.5 min (1368 spoken words @1.2x narrator), reverent documentary pace — trimmable to ~6:45 (Isaiah length) on request - **Spine:** Deep-Dive Seven-Movement (The Cry → A Death David Never Died → The Wounds Written Early → The Honest Question → He Quoted the Whole Song → The Turn → He Hath Done This) - **Voices:** `narrator` throughout · `jesus` for the words Jesus speaks from the cross (Matt 27:46, John 19:30) · KJV verbatim for all quoted Scripture - **Doctrine:** predictive prophecy, penal substitution (the forsaking), real resurrection (the v22 turn), worldwide mission, grace-anchored landing — evangelical, non-negotiable - **Status:** v3 DRAFT (2026-06-06) — lock-candidate. KJV verbatim sourced span-by-span via `pipeline/scripture.fetch_kjv`. Two reviews DONE: (1) in-engine red-team (REVISE → fixed B1 false Dead Sea fragment claim, kept the Septuagint; \"I thirst\" two-words; tightened M2/3/4). (2) ENFORCED external cursor+panel independent review — **5/5 REVISE, 0 FAIL** (cursor/claude/gemini/codex/grok), unanimous that doctrine + spine + KJV are sound, all flags editorial/precision. All convergent flags VERIFIED + fixed: \"seven words\" miscount (cry is 9 English / 4 Aramaic — all 5 caught) → dropped; \"one word: It is finished\" (3 English) → dropped; incipit \"naming the whole song\" softened from fact to natural-reading (cursor/claude/codex); v22 resurrection now grounded with spoken Heb 2:12 / risen-Christ lens (cursor/claude/codex/grok); penal-sub cadence rewritten to explicit bearing + reconciled with quoted v24 (cursor/claude); \"despair\" → \"anguish\" to avoid implying sinful hopelessness in Christ (codex); Ps 22:31→\"It is finished\" softened from \"same verdict\" to \"same note\"/resonance (cursor/codex); landing reshaped from decision-question to welcome (grok); non-KJV glosses italicised not quote-marked (codex); \"soldiers never read it\"/\"nothing ever matched\" absolutes softened (cursor/codex); ledger John 19:28→Ps 69:21 sourcing corrected (codex). KJV confirmed clean on all 14 spans by BOTH cursor and claude. Reviews saved at `_independent_review/20260606-100048/`. (3) Second fresh in-engine red-team on v3 → **VERDICT: LOCK** (no blocking defects; specifically confirmed the v3 edits introduced NO regressions — \"he raised him up\" is grounded by the spoken Heb 2:12, the reshaped landing is still a genuine CTA-to-Jesus, the bearing language is clean penal substitution not relocated gain/loss; KJV re-verified clean on all 14 spans; only optional length trims). THREE independent passes now agree. NEXT: user reads/approves → then audio (~$1–2, ElevenLabs). NOT yet rendered. --- ## MOVEMENT 1 — THE CRY *(~40s · cold open)* **[narrator]** At the ninth hour, nailed to a Roman cross and unable to fill his lungs, Jesus of Nazareth gathered his strength and cried out into the dark. **[jesus — KJV, Matthew 27:46]** \"My God, my God, why hast thou forsaken me?\" **[narrator]** We hear raw anguish — a man forsaken. And it is that. But it is also a quotation. Those exact words had been written down, in the first person, almost a thousand years before that morning — by a king who died old and safe in his own bed. **[narrator — KJV, Psalm 22:1]** \"My God, my God, why hast thou forsaken me? why art thou so far from helping me, and from the words of my roaring?\" **[narrator]** This is Psalm twenty-two. And the dying Jesus did not reach for it by accident. He was telling everyone within earshot exactly where to look. --- ## MOVEMENT 2 — A DEATH DAVID NEVER DIED *(~50s · the scandal)* **[narrator]** King David wrote this song. He wrote it in the first person — *I*, *me*, *my* — as if it were happening to his own body. But here is the strangeness: David himself never came near a death like the one he descr",
+    "beats": []
+  },
+  "platforms": [
+    {
+      "platform": "youtube_short",
+      "label": "YouTube (Short)",
+      "title": "Psalm 22: The Crucifixion, Written 1,000 Years Early",
+      "description": "At the ninth hour (Psalm 22:1, Matthew 27:46), Jesus cried out into the dark: \"My God, my God, why hast thou forsaken me?\"\n\nRaw anguish, yes. But also a quotation. Those exact words were written down, in the first person, almost a thousand years earlier, by a king who died old and safe in his own bed.\n\nThis film walks the whole song: the death David never died, the wounds written early, the honest question of how a poet saw Golgotha ten centuries out, the turn in the middle of the psalm, and its last line, which lands on the same note as the cross's last word: he hath done this. It is finished.\n\nA reverent deep-dive through Psalm 22 with every quotation verbatim KJV.\n\nHe was forsaken so that you never will be. Come and see where the song was pointing.\n\nFind Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝\n\nhttps://awakeden.com\n\nScripture quoted from the King James Version (KJV), public domain.",
+      "tags": [
+        "psalm 22",
+        "psalm 22 explained",
+        "crucifixion prophecy",
+        "my god my god why hast thou forsaken me",
+        "messianic prophecy",
+        "jesus in the old testament",
+        "kjv bible",
+        "bible documentary",
+        "matthew 27 46",
+        "prophecy fulfilled",
+        "jesus christ",
+        "bible study"
+      ],
+      "hashtags": [
+        "#Bible",
+        "#Jesus",
+        "#Psalm22",
+        "#MessianicProphecy",
+        "#KJV"
+      ]
+    },
+    {
+      "platform": "youtube_long",
+      "label": "YouTube (Long-form 16:9)",
+      "title": "Psalm 22: The Song From the Cross | The Crucifixion Written 1,000 Years Early",
+      "description": "At the ninth hour (Psalm 22:1), nailed to a Roman cross, Jesus gathered his strength and cried out: \"My God, my God, why hast thou forsaken me?\" (Matthew 27:46).\n\nWe hear raw anguish, and it is that. But it is also a quotation. Those exact words had been written down, in the first person, almost a thousand years before that morning, by a king who died old and safe in his own bed:\n\n\"My God, my God, why hast thou forsaken me? why art thou so far from helping me, and from the words of my roaring?\" (Psalm 22:1, KJV).\n\nThis deep-dive walks the whole song in seven movements:\n1. The Cry - the quotation inside the anguish\n2. A Death David Never Died - the first-person scandal\n3. The Wounds Written Early - pierced hands and feet, the parted garments, the lots\n4. The Honest Question - how could a poet see Golgotha ten centuries out?\n5. He Quoted the Whole Song - what reaching for the first line means\n6. The Turn - the psalm does not end in the dark (Hebrews 2:12)\n7. He Hath Done This - the last line and the cross's last word, on the same note\n\nEvery quotation verbatim KJV. Reverent documentary pace, inked graphic-novel visuals.\n\nHe was forsaken so that you never will be. However far you have run, the way home is open, and he opened it from the dark.\n\nFind Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝\n\nhttps://awakeden.com\n\nScripture quoted from the King James Version (KJV), public domain.",
+      "tags": [
+        "psalm 22 explained",
+        "psalm 22 crucifixion",
+        "the song from the cross",
+        "my god my god why hast thou forsaken me meaning",
+        "messianic prophecy explained",
+        "crucifixion prophecy",
+        "jesus in the old testament",
+        "kjv bible",
+        "bible documentary",
+        "matthew 27 46",
+        "hebrews 2 12",
+        "prophecy fulfilled",
+        "bible teaching",
+        "who is jesus",
+        "it is finished",
+        "david and jesus"
+      ],
+      "hashtags": [
+        "#Bible",
+        "#Jesus",
+        "#Psalm22",
+        "#MessianicProphecy",
+        "#KJV"
+      ]
+    },
+    {
+      "platform": "tiktok",
+      "label": "TikTok",
+      "title": "",
+      "description": "Jesus' darkest cry was a quote from a 1,000-year-old song, and the song describes the whole crucifixion, first person, centuries before crosses existed. Full deep-dive: from forsaken to FINISHED. Link in bio.\n\nFind Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝",
+      "tags": [],
+      "hashtags": [
+        "#Bible",
+        "#Jesus",
+        "#Psalm22",
+        "#Prophecy",
+        "#Cross",
+        "#KJV"
+      ]
+    },
+    {
+      "platform": "facebook",
+      "label": "Facebook (Reel/Video)",
+      "title": "The Song Jesus Was Singing While He Died",
+      "description": "At the ninth hour (Psalm 22:1, Matthew 27:46) Jesus cried David's thousand-year-old line as his own: \"My God, my God, why hast thou forsaken me?\"\n\nThis 7-minute film walks the whole psalm: the death David never died, the wounds written early, the turn in the middle of the song, and the last line that lands on the cross's own note: he hath done this. It is finished.\n\nEvery quotation verbatim KJV. He was forsaken so that you never will be.\n\nFind Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝\n\nhttps://awakeden.com\n\nScripture quoted from the King James Version (KJV), public domain.",
+      "tags": [],
+      "hashtags": [
+        "#Bible",
+        "#Jesus",
+        "#Psalm22"
+      ]
+    },
+    {
+      "platform": "instagram",
+      "label": "Instagram (Reel)",
+      "title": "",
+      "description": "A king wrote his own forsaken cry, a thousand years before the cross. (Psalm 22:1)\n\nJesus made it his own at the ninth hour, and the song he reached for describes the whole crucifixion, down to the parted garments and the lots.\n\nNew 7-minute film: from forsaken to finished. Link in bio.\n\nFind Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝",
+      "tags": [],
+      "hashtags": [
+        "#Bible",
+        "#Jesus",
+        "#Psalm22",
+        "#Prophecy",
+        "#Cross",
+        "#KJV",
+        "#MessianicProphecy",
+        "#BibleFilm",
+        "#Awakeden"
+      ]
+    }
+  ],
+  "title_candidates": [
+    {
+      "text": "Psalm 22: The Crucifixion, Written 1,000 Years Early",
+      "angle": "the whole-film claim: a first-person record before the event",
+      "chosen": true,
+      "reason": "highest-ranked hook by the generator"
+    },
+    {
+      "text": "The Song Jesus Was Singing While He Died",
+      "angle": "the incipit reading: quoting the first line points to the whole song",
+      "chosen": false,
+      "reason": ""
+    },
+    {
+      "text": "David Described a Death He Never Died",
+      "angle": "the scandal at the psalm's center",
+      "chosen": false,
+      "reason": ""
+    },
+    {
+      "text": "From Forsaken to Finished: The Whole Arc of Psalm 22",
+      "angle": "the v1-to-v31 turn",
+      "chosen": false,
+      "reason": ""
+    }
+  ],
+  "gates": [
+    {
+      "gate": "UK-G1",
+      "name": "length",
+      "passed": true,
+      "detail": "all fields within hard limits"
+    },
+    {
+      "gate": "UK-G2",
+      "name": "KJV-strict",
+      "passed": true,
+      "detail": "anchor verse quoted verbatim"
+    },
+    {
+      "gate": "UK-G3",
+      "name": "doctrine",
+      "passed": true,
+      "detail": "no clickbait/overclaim tokens"
+    },
+    {
+      "gate": "UK-G4",
+      "name": "brand",
+      "passed": true,
+      "detail": "footer + CTA-to-Jesus present"
+    },
+    {
+      "gate": "UK-G5",
+      "name": "platform",
+      "passed": true,
+      "detail": "hashtag counts + link rules OK"
+    },
+    {
+      "gate": "UK-G6",
+      "name": "no-repeat",
+      "passed": true,
+      "detail": "no title collisions with siblings"
+    },
+    {
+      "gate": "UK-G7",
+      "name": "lint",
+      "passed": true,
+      "detail": "plain ASCII, grace-anchored, verse front-loaded"
+    }
+  ],
+  "all_gates_pass": true,
+  "redteam": "VERDICT: PASS\n\n- Verbatim: the Psalm 22:1 anchor (full verse with \"why art thou so far from helping\n  me, and from the words of my roaring?\") is character-exact KJV in the long\n  description; the short form \"My God, my God, why hast thou forsaken me?\" is a\n  contiguous verbatim substring everywhere it is quoted. Clean.\n- Ref front-load: \"(Psalm 22:1\" appears in the first sentence of youtube_short,\n  youtube_long, facebook and instagram. Clean.\n- Typography: all-ASCII. Clean.\n- Doctrine and precision: the copy inherits the film's OWN panel-verified softenings -\n  it says the last line \"lands on the same note\" as It Is Finished (not \"same\n  verdict\"), and \"the song he reached for describes the whole crucifixion\" mirrors\n  the film's natural-reading incipit claim without hardening it into a fact-claim\n  about Jesus' intent beyond \"telling everyone where to look\", which the film itself\n  says. Grace-anchored landing, no fear framing. Clean.\n- Format fit: the youtube_long description is the primary slot and carries the\n  seven-movement map honestly (the film IS structured that way). TikTok/IG \"link in\n  bio\" is correct for long-form promotion. Budgets respected.\n- Minor (not blocking): title candidate 2 \"The Song Jesus Was Singing While He Died\"\n  reads as if he sang the whole psalm aloud; the film's claim is he quoted the first\n  line, pointing to the whole. It is used only on facebook where the body immediately\n  clarifies (\"cried David's thousand-year-old line as his own\"). Acceptable.\n- Nothing blocking.",
+  "panel_verdict": "",
+  "notes": []
+}
