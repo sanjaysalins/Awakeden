@@ -177,6 +177,34 @@ def test_retime_fails_loud_when_phrase_gone(tmp_path):
         RP.retime_score(d, pj)
 
 
+def test_choose_engine_policy():
+    """The paid-vs-$0 rule: writing->static, panels-only->dyncam, hook/close/sacred/
+    long-holds->kling, short full-bleeds->dyncam."""
+    pj = {"stills": {"jobs": {s: {"prompt": p, "ref": None} for s, p in {
+        "scroll_close": "an open scroll of faded script beside a lamp",
+        "grid_filler": "a quiet hillside path at dusk",
+        "hook_shot": "a storm rolling over a dark hilltop",
+        "christ_still": "Jesus crucified against the darkened sky",
+        "short_full": "an empty stone doorway at night",
+        "long_hold": "a shepherd walking a ridge at dawn",
+    }.items()}}, "register": {"stills": {}}}
+    spec = {"beats": [
+        {"t": [0, 3.4], "tpl": "full", "clips": [{"slug": "hook_shot"}]},
+        {"t": [3.4, 5], "tpl": "grid", "panels": [{"slug": "grid_filler"}, {"slug": "scroll_close"}]},
+        {"t": [5, 7], "tpl": "full", "clips": [{"slug": "short_full"}]},
+        {"t": [7, 11], "tpl": "full", "clips": [{"slug": "long_hold"}]},
+        {"t": [11, 14], "tpl": "full", "clips": [{"slug": "christ_still"}]},
+        {"t": [14, 17], "tpl": "full", "clips": [{"slug": "christ_still"}]},
+    ]}
+    usage = RP._slug_usage(spec)
+    assert RP.choose_engine("scroll_close", pj, usage)[0] == "static"
+    assert RP.choose_engine("grid_filler", pj, usage)[0] == "dyncam"
+    assert RP.choose_engine("hook_shot", pj, usage)[0] == "kling"     # first beat
+    assert RP.choose_engine("christ_still", pj, usage)[0] == "kling"  # close + sacred
+    assert RP.choose_engine("short_full", pj, usage)[0] == "dyncam"   # 2.0s hold
+    assert RP.choose_engine("long_hold", pj, usage)[0] == "kling"     # 4.0s hold
+
+
 def test_animate_absent_is_clean():
     # 3 pieces have no animate section — prompts must be empty, not crash
     for piece_dir in PIECES:

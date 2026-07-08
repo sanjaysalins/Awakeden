@@ -284,6 +284,99 @@ def run_hash_backfill(piece_dir: Path, pj: dict) -> int:
     return 0
 
 
+# ---------------------------------------------------------------- engine policy
+# choose_engine (P2-2, 2026-07-08): the paid-vs-$0 decision used to live in the
+# human's head (which slugs got an animate.moves entry). This encodes the value
+# rule so future clusters don't blanket-pay Kling for panel filler:
+#   static  — writing/coins (Kling garbles text: feedback-never-animate-writing)
+#   dyncam  — used only in grid/inset panels or flash inserts ($0 PIL camera)
+#   kling   — hook (first beat) / close (last two) / Christ-sacred subject /
+#             long full-bleed holds (>=3s) — the beats that carry the piece
+import re as _re
+
+# legible-TEXT surfaces garble under Kling; coins in motion shipped fine (2026-07-06),
+# so bare "coins" does NOT trigger — only script-bearing surfaces do.
+_WRITING_TOKENS = _re.compile(
+    r"\b(scrolls?|script|writing|letters?|lettering|inscriptions?|inscribed|"
+    r"titulus|parchment|manuscripts?)\b", _re.I)
+_SACRED_TOKENS = _re.compile(r"\b(jesus|christ|crucified|risen|lord)\b", _re.I)
+
+
+def _slug_usage(spec: dict) -> dict[str, list[dict]]:
+    """slug -> [{beat, dur, full, first, last}] from a living-page spec."""
+    beats = spec.get("beats") or []
+    out: dict[str, list[dict]] = {}
+    for i, b in enumerate(beats):
+        sources = list(b.get("clips") or []) + list(b.get("panels") or [])
+        t = b.get("t") or [0, 0]
+        for src in sources:
+            slug = (src.get("slug") or "") if isinstance(src, dict) else str(src)
+            if not slug:
+                continue
+            out.setdefault(slug, []).append({
+                "beat": i + 1, "dur": round(float(t[1]) - float(t[0]), 2),
+                "full": (b.get("tpl") == "full") or (len(sources) == 1),
+                "first": i == 0, "last": i >= len(beats) - 2,
+            })
+    return out
+
+
+def choose_engine(slug: str, pj: dict, usage: dict[str, list[dict]]) -> tuple[str, str]:
+    """-> (engine, reason). Deterministic; advisory (the human keeps final say)."""
+    job = pj["stills"]["jobs"].get(slug, {})
+    reg = (pj.get("register") or {}).get("stills", {}).get(slug, {})
+    text = " ".join([job.get("prompt", ""), reg.get("subject", ""),
+                     " ".join(reg.get("elements", []))])
+    if _WRITING_TOKENS.search(text):
+        return "static", "writing/coins — Kling garbles text"
+    uses = usage.get(slug, [])
+    if not uses:
+        return "dyncam", "not used in the spec"
+    full = [u for u in uses if u["full"]]
+    if not full:
+        return "dyncam", "grid/inset panels only"
+    if any(u["first"] for u in full):
+        return "kling", "carries the HOOK (first beat)"
+    if any(u["last"] for u in full):
+        return "kling", "carries the CLOSE (last beats)"
+    if _SACRED_TOKENS.search(text):
+        return "kling", "Christ/sacred subject"
+    longest = max(u["dur"] for u in full)
+    if longest >= 3.0:
+        return "kling", f"long full-bleed hold ({longest:.1f}s)"
+    return "dyncam", f"short full-bleed ({longest:.1f}s)"
+
+
+def run_engine_plan(piece_dir: Path, pj: dict) -> int:
+    """Advisory report: policy engine per slug vs what is currently paid, with the
+    projected spend against the episode ceiling. $0, changes nothing."""
+    from pipeline import cost
+    spec_path = piece_dir / "visual" / "livingpage_short.spec.json"
+    if not spec_path.is_file():
+        print(f"(no {spec_path.name} — engine plan needs the beats spec)")
+        return 1
+    spec = json.loads(spec_path.read_text(encoding="utf-8"))
+    usage = _slug_usage(spec)
+    moves = (pj.get("animate") or {}).get("moves") or {}
+    n_policy = n_current = 0
+    print(f"{'slug':28} {'current':8} {'policy':8} reason")
+    for slug in pj["stills"]["jobs"]:
+        current = "kling" if slug in moves else (
+            "clip" if (piece_dir / "visual" / "clips" / f"{slug}.mp4").exists() else "static/dyncam")
+        engine, reason = choose_engine(slug, pj, usage)
+        n_current += current in ("kling", "clip")
+        n_policy += engine == "kling"
+        mark = "" if (engine == "kling") == (current in ("kling", "clip")) else "  <-- differs"
+        print(f"{slug:28} {current:8} {engine:8} {reason}{mark}")
+    cur_usd = n_current * cost.KLING_USD_PER_CLIP
+    pol_usd = n_policy * cost.KLING_USD_PER_CLIP
+    spent = cost.episode_total_usd(pj["piece"])
+    print(f"\ncurrent Kling: {n_current} clips ~${cur_usd:.2f} · policy: {n_policy} "
+          f"~${pol_usd:.2f} (delta ${cur_usd - pol_usd:+.2f})")
+    print(f"episode ledger so far: ${spent:.2f} of ${cost.CEILING_USD['short']:.0f} cap")
+    return 0
+
+
 # ---------------------------------------------------------------- score retiming
 # The dip windows in piece.json are hand-tuned absolute seconds bound to ONE synth of
 # the narration. A re-voice silently desyncs them (the engine audit's biggest silent-
@@ -498,7 +591,7 @@ def main(argv=None) -> int:
     ap.add_argument("piece", help="piece folder containing piece.json")
     ap.add_argument("--stage", required=True,
                     choices=["stills", "animate", "score", "register", "all",
-                             "hash-backfill", "enrich-dips", "retime"])
+                             "hash-backfill", "enrich-dips", "retime", "engine-plan"])
     ap.add_argument("--render", action="store_true", help="stills: actually spend")
     ap.add_argument("--force", action="store_true", help="stills: re-render existing")
     ap.add_argument("--only", default="", help="comma slugs subset")
@@ -526,6 +619,8 @@ def main(argv=None) -> int:
             run_enrich_dips(piece_dir, pj)
         elif st == "retime":
             run_retime(piece_dir, pj)
+        elif st == "engine-plan":
+            run_engine_plan(piece_dir, pj)
     return 0
 
 

@@ -37,8 +37,55 @@ def _stage_match(rule_stage: str, stage: str) -> bool:
     return rule_stage in (stage, "both")
 
 
+# Structural checks (P2-1, 2026-07-08) — the two hard-won prompt-style rules that regex
+# can't express, promoted from memory docs (byteplus-lean-prompting,
+# seedream-scene-then-camera) into machine checks. Advisory, never blocking.
+_CLOSE_TOKENS = re.compile(r"\b(close-?up|close|macro)\b|filling the frame", re.I)
+_BODY_PARTS = re.compile(
+    r"\b(hands?|wrists?|feet|foot|fingers?|face|eyes?|wounds?|nails?|blood|palms?|"
+    r"arms?|cheek|mouth|head)\b", re.I)
+_SCENE_NOUNS = re.compile(
+    r"\b(jesus|christ|lord|man|woman|men|women|figure|figures|soldier|soldiers|child|"
+    r"children|father|mother|disciple|thief|crowd|priest|priests|beggar|david|john|mary|"
+    r"judas|peter|scene|hill|garden|tomb|room|workbench|table|doorway|cross\b.*\bstanding|"
+    r"crucified)\b", re.I)
+
+
+def _structural(prompt: str, stage: str) -> list[dict]:
+    if stage not in ("still", "both"):
+        return []
+    out = []
+    n = len(re.findall(r"[\w']+", prompt))
+    # calibrated 2026-07-08 over the 67 shipped cluster prompts: 19-word plates all
+    # rendered fine (floor 18); the >50 monsters (87/92/112 words) were exactly the
+    # repeat-re-render problem stills.
+    if n < 18 or n > 50:
+        out.append({
+            "id": "lean-prompt-band", "axis": "composition", "severity": "warn",
+            "match": f"{n} words",
+            "message": f"subject prompt is {n} words — the lean band is 25-40 "
+                       f"({'too thin: seedream fills gaps with inventions' if n < 18 else 'too dense: dense prompts hallucinate'})",
+            "fix": "one subject, 25-40 words, positive-only",
+            "provenance": "memory byteplus-lean-prompting",
+        })
+    # only BODY-PART close-ups isolate dangerously (nail_through_hand class);
+    # object still-lifes (cup, coins, scroll) are legitimate close subjects.
+    m = _CLOSE_TOKENS.search(prompt)
+    if m and _BODY_PARTS.search(prompt) and not _SCENE_NOUNS.search(prompt):
+        out.append({
+            "id": "scene-then-camera-closeup", "axis": "anti-hallucination", "severity": "warn",
+            "match": m.group(0),
+            "message": "close-up isolates an element with no whole-scene subject named — "
+                       "seedream is literal and INVENTS the missing context",
+            "fix": "prompt the WHOLE scene then place the camera "
+                   "(e.g. 'Jesus on the cross, camera close on his hand')",
+            "provenance": "memory seedream-scene-then-camera (nail_through_hand redo)",
+        })
+    return out
+
+
 def lint(prompt: str, stage: str = "still", rules: list[dict] | None = None) -> list[dict]:
-    """Run the deterministic (regex) rules. Returns findings sorted by severity."""
+    """Run the deterministic (regex + structural) rules. Returns findings sorted by severity."""
     rules = rules if rules is not None else load_rules()
     findings = []
     for r in rules:
@@ -51,6 +98,7 @@ def lint(prompt: str, stage: str = "still", rules: list[dict] | None = None) -> 
                 "match": m.group(0), "message": r["message"], "fix": r["fix"],
                 "provenance": r.get("provenance", ""),
             })
+    findings += _structural(prompt, stage)
     findings.sort(key=lambda f: (_SEV_ORDER.get(f["severity"], 9), f["axis"]))
     return findings
 
