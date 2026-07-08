@@ -1,3 +1,24 @@
+# RESUME — next session (updated 2026-07-08 late)
+
+**LAUNCH IS PREPPED.** L1-L7 all done: 21 human-approved video finals, 13 GREEN
+publish packs (@awakeden stamped, read-links in), 39 thumbnails + watermark +
+channel dress (banner strip WRITTEN->PIERCED->FINISHED->RISEN; avatar = crown art
++ AWAKEDEN chip; _brand/CHANNEL_DRESS.html has the instructions), upload_tracker.py
++ site watch-modals ready. RELEASE_CALENDAR.md = launch bulk + 8 shorts/2-3 longs
+monthly. Production board: production_board.py.
+
+**Waiting on the USER (launch blockers):**
+1. Upload banner/avatar/watermark in Studio (kit: _brand/CHANNEL_DRESS.html)
+2. Playlist Season 1 - The Cross + one UNLISTED safe-zone test upload
+3. Deploy _website (Jonah read page + modals are local-only)
+4. Pick the launch date
+
+**Next build work (mine, any session):** M1 needs 2 new Resurrection shorts
+(reuse-first ~\ each) + EW05 Jonah film for month-2; S2 Suno tracks when user
+generates; TikTok/IG/FB handles when they exist -> restamp packs.
+
+---
+
 # RESUME.md — start here next session
 
 ## ⚡⚡⚡ NEXT SESSION START HERE (updated 2026-07-08 EOD) — cluster 1 FULLY CLOSED; engine hardened P0+P1; next = P2 (resumable runner / morph pre-filter / choose_engine) or cluster 2 ⚡⚡⚡
