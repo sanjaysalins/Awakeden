@@ -6846,6 +6846,903 @@
       "used_in": [
         "i_thirst_john1928 short"
       ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-08",
+      "id": "soj_jonah_cast_overboard",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/jonah_cast_overboard.png",
+      "title": "sailors casting the prophet from a storm-lashed ship",
+      "subject": "sailors casting the prophet from a storm-lashed ship",
+      "characters": [
+        "Jonah",
+        "sailors"
+      ],
+      "elements": [
+        "merchant ship",
+        "storm waves",
+        "lightning"
+      ],
+      "setting": "Mediterranean storm",
+      "palette": "inked cel-flat, storm blue-blacks and deep teal to tomb dark to dawn gold",
+      "mood": "the deep, the sign, the rising",
+      "doctrine": "they took up Jonah and cast him forth into the sea (Jonah 1:15)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "jonah"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-08",
+      "id": "soj_great_fish_rising",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/great_fish_rising.png",
+      "title": "a great fish rising beneath the sinking prophet",
+      "subject": "a great fish rising beneath the sinking prophet",
+      "characters": [
+        "Jonah"
+      ],
+      "elements": [
+        "great fish",
+        "deep water",
+        "light columns"
+      ],
+      "setting": "the deep",
+      "palette": "inked cel-flat, storm blue-blacks and deep teal to tomb dark to dawn gold",
+      "mood": "the deep, the sign, the rising",
+      "doctrine": "the LORD had prepared a great fish to swallow up Jonah (Jonah 1:17)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "jonah"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-08",
+      "id": "soj_storm_ship_waves",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/storm_ship_waves.png",
+      "title": "a small ship heeling on mountainous storm waves",
+      "subject": "a small ship heeling on mountainous storm waves",
+      "characters": [],
+      "elements": [
+        "ship",
+        "storm waves",
+        "rain"
+      ],
+      "setting": "Mediterranean storm",
+      "palette": "inked cel-flat, storm blue-blacks and deep teal to tomb dark to dawn gold",
+      "mood": "the deep, the sign, the rising",
+      "doctrine": "the LORD sent out a great wind into the sea (Jonah 1:4)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "jonah"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-08",
+      "id": "soj_nineveh_distant_walls",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/nineveh_distant_walls.png",
+      "title": "the walled city of Nineveh at dusk from a distant ridge",
+      "subject": "the walled city of Nineveh at dusk from a distant ridge",
+      "characters": [],
+      "elements": [
+        "city walls",
+        "gates",
+        "towers"
+      ],
+      "setting": "ancient Assyria",
+      "palette": "inked cel-flat, storm blue-blacks and deep teal to tomb dark to dawn gold",
+      "mood": "the deep, the sign, the rising",
+      "doctrine": "go to Nineveh, that great city (Jonah 1:2)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "jonah"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-08",
+      "id": "soj_lot_falls_jonah",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/lot_falls_jonah.png",
+      "title": "sailors around the cast lots, every face on the prophet",
+      "subject": "sailors around the cast lots, every face on the prophet",
+      "characters": [
+        "Jonah",
+        "sailors"
+      ],
+      "elements": [
+        "pebble lots",
+        "deck",
+        "lantern"
+      ],
+      "setting": "ship deck",
+      "palette": "inked cel-flat, storm blue-blacks and deep teal to tomb dark to dawn gold",
+      "mood": "the deep, the sign, the rising",
+      "doctrine": "they cast lots, and the lot fell upon Jonah (Jonah 1:7)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "jonah"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-08",
+      "id": "soj_jonah_sinking_down",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/jonah_sinking_down.png",
+      "title": "the prophet sinking through the deep, ship hull far above",
+      "subject": "the prophet sinking through the deep, ship hull far above",
+      "characters": [
+        "Jonah"
+      ],
+      "elements": [
+        "deep water",
+        "bubbles",
+        "ship hull"
+      ],
+      "setting": "the deep",
+      "palette": "inked cel-flat, storm blue-blacks and deep teal to tomb dark to dawn gold",
+      "mood": "the deep, the sign, the rising",
+      "doctrine": "thou hadst cast me into the deep (Jonah 2:3)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "jonah"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-08",
+      "id": "soj_jonah_in_the_deep",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/jonah_in_the_deep.png",
+      "title": "the prophet praying inside the great fish's belly",
+      "subject": "the prophet praying inside the great fish's belly",
+      "characters": [
+        "Jonah"
+      ],
+      "elements": [
+        "fish belly",
+        "ribbed walls",
+        "teal glow"
+      ],
+      "setting": "belly of the fish",
+      "palette": "inked cel-flat, storm blue-blacks and deep teal to tomb dark to dawn gold",
+      "mood": "the deep, the sign, the rising",
+      "doctrine": "then Jonah prayed unto the LORD his God out of the fish's belly (Jonah 2:1)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "jonah"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-08",
+      "id": "soj_jesus_and_scribes",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/jesus_and_scribes.png",
+      "title": "Jesus calm before demanding scribes and Pharisees",
+      "subject": "Jesus calm before demanding scribes and Pharisees",
+      "characters": [
+        "Jesus",
+        "scribes"
+      ],
+      "elements": [
+        "temple columns",
+        "robes"
+      ],
+      "setting": "temple court",
+      "palette": "inked cel-flat, storm blue-blacks and deep teal to tomb dark to dawn gold",
+      "mood": "the deep, the sign, the rising",
+      "doctrine": "an evil and adulterous generation seeketh after a sign (Matt 12:39)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "jonah"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-08",
+      "id": "soj_three_days_dark_tomb",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/three_days_dark_tomb.png",
+      "title": "shrouded body on a ledge in a dark rock-cut tomb",
+      "subject": "shrouded body on a ledge in a dark rock-cut tomb",
+      "characters": [
+        "Christ (shrouded)"
+      ],
+      "elements": [
+        "stone ledge",
+        "linen shroud",
+        "light shaft"
+      ],
+      "setting": "rock-cut tomb",
+      "palette": "inked cel-flat, storm blue-blacks and deep teal to tomb dark to dawn gold",
+      "mood": "the deep, the sign, the rising",
+      "doctrine": "so shall the Son of man be three days and three nights in the heart of the earth (Matt 12:40)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "jonah"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-08",
+      "id": "soj_body_laid_in_tomb",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/body_laid_in_tomb.png",
+      "title": "the body laid gently on the tomb ledge by two men",
+      "subject": "the body laid gently on the tomb ledge by two men",
+      "characters": [
+        "Joseph of Arimathaea",
+        "Nicodemus"
+      ],
+      "elements": [
+        "linen shroud",
+        "oil lamp",
+        "tomb"
+      ],
+      "setting": "rock-cut tomb",
+      "palette": "inked cel-flat, storm blue-blacks and deep teal to tomb dark to dawn gold",
+      "mood": "the deep, the sign, the rising",
+      "doctrine": "there laid they Jesus (John 19:42)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "jonah"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-08",
+      "id": "soj_stone_rolled_dawn",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/stone_rolled_dawn.png",
+      "title": "the stone rolled aside, dawn light bursting from the tomb",
+      "subject": "the stone rolled aside, dawn light bursting from the tomb",
+      "characters": [],
+      "elements": [
+        "rolled stone",
+        "open doorway",
+        "dawn light"
+      ],
+      "setting": "garden tomb",
+      "palette": "inked cel-flat, storm blue-blacks and deep teal to tomb dark to dawn gold",
+      "mood": "the deep, the sign, the rising",
+      "doctrine": "the stone was rolled away (Mark 16:4)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "jonah"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-08",
+      "id": "soj_jonah_on_shore",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/jonah_on_shore.png",
+      "title": "the prophet cast up on the beach at dawn",
+      "subject": "the prophet cast up on the beach at dawn",
+      "characters": [
+        "Jonah"
+      ],
+      "elements": [
+        "wet beach",
+        "surf",
+        "seaweed"
+      ],
+      "setting": "shore at dawn",
+      "palette": "inked cel-flat, storm blue-blacks and deep teal to tomb dark to dawn gold",
+      "mood": "the deep, the sign, the rising",
+      "doctrine": "it vomited out Jonah upon the dry land (Jonah 2:10)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "jonah"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-08",
+      "id": "soj_risen_christ_wounds",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/risen_christ_wounds.png",
+      "title": "the risen Christ showing the wounds in his open palms",
+      "subject": "the risen Christ showing the wounds in his open palms",
+      "characters": [
+        "Christ risen"
+      ],
+      "elements": [
+        "wounded palms",
+        "white robe",
+        "dawn garden"
+      ],
+      "setting": "garden at dawn",
+      "palette": "inked cel-flat, storm blue-blacks and deep teal to tomb dark to dawn gold",
+      "mood": "the deep, the sign, the rising",
+      "doctrine": "he shewed unto them his hands and his side (John 20:20)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "jonah"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-08",
+      "id": "soj_mercy_hand_into_deep",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/mercy_hand_into_deep.png",
+      "title": "a wounded hand reaching down into dark water toward a sunken figure",
+      "subject": "a wounded hand reaching down into dark water toward a sunken figure",
+      "characters": [],
+      "elements": [
+        "wounded hand",
+        "water surface",
+        "light rays"
+      ],
+      "setting": "the deep",
+      "palette": "inked cel-flat, storm blue-blacks and deep teal to tomb dark to dawn gold",
+      "mood": "the deep, the sign, the rising",
+      "doctrine": "mercy reaching into the deep — yet will I look again toward thy holy temple (Jonah 2:4)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "jonah"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-08",
+      "id": "soj_man_rising_from_water",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/man_rising_from_water.png",
+      "title": "a man bursting up from dark water into morning light",
+      "subject": "a man bursting up from dark water into morning light",
+      "characters": [
+        "a man"
+      ],
+      "elements": [
+        "water surface",
+        "morning light"
+      ],
+      "setting": "the deep to the light",
+      "palette": "inked cel-flat, storm blue-blacks and deep teal to tomb dark to dawn gold",
+      "mood": "the deep, the sign, the rising",
+      "doctrine": "come up out of the deep and live — He brought up my life from corruption (Jonah 2:6)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "jonah"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-08",
+      "id": "soj_jonah_cast_overboard_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/clips/jonah_cast_overboard.mp4",
+      "title": "sailors casting the prophet from a storm-lashed ship (Kling push-in)",
+      "subject": "sailors casting the prophet from a storm-lashed ship",
+      "characters": [
+        "Jonah",
+        "sailors"
+      ],
+      "elements": [
+        "merchant ship",
+        "storm waves",
+        "lightning"
+      ],
+      "setting": "Mediterranean storm",
+      "doctrine": "they took up Jonah and cast him forth into the sea (Jonah 1:15)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "kling"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-08",
+      "id": "soj_great_fish_rising_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/clips/great_fish_rising.mp4",
+      "title": "a great fish rising beneath the sinking prophet (Kling push-in)",
+      "subject": "a great fish rising beneath the sinking prophet",
+      "characters": [
+        "Jonah"
+      ],
+      "elements": [
+        "great fish",
+        "deep water",
+        "light columns"
+      ],
+      "setting": "the deep",
+      "doctrine": "the LORD had prepared a great fish to swallow up Jonah (Jonah 1:17)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "kling"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-08",
+      "id": "soj_jonah_sinking_down_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/clips/jonah_sinking_down.mp4",
+      "title": "the prophet sinking through the deep, ship hull far above (Kling push-in)",
+      "subject": "the prophet sinking through the deep, ship hull far above",
+      "characters": [
+        "Jonah"
+      ],
+      "elements": [
+        "deep water",
+        "bubbles",
+        "ship hull"
+      ],
+      "setting": "the deep",
+      "doctrine": "thou hadst cast me into the deep (Jonah 2:3)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "kling"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-08",
+      "id": "soj_jonah_in_the_deep_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/clips/jonah_in_the_deep.mp4",
+      "title": "the prophet praying inside the great fish's belly (Kling push-in)",
+      "subject": "the prophet praying inside the great fish's belly",
+      "characters": [
+        "Jonah"
+      ],
+      "elements": [
+        "fish belly",
+        "ribbed walls",
+        "teal glow"
+      ],
+      "setting": "belly of the fish",
+      "doctrine": "then Jonah prayed unto the LORD his God out of the fish's belly (Jonah 2:1)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "kling"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-08",
+      "id": "soj_jesus_and_scribes_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/clips/jesus_and_scribes.mp4",
+      "title": "Jesus calm before demanding scribes and Pharisees (Kling push-in)",
+      "subject": "Jesus calm before demanding scribes and Pharisees",
+      "characters": [
+        "Jesus",
+        "scribes"
+      ],
+      "elements": [
+        "temple columns",
+        "robes"
+      ],
+      "setting": "temple court",
+      "doctrine": "an evil and adulterous generation seeketh after a sign (Matt 12:39)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "kling"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-08",
+      "id": "soj_three_days_dark_tomb_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/clips/three_days_dark_tomb.mp4",
+      "title": "shrouded body on a ledge in a dark rock-cut tomb (Kling push-in)",
+      "subject": "shrouded body on a ledge in a dark rock-cut tomb",
+      "characters": [
+        "Christ (shrouded)"
+      ],
+      "elements": [
+        "stone ledge",
+        "linen shroud",
+        "light shaft"
+      ],
+      "setting": "rock-cut tomb",
+      "doctrine": "so shall the Son of man be three days and three nights in the heart of the earth (Matt 12:40)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "kling"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-08",
+      "id": "soj_body_laid_in_tomb_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/clips/body_laid_in_tomb.mp4",
+      "title": "the body laid gently on the tomb ledge by two men (Kling push-in)",
+      "subject": "the body laid gently on the tomb ledge by two men",
+      "characters": [
+        "Joseph of Arimathaea",
+        "Nicodemus"
+      ],
+      "elements": [
+        "linen shroud",
+        "oil lamp",
+        "tomb"
+      ],
+      "setting": "rock-cut tomb",
+      "doctrine": "there laid they Jesus (John 19:42)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "kling"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-08",
+      "id": "soj_stone_rolled_dawn_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/clips/stone_rolled_dawn.mp4",
+      "title": "the stone rolled aside, dawn light bursting from the tomb (Kling push-in)",
+      "subject": "the stone rolled aside, dawn light bursting from the tomb",
+      "characters": [],
+      "elements": [
+        "rolled stone",
+        "open doorway",
+        "dawn light"
+      ],
+      "setting": "garden tomb",
+      "doctrine": "the stone was rolled away (Mark 16:4)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "kling"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-08",
+      "id": "soj_risen_christ_wounds_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/clips/risen_christ_wounds.mp4",
+      "title": "the risen Christ showing the wounds in his open palms (Kling push-in)",
+      "subject": "the risen Christ showing the wounds in his open palms",
+      "characters": [
+        "Christ risen"
+      ],
+      "elements": [
+        "wounded palms",
+        "white robe",
+        "dawn garden"
+      ],
+      "setting": "garden at dawn",
+      "doctrine": "he shewed unto them his hands and his side (John 20:20)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "kling"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-08",
+      "id": "soj_mercy_hand_into_deep_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/clips/mercy_hand_into_deep.mp4",
+      "title": "a wounded hand reaching down into dark water toward a sunken figure (Kling push-in)",
+      "subject": "a wounded hand reaching down into dark water toward a sunken figure",
+      "characters": [],
+      "elements": [
+        "wounded hand",
+        "water surface",
+        "light rays"
+      ],
+      "setting": "the deep",
+      "doctrine": "mercy reaching into the deep — yet will I look again toward thy holy temple (Jonah 2:4)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "kling"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
     }
   ]
 }
