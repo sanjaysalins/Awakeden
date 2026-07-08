@@ -142,32 +142,29 @@ def brand_assets(out_dir: Path) -> None:
                                         wordmark_width)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    def one_word(im: Image.Image, x: float, y: float, size: int, tracking: float):
-        dr = ImageDraw.Draw(im)
-        f = cd_font(ARIAL_BLK, size)
-        cx = x
-        for i, ch in enumerate("AWAKEDEN"):
-            if i == 4:
-                draw_split_char(im, (cx, y), ch, f, size, BONE, RED_BRIGHT)
-                dr = ImageDraw.Draw(im)
-            else:
-                dr.text((cx, y), ch, font=f,
-                        fill=(BONE if i < 4 else RED_BRIGHT) + (255,))
-            cx += dr.textlength(ch, font=f) + size * tracking
-
+    from pipeline.channel_dress import draw_word_centered
+    # YouTube renders the branding watermark in a small square with slight padding:
+    # give the word a soft ink chip so bone letters survive light footage.
     for px, name in ((800, "awakeden_watermark.png"), (150, "awakeden_watermark_150.png")):
         im = Image.new("RGBA", (px, px), (0, 0, 0, 0))
-        size = 40
-        while wordmark_width(size, 0.08) < px * 0.94:
-            size += 2
-        size -= 2
-        w = wordmark_width(size, 0.08)
-        one_word(im, (px - w) / 2, px * 0.5 - size * 0.62, size, 0.08)
+        ImageDraw.Draw(im).rounded_rectangle(
+            [0, px * 0.36, px, px * 0.64], radius=px * 0.05, fill=(12, 14, 18, 215))
+        draw_word_centered(im, (px * 0.04, px * 0.40, px * 0.96, px * 0.60))
         im.save(out_dir / name)
     # horizontal wordmark (transparent)
-    w = int(wordmark_width(220)) + 80
+    from pipeline.channel_dress import wordmark_width as ww
+    w = int(ww(220, 0.14)) + 80
     im = Image.new("RGBA", (w, 320), (0, 0, 0, 0))
-    one_word(im, 40, 40, 220, 0.14)
+    dr = ImageDraw.Draw(im)
+    f = cd_font(ARIAL_BLK, 220)
+    cx = 40.0
+    for i, ch in enumerate("AWAKEDEN"):
+        if i == 4:
+            draw_split_char(im, (cx, 40), ch, f, 220, BONE, RED_BRIGHT)
+            dr = ImageDraw.Draw(im)
+        else:
+            dr.text((cx, 40), ch, font=f, fill=(BONE if i < 4 else RED_BRIGHT) + (255,))
+        cx += dr.textlength(ch, font=f) + 220 * 0.14
     im.save(out_dir / "awakeden_wordmark.png")
     print(f"brand assets -> {out_dir}")
 

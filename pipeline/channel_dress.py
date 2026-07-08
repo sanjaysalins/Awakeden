@@ -137,22 +137,57 @@ def banner():
     print(f"banner  -> {p}")
 
 
+def fit_word_size(max_w: float, tracking: float = 0.08) -> int:
+    """Largest font size whose AWAKEDEN width fits max_w (grows from tiny)."""
+    size = 8
+    while wordmark_width(size + 2, tracking) <= max_w:
+        size += 2
+    return size
+
+
+def word_bbox(size: int, tracking: float = 0.08) -> tuple:
+    """(w, cap_top, cap_bottom) of the drawn word, measured, for true centering."""
+    w = int(wordmark_width(size, tracking)) + size
+    tmp = Image.new("RGBA", (w, size * 3), (0, 0, 0, 0))
+    dr = ImageDraw.Draw(tmp)
+    f = font(ARIAL_BLK, size)
+    cx = 0.0
+    for ch in "AWAKEDEN":
+        dr.text((cx, size), ch, font=f, fill=(255, 255, 255, 255))
+        cx += dr.textlength(ch, font=f) + size * tracking
+    bb = tmp.getbbox()
+    return (bb[2] - bb[0]), bb[1] - size, bb[3] - size   # width, top-off, bottom-off
+
+
+def draw_word_centered(im: Image.Image, box: tuple, tracking: float = 0.08,
+                       glow: bool = False) -> None:
+    """Draw the one-word mark optically centered inside box=(x0,y0,x1,y1)."""
+    bw, bh = box[2] - box[0], box[3] - box[1]
+    size = fit_word_size(bw, tracking)
+    w, top_off, bot_off = word_bbox(size, tracking)
+    glyph_h = bot_off - top_off
+    x = box[0] + (bw - w) / 2
+    y = box[1] + (bh - glyph_h) / 2 - top_off
+    draw_wordmark(im, x, y, size, tracking=tracking, glow=glow)
+
+
 def avatar():
-    """Site identity in a circle: ONE word — AWAKEDEN — bone into red through the
-    split E, exactly the website header, on the site ink."""
+    """ONE word — AWAKEDEN — centered inside the CIRCLE YouTube crops to:
+    the word box is the inscribed-safe 72% band, so the round mask never clips it."""
     px = 800
     im = Image.new("RGB", (px, px), SITE_INK)
-    # size the one-word mark to ~86% of the disc width
-    size = 84
-    while wordmark_width(size, 0.08) < px * 0.86:
-        size += 2
-    size -= 2
-    w = wordmark_width(size, 0.08)
-    draw_wordmark(im, (px - w) / 2, px * 0.5 - size * 0.62, size, tracking=0.08)
+    m = px * 0.14                                   # circle-safe margin
+    draw_word_centered(im, (m, px * 0.40, px - m, px * 0.56), glow=True)
     dr = ImageDraw.Draw(im)
-    dr.rectangle([px * 0.32, px * 0.63, px * 0.68, px * 0.637], fill=BONE)
+    dr.rectangle([px * 0.36, px * 0.60, px * 0.64, px * 0.607], fill=BONE)
     p = OUT / "channel_avatar.png"
     im.save(p)
+    # round preview — exactly what the circular crop shows
+    mask = Image.new("L", (px, px), 0)
+    ImageDraw.Draw(mask).ellipse([0, 0, px, px], fill=255)
+    prev = Image.new("RGB", (px, px), (255, 255, 255))
+    prev.paste(im, (0, 0), mask)
+    prev.save(OUT / "channel_avatar_ROUND_PREVIEW.png")
     print(f"avatar  -> {p}")
 
 
