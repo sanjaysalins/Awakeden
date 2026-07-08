@@ -13,7 +13,13 @@
       }
     }
   },
-  "animate": null,
+  "animate": {
+    "duration": 5,
+    "aspect_ratio": "9:16",
+    "moves": {
+      "bowed_head_finished": "ONE slow, steady, continuous push-in toward the bowed thorn-crowned head"
+    }
+  },
   "score": {
     "src": "visual/livingpage_short.spec_preview.mp4",
     "out": "visual/forsaken_cry_ps221_scored.mp4",

@@ -17,7 +17,13 @@
       }
     }
   },
-  "animate": null,
+  "animate": {
+    "duration": 5,
+    "aspect_ratio": "9:16",
+    "moves": {
+      "john_watching": "ONE slow, steady, continuous push-in toward the young disciple's tear-streaked upturned face"
+    }
+  },
   "score": {
     "src": "visual/livingpage_short.spec_preview.mp4",
     "out": "visual/crucifixion_foretold_ps2218_scored.mp4",
