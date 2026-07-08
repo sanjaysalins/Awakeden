@@ -8,6 +8,7 @@ One thief taunted. One asked: remember me. Jesus answered: with me. Today. Parad
 No merit, no ladder to climb. Repentance and trust. We are all one of those two men.
 
 Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Follow @awakeden
 
 ## HASHTAGS
 #Bible #Jesus #ThiefOnTheCross #Paradise #Cross #KJV #Gospel #BibleShorts #Awakeden

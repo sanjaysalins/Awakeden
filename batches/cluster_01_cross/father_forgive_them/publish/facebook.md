@@ -12,7 +12,9 @@ While we were yet sinners, Christ died for us. That mercy is held out to you now
 
 Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/father-forgive-them.html
-https://awakeden.com
+
+Follow:
+YouTube: @awakeden - https://youtube.com/@awakeden
 
 https://awakeden.com
 

@@ -12,7 +12,9 @@ The cross was no accident. It was the plan, and it was to win you back.
 
 Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/ps22-01-crucifixion-foretold.html
-https://awakeden.com
+
+Follow:
+YouTube: @awakeden - https://youtube.com/@awakeden
 
 https://awakeden.com
 

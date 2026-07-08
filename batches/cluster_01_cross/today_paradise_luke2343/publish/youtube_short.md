@@ -16,7 +16,9 @@ We are all one of those two men. Ask what the thief asked: remember me. Then hea
 
 Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/today-in-paradise.html
-https://awakeden.com
+
+Follow:
+YouTube: @awakeden - https://youtube.com/@awakeden
 
 https://awakeden.com
 

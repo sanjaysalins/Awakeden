@@ -12,7 +12,9 @@ The cup he asked to pass, he drank - on the cross, for you. He watched that hour
 
 Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/could-ye-not-watch-one-hour.html
-https://awakeden.com
+
+Follow:
+YouTube: @awakeden - https://youtube.com/@awakeden
 
 https://awakeden.com
 

@@ -14,7 +14,9 @@ The cross was no accident. Jesus let himself be weighed like a slave, and his bl
 
 Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/thirty-pieces-of-silver.html
-https://awakeden.com
+
+Follow:
+YouTube: @awakeden - https://youtube.com/@awakeden
 
 https://awakeden.com
 

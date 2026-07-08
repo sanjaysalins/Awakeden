@@ -25,6 +25,9 @@ He was forsaken so that you never will be. However far you have run, the way hom
 
 Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
 
+Follow:
+YouTube: @awakeden - https://youtube.com/@awakeden
+
 https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.

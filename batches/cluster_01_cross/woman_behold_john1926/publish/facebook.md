@@ -10,7 +10,9 @@ While judgment fell on him, he cared for someone else. Your wound is not invisib
 
 Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/woman-behold-thy-son.html
-https://awakeden.com
+
+Follow:
+YouTube: @awakeden - https://youtube.com/@awakeden
 
 https://awakeden.com
 
