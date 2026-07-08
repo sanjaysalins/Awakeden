@@ -1,0 +1,344 @@
+{
+  "piece": "sign_of_jonah_matt1240",
+  "title": "The Sign of Jonah (Matthew 12:40)",
+  "cluster": "cluster_02_resurrection",
+  "verse": "Jonah 1-2 + Matthew 12:40",
+  "stills": {
+    "model": "seedream-4-5-251128",
+    "size": "1440x2560",
+    "jobs": {
+      "jonah_cast_overboard": {
+        "prompt": "storm-lashed wooden merchant ship on towering dark waves, sailors mid-heave casting a wild-haired prophet over the rail toward the sea, lightning-lit spray, vertical, 8th-century BC Mediterranean",
+        "ref": "../../../ref_library/characters/JONAH.png"
+      },
+      "great_fish_rising": {
+        "prompt": "a vast dark great fish rising through deep blue-black water beneath a small sinking robed man, columns of pale light from the surface far above, trails of bubbles, vertical",
+        "ref": "../../../ref_library/objects/GREAT_FISH.png"
+      },
+      "storm_ship_waves": {
+        "prompt": "a small wooden merchant ship heeling on mountainous storm waves under a black sky, tiny sailors clinging to the rigging, rain slanting, vertical, 8th-century BC Mediterranean",
+        "ref": null
+      },
+      "nineveh_distant_walls": {
+        "prompt": "a massive walled city on a wide plain at dusk, high gates and stepped towers, warm lamplight inside the walls, seen from a distant ridge, vertical, ancient Assyria",
+        "ref": null
+      },
+      "lot_falls_jonah": {
+        "prompt": "a ring of storm-drenched sailors on a pitching wooden deck around small dark pebble lots on the planks, every face turned toward one wild-haired prophet standing apart, flickering oil-lamp light, vertical",
+        "ref": "../../../ref_library/characters/JONAH.png"
+      },
+      "jonah_sinking_down": {
+        "prompt": "a robed prophet sinking down through dark green-blue deep water, arms drifting up toward the wavering bright surface and a small ship hull far above, bubbles rising, vertical",
+        "ref": "../../../ref_library/characters/JONAH.png"
+      },
+      "jonah_in_the_deep": {
+        "prompt": "a gaunt prophet kneeling in prayer inside the vast dark ribbed belly of a great fish, faint cold teal light, wet cavernous walls arching high above him, vertical",
+        "ref": "../../../ref_library/places/BELLY_OF_THE_FISH.png"
+      },
+      "jesus_and_scribes": {
+        "prompt": "Jesus standing calm before a huddle of robed scribes and Pharisees gesturing in demand among temple columns, his face steady in warm light, vertical, 1st-century Judea",
+        "ref": "../../../ref_library/characters/JESUS.png"
+      },
+      "three_days_dark_tomb": {
+        "prompt": "a linen-shrouded body lying still on a stone ledge inside a dark rock-cut tomb, one thin shaft of cold light from the sealed entrance seam, vertical, 1st-century Judea",
+        "ref": "../../../ref_library/objects/RICH_MANS_TOMB.png"
+      },
+      "body_laid_in_tomb": {
+        "prompt": "two robed men gently laying a linen-shrouded body onto a stone ledge in a rock-cut tomb, warm oil-lamp light, grieving women at the entrance, vertical, 1st-century Judea",
+        "ref": "../../../ref_library/objects/RICH_MANS_TOMB.png"
+      },
+      "stone_rolled_dawn": {
+        "prompt": "the great round stone rolled fully aside from a rock-cut tomb entrance, blazing golden dawn light bursting out of the open doorway across a garden, vertical, 1st-century Judea",
+        "ref": "../../../ref_library/motifs/EMPTY_TOMB.png"
+      },
+      "jonah_on_shore": {
+        "prompt": "a drenched wild-haired prophet on hands and knees on a wet beach at dawn, seaweed strands on his ragged robe, gentle surf receding behind him, warm light breaking, vertical",
+        "ref": "../../../ref_library/characters/JONAH.png"
+      },
+      "risen_christ_wounds": {
+        "prompt": "the risen Christ standing in radiant dawn light in a garden, white robe, both hands open toward the viewer showing the wounds in his palms, serene living face, vertical, 1st-century Judea",
+        "ref": "../../../ref_library/characters/JESUS.png"
+      },
+      "mercy_hand_into_deep": {
+        "prompt": "a strong wounded hand reaching down through the surface of dark deep water, rays of golden light streaming down around it toward a dim sunken figure far below, vertical",
+        "ref": null
+      },
+      "man_rising_from_water": {
+        "prompt": "a man bursting up through the surface of dark water into brilliant golden morning light, face lifted, water streaming from his arms, vertical",
+        "ref": null
+      }
+    }
+  },
+  "animate": {
+    "duration": 5,
+    "aspect_ratio": "9:16",
+    "moves": {
+      "jonah_cast_overboard": "ONE slow, steady, continuous push-in toward the prophet mid-cast between the sailors' arms",
+      "great_fish_rising": "ONE slow, steady, continuous push-in toward the vast rising fish beneath the sinking man",
+      "jonah_sinking_down": "ONE slow, steady, continuous descent following the sinking prophet into the deep",
+      "jonah_in_the_deep": "ONE slow, steady, continuous push-in toward the praying prophet in the fish's dark belly",
+      "jesus_and_scribes": "ONE slow, steady, continuous push-in toward Jesus' calm steady face amid the demanding scribes",
+      "three_days_dark_tomb": "ONE slow, steady, continuous push-in along the light shaft toward the shrouded body",
+      "body_laid_in_tomb": "ONE slow, steady, continuous push-in toward the shrouded body being laid on the ledge",
+      "stone_rolled_dawn": "ONE slow, steady, continuous push-in into the blazing light of the open tomb doorway",
+      "mercy_hand_into_deep": "ONE slow, steady, continuous push-in toward the wounded hand piercing the water surface",
+      "risen_christ_wounds": "ONE slow, steady, continuous push-in toward the risen Christ's open wounded hands and serene face"
+    }
+  },
+  "score": {
+    "src": "visual/livingpage_short.spec_preview.mp4",
+    "out": "visual/sign_of_jonah_matt1240_scored.mp4",
+    "dark": "lonely_searching_a.mp3",
+    "grace": "sacred_grace_rise_a.mp3",
+    "base_seconds": 69.52,
+    "outro_hold": 1.5,
+    "dark_trim_end": "53.3",
+    "grace_trim": [
+      "20",
+      "90"
+    ],
+    "crossfade": "6",
+    "tpad": "1.5",
+    "dips": [
+      [
+        "30.9",
+        "41.0",
+        "0.35"
+      ]
+    ],
+    "cta_dip": [
+      "57.0",
+      "0.5"
+    ]
+  },
+  "register": {
+    "id_prefix": "soj",
+    "source": "byteplus seedream-4-5",
+    "created": "2026-07-08",
+    "style": "graphic_novel_inked",
+    "aspect": "9:16",
+    "palette": "inked cel-flat, storm blue-blacks and deep teal to tomb dark to dawn gold",
+    "mood": "the deep, the sign, the rising",
+    "tags_still": [
+      "livingpage",
+      "matt1240",
+      "jonah"
+    ],
+    "tags_clip": [
+      "livingpage",
+      "matt1240",
+      "kling"
+    ],
+    "used_in": [
+      "sign_of_jonah_matt1240 short"
+    ],
+    "clip_title_suffix": " (Kling push-in)",
+    "extra_rows": [],
+    "stills": {
+      "jonah_cast_overboard": {
+        "subject": "sailors casting the prophet from a storm-lashed ship",
+        "characters": [
+          "Jonah",
+          "sailors"
+        ],
+        "elements": [
+          "merchant ship",
+          "storm waves",
+          "lightning"
+        ],
+        "setting": "Mediterranean storm",
+        "scope": "neutral",
+        "doctrine": "they took up Jonah and cast him forth into the sea (Jonah 1:15)"
+      },
+      "great_fish_rising": {
+        "subject": "a great fish rising beneath the sinking prophet",
+        "characters": [
+          "Jonah"
+        ],
+        "elements": [
+          "great fish",
+          "deep water",
+          "light columns"
+        ],
+        "setting": "the deep",
+        "scope": "hero",
+        "doctrine": "the LORD had prepared a great fish to swallow up Jonah (Jonah 1:17)"
+      },
+      "storm_ship_waves": {
+        "subject": "a small ship heeling on mountainous storm waves",
+        "characters": [],
+        "elements": [
+          "ship",
+          "storm waves",
+          "rain"
+        ],
+        "setting": "Mediterranean storm",
+        "scope": "neutral",
+        "doctrine": "the LORD sent out a great wind into the sea (Jonah 1:4)"
+      },
+      "nineveh_distant_walls": {
+        "subject": "the walled city of Nineveh at dusk from a distant ridge",
+        "characters": [],
+        "elements": [
+          "city walls",
+          "gates",
+          "towers"
+        ],
+        "setting": "ancient Assyria",
+        "scope": "neutral",
+        "doctrine": "go to Nineveh, that great city (Jonah 1:2)"
+      },
+      "lot_falls_jonah": {
+        "subject": "sailors around the cast lots, every face on the prophet",
+        "characters": [
+          "Jonah",
+          "sailors"
+        ],
+        "elements": [
+          "pebble lots",
+          "deck",
+          "lantern"
+        ],
+        "setting": "ship deck",
+        "scope": "neutral",
+        "doctrine": "they cast lots, and the lot fell upon Jonah (Jonah 1:7)"
+      },
+      "jonah_sinking_down": {
+        "subject": "the prophet sinking through the deep, ship hull far above",
+        "characters": [
+          "Jonah"
+        ],
+        "elements": [
+          "deep water",
+          "bubbles",
+          "ship hull"
+        ],
+        "setting": "the deep",
+        "scope": "neutral",
+        "doctrine": "thou hadst cast me into the deep (Jonah 2:3)"
+      },
+      "jonah_in_the_deep": {
+        "subject": "the prophet praying inside the great fish's belly",
+        "characters": [
+          "Jonah"
+        ],
+        "elements": [
+          "fish belly",
+          "ribbed walls",
+          "teal glow"
+        ],
+        "setting": "belly of the fish",
+        "scope": "hero",
+        "doctrine": "then Jonah prayed unto the LORD his God out of the fish's belly (Jonah 2:1)"
+      },
+      "jesus_and_scribes": {
+        "subject": "Jesus calm before demanding scribes and Pharisees",
+        "characters": [
+          "Jesus",
+          "scribes"
+        ],
+        "elements": [
+          "temple columns",
+          "robes"
+        ],
+        "setting": "temple court",
+        "scope": "hero",
+        "doctrine": "an evil and adulterous generation seeketh after a sign (Matt 12:39)"
+      },
+      "three_days_dark_tomb": {
+        "subject": "shrouded body on a ledge in a dark rock-cut tomb",
+        "characters": [
+          "Christ (shrouded)"
+        ],
+        "elements": [
+          "stone ledge",
+          "linen shroud",
+          "light shaft"
+        ],
+        "setting": "rock-cut tomb",
+        "scope": "hero",
+        "doctrine": "so shall the Son of man be three days and three nights in the heart of the earth (Matt 12:40)"
+      },
+      "body_laid_in_tomb": {
+        "subject": "the body laid gently on the tomb ledge by two men",
+        "characters": [
+          "Joseph of Arimathaea",
+          "Nicodemus"
+        ],
+        "elements": [
+          "linen shroud",
+          "oil lamp",
+          "tomb"
+        ],
+        "setting": "rock-cut tomb",
+        "scope": "neutral",
+        "doctrine": "there laid they Jesus (John 19:42)"
+      },
+      "stone_rolled_dawn": {
+        "subject": "the stone rolled aside, dawn light bursting from the tomb",
+        "characters": [],
+        "elements": [
+          "rolled stone",
+          "open doorway",
+          "dawn light"
+        ],
+        "setting": "garden tomb",
+        "scope": "hero",
+        "doctrine": "the stone was rolled away (Mark 16:4)"
+      },
+      "jonah_on_shore": {
+        "subject": "the prophet cast up on the beach at dawn",
+        "characters": [
+          "Jonah"
+        ],
+        "elements": [
+          "wet beach",
+          "surf",
+          "seaweed"
+        ],
+        "setting": "shore at dawn",
+        "scope": "neutral",
+        "doctrine": "it vomited out Jonah upon the dry land (Jonah 2:10)"
+      },
+      "risen_christ_wounds": {
+        "subject": "the risen Christ showing the wounds in his open palms",
+        "characters": [
+          "Christ risen"
+        ],
+        "elements": [
+          "wounded palms",
+          "white robe",
+          "dawn garden"
+        ],
+        "setting": "garden at dawn",
+        "scope": "hero",
+        "doctrine": "he shewed unto them his hands and his side (John 20:20)"
+      },
+      "mercy_hand_into_deep": {
+        "subject": "a wounded hand reaching down into dark water toward a sunken figure",
+        "characters": [],
+        "elements": [
+          "wounded hand",
+          "water surface",
+          "light rays"
+        ],
+        "setting": "the deep",
+        "scope": "neutral",
+        "doctrine": "mercy reaching into the deep — yet will I look again toward thy holy temple (Jonah 2:4)"
+      },
+      "man_rising_from_water": {
+        "subject": "a man bursting up from dark water into morning light",
+        "characters": [
+          "a man"
+        ],
+        "elements": [
+          "water surface",
+          "morning light"
+        ],
+        "setting": "the deep to the light",
+        "scope": "neutral",
+        "doctrine": "come up out of the deep and live — He brought up my life from corruption (Jonah 2:6)"
+      }
+    }
+  }
+}

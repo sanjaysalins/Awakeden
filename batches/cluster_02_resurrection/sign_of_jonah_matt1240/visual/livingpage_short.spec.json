@@ -1,0 +1,436 @@
+{
+ "_doc": "THE SIGN OF JONAH (Jonah 1-2 + Matt 12:40) 9:16 SHORT - living page. 20 beats / 69.52s. Jonah's deep mirrored with Christ's tomb: storm hook with ramp+takeover, heartbeat under 'three days buried alive', sacred stillness on the Matt 12:40 bar (two-part: belly -> heart of the earth), guilty-down/innocent-down substitution, stack on 'grave no more held Him', border-break punch on HE ROSE (stone_rolled_dawn), mercy-into-the-deep CTA, risen Christ close.",
+ "audio": "../audio/narration.mp3",
+ "total": 69.52,
+ "cut_ticks": false,
+ "heartbeat": {
+  "from": 21.4,
+  "to": 25.4,
+  "gain": -9,
+  "bpm": 60
+ },
+ "beats": [
+  {
+   "t": [
+    0.0,
+    2.24
+   ],
+   "tpl": "full",
+   "punch": true,
+   "ramp": true,
+   "sfx": [
+    [
+     "impact_low_boom",
+     0.1,
+     -12
+    ]
+   ],
+   "takeover": {
+    "panel": 0,
+    "start": 1.2,
+    "zoom": 1.28
+   },
+   "clips": [
+    {
+     "slug": "jonah_cast_overboard",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "I told them to throw me into the sea",
+    "kw": "THROW ME IN"
+   }
+  },
+  {
+   "t": [
+    2.24,
+    5.26
+   ],
+   "tpl": "full",
+   "punch": true,
+   "sfx": [
+    [
+     "impact_low_boom",
+     2.3,
+     -14
+    ]
+   ],
+   "clips": [
+    {
+     "slug": "great_fish_rising",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "A great fish swallowed me whole",
+    "kw": "SWALLOWED WHOLE"
+   }
+  },
+  {
+   "t": [
+    5.26,
+    8.64
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "storm_ship_waves",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "I ran from God — His mercy was too wide",
+    "kw": "TOO WIDE"
+   }
+  },
+  {
+   "t": [
+    8.64,
+    11.96
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "nineveh_distant_walls",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He sent me to Nineveh — the city I hated",
+    "kw": "THE CITY I HATED"
+   }
+  },
+  {
+   "t": [
+    11.96,
+    14.59
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "storm_ship_waves",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "I'd sooner drown than see her spared",
+    "kw": "SOONER DROWN"
+   }
+  },
+  {
+   "t": [
+    14.59,
+    18.47
+   ],
+   "tpl": "full",
+   "whip": true,
+   "clips": [
+    {
+     "slug": "lot_falls_jonah",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The storm came for my sake — the lot fell on me",
+    "kw": "THE LOT FELL"
+   }
+  },
+  {
+   "t": [
+    18.47,
+    21.35
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "jonah_sinking_down",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "To spare them, I went over the rail",
+    "kw": "OVERBOARD"
+   }
+  },
+  {
+   "t": [
+    21.35,
+    25.51
+   ],
+   "tpl": "full",
+   "sfx": [
+    [
+     "air_hollow_desolate",
+     21.45,
+     -18
+    ]
+   ],
+   "clips": [
+    {
+     "slug": "jonah_in_the_deep",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Three days buried alive in the fish",
+    "kw": "THREE DAYS"
+   }
+  },
+  {
+   "t": [
+    25.51,
+    30.93
+   ],
+   "tpl": "full",
+   "whip": true,
+   "clips": [
+    {
+     "slug": "jesus_and_scribes",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Scribes demanded a sign — Jesus gave them only my name",
+    "kw": "MY NAME"
+   }
+  },
+  {
+   "t": [
+    30.93,
+    36.09
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "jonah_in_the_deep",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "For as Jonas was three days and three nights in the whale's belly;",
+    "speaker": "JESUS",
+    "ref": "MATTHEW 12:40"
+   }
+  },
+  {
+   "t": [
+    36.09,
+    40.83
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "three_days_dark_tomb",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "so shall the Son of man be three days and three nights in the heart of the earth.",
+    "speaker": "JESUS",
+    "ref": "MATTHEW 12:40"
+   }
+  },
+  {
+   "t": [
+    40.83,
+    44.4
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "jonah_sinking_down",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "I went down guilty — the storm was mine",
+    "kw": "GUILTY"
+   }
+  },
+  {
+   "t": [
+    44.4,
+    49.5
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "body_laid_in_tomb",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He went down innocent — He gave Himself",
+    "kw": "INNOCENT"
+   }
+  },
+  {
+   "t": [
+    49.5,
+    53.38
+   ],
+   "tpl": "stack_h",
+   "whip": true,
+   "clips": [
+    {
+     "slug": "stone_rolled_dawn",
+     "motion": "pushin",
+     "zoom": 1.22,
+     "at": 49.5,
+     "slide": "left"
+    },
+    {
+     "slug": "jonah_on_shore",
+     "motion": "pushin",
+     "zoom": 1.22,
+     "at": 51.3,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The grave no more held Him than the deep held me",
+    "kw": "COULD NOT HOLD HIM"
+   }
+  },
+  {
+   "t": [
+    53.38,
+    54.6
+   ],
+   "tpl": "full",
+   "punch": true,
+   "border_break": {
+    "at": 53.45
+   },
+   "sfx": [
+    [
+     "dawn_morning_warm",
+     53.45,
+     -13
+    ]
+   ],
+   "clips": [
+    {
+     "slug": "stone_rolled_dawn",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "HE ROSE",
+    "kw": "HE ROSE"
+   }
+  },
+  {
+   "t": [
+    54.6,
+    57.0
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "mercy_hand_into_deep",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Sure you've fallen too far?",
+    "kw": "TOO FAR?"
+   }
+  },
+  {
+   "t": [
+    57.0,
+    61.4
+   ],
+   "tpl": "full",
+   "punch": true,
+   "takeover": {
+    "panel": 0,
+    "start": 58.2,
+    "zoom": 1.3
+   },
+   "clips": [
+    {
+     "slug": "mercy_hand_into_deep",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "That is how far His mercy reaches — it cost Him the grave",
+    "kw": "THAT FAR"
+   }
+  },
+  {
+   "t": [
+    61.4,
+    63.6
+   ],
+   "tpl": "full",
+   "whip": true,
+   "clips": [
+    {
+     "slug": "man_rising_from_water",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Stop running. Turn",
+    "kw": "TURN"
+   }
+  },
+  {
+   "t": [
+    63.6,
+    66.7
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "risen_christ_wounds",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The One who went down into your dark rose again — Jesus",
+    "kw": "JESUS"
+   }
+  },
+  {
+   "t": [
+    66.7,
+    69.52
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "risen_christ_wounds",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Come up out of the deep — and live",
+    "kw": "AND LIVE"
+   }
+  }
+ ]
+}
