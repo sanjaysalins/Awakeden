@@ -1,4 +1,17 @@
-# RESUME — next session (updated 2026-07-08 late)
+# RESUME — next session (updated 2026-07-08 close)
+
+## TOMORROW'S AGENDA (user-agreed):
+1. **Month 1 build work**: the 2 new Resurrection shorts for the M1 calendar slots
+   (The Empty Tomb + Women as First Witnesses; reuse-first ~\ each off the banked
+   cluster_02 tomb/risen world - stills exist: stone_rolled_dawn, three_days_dark_tomb,
+   risen_christ_wounds, body_laid_in_tomb + JESUS.png anchor face). Full living-page
+   lane: narration -> voice -> spec -> stills(reuse!) -> gate -> animate -> build ->
+   score (S2 pair: lonely_searching_a -> glory_holy_stillness_a per SEASON_SCORES.md)
+   -> sfx -> publish pack. Then START EW05 Jonah long film (narration is voiced).
+2. **Website consolidation**: deploy-readiness sweep - Jonah read page + watch-modals
+   live, catalogue/plan pages current vs manifest, email capture decision, upload
+   tracker end-to-end test, site brand check vs the new dress (split-E everywhere).
+
 
 **LAUNCH IS PREPPED.** L1-L7 all done: 21 human-approved video finals, 13 GREEN
 publish packs (@awakeden stamped, read-links in), 39 thumbnails + watermark +
