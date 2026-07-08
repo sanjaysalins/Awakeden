@@ -18,6 +18,9 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parent.parent
+import sys
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 CL1 = ROOT / "batches" / "cluster_01_cross"
 CL2 = ROOT / "batches" / "cluster_02_resurrection"
 LONG = ROOT / "longform" / "02_Psalm_22_Song_From_The_Cross" / "v1"
@@ -119,37 +122,61 @@ def compose(frame: Image.Image, size_key: str, title: list[str], ref: str) -> Im
     dr.rectangle([margin, ty + int(ts * 0.12), margin + int(w * 0.14), ty + int(ts * 0.12) + max(6, ts // 14)], fill=RED)
     dr.text((margin + int(w * 0.16), ty), ref, font=f_ref, fill=IVORY)
 
-    # red AWAKEDEN wordmark — top-right (16:9, 1:1) / bottom-left above safe zone (9:16)
-    brand = "AWAKEDEN"
-    bw = dr.textlength(brand, font=f_brand)
+    # site wordmark (AWAK bone + EDEN red) — top-right (16:9, 1:1) / bottom-left (9:16)
+    from pipeline.channel_dress import draw_wordmark, wordmark_width
+    bsize = int(ts * 0.26)
+    bw = wordmark_width(bsize)
     if size_key == "9x16":
         bx, by = margin, h - int(h * 0.16)
     else:
         bx, by = w - margin - bw, int(h * 0.045)
-    dr.text((bx + 2, by + 2), brand, font=f_brand, fill=(0, 0, 0, 200))
-    dr.text((bx, by), brand, font=f_brand, fill=RED)
+    draw_wordmark(im, bx, by, bsize, glow=False, shadow=True)
     return im
 
 
 def brand_assets(out_dir: Path) -> None:
+    """Site-identity marks: stacked AWAK (bone) / EDEN (red) on transparent —
+    the YouTube branding watermark is a mini version of the channel avatar."""
+    from pipeline.channel_dress import ARIAL_BLK, BONE, RED_BRIGHT, font as cd_font
     out_dir.mkdir(parents=True, exist_ok=True)
-    # square monogram watermark (transparent) — for YouTube Studio branding slot
     for px, name in ((800, "awakeden_watermark.png"), (150, "awakeden_watermark_150.png")):
         im = Image.new("RGBA", (px, px), (0, 0, 0, 0))
         dr = ImageDraw.Draw(im)
-        ring = max(3, px // 40)
-        dr.ellipse([ring, ring, px - ring, px - ring], outline=RED + (255,), width=ring)
-        f = _font(GEORGIA_B, int(px * 0.62))
-        aw = dr.textlength("A", font=f)
-        dr.text(((px - aw) / 2, px * 0.13), "A", font=f, fill=RED + (255,))
+        size, tracking = int(px * 0.185), 0.10
+        f = cd_font(ARIAL_BLK, size)
+
+        def lw(s):
+            return sum(dr.textlength(c, font=f) + size * tracking for c in s) - size * tracking
+
+        from pipeline.channel_dress import draw_split_char
+        x = (px - lw("AWAKE")) / 2
+        for i, c in enumerate("AWAKE"):
+            if i == 4:   # the shared E: half bone, half red (the hinge into EDEN)
+                draw_split_char(im, (x, px * 0.24), c, f, size, BONE, RED_BRIGHT)
+                dr = ImageDraw.Draw(im)
+            else:
+                dr.text((x, px * 0.24), c, font=f, fill=BONE + (255,))
+            x += dr.textlength(c, font=f) + size * tracking
+        x = (px - lw("EDEN")) / 2
+        for c in "EDEN":
+            dr.text((x, px * 0.48), c, font=f, fill=RED_BRIGHT + (255,))
+            x += dr.textlength(c, font=f) + size * tracking
+        dr.rectangle([px * 0.30, px * 0.73, px * 0.70, px * 0.737], fill=BONE + (255,))
         im.save(out_dir / name)
     # horizontal wordmark (transparent)
-    f = _font(ARIAL_B, 220)
-    tmp = Image.new("RGBA", (10, 10))
-    tw = ImageDraw.Draw(tmp).textlength("AWAKEDEN", font=f)
-    im = Image.new("RGBA", (int(tw) + 80, 300), (0, 0, 0, 0))
-    ImageDraw.Draw(im).text((40, 30), "AWAKEDEN", font=f, fill=RED + (255,))
-    im.save(out_dir / "awakeden_wordmark.png")
+    from pipeline.channel_dress import draw_wordmark, wordmark_width
+    w = int(wordmark_width(220)) + 80
+    im = Image.new("RGBA", (w, 320), (0, 0, 0, 0))
+    draw_wordmark(im.convert("RGB"), 40, 40, 220)  # measure path; draw on RGBA below
+    im2 = Image.new("RGBA", (w, 320), (0, 0, 0, 0))
+    dr = ImageDraw.Draw(im2)
+    from pipeline.channel_dress import ARIAL_BLK as AB, font as cf
+    f = cf(AB, 220)
+    cx = 40.0
+    for i, ch in enumerate("AWAKEDEN"):
+        dr.text((cx, 40), ch, font=f, fill=(BONE if i < 4 else RED_BRIGHT) + (255,))
+        cx += dr.textlength(ch, font=f) + 220 * 0.14
+    im2.save(out_dir / "awakeden_wordmark.png")
     print(f"brand assets -> {out_dir}")
 
 
