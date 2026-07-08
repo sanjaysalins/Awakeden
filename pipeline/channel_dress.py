@@ -12,9 +12,24 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parent.parent
-SRC = (ROOT / "longform" / "02_Psalm_22_Song_From_The_Cross" / "v1"
-       / "visual_16x9_inked" / "crane_cross_soldiers.png")
 OUT = ROOT / "_brand"
+
+STRIP = [   # the channel's thesis in four inked panels — the red thread of Scripture
+    (ROOT / "batches/cluster_01_cross/pierced_zech1210/visual/zechariah_night_scroll.png", "WRITTEN"),
+    (ROOT / "batches/cluster_01_cross/pierced_zech1210/visual/face_on_cross.png", "PIERCED"),
+    (ROOT / "batches/cluster_01_cross/into_thy_hands_luke2346/visual/bowed_head_finished.png", "FINISHED"),
+    (ROOT / "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/stone_rolled_dawn.png", "RISEN"),
+]
+
+
+def _panel(src: Path, w: int, h: int) -> "Image.Image":
+    img = Image.open(src).convert("RGB")
+    sw, sh = img.size
+    scale = max(w / sw, h / sh)
+    img = img.resize((round(sw * scale), round(sh * scale)), Image.LANCZOS)
+    sw, sh = img.size
+    x, y = (sw - w) // 2, min((sh - h) // 3, sh - h)   # faces live high
+    return img.crop((x, y, x + w, y + h))
 
 RED = (168, 35, 29)
 IVORY = (245, 240, 208)
@@ -98,36 +113,50 @@ def draw_wordmark(im: Image.Image, x: float, y: float, size: int,
 def banner():
     W, H = 2560, 1440
     sx0, sy0, sx1, sy1 = 507, 508, 2053, 931          # all-device safe strip
-    img = Image.open(SRC).convert("RGB")
-
-    # cover-crop; bias so the face (upper-middle of source) sits mid-safe-strip
-    sw, sh = img.size
-    scale = max(W / sw, H / sh)
-    img = img.resize((round(sw * scale), round(sh * scale)), Image.LANCZOS)
-    sw, sh = img.size
-    # shift the subject right-of-center so the wordmark owns the left of the strip
-    x = max(0, (sw - W) // 2 - 520)
-    y = max(0, min(round(sh * 0.10), sh - H))          # keep the dark sky + face high
-    im = img.crop((x, y, x + W, y + H))
+    im = Image.new("RGB", (W, H), SITE_INK)
     dr = ImageDraw.Draw(im, "RGBA")
 
-    # site-identity panel at the strip's left, ending BEFORE the face (never over it)
-    size = 74
-    f_tag = font(GEORGIA_I, 40)
-    tag1 = "Finding Jesus in the"
-    tag2 = "whole Bible · one panel"
-    tag3 = "at a time"
-    pad = 30
-    pw = max(wordmark_width(size), dr.textlength(tag2, font=f_tag)) + pad * 2
-    px0, py0 = sx0 + 20, sy0 + 58
-    dr.rounded_rectangle([px0, py0, px0 + pw, py0 + 306], radius=14,
-                         fill=SITE_INK + (222,), outline=BONE + (235,), width=3)
-    draw_wordmark(im, px0 + pad, py0 + 24, size)
+    # faint oversized split-E on the TV-only edges (texture, never in the strip)
+    f_ghost = font(ARIAL_BLK, 900)
+    dr.text((W - 620, H - 780), "E", font=f_ghost, fill=(236, 234, 228, 13))
+    dr.text((-240, -230), "E", font=f_ghost, fill=(229, 48, 61, 11))
+
+    # ---- four story panels on the red thread (sized FIRST; text fits after) --
+    pw, ph, gap = 224, 330, 26
+    py = sy0 + 22
+    total = 4 * pw + 3 * gap
+    x0 = sx1 - total - 12                              # panels own the strip's right
+    left_w = x0 - sx0 - 60                             # room left for the words
+
+    # ---- left block: wordmark + tagline + the thread's origin ---------------
+    lx = sx0 + 10
+    size = fit_word_size(left_w - 20, 0.10)
+    draw_wordmark(im, lx, sy0 + 88, size, tracking=0.10)
     dr = ImageDraw.Draw(im, "RGBA")
-    ty = py0 + 24 + 106
-    for tg in (tag1, tag2, tag3):
-        dr.text((px0 + pad, ty), tg, font=f_tag, fill=BONE)
-        ty += 56
+    f_tag = font(GEORGIA_I, 34)
+    dr.text((lx + 4, sy0 + 196), "Finding Jesus in the whole Bible,", font=f_tag, fill=BONE)
+    dr.text((lx + 4, sy0 + 246), "one panel at a time.", font=f_tag, fill=BONE)
+    dr.line([(lx + 6, sy0 + 322), (lx + 200, sy0 + 322)], fill=RED_BRIGHT, width=5)
+
+    thread_y = py + ph // 2
+    dr.line([(x0 - 52, thread_y), (sx1 - 8, thread_y)], fill=RED_BRIGHT + (210,), width=6)
+    f_cap = font(GEORGIA_B, 27)
+    for i, (src, word) in enumerate(STRIP):
+        panel = _panel(src, pw, ph)
+        tile = Image.new("RGBA", (pw + 22, ph + 22), (0, 0, 0, 0))
+        ImageDraw.Draw(tile).rectangle([0, 0, pw + 21, ph + 21], fill=IVORY + (255,))
+        tile.paste(panel, (11, 11))
+        tile = tile.rotate((-1.4, 1.1, -0.9, 1.3)[i], expand=True, resample=Image.BICUBIC)
+        tx = x0 + i * (pw + gap) - (tile.width - pw) // 2
+        ty = py - (tile.height - ph) // 2
+        im.paste(tile, (tx, ty), tile)
+        dr = ImageDraw.Draw(im, "RGBA")
+        cw = dr.textlength(word, font=f_cap) + 34
+        cx = x0 + i * (pw + gap) + (pw - cw) / 2
+        cy = py + ph - 2
+        dr.rounded_rectangle([cx, cy, cx + cw, cy + 45], radius=8,
+                             fill=IVORY + (255,), outline=INK + (255,), width=3)
+        dr.text((cx + 17, cy + 6), word, font=f_cap, fill=INK)
 
     OUT.mkdir(exist_ok=True)
     p = OUT / "channel_banner.png"
@@ -172,14 +201,26 @@ def draw_word_centered(im: Image.Image, box: tuple, tracking: float = 0.08,
 
 
 def avatar():
-    """ONE word — AWAKEDEN — centered inside the CIRCLE YouTube crops to:
-    the word box is the inscribed-safe 72% band, so the round mask never clips it."""
+    """The channel in one glyph: the split E (AWAKE|EDEN hinge) inside an ivory
+    comic-panel frame — the medium (panel), the name (E), the Scripture thread
+    (red) — bold enough to read at 32px beside a comment, circle-crop safe."""
     px = 800
     im = Image.new("RGB", (px, px), SITE_INK)
-    m = px * 0.14                                   # circle-safe margin
-    draw_word_centered(im, (m, px * 0.40, px - m, px * 0.56), glow=True)
     dr = ImageDraw.Draw(im)
-    dr.rectangle([px * 0.36, px * 0.60, px * 0.64, px * 0.607], fill=BONE)
+    # ivory comic panel border, inside the circle-inscribed square
+    b0, b1 = px * 0.205, px * 0.795
+    dr.rounded_rectangle([b0, b1 * 0 + px * 0.225, b1, px * 0.775], radius=26,
+                         outline=IVORY, width=13)
+    # the split E, huge, optically centered in the panel
+    size = 380
+    f = font(ARIAL_BLK, size)
+    tmp = Image.new("RGBA", (size * 2, size * 2), (0, 0, 0, 0))
+    ImageDraw.Draw(tmp).text((size // 3, size // 3), "E", font=f, fill=(255,) * 4)
+    bb = tmp.getbbox()
+    gw, gh = bb[2] - bb[0], bb[3] - bb[1]
+    ex = (px - gw) / 2 - (bb[0] - size // 3)
+    ey = (px - gh) / 2 - (bb[1] - size // 3)
+    draw_split_char(im, (ex, ey), "E", f, size, BONE, RED_BRIGHT)
     p = OUT / "channel_avatar.png"
     im.save(p)
     # round preview — exactly what the circular crop shows
