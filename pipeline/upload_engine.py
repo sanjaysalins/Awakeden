@@ -82,10 +82,14 @@ def _find_video(media_dir: Path, fmt: str) -> str:
     if fmt == "short":
         a = media_dir / "assembly"
         if not a.is_dir() and (media_dir / "visual").is_dir():
-            # batch living-page layout: batches/<cluster>/<slug>/visual/<slug>_scored.mp4
-            scored = sorted((media_dir / "visual").glob("*_scored.mp4"))
-            if scored:
-                return str(scored[0].resolve())
+            # batch living-page layout: batches/<cluster>/<slug>/visual/.
+            # Finality per the caption policy (2026-07-08): the SFX bed IS the
+            # postable final (comic boxes are the captions); pilot lives in _byteplus/.
+            v = media_dir / "visual"
+            for pat in ("*_sfx.mp4", "_byteplus/*_scored.mp4", "*_scored.mp4"):
+                hits = sorted(v.glob(pat))
+                if hits:
+                    return str(hits[0].resolve())
         cands = [
             a / "viral_cut_sfx_music_captioned.mp4",   # best: sfx + music layer
             a / "viral_cut_sfx_captioned.mp4",
