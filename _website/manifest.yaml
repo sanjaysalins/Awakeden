@@ -1,939 +1,1009 @@
-# Public catalogue. Human-edited source of truth for awakeden.com
-# public_status: planned | in_production | studio_complete | live
-# preview_approved: must be true before a preview image is shown on the public site
-
 items:
-  - slug: isaiah-53-suffering-servant
-    kind: long
-    title: "Isaiah 53: The Suffering Servant"
-    ref: "Isaiah 53:5"
-    series_id: jesus-in-ot
-    cluster: null
-    cluster_order: null
-    public_status: studio_complete
-    featured: true
-    featured_order: 1
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "Seven hundred years before the cross, Isaiah wrote of a wound that would heal ours."
-    public_blurb: >
-      Long-form on Isaiah 53. The Suffering Servant, wounded for our transgressions, fulfilled
-      in the New Testament. The first Awakeden deep-dive slated for release.
+- slug: isaiah-53-suffering-servant
+  kind: long
+  title: 'Isaiah 53: The Suffering Servant'
+  ref: Isaiah 53:5
+  series_id: jesus-in-ot
+  cluster: null
+  cluster_order: null
+  public_status: studio_complete
+  featured: true
+  featured_order: 1
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Seven hundred years before the cross, Isaiah wrote of a wound that
+    would heal ours.
+  public_blurb: 'Long-form on Isaiah 53. The Suffering Servant, wounded for our transgressions,
+    fulfilled in the New Testament. The first Awakeden deep-dive slated for release.
 
-  - slug: psalm-22-from-the-cross
-    kind: long
-    title: "Psalm 22: The Song From the Cross"
-    ref: "Psalm 22:16"
-    series_id: jesus-in-ot
-    cluster: psalm-22
-    cluster_order: 0
-    public_status: in_production
-    featured: true
-    featured_order: 2
-    preview_approved: true
-    preview_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/livingpage_poster.png"
-    study_source: "../longform/02_Psalm_22_Song_From_The_Cross/v1"
-    youtube_id: null
-    public_hook: "David wrote the crucifixion a thousand years before Rome nailed anyone to a cross."
-    public_blurb: >
-      One locked long-form study on Psalm 22, cut into eight gospel shorts. Each short follows
-      one beat from the psalm Jesus lived out on the cross.
+    '
+- slug: psalm-22-from-the-cross
+  kind: long
+  title: 'Psalm 22: The Song From the Cross'
+  ref: Psalm 22:16
+  series_id: jesus-in-ot
+  cluster: psalm-22
+  cluster_order: 0
+  public_status: in_production
+  featured: true
+  featured_order: 2
+  preview_approved: true
+  preview_source: ../longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/livingpage_poster.png
+  study_source: ../longform/02_Psalm_22_Song_From_The_Cross/v1
+  youtube_id: null
+  public_hook: David wrote the crucifixion a thousand years before Rome nailed anyone
+    to a cross.
+  public_blurb: 'One locked long-form study on Psalm 22, cut into eight gospel shorts.
+    Each short follows one beat from the psalm Jesus lived out on the cross.
 
-  - slug: ps22-01-crucifixion-foretold
-    kind: short
-    title: "The Crucifixion Foretold"
-    ref: "Psalm 22:18"
-    series_id: jesus-in-ot
-    cluster: psalm-22
-    cluster_order: 1
-    public_status: studio_complete
-    featured: false
-    preview_approved: true
-    preview_source: "assets/study/read/ps22-01-crucifixion-foretold/beat_01.jpg"
-    youtube_id: null
-    read_source: "../batches/cluster_01_cross/crucifixion_foretold_ps2218"
-    public_hook: "Ten centuries before the cross, a psalm said a dying man's clothes would be divided."
-    public_blurb: >
-      Psalm 22:18. They part my garments and cast lots. John records the soldiers doing exactly that.
+    '
+- slug: ps22-01-crucifixion-foretold
+  kind: short
+  title: The Crucifixion Foretold
+  ref: Psalm 22:18
+  series_id: jesus-in-ot
+  cluster: psalm-22
+  cluster_order: 1
+  public_status: studio_complete
+  featured: false
+  preview_approved: true
+  preview_source: assets/study/read/ps22-01-crucifixion-foretold/beat_01.jpg
+  youtube_id: null
+  read_source: ../batches/cluster_01_cross/crucifixion_foretold_ps2218
+  public_hook: Ten centuries before the cross, a psalm said a dying man's clothes
+    would be divided.
+  public_blurb: 'Psalm 22:18. They part my garments and cast lots. John records the
+    soldiers doing exactly that.
 
-  - slug: ps22-02-mockers-words
-    kind: short
-    title: "The Mockers' Words"
-    ref: "Psalm 22:7-8"
-    series_id: jesus-in-ot
-    cluster: psalm-22
-    cluster_order: 2
-    public_status: studio_complete
-    featured: false
-    preview_approved: false
-    preview_source: null
-    study_source: "../v2/pilot/mockers_words_ps22/v1"
-    youtube_id: null
-    public_hook: "The crowd mocked Him. They repeated words David had written a thousand years earlier."
-    public_blurb: >
-      David wrote the mockers' gesture and their taunt. Matthew records both at the cross.
+    '
+- slug: ps22-02-mockers-words
+  kind: short
+  title: The Mockers' Words
+  ref: Psalm 22:7-8
+  series_id: jesus-in-ot
+  cluster: psalm-22
+  cluster_order: 2
+  public_status: studio_complete
+  featured: false
+  preview_approved: false
+  preview_source: null
+  study_source: ../v2/pilot/mockers_words_ps22/v1
+  youtube_id: null
+  public_hook: The crowd mocked Him. They repeated words David had written a thousand
+    years earlier.
+  public_blurb: 'David wrote the mockers'' gesture and their taunt. Matthew records
+    both at the cross.
 
-  - slug: ps22-03-forsaken-cry
-    kind: short
-    title: "The Forsaken Cry"
-    ref: "Psalm 22:1"
-    series_id: jesus-in-ot
-    cluster: psalm-22
-    cluster_order: 3
-    public_status: studio_complete
-    featured: true
-    featured_order: 3
-    preview_approved: true
-    preview_source: "assets/study/read/ps22-03-forsaken-cry/beat_01.jpg"
-    youtube_id: null
-    read_source: "../batches/cluster_01_cross/forsaken_cry_ps221"
-    public_hook: "The loneliest line Jesus spoke from the cross was a quote from Psalm 22."
-    public_blurb: >
-      My God, my God, why hast thou forsaken me? David wrote it. Jesus cried it from the cross.
+    '
+- slug: ps22-03-forsaken-cry
+  kind: short
+  title: The Forsaken Cry
+  ref: Psalm 22:1
+  series_id: jesus-in-ot
+  cluster: psalm-22
+  cluster_order: 3
+  public_status: studio_complete
+  featured: true
+  featured_order: 3
+  preview_approved: true
+  preview_source: assets/study/read/ps22-03-forsaken-cry/beat_01.jpg
+  youtube_id: null
+  read_source: ../batches/cluster_01_cross/forsaken_cry_ps221
+  public_hook: The loneliest line Jesus spoke from the cross was a quote from Psalm
+    22.
+  public_blurb: 'My God, my God, why hast thou forsaken me? David wrote it. Jesus
+    cried it from the cross.
 
-  - slug: ps22-04-declared-to-brethren
-    kind: short
-    title: "Declared to the Brethren"
-    ref: "Psalm 22:22"
-    series_id: jesus-in-ot
-    cluster: psalm-22
-    cluster_order: 4
-    public_status: studio_complete
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "The psalm moves from forsaken to declaring God's name to the congregation."
-    public_blurb: >
-      Psalm 22:22. I will declare thy name unto my brethren. Hebrews applies it to the risen Christ.
+    '
+- slug: ps22-04-declared-to-brethren
+  kind: short
+  title: Declared to the Brethren
+  ref: Psalm 22:22
+  series_id: jesus-in-ot
+  cluster: psalm-22
+  cluster_order: 4
+  public_status: studio_complete
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: The psalm moves from forsaken to declaring God's name to the congregation.
+  public_blurb: 'Psalm 22:22. I will declare thy name unto my brethren. Hebrews applies
+    it to the risen Christ.
 
-  - slug: ps22-05-he-hath-done-this
-    kind: short
-    title: "He Hath Done This"
-    ref: "Psalm 22:31"
-    series_id: jesus-in-ot
-    cluster: psalm-22
-    cluster_order: 5
-    public_status: studio_complete
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "It is finished. The psalm said He would declare it to a people yet unborn."
-    public_blurb: >
-      The closing line of Psalm 22, that he hath done this, lands on Christ's finished work.
+    '
+- slug: ps22-05-he-hath-done-this
+  kind: short
+  title: He Hath Done This
+  ref: Psalm 22:31
+  series_id: jesus-in-ot
+  cluster: psalm-22
+  cluster_order: 5
+  public_status: studio_complete
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: It is finished. The psalm said He would declare it to a people yet
+    unborn.
+  public_blurb: 'The closing line of Psalm 22, that he hath done this, lands on Christ''s
+    finished work.
 
-  - slug: ps22-06-ends-of-the-earth
-    kind: short
-    title: "The Ends of the Earth"
-    ref: "Psalm 22:27"
-    series_id: jesus-in-ot
-    cluster: psalm-22
-    cluster_order: 6
-    public_status: studio_complete
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "All the ends of the world shall remember and turn unto the Lord."
-    public_blurb: >
-      Psalm 22:27. The nations turning to worship, fulfilled through Christ.
+    '
+- slug: ps22-06-ends-of-the-earth
+  kind: short
+  title: The Ends of the Earth
+  ref: Psalm 22:27
+  series_id: jesus-in-ot
+  cluster: psalm-22
+  cluster_order: 6
+  public_status: studio_complete
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: All the ends of the world shall remember and turn unto the Lord.
+  public_blurb: 'Psalm 22:27. The nations turning to worship, fulfilled through Christ.
 
-  - slug: ps22-07-body-foretold
-    kind: short
-    title: "The Body Foretold"
-    ref: "Psalm 22:14-17"
-    series_id: jesus-in-ot
-    cluster: psalm-22
-    cluster_order: 7
-    public_status: studio_complete
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "I am poured out like water. David described a body the cross would fulfil."
-    public_blurb: >
-      Poured out, bones out of joint, hands and feet pierced. The psalm's language fits the crucifixion.
+    '
+- slug: ps22-07-body-foretold
+  kind: short
+  title: The Body Foretold
+  ref: Psalm 22:14-17
+  series_id: jesus-in-ot
+  cluster: psalm-22
+  cluster_order: 7
+  public_status: studio_complete
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: I am poured out like water. David described a body the cross would
+    fulfil.
+  public_blurb: 'Poured out, bones out of joint, hands and feet pierced. The psalm''s
+    language fits the crucifixion.
 
-  - slug: ps22-08-i-thirst
-    kind: short
-    title: "I Thirst"
-    ref: "Psalm 22:15"
-    series_id: jesus-in-ot
-    cluster: psalm-22
-    cluster_order: 8
-    public_status: studio_complete
-    featured: false
-    preview_approved: true
-    preview_source: "assets/study/read/ps22-08-i-thirst/beat_01.jpg"
-    youtube_id: null
-    read_source: "../batches/cluster_01_cross/i_thirst_john1928"
-    public_hook: "Two words from the cross. David wrote the thirst a thousand years before."
-    public_blurb: >
-      My tongue cleaveth to my jaws. The psalm's thirst, fulfilled in Jesus' cry from the cross.
+    '
+- slug: ps22-08-i-thirst
+  kind: short
+  title: I Thirst
+  ref: Psalm 22:15
+  series_id: jesus-in-ot
+  cluster: psalm-22
+  cluster_order: 8
+  public_status: studio_complete
+  featured: false
+  preview_approved: true
+  preview_source: assets/study/read/ps22-08-i-thirst/beat_01.jpg
+  youtube_id: null
+  read_source: ../batches/cluster_01_cross/i_thirst_john1928
+  public_hook: Two words from the cross. David wrote the thirst a thousand years before.
+  public_blurb: 'My tongue cleaveth to my jaws. The psalm''s thirst, fulfilled in
+    Jesus'' cry from the cross.
 
-  - slug: zechariah-12-10-pierced
-    kind: short
-    title: "The One They Pierced"
-    ref: "Zechariah 12:10"
-    series_id: jesus-in-ot
-    cluster: cluster-01-cross
-    cluster_order: 12
-    public_status: studio_complete
-    featured: false
-    preview_approved: true
-    preview_source: "assets/study/read/zechariah-12-10-pierced/beat_01.jpg"
-    study_source: "../v2/pilot/zechariah_12_10_pierced/v1"
-    youtube_id: null
-    read_source: "../batches/cluster_01_cross/pierced_zech1210"
-    public_hook: "A Roman soldier drove a spear into a dead man's side to be sure He was gone. He had no idea he was finishing a sentence God wrote five centuries earlier."
-    public_blurb: >
-      Zechariah 12:10. The LORD says they shall look upon me whom they have pierced, then mourn for him as for
-      an only son. John cites it at the spear. The pierced one is God himself, the Son. Look at Him and live.
+    '
+- slug: zechariah-12-10-pierced
+  kind: short
+  title: The One They Pierced
+  ref: Zechariah 12:10
+  series_id: jesus-in-ot
+  cluster: cluster-01-cross
+  cluster_order: 12
+  public_status: studio_complete
+  featured: false
+  preview_approved: true
+  preview_source: assets/study/read/zechariah-12-10-pierced/beat_01.jpg
+  study_source: ../v2/pilot/zechariah_12_10_pierced/v1
+  youtube_id: null
+  read_source: ../batches/cluster_01_cross/pierced_zech1210
+  public_hook: A Roman soldier drove a spear into a dead man's side to be sure He
+    was gone. He had no idea he was finishing a sentence God wrote five centuries
+    earlier.
+  public_blurb: 'Zechariah 12:10. The LORD says they shall look upon me whom they
+    have pierced, then mourn for him as for an only son. John cites it at the spear.
+    The pierced one is God himself, the Son. Look at Him and live.
 
-# --- Back-catalogue placeholders (auto-generated; rich pages land when v2 re-processes each) ---
-
-  - slug: why-are-you-afraid
-    kind: short
-    title: "Why Are You Afraid?"
-    ref: "Matthew 8:26"
-    series_id: questions-jesus-asked
-    cluster: null
-    public_status: planned
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "The disciples were drowning."
-    public_blurb: "The disciples were drowning."
-
-  - slug: psalms-22-part-2
-    kind: short
-    title: "Psalm 22, Part 2"
-    ref: "Psalm 22:1"
-    series_id: jesus-in-ot
-    cluster: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "What if part of Jesus' story was written before it happened?"
-    public_blurb: "What if part of Jesus' story was written before it happened?"
-
-  - slug: he-said-it-under-the-lamps
-    kind: short
-    title: "He Said It Under the Lamps"
-    ref: "John 8:12"
-    series_id: i-am-sayings
-    cluster: null
-    public_status: planned
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "At the Feast of Tabernacles, they lit four giant lamps in the temple, and that's when Jesus said this."
-    public_blurb: "At the Feast of Tabernacles, they lit four giant lamps in the temple, and that's when Jesus said this."
-
-  - slug: i-am-the-light-of-the-world
-    kind: short
-    title: "I AM the Light of the World"
-    ref: "John 8:12"
-    series_id: i-am-sayings
-    cluster: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "They lit four giant fires in the temple that night to remember when God led them. Then Jesus stood up and claimed to be the fire."
-    public_blurb: "They lit four giant fires in the temple that night to remember when God led them. Then Jesus stood up and claimed to be the fire."
-
-  - slug: i-am-the-door-the-shepherd-who-became-the-gate
-    kind: short
-    title: "I AM the Door: The Shepherd Who Became the Gate"
-    ref: "John 10:9"
-    series_id: i-am-sayings
-    cluster: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "In ancient Israel, the shepherd was the door. Literally his body."
-    public_blurb: "In ancient Israel, the shepherd was the door. Literally his body."
-
-  - slug: the-well-that-never-runs-dry
-    kind: short
-    title: "The Well That Never Runs Dry"
-    ref: "John 4:14"
-    series_id: people-who-encountered-jesus
-    cluster: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "She came to the well at noon to avoid the whispers. Five husbands behind her, a sixth man at home, and a thirst nothing had touched."
-    public_blurb: "She came to the well at noon to avoid the whispers. Five husbands behind her, a sixth man at home, and a thirst nothing had touched."
-
-  - slug: the-father-who-ran
-    kind: short
-    title: "The Father Who Ran"
-    ref: "Luke 15:20"
-    series_id: parables-of-jesus
-    cluster: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "We call it the parable of the prodigal son. But the son walks home slow and filthy. The only one running is the father."
-    public_blurb: "We call it the parable of the prodigal son. But the son walks home slow and filthy. The only one running is the father."
-
-  - slug: the-line-he-never-got-to-say
-    kind: short
-    title: "The Line He Never Got to Say"
-    ref: "Luke 15:20"
-    series_id: parables-of-jesus
-    cluster: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "He rehearsed three lines on the road home. He only got to say two. Read it again, the third sentence is gone."
-    public_blurb: "He rehearsed three lines on the road home. He only got to say two. Read it again, the third sentence is gone."
-
-  - slug: the-confession-he-never-finished
-    kind: short
-    title: "The Confession He Never Finished"
-    ref: "Luke 15:20"
-    series_id: parables-of-jesus
-    cluster: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "He rehearsed his apology the whole way home. Three parts. He only got two of them out, and that changes everything."
-    public_blurb: "He rehearsed his apology the whole way home. Three parts. He only got two of them out, and that changes everything."
-
-  - slug: the-kiss-that-cut-off-the-bargain
-    kind: short
-    title: "The Kiss That Cut Off the Bargain"
-    ref: "Luke 22:48"
-    series_id: people-who-encountered-jesus
-    cluster: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "He rehearsed the speech the whole walk home. Three lines. He only got to deliver two, the kiss cut off the third."
-    public_blurb: "He rehearsed the speech the whole walk home. Three lines. He only got to deliver two, the kiss cut off the third."
-
-  - slug: the-fire-jesus-built
-    kind: short
-    title: "The Fire Jesus Built"
-    ref: "John 21:17"
-    series_id: people-who-encountered-jesus
-    cluster: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "The last time Peter smelled charcoal smoke, he was denying Jesus by a fire. The risen Christ has built him another."
-    public_blurb: "The last time Peter smelled charcoal smoke, he was denying Jesus by a fire. The risen Christ has built him another."
-
-  - slug: he-never-said-yes
-    kind: short
-    title: "He Never Said Yes"
-    ref: "John 5:6"
-    series_id: questions-jesus-asked
-    cluster: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "Bethesda meant \"House of Mercy\", and it was the most merciless place in Jerusalem. For thirty-eight years one man lay there, too crippled to ever reach the water first."
-    public_blurb: "Bethesda meant \"House of Mercy\", and it was the most merciless place in Jerusalem. For thirty-eight years one man lay there, too crippled to ever reach the water first."
-
-  - slug: the-cliff-of-rival-gods
-    kind: short
-    title: "The Cliff of Rival Gods"
-    ref: "Matthew 16:15"
-    series_id: questions-jesus-asked
-    cluster: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "A cliffside honeycombed with pagan shrines. Pan's grotto behind Him. Caesar's white temple gleaming above. And Jesus picks THIS rock to ask the question."
-    public_blurb: "A cliffside honeycombed with pagan shrines. Pan's grotto behind Him. Caesar's white temple gleaming above. And Jesus picks THIS rock to ask the question."
-
-  - slug: he-was-asleep-in-the-storm
-    kind: short
-    title: "He Was Asleep in the Storm"
-    ref: "Matthew 8:26"
-    series_id: miracles-of-jesus
-    cluster: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "Waves breaking over the rail. Water in the boat past your knees. Men screaming for their lives. And in the stern, He is asleep."
-    public_blurb: "Waves breaking over the rail. Water in the boat past your knees. Men screaming for their lives. And in the stern, He is asleep."
-
-  - slug: the-pronouns-that-preached-the-gospel
-    kind: short
-    title: "The Pronouns That Preached the Gospel"
-    ref: "Isaiah 53:5"
-    series_id: jesus-in-ot
-    cluster: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "You think your failure disqualifies you. The man who denied Jesus to his face wrote the sentence that heals you, and it pivots on pronouns."
-    public_blurb: "You think your failure disqualifies you. The man who denied Jesus to his face wrote the sentence that heals you, and it pivots on pronouns."
-
-  - slug: he-never-answered-jesus
-    kind: short
-    title: "He Never Answered Jesus"
-    ref: "John 5:6"
-    series_id: questions-jesus-asked
-    cluster: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "Thirty-eight years on a mat. Jesus asks one question. And here is the detail almost everyone misses, the man never answers it. He explains why he can't."
-    public_blurb: "Thirty-eight years on a mat. Jesus asks one question. And here is the detail almost everyone misses, the man never answers it. He explains why he can't."
-
-  - slug: the-prepared-belly
-    kind: short
-    title: "The Prepared Belly"
-    ref: "Jonah 1:17"
-    series_id: jesus-in-ot
-    cluster: null
-    public_status: planned
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "You remember Jonah swallowed by a fish. Open the chapter, he is the man thrown overboard so the rest of the ship could live."
-    public_blurb: "You remember Jonah swallowed by a fish. Open the chapter, he is the man thrown overboard so the rest of the ship could live."
-
-  - slug: the-answer-was-a-gift
-    kind: short
-    title: "The Answer Was a Gift"
-    ref: "Matthew 16:15"
-    series_id: questions-jesus-asked
-    cluster: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "Before He asks His real question, Jesus takes a poll. He doesn't start with you. He starts with the crowd, what does everyone out there say about Him?"
-    public_blurb: "Before He asks His real question, Jesus takes a poll. He doesn't start with you. He starts with the crowd, what does everyone out there say about Him?"
-
-  - slug: the-question-on-the-gaza-road
-    kind: short
-    title: "The Question on the Gaza Road"
-    ref: "Isaiah 53:5"
-    series_id: jesus-in-ot
-    cluster: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "Seven hundred years before the cross, a Jewish prophet described a death like it, and on the Gaza road, an African official is reading that scroll aloud."
-    public_blurb: "Seven hundred years before the cross, a Jewish prophet described a death like it, and on the Gaza road, an African official is reading that scroll aloud."
-
-  - slug: jesus-walked-past-the-pool
-    kind: short
-    title: "Jesus Walked Past the Pool"
-    ref: "John 5:6"
-    series_id: miracles-of-jesus
-    cluster: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "For thirty-eight years he waited for the water to stir. Jesus walked past the water, and stopped at him."
-    public_blurb: "For thirty-eight years he waited for the water to stir. Jesus walked past the water, and stopped at him."
-
-  - slug: a-list-of-dead-men
-    kind: short
-    title: "A List of Dead Men"
-    ref: "Matthew 16:15"
-    series_id: questions-jesus-asked
-    cluster: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "You've already filed Jesus, great teacher, historical figure, the faith you left in childhood. Then He turns from the crowd and asks one question."
-    public_blurb: "You've already filed Jesus, great teacher, historical figure, the faith you left in childhood. Then He turns from the crowd and asks one question."
-
-  - slug: what-manner-of-man
-    kind: short
-    title: "What Manner of Man"
-    ref: "Matthew 8:26"
-    series_id: miracles-of-jesus
-    cluster: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "Black water pours over the rail, seasoned sailors screaming for their lives, and in the stern, soaked and rocking, one man is sound asleep."
-    public_blurb: "Black water pours over the rail, seasoned sailors screaming for their lives, and in the stern, soaked and rocking, one man is sound asleep."
-
-  - slug: the-race-he-could-never-win
-    kind: short
-    title: "The Race He Could Never Win"
-    ref: "John 5:6"
-    series_id: questions-jesus-asked
-    cluster: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "Five porches packed with the blind and the lame, all staring at one pool. When the water stirs, only the first one in is healed."
-    public_blurb: "Five porches packed with the blind and the lame, all staring at one pool. When the water stirs, only the first one in is healed."
-
-  - slug: smitten-of-god
-    kind: short
-    title: "Smitten of God"
-    ref: "Isaiah 53:5"
-    series_id: jesus-in-ot
-    cluster: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "Watch the crucifixion through the crowd's eyes, and you'll read it exactly the way they did: a man getting what God decided he deserved."
-    public_blurb: "Watch the crucifixion through the crowd's eyes, and you'll read it exactly the way they did: a man getting what God decided he deserved."
-
-  - slug: the-light-you-can-stand-in
-    kind: short
-    title: "The Light You Can Stand In"
-    ref: "John 8:12"
-    series_id: i-am-sayings
-    cluster: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "Stones drop in the dust, one by one. The accusers file out, oldest first, leaving one accused woman alone with Jesus in the light."
-    public_blurb: "Stones drop in the dust, one by one. The accusers file out, oldest first, leaving one accused woman alone with Jesus in the light."
-
-  - slug: the-door-was-a-body
-    kind: short
-    title: "The Door Was a Body"
-    ref: "John 10:9"
-    series_id: i-am-sayings
-    cluster: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "God's own name is \"I AM\", too holy to speak. And God looked at people who could never reach Him, and opened a door."
-    public_blurb: "God's own name is \"I AM\", too holy to speak. And God looked at people who could never reach Him, and opened a door."
-
-  - slug: the-shepherd-in-the-gap
-    kind: short
-    title: "The Shepherd in the Gap"
-    ref: "John 10:11"
-    series_id: i-am-sayings
-    cluster: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "Out in the hills, a sheepfold often had no gate, just a gap in the stones. At night the shepherd lay across it, his body the door."
-    public_blurb: "Out in the hills, a sheepfold often had no gate, just a gap in the stones. At night the shepherd lay across it, his body the door."
-
-  - slug: the-hunger-bread-cant-fill
-    kind: short
-    title: "The Hunger Bread Can't Fill"
-    ref: "John 6:35"
-    series_id: i-am-sayings
-    cluster: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "You can be completely full and still feel empty. Fridge stocked, day went fine, and something deeper than your stomach is still hungry."
-    public_blurb: "You can be completely full and still feel empty. Fridge stocked, day went fine, and something deeper than your stomach is still hungry."
-
-  - slug: manna-fulfilled
-    kind: short
-    title: "Manna Fulfilled"
-    ref: "John 6:49"
-    series_id: i-am-sayings
-    cluster: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "In the desert, God rained bread from heaven each morning. They gathered it, ate, lived another day, and still, every one died."
-    public_blurb: "In the desert, God rained bread from heaven each morning. They gathered it, ate, lived another day, and still, every one died."
-
-  - slug: in-no-wise-cast-out
-    kind: short
-    title: "In No Wise Cast Out"
-    ref: "John 6:37"
-    series_id: i-am-sayings
-    cluster: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "Somewhere in you is the quiet fear that if you actually came to God, He'd look at your record and turn you away."
-    public_blurb: "Somewhere in you is the quiet fear that if you actually came to God, He'd look at your record and turn you away."
-
-  - slug: who-do-you-say-i-am
-    kind: short
-    title: "Who Do You Say I Am"
-    ref: "Matthew 16:15"
-    series_id: questions-jesus-asked
-    cluster: null
-    public_status: planned
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "Everyone has an opinion about Jesus."
-    public_blurb: "Everyone has an opinion about Jesus."
-
-  # ---- Cluster 1: The Cross (living-page inked comic shorts, 2026-07) ----
-  - slug: father-forgive-them
-    kind: short
-    title: "Father, Forgive Them"
-    ref: "Luke 23:34"
-    series_id: words-from-cross
-    cluster: cluster-01-cross
-    cluster_order: 1
-    public_status: studio_complete
-    featured: false
-    preview_approved: true
-    preview_source: "assets/study/read/father-forgive-them/beat_01.jpg"
-    youtube_id: null
-    read_source: "../batches/cluster_01_cross/father_forgive_them"
-    read_spec: "visual/mocomic_v2.spec.json"
-    read_video: "visual/_byteplus/father_forgive_them_mocomic_v2_scored.mp4"
-    public_hook: "The first word from the cross is a prayer for the men driving the nails."
-    public_blurb: "Luke 23:34. While the soldiers divided his garments, Jesus prayed forgiveness over them. The first word from the cross, drawn panel by panel."
-
-  - slug: thirty-pieces-of-silver
-    kind: short
-    title: "Thirty Pieces of Silver"
-    ref: "Zechariah 11:13"
-    series_id: jesus-in-ot
-    cluster: cluster-01-cross
-    cluster_order: 2
-    public_status: studio_complete
-    featured: false
-    preview_approved: true
-    preview_source: "assets/study/read/thirty-pieces-of-silver/beat_01.jpg"
-    youtube_id: null
-    read_source: "../batches/cluster_01_cross/thirty_pieces_zech11"
-    public_hook: "Zechariah priced the betrayal five hundred years early: thirty pieces of silver, thrown down in the house of the LORD."
-    public_blurb: "Zechariah 11:12-13 names the price, the contempt, and the temple floor. Judas fulfilled every word of it. The prophecy that priced the Messiah."
-
-  - slug: today-in-paradise
-    kind: short
-    title: "Today in Paradise"
-    ref: "Luke 23:43"
-    series_id: words-from-cross
-    cluster: cluster-01-cross
-    cluster_order: 3
-    public_status: studio_complete
-    featured: false
-    preview_approved: true
-    preview_source: "assets/study/read/today-in-paradise/beat_01.jpg"
-    youtube_id: null
-    read_source: "../batches/cluster_01_cross/today_paradise_luke2343"
-    public_hook: "Two thieves. Same cross. Two answers."
-    public_blurb: "Luke 23:39-43. One thief railed, one asked to be remembered, and Jesus answered with a promise dated TODAY. The second word from the cross."
-
-  - slug: woman-behold-thy-son
-    kind: short
-    title: "Woman, Behold Thy Son"
-    ref: "John 19:26"
-    series_id: words-from-cross
-    cluster: cluster-01-cross
-    cluster_order: 4
-    public_status: studio_complete
-    featured: false
-    preview_approved: true
-    preview_source: "assets/study/read/woman-behold-thy-son/beat_01.jpg"
-    youtube_id: null
-    read_source: "../batches/cluster_01_cross/woman_behold_john1926"
-    public_hook: "Simeon promised Mary a sword. At the cross, Jesus watched it land, and gave her a son."
-    public_blurb: "Luke 2:35 meets John 19:26-27. The sword Simeon foretold pierces Mary at Golgotha, and the dying Jesus binds her wound with a son and a home."
-
-  - slug: it-is-finished
-    kind: short
-    title: "It Is Finished"
-    ref: "John 19:30"
-    series_id: words-from-cross
-    cluster: cluster-01-cross
-    cluster_order: 5
-    public_status: studio_complete
-    featured: false
-    preview_approved: true
-    preview_source: "assets/study/read/it-is-finished/beat_01.jpg"
-    youtube_id: null
-    read_source: "../batches/cluster_01_cross/it_is_finished_john1930"
-    public_hook: "The first time the Bible says finished, nothing was broken yet."
-    public_blurb: "Genesis 2:1 and John 19:30. Two finished works, one Workman: He finished creation and rested; He finished redemption and rose. Enter his rest."
-
-  - slug: father-into-thy-hands
-    kind: short
-    title: "Father, Into Thy Hands"
-    ref: "Luke 23:46"
-    series_id: words-from-cross
-    cluster: cluster-01-cross
-    cluster_order: 6
-    public_status: studio_complete
-    featured: false
-    preview_approved: true
-    preview_source: "assets/study/read/father-into-thy-hands/beat_01.jpg"
-    youtube_id: null
-    read_source: "../batches/cluster_01_cross/into_thy_hands_luke2346"
-    public_hook: "A dying man's last words. And they were a child's bedtime prayer."
-    public_blurb: "Psalm 31:5 was an evening prayer a child could learn. Luke 23:46: with his last breath Jesus prayed it, and added one word: Father."
-
-  - slug: could-ye-not-watch-one-hour
-    kind: short
-    title: "Could Ye Not Watch One Hour"
-    ref: "Matthew 26:40"
-    series_id: questions-jesus-asked
-    cluster: cluster-01-cross
-    cluster_order: 7
-    public_status: studio_complete
-    featured: false
-    preview_approved: true
-    preview_source: "assets/study/read/could-ye-not-watch-one-hour/beat_01.jpg"
-    youtube_id: null
-    read_source: "../batches/cluster_01_cross/watch_one_hour_matt2640"
-    public_hook: "Jesus asked three fishermen for one thing. They failed inside an hour."
-    public_blurb: "Matthew 26:36-46. Gethsemane, the cup, the sleeping disciples, and the mercy in the question. He watched that hour alone so no hour of yours is watched alone."
-
-  # ---- Eyewitness: Old Testament Shadows (first-person witness longs) ----
-  - slug: ew-two-goats
-    kind: long
-    title: "The Two Goats"
-    ref: "Leviticus 16:8"
-    series_id: eyewitness
-    cluster: null
-    cluster_order: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "Two goats, one lot, and sin carried away into the wilderness - told by the priest who was there."
-    public_blurb: "The Day of Atonement, first-person. The high priest walks you through the two goats, and where the whole pattern points."
-
-  - slug: ew-abraham-moriah
-    kind: long
-    title: "Abraham on Moriah"
-    ref: "Genesis 22:8"
-    series_id: eyewitness
-    cluster: null
-    cluster_order: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "Abraham climbed the mountain with wood on his son's back. He tells what happened when God provided."
-    public_blurb: "Genesis 22, first-person. My son, God will provide himself a lamb. A father tells the hardest walk in the Old Testament."
-
-  - slug: ew-bronze-serpent
-    kind: long
-    title: "The Bronze Serpent"
-    ref: "Numbers 21:8"
-    series_id: eyewitness
-    cluster: null
-    cluster_order: null
-    public_status: in_production
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "A serpent of brass on a pole, and everyone who looked at it lived. A witness tells the day looking was enough."
-    public_blurb: "Numbers 21, first-person. Jesus himself points back at this one: as Moses lifted up the serpent, so must the Son of man be lifted up."
-
-  - slug: ew-joseph
-    kind: long
-    title: "Joseph, Betrayed to Save"
-    ref: "Genesis 45:5"
-    series_id: eyewitness
-    cluster: null
-    cluster_order: null
-    public_status: planned
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "Sold by his brothers, raised up to save them. Joseph tells the story that points past itself."
-    public_blurb: "Genesis 37-45, first-person. God sent me before you to preserve life. The betrayed brother who became the rescuer."
-
-  - slug: ew-jonah
-    kind: long
-    title: "Jonah, Three Days in the Deep"
-    ref: "Jonah 1:17"
-    series_id: eyewitness
-    cluster: null
-    cluster_order: null
-    public_status: planned
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "Three days and three nights inside the fish. Jonah tells it - and Jesus called it the only sign He would give."
-    public_blurb: "Jonah 1-2, first-person. The prophet who ran, the deep that held him, and the sign Jesus claimed for Himself."
-
-  - slug: ew-noah
-    kind: long
-    title: "Noah, the Night God Shut the Door"
-    ref: "Genesis 7:16"
-    series_id: eyewitness
-    cluster: null
-    cluster_order: null
-    public_status: planned
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "One ark, one door, and the LORD shut him in. Noah tells the night the rain began."
-    public_blurb: "Genesis 6-8, first-person. One door through the water, shut by God's own hand."
-
-  - slug: ew-isaiah
-    kind: long
-    title: "Isaiah, the Man Who Saw It"
-    ref: "Isaiah 53:1"
-    series_id: eyewitness
-    cluster: null
-    cluster_order: null
-    public_status: planned
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "Who hath believed our report? Isaiah tells the vision that made him write of a servant wounded for us."
-    public_blurb: "Isaiah 53, from the prophet's side of the page. Seven hundred years early, he wrote what he was shown."
-
-  - slug: ew-passover-father
-    kind: long
-    title: "The Passover Father"
-    ref: "Exodus 12:13"
-    series_id: eyewitness
-    cluster: null
-    cluster_order: null
-    public_status: planned
-    featured: false
-    preview_approved: false
-    preview_source: null
-    youtube_id: null
-    public_hook: "A father in Egypt tells the night blood on a doorframe stood between his firstborn and death."
-    public_blurb: "Exodus 12, first-person. When I see the blood, I will pass over you. The night the lamb died instead."
-
-# Ordered public shelves: the catalogue renders one shelf per series, in this order.
-# Mirrors the original content folders (Drive: 0 Christianity/*) + the Eyewitness slate.
+    '
+- slug: why-are-you-afraid
+  kind: short
+  title: Why Are You Afraid?
+  ref: Matthew 8:26
+  series_id: questions-jesus-asked
+  cluster: null
+  public_status: planned
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: The disciples were drowning.
+  public_blurb: The disciples were drowning.
+- slug: psalms-22-part-2
+  kind: short
+  title: Psalm 22, Part 2
+  ref: Psalm 22:1
+  series_id: jesus-in-ot
+  cluster: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: What if part of Jesus' story was written before it happened?
+  public_blurb: What if part of Jesus' story was written before it happened?
+- slug: he-said-it-under-the-lamps
+  kind: short
+  title: He Said It Under the Lamps
+  ref: John 8:12
+  series_id: i-am-sayings
+  cluster: null
+  public_status: planned
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: At the Feast of Tabernacles, they lit four giant lamps in the temple,
+    and that's when Jesus said this.
+  public_blurb: At the Feast of Tabernacles, they lit four giant lamps in the temple,
+    and that's when Jesus said this.
+- slug: i-am-the-light-of-the-world
+  kind: short
+  title: I AM the Light of the World
+  ref: John 8:12
+  series_id: i-am-sayings
+  cluster: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: They lit four giant fires in the temple that night to remember when
+    God led them. Then Jesus stood up and claimed to be the fire.
+  public_blurb: They lit four giant fires in the temple that night to remember when
+    God led them. Then Jesus stood up and claimed to be the fire.
+- slug: i-am-the-door-the-shepherd-who-became-the-gate
+  kind: short
+  title: 'I AM the Door: The Shepherd Who Became the Gate'
+  ref: John 10:9
+  series_id: i-am-sayings
+  cluster: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: In ancient Israel, the shepherd was the door. Literally his body.
+  public_blurb: In ancient Israel, the shepherd was the door. Literally his body.
+- slug: the-well-that-never-runs-dry
+  kind: short
+  title: The Well That Never Runs Dry
+  ref: John 4:14
+  series_id: people-who-encountered-jesus
+  cluster: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: She came to the well at noon to avoid the whispers. Five husbands behind
+    her, a sixth man at home, and a thirst nothing had touched.
+  public_blurb: She came to the well at noon to avoid the whispers. Five husbands
+    behind her, a sixth man at home, and a thirst nothing had touched.
+- slug: the-father-who-ran
+  kind: short
+  title: The Father Who Ran
+  ref: Luke 15:20
+  series_id: parables-of-jesus
+  cluster: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: We call it the parable of the prodigal son. But the son walks home
+    slow and filthy. The only one running is the father.
+  public_blurb: We call it the parable of the prodigal son. But the son walks home
+    slow and filthy. The only one running is the father.
+- slug: the-line-he-never-got-to-say
+  kind: short
+  title: The Line He Never Got to Say
+  ref: Luke 15:20
+  series_id: parables-of-jesus
+  cluster: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: He rehearsed three lines on the road home. He only got to say two.
+    Read it again, the third sentence is gone.
+  public_blurb: He rehearsed three lines on the road home. He only got to say two.
+    Read it again, the third sentence is gone.
+- slug: the-confession-he-never-finished
+  kind: short
+  title: The Confession He Never Finished
+  ref: Luke 15:20
+  series_id: parables-of-jesus
+  cluster: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: He rehearsed his apology the whole way home. Three parts. He only got
+    two of them out, and that changes everything.
+  public_blurb: He rehearsed his apology the whole way home. Three parts. He only
+    got two of them out, and that changes everything.
+- slug: the-kiss-that-cut-off-the-bargain
+  kind: short
+  title: The Kiss That Cut Off the Bargain
+  ref: Luke 22:48
+  series_id: people-who-encountered-jesus
+  cluster: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: He rehearsed the speech the whole walk home. Three lines. He only got
+    to deliver two, the kiss cut off the third.
+  public_blurb: He rehearsed the speech the whole walk home. Three lines. He only
+    got to deliver two, the kiss cut off the third.
+- slug: the-fire-jesus-built
+  kind: short
+  title: The Fire Jesus Built
+  ref: John 21:17
+  series_id: people-who-encountered-jesus
+  cluster: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: The last time Peter smelled charcoal smoke, he was denying Jesus by
+    a fire. The risen Christ has built him another.
+  public_blurb: The last time Peter smelled charcoal smoke, he was denying Jesus by
+    a fire. The risen Christ has built him another.
+- slug: he-never-said-yes
+  kind: short
+  title: He Never Said Yes
+  ref: John 5:6
+  series_id: questions-jesus-asked
+  cluster: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Bethesda meant "House of Mercy", and it was the most merciless place
+    in Jerusalem. For thirty-eight years one man lay there, too crippled to ever reach
+    the water first.
+  public_blurb: Bethesda meant "House of Mercy", and it was the most merciless place
+    in Jerusalem. For thirty-eight years one man lay there, too crippled to ever reach
+    the water first.
+- slug: the-cliff-of-rival-gods
+  kind: short
+  title: The Cliff of Rival Gods
+  ref: Matthew 16:15
+  series_id: questions-jesus-asked
+  cluster: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: A cliffside honeycombed with pagan shrines. Pan's grotto behind Him.
+    Caesar's white temple gleaming above. And Jesus picks THIS rock to ask the question.
+  public_blurb: A cliffside honeycombed with pagan shrines. Pan's grotto behind Him.
+    Caesar's white temple gleaming above. And Jesus picks THIS rock to ask the question.
+- slug: he-was-asleep-in-the-storm
+  kind: short
+  title: He Was Asleep in the Storm
+  ref: Matthew 8:26
+  series_id: miracles-of-jesus
+  cluster: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Waves breaking over the rail. Water in the boat past your knees. Men
+    screaming for their lives. And in the stern, He is asleep.
+  public_blurb: Waves breaking over the rail. Water in the boat past your knees. Men
+    screaming for their lives. And in the stern, He is asleep.
+- slug: the-pronouns-that-preached-the-gospel
+  kind: short
+  title: The Pronouns That Preached the Gospel
+  ref: Isaiah 53:5
+  series_id: jesus-in-ot
+  cluster: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: You think your failure disqualifies you. The man who denied Jesus to
+    his face wrote the sentence that heals you, and it pivots on pronouns.
+  public_blurb: You think your failure disqualifies you. The man who denied Jesus
+    to his face wrote the sentence that heals you, and it pivots on pronouns.
+- slug: he-never-answered-jesus
+  kind: short
+  title: He Never Answered Jesus
+  ref: John 5:6
+  series_id: questions-jesus-asked
+  cluster: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Thirty-eight years on a mat. Jesus asks one question. And here is the
+    detail almost everyone misses, the man never answers it. He explains why he can't.
+  public_blurb: Thirty-eight years on a mat. Jesus asks one question. And here is
+    the detail almost everyone misses, the man never answers it. He explains why he
+    can't.
+- slug: the-prepared-belly
+  kind: short
+  title: The Prepared Belly
+  ref: Jonah 1:17
+  series_id: jesus-in-ot
+  cluster: null
+  public_status: planned
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: You remember Jonah swallowed by a fish. Open the chapter, he is the
+    man thrown overboard so the rest of the ship could live.
+  public_blurb: You remember Jonah swallowed by a fish. Open the chapter, he is the
+    man thrown overboard so the rest of the ship could live.
+- slug: the-answer-was-a-gift
+  kind: short
+  title: The Answer Was a Gift
+  ref: Matthew 16:15
+  series_id: questions-jesus-asked
+  cluster: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Before He asks His real question, Jesus takes a poll. He doesn't start
+    with you. He starts with the crowd, what does everyone out there say about Him?
+  public_blurb: Before He asks His real question, Jesus takes a poll. He doesn't start
+    with you. He starts with the crowd, what does everyone out there say about Him?
+- slug: the-question-on-the-gaza-road
+  kind: short
+  title: The Question on the Gaza Road
+  ref: Isaiah 53:5
+  series_id: jesus-in-ot
+  cluster: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Seven hundred years before the cross, a Jewish prophet described a
+    death like it, and on the Gaza road, an African official is reading that scroll
+    aloud.
+  public_blurb: Seven hundred years before the cross, a Jewish prophet described a
+    death like it, and on the Gaza road, an African official is reading that scroll
+    aloud.
+- slug: jesus-walked-past-the-pool
+  kind: short
+  title: Jesus Walked Past the Pool
+  ref: John 5:6
+  series_id: miracles-of-jesus
+  cluster: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: For thirty-eight years he waited for the water to stir. Jesus walked
+    past the water, and stopped at him.
+  public_blurb: For thirty-eight years he waited for the water to stir. Jesus walked
+    past the water, and stopped at him.
+- slug: a-list-of-dead-men
+  kind: short
+  title: A List of Dead Men
+  ref: Matthew 16:15
+  series_id: questions-jesus-asked
+  cluster: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: You've already filed Jesus, great teacher, historical figure, the faith
+    you left in childhood. Then He turns from the crowd and asks one question.
+  public_blurb: You've already filed Jesus, great teacher, historical figure, the
+    faith you left in childhood. Then He turns from the crowd and asks one question.
+- slug: what-manner-of-man
+  kind: short
+  title: What Manner of Man
+  ref: Matthew 8:26
+  series_id: miracles-of-jesus
+  cluster: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Black water pours over the rail, seasoned sailors screaming for their
+    lives, and in the stern, soaked and rocking, one man is sound asleep.
+  public_blurb: Black water pours over the rail, seasoned sailors screaming for their
+    lives, and in the stern, soaked and rocking, one man is sound asleep.
+- slug: the-race-he-could-never-win
+  kind: short
+  title: The Race He Could Never Win
+  ref: John 5:6
+  series_id: questions-jesus-asked
+  cluster: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Five porches packed with the blind and the lame, all staring at one
+    pool. When the water stirs, only the first one in is healed.
+  public_blurb: Five porches packed with the blind and the lame, all staring at one
+    pool. When the water stirs, only the first one in is healed.
+- slug: smitten-of-god
+  kind: short
+  title: Smitten of God
+  ref: Isaiah 53:5
+  series_id: jesus-in-ot
+  cluster: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: 'Watch the crucifixion through the crowd''s eyes, and you''ll read
+    it exactly the way they did: a man getting what God decided he deserved.'
+  public_blurb: 'Watch the crucifixion through the crowd''s eyes, and you''ll read
+    it exactly the way they did: a man getting what God decided he deserved.'
+- slug: the-light-you-can-stand-in
+  kind: short
+  title: The Light You Can Stand In
+  ref: John 8:12
+  series_id: i-am-sayings
+  cluster: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Stones drop in the dust, one by one. The accusers file out, oldest
+    first, leaving one accused woman alone with Jesus in the light.
+  public_blurb: Stones drop in the dust, one by one. The accusers file out, oldest
+    first, leaving one accused woman alone with Jesus in the light.
+- slug: the-door-was-a-body
+  kind: short
+  title: The Door Was a Body
+  ref: John 10:9
+  series_id: i-am-sayings
+  cluster: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: God's own name is "I AM", too holy to speak. And God looked at people
+    who could never reach Him, and opened a door.
+  public_blurb: God's own name is "I AM", too holy to speak. And God looked at people
+    who could never reach Him, and opened a door.
+- slug: the-shepherd-in-the-gap
+  kind: short
+  title: The Shepherd in the Gap
+  ref: John 10:11
+  series_id: i-am-sayings
+  cluster: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Out in the hills, a sheepfold often had no gate, just a gap in the
+    stones. At night the shepherd lay across it, his body the door.
+  public_blurb: Out in the hills, a sheepfold often had no gate, just a gap in the
+    stones. At night the shepherd lay across it, his body the door.
+- slug: the-hunger-bread-cant-fill
+  kind: short
+  title: The Hunger Bread Can't Fill
+  ref: John 6:35
+  series_id: i-am-sayings
+  cluster: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: You can be completely full and still feel empty. Fridge stocked, day
+    went fine, and something deeper than your stomach is still hungry.
+  public_blurb: You can be completely full and still feel empty. Fridge stocked, day
+    went fine, and something deeper than your stomach is still hungry.
+- slug: manna-fulfilled
+  kind: short
+  title: Manna Fulfilled
+  ref: John 6:49
+  series_id: i-am-sayings
+  cluster: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: In the desert, God rained bread from heaven each morning. They gathered
+    it, ate, lived another day, and still, every one died.
+  public_blurb: In the desert, God rained bread from heaven each morning. They gathered
+    it, ate, lived another day, and still, every one died.
+- slug: in-no-wise-cast-out
+  kind: short
+  title: In No Wise Cast Out
+  ref: John 6:37
+  series_id: i-am-sayings
+  cluster: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Somewhere in you is the quiet fear that if you actually came to God,
+    He'd look at your record and turn you away.
+  public_blurb: Somewhere in you is the quiet fear that if you actually came to God,
+    He'd look at your record and turn you away.
+- slug: who-do-you-say-i-am
+  kind: short
+  title: Who Do You Say I Am
+  ref: Matthew 16:15
+  series_id: questions-jesus-asked
+  cluster: null
+  public_status: planned
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Everyone has an opinion about Jesus.
+  public_blurb: Everyone has an opinion about Jesus.
+- slug: father-forgive-them
+  kind: short
+  title: Father, Forgive Them
+  ref: Luke 23:34
+  series_id: words-from-cross
+  cluster: cluster-01-cross
+  cluster_order: 1
+  public_status: studio_complete
+  featured: false
+  preview_approved: true
+  preview_source: assets/study/read/father-forgive-them/beat_01.jpg
+  youtube_id: null
+  read_source: ../batches/cluster_01_cross/father_forgive_them
+  read_spec: visual/mocomic_v2.spec.json
+  read_video: visual/_byteplus/father_forgive_them_mocomic_v2_scored.mp4
+  public_hook: The first word from the cross is a prayer for the men driving the nails.
+  public_blurb: Luke 23:34. While the soldiers divided his garments, Jesus prayed
+    forgiveness over them. The first word from the cross, drawn panel by panel.
+- slug: thirty-pieces-of-silver
+  kind: short
+  title: Thirty Pieces of Silver
+  ref: Zechariah 11:13
+  series_id: jesus-in-ot
+  cluster: cluster-01-cross
+  cluster_order: 2
+  public_status: studio_complete
+  featured: false
+  preview_approved: true
+  preview_source: assets/study/read/thirty-pieces-of-silver/beat_01.jpg
+  youtube_id: null
+  read_source: ../batches/cluster_01_cross/thirty_pieces_zech11
+  public_hook: 'Zechariah priced the betrayal five hundred years early: thirty pieces
+    of silver, thrown down in the house of the LORD.'
+  public_blurb: Zechariah 11:12-13 names the price, the contempt, and the temple floor.
+    Judas fulfilled every word of it. The prophecy that priced the Messiah.
+- slug: today-in-paradise
+  kind: short
+  title: Today in Paradise
+  ref: Luke 23:43
+  series_id: words-from-cross
+  cluster: cluster-01-cross
+  cluster_order: 3
+  public_status: studio_complete
+  featured: false
+  preview_approved: true
+  preview_source: assets/study/read/today-in-paradise/beat_01.jpg
+  youtube_id: null
+  read_source: ../batches/cluster_01_cross/today_paradise_luke2343
+  public_hook: Two thieves. Same cross. Two answers.
+  public_blurb: Luke 23:39-43. One thief railed, one asked to be remembered, and Jesus
+    answered with a promise dated TODAY. The second word from the cross.
+- slug: woman-behold-thy-son
+  kind: short
+  title: Woman, Behold Thy Son
+  ref: John 19:26
+  series_id: words-from-cross
+  cluster: cluster-01-cross
+  cluster_order: 4
+  public_status: studio_complete
+  featured: false
+  preview_approved: true
+  preview_source: assets/study/read/woman-behold-thy-son/beat_01.jpg
+  youtube_id: null
+  read_source: ../batches/cluster_01_cross/woman_behold_john1926
+  public_hook: Simeon promised Mary a sword. At the cross, Jesus watched it land,
+    and gave her a son.
+  public_blurb: Luke 2:35 meets John 19:26-27. The sword Simeon foretold pierces Mary
+    at Golgotha, and the dying Jesus binds her wound with a son and a home.
+- slug: it-is-finished
+  kind: short
+  title: It Is Finished
+  ref: John 19:30
+  series_id: words-from-cross
+  cluster: cluster-01-cross
+  cluster_order: 5
+  public_status: studio_complete
+  featured: false
+  preview_approved: true
+  preview_source: assets/study/read/it-is-finished/beat_01.jpg
+  youtube_id: null
+  read_source: ../batches/cluster_01_cross/it_is_finished_john1930
+  public_hook: The first time the Bible says finished, nothing was broken yet.
+  public_blurb: 'Genesis 2:1 and John 19:30. Two finished works, one Workman: He finished
+    creation and rested; He finished redemption and rose. Enter his rest.'
+- slug: father-into-thy-hands
+  kind: short
+  title: Father, Into Thy Hands
+  ref: Luke 23:46
+  series_id: words-from-cross
+  cluster: cluster-01-cross
+  cluster_order: 6
+  public_status: studio_complete
+  featured: false
+  preview_approved: true
+  preview_source: assets/study/read/father-into-thy-hands/beat_01.jpg
+  youtube_id: null
+  read_source: ../batches/cluster_01_cross/into_thy_hands_luke2346
+  public_hook: A dying man's last words. And they were a child's bedtime prayer.
+  public_blurb: 'Psalm 31:5 was an evening prayer a child could learn. Luke 23:46:
+    with his last breath Jesus prayed it, and added one word: Father.'
+- slug: could-ye-not-watch-one-hour
+  kind: short
+  title: Could Ye Not Watch One Hour
+  ref: Matthew 26:40
+  series_id: questions-jesus-asked
+  cluster: cluster-01-cross
+  cluster_order: 7
+  public_status: studio_complete
+  featured: false
+  preview_approved: true
+  preview_source: assets/study/read/could-ye-not-watch-one-hour/beat_01.jpg
+  youtube_id: null
+  read_source: ../batches/cluster_01_cross/watch_one_hour_matt2640
+  public_hook: Jesus asked three fishermen for one thing. They failed inside an hour.
+  public_blurb: Matthew 26:36-46. Gethsemane, the cup, the sleeping disciples, and
+    the mercy in the question. He watched that hour alone so no hour of yours is watched
+    alone.
+- slug: ew-two-goats
+  kind: long
+  title: The Two Goats
+  ref: Leviticus 16:8
+  series_id: eyewitness
+  cluster: null
+  cluster_order: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Two goats, one lot, and sin carried away into the wilderness - told
+    by the priest who was there.
+  public_blurb: The Day of Atonement, first-person. The high priest walks you through
+    the two goats, and where the whole pattern points.
+- slug: ew-abraham-moriah
+  kind: long
+  title: Abraham on Moriah
+  ref: Genesis 22:8
+  series_id: eyewitness
+  cluster: null
+  cluster_order: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Abraham climbed the mountain with wood on his son's back. He tells
+    what happened when God provided.
+  public_blurb: Genesis 22, first-person. My son, God will provide himself a lamb.
+    A father tells the hardest walk in the Old Testament.
+- slug: ew-bronze-serpent
+  kind: long
+  title: The Bronze Serpent
+  ref: Numbers 21:8
+  series_id: eyewitness
+  cluster: null
+  cluster_order: null
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: A serpent of brass on a pole, and everyone who looked at it lived.
+    A witness tells the day looking was enough.
+  public_blurb: 'Numbers 21, first-person. Jesus himself points back at this one:
+    as Moses lifted up the serpent, so must the Son of man be lifted up.'
+- slug: ew-joseph
+  kind: long
+  title: Joseph, Betrayed to Save
+  ref: Genesis 45:5
+  series_id: eyewitness
+  cluster: null
+  cluster_order: null
+  public_status: planned
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Sold by his brothers, raised up to save them. Joseph tells the story
+    that points past itself.
+  public_blurb: Genesis 37-45, first-person. God sent me before you to preserve life.
+    The betrayed brother who became the rescuer.
+- slug: ew-jonah
+  kind: long
+  title: Jonah, Three Days in the Deep
+  ref: Jonah 1:17
+  series_id: eyewitness
+  cluster: null
+  cluster_order: null
+  public_status: planned
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Three days and three nights inside the fish. Jonah tells it - and Jesus
+    called it the only sign He would give.
+  public_blurb: Jonah 1-2, first-person. The prophet who ran, the deep that held him,
+    and the sign Jesus claimed for Himself.
+- slug: ew-noah
+  kind: long
+  title: Noah, the Night God Shut the Door
+  ref: Genesis 7:16
+  series_id: eyewitness
+  cluster: null
+  cluster_order: null
+  public_status: planned
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: One ark, one door, and the LORD shut him in. Noah tells the night the
+    rain began.
+  public_blurb: Genesis 6-8, first-person. One door through the water, shut by God's
+    own hand.
+- slug: ew-isaiah
+  kind: long
+  title: Isaiah, the Man Who Saw It
+  ref: Isaiah 53:1
+  series_id: eyewitness
+  cluster: null
+  cluster_order: null
+  public_status: planned
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Who hath believed our report? Isaiah tells the vision that made him
+    write of a servant wounded for us.
+  public_blurb: Isaiah 53, from the prophet's side of the page. Seven hundred years
+    early, he wrote what he was shown.
+- slug: ew-passover-father
+  kind: long
+  title: The Passover Father
+  ref: Exodus 12:13
+  series_id: eyewitness
+  cluster: null
+  cluster_order: null
+  public_status: planned
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: A father in Egypt tells the night blood on a doorframe stood between
+    his firstborn and death.
+  public_blurb: Exodus 12, first-person. When I see the blood, I will pass over you.
+    The night the lamb died instead.
+- slug: sign-of-jonah
+  kind: short
+  title: The Sign of Jonah
+  ref: Matthew 12:40 + Jonah 1-2
+  series_id: jesus-in-ot
+  cluster: cluster-02-resurrection
+  cluster_order: 1
+  public_status: studio_complete
+  featured: false
+  featured_order: null
+  preview_approved: false
+  preview_source: ../batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual
+  youtube_id: null
+  public_hook: Jesus was asked for one sign. He gave them a man swallowed by the deep.
+  public_blurb: 'Jonah went down guilty; Christ went down innocent - and neither the
+    deep nor the grave could hold Him. Season 2 opens where the sign points: the resurrection.'
 series:
-  - slug: jesus-in-ot
-    title: "Jesus in the Old Testament"
-    note: "Prophecies and patterns written centuries early - Psalm 22, Isaiah 53, Zechariah - and the New Testament pointing back at them."
-  - slug: eyewitness
-    title: "Eyewitness: Old Testament Shadows"
-    note: "The Bible's own witnesses tell it first-person - the high priest with the two goats, Abraham on Moriah, a father in Egypt on Passover night. Every shadow lands on Jesus."
-  - slug: words-from-cross
-    title: "Words from the Cross"
-    note: "The seven last words of Jesus, and the night before - one piece per word."
-  - slug: questions-jesus-asked
-    title: "Questions Jesus Asked"
-    note: "The questions He put to people, and still puts to us. Who do you say I am? Why are you afraid?"
-  - slug: i-am-sayings
-    title: "The I AM Sayings"
-    note: "I am the bread of life, the light of the world, the door, the good shepherd, the resurrection, the way, the true vine."
-  - slug: parables-of-jesus
-    title: "The Parables of Jesus"
-    note: "The stories He told, and the God they reveal: the Father who runs, the kingdom hidden in plain sight."
-  - slug: miracles-of-jesus
-    title: "The Miracles of Jesus"
-    note: "What each sign showed about who He is, and what it asks of us now."
-  - slug: people-who-encountered-jesus
-    title: "People Who Encountered Jesus"
-    note: "The men and women who met Him in the Gospels and walked away changed."
-  - slug: titles-of-jesus
-    title: "Titles of Jesus"
-    note: "The names Scripture gives Him, and what each one reveals."
-  - slug: kingdom-of-god
-    title: "The Kingdom of God"
-    note: "What Jesus meant by the kingdom, and how it changes the way we live today."
-
+- slug: jesus-in-ot
+  title: Jesus in the Old Testament
+  note: Prophecies and patterns written centuries early - Psalm 22, Isaiah 53, Zechariah
+    - and the New Testament pointing back at them.
+- slug: eyewitness
+  title: 'Eyewitness: Old Testament Shadows'
+  note: The Bible's own witnesses tell it first-person - the high priest with the
+    two goats, Abraham on Moriah, a father in Egypt on Passover night. Every shadow
+    lands on Jesus.
+- slug: words-from-cross
+  title: Words from the Cross
+  note: The seven last words of Jesus, and the night before - one piece per word.
+- slug: questions-jesus-asked
+  title: Questions Jesus Asked
+  note: The questions He put to people, and still puts to us. Who do you say I am?
+    Why are you afraid?
+- slug: i-am-sayings
+  title: The I AM Sayings
+  note: I am the bread of life, the light of the world, the door, the good shepherd,
+    the resurrection, the way, the true vine.
+- slug: parables-of-jesus
+  title: The Parables of Jesus
+  note: 'The stories He told, and the God they reveal: the Father who runs, the kingdom
+    hidden in plain sight.'
+- slug: miracles-of-jesus
+  title: The Miracles of Jesus
+  note: What each sign showed about who He is, and what it asks of us now.
+- slug: people-who-encountered-jesus
+  title: People Who Encountered Jesus
+  note: The men and women who met Him in the Gospels and walked away changed.
+- slug: titles-of-jesus
+  title: Titles of Jesus
+  note: The names Scripture gives Him, and what each one reveals.
+- slug: kingdom-of-god
+  title: The Kingdom of God
+  note: What Jesus meant by the kingdom, and how it changes the way we live today.
 roadmap:
-  - slug: questions-jesus-asked
-    title: "Questions Jesus Asked"
-    ref: "Series"
-    note: "The questions He put to people, and still puts to us. Who do you say I am? Why are you afraid?"
-  - slug: miracles-of-jesus
-    title: "The Miracles of Jesus"
-    ref: "Series"
-    note: "What each sign showed about who He is, and what it asks of us now."
-  - slug: people-who-encountered-jesus
-    title: "People Who Encountered Jesus"
-    ref: "Series"
-    note: "The men and women who met Him in the Gospels and walked away changed."
-  - slug: parables-of-jesus
-    title: "The Parables of Jesus"
-    ref: "Series"
-    note: "The stories He told, and the God they reveal: the Father who runs, the kingdom hidden in plain sight."
-  - slug: titles-of-jesus
-    title: "Titles of Jesus"
-    ref: "Series"
-    note: "The names Scripture gives Him, and what each one reveals."
-  - slug: i-am-sayings
-    title: "The I AM Sayings"
-    ref: "Series"
-    note: "I am the bread of life, the light of the world, the door, the good shepherd, the resurrection, the way, the true vine."
-  - slug: kingdom-of-god
-    title: "The Kingdom of God"
-    ref: "Series"
-    note: "What Jesus meant by the kingdom, and how it changes the way we live today."
-
+- slug: questions-jesus-asked
+  title: Questions Jesus Asked
+  ref: Series
+  note: The questions He put to people, and still puts to us. Who do you say I am?
+    Why are you afraid?
+- slug: miracles-of-jesus
+  title: The Miracles of Jesus
+  ref: Series
+  note: What each sign showed about who He is, and what it asks of us now.
+- slug: people-who-encountered-jesus
+  title: People Who Encountered Jesus
+  ref: Series
+  note: The men and women who met Him in the Gospels and walked away changed.
+- slug: parables-of-jesus
+  title: The Parables of Jesus
+  ref: Series
+  note: 'The stories He told, and the God they reveal: the Father who runs, the kingdom
+    hidden in plain sight.'
+- slug: titles-of-jesus
+  title: Titles of Jesus
+  ref: Series
+  note: The names Scripture gives Him, and what each one reveals.
+- slug: i-am-sayings
+  title: The I AM Sayings
+  ref: Series
+  note: I am the bread of life, the light of the world, the door, the good shepherd,
+    the resurrection, the way, the true vine.
+- slug: kingdom-of-god
+  title: The Kingdom of God
+  ref: Series
+  note: What Jesus meant by the kingdom, and how it changes the way we live today.
 clusters:
   psalm-22:
-    title: "Psalm 22: From the Cross"
-    subtitle: "Eight shorts from one long-form study"
+    title: 'Psalm 22: From the Cross'
+    subtitle: Eight shorts from one long-form study
     slug: psalm-22
   cluster-01-cross:
-    title: "The Cross"
-    subtitle: "Eleven hand-inked shorts from Golgotha - the words from the cross and the prophecies that walked there"
+    title: The Cross
+    subtitle: Eleven hand-inked shorts from Golgotha - the words from the cross and
+      the prophecies that walked there
     slug: cluster-01-cross
