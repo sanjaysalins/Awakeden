@@ -1,0 +1,118 @@
+{
+  "piece": "i_thirst_john1928",
+  "title": "I Thirst (John 19:28 / Ps 22:15)",
+  "cluster": "cluster_01_cross",
+  "verse": "John 19:28 + Psalm 22:15",
+  "stills": {
+    "model": "seedream-4-5-251128",
+    "size": "1440x2560",
+    "jobs": {
+      "ocean_creation_wide": {
+        "prompt": "vast ocean waves rolling under a golden dawn sky, spray catching the light, no land, no figures, wide, vertical",
+        "ref": null
+      },
+      "potsherd_dry_clay": {
+        "prompt": "a broken shard of dry clay pottery lying on cracked parched earth, harsh dry light, close, vertical, ancient Judea",
+        "ref": null
+      },
+      "living_water_stream": {
+        "prompt": "a clear spring of water pouring over smooth rocks, sunlight sparkling in the falling water, green moss, close, vertical",
+        "ref": null
+      }
+    }
+  },
+  "animate": null,
+  "score": {
+    "src": "visual/livingpage_short.spec_preview.mp4",
+    "out": "visual/i_thirst_john1928_scored.mp4",
+    "dark": "lonely_searching_a.mp3",
+    "grace": "sacred_grace_rise_a.mp3",
+    "base_seconds": 55.74,
+    "outro_hold": 1.5,
+    "dark_trim_end": "43.9",
+    "grace_trim": [
+      "20",
+      "90"
+    ],
+    "crossfade": "6",
+    "tpad": "1.5",
+    "dips": [
+      [
+        "15.2",
+        "26.45",
+        "0.4"
+      ],
+      [
+        "32.6",
+        "36.7",
+        "0.35"
+      ]
+    ],
+    "cta_dip": [
+      "49.4",
+      "0.5"
+    ]
+  },
+  "register": {
+    "id_prefix": "it",
+    "source": "byteplus seedream-4-5",
+    "created": "2026-07-03",
+    "style": "graphic_novel_inked",
+    "aspect": "9:16",
+    "palette": "inked cel-flat, dawn gold / parched tan / water blue",
+    "mood": "the Maker thirsting, living water offered",
+    "tags_still": [
+      "livingpage",
+      "john1928",
+      "thirst"
+    ],
+    "tags_clip": [
+      "livingpage",
+      "john1928",
+      "kling"
+    ],
+    "used_in": [
+      "i_thirst_john1928 short"
+    ],
+    "clip_source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+    "clip_title_suffix": " (Kling push-in)",
+    "extra_rows": [],
+    "stills": {
+      "ocean_creation_wide": {
+        "subject": "vast curling ocean wave under golden dawn, spray in the light",
+        "characters": [],
+        "elements": [
+          "great wave",
+          "dawn sun",
+          "spray"
+        ],
+        "setting": "open sea",
+        "scope": "neutral",
+        "doctrine": "All things were made by him (John 1:3)"
+      },
+      "potsherd_dry_clay": {
+        "subject": "broken dry clay shard on cracked parched earth",
+        "characters": [],
+        "elements": [
+          "potsherd",
+          "cracked earth"
+        ],
+        "setting": "desert",
+        "scope": "neutral",
+        "doctrine": "my strength is dried up like a potsherd (Ps 22:15)"
+      },
+      "living_water_stream": {
+        "subject": "clear spring pouring over mossy rocks, sunlight in the water",
+        "characters": [],
+        "elements": [
+          "spring water",
+          "mossy rocks",
+          "sparkle"
+        ],
+        "setting": "spring",
+        "scope": "neutral",
+        "doctrine": "living water (John 4:14 / 7:37)"
+      }
+    }
+  }
+}

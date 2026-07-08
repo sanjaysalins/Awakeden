@@ -1,0 +1,106 @@
+{
+  "piece": "crucifixion_foretold_ps2218",
+  "title": "The Crucifixion Foretold (Ps 22:18)",
+  "cluster": "cluster_01_cross",
+  "verse": "Psalm 22:18 + John 19:24",
+  "stills": {
+    "model": "seedream-4-5-251128",
+    "size": "1440x2560",
+    "jobs": {
+      "david_writing_psalm": {
+        "prompt": "an aged king with a grey beard writing on an open scroll by a clay oil lamp, a harp resting against the stone wall beside him, night chamber, warm lamplight, vertical, ancient Israel",
+        "ref": null
+      },
+      "lots_cup_close": {
+        "prompt": "two small carved knucklebone lots tumbling from a leather cup onto flat stone, a folded woven garment lying beside them, harsh daylight, close, vertical, 1st-century Judea",
+        "ref": null
+      }
+    }
+  },
+  "animate": null,
+  "score": {
+    "src": "visual/livingpage_short.spec_preview.mp4",
+    "out": "visual/crucifixion_foretold_ps2218_scored.mp4",
+    "dark": "lonely_searching_a.mp3",
+    "grace": "sacred_grace_rise_a.mp3",
+    "base_seconds": 72.54,
+    "outro_hold": 1.5,
+    "dark_trim_end": "56.0",
+    "grace_trim": [
+      "20",
+      "90"
+    ],
+    "crossfade": "6",
+    "tpad": "1.5",
+    "dips": [
+      [
+        "31.5",
+        "37.1",
+        "0.35"
+      ],
+      [
+        "41.2",
+        "48.4",
+        "0.4"
+      ]
+    ],
+    "cta_dip": [
+      "63.3",
+      "0.5"
+    ]
+  },
+  "register": {
+    "id_prefix": "cf",
+    "source": "byteplus seedream-4-5",
+    "created": "2026-07-03",
+    "style": "graphic_novel_inked",
+    "aspect": "9:16",
+    "palette": "inked cel-flat, lamplight gold to storm grey",
+    "mood": "prophecy written, prophecy fulfilled",
+    "tags_still": [
+      "livingpage",
+      "ps2218",
+      "prophecy"
+    ],
+    "tags_clip": [
+      "livingpage",
+      "ps2218",
+      "kling"
+    ],
+    "used_in": [
+      "crucifixion_foretold_ps2218 short"
+    ],
+    "clip_source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+    "clip_title_suffix": " (Kling push-in)",
+    "extra_rows": [],
+    "stills": {
+      "david_writing_psalm": {
+        "subject": "aged King David writing the psalm by lamplight, harp beside",
+        "characters": [
+          "David"
+        ],
+        "elements": [
+          "scroll",
+          "oil lamp",
+          "harp",
+          "crown"
+        ],
+        "setting": "night chamber",
+        "scope": "neutral",
+        "doctrine": "David wrote it in the first person (Ps 22:1)"
+      },
+      "lots_cup_close": {
+        "subject": "leather cup with two knucklebone lots spilled on stone, garment beside",
+        "characters": [],
+        "elements": [
+          "knucklebone lots",
+          "leather cup",
+          "woven garment"
+        ],
+        "setting": "Golgotha",
+        "scope": "specific",
+        "doctrine": "cast lots upon my vesture (Ps 22:18)"
+      }
+    }
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "piece": "into_thy_hands_luke2346",
+  "title": "Father Into Thy Hands (Luke 23:46)",
+  "cluster": "cluster_01_cross",
+  "verse": "Luke 23:46 + Psalm 31:5",
+  "stills": {
+    "model": "seedream-4-5-251128",
+    "size": "1440x2560",
+    "jobs": {
+      "child_sleeping_lamp": {
+        "prompt": "a small child asleep on a woven mat under a wool blanket, a clay oil lamp burning low beside, a mother's silhouette in the doorway, warm night interior, vertical, ancient Judea",
+        "ref": null
+      },
+      "psalm_scroll_night": {
+        "prompt": "an open scroll of faded illegible script beside a burning clay oil lamp on a rough table at night, warm lamplight, close, vertical, ancient Judea",
+        "ref": null
+      },
+      "father_holds_sleeping_child": {
+        "prompt": "a bearded father cradling his sleeping child against his shoulder by lamplight, the child's face at peace, warm night interior, close, vertical, ancient Judea",
+        "ref": null
+      },
+      "hands_of_light_open": {
+        "prompt": "two vast gentle hands formed of warm golden light opening downward through parted storm clouds, rays spilling from the palms, vertical",
+        "ref": null
+      },
+      "child_waking_dawn": {
+        "prompt": "a child stirring awake on a mat as warm dawn light pours through a small window, eyes just opening, hopeful morning interior, vertical, ancient Judea",
+        "ref": null
+      },
+      "father_hand_childs_hand": {
+        "prompt": "a small child's hand resting inside a large weathered father's hand, a small clay oil lamp burning beside them, dark wool cloth behind, close, vertical, ancient Judea",
+        "ref": null
+      },
+      "father_lamp_doorway": {
+        "prompt": "a robed father holding a small clay oil lamp in the doorway of a stone house at night, warm light spilling across the threshold, seen from inside the dark room, vertical, 1st-century Judea",
+        "ref": null
+      },
+      "child_eyes_closing": {
+        "prompt": "a small child's peaceful face with eyes gently closed, tucked under a wool blanket, a large weathered hand resting on the blanket, a small clay oil lamp burning low nearby, close, vertical, ancient Judea",
+        "ref": null
+      },
+      "cross_at_dawn": {
+        "prompt": "an empty wooden cross standing on a rocky hilltop against a golden sunrise, warm light flooding the sky, wide, vertical, 1st-century Judea",
+        "ref": null
+      }
+    }
+  },
+  "animate": {
+    "duration": 5,
+    "aspect_ratio": "9:16",
+    "moves": {
+      "child_sleeping_lamp": "ONE slow, steady, continuous push-in toward the sleeping child's face in the lamp glow",
+      "father_holds_sleeping_child": "ONE slow, steady, continuous push-in toward the father and the sleeping child",
+      "hands_of_light_open": "ONE slow, steady, continuous push-in toward the open hands of light",
+      "child_waking_dawn": "ONE slow, steady, continuous push-in toward the waking child in the dawn light",
+      "father_hand_childs_hand": "ONE slow, steady, continuous push-in toward the small hand resting in the large hand",
+      "child_eyes_closing": "ONE slow, steady, continuous push-in toward the sleeping child's peaceful face",
+      "cross_at_dawn": "ONE slow, steady, continuous push-in toward the cross against the sunrise"
+    }
+  },
+  "score": {
+    "src": "visual/livingpage_short.spec_preview.mp4",
+    "out": "visual/into_thy_hands_luke2346_scored.mp4",
+    "dark": "lonely_searching_a.mp3",
+    "grace": "sacred_grace_rise_a.mp3",
+    "base_seconds": 59.03,
+    "outro_hold": 1.5,
+    "dark_trim_end": "21.2",
+    "grace_trim": [
+      "20",
+      "90"
+    ],
+    "crossfade": "6",
+    "tpad": "1.5",
+    "dips": [
+      [
+        "9.3",
+        "14.6",
+        "0.35"
+      ],
+      [
+        "21.25",
+        "25.2",
+        "0.4"
+      ]
+    ],
+    "cta_dip": [
+      "53.95",
+      "0.5"
+    ]
+  },
+  "register": {
+    "id_prefix": "ith",
+    "source": "byteplus seedream-4-5",
+    "created": "2026-07-03",
+    "style": "graphic_novel_inked",
+    "aspect": "9:16",
+    "palette": "inked cel-flat, lamp warm to storm dark to dawn gold",
+    "mood": "bedtime prayer, trust, the strong hands",
+    "tags_still": [
+      "livingpage",
+      "luke2346",
+      "child"
+    ],
+    "tags_clip": [
+      "livingpage",
+      "luke2346",
+      "kling"
+    ],
+    "used_in": [
+      "into_thy_hands_luke2346 short"
+    ],
+    "clip_source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+    "clip_title_suffix": " (Kling push-in)",
+    "extra_rows": [],
+    "stills": {
+      "child_sleeping_lamp": {
+        "subject": "small child asleep under a wool blanket by a low clay lamp",
+        "characters": [
+          "child"
+        ],
+        "elements": [
+          "oil lamp",
+          "woven mat",
+          "mother silhouette"
+        ],
+        "setting": "night interior",
+        "scope": "neutral",
+        "doctrine": "an evening prayer a child could learn"
+      },
+      "psalm_scroll_night": {
+        "subject": "open scroll of faded script beside a burning clay oil lamp",
+        "characters": [],
+        "elements": [
+          "scroll",
+          "oil lamp",
+          "night table"
+        ],
+        "setting": "night interior",
+        "scope": "neutral",
+        "doctrine": "Into thine hand I commit my spirit (Ps 31:5)"
+      },
+      "father_holds_sleeping_child": {
+        "subject": "bearded father cradling his sleeping child by lamplight",
+        "characters": [
+          "father",
+          "child"
+        ],
+        "elements": [
+          "lamplight",
+          "shoulder cradle"
+        ],
+        "setting": "night interior",
+        "scope": "neutral",
+        "doctrine": "like a child falling asleep in his father's arms"
+      },
+      "hands_of_light_open": {
+        "subject": "vast gentle hands of golden light opening through parted storm clouds",
+        "characters": [],
+        "elements": [
+          "hands of light",
+          "storm clouds",
+          "rays"
+        ],
+        "setting": "sky",
+        "scope": "hero",
+        "doctrine": "Father, into thy hands I commend my spirit (Luke 23:46)"
+      },
+      "child_waking_dawn": {
+        "subject": "child stirring awake as dawn light pours through a small window",
+        "characters": [
+          "child"
+        ],
+        "elements": [
+          "dawn window",
+          "waking eyes"
+        ],
+        "setting": "morning interior",
+        "scope": "neutral",
+        "doctrine": "death loses its last word"
+      },
+      "father_hand_childs_hand": {
+        "subject": "a child's hand resting inside a large weathered father's hand, lamp beside",
+        "characters": [
+          "father",
+          "child"
+        ],
+        "elements": [
+          "hands",
+          "clay oil lamp"
+        ],
+        "setting": "night interior",
+        "scope": "neutral",
+        "doctrine": "He begins with Father"
+      },
+      "father_lamp_doorway": {
+        "subject": "robed father holding a clay oil lamp in a stone doorway at night",
+        "characters": [
+          "father"
+        ],
+        "elements": [
+          "oil lamp",
+          "doorway",
+          "threshold light"
+        ],
+        "setting": "stone house",
+        "scope": "neutral",
+        "doctrine": "Not judge. Not stranger. Father"
+      },
+      "child_eyes_closing": {
+        "subject": "child's peaceful face eyes closed, a father's hand on the blanket, lamp low",
+        "characters": [
+          "father",
+          "child"
+        ],
+        "elements": [
+          "blanket",
+          "oil lamp",
+          "resting hand"
+        ],
+        "setting": "night interior",
+        "scope": "neutral",
+        "doctrine": "close your eyes in those same hands"
+      },
+      "cross_at_dawn": {
+        "subject": "empty wooden cross on a rocky hilltop against a golden sunrise",
+        "characters": [],
+        "elements": [
+          "empty cross",
+          "sunrise",
+          "hilltop"
+        ],
+        "setting": "Golgotha at dawn",
+        "scope": "hero",
+        "doctrine": "He keeps the morning"
+      }
+    }
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "piece": "pierced_zech1210",
+  "title": "Pierced (Zechariah 12:10)",
+  "cluster": "cluster_01_cross",
+  "verse": "Zechariah 12:10",
+  "stills": {
+    "model": "seedream-4-5-251128",
+    "size": "1440x2560",
+    "jobs": {
+      "spear_thrust_up": {
+        "prompt": "a Roman soldier seen from behind and below, thrusting a long spear steeply upward toward the crucified figure high against a dark storm sky, the moment of Zechariah's word arriving, vertical, 1st-century Judea",
+        "ref": "../father_forgive_them/visual/_byteplus/nail_wide_45.png"
+      },
+      "zechariah_night_scroll": {
+        "prompt": "an aged prophet standing on a flat rooftop at night, face lifted to a sky of stars, a rolled scroll held loosely at his side, moonlit ancient Judean city below, vertical, 1st-millennium-BC",
+        "ref": null
+      },
+      "mourners_only_son": {
+        "prompt": "a father and mother collapsed together in grief beside a shrouded form on a low bier, torchlit stone courtyard at night, their faces buried in each other's shoulders, vertical, ancient Judea",
+        "ref": null
+      },
+      "john_watching": {
+        "prompt": "a CLOSE shot of a young disciple at the foot of the cross, his young face filling the frame, flinching and grief-stricken as he looks upward, one hand gripping the cloak at his chest, hard storm light on his clean young face, vertical, 1st-century",
+        "ref": null
+      },
+      "blood_water_wood": {
+        "prompt": "a macro of the base of a rough wooden cross, a thin stream of water and dark blood running down the grain and pooling on the stone, storm light, vertical, 1st-century",
+        "ref": null
+      },
+      "grace_poured_sky": {
+        "prompt": "warm golden light pouring down like a waterfall from a single break in heavy dark clouds onto the small stone city below, the pouring is the subject, vertical, ancient Judea",
+        "ref": null
+      },
+      "look_up_faces": {
+        "prompt": "three different upturned 1st-century faces close together in half-light, eyes lifted toward a warm light above, tears catching the light, hope breaking on the faces, vertical",
+        "ref": null
+      }
+    }
+  },
+  "animate": {
+    "duration": 5,
+    "aspect_ratio": "9:16",
+    "moves": {
+      "spear_thrust_up": "ONE slow, steady, continuous push-in rising along the spear toward the crucified figure above",
+      "zechariah_night_scroll": "ONE slow, steady, continuous push-in toward the prophet's upturned face under the stars",
+      "mourners_only_son": "ONE slow, steady, continuous push-in toward the grieving parents",
+      "look_up_faces": "ONE slow, steady, continuous push-in toward the three upturned tearful faces",
+      "grace_poured_sky": "ONE slow, steady, continuous push-in toward the waterfall of light breaking the clouds",
+      "blood_water_wood": "ONE slow, steady, continuous push-in toward the stream running down the wood grain"
+    },
+    "base": "A finished inked graphic-novel comic panel — flat printed art with bold black ink outlines, cel-flat color and cross-hatching. Animate it as {move}. The drawing itself never moves, redraws, repaints, breathes or changes; the ink lines and flat colors stay exactly as printed; only the camera moves. No hard cuts, no dissolves, no morphing, no subject motion, no limbs moving, no new lines drawn. INVENT NOTHING: show ONLY what is already inked in this exact panel. Keep the subject whole in frame."
+  },
+  "score": {
+    "src": "visual/livingpage_short.spec_preview.mp4",
+    "out": "visual/pierced_zech1210_scored.mp4",
+    "dark": "lonely_searching_a.mp3",
+    "grace": "sacred_grace_rise_a.mp3",
+    "base_seconds": 59.04,
+    "outro_hold": 1.5,
+    "dark_trim_end": "38",
+    "grace_trim": [
+      "20",
+      "90"
+    ],
+    "crossfade": "6",
+    "tpad": "1.5",
+    "dips": [
+      [
+        "12.06",
+        "18.46",
+        "0.35"
+      ]
+    ],
+    "cta_dip": [
+      "48.87",
+      "0.5"
+    ]
+  },
+  "register": {
+    "id_prefix": "pz",
+    "source": "byteplus seedream-4-5",
+    "created": "2026-07-02",
+    "style": "graphic_novel_inked",
+    "aspect": "9:16",
+    "palette": "inked cel-flat, storm greys to warm gold",
+    "mood": "prophetic, pierced, grace",
+    "tags_still": [
+      "livingpage",
+      "pilot",
+      "zech1210"
+    ],
+    "tags_clip": [
+      "livingpage",
+      "pilot",
+      "zech1210",
+      "kling"
+    ],
+    "used_in": [
+      "pierced_zech1210 short"
+    ],
+    "clip_source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+    "clip_title_suffix": " (Kling push-in)",
+    "extra_rows": [],
+    "kling_slugs": [
+      "spear_thrust_up",
+      "zechariah_night_scroll",
+      "mourners_only_son",
+      "look_up_faces",
+      "grace_poured_sky",
+      "blood_water_wood"
+    ],
+    "stills": {
+      "spear_thrust_up": {
+        "subject": "Roman soldier thrusts spear up at the crucified Christ",
+        "characters": [
+          "soldier",
+          "Christ"
+        ],
+        "elements": [
+          "spear",
+          "cross",
+          "storm sky"
+        ],
+        "setting": "Golgotha, storm",
+        "scope": "hero",
+        "doctrine": "the piercing of John 19:34/Zech 12:10"
+      },
+      "zechariah_night_scroll": {
+        "subject": "prophet Zechariah under night stars with scroll",
+        "characters": [
+          "Zechariah"
+        ],
+        "elements": [
+          "scroll",
+          "stars",
+          "rooftop",
+          "city"
+        ],
+        "setting": "Judean rooftop, night",
+        "scope": "specific",
+        "doctrine": "the prophecy given ~500 BC"
+      },
+      "mourners_only_son": {
+        "subject": "father and mother collapsed in grief beside a shrouded bier",
+        "characters": [
+          "father",
+          "mother"
+        ],
+        "elements": [
+          "bier",
+          "shroud",
+          "torches"
+        ],
+        "setting": "stone courtyard, night",
+        "scope": "neutral",
+        "doctrine": "mourning as for an only son (Zech 12:10)"
+      },
+      "john_watching": {
+        "subject": "young disciple John flinching at the foot of the cross",
+        "characters": [
+          "John"
+        ],
+        "elements": [
+          "cloak",
+          "storm light"
+        ],
+        "setting": "foot of the cross",
+        "scope": "specific",
+        "doctrine": "the eyewitness of John 19:35-37"
+      },
+      "blood_water_wood": {
+        "subject": "macro: water and blood run down the cross's wood grain",
+        "characters": [],
+        "elements": [
+          "blood",
+          "water",
+          "wood grain",
+          "stone"
+        ],
+        "setting": "base of the cross",
+        "scope": "neutral",
+        "doctrine": "blood and water of John 19:34"
+      },
+      "grace_poured_sky": {
+        "subject": "golden light pours like a waterfall through broken storm clouds onto a stone city",
+        "characters": [],
+        "elements": [
+          "light waterfall",
+          "storm clouds",
+          "city"
+        ],
+        "setting": "sky over Jerusalem",
+        "scope": "neutral",
+        "doctrine": "I will pour the spirit of grace (Zech 12:10a)"
+      },
+      "look_up_faces": {
+        "subject": "three upturned tearful 1st-century faces catching warm light",
+        "characters": [
+          "onlookers"
+        ],
+        "elements": [
+          "tears",
+          "warm light"
+        ],
+        "setting": "half-light",
+        "scope": "neutral",
+        "doctrine": "they shall look upon me and mourn"
+      }
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "piece": "forsaken_cry_ps221",
+  "title": "The Forsaken Cry (Ps 22:1 / Matt 27:46)",
+  "cluster": "cluster_01_cross",
+  "verse": "Psalm 22:1 + Matthew 27:46",
+  "stills": {
+    "model": "seedream-4-5-251128",
+    "size": "1440x2560",
+    "jobs": {
+      "ninth_hour_darkness": {
+        "prompt": "three distant crosses on a hilltop under a sky gone almost black, a pale dim sun swallowed by heavy darkness, the land in shadow, wide, vertical, 1st-century Judea",
+        "ref": null
+      }
+    }
+  },
+  "animate": null,
+  "score": {
+    "src": "visual/livingpage_short.spec_preview.mp4",
+    "out": "visual/forsaken_cry_ps221_scored.mp4",
+    "dark": "lonely_searching_a.mp3",
+    "grace": "sacred_grace_rise_a.mp3",
+    "base_seconds": 58.18,
+    "outro_hold": 1.5,
+    "dark_trim_end": "34.3",
+    "grace_trim": [
+      "20",
+      "90"
+    ],
+    "crossfade": "6",
+    "tpad": "1.5",
+    "dips": [
+      [
+        "17.82",
+        "22.6",
+        "0.35"
+      ],
+      [
+        "27.15",
+        "31.9",
+        "0.35"
+      ]
+    ],
+    "cta_dip": [
+      "51.7",
+      "0.5"
+    ]
+  },
+  "register": {
+    "id_prefix": "fc",
+    "source": "byteplus seedream-4-5",
+    "created": "2026-07-03",
+    "style": "graphic_novel_inked",
+    "aspect": "9:16",
+    "palette": "inked cel-flat, near-black with pale sun",
+    "mood": "the dereliction, darkness at noon",
+    "tags_still": [
+      "livingpage",
+      "ps221",
+      "darkness"
+    ],
+    "tags_clip": [
+      "livingpage",
+      "ps221",
+      "kling"
+    ],
+    "used_in": [
+      "forsaken_cry_ps221 short"
+    ],
+    "clip_source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+    "clip_title_suffix": " (Kling push-in)",
+    "extra_rows": [
+      {
+        "id": "fc_father_lamp_doorway_clip",
+        "type": "clip",
+        "media": "video",
+        "path": "visual/clips/father_lamp_doorway.mp4",
+        "title": "father with lamp in doorway (Kling push-in)",
+        "subject": "robed father holding a clay oil lamp in a stone doorway at night",
+        "characters": [
+          "father"
+        ],
+        "elements": [
+          "oil lamp",
+          "doorway",
+          "threshold light"
+        ],
+        "setting": "stone house",
+        "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+        "doctrine": "the way home is open",
+        "reuse_scope": "neutral",
+        "tags": [
+          "livingpage",
+          "kling"
+        ],
+        "used_in": [
+          "forsaken_cry_ps221 short"
+        ]
+      }
+    ],
+    "stills": {
+      "ninth_hour_darkness": {
+        "subject": "three distant crosses under a sky gone black, dim swallowed sun",
+        "characters": [],
+        "elements": [
+          "three crosses",
+          "darkened sun",
+          "black clouds"
+        ],
+        "setting": "Golgotha",
+        "scope": "neutral",
+        "doctrine": "darkness over all the land, the ninth hour (Matt 27:45-46)"
+      }
+    }
+  }
+}

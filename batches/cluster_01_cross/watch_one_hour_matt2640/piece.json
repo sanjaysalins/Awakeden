@@ -1,0 +1,263 @@
+{
+  "piece": "watch_one_hour_matt2640",
+  "title": "Could Ye Not Watch One Hour (Matt 26:40)",
+  "cluster": "cluster_01_cross",
+  "verse": "Matthew 26:36-46",
+  "stills": {
+    "model": "seedream-4-5-251128",
+    "size": "1440x2560",
+    "jobs": {
+      "gethsemane_olives_night": {
+        "prompt": "a moonlit olive grove on a hillside at night, gnarled ancient trees casting long shadows, a distant city wall below, deep blue night, wide, vertical, 1st-century Judea",
+        "ref": null
+      },
+      "disciples_sleeping": {
+        "prompt": "three robed men slumped asleep against the roots of an ancient olive tree at night, cloaks pulled around them, moonlight, vertical, 1st-century Judea",
+        "ref": null
+      },
+      "jesus_stands_over_sleepers": {
+        "prompt": "Jesus standing quietly over three sleeping robed men beneath an olive tree at night, looking down at them with sorrowful tenderness, moonlight, vertical, 1st-century Judea",
+        "ref": "../pierced_zech1210/visual/face_on_cross.png"
+      },
+      "cup_moonlight": {
+        "prompt": "a plain stone cup standing on a flat rock in cold moonlight, olive branches shadowing the ground around it, night, close, vertical, ancient Judea",
+        "ref": null
+      },
+      "jesus_praying_close": {
+        "prompt": "the face of a man in anguished prayer kneeling in an olive garden at night, eyes shut tight, brow knotted, sweat on his brow, clasped hands under his chin, moonlight rim light, close, vertical, 1st-century Judea",
+        "ref": "../it_is_finished_john1930/visual/jesus_prays_night.png"
+      },
+      "jesus_leads_three": {
+        "prompt": "a robed man leading three companions up a moonlit path into an olive garden at night, seen from behind, gnarled trees ahead, deep blue night, wide, vertical, 1st-century Judea",
+        "ref": null
+      },
+      "sleeping_peter_close": {
+        "prompt": "an older bearded fisherman fast asleep against an olive trunk at night, cloak wrapped tight, mouth slack, moonlight on his weathered face, close, vertical, 1st-century Judea",
+        "ref": null
+      },
+      "kneeling_lamp_prayer": {
+        "prompt": "a robed figure kneeling in prayer beside a small clay oil lamp in a dark stone room at night, head bowed, warm lamp glow on his hands, vertical, 1st-century Judea",
+        "ref": null
+      },
+      "same_prayer_again": {
+        "prompt": "a robed man kneeling among olive trees with his forehead bowed low toward the ground in prayer, deep night, moonlight through the branches, seen from the side, vertical, 1st-century Judea",
+        "ref": null
+      },
+      "weak_flesh_hands": {
+        "prompt": "two rough weathered hands clasped tight and trembling against a dark woollen cloak, knuckles pale, night shadow, close, vertical, ancient Judea",
+        "ref": null
+      }
+    }
+  },
+  "animate": {
+    "duration": 5,
+    "aspect_ratio": "9:16",
+    "moves": {
+      "gethsemane_olives_night": "ONE slow, steady, continuous push-in over the olive grove toward the moonlit city below",
+      "jesus_praying_close": "ONE slow, steady, continuous push-in toward the anguished praying face",
+      "cup_moonlight": "ONE slow, steady, continuous push-in toward the cup in the moonlight",
+      "disciples_sleeping": "ONE slow, steady, continuous push-in toward the sleeping men",
+      "jesus_stands_over_sleepers": "ONE slow, steady, continuous push-in toward the standing figure looking down at the sleepers",
+      "jesus_leads_three": "ONE slow, steady, continuous push-in following the four walking figures up the moonlit path",
+      "sleeping_peter_close": "ONE slow, steady, continuous push-in toward the sleeping man's moonlit face",
+      "kneeling_lamp_prayer": "ONE slow, steady, continuous push-in toward the kneeling figure and the lamp glow",
+      "same_prayer_again": "ONE slow, steady, continuous push-in toward the low-bowed praying figure",
+      "weak_flesh_hands": "ONE slow, steady, continuous push-in toward the clasped trembling hands"
+    }
+  },
+  "score": {
+    "src": "visual/livingpage_short.spec_preview.mp4",
+    "out": "visual/watch_one_hour_matt2640_scored.mp4",
+    "dark": "lonely_searching_a.mp3",
+    "grace": "sacred_grace_rise_a.mp3",
+    "base_seconds": 59.0,
+    "outro_hold": 1.5,
+    "dark_trim_end": "29.7",
+    "grace_trim": [
+      "20",
+      "90"
+    ],
+    "crossfade": "6",
+    "tpad": "1.5",
+    "dips": [
+      [
+        "11.0",
+        "22.3",
+        "0.4"
+      ],
+      [
+        "26.99",
+        "29.79",
+        "0.35"
+      ]
+    ],
+    "cta_dip": [
+      "54.9",
+      "0.5"
+    ]
+  },
+  "register": {
+    "id_prefix": "wo",
+    "source": "byteplus seedream-4-5",
+    "created": "2026-07-03",
+    "style": "graphic_novel_inked",
+    "aspect": "9:16",
+    "palette": "inked cel-flat, deep blue night, moon silver, lamp warm",
+    "mood": "the lonely watch, weak flesh, mercy",
+    "tags_still": [
+      "livingpage",
+      "matt2640",
+      "gethsemane"
+    ],
+    "tags_clip": [
+      "livingpage",
+      "matt2640",
+      "kling"
+    ],
+    "used_in": [
+      "watch_one_hour_matt2640 short"
+    ],
+    "clip_source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+    "clip_title_suffix": " (Kling push-in)",
+    "extra_rows": [],
+    "stills": {
+      "gethsemane_olives_night": {
+        "subject": "moonlit olive grove on the hillside above the city wall",
+        "characters": [],
+        "elements": [
+          "olive trees",
+          "moon",
+          "city wall"
+        ],
+        "setting": "Gethsemane",
+        "scope": "neutral",
+        "doctrine": "Gethsemane, the night before the cross"
+      },
+      "disciples_sleeping": {
+        "subject": "three robed men slumped asleep against olive roots at night",
+        "characters": [
+          "Peter",
+          "James",
+          "John"
+        ],
+        "elements": [
+          "olive tree",
+          "cloaks",
+          "moonlight"
+        ],
+        "setting": "Gethsemane",
+        "scope": "specific",
+        "doctrine": "findeth them asleep (Matt 26:40)"
+      },
+      "jesus_stands_over_sleepers": {
+        "subject": "Jesus standing in sorrowful tenderness over three sleeping men",
+        "characters": [
+          "Christ",
+          "disciples"
+        ],
+        "elements": [
+          "olive tree",
+          "moonlight"
+        ],
+        "setting": "Gethsemane",
+        "scope": "specific",
+        "doctrine": "could ye not watch with me one hour (Matt 26:40)"
+      },
+      "cup_moonlight": {
+        "subject": "a plain stone cup on a flat rock in cold moonlight",
+        "characters": [],
+        "elements": [
+          "stone cup",
+          "flat rock",
+          "olive shadows"
+        ],
+        "setting": "Gethsemane",
+        "scope": "hero",
+        "doctrine": "let this cup pass from me (Matt 26:39)"
+      },
+      "jesus_praying_close": {
+        "subject": "anguished praying face, eyes shut tight, clasped hands, moonlit",
+        "characters": [
+          "Christ"
+        ],
+        "elements": [
+          "clasped hands",
+          "sweat",
+          "moon rim light"
+        ],
+        "setting": "Gethsemane",
+        "scope": "hero",
+        "doctrine": "nevertheless not as I will (Matt 26:39)"
+      },
+      "jesus_leads_three": {
+        "subject": "a robed man leading three companions up a moonlit garden path, from behind",
+        "characters": [
+          "Christ",
+          "disciples"
+        ],
+        "elements": [
+          "moonlit path",
+          "olive trees"
+        ],
+        "setting": "Gethsemane",
+        "scope": "specific",
+        "doctrine": "tarry ye here, and watch with me (Matt 26:38)"
+      },
+      "sleeping_peter_close": {
+        "subject": "older bearded fisherman fast asleep against an olive trunk, mouth slack",
+        "characters": [
+          "Peter"
+        ],
+        "elements": [
+          "olive trunk",
+          "cloak",
+          "moonlight"
+        ],
+        "setting": "Gethsemane",
+        "scope": "specific",
+        "doctrine": "saith unto Peter (Matt 26:40)"
+      },
+      "kneeling_lamp_prayer": {
+        "subject": "robed figure kneeling in prayer beside a small clay lamp in a dark room",
+        "characters": [
+          "us"
+        ],
+        "elements": [
+          "clay oil lamp",
+          "stone room",
+          "night window"
+        ],
+        "setting": "night interior",
+        "scope": "neutral",
+        "doctrine": "Watch and pray (Matt 26:41)"
+      },
+      "same_prayer_again": {
+        "subject": "kneeling man bowed low to the ground in prayer among olives, side view",
+        "characters": [
+          "Christ"
+        ],
+        "elements": [
+          "olive trees",
+          "moonlight",
+          "bowed prayer"
+        ],
+        "setting": "Gethsemane",
+        "scope": "specific",
+        "doctrine": "he returned to the same prayer (Matt 26:42)"
+      },
+      "weak_flesh_hands": {
+        "subject": "rough weathered hands clasped tight and trembling against dark wool",
+        "characters": [
+          "us"
+        ],
+        "elements": [
+          "clasped hands",
+          "dark cloak"
+        ],
+        "setting": "night",
+        "scope": "neutral",
+        "doctrine": "the flesh is weak (Matt 26:41)"
+      }
+    }
+  }
+}

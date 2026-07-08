@@ -1,0 +1,190 @@
+{
+  "piece": "woman_behold_john1926",
+  "title": "Woman Behold Thy Son (John 19:26)",
+  "cluster": "cluster_01_cross",
+  "verse": "John 19:25-27 + Luke 2:35",
+  "stills": {
+    "model": "seedream-4-5-251128",
+    "size": "1440x2560",
+    "jobs": {
+      "simeon_baby_temple": {
+        "prompt": "an aged man with a white beard lifting a swaddled infant in a shaft of temple light, a young mother in a veil watching close, stone columns, vertical, ancient Judea",
+        "ref": null
+      },
+      "mary_infant_shadow": {
+        "prompt": "a young veiled mother clutching a swaddled infant to her chest, a long thin cold shadow falling diagonally across her robe, dark temple stone behind, vertical, ancient Judea",
+        "ref": null
+      },
+      "mary_at_cross": {
+        "prompt": "a veiled grieving woman looking up from the foot of a tall cross where a crucified figure hangs high above her, seen from behind her shoulder, storm light, vertical, 1st-century Judea",
+        "ref": "../pierced_zech1210/visual/face_on_cross.png"
+      },
+      "jesus_looks_down": {
+        "prompt": "the thorn-crowned crucified Christ looking downward with steady compassion from the cross, storm sky behind, seen from below, close, vertical, 1st-century Judea",
+        "ref": "../pierced_zech1210/visual/face_on_cross.png"
+      },
+      "mary_and_john": {
+        "prompt": "a young bearded disciple wrapping his arm around a veiled grieving woman's shoulders, both looking up, at the foot of a cross, storm light, vertical, 1st-century Judea",
+        "ref": null
+      },
+      "john_leads_home": {
+        "prompt": "a YOUNG dark-haired bearded disciple, a man in his twenties, gently leading a veiled older woman along a dusk road toward the gate of a walled town, a bare empty hill far behind them, warm evening light, wide, vertical, 1st-century Judea",
+        "ref": null
+      }
+    }
+  },
+  "animate": {
+    "duration": 5,
+    "aspect_ratio": "9:16",
+    "moves": {
+      "simeon_baby_temple": "ONE slow, steady, continuous push-in toward the lifted infant in the light shaft",
+      "mary_at_cross": "ONE slow, steady, continuous push-in past the woman's shoulder up toward the crucified figure",
+      "jesus_looks_down": "ONE slow, steady, continuous push-in toward the downward-turned thorn-crowned face",
+      "mary_and_john": "ONE slow, steady, continuous push-in toward the two upturned faces",
+      "john_leads_home": "ONE slow, steady, continuous push-in following the road toward the glowing city gate"
+    }
+  },
+  "score": {
+    "src": "visual/livingpage_short.spec_preview.mp4",
+    "out": "visual/woman_behold_john1926_scored.mp4",
+    "dark": "lonely_searching_a.mp3",
+    "grace": "sacred_grace_rise_a.mp3",
+    "base_seconds": 59.06,
+    "outro_hold": 1.5,
+    "dark_trim_end": "28.7",
+    "grace_trim": [
+      "20",
+      "90"
+    ],
+    "crossfade": "6",
+    "tpad": "1.5",
+    "dips": [
+      [
+        "4.18",
+        "7.84",
+        "0.35"
+      ],
+      [
+        "22.09",
+        "31.87",
+        "0.4"
+      ]
+    ],
+    "cta_dip": [
+      "53.16",
+      "0.5"
+    ]
+  },
+  "register": {
+    "id_prefix": "wb",
+    "source": "byteplus seedream-4-5",
+    "created": "2026-07-03",
+    "style": "graphic_novel_inked",
+    "aspect": "9:16",
+    "palette": "inked cel-flat, temple gold to storm grey to dusk warm",
+    "mood": "a mother's wound, the Son who sees it",
+    "tags_still": [
+      "livingpage",
+      "john1926",
+      "mary"
+    ],
+    "tags_clip": [
+      "livingpage",
+      "john1926",
+      "kling"
+    ],
+    "used_in": [
+      "woman_behold_john1926 short"
+    ],
+    "clip_source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+    "clip_title_suffix": " (Kling push-in)",
+    "extra_rows": [],
+    "stills": {
+      "simeon_baby_temple": {
+        "subject": "aged Simeon lifting the swaddled infant in temple light",
+        "characters": [
+          "Simeon",
+          "infant Jesus",
+          "Mary"
+        ],
+        "elements": [
+          "temple columns",
+          "light shaft"
+        ],
+        "setting": "temple",
+        "scope": "specific",
+        "doctrine": "Simeon's blessing (Luke 2:28,34)"
+      },
+      "mary_infant_shadow": {
+        "subject": "young Mary clutching the infant, a cold sword-line shadow across her robe",
+        "characters": [
+          "Mary",
+          "infant Jesus"
+        ],
+        "elements": [
+          "sword shadow",
+          "temple stone"
+        ],
+        "setting": "temple",
+        "scope": "specific",
+        "doctrine": "a sword shall pierce thy own soul (Luke 2:35)"
+      },
+      "mary_at_cross": {
+        "subject": "veiled Mary looking up from the foot of the cross",
+        "characters": [
+          "Mary",
+          "Christ crucified"
+        ],
+        "elements": [
+          "cross",
+          "storm light"
+        ],
+        "setting": "Golgotha",
+        "scope": "specific",
+        "doctrine": "there stood by the cross his mother (John 19:25)"
+      },
+      "jesus_looks_down": {
+        "subject": "thorn-crowned Christ looking down in compassion from the cross",
+        "characters": [
+          "Christ"
+        ],
+        "elements": [
+          "crown of thorns",
+          "storm sky"
+        ],
+        "setting": "Golgotha",
+        "scope": "hero",
+        "doctrine": "when Jesus saw his mother (John 19:26)"
+      },
+      "mary_and_john": {
+        "subject": "the beloved disciple wrapping his arm around grieving Mary at the cross foot",
+        "characters": [
+          "Mary",
+          "John"
+        ],
+        "elements": [
+          "cross base",
+          "storm light"
+        ],
+        "setting": "Golgotha",
+        "scope": "specific",
+        "doctrine": "the disciple standing by, whom he loved (John 19:26)"
+      },
+      "john_leads_home": {
+        "subject": "John gently leading Mary along a dusk road toward a walled town gate",
+        "characters": [
+          "Mary",
+          "John"
+        ],
+        "elements": [
+          "town gate",
+          "dusk road",
+          "bare hill behind"
+        ],
+        "setting": "road from Golgotha",
+        "scope": "specific",
+        "doctrine": "took her unto his own home (John 19:27)"
+      }
+    }
+  }
+}
