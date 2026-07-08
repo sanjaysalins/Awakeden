@@ -1,0 +1,45 @@
+[
+ {
+  "slug": "body_laid_in_tomb",
+  "decision": "approve"
+ },
+ {
+  "slug": "great_fish_rising",
+  "decision": "approve"
+ },
+ {
+  "slug": "jesus_and_scribes",
+  "decision": "approve"
+ },
+ {
+  "slug": "jonah_cast_overboard",
+  "decision": "approve"
+ },
+ {
+  "slug": "jonah_in_the_deep",
+  "decision": "approve"
+ },
+ {
+  "slug": "jonah_on_shore",
+  "decision": "approve"
+ },
+ {
+  "slug": "jonah_sinking_down",
+  "decision": "approve"
+ },
+ {
+  "slug": "lot_falls_jonah",
+  "decision": "reject",
+  "notes": "feels bit unnatural"
+ },
+ {
+  "slug": "man_rising_from_water",
+  "decision": "reject",
+  "notes": "is this meant to be Jonah?"
+ },
+ {
+  "slug": "mercy_hand_into_deep",
+  "decision": "reject",
+  "notes": "the hand has a dark ball in the middle hand"
+ }
+]

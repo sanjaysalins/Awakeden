@@ -1,0 +1,9 @@
+{
+  "image": "nineveh_distant_walls.png",
+  "verdict": "PASS",
+  "flags": [
+    "eye-audited full-res 2026-07-08 vs fact cards: Assyrian walled city + ziggurat ✓; tiny Jonah on ridge; arch style nit only"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

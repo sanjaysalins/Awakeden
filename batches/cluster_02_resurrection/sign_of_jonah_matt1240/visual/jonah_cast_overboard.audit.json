@@ -1,0 +1,9 @@
+{
+  "image": "jonah_cast_overboard.png",
+  "verdict": "PASS",
+  "flags": [
+    "eye-audited full-res 2026-07-08 vs fact cards: sailors cast him (Jonah 1:15) ✓ mid-throw not a jump; period ship; anatomy clean"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

@@ -1,0 +1,14 @@
+{
+  "slug": "man_rising_from_water",
+  "hash": "aa4c96f1d6df2aa6",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": false,
+    "not_grotesque": false,
+    "style_consistent": false
+  },
+  "notes": "re-rolled per user gate notes; eye-audited full-res",
+  "reviewer": "in-chat-agent"
+}

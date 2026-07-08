@@ -1,0 +1,52 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Stills gate — sign_of_jonah_matt1240</title>
+<style>
+ body{background:#0f0f11;color:#eee;font-family:system-ui,Arial,sans-serif;margin:0;padding:18px 22px 110px}
+ h1{font-size:20px;margin:0 0 2px} .sub{color:#9aa;font-size:13px;margin-bottom:14px}
+ .contact{width:100%;max-width:1500px;border:1px solid #333;border-radius:8px;margin-bottom:20px}
+ .card{background:#191920;border:1px solid #333;border-radius:12px;padding:14px;margin:0 0 16px;display:flex;gap:18px;flex-wrap:wrap}
+ .card.approved{border-color:#3a7} .card.rejected{border-color:#c55}
+ .col{flex:1;min-width:290px}
+ .slug{font-family:monospace;color:#7ec8ff;font-size:15px}
+ .q{font-size:12px;margin:2px 0 6px} .q.PASS{color:#6d6} .q.FAIL{color:#e77} .q.none{color:#888}
+ img,video{max-width:100%;width:330px;border-radius:6px;display:block;background:#000}
+ .btns{margin-top:8px} .btns button{font-size:14px;margin:0 8px 0 0;padding:7px 16px;border-radius:8px;border:1px solid #555;background:#26262e;color:#eee;cursor:pointer}
+ .btns button.a.on{background:#3a7;border-color:#3a7;color:#fff} .btns button.r.on{background:#c55;border-color:#c55;color:#fff}
+ textarea{width:100%;box-sizing:border-box;height:52px;background:#111;color:#eee;border:1px solid #444;border-radius:6px;padding:6px;font-size:13px;margin-top:8px}
+ .noclip{color:#c66;font-size:13px;padding:16px 0}
+ #bar{position:fixed;left:0;right:0;bottom:0;background:#1c1c24;border-top:1px solid #444;padding:10px 22px;display:flex;gap:12px;align-items:center}
+ #bar button{font-size:14px;padding:8px 16px;border-radius:8px;border:none;background:#3a7;color:#fff;cursor:pointer}
+ #out{position:fixed;inset:5%;background:#111;border:1px solid #555;border-radius:10px;padding:16px;display:none;z-index:9;flex-direction:column}
+ #out textarea{flex:1;height:auto;background:#0a0a0a;color:#8f8;font-family:monospace}
+</style></head><body>
+<h1>Stills gate — sign_of_jonah_matt1240</h1>
+<div class="sub">Look at the WHOLE set first. Then Approve/Reject each still and add notes. Nothing gets animated or rebuilt until you approve. Then Export and paste back.</div>
+<img class="contact" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/_review/contact.jpg">
+<div id="app"></div>
+<div id="bar"><button onclick="exportAll()">⬇ Export decisions (paste back to me)</button>
+<span class="sub" style="margin:0">approve = keep · reject = redo</span></div>
+<div id="out"><b>Paste this back into the chat:</b><textarea id="ot" readonly></textarea>
+<div style="margin-top:10px"><button onclick="copyOut()">Copy</button>
+<button style="background:#555" onclick="document.getElementById('out').style.display='none'">Close</button></div></div>
+<script>
+const S=[{"slug": "body_laid_in_tomb", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/body_laid_in_tomb.png", "clip": "", "quality": null}, {"slug": "great_fish_rising", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/great_fish_rising.png", "clip": "", "quality": null}, {"slug": "jesus_and_scribes", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/jesus_and_scribes.png", "clip": "", "quality": null}, {"slug": "jonah_cast_overboard", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/jonah_cast_overboard.png", "clip": "", "quality": null}, {"slug": "jonah_in_the_deep", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/jonah_in_the_deep.png", "clip": "", "quality": null}, {"slug": "jonah_on_shore", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/jonah_on_shore.png", "clip": "", "quality": null}, {"slug": "jonah_sinking_down", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/jonah_sinking_down.png", "clip": "", "quality": null}, {"slug": "lot_falls_jonah", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/lot_falls_jonah.png", "clip": "", "quality": null}, {"slug": "man_rising_from_water", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/man_rising_from_water.png", "clip": "", "quality": null}, {"slug": "mercy_hand_into_deep", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/mercy_hand_into_deep.png", "clip": "", "quality": null}, {"slug": "nineveh_distant_walls", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/nineveh_distant_walls.png", "clip": "", "quality": null}, {"slug": "risen_christ_wounds", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/risen_christ_wounds.png", "clip": "", "quality": null}, {"slug": "stone_rolled_dawn", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/stone_rolled_dawn.png", "clip": "", "quality": null}, {"slug": "storm_ship_waves", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/storm_ship_waves.png", "clip": "", "quality": null}, {"slug": "three_days_dark_tomb", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/three_days_dark_tomb.png", "clip": "", "quality": null}]; const st={};
+S.forEach(s=>st[s.slug]={decision:null,notes:""});
+function render(){const a=document.getElementById('app');a.innerHTML='';
+ S.forEach(s=>{const c=document.createElement('div');c.className='card';c.id='c-'+s.slug;
+  const qc=s.quality?('q '+s.quality):'q none';const qt=s.quality?('agent quality: '+s.quality):'agent quality: (not scored)';
+  c.innerHTML=`<div class="col"><div class="slug">${s.slug}</div><div class="${qc}">${qt}</div>
+   <img src="${s.png}"></div>
+   <div class="col">${s.clip?`<video src="${s.clip}" controls loop muted playsinline></video>`:`<div class="noclip">— no clip yet —</div>`}
+   <div class="btns"><button class="a" data-s="${s.slug}">✓ Approve</button><button class="r" data-s="${s.slug}">✗ Reject</button></div>
+   <textarea data-s="${s.slug}" placeholder="notes (what's wrong / how to fix)"></textarea></div>`;
+  a.appendChild(c);});
+ document.querySelectorAll('.btns button').forEach(b=>b.onclick=()=>{const s=b.dataset.s;const dec=b.classList.contains('a')?'approve':'reject';
+  st[s].decision=dec;const card=document.getElementById('c-'+s);card.className='card '+(dec==='approve'?'approved':'rejected');
+  card.querySelectorAll('.a,.r').forEach(x=>x.classList.remove('on'));b.classList.add('on');});
+ document.querySelectorAll('textarea[data-s]').forEach(t=>t.oninput=()=>st[t.dataset.s].notes=t.value);}
+function exportAll(){const out=S.map(s=>({slug:s.slug,decision:st[s.slug].decision,notes:st[s.slug].notes.trim()||undefined}))
+  .filter(x=>x.decision||x.notes);
+ document.getElementById('ot').value="STILLS GATE DECISIONS ("+"sign_of_jonah_matt1240"+")\n"+JSON.stringify(out,null,2);
+ document.getElementById('out').style.display='flex';}
+function copyOut(){const t=document.getElementById('ot');t.select();document.execCommand('copy');}
+render();
+</script></body></html>

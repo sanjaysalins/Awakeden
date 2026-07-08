@@ -1,0 +1,9 @@
+{
+  "image": "three_days_dark_tomb.png",
+  "verdict": "PASS",
+  "flags": [
+    "eye-audited full-res 2026-07-08: round 2: chamber fills frame, shrouded body, thin light shaft; anatomy clean"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

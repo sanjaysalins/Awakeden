@@ -1,0 +1,482 @@
+{
+ "dod": {
+  "median_beat_s": 3.35,
+  "max_beat_s": 5.43,
+  "held_gt6s": [],
+  "slams": 1,
+  "kling_or_punch_or_slam_pct": 75,
+  "tier1_pct": 85,
+  "reuse_violations": [
+   "storm_ship_waves: beats 3->5 (gap 2 < 8)",
+   "jonah_in_the_deep: beats 8->10 (gap 2 < 8)",
+   "jonah_sinking_down: beats 7->12 (gap 5 < 8)",
+   "stone_rolled_dawn: beats 14->15 (gap 1 < 8)",
+   "mercy_hand_into_deep: beats 16->17 (gap 1 < 8)",
+   "risen_christ_wounds: beats 19->20 (gap 1 < 8)"
+  ],
+  "tier3_or_flagged_beats": [
+   14
+  ],
+  "standard_3b": {
+   "stills_over_2_uses": {},
+   "stills_fullbleed_twice": {
+    "storm_ship_waves": 2,
+    "jonah_sinking_down": 2,
+    "jonah_in_the_deep": 2,
+    "mercy_hand_into_deep": 2,
+    "risen_christ_wounds": 2
+   },
+   "fullbleed_beat_pct": 95,
+   "slop_caption_beats": []
+  },
+  "ramps": 1,
+  "whips": 4,
+  "flash_inserts": 0,
+  "cut_ticks": false,
+  "beats": 20
+ },
+ "beats": [
+  {
+   "beat": 1,
+   "t": [
+    0.0,
+    2.24
+   ],
+   "dur": 2.233333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "jonah_cast_overboard"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 2,
+   "t": [
+    2.24,
+    5.26
+   ],
+   "dur": 3.033333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "great_fish_rising"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 3,
+   "t": [
+    5.26,
+    8.64
+   ],
+   "dur": 3.366667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "storm_ship_waves"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 4,
+   "t": [
+    8.64,
+    11.96
+   ],
+   "dur": 3.333333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "nineveh_distant_walls"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 5,
+   "t": [
+    11.96,
+    14.59
+   ],
+   "dur": 2.633333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "storm_ship_waves"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 6,
+   "t": [
+    14.59,
+    18.47
+   ],
+   "dur": 3.866667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "lot_falls_jonah"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 7,
+   "t": [
+    18.47,
+    21.35
+   ],
+   "dur": 2.866667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "jonah_sinking_down"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 8,
+   "t": [
+    21.35,
+    25.51
+   ],
+   "dur": 4.166667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "jonah_in_the_deep"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 9,
+   "t": [
+    25.51,
+    30.93
+   ],
+   "dur": 5.433333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "jesus_and_scribes"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 10,
+   "t": [
+    30.93,
+    36.09
+   ],
+   "dur": 5.166667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "jonah_in_the_deep"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 11,
+   "t": [
+    36.09,
+    40.83
+   ],
+   "dur": 4.733333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "three_days_dark_tomb"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 12,
+   "t": [
+    40.83,
+    44.4
+   ],
+   "dur": 3.566667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "jonah_sinking_down"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 13,
+   "t": [
+    44.4,
+    49.5
+   ],
+   "dur": 5.1,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "body_laid_in_tomb"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 14,
+   "t": [
+    49.5,
+    53.38
+   ],
+   "dur": 3.866667,
+   "tpl": "stack_h",
+   "slams": 1,
+   "slugs": [
+    "stone_rolled_dawn",
+    "jonah_on_shore"
+   ],
+   "sources": [
+    "kling",
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 3,
+    "style": "scrim",
+    "flag": true
+   }
+  },
+  {
+   "beat": 15,
+   "t": [
+    53.38,
+    54.6
+   ],
+   "dur": 1.233333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "stone_rolled_dawn"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 16,
+   "t": [
+    54.6,
+    57.0
+   ],
+   "dur": 2.4,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "mercy_hand_into_deep"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 17,
+   "t": [
+    57.0,
+    61.4
+   ],
+   "dur": 4.4,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "mercy_hand_into_deep"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 18,
+   "t": [
+    61.4,
+    63.6
+   ],
+   "dur": 2.2,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "man_rising_from_water"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 19,
+   "t": [
+    63.6,
+    66.7
+   ],
+   "dur": 3.1,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "risen_christ_wounds"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 20,
+   "t": [
+    66.7,
+    69.52
+   ],
+   "dur": 2.833333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "risen_christ_wounds"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  }
+ ]
+}

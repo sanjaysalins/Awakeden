@@ -1,0 +1,14 @@
+{
+  "slug": "lot_falls_jonah",
+  "hash": "9e0f041d00a94fa6",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": false,
+    "not_grotesque": false,
+    "style_consistent": false
+  },
+  "notes": "re-rolled per user gate notes; eye-audited full-res",
+  "reviewer": "in-chat-agent"
+}

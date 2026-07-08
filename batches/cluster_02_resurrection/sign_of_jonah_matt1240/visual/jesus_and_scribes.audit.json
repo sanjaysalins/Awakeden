@@ -1,0 +1,9 @@
+{
+  "image": "jesus_and_scribes.png",
+  "verdict": "PASS",
+  "flags": [
+    "eye-audited full-res 2026-07-08 vs fact cards: JESUS anchor face ✓ calm; scribes demand; period; minor shadow-direction nit only"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

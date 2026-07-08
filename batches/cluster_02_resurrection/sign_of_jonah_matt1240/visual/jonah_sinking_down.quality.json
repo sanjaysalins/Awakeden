@@ -1,0 +1,14 @@
+{
+  "slug": "jonah_sinking_down",
+  "hash": "77a79aa0620bf2fa",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": false,
+    "not_grotesque": false,
+    "style_consistent": false
+  },
+  "notes": "corner squiggle patched (adversarial find)",
+  "reviewer": "in-chat-agent"
+}

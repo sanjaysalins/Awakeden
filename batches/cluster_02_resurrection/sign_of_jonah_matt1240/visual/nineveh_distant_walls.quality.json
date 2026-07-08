@@ -1,0 +1,14 @@
+{
+  "slug": "nineveh_distant_walls",
+  "hash": "29d3f817dd989c1a",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": false,
+    "not_grotesque": false,
+    "style_consistent": false
+  },
+  "notes": "eye-audited full-res vs Jonah/Matt12/John20 fact cards; details in .audit.json sidecar",
+  "reviewer": "in-chat-agent"
+}

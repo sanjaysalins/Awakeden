@@ -1,0 +1,14 @@
+{
+  "slug": "storm_ship_waves",
+  "hash": "d8338c7a86d5abf6",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": false,
+    "not_grotesque": false,
+    "style_consistent": false
+  },
+  "notes": "eye-audited full-res vs Jonah/Matt12/John20 fact cards; details in .audit.json sidecar",
+  "reviewer": "in-chat-agent"
+}

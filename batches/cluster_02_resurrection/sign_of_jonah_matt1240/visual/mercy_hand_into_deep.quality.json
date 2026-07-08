@@ -1,0 +1,14 @@
+{
+  "slug": "mercy_hand_into_deep",
+  "hash": "1c1a8a7e8a2b29d2",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": false,
+    "not_grotesque": false,
+    "style_consistent": false
+  },
+  "notes": "re-rolled per user gate notes; eye-audited full-res",
+  "reviewer": "in-chat-agent"
+}

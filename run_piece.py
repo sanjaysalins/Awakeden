@@ -48,13 +48,17 @@ def load_piece(piece_dir: Path) -> dict:
 
 
 def _bp(piece_dir: Path):
-    """The shared BytePlus module (style tail + key loader) — lives in the cluster's
-    father_forgive_them folder (pilot); loaded by path exactly like the old scripts."""
-    p = piece_dir.parent / "father_forgive_them" / "byteplus_seedream.py"
-    spec = importlib.util.spec_from_file_location("bp", p)
-    mod = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(mod)
-    return mod
+    """The shared BytePlus module (style tail + key loader). Canonical copy lives in
+    the cluster-1 pilot folder; pieces in OTHER clusters fall back to it (caught the
+    hard way on the cluster-2 pilot)."""
+    for p in (piece_dir.parent / "father_forgive_them" / "byteplus_seedream.py",
+              ROOT / "batches" / "cluster_01_cross" / "father_forgive_them" / "byteplus_seedream.py"):
+        if p.is_file():
+            spec = importlib.util.spec_from_file_location("bp", p)
+            mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mod)
+            return mod
+    raise FileNotFoundError("byteplus_seedream.py not found in any cluster pilot folder")
 
 
 # ---------------------------------------------------------------- stage: stills
