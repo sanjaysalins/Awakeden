@@ -205,13 +205,21 @@ def avatar():
     comic-panel frame — the medium (panel), the name (E), the Scripture thread
     (red) — bold enough to read at 32px beside a comment, circle-crop safe."""
     px = 800
-    im = Image.new("RGB", (px, px), SITE_INK)
-    dr = ImageDraw.Draw(im)
-    # ivory comic panel frame, kept inside the circle crop
-    dr.rounded_rectangle([px * 0.135, px * 0.30, px * 0.865, px * 0.70], radius=24,
-                         outline=IVORY, width=11)
-    # the WHOLE word — AWAKEDEN with the split E — centered inside the panel
-    draw_word_centered(im, (px * 0.175, px * 0.42, px * 0.825, px * 0.58), glow=True)
+    # the inked art fills the circle: crown of thorns, head bowed — the channel's
+    # most recognizable panel — with the whole word on an ink chip beneath
+    art = _panel(ROOT / "batches/cluster_01_cross/into_thy_hands_luke2346/visual"
+                        / "bowed_head_finished.png", px, px)
+    im = art.convert("RGB")
+    dr = ImageDraw.Draw(im, "RGBA")
+    # soft ink gradient at the bottom half so the chip band sits naturally
+    for i in range(int(px * 0.42)):
+        a = int(150 * (i / (px * 0.42)) ** 1.6)
+        dr.line([(0, int(px * 0.58) + i), (px, int(px * 0.58) + i)],
+                fill=(12, 14, 18, a))
+    # ink chip + the whole word (circle is narrower at this height — keep margins)
+    dr.rounded_rectangle([px * 0.13, px * 0.615, px * 0.87, px * 0.775],
+                         radius=20, fill=(12, 14, 18, 215), outline=IVORY + (235,), width=5)
+    draw_word_centered(im, (px * 0.17, px * 0.65, px * 0.83, px * 0.74), glow=True)
     p = OUT / "channel_avatar.png"
     im.save(p)
     # round preview — exactly what the circular crop shows
