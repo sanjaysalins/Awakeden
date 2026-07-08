@@ -207,20 +207,11 @@ def avatar():
     px = 800
     im = Image.new("RGB", (px, px), SITE_INK)
     dr = ImageDraw.Draw(im)
-    # ivory comic panel border, inside the circle-inscribed square
-    b0, b1 = px * 0.205, px * 0.795
-    dr.rounded_rectangle([b0, b1 * 0 + px * 0.225, b1, px * 0.775], radius=26,
-                         outline=IVORY, width=13)
-    # the split E, huge, optically centered in the panel
-    size = 380
-    f = font(ARIAL_BLK, size)
-    tmp = Image.new("RGBA", (size * 2, size * 2), (0, 0, 0, 0))
-    ImageDraw.Draw(tmp).text((size // 3, size // 3), "E", font=f, fill=(255,) * 4)
-    bb = tmp.getbbox()
-    gw, gh = bb[2] - bb[0], bb[3] - bb[1]
-    ex = (px - gw) / 2 - (bb[0] - size // 3)
-    ey = (px - gh) / 2 - (bb[1] - size // 3)
-    draw_split_char(im, (ex, ey), "E", f, size, BONE, RED_BRIGHT)
+    # ivory comic panel frame, kept inside the circle crop
+    dr.rounded_rectangle([px * 0.135, px * 0.30, px * 0.865, px * 0.70], radius=24,
+                         outline=IVORY, width=11)
+    # the WHOLE word — AWAKEDEN with the split E — centered inside the panel
+    draw_word_centered(im, (px * 0.175, px * 0.42, px * 0.825, px * 0.58), glow=True)
     p = OUT / "channel_avatar.png"
     im.save(p)
     # round preview — exactly what the circular crop shows
