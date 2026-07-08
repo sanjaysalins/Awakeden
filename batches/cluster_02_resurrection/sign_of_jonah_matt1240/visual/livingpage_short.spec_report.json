@@ -4,7 +4,7 @@
   "max_beat_s": 5.43,
   "held_gt6s": [],
   "slams": 1,
-  "kling_or_punch_or_slam_pct": 75,
+  "kling_or_punch_or_slam_pct": 100,
   "tier1_pct": 85,
   "reuse_violations": [
    "storm_ship_waves: beats 3->5 (gap 2 < 8)",
@@ -93,7 +93,7 @@
     "storm_ship_waves"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {
@@ -115,7 +115,7 @@
     "nineveh_distant_walls"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {
@@ -137,7 +137,7 @@
     "storm_ship_waves"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {
@@ -159,7 +159,7 @@
     "lot_falls_jonah"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {
@@ -337,7 +337,7 @@
    ],
    "sources": [
     "kling",
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {
@@ -425,7 +425,7 @@
     "man_rising_from_water"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {
