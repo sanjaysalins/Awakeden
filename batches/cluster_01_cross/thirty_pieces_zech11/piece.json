@@ -49,12 +49,9 @@
     "duration": 5,
     "aspect_ratio": "9:16",
     "moves": {
-      "thirty_coins_scatter": "ONE slow, steady, continuous push-in low across the stone floor toward the falling coins",
-      "weighing_scales_silver": "ONE slow, steady, continuous push-in toward the scale pan heavy with silver",
       "judas_bag_priests": "ONE slow, steady, continuous push-in toward the bowed man clutching the money bag",
       "judas_casting_coins": "ONE slow, steady, continuous push-in rising toward the coins flung in mid-air",
-      "potter_at_wheel": "ONE slow, steady, continuous push-in toward the clay vessel forming between the hands",
-      "silver_and_blood": "ONE slow, steady, continuous push-in following the dark red stream between the coins"
+      "potter_at_wheel": "ONE slow, steady, continuous push-in toward the clay vessel forming between the hands"
     },
     "base": "A finished inked graphic-novel comic panel — flat printed art with bold black ink outlines, cel-flat color and cross-hatching. Animate it as {move}. The drawing itself never moves, redraws, repaints, breathes or changes; the ink lines and flat colors stay exactly as printed; only the camera moves. No hard cuts, no dissolves, no morphing, no subject motion, no limbs moving, no new lines drawn. INVENT NOTHING: show ONLY what is already inked in this exact panel. Keep the subject whole in frame."
   },
