@@ -1,6 +1,48 @@
 # RESUME.md — start here next session
 
-## ⚡⚡⚡ NEXT SESSION START HERE (updated 2026-07-07 EOD) — FINALIZE the 4 cluster audit-fix stills (animate + rebuild), then commit ⚡⚡⚡
+## ⚡⚡⚡ NEXT SESSION START HERE (updated 2026-07-08 EOD) — cluster 1 FULLY CLOSED; engine hardened P0+P1; next = P2 (resumable runner / morph pre-filter / choose_engine) or cluster 2 ⚡⚡⚡
+
+> **Where we are (2026-07-08):** the WHOLE 2026-07-07 backlog is DONE + committed on `main`
+> (`8bfa516` P0 hardening → `7849d8b` manifest runner → `975fedc` P1 remainder → `34e2785`
+> re-animation → this rebuild commit). All 11 Cross shorts rebuilt clean.
+
+### ✅ WHAT THE 2026-07-08 SESSION DELIVERED
+- **Full engine review** (5 independent reviewers, whole repo). Report artifact:
+  https://claude.ai/code/artifact/fb7866b4-5e9a-490c-b5a7-3cff378a9e69
+- **P0 hardening:** suite greened (16 red → 0); `narration_gate` now BLOCKS the lock
+  (unmarked-verbatim-KJV false positive fixed via kjv_corpus 6-gram scan); runner refuses
+  audio on FAIL gates + on a crashed lock step; budget ceiling ENFORCED at the Kling
+  chokepoint + ledger rows per clip (backfilled 07-04..07); every render writes a
+  pending-FAIL sidecar + auto-positivize; animate refuses stills without PASS audit;
+  23MB git junk purged, 12 dead root scripts → `archive/root_oneoffs/`.
+- **P1 keystone:** `run_piece.py --stage stills|animate|score|register|hash-backfill|
+  enrich-dips|retime` + per-piece `piece.json` replaced the ×10 quartet (~1,850 dup lines).
+  Byte-parity PROVEN per piece before its quartet retired (`archive/quartets/`).
+- **P1 remainder:** clips hash-bound (`.src.sha`, stale → auto-retire+re-render); score dip
+  windows carry their spoken PHRASE (all 10 enriched; `--stage retime` re-syncs after any
+  re-voice); reuse pre-flight (identical sibling PASS still copied $0); `bib_validate` now
+  reads `livingpage_short.spec.json` (batch pieces visible to the fact pipeline).
+- **The 6 stale audit-fix clips re-animated** (~$1.95: 3 unique renders + 3 $0 propagations,
+  QC'd zero-morph) → **all 7 affected pieces rebuilt + re-scored + website refreshed.**
+  Cluster hash-clean: 0 stale. Review: `_NEW_CLIPS_REVIEW.html` + `_CROSS_SHORTS_REBUILT.html`.
+- Suite: **273 green**. Tests: 244 → 273 (+29 incl. cost, render-guard, run_piece, retime,
+  reuse, bib spec-loader).
+
+### ▶▶ NEXT SESSION — pick one
+1. **P2 engine work** (from the review artifact): resumable `cli_livingpage.py --continue`
+   state machine · deterministic morph/flow pre-filter before vision QC ·
+   `choose_engine()` paid-vs-$0 rule + per-piece credit cap · lean-prompt/scene-then-camera
+   lint rules · fold the living-page lane into `v2/SPEC.md`.
+2. **Cluster 2 production** — the manifest runner means a new piece = author `piece.json`
+   (+ spec + narration) and run `run_piece.py --stage all`; all gates/ledger on by default.
+3. **Publish pass** — the 11 rebuilt Cross shorts are ready for /publish + upload kits.
+4. Small leftovers: watch-list nits from the 07-07 audit (gem-like nail-head, boat-not-garden
+   sleeping_peter etc., user deprioritized); wire the deprecated `_byteplus/vinegar_*`
+   leftovers deletion; move root `test_bible_kb*.py` into `pipeline/`.
+
+---
+
+## ⚡⚡ PRIOR (2026-07-07 EOD) — FINALIZE the 4 cluster audit-fix stills (animate + rebuild), then commit — ✅ ALL DONE 2026-07-08 ⚡⚡
 
 > **Where we are (2026-07-07):** built the stills-first QUALITY GATE, fixed today_paradise end-to-end,
 > merged to `main`, then AUDITED all 10 Cross shorts (independent reviewers) and RE-RENDERED the 4 flagged
