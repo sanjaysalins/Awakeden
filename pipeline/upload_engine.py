@@ -31,9 +31,10 @@ def _filled(v: str | None) -> bool:
     return bool(v) and "FILL_ME" not in str(v)
 
 
-def build_footer(platform: str, brand: dict) -> str:
+def build_footer(platform: str, brand: dict, read_url: str = "") -> str:
     """Verbatim brand footer. Full (with links) on YouTube/Facebook; minimal,
-    link-free on TikTok/Instagram (links aren't clickable there)."""
+    link-free on TikTok/Instagram (links aren't clickable there). `read_url` is
+    the piece's own read-the-panels page on awakeden.com."""
     cta = (brand.get("cta_line") or "").strip()
     handles = brand.get("handles", {})
     scripture_note = (brand.get("scripture_note") or "").strip()
@@ -44,6 +45,8 @@ def build_footer(platform: str, brand: dict) -> str:
         lines.append(cta)
 
     link_friendly = platform.startswith("youtube") or platform == "facebook"
+    if link_friendly and _filled(read_url):
+        lines.append(f"Read it panel by panel: {read_url}")
     if link_friendly:
         follow: list[str] = []
         for plat, key in [("YouTube", "youtube"), ("TikTok", "tiktok"),
@@ -287,7 +290,14 @@ def assemble_kit(facts: SourceFacts, raw: dict, brand: dict) -> UploadKit:
     for key in PLATFORM_ORDER:
         block = (raw.get("platforms", {}) or {}).get(key, {}) or {}
         body = (block.get("description_body") or "").strip()
-        footer = build_footer(key, brand)
+        read_url = ""
+        pm = Path(facts.media_dir) / "publish_meta.json"
+        if pm.is_file():
+            try:
+                read_url = json.loads(pm.read_text(encoding="utf-8")).get("read_url", "")
+            except Exception:
+                pass
+        footer = build_footer(key, brand, read_url=read_url)
         description = f"{body}\n\n{footer}".strip() if footer else body
         platforms.append(PlatformMeta(
             platform=key,

@@ -13,6 +13,8 @@ Jonah went down guilty. Christ went down innocent, bearing what was ours. And he
 However far you think you have fallen, that is how far his mercy reaches. Come up out of the deep, and live.
 
 Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Read it panel by panel: https://awakeden.com/read/sign-of-jonah.html
+https://awakeden.com
 
 https://awakeden.com
 

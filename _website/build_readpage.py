@@ -174,10 +174,27 @@ def render_read_page(item: dict, spec: dict, slug: str, narration_text: str) -> 
                         canonical, og)]
     parts.append(f'<div class="page-hero"><h1>{esc(title)}</h1>'
                  f'<p class="hero-lead">{esc(hook)}</p></div>')
+    yt = (item.get("youtube_id") or "").strip()
+    if yt:
+        watch = (
+            f'<p><a class="watch-btn" href="#" onclick="document.getElementById(\'yt-modal\').style.display=\'flex\';'
+            f'document.getElementById(\'yt-frame\').src=\'https://www.youtube-nocookie.com/embed/{yt}?autoplay=1\';return false;">'
+            '&#9654;&nbsp; Watch the film</a></p>'
+            '<div id="yt-modal" style="display:none;position:fixed;inset:0;background:rgba(10,8,6,.92);'
+            'z-index:99;align-items:center;justify-content:center;flex-direction:column" '
+            'onclick="this.style.display=\'none\';document.getElementById(\'yt-frame\').src=\'\';">'
+            '<div style="width:min(92vw,960px);aspect-ratio:16/9">'
+            '<iframe id="yt-frame" style="width:100%;height:100%;border:0" allow="autoplay; fullscreen" '
+            'allowfullscreen></iframe></div>'
+            '<p style="color:#f5f0d0;font-size:.85rem;margin-top:.8rem">click anywhere to close</p></div>'
+            '<style>.watch-btn{display:inline-block;background:#a8231d;color:#f5f0d0;font-weight:700;'
+            'padding:.55em 1.3em;border-radius:6px;text-decoration:none}.watch-btn:hover{background:#c22b24}</style>')
+    else:
+        watch = '<p>Every panel below is a frame from the finished film, in order. ' \
+                'Scripture is in red. The video version is coming to YouTube.</p>'
     parts.append('<div class="read-meta">'
                  f'<p class="verse">{esc(ref)} &middot; KJV</p>'
-                 '<p>Every panel below is a frame from the finished film, in order. '
-                 'Scripture is in red. The video version is coming to YouTube.</p></div>')
+                 f'{watch}</div>')
     parts.append('<div class="strip">')
     for i, beat in enumerate(spec["beats"], 1):
         img = f"../assets/study/read/{slug}/beat_{i:02d}.jpg"

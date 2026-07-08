@@ -11,6 +11,8 @@ Nobody was trying to fulfil prophecy. Every coin found its mark. The cross was n
 Stop weighing out your own price. Receive his, and go free.
 
 Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Read it panel by panel: https://awakeden.com/read/thirty-pieces-of-silver.html
+https://awakeden.com
 
 https://awakeden.com
 

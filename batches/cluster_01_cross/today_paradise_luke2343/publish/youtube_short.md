@@ -15,6 +15,8 @@ He asked for someday. Jesus gave him that same afternoon. No merit. No time to e
 We are all one of those two men. Ask what the thief asked: remember me. Then hear his answer: with me. Today. Paradise.
 
 Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Read it panel by panel: https://awakeden.com/read/today-in-paradise.html
+https://awakeden.com
 
 https://awakeden.com
 

@@ -11,6 +11,8 @@ Matthew 26:40 - Jesus asked Peter, James and John to watch with him one hour in 
 The cup he asked to pass, he drank - on the cross, for you. He watched that hour alone, so that no hour of yours is watched alone. Bring Jesus the weak flesh he already knows.
 
 Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Read it panel by panel: https://awakeden.com/read/could-ye-not-watch-one-hour.html
+https://awakeden.com
 
 https://awakeden.com
 

@@ -11,6 +11,8 @@ Look upon ME - God is speaking. John watched the spear go in and knew: this was 
 Look at him - and live.
 
 Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Read it panel by panel: https://awakeden.com/read/zechariah-12-10-pierced.html
+https://awakeden.com
 
 https://awakeden.com
 
