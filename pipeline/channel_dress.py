@@ -138,45 +138,19 @@ def banner():
 
 
 def avatar():
-    """Site identity in a circle: AWAK (bone) stacked over EDEN (red glow) on the
-    site ink — exactly the website header, readable at channel-avatar sizes."""
+    """Site identity in a circle: ONE word — AWAKEDEN — bone into red through the
+    split E, exactly the website header, on the site ink."""
     px = 800
     im = Image.new("RGB", (px, px), SITE_INK)
+    # size the one-word mark to ~86% of the disc width
+    size = 84
+    while wordmark_width(size, 0.08) < px * 0.86:
+        size += 2
+    size -= 2
+    w = wordmark_width(size, 0.08)
+    draw_wordmark(im, (px - w) / 2, px * 0.5 - size * 0.62, size, tracking=0.08)
     dr = ImageDraw.Draw(im)
-    size, tracking = 128, 0.10
-    f = font(ARIAL_BLK, size)
-
-    def line_w(s):
-        return sum(dr.textlength(c, font=f) + size * tracking for c in s) - size * tracking
-
-    # AWAKE — bone, with the final E split bone/red (the hinge into EDEN)
-    x = (px - line_w("AWAKE")) / 2
-    y = px * 0.245
-    for i, c in enumerate("AWAKE"):
-        if i == 4:
-            draw_split_char(im, (x, y), c, f, size, BONE, RED_BRIGHT)
-            dr = ImageDraw.Draw(im)
-        else:
-            dr.text((x, y), c, font=f, fill=BONE)
-        x += dr.textlength(c, font=f) + size * tracking
-    # EDEN — red-bright with glow
-    from PIL import ImageFilter
-    gl = Image.new("RGBA", im.size, (0, 0, 0, 0))
-    gd = ImageDraw.Draw(gl)
-    x = (px - line_w("EDEN")) / 2
-    y2 = px * 0.485
-    for c in "EDEN":
-        gd.text((x, y2), c, font=f, fill=RED_BRIGHT + (170,))
-        x += gd.textlength(c, font=f) + size * tracking
-    gl = gl.filter(ImageFilter.GaussianBlur(14))
-    im = Image.alpha_composite(im.convert("RGBA"), gl).convert("RGB")
-    dr = ImageDraw.Draw(im)
-    x = (px - line_w("EDEN")) / 2
-    for c in "EDEN":
-        dr.text((x, y2), c, font=f, fill=RED_BRIGHT)
-        x += dr.textlength(c, font=f) + size * tracking
-    # thin bone rule beneath, like the site divider
-    dr.rectangle([px * 0.30, px * 0.72, px * 0.70, px * 0.727], fill=BONE)
+    dr.rectangle([px * 0.32, px * 0.63, px * 0.68, px * 0.637], fill=BONE)
     p = OUT / "channel_avatar.png"
     im.save(p)
     print(f"avatar  -> {p}")

@@ -135,48 +135,40 @@ def compose(frame: Image.Image, size_key: str, title: list[str], ref: str) -> Im
 
 
 def brand_assets(out_dir: Path) -> None:
-    """Site-identity marks: stacked AWAK (bone) / EDEN (red) on transparent —
-    the YouTube branding watermark is a mini version of the channel avatar."""
-    from pipeline.channel_dress import ARIAL_BLK, BONE, RED_BRIGHT, font as cd_font
+    """Site-identity marks: ONE word — AWAKEDEN with the split E — on transparent.
+    The YouTube branding watermark is the same mark, corner-subtle."""
+    from pipeline.channel_dress import (ARIAL_BLK, BONE, RED_BRIGHT,
+                                        draw_split_char, font as cd_font,
+                                        wordmark_width)
     out_dir.mkdir(parents=True, exist_ok=True)
-    for px, name in ((800, "awakeden_watermark.png"), (150, "awakeden_watermark_150.png")):
-        im = Image.new("RGBA", (px, px), (0, 0, 0, 0))
+
+    def one_word(im: Image.Image, x: float, y: float, size: int, tracking: float):
         dr = ImageDraw.Draw(im)
-        size, tracking = int(px * 0.185), 0.10
         f = cd_font(ARIAL_BLK, size)
-
-        def lw(s):
-            return sum(dr.textlength(c, font=f) + size * tracking for c in s) - size * tracking
-
-        from pipeline.channel_dress import draw_split_char
-        x = (px - lw("AWAKE")) / 2
-        for i, c in enumerate("AWAKE"):
-            if i == 4:   # the shared E: half bone, half red (the hinge into EDEN)
-                draw_split_char(im, (x, px * 0.24), c, f, size, BONE, RED_BRIGHT)
+        cx = x
+        for i, ch in enumerate("AWAKEDEN"):
+            if i == 4:
+                draw_split_char(im, (cx, y), ch, f, size, BONE, RED_BRIGHT)
                 dr = ImageDraw.Draw(im)
             else:
-                dr.text((x, px * 0.24), c, font=f, fill=BONE + (255,))
-            x += dr.textlength(c, font=f) + size * tracking
-        x = (px - lw("EDEN")) / 2
-        for c in "EDEN":
-            dr.text((x, px * 0.48), c, font=f, fill=RED_BRIGHT + (255,))
-            x += dr.textlength(c, font=f) + size * tracking
-        dr.rectangle([px * 0.30, px * 0.73, px * 0.70, px * 0.737], fill=BONE + (255,))
+                dr.text((cx, y), ch, font=f,
+                        fill=(BONE if i < 4 else RED_BRIGHT) + (255,))
+            cx += dr.textlength(ch, font=f) + size * tracking
+
+    for px, name in ((800, "awakeden_watermark.png"), (150, "awakeden_watermark_150.png")):
+        im = Image.new("RGBA", (px, px), (0, 0, 0, 0))
+        size = 40
+        while wordmark_width(size, 0.08) < px * 0.94:
+            size += 2
+        size -= 2
+        w = wordmark_width(size, 0.08)
+        one_word(im, (px - w) / 2, px * 0.5 - size * 0.62, size, 0.08)
         im.save(out_dir / name)
     # horizontal wordmark (transparent)
-    from pipeline.channel_dress import draw_wordmark, wordmark_width
     w = int(wordmark_width(220)) + 80
     im = Image.new("RGBA", (w, 320), (0, 0, 0, 0))
-    draw_wordmark(im.convert("RGB"), 40, 40, 220)  # measure path; draw on RGBA below
-    im2 = Image.new("RGBA", (w, 320), (0, 0, 0, 0))
-    dr = ImageDraw.Draw(im2)
-    from pipeline.channel_dress import ARIAL_BLK as AB, font as cf
-    f = cf(AB, 220)
-    cx = 40.0
-    for i, ch in enumerate("AWAKEDEN"):
-        dr.text((cx, 40), ch, font=f, fill=(BONE if i < 4 else RED_BRIGHT) + (255,))
-        cx += dr.textlength(ch, font=f) + 220 * 0.14
-    im2.save(out_dir / "awakeden_wordmark.png")
+    one_word(im, 40, 40, 220, 0.14)
+    im.save(out_dir / "awakeden_wordmark.png")
     print(f"brand assets -> {out_dir}")
 
 
