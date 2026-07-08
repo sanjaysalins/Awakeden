@@ -14,7 +14,7 @@ BASE = "https://ark.ap-southeast.bytepluses.com/api/v3/images/generations"
 bp_spec = importlib.util.spec_from_file_location("bp", FFT / "byteplus_seedream.py")
 bp = importlib.util.module_from_spec(bp_spec); bp_spec.loader.exec_module(bp)
 sys.path.insert(0, str(ROOT))
-from render_lint import lint as _lint
+from render_lint import lint as _lint, guard_prompt, arm_audit
 
 JOBS = {
  "david_writing_psalm": ("an aged king with a grey beard writing on an open scroll by a clay oil lamp, a harp resting against the stone wall beside him, night chamber, warm lamplight, vertical, ancient Israel", None),
@@ -39,6 +39,7 @@ if not a.render:
     print("\n$0 dry-run. --render to spend (~$0.05)."); sys.exit(0)
 
 def call(prompt, dest, ref):
+    prompt = guard_prompt(prompt)  # fail-closed: auto-fix poison tokens before the paid call
     body = {"model": MODEL, "prompt": prompt + bp.STYLE + bp.ONE, "size": SIZE,
             "response_format": "url", "watermark": False}
     if ref is not None:
@@ -55,6 +56,7 @@ def call(prompt, dest, ref):
         return "no-url"
     with urllib.request.urlopen(url, timeout=240) as im:
         dest.write_bytes(im.read())
+    arm_audit(dest)  # fail-closed: pending-FAIL sidecar until a real PASS is recorded
     return "ok"
 
 for slug, (prompt, ref) in JOBS.items():

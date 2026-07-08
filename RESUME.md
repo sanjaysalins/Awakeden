@@ -1,6 +1,63 @@
 # RESUME.md — start here next session
 
-## ⚡⚡⚡ NEXT SESSION START HERE (updated 2026-07-06 EOD) — CROSS-SHORTS: FULLY ANIMATED + BEEP-FREE; finish vinegar rebuild + redo 3 today_paradise stills ⚡⚡⚡
+## ⚡⚡⚡ NEXT SESSION START HERE (updated 2026-07-07 EOD) — FINALIZE the 4 cluster audit-fix stills (animate + rebuild), then commit ⚡⚡⚡
+
+> **Where we are (2026-07-07):** built the stills-first QUALITY GATE, fixed today_paradise end-to-end,
+> merged to `main`, then AUDITED all 10 Cross shorts (independent reviewers) and RE-RENDERED the 4 flagged
+> stills. The 4 fix stills are DONE + verified (my eye + independent reviewer 4/4 PASS) but NOT yet animated/
+> rebuilt into their videos, and NOT yet committed. On branch: **now on `main`** (feature branch still exists).
+
+### ▶▶ TOMORROW — FIRST STEP: finalize the 4 audit fixes (stills already done + verified)
+The 4 fixed stills are in place (and the 2 shared ones already propagated to their sibling pieces). Remaining =
+**animate 6 clips (~$4 Kling) + rebuild+re-score 7 pieces + refresh website + commit.**
+1. **Animate the 6 changed clips** (`_hf_animate_short.hf_animate`, gentle push-in; retry on HTTP 502/NSFW):
+   - `bowed_head_finished` → in it_is_finished_john1930, into_thy_hands_luke2346, forsaken_cry_ps221 (SAME shared still, 3 clips)
+   - `john_watching` → in pierced_zech1210, crucifixion_foretold_ps2218 (SAME shared still, 2 clips)
+   - `john_leads_home` → in woman_behold_john1926 (1 clip)
+   - `psalm22_scroll_david` (father_forgive_them pilot) → **STAYS STATIC, do NOT animate** (scroll → [[feedback-never-animate-writing]])
+   Move each stale clip to `clips/_stale_from_bad_stills/` first (still is newer → detect with `png -nt clip`).
+2. **Rebuild + re-score** each affected piece: the 6 living-page pieces via
+   `build_livingpage_16x9.py --pool <piece>/visual --spec livingpage_short.spec.json --clips --page 1080x1920 --no-ticks`
+   then `<piece>/_score.py`; the **pilot** `father_forgive_them` uses `build_mocomic_v2.py --clips` → `add_music_sfx.py`.
+   Then `_website/build_readpage.py --force`.
+   ⚠️ If a build hits `PermissionError [WinError 5]` on `_livingpage_work/seg_NN.mp4`, a prior build is still
+   holding the lock — `TaskStop` it, `rm -f _livingpage_work/*_kc.mp4`, re-run.
+3. **Commit** the audit fixes (the re-rendered stills post-merge are uncommitted). `*.mp4` is gitignored (clips
+   not tracked). Then optionally delete the feature branch.
+
+### ✅ WHAT THE 2026-07-07 SESSION DELIVERED
+- **NEW pipeline (committed `e97091b`, merged to main `de48b73`, pushed):** `stills_gate.py` — the mandatory
+  **stills-first HUMAN gate (#1)** + **5-axis QUALITY rubric (#2:** anatomy/believable/reads-as-intended/
+  not-grotesque/style), hash-bound, **fail-closed, wired into `build_livingpage_16x9.py`** (build refuses until
+  GREEN; `--skip-stills-gate` bypass). Flow now: render → `--build` → agent rubric (`--quality`) + **independent
+  adversarial reviewer** → **user approves** (`--approve`/`--apply`) → then animate/rebuild. Memory: [[stills-first-human-gate]].
+- **today_paradise (Luke 23:43) fully fixed + rebuilt + re-scored + approved:** thieves→clean ROPES (wounds/nails
+  blobbed, unspecified in Scripture), distinct non-Christ faces, correct crucifixion poses, `nail_through_hand`
+  via the **scene-then-camera prompt formula** ([[seedream-scene-then-camera]]), and **beat 5 mob→`mocker_taunts_jesus`**
+  (the taunt is the fellow criminal, Luke 23:39 — NOT a crowd; renamed slug in spec, retired crowd_mocking; Christ
+  enlarged + clearly nailed). Scored: today_paradise_luke2343_scored.mp4.
+- **Vinegar → HYSSOP on a long reed** (it_is_finished + i_thirst), soldier at the base reaching up; proven both
+  ways (eye + 5-CLI facts panel). [[crucifixion-still-facts]].
+- **Audited all 10 Cross shorts** (parallel independent reviewers, ~140 stills). Cluster is in GOOD shape —
+  only **3 hard FAILs + 1 gibberish scroll** (all now re-rendered + verified, awaiting animate/rebuild above):
+  `bowed_head_finished` (black-hole wound), `john_watching` (black donut-hole hands + cheek smudge; shared),
+  `john_leads_home` (John drawn elderly → now young), `psalm22_scroll_david` (pseudo-Hebrew → blank scroll).
+- **New memories:** [[every-still-biblically-driven]], [[crucifixion-still-facts]], [[stills-first-human-gate]],
+  [[seedream-scene-then-camera]].
+
+### ⏸️ NOT DONE / OPEN (lower priority)
+- **Watch-list items from the audit** (user chose to skip): `face_on_cross`/`spear_thrust_up` gem-like blue nail-head;
+  `06b_our_sin` faintly Christ-like bystander in crowd; `sleeping_peter_close` set on a boat not the garden;
+  trivial croppable corner squiggles on 3 thirty_pieces stills; `bowed_head_finished` was borderline in
+  into_thy_hands/forsaken_cry too (the re-render improves all 3).
+- **16 pre-existing test failures on `main`** (eyewitness/validation gates — NOT from this session; they fail on
+  origin/main already). Separate cleanup: `.venv\Scripts\python.exe -m pytest pipeline/test_eyewitness.py pipeline/test_validation.py -q`.
+- **Wire the living-page batch pieces into `bib_validate`** (bible-check keys on scene_plan.json; batch pieces use
+  livingpage_short.spec.json) — so accuracy auto-runs. [[every-still-biblically-driven]] known-gap.
+
+---
+
+## ⚡⚡ PRIOR (2026-07-06 EOD) — CROSS-SHORTS: FULLY ANIMATED + BEEP-FREE; finish vinegar rebuild + redo 3 today_paradise stills ⚡⚡
 
 > **Where we are (2026-07-06):** the 11 Cross shorts got a huge quality pass. Stills all audited + green,
 > heroes given epic cinematic Kling moves, EVERY non-writing still now Kling-animated, the annoying cut-tick

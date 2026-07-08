@@ -15,7 +15,7 @@ REF_JESUS = PZ / "visual" / "face_on_cross.png"
 bp_spec = importlib.util.spec_from_file_location("bp", FFT / "byteplus_seedream.py")
 bp = importlib.util.module_from_spec(bp_spec); bp_spec.loader.exec_module(bp)
 sys.path.insert(0, str(ROOT))
-from render_lint import lint as _lint
+from render_lint import lint as _lint, guard_prompt, arm_audit
 
 JOBS = {
  "child_sleeping_lamp": ("a small child asleep on a woven mat under a wool blanket, a clay oil lamp burning low beside, a mother's silhouette in the doorway, warm night interior, vertical, ancient Judea", None),
@@ -47,6 +47,7 @@ if not a.render:
     print("\n$0 dry-run. --render to spend (~$0.25)."); sys.exit(0)
 
 def call(prompt, dest, ref):
+    prompt = guard_prompt(prompt)  # fail-closed: auto-fix poison tokens before the paid call
     body = {"model": MODEL, "prompt": prompt + bp.STYLE + bp.ONE, "size": SIZE,
             "response_format": "url", "watermark": False}
     if ref is not None:
@@ -63,6 +64,7 @@ def call(prompt, dest, ref):
         return "no-url"
     with urllib.request.urlopen(url, timeout=240) as im:
         dest.write_bytes(im.read())
+    arm_audit(dest)  # fail-closed: pending-FAIL sidecar until a real PASS is recorded
     return "ok"
 
 for slug, (prompt, ref) in JOBS.items():

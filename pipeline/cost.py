@@ -129,8 +129,18 @@ def load() -> list[dict]:
     return [json.loads(l) for l in LEDGER.read_text(encoding="utf-8").splitlines() if l.strip()]
 
 
+def _usd(v) -> float:
+    """Coerce a ledger est_usd to float. Old hand-written rows carry strings like
+    '20-35' / '~1' / '<1' — take the leading number (range -> low bound), else 0."""
+    if isinstance(v, (int, float)):
+        return float(v)
+    import re as _re
+    m = _re.search(r"\d+(?:\.\d+)?", str(v or ""))
+    return float(m.group(0)) if m else 0.0
+
+
 def episode_total_usd(episode) -> float:
-    return round(sum((r.get("est_usd") or 0) for r in load() if r.get("episode") == episode), 2)
+    return round(sum(_usd(r.get("est_usd")) for r in load() if r.get("episode") == episode), 2)
 
 
 def estimate_batch(items) -> tuple[float, float]:
@@ -167,7 +177,7 @@ def summary(episode=None) -> str:
     for r in rows:
         ep = r.get("episode") or "(unattributed)"
         d = by_ep.setdefault(ep, {"usd": 0.0, "credits": 0.0, "n": 0})
-        d["usd"] += r.get("est_usd") or 0
+        d["usd"] += _usd(r.get("est_usd"))
         d["credits"] += r.get("actual_credits") or r.get("est_credits") or 0
         d["n"] += 1
     out = ["episode                              ops   credits     ~USD"]

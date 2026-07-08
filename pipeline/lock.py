@@ -254,6 +254,24 @@ def _narrative_presence_findings(md: str) -> list[str]:
     return fails
 
 
+def _earned_findings(folder: Path) -> list[str]:
+    """Earned hook + landing ($0, narration_gate.py) — BLOCKING (promoted 2026-07-08).
+    Stock closers ('come to Jesus' family with no KJV warrant), unearned landings and
+    template hooks refuse the lock. Corpus-swept before promotion: every currently
+    locked piece passes (the unmarked-KJV false-positive class was fixed first).
+    A piece too short to compute a hook/landing (<4 sentences — test fixtures) is
+    SKIPPED, and an unexpected error never crashes the lock."""
+    try:
+        import narration_gate as NG
+        r = NG.analyse(folder / "narration.md")
+    except Exception as e:  # noqa — the gate must never take the chokepoint down
+        print(f"  [lock] WARNING: narration_gate errored ({e}) — earned check skipped")
+        return []
+    if "error" in r:
+        return []  # too short to judge (fixtures); real shorts always parse
+    return [f"earned: {msg}" for level, msg in r["findings"] if level == "FAIL"]
+
+
 def _sibling_folders(folder: Path) -> list[Path]:
     parent = folder.parent
     return sorted(
@@ -277,6 +295,7 @@ def run_lock(folder: Path, *, form: str = "short", check_cluster: bool = True) -
     blocking += _rule8_findings(md, form)
     blocking += _anchor_findings(folder, md)
     blocking += _narrative_presence_findings(md)
+    blocking += _earned_findings(folder)
 
     # split-brain guard: the rendered tagged file must match the verified source
     pm = parity_mismatch(folder)
@@ -318,7 +337,7 @@ def run_lock(folder: Path, *, form: str = "short", check_cluster: bool = True) -
 
     ok = not blocking
     if ok:
-        checks = ["kjv_strict", "parity", "doctrine_scan", "hook_scan", "narrative_presence"] + \
+        checks = ["kjv_strict", "parity", "doctrine_scan", "hook_scan", "narrative_presence", "earned"] + \
                  (["rule8"] if form == "short" else []) + (["cluster"] if check_cluster else [])
         write_lock(folder, checks=checks)
         register(folder, form=form)

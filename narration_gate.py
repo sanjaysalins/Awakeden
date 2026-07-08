@@ -122,6 +122,34 @@ def _scripture(md: str) -> str:
     return " ".join(out)
 
 
+_KJV_CORPUS: str | None = None
+
+
+def _kjv_corpus_text() -> str:
+    """The whole KJV as one normalized lowercase string (lazy, cached)."""
+    global _KJV_CORPUS
+    if _KJV_CORPUS is None:
+        import json
+        books = json.load(open(ROOT / "data" / "kjv_corpus.json", encoding="utf-8-sig"))
+        raw = " ".join(v for b in books for ch in b["chapters"] for v in ch)
+        _KJV_CORPUS = " " + " ".join(re.findall(r"[a-z']+", raw.lower())) + " "
+    return _KJV_CORPUS
+
+
+def _unmarked_kjv(sents: list[str]) -> str:
+    """Sentences that embed a verbatim KJV span (>=6 consecutive corpus words) even
+    without quote marks or a [scripture] tag — e.g. Romans 5:8 woven into narrator
+    prose. Those ARE the piece's Scripture material; without this the earned-landing
+    check false-fails pieces that land on an unmarked verse (father_forgive_them)."""
+    corpus = _kjv_corpus_text()
+    hits = []
+    for s in sents:
+        w = re.findall(r"[a-z']+", s.lower())
+        if any(" " + " ".join(w[i:i + 6]) + " " in corpus for i in range(len(w) - 5)):
+            hits.append(s)
+    return " ".join(hits)
+
+
 def analyse(path: Path) -> dict:
     md = path.read_text(encoding="utf-8")
     text = _spoken(md)
@@ -130,7 +158,7 @@ def analyse(path: Path) -> dict:
         return {"error": f"could not parse enough sentences from {path}"}
     hook = " ".join(sents[:2])
     closer = " ".join(sents[-3:])
-    kjv = (_quotes(text) + " " + _scripture(md)).strip()
+    kjv = (_quotes(text) + " " + _scripture(md) + " " + _unmarked_kjv(sents)).strip()
     findings = []
 
     low = closer.lower()

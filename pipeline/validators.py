@@ -229,20 +229,32 @@ def narrative_presence(spoken_text: str) -> tuple[bool, list[str]]:
 
 def prompt_has_criteria() -> tuple[bool, str]:
     """The verify_image audit prompt must still contain the period/tone, text, and anatomy
-    checks. Guards against accidental removal (the period/tone check was added 2026-06-14)."""
+    checks. Guards against accidental removal (the period/tone check was added 2026-06-14).
+    The role text lives in pipeline/visual_render.py; the period/tone check moved into the
+    per-style config.STYLE_AUDIT_RUBRIC when the prompt was de-hardcoded from Baroque, so
+    EVERY style rubric is checked (a new style must not ship without it)."""
+    import config as _cfg  # root config, same import as visual_render
+
     src = (ROOT / "pipeline" / "visual_render.py").read_text(encoding="utf-8").lower()
     required = {
-        "period authenticity": "period authenticity",
-        "horror tone": "horror",
         "nsfw": "nsfw",
         "modern faces": "modern",
         "anatomy": "finger",
         "banned tokens": "banned",
     }
     missing = [name for name, needle in required.items() if needle not in src]
+    rubrics = getattr(_cfg, "STYLE_AUDIT_RUBRIC", {})
+    if not rubrics:
+        missing.append("STYLE_AUDIT_RUBRIC (missing/empty)")
+    for style_name, rubric in rubrics.items():
+        low = rubric.lower()
+        for name, needle in (("period authenticity", "period authenticity"),
+                             ("horror tone", "horror")):
+            if needle not in low:
+                missing.append(f"{name} ({style_name} rubric)")
     if missing:
         return False, f"verify_image prompt missing checks: {', '.join(missing)}"
-    return True, "verify_image carries period/tone + text + anatomy checks"
+    return True, "verify_image carries period/tone + text + anatomy checks (all style rubrics)"
 
 
 # ---------------------------------------------------------------- banned tokens

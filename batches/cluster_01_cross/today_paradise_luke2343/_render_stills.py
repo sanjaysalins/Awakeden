@@ -16,7 +16,7 @@ REF_JESUS_CROSS = PZ / "visual" / "face_on_cross.png"
 bp_spec = importlib.util.spec_from_file_location("bp", FFT / "byteplus_seedream.py")
 bp = importlib.util.module_from_spec(bp_spec); bp_spec.loader.exec_module(bp)
 sys.path.insert(0, str(ROOT))
-from render_lint import lint as _lint
+from render_lint import lint as _lint, guard_prompt, arm_audit
 
 JOBS = {
  "mocker_thief_face": ("a lean criminal on a cross, face twisted in a snarl as he shouts sideways, his wrists pierced to the beam, a dark ragged pierced wound at each wrist with dark red blood, storm sky behind, low angle, vertical, 1st-century Judea", None),
@@ -49,6 +49,7 @@ if not a.render:
     print("\n$0 dry-run. --render to spend (~$0.30)."); sys.exit(0)
 
 def call(prompt, dest, ref):
+    prompt = guard_prompt(prompt)  # fail-closed: auto-fix poison tokens before the paid call
     body = {"model": MODEL, "prompt": prompt + bp.STYLE + bp.ONE, "size": SIZE,
             "response_format": "url", "watermark": False}
     if ref is not None:
@@ -65,6 +66,7 @@ def call(prompt, dest, ref):
         return "no-url"
     with urllib.request.urlopen(url, timeout=240) as im:
         dest.write_bytes(im.read())
+    arm_audit(dest)  # fail-closed: pending-FAIL sidecar until a real PASS is recorded
     return "ok"
 
 for slug, (prompt, ref) in JOBS.items():

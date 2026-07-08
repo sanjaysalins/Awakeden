@@ -202,6 +202,28 @@ def test_assembly_allows_locked():
         pass  # we only assert the lock guard did NOT block a locked folder
 
 
+def test_stock_closer_blocks_lock():
+    """Earned gate (narration_gate, promoted to blocking 2026-07-08): a 'Come to Jesus'
+    closer with no KJV warrant for 'come' must refuse the lock."""
+    d = _mk("The soldiers gambled for his clothes at the cross. They never looked up.",
+            "But mercy stood over that cross all along. Come to Jesus today, and be saved.")
+    rep = L.run_lock(d, form="short", check_cluster=False)
+    assert not rep["ok"], "a stock closer must NOT lock"
+    assert any(b.startswith("earned:") and "STOCK-CLOSER" in b for b in rep["blocking"]), rep["blocking"]
+    assert not (d / ".locked").exists()
+
+
+def test_unmarked_kjv_landing_locks():
+    """A landing built on an UNMARKED verbatim KJV span (Rom 5:8 in narrator prose,
+    no quote marks — the father_forgive_them shape) counts as the piece's own
+    Scripture material and must lock cleanly."""
+    d = _mk("A unique opening about the men with the hammer. They did not know whom they held.",
+            "This is the gospel: while we were yet sinners, Christ died for us. "
+            "That mercy is held out to you now, and it is enough.")
+    rep = L.run_lock(d, form="short", check_cluster=False)
+    assert rep["ok"], rep["blocking"]
+
+
 if __name__ == "__main__":
     tests = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     passed = 0

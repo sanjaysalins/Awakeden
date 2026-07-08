@@ -96,8 +96,45 @@ def pushin_prompt(scene: dict) -> str:
     return (PUSHIN_BASE + f"the main subject of the painting, easing gently toward {focus}, "
             "keeping the whole figure in frame" + PUSHIN_TAIL)
 
+def _episode_of(png: Path) -> str:
+    """The owning piece folder (has narration.md / publish_meta.json), for the ledger."""
+    for p in png.parents:
+        if (p / "narration.md").is_file() or (p / "publish_meta.json").is_file():
+            return p.name
+    return png.parent.name
+
+
 def hf_animate(png: Path, out: Path, prompt: str, duration: int, aspect_ratio: str = "9:16") -> bool:
     # aspect_ratio defaults to 9:16 (shorts); pass "16:9" for long-form motion-comic (MOTIONCOMIC_SPEC MC-R2)
+    # STILL GATE (P0-4, 2026-07-08): never pay Kling for a production still that has no
+    # PASS audit sidecar — the batch flow used to animate stills the gate never saw.
+    # JITB_SKIP_STILL_GATE=1 overrides (discouraged).
+    import os
+    if os.getenv("JITB_SKIP_STILL_GATE", "0") in ("0", "false", "no"):
+        try:
+            sys.path.insert(0, str(ROOT))
+            from render_lint.verify import _sidecar_verdict, is_production_png
+            if is_production_png(png) and _sidecar_verdict(png) != "PASS":
+                raise PermissionError(
+                    f"REFUSING to animate {png.name}: no PASS audit sidecar "
+                    f"(verdict={_sidecar_verdict(png)!r}). Record a PASS via render_lint "
+                    f"verify --record first, or set JITB_SKIP_STILL_GATE=1 (discouraged).")
+        except ImportError as e:
+            print(f"   [gate] render_lint unavailable ({e}) — proceeding ungated")
+    # BUDGET TEETH (2026-07-08): this is the one chokepoint every Kling clip passes
+    # (batch _animate.py scripts + this CLI), so the episode ceiling is enforced and a
+    # ledger row written HERE — the engine audit found the batch flow spent unmetered.
+    _cost, ep = None, ""
+    try:
+        sys.path.insert(0, str(ROOT))
+        from pipeline import cost as _cost_mod
+        _cost, ep = _cost_mod, _episode_of(png)
+        _cost.check_budget(ep, "short", _cost.KLING_USD_PER_CLIP)
+    except SystemExit:
+        raise                     # ceiling breach — refuse the spend
+    except Exception as e:  # noqa - a broken ledger must not block animation
+        print(f"   [cost] ledger unavailable ({e}) — proceeding unmetered")
+        _cost = None
     cmd = [str(HF), "generate", "create", "kling3_0", "--start-image", str(png),
            "--prompt", prompt, "--duration", str(duration), "--mode", "pro",
            "--sound", "off", "--aspect_ratio", aspect_ratio, "--wait"]
@@ -108,7 +145,14 @@ def hf_animate(png: Path, out: Path, prompt: str, duration: int, aspect_ratio: s
         print(f"   [HF no-url] {png.name}: {blob.strip()[-200:]}")
         return False
     subprocess.run(["curl", "-s", "-L", m.group(0), "-o", str(out)], check=True)
-    return out.exists() and out.stat().st_size > 0
+    ok = out.exists() and out.stat().st_size > 0
+    if ok and _cost:
+        try:
+            _cost.record(ep, "clip", "animate", "hf", "kling3_0", 1,
+                         est_usd=_cost.KLING_USD_PER_CLIP, est_only=True, note=png.name)
+        except Exception:  # noqa - never fail a finished clip on a logging error
+            pass
+    return ok
 
 def ffmpeg_fallback(png: Path, out: Path):
     sys.path.insert(0, str(ROOT))

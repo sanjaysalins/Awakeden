@@ -16,7 +16,7 @@ REF_JESUS_CROSS = PZ / "visual" / "face_on_cross.png"
 bp_spec = importlib.util.spec_from_file_location("bp", FFT / "byteplus_seedream.py")
 bp = importlib.util.module_from_spec(bp_spec); bp_spec.loader.exec_module(bp)
 sys.path.insert(0, str(ROOT))
-from render_lint import lint as _lint
+from render_lint import lint as _lint, guard_prompt, arm_audit
 
 JOBS = {
  "simeon_baby_temple": ("an aged man with a white beard lifting a swaddled infant in a shaft of temple light, a young mother in a veil watching close, stone columns, vertical, ancient Judea", None),
@@ -24,7 +24,7 @@ JOBS = {
  "mary_at_cross": ("a veiled grieving woman looking up from the foot of a tall cross where a crucified figure hangs high above her, seen from behind her shoulder, storm light, vertical, 1st-century Judea", REF_JESUS_CROSS),
  "jesus_looks_down": ("the thorn-crowned crucified Christ looking downward with steady compassion from the cross, storm sky behind, seen from below, close, vertical, 1st-century Judea", REF_JESUS_CROSS),
  "mary_and_john": ("a young bearded disciple wrapping his arm around a veiled grieving woman's shoulders, both looking up, at the foot of a cross, storm light, vertical, 1st-century Judea", None),
- "john_leads_home": ("a young disciple gently leading a veiled woman along a dusk road toward the gate of a walled town, a bare empty hill far behind them, warm evening light, wide, vertical, 1st-century Judea", None),
+ "john_leads_home": ("a YOUNG dark-haired bearded disciple, a man in his twenties, gently leading a veiled older woman along a dusk road toward the gate of a walled town, a bare empty hill far behind them, warm evening light, wide, vertical, 1st-century Judea", None),
 }
 
 ap = argparse.ArgumentParser(); ap.add_argument("--render", action="store_true"); ap.add_argument("--force", action="store_true")
@@ -45,6 +45,7 @@ if not a.render:
     print("\n$0 dry-run. --render to spend (~$0.30)."); sys.exit(0)
 
 def call(prompt, dest, ref):
+    prompt = guard_prompt(prompt)  # fail-closed: auto-fix poison tokens before the paid call
     body = {"model": MODEL, "prompt": prompt + bp.STYLE + bp.ONE, "size": SIZE,
             "response_format": "url", "watermark": False}
     if ref is not None:
@@ -61,6 +62,7 @@ def call(prompt, dest, ref):
         return "no-url"
     with urllib.request.urlopen(url, timeout=240) as im:
         dest.write_bytes(im.read())
+    arm_audit(dest)  # fail-closed: pending-FAIL sidecar until a real PASS is recorded
     return "ok"
 
 for slug, (prompt, ref) in JOBS.items():

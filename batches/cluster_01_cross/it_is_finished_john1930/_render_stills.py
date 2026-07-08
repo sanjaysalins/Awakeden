@@ -16,14 +16,14 @@ REF_JESUS = PZ / "visual" / "face_on_cross.png"
 bp_spec = importlib.util.spec_from_file_location("bp", FFT / "byteplus_seedream.py")
 bp = importlib.util.module_from_spec(bp_spec); bp_spec.loader.exec_module(bp)
 sys.path.insert(0, str(ROOT))
-from render_lint import lint as _lint
+from render_lint import lint as _lint, guard_prompt, arm_audit
 
 JOBS = {
  "eden_garden_finished": ("an empty pristine garden valley at golden dawn, rivers threading between flowering trees toward distant mountains, landscape only, vast and still, wide, vertical", None),
  "seventh_day_light": ("warm golden evening light resting over rolling young hills and still water, a great calm, no figures, wide, vertical", None),
  "jesus_prays_night": ("Jesus kneeling in prayer among gnarled olive trees at night, face lifted to the moonlit sky, hands clasped on a flat rock, deep blue night, vertical, 1st-century Judea", REF_JESUS),
  "vinegar_sponge_reed": ("the thorn-crowned Christ crucified high on a tall cross under a sky of deep unnatural darkness; at the foot of the cross a Roman soldier stretches UP a LONG slender reed, its far tip wrapped with a small bunch of hyssop holding a vinegar-soaked sponge, reaching all the way up toward Christ's mouth far above; seen from the side at a low angle showing the full height of the cross and the long upward reach of the reed; barren Golgotha hill; vertical, 1st-century Judea", REF_JESUS),
- "bowed_head_finished": ("the thorn-crowned crucified Christ with head bowed in deep stillness, eyes closed, at peace, storm clouds parting behind, close, vertical, 1st-century Judea", REF_JESUS),
+ "bowed_head_finished": ("a CLOSE portrait of the thorn-crowned crucified Christ's bowed head and face filling the frame, his eyes closed in deep stillness and peace, storm clouds parting behind, vertical, 1st-century Judea", REF_JESUS),
  "tomb_stone_sealed": ("a great round stone sealing a rock-cut tomb at dusk, the hillside quiet, two small robed figures walking away down the path, vertical, 1st-century Judea", None),
  "first_day_morning": ("dawn light bursting from the open rock-cut entrance of a garden tomb, the great round stone rolled to the side, warm gold spilling across a stone path, olive trees, vertical, 1st-century Judea", None),
  "hands_shaping_light": ("two strong open hands cupping a swirling sphere of warm golden light against deep starry darkness, rays between the fingers, close, vertical", None),
@@ -49,6 +49,7 @@ if not a.render:
     print("\n$0 dry-run. --render to spend (~$0.35)."); sys.exit(0)
 
 def call(prompt, dest, ref):
+    prompt = guard_prompt(prompt)  # fail-closed: auto-fix poison tokens before the paid call
     body = {"model": MODEL, "prompt": prompt + bp.STYLE + bp.ONE, "size": SIZE,
             "response_format": "url", "watermark": False}
     if ref is not None:
@@ -65,6 +66,7 @@ def call(prompt, dest, ref):
         return "no-url"
     with urllib.request.urlopen(url, timeout=240) as im:
         dest.write_bytes(im.read())
+    arm_audit(dest)  # fail-closed: pending-FAIL sidecar until a real PASS is recorded
     return "ok"
 
 for slug, (prompt, ref) in JOBS.items():

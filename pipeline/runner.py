@@ -1,6 +1,7 @@
 """Orchestrate one narration: generate -> review -> revise (loop) -> handoff."""
 from __future__ import annotations
 
+import os
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -133,6 +134,14 @@ def create_narration(
         log("  finalize the beats in narration.md, then render audio:")
         log(f'    python _finalize.py "{folder}"')
         log("=" * 64)
+    elif run_audio and review.failed_gates and \
+            os.getenv("JITB_ALLOW_FAIL_SHIP", "0") in ("0", "false", "no"):
+        # FAIL-CLOSED (2026-07-08): revision exhaustion used to fall through and render
+        # audio anyway — a broken narration reached metered ElevenLabs. Refuse instead.
+        names = ", ".join(getattr(g, "gate", str(g)) for g in review.failed_gates)
+        log(f"\n--- Audio pipeline REFUSED: review still has FAIL gate(s) after "
+            f"{revisions} revision(s): {names}")
+        log("    Fix the draft and re-run, or set JITB_ALLOW_FAIL_SHIP=1 to override (discouraged).")
     elif run_audio:
         mode = (
             f"Shorts ~{config.SHORTS_TARGET_SECONDS:.0f}s"
@@ -155,9 +164,12 @@ def create_narration(
                 code = 1
             else:
                 code = handoff.run_audio_pipeline(folder, enforce_lock=True)
-        except Exception as e:  # noqa - never let the lock step crash a generate run
-            log(f"  [lock] skipped (non-fatal: {e}); rendering without lock enforcement")
-            code = handoff.run_audio_pipeline(folder, enforce_lock=False)
+        except Exception as e:  # noqa - a broken lock step must fail CLOSED, not render unlocked
+            # (was: render with enforce_lock=False — the exact fail-open shape the lock exists
+            # to prevent. The text artifacts are already written; only audio is refused.)
+            log(f"  [lock] ERROR ({e}) — NOT rendering audio. Fix the lock step and re-run, "
+                f"or run the audio pipeline manually after cli_lock.py passes.")
+            code = 1
         log(f"--- Audio pipeline exit code: {code} ---")
     else:
         log("\n(audio pipeline skipped — run it later with:)")
