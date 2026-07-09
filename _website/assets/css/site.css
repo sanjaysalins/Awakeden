@@ -1116,3 +1116,10 @@ a{color:inherit;text-decoration:none}
   .reveal{opacity:1;transform:none}
   .hero-copy > *{opacity:1}
 }
+
+/* catalogue: readable-now badge + theme jump nav */
+.badge-read{background:var(--red-bright);color:#f5f0e6;margin-left:.4rem}
+.jump-label{margin:1.4rem 0 .5rem;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--dim,#8b8b93)}
+.series-jump{margin-bottom:1.2rem}
+.jump-btn{text-decoration:none}
+.shelf{scroll-margin-top:96px}

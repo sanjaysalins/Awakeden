@@ -9,6 +9,7 @@ Outputs:
 """
 from __future__ import annotations
 
+import hashlib
 import html
 import json
 import re
@@ -513,33 +514,59 @@ def find_hero_png_from_scene_plan(plan_path: Path) -> Path | None:
     return None
 
 
-def write_svg_preview(slug: str, title: str, ref: str, out: Path) -> None:
-    t = html.escape(title[:48])
-    r = html.escape(ref)
-    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="540" height="960" viewBox="0 0 540 960">
+SVG_STATUS_CAPTION = {
+    "planned": "ON THE SLATE",
+    "in_production": "IN THE STUDIO",
+    "studio_complete": "COMING TO YOUTUBE",
+    "live": "LIVE NOW",
+}
+
+
+def _wrap_svg_title(title: str, max_chars: int = 15) -> list[str]:
+    words, lines, cur = title.upper().split(), [], ""
+    for w in words:
+        t = (cur + " " + w).strip()
+        if len(t) <= max_chars or not cur:
+            cur = t
+        else:
+            lines.append(cur)
+            cur = w
+    if cur:
+        lines.append(cur)
+    return lines[:5]
+
+
+def write_svg_preview(slug: str, title: str, ref: str, out: Path,
+                      status: str = "in_production") -> None:
+    """Coming-soon cover card in the site dress: ink panel, red ref chip,
+    bold bone title, split-E watermark, AWAK|EDEN mark."""
+    r = html.escape(ref.upper())
+    caption = SVG_STATUS_CAPTION.get(status, "IN THE STUDIO")
+    lines = _wrap_svg_title(html.escape(title))
+    size = 42 if max(len(ln) for ln in lines) <= 14 else 34
+    lh = int(size * 1.18)
+    y0 = 600 - lh * (len(lines) - 1)
+    title_texts = "\n".join(
+        f'  <text x="42" y="{y0 + i * lh}" fill="#eceae4" font-family="\'Archivo Black\',\'Arial Black\',sans-serif" '
+        f'font-size="{size}" font-weight="900" letter-spacing="0.01em">{ln}</text>'
+        for i, ln in enumerate(lines))
+    chip_w = int(len(ref) * 8.6) + 30
+    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="540" height="840" viewBox="0 0 540 840">
   <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#141018"/>
-      <stop offset="50%" stop-color="#0a0a0c"/>
-      <stop offset="100%" stop-color="#1c1208"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="28%" r="55%">
-      <stop offset="0%" stop-color="#c9a227" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#c9a227" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="bar" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#c9a227" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#c9a227" stop-opacity="0.5"/>
-    </linearGradient>
+    <clipPath id="tl"><polygon points="0,0 840,0 0,840"/></clipPath>
+    <clipPath id="br"><polygon points="840,0 840,840 0,840"/></clipPath>
   </defs>
-  <rect width="540" height="960" fill="url(#g)"/>
-  <rect width="540" height="960" fill="url(#glow)"/>
-  <rect x="0" y="0" width="4" height="960" fill="url(#bar)"/>
-  <circle cx="420" cy="180" r="120" fill="none" stroke="#c9a227" stroke-opacity="0.08" stroke-width="1"/>
-  <circle cx="420" cy="180" r="80" fill="none" stroke="#c9a227" stroke-opacity="0.12" stroke-width="1"/>
-  <text x="36" y="780" fill="#c9a227" font-family="Georgia, serif" font-size="11" letter-spacing="0.28em">AWAKEDEN SERIES</text>
-  <text x="36" y="830" fill="#f4efe6" font-family="Georgia, serif" font-size="26" font-weight="600">{t}</text>
-  <text x="36" y="868" fill="#a89880" font-family="Georgia, serif" font-size="15">{r}</text>
+  <rect width="540" height="840" fill="#0c0e12"/>
+  <g font-family="'Archivo Black','Arial Black',sans-serif" font-size="560" font-weight="900" opacity="0.55">
+    <text x="270" y="620" text-anchor="middle" fill="#16181e" clip-path="url(#tl)">E</text>
+    <text x="270" y="620" text-anchor="middle" fill="#1d1013" clip-path="url(#br)">E</text>
+  </g>
+  <rect x="18" y="18" width="504" height="804" fill="none" stroke="#eceae4" stroke-opacity="0.16" stroke-width="2"/>
+  <rect x="36" y="44" width="{chip_w}" height="32" fill="#e5303d"/>
+  <text x="{36 + chip_w // 2}" y="66" text-anchor="middle" fill="#f5f0e6" font-family="'Arial Black',sans-serif" font-size="13" font-weight="900" letter-spacing="0.08em">{r}</text>
+{title_texts}
+  <text x="42" y="{y0 + lh * (len(lines) - 1) + 44}" fill="#e5303d" font-family="'Arial Black',sans-serif" font-size="14" font-weight="900" letter-spacing="0.26em">{caption}</text>
+  <text x="42" y="792" font-family="'Archivo Black','Arial Black',sans-serif" font-size="19" font-weight="900" letter-spacing="0.12em"><tspan fill="#eceae4">AWAK</tspan><tspan fill="#e5303d">EDEN</tspan></text>
 </svg>"""
     out.write_text(svg, encoding="utf-8")
 
@@ -551,7 +578,8 @@ def build_preview(item: dict, warnings: list[str]) -> str | None:
     svg = PREVIEW_DIR / f"{slug}.svg"
 
     if not item.get("preview_approved"):
-        write_svg_preview(slug, item["title"], item.get("ref", ""), svg)
+        write_svg_preview(slug, item["title"], item.get("ref", ""), svg,
+                          item.get("public_status", "in_production"))
         return f"assets/previews/{slug}.svg"
 
     src_str = item.get("preview_source") or ""
@@ -576,7 +604,8 @@ def build_preview(item: dict, warnings: list[str]) -> str | None:
     if src and src.suffix.lower() in (".png", ".jpg", ".jpeg") and not src.is_file():
         warnings.append(f"{slug}: preview_source missing on disk ({src_str}); SVG fallback")
 
-    write_svg_preview(slug, item["title"], item.get("ref", ""), svg)
+    write_svg_preview(slug, item["title"], item.get("ref", ""), svg,
+                      item.get("public_status", "in_production"))
     return f"assets/previews/{slug}.svg"
 
 
@@ -584,12 +613,21 @@ def enrich_item(raw: dict, config: dict, warnings: list[str]) -> dict:
     item = dict(raw)
     item["status_label"] = STATUS_LABEL.get(item["public_status"], item["public_status"])
     item["status_class"] = STATUS_CLASS.get(item["public_status"], "")
-    item["preview"] = build_preview(item, warnings)
+    preview = build_preview(item, warnings)
+    if preview:
+        pf = SITE_DIR / preview
+        if pf.is_file():
+            digest = hashlib.md5(pf.read_bytes()).hexdigest()[:8]
+            preview = f"{preview}?v={digest}"
+    item["preview"] = preview
     item["show_video"] = (
         config["site"].get("mode") == "live"
         and item.get("youtube_id")
     )
     item["kind_label"] = "Long-form" if item.get("kind") == "long" else "Short"
+    read_page = SITE_DIR / "read" / f"{item['slug']}.html"
+    item["read"] = (f"read/{item['slug']}.html"
+                    if item.get("read_source") and read_page.is_file() else None)
     return item
 
 
@@ -614,6 +652,10 @@ def render_work_page(item: dict, config: dict, warnings: list) -> str:
 
     blurb = html.escape(item.get("public_blurb", "").strip())
     hook = html.escape(item.get("public_hook", "").strip())
+    read_cta = ""
+    if item.get("read"):
+        read_cta = (f'<p style="margin-top:1.1rem"><a class="btn btn-red" '
+                    f'href="../{item["read"]}">Read the whole study &#9656;</a></p>')
     cluster_link = ""
     if item.get("cluster") == "psalm-22":
         cluster_link = '<p class="work-cluster"><a href="../series/psalm-22.html">Part of Psalm 22: From the Cross</a></p>'
@@ -702,6 +744,7 @@ def render_work_page(item: dict, config: dict, warnings: list) -> str:
         <h1>{html.escape(item['title'])}</h1>
         <p class="work-ref">{html.escape(item.get('ref', ''))}</p>
         <p class="work-hook">{hook}</p>
+        {read_cta}
         {cluster_link}
       </div>
     </div>

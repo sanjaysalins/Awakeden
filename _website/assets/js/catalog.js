@@ -36,6 +36,7 @@
       '">' +
       esc(item.status_label) +
       "</span>" +
+      (item.read ? '<span class="badge badge-read">Readable now</span>' : "") +
       '<span class="card-kind">' +
       esc(item.kind_label) +
       "</span>" +
@@ -130,6 +131,34 @@
 
   var SERIES = []; // ordered shelves from catalog.json (manifest `series:`)
 
+  var STATUS_RANK = { live: 0, studio_complete: 1, in_production: 2, planned: 3 };
+
+  function shelfSort(rows) {
+    // finished art leads each shelf; placeholders follow, by status then order
+    return rows.slice().sort(function (a, b) {
+      var artA = a.preview && a.preview.indexOf(".svg") === -1 ? 0 : 1;
+      var artB = b.preview && b.preview.indexOf(".svg") === -1 ? 0 : 1;
+      if (artA !== artB) return artA - artB;
+      var rA = STATUS_RANK[a.public_status] != null ? STATUS_RANK[a.public_status] : 9;
+      var rB = STATUS_RANK[b.public_status] != null ? STATUS_RANK[b.public_status] : 9;
+      if (rA !== rB) return rA - rB;
+      return (a.cluster_order || 99) - (b.cluster_order || 99);
+    });
+  }
+
+  function renderSeriesJump(el) {
+    if (!el || !SERIES.length) return;
+    el.innerHTML = SERIES.map(function (s) {
+      return (
+        '<a class="filter-btn jump-btn" href="#shelf-' +
+        esc(s.slug) +
+        '">' +
+        esc(s.title) +
+        "</a>"
+      );
+    }).join("");
+  }
+
   function renderGrid(items, el, filter) {
     if (!el) return;
     var list = items.slice();
@@ -147,20 +176,21 @@
       var known = {};
       SERIES.forEach(function (s) { known[s.slug] = true; });
       var shelves = SERIES.map(function (s) {
-        var rows = list.filter(function (i) { return i.series_id === s.slug; });
+        var rows = shelfSort(list.filter(function (i) { return i.series_id === s.slug; }));
         return { s: s, rows: rows };
       });
-      var leftovers = list.filter(function (i) { return !known[i.series_id]; });
+      var leftovers = shelfSort(list.filter(function (i) { return !known[i.series_id]; }));
       if (leftovers.length) {
-        shelves.push({ s: { title: "More", note: "" }, rows: leftovers });
+        shelves.push({ s: { slug: "more", title: "More", note: "" }, rows: leftovers });
       }
       el.classList.add("shelved");
       el.innerHTML = shelves
         .map(function (sh) {
+          var shelfId = ' id="shelf-' + esc(sh.s.slug || "more") + '"';
           if (!sh.rows.length) {
             if (filter && filter !== "all") return "";
             return (
-              '<section class="shelf shelf-empty"><div class="shelf-head"><h3>' +
+              '<section class="shelf shelf-empty"' + shelfId + '><div class="shelf-head"><h3>' +
               esc(sh.s.title) +
               '</h3><p class="shelf-note">' +
               esc(sh.s.note || "") +
@@ -168,7 +198,7 @@
             );
           }
           return (
-            '<section class="shelf"><div class="shelf-head"><h3>' +
+            '<section class="shelf"' + shelfId + '><div class="shelf-head"><h3>' +
             esc(sh.s.title) +
             '</h3><p class="shelf-note">' +
             esc(sh.s.note || "") +
@@ -285,6 +315,7 @@
         renderStats(data.stats, document.getElementById("stats"));
         renderFeatured(items, document.getElementById("featured-grid"));
         renderMosaic(items, document.querySelector("[data-mosaic]"));
+        renderSeriesJump(document.getElementById("series-jump"));
         renderGrid(items, document.getElementById("catalogue-grid"), "all");
         renderCluster(items, document.getElementById("cluster-beats"));
         renderRoadmap(data.roadmap, document.getElementById("roadmap-list"));

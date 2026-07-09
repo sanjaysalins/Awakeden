@@ -58,7 +58,21 @@ The catalogue is a **public tracker of the v2 migration**. Back-catalogue pieces
 3. **Untracked side-effect files** in the repo root from the `npx skills` install: `skills/`, `skills-lock.json`, `data/skills/`, `CONTEXT.md`, `agent/` — NOT committed; gitignore or remove if unwanted.
 4. **Going live on YouTube:** when a video publishes, set its item `youtube_id` + flip `config.yaml` `site.mode: live`; the work page then embeds it.
 5. **Google Search Console:** add `awakeden.com`, submit `sitemap.xml`, request indexing (user action).
-6. **Catalogue UX (optional):** cards don't show a series label/grouping yet; nav still has a Psalm-22-specific link.
+6. ~~Catalogue UX~~ DONE 2026-07-09: series shelves + theme jump chips + art-first ordering + Readable-now badges + work-page read CTA.
+
+## Session log (2026-07-09b, production-ready pass: cards + navigation)
+User flagged "cards look stale, no clear navigation, no subject theme." Root causes found by
+full crawl (77 pages, 1101 links, 0 broken): 45/58 cards were murky gold-serif SVG placeholders
+(6 of them FINISHED pieces whose Baroque art was deliberately archived); work pages were dead
+ends (no read link); placeholders rendered before real art in shelves; no theme jump nav;
+orphan roadmap.html. Shipped: (1) placeholder SVG redesigned to the dress (ink panel, red ref
+chip, bold bone title, split-E watermark, status caption, AWAK|EDEN mark, 9:14 to match
+.card-poster crop); (2) "Read the whole study" red button on work pages + public `read` field
+in catalog.json; (3) READABLE NOW badge on cards; (4) art-first shelf ordering; (5) "Jump to a
+theme" chip row -> #shelf-<series> anchors; (6) preview URLs carry ?v=<md5> (previews are
+cached 7 days - THIS was why cards looked stale to returning visitors); (7) roadmap.html
+deleted (301 to plan.html already in netlify.toml). Baroque stays off the site: isaiah-53 +
+ps22-02/04/05/06/07 keep (now good-looking) placeholder covers until inked rebuilds exist.
 
 ## Session log (2026-07-09, deploy-readiness sweep)
 Verified live: read pages ×12 + read index + plan + catalogue + catalog.json all 200 on

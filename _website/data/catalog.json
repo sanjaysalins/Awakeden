@@ -157,9 +157,10 @@
       "public_blurb": "Long-form on Isaiah 53. The Suffering Servant, wounded for our transgressions, fulfilled in the New Testament. The first Awakeden deep-dive slated for release.\n",
       "status_label": "Studio complete",
       "status_class": "status-complete",
-      "preview": "assets/previews/isaiah-53-suffering-servant.svg",
+      "preview": "assets/previews/isaiah-53-suffering-servant.svg?v=6df053e9",
       "show_video": false,
-      "kind_label": "Long-form"
+      "kind_label": "Long-form",
+      "read": null
     },
     {
       "slug": "psalm-22-from-the-cross",
@@ -178,9 +179,10 @@
       "public_blurb": "One locked long-form study on Psalm 22, cut into eight gospel shorts. Each short follows one beat from the psalm Jesus lived out on the cross.\n",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/psalm-22-from-the-cross.webp",
+      "preview": "assets/previews/psalm-22-from-the-cross.webp?v=e5f5820f",
       "show_video": false,
-      "kind_label": "Long-form"
+      "kind_label": "Long-form",
+      "read": null
     },
     {
       "slug": "ps22-03-forsaken-cry",
@@ -199,9 +201,10 @@
       "public_blurb": "My God, my God, why hast thou forsaken me? David wrote it. Jesus cried it from the cross.\n",
       "status_label": "Studio complete",
       "status_class": "status-complete",
-      "preview": "assets/previews/ps22-03-forsaken-cry.webp",
+      "preview": "assets/previews/ps22-03-forsaken-cry.webp?v=2850497a",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": "read/ps22-03-forsaken-cry.html"
     },
     {
       "slug": "ps22-01-crucifixion-foretold",
@@ -219,9 +222,10 @@
       "public_blurb": "Psalm 22:18. They part my garments and cast lots. John records the soldiers doing exactly that.\n",
       "status_label": "Studio complete",
       "status_class": "status-complete",
-      "preview": "assets/previews/ps22-01-crucifixion-foretold.webp",
+      "preview": "assets/previews/ps22-01-crucifixion-foretold.webp?v=5562b5ea",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": "read/ps22-01-crucifixion-foretold.html"
     },
     {
       "slug": "father-forgive-them",
@@ -239,9 +243,10 @@
       "public_blurb": "Luke 23:34. While the soldiers divided his garments, Jesus prayed forgiveness over them. The first word from the cross, drawn panel by panel.",
       "status_label": "Studio complete",
       "status_class": "status-complete",
-      "preview": "assets/previews/father-forgive-them.webp",
+      "preview": "assets/previews/father-forgive-them.webp?v=5639c87f",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": "read/father-forgive-them.html"
     },
     {
       "slug": "sign-of-jonah",
@@ -260,9 +265,10 @@
       "public_blurb": "Jonah went down guilty; Christ went down innocent - and neither the deep nor the grave could hold Him. Season 2 opens where the sign points: the resurrection.",
       "status_label": "Studio complete",
       "status_class": "status-complete",
-      "preview": "assets/previews/sign-of-jonah.webp",
+      "preview": "assets/previews/sign-of-jonah.webp?v=40220dcf",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": "read/sign-of-jonah.html"
     },
     {
       "slug": "ps22-02-mockers-words",
@@ -280,9 +286,10 @@
       "public_blurb": "David wrote the mockers' gesture and their taunt. Matthew records both at the cross.\n",
       "status_label": "Studio complete",
       "status_class": "status-complete",
-      "preview": "assets/previews/ps22-02-mockers-words.svg",
+      "preview": "assets/previews/ps22-02-mockers-words.svg?v=ac3b65c9",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "thirty-pieces-of-silver",
@@ -300,9 +307,10 @@
       "public_blurb": "Zechariah 11:12-13 names the price, the contempt, and the temple floor. Judas fulfilled every word of it. The prophecy that priced the Messiah.",
       "status_label": "Studio complete",
       "status_class": "status-complete",
-      "preview": "assets/previews/thirty-pieces-of-silver.webp",
+      "preview": "assets/previews/thirty-pieces-of-silver.webp?v=4bb4edf9",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": "read/thirty-pieces-of-silver.html"
     },
     {
       "slug": "today-in-paradise",
@@ -320,9 +328,10 @@
       "public_blurb": "Luke 23:39-43. One thief railed, one asked to be remembered, and Jesus answered with a promise dated TODAY. The second word from the cross.",
       "status_label": "Studio complete",
       "status_class": "status-complete",
-      "preview": "assets/previews/today-in-paradise.webp",
+      "preview": "assets/previews/today-in-paradise.webp?v=8d8ca422",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": "read/today-in-paradise.html"
     },
     {
       "slug": "ps22-04-declared-to-brethren",
@@ -340,9 +349,10 @@
       "public_blurb": "Psalm 22:22. I will declare thy name unto my brethren. Hebrews applies it to the risen Christ.\n",
       "status_label": "Studio complete",
       "status_class": "status-complete",
-      "preview": "assets/previews/ps22-04-declared-to-brethren.svg",
+      "preview": "assets/previews/ps22-04-declared-to-brethren.svg?v=6f69840f",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "woman-behold-thy-son",
@@ -360,9 +370,10 @@
       "public_blurb": "Luke 2:35 meets John 19:26-27. The sword Simeon foretold pierces Mary at Golgotha, and the dying Jesus binds her wound with a son and a home.",
       "status_label": "Studio complete",
       "status_class": "status-complete",
-      "preview": "assets/previews/woman-behold-thy-son.webp",
+      "preview": "assets/previews/woman-behold-thy-son.webp?v=d7a40aa8",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": "read/woman-behold-thy-son.html"
     },
     {
       "slug": "ps22-05-he-hath-done-this",
@@ -380,9 +391,10 @@
       "public_blurb": "The closing line of Psalm 22, that he hath done this, lands on Christ's finished work.\n",
       "status_label": "Studio complete",
       "status_class": "status-complete",
-      "preview": "assets/previews/ps22-05-he-hath-done-this.svg",
+      "preview": "assets/previews/ps22-05-he-hath-done-this.svg?v=3c96c379",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "it-is-finished",
@@ -400,9 +412,10 @@
       "public_blurb": "Genesis 2:1 and John 19:30. Two finished works, one Workman: He finished creation and rested; He finished redemption and rose. Enter his rest.",
       "status_label": "Studio complete",
       "status_class": "status-complete",
-      "preview": "assets/previews/it-is-finished.webp",
+      "preview": "assets/previews/it-is-finished.webp?v=7f5db3db",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": "read/it-is-finished.html"
     },
     {
       "slug": "ps22-06-ends-of-the-earth",
@@ -420,9 +433,10 @@
       "public_blurb": "Psalm 22:27. The nations turning to worship, fulfilled through Christ.\n",
       "status_label": "Studio complete",
       "status_class": "status-complete",
-      "preview": "assets/previews/ps22-06-ends-of-the-earth.svg",
+      "preview": "assets/previews/ps22-06-ends-of-the-earth.svg?v=d551eb80",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "father-into-thy-hands",
@@ -440,9 +454,10 @@
       "public_blurb": "Psalm 31:5 was an evening prayer a child could learn. Luke 23:46: with his last breath Jesus prayed it, and added one word: Father.",
       "status_label": "Studio complete",
       "status_class": "status-complete",
-      "preview": "assets/previews/father-into-thy-hands.webp",
+      "preview": "assets/previews/father-into-thy-hands.webp?v=adff055c",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": "read/father-into-thy-hands.html"
     },
     {
       "slug": "ps22-07-body-foretold",
@@ -460,9 +475,10 @@
       "public_blurb": "Poured out, bones out of joint, hands and feet pierced. The psalm's language fits the crucifixion.\n",
       "status_label": "Studio complete",
       "status_class": "status-complete",
-      "preview": "assets/previews/ps22-07-body-foretold.svg",
+      "preview": "assets/previews/ps22-07-body-foretold.svg?v=b032839b",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "could-ye-not-watch-one-hour",
@@ -480,9 +496,10 @@
       "public_blurb": "Matthew 26:36-46. Gethsemane, the cup, the sleeping disciples, and the mercy in the question. He watched that hour alone so no hour of yours is watched alone.",
       "status_label": "Studio complete",
       "status_class": "status-complete",
-      "preview": "assets/previews/could-ye-not-watch-one-hour.webp",
+      "preview": "assets/previews/could-ye-not-watch-one-hour.webp?v=4f7b7c99",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": "read/could-ye-not-watch-one-hour.html"
     },
     {
       "slug": "ps22-08-i-thirst",
@@ -500,9 +517,10 @@
       "public_blurb": "My tongue cleaveth to my jaws. The psalm's thirst, fulfilled in Jesus' cry from the cross.\n",
       "status_label": "Studio complete",
       "status_class": "status-complete",
-      "preview": "assets/previews/ps22-08-i-thirst.webp",
+      "preview": "assets/previews/ps22-08-i-thirst.webp?v=15425086",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": "read/ps22-08-i-thirst.html"
     },
     {
       "slug": "zechariah-12-10-pierced",
@@ -520,9 +538,10 @@
       "public_blurb": "Zechariah 12:10. The LORD says they shall look upon me whom they have pierced, then mourn for him as for an only son. John cites it at the spear. The pierced one is God himself, the Son. Look at Him and live.\n",
       "status_label": "Studio complete",
       "status_class": "status-complete",
-      "preview": "assets/previews/zechariah-12-10-pierced.webp",
+      "preview": "assets/previews/zechariah-12-10-pierced.webp?v=7c836c12",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": "read/zechariah-12-10-pierced.html"
     },
     {
       "slug": "why-are-you-afraid",
@@ -539,9 +558,10 @@
       "public_blurb": "The disciples were drowning.",
       "status_label": "Planned",
       "status_class": "status-planned",
-      "preview": "assets/previews/why-are-you-afraid.svg",
+      "preview": "assets/previews/why-are-you-afraid.svg?v=04d9bbf2",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "psalms-22-part-2",
@@ -558,9 +578,10 @@
       "public_blurb": "What if part of Jesus' story was written before it happened?",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/psalms-22-part-2.svg",
+      "preview": "assets/previews/psalms-22-part-2.svg?v=dac3c4a5",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "he-said-it-under-the-lamps",
@@ -577,9 +598,10 @@
       "public_blurb": "At the Feast of Tabernacles, they lit four giant lamps in the temple, and that's when Jesus said this.",
       "status_label": "Planned",
       "status_class": "status-planned",
-      "preview": "assets/previews/he-said-it-under-the-lamps.svg",
+      "preview": "assets/previews/he-said-it-under-the-lamps.svg?v=2fb82b9a",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "i-am-the-light-of-the-world",
@@ -596,9 +618,10 @@
       "public_blurb": "They lit four giant fires in the temple that night to remember when God led them. Then Jesus stood up and claimed to be the fire.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/i-am-the-light-of-the-world.svg",
+      "preview": "assets/previews/i-am-the-light-of-the-world.svg?v=88b6db7b",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "i-am-the-door-the-shepherd-who-became-the-gate",
@@ -615,9 +638,10 @@
       "public_blurb": "In ancient Israel, the shepherd was the door. Literally his body.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/i-am-the-door-the-shepherd-who-became-the-gate.svg",
+      "preview": "assets/previews/i-am-the-door-the-shepherd-who-became-the-gate.svg?v=4a1be253",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "the-well-that-never-runs-dry",
@@ -634,9 +658,10 @@
       "public_blurb": "She came to the well at noon to avoid the whispers. Five husbands behind her, a sixth man at home, and a thirst nothing had touched.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/the-well-that-never-runs-dry.svg",
+      "preview": "assets/previews/the-well-that-never-runs-dry.svg?v=f1b6ca45",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "the-father-who-ran",
@@ -653,9 +678,10 @@
       "public_blurb": "We call it the parable of the prodigal son. But the son walks home slow and filthy. The only one running is the father.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/the-father-who-ran.svg",
+      "preview": "assets/previews/the-father-who-ran.svg?v=6d097672",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "the-line-he-never-got-to-say",
@@ -672,9 +698,10 @@
       "public_blurb": "He rehearsed three lines on the road home. He only got to say two. Read it again, the third sentence is gone.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/the-line-he-never-got-to-say.svg",
+      "preview": "assets/previews/the-line-he-never-got-to-say.svg?v=77e0b5df",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "the-confession-he-never-finished",
@@ -691,9 +718,10 @@
       "public_blurb": "He rehearsed his apology the whole way home. Three parts. He only got two of them out, and that changes everything.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/the-confession-he-never-finished.svg",
+      "preview": "assets/previews/the-confession-he-never-finished.svg?v=77b1572c",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "the-kiss-that-cut-off-the-bargain",
@@ -710,9 +738,10 @@
       "public_blurb": "He rehearsed the speech the whole walk home. Three lines. He only got to deliver two, the kiss cut off the third.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/the-kiss-that-cut-off-the-bargain.svg",
+      "preview": "assets/previews/the-kiss-that-cut-off-the-bargain.svg?v=d9a81428",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "the-fire-jesus-built",
@@ -729,9 +758,10 @@
       "public_blurb": "The last time Peter smelled charcoal smoke, he was denying Jesus by a fire. The risen Christ has built him another.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/the-fire-jesus-built.svg",
+      "preview": "assets/previews/the-fire-jesus-built.svg?v=025fc562",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "he-never-said-yes",
@@ -748,9 +778,10 @@
       "public_blurb": "Bethesda meant \"House of Mercy\", and it was the most merciless place in Jerusalem. For thirty-eight years one man lay there, too crippled to ever reach the water first.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/he-never-said-yes.svg",
+      "preview": "assets/previews/he-never-said-yes.svg?v=ef797b7d",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "the-cliff-of-rival-gods",
@@ -767,9 +798,10 @@
       "public_blurb": "A cliffside honeycombed with pagan shrines. Pan's grotto behind Him. Caesar's white temple gleaming above. And Jesus picks THIS rock to ask the question.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/the-cliff-of-rival-gods.svg",
+      "preview": "assets/previews/the-cliff-of-rival-gods.svg?v=662db52c",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "he-was-asleep-in-the-storm",
@@ -786,9 +818,10 @@
       "public_blurb": "Waves breaking over the rail. Water in the boat past your knees. Men screaming for their lives. And in the stern, He is asleep.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/he-was-asleep-in-the-storm.svg",
+      "preview": "assets/previews/he-was-asleep-in-the-storm.svg?v=979204d3",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "the-pronouns-that-preached-the-gospel",
@@ -805,9 +838,10 @@
       "public_blurb": "You think your failure disqualifies you. The man who denied Jesus to his face wrote the sentence that heals you, and it pivots on pronouns.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/the-pronouns-that-preached-the-gospel.svg",
+      "preview": "assets/previews/the-pronouns-that-preached-the-gospel.svg?v=bb202947",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "he-never-answered-jesus",
@@ -824,9 +858,10 @@
       "public_blurb": "Thirty-eight years on a mat. Jesus asks one question. And here is the detail almost everyone misses, the man never answers it. He explains why he can't.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/he-never-answered-jesus.svg",
+      "preview": "assets/previews/he-never-answered-jesus.svg?v=d186774a",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "the-prepared-belly",
@@ -843,9 +878,10 @@
       "public_blurb": "You remember Jonah swallowed by a fish. Open the chapter, he is the man thrown overboard so the rest of the ship could live.",
       "status_label": "Planned",
       "status_class": "status-planned",
-      "preview": "assets/previews/the-prepared-belly.svg",
+      "preview": "assets/previews/the-prepared-belly.svg?v=a3d4961e",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "the-answer-was-a-gift",
@@ -862,9 +898,10 @@
       "public_blurb": "Before He asks His real question, Jesus takes a poll. He doesn't start with you. He starts with the crowd, what does everyone out there say about Him?",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/the-answer-was-a-gift.svg",
+      "preview": "assets/previews/the-answer-was-a-gift.svg?v=ce904922",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "the-question-on-the-gaza-road",
@@ -881,9 +918,10 @@
       "public_blurb": "Seven hundred years before the cross, a Jewish prophet described a death like it, and on the Gaza road, an African official is reading that scroll aloud.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/the-question-on-the-gaza-road.svg",
+      "preview": "assets/previews/the-question-on-the-gaza-road.svg?v=052d3449",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "jesus-walked-past-the-pool",
@@ -900,9 +938,10 @@
       "public_blurb": "For thirty-eight years he waited for the water to stir. Jesus walked past the water, and stopped at him.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/jesus-walked-past-the-pool.svg",
+      "preview": "assets/previews/jesus-walked-past-the-pool.svg?v=98220588",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "a-list-of-dead-men",
@@ -919,9 +958,10 @@
       "public_blurb": "You've already filed Jesus, great teacher, historical figure, the faith you left in childhood. Then He turns from the crowd and asks one question.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/a-list-of-dead-men.svg",
+      "preview": "assets/previews/a-list-of-dead-men.svg?v=05dc715d",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "what-manner-of-man",
@@ -938,9 +978,10 @@
       "public_blurb": "Black water pours over the rail, seasoned sailors screaming for their lives, and in the stern, soaked and rocking, one man is sound asleep.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/what-manner-of-man.svg",
+      "preview": "assets/previews/what-manner-of-man.svg?v=b991bcca",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "the-race-he-could-never-win",
@@ -957,9 +998,10 @@
       "public_blurb": "Five porches packed with the blind and the lame, all staring at one pool. When the water stirs, only the first one in is healed.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/the-race-he-could-never-win.svg",
+      "preview": "assets/previews/the-race-he-could-never-win.svg?v=8b5bbfd5",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "smitten-of-god",
@@ -976,9 +1018,10 @@
       "public_blurb": "Watch the crucifixion through the crowd's eyes, and you'll read it exactly the way they did: a man getting what God decided he deserved.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/smitten-of-god.svg",
+      "preview": "assets/previews/smitten-of-god.svg?v=a9f774b6",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "the-light-you-can-stand-in",
@@ -995,9 +1038,10 @@
       "public_blurb": "Stones drop in the dust, one by one. The accusers file out, oldest first, leaving one accused woman alone with Jesus in the light.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/the-light-you-can-stand-in.svg",
+      "preview": "assets/previews/the-light-you-can-stand-in.svg?v=131ff652",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "the-door-was-a-body",
@@ -1014,9 +1058,10 @@
       "public_blurb": "God's own name is \"I AM\", too holy to speak. And God looked at people who could never reach Him, and opened a door.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/the-door-was-a-body.svg",
+      "preview": "assets/previews/the-door-was-a-body.svg?v=11ecbf91",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "the-shepherd-in-the-gap",
@@ -1033,9 +1078,10 @@
       "public_blurb": "Out in the hills, a sheepfold often had no gate, just a gap in the stones. At night the shepherd lay across it, his body the door.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/the-shepherd-in-the-gap.svg",
+      "preview": "assets/previews/the-shepherd-in-the-gap.svg?v=c3eec5d4",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "the-hunger-bread-cant-fill",
@@ -1052,9 +1098,10 @@
       "public_blurb": "You can be completely full and still feel empty. Fridge stocked, day went fine, and something deeper than your stomach is still hungry.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/the-hunger-bread-cant-fill.svg",
+      "preview": "assets/previews/the-hunger-bread-cant-fill.svg?v=9b77f7e2",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "manna-fulfilled",
@@ -1071,9 +1118,10 @@
       "public_blurb": "In the desert, God rained bread from heaven each morning. They gathered it, ate, lived another day, and still, every one died.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/manna-fulfilled.svg",
+      "preview": "assets/previews/manna-fulfilled.svg?v=f9f4bfc9",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "in-no-wise-cast-out",
@@ -1090,9 +1138,10 @@
       "public_blurb": "Somewhere in you is the quiet fear that if you actually came to God, He'd look at your record and turn you away.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/in-no-wise-cast-out.svg",
+      "preview": "assets/previews/in-no-wise-cast-out.svg?v=c2e11fa8",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "who-do-you-say-i-am",
@@ -1109,9 +1158,10 @@
       "public_blurb": "Everyone has an opinion about Jesus.",
       "status_label": "Planned",
       "status_class": "status-planned",
-      "preview": "assets/previews/who-do-you-say-i-am.svg",
+      "preview": "assets/previews/who-do-you-say-i-am.svg?v=5e920e6a",
       "show_video": false,
-      "kind_label": "Short"
+      "kind_label": "Short",
+      "read": null
     },
     {
       "slug": "ew-two-goats",
@@ -1129,9 +1179,10 @@
       "public_blurb": "The Day of Atonement, first-person. The high priest walks you through the two goats, and where the whole pattern points.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/ew-two-goats.svg",
+      "preview": "assets/previews/ew-two-goats.svg?v=1c877409",
       "show_video": false,
-      "kind_label": "Long-form"
+      "kind_label": "Long-form",
+      "read": null
     },
     {
       "slug": "ew-abraham-moriah",
@@ -1149,9 +1200,10 @@
       "public_blurb": "Genesis 22, first-person. My son, God will provide himself a lamb. A father tells the hardest walk in the Old Testament.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/ew-abraham-moriah.svg",
+      "preview": "assets/previews/ew-abraham-moriah.svg?v=19ec89ae",
       "show_video": false,
-      "kind_label": "Long-form"
+      "kind_label": "Long-form",
+      "read": null
     },
     {
       "slug": "ew-bronze-serpent",
@@ -1169,9 +1221,10 @@
       "public_blurb": "Numbers 21, first-person. Jesus himself points back at this one: as Moses lifted up the serpent, so must the Son of man be lifted up.",
       "status_label": "In production",
       "status_class": "status-production",
-      "preview": "assets/previews/ew-bronze-serpent.svg",
+      "preview": "assets/previews/ew-bronze-serpent.svg?v=568756b8",
       "show_video": false,
-      "kind_label": "Long-form"
+      "kind_label": "Long-form",
+      "read": null
     },
     {
       "slug": "ew-joseph",
@@ -1189,9 +1242,10 @@
       "public_blurb": "Genesis 37-45, first-person. God sent me before you to preserve life. The betrayed brother who became the rescuer.",
       "status_label": "Planned",
       "status_class": "status-planned",
-      "preview": "assets/previews/ew-joseph.svg",
+      "preview": "assets/previews/ew-joseph.svg?v=2b60d9d6",
       "show_video": false,
-      "kind_label": "Long-form"
+      "kind_label": "Long-form",
+      "read": null
     },
     {
       "slug": "ew-jonah",
@@ -1209,9 +1263,10 @@
       "public_blurb": "Jonah 1-2, first-person. The prophet who ran, the deep that held him, and the sign Jesus claimed for Himself.",
       "status_label": "Planned",
       "status_class": "status-planned",
-      "preview": "assets/previews/ew-jonah.svg",
+      "preview": "assets/previews/ew-jonah.svg?v=941fe98b",
       "show_video": false,
-      "kind_label": "Long-form"
+      "kind_label": "Long-form",
+      "read": null
     },
     {
       "slug": "ew-noah",
@@ -1229,9 +1284,10 @@
       "public_blurb": "Genesis 6-8, first-person. One door through the water, shut by God's own hand.",
       "status_label": "Planned",
       "status_class": "status-planned",
-      "preview": "assets/previews/ew-noah.svg",
+      "preview": "assets/previews/ew-noah.svg?v=088bab2d",
       "show_video": false,
-      "kind_label": "Long-form"
+      "kind_label": "Long-form",
+      "read": null
     },
     {
       "slug": "ew-isaiah",
@@ -1249,9 +1305,10 @@
       "public_blurb": "Isaiah 53, from the prophet's side of the page. Seven hundred years early, he wrote what he was shown.",
       "status_label": "Planned",
       "status_class": "status-planned",
-      "preview": "assets/previews/ew-isaiah.svg",
+      "preview": "assets/previews/ew-isaiah.svg?v=7d9a1548",
       "show_video": false,
-      "kind_label": "Long-form"
+      "kind_label": "Long-form",
+      "read": null
     },
     {
       "slug": "ew-passover-father",
@@ -1269,9 +1326,10 @@
       "public_blurb": "Exodus 12, first-person. When I see the blood, I will pass over you. The night the lamb died instead.",
       "status_label": "Planned",
       "status_class": "status-planned",
-      "preview": "assets/previews/ew-passover-father.svg",
+      "preview": "assets/previews/ew-passover-father.svg?v=67b4dc57",
       "show_video": false,
-      "kind_label": "Long-form"
+      "kind_label": "Long-form",
+      "read": null
     }
   ],
   "stats": {
