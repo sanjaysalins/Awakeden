@@ -60,6 +60,18 @@ The catalogue is a **public tracker of the v2 migration**. Back-catalogue pieces
 5. **Google Search Console:** add `awakeden.com`, submit `sitemap.xml`, request indexing (user action).
 6. **Catalogue UX (optional):** cards don't show a series label/grouping yet; nav still has a Psalm-22-specific link.
 
+## Session log (2026-07-09, deploy-readiness sweep)
+Verified live: read pages ×12 + read index + plan + catalogue + catalog.json all 200 on
+awakeden.com (the "deploy _website" launch blocker was already satisfied). Promoted
+**sign-of-jonah** preview (risen_christ_wounds.png, approved) — it was building an SVG
+placeholder. Refreshed the 9 stale preview webps (L2 hero-still upgrades). New-dress brand
+pass: favicon.svg → split-E mark (was old gold serif A); make_og_cards.py kicker → bone
+AWAK + red EDEN (was gold serif) + accepts .jpg sources; regenerated 13 per-study OG cards
+(restores cards purged with the Baroque archive). upload_tracker.py proven end-to-end
+(--set writes youtube_id → read page gains watch-modal → plan moves piece to "Out now";
+test reverted cleanly). **Email capture: user decided SKIP for launch** (YouTube subscribe
+stays the only CTA; revisit later).
+
 ## Session log (2026-06-20b)
 Promoted two finished v2 pieces to rich pages: **Zechariah 12:10 "The One They Pierced"** (new card, `jesus-in-ot`, added the `zechariah` `STUDY_SETTING` paragraph in `build_catalog.py`) + **Psalm 22 #2 "Mockers' Words"** re-pointed to its v2 reprocess. Built + verified + deployed (commit `6a3bf27`). Added the `/update-website` skill (`.claude/skills/`, gitignored/local). Last commit: `6a3bf27`.
 

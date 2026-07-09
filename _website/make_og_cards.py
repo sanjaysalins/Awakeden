@@ -22,7 +22,8 @@ import build_catalog as bc
 SITE = Path(__file__).resolve().parent
 OUT = SITE / "assets" / "og"
 W, H = 1200, 630
-GOLD = (212, 175, 55)
+BONE = (236, 234, 228)
+RED = (229, 48, 61)
 CREAM = (244, 239, 230)
 DIM = (180, 170, 150)
 
@@ -33,6 +34,13 @@ def font(bold: bool, size: int) -> ImageFont.FreeTypeFont:
         return ImageFont.truetype(f"C:/Windows/Fonts/{name}", size)
     except OSError:
         return ImageFont.load_default()
+
+
+def font_black(size: int) -> ImageFont.FreeTypeFont:
+    try:
+        return ImageFont.truetype("C:/Windows/Fonts/ariblk.ttf", size)
+    except OSError:
+        return font(True, size)
 
 
 def wrap(draw, text, fnt, max_w):
@@ -54,7 +62,7 @@ def resolve(item) -> Path | None:
     src = bc.resolve_source(item.get("preview_source") or "")
     if src and src.name == "scene_plan.json":
         src = bc.find_hero_png_from_scene_plan(src) or src
-    if src and src.suffix.lower() == ".png" and src.is_file():
+    if src and src.suffix.lower() in (".png", ".jpg", ".jpeg") and src.is_file():
         return src
     return None
 
@@ -75,10 +83,12 @@ def card(src: Path, title: str, ref: str, out: Path) -> None:
     ax, ay = 80, (H - a.height) // 2
     bg.paste(a, (ax, ay))
     d = ImageDraw.Draw(bg)
-    d.rectangle([ax - 1, ay - 1, ax + a.width, ay + a.height], outline=GOLD, width=2)
-    # text panel on the right
+    d.rectangle([ax - 1, ay - 1, ax + a.width, ay + a.height], outline=BONE, width=2)
+    # text panel on the right: the AWAK|EDEN two-colour mark (new dress)
     tx = ax + box_w + 70
-    d.text((tx, 150), "AWAKEDEN", font=font(True, 30), fill=GOLD)
+    kicker = font_black(30)
+    d.text((tx, 150), "AWAK", font=kicker, fill=BONE)
+    d.text((tx + d.textlength("AWAK", font=kicker), 150), "EDEN", font=kicker, fill=RED)
     y = 205
     for line in wrap(d, title, font(True, 52), W - tx - 70):
         d.text((tx, y), line, font=font(True, 52), fill=CREAM)

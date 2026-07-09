@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-04",
+  "generated": "2026-07-09",
   "site": {
     "url": "https://awakeden.com",
     "name": "Awakeden",
@@ -240,6 +240,27 @@
       "status_label": "Studio complete",
       "status_class": "status-complete",
       "preview": "assets/previews/father-forgive-them.webp",
+      "show_video": false,
+      "kind_label": "Short"
+    },
+    {
+      "slug": "sign-of-jonah",
+      "kind": "short",
+      "title": "The Sign of Jonah",
+      "ref": "Matthew 12:40 + Jonah 1-2",
+      "series_id": "jesus-in-ot",
+      "cluster": "cluster-02-resurrection",
+      "cluster_order": 1,
+      "public_status": "studio_complete",
+      "featured": false,
+      "featured_order": null,
+      "preview_approved": true,
+      "youtube_id": null,
+      "public_hook": "Jesus was asked for one sign. He gave them a man swallowed by the deep.",
+      "public_blurb": "Jonah went down guilty; Christ went down innocent - and neither the deep nor the grave could hold Him. Season 2 opens where the sign points: the resurrection.",
+      "status_label": "Studio complete",
+      "status_class": "status-complete",
+      "preview": "assets/previews/sign-of-jonah.webp",
       "show_video": false,
       "kind_label": "Short"
     },
@@ -1254,9 +1275,9 @@
     }
   ],
   "stats": {
-    "total": 57,
+    "total": 58,
     "live": 0,
-    "studio_complete": 17,
+    "studio_complete": 18,
     "in_production": 31,
     "planned": 9
   }

@@ -922,8 +922,8 @@ items:
   public_status: studio_complete
   featured: false
   featured_order: null
-  preview_approved: false
-  preview_source: ../batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual
+  preview_approved: true
+  preview_source: ../batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/risen_christ_wounds.png
   youtube_id: null
   public_hook: Jesus was asked for one sign. He gave them a man swallowed by the deep.
   public_blurb: 'Jonah went down guilty; Christ went down innocent - and neither the
