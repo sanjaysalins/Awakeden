@@ -1,17 +1,34 @@
-# RESUME — next session (updated 2026-07-08 close)
+# RESUME — next session (updated 2026-07-09 close)
 
-## TOMORROW'S AGENDA (user-agreed):
-1. **Month 1 build work**: the 2 new Resurrection shorts for the M1 calendar slots
-   (The Empty Tomb + Women as First Witnesses; reuse-first ~\ each off the banked
-   cluster_02 tomb/risen world - stills exist: stone_rolled_dawn, three_days_dark_tomb,
-   risen_christ_wounds, body_laid_in_tomb + JESUS.png anchor face). Full living-page
-   lane: narration -> voice -> spec -> stills(reuse!) -> gate -> animate -> build ->
-   score (S2 pair: lonely_searching_a -> glory_holy_stillness_a per SEASON_SCORES.md)
-   -> sfx -> publish pack. Then START EW05 Jonah long film (narration is voiced).
-2. **Website consolidation**: deploy-readiness sweep - Jonah read page + watch-modals
-   live, catalogue/plan pages current vs manifest, email capture decision, upload
-   tracker end-to-end test, site brand check vs the new dress (split-E everywhere).
+## NEXT SESSION AGENDA (user-agreed 2026-07-09):
+1. **Month 1 shorts** — The Empty Tomb + Women as First Witnesses (reuse-first off
+   the banked cluster_02 tomb/risen world - stills exist: stone_rolled_dawn,
+   three_days_dark_tomb, risen_christ_wounds, body_laid_in_tomb + JESUS.png anchor
+   face). Full living-page lane: narration -> voice -> spec -> stills(reuse!) ->
+   gate -> animate -> build -> score (S2 pair: lonely_searching_a ->
+   glory_holy_stillness_a per SEASON_SCORES.md) -> sfx -> publish pack.
+2. **EW05 Jonah long film** — narration already voiced, needs the visual lane.
+3. **Publish pass** — the 11 rebuilt Cross shorts are ready for /publish + upload kits.
+4. **P2 engine work** (optional, from the engine review): resumable runner, morph
+   pre-filter, choose_engine.
 
+Small leftovers (low priority): Baroque-only pieces (Isaiah 53, Ps22 parts 2/4-7)
+keep placeholder covers until inked rebuilds; watch-list nits from the 07-07 audit
+(user deprioritized); move root test_bible_kb*.py into pipeline/.
+
+## ✅ WHAT THE 2026-07-09 SESSION DELIVERED (website day)
+- **Deploy-readiness sweep** (commit f9fc576): verified the whole site LIVE on
+  awakeden.com (read pages, watch-modals, plan, catalogue); sign-of-jonah catalogue
+  card promoted (risen_christ_wounds); 9 stale previews refreshed; favicon + OG cards
+  moved to the new split-E dress; upload_tracker.py proven end-to-end (test reverted);
+  **email capture: user decided SKIP for launch**.
+- **Production-ready pass** (commits b531e72 + 59e2f24) after user flagged stale cards
+  + no navigation: full crawl (77 pages/1101 links/0 broken); 45 placeholder cards
+  redesigned as on-dress covers (red ref chip, bold title, split-E watermark, status
+  caption); "Read the whole study" button on work pages; READABLE NOW card badges;
+  art-first shelf ordering; "Jump to a theme" chip nav; preview+asset cache-busting
+  (7-day CDN cache was why cards looked stale); orphan roadmap.html removed.
+  Details: WEBSITE_HANDOFF.md session logs.
 
 **LAUNCH IS PREPPED.** L1-L7 all done: 21 human-approved video finals, 13 GREEN
 publish packs (@awakeden stamped, read-links in), 39 thumbnails + watermark +
@@ -23,12 +40,9 @@ monthly. Production board: production_board.py.
 **Waiting on the USER (launch blockers):**
 1. Upload banner/avatar/watermark in Studio (kit: _brand/CHANNEL_DRESS.html)
 2. Playlist Season 1 - The Cross + one UNLISTED safe-zone test upload
-3. Deploy _website (Jonah read page + modals are local-only)
-4. Pick the launch date
-
-**Next build work (mine, any session):** M1 needs 2 new Resurrection shorts
-(reuse-first ~\ each) + EW05 Jonah film for month-2; S2 Suno tracks when user
-generates; TikTok/IG/FB handles when they exist -> restamp packs.
+3. Pick the launch date
+(_website is DEPLOYED and live - no longer a blocker. When a video goes up:
+`upload_tracker.py --set <slug> <url>` + push -> site grows its Watch button.)
 
 ---
 
