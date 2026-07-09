@@ -1,0 +1,237 @@
+{
+  "piece": "empty_tomb_john208",
+  "title": "The Empty Tomb (John 20:8)",
+  "cluster": "cluster_02_resurrection",
+  "verse": "John 20:1-10 + John 20:29",
+  "stills": {
+    "model": "seedream-4-5-251128",
+    "size": "1440x2560",
+    "jobs": {
+      "stone_rolled_dawn": {
+        "prompt": "seen from inside a low hewn rock chamber of a 1st-century Judean tomb, looking out through a small waist-high square opening blazing with dawn light, the great round stone disc rolled aside beyond the opening, collapsed empty linen wrappings lying flat on a waist-low rock bench beside the opening, tool-marked stone walls, vertical, 1st-century Judea",
+        "ref": "../../../ref_library/motifs/EMPTY_TOMB.png"
+      },
+      "stone_taken_away_dark": {
+        "prompt": "a low rock-cut tomb in a hillside garden before dawn, a small square crawl-height opening cut into the rock face, a massive round stone disc rolled aside resting in its carved groove track beside the opening, the opening a black empty hole, deep pre-dawn blue darkness, faint cold first light on the hills, olive branches framing, vertical, 1st-century Judea",
+        "ref": "../../../ref_library/motifs/EMPTY_TOMB.png"
+      },
+      "mary_runs_predawn": {
+        "prompt": "a veiled woman in a simple wool tunic and mantle running hard toward the viewer down a dim garden path, urgent alarm on her face, her robe flying behind her, far behind her a low rock-cut tomb in the hillside with a small dark opening and its great round stone rolled aside, deep pre-dawn blue darkness, faint cold light on the hills, vertical, 1st-century Judea",
+        "ref": null
+      },
+      "two_disciples_running": {
+        "prompt": "two robed men running at full stride up a stony path between olive trees toward a low rock-cut tomb in the rocky hillside, its small square opening dark and low, the great round stone disc rolled aside in its groove beside the opening, dawn breaking low and golden across the hillside, dust rising from their sandals, vertical, 1st-century Judea",
+        "ref": null
+      },
+      "linen_left_lying": {
+        "prompt": "seen from above, a waist-low hewn stone bench inside a dim rock tomb chamber, wound linen burial cloths lying collapsed completely flat on the bench in loose layered folds and strips, wide bare stone visible around them, a small dusting of pale spice powder on the cloth, cool dawn light raking across the folds, vertical, 1st-century Judea",
+        "ref": "../../../ref_library/objects/RICH_MANS_TOMB.png"
+      },
+      "napkin_wrapped_apart": {
+        "prompt": "inside a dim hewn rock tomb, a small linen napkin wrapped together in a neat roll resting alone at the head-end of a waist-low stone bench, apart from flat collapsed grave linen further along the bench, camera close on the rolled napkin, soft dawn light, vertical, 1st-century Judea",
+        "ref": "../../../ref_library/objects/RICH_MANS_TOMB.png"
+      },
+      "john_believes_inside": {
+        "prompt": "inside a low hewn rock tomb chamber, a young lightly-bearded disciple bent low under the rock ceiling, kneeling by a waist-low stone bench, dawn light from the small low doorway full on his lifted awestruck face, collapsed flat empty linen wrappings on the bench beside him, tool-marked walls, vertical, 1st-century Judea",
+        "ref": "../../../ref_library/characters/JOHN_THE_APOSTLE.png"
+      },
+      "jesus_shows_thomas": {
+        "prompt": "the risen Christ in a lamplit stone upper room holding out his open wounded palms toward a kneeling awestruck disciple, warm lamp glow on both faces, vertical, 1st-century Judea",
+        "ref": "../../../ref_library/characters/JESUS.png"
+      },
+      "risen_christ_wounds": {
+        "prompt": "the risen Christ standing in radiant dawn light in a garden, white robe, both hands open toward the viewer showing the wounds in his palms, serene living face, vertical, 1st-century Judea",
+        "ref": "../../../ref_library/characters/JESUS.png"
+      }
+    }
+  },
+  "animate": {
+    "duration": 5,
+    "aspect_ratio": "9:16",
+    "moves": {
+      "stone_rolled_dawn": "ONE slow, steady, continuous push-in into the blazing light of the open tomb doorway",
+      "stone_taken_away_dark": "ONE slow, steady, continuous push-in toward the black open doorway of the tomb",
+      "mary_runs_predawn": "ONE slow, steady, continuous push-in toward the running veiled woman",
+      "two_disciples_running": "ONE slow, steady, continuous push-in toward the two running men on the path",
+      "linen_left_lying": "ONE slow, steady, continuous push-in along the ledge toward the flat linen grave clothes",
+      "napkin_wrapped_apart": "ONE slow, steady, continuous push-in toward the rolled napkin resting by itself",
+      "john_believes_inside": "ONE slow, steady, continuous push-in toward the young disciple's awestruck lit face",
+      "jesus_shows_thomas": "ONE slow, steady, continuous push-in toward the risen Christ's outstretched wounded palms before the kneeling disciple",
+      "risen_christ_wounds": "ONE slow, steady, continuous push-in toward the risen Christ's open wounded hands and serene face"
+    }
+  },
+  "score": {
+    "src": "visual/livingpage_short.spec_preview.mp4",
+    "out": "visual/empty_tomb_john208_scored.mp4",
+    "dark": "lonely_searching_a.mp3",
+    "grace": "glory_holy_stillness_a.mp3",
+    "base_seconds": 59.0,
+    "outro_hold": 1.5,
+    "dark_trim_end": "45.0",
+    "grace_trim": [
+      "20",
+      "90"
+    ],
+    "crossfade": "6",
+    "tpad": "1.5",
+    "dips": [],
+    "cta_dip": [
+      "50.0",
+      "0.5"
+    ],
+    "dips_meta": [],
+    "cta_meta": {
+      "phrase": "Jesus does not ask you to see",
+      "pre": 0.0
+    }
+  },
+  "register": {
+    "id_prefix": "et",
+    "source": "byteplus seedream-4-5",
+    "created": "2026-07-09",
+    "style": "graphic_novel_inked",
+    "aspect": "9:16",
+    "palette": "inked cel-flat, pre-dawn blue-blacks to tomb dark to dawn gold",
+    "mood": "the open grave, the ordered linen, believing without seeing",
+    "tags_still": [
+      "livingpage",
+      "john208",
+      "empty_tomb",
+      "resurrection"
+    ],
+    "tags_clip": [
+      "livingpage",
+      "john208",
+      "kling"
+    ],
+    "used_in": [
+      "empty_tomb_john208 short"
+    ],
+    "clip_title_suffix": " (Kling push-in)",
+    "extra_rows": [],
+    "stills": {
+      "stone_rolled_dawn": {
+        "subject": "the stone rolled aside, dawn light bursting from the tomb",
+        "characters": [],
+        "elements": [
+          "rolled stone",
+          "open doorway",
+          "dawn light",
+          "flat linen"
+        ],
+        "setting": "garden tomb",
+        "scope": "hero",
+        "doctrine": "seeth the stone taken away from the sepulchre (John 20:1)"
+      },
+      "stone_taken_away_dark": {
+        "subject": "the open tomb in pre-dawn darkness, stone rolled aside",
+        "characters": [],
+        "elements": [
+          "rolled stone",
+          "black doorway",
+          "pre-dawn dark"
+        ],
+        "setting": "garden tomb before dawn",
+        "scope": "neutral",
+        "doctrine": "when it was yet dark... and seeth the stone taken away (John 20:1)"
+      },
+      "mary_runs_predawn": {
+        "subject": "Mary Magdalene running from the open tomb in the dark",
+        "characters": [
+          "Mary Magdalene"
+        ],
+        "elements": [
+          "garden path",
+          "open tomb",
+          "pre-dawn dark"
+        ],
+        "setting": "garden before dawn",
+        "scope": "specific",
+        "doctrine": "Then she runneth, and cometh to Simon Peter (John 20:2)"
+      },
+      "two_disciples_running": {
+        "subject": "Peter and John running together toward the tomb at dawn",
+        "characters": [
+          "Peter",
+          "John"
+        ],
+        "elements": [
+          "stony path",
+          "olive trees",
+          "dawn light"
+        ],
+        "setting": "path to the garden tomb",
+        "scope": "specific",
+        "doctrine": "So they ran both together (John 20:4)"
+      },
+      "linen_left_lying": {
+        "subject": "the flat linen grave clothes lying undisturbed on the ledge",
+        "characters": [],
+        "elements": [
+          "linen clothes",
+          "stone ledge",
+          "dawn light"
+        ],
+        "setting": "rock-cut tomb",
+        "scope": "hero",
+        "doctrine": "saw the linen clothes lying (John 20:5)"
+      },
+      "napkin_wrapped_apart": {
+        "subject": "the head napkin wrapped together in a place by itself",
+        "characters": [],
+        "elements": [
+          "rolled napkin",
+          "stone ledge",
+          "flat linen apart"
+        ],
+        "setting": "rock-cut tomb",
+        "scope": "hero",
+        "doctrine": "the napkin, that was about his head... wrapped together in a place by itself (John 20:7)"
+      },
+      "john_believes_inside": {
+        "subject": "John inside the tomb, dawn light on his awestruck face",
+        "characters": [
+          "John"
+        ],
+        "elements": [
+          "tomb doorway light",
+          "stone ledge",
+          "flat linen"
+        ],
+        "setting": "rock-cut tomb",
+        "scope": "specific",
+        "doctrine": "and he saw, and believed (John 20:8)"
+      },
+      "jesus_shows_thomas": {
+        "subject": "the risen Christ showing his wounded hands to Thomas",
+        "characters": [
+          "Christ risen",
+          "Thomas"
+        ],
+        "elements": [
+          "wounded palms",
+          "lamplit upper room",
+          "kneeling disciple"
+        ],
+        "setting": "upper room, eight days after",
+        "scope": "hero",
+        "doctrine": "reach hither thy finger, and behold my hands (John 20:27)"
+      },
+      "risen_christ_wounds": {
+        "subject": "the risen Christ showing the wounds in his open palms",
+        "characters": [
+          "Christ risen"
+        ],
+        "elements": [
+          "wounded palms",
+          "white robe",
+          "dawn garden"
+        ],
+        "setting": "garden at dawn",
+        "scope": "hero",
+        "doctrine": "he shewed unto them his hands and his side (John 20:20)"
+      }
+    },
+    "clip_source": "HF kling3_0 pro 9:16, INK camera-only push-in"
+  }
+}

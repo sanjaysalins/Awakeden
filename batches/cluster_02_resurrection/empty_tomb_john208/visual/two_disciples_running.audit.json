@@ -1,0 +1,9 @@
+{
+  "image": "two_disciples_running.png",
+  "verdict": "PASS",
+  "flags": [
+    "in-chat-agent full-res v2: plain flat leather soles, world-matched tomb+stone, zero faces"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

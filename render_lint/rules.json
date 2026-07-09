@@ -1,335 +1,503 @@
 {
-  "_doc": "Render-prompt rule base — the KNOW layer of the render-quality loop. Every lesson we learn (from a memory or a redo) lives here as a rule so it shapes the NEXT prompt before we spend a credit. Grows monotonically: layer 5 (LEARN) writes new rules here. check=regex is deterministic ($0); check=llm is guidance the pre-flight red-team + post-render verify apply. severity block|warn|note is ADVISORY (user rule: advise + auto-fix, human decides).",
-  "version": 1,
-  "rules": [
+ "_doc": "Render-prompt rule base \u2014 the KNOW layer of the render-quality loop. Every lesson we learn (from a memory or a redo) lives here as a rule so it shapes the NEXT prompt before we spend a credit. Grows monotonically: layer 5 (LEARN) writes new rules here. check=regex is deterministic ($0); check=llm is guidance the pre-flight red-team + post-render verify apply. severity block|warn|note is ADVISORY (user rule: advise + auto-fix, human decides).",
+ "version": 1,
+ "rules": [
+  {
+   "id": "conflicting-pose-grows-extra-limbs",
+   "axis": "physics",
+   "severity": "warn",
+   "check": "llm",
+   "stage": "still",
+   "message": "describing TWO conflicting actions for the same limbs (e.g. 'arms nailed out along the beam' AND 'open hand presented toward the viewer') makes the model draw BOTH \u2014 a duplicate pair of arms/hands",
+   "fix": "state ONE unambiguous pose for the limbs; add an explicit count ('exactly two arms, one nail through each hand'); never mix a 'nailed-to-beam' pose with a 'reaching-to-viewer' pose in one figure",
+   "provenance": "fft 05 four-arms fail 2026-07-01"
+  },
+  {
+   "id": "crucified-hands-open-not-fist",
+   "axis": "biblical",
+   "severity": "block",
+   "check": "llm",
+   "stage": "still",
+   "message": "the crucified Christ must have OPEN, nailed/pierced hands \u2014 the model keeps drawing CLENCHED FISTS gripping a rope tied to the beam (contradicts 'nails through his hands' AND the mercy-in-the-open-hand doctrine; a fist round a rope is not crucifixion)",
+   "fix": "PURE-POSITIVE (naming 'fist'/'rope' to forbid them DRAWS them): describe only the desired end-state \u2014 'both hands OPEN and flat against the wooden crossbeam, palms facing forward, fingers relaxed and gently parted, a dark pierced wound in the centre of each open palm'. Never write the words fist, clenched, grip, rope, bound, tied.",
+   "provenance": "fft 02/05/06 roped-fist fail 2026-07-01 (user caught: 'loads of issues')"
+  },
+  {
+   "id": "no-church-in-scene",
+   "axis": "biblical",
+   "severity": "block",
+   "check": "regex",
+   "stage": "still",
+   "pattern": "\\b(church(es)?|steeple|spire|dome[ds]?\\s+(?:roof|building|temple)|cathedral|chapel|cross[- ]?topped)\\b",
+   "flags": "i",
+   "message": "a church / steeple / dome-with-a-cross in a 1st-century scene is an anachronism (the model drifts cross-topped domed buildings into the background)",
+   "fix": "describe only period-correct architecture: flat-roofed pale limestone houses, a city wall, no crosses or domes on any building; for distant Golgotha crosses name them as the two thieves' bare crosses only",
+   "provenance": "fft 01_golgotha church-in-background 2026-07-01"
+  },
+  {
+   "id": "lots-are-knucklebones-not-dominoes",
+   "axis": "biblical",
+   "severity": "warn",
+   "check": "regex",
+   "stage": "still",
+   "pattern": "\\b(dice|domino(es)?|tiles?|game\\s+pieces?)\\b",
+   "flags": "i",
+   "message": "Roman 'lots' render as DOMINOES/tiles (medieval anachronism) when named as dice/tiles/game pieces",
+   "fix": "name them 'small carved animal knucklebones (astragali) scattered in the dust' \u2014 never dice/dominoes/tiles",
+   "provenance": "fft 01c/04 domino-lots 2026-07-01"
+  },
+  {
+   "id": "no-freestanding-candle-outdoors",
+   "axis": "biblical",
+   "severity": "note",
+   "check": "regex",
+   "stage": "still",
+   "pattern": "\\b(candles?|candlelight|candlestick)\\b",
+   "flags": "i",
+   "message": "a free-standing burning candle on the ground at an outdoor daytime execution reads odd/anachronistic",
+   "fix": "drop the candle; light the ground scene by the storm-broken daylight or a low torch if a light source is needed",
+   "provenance": "fft 04 outdoor-candle 2026-07-01"
+  },
+  {
+   "id": "crucifixion-arm-geometry",
+   "axis": "physics",
+   "severity": "warn",
+   "check": "llm",
+   "stage": "still",
+   "message": "a nailed-hand close-up drifts into wrong crucifixion geometry \u2014 the arm angles DOWN and the hand is nailed to empty space / a beam that doesn't line up",
+   "fix": "lay the arm straight OUT along the horizontal crossbeam (patibulum); nail the hand to THAT beam at the arm's end; forearm leads back to the shoulder; use ONE clear beam, not a confusing beam intersection",
+   "provenance": "fft 05 'wrong cross and angle' 2026-07-01"
+  },
+  {
+   "id": "crucifixion-feet-to-upright-post",
+   "axis": "biblical",
+   "severity": "warn",
+   "check": "llm",
+   "stage": "still",
+   "message": "crucifixion FEET drift non-biblical \u2014 the model lays both feet flat on a horizontal board/table and drives a nail straight down, which reads as feet resting on a table, not a crucifixion",
+   "fix": "the feet are affixed to the UPRIGHT post (stipes): both bare feet pressed against the vertical beam, one over the other with the knees bent to the side, a single hand-forged spike through both feet into the standing post; never a horizontal board or flat table under the feet",
+   "provenance": "ps22 pierced_feet non-biblical 2026-07-02 (user caught)"
+  },
+  {
+   "id": "nail-head-wording-renders-a-tool",
+   "axis": "anti-hallucination",
+   "severity": "warn",
+   "check": "llm",
+   "stage": "still",
+   "message": "a crucifixion NAIL renders as a HAMMER/mallet when its head is called a 'broad flat hammered head', and as a DAGGER when called a 'tapered spike' with an 'edge' \u2014 the tool-word wins over 'nail'",
+   "fix": "describe it as 'a single long slender iron nail, its thin square shaft driven through, only a SMALL nail-head showing' \u2014 never 'broad/flat/hammered head' (draws a hammer) nor 'spike/blade/edge/tapered' (draws a dagger)",
+   "provenance": "ps22 pierced_feet dagger->hammer, user caught 3x 2026-07-02"
+  },
+  {
+   "id": "negation-draws-the-noun",
+   "axis": "anti-hallucination",
+   "severity": "warn",
+   "check": "regex",
+   "stage": "still",
+   "pattern": "\\b(no|without|never)\\s+(text|words?|letters?|writing|speech\\s*bubbles?|inscriptions?|scrolls?|nails?|blood|crosses?|child|children|boy|halo)\\b",
+   "flags": "i",
+   "message": "seedream has NO negative channel \u2014 naming a concrete noun to forbid it DRAWS it",
+   "fix": "delete the negation; describe the positive end-state (blank surface, healed skin, empty ground)",
+   "provenance": "seedream-no-negative-channel; fft 07 speech-bubble redo 2026-07-01",
+   "examples": [
     {
-      "id": "conflicting-pose-grows-extra-limbs",
-      "axis": "physics", "severity": "warn", "check": "llm", "stage": "still",
-      "message": "describing TWO conflicting actions for the same limbs (e.g. 'arms nailed out along the beam' AND 'open hand presented toward the viewer') makes the model draw BOTH — a duplicate pair of arms/hands",
-      "fix": "state ONE unambiguous pose for the limbs; add an explicit count ('exactly two arms, one nail through each hand'); never mix a 'nailed-to-beam' pose with a 'reaching-to-viewer' pose in one figure",
-      "provenance": "fft 05 four-arms fail 2026-07-01"
-    },
-    {
-      "id": "crucified-hands-open-not-fist",
-      "axis": "biblical", "severity": "block", "check": "llm", "stage": "still",
-      "message": "the crucified Christ must have OPEN, nailed/pierced hands — the model keeps drawing CLENCHED FISTS gripping a rope tied to the beam (contradicts 'nails through his hands' AND the mercy-in-the-open-hand doctrine; a fist round a rope is not crucifixion)",
-      "fix": "PURE-POSITIVE (naming 'fist'/'rope' to forbid them DRAWS them): describe only the desired end-state — 'both hands OPEN and flat against the wooden crossbeam, palms facing forward, fingers relaxed and gently parted, a dark pierced wound in the centre of each open palm'. Never write the words fist, clenched, grip, rope, bound, tied.",
-      "provenance": "fft 02/05/06 roped-fist fail 2026-07-01 (user caught: 'loads of issues')"
-    },
-    {
-      "id": "no-church-in-scene",
-      "axis": "biblical", "severity": "block", "check": "regex", "stage": "still",
-      "pattern": "\\b(church(es)?|steeple|spire|dome[ds]?\\s+(?:roof|building|temple)|cathedral|chapel|cross[- ]?topped)\\b", "flags": "i",
-      "message": "a church / steeple / dome-with-a-cross in a 1st-century scene is an anachronism (the model drifts cross-topped domed buildings into the background)",
-      "fix": "describe only period-correct architecture: flat-roofed pale limestone houses, a city wall, no crosses or domes on any building; for distant Golgotha crosses name them as the two thieves' bare crosses only",
-      "provenance": "fft 01_golgotha church-in-background 2026-07-01"
-    },
-    {
-      "id": "lots-are-knucklebones-not-dominoes",
-      "axis": "biblical", "severity": "warn", "check": "regex", "stage": "still",
-      "pattern": "\\b(dice|domino(es)?|tiles?|game\\s+pieces?)\\b", "flags": "i",
-      "message": "Roman 'lots' render as DOMINOES/tiles (medieval anachronism) when named as dice/tiles/game pieces",
-      "fix": "name them 'small carved animal knucklebones (astragali) scattered in the dust' — never dice/dominoes/tiles",
-      "provenance": "fft 01c/04 domino-lots 2026-07-01"
-    },
-    {
-      "id": "no-freestanding-candle-outdoors",
-      "axis": "biblical", "severity": "note", "check": "regex", "stage": "still",
-      "pattern": "\\b(candles?|candlelight|candlestick)\\b", "flags": "i",
-      "message": "a free-standing burning candle on the ground at an outdoor daytime execution reads odd/anachronistic",
-      "fix": "drop the candle; light the ground scene by the storm-broken daylight or a low torch if a light source is needed",
-      "provenance": "fft 04 outdoor-candle 2026-07-01"
-    },
-    {
-      "id": "crucifixion-arm-geometry",
-      "axis": "physics", "severity": "warn", "check": "llm", "stage": "still",
-      "message": "a nailed-hand close-up drifts into wrong crucifixion geometry — the arm angles DOWN and the hand is nailed to empty space / a beam that doesn't line up",
-      "fix": "lay the arm straight OUT along the horizontal crossbeam (patibulum); nail the hand to THAT beam at the arm's end; forearm leads back to the shoulder; use ONE clear beam, not a confusing beam intersection",
-      "provenance": "fft 05 'wrong cross and angle' 2026-07-01"
-    },
-    {
-      "id": "crucifixion-feet-to-upright-post",
-      "axis": "biblical", "severity": "warn", "check": "llm", "stage": "still",
-      "message": "crucifixion FEET drift non-biblical — the model lays both feet flat on a horizontal board/table and drives a nail straight down, which reads as feet resting on a table, not a crucifixion",
-      "fix": "the feet are affixed to the UPRIGHT post (stipes): both bare feet pressed against the vertical beam, one over the other with the knees bent to the side, a single hand-forged spike through both feet into the standing post; never a horizontal board or flat table under the feet",
-      "provenance": "ps22 pierced_feet non-biblical 2026-07-02 (user caught)"
-    },
-    {
-      "id": "nail-head-wording-renders-a-tool",
-      "axis": "anti-hallucination", "severity": "warn", "check": "llm", "stage": "still",
-      "message": "a crucifixion NAIL renders as a HAMMER/mallet when its head is called a 'broad flat hammered head', and as a DAGGER when called a 'tapered spike' with an 'edge' — the tool-word wins over 'nail'",
-      "fix": "describe it as 'a single long slender iron nail, its thin square shaft driven through, only a SMALL nail-head showing' — never 'broad/flat/hammered head' (draws a hammer) nor 'spike/blade/edge/tapered' (draws a dagger)",
-      "provenance": "ps22 pierced_feet dagger->hammer, user caught 3x 2026-07-02"
-    },
-    {
-      "id": "negation-draws-the-noun",
-      "axis": "anti-hallucination", "severity": "warn", "check": "regex", "stage": "still",
-      "pattern": "\\b(no|without|never)\\s+(text|words?|letters?|writing|speech\\s*bubbles?|inscriptions?|scrolls?|nails?|blood|crosses?|child|children|boy|halo)\\b", "flags": "i",
-      "message": "seedream has NO negative channel — naming a concrete noun to forbid it DRAWS it",
-      "fix": "delete the negation; describe the positive end-state (blank surface, healed skin, empty ground)",
-      "provenance": "seedream-no-negative-channel; fft 07 speech-bubble redo 2026-07-01",
-      "examples": [{"bad": "no speech bubbles, no text", "good": "(use the TEXT-FREE style variant; do not mention text at all)"}]
-    },
-    {
-      "id": "naming-text-draws-gibberish",
-      "axis": "anti-hallucination", "severity": "warn", "check": "regex", "stage": "still",
-      "pattern": "\\b(no\\s+text|speech\\s*bubbles?|inscriptions?|legible\\s+writing|titulus)\\b", "flags": "i",
-      "message": "any mention of text/writing (even to forbid) renders as gibberish letters",
-      "fix": "use the TEXT-FREE style (STYLE without the 'NO text' clause); leave writing surfaces unmentioned",
-      "provenance": "fft 07 gibberish bubble; feedback-never-animate-writing"
-    },
-    {
-      "id": "nail-renders-as-stud",
-      "axis": "anti-hallucination", "severity": "warn", "check": "regex", "stage": "still",
-      "pattern": "\\b(nails?|spikes?|studs?)\\b", "flags": "i",
-      "message": "PROVEN (probe #1, 10 variants): the WORD 'nail'/'spike' on a palm-forward hand ALWAYS renders a proud vertical nail standing OUT of the palm — head-shape words (round/flat/disc/square) only change its top; 'spike' adds an arrowhead; a two-hands macro adds finger-wire. ALL 8 nail-worded variants failed; BOTH wound-only variants (no 'nail' word) rendered a clean pierced hole.",
-      "fix": "PASSION pierced hand — DROP the words nail/spike/metal ENTIRELY and describe only the WOUND: 'a dark ragged pierced hole in the centre of the palm, dark red blood running down toward the wrist'. RISEN: 'one single round healed scar at the centre of the palm, smooth closed pale skin, flat and level' (also never say 'nail'; never 'puckered' → X-stitches). If a nail MUST appear as a separate object, show it lying flat or from the BACK of the hand, never on a palm-forward hand.",
-      "provenance": "PROBE #1 nail study 2026-07-01 (visual/_probe/nail/compare.html); seedream-no-negative-channel; fft 05/07/06c/01b redo fails"
-    },
-    {
-      "id": "welt-stripe-becomes-xstitch",
-      "axis": "anti-hallucination", "severity": "note", "check": "regex", "stage": "still",
-      "pattern": "\\b(welts?|stripes?|lash(?:es)?|gash(?:es)?|abrasions?)\\b", "flags": "i",
-      "message": "welt/stripe/lash wording draws as X-shaped stitches",
-      "fix": "bruise-only: 'smooth unbroken skin with deep red and purple blotches'",
-      "provenance": "seedream-no-negative-channel"
-    },
-    {
-      "id": "blind-draws-sunglasses",
-      "axis": "anti-hallucination", "severity": "note", "check": "regex", "stage": "still",
-      "pattern": "\\b(blind|clouded eyes|eyes (?:gently )?closed)\\b", "flags": "i",
-      "message": "blind/closed-eye wording draws sunglasses",
-      "fix": "drop it; show infirmity via posture, a staff, or a guiding hand",
-      "provenance": "seedream-no-negative-channel"
-    },
-    {
-      "id": "glow-on-body-neon-limbs",
-      "axis": "anti-hallucination", "severity": "note", "check": "regex", "stage": "still",
-      "pattern": "\\b(glow(?:ing)?|luminous|radiance on (?:the|his|her))\\b", "flags": "i",
-      "message": "'glow/light on the body' renders as neon glowing limbs",
-      "fix": "use 'plain even daylight' or 'a warm shaft of light falls across …'",
-      "provenance": "seedream-no-negative-channel"
-    },
-    {
-      "id": "disembodied-limb",
-      "axis": "anti-hallucination", "severity": "warn", "check": "llm", "stage": "still",
-      "message": "a hand/arm/limb shown alone reads as severed / disembodied",
-      "fix": "connect it: describe the arm continuing to the shoulder + edge of the torso, so it plainly belongs to the figure",
-      "provenance": "fft 05 detached-hand redo 2026-07-01; EW03 disembodied-hand defect"
-    },
-    {
-      "id": "large-object-must-be-grounded",
-      "axis": "physics", "severity": "warn", "check": "llm", "stage": "still",
-      "message": "large objects (cross, throne, altar, pillar) rendered floating unless anchored",
-      "fix": "state it is planted/driven/set into the ground: 'the upright runs unbroken to the earth, its foot set in a heap of stones and packed dust'",
-      "provenance": "fft 06 floating-cross redo 2026-07-01"
-    },
-    {
-      "id": "no-devotional-anachronism",
-      "axis": "biblical", "severity": "warn", "check": "llm", "stage": "still",
-      "message": "1st-century scenes drift a free-standing crucifix / church-style cross / modern religious prop into frame",
-      "fix": "do not mention 'cross' as scenery for ground scenes; for period scenes forbid nothing but describe only period-correct objects",
-      "provenance": "fft 04 devotional-cross artifact redo 2026-07-01"
-    },
-    {
-      "id": "reflected-cross-reads-inverted",
-      "axis": "anti-hallucination", "severity": "note", "check": "regex", "stage": "both",
-      "pattern": "\\bcross\\b[^.]*\\b(reflect\\w*|in the water|mirror\\w*)\\b", "flags": "i",
-      "message": "a cross reflected in water reads as an upside-down/inverted cross on a paused frame",
-      "fix": "keep the cross upright and solid; no reflection",
-      "provenance": "feedback-cross-in-water-inverted (#08)"
-    },
-    {
-      "id": "stills-must-be-biblical-period",
-      "axis": "biblical", "severity": "warn", "check": "llm", "stage": "still",
-      "message": "faces/dress/props drift modern / European / medieval",
-      "fix": "anchor 'ancient Near-Eastern, first-century, period-accurate'; Old-Master / reverent tone; no modern hair, cloth, or objects",
-      "provenance": "feedback-stills-biblical-period-gate; feedback-period-reverent-image-audit"
-    },
-    {
-      "id": "name-the-idol-culture",
-      "axis": "biblical", "severity": "warn", "check": "regex", "stage": "still",
-      "pattern": "\\b(idols?|shrines?|statues?|niches?|pagan)\\b", "flags": "i",
-      "message": "generic 'idol/shrine/statue' defaults the model to BUDDHA statues",
-      "fix": "name the exact culture (e.g. Greco-Roman, the god Pan for Caesarea Philippi)",
-      "provenance": "feedback-idols-must-be-period-culture (#19)"
-    },
-    {
-      "id": "god-father-never-depicted",
-      "axis": "biblical", "severity": "warn", "check": "regex", "stage": "still",
-      "pattern": "\\b(God the Father|the Father'?s? (?:face|figure|form|hand)|Yahweh|depict(?:ing)? God)\\b", "flags": "i",
-      "message": "God/the Father must never be depicted as a figure",
-      "fix": "show only a high radiant light or the effect on people; the prayer is TO the Father, show Jesus + light",
-      "provenance": "nonneg-doctrine-and-christ-lens; fft beat-sheet doctrine note"
-    },
-    {
-      "id": "character-face-consistency",
-      "axis": "character", "severity": "warn", "check": "llm", "stage": "still",
-      "message": "PROVEN (probe #3+#4): a shared text descriptor holds only a FAMILY resemblance (ref-lock is broken); the face drifts most when mood/glory adjectives ('glorified/radiant/joyful/sorrowful') reshape it. STRUCTURAL marks tighten the lock; single SPOT marks (mole) drift/float and add a defect risk",
-      "fix": "use the EXACT same descriptor string every time (don't paraphrase); keep the FACE description NEUTRAL even in emotional scenes — carry the emotion in posture/hands/light/context, not face-reshaping words. Bake in STRUCTURAL marks (lean face, high cheekbones, aquiline nose) for consistency; do NOT add a mole/spot-mark — it floats off the cheek or jumps to the forehead",
-      "provenance": "PROBE #3 + #4 face studies 2026-07-01 (visual/_probe/face/ + face_marks/compare.html)"
-    },
-    {
-      "id": "inject-locked-character-ref",
-      "axis": "character", "severity": "warn", "check": "llm", "stage": "both",
-      "message": "a recurring character/object described fresh each time drifts (different face/world)",
-      "fix": "inject the canonical ref_library descriptor verbatim; for long-form attach the locked --image anchor",
-      "provenance": "feedback-episode-world-consistency; base-elements library"
-    },
-    {
-      "id": "eyes-natural-not-supernatural",
-      "axis": "character", "severity": "note", "check": "regex", "stage": "still",
-      "pattern": "\\b(glowing|luminous|red|yellow|supernatural)\\s+eyes\\b", "flags": "i",
-      "message": "supernatural eye wording renders unnatural/uncanny eyes",
-      "fix": "'normal natural human eyes'",
-      "provenance": "base-elements CHARSHEET"
-    },
-    {
-      "id": "no-figures-mid-locomotion",
-      "axis": "physics", "severity": "warn", "check": "llm", "stage": "still",
-      "message": "figures rendered mid-stride get run BACKWARDS when the assembler boomerangs the clip",
-      "fix": "design an arrested/static pose (planted feet, standing, kneeling); atmosphere-dominant, locked camera",
-      "provenance": "physics-motion-check; longform-animation-aware-still-design"
-    },
-    {
-      "id": "particle-words-bloom-glitter",
-      "axis": "anti-hallucination", "severity": "warn", "check": "regex", "stage": "animation",
-      "pattern": "\\b(dust|motes?|sparkles?|glitter|drifting particles?|floating embers?|specks?)\\b", "flags": "i",
-      "message": "veo/kling bloom particle words (dust/motes/sparkles) into an AI-glitter snowstorm",
-      "fix": "strip particle words; use steady-light wording, or a deterministic ffmpeg push-in for glory scenes",
-      "provenance": "feedback-veo-no-glitter-glow; EW01 #13/#18 glitter fix"
-    },
-    {
-      "id": "never-animate-writing",
-      "axis": "anti-hallucination", "severity": "warn", "check": "regex", "stage": "animation",
-      "pattern": "\\b(scroll|titulus|inscription|codex|sign|writing|letters?|verse on)\\b", "flags": "i",
-      "message": "generatively animating writing morphs the letters into garbled text",
-      "fix": "hold as a still or deterministic push-in; design text as illegible marks; keep text in PIL furniture, never in the render",
-      "provenance": "feedback-never-animate-writing"
-    },
-    {
-      "id": "locked-camera-for-boomerang",
-      "axis": "physics", "severity": "note", "check": "llm", "stage": "animation",
-      "message": "a push-in that gets boomeranged becomes a zoom yo-yo",
-      "fix": "boomerang fill needs a LOCKED camera + deep atmosphere; use directional/continuous clips for moving cameras",
-      "provenance": "longform-animation-aware-still-design"
-    },
-    {
-      "id": "framing-sweet-spot",
-      "axis": "composition", "severity": "warn", "check": "llm", "stage": "still",
-      "message": "PROVEN (probe #2): the model is reliably great CLOSE→EPIC-WIDE with ONE dominant subject, but extreme MACRO floats stray composites (a face in the hand) and 'busy/packed/dense/many elements' FRAGMENTS into a multi-panel comic page (even with the ONE clause)",
-      "fix": "compose close→epic-wide with ONE dominant subject; do NOT shoot extreme macro of tiny detail (shoot close instead); for crowded beats use one subject + a SHADOW/silhouette crowd + 2-3 props, never 'busy/packed with detail'",
-      "provenance": "PROBE #2 framing study 2026-07-01 (visual/_probe/framing/compare.html)"
-    },
-    {
-      "id": "animation-clean-still",
-      "axis": "composition", "severity": "note", "check": "llm", "stage": "still",
-      "message": "dense/busy stills (many tiny faces, repeated detail) morph when Kling crop-cuts them",
-      "fix": "one dominant subject, ≤3 faces, crowds→shadow, negative space, no tiny repeated detail",
-      "provenance": "feedback-animation-clean-stills (#19)"
-    },
-    {
-      "id": "comic-must-use-template-library",
-      "axis": "composition", "severity": "block", "check": "structural", "stage": "comic",
-      "message": "a motion COMIC must USE the layout vocabulary (splits, fractures, insets, grids, triptychs) for a viral/epic comic-page rhythm — an all-'full' single-bleed plan is a slideshow, NOT a comic (this is the failure that shipped: 13/13 beats were 'full')",
-      "fix": "assign a VARIETY of templates across beats: fracture a single dramatic clip into anchored crops (hero_frac3/4, split_v, hero_band3), grid multiple hook/build clips (two_v, stack_h, triptych_v, strip_h3, quad), use big_inset for a main+detail beat; reserve 'full' for the true HERO singles (the red-letter prayer close, the risen-hero landing). No two ADJACENT beats share a template. Target: >= 5 distinct templates, and 'full' on <= ~40% of beats.",
-      "provenance": "fft mocomic all-full failure 2026-07-01 (user: 'we must do all the template to make it viral and epic')"
-    },
-    {
-      "id": "scene-subject-variety",
-      "axis": "composition", "severity": "block", "check": "structural", "stage": "plan",
-      "message": "a scene plan must NOT be mostly 'Christ in various poses' — it has to mine the narration's depth (the OT prophecy/type layer, the watching crowd + executioners, the human 'us', the cosmic response) or it fails to do justice to the text and the Bible study behind it. Failure that shipped: the fft pilot was 9/12 Christ-centric poses with NO Psalm-22 prophecy layer, NO crowd, NO executioner.",
-      "fix": "tag every scene with a subject_type (christ_hero/christ_detail/christ_risen = Christ-centric; context_scene/ot_echo/human_us/symbolic = the depth layers). Keep Christ-centric <= 60% of scenes; include >= 1 ot_echo (the OT prophecy/type, e.g. Psalm 22:18 'they cast lots upon my vesture'), >= 1 human_us, >= 2 context_scene; never > 2 consecutive Christ-centric scenes. Keep the three anchors (a nail/nailed-hands hook, the red-letter prayer FACE, the risen mercy-hero landing) but let the rest carry the study. Enforced by render_lint.verify.check_scene_subjects (run: python -m render_lint.verify --plan <scene_plan.json>).",
-      "provenance": "fft over-uses-Jesus-in-poses 2026-07-01 (user: 'we are not doing justice to the narration... just over using jesus in various poses')"
-    },
-    {
-      "id": "full-bleed-no-internal-frame",
-      "axis": "composition", "severity": "note", "check": "regex", "stage": "still",
-      "pattern": "\\b(gold frame|ornate frame|inside a frame|pillarbox|bordered)\\b", "flags": "i",
-      "message": "frame/border wording draws a picture-frame pillarbox inside the image",
-      "fix": "'ONE single full-bleed illustration filling the entire frame, no border or divider'",
-      "provenance": "EW01 gold-frame pillarbox fix"
-    },
-    {
-      "id": "no-brand-or-modern-logo",
-      "axis": "anti-hallucination", "severity": "block", "check": "llm", "stage": "still",
-      "message": "a coin / shield / seal / banner renders a MODERN BRAND or POP-CULTURE emblem (a Batman bat-wing, a corporate mark) or a neoclassical Western portrait, instead of a period device",
-      "fix": "PURE-POSITIVE and keep it small/soft: 'a small worn ancient silver coin, a faint indistinct archaic head in low relief, edges corroded' — never describe a crest / emblem / logo / detailed face; a legible modern device on a prop is the tell",
-      "provenance": "corpus red-team 2026-07-04: thirty_pieces Batman bat-wing on the coins (thirty_coins_scatter, silver_and_blood)"
-    },
-    {
-      "id": "no-style-drift-keep-house-ink",
-      "axis": "composition", "severity": "block", "check": "regex", "stage": "still",
-      "pattern": "\\b(anime|manga|chibi|cel[- ]?shad\\w*|ukiyo[- ]?e|hokusai|woodblock|water ?colou?r|photoreal\\w*|photo[- ]?realistic|3d ?render|pixar|disney|baroque oil|oil painting|impasto)\\b", "flags": "i",
-      "message": "naming a foreign art style pulls the still off the inked graphic-novel house look; even unprompted, individual stills drift into anime/cel-shade, ukiyo-e/Hokusai wave, watercolour, photoreal, or soft painterly Baroque and read as a different artist beside their siblings",
-      "fix": "use ONLY the project INK style string verbatim; never name another medium/artist; post-render, reject any still that does not match the bold-black-ink line look of the set (a whole-scene Hokusai 'Great Wave' or glossy anime face = redo)",
-      "provenance": "corpus red-team 2026-07-04: ocean_creation_wide (Hokusai), risen_mercy_hand/john_watching/mary_infant_shadow (anime cel-shade), david/shepherd stills (painterly)"
-    },
-    {
-      "id": "no-classical-or-islamic-or-medieval-skyline",
-      "axis": "biblical", "severity": "block", "check": "regex", "stage": "still",
-      "pattern": "\\b(parthenon|acropolis|corinthian|ionic|doric|pediment|colonnade|onion dome|golden dome|dome of the rock|minaret|gothic|pointed arch|leaded glass|lattice glass|crenellat\\w*|castellat\\w*|battlement|campanile|bell[- ]?tower)\\b", "flags": "i",
-      "message": "period-Jerusalem skylines drift wrong-culture: a Greek/Parthenon colonnade+pediment temple, an Islamic golden onion dome (Dome of the Rock) or minaret, or a medieval Gothic/crenellated/leaded-glass building — all centuries out of place",
-      "fix": "describe ONLY period architecture: flat-roofed pale limestone houses, plain stone walls, round/flat Roman arches, unglazed window openings; the temple is the plain Second-Temple stone platform (Zerubbabel-era for pre-exilic prophets, Herodian for the crucifixion) — never a dome, minaret, pointed arch, colonnade-and-pediment, or battlement",
-      "provenance": "corpus red-team 2026-07-04: gethsemane_olives_night (Greek temple x2 pieces), zechariah_night_scroll + storm_over_jerusalem (Dome of the Rock/minaret), synagogue_listeners_lean + ninth_hour_darkness (Gothic/leaded-glass/castellated)"
-    },
-    {
-      "id": "no-glass-or-metal-lantern",
-      "axis": "biblical", "severity": "block", "check": "regex", "stage": "still",
-      "pattern": "\\b(lantern|hurricane lamp|kerosene|oil lamp with a? ?glass|glass ?(?:globe|chimney)|carriage lamp|sconce|chamberstick|candlestick)\\b", "flags": "i",
-      "message": "night/scribe scenes light by a modern GLASS hurricane/kerosene/carriage lantern or a wax candle in a candlestick — anachronistic; even a correct clay lamp is drawn with the wick standing in the CENTRE of the bowl like a candle",
-      "fix": "a single low clay oil lamp: 'a small pinched-spout clay oil lamp, a low warm flame at its rim/spout' — never glass, never a chimney/globe, never a candlestick, never a central upright wick",
-      "provenance": "corpus red-team 2026-07-04: candle/lantern trap corpus-wide (david_old_deathbed, disputed_word_marks, old_king_hands_rings glass lanterns; child_eyes_closing/child_sleeping_lamp central-wick hybrids); complements no-freestanding-candle-outdoors"
-    },
-    {
-      "id": "only-one-christ-never-in-the-crowd",
-      "axis": "biblical", "severity": "block", "check": "llm", "stage": "still",
-      "message": "a second Christ-lookalike (white robe, long centre-parted hair, beard) is drawn STANDING AMONG the mourner / 'us' / sinner crowd, while Christ is also the figure on the cross — two Christs, and doctrinally He is the one lifted up, not one of the guilty crowd",
-      "fix": "the crowd/'us' figures are ordinary distinct people (vary age, build, hair, dress); reserve the Christ face+robe for the single Christ subject; when the beat is people beneath the cross, give them common tunics and covered heads, never the Christ likeness",
-      "provenance": "corpus red-team 2026-07-04: us_under_cross_shadow Christ-double in 4 pieces (a shared reuse-bank still)"
-    },
-    {
-      "id": "no-cloned-face-or-faceless-blob",
-      "axis": "character", "severity": "warn", "check": "llm", "stage": "still",
-      "message": "a crowd renders as the SAME face repeated (identical beard/nose/hairline) or drops a faceless dark void/blob figure at a focal point",
-      "fix": "give each visible crowd member distinct features (age/build/hair/expression); push true background figures to clean silhouettes at the EDGES, never a featureless blob in the centre; keep <=3 detailed faces and let the rest be shadow",
-      "provenance": "corpus red-team 2026-07-04: us_under_cross_shadow cloned trio + centre faceless void; look_up_faces three cloned Jesus faces"
-    },
-    {
-      "id": "crucifixion-continuity-crown-and-occupied-cross",
-      "axis": "biblical", "severity": "warn", "check": "llm", "stage": "still",
-      "message": "within one piece the crucified Christ is INCONSISTENT — crowned with thorns in one cut and bare-headed in the sibling cut; or the central cross is drawn EMPTY during a beat where He is still hanging (casting lots, mocking, the ninth-hour darkness)",
-      "fix": "standardise crown-of-thorns PRESENT on EVERY cross frame in a piece (add it where missing, never strip it); during any hanging beat the central cross must bear Christ — a bare cross is only legitimate at dawn/empty-tomb beats",
-      "provenance": "corpus red-team 2026-07-04: crown present/absent split across forsaken_cry/i_thirst/into_thy_hands/woman_behold/crucifixion_foretold; empty-cross-during-lots in seamless_robe_lots (2 pieces)"
-    },
-    {
-      "id": "one-fixing-method-per-body",
-      "axis": "physics", "severity": "warn", "check": "llm", "stage": "still",
-      "message": "the SAME crucified body is fixed two ways at once — a nail through one hand but the other wrist and/or the feet lashed with rope/cord",
-      "fix": "commit to ONE method for the whole body: if nailed, nail both hands and the feet (no rope on wrists/ankles); if the scene needs binding, rope all points — never mix nail on one hand and rope on the other",
-      "provenance": "corpus red-team 2026-07-04: golgotha_hill_wide nailed-one-side/roped-the-other in into_thy_hands/forsaken_cry/pierced_zech1210/woman_behold"
-    },
-    {
-      "id": "no-finery-on-a-stripped-victim",
-      "axis": "biblical", "severity": "warn", "check": "llm", "stage": "still",
-      "message": "a crucified figure (Christ or a thief) wears an ornate embroidered robe, gold-trim cuffs, or jewellery — but a crucifixion victim was stripped",
-      "fix": "the crucified body wears only a plain undyed loincloth; no robe, no gold trim, no collar, no jewellery, no coloured finery",
-      "provenance": "corpus red-team 2026-07-04: today_paradise confession_face_hands ornate red robe + gold cuff on a roped man"
-    },
-    {
-      "id": "no-modern-footwear-or-gear",
-      "axis": "biblical", "severity": "warn", "check": "llm", "stage": "still",
-      "message": "modern objects slip in on figures/props: a closed rounded shoe/loafer (feet should be open leather sandals), athletic tape wrapping a hand, a wristwatch, eyeglasses, a screw bench-vise on a workbench, or a telegraph/utility pole with strung wire on a rooftop",
-      "fix": "feet wear open strap sandals or are bare; a carpenter's bench uses wooden pegs/holdfasts (no metal screw-vise); rooftops carry only period masts/none, no wires; hands are bare skin with wounds, never taped",
-      "provenance": "corpus red-team 2026-07-04: jesus_stands_over_sleepers/jesus_leads_three loafers, 05_pierced_hand sports-tape, carpenter_bench_rest screw-vise, 04/01c telegraph poles"
-    },
-    {
-      "id": "bones-and-lots-not-cartoon",
-      "axis": "anti-hallucination", "severity": "warn", "check": "regex", "stage": "still",
-      "pattern": "\\b(bones?|skeleton|rib cage|dog[- ]?treat)\\b", "flags": "i",
-      "message": "the word 'bones' (e.g. Ps 22 'all my bones are out of joint') renders as cartoon double-knobbed dog-treat bone icons; the same icon shows up for 'lots'",
-      "fix": "for the body: show the wasted torso/ribs THROUGH the skin ('gaunt, every rib visible under stretched skin'), not loose bones on the ground; for lots: 'small carved animal knucklebones (astragali) in the dust' — never a cartoon dog-bone shape",
-      "provenance": "corpus red-team 2026-07-04: garment_tug + lots_dice_closeup dog-treat bones; complements lots-are-knucklebones-not-dominoes"
+     "bad": "no speech bubbles, no text",
+     "good": "(use the TEXT-FREE style variant; do not mention text at all)"
     }
-  ]
+   ]
+  },
+  {
+   "id": "naming-text-draws-gibberish",
+   "axis": "anti-hallucination",
+   "severity": "warn",
+   "check": "regex",
+   "stage": "still",
+   "pattern": "\\b(no\\s+text|speech\\s*bubbles?|inscriptions?|legible\\s+writing|titulus)\\b",
+   "flags": "i",
+   "message": "any mention of text/writing (even to forbid) renders as gibberish letters",
+   "fix": "use the TEXT-FREE style (STYLE without the 'NO text' clause); leave writing surfaces unmentioned",
+   "provenance": "fft 07 gibberish bubble; feedback-never-animate-writing"
+  },
+  {
+   "id": "nail-renders-as-stud",
+   "axis": "anti-hallucination",
+   "severity": "warn",
+   "check": "regex",
+   "stage": "still",
+   "pattern": "\\b(nails?|spikes?|studs?)\\b",
+   "flags": "i",
+   "message": "PROVEN (probe #1, 10 variants): the WORD 'nail'/'spike' on a palm-forward hand ALWAYS renders a proud vertical nail standing OUT of the palm \u2014 head-shape words (round/flat/disc/square) only change its top; 'spike' adds an arrowhead; a two-hands macro adds finger-wire. ALL 8 nail-worded variants failed; BOTH wound-only variants (no 'nail' word) rendered a clean pierced hole.",
+   "fix": "PASSION pierced hand \u2014 DROP the words nail/spike/metal ENTIRELY and describe only the WOUND: 'a dark ragged pierced hole in the centre of the palm, dark red blood running down toward the wrist'. RISEN: 'one single round healed scar at the centre of the palm, smooth closed pale skin, flat and level' (also never say 'nail'; never 'puckered' \u2192 X-stitches). If a nail MUST appear as a separate object, show it lying flat or from the BACK of the hand, never on a palm-forward hand.",
+   "provenance": "PROBE #1 nail study 2026-07-01 (visual/_probe/nail/compare.html); seedream-no-negative-channel; fft 05/07/06c/01b redo fails"
+  },
+  {
+   "id": "welt-stripe-becomes-xstitch",
+   "axis": "anti-hallucination",
+   "severity": "note",
+   "check": "regex",
+   "stage": "still",
+   "pattern": "\\b(welts?|stripes?|lash(?:es)?|gash(?:es)?|abrasions?)\\b",
+   "flags": "i",
+   "message": "welt/stripe/lash wording draws as X-shaped stitches",
+   "fix": "bruise-only: 'smooth unbroken skin with deep red and purple blotches'",
+   "provenance": "seedream-no-negative-channel"
+  },
+  {
+   "id": "blind-draws-sunglasses",
+   "axis": "anti-hallucination",
+   "severity": "note",
+   "check": "regex",
+   "stage": "still",
+   "pattern": "\\b(blind|clouded eyes|eyes (?:gently )?closed)\\b",
+   "flags": "i",
+   "message": "blind/closed-eye wording draws sunglasses",
+   "fix": "drop it; show infirmity via posture, a staff, or a guiding hand",
+   "provenance": "seedream-no-negative-channel"
+  },
+  {
+   "id": "glow-on-body-neon-limbs",
+   "axis": "anti-hallucination",
+   "severity": "note",
+   "check": "regex",
+   "stage": "still",
+   "pattern": "\\b(glow(?:ing)?|luminous|radiance on (?:the|his|her))\\b",
+   "flags": "i",
+   "message": "'glow/light on the body' renders as neon glowing limbs",
+   "fix": "use 'plain even daylight' or 'a warm shaft of light falls across \u2026'",
+   "provenance": "seedream-no-negative-channel"
+  },
+  {
+   "id": "disembodied-limb",
+   "axis": "anti-hallucination",
+   "severity": "warn",
+   "check": "llm",
+   "stage": "still",
+   "message": "a hand/arm/limb shown alone reads as severed / disembodied",
+   "fix": "connect it: describe the arm continuing to the shoulder + edge of the torso, so it plainly belongs to the figure",
+   "provenance": "fft 05 detached-hand redo 2026-07-01; EW03 disembodied-hand defect"
+  },
+  {
+   "id": "large-object-must-be-grounded",
+   "axis": "physics",
+   "severity": "warn",
+   "check": "llm",
+   "stage": "still",
+   "message": "large objects (cross, throne, altar, pillar) rendered floating unless anchored",
+   "fix": "state it is planted/driven/set into the ground: 'the upright runs unbroken to the earth, its foot set in a heap of stones and packed dust'",
+   "provenance": "fft 06 floating-cross redo 2026-07-01"
+  },
+  {
+   "id": "no-devotional-anachronism",
+   "axis": "biblical",
+   "severity": "warn",
+   "check": "llm",
+   "stage": "still",
+   "message": "1st-century scenes drift a free-standing crucifix / church-style cross / modern religious prop into frame",
+   "fix": "do not mention 'cross' as scenery for ground scenes; for period scenes forbid nothing but describe only period-correct objects",
+   "provenance": "fft 04 devotional-cross artifact redo 2026-07-01"
+  },
+  {
+   "id": "reflected-cross-reads-inverted",
+   "axis": "anti-hallucination",
+   "severity": "note",
+   "check": "regex",
+   "stage": "both",
+   "pattern": "\\bcross\\b[^.]*\\b(reflect\\w*|in the water|mirror\\w*)\\b",
+   "flags": "i",
+   "message": "a cross reflected in water reads as an upside-down/inverted cross on a paused frame",
+   "fix": "keep the cross upright and solid; no reflection",
+   "provenance": "feedback-cross-in-water-inverted (#08)"
+  },
+  {
+   "id": "stills-must-be-biblical-period",
+   "axis": "biblical",
+   "severity": "warn",
+   "check": "llm",
+   "stage": "still",
+   "message": "faces/dress/props drift modern / European / medieval",
+   "fix": "anchor 'ancient Near-Eastern, first-century, period-accurate'; Old-Master / reverent tone; no modern hair, cloth, or objects",
+   "provenance": "feedback-stills-biblical-period-gate; feedback-period-reverent-image-audit"
+  },
+  {
+   "id": "name-the-idol-culture",
+   "axis": "biblical",
+   "severity": "warn",
+   "check": "regex",
+   "stage": "still",
+   "pattern": "\\b(idols?|shrines?|statues?|niches?|pagan)\\b",
+   "flags": "i",
+   "message": "generic 'idol/shrine/statue' defaults the model to BUDDHA statues",
+   "fix": "name the exact culture (e.g. Greco-Roman, the god Pan for Caesarea Philippi)",
+   "provenance": "feedback-idols-must-be-period-culture (#19)"
+  },
+  {
+   "id": "god-father-never-depicted",
+   "axis": "biblical",
+   "severity": "warn",
+   "check": "regex",
+   "stage": "still",
+   "pattern": "\\b(God the Father|the Father'?s? (?:face|figure|form|hand)|Yahweh|depict(?:ing)? God)\\b",
+   "flags": "i",
+   "message": "God/the Father must never be depicted as a figure",
+   "fix": "show only a high radiant light or the effect on people; the prayer is TO the Father, show Jesus + light",
+   "provenance": "nonneg-doctrine-and-christ-lens; fft beat-sheet doctrine note"
+  },
+  {
+   "id": "character-face-consistency",
+   "axis": "character",
+   "severity": "warn",
+   "check": "llm",
+   "stage": "still",
+   "message": "PROVEN (probe #3+#4): a shared text descriptor holds only a FAMILY resemblance (ref-lock is broken); the face drifts most when mood/glory adjectives ('glorified/radiant/joyful/sorrowful') reshape it. STRUCTURAL marks tighten the lock; single SPOT marks (mole) drift/float and add a defect risk",
+   "fix": "use the EXACT same descriptor string every time (don't paraphrase); keep the FACE description NEUTRAL even in emotional scenes \u2014 carry the emotion in posture/hands/light/context, not face-reshaping words. Bake in STRUCTURAL marks (lean face, high cheekbones, aquiline nose) for consistency; do NOT add a mole/spot-mark \u2014 it floats off the cheek or jumps to the forehead",
+   "provenance": "PROBE #3 + #4 face studies 2026-07-01 (visual/_probe/face/ + face_marks/compare.html)"
+  },
+  {
+   "id": "inject-locked-character-ref",
+   "axis": "character",
+   "severity": "warn",
+   "check": "llm",
+   "stage": "both",
+   "message": "a recurring character/object described fresh each time drifts (different face/world)",
+   "fix": "inject the canonical ref_library descriptor verbatim; for long-form attach the locked --image anchor",
+   "provenance": "feedback-episode-world-consistency; base-elements library"
+  },
+  {
+   "id": "eyes-natural-not-supernatural",
+   "axis": "character",
+   "severity": "note",
+   "check": "regex",
+   "stage": "still",
+   "pattern": "\\b(glowing|luminous|red|yellow|supernatural)\\s+eyes\\b",
+   "flags": "i",
+   "message": "supernatural eye wording renders unnatural/uncanny eyes",
+   "fix": "'normal natural human eyes'",
+   "provenance": "base-elements CHARSHEET"
+  },
+  {
+   "id": "no-figures-mid-locomotion",
+   "axis": "physics",
+   "severity": "warn",
+   "check": "llm",
+   "stage": "still",
+   "message": "figures rendered mid-stride get run BACKWARDS when the assembler boomerangs the clip",
+   "fix": "design an arrested/static pose (planted feet, standing, kneeling); atmosphere-dominant, locked camera",
+   "provenance": "physics-motion-check; longform-animation-aware-still-design"
+  },
+  {
+   "id": "particle-words-bloom-glitter",
+   "axis": "anti-hallucination",
+   "severity": "warn",
+   "check": "regex",
+   "stage": "animation",
+   "pattern": "\\b(dust|motes?|sparkles?|glitter|drifting particles?|floating embers?|specks?)\\b",
+   "flags": "i",
+   "message": "veo/kling bloom particle words (dust/motes/sparkles) into an AI-glitter snowstorm",
+   "fix": "strip particle words; use steady-light wording, or a deterministic ffmpeg push-in for glory scenes",
+   "provenance": "feedback-veo-no-glitter-glow; EW01 #13/#18 glitter fix"
+  },
+  {
+   "id": "never-animate-writing",
+   "axis": "anti-hallucination",
+   "severity": "warn",
+   "check": "regex",
+   "stage": "animation",
+   "pattern": "\\b(scroll|titulus|inscription|codex|sign|writing|letters?|verse on)\\b",
+   "flags": "i",
+   "message": "generatively animating writing morphs the letters into garbled text",
+   "fix": "hold as a still or deterministic push-in; design text as illegible marks; keep text in PIL furniture, never in the render",
+   "provenance": "feedback-never-animate-writing"
+  },
+  {
+   "id": "locked-camera-for-boomerang",
+   "axis": "physics",
+   "severity": "note",
+   "check": "llm",
+   "stage": "animation",
+   "message": "a push-in that gets boomeranged becomes a zoom yo-yo",
+   "fix": "boomerang fill needs a LOCKED camera + deep atmosphere; use directional/continuous clips for moving cameras",
+   "provenance": "longform-animation-aware-still-design"
+  },
+  {
+   "id": "framing-sweet-spot",
+   "axis": "composition",
+   "severity": "warn",
+   "check": "llm",
+   "stage": "still",
+   "message": "PROVEN (probe #2): the model is reliably great CLOSE\u2192EPIC-WIDE with ONE dominant subject, but extreme MACRO floats stray composites (a face in the hand) and 'busy/packed/dense/many elements' FRAGMENTS into a multi-panel comic page (even with the ONE clause)",
+   "fix": "compose close\u2192epic-wide with ONE dominant subject; do NOT shoot extreme macro of tiny detail (shoot close instead); for crowded beats use one subject + a SHADOW/silhouette crowd + 2-3 props, never 'busy/packed with detail'",
+   "provenance": "PROBE #2 framing study 2026-07-01 (visual/_probe/framing/compare.html)"
+  },
+  {
+   "id": "animation-clean-still",
+   "axis": "composition",
+   "severity": "note",
+   "check": "llm",
+   "stage": "still",
+   "message": "dense/busy stills (many tiny faces, repeated detail) morph when Kling crop-cuts them",
+   "fix": "one dominant subject, \u22643 faces, crowds\u2192shadow, negative space, no tiny repeated detail",
+   "provenance": "feedback-animation-clean-stills (#19)"
+  },
+  {
+   "id": "comic-must-use-template-library",
+   "axis": "composition",
+   "severity": "block",
+   "check": "structural",
+   "stage": "comic",
+   "message": "a motion COMIC must USE the layout vocabulary (splits, fractures, insets, grids, triptychs) for a viral/epic comic-page rhythm \u2014 an all-'full' single-bleed plan is a slideshow, NOT a comic (this is the failure that shipped: 13/13 beats were 'full')",
+   "fix": "assign a VARIETY of templates across beats: fracture a single dramatic clip into anchored crops (hero_frac3/4, split_v, hero_band3), grid multiple hook/build clips (two_v, stack_h, triptych_v, strip_h3, quad), use big_inset for a main+detail beat; reserve 'full' for the true HERO singles (the red-letter prayer close, the risen-hero landing). No two ADJACENT beats share a template. Target: >= 5 distinct templates, and 'full' on <= ~40% of beats.",
+   "provenance": "fft mocomic all-full failure 2026-07-01 (user: 'we must do all the template to make it viral and epic')"
+  },
+  {
+   "id": "scene-subject-variety",
+   "axis": "composition",
+   "severity": "block",
+   "check": "structural",
+   "stage": "plan",
+   "message": "a scene plan must NOT be mostly 'Christ in various poses' \u2014 it has to mine the narration's depth (the OT prophecy/type layer, the watching crowd + executioners, the human 'us', the cosmic response) or it fails to do justice to the text and the Bible study behind it. Failure that shipped: the fft pilot was 9/12 Christ-centric poses with NO Psalm-22 prophecy layer, NO crowd, NO executioner.",
+   "fix": "tag every scene with a subject_type (christ_hero/christ_detail/christ_risen = Christ-centric; context_scene/ot_echo/human_us/symbolic = the depth layers). Keep Christ-centric <= 60% of scenes; include >= 1 ot_echo (the OT prophecy/type, e.g. Psalm 22:18 'they cast lots upon my vesture'), >= 1 human_us, >= 2 context_scene; never > 2 consecutive Christ-centric scenes. Keep the three anchors (a nail/nailed-hands hook, the red-letter prayer FACE, the risen mercy-hero landing) but let the rest carry the study. Enforced by render_lint.verify.check_scene_subjects (run: python -m render_lint.verify --plan <scene_plan.json>).",
+   "provenance": "fft over-uses-Jesus-in-poses 2026-07-01 (user: 'we are not doing justice to the narration... just over using jesus in various poses')"
+  },
+  {
+   "id": "full-bleed-no-internal-frame",
+   "axis": "composition",
+   "severity": "note",
+   "check": "regex",
+   "stage": "still",
+   "pattern": "\\b(gold frame|ornate frame|inside a frame|pillarbox|bordered)\\b",
+   "flags": "i",
+   "message": "frame/border wording draws a picture-frame pillarbox inside the image",
+   "fix": "'ONE single full-bleed illustration filling the entire frame, no border or divider'",
+   "provenance": "EW01 gold-frame pillarbox fix"
+  },
+  {
+   "id": "no-brand-or-modern-logo",
+   "axis": "anti-hallucination",
+   "severity": "block",
+   "check": "llm",
+   "stage": "still",
+   "message": "a coin / shield / seal / banner renders a MODERN BRAND or POP-CULTURE emblem (a Batman bat-wing, a corporate mark) or a neoclassical Western portrait, instead of a period device",
+   "fix": "PURE-POSITIVE and keep it small/soft: 'a small worn ancient silver coin, a faint indistinct archaic head in low relief, edges corroded' \u2014 never describe a crest / emblem / logo / detailed face; a legible modern device on a prop is the tell",
+   "provenance": "corpus red-team 2026-07-04: thirty_pieces Batman bat-wing on the coins (thirty_coins_scatter, silver_and_blood)"
+  },
+  {
+   "id": "no-style-drift-keep-house-ink",
+   "axis": "composition",
+   "severity": "block",
+   "check": "regex",
+   "stage": "still",
+   "pattern": "\\b(anime|manga|chibi|cel[- ]?shad\\w*|ukiyo[- ]?e|hokusai|woodblock|water ?colou?r|photoreal\\w*|photo[- ]?realistic|3d ?render|pixar|disney|baroque oil|oil painting|impasto)\\b",
+   "flags": "i",
+   "message": "naming a foreign art style pulls the still off the inked graphic-novel house look; even unprompted, individual stills drift into anime/cel-shade, ukiyo-e/Hokusai wave, watercolour, photoreal, or soft painterly Baroque and read as a different artist beside their siblings",
+   "fix": "use ONLY the project INK style string verbatim; never name another medium/artist; post-render, reject any still that does not match the bold-black-ink line look of the set (a whole-scene Hokusai 'Great Wave' or glossy anime face = redo)",
+   "provenance": "corpus red-team 2026-07-04: ocean_creation_wide (Hokusai), risen_mercy_hand/john_watching/mary_infant_shadow (anime cel-shade), david/shepherd stills (painterly)"
+  },
+  {
+   "id": "no-classical-or-islamic-or-medieval-skyline",
+   "axis": "biblical",
+   "severity": "block",
+   "check": "regex",
+   "stage": "still",
+   "pattern": "\\b(parthenon|acropolis|corinthian|ionic|doric|pediment|colonnade|onion dome|golden dome|dome of the rock|minaret|gothic|pointed arch|leaded glass|lattice glass|crenellat\\w*|castellat\\w*|battlement|campanile|bell[- ]?tower)\\b",
+   "flags": "i",
+   "message": "period-Jerusalem skylines drift wrong-culture: a Greek/Parthenon colonnade+pediment temple, an Islamic golden onion dome (Dome of the Rock) or minaret, or a medieval Gothic/crenellated/leaded-glass building \u2014 all centuries out of place",
+   "fix": "describe ONLY period architecture: flat-roofed pale limestone houses, plain stone walls, round/flat Roman arches, unglazed window openings; the temple is the plain Second-Temple stone platform (Zerubbabel-era for pre-exilic prophets, Herodian for the crucifixion) \u2014 never a dome, minaret, pointed arch, colonnade-and-pediment, or battlement",
+   "provenance": "corpus red-team 2026-07-04: gethsemane_olives_night (Greek temple x2 pieces), zechariah_night_scroll + storm_over_jerusalem (Dome of the Rock/minaret), synagogue_listeners_lean + ninth_hour_darkness (Gothic/leaded-glass/castellated)"
+  },
+  {
+   "id": "no-glass-or-metal-lantern",
+   "axis": "biblical",
+   "severity": "block",
+   "check": "regex",
+   "stage": "still",
+   "pattern": "\\b(lantern|hurricane lamp|kerosene|oil lamp with a? ?glass|glass ?(?:globe|chimney)|carriage lamp|sconce|chamberstick|candlestick)\\b",
+   "flags": "i",
+   "message": "night/scribe scenes light by a modern GLASS hurricane/kerosene/carriage lantern or a wax candle in a candlestick \u2014 anachronistic; even a correct clay lamp is drawn with the wick standing in the CENTRE of the bowl like a candle",
+   "fix": "a single low clay oil lamp: 'a small pinched-spout clay oil lamp, a low warm flame at its rim/spout' \u2014 never glass, never a chimney/globe, never a candlestick, never a central upright wick",
+   "provenance": "corpus red-team 2026-07-04: candle/lantern trap corpus-wide (david_old_deathbed, disputed_word_marks, old_king_hands_rings glass lanterns; child_eyes_closing/child_sleeping_lamp central-wick hybrids); complements no-freestanding-candle-outdoors"
+  },
+  {
+   "id": "only-one-christ-never-in-the-crowd",
+   "axis": "biblical",
+   "severity": "block",
+   "check": "llm",
+   "stage": "still",
+   "message": "a second Christ-lookalike (white robe, long centre-parted hair, beard) is drawn STANDING AMONG the mourner / 'us' / sinner crowd, while Christ is also the figure on the cross \u2014 two Christs, and doctrinally He is the one lifted up, not one of the guilty crowd",
+   "fix": "the crowd/'us' figures are ordinary distinct people (vary age, build, hair, dress); reserve the Christ face+robe for the single Christ subject; when the beat is people beneath the cross, give them common tunics and covered heads, never the Christ likeness",
+   "provenance": "corpus red-team 2026-07-04: us_under_cross_shadow Christ-double in 4 pieces (a shared reuse-bank still)"
+  },
+  {
+   "id": "no-cloned-face-or-faceless-blob",
+   "axis": "character",
+   "severity": "warn",
+   "check": "llm",
+   "stage": "still",
+   "message": "a crowd renders as the SAME face repeated (identical beard/nose/hairline) or drops a faceless dark void/blob figure at a focal point",
+   "fix": "give each visible crowd member distinct features (age/build/hair/expression); push true background figures to clean silhouettes at the EDGES, never a featureless blob in the centre; keep <=3 detailed faces and let the rest be shadow",
+   "provenance": "corpus red-team 2026-07-04: us_under_cross_shadow cloned trio + centre faceless void; look_up_faces three cloned Jesus faces"
+  },
+  {
+   "id": "crucifixion-continuity-crown-and-occupied-cross",
+   "axis": "biblical",
+   "severity": "warn",
+   "check": "llm",
+   "stage": "still",
+   "message": "within one piece the crucified Christ is INCONSISTENT \u2014 crowned with thorns in one cut and bare-headed in the sibling cut; or the central cross is drawn EMPTY during a beat where He is still hanging (casting lots, mocking, the ninth-hour darkness)",
+   "fix": "standardise crown-of-thorns PRESENT on EVERY cross frame in a piece (add it where missing, never strip it); during any hanging beat the central cross must bear Christ \u2014 a bare cross is only legitimate at dawn/empty-tomb beats",
+   "provenance": "corpus red-team 2026-07-04: crown present/absent split across forsaken_cry/i_thirst/into_thy_hands/woman_behold/crucifixion_foretold; empty-cross-during-lots in seamless_robe_lots (2 pieces)"
+  },
+  {
+   "id": "one-fixing-method-per-body",
+   "axis": "physics",
+   "severity": "warn",
+   "check": "llm",
+   "stage": "still",
+   "message": "the SAME crucified body is fixed two ways at once \u2014 a nail through one hand but the other wrist and/or the feet lashed with rope/cord",
+   "fix": "commit to ONE method for the whole body: if nailed, nail both hands and the feet (no rope on wrists/ankles); if the scene needs binding, rope all points \u2014 never mix nail on one hand and rope on the other",
+   "provenance": "corpus red-team 2026-07-04: golgotha_hill_wide nailed-one-side/roped-the-other in into_thy_hands/forsaken_cry/pierced_zech1210/woman_behold"
+  },
+  {
+   "id": "no-finery-on-a-stripped-victim",
+   "axis": "biblical",
+   "severity": "warn",
+   "check": "llm",
+   "stage": "still",
+   "message": "a crucified figure (Christ or a thief) wears an ornate embroidered robe, gold-trim cuffs, or jewellery \u2014 but a crucifixion victim was stripped",
+   "fix": "the crucified body wears only a plain undyed loincloth; no robe, no gold trim, no collar, no jewellery, no coloured finery",
+   "provenance": "corpus red-team 2026-07-04: today_paradise confession_face_hands ornate red robe + gold cuff on a roped man"
+  },
+  {
+   "id": "no-modern-footwear-or-gear",
+   "axis": "biblical",
+   "severity": "warn",
+   "check": "llm",
+   "stage": "still",
+   "message": "modern objects slip in on figures/props: a closed rounded shoe/loafer (feet should be open leather sandals), athletic tape wrapping a hand, a wristwatch, eyeglasses, a screw bench-vise on a workbench, or a telegraph/utility pole with strung wire on a rooftop",
+   "fix": "feet wear open strap sandals or are bare; a carpenter's bench uses wooden pegs/holdfasts (no metal screw-vise); rooftops carry only period masts/none, no wires; hands are bare skin with wounds, never taped",
+   "provenance": "corpus red-team 2026-07-04: jesus_stands_over_sleepers/jesus_leads_three loafers, 05_pierced_hand sports-tape, carpenter_bench_rest screw-vise, 04/01c telegraph poles"
+  },
+  {
+   "id": "bones-and-lots-not-cartoon",
+   "axis": "anti-hallucination",
+   "severity": "warn",
+   "check": "regex",
+   "stage": "still",
+   "pattern": "\\b(bones?|skeleton|rib cage|dog[- ]?treat)\\b",
+   "flags": "i",
+   "message": "the word 'bones' (e.g. Ps 22 'all my bones are out of joint') renders as cartoon double-knobbed dog-treat bone icons; the same icon shows up for 'lots'",
+   "fix": "for the body: show the wasted torso/ribs THROUGH the skin ('gaunt, every rib visible under stretched skin'), not loose bones on the ground; for lots: 'small carved animal knucklebones (astragali) in the dust' \u2014 never a cartoon dog-bone shape",
+   "provenance": "corpus red-team 2026-07-04: garment_tug + lots_dice_closeup dog-treat bones; complements lots-are-knucklebones-not-dominoes"
+  },
+  {
+   "id": "empty-grave-clothes-draw-a-corpse",
+   "axis": "doctrine",
+   "severity": "warn",
+   "check": "regex",
+   "pattern": "(grave clothes|burial cloth|linen).*(ledge|slab|bench|lying)",
+   "stage": "still",
+   "message": "asking for 'linen grave clothes lying on a ledge' makes seedream draw a CORPSE inside/under the cloth (3 consecutive failures on empty_tomb_john208, incl. a bare-torso body) - fatal for an EMPTY-tomb beat | WARN not block: the FIX pattern (overhead + completely-flat + wide bare stone around) also matches this regex; the eye audit is the hard gate",
+   "fix": "describe the emptiness POSITIVELY and change the camera: 'seen from directly above... linen sheet spread out open and lying paper-flat... thin as a single bedsheet... wide empty bare stone visible all around it'. Never write 'empty/no body' (names the noun).",
+   "provenance": "empty_tomb_john208 2026-07-09: v1 undisturbed-linen -> full shrouded corpse; v2 collapsed/hollow -> bare-torso corpse; v3 overhead+discarded-garment -> volumetric bundle; v4 paper-flat bedsheet overhead -> CLEAN"
+  }
+ ]
 }

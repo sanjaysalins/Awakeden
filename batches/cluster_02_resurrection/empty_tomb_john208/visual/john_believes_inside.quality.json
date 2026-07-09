@@ -1,0 +1,14 @@
+{
+  "slug": "john_believes_inside",
+  "hash": "eea62b96e4e63bd3",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true
+  },
+  "notes": "in-chat agent v2 rubric pass after adversarial re-roll 2026-07-09",
+  "reviewer": "in-chat-agent"
+}

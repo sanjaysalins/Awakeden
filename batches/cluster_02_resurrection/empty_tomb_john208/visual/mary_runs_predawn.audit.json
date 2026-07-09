@@ -1,0 +1,10 @@
+{
+  "image": "mary_runs_predawn.png",
+  "verdict": "PASS",
+  "flags": [
+    "in-chat-agent full-res: veiled woman urgent run, anatomy clean, period clean",
+    "NOTE background tomb glows from inside (invented light) - user gallery call"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

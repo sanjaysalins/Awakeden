@@ -1,0 +1,9 @@
+{
+  "image": "linen_left_lying.png",
+  "verdict": "PASS",
+  "flags": [
+    "in-chat-agent full-res v2: overhead paper-flat sheet, clearly cloth, no body volume, no sky misread"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

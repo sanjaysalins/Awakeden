@@ -1,0 +1,9 @@
+{
+  "image": "jesus_shows_thomas.png",
+  "verdict": "PASS",
+  "flags": [
+    "in-chat-agent full-res: anchor-consistent Christ, wounded palms toward kneeling Thomas, lamplit upper room, anatomy clean"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

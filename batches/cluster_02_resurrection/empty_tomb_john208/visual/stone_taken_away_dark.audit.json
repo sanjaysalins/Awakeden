@@ -1,0 +1,9 @@
+{
+  "image": "stone_taken_away_dark.png",
+  "verdict": "PASS",
+  "flags": [
+    "in-chat-agent full-res v2: stone fully aside, doorway open black, pre-dawn"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

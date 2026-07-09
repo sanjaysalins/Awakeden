@@ -1,0 +1,10 @@
+{
+  "image": "john_believes_inside.png",
+  "verdict": "PASS",
+  "flags": [
+    "in-chat-agent full-res v2: short-hair young John (no Jesus misread), wonder-lit face",
+    "nit: sheet edge drapes slightly"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

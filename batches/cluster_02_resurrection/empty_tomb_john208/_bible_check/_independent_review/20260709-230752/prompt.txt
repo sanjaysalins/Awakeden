@@ -1,0 +1,61 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: biblical-facts
+
+LENS — judge this BIBLICAL FACT SHEET (the Scripture-cited facts about
+location / time / place / customs / characters that a set of devotional paintings must
+honour). Be specific, cite the exact fact + reference:
+- CITATION TRUTH (most important): for every fact, does the quoted KJV text (shown under
+  each fact) ACTUALLY support the claim? Flag any claim the cited verse does NOT state, any
+  over-reach beyond what the verse says, and any citation that looks wrong/misapplied.
+- NO INVENTED FACTS: nothing asserted as biblical that Scripture does not actually say.
+  Tradition or commonplace-but-unbiblical detail (e.g. a number, a colour, an object the
+  text never mentions) must NOT be in the 'specified' bucket.
+- BUCKETS ARE HONEST: 'specified' = the Bible explicitly states this visual fact; 'constrained'
+  = not stated but a depiction could contradict the text; 'free' = artistic licence. Flag any
+  fact in the wrong bucket (especially licence dressed up as 'specified').
+- HISTORY STAYS SECONDARY: any historical_note must never override or contradict Scripture; flag
+  any that does, or that is presented as if it were biblical.
+- CHRIST-LENS INTACT: the facts must not distort the passage's witness to Christ / its typology.
+- COVERAGE: are there obvious, checkable biblical facts about these scenes that are MISSING
+  (a specified detail the painting could easily get wrong and no fact guards it)?
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block (on the VERDICT line write exactly ONE word —
+PASS or REVISE or FAIL — never the list of options):
+
+VERDICT: <PASS or REVISE or FAIL>
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# Biblical fact sheet — empty_tomb_john208 (drives + checks the stills)
+
+Buckets: **specified** = the Bible states it (image MUST match) · **constrained** = must not
+contradict (period/archaeology, secondary to Scripture) · **free** = licence.
+
+## The tomb itself
+- **[SPECIFIED]** A NEW rock-cut tomb in a GARDEN, near the crucifixion site: "Now in the place where he was crucified there was a garden; and in the garden a new sepulchre, wherein was never man yet laid" (John 19:41). "his own new tomb, which he had hewn out in the rock" (Matthew 27:60). Image: tomb hewn into living rock in a cultivated garden — never a freestanding masonry building, mausoleum or dome.
+- **[SPECIFIED]** The entrance is LOW — you must STOOP to look in: "And he stooping down, and looking in, saw the linen clothes lying" (John 20:5); "she stooped down, and looked into the sepulchre" (John 20:11); "stooping down, he beheld the linen clothes laid by themselves" (Luke 24:12). Image: small crawl-height square opening (~1 m), NEVER a tall standing-height doorway.
+- **[SPECIFIED]** A GREAT STONE was ROLLED to (and away from) the door: "he rolled a great stone to the door of the sepulchre" (Matthew 27:60); "Who shall roll us away the stone...? for it was very great" (Mark 16:3-4); "seeth the stone taken away from the sepulchre" (John 20:1). Image: a massive disc/round stone RESTING OUTSIDE beside the opening (rolled aside in its channel) — never inside the chamber, never small.
+- **[SPECIFIED]** The interior burial place is a rock SHELF/BENCH with a head-end and a foot-end, visible from the entrance when stooping: the linen was seen from OUTSIDE (John 20:5); angels later sat "the one at the head, and the other at the feet, where the body of Jesus had lain" (John 20:12); "sitting on the right side" (Mark 16:5). Image: waist-low hewn bench/arcosolium along the chamber wall — never a sunken pit, trough, coffin or sarcophagus.
+- **[CONSTRAINED]** 1st-century Judean rock-cut tomb: low hewn chamber (a grown man bends inside), tool-marked walls, disc stone runs in a cut groove/track across the facade. No columns, no steps up, no church forms, no candles/lamps burning inside.
+
+## The grave clothes
+- **[SPECIFIED]** PLURAL wound linen cloths, packed with spices: "wound it in linen clothes with the spices, as the manner of the Jews is to bury" (John 19:40); "a mixture of myrrh and aloes, about an hundred pound weight" (John 19:39); "saw the linen clothes lying" (John 20:5). Image: wound linen WRAPPINGS lying collapsed on the bench — layered strips/folds with residual bulk from the spices, visibly EMPTY (no head, no limbs, no body silhouette) — never one flat bedsheet, never a wrapped bundle that reads as a body.
+- **[SPECIFIED]** The face-napkin is SEPARATE and wrapped together: "the napkin, that was about his head, not lying with the linen clothes, but wrapped together in a place by itself" (John 20:7). Image: small rolled/folded cloth apart from the wrappings, at the HEAD-end of the bench.
+
+## People and time
+- **[SPECIFIED]** Mary Magdalene comes EARLY, WHILE IT IS STILL DARK, finds the stone already moved, and RUNS to Peter and John: "cometh Mary Magdalene early, when it was yet dark, unto the sepulchre, and seeth the stone taken away" (John 20:1-2). Image: pre-dawn darkness; the tomb is DARK — no light glowing from inside, no angel visible in her discovery/running beats.
+- **[SPECIFIED]** Peter and John RAN together; John outran Peter; Peter entered first, John entered after and believed (John 20:4-8). Image: two men running hard; inside-the-tomb beats show a man BENT/CROUCHED under the low chamber (he "went in" through a stooping entrance).
+- **[SPECIFIED]** The risen Jesus later SHOWS the wounds in his hands (John 20:20, 20:27); he is alive, whole, serene. **[CONSTRAINED]** no gore, no crown of thorns on the risen Christ.
+- **[CONSTRAINED]** Dress: 1st-century Judean — simple wool tunics, mantle drawn over a woman's head, leather sandals, muted natural dyes. No flowing white nun-like habit, no bright synthetic colors.
+
+## Free (artistic licence — not checked)
+- Palette, ink style, dramatic sky/sun scale, light rays OUTSIDE the tomb, composition, olive trees and garden planting, the exact shape of hills.
+
+Derived 2026-07-09 (agent-mode) from John 19:38-42; John 20:1-12, 20:20, 20:27; Matthew 27:59-60; Mark 16:3-5; Luke 24:12. KJV quotes verbatim. Historical notes are secondary and never override Scripture.
+----- ARTIFACT END -----

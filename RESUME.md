@@ -1,6 +1,29 @@
-# RESUME — next session (updated 2026-07-09 close)
+# RESUME — next session (updated 2026-07-09 LATE close — Empty Tomb mid-pipeline)
 
-## NEXT SESSION AGENDA (user-agreed 2026-07-09):
+## ⚡ NEXT SESSION FIRST THING: Empty Tomb (M1 short #1) — ONE user decision, then animate→ship
+Piece: `batches\cluster_02_resurrection\empty_tomb_john208\`  ·  board: `cli_livingpage.py "<piece>"`
+
+**DONE (this session, ~$1.60 spent):**
+- **Narration v4 LOCKED** (user hand-tuned; 3 in-chat panel rounds + user rounds; every doctrinal/KJV/grace flag fixed; hook = "Someone took the body. That was Mary's first thought…"; landing = "Believe what John believed at the linen — the Lord is risen"). `.locked` current.
+- **Audio v4 = 102.10s, user-approved BY EAR (GATE 1)** → `audio\narration.mp3` + `alignment.json` (267 words, current) + `narration.meta.json` (turn table).
+- **9 stills rendered + PASS-audited** (in-chat full-res eye, fail-closed sidecars written via `render_lint\verify.py --record`); **8 human-approved (GATE 2)**; `jesus_shows_thomas` added AFTER approval (agent-PASS, needs user nod). Adversarial reviewer round forced 4 re-rolls (all clean now). Stills gate GREEN.
+- **Spec written:** `visual\livingpage_short.spec.json` — 19 beats / 102.10s, timed to the synth turn boundaries (Mary redletter JOHN 20:2, JESUS redletter JOHN 20:29, WHAT-THIEF punch, heartbeat 40–49.7s, Christ close w/ border-break "THE LORD IS RISEN").
+- **2 banked clips propagated $0** into `visual\clips\` (stone_rolled_dawn, risen_christ_wounds + .src.sha + .flowqc.json from sign_of_jonah).
+- **New lint rule live:** `empty-grave-clothes-draw-a-corpse` (render_lint/rules.json; user downgraded block→warn) — "linen lying on ledge" prompts draw a CORPSE; use the paper-flat/collapsed-folds formula.
+
+**▶ PENDING USER DECISION (ask first):** user rewrote **7 still prompts** in piece.json to the accurate low-crawl-opening tomb world (stone disc in groove track, layered wound cloths + spice dust, John bent low). piece.json = new truth; PNGs on disk = OLD world (the approved set). Options quoted in-chat before break:
+  (a) re-render 7 (~$0.35) → re-eyeball → user re-approves gallery → Kling 8 clips (~$5.20; stone_rolled_dawn propagation breaks);
+  (b) keep approved PNGs → Kling 7 (~$4.55; both propagations survive); new prompts stay for future pieces.
+
+**THEN the rest of the lane:** `run_piece.py --stage animate` (stills_gate --check is GREEN; ask-before-spend the Kling batch) → build `longform\02_Psalm_22_Song_From_The_Cross\build_livingpage_16x9.py --pool "<piece>\visual" --spec livingpage_short.spec.json --clips --page 1080x1920 --no-ticks` → **fix score block BEFORE `--stage score`**: base_seconds 59.0→102.10, dips from alignment (Mary quote 13.6–18.32 + napkin 25.52–32.08 + beatitude 79.76–84.48), cta_meta phrase → v4 landing ("Believe what John believed"), pair stays lonely_searching_a → glory_holy_stillness_a (S2 interim per SEASON_SCORES.md) → /sfx → `--stage register` → /publish. Bib_validate keys on the spec (now present).
+
+**Piece 2 next:** Women as First Witnesses (Matt 28:1-10 / Mark 16:1-8) — NOT started. Distinct spine = the angel announcement + women as first witnesses (Empty Tomb deliberately contains NO angel; don't collide).
+
+---
+
+# PRIOR (2026-07-09 morning close — website day)
+
+## AGENDA (user-agreed 2026-07-09):
 1. **Month 1 shorts** — The Empty Tomb + Women as First Witnesses (reuse-first off
    the banked cluster_02 tomb/risen world - stills exist: stone_rolled_dawn,
    three_days_dark_tomb, risen_christ_wounds, body_laid_in_tomb + JESUS.png anchor

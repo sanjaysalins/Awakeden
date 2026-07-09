@@ -1,0 +1,9 @@
+{
+  "image": "napkin_wrapped_apart.png",
+  "verdict": "PASS",
+  "flags": [
+    "in-chat-agent full-res: rolled napkin alone on upper step, flat linen apart below - John 20:7 exact"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

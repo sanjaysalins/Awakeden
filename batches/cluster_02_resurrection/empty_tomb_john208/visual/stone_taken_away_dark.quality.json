@@ -1,0 +1,14 @@
+{
+  "slug": "stone_taken_away_dark",
+  "hash": "574b0363ffe8b060",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true
+  },
+  "notes": "in-chat agent v2 rubric pass after adversarial re-roll 2026-07-09",
+  "reviewer": "in-chat-agent"
+}

@@ -1,0 +1,114 @@
+{
+  "_purpose": "Website depth content for the read page (build_readpage.py). Pattern rows and meat cards are new public doctrinal claims: KJV strings must stay verbatim KJV.",
+  "splash_beat": 15,
+  "splash_text": "",
+  "_splash_note": "Panel 15 already carries a baked-in HE ROSE caption box, so no roar overlay. For future pieces: design the splash frame caption-free and put the roar in splash_text.",
+  "pattern_lead": "Jonah is the shadow. Jesus is the man casting it.",
+  "pattern": [
+    {
+      "ot": {
+        "who": "Jonah, about 780 BC",
+        "claim": "Offers himself to the sea to save the men on the ship.",
+        "ref": "Jonah 1:12",
+        "kjv": "Take me up, and cast me forth into the sea; so shall the sea be calm unto you."
+      },
+      "nt": {
+        "who": "Jesus, about AD 33",
+        "claim": "Lays his life down. No one takes it from him.",
+        "ref": "John 10:18",
+        "kjv": "No man taketh it from me, but I lay it down of myself."
+      }
+    },
+    {
+      "ot": {
+        "who": "Jonah",
+        "claim": "Goes down guilty. The storm was his own.",
+        "ref": "Jonah 1:12",
+        "kjv": "For I know that for my sake this great tempest is upon you."
+      },
+      "nt": {
+        "who": "Jesus",
+        "claim": "Goes down innocent. The storm was ours.",
+        "ref": "Isaiah 53:6",
+        "kjv": "The LORD hath laid on him the iniquity of us all."
+      }
+    },
+    {
+      "ot": {
+        "who": "Jonah",
+        "claim": "Three days and three nights in the belly of the fish.",
+        "ref": "Jonah 1:17",
+        "kjv": "And Jonah was in the belly of the fish three days and three nights."
+      },
+      "nt": {
+        "who": "Jesus",
+        "claim": "Three days and three nights in the heart of the earth.",
+        "ref": "Matthew 12:40",
+        "kjv": "So shall the Son of man be three days and three nights in the heart of the earth."
+      }
+    },
+    {
+      "ot": {
+        "who": "Jonah",
+        "claim": "Cries from the belly of hell, and is heard.",
+        "ref": "Jonah 2:2",
+        "kjv": "Out of the belly of hell cried I, and thou heardest my voice."
+      },
+      "nt": {
+        "who": "Jesus",
+        "claim": "Death was not able to hold him.",
+        "ref": "Acts 2:24",
+        "kjv": "Whom God hath raised up, having loosed the pains of death: because it was not possible that he should be holden of it."
+      }
+    },
+    {
+      "ot": {
+        "who": "Jonah",
+        "claim": "The deep gives him back to the dry land, alive.",
+        "ref": "Jonah 2:10",
+        "kjv": "And it vomited out Jonah upon the dry land."
+      },
+      "nt": {
+        "who": "Jesus",
+        "claim": "The tomb could not hold him. Empty.",
+        "ref": "Matthew 28:6",
+        "kjv": "He is not here: for he is risen, as he said."
+      }
+    }
+  ],
+  "pattern_note": "This is what Awakeden means by seeing Jesus in the whole Bible: the Old Testament draws the outline, the New Testament fills it in.",
+  "meat": [
+    {
+      "title": "Why 'sign' is a loaded word",
+      "body": "The scribes wanted a miracle performed on demand: proof without surrender. Jesus refuses their demand; that sign-seeking generation gets one sign only, the sign of Jonah: his death, burial and rising. He stakes the whole claim on it. If the tomb is not empty, you can walk away. That is not how frauds talk.",
+      "ref": "Matthew 12:39",
+      "kjv": "An evil and adulterous generation seeketh after a sign; and there shall no sign be given to it, but the sign of the prophet Jonas."
+    },
+    {
+      "title": "A psalm sung inside a grave",
+      "body": "Jonah chapter 2 is a song, prayed from inside the fish in the language of the Psalms. Psalm 42:7 cries: all thy waves and thy billows are gone over me. Jonah prays that psalm-language back to God from inside what should have been his tomb, certain he will be heard. A thousand years of Scripture later, another Man went into the grave with a psalm on his lips.",
+      "ref": "Jonah 2:3",
+      "kjv": "All thy billows and thy waves passed over me."
+    },
+    {
+      "title": "Two sleepers, two storms",
+      "body": "Jonah slept in the hold while the storm raged (Jonah 1:5). Jesus slept in the stern while the storm raged (Mark 4:38). Both were shaken awake by terrified men afraid to perish. The sea calmed when Jonah was thrown in. The sea calmed when Jesus simply spoke. Same scene, utterly different man.",
+      "ref": "Mark 4:39",
+      "kjv": "Peace, be still. And the wind ceased, and there was a great calm."
+    },
+    {
+      "title": "A greater than Jonas is here",
+      "body": "Jonah preached one reluctant sermon and a whole violent city repented in sackcloth. Jesus' point cuts: pagan Nineveh repented at the lesser prophet, while the experts stood in front of the greater One and demanded paperwork.",
+      "ref": "Matthew 12:41",
+      "kjv": "They repented at the preaching of Jonas; and, behold, a greater than Jonas is here."
+    }
+  ],
+  "today": {
+    "q": "Show me a sign and I'll believe.",
+    "paras": [
+      "That is still the deal we offer God. Prove yourself first, fix this diagnosis, this marriage, this bank balance, and then I'll listen. Jesus answered that demand with one sign: a grave that could not keep him.",
+      "And Jonah is in the story for the ones who are running. He did not drift from God; he bought a ticket in the opposite direction, because he knew exactly how merciful God is and hated it. If you have gone down that far on purpose, the fish is the point: the deep you chose is not deeper than the mercy that follows you into it.",
+      "Stop running, and turn. The One who went down into your dark and rose again is Jesus. Come up out of the deep, and live."
+    ]
+  }
+}

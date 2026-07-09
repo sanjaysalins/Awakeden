@@ -1,0 +1,14 @@
+{
+  "slug": "jesus_shows_thomas",
+  "hash": "48d44cf601703492",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true
+  },
+  "notes": "in-chat agent full-res rubric pass 2026-07-09",
+  "reviewer": "in-chat-agent"
+}
