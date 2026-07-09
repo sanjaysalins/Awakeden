@@ -1,23 +1,33 @@
-# RESUME — next session (updated 2026-07-09 LATE close — Empty Tomb mid-pipeline)
+# RESUME — next session (updated 2026-07-09 NIGHT close — FACT-CARDS-FIRST directive + Empty Tomb collision state)
 
-## ⚡ NEXT SESSION FIRST THING: Empty Tomb (M1 short #1) — ONE user decision, then animate→ship
-Piece: `batches\cluster_02_resurrection\empty_tomb_john208\`  ·  board: `cli_livingpage.py "<piece>"`
+## 🔒 NEW STANDING DIRECTIVE (user, 2026-07-09 night)
+User reviewed the Empty Tomb stills: "it feels like the stills were made with imagination, rather than
+grounding it in the Bible and the biblical times." Decision: **"even if it means a rebuild of every still
+and animation we have done, we need to fix this issue with how our stills are made."**
+→ **FACT-CARDS-FIRST is now the order of operations**: derive + 5-CLI-panel the `_bible_check/fact_sheet.md`
+BEFORE writing any still prompt; prompts are driven FROM the cards; eye-audit vs the cards; never prompt
+from memory of the passage. Bucket discipline (panel-corrected): SPECIFIED = only what KJV asserts;
+archaeology/typology = CONSTRAINED. Memory updated: `every-still-biblically-driven`. Corpus rebuild = task #4.
 
-**DONE (this session, ~$1.60 spent):**
-- **Narration v4 LOCKED** (user hand-tuned; 3 in-chat panel rounds + user rounds; every doctrinal/KJV/grace flag fixed; hook = "Someone took the body. That was Mary's first thought…"; landing = "Believe what John believed at the linen — the Lord is risen"). `.locked` current.
-- **Audio v4 = 102.10s, user-approved BY EAR (GATE 1)** → `audio\narration.mp3` + `alignment.json` (267 words, current) + `narration.meta.json` (turn table).
-- **9 stills rendered + PASS-audited** (in-chat full-res eye, fail-closed sidecars written via `render_lint\verify.py --record`); **8 human-approved (GATE 2)**; `jesus_shows_thomas` added AFTER approval (agent-PASS, needs user nod). Adversarial reviewer round forced 4 re-rolls (all clean now). Stills gate GREEN.
-- **Spec written:** `visual\livingpage_short.spec.json` — 19 beats / 102.10s, timed to the synth turn boundaries (Mary redletter JOHN 20:2, JESUS redletter JOHN 20:29, WHAT-THIEF punch, heartbeat 40–49.7s, Christ close w/ border-break "THE LORD IS RISEN").
-- **2 banked clips propagated $0** into `visual\clips\` (stone_rolled_dawn, risen_christ_wounds + .src.sha + .flowqc.json from sign_of_jonah).
-- **New lint rule live:** `empty-grave-clothes-draw-a-corpse` (render_lint/rules.json; user downgraded block→warn) — "linen lying on ledge" prompts draw a CORPSE; use the paper-flat/collapsed-folds formula.
+## ⚠️ COLLISION NOTICE — TWO sessions worked empty_tomb_john208 on 07-09; current disk truth:
+A late session (this one) ran unaware of the earlier session's GATE approvals. Net state on disk NOW:
+- **narration.md = v5** (redundancy-only duration trim of the panel-passed v4; 3 panel rounds claude PASS x3; earned gate PASS; ALL KJV verbatim kept). The earlier "user hand-tuned v4" wording was extended by panel fixes then trimmed — re-read it tomorrow before anything else.
+- **audio/narration.mp3 = v5 @ 79.07s (atempo 1.18)** — this OVERWROTE the ear-approved v4 @ 102.10s mp3 (GATE 1 approval is therefore VOID; the 102.10s file is not recoverable). `alignment.json` + the 19-beat `visual/livingpage_short.spec.json` are timed to the OLD 102.10s audio → BOTH STALE.
+- **7 stills RE-RENDERED from fact-card-driven prompts** (low stooping entrance per John 20:5/20:11, disc stone in groove, bench with wound plural linen, John bent low). The earlier GATE-2-approved PNGs were deleted per the redo rule — superseded by the user's rebuild directive anyway. `jesus_shows_thomas.png` (other session) survives. Old audit/quality sidecars + `_review/` gallery are hash-stale (correct: fail-closed).
+- **`_bible_check/fact_sheet.md` v2** — panel-corrected (5/5 convergent flags applied: buckets tightened to the text, hands-AND-side John 20:20/27, John-waited-outside 20:4-8, angels out of scope, Mark 16:5 dropped).
+- Spend 07-09 night session: ~$2.75 total (12+7 seedream stills ~$0.95, 3 synth passes ~$1.50, re-rolls).
 
-**▶ PENDING USER DECISION (ask first):** user rewrote **7 still prompts** in piece.json to the accurate low-crawl-opening tomb world (stone disc in groove track, layered wound cloths + spice dust, John bent low). piece.json = new truth; PNGs on disk = OLD world (the approved set). Options quoted in-chat before break:
-  (a) re-render 7 (~$0.35) → re-eyeball → user re-approves gallery → Kling 8 clips (~$5.20; stone_rolled_dawn propagation breaks);
-  (b) keep approved PNGs → Kling 7 (~$4.55; both propagations survive); new prompts stay for future pieces.
+## ⚡ NEXT SESSION ORDER (Empty Tomb pilot first, then corpus)
+1. **User decisions (ask FIRST):**
+   (a) AUDIO: keep v5 words @79.07s (needs a fresh ear-check) OR revert narration to v4 wording and re-synth (~$0.50) to recover the approved longer read. Then regenerate `alignment.json` (force) + retime the livingpage spec (scene-window staleness rule).
+   (b) STILLS: open the rebuilt fact-driven set full-res (eye-audit vs fact_sheet v2 + fresh sidecars + `stills_gate.py --build` FIRST, then give the user the gallery link) → GATE 2 re-approval.
+2. **Animate decision** (ask-before-spend): 9 clips Kling ≈ $17 all-in, or Kling heroes + $0 dyncam subset ≈ $6-8. stone_rolled_dawn/risen_christ_wounds clip propagation from jonah is BROKEN for any re-rendered still (src.sha mismatch) — only risen_christ_wounds still matches.
+3. **Then the lane:** animate → build livingpage (spec retimed) → score (fix score block: base_seconds → real duration, dips from NEW alignment, cta phrase = v5 landing) → /sfx → /caption → register → /publish.
+4. **CORPUS REBUILD (task #4):** per shipped piece: derive+panel fact cards → audit stills vs SPECIFIED → triage → re-drive + re-render violators → re-animate. START with `sign_of_jonah_matt1240` (its tomb stills share the tall-doorway defect and 2 were reused here). Then the 11 Cross shorts, Psalm22 inked long, EW01. Engine work: wire `bible_gate` BEFORE-RENDER (today only before-animate), wire bib_validate to livingpage specs.
 
-**THEN the rest of the lane:** `run_piece.py --stage animate` (stills_gate --check is GREEN; ask-before-spend the Kling batch) → build `longform\02_Psalm_22_Song_From_The_Cross\build_livingpage_16x9.py --pool "<piece>\visual" --spec livingpage_short.spec.json --clips --page 1080x1920 --no-ticks` → **fix score block BEFORE `--stage score`**: base_seconds 59.0→102.10, dips from alignment (Mary quote 13.6–18.32 + napkin 25.52–32.08 + beatitude 79.76–84.48), cta_meta phrase → v4 landing ("Believe what John believed"), pair stays lonely_searching_a → glory_holy_stillness_a (S2 interim per SEASON_SCORES.md) → /sfx → `--stage register` → /publish. Bib_validate keys on the spec (now present).
+**Piece 2 after pilot ships:** Women as First Witnesses (Matt 28:1-10 / Mark 16:1-8) — NOT started; distinct spine = angel announcement (Empty Tomb deliberately has NO angel; don't collide). Fact cards FIRST.
 
-**Piece 2 next:** Women as First Witnesses (Matt 28:1-10 / Mark 16:1-8) — NOT started. Distinct spine = the angel announcement + women as first witnesses (Empty Tomb deliberately contains NO angel; don't collide).
+**Also done 07-09 night (other lanes):** website elevation LIVE (depth-track study template + pattern device on sign-of-jonah read page; readable-now cards route to read pages; commit `abe20c6`) · EW05 Jonah long retention paper pass → `longform\EW05_Jonah\v1\retention_pass.md` · new render_lint rule `empty-grave-clothes-draw-a-corpse` (warn).
 
 ---
 
