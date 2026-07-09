@@ -24,7 +24,7 @@
     var i = typeof idx === "number" ? idx % 6 : 0;
     return (
       '<a class="card reveal" style="--i:' + i + '" href="' +
-      esc(asset("work/" + item.slug + ".html")) +
+      esc(asset(item.read || "work/" + item.slug + ".html")) +
       '">' +
       '<div class="card-poster">' +
       preview +
@@ -230,7 +230,7 @@
       .map(function (i) {
         return (
           '<a class="cluster-beat" href="' +
-          esc(asset("work/" + i.slug + ".html")) +
+          esc(asset(i.read || "work/" + i.slug + ".html")) +
           '">' +
           '<span class="cluster-num">' +
           String(i.cluster_order).padStart(2, "0") +

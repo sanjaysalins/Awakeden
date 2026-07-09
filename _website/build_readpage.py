@@ -77,11 +77,61 @@ def chrome_top(title: str, desc: str, canonical: str, og_image: str) -> str:
   <style>
     main.page{{padding-top:5.5rem}}
     .plan-series{{font-size:.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#c8a55e;margin:1.1rem 0 .45rem}}
-    .strip{{max-width:560px;margin:0 auto;padding:0 12px}}
-    .strip figure{{margin:0 0 30px}}
-    .strip img{{width:100%;border-radius:8px;display:block;border:1px solid rgba(255,255,255,.07);box-shadow:0 10px 34px rgba(0,0,0,.5)}}
-    .strip figcaption{{font-size:.95rem;color:#9aa3b2;padding:10px 4px 0;line-height:1.5}}
-    .strip figcaption .bar{{display:inline-block;background:#c1121f;color:#fff;font-weight:700;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;padding:.28rem .6rem;border-radius:3px;margin-right:.35rem}}
+    .strip{{max-width:600px;margin:0 auto;padding:0 12px}}
+    .strip figure{{margin:0 0 34px;background:#eceae4;padding:10px 10px 0;border-radius:4px;box-shadow:0 14px 40px rgba(0,0,0,.55);transform:rotate(-.5deg)}}
+    .strip figure:nth-child(even){{transform:rotate(.6deg)}}
+    .strip img{{width:100%;display:block;border:2px solid #101216;border-radius:0;box-shadow:none}}
+    .strip figcaption{{font-size:.92rem;color:#23262c;padding:10px 6px 12px;line-height:1.45;font-weight:600}}
+    .strip figcaption .bar{{display:inline-block;background:#c1121f;color:#fff;font-weight:800;font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;padding:.26rem .55rem;border-radius:3px;margin-right:.4rem}}
+    .strip figure.splash{{position:relative;background:none;padding:0;border-radius:6px;overflow:hidden;transform:none;box-shadow:0 18px 50px rgba(0,0,0,.65)}}
+    .strip figure.splash img{{border:none}}
+    .strip figure.splash .roar{{position:absolute;left:0;right:0;bottom:8%;text-align:center;font-family:'Archivo Black',sans-serif;text-transform:uppercase;color:#fff;font-size:clamp(2.6rem,10vw,4.8rem);letter-spacing:.02em;line-height:.9;text-shadow:0 4px 0 #000,0 0 40px rgba(229,48,61,.8);transform:rotate(-2deg)}}
+    .depth-track{{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin:1.2rem 0 0}}
+    .depth-track a{{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:.45rem .85rem;border:1px solid rgba(255,255,255,.14);border-radius:999px;color:#9aa0ab;text-decoration:none;transition:.2s}}
+    .depth-track a:hover{{border-color:#e5303d;color:#eceae4}}
+    .depth-track a b{{color:#e5303d;margin-right:.35rem}}
+    .sect{{max-width:1080px;margin:4rem auto 0;padding:0 16px}}
+    .sect-head{{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.3rem}}
+    .sect-head .no{{font-family:'Archivo Black',sans-serif;font-size:2.4rem;color:transparent;-webkit-text-stroke:1.5px rgba(236,234,228,.55)}}
+    .sect-head h2{{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(1.15rem,3vw,1.55rem);color:#efe9dc}}
+    .sect-head .sub{{color:#9aa0ab;font-size:.88rem}}
+    .pattern{{display:grid;gap:14px}}
+    .pattern-row{{display:grid;grid-template-columns:1fr 44px 1fr;align-items:stretch}}
+    .pcell{{background:#14171d;border:1px solid rgba(255,255,255,.09);border-radius:10px;padding:1rem 1.1rem}}
+    .pcell .who{{font-size:.66rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.45rem}}
+    .pcell.ot .who{{color:#c8a55e}}
+    .pcell.nt .who{{color:#e5303d}}
+    .pcell .claim{{font-weight:700;color:#eceae4;line-height:1.35}}
+    .pcell .kjv{{margin-top:.55rem;font-size:.86rem;color:#d8b9b9;border-left:3px solid #c1121f;padding:.35rem 0 .35rem .7rem;line-height:1.5}}
+    .pcell .kjv b{{color:#e5303d;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:.15rem}}
+    .plink{{display:grid;place-items:center;font-family:'Archivo Black',sans-serif;color:#e5303d;font-size:1.1rem}}
+    .pattern-note{{color:#9aa0ab;font-size:.92rem;max-width:640px;margin:1.2rem auto 0;text-align:center}}
+    @media(max-width:680px){{.pattern-row{{grid-template-columns:1fr}}.plink{{padding:.2rem 0;transform:rotate(90deg)}}}}
+    .meat{{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}}
+    .meat-card{{background:#14171d;border:1px solid rgba(255,255,255,.09);border-radius:12px;padding:1.2rem 1.3rem}}
+    .meat-card h3{{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:.92rem;margin:0 0 .55rem;color:#efe9dc}}
+    .meat-card h3 span{{color:#e5303d}}
+    .meat-card p{{font-size:.92rem;color:#c8ccd4;line-height:1.65}}
+    .meat-card .kjv{{margin-top:.7rem;font-size:.86rem;color:#d8b9b9;border-left:3px solid #c1121f;padding:.3rem 0 .3rem .7rem}}
+    .meat-card .kjv b{{color:#e5303d;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;display:block}}
+    .today-box{{max-width:680px;margin:0 auto;background:linear-gradient(160deg,#1a1210,#14171d 60%);border:1px solid rgba(200,165,94,.35);border-radius:14px;padding:1.6rem 1.7rem}}
+    .today-box p{{color:#d9d4c8;line-height:1.75}}
+    .today-box p+p{{margin-top:.8rem}}
+    .today-box .q{{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:1.02rem;color:#c8a55e;margin-bottom:.8rem}}
+    .journey{{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}}
+    .j-card{{display:block;background:#14171d;border:1px solid rgba(255,255,255,.09);border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .18s ease,border-color .18s ease}}
+    .j-card:hover{{transform:translateY(-4px);border-color:#e5303d}}
+    .j-card img{{width:100%;aspect-ratio:16/10;object-fit:cover;opacity:.85}}
+    .j-card .pad{{padding:.9rem 1rem 1.1rem}}
+    .j-card .k{{font-size:.64rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#e5303d}}
+    .j-card .t{{font-weight:800;color:#eceae4;margin-top:.25rem}}
+    .j-card .s{{font-size:.82rem;color:#9aa0ab;margin-top:.2rem}}
+    .sub-cta{{margin:2.4rem auto 0;max-width:680px;text-align:center;background:#14171d;border:2px solid #c1121f;border-radius:14px;padding:1.5rem 1.4rem;box-shadow:0 0 40px rgba(193,18,31,.25)}}
+    .sub-cta h3{{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:1.15rem;color:#efe9dc;margin:0}}
+    .sub-cta p{{color:#9aa0ab;font-size:.92rem;margin:.5rem 0 1rem}}
+    .sub-cta a,.sub-cta span.soon{{display:inline-block;background:#c1121f;color:#fff;font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-size:.8rem;padding:.75rem 1.5rem;border-radius:8px;text-decoration:none}}
+    .sub-cta a:hover{{background:#e5303d}}
+    .sub-cta span.soon{{background:#2a2e36;color:#9aa0ab}}
     .read-meta{{text-align:center;max-width:640px;margin:0 auto 34px;padding:0 14px;color:#9aa3b2}}
     .read-meta .verse{{display:inline-block;background:#c1121f;color:#fff;font-weight:700;letter-spacing:.18em;font-size:.78rem;padding:.35rem .8rem;border-radius:4px;text-transform:uppercase}}
     .read-text{{max-width:640px;margin:44px auto 0;padding:0 14px;line-height:1.75;color:#c8ccd4}}
@@ -164,7 +214,100 @@ def extract_frames(item: dict, batch: Path, out_dir: Path, *, force: bool) -> in
     return n
 
 
-def render_read_page(item: dict, spec: dict, slug: str, narration_text: str) -> str:
+def sect_head(no: str, title: str, sub: str) -> str:
+    return (f'<div class="sect-head"><span class="no">{esc(no)}</span>'
+            f'<h2>{esc(title)}</h2><span class="sub">{esc(sub)}</span></div>')
+
+
+def render_pattern(study: dict) -> str:
+    rows = study.get("pattern") or []
+    if not rows:
+        return ""
+    parts = ['<section class="sect" id="pattern">',
+             sect_head("02", "The pattern",
+                       slopless(study.get("pattern_lead", "The Old Testament draws the outline. The New Testament fills it in."))),
+             '<div class="pattern">']
+    for row in rows:
+        cells = []
+        for side in ("ot", "nt"):
+            c = row.get(side) or {}
+            cells.append(
+                f'<div class="pcell {side}"><div class="who">{esc(slopless(c.get("who", "")))}</div>'
+                f'<div class="claim">{esc(slopless(c.get("claim", "")))}</div>'
+                f'<div class="kjv"><b>{esc(c.get("ref", ""))}</b>"{esc(slopless(c.get("kjv", "")))}"</div></div>')
+        parts.append(f'<div class="pattern-row">{cells[0]}<div class="plink">&rarr;</div>{cells[1]}</div>')
+    parts.append("</div>")
+    note = slopless(study.get("pattern_note", ""))
+    if note:
+        parts.append(f'<p class="pattern-note">{esc(note)}</p>')
+    parts.append("</section>")
+    return "\n".join(parts)
+
+
+def render_meat(study: dict) -> str:
+    cards = study.get("meat") or []
+    if not cards:
+        return ""
+    parts = ['<section class="sect" id="meat">',
+             sect_head("03", "The meat", "for the ones who want to dig"),
+             '<div class="meat">']
+    for c in cards:
+        kjv = ""
+        if c.get("kjv"):
+            kjv = f'<div class="kjv"><b>{esc(c.get("ref", ""))}</b>{esc(slopless(c["kjv"]))}</div>'
+        parts.append(f'<div class="meat-card"><h3>{esc(slopless(c.get("title", "")))}</h3>'
+                     f'<p>{esc(slopless(c.get("body", "")))}</p>{kjv}</div>')
+    parts.append("</div></section>")
+    return "\n".join(parts)
+
+
+def render_today(study: dict) -> str:
+    today = study.get("today") or {}
+    if not today.get("paras"):
+        return ""
+    parts = ['<section class="sect" id="today">',
+             sect_head("04", "Today", "why this is in your feed"),
+             '<div class="today-box">']
+    if today.get("q"):
+        parts.append(f'<p class="q">"{esc(slopless(today["q"]))}"</p>')
+    for p in today["paras"]:
+        parts.append(f"<p>{esc(slopless(p))}</p>")
+    parts.append("</div></section>")
+    return "\n".join(parts)
+
+
+def render_journey(slug: str, n_beats: int, nxt: dict | None, yt_url: str) -> str:
+    parts = ['<section class="sect">',
+             sect_head("&rarr;", "Keep going", "the story does not stop here"),
+             '<div class="journey">']
+    if nxt:
+        parts.append(f'<a class="j-card" href="{esc(nxt["slug"])}.html">'
+                     f'<img loading="lazy" src="../assets/study/read/{esc(nxt["slug"])}/beat_01.jpg" alt="{esc(nxt["title"])}">'
+                     f'<div class="pad"><span class="k">Next study</span><div class="t">{esc(nxt["title"])}</div>'
+                     f'<div class="s">{esc(nxt.get("ref", ""))}</div></div></a>')
+    mid = max(1, n_beats // 2)
+    parts.append(f'<a class="j-card" href="../catalogue.html">'
+                 f'<img loading="lazy" src="../assets/study/read/{slug}/beat_{mid:02d}.jpg" alt="Catalogue">'
+                 f'<div class="pad"><span class="k">Explore</span><div class="t">Every study</div>'
+                 f'<div class="s">Season by season: the whole Bible, through Jesus.</div></div></a>')
+    parts.append(f'<a class="j-card" href="../plan.html">'
+                 f'<img loading="lazy" src="../assets/study/read/{slug}/beat_{n_beats:02d}.jpg" alt="The Plan">'
+                 f'<div class="pad"><span class="k">The plan</span><div class="t">What is coming</div>'
+                 f'<div class="s">We build in the open. See what is next.</div></div></a>')
+    parts.append("</div>")
+    if yt_url:
+        cta = f'<a href="{esc(yt_url)}">Subscribe on YouTube</a>'
+    else:
+        cta = '<span class="soon">Launching on YouTube soon</span>'
+    parts.append('<div class="sub-cta"><h3>New studies every week</h3>'
+                 '<p>60-second films on YouTube. The full studies live here.</p>'
+                 f'{cta}</div></section>')
+    return "\n".join(parts)
+
+
+def render_read_page(item: dict, spec: dict, slug: str, narration_text: str,
+                     study: dict | None = None, nxt: dict | None = None,
+                     yt_url: str = "") -> str:
     title = item["title"]
     ref = item.get("ref", "")
     hook = slopless(item.get("public_hook", ""))
@@ -195,16 +338,36 @@ def render_read_page(item: dict, spec: dict, slug: str, narration_text: str) -> 
     parts.append('<div class="read-meta">'
                  f'<p class="verse">{esc(ref)} &middot; KJV</p>'
                  f'{watch}</div>')
-    parts.append('<div class="strip">')
+    study = study or {}
+    if study.get("pattern") or study.get("meat") or (study.get("today") or {}).get("paras"):
+        track = ['<a href="#story"><b>1</b> The story</a>']
+        if study.get("pattern"):
+            track.append('<a href="#pattern"><b>2</b> The pattern</a>')
+        if study.get("meat"):
+            track.append('<a href="#meat"><b>3</b> The meat</a>')
+        if (study.get("today") or {}).get("paras"):
+            track.append('<a href="#today"><b>4</b> Today</a>')
+        parts.append(f'<nav class="depth-track" aria-label="Depth" style="margin-bottom:2rem">{"".join(track)}</nav>')
+    splash_beat = study.get("splash_beat") or 0
+    splash_text = slopless(study.get("splash_text", ""))
+    parts.append('<div class="strip" id="story">')
     for i, beat in enumerate(spec["beats"], 1):
         img = f"../assets/study/read/{slug}/beat_{i:02d}.jpg"
-        parts.append(f'<figure><img loading="lazy" src="{img}" '
-                     f'alt="Panel {i}: {esc(slopless((beat.get("cap") or {}).get("text", "")))}">'
-                     f'<figcaption>{beat_caption(beat)}</figcaption></figure>')
+        alt = esc(slopless((beat.get("cap") or {}).get("text", "")))
+        if i == splash_beat:
+            roar = f'<span class="roar">{esc(splash_text)}</span>' if splash_text else ""
+            parts.append(f'<figure class="splash"><img loading="lazy" src="{img}" alt="{alt}">{roar}</figure>')
+        else:
+            parts.append(f'<figure><img loading="lazy" src="{img}" alt="Panel {i}: {alt}">'
+                         f'<figcaption>{beat_caption(beat)}</figcaption></figure>')
     parts.append("</div>")
     if narration_text:
         parts.append('<div class="read-text"><h2>The narration</h2>'
                      f'<p>{esc(slopless(narration_text))}</p></div>')
+    parts.append(render_pattern(study))
+    parts.append(render_meat(study))
+    parts.append(render_today(study))
+    parts.append(render_journey(slug, len(spec["beats"]), nxt, yt_url))
     parts.append(CHROME_BOTTOM)
     return "\n".join(parts)
 
@@ -286,7 +449,13 @@ def main() -> int:
     items = manifest["items"]
     READ_DIR.mkdir(exist_ok=True)
 
-    pages: list[dict] = []
+    yt_url = ""
+    cfg_p = SITE_DIR / "config.yaml"
+    if cfg_p.is_file():
+        cfg = yaml.safe_load(cfg_p.read_text(encoding="utf-8")) or {}
+        yt_url = (((cfg.get("social") or {}).get("youtube") or {}).get("url") or "").strip()
+
+    entries: list[dict] = []
     for item in items:
         rs = item.get("read_source")
         if not rs:
@@ -307,12 +476,24 @@ def main() -> int:
         sp = batch / "audio" / "narration.spoken.txt"
         if sp.is_file():
             narration = sp.read_text(encoding="utf-8")
-        (READ_DIR / f"{slug}.html").write_text(
-            render_read_page(item, spec, slug, narration), encoding="utf-8")
-        pages.append({"slug": slug, "title": item["title"], "ref": item.get("ref", "")})
-        print(f"  read/{slug}.html  ({len(spec['beats'])} panels)")
+        study = None
+        st_p = batch / "study.json"
+        if st_p.is_file():
+            study = json.loads(st_p.read_text(encoding="utf-8"))
+        entries.append({"item": item, "spec": spec, "slug": slug, "narration": narration,
+                        "study": study, "title": item["title"], "ref": item.get("ref", "")})
 
-    pages.sort(key=lambda p: p["title"])
+    entries.sort(key=lambda e: e["title"])
+    pages: list[dict] = []
+    for i, e in enumerate(entries):
+        nxt = entries[(i + 1) % len(entries)] if len(entries) > 1 else None
+        nxt_page = {"slug": nxt["slug"], "title": nxt["title"], "ref": nxt["ref"]} if nxt else None
+        (READ_DIR / f"{e['slug']}.html").write_text(
+            render_read_page(e["item"], e["spec"], e["slug"], e["narration"],
+                             study=e["study"], nxt=nxt_page, yt_url=yt_url), encoding="utf-8")
+        pages.append({"slug": e["slug"], "title": e["title"], "ref": e["ref"]})
+        extras = " + study" if e["study"] else ""
+        print(f"  read/{e['slug']}.html  ({len(e['spec']['beats'])} panels{extras})")
     (READ_DIR / "index.html").write_text(render_read_index(pages), encoding="utf-8")
     (SITE_DIR / "plan.html").write_text(
         render_plan(items, {p["slug"] for p in pages}, manifest.get("series")), encoding="utf-8")
