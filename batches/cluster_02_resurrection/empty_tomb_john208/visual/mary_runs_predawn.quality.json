@@ -1,14 +1,15 @@
 {
   "slug": "mary_runs_predawn",
-  "hash": "240520d24feb70a1",
+  "hash": "19d04f65bf2a8d78",
   "verdict": "PASS",
   "axes": {
     "anatomy": true,
     "believable": true,
     "reads_as_intended": true,
     "not_grotesque": true,
-    "style_consistent": true
+    "style_consistent": true,
+    "world_consistent": true
   },
-  "notes": "in-chat agent full-res rubric pass 2026-07-09",
+  "notes": "WORLD-CONSISTENT v2: tomb now matches the canon (low rock face, small dark ground-level opening, DISC stone aside - was a boulder + masonry front). Pre-dawn dark, no angel/Christ, mantle over head, urgent run toward viewer. Minor: faint carved trim line inside the doorway; left foot slightly dark.",
   "reviewer": "in-chat-agent"
 }

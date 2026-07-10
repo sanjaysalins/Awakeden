@@ -1,14 +1,15 @@
 {
   "slug": "two_disciples_running",
-  "hash": "0812fc52ab21f29d",
+  "hash": "1e35d54caf452a3f",
   "verdict": "PASS",
   "axes": {
     "anatomy": true,
     "believable": true,
     "reads_as_intended": true,
     "not_grotesque": true,
-    "style_consistent": true
+    "style_consistent": true,
+    "world_consistent": true
   },
-  "notes": "in-chat agent v2 rubric pass after adversarial re-roll 2026-07-09",
+  "notes": "v3: NOW running TOWARD the tomb ahead of them (John 20:4), canon tomb world (low rock face, dark ground-level opening, disc aside), dawn golden, olive garden, dust off sandals. Composition fix that worked: 'far ahead of them in the hillside'.",
   "reviewer": "in-chat-agent"
 }

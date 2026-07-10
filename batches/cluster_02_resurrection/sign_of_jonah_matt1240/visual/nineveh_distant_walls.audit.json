@@ -2,7 +2,8 @@
   "image": "nineveh_distant_walls.png",
   "verdict": "PASS",
   "flags": [
-    "eye-audited full-res 2026-07-08 vs fact cards: Assyrian walled city + ziggurat ✓; tiny Jonah on ridge; arch style nit only"
+    "vision-audited vs v3: rectangular Assyrian gateways (no pointed/ogee arches), ziggurat, relief-carved gate towers, dusk lamps",
+    "no Islamic-era or Greco-Roman forms"
   ],
   "reviewer": "in-chat-agent",
   "stage": "content"

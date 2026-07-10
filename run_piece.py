@@ -104,11 +104,29 @@ def reuse_check(piece_dir: Path, slug: str, job: dict) -> Path | None:
     return None
 
 
+def check_world(pj: dict) -> list[str]:
+    """WORLD-CONSISTENCY check: piece.json stills.world maps a recurring subject to its
+    canonical phrase + the slugs that show it. Each listed prompt must carry the phrase
+    VERBATIM, so the same tomb/stone/face renders in every still (one episode = one world)."""
+    problems = []
+    jobs = pj["stills"]["jobs"]
+    for name, w in pj["stills"].get("world", {}).items():
+        for slug in w.get("applies_to", []):
+            if slug not in jobs:
+                problems.append(f"world:{name} lists unknown slug '{slug}'")
+            elif w["canon"] not in jobs[slug]["prompt"]:
+                problems.append(f"world:{name} — '{slug}' prompt is missing the canonical phrase")
+    return problems
+
+
 def run_stills(piece_dir: Path, pj: dict, *, render: bool, force: bool, only: set[str],
                no_reuse: bool = False) -> int:
     from render_lint import arm_audit, lint
     jobs = pj["stills"]["jobs"]
     block = False
+    for p in check_world(pj):
+        print(f"WORLD BLOCK: {p}")
+        block = True
     for slug, job in jobs.items():
         finds = lint(job["prompt"], stage="still")
         bad = [f for f in finds if str(f.get("level", f.get("severity", "warn"))).lower() == "block"]
@@ -454,7 +472,9 @@ def retime_score(piece_dir: Path, pj: dict) -> dict:
     dict (does not write)."""
     align = _load_alignment(piece_dir)
     sc = dict(pj["score"])
-    if align is None or not sc.get("dips_meta"):
+    enriched = (len(sc.get("dips_meta", [])) == len(sc.get("dips", []))
+                and bool(sc.get("cta_meta", {}).get("phrase")))
+    if align is None or not enriched:
         raise SystemExit("retime: needs audio/alignment.json and enriched dips_meta "
                          "(run --stage enrich-dips first)")
     mp3 = piece_dir / "audio" / "narration.mp3"

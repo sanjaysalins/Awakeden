@@ -1,4 +1,52 @@
-# RESUME — next session (updated 2026-07-09 NIGHT close — FACT-CARDS-FIRST directive + Empty Tomb collision state)
+# RESUME — next session (updated 2026-07-10 close — Empty Tomb SHIPPED + jonah corpus-rebuild #1 + de-slop sweep)
+
+## ✅ WHAT THE 2026-07-10 SESSION DELIVERED
+1. **EMPTY TOMB PILOT SHIPPED END-TO-END** (the fact-cards-first recipe proven):
+   - All 9 stills rebuilt fact-card-driven + WORLD-CONSISTENT, user-approved (GATE 2), fail-closed vision
+     audits GREEN. **ROOT CAUSE FOUND: `ref_library/motifs/EMPTY_TOMB.png` is POISONED** (wrapped corpse
+     in an open tomb) — removed from every prompt in cluster_02; QUARANTINE the file during the corpus pass.
+   - Audio: **v5 kept @79.07s** (user call); fresh whisperx alignment; 20-beat livingpage spec PHRASE-ANCHORED
+     retimed (never proportional — scratch tool pattern works); score cta_dip → 72.97s on "Believe what John
+     believed"; `run_piece.py` retime fixed for dip-less pieces.
+   - 6 Kling clips rendered + filmstrip-QC'd (1 HF-502 retry) → build → score → SFX bed
+     (`sfx_pilots/build_empty_tomb_sfx.py`) → registered → **publish pack GREEN** (panel 5/5 caught
+     "folds"→"wraps" face-cloth legend-bait + FB "No Angel" overclaim + IG faith-wobble — all reconciled;
+     `publish_meta.json` added). FINAL: `batches/cluster_02_resurrection/empty_tomb_john208/visual/empty_tomb_john208_sfx.mp4`.
+2. **CORPUS REBUILD #1 — sign_of_jonah DONE:** fact_sheet **v3** (5-CLI panel 5/5 REVISE → all convergent
+   fixes applied: buckets honest, Matt 12:40 = duration-parallel only, Jonah 1:5/1:13 + John 19:39 + Matt 27:57/66
+   guards added). 15 stills audited full-res; **5 rebuilt** (body_laid: face hidden + Nicodemus + spices;
+   three_days: fully wound + sealed dark; cast_overboard: SAILORS lower him; nineveh: Assyrian gates;
+   stone_rolled_dawn: **$0 REUSE of the approved empty_tomb exterior** after 5 stubborn rolls). Fish teeth +
+   mercy-hand kept (user calls). All 15 approved; 5 clips re-animated + QC'd; rebuilt/re-scored/re-SFX'd.
+   FINAL: `batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/sign_of_jonah_matt1240_sfx.mp4`.
+3. **WORLD-CONSISTENCY ENGINE** (user caught tomb drift): `piece.json stills.world` canon blocks
+   (tomb_exterior/grave_linen/burial_wrap) → `run_piece.check_world` BLOCKS render on drift;
+   `stills_gate.py` gained a 6th rubric axis `world_consistent` + review page now shows agent audit
+   notes + "Needs REBUILD" button per card.
+4. **DE-SLOP SWEEP** (user: dash-joint captions = AI slop): 18 cluster_02 box captions rewritten + both
+   videos rebuilt; **all 22 publish packs de-slopped + GREEN** (brand footer fixed at source in
+   `data/upload_brand.json` + `upload_engine` follow-line; 8 Psalm22 packs restamped to current brand;
+   KJV elision split into 2 full citations). **VERIFICATION 3-LAYER:** `caption_slop_check.py` corpus
+   scanner (GREEN) · livingpage builder SLOP BLOCK fail-closed (negative-tested) · publish_check UK-G7
+   dash-slop FAIL. Memory: `feedback-no-dash-caption-slop` 🔴.
+5. Spend ≈ **$9** total. ⚠️ TWO unauthorized spends confessed: $0.65 clip (usable) + a killed mid-flight
+   HF job (~$0.65, may linger in HF queue — DRAIN before next animate batch). Ask-before-spend remains 🔴.
+
+## ⚡ NEXT SESSION ORDER
+1. **User ear/eye on the two finals** (links above) — then /publish refresh for jonah + post-ready.
+2. **Corpus rebuild continues:** the **11 Cross shorts** (per piece: fact cards → 5-CLI panel → full-res
+   still audit vs SPECIFIED → world canon block → rebuild violators only → re-animate stale → rebuild).
+   Then Psalm22 inked long, EW01. Quarantine `ref_library/motifs/EMPTY_TOMB.png` + audit other refs
+   (RICH_MANS_TOMB.png has a tall-ish doorway — watch).
+3. **Piece 2: Women as First Witnesses** (Matt 28:1-10/Mark 16:1-8) — fact cards FIRST; distinct spine =
+   angel announcement (Empty Tomb deliberately has NO angel).
+4. **Engine wires:** `bible_gate` BEFORE-RENDER (today only before-animate) · `bib_validate` reads
+   livingpage specs · consider folding `caption_slop_check` into /validate.
+5. **Launch blockers (USER):** channel dress upload in Studio · Season-1 playlist + unlisted test · launch date.
+
+---
+
+# PRIOR (2026-07-09 NIGHT close — FACT-CARDS-FIRST directive + Empty Tomb collision state)
 
 ## 🔒 NEW STANDING DIRECTIVE (user, 2026-07-09 night)
 User reviewed the Empty Tomb stills: "it feels like the stills were made with imagination, rather than

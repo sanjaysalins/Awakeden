@@ -6,33 +6,52 @@
   "stills": {
     "model": "seedream-4-5-251128",
     "size": "1440x2560",
+    "world": {
+      "tomb_exterior": {
+        "canon": "a low rock-cut tomb, its small square opening at ground level pitch dark and empty, the great round stone disc rolled aside, resting against the rock face beside the opening",
+        "applies_to": [
+          "stone_rolled_dawn",
+          "stone_taken_away_dark",
+          "mary_runs_predawn",
+          "two_disciples_running"
+        ]
+      },
+      "grave_linen": {
+        "canon": "wound linen burial cloths lying collapsed flat on the bench in loose layered folds and strips",
+        "applies_to": [
+          "linen_left_lying",
+          "napkin_wrapped_apart",
+          "john_believes_inside"
+        ]
+      }
+    },
     "jobs": {
       "stone_rolled_dawn": {
-        "prompt": "seen from inside a low hewn rock chamber of a 1st-century Judean tomb, looking out through a small waist-high square opening blazing with dawn light, the great round stone disc rolled aside beyond the opening, collapsed empty linen wrappings lying flat on a waist-low rock bench beside the opening, tool-marked stone walls, vertical, 1st-century Judea",
-        "ref": "../../../ref_library/motifs/EMPTY_TOMB.png"
+        "prompt": "a low rock-cut tomb, its small square opening at ground level pitch dark and empty, the great round stone disc rolled aside, resting against the rock face beside the opening, in a hillside garden at dawn, golden sunrise flooding the garden, vertical, 1st-century Judea",
+        "ref": null
       },
       "stone_taken_away_dark": {
-        "prompt": "a low rock-cut tomb in a hillside garden before dawn, a small square crawl-height opening cut into the rock face, a massive round stone disc rolled aside resting in its carved groove track beside the opening, the opening a black empty hole, deep pre-dawn blue darkness, faint cold first light on the hills, olive branches framing, vertical, 1st-century Judea",
-        "ref": "../../../ref_library/motifs/EMPTY_TOMB.png"
+        "prompt": "a low rock-cut tomb, its small square opening at ground level pitch dark and empty, the great round stone disc rolled aside, resting against the rock face beside the opening, in a hillside garden before dawn, deep pre-dawn blue darkness, faint cold first light on the hills, olive branches framing, vertical, 1st-century Judea",
+        "ref": null
       },
       "mary_runs_predawn": {
-        "prompt": "a veiled woman in a simple wool tunic and mantle running hard toward the viewer down a dim garden path, urgent alarm on her face, her robe flying behind her, far behind her a low rock-cut tomb in the hillside with a small dark opening and its great round stone rolled aside, deep pre-dawn blue darkness, faint cold light on the hills, vertical, 1st-century Judea",
+        "prompt": "a veiled woman in a simple wool tunic and mantle running hard toward the viewer down a dim garden path, urgent alarm on her face, her robe flying behind her, far behind her a low rock-cut tomb, its small square opening at ground level pitch dark and empty, the great round stone disc rolled aside, resting against the rock face beside the opening, deep pre-dawn blue darkness, vertical, 1st-century Judea",
         "ref": null
       },
       "two_disciples_running": {
-        "prompt": "two robed men running at full stride up a stony path between olive trees toward a low rock-cut tomb in the rocky hillside, its small square opening dark and low, the great round stone disc rolled aside in its groove beside the opening, dawn breaking low and golden across the hillside, dust rising from their sandals, vertical, 1st-century Judea",
+        "prompt": "seen from behind, two robed men running at full stride up a stony path between olive trees, far ahead of them in the hillside a low rock-cut tomb, its small square opening at ground level pitch dark and empty, the great round stone disc rolled aside, resting against the rock face beside the opening, dawn breaking low and golden across the hillside, dust rising from their sandals, vertical, 1st-century Judea",
         "ref": null
       },
       "linen_left_lying": {
-        "prompt": "seen from above, a waist-low hewn stone bench inside a dim rock tomb chamber, wound linen burial cloths lying collapsed completely flat on the bench in loose layered folds and strips, wide bare stone visible around them, a small dusting of pale spice powder on the cloth, cool dawn light raking across the folds, vertical, 1st-century Judea",
+        "prompt": "seen from above, a waist-low hewn stone bench inside a dim rock tomb chamber, wound linen burial cloths lying collapsed flat on the bench in loose layered folds and strips, wide bare stone visible around them, a small dusting of pale spice powder on the cloth, cool dawn light raking across the folds, vertical, 1st-century Judea",
         "ref": "../../../ref_library/objects/RICH_MANS_TOMB.png"
       },
       "napkin_wrapped_apart": {
-        "prompt": "inside a dim hewn rock tomb, a small linen napkin wrapped together in a neat roll resting alone at the head-end of a waist-low stone bench, apart from flat collapsed grave linen further along the bench, camera close on the rolled napkin, soft dawn light, vertical, 1st-century Judea",
+        "prompt": "inside a dim hewn rock tomb, a small linen napkin wrapped together in a neat roll resting alone at the head-end of a waist-low stone bench, apart from wound linen burial cloths lying collapsed flat on the bench in loose layered folds and strips further along, camera close on the rolled napkin, soft dawn light, vertical, 1st-century Judea",
         "ref": "../../../ref_library/objects/RICH_MANS_TOMB.png"
       },
       "john_believes_inside": {
-        "prompt": "inside a low hewn rock tomb chamber, a young lightly-bearded disciple bent low under the rock ceiling, kneeling by a waist-low stone bench, dawn light from the small low doorway full on his lifted awestruck face, collapsed flat empty linen wrappings on the bench beside him, tool-marked walls, vertical, 1st-century Judea",
+        "prompt": "inside a low hewn rock tomb chamber, a young lightly-bearded disciple bent low under the rock ceiling, kneeling on the rock floor beside a waist-low stone bench, warm dawn light streaming in low across the floor from the small dark crawl doorway at ground level behind him, his lifted face awestruck, wound linen burial cloths lying collapsed flat on the bench in loose layered folds and strips at his shoulder, vertical, 1st-century Judea",
         "ref": "../../../ref_library/characters/JOHN_THE_APOSTLE.png"
       },
       "jesus_shows_thomas": {
@@ -49,7 +68,7 @@
     "duration": 5,
     "aspect_ratio": "9:16",
     "moves": {
-      "stone_rolled_dawn": "ONE slow, steady, continuous push-in into the blazing light of the open tomb doorway",
+      "stone_rolled_dawn": "ONE slow, steady, continuous push-in toward the dark open tomb doorway in golden dawn light",
       "stone_taken_away_dark": "ONE slow, steady, continuous push-in toward the black open doorway of the tomb",
       "mary_runs_predawn": "ONE slow, steady, continuous push-in toward the running veiled woman",
       "two_disciples_running": "ONE slow, steady, continuous push-in toward the two running men on the path",
@@ -65,7 +84,7 @@
     "out": "visual/empty_tomb_john208_scored.mp4",
     "dark": "lonely_searching_a.mp3",
     "grace": "glory_holy_stillness_a.mp3",
-    "base_seconds": 59.0,
+    "base_seconds": 79.07,
     "outro_hold": 1.5,
     "dark_trim_end": "45.0",
     "grace_trim": [
@@ -76,12 +95,12 @@
     "tpad": "1.5",
     "dips": [],
     "cta_dip": [
-      "50.0",
+      "72.97",
       "0.5"
     ],
     "dips_meta": [],
     "cta_meta": {
-      "phrase": "Jesus does not ask you to see",
+      "phrase": "Believe what John believed at the linen",
       "pre": 0.0
     }
   },
@@ -111,13 +130,13 @@
     "extra_rows": [],
     "stills": {
       "stone_rolled_dawn": {
-        "subject": "the stone rolled aside, dawn light bursting from the tomb",
+        "subject": "the stone rolled aside at dawn, the tomb open and empty",
         "characters": [],
         "elements": [
           "rolled stone",
           "open doorway",
           "dawn light",
-          "flat linen"
+          "garden"
         ],
         "setting": "garden tomb",
         "scope": "hero",

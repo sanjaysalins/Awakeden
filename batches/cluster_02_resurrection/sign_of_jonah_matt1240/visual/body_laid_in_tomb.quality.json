@@ -1,14 +1,15 @@
 {
   "slug": "body_laid_in_tomb",
-  "hash": "2425fc7513f652b6",
+  "hash": "97a0facb501d4c5a",
   "verdict": "PASS",
   "axes": {
     "anatomy": true,
     "believable": true,
-    "reads_as_intended": false,
-    "not_grotesque": false,
-    "style_consistent": false
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
   },
-  "notes": "eye-audited full-res vs Jonah/Matt12/John20 fact cards; details in .audit.json sidecar",
+  "notes": "REBUILD v3 vs cards: two men = Joseph AND Nicodemus (John 19:38-39), body fully wound with the face hidden, spice bundles + jar of myrrh (John 19:39 hundred pound weight), oil lamp fine during the OPEN-tomb burial. Fixed: exposed face, missing spices.",
   "reviewer": "in-chat-agent"
 }

@@ -55,7 +55,7 @@ def build_footer(platform: str, brand: dict, read_url: str = "") -> str:
             handle, url = h.get("handle"), h.get("url")
             if _filled(handle):
                 # plain hyphen, not em-dash: UK-G7 lints the whole description incl. footer
-                follow.append(f"{plat}: {handle}" + (f" - {url}" if _filled(url) else ""))
+                follow.append(f"{plat}: {handle}" + (f" ({url})" if _filled(url) else ""))
         if follow:
             lines.append("")
             lines.append("Follow:")

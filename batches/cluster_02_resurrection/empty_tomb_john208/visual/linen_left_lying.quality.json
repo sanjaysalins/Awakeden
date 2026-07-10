@@ -1,6 +1,6 @@
 {
   "slug": "linen_left_lying",
-  "hash": "e0e42da5f2715e2d",
+  "hash": "9e08739f243606ac",
   "verdict": "PASS",
   "axes": {
     "anatomy": true,
@@ -9,6 +9,6 @@
     "not_grotesque": true,
     "style_consistent": true
   },
-  "notes": "in-chat agent v2 rubric pass after adversarial re-roll 2026-07-09",
+  "notes": "vs cards: plural linen folds lying on the stone bench, spice dust visible (John 19:40 constrained), napkin question handled in its own still, hewn chamber OK. WATCH: the far end of the linen holds a rounded BULK that at a glance can read as a body still inside (card: must never read as an occupied shroud) - user eye decides keep vs re-roll flatter.",
   "reviewer": "in-chat-agent"
 }

@@ -5,10 +5,11 @@
   "axes": {
     "anatomy": true,
     "believable": true,
-    "reads_as_intended": false,
-    "not_grotesque": false,
-    "style_consistent": false
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
   },
-  "notes": "re-rolled per user gate notes; eye-audited full-res",
+  "notes": "declared FREE symbolic beat (rising typology): silhouette bursting from the sea under a light shaft. No contradiction. Clean.",
   "reviewer": "in-chat-agent"
 }

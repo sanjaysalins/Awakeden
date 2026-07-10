@@ -2,8 +2,8 @@
   "image": "stone_rolled_dawn.png",
   "verdict": "PASS",
   "flags": [
-    "eye-audited full-res 2026-07-08: round 2: EMPTY ledge + flat linen + napkin folded separately (John 20:7) + stone aside + dawn — doctrinally exact"
+    "reused byte-identical from C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_02_resurrection\\empty_tomb_john208\\visual\\stone_rolled_dawn.png"
   ],
-  "reviewer": "in-chat-agent",
+  "reviewer": "reuse:empty_tomb_john208",
   "stage": "content"
 }

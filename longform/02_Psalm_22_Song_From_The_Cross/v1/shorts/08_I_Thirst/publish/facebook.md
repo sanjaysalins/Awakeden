@@ -10,7 +10,12 @@ David painted this body a thousand years before Jesus hung on the cross. Dried c
 
 The One who made every river and offers living water went dry in your place. He thirsted so you could drink and never thirst again.
 
-Subscribe to walk through the whole Bible and meet Jesus on every page. ✝
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 

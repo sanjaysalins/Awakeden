@@ -11,22 +11,22 @@ We hear raw anguish, and it is that. But it is also a quotation. Those exact wor
 "My God, my God, why hast thou forsaken me? why art thou so far from helping me, and from the words of my roaring?" (Psalm 22:1, KJV).
 
 This deep-dive walks the whole song in seven movements:
-1. The Cry - the quotation inside the anguish
-2. A Death David Never Died - the first-person scandal
-3. The Wounds Written Early - pierced hands and feet, the parted garments, the lots
-4. The Honest Question - how could a poet see Golgotha ten centuries out?
-5. He Quoted the Whole Song - what reaching for the first line means
-6. The Turn - the psalm does not end in the dark (Hebrews 2:12)
-7. He Hath Done This - the last line and the cross's last word, on the same note
+1. The Cry: the quotation inside the anguish
+2. A Death David Never Died: the first-person scandal
+3. The Wounds Written Early: pierced hands and feet, the parted garments, the lots
+4. The Honest Question: how could a poet see Golgotha ten centuries out?
+5. He Quoted the Whole Song: what reaching for the first line means
+6. The Turn: the psalm does not end in the dark (Hebrews 2:12)
+7. He Hath Done This: the last line and the cross's last word, on the same note
 
 Every quotation verbatim KJV. Reverent documentary pace, inked graphic-novel visuals.
 
 He was forsaken so that you never will be. However far you have run, the way home is open, and he opened it from the dark.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
 
 Follow:
-YouTube: @awakeden - https://youtube.com/@awakeden
+YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
@@ -48,4 +48,4 @@ psalm 22 explained, psalm 22 crucifixion, the song from the cross, my god my god
 5:54 He Hath Done This
 
 ## PINNED_COMMENT
-Psalm 22:1 KJV: My God, my God, why hast thou forsaken me? - written a thousand years before the cross, and answered from it. Which movement stayed with you? Read the whole psalm beside John 19 and see where the song was pointing. He was forsaken so that you never will be.
+Psalm 22:1 KJV: My God, my God, why hast thou forsaken me? Written a thousand years before the cross, and answered from it. Which movement stayed with you? Read the whole psalm beside John 19 and see where the song was pointing. He was forsaken so that you never will be.

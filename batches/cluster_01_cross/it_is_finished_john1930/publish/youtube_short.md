@@ -14,11 +14,11 @@ Two finished works. One Workman. He finished creation and rested; he finished re
 
 You were never asked to finish it. You are asked to rest in it. He bowed his head so you could lift yours. The work is finished. Enter his rest.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/it-is-finished.html
 
 Follow:
-YouTube: @awakeden - https://youtube.com/@awakeden
+YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 

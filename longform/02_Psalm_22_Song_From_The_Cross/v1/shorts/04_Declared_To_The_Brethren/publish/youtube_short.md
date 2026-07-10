@@ -16,7 +16,12 @@ And hear what He calls us: Hebrews says He is not ashamed to call us brethren. B
 
 He was forsaken so you could be family. The risen Christ is calling you in.
 
-Subscribe to walk through the whole Bible and meet Jesus on every page. ✝
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 

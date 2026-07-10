@@ -7,7 +7,7 @@ Psalm 22:18. The soldiers at the cross rolled dice for the clothes off his back,
 
 No accident. The plan.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
 Follow @awakeden
 
 ## HASHTAGS

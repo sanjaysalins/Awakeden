@@ -8,7 +8,7 @@
     "size": "1440x2560",
     "jobs": {
       "jonah_cast_overboard": {
-        "prompt": "storm-lashed wooden merchant ship on towering dark waves, sailors mid-heave casting a wild-haired prophet over the rail toward the sea, lightning-lit spray, vertical, 8th-century BC Mediterranean",
+        "prompt": "on the deck of a storm-lashed wooden cargo ship on towering dark waves, two grieving sailors lowering a robed prophet over the rail by his arms into the raging sea, other sailors turning away in sorrow, rain and lightning-lit spray, vertical, 8th-century BC Mediterranean",
         "ref": "../../../ref_library/characters/JONAH.png"
       },
       "great_fish_rising": {
@@ -20,7 +20,7 @@
         "ref": null
       },
       "nineveh_distant_walls": {
-        "prompt": "a massive walled city on a wide plain at dusk, high gates and stepped towers, warm lamplight inside the walls, seen from a distant ridge, vertical, ancient Assyria",
+        "prompt": "a massive ancient Assyrian walled city on a wide plain at dusk, high square gate towers with plain rectangular gateways, a stepped ziggurat rising within, warm lamplight inside the walls, seen from a distant ridge, vertical, ancient Assyria",
         "ref": null
       },
       "lot_falls_jonah": {
@@ -40,16 +40,16 @@
         "ref": "../../../ref_library/characters/JESUS.png"
       },
       "three_days_dark_tomb": {
-        "prompt": "a linen-shrouded body lying still on a stone ledge inside a dark rock-cut tomb chamber that fills the whole frame, one thin shaft of cold light from the entrance seam, vertical, 1st-century Judea",
+        "prompt": "inside a sealed rock-cut tomb chamber in near darkness, a body fully wound in linen burial cloths, the head wrapped in its cloth, lying still on a waist-low stone bench, faint cold blue gloom, the chamber walls fading to black, vertical, 1st-century Judea",
         "ref": "../../../ref_library/objects/RICH_MANS_TOMB.png"
       },
       "body_laid_in_tomb": {
-        "prompt": "inside a small rock-cut tomb chamber, two robed men gently lowering a linen-shrouded body onto a low waist-high stone ledge cut along the wall, a small clay oil lamp on the floor casting warm light up the rough rock, vertical, 1st-century Judea",
+        "prompt": "inside a small rock-cut tomb chamber, two robed men gently lowering a body fully wound in linen burial cloths, the head wrapped in its cloth, the face hidden beneath the winding cloth, onto a waist-low stone bench, bundles of spices and a clay jar of myrrh beside the bench, a small clay oil lamp casting warm light, vertical, 1st-century Judea",
         "ref": "../../../ref_library/objects/RICH_MANS_TOMB.png"
       },
       "stone_rolled_dawn": {
-        "prompt": "seen from inside the empty rock-cut tomb, the great round stone rolled aside from the bright doorway, dawn light flooding across the bare stone ledge with only flat linen grave clothes lying on it, vertical, 1st-century Judea",
-        "ref": "../../../ref_library/motifs/EMPTY_TOMB.png"
+        "prompt": "a low rock-cut tomb, its small square opening at ground level pitch dark and empty, the great round stone disc rolled aside, resting against the rock face beside the opening, in a hillside garden at dawn, golden sunrise flooding the garden, vertical, 1st-century Judea",
+        "ref": null
       },
       "jonah_on_shore": {
         "prompt": "a drenched wild-haired prophet on hands and knees on a wet beach at dawn, seaweed strands on his ragged robe, gentle surf receding behind him, warm light breaking, vertical",
@@ -66,6 +66,25 @@
       "man_rising_from_water": {
         "prompt": "a man seen from behind in dark silhouette bursting up through the surface of deep water into blinding golden morning light, arms flung wide, spray flying off him, vertical",
         "ref": null
+      }
+    },
+    "world": {
+      "grave_linen": {
+        "canon": "wound linen burial cloths lying collapsed flat on the bench in loose layered folds and strips",
+        "applies_to": []
+      },
+      "burial_wrap": {
+        "canon": "a body fully wound in linen burial cloths, the head wrapped in its cloth",
+        "applies_to": [
+          "three_days_dark_tomb",
+          "body_laid_in_tomb"
+        ]
+      },
+      "tomb_exterior": {
+        "canon": "a low rock-cut tomb, its small square opening at ground level pitch dark and empty, the great round stone disc rolled aside, resting against the rock face beside the opening",
+        "applies_to": [
+          "stone_rolled_dawn"
+        ]
       }
     }
   },

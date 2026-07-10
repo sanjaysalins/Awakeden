@@ -14,11 +14,11 @@ While judgment fell on him, he cared for someone else. That is who is dying ther
 
 Your wound is not invisible to him either. Stand where Mary stood. The Son who saw her will behold you, and bind what the sword tore.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/woman-behold-thy-son.html
 
 Follow:
-YouTube: @awakeden - https://youtube.com/@awakeden
+YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 

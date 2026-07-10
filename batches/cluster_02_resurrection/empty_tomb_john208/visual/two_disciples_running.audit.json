@@ -2,7 +2,8 @@
   "image": "two_disciples_running.png",
   "verdict": "PASS",
   "flags": [
-    "in-chat-agent full-res v2: plain flat leather soles, world-matched tomb+stone, zero faces"
+    "vision-audited full-res: running TOWARD canon tomb ahead, dawn, dust",
+    "John 20:4"
   ],
   "reviewer": "in-chat-agent",
   "stage": "content"

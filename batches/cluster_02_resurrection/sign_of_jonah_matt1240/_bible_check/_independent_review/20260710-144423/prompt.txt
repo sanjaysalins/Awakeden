@@ -1,0 +1,81 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: biblical-facts
+
+LENS — judge this BIBLICAL FACT SHEET (the Scripture-cited facts about
+location / time / place / customs / characters that a set of devotional paintings must
+honour). Be specific, cite the exact fact + reference:
+- CITATION TRUTH (most important): for every fact, does the quoted KJV text (shown under
+  each fact) ACTUALLY support the claim? Flag any claim the cited verse does NOT state, any
+  over-reach beyond what the verse says, and any citation that looks wrong/misapplied.
+- NO INVENTED FACTS: nothing asserted as biblical that Scripture does not actually say.
+  Tradition or commonplace-but-unbiblical detail (e.g. a number, a colour, an object the
+  text never mentions) must NOT be in the 'specified' bucket.
+- BUCKETS ARE HONEST: 'specified' = the Bible explicitly states this visual fact; 'constrained'
+  = not stated but a depiction could contradict the text; 'free' = artistic licence. Flag any
+  fact in the wrong bucket (especially licence dressed up as 'specified').
+- HISTORY STAYS SECONDARY: any historical_note must never override or contradict Scripture; flag
+  any that does, or that is presented as if it were biblical.
+- CHRIST-LENS INTACT: the facts must not distort the passage's witness to Christ / its typology.
+- COVERAGE: are there obvious, checkable biblical facts about these scenes that are MISSING
+  (a specified detail the painting could easily get wrong and no fact guards it)?
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block (on the VERDICT line write exactly ONE word —
+PASS or REVISE or FAIL — never the list of options):
+
+VERDICT: <PASS or REVISE or FAIL>
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# Biblical fact sheet — sign_of_jonah_matt1240 (drives + checks the stills) — v2
+
+Buckets: **specified** = the Bible states it (image MUST match) · **constrained** = must not
+contradict (period/archaeology, SECONDARY — never forces a reading Scripture does not require) ·
+**free** = licence. v2 (2026-07-10): rewritten to the Empty Tomb v2 standard — verbatim KJV under
+every fact; tomb cards imported from the PANEL-CORRECTED empty_tomb_john208 sheet (same passages);
+added the missing guards the v1 sheet lacked (stooping entrance, stone outside, face-covered
+burial, Nineveh period).
+
+## The storm and the ship (Jonah 1)
+- **[SPECIFIED]** Jonah fled on a merchant ship from Joppa toward Tarshish: "But Jonah rose up to flee unto Tarshish from the presence of the LORD, and went down to Joppa; and he found a ship going to Tarshish: so he paid the fare thereof" (Jonah 1:3). Image: a working merchant vessel at sea.
+- **[SPECIFIED]** The storm is the LORD's and it threatens to break the ship: "But the LORD sent out a great wind into the sea, and there was a mighty tempest in the sea, so that the ship was like to be broken" (Jonah 1:4). Image: raging sea in every ship scene BEFORE Jonah goes over.
+- **[SPECIFIED]** The lot fell upon Jonah: "So they cast lots, and the lot fell upon Jonah" (Jonah 1:7). Image: small plain stones/pebbles as lots — NO legible marks or writing (script garbles in render).
+- **[SPECIFIED]** The SAILORS cast Jonah in, at his own word — he never jumps: "Take me up, and cast me forth into the sea" (Jonah 1:12); "So they took up Jonah, and cast him forth into the sea: and the sea ceased from her raging" (Jonah 1:15). Image: sailors lifting/casting him; never a self-leap.
+- **[SPECIFIED]** The sea ceased ONLY after he was cast in (Jonah 1:15 above). A calm sea with Jonah still aboard contradicts the text.
+- **[CONSTRAINED]** Period ship (8th-century BC Levantine merchant): wooden hull, single square sail, steering oars — no modern rigging, no metal hull, no anachronisms.
+
+## The great fish and the deep (Jonah 1:17 – 2:10)
+- **[SPECIFIED]** A great FISH prepared by the LORD: "Now the LORD had prepared a great fish to swallow up Jonah. And Jonah was in the belly of the fish three days and three nights" (Jonah 1:17). Species unspecified — "whale's belly" is Jesus' KJV wording (Matt 12:40), not a species claim. Image: one vast dark fish, no cartoon teeth/eyes.
+- **[SPECIFIED]** Jonah is ALIVE and PRAYING inside: "Then Jonah prayed unto the LORD his God out of the fish's belly" (Jonah 2:1). Image: living, praying posture — never a drowned corpse in the belly.
+- **[SPECIFIED]** The sinking is total and weedy: "The waters compassed me about, even to the soul: the depth closed me round about, the weeds were wrapped about my head" (Jonah 2:5). Image: weeds about the head are textual in sinking scenes.
+- **[SPECIFIED]** The fish vomited Jonah onto DRY LAND: "And the LORD spake unto the fish, and it vomited out Jonah upon the dry land" (Jonah 2:10). Image: shore at the sea's edge, Jonah alive.
+- **[FREE/symbolic]** The mercy-reach into the deep (light shaft / hand of light) is a symbolic rendering of "yet hast thou brought up my life from corruption, O LORD my God" (Jonah 2:6) — permitted as clearly non-literal light, never a photoreal human arm from the sky.
+
+## The sign demanded (Matthew 12:38-40)
+- **[SPECIFIED]** Scribes and Pharisees demand a sign and Jesus gives ONLY Jonah: "Master, we would see a sign from thee" (Matt 12:38); "An evil and adulterous generation seeketh after a sign; and there shall no sign be given to it, but the sign of the prophet Jonas" (Matt 12:39); "For as Jonas was three days and three nights in the whale's belly; so shall the Son of man be three days and three nights in the heart of the earth" (Matt 12:40).
+- **[CONSTRAINED]** Ministry scene, PRE-passion: Jesus calm and unwounded (no nail wounds, no cross motifs on his body); scribes/Pharisees in 1st-century Judean dress; use the JESUS anchor face.
+
+## The burial and the tomb (Matt 27:57-60; John 19:38-42) — imported from the panel-corrected empty_tomb sheet
+- **[SPECIFIED]** A rich man's NEW rock-cut tomb in a GARDEN near the crucifixion site: "he... laid it in his own new tomb, which he had hewn out in the rock" (Matthew 27:59-60); "Now in the place where he was crucified there was a garden; and in the garden a new sepulchre, wherein was never man yet laid" (John 19:41). Image: hewn into living rock in a garden — never a freestanding masonry building or dome.
+- **[SPECIFIED]** The entrance is LOW — a grown man STOOPS: "And he stooping down, and looking in" (John 20:5); "stooping down, he beheld" (Luke 24:12). Image: a low, small opening — never a tall standing-height doorway.
+- **[SPECIFIED]** The burial wrapping covers the WHOLE body including the head: "Then took they the body of Jesus, and wound it in linen clothes with the spices, as the manner of the Jews is to bury" (John 19:40); "he wrapped it in a clean linen cloth" (Matthew 27:59); "the napkin, that was about his head" (John 20:7). Image: a BURIAL still shows the body fully wound, FACE COVERED by the napkin — never an exposed face or hand inside the wrappings.
+- **[SPECIFIED]** A GREAT STONE rolled TO THE DOOR at burial: "and he rolled a great stone to the door of the sepulchre, and departed" (Matthew 27:60). Image: the stone seals or stands at the entrance OUTSIDE — never inside the chamber.
+- **[SPECIFIED]** The "heart of the earth" darkness (Matt 12:40): the sealed tomb interior is DARK — no lamps or candles burning in a sealed tomb, no window light. A closed-tomb still may show the wound body at rest (that is the burial state; the empty-linen rule applies only to post-resurrection beats).
+- **[SPECIFIED]** The stone found ROLLED AWAY at the resurrection: "And when they looked, they saw that the stone was rolled away: for it was very great" (Mark 16:4). Image: stone moved aside OUTSIDE the entrance.
+- **[SPECIFIED]** The risen Christ SHOWED his hands: "he shewed unto them his hands and his side" (John 20:20); "Reach hither thy finger, and behold my hands" (John 20:27). Image: wounds visible in the hands when shown; the side wound never contradicted (a robed side is fine).
+- **[CONSTRAINED]** 1st-century Judean rock-cut tomb typology (secondary): small squarish crawl-height opening, disc-shaped rolling stone in a groove or a great rolled boulder, low hewn chamber with waist-low bench, tool-marked walls. No columns, no church forms, no sarcophagus, no windows.
+- **[CONSTRAINED]** The risen Christ is alive and whole — no crown of thorns, no gore; serene.
+
+## Nineveh (Jonah 1:2 backdrop)
+- **[CONSTRAINED]** "that great city" (Jonah 1:2): ancient Assyrian walled city — massive mud-brick walls, gate towers, ziggurat silhouettes. NO Islamic-era architecture (no minarets, no onion domes), no Greco-Roman columns.
+
+## Free (artistic licence — not checked)
+Palette, ink style, storm/sea drama and scale, sky, light rays OUTSIDE the tomb, composition, wave shapes, fish silhouette style.
+
+Derived 2026-07-08, rewritten v2 2026-07-10 (agent-mode) from Jonah 1-2; Matthew 12:38-40; Matthew 27:57-60; Mark 16:4; John 19:38-42; John 20:5,7,20,27; Luke 24:12. KJV quotes verbatim. Tomb cards imported from empty_tomb_john208 fact_sheet v2 (5-CLI panel-corrected 2026-07-09).
+----- ARTIFACT END -----

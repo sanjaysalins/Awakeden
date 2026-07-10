@@ -7743,6 +7743,824 @@
       "used_in": [
         "sign_of_jonah_matt1240 short"
       ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "empty_tomb_john208",
+      "piece_title": "The Empty Tomb (John 20:8)",
+      "verse": "John 20:1-10 + John 20:29",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-09",
+      "id": "et_stone_rolled_dawn",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/empty_tomb_john208/visual/stone_rolled_dawn.png",
+      "title": "the stone rolled aside at dawn, the tomb open and empty",
+      "subject": "the stone rolled aside at dawn, the tomb open and empty",
+      "characters": [],
+      "elements": [
+        "rolled stone",
+        "open doorway",
+        "dawn light",
+        "garden"
+      ],
+      "setting": "garden tomb",
+      "palette": "inked cel-flat, pre-dawn blue-blacks to tomb dark to dawn gold",
+      "mood": "the open grave, the ordered linen, believing without seeing",
+      "doctrine": "seeth the stone taken away from the sepulchre (John 20:1)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "john208",
+        "empty_tomb",
+        "resurrection"
+      ],
+      "used_in": [
+        "empty_tomb_john208 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "empty_tomb_john208",
+      "piece_title": "The Empty Tomb (John 20:8)",
+      "verse": "John 20:1-10 + John 20:29",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-09",
+      "id": "et_stone_taken_away_dark",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/empty_tomb_john208/visual/stone_taken_away_dark.png",
+      "title": "the open tomb in pre-dawn darkness, stone rolled aside",
+      "subject": "the open tomb in pre-dawn darkness, stone rolled aside",
+      "characters": [],
+      "elements": [
+        "rolled stone",
+        "black doorway",
+        "pre-dawn dark"
+      ],
+      "setting": "garden tomb before dawn",
+      "palette": "inked cel-flat, pre-dawn blue-blacks to tomb dark to dawn gold",
+      "mood": "the open grave, the ordered linen, believing without seeing",
+      "doctrine": "when it was yet dark... and seeth the stone taken away (John 20:1)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "john208",
+        "empty_tomb",
+        "resurrection"
+      ],
+      "used_in": [
+        "empty_tomb_john208 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "empty_tomb_john208",
+      "piece_title": "The Empty Tomb (John 20:8)",
+      "verse": "John 20:1-10 + John 20:29",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-09",
+      "id": "et_mary_runs_predawn",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/empty_tomb_john208/visual/mary_runs_predawn.png",
+      "title": "Mary Magdalene running from the open tomb in the dark",
+      "subject": "Mary Magdalene running from the open tomb in the dark",
+      "characters": [
+        "Mary Magdalene"
+      ],
+      "elements": [
+        "garden path",
+        "open tomb",
+        "pre-dawn dark"
+      ],
+      "setting": "garden before dawn",
+      "palette": "inked cel-flat, pre-dawn blue-blacks to tomb dark to dawn gold",
+      "mood": "the open grave, the ordered linen, believing without seeing",
+      "doctrine": "Then she runneth, and cometh to Simon Peter (John 20:2)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "john208",
+        "empty_tomb",
+        "resurrection"
+      ],
+      "used_in": [
+        "empty_tomb_john208 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "empty_tomb_john208",
+      "piece_title": "The Empty Tomb (John 20:8)",
+      "verse": "John 20:1-10 + John 20:29",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-09",
+      "id": "et_two_disciples_running",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/empty_tomb_john208/visual/two_disciples_running.png",
+      "title": "Peter and John running together toward the tomb at dawn",
+      "subject": "Peter and John running together toward the tomb at dawn",
+      "characters": [
+        "Peter",
+        "John"
+      ],
+      "elements": [
+        "stony path",
+        "olive trees",
+        "dawn light"
+      ],
+      "setting": "path to the garden tomb",
+      "palette": "inked cel-flat, pre-dawn blue-blacks to tomb dark to dawn gold",
+      "mood": "the open grave, the ordered linen, believing without seeing",
+      "doctrine": "So they ran both together (John 20:4)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "john208",
+        "empty_tomb",
+        "resurrection"
+      ],
+      "used_in": [
+        "empty_tomb_john208 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "empty_tomb_john208",
+      "piece_title": "The Empty Tomb (John 20:8)",
+      "verse": "John 20:1-10 + John 20:29",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-09",
+      "id": "et_linen_left_lying",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/empty_tomb_john208/visual/linen_left_lying.png",
+      "title": "the flat linen grave clothes lying undisturbed on the ledge",
+      "subject": "the flat linen grave clothes lying undisturbed on the ledge",
+      "characters": [],
+      "elements": [
+        "linen clothes",
+        "stone ledge",
+        "dawn light"
+      ],
+      "setting": "rock-cut tomb",
+      "palette": "inked cel-flat, pre-dawn blue-blacks to tomb dark to dawn gold",
+      "mood": "the open grave, the ordered linen, believing without seeing",
+      "doctrine": "saw the linen clothes lying (John 20:5)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "john208",
+        "empty_tomb",
+        "resurrection"
+      ],
+      "used_in": [
+        "empty_tomb_john208 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "empty_tomb_john208",
+      "piece_title": "The Empty Tomb (John 20:8)",
+      "verse": "John 20:1-10 + John 20:29",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-09",
+      "id": "et_napkin_wrapped_apart",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/empty_tomb_john208/visual/napkin_wrapped_apart.png",
+      "title": "the head napkin wrapped together in a place by itself",
+      "subject": "the head napkin wrapped together in a place by itself",
+      "characters": [],
+      "elements": [
+        "rolled napkin",
+        "stone ledge",
+        "flat linen apart"
+      ],
+      "setting": "rock-cut tomb",
+      "palette": "inked cel-flat, pre-dawn blue-blacks to tomb dark to dawn gold",
+      "mood": "the open grave, the ordered linen, believing without seeing",
+      "doctrine": "the napkin, that was about his head... wrapped together in a place by itself (John 20:7)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "john208",
+        "empty_tomb",
+        "resurrection"
+      ],
+      "used_in": [
+        "empty_tomb_john208 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "empty_tomb_john208",
+      "piece_title": "The Empty Tomb (John 20:8)",
+      "verse": "John 20:1-10 + John 20:29",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-09",
+      "id": "et_john_believes_inside",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/empty_tomb_john208/visual/john_believes_inside.png",
+      "title": "John inside the tomb, dawn light on his awestruck face",
+      "subject": "John inside the tomb, dawn light on his awestruck face",
+      "characters": [
+        "John"
+      ],
+      "elements": [
+        "tomb doorway light",
+        "stone ledge",
+        "flat linen"
+      ],
+      "setting": "rock-cut tomb",
+      "palette": "inked cel-flat, pre-dawn blue-blacks to tomb dark to dawn gold",
+      "mood": "the open grave, the ordered linen, believing without seeing",
+      "doctrine": "and he saw, and believed (John 20:8)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "john208",
+        "empty_tomb",
+        "resurrection"
+      ],
+      "used_in": [
+        "empty_tomb_john208 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "empty_tomb_john208",
+      "piece_title": "The Empty Tomb (John 20:8)",
+      "verse": "John 20:1-10 + John 20:29",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-09",
+      "id": "et_jesus_shows_thomas",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/empty_tomb_john208/visual/jesus_shows_thomas.png",
+      "title": "the risen Christ showing his wounded hands to Thomas",
+      "subject": "the risen Christ showing his wounded hands to Thomas",
+      "characters": [
+        "Christ risen",
+        "Thomas"
+      ],
+      "elements": [
+        "wounded palms",
+        "lamplit upper room",
+        "kneeling disciple"
+      ],
+      "setting": "upper room, eight days after",
+      "palette": "inked cel-flat, pre-dawn blue-blacks to tomb dark to dawn gold",
+      "mood": "the open grave, the ordered linen, believing without seeing",
+      "doctrine": "reach hither thy finger, and behold my hands (John 20:27)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "john208",
+        "empty_tomb",
+        "resurrection"
+      ],
+      "used_in": [
+        "empty_tomb_john208 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "empty_tomb_john208",
+      "piece_title": "The Empty Tomb (John 20:8)",
+      "verse": "John 20:1-10 + John 20:29",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-09",
+      "id": "et_risen_christ_wounds",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/empty_tomb_john208/visual/risen_christ_wounds.png",
+      "title": "the risen Christ showing the wounds in his open palms",
+      "subject": "the risen Christ showing the wounds in his open palms",
+      "characters": [
+        "Christ risen"
+      ],
+      "elements": [
+        "wounded palms",
+        "white robe",
+        "dawn garden"
+      ],
+      "setting": "garden at dawn",
+      "palette": "inked cel-flat, pre-dawn blue-blacks to tomb dark to dawn gold",
+      "mood": "the open grave, the ordered linen, believing without seeing",
+      "doctrine": "he shewed unto them his hands and his side (John 20:20)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "john208",
+        "empty_tomb",
+        "resurrection"
+      ],
+      "used_in": [
+        "empty_tomb_john208 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "empty_tomb_john208",
+      "piece_title": "The Empty Tomb (John 20:8)",
+      "verse": "John 20:1-10 + John 20:29",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-09",
+      "id": "et_stone_rolled_dawn_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/empty_tomb_john208/visual/clips/stone_rolled_dawn.mp4",
+      "title": "the stone rolled aside at dawn, the tomb open and empty (Kling push-in)",
+      "subject": "the stone rolled aside at dawn, the tomb open and empty",
+      "characters": [],
+      "elements": [
+        "rolled stone",
+        "open doorway",
+        "dawn light",
+        "garden"
+      ],
+      "setting": "garden tomb",
+      "doctrine": "seeth the stone taken away from the sepulchre (John 20:1)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "john208",
+        "kling"
+      ],
+      "used_in": [
+        "empty_tomb_john208 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "empty_tomb_john208",
+      "piece_title": "The Empty Tomb (John 20:8)",
+      "verse": "John 20:1-10 + John 20:29",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-09",
+      "id": "et_stone_taken_away_dark_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/empty_tomb_john208/visual/clips/stone_taken_away_dark.mp4",
+      "title": "the open tomb in pre-dawn darkness, stone rolled aside (Kling push-in)",
+      "subject": "the open tomb in pre-dawn darkness, stone rolled aside",
+      "characters": [],
+      "elements": [
+        "rolled stone",
+        "black doorway",
+        "pre-dawn dark"
+      ],
+      "setting": "garden tomb before dawn",
+      "doctrine": "when it was yet dark... and seeth the stone taken away (John 20:1)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "john208",
+        "kling"
+      ],
+      "used_in": [
+        "empty_tomb_john208 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "empty_tomb_john208",
+      "piece_title": "The Empty Tomb (John 20:8)",
+      "verse": "John 20:1-10 + John 20:29",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-09",
+      "id": "et_mary_runs_predawn_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/empty_tomb_john208/visual/clips/mary_runs_predawn.mp4",
+      "title": "Mary Magdalene running from the open tomb in the dark (Kling push-in)",
+      "subject": "Mary Magdalene running from the open tomb in the dark",
+      "characters": [
+        "Mary Magdalene"
+      ],
+      "elements": [
+        "garden path",
+        "open tomb",
+        "pre-dawn dark"
+      ],
+      "setting": "garden before dawn",
+      "doctrine": "Then she runneth, and cometh to Simon Peter (John 20:2)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "john208",
+        "kling"
+      ],
+      "used_in": [
+        "empty_tomb_john208 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "empty_tomb_john208",
+      "piece_title": "The Empty Tomb (John 20:8)",
+      "verse": "John 20:1-10 + John 20:29",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-09",
+      "id": "et_two_disciples_running_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/empty_tomb_john208/visual/clips/two_disciples_running.mp4",
+      "title": "Peter and John running together toward the tomb at dawn (Kling push-in)",
+      "subject": "Peter and John running together toward the tomb at dawn",
+      "characters": [
+        "Peter",
+        "John"
+      ],
+      "elements": [
+        "stony path",
+        "olive trees",
+        "dawn light"
+      ],
+      "setting": "path to the garden tomb",
+      "doctrine": "So they ran both together (John 20:4)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "john208",
+        "kling"
+      ],
+      "used_in": [
+        "empty_tomb_john208 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "empty_tomb_john208",
+      "piece_title": "The Empty Tomb (John 20:8)",
+      "verse": "John 20:1-10 + John 20:29",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-09",
+      "id": "et_linen_left_lying_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/empty_tomb_john208/visual/clips/linen_left_lying.mp4",
+      "title": "the flat linen grave clothes lying undisturbed on the ledge (Kling push-in)",
+      "subject": "the flat linen grave clothes lying undisturbed on the ledge",
+      "characters": [],
+      "elements": [
+        "linen clothes",
+        "stone ledge",
+        "dawn light"
+      ],
+      "setting": "rock-cut tomb",
+      "doctrine": "saw the linen clothes lying (John 20:5)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "john208",
+        "kling"
+      ],
+      "used_in": [
+        "empty_tomb_john208 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "empty_tomb_john208",
+      "piece_title": "The Empty Tomb (John 20:8)",
+      "verse": "John 20:1-10 + John 20:29",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-09",
+      "id": "et_napkin_wrapped_apart_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/empty_tomb_john208/visual/clips/napkin_wrapped_apart.mp4",
+      "title": "the head napkin wrapped together in a place by itself (Kling push-in)",
+      "subject": "the head napkin wrapped together in a place by itself",
+      "characters": [],
+      "elements": [
+        "rolled napkin",
+        "stone ledge",
+        "flat linen apart"
+      ],
+      "setting": "rock-cut tomb",
+      "doctrine": "the napkin, that was about his head... wrapped together in a place by itself (John 20:7)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "john208",
+        "kling"
+      ],
+      "used_in": [
+        "empty_tomb_john208 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "empty_tomb_john208",
+      "piece_title": "The Empty Tomb (John 20:8)",
+      "verse": "John 20:1-10 + John 20:29",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-09",
+      "id": "et_john_believes_inside_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/empty_tomb_john208/visual/clips/john_believes_inside.mp4",
+      "title": "John inside the tomb, dawn light on his awestruck face (Kling push-in)",
+      "subject": "John inside the tomb, dawn light on his awestruck face",
+      "characters": [
+        "John"
+      ],
+      "elements": [
+        "tomb doorway light",
+        "stone ledge",
+        "flat linen"
+      ],
+      "setting": "rock-cut tomb",
+      "doctrine": "and he saw, and believed (John 20:8)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "john208",
+        "kling"
+      ],
+      "used_in": [
+        "empty_tomb_john208 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "empty_tomb_john208",
+      "piece_title": "The Empty Tomb (John 20:8)",
+      "verse": "John 20:1-10 + John 20:29",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-09",
+      "id": "et_jesus_shows_thomas_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/empty_tomb_john208/visual/clips/jesus_shows_thomas.mp4",
+      "title": "the risen Christ showing his wounded hands to Thomas (Kling push-in)",
+      "subject": "the risen Christ showing his wounded hands to Thomas",
+      "characters": [
+        "Christ risen",
+        "Thomas"
+      ],
+      "elements": [
+        "wounded palms",
+        "lamplit upper room",
+        "kneeling disciple"
+      ],
+      "setting": "upper room, eight days after",
+      "doctrine": "reach hither thy finger, and behold my hands (John 20:27)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "john208",
+        "kling"
+      ],
+      "used_in": [
+        "empty_tomb_john208 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "empty_tomb_john208",
+      "piece_title": "The Empty Tomb (John 20:8)",
+      "verse": "John 20:1-10 + John 20:29",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-09",
+      "id": "et_risen_christ_wounds_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/empty_tomb_john208/visual/clips/risen_christ_wounds.mp4",
+      "title": "the risen Christ showing the wounds in his open palms (Kling push-in)",
+      "subject": "the risen Christ showing the wounds in his open palms",
+      "characters": [
+        "Christ risen"
+      ],
+      "elements": [
+        "wounded palms",
+        "white robe",
+        "dawn garden"
+      ],
+      "setting": "garden at dawn",
+      "doctrine": "he shewed unto them his hands and his side (John 20:20)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "john208",
+        "kling"
+      ],
+      "used_in": [
+        "empty_tomb_john208 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-08",
+      "id": "soj_storm_ship_waves_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/clips/storm_ship_waves.mp4",
+      "title": "a small ship heeling on mountainous storm waves (Kling push-in)",
+      "subject": "a small ship heeling on mountainous storm waves",
+      "characters": [],
+      "elements": [
+        "ship",
+        "storm waves",
+        "rain"
+      ],
+      "setting": "Mediterranean storm",
+      "doctrine": "the LORD sent out a great wind into the sea (Jonah 1:4)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "kling"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-08",
+      "id": "soj_nineveh_distant_walls_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/clips/nineveh_distant_walls.mp4",
+      "title": "the walled city of Nineveh at dusk from a distant ridge (Kling push-in)",
+      "subject": "the walled city of Nineveh at dusk from a distant ridge",
+      "characters": [],
+      "elements": [
+        "city walls",
+        "gates",
+        "towers"
+      ],
+      "setting": "ancient Assyria",
+      "doctrine": "go to Nineveh, that great city (Jonah 1:2)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "kling"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-08",
+      "id": "soj_lot_falls_jonah_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/clips/lot_falls_jonah.mp4",
+      "title": "sailors around the cast lots, every face on the prophet (Kling push-in)",
+      "subject": "sailors around the cast lots, every face on the prophet",
+      "characters": [
+        "Jonah",
+        "sailors"
+      ],
+      "elements": [
+        "pebble lots",
+        "deck",
+        "lantern"
+      ],
+      "setting": "ship deck",
+      "doctrine": "they cast lots, and the lot fell upon Jonah (Jonah 1:7)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "kling"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-08",
+      "id": "soj_jonah_on_shore_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/clips/jonah_on_shore.mp4",
+      "title": "the prophet cast up on the beach at dawn (Kling push-in)",
+      "subject": "the prophet cast up on the beach at dawn",
+      "characters": [
+        "Jonah"
+      ],
+      "elements": [
+        "wet beach",
+        "surf",
+        "seaweed"
+      ],
+      "setting": "shore at dawn",
+      "doctrine": "it vomited out Jonah upon the dry land (Jonah 2:10)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "kling"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "sign_of_jonah_matt1240",
+      "piece_title": "The Sign of Jonah (Matthew 12:40)",
+      "verse": "Jonah 1-2 + Matthew 12:40",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-08",
+      "id": "soj_man_rising_from_water_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/clips/man_rising_from_water.mp4",
+      "title": "a man bursting up from dark water into morning light (Kling push-in)",
+      "subject": "a man bursting up from dark water into morning light",
+      "characters": [
+        "a man"
+      ],
+      "elements": [
+        "water surface",
+        "morning light"
+      ],
+      "setting": "the deep to the light",
+      "doctrine": "come up out of the deep and live — He brought up my life from corruption (Jonah 2:6)",
+      "reuse_scope": "neutral",
+      "tags": [
+        "livingpage",
+        "matt1240",
+        "kling"
+      ],
+      "used_in": [
+        "sign_of_jonah_matt1240 short"
+      ]
     }
   ]
 }

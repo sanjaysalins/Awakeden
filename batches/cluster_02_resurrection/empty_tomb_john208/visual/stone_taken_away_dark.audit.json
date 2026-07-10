@@ -2,7 +2,9 @@
   "image": "stone_taken_away_dark.png",
   "verdict": "PASS",
   "flags": [
-    "in-chat-agent full-res v2: stone fully aside, doorway open black, pre-dawn"
+    "vision-audited full-res: pre-dawn dark unattended tomb, disc aside outside, olive framing",
+    "no ramp/pit",
+    "matches world canon"
   ],
   "reviewer": "in-chat-agent",
   "stage": "content"

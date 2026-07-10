@@ -5,10 +5,11 @@
   "axes": {
     "anatomy": true,
     "believable": true,
-    "reads_as_intended": false,
-    "not_grotesque": false,
-    "style_consistent": false
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
   },
-  "notes": "eye-audited full-res vs Jonah/Matt12/John20 fact cards; details in .audit.json sidecar",
+  "notes": "same banked still you approved in empty_tomb today: palm wounds shown (John 20:20), alive+whole, no crown of thorns, garden dawn free. Clean.",
   "reviewer": "in-chat-agent"
 }

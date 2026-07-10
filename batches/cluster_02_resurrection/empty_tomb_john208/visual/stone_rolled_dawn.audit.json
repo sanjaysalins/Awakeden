@@ -1,9 +1,10 @@
 {
- "image": "stone_rolled_dawn.png",
- "verdict": "PASS",
- "flags": [
-  "eye-audited full-res 2026-07-09 vs John 20:1-10+20:29 facts: reused sign_of_jonah PASS still (identical prompt); from-inside open doorway + flat linen, no figure"
- ],
- "reviewer": "in-chat-agent",
- "stage": "content"
+  "image": "stone_rolled_dawn.png",
+  "verdict": "PASS",
+  "flags": [
+    "vision-audited full-res vs fact_sheet v2 + world canon: exterior dawn, empty dark ground-level opening, disc outside against rock face, garden",
+    "no body/window/ramp"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
 }

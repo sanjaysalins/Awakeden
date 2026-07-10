@@ -1,7 +1,7 @@
 # youtube_short — YouTube (Short)
 
 ## TITLE
-Thirty Coins Hit the Temple Floor - 500 Years Apart
+Thirty Coins Hit the Temple Floor, 500 Years Apart
 
 ## DESCRIPTION
 Thirty silver coins hit the temple floor. Each one lands on a mark written five hundred years early.
@@ -12,11 +12,11 @@ Five centuries later Judas sold Jesus for the same sum, threw it down in the tem
 
 The cross was no accident. Jesus let himself be weighed like a slave, and his blood bought you back. Stop weighing out your own price. Receive his, and go free.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/thirty-pieces-of-silver.html
 
 Follow:
-YouTube: @awakeden - https://youtube.com/@awakeden
+YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 

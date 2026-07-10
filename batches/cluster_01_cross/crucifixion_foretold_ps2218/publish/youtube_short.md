@@ -12,11 +12,11 @@ A thousand years later, John stood at the cross and watched soldiers divide Jesu
 
 God had it written down early so that when it happened, you would know: the cross was no accident. It was the plan. They rolled dice for the clothes off his back, never seeing what he was doing: laying down his life to win you back.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/ps22-01-crucifixion-foretold.html
 
 Follow:
-YouTube: @awakeden - https://youtube.com/@awakeden
+YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 

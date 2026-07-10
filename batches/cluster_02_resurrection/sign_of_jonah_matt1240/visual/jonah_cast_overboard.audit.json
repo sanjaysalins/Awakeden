@@ -2,7 +2,7 @@
   "image": "jonah_cast_overboard.png",
   "verdict": "PASS",
   "flags": [
-    "eye-audited full-res 2026-07-08 vs fact cards: sailors cast him (Jonah 1:15) ✓ mid-throw not a jump; period ship; anatomy clean"
+    "vision-audited vs v3: sailors LOWER Jonah by his arms (Jonah 1:15 cast, never a jump), grieving crew (1:13-14 reluctance), cargo bales (1:5 wares), raging storm, period ship"
   ],
   "reviewer": "in-chat-agent",
   "stage": "content"

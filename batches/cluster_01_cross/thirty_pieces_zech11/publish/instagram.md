@@ -7,7 +7,7 @@ Zechariah: weighed, thrown down, to the potter, in the house of the LORD. Judas:
 
 Nobody was steering. Every coin found its mark. His blood bought you back. Receive his price, and go free.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
 Follow @awakeden
 
 ## HASHTAGS

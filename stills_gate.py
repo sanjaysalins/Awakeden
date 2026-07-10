@@ -32,7 +32,8 @@ from pathlib import Path
 
 from render_lint.verify import is_production_png  # reuse the story-still filter
 
-RUBRIC_AXES = ["anatomy", "believable", "reads_as_intended", "not_grotesque", "style_consistent"]
+RUBRIC_AXES = ["anatomy", "believable", "reads_as_intended", "not_grotesque", "style_consistent",
+               "world_consistent"]
 RUBRIC = """QUALITY RUBRIC (#2) — score EVERY still, viewing the whole set as a contact sheet first.
 A still PASSes only if ALL five axes pass. Judge the image, not just the one thing you changed.
   - anatomy         : hands/faces/limbs correct; no extra/merged/missing parts, no floating objects.
@@ -43,7 +44,11 @@ A still PASSes only if ALL five axes pass. Judge the image, not just the one thi
   - reads_as_intended: at a glance it reads as the intended subject + action (e.g. a MOCKING crowd
                       actually looks hostile, not like mourners).
   - not_grotesque   : wounds/blood are restrained and reverent — not gaping black holes, gore, or horror.
-  - style_consistent: matches the inked graphic-novel style AND the rest of this set (faces, palette)."""
+  - style_consistent: matches the inked graphic-novel style AND the rest of this set (faces, palette).
+  - world_consistent: every RECURRING subject (the tomb, the stone, a character's face/dress, a
+                      location) looks like the SAME thing in every still it appears in — same shape,
+                      same materials, same scale. Judge from the contact sheet, side by side; one
+                      episode is ONE world (a disc stone in one still cannot be a boulder in another)."""
 
 
 def _visual(piece: Path) -> Path:
@@ -106,9 +111,12 @@ def _review_html(piece: Path, stills: list[Path]) -> str:
     for s in stills:
         clip = v / "clips" / f"{s.stem}.mp4"
         q = v / f"{s.stem}.quality.json"
-        qv = json.loads(q.read_text(encoding="utf-8")).get("verdict") if q.exists() else None
+        qv, qn = None, ""
+        if q.exists():
+            qd = json.loads(q.read_text(encoding="utf-8"))
+            qv, qn = qd.get("verdict"), qd.get("notes", "")
         scenes.append({"slug": s.stem, "png": _furl(s),
-                       "clip": _furl(clip) if clip.exists() else "", "quality": qv})
+                       "clip": _furl(clip) if clip.exists() else "", "quality": qv, "qnotes": qn})
     data = json.dumps(scenes)
     tpl = r"""<!doctype html><html><head><meta charset="utf-8"><title>Stills gate — __NAME__</title>
 <style>
@@ -120,6 +128,7 @@ def _review_html(piece: Path, stills: list[Path]) -> str:
  .col{flex:1;min-width:290px}
  .slug{font-family:monospace;color:#7ec8ff;font-size:15px}
  .q{font-size:12px;margin:2px 0 6px} .q.PASS{color:#6d6} .q.FAIL{color:#e77} .q.none{color:#888}
+ .qn{font-size:12px;color:#cb9;background:#141410;border:1px solid #3a3520;border-radius:6px;padding:6px 8px;margin:0 0 8px;white-space:pre-wrap}
  img,video{max-width:100%;width:330px;border-radius:6px;display:block;background:#000}
  .btns{margin-top:8px} .btns button{font-size:14px;margin:0 8px 0 0;padding:7px 16px;border-radius:8px;border:1px solid #555;background:#26262e;color:#eee;cursor:pointer}
  .btns button.a.on{background:#3a7;border-color:#3a7;color:#fff} .btns button.r.on{background:#c55;border-color:#c55;color:#fff}
@@ -135,7 +144,7 @@ def _review_html(piece: Path, stills: list[Path]) -> str:
 <img class="contact" src="__CONTACT__">
 <div id="app"></div>
 <div id="bar"><button onclick="exportAll()">⬇ Export decisions (paste back to me)</button>
-<span class="sub" style="margin:0">approve = keep · reject = redo</span></div>
+<span class="sub" style="margin:0">approve = keep · needs rebuild = redo (add a note saying what to fix)</span></div>
 <div id="out"><b>Paste this back into the chat:</b><textarea id="ot" readonly></textarea>
 <div style="margin-top:10px"><button onclick="copyOut()">Copy</button>
 <button style="background:#555" onclick="document.getElementById('out').style.display='none'">Close</button></div></div>
@@ -145,11 +154,12 @@ S.forEach(s=>st[s.slug]={decision:null,notes:""});
 function render(){const a=document.getElementById('app');a.innerHTML='';
  S.forEach(s=>{const c=document.createElement('div');c.className='card';c.id='c-'+s.slug;
   const qc=s.quality?('q '+s.quality):'q none';const qt=s.quality?('agent quality: '+s.quality):'agent quality: (not scored)';
-  c.innerHTML=`<div class="col"><div class="slug">${s.slug}</div><div class="${qc}">${qt}</div>
-   <img src="${s.png}"></div>
+  const qn=s.qnotes?`<div class="qn">📋 agent audit: ${s.qnotes}</div>`:'';
+  c.innerHTML=`<div class="col"><div class="slug">${s.slug}</div><div class="${qc}">${qt}</div>${qn}
+   <a href="${s.png}" target="_blank" title="open full-res"><img src="${s.png}"></a></div>
    <div class="col">${s.clip?`<video src="${s.clip}" controls loop muted playsinline></video>`:`<div class="noclip">— no clip yet —</div>`}
-   <div class="btns"><button class="a" data-s="${s.slug}">✓ Approve</button><button class="r" data-s="${s.slug}">✗ Reject</button></div>
-   <textarea data-s="${s.slug}" placeholder="notes (what's wrong / how to fix)"></textarea></div>`;
+   <div class="btns"><button class="a" data-s="${s.slug}">✓ Approve</button><button class="r" data-s="${s.slug}">✗ Needs REBUILD</button></div>
+   <textarea data-s="${s.slug}" placeholder="notes (what's wrong / how to rebuild it)"></textarea></div>`;
   a.appendChild(c);});
  document.querySelectorAll('.btns button').forEach(b=>b.onclick=()=>{const s=b.dataset.s;const dec=b.classList.contains('a')?'approve':'reject';
   st[s].decision=dec;const card=document.getElementById('c-'+s);card.className='card '+(dec==='approve'?'approved':'rejected');

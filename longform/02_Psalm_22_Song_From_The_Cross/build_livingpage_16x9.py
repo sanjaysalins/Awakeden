@@ -367,6 +367,8 @@ def main():
     ap.add_argument("--clips", action="store_true")
     ap.add_argument("--no-sfx", action="store_true")
     ap.add_argument("--lint", action="store_true", help="$0 plan check: crops/captions/reuse/DoD, no ffmpeg")
+    ap.add_argument("--allow-slop", action="store_true",
+                    help="override the fail-closed dash-slop caption block (user-approved only)")
     ap.add_argument("--only", default="", help="rebuild only these beat numbers (e.g. 3,17); others reuse existing segs")
     ap.add_argument("--pool", default="", help="visual pool dir (default: this episode's). Graduation seam: any piece can use the engine")
     ap.add_argument("--page", default="", help="WxH, e.g. 1080x1920 for a 9:16 short (default 1920x1080)")
@@ -564,8 +566,9 @@ def main():
             if b["tpl"] == "full":
                 fb[c["slug"]] += 1
         cp = b.get("cap")
-        if cp and cp["type"] == "caption" and (" - " in cp["text"] or "..." in cp["text"]):
-            slop.append(idx)
+        if cp and cp["type"] == "caption" and any(
+                t in cp["text"] for t in (" - ", "...", "—", "–", "â€")):
+            slop.append(idx)  # dash-joint "X - Y" template + ellipsis + mojibake = AI slop
         if cp and cp["type"] == "redletter" and "..." in cp["text"]:
             slop.append(idx)
     std = {"stills_over_2_uses": {s: n for s, n in cnt.items() if n > 2},
@@ -589,6 +592,14 @@ def main():
     if a.lint:
         print(f"\nLINT DoD: {json.dumps(dod, indent=1)}")
         return
+
+    # FAIL-CLOSED: dash-joint / ellipsis / mojibake captions are AI slop
+    # (memory feedback-no-dash-caption-slop) — refuse to render them onto pixels.
+    if slop and not a.allow_slop:
+        print(f"\nSLOP BLOCK: beats {slop} carry dash-joint/ellipsis/mojibake captions. "
+              f"Rewrite as plain sentences (or --allow-slop with user approval).")
+        import sys as _s
+        _s.exit(3)
 
     hb = spec.get("heartbeat")
     if hb and not a.no_sfx:

@@ -5,10 +5,11 @@
   "axes": {
     "anatomy": true,
     "believable": true,
-    "reads_as_intended": false,
-    "not_grotesque": false,
-    "style_consistent": false
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
   },
-  "notes": "eye-audited full-res vs Jonah/Matt12/John20 fact cards; details in .audit.json sidecar",
+  "notes": "vs v3 cards: scribes+Pharisees DEMAND the sign (Matt 12:38), Jesus calm, pre-passion, unwounded, anchor face, colonnaded temple court OK. Clean.",
   "reviewer": "in-chat-agent"
 }

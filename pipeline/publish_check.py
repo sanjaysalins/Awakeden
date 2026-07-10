@@ -158,6 +158,18 @@ def check_unit(media_dir: str | Path, *, sibling_titles: list[str] | None = None
     if is_long:
         _check_chapters(pub, fails, warns)
 
+    # anti-slop dash-joint scan (user rule 2026-07-10: "X - Y" template reads as AI slop;
+    # memory feedback-no-dash-caption-slop). URLs exempt; hyphenated words unaffected.
+    _url = re.compile(r"https?://\S+")
+    for md in sorted(pub.glob("*.md")):
+        for n, line in enumerate(md.read_text(encoding="utf-8").splitlines(), 1):
+            if line.startswith("#"):
+                continue
+            bare = _url.sub("", line)
+            slop = [t for t in (" - ", "—", "–", "...", "…", "â€") if t in bare]
+            if slop:
+                fails.append(f"UK-G7 dash-slop {md.name}:{n}: {slop} in {line.strip()[:60]!r}")
+
     # thumbnail (WARN — no thumbnail stage in JITB yet)
     src = pub / "_source.json"
     if src.exists():

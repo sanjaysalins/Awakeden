@@ -10,11 +10,11 @@ He rested after each. And on the first day, morning came.
 
 You were never asked to finish the work. You are asked to rest in it. He bowed his head so you could lift yours.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/it-is-finished.html
 
 Follow:
-YouTube: @awakeden - https://youtube.com/@awakeden
+YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 

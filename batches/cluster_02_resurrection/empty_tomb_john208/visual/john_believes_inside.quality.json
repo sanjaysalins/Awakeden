@@ -1,6 +1,6 @@
 {
   "slug": "john_believes_inside",
-  "hash": "eea62b96e4e63bd3",
+  "hash": "4a385ba059ac8bfa",
   "verdict": "PASS",
   "axes": {
     "anatomy": true,
@@ -9,6 +9,6 @@
     "not_grotesque": true,
     "style_consistent": true
   },
-  "notes": "in-chat agent v2 rubric pass after adversarial re-roll 2026-07-09",
+  "notes": "REBUILD v4 vs cards: John kneeling ON THE FLOOR beside the waist-low bench (John 20:8 saw and believed), loose flat EMPTY linen folds on the bench, dark crawl doorway at ground level with dawn light low across the floor, low hewn ceiling, no shovel, no window, period dress.",
   "reviewer": "in-chat-agent"
 }

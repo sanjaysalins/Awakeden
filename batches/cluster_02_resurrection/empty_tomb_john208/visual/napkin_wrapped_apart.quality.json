@@ -1,14 +1,15 @@
 {
   "slug": "napkin_wrapped_apart",
-  "hash": "848c1620ca0c66a0",
+  "hash": "cfa364f70379e881",
   "verdict": "PASS",
   "axes": {
     "anatomy": true,
     "believable": true,
     "reads_as_intended": true,
     "not_grotesque": true,
-    "style_consistent": true
+    "style_consistent": true,
+    "world_consistent": true
   },
-  "notes": "in-chat agent full-res rubric pass 2026-07-09",
+  "notes": "v2 after user catch: linen now COLLAPSED EMPTY layered strips lying flat (matches linen_left_lying - world canon grave_linen), napkin wrapped apart at head-end (John 20:7). Doctrine kept: BOTH items belong in frame - John 20:6-7 shows linen lying AND napkin apart; the order is the evidence John believed.",
   "reviewer": "in-chat-agent"
 }

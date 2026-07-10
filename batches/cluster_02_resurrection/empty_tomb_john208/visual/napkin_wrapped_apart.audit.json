@@ -2,7 +2,8 @@
   "image": "napkin_wrapped_apart.png",
   "verdict": "PASS",
   "flags": [
-    "in-chat-agent full-res: rolled napkin alone on upper step, flat linen apart below - John 20:7 exact"
+    "vision-audited full-res: napkin wrapped apart at head-end, linen = collapsed empty layered strips per grave_linen canon",
+    "John 20:6-7"
   ],
   "reviewer": "in-chat-agent",
   "stage": "content"

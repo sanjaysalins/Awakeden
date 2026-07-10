@@ -14,9 +14,14 @@ A thousand years later, John records Jesus' last word from the cross: "It is fin
 
 Different words. Different languages. A thousand years apart. But the same note: a completed saving work, with nothing left to add.
 
-What is left for you to earn? Nothing. Only someone to come home to - the One who said it is done.
+What is left for you to earn? Nothing. Only someone to come home to, the One who said it is done.
 
-Subscribe to walk through the whole Bible and meet Jesus on every page. ✝
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 

@@ -1,6 +1,6 @@
 {
   "slug": "stone_rolled_dawn",
-  "hash": "57c64294059a4277",
+  "hash": "a03bd6cca92d43b0",
   "verdict": "PASS",
   "axes": {
     "anatomy": true,
@@ -9,6 +9,6 @@
     "not_grotesque": true,
     "style_consistent": true
   },
-  "notes": "in-chat agent full-res rubric pass 2026-07-09",
+  "notes": "REBUILD v3 (ref-free) vs cards: exterior garden tomb at golden dawn (John 19:41), low ground-level opening dark and EMPTY, disc stone rolled aside OUTSIDE resting against the rock face (Matt 27:60/John 20:1), no body, no window, no ramp. Fixed root cause: dropped the corrupted EMPTY_TOMB.png ref (it contained a corpse-on-bench composition).",
   "reviewer": "in-chat-agent"
 }

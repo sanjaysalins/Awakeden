@@ -12,11 +12,11 @@ And listen closely: this was no cry of lost faith. Even forsaken, he still calls
 
 He was forsaken so that you never will be. However far you have run, the way home is open, and he opened it from the dark.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/ps22-03-forsaken-cry.html
 
 Follow:
-YouTube: @awakeden - https://youtube.com/@awakeden
+YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 

@@ -3,7 +3,7 @@
 ## CAPTION
 The first time the Bible says finished, nothing was broken yet. Creation: finished, then rest. Redemption: finished, then the tomb-rest, then MORNING. Two finished works. One Workman. You were never asked to finish it. Rest in it.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
 Follow @awakeden
 
 ## HASHTAGS

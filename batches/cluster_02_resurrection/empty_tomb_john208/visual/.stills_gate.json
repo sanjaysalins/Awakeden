@@ -1,73 +1,73 @@
 {
   "stills": {
-    "john_believes_inside": {
-      "hash": "eea62b96e4e63bd3",
+    "jesus_shows_thomas": {
+      "hash": "48d44cf601703492",
       "quality": "PASS",
-      "quality_hash": "eea62b96e4e63bd3",
+      "quality_hash": "48d44cf601703492",
       "approved": true,
-      "approved_hash": "eea62b96e4e63bd3",
-      "approve_notes": "user approved GATE 2 in chat 2026-07-09 (with 102s v4 audio)"
+      "approved_hash": "48d44cf601703492"
+    },
+    "john_believes_inside": {
+      "hash": "4a385ba059ac8bfa",
+      "quality": "PASS",
+      "quality_hash": "4a385ba059ac8bfa",
+      "approved": true,
+      "approved_hash": "4a385ba059ac8bfa",
+      "approve_notes": "user approved 2026-07-10 (fact-card + world-canon rebuilds)"
     },
     "linen_left_lying": {
-      "hash": "e0e42da5f2715e2d",
+      "hash": "9e08739f243606ac",
       "quality": "PASS",
-      "quality_hash": "e0e42da5f2715e2d",
+      "quality_hash": "9e08739f243606ac",
       "approved": true,
-      "approved_hash": "e0e42da5f2715e2d",
-      "approve_notes": "user approved GATE 2 in chat 2026-07-09 (with 102s v4 audio)"
+      "approved_hash": "9e08739f243606ac"
     },
     "mary_runs_predawn": {
-      "hash": "240520d24feb70a1",
+      "hash": "19d04f65bf2a8d78",
       "quality": "PASS",
-      "quality_hash": "240520d24feb70a1",
+      "quality_hash": "19d04f65bf2a8d78",
       "approved": true,
-      "approved_hash": "240520d24feb70a1",
-      "approve_notes": "user approved GATE 2 in chat 2026-07-09 (with 102s v4 audio)"
+      "approved_hash": "19d04f65bf2a8d78",
+      "approve_notes": "user approved 2026-07-10 (fact-card + world-canon rebuilds)"
     },
     "napkin_wrapped_apart": {
-      "hash": "848c1620ca0c66a0",
+      "hash": "cfa364f70379e881",
       "quality": "PASS",
-      "quality_hash": "848c1620ca0c66a0",
+      "quality_hash": "cfa364f70379e881",
       "approved": true,
-      "approved_hash": "848c1620ca0c66a0",
-      "approve_notes": "user approved GATE 2 in chat 2026-07-09 (with 102s v4 audio)"
+      "approved_hash": "cfa364f70379e881",
+      "approve_notes": "user approved 2026-07-10 (fact-card + world-canon rebuilds)"
     },
     "risen_christ_wounds": {
       "hash": "7e09f94658bb29e6",
       "quality": "PASS",
       "quality_hash": "7e09f94658bb29e6",
       "approved": true,
-      "approved_hash": "7e09f94658bb29e6",
-      "approve_notes": "user approved GATE 2 in chat 2026-07-09 (with 102s v4 audio)"
+      "approved_hash": "7e09f94658bb29e6"
     },
     "stone_rolled_dawn": {
-      "hash": "57c64294059a4277",
+      "hash": "a03bd6cca92d43b0",
       "quality": "PASS",
-      "quality_hash": "57c64294059a4277",
+      "quality_hash": "a03bd6cca92d43b0",
       "approved": true,
-      "approved_hash": "57c64294059a4277",
-      "approve_notes": "user approved GATE 2 in chat 2026-07-09 (with 102s v4 audio)"
+      "approved_hash": "a03bd6cca92d43b0",
+      "approve_notes": "user approved 2026-07-10 (fact-card + world-canon rebuilds)"
     },
     "stone_taken_away_dark": {
-      "hash": "574b0363ffe8b060",
+      "hash": "7b8dafd3bcdbba16",
       "quality": "PASS",
-      "quality_hash": "574b0363ffe8b060",
+      "quality_hash": "7b8dafd3bcdbba16",
       "approved": true,
-      "approved_hash": "574b0363ffe8b060",
-      "approve_notes": "user approved GATE 2 in chat 2026-07-09 (with 102s v4 audio)"
+      "approved_hash": "7b8dafd3bcdbba16",
+      "approve_notes": "user approved 2026-07-10 (fact-card + world-canon rebuilds)"
     },
     "two_disciples_running": {
-      "hash": "0812fc52ab21f29d",
+      "hash": "1e35d54caf452a3f",
       "quality": "PASS",
-      "quality_hash": "0812fc52ab21f29d",
+      "quality_hash": "1e35d54caf452a3f",
       "approved": true,
-      "approved_hash": "0812fc52ab21f29d",
-      "approve_notes": "user approved GATE 2 in chat 2026-07-09 (with 102s v4 audio)"
-    },
-    "jesus_shows_thomas": {
-      "hash": "48d44cf601703492",
-      "quality": "PASS",
-      "quality_hash": "48d44cf601703492"
+      "approved_hash": "1e35d54caf452a3f",
+      "approve_notes": "user approved 2026-07-10 (fact-card + world-canon rebuilds)"
     }
   }
 }

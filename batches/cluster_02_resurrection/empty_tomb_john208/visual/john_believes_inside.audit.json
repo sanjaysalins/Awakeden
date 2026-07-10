@@ -2,8 +2,8 @@
   "image": "john_believes_inside.png",
   "verdict": "PASS",
   "flags": [
-    "in-chat-agent full-res v2: short-hair young John (no Jesus misread), wonder-lit face",
-    "nit: sheet edge drapes slightly"
+    "vision-audited full-res: John kneels ON FLOOR beside bench, empty flat linen folds, ground-level crawl doorway, no shovel/window",
+    "John 20:8"
   ],
   "reviewer": "in-chat-agent",
   "stage": "content"

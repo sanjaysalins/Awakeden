@@ -10,7 +10,12 @@ Psalm 22:31 (KJV): "They shall come, and shall declare his righteousness unto a 
 
 A thousand years later, Jesus' last word from the cross was "It is finished." Different words, same note: a completed work. Nothing left to earn. Only someone to come home to.
 
-Subscribe to walk through the whole Bible and meet Jesus on every page. ✝
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 

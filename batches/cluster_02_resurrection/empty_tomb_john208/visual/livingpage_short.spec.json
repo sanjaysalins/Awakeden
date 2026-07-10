@@ -1,150 +1,430 @@
 {
  "_doc": "THE EMPTY TOMB (John 20:1-10 + 20:29) 9:16 SHORT - living page. 19 beats / 102.10s. Stolen-body misdirection hook, Mary's redletter report, evidence run (linen -> napkin -> WHAT THIEF punch), heartbeat hush inside the tomb (no angel / where the body lay), HE BELIEVED takeover on John, Thomas foil, JESUS redletter beatitude, sustained sacred Christ close (border-break on THE LORD IS RISEN).",
  "audio": "../audio/narration.mp3",
- "total": 102.10,
+ "total": 79.07,
  "cut_ticks": false,
  "heartbeat": {
-  "from": 40.0,
-  "to": 49.68,
+  "from": 33.24,
+  "to": 40.03,
   "gain": -9,
   "bpm": 60
  },
  "beats": [
   {
-   "t": [0.0, 4.64],
+   "t": [
+    0.0,
+    4.58
+   ],
    "tpl": "full",
    "punch": true,
    "ramp": true,
-   "sfx": [["impact_low_boom", 0.1, -12]],
-   "takeover": {"panel": 0, "start": 3.2, "zoom": 1.24},
-   "clips": [{"slug": "stone_rolled_dawn", "motion": "pushin"}],
-   "cap": {"type": "caption", "text": "Someone took the body", "kw": "TOOK THE BODY"}
+   "sfx": [
+    [
+     "impact_low_boom",
+     0.1,
+     -12
+    ]
+   ],
+   "takeover": {
+    "panel": 0,
+    "start": 3.14,
+    "zoom": 1.24
+   },
+   "clips": [
+    {
+     "slug": "stone_rolled_dawn",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Someone took the body",
+    "kw": "TOOK THE BODY"
+   }
   },
   {
-   "t": [4.64, 9.2],
+   "t": [
+    4.58,
+    9.5
+   ],
    "tpl": "full",
-   "clips": [{"slug": "stone_taken_away_dark", "motion": "pushin"}],
-   "cap": {"type": "caption", "text": "While it was still dark — the stone stood rolled away", "kw": "STILL DARK"}
+   "clips": [
+    {
+     "slug": "stone_taken_away_dark",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "While it was still dark, the stone stood rolled away",
+    "kw": "STILL DARK"
+   }
   },
   {
-   "t": [9.2, 13.6],
-   "tpl": "full",
-   "whip": true,
-   "clips": [{"slug": "mary_runs_predawn", "motion": "pushin"}],
-   "cap": {"type": "caption", "text": "Mary ran to Peter and John", "kw": "SHE RAN"}
-  },
-  {
-   "t": [13.6, 18.32],
-   "tpl": "full",
-   "clips": [{"slug": "mary_runs_predawn", "motion": "pushin"}],
-   "cap": {"type": "redletter", "text": "They have taken away the Lord out of the sepulchre, and we know not where they have laid him.", "speaker": "MARY", "ref": "JOHN 20:2"}
-  },
-  {
-   "t": [18.32, 21.6],
-   "tpl": "full",
-   "whip": true,
-   "clips": [{"slug": "two_disciples_running", "motion": "pushin"}],
-   "cap": {"type": "caption", "text": "They ran to see — the body was gone", "kw": "GONE"}
-  },
-  {
-   "t": [21.6, 25.52],
-   "tpl": "full",
-   "clips": [{"slug": "linen_left_lying", "motion": "pushin"}],
-   "cap": {"type": "caption", "text": "Only the linen — and the cloth from his head", "kw": "ONLY THE LINEN"}
-  },
-  {
-   "t": [25.52, 29.5],
-   "tpl": "full",
-   "clips": [{"slug": "napkin_wrapped_apart", "motion": "pushin"}],
-   "cap": {"type": "caption", "text": "The napkin that was about his head", "kw": "THE NAPKIN"}
-  },
-  {
-   "t": [29.5, 35.04],
-   "tpl": "full",
-   "punch": true,
-   "sfx": [["impact_low_boom", 32.1, -14]],
-   "clips": [{"slug": "napkin_wrapped_apart", "motion": "pushin"}],
-   "cap": {"type": "caption", "text": "Wrapped together, in a place by itself — what thief does that?", "kw": "WHAT THIEF"}
-  },
-  {
-   "t": [35.04, 40.0],
-   "tpl": "full",
-   "clips": [{"slug": "john_believes_inside", "motion": "pushin"}],
-   "cap": {"type": "caption", "text": "Then John stepped inside", "kw": "JOHN STEPPED IN"}
-  },
-  {
-   "t": [40.0, 44.8],
-   "tpl": "full",
-   "sfx": [["air_hollow_desolate", 40.1, -18]],
-   "clips": [{"slug": "stone_rolled_dawn", "motion": "pushin"}],
-   "cap": {"type": "caption", "text": "No angel spoke — no risen Lord stood there", "kw": "NO ANGEL"}
-  },
-  {
-   "t": [44.8, 49.68],
-   "tpl": "full",
-   "clips": [{"slug": "linen_left_lying", "motion": "pushin"}],
-   "cap": {"type": "caption", "text": "Only the linen, where the body should have been", "kw": "WHERE THE BODY LAY"}
-  },
-  {
-   "t": [49.68, 51.84],
-   "tpl": "full",
-   "punch": true,
-   "takeover": {"panel": 0, "start": 50.3, "zoom": 1.3},
-   "clips": [{"slug": "john_believes_inside", "motion": "pushin"}],
-   "cap": {"type": "caption", "text": "and he saw, and believed", "kw": "HE BELIEVED"}
-  },
-  {
-   "t": [51.84, 58.5],
-   "tpl": "full",
-   "clips": [{"slug": "risen_christ_wounds", "motion": "pushin"}],
-   "cap": {"type": "caption", "text": "Believed what? That his Lord was risen", "kw": "HIS LORD RISEN"}
-  },
-  {
-   "t": [58.5, 65.52],
-   "tpl": "full",
-   "clips": [{"slug": "stone_taken_away_dark", "motion": "pushin"}],
-   "cap": {"type": "caption", "text": "He did not yet know the scripture — the linen was enough", "kw": "THE LINEN WAS ENOUGH"}
-  },
-  {
-   "t": [65.52, 71.5],
+   "t": [
+    9.5,
+    11.26
+   ],
    "tpl": "full",
    "whip": true,
-   "clips": [{"slug": "jesus_shows_thomas", "motion": "pushin"}],
-   "cap": {"type": "caption", "text": "Thomas refused to believe until he saw", "kw": "UNTIL I SEE"}
+   "clips": [
+    {
+     "slug": "mary_runs_predawn",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Mary ran to Peter and John",
+    "kw": "SHE RAN"
+   }
   },
   {
-   "t": [71.5, 79.76],
+   "t": [
+    11.26,
+    16.16
+   ],
    "tpl": "full",
-   "clips": [{"slug": "jesus_shows_thomas", "motion": "pushin"}],
-   "cap": {"type": "caption", "text": "Eight days later He showed Thomas His hands — Thomas saw, and believed", "kw": "THOMAS SAW"}
+   "clips": [
+    {
+     "slug": "mary_runs_predawn",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "They have taken away the Lord out of the sepulchre, and we know not where they have laid him.",
+    "speaker": "MARY",
+    "ref": "JOHN 20:2"
+   }
   },
   {
-   "t": [79.76, 84.48],
+   "t": [
+    16.16,
+    18.74
+   ],
    "tpl": "full",
-   "clips": [{"slug": "risen_christ_wounds", "motion": "pushin"}],
-   "cap": {"type": "redletter", "text": "blessed are they that have not seen, and yet have believed.", "speaker": "JESUS", "ref": "JOHN 20:29"}
+   "whip": true,
+   "clips": [
+    {
+     "slug": "two_disciples_running",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "They ran to see. The body was gone.",
+    "kw": "GONE"
+   }
   },
   {
-   "t": [84.48, 93.0],
+   "t": [
+    18.74,
+    21.86
+   ],
    "tpl": "full",
-   "takeover": {"panel": 0, "start": 88.0, "zoom": 1.26},
-   "clips": [{"slug": "risen_christ_wounds", "motion": "pushin"}],
-   "cap": {"type": "caption", "text": "You were not at the tomb — Jesus was speaking about you", "kw": "ABOUT YOU"}
+   "clips": [
+    {
+     "slug": "linen_left_lying",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Only the linen, and the cloth from his head",
+    "kw": "ONLY THE LINEN"
+   }
   },
   {
-   "t": [93.0, 97.5],
+   "t": [
+    21.86,
+    26.04
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "napkin_wrapped_apart",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The napkin that was about his head",
+    "kw": "THE NAPKIN"
+   }
+  },
+  {
+   "t": [
+    26.04,
+    30.93
+   ],
    "tpl": "full",
    "punch": true,
-   "border_break": {"at": 93.1},
-   "sfx": [["dawn_morning_warm", 93.1, -13]],
-   "clips": [{"slug": "risen_christ_wounds", "motion": "pushin"}],
-   "cap": {"type": "caption", "text": "Believe what John believed at the linen — the Lord is risen", "kw": "THE LORD IS RISEN"}
+   "sfx": [
+    [
+     "impact_low_boom",
+     28.64,
+     -14
+    ]
+   ],
+   "clips": [
+    {
+     "slug": "napkin_wrapped_apart",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Wrapped together, in a place by itself. What thief does that?",
+    "kw": "WHAT THIEF"
+   }
   },
   {
-   "t": [97.5, 102.1],
+   "t": [
+    30.93,
+    33.24
+   ],
    "tpl": "full",
-   "clips": [{"slug": "risen_christ_wounds", "motion": "pushin"}],
-   "cap": {"type": "caption", "text": "Already, he calls that faith blessed", "kw": "ALREADY BLESSED"}
+   "clips": [
+    {
+     "slug": "john_believes_inside",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Then John stepped inside",
+    "kw": "JOHN STEPPED IN"
+   }
+  },
+  {
+   "t": [
+    33.24,
+    36.16
+   ],
+   "tpl": "full",
+   "sfx": [
+    [
+     "air_hollow_desolate",
+     33.34,
+     -18
+    ]
+   ],
+   "clips": [
+    {
+     "slug": "stone_rolled_dawn",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "No angel spoke. No risen Lord stood there.",
+    "kw": "NO ANGEL"
+   }
+  },
+  {
+   "t": [
+    36.16,
+    40.03
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "linen_left_lying",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Only the linen, where the body should have been",
+    "kw": "WHERE THE BODY LAY"
+   }
+  },
+  {
+   "t": [
+    40.03,
+    44.43
+   ],
+   "tpl": "full",
+   "punch": true,
+   "takeover": {
+    "panel": 0,
+    "start": 42.89,
+    "zoom": 1.3
+   },
+   "clips": [
+    {
+     "slug": "john_believes_inside",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "and he saw, and believed",
+    "kw": "HE BELIEVED"
+   }
+  },
+  {
+   "t": [
+    44.43,
+    47.73
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "risen_christ_wounds",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Believed what? That his Lord was risen",
+    "kw": "HIS LORD RISEN"
+   }
+  },
+  {
+   "t": [
+    47.73,
+    53.15
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "stone_taken_away_dark",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He did not yet know the scripture. The linen was enough.",
+    "kw": "THE LINEN WAS ENOUGH"
+   }
+  },
+  {
+   "t": [
+    53.15,
+    55.69
+   ],
+   "tpl": "full",
+   "whip": true,
+   "clips": [
+    {
+     "slug": "jesus_shows_thomas",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Thomas refused to believe until he saw",
+    "kw": "UNTIL I SEE"
+   }
+  },
+  {
+   "t": [
+    55.69,
+    61.43
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "jesus_shows_thomas",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Eight days later He showed Thomas His hands. Thomas saw, and believed.",
+    "kw": "THOMAS SAW"
+   }
+  },
+  {
+   "t": [
+    61.43,
+    67.49
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "risen_christ_wounds",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "blessed are they that have not seen, and yet have believed.",
+    "speaker": "JESUS",
+    "ref": "JOHN 20:29"
+   }
+  },
+  {
+   "t": [
+    67.49,
+    72.97
+   ],
+   "tpl": "full",
+   "takeover": {
+    "panel": 0,
+    "start": 67.97,
+    "zoom": 1.26
+   },
+   "clips": [
+    {
+     "slug": "risen_christ_wounds",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "You were not at the tomb. Jesus was speaking about you.",
+    "kw": "ABOUT YOU"
+   }
+  },
+  {
+   "t": [
+    72.97,
+    77.15
+   ],
+   "tpl": "full",
+   "punch": true,
+   "border_break": {
+    "at": 93.1
+   },
+   "sfx": [
+    [
+     "dawn_morning_warm",
+     73.07,
+     -13
+    ]
+   ],
+   "clips": [
+    {
+     "slug": "risen_christ_wounds",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Believe what John believed at the linen: the Lord is risen",
+    "kw": "THE LORD IS RISEN"
+   }
+  },
+  {
+   "t": [
+    77.15,
+    79.07
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "risen_christ_wounds",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Already, he calls that faith blessed",
+    "kw": "ALREADY BLESSED"
+   }
   }
  ]
 }

@@ -1,6 +1,6 @@
 {
   "slug": "stone_taken_away_dark",
-  "hash": "574b0363ffe8b060",
+  "hash": "7b8dafd3bcdbba16",
   "verdict": "PASS",
   "axes": {
     "anatomy": true,
@@ -9,6 +9,6 @@
     "not_grotesque": true,
     "style_consistent": true
   },
-  "notes": "in-chat agent v2 rubric pass after adversarial re-roll 2026-07-09",
+  "notes": "REBUILD v3 (ref-free) vs cards: pre-dawn blue darkness (John 20:1 while it was yet dark), tomb unattended, opening pitch dark, disc stone rolled aside outside against the rock face, olive framing, no ramp/pit/slab. Clean.",
   "reviewer": "in-chat-agent"
 }

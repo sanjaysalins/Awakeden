@@ -4,17 +4,22 @@
 They Sneered the Prophecy They Were Fulfilling
 
 ## DESCRIPTION
-At the cross they shook their heads and sneered a taunt - one a psalm had recorded a thousand years earlier.
+At the cross they shook their heads and sneered a taunt, one a psalm had recorded a thousand years earlier.
 
 Psalm 22:7-8 (KJV): "they shake the head, saying, He trusted on the LORD that he would deliver him: let him deliver him."
 
-Matthew 27 records both: the wagging heads (v.39) and the same taunt in v.43 - let him deliver him now. Same gesture. Same words. A millennium apart.
+Matthew 27 records both: the wagging heads (v.39) and the same taunt in v.43, let him deliver him now. Same gesture. Same words. A millennium apart.
 
 They thought they were mocking a failed messiah. They were unknowingly reciting the prophecy that marked Him as the One.
 
-He could have come down. He chose to stay - not from weakness, but because staying was the only way to deliver you.
+He could have come down. He chose to stay, not from weakness, but because staying was the only way to deliver you.
 
-Subscribe to walk through the whole Bible and meet Jesus on every page. ✝
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 

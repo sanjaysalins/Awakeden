@@ -1,12 +1,12 @@
 {
   "stills": {
     "body_laid_in_tomb": {
-      "hash": "2425fc7513f652b6",
+      "hash": "97a0facb501d4c5a",
       "quality": "PASS",
-      "quality_hash": "2425fc7513f652b6",
+      "quality_hash": "97a0facb501d4c5a",
       "approved": true,
-      "approved_hash": "2425fc7513f652b6",
-      "approve_notes": "user approved all 15 in chat 2026-07-08 (7 via review page + 9 explicit incl. re-rolls)"
+      "approved_hash": "97a0facb501d4c5a",
+      "approve_notes": "user approved 2026-07-10 (corpus-rebuild fact-card pass; fish + hand kept by user call)"
     },
     "great_fish_rising": {
       "hash": "d1647ec49c58b94b",
@@ -14,7 +14,7 @@
       "quality_hash": "d1647ec49c58b94b",
       "approved": true,
       "approved_hash": "d1647ec49c58b94b",
-      "approve_notes": "user approved all 15 in chat 2026-07-08 (7 via review page + 9 explicit incl. re-rolls)"
+      "approve_notes": "user approved 2026-07-10 (corpus-rebuild fact-card pass; fish + hand kept by user call)"
     },
     "jesus_and_scribes": {
       "hash": "f4121352b38f94d8",
@@ -22,15 +22,15 @@
       "quality_hash": "f4121352b38f94d8",
       "approved": true,
       "approved_hash": "f4121352b38f94d8",
-      "approve_notes": "user approved all 15 in chat 2026-07-08 (7 via review page + 9 explicit incl. re-rolls)"
+      "approve_notes": "user approved 2026-07-10 (corpus-rebuild fact-card pass; fish + hand kept by user call)"
     },
     "jonah_cast_overboard": {
-      "hash": "c45d46e27a9c453d",
+      "hash": "f2efa9b1a350fb21",
       "quality": "PASS",
-      "quality_hash": "c45d46e27a9c453d",
+      "quality_hash": "f2efa9b1a350fb21",
       "approved": true,
-      "approved_hash": "c45d46e27a9c453d",
-      "approve_notes": "user approved all 15 in chat 2026-07-08 (7 via review page + 9 explicit incl. re-rolls)"
+      "approved_hash": "f2efa9b1a350fb21",
+      "approve_notes": "user approved 2026-07-10 (corpus-rebuild fact-card pass; fish + hand kept by user call)"
     },
     "jonah_in_the_deep": {
       "hash": "99f00ae3a1310b59",
@@ -38,7 +38,7 @@
       "quality_hash": "99f00ae3a1310b59",
       "approved": true,
       "approved_hash": "99f00ae3a1310b59",
-      "approve_notes": "user approved all 15 in chat 2026-07-08 (7 via review page + 9 explicit incl. re-rolls)"
+      "approve_notes": "user approved 2026-07-10 (corpus-rebuild fact-card pass; fish + hand kept by user call)"
     },
     "jonah_on_shore": {
       "hash": "dc85cb4696daaaf2",
@@ -46,7 +46,7 @@
       "quality_hash": "dc85cb4696daaaf2",
       "approved": true,
       "approved_hash": "dc85cb4696daaaf2",
-      "approve_notes": "user approved all 15 in chat 2026-07-08 (7 via review page + 9 explicit incl. re-rolls)"
+      "approve_notes": "user approved 2026-07-10 (corpus-rebuild fact-card pass; fish + hand kept by user call)"
     },
     "jonah_sinking_down": {
       "hash": "77a79aa0620bf2fa",
@@ -54,7 +54,7 @@
       "quality_hash": "77a79aa0620bf2fa",
       "approved": true,
       "approved_hash": "77a79aa0620bf2fa",
-      "approve_notes": "user approved all 15 in chat 2026-07-08 (7 via review page + 9 explicit incl. re-rolls)"
+      "approve_notes": "user approved 2026-07-10 (corpus-rebuild fact-card pass; fish + hand kept by user call)"
     },
     "lot_falls_jonah": {
       "hash": "9e0f041d00a94fa6",
@@ -62,8 +62,7 @@
       "quality_hash": "9e0f041d00a94fa6",
       "approved": true,
       "approved_hash": "9e0f041d00a94fa6",
-      "reject_notes": "feels bit unnatural",
-      "approve_notes": "user approved all 15 in chat 2026-07-08 (7 via review page + 9 explicit incl. re-rolls)"
+      "approve_notes": "user approved 2026-07-10 (corpus-rebuild fact-card pass; fish + hand kept by user call)"
     },
     "man_rising_from_water": {
       "hash": "aa4c96f1d6df2aa6",
@@ -71,8 +70,7 @@
       "quality_hash": "aa4c96f1d6df2aa6",
       "approved": true,
       "approved_hash": "aa4c96f1d6df2aa6",
-      "reject_notes": "is this meant to be Jonah?",
-      "approve_notes": "user approved all 15 in chat 2026-07-08 (7 via review page + 9 explicit incl. re-rolls)"
+      "approve_notes": "user approved 2026-07-10 (corpus-rebuild fact-card pass; fish + hand kept by user call)"
     },
     "mercy_hand_into_deep": {
       "hash": "1c1a8a7e8a2b29d2",
@@ -80,16 +78,15 @@
       "quality_hash": "1c1a8a7e8a2b29d2",
       "approved": true,
       "approved_hash": "1c1a8a7e8a2b29d2",
-      "reject_notes": "the hand has a dark ball in the middle hand",
-      "approve_notes": "user approved all 15 in chat 2026-07-08 (7 via review page + 9 explicit incl. re-rolls)"
+      "approve_notes": "user approved 2026-07-10 (corpus-rebuild fact-card pass; fish + hand kept by user call)"
     },
     "nineveh_distant_walls": {
-      "hash": "29d3f817dd989c1a",
+      "hash": "6d79814e2e255023",
       "quality": "PASS",
-      "quality_hash": "29d3f817dd989c1a",
+      "quality_hash": "6d79814e2e255023",
       "approved": true,
-      "approved_hash": "29d3f817dd989c1a",
-      "approve_notes": "user approved all 15 in chat 2026-07-08 (7 via review page + 9 explicit incl. re-rolls)"
+      "approved_hash": "6d79814e2e255023",
+      "approve_notes": "user approved 2026-07-10 (corpus-rebuild fact-card pass; fish + hand kept by user call)"
     },
     "risen_christ_wounds": {
       "hash": "7e09f94658bb29e6",
@@ -97,15 +94,15 @@
       "quality_hash": "7e09f94658bb29e6",
       "approved": true,
       "approved_hash": "7e09f94658bb29e6",
-      "approve_notes": "user approved all 15 in chat 2026-07-08 (7 via review page + 9 explicit incl. re-rolls)"
+      "approve_notes": "user approved 2026-07-10 (corpus-rebuild fact-card pass; fish + hand kept by user call)"
     },
     "stone_rolled_dawn": {
-      "hash": "57c64294059a4277",
+      "hash": "a03bd6cca92d43b0",
       "quality": "PASS",
-      "quality_hash": "57c64294059a4277",
+      "quality_hash": "a03bd6cca92d43b0",
       "approved": true,
-      "approved_hash": "57c64294059a4277",
-      "approve_notes": "user approved all 15 in chat 2026-07-08 (7 via review page + 9 explicit incl. re-rolls)"
+      "approved_hash": "a03bd6cca92d43b0",
+      "approve_notes": "user approved 2026-07-10 (corpus-rebuild fact-card pass; fish + hand kept by user call)"
     },
     "storm_ship_waves": {
       "hash": "d8338c7a86d5abf6",
@@ -113,15 +110,15 @@
       "quality_hash": "d8338c7a86d5abf6",
       "approved": true,
       "approved_hash": "d8338c7a86d5abf6",
-      "approve_notes": "user approved all 15 in chat 2026-07-08 (7 via review page + 9 explicit incl. re-rolls)"
+      "approve_notes": "user approved 2026-07-10 (corpus-rebuild fact-card pass; fish + hand kept by user call)"
     },
     "three_days_dark_tomb": {
-      "hash": "10da393fe1546d4e",
+      "hash": "d196ca7bf9671cc9",
       "quality": "PASS",
-      "quality_hash": "10da393fe1546d4e",
+      "quality_hash": "d196ca7bf9671cc9",
       "approved": true,
-      "approved_hash": "10da393fe1546d4e",
-      "approve_notes": "user approved all 15 in chat 2026-07-08 (7 via review page + 9 explicit incl. re-rolls)"
+      "approved_hash": "d196ca7bf9671cc9",
+      "approve_notes": "user approved 2026-07-10 (corpus-rebuild fact-card pass; fish + hand kept by user call)"
     }
   }
 }

@@ -5,10 +5,11 @@
   "axes": {
     "anatomy": true,
     "believable": true,
-    "reads_as_intended": false,
-    "not_grotesque": false,
-    "style_consistent": false
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": false
   },
-  "notes": "eye-audited full-res vs Jonah/Matt12/John20 fact cards; details in .audit.json sidecar",
+  "notes": "USER CALL: vast dark fish about to swallow Jonah (1:17) - but prominent shark TEETH + yellow eye lean monster-ish vs the constrained no-cartoon-teeth card. Keep the drama or re-roll softer?",
   "reviewer": "in-chat-agent"
 }

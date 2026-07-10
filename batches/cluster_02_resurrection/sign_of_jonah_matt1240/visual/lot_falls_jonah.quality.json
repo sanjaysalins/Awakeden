@@ -5,10 +5,11 @@
   "axes": {
     "anatomy": true,
     "believable": true,
-    "reads_as_intended": false,
-    "not_grotesque": false,
-    "style_consistent": false
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
   },
-  "notes": "re-rolled per user gate notes; eye-audited full-res",
+  "notes": "vs v3 cards: lots as plain unmarked pebbles (constrained OK), storm raging, Jonah stands apart robed (woken after 1:5-6, timing fine). Clean.",
   "reviewer": "in-chat-agent"
 }

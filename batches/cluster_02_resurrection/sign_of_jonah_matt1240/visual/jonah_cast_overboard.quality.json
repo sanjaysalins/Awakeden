@@ -1,14 +1,15 @@
 {
   "slug": "jonah_cast_overboard",
-  "hash": "c45d46e27a9c453d",
+  "hash": "f2efa9b1a350fb21",
   "verdict": "PASS",
   "axes": {
     "anatomy": true,
     "believable": true,
-    "reads_as_intended": false,
-    "not_grotesque": false,
-    "style_consistent": false
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
   },
-  "notes": "eye-audited full-res vs Jonah/Matt12/John20 fact cards; details in .audit.json sidecar",
+  "notes": "REBUILD v2 vs cards: the SAILORS lower Jonah by his arms (Jonah 1:12,15 - he never jumps), grieving faces + men turning away (1:13-14 they rowed hard first), cargo bales on deck (1:5 wares), raging storm. Fixed: old still read as a self-leap.",
   "reviewer": "in-chat-agent"
 }

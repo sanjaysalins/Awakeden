@@ -2,8 +2,8 @@
   "image": "mary_runs_predawn.png",
   "verdict": "PASS",
   "flags": [
-    "in-chat-agent full-res: veiled woman urgent run, anatomy clean, period clean",
-    "NOTE background tomb glows from inside (invented light) - user gallery call"
+    "vision-audited full-res: canon tomb w/ disc stone (was boulder), pre-dawn dark, no angel/Christ, mantle over head",
+    "John 20:1-2"
   ],
   "reviewer": "in-chat-agent",
   "stage": "content"

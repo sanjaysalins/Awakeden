@@ -1,10 +1,10 @@
 # youtube_short - YouTube (Short)
 
 ## TITLE
-The Wound God Called His Own - 500 Years Early
+The Wound God Called His Own, 500 Years Early
 
 ## DESCRIPTION
-A Roman soldier raised his spear on a Friday afternoon - and finished a sentence God had started writing five hundred years earlier.
+A Roman soldier raised his spear on a Friday afternoon, and finished a sentence God had started writing five hundred years earlier.
 
 In Zechariah 12, the LORD himself is speaking, and he claims the wound as his own: "and they shall look upon me whom they have pierced, and they shall mourn for him, as one mourneth for his only son" (Zechariah 12:10, KJV).
 
@@ -12,13 +12,13 @@ Look upon ME. Mourn for HIM. The pierced one is the LORD himself, come in the fl
 
 And the promise begins with grace: grace poured out, not wrath: "the spirit of grace and of supplications." He gives the tears he asks for.
 
-Do what the verse says. Look at him - and live.
+Do what the verse says. Look at him, and live.
 
-Find Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/zechariah-12-10-pierced.html
 
 Follow:
-YouTube: @awakeden - https://youtube.com/@awakeden
+YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
