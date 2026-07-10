@@ -2,10 +2,8 @@
   "image": "soldiers_gambling.png",
   "verdict": "PASS",
   "flags": [
-    "lot-STONES not dog-bones",
-    "no coins",
-    "soldiers + robe",
-    "inked"
+    "FOUR soldiers, folded robe, Christ ON cross, daylight per Mark 15:25",
+    "eye-audited full-res vs cluster fact sheet v2"
   ],
   "reviewer": "in-chat-agent",
   "stage": "content"

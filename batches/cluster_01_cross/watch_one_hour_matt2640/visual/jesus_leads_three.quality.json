@@ -1,0 +1,15 @@
+{
+  "slug": "jesus_leads_three",
+  "hash": "3f62ebfb119ecdfc",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "grandfathered: in locked final; passed 2026-07-10 cluster fact-card audit",
+  "reviewer": "in-chat-agent"
+}

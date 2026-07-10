@@ -32,7 +32,7 @@
         "ref": null
       },
       "sleeping_peter_close": {
-        "prompt": "an older bearded fisherman fast asleep against an olive trunk at night, cloak wrapped tight, mouth slack, moonlight on his weathered face, close, vertical, 1st-century Judea",
+        "prompt": "an older bearded man fast asleep on the ground of a moonlit olive grove at night, leaning back against a gnarled olive trunk, cloak wrapped tight, mouth slack, olive branches overhead, close, vertical, 1st-century Judea",
         "ref": null
       },
       "kneeling_lamp_prayer": {
@@ -45,6 +45,18 @@
       },
       "weak_flesh_hands": {
         "prompt": "two rough weathered hands clasped tight and trembling against a dark woollen cloak, knuckles pale, night shadow, close, vertical, ancient Judea",
+        "ref": null
+      },
+      "face_on_cross": {
+        "prompt": "a close portrait of the crucified Christ from the shoulders up, his thorn-crowned head lifted, eyes open toward heaven, the rough wooden beam behind his head, dim failing light, close, vertical, 1st-century Judea",
+        "ref": "../father_forgive_them/visual/_byteplus/face_on_cross_fix2.png"
+      },
+      "golgotha_hill_wide": {
+        "prompt": "a wide view of three crosses standing on the low rocky rise of Golgotha outside the walls of Jerusalem, the centre cross bearing the crucified Christ, a crucified thief on each cross beside him, small figures gathered below, low flat-roofed stone houses beyond the wall, clear morning light, wide, vertical, 1st-century Judea",
+        "ref": null
+      },
+      "us_under_cross_shadow": {
+        "prompt": "two bowed figures kneeling small in the dust at dawn, the long shadow of a single cross falling across them and stretching up the ground, heads down and hands clasped, soft low golden light, wide, vertical, 1st-century Judea",
         "ref": null
       }
     }
@@ -62,7 +74,9 @@
       "sleeping_peter_close": "ONE slow, steady, continuous push-in toward the sleeping man's moonlit face",
       "kneeling_lamp_prayer": "ONE slow, steady, continuous push-in toward the kneeling figure and the lamp glow",
       "same_prayer_again": "ONE slow, steady, continuous push-in toward the low-bowed praying figure",
-      "weak_flesh_hands": "ONE slow, steady, continuous push-in toward the clasped trembling hands"
+      "weak_flesh_hands": "ONE slow, steady, continuous push-in toward the clasped trembling hands",
+      "face_on_cross": "ONE slow, steady, continuous push-in toward the thorn-crowned upturned face",
+      "us_under_cross_shadow": "ONE slow, steady, continuous push-in toward the two bowed figures beneath the long cross shadow"
     }
   },
   "score": {

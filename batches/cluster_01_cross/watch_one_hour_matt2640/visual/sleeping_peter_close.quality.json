@@ -1,0 +1,15 @@
+{
+  "slug": "sleeping_peter_close",
+  "hash": "2e0e1c6ffc907f2a",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "fact-card rebuild 2026-07-10, eye-audited vs fact sheet v2",
+  "reviewer": "in-chat-agent"
+}

@@ -2,11 +2,8 @@
   "image": "soldiers_gambling.png",
   "verdict": "PASS",
   "flags": [
-    "lot-STONES not dog-bones",
-    "no coins",
-    "soldiers + robe",
-    "inked"
+    "reused byte-identical from C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\crucifixion_foretold_ps2218\\visual\\soldiers_gambling.png"
   ],
-  "reviewer": "in-chat-agent",
+  "reviewer": "reuse:crucifixion_foretold_ps2218",
   "stage": "content"
 }

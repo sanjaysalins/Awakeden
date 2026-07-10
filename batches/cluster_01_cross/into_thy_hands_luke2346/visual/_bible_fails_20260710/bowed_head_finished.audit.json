@@ -1,0 +1,13 @@
+{
+  "image": "bowed_head_finished.png",
+  "verdict": "PASS",
+  "flags": [
+    "malformed lying/floating nails -> both hands open with clean pierced wounds",
+    "bowed head + closed eyes (scene)",
+    "face matches locked anchor",
+    "crown",
+    "inked"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

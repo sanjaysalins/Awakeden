@@ -2,12 +2,8 @@
   "image": "face_on_cross.png",
   "verdict": "PASS",
   "flags": [
-    "hero hands: garbled block-nail/mitten -> both open flat with pierced wounds",
-    "glowing eyes -> natural dark brown",
-    "face = canonical Christ (user-confirmed)",
-    "crown",
-    "inked. NEW REF_JESUS anchor"
+    "reused byte-identical from C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\into_thy_hands_luke2346\\visual\\face_on_cross.png"
   ],
-  "reviewer": "in-chat-agent",
+  "reviewer": "reuse:into_thy_hands_luke2346",
   "stage": "content"
 }

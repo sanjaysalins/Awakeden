@@ -2,11 +2,8 @@
   "image": "us_under_cross_shadow.png",
   "verdict": "PASS",
   "flags": [
-    "distinct crowd (was clones/faceless void/Christ-double)",
-    "UPRIGHT cross shadow (was inverted)",
-    "inked",
-    "minor coins at bottom edge (croppable)"
+    "reused byte-identical from C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\crucifixion_foretold_ps2218\\visual\\us_under_cross_shadow.png"
   ],
-  "reviewer": "in-chat-agent",
+  "reviewer": "reuse:crucifixion_foretold_ps2218",
   "stage": "content"
 }

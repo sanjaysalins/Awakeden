@@ -18,10 +18,25 @@
       "living_water_stream": {
         "prompt": "a clear spring of water pouring over smooth rocks, sunlight sparkling in the falling water, green moss, close, vertical",
         "ref": null
+      },
+      "us_under_cross_shadow": {
+        "prompt": "two bowed figures kneeling small in the dust at dawn, the long shadow of a single cross falling across them and stretching up the ground, heads down and hands clasped, soft low golden light, wide, vertical, 1st-century Judea",
+        "ref": null
+      },
+      "bowed_head_finished": {
+        "prompt": "a close portrait of the crucified Christ with his head bowed low in death, the thorn crown resting over closed eyes, stillness and peace on his face, deep darkness behind the cross, close, vertical, 1st-century Judea",
+        "ref": "../into_thy_hands_luke2346/visual/face_on_cross.png"
       }
     }
   },
-  "animate": null,
+  "animate": {
+    "duration": 5,
+    "aspect_ratio": "9:16",
+    "moves": {
+      "us_under_cross_shadow": "ONE slow, steady, continuous push-in toward the two bowed figures beneath the long cross shadow",
+      "bowed_head_finished": "ONE slow, steady, continuous push-in toward the bowed thorn-crowned head"
+    }
+  },
   "score": {
     "src": "visual/livingpage_short.spec_preview.mp4",
     "out": "visual/i_thirst_john1928_scored.mp4",

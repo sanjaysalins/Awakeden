@@ -1,0 +1,14 @@
+{
+  "slug": "us_under_cross_shadow",
+  "hash": "52e878bc6e5676f2",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true
+  },
+  "notes": "group under cross-shadow, coins removed",
+  "reviewer": "in-chat-agent"
+}

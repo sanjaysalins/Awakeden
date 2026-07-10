@@ -2,12 +2,8 @@
   "image": "golgotha_hill_wide.png",
   "verdict": "PASS",
   "flags": [
-    "open flat hands (was fists)",
-    "bare ground no coins",
-    "garbled claw-nails gone",
-    "period town",
-    "inked"
+    "reused byte-identical from C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\crucifixion_foretold_ps2218\\visual\\golgotha_hill_wide.png"
   ],
-  "reviewer": "in-chat-agent",
+  "reviewer": "reuse:crucifixion_foretold_ps2218",
   "stage": "content"
 }

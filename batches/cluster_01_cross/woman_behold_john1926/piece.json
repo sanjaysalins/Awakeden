@@ -16,19 +16,31 @@
         "ref": null
       },
       "mary_at_cross": {
-        "prompt": "a veiled grieving woman looking up from the foot of a tall cross where a crucified figure hangs high above her, seen from behind her shoulder, storm light, vertical, 1st-century Judea",
-        "ref": "../pierced_zech1210/visual/face_on_cross.png"
+        "prompt": "a veiled grieving woman seen from behind her shoulder, looking up at a tall simple wooden cross of two rough beams where the crucified Christ hangs high above the ground, his whole body lifted well above her, clear morning light, low angle, vertical, 1st-century Judea",
+        "ref": "../into_thy_hands_luke2346/visual/face_on_cross.png"
       },
       "jesus_looks_down": {
-        "prompt": "the thorn-crowned crucified Christ looking downward with steady compassion from the cross, storm sky behind, seen from below, close, vertical, 1st-century Judea",
-        "ref": "../pierced_zech1210/visual/face_on_cross.png"
+        "prompt": "the thorn-crowned crucified Christ seen from below from the chest up, his head turned downward with steady compassion toward those beneath the cross, clear morning light on his face, close, vertical, 1st-century Judea",
+        "ref": "../into_thy_hands_luke2346/visual/face_on_cross.png"
       },
       "mary_and_john": {
-        "prompt": "a young bearded disciple wrapping his arm around a veiled grieving woman's shoulders, both looking up, at the foot of a cross, storm light, vertical, 1st-century Judea",
+        "prompt": "a young bearded disciple wrapping his arm around a veiled grieving woman's shoulders, both looking up at the crucified Christ hanging on the cross rising beside them, clear morning light, vertical, 1st-century Judea",
         "ref": null
       },
       "john_leads_home": {
-        "prompt": "a YOUNG dark-haired bearded disciple, a man in his twenties, gently leading a veiled older woman along a dusk road toward the gate of a walled town, a bare empty hill far behind them, warm evening light, wide, vertical, 1st-century Judea",
+        "prompt": "a young dark-haired bearded disciple gently leading a veiled older woman along a dusty road toward the gate of a walled town, far behind them three small crosses on a low rise, warm late afternoon light, wide, vertical, 1st-century Judea",
+        "ref": null
+      },
+      "face_on_cross": {
+        "prompt": "a close portrait of the crucified Christ from the shoulders up, his thorn-crowned head lifted, eyes open toward heaven, the rough wooden beam behind his head, dim failing light, close, vertical, 1st-century Judea",
+        "ref": "../father_forgive_them/visual/_byteplus/face_on_cross_fix2.png"
+      },
+      "golgotha_hill_wide": {
+        "prompt": "a wide view of three crosses standing on the low rocky rise of Golgotha outside the walls of Jerusalem, the centre cross bearing the crucified Christ, a crucified thief on each cross beside him, small figures gathered below, low flat-roofed stone houses beyond the wall, clear morning light, wide, vertical, 1st-century Judea",
+        "ref": null
+      },
+      "us_under_cross_shadow": {
+        "prompt": "two bowed figures kneeling small in the dust at dawn, the long shadow of a single cross falling across them and stretching up the ground, heads down and hands clasped, soft low golden light, wide, vertical, 1st-century Judea",
         "ref": null
       }
     }
@@ -41,7 +53,10 @@
       "mary_at_cross": "ONE slow, steady, continuous push-in past the woman's shoulder up toward the crucified figure",
       "jesus_looks_down": "ONE slow, steady, continuous push-in toward the downward-turned thorn-crowned face",
       "mary_and_john": "ONE slow, steady, continuous push-in toward the two upturned faces",
-      "john_leads_home": "ONE slow, steady, continuous push-in following the road toward the glowing city gate"
+      "john_leads_home": "ONE slow, steady, continuous push-in following the road toward the glowing city gate",
+      "face_on_cross": "ONE slow, steady, continuous push-in toward the thorn-crowned upturned face",
+      "golgotha_hill_wide": "ONE slow, steady, continuous push-in up the hill toward the three crosses",
+      "us_under_cross_shadow": "ONE slow, steady, continuous push-in toward the two bowed figures beneath the long cross shadow"
     }
   },
   "score": {

@@ -2,8 +2,9 @@
   "image": "jesus_looks_down.png",
   "verdict": "PASS",
   "flags": [
-    "eye-audited full-res via render_lint batch-Agent flow 2026-07-06; no checklist defect"
+    "chest-up, head down in compassion, no hands in frame, daylight per John 19:26 timing",
+    "eye-audited full-res vs fact sheet v2"
   ],
-  "reviewer": "claude-batch-agent+opus-verify",
+  "reviewer": "in-chat-agent",
   "stage": "content"
 }

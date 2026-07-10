@@ -42,6 +42,10 @@
       "silver_and_blood": {
         "prompt": "worn silver coins lying flat, scattered wide across pale stone slabs, a dark red stream running across the stone between the coins, hard side light, low close angle, vertical",
         "ref": "../../../ref_library/objects/THIRTY_PIECES_SILVER.png"
+      },
+      "face_on_cross": {
+        "prompt": "a close portrait of the crucified Christ from the shoulders up, his thorn-crowned head lifted, eyes open toward heaven, the rough wooden beam behind his head, dim failing light, close, vertical, 1st-century Judea",
+        "ref": "../father_forgive_them/visual/_byteplus/face_on_cross_fix2.png"
       }
     }
   },
@@ -51,7 +55,8 @@
     "moves": {
       "judas_bag_priests": "ONE slow, steady, continuous push-in toward the bowed man clutching the money bag",
       "judas_casting_coins": "ONE slow, steady, continuous quarter-arc rising from the scattered coins up toward the casters outstretched hand, ending framed on his upper body, never showing the panel edge",
-      "potter_at_wheel": "ONE slow, steady, continuous quarter-arc around the potter's wheel with slight downward tilt onto the clay vessel, gentle parallax against the workshop shadows"
+      "potter_at_wheel": "ONE slow, steady, continuous quarter-arc around the potter's wheel with slight downward tilt onto the clay vessel, gentle parallax against the workshop shadows",
+      "face_on_cross": "ONE slow, steady, continuous push-in toward the thorn-crowned upturned face"
     },
     "base": "A finished inked graphic-novel comic panel — flat printed art with bold black ink outlines, cel-flat color and cross-hatching. Animate it as {move}. The drawing itself never moves, redraws, repaints, breathes or changes; the ink lines and flat colors stay exactly as printed; only the camera moves. No hard cuts, no dissolves, no morphing, no subject motion, no limbs moving, no new lines drawn. INVENT NOTHING: show ONLY what is already inked in this exact panel. Keep the subject whole in frame."
   },

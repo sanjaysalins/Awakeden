@@ -1,0 +1,12 @@
+{
+  "image": "us_under_cross_shadow.png",
+  "verdict": "PASS",
+  "flags": [
+    "distinct crowd (was clones/faceless void/Christ-double)",
+    "UPRIGHT cross shadow (was inverted)",
+    "inked",
+    "minor coins at bottom edge (croppable)"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

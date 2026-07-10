@@ -2,8 +2,9 @@
   "image": "lots_cup_close.png",
   "verdict": "PASS",
   "flags": [
-    "eye-verified full-res 2026-07-06; redo: lots as rounded lot-stones (was cartoon dog-bones)"
+    "period cubic bone dice w/ pips (dog-bones fixed), leather cup, folded garment, daylight",
+    "eye-audited full-res vs fact sheet v2"
   ],
-  "reviewer": "opus-eye-verify",
+  "reviewer": "in-chat-agent",
   "stage": "content"
 }

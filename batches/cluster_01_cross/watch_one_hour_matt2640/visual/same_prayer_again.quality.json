@@ -1,0 +1,15 @@
+{
+  "slug": "same_prayer_again",
+  "hash": "9e9e03f796744982",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "grandfathered: in locked final; passed 2026-07-10 cluster fact-card audit",
+  "reviewer": "in-chat-agent"
+}

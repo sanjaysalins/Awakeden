@@ -1,0 +1,15 @@
+{
+  "slug": "mary_at_cross",
+  "hash": "9ddd6b7443083cb3",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "fact-card rebuild 2026-07-10, eye-audited vs fact sheet v2",
+  "reviewer": "in-chat-agent"
+}

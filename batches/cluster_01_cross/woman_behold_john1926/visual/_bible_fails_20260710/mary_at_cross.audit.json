@@ -1,0 +1,11 @@
+{
+  "image": "mary_at_cross.png",
+  "verdict": "PASS",
+  "flags": [
+    "Christ bare-headed -> crown of thorns",
+    "Mary at foot",
+    "face-ref"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

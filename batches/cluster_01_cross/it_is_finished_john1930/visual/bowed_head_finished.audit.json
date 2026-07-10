@@ -2,11 +2,9 @@
   "image": "bowed_head_finished.png",
   "verdict": "PASS",
   "flags": [
-    "malformed lying/floating nails -> both hands open with clean pierced wounds",
-    "bowed head + closed eyes (scene)",
-    "face matches locked anchor",
-    "crown",
-    "inked"
+    "head bowed in death, eyes closed, deep darkness, no lightning",
+    "anchor shoulder-band inherited",
+    "eye-audited full-res vs fact sheet v2"
   ],
   "reviewer": "in-chat-agent",
   "stage": "content"

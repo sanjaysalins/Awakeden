@@ -1,0 +1,13 @@
+{
+  "image": "face_on_cross.png",
+  "verdict": "PASS",
+  "flags": [
+    "hero hands: garbled block-nail/mitten -> both open flat with pierced wounds",
+    "glowing eyes -> natural dark brown",
+    "face = canonical Christ (user-confirmed)",
+    "crown",
+    "inked. NEW REF_JESUS anchor"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

@@ -2,10 +2,8 @@
   "image": "seamless_robe_lots.png",
   "verdict": "PASS",
   "flags": [
-    "robe = flat empty cloth (was corpse-read)",
-    "lot-stones not dog-bones",
-    "Christ on cross (was empty)",
-    "inked"
+    "FOUR soldiers, smooth woven seamless tunic (net fixed), lots on stone",
+    "eye-audited full-res vs fact sheet v2"
   ],
   "reviewer": "in-chat-agent",
   "stage": "content"

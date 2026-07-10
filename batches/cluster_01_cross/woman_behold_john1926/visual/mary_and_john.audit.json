@@ -2,8 +2,9 @@
   "image": "mary_and_john.png",
   "verdict": "PASS",
   "flags": [
-    "eye-verified full-res 2026-07-06; redo: Christ crucified on the cross, open pierced hands (was empty cross)"
+    "John's arm around Mary, both look up at Christ ON the cross, daylight, wounds restrained",
+    "eye-audited full-res vs fact sheet v2"
   ],
-  "reviewer": "opus-eye-verify",
+  "reviewer": "in-chat-agent",
   "stage": "content"
 }

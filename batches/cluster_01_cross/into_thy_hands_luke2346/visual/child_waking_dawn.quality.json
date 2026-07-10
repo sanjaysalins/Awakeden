@@ -1,0 +1,15 @@
+{
+  "slug": "child_waking_dawn",
+  "hash": "b6670cd889fcc7ca",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "grandfathered: in locked final; passed 2026-07-10 cluster fact-card audit",
+  "reviewer": "in-chat-agent"
+}

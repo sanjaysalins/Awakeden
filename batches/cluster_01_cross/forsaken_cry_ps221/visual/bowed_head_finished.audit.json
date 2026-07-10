@@ -2,12 +2,8 @@
   "image": "bowed_head_finished.png",
   "verdict": "PASS",
   "flags": [
-    "malformed lying/floating nails -> both hands open with clean pierced wounds",
-    "bowed head + closed eyes (scene)",
-    "face matches locked anchor",
-    "crown",
-    "inked"
+    "reused byte-identical from C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\it_is_finished_john1930\\visual\\bowed_head_finished.png"
   ],
-  "reviewer": "in-chat-agent",
+  "reviewer": "reuse:it_is_finished_john1930",
   "stage": "content"
 }

@@ -62,13 +62,18 @@ def _bp(piece_dir: Path):
 
 
 # ---------------------------------------------------------------- stage: stills
-def stills_bodies(piece_dir: Path, pj: dict, bp=None) -> dict[str, tuple[dict, Path]]:
-    """slug -> (request body, dest png). Pure — no network, no writes."""
+def stills_bodies(piece_dir: Path, pj: dict, bp=None,
+                  slugs: set[str] | None = None) -> dict[str, tuple[dict, Path]]:
+    """slug -> (request body, dest png). Pure — no network, no writes. `slugs` limits
+    which jobs are built (a job whose ref is a sibling still not rendered yet would
+    crash the eager base64 encode)."""
     from render_lint import guard_prompt
     bp = bp or _bp(piece_dir)
     st = pj["stills"]
     out = {}
     for slug, job in st["jobs"].items():
+        if slugs is not None and slug not in slugs:
+            continue
         prompt = guard_prompt(job["prompt"])
         body = {"model": st["model"], "prompt": prompt + bp.STYLE + bp.ONE,
                 "size": st["size"], "response_format": "url", "watermark": False}
@@ -149,17 +154,18 @@ def run_stills(piece_dir: Path, pj: dict, *, render: bool, force: bool, only: se
 
     from pipeline import cost
     bp = _bp(piece_dir)
-    bodies = stills_bodies(piece_dir, pj, bp)
     todo = [s for s in jobs if (not only or s in only)
             and (force or not (piece_dir / "visual" / f"{s}.png").exists())]
+    bodies = stills_bodies(piece_dir, pj, bp, slugs=set(todo))
     cost.check_budget(pj["piece"], "short", len(todo) * SEEDREAM_USD_PER_IMG)
     for slug in jobs:
         if only and slug not in only:
             continue
-        body, dest = bodies[slug]
+        dest = piece_dir / "visual" / f"{slug}.png"
         if dest.exists() and not force:
             print(f"[skip] {slug}")
             continue
+        body, _ = bodies[slug]
         if not no_reuse:
             src = reuse_check(piece_dir, slug, jobs[slug])
             if src is not None:

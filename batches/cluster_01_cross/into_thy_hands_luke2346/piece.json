@@ -42,6 +42,18 @@
       "cross_at_dawn": {
         "prompt": "an empty wooden cross standing on a rocky hilltop against a golden sunrise, warm light flooding the sky, wide, vertical, 1st-century Judea",
         "ref": null
+      },
+      "face_on_cross": {
+        "prompt": "a close portrait of the crucified Christ from the shoulders up, his thorn-crowned head lifted, eyes open toward heaven, the rough wooden beam behind his head, dim failing light, close, vertical, 1st-century Judea",
+        "ref": "../father_forgive_them/visual/_byteplus/face_on_cross_fix2.png"
+      },
+      "golgotha_hill_wide": {
+        "prompt": "a wide view of three crosses standing on the low rocky rise of Golgotha outside the walls of Jerusalem, the centre cross bearing the crucified Christ, a crucified thief on each cross beside him, small mourners below, the sky black at midday and the whole land lying dim in deep shadow, low flat-roofed stone houses beyond the wall, wide, vertical, 1st-century Judea",
+        "ref": null
+      },
+      "bowed_head_finished": {
+        "prompt": "a close portrait of the crucified Christ with his head bowed low in death, the thorn crown resting over closed eyes, stillness and peace on his face, deep darkness behind the cross, close, vertical, 1st-century Judea",
+        "ref": "../into_thy_hands_luke2346/visual/face_on_cross.png"
       }
     }
   },
@@ -56,7 +68,9 @@
       "father_hand_childs_hand": "ONE slow, steady, continuous push-in toward the small hand resting in the large hand",
       "child_eyes_closing": "ONE slow, steady, continuous push-in toward the sleeping child's peaceful face",
       "cross_at_dawn": "ONE slow, steady, continuous push-in toward the cross against the sunrise",
-      "bowed_head_finished": "ONE slow, steady, continuous push-in toward the bowed thorn-crowned head"
+      "bowed_head_finished": "ONE slow, steady, continuous push-in toward the bowed thorn-crowned head",
+      "face_on_cross": "ONE slow, steady, continuous push-in toward the thorn-crowned upturned face",
+      "golgotha_hill_wide": "ONE slow, steady, continuous push-in up the hill toward the three crosses"
     }
   },
   "score": {

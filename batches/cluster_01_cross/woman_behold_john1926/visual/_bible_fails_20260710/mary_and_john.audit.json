@@ -1,0 +1,9 @@
+{
+  "image": "mary_and_john.png",
+  "verdict": "PASS",
+  "flags": [
+    "eye-verified full-res 2026-07-06; redo: Christ crucified on the cross, open pierced hands (was empty cross)"
+  ],
+  "reviewer": "opus-eye-verify",
+  "stage": "content"
+}

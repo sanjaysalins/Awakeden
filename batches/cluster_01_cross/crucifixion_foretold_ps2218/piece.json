@@ -12,7 +12,27 @@
         "ref": null
       },
       "lots_cup_close": {
-        "prompt": "two small carved knucklebone lots tumbling from a leather cup onto flat stone, a folded woven garment lying beside them, harsh daylight, close, vertical, 1st-century Judea",
+        "prompt": "two small worn cubic dice of pale bone tumbling from a leather cup onto a flat stone slab, a folded smooth woven garment beside the stone, the dusty ground of Golgotha around, harsh daylight, close, vertical, 1st-century Judea",
+        "ref": null
+      },
+      "us_under_cross_shadow": {
+        "prompt": "two bowed figures kneeling small in the dust at dawn, the long shadow of a single cross falling across them and stretching up the ground, heads down and hands clasped, soft low golden light, wide, vertical, 1st-century Judea",
+        "ref": null
+      },
+      "golgotha_hill_wide": {
+        "prompt": "a wide view of three crosses standing on the low rocky rise of Golgotha outside the walls of Jerusalem, the centre cross bearing the crucified Christ, a crucified thief on each cross beside him, small figures gathered below, low flat-roofed stone houses beyond the wall, clear morning light, wide, vertical, 1st-century Judea",
+        "ref": null
+      },
+      "soldiers_gambling": {
+        "prompt": "four Roman soldiers kneeling in a circle on stony ground casting small lots for a folded seamless robe, above and behind them the crucified Christ hangs on his cross, morning light, low angle, vertical, 1st-century Judea",
+        "ref": null
+      },
+      "seamless_robe_lots": {
+        "prompt": "four Roman soldiers gathered around a plain undyed woven tunic held spread between them, its cloth smooth and tightly woven, small lots scattered on a flat stone, bright morning light, close, vertical, 1st-century Judea",
+        "ref": null
+      },
+      "john_watching": {
+        "prompt": "a close shot of a young bearded disciple at Golgotha, his grief-stricken face lifted upward, one hand gripping the cloak at his chest, far behind him the crucified Christ hangs on his cross with head bowed against a plain dusky sky, morning light, close, vertical, 1st-century Judea",
         "ref": null
       }
     }
@@ -21,7 +41,12 @@
     "duration": 5,
     "aspect_ratio": "9:16",
     "moves": {
-      "john_watching": "ONE slow, steady, continuous push-through past the foreground shoulder toward John's watching face, deep parallax between him and the distant cross"
+      "john_watching": "ONE slow, steady, continuous push-through past the foreground shoulder toward John's watching face, deep parallax between him and the distant cross",
+      "us_under_cross_shadow": "ONE slow, steady, continuous push-in toward the two bowed figures beneath the long cross shadow",
+      "golgotha_hill_wide": "ONE slow, steady, continuous push-in up the hill toward the three crosses",
+      "soldiers_gambling": "ONE slow, steady, continuous push-in toward the kneeling soldiers casting lots beneath the cross",
+      "seamless_robe_lots": "ONE slow, steady, continuous push-in toward the seamless tunic held spread between the soldiers",
+      "lots_cup_close": "ONE slow, steady, continuous push-in toward the bone dice tumbling from the leather cup"
     }
   },
   "score": {

@@ -1,4 +1,44 @@
-# RESUME — next session (updated 2026-07-10 close — Empty Tomb SHIPPED + jonah corpus-rebuild #1 + de-slop sweep)
+# RESUME — next session (updated 2026-07-10 late — CROSS CLUSTER fact-card rebuild DONE: stills+clips; finals rebuilding)
+
+## ✅ 2026-07-10 LATE SESSION — the 11 Cross shorts fact-card rebuild (corpus rebuild #2)
+1. **Cluster fact sheet v2** (`batches/cluster_01_cross/_bible_check/fact_sheet.md`) — 5-CLI panel
+   applied (Ps 22:18 present tense, robe scarlet OR purple, Mark 15:25 darkness-timing card:
+   EARLY words = daylight / LATE words = darkness-no-storm, Simon of Cyrene, gall≠sponge,
+   thirty-pieces Judas/priests split).
+2. **Audit → verification → rebuild:** 4 subagents flagged 44 rows → md5-dedupe 22 unique files →
+   eye-verified ALL 22 full-res (22/22 confirmed, +1 byte-identical pierced/john_watching the agents
+   missed). **18 unique stills rebuilt over 3 re-roll rounds** ($1.45, 29 renders), every render
+   eye-audited vs the cards. Defects killed: ONE-cross/empty-cross Calvarys (both thieves now present),
+   lightning/storm on darkness beats, halo, dog-bone "lots" (→ period cubic bone dice), net-textured
+   seamless robe, chain-crucifix invented object, Peter-on-a-boat (→ olive grove), 4 hands (→ 2),
+   gold coins, church steeple. 3 pilot reshoot leftovers RETIRED not rebuilt (final video never used
+   them). Shared plates paid ONCE → 42 sibling files refreshed byte-identical ($0 reuse pre-flight).
+   Review: `batches/cluster_01_cross/_bible_check/REBUILD_REVIEW.html`.
+3. **Re-animation (user GO $15.60 → actual $12.35):** 19 owner clips HF Kling pro, filmstrip-QC'd
+   (all clean; note: Kling sharpened the ninth-hour titulus toward a tiny "INRI" — faithful, flagged);
+   22 sibling clips propagated $0 with own `.src.sha`; old clips retired to
+   `clips/_stale_from_bad_stills/`. ALL cluster-01 clips now manifest-managed (`animate.moves` added
+   everywhere; i_thirst gained its animate section). `run_piece.stills_bodies` fixed (lazy body build —
+   the eager ref-encode crashed when a ref still wasn't rendered yet); tests green.
+   Clips QC: `batches/cluster_01_cross/_bible_check/CLIP_QC.html`.
+4. **Stills gates:** user verbal GO recorded as approval on all 10 pieces; pre-rubric stills
+   grandfathered quality-PASS (in locked finals + passed the fact-card audit). All 10 gates GREEN.
+5. **Finals rebuild (user GO, $0):** build→score→sfx chain over the 10 pieces (fresh `<piece>_sfx.mp4`
+   finals; comic boxes ARE the captions, no ivory layer). NOTE: first launch aborted — the builder gate
+   demanded quality rows for pre-rubric stills (fixed via 4); relaunched clean, running at session close.
+6. Day-late total ≈ **$13.80** (stills $1.45 + clips $12.35). No unauthorized spend this session.
+
+## ⚡ NEXT SESSION ORDER (overrides the list below)
+1. **Verify the finals chain finished** (10× `<piece>_sfx.mp4` fresh in each `visual/`; if the chain
+   died mid-run, re-run the same build→score→sfx loop — it is idempotent) → eye/ear pass → one
+   10-video review page → **/publish refresh** for all 10 packs.
+2. **Corpus rebuild continues:** Psalm22 inked long + EW01 (same recipe). Quarantine
+   `ref_library/motifs/EMPTY_TOMB.png` + ref audit (RICH_MANS_TOMB.png tall doorway — watch).
+3. Then the prior list (Women as First Witnesses; engine wires; launch blockers — all still open).
+
+---
+
+# PRIOR (2026-07-10 close — Empty Tomb SHIPPED + jonah corpus-rebuild #1 + de-slop sweep)
 
 ## ✅ WHAT THE 2026-07-10 SESSION DELIVERED
 1. **EMPTY TOMB PILOT SHIPPED END-TO-END** (the fact-cards-first recipe proven):
