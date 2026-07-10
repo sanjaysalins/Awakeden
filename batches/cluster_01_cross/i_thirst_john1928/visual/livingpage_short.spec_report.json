@@ -9,7 +9,7 @@
   ],
   "slams": 0,
   "kling_or_punch_or_slam_pct": 83,
-  "tier1_pct": 0,
+  "tier1_pct": 8,
   "reuse_violations": [],
   "tier3_or_flagged_beats": [],
   "standard_3b": {
@@ -108,8 +108,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
-    "style": "scrim",
+    "tier": 1,
+    "style": "box",
     "flag": false
    }
   },

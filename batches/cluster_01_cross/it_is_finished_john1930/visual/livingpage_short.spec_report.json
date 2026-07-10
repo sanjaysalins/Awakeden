@@ -5,7 +5,7 @@
   "held_gt6s": [],
   "slams": 1,
   "kling_or_punch_or_slam_pct": 94,
-  "tier1_pct": 0,
+  "tier1_pct": 18,
   "reuse_violations": [],
   "tier3_or_flagged_beats": [
    12
@@ -106,8 +106,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
-    "style": "scrim",
+    "tier": 1,
+    "style": "box",
     "flag": false
    }
   },
@@ -128,8 +128,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
-    "style": "band",
+    "tier": 1,
+    "style": "plaque",
     "flag": false
    }
   },
@@ -216,8 +216,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
-    "style": "scrim",
+    "tier": 1,
+    "style": "box",
     "flag": false
    }
   },

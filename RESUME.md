@@ -29,12 +29,23 @@
 6. Day-late total ≈ **$13.80** (stills $1.45 + clips $12.35). No unauthorized spend this session.
 
 ## ⚡ NEXT SESSION ORDER (overrides the list below)
-1. **Verify the finals chain finished** (10× `<piece>_sfx.mp4` fresh in each `visual/`; if the chain
-   died mid-run, re-run the same build→score→sfx loop — it is idempotent) → eye/ear pass → one
-   10-video review page → **/publish refresh** for all 10 packs.
-2. **Corpus rebuild continues:** Psalm22 inked long + EW01 (same recipe). Quarantine
+1. **Finals chain:** was at piece 5/10 (it_is_finished score) at close, 4/10 FRESH
+   (crucifixion_foretold, forsaken_cry, i_thirst, into_thy_hands); should be COMPLETE by pickup.
+   Verify: `.venv\Scripts\python.exe batches/cluster_01_cross/_bible_check/make_finals_review.py`
+   → expect 10/10 fresh in `FINALS_REVIEW.html`. If the chain died mid-run, re-run the same
+   build→score→sfx loop per remaining piece — it is idempotent (session log: build cmd =
+   Psalm22 `build_livingpage_16x9.py --pool <piece>/visual --spec livingpage_short.spec.json
+   --clips --page 1080x1920 --no-ticks`, then `run_piece --stage score`, then
+   `sfx_pilots/build_cluster1_sfx.py <piece>`).
+2. **PUBLISH REFRESH ×10 — USER-AUTHORIZED 2026-07-10 night ("go ahead with the publish refresh
+   when the chain finishes")**: my eye-pass on the 10 finals first, then `cli_publish.py` per
+   piece (gates + 5-CLI panel + reconcile → GREEN), hand the user FINALS_REVIEW.html + the 10
+   PUBLISH_INDEX.html links. $0.
+3. **USER queue:** eye/ear pass on the Cross finals + the two cluster-2 finals (empty_tomb,
+   sign_of_jonah) · channel dress upload · Season-1 playlist + unlisted test · launch date.
+4. **Corpus rebuild continues:** Psalm22 inked long + EW01 (same recipe). Quarantine
    `ref_library/motifs/EMPTY_TOMB.png` + ref audit (RICH_MANS_TOMB.png tall doorway — watch).
-3. Then the prior list (Women as First Witnesses; engine wires; launch blockers — all still open).
+5. Then the prior list (Women as First Witnesses; engine wires — all still open).
 
 ---
 
