@@ -10,7 +10,7 @@
    6.3
   ],
   "slams": 2,
-  "kling_or_punch_or_slam_pct": 86,
+  "kling_or_punch_or_slam_pct": 79,
   "tier1_pct": 36,
   "reuse_violations": [],
   "tier3_or_flagged_beats": [
@@ -198,7 +198,7 @@
     "john_watching"
    ],
    "sources": [
-    "kling"
+    "dyncam"
    ],
    "punch": false,
    "cap": {

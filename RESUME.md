@@ -1,6 +1,24 @@
-# RESUME — next session (updated 2026-07-11 — finals chain DONE ×2 (dyncam stale-cache bug found+fixed), 11 finals eye-passed, 11 publish packs GREEN — USER final review pending)
+# RESUME — next session (updated 2026-07-11 PM — USER stills-feedback loop DONE: 9 flags fixed across 6 rounds, 7 Kling re-animations, 10 finals rebuilt+GREEN — USER final review pending)
 
-## ✅ 2026-07-11 SESSION — finals finished + DYNCAM STALE-CACHE BUG caught before ship ($0 spend)
+## ✅ 2026-07-11 PM SESSION — user stills feedback → fix → re-animate → rebuild (~$6 total)
+1. **User reviewed ALL 162 stills** (ALL_STILLS_REVIEW.html) + the FIXED_STILLS_REVIEW.html gate page;
+   3 feedback rounds fixed 9 flags: seamless robe (long costly one-piece chiton, 4 soldiers, John
+   19:23-24) · golgotha morning+dark (short Roman posts, no halo/skyline-cross/streak, loincloths) ·
+   bowed_head (v10: camera along the ONE crossbeam, iron nail through the palm — user caught a
+   two-cross geometry miss my eye-pass passed; memory `crucifixion-still-facts` updated: TRACE THE
+   BEAMS) · pierced blood (spear outside-in, John 19:34) · mourners look up (Zech 12:10) · thirty
+   blood (wounds not wood) · coin (fingertip shekel).
+2. **User said "go" → animation batch:** 7 Kling re-renders (~$4.55) all filmstrip-PASSED (frozen
+   tableau); 9 sibling clips copied w/ own .src.sha ($0); dancing john_watching clip RETIRED
+   (crucifixion_foretold → dyncam fallback, animate.moves entry removed); thirty blood promoted to
+   a managed move.
+3. **stills_gate GREEN ×10** (quality PASS + human approval recorded, hash-bound to the approved
+   PNGs) → **all 10 finals rebuilt** (build→score→sfx) → 0:37 dancing beat verified GONE on the NEW
+   file → FINALS_REVIEW restamped **10/10 fresh** → publish packs re-verified **10/10 GREEN**.
+   Gotchas hit: builder `--spec` is pool-relative; build_cluster1_sfx takes a piece-NAME substring
+   (a path filter silently builds nothing — check for empty "BUILT:").
+
+## ✅ 2026-07-11 AM SESSION — finals finished + DYNCAM STALE-CACHE BUG caught before ship ($0 spend)
 1. **Finals chain completed** (it had died at 5/10 overnight): remaining 5 pieces rebuilt, 10/10 fresh.
 2. **🔧 DYNCAM STALE-CACHE BUG found during my eye-pass and FIXED:** `build_dyncomic_16x9.py
    dyncam_clip()` reused `_dyncam_work/<slug>_<move>.mp4` mtime-blind → all 10 "fresh" Cross finals

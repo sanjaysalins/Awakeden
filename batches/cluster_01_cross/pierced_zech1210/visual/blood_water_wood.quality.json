@@ -1,6 +1,6 @@
 {
   "slug": "blood_water_wood",
-  "hash": "7a7c632615f8b2ff",
+  "hash": "e9211c63741b5b92",
   "verdict": "PASS",
   "axes": {
     "anatomy": true,
@@ -10,6 +10,6 @@
     "style_consistent": true,
     "world_consistent": true
   },
-  "notes": "fact-card rebuild 2026-07-10, eye-audited vs fact sheet v2",
+  "notes": "full-res eye-audit 2026-07-11: 4-round fix loop, beams traced, all axes pass",
   "reviewer": "in-chat-agent"
 }

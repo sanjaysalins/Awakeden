@@ -1,6 +1,6 @@
 {
   "slug": "golgotha_hill_wide",
-  "hash": "5da90cc6727fe46b",
+  "hash": "cdde3bd02f2f0c07",
   "verdict": "PASS",
   "axes": {
     "anatomy": true,
@@ -10,6 +10,6 @@
     "style_consistent": true,
     "world_consistent": true
   },
-  "notes": "fact-card rebuild 2026-07-10, eye-audited vs fact sheet v2",
+  "notes": "full-res eye-audit 2026-07-11: 4-round fix loop, beams traced, all axes pass",
   "reviewer": "in-chat-agent"
 }

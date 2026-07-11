@@ -1,6 +1,6 @@
 {
   "slug": "coin_on_scroll",
-  "hash": "718c3958c1bd2d1b",
+  "hash": "3509d4451aed4d7a",
   "verdict": "PASS",
   "axes": {
     "anatomy": true,
@@ -10,6 +10,6 @@
     "style_consistent": true,
     "world_consistent": true
   },
-  "notes": "grandfathered: in locked final; passed 2026-07-10 cluster fact-card audit",
+  "notes": "full-res eye-audit 2026-07-11: 4-round fix loop, beams traced, all axes pass",
   "reviewer": "in-chat-agent"
 }
