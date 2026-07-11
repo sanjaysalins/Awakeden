@@ -58,8 +58,8 @@ const CARDS = [
  {id:"forsaken_cry_ps221/bowed_head_finished",
   img:"cluster_01_cross/forsaken_cry_ps221/visual/bowed_head_finished.png",
   slug:"bowed_head_finished", pieces:"forsaken_cry + into_thy_hands, it_is_finished, i_thirst",
-  was:"nailed to the cross without nails",
-  now:"NEW ANGLE that finally worked: his hand in the foreground spread flat on the beam, a square-headed iron nail driven through it, blood running down the wood, head bowed under the thorn crown"},
+  was:"the nailed hand was on a SECOND cross (two crosses in one image)",
+  now:"ONE cross only: camera looks along the single crossbeam — his arm lies along it, open palm nailed by one square-headed iron nail, blood, thorn-crowned head at the beam. Note: the close angle can also read as the nailing moment before the cross is raised — flag FIX if you want the upright-cross feel instead"},
  {id:"pierced_zech1210/blood_water_wood",
   img:"cluster_01_cross/pierced_zech1210/visual/blood_water_wood.png",
   slug:"blood_water_wood — SIDE (pierced)", pieces:"pierced only",
@@ -90,7 +90,7 @@ function render(){
     const f = fb[c.id] || {};
     if (f.state === "fix") n++;
     const d = document.createElement("div"); d.className = "card";
-    d.innerHTML = `<a href="${c.img}?v=7" target="_blank"><img src="${c.img}?v=7" loading="lazy"></a>
+    d.innerHTML = `<a href="${c.img}?v=8" target="_blank"><img src="${c.img}?v=8" loading="lazy"></a>
       <div class="meta">
         <div class="slug">${c.slug}</div>
         <div class="pieces">${c.pieces}</div>
