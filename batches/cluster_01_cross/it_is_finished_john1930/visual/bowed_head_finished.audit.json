@@ -2,10 +2,8 @@
   "image": "bowed_head_finished.png",
   "verdict": "PASS",
   "flags": [
-    "head bowed in death, eyes closed, deep darkness, no lightning",
-    "anchor shoulder-band inherited",
-    "eye-audited full-res vs fact sheet v2"
+    "reused byte-identical from C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\forsaken_cry_ps221\\visual\\bowed_head_finished.png"
   ],
-  "reviewer": "in-chat-agent",
+  "reviewer": "reuse:forsaken_cry_ps221",
   "stage": "content"
 }

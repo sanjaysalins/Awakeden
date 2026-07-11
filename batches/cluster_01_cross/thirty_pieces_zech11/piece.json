@@ -12,7 +12,7 @@
         "ref": "../../../ref_library/objects/THIRTY_PIECES_SILVER.png"
       },
       "coin_on_scroll": {
-        "prompt": "a single silver coin resting on an unrolled ancient scroll of faded illegible marks, warm oil-lamp light, close, vertical, ancient Judea",
+        "prompt": "a broad unrolled ancient scroll of faint faded illegible marks on a wooden table, one small silver shekel the size of a fingertip lying alone on the wide parchment, a small clay oil lamp burning beside it, warm lamplight, close, vertical, ancient Judea",
         "ref": null
       },
       "weighing_scales_silver": {
@@ -46,6 +46,10 @@
       "face_on_cross": {
         "prompt": "a close portrait of the crucified Christ from the shoulders up, his thorn-crowned head lifted, eyes open toward heaven, the rough wooden beam behind his head, dim failing light, close, vertical, 1st-century Judea",
         "ref": "../father_forgive_them/visual/_byteplus/face_on_cross_fix2.png"
+      },
+      "blood_water_wood": {
+        "prompt": "the crucified Christ on a low wooden cross at Golgotha seen from below, thin trickles of blood running from his pierced hands and feet down the wood, a small dark pool gathering on the pale stone at the foot of the cross, heavy grey afternoon sky, low angle, vertical, 1st-century Judea",
+        "ref": null
       }
     }
   },
