@@ -8,11 +8,9 @@
   ],
   "slams": 2,
   "kling_or_punch_or_slam_pct": 92,
-  "tier1_pct": 8,
+  "tier1_pct": 31,
   "reuse_violations": [],
   "tier3_or_flagged_beats": [
-   4,
-   6,
    10,
    12
   ],
@@ -90,8 +88,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
-    "style": "scrim",
+    "tier": 1,
+    "style": "box",
     "flag": false
    }
   },
@@ -112,9 +110,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 3,
+    "tier": 2,
     "style": "band",
-    "flag": true
+    "flag": false
    }
   },
   {
@@ -156,9 +154,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 3,
+    "tier": 2,
     "style": "band",
-    "flag": true
+    "flag": false
    }
   },
   {
@@ -178,8 +176,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
-    "style": "band",
+    "tier": 1,
+    "style": "plaque",
     "flag": false
    }
   },
@@ -268,8 +266,8 @@
    ],
    "punch": true,
    "cap": {
-    "tier": 2,
-    "style": "scrim",
+    "tier": 1,
+    "style": "box",
     "flag": false
    }
   },

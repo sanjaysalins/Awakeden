@@ -1,4 +1,37 @@
-# RESUME — next session (updated 2026-07-10 late — CROSS CLUSTER fact-card rebuild DONE: stills+clips; finals rebuilding)
+# RESUME — next session (updated 2026-07-11 — finals chain DONE ×2 (dyncam stale-cache bug found+fixed), 11 finals eye-passed, 11 publish packs GREEN — USER final review pending)
+
+## ✅ 2026-07-11 SESSION — finals finished + DYNCAM STALE-CACHE BUG caught before ship ($0 spend)
+1. **Finals chain completed** (it had died at 5/10 overnight): remaining 5 pieces rebuilt, 10/10 fresh.
+2. **🔧 DYNCAM STALE-CACHE BUG found during my eye-pass and FIXED:** `build_dyncomic_16x9.py
+   dyncam_clip()` reused `_dyncam_work/<slug>_<move>.mp4` mtime-blind → all 10 "fresh" Cross finals
+   still played PRE-fact-card art on dyncam beats (caught: modern portrait coin in thirty_pieces vs
+   the blank-disc coin_on_scroll.png on disk; 41 stale arcs cluster-wide + jonah's old Nineveh).
+   3-line fail-closed guard added (cache reused only if newer than its still); 31 orphan stale arcs
+   deleted; **ALL 10 Cross + sign_of_jonah rebuilt AGAIN** (build→score→sfx, $0); pytest 283 green.
+   empty_tomb checked clean (no stale arcs). Memory: `dyncam-stale-cache-guard`.
+3. **Eye-pass ×11 finals (filmstrips + full-res spot checks): ALL PASS.** Fact-card fixes now visible
+   in the cuts: blank silver coin, Assyrian Nineveh, corrected David-writing, john_watching spear beat
+   lost its lightning, sailors lower Jonah, wound burial body, cubic dice, both thieves everywhere.
+   Note for user: thirty_pieces "HIS BLOOD BOUGHT YOU" beat = approved silver_and_blood still (storm
+   sky, symbolic beat — not a darkness-timing beat); left as approved.
+4. **Publish refresh ×11 GREEN** (10 Cross + jonah): packs kept the 07-10 panel-passed copy, srt +
+   PUBLISH_INDEX re-verified vs the fresh finals; 0 fail, 1 standing warn each (no-thumbnail).
+5. **EMPTY_TOMB.png QUARANTINED** → `ref_library/_quarantine/EMPTY_TOMB.png`; catalogue.json +
+   motifs/EMPTY_TOMB.json marked quarantined/do-not-use (canonical TEXT kept — it's correct).
+   Nothing referenced it in any piece.json. RICH_MANS_TOMB.png still on the watch list.
+
+## ⚡ NEXT SESSION ORDER
+1. **USER final review:** FINALS_REVIEW.html (10/10 fresh) + the 11 PUBLISH_INDEX.html links + the
+   two cluster-2 finals · then channel dress upload · Season-1 playlist + unlisted test · launch date.
+2. **Corpus rebuild continues:** Psalm22 inked long + EW01 (same fact-cards recipe). Ref audit.
+3. **Engine wires:** bible_gate BEFORE-RENDER · bib_validate reads livingpage specs · fold
+   caption_slop_check into /validate. Consider porting the dyncam stale-guard pattern to any other
+   slug-keyed cache (sweep for `if dest.exists()` reuse in builders).
+4. Then the prior list (Women as First Witnesses etc. — all still open).
+
+---
+
+# PRIOR (2026-07-10 late — CROSS CLUSTER fact-card rebuild DONE: stills+clips; finals rebuilding)
 
 ## ✅ 2026-07-10 LATE SESSION — the 11 Cross shorts fact-card rebuild (corpus rebuild #2)
 1. **Cluster fact sheet v2** (`batches/cluster_01_cross/_bible_check/fact_sheet.md`) — 5-CLI panel

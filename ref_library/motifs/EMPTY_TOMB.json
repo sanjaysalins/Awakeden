@@ -11,8 +11,9 @@
     "victory"
   ],
   "style": "inked",
-  "anchor": "motifs/EMPTY_TOMB.png",
+  "anchor": null,
+  "quarantined": true,
   "first_used": "05_Seed_Of_The_Woman",
   "count": 6,
-  "notes": "Pass `anchor` as --image to lock identity/world across scenes."
+  "notes": "QUARANTINED 2026-07-11: poisoned ref — the render shows a wrapped corpse lying in the open tomb (contradicts John 20:6-7 empty grave-clothes). DO NOT use as a ref image. File moved to _quarantine/EMPTY_TOMB.png; re-render a faithful anchor before restoring."
 }

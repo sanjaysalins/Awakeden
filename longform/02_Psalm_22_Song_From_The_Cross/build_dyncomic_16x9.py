@@ -47,7 +47,10 @@ def run(cmd, what):
 
 def dyncam_clip(slug: str, move: str) -> Path:
     dest = DYN / f"{slug}_{move}.mp4"
-    if dest.exists() and dest.stat().st_size > 0:
+    src = POOL / f"{slug}.png"
+    # stale-cache guard: a cached move rendered before the still's last change replays OLD art
+    if dest.exists() and dest.stat().st_size > 0 and (
+            not src.exists() or dest.stat().st_mtime >= src.stat().st_mtime):
         return dest
     anc = pf.load_anchor(POOL, slug)
     focus = anc["focus"] if anc else [0.5, 0.4]
