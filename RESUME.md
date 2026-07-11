@@ -1,4 +1,40 @@
-# RESUME — next session (updated 2026-07-11 PM — USER stills-feedback loop DONE: 9 flags fixed across 6 rounds, 7 Kling re-animations, 10 finals rebuilt+GREEN — USER final review pending)
+# RESUME — next session (updated 2026-07-11 night — E2E dress rehearsal @ GATE 1 APPROVED; pipeline optimization shipped)
+
+## ⚡ NEXT SESSION ORDER — resume the "Women as First Witnesses" dress rehearsal at STILLS
+The user asked for ONE short built fully end-to-end (narration→sfx) with all panels/gates, to prove
+the pipeline. Half done + AUDIO GATE 1 APPROVED. **Pick up here:**
+1. **Piece:** `batches\cluster_02_resurrection\women_first_witnesses_luke245` (Luke 24:5-6, Resurrection
+   on Trial series). Budget: **$6 ceiling approved, ~$0.50 spent** (voice). Remaining ~$5.50 for stills+Kling.
+2. **DONE + LOCKED:** narration v4 (tournament → red-team → **2× 5-CLI panel rounds** → `cli_lock.py` GREEN;
+   panel R2 = claude PASS 8/8, gemini 8/9). Audio = 82.04s 2-voice MP3, atempo 1.166, whisperx-aligned.
+   **HUMAN GATE 1 (audio by ear) = APPROVED by user 2026-07-11.**
+3. **NEXT STEP = `/bible-check`** (fact cards for Luke 24 tomb-dawn: the women named Luke 8:2-3/23:49/23:55/24:10,
+   two men in shining garments = angels, spices, sealed-then-open tomb, Galilee flashback) → **`/scene-plan`**
+   → author `piece.json` + `livingpage_short.spec.json` → **`/stills`** (BytePlus ~$0.05×N, ~$0.60) →
+   **HUMAN GATE 2** (stills gallery: pick hero / reroll / exclude) → **`/animate`** (Kling ~$4) →
+   **`batch_advance.py`** finishes build→score→sfx ($0) → **`/publish`** pack. Then present the finished
+   `_sfx.mp4` + the full gate/panel evidence trail.
+4. Reuse cluster-2 tomb world (empty_tomb_john208 stills/refs); the sfx layer map needs a new
+   `sfx_pilots/build_women_witnesses_sfx.py` (bespoke, $0 from sound_library) OR add to build_cluster1-style dict.
+5. NOTE agent-bridge friction: audio verify/tag/audit each BLOCK on a bridge request I must service by hand
+   (write `.agent_bridge/responses/<id>.txt`). Tag stage: `<speaker name="narrator">` is FORBIDDEN (narrator
+   implicit); pre-writing `audio/narration-tagged.md` skips the tag bridge round-trip entirely (did that).
+
+## ✅ 2026-07-11 night — PIPELINE OPTIMIZATION shipped (red-teamed "Brain/Skill-Engine/Trigger" blueprint)
+User pasted an "AI-native 3-layer architecture" prompt; asked if it's worth adopting. Verdict (after 3
+adversarial reviewers + my verify): the pasted blueprint = NO (local-LLM/keyword-triggers/unverified curation
+violate locked decisions), BUT "make no change" was WRONG — the user's own `PRODUCER_ORCHESTRATOR_PLAN.md`
+already designed a scoped version. Shipped 2 of 3 pieces ($0, 290 tests green):
+1. **`batch_advance.py`** — night-shift runner: walks every piece in a batch through its `auto=True` $0 steps
+   (build→score→sfx→register), parks at every PAID/HUMAN gate with the exact command (INV-20 safe), retries a
+   crashed step once then BLOCKED+continue, STUCK guard vs loops. `--dry-run`/`--pieces`/`--json`. Proven on
+   cluster_01 (10 COMPLETE, 1 gated) + live-ran i_thirst's stale build→score→sfx to COMPLETE, $0.
+2. **`cli_livingpage.detect()`** — added the missing **sfx step** (final = `*_sfx.mp4`; builder found by slug-
+   scanning `sfx_pilots/build_*.py`).
+3. **Learning loop wired** (was inert per PIPELINE_HARDENING C2): `python -m pipeline.learning record <json>` =
+   the ONE validated ledger writer; `/learn` SKILL.md updated; `test_learning_record.py` (7 tests).
+4. **DEFERRED post-launch:** cross-piece gate queue (PRODUCER_ORCHESTRATOR §4; seed=production_board.py).
+   Memory: `batch-advance-night-shift`. Plan: `~/.claude/plans/adaptive-stirring-rose.md`.
 
 ## ✅ 2026-07-11 PM SESSION — user stills feedback → fix → re-animate → rebuild (~$6 total)
 1. **User reviewed ALL 162 stills** (ALL_STILLS_REVIEW.html) + the FIXED_STILLS_REVIEW.html gate page;

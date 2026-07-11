@@ -14,7 +14,7 @@ stills-first human gate.
 
 Stages (in order):
   narration -> voice -> spec -> manifest -> stills -> stills-gate -> animate
-  -> build -> score -> register
+  -> build -> score -> sfx -> register
 """
 from __future__ import annotations
 
@@ -42,6 +42,19 @@ class Step:
 
 def _mtime(p: Path) -> float:
     return p.stat().st_mtime if p.exists() else 0.0
+
+
+def _sfx_builder(slug: str) -> Path | None:
+    """The sfx_pilots build script carrying this piece's layer map ($0, reuse-only
+    from sound_library). Cluster-1 pieces live in build_cluster1_sfx.py's PIECES dict;
+    later clusters get bespoke build_<piece>_sfx.py scripts."""
+    for p in sorted((ROOT / "sfx_pilots").glob("build_*.py")):
+        try:
+            if slug in p.read_text(encoding="utf-8"):
+                return p
+        except OSError:
+            continue
+    return None
 
 
 def detect(piece: Path) -> list[Step]:
@@ -139,7 +152,24 @@ def detect(piece: Path) -> list[Step]:
                       f"{PY} run_piece.py {q} --stage retime && --stage score" if warn else
                       f"{PY} run_piece.py {q} --stage score", auto=not warn))
 
-    # 10. register (asset index rows exist for this piece)
+    # 10. sfx bed — the living-page FINAL is <out>_sfx.mp4 (caption policy: the comic
+    # boxes ARE the captions), built $0 from sound_library by the piece's layer map
+    if scored is not None:
+        sfx_out = scored.with_name(scored.name.replace("_scored", "_sfx"))
+        builder = _sfx_builder(piece.name)
+        sfx_ok = sfx_out.exists() and _mtime(sfx_out) >= _mtime(scored)
+        if builder is not None:
+            flt = f" {piece.name}" if builder.name == "build_cluster1_sfx.py" else ""
+            cmd = f'{PY} "{builder}"{flt}'
+        else:
+            cmd = "author the sfx layer map in sfx_pilots/ (see build_cluster1_sfx.py)"
+        steps.append(Step("sfx", sfx_ok,
+                          sfx_out.name if sfx_ok else
+                          (f"{sfx_out.name} STALE (scored cut is newer)" if sfx_out.exists()
+                           else f"no {sfx_out.name}"),
+                          cmd, auto=builder is not None))
+
+    # 11. register (asset index rows exist for this piece)
     try:
         idx = json.loads((ROOT / "asset_index.json").read_text(encoding="utf-8"))
         entries = idx.get("assets", idx if isinstance(idx, list) else [])

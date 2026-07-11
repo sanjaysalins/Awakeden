@@ -1,0 +1,22 @@
+{
+  "folder": "audio",
+  "stage": "verify",
+  "generated_at": "2026-07-11T22:20:33Z",
+  "deterministic": {
+    "char_count_after_comment_strip": 1643,
+    "char_cap": 2000,
+    "within_cap": true,
+    "non_empty": true
+  },
+  "voice_roster": {
+    "voices_json_present": true,
+    "speakers_in_roster": [
+      "narrator",
+      "scripture"
+    ]
+  },
+  "anthropic_review": {
+    "model": "claude-opus-4-7",
+    "error": "RuntimeError: agent-bridge timed out after 3600s waiting for C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\.agent_bridge\\responses\\0001_f9d75b.txt. Either service the request (write the reply file) or set LLM_PROVIDER=api."
+  }
+}

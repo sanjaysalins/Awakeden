@@ -1,0 +1,73 @@
+{
+  "folder": "audio",
+  "stage": "audit",
+  "generated_at": "2026-07-11T22:31:21Z",
+  "deterministic": {
+    "tag_validation": "passed",
+    "speaker_validation": "passed",
+    "roster": [
+      "scripture"
+    ]
+  },
+  "round_trip": {
+    "exact_match": false,
+    "blocking": true,
+    "diff_segments": [
+      {
+        "op": "delete",
+        "original": "# Women as First Witnesses - Luke 24:5-6 Series: Resurrection on Trial · Cluster 2 · style: inked motion-comic (living page) Note: quotes - Luke 24:11 (full verse), Luke 24:5b-7 (through \"rise again.\"). LOCKED v4 (full review trail in piece-root narration.md). [narrator]",
+        "tagged": ""
+      },
+      {
+        "op": "delete",
+        "original": "[scripture]",
+        "tagged": ""
+      },
+      {
+        "op": "delete",
+        "original": "[narrator]",
+        "tagged": ""
+      },
+      {
+        "op": "delete",
+        "original": "[narrator]",
+        "tagged": ""
+      },
+      {
+        "op": "delete",
+        "original": "[narrator]",
+        "tagged": ""
+      },
+      {
+        "op": "delete",
+        "original": "[scripture]",
+        "tagged": ""
+      },
+      {
+        "op": "delete",
+        "original": "[narrator]",
+        "tagged": ""
+      },
+      {
+        "op": "delete",
+        "original": "[narrator]",
+        "tagged": ""
+      }
+    ],
+    "added_words": 0,
+    "removed_words": 49
+  },
+  "anthropic_audit": {
+    "tag_economy": "appropriate",
+    "tag_quality_overall": "good",
+    "missed_speaker_opportunities": [],
+    "tonal_mismatches": [],
+    "concerns": [
+      "Scripture lines are correctly left untagged for a clean reverent read by the scripture voice; narrator contour runs serious -> matter-of-fact -> reflective -> quietly -> reflective -> emphasized, which tracks the argument-to-invitation arc without flat-read repetition."
+    ],
+    "model": "claude-opus-4-7",
+    "request_id": null,
+    "input_tokens": null,
+    "output_tokens": null
+  }
+}

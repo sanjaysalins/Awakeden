@@ -1,0 +1,16 @@
+# Women as First Witnesses — Luke 24:5-6 (with Luke 24:11, 24:7; context Luke 8:2-3, 23:49, 23:55, 24:1, 24:8-10; landing echoes Luke 19:10)
+
+Series: Resurrection on Trial · Cluster 2 (Resurrection / Empty Tomb) · style: inked motion-comic (living page)
+Note: quotes — Luke 24:11 (full verse), Luke 24:5b-7 (through "rise again."). Thread: the witnesses who never left (Luke 8:2-3 → 23:49 → 23:55 → 24:10); the angel's "remember" points to Jesus' own Galilee prophecy (24:6-8), which the women were there to hear.
+Status: v4 — panel round 2 reconciled (claude PASS 8/8, gemini 8/9; cursor/codex/grok craft REVISEs, no doctrinal or KJV flags). Applied convergent: quote 2 extended through 24:7 so the prophecy is Scripture's words (ends full stop); landing pays off the idle-tales/court arc before the seek-reversal; "the Gospel writer Luke" + clear referent; "their own means"; "sends His word" (text-exact); "never abandoned Him" cut (the 23:49→55→24:1 chain carries it). Explicitly answered, not applied: dropping the seek-reversal close (grok) — claude 8/10 and gemini 9/10 call it bespoke to this piece (flips its own quoted verb + Luke 19:10 grace-reversal); dropping the court/inventing beat (grok) — it is this episode's charter theme, kept as ONE demoted beat. Per narration-review-process (one red-team + one panel, both applied), v4 proceeds to the deterministic lock; the user judges at GATE 1.
+Audio: LOCKED, synth 82.04s (2-voice narrator+scripture, narrator atempo 1.166 natural band), whisperx-aligned. **HUMAN GATE 1 APPROVED by user 2026-07-11 (by ear).** Next: fact cards → scene plan → stills (GATE 2).
+v1 = tournament synth (hook A + spine B + proof C + climax D). v2 = red-team REVISE applied (courts absolutism softened, "first news" Luke-scoped, clarity fixes). v3 = panel round 1 reconciled (stock closer rebuilt, forger line cost-framed, "remember" re-anchored to the prophecy, hook rebuilt text-first).
+
+[narrator] The first report that Jesus was risen was dismissed as nonsense — by His own apostles.
+[scripture] And their words seemed to them as idle tales, and they believed them not.
+[narrator] The report came from women — and in that world, a woman's word carried almost no weight in court. No one inventing a resurrection would open it there. The Gospel writer Luke gains nothing by recording that — unless it is simply what happened.
+[narrator] And Luke named these women long before — Mary Magdalene, and Joanna — following Jesus through Galilee, supporting Him from their own means. They watched Him die. They saw where He was buried. At dawn, they were back.
+[narrator] So the angels pointed them to His own promise:
+[scripture] Why seek ye the living among the dead? He is not here, but is risen: remember how he spake unto you when he was yet in Galilee, Saying, The Son of man must be delivered into the hands of sinful men, and be crucified, and the third day rise again.
+[narrator] They had followed Him closely enough to hear that promise made. The promise had been kept — and they were the first to know. The idle tale was true, and it went first to the witnesses the world would not hear.
+[narrator] He still sends His word to the overlooked. You need no standing in any court to receive it. Stop seeking the living among the dead — the risen Christ is seeking you.
