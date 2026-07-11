@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Fixed Stills Review — Cross cluster (2026-07-11)</title>
+<title>Fixed Stills Review â€” Cross cluster (2026-07-11)</title>
 <style>
   :root { color-scheme: dark; }
   body { background:#14100c; color:#e8dfd0; font-family:Segoe UI,Arial,sans-serif; margin:0; padding:24px; }
@@ -28,8 +28,8 @@
 </style>
 </head>
 <body>
-<h1>Fixed Stills — final check before re-animating</h1>
-<div class="sub">8 fixed designs (13 files — shared plates propagate to sibling pieces). Click any image for full-res.
+<h1>Fixed Stills â€” final check before re-animating</h1>
+<div class="sub">8 fixed designs (13 files â€” shared plates propagate to sibling pieces). Click any image for full-res.
 Mark FIX + a note on anything still wrong, then COPY FEEDBACK and paste it in chat. If all PASS, just say <b>approved</b>.</div>
 <div class="bar">
   <button onclick="copyFb()">COPY FEEDBACK</button>
@@ -43,28 +43,28 @@ const CARDS = [
  {id:"crucifixion_foretold_ps2218/seamless_robe_lots",
   img:"cluster_01_cross/crucifixion_foretold_ps2218/visual/seamless_robe_lots.png",
   slug:"seamless_robe_lots", pieces:"crucifixion_foretold + pierced",
-  was:"robe looked like a modern T-shirt; then grew a stitched neck placket + gold cuffs",
-  now:"one smooth unbroken weave (John 19:23 'without seam'), plain neck, boxy ancient cut, pebble lots on the stone, 4 soldiers dividing (5th = centurion)"},
+  was:"looked like a wide modern T-shirt, not the garment Jesus wore",
+  now:"the long ankle-length seamless tunic (chiton) Jesus actually wore under his outer clothes â€” one unbroken weave top to hem (John 19:23), held by exactly FOUR soldiers, lots on the stone"},
  {id:"crucifixion_foretold_ps2218/golgotha_hill_wide",
   img:"cluster_01_cross/crucifixion_foretold_ps2218/visual/golgotha_hill_wide.png",
-  slug:"golgotha_hill_wide — MORNING", pieces:"crucifixion_foretold + today_paradise, watch_one_hour, woman_behold",
+  slug:"golgotha_hill_wide â€” MORNING", pieces:"crucifixion_foretold + today_paradise, watch_one_hour, woman_behold",
   was:"giant crosses (not biblical); then church-crosses on rooftops; then a halo",
   now:"short Roman posts, feet just above the bystanders, all three stripped to loincloths, no halo, plain skyline"},
  {id:"forsaken_cry_ps221/golgotha_hill_wide",
   img:"cluster_01_cross/forsaken_cry_ps221/visual/golgotha_hill_wide.png",
-  slug:"golgotha_hill_wide — DARK (ninth hour)", pieces:"forsaken_cry + into_thy_hands, it_is_finished, pierced",
+  slug:"golgotha_hill_wide â€” DARK (ninth hour)", pieces:"forsaken_cry + into_thy_hands, it_is_finished, pierced",
   was:"giant crosses; then a skyline cross + comet streak + a thief in a shirt",
   now:"smooth black midday sky (Matt 27:45), short posts, all three in loincloths, clean skyline"},
  {id:"forsaken_cry_ps221/bowed_head_finished",
   img:"cluster_01_cross/forsaken_cry_ps221/visual/bowed_head_finished.png",
   slug:"bowed_head_finished", pieces:"forsaken_cry + into_thy_hands, it_is_finished, i_thirst",
-  was:"Jesus' hands were not on the cross (arms slack / palm floating)",
-  now:"both hands flat against the crossbeam, arms stretched along the wood, head bowed (John 19:30). Tiny nit: faint strap-like shading on the right shoulder — flag it if it bothers you"},
+  was:"Jesus' hands were not on the cross; you asked for nails",
+  now:"hands flat ON the crossbeam with blood from the palm wounds. HONEST NOTE: I tried nails 3 times â€” the AI keeps drawing hands HOLDING nails or spikes floating in the wood (grotesque). The wounds + blood imply the nails; the wide golgotha shots show the full crucifixion. Flag FIX if you still want me to keep trying"},
  {id:"pierced_zech1210/blood_water_wood",
   img:"cluster_01_cross/pierced_zech1210/visual/blood_water_wood.png",
-  slug:"blood_water_wood — SIDE (pierced)", pieces:"pierced only",
-  was:"the WOOD itself was bleeding (not biblical)",
-  now:"blood and water run from the spear wound in HIS side (John 19:34)"},
+  slug:"blood_water_wood â€” SIDE (pierced)", pieces:"pierced only",
+  was:"spear looked like it was coming OUT of his chest + rocks on his waist",
+  now:"the soldier below thrusts the spear UP from outside INTO his side (John 19:34), blood and water fall, loincloth clean"},
  {id:"pierced_zech1210/mourners_only_son",
   img:"cluster_01_cross/pierced_zech1210/visual/mourners_only_son.png",
   slug:"mourners_only_son", pieces:"pierced only",
@@ -72,7 +72,7 @@ const CARDS = [
   now:"mourners LOOK UP at the crucified Christ and weep (Zech 12:10 / John 19:37)"},
  {id:"thirty_pieces_zech11/blood_water_wood",
   img:"cluster_01_cross/thirty_pieces_zech11/visual/blood_water_wood.png",
-  slug:"blood_water_wood — FOOT (thirty_pieces)", pieces:"thirty_pieces only",
+  slug:"blood_water_wood â€” FOOT (thirty_pieces)", pieces:"thirty_pieces only",
   was:"bleeding wood + floating mid-air drops",
   now:"blood runs from his pierced hands and feet down the wood, pooling on the stone below"},
  {id:"thirty_pieces_zech11/coin_on_scroll",
@@ -90,7 +90,7 @@ function render(){
     const f = fb[c.id] || {};
     if (f.state === "fix") n++;
     const d = document.createElement("div"); d.className = "card";
-    d.innerHTML = `<a href="${c.img}?v=4" target="_blank"><img src="${c.img}?v=4" loading="lazy"></a>
+    d.innerHTML = `<a href="${c.img}?v=6" target="_blank"><img src="${c.img}?v=6" loading="lazy"></a>
       <div class="meta">
         <div class="slug">${c.slug}</div>
         <div class="pieces">${c.pieces}</div>
@@ -123,3 +123,4 @@ render();
 </script>
 </body>
 </html>
+
