@@ -48,6 +48,26 @@ def test_piece_json_drives_all_stages(piece_dir):
     assert all(r["piece"] == pj["piece"] for r in rows)
 
 
+def test_check_refs_flags_peopled_null_ref():
+    """A recurring PEOPLED subject's stills must each carry a character ref; a tomb/
+    landscape group is exempt. Guards the ref:null generic-faces trap."""
+    pj = {"stills": {"jobs": {
+        "women_a": {"prompt": "x", "ref": "../ref.png"},
+        "women_b": {"prompt": "x", "ref": None},        # peopled + null -> flagged
+        "tomb_a":  {"prompt": "x", "ref": None},        # not people -> exempt
+    }, "world": {
+        "women_group": {"canon": "the same three Judean women in wool tunics",
+                        "applies_to": ["women_a", "women_b"]},
+        "tomb": {"canon": "a low rock-hewn tomb with a great round stone",
+                 "applies_to": ["tomb_a"]},
+    }}}
+    problems = RP.check_refs(pj)
+    assert len(problems) == 1 and "women_b" in problems[0]
+    # once anchored, the group passes
+    pj["stills"]["jobs"]["women_b"]["ref"] = "../ref.png"
+    assert RP.check_refs(pj) == []
+
+
 def test_clip_hash_binding(tmp_path):
     """A clip is fresh only while (still bytes + prompt + params) are unchanged;
     pre-hash clips are judged by mtime (still newer = stale)."""

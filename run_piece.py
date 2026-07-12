@@ -124,6 +124,35 @@ def check_world(pj: dict) -> list[str]:
     return problems
 
 
+# Every still of a recurring PEOPLED subject must attach a character ref, or the faces
+# render generic/duplicated across the episode (feedback-peopled-stills-need-character-ref;
+# proven again by the prompt-author POC 2026-07-12). check_world forces the canonical PHRASE
+# into each prompt; this forces the ANCHOR too. A recurring subject counts as "people" when
+# its world canon names any of these — a tomb/stone/landscape group is exempt.
+_PEOPLE_CANON = __import__("re").compile(
+    r"\b(wom[ae]n|m[ae]n|messengers?|angels?|disciples?|apostles?|children|child|boys?|"
+    r"girls?|fathers?|mothers?|priests?|shepherds?|soldiers?|crowds?|people|witnesses?|"
+    r"figures?)\b", __import__("re").I)
+
+
+def check_refs(pj: dict) -> list[str]:
+    """Fail-closed: a peopled recurring subject's stills must each carry a (non-null) ref
+    so the same faces render across the episode. The world map declares the recurring
+    subjects; for any whose canon describes people, every listed slug's job needs a ref.
+    Catches the ref:null trap (e.g. a front-facing women shot rendered with generic faces)."""
+    problems = []
+    jobs = pj["stills"]["jobs"]
+    for name, w in pj["stills"].get("world", {}).items():
+        if not _PEOPLE_CANON.search(w.get("canon", "")):
+            continue
+        for slug in w.get("applies_to", []):
+            job = jobs.get(slug)
+            if job is not None and not job.get("ref"):
+                problems.append(f"world:{name} — peopled still '{slug}' has ref:null; attach a "
+                                f"character anchor so faces stay consistent across the episode")
+    return problems
+
+
 def run_stills(piece_dir: Path, pj: dict, *, render: bool, force: bool, only: set[str],
                no_reuse: bool = False) -> int:
     from render_lint import arm_audit, lint
@@ -131,6 +160,9 @@ def run_stills(piece_dir: Path, pj: dict, *, render: bool, force: bool, only: se
     block = False
     for p in check_world(pj):
         print(f"WORLD BLOCK: {p}")
+        block = True
+    for p in check_refs(pj):
+        print(f"REF BLOCK: {p}")
         block = True
     for slug, job in jobs.items():
         finds = lint(job["prompt"], stage="still")
