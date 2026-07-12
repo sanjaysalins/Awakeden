@@ -68,6 +68,24 @@ def test_check_refs_flags_peopled_null_ref():
     assert RP.check_refs(pj) == []
 
 
+def test_check_world_colors_nudges_uncoloured_people():
+    """Advisory nudge: a peopled world canon that pins no garment colour is flagged;
+    hair colour ('grey-haired') must not count, and a colour-locked canon passes."""
+    def pj(canon):
+        return {"stills": {"jobs": {}, "world": {"g": {"canon": canon, "applies_to": []}}}}
+    # hair colour only, generic 'wool tunics' -> nudged
+    assert RP.check_world_colors(pj(
+        "the same three women, a grey-haired elder, in wool tunics and head mantles"))
+    # garment colour locked -> no nudge
+    assert not RP.check_world_colors(pj(
+        "three women: Mary in terracotta tunic, Joanna in olive-sage mantle, elder in stone-grey robe"))
+    # already-good real canon (shining_men) -> no nudge
+    assert not RP.check_world_colors(pj(
+        "two messengers in shining white-and-gold garments, blazing with light"))
+    # non-people group is exempt
+    assert not RP.check_world_colors(pj("a low rock-hewn tomb with a great round stone"))
+
+
 def test_clip_hash_binding(tmp_path):
     """A clip is fresh only while (still bytes + prompt + params) are unchanged;
     pre-hash clips are judged by mtime (still newer = stale)."""

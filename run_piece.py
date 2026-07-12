@@ -153,6 +153,46 @@ def check_refs(pj: dict) -> list[str]:
     return problems
 
 
+# A peopled world canon should LOCK a distinct garment colour per person, so the same
+# people wear the same clothes in every frame (check_world copies the canon verbatim into
+# each prompt). This teaches the scene-planner at the $0 dry-run — advisory, never blocks,
+# because colour is fuzzy (hair-grey vs garment-grey). Adjacency to a clothing noun (±20
+# chars) is what keeps 'grey-haired' from counting as a garment colour.
+_GARMENT_NOUN = __import__("re").compile(
+    r"\b(tunics?|mantles?|robes?|cloaks?|garments?|veils?|wraps?|headscar(?:f|ves)|"
+    r"vestments?|shawls?|sash|girdles?|dress|linen)\b", __import__("re").I)
+_GARMENT_COLOR = __import__("re").compile(
+    r"\b(terracotta|ochre|olive|sage|indigo|crimson|scarlet|umber|sienna|russet|teal|"
+    r"saffron|gr[ea]y|brown|blue|green|red|cream|tan|beige|charcoal|maroon|mustard|rust|"
+    r"amber|azure|violet|purple|white|black|gold|golden)\b", __import__("re").I)
+
+
+def _garment_colors(canon: str) -> set[str]:
+    """Colours sitting within ~20 chars of a clothing noun — so 'white-and-gold garments'
+    counts but 'grey-haired woman, in wool tunics' does not."""
+    cols: set[str] = set()
+    for m in _GARMENT_NOUN.finditer(canon):
+        window = canon[max(0, m.start() - 20):m.end() + 20]
+        for c in _GARMENT_COLOR.finditer(window):
+            cols.add(c.group(0).lower())
+    return cols
+
+
+def check_world_colors(pj: dict) -> list[str]:
+    """Advisory (non-blocking): a peopled recurring subject should lock a DISTINCT garment
+    colour per person in its world canon. Flags a peopled group whose canon pins NO garment
+    colour at all — the residual 'same people, different outfits' drift the prompt-author POC
+    surfaced (2026-07-12)."""
+    out = []
+    for name, w in pj["stills"].get("world", {}).items():
+        canon = w.get("canon", "")
+        if _PEOPLE_CANON.search(canon) and not _garment_colors(canon):
+            out.append(f"world:{name} — peopled canon pins no garment colour; lock a DISTINCT "
+                       f"colour per person (e.g. terracotta / olive-sage / stone-grey) so the "
+                       f"same people wear the same clothes across every still")
+    return out
+
+
 def run_stills(piece_dir: Path, pj: dict, *, render: bool, force: bool, only: set[str],
                no_reuse: bool = False) -> int:
     from render_lint import arm_audit, lint
@@ -164,6 +204,8 @@ def run_stills(piece_dir: Path, pj: dict, *, render: bool, force: bool, only: se
     for p in check_refs(pj):
         print(f"REF BLOCK: {p}")
         block = True
+    for p in check_world_colors(pj):
+        print(f"COLOR NUDGE: {p}")   # advisory — teaches the planner, never blocks
     for slug, job in jobs.items():
         finds = lint(job["prompt"], stage="still")
         bad = [f for f in finds if str(f.get("level", f.get("severity", "warn"))).lower() == "block"]
