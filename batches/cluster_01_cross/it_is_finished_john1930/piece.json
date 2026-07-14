@@ -1,283 +1,293 @@
 {
-  "piece": "it_is_finished_john1930",
-  "title": "It Is Finished (John 19:30)",
-  "cluster": "cluster_01_cross",
-  "verse": "John 19:30 + Gen 2:1 + John 1:3 + John 17:4",
-  "stills": {
-    "model": "seedream-4-5-251128",
-    "size": "1440x2560",
-    "jobs": {
-      "eden_garden_finished": {
-        "prompt": "an empty pristine garden valley at golden dawn, rivers threading between flowering trees toward distant mountains, landscape only, vast and still, wide, vertical",
-        "ref": null
-      },
-      "seventh_day_light": {
-        "prompt": "warm golden evening light resting over rolling young hills and still water, a great calm, no figures, wide, vertical",
-        "ref": null
-      },
-      "jesus_prays_night": {
-        "prompt": "Jesus kneeling in prayer among gnarled olive trees at night, face lifted to the moonlit sky, hands clasped on a flat rock, deep blue night, vertical, 1st-century Judea",
-        "ref": "../pierced_zech1210/visual/face_on_cross.png"
-      },
-      "vinegar_sponge_reed": {
-        "prompt": "the thorn-crowned Christ crucified high on a tall cross, both arms stretched out and fixed to the crossbeam, under deep midday darkness; below a Roman soldier stretches up a long slender reed tipped with a small hyssop-bound sponge toward Christ's mouth; side view from a low angle showing the full height of the cross, vertical, 1st-century Judea",
-        "ref": "../into_thy_hands_luke2346/visual/face_on_cross.png"
-      },
-      "bowed_head_finished": {
-        "prompt": "a view straight down the length of the one wooden crossbeam of the cross, nearest the camera the open hand of the crucified Christ nailed flat to the beam by a single square-headed iron nail through the palm, blood on the wood, his arm lying along the beam leading back to his bowed head crowned with thorns, eyes closed, deep darkness behind, close, vertical, 1st-century Judea",
-        "ref": "../into_thy_hands_luke2346/visual/face_on_cross.png"
-      },
-      "tomb_stone_sealed": {
-        "prompt": "a great round stone sealing a rock-cut tomb at dusk, the hillside quiet, two small robed figures walking away down the path, vertical, 1st-century Judea",
-        "ref": null
-      },
-      "first_day_morning": {
-        "prompt": "dawn light bursting from the open rock-cut entrance of a garden tomb, the great round stone rolled to the side, warm gold spilling across a stone path, olive trees, vertical, 1st-century Judea",
-        "ref": null
-      },
-      "hands_shaping_light": {
-        "prompt": "two strong open hands, a left hand and a right hand, cupping a swirling sphere of warm golden light against deep starry darkness, rays passing between the fingers, close, vertical",
-        "ref": null
-      },
-      "carpenter_bench_rest": {
-        "prompt": "a carpenter's wooden workbench with a finished three-legged wooden stool standing on it, tools laid down neatly, wood shavings, warm evening light through a small window, quiet stone workshop, vertical, 1st-century Judea",
-        "ref": null
-      },
-      "man_lifting_face_dawn": {
-        "prompt": "a weathered man lifting his face upward into warm dawn light with eyes closed and peace on his face, dark robe, close, vertical, 1st-century Judea",
-        "ref": null
-      },
-      "us_under_cross_shadow": {
-        "prompt": "two bowed figures kneeling small in the dust at dawn, the long shadow of a single cross falling across them and stretching up the ground, heads down and hands clasped, soft low golden light, wide, vertical, 1st-century Judea",
-        "ref": null
-      },
-      "golgotha_hill_wide": {
-        "prompt": "a wide view of three crosses standing on the low rocky rise of Golgotha outside the walls of Jerusalem, the crosses short rough wooden posts, the crucified men stripped to plain loincloths with their feet hanging just above the bystanders' heads, the centre cross bearing the crucified Christ, his bare dark hair against the open sky, a crucified thief stripped to a loincloth on each cross beside him, small mourners standing close below, low stone houses with plain flat earthen roofs beyond the wall, the sky a smooth deep black at midday, the hill and city lying dim in deep shadow, wide, vertical, 1st-century Judea",
-        "ref": null
-      },
-      "face_on_cross": {
-        "prompt": "a close portrait of the crucified Christ from the shoulders up, his thorn-crowned head lifted, eyes open toward heaven, the rough wooden beam behind his head, dim failing light, close, vertical, 1st-century Judea",
-        "ref": "../father_forgive_them/visual/_byteplus/face_on_cross_fix2.png"
-      }
-    }
-  },
-  "animate": {
-    "duration": 5,
-    "aspect_ratio": "9:16",
-    "moves": {
-      "eden_garden_finished": "ONE slow, steady, continuous push-in down the river valley toward the rising sun",
-      "jesus_prays_night": "ONE slow, steady, continuous push-in toward the praying figure's moonlit face",
-      "vinegar_sponge_reed": "ONE slow, steady, continuous push-in rising along the reed toward the crucified figure",
-      "bowed_head_finished": "ONE slow, steady, continuous push-in toward the bowed thorn-crowned head",
-      "tomb_stone_sealed": "ONE slow, steady, continuous push-in toward the sealed round stone",
-      "first_day_morning": "ONE slow, steady, continuous push-in toward the light bursting from the open tomb",
-      "hands_shaping_light": "ONE slow, steady, continuous push-in toward the sphere of light between the hands",
-      "carpenter_bench_rest": "ONE slow, steady, continuous push-in toward the finished stool on the workbench",
-      "man_lifting_face_dawn": "ONE slow, steady, continuous push-in toward the lifted face in the dawn light",
-      "us_under_cross_shadow": "ONE slow, steady, continuous push-in toward the two bowed figures beneath the long cross shadow",
-      "golgotha_hill_wide": "ONE slow, steady, continuous push-in up the hill toward the three crosses",
-      "face_on_cross": "ONE slow, steady, continuous push-in toward the thorn-crowned upturned face"
-    }
-  },
-  "score": {
-    "src": "visual/livingpage_short.spec_preview.mp4",
-    "out": "visual/it_is_finished_john1930_scored.mp4",
-    "dark": "lonely_searching_a.mp3",
-    "grace": "sacred_grace_rise_a.mp3",
-    "base_seconds": 59.09,
-    "outro_hold": 1.5,
-    "dark_trim_end": "35.3",
-    "grace_trim": [
-      "20",
-      "90"
-    ],
-    "crossfade": "6",
-    "tpad": "1.5",
-    "dips": [
-      [
-        "24.4",
-        "30.2",
-        "0.4"
-      ],
-      [
-        "31.8",
-        "39.85",
-        "0.35"
-      ]
-    ],
-    "cta_dip": [
-      "54.45",
-      "0.5"
-    ],
-    "dips_meta": [
-      {
-        "phrase": "I have glorified thee on the earth: I have finished the work which thou gavest me to do.",
-        "pre": 0.27,
-        "post": 0.11
-      },
-      {
-        "phrase": "When Jesus therefore had received the vinegar, he said, It is finished: and he bowed his head, and gave up the ghost.",
-        "pre": 0.03,
-        "post": 0.08
-      }
-    ],
-    "cta_meta": {
-      "phrase": "He bowed his head so you could lift yours. The work is finished. Enter his rest.",
-      "pre": 0.08
-    }
-  },
-  "register": {
-    "id_prefix": "iif",
-    "source": "byteplus seedream-4-5",
-    "created": "2026-07-03",
-    "style": "graphic_novel_inked",
-    "aspect": "9:16",
-    "palette": "inked cel-flat, Eden gold to storm dark to dawn gold",
-    "mood": "two finished works, rest",
-    "tags_still": [
-      "livingpage",
-      "john1930",
-      "creation"
-    ],
-    "tags_clip": [
-      "livingpage",
-      "john1930",
-      "kling"
-    ],
-    "used_in": [
-      "it_is_finished_john1930 short"
-    ],
-    "clip_source": "HF kling3_0 pro 9:16, INK camera-only push-in",
-    "clip_title_suffix": " (Kling push-in)",
-    "extra_rows": [],
-    "stills": {
-      "eden_garden_finished": {
-        "subject": "pristine garden valley at golden dawn, creation complete",
-        "characters": [],
-        "elements": [
-          "rivers",
-          "flowering trees",
-          "mountains"
-        ],
-        "setting": "Eden",
-        "scope": "neutral",
-        "doctrine": "the heavens and the earth were finished (Gen 2:1)"
-      },
-      "seventh_day_light": {
-        "subject": "golden evening calm over young hills and still water",
-        "characters": [],
-        "elements": [
-          "golden light",
-          "hills",
-          "still water"
-        ],
-        "setting": "young earth",
-        "scope": "neutral",
-        "doctrine": "God rested (Gen 2:2)"
-      },
-      "jesus_prays_night": {
-        "subject": "Jesus kneeling in prayer among olive trees, face lifted to the moon",
-        "characters": [
-          "Christ"
-        ],
-        "elements": [
-          "olive trees",
-          "moon",
-          "flat rock"
-        ],
-        "setting": "Gethsemane",
-        "scope": "specific",
-        "doctrine": "I have finished the work (John 17:4)"
-      },
-      "vinegar_sponge_reed": {
-        "subject": "sponge on a reed lifted toward the crucified Christ, from below",
-        "characters": [
-          "Christ crucified"
-        ],
-        "elements": [
-          "sponge",
-          "reed",
-          "cross"
-        ],
-        "setting": "Golgotha",
-        "scope": "specific",
-        "doctrine": "had received the vinegar (John 19:30)"
-      },
-      "bowed_head_finished": {
-        "subject": "thorn-crowned Christ, head bowed in stillness, at peace",
-        "characters": [
-          "Christ crucified"
-        ],
-        "elements": [
-          "crown of thorns",
-          "parting storm"
-        ],
-        "setting": "Golgotha",
-        "scope": "hero",
-        "doctrine": "he bowed his head, and gave up the ghost (John 19:30)"
-      },
-      "tomb_stone_sealed": {
-        "subject": "great round stone sealing the rock-cut tomb at dusk",
-        "characters": [],
-        "elements": [
-          "round stone",
-          "tomb",
-          "dusk hillside"
-        ],
-        "setting": "garden tomb",
-        "scope": "neutral",
-        "doctrine": "rested in the tomb through the sabbath"
-      },
-      "first_day_morning": {
-        "subject": "dawn light bursting from the open garden tomb, stone rolled aside",
-        "characters": [],
-        "elements": [
-          "open tomb",
-          "rolled stone",
-          "dawn gold"
-        ],
-        "setting": "garden tomb",
-        "scope": "hero",
-        "doctrine": "on the first day, morning came (Luke 24:1)"
-      },
-      "hands_shaping_light": {
-        "subject": "two strong hands cupping a sphere of golden light in starry darkness",
-        "characters": [],
-        "elements": [
-          "hands",
-          "light sphere",
-          "stars"
-        ],
-        "setting": "creation",
-        "scope": "neutral",
-        "doctrine": "All things were made by him (John 1:3)"
-      },
-      "carpenter_bench_rest": {
-        "subject": "carpenter's bench with a finished stool, tools laid down at rest",
-        "characters": [],
-        "elements": [
-          "workbench",
-          "stool",
-          "tools",
-          "shavings"
-        ],
-        "setting": "workshop",
-        "scope": "neutral",
-        "doctrine": "He does not leave work half done"
-      },
-      "man_lifting_face_dawn": {
-        "subject": "a weathered man lifting his face into warm dawn light, at peace",
-        "characters": [
-          "us"
-        ],
-        "elements": [
-          "dawn light",
-          "lifted face"
-        ],
-        "setting": "dawn",
-        "scope": "neutral",
-        "doctrine": "He bowed his head so you could lift yours"
-      }
-    }
+ "piece": "it_is_finished_john1930",
+ "title": "It Is Finished (John 19:30)",
+ "cluster": "cluster_01_cross",
+ "verse": "John 19:30 + Gen 2:1 + John 1:3 + John 17:4",
+ "stills": {
+  "model": "seedream-4-5-251128",
+  "size": "1440x2560",
+  "jobs": {
+   "eden_garden_finished": {
+    "prompt": "an empty pristine garden valley at golden dawn, rivers threading between flowering trees toward distant mountains, landscape only, vast and still, wide, vertical",
+    "ref": null
+   },
+   "seventh_day_light": {
+    "prompt": "warm golden evening light resting over rolling young hills and still water, a great calm, no figures, wide, vertical",
+    "ref": null
+   },
+   "jesus_prays_night": {
+    "prompt": "Jesus kneeling in prayer among gnarled olive trees at night, face lifted to the moonlit sky, hands clasped on a flat rock, deep blue night, vertical, 1st-century Judea",
+    "ref": "../pierced_zech1210/visual/face_on_cross.png"
+   },
+   "vinegar_sponge_reed": {
+    "prompt": "the thorn-crowned Christ crucified high on a tall cross, both arms stretched out and fixed to the crossbeam, under deep midday darkness; below a Roman soldier stretches up a long slender reed tipped with a small hyssop-bound sponge toward Christ's mouth; side view from a low angle showing the full height of the cross, vertical, 1st-century Judea",
+    "ref": "../into_thy_hands_luke2346/visual/face_on_cross.png"
+   },
+   "bowed_head_finished": {
+    "prompt": "a view straight down the length of the one wooden crossbeam of the cross, nearest the camera the open hand of the crucified Christ nailed flat to the beam by a single square-headed iron nail through the palm, blood on the wood, his arm lying along the beam leading back to his bowed head crowned with thorns, eyes closed, deep darkness behind, close, vertical, 1st-century Judea",
+    "ref": "../into_thy_hands_luke2346/visual/face_on_cross.png"
+   },
+   "tomb_stone_sealed": {
+    "prompt": "a great round stone sealing a rock-cut tomb at dusk, the hillside quiet, two small robed figures walking away down the path, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "first_day_morning": {
+    "prompt": "dawn light bursting from the open rock-cut entrance of a garden tomb, the great round stone rolled to the side, warm gold spilling across a stone path, olive trees, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "hands_shaping_light": {
+    "prompt": "two strong open hands, a left hand and a right hand, cupping a swirling sphere of warm golden light against deep starry darkness, rays passing between the fingers, close, vertical",
+    "ref": null
+   },
+   "carpenter_bench_rest": {
+    "prompt": "a carpenter's wooden workbench with a finished three-legged wooden stool standing on it, tools laid down neatly, wood shavings, warm evening light through a small window, quiet stone workshop, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "man_lifting_face_dawn": {
+    "prompt": "a weathered man lifting his face upward into warm dawn light with eyes closed and peace on his face, dark robe, close, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "us_under_cross_shadow": {
+    "prompt": "two bowed figures kneeling small in the dust at dawn, the long shadow of a single cross falling across them and stretching up the ground, heads down and hands clasped, soft low golden light, wide, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "golgotha_hill_wide": {
+    "prompt": "a wide view of three crosses standing on the low rocky rise of Golgotha outside the walls of Jerusalem, the crosses short rough wooden posts, the crucified men stripped to plain loincloths with their feet hanging just above the bystanders' heads, the centre cross bearing the crucified Christ, his bare dark hair against the open sky, a crucified thief stripped to a loincloth on each cross beside him, small mourners standing close below, low stone houses with plain flat earthen roofs beyond the wall, the sky a smooth deep black at midday, the hill and city lying dim in deep shadow, wide, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "face_on_cross": {
+    "prompt": "a close portrait of the crucified Christ from the shoulders up, his thorn-crowned head lifted, eyes open toward heaven, the rough wooden beam behind his head, dim failing light, close, vertical, 1st-century Judea",
+    "ref": "../father_forgive_them/visual/_byteplus/face_on_cross_fix2.png"
+   }
   }
+ },
+ "animate": {
+  "duration": 5,
+  "aspect_ratio": "9:16",
+  "moves": {
+   "eden_garden_finished": "ONE slow, steady, continuous push-in down the river valley toward the rising sun",
+   "jesus_prays_night": "ONE slow, steady, continuous push-in toward the praying figure's moonlit face",
+   "vinegar_sponge_reed": "ONE slow, steady, continuous push-in rising along the reed toward the crucified figure",
+   "bowed_head_finished": "ONE slow, steady, continuous push-in toward the bowed thorn-crowned head",
+   "tomb_stone_sealed": "ONE slow, steady, continuous push-in toward the sealed round stone",
+   "first_day_morning": "ONE slow, steady, continuous push-in toward the light bursting from the open tomb",
+   "hands_shaping_light": "ONE slow, steady, continuous push-in toward the sphere of light between the hands",
+   "carpenter_bench_rest": "ONE slow, steady, continuous push-in toward the finished stool on the workbench",
+   "man_lifting_face_dawn": "ONE slow, steady, continuous push-in toward the lifted face in the dawn light",
+   "us_under_cross_shadow": "ONE slow, steady, continuous push-in toward the two bowed figures beneath the long cross shadow",
+   "golgotha_hill_wide": "ONE slow, steady, continuous push-in up the hill toward the three crosses",
+   "face_on_cross": "ONE slow, steady, continuous push-in toward the thorn-crowned upturned face"
+  },
+  "living_light": {
+   "bowed_head_finished": {
+    "target": "the bowed, thorn-crowned head",
+    "light": "the dim light behind the bowed figure breathes almost imperceptibly, a faint pale glow slowly rising around the silhouette while the darkness softens toward the horizon"
+   },
+   "cross_at_dawn": {
+    "target": "the empty cross on the hilltop",
+    "light": "the great dawn sun behind the cross slowly intensifies, its rays sweeping gently across the sky, warm haze shimmering over the rocks below"
+   }
+  }
+ },
+ "score": {
+  "src": "visual/livingpage_short.spec_preview.mp4",
+  "out": "visual/it_is_finished_john1930_scored.mp4",
+  "dark": "lonely_searching_a.mp3",
+  "grace": "sacred_grace_rise_a.mp3",
+  "base_seconds": 59.09,
+  "outro_hold": 1.5,
+  "dark_trim_end": "35.3",
+  "grace_trim": [
+   "20",
+   "90"
+  ],
+  "crossfade": "6",
+  "tpad": "1.5",
+  "dips": [
+   [
+    "24.4",
+    "30.2",
+    "0.4"
+   ],
+   [
+    "31.8",
+    "39.85",
+    "0.35"
+   ]
+  ],
+  "cta_dip": [
+   "54.45",
+   "0.5"
+  ],
+  "dips_meta": [
+   {
+    "phrase": "I have glorified thee on the earth: I have finished the work which thou gavest me to do.",
+    "pre": 0.27,
+    "post": 0.11
+   },
+   {
+    "phrase": "When Jesus therefore had received the vinegar, he said, It is finished: and he bowed his head, and gave up the ghost.",
+    "pre": 0.03,
+    "post": 0.08
+   }
+  ],
+  "cta_meta": {
+   "phrase": "He bowed his head so you could lift yours. The work is finished. Enter his rest.",
+   "pre": 0.08
+  }
+ },
+ "register": {
+  "id_prefix": "iif",
+  "source": "byteplus seedream-4-5",
+  "created": "2026-07-03",
+  "style": "graphic_novel_inked",
+  "aspect": "9:16",
+  "palette": "inked cel-flat, Eden gold to storm dark to dawn gold",
+  "mood": "two finished works, rest",
+  "tags_still": [
+   "livingpage",
+   "john1930",
+   "creation"
+  ],
+  "tags_clip": [
+   "livingpage",
+   "john1930",
+   "kling"
+  ],
+  "used_in": [
+   "it_is_finished_john1930 short"
+  ],
+  "clip_source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+  "clip_title_suffix": " (Kling push-in)",
+  "extra_rows": [],
+  "stills": {
+   "eden_garden_finished": {
+    "subject": "pristine garden valley at golden dawn, creation complete",
+    "characters": [],
+    "elements": [
+     "rivers",
+     "flowering trees",
+     "mountains"
+    ],
+    "setting": "Eden",
+    "scope": "neutral",
+    "doctrine": "the heavens and the earth were finished (Gen 2:1)"
+   },
+   "seventh_day_light": {
+    "subject": "golden evening calm over young hills and still water",
+    "characters": [],
+    "elements": [
+     "golden light",
+     "hills",
+     "still water"
+    ],
+    "setting": "young earth",
+    "scope": "neutral",
+    "doctrine": "God rested (Gen 2:2)"
+   },
+   "jesus_prays_night": {
+    "subject": "Jesus kneeling in prayer among olive trees, face lifted to the moon",
+    "characters": [
+     "Christ"
+    ],
+    "elements": [
+     "olive trees",
+     "moon",
+     "flat rock"
+    ],
+    "setting": "Gethsemane",
+    "scope": "specific",
+    "doctrine": "I have finished the work (John 17:4)"
+   },
+   "vinegar_sponge_reed": {
+    "subject": "sponge on a reed lifted toward the crucified Christ, from below",
+    "characters": [
+     "Christ crucified"
+    ],
+    "elements": [
+     "sponge",
+     "reed",
+     "cross"
+    ],
+    "setting": "Golgotha",
+    "scope": "specific",
+    "doctrine": "had received the vinegar (John 19:30)"
+   },
+   "bowed_head_finished": {
+    "subject": "thorn-crowned Christ, head bowed in stillness, at peace",
+    "characters": [
+     "Christ crucified"
+    ],
+    "elements": [
+     "crown of thorns",
+     "parting storm"
+    ],
+    "setting": "Golgotha",
+    "scope": "hero",
+    "doctrine": "he bowed his head, and gave up the ghost (John 19:30)"
+   },
+   "tomb_stone_sealed": {
+    "subject": "great round stone sealing the rock-cut tomb at dusk",
+    "characters": [],
+    "elements": [
+     "round stone",
+     "tomb",
+     "dusk hillside"
+    ],
+    "setting": "garden tomb",
+    "scope": "neutral",
+    "doctrine": "rested in the tomb through the sabbath"
+   },
+   "first_day_morning": {
+    "subject": "dawn light bursting from the open garden tomb, stone rolled aside",
+    "characters": [],
+    "elements": [
+     "open tomb",
+     "rolled stone",
+     "dawn gold"
+    ],
+    "setting": "garden tomb",
+    "scope": "hero",
+    "doctrine": "on the first day, morning came (Luke 24:1)"
+   },
+   "hands_shaping_light": {
+    "subject": "two strong hands cupping a sphere of golden light in starry darkness",
+    "characters": [],
+    "elements": [
+     "hands",
+     "light sphere",
+     "stars"
+    ],
+    "setting": "creation",
+    "scope": "neutral",
+    "doctrine": "All things were made by him (John 1:3)"
+   },
+   "carpenter_bench_rest": {
+    "subject": "carpenter's bench with a finished stool, tools laid down at rest",
+    "characters": [],
+    "elements": [
+     "workbench",
+     "stool",
+     "tools",
+     "shavings"
+    ],
+    "setting": "workshop",
+    "scope": "neutral",
+    "doctrine": "He does not leave work half done"
+   },
+   "man_lifting_face_dawn": {
+    "subject": "a weathered man lifting his face into warm dawn light, at peace",
+    "characters": [
+     "us"
+    ],
+    "elements": [
+     "dawn light",
+     "lifted face"
+    ],
+    "setting": "dawn",
+    "scope": "neutral",
+    "doctrine": "He bowed his head so you could lift yours"
+   }
+  }
+ }
 }
