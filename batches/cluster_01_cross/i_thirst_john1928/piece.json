@@ -1,149 +1,159 @@
 {
-  "piece": "i_thirst_john1928",
-  "title": "I Thirst (John 19:28 / Ps 22:15)",
-  "cluster": "cluster_01_cross",
-  "verse": "John 19:28 + Psalm 22:15",
-  "stills": {
-    "model": "seedream-4-5-251128",
-    "size": "1440x2560",
-    "jobs": {
-      "ocean_creation_wide": {
-        "prompt": "vast ocean waves rolling under a golden dawn sky, spray catching the light, no land, no figures, wide, vertical",
-        "ref": null
-      },
-      "potsherd_dry_clay": {
-        "prompt": "a broken shard of dry clay pottery lying on cracked parched earth, harsh dry light, close, vertical, ancient Judea",
-        "ref": null
-      },
-      "living_water_stream": {
-        "prompt": "a clear spring of water pouring over smooth rocks, sunlight sparkling in the falling water, green moss, close, vertical",
-        "ref": null
-      },
-      "us_under_cross_shadow": {
-        "prompt": "two bowed figures kneeling small in the dust at dawn, the long shadow of a single cross falling across them and stretching up the ground, heads down and hands clasped, soft low golden light, wide, vertical, 1st-century Judea",
-        "ref": null
-      },
-      "bowed_head_finished": {
-        "prompt": "a view straight down the length of the one wooden crossbeam of the cross, nearest the camera the open hand of the crucified Christ nailed flat to the beam by a single square-headed iron nail through the palm, blood on the wood, his arm lying along the beam leading back to his bowed head crowned with thorns, eyes closed, deep darkness behind, close, vertical, 1st-century Judea",
-        "ref": "../into_thy_hands_luke2346/visual/face_on_cross.png"
-      }
-    }
-  },
-  "animate": {
-    "duration": 5,
-    "aspect_ratio": "9:16",
-    "moves": {
-      "us_under_cross_shadow": "ONE slow, steady, continuous push-in toward the two bowed figures beneath the long cross shadow",
-      "bowed_head_finished": "ONE slow, steady, continuous push-in toward the bowed thorn-crowned head"
-    }
-  },
-  "score": {
-    "src": "visual/livingpage_short.spec_preview.mp4",
-    "out": "visual/i_thirst_john1928_scored.mp4",
-    "dark": "lonely_searching_a.mp3",
-    "grace": "sacred_grace_rise_a.mp3",
-    "base_seconds": 55.74,
-    "outro_hold": 1.5,
-    "dark_trim_end": "43.9",
-    "grace_trim": [
-      "20",
-      "90"
-    ],
-    "crossfade": "6",
-    "tpad": "1.5",
-    "dips": [
-      [
-        "15.2",
-        "26.45",
-        "0.4"
-      ],
-      [
-        "32.6",
-        "36.7",
-        "0.35"
-      ]
-    ],
-    "cta_dip": [
-      "49.4",
-      "0.5"
-    ],
-    "dips_meta": [
-      {
-        "phrase": "\"My strength is dried up like a potsherd; and my tongue cleaveth to my jaws; and thou hast brought me into the dust of death.\"",
-        "pre": 0.01,
-        "post": 0.14
-      },
-      {
-        "phrase": "Then John records the dying Jesus' cry: \"I thirst.\"",
-        "pre": 0.01,
-        "post": 0.15
-      }
-    ],
-    "cta_meta": {
-      "phrase": "Bring Him your thirst — and drink. That water is Himself.",
-      "pre": 1.04
-    }
-  },
-  "register": {
-    "id_prefix": "it",
-    "source": "byteplus seedream-4-5",
-    "created": "2026-07-03",
-    "style": "graphic_novel_inked",
-    "aspect": "9:16",
-    "palette": "inked cel-flat, dawn gold / parched tan / water blue",
-    "mood": "the Maker thirsting, living water offered",
-    "tags_still": [
-      "livingpage",
-      "john1928",
-      "thirst"
-    ],
-    "tags_clip": [
-      "livingpage",
-      "john1928",
-      "kling"
-    ],
-    "used_in": [
-      "i_thirst_john1928 short"
-    ],
-    "clip_source": "HF kling3_0 pro 9:16, INK camera-only push-in",
-    "clip_title_suffix": " (Kling push-in)",
-    "extra_rows": [],
-    "stills": {
-      "ocean_creation_wide": {
-        "subject": "vast curling ocean wave under golden dawn, spray in the light",
-        "characters": [],
-        "elements": [
-          "great wave",
-          "dawn sun",
-          "spray"
-        ],
-        "setting": "open sea",
-        "scope": "neutral",
-        "doctrine": "All things were made by him (John 1:3)"
-      },
-      "potsherd_dry_clay": {
-        "subject": "broken dry clay shard on cracked parched earth",
-        "characters": [],
-        "elements": [
-          "potsherd",
-          "cracked earth"
-        ],
-        "setting": "desert",
-        "scope": "neutral",
-        "doctrine": "my strength is dried up like a potsherd (Ps 22:15)"
-      },
-      "living_water_stream": {
-        "subject": "clear spring pouring over mossy rocks, sunlight in the water",
-        "characters": [],
-        "elements": [
-          "spring water",
-          "mossy rocks",
-          "sparkle"
-        ],
-        "setting": "spring",
-        "scope": "neutral",
-        "doctrine": "living water (John 4:14 / 7:37)"
-      }
-    }
+ "piece": "i_thirst_john1928",
+ "title": "I Thirst (John 19:28 / Ps 22:15)",
+ "cluster": "cluster_01_cross",
+ "verse": "John 19:28 + Psalm 22:15",
+ "stills": {
+  "model": "seedream-4-5-251128",
+  "size": "1440x2560",
+  "jobs": {
+   "ocean_creation_wide": {
+    "prompt": "vast ocean waves rolling under a golden dawn sky, spray catching the light, no land, no figures, wide, vertical",
+    "ref": null
+   },
+   "potsherd_dry_clay": {
+    "prompt": "a broken shard of dry clay pottery lying on cracked parched earth, harsh dry light, close, vertical, ancient Judea",
+    "ref": null
+   },
+   "living_water_stream": {
+    "prompt": "a clear spring of water pouring over smooth rocks, sunlight sparkling in the falling water, green moss, close, vertical",
+    "ref": null
+   },
+   "us_under_cross_shadow": {
+    "prompt": "two bowed figures kneeling small in the dust at dawn, the long shadow of a single cross falling across them and stretching up the ground, heads down and hands clasped, soft low golden light, wide, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "bowed_head_finished": {
+    "prompt": "a view straight down the length of the one wooden crossbeam of the cross, nearest the camera the open hand of the crucified Christ nailed flat to the beam by a single square-headed iron nail through the palm, blood on the wood, his arm lying along the beam leading back to his bowed head crowned with thorns, eyes closed, deep darkness behind, close, vertical, 1st-century Judea",
+    "ref": "../into_thy_hands_luke2346/visual/face_on_cross.png"
+   }
   }
+ },
+ "animate": {
+  "duration": 5,
+  "aspect_ratio": "9:16",
+  "moves": {
+   "us_under_cross_shadow": "ONE slow, steady, continuous push-in toward the two bowed figures beneath the long cross shadow",
+   "bowed_head_finished": "ONE slow, steady, continuous push-in toward the bowed thorn-crowned head"
+  },
+  "living_light": {
+   "living_water_stream": {
+    "target": "the falling stream of water",
+    "light": "the falling water flows gently and continuously, sunlight playing softly across the stream and the pool, thin mist drifting off the splash"
+   },
+   "cross_at_dawn": {
+    "target": "the empty cross on the hilltop",
+    "light": "the great dawn sun behind the cross slowly intensifies, its rays sweeping gently across the sky, warm haze shimmering over the rocks below"
+   }
+  }
+ },
+ "score": {
+  "src": "visual/livingpage_short.spec_preview.mp4",
+  "out": "visual/i_thirst_john1928_scored.mp4",
+  "dark": "lonely_searching_a.mp3",
+  "grace": "sacred_grace_rise_a.mp3",
+  "base_seconds": 55.74,
+  "outro_hold": 1.5,
+  "dark_trim_end": "43.9",
+  "grace_trim": [
+   "20",
+   "90"
+  ],
+  "crossfade": "6",
+  "tpad": "1.5",
+  "dips": [
+   [
+    "15.2",
+    "26.45",
+    "0.4"
+   ],
+   [
+    "32.6",
+    "36.7",
+    "0.35"
+   ]
+  ],
+  "cta_dip": [
+   "49.4",
+   "0.5"
+  ],
+  "dips_meta": [
+   {
+    "phrase": "\"My strength is dried up like a potsherd; and my tongue cleaveth to my jaws; and thou hast brought me into the dust of death.\"",
+    "pre": 0.01,
+    "post": 0.14
+   },
+   {
+    "phrase": "Then John records the dying Jesus' cry: \"I thirst.\"",
+    "pre": 0.01,
+    "post": 0.15
+   }
+  ],
+  "cta_meta": {
+   "phrase": "Bring Him your thirst — and drink. That water is Himself.",
+   "pre": 1.04
+  }
+ },
+ "register": {
+  "id_prefix": "it",
+  "source": "byteplus seedream-4-5",
+  "created": "2026-07-03",
+  "style": "graphic_novel_inked",
+  "aspect": "9:16",
+  "palette": "inked cel-flat, dawn gold / parched tan / water blue",
+  "mood": "the Maker thirsting, living water offered",
+  "tags_still": [
+   "livingpage",
+   "john1928",
+   "thirst"
+  ],
+  "tags_clip": [
+   "livingpage",
+   "john1928",
+   "kling"
+  ],
+  "used_in": [
+   "i_thirst_john1928 short"
+  ],
+  "clip_source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+  "clip_title_suffix": " (Kling push-in)",
+  "extra_rows": [],
+  "stills": {
+   "ocean_creation_wide": {
+    "subject": "vast curling ocean wave under golden dawn, spray in the light",
+    "characters": [],
+    "elements": [
+     "great wave",
+     "dawn sun",
+     "spray"
+    ],
+    "setting": "open sea",
+    "scope": "neutral",
+    "doctrine": "All things were made by him (John 1:3)"
+   },
+   "potsherd_dry_clay": {
+    "subject": "broken dry clay shard on cracked parched earth",
+    "characters": [],
+    "elements": [
+     "potsherd",
+     "cracked earth"
+    ],
+    "setting": "desert",
+    "scope": "neutral",
+    "doctrine": "my strength is dried up like a potsherd (Ps 22:15)"
+   },
+   "living_water_stream": {
+    "subject": "clear spring pouring over mossy rocks, sunlight in the water",
+    "characters": [],
+    "elements": [
+     "spring water",
+     "mossy rocks",
+     "sparkle"
+    ],
+    "setting": "spring",
+    "scope": "neutral",
+    "doctrine": "living water (John 4:14 / 7:37)"
+   }
+  }
+ }
 }

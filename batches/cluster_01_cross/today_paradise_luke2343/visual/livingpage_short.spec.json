@@ -1,410 +1,528 @@
 {
-  "_doc": "TODAY IN PARADISE (Luke 23:39-43) 9:16 SHORT - living page per LIVINGPAGE_STANDARD. 16 beats / 59.07s. Ramp+takeover hill hook, two-face slams on 'Same nails. Same hill', 4 Scripture bars (mocker 23:39b / thief 23:41 / thief 23:42b / JESUS 23:43b, KJV 'To day' preserved on audio, bars exact), heartbeat 26.8-36.37 STOPS DEAD when Jesus answers, border-break on the answer, punch grammar + ticks.",
-  "audio": "../audio/narration.mp3",
-  "total": 59.07,
-  "cut_ticks": true,
-  "heartbeat": {
-    "from": 26.8,
-    "to": 36.37,
-    "gain": -9,
-    "bpm": 64
-  },
-  "beats": [
+ "_doc": "TODAY IN PARADISE (Luke 23:39-43) 9:16 SHORT - living page per LIVINGPAGE_STANDARD. 16 beats / 59.07s. Ramp+takeover hill hook, two-face slams on 'Same nails. Same hill', 4 Scripture bars (mocker 23:39b / thief 23:41 / thief 23:42b / JESUS 23:43b, KJV 'To day' preserved on audio, bars exact), heartbeat 26.8-36.37 STOPS DEAD when Jesus answers, border-break on the answer, punch grammar + ticks.",
+ "audio": "../audio/narration.mp3",
+ "total": 59.07,
+ "cut_ticks": false,
+ "heartbeat": {
+  "from": 26.8,
+  "to": 36.37,
+  "gain": -9,
+  "bpm": 64
+ },
+ "beats": [
+  {
+   "t": [
+    0.0,
+    2.9
+   ],
+   "tpl": "hero_band3",
+   "punch": true,
+   "ramp": true,
+   "sfx": [
+    [
+     "impact_low_boom",
+     0.1,
+     -12
+    ]
+   ],
+   "clips": [
     {
-      "t": [
-        0.0,
-        2.9
-      ],
-      "tpl": "full",
-      "punch": true,
-      "ramp": true,
-      "sfx": [
-        [
-          "impact_low_boom",
-          0.1,
-          -12
-        ]
-      ],
-      "clips": [
-        {
-          "slug": "golgotha_hill_wide",
-          "motion": "pushin"
-        }
-      ],
-      "takeover": {
-        "panel": 0,
-        "start": 1.5,
-        "zoom": 1.3
-      },
-      "cap": {
-        "type": "caption",
-        "text": "Two criminals died beside Jesus",
-        "kw": "TWO"
-      }
-    },
-    {
-      "t": [
-        2.9,
-        5.2
-      ],
-      "tpl": "stack_h",
-      "clips": [
-        {
-          "slug": "nail_through_hand",
-          "motion": "pushin",
-          "at": 2.9,
-          "slide": "left",
-          "sfx": "nail_strike_single"
-        },
-        {
-          "slug": "us_under_cross_shadow",
-          "motion": "pushin",
-          "at": 4.04,
-          "slide": "right"
-        }
-      ],
-      "cap": {
-        "type": "caption",
-        "text": "Same nails. Same hill",
-        "kw": "SAME"
-      }
-    },
-    {
-      "t": [
-        5.2,
-        7.84
-      ],
-      "tpl": "full",
-      "whip": true,
-      "clips": [
-        {
-          "slug": "thief_looks_to_jesus",
-          "motion": "pushin"
-        }
-      ],
-      "cap": {
-        "type": "caption",
-        "text": "Same distance. Opposite eternities",
-        "kw": "OPPOSITE"
-      }
-    },
-    {
-      "t": [
-        7.84,
-        12.04
-      ],
-      "tpl": "full",
-      "punch": true,
-      "clips": [
-        {
-          "slug": "mocker_thief_face",
-          "motion": "pushin"
-        }
-      ],
-      "cap": {
-        "type": "caption",
-        "text": "Both guilty. Both spoke to him",
-        "kw": "BOTH"
-      }
-    },
-    {
-      "t": [
-        12.04,
-        15.32
-      ],
-      "tpl": "full",
-      "sfx": [
-        [
-          "crowd_shout_mob",
-          12.1,
-          -18
-        ]
-      ],
-      "clips": [
-        {
-          "slug": "mocker_taunts_jesus",
-          "motion": "pushin"
-        }
-      ],
-      "cap": {
-        "type": "redletter",
-        "text": "If thou be Christ, save thyself and us",
-        "speaker": "THE MOCKER",
-        "ref": "LUKE 23:39b"
-      }
-    },
-    {
-      "t": [
-        15.32,
-        18.82
-      ],
-      "tpl": "full",
-      "whip": true,
-      "clips": [
-        {
-          "slug": "penitent_thief_face",
-          "motion": "pushin"
-        }
-      ],
-      "cap": {
-        "type": "caption",
-        "text": "The other thief rebuked him",
-        "kw": "REBUKED"
-      }
-    },
-    {
-      "t": [
-        18.82,
-        26.77
-      ],
-      "tpl": "full",
-      "sfx": [
-        [
-          "air_hollow_desolate",
-          18.9,
-          -17
-        ]
-      ],
-      "clips": [
-        {
-          "slug": "two_thieves_wide",
-          "motion": "pushin"
-        }
-      ],
-      "cap": {
-        "type": "redletter",
-        "text": "And we indeed justly; for we receive the due reward of our deeds: but this man hath done nothing amiss",
-        "speaker": "THE THIEF",
-        "ref": "LUKE 23:41"
-      }
-    },
-    {
-      "t": [
-        26.77,
-        32.01
-      ],
-      "tpl": "full",
-      "punch": true,
-      "inserts": [
-        {
-          "at": 28.9,
-          "slug": "mocker_thief_face",
-          "frames": 4
-        }
-      ],
-      "clips": [
-        {
-          "slug": "confession_face_hands",
-          "motion": "static",
-          "cam": "arc"
-        }
-      ],
-      "cap": {
-        "type": "caption",
-        "text": "A confession. A verdict: innocent",
-        "kw": "INNOCENT"
-      }
-    },
-    {
-      "t": [
-        32.01,
-        36.37
-      ],
-      "tpl": "full",
-      "sfx": [
-        [
-          "wind_desert_bleak",
-          32.05,
-          -18
-        ]
-      ],
-      "clips": [
-        {
-          "slug": "kingdom_light_clouds",
-          "motion": "static",
-          "cam": "arc"
-        }
-      ],
-      "cap": {
-        "type": "redletter",
-        "text": "Lord, remember me when thou comest into thy kingdom",
-        "speaker": "THE THIEF",
-        "ref": "LUKE 23:42b"
-      }
-    },
-    {
-      "t": [
-        36.37,
-        42.81
-      ],
-      "tpl": "full",
-      "border_break": {
-        "at": 36.45
-      },
-      "clips": [
-        {
-          "slug": "jesus_turns_to_thief",
-          "motion": "pushin"
-        }
-      ],
-      "cap": {
-        "type": "redletter",
-        "text": "Verily I say unto thee, To day shalt thou be with me in paradise",
-        "speaker": "JESUS",
-        "ref": "LUKE 23:43b"
-      }
-    },
-    {
-      "t": [
-        42.81,
-        46.35
-      ],
-      "tpl": "full",
-      "whip": true,
-      "clips": [
-        {
-          "slug": "risen_mercy_hand",
-          "motion": "pushin"
-        }
-      ],
-      "cap": {
-        "type": "caption",
-        "text": "He got that same afternoon",
-        "kw": "SAME AFTERNOON"
-      }
-    },
-    {
-      "t": [
-        46.35,
-        48.77
-      ],
-      "tpl": "stack_h",
-      "clips": [
-        {
-          "slug": "nail_through_hand",
-          "motion": "pushin",
-          "zoom": 1.25,
-          "at": 46.35,
-          "slide": "left"
-        },
-        {
-          "slug": "thief_looks_to_jesus",
-          "motion": "pushin",
-          "zoom": 1.2,
-          "at": 47.3,
-          "slide": "right"
-        }
-      ],
-      "cap": {
-        "type": "caption",
-        "text": "No merit. Just repentance and trust",
-        "kw": "TRUST"
-      }
-    },
-    {
-      "t": [
-        48.77,
-        50.51
-      ],
-      "tpl": "stack_h",
-      "clips": [
-        {
-          "slug": "golgotha_hill_wide",
-          "motion": "pushin",
-          "zoom": 1.3,
-          "at": 48.77,
-          "slide": "up"
-        },
-        {
-          "slug": "mocker_thief_face",
-          "motion": "pushin",
-          "zoom": 1.2
-        }
-      ],
-      "cap": {
-        "type": "caption",
-        "text": "We are all one of those two men",
-        "kw": "TWO MEN"
-      }
-    },
-    {
-      "t": [
-        50.51,
-        53.95
-      ],
-      "tpl": "stack_h",
-      "punch": true,
-      "inserts": [
-        {
-          "at": 52.3,
-          "slug": "golgotha_hill_wide",
-          "frames": 4
-        }
-      ],
-      "clips": [
-        {
-          "slug": "penitent_thief_face",
-          "motion": "pushin",
-          "zoom": 1.2
-        },
-        {
-          "slug": "us_under_cross_shadow",
-          "motion": "pushin",
-          "zoom": 1.25,
-          "at": 52.29,
-          "slide": "up"
-        }
-      ],
-      "cap": {
-        "type": "caption",
-        "text": "Ask what the thief asked. Remember me",
-        "kw": "REMEMBER ME"
-      }
-    },
-    {
-      "t": [
-        53.95,
-        57.09
-      ],
-      "tpl": "full",
-      "punch": true,
-      "clips": [
-        {
-          "slug": "answer_light_profile",
-          "motion": "static",
-          "cam": "arc"
-        }
-      ],
-      "cap": {
-        "type": "caption",
-        "text": "Hear his answer. With me. Today",
-        "kw": "WITH ME"
-      }
-    },
-    {
-      "t": [
-        57.09,
-        59.07
-      ],
-      "tpl": "full",
-      "sfx": [
-        [
-          "dawn_morning_warm",
-          57.1,
-          -15
-        ]
-      ],
-      "clips": [
-        {
-          "slug": "paradise_dawn",
-          "motion": "pushin"
-        }
-      ],
-      "cap": {
-        "type": "caption",
-        "text": "Paradise",
-        "kw": "PARADISE"
-      }
+     "slug": "golgotha_hill_wide",
+     "motion": "pushin"
     }
-  ]
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Two criminals died beside Jesus",
+    "kw": "TWO"
+   },
+   "anchors": [
+    [
+     1.0,
+     0.5,
+     0.2
+    ],
+    [
+     1.25,
+     0.5,
+     0.5
+    ],
+    [
+     1.35,
+     0.5,
+     0.8
+    ]
+   ],
+   "panel_at": [
+    0.0,
+    0.25,
+    0.5
+   ],
+   "panel_slide": [
+    "up",
+    "left",
+    "down"
+   ],
+   "flash": true
+  },
+  {
+   "t": [
+    2.9,
+    5.2
+   ],
+   "tpl": "stack_h",
+   "clips": [
+    {
+     "slug": "nail_through_hand",
+     "motion": "pushin",
+     "at": 2.9,
+     "slide": "left",
+     "sfx": "nail_strike_single"
+    },
+    {
+     "slug": "us_under_cross_shadow",
+     "motion": "pushin",
+     "at": 4.04,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Same nails. Same hill",
+    "kw": "SAME"
+   },
+   "fx": {
+    "temp": 7400
+   }
+  },
+  {
+   "t": [
+    5.2,
+    7.84
+   ],
+   "tpl": "full",
+   "whip": true,
+   "clips": [
+    {
+     "slug": "thief_looks_to_jesus",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Same distance. Opposite eternities",
+    "kw": "OPPOSITE"
+   }
+  },
+  {
+   "t": [
+    7.84,
+    12.04
+   ],
+   "tpl": "full",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "mocker_thief_face",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Both guilty. Both spoke to him",
+    "kw": "BOTH"
+   },
+   "fx": {
+    "temp": 7600
+   }
+  },
+  {
+   "t": [
+    12.04,
+    15.32
+   ],
+   "tpl": "full",
+   "sfx": [
+    [
+     "crowd_shout_mob",
+     12.1,
+     -18
+    ]
+   ],
+   "clips": [
+    {
+     "slug": "mocker_taunts_jesus",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "If thou be Christ, save thyself and us",
+    "speaker": "THE MOCKER",
+    "ref": "LUKE 23:39b"
+   },
+   "fx": {
+    "temp": 7800
+   }
+  },
+  {
+   "t": [
+    15.32,
+    18.82
+   ],
+   "tpl": "full",
+   "whip": true,
+   "clips": [
+    {
+     "slug": "penitent_thief_face",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The other thief rebuked him",
+    "kw": "REBUKED"
+   },
+   "fx": {
+    "temp": 7200
+   }
+  },
+  {
+   "t": [
+    18.82,
+    26.77
+   ],
+   "tpl": "hero_frac3",
+   "sfx": [
+    [
+     "air_hollow_desolate",
+     18.9,
+     -17
+    ]
+   ],
+   "clips": [
+    {
+     "slug": "two_thieves_wide",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "And we indeed justly; for we receive the due reward of our deeds: but this man hath done nothing amiss",
+    "speaker": "THE THIEF",
+    "ref": "LUKE 23:41"
+   },
+   "anchors": [
+    [
+     1.6,
+     0.5,
+     0.22
+    ],
+    [
+     1.9,
+     0.19,
+     0.3
+    ],
+    [
+     1.9,
+     0.82,
+     0.32
+    ]
+   ],
+   "panel_at": [
+    18.82,
+    19.32,
+    19.82
+   ],
+   "panel_slide": [
+    "up",
+    "left",
+    "right"
+   ],
+   "flash": true,
+   "fx": {
+    "temp": 7900
+   }
+  },
+  {
+   "t": [
+    26.77,
+    32.01
+   ],
+   "tpl": "hero_frac3",
+   "punch": true,
+   "inserts": [
+    {
+     "at": 28.9,
+     "slug": "mocker_thief_face",
+     "frames": 4
+    }
+   ],
+   "clips": [
+    {
+     "slug": "confession_face_hands",
+     "motion": "static",
+     "cam": "arc"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "A confession. A verdict: innocent",
+    "kw": "INNOCENT"
+   },
+   "anchors": [
+    [
+     1.0,
+     0.5,
+     0.5
+    ],
+    [
+     1.7,
+     0.5,
+     0.35
+    ],
+    [
+     1.8,
+     0.5,
+     0.65
+    ]
+   ],
+   "panel_at": [
+    26.77,
+    27.17,
+    27.57
+   ],
+   "panel_slide": [
+    "left",
+    "right",
+    "up"
+   ],
+   "flash": true,
+   "fx": {
+    "temp": 7000
+   }
+  },
+  {
+   "t": [
+    32.01,
+    36.37
+   ],
+   "tpl": "full",
+   "sfx": [
+    [
+     "wind_desert_bleak",
+     32.05,
+     -18
+    ]
+   ],
+   "clips": [
+    {
+     "slug": "kingdom_light_clouds",
+     "motion": "static"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "Lord, remember me when thou comest into thy kingdom",
+    "speaker": "THE THIEF",
+    "ref": "LUKE 23:42b"
+   },
+   "fx": {
+    "temp": 6000
+   }
+  },
+  {
+   "t": [
+    36.37,
+    42.81
+   ],
+   "tpl": "full",
+   "border_break": {
+    "at": 36.45
+   },
+   "clips": [
+    {
+     "slug": "jesus_turns_to_thief",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "Verily I say unto thee, To day shalt thou be with me in paradise",
+    "speaker": "JESUS",
+    "ref": "LUKE 23:43b"
+   },
+   "fx": {
+    "temp": 5800
+   }
+  },
+  {
+   "t": [
+    42.81,
+    46.35
+   ],
+   "tpl": "full",
+   "whip": true,
+   "clips": [
+    {
+     "slug": "risen_mercy_hand",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He got that same afternoon",
+    "kw": "SAME AFTERNOON"
+   },
+   "fx": {
+    "temp": 5400
+   }
+  },
+  {
+   "t": [
+    46.35,
+    48.77
+   ],
+   "tpl": "stack_h",
+   "clips": [
+    {
+     "slug": "nail_through_hand",
+     "motion": "pushin",
+     "zoom": 1.25,
+     "at": 46.35,
+     "slide": "left"
+    },
+    {
+     "slug": "thief_looks_to_jesus",
+     "motion": "pushin",
+     "zoom": 1.2,
+     "at": 47.3,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "No merit. Just repentance and trust",
+    "kw": "TRUST"
+   }
+  },
+  {
+   "t": [
+    48.77,
+    50.51
+   ],
+   "tpl": "stack_h",
+   "clips": [
+    {
+     "slug": "golgotha_hill_wide",
+     "motion": "pushin",
+     "zoom": 1.3,
+     "at": 48.77,
+     "slide": "up"
+    },
+    {
+     "slug": "mocker_thief_face",
+     "motion": "pushin",
+     "zoom": 1.2
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "We are all one of those two men",
+    "kw": "TWO MEN"
+   },
+   "fx": {
+    "temp": 7000
+   }
+  },
+  {
+   "t": [
+    50.51,
+    53.95
+   ],
+   "tpl": "stack_h",
+   "punch": true,
+   "inserts": [
+    {
+     "at": 52.3,
+     "slug": "golgotha_hill_wide",
+     "frames": 4
+    }
+   ],
+   "clips": [
+    {
+     "slug": "penitent_thief_face",
+     "motion": "pushin",
+     "zoom": 1.2
+    },
+    {
+     "slug": "us_under_cross_shadow",
+     "motion": "pushin",
+     "zoom": 1.25,
+     "at": 52.29,
+     "slide": "up"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Ask what the thief asked. Remember me",
+    "kw": "REMEMBER ME"
+   },
+   "fx": {
+    "temp": 6400
+   }
+  },
+  {
+   "t": [
+    53.95,
+    57.09
+   ],
+   "tpl": "full",
+   "punch": true,
+   "clips": [
+    {
+     "slug": "answer_light_profile",
+     "motion": "static",
+     "cam": "arc"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Hear his answer. With me. Today",
+    "kw": "WITH ME"
+   },
+   "fx": {
+    "temp": 5000
+   }
+  },
+  {
+   "t": [
+    57.09,
+    59.07
+   ],
+   "tpl": "full",
+   "sfx": [
+    [
+     "dawn_morning_warm",
+     57.1,
+     -15
+    ]
+   ],
+   "clips": [
+    {
+     "slug": "paradise_dawn",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Paradise",
+    "kw": "PARADISE"
+   },
+   "fx": {
+    "temp": 4900
+   }
+  }
+ ],
+ "motion": "smooth"
 }

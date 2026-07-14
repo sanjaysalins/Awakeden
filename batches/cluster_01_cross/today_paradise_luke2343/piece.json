@@ -1,273 +1,283 @@
 {
-  "piece": "today_paradise_luke2343",
-  "title": "Today in Paradise (Luke 23:43)",
-  "cluster": "cluster_01_cross",
-  "verse": "Luke 23:39-43",
-  "stills": {
-    "model": "seedream-4-5-251128",
-    "size": "1440x2560",
-    "jobs": {
-      "mocker_thief_face": {
-        "prompt": "a lean criminal on a cross, face twisted in a snarl as he shouts sideways, his wrists pierced to the beam, a dark ragged pierced wound at each wrist with dark red blood, storm sky behind, low angle, vertical, 1st-century Judea",
-        "ref": null
-      },
-      "penitent_thief_face": {
-        "prompt": "a CLOSE upper-body portrait of a gaunt weather-beaten OLDER criminal with a broad heavy face, a balding head with short-cropped grey hair, a heavy lined weathered face and a coarse grey stubble beard, crucified on a single rough wooden cross, one bare arm stretched out and roped at the wrist to the horizontal crossbeam, the wrist bound with coils of rope, no wound, at the edge of the frame, head bowed low, tears cutting through the grime on his cheeks, spent and humble, storm light, vertical, 1st-century Judea",
-        "ref": null
-      },
-      "thief_looks_to_jesus": {
-        "prompt": "a penitent criminal crucified on his own single wooden cross on a barren dusty Golgotha hilltop, a bald weather-beaten older man, his arms stretched out and roped at the wrists to his crossbeam and his feet bound to the post with rope, no wounds, his body sagging, the bare clean dusty ground at the foot of the cross empty, his head LIFTED and clearly turned to the side to gaze across toward the thorn-crowned Christ crucified on a separate single cross a short distance away, dry blowing dust and dark storm sky, a medium shot from the side so BOTH crosses stand clear on the hill, vertical, 1st-century Judea",
-        "ref": null
-      },
-      "jesus_turns_to_thief": {
-        "prompt": "a CLOSE portrait of the thorn-crowned crucified Christ against a plain dark empty storm sky, one single plain vertical wooden post directly behind his back and one horizontal crossbeam behind his shoulders, his arms stretched out and nailed along that one crossbeam, his head turned gently to one side, eyes open and steady with quiet compassion, vertical, 1st-century Judea",
-        "ref": "../pierced_zech1210/visual/face_on_cross.png"
-      },
-      "two_thieves_wide": {
-        "prompt": "three men crucified high on three rough wooden crosses on a barren hilltop, arms outstretched on the crossbeams, the middle cross taller, seen from a low angle, heavy storm sky, wide, vertical, 1st-century Judea",
-        "ref": null
-      },
-      "confession_face_hands": {
-        "prompt": "an OLDER criminal's weathered face — short-cropped grey hair, grey stubble — pressed near his hand held flat to the wooden beam, a small dark wound and a little dark blood on the back of the hand, eyes shut, jaw tight, storm light, close, vertical, 1st-century",
-        "ref": null
-      },
-      "kingdom_light_clouds": {
-        "prompt": "a single shaft of pale light opening through heavy dark storm clouds over distant Judean hills, the light is the subject, vertical, ancient",
-        "ref": null
-      },
-      "answer_light_profile": {
-        "prompt": "the thorn-crowned head in quiet profile against a break of warm light in the storm clouds, calm and steady, close, vertical, 1st-century Judea",
-        "ref": "../pierced_zech1210/visual/face_on_cross.png"
-      },
-      "paradise_dawn": {
-        "prompt": "warm golden dawn light flooding over a ridge of cypress and olive trees into a still garden valley, soft mist catching the light, seen from below, vertical, ancient Judea",
-        "ref": null
-      },
-      "golgotha_hill_wide": {
-        "prompt": "a wide view of three crosses standing on the low rocky rise of Golgotha outside the walls of Jerusalem, the crosses short rough wooden posts, the crucified men stripped to plain loincloths with their feet hanging just above the bystanders' heads, the centre cross bearing the crucified Christ, his bare dark hair against the open sky and his bare feet resting together against the wood, a crucified thief stripped to a loincloth on each cross beside him, small mourners standing close below, low stone houses with plain bare flat earthen roofs beyond the wall, the skyline beyond only plain rooftops under open sky, clear morning light under a plain pale sky, wide, vertical, 1st-century Judea",
-        "ref": null
-      },
-      "us_under_cross_shadow": {
-        "prompt": "two bowed figures kneeling small in the dust at dawn, the long shadow of a single cross falling across them and stretching up the ground, heads down and hands clasped, soft low golden light, wide, vertical, 1st-century Judea",
-        "ref": null
-      }
-    }
-  },
-  "animate": {
-    "duration": 5,
-    "aspect_ratio": "9:16",
-    "moves": {
-      "mocker_thief_face": "ONE slow, steady, continuous push-in toward the shouting man's twisted face",
-      "penitent_thief_face": "ONE slow, steady, continuous push-in toward the bound man's tearful turned face",
-      "thief_looks_to_jesus": "ONE slow, steady, continuous push-in toward the penitent thief on his cross, drifting toward the distant cross of Christ beyond",
-      "jesus_turns_to_thief": "ONE slow, steady, continuous push-in toward the turned face of Jesus, gentle sideways drift giving parallax against the wooden beam behind him",
-      "paradise_dawn": "ONE slow, steady, continuous rising crane toward the dawn horizon, gentle parallax over the foreground ridge, lifting into the light",
-      "two_thieves_wide": "ONE slow, steady, continuous push-in up the hill toward the three crosses against the storm",
-      "golgotha_hill_wide": "ONE slow, steady, continuous push-in up the hill toward the three crosses",
-      "us_under_cross_shadow": "ONE slow, steady, continuous push-in toward the two bowed figures beneath the long cross shadow"
-    },
-    "base": "A finished inked graphic-novel comic panel — flat printed art with bold black ink outlines, cel-flat color and cross-hatching. Animate it as {move}. The drawing itself never moves, redraws, repaints, breathes or changes; the ink lines and flat colors stay exactly as printed; only the camera moves. No hard cuts, no dissolves, no morphing, no subject motion, no limbs moving, no new lines drawn. INVENT NOTHING: show ONLY what is already inked in this exact panel. Keep the subject whole in frame."
-  },
-  "score": {
-    "src": "visual/livingpage_short.spec_preview.mp4",
-    "out": "visual/today_paradise_luke2343_scored.mp4",
-    "dark": "lonely_searching_a.mp3",
-    "grace": "sacred_grace_rise_a.mp3",
-    "base_seconds": 59.07,
-    "outro_hold": 1.5,
-    "dark_trim_end": "36.3",
-    "grace_trim": [
-      "20",
-      "90"
-    ],
-    "crossfade": "6",
-    "tpad": "1.5",
-    "dips": [
-      [
-        "18.82",
-        "26.77",
-        "0.35"
-      ],
-      [
-        "32.01",
-        "36.37",
-        "0.4"
-      ]
-    ],
-    "cta_dip": [
-      "50.51",
-      "0.5"
-    ],
-    "dips_meta": [
-      {
-        "phrase": "And we indeed justly; for we receive the due reward of our deeds: but this man hath done nothing amiss.",
-        "pre": 0.0,
-        "post": 0.29
-      },
-      {
-        "phrase": "Lord, remember me when thou comest into thy kingdom.",
-        "pre": -0.0,
-        "post": 0.54
-      }
-    ],
-    "cta_meta": {
-      "phrase": "Ask what the thief asked. Remember me. Then hear his answer. With me. Today. Paradise.",
-      "pre": -0.0
-    }
-  },
-  "register": {
-    "id_prefix": "tpd",
-    "source": "byteplus seedream-4-5",
-    "created": "2026-07-03",
-    "style": "graphic_novel_inked",
-    "aspect": "9:16",
-    "palette": "inked cel-flat, storm greys to paradise gold",
-    "mood": "two responses, mercy, paradise",
-    "tags_still": [
-      "livingpage",
-      "luke2343",
-      "thief"
-    ],
-    "tags_clip": [
-      "livingpage",
-      "luke2343",
-      "kling"
-    ],
-    "used_in": [
-      "today_paradise_luke2343 short"
-    ],
-    "clip_source": "HF kling3_0 pro 9:16, INK camera-only push-in",
-    "clip_title_suffix": " (Kling push-in)",
-    "extra_rows": [],
-    "kling_slugs": [
-      "mocker_thief_face",
-      "penitent_thief_face",
-      "thief_looks_to_jesus",
-      "jesus_turns_to_thief",
-      "paradise_dawn",
-      "two_thieves_wide"
-    ],
-    "stills": {
-      "mocker_thief_face": {
-        "subject": "the railing thief snarling from his cross",
-        "characters": [
-          "mocker thief"
-        ],
-        "elements": [
-          "ropes",
-          "storm"
-        ],
-        "setting": "Golgotha",
-        "scope": "specific",
-        "doctrine": "the mocker's taunt (Luke 23:39)"
-      },
-      "penitent_thief_face": {
-        "subject": "the penitent thief bound and tearful, head turned",
-        "characters": [
-          "penitent thief"
-        ],
-        "elements": [
-          "ropes",
-          "tears"
-        ],
-        "setting": "Golgotha",
-        "scope": "specific",
-        "doctrine": "the confession (Luke 23:40-41)"
-      },
-      "thief_looks_to_jesus": {
-        "subject": "over the thief's shoulder toward the crucified Christ",
-        "characters": [
-          "penitent thief",
-          "Christ"
-        ],
-        "elements": [
-          "two crosses",
-          "storm"
-        ],
-        "setting": "Golgotha",
-        "scope": "specific",
-        "doctrine": "Lord, remember me (Luke 23:42)"
-      },
-      "jesus_turns_to_thief": {
-        "subject": "thorn-crowned Christ turning his head in compassion",
-        "characters": [
-          "Christ"
-        ],
-        "elements": [
-          "crown of thorns",
-          "cross"
-        ],
-        "setting": "Golgotha",
-        "scope": "hero",
-        "doctrine": "To day shalt thou be with me (Luke 23:43)"
-      },
-      "two_thieves_wide": {
-        "subject": "three crucified men on a stormy hilltop, middle cross taller",
-        "characters": [
-          "Christ",
-          "two thieves"
-        ],
-        "elements": [
-          "three crosses",
-          "storm"
-        ],
-        "setting": "Golgotha wide",
-        "scope": "neutral",
-        "doctrine": "crucified with the malefactors (Luke 23:33)"
-      },
-      "confession_face_hands": {
-        "subject": "the bound thief's face pressed by his roped fist, eyes shut",
-        "characters": [
-          "penitent thief"
-        ],
-        "elements": [
-          "rope",
-          "beam"
-        ],
-        "setting": "Golgotha close",
-        "scope": "specific",
-        "doctrine": "we indeed justly (Luke 23:41)"
-      },
-      "kingdom_light_clouds": {
-        "subject": "a shaft of pale light opening in heavy storm clouds",
-        "characters": [],
-        "elements": [
-          "light shaft",
-          "storm clouds",
-          "hills"
-        ],
-        "setting": "sky",
-        "scope": "neutral",
-        "doctrine": "when thou comest into thy kingdom (Luke 23:42)"
-      },
-      "answer_light_profile": {
-        "subject": "thorn-crowned profile calm against breaking light",
-        "characters": [
-          "Christ"
-        ],
-        "elements": [
-          "crown of thorns",
-          "light break"
-        ],
-        "setting": "Golgotha",
-        "scope": "hero",
-        "doctrine": "Verily I say unto thee (Luke 23:43)"
-      },
-      "paradise_dawn": {
-        "subject": "dawn garden with a robed figure in the light on the hilltop",
-        "characters": [
-          "Christ figure"
-        ],
-        "elements": [
-          "olive trees",
-          "cypress",
-          "dawn light",
-          "garden path"
-        ],
-        "setting": "paradise garden",
-        "scope": "neutral",
-        "doctrine": "with me in paradise (Luke 23:43)"
-      }
-    }
+ "piece": "today_paradise_luke2343",
+ "title": "Today in Paradise (Luke 23:43)",
+ "cluster": "cluster_01_cross",
+ "verse": "Luke 23:39-43",
+ "stills": {
+  "model": "seedream-4-5-251128",
+  "size": "1440x2560",
+  "jobs": {
+   "mocker_thief_face": {
+    "prompt": "a lean criminal on a cross, face twisted in a snarl as he shouts sideways, his wrists pierced to the beam, a dark ragged pierced wound at each wrist with dark red blood, storm sky behind, low angle, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "penitent_thief_face": {
+    "prompt": "a CLOSE upper-body portrait of a gaunt weather-beaten OLDER criminal with a broad heavy face, a balding head with short-cropped grey hair, a heavy lined weathered face and a coarse grey stubble beard, crucified on a single rough wooden cross, one bare arm stretched out and roped at the wrist to the horizontal crossbeam, the wrist bound with coils of rope, no wound, at the edge of the frame, head bowed low, tears cutting through the grime on his cheeks, spent and humble, storm light, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "thief_looks_to_jesus": {
+    "prompt": "a penitent criminal crucified on his own single wooden cross on a barren dusty Golgotha hilltop, a bald weather-beaten older man, his arms stretched out and roped at the wrists to his crossbeam and his feet bound to the post with rope, no wounds, his body sagging, the bare clean dusty ground at the foot of the cross empty, his head LIFTED and clearly turned to the side to gaze across toward the thorn-crowned Christ crucified on a separate single cross a short distance away, dry blowing dust and dark storm sky, a medium shot from the side so BOTH crosses stand clear on the hill, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "jesus_turns_to_thief": {
+    "prompt": "a CLOSE portrait of the thorn-crowned crucified Christ against a plain dark empty storm sky, one single plain vertical wooden post directly behind his back and one horizontal crossbeam behind his shoulders, his arms stretched out and nailed along that one crossbeam, his head turned gently to one side, eyes open and steady with quiet compassion, vertical, 1st-century Judea",
+    "ref": "../pierced_zech1210/visual/face_on_cross.png"
+   },
+   "two_thieves_wide": {
+    "prompt": "three men crucified high on three rough wooden crosses on a barren hilltop, arms outstretched on the crossbeams, the middle cross taller, seen from a low angle, heavy storm sky, wide, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "confession_face_hands": {
+    "prompt": "an OLDER criminal's weathered face — short-cropped grey hair, grey stubble — pressed near his hand held flat to the wooden beam, a small dark wound and a little dark blood on the back of the hand, eyes shut, jaw tight, storm light, close, vertical, 1st-century",
+    "ref": null
+   },
+   "kingdom_light_clouds": {
+    "prompt": "a single shaft of pale light opening through heavy dark storm clouds over distant Judean hills, the light is the subject, vertical, ancient",
+    "ref": null
+   },
+   "answer_light_profile": {
+    "prompt": "the thorn-crowned head in quiet profile against a break of warm light in the storm clouds, calm and steady, close, vertical, 1st-century Judea",
+    "ref": "../pierced_zech1210/visual/face_on_cross.png"
+   },
+   "paradise_dawn": {
+    "prompt": "warm golden dawn light flooding over a ridge of cypress and olive trees into a still garden valley, soft mist catching the light, seen from below, vertical, ancient Judea",
+    "ref": null
+   },
+   "golgotha_hill_wide": {
+    "prompt": "a wide view of three crosses standing on the low rocky rise of Golgotha outside the walls of Jerusalem, the crosses short rough wooden posts, the crucified men stripped to plain loincloths with their feet hanging just above the bystanders' heads, the centre cross bearing the crucified Christ, his bare dark hair against the open sky and his bare feet resting together against the wood, a crucified thief stripped to a loincloth on each cross beside him, small mourners standing close below, low stone houses with plain bare flat earthen roofs beyond the wall, the skyline beyond only plain rooftops under open sky, clear morning light under a plain pale sky, wide, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "us_under_cross_shadow": {
+    "prompt": "two bowed figures kneeling small in the dust at dawn, the long shadow of a single cross falling across them and stretching up the ground, heads down and hands clasped, soft low golden light, wide, vertical, 1st-century Judea",
+    "ref": null
+   }
   }
+ },
+ "animate": {
+  "duration": 5,
+  "aspect_ratio": "9:16",
+  "moves": {
+   "mocker_thief_face": "ONE slow, steady, continuous push-in toward the shouting man's twisted face",
+   "penitent_thief_face": "ONE slow, steady, continuous push-in toward the bound man's tearful turned face",
+   "thief_looks_to_jesus": "ONE slow, steady, continuous push-in toward the penitent thief on his cross, drifting toward the distant cross of Christ beyond",
+   "jesus_turns_to_thief": "ONE slow, steady, continuous push-in toward the turned face of Jesus, gentle sideways drift giving parallax against the wooden beam behind him",
+   "paradise_dawn": "ONE slow, steady, continuous rising crane toward the dawn horizon, gentle parallax over the foreground ridge, lifting into the light",
+   "two_thieves_wide": "ONE slow, steady, continuous push-in up the hill toward the three crosses against the storm",
+   "golgotha_hill_wide": "ONE slow, steady, continuous push-in up the hill toward the three crosses",
+   "us_under_cross_shadow": "ONE slow, steady, continuous push-in toward the two bowed figures beneath the long cross shadow"
+  },
+  "base": "A finished inked graphic-novel comic panel — flat printed art with bold black ink outlines, cel-flat color and cross-hatching. Animate it as {move}. The drawing itself never moves, redraws, repaints, breathes or changes; the ink lines and flat colors stay exactly as printed; only the camera moves. No hard cuts, no dissolves, no morphing, no subject motion, no limbs moving, no new lines drawn. INVENT NOTHING: show ONLY what is already inked in this exact panel. Keep the subject whole in frame.",
+  "living_light": {
+   "kingdom_light_clouds": {
+    "target": "the pillar of light through the parted storm",
+    "light": "the great pillar of light slowly widens and brightens, the dark clouds parting almost imperceptibly, its rays sweeping the hills below"
+   },
+   "paradise_dawn": {
+    "target": "the sunrise beyond the distant figure on the hill",
+    "light": "the dawn rays streaming past the distant figure slowly strengthen and sweep across the garden, the soft mist drifting slowly between the olive trees"
+   }
+  }
+ },
+ "score": {
+  "src": "visual/livingpage_short.spec_preview.mp4",
+  "out": "visual/today_paradise_luke2343_scored.mp4",
+  "dark": "lonely_searching_a.mp3",
+  "grace": "sacred_grace_rise_a.mp3",
+  "base_seconds": 59.07,
+  "outro_hold": 1.5,
+  "dark_trim_end": "36.3",
+  "grace_trim": [
+   "20",
+   "90"
+  ],
+  "crossfade": "6",
+  "tpad": "1.5",
+  "dips": [
+   [
+    "18.82",
+    "26.77",
+    "0.35"
+   ],
+   [
+    "32.01",
+    "36.37",
+    "0.4"
+   ]
+  ],
+  "cta_dip": [
+   "50.51",
+   "0.5"
+  ],
+  "dips_meta": [
+   {
+    "phrase": "And we indeed justly; for we receive the due reward of our deeds: but this man hath done nothing amiss.",
+    "pre": 0.0,
+    "post": 0.29
+   },
+   {
+    "phrase": "Lord, remember me when thou comest into thy kingdom.",
+    "pre": -0.0,
+    "post": 0.54
+   }
+  ],
+  "cta_meta": {
+   "phrase": "Ask what the thief asked. Remember me. Then hear his answer. With me. Today. Paradise.",
+   "pre": -0.0
+  }
+ },
+ "register": {
+  "id_prefix": "tpd",
+  "source": "byteplus seedream-4-5",
+  "created": "2026-07-03",
+  "style": "graphic_novel_inked",
+  "aspect": "9:16",
+  "palette": "inked cel-flat, storm greys to paradise gold",
+  "mood": "two responses, mercy, paradise",
+  "tags_still": [
+   "livingpage",
+   "luke2343",
+   "thief"
+  ],
+  "tags_clip": [
+   "livingpage",
+   "luke2343",
+   "kling"
+  ],
+  "used_in": [
+   "today_paradise_luke2343 short"
+  ],
+  "clip_source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+  "clip_title_suffix": " (Kling push-in)",
+  "extra_rows": [],
+  "kling_slugs": [
+   "mocker_thief_face",
+   "penitent_thief_face",
+   "thief_looks_to_jesus",
+   "jesus_turns_to_thief",
+   "paradise_dawn",
+   "two_thieves_wide"
+  ],
+  "stills": {
+   "mocker_thief_face": {
+    "subject": "the railing thief snarling from his cross",
+    "characters": [
+     "mocker thief"
+    ],
+    "elements": [
+     "ropes",
+     "storm"
+    ],
+    "setting": "Golgotha",
+    "scope": "specific",
+    "doctrine": "the mocker's taunt (Luke 23:39)"
+   },
+   "penitent_thief_face": {
+    "subject": "the penitent thief bound and tearful, head turned",
+    "characters": [
+     "penitent thief"
+    ],
+    "elements": [
+     "ropes",
+     "tears"
+    ],
+    "setting": "Golgotha",
+    "scope": "specific",
+    "doctrine": "the confession (Luke 23:40-41)"
+   },
+   "thief_looks_to_jesus": {
+    "subject": "over the thief's shoulder toward the crucified Christ",
+    "characters": [
+     "penitent thief",
+     "Christ"
+    ],
+    "elements": [
+     "two crosses",
+     "storm"
+    ],
+    "setting": "Golgotha",
+    "scope": "specific",
+    "doctrine": "Lord, remember me (Luke 23:42)"
+   },
+   "jesus_turns_to_thief": {
+    "subject": "thorn-crowned Christ turning his head in compassion",
+    "characters": [
+     "Christ"
+    ],
+    "elements": [
+     "crown of thorns",
+     "cross"
+    ],
+    "setting": "Golgotha",
+    "scope": "hero",
+    "doctrine": "To day shalt thou be with me (Luke 23:43)"
+   },
+   "two_thieves_wide": {
+    "subject": "three crucified men on a stormy hilltop, middle cross taller",
+    "characters": [
+     "Christ",
+     "two thieves"
+    ],
+    "elements": [
+     "three crosses",
+     "storm"
+    ],
+    "setting": "Golgotha wide",
+    "scope": "neutral",
+    "doctrine": "crucified with the malefactors (Luke 23:33)"
+   },
+   "confession_face_hands": {
+    "subject": "the bound thief's face pressed by his roped fist, eyes shut",
+    "characters": [
+     "penitent thief"
+    ],
+    "elements": [
+     "rope",
+     "beam"
+    ],
+    "setting": "Golgotha close",
+    "scope": "specific",
+    "doctrine": "we indeed justly (Luke 23:41)"
+   },
+   "kingdom_light_clouds": {
+    "subject": "a shaft of pale light opening in heavy storm clouds",
+    "characters": [],
+    "elements": [
+     "light shaft",
+     "storm clouds",
+     "hills"
+    ],
+    "setting": "sky",
+    "scope": "neutral",
+    "doctrine": "when thou comest into thy kingdom (Luke 23:42)"
+   },
+   "answer_light_profile": {
+    "subject": "thorn-crowned profile calm against breaking light",
+    "characters": [
+     "Christ"
+    ],
+    "elements": [
+     "crown of thorns",
+     "light break"
+    ],
+    "setting": "Golgotha",
+    "scope": "hero",
+    "doctrine": "Verily I say unto thee (Luke 23:43)"
+   },
+   "paradise_dawn": {
+    "subject": "dawn garden with a robed figure in the light on the hilltop",
+    "characters": [
+     "Christ figure"
+    ],
+    "elements": [
+     "olive trees",
+     "cypress",
+     "dawn light",
+     "garden path"
+    ],
+    "setting": "paradise garden",
+    "scope": "neutral",
+    "doctrine": "with me in paradise (Luke 23:43)"
+   }
+  }
+ }
 }
