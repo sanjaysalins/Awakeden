@@ -1,152 +1,162 @@
 {
-  "piece": "crucifixion_foretold_ps2218",
-  "title": "The Crucifixion Foretold (Ps 22:18)",
-  "cluster": "cluster_01_cross",
-  "verse": "Psalm 22:18 + John 19:24",
-  "stills": {
-    "model": "seedream-4-5-251128",
-    "size": "1440x2560",
-    "jobs": {
-      "david_writing_psalm": {
-        "prompt": "an aged king with a grey beard writing on an open scroll by a clay oil lamp, a harp resting against the stone wall beside him, night chamber, warm lamplight, vertical, ancient Israel",
-        "ref": null
-      },
-      "lots_cup_close": {
-        "prompt": "two small worn cubic dice of pale bone tumbling from a leather cup onto a flat stone slab, a folded smooth woven garment beside the stone, the dusty ground of Golgotha around, harsh daylight, close, vertical, 1st-century Judea",
-        "ref": null
-      },
-      "us_under_cross_shadow": {
-        "prompt": "two bowed figures kneeling small in the dust at dawn, the long shadow of a single cross falling across them and stretching up the ground, heads down and hands clasped, soft low golden light, wide, vertical, 1st-century Judea",
-        "ref": null
-      },
-      "golgotha_hill_wide": {
-        "prompt": "a wide view of three crosses standing on the low rocky rise of Golgotha outside the walls of Jerusalem, the crosses short rough wooden posts, the crucified men stripped to plain loincloths with their feet hanging just above the bystanders' heads, the centre cross bearing the crucified Christ, his bare dark hair against the open sky and his bare feet resting together against the wood, a crucified thief stripped to a loincloth on each cross beside him, small mourners standing close below, low stone houses with plain bare flat earthen roofs beyond the wall, the skyline beyond only plain rooftops under open sky, clear morning light under a plain pale sky, wide, vertical, 1st-century Judea",
-        "ref": null
-      },
-      "soldiers_gambling": {
-        "prompt": "four Roman soldiers kneeling in a circle on stony ground casting small lots for a folded seamless robe, above and behind them the crucified Christ hangs on his cross, morning light, low angle, vertical, 1st-century Judea",
-        "ref": null
-      },
-      "seamless_robe_lots": {
-        "prompt": "four Roman soldiers kneeling and standing around a long ankle-length tunic of finely woven ivory linen held up spread between them, the weave tight and costly with a soft sheen, one smooth unbroken piece from the shoulders down to the hem, a plain round neck opening, beside them a flat stone with small pebble lots scattered across it, bright morning light, close, vertical, 1st-century Judea",
-        "ref": null
-      },
-      "john_watching": {
-        "prompt": "a close shot of a young bearded disciple at Golgotha, his grief-stricken face lifted upward, one hand gripping the cloak at his chest, far behind him the crucified Christ hangs on his cross with head bowed against a plain dusky sky, morning light, close, vertical, 1st-century Judea",
-        "ref": null
-      }
-    }
-  },
-  "animate": {
-    "duration": 5,
-    "aspect_ratio": "9:16",
-    "moves": {
-      "us_under_cross_shadow": "ONE slow, steady, continuous push-in toward the two bowed figures beneath the long cross shadow",
-      "golgotha_hill_wide": "ONE slow, steady, continuous push-in up the hill toward the three crosses",
-      "soldiers_gambling": "ONE slow, steady, continuous push-in toward the kneeling soldiers casting lots beneath the cross",
-      "seamless_robe_lots": "ONE slow, steady, continuous push-in toward the seamless tunic held spread between the soldiers",
-      "lots_cup_close": "ONE slow, steady, continuous push-in toward the bone dice tumbling from the leather cup"
-    }
-  },
-  "score": {
-    "src": "visual/livingpage_short.spec_preview.mp4",
-    "out": "visual/crucifixion_foretold_ps2218_scored.mp4",
-    "dark": "lonely_searching_a.mp3",
-    "grace": "sacred_grace_rise_a.mp3",
-    "base_seconds": 72.54,
-    "outro_hold": 1.5,
-    "dark_trim_end": "56.0",
-    "grace_trim": [
-      "20",
-      "90"
-    ],
-    "crossfade": "6",
-    "tpad": "1.5",
-    "dips": [
-      [
-        "31.5",
-        "37.1",
-        "0.35"
-      ],
-      [
-        "41.2",
-        "48.4",
-        "0.4"
-      ]
-    ],
-    "cta_dip": [
-      "63.3",
-      "0.5"
-    ],
-    "dips_meta": [
-      {
-        "phrase": "\"They part my garments among them, and cast lots upon my vesture.\"",
-        "pre": 0.01,
-        "post": 0.11
-      },
-      {
-        "phrase": "soldiers dividing Jesus' clothes, then casting lots for the seamless coat — \"that the scripture might be fulfilled\".",
-        "pre": 0.07,
-        "post": 0.09
-      }
-    ],
-    "cta_meta": {
-      "phrase": "They rolled dice for the clothes off His back, never seeing what He was really doing — laying down His life to win you back.",
-      "pre": 0.57
-    }
-  },
-  "register": {
-    "id_prefix": "cf",
-    "source": "byteplus seedream-4-5",
-    "created": "2026-07-03",
-    "style": "graphic_novel_inked",
-    "aspect": "9:16",
-    "palette": "inked cel-flat, lamplight gold to storm grey",
-    "mood": "prophecy written, prophecy fulfilled",
-    "tags_still": [
-      "livingpage",
-      "ps2218",
-      "prophecy"
-    ],
-    "tags_clip": [
-      "livingpage",
-      "ps2218",
-      "kling"
-    ],
-    "used_in": [
-      "crucifixion_foretold_ps2218 short"
-    ],
-    "clip_source": "HF kling3_0 pro 9:16, INK camera-only push-in",
-    "clip_title_suffix": " (Kling push-in)",
-    "extra_rows": [],
-    "stills": {
-      "david_writing_psalm": {
-        "subject": "aged King David writing the psalm by lamplight, harp beside",
-        "characters": [
-          "David"
-        ],
-        "elements": [
-          "scroll",
-          "oil lamp",
-          "harp",
-          "crown"
-        ],
-        "setting": "night chamber",
-        "scope": "neutral",
-        "doctrine": "David wrote it in the first person (Ps 22:1)"
-      },
-      "lots_cup_close": {
-        "subject": "leather cup with two knucklebone lots spilled on stone, garment beside",
-        "characters": [],
-        "elements": [
-          "knucklebone lots",
-          "leather cup",
-          "woven garment"
-        ],
-        "setting": "Golgotha",
-        "scope": "specific",
-        "doctrine": "cast lots upon my vesture (Ps 22:18)"
-      }
-    }
+ "piece": "crucifixion_foretold_ps2218",
+ "title": "The Crucifixion Foretold (Ps 22:18)",
+ "cluster": "cluster_01_cross",
+ "verse": "Psalm 22:18 + John 19:24",
+ "stills": {
+  "model": "seedream-4-5-251128",
+  "size": "1440x2560",
+  "jobs": {
+   "david_writing_psalm": {
+    "prompt": "an aged king with a grey beard writing on an open scroll by a clay oil lamp, a harp resting against the stone wall beside him, night chamber, warm lamplight, vertical, ancient Israel",
+    "ref": null
+   },
+   "lots_cup_close": {
+    "prompt": "two small worn cubic dice of pale bone tumbling from a leather cup onto a flat stone slab, a folded smooth woven garment beside the stone, the dusty ground of Golgotha around, harsh daylight, close, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "us_under_cross_shadow": {
+    "prompt": "two bowed figures kneeling small in the dust at dawn, the long shadow of a single cross falling across them and stretching up the ground, heads down and hands clasped, soft low golden light, wide, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "golgotha_hill_wide": {
+    "prompt": "a wide view of three crosses standing on the low rocky rise of Golgotha outside the walls of Jerusalem, the crosses short rough wooden posts, the crucified men stripped to plain loincloths with their feet hanging just above the bystanders' heads, the centre cross bearing the crucified Christ, his bare dark hair against the open sky and his bare feet resting together against the wood, a crucified thief stripped to a loincloth on each cross beside him, small mourners standing close below, low stone houses with plain bare flat earthen roofs beyond the wall, the skyline beyond only plain rooftops under open sky, clear morning light under a plain pale sky, wide, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "soldiers_gambling": {
+    "prompt": "four Roman soldiers kneeling in a circle on stony ground casting small lots for a folded seamless robe, above and behind them the crucified Christ hangs on his cross, morning light, low angle, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "seamless_robe_lots": {
+    "prompt": "four Roman soldiers kneeling and standing around a long ankle-length tunic of finely woven ivory linen held up spread between them, the weave tight and costly with a soft sheen, one smooth unbroken piece from the shoulders down to the hem, a plain round neck opening, beside them a flat stone with small pebble lots scattered across it, bright morning light, close, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "john_watching": {
+    "prompt": "a close shot of a young bearded disciple at Golgotha, his grief-stricken face lifted upward, one hand gripping the cloak at his chest, far behind him the crucified Christ hangs on his cross with head bowed against a plain dusky sky, morning light, close, vertical, 1st-century Judea",
+    "ref": null
+   }
   }
+ },
+ "animate": {
+  "duration": 5,
+  "aspect_ratio": "9:16",
+  "moves": {
+   "us_under_cross_shadow": "ONE slow, steady, continuous push-in toward the two bowed figures beneath the long cross shadow",
+   "golgotha_hill_wide": "ONE slow, steady, continuous push-in up the hill toward the three crosses",
+   "soldiers_gambling": "ONE slow, steady, continuous push-in toward the kneeling soldiers casting lots beneath the cross",
+   "seamless_robe_lots": "ONE slow, steady, continuous push-in toward the seamless tunic held spread between the soldiers",
+   "lots_cup_close": "ONE slow, steady, continuous push-in toward the bone dice tumbling from the leather cup"
+  },
+  "living_light": {
+   "jesus_looks_down": {
+    "target": "the whole figure on the cross seen from below",
+    "light": "the pale light around the cross slowly deepens and breathes, a soft glow gathering behind the crossbeam while thin haze drifts below"
+   },
+   "risen_mercy_hand": {
+    "target": "the whole outstretched arm and the light around it",
+    "light": "the glow around the outstretched arm slowly builds and breathes, soft rays fanning outward, warm haze shimmering at the edges of the light"
+   }
+  }
+ },
+ "score": {
+  "src": "visual/livingpage_short.spec_preview.mp4",
+  "out": "visual/crucifixion_foretold_ps2218_scored.mp4",
+  "dark": "lonely_searching_a.mp3",
+  "grace": "sacred_grace_rise_a.mp3",
+  "base_seconds": 72.54,
+  "outro_hold": 1.5,
+  "dark_trim_end": "56.0",
+  "grace_trim": [
+   "20",
+   "90"
+  ],
+  "crossfade": "6",
+  "tpad": "1.5",
+  "dips": [
+   [
+    "31.5",
+    "37.1",
+    "0.35"
+   ],
+   [
+    "41.2",
+    "48.4",
+    "0.4"
+   ]
+  ],
+  "cta_dip": [
+   "63.3",
+   "0.5"
+  ],
+  "dips_meta": [
+   {
+    "phrase": "\"They part my garments among them, and cast lots upon my vesture.\"",
+    "pre": 0.01,
+    "post": 0.11
+   },
+   {
+    "phrase": "soldiers dividing Jesus' clothes, then casting lots for the seamless coat — \"that the scripture might be fulfilled\".",
+    "pre": 0.07,
+    "post": 0.09
+   }
+  ],
+  "cta_meta": {
+   "phrase": "They rolled dice for the clothes off His back, never seeing what He was really doing — laying down His life to win you back.",
+   "pre": 0.57
+  }
+ },
+ "register": {
+  "id_prefix": "cf",
+  "source": "byteplus seedream-4-5",
+  "created": "2026-07-03",
+  "style": "graphic_novel_inked",
+  "aspect": "9:16",
+  "palette": "inked cel-flat, lamplight gold to storm grey",
+  "mood": "prophecy written, prophecy fulfilled",
+  "tags_still": [
+   "livingpage",
+   "ps2218",
+   "prophecy"
+  ],
+  "tags_clip": [
+   "livingpage",
+   "ps2218",
+   "kling"
+  ],
+  "used_in": [
+   "crucifixion_foretold_ps2218 short"
+  ],
+  "clip_source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+  "clip_title_suffix": " (Kling push-in)",
+  "extra_rows": [],
+  "stills": {
+   "david_writing_psalm": {
+    "subject": "aged King David writing the psalm by lamplight, harp beside",
+    "characters": [
+     "David"
+    ],
+    "elements": [
+     "scroll",
+     "oil lamp",
+     "harp",
+     "crown"
+    ],
+    "setting": "night chamber",
+    "scope": "neutral",
+    "doctrine": "David wrote it in the first person (Ps 22:1)"
+   },
+   "lots_cup_close": {
+    "subject": "leather cup with two knucklebone lots spilled on stone, garment beside",
+    "characters": [],
+    "elements": [
+     "knucklebone lots",
+     "leather cup",
+     "woven garment"
+    ],
+    "setting": "Golgotha",
+    "scope": "specific",
+    "doctrine": "cast lots upon my vesture (Ps 22:18)"
+   }
+  }
+ }
 }
