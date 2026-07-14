@@ -84,8 +84,11 @@ def check(verbose: bool = True) -> int:
             print(f"  {ep:36} {n:3} clip(s)  {n * KLING_CR_PER_CLIP:7.1f}cr")
         print(f"  TOTAL: {max(clips, disk)} clips = {credits:.1f}cr of {CAP_CREDITS:.0f}cr cap"
               f"  (+ ${stills_usd:.2f} BytePlus stills, separate currency)")
-    if credits >= CAP_CREDITS:
-        print("STOP-LOSS BREACHED - no further paid renders; re-quote the user.")
+    # PROJECTED check (panel round-5 grok): a HARD cap refuses the clip that WOULD cross
+    # the wall, not the one after it — at 480cr spent, one more 7.5cr clip must not run.
+    if credits + KLING_CR_PER_CLIP > CAP_CREDITS:
+        print(f"STOP-LOSS: {credits:.1f}cr spent + one {KLING_CR_PER_CLIP}cr clip would "
+              f"cross the {CAP_CREDITS:.0f}cr cap - no further paid renders; re-quote the user.")
         return 1
     if verbose:
         print(f"  headroom: {CAP_CREDITS - credits:.1f}cr")

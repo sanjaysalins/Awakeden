@@ -78,6 +78,14 @@ def check_piece(piece_dir: Path) -> list[str]:
                          f"(lowest K) and <= {ARC_LANDING_MAX_K}K")
     if spec.get("cut_ticks"):
         fails.append("cut_ticks true - the gold master ships without per-cut tick SFX")
+    # the spend meter charges a FLAT 7.5cr per clip, which is only true at 5s (panel
+    # round-5 claude: a 10s anti-melt hold would silently halve the meter)
+    if pj_p.is_file():
+        dur = ((json.loads(pj_p.read_text(encoding="utf-8")).get("animate") or {})
+               .get("duration", 5))
+        if dur != 5:
+            fails.append(f"animate.duration {dur} != 5 - the stop-loss meter is pinned to "
+                         f"7.5cr per 5s clip; re-pin KLING_CR_PER_CLIP before rendering")
 
     slop = [i for i, b in enumerate(beats, 1)
             if (cp := b.get("cap")) and any(t in cp.get("text", "") for t in SLOP_TOKENS)]

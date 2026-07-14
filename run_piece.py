@@ -373,6 +373,20 @@ def run_animate(piece_dir: Path, pj: dict, *, only: set[str]) -> int:
     clips = pool / "clips"
     clips.mkdir(exist_ok=True)
     an = pj["animate"]
+    # BULK GUARD (panel round-5): after a gold-master spec rewrite MANY clips go stale;
+    # a bare `--stage animate` would pay for all of them, not the 2 living-light slugs
+    # the wave budgeted. Rollout pieces must name their targets (or loudly override).
+    if (piece_dir / "visual" / "livingpage_short.spec.json").is_file() and not only:
+        import os as _os
+        if _os.getenv("JITB_ALLOW_BULK_ANIMATE", "0") in ("0", "false", "no"):
+            pending = [s for s, p in animate_prompts(pj).items()
+                       if _clip_state(pool / f"{s}.png", clips / f"{s}.mp4", p, an)
+                       not in ("fresh", "unhashed")]
+            if len(pending) > 2:
+                print(f"BULK GUARD - {len(pending)} clips would render ({', '.join(pending[:6])}"
+                      f"{'...' if len(pending) > 6 else ''}). Name targets with --only, or set "
+                      f"JITB_ALLOW_BULK_ANIMATE=1 if a full re-render is truly intended.")
+                return 5
     for slug, prompt in animate_prompts(pj).items():
         if only and slug not in only:
             continue

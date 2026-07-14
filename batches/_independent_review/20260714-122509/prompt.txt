@@ -1,3 +1,27 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: plan
+
+LENS — judge this PLAN on (be specific, cite the exact step/claim):
+- Feasibility against the real codebase / tools (does it assume things that exist?).
+- Hidden risks, false assumptions, single points of failure.
+- Over-engineering / premature building before the idea is proven.
+- Missing steps, edge cases, or verification gaps.
+- Reuse: does it duplicate tools that already exist instead of reusing them?
+- Cost / spend and whether it's justified.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block (on the VERDICT line write exactly ONE word —
+PASS or REVISE or FAIL — never the list of options):
+
+VERDICT: <PASS or REVISE or FAIL>
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
 # CORPUS ROLLOUT PLAN v5 — gold-master format × 12 living-page shorts (2026-07-14)
 
 **Status:** v5 after panel round 4 (FULL panel 5/5, all REVISE — every finding verified,
@@ -30,12 +54,8 @@ Out of scope: EW01–09, QJA, and `father_forgive_them` (Wave E, separately quot
   summary` credits can't see animate rows; (b) account `reconcile` over-attributes under
   parallel use — excluded; (c) failed-but-BILLED rolls (502s, NSFW blocks) leave neither
   row nor mp4 — HF balance eyeball at each wave gate covers them, and the forecast carries
-  a line for NSFW-blocked-but-billed rolls on crucifixion imagery. **ONE TRUTH for current
-  spend (round-5 fix, all sections agree): 5 clips = 37.5cr, remaining 447.5cr.** The
-  stop-loss refuses PROJECTED breaches (spent + one clip > cap), not just realized ones,
-  and a bare `--stage animate` on a rollout piece refuses when >2 clips would render
-  (BULK GUARD, exit 5; `JITB_ALLOW_BULK_ANIMATE=1` = loud override). The 7.5cr constant
-  is pinned in the gate: `animate.duration != 5` is a gate FAIL until the meter is re-pinned.
+  a line for NSFW-blocked-but-billed rolls on crucifixion imagery. Current: 6 clips
+  charged (disk) = 45cr, 440 headroom.
 - **One render path, no silent fallback:** ALL rollout renders and re-rolls go through
   `run_piece --stage animate [--only <slug>]` — never the `_hf_animate_short.py` CLI or
   `_animate_rerolls.py` (both bypass the rollout gate, and the CLI silently substitutes a
@@ -160,3 +180,4 @@ was swallowing them — automation saw success on refused runs).
 - **cursor "Wave A is heavy authoring, not a preflight":** correct — Wave A split into A(a)
   authoring/$0 and A(b) render/rate-measurement, with tooling as an explicit deliverable.
 - **claude "gate window / zero point / derive Wave D":** all fixed above.
+----- ARTIFACT END -----
