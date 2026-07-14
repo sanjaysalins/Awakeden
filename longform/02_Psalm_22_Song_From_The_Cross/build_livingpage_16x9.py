@@ -39,7 +39,30 @@ PAGE = (1920, 1080)
 SOUND = ROOT / "sound_library" / "clips"
 PAPER = (252, 249, 241)
 INK = (18, 14, 8, 255)
-SLIDE_OFF = {"left": (60, 0), "right": (-60, 0), "up": (0, 50), "down": (0, -50)}
+# Motion profiles (2026-07-14, user decision): the slam/shake feel is PER-PIECE via the spec's
+# "motion" field, not global. "classic" = the original punchy look every already-approved piece
+# was built with (default). "smooth" = the motion-sensitivity variant (no page shake, shorter
+# slower slides, softer flash) the user asked for on women_first_witnesses.
+MOTION_PROFILES = {
+    "classic": dict(slide_h=60, slide_v=50, slide_dur=0.13, flash_a=0.6, flash_d=0.07,
+                    shake_x=10.0, shake_y=7.0, shake_freq=70, shake_win=0.20),
+    "smooth":  dict(slide_h=38, slide_v=32, slide_dur=0.22, flash_a=0.4, flash_d=0.05,
+                    shake_x=0.0, shake_y=0.0, shake_freq=38, shake_win=0.16),
+}
+
+
+def set_motion_profile(name):
+    global SLIDE_OFF, SLIDE_DUR, FLASH_ALPHA, FLASH_DUR
+    global SHAKE_AMP_X, SHAKE_AMP_Y, SHAKE_FREQ, SHAKE_WIN
+    p = MOTION_PROFILES[name]
+    SLIDE_OFF = {"left": (p["slide_h"], 0), "right": (-p["slide_h"], 0),
+                 "up": (0, p["slide_v"]), "down": (0, -p["slide_v"])}
+    SLIDE_DUR, FLASH_ALPHA, FLASH_DUR = p["slide_dur"], p["flash_a"], p["flash_d"]
+    SHAKE_AMP_X, SHAKE_AMP_Y = p["shake_x"], p["shake_y"]
+    SHAKE_FREQ, SHAKE_WIN = p["shake_freq"], p["shake_win"]
+
+
+set_motion_profile("classic")
 run = base.run
 
 
@@ -115,18 +138,18 @@ def compose_page(out, dur, panels, work):
             parts.append(f"[o{k}][b{k}]overlay={x - M}:{y - M}[w{k}]")
             prev = f"w{k}"
         else:
-            offx, offy = SLIDE_OFF.get(pn.get("slide", "left"), (60, 0))
-            ex = f"{x}-{offx}*(1-min((t-{at:.3f})/0.13,1))" if offx else str(x)
-            ey = f"{y}-{offy}*(1-min((t-{at:.3f})/0.13,1))" if offy else str(y)
+            offx, offy = SLIDE_OFF.get(pn.get("slide", "left"), SLIDE_OFF["left"])
+            ex = f"{x}-{offx}*(1-min((t-{at:.3f})/{SLIDE_DUR},1))" if offx else str(x)
+            ey = f"{y}-{offy}*(1-min((t-{at:.3f})/{SLIDE_DUR},1))" if offy else str(y)
             en = f"gte(t,{at:.3f})"
             parts.append(f"[{prev}][p{k}]overlay=x='{ex}':y='{ey}':enable='{en}'[o{k}]")
-            exb = f"{x - M}-{offx}*(1-min((t-{at:.3f})/0.13,1))" if offx else str(x - M)
-            eyb = f"{y - M}-{offy}*(1-min((t-{at:.3f})/0.13,1))" if offy else str(y - M)
+            exb = f"{x - M}-{offx}*(1-min((t-{at:.3f})/{SLIDE_DUR},1))" if offx else str(x - M)
+            eyb = f"{y - M}-{offy}*(1-min((t-{at:.3f})/{SLIDE_DUR},1))" if offy else str(y - M)
             parts.append(f"[o{k}][b{k}]overlay=x='{exb}':y='{eyb}':enable='{en}'[w{k}]")
             prev = f"w{k}"
             if pn.get("flash", True):
-                parts.append(f"color=c=white@0.6:s={w}x{h}:r=30:d={dur},format=yuva420p[f{k}]")
-                parts.append(f"[{prev}][f{k}]overlay={x}:{y}:enable='between(t,{at:.3f},{at + 0.07:.3f})'[fl{k}]")
+                parts.append(f"color=c=white@{FLASH_ALPHA}:s={w}x{h}:r=30:d={dur},format=yuva420p[f{k}]")
+                parts.append(f"[{prev}][f{k}]overlay={x}:{y}:enable='between(t,{at:.3f},{at + FLASH_DUR:.3f})'[fl{k}]")
                 prev = f"fl{k}"
     parts.append(f"[{prev}]format=yuv420p[outv]")
     cmd = ["ffmpeg", "-y", "-loglevel", "error"]
@@ -143,15 +166,19 @@ def compose_page(out, dur, panels, work):
 
 
 def apply_shake(seg, slams, dur):
-    """Decaying page shake at each slam. Page pre-scaled 3% so the jitter never shows edges."""
+    """Decaying page shake at each slam. Page pre-scaled 3% so the jitter never shows edges.
+    Shake shape comes from the piece's motion profile; the "smooth" profile zeroes the amps
+    (the panel slam-in carries the impact instead) — skip the re-encode entirely then."""
+    if SHAKE_AMP_X == 0 and SHAKE_AMP_Y == 0:
+        return
     def expr(amp):
-        terms = [f"if(between(t,{a:.3f},{a + 0.20:.3f}),{amp}*sin((t-{a:.3f})*70)*(1-(t-{a:.3f})/0.20),0)"
+        terms = [f"if(between(t,{a:.3f},{a + SHAKE_WIN:.3f}),{amp}*sin((t-{a:.3f})*{SHAKE_FREQ})*(1-(t-{a:.3f})/{SHAKE_WIN}),0)"
                  for a in slams]
         return "+".join(terms)
     W, H = PAGE
     sw, sh = round(W * 1.03 / 2) * 2, round(H * 1.03 / 2) * 2
     vf = (f"scale={sw}:{sh},crop={W}:{H}:"
-          f"x='(iw-{W})/2+{expr(10)}':y='(ih-{H})/2+{expr(7)}',setsar=1")
+          f"x='(iw-{W})/2+{expr(SHAKE_AMP_X)}':y='(ih-{H})/2+{expr(SHAKE_AMP_Y)}',setsar=1")
     tmp = seg.with_name(seg.stem + "_sh.mp4")
     run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(seg), "-vf", vf, "-r", "30",
          "-c:v", "libx264", "-crf", "18", "-preset", "veryfast", "-pix_fmt", "yuv420p", str(tmp)],
@@ -390,6 +417,7 @@ def main():
         base.dc.OUT_W, base.dc.OUT_H = w, h  # dynamic_cam runtime seam (file untouched)
         if h > w:                            # portrait: caption furniture scaled to the shorts look
             cl.BASE_H = 1560                 # kinetic ~47px on a 1080-wide page (matches the locked short)
+            cl.SHORTS_SAFE_BOT = 0.18        # keep captions out of the TikTok/Reels/Shorts bottom-UI band
     if not a.lint and not a.skip_stills_gate:      # #1 fail-closed STILLS HUMAN-GATE (grandfathered if no gate.json)
         import sys as _sys
         if str(ROOT) not in _sys.path:
@@ -398,6 +426,10 @@ def main():
         if stills_gate.check(POOL, stage="build") != 0:
             _sys.exit(3)
     spec = json.loads((POOL / a.spec).read_text(encoding="utf-8"))
+    motion = spec.get("motion", "classic")
+    assert motion in MOTION_PROFILES, f"unknown motion profile {motion!r} (pick: {sorted(MOTION_PROFILES)})"
+    set_motion_profile(motion)
+    print(f"[motion] profile = {motion}")
     for p, q in zip(spec["beats"], spec["beats"][1:]):
         assert p["t"][1] > p["t"][0] and abs(p["t"][1] - q["t"][0]) < 1e-6, f"beats not contiguous at {p['t']}"
     clips_dir = POOL / "clips"

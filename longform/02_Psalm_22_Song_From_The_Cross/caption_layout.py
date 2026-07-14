@@ -38,6 +38,10 @@ R_SHORT_WORDS = 8
 CHIP_H_PAD = 18                      # tag chip inner pad above plaque/band
 
 MARGIN_X, MARGIN_TOP, MARGIN_BOT = 36, 40, 48
+# 9:16 shorts platform safe-zone: TikTok/Reels/Shorts cover the bottom ~18% (caption,
+# handle, progress bar) with UI, so captions must never sit there. Set by the portrait
+# builder (fraction of H reserved at the bottom); 0 = off (long-form 16:9 unaffected).
+SHORTS_SAFE_BOT = 0.0
 GAP = 12                             # min clearance caption-box <-> keep-box
 CORE_FRAC = 0.45                     # core box = this fraction of the keep box, on focus
 
@@ -151,6 +155,7 @@ def _candidates(page, bw, bh, sc):
     then the other corners, edges, then a top-first grid sweep from the edges inward."""
     W, H = page
     mx, mt, mb = round(MARGIN_X * sc), round(MARGIN_TOP * sc), round(MARGIN_BOT * sc)
+    mb = max(mb, round(SHORTS_SAFE_BOT * H))    # keep captions above the shorts UI band
     xs_l, xs_r = mx, W - bw - mx
     yb, yt = H - bh - mb, mt
     out = [(xs_l, yt), (xs_r, yt), (xs_l, yb), (xs_r, yb),
@@ -204,14 +209,16 @@ def solve(page, panels, cap):
                                 lines=lines, fsz=fsz, pad=pad, lh=lh, chip_h=0,
                                 flag=False, reason=f"tier1 @ {wf:.0%} width")
         # Tier 2 — compact scrim low in the frame, over expendable (non-core) region
+        # (raised above the shorts UI band when SHORTS_SAFE_BOT is set)
+        mb_safe = max(round(MARGIN_BOT * sc), round(SHORTS_SAFE_BOT * H))
         lines, bw, bh, lh = _shrink_wrap(text, fsz, pad, lead, round(0.5 * W))
         for x in (round(MARGIN_X * sc), W - bw - round(MARGIN_X * sc), (W - bw) // 2):
-            box = (x, H - bh - round(MARGIN_BOT * sc), bw, bh)
+            box = (x, H - bh - mb_safe, bw, bh)
             if _clear(box, cores):
                 return dict(tier=2, cls=cls, style="scrim", box=box, lines=lines,
                             fsz=fsz, pad=pad, lh=lh, chip_h=0, flag=False,
                             reason="tier2 lower scrim (clears cores)")
-        box = ((W - bw) // 2, H - bh - round(MARGIN_BOT * sc), bw, bh)
+        box = ((W - bw) // 2, H - bh - mb_safe, bw, bh)
         return dict(tier=3, cls=cls, style="scrim", box=box, lines=lines, fsz=fsz,
                     pad=pad, lh=lh, chip_h=0, flag=True,
                     reason="tier3 FLAG: no keep-clear box, cores block the lower third")
@@ -232,9 +239,12 @@ def solve(page, panels, cap):
     lines, _w = wrap_lines(text, fsz, W - 2 * mx - 2 * pad)
     lh = fsz + lead
     bh = len(lines) * lh + 2 * pad + chip_h
-    box = (mx, H - bh - round(24 * sc), W - 2 * mx, bh)
+    band_bot = max(round(24 * sc), round(SHORTS_SAFE_BOT * H))   # clear the shorts UI band
+    box = (mx, H - bh - band_bot, W - 2 * mx, bh)
     ok_band = _clear(box, cores)
-    in_bottom = box[1] + chip_h >= 0.75 * H     # DoD: band body within the bottom 25%
+    # long-form keeps the "band within bottom-25%" check; shorts deliberately raise it, so
+    # sitting above the bottom quarter is CORRECT there, not a flag.
+    in_bottom = SHORTS_SAFE_BOT > 0 or box[1] + chip_h >= 0.75 * H
     if ok_band:
         return dict(tier=2, cls=cls, style="band", box=box, lines=lines, fsz=fsz,
                     pad=pad, lh=lh, chip_h=chip_h, flag=not in_bottom,

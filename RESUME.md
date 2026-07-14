@@ -1,6 +1,152 @@
-# RESUME — next session (updated 2026-07-11 night — E2E dress rehearsal @ GATE 1 APPROVED; pipeline optimization shipped)
+# RESUME — next session (updated 2026-07-14 — DECISION 1 RESOLVED; effects/rollout path still open)
 
-## ⚡ NEXT SESSION ORDER — resume the "Women as First Witnesses" dress rehearsal at STILLS
+## 🌅 NEXT: the two big asks (viral effects per-SEGMENT + corpus rollout) — see ⏭️ below
+Big session on `batches/cluster_02_resurrection/women_first_witnesses_luke245`. The piece is **solid + shippable**
+(final = `…/visual/women_first_witnesses_luke245_sfx.mp4`, 82.06s, built 2026-07-13 17:01). Tests green.
+
+### ✅ DECISION 1 RESOLVED (2026-07-14) — shake scoped PER-PIECE via spec "motion" flag (user picked b)
+Builder now has `MOTION_PROFILES` in `build_livingpage_16x9.py`: **"classic"** (default — the ORIGINAL punchy
+shake 10/7@70rad, slide 60px/0.13s, flash 0.6/0.07 that every approved piece was built with) and **"smooth"**
+(no shake, slide 38px/0.22s, flash 0.4/0.05 — the motion-sensitivity look). Spec picks via top-level
+`"motion": "smooth"`; only `women_first_witnesses_luke245` carries it (verified across all 15 specs). Builder
+prints `[motion] profile = …` and asserts unknown names. Lint on the Women piece = exit 0; suite 293 passed/1 skip.
+Caption safe-zone edits (red-team-cleared) kept as-is. Still UNCOMMITTED.
+
+### 🐢 POLITE THROTTLE made gentler (2026-07-14, user ask)
+`.venv sitecustomize.py` + `_polite.py`: default POLITE_CPU 50→**33** (4/12 cores), priority BelowNormal→**Idle**
+(inherited by ffmpeg children; yields instantly to the user), **NEW low memory priority** (Windows evicts render
+RAM first under pressure). Verified live. Override per-run with `POLITE_CPU=50` (or 0 = full speed).
+
+### ✅ HOUSEKEEPING done 2026-07-14 — MEMORY.md compacted below the read limit.
+
+### 🟡 OTHER red-team findings
+- Caption safe-zone (`SHORTS_SAFE_BOT=0.18`, portrait-only, in caption_layout.py + builder) is SAFE — defaults 0.0 so
+  long-form 16:9 untouched; captions verified above the TikTok/Reels bottom-UI band. KEEP.
+- "No repeats" only HALF done: women_tell_news (beats 1,4) + women_plead (beats 2,3) still reuse same still (masked by
+  different templates). The de-dup renders were rejected as "nothing new."
+- ~$0.15 sunk on 3 rejected samey stills → parked in `visual/_unused_new_stills/`.
+- Architectural smell (pre-existing): the shared living-page ENGINE lives inside one episode's folder (`longform/02_Psalm_22…`).
+
+### ⏭️ THEN — the two big asks still open (user wants, NOT started right)
+1. **VIRAL EFFECTS** — god-rays + cold→warm grade PROVEN in frames (user approved subtlety) but my post-pass render
+   was the WRONG architecture (slow: re-encodes whole 82s → GB files, minutes). RIGHT WAY = bake per-SEGMENT during the
+   build (~4s each = instant). Dust dropped (too costly for the payoff; if wanted, bake a STATIC dust layer into stills).
+   2.5D parallax not started (needs depth-layer/mask setup). Overlay recipe saved below.
+2. **CORPUS ROLLOUT** — apply this gold-master format (grid-mix + scale-variety + no-repeat + sound accents + safe-zone
+   + effects) to the other 12 shorts (10 Cross + 2 Resurrection). Needs CODIFYING first (a repeatable transform + a DoD
+   gate that BLOCKS non-conforming pieces) else it's 12× today's hand-iteration. Est budget ~$25-35 (variety/de-dup
+   renders + Kling micro-motion). Do cluster-by-cluster; user reviews each. QUOTE + get budget OK before the batch.
+
+### 📐 GOLD-MASTER STANDARD (what every short should hit — codify this)
+Comic-grid layout (MIX: quad/big-two/3-band/split, not one) · scale variety (CU + wide + detail + medium — the fix for
+"nothing new"; **shatter needs MULTI-figure stills, Jesus/Christ singles stay full**) · no still repeats · smooth motion
+(no shake) · word-timed keyword captions IN the safe-zone · SFX bed w/ tasteful accents (riser into reveal, stone-roll;
+NO hype drop on sacred beats — grace-anchored) · bookend hook→Christ + border-break landing.
+
+### 🎛️ EFFECT OVERLAY RECIPE (for the per-segment build feature)
+God-rays = PIL gold streak-fan from a source point + soft core glow, GaussianBlur, overlaid `blend=screen@0.6` (FORMAT
+BOTH to rgba first or you get MAGENTA). Grade arc = ffmpeg native `colortemperature` (temp<6500 warm, >6500 cool) with
+`enable=between(t,..)` windows — FAST, no full-frame rgba. Death beats cool (~7900K), resurrection warm (~4900K). Demo
+frames were good; grade is SUBTLE (inked art already warm), god-rays are the visible part. `POLITE_CPU=0` for bash ffmpeg
+does NOT uncap (the cap is a python sitecustomize monkeypatch, not bash) — direct ffmpeg was just slow on the machine.
+
+---
+
+## ✅ 2026-07-13 — DONE: finished the 4 credit-blocked beats on Kling (NO model swap needed)
+Resolved the 2026-07-12 "Kling out of credits" TODO. Key finding: **"Kling" IS already an HF model** —
+the shorts path is `hf.exe generate create kling3_0 --mode pro`. So "switch Kling → another HF model" was
+a false fork; the credit fail was the **HF account balance** (3.27 credits), not a separate Kling bill.
+Checked per-clip HF cost: kling3_0 pro=12.5, std=10, veo3_1_lite=8, seedance1_5=4.8 credits — **none fit**
+3.27, so no cheaper-HF-model swap could rescue it. User **topped up HF** (→4003 credits) → finished on
+proven Kling (no swap, no morph risk).
+- **Rendered the 4** (`run_piece.py "<piece>" --stage animate --only galilee_listen_closer,women_remember,women_run_tell,women_cross_afar`):
+  all SAVED, 5.04s @ 1080×1920, `.src.sha` hash-bound. Spend = **30 HF credits** (7.5/clip, ~$1.56 — cheaper than the ~$2.60 est).
+- **Filmstrip-QC'd all 4 by eye = PASS** (frozen tableau, camera-only push-in, no morph, consistent THE_WOMEN/JESUS faces, Jesus natural scale).
+- **Rebuilt final** via `cli_livingpage.py --continue` ×3 (build→score→sfx cascade, all $0). New final:
+  `…/women_first_witnesses_luke245/visual/women_first_witnesses_luke245_sfx.mp4` (82.06s, 1080×1920 30fps, 09:39 today).
+  Verified all 4 new beats appear at their timestamps w/ living-page caption boxes. Now **13 Kling clips / lower dyncam count**.
+- Publish pack path unchanged (same filename) → still GREEN. **Piece is fully COMPLETE.**
+- **EPIC PASS (2026-07-13, $0):** user loved the risen-hand landing (beat17 = punch+border_break+takeover+SFX
+  swell) and asked for more cinematic effects. Root cause: all 18 beats were the SAME `pushin`. Re-choreographed
+  the whole spec ($0, build-layer only — NO Kling re-renders): varied dyncam moves (swoop/tour/parallax/push),
+  punch snaps, whip cuts, speed-ramps into dawn+run, takeover pushes on emotional beats, sacred hush held on the
+  angels, hand landing untouched. Then **PHASE 2 shatter panels:** beat0 apostles_dismiss → `hero_frac4` quad
+  (4 doubters + 2 raised dismissive palms slam in) + beat2 women_plead_closer → `hero_frac3` big-two (3 women
+  witnesses). Anchors hand-tuned on faces + crop-verified. Backups: `visual/livingpage_short.spec.json.bak_preepic`
+  (pre-effects) + `.bak_prephase2` (pre-shatter). Effect vocab lives in `build_livingpage_16x9.py` +
+  `comic_engine.py` TEMPLATES (full/two_v/stack_h/strip_h3/quad/hero_frac3/hero_frac4/hero_band3).
+- **EPIC PASS v2 (2026-07-13, user review):** user loved grids but (a) shake=dizzy, (b) wanted MOST beats as grids +
+  few full heroes, (c) template variety (not all frac3), (d) less still reuse, (e) angels mismatched between
+  two_men_shining & women_bowed. Fixes ($0): **shake DISABLED** (`SHAKE_AMP_X/Y=0` early-return). **Slide softened**
+  (`SLIDE_OFF` 60→38px, new `SLIDE_DUR` 0.13→0.22s, flash @0.6→@0.4, ±no whip/ramp/punch). **11 grids / 7 heroes**
+  (fullbleed 100%→~50%): quad(0), frac3(1,2,7,13,15), band3(4,6,8 landscapes/journey), stack_h(3 juxta
+  women|apostles). KEY LESSON: shatter needs MULTI-figure stills — Jesus/Christ singles stay full (shatter repeats
+  one face). **Angels fix:** beats 9+10 both = women_bowed (dropped two_men_shining), wide→tight continuous push so
+  angels identical; `anchors/women_bowed.json` keep-box added. Backups `.bak_prephase3` + `.bak_prephase4`.
+- **VARIETY PASS (2026-07-13, user "nothing new"):** user said more grids all looked same-y. LESSON: variety = change
+  of SCALE/ANGLE, not more medium group shots. First tried 3 new stills (tomb_sealed/women_recount/women_testify) →
+  user rejected "nothing new in them" (they were more 3-women-in-a-room) → moved to visual/_unused_new_stills/ (~$0.15
+  WASTED, jobs reverted). Then rendered 3 GENUINELY distinct (user approved GATE 2): **magdalene_face_cu** (extreme CU
+  face+tear), **women_tiny_dawn** (extreme WIDE, women tiny under sunrise), **graveclothes_linen** (empty linen detail,
+  no people, Luke 24:12). Wired: beat8=women_tiny_dawn, beat13=magdalene_face_cu, beat14=graveclothes_linen (all full
+  heroes — dramatic singles can't grid). Now 8 grids / 10 heroes (fullbleed 56%), rich MIX. 19 stills GREEN. ~$0.15 used.
+  Tomb "wipe" abandoned — the graveclothes detail is the better empty-tomb reveal (sealed-tomb still was too same-y).
+- **Left open (unchanged, independent):** (a) `.claude/` skill edits are gitignored — un-ignore or move rule to a tracked doc;
+  (b) keep/delete untracked `poc_prompt_bakeoff/`. Neither blocks anything.
+
+
+## 🧵 TOMORROW TODO — still-consistency thread (prompt-author POC, 2026-07-12 eve, SEPARATE session)
+Ran a POC: give an LLM a full grounded brief → it returns a complete paste-ready text-to-image prompt →
+render verbatim + ref. Finding: the chatbot barely matters; the lever is the BRIEF (ref on every peopled
+still + locked garment colour per person + no-panels/no-text, all in the prompt). Harness + ~60 renders +
+galleries in **untracked** `poc_prompt_bakeoff/` (`index_full_named.html` is the best evidence). Memory: [[poc-prompt-author-bakeoff]].
+**SHIPPED to main today (2 commits):**
+- `05c966b` — `run_piece.check_refs()`: fail-closed BLOCK, a peopled `stills.world` group's stills must each
+  carry a character ref (never `ref:null`). Scanned all 13 repo pieces → 0 newly blocked. +test.
+- `6338611` — `run_piece.check_world_colors()`: ADVISORY nudge (never blocks) when a peopled canon pins no
+  garment colour. Authoring rule also written into the `witness-world` + `scene-plan` skill guardrails. +test.
+**OPEN — pick tomorrow (the one real decision):** the two skill edits live under `.claude/` which is
+**gitignored** → the authoring teaching is active on THIS machine but NOT version-controlled. Decide: (a)
+un-ignore those skill paths, or (b) move the rule into a tracked doc (e.g. beside `check_world` in
+`run_piece.py`, already committed). Also optional: keep vs delete the untracked `poc_prompt_bakeoff/` folder.
+Nothing here blocks the animation-swap work above — this is an independent thread.
+
+
+## ⚡ NEXT SESSION ORDER — dress rehearsal is DONE (narration→sfx); build the /publish pack
+The "Women as First Witnesses" (Luke 24:5-6) dress-rehearsal short is FINISHED end-to-end on the full
+gated pipeline. FINAL: `batches/cluster_02_resurrection/women_first_witnesses_luke245/visual/women_first_witnesses_luke245_sfx.mp4`
+(82.06s, 9:16). All gates green (narration LOCKED + 2× panel; audio GATE 1; bible-check claude PASS;
+stills GATE 2 user-approved after 4 reject rounds; 6 Kling filmstrip-QC'd; build→score→sfx). Spend ≈ $5.45/$6.
+1. **DONE — `/publish` pack GREEN** (`…/women_first_witnesses_luke245/publish/PUBLISH_INDEX.html`; UK-G1..G7
+   pass, 1 warn=no-thumbnail). Full dress rehearsal narration→publish COMPLETE. Serviced the dead-API
+   agent-bridge in-chat (upload-gen + red-team). Fixes to reach GREEN, banked for next pieces: a
+   **`publish_meta.json`** beside narration.md is REQUIRED for batch living-page pieces (sets anchor_ref
+   for UK-G2 — else the harvest is blank); copy must avoid `" - "`/`"..."` (UK-G7 slop) and front-load the
+   verse ref in the first 157 chars; quote ONLY the anchor verse, verbatim KJV. NEXT = user final review
+   (film + publish index) + add a thumbnail/cover before posting.
+2. **🔴 RECURRING-MISTAKE FIX (banked):** every peopled still MUST attach a `ref_library/characters/*` ref
+   (ref:null → seedream invents generic/duplicate Jesus-faces) + name distinct individuals + crowds→shadow.
+   New reusable ref created: `ref_library/characters/THE_WOMEN.png` (Magdalene/Joanna/elder). Consider a
+   lint that BLOCKS `register.stills[slug].characters != [] and ref is null`. Memory: `feedback-peopled-stills-need-character-ref`.
+3. Then the corpus-rebuild backlog below (Psalm22 long, EW01) + the prior lists.
+
+## ⚡ DYNAMISM PASS + KLING EXPANSION (2026-07-12 late) — 1 credit-blocked step left
+User feedback: the piece reused the same stills/clips too much + wanted more Kling motion. Fixed:
+- **Dynamism:** 10→16 distinct visuals across 18 beats. Rendered 5 NEW in-world stills (same THE_WOMEN/
+  DISCIPLES/JESUS refs → consistent faces): women_plead_closer, apostles_doubt_closer, galilee_listen_closer,
+  women_remember, women_run_tell. Reused empty_tomb's risen clip ($0, same JESUS face) as `risen_prophecy`
+  for the "third day rise again" beat. No still now used >2× (was galilee ×3, women_tell_news ×3). Standing
+  rule reaffirmed: [[feedback-no-reuse-beat-match]] — one distinct visual/beat, reuse-bank-first, same-world only.
+- **Giant-Jesus fix:** galilee_listen_closer re-rendered at natural scale (was giant vs a tiny lake).
+- **Kling expansion (user chose 6 @ $0.65):** only **2 of 6 rendered** (women_plead_closer, apostles_doubt_closer)
+  before **HF/Kling ran OUT OF CREDITS** (`not_enough_credits`, plan ultimate). Now 9 Kling-animated beats /
+  7 dyncam. **TODO after HF credit top-up:** `run_piece.py "<piece>" --stage animate` renders just the 4
+  queued-but-failed (galilee_listen_closer, women_remember, women_run_tell, women_cross_afar, ~$2.60) → rebuild.
+- **Engine:** a new REF BLOCK gate now blocks peopled stills with ref:null (the systemic guard I'd flagged).
+- Spend this session on the piece ≈ **$7.0** (voice $0.50 + stills ~$1.6 + Kling $4.55 + reuse $0). FINAL rebuilt:
+  `…/women_first_witnesses_luke245/visual/women_first_witnesses_luke245_sfx.mp4` (82.06s). Publish pack still GREEN.
+
+## ⚡ PRIOR ORDER (done this session) — resume the "Women as First Witnesses" dress rehearsal at STILLS
 The user asked for ONE short built fully end-to-end (narration→sfx) with all panels/gates, to prove
 the pipeline. Half done + AUDIO GATE 1 APPROVED. **Pick up here:**
 1. **Piece:** `batches\cluster_02_resurrection\women_first_witnesses_luke245` (Luke 24:5-6, Resurrection

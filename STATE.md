@@ -1,6 +1,48 @@
 # STATE.md — progress tracker
 
-**Last updated:** 2026-07-10 (late)
+**Last updated:** 2026-07-14
+**Status (2026-07-14 — DECISION 1 resolved + gentler throttle):** Shake/slam feel is now **per-piece** via the
+spec's `"motion"` flag (user picked option b): `MOTION_PROFILES` in the shared builder — "classic" default =
+the original punchy look restored (all 12 other shorts + long-form unchanged on rebuild), "smooth" = no-shake
+variant, carried ONLY by `women_first_witnesses_luke245`'s spec. Verified: lint exit 0 w/ `[motion] profile =
+smooth`, suite 293 passed/1 skip. Polite throttle gentler (user ask): POLITE_CPU default 33%, Idle priority,
+NEW low memory priority — in `.venv sitecustomize.py` + `_polite.py`, verified live. MEMORY.md compacted.
+Changes UNCOMMITTED. NEXT = viral effects per-SEGMENT build + corpus rollout (quote budget first) — RESUME.md.
+
+**Last updated (prior):** 2026-07-13 (night — PAUSED mid-red-team)
+**Status (2026-07-13 — "Women as First Witnesses" MOTION-COMIC UPGRADE + red-team pause):** Big polish session
+on `batches/cluster_02_resurrection/women_first_witnesses_luke245`. Piece is **solid + shippable**; PAUSED to
+red-team before rolling out to other pieces. DONE: (1) finished the 4 credit-blocked Kling beats (topped-up HF,
+30 credits — "Kling" IS an HF model, was a false model-swap fork). (2) MOTION-COMIC pass: shatter/grid layout
+(8 grids/10 heroes, 4 templates: quad/big-two/3-band/split), shake KILLED (was dizzy), slides softened, angels
+continuity fixed (beats 9+10 both women_bowed, dropped two_men_shining). (3) 3 GENUINELY-distinct new stills
+(magdalene_face_cu extreme-CU / women_tiny_dawn extreme-wide / graveclothes_linen empty-linen detail, Luke 24:12)
+after 3 SAMEY ones were user-rejected "nothing new" (~$0.15 sunk, parked in _unused_new_stills/). (4) tasteful SFX
+accents (riser+stone-roll, no shofar). (5) **CAPTION SAFE-ZONE** — captions now clear the TikTok/Reels bottom-UI
+band (`SHORTS_SAFE_BOT=0.18`, portrait-only). RED-TEAM: **278 tests pass**; final verified current. 🔴 KEY RISK =
+SHAKE/slide softening are GLOBAL edits to the SHARED builder → affect all 13 shorts + long-form on rebuild (user
+only wanted it here); UNCOMMITTED + untested. Shared code: `longform/02_Psalm_22…/build_livingpage_16x9.py` +
+`caption_layout.py`. OPEN: viral effects (god-rays/grade proven but need per-SEGMENT build integration, NOT post-pass)
++ corpus rollout to 12 shorts (codify first, ~$25-35). **Full pickup + DECISIONS: RESUME.md top.**
+
+**Last updated (prior):** 2026-07-12
+**Status (2026-07-12 — DRESS REHEARSAL COMPLETE: "Women as First Witnesses" narration→sfx):** The
+E2E dress-rehearsal short (`batches/cluster_02_resurrection/women_first_witnesses_luke245`, Luke 24:5-6)
+is **FINISHED through _sfx** on the full gated pipeline. bible-check fact_sheet v3 (2 panel rounds →
+claude PASS, Luke-scoped: two men in shining garments, hands-and-feet wounds, no Roman guards) →
+piece.json (10 stills) + livingpage_short.spec.json (18 beats on the real 82.04s timeline) → stills
+(BytePlus seedream). **RECURRING USER REJECT root-caused + fixed: peopled stills left with ref:null →
+seedream invents generic/duplicate Jesus-faces.** 4 reject rounds fixed by driving every peopled still
+from the character-ref library + naming distinct individuals + crowds-to-shadow: angels→ANGEL_OF_THE_LORD
+(golden, no-wings, non-Christ), apostles→DISCIPLES (3 distinct + shadow), women→**new THE_WOMEN ref**
+(named 3 distinct: young Magdalene/middle Joanna/grey elder), burial reworked from-behind + sealed tomb.
+**GATE 2 user-approved** → 6 Kling clips (filmstrip-QC'd, no morph) → build (18-beat living-page) → score
+(dark→grace) → **new sfx_pilots/build_women_witnesses_sfx.py** ($0 bed) → register. FINAL:
+`…/women_first_witnesses_luke245/visual/women_first_witnesses_luke245_sfx.mp4` (82.06s, 9:16). Spend ≈
+**$5.45 of $6** (voice $0.50 + stills ~$1.05 + Kling $3.90). NEXT = /publish pack, then present the full
+evidence trail. Memory: [[feedback-peopled-stills-need-character-ref]]. **Full pickup: RESUME.md top.**
+
+**Last updated (prior):** 2026-07-10 (late)
 **Status (2026-07-10 late — CROSS CLUSTER rebuilt on fact cards):** **Corpus rebuild #2 done through clips: all 11 Cross shorts.** Cluster fact sheet v2 (paneled; Mark 15:25 darkness-timing = early words daylight / late words darkness-no-storm). 44 agent flags → 22 unique fails, ALL eye-verified true (+1 byte-identical copy the agents missed); **18 unique stills rebuilt** over 3 eye-audited re-roll rounds ($1.45) — both thieves restored on every Calvary wide, lightning/halos/gold-coins/dog-bone-lots/boat-Peter all killed; 42 sibling files refreshed via $0 reuse; 3 unused pilot leftovers retired. **19 clips re-animated** ($12.35, filmstrip-QC'd) + 22 propagated $0; every cluster-01 clip now hash-bound to `animate.moves`. All 10 stills gates GREEN (user GO recorded; pre-rubric stills grandfathered). Finals build→score→sfx chain relaunched at close (first launch aborted on the quality-row gate, fixed). `run_piece.stills_bodies` lazy-build fix; tests green. Day-late spend ≈ $13.80, all authorized. NEXT = verify finals + publish refresh ×10, then Psalm22 long + EW01. **Full pickup: RESUME.md top.**
 
 **Last updated (prior):** 2026-07-10
