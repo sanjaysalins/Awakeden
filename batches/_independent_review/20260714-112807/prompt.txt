@@ -1,0 +1,110 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: plan
+
+LENS — judge this PLAN on (be specific, cite the exact step/claim):
+- Feasibility against the real codebase / tools (does it assume things that exist?).
+- Hidden risks, false assumptions, single points of failure.
+- Over-engineering / premature building before the idea is proven.
+- Missing steps, edge cases, or verification gaps.
+- Reuse: does it duplicate tools that already exist instead of reusing them?
+- Cost / spend and whether it's justified.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block (on the VERDICT line write exactly ONE word —
+PASS or REVISE or FAIL — never the list of options):
+
+VERDICT: <PASS or REVISE or FAIL>
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# CORPUS ROLLOUT PLAN — gold-master format × 13 living-page shorts (2026-07-14)
+
+**Status:** Phase 0 shipped; Wave A NOT started — this plan is under independent review first.
+**User approval:** GO given 2026-07-14 at ~485 HF credits (~$25 actual rate) for all 13
+remaining cluster pieces. EW01–09 + QJA back-catalogue explicitly OUT of scope.
+
+## Goal
+
+Bring every living-page short in `batches/cluster_01_cross/` + `cluster_02_resurrection/`
+up to the user-approved gold master (`women_first_witnesses_luke245`, shipped 2026-07-14):
+
+- **Comic-grid mix** — ≤60% full-bleed beats, ≥3 templates (quad/frac3/band3/stack_h/full);
+  shatter only on multi-figure stills, Christ/single heroes stay full-bleed
+- **Scale variety** — CU + wide + detail + medium across the piece; no still >2 uses;
+  same-still full-bleed twice ONLY as an adjacent deliberate two-shot (max 2 pairs)
+- **Cold→warm grade arc** — per-beat `fx.temp` (death ~7900K → landing ~4900K), applied
+  ONLY inside panel rects (ivory paper never tints); PIL rays as fallback light
+- **Living light (Kling-native)** — 2–3 reveal/landing beats per piece re-animated via the
+  `animate.living_light` channel: figures frozen, ONLY light/air move
+- **Smooth motion** — per-piece spec `"motion": "smooth"` (no page shake, soft slams)
+- **Sound accents** — riser/reveal accents from sound_library; NO hype drop on sacred beats
+- **Caption safe-zone** — automatic (portrait builder sets SHORTS_SAFE_BOT=0.18)
+- **Bookend** — motion hook open, close on Christ, landing beat carries light
+
+## Phase 0 — CODIFIED (shipped, tests green: 305 passed / 1 skip)
+
+1. **`pipeline/rollout_gate.py`** — deterministic blocking gate, runs at spec-authoring time:
+   motion=smooth · full-bleed ≤60% · ≥3 templates · no still >2 uses · full-bleed repeats
+   only as ≤2 adjacent pairs · fx on ≥50% of beats · ≥1 living_light clip · landing lit ·
+   no dash/ellipsis/mojibake captions. Verified: gold master PASS; it_is_finished FAILs 6.
+2. **`animate.living_light` channel** (run_piece.py) — LIVING_LIGHT_BASE template with the
+   three pilot-taught locks: (a) expression INSIDE the frozen contract (v1 stern-face fail),
+   (b) dry-wound lock (v2 bleeding-palm fail), (c) whole-figure push, never enlarge a wound.
+   Glitter-word ban (fail-closed ValueError). Verbatim-prompt escape for QC'd clips whose
+   exact wording differs. Same clip_src_hash binding + stills-gate + budget ledger as every
+   Kling clip (the hf_animate chokepoint).
+
+## Waves (HUMAN GATE after each — user reviews before the next wave)
+
+| Wave | Pieces | Notes |
+|---|---|---|
+| A | it_is_finished, pierced, crucifixion_foretold | prove the repeatable transform |
+| B | forsaken_cry, i_thirst, into_thy_hands, today_paradise | |
+| C | watch_one_hour, woman_behold, thirty_pieces, father_forgive_them | father_forgive_them needs mocomic→livingpage spec migration first |
+| D | empty_tomb, sign_of_jonah | heaviest: de-dup stills (empty_tomb = 9 stills/20 beats, one still ×5) |
+
+Per piece: (1) $0 spec upgrade (grids/anchors, scale variety, fx arc, motion smooth, sound
+accents, living_light entries) → rollout_gate PASS → (2) paid renders (living-light clips;
+Wave D adds de-dup stills via BytePlus + their clips) → filmstrip QC by eye per clip →
+(3) $0 rebuild → score → sfx → frame eye-check → publish refresh. Backup each piece's
+current final before its first rebuild (same `.bak_prelivinglight` pattern as the gold master).
+
+## Budget
+
+- Living-light: ~30 clips × 7.5cr + ~50% QC-lottery re-roll margin ≈ 340cr
+- De-dup stills ~15 × $0.05 BytePlus + ~11 clips ≈ 110cr
+- father_forgive_them migration extras ≈ 35cr
+- **Total ≈ 485cr ≈ $25 actual rate** (list-price view ~$67). Ledger rows auto-written at
+  the hf_animate chokepoint; per-episode ceilings enforced there.
+- Spent so far (pilot + promotion): ~52.5cr / 7 Kling rolls.
+
+## Known risks & mitigations
+
+- **Kling QC lottery** (~1 in 3 first rolls fails: face-morph, wound-bleed, disobedient
+  motion) → filmstrip QC EVERY clip by eye before use; re-roll margin in budget; rejects
+  parked in `_fx_pilot/_rejected/`-style folders, never deleted.
+- **Kling disobeys "frozen"** (walked the tiny dawn figures) → acceptable ONLY at extreme
+  wide; a moving figure on a CU/medium = reject. QC rubric includes this.
+- **Double-lighting** — beats carried by a living-light clip must NOT also carry `fx.rays`
+  (gold master promotion dropped them); temp grade stays.
+- **Shipped-piece regression** — every current final backed up pre-rebuild; publish packs
+  keep the same filename → publish stays GREEN; the classic/smooth motion switch is
+  per-piece spec, defaulting classic for anything untouched.
+- **Grid crops chopping heads** — panel_fit fit-gate + anchors; hand-tune anchors on faces
+  (the Women piece needed several rounds); fit-gate warnings reviewed per piece.
+- **Doctrine** — no still/clip content changes except light/atmosphere; any NEW de-dup
+  still (Wave D) goes through the full bible-check fact-card + vision-audit + stills-gate
+  path like any production still.
+
+## Open questions for reviewers
+
+1. Are the gate thresholds right (≤60% full, ≥50% fx, ≤2 adjacent two-shot pairs)?
+2. Missed failure modes in the living-light template or the wave order?
+3. Anything that could silently degrade the 10 already-approved Cross finals?
+4. Is the re-roll margin (~50%) enough given the observed 1-in-3 reject rate?
+----- ARTIFACT END -----

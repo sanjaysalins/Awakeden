@@ -1,9 +1,10 @@
 {
   "image": "women_tiny_dawn.png",
-  "verdict": "FAIL",
+  "verdict": "PASS",
   "flags": [
-    "pending vision review (auto-armed at render)"
+    "vision review 2026-07-14 (in-chat Claude): 3 women period-correct on path to opened rock tomb, dawn sun per Mark 16:2, no invented elements",
+    "sidecar had been armed-FAIL pending review"
   ],
-  "reviewer": "render-arm",
+  "reviewer": "in-chat-agent",
   "stage": "content"
 }

@@ -69,10 +69,7 @@
     "right",
     "down"
    ],
-   "flash": true,
-   "fx": {
-    "temp": 7200
-   }
+   "flash": true
   },
   {
    "t": [
@@ -118,10 +115,7 @@
     "right",
     "right"
    ],
-   "flash": true,
-   "fx": {
-    "temp": 7200
-   }
+   "flash": true
   },
   {
    "t": [
@@ -167,10 +161,7 @@
     "right",
     "right"
    ],
-   "flash": true,
-   "fx": {
-    "temp": 7200
-   }
+   "flash": true
   },
   {
    "t": [
@@ -195,9 +186,6 @@
     "type": "caption",
     "text": "No one inventing a resurrection would ever open it there",
     "kw": "NO ONE WOULD INVENT THIS"
-   },
-   "fx": {
-    "temp": 7400
    }
   },
   {
@@ -313,10 +301,7 @@
     "left",
     "down"
    ],
-   "flash": true,
-   "fx": {
-    "temp": 7900
-   }
+   "flash": true
   },
   {
    "t": [
@@ -362,10 +347,7 @@
     "right",
     "right"
    ],
-   "flash": true,
-   "fx": {
-    "temp": 7700
-   }
+   "flash": true
   },
   {
    "t": [
@@ -388,9 +370,6 @@
     "panel": 0,
     "start": 32.5,
     "zoom": 1.1
-   },
-   "fx": {
-    "temp": 7000
    }
   },
   {
@@ -410,9 +389,6 @@
     "type": "caption",
     "text": "So the angels pointed them to His own promise",
     "kw": "THE ANGELS SPOKE"
-   },
-   "fx": {
-    "temp": 5800
    }
   },
   {
@@ -433,9 +409,6 @@
     "text": "Why seek ye the living among the dead? He is not here, but is risen:",
     "speaker": "THE ANGELS",
     "ref": "LUKE 24:5-6"
-   },
-   "fx": {
-    "temp": 5400
    }
   },
   {
@@ -460,9 +433,6 @@
     "panel": 0,
     "start": 49.4,
     "zoom": 1.1
-   },
-   "fx": {
-    "temp": 5800
    }
   },
   {
@@ -510,9 +480,6 @@
     "panel": 0,
     "start": 59.41,
     "zoom": 1.08
-   },
-   "fx": {
-    "temp": 5600
    }
   },
   {
@@ -536,9 +503,6 @@
     "panel": 0,
     "start": 63.9,
     "zoom": 1.1
-   },
-   "fx": {
-    "temp": 5400
    }
   },
   {
@@ -585,10 +549,7 @@
     "right",
     "right"
    ],
-   "flash": true,
-   "fx": {
-    "temp": 5200
-   }
+   "flash": true
   },
   {
    "t": [
@@ -611,9 +572,6 @@
     "panel": 0,
     "start": 73.3,
     "zoom": 1.1
-   },
-   "fx": {
-    "temp": 5000
    }
   },
   {
@@ -648,9 +606,6 @@
     "type": "caption",
     "text": "Stop seeking the living among the dead. The risen Christ is seeking you.",
     "kw": "HE IS SEEKING YOU"
-   },
-   "fx": {
-    "temp": 4900
    }
   }
  ]

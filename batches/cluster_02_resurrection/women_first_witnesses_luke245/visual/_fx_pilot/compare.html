@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Kling living-light pilot — compare</title>
+<style>
+ body{background:#1a1714;color:#eee8dc;font-family:Georgia,serif;margin:24px}
+ h1{font-size:22px} h2{font-size:17px;margin:34px 0 6px;color:#d8c9a3}
+ .verdict{font-weight:bold;padding:2px 10px;border-radius:12px;font-size:13px}
+ .pass{background:#1e4620;color:#9fdca4} .reject{background:#5a1f1f;color:#f0a8a8}
+ .row{display:flex;gap:16px;align-items:flex-start}
+ .row figure{margin:0} video{width:280px;border-radius:8px} img.still{width:280px;border-radius:8px}
+ figcaption{font-size:13px;color:#b9ac93;text-align:center;padding:4px}
+ img.strip{width:100%;max-width:1100px;border-radius:6px;margin-top:8px}
+ p{max-width:75ch;color:#cfc4ae;font-size:14px} .note{font-size:13px;color:#a89b83}
+</style></head><body>
+<h1>PILOT — Kling carries the effects natively ("living light"), 3 clips, ~22.5 credits</h1>
+<p>Prompt discipline: figures frozen, ONLY light and air move (rays, dust in beams, breathing
+glow, mist, faint breeze). Left = what ships today, right = the living-light pilot.</p>
+
+<h2>1. The angels (women_bowed) — <span class="verdict pass">PASS — the winner</span></h2>
+<div class="row">
+ <figure><video controls src="../clips/women_bowed.mp4"></video><figcaption>current (camera-only)</figcaption></figure>
+ <figure><video controls src="women_bowed_livinglight.mp4"></video><figcaption>pilot — living light</figcaption></figure>
+</div>
+<p class="note">Golden rays pour in and INTENSIFY through the clip, light plays on the cave floor,
+the garments' glow breathes. Faces/figures stable, nothing invented. Clearly better than the
+static overlay.</p>
+<img class="strip" src="qc_women_bowed_strip.png">
+
+<h2>2. The landing (risen_christ_seeking) — <span class="verdict pass">PASS on v3 (2 re-rolls)</span></h2>
+<div class="row">
+ <figure><video controls src="../clips/_old_kling/risen_christ_seeking.mp4"></video><figcaption>previous (camera-only)</figcaption></figure>
+ <figure><video controls src="risen_christ_seeking_livinglight.mp4"></video><figcaption>v3 — living light (now IN the final)</figcaption></figure>
+</div>
+<p class="note">v1 hardened the face into a stern frown (rejected). v2 fixed the face but pushing
+into the palm made the wound BLEED (rejected — parked in _rejected/). v3 = whole-figure push +
+expression lock + dry-wound lock: face stays gentle throughout, sunburst blooms, the nail-print
+stays a dry mark as He shows His hands. The 3 locks are now baked into the shared
+LIVING_LIGHT_BASE prompt template.</p>
+<img class="strip" src="qc_risen_v2_strip.png" title="v2 — the bleeding-wound reject">
+<img class="strip" src="qc_risen_v3_strip.png" title="v3 — PASS">
+
+<h2>3. The dawn (women_tiny_dawn) — <span class="verdict pass">PASS — with a footnote</span></h2>
+<div class="row">
+ <figure><img class="still" src="../women_tiny_dawn.png"><figcaption>current = still + $0 dyncam push (beat 9 of the final)</figcaption></figure>
+ <figure><video controls src="women_tiny_dawn_livinglight.mp4"></video><figcaption>pilot — living light</figcaption></figure>
+</div>
+<p class="note">Dawn warms, mist drifts around the tomb, clouds creep — and Kling made the three
+tiny women actually WALK up the path despite the frozen instruction. At this extreme-wide scale it
+is clean (3 stay 3, no morph, forward motion) and adds life. Footnote: proof the prompt does not
+fully control Kling — the same disobedience on a close-up would be a reject.</p>
+<img class="strip" src="qc_dawn_strip.png">
+
+<h2>Scorecard</h2>
+<p>2 keepers + 1 fixable reject on first rolls. Cost ~7.5 credits/clip. The living-light layer is
+real and worth it on REVEAL and LANDING beats; camera-only stays right for argument/grid beats.
+Every clip needs the filmstrip QC — the lottery is real (one face morph in three).</p>
+</body></html>

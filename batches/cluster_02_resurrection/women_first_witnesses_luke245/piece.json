@@ -134,6 +134,23 @@
    "women_remember": "ONE slow, steady, continuous push-in toward the women's faces lighting with recognition",
    "women_run_tell": "ONE slow, steady, continuous push-in toward the three women hurrying forward at dawn",
    "women_cross_afar": "ONE slow, steady, continuous push-in toward the women watching the distant crosses"
+  },
+  "living_light": {
+   "women_bowed": {
+    "target": "the two shining figures",
+    "light": "living light (see verbatim prompt)",
+    "prompt": "A still finished inked graphic-novel illustration on flat canvas, filmed as ONE slow, steady push-in toward the two shining figures. Every figure stays perfectly frozen the entire time — no limbs move, no heads turn, no faces change, no morphing, no new figures, hands, wings or objects appear. INVENT NOTHING: show only what is already painted in this exact image. ONLY the light and the air are alive: volumetric golden light rays from above slowly intensify and sweep almost imperceptibly, fine dust motes drift down through the beams, and the soft glow around the shining garments breathes gently brighter and dimmer."
+   },
+   "risen_christ_seeking": {
+    "target": "the whole standing figure",
+    "light": "living light (see verbatim prompt)",
+    "prompt": "A still finished inked graphic-novel illustration on flat canvas, filmed as ONE very slow, gentle push-in toward the whole standing figure, keeping him fully in frame. His face keeps the exact same gentle, calm expression from first frame to last — the eyes, brow and mouth are painted and NEVER shift, harden, frown or blink. The small wound marks on his open palm stay EXACTLY as painted, dry and still — no blood flows, drips, spreads, brightens or grows. Every figure stays perfectly frozen the entire time — no limbs move, no heads turn, no faces change, no morphing, no new figures, hands, wings or objects appear. INVENT NOTHING: show only what is already painted in this exact image. ONLY the light and the garden air are alive: the sunburst behind him slowly intensifies, its rays sweeping gently, warm morning haze shimmers in the light, and the flowers and grasses at the very edges of the frame sway faintly in a light breeze."
+   },
+   "women_tiny_dawn": {
+    "target": "the tiny walking figures",
+    "light": "living light (see verbatim prompt)",
+    "prompt": "A still finished inked graphic-novel illustration on flat canvas, filmed as ONE slow, steady push-in toward the tiny walking figures. Every figure stays perfectly frozen the entire time — no limbs move, no heads turn, no faces change, no morphing, no new figures, hands, wings or objects appear. INVENT NOTHING: show only what is already painted in this exact image. ONLY the sky and the air are alive: the dawn glow on the horizon slowly warms and brightens, thin mist drifts low across the ground, and the clouds creep almost imperceptibly across the sky."
+   }
   }
  },
  "score": {

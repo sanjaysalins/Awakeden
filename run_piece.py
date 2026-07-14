@@ -42,6 +42,21 @@ INK_BASE = ("A finished inked graphic-novel comic panel - flat printed art with 
             "subject motion, no limbs moving, no new lines drawn. INVENT NOTHING: show ONLY what is "
             "already inked in this exact panel. Keep the subject whole in frame.")
 
+# LIVING-LIGHT contract (2026-07-14 pilot, memory feedback-kling-native-effects-hybrid):
+# figures frozen, ONLY light/air move. The three locks the pilot's failures taught:
+# expression inside the frozen contract (v1 sternface), dry-wound (v2 bleeding palm),
+# whole-figure push (never enlarge a wound). No particle words (veo-glitter lesson).
+LIVING_LIGHT_BASE = (
+    "A finished inked graphic-novel comic panel - flat printed art with bold black ink outlines, "
+    "cel-flat color and cross-hatching, filmed as ONE very slow, gentle push-in toward {target}, "
+    "keeping the subject whole in frame. Every figure stays perfectly frozen - no limbs move, no "
+    "heads turn; every painted face keeps its exact same expression from first frame to last, the "
+    "eyes, brows and mouths NEVER shift, harden, frown or blink. Any wound marks stay exactly as "
+    "painted, dry and still - no blood flows, drips, spreads or grows. INVENT NOTHING: no new "
+    "figures, hands, wings, objects or lines appear; show ONLY what is already inked in this exact "
+    "panel. ONLY the light and the air are alive: {light}")
+_GLITTER_WORDS = ("sparkle", "glitter", "particle", "firefl", "bokeh", "shimmering dots")
+
 
 def load_piece(piece_dir: Path) -> dict:
     return json.loads((piece_dir / "piece.json").read_text(encoding="utf-8"))
@@ -280,7 +295,20 @@ def run_stills(piece_dir: Path, pj: dict, *, render: bool, force: bool, only: se
 def animate_prompts(pj: dict) -> dict[str, str]:
     an = pj.get("animate") or {"moves": {}}
     base = an.get("base") or INK_BASE   # per-piece verbatim override (e.g. em-dash variant)
-    return {slug: base.format(move=move) for slug, move in an["moves"].items()}
+    out = {slug: base.format(move=move) for slug, move in an["moves"].items()}
+    # living_light channel: {slug: {"target": ..., "light": ...}} — wins over moves for a slug.
+    # Prompt change -> clip_src_hash mismatch -> the normal gated re-render. Fail-closed on
+    # glitter words (they bloom AI-sparkle; light must be beams/glow/haze/mist, never dots).
+    for slug, ll in (an.get("living_light") or {}).items():
+        # "prompt" = verbatim override (e.g. a QC'd pilot clip whose exact wording differs
+        # from the template — the hash must bind to the words that PRODUCED the clip)
+        text = ll.get("prompt") or LIVING_LIGHT_BASE.format(target=ll["target"], light=ll["light"])
+        bad = [w for w in _GLITTER_WORDS if w in text.lower()]
+        if bad:
+            raise ValueError(f"living_light[{slug}]: banned particle word(s) {bad} — "
+                             f"describe beams/glow/haze/mist, not dots")
+        out[slug] = text
+    return out
 
 
 def clip_src_hash(still: Path, prompt: str, duration: int, aspect_ratio: str) -> str:
@@ -312,6 +340,17 @@ def run_animate(piece_dir: Path, pj: dict, *, only: set[str]) -> int:
     if not pj.get("animate"):
         print("(no animate section — this piece's clips come from elsewhere)")
         return 0
+    # ROLLOUT GATE (panel fix 2026-07-14): a piece with living_light entries claims the
+    # gold-master bar — refuse paid animate until the whole spec meets it (was CLI-only,
+    # i.e. a human-discipline single point of failure).
+    if (pj["animate"].get("living_light") or {}):
+        from pipeline.rollout_gate import check_piece
+        fails = check_piece(piece_dir)
+        if fails:
+            print("ROLLOUT GATE FAIL - refusing paid animate until the spec meets the bar:")
+            for f in fails:
+                print(f"  - {f}")
+            return 3
     from _hf_animate_short import hf_animate   # carries the PASS-sidecar + budget gates
     pool = piece_dir / "visual"
     clips = pool / "clips"

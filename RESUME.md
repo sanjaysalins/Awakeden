@@ -27,15 +27,40 @@ RAM first under pressure). Verified live. Override per-run with `POLITE_CPU=50` 
 - ~$0.15 sunk on 3 rejected samey stills → parked in `visual/_unused_new_stills/`.
 - Architectural smell (pre-existing): the shared living-page ENGINE lives inside one episode's folder (`longform/02_Psalm_22…`).
 
-### ⏭️ THEN — the two big asks still open (user wants, NOT started right)
-1. **VIRAL EFFECTS** — god-rays + cold→warm grade PROVEN in frames (user approved subtlety) but my post-pass render
-   was the WRONG architecture (slow: re-encodes whole 82s → GB files, minutes). RIGHT WAY = bake per-SEGMENT during the
-   build (~4s each = instant). Dust dropped (too costly for the payoff; if wanted, bake a STATIC dust layer into stills).
-   2.5D parallax not started (needs depth-layer/mask setup). Overlay recipe saved below.
-2. **CORPUS ROLLOUT** — apply this gold-master format (grid-mix + scale-variety + no-repeat + sound accents + safe-zone
-   + effects) to the other 12 shorts (10 Cross + 2 Resurrection). Needs CODIFYING first (a repeatable transform + a DoD
-   gate that BLOCKS non-conforming pieces) else it's 12× today's hand-iteration. Est budget ~$25-35 (variety/de-dup
-   renders + Kling micro-motion). Do cluster-by-cluster; user reviews each. QUOTE + get budget OK before the batch.
+### ✅ VIRAL EFFECTS SHIPPED (2026-07-14) — per-SEGMENT fx in the shared builder
+`build_livingpage_16x9.py` now has `apply_fx()` + `make_rays()`: per-beat spec `"fx": {"temp": K,
+"rays": {"at": [fx,fy], "strength": 0..1}}`. Grade = ffmpeg `colortemperature` applied only INSIDE the
+panel rects (whole-frame graded the ivory paper BLUE — caught on frame 1, fixed); rays = PIL gold
+streak-fan + core glow, screen-blend@0.6 rgba-both-sides, cached per (page,at,strength); one fast
+re-encode per ~4s segment, runs after motion / before captions. Women piece re-shipped with the arc
+(15/18 beats: 7200K doubt → 7900K Calvary → warm 5800→4900K; rays on angel beats 10/11 + landing 17/18),
+score+sfx re-cascaded, final 82.06s current, frames eye-verified, suite 293/1. Review gallery:
+`…/visual/_review/fx_review/index.html`. Still open from the effects wishlist: 2.5D parallax (needs
+depth masks — not started); dust stays dropped.
+### ✅ ROLLOUT UNDERWAY (2026-07-14 PM) — Phase 0 codified; Women = full hybrid gold master; Wave A next
+User GO: corpus rollout ~485cr for ALL 13 remaining cluster pieces (incl. father_forgive_them mocomic→livingpage
+migration; EW/QJA back-catalogue explicitly OUT). Pilot = 3/3 keepers after re-rolls → promoted into the Women
+final (backup kept). Codified: run_piece `animate.living_light` (3 locks: expression / dry-wound / whole-figure
+push; glitter ban; verbatim escape) + `pipeline/rollout_gate.py` (women PASS; it_is_finished correctly FAILs on 6
+gaps). Wave A = it_is_finished + pierced + crucifixion_foretold: author grid-mix + fx arc + living-light entries
+per piece, render, rebuild, USER REVIEWS the wave. Pilot learnings live in compare.html + memory.
+### 🎬 (superseded) KLING LIVING-LIGHT PILOT (2026-07-14 PM, user-approved ~22.5 credits) — 2 PASS / 1 fixable REJECT
+User direction (memory [[feedback-kling-native-effects-hybrid]]): SPEND on Kling for living light/atmosphere;
+builder keeps grid/slams/grade/SFX/captions. Pilot = `sfx_pilots/fx_pilot_kling_living_light.py` → 3 clips in
+`…/women_first_witnesses_luke245/visual/_fx_pilot/` (shipped clips untouched). RESULTS (`compare.html` there):
+women_bowed = PASS (rays intensify, floor lit, faces stable — the proof); women_tiny_dawn = PASS w/ footnote
+(Kling walked the tiny women despite "frozen" — fine at extreme-wide, reject-grade on a CU); risen_christ_seeking
+= REJECT (face hardened to a stern frown mid-clip — re-roll with "his gentle expression never changes" + push to
+the HAND). Learnings: expression must be INSIDE the frozen contract; ~7.5cr/clip; 502s retry-able (one may still
+bill); women_tiny_dawn.audit.json was armed-FAIL "pending review" → vision-reviewed + recorded PASS. NEXT: user
+judges compare.html → if GO, re-roll the landing + fold living-light into the corpus transform (reveal/landing
+beats only; camera-only stays for grid/argument beats).
+### ⏭️ THEN — the big ask still open
+**CORPUS ROLLOUT** — apply this gold-master format (grid-mix + scale-variety + no-repeat + sound accents + safe-zone
++ effects) to the other 12 shorts (10 Cross + 2 Resurrection). Needs CODIFYING first (a repeatable transform + a DoD
+gate that BLOCKS non-conforming pieces) else it's 12× today's hand-iteration. Est budget ~$25-35 (variety/de-dup
+renders + Kling micro-motion). Do cluster-by-cluster; user reviews each. QUOTE + get budget OK before the batch.
+The fx arc itself is $0 per piece (spec edits + rebuild) and is now part of the gold-master transform.
 
 ### 📐 GOLD-MASTER STANDARD (what every short should hit — codify this)
 Comic-grid layout (MIX: quad/big-two/3-band/split, not one) · scale variety (CU + wide + detail + medium — the fix for

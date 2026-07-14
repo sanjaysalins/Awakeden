@@ -1,6 +1,19 @@
 # STATE.md — progress tracker
 
-**Last updated:** 2026-07-14
+**Last updated:** 2026-07-14 (PM — viral FX shipped)
+**Status (2026-07-14 PM — VIRAL EFFECTS baked per-segment):** `apply_fx()` in the shared builder: per-beat
+spec `"fx"` = god-rays (PIL streak-fan, screen@0.6) + `colortemperature` grade INSIDE panel rects only
+(paper stays ivory). Women piece re-shipped w/ full cold→warm arc (15 fx beats, rays on angels+landing),
+score+sfx re-cascaded (82.06s), frames eye-verified, 293/1 green. Gallery: `…/visual/_review/fx_review/`.
+NEXT = corpus rollout (codify + quote ~$25-35). Uncommitted.
+**(later 07-14) LIVING-LIGHT SHIPPED + ROLLOUT PHASE 0 DONE:** user GO'd the hybrid (Kling = living light,
+builder = grid/grade/SFX, [[feedback-kling-native-effects-hybrid]]) + the ~485cr corpus rollout. Pilot ended
+3/3 keepers (landing took 3 rolls: v1 stern-face, v2 bleeding-wound, v3 PASS w/ expression+dry-wound locks).
+All 3 PROMOTED into the Women final (82.06s rebuilt, backup `…_sfx.bak_prelivinglight.mp4`); frames verified;
+**rollout gate: PASS women_first_witnesses**. CODIFIED: `animate.living_light` channel in run_piece.py
+(LIVING_LIGHT_BASE w/ the 3 locks + glitter ban + verbatim-prompt escape, hash-bound) + `pipeline/rollout_gate.py`
+(blocking gold-master bar) + tests → **305 passed/1 skip**. Spend today ≈ 52.5cr (7 Kling rolls). NEXT = Wave A
+(it_is_finished, pierced, crucifixion_foretold): spec upgrades ($0) → living-light clips → rebuild → user review.
 **Status (2026-07-14 — DECISION 1 resolved + gentler throttle):** Shake/slam feel is now **per-piece** via the
 spec's `"motion"` flag (user picked option b): `MOTION_PROFILES` in the shared builder — "classic" default =
 the original punchy look restored (all 12 other shorts + long-form unchanged on rebuild), "smooth" = no-shake

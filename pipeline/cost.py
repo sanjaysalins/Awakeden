@@ -62,8 +62,9 @@ def hf_estimate(model: str, prompt: str = "estimate", image=None) -> float:
     return float(d.get("credits_exact", d.get("credits", 0)))
 
 
-def hf_transactions(size: int = 200):
-    return _hf("account", "transactions", "--size", str(size), "--json")
+def hf_transactions(size: int = 100):
+    # HF API caps query.size at 100 (a larger value is a hard error, seen 2026-07-14)
+    return _hf("account", "transactions", "--size", str(min(size, 100)), "--json")
 
 
 # ---- ledger --------------------------------------------------------------------

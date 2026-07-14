@@ -23,7 +23,7 @@ frame-exact segments) via build_dyncomic_16x9; only the page compositor is new.
 import argparse, json, math, statistics, subprocess
 from pathlib import Path
 
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFilter
 
 import build_dyncomic_16x9 as base
 import caption_layout as cl
@@ -183,6 +183,76 @@ def apply_shake(seg, slams, dur):
     run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(seg), "-vf", vf, "-r", "30",
          "-c:v", "libx264", "-crf", "18", "-preset", "veryfast", "-pix_fmt", "yuv420p", str(tmp)],
         f"shake {seg.name}")
+    tmp.replace(seg)
+
+
+def make_rays(png, page, at, strength):
+    """Gold god-ray streak-fan + soft core glow as a full-page RGBA overlay (PIL, cached).
+    Deterministic (sin-hash per ray, no RNG) so re-runs are byte-stable."""
+    W, H = page
+    cx, cy = at[0] * W, at[1] * H
+    img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    dr = ImageDraw.Draw(img)
+    aim = math.atan2(H / 2 - cy, W / 2 - cx)     # fan opens toward the page centre
+    reach = math.hypot(W, H)
+    for k in range(24):
+        ang = aim + (k / 23 - 0.5) * math.radians(150)
+        ln = reach * (0.55 + 0.45 * abs(math.sin(k * 12.9898)))
+        hw = 14 + 60 * abs(math.sin(k * 4.1273))
+        al = int(strength * (26 + 34 * abs(math.sin(k * 7.331))))
+        tip = (cx + ln * math.cos(ang), cy + ln * math.sin(ang))
+        perp = (math.cos(ang + math.pi / 2), math.sin(ang + math.pi / 2))
+        dr.polygon([(cx, cy), (tip[0] + hw * perp[0], tip[1] + hw * perp[1]),
+                    (tip[0] - hw * perp[0], tip[1] - hw * perp[1])],
+                   fill=(255, 219, 145, al))
+    img = img.filter(ImageFilter.GaussianBlur(16))
+    glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    r = 0.14 * max(W, H)
+    ImageDraw.Draw(glow).ellipse([cx - r, cy - r, cx + r, cy + r],
+                                 fill=(255, 231, 178, int(110 * strength)))
+    img.alpha_composite(glow.filter(ImageFilter.GaussianBlur(60)))
+    img.save(png)
+
+
+def apply_fx(seg, dur, fx, rects=None):
+    """Bake the beat's viral effects in ONE fast re-encode of the ~4s segment — never a
+    whole-video post-pass (the 2026-07-13 post-pass was minutes + GB files; this is instant).
+    fx = spec per-beat {"temp": K, "rays": {"at": [fx,fy], "strength": 0..1, "opacity": 0..1}}:
+    temp <6500 = warm resurrection light, >6500 = cool death/dark (SUBTLE — inked art is
+    already warm); god-rays are the visible part. Runs after motion, BEFORE captions.
+    rects: panel rects for paged templates — the grade applies only INSIDE them, because
+    the ivory paper must stay constant across beats (a cool beat would print the page blue)."""
+    rays, temp = fx.get("rays"), fx.get("temp")
+    if not rays and not temp:
+        return
+    cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", str(seg)]
+    chain, last = [], "[0:v]"
+    if rays:
+        at = rays.get("at", [0.5, 0.12])
+        strength = rays.get("strength", 0.5)
+        png = WORK / f"_rays_{PAGE[0]}x{PAGE[1]}_{at[0]:.2f}_{at[1]:.2f}_{strength:.2f}.png"
+        if not png.exists():
+            make_rays(png, PAGE, at, strength)
+        cmd += ["-loop", "1", "-framerate", "30", "-t", f"{dur}", "-i", str(png)]
+        # format BOTH sides to rgba before screen-blending or the gold turns MAGENTA
+        chain.append(f"[0:v]format=rgba[b];[1:v]format=rgba[r];"
+                     f"[b][r]blend=all_mode=screen:all_opacity={rays.get('opacity', 0.6)}[v]")
+        last = "[v]"
+    if temp and rects:
+        chain.append(f"{last}split=2[fb][fg];[fg]colortemperature=temperature={int(temp)}[gt]")
+        chain.append(f"[gt]split={len(rects)}" + "".join(f"[t{k}]" for k in range(len(rects))))
+        for k, (x, y, w, h) in enumerate(rects):
+            chain.append(f"[t{k}]crop={w}:{h}:{x}:{y}[c{k}]")
+            chain.append(f"{'[fb]' if k == 0 else f'[b{k - 1}]'}[c{k}]overlay={x}:{y}[b{k}]")
+        last = f"[b{len(rects) - 1}]"
+    elif temp:
+        chain.append(f"{last}colortemperature=temperature={int(temp)}[g]")
+        last = "[g]"
+    chain.append(f"{last}format=yuv420p[outv]")
+    tmp = seg.with_name(seg.stem + "_fx.mp4")
+    run(cmd + ["-filter_complex", ";".join(chain), "-map", "[outv]", "-r", "30",
+               "-c:v", "libx264", "-crf", "18", "-preset", "veryfast", str(tmp)],
+        f"fx {seg.name}")
     tmp.replace(seg)
 
 
@@ -559,6 +629,9 @@ def main():
         for e in ins:
             src = e["sfx"] if "sfx" in e else TICK
             sfx_events.append((e["at"], src, e.get("gain", -13), 0.25, 0.08))
+        fxd = b.get("fx")
+        if fxd and not skip_build:
+            apply_fx(seg, dur, fxd, None if mode == "single" else rects)
         cp = b.get("cap")
         if (spec.get("cut_ticks") and not a.no_ticks and i > 1 and not bb
                 and not (cp and cp["type"] == "redletter")):
@@ -578,7 +651,9 @@ def main():
         segs.append(seg)
         tag = f"T{csol['tier']}{'*FLAG' if csol and csol['flag'] else ''} {csol['style']}" if csol else "-"
         print(f"  [{i:2}] {tpl:10} {dur:5.2f}s {len(slams)} slam(s) {'BREAK ' if bb else ''}{'TAKEOVER ' if tk else ''}"
-              f"{'PUNCH ' if b.get('punch') else ''}{'/'.join(moving):13} cap:{tag}", flush=True)
+              f"{'PUNCH ' if b.get('punch') else ''}"
+              f"{('FX(' + ('rays+' if fxd.get('rays') else '') + str(fxd.get('temp', '')) + 'K) ') if fxd else ''}"
+              f"{'/'.join(moving):13} cap:{tag}", flush=True)
         report.append({"beat": i, "t": b["t"], "dur": dur, "tpl": tpl, "slams": len(slams),
                        "slugs": [c["slug"] for c in b["clips"]],
                        "sources": moving, "punch": bool(b.get("punch")),
@@ -617,6 +692,7 @@ def main():
            "ramps": sum(1 for b in spec["beats"] if b.get("ramp")),
            "whips": sum(1 for b in spec["beats"] if b.get("whip")),
            "flash_inserts": sum(len(b.get("inserts", [])) for b in spec["beats"]),
+           "fx_beats": sum(1 for b in spec["beats"] if b.get("fx")),
            "cut_ticks": bool(spec.get("cut_ticks")),
            "beats": len(report)}
     if fitwarn:

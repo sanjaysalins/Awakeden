@@ -6,8 +6,8 @@
    6.2
   ],
   "slams": 16,
-  "kling_or_punch_or_slam_pct": 83,
-  "tier1_pct": 6,
+  "kling_or_punch_or_slam_pct": 89,
+  "tier1_pct": 11,
   "reuse_violations": [
    "women_plead_closer: beats 3->4 (gap 1 < 8)",
    "women_tell_news: beats 2->5 (gap 3 < 8)",
@@ -29,6 +29,7 @@
   "ramps": 0,
   "whips": 0,
   "flash_inserts": 0,
+  "fx_beats": 15,
   "cut_ticks": false,
   "beats": 18
  },
@@ -224,12 +225,12 @@
     "women_tiny_dawn"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
-    "style": "scrim",
+    "tier": 1,
+    "style": "box",
     "flag": false
    }
   },

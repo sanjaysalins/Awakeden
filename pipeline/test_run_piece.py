@@ -35,9 +35,11 @@ def test_piece_json_drives_all_stages(piece_dir):
             assert "image" in body, f"{slug}: ref not attached"
             # the referenced source still must actually exist
             assert (piece_dir / pj["stills"]["jobs"][slug]["ref"]).resolve().exists(), slug
-    # animate: prompts contain the frozen-tableau contract
+    # animate: prompts carry the anti-morph contract — either camera-only (INK_BASE)
+    # or the living-light form (figures frozen, only light/air move; 2026-07-14 hybrid)
     for slug, prompt in RP.animate_prompts(pj).items():
-        assert "INVENT NOTHING" in prompt and "only the camera moves" in prompt, slug
+        assert "INVENT NOTHING" in prompt, slug
+        assert "only the camera moves" in prompt or "perfectly frozen" in prompt, slug
     # score: a complete ffmpeg argv builds
     cmd = RP.score_cmd(piece_dir, pj)
     assert cmd[0] == "ffmpeg" and "-filter_complex" in cmd and str(cmd[-1]).endswith(".mp4")
