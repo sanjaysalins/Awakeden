@@ -1,6 +1,16 @@
 # STATE.md — progress tracker
 
-**Last updated:** 2026-07-14 (PM — viral FX shipped)
+**Last updated:** 2026-07-14 (eve — rollout red-teamed 6 rounds; Wave A(a) OPEN)
+**Status (2026-07-14 eve — ROLLOUT PLAN v5.1 + A(a) started):** Plan survived 6 adversarial panel
+rounds (findings shrank structural→arithmetic; every one verified+fixed or answered — see
+`batches/ROLLOUT_PLAN.md` + `_independent_review/`). Fail-closed spend stack now REAL: rollout gate
+(22 checks) + 485cr stop-loss keyed on ROLLOUT_EPISODES membership, projected-breach refusal,
+per-clip re-check, bulk guard (exit 5), cap inside hf_animate itself, exit codes propagate, disk
+cross-check de-duped. USER DECISION: A(a) $0 authoring proceeds now (reviewers cleared it rounds
+4-6); **A(b) paid renders blocked until the A(b) checkpoint decision.** `pipeline/wave_tools.py`
+shipped (backup/strips/compare/checklist — smoke-tested). Suite 315/1. NEXT = it_is_finished spec
+rewrite (grids+fx arc+smooth+living_light), then pierced, crucifixion_foretold → gate PASS ×3 →
+A(b) decision w/ user. Spend attributed: 37.5cr of 485.
 **Status (2026-07-14 PM — VIRAL EFFECTS baked per-segment):** `apply_fx()` in the shared builder: per-beat
 spec `"fx"` = god-rays (PIL streak-fan, screen@0.6) + `colortemperature` grade INSIDE panel rects only
 (paper stays ivory). Women piece re-shipped w/ full cold→warm arc (15 fx beats, rays on angels+landing),
