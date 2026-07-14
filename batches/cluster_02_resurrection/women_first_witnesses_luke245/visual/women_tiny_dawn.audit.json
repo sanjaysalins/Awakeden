@@ -1,0 +1,9 @@
+{
+  "image": "women_tiny_dawn.png",
+  "verdict": "FAIL",
+  "flags": [
+    "pending vision review (auto-armed at render)"
+  ],
+  "reviewer": "render-arm",
+  "stage": "content"
+}

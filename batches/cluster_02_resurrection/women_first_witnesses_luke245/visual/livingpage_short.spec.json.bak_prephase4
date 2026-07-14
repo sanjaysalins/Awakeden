@@ -1,0 +1,581 @@
+{
+ "_doc": "WOMEN AS FIRST WITNESSES (Luke 24:5-6) 9:16 SHORT - living page. 18 beats / 82.04s. Hook: the risen report dismissed as nonsense by the apostles (idle tales). Apologetic middle: a woman's word carried no legal weight, so no forger would open here; Luke names them (Mary Magdalene, Joanna), the witnesses who never left - watched Him die (afar), saw the burial, back at dawn. Angels reveal (heartbeat hush on 'He is not here, but is risen'), the remembered Galilee promise, crucified-and-risen. Landing: the promise kept, first to the overlooked, border-break on 'the risen Christ is seeking you'. Luke-scoped throughout.",
+ "audio": "../audio/narration.mp3",
+ "total": 82.04,
+ "cut_ticks": false,
+ "heartbeat": {
+  "from": 43.27,
+  "to": 49.0,
+  "gain": -9,
+  "bpm": 60
+ },
+ "beats": [
+  {
+   "t": [
+    0.0,
+    5.29
+   ],
+   "tpl": "hero_frac4",
+   "sfx": [
+    [
+     "impact_low_boom",
+     0.1,
+     -12
+    ]
+   ],
+   "clips": [
+    {
+     "slug": "apostles_dismiss",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The first news that Jesus was alive, His own apostles called nonsense",
+    "kw": "CALLED IT NONSENSE"
+   },
+   "anchors": [
+    [
+     3.2,
+     0.13,
+     0.24
+    ],
+    [
+     3.2,
+     0.37,
+     0.24
+    ],
+    [
+     3.4,
+     0.64,
+     0.23
+    ],
+    [
+     2.6,
+     0.8,
+     0.31
+    ]
+   ],
+   "panel_at": [
+    0.0,
+    0.3,
+    0.6,
+    0.9
+   ],
+   "panel_slide": [
+    "left",
+    "up",
+    "right",
+    "down"
+   ],
+   "flash": true
+  },
+  {
+   "t": [
+    5.29,
+    9.77
+   ],
+   "tpl": "hero_frac3",
+   "clips": [
+    {
+     "slug": "women_tell_news",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Their words seemed to them as idle tales, and they believed them not",
+    "kw": "IDLE TALES"
+   },
+   "anchors": [
+    [
+     1.6,
+     0.19,
+     0.4
+    ],
+    [
+     2.0,
+     0.38,
+     0.36
+    ],
+    [
+     2.0,
+     0.6,
+     0.35
+    ]
+   ],
+   "panel_at": [
+    5.29,
+    5.59,
+    5.89
+   ],
+   "panel_slide": [
+    "left",
+    "right",
+    "right"
+   ],
+   "flash": true
+  },
+  {
+   "t": [
+    9.77,
+    13.4
+   ],
+   "tpl": "hero_frac3",
+   "clips": [
+    {
+     "slug": "women_plead_closer",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The report came from women, whose word carried almost no weight in court",
+    "kw": "A WOMAN'S WORD"
+   },
+   "anchors": [
+    [
+     1.5,
+     0.22,
+     0.36
+    ],
+    [
+     1.9,
+     0.48,
+     0.31
+    ],
+    [
+     1.9,
+     0.79,
+     0.3
+    ]
+   ],
+   "panel_at": [
+    9.77,
+    10.07,
+    10.37
+   ],
+   "panel_slide": [
+    "left",
+    "right",
+    "right"
+   ],
+   "flash": true
+  },
+  {
+   "t": [
+    13.4,
+    17.5
+   ],
+   "tpl": "stack_h",
+   "clips": [
+    {
+     "slug": "women_plead_closer",
+     "motion": "pushin",
+     "at": 13.4
+    },
+    {
+     "slug": "apostles_doubt_closer",
+     "motion": "pushin",
+     "at": 13.68,
+     "slide": "up"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "No one inventing a resurrection would ever open it there",
+    "kw": "NO ONE WOULD INVENT THIS"
+   }
+  },
+  {
+   "t": [
+    17.5,
+    21.5
+   ],
+   "tpl": "hero_frac3",
+   "clips": [
+    {
+     "slug": "women_tell_news",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Luke gains nothing by recording it, unless it is simply what happened",
+    "kw": "UNLESS IT HAPPENED"
+   },
+   "anchors": [
+    [
+     1.5,
+     0.38,
+     0.36
+    ],
+    [
+     2.2,
+     0.19,
+     0.4
+    ],
+    [
+     2.2,
+     0.6,
+     0.35
+    ]
+   ],
+   "panel_at": [
+    17.5,
+    17.8,
+    18.1
+   ],
+   "panel_slide": [
+    "right",
+    "left",
+    "right"
+   ],
+   "flash": true
+  },
+  {
+   "t": [
+    21.5,
+    26.5
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "galilee_promise",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Luke named these women long before, Mary Magdalene, and Joanna",
+    "kw": "HE NAMED THEM"
+   },
+   "takeover": {
+    "panel": 0,
+    "start": 21.8,
+    "zoom": 1.16
+   }
+  },
+  {
+   "t": [
+    26.5,
+    29.2
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "women_cross_afar",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "They watched Him die",
+    "kw": "THEY WATCHED HIM DIE"
+   },
+   "takeover": {
+    "panel": 0,
+    "start": 26.7,
+    "zoom": 1.15
+   }
+  },
+  {
+   "t": [
+    29.2,
+    32.2
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "women_behold_burial",
+     "motion": "pushin",
+     "cam": "parallax"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "They saw where He was buried",
+    "kw": "WHERE HE WAS BURIED"
+   }
+  },
+  {
+   "t": [
+    32.2,
+    38.4
+   ],
+   "tpl": "full",
+   "whip": true,
+   "clips": [
+    {
+     "slug": "women_dawn_spices",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "At dawn, they were back",
+    "kw": "AT DAWN, THEY WERE BACK"
+   },
+   "ramp": true
+  },
+  {
+   "t": [
+    38.4,
+    43.27
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "two_men_shining",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "So the angels pointed them to His own promise",
+    "kw": "THE ANGELS SPOKE"
+   },
+   "takeover": {
+    "panel": 0,
+    "start": 38.8,
+    "zoom": 1.2
+   }
+  },
+  {
+   "t": [
+    43.27,
+    49.0
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "women_bowed",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "Why seek ye the living among the dead? He is not here, but is risen:",
+    "speaker": "THE ANGELS",
+    "ref": "LUKE 24:5-6"
+   }
+  },
+  {
+   "t": [
+    49.0,
+    54.0
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "galilee_listen_closer",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "remember how he spake unto you when he was yet in Galilee,",
+    "speaker": "THE ANGELS",
+    "ref": "LUKE 24:6"
+   },
+   "takeover": {
+    "panel": 0,
+    "start": 49.4,
+    "zoom": 1.14
+   }
+  },
+  {
+   "t": [
+    54.0,
+    59.11
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "risen_prophecy",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "The Son of man must be delivered into the hands of sinful men, and be crucified, and the third day rise again.",
+    "speaker": "THE ANGELS",
+    "ref": "LUKE 24:7"
+   },
+   "takeover": {
+    "panel": 0,
+    "start": 54.3,
+    "zoom": 1.14
+   }
+  },
+  {
+   "t": [
+    59.11,
+    63.6
+   ],
+   "tpl": "hero_frac3",
+   "clips": [
+    {
+     "slug": "women_remember",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "They had followed Him closely enough to hear that promise made",
+    "kw": "THEY HEARD IT MADE"
+   },
+   "anchors": [
+    [
+     1.5,
+     0.2,
+     0.3
+    ],
+    [
+     1.9,
+     0.48,
+     0.28
+    ],
+    [
+     1.9,
+     0.76,
+     0.28
+    ]
+   ],
+   "panel_at": [
+    59.11,
+    59.41,
+    59.71
+   ],
+   "panel_slide": [
+    "left",
+    "right",
+    "right"
+   ],
+   "flash": true
+  },
+  {
+   "t": [
+    63.6,
+    68.0
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "stone_rolled_empty",
+     "motion": "pushin",
+     "cam": "push"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The promise had been kept, and they were the first to know",
+    "kw": "THE FIRST TO KNOW"
+   },
+   "punch": true
+  },
+  {
+   "t": [
+    68.0,
+    73.0
+   ],
+   "tpl": "hero_frac3",
+   "clips": [
+    {
+     "slug": "women_run_tell",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The idle tale was true, and it went first to the ones the world would not hear",
+    "kw": "THE IDLE TALE WAS TRUE"
+   },
+   "anchors": [
+    [
+     1.6,
+     0.33,
+     0.38
+    ],
+    [
+     2.0,
+     0.49,
+     0.35
+    ],
+    [
+     2.0,
+     0.66,
+     0.33
+    ]
+   ],
+   "panel_at": [
+    68.0,
+    68.3,
+    68.6
+   ],
+   "panel_slide": [
+    "left",
+    "right",
+    "right"
+   ],
+   "flash": true
+  },
+  {
+   "t": [
+    73.0,
+    77.5
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "risen_christ_seeking",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He still sends His word to the overlooked. No standing in any court is required.",
+    "kw": "TO THE OVERLOOKED"
+   },
+   "takeover": {
+    "panel": 0,
+    "start": 73.3,
+    "zoom": 1.16
+   }
+  },
+  {
+   "t": [
+    77.5,
+    82.04
+   ],
+   "tpl": "full",
+   "punch": true,
+   "border_break": {
+    "at": 78.2
+   },
+   "takeover": {
+    "panel": 0,
+    "start": 78.0,
+    "zoom": 1.26
+   },
+   "sfx": [
+    [
+     "dawn_morning_warm",
+     77.6,
+     -13
+    ]
+   ],
+   "clips": [
+    {
+     "slug": "risen_christ_seeking",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Stop seeking the living among the dead. The risen Christ is seeking you.",
+    "kw": "HE IS SEEKING YOU"
+   }
+  }
+ ]
+}

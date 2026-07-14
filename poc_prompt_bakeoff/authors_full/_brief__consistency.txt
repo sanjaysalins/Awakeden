@@ -1,0 +1,36 @@
+You are the PROMPT ENGINEER for a reverent, biblically faithful short-video
+pipeline. From the brief below, write ONE complete, self-contained text-to-image
+prompt that I will paste DIRECTLY into the image generator (Google Nano Banana
+Pro / Gemini image, vertical 9:16) with NO edits. Put EVERYTHING the generator
+needs into your prompt — style, subject, mood, quality guards.
+
+REQUIRED STYLE (your prompt MUST specify this look): inked biblical graphic-novel
+/ cinematic-manga illustration — bold clean black ink linework and outlines, flat
+cel-shaded comic colour, hand-drawn 2D artwork, dramatic ink shadows, reverent and
+holy, ancient Near-Eastern period-accurate. NOT an oil painting, NOT
+photorealistic, NOT a 3D render, NOT soft airbrushed anime.
+
+A CHARACTER REFERENCE IMAGE of the canonical face(s) is attached at render time,
+so name the person and give light anchors (garment, hair, age) but do NOT
+over-describe the face — the reference carries the likeness.
+
+RULES your prompt must obey:
+- Frozen tableau / state-only: one held instant, no motion or sequence.
+- EXACTLY the figures the beat calls for, faces visible to camera, no extra
+  people; one dominant subject; extras recede into shadow.
+- Ancient first-century biblical world; ground every detail in the FACT CARD and
+  include NONE of its banned anachronisms.
+- No legible text, letters or signs anywhere; keep hands simple or shadowed.
+- Positive phrasing — describe the correct end-state, never "no X".
+
+SCENE: The women, first witnesses (2 beats)
+VERSE: Luke 24:1-3; Mark 16:1-4; Matthew 28:8-9
+NARRATION BEAT: BEAT A — Very early on the first day of the week, at first dawn light, the women come to the rock-cut tomb carrying their burial spices, and find the great stone already rolled away and the tomb open and empty.
+
+BEAT B — Moments later, as the SAME women hurry away to tell the disciples, the risen Jesus himself meets them on the path; they fall and hold him by the feet and worship.
+
+FACT CARD: WHO (identical across BOTH beats): the women who followed Jesus from Galilee — Mary Magdalene, a resolute woman in her thirties; Joanna, dignified and middle-aged; and an older grey-haired woman. First-century Judean women in simple wool tunics with mantles drawn over the head, muted earth-tone natural dyes, sandals; carrying burial spices in small clay jars or cloth bundles. PLACE: a rock-cut garden tomb sealed by a large heavy DISC / roll-stone (Mark 16:3-4), not a hinged wooden door; dawn half-light. BEAT A: the stone rolled aside, the tomb dark and EMPTY — no body, and (per the beat) no figure inside yet; the women startled. BEAT B: the risen Jesus stands on the path in a plain tunic and mantle (reference attached), the women bowed at his feet in worship (Matthew 28:9). BANNED ANACHRONISMS: modern faces, dress or grooming; a hinged wooden or stone door instead of the roll-stone; legible text; Jesus appearing INSIDE the empty tomb in beat A. TONE: hush, fear turning to astonished joy. CONSISTENCY IS THE TEST: the three women must read as the SAME three people in both frames — same ages, same garment colours, same hair.
+
+IDENTITY: The canonical women reference face is attached to BOTH beats; the Jesus reference is also attached to beat B. The whole point of this scene is identity CONSISTENCY across the two frames.
+
+This scene is TWO beats (A then B). Output TWO complete prompts, `PROMPT_A:` then `PROMPT_B:`, each on its own line. The SAME people must be visually IDENTICAL across both — repeat the exact same per-person anchors (age, garment colour, hair) in BOTH so they read as the same individuals.

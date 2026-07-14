@@ -1,0 +1,435 @@
+{
+ "dod": {
+  "median_beat_s": 4.52,
+  "max_beat_s": 6.2,
+  "held_gt6s": [
+   6.2
+  ],
+  "slams": 16,
+  "kling_or_punch_or_slam_pct": 83,
+  "tier1_pct": 6,
+  "reuse_violations": [
+   "women_plead_closer: beats 3->4 (gap 1 < 8)",
+   "women_tell_news: beats 2->5 (gap 3 < 8)",
+   "women_bowed: beats 10->11 (gap 1 < 8)",
+   "risen_christ_seeking: beats 17->18 (gap 1 < 8)"
+  ],
+  "tier3_or_flagged_beats": [
+   4
+  ],
+  "standard_3b": {
+   "stills_over_2_uses": {},
+   "stills_fullbleed_twice": {
+    "women_bowed": 2,
+    "risen_christ_seeking": 2
+   },
+   "fullbleed_beat_pct": 56,
+   "slop_caption_beats": []
+  },
+  "ramps": 0,
+  "whips": 0,
+  "flash_inserts": 0,
+  "cut_ticks": false,
+  "beats": 18
+ },
+ "beats": [
+  {
+   "beat": 1,
+   "t": [
+    0.0,
+    5.29
+   ],
+   "dur": 5.3,
+   "tpl": "hero_frac4",
+   "slams": 3,
+   "slugs": [
+    "apostles_dismiss"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 2,
+   "t": [
+    5.29,
+    9.77
+   ],
+   "dur": 4.466667,
+   "tpl": "hero_frac3",
+   "slams": 2,
+   "slugs": [
+    "women_tell_news"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 3,
+   "t": [
+    9.77,
+    13.4
+   ],
+   "dur": 3.633333,
+   "tpl": "hero_frac3",
+   "slams": 2,
+   "slugs": [
+    "women_plead_closer"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 4,
+   "t": [
+    13.4,
+    17.5
+   ],
+   "dur": 4.1,
+   "tpl": "stack_h",
+   "slams": 1,
+   "slugs": [
+    "women_plead_closer",
+    "apostles_doubt_closer"
+   ],
+   "sources": [
+    "kling",
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 3,
+    "style": "scrim",
+    "flag": true
+   }
+  },
+  {
+   "beat": 5,
+   "t": [
+    17.5,
+    21.5
+   ],
+   "dur": 4.0,
+   "tpl": "hero_band3",
+   "slams": 2,
+   "slugs": [
+    "women_tell_news"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 6,
+   "t": [
+    21.5,
+    26.5
+   ],
+   "dur": 5.0,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "galilee_promise"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 7,
+   "t": [
+    26.5,
+    29.2
+   ],
+   "dur": 2.7,
+   "tpl": "hero_band3",
+   "slams": 2,
+   "slugs": [
+    "women_cross_afar"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 8,
+   "t": [
+    29.2,
+    32.2
+   ],
+   "dur": 3.0,
+   "tpl": "hero_frac3",
+   "slams": 2,
+   "slugs": [
+    "women_behold_burial"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 9,
+   "t": [
+    32.2,
+    38.4
+   ],
+   "dur": 6.2,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "women_tiny_dawn"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 10,
+   "t": [
+    38.4,
+    43.27
+   ],
+   "dur": 4.866667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "women_bowed"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 11,
+   "t": [
+    43.27,
+    49.0
+   ],
+   "dur": 5.733333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "women_bowed"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 12,
+   "t": [
+    49.0,
+    54.0
+   ],
+   "dur": 5.0,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "galilee_listen_closer"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 13,
+   "t": [
+    54.0,
+    59.11
+   ],
+   "dur": 5.1,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "risen_prophecy"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 14,
+   "t": [
+    59.11,
+    63.6
+   ],
+   "dur": 4.5,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "magdalene_face_cu"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 15,
+   "t": [
+    63.6,
+    68.0
+   ],
+   "dur": 4.4,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "graveclothes_linen"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 16,
+   "t": [
+    68.0,
+    73.0
+   ],
+   "dur": 5.0,
+   "tpl": "hero_frac3",
+   "slams": 2,
+   "slugs": [
+    "women_run_tell"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 17,
+   "t": [
+    73.0,
+    77.5
+   ],
+   "dur": 4.5,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "risen_christ_seeking"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 18,
+   "t": [
+    77.5,
+    82.04
+   ],
+   "dur": 4.533333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "risen_christ_seeking"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+{
+  "slug": "stone_rolled_empty",
+  "hash": "b1fbb8b5fe65846d",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "",
+  "reviewer": "in-chat-agent"
+}

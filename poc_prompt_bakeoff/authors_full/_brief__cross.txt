@@ -1,0 +1,34 @@
+You are the PROMPT ENGINEER for a reverent, biblically faithful short-video
+pipeline. From the brief below, write ONE complete, self-contained text-to-image
+prompt that I will paste DIRECTLY into the image generator (Google Nano Banana
+Pro / Gemini image, vertical 9:16) with NO edits. Put EVERYTHING the generator
+needs into your prompt — style, subject, mood, quality guards.
+
+REQUIRED STYLE (your prompt MUST specify this look): inked biblical graphic-novel
+/ cinematic-manga illustration — bold clean black ink linework and outlines, flat
+cel-shaded comic colour, hand-drawn 2D artwork, dramatic ink shadows, reverent and
+holy, ancient Near-Eastern period-accurate. NOT an oil painting, NOT
+photorealistic, NOT a 3D render, NOT soft airbrushed anime.
+
+A CHARACTER REFERENCE IMAGE of the canonical face(s) is attached at render time,
+so name the person and give light anchors (garment, hair, age) but do NOT
+over-describe the face — the reference carries the likeness.
+
+RULES your prompt must obey:
+- Frozen tableau / state-only: one held instant, no motion or sequence.
+- EXACTLY the figures the beat calls for, faces visible to camera, no extra
+  people; one dominant subject; extras recede into shadow.
+- Ancient first-century biblical world; ground every detail in the FACT CARD and
+  include NONE of its banned anachronisms.
+- No legible text, letters or signs anywhere; keep hands simple or shadowed.
+- Positive phrasing — describe the correct end-state, never "no X".
+
+SCENE: Father, forgive them
+VERSE: Luke 23:33-34; Matthew 27:29,45; John 19:17-18
+NARRATION BEAT: The hero gospel-pivot frame: Jesus crucified at Calvary, and from the cross he prays for the very men who nailed him — 'Father, forgive them; for they know not what they do.' This is the still the whole short bookends on; it must carry the landing.
+
+FACT CARD: PLACE: Golgotha / Calvary, a low skull-hill outside Jerusalem (Luke 23:33; John 19:17). SUBJECT: Jesus nailed to a plain rough-hewn wooden Roman cross, stripped to a modest cloth loincloth (his garments were parted, John 19:23-24), a twisted crown of thorns on his head (Matthew 27:29), head bowed or lifted in prayer, weathered first-century Judean man of about thirty. FLANKING: two malefactors crucified one on each side (Luke 23:33) — keep them as distant flanking crosses in shadow, never co-equal focal points. SKY: a supernatural darkness lay over all the land from the sixth to the ninth hour (Matthew 27:45) — a darkened, oppressive noon, NOT a lightning thunderstorm. GROUND: Roman soldiers and a mocking crowd may recede below in deep shadow (Matthew 27:35-36). BANNED ANACHRONISMS: any legible titulus / sign text (the John 19:19 sign must be illegible or omitted); a lightning storm sky; an ornate European crucifix; modern faces, dress or grooming; horror-film gore; a bare fully-nude figure. Keep the pierced hands simple or in shadow (complex finger poses render as garbled blobs). TONE: reverent, sorrowful, holy — never sensational.
+
+IDENTITY: The canonical Jesus reference face is attached; name him and give light anchors (crown of thorns, loincloth, ~30) but let the reference carry the likeness.
+
+Output ONLY the finished prompt, ready to paste, prefixed EXACTLY with `PROMPT:` (a single flowing description, up to ~110 words).

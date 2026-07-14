@@ -1,0 +1,15 @@
+{
+  "slug": "women_tiny_dawn",
+  "hash": "a8711ae0547a77e5",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "",
+  "reviewer": "in-chat-agent"
+}

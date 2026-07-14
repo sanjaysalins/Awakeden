@@ -1,0 +1,23 @@
+{
+  "cross": {
+    "claude": "A",
+    "codex": "B",
+    "cursor": "C",
+    "grok": "D",
+    "gemini": "E"
+  },
+  "water": {
+    "claude": "A",
+    "grok": "B",
+    "codex": "C",
+    "gemini": "D",
+    "cursor": "E"
+  },
+  "consistency": {
+    "grok": "A",
+    "gemini": "B",
+    "codex": "C",
+    "cursor": "D",
+    "claude": "E"
+  }
+}

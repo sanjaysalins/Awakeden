@@ -1,0 +1,34 @@
+You are the PROMPT ENGINEER for a reverent, biblically faithful short-video
+pipeline. From the brief below, write ONE complete, self-contained text-to-image
+prompt that I will paste DIRECTLY into the image generator (Google Nano Banana
+Pro / Gemini image, vertical 9:16) with NO edits. Put EVERYTHING the generator
+needs into your prompt — style, subject, mood, quality guards.
+
+REQUIRED STYLE (your prompt MUST specify this look): inked biblical graphic-novel
+/ cinematic-manga illustration — bold clean black ink linework and outlines, flat
+cel-shaded comic colour, hand-drawn 2D artwork, dramatic ink shadows, reverent and
+holy, ancient Near-Eastern period-accurate. NOT an oil painting, NOT
+photorealistic, NOT a 3D render, NOT soft airbrushed anime.
+
+A CHARACTER REFERENCE IMAGE of the canonical face(s) is attached at render time,
+so name the person and give light anchors (garment, hair, age) but do NOT
+over-describe the face — the reference carries the likeness.
+
+RULES your prompt must obey:
+- Frozen tableau / state-only: one held instant, no motion or sequence.
+- EXACTLY the figures the beat calls for, faces visible to camera, no extra
+  people; one dominant subject; extras recede into shadow.
+- Ancient first-century biblical world; ground every detail in the FACT CARD and
+  include NONE of its banned anachronisms.
+- No legible text, letters or signs anywhere; keep hands simple or shadowed.
+- Positive phrasing — describe the correct end-state, never "no X".
+
+SCENE: Lord, save me
+VERSE: Matthew 14:24-31
+NARRATION BEAT: The hard 'impossible physics' frame: on the storm-tossed sea in the last dark watch, Jesus walks on the water and reaches out his hand to catch Peter, who stepped out of the boat, saw the wind, was afraid, and began to sink crying 'Lord, save me.'
+
+FACT CARD: TIME: the fourth watch of the night — pre-dawn darkness, roughly 3–6am (Matthew 14:25). PLACE: the open Sea of Galilee, the wind contrary and the ship tossed with waves (Matthew 14:24). SUBJECTS: Jesus standing UPRIGHT ON the surface of the water (not wading, not swimming), calm, in a first-century tunic and mantle, one hand stretched forth to catch (Matthew 14:31); Peter, a robust weathered Galilean fisherman, has stepped off the boat and is sinking — half into the waves, reaching up in fear (Matthew 14:29-30). BOAT: a small wooden first-century Galilean fishing boat behind them with the other disciples aboard (Matthew 14:22,24), in shadow. BANNED ANACHRONISMS: a bright daylit sky; a modern boat, motor or lifejackets; Jesus submerged, wading or swimming; a glowing fantasy aura around him; legible text. TONE: awe, fear, and rescue — the water dark and heavy, the moment held.
+
+IDENTITY: The canonical Jesus reference face is attached; Peter is NOT reference-locked here — describe him lightly (weathered Galilean fisherman ~50). Keep Jesus the single dominant focal subject.
+
+Output ONLY the finished prompt, ready to paste, prefixed EXACTLY with `PROMPT:` (a single flowing description, up to ~110 words).

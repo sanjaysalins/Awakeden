@@ -8561,6 +8561,602 @@
       "used_in": [
         "sign_of_jonah_matt1240 short"
       ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "women_first_witnesses_luke245",
+      "piece_title": "Women as First Witnesses (Luke 24:5-6)",
+      "verse": "Luke 24:5-7 + 24:10-11 (context Luke 8:2-3, 23:49, 23:53-55, 24:1-4; landing echo Luke 19:10)",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-12",
+      "id": "ww_apostles_dismiss",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/women_first_witnesses_luke245/visual/apostles_dismiss.png",
+      "title": "the apostles dismissing the women's report as nonsense",
+      "subject": "the apostles dismissing the women's report as nonsense",
+      "characters": [
+        "the apostles"
+      ],
+      "elements": [
+        "stone room",
+        "doubting faces",
+        "grey dawn light"
+      ],
+      "setting": "a plain stone room",
+      "palette": "inked cel-flat, grey pre-dawn to shining white to sunrise gold",
+      "mood": "the witnesses the world would not hear, sent first to the empty tomb",
+      "doctrine": "their words seemed to them as idle tales, and they believed them not (Luke 24:11)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "luke245",
+        "women_witnesses",
+        "resurrection"
+      ],
+      "used_in": [
+        "women_first_witnesses_luke245 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "women_first_witnesses_luke245",
+      "piece_title": "Women as First Witnesses (Luke 24:5-6)",
+      "verse": "Luke 24:5-7 + 24:10-11 (context Luke 8:2-3, 23:49, 23:53-55, 24:1-4; landing echo Luke 19:10)",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-12",
+      "id": "ww_women_tell_news",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/women_first_witnesses_luke245/visual/women_tell_news.png",
+      "title": "the women earnestly telling the disbelieving disciples",
+      "subject": "the women earnestly telling the disbelieving disciples",
+      "characters": [
+        "Mary Magdalene",
+        "Joanna",
+        "the women"
+      ],
+      "elements": [
+        "open pleading hands",
+        "seated doubting men",
+        "stone interior"
+      ],
+      "setting": "a plain stone room",
+      "palette": "inked cel-flat, grey pre-dawn to shining white to sunrise gold",
+      "mood": "the witnesses the world would not hear, sent first to the empty tomb",
+      "doctrine": "It was Mary Magdalene, and Joanna... which told these things unto the apostles (Luke 24:10)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "luke245",
+        "women_witnesses",
+        "resurrection"
+      ],
+      "used_in": [
+        "women_first_witnesses_luke245 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "women_first_witnesses_luke245",
+      "piece_title": "Women as First Witnesses (Luke 24:5-6)",
+      "verse": "Luke 24:5-7 + 24:10-11 (context Luke 8:2-3, 23:49, 23:53-55, 24:1-4; landing echo Luke 19:10)",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-12",
+      "id": "ww_women_cross_afar",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/women_first_witnesses_luke245/visual/women_cross_afar.png",
+      "title": "the women watching the crucifixion from afar",
+      "subject": "the women watching the crucifixion from afar",
+      "characters": [
+        "the women"
+      ],
+      "elements": [
+        "three distant crosses",
+        "barren slope",
+        "darkened sky"
+      ],
+      "setting": "a slope far from Golgotha",
+      "palette": "inked cel-flat, grey pre-dawn to shining white to sunrise gold",
+      "mood": "the witnesses the world would not hear, sent first to the empty tomb",
+      "doctrine": "the women that followed him from Galilee, stood afar off, beholding these things (Luke 23:49)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "luke245",
+        "women_witnesses",
+        "resurrection"
+      ],
+      "used_in": [
+        "women_first_witnesses_luke245 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "women_first_witnesses_luke245",
+      "piece_title": "Women as First Witnesses (Luke 24:5-6)",
+      "verse": "Luke 24:5-7 + 24:10-11 (context Luke 8:2-3, 23:49, 23:53-55, 24:1-4; landing echo Luke 19:10)",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-12",
+      "id": "ww_women_behold_burial",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/women_first_witnesses_luke245/visual/women_behold_burial.png",
+      "title": "the women watching where the body was laid",
+      "subject": "the women watching where the body was laid",
+      "characters": [
+        "the women"
+      ],
+      "elements": [
+        "linen-wrapped body",
+        "rock-hewn tomb",
+        "great stone waiting"
+      ],
+      "setting": "the garden tomb at dusk",
+      "palette": "inked cel-flat, grey pre-dawn to shining white to sunrise gold",
+      "mood": "the witnesses the world would not hear, sent first to the empty tomb",
+      "doctrine": "beheld the sepulchre, and how his body was laid (Luke 23:55); a sepulchre that was hewn in stone (Luke 23:53)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "luke245",
+        "women_witnesses",
+        "resurrection"
+      ],
+      "used_in": [
+        "women_first_witnesses_luke245 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "women_first_witnesses_luke245",
+      "piece_title": "Women as First Witnesses (Luke 24:5-6)",
+      "verse": "Luke 24:5-7 + 24:10-11 (context Luke 8:2-3, 23:49, 23:53-55, 24:1-4; landing echo Luke 19:10)",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-12",
+      "id": "ww_women_dawn_spices",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/women_first_witnesses_luke245/visual/women_dawn_spices.png",
+      "title": "the women returning to the tomb at dawn with spices",
+      "subject": "the women returning to the tomb at dawn with spices",
+      "characters": [
+        "the women"
+      ],
+      "elements": [
+        "clay spice jars",
+        "garden tomb",
+        "grey-gold dawn"
+      ],
+      "setting": "the garden tomb at first light",
+      "palette": "inked cel-flat, grey pre-dawn to shining white to sunrise gold",
+      "mood": "the witnesses the world would not hear, sent first to the empty tomb",
+      "doctrine": "very early in the morning, they came unto the sepulchre, bringing the spices (Luke 24:1)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "luke245",
+        "women_witnesses",
+        "resurrection"
+      ],
+      "used_in": [
+        "women_first_witnesses_luke245 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "women_first_witnesses_luke245",
+      "piece_title": "Women as First Witnesses (Luke 24:5-6)",
+      "verse": "Luke 24:5-7 + 24:10-11 (context Luke 8:2-3, 23:49, 23:53-55, 24:1-4; landing echo Luke 19:10)",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-12",
+      "id": "ww_stone_rolled_empty",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/women_first_witnesses_luke245/visual/stone_rolled_empty.png",
+      "title": "the stone rolled away, the tomb empty at dawn",
+      "subject": "the stone rolled away, the tomb empty at dawn",
+      "characters": [],
+      "elements": [
+        "rolled stone",
+        "dark empty opening",
+        "sunrise garden"
+      ],
+      "setting": "the garden tomb",
+      "palette": "inked cel-flat, grey pre-dawn to shining white to sunrise gold",
+      "mood": "the witnesses the world would not hear, sent first to the empty tomb",
+      "doctrine": "they found the stone rolled away... and found not the body of the Lord Jesus (Luke 24:2-3)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "luke245",
+        "women_witnesses",
+        "resurrection"
+      ],
+      "used_in": [
+        "women_first_witnesses_luke245 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "women_first_witnesses_luke245",
+      "piece_title": "Women as First Witnesses (Luke 24:5-6)",
+      "verse": "Luke 24:5-7 + 24:10-11 (context Luke 8:2-3, 23:49, 23:53-55, 24:1-4; landing echo Luke 19:10)",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-12",
+      "id": "ww_two_men_shining",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/women_first_witnesses_luke245/visual/two_men_shining.png",
+      "title": "the two men in shining garments standing in the tomb",
+      "subject": "the two men in shining garments standing in the tomb",
+      "characters": [
+        "the two men (angels)"
+      ],
+      "elements": [
+        "shining white garments",
+        "radiant light",
+        "empty stone bench"
+      ],
+      "setting": "inside the rock-hewn tomb",
+      "palette": "inked cel-flat, grey pre-dawn to shining white to sunrise gold",
+      "mood": "the witnesses the world would not hear, sent first to the empty tomb",
+      "doctrine": "two men stood by them in shining garments (Luke 24:4); a vision of angels (Luke 24:23)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "luke245",
+        "women_witnesses",
+        "resurrection"
+      ],
+      "used_in": [
+        "women_first_witnesses_luke245 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "women_first_witnesses_luke245",
+      "piece_title": "Women as First Witnesses (Luke 24:5-6)",
+      "verse": "Luke 24:5-7 + 24:10-11 (context Luke 8:2-3, 23:49, 23:53-55, 24:1-4; landing echo Luke 19:10)",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-12",
+      "id": "ww_women_bowed",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/women_first_witnesses_luke245/visual/women_bowed.png",
+      "title": "the women bowed to the earth before the shining men",
+      "subject": "the women bowed to the earth before the shining men",
+      "characters": [
+        "the women",
+        "the two men (angels)"
+      ],
+      "elements": [
+        "faces bowed to the earth",
+        "shining figures",
+        "tomb interior"
+      ],
+      "setting": "inside the rock-hewn tomb",
+      "palette": "inked cel-flat, grey pre-dawn to shining white to sunrise gold",
+      "mood": "the witnesses the world would not hear, sent first to the empty tomb",
+      "doctrine": "as they were afraid, and bowed down their faces to the earth (Luke 24:5)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "luke245",
+        "women_witnesses",
+        "resurrection"
+      ],
+      "used_in": [
+        "women_first_witnesses_luke245 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "women_first_witnesses_luke245",
+      "piece_title": "Women as First Witnesses (Luke 24:5-6)",
+      "verse": "Luke 24:5-7 + 24:10-11 (context Luke 8:2-3, 23:49, 23:53-55, 24:1-4; landing echo Luke 19:10)",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-12",
+      "id": "ww_galilee_promise",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/women_first_witnesses_luke245/visual/galilee_promise.png",
+      "title": "Jesus teaching the disciples and women in Galilee",
+      "subject": "Jesus teaching the disciples and women in Galilee",
+      "characters": [
+        "Christ",
+        "disciples",
+        "the women"
+      ],
+      "elements": [
+        "Galilee hillside",
+        "seated listeners",
+        "raised teaching hand"
+      ],
+      "setting": "a Galilee hillside",
+      "palette": "inked cel-flat, grey pre-dawn to shining white to sunrise gold",
+      "mood": "the witnesses the world would not hear, sent first to the empty tomb",
+      "doctrine": "remember how he spake unto you when he was yet in Galilee (Luke 24:6)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "luke245",
+        "women_witnesses",
+        "resurrection"
+      ],
+      "used_in": [
+        "women_first_witnesses_luke245 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "women_first_witnesses_luke245",
+      "piece_title": "Women as First Witnesses (Luke 24:5-6)",
+      "verse": "Luke 24:5-7 + 24:10-11 (context Luke 8:2-3, 23:49, 23:53-55, 24:1-4; landing echo Luke 19:10)",
+      "source": "byteplus seedream-4-5",
+      "created": "2026-07-12",
+      "id": "ww_risen_christ_seeking",
+      "type": "still",
+      "media": "image",
+      "path": "batches/cluster_02_resurrection/women_first_witnesses_luke245/visual/risen_christ_seeking.png",
+      "title": "the risen Christ reaching out to seek the overlooked",
+      "subject": "the risen Christ reaching out to seek the overlooked",
+      "characters": [
+        "Christ risen"
+      ],
+      "elements": [
+        "outstretched hand",
+        "wound-marks in hand and feet",
+        "sunrise garden"
+      ],
+      "setting": "a garden at sunrise",
+      "palette": "inked cel-flat, grey pre-dawn to shining white to sunrise gold",
+      "mood": "the witnesses the world would not hear, sent first to the empty tomb",
+      "doctrine": "Behold my hands and my feet (Luke 24:39); the Son of man is come to seek and to save that which was lost (Luke 19:10)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "luke245",
+        "women_witnesses",
+        "resurrection"
+      ],
+      "used_in": [
+        "women_first_witnesses_luke245 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "women_first_witnesses_luke245",
+      "piece_title": "Women as First Witnesses (Luke 24:5-6)",
+      "verse": "Luke 24:5-7 + 24:10-11 (context Luke 8:2-3, 23:49, 23:53-55, 24:1-4; landing echo Luke 19:10)",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-12",
+      "id": "ww_apostles_dismiss_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/women_first_witnesses_luke245/visual/clips/apostles_dismiss.mp4",
+      "title": "the apostles dismissing the women's report as nonsense (Kling push-in)",
+      "subject": "the apostles dismissing the women's report as nonsense",
+      "characters": [
+        "the apostles"
+      ],
+      "elements": [
+        "stone room",
+        "doubting faces",
+        "grey dawn light"
+      ],
+      "setting": "a plain stone room",
+      "doctrine": "their words seemed to them as idle tales, and they believed them not (Luke 24:11)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "luke245",
+        "kling"
+      ],
+      "used_in": [
+        "women_first_witnesses_luke245 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "women_first_witnesses_luke245",
+      "piece_title": "Women as First Witnesses (Luke 24:5-6)",
+      "verse": "Luke 24:5-7 + 24:10-11 (context Luke 8:2-3, 23:49, 23:53-55, 24:1-4; landing echo Luke 19:10)",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-12",
+      "id": "ww_women_dawn_spices_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/women_first_witnesses_luke245/visual/clips/women_dawn_spices.mp4",
+      "title": "the women returning to the tomb at dawn with spices (Kling push-in)",
+      "subject": "the women returning to the tomb at dawn with spices",
+      "characters": [
+        "the women"
+      ],
+      "elements": [
+        "clay spice jars",
+        "garden tomb",
+        "grey-gold dawn"
+      ],
+      "setting": "the garden tomb at first light",
+      "doctrine": "very early in the morning, they came unto the sepulchre, bringing the spices (Luke 24:1)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "luke245",
+        "kling"
+      ],
+      "used_in": [
+        "women_first_witnesses_luke245 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "women_first_witnesses_luke245",
+      "piece_title": "Women as First Witnesses (Luke 24:5-6)",
+      "verse": "Luke 24:5-7 + 24:10-11 (context Luke 8:2-3, 23:49, 23:53-55, 24:1-4; landing echo Luke 19:10)",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-12",
+      "id": "ww_two_men_shining_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/women_first_witnesses_luke245/visual/clips/two_men_shining.mp4",
+      "title": "the two men in shining garments standing in the tomb (Kling push-in)",
+      "subject": "the two men in shining garments standing in the tomb",
+      "characters": [
+        "the two men (angels)"
+      ],
+      "elements": [
+        "shining white garments",
+        "radiant light",
+        "empty stone bench"
+      ],
+      "setting": "inside the rock-hewn tomb",
+      "doctrine": "two men stood by them in shining garments (Luke 24:4); a vision of angels (Luke 24:23)",
+      "reuse_scope": "specific",
+      "tags": [
+        "livingpage",
+        "luke245",
+        "kling"
+      ],
+      "used_in": [
+        "women_first_witnesses_luke245 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "women_first_witnesses_luke245",
+      "piece_title": "Women as First Witnesses (Luke 24:5-6)",
+      "verse": "Luke 24:5-7 + 24:10-11 (context Luke 8:2-3, 23:49, 23:53-55, 24:1-4; landing echo Luke 19:10)",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-12",
+      "id": "ww_women_bowed_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/women_first_witnesses_luke245/visual/clips/women_bowed.mp4",
+      "title": "the women bowed to the earth before the shining men (Kling push-in)",
+      "subject": "the women bowed to the earth before the shining men",
+      "characters": [
+        "the women",
+        "the two men (angels)"
+      ],
+      "elements": [
+        "faces bowed to the earth",
+        "shining figures",
+        "tomb interior"
+      ],
+      "setting": "inside the rock-hewn tomb",
+      "doctrine": "as they were afraid, and bowed down their faces to the earth (Luke 24:5)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "luke245",
+        "kling"
+      ],
+      "used_in": [
+        "women_first_witnesses_luke245 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "women_first_witnesses_luke245",
+      "piece_title": "Women as First Witnesses (Luke 24:5-6)",
+      "verse": "Luke 24:5-7 + 24:10-11 (context Luke 8:2-3, 23:49, 23:53-55, 24:1-4; landing echo Luke 19:10)",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-12",
+      "id": "ww_galilee_promise_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/women_first_witnesses_luke245/visual/clips/galilee_promise.mp4",
+      "title": "Jesus teaching the disciples and women in Galilee (Kling push-in)",
+      "subject": "Jesus teaching the disciples and women in Galilee",
+      "characters": [
+        "Christ",
+        "disciples",
+        "the women"
+      ],
+      "elements": [
+        "Galilee hillside",
+        "seated listeners",
+        "raised teaching hand"
+      ],
+      "setting": "a Galilee hillside",
+      "doctrine": "remember how he spake unto you when he was yet in Galilee (Luke 24:6)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "luke245",
+        "kling"
+      ],
+      "used_in": [
+        "women_first_witnesses_luke245 short"
+      ]
+    },
+    {
+      "aspect": "9:16",
+      "style": "graphic_novel_inked",
+      "cluster": "cluster_02_resurrection",
+      "piece": "women_first_witnesses_luke245",
+      "piece_title": "Women as First Witnesses (Luke 24:5-6)",
+      "verse": "Luke 24:5-7 + 24:10-11 (context Luke 8:2-3, 23:49, 23:53-55, 24:1-4; landing echo Luke 19:10)",
+      "source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+      "created": "2026-07-12",
+      "id": "ww_risen_christ_seeking_clip",
+      "type": "clip",
+      "media": "video",
+      "path": "batches/cluster_02_resurrection/women_first_witnesses_luke245/visual/clips/risen_christ_seeking.mp4",
+      "title": "the risen Christ reaching out to seek the overlooked (Kling push-in)",
+      "subject": "the risen Christ reaching out to seek the overlooked",
+      "characters": [
+        "Christ risen"
+      ],
+      "elements": [
+        "outstretched hand",
+        "wound-marks in hand and feet",
+        "sunrise garden"
+      ],
+      "setting": "a garden at sunrise",
+      "doctrine": "Behold my hands and my feet (Luke 24:39); the Son of man is come to seek and to save that which was lost (Luke 19:10)",
+      "reuse_scope": "hero",
+      "tags": [
+        "livingpage",
+        "luke245",
+        "kling"
+      ],
+      "used_in": [
+        "women_first_witnesses_luke245 short"
+      ]
     }
   ]
 }

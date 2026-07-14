@@ -1,0 +1,31 @@
+{
+  "note": "TRUE INDEPENDENCE test. Each author gets ONLY the verse (KJV) + a one-line neutral beat. No fact card, no style, no identity anchors, no negatives, no rules, no consistency instruction. Prompts are rendered VERBATIM through NBP (no ref, no style injection) so we see each model's own unguided instincts.",
+  "negative": "",
+  "briefs": [
+    {
+      "id": "cross",
+      "title": "Father, forgive them",
+      "mode": "single",
+      "verse_ref": "Luke 23:33-34",
+      "kjv_text": "And when they were come to the place, which is called Calvary, there they crucified him, and the malefactors, one on the right hand, and the other on the left. Then said Jesus, Father, forgive them; for they know not what they do. And they parted his raiment, and cast lots.",
+      "beat": "Depict the moment Jesus, crucified, prays 'Father, forgive them.'"
+    },
+    {
+      "id": "water",
+      "title": "Lord, save me",
+      "mode": "single",
+      "verse_ref": "Matthew 14:25-31",
+      "kjv_text": "And in the fourth watch of the night Jesus went unto them, walking on the sea... And when Peter was come down out of the ship, he walked on the water, to go to Jesus. But when he saw the wind boisterous, he was afraid; and beginning to sink, he cried, saying, Lord, save me. And immediately Jesus stretched forth his hand, and caught him.",
+      "beat": "Depict the moment Jesus catches the sinking Peter on the water."
+    },
+    {
+      "id": "consistency",
+      "title": "The women, first witnesses (2 beats)",
+      "mode": "pair",
+      "verse_ref": "Luke 24:1-3; Matthew 28:8-9",
+      "kjv_text": "[Luke 24:1-3] Now upon the first day of the week, very early in the morning, they came unto the sepulchre, bringing the spices which they had prepared... And they found the stone rolled away from the sepulchre. And they entered in, and found not the body of the Lord Jesus.\n[Matthew 28:8-9] And they departed quickly from the sepulchre with fear and great joy... And as they went to tell his disciples, behold, Jesus met them, saying, All hail. And they came and held him by the feet, and worshipped him.",
+      "beat_a": "Depict the women arriving at the tomb at dawn, finding the stone rolled away and the body gone.",
+      "beat_b": "Depict the same women, moments later, meeting the risen Jesus on the way and holding him by the feet."
+    }
+  ]
+}

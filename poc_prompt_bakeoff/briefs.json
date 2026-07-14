@@ -1,0 +1,38 @@
+{
+  "note": "POC prompt-authoring bake-off. Every LLM author gets the SAME brief per scene. Only the author varies; style + negatives + character ref are frozen. Style = inked graphic-novel (config.STYLE_REGISTRY['graphic_novel']). Renderer = NBP (gemini-3-pro-image-preview), 9:16.",
+  "negative": "legible text letters signs or writing, modern clothing objects or architecture, extra or fused or missing fingers, photorealistic or glossy 3D render, oil-painting brushstrokes, soft airbrushed anime, horror gore, more than one dominant subject, cluttered unreadable crowd, fantasy glow or halo aura",
+  "briefs": [
+    {
+      "id": "cross",
+      "title": "Father, forgive them",
+      "mode": "single",
+      "refs": ["ref_library/characters/JESUS.png"],
+      "verse_ref": "Luke 23:33-34; Matthew 27:29,45; John 19:17-18",
+      "beat": "The hero gospel-pivot frame: Jesus crucified at Calvary, and from the cross he prays for the very men who nailed him — 'Father, forgive them; for they know not what they do.' This is the still the whole short bookends on; it must carry the landing.",
+      "fact_card": "PLACE: Golgotha / Calvary, a low skull-hill outside Jerusalem (Luke 23:33; John 19:17). SUBJECT: Jesus nailed to a plain rough-hewn wooden Roman cross, stripped to a modest cloth loincloth (his garments were parted, John 19:23-24), a twisted crown of thorns on his head (Matthew 27:29), head bowed or lifted in prayer, weathered first-century Judean man of about thirty. FLANKING: two malefactors crucified one on each side (Luke 23:33) — keep them as distant flanking crosses in shadow, never co-equal focal points. SKY: a supernatural darkness lay over all the land from the sixth to the ninth hour (Matthew 27:45) — a darkened, oppressive noon, NOT a lightning thunderstorm. GROUND: Roman soldiers and a mocking crowd may recede below in deep shadow (Matthew 27:35-36). BANNED ANACHRONISMS: any legible titulus / sign text (the John 19:19 sign must be illegible or omitted); a lightning storm sky; an ornate European crucifix; modern faces, dress or grooming; horror-film gore; a bare fully-nude figure. Keep the pierced hands simple or in shadow (complex finger poses render as garbled blobs). TONE: reverent, sorrowful, holy — never sensational.",
+      "identity_note": "The canonical Jesus reference face is attached; name him and give light anchors (crown of thorns, loincloth, ~30) but let the reference carry the likeness."
+    },
+    {
+      "id": "water",
+      "title": "Lord, save me",
+      "mode": "single",
+      "refs": ["ref_library/characters/JESUS.png"],
+      "verse_ref": "Matthew 14:24-31",
+      "beat": "The hard 'impossible physics' frame: on the storm-tossed sea in the last dark watch, Jesus walks on the water and reaches out his hand to catch Peter, who stepped out of the boat, saw the wind, was afraid, and began to sink crying 'Lord, save me.'",
+      "fact_card": "TIME: the fourth watch of the night — pre-dawn darkness, roughly 3–6am (Matthew 14:25). PLACE: the open Sea of Galilee, the wind contrary and the ship tossed with waves (Matthew 14:24). SUBJECTS: Jesus standing UPRIGHT ON the surface of the water (not wading, not swimming), calm, in a first-century tunic and mantle, one hand stretched forth to catch (Matthew 14:31); Peter, a robust weathered Galilean fisherman, has stepped off the boat and is sinking — half into the waves, reaching up in fear (Matthew 14:29-30). BOAT: a small wooden first-century Galilean fishing boat behind them with the other disciples aboard (Matthew 14:22,24), in shadow. BANNED ANACHRONISMS: a bright daylit sky; a modern boat, motor or lifejackets; Jesus submerged, wading or swimming; a glowing fantasy aura around him; legible text. TONE: awe, fear, and rescue — the water dark and heavy, the moment held.",
+      "identity_note": "The canonical Jesus reference face is attached; Peter is NOT reference-locked here — describe him lightly (weathered Galilean fisherman ~50). Keep Jesus the single dominant focal subject."
+    },
+    {
+      "id": "consistency",
+      "title": "The women, first witnesses (2 beats)",
+      "mode": "pair",
+      "refs_a": ["ref_library/characters/THE_WOMEN.png"],
+      "refs_b": ["ref_library/characters/THE_WOMEN.png", "ref_library/characters/JESUS.png"],
+      "verse_ref": "Luke 24:1-3; Mark 16:1-4; Matthew 28:8-9",
+      "beat_a": "BEAT A — Very early on the first day of the week, at first dawn light, the women come to the rock-cut tomb carrying their burial spices, and find the great stone already rolled away and the tomb open and empty.",
+      "beat_b": "BEAT B — Moments later, as the SAME women hurry away to tell the disciples, the risen Jesus himself meets them on the path; they fall and hold him by the feet and worship.",
+      "fact_card": "WHO (identical across BOTH beats): the women who followed Jesus from Galilee — Mary Magdalene, a resolute woman in her thirties; Joanna, dignified and middle-aged; and an older grey-haired woman. First-century Judean women in simple wool tunics with mantles drawn over the head, muted earth-tone natural dyes, sandals; carrying burial spices in small clay jars or cloth bundles. PLACE: a rock-cut garden tomb sealed by a large heavy DISC / roll-stone (Mark 16:3-4), not a hinged wooden door; dawn half-light. BEAT A: the stone rolled aside, the tomb dark and EMPTY — no body, and (per the beat) no figure inside yet; the women startled. BEAT B: the risen Jesus stands on the path in a plain tunic and mantle (reference attached), the women bowed at his feet in worship (Matthew 28:9). BANNED ANACHRONISMS: modern faces, dress or grooming; a hinged wooden or stone door instead of the roll-stone; legible text; Jesus appearing INSIDE the empty tomb in beat A. TONE: hush, fear turning to astonished joy. CONSISTENCY IS THE TEST: the three women must read as the SAME three people in both frames — same ages, same garment colours, same hair.",
+      "identity_note": "The canonical women reference face is attached to BOTH beats; the Jesus reference is also attached to beat B. The whole point of this scene is identity CONSISTENCY across the two frames."
+    }
+  ]
+}

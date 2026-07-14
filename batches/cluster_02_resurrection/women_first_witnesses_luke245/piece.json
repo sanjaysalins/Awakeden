@@ -1,0 +1,335 @@
+{
+ "piece": "women_first_witnesses_luke245",
+ "title": "Women as First Witnesses (Luke 24:5-6)",
+ "cluster": "cluster_02_resurrection",
+ "verse": "Luke 24:5-7 + 24:10-11 (context Luke 8:2-3, 23:49, 23:53-55, 24:1-4; landing echo Luke 19:10)",
+ "world": {
+  "canon": "Luke-scoped resurrection dawn. The women are the SAME group of first-century Judean women throughout (Mary Magdalene, Joanna, and others) in plain wool tunics with mantles drawn over the head, muted natural dyes, sandals. The tomb is HEWN IN STONE and new (Luke 23:53), a low rock-cut opening in a garden, its great round stone rolled aside. The two heavenly witnesses are MEN in dazzling shining white garments, radiant with light, WITHOUT wings (Luke 24:4, 'two men'). NO Roman guards at the women's dawn tomb (Matthew-only). Where the risen Christ shows wounds, they are in the HANDS and FEET (Luke 24:39-40), never the pierced side.",
+  "check_world": true
+ },
+ "stills": {
+  "model": "seedream-4-5-251128",
+  "size": "1440x2560",
+  "world": {
+   "women_group": {
+    "canon": "the same three Judean women, young dark-haired Mary Magdalene, middle-aged Joanna, and an older grey-haired woman, in wool tunics and head mantles",
+    "applies_to": [
+     "women_tell_news",
+     "women_cross_afar",
+     "women_behold_burial",
+     "women_dawn_spices",
+     "women_bowed",
+     "women_plead_closer",
+     "women_remember",
+     "women_run_tell"
+    ]
+   },
+   "tomb": {
+    "canon": "a low rock-hewn tomb in a rocky hillside garden, its great round stone rolled aside beside a dark low opening",
+    "applies_to": [
+     "women_dawn_spices",
+     "stone_rolled_empty"
+    ]
+   },
+   "shining_men": {
+    "canon": "two tall radiant youthful heavenly messengers with golden light-touched flowing hair in shining white-and-gold garments, blazing with light, no wings",
+    "applies_to": [
+     "two_men_shining",
+     "women_bowed"
+    ]
+   }
+  },
+  "jobs": {
+   "apostles_dismiss": {
+    "prompt": "Three distinct Galilean apostles close in the foreground, a young clean-shaven man, a dark-bearded rugged fisherman, and a bald grey-bearded old man, reacting with doubt and waving off unwelcome news, a few more disciples behind them half in shadow, in coarse homespun tunics with rope girdles, plain bare stone room, cold grey dawn light from a low doorway",
+    "ref": "../../../ref_library/characters/DISCIPLES.png"
+   },
+   "women_tell_news": {
+    "prompt": "the same three Judean women, young dark-haired Mary Magdalene, middle-aged Joanna, and an older grey-haired woman, in wool tunics and head mantles, earnest and breathless, pleading with open hands before seated bearded men who look away unconvinced, plain bare stone interior, pale dawn light",
+    "ref": "../../../ref_library/characters/THE_WOMEN.png"
+   },
+   "women_cross_afar": {
+    "prompt": "Seen from behind, the same three Judean women, young dark-haired Mary Magdalene, middle-aged Joanna, and an older grey-haired woman, in wool tunics and head mantles, standing far off on a barren slope watching three distant crosses on a low hill under a darkened sky, heads bowed in grief, wide empty ground between them and the crosses",
+    "ref": "../../../ref_library/characters/THE_WOMEN.png"
+   },
+   "women_behold_burial": {
+    "prompt": "the same three Judean women, young dark-haired Mary Magdalene, middle-aged Joanna, and an older grey-haired woman, in wool tunics and head mantles, seen from behind standing close together at dusk before a low rock-hewn tomb cut into a rocky hillside garden, its great round stone rolled firmly across to seal the entrance, fading grey light, quiet grief",
+    "ref": "../../../ref_library/characters/THE_WOMEN.png"
+   },
+   "women_dawn_spices": {
+    "prompt": "the same three Judean women, young dark-haired Mary Magdalene, middle-aged Joanna, and an older grey-haired woman, in wool tunics and head mantles, walking at first grey-gold dawn toward a low rock-hewn tomb in a rocky hillside garden, its great round stone rolled aside beside a dark low opening, carrying small plain clay spice jars, dew on the ground",
+    "ref": "../../../ref_library/characters/THE_WOMEN.png"
+   },
+   "stone_rolled_empty": {
+    "prompt": "a low rock-hewn tomb in a rocky hillside garden, its great round stone rolled aside beside a dark low opening, the opening empty and unlit, golden sunrise flooding the quiet garden",
+    "ref": null
+   },
+   "two_men_shining": {
+    "prompt": "two tall radiant youthful heavenly messengers with golden light-touched flowing hair in shining white-and-gold garments, blazing with light, no wings, standing inside a dim rock-hewn tomb chamber, brilliant light across the bare stone, an empty stone burial bench behind them",
+    "ref": "../../../ref_library/characters/ANGEL_OF_THE_LORD.png"
+   },
+   "women_bowed": {
+    "prompt": "the same three Judean women, young dark-haired Mary Magdalene, middle-aged Joanna, and an older grey-haired woman, in wool tunics and head mantles, all three bowed low with faces to the earth in fear and awe, before two tall radiant youthful heavenly messengers with golden light-touched flowing hair in shining white-and-gold garments, blazing with light, no wings, inside a dim rock-hewn tomb chamber",
+    "ref": "../../../ref_library/characters/ANGEL_OF_THE_LORD.png"
+   },
+   "galilee_promise": {
+    "prompt": "Jesus in a plain robe seated on a green Galilee hillside teaching a close circle of listening disciples and women, one hand raised as he speaks a solemn word, warm afternoon daylight, distant blue hills and a calm lake beyond",
+    "ref": "../../../ref_library/characters/JESUS.png"
+   },
+   "risen_christ_seeking": {
+    "prompt": "The risen Christ standing alive and serene in radiant golden sunrise in a garden, one hand reaching out toward the viewer in gentle invitation, the healed wound-marks visible in his open hand and bare feet, white and earth-toned robes, warm morning light",
+    "ref": "../../../ref_library/characters/JESUS.png"
+   },
+   "apostles_doubt_closer": {
+    "prompt": "A closer view of two or three of the apostles, first-century Galilean men, one shaking his head and turning away in flat disbelief, another with a skeptical frown and folded arms, dim bare stone room, cold grey light",
+    "ref": "../../../ref_library/characters/DISCIPLES.png"
+   },
+   "women_plead_closer": {
+    "prompt": "the same three Judean women, young dark-haired Mary Magdalene, middle-aged Joanna, and an older grey-haired woman, in wool tunics and head mantles, seen closer, urgent and imploring, one with a hand pressed to her heart as she tells the news, warm dim stone interior",
+    "ref": "../../../ref_library/characters/THE_WOMEN.png"
+   },
+   "galilee_listen_closer": {
+    "prompt": "Jesus in a plain robe standing at natural human scale on a green Galilee hillside foretelling his death and rising, one hand lifted in emphasis, a small group of women and disciples seated close around him listening, the calm lake and blue hills small in the far distance, warm afternoon light, balanced medium shot",
+    "ref": "../../../ref_library/characters/JESUS.png"
+   },
+   "women_remember": {
+    "prompt": "the same three Judean women, young dark-haired Mary Magdalene, middle-aged Joanna, and an older grey-haired woman, in wool tunics and head mantles, their faces lighting with sudden recognition as they remember his words, inside a dim rock-hewn tomb, soft dawn light on their faces",
+    "ref": "../../../ref_library/characters/THE_WOMEN.png"
+   },
+   "women_run_tell": {
+    "prompt": "the same three Judean women, young dark-haired Mary Magdalene, middle-aged Joanna, and an older grey-haired woman, in wool tunics and head mantles, hurrying away from the tomb along a garden path at dawn to carry the news, urgency and hope on their faces, grey-gold light",
+    "ref": "../../../ref_library/characters/THE_WOMEN.png"
+   },
+   "risen_prophecy": {
+    "prompt": "The risen Christ standing alive in radiant golden sunrise in a garden, both open hands held out showing the healed wound-marks in his palms, white robe, serene living face",
+    "ref": "../../../ref_library/characters/JESUS.png"
+   },
+   "magdalene_face_cu": {
+    "prompt": "extreme close-up of young dark-haired Mary Magdalene, her face filling the frame, dark eyes wide and brimming with tears and dawning wonder, loose hair and a pale head mantle, soft rose dawn light on her skin, dark shadowed background",
+    "ref": "../../../ref_library/characters/THE_WOMEN.png"
+   },
+   "women_tiny_dawn": {
+    "prompt": "a vast pale-gold sunrise over rocky Judean garden hills, three small distant figures of women in mantles walking a pale winding path toward a low rock tomb, dwarfed beneath the immense dawn sky, sweeping wide establishing view",
+    "ref": "../../../ref_library/characters/THE_WOMEN.png"
+   },
+   "graveclothes_linen": {
+    "prompt": "inside a dark rock-hewn tomb, a bare low stone burial shelf where flattened empty white linen cloths lie collapsed and hollow, undisturbed and abandoned, a single shaft of pale dawn light across the empty linen, cold quiet stone",
+    "ref": null
+   }
+  }
+ },
+ "animate": {
+  "duration": 5,
+  "aspect_ratio": "9:16",
+  "moves": {
+   "apostles_dismiss": "ONE slow, steady, continuous push-in toward the doubting apostles turning away in the grey stone room",
+   "women_dawn_spices": "ONE slow, steady, continuous push-in toward the women walking to the tomb through the dawn garden",
+   "two_men_shining": "ONE slow, steady, continuous push-in toward the two radiant men in shining garments in the tomb",
+   "women_bowed": "ONE slow, steady, continuous push-in toward the women bowed to the earth before the shining men",
+   "galilee_promise": "ONE slow, steady, continuous push-in toward Jesus teaching the seated circle on the Galilee hillside",
+   "risen_christ_seeking": "ONE slow, steady, continuous push-in toward the risen Christ's outstretched hand and serene living face",
+   "women_plead_closer": "ONE slow, steady, continuous push-in toward the three women pleading, one hand pressed to her heart",
+   "apostles_doubt_closer": "ONE slow, steady, continuous push-in toward the doubting apostles, one turning away in disbelief",
+   "galilee_listen_closer": "ONE slow, steady, continuous push-in toward Jesus foretelling on the Galilee hillside",
+   "women_remember": "ONE slow, steady, continuous push-in toward the women's faces lighting with recognition",
+   "women_run_tell": "ONE slow, steady, continuous push-in toward the three women hurrying forward at dawn",
+   "women_cross_afar": "ONE slow, steady, continuous push-in toward the women watching the distant crosses"
+  }
+ },
+ "score": {
+  "src": "visual/livingpage_short.spec_preview.mp4",
+  "out": "visual/women_first_witnesses_luke245_scored.mp4",
+  "dark": "lonely_searching_a.mp3",
+  "grace": "glory_holy_stillness_a.mp3",
+  "base_seconds": 82.04,
+  "outro_hold": 1.5,
+  "dark_trim_end": "48.0",
+  "grace_trim": [
+   "15",
+   "95"
+  ],
+  "crossfade": "6",
+  "tpad": "1.5",
+  "dips": [],
+  "cta_dip": [
+   "77.5",
+   "0.5"
+  ],
+  "dips_meta": [],
+  "cta_meta": {
+   "phrase": "the risen Christ is seeking you",
+   "pre": 0.0
+  }
+ },
+ "register": {
+  "id_prefix": "ww",
+  "source": "byteplus seedream-4-5",
+  "created": "2026-07-12",
+  "style": "graphic_novel_inked",
+  "aspect": "9:16",
+  "palette": "inked cel-flat, grey pre-dawn to shining white to sunrise gold",
+  "mood": "the witnesses the world would not hear, sent first to the empty tomb",
+  "tags_still": [
+   "livingpage",
+   "luke245",
+   "women_witnesses",
+   "resurrection"
+  ],
+  "tags_clip": [
+   "livingpage",
+   "luke245",
+   "kling"
+  ],
+  "used_in": [
+   "women_first_witnesses_luke245 short"
+  ],
+  "clip_title_suffix": " (Kling push-in)",
+  "extra_rows": [],
+  "stills": {
+   "apostles_dismiss": {
+    "subject": "the apostles dismissing the women's report as nonsense",
+    "characters": [
+     "the apostles"
+    ],
+    "elements": [
+     "stone room",
+     "doubting faces",
+     "grey dawn light"
+    ],
+    "setting": "a plain stone room",
+    "scope": "specific",
+    "doctrine": "their words seemed to them as idle tales, and they believed them not (Luke 24:11)"
+   },
+   "women_tell_news": {
+    "subject": "the women earnestly telling the disbelieving disciples",
+    "characters": [
+     "Mary Magdalene",
+     "Joanna",
+     "the women"
+    ],
+    "elements": [
+     "open pleading hands",
+     "seated doubting men",
+     "stone interior"
+    ],
+    "setting": "a plain stone room",
+    "scope": "specific",
+    "doctrine": "It was Mary Magdalene, and Joanna... which told these things unto the apostles (Luke 24:10)"
+   },
+   "women_cross_afar": {
+    "subject": "the women watching the crucifixion from afar",
+    "characters": [
+     "the women"
+    ],
+    "elements": [
+     "three distant crosses",
+     "barren slope",
+     "darkened sky"
+    ],
+    "setting": "a slope far from Golgotha",
+    "scope": "specific",
+    "doctrine": "the women that followed him from Galilee, stood afar off, beholding these things (Luke 23:49)"
+   },
+   "women_behold_burial": {
+    "subject": "the women watching where the body was laid",
+    "characters": [
+     "the women"
+    ],
+    "elements": [
+     "linen-wrapped body",
+     "rock-hewn tomb",
+     "great stone waiting"
+    ],
+    "setting": "the garden tomb at dusk",
+    "scope": "specific",
+    "doctrine": "beheld the sepulchre, and how his body was laid (Luke 23:55); a sepulchre that was hewn in stone (Luke 23:53)"
+   },
+   "women_dawn_spices": {
+    "subject": "the women returning to the tomb at dawn with spices",
+    "characters": [
+     "the women"
+    ],
+    "elements": [
+     "clay spice jars",
+     "garden tomb",
+     "grey-gold dawn"
+    ],
+    "setting": "the garden tomb at first light",
+    "scope": "specific",
+    "doctrine": "very early in the morning, they came unto the sepulchre, bringing the spices (Luke 24:1)"
+   },
+   "stone_rolled_empty": {
+    "subject": "the stone rolled away, the tomb empty at dawn",
+    "characters": [],
+    "elements": [
+     "rolled stone",
+     "dark empty opening",
+     "sunrise garden"
+    ],
+    "setting": "the garden tomb",
+    "scope": "hero",
+    "doctrine": "they found the stone rolled away... and found not the body of the Lord Jesus (Luke 24:2-3)"
+   },
+   "two_men_shining": {
+    "subject": "the two men in shining garments standing in the tomb",
+    "characters": [
+     "the two men (angels)"
+    ],
+    "elements": [
+     "shining white garments",
+     "radiant light",
+     "empty stone bench"
+    ],
+    "setting": "inside the rock-hewn tomb",
+    "scope": "specific",
+    "doctrine": "two men stood by them in shining garments (Luke 24:4); a vision of angels (Luke 24:23)"
+   },
+   "women_bowed": {
+    "subject": "the women bowed to the earth before the shining men",
+    "characters": [
+     "the women",
+     "the two men (angels)"
+    ],
+    "elements": [
+     "faces bowed to the earth",
+     "shining figures",
+     "tomb interior"
+    ],
+    "setting": "inside the rock-hewn tomb",
+    "scope": "hero",
+    "doctrine": "as they were afraid, and bowed down their faces to the earth (Luke 24:5)"
+   },
+   "galilee_promise": {
+    "subject": "Jesus teaching the disciples and women in Galilee",
+    "characters": [
+     "Christ",
+     "disciples",
+     "the women"
+    ],
+    "elements": [
+     "Galilee hillside",
+     "seated listeners",
+     "raised teaching hand"
+    ],
+    "setting": "a Galilee hillside",
+    "scope": "hero",
+    "doctrine": "remember how he spake unto you when he was yet in Galilee (Luke 24:6)"
+   },
+   "risen_christ_seeking": {
+    "subject": "the risen Christ reaching out to seek the overlooked",
+    "characters": [
+     "Christ risen"
+    ],
+    "elements": [
+     "outstretched hand",
+     "wound-marks in hand and feet",
+     "sunrise garden"
+    ],
+    "setting": "a garden at sunrise",
+    "scope": "hero",
+    "doctrine": "Behold my hands and my feet (Luke 24:39); the Son of man is come to seek and to save that which was lost (Luke 19:10)"
+   }
+  },
+  "clip_source": "HF kling3_0 pro 9:16, INK camera-only push-in"
+ }
+}

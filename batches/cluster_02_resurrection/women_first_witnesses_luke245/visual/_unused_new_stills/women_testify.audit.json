@@ -1,0 +1,9 @@
+{
+  "image": "women_testify.png",
+  "verdict": "FAIL",
+  "flags": [
+    "pending vision review (auto-armed at render)"
+  ],
+  "reviewer": "render-arm",
+  "stage": "content"
+}

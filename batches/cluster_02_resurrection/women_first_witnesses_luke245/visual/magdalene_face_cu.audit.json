@@ -1,0 +1,9 @@
+{
+  "image": "magdalene_face_cu.png",
+  "verdict": "FAIL",
+  "flags": [
+    "pending vision review (auto-armed at render)"
+  ],
+  "reviewer": "render-arm",
+  "stage": "content"
+}

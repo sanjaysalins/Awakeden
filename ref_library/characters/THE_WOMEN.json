@@ -1,0 +1,19 @@
+{
+  "name": "THE_WOMEN",
+  "kind": "character",
+  "canonical": "the women who followed Jesus from Galilee (Mary Magdalene, Joanna and others), first-century Judean women of varied ages, olive-skinned Hebrew faces, in simple wool tunics with mantles drawn over the head and muted natural earth-tone dyes and sandals; Mary Magdalene a resolute woman in her thirties, Joanna dignified and middle-aged, plus an older grey-haired woman",
+  "tags": [
+    "women",
+    "mary magdalene",
+    "joanna",
+    "witnesses",
+    "galilee",
+    "group",
+    "female"
+  ],
+  "style": "inked",
+  "anchor": "characters/THE_WOMEN.png",
+  "first_used": "women_first_witnesses_luke245",
+  "count": 1,
+  "notes": "Pass `anchor` as --image to lock the women witnesses' identity across scenes."
+}

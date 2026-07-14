@@ -1,0 +1,15 @@
+{
+  "slug": "galilee_promise",
+  "hash": "991b822f5138388d",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "",
+  "reviewer": "in-chat-agent"
+}

@@ -1,0 +1,15 @@
+{
+  "slug": "women_bowed",
+  "hash": "84c59bccf2e453fa",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "",
+  "reviewer": "in-chat-agent"
+}
