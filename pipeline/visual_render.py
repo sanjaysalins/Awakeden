@@ -509,6 +509,29 @@ def _write_cut_hint_sidecar(scene: Scene, out_dir: Path) -> Path:
     return p
 
 
+def _record_still_cost(provider: ImageProvider, out_dir: Path, stem: str, log=print) -> None:
+    """Spend-ledger row for one paid image generation (each retry attempt is a
+    real spend). Never breaks the render."""
+    try:
+        from pipeline import cost
+        ep = out_dir.name
+        for p in out_dir.parents:
+            if p.name == "v1":
+                ep = p.parent.name
+                break
+        if provider.name == "nbp":
+            cost.record_nbp(ep, "still", "render", note=stem)
+            return
+        model = getattr(provider, "_model", "") or config.still_model()
+        try:  # exact per-model estimate; flat fallback if the cost query flakes
+            cost.record_hf(ep, "still", "render", model, note=stem)
+        except Exception:
+            cost.record(ep, "still", "render", "hf", model, 1, est_usd=0.30,
+                        est_only=True, note=f"{stem} (flat est)")
+    except Exception as e:
+        log(f"        [cost] still ledger row failed: {e}")
+
+
 def render_scene(
     scene: Scene,
     provider: ImageProvider,
@@ -552,6 +575,7 @@ def render_scene(
         t0 = time.monotonic()
         png_bytes = provider.generate(scene, audit_feedback=feedback)
         elapsed = time.monotonic() - t0
+        _record_still_cost(provider, out_dir, stem, log=log)
         png_path.write_bytes(png_bytes)
         (out_dir / f"{stem}.style.json").write_text(
             json.dumps(config.style_provenance(), indent=2), encoding="utf-8")

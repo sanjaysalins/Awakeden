@@ -125,9 +125,21 @@ def record_llm(episode, stage, model, input_tokens=0, output_tokens=0, note="") 
 
 # ---- budget + rollup -----------------------------------------------------------
 def load() -> list[dict]:
+    """All ledger rows; a torn/garbage line (unlocked concurrent appends from two
+    sessions) is skipped, never a crash — this feeds hooks that run constantly."""
     if not LEDGER.exists():
         return []
-    return [json.loads(l) for l in LEDGER.read_text(encoding="utf-8").splitlines() if l.strip()]
+    rows = []
+    for l in LEDGER.read_text(encoding="utf-8").splitlines():
+        if not l.strip():
+            continue
+        try:
+            r = json.loads(l)
+        except ValueError:
+            continue
+        if isinstance(r, dict):
+            rows.append(r)
+    return rows
 
 
 def _usd(v) -> float:
@@ -190,6 +202,48 @@ def summary(episode=None) -> str:
     return "\n".join(out)
 
 
+def today_rows() -> list[dict]:
+    """Rows whose UTC ts falls on today's LOCAL date. Skips unparsable/garbage
+    lines and `reconcile` true-up rows (their ops already have estimate rows —
+    summing both would double-count the day)."""
+    today = datetime.now().astimezone().date()
+    out = []
+    for r in load():
+        try:
+            if datetime.fromisoformat(r.get("ts") or "").astimezone().date() != today:
+                continue
+        except Exception:
+            continue
+        if r.get("stage") == "reconcile":
+            continue
+        out.append(r)
+    return out
+
+
+def today_summary(line: bool = False) -> str:
+    """Today's repo-wide spend grouped by provider; line=True -> one compact string."""
+    by_p: dict = {}
+    rows = today_rows()
+    for r in rows:
+        p = r.get("provider") or "other"
+        d = by_p.setdefault(p, {"usd": 0.0, "credits": 0.0, "n": 0})
+        d["usd"] += _usd(r.get("est_usd"))
+        d["credits"] += r.get("actual_credits") or r.get("est_credits") or 0
+        d["n"] += 1
+    tot_u = sum(d["usd"] for d in by_p.values())
+    tot_c = sum(d["credits"] for d in by_p.values())
+    ranked = sorted(by_p.items(), key=lambda x: -x[1]["usd"])
+    if line:
+        return " | ".join([f"TODAY ${tot_u:.2f} ({tot_c:.1f}cr)"]
+                          + [f"{p} ${d['usd']:.2f}" for p, d in ranked])
+    out = [f"today ({datetime.now().astimezone().date()})",
+           "provider          ops   credits     ~USD"]
+    for p, d in ranked:
+        out.append(f"{p[:17]:17} {d['n']:4}  {d['credits']:8.1f}  ${d['usd']:7.2f}")
+    out.append(f"{'TOTAL':17} {len(rows):4}  {tot_c:8.1f}  ${tot_u:7.2f}")
+    return "\n".join(out)
+
+
 # ---- CLI -----------------------------------------------------------------------
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description="spend ledger / cost tool")
@@ -198,6 +252,7 @@ def main(argv=None) -> int:
     pe = sub.add_parser("estimate"); pe.add_argument("model"); pe.add_argument("--prompt", default="estimate")
     pe.add_argument("--image"); pe.add_argument("--units", type=int, default=1)
     ps = sub.add_parser("summary"); ps.add_argument("--episode")
+    pt = sub.add_parser("today"); pt.add_argument("--line", action="store_true")
     pr = sub.add_parser("reconcile"); pr.add_argument("--episode", required=True); pr.add_argument("--since", required=True)
     a = ap.parse_args(argv)
     if a.cmd == "balance":
@@ -207,6 +262,8 @@ def main(argv=None) -> int:
         print(f"{a.model} x{a.units}: {cr:.1f} credits  ~${cr*CREDITS_TO_USD:.2f}")
     elif a.cmd == "summary":
         print(summary(a.episode))
+    elif a.cmd == "today":
+        print(today_summary(line=a.line))
     elif a.cmd == "reconcile":
         r = reconcile(a.episode, a.since)
         print(f"reconciled {a.episode}: {r['actual_credits']} credits (~${r['est_usd']}) since {a.since}")

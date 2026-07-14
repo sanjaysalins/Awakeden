@@ -86,3 +86,6 @@ _website/_redesign/_media/
 
 # archived (off-site) content, kept on disk only
 archive/
+
+# per-session cost-watcher state (cost_status.py hook)
+data/.cost_state/

@@ -226,6 +226,30 @@ def _run(cmd: list[str]) -> int:
         return 1
 
 
+def _mp3_sig(v1: Path) -> tuple | None:
+    p = v1 / "narration.mp3"
+    return (p.stat().st_mtime, p.stat().st_size) if p.exists() else None
+
+
+def _record_eleven_cost(v1: Path, pre_sig: tuple | None) -> None:
+    """Spend-ledger row for the ElevenLabs synth (estimate-only, chars-based) —
+    this stage previously bypassed the ledger entirely. Skipped when the synth
+    was a no-op (per_turn_synth exits 0 without spending if narration.mp3 and
+    all _turns already exist) — narration.mp3 unchanged means nothing was billed."""
+    try:
+        if _mp3_sig(v1) == pre_sig:
+            return
+        from pipeline import cost
+        for name in ("narration.spoken.txt", "narration-tagged.md", "narration.md"):
+            p = v1 / name
+            if p.exists():
+                cost.record_eleven(v1.parent.name, "audio", "voice",
+                                   len(p.read_text(encoding="utf-8")), note=name)
+                return
+    except Exception as e:
+        print(f"  [cost] elevenlabs ledger row failed: {e}")
+
+
 def run_audio_pipeline(v1_folder: Path, *, enforce_lock: bool = True) -> int:
     """Drive the audio pipeline. In SHORTS_MODE (default) this runs the three
     Anthropic stages then the duration-locked per_turn_synth (PLAYBOOK_shorts);
@@ -252,7 +276,11 @@ def run_audio_pipeline(v1_folder: Path, *, enforce_lock: bool = True) -> int:
         return 1
 
     if not config.SHORTS_MODE:
-        return _run([py, str(pipeline), str(v1_folder)])
+        pre_sig = _mp3_sig(Path(v1_folder))
+        code = _run([py, str(pipeline), str(v1_folder)])
+        if code == 0:
+            _record_eleven_cost(Path(v1_folder), pre_sig)
+        return code
 
     # --- Shorts path: verify -> tag -> audit, then duration-locked synth ---
     synth = config.PER_TURN_SYNTH_SCRIPT
@@ -278,4 +306,8 @@ def run_audio_pipeline(v1_folder: Path, *, enforce_lock: bool = True) -> int:
     # Natural speed (default): --target is a ceiling, the voice is never stretched.
     if config.SHORTS_NATURAL_SPEED:
         synth_cmd.append("--natural")
-    return _run(synth_cmd)
+    pre_sig = _mp3_sig(Path(v1_folder))
+    code = _run(synth_cmd)
+    if code == 0:
+        _record_eleven_cost(Path(v1_folder), pre_sig)
+    return code

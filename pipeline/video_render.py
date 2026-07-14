@@ -133,6 +133,32 @@ class VideoProvider(ABC):
         provider refuses the image, VideoGenError on other failure."""
 
 
+def _episode_of(path: Path) -> str:
+    """Ledger episode id from any path under <episode>/v1/... (fallback: parent name)."""
+    for p in path.parents:
+        if p.name == "v1":
+            return p.parent.name
+    return path.parent.name
+
+
+def _record_clip_cost(provider: str, model: str, png_path: Path) -> None:
+    """Spend-ledger row for one rendered clip. Never breaks the render."""
+    try:
+        from pipeline import cost
+        ep = _episode_of(png_path)
+        if provider == "kling":
+            cost.record_kling(ep, "clip", "animate", note=png_path.name)
+            return
+        try:  # exact per-model estimate; flat fallback if the cost query flakes
+            cost.record_hf(ep, "clip", "animate", model, image=png_path, note=png_path.name)
+        except Exception:
+            cost.record(ep, "clip", "animate", "hf", model, 1,
+                        est_usd=cost.KLING_USD_PER_CLIP, est_only=True,
+                        note=f"{png_path.name} (flat est)")
+    except Exception as e:
+        print(f"      [cost] clip ledger row failed: {e}")
+
+
 class HFVideoProvider(VideoProvider):
     """Higgsfield CLI image-to-video (default kling3_0)."""
 
@@ -177,6 +203,7 @@ class HFVideoProvider(VideoProvider):
         req = urllib.request.Request(url, headers={"User-Agent": "JesusInTheBible/1.0"})
         with urllib.request.urlopen(req, timeout=300) as resp:
             out_mp4.write_bytes(resp.read())
+        _record_clip_cost("hf", model, png_path)
         return out_mp4
 
 
@@ -196,6 +223,7 @@ class KlingDirectProvider(VideoProvider):
         env["PYTHONIOENCODING"] = "utf-8"
         config.inject_agent_env(env)
         png_abs = png_path.resolve()  # subprocess runs in PythonProject1 cwd — pass an absolute path
+        pre_exists = png_abs.with_suffix(".mp4").exists()  # image_to_kling is idempotent — no spend if so
         result = subprocess.run(
             [config.NARRATION_PYTHON, str(script), str(png_abs), "--skip-audit"],
             cwd=str(config.NARRATION_PROJECT_DIR.parent), env=env,
@@ -209,6 +237,8 @@ class KlingDirectProvider(VideoProvider):
         if produced.resolve() != out_mp4.resolve():
             out_mp4.parent.mkdir(parents=True, exist_ok=True)
             out_mp4.write_bytes(produced.read_bytes())
+        if not pre_exists:
+            _record_clip_cost("kling", "kling-direct", png_path)
         return out_mp4
 
 
