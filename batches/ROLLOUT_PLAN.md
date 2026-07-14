@@ -107,6 +107,16 @@ are unchanged).
   clip (landing only) on B–C, saves ~52–120cr; (2) defer Wave D de-dup, saves ~15–30cr;
   (3) drop pieces. No silent spending through the cap.
 
+## 🔴 LIVING-LIGHT TARGET RULE (Wave A(b) measured lesson — binding on Waves B–D)
+
+3 rejects, one shared killer: **any still with PAINTED BLOOD gets its blood animated by
+Kling despite the dry-wound prompt lock** (pilot v2, bowed_head_finished, jesus_looks_down
+— 3/3). Living-light targets MUST be clean-light stills: light-source scenes (poured sky,
+sunburst, moonlit face), figure-free landings, still-lifes with shadows. A tiny clean
+wound mark is acceptable (risen_mercy_hand passed — the light covered it). VIEW every
+target still before naming it (a slug name is not a composition). Blood-bearing
+crucifixion imagery stays camera-only, always.
+
 ## Re-roll mechanic (round-4 fix — now real in code)
 
 QC reject → park the mp4 in `visual/clips/_rejected/` (leave the `.src.sha`) → the clip

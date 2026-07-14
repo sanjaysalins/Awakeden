@@ -79,13 +79,13 @@
    "face_on_cross": "ONE slow, steady, continuous push-in toward the thorn-crowned upturned face"
   },
   "living_light": {
-   "bowed_head_finished": {
-    "target": "the bowed, thorn-crowned head",
-    "light": "the dim light behind the bowed figure breathes almost imperceptibly, a faint pale glow slowly rising around the silhouette while the darkness softens toward the horizon"
-   },
    "cross_at_dawn": {
     "target": "the empty cross on the hilltop",
     "light": "the great dawn sun behind the cross slowly intensifies, its rays sweeping gently across the sky, warm haze shimmering over the rocks below"
+   },
+   "jesus_prays_night": {
+    "target": "the praying figure in the moonlight",
+    "light": "the moonlight on the praying figure slowly breathes brighter and softer, thin night mist drifting low through the olive trees, the distant stars glimmering faintly"
    }
   }
  },

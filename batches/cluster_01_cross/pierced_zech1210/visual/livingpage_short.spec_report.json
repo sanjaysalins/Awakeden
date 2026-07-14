@@ -5,27 +5,30 @@
   "held_gt6s": [
    6.4
   ],
-  "slams": 7,
+  "slams": 11,
   "kling_or_punch_or_slam_pct": 94,
-  "tier1_pct": 18,
+  "tier1_pct": 6,
   "reuse_violations": [],
   "tier3_or_flagged_beats": [
    5,
    6,
    10,
    11,
-   14
+   13,
+   14,
+   16
   ],
   "standard_3b": {
    "stills_over_2_uses": {},
    "stills_fullbleed_twice": {},
-   "fullbleed_beat_pct": 65,
+   "fullbleed_beat_pct": 53,
    "slop_caption_beats": []
   },
   "ramps": 2,
   "whips": 4,
   "flash_inserts": 2,
-  "cut_ticks": true,
+  "fx_beats": 14,
+  "cut_ticks": false,
   "beats": 17
  },
  "beats": [
@@ -184,8 +187,8 @@
    ],
    "punch": true,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -206,8 +209,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "plaque",
+    "tier": 2,
+    "style": "band",
     "flag": false
    }
   },
@@ -218,8 +221,8 @@
     32.62
    ],
    "dur": 2.1,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_band3",
+   "slams": 2,
    "slugs": [
     "soldiers_gambling"
    ],
@@ -310,8 +313,8 @@
     46.11
    ],
    "dur": 2.266667,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_frac3",
+   "slams": 2,
    "slugs": [
     "look_up_faces"
    ],
@@ -320,9 +323,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "scrim",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -388,9 +391,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "scrim",
-    "flag": false
+    "flag": true
    }
   },
   {

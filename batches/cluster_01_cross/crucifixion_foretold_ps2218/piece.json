@@ -48,13 +48,13 @@
    "lots_cup_close": "ONE slow, steady, continuous push-in toward the bone dice tumbling from the leather cup"
   },
   "living_light": {
-   "jesus_looks_down": {
-    "target": "the whole figure on the cross seen from below",
-    "light": "the pale light around the cross slowly deepens and breathes, a soft glow gathering behind the crossbeam while thin haze drifts below"
-   },
    "risen_mercy_hand": {
     "target": "the whole outstretched arm and the light around it",
     "light": "the glow around the outstretched arm slowly builds and breathes, soft rays fanning outward, warm haze shimmering at the edges of the light"
+   },
+   "lots_cup_close": {
+    "target": "the overturned dice cup and the scattered lots on the stone",
+    "light": "the low evening light across the stone slowly deepens and warms, the shadows of the cup and the lots stretching almost imperceptibly, fine dust drifting through the sunlit air"
    }
   }
  },

@@ -9,11 +9,14 @@
    6.5,
    6.3
   ],
-  "slams": 2,
-  "kling_or_punch_or_slam_pct": 79,
-  "tier1_pct": 36,
+  "slams": 10,
+  "kling_or_punch_or_slam_pct": 86,
+  "tier1_pct": 0,
   "reuse_violations": [],
   "tier3_or_flagged_beats": [
+   2,
+   3,
+   5,
    6,
    11,
    13
@@ -21,13 +24,14 @@
   "standard_3b": {
    "stills_over_2_uses": {},
    "stills_fullbleed_twice": {},
-   "fullbleed_beat_pct": 86,
+   "fullbleed_beat_pct": 57,
    "slop_caption_beats": []
   },
   "ramps": 1,
   "whips": 2,
   "flash_inserts": 2,
-  "cut_ticks": true,
+  "fx_beats": 12,
+  "cut_ticks": false,
   "beats": 14
  },
  "beats": [
@@ -48,8 +52,8 @@
    ],
    "punch": true,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -70,9 +74,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "scrim",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -82,8 +86,8 @@
     16.2
    ],
    "dur": 6.3,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_frac3",
+   "slams": 2,
    "slugs": [
     "david_writing_psalm"
    ],
@@ -92,9 +96,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "scrim",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -104,8 +108,8 @@
     19.9
    ],
    "dur": 3.7,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_band3",
+   "slams": 2,
    "slugs": [
     "golgotha_hill_wide"
    ],
@@ -114,8 +118,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -136,9 +140,9 @@
    ],
    "punch": true,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "scrim",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -148,8 +152,8 @@
     31.5
    ],
    "dur": 6.7,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_frac3",
+   "slams": 2,
    "slugs": [
     "crowd_mocking"
    ],
@@ -202,8 +206,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -224,8 +228,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "plaque",
+    "tier": 2,
+    "style": "band",
     "flag": false
    }
   },
@@ -236,8 +240,8 @@
     56.1
    ],
    "dur": 7.7,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_band3",
+   "slams": 2,
    "slugs": [
     "us_under_cross_shadow"
    ],
@@ -246,8 +250,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },

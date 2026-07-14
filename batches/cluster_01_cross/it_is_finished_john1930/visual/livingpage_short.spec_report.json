@@ -3,23 +3,29 @@
   "median_beat_s": 3.4,
   "max_beat_s": 5.8,
   "held_gt6s": [],
-  "slams": 1,
+  "slams": 13,
   "kling_or_punch_or_slam_pct": 94,
-  "tier1_pct": 18,
+  "tier1_pct": 0,
   "reuse_violations": [],
   "tier3_or_flagged_beats": [
-   12
+   1,
+   2,
+   7,
+   8,
+   12,
+   13
   ],
   "standard_3b": {
    "stills_over_2_uses": {},
    "stills_fullbleed_twice": {},
-   "fullbleed_beat_pct": 94,
+   "fullbleed_beat_pct": 59,
    "slop_caption_beats": []
   },
-  "ramps": 1,
+  "ramps": 0,
   "whips": 3,
   "flash_inserts": 1,
-  "cut_ticks": true,
+  "fx_beats": 12,
+  "cut_ticks": false,
   "beats": 17
  },
  "beats": [
@@ -30,8 +36,8 @@
     3.4
    ],
    "dur": 3.4,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_band3",
+   "slams": 2,
    "slugs": [
     "eden_garden_finished"
    ],
@@ -40,9 +46,9 @@
    ],
    "punch": true,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "scrim",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -62,9 +68,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "band",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -74,8 +80,8 @@
     12.0
    ],
    "dur": 4.966667,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_frac3",
+   "slams": 2,
    "slugs": [
     "carpenter_bench_rest"
    ],
@@ -96,8 +102,8 @@
     15.55
    ],
    "dur": 3.533333,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_band3",
+   "slams": 2,
    "slugs": [
     "golgotha_hill_wide"
    ],
@@ -106,8 +112,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -128,8 +134,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "plaque",
+    "tier": 2,
+    "style": "band",
     "flag": false
    }
   },
@@ -162,8 +168,8 @@
     24.4
    ],
    "dur": 1.8,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_band3",
+   "slams": 2,
    "slugs": [
     "gethsemane_olives_night"
    ],
@@ -172,9 +178,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "scrim",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -194,9 +200,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "band",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -206,8 +212,8 @@
     31.8
    ],
    "dur": 1.6,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_band3",
+   "slams": 2,
    "slugs": [
     "us_under_cross_shadow"
    ],
@@ -216,8 +222,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -296,8 +302,8 @@
     48.75
    ],
    "dur": 5.666667,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_frac3",
+   "slams": 2,
    "slugs": [
     "tomb_stone_sealed"
    ],
@@ -306,9 +312,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "scrim",
-    "flag": false
+    "flag": true
    }
   },
   {
