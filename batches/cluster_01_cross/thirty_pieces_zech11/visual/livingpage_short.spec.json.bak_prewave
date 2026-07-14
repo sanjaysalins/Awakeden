@@ -2,7 +2,7 @@
  "_doc": "THIRTY PIECES (Zech 11:12-13) 9:16 SHORT - living page per LIVINGPAGE_STANDARD. 17 beats / 59.08s. Ramp+takeover coins hook, 4 sacred bars (11:12b/11:13a/11:13b/27:5a, exact KJV casing), heartbeat 28.4-38.79 STOPS DEAD on the Blood Money boom, border-break at 45.75 on 'The cross was no accident', punch grammar (2 ramps / 4 whips / 2 flash-inserts / ticks).",
  "audio": "../audio/narration.mp3",
  "total": 59.08,
- "cut_ticks": false,
+ "cut_ticks": true,
  "heartbeat": {
   "from": 28.4,
   "to": 38.79,
@@ -31,6 +31,11 @@
      "motion": "pushin"
     }
    ],
+   "takeover": {
+    "panel": 0,
+    "start": 1.6,
+    "zoom": 1.32
+   },
    "cap": {
     "type": "caption",
     "text": "Thirty silver coins hit the floor",
@@ -62,7 +67,7 @@
     5.24,
     9.6
    ],
-   "tpl": "hero_frac3",
+   "tpl": "full",
    "whip": true,
    "clips": [
     {
@@ -74,37 +79,6 @@
     "type": "caption",
     "text": "Zechariah asked for his shepherd's wages",
     "kw": "WAGES"
-   },
-   "anchors": [
-    [
-     1.0,
-     0.5,
-     0.45
-    ],
-    [
-     1.8,
-     0.45,
-     0.3
-    ],
-    [
-     1.9,
-     0.55,
-     0.62
-    ]
-   ],
-   "panel_at": [
-    5.24,
-    5.64,
-    6.04
-   ],
-   "panel_slide": [
-    "left",
-    "right",
-    "up"
-   ],
-   "flash": true,
-   "fx": {
-    "temp": 7000
    }
   },
   {
@@ -112,7 +86,7 @@
     9.6,
     12.54
    ],
-   "tpl": "hero_frac3",
+   "tpl": "full",
    "sfx": [
     [
      "coins_clinking",
@@ -131,37 +105,6 @@
     "text": "So they weighed for my price thirty pieces of silver",
     "speaker": "ZECHARIAH",
     "ref": "11:12b"
-   },
-   "anchors": [
-    [
-     1.6,
-     0.5,
-     0.18
-    ],
-    [
-     1.8,
-     0.25,
-     0.62
-    ],
-    [
-     1.8,
-     0.75,
-     0.72
-    ]
-   ],
-   "panel_at": [
-    9.6,
-    9.88,
-    10.16
-   ],
-   "panel_slide": [
-    "up",
-    "left",
-    "right"
-   ],
-   "flash": true,
-   "fx": {
-    "temp": 7300
    }
   },
   {
@@ -187,9 +130,6 @@
     "type": "caption",
     "text": "The LORD took it personally",
     "kw": "PERSONALLY"
-   },
-   "fx": {
-    "temp": 7600
    }
   },
   {
@@ -230,9 +170,6 @@
     "type": "caption",
     "text": "He threw them where the LORD said",
     "kw": "THE LORD"
-   },
-   "fx": {
-    "temp": 7400
    }
   },
   {
@@ -240,7 +177,7 @@
     23.63,
     28.39
    ],
-   "tpl": "hero_frac3",
+   "tpl": "full",
    "clips": [
     {
      "slug": "potter_at_wheel",
@@ -252,37 +189,6 @@
     "text": "And I took the thirty pieces of silver, and cast them to the potter in the house of the LORD",
     "speaker": "ZECHARIAH",
     "ref": "11:13b"
-   },
-   "anchors": [
-    [
-     1.5,
-     0.5,
-     0.45
-    ],
-    [
-     1.4,
-     0.5,
-     0.65
-    ],
-    [
-     1.5,
-     0.2,
-     0.15
-    ]
-   ],
-   "panel_at": [
-    23.63,
-    24.03,
-    24.43
-   ],
-   "panel_slide": [
-    "left",
-    "right",
-    "up"
-   ],
-   "flash": true,
-   "fx": {
-    "temp": 6800
    }
   },
   {
@@ -290,7 +196,7 @@
     28.39,
     31.07
    ],
-   "tpl": "hero_frac3",
+   "tpl": "full",
    "punch": true,
    "sfx": [
     [
@@ -309,37 +215,6 @@
     "type": "caption",
     "text": "Judas sold Jesus for the same sum",
     "kw": "THE SAME SUM"
-   },
-   "anchors": [
-    [
-     1.6,
-     0.5,
-     0.42
-    ],
-    [
-     1.8,
-     0.13,
-     0.5
-    ],
-    [
-     1.8,
-     0.87,
-     0.48
-    ]
-   ],
-   "panel_at": [
-    28.39,
-    28.64,
-    28.89
-   ],
-   "panel_slide": [
-    "up",
-    "left",
-    "right"
-   ],
-   "flash": true,
-   "fx": {
-    "temp": 7500
    }
   },
   {
@@ -347,7 +222,7 @@
     31.07,
     34.39
    ],
-   "tpl": "hero_frac3",
+   "tpl": "full",
    "sfx": [
     [
      "air_hollow_desolate",
@@ -366,37 +241,6 @@
     "text": "And he cast down the pieces of silver in the temple, and departed",
     "speaker": "MATTHEW",
     "ref": "27:5a"
-   },
-   "anchors": [
-    [
-     1.6,
-     0.5,
-     0.4
-    ],
-    [
-     1.7,
-     0.42,
-     0.15
-    ],
-    [
-     1.8,
-     0.85,
-     0.55
-    ]
-   ],
-   "panel_at": [
-    31.07,
-    31.37,
-    31.67
-   ],
-   "panel_slide": [
-    "left",
-    "up",
-    "right"
-   ],
-   "flash": true,
-   "fx": {
-    "temp": 7700
    }
   },
   {
@@ -416,6 +260,7 @@
     {
      "slug": "coin_on_scroll",
      "motion": "static",
+     "cam": "arc",
      "zoom": 1.2,
      "at": 37.17,
      "slide": "right"
@@ -425,9 +270,6 @@
     "type": "caption",
     "text": "Cast down. In the temple",
     "kw": "CAST DOWN"
-   },
-   "fx": {
-    "temp": 7300
    }
   },
   {
@@ -455,9 +297,6 @@
     "type": "caption",
     "text": "Blood money bought the potter's field",
     "kw": "BLOOD MONEY"
-   },
-   "fx": {
-    "temp": 7900
    }
   },
   {
@@ -494,9 +333,6 @@
     "type": "caption",
     "text": "Every coin found its mark",
     "kw": "ITS MARK"
-   },
-   "fx": {
-    "temp": 7000
    }
   },
   {
@@ -518,9 +354,6 @@
     "type": "caption",
     "text": "The cross was no accident",
     "kw": "NO ACCIDENT"
-   },
-   "fx": {
-    "temp": 7800
    }
   },
   {
@@ -549,9 +382,6 @@
     "type": "caption",
     "text": "A field for the dead",
     "kw": "THE DEAD"
-   },
-   "fx": {
-    "temp": 7400
    }
   },
   {
@@ -578,9 +408,6 @@
     "type": "caption",
     "text": "His blood bought you back",
     "kw": "HIS BLOOD"
-   },
-   "fx": {
-    "temp": 7600
    }
   },
   {
@@ -607,9 +434,6 @@
     "type": "caption",
     "text": "Stop weighing out your own price",
     "kw": "YOUR PRICE"
-   },
-   "fx": {
-    "temp": 6400
    }
   },
   {
@@ -635,11 +459,7 @@
     "type": "caption",
     "text": "Receive his price, and go free",
     "kw": "GO FREE"
-   },
-   "fx": {
-    "temp": 4900
    }
   }
- ],
- "motion": "smooth"
+ ]
 }

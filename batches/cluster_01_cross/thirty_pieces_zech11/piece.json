@@ -1,265 +1,275 @@
 {
-  "piece": "thirty_pieces_zech11",
-  "title": "Thirty Pieces of Silver (Zechariah 11:12-13)",
-  "cluster": "cluster_01_cross",
-  "verse": "Zechariah 11:12-13",
-  "stills": {
-    "model": "seedream-4-5-251128",
-    "size": "1440x2560",
-    "jobs": {
-      "thirty_coins_scatter": {
-        "prompt": "silver coins scattering and bouncing across a worn stone temple floor, low close angle, torchlight glinting on the metal, vertical, 1st-century Judea",
-        "ref": "../../../ref_library/objects/THIRTY_PIECES_SILVER.png"
-      },
-      "coin_on_scroll": {
-        "prompt": "a broad unrolled ancient scroll of faint faded illegible marks on a wooden table, one small silver shekel the size of a fingertip lying alone on the wide parchment, a small clay oil lamp burning beside it, warm lamplight, close, vertical, ancient Judea",
-        "ref": null
-      },
-      "weighing_scales_silver": {
-        "prompt": "aged hands steadying a bronze balance scale heavy with silver pieces, dim stone chamber, torchlight, vertical, 1st-century Judea",
-        "ref": "../../../ref_library/objects/THIRTY_PIECES_SILVER.png"
-      },
-      "potter_at_wheel": {
-        "prompt": "an old potter's clay-covered hands shaping a vessel on a spinning stone wheel, dusty workshop shafts of light, close, vertical, ancient Judea",
-        "ref": null
-      },
-      "judas_bag_priests": {
-        "prompt": "a weary bearded man in an olive robe clutching a small cloth money bag to his chest, head bowed, richly robed priests watching from the shadows behind him, torchlit stone chamber, vertical, 1st-century Judea",
-        "ref": "../../../ref_library/characters/JUDAS.png"
-      },
-      "judas_casting_coins": {
-        "prompt": "a gaunt man in an olive robe hurling a handful of silver coins across a grand temple hall, the coins caught in mid-air, robed priests recoiling, vertical, 1st-century Judea",
-        "ref": "../../../ref_library/characters/JUDAS.png"
-      },
-      "zechariah_casting": {
-        "prompt": "an aged prophet in a simple robe flinging a handful of silver coins across a torchlit temple court toward a potter's stall, the coins caught mid-air, night, vertical, ancient Judea",
-        "ref": null
-      },
-      "potters_field": {
-        "prompt": "a bleak empty clay field scattered with broken pottery shards under a heavy grey sky, low ridge on the horizon, wide, vertical, ancient Judea",
-        "ref": null
-      },
-      "silver_and_blood": {
-        "prompt": "worn silver coins lying flat, scattered wide across pale stone slabs, a dark red stream running across the stone between the coins, hard side light, low close angle, vertical",
-        "ref": "../../../ref_library/objects/THIRTY_PIECES_SILVER.png"
-      },
-      "face_on_cross": {
-        "prompt": "a close portrait of the crucified Christ from the shoulders up, his thorn-crowned head lifted, eyes open toward heaven, the rough wooden beam behind his head, dim failing light, close, vertical, 1st-century Judea",
-        "ref": "../father_forgive_them/visual/_byteplus/face_on_cross_fix2.png"
-      },
-      "blood_water_wood": {
-        "prompt": "the crucified Christ on a low wooden cross at Golgotha seen from below, thin trickles of blood running from his pierced hands and feet down the wood, a small dark pool gathering on the pale stone at the foot of the cross, heavy grey afternoon sky, low angle, vertical, 1st-century Judea",
-        "ref": null
-      }
-    }
-  },
-  "animate": {
-    "duration": 5,
-    "aspect_ratio": "9:16",
-    "moves": {
-      "judas_bag_priests": "ONE slow, steady, continuous push-in toward the bowed man clutching the money bag",
-      "judas_casting_coins": "ONE slow, steady, continuous quarter-arc rising from the scattered coins up toward the casters outstretched hand, ending framed on his upper body, never showing the panel edge",
-      "potter_at_wheel": "ONE slow, steady, continuous quarter-arc around the potter's wheel with slight downward tilt onto the clay vessel, gentle parallax against the workshop shadows",
-      "face_on_cross": "ONE slow, steady, continuous push-in toward the thorn-crowned upturned face",
-      "blood_water_wood": "ONE slow, steady, continuous push-in toward the dark pool gathering on the stone at the foot of the cross"
-    },
-    "base": "A finished inked graphic-novel comic panel — flat printed art with bold black ink outlines, cel-flat color and cross-hatching. Animate it as {move}. The drawing itself never moves, redraws, repaints, breathes or changes; the ink lines and flat colors stay exactly as printed; only the camera moves. No hard cuts, no dissolves, no morphing, no subject motion, no limbs moving, no new lines drawn. INVENT NOTHING: show ONLY what is already inked in this exact panel. Keep the subject whole in frame."
-  },
-  "score": {
-    "src": "visual/livingpage_short.spec_preview.mp4",
-    "out": "visual/thirty_pieces_zech11_scored.mp4",
-    "dark": "lonely_searching_a.mp3",
-    "grace": "sacred_grace_rise_a.mp3",
-    "base_seconds": 59.08,
-    "outro_hold": 1.5,
-    "dark_trim_end": "45.6",
-    "grace_trim": [
-      "20",
-      "90"
-    ],
-    "crossfade": "6",
-    "tpad": "1.5",
-    "dips": [
-      [
-        "9.60",
-        "12.54",
-        "0.35"
-      ],
-      [
-        "23.63",
-        "28.39",
-        "0.35"
-      ]
-    ],
-    "cta_dip": [
-      "54.75",
-      "0.5"
-    ],
-    "dips_meta": [
-      {
-        "phrase": "So they weighed for my price thirty pieces of silver.",
-        "pre": 0.0,
-        "post": 0.04
-      },
-      {
-        "phrase": "And I took the thirty pieces of silver, and cast them to the potter in the house of the LORD.",
-        "pre": -0.0,
-        "post": 0.16
-      }
-    ],
-    "cta_meta": {
-      "phrase": "Stop weighing out your own price. Receive his price, and go free.",
-      "pre": 0.0
-    }
-  },
-  "register": {
-    "id_prefix": "tp",
-    "source": "byteplus seedream-4-5",
-    "created": "2026-07-03",
-    "style": "graphic_novel_inked",
-    "aspect": "9:16",
-    "palette": "inked cel-flat, torch ambers and temple stone",
-    "mood": "prophetic ledger, betrayal, ransom",
-    "tags_still": [
-      "livingpage",
-      "zech11",
-      "thirty-pieces"
-    ],
-    "tags_clip": [
-      "livingpage",
-      "zech11",
-      "kling"
-    ],
-    "used_in": [
-      "thirty_pieces_zech11 short"
-    ],
-    "clip_source": "HF kling3_0 pro 9:16, INK camera-only push-in",
-    "clip_title_suffix": " (Kling push-in)",
-    "extra_rows": [],
-    "kling_slugs": [
-      "thirty_coins_scatter",
-      "weighing_scales_silver",
-      "judas_bag_priests",
-      "judas_casting_coins",
-      "potter_at_wheel",
-      "silver_and_blood"
-    ],
-    "stills": {
-      "thirty_coins_scatter": {
-        "subject": "silver coins scattering across the torchlit temple floor",
-        "characters": [],
-        "elements": [
-          "coins",
-          "temple floor",
-          "torch"
-        ],
-        "setting": "temple court, night",
-        "scope": "neutral",
-        "doctrine": "the thirty pieces cast down (Matt 27:5)"
-      },
-      "coin_on_scroll": {
-        "subject": "a silver coin resting on an ancient scroll by lamplight",
-        "characters": [],
-        "elements": [
-          "coin",
-          "scroll",
-          "oil lamp"
-        ],
-        "setting": "scribe's table",
-        "scope": "neutral",
-        "doctrine": "the price written five centuries early (Zech 11:12)"
-      },
-      "weighing_scales_silver": {
-        "subject": "hands weighing silver pieces on a hanging balance",
-        "characters": [],
-        "elements": [
-          "balance scale",
-          "silver",
-          "torch"
-        ],
-        "setting": "stone chamber",
-        "scope": "neutral",
-        "doctrine": "so they weighed for my price (Zech 11:12)"
-      },
-      "potter_at_wheel": {
-        "subject": "a potter's clay hands shaping a vessel on a stone wheel",
-        "characters": [
-          "potter"
-        ],
-        "elements": [
-          "wheel",
-          "clay vessel"
-        ],
-        "setting": "workshop",
-        "scope": "neutral",
-        "doctrine": "cast it unto the potter (Zech 11:13)"
-      },
-      "judas_bag_priests": {
-        "subject": "Judas head bowed clutching the money bag, priests watching",
-        "characters": [
-          "Judas",
-          "priests"
-        ],
-        "elements": [
-          "money bag",
-          "coins",
-          "torches"
-        ],
-        "setting": "temple chamber",
-        "scope": "specific",
-        "doctrine": "the covenant for thirty pieces (Matt 26:15)"
-      },
-      "judas_casting_coins": {
-        "subject": "Judas hurling the silver across the temple hall, priests recoiling",
-        "characters": [
-          "Judas",
-          "priests"
-        ],
-        "elements": [
-          "coins mid-air",
-          "temple columns"
-        ],
-        "setting": "temple hall",
-        "scope": "specific",
-        "doctrine": "he cast down the pieces of silver (Matt 27:5)"
-      },
-      "zechariah_casting": {
-        "subject": "the prophet flinging silver coins toward a potter's stall at night",
-        "characters": [
-          "Zechariah"
-        ],
-        "elements": [
-          "coins mid-air",
-          "potter's stall",
-          "torches"
-        ],
-        "setting": "temple court, night",
-        "scope": "specific",
-        "doctrine": "I took the thirty pieces and cast them (Zech 11:13)"
-      },
-      "potters_field": {
-        "subject": "a bleak clay field strewn with broken pottery under a grey sky",
-        "characters": [],
-        "elements": [
-          "pottery shards",
-          "clay field"
-        ],
-        "setting": "potter's field",
-        "scope": "neutral",
-        "doctrine": "the field of blood (Matt 27:7-8)"
-      },
-      "silver_and_blood": {
-        "subject": "worn silver coins on pale stone with a dark red stream between them",
-        "characters": [],
-        "elements": [
-          "coins",
-          "blood stream",
-          "stone"
-        ],
-        "setting": "temple floor",
-        "scope": "neutral",
-        "doctrine": "the price of blood (Matt 27:6)"
-      }
-    }
+ "piece": "thirty_pieces_zech11",
+ "title": "Thirty Pieces of Silver (Zechariah 11:12-13)",
+ "cluster": "cluster_01_cross",
+ "verse": "Zechariah 11:12-13",
+ "stills": {
+  "model": "seedream-4-5-251128",
+  "size": "1440x2560",
+  "jobs": {
+   "thirty_coins_scatter": {
+    "prompt": "silver coins scattering and bouncing across a worn stone temple floor, low close angle, torchlight glinting on the metal, vertical, 1st-century Judea",
+    "ref": "../../../ref_library/objects/THIRTY_PIECES_SILVER.png"
+   },
+   "coin_on_scroll": {
+    "prompt": "a broad unrolled ancient scroll of faint faded illegible marks on a wooden table, one small silver shekel the size of a fingertip lying alone on the wide parchment, a small clay oil lamp burning beside it, warm lamplight, close, vertical, ancient Judea",
+    "ref": null
+   },
+   "weighing_scales_silver": {
+    "prompt": "aged hands steadying a bronze balance scale heavy with silver pieces, dim stone chamber, torchlight, vertical, 1st-century Judea",
+    "ref": "../../../ref_library/objects/THIRTY_PIECES_SILVER.png"
+   },
+   "potter_at_wheel": {
+    "prompt": "an old potter's clay-covered hands shaping a vessel on a spinning stone wheel, dusty workshop shafts of light, close, vertical, ancient Judea",
+    "ref": null
+   },
+   "judas_bag_priests": {
+    "prompt": "a weary bearded man in an olive robe clutching a small cloth money bag to his chest, head bowed, richly robed priests watching from the shadows behind him, torchlit stone chamber, vertical, 1st-century Judea",
+    "ref": "../../../ref_library/characters/JUDAS.png"
+   },
+   "judas_casting_coins": {
+    "prompt": "a gaunt man in an olive robe hurling a handful of silver coins across a grand temple hall, the coins caught in mid-air, robed priests recoiling, vertical, 1st-century Judea",
+    "ref": "../../../ref_library/characters/JUDAS.png"
+   },
+   "zechariah_casting": {
+    "prompt": "an aged prophet in a simple robe flinging a handful of silver coins across a torchlit temple court toward a potter's stall, the coins caught mid-air, night, vertical, ancient Judea",
+    "ref": null
+   },
+   "potters_field": {
+    "prompt": "a bleak empty clay field scattered with broken pottery shards under a heavy grey sky, low ridge on the horizon, wide, vertical, ancient Judea",
+    "ref": null
+   },
+   "silver_and_blood": {
+    "prompt": "worn silver coins lying flat, scattered wide across pale stone slabs, a dark red stream running across the stone between the coins, hard side light, low close angle, vertical",
+    "ref": "../../../ref_library/objects/THIRTY_PIECES_SILVER.png"
+   },
+   "face_on_cross": {
+    "prompt": "a close portrait of the crucified Christ from the shoulders up, his thorn-crowned head lifted, eyes open toward heaven, the rough wooden beam behind his head, dim failing light, close, vertical, 1st-century Judea",
+    "ref": "../father_forgive_them/visual/_byteplus/face_on_cross_fix2.png"
+   },
+   "blood_water_wood": {
+    "prompt": "the crucified Christ on a low wooden cross at Golgotha seen from below, thin trickles of blood running from his pierced hands and feet down the wood, a small dark pool gathering on the pale stone at the foot of the cross, heavy grey afternoon sky, low angle, vertical, 1st-century Judea",
+    "ref": null
+   }
   }
+ },
+ "animate": {
+  "duration": 5,
+  "aspect_ratio": "9:16",
+  "moves": {
+   "judas_bag_priests": "ONE slow, steady, continuous push-in toward the bowed man clutching the money bag",
+   "judas_casting_coins": "ONE slow, steady, continuous quarter-arc rising from the scattered coins up toward the casters outstretched hand, ending framed on his upper body, never showing the panel edge",
+   "potter_at_wheel": "ONE slow, steady, continuous quarter-arc around the potter's wheel with slight downward tilt onto the clay vessel, gentle parallax against the workshop shadows",
+   "face_on_cross": "ONE slow, steady, continuous push-in toward the thorn-crowned upturned face",
+   "blood_water_wood": "ONE slow, steady, continuous push-in toward the dark pool gathering on the stone at the foot of the cross"
+  },
+  "base": "A finished inked graphic-novel comic panel — flat printed art with bold black ink outlines, cel-flat color and cross-hatching. Animate it as {move}. The drawing itself never moves, redraws, repaints, breathes or changes; the ink lines and flat colors stay exactly as printed; only the camera moves. No hard cuts, no dissolves, no morphing, no subject motion, no limbs moving, no new lines drawn. INVENT NOTHING: show ONLY what is already inked in this exact panel. Keep the subject whole in frame.",
+  "living_light": {
+   "thirty_coins_scatter": {
+    "target": "the scattered silver on the temple stones",
+    "light": "the cold light across the scattered silver slowly shifts and breathes, the shadows of the temple steps deepening and softening"
+   },
+   "risen_mercy_hand": {
+    "target": "the whole outstretched arm and the light around it",
+    "light": "the glow around the outstretched arm slowly builds and breathes, soft rays fanning outward, warm haze shimmering at the edges of the light"
+   }
+  }
+ },
+ "score": {
+  "src": "visual/livingpage_short.spec_preview.mp4",
+  "out": "visual/thirty_pieces_zech11_scored.mp4",
+  "dark": "lonely_searching_a.mp3",
+  "grace": "sacred_grace_rise_a.mp3",
+  "base_seconds": 59.08,
+  "outro_hold": 1.5,
+  "dark_trim_end": "45.6",
+  "grace_trim": [
+   "20",
+   "90"
+  ],
+  "crossfade": "6",
+  "tpad": "1.5",
+  "dips": [
+   [
+    "9.60",
+    "12.54",
+    "0.35"
+   ],
+   [
+    "23.63",
+    "28.39",
+    "0.35"
+   ]
+  ],
+  "cta_dip": [
+   "54.75",
+   "0.5"
+  ],
+  "dips_meta": [
+   {
+    "phrase": "So they weighed for my price thirty pieces of silver.",
+    "pre": 0.0,
+    "post": 0.04
+   },
+   {
+    "phrase": "And I took the thirty pieces of silver, and cast them to the potter in the house of the LORD.",
+    "pre": -0.0,
+    "post": 0.16
+   }
+  ],
+  "cta_meta": {
+   "phrase": "Stop weighing out your own price. Receive his price, and go free.",
+   "pre": 0.0
+  }
+ },
+ "register": {
+  "id_prefix": "tp",
+  "source": "byteplus seedream-4-5",
+  "created": "2026-07-03",
+  "style": "graphic_novel_inked",
+  "aspect": "9:16",
+  "palette": "inked cel-flat, torch ambers and temple stone",
+  "mood": "prophetic ledger, betrayal, ransom",
+  "tags_still": [
+   "livingpage",
+   "zech11",
+   "thirty-pieces"
+  ],
+  "tags_clip": [
+   "livingpage",
+   "zech11",
+   "kling"
+  ],
+  "used_in": [
+   "thirty_pieces_zech11 short"
+  ],
+  "clip_source": "HF kling3_0 pro 9:16, INK camera-only push-in",
+  "clip_title_suffix": " (Kling push-in)",
+  "extra_rows": [],
+  "kling_slugs": [
+   "thirty_coins_scatter",
+   "weighing_scales_silver",
+   "judas_bag_priests",
+   "judas_casting_coins",
+   "potter_at_wheel",
+   "silver_and_blood"
+  ],
+  "stills": {
+   "thirty_coins_scatter": {
+    "subject": "silver coins scattering across the torchlit temple floor",
+    "characters": [],
+    "elements": [
+     "coins",
+     "temple floor",
+     "torch"
+    ],
+    "setting": "temple court, night",
+    "scope": "neutral",
+    "doctrine": "the thirty pieces cast down (Matt 27:5)"
+   },
+   "coin_on_scroll": {
+    "subject": "a silver coin resting on an ancient scroll by lamplight",
+    "characters": [],
+    "elements": [
+     "coin",
+     "scroll",
+     "oil lamp"
+    ],
+    "setting": "scribe's table",
+    "scope": "neutral",
+    "doctrine": "the price written five centuries early (Zech 11:12)"
+   },
+   "weighing_scales_silver": {
+    "subject": "hands weighing silver pieces on a hanging balance",
+    "characters": [],
+    "elements": [
+     "balance scale",
+     "silver",
+     "torch"
+    ],
+    "setting": "stone chamber",
+    "scope": "neutral",
+    "doctrine": "so they weighed for my price (Zech 11:12)"
+   },
+   "potter_at_wheel": {
+    "subject": "a potter's clay hands shaping a vessel on a stone wheel",
+    "characters": [
+     "potter"
+    ],
+    "elements": [
+     "wheel",
+     "clay vessel"
+    ],
+    "setting": "workshop",
+    "scope": "neutral",
+    "doctrine": "cast it unto the potter (Zech 11:13)"
+   },
+   "judas_bag_priests": {
+    "subject": "Judas head bowed clutching the money bag, priests watching",
+    "characters": [
+     "Judas",
+     "priests"
+    ],
+    "elements": [
+     "money bag",
+     "coins",
+     "torches"
+    ],
+    "setting": "temple chamber",
+    "scope": "specific",
+    "doctrine": "the covenant for thirty pieces (Matt 26:15)"
+   },
+   "judas_casting_coins": {
+    "subject": "Judas hurling the silver across the temple hall, priests recoiling",
+    "characters": [
+     "Judas",
+     "priests"
+    ],
+    "elements": [
+     "coins mid-air",
+     "temple columns"
+    ],
+    "setting": "temple hall",
+    "scope": "specific",
+    "doctrine": "he cast down the pieces of silver (Matt 27:5)"
+   },
+   "zechariah_casting": {
+    "subject": "the prophet flinging silver coins toward a potter's stall at night",
+    "characters": [
+     "Zechariah"
+    ],
+    "elements": [
+     "coins mid-air",
+     "potter's stall",
+     "torches"
+    ],
+    "setting": "temple court, night",
+    "scope": "specific",
+    "doctrine": "I took the thirty pieces and cast them (Zech 11:13)"
+   },
+   "potters_field": {
+    "subject": "a bleak clay field strewn with broken pottery under a grey sky",
+    "characters": [],
+    "elements": [
+     "pottery shards",
+     "clay field"
+    ],
+    "setting": "potter's field",
+    "scope": "neutral",
+    "doctrine": "the field of blood (Matt 27:7-8)"
+   },
+   "silver_and_blood": {
+    "subject": "worn silver coins on pale stone with a dark red stream between them",
+    "characters": [],
+    "elements": [
+     "coins",
+     "blood stream",
+     "stone"
+    ],
+    "setting": "temple floor",
+    "scope": "neutral",
+    "doctrine": "the price of blood (Matt 27:6)"
+   }
+  }
+ }
 }

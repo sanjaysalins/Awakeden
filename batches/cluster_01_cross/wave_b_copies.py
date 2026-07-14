@@ -16,6 +16,9 @@ COPIES = [
     ("it_is_finished_john1930", "i_thirst_john1928", "cross_at_dawn"),
     ("it_is_finished_john1930", "into_thy_hands_luke2346", "cross_at_dawn"),
     ("pierced_zech1210", "forsaken_cry_ps221", "grace_poured_sky"),
+    # Wave C
+    ("pierced_zech1210", "woman_behold_john1926", "risen_mercy_hand"),
+    ("pierced_zech1210", "thirty_pieces_zech11", "risen_mercy_hand"),
 ]
 
 
