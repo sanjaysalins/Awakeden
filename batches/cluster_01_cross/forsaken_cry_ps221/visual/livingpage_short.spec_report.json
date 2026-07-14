@@ -6,23 +6,28 @@
    7.33,
    6.1
   ],
-  "slams": 0,
-  "kling_or_punch_or_slam_pct": 85,
-  "tier1_pct": 23,
+  "slams": 12,
+  "kling_or_punch_or_slam_pct": 92,
+  "tier1_pct": 0,
   "reuse_violations": [],
   "tier3_or_flagged_beats": [
-   9
+   2,
+   5,
+   8,
+   9,
+   12
   ],
   "standard_3b": {
    "stills_over_2_uses": {},
    "stills_fullbleed_twice": {},
-   "fullbleed_beat_pct": 100,
+   "fullbleed_beat_pct": 54,
    "slop_caption_beats": []
   },
   "ramps": 1,
   "whips": 1,
   "flash_inserts": 1,
-  "cut_ticks": true,
+  "fx_beats": 11,
+  "cut_ticks": false,
   "beats": 13
  },
  "beats": [
@@ -55,8 +60,8 @@
     9.8
    ],
    "dur": 4.866667,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_frac3",
+   "slams": 2,
    "slugs": [
     "david_writing_psalm"
    ],
@@ -65,9 +70,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "scrim",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -77,8 +82,8 @@
     15.05
    ],
    "dur": 5.266667,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_band3",
+   "slams": 2,
    "slugs": [
     "golgotha_hill_wide"
    ],
@@ -87,8 +92,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -99,8 +104,8 @@
     17.82
    ],
    "dur": 2.766667,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_band3",
+   "slams": 2,
    "slugs": [
     "us_under_cross_shadow"
    ],
@@ -109,8 +114,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -131,9 +136,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "band",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -153,8 +158,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -187,8 +192,8 @@
     34.45
    ],
    "dur": 2.566667,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_frac3",
+   "slams": 2,
    "slugs": [
     "look_up_faces"
    ],
@@ -197,9 +202,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "scrim",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -209,8 +214,8 @@
     40.56
    ],
    "dur": 6.1,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_band3",
+   "slams": 2,
    "slugs": [
     "face_on_cross"
    ],
@@ -275,8 +280,8 @@
     55.6
    ],
    "dur": 3.9,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_frac3",
+   "slams": 2,
    "slugs": [
     "father_lamp_doorway"
    ],
@@ -285,9 +290,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "scrim",
-    "flag": false
+    "flag": true
    }
   },
   {

@@ -6,11 +6,14 @@
    7.93,
    6.43
   ],
-  "slams": 3,
-  "kling_or_punch_or_slam_pct": 94,
-  "tier1_pct": 12,
+  "slams": 9,
+  "kling_or_punch_or_slam_pct": 100,
+  "tier1_pct": 6,
   "reuse_violations": [],
   "tier3_or_flagged_beats": [
+   3,
+   5,
+   7,
    12,
    13,
    14
@@ -18,13 +21,14 @@
   "standard_3b": {
    "stills_over_2_uses": {},
    "stills_fullbleed_twice": {},
-   "fullbleed_beat_pct": 75,
+   "fullbleed_beat_pct": 56,
    "slop_caption_beats": []
   },
-  "ramps": 1,
+  "ramps": 0,
   "whips": 3,
   "flash_inserts": 2,
-  "cut_ticks": true,
+  "fx_beats": 13,
+  "cut_ticks": false,
   "beats": 16
  },
  "beats": [
@@ -35,8 +39,8 @@
     2.9
    ],
    "dur": 2.9,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_band3",
+   "slams": 2,
    "slugs": [
     "golgotha_hill_wide"
    ],
@@ -45,8 +49,8 @@
    ],
    "punch": true,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -91,9 +95,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "scrim",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -135,9 +139,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "band",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -169,8 +173,8 @@
     26.77
    ],
    "dur": 7.933333,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_frac3",
+   "slams": 2,
    "slugs": [
     "two_thieves_wide"
    ],
@@ -179,9 +183,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "band",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -191,8 +195,8 @@
     32.01
    ],
    "dur": 5.233333,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_frac3",
+   "slams": 2,
    "slugs": [
     "confession_face_hands"
    ],
@@ -219,7 +223,7 @@
     "kingdom_light_clouds"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {

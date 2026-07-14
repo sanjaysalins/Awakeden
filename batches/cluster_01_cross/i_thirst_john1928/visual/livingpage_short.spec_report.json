@@ -7,21 +7,29 @@
    7.2,
    6.13
   ],
-  "slams": 0,
-  "kling_or_punch_or_slam_pct": 83,
-  "tier1_pct": 8,
+  "slams": 10,
+  "kling_or_punch_or_slam_pct": 92,
+  "tier1_pct": 0,
   "reuse_violations": [],
-  "tier3_or_flagged_beats": [],
+  "tier3_or_flagged_beats": [
+   2,
+   3,
+   5,
+   6,
+   9,
+   10
+  ],
   "standard_3b": {
    "stills_over_2_uses": {},
    "stills_fullbleed_twice": {},
-   "fullbleed_beat_pct": 100,
+   "fullbleed_beat_pct": 58,
    "slop_caption_beats": []
   },
-  "ramps": 1,
+  "ramps": 0,
   "whips": 1,
   "flash_inserts": 1,
-  "cut_ticks": true,
+  "fx_beats": 10,
+  "cut_ticks": false,
   "beats": 12
  },
  "beats": [
@@ -32,8 +40,8 @@
     4.9
    ],
    "dur": 4.9,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_band3",
+   "slams": 2,
    "slugs": [
     "ocean_creation_wide"
    ],
@@ -54,8 +62,8 @@
     8.6
    ],
    "dur": 3.7,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_band3",
+   "slams": 2,
    "slugs": [
     "face_on_cross"
    ],
@@ -64,9 +72,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "scrim",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -76,8 +84,8 @@
     13.0
    ],
    "dur": 4.4,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_frac3",
+   "slams": 2,
    "slugs": [
     "david_writing_psalm"
    ],
@@ -86,9 +94,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "scrim",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -98,8 +106,8 @@
     15.2
    ],
    "dur": 2.2,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_band3",
+   "slams": 2,
    "slugs": [
     "us_under_cross_shadow"
    ],
@@ -108,8 +116,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -130,9 +138,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "band",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -152,9 +160,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "band",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -208,8 +216,8 @@
     44.0
    ],
    "dur": 7.3,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_frac3",
+   "slams": 2,
    "slugs": [
     "jesus_praying_close"
    ],
@@ -218,9 +226,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "scrim",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -240,9 +248,9 @@
    ],
    "punch": true,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "scrim",
-    "flag": false
+    "flag": true
    }
   },
   {
