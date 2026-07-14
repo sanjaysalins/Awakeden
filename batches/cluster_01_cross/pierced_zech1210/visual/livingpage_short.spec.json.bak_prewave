@@ -2,7 +2,7 @@
  "_doc": "PIERCED (Zech 12:10) 9:16 SHORT - living-page pilot per LIVINGPAGE_STANDARD 6/7. 16 beats / 59.04s, word-timed slams, takeover on the spear thrust, BORDER-BREAK on 'I will pour' (the heavens rend and grace pours through the frame), sacred bars still, distinct image per beat (reuse only >=8 gap + diff crop). All bars verbatim KJV vs kjv_cache. PUNCH PASS v2: speed ramps (hook+CTA), whip-cuts, flash-frame inserts, cut ticks.",
  "audio": "../audio/narration.mp3",
  "total": 59.04,
- "cut_ticks": false,
+ "cut_ticks": true,
  "beats": [
   {
    "t": [
@@ -41,9 +41,6 @@
     "type": "caption",
     "text": "A Roman soldier raised his spear",
     "kw": "SPEAR"
-   },
-   "fx": {
-    "temp": 7400
    }
   },
   {
@@ -70,9 +67,6 @@
     "type": "caption",
     "text": "And finished a sentence God started writing",
     "kw": "GOD"
-   },
-   "fx": {
-    "temp": 7000
    }
   },
   {
@@ -125,9 +119,6 @@
     "text": "and they shall look upon me whom they have pierced, and they shall mourn for him, as one mourneth for his only son",
     "speaker": "THE LORD",
     "ref": "12:10b"
-   },
-   "fx": {
-    "temp": 7600
    }
   },
   {
@@ -155,9 +146,6 @@
     "type": "caption",
     "text": "Look upon ME. Mourn for HIM",
     "kw": "ME HIM"
-   },
-   "fx": {
-    "temp": 7700
    }
   },
   {
@@ -184,9 +172,6 @@
     "type": "caption",
     "text": "The LORD himself, come in the flesh",
     "kw": "IN THE FLESH"
-   },
-   "fx": {
-    "temp": 7400
    }
   },
   {
@@ -234,9 +219,6 @@
     "text": "They shall look on him whom they pierced.",
     "speaker": "JOHN",
     "ref": "19:37b"
-   },
-   "fx": {
-    "temp": 7900
    }
   },
   {
@@ -244,7 +226,7 @@
     30.54,
     32.62
    ],
-   "tpl": "hero_band3",
+   "tpl": "full",
    "whip": true,
    "clips": [
     {
@@ -256,37 +238,6 @@
     "type": "caption",
     "text": "The soldier saw a dying man",
     "kw": "DYING MAN"
-   },
-   "anchors": [
-    [
-     1.15,
-     0.6,
-     0.15
-    ],
-    [
-     1.3,
-     0.5,
-     0.6
-    ],
-    [
-     1.8,
-     0.5,
-     0.85
-    ]
-   ],
-   "panel_at": [
-    30.54,
-    30.79,
-    31.04
-   ],
-   "panel_slide": [
-    "up",
-    "left",
-    "down"
-   ],
-   "flash": true,
-   "fx": {
-    "temp": 7600
    }
   },
   {
@@ -313,9 +264,6 @@
     "type": "caption",
     "text": "John saw God keeping his own word",
     "kw": "HIS OWN WORD"
-   },
-   "fx": {
-    "temp": 7200
    }
   },
   {
@@ -364,9 +312,6 @@
     "text": "I will pour upon the house of David, and upon the inhabitants of Jerusalem, the spirit of grace and of supplications",
     "speaker": "THE LORD",
     "ref": "12:10a"
-   },
-   "fx": {
-    "temp": 6000
    }
   },
   {
@@ -374,7 +319,7 @@
     43.84,
     46.11
    ],
-   "tpl": "hero_frac3",
+   "tpl": "full",
    "whip": true,
    "clips": [
     {
@@ -386,37 +331,6 @@
     "type": "caption",
     "text": "He gives the tears he asks for",
     "kw": "TEARS"
-   },
-   "anchors": [
-    [
-     1.6,
-     0.17,
-     0.32
-    ],
-    [
-     1.8,
-     0.52,
-     0.47
-    ],
-    [
-     1.8,
-     0.8,
-     0.4
-    ]
-   ],
-   "panel_at": [
-    43.84,
-    44.12,
-    44.4
-   ],
-   "panel_slide": [
-    "left",
-    "up",
-    "right"
-   ],
-   "flash": true,
-   "fx": {
-    "temp": 5800
    }
   },
   {
@@ -443,9 +357,6 @@
     "type": "caption",
     "text": "He did not send a stranger. He came himself",
     "kw": "HE CAME HIMSELF"
-   },
-   "fx": {
-    "temp": 5600
    }
   },
   {
@@ -465,9 +376,6 @@
     "type": "caption",
     "text": "Do what the verse says. Look at him",
     "kw": "LOOK"
-   },
-   "fx": {
-    "temp": 5400
    }
   },
   {
@@ -494,9 +402,6 @@
     "type": "caption",
     "text": "Grace turns looking into mourning, and mourning into trust",
     "kw": "TRUST"
-   },
-   "fx": {
-    "temp": 5200
    }
   },
   {
@@ -515,11 +420,7 @@
     "type": "caption",
     "text": "Look, and live",
     "kw": "LIVE"
-   },
-   "fx": {
-    "temp": 4900
    }
   }
- ],
- "motion": "smooth"
+ ]
 }
