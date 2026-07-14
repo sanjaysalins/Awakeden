@@ -1,10 +1,31 @@
-# CORPUS ROLLOUT PLAN v5 — gold-master format × 12 living-page shorts (2026-07-14)
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
 
-**Status:** v5 after panel round 4 (FULL panel 5/5, all REVISE — every finding verified,
-fixed in code or answered below; grok's round-4 consensus: "A(a) $0 authoring can proceed
-after tooling/SOP fixes; paid renders should not" — A(b) stays blocked on a clean verdict).
-**Baseline gate FAILs for all 12 pieces: `batches/_rollout/baseline_gate_fails_20260714.txt`**
-(the checked-in artifact round 4 asked for).
+ARTIFACT TYPE: plan
+
+LENS — judge this PLAN on (be specific, cite the exact step/claim):
+- Feasibility against the real codebase / tools (does it assume things that exist?).
+- Hidden risks, false assumptions, single points of failure.
+- Over-engineering / premature building before the idea is proven.
+- Missing steps, edge cases, or verification gaps.
+- Reuse: does it duplicate tools that already exist instead of reusing them?
+- Cost / spend and whether it's justified.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block (on the VERDICT line write exactly ONE word —
+PASS or REVISE or FAIL — never the list of options):
+
+VERDICT: <PASS or REVISE or FAIL>
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# CORPUS ROLLOUT PLAN v4 — gold-master format × 12 living-page shorts (2026-07-14)
+
+**Status:** v4 after panel round 3 (DEGRADED 2/5 — cursor REVISE + claude REVISE both
+applied below; grok/codex/gemini being revived via panel_doctor for round 4).
 **User approval:** GO at 485cr HARD envelope (pilot spend COUNTS INSIDE it — zero point
 defined below). Wave A starts only on a clean panel verdict for this revision.
 Out of scope: EW01–09, QJA, and `father_forgive_them` (Wave E, separately quoted).
@@ -57,11 +78,11 @@ accepted warnings, so it cannot hard-block).
 
 | Wave | Pieces | Gate |
 |---|---|---|
-| A(a) | it_is_finished, pierced, crucifixion_foretold — SPEC AUTHORING (a full gold-master rewrite ×3, NOT a light touch — panel is right that this is the biggest wall-clock block): baseline FAILs already logged (`_rollout/baseline_gate_fails_20260714.txt`) → grid conversion (SOP: Christ singles stay full; convert crowd/object/multi-figure beats; preserve each piece's heartbeat/punch/whip choreography) + fx arc + smooth + living_light entries NAMED per piece before A(a) ends → gate PASS. **Deliverable: shared tooling, re-aimed at the production path (round-4 fix):** thin cluster wrapper over the EXISTING `pipeline.clip_anim_qc.build_filmstrip()` (don't reinvent) + backup helper + before/after page builder + `wave_checklist.json` writer (schema: per-item pass/fail + note + reviewer + date). The gold-master promote script stays a pilot utility only — production renders go straight to `clips/` via `run_piece --only`. $0. | — |
+| A(a) | it_is_finished, pierced, crucifixion_foretold — SPEC AUTHORING: baseline gate FAILs logged per piece → full spec rewrite (grid conversion + anchors + fit-gate, fx arc, smooth, living_light entries) → gate PASS. **Deliverable: shared tooling** (generalized `pipeline/living_light_promote.py` from the gold-master script + before/after page builder + backup helper). $0. | — |
 | A(b) | Wave A renders: 2 living-light clips/piece (6 total), **first roll = the wound/CU proof** (`it_is_finished`'s bowed-head/nail still — names finalized at authoring, logged in wave_checklist) → filmstrip QC → measured re-roll rate | HUMAN + stop-loss |
 | B | forsaken_cry, i_thirst, into_thy_hands, today_paradise | **RE-QUOTE FIRST** (below) |
 | C | watch_one_hour, woman_behold, thirty_pieces | HUMAN + stop-loss |
-| D | empty_tomb, sign_of_jonah — fact cards FIRST → author still jobs → `run_piece.reuse_check` → render only the gaps → stills-gate → **animate → register** (round-4 gemini: register scans `clips/` for mp4s, so it must FOLLOW animate — ordering corrected) | HUMAN + stop-loss |
+| D | empty_tomb, sign_of_jonah — ordering fixed per panel: fact cards FIRST → author still jobs → `run_piece.reuse_check` → render only the gaps → stills-gate → asset_index registration → clips | HUMAN + stop-loss |
 | E | father_forgive_them — greenfield mocomic→livingpage migration; scoped + quoted separately after Wave A. **Wave E must never move/delete assets other pieces reference** (`it_is_finished` refs `../father_forgive_them/visual/_byteplus/face_on_cross_fix2.png`) | — |
 
 Reuse discipline applies to ANY still work in ANY wave (not only D): fact cards → author
@@ -75,68 +96,21 @@ USER, never silent `override=True`) → renders → QC → rebuild → before/af
 narrations + significant plans — this plan — not every deterministic rebuild; the narrations
 are unchanged).
 
-## Budget v5 (re-based on the REMAINING envelope — round-4 claude catch)
+## Budget v3 (derived, single currency per line)
 
-- Zero point: rollout spend to date = **37.5cr** (ledger = disk after de-dup fix; billed
-  possibly ~+15cr in 502s — limit (c), balance eyeball). **Remaining envelope ≈ 447.5cr.
-  All forecasts below compare against the REMAINING number, not 485.**
-  (gemini's "start date leaks July 12–13 pilot spend" is answered: that spend was the
-  Women PIECE's own production — voice/stills/12 camera-only clips under its $6 episode
-  budget, approved and reconciled separately. The 485 envelope covers ROLLOUT work, which
-  began 2026-07-14. The envelope's zero point is a definition, and it is now stated.)
 - Living-light: 12 pieces × 2 clips = 24 × 7.5cr = **180cr base**
-- Wave D de-dup **re-derived from the actual baseline gate dump** (round-4 fix): most
-  full-bleed doubles are NON-adjacent repeats fixable by $0 grid conversion; the only
-  true still-overuse is empty_tomb's `risen_christ_wounds` ×5 → ≥3 beat reassignments,
-  of which ~2–3 need NEW stills+clips. Wave D extra ≈ **15–30cr** + ~$0.15 BytePlus
-  (was "67.5cr", an estimate dressed as derived — panel was right).
-- Base ≈ 195–210cr. Worst case (pilot 2.3×/keeper): **~449–483cr vs 447.5 remaining —
-  right at the wall**; hoped ~1.5×: **~295–315cr, ~135cr headroom.**
-- **Forecast rule: B–D forecast at max(Wave A measured, 2.3×) unless Wave A shows ≤1.5×
-  across all 6 rolls. Re-quote before Wave B either way. Per-slug roll cap: 3 attempts,
-  then stop and report (pilot precedent) — one stubborn CU cannot eat a wave's budget.**
-- **A(b) invocations MUST use `--only <ll_slugs>`** — a bare `--stage animate` re-renders
-  every hash-stale clip and burns the envelope on non-living-light work (round-4 grok).
-- **Default scope cuts if forecast > remaining** (user picks at re-quote): (1) 1 living-light
-  clip (landing only) on B–C, saves ~52–120cr; (2) defer Wave D de-dup, saves ~15–30cr;
-  (3) drop pieces. No silent spending through the cap.
-
-## Re-roll mechanic (round-4 fix — now real in code)
-
-QC reject → park the mp4 in `visual/clips/_rejected/` (leave the `.src.sha`) → the clip
-state reads **missing** → `run_piece --stage animate --only <slug>` re-renders it. (The
-skip-if-hash-current logic previously made a parked reject SKIP forever; fixed.) The
-stop-loss re-checks the cap **before every paid clip**, not once per invocation, and all
-gate/stop-loss refusals now propagate to the shell exit code (round-4 codex: `main()`
-was swallowing them — automation saw success on refused runs).
-
-## Answered panel objections (round 4)
-
-- **codex "exit 4 never reaches the shell":** TRUE and fixed — `main()` now propagates
-  stage return codes (was returning 0 on refused runs).
-- **3 voices "stop-loss checks once, batch can overshoot":** fixed — re-check before
-  EVERY paid clip in the loop.
-- **claude/codex/grok "disk count double-counts promotes, misses parked rejects":** fixed —
-  recursive glob incl. `_rejected/`/`_stale_from_bad_stills/`, de-duped by (size, mtime)
-  copy2 signature; tested (`test_disk_clip_count_dedup_and_rejects`). Live reading now
-  agrees with the ledger (5 = 5).
-- **claude "forecast ignores its own zero point":** fixed — Budget v5 compares against the
-  447.5cr REMAINING envelope.
-- **gemini "ROLLOUT_START leaks pilot spend":** answered (not a bug) — July 12–13 spend was
-  the Women piece's own production budget, not rollout work; zero point now defined in text.
-- **gemini "no re-roll path / needs --force":** fixed differently — a parked reject reads
-  as clip-state "missing" and re-renders; no new flag needed.
-- **gemini "register before clips":** TRUE — Wave D ordering corrected (animate → register).
-- **grok/cursor "A(a) tooling vapor / mis-aimed":** re-aimed — reuse `build_filmstrip`,
-  production path is `run_piece --only`, promote demoted to pilot utility; tooling remains
-  an A(a) deliverable that BLOCKS A(b).
-- **grok/codex "Wave D numbers soft":** re-derived from the checked-in baseline dump
-  (15–30cr, grid conversion absorbs the non-adjacent doubles).
-- **cursor "spec-less pieces bypass gate+stop-loss":** answered — every run_piece-runnable
-  piece has both `piece.json` and a livingpage spec today; `father_forgive_them` has
-  neither (cannot run through run_piece at all) and is Wave E scope. Caveat now stated.
-- **codex ".venv python would not launch in this environment":** reviewer-sandbox
-  limitation, not a repo defect; suite verified locally (314 passed / 1 skipped).
+- Wave D de-dup (derived, was hand-waved): empty_tomb ~6 replacement stills → 6 new clips
+  (45cr) + sign_of_jonah ~3 → 3 clips (22.5cr) = **67.5cr base**; stills themselves ≈
+  **$0.45 BytePlus (USD, separate)**
+- Base total 247.5cr. At pilot-observed 2.3×/keeper worst case ≈ **569cr — over the 485
+  envelope**; at the hoped ~1.5× (locks now baked in) ≈ **371cr — inside it**
+- **Forecast rule (panel fix): B–D are forecast at max(Wave A measured rate, pilot 2.3×)
+  unless Wave A shows ≤1.5× across all 6 rolls.** Re-quote the user before Wave B either way.
+- **Default scope cuts if the forecast breaches 485** (user picks at re-quote): (1) drop to
+  1 living-light clip (landing only) on Waves B–C, saves ~52–120cr; (2) defer Wave D de-dup
+  to its own quote, saves ~68–155cr; (3) drop pieces. No silent spending through the cap.
+- Zero point: pilot + promotion spend counts INSIDE 485. Attributed so far: 37.5cr
+  (ledger) — billed possibly up to ~52.5cr incl. one billed 502; balance eyeball at gates.
 
 ## Answered panel objections (rounds 2–3)
 
@@ -156,3 +130,4 @@ was swallowing them — automation saw success on refused runs).
 - **cursor "Wave A is heavy authoring, not a preflight":** correct — Wave A split into A(a)
   authoring/$0 and A(b) render/rate-measurement, with tooling as an explicit deliverable.
 - **claude "gate window / zero point / derive Wave D":** all fixed above.
+----- ARTIFACT END -----

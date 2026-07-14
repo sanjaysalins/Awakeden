@@ -1,0 +1,7 @@
+# Independent review — gemini (OK, 205s)
+
+VERDICT: REVISE
+TOP FIXES:
+1. **Stop-loss leaks pilot spend (Cost/Spend false assumption):** `pipeline/rollout_spend.py` hard-codes `ROLLOUT_START = "2026-07-14"` and strictly skips any ledger rows (`ts < ROLLOUT_START`) or disk files (`st_mtime < cutoff`) from before midnight July 14. Real ledger data shows the `women_first_witnesses_luke245` pilot spend occurred heavily on July 12 and 13. The script zeroes out the "37.5cr attributed so far" and will fail to trip at the true 485cr limit. Change the start date to catch the true pilot onset (e.g., `2026-07-12`).
+2. **Re-rolls are blocked by idempotence (Feasibility against codebase):** The plan bans `_animate_rerolls.py` in favor of `run_piece --stage animate`, but `run_piece.py`'s `run_animate` automatically skips hash-current clips and does not accept the `--force` flag (which is only wired to `run_stills`). At a 2.3x re-roll rate, the user has no way to re-roll a bad Kling clip without manually deleting the `.mp4` and `.sha` sidecars first. Wire the `--force` flag to bypass `_clip_state` checking in the animate stage.
+3. **Wave D ordering defeats clip registration (Verification gap):** Wave D's explicit fixed ordering dictates `asset_index registration → clips`. However, `run_piece.py`'s `register_rows` function defaults to scanning the `visual/clips/` directory to discover existing `.mp4`s. If you register before animating, the clips will not be found and thus omitted from the asset index. Keep the codebase's canonical sequence (`animate → register`).

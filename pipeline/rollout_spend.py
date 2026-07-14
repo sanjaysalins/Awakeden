@@ -47,22 +47,26 @@ def tally():
 
 
 def disk_clip_count(root: Path | None = None) -> int:
-    """Cross-check (panel round-3 fix): the ledger writer is best-effort — hf_animate
-    proceeds unmetered if pipeline.cost errors, so ledger rows can UNDER-count. Count the
-    rendered mp4s on disk instead (rollout episodes, newer than the rollout start) and let
-    the caller take max(ledger, disk)."""
+    """Cross-check (panel rounds 3-4): the ledger writer is best-effort — hf_animate
+    proceeds unmetered if pipeline.cost errors — so ledger rows can UNDER-count. Count
+    rendered mp4s on disk (rollout episodes, newer than the rollout start):
+    - RECURSIVE under clips/ so QC rejects parked in _rejected/ and stale clips in
+      _stale_from_bad_stills/ stay charged (at 2.3x/keeper most paid rolls are rejects)
+    - DE-DUPED by (size, mtime): promote copies a pilot mp4 into clips/ via copy2, which
+      preserves both — one HF bill must not count twice."""
     import datetime as dt
     root = root or LEDGER.parent.parent / "batches"
     cutoff = dt.datetime.fromisoformat(ROLLOUT_START).timestamp()
-    n = 0
+    seen = set()
     for ep_dir in root.glob("cluster_0*/*"):
         if ep_dir.name not in ROLLOUT_EPISODES:
             continue
-        for sub in ("clips", "_fx_pilot"):
-            d = ep_dir / "visual" / sub
-            if d.is_dir():
-                n += sum(1 for m in d.glob("*.mp4") if m.stat().st_mtime >= cutoff)
-    return n
+        for pattern in ("clips/**/*.mp4", "_fx_pilot/**/*.mp4"):
+            for m in (ep_dir / "visual").glob(pattern):
+                st = m.stat()
+                if st.st_mtime >= cutoff:
+                    seen.add((ep_dir.name, st.st_size, round(st.st_mtime, 2)))
+    return len(seen)
 
 
 def check(verbose: bool = True) -> int:

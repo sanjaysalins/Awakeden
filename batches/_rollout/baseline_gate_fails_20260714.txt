@@ -1,0 +1,116 @@
+﻿FAIL it_is_finished_john1930
+  - motion='classic' - gold master is "smooth"
+  - fullbleed 94% > 60% - convert beats to grids
+  - only 2 template(s) ['full', 'stack_h'] - need >= 3
+  - fx on 0% of beats < 50% - author the cold->warm grade arc
+  - no temp grade anywhere - the fx arc must carry colortemperature beats
+  - cut_ticks true - the gold master ships without per-cut tick SFX
+  - 0 animate.living_light clip(s) < 2 (default 2/piece: a reveal + the landing)
+  - landing beat carries no light (no fx.rays and no living_light clip)
+FAIL pierced_zech1210
+  - motion='classic' - gold master is "smooth"
+  - fullbleed 65% > 60% - convert beats to grids
+  - fx on 0% of beats < 50% - author the cold->warm grade arc
+  - no temp grade anywhere - the fx arc must carry colortemperature beats
+  - cut_ticks true - the gold master ships without per-cut tick SFX
+  - 0 animate.living_light clip(s) < 2 (default 2/piece: a reveal + the landing)
+  - landing beat carries no light (no fx.rays and no living_light clip)
+FAIL crucifixion_foretold_ps2218
+  - motion='classic' - gold master is "smooth"
+  - fullbleed 86% > 60% - convert beats to grids
+  - only 2 template(s) ['full', 'stack_h'] - need >= 3
+  - fx on 0% of beats < 50% - author the cold->warm grade arc
+  - no temp grade anywhere - the fx arc must carry colortemperature beats
+  - cut_ticks true - the gold master ships without per-cut tick SFX
+  - 0 animate.living_light clip(s) < 2 (default 2/piece: a reveal + the landing)
+  - landing beat carries no light (no fx.rays and no living_light clip)
+FAIL forsaken_cry_ps221
+  - motion='classic' - gold master is "smooth"
+  - fullbleed 100% > 60% - convert beats to grids
+  - only 1 template(s) ['full'] - need >= 3
+  - fx on 0% of beats < 50% - author the cold->warm grade arc
+  - no temp grade anywhere - the fx arc must carry colortemperature beats
+  - cut_ticks true - the gold master ships without per-cut tick SFX
+  - 0 animate.living_light clip(s) < 2 (default 2/piece: a reveal + the landing)
+  - landing beat carries no light (no fx.rays and no living_light clip)
+FAIL i_thirst_john1928
+  - motion='classic' - gold master is "smooth"
+  - fullbleed 100% > 60% - convert beats to grids
+  - only 1 template(s) ['full'] - need >= 3
+  - fx on 0% of beats < 50% - author the cold->warm grade arc
+  - no temp grade anywhere - the fx arc must carry colortemperature beats
+  - cut_ticks true - the gold master ships without per-cut tick SFX
+  - 0 animate.living_light clip(s) < 2 (default 2/piece: a reveal + the landing)
+  - landing beat carries no light (no fx.rays and no living_light clip)
+FAIL into_thy_hands_luke2346
+  - motion='classic' - gold master is "smooth"
+  - fullbleed 100% > 60% - convert beats to grids
+  - only 1 template(s) ['full'] - need >= 3
+  - fx on 0% of beats < 50% - author the cold->warm grade arc
+  - no temp grade anywhere - the fx arc must carry colortemperature beats
+  - cut_ticks true - the gold master ships without per-cut tick SFX
+  - 0 animate.living_light clip(s) < 2 (default 2/piece: a reveal + the landing)
+  - landing beat carries no light (no fx.rays and no living_light clip)
+FAIL today_paradise_luke2343
+  - motion='classic' - gold master is "smooth"
+  - fullbleed 75% > 60% - convert beats to grids
+  - only 2 template(s) ['full', 'stack_h'] - need >= 3
+  - fx on 0% of beats < 50% - author the cold->warm grade arc
+  - no temp grade anywhere - the fx arc must carry colortemperature beats
+  - cut_ticks true - the gold master ships without per-cut tick SFX
+  - 0 animate.living_light clip(s) < 2 (default 2/piece: a reveal + the landing)
+  - landing beat carries no light (no fx.rays and no living_light clip)
+FAIL watch_one_hour_matt2640
+  - motion='classic' - gold master is "smooth"
+  - fullbleed 88% > 60% - convert beats to grids
+  - only 2 template(s) ['full', 'stack_h'] - need >= 3
+  - fx on 0% of beats < 50% - author the cold->warm grade arc
+  - no temp grade anywhere - the fx arc must carry colortemperature beats
+  - cut_ticks true - the gold master ships without per-cut tick SFX
+  - 0 animate.living_light clip(s) < 2 (default 2/piece: a reveal + the landing)
+  - landing beat carries no light (no fx.rays and no living_light clip)
+FAIL woman_behold_john1926
+  - motion='classic' - gold master is "smooth"
+  - fullbleed 85% > 60% - convert beats to grids
+  - only 2 template(s) ['full', 'stack_h'] - need >= 3
+  - fx on 0% of beats < 50% - author the cold->warm grade arc
+  - no temp grade anywhere - the fx arc must carry colortemperature beats
+  - cut_ticks true - the gold master ships without per-cut tick SFX
+  - 0 animate.living_light clip(s) < 2 (default 2/piece: a reveal + the landing)
+  - landing beat carries no light (no fx.rays and no living_light clip)
+FAIL thirty_pieces_zech11
+  - motion='classic' - gold master is "smooth"
+  - fullbleed 83% > 60% - convert beats to grids
+  - only 2 template(s) ['full', 'stack_h'] - need >= 3
+  - fx on 0% of beats < 50% - author the cold->warm grade arc
+  - no temp grade anywhere - the fx arc must carry colortemperature beats
+  - cut_ticks true - the gold master ships without per-cut tick SFX
+  - 0 animate.living_light clip(s) < 2 (default 2/piece: a reveal + the landing)
+  - landing beat carries no light (no fx.rays and no living_light clip)
+FAIL empty_tomb_john208
+  - motion='classic' - gold master is "smooth"
+  - fullbleed 100% > 60% - convert beats to grids
+  - only 1 template(s) ['full'] - need >= 3
+  - stills used > 2x: {'risen_christ_wounds': 5}
+  - 8 stills full-bleed twice (max 2): {'stone_rolled_dawn': [1, 10], 'stone_taken_away_dark': [2, 14], 'mary_runs_predawn': [3, 4], 'linen_left_lying': [6, 11], 'napkin_wrapped_apart': [7, 8], 'john_believes_inside': [9, 12], 'risen_christ_wounds': [13, 17, 18, 19, 20], 'jesus_shows_thomas': [15, 16]}
+  - full-bleed repeat stone_rolled_dawn at beats [1, 10] - only an ADJACENT two-shot is allowed
+  - full-bleed repeat stone_taken_away_dark at beats [2, 14] - only an ADJACENT two-shot is allowed
+  - full-bleed repeat linen_left_lying at beats [6, 11] - only an ADJACENT two-shot is allowed
+  - full-bleed repeat john_believes_inside at beats [9, 12] - only an ADJACENT two-shot is allowed
+  - full-bleed repeat risen_christ_wounds at beats [13, 17, 18, 19, 20] - only an ADJACENT two-shot is allowed
+  - fx on 0% of beats < 50% - author the cold->warm grade arc
+  - no temp grade anywhere - the fx arc must carry colortemperature beats
+  - 0 animate.living_light clip(s) < 2 (default 2/piece: a reveal + the landing)
+  - landing beat carries no light (no fx.rays and no living_light clip)
+FAIL sign_of_jonah_matt1240
+  - motion='classic' - gold master is "smooth"
+  - fullbleed 95% > 60% - convert beats to grids
+  - only 2 template(s) ['full', 'stack_h'] - need >= 3
+  - 5 stills full-bleed twice (max 2): {'storm_ship_waves': [3, 5], 'jonah_sinking_down': [7, 12], 'jonah_in_the_deep': [8, 10], 'mercy_hand_into_deep': [16, 17], 'risen_christ_wounds': [19, 20]}
+  - full-bleed repeat storm_ship_waves at beats [3, 5] - only an ADJACENT two-shot is allowed
+  - full-bleed repeat jonah_sinking_down at beats [7, 12] - only an ADJACENT two-shot is allowed
+  - full-bleed repeat jonah_in_the_deep at beats [8, 10] - only an ADJACENT two-shot is allowed
+  - fx on 0% of beats < 50% - author the cold->warm grade arc
+  - no temp grade anywhere - the fx arc must carry colortemperature beats
+  - 0 animate.living_light clip(s) < 2 (default 2/piece: a reveal + the landing)
+  - landing beat carries no light (no fx.rays and no living_light clip)

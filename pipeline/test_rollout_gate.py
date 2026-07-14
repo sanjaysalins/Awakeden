@@ -181,6 +181,29 @@ def test_rollout_spend_tally(tmp_path, monkeypatch):
     assert per_ep == {"it_is_finished_john1930": 2}
 
 
+def test_disk_clip_count_dedup_and_rejects(tmp_path):
+    """One HF bill = one count: promoted copy2 duplicates collapse; parked rejects and
+    stale clips still count; pre-rollout mp4s and out-of-scope episodes don't."""
+    import os
+    import shutil
+    import pipeline.rollout_spend as rs
+    vis = tmp_path / "cluster_01_cross" / "it_is_finished_john1930" / "visual"
+    (vis / "clips" / "_rejected").mkdir(parents=True)
+    (vis / "_fx_pilot").mkdir(parents=True)
+    pilot = vis / "_fx_pilot" / "a_livinglight.mp4"
+    pilot.write_bytes(b"AAAA")                                  # 1 bill (pilot render)
+    shutil.copy2(pilot, vis / "clips" / "a.mp4")                # promoted copy - same bill
+    (vis / "clips" / "b.mp4").write_bytes(b"BBBBBB")            # 1 bill (production render)
+    (vis / "clips" / "_rejected" / "c.mp4").write_bytes(b"CC")  # 1 bill (parked QC reject)
+    old = vis / "clips" / "old.mp4"
+    old.write_bytes(b"OLDOLD")                                  # pre-rollout - not charged
+    os.utime(old, (10_000, 10_000))
+    other = tmp_path / "cluster_01_cross" / "not_in_scope" / "visual" / "clips"
+    other.mkdir(parents=True)
+    (other / "x.mp4").write_bytes(b"XX")                        # out of scope
+    assert rs.disk_clip_count(root=tmp_path) == 3
+
+
 def test_dash_slop_fails(tmp_path):
     spec = gold_spec()
     spec["beats"][0]["cap"]["text"] = "one thing - another thing"

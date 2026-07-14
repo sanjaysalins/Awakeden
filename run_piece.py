@@ -323,6 +323,10 @@ def clip_src_hash(still: Path, prompt: str, duration: int, aspect_ratio: str) ->
 
 
 def _clip_state(still: Path, out: Path, prompt: str, an: dict) -> str:
+    if not out.exists():
+        # the QC re-roll mechanic (panel round-4): parking a rejected mp4 in _rejected/
+        # (sha left behind) must trigger a re-render, not a hash-current skip
+        return "missing"
     """'fresh' (hash matches) | 'stale' (source changed) | 'unhashed' (pre-P1 clip,
     judged by mtime: clip older than its still = stale) | 'missing'."""
     if not (out.exists() and out.stat().st_size > 0):
@@ -389,6 +393,12 @@ def run_animate(piece_dir: Path, pj: dict, *, only: set[str]) -> int:
                 dest.unlink()
             out.replace(dest)
             print(f"[stale] {slug} — old clip moved to {stale_dir.name}/, re-rendering")
+        # re-check the batch cap before EACH paid render — one green pre-loop check let a
+        # multi-clip run overshoot 485cr (panel round-4, 3 voices)
+        from pipeline.rollout_spend import check as _slcheck
+        if (piece_dir / "visual" / "livingpage_short.spec.json").is_file() and _slcheck(verbose=False):
+            print(f"ROLLOUT STOP-LOSS hit mid-batch - stopping before {slug}")
+            return 4
         ok = hf_animate(still, out, prompt, an["duration"], aspect_ratio=an["aspect_ratio"])
         if ok:
             out.with_suffix(".src.sha").write_text(
@@ -760,23 +770,28 @@ def main(argv=None) -> int:
     stages = ["stills", "animate", "score", "register"] if a.stage == "all" else [a.stage]
     for st in stages:
         print(f"== {pj['piece']} :: {st} ==")
+        rc = 0
         if st == "stills":
-            run_stills(piece_dir, pj, render=a.render, force=a.force, only=only,
-                       no_reuse=a.no_reuse)
+            rc = run_stills(piece_dir, pj, render=a.render, force=a.force, only=only,
+                            no_reuse=a.no_reuse)
         elif st == "animate":
-            run_animate(piece_dir, pj, only=only)
+            rc = run_animate(piece_dir, pj, only=only)
         elif st == "score":
-            run_score(piece_dir, pj)
+            rc = run_score(piece_dir, pj)
         elif st == "register":
-            run_register(piece_dir, pj)
+            rc = run_register(piece_dir, pj)
         elif st == "hash-backfill":
-            run_hash_backfill(piece_dir, pj)
+            rc = run_hash_backfill(piece_dir, pj)
         elif st == "enrich-dips":
-            run_enrich_dips(piece_dir, pj)
+            rc = run_enrich_dips(piece_dir, pj)
         elif st == "retime":
-            run_retime(piece_dir, pj)
+            rc = run_retime(piece_dir, pj)
         elif st == "engine-plan":
-            run_engine_plan(piece_dir, pj)
+            rc = run_engine_plan(piece_dir, pj)
+        # gate/stop-loss refusals (3/4) MUST reach the shell — automation was seeing
+        # exit 0 on refused paid stages (panel round-4 codex catch)
+        if rc:
+            return rc
     return 0
 
 
