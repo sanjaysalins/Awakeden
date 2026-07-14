@@ -35,6 +35,10 @@ PROVIDERS = {
     # Model pinned per voice so panel diversity is DETERMINISTIC (5 distinct families:
     # Cursor/Composer, Anthropic, Google, OpenAI, xAI) — never silently collapsed by a
     # CLI changing its default model.
+    # Per-reviewer timeouts scale by REVIEW_TIMEOUT_MULT (env, default 1.0). Raised for
+    # heavy plan reviews: codex/gemini died at exactly their caps on 6KB artifacts they
+    # were fact-checking against the repo (panel rounds 2026-07-14) while perfectly
+    # healthy on the doctor's smoke test.
     "cursor": {  # PRIMARY — Cursor's own Composer model (= the default that earned 98% OK)
         "command": "cursor-agent",
         "args": ["-p", "--mode", "ask", "--model", "composer-2.5-fast"], "mode": "stdin",
@@ -223,11 +227,12 @@ def run_one(name: str, prompt: str, outdir: Path) -> tuple[str, bool, str, float
     if os.getenv("JITB_PANEL_USE_API", "0") not in ("1", "true", "yes"):
         for k in ("ANTHROPIC_API_KEY", "GEMINI_API_KEY", "GOOGLE_API_KEY", "OPENAI_API_KEY"):
             sub_env.pop(k, None)
+    tmo = round(cfg["timeout"] * float(os.getenv("REVIEW_TIMEOUT_MULT", "1")))
     t = time.monotonic()
     try:
         r = subprocess.run(
             cmd, input=stdin_payload, capture_output=True, text=True, env=sub_env,
-            encoding="utf-8", errors="replace", timeout=cfg["timeout"],
+            encoding="utf-8", errors="replace", timeout=tmo,
             stdin=None if stdin_payload is not None else subprocess.DEVNULL,
         )
         dur = time.monotonic() - t
@@ -237,7 +242,7 @@ def run_one(name: str, prompt: str, outdir: Path) -> tuple[str, bool, str, float
             out = f"(no output; exit {r.returncode}; stderr: {(r.stderr or '')[:200]})"
         return name, ok, out, dur
     except subprocess.TimeoutExpired:
-        return name, False, f"(timed out after {cfg['timeout']}s)", time.monotonic() - t
+        return name, False, f"(timed out after {tmo}s)", time.monotonic() - t
     finally:
         if tmp_file:
             tmp_file.unlink(missing_ok=True)

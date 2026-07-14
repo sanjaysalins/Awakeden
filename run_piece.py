@@ -357,6 +357,13 @@ def run_animate(piece_dir: Path, pj: dict, *, only: set[str]) -> int:
                 return 3
         else:
             print("[gate] ROLLOUT GATE BYPASSED via JITB_SKIP_ROLLOUT_GATE=1 - surgical repairs only")
+        # 485cr batch stop-loss at the SAME chokepoint (panel round-3: "run manually at
+        # wave gates" was a human-discipline control; this is the fail-closed version).
+        from pipeline.rollout_spend import check as rollout_spend_check
+        if rollout_spend_check(verbose=False):
+            print("ROLLOUT STOP-LOSS BREACHED - refusing paid animate; re-quote the user "
+                  "(python -m pipeline.rollout_spend for the breakdown)")
+            return 4
     from _hf_animate_short import hf_animate   # carries the PASS-sidecar + budget gates
     pool = piece_dir / "visual"
     clips = pool / "clips"

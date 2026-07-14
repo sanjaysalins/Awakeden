@@ -1,7 +1,31 @@
-# CORPUS ROLLOUT PLAN v4 — gold-master format × 12 living-page shorts (2026-07-14)
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
 
-**Status:** v4 after panel round 3 (DEGRADED 2/5 — cursor REVISE + claude REVISE both
-applied below; grok/codex/gemini being revived via panel_doctor for round 4).
+ARTIFACT TYPE: plan
+
+LENS — judge this PLAN on (be specific, cite the exact step/claim):
+- Feasibility against the real codebase / tools (does it assume things that exist?).
+- Hidden risks, false assumptions, single points of failure.
+- Over-engineering / premature building before the idea is proven.
+- Missing steps, edge cases, or verification gaps.
+- Reuse: does it duplicate tools that already exist instead of reusing them?
+- Cost / spend and whether it's justified.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block (on the VERDICT line write exactly ONE word —
+PASS or REVISE or FAIL — never the list of options):
+
+VERDICT: <PASS or REVISE or FAIL>
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# CORPUS ROLLOUT PLAN v3 — gold-master format × 12 living-page shorts (2026-07-14)
+
+**Status:** v3 after panel round 2 (quorum 4/5: claude PASS, grok REVISE, cursor REVISE,
+gemini FAIL — every finding below verified against the code, fixed or answered).
 **User approval:** GO at 485cr HARD envelope (pilot spend COUNTS INSIDE it — zero point
 defined below). Wave A starts only on a clean panel verdict for this revision.
 Out of scope: EW01–09, QJA, and `father_forgive_them` (Wave E, separately quoted).
@@ -16,39 +40,24 @@ Out of scope: EW01–09, QJA, and `father_forgive_them` (Wave E, separately quot
 - **Gate fires on EVERY `run_piece --stage animate` where a livingpage spec exists**
   (round-2 fix: the living_light-presence condition left a mid-migration bypass window).
   `JITB_SKIP_ROLLOUT_GATE=1` = loud, discouraged escape for surgical repairs only.
-- **Stop-loss is fail-closed AT THE CHOKEPOINT (round-3 fix):** `run_piece --stage animate`
-  calls `pipeline.rollout_spend.check()` after the rollout gate and refuses paid renders
-  (exit 4) when the 485cr cap is reached — no longer a manual wave-gate script (though it
-  still runs there for the human view). Counts attributable ledger rows (Kling clips ×
-  7.5cr; BytePlus stills separate USD) **cross-checked against rendered mp4s on disk and
-  charged at the HIGHER number** (round-3 claude flag: the ledger writer is best-effort —
-  `hf_animate` proceeds unmetered if `pipeline.cost` errors — so ledger alone can
-  under-count; the disk check catches that class). Remaining stated limits: (a) `cost
-  summary` credits can't see animate rows; (b) account `reconcile` over-attributes under
-  parallel use — excluded; (c) failed-but-BILLED rolls (502s, NSFW blocks) leave neither
-  row nor mp4 — HF balance eyeball at each wave gate covers them, and the forecast carries
-  a line for NSFW-blocked-but-billed rolls on crucifixion imagery. Current: 6 clips
-  charged (disk) = 45cr, 440 headroom.
-- **One render path, no silent fallback:** ALL rollout renders and re-rolls go through
-  `run_piece --stage animate [--only <slug>]` — never the `_hf_animate_short.py` CLI or
-  `_animate_rerolls.py` (both bypass the rollout gate, and the CLI silently substitutes a
-  $0 ffmpeg crop-cut on NSFW blocks, which would let a static fake occupy a living-light
-  slot). Verified: `run_piece` prints FAILED and substitutes nothing — an HF block is a
-  visible re-roll decision, never a silent downgrade.
+- **Stop-loss is now a script, not prose:** `python -m pipeline.rollout_spend` sums
+  attributable ledger rows (rollout episodes since 2026-07-14; Kling clips × 7.5cr observed
+  billing; BytePlus stills reported separately in USD) against the 485cr cap, exit 1 on
+  breach. Run at EVERY wave gate + before any render batch. Known limits, stated honestly:
+  (a) `cost summary` credits can't see animate rows (est_usd only) — that's why this script;
+  (b) account-level `reconcile` OVER-attributes when the user spends in parallel (observed)
+  — excluded by design; (c) failed-but-billed rolls (502s) write no ledger row — cross-check
+  the HF balance by eye at each wave gate. Current reading: 37.5cr attributed, 447.5 headroom.
 
 ## Human checklist per piece (recorded as `visual/wave_checklist.json`, reviewed at wave gate)
 
 1. Scale variety (CU+wide+detail+medium) · 2. grids only on multi-figure stills, Christ
-singles stay full-bleed · 3. audio-diff: spec beat `sfx` arrays vs the piece's REAL bed
-builder — `sfx_pilots/build_cluster1_sfx.py` PIECES dict or the piece's `build_*_sfx.py`,
-as discovered by `cli_livingpage._sfx_builder()` (round-3 fix: no per-piece `_sfx.py`
-exists; the old grep target was wrong) · 4. hook-open / Christ-close bookend · 5. filmstrip
-per new clip via the gold-master ffmpeg-strip workflow, shipped as a shared helper in the
-A(a) tooling (round-3 fix: `pipeline/clip_anim_qc.py` is v1 scene-plan layout and no-ops on
-cluster pieces — reference dropped); rejects parked in `visual/clips/_rejected/` ·
-6. BEFORE/AFTER page + backup via the shared tooling · 7. builder fit-gate warnings
-reviewed and dispositioned by eye (advisory by design — the gold master itself carries 2
-accepted warnings, so it cannot hard-block).
+singles stay full-bleed · 3. audio-diff: grep the piece's `_sfx.py` bed builder for every
+spec-beat `sfx` name — no doubled accents (answer to "un-gateable": it IS a $0 diff, done
+as a named step; unifying the two audio systems = post-rollout refactor) · 4. hook-open /
+Christ-close bookend · 5. filmstrip per new clip via `pipeline/clip_anim_qc.py`, rejects
+parked in `visual/clips/_rejected/` · 6. BEFORE/AFTER page + backup via the shared tooling
+(Wave A deliverable below).
 
 ## Waves
 
@@ -59,10 +68,7 @@ accepted warnings, so it cannot hard-block).
 | B | forsaken_cry, i_thirst, into_thy_hands, today_paradise | **RE-QUOTE FIRST** (below) |
 | C | watch_one_hour, woman_behold, thirty_pieces | HUMAN + stop-loss |
 | D | empty_tomb, sign_of_jonah — ordering fixed per panel: fact cards FIRST → author still jobs → `run_piece.reuse_check` → render only the gaps → stills-gate → asset_index registration → clips | HUMAN + stop-loss |
-| E | father_forgive_them — greenfield mocomic→livingpage migration; scoped + quoted separately after Wave A. **Wave E must never move/delete assets other pieces reference** (`it_is_finished` refs `../father_forgive_them/visual/_byteplus/face_on_cross_fix2.png`) | — |
-
-Reuse discipline applies to ANY still work in ANY wave (not only D): fact cards → author
-jobs → `reuse_check` → render only the gaps. A(b) is BLOCKED until the A(a) tooling exists.
+| E | father_forgive_them — greenfield mocomic→livingpage migration; scoped + quoted separately after Wave A | — |
 
 Per piece: backup final (`.bak_prelivinglight`) → spec upgrade → gate PASS → `rollout_spend`
 + `cost summary --episode` pre-flight ($25/short ceiling; a near-ceiling episode = ASK THE
@@ -88,14 +94,7 @@ are unchanged).
 - Zero point: pilot + promotion spend counts INSIDE 485. Attributed so far: 37.5cr
   (ledger) — billed possibly up to ~52.5cr incl. one billed 502; balance eyeball at gates.
 
-## Answered panel objections (rounds 2–3)
-
-- **round-3 claude #1 (unmetered-spend hole):** fixed — disk cross-check in `rollout_spend`,
-  charged at max(ledger, disk); stated limit (c) covers billed-but-failed rolls.
-- **round-3 claude #2/#4 + cursor (fallback/re-roll path, QC tooling, audio target, fit-gate,
-  reuse in A–C, Wave E dependency):** all folded into the sections above.
-- **round-3 cursor "stop-loss not at chokepoint":** fixed — `run_piece` animate now refuses
-  on breach (exit 4).
+## Answered panel objections (round 2)
 
 - **gemini "BytePlus unsupported" (round 1):** wrong — `run_piece.py:34` ARK endpoint; all
   cluster stills render there. Confirmed by grok + claude round 2.
@@ -106,3 +105,4 @@ are unchanged).
 - **cursor "Wave A is heavy authoring, not a preflight":** correct — Wave A split into A(a)
   authoring/$0 and A(b) render/rate-measurement, with tooling as an explicit deliverable.
 - **claude "gate window / zero point / derive Wave D":** all fixed above.
+----- ARTIFACT END -----

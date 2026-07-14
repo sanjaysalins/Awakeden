@@ -46,18 +46,50 @@ def tally():
     return clips, clips * KLING_CR_PER_CLIP, stills_usd, per_ep
 
 
-def main() -> int:
+def disk_clip_count(root: Path | None = None) -> int:
+    """Cross-check (panel round-3 fix): the ledger writer is best-effort — hf_animate
+    proceeds unmetered if pipeline.cost errors, so ledger rows can UNDER-count. Count the
+    rendered mp4s on disk instead (rollout episodes, newer than the rollout start) and let
+    the caller take max(ledger, disk)."""
+    import datetime as dt
+    root = root or LEDGER.parent.parent / "batches"
+    cutoff = dt.datetime.fromisoformat(ROLLOUT_START).timestamp()
+    n = 0
+    for ep_dir in root.glob("cluster_0*/*"):
+        if ep_dir.name not in ROLLOUT_EPISODES:
+            continue
+        for sub in ("clips", "_fx_pilot"):
+            d = ep_dir / "visual" / sub
+            if d.is_dir():
+                n += sum(1 for m in d.glob("*.mp4") if m.stat().st_mtime >= cutoff)
+    return n
+
+
+def check(verbose: bool = True) -> int:
+    """0 = inside the cap; 1 = BREACHED. Called at the animate chokepoint AND wave gates."""
     clips, credits, stills_usd, per_ep = tally()
-    print(f"ROLLOUT SPEND since {ROLLOUT_START} (attributable ledger rows):")
-    for ep, n in sorted(per_ep.items()):
-        print(f"  {ep:36} {n:3} clip(s)  {n * KLING_CR_PER_CLIP:7.1f}cr")
-    print(f"  TOTAL: {clips} clips = {credits:.1f}cr of {CAP_CREDITS:.0f}cr cap"
-          f"  (+ ${stills_usd:.2f} BytePlus stills, separate currency)")
+    disk = disk_clip_count()
+    if disk > clips:
+        if verbose:
+            print(f"[stop-loss] WARNING: {disk} rollout clips on disk vs {clips} ledger rows "
+                  f"- ledger under-counted; charging the cap at the DISK number")
+        credits = disk * KLING_CR_PER_CLIP
+    if verbose:
+        print(f"ROLLOUT SPEND since {ROLLOUT_START} (attributable; disk cross-checked):")
+        for ep, n in sorted(per_ep.items()):
+            print(f"  {ep:36} {n:3} clip(s)  {n * KLING_CR_PER_CLIP:7.1f}cr")
+        print(f"  TOTAL: {max(clips, disk)} clips = {credits:.1f}cr of {CAP_CREDITS:.0f}cr cap"
+              f"  (+ ${stills_usd:.2f} BytePlus stills, separate currency)")
     if credits >= CAP_CREDITS:
         print("STOP-LOSS BREACHED - no further paid renders; re-quote the user.")
         return 1
-    print(f"  headroom: {CAP_CREDITS - credits:.1f}cr")
+    if verbose:
+        print(f"  headroom: {CAP_CREDITS - credits:.1f}cr")
     return 0
+
+
+def main() -> int:
+    return check(verbose=True)
 
 
 if __name__ == "__main__":
