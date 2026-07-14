@@ -135,6 +135,16 @@ def hf_animate(png: Path, out: Path, prompt: str, duration: int, aspect_ratio: s
     except Exception as e:  # noqa - a broken ledger must not block animation
         print(f"   [cost] ledger unavailable ({e}) — proceeding unmetered")
         _cost = None
+    # ROLLOUT STOP-LOSS at the true bottom of the funnel (panel round-6): this is the
+    # only function that bills Kling, so the 485cr cap binds here for rollout episodes —
+    # even via legacy paths (_animate_rerolls.py / this CLI) the plan bans by SOP.
+    try:
+        from pipeline.rollout_spend import ROLLOUT_EPISODES, check as _rollout_check
+        if ep in ROLLOUT_EPISODES and _rollout_check(verbose=False):
+            raise SystemExit(f"ROLLOUT STOP-LOSS: refusing {png.name} — the 485cr rollout "
+                             f"cap is reached (python -m pipeline.rollout_spend)")
+    except ImportError as e:
+        print(f"   [rollout] stop-loss unavailable ({e}) — proceeding on episode ceiling only")
     cmd = [str(HF), "generate", "create", "kling3_0", "--start-image", str(png),
            "--prompt", prompt, "--duration", str(duration), "--mode", "pro",
            "--sound", "off", "--aspect_ratio", aspect_ratio, "--wait"]

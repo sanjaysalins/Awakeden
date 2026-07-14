@@ -56,6 +56,9 @@ def disk_clip_count(root: Path | None = None) -> int:
       preserves both — one HF bill must not count twice."""
     import datetime as dt
     root = root or LEDGER.parent.parent / "batches"
+    # LOCAL midnight, deliberately ~5.5h EARLIER than the ledger's UTC string compare:
+    # the disk count may include late-July-13 files the ledger excludes — it over-counts
+    # and trips early, never leaks. Do not "fix" this to UTC (panel round-6 F3).
     cutoff = dt.datetime.fromisoformat(ROLLOUT_START).timestamp()
     seen = set()
     for ep_dir in root.glob("cluster_0*/*"):

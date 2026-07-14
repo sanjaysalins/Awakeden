@@ -1,3 +1,27 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: plan
+
+LENS — judge this PLAN on (be specific, cite the exact step/claim):
+- Feasibility against the real codebase / tools (does it assume things that exist?).
+- Hidden risks, false assumptions, single points of failure.
+- Over-engineering / premature building before the idea is proven.
+- Missing steps, edge cases, or verification gaps.
+- Reuse: does it duplicate tools that already exist instead of reusing them?
+- Cost / spend and whether it's justified.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block (on the VERDICT line write exactly ONE word —
+PASS or REVISE or FAIL — never the list of options):
+
+VERDICT: <PASS or REVISE or FAIL>
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
 # CORPUS ROLLOUT PLAN v5 — gold-master format × 12 living-page shorts (2026-07-14)
 
 **Status:** v5 after panel round 4 (FULL panel 5/5, all REVISE — every finding verified,
@@ -95,9 +119,7 @@ are unchanged).
   of which ~2–3 need NEW stills+clips. Wave D extra ≈ **15–30cr** + ~$0.15 BytePlus
   (was "67.5cr", an estimate dressed as derived — panel was right).
 - Base ≈ 195–210cr. Worst case (pilot 2.3×/keeper): **~449–483cr vs 447.5 remaining —
-  strictly OVER the wall, so at the pilot rate the Wave B re-quote + scope cut is the
-  EXPECTED path, not a contingency** (round-6 honesty fix); hoped ~1.5×: **~295–315cr,
-  ~135cr headroom.**
+  right at the wall**; hoped ~1.5×: **~295–315cr, ~135cr headroom.**
 - **Forecast rule: B–D forecast at max(Wave A measured, 2.3×) unless Wave A shows ≤1.5×
   across all 6 rolls. Re-quote before Wave B either way. Per-slug roll cap: 3 attempts,
   then stop and report (pilot precedent) — one stubborn CU cannot eat a wave's budget.**
@@ -162,3 +184,4 @@ was swallowing them — automation saw success on refused runs).
 - **cursor "Wave A is heavy authoring, not a preflight":** correct — Wave A split into A(a)
   authoring/$0 and A(b) render/rate-measurement, with tooling as an explicit deliverable.
 - **claude "gate window / zero point / derive Wave D":** all fixed above.
+----- ARTIFACT END -----

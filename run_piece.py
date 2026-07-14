@@ -344,12 +344,16 @@ def run_animate(piece_dir: Path, pj: dict, *, only: set[str]) -> int:
     if not pj.get("animate"):
         print("(no animate section — this piece's clips come from elsewhere)")
         return 0
-    # ROLLOUT GATE (panel fixes 2026-07-14, round 2): ANY living-page piece (spec present)
-    # must meet the gold-master bar before paid animate — conditioning on living_light
-    # entries left a bypass window for mid-migration pieces (all 4 panel voices flagged it).
+    # ROLLOUT GATE (panel fixes 2026-07-14, rounds 2+6): ANY living-page piece must meet
+    # the gold-master bar before paid animate. Keyed on ROLLOUT_EPISODES membership OR
+    # spec presence (round-6: spec-file-only keying meant a spec renamed mid-A(a)-rewrite
+    # stripped every spend control — exactly the window the rewrite creates; a missing
+    # spec on a rollout episode now FAILS the gate rather than skipping it).
     # JITB_SKIP_ROLLOUT_GATE=1 = loud escape for a surgical repair on an unupgraded piece.
     import os
-    if (piece_dir / "visual" / "livingpage_short.spec.json").is_file():
+    from pipeline.rollout_spend import ROLLOUT_EPISODES
+    if (piece_dir.name in ROLLOUT_EPISODES
+            or (piece_dir / "visual" / "livingpage_short.spec.json").is_file()):
         if os.getenv("JITB_SKIP_ROLLOUT_GATE", "0") in ("0", "false", "no"):
             from pipeline.rollout_gate import check_piece
             fails = check_piece(piece_dir)
@@ -376,7 +380,9 @@ def run_animate(piece_dir: Path, pj: dict, *, only: set[str]) -> int:
     # BULK GUARD (panel round-5): after a gold-master spec rewrite MANY clips go stale;
     # a bare `--stage animate` would pay for all of them, not the 2 living-light slugs
     # the wave budgeted. Rollout pieces must name their targets (or loudly override).
-    if (piece_dir / "visual" / "livingpage_short.spec.json").is_file() and not only:
+    from pipeline.rollout_spend import ROLLOUT_EPISODES as _REPS
+    if (piece_dir.name in _REPS
+            or (piece_dir / "visual" / "livingpage_short.spec.json").is_file()) and not only:
         import os as _os
         if _os.getenv("JITB_ALLOW_BULK_ANIMATE", "0") in ("0", "false", "no"):
             pending = [s for s, p in animate_prompts(pj).items()
@@ -408,9 +414,12 @@ def run_animate(piece_dir: Path, pj: dict, *, only: set[str]) -> int:
             out.replace(dest)
             print(f"[stale] {slug} — old clip moved to {stale_dir.name}/, re-rendering")
         # re-check the batch cap before EACH paid render — one green pre-loop check let a
-        # multi-clip run overshoot 485cr (panel round-4, 3 voices)
-        from pipeline.rollout_spend import check as _slcheck
-        if (piece_dir / "visual" / "livingpage_short.spec.json").is_file() and _slcheck(verbose=False):
+        # multi-clip run overshoot 485cr (panel round-4, 3 voices; round-6: keyed on
+        # episode membership so a mid-rewrite spec rename cannot strip the cap)
+        from pipeline.rollout_spend import check as _slcheck, ROLLOUT_EPISODES as _RE2
+        if (piece_dir.name in _RE2
+                or (piece_dir / "visual" / "livingpage_short.spec.json").is_file()) \
+                and _slcheck(verbose=False):
             print(f"ROLLOUT STOP-LOSS hit mid-batch - stopping before {slug}")
             return 4
         ok = hf_animate(still, out, prompt, an["duration"], aspect_ratio=an["aspect_ratio"])
