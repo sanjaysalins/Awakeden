@@ -67,12 +67,17 @@ def check_piece(piece_dir: Path) -> list[str]:
     # landing that is the warmest beat of the piece (lowest Kelvin)
     temps = [b["fx"]["temp"] for b in beats if (b.get("fx") or {}).get("temp")]
     last_temp = (beats[-1].get("fx") or {}).get("temp")
-    if temps:
+    if not temps:
+        # rays-only fx could satisfy the % check with NO grade at all (panel round-2 flag)
+        fails.append("no temp grade anywhere - the fx arc must carry colortemperature beats")
+    else:
         if max(temps) < ARC_COOL_MIN_K:
             fails.append(f"grade arc flat: no cool pole >= {ARC_COOL_MIN_K}K (max {max(temps)}K)")
         if last_temp is None or last_temp != min(temps) or last_temp > ARC_LANDING_MAX_K:
             fails.append(f"grade arc: landing temp {last_temp}K must be the piece's warmest "
                          f"(lowest K) and <= {ARC_LANDING_MAX_K}K")
+    if spec.get("cut_ticks"):
+        fails.append("cut_ticks true - the gold master ships without per-cut tick SFX")
 
     slop = [i for i, b in enumerate(beats, 1)
             if (cp := b.get("cap")) and any(t in cp.get("text", "") for t in SLOP_TOKENS)]

@@ -138,6 +138,49 @@ def test_cold_landing_fails(tmp_path):
     assert any("landing temp" in f for f in fails)
 
 
+def test_rays_only_fx_fails(tmp_path):
+    spec = gold_spec()
+    for b in spec["beats"]:                        # fx present but carries NO temp grade
+        if b.get("fx"):
+            b["fx"] = {"rays": {"at": [0.5, 0.1], "strength": 0.3}}
+    for b in spec["beats"]:                        # avoid double-lit noise on ll beats
+        if {c["slug"] for c in b["clips"]} & {"s06", "s09"}:
+            b.pop("fx", None)
+    fails = check_piece(write_piece(tmp_path, spec))
+    assert any("no temp grade" in f for f in fails)
+
+
+def test_cut_ticks_fails(tmp_path):
+    spec = gold_spec()
+    spec["cut_ticks"] = True
+    fails = check_piece(write_piece(tmp_path, spec))
+    assert any("cut_ticks" in f for f in fails)
+
+
+def test_rollout_spend_tally(tmp_path, monkeypatch):
+    import pipeline.rollout_spend as rs
+    rows = [
+        {"ts": "2026-07-14T09:00:00", "episode": "it_is_finished_john1930",
+         "kind": "clip", "provider": "hf", "units": 1},
+        {"ts": "2026-07-14T09:01:00", "episode": "it_is_finished_john1930",
+         "kind": "clip", "provider": "hf", "units": 1},
+        {"ts": "2026-07-14T09:02:00", "episode": "empty_tomb_john208",
+         "kind": "still", "provider": "byteplus", "est_usd": 0.05},
+        {"ts": "2026-07-13T09:00:00", "episode": "it_is_finished_john1930",
+         "kind": "clip", "provider": "hf", "units": 1},                      # pre-rollout
+        {"ts": "2026-07-14T09:03:00", "episode": "unrelated_piece",
+         "kind": "clip", "provider": "hf", "units": 1},                      # out of scope
+        {"ts": "2026-07-14T09:04:00", "episode": "women_first_witnesses_luke245",
+         "stage": "reconcile", "actual_credits": 80.0},                      # excluded
+    ]
+    lg = tmp_path / "ledger.jsonl"
+    lg.write_text("\n".join(json.dumps(r) for r in rows), encoding="utf-8")
+    monkeypatch.setattr(rs, "LEDGER", lg)
+    clips, credits, stills_usd, per_ep = rs.tally()
+    assert clips == 2 and credits == 15.0 and stills_usd == 0.05
+    assert per_ep == {"it_is_finished_john1930": 2}
+
+
 def test_dash_slop_fails(tmp_path):
     spec = gold_spec()
     spec["beats"][0]["cap"]["text"] = "one thing - another thing"

@@ -340,17 +340,23 @@ def run_animate(piece_dir: Path, pj: dict, *, only: set[str]) -> int:
     if not pj.get("animate"):
         print("(no animate section — this piece's clips come from elsewhere)")
         return 0
-    # ROLLOUT GATE (panel fix 2026-07-14): a piece with living_light entries claims the
-    # gold-master bar — refuse paid animate until the whole spec meets it (was CLI-only,
-    # i.e. a human-discipline single point of failure).
-    if (pj["animate"].get("living_light") or {}):
-        from pipeline.rollout_gate import check_piece
-        fails = check_piece(piece_dir)
-        if fails:
-            print("ROLLOUT GATE FAIL - refusing paid animate until the spec meets the bar:")
-            for f in fails:
-                print(f"  - {f}")
-            return 3
+    # ROLLOUT GATE (panel fixes 2026-07-14, round 2): ANY living-page piece (spec present)
+    # must meet the gold-master bar before paid animate — conditioning on living_light
+    # entries left a bypass window for mid-migration pieces (all 4 panel voices flagged it).
+    # JITB_SKIP_ROLLOUT_GATE=1 = loud escape for a surgical repair on an unupgraded piece.
+    import os
+    if (piece_dir / "visual" / "livingpage_short.spec.json").is_file():
+        if os.getenv("JITB_SKIP_ROLLOUT_GATE", "0") in ("0", "false", "no"):
+            from pipeline.rollout_gate import check_piece
+            fails = check_piece(piece_dir)
+            if fails:
+                print("ROLLOUT GATE FAIL - refusing paid animate until the spec meets the bar")
+                print("(JITB_SKIP_ROLLOUT_GATE=1 to bypass for a surgical repair - discouraged):")
+                for f in fails:
+                    print(f"  - {f}")
+                return 3
+        else:
+            print("[gate] ROLLOUT GATE BYPASSED via JITB_SKIP_ROLLOUT_GATE=1 - surgical repairs only")
     from _hf_animate_short import hf_animate   # carries the PASS-sidecar + budget gates
     pool = piece_dir / "visual"
     clips = pool / "clips"
