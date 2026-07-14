@@ -5,25 +5,32 @@
   "held_gt6s": [
    6.07
   ],
-  "slams": 2,
+  "slams": 12,
   "kling_or_punch_or_slam_pct": 100,
-  "tier1_pct": 19,
+  "tier1_pct": 6,
   "reuse_violations": [],
   "tier3_or_flagged_beats": [
+   1,
+   2,
    3,
+   5,
+   6,
+   10,
+   11,
    14,
    15
   ],
   "standard_3b": {
    "stills_over_2_uses": {},
    "stills_fullbleed_twice": {},
-   "fullbleed_beat_pct": 88,
+   "fullbleed_beat_pct": 56,
    "slop_caption_beats": []
   },
-  "ramps": 1,
+  "ramps": 0,
   "whips": 2,
   "flash_inserts": 1,
-  "cut_ticks": true,
+  "fx_beats": 14,
+  "cut_ticks": false,
   "beats": 16
  },
  "beats": [
@@ -34,8 +41,8 @@
     3.78
    ],
    "dur": 3.766667,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_frac3",
+   "slams": 2,
    "slugs": [
     "disciples_sleeping"
    ],
@@ -44,9 +51,9 @@
    ],
    "punch": true,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "scrim",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -56,8 +63,8 @@
     6.82
    ],
    "dur": 3.066667,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_band3",
+   "slams": 2,
    "slugs": [
     "gethsemane_olives_night"
    ],
@@ -66,9 +73,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "scrim",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -100,8 +107,8 @@
     11.0
    ],
    "dur": 1.633333,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_frac3",
+   "slams": 2,
    "slugs": [
     "jesus_prays_night"
    ],
@@ -132,9 +139,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "band",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -154,9 +161,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "band",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -242,9 +249,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "band",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -264,9 +271,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "band",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -276,8 +283,8 @@
     45.9
    ],
    "dur": 3.9,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_frac3",
+   "slams": 2,
    "slugs": [
     "same_prayer_again"
    ],
@@ -298,8 +305,8 @@
     48.72
    ],
    "dur": 2.833333,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_band3",
+   "slams": 2,
    "slugs": [
     "face_on_cross"
    ],
@@ -308,8 +315,8 @@
    ],
    "punch": true,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -378,8 +385,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   }

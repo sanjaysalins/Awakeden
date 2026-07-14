@@ -6,9 +6,9 @@
    6.63,
    6.37
   ],
-  "slams": 2,
+  "slams": 10,
   "kling_or_punch_or_slam_pct": 92,
-  "tier1_pct": 31,
+  "tier1_pct": 8,
   "reuse_violations": [],
   "tier3_or_flagged_beats": [
    10,
@@ -17,13 +17,14 @@
   "standard_3b": {
    "stills_over_2_uses": {},
    "stills_fullbleed_twice": {},
-   "fullbleed_beat_pct": 85,
+   "fullbleed_beat_pct": 54,
    "slop_caption_beats": []
   },
   "ramps": 1,
   "whips": 2,
   "flash_inserts": 2,
-  "cut_ticks": true,
+  "fx_beats": 12,
+  "cut_ticks": false,
   "beats": 13
  },
  "beats": [
@@ -78,8 +79,8 @@
     13.06
    ],
    "dur": 5.233333,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_band3",
+   "slams": 2,
    "slugs": [
     "golgotha_hill_wide"
    ],
@@ -122,8 +123,8 @@
     22.09
    ],
    "dur": 6.366667,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_frac3",
+   "slams": 2,
    "slugs": [
     "mary_and_john"
    ],
@@ -132,8 +133,8 @@
    ],
    "punch": true,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -144,8 +145,8 @@
     28.75
    ],
    "dur": 6.633333,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_band3",
+   "slams": 2,
    "slugs": [
     "face_on_cross"
    ],
@@ -176,8 +177,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "plaque",
+    "tier": 2,
+    "style": "band",
     "flag": false
    }
   },
@@ -240,7 +241,7 @@
    ],
    "sources": [
     "kling",
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {
@@ -256,8 +257,8 @@
     49.22
    ],
    "dur": 5.633333,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_band3",
+   "slams": 2,
    "slugs": [
     "jesus_looks_down"
    ],
@@ -266,8 +267,8 @@
    ],
    "punch": true,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },

@@ -3,27 +3,35 @@
   "median_beat_s": 2.77,
   "max_beat_s": 5.8,
   "held_gt6s": [],
-  "slams": 3,
-  "kling_or_punch_or_slam_pct": 83,
-  "tier1_pct": 11,
+  "slams": 13,
+  "kling_or_punch_or_slam_pct": 94,
+  "tier1_pct": 6,
   "reuse_violations": [],
   "tier3_or_flagged_beats": [
    1,
    2,
+   4,
+   6,
+   8,
+   9,
+   10,
    11,
+   12,
    15,
+   16,
    17
   ],
   "standard_3b": {
    "stills_over_2_uses": {},
    "stills_fullbleed_twice": {},
-   "fullbleed_beat_pct": 83,
+   "fullbleed_beat_pct": 56,
    "slop_caption_beats": []
   },
   "ramps": 2,
   "whips": 4,
   "flash_inserts": 2,
-  "cut_ticks": true,
+  "fx_beats": 15,
+  "cut_ticks": false,
   "beats": 18
  },
  "beats": [
@@ -40,7 +48,7 @@
     "thirty_coins_scatter"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": true,
    "cap": {
@@ -78,8 +86,8 @@
     9.6
    ],
    "dur": 4.366667,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_frac3",
+   "slams": 2,
    "slugs": [
     "zechariah_night_scroll"
    ],
@@ -100,8 +108,8 @@
     12.54
    ],
    "dur": 2.933333,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_frac3",
+   "slams": 2,
    "slugs": [
     "weighing_scales_silver"
    ],
@@ -110,9 +118,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "band",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -154,9 +162,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "band",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -188,8 +196,8 @@
     28.39
    ],
    "dur": 4.766667,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_frac3",
+   "slams": 2,
    "slugs": [
     "potter_at_wheel"
    ],
@@ -198,9 +206,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "band",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -210,8 +218,8 @@
     31.07
    ],
    "dur": 2.666667,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_frac3",
+   "slams": 2,
    "slugs": [
     "judas_bag_priests"
    ],
@@ -220,9 +228,9 @@
    ],
    "punch": true,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "scrim",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -232,8 +240,8 @@
     34.39
    ],
    "dur": 3.333333,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_frac3",
+   "slams": 2,
    "slugs": [
     "judas_casting_coins"
    ],
@@ -242,9 +250,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "band",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -261,7 +269,7 @@
     "coin_on_scroll"
    ],
    "sources": [
-    "dyncam",
+    "kling",
     "dyncam"
    ],
    "punch": false,
@@ -288,9 +296,9 @@
    ],
    "punch": true,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "scrim",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -334,8 +342,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -378,9 +386,9 @@
    ],
    "punch": true,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "scrim",
-    "flag": false
+    "flag": true
    }
   },
   {
