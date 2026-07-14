@@ -1,6 +1,15 @@
 # STATE.md — progress tracker
 
-**Last updated:** 2026-07-14 (eve — rollout red-teamed 6 rounds; Wave A(a) OPEN)
+**Last updated:** 2026-07-14 (night — WAVE A COMPLETE, at the human wave gate)
+**Status (2026-07-14 night — WAVE A DONE, awaiting user wave-gate review):** All 3 pieces
+(it_is_finished / pierced / crucifixion_foretold) upgraded to gold master + REBUILT through sfx:
+grids (anchors eyeballed per still), cold→warm arcs, smooth, living-light clips IN the finals.
+A(b): 7 paid rolls → 6 slots (5 renders + $0 sibling copy), measured rate 1.17×. 🔴 WAVE LESSON
+(binding, in plan+memory): living-light ONLY on clean-light stills — painted-blood crucifixion
+imagery animates its blood 3/3 despite prompt locks; stays camera-only. 2 rejects parked, targets
+swapped (jesus_prays_night, lots_cup_close — both PASS). Spend 97.5cr of 485 (headroom 387.5).
+REVIEW: 3 wave_compare pages + batches/_rollout/wave_a_clips.html. NEXT = user wave gate →
+Wave B re-quote (~90cr at conservative 1.5×). **Full pickup: RESUME.md top.**
 **Status (2026-07-14 eve — ROLLOUT PLAN v5.1 + A(a) started):** Plan survived 6 adversarial panel
 rounds (findings shrank structural→arithmetic; every one verified+fixed or answered — see
 `batches/ROLLOUT_PLAN.md` + `_independent_review/`). Fail-closed spend stack now REAL: rollout gate
