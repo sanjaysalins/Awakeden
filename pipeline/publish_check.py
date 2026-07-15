@@ -170,12 +170,35 @@ def check_unit(media_dir: str | Path, *, sibling_titles: list[str] | None = None
             if slop:
                 fails.append(f"UK-G7 dash-slop {md.name}:{n}: {slop} in {line.strip()[:60]!r}")
 
-    # thumbnail (WARN — no thumbnail stage in JITB yet)
+    # freshness: the pack must be stamped against the CURRENT final (a stale pack
+    # cannot be GREEN — the wave-rollout lesson, commit 9007339) + thumbnail
     src = pub / "_source.json"
     if src.exists():
-        thumb = json.loads(src.read_text(encoding="utf-8")).get("thumbnail", "")
+        try:
+            meta = json.loads(src.read_text(encoding="utf-8"))
+        except ValueError:
+            meta = None
+            fails.append("_source.json is malformed JSON (re-run cli_publish.py --index)")
+    else:
+        meta = None
+    if meta is not None:
+        from pipeline import finality
+        from pipeline.publish_pack import final_video_and_words
+        cur_video, _w = final_video_and_words(media)
+        if cur_video:
+            cur_sha = finality.content_sha(cur_video)
+            rec = meta.get("final_sha", "")
+            if not rec:
+                fails.append("pack not sha-stamped against the final (re-run cli_publish.py --index)")
+            elif rec != cur_sha:
+                fails.append("pack STALE: built from a different final (re-run cli_publish.py --index, re-read the copy)")
+            copy_rec = meta.get("copy_final_sha", "")
+            if copy_rec and rec == cur_sha and copy_rec != cur_sha:
+                warns.append("pack COPY authored against an older final - re-read the .md copy, "
+                             "then cli_publish.py --copy-ok (or --redraft)")
+        thumb = meta.get("thumbnail", "")
         if not thumb:
-            warns.append("no thumbnail (JITB has no thumbnail stage yet - add a cover before posting)")
+            warns.append("no thumbnail (run pipeline/thumbnails.py, then cli_publish.py --index)")
         elif not Path(thumb).exists():
             warns.append(f"thumbnail referenced but missing: {thumb}")
 

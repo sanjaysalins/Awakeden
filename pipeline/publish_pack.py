@@ -67,51 +67,25 @@ def parse_copy(path: Path) -> dict[str, str]:
 # ----------------------------------------------------------------------------
 # finished video + its forced-aligned words.json
 # ----------------------------------------------------------------------------
-_FINAL_VIDEO_ORDER = [
-    "viral_cut_sfx_music_captioned.mp4",
-    "viral_cut_sfx_captioned.mp4",
-    "viral_cut_captioned.mp4",
-]
-
-
 def final_video_and_words(media_dir: str | Path) -> tuple[str, str]:
-    """Best finished captioned video + its sibling <stem>.words.json (both '' if absent)."""
-    a = Path(media_dir).resolve() / "assembly"
-    if not a.is_dir():
-        # batch living-page layout: visual/. + audio/alignment.json
-        # (alignment.json is the same [{w,start,end},...] shape build_srt expects)
-        # Finality per the caption policy (2026-07-08): _sfx.mp4 IS the postable final
-        # (comic boxes are the captions); the pilot lives under _byteplus/.
-        root = Path(media_dir).resolve()
-        v = root / "visual"
-        if v.is_dir():
-            for pat in ("*_sfx.mp4", "_byteplus/*_scored.mp4", "*_scored.mp4"):
-                hits = sorted(v.glob(pat))
-                if hits:
-                    words = root / "audio" / "alignment.json"
-                    return str(hits[0].resolve()), (str(words) if words.is_file() else "")
-        # inked long-form v1: visual_16x9/*_sfx.mp4 outranks legacy *_captioned.mp4
-        v16 = root / "visual_16x9"
-        if v16.is_dir():
-            for pat in ("*_sfx.mp4", "*_captioned.mp4"):
-                hits = sorted(v16.glob(pat))
-                if hits:
-                    for w in (root / "audio" / "alignment.json",
-                              hits[0].with_suffix(".words.json")):
-                        if w.is_file():
-                            return str(hits[0].resolve()), str(w)
-                    return str(hits[0].resolve()), ""
+    """Best finished video (ONE rule: pipeline/finality.py) + its words json.
+
+    Words: an assembly cut is re-timed, so only its sidecar <stem>.words.json is
+    valid; living-page/long layouts use audio/alignment.json (the same
+    [{w,start,end},...] shape build_srt expects)."""
+    from pipeline import finality
+    root = Path(media_dir).resolve()
+    _status, video = finality.final_video(root)
+    if not video:
         return "", ""
-    for name in _FINAL_VIDEO_ORDER:
-        v = a / name
-        if v.is_file():
-            words = v.with_suffix(".words.json")
-            return str(v), (str(words) if words.is_file() else "")
-    # fall back to any *_captioned.mp4
-    for v in sorted(a.glob("*_captioned.mp4")):
-        words = v.with_suffix(".words.json")
-        return str(v.resolve()), (str(words) if words.is_file() else "")
-    return "", ""
+    video = video.resolve()
+    if video.parent.name == "assembly":
+        w = video.with_suffix(".words.json")
+        return str(video), (str(w) if w.is_file() else "")
+    for w in (root / "audio" / "alignment.json", video.with_suffix(".words.json")):
+        if w.is_file():
+            return str(video), str(w)
+    return str(video), ""
 
 
 # ----------------------------------------------------------------------------
@@ -191,16 +165,22 @@ def _meta_by_platform(kit: UploadKit) -> dict[str, PlatformMeta]:
 # facts + suggested SEO seeds
 # ----------------------------------------------------------------------------
 def build_source(kit: UploadKit, video: str, words: str) -> dict:
+    from pipeline import finality
     s = kit.source
+    vid = video or s.video_path
+    thumb = Path(s.media_dir) / "publish" / "thumbs" / "thumb_16x9.jpg"
     return {
         "media_dir": s.media_dir,
         "episode_title": s.episode_title,
         "format": s.format,
         "series": s.series_name,
         "anchor_ref": s.anchor_ref,
-        "video": video or s.video_path,
+        "video": vid,
         "words_json": words,
-        "thumbnail": "",  # JITB has no thumbnail stage yet -> WARN in the gate
+        # the sha of the final this pack was built/refreshed against — the SYNC
+        # gate (release_check.py) FAILs the pack when the final moves on
+        "final_sha": finality.content_sha(vid) if vid else "",
+        "thumbnail": str(thumb) if thumb.is_file() else "",
     }
 
 
@@ -310,6 +290,7 @@ def write_unit_pack(kit: UploadKit, *, chapters: str = "", pinned: str = "",
     by = _meta_by_platform(kit)
 
     written: list[tuple[str, str]] = []
+    wrote_copy = False
     for plat in platforms:
         meta = by.get(plat)
         if not meta:
@@ -322,6 +303,7 @@ def write_unit_pack(kit: UploadKit, *, chapters: str = "", pinned: str = "",
                                            chapters=chapters, pinned=pinned),
                         encoding="utf-8")
         written.append((meta.label, str(path)))
+        wrote_copy = True
 
     video, words = final_video_and_words(media)
     srt_note = ""
@@ -330,8 +312,21 @@ def write_unit_pack(kit: UploadKit, *, chapters: str = "", pinned: str = "",
     else:
         srt_note = "no <final video>.words.json found — captions.srt not built"
 
-    (pub / "_source.json").write_text(
-        json.dumps(build_source(kit, video, words), indent=2, ensure_ascii=False), encoding="utf-8")
+    src = build_source(kit, video, words)
+    # copy_final_sha = what the COPY was authored against. A mechanical --index
+    # refresh restamps final_sha but must NOT restamp this — otherwise one batch
+    # refresh launders wave-stale copy as reviewed (commit 9007339's failure).
+    # Cleared only by writing fresh copy, or explicitly via cli_publish --copy-ok.
+    prev = {}
+    src_p = pub / "_source.json"
+    if src_p.exists():
+        try:
+            prev = json.loads(src_p.read_text(encoding="utf-8"))
+        except ValueError:
+            prev = {}
+    src["copy_final_sha"] = (src["final_sha"] if wrote_copy or not prev.get("copy_final_sha")
+                             else prev["copy_final_sha"])
+    src_p.write_text(json.dumps(src, indent=2, ensure_ascii=False), encoding="utf-8")
     seo_p = pub / "_seo.json"
     if not seo_p.exists() or force:
         seo_p.write_text(json.dumps(suggest_seo(kit), indent=2, ensure_ascii=False), encoding="utf-8")

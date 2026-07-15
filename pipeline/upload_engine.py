@@ -82,34 +82,21 @@ def build_footer(platform: str, brand: dict, read_url: str = "") -> str:
 # Harvest source facts from a finished-media folder
 # --------------------------------------------------------------------------
 def _find_video(media_dir: Path, fmt: str) -> str:
-    cands: list[Path] = []
+    from pipeline import finality
+    _status, video = finality.final_video(media_dir)  # ONE rule (pipeline/finality.py)
+    if video:
+        return str(video.resolve())
+    # last-resort fallbacks finality doesn't bless (uncaptioned legacy cuts)
     if fmt == "short":
         a = media_dir / "assembly"
-        if not a.is_dir() and (media_dir / "visual").is_dir():
-            # batch living-page layout: batches/<cluster>/<slug>/visual/.
-            # Finality per the caption policy (2026-07-08): the SFX bed IS the
-            # postable final (comic boxes are the captions); pilot lives in _byteplus/.
-            v = media_dir / "visual"
-            for pat in ("*_sfx.mp4", "_byteplus/*_scored.mp4", "*_scored.mp4"):
-                hits = sorted(v.glob(pat))
-                if hits:
-                    return str(hits[0].resolve())
-        cands = [
-            a / "viral_cut_sfx_music_captioned.mp4",   # best: sfx + music layer
-            a / "viral_cut_sfx_captioned.mp4",
-            a / "viral_cut_captioned.mp4",
-            a / "viral_cut_sfx.mp4",
-            a / "viral_cut.mp4",
-        ]
+        cands = [a / "viral_cut_sfx.mp4", a / "viral_cut.mp4"]
     else:
         v = media_dir / "visual_16x9"
-        # inked living-page longs carry their text as comic boxes: the bare *_sfx.mp4
-        # (e.g. LivingPage_*_scored_sfx.mp4) outranks a legacy *_captioned.mp4
-        cands = (sorted(v.glob("*_sfx.mp4")) + sorted(v.glob("*_captioned.mp4"))
-                 + sorted(v.glob("*.mp4")))
+        cands = ([c for c in sorted(v.glob("*.mp4")) if ".bak" not in c.name]
+                 if v.is_dir() else [])
     for c in cands:
-        if Path(c).is_file():
-            return str(Path(c).resolve())
+        if c.is_file():
+            return str(c.resolve())
     return ""
 
 

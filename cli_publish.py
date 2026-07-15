@@ -20,6 +20,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 from pathlib import Path
 
@@ -77,6 +78,7 @@ def main() -> int:
     ap.add_argument("--strict", action="store_true", help="promote WARN to FAIL in the gate")
     ap.add_argument("--index", action="store_true", help="refresh srt + PUBLISH_INDEX.html from the on-disk copy (no LLM, no overwrite)")
     ap.add_argument("--redraft", action="store_true", help="throw away existing copy and auto-draft + panel from scratch")
+    ap.add_argument("--copy-ok", action="store_true", help="after RE-READING the copy against the current final, clear the copy-staleness stamp")
     ap.add_argument("--no-fail", action="store_true", help="exit 0 even if a gate fails")
     args = ap.parse_args()
 
@@ -91,6 +93,13 @@ def main() -> int:
         print(f"\n=== Publish pack: {Path(t).name} ===")
         u = _process(t, run_panel=not args.no_panel and not args.index,
                      index_only=args.index, redraft=args.redraft)
+        if args.copy_ok:
+            src_p = Path(t).resolve() / "publish" / "_source.json"
+            src = json.loads(src_p.read_text(encoding="utf-8"))
+            src["copy_final_sha"] = src.get("final_sha", "")
+            src_p.write_text(json.dumps(src, indent=2, ensure_ascii=False), encoding="utf-8")
+            print("  copy-ok: copy stamp cleared against the current final "
+                  "(you re-read the copy, right?)")
         summaries.append(u)
         pack = u["pack"]
         if u.get("refreshed"):

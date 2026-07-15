@@ -1,6 +1,50 @@
-# RESUME — next session (updated 2026-07-15 — WAVE E COMPLETE: ALL 14 rollout pieces at the gold master)
+# RESUME — next session (updated 2026-07-15 — WAVE E COMPLETE + 4 new episodes queued)
 
-## 🌅 FIRST: user wave-gate review of Waves B/C/D/E, then publish refresh
+## 🗺️ TODO — 4 new episodes queued, work them IN THIS ORDER (added 2026-07-15)
+
+Board: `file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/_PRODUCTION_BOARD.html` (Episodes
+section at the top — 5 total now). Sequence matches `RELEASE_CALENDAR.md`'s Month 2-3 order and
+`longform/LONGFORM_TYPES_SHADOWS_SLATE.md` (the source of every title/verse below — nothing invented,
+lifted verbatim from your own locked plan).
+
+**1. The Passover Lamb** (`passover-lamb`) — long DONE (narration locked, video finished, thumbs cut).
+   4 shorts scaffolded as `planned` in `_website/manifest.yaml`, ready for `/narrate`:
+   - `passover-lamb-01-unbroken-bone` — The Unbroken Bone (John 19:36)
+   - `passover-lamb-02-blood-on-the-doorposts` — Blood on the Doorposts (Exodus 12:13)
+   - `passover-lamb-03-kept-four-days` — Kept Four Days, Found Faultless (Exodus 12:5-6)
+   - `passover-lamb-04-christ-our-passover` — Christ Our Passover (1 Corinthians 5:7)
+
+**2. The Bronze Serpent** (`bronze-serpent`) — long DONE. 3 shorts scaffolded:
+   - `bronze-serpent-01-look-and-live` — Look and Live (Numbers 21:8-9)
+   - `bronze-serpent-02-the-thing-that-killed-them` — The Thing That Killed Them, Lifted Up (Numbers 21:9)
+   - `bronze-serpent-03-son-of-man-lifted-up` — Even So Must the Son of Man Be Lifted Up (John 3:14-15)
+
+**3. The Seed of the Woman** (`seed-of-the-woman`) — long DONE. 4 shorts scaffolded:
+   - `seed-of-woman-01-first-gospel-in-the-curse` — The First Gospel in the Curse (Genesis 3:15)
+   - `seed-of-woman-02-her-seed` — Her Seed (Galatians 4:4)
+   - `seed-of-woman-03-heel-vs-head` — Heel vs Head (Genesis 3:15)
+   - `seed-of-woman-04-serpent-crusher-promised` — The Serpent-Crusher, Promised (Romans 16:20)
+
+**4. Day of Atonement / Scapegoat** (`day-of-atonement`) — long NOT ready: narration/audio locked but
+   the film is still 25 raw unassembled clips (no score/sfx/captions yet) — that has to happen BEFORE
+   this one's shorts, unlike the other three. 3 shorts already scaffolded for when it's ready:
+   - `day-of-atonement-01-goat-that-carried-it-away` — The Goat That Carried It Away (Leviticus 16:21-22)
+   - `day-of-atonement-02-blood-behind-the-veil` — The Blood Behind the Veil (Leviticus 16:15)
+   - `day-of-atonement-03-once-for-all` — Once for All (Hebrews 10:11-12)
+
+**Two spend decisions waiting on the user (ask-before-spending):**
+- Publish packs for the 3 finished longs (Passover Lamb / Bronze Serpent / Seed of the Woman) —
+  LLM copy draft + panel, run via `cli_publish.py`. Not built yet.
+- Psalm 22's own long is still `public_status: in_production` in the manifest despite being fully
+  built (finality FINAL, pack fresh, thumbs fresh) — bump to `studio_complete` once you've actually
+  reviewed/approved it; the board/tracker both correctly refuse to call it "ready" until you do.
+
+Full context + the red-team that hardened this: `v2/RELEASE_SYNC.md` ("Long + short combined — the
+EPISODE" section) and memory `episode-unit-of-work`.
+
+---
+
+## 🌅 ALSO OUTSTANDING: user wave-gate review of Waves B/C/D/E, then publish refresh
 **The corpus rollout is BUILT 14/14** — father_forgive_them (the last piece, the old mocomic
 pilot) migrated to the livingpage gold master 2026-07-15: new `piece.json` + 16-beat spec,
 16 gates green (rollout PASS w/ documented 1-living-light exception, stills gate 14/14,

@@ -89,3 +89,6 @@ archive/
 
 # per-session cost-watcher state (cost_status.py hook)
 data/.cost_state/
+
+# local content-sha perf cache (pipeline/finality.py) — machine-local, regenerable
+data/.sha_cache.json

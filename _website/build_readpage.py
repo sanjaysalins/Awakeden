@@ -193,13 +193,14 @@ def extract_frames(item: dict, batch: Path, out_dir: Path, *, force: bool) -> in
         if not scored[0].is_file():
             scored = []
     else:
-        scored = sorted((batch / "visual").glob("*_scored.mp4"))
+        scored = [h for h in sorted((batch / "visual").glob("*_scored.mp4"))
+                  if ".bak" not in h.name]  # never frame a parked backup
     if not scored:
         print(f"  !! no scored mp4 for {item['slug']} - skipping frames")
         return 0
     video = scored[0]
     out_dir.mkdir(parents=True, exist_ok=True)
-    n = 0
+    n = wrote = 0
     for i, beat in enumerate(spec["beats"], 1):
         dest = out_dir / f"beat_{i:02d}.jpg"
         n += 1
@@ -207,10 +208,31 @@ def extract_frames(item: dict, batch: Path, out_dir: Path, *, force: bool) -> in
             continue
         t0, t1 = beat["t"]
         t = min(max(t0 + 0.8 * (t1 - t0), t0 + 0.3), t1 - 0.15)
+        dest.unlink(missing_ok=True)  # ffmpeg -ss past EOF exits 0 writing nothing
         subprocess.run(
             ["ffmpeg", "-y", "-loglevel", "error", "-ss", f"{t:.2f}", "-i", str(video),
              "-frames:v", "1", "-vf", f"scale={FRAME_W}:-2", "-q:v", str(JPEG_Q), str(dest)],
             check=True)
+        if dest.is_file():
+            wrote += 1
+    if wrote == n:
+        # every frame was (re)cut from THIS video in THIS run -> stamp provenance
+        # (SYNC-G5 freshness, v2/RELEASE_SYNC.md)
+        import hashlib
+        h = hashlib.sha256()
+        with open(video, "rb") as fh:
+            for chunk in iter(lambda: fh.read(1 << 20), b""):
+                h.update(chunk)
+        (out_dir / "_meta.json").write_text(json.dumps(
+            {"source_video": video.name, "source_sha": h.hexdigest()}, indent=2),
+            encoding="utf-8")
+    elif wrote:
+        # MIXED provenance (some frames kept from an older video, some new) — a
+        # stamp would launder it as fresh (red-team C3). Drop any old stamp so the
+        # SYNC gate WARNs until a full --force re-extract.
+        (out_dir / "_meta.json").unlink(missing_ok=True)
+        print(f"  !! {item['slug']}: {wrote}/{n} frames re-cut - mixed provenance, "
+              "_meta dropped; run with --force to re-cut all beats")
     return n
 
 

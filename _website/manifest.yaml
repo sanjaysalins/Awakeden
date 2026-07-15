@@ -18,6 +18,7 @@ items:
     fulfilled in the New Testament. The first Awakeden deep-dive slated for release.
 
     '
+  source: ../longform/01_Isaiah_53_Suffering_Servant/v1
 - slug: psalm-22-from-the-cross
   kind: long
   title: 'Psalm 22: The Song From the Cross'
@@ -38,6 +39,7 @@ items:
     Each short follows one beat from the psalm Jesus lived out on the cross.
 
     '
+  source: ../longform/02_Psalm_22_Song_From_The_Cross/v1
 - slug: ps22-01-crucifixion-foretold
   kind: short
   title: The Crucifixion Foretold
@@ -57,6 +59,8 @@ items:
     soldiers doing exactly that.
 
     '
+  source: ../batches/cluster_01_cross/crucifixion_foretold_ps2218
+  parent: psalm-22-from-the-cross
 - slug: ps22-02-mockers-words
   kind: short
   title: The Mockers' Words
@@ -76,6 +80,8 @@ items:
     both at the cross.
 
     '
+  source: ../batches/cluster_01_cross/mockers_words_ps227
+  parent: psalm-22-from-the-cross
 - slug: ps22-03-forsaken-cry
   kind: short
   title: The Forsaken Cry
@@ -96,6 +102,8 @@ items:
     cried it from the cross.
 
     '
+  source: ../batches/cluster_01_cross/forsaken_cry_ps221
+  parent: psalm-22-from-the-cross
 - slug: ps22-04-declared-to-brethren
   kind: short
   title: Declared to the Brethren
@@ -113,6 +121,8 @@ items:
     it to the risen Christ.
 
     '
+  source: ../batches/cluster_01_cross/declared_brethren_ps2222
+  parent: psalm-22-from-the-cross
 - slug: ps22-05-he-hath-done-this
   kind: short
   title: He Hath Done This
@@ -131,6 +141,8 @@ items:
     finished work.
 
     '
+  source: ../batches/cluster_01_cross/he_hath_done_this_ps2231
+  parent: psalm-22-from-the-cross
 - slug: ps22-06-ends-of-the-earth
   kind: short
   title: The Ends of the Earth
@@ -147,6 +159,8 @@ items:
   public_blurb: 'Psalm 22:27. The nations turning to worship, fulfilled through Christ.
 
     '
+  source: ../batches/cluster_01_cross/ends_of_earth_ps2227
+  parent: psalm-22-from-the-cross
 - slug: ps22-07-body-foretold
   kind: short
   title: The Body Foretold
@@ -165,6 +179,8 @@ items:
     language fits the crucifixion.
 
     '
+  source: ../batches/cluster_01_cross/body_foretold_ps2214
+  parent: psalm-22-from-the-cross
 - slug: ps22-08-i-thirst
   kind: short
   title: I Thirst
@@ -183,6 +199,8 @@ items:
     Jesus'' cry from the cross.
 
     '
+  source: ../batches/cluster_01_cross/i_thirst_john1928
+  parent: psalm-22-from-the-cross
 - slug: zechariah-12-10-pierced
   kind: short
   title: The One They Pierced
@@ -205,6 +223,7 @@ items:
     The pierced one is God himself, the Son. Look at Him and live.
 
     '
+  source: ../batches/cluster_01_cross/pierced_zech1210
 - slug: why-are-you-afraid
   kind: short
   title: Why Are You Afraid?
@@ -685,6 +704,7 @@ items:
   public_hook: The first word from the cross is a prayer for the men driving the nails.
   public_blurb: Luke 23:34. While the soldiers divided his garments, Jesus prayed
     forgiveness over them. The first word from the cross, drawn panel by panel.
+  source: ../batches/cluster_01_cross/father_forgive_them
 - slug: thirty-pieces-of-silver
   kind: short
   title: Thirty Pieces of Silver
@@ -702,6 +722,7 @@ items:
     of silver, thrown down in the house of the LORD.'
   public_blurb: Zechariah 11:12-13 names the price, the contempt, and the temple floor.
     Judas fulfilled every word of it. The prophecy that priced the Messiah.
+  source: ../batches/cluster_01_cross/thirty_pieces_zech11
 - slug: today-in-paradise
   kind: short
   title: Today in Paradise
@@ -718,6 +739,7 @@ items:
   public_hook: Two thieves. Same cross. Two answers.
   public_blurb: Luke 23:39-43. One thief railed, one asked to be remembered, and Jesus
     answered with a promise dated TODAY. The second word from the cross.
+  source: ../batches/cluster_01_cross/today_paradise_luke2343
 - slug: woman-behold-thy-son
   kind: short
   title: Woman, Behold Thy Son
@@ -735,6 +757,7 @@ items:
     and gave her a son.
   public_blurb: Luke 2:35 meets John 19:26-27. The sword Simeon foretold pierces Mary
     at Golgotha, and the dying Jesus binds her wound with a son and a home.
+  source: ../batches/cluster_01_cross/woman_behold_john1926
 - slug: it-is-finished
   kind: short
   title: It Is Finished
@@ -751,6 +774,7 @@ items:
   public_hook: The first time the Bible says finished, nothing was broken yet.
   public_blurb: 'Genesis 2:1 and John 19:30. Two finished works, one Workman: He finished
     creation and rested; He finished redemption and rose. Enter his rest.'
+  source: ../batches/cluster_01_cross/it_is_finished_john1930
 - slug: father-into-thy-hands
   kind: short
   title: Father, Into Thy Hands
@@ -767,6 +791,7 @@ items:
   public_hook: A dying man's last words. And they were a child's bedtime prayer.
   public_blurb: 'Psalm 31:5 was an evening prayer a child could learn. Luke 23:46:
     with his last breath Jesus prayed it, and added one word: Father.'
+  source: ../batches/cluster_01_cross/into_thy_hands_luke2346
 - slug: could-ye-not-watch-one-hour
   kind: short
   title: Could Ye Not Watch One Hour
@@ -784,6 +809,7 @@ items:
   public_blurb: Matthew 26:36-46. Gethsemane, the cup, the sleeping disciples, and
     the mercy in the question. He watched that hour alone so no hour of yours is watched
     alone.
+  source: ../batches/cluster_01_cross/watch_one_hour_matt2640
 - slug: ew-two-goats
   kind: long
   title: The Two Goats
@@ -800,6 +826,7 @@ items:
     by the priest who was there.
   public_blurb: The Day of Atonement, first-person. The high priest walks you through
     the two goats, and where the whole pattern points.
+  source: ../longform/EW01_Two_Goats/v1
 - slug: ew-abraham-moriah
   kind: long
   title: Abraham on Moriah
@@ -816,6 +843,7 @@ items:
     what happened when God provided.
   public_blurb: Genesis 22, first-person. My son, God will provide himself a lamb.
     A father tells the hardest walk in the Old Testament.
+  source: ../longform/EW02_Abraham/v1
 - slug: ew-bronze-serpent
   kind: long
   title: The Bronze Serpent
@@ -832,6 +860,7 @@ items:
     A witness tells the day looking was enough.
   public_blurb: 'Numbers 21, first-person. Jesus himself points back at this one:
     as Moses lifted up the serpent, so must the Son of man be lifted up.'
+  source: ../longform/EW04_Bronze_Serpent/v1
 - slug: ew-joseph
   kind: long
   title: Joseph, Betrayed to Save
@@ -848,6 +877,7 @@ items:
     that points past itself.
   public_blurb: Genesis 37-45, first-person. God sent me before you to preserve life.
     The betrayed brother who became the rescuer.
+  source: ../longform/EW03_Joseph/v1
 - slug: ew-jonah
   kind: long
   title: Jonah, Three Days in the Deep
@@ -864,6 +894,7 @@ items:
     called it the only sign He would give.
   public_blurb: Jonah 1-2, first-person. The prophet who ran, the deep that held him,
     and the sign Jesus claimed for Himself.
+  source: ../longform/EW05_Jonah/v1
 - slug: ew-noah
   kind: long
   title: Noah, the Night God Shut the Door
@@ -880,6 +911,7 @@ items:
     rain began.
   public_blurb: Genesis 6-8, first-person. One door through the water, shut by God's
     own hand.
+  source: ../longform/EW06_Noah/v1
 - slug: ew-isaiah
   kind: long
   title: Isaiah, the Man Who Saw It
@@ -896,6 +928,7 @@ items:
     write of a servant wounded for us.
   public_blurb: Isaiah 53, from the prophet's side of the page. Seven hundred years
     early, he wrote what he was shown.
+  source: ../longform/EW07_Isaiah/v1
 - slug: ew-passover-father
   kind: long
   title: The Passover Father
@@ -912,6 +945,7 @@ items:
     his firstborn and death.
   public_blurb: Exodus 12, first-person. When I see the blood, I will pass over you.
     The night the lamb died instead.
+  source: ../longform/EW08_Passover/v1
 - slug: sign-of-jonah
   kind: short
   title: The Sign of Jonah
@@ -929,6 +963,7 @@ items:
   public_blurb: 'Jonah went down guilty; Christ went down innocent - and neither the
     deep nor the grave could hold Him. Season 2 opens where the sign points: the resurrection.'
   read_source: ../batches/cluster_02_resurrection/sign_of_jonah_matt1240
+  source: ../batches/cluster_02_resurrection/sign_of_jonah_matt1240
 - slug: the-empty-tomb
   kind: short
   title: The Empty Tomb
@@ -947,6 +982,7 @@ items:
     wrapped apart by itself: what thief does that? What John saw at the linen, and
     what he believed, drawn panel by panel.'
   read_source: ../batches/cluster_02_resurrection/empty_tomb_john208
+  source: ../batches/cluster_02_resurrection/empty_tomb_john208
 - slug: women-first-witnesses
   kind: short
   title: Women as First Witnesses
@@ -962,10 +998,315 @@ items:
   youtube_id: null
   public_hook: The first report that Jesus was risen was dismissed as nonsense, by
     His own apostles.
-  public_blurb: 'Luke 24. The first news came from women whose word carried almost
-    no weight in court. No one inventing a resurrection would open it there. The
-    witnesses who never left, drawn panel by panel.'
+  public_blurb: Luke 24. The first news came from women whose word carried almost
+    no weight in court. No one inventing a resurrection would open it there. The witnesses
+    who never left, drawn panel by panel.
   read_source: ../batches/cluster_02_resurrection/women_first_witnesses_luke245
+  source: ../batches/cluster_02_resurrection/women_first_witnesses_luke245
+- slug: passover-lamb
+  kind: long
+  title: The Passover Lamb
+  ref: Exodus 12:13
+  series_id: jesus-in-ot
+  cluster: passover-lamb
+  cluster_order: 0
+  public_status: studio_complete
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  source: ../longform/03_The_Passover_Lamb/v1
+  public_hook: The instructions for Israel's last night in Egypt are so oddly specific
+    they stop sounding like rules for a meal, and start sounding like a description
+    of a man who would not be born for another fourteen hundred years.
+  public_blurb: Exodus 12. A lamb without blemish, kept four days, its blood on the
+    doorposts, not one bone broken - every specific detail lands on the cross. Christ
+    our passover is sacrificed for us (1 Corinthians 5:7).
+- slug: bronze-serpent
+  kind: long
+  title: The Bronze Serpent
+  ref: Numbers 21:8-9
+  series_id: jesus-in-ot
+  cluster: bronze-serpent
+  cluster_order: 0
+  public_status: studio_complete
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  source: ../longform/04_The_Bronze_Serpent/v1
+  public_hook: A whole camp is dying of snakebite, and God's remedy is not to kill
+    the snakes or hand out an antidote. He tells them to look at a piece of metal
+    on a pole. Look, and live.
+  public_blurb: 'Numbers 21. Jesus applies this image to himself: as Moses lifted
+    up the serpent in the wilderness, even so must the Son of man be lifted up (John
+    3:14-15).'
+- slug: seed-of-the-woman
+  kind: long
+  title: The Seed of the Woman
+  ref: Genesis 3:15
+  series_id: jesus-in-ot
+  cluster: seed-of-the-woman
+  cluster_order: 0
+  public_status: studio_complete
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  source: ../longform/05_The_Seed_Of_The_Woman/v1
+  public_hook: Something has just gone terribly wrong in the garden - and in the middle
+    of the curse God speaks the first promise of a rescuer, before he ever addresses
+    Adam or Eve directly.
+  public_blurb: Genesis 3:15. The seed of the woman, a bruised heel that still crushes
+    the head - the first gospel promise, spoken a thousand years before David and
+    Isaiah wrote it clearer.
+- slug: day-of-atonement
+  kind: long
+  title: Day of Atonement / Scapegoat
+  ref: Leviticus 16:15
+  series_id: jesus-in-ot
+  cluster: day-of-atonement
+  cluster_order: 0
+  public_status: in_production
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  source: ../longform/06_Day_Of_Atonement/v1
+  public_hook: Once a year, only once, a whole nation held its breath for one man
+    to walk behind a curtain no one else could touch.
+  public_blurb: Leviticus 16. Two goats, one sin offering - one slain, one sent alive
+    into the wilderness carrying the sin away. By his own blood he entered in once
+    (Hebrews 9-10).
+- slug: passover-lamb-01-unbroken-bone
+  kind: short
+  title: The Unbroken Bone
+  ref: John 19:36
+  series_id: jesus-in-ot
+  cluster: passover-lamb
+  cluster_order: 1
+  parent: passover-lamb
+  public_status: planned
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Planned short from The Passover Lamb (John 19:36) - not yet narrated.
+  public_blurb: 'Distilled from the locked long-form study. Anchor verse: John 19:36.
+    Narration not yet written.'
+- slug: passover-lamb-02-blood-on-the-doorposts
+  kind: short
+  title: Blood on the Doorposts
+  ref: Exodus 12:13
+  series_id: jesus-in-ot
+  cluster: passover-lamb
+  cluster_order: 2
+  parent: passover-lamb
+  public_status: planned
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Planned short from The Passover Lamb (Exodus 12:13) - not yet narrated.
+  public_blurb: 'Distilled from the locked long-form study. Anchor verse: Exodus 12:13.
+    Narration not yet written.'
+- slug: passover-lamb-03-kept-four-days
+  kind: short
+  title: Kept Four Days, Found Faultless
+  ref: Exodus 12:5-6
+  series_id: jesus-in-ot
+  cluster: passover-lamb
+  cluster_order: 3
+  parent: passover-lamb
+  public_status: planned
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Planned short from The Passover Lamb (Exodus 12:5-6) - not yet narrated.
+  public_blurb: 'Distilled from the locked long-form study. Anchor verse: Exodus 12:5-6.
+    Narration not yet written.'
+- slug: passover-lamb-04-christ-our-passover
+  kind: short
+  title: Christ Our Passover
+  ref: 1 Corinthians 5:7
+  series_id: jesus-in-ot
+  cluster: passover-lamb
+  cluster_order: 4
+  parent: passover-lamb
+  public_status: planned
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Planned short from The Passover Lamb (1 Corinthians 5:7) - not yet
+    narrated.
+  public_blurb: 'Distilled from the locked long-form study. Anchor verse: 1 Corinthians
+    5:7. Narration not yet written.'
+- slug: bronze-serpent-01-look-and-live
+  kind: short
+  title: Look and Live
+  ref: Numbers 21:8-9
+  series_id: jesus-in-ot
+  cluster: bronze-serpent
+  cluster_order: 1
+  parent: bronze-serpent
+  public_status: planned
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Planned short from The Bronze Serpent (Numbers 21:8-9) - not yet narrated.
+  public_blurb: 'Distilled from the locked long-form study. Anchor verse: Numbers
+    21:8-9. Narration not yet written.'
+- slug: bronze-serpent-02-the-thing-that-killed-them
+  kind: short
+  title: The Thing That Killed Them, Lifted Up
+  ref: Numbers 21:9
+  series_id: jesus-in-ot
+  cluster: bronze-serpent
+  cluster_order: 2
+  parent: bronze-serpent
+  public_status: planned
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Planned short from The Bronze Serpent (Numbers 21:9) - not yet narrated.
+  public_blurb: 'Distilled from the locked long-form study. Anchor verse: Numbers
+    21:9. Narration not yet written.'
+- slug: bronze-serpent-03-son-of-man-lifted-up
+  kind: short
+  title: Even So Must the Son of Man Be Lifted Up
+  ref: John 3:14-15
+  series_id: jesus-in-ot
+  cluster: bronze-serpent
+  cluster_order: 3
+  parent: bronze-serpent
+  public_status: planned
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Planned short from The Bronze Serpent (John 3:14-15) - not yet narrated.
+  public_blurb: 'Distilled from the locked long-form study. Anchor verse: John 3:14-15.
+    Narration not yet written.'
+- slug: seed-of-woman-01-first-gospel-in-the-curse
+  kind: short
+  title: The First Gospel in the Curse
+  ref: Genesis 3:15
+  series_id: jesus-in-ot
+  cluster: seed-of-the-woman
+  cluster_order: 1
+  parent: seed-of-the-woman
+  public_status: planned
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Planned short from The Seed of the Woman (Genesis 3:15) - not yet narrated.
+  public_blurb: 'Distilled from the locked long-form study. Anchor verse: Genesis
+    3:15. Narration not yet written.'
+- slug: seed-of-woman-02-her-seed
+  kind: short
+  title: Her Seed
+  ref: Galatians 4:4
+  series_id: jesus-in-ot
+  cluster: seed-of-the-woman
+  cluster_order: 2
+  parent: seed-of-the-woman
+  public_status: planned
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Planned short from The Seed of the Woman (Galatians 4:4) - not yet
+    narrated.
+  public_blurb: 'Distilled from the locked long-form study. Anchor verse: Galatians
+    4:4. Narration not yet written.'
+- slug: seed-of-woman-03-heel-vs-head
+  kind: short
+  title: Heel vs Head
+  ref: Genesis 3:15
+  series_id: jesus-in-ot
+  cluster: seed-of-the-woman
+  cluster_order: 3
+  parent: seed-of-the-woman
+  public_status: planned
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Planned short from The Seed of the Woman (Genesis 3:15) - not yet narrated.
+  public_blurb: 'Distilled from the locked long-form study. Anchor verse: Genesis
+    3:15. Narration not yet written.'
+- slug: seed-of-woman-04-serpent-crusher-promised
+  kind: short
+  title: The Serpent-Crusher, Promised
+  ref: Romans 16:20
+  series_id: jesus-in-ot
+  cluster: seed-of-the-woman
+  cluster_order: 4
+  parent: seed-of-the-woman
+  public_status: planned
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Planned short from The Seed of the Woman (Romans 16:20) - not yet narrated.
+  public_blurb: 'Distilled from the locked long-form study. Anchor verse: Romans 16:20.
+    Narration not yet written.'
+- slug: day-of-atonement-01-goat-that-carried-it-away
+  kind: short
+  title: The Goat That Carried It Away
+  ref: Leviticus 16:21-22
+  series_id: jesus-in-ot
+  cluster: day-of-atonement
+  cluster_order: 1
+  parent: day-of-atonement
+  public_status: planned
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Planned short from Day of Atonement / Scapegoat (Leviticus 16:21-22)
+    - not yet narrated.
+  public_blurb: 'Distilled from the locked long-form study. Anchor verse: Leviticus
+    16:21-22. Narration not yet written.'
+- slug: day-of-atonement-02-blood-behind-the-veil
+  kind: short
+  title: The Blood Behind the Veil
+  ref: Leviticus 16:15
+  series_id: jesus-in-ot
+  cluster: day-of-atonement
+  cluster_order: 2
+  parent: day-of-atonement
+  public_status: planned
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Planned short from Day of Atonement / Scapegoat (Leviticus 16:15) -
+    not yet narrated.
+  public_blurb: 'Distilled from the locked long-form study. Anchor verse: Leviticus
+    16:15. Narration not yet written.'
+- slug: day-of-atonement-03-once-for-all
+  kind: short
+  title: Once for All
+  ref: Hebrews 10:11-12
+  series_id: jesus-in-ot
+  cluster: day-of-atonement
+  cluster_order: 3
+  parent: day-of-atonement
+  public_status: planned
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Planned short from Day of Atonement / Scapegoat (Hebrews 10:11-12)
+    - not yet narrated.
+  public_blurb: 'Distilled from the locked long-form study. Anchor verse: Hebrews
+    10:11-12. Narration not yet written.'
 series:
 - slug: he-is-risen
   title: He Is Risen
@@ -1049,3 +1390,19 @@ clusters:
     subtitle: Eleven hand-inked shorts from Golgotha - the words from the cross and
       the prophecies that walked there
     slug: cluster-01-cross
+  passover-lamb:
+    title: The Passover Lamb
+    subtitle: Four shorts from one locked long-form study
+    slug: passover-lamb
+  bronze-serpent:
+    title: The Bronze Serpent
+    subtitle: Three shorts from one locked long-form study
+    slug: bronze-serpent
+  seed-of-the-woman:
+    title: The Seed of the Woman
+    subtitle: Four shorts from one locked long-form study
+    slug: seed-of-the-woman
+  day-of-atonement:
+    title: Day of Atonement / Scapegoat
+    subtitle: Three shorts from one locked long-form study
+    slug: day-of-atonement

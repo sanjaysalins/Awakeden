@@ -184,6 +184,16 @@ narration_gate.py             $0 EARNED hook+landing gate (run BEFORE spend on e
                                 narration): FAILs stock closers ("come to Jesus" family)
                                 unless the piece's own KJV uses the verb, unearned landings,
                                 template hooks; WARNs corpus-stale closer verbs
+pipeline/finality.py          the ONE "what is the final video" rule + content sha (v2/RELEASE_SYNC.md)
+pipeline/release_state.py     per-piece release state (manifest join x finality x pack x thumbs x site x ledger)
+release_check.py              $0 fail-closed SYNC gate (SYNC-G1..G7) — run before any _website deploy / after posting
+upload_tracker.py             THE one write path for posted URLs: --set <slug> <platform> <url>
+                                -> dated data/release_ledger.json (+ manifest youtube_id for YT)
+production_board.py           the human board — same release_state, rendered (_PRODUCTION_BOARD.html);
+                                EPISODES roll-up (long+shorts as one unit of work) above the flat table
+pipeline/episode_state.py     Episode = a long + its parent-linked shorts, DETECTED not declared
+build_upload_tracker.py       _UPLOAD_TRACKER.html — paste-URL posting runbook; episodes render as
+                                one release-campaign block (long + shorts together), not flat cards
 README.md                     user-facing docs
 ```
 

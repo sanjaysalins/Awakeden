@@ -1,0 +1,136 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: plan
+
+LENS — judge this PLAN on (be specific, cite the exact step/claim):
+- Feasibility against the real codebase / tools (does it assume things that exist?).
+- Hidden risks, false assumptions, single points of failure.
+- Over-engineering / premature building before the idea is proven.
+- Missing steps, edge cases, or verification gaps.
+- Reuse: does it duplicate tools that already exist instead of reusing them?
+- Cost / spend and whether it's justified.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block (on the VERDICT line write exactly ONE word —
+PASS or REVISE or FAIL — never the list of options):
+
+VERDICT: <PASS or REVISE or FAIL>
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# RELEASE SYNC — one desk for publish · upload · website · tracking
+
+Status: DESIGN + BUILD 2026-07-15. Modeled on HF-POC's fg-publish/fg-upload chain,
+keeping what worked (paste-ready packs, deterministic gates, never auto-upload)
+and designing out its failures (two hand-synced URL stores, no dates, browser
+localStorage as primary state, hardcoded episode lists, fuzzy joins).
+
+## The problem this solves
+
+Five drift seams existed in JITB (2026-07-15 audit):
+
+1. FOUR different "what is the final video" implementations
+   (`production_board.final_video`, `publish_pack.final_video_and_words`,
+   `upload_engine._find_video`, `thumbnails._sfx_video`) — only one skipped
+   `.bak` backups.
+2. The production board joined manifest↔lane by FUZZY letters-match — already
+   produced one false FINAL (`ew-jonah` → `sign_of_jonah`, 2026-07-15).
+3. Publish packs went silently stale when finals were re-rendered
+   ("14 packs stale vs the new finals", commit 9007339).
+4. Only YouTube was tracked, with no dates; TikTok/FB/IG posting state lived
+   nowhere. Thumbnails existed on disk but the gate couldn't see them
+   (`_source.json.thumbnail` hardcoded `""`).
+5. The long↔short relationship was encoded three inconsistent ways (folder
+   nesting, manifest `cluster`, batch_manifest plan) with no authoritative link.
+
+## The design — one registry, one finality rule, one write path, one gate, one board
+
+```
+_website/manifest.yaml          THE REGISTRY (already existed; now the hard join)
+  + source:  ../batches/...     stable link: catalogue item -> lane folder
+  + parent:  <long slug>        stable link: derived short -> its long
+
+pipeline/finality.py            THE ONE RULE: final_video(dir, kind) + content sha
+                                (sha cached by size+mtime in data/.sha_cache.json;
+                                mtime alone is NOT freshness — dyncam lesson)
+
+data/release_ledger.json        THE POSTING LEDGER: slug -> platform ->
+                                {url, video_id, posted (date), final_sha}
+                                written ONLY by upload_tracker.py --set
+
+upload_tracker.py               THE ONE WRITE PATH: --set <slug> <platform> <url>
+                                writes ledger + manifest youtube_id (+status live)
+                                + rebuilds read pages. Never uploads, never deploys.
+
+pipeline/release_state.py       ONE computation of per-piece state, shared by:
+release_check.py                the $0 fail-closed SYNC gate (exit 1 on drift)
+production_board.py             the human board (renders the same state)
+```
+
+### Freshness chain (sha, not mtime)
+
+The final video's content sha256 is the anchor. Every derived surface records
+the sha of the final it was built from:
+
+- publish pack   -> `publish/_source.json.final_sha` (written on every pack build/refresh)
+- thumbnails     -> `publish/thumbs/_meta.json.final_sha`
+- read frames    -> `_website/assets/study/read/<slug>/_meta.json.source_sha`
+- posting        -> `release_ledger.json[slug][platform].final_sha` (what was actually posted)
+
+A surface whose recorded sha != the current final's sha is STALE and the gate
+says exactly which command refreshes it.
+
+### The SYNC gates (all $0 deterministic, in release_check.py)
+
+| Gate | Check | Level |
+|------|-------|-------|
+| SYNC-G1 | every catalogue item hard-joins to a real folder (`source`/`read_source`/`study_source`); fuzzy match is DEAD | FAIL (studio_complete/live) / WARN (in_production) |
+| SYNC-G2 | `studio_complete`/`live` items have a final video under the ONE finality rule | FAIL |
+| SYNC-G3 | publish pack exists + `final_sha` matches the current final (stale pack cannot be GREEN) | FAIL |
+| SYNC-G4 | thumbs exist + `_meta.json.final_sha` matches | FAIL (live) / WARN (studio_complete) |
+| SYNC-G5 | read page built for promoted items; frame `_meta.source_sha` matches; `publish_meta.json.read_url` points at the real `read/<slug>.html` | FAIL on read_url mismatch; WARN on frame sha (audio-only sfx change also shifts the sha) |
+| SYNC-G6 | published coherence: `youtube_id` ⟺ `public_status: live` ⟺ dated ledger entry with URL; posted `final_sha` == current final (else the LIVE video is outdated — surface it) | FAIL |
+| SYNC-G7 | long↔short: shorts in a cluster that has a long carry `parent:`; parent exists and is a long | FAIL |
+
+Platforms not yet posted are reported as the TO-POST queue, never a FAIL
+(posting is the human's move; the gate only guards *recorded truth*).
+
+### Long + short combined
+
+- `parent:` in the manifest is THE authoritative link (ps22-01..08 ->
+  psalm-22-from-the-cross). Folder nesting and batch_manifest stay as
+  build-time conveniences, never as the source of truth.
+- The board groups every cluster with its long first, shorts nested under it,
+  so "is the family fully out?" is one glance.
+- The TO-POST queue orders: long first, then its shorts by `cluster_order`
+  (shorts funnel to the long — memory `shorts-longform-funnel`).
+
+### What stays manual (by design, same as HF-POC)
+
+Posting itself. The chain is: board shows TO-POST -> open the piece's
+`publish/PUBLISH_INDEX.html` (copy buttons) -> upload by hand -> paste the URL:
+`upload_tracker.py --set <slug> <platform> <url>` -> gate + board go green.
+One paste per platform is the entire bookkeeping burden.
+
+## Commands
+
+```
+.venv\Scripts\python.exe release_check.py              # the SYNC gate (exit 1 on drift)
+.venv\Scripts\python.exe release_check.py --slug X     # one piece
+.venv\Scripts\python.exe production_board.py           # board (renders the same state)
+.venv\Scripts\python.exe upload_tracker.py --list
+.venv\Scripts\python.exe upload_tracker.py --set <slug> youtube <url>
+.venv\Scripts\python.exe upload_tracker.py --set <slug> tiktok <url>
+.venv\Scripts\python.exe pipeline\thumbnails.py        # manifest-driven, writes _meta.json
+```
+
+## Standing rule
+
+`release_check.py` joins `validate` in the pre-ship set: run it before any
+deploy of `_website/` and after any posting batch. The board is regenerated
+by `release_check.py --board` or `production_board.py` — same state, two views.
+----- ARTIFACT END -----

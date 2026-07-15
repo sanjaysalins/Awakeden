@@ -65,7 +65,7 @@ TOPIC
   │     timeline → jigsaw → AS-G1..G9 → render → per-slot verify
   │     ═══════════════ HUMAN GATE 3: approve clips (exclude) ═══════════════
   ▼  STAGE 4 — CAPTION   /caption    → viral_cut_sfx_captioned.mp4  (final clip)
-  ▼  STAGE 5 — UPLOAD    /upload     → upload_kit (title/desc/tags/hashtags, UK-G1..G6)
+  ▼  STAGE 5 — UPLOAD    /upload     → upload_kit (title/desc/tags/hashtags, UK-G1..G7)
 OUTPUT
 ```
 
@@ -121,7 +121,8 @@ upload/caption tail.
 | 3 Assembly | `/assemble` | `pipeline/assembly_engine.py` + `assembly_ffmpeg.py` | `viral_cut.mp4` + `index.html` | AS-G1–G9 |
 | 3b SFX | `/sfx` | `sfx_pilots/sfxlib.py` | `viral_cut_sfx.mp4` | reuse-from-library, sidechain-duck (INV-18) |
 | 4 Caption | `/caption` | `veed_io/caption.py` | `<clip>_captioned.mp4` | offline $0 ivory recipe (INV-16) |
-| 5 Upload | `/upload` | `pipeline/upload_gates.py` | `upload/upload_kit.{json,md}` | UK-G1–G6 |
+| 5 Upload | `/upload` | `pipeline/upload_gates.py` | `upload/upload_kit.{json,md}` | UK-G1–G7 |
+| 6 Publish/Release | `/publish` + `release_check.py` | `pipeline/publish_check.py` + `pipeline/release_state.py` | `publish/` pack + `data/release_ledger.json` | UK-G1–G7 + SYNC-G1–G7 |
 | x Review | `/review` | `independent_review.py` | `_independent_review/<stamp>/` | 5-CLI panel before any LOCK (INV-9) |
 | x Validate | `/validate` | `pipeline/validators.py` + `test_*.py` + `test_bible_kb*.py` | green suite | rules_integrity + 114 tests + 31 Bible-Check tests (adds coherence/dedup/still-review/clip-reuse + BC-G1/BC-G2/chokepoint hash-binding suites; CLIP-NOWRITING live; anchor-verse-unquoted + IMG-COHERENT fixtures still targets) |
 | x Cost | `/cost` | `pipeline/cost.py` | `data/spend_ledger.jsonl` | pre-flight estimate + ask-before-spend (INV-20) |
@@ -233,6 +234,28 @@ fail-closed) · **constrained** (must not contradict) · **free** (licence, not 
 | UK-G4 Brand | D | CTA-to-Jesus + footer present |
 | UK-G5 Platform | D | hashtag counts + no malformed tags/links |
 | UK-G6 No-Repeat | D | titles don't collide across platforms/siblings |
+| UK-G7 Lint | D | plain-ASCII anti-slop + grace-anchored + anchor ref front-loaded |
+
+The publish-pack GREEN gate (`pipeline/publish_check.py`, Stage 6) re-parses the
+ON-DISK pack into an UploadKit and re-runs UK-G1..G7 (one rulebook) + placeholder
+scan + captions.srt validity + CHAPTERS 0:00-ascending + ToS banlist + dash-slop
+scan + `final_sha` freshness (a pack built from a superseded final is RED).
+
+### RELEASE SYNC — `pipeline/release_state.py` + `release_check.py` (LIVE 2026-07-15, see v2/RELEASE_SYNC.md)
+One registry (`_website/manifest.yaml` hard-joined via `source:`/`parent:`),
+one finality rule (`pipeline/finality.py`, content-sha anchored, `.bak`-proof),
+one write path for posted URLs (`upload_tracker.py --set <slug> <platform> <url>`
+→ dated `data/release_ledger.json`), one $0 gate, one board (`production_board.py`).
+
+| Gate | Type | Checks |
+|---|---|---|
+| SYNC-G1 Join | D | catalogue item ⇄ piece folder by explicit `source:` — fuzzy matching is dead; shipped item without a join = FAIL |
+| SYNC-G2 Finality | D | `studio_complete`/`live` ⇒ a FINAL under the one rule |
+| SYNC-G3 Pack fresh | D | `publish/_source.json.final_sha` == current final's sha |
+| SYNC-G4 Thumbs fresh | D | `publish/thumbs/_meta.json.final_sha` == current final's sha (FAIL when live, WARN when studio_complete) |
+| SYNC-G5 Site fresh | D | read page exists for promoted items; frame `_meta.source_sha` == scored video (WARN); `publish_meta.read_url` == the real `read/<slug>.html` (FAIL) |
+| SYNC-G6 Posted truth | D | `youtube_id` ⇔ `public_status: live` ⇔ dated ledger entry; posted sha == current final |
+| SYNC-G7 Long⇄short | D | a short in a cluster that has a long carries `parent:` = that long |
 
 ### LIVING-PAGE lane — `run_piece.py` + `render_lint/` + `stills_gate.py` + `pipeline/flow_check.py` (all LIVE 2026-07-08)
 `H` = human gate. Every LP-D gate is wired into the runner itself — a bespoke

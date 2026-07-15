@@ -1,6 +1,81 @@
 # STATE.md — progress tracker
 
-**Last updated:** 2026-07-15 (WAVE E COMPLETE — rollout BUILT 14/14; user wave gates B/C/D/E pending)
+**Last updated:** 2026-07-15 (5 episodes tracked, red-teamed)
+**Status (2026-07-15 — episode red-team + 4 new episodes scaffolded from the user's own plan):**
+Red-teamed the Episode concept (2 agents). Confirmed CRITICAL live bug: production_board.py said
+Psalm 22 was "built, ready to release" while build_upload_tracker.py correctly said "not yet marked
+ready" for the SAME episode in the SAME run — `EpisodeState.status` checked bare `finality` instead
+of the already-built `long_ready` gate. Fixed + both dashboards now agree ("long built, awaiting
+catalogue approval"). Also fixed: a fabricated "post the long first, then shorts" cadence citation
+that CONTRADICTED the real RELEASE_CALENDAR.md (Psalm 22's own calendar schedules 2 shorts as
+PRE-long trailers) — replaced with a pointer to the real doc, no invented rule. SYNC-G7 hardened
+(a short with cluster:null + a typo'd parent: sailed through undetected — now cross-checks cluster
+against the parent's). "Shorts building" no longer lies about untouched `planned` shorts. A LIVE
+long whose final regresses no longer silently reads as "in production". `shorts_posted_any` (any
+platform) now actually renders instead of the bar sitting stuck at 0% during real posting progress
+(the 24-48h TikTok/FB/IG cross-post lag was hiding real work). cluster_order=0 falsy-bug fixed.
+7 new regression tests. Suite 341/1.
+**+ 4 new episodes scaffolded**, sourced from the user's OWN locked plan (longform/LONGFORM_TYPES_
+SHADOWS_SLATE.md — titles/verses/short-counts lifted verbatim, nothing invented) + verified against
+RELEASE_CALENDAR.md's Month 2-3 order: **Passover Lamb** (4 shorts), **Bronze Serpent** (3 shorts),
+**Seed of the Woman** (4 shorts) — all three narration-locked AND video-finished, just never added to
+_website/manifest.yaml before (were literal orphans on the production board). **Day of Atonement**
+(3 shorts) — narration locked, film not assembled yet, correctly shows "long in production". Longs'
+hooks/blurbs trimmed from their own real narration.spoken.txt openings, not invented. Thumbnails cut
+for the 3 finished longs ($0, eyes-verified clean — no overflow/blank-void/caption issues, the
+auto-fixes from the earlier thumbnail deep-dive held up on fresh content). Publish packs NOT yet
+built (costs LLM spend — needs explicit go-ahead per ask-before-spending). Board now shows 5
+episodes total; orphan lane folders dropped from 5 to 1 (only EW09_Boaz, which has no folder yet).
+**NEXT:** user decides when to spend on publish packs for the 3 ready longs, and when to start
+/narrate on the 14 planned shorts (Passover Lamb first per the calendar).
+**Status (2026-07-15 — thumbnail deep-dive, user caught "I feel you missed a lot of things" and was right):**
+Actually LOOKED at every generated thumbnail (not just ran the script) and found 3 real, systemic bugs
+the earlier pass missed: (1) long titles ran off the 16:9/TikTok canvas at the fixed font size
+("THEY SHALL LOOK ON HIM" etc clipped) -> `_fit_title_font` auto-shrinks to fit, tested.
+(2) migrated hero-frame timestamps (carried over unverified from the pre-rebuild PIECES dict) landed
+on unpainted comic-panel-grid voids in the REBUILT videos (thirty_pieces/forsaken_cry/i_thirst/
+crucifixion_foretold) -> `blank_fraction()` + `grab_frame()` auto-avoidance (calibrated: bright+flat
+= void, dark+flat = legit dramatic backdrop), searches nearby offsets, loud WARN if none clean.
+(3) Isaiah 53 (a documentary-style long with NEAR-CONTINUOUS captions, no clean gap anywhere) ghosted
+its own caption text behind the title -> solid scrim behind the title block on top of the gradient.
+Also caught: Isaiah 53 + body_foretold_ps2214 (a brand-new wave-rebuild piece) had NO publish_meta.json
+at all -> used default landed-badly timestamps; wrote minimal `thumb` specs for both (hand-picked,
+eyes-verified clean frames). Re-ran full thumbnail batch (88 files), re-inspected every 16:9 by eye,
+sampled 9:16/TikTok. 7 new regression tests (`pipeline/test_thumbnails.py`). Suite 323/1.
+Residual accepted: Isaiah 53's ghost is now near-invisible but not 100% zero (further scrim opacity
+would flatten the art for every OTHER thumbnail); one small caption-fragment bleeds at the 9:16
+bottom-left edge on Isaiah (low severity). NOT yet re-checked: TikTok/9:16 for every piece (only
+sampled ~6 of 22) — worth a further pass before a real posting push.
+**LESSON:** don't trust a script ran clean == output is clean. Open the actual images.
+**Status (2026-07-15 — RELEASE SYNC desk built, modeled on HF-POC fg-publish, drift designed out):**
+ONE finality rule (`pipeline/finality.py`, content-sha + `.bak`-proof; 4 duplicate impls retired),
+HARD manifest join (`source:` on 29 items + `parent:` on the 8 ps22 shorts — the fuzzy matcher that
+false-FINAL'd ew-jonah is dead), dated per-platform ledger `data/release_ledger.json` written ONLY by
+`upload_tracker.py --set <slug> <platform> <url>` (YT also → manifest youtube_id + read-page rebuild),
+$0 SYNC gate `release_check.py` (SYNC-G1..G7: join/finality/pack-sha/thumbs-sha/site-sha/posted-truth/
+long⇄short) + `production_board.py` re-rendered from the same `pipeline/release_state.py`.
+Packs now sha-stamped via `cli_publish.py --index` (all 15 GREEN); thumbnails manifest-driven
+(specs moved into publish_meta.json `thumb:`; 17 pieces cut incl. empty-tomb/women-first which had
+none); read frames stamp `_meta.json` on extraction (14 baselines from the wave-gated finals).
+Honest gate reds remaining = the 5 ps22 rebuild shorts (no final yet) + isaiah-53 (no pack yet).
+Spec: v2/RELEASE_SYNC.md + SPEC.md §4 SYNC table. Suite 273/1 + validator teeth green.
+**RED-TEAMED same day (2 hostile agents + empirical probe; record in v2/RELEASE_SYNC.md):** caught
++ fixed: finality picked Isaiah's UNSCORED captioned (alphabetical tie) — now deeper-chain wins +
+pattern-beats-directory (inked sfx will outrank old captioned when it lands; thumbs re-cut); sha
+cache spoofable by same-size+restored-mtime swap — now head/tail-64KB fingerprint trust; thumbs/
+read-frame stamps could launder stale pixels (ffmpeg past-EOF exits 0!) — pre-delete+verify + full-
+coverage-only stamping; --index/--set laundering blocked (copy_final_sha preserved → --copy-ok;
+ledger replace needs --repost); G6 reverse check (ledger⇒manifest); --slug false-RED fixed (gates
+always run over the FULL catalogue); FINAL_VIDEO.txt pin added (Psalm22 pinned; **EW01 sfx vs
+sfx_captioned = OPEN USER CALL**). Suite 316/1. 15/15 packs GREEN re-stamped.
+**+ UPLOAD TRACKER page + TikTok covers (user ask):** `build_upload_tracker.py` →
+`_UPLOAD_TRACKER.html` — per-piece cards (video/pack/captions.srt/thumbs/read links + ffprobe
+aspect check), per-platform URL paste box → copies the exact `upload_tracker.py --set` command
+(ledger-driven, NO localStorage). `pipeline/thumbnails.py` now cuts 4 per piece: 16:9 + 9:16 +
+1:1 + TikTok centre-safe cover (blurred backdrop, all content in the middle 3:4) — 68 thumbs cut.
+NOTE some hero times catch a comic box mid-fade since the wave rebuild moved box timings —
+nudge `publish_meta.json` thumb.t per piece if a thumb shows a half-faded box.
+**Status (2026-07-15 — WAVE E COMPLETE — rollout BUILT 14/14; user wave gates B/C/D/E pending)**
 **Status (2026-07-15 — WAVE E DONE):** father_forgive_them migrated mocomic→livingpage gold master
 (new piece.json + 16-beat spec + 14 stills eye-audited + 10 clips inherited $0 incl. the
 risen_mercy_hand LL copy). Fixed en route: live pilot was playing a RETIRED bible-fail lots still
