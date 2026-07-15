@@ -1,0 +1,18 @@
+{
+ "image": "empty_tomb_open.png",
+ "verdict": "PASS",
+ "flags": [
+  "audited 2026-07-05 cut sweep (agent + spot-verify)",
+  "clean"
+ ],
+ "reviewer": "in-chat-agent",
+ "stage": "content",
+ "provenance": {
+  "source": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\empty_tomb_open.png",
+  "source_audit": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\empty_tomb_open.audit.json",
+  "source_verdict": "PASS",
+  "copied_for": "isaiah53_inked_rebuild",
+  "copy_mode": "byte-identical",
+  "date": "2026-07-15"
+ }
+}

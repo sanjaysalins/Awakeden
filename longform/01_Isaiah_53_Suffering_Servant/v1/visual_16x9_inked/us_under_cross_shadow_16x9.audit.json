@@ -1,0 +1,10 @@
+{
+  "image": "us_under_cross_shadow_16x9.png",
+  "verdict": "PASS",
+  "flags": [
+    "eye-QC PASS",
+    "matches 9:16 signature world"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

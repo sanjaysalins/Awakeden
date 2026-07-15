@@ -1,0 +1,15 @@
+{
+  "slug": "nail_through_hand",
+  "hash": "10bbc061070ddb3c",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "Wave F contact-sheet pass 2026-07-15: body-beats frames (blood_water_wood, nail, bowed head) restrained and reverent, no gore; body_suspended_wide PENDING paid render. | byte-identical corpus copy from into_thy_hands_luke2346 (wave-gated source)",
+  "reviewer": "in-chat-agent"
+}

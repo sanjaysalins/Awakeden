@@ -1,0 +1,18 @@
+{
+ "image": "blood_water_wood.png",
+ "verdict": "PASS",
+ "flags": [
+  "base-only macro, no bare crossbeam, blood + water streams down grain, dim darkness",
+  "eye-audited full-res vs fact sheet v2"
+ ],
+ "reviewer": "in-chat-agent",
+ "stage": "content",
+ "provenance": {
+  "source": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\pierced_zech1210\\visual\\blood_water_wood.png",
+  "source_audit": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\pierced_zech1210\\visual\\blood_water_wood.audit.json",
+  "source_verdict": "PASS",
+  "copied_for": "isaiah53_inked_rebuild",
+  "copy_mode": "byte-identical",
+  "date": "2026-07-15"
+ }
+}

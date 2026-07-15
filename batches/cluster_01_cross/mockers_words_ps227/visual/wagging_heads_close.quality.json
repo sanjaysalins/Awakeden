@@ -1,0 +1,15 @@
+{
+  "slug": "wagging_heads_close",
+  "hash": "eb465e3b773290a3",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "fresh render eye-verified in chat 2026-07-15",
+  "reviewer": "in-chat-agent"
+}

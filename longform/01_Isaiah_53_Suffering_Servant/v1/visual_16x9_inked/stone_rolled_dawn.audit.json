@@ -1,0 +1,18 @@
+{
+ "image": "stone_rolled_dawn.png",
+ "verdict": "PASS",
+ "flags": [
+  "vision-audited full-res vs fact_sheet v2 + world canon: exterior dawn, empty dark ground-level opening, disc outside against rock face, garden",
+  "no body/window/ramp"
+ ],
+ "reviewer": "in-chat-agent",
+ "stage": "content",
+ "provenance": {
+  "source": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_02_resurrection\\empty_tomb_john208\\visual\\stone_rolled_dawn.png",
+  "source_audit": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_02_resurrection\\empty_tomb_john208\\visual\\stone_rolled_dawn.audit.json",
+  "source_verdict": "PASS",
+  "copied_for": "isaiah53_inked_rebuild",
+  "copy_mode": "byte-identical",
+  "date": "2026-07-15"
+ }
+}

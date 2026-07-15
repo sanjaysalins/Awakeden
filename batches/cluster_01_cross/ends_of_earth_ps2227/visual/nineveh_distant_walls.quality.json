@@ -1,0 +1,15 @@
+{
+  "slug": "nineveh_distant_walls",
+  "hash": "6d79814e2e255023",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "Wave F contact-sheet pass 2026-07-15: dark-world golgotha/ninth-hour frames consistent; nineveh plate is the nations stand-in until the two fresh plates render (PENDING). | byte-identical corpus copy from sign_of_jonah_matt1240 (wave-gated source)",
+  "reviewer": "in-chat-agent"
+}

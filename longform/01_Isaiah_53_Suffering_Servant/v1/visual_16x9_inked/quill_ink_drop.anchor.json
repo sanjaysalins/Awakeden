@@ -1,0 +1,14 @@
+{
+  "keep": [
+    0.05,
+    0.1,
+    0.9,
+    0.9
+  ],
+  "focus": [
+    0.35,
+    0.45
+  ],
+  "pad": 0.05,
+  "note": "hand+pen left-centre, inkwell centre; candle right"
+}

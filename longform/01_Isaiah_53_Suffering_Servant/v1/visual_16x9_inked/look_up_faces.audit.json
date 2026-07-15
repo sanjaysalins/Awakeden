@@ -1,0 +1,18 @@
+{
+ "image": "look_up_faces.png",
+ "verdict": "PASS",
+ "flags": [
+  "3 cloned Jesus faces -> 3 distinct mourners (old man/young woman/youth)",
+  "inked"
+ ],
+ "reviewer": "in-chat-agent",
+ "stage": "content",
+ "provenance": {
+  "source": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\pierced_zech1210\\visual\\look_up_faces.png",
+  "source_audit": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\pierced_zech1210\\visual\\look_up_faces.audit.json",
+  "source_verdict": "PASS",
+  "copied_for": "isaiah53_inked_rebuild",
+  "copy_mode": "byte-identical",
+  "date": "2026-07-15"
+ }
+}

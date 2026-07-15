@@ -1,0 +1,14 @@
+{
+  "keep": [
+    0.1,
+    0.1,
+    0.8,
+    0.95
+  ],
+  "focus": [
+    0.42,
+    0.55
+  ],
+  "pad": 0.05,
+  "note": "helmet+spear centre-left; wall free right"
+}

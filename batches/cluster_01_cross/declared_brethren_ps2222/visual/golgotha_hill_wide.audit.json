@@ -1,0 +1,11 @@
+{
+ "image": "golgotha_hill_wide.png",
+ "verdict": "PASS",
+ "flags": [
+  "byte-identical corpus copy from forsaken_cry_ps221 (wave-gated source)",
+  "source audit PASS: black midday sky, land in shadow, three crosses all occupied, no steeple, no lightning; eye-audited full-res vs fact sheet v2",
+  "Wave F ps22 rebuild $0 migration 2026-07-15"
+ ],
+ "reviewer": "in-chat-agent",
+ "stage": "content"
+}

@@ -1,0 +1,17 @@
+{
+ "image": "body_laid_in_tomb.png",
+ "verdict": "PASS",
+ "flags": [
+  "vision-audited vs v3: TWO men (Joseph+Nicodemus John 19:38-39), body fully wound face hidden, spice bundles + myrrh jar (100lb weight guard), open-tomb oil lamp OK, low chamber"
+ ],
+ "reviewer": "in-chat-agent",
+ "stage": "content",
+ "provenance": {
+  "source": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_02_resurrection\\sign_of_jonah_matt1240\\visual\\body_laid_in_tomb.png",
+  "source_audit": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_02_resurrection\\sign_of_jonah_matt1240\\visual\\body_laid_in_tomb.audit.json",
+  "source_verdict": "PASS",
+  "copied_for": "isaiah53_inked_rebuild",
+  "copy_mode": "byte-identical",
+  "date": "2026-07-15"
+ }
+}

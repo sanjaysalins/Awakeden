@@ -1,0 +1,11 @@
+{
+ "image": "lots_cup_close.png",
+ "verdict": "PASS",
+ "flags": [
+  "byte-identical corpus copy from crucifixion_foretold_ps2218 (wave-gated source)",
+  "source audit PASS: period cubic bone dice w/ pips (dog-bones fixed), leather cup, folded garment, daylight; eye-audited full-res vs fact sheet v2",
+  "Wave F ps22 rebuild $0 migration 2026-07-15"
+ ],
+ "reviewer": "in-chat-agent",
+ "stage": "content"
+}

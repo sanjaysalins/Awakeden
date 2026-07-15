@@ -1,0 +1,17 @@
+{
+ "image": "risen_mercy_hand.png",
+ "verdict": "PASS",
+ "flags": [
+  "eye-audited full-res via render_lint batch-Agent flow 2026-07-06; no checklist defect"
+ ],
+ "reviewer": "claude-batch-agent+opus-verify",
+ "stage": "content",
+ "provenance": {
+  "source": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\crucifixion_foretold_ps2218\\visual\\risen_mercy_hand.png",
+  "source_audit": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\crucifixion_foretold_ps2218\\visual\\risen_mercy_hand.audit.json",
+  "source_verdict": "PASS",
+  "copied_for": "isaiah53_inked_rebuild",
+  "copy_mode": "byte-identical",
+  "date": "2026-07-15"
+ }
+}

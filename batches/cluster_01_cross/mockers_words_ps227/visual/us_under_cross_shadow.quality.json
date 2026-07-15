@@ -1,0 +1,15 @@
+{
+  "slug": "us_under_cross_shadow",
+  "hash": "dc2472e18692e9c0",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "Wave F contact-sheet pass 2026-07-15: coherent single ink world (dusk taunt frames, scroll world, risen gold tail); wounds restrained (face_on_cross/jesus_looks_down small dry palm marks); all corpus wave-gated copies. | byte-identical corpus copy from crucifixion_foretold_ps2218 (wave-gated source)",
+  "reviewer": "in-chat-agent"
+}

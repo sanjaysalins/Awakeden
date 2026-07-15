@@ -1,0 +1,54 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Stills gate — declared_brethren_ps2222</title>
+<style>
+ body{background:#0f0f11;color:#eee;font-family:system-ui,Arial,sans-serif;margin:0;padding:18px 22px 110px}
+ h1{font-size:20px;margin:0 0 2px} .sub{color:#9aa;font-size:13px;margin-bottom:14px}
+ .contact{width:100%;max-width:1500px;border:1px solid #333;border-radius:8px;margin-bottom:20px}
+ .card{background:#191920;border:1px solid #333;border-radius:12px;padding:14px;margin:0 0 16px;display:flex;gap:18px;flex-wrap:wrap}
+ .card.approved{border-color:#3a7} .card.rejected{border-color:#c55}
+ .col{flex:1;min-width:290px}
+ .slug{font-family:monospace;color:#7ec8ff;font-size:15px}
+ .q{font-size:12px;margin:2px 0 6px} .q.PASS{color:#6d6} .q.FAIL{color:#e77} .q.none{color:#888}
+ .qn{font-size:12px;color:#cb9;background:#141410;border:1px solid #3a3520;border-radius:6px;padding:6px 8px;margin:0 0 8px;white-space:pre-wrap}
+ img,video{max-width:100%;width:330px;border-radius:6px;display:block;background:#000}
+ .btns{margin-top:8px} .btns button{font-size:14px;margin:0 8px 0 0;padding:7px 16px;border-radius:8px;border:1px solid #555;background:#26262e;color:#eee;cursor:pointer}
+ .btns button.a.on{background:#3a7;border-color:#3a7;color:#fff} .btns button.r.on{background:#c55;border-color:#c55;color:#fff}
+ textarea{width:100%;box-sizing:border-box;height:52px;background:#111;color:#eee;border:1px solid #444;border-radius:6px;padding:6px;font-size:13px;margin-top:8px}
+ .noclip{color:#c66;font-size:13px;padding:16px 0}
+ #bar{position:fixed;left:0;right:0;bottom:0;background:#1c1c24;border-top:1px solid #444;padding:10px 22px;display:flex;gap:12px;align-items:center}
+ #bar button{font-size:14px;padding:8px 16px;border-radius:8px;border:none;background:#3a7;color:#fff;cursor:pointer}
+ #out{position:fixed;inset:5%;background:#111;border:1px solid #555;border-radius:10px;padding:16px;display:none;z-index:9;flex-direction:column}
+ #out textarea{flex:1;height:auto;background:#0a0a0a;color:#8f8;font-family:monospace}
+</style></head><body>
+<h1>Stills gate — declared_brethren_ps2222</h1>
+<div class="sub">Look at the WHOLE set first. Then Approve/Reject each still and add notes. Nothing gets animated or rebuilt until you approve. Then Export and paste back.</div>
+<img class="contact" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/declared_brethren_ps2222/visual/_review/contact.jpg">
+<div id="app"></div>
+<div id="bar"><button onclick="exportAll()">⬇ Export decisions (paste back to me)</button>
+<span class="sub" style="margin:0">approve = keep · needs rebuild = redo (add a note saying what to fix)</span></div>
+<div id="out"><b>Paste this back into the chat:</b><textarea id="ot" readonly></textarea>
+<div style="margin-top:10px"><button onclick="copyOut()">Copy</button>
+<button style="background:#555" onclick="document.getElementById('out').style.display='none'">Close</button></div></div>
+<script>
+const S=[{"slug": "cross_at_dawn", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/declared_brethren_ps2222/visual/cross_at_dawn.png", "clip": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/declared_brethren_ps2222/visual/clips/cross_at_dawn.mp4", "quality": null, "qnotes": ""}, {"slug": "david_writing_psalm", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/declared_brethren_ps2222/visual/david_writing_psalm.png", "clip": "", "quality": null, "qnotes": ""}, {"slug": "face_on_cross", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/declared_brethren_ps2222/visual/face_on_cross.png", "clip": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/declared_brethren_ps2222/visual/clips/face_on_cross.mp4", "quality": null, "qnotes": ""}, {"slug": "golgotha_hill_wide", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/declared_brethren_ps2222/visual/golgotha_hill_wide.png", "clip": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/declared_brethren_ps2222/visual/clips/golgotha_hill_wide.mp4", "quality": null, "qnotes": ""}, {"slug": "look_up_faces", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/declared_brethren_ps2222/visual/look_up_faces.png", "clip": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/declared_brethren_ps2222/visual/clips/look_up_faces.mp4", "quality": null, "qnotes": ""}, {"slug": "ninth_hour_darkness", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/declared_brethren_ps2222/visual/ninth_hour_darkness.png", "clip": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/declared_brethren_ps2222/visual/clips/ninth_hour_darkness.mp4", "quality": null, "qnotes": ""}, {"slug": "psalm_scroll_night", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/declared_brethren_ps2222/visual/psalm_scroll_night.png", "clip": "", "quality": null, "qnotes": ""}, {"slug": "risen_christ_seeking", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/declared_brethren_ps2222/visual/risen_christ_seeking.png", "clip": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/declared_brethren_ps2222/visual/clips/risen_christ_seeking.mp4", "quality": null, "qnotes": ""}, {"slug": "risen_christ_wounds", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/declared_brethren_ps2222/visual/risen_christ_wounds.png", "clip": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/declared_brethren_ps2222/visual/clips/risen_christ_wounds.mp4", "quality": null, "qnotes": ""}, {"slug": "risen_mercy_hand", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/declared_brethren_ps2222/visual/risen_mercy_hand.png", "clip": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/declared_brethren_ps2222/visual/clips/risen_mercy_hand.mp4", "quality": null, "qnotes": ""}, {"slug": "stone_rolled_dawn", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/declared_brethren_ps2222/visual/stone_rolled_dawn.png", "clip": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/declared_brethren_ps2222/visual/clips/stone_rolled_dawn.mp4", "quality": null, "qnotes": ""}, {"slug": "us_under_cross_shadow", "png": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/declared_brethren_ps2222/visual/us_under_cross_shadow.png", "clip": "file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/declared_brethren_ps2222/visual/clips/us_under_cross_shadow.mp4", "quality": null, "qnotes": ""}]; const st={};
+S.forEach(s=>st[s.slug]={decision:null,notes:""});
+function render(){const a=document.getElementById('app');a.innerHTML='';
+ S.forEach(s=>{const c=document.createElement('div');c.className='card';c.id='c-'+s.slug;
+  const qc=s.quality?('q '+s.quality):'q none';const qt=s.quality?('agent quality: '+s.quality):'agent quality: (not scored)';
+  const qn=s.qnotes?`<div class="qn">📋 agent audit: ${s.qnotes}</div>`:'';
+  c.innerHTML=`<div class="col"><div class="slug">${s.slug}</div><div class="${qc}">${qt}</div>${qn}
+   <a href="${s.png}" target="_blank" title="open full-res"><img src="${s.png}"></a></div>
+   <div class="col">${s.clip?`<video src="${s.clip}" controls loop muted playsinline></video>`:`<div class="noclip">— no clip yet —</div>`}
+   <div class="btns"><button class="a" data-s="${s.slug}">✓ Approve</button><button class="r" data-s="${s.slug}">✗ Needs REBUILD</button></div>
+   <textarea data-s="${s.slug}" placeholder="notes (what's wrong / how to rebuild it)"></textarea></div>`;
+  a.appendChild(c);});
+ document.querySelectorAll('.btns button').forEach(b=>b.onclick=()=>{const s=b.dataset.s;const dec=b.classList.contains('a')?'approve':'reject';
+  st[s].decision=dec;const card=document.getElementById('c-'+s);card.className='card '+(dec==='approve'?'approved':'rejected');
+  card.querySelectorAll('.a,.r').forEach(x=>x.classList.remove('on'));b.classList.add('on');});
+ document.querySelectorAll('textarea[data-s]').forEach(t=>t.oninput=()=>st[t.dataset.s].notes=t.value);}
+function exportAll(){const out=S.map(s=>({slug:s.slug,decision:st[s.slug].decision,notes:st[s.slug].notes.trim()||undefined}))
+  .filter(x=>x.decision||x.notes);
+ document.getElementById('ot').value="STILLS GATE DECISIONS ("+"declared_brethren_ps2222"+")\n"+JSON.stringify(out,null,2);
+ document.getElementById('out').style.display='flex';}
+function copyOut(){const t=document.getElementById('ot');t.select();document.execCommand('copy');}
+render();
+</script></body></html>

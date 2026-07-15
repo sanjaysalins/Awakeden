@@ -22,11 +22,17 @@ MUSIC_LIB = ROOT / "music_library" / "clips"
 #   gain_db:  score level under the narration (narration standard is -8 dB)
 #   outro_s:  tail hold after narration ends (last frame clone + score ring-out)
 EPISODES: dict[str, dict] = {
+    # Isaiah 53 INKED rebuild (405.26s, 95 beats) — writing/700BC open + despised (searching)
+    # -> lamb/trial/death holy weight -> eunuch + risen close (grace rising). Closer is
+    # sacred_grace_rise_b (229.9s, the ps22 fix) so the score covers the film close; the _a
+    # take left the final CTA bare. Dip = the heartbeat-stop sacred window ("His name is
+    # Jesus", 400.4) so the name lands in near-silence; the outro ring recovers after.
     "01_Isaiah_53_Suffering_Servant": {
-        "segments": ["lonely_searching_a", "sacred_grace_rise_a"],
+        "segments": ["lonely_searching_a", "sacred_grace_rise_b"],
         "xfade_s": 6.0,
         "gain_db": -11.0,
         "outro_s": 2.5,
+        "dips": [[400.4, 404.0, 0.3]],
     },
     # Psalm 22 (418.2s) — ache (M1-M4) -> grace enters M5 -> climaxes M6 turn -> resolves M7.
     # Closer is sacred_grace_rise_b (229.9s) so the score covers the final "Come and join"
@@ -111,7 +117,11 @@ def run(episode_dir: Path, yes: bool, regen: bool) -> None:
             f"Known episodes: {list(EPISODES)}"
         )
 
-    visual_dir = episode_dir / "v1" / "visual_16x9"
+    # inked-rebuild pool wins when present (the legacy Baroque cut in visual_16x9 is
+    # reference-only and never ships — memory: graphic-novel-style-migration)
+    visual_dir = episode_dir / "v1" / "visual_16x9_inked"
+    if not visual_dir.is_dir():
+        visual_dir = episode_dir / "v1" / "visual_16x9"
     candidates = [
         c for c in sorted(visual_dir.glob("*_16x9.mp4"))
         if "_scored" not in c.name

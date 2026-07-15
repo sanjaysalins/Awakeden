@@ -1,0 +1,18 @@
+{
+ "image": "darkness_veil_torn.png",
+ "verdict": "PASS",
+ "flags": [
+  "temple veil torn top-to-bottom between period columns, B/W ink; no writing, no figures",
+  "vision-audited in-chat by Claude 2026-07-15 (Wave E migration eye pass)"
+ ],
+ "reviewer": "in-chat-agent",
+ "stage": "content",
+ "provenance": {
+  "source": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\father_forgive_them\\visual\\darkness_veil_torn.png",
+  "source_audit": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\father_forgive_them\\visual\\darkness_veil_torn.audit.json",
+  "source_verdict": "PASS",
+  "copied_for": "isaiah53_inked_rebuild",
+  "copy_mode": "byte-identical",
+  "date": "2026-07-15"
+ }
+}

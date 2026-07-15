@@ -121,6 +121,56 @@ PIECES: dict[str, list] = {
         layer("dawn",   "dawn_morning_warm",   "loop",   49.2, 9.9,  -36.0, filt="lowpass=f=3400", fin=2.0),
     ],
     # 60s pilot — the mob, the nails (already scored+mixed by add_music_sfx; SKIP by default)
+    # ---- Wave F ps22 rebuilds (2026-07-15): 5 inked living-page shorts ----
+    # 78.02s — mocking crowd -> David writes -> wagging heads -> rulers sneer -> He stayed -> dawn
+    "mockers_words_ps227": [
+        layer("crowd0", "crowd_murmur_distant","loop",    0.0, 4.4,  -39.0, fin=0.4, fout=1.0),
+        layer("scroll", "fire_crackling",      "loop",    4.6, 5.4,  -41.0, filt="lowpass=f=4200", fin=1.0, fout=1.2),
+        layer("wind",   "wind_desert_bleak",   "loop",   10.1, 21.8, -40.0, fin=1.5, fout=2.0),
+        layer("crowd1", "crowd_murmur_distant","loop",   19.3, 9.5,  -41.0, fin=1.2, fout=1.5),
+        layer("lots",   "coins_clinking",      "oneshot",34.6, 2.2,  -32.0, fout=0.8),
+        layer("hollow", "air_hollow_desolate", "loop",   41.0, 7.1,  -39.0, filt="lowpass=f=3000", fin=1.5, fout=1.5),
+        layer("wind2",  "wind_desert_bleak",   "loop",   48.1, 15.1, -41.0, fin=1.5, fout=2.0),
+        layer("dawn",   "dawn_morning_warm",   "loop",   68.5, 9.5,  -37.0, filt="lowpass=f=3400", fin=2.5),
+    ],
+    # 58.96s — darkness open -> psalm turn -> the congregation -> risen -> family -> dawn
+    "declared_brethren_ps2222": [
+        layer("hollow", "air_hollow_desolate", "loop",    0.0, 7.4,  -39.0, filt="lowpass=f=3000", fin=0.5, fout=1.5),
+        layer("scroll", "fire_crackling",      "loop",    7.4, 8.5,  -41.0, filt="lowpass=f=4200", fin=1.2, fout=1.5),
+        layer("hall",   "crowd_murmur_distant","loop",   16.0, 5.8,  -42.0, fin=1.2, fout=1.5),
+        layer("wind",   "wind_desert_bleak",   "loop",   21.9, 10.3, -41.0, fin=1.5, fout=1.5),
+        layer("stone",  "stone_roll_tomb",     "oneshot",32.4, 2.4,  -33.0, fout=1.0),
+        layer("dawn",   "dawn_morning_warm",   "loop",   36.6, 22.4, -37.0, filt="lowpass=f=3400", fin=3.0),
+    ],
+    # 42.70s — David + bowed head -> done -> vinegar -> finished -> home lamp -> dawn
+    "he_hath_done_this_ps2231": [
+        layer("scroll", "fire_crackling",      "loop",    0.0, 7.9,  -41.0, filt="lowpass=f=4200", fin=0.5, fout=1.2),
+        layer("wind",   "wind_desert_bleak",   "loop",    7.9, 12.6, -41.0, fin=1.5, fout=1.5),
+        layer("hollow", "air_hollow_desolate", "loop",   20.5, 5.4,  -40.0, filt="lowpass=f=3000", fin=1.2, fout=1.2),
+        layer("wind2",  "wind_desert_bleak",   "loop",   25.9, 10.6, -41.0, fin=1.5, fout=1.5),
+        layer("home",   "fire_crackling",      "loop",   36.5, 4.0,  -41.0, filt="lowpass=f=4200", fin=1.0, fout=1.0),
+        layer("dawn",   "dawn_morning_warm",   "loop",   40.5, 2.2,  -38.0, filt="lowpass=f=3400", fin=0.8),
+    ],
+    # 67.50s — one forsaken man -> all nations turn -> tomb -> worship -> landing rays
+    "ends_of_earth_ps2227": [
+        layer("hollow", "air_hollow_desolate", "loop",    0.0, 7.5,  -39.0, filt="lowpass=f=3000", fin=0.5, fout=1.5),
+        layer("wind",   "wind_desert_bleak",   "loop",    7.5, 14.0, -40.0, fin=1.5, fout=1.5),
+        layer("nations","crowd_murmur_distant","loop",   16.8, 4.6,  -42.0, fin=1.2, fout=1.2),
+        layer("wind2",  "wind_desert_bleak",   "loop",   21.5, 11.1, -40.0, fin=1.5, fout=1.5),
+        layer("stone",  "stone_roll_tomb",     "oneshot",32.8, 2.4,  -33.0, fout=1.0),
+        layer("worship","crowd_murmur_distant","loop",   39.4, 6.5,  -40.0, fin=1.2, fout=1.5),
+        layer("dawn",   "dawn_morning_warm",   "loop",   48.1, 19.4, -36.0, filt="lowpass=f=3400", fin=3.0),
+    ],
+    # 66.94s — David writes -> watch the body -> bones out of joint -> staring crowd -> crushed for you
+    "body_foretold_ps2214": [
+        layer("scroll", "fire_crackling",      "loop",    0.0, 10.0, -41.0, filt="lowpass=f=4200", fin=0.5, fout=1.5),
+        layer("wind",   "wind_desert_bleak",   "loop",   10.1, 8.2,  -40.0, fin=1.5, fout=1.5),
+        layer("hollow", "air_hollow_desolate", "loop",   18.3, 12.9, -40.0, filt="lowpass=f=3000", fin=1.5, fout=2.0),
+        layer("wind2",  "wind_desert_bleak",   "loop",   31.2, 13.4, -41.0, fin=1.5, fout=1.5),
+        layer("stare",  "crowd_murmur_distant","loop",   38.6, 6.1,  -40.0, fin=1.2, fout=1.5),
+        layer("rumble", "rumble_deep_sub",     "oneshot",52.6, 3.5,  -34.0, fout=2.0),
+        layer("dawn",   "dawn_morning_warm",   "loop",   59.9, 7.0,  -37.0, filt="lowpass=f=3400", fin=2.5),
+    ],
 }
 
 # ---- the inked Psalm 22 LONG (418.2s, 7 movements) --------------------------------
@@ -152,6 +202,44 @@ LONG_LAYERS = [
 ]
 
 
+# ---- the inked Isaiah 53 LONG (405.26s, 95 beats; scored by longform/_add_score_lf.py) ----
+ISAIAH_CUT = (REPO / "longform" / "01_Isaiah_53_Suffering_Servant" / "v1"
+              / "visual_16x9_inked" / "LivingPage_Isaiah53_16x9_scored.mp4")
+ISAIAH_LAYERS = [
+    # M1 the lamplit scroll + 700BC Jerusalem (0-22)
+    layer("m1fire",  "fire_crackling",      "loop",    0.0, 19.0, -41.0, filt="lowpass=f=4200", fin=0.5, fout=2.0),
+    # M2 the report -> exalted -> marred (22-65): open air, then the picture breaks
+    layer("m2wind",  "wind_desert_bleak",   "loop",   19.0, 28.0, -41.0, fin=2.0, fout=2.0),
+    layer("m2thund", "thunder_low_roll",    "oneshot",49.9, 3.5,  -34.0, fout=2.0),
+    # M3 despised and rejected (65-90): the crowd that looks away
+    layer("m3crowd", "crowd_murmur_distant","loop",   64.7, 14.9, -40.0, fin=1.5, fout=1.5),
+    layer("m3wind",  "wind_desert_bleak",   "loop",   79.6, 19.4, -40.0, fin=1.5, fout=1.5),
+    # M4 the transaction (99-135): sacred hollow under the wounds verses
+    layer("m4hollow","air_hollow_desolate", "loop",   99.0, 29.0, -40.0, filt="lowpass=f=3000", fin=2.0, fout=2.0),
+    layer("m4sheep", "flock_sheep_field",   "loop",  128.4, 4.2,  -40.0, fin=0.8, fout=1.0),
+    # M5 the silent lamb (142-158): torch-lit trial night
+    layer("m5torch", "fire_crackling",      "loop",  142.4, 11.4, -41.0, filt="lowpass=f=4200", fin=1.2, fout=1.5),
+    # M6 the honest question / Israel (158-234): study air, the exile road
+    layer("m6wind",  "wind_desert_bleak",   "loop",  158.0, 32.0, -42.0, fin=2.0, fout=2.0),
+    layer("m6exile", "crowd_murmur_distant","loop",  167.3, 4.1,  -42.0, fin=1.0, fout=1.0),
+    layer("m6hollow","air_hollow_desolate", "loop",  195.8, 17.9, -40.0, filt="lowpass=f=3000", fin=1.5, fout=2.0),
+    # M7 the eunuch's chariot (234-282): hooves + wheels on the desert road (diegetic star)
+    layer("m7wind",  "wind_desert_bleak",   "loop",  234.0, 48.0, -42.0, fin=2.0, fout=2.0),
+    layer("m7hooves","horse_hooves_walk",   "loop",  237.6, 24.5, -39.0, fin=1.2, fout=2.0),
+    layer("m7wheels","chariot_wheels_road", "loop",  238.0, 24.0, -40.0, fin=1.2, fout=2.0),
+    # M8 it pleased the LORD to bruise him (282-306): darkness
+    layer("m8rumble","rumble_deep_sub",     "oneshot",285.4, 4.0, -34.0, fout=2.5),
+    layer("m8hollow","air_hollow_desolate", "loop",  282.2, 23.5, -39.0, filt="lowpass=f=3000", fin=1.5, fout=2.5),
+    # M9 the morning turn (306-342): dawn + the stone
+    layer("m9dawn",  "dawn_morning_warm",   "loop",  305.7, 36.3, -37.0, filt="lowpass=f=3400", fin=3.0, fout=2.0),
+    layer("m9stone", "stone_roll_tomb",     "oneshot",318.3, 2.4, -33.0, fout=1.0),
+    # M10 back to the lamp -> verse six -> the name (342-405): warm all the way home
+    layer("m10fire", "fire_crackling",      "loop",  342.0, 5.3,  -41.0, filt="lowpass=f=4200", fin=1.0, fout=1.2),
+    layer("m10wind", "wind_desert_bleak",   "loop",  347.3, 16.8, -42.0, fin=2.0, fout=2.0),
+    layer("m10dawn", "dawn_morning_warm",   "loop",  364.1, 41.2, -36.0, filt="lowpass=f=3400", fin=3.0),
+]
+
+
 def main():
     flt = sys.argv[1] if len(sys.argv) > 1 else ""
     built = []
@@ -168,6 +256,12 @@ def main():
         out = LONG_CUT.with_name(LONG_CUT.name.replace("_scored.mp4", "_scored_sfx.mp4"))
         sfxlib.show_plan("PSALM 22 LONG (inked)", LONG_LAYERS)
         sfxlib.build(LONG_CUT, out, LONG_LAYERS)
+        sfxlib.measure(out)
+        built.append(out)
+    if (not flt or "isaiah" in flt.lower() or "long" in flt.lower()) and ISAIAH_CUT.exists():
+        out = ISAIAH_CUT.with_name(ISAIAH_CUT.name.replace("_scored.mp4", "_scored_sfx.mp4"))
+        sfxlib.show_plan("ISAIAH 53 LONG (inked)", ISAIAH_LAYERS)
+        sfxlib.build(ISAIAH_CUT, out, ISAIAH_LAYERS)
         sfxlib.measure(out)
         built.append(out)
     print("\nBUILT:")

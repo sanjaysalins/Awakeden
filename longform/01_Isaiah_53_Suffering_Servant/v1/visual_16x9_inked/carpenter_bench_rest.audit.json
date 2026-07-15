@@ -1,0 +1,18 @@
+{
+ "image": "carpenter_bench_rest.png",
+ "verdict": "PASS",
+ "flags": [
+  "modern bench-vise removed -> bare bench + period tools",
+  "inked"
+ ],
+ "reviewer": "in-chat-agent",
+ "stage": "content",
+ "provenance": {
+  "source": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\it_is_finished_john1930\\visual\\carpenter_bench_rest.png",
+  "source_audit": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\it_is_finished_john1930\\visual\\carpenter_bench_rest.audit.json",
+  "source_verdict": "PASS",
+  "copied_for": "isaiah53_inked_rebuild",
+  "copy_mode": "byte-identical",
+  "date": "2026-07-15"
+ }
+}

@@ -1,0 +1,299 @@
+{
+ "piece": "he_hath_done_this_ps2231",
+ "title": "He Hath Done This (Psalm 22:31)",
+ "cluster": "cluster_01_cross",
+ "verse": "Psalm 22:31 + John 19:30",
+ "stills": {
+  "model": "seedream-4-5-251128",
+  "size": "1440x2560",
+  "jobs": {
+   "david_writing_psalm": {
+    "prompt": "an aged king with a grey beard writing on an open scroll by a clay oil lamp, a harp resting against the stone wall beside him, night chamber, warm lamplight, vertical, ancient Israel",
+    "ref": null
+   },
+   "bowed_head_finished": {
+    "prompt": "a view straight down the length of the one wooden crossbeam of the cross, nearest the camera the open hand of the crucified Christ nailed flat to the beam by a single square-headed iron nail through the palm, blood on the wood, his arm lying along the beam leading back to his bowed head crowned with thorns, eyes closed, deep darkness behind, close, vertical, 1st-century Judea",
+    "ref": "../into_thy_hands_luke2346/visual/face_on_cross.png"
+   },
+   "psalm_scroll_night": {
+    "prompt": "an open scroll of faded illegible script beside a burning clay oil lamp on a rough table at night, warm lamplight, close, vertical, ancient Judea",
+    "ref": null
+   },
+   "carpenter_bench_rest": {
+    "prompt": "a carpenter's wooden workbench with a finished three-legged wooden stool standing on it, tools laid down neatly, wood shavings, warm evening light through a small window, quiet stone workshop, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "child_waking_dawn": {
+    "prompt": "a child stirring awake on a mat as warm dawn light pours through a small window, eyes just opening, hopeful morning interior, vertical, ancient Judea",
+    "ref": null
+   },
+   "look_up_faces": {
+    "prompt": "three different upturned 1st-century faces close together in half-light, eyes lifted toward a warm light above, tears catching the light, hope breaking on the faces, vertical",
+    "ref": null
+   },
+   "vinegar_sponge_reed": {
+    "prompt": "the thorn-crowned Christ crucified high on a tall cross, both arms stretched out and fixed to the crossbeam, under deep midday darkness; below a Roman soldier stretches up a long slender reed tipped with a small hyssop-bound sponge toward Christ's mouth; side view from a low angle showing the full height of the cross, vertical, 1st-century Judea",
+    "ref": "../into_thy_hands_luke2346/visual/face_on_cross.png"
+   },
+   "face_on_cross": {
+    "prompt": "a close portrait of the crucified Christ from the shoulders up, his thorn-crowned head lifted, eyes open toward heaven, the rough wooden beam behind his head, dim failing light, close, vertical, 1st-century Judea",
+    "ref": "../father_forgive_them/visual/_byteplus/face_on_cross_fix2.png"
+   },
+   "cross_at_dawn": {
+    "prompt": "an empty wooden cross standing on a rocky hilltop against a golden sunrise, warm light flooding the sky, wide, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "father_lamp_doorway": {
+    "prompt": "a robed father holding a small clay oil lamp in the doorway of a stone house at night, warm light spilling across the threshold, seen from inside the dark room, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "risen_mercy_hand": {
+    "prompt": "inked biblical graphic-novel of the risen Christ facing forward, one open hand held out low bearing the faint flat healed mark, warm golden light",
+    "ref": null
+   }
+  }
+ },
+ "animate": {
+  "duration": 5,
+  "aspect_ratio": "9:16",
+  "moves": {
+   "bowed_head_finished": "ONE slow, steady, continuous push-in toward the bowed thorn-crowned head",
+   "carpenter_bench_rest": "ONE slow, steady, continuous push-in toward the finished stool on the workbench",
+   "child_waking_dawn": "ONE slow, steady, continuous push-in toward the waking child in the dawn light",
+   "vinegar_sponge_reed": "ONE slow, steady, continuous push-in rising along the reed toward the crucified figure"
+  },
+  "living_light": {
+   "cross_at_dawn": {
+    "target": "the empty cross on the hilltop",
+    "light": "the great dawn sun behind the cross slowly intensifies, its rays sweeping gently across the sky, warm haze shimmering over the rocks below"
+   },
+   "risen_mercy_hand": {
+    "target": "the whole outstretched arm and the light around it",
+    "light": "the glow around the outstretched arm slowly builds and breathes, soft rays fanning outward, warm haze shimmering at the edges of the light"
+   }
+  }
+ },
+ "score": {
+  "src": "visual/livingpage_short.spec_preview.mp4",
+  "out": "visual/he_hath_done_this_ps2231_scored.mp4",
+  "dark": "lonely_searching_a.mp3",
+  "grace": "sacred_grace_rise_a.mp3",
+  "base_seconds": 42.7,
+  "outro_hold": 1.5,
+  "dark_trim_end": "28",
+  "grace_trim": [
+   "20",
+   "90"
+  ],
+  "crossfade": "6",
+  "tpad": "1.5",
+  "dips": [
+   [
+    "15.45",
+    "18.55",
+    "0.4"
+   ],
+   [
+    "24.15",
+    "25.85",
+    "0.4"
+   ]
+  ],
+  "cta_dip": [
+   "40.50",
+   "0.5"
+  ],
+  "dips_meta": [
+   {
+    "phrase": "Its final line: \" that he hath done this.\"",
+    "pre": 0.08,
+    "post": 0.2
+   },
+   {
+    "phrase": "\"It is finished\".",
+    "pre": 0.08,
+    "post": 0.12
+   }
+  ],
+  "cta_meta": {
+   "phrase": "the One who said it is done.",
+   "pre": 0.02
+  }
+ },
+ "register": {
+  "id_prefix": "hhd",
+  "source": "corpus byte-identical reuse + byteplus seedream-4-5",
+  "created": "2026-07-15",
+  "style": "graphic_novel_inked",
+  "aspect": "9:16",
+  "palette": "inked cel-flat, lamplit night to finished dawn",
+  "mood": "two final words, ten centuries apart, the same finished work",
+  "tags_still": [
+   "livingpage",
+   "psalm22",
+   "he_hath_done_this",
+   "cross"
+  ],
+  "tags_clip": [
+   "livingpage",
+   "psalm22",
+   "he_hath_done_this",
+   "kling"
+  ],
+  "used_in": [
+   "he_hath_done_this_ps2231 short"
+  ],
+  "clip_title_suffix": " (clip)",
+  "clip_source": "corpus HF kling3_0 pro 9:16 copies (hash-bound where manifest-driven)",
+  "extra_rows": [],
+  "stills": {
+   "david_writing_psalm": {
+    "subject": "aged King David writing the psalm by lamplight, harp beside",
+    "characters": [
+     "David"
+    ],
+    "elements": [
+     "scroll",
+     "oil lamp",
+     "harp",
+     "crown"
+    ],
+    "setting": "night chamber",
+    "scope": "neutral",
+    "doctrine": "David wrote it in the first person (Ps 22:1)"
+   },
+   "bowed_head_finished": {
+    "subject": "thorn-crowned Christ, head bowed in stillness, at peace",
+    "characters": [
+     "Christ crucified"
+    ],
+    "elements": [
+     "crown of thorns",
+     "parting storm"
+    ],
+    "setting": "Golgotha",
+    "scope": "hero",
+    "doctrine": "he bowed his head, and gave up the ghost (John 19:30)"
+   },
+   "psalm_scroll_night": {
+    "subject": "open scroll of faded script beside a burning clay oil lamp",
+    "characters": [],
+    "elements": [
+     "scroll",
+     "oil lamp",
+     "night table"
+    ],
+    "setting": "night interior",
+    "scope": "neutral",
+    "doctrine": "Into thine hand I commit my spirit (Ps 31:5)"
+   },
+   "carpenter_bench_rest": {
+    "subject": "carpenter's bench with a finished stool, tools laid down at rest",
+    "characters": [],
+    "elements": [
+     "workbench",
+     "stool",
+     "tools",
+     "shavings"
+    ],
+    "setting": "workshop",
+    "scope": "neutral",
+    "doctrine": "He does not leave work half done"
+   },
+   "child_waking_dawn": {
+    "subject": "child stirring awake as dawn light pours through a small window",
+    "characters": [
+     "child"
+    ],
+    "elements": [
+     "dawn window",
+     "waking eyes"
+    ],
+    "setting": "morning interior",
+    "scope": "neutral",
+    "doctrine": "death loses its last word"
+   },
+   "look_up_faces": {
+    "subject": "three upturned tearful 1st-century faces catching warm light",
+    "characters": [
+     "onlookers"
+    ],
+    "elements": [
+     "tears",
+     "warm light"
+    ],
+    "setting": "half-light",
+    "scope": "neutral",
+    "doctrine": "they shall look upon me and mourn"
+   },
+   "vinegar_sponge_reed": {
+    "subject": "sponge on a reed lifted toward the crucified Christ, from below",
+    "characters": [
+     "Christ crucified"
+    ],
+    "elements": [
+     "sponge",
+     "reed",
+     "cross"
+    ],
+    "setting": "Golgotha",
+    "scope": "specific",
+    "doctrine": "had received the vinegar (John 19:30)"
+   },
+   "face_on_cross": {
+    "subject": "the crucified Christ, face lifted against the darkened sky",
+    "characters": [
+     "the crucified Christ"
+    ],
+    "elements": [
+     "cross",
+     "lifted face",
+     "storm sky"
+    ],
+    "setting": "the cross, low angle",
+    "scope": "specific",
+    "doctrine": "he humbled himself, and became obedient unto death, even the death of the cross (Phil 2:8)"
+   },
+   "cross_at_dawn": {
+    "subject": "empty wooden cross on a rocky hilltop against a golden sunrise",
+    "characters": [],
+    "elements": [
+     "empty cross",
+     "sunrise",
+     "hilltop"
+    ],
+    "setting": "Golgotha at dawn",
+    "scope": "hero",
+    "doctrine": "He keeps the morning"
+   },
+   "father_lamp_doorway": {
+    "subject": "robed father holding a clay oil lamp in a stone doorway at night",
+    "characters": [
+     "father"
+    ],
+    "elements": [
+     "oil lamp",
+     "doorway",
+     "threshold light"
+    ],
+    "setting": "stone house",
+    "scope": "neutral",
+    "doctrine": "Not judge. Not stranger. Father"
+   },
+   "risen_mercy_hand": {
+    "subject": "the risen Christ holding out the open healed hand",
+    "characters": [
+     "the risen Christ"
+    ],
+    "elements": [
+     "open hand",
+     "healed mark",
+     "warm light"
+    ],
+    "setting": "golden light",
+    "scope": "hero",
+    "doctrine": "come, and receive mercy by faith (Rom 5:8; Heb 4:16)"
+   }
+  }
+ }
+}

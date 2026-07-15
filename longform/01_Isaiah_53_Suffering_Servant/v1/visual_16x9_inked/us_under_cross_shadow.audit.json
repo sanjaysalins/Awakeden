@@ -1,0 +1,18 @@
+{
+ "image": "us_under_cross_shadow.png",
+ "verdict": "PASS",
+ "flags": [
+  "seven bowed mourners under the long cross shadow; faces distinct + bowed, no Christ-lookalike; fft's own richer version kept over the corpus 2-kneeler plate",
+  "vision-audited in-chat by Claude 2026-07-15 (Wave E migration eye pass)"
+ ],
+ "reviewer": "in-chat-agent",
+ "stage": "content",
+ "provenance": {
+  "source": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\father_forgive_them\\visual\\us_under_cross_shadow.png",
+  "source_audit": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\father_forgive_them\\visual\\us_under_cross_shadow.audit.json",
+  "source_verdict": "PASS",
+  "copied_for": "isaiah53_inked_rebuild",
+  "copy_mode": "byte-identical",
+  "date": "2026-07-15"
+ }
+}

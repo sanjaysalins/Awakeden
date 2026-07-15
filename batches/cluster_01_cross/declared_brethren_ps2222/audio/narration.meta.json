@@ -1,0 +1,77 @@
+{
+  "folder": "04_Declared_To_The_Brethren",
+  "stage": "per_turn_synth",
+  "mode": "dialogue_per_turn_with_narrator_atempo",
+  "generated_at": "2026-06-19T09:41:34Z",
+  "model_id": "eleven_v3",
+  "output_format": "mp3_44100_128",
+  "target_seconds": 59.0,
+  "natural_total_seconds": 56.0,
+  "narrator_natural_seconds": 48.32,
+  "quote_total_seconds": 7.68,
+  "narrator_atempo_factor": 0.9565,
+  "pre_quote_pause_seconds": 0.4,
+  "post_quote_pause_seconds": 0.0,
+  "pause_total_seconds": 0.8,
+  "final_total_seconds": 58.955,
+  "delta_vs_target_seconds": -0.045,
+  "turns": [
+    {
+      "index": 0,
+      "speaker": "narrator",
+      "chars": 200,
+      "natural_seconds": 15.52,
+      "final_seconds": 16.212,
+      "atempo_applied": true
+    },
+    {
+      "index": 1,
+      "speaker": "jesus",
+      "chars": 96,
+      "natural_seconds": 5.2,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 2,
+      "speaker": "narrator",
+      "chars": 234,
+      "natural_seconds": 18.56,
+      "final_seconds": 5.2,
+      "atempo_applied": true
+    },
+    {
+      "index": 3,
+      "speaker": "scripture",
+      "chars": 35,
+      "natural_seconds": 2.48,
+      "final_seconds": 19.385,
+      "atempo_applied": false
+    },
+    {
+      "index": 4,
+      "speaker": "narrator",
+      "chars": 167,
+      "natural_seconds": 14.24,
+      "final_seconds": 0.4,
+      "atempo_applied": true
+    }
+  ],
+  "speakers": {
+    "narrator": {
+      "voice_id": "LSi9zNCeliLuhIGGS0By",
+      "audio_tag": null
+    },
+    "jesus": {
+      "voice_id": "UzI1NsMEV3ni5JRkRSls",
+      "audio_tag": null
+    },
+    "scripture": {
+      "voice_id": "puDRtQWF8NtQiPMJygTb",
+      "audio_tag": null
+    }
+  },
+  "settings": {
+    "stability": 0.65
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "slug": "body_suspended_wide",
+  "hash": "9e4f45857cf8dde4",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "fresh render eye-verified in chat 2026-07-15",
+  "reviewer": "in-chat-agent"
+}

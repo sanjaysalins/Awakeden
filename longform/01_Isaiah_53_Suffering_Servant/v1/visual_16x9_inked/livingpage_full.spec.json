@@ -1,0 +1,2282 @@
+{
+ "_doc": "ISAIAH 53 - LIVING PAGE FULL FILM (0-405.26s, 95 beats, 7 movements), inked 16:9 rebuild per INKED_REBUILD_PLAN.md. Word-timed slams from narration.alignment.json (header offset: speech starts 0.43s), BORDER-BREAK on 'the picture breaks' (50.96), one takeover dive into the mercy hand (beat 34), synthesized heartbeat 385.94->400.40 STOPPING DEAD on 'His name is Jesus', sacred red-letter beats still (no punch, no slam-stacking). Reuse: max 2 uses/still + never 2x full-bleed + >=8 beat gap. DOCUMENTED EXCEPTIONS (plan-mandated): israel_servant_nation 41->43 sacred reprise; philip_eunuch_scroll 60->61 hold into the spoken question; risen_christ_seeking_16x9 3 uses / full-bleed x3 / gap-1 x2 = the designed film close (reveal -> 'His name is Jesus' hero -> hold). 9:16 shorts assets ride VERTICAL COLUMNS ONLY (triptych_v) via their native Kling clips; 15 worklist slugs (12 stills + 3 hero clips) pending in ISAIAH_PAID_WORKLIST.md. All red-letter text verbatim KJV as quoted by the LOCKED narration.",
+ "audio": "../narration.mp3",
+ "total": 405.26,
+ "heartbeat": {
+  "from": 385.94,
+  "to": 400.4,
+  "gain": -9
+ },
+ "beats": [
+  {
+   "t": [
+    0.0,
+    4.26
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "isaiah_writing_lamplight",
+     "motion": "static"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Seven hundred years before a Roman nail",
+    "kw": "SEVEN HUNDRED YEARS"
+   },
+   "sfx": [
+    [
+     "fire_crackling",
+     0.3,
+     -18
+    ]
+   ]
+  },
+  {
+   "t": [
+    4.26,
+    9.08
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "jerusalem_700bc_wide",
+     "motion": "static",
+     "cam": "swoop"
+    }
+   ],
+   "punch": true,
+   "cap": {
+    "type": "caption",
+    "text": "A prophet wrote down the death of a man he had never met",
+    "kw": "NEVER MET"
+   }
+  },
+  {
+   "t": [
+    9.08,
+    15.84
+   ],
+   "tpl": "triptych_v",
+   "clips": [
+    {
+     "slug": "nail_through_hand",
+     "motion": "static",
+     "at": 9.86,
+     "slide": "left",
+     "sfx": "nail_strike_single"
+    },
+    {
+     "slug": "bowed_head_finished",
+     "motion": "static",
+     "at": 10.96,
+     "slide": "up"
+    },
+    {
+     "slug": "body_laid_in_tomb",
+     "motion": "static",
+     "at": 12.3,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The wounds. The silence. The grave. The rich man in his death.",
+    "kw": "WOUNDS"
+   }
+  },
+  {
+   "t": [
+    15.84,
+    19.08
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "roman_nails_pouch",
+     "motion": "static"
+    },
+    {
+     "slug": "quill_ink_drop",
+     "motion": "static",
+     "at": 17.42,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He wrote down what the wounds were for",
+    "kw": "WOUNDS WERE FOR"
+   }
+  },
+  {
+   "t": [
+    19.08,
+    21.9
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "hebrew_scroll_edge_light",
+     "motion": "static",
+     "cam": "push"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The question that still hangs over the page",
+    "kw": "STILL HANGS"
+   }
+  },
+  {
+   "t": [
+    21.9,
+    25.5
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "synagogue_listeners_lean",
+     "motion": "static",
+     "cam": "push"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "Who hath believed our report? and to whom is the arm of the LORD revealed?",
+    "speaker": "SCRIPTURE",
+    "ref": "Isaiah 53:1"
+   }
+  },
+  {
+   "t": [
+    25.5,
+    27.88
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "first_century_reader",
+     "motion": "static",
+     "cam": "push"
+    }
+   ],
+   "punch": true,
+   "cap": {
+    "type": "caption",
+    "text": "This is Isaiah fifty-three",
+    "kw": "ISAIAH FIFTY-THREE"
+   }
+  },
+  {
+   "t": [
+    27.88,
+    31.56
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "seventy_scribes_lamps",
+     "motion": "static",
+     "cam": "tour"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The most astonishing accident in all of human literature",
+    "kw": "ASTONISHING ACCIDENT"
+   }
+  },
+  {
+   "t": [
+    31.56,
+    37.82
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "convergence_on_cross",
+     "motion": "static",
+     "cam": "arc"
+    }
+   ],
+   "punch": true,
+   "cap": {
+    "type": "caption",
+    "text": "Someone outside of time telling us how God would save the world",
+    "kw": "OUTSIDE OF TIME"
+   }
+  },
+  {
+   "t": [
+    37.82,
+    40.14
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "parting_storm_light",
+     "motion": "static",
+     "cam": "push"
+    }
+   ],
+   "punch": true,
+   "cap": {
+    "type": "caption",
+    "text": "It opens with God Himself pointing",
+    "kw": "GOD HIMSELF"
+   }
+  },
+  {
+   "t": [
+    40.14,
+    47.02
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "servant_exalted_light",
+     "motion": "static",
+     "cam": "push"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "Behold, my servant shall deal prudently, he shall be exalted and extolled, and be very high.",
+    "speaker": "THE LORD",
+    "ref": "Isaiah 52:13"
+   }
+  },
+  {
+   "t": [
+    47.02,
+    49.94
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "war_helmet_spear_rest",
+     "motion": "static",
+     "cam": "push"
+    }
+   ],
+   "punch": true,
+   "cap": {
+    "type": "caption",
+    "text": "You brace yourself for a conquering king",
+    "kw": "CONQUERING KING"
+   }
+  },
+  {
+   "t": [
+    49.94,
+    51.66
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "face_anguish_closeup",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "And then the picture breaks",
+    "kw": "BREAKS"
+   },
+   "border_break": {
+    "at": 50.96
+   }
+  },
+  {
+   "t": [
+    51.66,
+    56.38
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "cry_profile_dark",
+     "motion": "static",
+     "cam": "push"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "his visage was so marred more than any man, and his form more than the sons of men",
+    "speaker": "SCRIPTURE",
+    "ref": "Isaiah 52:14"
+   }
+  },
+  {
+   "t": [
+    56.38,
+    58.14
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "spit_shout_macro",
+     "motion": "static",
+     "cam": "arc"
+    }
+   ],
+   "punch": true,
+   "cap": {
+    "type": "caption",
+    "text": "A face beaten past recognising",
+    "kw": "BEATEN"
+   }
+  },
+  {
+   "t": [
+    58.14,
+    64.7
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "tear_track_macro",
+     "motion": "static",
+     "cam": "push"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "he hath no form nor comeliness; and when we shall see him, there is no beauty that we should desire him",
+    "speaker": "SCRIPTURE",
+    "ref": "Isaiah 53:2"
+   }
+  },
+  {
+   "t": [
+    64.7,
+    71.36
+   ],
+   "tpl": "triptych_v",
+   "clips": [
+    {
+     "slug": "crowd_mocking",
+     "motion": "static"
+    },
+    {
+     "slug": "face_on_cross",
+     "motion": "static"
+    },
+    {
+     "slug": "look_up_faces",
+     "motion": "static"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "He is despised and rejected of men; a man of sorrows, and acquainted with grief",
+    "speaker": "SCRIPTURE",
+    "ref": "Isaiah 53:3"
+   }
+  },
+  {
+   "t": [
+    71.36,
+    76.14
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "crane_cross_soldiers",
+     "motion": "static",
+     "cam": "push"
+    },
+    {
+     "slug": "hung_by_arms",
+     "motion": "static",
+     "at": 74.3,
+     "slide": "right",
+     "cam": "arc"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He does not arrive in armour. He arrives in agony.",
+    "kw": "AGONY"
+   }
+  },
+  {
+   "t": [
+    76.14,
+    79.58
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "mockers_wag_heads",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The world looks at him and looks away",
+    "kw": "LOOKS AWAY"
+   }
+  },
+  {
+   "t": [
+    79.58,
+    84.18
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "hill_crowd_watching_storm",
+     "motion": "static",
+     "cam": "arc"
+    }
+   ],
+   "punch": true,
+   "cap": {
+    "type": "caption",
+    "text": "The exalted one and the despised one are the same man",
+    "kw": "SAME MAN"
+   }
+  },
+  {
+   "t": [
+    84.18,
+    89.74
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "war_helmet_spear_rest",
+     "motion": "static",
+     "cam": "push",
+     "zoom": 1.15
+    },
+    {
+     "slug": "face_anguish_closeup",
+     "motion": "static",
+     "at": 85.9,
+     "slide": "right",
+     "zoom": 1.2
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "That tension is the whole gospel in a single breath",
+    "kw": "WHOLE GOSPEL"
+   }
+  },
+  {
+   "t": [
+    89.74,
+    93.7
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "scholar_hand_on_text",
+     "motion": "static",
+     "cam": "push"
+    }
+   ],
+   "punch": true,
+   "cap": {
+    "type": "caption",
+    "text": "The centre of the chapter. Every line is a transaction.",
+    "kw": "TRANSACTION"
+   }
+  },
+  {
+   "t": [
+    93.7,
+    96.9
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "substitute_shadow",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "Surely he hath borne our griefs, and carried our sorrows",
+    "speaker": "SCRIPTURE",
+    "ref": "Isaiah 53:4"
+   }
+  },
+  {
+   "t": [
+    96.9,
+    99.12
+   ],
+   "tpl": "triptych_v",
+   "clips": [
+    {
+     "slug": "mourners_only_son",
+     "motion": "static"
+    },
+    {
+     "slug": "us_under_cross_shadow",
+     "motion": "static",
+     "at": 98.16,
+     "slide": "up"
+    },
+    {
+     "slug": "blood_water_wood",
+     "motion": "static",
+     "at": 98.62,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Our griefs. Not his own.",
+    "kw": "NOT HIS OWN"
+   }
+  },
+  {
+   "t": [
+    99.12,
+    103.5
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "nail_through_hand_16x9",
+     "motion": "static",
+     "cam": "push"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "But he was wounded for our transgressions, he was bruised for our iniquities",
+    "speaker": "SCRIPTURE",
+    "ref": "Isaiah 53:5"
+   }
+  },
+  {
+   "t": [
+    103.5,
+    107.94
+   ],
+   "tpl": "triptych_v",
+   "clips": [
+    {
+     "slug": "darkness_veil_torn",
+     "motion": "static"
+    },
+    {
+     "slug": "cross_at_dawn",
+     "motion": "static"
+    },
+    {
+     "slug": "grace_poured_sky",
+     "motion": "static"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "the chastisement of our peace was upon him; and with his stripes we are healed",
+    "speaker": "SCRIPTURE",
+    "ref": "Isaiah 53:5"
+   }
+  },
+  {
+   "t": [
+    107.94,
+    114.9
+   ],
+   "tpl": "triptych_v",
+   "clips": [
+    {
+     "slug": "jesus_praying_close",
+     "motion": "static"
+    },
+    {
+     "slug": "bowed_head_finished",
+     "motion": "static",
+     "at": 112.24,
+     "slide": "up",
+     "zoom": 1.2
+    },
+    {
+     "slug": "nail_through_hand",
+     "motion": "static",
+     "at": 113.44,
+     "slide": "right",
+     "zoom": 1.3
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Our transgressions. Our peace. His wounds.",
+    "kw": "HIS WOUNDS"
+   }
+  },
+  {
+   "t": [
+    114.9,
+    119.78
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "crane_cross_soldiers",
+     "motion": "static",
+     "cam": "swoop"
+    }
+   ],
+   "punch": true,
+   "cap": {
+    "type": "caption",
+    "text": "Not a brave example. This is a substitution.",
+    "kw": "SUBSTITUTION"
+   }
+  },
+  {
+   "t": [
+    119.78,
+    123.18
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "us_under_cross_shadow_16x9",
+     "motion": "static",
+     "cam": "arc"
+    }
+   ],
+   "punch": true,
+   "cap": {
+    "type": "caption",
+    "text": "One stands in the place of many and takes what they had earned",
+    "kw": "PLACE OF MANY"
+   }
+  },
+  {
+   "t": [
+    123.18,
+    128.36
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "hand_reaching_closeup",
+     "motion": "pushin"
+    }
+   ],
+   "punch": true,
+   "cap": {
+    "type": "caption",
+    "text": "Isaiah reaches out and pulls you in",
+    "kw": "PULLS YOU IN"
+   }
+  },
+  {
+   "t": [
+    128.36,
+    132.64
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "sheep_astray_hills",
+     "motion": "static",
+     "cam": "swoop"
+    },
+    {
+     "slug": "roads_converge_valley",
+     "motion": "static",
+     "cam": "push"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "All we like sheep have gone astray; we have turned every one to his own way",
+    "speaker": "SCRIPTURE",
+    "ref": "Isaiah 53:6"
+   },
+   "sfx": [
+    [
+     "flock_sheep_field",
+     128.5,
+     -16
+    ]
+   ]
+  },
+  {
+   "t": [
+    132.64,
+    135.2
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "golgotha_three_crosses_ridge",
+     "motion": "static"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "and the LORD hath laid on him the iniquity of us all",
+    "speaker": "SCRIPTURE",
+    "ref": "Isaiah 53:6"
+   },
+   "sfx": [
+    [
+     "rumble_deep_sub",
+     132.7,
+     -14
+    ]
+   ]
+  },
+  {
+   "t": [
+    135.2,
+    137.24
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "ends_of_earth_faces",
+     "motion": "static",
+     "cam": "push"
+    }
+   ],
+   "punch": true,
+   "cap": {
+    "type": "caption",
+    "text": "All of us. Every one.",
+    "kw": "EVERY ONE"
+   }
+  },
+  {
+   "t": [
+    137.24,
+    142.42
+   ],
+   "tpl": "triptych_v",
+   "clips": [
+    {
+     "slug": "look_up_faces",
+     "motion": "static",
+     "zoom": 1.2
+    },
+    {
+     "slug": "risen_mercy_hand",
+     "motion": "static",
+     "at": 139.52,
+     "slide": "up"
+    },
+    {
+     "slug": "hands_of_light_open",
+     "motion": "static",
+     "at": 140.04,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The straying is named. Then the rescue. Laid on him.",
+    "kw": "LAID ON HIM"
+   },
+   "takeover": {
+    "panel": 1,
+    "start": 140.8,
+    "zoom": 1.4
+   }
+  },
+  {
+   "t": [
+    142.42,
+    148.02
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "jesus_silent_accusers",
+     "motion": "static",
+     "cam": "push"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "He was oppressed, and he was afflicted, yet he opened not his mouth",
+    "speaker": "SCRIPTURE",
+    "ref": "Isaiah 53:7"
+   }
+  },
+  {
+   "t": [
+    148.02,
+    153.82
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "lamb_to_slaughter",
+     "motion": "static"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "he is brought as a lamb to the slaughter, and as a sheep before her shearers is dumb",
+    "speaker": "SCRIPTURE",
+    "ref": "Isaiah 53:7"
+   }
+  },
+  {
+   "t": [
+    153.82,
+    157.82
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "wrists_bound_beam_macro",
+     "motion": "static",
+     "cam": "push"
+    }
+   ],
+   "punch": true,
+   "cap": {
+    "type": "caption",
+    "text": "No defence. No curse on his accusers.",
+    "kw": "NO DEFENCE"
+   }
+  },
+  {
+   "t": [
+    157.82,
+    159.32
+   ],
+   "tpl": "triptych_v",
+   "clips": [
+    {
+     "slug": "cross_at_dawn",
+     "motion": "static",
+     "zoom": 1.15
+    },
+    {
+     "slug": "three_days_dark_tomb",
+     "motion": "static",
+     "at": 158.14,
+     "slide": "up"
+    },
+    {
+     "slug": "tomb_stone_sealed",
+     "motion": "static",
+     "at": 158.46,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Silent.",
+    "kw": "SILENT"
+   }
+  },
+  {
+   "t": [
+    159.32,
+    161.88
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "scholars_debate_two",
+     "motion": "static",
+     "cam": "arc"
+    }
+   ],
+   "punch": true,
+   "cap": {
+    "type": "caption",
+    "text": "Now. An honest question.",
+    "kw": "HONEST QUESTION"
+   }
+  },
+  {
+   "t": [
+    161.88,
+    167.32
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "congregation_hands_lifted",
+     "motion": "static",
+     "cam": "arc"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Many thoughtful Jewish readers have understood the Servant as Israel itself",
+    "kw": "ISRAEL"
+   }
+  },
+  {
+   "t": [
+    167.32,
+    171.42
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "israel_servant_nation",
+     "motion": "static",
+     "cam": "swoop"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "A suffering people despised among the nations",
+    "kw": "DESPISED"
+   }
+  },
+  {
+   "t": [
+    171.42,
+    177.52
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "scholar_hand_on_text",
+     "motion": "static",
+     "cam": "push",
+     "zoom": 1.15
+    },
+    {
+     "slug": "two_scrolls_compared",
+     "motion": "static",
+     "at": 174.0,
+     "slide": "right",
+     "cam": "arc"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "They have a real text behind them, earlier in this same book",
+    "kw": "REAL TEXT"
+   }
+  },
+  {
+   "t": [
+    177.52,
+    181.06
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "israel_servant_nation",
+     "motion": "static",
+     "cam": "push",
+     "zoom": 1.2
+    },
+    {
+     "slug": "servant_exalted_light",
+     "motion": "static",
+     "cam": "push",
+     "zoom": 1.2
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "Thou art my servant, O Israel, in whom I will be glorified",
+    "speaker": "THE LORD",
+    "ref": "Isaiah 49:3"
+   }
+  },
+  {
+   "t": [
+    181.06,
+    186.8
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "scribe_over_manuscripts",
+     "motion": "static",
+     "cam": "push"
+    }
+   ],
+   "punch": true,
+   "cap": {
+    "type": "caption",
+    "text": "Not a dodge. The natural first guess.",
+    "kw": "NATURAL FIRST GUESS"
+   }
+  },
+  {
+   "t": [
+    186.8,
+    189.98
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "threshold_open_door",
+     "motion": "static",
+     "cam": "push"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "It deserves a serious answer, not a sneer",
+    "kw": "SERIOUS ANSWER"
+   }
+  },
+  {
+   "t": [
+    189.98,
+    193.7
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "storm_over_jerusalem",
+     "motion": "static",
+     "cam": "push"
+    }
+   ],
+   "punch": true,
+   "cap": {
+    "type": "caption",
+    "text": "What the chapter does that no nation can survive",
+    "kw": "NO NATION"
+   },
+   "sfx": [
+    [
+     "thunder_low_roll",
+     190.0,
+     -12
+    ]
+   ]
+  },
+  {
+   "t": [
+    193.7,
+    195.8
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "vesture_seamless_folded",
+     "motion": "static",
+     "cam": "push"
+    }
+   ],
+   "punch": true,
+   "cap": {
+    "type": "caption",
+    "text": "First. The sufferer is sinless.",
+    "kw": "SINLESS"
+   }
+  },
+  {
+   "t": [
+    195.8,
+    199.26
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "execution_stakes_field",
+     "motion": "static",
+     "cam": "push"
+    },
+    {
+     "slug": "stone_rolled_groove",
+     "motion": "static",
+     "cam": "arc"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "he made his grave with the wicked, and with the rich in his death",
+    "speaker": "SCRIPTURE",
+    "ref": "Isaiah 53:9"
+   }
+  },
+  {
+   "t": [
+    199.26,
+    202.86
+   ],
+   "tpl": "triptych_v",
+   "clips": [
+    {
+     "slug": "jesus_praying_close",
+     "motion": "static",
+     "zoom": 1.2
+    },
+    {
+     "slug": "willing_offering",
+     "motion": "static"
+    },
+    {
+     "slug": "mourners_only_son",
+     "motion": "static",
+     "zoom": 1.15
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "because he had done no violence, neither was any deceit in his mouth",
+    "speaker": "SCRIPTURE",
+    "ref": "Isaiah 53:9"
+   }
+  },
+  {
+   "t": [
+    202.86,
+    209.52
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "ends_of_earth",
+     "motion": "static",
+     "cam": "parallax"
+    }
+   ],
+   "punch": true,
+   "cap": {
+    "type": "caption",
+    "text": "No people in history has ever been honestly described that way",
+    "kw": "NO PEOPLE"
+   }
+  },
+  {
+   "t": [
+    209.52,
+    213.74
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "pierced_hands_feet",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "for the transgression of my people was he stricken",
+    "speaker": "SCRIPTURE",
+    "ref": "Isaiah 53:8"
+   }
+  },
+  {
+   "t": [
+    213.74,
+    218.52
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "convergence_on_cross",
+     "motion": "static",
+     "cam": "push",
+     "zoom": 1.1
+    },
+    {
+     "slug": "substitute_shadow",
+     "motion": "static",
+     "at": 215.68,
+     "slide": "right",
+     "zoom": 1.1
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He stands in their place. He cannot simply be them.",
+    "kw": "IN THEIR PLACE"
+   }
+  },
+  {
+   "t": [
+    218.52,
+    223.36
+   ],
+   "tpl": "triptych_v",
+   "clips": [
+    {
+     "slug": "body_laid_in_tomb",
+     "motion": "static",
+     "zoom": 1.2
+    },
+    {
+     "slug": "tomb_stone_sealed",
+     "motion": "static",
+     "at": 219.88,
+     "slide": "up",
+     "zoom": 1.2
+    },
+    {
+     "slug": "carpenter_bench_rest",
+     "motion": "static",
+     "at": 221.5,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "A single grave. A rich man's tomb. A sinless life.",
+    "kw": "SINLESS LIFE"
+   }
+  },
+  {
+   "t": [
+    223.36,
+    228.34
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "cry_face_tears",
+     "motion": "pushin"
+    }
+   ],
+   "punch": true,
+   "cap": {
+    "type": "caption",
+    "text": "This is not a people. This is a person.",
+    "kw": "PERSON"
+   }
+  },
+  {
+   "t": [
+    228.34,
+    231.44
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "two_scrolls_compared",
+     "motion": "static",
+     "cam": "push",
+     "zoom": 1.25
+    }
+   ],
+   "punch": true,
+   "cap": {
+    "type": "caption",
+    "text": "The only question that matters",
+    "kw": "ONLY QUESTION"
+   }
+  },
+  {
+   "t": [
+    231.44,
+    234.02
+   ],
+   "tpl": "hero_frac3",
+   "clips": [
+    {
+     "slug": "mockers_wag_heads",
+     "motion": "pushin"
+    }
+   ],
+   "anchors": [
+    [
+     1.0,
+     0.5,
+     0.5
+    ],
+    [
+     1.6,
+     0.3,
+     0.35
+    ],
+    [
+     1.6,
+     0.7,
+     0.35
+    ]
+   ],
+   "panel_at": [
+    231.44,
+    231.92,
+    232.4
+   ],
+   "panel_slide": [
+    "left",
+    "up",
+    "right"
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Who is he?",
+    "kw": "WHO IS HE"
+   }
+  },
+  {
+   "t": [
+    234.02,
+    237.6
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "cross_hill_pullback",
+     "motion": "pullback"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The New Testament records the exact moment",
+    "kw": "EXACT MOMENT"
+   }
+  },
+  {
+   "t": [
+    237.6,
+    242.58
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "chariot_desert_road_wide",
+     "motion": "static",
+     "cam": "swoop"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "A man from Ethiopia, reading this very chapter aloud",
+    "kw": "ETHIOPIA"
+   },
+   "sfx": [
+    [
+     "chariot_wheels_road",
+     237.8,
+     -14
+    ]
+   ]
+  },
+  {
+   "t": [
+    242.58,
+    248.52
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "greek_ot_scroll",
+     "motion": "static",
+     "cam": "push",
+     "zoom": 1.15
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "He was led as a sheep to the slaughter; and like a lamb dumb before his shearer, so opened he not his mouth",
+    "speaker": "SCRIPTURE",
+    "ref": "Acts 8:32"
+   }
+  },
+  {
+   "t": [
+    248.52,
+    255.08
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "philip_eunuch_scroll",
+     "motion": "static",
+     "cam": "push"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Philip, sent by the Spirit, comes alongside the chariot",
+    "kw": "SPIRIT"
+   }
+  },
+  {
+   "t": [
+    255.08,
+    262.14
+   ],
+   "tpl": "hero_frac3",
+   "clips": [
+    {
+     "slug": "philip_eunuch_scroll",
+     "motion": "pushin"
+    }
+   ],
+   "anchors": [
+    [
+     1.0,
+     0.5,
+     0.5
+    ],
+    [
+     1.5,
+     0.68,
+     0.32
+    ],
+    [
+     1.5,
+     0.32,
+     0.4
+    ]
+   ],
+   "panel_at": [
+    255.08,
+    255.08,
+    255.08
+   ],
+   "panel_slide": [
+    "left",
+    "left",
+    "left"
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "I pray thee, of whom speaketh the prophet this? of himself, or of some other man?",
+    "speaker": "THE EUNUCH",
+    "ref": "Acts 8:34"
+   }
+  },
+  {
+   "t": [
+    262.14,
+    264.9
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "quill_ink_drop",
+     "motion": "static",
+     "cam": "arc",
+     "zoom": 1.3
+    }
+   ],
+   "punch": true,
+   "cap": {
+    "type": "caption",
+    "text": "Luke gives the answer in one unforgettable line",
+    "kw": "UNFORGETTABLE"
+   }
+  },
+  {
+   "t": [
+    264.9,
+    269.24
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "roads_converge_valley",
+     "motion": "static",
+     "cam": "push",
+     "zoom": 1.15
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "Then Philip opened his mouth, and began at the same scripture, and preached unto him Jesus",
+    "speaker": "SCRIPTURE",
+    "ref": "Acts 8:35"
+   }
+  },
+  {
+   "t": [
+    269.24,
+    271.6
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "scribe_over_manuscripts",
+     "motion": "static",
+     "cam": "arc",
+     "zoom": 1.25
+    },
+    {
+     "slug": "threshold_open_door",
+     "motion": "static",
+     "at": 269.96,
+     "slide": "right",
+     "cam": "push",
+     "zoom": 1.2
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He did not have to wrestle the text into shape",
+    "kw": "WRESTLE"
+   }
+  },
+  {
+   "t": [
+    271.6,
+    275.94
+   ],
+   "tpl": "triptych_v",
+   "clips": [
+    {
+     "slug": "prophet_scroll",
+     "motion": "static"
+    },
+    {
+     "slug": "golgotha_hill_wide",
+     "motion": "static",
+     "at": 273.54,
+     "slide": "up"
+    },
+    {
+     "slug": "risen_christ_wounds",
+     "motion": "static",
+     "at": 274.38,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He started at Isaiah fifty-three and the road led straight to Jesus",
+    "kw": "STRAIGHT TO JESUS"
+   }
+  },
+  {
+   "t": [
+    275.94,
+    280.24
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "scholars_debate_two",
+     "motion": "static",
+     "cam": "arc",
+     "zoom": 1.15
+    },
+    {
+     "slug": "seventy_scribes_lamps",
+     "motion": "static",
+     "at": 277.54,
+     "slide": "right",
+     "cam": "push"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The report Isaiah wondered if anyone would believe",
+    "kw": "BELIEVE"
+   }
+  },
+  {
+   "t": [
+    280.24,
+    282.22
+   ],
+   "tpl": "triptych_v",
+   "clips": [
+    {
+     "slug": "us_under_cross_shadow",
+     "motion": "static",
+     "zoom": 1.15
+    },
+    {
+     "slug": "face_on_cross",
+     "motion": "static",
+     "at": 280.98,
+     "slide": "up",
+     "zoom": 1.15
+    },
+    {
+     "slug": "risen_mercy_hand",
+     "motion": "static",
+     "at": 281.12,
+     "slide": "right",
+     "zoom": 1.2
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The New Testament answers. This is the man.",
+    "kw": "MAN"
+   }
+  },
+  {
+   "t": [
+    282.22,
+    285.42
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "storm_over_jerusalem",
+     "motion": "static",
+     "cam": "push",
+     "zoom": 1.25
+    },
+    {
+     "slug": "hill_crowd_watching_storm",
+     "motion": "static",
+     "at": 283.7,
+     "slide": "right",
+     "cam": "push",
+     "zoom": 1.2
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "One line heavier than all the wounds",
+    "kw": "HEAVIER"
+   }
+  },
+  {
+   "t": [
+    285.42,
+    288.62
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "ninth_hour_darkness",
+     "motion": "static",
+     "cam": "push"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "Yet it pleased the LORD to bruise him; he hath put him to grief",
+    "speaker": "SCRIPTURE",
+    "ref": "Isaiah 53:10"
+   },
+   "sfx": [
+    [
+     "rumble_deep_sub",
+     285.5,
+     -14
+    ]
+   ]
+  },
+  {
+   "t": [
+    288.62,
+    292.54
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "cry_ninth_hour",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Pleased. Not because the Father delights in pain",
+    "kw": "PLEASED"
+   }
+  },
+  {
+   "t": [
+    292.54,
+    298.12
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "kindreds_bowing",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "What the cross would accomplish. A people brought home.",
+    "kw": "BROUGHT HOME"
+   }
+  },
+  {
+   "t": [
+    298.12,
+    305.72
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "poured_out_bones",
+     "motion": "pushin"
+    }
+   ],
+   "punch": true,
+   "cap": {
+    "type": "caption",
+    "text": "He poured out his soul unto death. He gave it.",
+    "kw": "GAVE"
+   }
+  },
+  {
+   "t": [
+    305.72,
+    308.66
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "parting_storm_light",
+     "motion": "pullback"
+    },
+    {
+     "slug": "morning_birds_hill",
+     "motion": "static",
+     "at": 307.06,
+     "slide": "right",
+     "cam": "push"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Quietly, the chapter turns toward morning",
+    "kw": "TOWARD MORNING"
+   }
+  },
+  {
+   "t": [
+    308.66,
+    314.66
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "nations_streaming_wide",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "he shall see his seed, he shall prolong his days, and the pleasure of the LORD shall prosper in his hand",
+    "speaker": "SCRIPTURE",
+    "ref": "Isaiah 53:10"
+   }
+  },
+  {
+   "t": [
+    314.66,
+    318.14
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "dawn_empty_cross",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "He shall see of the travail of his soul, and shall be satisfied",
+    "speaker": "SCRIPTURE",
+    "ref": "Isaiah 53:11"
+   }
+  },
+  {
+   "t": [
+    318.14,
+    324.04
+   ],
+   "tpl": "triptych_v",
+   "clips": [
+    {
+     "slug": "stone_rolled_dawn",
+     "motion": "static"
+    },
+    {
+     "slug": "tomb_doorway_dawn",
+     "motion": "static",
+     "at": 321.5,
+     "slide": "up"
+    },
+    {
+     "slug": "linen_left_lying",
+     "motion": "static",
+     "at": 322.36,
+     "slide": "right"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Unless death is not the end of him",
+    "kw": "UNLESS DEATH"
+   },
+   "sfx": [
+    [
+     "stone_roll_tomb",
+     318.3,
+     -12
+    ]
+   ]
+  },
+  {
+   "t": [
+    324.04,
+    329.0
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "empty_tomb_open",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "A shape that only resurrection fills",
+    "kw": "RESURRECTION"
+   }
+  },
+  {
+   "t": [
+    329.0,
+    331.84
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "grave_clothes_folded_macro",
+     "motion": "static",
+     "cam": "push"
+    }
+   ],
+   "punch": true,
+   "cap": {
+    "type": "caption",
+    "text": "A shadow the New Testament would bring into full light",
+    "kw": "FULL LIGHT"
+   }
+  },
+  {
+   "t": [
+    331.84,
+    338.12
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "finished_work",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Not defeat but one word. Satisfied.",
+    "kw": "SATISFIED"
+   }
+  },
+  {
+   "t": [
+    338.12,
+    341.98
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "risen_hands_raised",
+     "motion": "pushin"
+    }
+   ],
+   "punch": true,
+   "cap": {
+    "type": "caption",
+    "text": "The travail was not wasted. It was enough.",
+    "kw": "ENOUGH"
+   }
+  },
+  {
+   "t": [
+    341.98,
+    343.82
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "isaiah_writing_lamplight",
+     "motion": "static",
+     "cam": "push"
+    },
+    {
+     "slug": "roman_nails_pouch",
+     "motion": "static",
+     "at": 342.82,
+     "slide": "right",
+     "cam": "arc",
+     "zoom": 1.2
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Come back to where Isaiah began",
+    "kw": "WHERE ISAIAH BEGAN"
+   }
+  },
+  {
+   "t": [
+    343.82,
+    347.28
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "synagogue_listeners_lean",
+     "motion": "static",
+     "cam": "push",
+     "zoom": 1.15
+    },
+    {
+     "slug": "first_century_reader",
+     "motion": "static",
+     "cam": "arc",
+     "zoom": 1.15
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "Who hath believed our report? and to whom is the arm of the LORD revealed?",
+    "speaker": "SCRIPTURE",
+    "ref": "Isaiah 53:1"
+   }
+  },
+  {
+   "t": [
+    347.28,
+    353.88
+   ],
+   "tpl": "big_inset",
+   "clips": [
+    {
+     "slug": "hand_reaching_closeup",
+     "motion": "pushin",
+     "zoom": 1.2
+    },
+    {
+     "slug": "cry_face_tears",
+     "motion": "static",
+     "at": 352.18,
+     "slide": "up",
+     "zoom": 1.1
+    }
+   ],
+   "punch": true,
+   "cap": {
+    "type": "caption",
+    "text": "The arm of the LORD is not a thing. It is a person.",
+    "kw": "PERSON"
+   }
+  },
+  {
+   "t": [
+    353.88,
+    357.0
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "cry_profile_dark",
+     "motion": "static",
+     "cam": "push",
+     "zoom": 1.3
+    },
+    {
+     "slug": "spit_shout_macro",
+     "motion": "static",
+     "at": 354.98,
+     "slide": "right",
+     "cam": "push",
+     "zoom": 1.2
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "A face marred more than any man's",
+    "kw": "MARRED"
+   }
+  },
+  {
+   "t": [
+    357.0,
+    360.46
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "pierced_hands_feet",
+     "motion": "static",
+     "zoom": 1.1
+    },
+    {
+     "slug": "wrists_bound_beam_macro",
+     "motion": "static",
+     "at": 357.58,
+     "slide": "right",
+     "cam": "push",
+     "zoom": 1.2
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Hands wounded for transgressions never his own",
+    "kw": "WOUNDED"
+   }
+  },
+  {
+   "t": [
+    360.46,
+    364.12
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "hebrew_scroll_edge_light",
+     "motion": "static",
+     "cam": "push",
+     "zoom": 1.4
+    },
+    {
+     "slug": "ends_of_earth_faces",
+     "motion": "static",
+     "at": 361.7,
+     "slide": "right",
+     "cam": "arc",
+     "zoom": 1.2
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "It has your name in verse six",
+    "kw": "YOUR NAME"
+   }
+  },
+  {
+   "t": [
+    364.12,
+    371.48
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "us_under_cross_shadow_16x9",
+     "motion": "static",
+     "cam": "push",
+     "zoom": 1.15
+    },
+    {
+     "slug": "ends_of_earth",
+     "motion": "static",
+     "cam": "arc",
+     "zoom": 1.2
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "we have turned every one to his own way",
+    "speaker": "SCRIPTURE",
+    "ref": "Isaiah 53:6"
+   }
+  },
+  {
+   "t": [
+    371.48,
+    378.12
+   ],
+   "tpl": "triptych_v",
+   "clips": [
+    {
+     "slug": "grace_poured_sky",
+     "motion": "static",
+     "zoom": 1.2
+    },
+    {
+     "slug": "hands_of_light_open",
+     "motion": "static",
+     "zoom": 1.25
+    },
+    {
+     "slug": "father_lamp_doorway",
+     "motion": "static"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "the LORD hath laid on him the iniquity of us all",
+    "speaker": "SCRIPTURE",
+    "ref": "Isaiah 53:6"
+   }
+  },
+  {
+   "t": [
+    378.12,
+    382.28
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "golgotha_three_crosses_ridge",
+     "motion": "static",
+     "cam": "push",
+     "zoom": 1.1
+    },
+    {
+     "slug": "ninth_hour_darkness",
+     "motion": "static",
+     "at": 380.68,
+     "slide": "right",
+     "cam": "arc",
+     "zoom": 1.2
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Every way you turned that was your own. Laid on him.",
+    "kw": "LAID ON HIM"
+   }
+  },
+  {
+   "t": [
+    382.28,
+    385.94
+   ],
+   "tpl": "triptych_v",
+   "clips": [
+    {
+     "slug": "stone_rolled_dawn",
+     "motion": "static",
+     "zoom": 1.25
+    },
+    {
+     "slug": "tomb_doorway_dawn",
+     "motion": "static",
+     "at": 383.74,
+     "slide": "up",
+     "zoom": 1.3
+    },
+    {
+     "slug": "linen_left_lying",
+     "motion": "static",
+     "at": 384.18,
+     "slide": "right",
+     "zoom": 1.25
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Already carried. Already taken away.",
+    "kw": "ALREADY"
+   }
+  },
+  {
+   "t": [
+    385.94,
+    389.44
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "kneeling_at_cross",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "You do not have to clean yourself up before you come",
+    "kw": "CLEAN YOURSELF UP"
+   }
+  },
+  {
+   "t": [
+    389.44,
+    396.58
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "nail_through_hand_16x9",
+     "motion": "static",
+     "cam": "push",
+     "zoom": 1.2
+    },
+    {
+     "slug": "cry_ninth_hour",
+     "motion": "static",
+     "at": 392.36,
+     "slide": "right",
+     "zoom": 1.1
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He was wounded for your transgressions and bore them in your place",
+    "kw": "YOUR TRANSGRESSIONS"
+   }
+  },
+  {
+   "t": [
+    396.58,
+    400.4
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "risen_christ_seeking_16x9",
+     "motion": "static",
+     "cam": "push",
+     "zoom": 1.1
+    }
+   ],
+   "punch": true,
+   "cap": {
+    "type": "caption",
+    "text": "The report is true. The arm of the LORD has a name.",
+    "kw": "TRUE"
+   }
+  },
+  {
+   "t": [
+    400.4,
+    403.64
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "risen_christ_seeking_16x9",
+     "motion": "static"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "His name is Jesus",
+    "kw": "JESUS"
+   },
+   "sfx": [
+    [
+     "dawn_morning_warm",
+     400.5,
+     -16
+    ]
+   ]
+  },
+  {
+   "t": [
+    403.64,
+    405.26
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "risen_christ_seeking_16x9",
+     "motion": "static"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Have you believed the report?",
+    "kw": "BELIEVED"
+   }
+  }
+ ]
+}

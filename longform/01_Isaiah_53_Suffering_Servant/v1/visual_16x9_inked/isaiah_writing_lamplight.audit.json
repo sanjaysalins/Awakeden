@@ -1,0 +1,10 @@
+{
+  "image": "isaiah_writing_lamplight.png",
+  "verdict": "PASS",
+  "flags": [
+    "eye-QC PASS 2026-07-15",
+    "LL target: lamp flame sole bright point, no wounds"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

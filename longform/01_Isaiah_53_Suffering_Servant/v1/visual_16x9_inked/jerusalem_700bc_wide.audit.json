@@ -1,0 +1,10 @@
+{
+  "image": "jerusalem_700bc_wide.png",
+  "verdict": "PASS",
+  "flags": [
+    "eye-QC PASS roll3 (roll1 Greek Parthenon, roll2 colonnade)",
+    "plain ashlar flat-roof Solomonic sanctuary, bronze pillars Jachin-Boaz"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

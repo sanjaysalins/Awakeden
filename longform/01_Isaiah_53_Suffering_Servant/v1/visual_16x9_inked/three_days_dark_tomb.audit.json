@@ -1,0 +1,18 @@
+{
+ "image": "three_days_dark_tomb.png",
+ "verdict": "PASS",
+ "flags": [
+  "vision-audited vs fact_sheet v3: body FULLY wound incl head (John 19:40+20:7), sealed dark chamber, no light shaft/window/lamp",
+  "border cropped to full-bleed"
+ ],
+ "reviewer": "in-chat-agent",
+ "stage": "content",
+ "provenance": {
+  "source": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_02_resurrection\\sign_of_jonah_matt1240\\visual\\three_days_dark_tomb.png",
+  "source_audit": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_02_resurrection\\sign_of_jonah_matt1240\\visual\\three_days_dark_tomb.audit.json",
+  "source_verdict": "PASS",
+  "copied_for": "isaiah53_inked_rebuild",
+  "copy_mode": "byte-identical",
+  "date": "2026-07-15"
+ }
+}

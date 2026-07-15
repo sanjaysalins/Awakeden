@@ -1,0 +1,17 @@
+{
+ "image": "linen_left_lying.png",
+ "verdict": "PASS",
+ "flags": [
+  "in-chat-agent full-res v2: overhead paper-flat sheet, clearly cloth, no body volume, no sky misread"
+ ],
+ "reviewer": "in-chat-agent",
+ "stage": "content",
+ "provenance": {
+  "source": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_02_resurrection\\empty_tomb_john208\\visual\\linen_left_lying.png",
+  "source_audit": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_02_resurrection\\empty_tomb_john208\\visual\\linen_left_lying.audit.json",
+  "source_verdict": "PASS",
+  "copied_for": "isaiah53_inked_rebuild",
+  "copy_mode": "byte-identical",
+  "date": "2026-07-15"
+ }
+}

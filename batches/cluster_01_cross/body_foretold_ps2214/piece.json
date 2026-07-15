@@ -1,0 +1,355 @@
+{
+ "piece": "body_foretold_ps2214",
+ "title": "The Body Foretold (Psalm 22:14-17)",
+ "cluster": "cluster_01_cross",
+ "verse": "Psalm 22:14-17",
+ "stills": {
+  "model": "seedream-4-5-251128",
+  "size": "1440x2560",
+  "jobs": {
+   "david_writing_psalm": {
+    "prompt": "an aged king with a grey beard writing on an open scroll by a clay oil lamp, a harp resting against the stone wall beside him, night chamber, warm lamplight, vertical, ancient Israel",
+    "ref": null
+   },
+   "face_on_cross": {
+    "prompt": "a close portrait of the crucified Christ from the shoulders up, his thorn-crowned head lifted, eyes open toward heaven, the rough wooden beam behind his head, dim failing light, close, vertical, 1st-century Judea",
+    "ref": "../father_forgive_them/visual/_byteplus/face_on_cross_fix2.png"
+   },
+   "psalm_scroll_night": {
+    "prompt": "an open scroll of faded illegible script beside a burning clay oil lamp on a rough table at night, warm lamplight, close, vertical, ancient Judea",
+    "ref": null
+   },
+   "golgotha_hill_wide": {
+    "prompt": "a wide view of three crosses standing on the low rocky rise of Golgotha outside the walls of Jerusalem, the crosses short rough wooden posts, the crucified men stripped to plain loincloths with their feet hanging just above the bystanders' heads, the centre cross bearing the crucified Christ, his bare dark hair against the open sky and his bare feet resting together against the wood, a crucified thief stripped to a loincloth on each cross beside him, small mourners standing close below, low stone houses with plain bare flat earthen roofs beyond the wall, the skyline beyond only plain rooftops under open sky, clear morning light under a plain pale sky, wide, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "body_suspended_wide": {
+    "prompt": "a distant reverent silhouette of the crucified Christ seen from far below against a vast storm sky, body hanging low by the outstretched arms, weight sagging onto the shoulders, limbs drawn taut, thorn crown on the bowed head, dark rocky hilltop, vertical",
+    "ref": "../crucifixion_foretold_ps2218/visual/face_on_cross.png"
+   },
+   "blood_water_wood": {
+    "prompt": "the crucified Christ on the cross, a Roman soldier's long spear thrust upward from below, the iron spearhead sunk deep into the side of his chest, the wooden shaft slanting down toward the ground, a stream of dark blood and clear water running from the wound down his skin, a plain cloth loincloth at his waist, dim darkened afternoon light, close, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "two_thieves_wide": {
+    "prompt": "three men crucified high on three rough wooden crosses on a barren hilltop, arms outstretched on the crossbeams, the middle cross taller, seen from a low angle, heavy storm sky, wide, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "crowd_mocking": {
+    "prompt": "inked biblical graphic-novel of a 1st-century crowd mocking, with only THREE distinct foreground mockers, each a clearly DIFFERENT person — a grizzled grey-bearded old elder, a younger clean-shaven man, and a heavy middle-aged man with a dark beard — jeering upward with open scornful mouths and pointing hands, in dusty earth-toned head-wraps and coarse tunics; behind them the rest of the crowd is a DARK FEATURELESS SILHOUETTE MASS with no individual faces, bold black ink, flat dusk palette, reverent tone despite the scorn, tension",
+    "ref": null
+   },
+   "ninth_hour_darkness": {
+    "prompt": "three crosses standing on the low rocky rise of Golgotha seen from far off, each cross bearing a crucified figure, the whole land swallowed in deep midday darkness, a pale dim sun barely showing through, wide, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "us_under_cross_shadow": {
+    "prompt": "two bowed figures kneeling small in the dust at dawn, the long shadow of a single cross falling across them and stretching up the ground, heads down and hands clasped, soft low golden light, wide, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "nail_through_hand": {
+    "prompt": "inked biblical graphic-novel close-up of a single forged square iron nail through the center of an open human palm pressed to dark rough cross-wood, one dominant subject, bold black ink linework, flat muted crimson and grey, reverent, cinematic-1st-century, dramatic side light",
+    "ref": null
+   },
+   "bowed_head_finished": {
+    "prompt": "a view straight down the length of the one wooden crossbeam of the cross, nearest the camera the open hand of the crucified Christ nailed flat to the beam by a single square-headed iron nail through the palm, blood on the wood, his arm lying along the beam leading back to his bowed head crowned with thorns, eyes closed, deep darkness behind, close, vertical, 1st-century Judea",
+    "ref": "../into_thy_hands_luke2346/visual/face_on_cross.png"
+   },
+   "cross_at_dawn": {
+    "prompt": "an empty wooden cross standing on a rocky hilltop against a golden sunrise, warm light flooding the sky, wide, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "risen_mercy_hand": {
+    "prompt": "inked biblical graphic-novel of the risen Christ facing forward, one open hand held out low bearing the faint flat healed mark, warm golden light",
+    "ref": null
+   }
+  }
+ },
+ "animate": {
+  "duration": 5,
+  "aspect_ratio": "9:16",
+  "moves": {
+   "golgotha_hill_wide": "ONE slow, steady, continuous push-in up the hill toward the three crosses",
+   "ninth_hour_darkness": "ONE slow, steady, continuous push-in toward the three distant crosses under the darkened sky",
+   "us_under_cross_shadow": "ONE slow, steady, continuous push-in toward the two bowed figures beneath the long cross shadow",
+   "bowed_head_finished": "ONE slow, steady, continuous push-in toward the bowed thorn-crowned head"
+  },
+  "living_light": {
+   "cross_at_dawn": {
+    "target": "the empty cross on the hilltop",
+    "light": "the great dawn sun behind the cross slowly intensifies, its rays sweeping gently across the sky, warm haze shimmering over the rocks below"
+   },
+   "risen_mercy_hand": {
+    "target": "the whole outstretched arm and the light around it",
+    "light": "the glow around the outstretched arm slowly builds and breathes, soft rays fanning outward, warm haze shimmering at the edges of the light"
+   }
+  }
+ },
+ "score": {
+  "src": "visual/livingpage_short.spec_preview.mp4",
+  "out": "visual/body_foretold_ps2214_scored.mp4",
+  "dark": "lonely_searching_a.mp3",
+  "grace": "sacred_grace_rise_a.mp3",
+  "base_seconds": 66.94,
+  "outro_hold": 1.5,
+  "dark_trim_end": "57",
+  "grace_trim": [
+   "20",
+   "90"
+  ],
+  "crossfade": "6",
+  "tpad": "1.5",
+  "dips": [
+   [
+    "18.25",
+    "24.60",
+    "0.4"
+   ],
+   [
+    "31.20",
+    "35.95",
+    "0.4"
+   ]
+  ],
+  "cta_dip": [
+   "63.60",
+   "0.5"
+  ],
+  "dips_meta": [
+   {
+    "phrase": "\"I am poured out like water, and all my bones are out of joint \"",
+    "pre": 0.05,
+    "post": 0.43
+   },
+   {
+    "phrase": "And: \"I may tell all my bones: they look and stare upon me.\"",
+    "pre": 0.11,
+    "post": -0.04
+   }
+  ],
+  "cta_meta": {
+   "phrase": "He was crushed in your place.",
+   "pre": 1.32
+  }
+ },
+ "register": {
+  "id_prefix": "tbf",
+  "source": "corpus byte-identical reuse + byteplus seedream-4-5",
+  "created": "2026-07-15",
+  "style": "graphic_novel_inked",
+  "aspect": "9:16",
+  "palette": "inked cel-flat, storm-cold body beats to mercy gold",
+  "mood": "a dying body described a thousand years before the cross",
+  "tags_still": [
+   "livingpage",
+   "psalm22",
+   "body_foretold",
+   "cross"
+  ],
+  "tags_clip": [
+   "livingpage",
+   "psalm22",
+   "body_foretold",
+   "kling"
+  ],
+  "used_in": [
+   "body_foretold_ps2214 short"
+  ],
+  "clip_title_suffix": " (clip)",
+  "clip_source": "corpus HF kling3_0 pro 9:16 copies (hash-bound where manifest-driven)",
+  "extra_rows": [],
+  "stills": {
+   "david_writing_psalm": {
+    "subject": "aged King David writing the psalm by lamplight, harp beside",
+    "characters": [
+     "David"
+    ],
+    "elements": [
+     "scroll",
+     "oil lamp",
+     "harp",
+     "crown"
+    ],
+    "setting": "night chamber",
+    "scope": "neutral",
+    "doctrine": "David wrote it in the first person (Ps 22:1)"
+   },
+   "face_on_cross": {
+    "subject": "the crucified Christ, face lifted against the darkened sky",
+    "characters": [
+     "the crucified Christ"
+    ],
+    "elements": [
+     "cross",
+     "lifted face",
+     "storm sky"
+    ],
+    "setting": "the cross, low angle",
+    "scope": "specific",
+    "doctrine": "he humbled himself, and became obedient unto death, even the death of the cross (Phil 2:8)"
+   },
+   "psalm_scroll_night": {
+    "subject": "open scroll of faded script beside a burning clay oil lamp",
+    "characters": [],
+    "elements": [
+     "scroll",
+     "oil lamp",
+     "night table"
+    ],
+    "setting": "night interior",
+    "scope": "neutral",
+    "doctrine": "Into thine hand I commit my spirit (Ps 31:5)"
+   },
+   "golgotha_hill_wide": {
+    "subject": "three occupied crosses on Golgotha outside the wall, midday-black sky",
+    "characters": [
+     "the crucified Christ",
+     "two thieves",
+     "mourners"
+    ],
+    "elements": [
+     "three crosses",
+     "city wall",
+     "black sky"
+    ],
+    "setting": "Golgotha wide",
+    "scope": "specific",
+    "doctrine": "and there were also two other, malefactors, led with him (Luke 23:32)"
+   },
+   "body_suspended_wide": {
+    "subject": "the crucified body hanging by the arms, far silhouette",
+    "characters": [
+     "the crucified Christ"
+    ],
+    "elements": [
+     "outstretched arms",
+     "storm sky",
+     "thorn crown"
+    ],
+    "setting": "Golgotha, seen from far below",
+    "scope": "specific",
+    "doctrine": "I am poured out like water, and all my bones are out of joint (Psalm 22:14)"
+   },
+   "blood_water_wood": {
+    "subject": "macro: water and blood run down the cross's wood grain",
+    "characters": [],
+    "elements": [
+     "blood",
+     "water",
+     "wood grain",
+     "stone"
+    ],
+    "setting": "base of the cross",
+    "scope": "neutral",
+    "doctrine": "blood and water of John 19:34"
+   },
+   "two_thieves_wide": {
+    "subject": "three crucified men on a stormy hilltop, middle cross taller",
+    "characters": [
+     "Christ",
+     "two thieves"
+    ],
+    "elements": [
+     "three crosses",
+     "storm"
+    ],
+    "setting": "Golgotha wide",
+    "scope": "neutral",
+    "doctrine": "crucified with the malefactors (Luke 23:33)"
+   },
+   "crowd_mocking": {
+    "subject": "three mockers pointing up, the crowd in shadow",
+    "characters": [
+     "three mockers",
+     "shadow crowd"
+    ],
+    "elements": [
+     "pointing hands",
+     "open mouths"
+    ],
+    "setting": "Golgotha",
+    "scope": "neutral",
+    "doctrine": "and the people stood beholding... deriding him (Luke 23:35)"
+   },
+   "ninth_hour_darkness": {
+    "subject": "three distant crosses under a sky gone black, dim swallowed sun",
+    "characters": [],
+    "elements": [
+     "three crosses",
+     "darkened sun",
+     "black clouds"
+    ],
+    "setting": "Golgotha",
+    "scope": "neutral",
+    "doctrine": "darkness over all the land, the ninth hour (Matt 27:45-46)"
+   },
+   "us_under_cross_shadow": {
+    "subject": "seven bowed mourners under the long shadow of the cross",
+    "characters": [
+     "seven bowed figures"
+    ],
+    "elements": [
+     "cross shadow",
+     "bowed heads",
+     "dust"
+    ],
+    "setting": "Golgotha",
+    "scope": "neutral",
+    "doctrine": "the sin that put him there was ours (Rom 3:23)"
+   },
+   "nail_through_hand": {
+    "subject": "a forged square iron nail through the open hand on the beam",
+    "characters": [],
+    "elements": [
+     "nail",
+     "open hand",
+     "rope",
+     "beam",
+     "blood"
+    ],
+    "setting": "the cross, close",
+    "scope": "specific",
+    "doctrine": "they pierced my hands and my feet (Psalm 22:16)"
+   },
+   "bowed_head_finished": {
+    "subject": "thorn-crowned Christ, head bowed in stillness, at peace",
+    "characters": [
+     "Christ crucified"
+    ],
+    "elements": [
+     "crown of thorns",
+     "parting storm"
+    ],
+    "setting": "Golgotha",
+    "scope": "hero",
+    "doctrine": "he bowed his head, and gave up the ghost (John 19:30)"
+   },
+   "cross_at_dawn": {
+    "subject": "empty wooden cross on a rocky hilltop against a golden sunrise",
+    "characters": [],
+    "elements": [
+     "empty cross",
+     "sunrise",
+     "hilltop"
+    ],
+    "setting": "Golgotha at dawn",
+    "scope": "hero",
+    "doctrine": "He keeps the morning"
+   },
+   "risen_mercy_hand": {
+    "subject": "the risen Christ holding out the open healed hand",
+    "characters": [
+     "the risen Christ"
+    ],
+    "elements": [
+     "open hand",
+     "healed mark",
+     "warm light"
+    ],
+    "setting": "golden light",
+    "scope": "hero",
+    "doctrine": "come, and receive mercy by faith (Rom 5:8; Heb 4:16)"
+   }
+  }
+ }
+}

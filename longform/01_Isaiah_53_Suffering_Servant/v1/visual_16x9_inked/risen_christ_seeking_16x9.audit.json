@@ -1,0 +1,10 @@
+{
+  "image": "risen_christ_seeking_16x9.png",
+  "verdict": "PASS",
+  "flags": [
+    "eye-QC PASS roll3 (roll1 palms-at-camera LL-unsafe, roll2 four hands)",
+    "healed dry marks on lowered palms, no crown BY DESIGN, LL-safe pose family"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

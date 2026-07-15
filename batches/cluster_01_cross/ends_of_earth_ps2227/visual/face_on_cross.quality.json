@@ -1,0 +1,15 @@
+{
+  "slug": "face_on_cross",
+  "hash": "3b3016e647987061",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "Wave F contact-sheet pass 2026-07-15: dark-world golgotha/ninth-hour frames consistent; nineveh plate is the nations stand-in until the two fresh plates render (PENDING). | byte-identical corpus copy from forsaken_cry_ps221 (wave-gated source)",
+  "reviewer": "in-chat-agent"
+}

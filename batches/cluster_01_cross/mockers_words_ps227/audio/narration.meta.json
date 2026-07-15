@@ -1,0 +1,93 @@
+{
+  "folder": "v1",
+  "stage": "per_turn_synth",
+  "mode": "dialogue_per_turn_with_narrator_atempo",
+  "generated_at": "2026-07-03T10:03:24Z",
+  "model_id": "eleven_v3",
+  "output_format": "mp3_44100_128",
+  "target_seconds": 78.0,
+  "natural_total_seconds": 89.92,
+  "narrator_natural_seconds": 70.48,
+  "quote_total_seconds": 19.44,
+  "narrator_atempo_factor": 1.2287,
+  "pre_quote_pause_seconds": 0.4,
+  "post_quote_pause_seconds": 0.0,
+  "pause_total_seconds": 1.2,
+  "final_total_seconds": 78.017,
+  "delta_vs_target_seconds": 0.017,
+  "turns": [
+    {
+      "index": 0,
+      "speaker": "narrator",
+      "chars": 204,
+      "natural_seconds": 12.56,
+      "final_seconds": 10.228,
+      "atempo_applied": true
+    },
+    {
+      "index": 1,
+      "speaker": "david",
+      "chars": 106,
+      "natural_seconds": 6.32,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 2,
+      "speaker": "narrator",
+      "chars": 121,
+      "natural_seconds": 7.76,
+      "final_seconds": 6.32,
+      "atempo_applied": true
+    },
+    {
+      "index": 3,
+      "speaker": "mocker",
+      "chars": 100,
+      "natural_seconds": 8.24,
+      "final_seconds": 6.311,
+      "atempo_applied": false
+    },
+    {
+      "index": 4,
+      "speaker": "narrator",
+      "chars": 156,
+      "natural_seconds": 11.2,
+      "final_seconds": 0.4,
+      "atempo_applied": true
+    },
+    {
+      "index": 5,
+      "speaker": "mocker",
+      "chars": 68,
+      "natural_seconds": 4.88,
+      "final_seconds": 8.24,
+      "atempo_applied": false
+    },
+    {
+      "index": 6,
+      "speaker": "narrator",
+      "chars": 520,
+      "natural_seconds": 38.96,
+      "final_seconds": 9.127,
+      "atempo_applied": true
+    }
+  ],
+  "speakers": {
+    "narrator": {
+      "voice_id": "LSi9zNCeliLuhIGGS0By",
+      "audio_tag": null
+    },
+    "david": {
+      "voice_id": "puDRtQWF8NtQiPMJygTb",
+      "audio_tag": null
+    },
+    "mocker": {
+      "voice_id": "SOYHLrjzK2X1ezoPC6cr",
+      "audio_tag": "[mocking]"
+    }
+  },
+  "settings": {
+    "stability": 0.5
+  }
+}

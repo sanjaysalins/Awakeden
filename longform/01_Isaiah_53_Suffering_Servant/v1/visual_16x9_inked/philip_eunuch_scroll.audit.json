@@ -1,0 +1,10 @@
+{
+  "image": "philip_eunuch_scroll.png",
+  "verdict": "PASS",
+  "flags": [
+    "eye-QC PASS",
+    "scroll glyphs non-legible, never animate"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

@@ -1,0 +1,11 @@
+{
+ "image": "us_under_cross_shadow.png",
+ "verdict": "PASS",
+ "flags": [
+  "byte-identical corpus copy from forsaken_cry_ps221 (wave-gated source)",
+  "source audit PASS: reused byte-identical from C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\crucifixion_foretold_ps2218\\visual\\us_under_cross_shadow.png",
+  "Wave F ps22 rebuild $0 migration 2026-07-15"
+ ],
+ "reviewer": "in-chat-agent",
+ "stage": "content"
+}

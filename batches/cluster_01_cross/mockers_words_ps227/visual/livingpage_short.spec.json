@@ -1,0 +1,625 @@
+{
+ "_doc": "THE MOCKERS' WORDS (Psalm 22:7-8 + Matt 27:39-43) 9:16 SHORT - living page (Wave F ps22 rebuild). 22 beats / 78.02s. Script hook -> David's taunt written 1000 years early -> Matthew's mockers recite it -> He stayed -> the song ends with the world turning -> mercy-hand landing. Grade 7200->7900K at the taunts, landing 4900K.",
+ "audio": "../audio/narration.mp3",
+ "total": 78.02,
+ "cut_ticks": false,
+ "motion": "smooth",
+ "heartbeat": {
+  "from": 52.21,
+  "to": 59.83,
+  "gain": -9,
+  "bpm": 60
+ },
+ "beats": [
+  {
+   "t": [
+    0.0,
+    3.06
+   ],
+   "tpl": "big_inset",
+   "clips": [
+    {
+     "slug": "crowd_mocking",
+     "motion": "pushin"
+    },
+    {
+     "slug": "psalm_scroll_night",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The crowd mocking Jesus at the cross was reading from a script",
+    "kw": "A SCRIPT"
+   },
+   "fx": {
+    "temp": 7200
+   },
+   "punch": true,
+   "ramp": true,
+   "sfx": [
+    [
+     "impact_low_boom",
+     0.1,
+     -12
+    ]
+   ],
+   "takeover": {
+    "panel": 0,
+    "start": 2.0,
+    "zoom": 1.24
+   }
+  },
+  {
+   "t": [
+    3.06,
+    4.58
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "crowd_mocking",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "They just didn't know it",
+    "kw": "DIDN'T KNOW"
+   },
+   "fx": {
+    "temp": 7300
+   },
+   "whip": true
+  },
+  {
+   "t": [
+    4.58,
+    10.06
+   ],
+   "tpl": "hero_frac3",
+   "clips": [
+    {
+     "slug": "david_writing_psalm",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "A thousand years before, Psalm twenty-two recorded how the Messiah would be mocked",
+    "kw": "A THOUSAND YEARS"
+   },
+   "fx": {
+    "temp": 7400
+   },
+   "anchors": [
+    [
+     1.0,
+     0.5,
+     0.5
+    ],
+    [
+     1.5,
+     0.47,
+     0.32
+    ],
+    [
+     1.6,
+     0.42,
+     0.7
+    ]
+   ],
+   "panel_at": [
+    4.58,
+    4.93,
+    5.28
+   ],
+   "panel_slide": [
+    "left",
+    "up",
+    "down"
+   ],
+   "flash": true
+  },
+  {
+   "t": [
+    10.06,
+    15.94
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "wagging_heads_close",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "they shake the head, saying, He trusted on the LORD that he would deliver him:",
+    "speaker": "DAVID",
+    "ref": "PSALM 22:7-8"
+   },
+   "fx": {
+    "temp": 7600
+   }
+  },
+  {
+   "t": [
+    15.94,
+    17.02
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "wagging_heads_close",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "let him deliver him.",
+    "speaker": "DAVID",
+    "ref": "PSALM 22:8"
+   },
+   "fx": {
+    "temp": 7700
+   }
+  },
+  {
+   "t": [
+    17.02,
+    19.32
+   ],
+   "tpl": "stack_h",
+   "clips": [
+    {
+     "slug": "golgotha_hill_wide",
+     "motion": "pushin"
+    },
+    {
+     "slug": "rulers_sneering",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "At the cross, Matthew's gospel records it",
+    "kw": "MATTHEW RECORDS IT"
+   },
+   "fx": {
+    "temp": 7500
+   },
+   "whip": true
+  },
+  {
+   "t": [
+    19.32,
+    23.76
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "rulers_sneering",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The passers-by wagging their heads, the rulers sneering nearly line for line",
+    "kw": "LINE FOR LINE"
+   },
+   "fx": {
+    "temp": 7600
+   }
+  },
+  {
+   "t": [
+    23.76,
+    28.81
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "ninth_hour_darkness",
+     "motion": "pushin"
+    },
+    {
+     "slug": "face_on_cross",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "He trusted in God; let him deliver him now, if he will have him:",
+    "speaker": "MOCKER",
+    "ref": "MATTHEW 27:43"
+   },
+   "fx": {
+    "temp": 7800
+   }
+  },
+  {
+   "t": [
+    28.81,
+    31.95
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "face_on_cross",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "for he said, I am the Son of God.",
+    "speaker": "MOCKER",
+    "ref": "MATTHEW 27:43"
+   },
+   "fx": {
+    "temp": 7900
+   }
+  },
+  {
+   "t": [
+    31.95,
+    34.41
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "david_writing_psalm",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "They thought they were inventing the cruelty",
+    "kw": "INVENTING"
+   },
+   "fx": {
+    "temp": 7700
+   }
+  },
+  {
+   "t": [
+    34.41,
+    39.63
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "seamless_robe_lots",
+     "motion": "pushin"
+    },
+    {
+     "slug": "lots_cup_close",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "They were reciting prophecy, unwilling witnesses that this was the One",
+    "kw": "UNWILLING WITNESSES"
+   },
+   "fx": {
+    "temp": 7700
+   }
+  },
+  {
+   "t": [
+    39.63,
+    41.03
+   ],
+   "tpl": "stack_h",
+   "clips": [
+    {
+     "slug": "jesus_looks_down",
+     "motion": "pushin"
+    },
+    {
+     "slug": "ninth_hour_darkness",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "And they threw one more taunt at Him",
+    "kw": "ONE MORE TAUNT"
+   },
+   "fx": {
+    "temp": 7800
+   },
+   "whip": true
+  },
+  {
+   "t": [
+    41.03,
+    44.99
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "two_thieves_wide",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "save thyself. If thou be the Son of God,",
+    "speaker": "MOCKER",
+    "ref": "MATTHEW 27:40"
+   },
+   "fx": {
+    "temp": 7900
+   }
+  },
+  {
+   "t": [
+    44.99,
+    46.37
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "two_thieves_wide",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "come down from the cross.",
+    "speaker": "MOCKER",
+    "ref": "MATTHEW 27:40"
+   },
+   "fx": {
+    "temp": 7900
+   }
+  },
+  {
+   "t": [
+    46.37,
+    48.13
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "jesus_looks_down",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "But He could have come down",
+    "kw": "HE COULD HAVE"
+   },
+   "fx": {
+    "temp": 7500
+   }
+  },
+  {
+   "t": [
+    48.13,
+    52.21
+   ],
+   "tpl": "hero_band3",
+   "clips": [
+    {
+     "slug": "golgotha_hill_wide",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He showed He was the Son not by escaping the cross, but by staying on it",
+    "kw": "BY STAYING"
+   },
+   "fx": {
+    "temp": 7400
+   },
+   "anchors": [
+    [
+     1.0,
+     0.5,
+     0.35
+    ],
+    [
+     1.5,
+     0.5,
+     0.24
+    ],
+    [
+     1.5,
+     0.5,
+     0.8
+    ]
+   ],
+   "panel_at": [
+    48.13,
+    48.43,
+    48.73
+   ],
+   "panel_slide": [
+    "up",
+    "left",
+    "down"
+   ],
+   "flash": true
+  },
+  {
+   "t": [
+    52.21,
+    56.51
+   ],
+   "tpl": "hero_frac3",
+   "clips": [
+    {
+     "slug": "us_under_cross_shadow",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Bearing the scorn He could have silenced, for the very people throwing it",
+    "kw": "FOR THE VERY PEOPLE"
+   },
+   "fx": {
+    "temp": 7300
+   },
+   "anchors": [
+    [
+     1.0,
+     0.5,
+     0.4
+    ],
+    [
+     1.5,
+     0.3,
+     0.34
+    ],
+    [
+     1.5,
+     0.68,
+     0.34
+    ]
+   ],
+   "panel_at": [
+    52.21,
+    52.56,
+    52.91
+   ],
+   "panel_slide": [
+    "up",
+    "left",
+    "right"
+   ],
+   "flash": true
+  },
+  {
+   "t": [
+    56.51,
+    59.83
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "look_up_faces",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The man they mocked is the One the whole song was about",
+    "kw": "THE WHOLE SONG"
+   },
+   "fx": {
+    "temp": 7200
+   }
+  },
+  {
+   "t": [
+    59.83,
+    63.25
+   ],
+   "tpl": "big_inset",
+   "clips": [
+    {
+     "slug": "seamless_robe_lots",
+     "motion": "pushin"
+    },
+    {
+     "slug": "us_under_cross_shadow",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "They told the King to come down, and He never did",
+    "kw": "HE NEVER DID"
+   },
+   "fx": {
+    "temp": 7400
+   },
+   "punch": true
+  },
+  {
+   "t": [
+    63.25,
+    68.5
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "look_up_faces",
+     "motion": "pushin"
+    },
+    {
+     "slug": "lots_cup_close",
+     "motion": "pushin",
+     "zoom": 1.25
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He stayed under scorn, theirs and ours, to win the scorners",
+    "kw": "TO WIN THE SCORNERS"
+   },
+   "fx": {
+    "temp": 6900
+   }
+  },
+  {
+   "t": [
+    68.5,
+    74.72
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "grace_poured_sky",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The song ends with all the ends of the world turning to Him",
+    "kw": "TURNING TO HIM"
+   },
+   "fx": {
+    "temp": 6200
+   }
+  },
+  {
+   "t": [
+    74.72,
+    78.02
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "risen_mercy_hand",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Turn, and come to the One who would not come down",
+    "kw": "TURN, AND COME"
+   },
+   "fx": {
+    "temp": 4900
+   },
+   "punch": true,
+   "border_break": {
+    "at": 75.0
+   },
+   "sfx": [
+    [
+     "dawn_morning_warm",
+     74.85,
+     -13
+    ]
+   ]
+  }
+ ]
+}

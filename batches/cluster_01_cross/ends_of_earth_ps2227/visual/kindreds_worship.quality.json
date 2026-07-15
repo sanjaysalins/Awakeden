@@ -1,0 +1,15 @@
+{
+  "slug": "kindreds_worship",
+  "hash": "8f04e4ef90686205",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "fresh render eye-verified in chat 2026-07-15",
+  "reviewer": "in-chat-agent"
+}

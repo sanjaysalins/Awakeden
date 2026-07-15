@@ -1,0 +1,21 @@
+{
+ "image": "face_on_cross.png",
+ "verdict": "PASS",
+ "flags": [
+  "hero hands: garbled block-nail/mitten -> both open flat with pierced wounds",
+  "glowing eyes -> natural dark brown",
+  "face = canonical Christ (user-confirmed)",
+  "crown",
+  "inked. NEW REF_JESUS anchor"
+ ],
+ "reviewer": "in-chat-agent",
+ "stage": "content",
+ "provenance": {
+  "source": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\crucifixion_foretold_ps2218\\visual\\face_on_cross.png",
+  "source_audit": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\crucifixion_foretold_ps2218\\visual\\face_on_cross.audit.json",
+  "source_verdict": "PASS",
+  "copied_for": "isaiah53_inked_rebuild",
+  "copy_mode": "byte-identical",
+  "date": "2026-07-15"
+ }
+}

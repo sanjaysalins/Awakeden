@@ -1,0 +1,11 @@
+{
+ "image": "face_on_cross.png",
+ "verdict": "PASS",
+ "flags": [
+  "byte-identical corpus copy from forsaken_cry_ps221 (wave-gated source)",
+  "source audit PASS: hero hands: garbled block-nail/mitten -> both open flat with pierced wounds; glowing eyes -> natural dark brown; face = canonical Christ (user-confirmed); crown; inked. NEW REF_JESUS anchor",
+  "Wave F ps22 rebuild $0 migration 2026-07-15"
+ ],
+ "reviewer": "in-chat-agent",
+ "stage": "content"
+}

@@ -1,0 +1,17 @@
+{
+ "image": "risen_christ_wounds.png",
+ "verdict": "PASS",
+ "flags": [
+  "eye-audited full-res 2026-07-09 vs John 20:1-10+20:29 facts: reused sign_of_jonah PASS still; risen Christ, wounds in open palms, serene living face"
+ ],
+ "reviewer": "in-chat-agent",
+ "stage": "content",
+ "provenance": {
+  "source": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_02_resurrection\\empty_tomb_john208\\visual\\risen_christ_wounds.png",
+  "source_audit": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_02_resurrection\\empty_tomb_john208\\visual\\risen_christ_wounds.audit.json",
+  "source_verdict": "PASS",
+  "copied_for": "isaiah53_inked_rebuild",
+  "copy_mode": "byte-identical",
+  "date": "2026-07-15"
+ }
+}

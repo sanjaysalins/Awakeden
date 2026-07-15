@@ -1,0 +1,18 @@
+{
+ "image": "nail_through_hand.png",
+ "verdict": "PASS",
+ "flags": [
+  "nail through the open hand ON the beam, wrist roped (nails+rope hybrid per fact card), blood; corpus-shared art (5 pieces, wave-gated)",
+  "vision-audited in-chat by Claude 2026-07-15 (Wave E migration eye pass)"
+ ],
+ "reviewer": "in-chat-agent",
+ "stage": "content",
+ "provenance": {
+  "source": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\father_forgive_them\\visual\\nail_through_hand.png",
+  "source_audit": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\father_forgive_them\\visual\\nail_through_hand.audit.json",
+  "source_verdict": "PASS",
+  "copied_for": "isaiah53_inked_rebuild",
+  "copy_mode": "byte-identical",
+  "date": "2026-07-15"
+ }
+}

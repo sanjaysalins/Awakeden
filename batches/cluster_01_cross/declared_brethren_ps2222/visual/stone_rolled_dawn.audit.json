@@ -1,0 +1,11 @@
+{
+ "image": "stone_rolled_dawn.png",
+ "verdict": "PASS",
+ "flags": [
+  "byte-identical corpus copy from sign_of_jonah_matt1240 (wave-gated source)",
+  "source audit PASS: reused byte-identical from C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_02_resurrection\\empty_tomb_john208\\visual\\stone_rolled_dawn.png",
+  "Wave F ps22 rebuild $0 migration 2026-07-15"
+ ],
+ "reviewer": "in-chat-agent",
+ "stage": "content"
+}

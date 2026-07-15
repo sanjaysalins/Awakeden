@@ -1,0 +1,11 @@
+{
+  "image": "isaiah_writing_lamplight.mp4",
+  "verdict": "PASS",
+  "flags": [
+    "clip eye-QC roll2 PASS w/ FOOTNOTE: few small ink marks grow at pen contact point (reads as diegetic writing",
+    "v1 rejected for page-wide invented text)",
+    "flame+haze clean, figure frozen"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

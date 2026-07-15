@@ -1,0 +1,10 @@
+{
+  "image": "israel_servant_nation.png",
+  "verdict": "PASS",
+  "flags": [
+    "eye-QC PASS after surgical retouch: church steeple removed from skyline (sky interpolation + mirrored skyline clone x700-806)",
+    "dignified exile"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

@@ -1,0 +1,20 @@
+{
+ "image": "tomb_doorway_dawn.png",
+ "verdict": "PASS",
+ "flags": [
+  "v3 after 2 rejects (v1 wooden door w/ metal handle = period fail",
+  "v2 shrouded corpse on bench = doctrinal fail)",
+  "v3 bare shelf + folded napkin only, rock-cut opening, dawn light, figure-free, John 20:7 grounded, clean-light LL eligible",
+  "vision-audited in-chat by Claude 2026-07-14"
+ ],
+ "reviewer": "in-chat-agent",
+ "stage": "content",
+ "provenance": {
+  "source": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_02_resurrection\\empty_tomb_john208\\visual\\tomb_doorway_dawn.png",
+  "source_audit": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_02_resurrection\\empty_tomb_john208\\visual\\tomb_doorway_dawn.audit.json",
+  "source_verdict": "PASS",
+  "copied_for": "isaiah53_inked_rebuild",
+  "copy_mode": "byte-identical",
+  "date": "2026-07-15"
+ }
+}

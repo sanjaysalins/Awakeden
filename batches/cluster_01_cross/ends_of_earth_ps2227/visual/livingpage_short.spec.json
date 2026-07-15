@@ -1,0 +1,560 @@
+{
+ "_doc": "THE ENDS OF THE EARTH (Psalm 22:27) 9:16 SHORT - living page (Wave F ps22 rebuild). 18 beats / 67.50s. Dying-alone hook -> SCRIPTURE redletter Ps 22:27 on the fresh nations plate -> impossible -> cross + empty tomb -> nation after nation -> wherever you are -> rays landing on the risen Christ. NOTE: nations_turning_wide + kindreds_worship are the PAID pending stills.",
+ "audio": "../audio/narration.mp3",
+ "total": 67.5,
+ "cut_ticks": false,
+ "motion": "smooth",
+ "heartbeat": {
+  "from": 52.2,
+  "to": 57.55,
+  "gain": -9,
+  "bpm": 60
+ },
+ "beats": [
+  {
+   "t": [
+    0.0,
+    4.2
+   ],
+   "tpl": "big_inset",
+   "clips": [
+    {
+     "slug": "ninth_hour_darkness",
+     "motion": "pushin"
+    },
+    {
+     "slug": "face_on_cross",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Psalm twenty-two opens with one forsaken man dying alone",
+    "kw": "DYING ALONE"
+   },
+   "fx": {
+    "temp": 7300
+   },
+   "punch": true,
+   "ramp": true,
+   "sfx": [
+    [
+     "impact_low_boom",
+     0.1,
+     -12
+    ]
+   ],
+   "takeover": {
+    "panel": 1,
+    "start": 2.6,
+    "zoom": 1.24
+   }
+  },
+  {
+   "t": [
+    4.2,
+    7.55
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "psalm_scroll_night",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "and ends with every nation on earth",
+    "kw": "EVERY NATION"
+   },
+   "fx": {
+    "temp": 7200
+   }
+  },
+  {
+   "t": [
+    7.55,
+    11.7
+   ],
+   "tpl": "stack_h",
+   "clips": [
+    {
+     "slug": "face_on_cross",
+     "motion": "pushin"
+    },
+    {
+     "slug": "grace_poured_sky",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "After the suffering, the song throws its arms open to every nation",
+    "kw": "ARMS OPEN"
+   },
+   "fx": {
+    "temp": 7000
+   }
+  },
+  {
+   "t": [
+    11.7,
+    16.8
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "nations_turning_wide",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "All the ends of the world shall remember and turn unto the LORD:",
+    "speaker": "SCRIPTURE",
+    "ref": "PSALM 22:27"
+   },
+   "fx": {
+    "temp": 6800
+   }
+  },
+  {
+   "t": [
+    16.8,
+    21.45
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "nations_turning_wide",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "and all the kindreds of the nations shall worship before thee.",
+    "speaker": "SCRIPTURE",
+    "ref": "PSALM 22:27"
+   },
+   "fx": {
+    "temp": 6600
+   }
+  },
+  {
+   "t": [
+    21.45,
+    24.7
+   ],
+   "tpl": "hero_band3",
+   "clips": [
+    {
+     "slug": "golgotha_hill_wide",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "A man dying in one corner of the Roman Empire",
+    "kw": "ONE CORNER"
+   },
+   "fx": {
+    "temp": 7400
+   },
+   "anchors": [
+    [
+     1.0,
+     0.5,
+     0.35
+    ],
+    [
+     1.5,
+     0.5,
+     0.26
+    ],
+    [
+     1.5,
+     0.5,
+     0.78
+    ]
+   ],
+   "panel_at": [
+    21.45,
+    21.75,
+    22.05
+   ],
+   "panel_slide": [
+    "up",
+    "left",
+    "down"
+   ],
+   "flash": true
+  },
+  {
+   "t": [
+    24.7,
+    28.8
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "psalm_scroll_night",
+     "motion": "pushin"
+    },
+    {
+     "slug": "look_up_faces",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "and his song says the ends of the earth will turn to God",
+    "kw": "THE ENDS OF THE EARTH"
+   },
+   "fx": {
+    "temp": 7200
+   }
+  },
+  {
+   "t": [
+    28.8,
+    31.1
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "ninth_hour_darkness",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "It sounded impossible",
+    "kw": "IMPOSSIBLE"
+   },
+   "fx": {
+    "temp": 7800
+   },
+   "whip": true
+  },
+  {
+   "t": [
+    31.1,
+    32.6
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "us_under_cross_shadow",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "But from that cross",
+    "kw": "THAT CROSS"
+   },
+   "fx": {
+    "temp": 7400
+   }
+  },
+  {
+   "t": [
+    32.6,
+    35.9
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "stone_rolled_dawn",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "and the empty tomb, the gospel went out",
+    "kw": "THE EMPTY TOMB"
+   },
+   "fx": {
+    "temp": 6600
+   }
+  },
+  {
+   "t": [
+    35.9,
+    39.35
+   ],
+   "tpl": "hero_frac3",
+   "clips": [
+    {
+     "slug": "nineveh_distant_walls",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "and people in nation after nation have turned to the LORD",
+    "kw": "NATION AFTER NATION"
+   },
+   "fx": {
+    "temp": 6800
+   },
+   "anchors": [
+    [
+     1.0,
+     0.5,
+     0.45
+    ],
+    [
+     1.4,
+     0.5,
+     0.2
+    ],
+    [
+     1.5,
+     0.5,
+     0.78
+    ]
+   ],
+   "panel_at": [
+    35.9,
+    36.2,
+    36.5
+   ],
+   "panel_slide": [
+    "up",
+    "left",
+    "down"
+   ],
+   "flash": true
+  },
+  {
+   "t": [
+    39.35,
+    42.9
+   ],
+   "tpl": "stack_h",
+   "clips": [
+    {
+     "slug": "look_up_faces",
+     "motion": "pushin"
+    },
+    {
+     "slug": "kindreds_worship",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "worshipping the One who died and rose",
+    "kw": "DIED AND ROSE"
+   },
+   "fx": {
+    "temp": 6400
+   }
+  },
+  {
+   "t": [
+    42.9,
+    45.95
+   ],
+   "tpl": "hero_band3",
+   "clips": [
+    {
+     "slug": "risen_christ_wounds",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "That is the reach of the cross",
+    "kw": "THE REACH"
+   },
+   "fx": {
+    "temp": 6200
+   },
+   "anchors": [
+    [
+     1.2,
+     0.5,
+     0.24
+    ],
+    [
+     1.7,
+     0.13,
+     0.62
+    ],
+    [
+     1.7,
+     0.87,
+     0.62
+    ]
+   ],
+   "panel_at": [
+    42.9,
+    43.2,
+    43.5
+   ],
+   "panel_slide": [
+    "up",
+    "left",
+    "right"
+   ],
+   "flash": true
+  },
+  {
+   "t": [
+    45.95,
+    48.1
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "golgotha_hill_wide",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "It was never a local tragedy",
+    "kw": "NEVER A LOCAL TRAGEDY"
+   },
+   "fx": {
+    "temp": 7000
+   }
+  },
+  {
+   "t": [
+    48.1,
+    52.2
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "kindreds_worship",
+     "motion": "pushin"
+    },
+    {
+     "slug": "stone_rolled_dawn",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "it was for the nations, all the kindreds of the earth",
+    "kw": "FOR THE NATIONS"
+   },
+   "fx": {
+    "temp": 6600
+   }
+  },
+  {
+   "t": [
+    52.2,
+    57.55
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "grace_poured_sky",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "And the ends of the world includes wherever you are, right now",
+    "kw": "WHEREVER YOU ARE"
+   },
+   "fx": {
+    "temp": 5800
+   }
+  },
+  {
+   "t": [
+    57.55,
+    63.05
+   ],
+   "tpl": "hero_frac3",
+   "clips": [
+    {
+     "slug": "us_under_cross_shadow",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The song that began with one man dying alone has swept the whole earth",
+    "kw": "THE WHOLE EARTH"
+   },
+   "fx": {
+    "temp": 6000
+   },
+   "anchors": [
+    [
+     1.0,
+     0.5,
+     0.4
+    ],
+    [
+     1.5,
+     0.3,
+     0.34
+    ],
+    [
+     1.5,
+     0.68,
+     0.34
+    ]
+   ],
+   "panel_at": [
+    57.55,
+    57.9,
+    58.25
+   ],
+   "panel_slide": [
+    "up",
+    "left",
+    "right"
+   ],
+   "flash": true
+  },
+  {
+   "t": [
+    63.05,
+    67.5
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "risen_christ_wounds",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "the Lord it promised still has room for you to turn to Him",
+    "kw": "ROOM FOR YOU"
+   },
+   "fx": {
+    "temp": 5000,
+    "rays": {
+     "at": [
+      0.5,
+      0.12
+     ],
+     "strength": 0.5
+    }
+   },
+   "punch": true,
+   "border_break": {
+    "at": 63.3
+   },
+   "sfx": [
+    [
+     "dawn_morning_warm",
+     63.2,
+     -13
+    ]
+   ]
+  }
+ ]
+}

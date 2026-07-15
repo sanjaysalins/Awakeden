@@ -1,0 +1,10 @@
+{
+  "image": "sheep_astray_hills.png",
+  "verdict": "PASS",
+  "flags": [
+    "eye-QC PASS",
+    "every sheep own way, no shepherd per Isa 53:6"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

@@ -1,0 +1,11 @@
+{
+ "image": "risen_christ_wounds.png",
+ "verdict": "PASS",
+ "flags": [
+  "byte-identical corpus copy from sign_of_jonah_matt1240 (wave-gated source)",
+  "source audit PASS: eye-audited full-res 2026-07-08 vs fact cards: anchor face alive+serene \u2713 wounds in both palms \u2713 5 fingers each \u2713 dawn garden \u2014 CLUSTER HERO",
+  "Wave F ps22 rebuild $0 migration 2026-07-15"
+ ],
+ "reviewer": "in-chat-agent",
+ "stage": "content"
+}

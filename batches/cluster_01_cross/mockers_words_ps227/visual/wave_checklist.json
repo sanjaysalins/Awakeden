@@ -1,0 +1,54 @@
+{
+ "piece": "mockers_words_ps227",
+ "created": "2026-07-15",
+ "items": [
+  {
+   "name": "scale_variety",
+   "pass": null,
+   "note": "",
+   "reviewer": "sanjay"
+  },
+  {
+   "name": "grids_multi_figure",
+   "pass": null,
+   "note": "",
+   "reviewer": "sanjay"
+  },
+  {
+   "name": "audio_diff",
+   "pass": null,
+   "note": "",
+   "reviewer": "sanjay"
+  },
+  {
+   "name": "bookend",
+   "pass": null,
+   "note": "",
+   "reviewer": "sanjay"
+  },
+  {
+   "name": "filmstrip_qc",
+   "pass": null,
+   "note": "",
+   "reviewer": "sanjay"
+  },
+  {
+   "name": "before_after_review",
+   "pass": null,
+   "note": "",
+   "reviewer": "sanjay"
+  },
+  {
+   "name": "fit_gate_disposition",
+   "pass": null,
+   "note": "7 over-cropped panels, all the known accepted stack_h/two_v keep-box family (focus protected, edges clipped); held_gt6s = 6.22s grace_poured_sky living-light hold (deliberate, Kling light is alive)",
+   "reviewer": "sanjay"
+  },
+  {
+   "name": "swapped_stills_review",
+   "pass": null,
+   "note": "lots_cup_close 2nd use re-cropped (zoom 1.25) to clear the SAME-CROP lint",
+   "reviewer": "sanjay"
+  }
+ ]
+}

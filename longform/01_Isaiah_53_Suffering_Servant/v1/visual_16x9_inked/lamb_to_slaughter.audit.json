@@ -1,0 +1,10 @@
+{
+  "image": "lamb_to_slaughter.png",
+  "verdict": "PASS",
+  "flags": [
+    "eye-QC PASS",
+    "unmarked wool, mouth closed per Isa 53:7, LL target"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

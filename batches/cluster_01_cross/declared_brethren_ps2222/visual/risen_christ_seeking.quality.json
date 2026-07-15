@@ -1,0 +1,15 @@
+{
+  "slug": "risen_christ_seeking",
+  "hash": "4c00dc97c30ed0dc",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "Wave F contact-sheet pass 2026-07-15: forsaken-dark to risen-gold arc reads clean; risen heroes consistent with corpus; congregation still PENDING paid render (not in set). | byte-identical corpus copy from empty_tomb_john208 (wave-gated source)",
+  "reviewer": "in-chat-agent"
+}

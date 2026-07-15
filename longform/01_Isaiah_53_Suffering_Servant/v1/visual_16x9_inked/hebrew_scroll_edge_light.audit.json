@@ -1,0 +1,19 @@
+{
+ "image": "hebrew_scroll_edge_light.png",
+ "verdict": "PASS",
+ "flags": [
+  "eye-audited 2026-07-05 LF redo v2",
+  "coin fix + tweaks",
+  "clean"
+ ],
+ "reviewer": "in-chat-agent",
+ "stage": "content",
+ "provenance": {
+  "source": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\hebrew_scroll_edge_light.png",
+  "source_audit": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\hebrew_scroll_edge_light.audit.json",
+  "source_verdict": "PASS",
+  "copied_for": "isaiah53_inked_rebuild",
+  "copy_mode": "byte-identical",
+  "date": "2026-07-15"
+ }
+}

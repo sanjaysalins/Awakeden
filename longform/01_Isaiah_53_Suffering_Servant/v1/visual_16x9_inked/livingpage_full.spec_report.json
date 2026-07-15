@@ -1,0 +1,2249 @@
+{
+ "dod": {
+  "median_beat_s": 4.0,
+  "max_beat_s": 7.6,
+  "held_gt6s": [
+   7.6,
+   7.33,
+   7.13,
+   7.07,
+   6.97,
+   6.9,
+   6.77,
+   6.67,
+   6.67,
+   6.67,
+   6.6,
+   6.57,
+   6.53,
+   6.3,
+   6.27,
+   6.1
+  ],
+  "slams": 39,
+  "kling_or_punch_or_slam_pct": 75,
+  "tier1_pct": 26,
+  "reuse_violations": [
+   "israel_servant_nation: beats 41->43 (gap 2 < 8)",
+   "philip_eunuch_scroll: beats 60->61 (gap 1 < 8)",
+   "risen_christ_seeking_16x9: beats 93->94 (gap 1 < 8)",
+   "risen_christ_seeking_16x9: beats 94->95 (gap 1 < 8)"
+  ],
+  "tier3_or_flagged_beats": [
+   6,
+   8,
+   12,
+   21,
+   46,
+   66,
+   74,
+   82
+  ],
+  "standard_3b": {
+   "stills_over_2_uses": {
+    "risen_christ_seeking_16x9": 3
+   },
+   "stills_fullbleed_twice": {
+    "risen_christ_seeking_16x9": 3
+   },
+   "fullbleed_beat_pct": 61,
+   "slop_caption_beats": []
+  },
+  "ramps": 0,
+  "whips": 0,
+  "flash_inserts": 0,
+  "fx_beats": 0,
+  "cut_ticks": false,
+  "beats": 95
+ },
+ "beats": [
+  {
+   "beat": 1,
+   "t": [
+    0.0,
+    4.26
+   ],
+   "dur": 4.266667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "isaiah_writing_lamplight"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 2,
+   "t": [
+    4.26,
+    9.08
+   ],
+   "dur": 4.8,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "jerusalem_700bc_wide"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 3,
+   "t": [
+    9.08,
+    15.84
+   ],
+   "dur": 6.766667,
+   "tpl": "triptych_v",
+   "slams": 3,
+   "slugs": [
+    "nail_through_hand",
+    "bowed_head_finished",
+    "body_laid_in_tomb"
+   ],
+   "sources": [
+    "kling",
+    "kling",
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 4,
+   "t": [
+    15.84,
+    19.08
+   ],
+   "dur": 3.233333,
+   "tpl": "two_v",
+   "slams": 1,
+   "slugs": [
+    "roman_nails_pouch",
+    "quill_ink_drop"
+   ],
+   "sources": [
+    "dyncam",
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 5,
+   "t": [
+    19.08,
+    21.9
+   ],
+   "dur": 2.833333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "hebrew_scroll_edge_light"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 6,
+   "t": [
+    21.9,
+    25.5
+   ],
+   "dur": 3.6,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "synagogue_listeners_lean"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 3,
+    "style": "band",
+    "flag": true
+   }
+  },
+  {
+   "beat": 7,
+   "t": [
+    25.5,
+    27.88
+   ],
+   "dur": 2.366667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "first_century_reader"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 8,
+   "t": [
+    27.88,
+    31.56
+   ],
+   "dur": 3.7,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "seventy_scribes_lamps"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 3,
+    "style": "scrim",
+    "flag": true
+   }
+  },
+  {
+   "beat": 9,
+   "t": [
+    31.56,
+    37.82
+   ],
+   "dur": 6.266667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "convergence_on_cross"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 10,
+   "t": [
+    37.82,
+    40.14
+   ],
+   "dur": 2.3,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "parting_storm_light"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 11,
+   "t": [
+    40.14,
+    47.02
+   ],
+   "dur": 6.9,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "servant_exalted_light"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 12,
+   "t": [
+    47.02,
+    49.94
+   ],
+   "dur": 2.9,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "war_helmet_spear_rest"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 3,
+    "style": "scrim",
+    "flag": true
+   }
+  },
+  {
+   "beat": 13,
+   "t": [
+    49.94,
+    51.66
+   ],
+   "dur": 1.733333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "face_anguish_closeup"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 14,
+   "t": [
+    51.66,
+    56.38
+   ],
+   "dur": 4.7,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "cry_profile_dark"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 15,
+   "t": [
+    56.38,
+    58.14
+   ],
+   "dur": 1.766667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "spit_shout_macro"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 16,
+   "t": [
+    58.14,
+    64.7
+   ],
+   "dur": 6.566667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "tear_track_macro"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 17,
+   "t": [
+    64.7,
+    71.36
+   ],
+   "dur": 6.666667,
+   "tpl": "triptych_v",
+   "slams": 0,
+   "slugs": [
+    "crowd_mocking",
+    "face_on_cross",
+    "look_up_faces"
+   ],
+   "sources": [
+    "kling",
+    "kling",
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 18,
+   "t": [
+    71.36,
+    76.14
+   ],
+   "dur": 4.766667,
+   "tpl": "two_v",
+   "slams": 1,
+   "slugs": [
+    "crane_cross_soldiers",
+    "hung_by_arms"
+   ],
+   "sources": [
+    "dyncam",
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 19,
+   "t": [
+    76.14,
+    79.58
+   ],
+   "dur": 3.433333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "mockers_wag_heads"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 20,
+   "t": [
+    79.58,
+    84.18
+   ],
+   "dur": 4.6,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "hill_crowd_watching_storm"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 21,
+   "t": [
+    84.18,
+    89.74
+   ],
+   "dur": 5.566667,
+   "tpl": "two_v",
+   "slams": 1,
+   "slugs": [
+    "war_helmet_spear_rest",
+    "face_anguish_closeup"
+   ],
+   "sources": [
+    "dyncam",
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 3,
+    "style": "scrim",
+    "flag": true
+   }
+  },
+  {
+   "beat": 22,
+   "t": [
+    89.74,
+    93.7
+   ],
+   "dur": 3.966667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "scholar_hand_on_text"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 23,
+   "t": [
+    93.7,
+    96.9
+   ],
+   "dur": 3.2,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "substitute_shadow"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 24,
+   "t": [
+    96.9,
+    99.12
+   ],
+   "dur": 2.233333,
+   "tpl": "triptych_v",
+   "slams": 2,
+   "slugs": [
+    "mourners_only_son",
+    "us_under_cross_shadow",
+    "blood_water_wood"
+   ],
+   "sources": [
+    "kling",
+    "kling",
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 25,
+   "t": [
+    99.12,
+    103.5
+   ],
+   "dur": 4.366667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "nail_through_hand_16x9"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 26,
+   "t": [
+    103.5,
+    107.94
+   ],
+   "dur": 4.433333,
+   "tpl": "triptych_v",
+   "slams": 0,
+   "slugs": [
+    "darkness_veil_torn",
+    "cross_at_dawn",
+    "grace_poured_sky"
+   ],
+   "sources": [
+    "kling",
+    "kling",
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 27,
+   "t": [
+    107.94,
+    114.9
+   ],
+   "dur": 6.966667,
+   "tpl": "triptych_v",
+   "slams": 2,
+   "slugs": [
+    "jesus_praying_close",
+    "bowed_head_finished",
+    "nail_through_hand"
+   ],
+   "sources": [
+    "kling",
+    "kling",
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 28,
+   "t": [
+    114.9,
+    119.78
+   ],
+   "dur": 4.866667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "crane_cross_soldiers"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 29,
+   "t": [
+    119.78,
+    123.18
+   ],
+   "dur": 3.4,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "us_under_cross_shadow_16x9"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 30,
+   "t": [
+    123.18,
+    128.36
+   ],
+   "dur": 5.2,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "hand_reaching_closeup"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 31,
+   "t": [
+    128.36,
+    132.64
+   ],
+   "dur": 4.266667,
+   "tpl": "two_v",
+   "slams": 0,
+   "slugs": [
+    "sheep_astray_hills",
+    "roads_converge_valley"
+   ],
+   "sources": [
+    "dyncam",
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 32,
+   "t": [
+    132.64,
+    135.2
+   ],
+   "dur": 2.566667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "golgotha_three_crosses_ridge"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 33,
+   "t": [
+    135.2,
+    137.24
+   ],
+   "dur": 2.033333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "ends_of_earth_faces"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 34,
+   "t": [
+    137.24,
+    142.42
+   ],
+   "dur": 5.2,
+   "tpl": "triptych_v",
+   "slams": 2,
+   "slugs": [
+    "look_up_faces",
+    "risen_mercy_hand",
+    "hands_of_light_open"
+   ],
+   "sources": [
+    "kling",
+    "kling",
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 35,
+   "t": [
+    142.42,
+    148.02
+   ],
+   "dur": 5.6,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "jesus_silent_accusers"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 36,
+   "t": [
+    148.02,
+    153.82
+   ],
+   "dur": 5.8,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "lamb_to_slaughter"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 37,
+   "t": [
+    153.82,
+    157.82
+   ],
+   "dur": 4.0,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "wrists_bound_beam_macro"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 38,
+   "t": [
+    157.82,
+    159.32
+   ],
+   "dur": 1.5,
+   "tpl": "triptych_v",
+   "slams": 2,
+   "slugs": [
+    "cross_at_dawn",
+    "three_days_dark_tomb",
+    "tomb_stone_sealed"
+   ],
+   "sources": [
+    "kling",
+    "kling",
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 39,
+   "t": [
+    159.32,
+    161.88
+   ],
+   "dur": 2.533333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "scholars_debate_two"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 40,
+   "t": [
+    161.88,
+    167.32
+   ],
+   "dur": 5.466667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "congregation_hands_lifted"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 41,
+   "t": [
+    167.32,
+    171.42
+   ],
+   "dur": 4.1,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "israel_servant_nation"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 42,
+   "t": [
+    171.42,
+    177.52
+   ],
+   "dur": 6.1,
+   "tpl": "two_v",
+   "slams": 1,
+   "slugs": [
+    "scholar_hand_on_text",
+    "two_scrolls_compared"
+   ],
+   "sources": [
+    "dyncam",
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 43,
+   "t": [
+    177.52,
+    181.06
+   ],
+   "dur": 3.533333,
+   "tpl": "two_v",
+   "slams": 0,
+   "slugs": [
+    "israel_servant_nation",
+    "servant_exalted_light"
+   ],
+   "sources": [
+    "dyncam",
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 44,
+   "t": [
+    181.06,
+    186.8
+   ],
+   "dur": 5.733333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "scribe_over_manuscripts"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 45,
+   "t": [
+    186.8,
+    189.98
+   ],
+   "dur": 3.166667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "threshold_open_door"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 46,
+   "t": [
+    189.98,
+    193.7
+   ],
+   "dur": 3.733333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "storm_over_jerusalem"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 3,
+    "style": "scrim",
+    "flag": true
+   }
+  },
+  {
+   "beat": 47,
+   "t": [
+    193.7,
+    195.8
+   ],
+   "dur": 2.1,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "vesture_seamless_folded"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 48,
+   "t": [
+    195.8,
+    199.26
+   ],
+   "dur": 3.466667,
+   "tpl": "two_v",
+   "slams": 0,
+   "slugs": [
+    "execution_stakes_field",
+    "stone_rolled_groove"
+   ],
+   "sources": [
+    "dyncam",
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 49,
+   "t": [
+    199.26,
+    202.86
+   ],
+   "dur": 3.6,
+   "tpl": "triptych_v",
+   "slams": 0,
+   "slugs": [
+    "jesus_praying_close",
+    "willing_offering",
+    "mourners_only_son"
+   ],
+   "sources": [
+    "kling",
+    "kling",
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 50,
+   "t": [
+    202.86,
+    209.52
+   ],
+   "dur": 6.666667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "ends_of_earth"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 51,
+   "t": [
+    209.52,
+    213.74
+   ],
+   "dur": 4.2,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "pierced_hands_feet"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 52,
+   "t": [
+    213.74,
+    218.52
+   ],
+   "dur": 4.8,
+   "tpl": "two_v",
+   "slams": 1,
+   "slugs": [
+    "convergence_on_cross",
+    "substitute_shadow"
+   ],
+   "sources": [
+    "dyncam",
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 53,
+   "t": [
+    218.52,
+    223.36
+   ],
+   "dur": 4.833333,
+   "tpl": "triptych_v",
+   "slams": 2,
+   "slugs": [
+    "body_laid_in_tomb",
+    "tomb_stone_sealed",
+    "carpenter_bench_rest"
+   ],
+   "sources": [
+    "kling",
+    "kling",
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 54,
+   "t": [
+    223.36,
+    228.34
+   ],
+   "dur": 4.966667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "cry_face_tears"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 55,
+   "t": [
+    228.34,
+    231.44
+   ],
+   "dur": 3.1,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "two_scrolls_compared"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 56,
+   "t": [
+    231.44,
+    234.02
+   ],
+   "dur": 2.6,
+   "tpl": "hero_frac3",
+   "slams": 2,
+   "slugs": [
+    "mockers_wag_heads"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 57,
+   "t": [
+    234.02,
+    237.6
+   ],
+   "dur": 3.566667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "cross_hill_pullback"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 58,
+   "t": [
+    237.6,
+    242.58
+   ],
+   "dur": 4.966667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "chariot_desert_road_wide"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 59,
+   "t": [
+    242.58,
+    248.52
+   ],
+   "dur": 5.966667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "greek_ot_scroll"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 60,
+   "t": [
+    248.52,
+    255.08
+   ],
+   "dur": 6.533333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "philip_eunuch_scroll"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 61,
+   "t": [
+    255.08,
+    262.14
+   ],
+   "dur": 7.066667,
+   "tpl": "hero_frac3",
+   "slams": 0,
+   "slugs": [
+    "philip_eunuch_scroll"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 62,
+   "t": [
+    262.14,
+    264.9
+   ],
+   "dur": 2.766667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "quill_ink_drop"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 63,
+   "t": [
+    264.9,
+    269.24
+   ],
+   "dur": 4.333333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "roads_converge_valley"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 64,
+   "t": [
+    269.24,
+    271.6
+   ],
+   "dur": 2.366667,
+   "tpl": "two_v",
+   "slams": 1,
+   "slugs": [
+    "scribe_over_manuscripts",
+    "threshold_open_door"
+   ],
+   "sources": [
+    "dyncam",
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 65,
+   "t": [
+    271.6,
+    275.94
+   ],
+   "dur": 4.333333,
+   "tpl": "triptych_v",
+   "slams": 2,
+   "slugs": [
+    "prophet_scroll",
+    "golgotha_hill_wide",
+    "risen_christ_wounds"
+   ],
+   "sources": [
+    "kling",
+    "kling",
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 66,
+   "t": [
+    275.94,
+    280.24
+   ],
+   "dur": 4.3,
+   "tpl": "two_v",
+   "slams": 1,
+   "slugs": [
+    "scholars_debate_two",
+    "seventy_scribes_lamps"
+   ],
+   "sources": [
+    "dyncam",
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 3,
+    "style": "scrim",
+    "flag": true
+   }
+  },
+  {
+   "beat": 67,
+   "t": [
+    280.24,
+    282.22
+   ],
+   "dur": 2.0,
+   "tpl": "triptych_v",
+   "slams": 2,
+   "slugs": [
+    "us_under_cross_shadow",
+    "face_on_cross",
+    "risen_mercy_hand"
+   ],
+   "sources": [
+    "kling",
+    "kling",
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 68,
+   "t": [
+    282.22,
+    285.42
+   ],
+   "dur": 3.2,
+   "tpl": "two_v",
+   "slams": 1,
+   "slugs": [
+    "storm_over_jerusalem",
+    "hill_crowd_watching_storm"
+   ],
+   "sources": [
+    "dyncam",
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 69,
+   "t": [
+    285.42,
+    288.62
+   ],
+   "dur": 3.2,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "ninth_hour_darkness"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 70,
+   "t": [
+    288.62,
+    292.54
+   ],
+   "dur": 3.9,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "cry_ninth_hour"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 71,
+   "t": [
+    292.54,
+    298.12
+   ],
+   "dur": 5.6,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "kindreds_bowing"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 72,
+   "t": [
+    298.12,
+    305.72
+   ],
+   "dur": 7.6,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "poured_out_bones"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 73,
+   "t": [
+    305.72,
+    308.66
+   ],
+   "dur": 2.933333,
+   "tpl": "two_v",
+   "slams": 1,
+   "slugs": [
+    "parting_storm_light",
+    "morning_birds_hill"
+   ],
+   "sources": [
+    "kling",
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 74,
+   "t": [
+    308.66,
+    314.66
+   ],
+   "dur": 6.0,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "nations_streaming_wide"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 3,
+    "style": "band",
+    "flag": true
+   }
+  },
+  {
+   "beat": 75,
+   "t": [
+    314.66,
+    318.14
+   ],
+   "dur": 3.466667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "dawn_empty_cross"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 76,
+   "t": [
+    318.14,
+    324.04
+   ],
+   "dur": 5.9,
+   "tpl": "triptych_v",
+   "slams": 2,
+   "slugs": [
+    "stone_rolled_dawn",
+    "tomb_doorway_dawn",
+    "linen_left_lying"
+   ],
+   "sources": [
+    "kling",
+    "kling",
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 77,
+   "t": [
+    324.04,
+    329.0
+   ],
+   "dur": 4.966667,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "empty_tomb_open"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 78,
+   "t": [
+    329.0,
+    331.84
+   ],
+   "dur": 2.833333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "grave_clothes_folded_macro"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 79,
+   "t": [
+    331.84,
+    338.12
+   ],
+   "dur": 6.3,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "finished_work"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 80,
+   "t": [
+    338.12,
+    341.98
+   ],
+   "dur": 3.833333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "risen_hands_raised"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 81,
+   "t": [
+    341.98,
+    343.82
+   ],
+   "dur": 1.866667,
+   "tpl": "two_v",
+   "slams": 1,
+   "slugs": [
+    "isaiah_writing_lamplight",
+    "roman_nails_pouch"
+   ],
+   "sources": [
+    "dyncam",
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 82,
+   "t": [
+    343.82,
+    347.28
+   ],
+   "dur": 3.433333,
+   "tpl": "two_v",
+   "slams": 0,
+   "slugs": [
+    "synagogue_listeners_lean",
+    "first_century_reader"
+   ],
+   "sources": [
+    "dyncam",
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 3,
+    "style": "band",
+    "flag": true
+   }
+  },
+  {
+   "beat": 83,
+   "t": [
+    347.28,
+    353.88
+   ],
+   "dur": 6.6,
+   "tpl": "big_inset",
+   "slams": 1,
+   "slugs": [
+    "hand_reaching_closeup",
+    "cry_face_tears"
+   ],
+   "sources": [
+    "kling",
+    "kling"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 84,
+   "t": [
+    353.88,
+    357.0
+   ],
+   "dur": 3.133333,
+   "tpl": "two_v",
+   "slams": 1,
+   "slugs": [
+    "cry_profile_dark",
+    "spit_shout_macro"
+   ],
+   "sources": [
+    "dyncam",
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 85,
+   "t": [
+    357.0,
+    360.46
+   ],
+   "dur": 3.466667,
+   "tpl": "two_v",
+   "slams": 1,
+   "slugs": [
+    "pierced_hands_feet",
+    "wrists_bound_beam_macro"
+   ],
+   "sources": [
+    "kling",
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 86,
+   "t": [
+    360.46,
+    364.12
+   ],
+   "dur": 3.666667,
+   "tpl": "two_v",
+   "slams": 1,
+   "slugs": [
+    "hebrew_scroll_edge_light",
+    "ends_of_earth_faces"
+   ],
+   "sources": [
+    "dyncam",
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 87,
+   "t": [
+    364.12,
+    371.48
+   ],
+   "dur": 7.333333,
+   "tpl": "two_v",
+   "slams": 0,
+   "slugs": [
+    "us_under_cross_shadow_16x9",
+    "ends_of_earth"
+   ],
+   "sources": [
+    "dyncam",
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 88,
+   "t": [
+    371.48,
+    378.12
+   ],
+   "dur": 6.666667,
+   "tpl": "triptych_v",
+   "slams": 0,
+   "slugs": [
+    "grace_poured_sky",
+    "hands_of_light_open",
+    "father_lamp_doorway"
+   ],
+   "sources": [
+    "kling",
+    "kling",
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "band",
+    "flag": false
+   }
+  },
+  {
+   "beat": 89,
+   "t": [
+    378.12,
+    382.28
+   ],
+   "dur": 4.133333,
+   "tpl": "two_v",
+   "slams": 1,
+   "slugs": [
+    "golgotha_three_crosses_ridge",
+    "ninth_hour_darkness"
+   ],
+   "sources": [
+    "dyncam",
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 90,
+   "t": [
+    382.28,
+    385.94
+   ],
+   "dur": 3.666667,
+   "tpl": "triptych_v",
+   "slams": 2,
+   "slugs": [
+    "stone_rolled_dawn",
+    "tomb_doorway_dawn",
+    "linen_left_lying"
+   ],
+   "sources": [
+    "kling",
+    "kling",
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 91,
+   "t": [
+    385.94,
+    389.44
+   ],
+   "dur": 3.5,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "kneeling_at_cross"
+   ],
+   "sources": [
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 92,
+   "t": [
+    389.44,
+    396.58
+   ],
+   "dur": 7.133333,
+   "tpl": "two_v",
+   "slams": 1,
+   "slugs": [
+    "nail_through_hand_16x9",
+    "cry_ninth_hour"
+   ],
+   "sources": [
+    "dyncam",
+    "kling"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 93,
+   "t": [
+    396.58,
+    400.4
+   ],
+   "dur": 3.833333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "risen_christ_seeking_16x9"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": true,
+   "cap": {
+    "tier": 2,
+    "style": "scrim",
+    "flag": false
+   }
+  },
+  {
+   "beat": 94,
+   "t": [
+    400.4,
+    403.64
+   ],
+   "dur": 3.233333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "risen_christ_seeking_16x9"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  },
+  {
+   "beat": 95,
+   "t": [
+    403.64,
+    405.26
+   ],
+   "dur": 1.633333,
+   "tpl": "full",
+   "slams": 0,
+   "slugs": [
+    "risen_christ_seeking_16x9"
+   ],
+   "sources": [
+    "dyncam"
+   ],
+   "punch": false,
+   "cap": {
+    "tier": 1,
+    "style": "box",
+    "flag": false
+   }
+  }
+ ]
+}

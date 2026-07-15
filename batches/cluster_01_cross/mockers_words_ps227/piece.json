@@ -1,0 +1,402 @@
+{
+ "piece": "mockers_words_ps227",
+ "title": "The Mockers' Words (Psalm 22:7-8)",
+ "cluster": "cluster_01_cross",
+ "verse": "Psalm 22:7-8 + Matthew 27:39-43",
+ "stills": {
+  "model": "seedream-4-5-251128",
+  "size": "1440x2560",
+  "jobs": {
+   "crowd_mocking": {
+    "prompt": "inked biblical graphic-novel of a 1st-century crowd mocking, with only THREE distinct foreground mockers, each a clearly DIFFERENT person — a grizzled grey-bearded old elder, a younger clean-shaven man, and a heavy middle-aged man with a dark beard — jeering upward with open scornful mouths and pointing hands, in dusty earth-toned head-wraps and coarse tunics; behind them the rest of the crowd is a DARK FEATURELESS SILHOUETTE MASS with no individual faces, bold black ink, flat dusk palette, reverent tone despite the scorn, tension",
+    "ref": null
+   },
+   "psalm_scroll_night": {
+    "prompt": "an open scroll of faded illegible script beside a burning clay oil lamp on a rough table at night, warm lamplight, close, vertical, ancient Judea",
+    "ref": null
+   },
+   "david_writing_psalm": {
+    "prompt": "an aged king with a grey beard writing on an open scroll by a clay oil lamp, a harp resting against the stone wall beside him, night chamber, warm lamplight, vertical, ancient Israel",
+    "ref": null
+   },
+   "wagging_heads_close": {
+    "prompt": "three Judean passers-by on the road below the cross at dusk, heads mid-shake in scorn, mouths open in taunt, one arm pointing up toward the cross above, weathered bearded faces, dusty wool robes and head cloths, 1st-century Judea, vertical",
+    "ref": "../crucifixion_foretold_ps2218/visual/crowd_mocking.png"
+   },
+   "rulers_sneering": {
+    "prompt": "a knot of chief priests and scribes in rich temple vestments and ornate head wraps standing apart from the common crowd on the road outside Jerusalem, faces twisted in open scorn and contempt, lips curled, one gesturing dismissively toward a bare rocky hill in the far distance, the city wall rising behind them, dusk light, 1st-century Judea, vertical",
+    "ref": "../crucifixion_foretold_ps2218/visual/crowd_mocking.png"
+   },
+   "golgotha_hill_wide": {
+    "prompt": "a wide view of three crosses standing on the low rocky rise of Golgotha outside the walls of Jerusalem, the crosses short rough wooden posts, the crucified men stripped to plain loincloths with their feet hanging just above the bystanders' heads, the centre cross bearing the crucified Christ, his bare dark hair against the open sky and his bare feet resting together against the wood, a crucified thief stripped to a loincloth on each cross beside him, small mourners standing close below, low stone houses with plain bare flat earthen roofs beyond the wall, the skyline beyond only plain rooftops under open sky, clear morning light under a plain pale sky, wide, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "ninth_hour_darkness": {
+    "prompt": "three crosses standing on the low rocky rise of Golgotha seen from far off, each cross bearing a crucified figure, the whole land swallowed in deep midday darkness, a pale dim sun barely showing through, wide, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "face_on_cross": {
+    "prompt": "a close portrait of the crucified Christ from the shoulders up, his thorn-crowned head lifted, eyes open toward heaven, the rough wooden beam behind his head, dim failing light, close, vertical, 1st-century Judea",
+    "ref": "../father_forgive_them/visual/_byteplus/face_on_cross_fix2.png"
+   },
+   "seamless_robe_lots": {
+    "prompt": "four Roman soldiers kneeling and standing around a long ankle-length tunic of finely woven ivory linen held up spread between them, the weave tight and costly with a soft sheen, one smooth unbroken piece from the shoulders down to the hem, a plain round neck opening, beside them a flat stone with small pebble lots scattered across it, bright morning light, close, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "lots_cup_close": {
+    "prompt": "two small worn cubic dice of pale bone tumbling from a leather cup onto a flat stone slab, a folded smooth woven garment beside the stone, the dusty ground of Golgotha around, harsh daylight, close, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "jesus_looks_down": {
+    "prompt": "the thorn-crowned crucified Christ seen from below from the chest up, his head turned downward with steady compassion toward those beneath the cross, clear morning light on his face, close, vertical, 1st-century Judea",
+    "ref": "../into_thy_hands_luke2346/visual/face_on_cross.png"
+   },
+   "two_thieves_wide": {
+    "prompt": "three men crucified high on three rough wooden crosses on a barren hilltop, arms outstretched on the crossbeams, the middle cross taller, seen from a low angle, heavy storm sky, wide, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "us_under_cross_shadow": {
+    "prompt": "two bowed figures kneeling small in the dust at dawn, the long shadow of a single cross falling across them and stretching up the ground, heads down and hands clasped, soft low golden light, wide, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "look_up_faces": {
+    "prompt": "three different upturned 1st-century faces close together in half-light, eyes lifted toward a warm light above, tears catching the light, hope breaking on the faces, vertical",
+    "ref": null
+   },
+   "grace_poured_sky": {
+    "prompt": "warm golden light pouring down like a waterfall from a single break in heavy dark clouds onto the small stone city below, the pouring is the subject, vertical, ancient Judea",
+    "ref": null
+   },
+   "risen_mercy_hand": {
+    "prompt": "inked biblical graphic-novel of the risen Christ facing forward, one open hand held out low bearing the faint flat healed mark, warm golden light",
+    "ref": null
+   }
+  }
+ },
+ "animate": {
+  "duration": 5,
+  "aspect_ratio": "9:16",
+  "moves": {
+   "golgotha_hill_wide": "ONE slow, steady, continuous push-in up the hill toward the three crosses",
+   "ninth_hour_darkness": "ONE slow, steady, continuous push-in toward the three distant crosses under the darkened sky",
+   "seamless_robe_lots": "ONE slow, steady, continuous push-in toward the seamless tunic held spread between the soldiers",
+   "us_under_cross_shadow": "ONE slow, steady, continuous push-in toward the two bowed figures beneath the long cross shadow"
+  },
+  "living_light": {
+   "lots_cup_close": {
+    "target": "the overturned dice cup and the scattered lots on the stone",
+    "light": "the low evening light across the stone slowly deepens and warms, the shadows of the cup and the lots stretching almost imperceptibly, fine dust drifting through the sunlit air"
+   },
+   "grace_poured_sky": {
+    "target": "the light pouring from the opened sky",
+    "light": "the poured light from the opened sky slowly intensifies, its rays widening and sweeping gently, warm haze drifting where the light meets the ground"
+   },
+   "risen_mercy_hand": {
+    "target": "the whole outstretched arm and the light around it",
+    "light": "the glow around the outstretched arm slowly builds and breathes, soft rays fanning outward, warm haze shimmering at the edges of the light"
+   }
+  }
+ },
+ "score": {
+  "src": "visual/livingpage_short.spec_preview.mp4",
+  "out": "visual/mockers_words_ps227_scored.mp4",
+  "dark": "lonely_searching_a.mp3",
+  "grace": "sacred_grace_rise_a.mp3",
+  "base_seconds": 78.02,
+  "outro_hold": 1.5,
+  "dark_trim_end": "52",
+  "grace_trim": [
+   "20",
+   "90"
+  ],
+  "crossfade": "6",
+  "tpad": "1.5",
+  "dips": [
+   [
+    "10.06",
+    "17.02",
+    "0.4"
+   ],
+   [
+    "23.76",
+    "31.95",
+    "0.4"
+   ],
+   [
+    "41.03",
+    "46.37",
+    "0.4"
+   ]
+  ],
+  "cta_dip": [
+   "74.72",
+   "0.5"
+  ],
+  "dips_meta": [
+   {
+    "phrase": "\"...they shake the head, saying, He trusted on the LORD that he would deliver him: let him deliver him...\"",
+    "pre": 0.04,
+    "post": 0.08
+   },
+   {
+    "phrase": "\"He trusted in God; let him deliver him now, if he will have him: for he said, I am the Son of God.\"",
+    "pre": 0.04,
+    "post": 0.1
+   },
+   {
+    "phrase": "\"save thyself. If thou be the Son of God, come down from the cross.\"",
+    "pre": -0.0,
+    "post": 0.14
+   }
+  ],
+  "cta_meta": {
+   "phrase": "Turn, and come to the One who would not come down.",
+   "pre": 0.3
+  }
+ },
+ "register": {
+  "id_prefix": "mw",
+  "source": "corpus byte-identical reuse + byteplus seedream-4-5",
+  "created": "2026-07-15",
+  "style": "graphic_novel_inked",
+  "aspect": "9:16",
+  "palette": "inked cel-flat, dusk taunts to risen gold",
+  "mood": "the taunts at the cross were a thousand-year-old script",
+  "tags_still": [
+   "livingpage",
+   "psalm22",
+   "mockers_words",
+   "cross"
+  ],
+  "tags_clip": [
+   "livingpage",
+   "psalm22",
+   "mockers_words",
+   "kling"
+  ],
+  "used_in": [
+   "mockers_words_ps227 short"
+  ],
+  "clip_title_suffix": " (clip)",
+  "clip_source": "corpus HF kling3_0 pro 9:16 copies (hash-bound where manifest-driven)",
+  "extra_rows": [],
+  "stills": {
+   "crowd_mocking": {
+    "subject": "three mockers pointing up, the crowd in shadow",
+    "characters": [
+     "three mockers",
+     "shadow crowd"
+    ],
+    "elements": [
+     "pointing hands",
+     "open mouths"
+    ],
+    "setting": "Golgotha",
+    "scope": "neutral",
+    "doctrine": "and the people stood beholding... deriding him (Luke 23:35)"
+   },
+   "psalm_scroll_night": {
+    "subject": "open scroll of faded script beside a burning clay oil lamp",
+    "characters": [],
+    "elements": [
+     "scroll",
+     "oil lamp",
+     "night table"
+    ],
+    "setting": "night interior",
+    "scope": "neutral",
+    "doctrine": "Into thine hand I commit my spirit (Ps 31:5)"
+   },
+   "david_writing_psalm": {
+    "subject": "aged King David writing the psalm by lamplight, harp beside",
+    "characters": [
+     "David"
+    ],
+    "elements": [
+     "scroll",
+     "oil lamp",
+     "harp",
+     "crown"
+    ],
+    "setting": "night chamber",
+    "scope": "neutral",
+    "doctrine": "David wrote it in the first person (Ps 22:1)"
+   },
+   "wagging_heads_close": {
+    "subject": "three passers-by wagging their heads at the cross",
+    "characters": [
+     "three mockers"
+    ],
+    "elements": [
+     "shaking heads",
+     "taunting mouths",
+     "dusty robes"
+    ],
+    "setting": "the road below Golgotha",
+    "scope": "specific",
+    "doctrine": "all they that see me laugh me to scorn... they shake the head (Psalm 22:7; Matt 27:39)"
+   },
+   "rulers_sneering": {
+    "subject": "chief priests and scribes sneering up at the cross",
+    "characters": [
+     "chief priests",
+     "scribes"
+    ],
+    "elements": [
+     "temple vestments",
+     "sneering faces"
+    ],
+    "setting": "Golgotha",
+    "scope": "specific",
+    "doctrine": "likewise also the chief priests mocking him, with the scribes and elders (Matt 27:41)"
+   },
+   "golgotha_hill_wide": {
+    "subject": "three occupied crosses on Golgotha outside the wall, midday-black sky",
+    "characters": [
+     "the crucified Christ",
+     "two thieves",
+     "mourners"
+    ],
+    "elements": [
+     "three crosses",
+     "city wall",
+     "black sky"
+    ],
+    "setting": "Golgotha wide",
+    "scope": "specific",
+    "doctrine": "and there were also two other, malefactors, led with him (Luke 23:32)"
+   },
+   "ninth_hour_darkness": {
+    "subject": "three distant crosses under a sky gone black, dim swallowed sun",
+    "characters": [],
+    "elements": [
+     "three crosses",
+     "darkened sun",
+     "black clouds"
+    ],
+    "setting": "Golgotha",
+    "scope": "neutral",
+    "doctrine": "darkness over all the land, the ninth hour (Matt 27:45-46)"
+   },
+   "face_on_cross": {
+    "subject": "the crucified Christ, face lifted against the darkened sky",
+    "characters": [
+     "the crucified Christ"
+    ],
+    "elements": [
+     "cross",
+     "lifted face",
+     "storm sky"
+    ],
+    "setting": "the cross, low angle",
+    "scope": "specific",
+    "doctrine": "he humbled himself, and became obedient unto death, even the death of the cross (Phil 2:8)"
+   },
+   "seamless_robe_lots": {
+    "subject": "the seamless tunic held spread between the soldiers",
+    "characters": [
+     "Roman soldiers"
+    ],
+    "elements": [
+     "seamless robe",
+     "soldiers' hands"
+    ],
+    "setting": "Golgotha",
+    "scope": "specific",
+    "doctrine": "they parted my garments among them, and cast lots upon my vesture (Psalm 22:18)"
+   },
+   "lots_cup_close": {
+    "subject": "leather cup with two knucklebone lots spilled on stone, garment beside",
+    "characters": [],
+    "elements": [
+     "knucklebone lots",
+     "leather cup",
+     "woven garment"
+    ],
+    "setting": "Golgotha",
+    "scope": "specific",
+    "doctrine": "cast lots upon my vesture (Ps 22:18)"
+   },
+   "jesus_looks_down": {
+    "subject": "thorn-crowned Christ looking down in compassion from the cross",
+    "characters": [
+     "Christ"
+    ],
+    "elements": [
+     "crown of thorns",
+     "storm sky"
+    ],
+    "setting": "Golgotha",
+    "scope": "hero",
+    "doctrine": "when Jesus saw his mother (John 19:26)"
+   },
+   "two_thieves_wide": {
+    "subject": "three crucified men on a stormy hilltop, middle cross taller",
+    "characters": [
+     "Christ",
+     "two thieves"
+    ],
+    "elements": [
+     "three crosses",
+     "storm"
+    ],
+    "setting": "Golgotha wide",
+    "scope": "neutral",
+    "doctrine": "crucified with the malefactors (Luke 23:33)"
+   },
+   "us_under_cross_shadow": {
+    "subject": "seven bowed mourners under the long shadow of the cross",
+    "characters": [
+     "seven bowed figures"
+    ],
+    "elements": [
+     "cross shadow",
+     "bowed heads",
+     "dust"
+    ],
+    "setting": "Golgotha",
+    "scope": "neutral",
+    "doctrine": "the sin that put him there was ours (Rom 3:23)"
+   },
+   "look_up_faces": {
+    "subject": "three upturned tearful 1st-century faces catching warm light",
+    "characters": [
+     "onlookers"
+    ],
+    "elements": [
+     "tears",
+     "warm light"
+    ],
+    "setting": "half-light",
+    "scope": "neutral",
+    "doctrine": "they shall look upon me and mourn"
+   },
+   "grace_poured_sky": {
+    "subject": "golden light pours like a waterfall through broken storm clouds onto a stone city",
+    "characters": [],
+    "elements": [
+     "light waterfall",
+     "storm clouds",
+     "city"
+    ],
+    "setting": "sky over Jerusalem",
+    "scope": "neutral",
+    "doctrine": "I will pour the spirit of grace (Zech 12:10a)"
+   },
+   "risen_mercy_hand": {
+    "subject": "the risen Christ holding out the open healed hand",
+    "characters": [
+     "the risen Christ"
+    ],
+    "elements": [
+     "open hand",
+     "healed mark",
+     "warm light"
+    ],
+    "setting": "golden light",
+    "scope": "hero",
+    "doctrine": "come, and receive mercy by faith (Rom 5:8; Heb 4:16)"
+   }
+  }
+ }
+}

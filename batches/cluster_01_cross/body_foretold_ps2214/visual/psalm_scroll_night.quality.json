@@ -1,0 +1,15 @@
+{
+  "slug": "psalm_scroll_night",
+  "hash": "d3116aa257335316",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "Wave F contact-sheet pass 2026-07-15: body-beats frames (blood_water_wood, nail, bowed head) restrained and reverent, no gore; body_suspended_wide PENDING paid render. | byte-identical corpus copy from crucifixion_foretold_ps2218 (wave-gated source)",
+  "reviewer": "in-chat-agent"
+}

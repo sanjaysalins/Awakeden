@@ -1,0 +1,10 @@
+{
+  "image": "chariot_desert_road_wide.png",
+  "verdict": "PASS",
+  "flags": [
+    "eye-QC PASS roll3 (roll1 open chariot broke world-consistency with philip still, roll2 royal diadem)",
+    "covered carriage, bare-headed treasurer"
+  ],
+  "reviewer": "in-chat-agent",
+  "stage": "content"
+}

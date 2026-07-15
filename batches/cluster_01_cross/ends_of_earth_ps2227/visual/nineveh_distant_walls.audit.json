@@ -1,0 +1,11 @@
+{
+ "image": "nineveh_distant_walls.png",
+ "verdict": "PASS",
+ "flags": [
+  "byte-identical corpus copy from sign_of_jonah_matt1240 (wave-gated source)",
+  "source audit PASS: vision-audited vs v3: rectangular Assyrian gateways (no pointed/ogee arches), ziggurat, relief-carved gate towers, dusk lamps; no Islamic-era or Greco-Roman forms",
+  "Wave F ps22 rebuild $0 migration 2026-07-15"
+ ],
+ "reviewer": "in-chat-agent",
+ "stage": "content"
+}

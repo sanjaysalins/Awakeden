@@ -1,0 +1,11 @@
+{
+ "image": "us_under_cross_shadow.png",
+ "verdict": "PASS",
+ "flags": [
+  "byte-identical corpus copy from crucifixion_foretold_ps2218 (wave-gated source)",
+  "source audit PASS: two bowed figures, dawn cross shadow, no lightning, no coins; eye-audited full-res vs cluster fact sheet v2",
+  "Wave F ps22 rebuild $0 migration 2026-07-15"
+ ],
+ "reviewer": "in-chat-agent",
+ "stage": "content"
+}

@@ -1,0 +1,15 @@
+{
+  "slug": "ninth_hour_darkness",
+  "hash": "8a83b7cd4ef8e458",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "Wave F contact-sheet pass 2026-07-15: coherent single ink world (dusk taunt frames, scroll world, risen gold tail); wounds restrained (face_on_cross/jesus_looks_down small dry palm marks); all corpus wave-gated copies. | byte-identical corpus copy from forsaken_cry_ps221 (wave-gated source)",
+  "reviewer": "in-chat-agent"
+}

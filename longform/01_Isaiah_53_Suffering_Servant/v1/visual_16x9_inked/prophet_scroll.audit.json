@@ -1,0 +1,19 @@
+{
+ "image": "prophet_scroll.png",
+ "verdict": "PASS",
+ "flags": [
+  "gibberish scroll->blank scroll",
+  "lamb + prophet + clay lamp",
+  "inked"
+ ],
+ "reviewer": "in-chat-agent",
+ "stage": "content",
+ "provenance": {
+  "source": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\pierced_zech1210\\visual\\prophet_scroll.png",
+  "source_audit": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\pierced_zech1210\\visual\\prophet_scroll.audit.json",
+  "source_verdict": "PASS",
+  "copied_for": "isaiah53_inked_rebuild",
+  "copy_mode": "byte-identical",
+  "date": "2026-07-15"
+ }
+}

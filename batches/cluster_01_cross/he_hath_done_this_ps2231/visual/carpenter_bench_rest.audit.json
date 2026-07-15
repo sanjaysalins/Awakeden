@@ -1,0 +1,11 @@
+{
+ "image": "carpenter_bench_rest.png",
+ "verdict": "PASS",
+ "flags": [
+  "byte-identical corpus copy from it_is_finished_john1930 (wave-gated source)",
+  "source audit PASS: modern bench-vise removed -> bare bench + period tools; inked",
+  "Wave F ps22 rebuild $0 migration 2026-07-15"
+ ],
+ "reviewer": "in-chat-agent",
+ "stage": "content"
+}
