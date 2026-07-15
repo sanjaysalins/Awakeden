@@ -33,6 +33,11 @@
   },
   "series": [
     {
+      "slug": "he-is-risen",
+      "title": "He Is Risen",
+      "note": "The empty tomb examined witness by witness: the stone, the linen, the women, and the men who did not believe them."
+    },
+    {
       "slug": "jesus-in-ot",
       "title": "Jesus in the Old Testament",
       "note": "Prophecies and patterns written centuries early - Psalm 22, Isaiah 53, Zechariah - and the New Testament pointing back at them."
@@ -313,6 +318,28 @@
       "read": "read/thirty-pieces-of-silver.html"
     },
     {
+      "slug": "the-empty-tomb",
+      "kind": "short",
+      "title": "The Empty Tomb",
+      "ref": "John 20:8",
+      "series_id": "he-is-risen",
+      "cluster": "cluster-02-resurrection",
+      "cluster_order": 2,
+      "public_status": "studio_complete",
+      "featured": false,
+      "featured_order": null,
+      "preview_approved": true,
+      "youtube_id": null,
+      "public_hook": "Someone took the body. That was Mary's first thought at the empty tomb.",
+      "public_blurb": "John 20. The stone rolled away, the linen left lying, the face-cloth wrapped apart by itself: what thief does that? What John saw at the linen, and what he believed, drawn panel by panel.",
+      "status_label": "Studio complete",
+      "status_class": "status-complete",
+      "preview": "assets/previews/the-empty-tomb.webp?v=df02efaa",
+      "show_video": false,
+      "kind_label": "Short",
+      "read": "read/the-empty-tomb.html"
+    },
+    {
       "slug": "today-in-paradise",
       "kind": "short",
       "title": "Today in Paradise",
@@ -332,6 +359,28 @@
       "show_video": false,
       "kind_label": "Short",
       "read": "read/today-in-paradise.html"
+    },
+    {
+      "slug": "women-first-witnesses",
+      "kind": "short",
+      "title": "Women as First Witnesses",
+      "ref": "Luke 24:5-6",
+      "series_id": "he-is-risen",
+      "cluster": "cluster-02-resurrection",
+      "cluster_order": 3,
+      "public_status": "studio_complete",
+      "featured": false,
+      "featured_order": null,
+      "preview_approved": true,
+      "youtube_id": null,
+      "public_hook": "The first report that Jesus was risen was dismissed as nonsense, by His own apostles.",
+      "public_blurb": "Luke 24. The first news came from women whose word carried almost no weight in court. No one inventing a resurrection would open it there. The witnesses who never left, drawn panel by panel.",
+      "status_label": "Studio complete",
+      "status_class": "status-complete",
+      "preview": "assets/previews/women-first-witnesses.webp?v=63511adb",
+      "show_video": false,
+      "kind_label": "Short",
+      "read": "read/women-first-witnesses.html"
     },
     {
       "slug": "ps22-04-declared-to-brethren",
@@ -1333,9 +1382,9 @@
     }
   ],
   "stats": {
-    "total": 58,
+    "total": 60,
     "live": 0,
-    "studio_complete": 18,
+    "studio_complete": 20,
     "in_production": 31,
     "planned": 9
   }
