@@ -30,7 +30,7 @@ def gold_spec():
     return {"motion": "smooth", "audio": "../audio/narration.mp3", "beats": beats}
 
 
-def write_piece(tmp_path, spec, living_light=None):
+def write_piece(tmp_path, spec, living_light=None, ll_exception=None):
     (tmp_path / "visual").mkdir(parents=True, exist_ok=True)
     (tmp_path / "visual" / "livingpage_short.spec.json").write_text(
         json.dumps(spec), encoding="utf-8")
@@ -40,6 +40,8 @@ def write_piece(tmp_path, spec, living_light=None):
                                     "light": "the sunburst slowly intensifies"},
                             "s06": {"target": "the shining figures",
                                     "light": "golden rays slowly intensify"}}}}
+    if ll_exception is not None:
+        pj["animate"]["living_light_exception"] = ll_exception
     (tmp_path / "piece.json").write_text(json.dumps(pj), encoding="utf-8")
     return tmp_path
 
@@ -111,6 +113,23 @@ def test_single_living_light_fails(tmp_path):
     fails = check_piece(write_piece(
         tmp_path, gold_spec(),
         living_light={"s09": {"target": "x", "light": "y"}}))
+    assert any("< 2" in f for f in fails)
+
+
+def test_single_living_light_with_user_exception_passes(tmp_path):
+    fails = check_piece(write_piece(
+        tmp_path, gold_spec(),
+        living_light={"s09": {"target": "x", "light": "y"}},
+        ll_exception={"user": "sanjay", "date": "2026-07-15",
+                      "reason": "no second wound-free still; Kling regenerates blood"}))
+    assert not any("living_light clip(s)" in f for f in fails)
+
+
+def test_malformed_exception_does_not_lower_the_bar(tmp_path):
+    fails = check_piece(write_piece(
+        tmp_path, gold_spec(),
+        living_light={"s09": {"target": "x", "light": "y"}},
+        ll_exception={"reason": "no user grant recorded"}))
     assert any("< 2" in f for f in fails)
 
 

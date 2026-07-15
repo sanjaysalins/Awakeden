@@ -1,0 +1,10 @@
+{
+ "image": "risen_mercy_hand.png",
+ "verdict": "PASS",
+ "flags": [
+  "the corpus landing hero (byte-identical in 9 pieces): risen Christ, open healed hand held out; LL clip $0-copied from pierced_zech1210",
+  "vision-audited in-chat by Claude 2026-07-15 (Wave E migration eye pass)"
+ ],
+ "reviewer": "in-chat-agent",
+ "stage": "content"
+}

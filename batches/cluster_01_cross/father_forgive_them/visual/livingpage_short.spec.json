@@ -1,0 +1,508 @@
+{
+ "_doc": "FATHER FORGIVE THEM (Luke 23:34) 9:16 SHORT - living page (Wave E migration from the mocomic pilot). 16 beats / 57.15s. Nails hook -> the prayer nobody expected -> red-letter Luke 23:34 -> Psalm 22:18 receipt -> conviction (ours too) -> Rom 5:8 living-light reveal -> risen mercy-hand landing. Grade 7200->7900K at the cross, warming to 4900K on the held-out hand.",
+ "audio": "../audio/narration.mp3",
+ "total": 57.15,
+ "cut_ticks": false,
+ "motion": "smooth",
+ "heartbeat": {
+  "from": 28.0,
+  "to": 36.2,
+  "gain": -9,
+  "bpm": 60
+ },
+ "beats": [
+  {
+   "t": [
+    0.0,
+    3.4
+   ],
+   "tpl": "big_inset",
+   "clips": [
+    {
+     "slug": "nail_through_hand",
+     "motion": "pushin"
+    },
+    {
+     "slug": "executioner_ignorance",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Nails through his hands.",
+    "kw": "NAILS"
+   },
+   "fx": {
+    "temp": 7200
+   },
+   "punch": true,
+   "ramp": true,
+   "sfx": [
+    [
+     "nail_strike_single",
+     0.15,
+     -10
+    ]
+   ],
+   "takeover": {
+    "panel": 0,
+    "start": 2.3,
+    "zoom": 1.24
+   }
+  },
+  {
+   "t": [
+    3.4,
+    7.0
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "soldiers_gambling_establish",
+     "motion": "pushin"
+    },
+    {
+     "slug": "seamless_robe_lots_cast",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Soldiers at his feet, gambling for his clothes.",
+    "kw": "GAMBLING"
+   },
+   "fx": {
+    "temp": 7400
+   }
+  },
+  {
+   "t": [
+    7.0,
+    10.31
+   ],
+   "tpl": "stack_h",
+   "clips": [
+    {
+     "slug": "crowd_mocking",
+     "motion": "pushin"
+    },
+    {
+     "slug": "father_forgive_them_face",
+     "motion": "pushin",
+     "bias": [
+      0.5,
+      0.3
+     ]
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "A word no one expected. Not a curse.",
+    "kw": "NOT A CURSE"
+   },
+   "fx": {
+    "temp": 7600
+   },
+   "whip": true
+  },
+  {
+   "t": [
+    10.31,
+    12.46
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "father_forgive_them_face",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "It is a prayer.",
+    "kw": "A PRAYER"
+   },
+   "fx": {
+    "temp": 7500
+   }
+  },
+  {
+   "t": [
+    12.46,
+    16.94
+   ],
+   "tpl": "hero_frac3",
+   "clips": [
+    {
+     "slug": "us_under_cross_shadow",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Jesus prays for the very people putting him to death.",
+    "kw": "PRAYS FOR THEM"
+   },
+   "fx": {
+    "temp": 7700
+   },
+   "anchors": [
+    [
+     1.0,
+     0.5,
+     0.5
+    ],
+    [
+     1.5,
+     0.3,
+     0.55
+    ],
+    [
+     1.6,
+     0.52,
+     0.55
+    ]
+   ],
+   "panel_at": [
+    12.46,
+    12.81,
+    13.16
+   ],
+   "panel_slide": [
+    "left",
+    "up",
+    "down"
+   ],
+   "flash": true
+  },
+  {
+   "t": [
+    16.94,
+    22.06
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "face_on_cross_speaks",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "Father, forgive them; for they know not what they do.",
+    "speaker": "JESUS",
+    "ref": "Luke 23:34"
+   },
+   "fx": {
+    "temp": 7900
+   }
+  },
+  {
+   "t": [
+    22.06,
+    24.22
+   ],
+   "tpl": "two_v",
+   "clips": [
+    {
+     "slug": "psalm22_scroll_david",
+     "motion": "pushin"
+    },
+    {
+     "slug": "seamless_robe_lots_cast",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Luke records it as they gambled:",
+    "kw": "GAMBLED"
+   },
+   "fx": {
+    "temp": 7700
+   }
+  },
+  {
+   "t": [
+    24.22,
+    28.0
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "psalm22_scroll_david",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "And they parted his raiment, and cast lots.",
+    "speaker": "SCRIPTURE",
+    "ref": "Luke 23:34 / Psalm 22:18"
+   },
+   "fx": {
+    "temp": 7800
+   }
+  },
+  {
+   "t": [
+    28.0,
+    32.37
+   ],
+   "tpl": "big_inset",
+   "clips": [
+    {
+     "slug": "executioner_ignorance",
+     "motion": "pushin"
+    },
+    {
+     "slug": "nail_through_hand",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "It does not excuse the sin; it intercedes for the sinner.",
+    "kw": "INTERCEDES"
+   },
+   "fx": {
+    "temp": 7500
+   }
+  },
+  {
+   "t": [
+    32.37,
+    36.2
+   ],
+   "tpl": "hero_band3",
+   "clips": [
+    {
+     "slug": "golgotha_hill_wide",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "The sin that put him there was ours too.",
+    "kw": "OURS TOO"
+   },
+   "fx": {
+    "temp": 7300
+   },
+   "anchors": [
+    [
+     1.0,
+     0.5,
+     0.28
+    ],
+    [
+     1.45,
+     0.5,
+     0.18
+    ],
+    [
+     1.6,
+     0.5,
+     0.72
+    ]
+   ],
+   "panel_at": [
+    32.37,
+    32.67,
+    32.97
+   ],
+   "panel_slide": [
+    "up",
+    "left",
+    "down"
+   ],
+   "flash": true,
+   "whip": true
+  },
+  {
+   "t": [
+    36.2,
+    39.8
+   ],
+   "tpl": "stack_h",
+   "clips": [
+    {
+     "slug": "willing_offering",
+     "motion": "pushin",
+     "bias": [
+      0.5,
+      0.4
+     ]
+    },
+    {
+     "slug": "darkness_veil_torn",
+     "motion": "pushin",
+     "bias": [
+      0.5,
+      0.45
+     ]
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He gave himself willingly.",
+    "kw": "WILLINGLY"
+   },
+   "fx": {
+    "temp": 7000
+   }
+  },
+  {
+   "t": [
+    39.8,
+    42.84
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "risen_interceding_christ",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "He still lives to make intercession for sinners.",
+    "kw": "HE LIVES"
+   },
+   "fx": {
+    "temp": 6400
+   }
+  },
+  {
+   "t": [
+    42.84,
+    48.5
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "willing_offering",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "redletter",
+    "text": "While we were yet sinners, Christ died for us.",
+    "speaker": "SCRIPTURE",
+    "ref": "Romans 5:8"
+   },
+   "fx": {
+    "temp": 6000,
+    "rays": {
+     "at": [
+      0.1,
+      0.03
+     ],
+     "strength": 0.5
+    }
+   }
+  },
+  {
+   "t": [
+    48.5,
+    51.85
+   ],
+   "tpl": "hero_frac3",
+   "clips": [
+    {
+     "slug": "risen_interceding_christ",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Pleading mercy before we knew we needed it.",
+    "kw": "MERCY"
+   },
+   "fx": {
+    "temp": 5800
+   },
+   "anchors": [
+    [
+     1.15,
+     0.5,
+     0.4
+    ],
+    [
+     1.55,
+     0.5,
+     0.21
+    ],
+    [
+     1.5,
+     0.3,
+     0.82
+    ]
+   ],
+   "panel_at": [
+    48.5,
+    48.85,
+    49.2
+   ],
+   "panel_slide": [
+    "left",
+    "up",
+    "down"
+   ],
+   "flash": true
+  },
+  {
+   "t": [
+    51.85,
+    54.4
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "risen_mercy_hand",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "That mercy is held out to you now",
+    "kw": "HELD OUT TO YOU"
+   },
+   "fx": {
+    "temp": 5400
+   },
+   "punch": true,
+   "border_break": {
+    "at": 52.1
+   },
+   "sfx": [
+    [
+     "dawn_morning_warm",
+     51.95,
+     -13
+    ]
+   ]
+  },
+  {
+   "t": [
+    54.4,
+    57.15
+   ],
+   "tpl": "full",
+   "clips": [
+    {
+     "slug": "risen_mercy_hand",
+     "motion": "pushin"
+    }
+   ],
+   "cap": {
+    "type": "caption",
+    "text": "Come, and receive it by faith.",
+    "kw": "BY FAITH"
+   },
+   "fx": {
+    "temp": 4900
+   }
+  }
+ ]
+}

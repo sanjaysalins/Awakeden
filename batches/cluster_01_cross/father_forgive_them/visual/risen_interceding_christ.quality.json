@@ -1,0 +1,15 @@
+{
+  "slug": "risen_interceding_christ",
+  "hash": "c4ac1ee8802f6c49",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "dry-healed palm retouch 2026-07-15, eye-verified palm crops full-res",
+  "reviewer": "in-chat-agent"
+}

@@ -1,0 +1,15 @@
+{
+  "slug": "psalm22_scroll_david",
+  "hash": "fe2eeeea654b79bf",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "Wave E eye-audit in chat 2026-07-15; live-pilot/corpus-gated art",
+  "reviewer": "in-chat-agent"
+}

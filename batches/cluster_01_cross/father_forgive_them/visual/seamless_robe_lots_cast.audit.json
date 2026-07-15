@@ -1,0 +1,10 @@
+{
+ "image": "seamless_robe_lots_cast.png",
+ "verdict": "PASS",
+ "flags": [
+  "07-04 redo-batch fix: Christ ON the centre cross alive w/ crown (was the CRITICAL empty-cross storm fail), 4 soldiers, stone lots; NOTE side crosses empty (thieves not shown) - carried defensible, flagged at wave gate",
+  "vision-audited in-chat by Claude 2026-07-15 (Wave E migration eye pass)"
+ ],
+ "reviewer": "in-chat-agent",
+ "stage": "content"
+}

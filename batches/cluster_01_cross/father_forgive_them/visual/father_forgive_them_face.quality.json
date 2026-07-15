@@ -1,0 +1,15 @@
+{
+  "slug": "father_forgive_them_face",
+  "hash": "778a1d8f98087c21",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "prayer-close CU; no thorn crown (corpus continuity note) - user wave-gate eyes requested",
+  "reviewer": "in-chat-agent"
+}

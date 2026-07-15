@@ -1,22 +1,41 @@
-# RESUME — next session (updated 2026-07-14 late night — WAVES A–D COMPLETE, rollout nearly done)
+# RESUME — next session (updated 2026-07-15 — WAVE E COMPLETE: ALL 14 rollout pieces at the gold master)
 
-## 🌅 FIRST TOMORROW: user wave-gate review of Waves B/C/D, then Wave E (the last piece)
-**All 13 rollout pieces except father_forgive_them are now at the hybrid gold master** (grids +
-cold→warm fx arcs + smooth motion + living-light Kling clips), every rollout gate PASS, every old
-final backed up as `<piece>_sfx.bak_prelivinglight.mp4`.
+## 🌅 FIRST: user wave-gate review of Waves B/C/D/E, then publish refresh
+**The corpus rollout is BUILT 14/14** — father_forgive_them (the last piece, the old mocomic
+pilot) migrated to the livingpage gold master 2026-07-15: new `piece.json` + 16-beat spec,
+16 gates green (rollout PASS w/ documented 1-living-light exception, stills gate 14/14,
+suite 323 green). Final = `visual/father_forgive_them_sfx.mp4` (57.17s).
 
-1. **USER WAVE GATE (outstanding for B/C/D):** open the `visual/_review/wave_compare/index.html`
-   page in each upgraded piece. Wave D pages:
+1. **USER WAVE GATE (outstanding for B/C/D/E):** open `visual/_review/wave_compare/index.html`
+   in each upgraded piece. Wave E page:
+   - `file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_01_cross/father_forgive_them/visual/_review/wave_compare/index.html`
+   Wave D pages:
    - `file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_02_resurrection/empty_tomb_john208/visual/_review/wave_compare/index.html`
    - `file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/_review/wave_compare/index.html`
-   **Taste calls waiting on the user:** (a) jonah `mercy_hand_into_deep` v2 — water-ripple rings
-   form around the submerged figure where the light lands (face stays frozen; v1 glowing-eyes
-   REJECT is parked in `clips/_rejected/`); (b) hands_of_light_open final starburst (flagged in
-   Wave B). Checklists seeded: `visual/wave_checklist.json` in both Wave D pieces.
-2. **WAVE E — father_forgive_them** mocomic→livingpage migration: separately scoped, needs its own
-   quote before any spend. Headroom ≈ 245cr of the 485 envelope (≈ 240cr committed, disk-basis).
-3. Then: publish refresh across the upgraded pieces (`publish_meta.json` / upload kits are stale
-   where beats changed).
+   **Taste calls waiting on the user:** (a) jonah `mercy_hand_into_deep` v2 ripple-rings;
+   (b) hands_of_light_open final starburst (Wave B); (c) Wave E swapped stills — the fixed
+   `seamless_robe_lots_cast` (empty side crosses note) + `father_forgive_them_face` (no crown).
+2. Then: publish refresh across the upgraded pieces (`publish_meta.json` / upload kits are stale
+   where beats changed). father_forgive_them's pack must repoint from the mocomic to the new final.
+
+### ✅ WAVE E shipped 2026-07-15 — father_forgive_them mocomic→livingpage migration
+- **$0 prep:** provenance archaeology found the LIVE pilot played a retired bible-fail still
+  (storm/empty-cross lots art) — migration installs the 07-04 fix; `golgotha_hill_wide` swapped
+  to the corpus 3-crucified still (fft's own had EMPTY crosses); red-letter Luke 23:34 beat now
+  plays face_on_cross_speaks (Christ ON the cross). 3 corpus clips + the risen_mercy_hand
+  living-light clip inherited $0 (byte-identical + hash-bound).
+- **`willing_offering` re-rendered life-size** (user caught the old still's GIANT Christ, ~5
+  mourner-heights): 3 BytePlus rolls ~$0.15, best-of + lightning retouched out (darkness≠storm).
+- **🔴 LIVING-LIGHT LESSON (memory `living-light-no-fresh-blood`): 5/5 Kling rejects, 37.5cr** —
+  Kling grows/INVENTS/REGENERATES blood on ANY still with wound-marked palms facing camera,
+  even after dry-retouching the pixels. LL is only safe on wound-free stills. Rejects parked in
+  `clips/_rejected/`. User granted the 1-LL exception (auditable
+  `animate.living_light_exception` in piece.json; rollout_gate honors user+date+reason, 2 new
+  tests); the Rom 5:8 reveal carries $0 PIL god-rays; the landing plays the free
+  risen_mercy_hand LL clip.
+- Wave E spend: 37.5cr Kling (all rejects) + ~$0.30 BytePlus. Rollout total ≈ 277.5/485cr.
+- Migration script (idempotent, re-runnable): `batches/cluster_01_cross/father_forgive_them/wave_e_migrate.py`;
+  sfx bed added to `sfx_pilots/build_cluster1_sfx.py` (old mocomic cut() special-case removed).
 
 ### ✅ WAVE D shipped tonight (2026-07-14 late) — empty_tomb + sign_of_jonah
 - **empty_tomb_john208**: 9 grids (55% full), 20-beat 6800→7900→4900K arc. The risen_christ_wounds

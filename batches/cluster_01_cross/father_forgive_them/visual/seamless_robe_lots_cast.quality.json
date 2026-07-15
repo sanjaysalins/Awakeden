@@ -1,0 +1,15 @@
+{
+  "slug": "seamless_robe_lots_cast",
+  "hash": "2bb3c1fe0a965feb",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "07-04 bible-fix (Christ on cross alive); NOTE empty side crosses flagged for user wave gate",
+  "reviewer": "in-chat-agent"
+}

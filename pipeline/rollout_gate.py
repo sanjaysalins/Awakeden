@@ -95,11 +95,20 @@ def check_piece(piece_dir: Path) -> list[str]:
     # living-light: at least one Kling-native lit clip, and the LANDING must carry light
     # (spec fx rays or a living_light clip) - every cut closes on Christ, lit.
     ll = {}
+    ll_exc = None
     if pj_p.is_file():
         pj = json.loads(pj_p.read_text(encoding="utf-8"))
         ll = (pj.get("animate") or {}).get("living_light") or {}
-    if len(ll) < MIN_LIVING_LIGHT:
-        fails.append(f"{len(ll)} animate.living_light clip(s) < {MIN_LIVING_LIGHT} "
+        ll_exc = (pj.get("animate") or {}).get("living_light_exception")
+    # user-granted exception (2026-07-15, father_forgive_them): a piece may ship with 1
+    # living-light clip ONLY with an explicit, auditable grant - user + date + reason
+    # (e.g. no second wound-free still; Kling regenerates blood on wound-marked palms,
+    # memory living-light-no-fresh-blood). Never silent: malformed grants don't count.
+    min_ll = MIN_LIVING_LIGHT
+    if isinstance(ll_exc, dict) and ll_exc.get("user") and ll_exc.get("date") and ll_exc.get("reason"):
+        min_ll = 1
+    if len(ll) < min_ll:
+        fails.append(f"{len(ll)} animate.living_light clip(s) < {min_ll} "
                      f"(default 2/piece: a reveal + the landing)")
     # double-lighting (panel convergent flag): a beat played by a living-light clip must
     # not ALSO carry the PIL rays overlay - Kling IS the light there

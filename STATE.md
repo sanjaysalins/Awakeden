@@ -1,6 +1,16 @@
 # STATE.md — progress tracker
 
-**Last updated:** 2026-07-14 (late night — WAVES A–D COMPLETE; rollout = 12/13 pieces at gold master)
+**Last updated:** 2026-07-15 (WAVE E COMPLETE — rollout BUILT 14/14; user wave gates B/C/D/E pending)
+**Status (2026-07-15 — WAVE E DONE):** father_forgive_them migrated mocomic→livingpage gold master
+(new piece.json + 16-beat spec + 14 stills eye-audited + 10 clips inherited $0 incl. the
+risen_mercy_hand LL copy). Fixed en route: live pilot was playing a RETIRED bible-fail lots still
+(storm/empty-cross) — 07-04 fix installed; golgotha swapped to the corpus 3-crucified still; user
+caught GIANT-scale willing_offering → re-rendered life-size (~$0.15, lightning retouched out).
+🔴 LL lesson EXTENDED (37.5cr, 5/5 rejects, memory `living-light-no-fresh-blood`): Kling
+REGENERATES blood even on dry-retouched wound-palms — LL only on wound-FREE stills; user granted
+the auditable 1-LL exception (`animate.living_light_exception`, gate + 2 tests). Reveal = $0 rays;
+landing = free LL clip. Final `visual/father_forgive_them_sfx.mp4` 57.17s; suite 323/1; rollout
+spend ≈ 277.5/485cr. NEXT = user wave gates B/C/D/E → publish refresh. **Full pickup: RESUME.md top.**
 **Status (2026-07-14 late night — WAVE D DONE):** empty_tomb + sign_of_jonah upgraded + rebuilt through
 sfx; gates PASS. empty_tomb: risen_wounds ×5 de-duped (2 uses + $0 byte-identical `risen_christ_seeking`
 copy from women + NEW `tomb_doorway_dawn` LL still — 3 rolls: v1 wooden-door period FAIL, v2 corpse-in-linen

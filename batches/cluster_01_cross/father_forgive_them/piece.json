@@ -1,0 +1,355 @@
+{
+ "piece": "father_forgive_them",
+ "title": "Father, Forgive Them (Luke 23:34)",
+ "cluster": "cluster_01_cross",
+ "verse": "Luke 23:34 + Psalm 22:18 + Romans 5:8 + Hebrews 7:25",
+ "stills": {
+  "model": "seedream-4-5-251128",
+  "size": "1440x2560",
+  "jobs": {
+   "nail_through_hand": {
+    "prompt": "inked biblical graphic-novel close-up of a single forged square iron nail through the center of an open human palm pressed to dark rough cross-wood, one dominant subject, bold black ink linework, flat muted crimson and grey, reverent, cinematic-1st-century, dramatic side light",
+    "ref": null
+   },
+   "executioner_ignorance": {
+    "prompt": "inked biblical graphic-novel close of a single weathered 1st-century Roman executioner still at his work, one hand gripping a heavy iron mallet, brow furrowed in hard duty, unaware of who he kills, ordinary grey daylight (not glorified light), one dominant subject, bold black ink, flat dusty tones, reverent, cinematic",
+    "ref": null
+   },
+   "soldiers_gambling_establish": {
+    "prompt": "inked biblical graphic-novel wide of a crucifixion on a bleak hill: the full crucified man on a tall wooden cross, head bowed, arms nailed along the beam, and at the foot two or three 1st-century Roman soldiers crouched in the dust casting a few pale rounded pebbles over a folded woven garment, one dominant grouping, bold black ink, flat ochre and iron-grey, reverent, dark storm sky, period-accurate",
+    "ref": null
+   },
+   "seamless_robe_lots_cast": {
+    "prompt": "inked biblical graphic-novel of a seamless woven robe held up in one Roman soldier's hand while two or three clearly-thrown pale lots land in the dust below, the gambling read unmistakable through the soldiers' intent crouch, one dominant subject, bold black ink, flat ochre and grey, reverent, low angle, 1st-century",
+    "ref": null
+   },
+   "crowd_mocking": {
+    "prompt": "inked biblical graphic-novel of a 1st-century crowd mocking, with only THREE distinct foreground mockers, each a clearly DIFFERENT person — a grizzled grey-bearded old elder, a younger clean-shaven man, and a heavy middle-aged man with a dark beard — jeering upward with open scornful mouths and pointing hands, in dusty earth-toned head-wraps and coarse tunics; behind them the rest of the crowd is a DARK FEATURELESS SILHOUETTE MASS with no individual faces, bold black ink, flat dusk palette, reverent tone despite the scorn, tension",
+    "ref": null
+   },
+   "face_on_cross_speaks": {
+    "prompt": "inked biblical graphic-novel of the face, shoulders and outstretched arms of the crucified Christ on the wooden crossbeam, eyes lowered with compassion, lips just parting to speak, one dominant subject, bold black ink linework, flat warm skin against a dim storm sky, reverent, cinematic, 1st-century, soft rim light",
+    "ref": null
+   },
+   "father_forgive_them_face": {
+    "prompt": "inked biblical graphic-novel intimate close of the crucified Christ's face in prayer, eyes lifting past the frame toward the light, brow easing, one dominant subject, bold black ink, flat warm tones, reverent, cinematic-negative space above for later caption furniture",
+    "ref": null
+   },
+   "psalm22_scroll_david": {
+    "prompt": "inked biblical graphic-novel of an aged hand of an ancient Hebrew psalmist resting on a half-unrolled scroll seen at a steep raking side-angle so the parchment is strongly foreshortened and its writing reads only as faint indistinct rhythmic horizontal ink strokes with no separate letters and no alphabet; a young white lamb lying quietly in FRONT of the scroll as the clear focal subject (the foreshadowed sacrifice), a small clay oil lamp casting warm amber light, one dominant subject, bold black ink of the SAME line-weight and reverence as the Golgotha scenes, flat amber lamplight, reverent, 1st-millennium-BC",
+    "ref": null
+   },
+   "us_under_cross_shadow": {
+    "prompt": "inked biblical graphic-novel of two or three ordinary bowed figures kneeling small in the dust as the long shadow of a cross falls across them, one dominant grouping, bold black ink, flat muted earth tones, reverent, wide, the cross implied only by its shadow",
+    "ref": null
+   },
+   "golgotha_hill_wide": {
+    "prompt": "a wide view of three crosses standing on the low rocky rise of Golgotha outside the walls of Jerusalem, the crosses short rough wooden posts, the crucified men stripped to plain loincloths with their feet hanging just above the bystanders' heads, the centre cross bearing the crucified Christ, his bare dark hair against the open sky, a crucified thief stripped to a loincloth on each cross beside him, small mourners standing close below, low stone houses with plain flat earthen roofs beyond the wall, the sky a smooth deep black at midday, the hill and city lying dim in deep shadow, wide, vertical, 1st-century Judea",
+    "ref": null
+   },
+   "willing_offering": {
+    "prompt": "a life-size crucifixion on a bare rocky hilltop at midday, the sky a smooth deep featureless black, darkness lying over the whole land: the crucified Christ with a thorn crown hangs with both arms stretched wide along the full crossbeam, open palms flat against the wood, each palm marked with one small dark dry wound, head bowed in willing surrender, a kneeling hooded mourner at the very foot of the cross, the mourner's bowed head reaching almost to Christ's feet, one single diagonal shaft of warm golden light falling across him through the darkness, 1st-century Judea, vertical",
+    "ref": "../crucifixion_foretold_ps2218/visual/face_on_cross.png"
+   },
+   "darkness_veil_torn": {
+    "prompt": "inked biblical graphic-novel of a great heavy temple veil torn from top to bottom down its middle under a sky of deep darkness, the rent opening into a shadowed empty holy place beyond, only the torn way opened, one dominant subject, bold black ink, flat near-monochrome dark palette, reverent, awe, 1st-century",
+    "ref": null
+   },
+   "risen_interceding_christ": {
+    "prompt": "inked biblical graphic-novel of the risen Christ as the great high priest interceding at the throne of heaven: standing in three-quarter view, both open hands lifted upward, the centre of each open palm marked by a single old HEALED scar — a thin dark closed mark lying flush and flat within the skin in the same warm skin tone, long-healed; fingers relaxed with plain natural fingertips, his bearded face lifted in earnest pleading toward a high radiant heavenly light above (the light only, no figure in it), and low behind him a single small shadowed kneeling sinner he stands between and pleads for, Christ the one dominant subject, flowing robe, bold black ink, flat warm gold and deep shadow, hard-edged light shaft from above, reverent, cinematic, 1st-century",
+    "ref": null
+   },
+   "risen_mercy_hand": {
+    "prompt": "inked biblical graphic-novel of the risen Christ facing forward, one open hand held out low bearing the faint flat healed mark, warm golden light",
+    "ref": null
+   }
+  }
+ },
+ "animate": {
+  "duration": 5,
+  "aspect_ratio": "9:16",
+  "moves": {},
+  "living_light": {
+   "risen_mercy_hand": {
+    "target": "the whole outstretched arm and the light around it",
+    "light": "the glow around the outstretched arm slowly builds and breathes, soft rays fanning outward, warm haze shimmering at the edges of the light"
+   }
+  },
+  "living_light_exception": {
+   "user": "sanjay",
+   "date": "2026-07-15",
+   "reason": "cross piece has no second wound-free still that fits a lit beat; 5/5 Kling blood rejects on wound-marked stills (37.5cr, parked in clips/_rejected/); the Rom 5:8 reveal carries $0 fx.rays instead"
+  }
+ },
+ "score": {
+  "src": "visual/livingpage_short.spec_preview.mp4",
+  "out": "visual/father_forgive_them_scored.mp4",
+  "dark": "lonely_searching_a.mp3",
+  "grace": "sacred_grace_rise_a.mp3",
+  "base_seconds": 57.15,
+  "outro_hold": 1.5,
+  "dark_trim_end": "33",
+  "grace_trim": [
+   "20",
+   "90"
+  ],
+  "crossfade": "6",
+  "tpad": "1.5",
+  "dips": [
+   [
+    "16.94",
+    "22.06",
+    "0.4"
+   ],
+   [
+    "42.84",
+    "48.5",
+    "0.35"
+   ]
+  ],
+  "cta_dip": [
+   "51.85",
+   "0.5"
+  ],
+  "dips_meta": [
+   {
+    "phrase": "Father, forgive them; for they know not what they do."
+   },
+   {
+    "phrase": "While we were yet sinners, Christ died for us."
+   }
+  ],
+  "cta_meta": {
+   "phrase": "That mercy is held out to you now: come, and receive it by faith."
+  }
+ },
+ "register": {
+  "id_prefix": "fft",
+  "source": "byteplus seedream-4-5",
+  "created": "2026-07-15",
+  "style": "graphic_novel_inked",
+  "aspect": "9:16",
+  "palette": "inked cel-flat, storm dark to risen gold",
+  "mood": "the prayer from the cross for the ones driving the nails",
+  "tags_still": [
+   "livingpage",
+   "luke2334",
+   "father_forgive_them",
+   "cross"
+  ],
+  "tags_clip": [
+   "livingpage",
+   "luke2334",
+   "kling"
+  ],
+  "used_in": [
+   "father_forgive_them short"
+  ],
+  "clip_title_suffix": " (clip)",
+  "clip_source": "pilot byteplus i2v / corpus HF kling3_0 pro 9:16 / pierced LL copy",
+  "extra_rows": [],
+  "stills": {
+   "nail_through_hand": {
+    "subject": "a forged square iron nail through the open hand on the beam",
+    "characters": [],
+    "elements": [
+     "nail",
+     "open hand",
+     "rope",
+     "beam",
+     "blood"
+    ],
+    "setting": "the cross, close",
+    "scope": "specific",
+    "doctrine": "they pierced my hands and my feet (Psalm 22:16)"
+   },
+   "executioner_ignorance": {
+    "subject": "the executioner's fists mid-swing, mallet and nail",
+    "characters": [
+     "Roman executioner"
+    ],
+    "elements": [
+     "mallet",
+     "nail",
+     "bracers"
+    ],
+    "setting": "Golgotha",
+    "scope": "specific",
+    "doctrine": "they know not what they do (Luke 23:34)"
+   },
+   "soldiers_gambling_establish": {
+    "subject": "four soldiers casting lots beneath the occupied cross",
+    "characters": [
+     "four Roman soldiers",
+     "the crucified Christ"
+    ],
+    "elements": [
+     "lot-stones",
+     "garment",
+     "jug",
+     "cross",
+     "city wall"
+    ],
+    "setting": "Golgotha",
+    "scope": "specific",
+    "doctrine": "then the soldiers... took his garments... and also his coat (John 19:23)"
+   },
+   "seamless_robe_lots_cast": {
+    "subject": "lots cast for the garments while Christ hangs alive above",
+    "characters": [
+     "Roman soldiers",
+     "the crucified Christ"
+    ],
+    "elements": [
+     "lot-stones",
+     "garments",
+     "three crosses"
+    ],
+    "setting": "Golgotha",
+    "scope": "specific",
+    "doctrine": "they parted his raiment, and cast lots (Luke 23:34)"
+   },
+   "crowd_mocking": {
+    "subject": "three mockers pointing up, the crowd in shadow",
+    "characters": [
+     "three mockers",
+     "shadow crowd"
+    ],
+    "elements": [
+     "pointing hands",
+     "open mouths"
+    ],
+    "setting": "Golgotha",
+    "scope": "neutral",
+    "doctrine": "and the people stood beholding... deriding him (Luke 23:35)"
+   },
+   "face_on_cross_speaks": {
+    "subject": "the crucified Christ, face lifted, speaking from the cross",
+    "characters": [
+     "the crucified Christ"
+    ],
+    "elements": [
+     "cross",
+     "nailed hands",
+     "lifted face"
+    ],
+    "setting": "the cross, low angle",
+    "scope": "specific",
+    "doctrine": "Father, forgive them (Luke 23:34)"
+   },
+   "father_forgive_them_face": {
+    "subject": "close of Christ's face lifted in prayer at the cross",
+    "characters": [
+     "the crucified Christ"
+    ],
+    "elements": [
+     "lifted face",
+     "cross beam"
+    ],
+    "setting": "the cross, close",
+    "scope": "specific",
+    "doctrine": "Father, forgive them (Luke 23:34)"
+   },
+   "psalm22_scroll_david": {
+    "subject": "the aged psalmist over a blank scroll, lyre and clay lamp",
+    "characters": [
+     "David the psalmist"
+    ],
+    "elements": [
+     "scroll",
+     "lyre",
+     "clay lamp",
+     "night"
+    ],
+    "setting": "night chamber, c.1000 BC",
+    "scope": "specific",
+    "doctrine": "they part my garments among them, and cast lots upon my vesture (Psalm 22:18)"
+   },
+   "us_under_cross_shadow": {
+    "subject": "seven bowed mourners under the long shadow of the cross",
+    "characters": [
+     "seven bowed figures"
+    ],
+    "elements": [
+     "cross shadow",
+     "bowed heads",
+     "dust"
+    ],
+    "setting": "Golgotha",
+    "scope": "neutral",
+    "doctrine": "the sin that put him there was ours (Rom 3:23)"
+   },
+   "golgotha_hill_wide": {
+    "subject": "three occupied crosses on Golgotha outside the wall, midday-black sky",
+    "characters": [
+     "the crucified Christ",
+     "two thieves",
+     "mourners"
+    ],
+    "elements": [
+     "three crosses",
+     "city wall",
+     "black sky"
+    ],
+    "setting": "Golgotha wide",
+    "scope": "specific",
+    "doctrine": "and there were also two other, malefactors, led with him (Luke 23:32)"
+   },
+   "willing_offering": {
+    "subject": "the crucified Christ under a single golden shaft through the darkness",
+    "characters": [
+     "the crucified Christ",
+     "kneeling mourner"
+    ],
+    "elements": [
+     "cross",
+     "light shaft",
+     "crown of thorns",
+     "darkness"
+    ],
+    "setting": "Golgotha",
+    "scope": "specific",
+    "doctrine": "he gave himself for us (Titus 2:14); no man taketh it from me (John 10:18)"
+   },
+   "darkness_veil_torn": {
+    "subject": "the temple veil torn from top to bottom",
+    "characters": [],
+    "elements": [
+     "torn veil",
+     "temple columns"
+    ],
+    "setting": "the temple",
+    "scope": "specific",
+    "doctrine": "the veil of the temple was rent in the midst (Luke 23:45)"
+   },
+   "risen_interceding_christ": {
+    "subject": "the risen Christ interceding in a shaft of light, a sinner kneeling below",
+    "characters": [
+     "the risen Christ",
+     "kneeling sinner"
+    ],
+    "elements": [
+     "raised healed hands",
+     "light shaft"
+    ],
+    "setting": "heavenly light",
+    "scope": "specific",
+    "doctrine": "he ever liveth to make intercession for them (Hebrews 7:25)"
+   },
+   "risen_mercy_hand": {
+    "subject": "the risen Christ holding out the open healed hand",
+    "characters": [
+     "the risen Christ"
+    ],
+    "elements": [
+     "open hand",
+     "healed mark",
+     "warm light"
+    ],
+    "setting": "golden light",
+    "scope": "hero",
+    "doctrine": "come, and receive mercy by faith (Rom 5:8; Heb 4:16)"
+   }
+  }
+ }
+}

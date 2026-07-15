@@ -1,0 +1,15 @@
+{
+  "slug": "face_on_cross_speaks",
+  "hash": "a7099cb1237e0e01",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "Wave E eye-audit in chat 2026-07-15; live-pilot/corpus-gated art",
+  "reviewer": "in-chat-agent"
+}

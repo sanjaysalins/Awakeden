@@ -23,12 +23,23 @@ CL = REPO / "batches" / "cluster_01_cross"
 
 
 def cut(piece: str) -> Path:
-    if piece == "father_forgive_them":
-        return CL / piece / "visual" / "_byteplus" / "father_forgive_them_mocomic_v2_scored.mp4"
+    # (father_forgive_them migrated to the standard livingpage layout 2026-07-15;
+    # its old mocomic special-case path is gone)
     return CL / piece / "visual" / f"{piece}_scored.mp4"
 
 
 PIECES: dict[str, list] = {
+    # 57.15s — nails -> gambling -> the prayer -> Ps22 receipt -> ours too -> risen mercy
+    # (Wave E livingpage migration 2026-07-15. Build embeds nail_strike + dawn accents +
+    # heartbeat 28-36.2 + veil_tearing at the border-break - the bed stays UNDER those.)
+    "father_forgive_them": [
+        layer("wind",   "wind_desert_bleak",    "loop",    0.0, 16.9, -40.0, fin=0.5, fout=2.0),
+        layer("lots",   "coins_clinking",       "oneshot", 4.6, 2.2,  -32.0, fout=0.8),
+        layer("crowd",  "crowd_murmur_distant", "loop",    7.0, 3.3,  -39.0, fin=0.8, fout=1.0),
+        layer("hollow", "air_hollow_desolate",  "loop",   16.9, 11.1, -39.0, filt="lowpass=f=3000", fin=1.5, fout=1.5),
+        layer("lamp",   "fire_crackling",       "loop",   22.1, 5.9,  -42.0, filt="lowpass=f=4200", fin=1.0, fout=1.0),
+        layer("rumble", "rumble_deep_sub",      "oneshot",36.3, 4.0,  -34.0, fout=2.5),
+    ],
     # 72.54s — David writes it, soldiers gamble it: night scroll -> Golgotha -> lots -> dawn
     "crucifixion_foretold_ps2218": [
         layer("wind",   "wind_desert_bleak",   "loop",    0.0, 31.0, -40.0, fin=0.5, fout=2.0),

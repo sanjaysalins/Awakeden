@@ -1,0 +1,15 @@
+{
+  "slug": "willing_offering",
+  "hash": "d992554c00abfd3f",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": true,
+    "believable": true,
+    "reads_as_intended": true,
+    "not_grotesque": true,
+    "style_consistent": true,
+    "world_consistent": true
+  },
+  "notes": "life-size v3 re-render + lightning retouch, eye-verified full-res + hand crops 2026-07-15",
+  "reviewer": "in-chat-agent"
+}
