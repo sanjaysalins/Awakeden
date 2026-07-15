@@ -68,7 +68,10 @@ def _letters(s: str) -> str:
 def match_manifest(item_title: str, item_slug: str, pieces: dict[str, Path]) -> str | None:
     """Best lane piece for a manifest item: letters-only containment (handles short
     titles + the ps22-NN- prefixes) with token overlap as the tie-breaker."""
-    slug_l = _letters(item_slug.replace("ps22", "").replace("ew", ""))
+    # NOTE: do NOT strip "ew" - the eyewitness lane lives in longform/, never in
+    # batches/, and stripping it made ew-jonah letter-match sign_of_jonah's piece
+    # (the board then showed a FINAL for a piece with no video at all, 2026-07-15)
+    slug_l = _letters(item_slug.replace("ps22", ""))
     title_l = _letters(item_title)
     want = _norm_tokens(item_title) | _norm_tokens(item_slug.replace("-", " "))
     best, score = None, 0
