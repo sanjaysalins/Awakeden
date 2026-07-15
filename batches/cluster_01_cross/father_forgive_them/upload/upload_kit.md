@@ -1,7 +1,7 @@
 # Upload Kit — Father, Forgive Them
 
 **Status:** RED-TEAMED  ·  **Gates:** FAILURES ❌
-**Video:** `C:\Users\sanjay\PycharmProjects\JesusInTheBible\batches\cluster_01_cross\father_forgive_them\visual\_byteplus\father_forgive_them_mocomic_v2_scored.mp4`
+**Video:** `C:\Users\sanjay\PycharmProjects\JesusInTheBible\batches\cluster_01_cross\father_forgive_them\visual\_byteplus\father_forgive_them_sfx.mp4`
 **Format:** short  ·  **Series:** Words from the Cross  ·  **Anchor:** Luke 23:34
 
 > Copy each block straight into the platform's upload form. Title, description,
