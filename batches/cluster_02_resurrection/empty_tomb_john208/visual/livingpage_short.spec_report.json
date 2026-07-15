@@ -5,43 +5,33 @@
   "held_gt6s": [
    6.07
   ],
-  "slams": 0,
+  "slams": 18,
   "kling_or_punch_or_slam_pct": 100,
-  "tier1_pct": 85,
+  "tier1_pct": 10,
   "reuse_violations": [
    "mary_runs_predawn: beats 3->4 (gap 1 < 8)",
    "napkin_wrapped_apart: beats 7->8 (gap 1 < 8)",
-   "stone_rolled_dawn: beats 1->10 SAME CROP (1.8, (0.5, 0.5), 1.0, 'pushin')",
    "linen_left_lying: beats 6->11 (gap 5 < 8)",
    "john_believes_inside: beats 9->12 (gap 3 < 8)",
-   "stone_taken_away_dark: beats 2->14 SAME CROP (1.8, (0.5, 0.5), 1.0, 'pushin')",
    "jesus_shows_thomas: beats 15->16 (gap 1 < 8)",
    "risen_christ_wounds: beats 13->17 (gap 4 < 8)",
-   "risen_christ_wounds: beats 17->18 (gap 1 < 8)",
-   "risen_christ_wounds: beats 18->19 (gap 1 < 8)",
-   "risen_christ_wounds: beats 19->20 (gap 1 < 8)"
+   "risen_christ_seeking: beats 19->20 (gap 1 < 8)"
   ],
-  "tier3_or_flagged_beats": [],
+  "tier3_or_flagged_beats": [
+   15
+  ],
   "standard_3b": {
-   "stills_over_2_uses": {
-    "risen_christ_wounds": 5
-   },
+   "stills_over_2_uses": {},
    "stills_fullbleed_twice": {
-    "stone_rolled_dawn": 2,
-    "stone_taken_away_dark": 2,
-    "mary_runs_predawn": 2,
-    "linen_left_lying": 2,
-    "napkin_wrapped_apart": 2,
-    "john_believes_inside": 2,
-    "risen_christ_wounds": 5,
-    "jesus_shows_thomas": 2
+    "risen_christ_seeking": 2
    },
-   "fullbleed_beat_pct": 100,
+   "fullbleed_beat_pct": 55,
    "slop_caption_beats": []
   },
   "ramps": 1,
   "whips": 3,
   "flash_inserts": 0,
+  "fx_beats": 20,
   "cut_ticks": false,
   "beats": 20
  },
@@ -63,8 +53,8 @@
    ],
    "punch": true,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -85,8 +75,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -97,8 +87,8 @@
     11.26
    ],
    "dur": 1.766667,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_band3",
+   "slams": 2,
    "slugs": [
     "mary_runs_predawn"
    ],
@@ -141,8 +131,8 @@
     18.74
    ],
    "dur": 2.566667,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_frac3",
+   "slams": 2,
    "slugs": [
     "two_disciples_running"
    ],
@@ -151,8 +141,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -163,8 +153,8 @@
     21.86
    ],
    "dur": 3.133333,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_frac3",
+   "slams": 2,
    "slugs": [
     "linen_left_lying"
    ],
@@ -173,8 +163,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -195,8 +185,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -207,8 +197,8 @@
     30.93
    ],
    "dur": 4.9,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_frac3",
+   "slams": 2,
    "slugs": [
     "napkin_wrapped_apart"
    ],
@@ -217,8 +207,8 @@
    ],
    "punch": true,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -229,8 +219,8 @@
     33.24
    ],
    "dur": 2.3,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_frac3",
+   "slams": 2,
    "slugs": [
     "john_believes_inside"
    ],
@@ -239,8 +229,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -251,8 +241,8 @@
     36.16
    ],
    "dur": 2.933333,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_band3",
+   "slams": 2,
    "slugs": [
     "stone_rolled_dawn"
    ],
@@ -283,8 +273,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -305,8 +295,8 @@
    ],
    "punch": true,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -317,8 +307,8 @@
     47.73
    ],
    "dur": 3.3,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_band3",
+   "slams": 2,
    "slugs": [
     "risen_christ_wounds"
    ],
@@ -327,8 +317,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -339,8 +329,8 @@
     53.15
    ],
    "dur": 5.4,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_band3",
+   "slams": 2,
    "slugs": [
     "stone_taken_away_dark"
    ],
@@ -349,8 +339,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -361,8 +351,8 @@
     55.69
    ],
    "dur": 2.566667,
-   "tpl": "full",
-   "slams": 0,
+   "tpl": "hero_frac3",
+   "slams": 2,
    "slugs": [
     "jesus_shows_thomas"
    ],
@@ -371,9 +361,9 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "box",
-    "flag": false
+    "tier": 3,
+    "style": "scrim",
+    "flag": true
    }
   },
   {
@@ -430,15 +420,15 @@
    "tpl": "full",
    "slams": 0,
    "slugs": [
-    "risen_christ_wounds"
+    "tomb_doorway_dawn"
    ],
    "sources": [
     "kling"
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -452,15 +442,15 @@
    "tpl": "full",
    "slams": 0,
    "slugs": [
-    "risen_christ_wounds"
+    "risen_christ_seeking"
    ],
    "sources": [
     "kling"
    ],
    "punch": true,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -474,15 +464,15 @@
    "tpl": "full",
    "slams": 0,
    "slugs": [
-    "risen_christ_wounds"
+    "risen_christ_seeking"
    ],
    "sources": [
     "kling"
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   }

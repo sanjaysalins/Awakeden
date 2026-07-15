@@ -1,0 +1,15 @@
+{
+  "slug": "tomb_doorway_dawn",
+  "hash": "039de59dfe00d9c6",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": false,
+    "believable": false,
+    "reads_as_intended": false,
+    "not_grotesque": false,
+    "style_consistent": false,
+    "world_consistent": false
+  },
+  "notes": "v3 vision-audited in chat: bare shelf + folded napkin, rock-cut opening, no door, no figure; period + doctrine clean",
+  "reviewer": "in-chat-agent"
+}

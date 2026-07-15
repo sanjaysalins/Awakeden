@@ -1,6 +1,44 @@
-# RESUME — next session (updated 2026-07-14 — DECISION 1 RESOLVED; effects/rollout path still open)
+# RESUME — next session (updated 2026-07-14 late night — WAVES A–D COMPLETE, rollout nearly done)
 
-## 🌅 NEXT: the two big asks (viral effects per-SEGMENT + corpus rollout) — see ⏭️ below
+## 🌅 FIRST TOMORROW: user wave-gate review of Waves B/C/D, then Wave E (the last piece)
+**All 13 rollout pieces except father_forgive_them are now at the hybrid gold master** (grids +
+cold→warm fx arcs + smooth motion + living-light Kling clips), every rollout gate PASS, every old
+final backed up as `<piece>_sfx.bak_prelivinglight.mp4`.
+
+1. **USER WAVE GATE (outstanding for B/C/D):** open the `visual/_review/wave_compare/index.html`
+   page in each upgraded piece. Wave D pages:
+   - `file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_02_resurrection/empty_tomb_john208/visual/_review/wave_compare/index.html`
+   - `file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/batches/cluster_02_resurrection/sign_of_jonah_matt1240/visual/_review/wave_compare/index.html`
+   **Taste calls waiting on the user:** (a) jonah `mercy_hand_into_deep` v2 — water-ripple rings
+   form around the submerged figure where the light lands (face stays frozen; v1 glowing-eyes
+   REJECT is parked in `clips/_rejected/`); (b) hands_of_light_open final starburst (flagged in
+   Wave B). Checklists seeded: `visual/wave_checklist.json` in both Wave D pieces.
+2. **WAVE E — father_forgive_them** mocomic→livingpage migration: separately scoped, needs its own
+   quote before any spend. Headroom ≈ 245cr of the 485 envelope (≈ 240cr committed, disk-basis).
+3. Then: publish refresh across the upgraded pieces (`publish_meta.json` / upload kits are stale
+   where beats changed).
+
+### ✅ WAVE D shipped tonight (2026-07-14 late) — empty_tomb + sign_of_jonah
+- **empty_tomb_john208**: 9 grids (55% full), 20-beat 6800→7900→4900K arc. The risen_christ_wounds
+  ×5 over-use fixed: kept at beats 13 (band3 sun/face/palms tour) + 17 (KJV, full); beats 19+20 land
+  on `risen_christ_seeking` **copied byte-identical from women_first_witnesses** (still + audit +
+  LL clip, verbatim-prompt hash-bound, $0); beat 18 "ABOUT YOU" = NEW still `tomb_doorway_dawn`
+  (living-light). New-still lesson: v1 drew a wooden door (period FAIL), v2 drew a corpse in the
+  linen (doctrine FAIL — the `empty-grave-clothes-draw-a-corpse` lint predicted it; "linen cloths
+  lying" is the trigger phrase, describe a bare shelf + folded cloth instead). v3 PASS, user-approved
+  in chat, animated (clip PASS). Stills-gate note: copied/new stills needed `stills_gate.py
+  --quality + --approve` rows in THIS piece before the build unblocked (fail-closed worked).
+- **sign_of_jonah_matt1240**: 7 grids (60% full), 19-beat arc + rays on the landing. Living-light =
+  `stone_rolled_dawn` (PASS first roll) + `mercy_hand_into_deep` (v2, see taste call above).
+  **Grid lesson (now in memory):** Christ-anchored stills can't grid — the panel-crop keep-box
+  (rightly) refuses to chop the figure, so all 3 panels came out near-identical full-figure Jesus;
+  swapped the grid to the storm ship (great) and returned jesus_and_scribes to full-bleed.
+- Wave D spend: 30cr Kling (4 clips incl. 1 reject) + ~$0.15 BytePlus (3 still rolls). Rollout
+  total ≈ 240/485cr.
+
+
+
+## (prior 2026-07-14 day — superseded) the two big asks (viral effects per-SEGMENT + corpus rollout)
 Big session on `batches/cluster_02_resurrection/women_first_witnesses_luke245`. The piece is **solid + shippable**
 (final = `…/visual/women_first_witnesses_luke245_sfx.mp4`, 82.06s, built 2026-07-13 17:01). Tests green.
 

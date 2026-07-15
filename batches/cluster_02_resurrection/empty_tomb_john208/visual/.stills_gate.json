@@ -68,6 +68,22 @@
       "approved": true,
       "approved_hash": "1e35d54caf452a3f",
       "approve_notes": "user approved 2026-07-10 (fact-card + world-canon rebuilds)"
+    },
+    "tomb_doorway_dawn": {
+      "hash": "039de59dfe00d9c6",
+      "quality": "PASS",
+      "quality_hash": "039de59dfe00d9c6",
+      "approved": true,
+      "approved_hash": "039de59dfe00d9c6",
+      "approve_notes": "user approved in chat 2026-07-14: 'the doorway still is approved, animate it'"
+    },
+    "risen_christ_seeking": {
+      "hash": "4c00dc97c30ed0dc",
+      "quality": "PASS",
+      "quality_hash": "4c00dc97c30ed0dc",
+      "approved": true,
+      "approved_hash": "4c00dc97c30ed0dc",
+      "approve_notes": "carries women_first_witnesses human approval; byte-identical copy"
     }
   }
 }

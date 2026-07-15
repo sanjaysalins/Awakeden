@@ -1,6 +1,16 @@
 # STATE.md — progress tracker
 
-**Last updated:** 2026-07-14 (night — WAVE A COMPLETE, at the human wave gate)
+**Last updated:** 2026-07-14 (late night — WAVES A–D COMPLETE; rollout = 12/13 pieces at gold master)
+**Status (2026-07-14 late night — WAVE D DONE):** empty_tomb + sign_of_jonah upgraded + rebuilt through
+sfx; gates PASS. empty_tomb: risen_wounds ×5 de-duped (2 uses + $0 byte-identical `risen_christ_seeking`
+copy from women + NEW `tomb_doorway_dawn` LL still — 3 rolls: v1 wooden-door period FAIL, v2 corpse-in-linen
+doctrine FAIL, v3 user-approved + animated PASS). jonah: LL = stone_rolled_dawn (1st-roll PASS) +
+mercy_hand_into_deep v2 (v1 glowing-eyes REJECT parked; v2 has water-ripple rings around the figure —
+USER TASTE CALL at the wave gate). 🔧 LESSON: Christ-anchored stills can't grid (keep-box refuses to chop
+the figure → 3 identical panels); grid seascapes/objects instead. Stills-gate fail-closed proved out
+(copied/new stills needed --quality/--approve rows in-piece). Wave D spend 30cr + ~$0.15; rollout total
+≈ 240/485cr (headroom ~245 for Wave E). NEXT = user wave-gate review B/C/D compare pages → Wave E
+(father_forgive_them migration, quote first) → publish refresh. **Full pickup: RESUME.md top.**
 **Status (2026-07-14 night — WAVE A DONE, awaiting user wave-gate review):** All 3 pieces
 (it_is_finished / pierced / crucifixion_foretold) upgraded to gold master + REBUILT through sfx:
 grids (anchors eyeballed per still), cold→warm arcs, smooth, living-light clips IN the finals.

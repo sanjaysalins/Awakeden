@@ -1,0 +1,15 @@
+{
+  "slug": "risen_christ_seeking",
+  "hash": "4c00dc97c30ed0dc",
+  "verdict": "PASS",
+  "axes": {
+    "anatomy": false,
+    "believable": false,
+    "reads_as_intended": false,
+    "not_grotesque": false,
+    "style_consistent": false,
+    "world_consistent": false
+  },
+  "notes": "byte-identical copy of women_first_witnesses approved still (sha-verified)",
+  "reviewer": "in-chat-agent"
+}
