@@ -46,7 +46,9 @@ def _font(path: str, size: int) -> ImageFont.FreeTypeFont:
 def _sfx_video(piece_dir: Path) -> Path:
     v = piece_dir / "visual"
     for pat in ("*_sfx.mp4", "_byteplus/*_scored.mp4", "*_scored.mp4"):
-        hits = sorted(v.glob(pat))
+        # the wave rollout parks the pre-upgrade final as *_sfx.bak_prelivinglight.mp4,
+        # which sorts BEFORE *_sfx.mp4 - never thumbnail a backup
+        hits = [h for h in sorted(v.glob(pat)) if ".bak" not in h.name]
         if hits:
             return hits[0]
     raise FileNotFoundError(f"no final video under {v}")
