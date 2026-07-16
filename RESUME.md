@@ -1,4 +1,79 @@
-# RESUME — next session (updated 2026-07-15 — WAVE E COMPLETE + 4 new episodes queued)
+# RESUME — next session (updated 2026-07-16 — legacy-style gate fixed, Bronze Serpent mid-rebuild, 11 shorts at GATE 2)
+
+## 🔴 PICK UP HERE FIRST (2026-07-16 session paused mid-task, user said "let's pick this up tomorrow")
+
+### 1. Bronze Serpent graphic-novel rebuild — IN PROGRESS, NOT FINISHED
+`longform/04_The_Bronze_Serpent/v1/visual_16x9_inked/` — a background agent was mid-render
+when the session paused. **As of pause: segment 34 of 52 rendered** (`_livingpage_work/seg_*.mp4`
+— check current count/mtimes, it may have kept progressing or may have stopped). The OLD
+final (`BronzeSerpent_16x9_scored_sfx.mp4`, mtime Jul 16 18:31) is STALE — do not treat it as
+current, it predates the defect fixes + full-animation + full-template rework.
+
+**What's already done and should NOT be redone:**
+- All 4 long-form Baroque episodes (Passover Lamb/Bronze Serpent/Seed of the Woman/Day of
+  Atonement) archived to `archive/<episode>_baroque/` (reference only, not deleted).
+- Real regression fixed: `config.VISUAL_STYLE` now defaults `graphic_novel` (was silently
+  `baroque`); new **SYNC-G8** gate (`pipeline/art_style.py`) fails any studio_complete/live
+  piece rendered in the legacy style — this can't silently regress again.
+- Day of Atonement assembled through score→SFX→captions for the first time (was 25 raw
+  never-chained clips). Publish packs built for all 4 episodes (GREEN).
+- Bronze Serpent: rebuilt graphic-novel → density pass (27→52 beats) → **then a defect-fix +
+  full-template + full-animation pass** (user reviewed via `_STILLS_REVIEW.html`, flagged 7
+  real still defects — all fixed and re-verified by eye: duplicated serpent standards→one
+  standard, a crowd figure that read as Jesus in an OT scene→re-faced, snakes-still-on-arms→
+  bite wounds, a giant disproportionate pole→rescaled, plus 3 more). Spec reworked to use ALL
+  11 `comic_engine.py` grid templates (was only 5 of 11 — `split_v`/`stack_h`/`strip_h3`/
+  `quad`/`hero_frac4`/`hero_band3` were sitting completely unused). Every panel is meant to
+  carry real motion now (Kling/veo clip or $0 `dynamic_cam`) per the engine's own "ALIVE —
+  never static" design intent, which the piece wasn't actually honoring before.
+
+**What's still open:**
+1. Finish the 52-segment render → mux → score → SFX rebuild → publish pack refresh
+   (thumbnails likely need re-cutting since the hero frame may have changed).
+2. **Verify motion coverage for real** — pull frames a couple seconds apart from several
+   different beats/templates and confirm they visibly differ (a genuinely static panel will
+   look identical between two pulls). This was asked of the last agent but never confirmed
+   complete before the pause.
+3. Run full test suite + `release_check.py` + `production_board.py`, confirm bronze-serpent
+   is gate-clean and genuinely reflects the new content.
+4. **Then show the user** — this was a live back-and-forth (user reviewed, flagged issues,
+   asked for more animation/grid variety) — don't consider it done until they've actually
+   seen the new version. If a background agent is still running from before the pause, check
+   its live status first rather than starting a duplicate.
+5. **Only after Bronze Serpent is approved**: same treatment (archive→rebuild) is queued for
+   the other 3 (Passover Lamb, Seed of the Woman, Day of Atonement) — NOT started, needs the
+   user's go-ahead per-episode same as Bronze Serpent got. Rough ceiling estimate from the
+   first quote was ~$30-33/episode assuming zero reuse; Bronze Serpent's actual spend across
+   both rebuild passes should inform a better estimate for the remaining 3.
+
+Lesson learned hard this session, apply it: **every subagent that ended its turn assuming a
+background render/job would "notify" it lost real progress** — the notification only fires
+when an agent's OWN turn ends with no tracked children, nothing actually wakes it back up.
+Any agent picking up render/build work must run it in the foreground (synchronous wait or
+active polling within one continuous turn), not delegate to "I'll resume when it's done."
+
+### 2. 11 shorts — all at GATE 2, waiting on the USER's image review (not a next-session task, just FYI)
+Passover Lamb ×4 + Bronze Serpent ×3 + Seed of the Woman ×4, episodes 37-47 in
+`C:\Users\sanjay\PycharmProjects\PythonProject1\jesus\narration\`. Spend $45.06 of the $60
+budget across the whole 2026-07-16 session (long-form rebuild spend included in that total).
+All narrate→voice→scene-plan→stills complete; galleries at `<folder>/v1/visual/hf/index.html`.
+**GATE 2 (hero pick / reroll / exclude) is a human decision — next session should NOT push
+these further (no Kling) until the user has actually reviewed the galleries**, same discipline
+as Bronze Serpent above. 3 scenes across 3 different shorts got NSFW-blocked (blood-doorpost
+imagery) and sit excluded rather than rendered — a GATE 2 call, not a bug.
+
+Also fixed in passing this session: a real bug in `pipeline/narration_parse.py` (the
+spoken-text parser wasn't stripping ElevenLabs bracket tags, silently breaking re-lock on any
+already-tagged piece) — this was a project-wide bug, not scoped to today's pieces.
+
+### 3. Everything committed
+Both repos (`JesusInTheBible` + `PythonProject1`) are committed as of this pause. The 4
+archived-Baroque episodes, the regression fix, Day of Atonement, publish packs, and both
+Bronze Serpent rebuild passes are one commit each. Bronze Serpent's IN-PROGRESS render
+segments are gitignored working files, not committed — check disk state fresh next session,
+don't assume the last commit reflects the finished film.
+
+---
 
 ## 🗺️ TODO — 4 new episodes queued, work them IN THIS ORDER (added 2026-07-15)
 
