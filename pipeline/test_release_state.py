@@ -52,6 +52,30 @@ def test_g2_shipped_without_final_fails():
     assert hits(run_gates([s], []), "SYNC-G2", "p", "FAIL")
 
 
+# ---- SYNC-G8 art-style ban (memory graphic-novel-style-migration) -----------
+def test_g8_shipped_baroque_fails():
+    s = _shipped(art_style="baroque")
+    assert hits(run_gates([s], []), "SYNC-G8", "p", "FAIL")
+
+
+def test_g8_shipped_graphic_novel_is_silent():
+    s = _shipped(art_style="graphic_novel")
+    assert not hits(run_gates([s], []), "SYNC-G8", "p")
+
+
+def test_g8_shipped_unknown_style_is_silent():
+    # fail-SAFE not fail-closed: a style this heuristic can't classify must
+    # not retroactively fail an already-shipped piece (see art_style.py docstring)
+    s = _shipped(art_style="unknown")
+    assert not hits(run_gates([s], []), "SYNC-G8", "p")
+
+
+def test_g8_unshipped_baroque_is_silent():
+    s = PieceState(slug="p", status="in_production", source_dir=Path("x"),
+                   art_style="baroque")
+    assert not hits(run_gates([s], []), "SYNC-G8", "p")
+
+
 # ---- SYNC-G3/G4 pack + thumbs freshness --------------------------------------
 def test_g3_pack_missing_unstamped_stale():
     assert hits(run_gates([_shipped(pack_exists=False)], []), "SYNC-G3", "p", "FAIL")

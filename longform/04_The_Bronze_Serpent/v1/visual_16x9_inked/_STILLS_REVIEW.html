@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bronze Serpent — Stills Review</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0 0 140px 0;
+    background: #15161a; color: #eee;
+    font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+  header {
+    padding: 18px 24px; background: #1c1e24; border-bottom: 1px solid #333;
+    position: sticky; top: 0; z-index: 5;
+  }
+  h1 { margin: 0 0 4px; font-size: 20px; }
+  header p { margin: 0; color: #aaa; font-size: 13px; }
+  .grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 18px; padding: 20px;
+  }
+  .card {
+    background: #1e2027; border: 2px solid #333; border-radius: 8px; overflow: hidden;
+    transition: border-color .15s;
+  }
+  .card.bad { border-color: #e5484d; box-shadow: 0 0 0 1px #e5484d55; }
+  .card img { width: 100%; display: block; cursor: zoom-in; background: #000; }
+  .card .body { padding: 10px 12px 12px; }
+  .card .fname { font-size: 12px; color: #8a8f98; word-break: break-all; margin-bottom: 8px; }
+  .card .row { display: flex; gap: 8px; align-items: center; }
+  .card button.toggle {
+    flex: 0 0 auto; border: 1px solid #444; background: #2a2d35; color: #ddd;
+    border-radius: 6px; padding: 6px 10px; font-size: 12px; cursor: pointer;
+  }
+  .card.bad button.toggle { background: #e5484d; border-color: #e5484d; color: #fff; }
+  .card textarea {
+    flex: 1 1 auto; resize: vertical; min-height: 34px; background: #14151a;
+    border: 1px solid #333; color: #eee; border-radius: 6px; padding: 6px 8px;
+    font-size: 12px; font-family: inherit;
+  }
+  .bar {
+    position: fixed; bottom: 0; left: 0; right: 0; background: #1c1e24;
+    border-top: 1px solid #333; padding: 12px 24px; display: flex; gap: 12px;
+    align-items: center; z-index: 10;
+  }
+  .bar .count { font-size: 13px; color: #ccc; }
+  .bar button {
+    border: none; border-radius: 6px; padding: 10px 16px; font-size: 13px;
+    cursor: pointer; font-weight: 600;
+  }
+  #copyBtn { background: #4a90e2; color: #fff; }
+  #clearBtn { background: #333; color: #ccc; }
+  .bar textarea {
+    flex: 1 1 auto; height: 34px; background: #14151a; border: 1px solid #333;
+    color: #8a8f98; border-radius: 6px; padding: 8px; font-size: 12px; font-family: monospace;
+  }
+  .lightbox {
+    display: none; position: fixed; inset: 0; background: #000d; z-index: 20;
+    align-items: center; justify-content: center; padding: 20px;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: 100%; max-height: 100%; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Bronze Serpent — Stills Review (27)</h1>
+  <p>Click a still to zoom. Click "mark bad" on anything wrong, add a short note, then hit Copy Feedback and paste it back to Claude. Marks are saved locally in this browser.</p>
+</header>
+
+<div class="grid" id="grid"></div>
+
+<div class="lightbox" id="lightbox"><img id="lightboxImg"></div>
+
+<div class="bar">
+  <span class="count" id="count">0 marked</span>
+  <textarea id="preview" readonly placeholder="Marked-bad stills will preview here..."></textarea>
+  <button id="copyBtn">Copy Feedback</button>
+  <button id="clearBtn">Clear all marks</button>
+</div>
+
+<script>
+const STILLS = [
+  "01_snakebite.png",
+  "02_worn_down_they_despise_the_bread_of_heaven.png",
+  "03_the_lord_sent_fiery_serpents__and_people_died.png",
+  "04_venom.png",
+  "05_they_beg_moses_take_the_serpents_away.png",
+  "06_not.png",
+  "07_make_a_fiery_serpent_set_it_on_a_pole.png",
+  "08_raised.png",
+  "09_look.png",
+  "10_and_moses_made_a_serpent_of_brass_the_camp_looks.png",
+  "11_night.png",
+  "12_even_so_must_the_son_of_man_be_lifted_up.png",
+  "13_lifted_up__signifying_what_death_he_should_die.png",
+  "14_for_god_so_loved_the_world.png",
+  "15_hezekiah_breaks_the_brazen_serpent.png",
+  "16_the_likeness_of_the_curse_lifted_up.png",
+  "17_made_a_curse_for_us__on_the_tree.png",
+  "18_curse.png",
+  "19_look.png",
+  "20_whosoever.png",
+  "21_look_to_the_one_lifted_up_hero_close.png",
+  "22_curse.png",
+  "23_himself.png",
+  "24_trust.png",
+  "25_we_are_all_bitten__the_cure_outside_us.png",
+  "26_strong.png",
+  "27_outward.png",
+];
+
+const STORE_KEY = "bronzeSerpentStillsReview_v1";
+let state = {};
+try { state = JSON.parse(localStorage.getItem(STORE_KEY) || "{}"); } catch (e) { state = {}; }
+
+const grid = document.getElementById("grid");
+
+function save() {
+  localStorage.setItem(STORE_KEY, JSON.stringify(state));
+  render();
+}
+
+function render() {
+  const marked = STILLS.filter(f => state[f] && state[f].bad);
+  document.getElementById("count").textContent = marked.length + " marked";
+  const lines = marked.map(f => `${f} — ${(state[f].note || "").trim() || "(no note)"}`);
+  const text = marked.length
+    ? `Bronze Serpent — still feedback (${marked.length} flagged)\n\n` + lines.join("\n")
+    : "";
+  document.getElementById("preview").value = text;
+  document.querySelectorAll(".card").forEach(card => {
+    const f = card.dataset.file;
+    card.classList.toggle("bad", !!(state[f] && state[f].bad));
+  });
+}
+
+STILLS.forEach(f => {
+  const card = document.createElement("div");
+  card.className = "card";
+  card.dataset.file = f;
+  card.innerHTML = `
+    <img src="${f}" loading="lazy" alt="${f}">
+    <div class="body">
+      <div class="fname">${f}</div>
+      <div class="row">
+        <button class="toggle">Mark bad</button>
+        <textarea placeholder="What's wrong (optional)"></textarea>
+      </div>
+    </div>
+  `;
+  const img = card.querySelector("img");
+  const btn = card.querySelector("button.toggle");
+  const note = card.querySelector("textarea");
+
+  if (state[f]) note.value = state[f].note || "";
+
+  img.addEventListener("click", () => {
+    document.getElementById("lightboxImg").src = f;
+    document.getElementById("lightbox").classList.add("open");
+  });
+  btn.addEventListener("click", () => {
+    state[f] = state[f] || {};
+    state[f].bad = !state[f].bad;
+    save();
+  });
+  note.addEventListener("input", () => {
+    state[f] = state[f] || {};
+    state[f].note = note.value;
+    save();
+  });
+
+  grid.appendChild(card);
+});
+
+document.getElementById("lightbox").addEventListener("click", () => {
+  document.getElementById("lightbox").classList.remove("open");
+});
+
+document.getElementById("copyBtn").addEventListener("click", async () => {
+  const text = document.getElementById("preview").value;
+  if (!text) { alert("Nothing marked yet — click \"Mark bad\" on the stills with issues first."); return; }
+  try {
+    await navigator.clipboard.writeText(text);
+    const btn = document.getElementById("copyBtn");
+    const orig = btn.textContent;
+    btn.textContent = "Copied!";
+    setTimeout(() => btn.textContent = orig, 1200);
+  } catch (e) {
+    const ta = document.getElementById("preview");
+    ta.focus(); ta.select();
+    document.execCommand("copy");
+    alert("Copied via fallback (select-all). If that failed too, the text is selected in the box — press Ctrl+C.");
+  }
+});
+
+document.getElementById("clearBtn").addEventListener("click", () => {
+  if (!confirm("Clear all marks and notes?")) return;
+  state = {};
+  save();
+});
+
+render();
+</script>
+
+</body>
+</html>

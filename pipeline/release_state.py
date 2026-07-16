@@ -18,7 +18,7 @@ from pathlib import Path
 
 import yaml
 
-from pipeline import finality
+from pipeline import art_style, finality
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / "_website"
@@ -62,6 +62,7 @@ class PieceState:
     youtube_id: str | None = None
     ledger: dict = field(default_factory=dict)   # platform -> {url, posted, final_sha,...}
     dangling: list = field(default_factory=list)  # *_source fields set but folder missing
+    art_style: str = art_style.UNKNOWN  # "baroque" | "graphic_novel" | "unknown" (SYNC-G8)
 
     @property
     def post_platforms(self) -> list[str]:
@@ -163,6 +164,7 @@ def gather() -> tuple[list[PieceState], list[str], list[str]]:
                        if it.get(k) and not (SITE / it[k]).resolve().is_dir()]
         if st.source_dir:
             joined_dirs.add(st.source_dir)
+            st.art_style = art_style.detect_art_style(st.source_dir)
             st.finality, st.video = finality.final_video(st.source_dir)
             if st.video:
                 st.video_sha = finality.content_sha(st.video)
@@ -288,6 +290,15 @@ def run_gates(states: list[PieceState], orphans: list[str],
             out.append(("SYNC-G2", "WARN", s.slug,
                         f"multiple candidate finals in the lane - picked {s.video.name if s.video else '?'}, "
                         f"rivals: {s.rivals} - pin the postable with FINAL_VIDEO.txt"))
+        # G8 art-style ban: everything from the oil-painting era is LEGACY and
+        # NEVER counts as upload-ready (memory `graphic-novel-style-migration`,
+        # hardened 2026-07-15). Only a POSITIVE "baroque" detection blocks —
+        # "unknown" is left alone (see pipeline/art_style.py docstring).
+        if shipped and s.art_style == art_style.BAROQUE:
+            out.append(("SYNC-G8", "FAIL", s.slug,
+                        "rendered in LEGACY Baroque oil-painting style - never ships; "
+                        "rebuild stills+animation in the graphic-novel standard before "
+                        "this can be studio_complete/live"))
         # G5 website (read_page + read-frame anchor don't need the final video)
         if s.read_page and not s.has_read_source:
             out.append(("SYNC-G5", "WARN", s.slug,

@@ -1,0 +1,14 @@
+{
+ "keep": [
+  0.1,
+  0.05,
+  0.9,
+  0.95
+ ],
+ "focus": [
+  0.48,
+  0.42
+ ],
+ "pad": 0.05,
+ "note": "dying man face close, centred"
+}

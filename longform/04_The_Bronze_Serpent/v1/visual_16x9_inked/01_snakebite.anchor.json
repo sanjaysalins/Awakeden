@@ -1,0 +1,14 @@
+{
+ "keep": [
+  0.05,
+  0.3,
+  0.95,
+  0.95
+ ],
+ "focus": [
+  0.35,
+  0.65
+ ],
+ "pad": 0.05,
+ "note": "kneeling bitten figures, lower-left/centre"
+}

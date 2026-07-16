@@ -54,24 +54,34 @@ def main() -> int:
     rows = []
     for s in states:
         lane = lane_state(s)
-        ready = s.finality.startswith("FINAL") and (lane in ("COMPLETE", "legacy lane", "-"))
+        # a Baroque-style final NEVER counts as ready — memory
+        # `graphic-novel-style-migration`, hardened 2026-07-15: legacy oil-
+        # painting renders never ship, no matter how finished the video looks.
+        ready = (s.finality.startswith("FINAL") and (lane in ("COMPLETE", "legacy lane", "-"))
+                 and s.art_style != "baroque")
         rows.append((s, lane, ready))
 
     n_ready = sum(r for _, _, r in rows)
     n_pack = sum(1 for s, _, _ in rows if s.pack_fresh)
     n_page = sum(1 for s, _, _ in rows if s.read_page)
     n_pub = sum(1 for s, _, _ in rows if s.youtube_id)
+    n_legacy_style = sum(1 for s, _, _ in rows if s.art_style == "baroque")
 
     # ---- console ----
     print(f"{'slug':34} {'status':16} {'pipeline':20} {'video':20} pack page yt")
     for s, lane, _ in rows:
         pk = "OK" if s.pack_fresh else ("st" if s.pack_exists else "-")
+        style_flag = " [BAROQUE-LEGACY]" if s.art_style == "baroque" else ""
         print(f"{s.slug[:34]:34} {s.status[:16]:16} {lane[:20]:20} {s.finality[:20]:20} "
-              f"{pk:4} {'Y' if s.read_page else '-'}    {'Y' if s.youtube_id else '-'}")
+              f"{pk:4} {'Y' if s.read_page else '-'}    {'Y' if s.youtube_id else '-'}{style_flag}")
     n_fail = len([f for f in findings if f[1] == 'FAIL'])
     print(f"\n{len(rows)} catalogue items · {n_ready} production-ready · {n_pack} packs fresh · "
           f"{n_page} read pages · {n_pub} published · {n_fail} SYNC FAILs "
           f"(detail: .venv\\Scripts\\python.exe release_check.py)")
+    if n_legacy_style:
+        print(f"! {n_legacy_style} piece(s) flagged BAROQUE-LEGACY (never ships — "
+              f"memory graphic-novel-style-migration): "
+              f"{[s.slug for s, _, _ in rows if s.art_style == 'baroque']}")
     if episodes:
         print(f"\n{len(episodes)} episode(s):")
         for ep in episodes:
@@ -107,9 +117,10 @@ def main() -> int:
                             for gate, lvl, msg in probs)
         indent = "&nbsp;&nbsp;&nbsp;&nbsp;↳ " if s.parent else ""
         kind_badge = chip("LONG", "long") if s.kind == "long" else ""
+        style_badge = chip("BAROQUE-LEGACY, NEVER SHIPS", "warn") if s.art_style == "baroque" else ""
         trs.append(
             f"<tr id='row-{html.escape(s.slug)}'>"
-            f"<td>{indent}{html.escape(s.title)} {kind_badge}"
+            f"<td>{indent}{html.escape(s.title)} {kind_badge} {style_badge}"
             f"<div class=slug>{s.slug} · {s.cluster or '-'}</div>{prob_html}</td>"
             f"<td>{chip(s.status, 'ok' if s.status in ('studio_complete', 'live') else 'warn' if s.status == 'in_production' else 'mut')}</td>"
             f"<td>{chip(lane, 'ok' if lane in ('COMPLETE', 'legacy lane') else 'warn' if lane != '-' else 'mut')}</td>"

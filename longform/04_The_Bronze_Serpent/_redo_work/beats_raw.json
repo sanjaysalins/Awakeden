@@ -1,0 +1,1188 @@
+[
+ {
+  "start": "A whole",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "01_snakebite",
+    "cam": "push"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "A whole camp is dying of snakebite.",
+   "kw": "SNAKEBITE"
+  },
+  "punch": true
+ },
+ {
+  "start": "and God's",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "04_venom"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "God's remedy is not to kill the snakes, or heal the wounds, or hand out an antidote.",
+   "kw": "REMEDY"
+  },
+  "inserts": [
+   {
+    "at_frac": 0.55,
+    "slug": "08_raised",
+    "frames": 4
+   }
+  ]
+ },
+ {
+  "start": "He tells",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "08_raised",
+    "cam": "push"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "He tells them to look at a piece of metal on a pole. Look, and live.",
+   "kw": "LOOK"
+  },
+  "ramp": true
+ },
+ {
+  "start": "It is one",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "08_raised",
+    "cam": "arc"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "It is one of the strangest cures in the Bible.",
+   "kw": "STRANGEST"
+  }
+ },
+ {
+  "start": "It happens",
+  "tpl": "hero_frac3",
+  "clips": [
+   {
+    "slug": "02_worn_down_they_despise_the_bread_of_heaven"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "It happens near the end of the wilderness years. Israel is worn down by the long road, and the old bitterness boils over.",
+   "kw": "BOILS OVER"
+  },
+  "anchors": [
+   [
+    1.0,
+    0.42,
+    0.42
+   ],
+   [
+    1.9,
+    0.2,
+    0.62
+   ],
+   [
+    1.9,
+    0.62,
+    0.42
+   ]
+  ],
+  "_panel_slide": [
+   "left",
+   "up",
+   "right"
+  ],
+  "flash": true
+ },
+ {
+  "start": "Wherefore have",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "03_the_lord_sent_fiery_serpents__and_people_died",
+    "cam": "push"
+   }
+  ],
+  "cap": {
+   "type": "redletter",
+   "speaker": "THE PEOPLE",
+   "ref": "Numbers 21:5",
+   "text": "Wherefore have ye brought us up out of Egypt to die in the wilderness? for there is no bread, neither is there any water; and our soul loatheth this light bread."
+  },
+  "takeover": {
+   "panel": 0,
+   "start_frac": 0.75,
+   "zoom": 1.25
+  }
+ },
+ {
+  "start": "And the LORD sent",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "03_the_lord_sent_fiery_serpents__and_people_died",
+    "cam": "arc"
+   }
+  ],
+  "cap": {
+   "type": "redletter",
+   "speaker": "NUMBERS 21",
+   "ref": "Numbers 21:6",
+   "text": "And the LORD sent fiery serpents among the people, and they bit the people; and much people of Israel died."
+  }
+ },
+ {
+  "start": "Picture the",
+  "tpl": "hero_frac3",
+  "clips": [
+   {
+    "slug": "05_they_beg_moses_take_the_serpents_away"
+   }
+  ],
+  "cap": {
+   "type": "redletter",
+   "speaker": "THE PEOPLE",
+   "ref": "Numbers 21:7",
+   "text": "We have sinned, for we have spoken against the LORD, and against thee; pray unto the LORD, that he take away the serpents from us."
+  },
+  "anchors": [
+   [
+    1.0,
+    0.35,
+    0.5
+   ],
+   [
+    1.8,
+    0.18,
+    0.72
+   ],
+   [
+    1.8,
+    0.62,
+    0.68
+   ]
+  ],
+  "_panel_slide": [
+   "left",
+   "up",
+   "right"
+  ],
+  "flash": true
+ },
+ {
+  "start": "Their confession",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "27_outward",
+    "cam": "push"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "Their confession is real. They name the sin itself. But look at the cure they ask for: take away the serpents, make the threat go away.",
+   "kw": "CONFESSION"
+  },
+  "punch": true
+ },
+ {
+  "start": "Even as they",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "27_outward",
+    "cam": "arc"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "Even as they confess, their request reaches only for the danger outside.",
+   "kw": "OUTWARD"
+  }
+ },
+ {
+  "start": "Now watch",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "06_not",
+    "cam": "arc"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "Now watch what God actually does, because He does not do what they asked.",
+   "kw": "NOT"
+  }
+ },
+ {
+  "start": "Make thee",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "07_make_a_fiery_serpent_set_it_on_a_pole"
+   }
+  ],
+  "cap": {
+   "type": "redletter",
+   "speaker": "THE LORD",
+   "ref": "Numbers 21:8",
+   "text": "Make thee a fiery serpent, and set it upon a pole: and it shall come to pass, that every one that is bitten, when he looketh upon it, shall live."
+  }
+ },
+ {
+  "start": "Sit with",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "22_curse",
+    "cam": "swoop"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "Sit with how strange that is. The cure is shaped like the curse.",
+   "kw": "CURSE"
+  },
+  "punch": true
+ },
+ {
+  "start": "The thing lifted",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "22_curse",
+    "cam": "arc"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "The thing lifted up is a serpent, a bronze likeness of the very thing killing them, raised on a pole for all to see.",
+   "kw": "LIKENESS"
+  }
+ },
+ {
+  "start": "And the cure",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "08_raised",
+    "cam": "arc"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "And the cure costs the bitten man nothing he can boast in.",
+   "kw": "NOTHING"
+  }
+ },
+ {
+  "start": "Every one",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "08_raised"
+   }
+  ],
+  "cap": {
+   "type": "redletter",
+   "speaker": "THE LORD",
+   "ref": "Numbers 21:8b",
+   "text": "Every one that is bitten, when he looketh upon it, shall live."
+  }
+ },
+ {
+  "start": "One act",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "09_look"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "One act. Look.",
+   "kw": "LOOK"
+  },
+  "punch": true
+ },
+ {
+  "start": "And Moses made",
+  "tpl": "hero_frac3",
+  "clips": [
+   {
+    "slug": "10_and_moses_made_a_serpent_of_brass_the_camp_looks"
+   }
+  ],
+  "cap": {
+   "type": "redletter",
+   "speaker": "NUMBERS 21",
+   "ref": "Numbers 21:9",
+   "text": "And Moses made a serpent of brass, and put it upon a pole, and it came to pass, that if a serpent had bitten any man, when he beheld the serpent of brass, he lived."
+  },
+  "anchors": [
+   [
+    1.0,
+    0.5,
+    0.4
+   ],
+   [
+    1.9,
+    0.2,
+    0.7
+   ],
+   [
+    1.9,
+    0.78,
+    0.68
+   ]
+  ],
+  "_panel_slide": [
+   "left",
+   "up",
+   "right"
+  ],
+  "flash": true
+ },
+ {
+  "start": "Now move",
+  "tpl": "two_v",
+  "clips": [
+   {
+    "slug": "01_snakebite",
+    "cam": "swoop"
+   },
+   {
+    "slug": "03_the_lord_sent_fiery_serpents__and_people_died",
+    "cam": "swoop"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "Now move forward roughly fourteen hundred years.",
+   "kw": "FOURTEEN HUNDRED"
+  }
+ },
+ {
+  "start": "into a quiet",
+  "tpl": "hero_frac3",
+  "clips": [
+   {
+    "slug": "11_night"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "Into a quiet night-time conversation. A religious leader named Nicodemus has come to Jesus in the dark, trying to understand who He is.",
+   "kw": "NICODEMUS"
+  },
+  "anchors": [
+   [
+    1.0,
+    0.5,
+    0.42
+   ],
+   [
+    1.9,
+    0.28,
+    0.42
+   ],
+   [
+    1.9,
+    0.74,
+    0.42
+   ]
+  ],
+  "_panel_slide": [
+   "left",
+   "up",
+   "right"
+  ],
+  "flash": true
+ },
+ {
+  "start": "And Jesus reaches",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "23_himself",
+    "cam": "push"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "And Jesus reaches back, past the temple, past the law, to a snake on a pole in the desert.",
+   "kw": "REACHES BACK"
+  }
+ },
+ {
+  "start": "And as Moses",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "12_even_so_must_the_son_of_man_be_lifted_up"
+   }
+  ],
+  "cap": {
+   "type": "redletter",
+   "speaker": "JESUS",
+   "ref": "John 3:14-15",
+   "text": "And as Moses lifted up the serpent in the wilderness, even so must the Son of man be lifted up: That whosoever believeth in him should not perish, but have eternal life."
+  }
+ },
+ {
+  "start": "Stop on",
+  "tpl": "two_v",
+  "clips": [
+   {
+    "slug": "reuse_jesus_looks_down"
+   },
+   {
+    "slug": "reuse_face_on_cross"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "Stop on that. This is not a preacher centuries later finding a clever picture in the Old Testament.",
+   "kw": "STOP ON THAT"
+  }
+ },
+ {
+  "start": "This is Jesus",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "13_lifted_up__signifying_what_death_he_should_die",
+    "cam": "push"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "This is Jesus Himself, naming that pole as a portrait of His own cross.",
+   "kw": "PORTRAIT"
+  },
+  "punch": true
+ },
+ {
+  "start": "And He means",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "13_lifted_up__signifying_what_death_he_should_die",
+    "cam": "arc"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "And He means it precisely. Later, John tells us what that phrase pointed to.",
+   "kw": "PRECISELY"
+  }
+ },
+ {
+  "start": "And I, if",
+  "tpl": "triptych_v",
+  "clips": [
+   {
+    "slug": "reuse_nail_through_hand"
+   },
+   {
+    "slug": "13_lifted_up__signifying_what_death_he_should_die",
+    "cam": "swoop"
+   },
+   {
+    "slug": "reuse_golgotha_hill_wide"
+   }
+  ],
+  "cap": {
+   "type": "redletter",
+   "speaker": "JESUS",
+   "ref": "John 12:32",
+   "text": "And I, if I be lifted up from the earth, will draw all men unto me."
+  }
+ },
+ {
+  "start": "This he said",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "reuse_darkness_veil_torn"
+   }
+  ],
+  "cap": {
+   "type": "redletter",
+   "speaker": "SCRIPTURE",
+   "ref": "John 12:33",
+   "text": "This he said, signifying what death he should die."
+  }
+ },
+ {
+  "start": "Lifted up",
+  "tpl": "two_v",
+  "clips": [
+   {
+    "slug": "reuse_two_thieves_wide"
+   },
+   {
+    "slug": "reuse_cross_at_dawn"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "Lifted up was the cross. By Jesus' own word, the wilderness pole was a picture of Calvary.",
+   "kw": "CALVARY"
+  }
+ },
+ {
+  "start": "And the passage",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "14_for_god_so_loved_the_world",
+    "cam": "push"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "And the passage flows straight on into the verse the whole world knows.",
+   "kw": "WHOLE WORLD"
+  }
+ },
+ {
+  "start": "For God so loved",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "14_for_god_so_loved_the_world"
+   }
+  ],
+  "cap": {
+   "type": "redletter",
+   "speaker": "SCRIPTURE",
+   "ref": "John 3:16",
+   "text": "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have eternal life."
+  }
+ },
+ {
+  "start": "The snake on",
+  "tpl": "big_inset",
+  "clips": [
+   {
+    "slug": "08_raised",
+    "cam": "arc"
+   },
+   {
+    "slug": "reuse_grace_poured_sky"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "The snake on the pole and God so loved the world sit in the same breath of Scripture.",
+   "kw": "SAME BREATH"
+  }
+ },
+ {
+  "start": "Now, be fair",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "24_trust",
+    "cam": "arc"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "Now, be fair to the doubts, because there are two.",
+   "kw": "TWO DOUBTS"
+  }
+ },
+ {
+  "start": "First: doesn't",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "24_trust",
+    "cam": "swoop"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "First: doesn't a bronze snake on a pole just become an idol? Scripture itself answers that, bluntly.",
+   "kw": "IDOL"
+  }
+ },
+ {
+  "start": "Centuries later",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "15_hezekiah_breaks_the_brazen_serpent",
+    "cam": "push"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "Centuries later Israel did begin burning incense to it, and a godly king named Hezekiah",
+   "kw": "HEZEKIAH"
+  }
+ },
+ {
+  "start": "brake in pieces",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "15_hezekiah_breaks_the_brazen_serpent"
+   }
+  ],
+  "cap": {
+   "type": "redletter",
+   "speaker": "2 KINGS 18",
+   "ref": "2 Kings 18:4",
+   "text": "brake in pieces the brasen serpent that Moses had made."
+  },
+  "punch": true
+ },
+ {
+  "start": "The bronze never",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "24_trust",
+    "cam": "push"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "The bronze never had power; God did. Looking was never magic, it was trust.",
+   "kw": "TRUST"
+  }
+ },
+ {
+  "start": "aimed where",
+  "tpl": "two_v",
+  "clips": [
+   {
+    "slug": "reuse_jesus_looks_down"
+   },
+   {
+    "slug": "reuse_hands_of_light_open"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "Aimed where God told them to aim it. Scripture smashes the relic itself, so you never mistake the sign for the Savior.",
+   "kw": "NOT THE SIGN"
+  }
+ },
+ {
+  "start": "Second, and",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "16_the_likeness_of_the_curse_lifted_up",
+    "cam": "push"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "Second, and deeper: isn't a serpent a strange picture of Christ?",
+   "kw": "STRANGE PICTURE"
+  }
+ },
+ {
+  "start": "In the Bible",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "16_the_likeness_of_the_curse_lifted_up",
+    "cam": "arc"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "In the Bible the serpent is the tempter and the curse. Exactly, and that is the point, not the problem.",
+   "kw": "THE POINT"
+  }
+ },
+ {
+  "start": "What hung on",
+  "tpl": "two_v",
+  "clips": [
+   {
+    "slug": "16_the_likeness_of_the_curse_lifted_up",
+    "cam": "push"
+   },
+   {
+    "slug": "reuse_bowed_head_finished"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "What hung on that pole was the likeness of the very thing killing them.",
+   "kw": "LIKENESS"
+  }
+ },
+ {
+  "start": "what hung on the cross",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "17_made_a_curse_for_us__on_the_tree",
+    "cam": "push"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "What hung on the cross was the One of whom Scripture says God",
+   "kw": "OF WHOM SCRIPTURE SAYS"
+  }
+ },
+ {
+  "start": "hath made him",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "17_made_a_curse_for_us__on_the_tree"
+   }
+  ],
+  "cap": {
+   "type": "redletter",
+   "speaker": "2 CORINTHIANS 5",
+   "ref": "2 Corinthians 5:21",
+   "text": "hath made him to be sin for us, who knew no sin."
+  }
+ },
+ {
+  "start": "being made",
+  "tpl": "triptych_v",
+  "clips": [
+   {
+    "slug": "reuse_nail_through_hand"
+   },
+   {
+    "slug": "17_made_a_curse_for_us__on_the_tree",
+    "cam": "arc"
+   },
+   {
+    "slug": "reuse_darkness_veil_torn"
+   }
+  ],
+  "cap": {
+   "type": "redletter",
+   "speaker": "GALATIANS 3",
+   "ref": "Galatians 3:13",
+   "text": "being made a curse for us: for it is written, Cursed is every one that hangeth on a tree."
+  }
+ },
+ {
+  "start": "Christ did not",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "18_curse",
+    "cam": "push"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "Christ did not become a sinner. He was lifted up bearing our curse, in the likeness of the judgment we deserved.",
+   "kw": "BEARING OUR CURSE"
+  },
+  "punch": true
+ },
+ {
+  "start": "so the look",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "18_curse",
+    "cam": "arc"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "So the look of faith could find it there and live. This is not a stretch; it is the meaning Jesus put there Himself.",
+   "kw": "MEANING JESUS PUT THERE"
+  }
+ },
+ {
+  "start": "So hold the two",
+  "tpl": "two_v",
+  "clips": [
+   {
+    "slug": "22_curse",
+    "cam": "swoop"
+   },
+   {
+    "slug": "reuse_golgotha_hill_wide"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "So hold the two scenes together. In the wilderness the cure was never in the dying man.",
+   "kw": "NEVER IN HIM"
+  }
+ },
+ {
+  "start": "he could not",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "19_look",
+    "cam": "push"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "He could not neutralize the venom or earn his way back to health. It hung entirely outside him, on a pole.",
+   "kw": "OUTSIDE HIM"
+  }
+ },
+ {
+  "start": "That is the cross",
+  "tpl": "big_inset",
+  "clips": [
+   {
+    "slug": "25_we_are_all_bitten__the_cure_outside_us",
+    "cam": "push"
+   },
+   {
+    "slug": "reuse_face_on_cross"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "That is the cross. We are all bitten; the poison of sin is already in us, and no self-improvement reaches it.",
+   "kw": "ALL BITTEN"
+  }
+ },
+ {
+  "start": "So God lifted",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "25_we_are_all_bitten__the_cure_outside_us",
+    "cam": "arc"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "So God lifted up His Son, who",
+   "kw": "LIFTED UP HIS SON"
+  }
+ },
+ {
+  "start": "his own self",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "16_the_likeness_of_the_curse_lifted_up",
+    "cam": "push"
+   }
+  ],
+  "cap": {
+   "type": "redletter",
+   "speaker": "1 PETER 2",
+   "ref": "1 Peter 2:24",
+   "text": "his own self bare our sins in his own body on the tree."
+  }
+ },
+ {
+  "start": "The curse fell",
+  "tpl": "two_v",
+  "clips": [
+   {
+    "slug": "reuse_us_under_cross_shadow"
+   },
+   {
+    "slug": "18_curse",
+    "cam": "swoop"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "The curse fell on the lifted One, so that everyone who looks to Him might live.",
+   "kw": "FELL ON HIM"
+  }
+ },
+ {
+  "start": "It cost the",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "26_strong",
+    "cam": "push"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "It cost the bitten Israelite nothing but a turn of the eyes. It cost the Son everything.",
+   "kw": "COST"
+  },
+  "punch": true
+ },
+ {
+  "start": "There is one",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "19_look",
+    "cam": "swoop"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "There is one more detail here, and it may be the kindest of all: the cure was a look.",
+   "kw": "THE CURE WAS A LOOK"
+  }
+ },
+ {
+  "start": "God could have",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "26_strong",
+    "cam": "arc"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "God could have asked for a climb, a payment, a proof of strength. He asked for the one thing a dying man can still do.",
+   "kw": "ONE THING"
+  }
+ },
+ {
+  "start": "You can be",
+  "tpl": "two_v",
+  "clips": [
+   {
+    "slug": "reuse_man_lifting_face_dawn"
+   },
+   {
+    "slug": "reuse_look_up_faces"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "You can be too weak to stand and still lift your eyes.",
+   "kw": "LIFT YOUR EYES"
+  }
+ },
+ {
+  "start": "The most poisoned",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "20_whosoever",
+    "cam": "push"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "The most poisoned person in the camp was no further from healing than the least.",
+   "kw": "NO FURTHER"
+  }
+ },
+ {
+  "start": "both were saved",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "20_whosoever",
+    "cam": "arc"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "Both were saved the same way, by looking away from themselves to the One lifted up.",
+   "kw": "SAME WAY"
+  }
+ },
+ {
+  "start": "So the invitation",
+  "tpl": "triptych_v",
+  "clips": [
+   {
+    "slug": "reuse_look_up_faces"
+   },
+   {
+    "slug": "20_whosoever",
+    "cam": "swoop"
+   },
+   {
+    "slug": "reuse_hands_of_light_open"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "So the invitation is as wide as the word Jesus chose: whosoever.",
+   "kw": "WHOSOEVER"
+  }
+ },
+ {
+  "start": "You do not have",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "26_strong",
+    "cam": "push"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "You do not have to get the poison out first, or feel strong, or be certain your faith is large enough.",
+   "kw": "NOT FIRST"
+  }
+ },
+ {
+  "start": "Faith is not",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "26_strong",
+    "cam": "arc"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "Faith is not a great work you produce; it is the empty-handed look of someone who has stopped trying to save themselves.",
+   "kw": "EMPTY-HANDED LOOK"
+  }
+ },
+ {
+  "start": "You only have",
+  "tpl": "two_v",
+  "clips": [
+   {
+    "slug": "reuse_man_lifting_face_dawn"
+   },
+   {
+    "slug": "21_look_to_the_one_lifted_up_hero_close"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "You only have to stop staring at the bite, and look up.",
+   "kw": "LOOK UP"
+  },
+  "punch": true
+ },
+ {
+  "start": "The serpent in",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "10_and_moses_made_a_serpent_of_brass_the_camp_looks",
+    "cam": "swoop"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "The serpent in the wilderness was God teaching the world one motion that saves.",
+   "kw": "ONE MOTION"
+  }
+ },
+ {
+  "start": "He lifted His Son",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "21_look_to_the_one_lifted_up_hero_close"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "He lifted His Son on a cross for exactly that, so that whosoever turns their eyes to Him",
+   "kw": "WHOSOEVER TURNS"
+  }
+ },
+ {
+  "start": "should not perish",
+  "tpl": "two_v",
+  "clips": [
+   {
+    "slug": "reuse_risen_christ_wounds"
+   },
+   {
+    "slug": "reuse_risen_christ_seeking"
+   }
+  ],
+  "cap": {
+   "type": "redletter",
+   "speaker": "JOHN 3",
+   "ref": "John 3:15b",
+   "text": "should not perish, but have eternal life."
+  }
+ },
+ {
+  "start": "You have stared",
+  "tpl": "triptych_v",
+  "clips": [
+   {
+    "slug": "reuse_stone_rolled_dawn"
+   },
+   {
+    "slug": "reuse_risen_christ_congregation"
+   },
+   {
+    "slug": "reuse_first_day_morning"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "You have stared at the bite long enough. The cure was never inside you.",
+   "kw": "NEVER INSIDE YOU"
+  }
+ },
+ {
+  "start": "it is lifted up",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "21_look_to_the_one_lifted_up_hero_close"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "It is lifted up, outside you, already finished.",
+   "kw": "ALREADY FINISHED"
+  }
+ },
+ {
+  "start": "Lift your eyes",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "21_look_to_the_one_lifted_up_hero_close"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "Lift your eyes from the poison to the Saviour.",
+   "kw": "LIFT YOUR EYES"
+  }
+ },
+ {
+  "start": "What He has",
+  "tpl": "full",
+  "clips": [
+   {
+    "slug": "21_look_to_the_one_lifted_up_hero_close"
+   }
+  ],
+  "cap": {
+   "type": "caption",
+   "text": "What He has done on that cross is enough.",
+   "kw": "ENOUGH"
+  }
+ }
+]

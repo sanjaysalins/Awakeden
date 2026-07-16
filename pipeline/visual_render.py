@@ -356,11 +356,12 @@ def _vision_call(scene: Scene, png_bytes: bytes) -> dict:
     if scene.vignettes:
         vignette_lines = "\n".join(f"  - {v}" for v in scene.vignettes)
         vignette_lines = f"\nREQUIRED BACKGROUND VIGNETTES (unified scene; each must be present and recognisable):\n{vignette_lines}\n"
-    # Style-selected check #6 rubric + medium phrase (Phase 0: de-hardcode Baroque).
+    # Style-selected check #6 rubric + medium phrase. Unknown VISUAL_STYLE falls
+    # back to graphic_novel, never the legacy Baroque rubric (hardened 2026-07-15).
     style_rubric = config.STYLE_AUDIT_RUBRIC.get(
-        config.VISUAL_STYLE, config.STYLE_AUDIT_RUBRIC["baroque"])
+        config.VISUAL_STYLE, config.STYLE_AUDIT_RUBRIC["graphic_novel"])
     medium = config.STYLE_MEDIUM_PHRASE.get(
-        config.VISUAL_STYLE, config.STYLE_MEDIUM_PHRASE["baroque"])
+        config.VISUAL_STYLE, config.STYLE_MEDIUM_PHRASE["graphic_novel"])
     role = (
         "You are an INDEPENDENT visual content auditor. The user wrote a scene "
         "spec; an image model rendered an image. Verify EVERY required element "
@@ -391,6 +392,21 @@ def _vision_call(scene: Scene, png_bytes: bytes) -> dict:
         "subject (count the fingers on any prominent open hand). Background "
         "figures dissolving into shadow get more latitude — note but do not fail "
         "on a slightly-off distant hand.\n"
+        "6. **Iconography & cultural accuracy (CHECK THIS EXPLICITLY).** FAIL "
+        "(passed:false) on any of: a crucified figure whose wrists/feet are "
+        "BOUND WITH ROPE/cord instead of NAILED (a small flat nail-head through "
+        "pierced flesh) when the spec calls for crucifixion; an animal species "
+        "that does NOT match the spec (e.g. a GOAT, ram, or other animal shown "
+        "when the spec calls for a LAMB, or vice versa); architecture, columns, "
+        "vestments, headwear, or dress imported from the WRONG culture/era for "
+        "the stated setting (e.g. fluted Greco-Roman marble columns on a Hebrew "
+        "slave-house doorway in Egypt; a tall pointed Western bishop's mitre on "
+        "a 1st-century Jewish high priest, who wore a wrapped turban-style "
+        "miter with a gold plate, not a Christian mitre); and any prominent "
+        "background object NOT called for in the spec that contradicts the "
+        "scene (e.g. an extra unexplained second cross/figure not in the "
+        "visible_elements list). A plausible-looking but historically/"
+        "textually WRONG detail is a HARD FAIL, not a minor nit.\n"
         + style_rubric +
         f"BANNED VISIBLE ELEMENTS: {sorted(config.VISUAL_BANNED_TOKENS)}\n\n"
         "Return ONLY a JSON object (optionally inside a ```json fence):\n"

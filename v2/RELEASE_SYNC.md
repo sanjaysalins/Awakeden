@@ -77,9 +77,39 @@ are $0 one-liners — fail-closed beats guessing whether a change "counts".
 | SYNC-G5 | read page built for promoted items; frame `_meta.source_sha` matches; `publish_meta.json.read_url` points at the real `read/<slug>.html` | FAIL on read_url mismatch; WARN on frame sha (audio-only sfx change also shifts the sha) |
 | SYNC-G6 | published coherence: `youtube_id` ⟺ `public_status: live` ⟺ dated ledger entry with URL; posted `final_sha` == current final (else the LIVE video is outdated — surface it) | FAIL |
 | SYNC-G7 | long↔short: shorts in a cluster that has a long carry `parent:`; parent exists and is a long | FAIL |
+| SYNC-G8 | art style: a `studio_complete`/`live` item's rendered art style is not the LEGACY Baroque oil-painting look (`pipeline/art_style.py`, deterministic text-scan over `scene_plan.json`/`_panel_scene_plan.md`/`piece.json`) | FAIL |
 
 Platforms not yet posted are reported as the TO-POST queue, never a FAIL
 (posting is the human's move; the gate only guards *recorded truth*).
+
+### SYNC-G8 — the Baroque-legacy ban (added 2026-07-16)
+
+🔒 HARDENED (user, 2026-07-15, memory `graphic-novel-style-migration`):
+"everything from the oil-painting era is LEGACY and will NEVER BE UPLOADED...
+don't count legacy finals as upload-ready on any board or plan." No Baroque
+final ships, ever. This was a real gap: `production_board.py`'s readiness
+calc and every SYNC gate checked finality/pack/thumbs freshness but never a
+piece's *art style* — four Types & Shadows longs (Passover Lamb, Bronze
+Serpent, Seed of the Woman, Day of Atonement) were built through score/SFX/
+caption and given GREEN publish packs while still rendered Baroque, a direct
+regression against the hardened rule (caught 2026-07-16).
+
+No per-piece `art_style` field is persisted at render time yet, so
+`pipeline/art_style.py::detect_art_style()` is the deterministic stopgap: it
+scans `visual_16x9_inked/scene_plan.json` (wins over `visual_16x9`, matching
+`finality.py`'s own inked-first precedence), the self-review
+`_panel_scene_plan.md`, and a shorts/batches `piece.json`'s still-job prompts
+for an explicit "baroque"/"graphic-novel" marker. It is fail-SAFE, not
+fail-closed: only a POSITIVE "baroque" hit blocks a piece; anything the
+scanner can't classify returns `"unknown"` and is left alone, so it cannot
+retroactively fail already-shipped pieces built through a format this
+heuristic doesn't recognise. `config.VISUAL_STYLE` also flips default
+`baroque` → `graphic_novel` the same day (config.py; Baroque stays selectable
+only via an explicit env override for one-off reference renders).
+
+**Follow-up (not done here):** persist a real `art_style` field on every
+piece at render time and treat `"unknown"` as `baroque` (fail-closed) once the
+whole catalogue has been swept and confirmed clean under the loose heuristic.
 
 ### Long + short combined — the EPISODE (added 2026-07-15, user ask: "unlike
 Furgiven I don't have a long+shorts unit of work I can track — it feels

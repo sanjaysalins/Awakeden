@@ -401,18 +401,21 @@ VISUAL_STYLE_TAIL = (
 # CODE "must read as a 17th-century Baroque oil painting" — which would FAIL
 # every good frame of the new inked graphic-novel style. The audit's style check
 # is now selected by VISUAL_STYLE so the same auditor judges whichever look a
-# piece was rendered in. Default stays "baroque" for back-compat with the
-# existing long-form corpus; the new pipeline sets VISUAL_STYLE=graphic_novel.
-# Style versions: "baroque" (old oil-painting) | "graphic_novel" (new inked look).
+# piece was rendered in. 🔒 HARDENED (user, 2026-07-15, memory
+# `graphic-novel-style-migration`): the oil-painting era is LEGACY and never
+# ships — graphic_novel is the standard now, default flipped accordingly.
+# Baroque stays selectable only for one-off reference/back-compat renders via
+# an explicit VISUAL_STYLE=baroque override.
+# Style versions: "baroque" (LEGACY oil-painting, never ships) | "graphic_novel" (standard).
 # ----------------------------------------------------------------------------
-VISUAL_STYLE = os.getenv("VISUAL_STYLE", "baroque").strip().lower()
+VISUAL_STYLE = os.getenv("VISUAL_STYLE", "graphic_novel").strip().lower()
 
 # check-#6 rubric text, per style. Each is the "period authenticity & tone"
 # paragraph the auditor applies. The structure (HARD FAIL on modern/horror/NSFW,
 # reverent ancient biblical world) is shared; only the *medium* differs.
 STYLE_AUDIT_RUBRIC = {
     "baroque": (
-        "6. **Period authenticity & reverent tone (CHECK THIS EXPLICITLY).** The "
+        "7. **Period authenticity & reverent tone (CHECK THIS EXPLICITLY).** The "
         "image must read as a 17th-century Baroque devotional OIL PAINTING of the "
         "ANCIENT biblical world. FAIL (passed:false) on any of: faces/hair/grooming "
         "that look like MODERN contemporary people or photo-portrait models; modern "
@@ -426,7 +429,7 @@ STYLE_AUDIT_RUBRIC = {
         "the mood must be reverent, not sensational. When in doubt on tone, FAIL.\n\n"
     ),
     "graphic_novel": (
-        "6. **Style fidelity, period authenticity & reverent tone (CHECK THIS "
+        "7. **Style fidelity, period authenticity & reverent tone (CHECK THIS "
         "EXPLICITLY).** The image must read as an INKED BIBLICAL GRAPHIC-NOVEL / "
         "cinematic-manga ILLUSTRATION of the ANCIENT biblical world: bold clean "
         "black ink linework and outlines, flat cel-shaded comic colour, hand-drawn "
@@ -473,7 +476,7 @@ VISUAL_STYLE_TAIL_GN = (
 # video_render, the audit); every other stage is style-agnostic.
 # ----------------------------------------------------------------------------
 STYLE_REGISTRY = {
-    "baroque": {                                  # old oil-painting way (default)
+    "baroque": {                                  # LEGACY oil-painting way, never ships
         "style_base": VISUAL_STYLE_BASE,
         "style_tail": VISUAL_STYLE_TAIL,
         "still_model": ("hf", "nano_banana_2"),
@@ -481,7 +484,7 @@ STYLE_REGISTRY = {
         "audit_rubric": STYLE_AUDIT_RUBRIC["baroque"],
         "audit_medium": STYLE_MEDIUM_PHRASE["baroque"],
     },
-    "graphic_novel": {                            # new inked graphic-novel way
+    "graphic_novel": {                            # standard: inked graphic-novel way (default)
         "style_base": VISUAL_STYLE_BASE_GN,
         "style_tail": VISUAL_STYLE_TAIL_GN,
         "still_model": ("hf", "seedream_v4_5"),
@@ -493,8 +496,9 @@ STYLE_REGISTRY = {
 
 
 def style() -> dict:
-    """The active style record (defaults to baroque if VISUAL_STYLE is unknown)."""
-    return STYLE_REGISTRY.get(VISUAL_STYLE, STYLE_REGISTRY["baroque"])
+    """The active style record (defaults to graphic_novel if VISUAL_STYLE is unknown —
+    the legacy Baroque style is never a silent fallback, only an explicit choice)."""
+    return STYLE_REGISTRY.get(VISUAL_STYLE, STYLE_REGISTRY["graphic_novel"])
 
 
 def still_model() -> str:

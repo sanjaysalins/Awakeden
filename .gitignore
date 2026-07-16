@@ -23,6 +23,7 @@ Thumbs.db
 
 # ── Agent-mode bridge (transient request/response/image files) ─
 .agent_bridge/
+.agent_bridge_*/
 
 # ── Local Claude Code session state + scratch (per-machine) ────
 .claude/

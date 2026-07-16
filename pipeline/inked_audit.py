@@ -99,8 +99,8 @@ def _trap_block(trap_keys: list[str]) -> str:
 def build_audit_prompt(should_show: str, trap_keys: list[str], style: str | None = None) -> str:
     """Compose the auditor system prompt: inked style fidelity + the named traps."""
     style = (style or config.VISUAL_STYLE).strip().lower()
-    style_rubric = config.STYLE_AUDIT_RUBRIC.get(style, config.STYLE_AUDIT_RUBRIC["baroque"])
-    medium = config.STYLE_MEDIUM_PHRASE.get(style, config.STYLE_MEDIUM_PHRASE["baroque"])
+    style_rubric = config.STYLE_AUDIT_RUBRIC.get(style, config.STYLE_AUDIT_RUBRIC["graphic_novel"])
+    medium = config.STYLE_MEDIUM_PHRASE.get(style, config.STYLE_MEDIUM_PHRASE["graphic_novel"])
     return (
         "You are an INDEPENDENT visual content + iconography auditor for a reverent "
         "Bible-faithful illustration. Audit the attached image against the spec "

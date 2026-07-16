@@ -102,10 +102,22 @@ def _parse_xml_blocks(md: str) -> list[Block]:
     return blocks
 
 
+_HTML_COMMENT = re.compile(r"<!--.*?-->", re.DOTALL)
+# shorts auto-tag output (narration-tagged.md) prefixes a beat with one or more
+# ElevenLabs bracket tags, e.g. "[serious][deliberate] text..." - these are
+# delivery directions, not spoken text, and must not leak into the spoken hash
+# (else re-locking a tagged shorts file always "changes" the text - see the
+# XML path's equivalent stripping in _parse_xml_blocks).
+_LEADING_BRACKET_TAGS = re.compile(r"^(?:\[[^\[\]]+\]\s*)+")
+
+
 def _parse_prose_blocks(md: str) -> list[Block]:
     """Engine-generated narration.md is PLAIN PROSE (paragraphs = beats, no speaker
     markers). Treat each paragraph as a narrator block so the lock can verify/cluster
-    it too. Skips headings, rules, front-matter bullets, and a trailing ledger."""
+    it too. Skips headings, rules, front-matter bullets, and a trailing ledger.
+    Also handles the shorts narration-tagged.md variant (bracket audio-tags + an
+    HTML sentinel comment, no <speaker> XML) by stripping both before extraction."""
+    md = _HTML_COMMENT.sub("", md)
     # truncate at a non-spoken ledger heading so DEPTH/SOURCING/VOICE never leaks in
     cut = re.split(r"(?im)^\s*#{1,6}\s*(?:depth|sourcing|voice\b)", md, 1)[0]
     blocks: list[Block] = []
@@ -113,7 +125,7 @@ def _parse_prose_blocks(md: str) -> list[Block]:
         lines = [l for l in para.splitlines()
                  if l.strip() and not _HEADING.match(l) and not _RULE.match(l)
                  and not l.lstrip().startswith(("- ", "* ", "**Status", "**Series"))]
-        text = " ".join(l.strip() for l in lines).strip()
+        text = " ".join(_LEADING_BRACKET_TAGS.sub("", l.strip(), count=1).strip() for l in lines).strip()
         # stop at a DEPTH/VOICE ledger if one appears
         if text and not text.lower().startswith(("depth", "voice plan", "sourcing")):
             blocks.append(Block(speaker="narrator", ref=None, text=text))

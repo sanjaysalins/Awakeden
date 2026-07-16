@@ -122,7 +122,7 @@ upload/caption tail.
 | 3b SFX | `/sfx` | `sfx_pilots/sfxlib.py` | `viral_cut_sfx.mp4` | reuse-from-library, sidechain-duck (INV-18) |
 | 4 Caption | `/caption` | `veed_io/caption.py` | `<clip>_captioned.mp4` | offline $0 ivory recipe (INV-16) |
 | 5 Upload | `/upload` | `pipeline/upload_gates.py` | `upload/upload_kit.{json,md}` | UK-G1–G7 |
-| 6 Publish/Release | `/publish` + `release_check.py` | `pipeline/publish_check.py` + `pipeline/release_state.py` | `publish/` pack + `data/release_ledger.json` | UK-G1–G7 + SYNC-G1–G7 |
+| 6 Publish/Release | `/publish` + `release_check.py` | `pipeline/publish_check.py` + `pipeline/release_state.py` | `publish/` pack + `data/release_ledger.json` | UK-G1–G7 + SYNC-G1–G8 |
 | x Review | `/review` | `independent_review.py` | `_independent_review/<stamp>/` | 5-CLI panel before any LOCK (INV-9) |
 | x Validate | `/validate` | `pipeline/validators.py` + `test_*.py` + `test_bible_kb*.py` | green suite | rules_integrity + 114 tests + 31 Bible-Check tests (adds coherence/dedup/still-review/clip-reuse + BC-G1/BC-G2/chokepoint hash-binding suites; CLIP-NOWRITING live; anchor-verse-unquoted + IMG-COHERENT fixtures still targets) |
 | x Cost | `/cost` | `pipeline/cost.py` | `data/spend_ledger.jsonl` | pre-flight estimate + ask-before-spend (INV-20) |
@@ -256,6 +256,7 @@ one write path for posted URLs (`upload_tracker.py --set <slug> <platform> <url>
 | SYNC-G5 Site fresh | D | read page exists for promoted items; frame `_meta.source_sha` == scored video (WARN); `publish_meta.read_url` == the real `read/<slug>.html` (FAIL) |
 | SYNC-G6 Posted truth | D | `youtube_id` ⇔ `public_status: live` ⇔ dated ledger entry; posted sha == current final |
 | SYNC-G7 Long⇄short | D | a short in a cluster that has a long carries `parent:` = that long |
+| SYNC-G8 Art style | D | `studio_complete`/`live` ⇒ not detected LEGACY Baroque oil-painting style (`pipeline/art_style.py`; hardened 2026-07-15, memory `graphic-novel-style-migration` — the oil-painting era never ships) |
 
 ### LIVING-PAGE lane — `run_piece.py` + `render_lint/` + `stills_gate.py` + `pipeline/flow_check.py` (all LIVE 2026-07-08)
 `H` = human gate. Every LP-D gate is wired into the runner itself — a bespoke

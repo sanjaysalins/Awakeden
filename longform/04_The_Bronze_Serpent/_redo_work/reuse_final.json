@@ -1,0 +1,128 @@
+{
+ "cross_at_dawn": {
+  "clip": "batches/cluster_01_cross\\body_foretold_ps2214\\visual\\clips\\cross_at_dawn.mp4",
+  "anchor": "batches/cluster_01_cross\\body_foretold_ps2214\\visual\\cross_at_dawn.anchor.json",
+  "n_clips": 7,
+  "n_anchors": 7
+ },
+ "face_on_cross": {
+  "clip": "batches/cluster_01_cross\\body_foretold_ps2214\\visual\\clips\\face_on_cross.mp4",
+  "anchor": "batches/cluster_01_cross\\body_foretold_ps2214\\visual\\face_on_cross.anchor.json",
+  "n_clips": 14,
+  "n_anchors": 8
+ },
+ "golgotha_hill_wide": {
+  "clip": "batches/cluster_01_cross\\body_foretold_ps2214\\visual\\clips\\golgotha_hill_wide.mp4",
+  "anchor": null,
+  "n_clips": 12,
+  "n_anchors": 0
+ },
+ "nail_through_hand": {
+  "clip": "batches/cluster_01_cross\\body_foretold_ps2214\\visual\\clips\\nail_through_hand.mp4",
+  "anchor": "batches/cluster_01_cross\\body_foretold_ps2214\\visual\\nail_through_hand.anchor.json",
+  "n_clips": 8,
+  "n_anchors": 7
+ },
+ "risen_mercy_hand": {
+  "clip": "batches/cluster_01_cross\\body_foretold_ps2214\\visual\\clips\\risen_mercy_hand.mp4",
+  "anchor": "batches/cluster_01_cross\\body_foretold_ps2214\\visual\\risen_mercy_hand.anchor.json",
+  "n_clips": 14,
+  "n_anchors": 13
+ },
+ "two_thieves_wide": {
+  "clip": "batches/cluster_01_cross\\body_foretold_ps2214\\visual\\clips\\two_thieves_wide.mp4",
+  "anchor": "batches/cluster_01_cross\\body_foretold_ps2214\\visual\\two_thieves_wide.anchor.json",
+  "n_clips": 3,
+  "n_anchors": 3
+ },
+ "us_under_cross_shadow": {
+  "clip": "batches/cluster_01_cross\\body_foretold_ps2214\\visual\\clips\\us_under_cross_shadow.mp4",
+  "anchor": null,
+  "n_clips": 13,
+  "n_anchors": 0
+ },
+ "bowed_head_finished": {
+  "clip": "batches/cluster_01_cross\\body_foretold_ps2214\\visual\\clips\\bowed_head_finished.mp4",
+  "anchor": null,
+  "n_clips": 6,
+  "n_anchors": 0
+ },
+ "darkness_veil_torn": {
+  "clip": "batches/cluster_01_cross\\father_forgive_them\\visual\\clips\\darkness_veil_torn.mp4",
+  "anchor": "batches/cluster_01_cross\\forsaken_cry_ps221\\visual\\darkness_veil_torn.anchor.json",
+  "n_clips": 3,
+  "n_anchors": 2
+ },
+ "grace_poured_sky": {
+  "clip": "batches/cluster_01_cross\\ends_of_earth_ps2227\\visual\\clips\\grace_poured_sky.mp4",
+  "anchor": "batches/cluster_01_cross\\ends_of_earth_ps2227\\visual\\grace_poured_sky.anchor.json",
+  "n_clips": 4,
+  "n_anchors": 4
+ },
+ "look_up_faces": {
+  "clip": "batches/cluster_01_cross\\declared_brethren_ps2222\\visual\\clips\\look_up_faces.mp4",
+  "anchor": "batches/cluster_01_cross\\declared_brethren_ps2222\\visual\\look_up_faces.anchor.json",
+  "n_clips": 6,
+  "n_anchors": 6
+ },
+ "ninth_hour_darkness": {
+  "clip": "batches/cluster_01_cross\\body_foretold_ps2214\\visual\\clips\\ninth_hour_darkness.mp4",
+  "anchor": null,
+  "n_clips": 5,
+  "n_anchors": 0
+ },
+ "risen_christ_wounds": {
+  "clip": "batches/cluster_01_cross\\declared_brethren_ps2222\\visual\\clips\\risen_christ_wounds.mp4",
+  "anchor": null,
+  "n_clips": 2,
+  "n_anchors": 0
+ },
+ "risen_christ_seeking": {
+  "clip": "batches/cluster_01_cross\\declared_brethren_ps2222\\visual\\clips\\risen_christ_seeking.mp4",
+  "anchor": null,
+  "n_clips": 1,
+  "n_anchors": 0
+ },
+ "risen_christ_congregation": {
+  "clip": "batches/cluster_01_cross\\declared_brethren_ps2222\\visual\\clips\\risen_christ_congregation.mp4",
+  "anchor": null,
+  "n_clips": 1,
+  "n_anchors": 0
+ },
+ "stone_rolled_dawn": {
+  "clip": "batches/cluster_01_cross\\declared_brethren_ps2222\\visual\\clips\\stone_rolled_dawn.mp4",
+  "anchor": null,
+  "n_clips": 2,
+  "n_anchors": 0
+ },
+ "man_lifting_face_dawn": {
+  "clip": "batches/cluster_01_cross\\it_is_finished_john1930\\visual\\clips\\man_lifting_face_dawn.mp4",
+  "anchor": "batches/cluster_01_cross\\it_is_finished_john1930\\visual\\man_lifting_face_dawn.anchor.json",
+  "n_clips": 1,
+  "n_anchors": 1
+ },
+ "jesus_looks_down": {
+  "clip": "batches/cluster_01_cross\\crucifixion_foretold_ps2218\\visual\\clips\\jesus_looks_down.mp4",
+  "anchor": "batches/cluster_01_cross\\crucifixion_foretold_ps2218\\visual\\jesus_looks_down.anchor.json",
+  "n_clips": 3,
+  "n_anchors": 2
+ },
+ "hands_of_light_open": {
+  "clip": "batches/cluster_01_cross\\into_thy_hands_luke2346\\visual\\clips\\hands_of_light_open.mp4",
+  "anchor": "batches/cluster_01_cross\\into_thy_hands_luke2346\\visual\\hands_of_light_open.anchor.json",
+  "n_clips": 1,
+  "n_anchors": 1
+ },
+ "kingdom_light_clouds": {
+  "clip": "batches/cluster_01_cross\\today_paradise_luke2343\\visual\\clips\\kingdom_light_clouds.mp4",
+  "anchor": "batches/cluster_01_cross\\today_paradise_luke2343\\visual\\kingdom_light_clouds.anchor.json",
+  "n_clips": 1,
+  "n_anchors": 1
+ },
+ "first_day_morning": {
+  "clip": "batches/cluster_01_cross\\into_thy_hands_luke2346\\visual\\clips\\first_day_morning.mp4",
+  "anchor": "batches/cluster_01_cross\\into_thy_hands_luke2346\\visual\\first_day_morning.anchor.json",
+  "n_clips": 2,
+  "n_anchors": 2
+ }
+}

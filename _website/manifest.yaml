@@ -1010,7 +1010,7 @@ items:
   series_id: jesus-in-ot
   cluster: passover-lamb
   cluster_order: 0
-  public_status: studio_complete
+  public_status: in_production
   featured: false
   preview_approved: false
   preview_source: null
@@ -1029,7 +1029,7 @@ items:
   series_id: jesus-in-ot
   cluster: bronze-serpent
   cluster_order: 0
-  public_status: studio_complete
+  public_status: in_production
   featured: false
   preview_approved: false
   preview_source: null
@@ -1048,7 +1048,7 @@ items:
   series_id: jesus-in-ot
   cluster: seed-of-the-woman
   cluster_order: 0
-  public_status: studio_complete
+  public_status: in_production
   featured: false
   preview_approved: false
   preview_source: null
