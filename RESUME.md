@@ -1,13 +1,101 @@
-# RESUME — next session (updated 2026-07-18 — Bronze Serpent quality-rework session, one style-mismatch item left)
+# RESUME — next session (updated 2026-07-19 — panel_animator toolkit built + landing-hold standard locked (INV-26), two real engine bugs found and fixed across shorts AND long-form)
 
-## 🔴 PICK UP HERE FIRST (2026-07-18 session paused, user said "we will pick this up tomorrow")
+## 🔴 PICK UP HERE FIRST (2026-07-19 session paused, user said "let's save everything and resume tomorrow")
 
-### 1. Bronze Serpent — GATE-CLEAN and committed, ONE known issue left to decide on
+### 0. Everything is committed — `67fc015`
+Nothing outstanding to save. Working tree is clean except pre-existing/not-mine scratch
+(`_run_audio_bs03.py`, `poc_elevate/`, `poc_vibemotion_style/` — untouched, leave alone) and
+disposable render logs/POC dirs under Bronze Serpent's `visual_16x9_inked/` (by design, never
+committed — see `.gitignore` media policy). `longform/04_The_Bronze_Serpent/_prototype_60s/`
+is a throwaway 60s panel_animator demo the user reviewed and liked — safe to delete anytime,
+or keep as a reference; not part of the shipped film.
+
+### 1. NEW: `panel_animator/` — an 8-tool comic-panel toolkit, built and locked this session
+Read `panel_animator/README.md` first — it's the roster + a "reach for it when / not when"
+table per tool. Two tiers, **do not blur them**:
+- **Standard, use often**: `typography_panel.py` (in-world text reveal, torn parchment band,
+  illuminated-manuscript red "rubrication" accent word) + `infographic_panel.py` (two-still
+  comic diptych, torn gutter, brush arrow). Both now support `--aspect 9:16` (built today —
+  previously 16:9-only) as a REAL portrait layout, not a crop.
+- **Selective, spread thin, one deliberate pick per beat**: `grid_choreography.py` (virtual
+  page-camera rack-focus across a live 2x2 grid), `impact_burst.py` (ink burst at a REAL point
+  of contact), `ink_transition.py` (organic ink-bleed/wipe cut), `line_boil.py` (hand-inked
+  frame wobble on a held panel), `parallax_25d.py` (2.5D depth on a CALM panel via `rembg`),
+  `print_grade.py` (halftone + fringe + grain, final pass only).
+- Memory: [[panel-animator-intentional-use]]. CLAUDE.md's comic-grid rule was refined to
+  match: a grid needs ≥1 real animated clip, not literally every cell (a static text panel can
+  be one of several).
+- One real panel is live in each of two finished pieces as a worked example (not just a demo):
+  Bronze Serpent's opening beat (typography, "much people of Israel died") and
+  father_forgive_them's beat 8 (typography, over `psalm22_scroll_david` — which had NO real
+  clip at all before, so this doubled as a real fix, not just decoration).
+- **Not yet done**: only tested on 2 pieces + one throwaway 60s prototype. No shorts have
+  gotten an `infographic_panel` yet. `grid_choreography`/`impact_burst`/`ink_transition`/
+  `line_boil`/`parallax_25d`/`print_grade` have only been proven in the 60s prototype, never
+  wired into a real shipped beat. Next natural step, when the user wants it: pick ONE more
+  deliberate beat (not a sweep) in a real piece for one of the untested-in-production tools.
+
+### 2. NEW: landing-hold standard locked — `v2/SPEC.md` INV-26, gate = `check_landing_hold.py`
+Every finished cut (short or long) needs a ≥3.0s hold after the last spoken word, audio
+duration matching video duration. Run `.venv\Scripts\python.exe check_landing_hold.py` (whole-
+repo scan, $0, ffprobe-only) before calling ANY piece done. FAILs on real desync; WARNs
+(doesn't block) on pieces still at the old 1.5s/2.5s hold. Memory: [[landing-hold-standard]].
+
+**Two real bugs found and fixed this session** (not hypothetical — both were live in shipped
+files):
+1. `run_piece.py`'s shared shorts score stage had NO audio padding at all — narration ended
+   ~1.5s before the video's hold, silently. Fixed with `apad=whole_dur`.
+2. Bronze Serpent's `_add_score_inked.py` + the shared `longform/_add_score_lf.py` used
+   RELATIVE padding (`apad=pad_dur`, pads onto whatever the audio's raw length already was)
+   instead of ABSOLUTE (`apad=whole_dur`) — so a pre-existing ~1s build-stage gap in Bronze
+   Serpent's own narration/video survived every score rebuild uncorrected. Bronze Serpent's
+   shipped file had a genuine 1.01s A/V desync until this session; now fixed and verified
+   (`gap=-0.01s`).
+
+**Currently at 3.0s + verified clean**: `father_forgive_them`, Bronze Serpent, Psalm 22.
+**Everything else (15 shorts + Isaiah 53 + EW01 Two Goats) is still at the OLD 1.5s/2.5s
+hold — WARN-only, deliberately NOT retrofitted** (user's explicit call: lock the standard for
+new work, don't spend the batch-rebuild effort on already-shipped content unless asked).
+
+### 3. NEW: red-teamed shorts vs long-form engine parity — found + fixed a real Psalm 22 bug
+Asked "are shorts and long-form really built the same way" — they mostly are (same
+`build_livingpage_16x9.py` engine, same stills-gate/reuse-check/fit-gate, same caption engine)
+but Psalm 22's own copy of the build script was missing TWO fixes Bronze Serpent already had:
+- The 2026-07-17 "every-screen-animated" fix — Psalm 22's `source()` checked `cam` BEFORE
+  checking for a real clip, so any beat with a `cam` hint silently used Ken Burns even when a
+  real animated clip existed.
+- The 2026-07-16 `_dims()` crop fix — Psalm 22 assumed every clip was PAGE-shaped when
+  solving grid-panel crops, mis-solving any reused off-aspect clip (this one turned out to have
+  zero actual instances in Psalm 22 — real latent risk, correctly fixed, no visible impact).
+Both backported. Scoped the actual impact BEFORE rebuilding (per the user's ask): only 4 of 99
+beats affected (~3.5% of the film, beats 9/32/74/95, two real clip assets — `pierced_feet` and
+`kindreds_bowing`). Rebuilt just those 4 beats + rescored + re-SFX'd. Verified by eye and via
+the gate. **Isaiah 53 was NOT audited for the same bugs** (user explicitly scoped this pass to
+"just Psalm 22") — if Isaiah 53's `build_livingpage_16x9.py` copy exists and predates
+2026-07-16/17, it likely has the same two bugs. Worth a quick same-style scoping pass before
+ever touching Isaiah 53 again.
+
+**Still-open architectural findings from the red-team (not bugs, real inconsistency, bigger
+asks than this pass — flagged, not fixed):**
+- THREE independent score-mixing implementations (shorts' `run_piece.py`, long-form's shared
+  `_add_score_lf.py`, Bronze Serpent's own fork `_add_score_inked.py`) — this is literally how
+  the two apad bugs above ended up different bugs in different places. Consolidating to one
+  implementation would prevent this class of bug recurring a third time.
+- SFX: shorts share one real library (`sfx_pilots/sfxlib.py`); every long-form episode has its
+  own hand-rolled ad-hoc `CUES`-list script (7 of them). Same risk pattern.
+- `panel_variety_lint.py` exists ONLY for Bronze Serpent and isn't wired into the build as an
+  actual gate anywhere, even for Bronze Serpent itself — it's a script you have to remember to
+  run by hand. No shorts equivalent exists at all.
+- The "every panel animated, no Ken Burns" rule is advisory-only in BOTH formats — nothing
+  exits non-zero on a low `kling_or_punch_or_slam_pct`. Symmetric gap, not an asymmetry, but
+  worth knowing it isn't actually enforced anywhere.
+
+### 4. Bronze Serpent — the 2026-07-18 style-mismatch item is DONE, plus more fixes on top
 `longform/04_The_Bronze_Serpent/v1/visual_16x9_inked/BronzeSerpent_16x9_scored_sfx.mp4` is
-current, finished, and verified (477.77s). Committed in `c0888ee`. Do NOT redo any of the
+current, finished, and verified (477.77s, landing-hold gate clean). Do NOT redo any of the
 work below — it's done and eye-verified, not just clean-exit-code verified.
 
-**What happened this session (in order, don't repeat):**
+**What happened across 2026-07-18/19 (in order, don't repeat):**
 1. **"Every screen must be animated" rule, locked** (CLAUDE.md + memory
    `comic-grid-cost-tiered-animation`): Ken Burns is no longer acceptable anywhere in a
    comic-grid piece — every panel needs a real Seedance/Kling clip. Fixed a real code bug in
@@ -34,40 +122,41 @@ work below — it's done and eye-verified, not just clean-exit-code verified.
 6. Full rebuild → score → SFX → thumbnails → publish after EVERY fix pass above; 410 tests
    green, `release_check.py`/`production_board.py`/`panel_variety_lint.py` all clean each time.
 
-**Outstanding — one real finding from today's final sweep, NOT yet fixed, needs a decision:**
-`reuse_two_thieves_wide` (used in beat 22 and beat 32) is a genuine **art-style mismatch** —
-flat, high-contrast black/white manga-ink style, visibly different from the rest of the
-film's fuller painted-color graphic-novel look. This is NOT a resolution issue (that class is
-now gated) — it's a different rendering style entirely, likely pulled from a different
-piece's asset bank. Options for tomorrow: render a native 16:9 replacement (same treatment as
-the 5 hero fixes above), or ask the user if this is acceptable as intentional variation.
-Screenshot evidence was shown to the user in-chat; not saved to disk anywhere else.
+**RESOLVED 2026-07-19** (was the outstanding item from 2026-07-18): `reuse_two_thieves_wide`
+replaced with a genuine native 16:9 still+clip (`two_thieves_foreground`), matching the film's
+painted-color graphic-novel look. Took 4 render iterations — the recurring "weird nail" defect
+turned out to be the word "coin-sized" priming coin-with-a-cross iconography (swapped to
+"button-sized"), plus a hallucinated wristband and gold-medallion "jewelry" on the thieves'
+rope bindings along the way.
 
-**Two more things to remember, not urgent:**
+**Also done 2026-07-19, same root-cause fix, 6 total scenes**: the SAME nail artifact was found
+in 5 OTHER already-shipped native scenes (12, 16, 18, 25, 31) via the user's own media-review
+gallery feedback — all fixed with the same "button-sized" positive-only phrasing. Scene 25 also
+had an unrelated real defect (a floating/unplanted distant cross) and scene 18 had excessive
+gore on a snakebite wound — both fixed while re-rendering anyway. Scene 13's CLIP (not still)
+was separately fixed — Kling was inventing blood spreading down the garment; re-animated on
+Seedance instead (matches the project's own earlier finding that Kling, not Seedance, is the
+one that invents blood).
+
+**Also done 2026-07-19**: the landing-hold fix (see item 2 above) — Bronze Serpent's final file
+had a genuine 1.01s A/V desync, now fixed and reverified.
+
+**Two things to remember, not urgent:**
 - `_MEDIA_REVIEW.html` (in `visual_16x9_inked/`) is a reusable still+clip review gallery —
-  worth porting to future comic-grid pieces rather than rebuilding from scratch.
+  worth porting to future comic-grid pieces rather than rebuilding from scratch. Kept current
+  as of 2026-07-19 (33 native + 17 reuse entries, matches the live spec).
 - The other 3 archived-Baroque episodes (Passover Lamb, Seed of the Woman, Day of Atonement)
   are still queued for the same graphic-novel rebuild treatment, still NOT started, still
-  needs the user's per-episode go-ahead — and should now be costed against ALL of today's new
-  rules (every-screen-animated, panel-variety, reuse-aspect), not the older assumptions.
+  needs the user's per-episode go-ahead — and should now be costed against ALL of the
+  2026-07-17/19 rules (every-screen-animated, panel-variety, reuse-aspect, landing-hold), not
+  the older assumptions.
 
-### 2. 11 shorts — still at GATE 2, still waiting on the USER's image review (untouched this session)
+### 5. 11 shorts — still at GATE 2, still waiting on the USER's image review (untouched this session)
 Passover Lamb ×4 + Bronze Serpent ×3 + Seed of the Woman ×4, episodes 37-47 in
 `C:\Users\sanjay\PycharmProjects\PythonProject1\jesus\narration\`. Status unchanged from
 2026-07-16 — galleries at `<folder>/v1/visual/hf/index.html`, still a human decision, still
 should not be pushed further (no Kling) until reviewed. Confirmed 2026-07-17: all 11 galleries
 current and non-stale, 4 scenes across 2 shorts NSFW-blocked as expected (not a bug).
-
-### 3. Everything committed
-`JesusInTheBible` repo: commit `c0888ee` ("Bronze Serpent: every-screen-animated rework +
-panel-variety/reuse-aspect gates") covers today's CLAUDE.md rules, the `build_livingpage_16x9.py`
-fix, the two new gate/asset files (`panel_variety_lint.py`, `visual_tags.json`), the
-`_MEDIA_REVIEW.html` tool, and all `scene_plan.json`/`livingpage_full.spec.json` edits.
-Media (stills/clips, all gitignored) and scratch render logs (`_render*_log.txt`,
-`_render*_results.json`, `_bakeoff_i2v/`) are untracked working files on disk, not committed
-— check disk state fresh, don't assume the commit reflects every rendered asset (it doesn't,
-by design). An unrelated untracked file `_run_audio_bs03.py` was already sitting in the repo
-root before this session started — not touched, not mine, leave it alone.
 
 ---
 
