@@ -1,77 +1,73 @@
-# RESUME — next session (updated 2026-07-16 — legacy-style gate fixed, Bronze Serpent mid-rebuild, 11 shorts at GATE 2)
+# RESUME — next session (updated 2026-07-18 — Bronze Serpent quality-rework session, one style-mismatch item left)
 
-## 🔴 PICK UP HERE FIRST (2026-07-16 session paused mid-task, user said "let's pick this up tomorrow")
+## 🔴 PICK UP HERE FIRST (2026-07-18 session paused, user said "we will pick this up tomorrow")
 
-### 1. Bronze Serpent graphic-novel rebuild — IN PROGRESS, NOT FINISHED
-`longform/04_The_Bronze_Serpent/v1/visual_16x9_inked/` — a background agent was mid-render
-when the session paused. **As of pause: segment 34 of 52 rendered** (`_livingpage_work/seg_*.mp4`
-— check current count/mtimes, it may have kept progressing or may have stopped). The OLD
-final (`BronzeSerpent_16x9_scored_sfx.mp4`, mtime Jul 16 18:31) is STALE — do not treat it as
-current, it predates the defect fixes + full-animation + full-template rework.
+### 1. Bronze Serpent — GATE-CLEAN and committed, ONE known issue left to decide on
+`longform/04_The_Bronze_Serpent/v1/visual_16x9_inked/BronzeSerpent_16x9_scored_sfx.mp4` is
+current, finished, and verified (477.77s). Committed in `c0888ee`. Do NOT redo any of the
+work below — it's done and eye-verified, not just clean-exit-code verified.
 
-**What's already done and should NOT be redone:**
-- All 4 long-form Baroque episodes (Passover Lamb/Bronze Serpent/Seed of the Woman/Day of
-  Atonement) archived to `archive/<episode>_baroque/` (reference only, not deleted).
-- Real regression fixed: `config.VISUAL_STYLE` now defaults `graphic_novel` (was silently
-  `baroque`); new **SYNC-G8** gate (`pipeline/art_style.py`) fails any studio_complete/live
-  piece rendered in the legacy style — this can't silently regress again.
-- Day of Atonement assembled through score→SFX→captions for the first time (was 25 raw
-  never-chained clips). Publish packs built for all 4 episodes (GREEN).
-- Bronze Serpent: rebuilt graphic-novel → density pass (27→52 beats) → **then a defect-fix +
-  full-template + full-animation pass** (user reviewed via `_STILLS_REVIEW.html`, flagged 7
-  real still defects — all fixed and re-verified by eye: duplicated serpent standards→one
-  standard, a crowd figure that read as Jesus in an OT scene→re-faced, snakes-still-on-arms→
-  bite wounds, a giant disproportionate pole→rescaled, plus 3 more). Spec reworked to use ALL
-  11 `comic_engine.py` grid templates (was only 5 of 11 — `split_v`/`stack_h`/`strip_h3`/
-  `quad`/`hero_frac4`/`hero_band3` were sitting completely unused). Every panel is meant to
-  carry real motion now (Kling/veo clip or $0 `dynamic_cam`) per the engine's own "ALIVE —
-  never static" design intent, which the piece wasn't actually honoring before.
+**What happened this session (in order, don't repeat):**
+1. **"Every screen must be animated" rule, locked** (CLAUDE.md + memory
+   `comic-grid-cost-tiered-animation`): Ken Burns is no longer acceptable anywhere in a
+   comic-grid piece — every panel needs a real Seedance/Kling clip. Fixed a real code bug in
+   `build_livingpage_16x9.py`'s `source()` that let a spec `"cam"` hint force Ken Burns even
+   when a real clip existed — real clip now always wins.
+2. **Panel-redundancy audit**: a full eye-survey (not just the tag-lint) found 9 grids
+   showing the same subject twice (duplicate crucifixion close-ups, duplicate light-shaft
+   imagery, etc.) — all fixed by re-pairing panels to existing assets ($0). New gate:
+   `panel_variety_lint.py`.
+3. **Camera-move monotony fixed**: all-push-in replaced with 4 real treatments (push/hold/
+   pullback/drift) across the panel-fill clips.
+4. **User found real render defects via `_MEDIA_REVIEW.html`** (the new still+clip review
+   gallery, still there for future use): a "pool of light" prompt was literally rendering as
+   a water puddle, "dark round nail head" was rendering as a broken ball+dagger across 4
+   stills, Kling was inventing streaming blood/dripping fluid on 2 clips. All fixed at the
+   PROMPT-LANGUAGE root cause, not just re-rolled.
+5. **User caught a resolution/quality mismatch by eye**: some clips looked much softer than
+   others. Root cause confirmed — 5 hero/full-bleed beats were using 9:16-native shorts assets
+   stretched to 16:9 (forbidden per pre-existing memory `vertical-panels-cross-aspect-reuse`,
+   which had been silently violated). Rendered 5 fresh native 16:9 stills+clips to replace them
+   (also caught and fixed a caption/content mismatch and a bare-chest doctrine slip along the
+   way). New gate: `panel_variety_lint.py` now also fails any 9:16 reuse asset used full-bleed
+   or zoomed past 1.05x.
+6. Full rebuild → score → SFX → thumbnails → publish after EVERY fix pass above; 410 tests
+   green, `release_check.py`/`production_board.py`/`panel_variety_lint.py` all clean each time.
 
-**What's still open:**
-1. Finish the 52-segment render → mux → score → SFX rebuild → publish pack refresh
-   (thumbnails likely need re-cutting since the hero frame may have changed).
-2. **Verify motion coverage for real** — pull frames a couple seconds apart from several
-   different beats/templates and confirm they visibly differ (a genuinely static panel will
-   look identical between two pulls). This was asked of the last agent but never confirmed
-   complete before the pause.
-3. Run full test suite + `release_check.py` + `production_board.py`, confirm bronze-serpent
-   is gate-clean and genuinely reflects the new content.
-4. **Then show the user** — this was a live back-and-forth (user reviewed, flagged issues,
-   asked for more animation/grid variety) — don't consider it done until they've actually
-   seen the new version. If a background agent is still running from before the pause, check
-   its live status first rather than starting a duplicate.
-5. **Only after Bronze Serpent is approved**: same treatment (archive→rebuild) is queued for
-   the other 3 (Passover Lamb, Seed of the Woman, Day of Atonement) — NOT started, needs the
-   user's go-ahead per-episode same as Bronze Serpent got. Rough ceiling estimate from the
-   first quote was ~$30-33/episode assuming zero reuse; Bronze Serpent's actual spend across
-   both rebuild passes should inform a better estimate for the remaining 3.
+**Outstanding — one real finding from today's final sweep, NOT yet fixed, needs a decision:**
+`reuse_two_thieves_wide` (used in beat 22 and beat 32) is a genuine **art-style mismatch** —
+flat, high-contrast black/white manga-ink style, visibly different from the rest of the
+film's fuller painted-color graphic-novel look. This is NOT a resolution issue (that class is
+now gated) — it's a different rendering style entirely, likely pulled from a different
+piece's asset bank. Options for tomorrow: render a native 16:9 replacement (same treatment as
+the 5 hero fixes above), or ask the user if this is acceptable as intentional variation.
+Screenshot evidence was shown to the user in-chat; not saved to disk anywhere else.
 
-Lesson learned hard this session, apply it: **every subagent that ended its turn assuming a
-background render/job would "notify" it lost real progress** — the notification only fires
-when an agent's OWN turn ends with no tracked children, nothing actually wakes it back up.
-Any agent picking up render/build work must run it in the foreground (synchronous wait or
-active polling within one continuous turn), not delegate to "I'll resume when it's done."
+**Two more things to remember, not urgent:**
+- `_MEDIA_REVIEW.html` (in `visual_16x9_inked/`) is a reusable still+clip review gallery —
+  worth porting to future comic-grid pieces rather than rebuilding from scratch.
+- The other 3 archived-Baroque episodes (Passover Lamb, Seed of the Woman, Day of Atonement)
+  are still queued for the same graphic-novel rebuild treatment, still NOT started, still
+  needs the user's per-episode go-ahead — and should now be costed against ALL of today's new
+  rules (every-screen-animated, panel-variety, reuse-aspect), not the older assumptions.
 
-### 2. 11 shorts — all at GATE 2, waiting on the USER's image review (not a next-session task, just FYI)
+### 2. 11 shorts — still at GATE 2, still waiting on the USER's image review (untouched this session)
 Passover Lamb ×4 + Bronze Serpent ×3 + Seed of the Woman ×4, episodes 37-47 in
-`C:\Users\sanjay\PycharmProjects\PythonProject1\jesus\narration\`. Spend $45.06 of the $60
-budget across the whole 2026-07-16 session (long-form rebuild spend included in that total).
-All narrate→voice→scene-plan→stills complete; galleries at `<folder>/v1/visual/hf/index.html`.
-**GATE 2 (hero pick / reroll / exclude) is a human decision — next session should NOT push
-these further (no Kling) until the user has actually reviewed the galleries**, same discipline
-as Bronze Serpent above. 3 scenes across 3 different shorts got NSFW-blocked (blood-doorpost
-imagery) and sit excluded rather than rendered — a GATE 2 call, not a bug.
-
-Also fixed in passing this session: a real bug in `pipeline/narration_parse.py` (the
-spoken-text parser wasn't stripping ElevenLabs bracket tags, silently breaking re-lock on any
-already-tagged piece) — this was a project-wide bug, not scoped to today's pieces.
+`C:\Users\sanjay\PycharmProjects\PythonProject1\jesus\narration\`. Status unchanged from
+2026-07-16 — galleries at `<folder>/v1/visual/hf/index.html`, still a human decision, still
+should not be pushed further (no Kling) until reviewed. Confirmed 2026-07-17: all 11 galleries
+current and non-stale, 4 scenes across 2 shorts NSFW-blocked as expected (not a bug).
 
 ### 3. Everything committed
-Both repos (`JesusInTheBible` + `PythonProject1`) are committed as of this pause. The 4
-archived-Baroque episodes, the regression fix, Day of Atonement, publish packs, and both
-Bronze Serpent rebuild passes are one commit each. Bronze Serpent's IN-PROGRESS render
-segments are gitignored working files, not committed — check disk state fresh next session,
-don't assume the last commit reflects the finished film.
+`JesusInTheBible` repo: commit `c0888ee` ("Bronze Serpent: every-screen-animated rework +
+panel-variety/reuse-aspect gates") covers today's CLAUDE.md rules, the `build_livingpage_16x9.py`
+fix, the two new gate/asset files (`panel_variety_lint.py`, `visual_tags.json`), the
+`_MEDIA_REVIEW.html` tool, and all `scene_plan.json`/`livingpage_full.spec.json` edits.
+Media (stills/clips, all gitignored) and scratch render logs (`_render*_log.txt`,
+`_render*_results.json`, `_bakeoff_i2v/`) are untracked working files on disk, not committed
+— check disk state fresh, don't assume the commit reflects every rendered asset (it doesn't,
+by design). An unrelated untracked file `_run_audio_bs03.py` was already sitting in the repo
+root before this session started — not touched, not mine, leave it alone.
 
 ---
 
