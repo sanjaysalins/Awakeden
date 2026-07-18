@@ -535,12 +535,14 @@ def main():
             make_whoosh(WHOOSH)
 
     def source(cdef):
+        # Every-screen-animated rule (2026-07-17): a real rendered clip always wins
+        # when present -- `cam` is only a Ken-Burns fallback for slugs with no clip.
         slug, cam = cdef["slug"], cdef.get("cam")
         live = clips_dir / f"{slug}.mp4"
-        if cam:
-            return base.dyncam_clip(slug, cam, dur) if not a.lint else live, "dyncam", cam, "pushin"
         if a.clips and live.exists() and live.stat().st_size > 0:
             return live, "kling", None, cdef.get("motion", "pushin")
+        if cam:
+            return base.dyncam_clip(slug, cam, dur) if not a.lint else live, "dyncam", cam, "pushin"
         return base.dyncam_clip(slug, "arc", dur) if not a.lint else live, "dyncam", "arc", "pushin"
 
     for i, b in enumerate(spec["beats"], 1):

@@ -289,8 +289,46 @@ they're never animated; `VISION_AUDIT_MODEL`=Haiku for the coarse assembly verif
   each as a soft-edged background memory, never in panels/arches/windows.
 - **Kling-friendly state-only language** — image is a frozen tableau; only the
   camera moves (per `adhoc/SKILL_locked.md`).
+- **Comic-grid panel animator tiering** (cost control, locked 2026-07-17, TIGHTENED
+  2026-07-17 same day): **every panel on every screen must be a real generative
+  animated clip — Ken Burns / `dynamic_cam` is NOT an acceptable substitute anywhere,
+  full stop.** (Earlier same-day framing allowed ≥1 real panel per grid with the rest
+  on $0 Ken Burns — the user explicitly overrode that a few hours later: "every screen
+  should use animated clips.") Default clip animator is **Seedance 1.5 Pro** (~4.8cr
+  vs Kling's ~10cr). The 2026-07-17 bake-off (`longform/04_The_Bronze_Serpent/v1/
+  visual_16x9_inked/_bakeoff_i2v/index.html`) showed Seedance matches Kling on a calm
+  single-figure panel but INVENTS motion on multi-figure/action panels (a coiled
+  serpent uncoiled and slithered, a raised hand moved to a different pose, a frozen
+  hammer-strike continued its swing) — so **Kling is reserved for panels with
+  action/crowd/complexity**; calm single-figure panels stay on Seedance. Comic-style
+  multi-panel grid stays the default layout; **hero stills / important images get a
+  single full-bleed panel**, not chopped into a multi-panel grid — that single panel
+  still needs a real clip. **Reuse-first for 9:16 grid panels:** before generating a
+  new panel clip for a 9:16-shaped slot, check the shorts' own rendered clips (native
+  9:16, HF Kling pro gallery-tour) for a topically-matched one and drop it in
+  near-natively (per `vertical-panels-cross-aspect-reuse`) — $0 beats Seedance beats
+  Kling, in that order, whenever a matching shorts clip already exists. This is a real
+  cost increase over the original same-day framing — confirm the spend estimate with
+  the user before converting a piece's remaining Ken-Burns panels.
 - **Reuse downstream pipelines, do not duplicate** — `narration_pipeline.py`,
   `per_turn_synth.py`, `image_to_kling.py` are subprocess'd, not re-implemented.
+- **Panel-variety gate for comic grids** (locked 2026-07-17): a full-film eye
+  survey of Bronze Serpent found 9 of 20 multi-panel grids showing visually
+  redundant content — two panels of the same crucifixion face close-up, two
+  panels of the same "light shaft through clouds," etc. `panel_variety_lint.py`
+  (per-episode, e.g. `longform/04_The_Bronze_Serpent/panel_variety_lint.py`) is
+  the deterministic $0 guard: every still used in a multi-panel grid needs a
+  short category tag in `visual_tags.json` (subject+pose+framing, e.g.
+  `christ-face-closeup`, `wounded-hand-macro`, `light-shaft-clouds`); the lint
+  FAILS any grid where 2+ panels share a tag, and WARNs if one camera-motion
+  direction dominates >60% of panels. **This deterministic tag-check is a
+  floor, not the ceiling** — it caught 6 of 9 real collisions automatically;
+  the other 3 needed a human eye-check because the redundancy was about
+  composition/mood once cropped into the panel shape, not raw subject tag (see
+  `always-independent-red-team` / `feedback-verify-by-looking-not-running`).
+  Run the lint AND look at every multi-panel grid's actual composited frame
+  before calling a comic-grid piece done — an untagged or newly-added still
+  must get a tag before it enters a grid.
 
 ## Independent review gate (ENFORCED — cursor + panel)
 

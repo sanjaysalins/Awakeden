@@ -40,30 +40,30 @@
    6.17
   ],
   "slams": 12,
-  "kling_or_punch_or_slam_pct": 71,
-  "tier1_pct": 12,
-  "reuse_violations": [
-   "21_look_to_the_one_lifted_up_hero_close: beats 47->49 (gap 2 < 8)",
-   "21_look_to_the_one_lifted_up_hero_close: beats 49->52 (gap 3 < 8)"
-  ],
+  "kling_or_punch_or_slam_pct": 100,
+  "tier1_pct": 29,
+  "reuse_violations": [],
   "tier3_or_flagged_beats": [
    5,
+   10,
+   11,
    15,
+   29,
+   33,
    36,
-   45
+   44
   ],
   "standard_3b": {
    "stills_over_2_uses": {
     "08_raised": 3,
-    "21_look_to_the_one_lifted_up_hero_close": 3
+    "22_curse": 3,
+    "09_look": 3,
+    "18_curse": 3
    },
    "stills_fullbleed_twice": {
-    "08_raised": 2,
-    "13_lifted_up__signifying_what_death_he_should_die": 2,
-    "18_curse": 2,
-    "21_look_to_the_one_lifted_up_hero_close": 2
+    "13_lifted_up__signifying_what_death_he_should_die": 2
    },
-   "fullbleed_beat_pct": 58,
+   "fullbleed_beat_pct": 44,
    "slop_caption_beats": []
   },
   "ramps": 1,
@@ -87,7 +87,7 @@
     "01_snakebite"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": true,
    "cap": {
@@ -109,12 +109,12 @@
     "04_venom"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
-    "style": "scrim",
+    "tier": 1,
+    "style": "box",
     "flag": false
    }
   },
@@ -131,7 +131,7 @@
     "08_raised"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {
@@ -153,7 +153,7 @@
     "02_worn_down_they_despise_the_bread_of_heaven"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {
@@ -175,7 +175,7 @@
     "03_the_lord_sent_fiery_serpents__and_people_died"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {
@@ -197,7 +197,7 @@
     "05_they_beg_moses_take_the_serpents_away"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {
@@ -219,7 +219,7 @@
     "27_outward"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": true,
    "cap": {
@@ -241,12 +241,12 @@
     "06_not"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
-    "style": "scrim",
+    "tier": 1,
+    "style": "box",
     "flag": false
    }
   },
@@ -279,19 +279,19 @@
     150.46
    ],
    "dur": 22.933333,
-   "tpl": "full",
+   "tpl": "hero_frac4",
    "slams": 0,
    "slugs": [
     "22_curse"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": true,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "scrim",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -301,19 +301,19 @@
     163.02
    ],
    "dur": 12.566667,
-   "tpl": "full",
+   "tpl": "hero_frac4",
    "slams": 0,
    "slugs": [
     "08_raised"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "band",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -329,7 +329,7 @@
     "09_look"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": true,
    "cap": {
@@ -351,7 +351,7 @@
     "10_and_moses_made_a_serpent_of_brass_the_camp_looks"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {
@@ -374,8 +374,8 @@
     "03_the_lord_sent_fiery_serpents__and_people_died"
    ],
    "sources": [
-    "dyncam",
-    "dyncam"
+    "kling",
+    "kling"
    ],
    "punch": false,
    "cap": {
@@ -397,7 +397,7 @@
     "11_night"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {
@@ -419,7 +419,7 @@
     "23_himself"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {
@@ -435,7 +435,7 @@
     210.16
    ],
    "dur": 13.233333,
-   "tpl": "full",
+   "tpl": "hero_band3",
    "slams": 0,
    "slugs": [
     "12_even_so_must_the_son_of_man_be_lifted_up"
@@ -460,7 +460,7 @@
    "tpl": "two_v",
    "slams": 0,
    "slugs": [
-    "reuse_jesus_looks_down",
+    "22_curse",
     "reuse_face_on_cross"
    ],
    "sources": [
@@ -487,7 +487,7 @@
     "13_lifted_up__signifying_what_death_he_should_die"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": true,
    "cap": {
@@ -507,7 +507,7 @@
    "slams": 0,
    "slugs": [
     "reuse_nail_through_hand",
-    "reuse_risen_mercy_hand",
+    "18_curse",
     "reuse_golgotha_hill_wide"
    ],
    "sources": [
@@ -532,7 +532,7 @@
    "tpl": "full",
    "slams": 0,
    "slugs": [
-    "reuse_darkness_veil_torn"
+    "28_the_veil_torn_signifying_what_death_he_should_die"
    ],
    "sources": [
     "kling"
@@ -581,7 +581,7 @@
     "14_for_god_so_loved_the_world"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {
@@ -604,7 +604,7 @@
     "reuse_grace_poured_sky"
    ],
    "sources": [
-    "dyncam",
+    "kling",
     "kling"
    ],
    "punch": false,
@@ -627,12 +627,12 @@
     "24_trust"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
-    "style": "scrim",
+    "tier": 1,
+    "style": "box",
     "flag": false
    }
   },
@@ -649,7 +649,7 @@
     "15_hezekiah_breaks_the_brazen_serpent"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": true,
    "cap": {
@@ -668,7 +668,7 @@
    "tpl": "full",
    "slams": 0,
    "slugs": [
-    "reuse_ninth_hour_darkness"
+    "29_the_bronze_never_had_power_god_did"
    ],
    "sources": [
     "kling"
@@ -690,7 +690,7 @@
    "tpl": "two_v",
    "slams": 0,
    "slugs": [
-    "reuse_kingdom_light_clouds",
+    "26_strong",
     "reuse_hands_of_light_open"
    ],
    "sources": [
@@ -711,19 +711,21 @@
     309.48
    ],
    "dur": 12.933333,
-   "tpl": "full",
+   "tpl": "stack_h",
    "slams": 0,
    "slugs": [
-    "16_the_likeness_of_the_curse_lifted_up"
+    "16_the_likeness_of_the_curse_lifted_up",
+    "09_look"
    ],
    "sources": [
-    "dyncam"
+    "kling",
+    "kling"
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "scrim",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -740,7 +742,7 @@
     "reuse_bowed_head_finished"
    ],
    "sources": [
-    "dyncam",
+    "kling",
     "kling"
    ],
    "punch": false,
@@ -763,7 +765,7 @@
     "17_made_a_curse_for_us__on_the_tree"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {
@@ -783,11 +785,11 @@
    "slams": 0,
    "slugs": [
     "23_himself",
-    "reuse_jesus_looks_down",
+    "reuse_two_thieves_wide",
     "reuse_darkness_veil_torn"
    ],
    "sources": [
-    "dyncam",
+    "kling",
     "kling",
     "kling"
    ],
@@ -805,19 +807,25 @@
     347.7
    ],
    "dur": 17.233333,
-   "tpl": "full",
+   "tpl": "quad",
    "slams": 0,
    "slugs": [
-    "18_curse"
+    "18_curse",
+    "02_worn_down_they_despise_the_bread_of_heaven",
+    "04_venom",
+    "06_not"
    ],
    "sources": [
-    "dyncam"
+    "kling",
+    "kling",
+    "kling",
+    "kling"
    ],
    "punch": true,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "scrim",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -834,7 +842,7 @@
     "reuse_golgotha_hill_wide"
    ],
    "sources": [
-    "dyncam",
+    "kling",
     "kling"
    ],
    "punch": false,
@@ -857,7 +865,7 @@
     "19_look"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {
@@ -880,7 +888,7 @@
     "reuse_face_on_cross"
    ],
    "sources": [
-    "dyncam",
+    "kling",
     "kling"
    ],
    "punch": false,
@@ -900,15 +908,15 @@
    "tpl": "full",
    "slams": 0,
    "slugs": [
-    "reuse_risen_mercy_hand"
+    "30_so_god_lifted_up_his_son_who"
    ],
    "sources": [
     "kling"
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
-    "style": "scrim",
+    "tier": 1,
+    "style": "box",
     "flag": false
    }
   },
@@ -922,7 +930,7 @@
    "tpl": "full",
    "slams": 0,
    "slugs": [
-    "reuse_risen_christ_congregation"
+    "31_his_own_self_bare_our_sins_in_his_own_body_on_the_tree"
    ],
    "sources": [
     "kling"
@@ -949,7 +957,7 @@
    ],
    "sources": [
     "kling",
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {
@@ -971,12 +979,12 @@
     "26_strong"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": true,
    "cap": {
-    "tier": 2,
-    "style": "scrim",
+    "tier": 1,
+    "style": "box",
     "flag": false
    }
   },
@@ -993,7 +1001,7 @@
     "18_curse"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {
@@ -1009,12 +1017,14 @@
     404.4
    ],
    "dur": 9.0,
-   "tpl": "full",
+   "tpl": "split_v",
    "slams": 0,
    "slugs": [
-    "reuse_nail_through_hand"
+    "reuse_nail_through_hand",
+    "reuse_bowed_head_finished"
    ],
    "sources": [
+    "kling",
     "kling"
    ],
    "punch": false,
@@ -1055,19 +1065,23 @@
     419.04
    ],
    "dur": 10.1,
-   "tpl": "full",
+   "tpl": "strip_h3",
    "slams": 0,
    "slugs": [
-    "20_whosoever"
+    "20_whosoever",
+    "09_look",
+    "05_they_beg_moses_take_the_serpents_away"
    ],
    "sources": [
-    "dyncam"
+    "kling",
+    "kling",
+    "kling"
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
+    "tier": 3,
     "style": "scrim",
-    "flag": false
+    "flag": true
    }
   },
   {
@@ -1080,20 +1094,20 @@
    "tpl": "triptych_v",
    "slams": 0,
    "slugs": [
-    "19_look",
+    "reuse_ninth_hour_darkness",
     "25_we_are_all_bitten__the_cure_outside_us",
     "reuse_hands_of_light_open"
    ],
    "sources": [
-    "dyncam",
-    "dyncam",
+    "kling",
+    "kling",
     "kling"
    ],
    "punch": false,
    "cap": {
-    "tier": 3,
-    "style": "scrim",
-    "flag": true
+    "tier": 1,
+    "style": "box",
+    "flag": false
    }
   },
   {
@@ -1109,7 +1123,7 @@
     "13_lifted_up__signifying_what_death_he_should_die"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {
@@ -1128,8 +1142,8 @@
    "tpl": "two_v",
    "slams": 0,
    "slugs": [
-    "reuse_grace_poured_sky",
-    "21_look_to_the_one_lifted_up_hero_close"
+    "24_trust",
+    "reuse_us_under_cross_shadow"
    ],
    "sources": [
     "kling",
@@ -1137,8 +1151,8 @@
    ],
    "punch": true,
    "cap": {
-    "tier": 2,
-    "style": "scrim",
+    "tier": 1,
+    "style": "box",
     "flag": false
    }
   },
@@ -1155,12 +1169,12 @@
     "10_and_moses_made_a_serpent_of_brass_the_camp_looks"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
-    "style": "scrim",
+    "tier": 1,
+    "style": "box",
     "flag": false
    }
   },
@@ -1174,15 +1188,15 @@
    "tpl": "full",
    "slams": 0,
    "slugs": [
-    "21_look_to_the_one_lifted_up_hero_close"
+    "32_he_lifted_his_son_on_a_cross_for_exactly_that"
    ],
    "sources": [
     "kling"
    ],
    "punch": false,
    "cap": {
-    "tier": 2,
-    "style": "scrim",
+    "tier": 1,
+    "style": "box",
     "flag": false
    }
   },
@@ -1197,7 +1211,7 @@
    "slams": 0,
    "slugs": [
     "reuse_risen_christ_wounds",
-    "reuse_risen_christ_seeking"
+    "reuse_first_day_morning"
    ],
    "sources": [
     "kling",
@@ -1222,7 +1236,7 @@
    "slugs": [
     "reuse_stone_rolled_dawn",
     "reuse_risen_christ_congregation",
-    "reuse_first_day_morning"
+    "reuse_kingdom_light_clouds"
    ],
    "sources": [
     "kling",

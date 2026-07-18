@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bronze Serpent — Stills + Clips Review</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0 0 160px 0;
+    background: #15161a; color: #eee;
+    font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+  header {
+    padding: 18px 24px; background: #1c1e24; border-bottom: 1px solid #333;
+    position: sticky; top: 0; z-index: 5;
+  }
+  h1 { margin: 0 0 4px; font-size: 20px; }
+  header p { margin: 0 0 4px; color: #aaa; font-size: 13px; }
+  h2.section { margin: 24px 24px 4px; font-size: 15px; color: #d4af37; border-bottom: 1px solid #333; padding-bottom: 6px; }
+  .section-note { margin: 0 24px 12px; font-size: 12px; color: #888; }
+  .grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 18px; padding: 12px 24px;
+  }
+  .card {
+    background: #1e2027; border: 2px solid #333; border-radius: 8px; overflow: hidden;
+    transition: border-color .15s;
+  }
+  .card.bad-still { border-color: #e5484d; }
+  .card.bad-clip { border-color: #f5a623; }
+  .card.bad-still.bad-clip { border-color: #e5484d; box-shadow: 0 0 0 3px #f5a62366; }
+  .media-row { display: flex; }
+  .media-col { flex: 1 1 50%; min-width: 0; position: relative; }
+  .media-col img, .media-col video { width: 100%; display: block; background: #000; height: 160px; object-fit: contain; }
+  .media-col img { cursor: zoom-in; }
+  .media-label {
+    position: absolute; top: 4px; left: 4px; background: #000a; color: #ccc;
+    font-size: 10px; padding: 2px 6px; border-radius: 4px; letter-spacing: .04em;
+  }
+  .card .body { padding: 10px 12px 12px; }
+  .card .fname { font-size: 12px; color: #8a8f98; word-break: break-all; margin-bottom: 8px; }
+  .card .row { display: flex; gap: 6px; align-items: center; margin-bottom: 6px; }
+  .card button.toggle {
+    flex: 0 0 auto; border: 1px solid #444; background: #2a2d35; color: #ddd;
+    border-radius: 6px; padding: 6px 8px; font-size: 11px; cursor: pointer; white-space: nowrap;
+  }
+  .card button.toggle.still.on { background: #e5484d; border-color: #e5484d; color: #fff; }
+  .card button.toggle.clip.on { background: #f5a623; border-color: #f5a623; color: #1a1200; }
+  .card textarea {
+    flex: 1 1 auto; resize: vertical; min-height: 34px; background: #14151a;
+    border: 1px solid #333; color: #eee; border-radius: 6px; padding: 6px 8px;
+    font-size: 12px; font-family: inherit;
+  }
+  .bar {
+    position: fixed; bottom: 0; left: 0; right: 0; background: #1c1e24;
+    border-top: 1px solid #333; padding: 12px 24px; display: flex; gap: 12px;
+    align-items: center; z-index: 10;
+  }
+  .bar .count { font-size: 13px; color: #ccc; white-space: nowrap; }
+  .bar button {
+    border: none; border-radius: 6px; padding: 10px 16px; font-size: 13px;
+    cursor: pointer; font-weight: 600; white-space: nowrap;
+  }
+  #copyBtn { background: #4a90e2; color: #fff; }
+  #clearBtn { background: #333; color: #ccc; }
+  .bar textarea {
+    flex: 1 1 auto; height: 34px; background: #14151a; border: 1px solid #333;
+    color: #8a8f98; border-radius: 6px; padding: 8px; font-size: 12px; font-family: monospace;
+  }
+  .lightbox {
+    display: none; position: fixed; inset: 0; background: #000d; z-index: 20;
+    align-items: center; justify-content: center; padding: 20px;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: 100%; max-height: 100%; }
+  .legend { display: flex; gap: 16px; font-size: 12px; color: #aaa; margin-top: 6px; }
+  .legend span.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 4px; vertical-align: -1px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Bronze Serpent — Stills + Clips Review</h1>
+  <p>Each card = one source still (left) + its rendered clip (right, hover/click to play). Mark the STILL bad if the painting itself is wrong (anatomy, period, doctrine). Mark the CLIP bad if the animation is wrong (hallucinated motion, garbled) even if the still is fine. Add a short note either way, then hit Copy Feedback at the bottom and paste it back to Claude. Everything is saved locally in this browser as you go.</p>
+  <div class="legend">
+    <span><span class="dot" style="background:#e5484d"></span>still bad</span>
+    <span><span class="dot" style="background:#f5a623"></span>clip bad</span>
+    <span><span class="dot" style="background:#333;border:1px solid #666"></span>ok</span>
+  </div>
+</header>
+
+<h2 class="section">Original stills (27) — still + clip side by side</h2>
+<p class="section-note">Recreating one of these means: re-render the still (Stage 2b) and its clip (Stage 2c), then re-run the panel-variety lint before the next rebuild.</p>
+<div class="grid" id="gridOriginal"></div>
+
+<h2 class="section">Reused clips (21) — no local still, clip only</h2>
+<p class="section-note">These are $0 reused clips pulled from other pieces' asset banks (crucifixion/resurrection imagery). Marking one bad flags the CLIP for this piece only — it may still be fine in its original piece, so don't delete the source asset elsewhere without checking.</p>
+<div class="grid" id="gridReuse"></div>
+
+<div class="lightbox" id="lightbox"><img id="lightboxImg"></div>
+
+<div class="bar">
+  <span class="count" id="count">0 marked</span>
+  <textarea id="preview" readonly placeholder="Marked items will preview here..."></textarea>
+  <button id="copyBtn">Copy Feedback</button>
+  <button id="clearBtn">Clear all marks</button>
+</div>
+
+<script>
+const ORIGINAL = [
+  "01_snakebite",
+  "02_worn_down_they_despise_the_bread_of_heaven",
+  "03_the_lord_sent_fiery_serpents__and_people_died",
+  "04_venom",
+  "05_they_beg_moses_take_the_serpents_away",
+  "06_not",
+  "07_make_a_fiery_serpent_set_it_on_a_pole",
+  "08_raised",
+  "09_look",
+  "10_and_moses_made_a_serpent_of_brass_the_camp_looks",
+  "11_night",
+  "12_even_so_must_the_son_of_man_be_lifted_up",
+  "13_lifted_up__signifying_what_death_he_should_die",
+  "14_for_god_so_loved_the_world",
+  "15_hezekiah_breaks_the_brazen_serpent",
+  "16_the_likeness_of_the_curse_lifted_up",
+  "17_made_a_curse_for_us__on_the_tree",
+  "18_curse",
+  "19_look",
+  "20_whosoever",
+  "21_look_to_the_one_lifted_up_hero_close",
+  "22_curse",
+  "23_himself",
+  "24_trust",
+  "25_we_are_all_bitten__the_cure_outside_us",
+  "26_strong",
+  "27_outward",
+];
+
+const REUSE = [
+  "reuse_bowed_head_finished",
+  "reuse_cross_at_dawn",
+  "reuse_darkness_veil_torn",
+  "reuse_face_on_cross",
+  "reuse_first_day_morning",
+  "reuse_golgotha_hill_wide",
+  "reuse_grace_poured_sky",
+  "reuse_hands_of_light_open",
+  "reuse_jesus_looks_down",
+  "reuse_kingdom_light_clouds",
+  "reuse_look_up_faces",
+  "reuse_man_lifting_face_dawn",
+  "reuse_nail_through_hand",
+  "reuse_ninth_hour_darkness",
+  "reuse_risen_christ_congregation",
+  "reuse_risen_christ_seeking",
+  "reuse_risen_christ_wounds",
+  "reuse_risen_mercy_hand",
+  "reuse_stone_rolled_dawn",
+  "reuse_two_thieves_wide",
+  "reuse_us_under_cross_shadow",
+];
+
+const STORE_KEY = "bronzeSerpentMediaReview_v1";
+let state = {};
+try { state = JSON.parse(localStorage.getItem(STORE_KEY) || "{}"); } catch (e) { state = {}; }
+
+function save() {
+  localStorage.setItem(STORE_KEY, JSON.stringify(state));
+  render();
+}
+
+function render() {
+  const all = [...ORIGINAL, ...REUSE];
+  const marked = all.filter(f => state[f] && (state[f].badStill || state[f].badClip));
+  document.getElementById("count").textContent = marked.length + " marked";
+  const lines = marked.map(f => {
+    const s = state[f];
+    const flags = [s.badStill ? "STILL" : null, s.badClip ? "CLIP" : null].filter(Boolean).join("+");
+    return `${f} — [${flags}] ${(s.note || "").trim() || "(no note)"}`;
+  });
+  const text = marked.length
+    ? `Bronze Serpent — media feedback (${marked.length} flagged)\n\n` + lines.join("\n")
+    : "";
+  document.getElementById("preview").value = text;
+  document.querySelectorAll(".card").forEach(card => {
+    const f = card.dataset.file;
+    const s = state[f] || {};
+    card.classList.toggle("bad-still", !!s.badStill);
+    card.classList.toggle("bad-clip", !!s.badClip);
+  });
+}
+
+function makeCard(slug, hasStill) {
+  const card = document.createElement("div");
+  card.className = "card";
+  card.dataset.file = slug;
+  const stillSrc = `${slug}.png`;
+  const clipSrc = `clips/${slug}.mp4`;
+  card.innerHTML = `
+    <div class="media-row">
+      <div class="media-col">
+        ${hasStill
+          ? `<img src="${stillSrc}" loading="lazy" alt="${slug}"><span class="media-label">STILL</span>`
+          : `<div style="height:160px;display:flex;align-items:center;justify-content:center;color:#555;font-size:11px;">no local still</div>`}
+      </div>
+      <div class="media-col">
+        <video src="${clipSrc}" muted loop preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video>
+        <span class="media-label">CLIP</span>
+      </div>
+    </div>
+    <div class="body">
+      <div class="fname">${slug}</div>
+      <div class="row">
+        <button class="toggle still">Mark still bad</button>
+        <button class="toggle clip">Mark clip bad</button>
+      </div>
+      <div class="row">
+        <textarea placeholder="What's wrong (optional)"></textarea>
+      </div>
+    </div>
+  `;
+  if (hasStill) {
+    const img = card.querySelector("img");
+    img.addEventListener("click", () => {
+      document.getElementById("lightboxImg").src = stillSrc;
+      document.getElementById("lightbox").classList.add("open");
+    });
+  }
+  const btnStill = card.querySelector("button.still");
+  const btnClip = card.querySelector("button.clip");
+  const note = card.querySelector("textarea");
+
+  if (state[slug]) {
+    note.value = state[slug].note || "";
+    if (state[slug].badStill) btnStill.classList.add("on");
+    if (state[slug].badClip) btnClip.classList.add("on");
+  }
+  if (!hasStill) { btnStill.disabled = true; btnStill.style.opacity = 0.3; btnStill.title = "no local still for a reused clip"; }
+
+  btnStill.addEventListener("click", () => {
+    state[slug] = state[slug] || {};
+    state[slug].badStill = !state[slug].badStill;
+    btnStill.classList.toggle("on", state[slug].badStill);
+    save();
+  });
+  btnClip.addEventListener("click", () => {
+    state[slug] = state[slug] || {};
+    state[slug].badClip = !state[slug].badClip;
+    btnClip.classList.toggle("on", state[slug].badClip);
+    save();
+  });
+  note.addEventListener("input", () => {
+    state[slug] = state[slug] || {};
+    state[slug].note = note.value;
+    save();
+  });
+
+  return card;
+}
+
+const gridOriginal = document.getElementById("gridOriginal");
+ORIGINAL.forEach(slug => gridOriginal.appendChild(makeCard(slug, true)));
+
+const gridReuse = document.getElementById("gridReuse");
+REUSE.forEach(slug => gridReuse.appendChild(makeCard(slug, false)));
+
+document.getElementById("lightbox").addEventListener("click", () => {
+  document.getElementById("lightbox").classList.remove("open");
+});
+
+document.getElementById("copyBtn").addEventListener("click", async () => {
+  const text = document.getElementById("preview").value;
+  if (!text) { alert("Nothing marked yet — click \"Mark still bad\" or \"Mark clip bad\" on the items with issues first."); return; }
+  try {
+    await navigator.clipboard.writeText(text);
+    const btn = document.getElementById("copyBtn");
+    const orig = btn.textContent;
+    btn.textContent = "Copied!";
+    setTimeout(() => btn.textContent = orig, 1200);
+  } catch (e) {
+    const ta = document.getElementById("preview");
+    ta.focus(); ta.select();
+    document.execCommand("copy");
+    alert("Copied via fallback (select-all). If that failed too, the text is selected in the box — press Ctrl+C.");
+  }
+});
+
+document.getElementById("clearBtn").addEventListener("click", () => {
+  if (!confirm("Clear all marks and notes?")) return;
+  state = {};
+  save();
+});
+
+render();
+</script>
+
+</body>
+</html>
