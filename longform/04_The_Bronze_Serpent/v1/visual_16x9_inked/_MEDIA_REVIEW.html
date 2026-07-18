@@ -90,12 +90,12 @@
   </div>
 </header>
 
-<h2 class="section">Original stills (27) — still + clip side by side</h2>
-<p class="section-note">Recreating one of these means: re-render the still (Stage 2b) and its clip (Stage 2c), then re-run the panel-variety lint before the next rebuild.</p>
+<h2 class="section">Native stills (33) — still + clip side by side</h2>
+<p class="section-note">Recreating one of these means: re-render the still (Stage 2b) and its clip (Stage 2c), then re-run the panel-variety lint before the next rebuild. Updated 2026-07-19: adds 28-32 (rendered same-day as a resolution fix) and two_thieves_foreground (rendered today to replace the mismatched-style reuse_two_thieves_wide).</p>
 <div class="grid" id="gridOriginal"></div>
 
-<h2 class="section">Reused clips (21) — no local still, clip only</h2>
-<p class="section-note">These are $0 reused clips pulled from other pieces' asset banks (crucifixion/resurrection imagery). Marking one bad flags the CLIP for this piece only — it may still be fine in its original piece, so don't delete the source asset elsewhere without checking.</p>
+<h2 class="section">Reused clips (17) — no local still, clip only</h2>
+<p class="section-note">These are $0 reused clips pulled from other pieces' asset banks (crucifixion/resurrection imagery). Marking one bad flags the CLIP for this piece only — it may still be fine in its original piece, so don't delete the source asset elsewhere without checking. 4 orphaned reuse clips (jesus_looks_down, risen_christ_seeking, risen_mercy_hand, two_thieves_wide) were deleted 2026-07-19 — no longer used anywhere in this film, so dropped from this review.</p>
 <div class="grid" id="gridReuse"></div>
 
 <div class="lightbox" id="lightbox"><img id="lightboxImg"></div>
@@ -136,6 +136,12 @@ const ORIGINAL = [
   "25_we_are_all_bitten__the_cure_outside_us",
   "26_strong",
   "27_outward",
+  "28_the_veil_torn_signifying_what_death_he_should_die",
+  "29_the_bronze_never_had_power_god_did",
+  "30_so_god_lifted_up_his_son_who",
+  "31_his_own_self_bare_our_sins_in_his_own_body_on_the_tree",
+  "32_he_lifted_his_son_on_a_cross_for_exactly_that",
+  "two_thieves_foreground",
 ];
 
 const REUSE = [
@@ -147,18 +153,14 @@ const REUSE = [
   "reuse_golgotha_hill_wide",
   "reuse_grace_poured_sky",
   "reuse_hands_of_light_open",
-  "reuse_jesus_looks_down",
   "reuse_kingdom_light_clouds",
   "reuse_look_up_faces",
   "reuse_man_lifting_face_dawn",
   "reuse_nail_through_hand",
   "reuse_ninth_hour_darkness",
   "reuse_risen_christ_congregation",
-  "reuse_risen_christ_seeking",
   "reuse_risen_christ_wounds",
-  "reuse_risen_mercy_hand",
   "reuse_stone_rolled_dawn",
-  "reuse_two_thieves_wide",
   "reuse_us_under_cross_shadow",
 ];
 

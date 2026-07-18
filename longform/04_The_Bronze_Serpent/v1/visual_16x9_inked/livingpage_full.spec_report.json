@@ -41,7 +41,7 @@
   ],
   "slams": 12,
   "kling_or_punch_or_slam_pct": 100,
-  "tier1_pct": 29,
+  "tier1_pct": 27,
   "reuse_violations": [],
   "tier3_or_flagged_beats": [
    5,
@@ -84,17 +84,13 @@
    "tpl": "full",
    "slams": 0,
    "slugs": [
-    "01_snakebite"
+    "01_snakebite_typo"
    ],
    "sources": [
     "kling"
    ],
    "punch": true,
-   "cap": {
-    "tier": 1,
-    "style": "box",
-    "flag": false
-   }
+   "cap": null
   },
   {
    "beat": 2,
@@ -554,7 +550,7 @@
    "tpl": "two_v",
    "slams": 0,
    "slugs": [
-    "reuse_two_thieves_wide",
+    "two_thieves_foreground",
     "reuse_cross_at_dawn"
    ],
    "sources": [
@@ -785,7 +781,7 @@
    "slams": 0,
    "slugs": [
     "23_himself",
-    "reuse_two_thieves_wide",
+    "two_thieves_foreground",
     "reuse_darkness_veil_torn"
    ],
    "sources": [

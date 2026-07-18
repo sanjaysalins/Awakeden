@@ -20,16 +20,6 @@
   "anchor_src": "batches/cluster_01_cross\\body_foretold_ps2214\\visual\\nail_through_hand.anchor.json"
  },
  {
-  "slug": "reuse_risen_mercy_hand",
-  "src": "batches/cluster_01_cross\\body_foretold_ps2214\\visual\\clips\\risen_mercy_hand.mp4",
-  "anchor_src": "batches/cluster_01_cross\\body_foretold_ps2214\\visual\\risen_mercy_hand.anchor.json"
- },
- {
-  "slug": "reuse_two_thieves_wide",
-  "src": "batches/cluster_01_cross\\body_foretold_ps2214\\visual\\clips\\two_thieves_wide.mp4",
-  "anchor_src": "batches/cluster_01_cross\\body_foretold_ps2214\\visual\\two_thieves_wide.anchor.json"
- },
- {
   "slug": "reuse_us_under_cross_shadow",
   "src": "batches/cluster_01_cross\\body_foretold_ps2214\\visual\\clips\\us_under_cross_shadow.mp4",
   "anchor_src": "CUSTOM"
@@ -65,11 +55,6 @@
   "anchor_src": "CUSTOM"
  },
  {
-  "slug": "reuse_risen_christ_seeking",
-  "src": "batches/cluster_01_cross\\declared_brethren_ps2222\\visual\\clips\\risen_christ_seeking.mp4",
-  "anchor_src": "CUSTOM"
- },
- {
   "slug": "reuse_risen_christ_congregation",
   "src": "batches/cluster_01_cross\\declared_brethren_ps2222\\visual\\clips\\risen_christ_congregation.mp4",
   "anchor_src": "CUSTOM"
@@ -83,11 +68,6 @@
   "slug": "reuse_man_lifting_face_dawn",
   "src": "batches/cluster_01_cross\\it_is_finished_john1930\\visual\\clips\\man_lifting_face_dawn.mp4",
   "anchor_src": "batches/cluster_01_cross\\it_is_finished_john1930\\visual\\man_lifting_face_dawn.anchor.json"
- },
- {
-  "slug": "reuse_jesus_looks_down",
-  "src": "batches/cluster_01_cross\\crucifixion_foretold_ps2218\\visual\\clips\\jesus_looks_down.mp4",
-  "anchor_src": "batches/cluster_01_cross\\crucifixion_foretold_ps2218\\visual\\jesus_looks_down.anchor.json"
  },
  {
   "slug": "reuse_hands_of_light_open",

@@ -696,7 +696,11 @@ def score_cmd(piece_dir: Path, pj: dict) -> list[str]:
         f"[mch]atrim=0:{total},afade=t=in:st=0:d=1.5,afade=t=out:st={total - 1.5:.2f}:d=1.5,volume=-13dB,"
         + dips +
         f"volume=volume={cta_vol}:enable='between(t,{cta_start},{total})'[mus];"
-        f"[0:a]asplit=2[main][key];"
+        # narration ([0:a]) ends at base_seconds with no trailing silence -- pad it
+        # out to `total` BEFORE the split, or the mix (and the -shortest-bounded
+        # final mux downstream) truncates near base_seconds and the outro_hold
+        # never actually lingers in the audio, even though the video does.
+        f"[0:a]apad=whole_dur={total},asplit=2[main][key];"
         f"[mus][key]sidechaincompress=threshold=0.12:ratio=2.5:attack=20:release=250[musd];"
         f"[main][musd]amix=inputs=2:normalize=0,alimiter=limit=0.97,aresample=44100[mix];"
         f"[0:v]tpad=stop_mode=clone:stop_duration={sc['tpad']}[vout]"

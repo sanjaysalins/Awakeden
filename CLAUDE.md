@@ -310,6 +310,33 @@ they're never animated; `VISION_AUDIT_MODEL`=Haiku for the coarse assembly verif
   Kling, in that order, whenever a matching shorts clip already exists. This is a real
   cost increase over the original same-day framing — confirm the spend estimate with
   the user before converting a piece's remaining Ken-Burns panels.
+  **Refined 2026-07-19** now that `panel_animator/` (typography-panel, infographic-panel
+  — static-background, in-world-text panels) exists as legitimate grid content: within
+  ANY multi-panel grid, at least one cell must still be a real generative animated clip
+  — a grid of nothing but static text/diagram panels is not acceptable, but a grid
+  mixing one typography/infographic panel alongside real animated clips is. See
+  `panel_animator/README.md` for the full toolkit and when to reach for each piece —
+  the comic-style parchment-band caption is the STANDARD default text treatment
+  (keep using it); the other 6 effects (grid-choreography, impact-burst, ink-transition,
+  line-boil, parallax-panel, print-grade) are used SELECTIVELY, spread thin across an
+  episode, each one picked deliberately for that still + that narration beat — not
+  applied by default or stacked everywhere just because they're available.
+- **Landing hold ≥3.0s on every finished cut, short or long-form** (locked
+  2026-07-19, INV-26): after the last spoken word, video AND audio both keep
+  running for a minimum 3.0s hold before the file ends — audio track duration
+  must match video track duration, never a silent early cutoff. Gate: `.venv\
+  Scripts\python.exe check_landing_hold.py` ($0, FAILs on any real audio/video
+  duration mismatch >0.3s across every finished mp4 in `batches/`+`longform/`;
+  WARNs, does not block, on already-shipped pieces still at the old 1.5s/2.5s
+  hold — not retrofitted per the user's 2026-07-19 call, only new pieces are
+  held to 3.0s). Two real bugs found and fixed the same day: `run_piece.py`'s
+  shared score stage was missing `apad` entirely (shorts path); Bronze
+  Serpent's `_add_score_inked.py` / the shared `longform/_add_score_lf.py`
+  used `apad=pad_dur=X` (pads BY X seconds onto the audio's own possibly-
+  already-short raw length) instead of `apad=whole_dur=<target>` (pads TO an
+  absolute length) — so a pre-existing ~1s narration/video gap from the BUILD
+  stage survived the score stage uncorrected. Both are fixed; re-check any
+  piece with `check_landing_hold.py` before calling a rebuild done.
 - **Reuse downstream pipelines, do not duplicate** — `narration_pipeline.py`,
   `per_turn_synth.py`, `image_to_kling.py` are subprocess'd, not re-implemented.
 - **Panel-variety gate for comic grids** (locked 2026-07-17): a full-film eye

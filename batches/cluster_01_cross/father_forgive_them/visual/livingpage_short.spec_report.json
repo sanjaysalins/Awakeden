@@ -4,12 +4,11 @@
   "max_beat_s": 5.67,
   "held_gt6s": [],
   "slams": 6,
-  "kling_or_punch_or_slam_pct": 69,
+  "kling_or_punch_or_slam_pct": 75,
   "tier1_pct": 0,
   "reuse_violations": [
    "father_forgive_them_face: beats 3->4 (gap 1 < 8)",
    "seamless_robe_lots_cast: beats 2->7 (gap 5 < 8)",
-   "psalm22_scroll_david: beats 7->8 (gap 1 < 8)",
    "willing_offering: beats 11->13 (gap 2 < 8)",
    "risen_interceding_christ: beats 12->14 (gap 2 < 8)",
    "risen_mercy_hand: beats 15->16 (gap 1 < 8)"
@@ -206,17 +205,13 @@
    "tpl": "full",
    "slams": 0,
    "slugs": [
-    "psalm22_scroll_david"
+    "psalm22_scroll_david_typo"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": false,
-   "cap": {
-    "tier": 2,
-    "style": "band",
-    "flag": false
-   }
+   "cap": null
   },
   {
    "beat": 9,

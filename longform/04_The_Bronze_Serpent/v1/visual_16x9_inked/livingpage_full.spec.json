@@ -8,15 +8,11 @@
       "tpl": "full",
       "clips": [
         {
-          "slug": "01_snakebite",
+          "slug": "01_snakebite_typo",
           "cam": "push"
         }
       ],
-      "cap": {
-        "type": "caption",
-        "text": "A whole camp is dying of snakebite.",
-        "kw": "SNAKEBITE"
-      },
+      "cap": null,
       "punch": true,
       "t": [
         0.0,
@@ -663,7 +659,7 @@
       "tpl": "two_v",
       "clips": [
         {
-          "slug": "reuse_two_thieves_wide"
+          "slug": "two_thieves_foreground"
         },
         {
           "slug": "reuse_cross_at_dawn"
@@ -866,7 +862,7 @@
           "motion": "hold"
         },
         {
-          "slug": "reuse_two_thieves_wide"
+          "slug": "two_thieves_foreground"
         },
         {
           "slug": "reuse_darkness_veil_torn"

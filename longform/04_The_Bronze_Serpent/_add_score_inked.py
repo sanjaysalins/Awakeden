@@ -106,7 +106,13 @@ def run(yes: bool, regen: bool) -> None:
         f"afade=t=out:st={fade_out_start:.2f}:d={fade_dur},"
         f"volume={gain}dB[mus]; "
         f"[0:v]tpad=stop_mode=clone:stop_duration={outro}[vout]; "
-        f"[0:a]{fmt},apad=pad_dur={outro},asplit=2[main][key]; "
+        # apad=pad_dur=X pads X seconds onto the audio's OWN raw length -- if the
+        # source narration audio is already shorter than its video track (a real,
+        # ~1s gap found in Bronze Serpent's build), that pre-existing shortfall
+        # survives instead of being corrected. whole_dur pads to an ABSOLUTE
+        # target (matching [vout]'s true length: V + outro = total) regardless
+        # of how long the raw audio actually was going in. INV-26.
+        f"[0:a]{fmt},apad=whole_dur={total},asplit=2[main][key]; "
         f"[mus][key]sidechaincompress=threshold=0.12:ratio=2.5:attack=20:release=250[musd]; "
         f"[main][musd]amix=inputs=2:normalize=0,alimiter=limit=0.97,aresample=44100[mix]"
     )

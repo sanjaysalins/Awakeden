@@ -1,5 +1,6 @@
 {
   "_doc": "Short categorical tag per still capturing its core visual idea (subject+pose+framing). Used by panel_variety_lint to fail any multi-panel grid where 2+ panels share a tag -- the deterministic guard against 'same image, different crop' grids. Assigned 2026-07-17 after a full-film eye survey found 9 colliding grids in this piece. Add a tag for every NEW still before it enters a multi-panel grid.",
+  "two_thieves_foreground": "crucifixion-wide-thieves-foreground",
   "01_snakebite": "camp-death-scene-warm",
   "02_worn_down_they_despise_the_bread_of_heaven": "camp-crowd-caravan",
   "03_the_lord_sent_fiery_serpents__and_people_died": "camp-death-scene-cool",

@@ -36,7 +36,7 @@ EPISODES: dict[str, dict] = {
         "segments": ["lonely_searching_a", "sacred_grace_rise_b"],
         "xfade_s": 6.0,
         "gain_db": -11.0,
-        "outro_s": 2.5,
+        "outro_s": 3.0,
         # dip the score under the heartbeat-stop window so "It is finished." lands in near-silence
         "dips": [[363.5, 373.5, 0.25]],
     },
@@ -220,8 +220,13 @@ def run(episode_dir: Path, yes: bool, regen: bool) -> None:
         f"volume={gain}dB{dips}[mus]; "
         # Hold the last frame of video for outro
         f"[0:v]tpad=stop_mode=clone:stop_duration={outro}[vout]; "
-        # Split narration+SFX into main (output) and key (sidechain trigger)
-        f"[0:a]{fmt},apad=pad_dur={outro},asplit=2[main][key]; "
+        # Split narration+SFX into main (output) and key (sidechain trigger).
+        # whole_dur (not pad_dur=outro) -- pad_dur adds a fixed amount onto the
+        # audio's OWN raw length, so if the source narration audio is already
+        # shorter than its video track (a real gap, found in Bronze Serpent),
+        # that shortfall survives instead of being corrected. whole_dur pads to
+        # the ABSOLUTE target `total`, matching [vout]'s true length. INV-26.
+        f"[0:a]{fmt},apad=whole_dur={total},asplit=2[main][key]; "
         # Duck score whenever voice is present
         f"[mus][key]sidechaincompress=threshold=0.12:ratio=2.5:attack=20:release=250[musd]; "
         f"[main][musd]amix=inputs=2:normalize=0,alimiter=limit=0.97,aresample=44100[mix]"

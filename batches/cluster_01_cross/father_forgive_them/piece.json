@@ -87,14 +87,14 @@
   "dark": "lonely_searching_a.mp3",
   "grace": "sacred_grace_rise_a.mp3",
   "base_seconds": 57.15,
-  "outro_hold": 1.5,
+  "outro_hold": 3.0,
   "dark_trim_end": "33",
   "grace_trim": [
    "20",
    "90"
   ],
   "crossfade": "6",
-  "tpad": "1.5",
+  "tpad": "3.0",
   "dips": [
    [
     "16.94",

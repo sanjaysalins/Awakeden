@@ -66,6 +66,30 @@ set_motion_profile("classic")
 run = base.run
 
 
+_DIMS_CACHE = {}
+
+
+def _dims(path):
+    """Real (w,h) of a video source, ffprobed once and cached. REUSE FIX
+    (backported 2026-07-19 from longform/04_The_Bronze_Serpent's 2026-07-16
+    fix -- this copy never got it): panel-fit used to assume every source was
+    PAGE-shaped (true for this episode's own 16:9 stills/Kling clips), which
+    mis-solves the crop for a REUSED 9:16 clip_library clip dropped into a
+    two_v/triptych_v column. Probing the actual file is backward-compatible
+    (own sources ARE page-shaped, so this returns PAGE for them)."""
+    p = str(path)
+    if p not in _DIMS_CACHE:
+        r = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0",
+                            "-show_entries", "stream=width,height", "-of", "csv=p=0", p],
+                            capture_output=True, text=True)
+        try:
+            w, h = r.stdout.strip().split(",")
+            _DIMS_CACHE[p] = (int(w), int(h))
+        except Exception:
+            _DIMS_CACHE[p] = PAGE
+    return _DIMS_CACHE[p]
+
+
 # ---------------- craft assets (PIL, cached) ----------------
 def halftone_bg():
     p = WORK / "_bg_halftone.png"
@@ -514,12 +538,17 @@ def main():
             make_whoosh(WHOOSH)
 
     def source(cdef):
+        # Every-screen-animated rule (backported 2026-07-19 from Bronze Serpent's
+        # 2026-07-17 fix -- this copy never got it): a real rendered clip always
+        # wins when present -- `cam` is only a Ken-Burns fallback for slugs with
+        # no clip. The old order checked `cam` FIRST, so any beat with a `cam`
+        # hint set silently used Ken Burns even when a real animated clip existed.
         slug, cam = cdef["slug"], cdef.get("cam")
         live = clips_dir / f"{slug}.mp4"
-        if cam:
-            return base.dyncam_clip(slug, cam) if not a.lint else live, "dyncam", cam, "pushin"
         if a.clips and live.exists() and live.stat().st_size > 0:
             return live, "kling", None, cdef.get("motion", "pushin")
+        if cam:
+            return base.dyncam_clip(slug, cam) if not a.lint else live, "dyncam", cam, "pushin"
         return base.dyncam_clip(slug, "arc") if not a.lint else live, "dyncam", "arc", "pushin"
 
     for i, b in enumerate(spec["beats"], 1):
@@ -576,7 +605,7 @@ def main():
                 clip, src, cam, motion = source(cdef)
                 anc = pf.load_anchor(POOL, cdef["slug"]) or pf.default_anchor()
                 r = rects[k]
-                sol = pf.solve_crop((r[2], r[3]), PAGE, anc, motion)
+                sol = pf.solve_crop((r[2], r[3]), _dims(clip), anc, motion)
                 z = round(sol["zoom"] * cdef.get("zoom", 1.0), 3)
                 if not sol["fit"] and max(sol["lost"]) > 0.10:
                     fitwarn.append(f"  beat {i:>2} {tpl:10} panel {k} {cdef['slug']:24} {sol['reason']}")

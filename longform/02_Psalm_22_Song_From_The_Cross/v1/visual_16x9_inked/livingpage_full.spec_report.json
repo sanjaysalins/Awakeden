@@ -9,7 +9,7 @@
    6.3
   ],
   "slams": 69,
-  "kling_or_punch_or_slam_pct": 75,
+  "kling_or_punch_or_slam_pct": 76,
   "tier1_pct": 21,
   "reuse_violations": [],
   "tier3_or_flagged_beats": [
@@ -25,6 +25,7 @@
   "ramps": 0,
   "whips": 0,
   "flash_inserts": 0,
+  "fx_beats": 0,
   "cut_ticks": false,
   "beats": 99
  },
@@ -227,7 +228,7 @@
     "lots_dice_closeup"
    ],
    "sources": [
-    "dyncam",
+    "kling",
     "kling",
     "kling",
     "kling"
@@ -750,7 +751,7 @@
     "pierced_feet"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": true,
    "cap": {
@@ -1702,7 +1703,7 @@
     "kindreds_bowing"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": false,
    "cap": {
@@ -2183,7 +2184,7 @@
     "ends_of_earth"
    ],
    "sources": [
-    "dyncam",
+    "kling",
     "kling",
     "dyncam",
     "kling"
