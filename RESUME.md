@@ -1,14 +1,47 @@
-# RESUME — next session (updated 2026-07-19 — panel_animator toolkit built + landing-hold standard locked (INV-26), two real engine bugs found and fixed across shorts AND long-form)
+# RESUME — next session (updated 2026-07-19 END-OF-DAY — ALL FIVE "bigger builds" DONE: one score mixer, panel-variety wired, LF-SP/LF-AS validators, fail-closed long clip-QC; plus panel_animator toolkit + INV-26 from earlier the same day)
 
-## 🔴 PICK UP HERE FIRST (2026-07-19 session paused, user said "let's save everything and resume tomorrow")
+## 🔴 PICK UP HERE FIRST (2026-07-19 second wrap, user said "update RESUME.md and let's wrap up")
 
-### 0. Everything is committed — `67fc015`
-Nothing outstanding to save. Working tree is clean except pre-existing/not-mine scratch
-(`_run_audio_bs03.py`, `poc_elevate/`, `poc_vibemotion_style/` — untouched, leave alone) and
-disposable render logs/POC dirs under Bronze Serpent's `visual_16x9_inked/` (by design, never
-committed — see `.gitignore` media policy). `longform/04_The_Bronze_Serpent/_prototype_60s/`
-is a throwaway 60s panel_animator demo the user reviewed and liked — safe to delete anytime,
-or keep as a reference; not part of the shipped film.
+### 0. Everything committed — day ends at `a4bc200` (9 commits today: 67fc015..a4bc200)
+Working tree clean except pre-existing/not-mine scratch (`_run_audio_bs03.py`, `poc_elevate/`,
+`poc_vibemotion_style/` — untouched, leave alone) and disposable render logs/POC dirs under
+Bronze Serpent's `visual_16x9_inked/` (by design, never committed — gitignore media policy).
+`longform/04_The_Bronze_Serpent/_prototype_60s/` = throwaway 60s panel_animator demo the user
+reviewed and liked — safe to delete anytime; not part of the shipped film.
+**Machine-hygiene note:** a full-suite pytest "hang" at day's end was NOT code — an orphaned
+runaway ffmpeg from a STOPPED background task (2:03 AM, 2.6 CPU-hours) was starving the box.
+Killed it + stale python pairs; clean rerun 430 green in 105s. If a suite run ever crawls,
+`Get-Process python*,ffmpeg*` and look for old StartTimes before debugging code.
+
+### 0b. ALL FIVE "bigger builds" LANDED (user greenlit "All five"; commits `e34c04d` + `a4bc200`)
+Full detail in the two commit messages; the shape:
+1. **ONE score mixer** — `pipeline/score_mix.py`; all three scorers (`run_piece.py`,
+   `longform/_add_score_lf.py`, Bronze Serpent's `_add_score_inked.py`) delegate the
+   narration-pad/duck/mix tail. `test_score_mix.py` FAILS if any scorer regrows a local
+   graph. All three lanes rebuilt + landing-hold-verified as regression proof.
+2. **Panel-variety gate wired** — `pipeline/panel_variety.py` (from the never-invoked
+   Bronze-Serpent-only script), now BLOCKING inside both `build_livingpage_16x9.py` copies
+   (exit 4, `--skip-panel-variety` escape). Pools without `visual_tags.json` grandfathered.
+3. **`validators.lf_scene_plan`** (+ spec-promised `lf_movement_coverage`) — long scene-plan
+   teeth: movement coverage, Christ-close, ≤60% Christ-centric, per-scene veo3 `atmos` hint,
+   negation-aware banned tokens ('frame' excluded — 134/134 approved-scene hits were
+   doorframe/off-frame/16:9 idiom). Scene count = WARN-only. All 5 locked plans clean.
+4. **`validators.lf_assembly`** — LF-AS window tiling / movement+clips-on-disk coverage /
+   gospel frame / hero-window. WINDOW-LANE ONLY (livingpage-lane scene plans carry
+   overlapping still-source `t` by design — do not point it at those). Wired BLOCKING into
+   `longform/_assemble_16x9.py`.
+5. **Fail-closed long clip-QC** — `pipeline/clip_qc.py` extended (LF_CRITERIA veo3 rules,
+   `dir_status`, CLI `--dir`); `_assemble_16x9.py` refuses unverified clips under
+   `JITB_REQUIRE_CLIPQC=1` (default report-only until an episode's clips are backfilled —
+   NO long episode has sidecars yet; that backfill is a real worklist:
+   `python -m pipeline.clip_qc "<clips dir>" --dir --frames`, eyeball, `record_verdict`).
+Suite: 430 passed (was 410 at day start; +20 new tests). LONGFORM_SPEC rows updated to name
+the real validators; scene-plan-long / assemble-long / voice / stills skills updated
+(.claude-local, not in git).
+**Deliberately NOT done:** backfilling clip-QC sidecars for existing long episodes (spend
+of attention, needs eyeballing every clip — a good standalone session task); LF-AS-G3
+pacing stays manual (no artifact records per-clip speed); shorts' `visual_engine` SP-G5
+still uses the naive substring matcher (its LLM blocks don't hit the idioms — fine as-is).
 
 ### 1. NEW: `panel_animator/` — an 8-tool comic-panel toolkit, built and locked this session
 Read `panel_animator/README.md` first — it's the roster + a "reach for it when / not when"
@@ -89,20 +122,17 @@ through /sfx would hand longs the shorts SFX engine). What landed:
   (was 59s-only), /stills got the 16:9 + veo3-atmospheric-hints section, /assemble-long now
   ends with the `check_landing_hold.py` gate step, /narrate-long names the real validator.
 
-**Still-open architectural findings from the red-team (not bugs, real inconsistency, bigger
-asks than this pass — flagged, not fixed):**
-- THREE independent score-mixing implementations (shorts' `run_piece.py`, long-form's shared
-  `_add_score_lf.py`, Bronze Serpent's own fork `_add_score_inked.py`) — this is literally how
-  the two apad bugs above ended up different bugs in different places. Consolidating to one
-  implementation would prevent this class of bug recurring a third time.
-- SFX: shorts share one real library (`sfx_pilots/sfxlib.py`); every long-form episode has its
-  own hand-rolled ad-hoc `CUES`-list script (7 of them). Same risk pattern.
-- `panel_variety_lint.py` exists ONLY for Bronze Serpent and isn't wired into the build as an
-  actual gate anywhere, even for Bronze Serpent itself — it's a script you have to remember to
-  run by hand. No shorts equivalent exists at all.
-- The "every panel animated, no Ken Burns" rule is advisory-only in BOTH formats — nothing
-  exits non-zero on a low `kling_or_punch_or_slam_pct`. Symmetric gap, not an asymmetry, but
-  worth knowing it isn't actually enforced anywhere.
+**Architectural findings from the red-team — status after the "bigger builds" pass (item 0b):**
+- ~~THREE independent score-mixing implementations~~ **DONE** — consolidated into
+  `pipeline/score_mix.py` (`e34c04d`).
+- ~~`panel_variety_lint.py` never wired as a gate~~ **DONE** — `pipeline/panel_variety.py`,
+  blocking in both builders (`e34c04d`).
+- **STILL OPEN — SFX split**: shorts share `sfx_pilots/sfxlib.py`; every long-form episode
+  still has its own hand-rolled `CUES`-list script (7 of them). Same fork-drift risk the
+  score mixers had. Next natural consolidation candidate.
+- **STILL OPEN — "every panel animated" is advisory-only** in BOTH formats — nothing exits
+  non-zero on a low `kling_or_punch_or_slam_pct`. Symmetric gap; could be a threshold gate
+  in the builders now that the panel-variety wiring pattern exists.
 
 ### 4. Bronze Serpent — the 2026-07-18 style-mismatch item is DONE, plus more fixes on top
 `longform/04_The_Bronze_Serpent/v1/visual_16x9_inked/BronzeSerpent_16x9_scored_sfx.mp4` is
