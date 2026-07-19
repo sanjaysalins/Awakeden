@@ -59,6 +59,34 @@ audio_dur = dur(AUDIO)
 scenes = ep.scenes
 print(f"{ep.slug}: audio {audio_dur:.1f}s · {len(scenes)} scenes · boomerang + directional-chain")
 
+# LF-AS deterministic gate (validators.lf_assembly, 2026-07-19): window tiling,
+# movement coverage, gospel frame, hero window — BLOCKING (all 4 window-lane
+# episodes sweep clean, so a failure here is a real authoring defect).
+sys.path.insert(0, str(ROOT))
+from pipeline import validators as _validators, clip_qc as _clip_qc  # noqa: E402
+_blk, _warns = _validators.lf_assembly({"scenes": scenes}, audio_dur=audio_dur)
+for _w in _warns:
+    print(f"  [lf-as] warn: {_w}")
+if _blk:
+    for _b in _blk:
+        print(f"  [lf-as] BLOCK: {_b}")
+    raise SystemExit("LF-AS gate failed — fix the scene windows/plan before assembling")
+
+# Fail-closed CLIP QC chokepoint (INV-23/24 discipline for the long lane).
+# ROLLOUT-GATED: existing episodes' clips predate the sidecar discipline, so
+# the default is report-only; set JITB_REQUIRE_CLIPQC=1 to enforce once an
+# episode's clips are backfilled (`python -m pipeline.clip_qc <dir> --dir`).
+import os as _os  # noqa: E402
+_unverified = [ep.stem(s) for s in scenes
+               if not _clip_qc.is_verified(OUT / f"{ep.stem(s)}.mp4")]
+if _unverified:
+    _msg = (f"  [clip-qc] {len(_unverified)}/{len(scenes)} clips lack a passing "
+            f".clipqc.json sidecar (fail-closed discipline, pipeline/clip_qc.py)")
+    if _os.environ.get("JITB_REQUIRE_CLIPQC") == "1":
+        print(_msg)
+        raise SystemExit("clip-qc gate failed — QC the clips (record_verdict) before assembling")
+    print(_msg + " — REPORT-ONLY (set JITB_REQUIRE_CLIPQC=1 to enforce)")
+
 seg_paths = []
 for i, s in enumerate(scenes):
     start, end = s["t"]

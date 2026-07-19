@@ -83,38 +83,67 @@ def is_verified(mp4: Path) -> bool:
         return False
 
 
+LF_CRITERIA = (
+    "A rendered veo3 LONG-FORM clip PASSES only if, across its frames (LF-CLIP-*, "
+    "v2/LONGFORM_SPEC.md §4):\n"
+    "  1. ATMOSPHERE-ONLY: motion is atmospheric (drifting dust/smoke/light, cloth "
+    "stirring, flame wavering) — never subject locomotion (no walking, running, "
+    "reaching, striking; figures may breathe or turn slightly).\n"
+    "  2. NO-MORPH: faces, hands, and forms stay stable frame-to-frame; no melting, "
+    "warping, or morphing.\n"
+    "  3. NO-INVENT: nothing appears that isn't in the source still — no invented "
+    "blood, water, figures, objects, or text.\n"
+    "  4. STYLE-FAITHFUL: every frame keeps the source still's art style (inked "
+    "graphic-novel or Baroque oil per episode) — no photoreal softening.\n"
+    "  5. NO-WRITING-ANIMATED: scroll/titulus/sign content never animates (INV-17).\n"
+    "FAIL if any frame violates these. Fail-closed: when unsure, FAIL."
+)
+
+
+def _status_row(mp4: Path) -> dict:
+    sc = _sidecar(mp4)
+    if not sc.exists():
+        state = "UNVERIFIED"
+    else:
+        try:
+            state = "PASS" if json.loads(sc.read_text(encoding="utf-8")).get("passed") else "FAIL"
+        except (OSError, ValueError):
+            state = "BAD-SIDECAR"
+    return {"clip": mp4.name, "state": state}
+
+
 def short_status(short_folder: Path, provider: str = "nbp") -> list[dict]:
     """Status of every rendered clip in a short: verified / unverified / failed."""
-    nbp = short_folder / "visual" / provider
-    rows = []
-    for mp4 in sorted(nbp.glob("*.mp4")):
-        sc = _sidecar(mp4)
-        if not sc.exists():
-            state = "UNVERIFIED"
-        else:
-            try:
-                state = "PASS" if json.loads(sc.read_text(encoding="utf-8")).get("passed") else "FAIL"
-            except (OSError, ValueError):
-                state = "BAD-SIDECAR"
-        rows.append({"clip": mp4.name, "state": state})
-    return rows
+    return dir_status(short_folder / "visual" / provider)
+
+
+def dir_status(clips_dir: Path) -> list[dict]:
+    """Status of every clip in ANY directory (the long-form 16:9 lane keeps its
+    clips at <episode>/v1/visual_16x9*/(clips/)?NN_*.mp4 — pass that dir here).
+    Added 2026-07-19 so the long lane shares the same fail-closed sidecar
+    discipline instead of the assemble-long skill claiming a chokepoint nothing
+    read."""
+    return [_status_row(mp4) for mp4 in sorted(clips_dir.glob("*.mp4"))]
 
 
 if __name__ == "__main__":
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     dump = "--frames" in sys.argv
+    long_mode = "--dir" in sys.argv   # pass a clips DIR directly (long-form 16:9 lane)
     if not args:
-        print("usage: python -m pipeline.clip_qc <short folder> [--frames]")
+        print("usage: python -m pipeline.clip_qc <short folder> [--frames]\n"
+              "       python -m pipeline.clip_qc <clips dir> --dir [--frames]   # long-form")
         raise SystemExit(2)
     folder = Path(args[0])
-    rows = short_status(folder)
+    clips_dir = folder if long_mode else folder / "visual" / "nbp"
+    rows = dir_status(clips_dir)
     unv = [r for r in rows if r["state"] != "PASS"]
     for r in rows:
         print(f"  [{r['state']:>11}] {r['clip']}")
     print(f"\n{len(rows)-len(unv)}/{len(rows)} clips verified PASS; {len(unv)} need a look.")
-    print("\nCRITERIA:\n" + CRITERIA)
+    print("\nCRITERIA:\n" + (LF_CRITERIA if long_mode else CRITERIA))
     if dump:
-        qc = folder / "visual" / "nbp" / "_clipqc_frames"
-        for mp4 in sorted((folder / "visual" / "nbp").glob("*.mp4")):
+        qc = clips_dir / "_clipqc_frames"
+        for mp4 in sorted(clips_dir.glob("*.mp4")):
             extract_frames(mp4, qc)
         print(f"\nframes -> {qc}")

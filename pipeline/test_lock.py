@@ -350,6 +350,22 @@ def test_lf_assembly_movement_clips_and_hero(tmp_path):
     assert "end before the final 90s" in joined
 
 
+def test_clip_qc_dir_status_and_lf_criteria(tmp_path):
+    """The long-lane clip-QC surface: dir_status over any clips dir, fail-closed
+    sidecar states, and the LF criteria carrying the veo3 rules."""
+    from pipeline import clip_qc as CQ
+    a, b, c = tmp_path / "01_a.mp4", tmp_path / "02_b.mp4", tmp_path / "03_c.mp4"
+    for f in (a, b, c):
+        f.write_bytes(b"0")
+    CQ.record_verdict(a, True)
+    CQ.record_verdict(b, False, issues=["subject locomotion"])
+    rows = {r["clip"]: r["state"] for r in CQ.dir_status(tmp_path)}
+    assert rows == {"01_a.mp4": "PASS", "02_b.mp4": "FAIL", "03_c.mp4": "UNVERIFIED"}
+    assert CQ.is_verified(a) and not CQ.is_verified(b) and not CQ.is_verified(c)
+    for needle in ("ATMOSPHERE-ONLY", "NO-INVENT", "NO-WRITING-ANIMATED"):
+        assert needle in CQ.LF_CRITERIA
+
+
 def test_lf_movements_non_movement_format_warns_only():
     """A long narration with no '## Movement' headers (legacy/witness format) must
     WARN, never block — re-locks of Isaiah 53 / Psalm 22 cannot be broken."""

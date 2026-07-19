@@ -144,6 +144,15 @@ Total: ~330–500s (~6–8 min). Trim words before compressing the voice.
 | LF-CLIP-NOWRITING | D | Writing scenes (scroll / titulus / codex / sign) are NOT animated with veo3 — hold as a still or give a deterministic ffmpeg push-in (→SPEC INV-17 NEVER-ANIMATE-WRITING) |
 | **LF-CLIP-DURATION** | D | Clip is ≥7.5s (veo3 at 8s, accounting for boomerang transitions); short clips flag for a continuation or boomerang |
 
+**Verdict discipline (since 2026-07-19):** LF-CLIP-* verdicts are recorded as
+fail-closed `.clipqc.json` sidecars via `pipeline/clip_qc.py` (`record_verdict`
+after a REAL look at the extracted frames; `LF_CRITERIA` states the rules;
+`python -m pipeline.clip_qc "<clips dir>" --dir --frames` for the worklist).
+`_assemble_16x9.py` checks every scene's clip and refuses assembly when
+`JITB_REQUIRE_CLIPQC=1` (report-only by default until an episode's clips are
+backfilled — same rollout pattern as INV-23). No sidecar = UNVERIFIED, never
+assumed passing (INV-24).
+
 **Veo3 prompt discipline (the animate-long recipe):**
 ```
 Baroque oil painting in motion. [Subject description from subject_block].
