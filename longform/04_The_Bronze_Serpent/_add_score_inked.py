@@ -12,6 +12,9 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT))
+from pipeline import score_mix  # noqa: E402 — the ONE shared score-mix tail (INV-26)
+
 MUSIC_LIB = ROOT / "music_library" / "clips"
 VIS = Path(__file__).resolve().parent / "v1" / "visual_16x9_inked"
 
@@ -99,34 +102,23 @@ def run(yes: bool, regen: bool) -> None:
 
     fade_dur = 1.5
     fade_out_start = max(0.0, total - fade_dur)
+    # Music prep stays; the narration-pad + duck + mix tail is the SHARED
+    # pipeline/score_mix fragment (INV-26 — see score_mix.py for the history
+    # of the relative-apad bug this fork carried until 2026-07-19).
     fc = (
         f"[1:a]{fmt},atempo={atempo:.4f},asetpts=PTS-STARTPTS,"
         f"atrim=0:{total+0.2:.3f},"
         f"afade=t=in:st=0:d=2,"
         f"afade=t=out:st={fade_out_start:.2f}:d={fade_dur},"
-        f"volume={gain}dB[mus]; "
-        f"[0:v]tpad=stop_mode=clone:stop_duration={outro}[vout]; "
-        # apad=pad_dur=X pads X seconds onto the audio's OWN raw length -- if the
-        # source narration audio is already shorter than its video track (a real,
-        # ~1s gap found in Bronze Serpent's build), that pre-existing shortfall
-        # survives instead of being corrected. whole_dur pads to an ABSOLUTE
-        # target (matching [vout]'s true length: V + outro = total) regardless
-        # of how long the raw audio actually was going in. INV-26.
-        f"[0:a]{fmt},apad=whole_dur={total},asplit=2[main][key]; "
-        f"[mus][key]sidechaincompress=threshold=0.12:ratio=2.5:attack=20:release=250[musd]; "
-        f"[main][musd]amix=inputs=2:normalize=0,alimiter=limit=0.97,aresample=44100[mix]"
+        f"volume={gain}dB[mus];"
+        + score_mix.mix_tail(total, outro, fmt_narration=True)
     )
     inputs = ["-i", str(src), "-i", str(trimmed)]
     cmd = (
         ["ffmpeg", "-y", "-hide_banner", "-loglevel", "error"]
         + inputs
-        + ["-filter_complex", fc,
-           "-map", "[vout]", "-map", "[mix]",
-           "-c:v", "libx264", "-crf", "18", "-preset", "veryfast", "-pix_fmt", "yuv420p",
-           "-movflags", "+faststart",
-           "-c:a", "aac", "-b:a", "192k",
-           "-t", f"{total:.3f}",
-           str(out)]
+        + ["-filter_complex", fc]
+        + score_mix.output_args(out, preset="veryfast", total=total)
     )
     print("[score] mixing (may take ~30s)...", flush=True)
     p = subprocess.run(cmd, capture_output=True, text=True)

@@ -31,6 +31,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
 
+from pipeline import score_mix  # noqa: E402 — the ONE shared score-mix tail (INV-26)
+
 BASE_URL = "https://ark.ap-southeast.bytepluses.com/api/v3/images/generations"
 SEEDREAM_USD_PER_IMG = 0.05          # ledger estimate per BytePlus still
 
@@ -689,27 +691,22 @@ def score_cmd(piece_dir: Path, pj: dict) -> list[str]:
     dips = "".join(
         f"volume=volume={v}:enable='between(t,{a},{b})'," for a, b, v in sc["dips"])
     cta_start, cta_vol = sc["cta_dip"]
+    # music prep (2-track dark->grace crossfade + dips) stays here; the
+    # narration-pad + duck + mix tail is the SHARED score_mix fragment --
+    # the exact place the 2026-07-19 no-apad bug lived, now single-sourced.
     fc = (
-        f"[1:a]atrim=0:{sc['dark_trim_end']},aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=44100[d];"
-        f"[2:a]atrim={sc['grace_trim'][0]}:{sc['grace_trim'][1]},aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=44100[g];"
+        f"[1:a]atrim=0:{sc['dark_trim_end']},{score_mix.AFMT}[d];"
+        f"[2:a]atrim={sc['grace_trim'][0]}:{sc['grace_trim'][1]},{score_mix.AFMT}[g];"
         f"[d][g]acrossfade=d={sc['crossfade']}:c1=exp:c2=exp[mch];"
         f"[mch]atrim=0:{total},afade=t=in:st=0:d=1.5,afade=t=out:st={total - 1.5:.2f}:d=1.5,volume=-13dB,"
         + dips +
         f"volume=volume={cta_vol}:enable='between(t,{cta_start},{total})'[mus];"
-        # narration ([0:a]) ends at base_seconds with no trailing silence -- pad it
-        # out to `total` BEFORE the split, or the mix (and the -shortest-bounded
-        # final mux downstream) truncates near base_seconds and the outro_hold
-        # never actually lingers in the audio, even though the video does.
-        f"[0:a]apad=whole_dur={total},asplit=2[main][key];"
-        f"[mus][key]sidechaincompress=threshold=0.12:ratio=2.5:attack=20:release=250[musd];"
-        f"[main][musd]amix=inputs=2:normalize=0,alimiter=limit=0.97,aresample=44100[mix];"
-        f"[0:v]tpad=stop_mode=clone:stop_duration={sc['tpad']}[vout]"
+        + score_mix.mix_tail(total, sc["tpad"])
     )
     return ["ffmpeg", "-y", "-loglevel", "error", "-i", str(src),
             "-i", str(mus / sc["dark"]), "-i", str(mus / sc["grace"]),
-            "-filter_complex", fc, "-map", "[vout]", "-map", "[mix]",
-            "-c:v", "libx264", "-crf", "18", "-preset", "medium", "-pix_fmt", "yuv420p",
-            "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(out)]
+            "-filter_complex", fc,
+            *score_mix.output_args(out, preset="medium")]
 
 
 def run_score(piece_dir: Path, pj: dict) -> int:

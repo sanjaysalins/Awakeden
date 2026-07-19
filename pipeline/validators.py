@@ -320,14 +320,199 @@ def lf_movements(md: str) -> tuple[list[str], list[str]]:
     return blocking, warnings
 
 
+# ---------------------------------------------------------------- LF-SP scene-plan gates
+
+_LF_MOVEMENTS = ("M1", "M2", "M3", "M4", "M5", "M6", "M7")
+
+
+def lf_movement_coverage(plan: dict) -> list[str]:
+    """LF-SP-G2 (the validator LONGFORM_SPEC §4 named as 'Phase-1 … not yet
+    implemented' until 2026-07-19): every movement M1–M7 has ≥2 scenes, via the
+    `mvt` field on each scene. Returns blocking findings."""
+    from collections import Counter
+    counts = Counter(str(s.get("mvt", ""))[:2] for s in plan.get("scenes", []))
+    return [f"LF-SP-G2: movement {m} has {counts.get(m, 0)} scene(s) (needs >= 2)"
+            for m in _LF_MOVEMENTS if counts.get(m, 0) < 2]
+
+
+def lf_scene_plan(plan: dict) -> tuple[list[str], list[str]]:
+    """Deterministic LF-SP checks over a hand-authored long scene_plan.json
+    (the long lane bypasses cli_visual's engine, so the shorts SP pre-checks
+    never run — this is the long-form counterpart). Corpus-calibrated
+    2026-07-19 against all 5 human-approved plans (03/04/04-inked/05/06):
+
+    BLOCKING (all 5 approved plans pass these):
+      - LF-SP-G2 movement coverage (>=2 scenes per M1..M7)
+      - Christ-close: the final scene has jesus=true (gospel frame)
+      - >=1 jesus=true scene overall
+      - Christ-centric cap: <=60% of scenes jesus=true (corpus max 40%;
+        memory scene-subject-variety-gate)
+      - veo3 atmos hint: every scene has a non-empty `atmos`
+        (LONGFORM_SPEC §4 — a hint-free still animates dead under veo3)
+      - LF-SP-G5: no banned visible tokens in any subject_block
+
+    WARN-only (the spec's numbers conflict with the approved corpus):
+      - scene count vs LF-INV-4 (floor ceil(dur/20), cap 25) — the locked
+        Bronze Serpent plans have 27 and 32 scenes (user-driven density),
+        so the cap is advisory, never blocking."""
+    import math
+    scenes = plan.get("scenes", [])
+    blocking: list[str] = []
+    warnings: list[str] = []
+    if not scenes:
+        return ["LF-SP: scene plan has no scenes"], []
+
+    blocking += lf_movement_coverage(plan)
+
+    jesus_scenes = [s for s in scenes if s.get("jesus")]
+    if not jesus_scenes:
+        blocking.append("LF-SP-G9: no jesus=true scene anywhere (needs >=1 Jesus/NT-link)")
+    if not scenes[-1].get("jesus"):
+        blocking.append("LF-SP-G9: final scene is not jesus=true — the film must close on Christ")
+    pct = round(100 * len(jesus_scenes) / len(scenes))
+    if pct > 60:
+        blocking.append(f"LF-SP: {pct}% of scenes are Christ-centric (cap 60% — vary the subjects)")
+
+    no_atmos = [s.get("id") for s in scenes if not str(s.get("atmos", "")).strip()]
+    if no_atmos:
+        blocking.append(f"LF-SP: scenes {no_atmos} missing the veo3 `atmos` motion hint")
+
+    for s in scenes:
+        # 'frame' is EXCLUDED from the long-form scan: calibration over all 134
+        # scenes in the 5 approved plans found 100% of its post-negation hits
+        # were idiom, not violations — "doorframe" (the Passover blood-marked
+        # doorposts ARE the subject), "off-frame", "16:9 frame edge to edge",
+        # "framed within a doorway". The token stays in the shorts SP-G5 list
+        # (terse LLM blocks don't use those idioms); 'wooden frame' (the real
+        # artifact) remains blocking here.
+        bad = [t for t in banned_tokens(str(s.get("subject_block", ""))) if t != "frame"]
+        if bad:
+            blocking.append(f"LF-SP-G5: scene {s.get('id')} subject_block carries banned tokens {bad}")
+
+    dur = max((s["t"][1] for s in scenes if s.get("t")), default=0)
+    if dur:
+        floor = math.ceil(dur / 20)
+        if len(scenes) < floor:
+            warnings.append(f"LF-SP: {len(scenes)} scenes for {dur:.0f}s — below the LF-INV-4 "
+                            f"floor of {floor} (advisory)")
+        if len(scenes) > 25:
+            warnings.append(f"LF-SP: {len(scenes)} scenes exceeds the LF-INV-4 cap of 25 "
+                            f"(advisory — the locked dense rebuilds run 27-32)")
+    return blocking, warnings
+
+
+# ---------------------------------------------------------------- LF-AS assembly gates
+
+def lf_assembly(plan: dict, audio_dur: float | None = None,
+                clips_dir: Path | None = None) -> tuple[list[str], list[str]]:
+    """Deterministic LF-AS checks (v2/LONGFORM_SPEC.md §4) over the long scene
+    plan + (optionally) the real audio duration and rendered-clips dir.
+
+    APPLIES ONLY to the WINDOW-TILED assembly lane (`_assemble_16x9.py`, whose
+    fill is driven by the scene plan's `t` windows and which has no gate code
+    of its own). Do NOT run it on a livingpage-lane scene_plan (e.g. Bronze
+    Serpent's `visual_16x9_inked/scene_plan.json`): there the film is driven by
+    the beat spec (`livingpage_full.spec.json`, whose contiguity the builder
+    itself asserts) and the scene plan's `t` values are still-source metadata
+    that legitimately overlap.
+
+    Corpus-calibrated 2026-07-19 against the 4 window-lane Types & Shadows
+    plans (all pass; two run a few seconds PAST their audio, which is benign
+    over-coverage, so only an early end blocks).
+
+    BLOCKING: LF-AS-G1 window tiling (starts ~0, no internal gap > 0.5s, no
+    overlaps, reaches the audio end when audio_dur given); LF-AS-G4 movement
+    coverage incl. a real clip on disk per movement when clips_dir given;
+    LF-AS-G6 gospel frame (opens M1, closes jesus=true); LF-AS-G5 hero window
+    intersects the final 90s WHEN a hero flag exists.
+    WARN: no hero flag anywhere (G5 not deterministically checkable — only
+    episode 06 carries the field so far). Pacing (G3) and per-clip speed are
+    not recorded in any artifact — still manual/ear."""
+    scenes = sorted(plan.get("scenes", []), key=lambda s: s["t"][0])
+    blocking: list[str] = []
+    warnings: list[str] = []
+    if not scenes:
+        return ["LF-AS: no scenes in plan"], []
+
+    if scenes[0]["t"][0] > 0.5:
+        blocking.append(f"LF-AS-G1: first window starts at {scenes[0]['t'][0]}s (must start ~0)")
+    for a, b in zip(scenes, scenes[1:]):
+        gap = b["t"][0] - a["t"][1]
+        if gap > 0.5:
+            blocking.append(f"LF-AS-G1: {gap:.2f}s gap between scene {a['id']} and {b['id']}")
+        if gap < -0.01:
+            blocking.append(f"LF-AS-G1: scenes {a['id']} and {b['id']} overlap by {-gap:.2f}s")
+    end = scenes[-1]["t"][1]
+    if audio_dur and end < audio_dur - 0.5:
+        blocking.append(f"LF-AS-G1: windows end at {end:.1f}s but audio runs {audio_dur:.1f}s "
+                        f"— the tail is uncovered")
+
+    from collections import Counter
+    per_mvt: dict[str, list] = {}
+    for s in scenes:
+        per_mvt.setdefault(str(s.get("mvt", ""))[:2], []).append(s)
+    for m in _LF_MOVEMENTS:
+        if m not in per_mvt:
+            blocking.append(f"LF-AS-G4: movement {m} has no scene at all")
+        elif clips_dir is not None:
+            if not any(_scene_clip_exists(clips_dir, s) for s in per_mvt[m]):
+                blocking.append(f"LF-AS-G4: movement {m} has no rendered clip on disk "
+                                f"(scenes {[s['id'] for s in per_mvt[m]]})")
+
+    if not str(scenes[0].get("mvt", "")).startswith("M1"):
+        blocking.append(f"LF-AS-G6: film opens on {scenes[0].get('mvt')} — must open on M1 (The Picture)")
+    if not scenes[-1].get("jesus"):
+        blocking.append("LF-AS-G6: final scene is not jesus=true — the film must close on Christ")
+
+    heroes = [s for s in scenes if s.get("hero")]
+    if not heroes:
+        warnings.append("LF-AS-G5: no scene carries a hero flag — hero placement not "
+                        "deterministically checkable (manual)")
+    elif audio_dur:
+        if not any(s["t"][1] >= audio_dur - 90 for s in heroes):
+            blocking.append(f"LF-AS-G5: hero scene(s) {[s['id'] for s in heroes]} all end "
+                            f"before the final 90s window")
+    return blocking, warnings
+
+
+def _scene_clip_exists(clips_dir: Path, scene: dict) -> bool:
+    """A rendered clip for scene N is any `NN_*.mp4` (the long naming scheme)."""
+    return any(clips_dir.glob(f"{int(scene['id']):02d}_*.mp4"))
+
+
 # ---------------------------------------------------------------- banned tokens
 
+_NEGATOR_BEFORE = re.compile(
+    r"\b(?:no|not|never|without|non)\b[\s,:;-]*(?:[a-z][a-z-]*[\s,:;-]+){0,2}$")
+
+
 def banned_tokens(text: str) -> list[str]:
-    """Return any banned visible-token strings present in text (reuses config list)."""
-    from . import config as _cfg  # noqa
+    """Return banned visible-token strings ASSERTED in text (reuses the config
+    list). NEGATION-AWARE: an occurrence directly preceded by a negator
+    (no/not/never/without, with up to 2 intervening words) does NOT count —
+    long-form subject_blocks deliberately carry tails like 'no frame, no
+    panels, no border, no text' and 'NO modern NO medieval dress', which are
+    the OPPOSITE of a violation. (Naive substring here flagged 134/134 scenes
+    across all 5 human-approved long plans — 100% false positives.)
+    NOTE: config lives at repo ROOT (import config), not pipeline.config — the
+    old relative import was dead-broken and unnoticed because this function had
+    no callers until lf_scene_plan (2026-07-19)."""
+    import config as _cfg  # noqa — root-level module, ROOT is on sys.path
     toks = getattr(_cfg, "VISUAL_BANNED_TOKENS", set())
     low = (text or "").lower()
-    return sorted(t for t in toks if t.lower() in low)
+    hits: set[str] = set()
+    for t in toks:
+        tl = t.lower()
+        start = 0
+        while True:
+            pos = low.find(tl, start)
+            if pos < 0:
+                break
+            if not _NEGATOR_BEFORE.search(low[max(0, pos - 40):pos]):
+                hits.add(t)
+                break
+            start = pos + len(tl)
+    return sorted(hits)
 
 
 # ---------------------------------------------------------------- registry integrity

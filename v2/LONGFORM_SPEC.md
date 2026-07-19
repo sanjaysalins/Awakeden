@@ -105,7 +105,7 @@ Total: ~330–500s (~6–8 min). Trim words before compressing the voice.
 | Gate | Type | Checks |
 |---|---|---|
 | LF-SP-G1 Biblical Accuracy | P | Every literal scene defensible vs pericope |
-| **LF-SP-G2 Movement Coverage** | **D (Phase-1)** | Every movement (M1–M7) has ≥2 scenes; no movement is visually skipped. Requires `mvt` field on each scene in `visual_16x9/scene_plan.json`. No Python validator yet — checked manually until Phase-1 implementation adds `validators.lf_movement_coverage()`. |
+| **LF-SP-G2 Movement Coverage** | **D** | Every movement (M1–M7) has ≥2 scenes; no movement is visually skipped. Requires `mvt` field on each scene. **Validator: `validators.lf_movement_coverage()` (real since 2026-07-19), part of `validators.lf_scene_plan()` which also enforces deterministically: Christ-close final scene, ≥1 Jesus scene, ≤60% Christ-centric, non-empty `atmos` veo3 hint per scene, and LF-SP-G5 banned tokens (negation-aware; 'frame' excluded — calibration over all 134 approved scenes showed its every post-negation hit was doorframe/off-frame/16:9-frame idiom). Scene-count vs LF-INV-4 is WARN-only (approved dense rebuilds run 27–32). All 5 locked plans sweep clean.** |
 | LF-SP-G3 Visual Variety | P | Not repetitive; long-form cliché blocklist (see §clichés) |
 | LF-SP-G4 Theological Honesty | P | Symbolic scenes carry no foreign doctrine |
 | LF-SP-G5 Prompt Conformance | D | No banned tokens in subject/mood blocks (same T1–T6 → SPEC §4) |
@@ -165,10 +165,10 @@ Painterly atmospheric life only.
 
 | Gate | Type | Checks |
 |---|---|---|
-| LF-AS-G1 Timeline Coverage | D | Scene windows tile [0, audio_dur] contiguously; no gap > 0.5s |
+| LF-AS-G1 Timeline Coverage | D | Scene windows tile [0, audio_dur] contiguously; no gap > 0.5s. **Validator: `validators.lf_assembly()` (real since 2026-07-19) — also carries G4 movement-coverage (incl. clip-on-disk per movement), G6 gospel frame, and G5 hero-window when a `hero` flag exists. WINDOW-LANE ONLY (`_assemble_16x9.py`): do not run it on a livingpage-lane scene_plan, whose `t` values are still-source metadata and whose contiguity the beat-spec builder asserts itself. All 4 window-lane plans sweep clean.** |
 | LF-AS-G2 No Reuse | D | Each clip (or boomerang of a clip) appears for exactly one scene window; no clip reused across scene slots |
 | **LF-AS-G3 Pacing Health** | D/A | Avg playback rate ≤1.3× (voice sets the pace, clips fill it); never speed a clip > 2.0×; flag freeze-holds > 15s as advisory |
-| **LF-AS-G4 Movement Coverage** | D (Phase-1) | Every M1–M7 movement has ≥1 clip in the final cut; no movement is silent-black. Requires `mvt` on each scene in the assembled cut. Verified manually until `validators.lf_assembly_coverage()` is implemented. |
+| **LF-AS-G4 Movement Coverage** | D | Every M1–M7 movement has ≥1 clip in the final cut; no movement is silent-black. Requires `mvt` on each scene. **Enforced by `validators.lf_assembly(plan, audio_dur, clips_dir)` since 2026-07-19 (checks a real `NN_*.mp4` exists on disk for at least one scene of every movement).** |
 | **LF-AS-G5 Hero = Christ-at-centre** | D | Hero scene = the substitution/exchange/cross scene (from M6); it is the visual peak; it must appear within the final 90s of the cut |
 | LF-AS-G6 Gospel Frame | D | Opening clip = The Picture (M1, an OT scene); closing clip = The Invitation (M7 or hero); cut ends on Christ — never on a crowd, symbol, or landscape alone |
 

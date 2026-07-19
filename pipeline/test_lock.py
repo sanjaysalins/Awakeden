@@ -267,6 +267,89 @@ def test_lf_movements_word_budget_calibration():
     assert any("total spoken words" in b for b in blocking), blocking
 
 
+def _lf_plan(n_per_mvt=3, jesus_last=True, jesus_pct_scenes=None, atmos="dust drifts",
+             subject="a lone figure on a hill, one continuous image, no frame, no border"):
+    """Synthesize a minimal valid long scene plan (7 movements x n scenes)."""
+    scenes, sid = [], 0
+    for m in range(1, 8):
+        for _ in range(n_per_mvt):
+            sid += 1
+            scenes.append({"id": sid, "mvt": f"M{m} Part", "t": [(sid - 1) * 20.0, sid * 20.0],
+                           "jesus": False, "atmos": atmos, "subject_block": subject})
+    if jesus_last:
+        scenes[-1]["jesus"] = True
+    return {"scenes": scenes}
+
+
+def test_lf_scene_plan_valid_passes():
+    from pipeline import validators as V
+    blocking, _ = V.lf_scene_plan(_lf_plan())
+    assert not blocking, blocking
+
+
+def test_lf_scene_plan_gaps_block():
+    """Missing movement coverage, no Christ-close, missing atmos, asserted banned
+    token each block; negated tokens ('no frame') never do."""
+    from pipeline import validators as V
+    plan = _lf_plan()
+    for s in plan["scenes"]:
+        if s["mvt"].startswith("M5"):
+            s["mvt"] = "M4 Part"          # M5 now has 0 scenes
+    plan["scenes"][-1]["jesus"] = False   # no Christ-close
+    plan["scenes"][0]["atmos"] = ""       # missing veo3 hint
+    plan["scenes"][1]["subject_block"] = "a neon sign over a split screen diagram"
+    blocking, _ = V.lf_scene_plan(plan)
+    joined = " | ".join(blocking)
+    assert "movement M5" in joined and "close on Christ" in joined
+    assert "missing the veo3" in joined and "banned tokens" in joined
+
+
+def test_lf_scene_plan_count_is_advisory():
+    """Scene count out of the LF-INV-4 band WARNs, never blocks (the locked dense
+    rebuilds run 27-32 scenes)."""
+    from pipeline import validators as V
+    blocking, warnings = V.lf_scene_plan(_lf_plan(n_per_mvt=5))   # 35 scenes
+    assert not blocking, blocking
+    assert any("cap of 25" in w for w in warnings), warnings
+
+
+def test_lf_assembly_valid_passes():
+    from pipeline import validators as V
+    plan = _lf_plan()   # contiguous 20s windows, opens M1, closes jesus
+    blocking, warnings = V.lf_assembly(plan, audio_dur=plan["scenes"][-1]["t"][1])
+    assert not blocking, blocking
+    assert any("hero" in w for w in warnings)   # no hero flag -> WARN, not block
+
+
+def test_lf_assembly_tiling_and_frame_block():
+    from pipeline import validators as V
+    plan = _lf_plan()
+    plan["scenes"][3]["t"][0] += 2.0             # 2s gap before scene 4
+    plan["scenes"][0]["mvt"] = "M2 Wrong"        # doesn't open on M1
+    plan["scenes"][-1]["jesus"] = False          # doesn't close on Christ
+    audio = plan["scenes"][-1]["t"][1] + 10      # audio outruns the windows
+    blocking, _ = V.lf_assembly(plan, audio_dur=audio)
+    joined = " | ".join(blocking)
+    assert "gap between scene" in joined and "must open on M1" in joined
+    assert "close on Christ" in joined and "tail is uncovered" in joined
+
+
+def test_lf_assembly_movement_clips_and_hero(tmp_path):
+    from pipeline import validators as V
+    plan = _lf_plan()
+    # clips on disk for every scene except movement M4's three scenes
+    m4_ids = {s["id"] for s in plan["scenes"] if s["mvt"].startswith("M4")}
+    for s in plan["scenes"]:
+        if s["id"] not in m4_ids:
+            (tmp_path / f"{s['id']:02d}_x.mp4").write_bytes(b"0")
+    plan["scenes"][2]["hero"] = True             # hero early in the film
+    audio = plan["scenes"][-1]["t"][1]
+    blocking, _ = V.lf_assembly(plan, audio_dur=audio, clips_dir=tmp_path)
+    joined = " | ".join(blocking)
+    assert "movement M4 has no rendered clip" in joined
+    assert "end before the final 90s" in joined
+
+
 def test_lf_movements_non_movement_format_warns_only():
     """A long narration with no '## Movement' headers (legacy/witness format) must
     WARN, never block — re-locks of Isaiah 53 / Psalm 22 cannot be broken."""

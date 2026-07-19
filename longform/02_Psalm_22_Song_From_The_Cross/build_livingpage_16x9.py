@@ -495,6 +495,7 @@ def main():
     ap.add_argument("--page", default="", help="WxH, e.g. 1080x1920 for a 9:16 short (default 1920x1080)")
     ap.add_argument("--no-ticks", action="store_true", help="drop the per-cut tick SFX (the 1900Hz snap); slams/whooshes/heartbeat stay")
     ap.add_argument("--skip-stills-gate", action="store_true", help="bypass the fail-closed stills human-gate (only when deliberately skipping review)")
+    ap.add_argument("--skip-panel-variety", action="store_true", help="bypass the panel-variety/reuse-aspect gate (only for a deliberate, user-approved exception)")
     a = ap.parse_args()
     global POOL, WORK, DYN, PAGE
     if a.pool:
@@ -520,6 +521,13 @@ def main():
         if stills_gate.check(POOL, stage="build") != 0:
             _sys.exit(3)
     spec = json.loads((POOL / a.spec).read_text(encoding="utf-8"))
+    if not a.skip_panel_variety:      # #2 PANEL-VARIETY GATE (wired 2026-07-19 — was a
+        import sys as _sys           # per-episode script nothing invoked; grandfathered
+        if str(ROOT) not in _sys.path:   # (WARN+skip) for pools with no visual_tags.json)
+            _sys.path.insert(0, str(ROOT))
+        from pipeline import panel_variety as _pv
+        if _pv.check(POOL, spec) != 0:
+            _sys.exit(4)
     motion = spec.get("motion", "classic")
     assert motion in MOTION_PROFILES, f"unknown motion profile {motion!r} (pick: {sorted(MOTION_PROFILES)})"
     set_motion_profile(motion)
