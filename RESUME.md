@@ -127,9 +127,12 @@ through /sfx would hand longs the shorts SFX engine). What landed:
   `pipeline/score_mix.py` (`e34c04d`).
 - ~~`panel_variety_lint.py` never wired as a gate~~ **DONE** — `pipeline/panel_variety.py`,
   blocking in both builders (`e34c04d`).
-- **STILL OPEN — SFX split**: shorts share `sfx_pilots/sfxlib.py`; every long-form episode
-  still has its own hand-rolled `CUES`-list script (7 of them). Same fork-drift risk the
-  score mixers had. Next natural consolidation candidate.
+- ~~SFX split~~ **DONE 2026-07-19 (next session)** — `pipeline/sfx_bed.py` is the ONE
+  cue-bed engine; all 7 long-form `_sfx_*.py` scripts are now thin cue-sheet wrappers.
+  `pipeline/test_sfx_bed.py` guards against regrowth (suite 436). Regression-proven:
+  Bronze Serpent rebuilt via the shared engine matches the shipped file exactly
+  (same stream durations, same mean/max volume). `sfx_pilots/sfxlib.py` (shorts)
+  deliberately left alone — genuinely different design, not a fork.
 - **STILL OPEN — "every panel animated" is advisory-only** in BOTH formats — nothing exits
   non-zero on a low `kling_or_punch_or_slam_pct`. Symmetric gap; could be a threshold gate
   in the builders now that the panel-variety wiring pattern exists.
