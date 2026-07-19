@@ -75,6 +75,20 @@ the gate. **Isaiah 53 was NOT audited for the same bugs** (user explicitly scope
 2026-07-16/17, it likely has the same two bugs. Worth a quick same-style scoping pass before
 ever touching Isaiah 53 again.
 
+**UPDATE (later same session): skills-level deep dive + red-team + Tier-1 fixes DONE, commit
+`8987832`.** A second audit compared the shorts vs long-form SKILLS (not just the engine).
+Red-teamed before acting — 2 proposed fixes were refuted and dropped (the "orphaned" clip-QC
+scripts are hardcoded to the eyewitness gallery layout, unusable as-is; routing /assemble-long
+through /sfx would hand longs the shorts SFX engine). What landed:
+- **LF-G5 is now REAL**: `validators.lf_movements` (7 movements/order/word-budget), wired into
+  `run_lock(form='long')`, corpus-swept (Day of Atonement's 1426 words → calibrated 10% WARN
+  band, not a block; legacy/witness formats WARN), 4 new tests (suite now 414).
+- **LONGFORM_SPEC**: LF-INV-9 (landing hold binds longs, references INV-26) + LF-INV-10
+  (documents the bible-gate wiring in the long animate path) + honest LF-G5 row.
+- **Skill edits (`.claude/`-local, gitignored by design)**: /voice got its long-form section
+  (was 59s-only), /stills got the 16:9 + veo3-atmospheric-hints section, /assemble-long now
+  ends with the `check_landing_hold.py` gate step, /narrate-long names the real validator.
+
 **Still-open architectural findings from the red-team (not bugs, real inconsistency, bigger
 asks than this pass — flagged, not fixed):**
 - THREE independent score-mixing implementations (shorts' `run_piece.py`, long-form's shared
