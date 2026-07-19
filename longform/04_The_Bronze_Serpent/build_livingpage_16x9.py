@@ -493,6 +493,7 @@ def main():
     ap.add_argument("--no-ticks", action="store_true", help="drop the per-cut tick SFX (the 1900Hz snap); slams/whooshes/heartbeat stay")
     ap.add_argument("--skip-stills-gate", action="store_true", help="bypass the fail-closed stills human-gate (only when deliberately skipping review)")
     ap.add_argument("--skip-panel-variety", action="store_true", help="bypass the panel-variety/reuse-aspect gate (only for a deliberate, user-approved exception)")
+    ap.add_argument("--skip-animated-gate", action="store_true", help="bypass the animated-pct gate (only for a deliberate, user-approved exception)")
     a = ap.parse_args()
     global POOL, WORK, DYN, PAGE
     if a.pool:
@@ -728,6 +729,13 @@ def main():
            "beats": len(report)}
     if fitwarn:
         print(f"\n[fit-gate] {len(fitwarn)} over-cropped panel(s):\n" + "\n".join(fitwarn))
+    if not a.skip_animated_gate:      # #3 ANIMATED-PCT GATE (wired 2026-07-19 — the DoD
+        import sys as _sys            # number was advisory-only; --clips renders only,
+        if str(ROOT) not in _sys.path:    # stills-only previews are all-dyncam by design)
+            _sys.path.insert(0, str(ROOT))
+        from pipeline import animated_gate as _ag
+        if _ag.check(report, clips=a.clips) != 0:
+            _sys.exit(5)
     if a.lint:
         print(f"\nLINT DoD: {json.dumps(dod, indent=1)}")
         return

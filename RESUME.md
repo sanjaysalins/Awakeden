@@ -133,9 +133,13 @@ through /sfx would hand longs the shorts SFX engine). What landed:
   Bronze Serpent rebuilt via the shared engine matches the shipped file exactly
   (same stream durations, same mean/max volume). `sfx_pilots/sfxlib.py` (shorts)
   deliberately left alone — genuinely different design, not a fork.
-- **STILL OPEN — "every panel animated" is advisory-only** in BOTH formats — nothing exits
-  non-zero on a low `kling_or_punch_or_slam_pct`. Symmetric gap; could be a threshold gate
-  in the builders now that the panel-variety wiring pattern exists.
+- ~~"every panel animated" advisory-only~~ **DONE 2026-07-19 (next session)** —
+  `pipeline/animated_gate.py`, BLOCKING (exit 5, `--skip-animated-gate` escape) in both
+  `build_livingpage_16x9.py` copies. Corpus-calibrated: FAIL < 75% (shipped floor —
+  father_forgive_them + Isaiah 53 inked both sit at 75), WARN < 90% with the dead-beat
+  list. Only gates real `--clips` renders (stills-only previews are all-dyncam by
+  design). `pipeline/test_animated_gate.py` sweeps every shipped livingpage report as
+  calibration proof + guards the wiring in both builders (suite 443).
 
 ### 4. Bronze Serpent — the 2026-07-18 style-mismatch item is DONE, plus more fixes on top
 `longform/04_The_Bronze_Serpent/v1/visual_16x9_inked/BronzeSerpent_16x9_scored_sfx.mp4` is
