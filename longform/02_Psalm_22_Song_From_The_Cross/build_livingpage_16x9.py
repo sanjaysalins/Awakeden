@@ -560,6 +560,7 @@ def main():
             return base.dyncam_clip(slug, cam) if not a.lint else live, "dyncam", cam, "pushin"
         return base.dyncam_clip(slug, "arc") if not a.lint else live, "dyncam", "arc", "pushin"
 
+    reused_segs = []
     for i, b in enumerate(spec["beats"], 1):
         tpl = b["tpl"]
         f0, f1 = round(b["t"][0] * 30), round(b["t"][1] * 30)
@@ -569,6 +570,8 @@ def main():
         seg = WORK / f"seg_{i:02d}.mp4"
         panels_info, slams, moving = [], [], []
         skip_build = a.lint or (only and i not in only and seg.exists())
+        if skip_build and not a.lint:
+            reused_segs.append(i)
 
         if mode == "single":                        # full-bleed hero: the locked engine path
             cdef = b["clips"][0]
@@ -735,15 +738,20 @@ def main():
            "beats": len(report)}
     if fitwarn:
         print(f"\n[fit-gate] {len(fitwarn)} over-cropped panel(s):\n" + "\n".join(fitwarn))
-    if not a.skip_animated_gate:      # #3 ANIMATED-PCT GATE (wired 2026-07-19 — the DoD
-        import sys as _sys            # number was advisory-only; --clips renders only,
-        if str(ROOT) not in _sys.path:    # stills-only previews are all-dyncam by design)
-            _sys.path.insert(0, str(ROOT))
+    if reused_segs and a.clips:       # red-team F2: reused segs keep the PIXELS they were
+        print(f"[animated-gate] NOTE: --only reused {len(reused_segs)} existing seg(s) "
+              f"{reused_segs} — the gate scores the CURRENT clips dir, not the pixels "
+              f"inside reused segs (a seg rendered before its clip landed stays dyncam)")
+    if a.lint:                        # DoD prints BEFORE the gate can exit — a failing
+        print(f"\nLINT DoD: {json.dumps(dod, indent=1)}")   # lint must never swallow the
+    if not a.skip_animated_gate:      # diagnostics needed to repair the piece (red-team
+        import sys as _sys            # 2026-07-19). #3 ANIMATED-PCT GATE — the DoD number
+        if str(ROOT) not in _sys.path:    # was advisory-only; --clips renders only,
+            _sys.path.insert(0, str(ROOT))    # stills-only previews are all-dyncam by design
         from pipeline import animated_gate as _ag
         if _ag.check(report, clips=a.clips) != 0:
             _sys.exit(5)
     if a.lint:
-        print(f"\nLINT DoD: {json.dumps(dod, indent=1)}")
         return
 
     # FAIL-CLOSED: dash-joint / ellipsis / mojibake captions are AI slop
@@ -779,7 +787,8 @@ def main():
         out.write_bytes(muxed.read_bytes())
 
     (POOL / (Path(a.spec).stem + "_report.json")).write_text(
-        json.dumps({"dod": dod, "beats": report}, indent=1), encoding="utf-8")
+        json.dumps({"dod": dod, "clips_build": bool(a.clips), "beats": report},
+                   indent=1), encoding="utf-8")
     print(f"\nDoD: {json.dumps(dod)}")
     print(f"\nDONE -> {out}\n  file:///{str(out).replace(chr(92), '/')}")
 

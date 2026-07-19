@@ -133,13 +133,22 @@ through /sfx would hand longs the shorts SFX engine). What landed:
   Bronze Serpent rebuilt via the shared engine matches the shipped file exactly
   (same stream durations, same mean/max volume). `sfx_pilots/sfxlib.py` (shorts)
   deliberately left alone — genuinely different design, not a fork.
-- ~~"every panel animated" advisory-only~~ **DONE 2026-07-19 (next session)** —
+- ~~"every panel animated" advisory-only~~ **DONE 2026-07-19 (next session), then
+  RED-TEAMED (3 adversarial agents) and hardened same session** —
   `pipeline/animated_gate.py`, BLOCKING (exit 5, `--skip-animated-gate` escape) in both
-  `build_livingpage_16x9.py` copies. Corpus-calibrated: FAIL < 75% (shipped floor —
-  father_forgive_them + Isaiah 53 inked both sit at 75), WARN < 90% with the dead-beat
-  list. Only gates real `--clips` renders (stills-only previews are all-dyncam by
-  design). `pipeline/test_animated_gate.py` sweeps every shipped livingpage report as
-  calibration proof + guards the wiring in both builders (suite 443).
+  `build_livingpage_16x9.py` copies. TWO corpus-calibrated dimensions after the red-team:
+  composite (kling/punch/slam) FAIL < 75% (shipped floor) + REAL-CLIP FAIL < 40%
+  (shipped min = Isaiah 53 at 42%; catches the punch/slam-rescue bypass where an EMPTY
+  clips dir passed — thirty_pieces reads 78% on punch/slam alone). WARN < 80 (was 90 —
+  half the corpus incl. the gold master was in the nag zone). Report JSON now stamps
+  `clips_build`; `cli_livingpage.py` build step refuses a preview built without
+  `--clips` (the P0: a manual no---clips rebuild overwrites the same shippable preview
+  filename and mtime checks can't tell). LINT DoD always prints before the gate exits.
+  E2E test runs both real builders on a synthetic pool and asserts exit 5 (suite 447).
+  **Known accepted**: gate fires post-render (pre-render spec classifier = drift risk,
+  documented in the module); `--only` reused segs keep old pixels (printed NOTE);
+  legacy `build_dyncomic_16x9.py` copies remain ungated (superseded builders — gate
+  them if ever used again).
 
 ### 4. Bronze Serpent — the 2026-07-18 style-mismatch item is DONE, plus more fixes on top
 `longform/04_The_Bronze_Serpent/v1/visual_16x9_inked/BronzeSerpent_16x9_scored_sfx.mp4` is

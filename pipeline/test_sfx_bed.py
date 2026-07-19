@@ -14,15 +14,20 @@ import pytest
 from pipeline import sfx_bed
 
 ROOT = Path(__file__).resolve().parent.parent
-EPISODE_SCRIPTS = [
-    ROOT / "longform" / "02_Psalm_22_Song_From_The_Cross" / "_sfx_psalm22_lf.py",
-    ROOT / "longform" / "03_The_Passover_Lamb" / "_sfx_passover.py",
-    ROOT / "longform" / "04_The_Bronze_Serpent" / "_sfx_bronze.py",
-    ROOT / "longform" / "04_The_Bronze_Serpent" / "_sfx_bronze_inked.py",
-    ROOT / "longform" / "05_The_Seed_Of_The_Woman" / "_sfx_seed.py",
-    ROOT / "longform" / "06_Day_Of_Atonement" / "_sfx_atonement.py",
-    ROOT / "longform" / "EW01_Two_Goats" / "_sfx_two_goats.py",
-]
+# Discovered, not hardcoded (red-team 2026-07-19): a hardcoded list guards the
+# past seven files, not the pattern — an eighth episode's copy-pasted local
+# engine would escape entirely. The glob auto-covers every future episode.
+EPISODE_SCRIPTS = sorted(ROOT.glob("longform/*/_sfx_*.py"))
+
+
+def test_episode_script_discovery_is_sane():
+    """The glob must keep finding the known seven (a rename/move that silently
+    empties the guard is itself a failure)."""
+    names = {p.name for p in EPISODE_SCRIPTS}
+    assert len(EPISODE_SCRIPTS) >= 7, f"guard glob collapsed: {names}"
+    assert {"_sfx_psalm22_lf.py", "_sfx_passover.py", "_sfx_bronze.py",
+            "_sfx_bronze_inked.py", "_sfx_seed.py", "_sfx_atonement.py",
+            "_sfx_two_goats.py"} <= names, names
 
 
 def test_cue_af_matches_historical_filter():
@@ -62,7 +67,11 @@ def test_no_episode_script_owns_a_local_engine():
         src = f.read_text(encoding="utf-8")
         assert "from pipeline.sfx_bed import build" in src, \
             f"{f.name}: does not delegate to pipeline.sfx_bed"
-        # match ENGINE TOKENS, not prose comments about the history
+        assert "build(SCORED, OUT, CUES, TOTAL" in src, \
+            f"{f.name}: imports the engine but never calls it"
+        # substring scan over the WHOLE file, docstrings included — a wrapper
+        # docstring mentioning these tokens fails too (fail-closed nuisance,
+        # accepted; keep engine words out of cue-sheet prose)
         for token in ("amix=", "afade=", "stream_loop", "filter_complex", "subprocess"):
             assert token not in src, f"{f.name}: local engine reintroduced ({token})"
 

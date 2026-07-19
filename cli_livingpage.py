@@ -128,15 +128,28 @@ def detect(piece: Path) -> list[Step]:
     else:
         steps.append(Step("animate", True, "(no animate section — clips come from elsewhere)"))
 
-    # 8. build (preview newer than spec + clips + stills)
+    # 8. build (preview newer than spec + clips + stills, AND provenance: a manual
+    # no---clips rebuild writes the same preview filename with all-dyncam pixels —
+    # the report's clips_build stamp is the only way to tell (red-team 2026-07-19).
+    # Reports predating the stamp have no key = legacy pass; explicit false blocks.
     preview = piece / "visual" / "livingpage_short.spec_preview.mp4"
     newest_src = max([_mtime(spec)] +
                      [_mtime(p) for p in (piece / "visual").glob("*.png")] +
                      [_mtime(c) for c in (piece / "visual" / "clips").glob("*.mp4")] or [0])
-    build_ok = preview.exists() and _mtime(preview) >= newest_src
+    report_p = piece / "visual" / "livingpage_short.spec_report.json"
+    no_clips_build = False
+    if report_p.is_file():
+        try:
+            no_clips_build = json.loads(report_p.read_text(encoding="utf-8")).get(
+                "clips_build") is False
+        except (json.JSONDecodeError, OSError):
+            pass
+    build_ok = preview.exists() and _mtime(preview) >= newest_src and not no_clips_build
     steps.append(Step("build", build_ok,
                       "preview newer than every source" if build_ok else
-                      ("preview STALE (a source changed)" if preview.exists() else "no preview built"),
+                      ("preview built WITHOUT --clips (all-dyncam) — rebuild with --clips"
+                       if no_clips_build else
+                       ("preview STALE (a source changed)" if preview.exists() else "no preview built")),
                       f'{PY} "{BUILDER}" --pool "{piece / "visual"}" --spec livingpage_short.spec.json '
                       f"--clips --page 1080x1920 --no-ticks", auto=True))
 
