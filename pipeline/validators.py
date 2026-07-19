@@ -257,6 +257,69 @@ def prompt_has_criteria() -> tuple[bool, str]:
     return True, "verify_image carries period/tone + text + anatomy checks (all style rubrics)"
 
 
+# ---------------------------------------------------------------- LF-G5 movement structure
+
+_MOVEMENT_HDR = re.compile(r"^##\s*Movement\s+(\d+)\b.*$", re.MULTILINE)
+_LF_WORDS_MIN, _LF_WORDS_MAX = 950, 1400
+_LF_MOVEMENT_MIN_WORDS = 100
+
+
+def _lf_spoken_words(section: str) -> int:
+    """Approximate SPOKEN word count for one movement section: drop bracketed
+    delivery-note lines ('Bracketed [ ] lines are delivery notes, not spoken'),
+    strip markdown emphasis markers, count whitespace-separated words. Bold KJV
+    quotes ARE spoken and counted."""
+    words = 0
+    for line in section.splitlines():
+        s = line.strip()
+        if not s or (s.startswith("[") and s.endswith("]")):
+            continue
+        s = s.replace("**", "").replace("*", "").replace("_", "")
+        words += len(s.split())
+    return words
+
+
+def lf_movements(md: str) -> tuple[list[str], list[str]]:
+    """LF-G5 (deterministic, v2/LONGFORM_SPEC.md §4): all 7 movements present, in
+    order; each movement > 100 spoken words; total 950-1400 words. Returns
+    (blocking, warnings). Applies ONLY to the '## Movement N' Types & Shadows
+    format — a long narration with no movement headers (legacy Isaiah 53 /
+    Psalm 22, or the witness spine which locks via cli_witness_lock, not here)
+    gets a WARNING, never a block, so re-locks of the existing corpus can't be
+    broken by a format this gate was never written for."""
+    hdrs = [(m.start(), int(m.group(1))) for m in _MOVEMENT_HDR.finditer(md)]
+    if not hdrs:
+        return [], ["LF-G5: no '## Movement N' headers — not the 7-movement "
+                    "Types & Shadows format; movement structure NOT checked"]
+    blocking: list[str] = []
+    warnings: list[str] = []
+    nums = [n for _, n in hdrs]
+    if nums != list(range(1, 8)):
+        blocking.append(f"LF-G5: movement headers are {nums} — expected exactly 1..7 in order")
+    # per-movement + total spoken word budget (section = header to next header/EOF)
+    total = 0
+    for i, (pos, n) in enumerate(hdrs):
+        end = hdrs[i + 1][0] if i + 1 < len(hdrs) else len(md)
+        body = md[md.index("\n", pos) + 1: end] if "\n" in md[pos:end] else ""
+        w = _lf_spoken_words(body)
+        total += w
+        if w <= _LF_MOVEMENT_MIN_WORDS:
+            blocking.append(f"LF-G5: Movement {n} has only {w} spoken words (must be > {_LF_MOVEMENT_MIN_WORDS})")
+    # Word budget: calibrated against the human-approved corpus before promotion
+    # (feedback-gate-calibration-human-authority) — Day of Atonement LOCKED at
+    # 1426 words, 1.9% over the spec's 1400 cap, so a hard cap would refuse to
+    # re-lock a human-approved piece. Within 10% of the band -> WARN; beyond
+    # 10% -> BLOCK. The spec numbers stay canonical; enforcement is calibrated.
+    lo_hard, hi_hard = _LF_WORDS_MIN * 0.9, _LF_WORDS_MAX * 1.1
+    if not (_LF_WORDS_MIN <= total <= _LF_WORDS_MAX):
+        msg = f"LF-G5: total spoken words {total} outside {_LF_WORDS_MIN}-{_LF_WORDS_MAX} (6-8 min budget)"
+        if lo_hard <= total <= hi_hard:
+            warnings.append(msg + " — within 10% tolerance (corpus-calibrated), not blocking")
+        else:
+            blocking.append(msg)
+    return blocking, warnings
+
+
 # ---------------------------------------------------------------- banned tokens
 
 def banned_tokens(text: str) -> list[str]:

@@ -297,6 +297,16 @@ def run_lock(folder: Path, *, form: str = "short", check_cluster: bool = True) -
     blocking += _narrative_presence_findings(md)
     blocking += _earned_findings(folder)
 
+    # LF-G5 (long-form only): 7-movement structure + word budget. Was advertised as
+    # deterministic in narrate-long/SKILL.md + LONGFORM_SPEC §4 but had no validator
+    # until 2026-07-19 — this closes that gap. Corpus-swept before promotion: all 4
+    # locked Types & Shadows longs pass (Day of Atonement's 1426 words lands in the
+    # calibrated 10%-tolerance WARN band, see validators.lf_movements).
+    lf_warnings: list[str] = []
+    if form == "long":
+        lf_block, lf_warnings = validators.lf_movements(md)
+        blocking += lf_block
+
     # split-brain guard: the rendered tagged file must match the verified source
     pm = parity_mismatch(folder)
     if pm:
@@ -338,11 +348,11 @@ def run_lock(folder: Path, *, form: str = "short", check_cluster: bool = True) -
     ok = not blocking
     if ok:
         checks = ["kjv_strict", "parity", "doctrine_scan", "hook_scan", "narrative_presence", "earned"] + \
-                 (["rule8"] if form == "short" else []) + (["cluster"] if check_cluster else [])
+                 (["rule8"] if form == "short" else ["lf_movements"]) + (["cluster"] if check_cluster else [])
         write_lock(folder, checks=checks)
         register(folder, form=form)
     return {"ok": ok, "folder": folder.name, "blocking": blocking,
-            "warnings": cluster_skipped, "doctrine": doctrine, "hook": hook}
+            "warnings": cluster_skipped + lf_warnings, "doctrine": doctrine, "hook": hook}
 
 
 def write_lock(folder: Path, *, checks: list[str] | None = None) -> None:

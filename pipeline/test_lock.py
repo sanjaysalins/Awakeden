@@ -224,6 +224,58 @@ def test_unmarked_kjv_landing_locks():
     assert rep["ok"], rep["blocking"]
 
 
+def test_lf_movements_valid_structure_passes():
+    """LF-G5: a well-formed 7-movement narration (>100 words each, total in band)
+    returns no blocking findings."""
+    from pipeline import validators as V
+    body = ("word " * 160).strip()   # 160 spoken words per movement -> 1120 total
+    md = "\n\n".join(f"## Movement {n} — Part {n}\n\n{body}" for n in range(1, 8))
+    blocking, warnings = V.lf_movements(md)
+    assert not blocking, blocking
+    assert not warnings, warnings
+
+
+def test_lf_movements_missing_and_short_blocks():
+    """LF-G5: a missing movement (1..6 only) and an under-100-word movement both block."""
+    from pipeline import validators as V
+    body = ("word " * 160).strip()
+    md6 = "\n\n".join(f"## Movement {n} — Part {n}\n\n{body}" for n in range(1, 7))
+    blocking, _ = V.lf_movements(md6)
+    assert any("expected exactly 1..7" in b for b in blocking), blocking
+
+    thin = "\n\n".join(
+        f"## Movement {n} — Part {n}\n\n" + (("word " * 160).strip() if n != 3 else "too short")
+        for n in range(1, 8))
+    blocking, _ = V.lf_movements(thin)
+    assert any("Movement 3" in b for b in blocking), blocking
+
+
+def test_lf_movements_word_budget_calibration():
+    """LF-G5 word budget: within 10% of the 950-1400 band -> WARN only (Day of
+    Atonement locked at 1426); beyond 10% -> BLOCK; delivery notes not counted."""
+    from pipeline import validators as V
+    # ~1430 total (within 1400*1.1) -> warn, not block
+    body = ("word " * 204).strip()   # 204*7 = 1428
+    md = "\n\n".join(f"## Movement {n} — X\n\n[not spoken delivery note]\n\n{body}" for n in range(1, 8))
+    blocking, warnings = V.lf_movements(md)
+    assert not blocking, blocking
+    assert any("tolerance" in w for w in warnings), warnings
+    # ~1800 total (>1400*1.1) -> block
+    body = ("word " * 260).strip()
+    md = "\n\n".join(f"## Movement {n} — X\n\n{body}" for n in range(1, 8))
+    blocking, _ = V.lf_movements(md)
+    assert any("total spoken words" in b for b in blocking), blocking
+
+
+def test_lf_movements_non_movement_format_warns_only():
+    """A long narration with no '## Movement' headers (legacy/witness format) must
+    WARN, never block — re-locks of Isaiah 53 / Psalm 22 cannot be broken."""
+    from pipeline import validators as V
+    blocking, warnings = V.lf_movements("# Some Legacy Long\n\nProse without movement headers.")
+    assert not blocking, blocking
+    assert warnings and "NOT checked" in warnings[0], warnings
+
+
 if __name__ == "__main__":
     tests = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     passed = 0

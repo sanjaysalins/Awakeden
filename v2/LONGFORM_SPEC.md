@@ -82,7 +82,7 @@ Total: ~330–500s (~6–8 min). Trim words before compressing the voice.
 | LF-G2 Passage Depth | P | Does each movement add something a casual reading misses? At least M3 (Strange Detail) must be genuinely non-obvious |
 | LF-G3 Conviction | P | Grace-anchored throughout (no gain/loss/fear/shame); M6 Exchange is substitution-clear (Christ bore the penalty, did not merely set an example) |
 | LF-G4 Invitation | P | M7 lands on Christ specifically; grace-gift not self-help; does NEW work — not a recycled "will you trust Him?" |
-| **LF-G5 7-Movement Structure** | **D** | All 7 movements present, in order; each movement > 100 words; total 950–1400 words for 6–8 min |
+| **LF-G5 7-Movement Structure** | **D** | All 7 movements present, in order; each movement > 100 words; total 950–1400 words for 6–8 min. **Validator: `validators.lf_movements`, enforced in `cli_lock.py --form long` since 2026-07-19** (before that this row claimed D with no code behind it). Word-budget enforcement is corpus-calibrated: within 10% of the band → WARN (Day of Atonement locked at 1426), beyond 10% → BLOCK. Applies only to '## Movement N' format; witness/legacy long formats get a WARN, not a block |
 | LF-G6 Craft | P | Standalone, plain prose, clean pacing; no paragraph starts the same way twice |
 | LF-G7 Thread Integrity | P | One thread spine carried through all 7 movements; M3 Strange Detail resolves in M4 Match; M5 Objection strengthens M6; closing mirrors the opening image |
 | **LF-G8 Honest Objection Quality** | **P** | M5 must steel-man the real pushback (not "some people wonder if…" strawman); the answer must address the specific concern raised, not pivot away from it |
@@ -207,6 +207,8 @@ Same `/caption` skill as shorts. For long-form, **WhisperX phoneme forced-align 
 | LF-INV-6 | **The Honest Objection (M5) must be a genuine steel-man.** A throwaway "some wonder if…" + immediate dismissal FAILs LF-G8. |
 | LF-INV-7 | **Test-gate before batch.** Render 1–2 paid stills + animate with veo3 BEFORE the full batch. User approves look + motion quality. |
 | LF-INV-8 | **Shorts distilled from the long must inherit its thread spine.** A short cannot contradict the long's exegesis or introduce a different entry thread. |
+| LF-INV-9 | **Landing hold applies to longs** — the ≥3.0s hold + audio/video duration parity rule (canonical: `v2/SPEC.md` INV-26, added 2026-07-19) binds long-form finals exactly as shorts. Gate: `check_landing_hold.py` (also run automatically in the whole-repo scan). New long score recipes author `outro_s: 3.0`; legacy 2.5s pieces are WARN-only, not retrofitted. |
+| LF-INV-10 | **Bible-gate is wired into the long animate path** — `bible_kb.gate` (INV-25 chokepoint) is enforced in code by `longform/_animate_16x9.py` + `_animate_directional.py` before any veo3 spend; a still contradicting a `specified`/`constrained` fact card never animates. (Documented 2026-07-19 — the enforcement predates this entry; the spec/skills simply never stated it.) |
 
 ---
 
