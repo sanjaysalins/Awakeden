@@ -1,0 +1,9 @@
+{
+ "passed": false,
+ "issues": [
+  "1 ATMOSPHERE-ONLY: the bowed figure rotates from side profile to a full back view across the clip — subject body motion, not camera",
+  "2 NO-MORPH: face disappears behind hair and the torso/garment fully redraws during the rotation",
+  "3 NO-INVENT: later frames replace the storm sky with a cream parchment field with torn-page edges not in the still"
+ ],
+ "note": "Bowed Christ before the shadowed cross; the clip orbits and the figure itself turns away while the background dissolves into an invented torn-parchment edge. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+}

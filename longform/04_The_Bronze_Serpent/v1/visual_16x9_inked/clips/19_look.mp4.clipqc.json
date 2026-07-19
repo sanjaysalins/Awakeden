@@ -1,0 +1,7 @@
+{
+ "passed": false,
+ "issues": [
+  "3 invented blood: a red stain appears on the man's sleeve at qc3 and grows into a large jagged blood splash by qc9-qc11 — nothing is there in the source still"
+ ],
+ "note": "Snake-bitten man lying in the light shaft; camera pull-back and face are fine, but the animation invents a spreading blood stain on his right sleeve. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+}

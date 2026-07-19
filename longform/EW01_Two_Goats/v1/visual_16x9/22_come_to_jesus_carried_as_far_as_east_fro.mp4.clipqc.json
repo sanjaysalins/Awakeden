@@ -1,0 +1,8 @@
+{
+ "passed": false,
+ "issues": [
+  "3 NO-INVENT: the lane-wide white snow/particle overlay covers the frame by qc11 (verified by hand)",
+  "2/3 the dark cloth hanging on the left fence in the still renders as a small dark human silhouette that shifts posture/position across qc0-qc11"
+ ],
+ "note": "Jesus welcoming a man at the tent; main figures stable and style kept — flagged fail-closed on the background cloth-to-figure morph; genuinely borderline at QC resolution, worth one human look. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+}

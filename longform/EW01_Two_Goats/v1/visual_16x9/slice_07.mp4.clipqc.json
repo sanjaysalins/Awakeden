@@ -1,0 +1,8 @@
+{
+ "passed": false,
+ "issues": [
+  "1 subject action: the priest's hands actively move and drop/manipulate the lots across frames (drop pose -> pinching a stone at the bowl)",
+  "3 invention: a dark angular object appears between/below the hands from qc3 on, and several extra lots accumulate in the bowl that are not in the still"
+ ],
+ "note": "Casting-lots-over-bowl scene with two goats; hands animate the action and new objects appear; rising bowl smoke itself is atmospheric. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+}

@@ -1,0 +1,8 @@
+{
+ "passed": false,
+ "issues": [
+  "2 NO-MORPH: strong halo-bloom — a star-shaped flare materializes between the hands (frame 3) and grows into a frame-dominating sunburst by the last frame, washing out hand/cloud detail",
+  "3 NO-INVENT: the central starburst object is not in the source still, which shows only downward light rays from the palms"
+ ],
+ "note": "Open cupped hands pouring light; the invented growing starburst overwhelms the artwork — classic AI light-bloom, fail-closed. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+}

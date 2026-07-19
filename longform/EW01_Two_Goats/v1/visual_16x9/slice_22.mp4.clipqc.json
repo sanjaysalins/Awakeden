@@ -1,0 +1,8 @@
+{
+ "passed": false,
+ "issues": [
+  "1 ATMOSPHERE-ONLY: the ragged wanderer visibly walks — stride/leg positions change every frame and he advances; background bearers also shift poses",
+  "3 NO-INVENT: a large hanging jug/gourd appears on his hip strap that is not in the still; sky fills with star/snow specks far beyond subtle motes"
+ ],
+ "note": "Wanderer on road turning toward glowing Christ; clip animates real locomotion and adds a carried jug not in the source. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+}

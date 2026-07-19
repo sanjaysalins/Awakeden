@@ -1,0 +1,8 @@
+{
+ "passed": false,
+ "issues": [
+  "2 NO-MORPH: nail entry wound morphs from a small dark puncture into a wide black ring/donut hole around the nail by qc6-qc11",
+  "3 NO-INVENT: blood volume grows — new white-highlighted loop of blood and longer rivulets not in the source still"
+ ],
+ "note": "Close-up of nail through palm; blood exists in the still but the clip regenerates and enlarges the wound and adds flowing blood (known Kling blood-regeneration failure mode). [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+}

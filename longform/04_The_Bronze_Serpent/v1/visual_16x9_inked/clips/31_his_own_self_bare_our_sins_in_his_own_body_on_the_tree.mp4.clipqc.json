@@ -1,0 +1,7 @@
+{
+ "passed": false,
+ "issues": [
+  "3 NO-INVENT: blood drip from both nailed palms is animated — the hanging drips lengthen and detached red droplets appear falling mid-air below each hand (visible left side ~frames 3-11) that are not in the source still"
+ ],
+ "note": "Christ on the cross, head bowed; camera pull-back is fine and face/nails stay stable, but the palm blood actively flows and sheds new falling droplets, which is generated dripping fluid beyond the frozen tableau. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+}

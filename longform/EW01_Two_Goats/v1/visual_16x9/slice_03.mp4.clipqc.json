@@ -1,0 +1,7 @@
+{
+ "passed": false,
+ "issues": [
+  "1 subject locomotion: the white-robed figure takes visible steps and advances from mid-corridor to standing directly at the veil (stride changes qc0->qc11, floor gap to the veil closes beyond what the push-in explains)"
+ ],
+ "note": "Figure in white walking toward the temple veil; camera push-in plus real walking; large incense-smoke puffs also appear mid-clip (atmospheric class, not the fail reason). [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+}

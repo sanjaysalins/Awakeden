@@ -1,0 +1,8 @@
+{
+ "passed": false,
+ "issues": [
+  "3 NO-INVENT: nails driven through both palms plus dark strap/wire bindings around wrists appear in every frame but are absent from the source still (still shows open wounded palms only)",
+  "3 NO-INVENT: blood streaks appear along the left forearm in mid frames not present in the still"
+ ],
+ "note": "Christ on the cross looking up; camera push-in is fine and stable, but the clip was rendered with invented nails, wrist bindings and forearm blood not in the approved still. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+}

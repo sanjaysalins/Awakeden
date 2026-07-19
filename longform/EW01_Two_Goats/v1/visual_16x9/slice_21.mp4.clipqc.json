@@ -1,0 +1,8 @@
+{
+ "passed": false,
+ "issues": [
+  "3 NO-INVENT: camera pull-back generates a whole new right-hand region absent from the still — arched portal blazing with light, candelabra with lit candles, gold ewers/urns on a new pedestal, red drapery swag, extra floor vessels",
+  "2 NO-MORPH: the invented architecture keeps reshaping frame-to-frame (pillar becomes arch with light hole)"
+ ],
+ "note": "Old prophet by altar with goats; the zoom-out invents an entire temple wall of candles and gold vessels never in the source painting. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+}

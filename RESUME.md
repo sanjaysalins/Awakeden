@@ -38,10 +38,24 @@ Full detail in the two commit messages; the shape:
 Suite: 430 passed (was 410 at day start; +20 new tests). LONGFORM_SPEC rows updated to name
 the real validators; scene-plan-long / assemble-long / voice / stills skills updated
 (.claude-local, not in git).
-**Deliberately NOT done:** backfilling clip-QC sidecars for existing long episodes (spend
-of attention, needs eyeballing every clip — a good standalone session task); LF-AS-G3
-pacing stays manual (no artifact records per-clip speed); shorts' `visual_engine` SP-G5
-still uses the naive substring matcher (its LLM blocks don't hit the idioms — fine as-is).
+**Deliberately NOT done:** LF-AS-G3 pacing stays manual (no artifact records per-clip
+speed); shorts' `visual_engine` SP-G5 still uses the naive substring matcher (its LLM
+blocks don't hit the idioms — fine as-is).
+**Clip-QC backfill DONE 2026-07-19 (next session):** all 179 live long-form clips
+(Isaiah inked 46, Psalm22 inked 32, Bronze inked 51, EW01 54) QC'd via 14 parallel
+vision reviewers (still + 5 frames each vs LF_CRITERIA) with hand re-verification of
+every borderline + one sample per failure class. **52 FAIL sidecars written
+(fail-closed): Isaiah 10, Psalm22 6, Bronze 15, EW01 21.** Three systemic failure
+classes: (1) Kling/veo re-animates BLOOD on crucifixion clips (drips lengthen, droplets
+fall — the known living-light-no-fresh-blood mode); (2) EW01 lane-wide invented
+"snowfall" particle overlay (~9 clips, even renders over the letterbox matte);
+(3) generative pull-backs inventing whole new content (slice_01/13/21 fabricate crowds/
+temple walls; slice_13 adds period-wrong crosses to a Yom Kippur scene). Review
+galleries: `_CLIPQC_REVIEW.html` in each clips dir (FAILs first, filmstrip + video).
+NOTE: these clips are in SHIPPED, eye-approved films — the sidecars are the honest
+per-clip record, not a recall. `JITB_REQUIRE_CLIPQC=1` stays OFF (flipping it would
+block rebuilds until 52 clips are re-animated — a spend decision for the user).
+User verdict overrides: edit the `.clipqc.json` or tell Claude.
 
 ### 1. NEW: `panel_animator/` — an 8-tool comic-panel toolkit, built and locked this session
 Read `panel_animator/README.md` first — it's the roster + a "reach for it when / not when"

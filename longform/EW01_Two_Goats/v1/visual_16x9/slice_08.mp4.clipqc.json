@@ -1,0 +1,8 @@
+{
+ "passed": false,
+ "issues": [
+  "2 halo-bloom/morph: the mercy-seat glow escalates into a huge starburst that washes out the Ark, and the priest's hair/beard visibly lengthen and change by qc9-qc11",
+  "3 invention: an ornate crown/turret structure appears above the Ark from qc6 onward that is not in the source still"
+ ],
+ "note": "Priest with bowl of blood before the Ark; later frames also drift toward photoreal softening of the figure — multiple compounding violations. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+}

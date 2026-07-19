@@ -1,0 +1,7 @@
+{
+ "passed": false,
+ "issues": [
+  "3 invented figure: an old robed man with staff/rope appears at the far-left edge in qc9 and qc11 (not present anywhere in the source still)"
+ ],
+ "note": "Priest gesturing past the altar with two goats; motion is otherwise camera drift + smoke, but the leftward reframe out-paints a whole new bystander. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+}

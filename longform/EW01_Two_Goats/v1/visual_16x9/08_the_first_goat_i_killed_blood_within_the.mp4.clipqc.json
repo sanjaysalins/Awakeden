@@ -1,0 +1,9 @@
+{
+ "passed": false,
+ "issues": [
+  "1 sprinkling arm visibly changes pose across frames (raised / lowered / mid) - subject action, not atmospheric",
+  "3 blood is animated and re-invented: floating drip near his face at qc3, new red streak on the ark front at qc9-qc11",
+  "3 massive tan fog bank invented over the left half by qc9"
+ ],
+ "note": "Blood-sprinkling scene: the model animates the sprinkling gesture and regenerates blood in new places, then floods the scene with invented fog - multiple hard violations. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+}

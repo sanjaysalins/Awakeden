@@ -1,0 +1,8 @@
+{
+ "passed": false,
+ "issues": [
+  "1 subject locomotion - the white-robed man and the dark-robed figure walk several steps toward camera across frames; foreground man's arm also shifts pose",
+  "3 invention - a white bandage appears on the bitten man's foot from qc6 onward (bare bleeding foot in the source still)"
+ ],
+ "note": "Red-sky camp scene; camera is mostly static but the mid-ground figures actually walk and the snakebit foot gains a bandage mid-clip. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+}

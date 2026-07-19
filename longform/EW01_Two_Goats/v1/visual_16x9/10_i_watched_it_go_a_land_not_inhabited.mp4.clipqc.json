@@ -1,0 +1,7 @@
+{
+ "passed": false,
+ "issues": [
+  "3 heavy invented snowfall particle overlay from qc6 onward, densest at qc9-qc11"
+ ],
+ "note": "Camp scene with scapegoat watcher: figures and goat hold pose, incense drift fine, but the same glowing snow overlay buries the desert scene - not in the source still. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+}

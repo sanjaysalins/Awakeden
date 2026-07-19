@@ -1,0 +1,8 @@
+{
+ "passed": false,
+ "issues": [
+  "3 NO-INVENT: a titulus signboard with garbled scribble-text materializes on the upper beam above Christ (visible qc6-qc11) — no signboard exists in the source still or first frames",
+  "5 NO-WRITING-ANIMATED: the invented board carries illegible pseudo-lettering"
+ ],
+ "note": "Push-in past two shouting mockers toward the crucified Christ; camera move is fine but a scribbled titulus board appears out of nothing mid-clip. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+}

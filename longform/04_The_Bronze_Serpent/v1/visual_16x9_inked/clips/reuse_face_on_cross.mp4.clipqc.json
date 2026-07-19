@@ -1,0 +1,7 @@
+{
+ "passed": false,
+ "issues": [
+  "3 NO-INVENT: blood on the left wrist/forearm is animated flowing — the streaks below the nailed palm lengthen down the forearm and new red runs appear across frames 3-9 that are not in the first frame"
+ ],
+ "note": "Camera pushes from the nailed hand in to Christ's upturned face (face itself stays stable), but the wound actively bleeds new trickles down the arm during the move — generated dripping fluid, fail-closed. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+}
