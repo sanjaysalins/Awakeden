@@ -13,6 +13,7 @@ Psalm 22 recorded the mockery in advance: the wagging heads, the sneer, the very
 And the psalm they never finished ends with all the ends of the world turning to him. Turn, and come to the One who would not come down.
 
 Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Read it panel by panel: https://awakeden.com/read/ps22-02-mockers-words.html
 
 Follow:
 YouTube: @awakeden (https://youtube.com/@awakeden)

@@ -11,6 +11,7 @@ Psalm 22 opens with one forsaken man dying alone, and ends with every nation on 
 From the cross and the empty tomb the gospel went out, and people in nation after nation have turned to the LORD, worshipping the One who died and rose. And the ends of the world includes wherever you are, right now. The Lord this song promised still has room for you to turn to him.
 
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Read it panel by panel: https://awakeden.com/read/ps22-06-ends-of-the-earth.html
 
 Follow:
 YouTube: @awakeden (https://youtube.com/@awakeden)

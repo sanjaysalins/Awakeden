@@ -11,6 +11,7 @@ A thousand years before the cross, Psalm 22 wrote down the mockery: the wagging 
 They told the King to come down. He stayed, for the very people throwing the scorn. And the psalm they never finished ends with all the ends of the world turning to him. Turn, and come to the One who would not come down.
 
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Read it panel by panel: https://awakeden.com/read/ps22-02-mockers-words.html
 
 Follow:
 YouTube: @awakeden (https://youtube.com/@awakeden)

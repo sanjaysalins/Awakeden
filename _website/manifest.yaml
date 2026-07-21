@@ -70,10 +70,11 @@ items:
   cluster_order: 2
   public_status: studio_complete
   featured: false
-  preview_approved: false
-  preview_source: null
+  preview_approved: true
+  preview_source: assets/study/read/ps22-02-mockers-words/beat_01.jpg
   study_source: ../v2/pilot/mockers_words_ps22/v1
   youtube_id: null
+  read_source: ../batches/cluster_01_cross/mockers_words_ps227
   public_hook: The crowd mocked Him. They repeated words David had written a thousand
     years earlier.
   public_blurb: 'David wrote the mockers'' gesture and their taunt. Matthew records
@@ -113,9 +114,10 @@ items:
   cluster_order: 4
   public_status: studio_complete
   featured: false
-  preview_approved: false
-  preview_source: null
+  preview_approved: true
+  preview_source: assets/study/read/ps22-04-declared-to-brethren/beat_01.jpg
   youtube_id: null
+  read_source: ../batches/cluster_01_cross/declared_brethren_ps2222
   public_hook: The psalm moves from forsaken to declaring God's name to the congregation.
   public_blurb: 'Psalm 22:22. I will declare thy name unto my brethren. Hebrews applies
     it to the risen Christ.
@@ -132,9 +134,10 @@ items:
   cluster_order: 5
   public_status: studio_complete
   featured: false
-  preview_approved: false
-  preview_source: null
+  preview_approved: true
+  preview_source: assets/study/read/ps22-05-he-hath-done-this/beat_01.jpg
   youtube_id: null
+  read_source: ../batches/cluster_01_cross/he_hath_done_this_ps2231
   public_hook: It is finished. The psalm said He would declare it to a people yet
     unborn.
   public_blurb: 'The closing line of Psalm 22, that he hath done this, lands on Christ''s
@@ -152,9 +155,10 @@ items:
   cluster_order: 6
   public_status: studio_complete
   featured: false
-  preview_approved: false
-  preview_source: null
+  preview_approved: true
+  preview_source: assets/study/read/ps22-06-ends-of-the-earth/beat_01.jpg
   youtube_id: null
+  read_source: ../batches/cluster_01_cross/ends_of_earth_ps2227
   public_hook: All the ends of the world shall remember and turn unto the Lord.
   public_blurb: 'Psalm 22:27. The nations turning to worship, fulfilled through Christ.
 
@@ -170,9 +174,10 @@ items:
   cluster_order: 7
   public_status: studio_complete
   featured: false
-  preview_approved: false
-  preview_source: null
+  preview_approved: true
+  preview_source: assets/study/read/ps22-07-body-foretold/beat_01.jpg
   youtube_id: null
+  read_source: ../batches/cluster_01_cross/body_foretold_ps2214
   public_hook: I am poured out like water. David described a body the cross would
     fulfil.
   public_blurb: 'Poured out, bones out of joint, hands and feet pierced. The psalm''s
