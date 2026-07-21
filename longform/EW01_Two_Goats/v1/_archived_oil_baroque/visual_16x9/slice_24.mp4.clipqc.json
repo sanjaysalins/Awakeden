@@ -1,0 +1,5 @@
+{
+ "passed": true,
+ "issues": [],
+ "note": "Verified by hand (Claude, frame-by-frame vs still): all mourners hold bowed poses, curtain hand static, doorway glow stays soft with only mild ray drift, no invented figures, Baroque oil held. [re-animated + verified clean 2026-07-19 (qcfix batch; frozen-tableau recipe)]"
+}

@@ -1,7 +1,0 @@
-{
- "passed": false,
- "issues": [
-  "3 snow-like white particle overlay grows dense across the whole frame by qc9-qc11 (not in still)"
- ],
- "note": "Priest with two lots and both goats hold pose perfectly and smoke drift is fine, but an invented drifting-snow speck field blankets the frame in the second half. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
-}

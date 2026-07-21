@@ -27,7 +27,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 from pipeline.sfx_bed import build  # noqa: E402
 
-VIS = Path(__file__).resolve().parent / "v1" / "visual_16x9"
+VIS = Path(__file__).resolve().parent / "v1" / "visual_16x9_inked"
 SCORED = VIS / "LivingPage_Psalm22_16x9_scored.mp4"
 OUT = VIS / "LivingPage_Psalm22_16x9_scored_sfx.mp4"
 TOTAL = 421.2  # 418.2s narration + 3.0s landing hold (INV-26, 2026-07-19)
@@ -42,9 +42,8 @@ CUES = [
     ("air_hollow_desolate", 166.0,   230.0, -38),   # the honest objection, quiet and contemplative
     ("thunder_low_roll",    233.6,   279.0, -28),   # back to the cross, the storm
     ("rumble_deep_sub",     233.6,   289.0, -32),   # weight under the storm
-    ("heavenly_choir_soft", 289.2,   340.0, -35),   # the turn to life, the congregation
     ("impact_low_boom",     370.5,   372.0, -18),   # "It is finished."
-    ("dawn_morning_warm",   339.9,   TOTAL, -30),   # the ends of the earth stream home, through the landing hold
+    ("dawn_morning_warm",   289.2,   TOTAL, -30),   # the turn to life, the congregation, the ends of the earth stream home, through the landing hold
 ]
 
 

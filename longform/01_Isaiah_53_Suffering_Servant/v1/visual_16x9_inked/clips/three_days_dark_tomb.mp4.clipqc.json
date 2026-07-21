@@ -1,8 +1,5 @@
 {
- "passed": false,
- "issues": [
-  "3 NO-INVENT: bare feet with visible toes emerge from the shroud by qc3 and persist — the source still shows the foot end fully wrapped with no toes",
-  "2 NO-MORPH: the bandage wrapping at the foot end reshapes itself around the invented feet"
- ],
- "note": "Wrapped body on stone slab in blue tomb; animation invents unwrapped bare feet/toes not present in the still. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+ "passed": true,
+ "issues": [],
+ "note": "Feet stay fully wrapped (no toes, no reshaping); shroud figure static; only background mist drifts as in still. [re-animated + verified clean 2026-07-19 (qcfix batch; frozen-tableau recipe)]"
 }

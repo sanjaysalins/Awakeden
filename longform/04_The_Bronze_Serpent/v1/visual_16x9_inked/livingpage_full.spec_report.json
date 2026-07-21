@@ -73,6 +73,7 @@
   "cut_ticks": true,
   "beats": 52
  },
+ "clips_build": true,
  "beats": [
   {
    "beat": 1,

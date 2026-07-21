@@ -1,8 +1,5 @@
 {
- "passed": false,
- "issues": [
-  "3 NO-INVENT: a bright red blood trickle from the lower lip appears and lengthens down through the beard (qc3 to qc11) — the source still has only a tiny faint lip mark and no running blood",
-  "2 NO-MORPH: the slightly open parched mouth of the still closes and the lip area redraws as the drip grows"
- ],
- "note": "Bowed head of Christ before the cross; push-in is fine but the animator regenerates fresh dripping blood at the mouth not present in the approved still. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+ "passed": true,
+ "issues": [],
+ "note": "Clean push-in; no red trickle forms at the lip, the small dark lip mark from the still stays static, mouth and face stable. [re-animated + verified clean 2026-07-19 (qcfix batch; frozen-tableau recipe)]"
 }

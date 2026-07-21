@@ -1,8 +1,5 @@
 {
- "passed": false,
- "issues": [
-  "1 subject locomotion: the frozen hammer-strike continues into full overhead wind-ups and repeated swings (qc3, qc9, qc11)",
-  "3 invention: serpent idol's head breaks off and new rubble/rock fragments appear on the pedestal and floor not in the still"
- ],
- "note": "Hezekiah actually swings the sledgehammer through multiple strokes and the statue's head is knocked off mid-clip — the classic invented-action failure for this multi-figure action panel. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+ "passed": true,
+ "issues": [],
+ "note": "Kling3.0 pro pass, verified by hand across 5 sampled frames: hammer/debris/smoke geometry held fixed relative to each other, only camera pushed toward the crowned face; the hammer-completes-its-swing defect (2x Seedance fails) is gone."
 }

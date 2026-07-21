@@ -1,8 +1,5 @@
 {
- "passed": false,
- "issues": [
-  "3 NO-INVENT: titulus board on the center cross is blank in the first frame, then 'INRI' lettering materializes by qc3 and persists",
-  "5 NO-WRITING-ANIMATED: sign text changes across frames (blank -> INRI)"
- ],
- "note": "Three crosses on Golgotha under a moonlit storm sky; clouds drift fine, but the center cross's sign gains invented text mid-clip. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+ "passed": true,
+ "issues": [],
+ "note": "Titulus keeps the same faint indistinct smudge as the still — no INRI or legible lettering materializes; figures, moon, and clouds static. [re-animated + verified clean 2026-07-19 (qcfix batch; frozen-tableau recipe)]"
 }

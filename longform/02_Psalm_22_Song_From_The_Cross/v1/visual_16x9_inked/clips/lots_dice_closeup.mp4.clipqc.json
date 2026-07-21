@@ -1,7 +1,5 @@
 {
- "passed": false,
- "issues": [
-  "1 ATMOSPHERE-ONLY: knucklebones frozen mid-air in the still visibly fall, land, and accumulate on the garment across qc3-qc11, and the caster's fist opens to release them — completed action motion, not atmospheric drift"
- ],
- "note": "Soldiers casting lots over the garment; the frozen mid-air bones animate a full fall-and-land arc and the hand releases — beyond the frozen-tableau rule. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+ "passed": true,
+ "issues": [],
+ "note": "Still-edit (removed all bones suspended in open air, kept only held/settled bones) + Kling3.0 pro re-roll, verified by hand across 5 frames: both hands static, nothing falls, pouch contents unchanged. 5th attempt, root-caused to the still composition."
 }

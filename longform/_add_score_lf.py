@@ -126,7 +126,11 @@ def run(episode_dir: Path, yes: bool, regen: bool) -> None:
             f"Known episodes: {list(EPISODES)}"
         )
 
-    visual_dir = episode_dir / "v1" / "visual_16x9"
+    # inked-rebuild pool wins when present (the legacy Baroque cut in visual_16x9 is
+    # reference-only and never ships — memory: graphic-novel-style-migration)
+    visual_dir = episode_dir / "v1" / "visual_16x9_inked"
+    if not visual_dir.is_dir():
+        visual_dir = episode_dir / "v1" / "visual_16x9"
     candidates = [
         c for c in sorted(visual_dir.glob("*_16x9.mp4"))
         if "_scored" not in c.name

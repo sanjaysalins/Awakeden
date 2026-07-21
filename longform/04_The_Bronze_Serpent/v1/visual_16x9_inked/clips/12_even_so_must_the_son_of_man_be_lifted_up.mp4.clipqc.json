@@ -1,7 +1,5 @@
 {
- "passed": false,
- "issues": [
-  "3 invention - animated blood droplets detach from both nailed palms and fall from qc6 onward, with elongated drips and red blobs hanging suspended mid-air by qc9/qc11 (still has only a short static trickle at each nail)"
- ],
- "note": "Diptych of brass serpent and Christ on the cross; figures and faces stay stable, but the clip generates fresh falling blood beyond the still's static trickles, and the suspended drops read as artifacts on a sacred frame. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+ "passed": true,
+ "issues": [],
+ "note": "No droplets detach or hang mid-air; both palm wounds stay the dry nail-head-plus-static-smudge of the corrected _dry reference, scaling only with the zoom. [re-animated + verified clean 2026-07-19 (qcfix batch; frozen-tableau recipe)]"
 }

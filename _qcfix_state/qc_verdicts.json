@@ -1,0 +1,1216 @@
+[
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\blood_water_wood.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Slow push-in on spear-pierced side with blood and water flow; the streams thicken slightly as they continue flowing but both fluids exist in the source still; face and spear stable, inked style kept."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\body_laid_in_tomb.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Two men lowering the wrapped body in the tomb; only a gentle settling/breathing shift and steady lamp flame; faces, wrappings and props stable, style faithful."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\bowed_head_finished.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Camera travels up the nailed arm from hand to the bowed face; camera-only reframe of the frozen tableau, no morph or invention, inked style kept."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\carpenter_bench_rest.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Slow push-in on the carpenter bench with mallet, saw, pegs under a steady light shaft; all objects stable, nothing invented, style faithful."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\cross_at_dawn.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Empty cross against the sunrise; subtle zoom and gentle ray brightening only; cross, rocks and clouds stable, style faithful."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\cross_hill_pullback.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Slow pull-back from the hilltop cross under storm light; scene content stable and faithful; pull-back reveals a plain white page margin at the frame edges late in the clip (reads as a panel border, not invented scene content)."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\crowd_mocking.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 NO-INVENT: a small signature-like scribble of illegible text appears at the bottom-right corner in the later frames (qc6-qc11) that is not present in the source still"
+  ],
+  "note": "Mocking crowd with three shouting foreground men; figures themselves stay stable during the slow pull-back, but the reveal adds an invented squiggle/pseudo-text mark in the bottom-right margin \u2014 minor and marginal, flagged fail-closed."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\cry_face_tears.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Close-up of the weeping downcast face; slow push-in, the existing tear slides slightly further down the cheek (atmospheric continuation); face and light shaft stable, style faithful."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\cry_ninth_hour.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Christ crying out on the cross under storm sky; lightning flicker and slow pull-back only, figure fully stable; late frames reveal a plain white page margin at the edges (panel-border effect, not invented content)."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\darkness_veil_torn.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Torn temple veil between pillars in B/W ink; only a faint cloth stir and slight zoom; tear shape, architecture and sky stable, style faithful."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\dawn_empty_cross.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Empty cross with storm breaking into sunrise; cloud drift and lightning flicker (both in source) plus slight zoom; cross and landscape stable, style faithful."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\empty_tomb_open.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Empty tomb with folded linen and dawn light through the doorway; gentle push-in, steady light beam, linen and stone stable, style faithful."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\face_anguish_closeup.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Close-up of the anguished upturned face crying out; subtle cloud drift and slight zoom only; face, teeth and shadow band stable across all frames, style faithful."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\face_on_cross.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Slow push-in on Christ on the cross looking up; face, crown, nail wounds all stable; warm light ray at end is a subtle atmospheric shift."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\father_lamp_doorway.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Old man with oil lamp at night doorway; gentle zoom, flame waver only, figure and scene stable."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\finished_work.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Jesus with open scarred hand against golden sky; gentle push-in, face and hand stable, inked style intact."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\golgotha_hill_wide.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Three crosses over Jerusalem wall, near-static subtle zoom; all figures and the blank titulus unchanged across frames."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\golgotha_three_crosses_ridge.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Silhouetted three crosses under a light shaft; slow push-in, crosses/shadows/clouds stable."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\grace_poured_sky.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Golden light cascade from parted clouds over a village; shimmer plus swelling base mist are atmospheric, style faithful; borderline but the mist glow exists in the still."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\hand_reaching_closeup.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Deep push-in on open palm with healed nail scar; scar unchanged, no fresh blood, fingers stable."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\hands_of_light_open.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "2 NO-MORPH: strong halo-bloom \u2014 a star-shaped flare materializes between the hands (frame 3) and grows into a frame-dominating sunburst by the last frame, washing out hand/cloud detail",
+   "3 NO-INVENT: the central starburst object is not in the source still, which shows only downward light rays from the palms"
+  ],
+  "note": "Open cupped hands pouring light; the invented growing starburst overwhelms the artwork \u2014 classic AI light-bloom, fail-closed."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\isaiah_writing_lamplight.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "5 NO-WRITING-ANIMATED: dark ink tick marks materialize on the blank scroll page near the quill between frame 1 and frame 2 and persist (page center, left of the rolled scroll)",
+   "3 NO-INVENT: those marks are not in the source still; faint drifting smoke lower-left is fine but the appearing ink is not"
+  ],
+  "note": "Isaiah writing by lamplight; pose and flame fine, but writing appears on the page mid-clip \u2014 minor in size, still a named violation."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\jesus_praying_close.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Jesus kneeling in Gethsemane under full moon; gentle zoom, figure/trees/moon stable, no morph."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\kindreds_bowing.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Ring of bowing nations before the rising sun; slow pull-back, crowd frozen and stable, stylized blank faces match the still."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\kneeling_at_cross.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Towering cross with sun rays and three kneelers; camera-only push-in/tilt-up, kneelers exit frame bottom naturally, cross stable."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\lamb_to_slaughter.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Tethered lamb before stone altar; light shafts sweep in and floor pool brightens \u2014 atmospheric light only, lamb and rope stable."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\linen_left_lying.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Empty burial linens on stone slab in tomb; subtle push-in only, cloth and stone stable, inked style kept."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\look_up_faces.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Three upturned tearful faces under light shaft; faces stay stable across a slight zoom, tears already in the still, no morph or invention."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\mockers_wag_heads.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Two mocking profiles flanking distant crucifixion; gentle zoom, all faces and background crowd stable, spittle marks unchanged."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\mourners_only_son.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 NO-INVENT: new crowd figures materialize during the push-in \u2014 a dark-bearded man in gray-blue robe appears at the far left edge (qc9/qc11) and another bearded profile appears at right near the post; neither is in the source still"
+  ],
+  "note": "Mourners beneath the cross; the push-in regenerates the crowd edges, adding people the still does not contain; tears also thicken into heavy white streaks."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\nail_through_hand.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "2 NO-MORPH: nail entry wound morphs from a small dark puncture into a wide black ring/donut hole around the nail by qc6-qc11",
+   "3 NO-INVENT: blood volume grows \u2014 new white-highlighted loop of blood and longer rivulets not in the source still"
+  ],
+  "note": "Close-up of nail through palm; blood exists in the still but the clip regenerates and enlarges the wound and adds flowing blood (known Kling blood-regeneration failure mode)."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\nations_streaming_wide.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "1 ATMOSPHERE-ONLY: crowd figures visibly advance along the roads between frames (walking locomotion, not drift)",
+   "3 NO-INVENT: foreground crowd is regenerated during the push-in \u2014 bottom-edge figures in qc9/qc11 differ from and exceed those in the still"
+  ],
+  "note": "Aerial multitudes streaming to the sunrise hill; motion is the crowds walking plus regenerated foreground people; borderline in spirit for a 'streaming nations' beat but fails the letter of the gates."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\parting_storm_light.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Cross on hill with parting storm and rays; kneeling figures hold pose, clouds/rays shift subtly, gentle zoom only."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\pierced_hands_feet.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Open palm with nail and existing blood splatter; splatter shape and drips stay essentially identical across frames, slight zoom, no new blood."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\poured_out_bones.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 NO-INVENT: nails with square heads protrude from both palms and dark straps bind the wrists from qc0 onward \u2014 none are present in the source still (open palms, small wounds only); extra blood streaks added on the left forearm"
+  ],
+  "note": "Low-angle Christ on the cross; the clip adds nails and wrist bindings the still does not have; framing then pushes in past the hands."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\prophet_scroll.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Prophet holding a blank scroll with lamb and oil lamp; scroll stays blank (nothing to garble), flame flickers subtly, faces and lamb stable."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\risen_christ_wounds.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Risen Christ in garden sunrise showing dry palm wounds; steady push-in, face and wounds stable, no blood regeneration."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\risen_hands_raised.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Raised scarred palms, eyes closed, cross-shadow on wall; smooth push-in toward the face, scars stay dry, no morph."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\risen_mercy_hand.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Christ extending scarred hand; light rays bloom and sweep across robe/hand (atmospheric), scar stays a dry streak though slightly elongated in late frames \u2014 borderline but no flowing blood, face and fingers stable."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\stone_rolled_dawn.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Slow push-in on frozen tomb-and-rolled-stone tableau at sunrise; only camera and subtle light shift, inked style intact."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\substitute_shadow.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Aerial group of six figures whose shadow forms a cross; figures frozen, gentle zoom and sun-glow shift only."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\three_days_dark_tomb.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 NO-INVENT: bare feet with visible toes emerge from the shroud by qc3 and persist \u2014 the source still shows the foot end fully wrapped with no toes",
+   "2 NO-MORPH: the bandage wrapping at the foot end reshapes itself around the invented feet"
+  ],
+  "note": "Wrapped body on stone slab in blue tomb; animation invents unwrapped bare feet/toes not present in the still."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\tomb_doorway_dawn.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Empty tomb interior with folded cloth and sunrise doorway; brightening light and a faint low mist drift mid-clip (atmospheric), cloth and scene stable."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\tomb_stone_sealed.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "1 ATMOSPHERE-ONLY: the two robed figures on the path visibly walk \u2014 leg strides and poses change across qc3-qc11 (subject locomotion, not breathing/turning)"
+  ],
+  "note": "Sealed hillside tomb at dusk with two distant figures; scene otherwise stable but the figures are animated walking toward the tomb."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\us_under_cross_shadow.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Seven mourners bowed beneath a cross shadow under storm sky; frozen tableau, slight zoom, faces and forms stable."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\01_Isaiah_53_Suffering_Servant\\v1\\visual_16x9_inked\\clips\\willing_offering.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 NO-INVENT: long dripping blood streams grow from both palm wounds from qc0 onward, extending far down the frame \u2014 the source still has only small static wound marks with no streams"
+  ],
+  "note": "Crucifixion with kneeling figure and light shaft; animation invents continuously lengthening blood drips from the nail wounds."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\cross_hill_pullback.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Empty cross on hill with sun ray; clean camera pull-back revealing page margins, painting frozen and faithful."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\cry_face_tears.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Close-up of Christ's sorrowful face; the tear already in the still slides slowly down the cheek, face/features otherwise rock-stable, style kept."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\cry_ninth_hour.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Christ crying out on the cross under storm; slow pull-back with flickering lightning (atmospheric), figure frozen and stable."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\david_psalmist.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 NO-INVENT / 5 NO-WRITING-ANIMATED: script-like handwriting marks appear on the rolled scroll (bottom-left) around qc6 that are not in the source still's blank scroll"
+  ],
+  "note": "David singing with lyre under stars, push-in to his face; borderline-minor invention \u2014 text marks materialize on the scroll prop mid-clip, rest of clip is a clean camera push."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\dawn_empty_cross.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Empty cross between storm and sunrise; lightning flicker and light shift only (atmospheric), cross and terrain stable, slight zoom."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\dogs_encompass.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Moonlit ring of glowing-eyed dogs closing around an empty center; slow push-in, subtle crouch/breath shifts only, no morph or invention."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\empty_tomb_open.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Empty tomb with folded linen and dawn light shaft; slow push-in, linen and rock stay stable, light drift only."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\ends_of_earth.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Crowds converging on sunset cross-hill; camera pushes past static foreground crowd, figures hold pose, inked style intact."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\face_anguish_closeup.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Christ's anguished upturned face; subtle zoom with drifting storm clouds, face/teeth/eyes stay stable across all frames."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\finished_work.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Risen Christ with open scarred palm on golden light; gentle push-in, light rays drift, face and hand stable \u2014 borderline none."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\garment_tug.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Two fists pulling the seamless garment taut over scattered knucklebones; hands hold frozen tension, only dust drifts, bones stay put."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\golgotha_three_crosses_ridge.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Three crosses on ridge under torn sky with light shaft; slow push-in, crosses/shadows/clouds stable, inked look kept."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\hand_reaching_closeup.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Open palm with healed pierced wound; push-in toward the wound, no new blood or drip appears, hand static, style faithful."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\kindreds_bowing.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Ring of kindreds bowing before sunrise; slow pull-back, all figures hold their bowed poses, sun rays steady."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\kneeling_at_cross.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Low-angle empty cross with three kneelers; upward push-in, kneelers exit frame bottom via camera only, cross stable."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\lion_gape.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Roaring lion close-up; push-in with drifting breath-smoke, the glowing spark in the mouth (present in still) brightens slightly \u2014 atmospheric; face/teeth stable."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\lots_dice_closeup.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "1 ATMOSPHERE-ONLY: knucklebones frozen mid-air in the still visibly fall, land, and accumulate on the garment across qc3-qc11, and the caster's fist opens to release them \u2014 completed action motion, not atmospheric drift"
+  ],
+  "note": "Soldiers casting lots over the garment; the frozen mid-air bones animate a full fall-and-land arc and the hand releases \u2014 beyond the frozen-tableau rule."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\mockers_below_cross_low.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 NO-INVENT: a titulus signboard with garbled scribble-text materializes on the upper beam above Christ (visible qc6-qc11) \u2014 no signboard exists in the source still or first frames",
+   "5 NO-WRITING-ANIMATED: the invented board carries illegible pseudo-lettering"
+  ],
+  "note": "Push-in past two shouting mockers toward the crucified Christ; camera move is fine but a scribbled titulus board appears out of nothing mid-clip."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\mockers_wag_heads.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Two mockers in profile flanking the distant cross; subtle jaw/head movement within 'subtle turning' allowance, faces stable, spittle marks and crowd unchanged."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\nations_streaming_wide.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Aerial crowds streaming along roads toward sunset hill; slow pull-back/drift, crowds and terrain stay stable, inked style holds."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\parting_storm_light.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Cross on hill with light breaking through storm clouds over kneeling figures; gentle push-in, rays and figures stable, no invention."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\pierced_feet.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Nailed crossed feet close-up; slow push-in, nail and existing blood drips match the still and stay stable, no new fluid appears."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\pierced_hands_feet.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Nail through open palm on beam; slow push-in, splatter pattern identical to the still across frames, nail/hand stable."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\poured_out_bones.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 NO-INVENT: nails driven through both palms plus dark strap/wire bindings around wrists appear in every frame but are absent from the source still (still shows open wounded palms only)",
+   "3 NO-INVENT: blood streaks appear along the left forearm in mid frames not present in the still"
+  ],
+  "note": "Christ on the cross looking up; camera push-in is fine and stable, but the clip was rendered with invented nails, wrist bindings and forearm blood not in the approved still."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\risen_hands_raised.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Risen Christ, eyes closed, scarred palms raised; slow push-in to the face, scars and features stable, style faithful."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\risen_worshipper.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Christ with open arms before radiating light; slow pull-back that reveals a white page-border at the edges (reads as comic-panel margin, camera-only), figure fully stable."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\substitute_shadow.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Group of disciples casting one cross-shaped shadow at sunset; subtle drift/zoom only, figures and shadow stable."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\the_turn.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Christ raising a hand in a shaft of light with cross shadow; steady push-in toward face, pose and hand stable, no invention."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\thirst_dust.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 NO-INVENT: a bright red blood trickle from the lower lip appears and lengthens down through the beard (qc3 to qc11) \u2014 the source still has only a tiny faint lip mark and no running blood",
+   "2 NO-MORPH: the slightly open parched mouth of the still closes and the lip area redraws as the drip grows"
+  ],
+  "note": "Bowed head of Christ before the cross; push-in is fine but the animator regenerates fresh dripping blood at the mouth not present in the approved still."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\vinegar_sponge.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Arm lifting the vinegar sponge on a reed toward the cross; sponge, reed and hand stable, only the drips already present in the still fall \u2014 borderline liquid motion but the dripping is in the source, style holds."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\worm_lowest.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "1 ATMOSPHERE-ONLY: the bowed figure rotates from side profile to a full back view across the clip \u2014 subject body motion, not camera",
+   "2 NO-MORPH: face disappears behind hair and the torso/garment fully redraws during the rotation",
+   "3 NO-INVENT: later frames replace the storm sky with a cream parchment field with torn-page edges not in the still"
+  ],
+  "note": "Bowed Christ before the shadowed cross; the clip orbits and the figure itself turns away while the background dissolves into an invented torn-parchment edge."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\02_Psalm_22_Song_From_The_Cross\\v1\\visual_16x9_inked\\clips\\worm_reproach.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Bowed Christ surrounded by pointing hands and accusing crowd; near-static with only a subtle drift, all faces and hands stable, style faithful."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\01_snakebite.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Slow push-in on plague camp; kneeling helpers, victims and red serpents all stay frozen, inked style and blood pools unchanged across frames."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\01_snakebite_typo.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Typography panel over the frozen snakebite art: Numbers 21:6 tag, honest ticking counter (624->347) resolving to 'no number is recorded', torn caption band 'much people of israel died'; background static, designed kinetic type not in-scene writing; qc6 catches a mid-spring 'much/people' overlap that resolves cleanly by qc9."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\02_worn_down_they_despise_the_bread_of_heaven.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Slow push-in on camp with manna pile and camel caravan; all figures hold pose, only dust haze drifts; faces and style stable."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\03_the_lord_sent_fiery_serpents__and_people_died.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "1 subject locomotion - the white-robed man and the dark-robed figure walk several steps toward camera across frames; foreground man's arm also shifts pose",
+   "3 invention - a white bandage appears on the bitten man's foot from qc6 onward (bare bleeding foot in the source still)"
+  ],
+  "note": "Red-sky camp scene; camera is mostly static but the mid-ground figures actually walk and the snakebit foot gains a bandage mid-clip."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\04_venom.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Large pull-back from bitten man on cot to full tent at night; his pose, face, snake and wound stay frozen; revealed surroundings (tent frame, legs, night sky) are a coherent inked extension of the same scene - borderline only in how far the outpainted reveal goes."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\05_they_beg_moses_take_the_serpents_away.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Push-in on crowd pleading with Moses; every face and raised hand holds its pose, ground serpent static; style faithful throughout."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\06_not.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Moses kneeling in glowing sand circle, slow drift/settle; kneeling pose, onlookers and glow ring all stable, no invention."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\07_make_a_fiery_serpent_set_it_on_a_pole.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 invention - a golden droplet forms at the serpent's mouth from qc6 and drips/falls as a viscous strand by qc9-qc11 (no drip in the source still)",
+   "2 morph - the serpent's forked tongue melts into that drip strand"
+  ],
+  "note": "Moses fastening the brass serpent by firelight; flame flicker itself is fine, but the serpent's mouth generates invented dripping fluid."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\08_raised.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Push-in on the raised serpent pole at sunset; snake and pole frozen, crowd holds pose; drifting dust/cloud builds late and softly obscures the figures at the base - atmospheric, not subject motion."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\09_look.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Light shaft on the dying man's upturned face; slight zoom only, wound and blood unchanged, background crowd and staff-bearer stable."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\10_and_moses_made_a_serpent_of_brass_the_camp_looks.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "1 subject motion - in qc9/qc11 a watcher in the right-hand group extends a pointing arm toward the pole that is down in the still and early frames",
+   "3 invention - a new slumped figure with an outstretched arm appears center-bottom near the bald watcher in the late frames"
+  ],
+  "note": "Wide camp view of the brass serpent at sunset; camera drift is fine but late frames add a pointing arm and an extra figure not in the source still - moderate confidence, failing closed."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\11_night.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Jesus and Nicodemus by lamplight; both faces and poses rock-stable, city window unchanged; only the lamp flame grows/wavers taller from the pitcher mouth - allowed flame motion."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\12_even_so_must_the_son_of_man_be_lifted_up.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 invention - animated blood droplets detach from both nailed palms and fall from qc6 onward, with elongated drips and red blobs hanging suspended mid-air by qc9/qc11 (still has only a short static trickle at each nail)"
+  ],
+  "note": "Diptych of brass serpent and Christ on the cross; figures and faces stay stable, but the clip generates fresh falling blood beyond the still's static trickles, and the suspended drops read as artifacts on a sacred frame."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\13_lifted_up__signifying_what_death_he_should_die.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Slow push-in on the crucifixion over Jerusalem; pose, bound hands, titulus and city stay stable; only light/cloud drift. Faint chest abrasion visible at closer zoom is present in the source still."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\14_for_god_so_loved_the_world.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Jesus in foreground overlooking city with cross-hill; head turns gently from 3/4 to profile (within allowed subtle turning), face stays consistent, rays drift; no invention, style faithful."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\15_hezekiah_breaks_the_brazen_serpent.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "1 subject locomotion: the frozen hammer-strike continues into full overhead wind-ups and repeated swings (qc3, qc9, qc11)",
+   "3 invention: serpent idol's head breaks off and new rubble/rock fragments appear on the pedestal and floor not in the still"
+  ],
+  "note": "Hezekiah actually swings the sledgehammer through multiple strokes and the statue's head is knocked off mid-clip \u2014 the classic invented-action failure for this multi-figure action panel."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\16_the_likeness_of_the_curse_lifted_up.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 invented dripping fluid: palm blood drips lengthen, detach and fall as new mid-air droplets down both sides (qc6-qc11)",
+   "3 invention: a droplet appears falling from the bronze serpent's mouth (qc11) that is not in the still"
+  ],
+  "note": "Split-panel serpent-pole / crucifixion; composition and figures stay stable but the animation regenerates flowing blood well beyond the still's short static drips."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\17_made_a_curse_for_us__on_the_tree.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Slow zoom on Christ bound to the cross with amber light shaft; pose, face, ropes stable, dust motes drift in the beam. A faint amber tint line at the collar in late frames reads as beam coloring, not an object \u2014 borderline but acceptable."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\18_curse.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 invented dripping fluid: the palm blood drips grow into long falling trails with new detached droplets in mid-air below the crossbeam (qc3-qc11)"
+  ],
+  "note": "Bitten man gazing up at the crucified Christ; figures and faces stay stable, but the nail-wound blood visibly flows and sheds new falling drops not present in the still."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\19_look.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 invented blood: a red stain appears on the man's sleeve at qc3 and grows into a large jagged blood splash by qc9-qc11 \u2014 nothing is there in the source still"
+  ],
+  "note": "Snake-bitten man lying in the light shaft; camera pull-back and face are fine, but the animation invents a spreading blood stain on his right sleeve."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\20_whosoever.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 invention / 2 halo-bloom: a hard-edged vertical light pillar materializes mid-clip (qc6) and by qc11 erupts in a fire-like orange burst along the camp horizon \u2014 the still has only a soft diffuse glow"
+  ],
+  "note": "Crowd looking up at the sky over the camp; faces stay stable, but the sky invents a laser-like beam with a burning flare at its base that is not in the source still."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\21_look_to_the_one_lifted_up_hero_close.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Hero close of the risen Christ extending his scarred hand, radiant halo; gentle zoom and glow pulse only \u2014 face, fingers and palm scar stay stable, style faithful."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\22_curse.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "2 form instability: the bronze serpent's rigid forked tongue wavers, lengthens and splays into long trailing strands across frames (qc6-qc11) \u2014 a fixed metal statue part changing shape"
+  ],
+  "note": "Bronze serpent on the pole in the desert, slow push-in; coils, pole and light shaft stay frozen, but the statue's tongue visibly animates/morphs, making the idol read alive. Isolated but nameable."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\23_himself.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Jesus with hand on chest by torchlight, slow push-in; face, hands and robe stable, only the wall-torch flame wavers \u2014 clean atmospheric clip."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\24_trust.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Man in the temple hall gazing at the light-filled window with shattered idol on the floor; slow pull-back, figure and debris stable, light shaft steady \u2014 no invention."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\25_we_are_all_bitten__the_cure_outside_us.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 invented dripping fluid: the distant Christ's hand wounds shed long falling droplet trails through the air (qc3-qc11), and new red blood spots appear on the sand around the mound by qc9-qc11 \u2014 none of this is in the still"
+  ],
+  "note": "Bitten man's hand in foreground with the cross on the mound behind; figures stay stable but the animation regenerates falling blood and lands new blood spatter on the ground."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\26_strong.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Open upturned hand in a golden light shaft; slow camera pull-back/reframe only, hand and cuff stay stable, inked style faithful."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\27_outward.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Kneeling bitten Israelites with raised hands before tents; camera-only slow pull-back, poses and serpent-bite marks frozen, distant crowd stays consistent."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\28_the_veil_torn_signifying_what_death_he_should_die.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Torn temple veil between pillars; slight pull-back with drifting smoke and steady lightning sky, tear shape and altar stay stable, no invention."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\29_the_bronze_never_had_power_god_did.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Lone serpent pole in night desert camp; gentle pull-back with a soft moon-glow bloom behind clouds (atmospheric light only), sheep and tents frozen."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\30_so_god_lifted_up_his_son_who.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Jesus with outstretched scarred hand against sunburst; camera push-in toward the palm, face and scar stable; slight finger foreshortening at the closest framing reads as perspective, not a pose change."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\31_his_own_self_bare_our_sins_in_his_own_body_on_the_tree.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 NO-INVENT: blood drip from both nailed palms is animated \u2014 the hanging drips lengthen and detached red droplets appear falling mid-air below each hand (visible left side ~frames 3-11) that are not in the source still"
+  ],
+  "note": "Christ on the cross, head bowed; camera pull-back is fine and face/nails stay stable, but the palm blood actively flows and sheds new falling droplets, which is generated dripping fluid beyond the frozen tableau."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\32_he_lifted_his_son_on_a_cross_for_exactly_that.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Jesus before Golgotha's three crosses at sunburst; steady slow zoom-in, face and background frozen, style faithful."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\reuse_bowed_head_finished.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "9:16 reuse gallery-tour: camera travels from the nailed hand up the arm to the crowned bowed head; painting stays frozen, blood at the nail static, no morph or invention relative to the first frame."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\reuse_cross_at_dawn.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Empty cross on rocky hill against sunrise; near-static hold with subtle light-ray drift, everything stable, style faithful."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\reuse_darkness_veil_torn.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Monochrome torn veil between temple pillars; slight zoom with drifting dark clouds only, tear and architecture rock-stable."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\reuse_face_on_cross.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 NO-INVENT: blood on the left wrist/forearm is animated flowing \u2014 the streaks below the nailed palm lengthen down the forearm and new red runs appear across frames 3-9 that are not in the first frame"
+  ],
+  "note": "Camera pushes from the nailed hand in to Christ's upturned face (face itself stays stable), but the wound actively bleeds new trickles down the arm during the move \u2014 generated dripping fluid, fail-closed."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\reuse_first_day_morning.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Empty tomb with rolled-away stone at dawn; camera push-in toward the glowing doorway, light rays strengthen atmospherically, flowers/rocks consistent with parallax reveal, no morph."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\reuse_golgotha_hill_wide.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Three crosses above the city wall with mourners below; slow push-in only, all figures frozen and stable, inked style faithful."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\reuse_grace_poured_sky.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Golden light-cascade from parted storm clouds over a village; clouds drift, glow-mist rises at the base, slight zoom \u2014 all atmospheric, inked style intact."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\reuse_hands_of_light_open.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Open cupped hands in clouds; a sunburst flare grows to a bright crescendo by the end \u2014 hand line-art stays stable and drawn, so judged light behavior not morph; borderline-strong bloom worth an eye at full speed."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\reuse_kingdom_light_clouds.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Vertical light shaft through black storm clouds onto desert hills; beam brightens, clouds drift, low mist puffs rise \u2014 atmospheric only, style faithful."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\reuse_look_up_faces.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Three tear-streaked upturned faces in a light shaft; faces/eyes stable across frames, only tear-glint and a slow pull-back."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\reuse_man_lifting_face_dawn.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Bearded man lifting his face at dawn; gentle push-in, faint smile forms (subtle breathing-level expression), no warp or invention."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\reuse_nail_through_hand.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Nail through palm on the beam; hand/nail/wood stable with slow reframe; the blood drip already present in frame 1 continues flowing slightly downward \u2014 continuation of existing fluid, not new invention, but borderline."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\reuse_ninth_hour_darkness.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 NO-INVENT: titulus board on the center cross is blank in the first frame, then 'INRI' lettering materializes by qc3 and persists",
+   "5 NO-WRITING-ANIMATED: sign text changes across frames (blank -> INRI)"
+  ],
+  "note": "Three crosses on Golgotha under a moonlit storm sky; clouds drift fine, but the center cross's sign gains invented text mid-clip."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\reuse_risen_christ_congregation.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Christ arms raised under a hanging lamp before a seated congregation; figures and faces stable, lamp beam breathes, slight camera drift only."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\reuse_risen_christ_wounds.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Risen Christ showing wounded palms against a sun halo; steady push-in, face/hands/wound marks stable, inked style intact."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\reuse_stone_rolled_dawn.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Empty tomb with rolled stone at sunrise; scene static, a soft mist band drifts in over the fields \u2014 atmospheric only."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\reuse_us_under_cross_shadow.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Two kneeling figures flanking the cross with its long shadow at sunset; figures and shadow stable, gentle pull-back and sun-glow shift only."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1\\visual_16x9_inked\\clips\\two_thieves_foreground.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 NO-INVENT: fresh red blood splatters appear on the hilltop ground (lower-left and lower-right of the mound) from qc6 onward \u2014 absent in the source still",
+   "3 NO-INVENT: nail-wound drips on both thieves' palms grow into long hanging droplets falling through mid-air, well beyond the small trickles in the still"
+  ],
+  "note": "Two thieves' nailed palms framing Christ crucified; composition and figures stable, but Kling regenerates and adds blood \u2014 new ground splats plus falling droplets."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\01_once_a_year_only_once.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "High priest before the tabernacle with censer smoke and crowd (Baroque oil); smoke plumes drift and reshape, altar flame flickers, figures stable and painterly style preserved \u2014 a faint dark wisp in the upper sky late in the clip reads as drifting smoke, in style."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\02_i_laid_aside_gold_and_glory.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Hands holding the jeweled breastplate over folded linens; slight push-in, incense drift and faint dust motes; hands, stones and folds stay stable."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\03_plain_white_linen_like_a_servant.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Priest in white linen before the veil; lamp flames waver, floor smoke drifts, small incense wisp near his shoulder; figure and face stable, style faithful."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\04_i_went_in_alone.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 invented golden glitter/sparkle light column fills the veil opening (dark interior in still)",
+   "3 thick white fog invented across the foreground by qc9-qc11",
+   "2 halo-bloom escalation on the curtain edge"
+  ],
+  "note": "Priest at the tent flap stays stable, but the dark interior turns into a glowing sparkle-filled light shaft and heavy smoke floods the bottom third - classic AI-glitter bloom not in the source still."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\05_that_he_die_not_the_cloud_upon_the_mercy.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 invented starburst lens-flare above the ark plus a field of twinkle/sparkle specks",
+   "2 bloom intensifies frame-over-frame"
+  ],
+  "note": "Prostrate priest and ark stay stable and the billowing cloud itself is on-beat, but from qc6 a bright star-flare and dozens of glitter twinkles appear that are not in the still (fail-closed on the glitter, not the cloud)."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\06_i_buried_two_of_my_own_sons.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Grieving Aaron with dead sons and funeral bier; altar flame wavers and incense smoke drifts; all figures hold pose, blood elements unchanged from still; faint sparse specks only."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\07_they_brought_me_two_goats_and_i_cast_lot.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 snow-like white particle overlay grows dense across the whole frame by qc9-qc11 (not in still)"
+  ],
+  "note": "Priest with two lots and both goats hold pose perfectly and smoke drift is fine, but an invented drifting-snow speck field blankets the frame in the second half."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\08_the_first_goat_i_killed_blood_within_the.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "1 sprinkling arm visibly changes pose across frames (raised / lowered / mid) - subject action, not atmospheric",
+   "3 blood is animated and re-invented: floating drip near his face at qc3, new red streak on the ark front at qc9-qc11",
+   "3 massive tan fog bank invented over the left half by qc9"
+  ],
+  "note": "Blood-sprinkling scene: the model animates the sprinkling gesture and regenerates blood in new places, then floods the scene with invented fog - multiple hard violations."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\09_both_my_hands_upon_the_live_goat.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 dense field of large glowing bokeh orbs / snowfall blankets the frame by qc11 (not in still)"
+  ],
+  "note": "Hands-on-the-goat tableau itself is rock steady (no locomotion, faces stable), but an invented glowing particle snowfall grows until it covers the whole painting."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\10_i_watched_it_go_a_land_not_inhabited.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 heavy invented snowfall particle overlay from qc6 onward, densest at qc9-qc11"
+  ],
+  "note": "Camp scene with scapegoat watcher: figures and goat hold pose, incense drift fine, but the same glowing snow overlay buries the desert scene - not in the source still."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\11_one_offering_yet_it_took_two_goats.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 invented particle/snow overlay - specks even render on top of the khaki letterbox matte, proving a composited overlay"
+  ],
+  "note": "Two-goats split tableau stays stable (kneeling priest, led goat, fire flicker fine), but the drifting-snow overlay appears from qc6 and sits over the letterbox border itself."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\12_why_two_two_things_at_once.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Night portrait of the priest; altar smoke curls nicely, slow push-in, face fully stable; a light faint speckle appears late but stays dim/sparse - borderline, below violation threshold."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\13_the_people_went_home_clean.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "High priest at the altar before the standing congregation; ember glow and smoke drift, crowd holds pose, no morphing; mild late speckle in the night sky, below threshold."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\14_every_year_i_came_back_and_did_it_again.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 heavy invented snowfall of large white flakes covers the whole scene by qc6-qc11 (not in still)"
+  ],
+  "note": "Repeating-ritual tableau (priests, goats, blood bowl) holds pose and smoke drift is fine, but the strongest instance of the lane-wide invented snow overlay buries the frame."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\15_i_was_only_ever_pointing_a_sign.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Old witness in tent gazing up; slow push-in, lamp flame wavers, smoke drifts; face/turban/curtains stable, Baroque oil kept."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\16_a_shadow_waits_for_the_body_the_body_cam.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 invented object: a golden cup/censer with flame materializes in the high priest's left hand by qc6 and stays through qc11 (still shows only the one extended oil lamp)",
+   "2 priest's arm/hand pose morphs to hold the new object"
+  ],
+  "note": "Tabernacle + altar + two goats + cross shadow; scene otherwise stable with smoke drift, but the priest grows a second flaming vessel mid-clip."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\17_by_his_own_blood_he_entered_in_once.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "1 subject locomotion: Jesus passes through the veil and is fully GONE by qc9/qc11",
+   "3 invented figures: two translucent ghost-like robed figures appear foreground left and right at qc6",
+   "2 Jesus turns translucent/dissolves (morph)"
+  ],
+  "note": "Jesus at the glowing veil; clip animates him entering and vanishing plus phantom figures \u2014 narrative motion, not atmospheric."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\18_the_lord_laid_on_him_the_iniquity_of_us_.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Jesus open-handed between the two goats before the tabernacle; smoke drifts, subtle zoom, faces/goats/cross-glow stable, painterly style kept."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\19_he_suffered_without_the_gate.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Jesus outside the city gate viewing the camp; slow pull-back, altar smoke drifts, figure static; borderline pale smudge in his robe folds at qc9 reads as paint texture, not a new element."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\20_he_sat_down_the_veil_rent_from_the_top.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Seated Christ, kneeling priest, ark shafts of light; smoke and light-motes drift, all figures and gold furniture stable, oil style kept."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\21_do_not_come_to_me_or_a_goat_or_an_altar.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 invented figure: an old robed man with staff/rope appears at the far-left edge in qc9 and qc11 (not present anywhere in the source still)"
+  ],
+  "note": "Priest gesturing past the altar with two goats; motion is otherwise camera drift + smoke, but the leftward reframe out-paints a whole new bystander."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\22_come_to_jesus_carried_as_far_as_east_fro.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 NO-INVENT: the lane-wide white snow/particle overlay covers the frame by qc11 (verified by hand)",
+   "2/3 the dark cloth hanging on the left fence in the still renders as a small dark human silhouette that shifts posture/position across qc0-qc11"
+  ],
+  "note": "Jesus welcoming a man at the tent; main figures stable and style kept \u2014 flagged fail-closed on the background cloth-to-figure morph; genuinely borderline at QC resolution, worth one human look."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\23_the_way_is_thrown_wide_open.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Torn veil revealing the ark; clean camera push-in through the opening, veil sway + smoke only, cherubim/ark stable, inkless painterly look kept."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\24_boldness_to_enter_into_the_holiest.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Crowd gathered before the open tabernacle and ark; lamp flame + altar fire flicker, drifting ash/dust motes thicken late but stay atmospheric; every face holds identity."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\25_will_you_come_in_be_carried_clean.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "1 subject motion: Jesus' arms lift and reposition from outstretched-low to raised open palms between qc3 and qc6",
+   "2/3 background morph: the tent camp, ark and fence dissolve entirely into abstract golden light rays by qc9/qc11",
+   "4 style drift: final frames lose the oil-brush texture for a smooth airbrushed glow"
+  ],
+  "note": "Invitation shot at the tent flap; the clip re-poses the subject and replaces the whole environment with light \u2014 well beyond atmospheric motion."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\slice_01.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 massive invention on pull-back: crowd grows from dozens to thousands, new tents, banner poles and cross-topped standards appear (qc6-qc11), plus a new censer/smoke plume in the crowd",
+   "2 the tabernacle tent morphs shape and sprouts spire finials by qc9"
+  ],
+  "note": "Kneeling high priest at the tent door; generative zoom-out fabricates an epic panorama that is not in the source still."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\slice_02.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Hands folding the jeweled breastplate onto priestly garments; slow push-in with dust motes, hands/gems/cloth stable, folded linen exits frame by crop only, oil style kept."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\slice_03.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "1 subject locomotion: the white-robed figure takes visible steps and advances from mid-corridor to standing directly at the veil (stride changes qc0->qc11, floor gap to the veil closes beyond what the push-in explains)"
+  ],
+  "note": "Figure in white walking toward the temple veil; camera push-in plus real walking; large incense-smoke puffs also appear mid-clip (atmospheric class, not the fail reason)."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\slice_04.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Hooded figure standing before the parted veil; camera drift, light shaft brightens, low ground-mist develops; figure and curtains stable, painterly style held."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\slice_05.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Kneeling priest before the Ark in glory cloud; slow push-in, cloud drift, dense bright particle field grows; kneeling figure only bows deeper, Ark and cherubim stable."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\slice_06.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Grieving Aaron with memory vignettes (dead sons, bier, altar flame); a heavy beige smoke billow crosses the lower-left mid-clip then recedes \u2014 atmospheric only; all figures/faces stable, borderline on smoke opacity."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\slice_07.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "1 subject action: the priest's hands actively move and drop/manipulate the lots across frames (drop pose -> pinching a stone at the bowl)",
+   "3 invention: a dark angular object appears between/below the hands from qc3 on, and several extra lots accumulate in the bowl that are not in the still"
+  ],
+  "note": "Casting-lots-over-bowl scene with two goats; hands animate the action and new objects appear; rising bowl smoke itself is atmospheric."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\slice_08.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "2 halo-bloom/morph: the mercy-seat glow escalates into a huge starburst that washes out the Ark, and the priest's hair/beard visibly lengthen and change by qc9-qc11",
+   "3 invention: an ornate crown/turret structure appears above the Ark from qc6 onward that is not in the source still"
+  ],
+  "note": "Priest with bowl of blood before the Ark; later frames also drift toward photoreal softening of the figure \u2014 multiple compounding violations."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\slice_09.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Elder laying hands on the goat at the gate, younger man watching; gentle hand shift on the goat's head (subtle, non-locomotive), heavy dust motes; faces, goat, and painterly style stable."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\slice_10.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Scapegoat alone on cracked flats with hooded watcher; camera pans right so the watcher exits frame and more landscape is revealed \u2014 camera-only reframe; goat holds position with only slight stance shifts."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\slice_11.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Split scene: slain goat on draped altar amid fire-glow smoke, living goat by the desert road; smoke/glow drift only, both goats and vessels stable, style held."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\slice_12.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Old man at table with oil lamp by ruined arch at dusk; push-in with flame flicker, ember smoke, drifting motes; face and pose consistent throughout."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\slice_13.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 invention: the pull-back generatively invents a huge new crowd (hundreds of figures), multiple cross-topped staffs among them, and a cross inside the tent \u2014 none present in the close-framed source still (the crosses are also period-wrong for a Yom Kippur scene)",
+   "1 subject motion: the invented crowd mills/shifts between frames"
+  ],
+  "note": "Israelites outside the tent at sunset; qc0 matches the still but from qc3 the shot widens far beyond the source painting into fabricated content."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\slice_14.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Five priests preparing the offering at the altar with two goats and blood bowl; slight camera drift, incense smoke develops right side, particles; figures, goats, and blood details stable."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\slice_15.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Old man clutching the temple veil looking up; deep push-in with slight facial-detail drift (hair curls fuller by the end) but identity, pose, and painterly style hold \u2014 within tolerance."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\slice_16.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Two goats on altar with cross shadow and kneeling worshippers; slow drift with smoke/light-shaft haze only, figures and goats stable, oil style kept."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\slice_17.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Christ from behind, hand raised toward glowing torn veil; near-static hold, veil light shimmers subtly, figure/hand/wound stable, style faithful."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\slice_18.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Christ arms open between altar goat and departing scapegoat under light cross; gentle zoom-in, ray shimmer only, all subjects and faces stable."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\slice_19.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Robed figure on road outside city walls at dusk; slow zoom-in with drifting light motes, feet planted (no walking), slight cloth drape shift only \u2014 borderline but subtle."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\slice_20.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Enthroned Christ with blessing hand beside torn glowing curtain; figure and hand stable, only drifting dust/light motes increase, Baroque oil style kept."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\slice_21.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "3 NO-INVENT: camera pull-back generates a whole new right-hand region absent from the still \u2014 arched portal blazing with light, candelabra with lit candles, gold ewers/urns on a new pedestal, red drapery swag, extra floor vessels",
+   "2 NO-MORPH: the invented architecture keeps reshaping frame-to-frame (pillar becomes arch with light hole)"
+  ],
+  "note": "Old prophet by altar with goats; the zoom-out invents an entire temple wall of candles and gold vessels never in the source painting."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\slice_22.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "1 ATMOSPHERE-ONLY: the ragged wanderer visibly walks \u2014 stride/leg positions change every frame and he advances; background bearers also shift poses",
+   "3 NO-INVENT: a large hanging jug/gourd appears on his hip strap that is not in the still; sky fills with star/snow specks far beyond subtle motes"
+  ],
+  "note": "Wanderer on road turning toward glowing Christ; clip animates real locomotion and adds a carried jug not in the source."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\slice_23.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Torn temple veil doorway with light beyond; slow push-in, torn white inner cloth stirs gently, drifting motes, no invention, style faithful."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\slice_24.mp4",
+  "verdict": "FAIL",
+  "issues": [
+   "1 ATMOSPHERE-ONLY: crowd rearranges \u2014 the old man behind the veil steps forward and gestures toward the girl; a white-robed woman crosses leftward through the group",
+   "3 NO-INVENT: a small object/cord appears dangling from the curtain-holder's hand in later frames; extra white-robed figure movement not in the still",
+   "2 NO-MORPH: several faces drift identity as figures shift"
+  ],
+  "note": "Worshippers filing past the torn veil; people move through the scene and identities/positions drift instead of a frozen tableau."
+ },
+ {
+  "mp4": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\EW01_Two_Goats\\v1\\visual_16x9\\slice_25.mp4",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Christ stepping through the parted veil, hand extended; slow push-in, face and robe stable, only a subtle finger-pose drift in the extended hand and drifting motes \u2014 within atmospheric tolerance."
+ }
+]

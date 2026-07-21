@@ -1,8 +1,0 @@
-{
- "passed": false,
- "issues": [
-  "3 invented object: a golden cup/censer with flame materializes in the high priest's left hand by qc6 and stays through qc11 (still shows only the one extended oil lamp)",
-  "2 priest's arm/hand pose morphs to hold the new object"
- ],
- "note": "Tabernacle + altar + two goats + cross shadow; scene otherwise stable with smoke drift, but the priest grows a second flaming vessel mid-clip. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
-}

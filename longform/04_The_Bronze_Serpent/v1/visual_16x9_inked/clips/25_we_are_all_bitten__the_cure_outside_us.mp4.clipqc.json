@@ -1,7 +1,5 @@
 {
- "passed": false,
- "issues": [
-  "3 invented dripping fluid: the distant Christ's hand wounds shed long falling droplet trails through the air (qc3-qc11), and new red blood spots appear on the sand around the mound by qc9-qc11 — none of this is in the still"
- ],
- "note": "Bitten man's hand in foreground with the cross on the mound behind; figures stay stable but the animation regenerates falling blood and lands new blood spatter on the ground. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+ "passed": true,
+ "issues": [],
+ "note": "Rightward drift onto the distant cross; hand wounds stay small and static, no falling trails, no red spots on the sand. [re-animated + verified clean 2026-07-19 (qcfix batch; frozen-tableau recipe)]"
 }

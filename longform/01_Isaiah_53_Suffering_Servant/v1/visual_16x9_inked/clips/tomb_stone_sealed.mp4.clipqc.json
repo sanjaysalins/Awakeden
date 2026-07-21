@@ -1,7 +1,5 @@
 {
- "passed": false,
- "issues": [
-  "1 ATMOSPHERE-ONLY: the two robed figures on the path visibly walk — leg strides and poses change across qc3-qc11 (subject locomotion, not breathing/turning)"
- ],
- "note": "Sealed hillside tomb at dusk with two distant figures; scene otherwise stable but the figures are animated walking toward the tomb. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+ "passed": true,
+ "issues": [],
+ "note": "Figures do not walk — their size ratio to the stone stays constant, consistent with pure camera push-in toward the sealed tomb. [re-animated + verified clean 2026-07-19 (qcfix batch; frozen-tableau recipe)]"
 }

@@ -1,5 +1,5 @@
 {
  "passed": true,
  "issues": [],
- "note": "Aerial crowds streaming along roads toward sunset hill; slow pull-back/drift, crowds and terrain stay stable, inked style holds. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+ "note": "Camera-only push-in; crowd clusters hold position and figure-to-landmark ratios stay constant; no walking, no foreground regen. [re-animated + verified clean 2026-07-19 (qcfix batch; frozen-tableau recipe)]"
 }

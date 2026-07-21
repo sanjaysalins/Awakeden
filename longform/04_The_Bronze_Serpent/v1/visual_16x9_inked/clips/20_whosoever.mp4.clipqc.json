@@ -1,7 +1,5 @@
 {
- "passed": false,
- "issues": [
-  "3 invention / 2 halo-bloom: a hard-edged vertical light pillar materializes mid-clip (qc6) and by qc11 erupts in a fire-like orange burst along the camp horizon — the still has only a soft diffuse glow"
- ],
- "note": "Crowd looking up at the sky over the camp; faces stay stable, but the sky invents a laser-like beam with a burning flare at its base that is not in the source still. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+ "passed": true,
+ "issues": [],
+ "note": "No hard light pillar or orange burst — sky glow stays a soft shaft; crowd frozen, faces stable; pan reveals only style-consistent crowd continuation behind the foreground man. [re-animated + verified clean 2026-07-19 (qcfix batch; frozen-tableau recipe)]"
 }

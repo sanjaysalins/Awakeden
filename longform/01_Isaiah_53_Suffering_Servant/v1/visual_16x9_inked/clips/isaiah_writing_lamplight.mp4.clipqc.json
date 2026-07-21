@@ -1,8 +1,5 @@
 {
- "passed": false,
- "issues": [
-  "5 NO-WRITING-ANIMATED: dark ink tick marks materialize on the blank scroll page near the quill between frame 1 and frame 2 and persist (page center, left of the rolled scroll)",
-  "3 NO-INVENT: those marks are not in the source still; faint drifting smoke lower-left is fine but the appearing ink is not"
- ],
- "note": "Isaiah writing by lamplight; pose and flame fine, but writing appears on the page mid-clip — minor in size, still a named violation. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+ "passed": true,
+ "issues": [],
+ "note": "No ink ticks materialize on the page; push-in ends on face; slight gaze lift from page to camera is the only motion. [re-animated + verified clean 2026-07-19 (qcfix batch; frozen-tableau recipe)]"
 }

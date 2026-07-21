@@ -1,7 +1,0 @@
-{
- "passed": false,
- "issues": [
-  "3 dense field of large glowing bokeh orbs / snowfall blankets the frame by qc11 (not in still)"
- ],
- "note": "Hands-on-the-goat tableau itself is rock steady (no locomotion, faces stable), but an invented glowing particle snowfall grows until it covers the whole painting. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
-}

@@ -1,9 +1,0 @@
-{
- "passed": false,
- "issues": [
-  "3 invented golden glitter/sparkle light column fills the veil opening (dark interior in still)",
-  "3 thick white fog invented across the foreground by qc9-qc11",
-  "2 halo-bloom escalation on the curtain edge"
- ],
- "note": "Priest at the tent flap stays stable, but the dark interior turns into a glowing sparkle-filled light shaft and heavy smoke floods the bottom third - classic AI-glitter bloom not in the source still. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
-}

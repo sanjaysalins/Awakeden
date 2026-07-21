@@ -1,8 +1,5 @@
 {
- "passed": false,
- "issues": [
-  "1 ATMOSPHERE-ONLY: crowd figures visibly advance along the roads between frames (walking locomotion, not drift)",
-  "3 NO-INVENT: foreground crowd is regenerated during the push-in — bottom-edge figures in qc9/qc11 differ from and exceed those in the still"
- ],
- "note": "Aerial multitudes streaming to the sunrise hill; motion is the crowds walking plus regenerated foreground people; borderline in spirit for a 'streaming nations' beat but fails the letter of the gates. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+ "passed": true,
+ "issues": [],
+ "note": "Camera-only push-in; crowd clusters hold position and figure-to-landmark ratios stay constant; no walking, no foreground regen. [re-animated + verified clean 2026-07-19 (qcfix batch; frozen-tableau recipe)]"
 }

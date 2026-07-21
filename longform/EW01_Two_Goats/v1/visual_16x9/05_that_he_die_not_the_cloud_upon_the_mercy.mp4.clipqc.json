@@ -1,8 +1,0 @@
-{
- "passed": false,
- "issues": [
-  "3 invented starburst lens-flare above the ark plus a field of twinkle/sparkle specks",
-  "2 bloom intensifies frame-over-frame"
- ],
- "note": "Prostrate priest and ark stay stable and the billowing cloud itself is on-beat, but from qc6 a bright star-flare and dozens of glitter twinkles appear that are not in the still (fail-closed on the glitter, not the cloud). [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
-}

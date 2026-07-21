@@ -1,8 +1,5 @@
 {
- "passed": false,
- "issues": [
-  "2 NO-MORPH: nail entry wound morphs from a small dark puncture into a wide black ring/donut hole around the nail by qc6-qc11",
-  "3 NO-INVENT: blood volume grows — new white-highlighted loop of blood and longer rivulets not in the source still"
- ],
- "note": "Close-up of nail through palm; blood exists in the still but the clip regenerates and enlarges the wound and adds flowing blood (known Kling blood-regeneration failure mode). [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+ "passed": true,
+ "issues": [],
+ "note": "SWAPPED IN (qcfix, 2026-07-20): the original nail_through_hand clip failed 7 straight re-animation attempts across 2 models (Seedance, Kling) and 5 distinct strategies (plain reframe, explicit anti-blood language, flat-matte-ink wound edit, wide-pullback edit, and a genuinely fresh wide render with zero blood visible in frame 1) -- every attempt invented a growing blood splash/drip by the clip's end, proving the defect is inherent to nail-through-palm imagery in current i2v models, not a framing or wording problem. Per user decision, swapped this slug's clip file to reuse the content of pierced_hands_feet.mp4 (already-passing, same thematic beat: nail-pierced open palm with existing static blood that never grows). Original defective clip archived at clips/_qcfix_replaced/nail_through_hand.mp4. The still nail_through_hand.png is now orphaned/unused by the actual film (builder reads clips/<slug>.mp4 directly, poster PNG doesn't matter). Full 7-attempt history in _qcfix_state/fix_verify_results.json."
 }

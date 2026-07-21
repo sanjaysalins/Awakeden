@@ -1,0 +1,331 @@
+[
+ {
+  "slug": "slice_13",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Push-in to tent elder; no invented crowd or crosses; figures static, Baroque oil held; only faint ember specks near the fire."
+ },
+ {
+  "slug": "07_they_brought_me_two_goats_and_i_cast_lot",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "No snow/particle overlay; push-in on priest's hands, lot stones and goats stable; only a thin smoke wisp consistent with the still's smoke."
+ },
+ {
+  "slug": "david_psalmist",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Scroll page stays blank (no pseudo-script); push-in to David's face, inked style held; minor singing mouth movement only."
+ },
+ {
+  "slug": "crowd_mocking",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Push-in to center face; no signature scribble or new text; silhouette crowd and faces stable."
+ },
+ {
+  "slug": "hands_of_light_open",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "No star flare or sunburst escalation; central glow stays as in still; hands and rays stable through push-in."
+ },
+ {
+  "slug": "isaiah_writing_lamplight",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "No ink ticks materialize on the page; push-in ends on face; slight gaze lift from page to camera is the only motion."
+ },
+ {
+  "slug": "mourners_only_son",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Push-in holds; no new bearded figures, tears stay thin; minor background face redraw within tolerance, style held."
+ },
+ {
+  "slug": "nations_streaming_wide",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Camera-only push-in; crowd clusters hold position and figure-to-landmark ratios stay constant; no walking, no foreground regen."
+ },
+ {
+  "slug": "poured_out_bones",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "No nails, wrist bindings or forearm streaks; palm marks stay small; clean push-in to face, style held."
+ },
+ {
+  "slug": "three_days_dark_tomb",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Feet stay fully wrapped (no toes, no reshaping); shroud figure static; only background mist drifts as in still."
+ },
+ {
+  "slug": "tomb_stone_sealed",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Figures do not walk \u2014 their size ratio to the stone stays constant, consistent with pure camera push-in toward the sealed tomb."
+ },
+ {
+  "slug": "nail_through_hand",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "RESOLVED via swap-in, not a fix: 7 straight re-animation attempts failed identically (blood invention regardless of framing/wording, 2 models, 5 strategies). Per user decision, swapped the clip file to reuse pierced_hands_feet.mp4 (already-passing, same thematic beat). Original archived to clips/_qcfix_replaced/nail_through_hand.mp4. PROMOTED."
+ },
+ {
+  "slug": "willing_offering",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "No palm drips; only pre-existing sky lightning brightens; figures static, push-in only, style held."
+ },
+ {
+  "slug": "lots_dice_closeup",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Still-edit (removed all bones suspended in open air, kept only held/settled bones) + Kling3.0 pro re-roll, verified by hand: nothing falls, hands static, pouch unchanged. 5th total attempt, root-caused to still composition. PROMOTED."
+ },
+ {
+  "slug": "mockers_below_cross_low",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "No titulus appears; upper beam stays blank through the push-in, Christ's pose and the mockers stable, style held."
+ },
+ {
+  "slug": "thirst_dust",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Clean push-in; no red trickle forms at the lip, the small dark lip mark from the still stays static, mouth and face stable."
+ },
+ {
+  "slug": "worm_lowest",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Figure holds the profile pose in every frame \u2014 no rotation to a back view, torso and garment stable, sky stays inked storm clouds with no parchment field."
+ },
+ {
+  "slug": "03_the_lord_sent_fiery_serpents__and_people_died",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Mid-ground figures hold frozen stride poses (no walking progression), bitten foot stays red with no bandage, snake coil and tongue static; red squiggle left of snake exists in the still."
+ },
+ {
+  "slug": "07_make_a_fiery_serpent_set_it_on_a_pole",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Kling3.0 pro, verified by hand: tongue/coils held frozen through push-in. PROMOTED."
+ },
+ {
+  "slug": "10_and_moses_made_a_serpent_of_brass_the_camp_looks",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "No arm rises and no new slumped figure appears; lying bodies, seated tent figures, and pole serpent all stable through the camera advance."
+ },
+ {
+  "slug": "15_hezekiah_breaks_the_brazen_serpent",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Kling3.0 pro, verified by hand across 5 frames: hammer/debris/smoke held fixed relative geometry, only camera pushed to face. PROMOTED."
+ },
+ {
+  "slug": "19_look",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "No red stain appears on the sleeve or anywhere; clean push-in with stable face, pose, and light shafts."
+ },
+ {
+  "slug": "20_whosoever",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "No hard light pillar or orange burst \u2014 sky glow stays a soft shaft; crowd frozen, faces stable; pan reveals only style-consistent crowd continuation behind the foreground man."
+ },
+ {
+  "slug": "22_curse",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Camera tilts down the pole away from the head early; coils rigid, no tongue splay, nothing new."
+ },
+ {
+  "slug": "reuse_ninth_hour_darkness",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Titulus keeps the same faint indistinct smudge as the still \u2014 no INRI or legible lettering materializes; figures, moon, and clouds static."
+ },
+ {
+  "slug": "12_even_so_must_the_son_of_man_be_lifted_up",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "No droplets detach or hang mid-air; both palm wounds stay the dry nail-head-plus-static-smudge of the corrected _dry reference, scaling only with the zoom."
+ },
+ {
+  "slug": "16_the_likeness_of_the_curse_lifted_up",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Push-in to face; nail wounds stay compact dots, no drips, no serpent droplet, inked style held."
+ },
+ {
+  "slug": "18_curse",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Camera tilts down past the cross; nails and wounds static, no drips or detached droplets, inked style held."
+ },
+ {
+  "slug": "25_we_are_all_bitten__the_cure_outside_us",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Rightward drift onto the distant cross; hand wounds stay small and static, no falling trails, no red spots on the sand."
+ },
+ {
+  "slug": "31_his_own_self_bare_our_sins_in_his_own_body_on_the_tree",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Head stays BARE in every frame (no crown of thorns); nail heads present, wounds static, no detached droplets; clouds only drift."
+ },
+ {
+  "slug": "two_thieves_foreground",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Kling3.0 pro from Gemini drip-removed still, verified by hand: hands/face/composition held clean. PROMOTED."
+ },
+ {
+  "slug": "reuse_face_on_cross",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Wrist/forearm stay clean - wound marks static, no flowing runs; crown, pose and inked style held through the camera move."
+ },
+ {
+  "slug": "04_i_went_in_alone",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Dark interior stays dark, no sparkle column or fog; camera move plus a subtle hand-grip settle only, Baroque style held."
+ },
+ {
+  "slug": "05_that_he_die_not_the_cloud_upon_the_mercy",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "No starburst or glitter; cloud/incense drift stays painterly, prostrate priest and ark stable through push-in."
+ },
+ {
+  "slug": "08_the_first_goat_i_killed_blood_within_the",
+  "verdict": "FAIL",
+  "issues": [
+   "sprinkle droplets grow into a thick continuous pouring red stream from hand to mercy seat",
+   "red pool spreads across the ark lid",
+   "bowl leaves his hand and sits on an invented pedestal by qc9",
+   "arm and body re-pose"
+  ],
+  "note": "Worse than the original defect - full blood-regeneration mode plus an invented bowl stand. [retry 2 FAIL]"
+ },
+ {
+  "slug": "09_both_my_hands_upon_the_live_goat",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "No bokeh/snow; hands stay laid on the goat, only push-in with mild head-angle and smoke drift."
+ },
+ {
+  "slug": "10_i_watched_it_go_a_land_not_inhabited",
+  "verdict": "FAIL",
+  "issues": [
+   "new robed, turbaned figure materializes behind the witness at frame-left in qc9-qc11"
+  ],
+  "note": "Snow overlay gone, but the reframe out-paints an extra person. [retry 2 FAIL]"
+ },
+ {
+  "slug": "11_one_offering_yet_it_took_two_goats",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "No snow overlay on scene or matte; priest, ark, cherubim and goats hold form through the push-in."
+ },
+ {
+  "slug": "14_every_year_i_came_back_and_did_it_again",
+  "verdict": "FAIL",
+  "issues": [
+   "invented dark creature/figure with a face appears seated on a bench mid-clip",
+   "background regenerates into new green drapes, poles and furniture",
+   "lead priest re-poses/walks during the push-in"
+  ],
+  "note": "Snowfall fixed, but the push-in invents a disturbing dark figure and a whole new background set. [retry 2 FAIL]"
+ },
+ {
+  "slug": "16_a_shadow_waits_for_the_body_the_body_cam",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "No censer materializes; priest keeps his single lamp, goats and figures hold pose, push-in only, Baroque oil held. [two independent reviewers agreed]"
+ },
+ {
+  "slug": "17_by_his_own_blood_he_entered_in_once",
+  "verdict": "FAIL",
+  "issues": [
+   "Jesus advances into the veil and fully vanishes by qc9-qc11",
+   "empty curtain frames do not match reference"
+  ],
+  "note": "Repeats the pass-through animation. [retry 2 FAIL]"
+ },
+ {
+  "slug": "21_do_not_come_to_me_or_a_goat_or_an_altar",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Push-in toward the priest; no new bystander, poses held, Baroque style held."
+ },
+ {
+  "slug": "22_come_to_jesus_carried_as_far_as_east_fro",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "No snow overlay, fence cloth stays a cloth, Jesus holds the same open-armed pose, push-in only. [two reviewers agreed]"
+ },
+ {
+  "slug": "25_will_you_come_in_be_carried_clean",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Arms hold pose, camp background survives the push-in intact, oil texture kept to the last frame. [two reviewers agreed]"
+ },
+ {
+  "slug": "slice_01",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Push-in replaces the bad zoom-out: no fabricated panorama, no new figures/tents/finials; kneeling priest and crowd stay frozen. [two reviewers agreed]"
+ },
+ {
+  "slug": "slice_03",
+  "verdict": "FAIL",
+  "issues": [
+   "white-robed figure walks to the veil and disappears behind it",
+   "veil embroidery morphs, growing a central medallion"
+  ],
+  "note": "Same locomotion a third time plus tapestry morph. [retry 2 FAIL]"
+ },
+ {
+  "slug": "slice_07",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Three lots stay suspended above the empty bowl in all frames - no fall-and-land, no accumulation, no dark object; hands hold pose. [two reviewers agreed]"
+ },
+ {
+  "slug": "slice_08",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Mercy-seat glow stays soft (no starburst, no crown), blood level static, drift reveals only plain dark wall/floor. [two reviewers agreed]"
+ },
+ {
+  "slug": "slice_21",
+  "verdict": "FAIL",
+  "issues": [
+   "subject pose change: head lifts from level gaze to looking upward and both arms re-pose into a wide open-armed gesture by qc6-qc11",
+   "pottery on the altar subtly rearranged in late frames"
+  ],
+  "note": "Reframe avoided the invented temple wall, but the prophet visibly re-poses (head up, arms spread) - subject motion, not camera. [retry 2 FAIL]"
+ },
+ {
+  "slug": "slice_22",
+  "verdict": "FAIL",
+  "issues": [
+   "subject locomotion: the wanderer takes visible strides and advances toward Jesus across qc3-qc11",
+   "background bearer group regenerates - figures change count, positions and dress; a new pole-carrying figure appears far-left in qc11"
+  ],
+  "note": "Retry still animates the walk and repaints the background group; no jug this time but locomotion persists. [retry 2 FAIL \u2014 third consecutive fail]"
+ },
+ {
+  "slug": "slice_24",
+  "verdict": "PASS",
+  "issues": [],
+  "note": "Verified by hand (Claude, frame-by-frame vs still): all mourners hold bowed poses, curtain hand static, doorway glow stays soft with only mild ray drift, no invented figures, Baroque oil held."
+ }
+]

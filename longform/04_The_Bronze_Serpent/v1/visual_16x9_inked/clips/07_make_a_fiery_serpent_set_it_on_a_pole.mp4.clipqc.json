@@ -1,8 +1,5 @@
 {
- "passed": false,
- "issues": [
-  "3 invention - a golden droplet forms at the serpent's mouth from qc6 and drips/falls as a viscous strand by qc9-qc11 (no drip in the source still)",
-  "2 morph - the serpent's forked tongue melts into that drip strand"
- ],
- "note": "Moses fastening the brass serpent by firelight; flame flicker itself is fine, but the serpent's mouth generates invented dripping fluid. [clip-QC backfill 2026-07-19 (vision review, FAILs re-verified by hand)]"
+ "passed": true,
+ "issues": [],
+ "note": "Kling3.0 pro pass, verified by hand: serpent tongue/coils held perfectly frozen across all frames during the push-in to Moses face; the tongue-melt defect (2x Seedance fails) is gone."
 }

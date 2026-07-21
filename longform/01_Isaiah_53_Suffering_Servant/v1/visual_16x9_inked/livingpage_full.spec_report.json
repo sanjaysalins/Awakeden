@@ -22,7 +22,7 @@
   ],
   "slams": 39,
   "kling_or_punch_or_slam_pct": 75,
-  "tier1_pct": 26,
+  "tier1_pct": 23,
   "reuse_violations": [
    "israel_servant_nation: beats 41->43 (gap 2 < 8)",
    "philip_eunuch_scroll: beats 60->61 (gap 1 < 8)",
@@ -56,6 +56,7 @@
   "cut_ticks": false,
   "beats": 95
  },
+ "clips_build": true,
  "beats": [
   {
    "beat": 1,
@@ -274,7 +275,7 @@
     "parting_storm_light"
    ],
    "sources": [
-    "dyncam"
+    "kling"
    ],
    "punch": true,
    "cap": {
@@ -672,8 +673,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -1590,8 +1591,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },
@@ -1903,7 +1904,7 @@
     "roman_nails_pouch"
    ],
    "sources": [
-    "dyncam",
+    "kling",
     "dyncam"
    ],
    "punch": false,
@@ -2097,7 +2098,7 @@
     "ninth_hour_darkness"
    ],
    "sources": [
-    "dyncam",
+    "kling",
     "dyncam"
    ],
    "punch": false,
@@ -2128,8 +2129,8 @@
    ],
    "punch": false,
    "cap": {
-    "tier": 1,
-    "style": "box",
+    "tier": 2,
+    "style": "scrim",
     "flag": false
    }
   },

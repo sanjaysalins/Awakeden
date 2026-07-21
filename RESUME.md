@@ -1,6 +1,383 @@
-# RESUME — next session (updated 2026-07-19 END-OF-DAY — ALL FIVE "bigger builds" DONE: one score mixer, panel-variety wired, LF-SP/LF-AS validators, fail-closed long clip-QC; plus panel_animator toolkit + INV-26 from earlier the same day)
+# RESUME — next session (updated 2026-07-21 — the WHOLE clip-QC arc is CLOSED: 44/44 clips PASS, all 3 films rebuilt + scored + sfx'd, gates green, suite 447, galleries refreshed, one clean commit landed.)
 
-## 🔴 PICK UP HERE FIRST (2026-07-19 second wrap, user said "update RESUME.md and let's wrap up")
+## ✅✅✅✅✅✅ 2026-07-21 — CLIP-QC ARC COMPLETE (rebuilds done, committed). Nothing left from this effort.
+
+**What happened this session (2026-07-21):**
+- Discovered Bronze Serpent + Psalm 22 had ALREADY been rebuilt with `--clips` on 2026-07-20
+  after their last clip promotions (verified via `clips_build: true` in both
+  `livingpage_full.spec_report.json` + scored/sfx mtimes) — only Isaiah 53 was stale.
+- **Isaiah 53 rebuilt** via the psalm22 engine (`build_livingpage_16x9.py --pool <isaiah
+  inked pool> --spec livingpage_full.spec.json --clips`) — first Isaiah build on the
+  post-2026-07-16/17 engine, so it also picked up the every-screen-animated + `_dims()`
+  crop fixes it had never had. Animated-gate: 75% composite (WARN zone, passes the 75%
+  shipped floor — same as its old baseline). Reuse flags = only the spec's documented
+  exceptions. Then `_add_score_lf.py --regen` (407.8s) + NEW `_sfx_isaiah53_lf.py`
+  (13-cue bed via pipeline/sfx_bed).
+- `_add_score_lf.py` now prefers the `visual_16x9_inked` pool when present;
+  `_sfx_psalm22_lf.py` retargeted to the inked pool (+ choir cue removed per
+  feedback-no-choir-pad-under-score).
+- **Gates:** `check_landing_hold.py` 34 files **0 FAIL** (Isaiah gap −0.02s; WARNs =
+  known grandfathered old-hold pieces). Full suite **447 passed, 1 skipped**.
+- **Galleries refreshed** via new `_qcfix_refresh_galleries.py` (repo root, reusable):
+  re-extracts filmstrips for any clip newer than its frames + rebuilds
+  `_CLIPQC_REVIEW.html` from current sidecars. 129 clips, 0 FAIL, 32 filmstrips
+  re-extracted. Eye-verified the two decision clips (nail_through_hand swap = static
+  blood, lots_dice_closeup = all bones settled) + 3 frames of the rebuilt Isaiah film.
+- **One clean commit** covering the whole arc (sidecars flipped PASS, 3 fresh spec
+  reports, galleries, EW01 oil archive move, qcfix scripts/state, spend ledger, this file).
+
+**The 3 finished films (current, clip-QC-clean, scored + sfx):**
+- `longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9_inked/LivingPage_Isaiah53_16x9_scored_sfx.mp4` (407.8s)
+- `longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/LivingPage_Psalm22_16x9_scored_sfx.mp4` (421.2s)
+- `longform/04_The_Bronze_Serpent/v1/visual_16x9_inked/BronzeSerpent_16x9_scored_sfx.mp4` (477.8s)
+
+**Still-open backlog (unchanged, in priority order):**
+1. EW01 Two Goats full ink migration (real spend decision — do NOT start without the
+   user; pattern = Bronze's `_build_inked_scene_plan.py`, see the 2026-07-20 section below).
+2. Isaiah 53 is at the old 2.5s landing hold (WARN-only, grandfathered). If the user ever
+   wants it at 3.0s: bump `outro_s` in `_add_score_lf.py` EPISODES + `TOTAL` in
+   `_sfx_isaiah53_lf.py`, re-run score+sfx ($0, ~5 min).
+3. Launch-readiness plan L1-L6 (memory `launch-readiness-plan`).
+
+## 🟢🟢🟢🟢🟢🟢 HISTORICAL — 2026-07-20 — ALL 44 CLIPS DONE, ready to rebuild (superseded by the section above)
+
+**Every in-scope clip now PASSES.** `nail_through_hand` (Isaiah 53) — the last holdout — is
+resolved, but NOT by fixing the animation: after 7 straight failed re-animation attempts (2
+models, 5 strategies, including a genuinely wide fresh render with zero blood visible in
+frame 1 that still invented a bigger splash — see the full log two sections below), the user
+chose to **swap the shot**. `clips/nail_through_hand.mp4` now contains the content of the
+already-passing `pierced_hands_feet.mp4` (same beat: nail-pierced open palm with existing
+static blood that never grows). The original defective clip is archived, not deleted, at
+`longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9_inked/clips/_qcfix_replaced/
+nail_through_hand.mp4`. Sidecar `nail_through_hand.mp4.clipqc.json` updated to `passed: true`
+with the full swap rationale. `_qcfix_state/fix_verify_results.json` now reads **44 PASS / 7
+FAIL** — the 7 FAILs remaining are ALL the moot archived-EW01 clips (`08_the_first_goat...`,
+`10_i_watched_it_go...`, `14_every_year_i_came...`, `17_by_his_own_blood...`, `slice_03`,
+`slice_21`, `slice_22`) — ignore them, EW01 is parked pending its own future full ink
+migration (separate task, not started).
+
+**Real learning worth remembering for future episodes:** nail-through-palm / flesh-piercing
+wound close-ups reliably trigger blood-invention in current i2v models (both Seedance and
+Kling), REGARDLESS of framing (tight or genuinely wide) or prompt wording (plain, explicit
+anti-motion, flat-ink edit). If a future scene plan calls for a similar pierced-flesh macro
+shot, either budget for a shot-swap up front, or design the still so the wound is not
+Kling-animated at all (e.g. a static-hold panel, or bake the beat into a wider tableau that
+was never animated as a nail-macro in the first place).
+
+**Next action (in order), the whole reason this effort started:**
+1. Rebuild the 3 films — `build_livingpage_16x9.py --clips` for isaiah53/psalm22/bronze, each
+   in their own pool dir. (NOT EW01 — still archived to legacy oil, separate future task.)
+2. Re-score (`pipeline/score_mix`), re-sfx (`pipeline/sfx_bed`), `check_landing_hold.py`,
+   `pipeline/panel_variety`, `pipeline/animated_gate`.
+3. Full test suite green.
+4. Refresh `_CLIPQC_REVIEW.html` galleries for all 3.
+5. THEN **one clean commit** covering the whole arc: the clip-QC backfill (sidecars, already
+   committed separately per the 070b7ff commit) + this repair batch (~$70-85 total spend,
+   42 re-animated + promoted, 1 swapped-in, EW01 archived) + the 3 rebuilt films + refreshed
+   galleries.
+6. Report back to the user with the 3 rebuilt films' clickable links + fresh galleries.
+
+Total spend across the whole clip-QC fix effort (backfill + repair batch + this session's
+final push on nail_through_hand): **~$82-87.**
+
+---
+
+## 🔴🔴🔴🔴🔴🔴 PICK UP HERE SECOND (historical — nail_through_hand attempt log, superseded by the resolution above)
+
+**Do NOT spend more on another animation attempt for this clip without asking the user first.**
+7 straight attempts have failed the identical way (wound/blood grows by end of clip), across
+2 different animation models, 5 distinct prompt/edit strategies, and — as of this update —
+BOTH tight-crop AND genuinely wide framing. The 7th attempt (this session) rendered a fresh
+still from a text prompt only (no reference image, so no inherited tight-crop bias):
+full forearm, bound wrist, long stretch of beam, storm sky, hand/nail occupying only the
+lower third of frame, wound drawn as a tiny flat ink mark with ZERO blood color visible in
+frame 1 — verified clean by eye
+(`longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9_inked/clips/_qcfix_test/
+nail_through_hand_freshwide.png`). Kling still invented a large red splash AND a new running
+drip down the wrist by the last frame
+(`..._frames_wide/fw3.jpg`) — **worse than the tight-crop attempts, not better.**
+
+**This falsifies the wide-framing theory. Composition is not the trigger.** Conclusion after
+7 attempts: nail-through-palm crucifixion imagery reliably triggers blood invention in
+current i2v models (Seedance AND Kling) regardless of framing or wording. Spend on this one
+clip alone: ~$12-15 of the ~$70 whole-effort total. **Real options left, genuinely down to
+two now:**
+- **Swap to a different shot for this beat** — remove the nail-entering-flesh element
+  entirely (e.g. a wider crucifixion tableau that doesn't isolate the wound, or reuse/adapt a
+  different existing still for this narration beat).
+- **Accept the original clip as-is** — still in place, untouched, at
+  `longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9_inked/clips/nail_through_hand.mp4`.
+
+Full attempt-by-attempt history + diagnosis: `_qcfix_state/fix_verify_results.json`, slug
+`nail_through_hand` (verdict FAIL, note has the complete 7-attempt log).
+
+## 🔴🔴🔴🔴🔴 PICK UP HERE SECOND — 2026-07-20 (superseded by the section above — kept for the lots_dice_closeup resolution record)
+
+**`lots_dice_closeup` is DONE.** A still-edit (removed all bones suspended in open air) +
+Kling3.0 pro re-roll (5th attempt) verified PASS by hand and was promoted into
+`longform/02_Psalm_22_Song_From_The_Cross/v1/visual_16x9_inked/clips/lots_dice_closeup.mp4`.
+Sidecar updated. **This clip is closed — do not re-touch it.**
+
+**`nail_through_hand` (Isaiah 53) has now failed 6 straight attempts** (2x Seedance reframe,
+4x Kling incl. explicit anti-motion phrasing, a flat-matte-ink wound edit, and a combined
+wide-pullback + flat-ink edit). Every attempt, the wound spreads into a growing blood-splash
+by the final frame. The 6th attempt (this session, 2026-07-20) tried the user-chosen "wider
+framing" fix — asked Gemini to pull the camera back (more forearm, more beam, more sky) in
+one edit from the native 9:16 master `nail_through_hand.png`. **Gemini did NOT actually
+widen the composition** — checked both new frames by eye
+(`longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9_inked/clips/_qcfix_test/
+nail_through_hand_wide.png` and `_frames_wide/f1.jpg` / `f3.jpg`) — the output crop is
+essentially identical to the original tight macro (hand still fills ~70% of frame). Kling
+then regenerated the wound into an even LARGER splash with new spatter droplets — worse than
+attempt 5, not better.
+
+**Diagnosis: Gemini single-image edit cannot reliably recompose/pull back an already-tight
+crop — it preserves the input framing rather than genuinely zooming out.** A real fix needs
+one of:
+- **(a) A brand-new wide establishing shot generated FRESH** (full text-to-image render from
+  the style prompt, not an edit-from-crop) — e.g. a wider crucifixion composition showing
+  the whole forearm + cross beam + more sky, wound small in frame, matching how
+  `04_The_Bronze_Serpent/v1/visual_16x9_inked/21_look_to_the_one_lifted_up_hero_close.png`
+  actually achieved a small, calm wound in a wide composition (it was rendered wide from the
+  start, never edited-wide from a tight crop). Real spend: ~1 fresh HF/NBP render + Vision
+  audit + 1 Kling roll (~$2-3).
+- **(b) Swap in a different existing still/shot** for this beat instead.
+- **(c) Accept the current shipped clip as-is** (the ORIGINAL pre-fix clip, still in place at
+  `longform/01_Isaiah_53_Suffering_Servant/v1/visual_16x9_inked/clips/nail_through_hand.mp4`)
+  — does not meet the "no AI slop" bar, so probably not the right call, but it's an option.
+
+State: `_qcfix_state/fix_verify_results.json` slug `nail_through_hand` now records the 6th
+FAIL with full diagnosis. Its canonical clip file was never touched (only 5 promotions ever
+happened across the whole effort; nail_through_hand isn't one of them).
+
+**Once nail_through_hand is finally resolved (however chosen):** rebuild the 3 films
+(isaiah/psalm22/bronze — NOT EW01, still archived) — `build_livingpage_16x9.py --clips` for
+each in their own pool dirs — then re-score (`pipeline/score_mix`), re-sfx
+(`pipeline/sfx_bed`), `check_landing_hold.py`, `pipeline/panel_variety`,
+`pipeline/animated_gate`, full test suite, refresh `_CLIPQC_REVIEW.html` galleries, THEN one
+clean commit covering the whole arc (clip-QC fix backfill + repair batch + rebuilt films).
+
+---
+
+## 🔴🔴🔴🔴 PICK UP HERE FIRST — 2026-07-20 (latest): only 2 clips left, need your call
+
+**Bottom line: 42 of the 44 in-scope clips (isaiah53/psalm22/bronze) are fixed, verified,
+and promoted.** The Kling 3.0 pass on the 5 remaining stubborn clips (see the "EW01
+archived" section below for the other 7 that got dropped) went 3-for-5:
+- ✅ `07_make_a_fiery_serpent_set_it_on_a_pole` (bronze) — PROMOTED. Kling held the
+  serpent tongue/coils frozen through the push-in; the tongue-melt defect is gone.
+- ✅ `15_hezekiah_breaks_the_brazen_serpent` (bronze) — PROMOTED. Hammer/debris/smoke held
+  fixed relative geometry across all 5 sampled frames; the swing-completes-itself defect
+  is gone.
+- ✅ `two_thieves_foreground` (bronze) — PROMOTED. Clean push-in to Christ's face from the
+  Gemini drip-removed still; hands/face/composition held.
+- ❌ `nail_through_hand` (isaiah53) — **still fails after 4 total attempts** (2x Seedance
+  reframes + 2x Kling, the 2nd Kling attempt used the EXACT explicit "no blood flows,
+  drips, spreads, brightens, pools or grows" phrasing that's PROVEN to work on this same
+  episode's `21_look_to_the_one_lifted_up_hero_close`). The wound still grows a drip and
+  forms a hanging droplet by the last frame, every single time, on every model tried.
+- ❌ `lots_dice_closeup` (psalm22) — **still fails after 4 total attempts** (2x Seedance +
+  2x Kling, the 2nd Kling attempt used explicit "the bones NEVER fall, drop, land, or move
+  further" phrasing matching the proven Hezekiah-hammer precedent). The mid-air bone
+  still completes its fall into the pouch every time.
+
+**Why I stopped instead of retrying again:** this is now a consistent pattern across BOTH
+animation models AND both a plain-reframe prompt style and an explicit-anti-motion prompt
+style that's independently proven to work elsewhere in this same project. That's strong
+evidence the STILL's own composition is the root cause — both shots depict something
+physically mid-action (a wound about to bleed, bones suspended mid-fall) that any video
+model's physics prior overrides text instructions to complete. Throwing more paid rolls
+at the identical recipe isn't going to fix it; a still-level redesign might (remove the
+volatile element from the image itself, the same technique that fixed the Bronze Serpent
+blood-drip clips this session), or a genuinely different shot composition might be needed.
+**This is a real decision point — ask the user before spending more** on either clip:
+options are (a) a Gemini still-edit for each (nail_through_hand: heal the wound mark to a
+single flat dry scar with zero visible depth/moisture, matching the successful
+`21_look_...` still's simpler wound rendering; lots_dice_closeup: redraw so ALL bones are
+already landed/settled in the pouch, none suspended mid-air) then re-roll, (b) accept the
+current shipped clip for one or both (does NOT meet the user's "no AI slop" bar, so
+probably not the right call), or (c) swap in a different existing still/shot for that beat
+entirely if one exists in the pool.
+
+**Total spend across the whole clip-QC fix effort (backfill + repair batch): ~$70.**
+
+**Once the last 2 are resolved (however they get resolved), then:** rebuild the 3 films
+(isaiah/psalm22/bronze — NOT EW01, still archived) — `build_livingpage_16x9.py --clips`
+for each in their own pool dirs — then re-score (`pipeline/score_mix`), re-sfx
+(`pipeline/sfx_bed`), `check_landing_hold.py`, `pipeline/panel_variety`,
+`pipeline/animated_gate`, full test suite, refresh `_CLIPQC_REVIEW.html` galleries, THEN
+one clean commit covering the whole arc.
+
+State files (durable, in `_qcfix_state/` at repo root, survives session boundaries):
+`fix_verify_results.json` now has all 51 final verdicts (42 PASS / 9 FAIL — 7 of the 9
+FAILs are the archived-and-moot EW01 clips, only nail_through_hand + lots_dice_closeup are
+real open items). `fix_jobs.json` unchanged from before. New standalone scripts at repo
+root: `_qcfix_kling5.py` (the 5-clip Kling batch that ran this session),
+`_qcfix_kling2_retry.py` (the explicit-language retry on the final 2 — failed, kept for
+reference/reuse if you want a 5th attempt with a still-edited source image).
+
+---
+
+## 🔴🔴🔴 PICK UP HERE SECOND — 2026-07-20: EW01 archived, big scope change
+
+**What happened:** mid-way through the Kling retry pass on the 12 stubborn clip-QC-fix
+clips (see section below), the user stopped and pointed out that 7 of the 12 belonged to
+EW01 Two Goats — the ONLY finished long-form piece still in the legacy Baroque oil style
+(Isaiah 53, Psalm 22, and Bronze Serpent were already migrated to inked graphic-novel,
+memory `graphic-novel-style-migration`). Fixing 7 oil clips was about to be wasted spend,
+since the user then said: *"archive every work we have done with oil painting, just keep
+the narration handy to use and we will reanimate them all in the new comic style we have
+adapted."*
+
+**Done:** EW01's ENTIRE oil-painting visual production is archived (not deleted) to
+`longform/EW01_Two_Goats/v1/_archived_oil_baroque/` — read its `README.md` first. Contains:
+- `visual_16x9/` — the long film: every still, every clip, clip-QC sidecars, bib-fact
+  audits, sigcrops, AND `scene_plan.json` (+ 2 backups + `scene_plan.md`) — the shot list.
+- `visual_16x9_test/` — throwaway camera POC renders.
+- `publish_thumbs/` (was `v1/publish/thumbs/`).
+- `short_gallery_clips/` + `short_visual_9x16_test/` (was `v1/short/gallery_clips/` +
+  `v1/short/visual_9x16_test/`) — the SEPARATE 9:16 short's oil visual work.
+
+**Untouched, still live at normal paths** (exactly what the user asked to keep): every
+narration/audio/text file for both the long (`v1/narration*.md`, `narration.mp3`,
+`voices.json`, `passage.txt`, `_turns/`, `_independent_review/`, `_bible_check/`, `.locked`)
+and the short (`v1/short/narration*.md`, `narration.calm.md`, `_punchy/` alt cut,
+`_visual_strategy/` planning doc, its own `.locked`).
+
+**Next step for EW01 (a NEW backlog item, not urgent, do NOT start without the user's
+go-ahead — this is a real spend decision, full re-render of ~50 stills + ~50 clips):**
+follow the Bronze Serpent precedent exactly — `longform/04_The_Bronze_Serpent/
+_build_inked_scene_plan.py` shows the pattern: read the legacy oil `scene_plan.json`,
+restyle ONLY the `subject_block` style-prefix text (Baroque-oil phrasing -> inked-
+graphic-novel phrasing), keep every scene's content/camera/timing/captions untouched,
+write the new plan to a new `v1/visual_16x9_inked/scene_plan.json`. Then re-render stills
+(ink renderer, same content) and re-animate clips using the fix-batch's proven techniques
+(frozen-tableau prompts, Kling-for-action vs Seedance-for-calm, drip-removal edits).
+Write an equivalent `_build_inked_scene_plan.py` for EW01 pointed at
+`longform/EW01_Two_Goats/v1/_archived_oil_baroque/visual_16x9/scene_plan.json`.
+
+**The clip-QC fix batch below is NOW SCOPED DOWN to 5 clips, not 12** — the 7 EW01 clips
+listed in "Group A"/"Group B" below are MOOT (their episode is archived; ignore those
+bullet points entirely). Only these 5 remain, all in already-inked episodes, all
+proceeding via HF Kling 3.0 per the user's standing instruction:
+- `nail_through_hand` (isaiah53)
+- `lots_dice_closeup` (psalm22)
+- `07_make_a_fiery_serpent_set_it_on_a_pole` (bronze)
+- `15_hezekiah_breaks_the_brazen_serpent` (bronze)
+- `two_thieves_foreground` (bronze)
+
+**Once those 5 are done, the "rebuild all 4 films" step below becomes "rebuild 3 films"**
+— isaiah/psalm22/bronze only. EW01 does NOT get rebuilt from its old oil clips; it waits
+for the full ink migration (a separate future task).
+
+---
+
+## 🔴🔴 PICK UP HERE SECOND (superseded in part — read the 2026-07-20 section above first)
+
+**Context:** after the clip-QC backfill (below, "PICK UP HERE FIRST second wrap" section)
+found 52 FAIL clips across the 4 long-form films, the user said (verbatim): *"please note
+nothing has been uploaded yet, so feel free to address any issues and lets make it
+production worthy and professional looking with out AI sloop in it"* — full authorization
+to re-animate every defective clip before anything ships. This is that repair batch.
+
+### State right now (2026-07-19 night, session paused by user to switch Claude model)
+- **39 of 51 defective clips FIXED, VERIFIED, and PROMOTED** — the bad original is archived
+  to `<clips_dir>/_qcfix_replaced/<name>.mp4` (NOT deleted, recoverable), the new verified
+  clip is in place, and its `.clipqc.json` sidecar now reads PASS with the fix note.
+  **12 clips remain FAIL** (list below) — their ORIGINAL (defective) clip is STILL the one
+  in place; nothing has been swapped for these 12 yet.
+- **Spend so far: ~$60.**
+- **NONE of the 4 films have been rebuilt yet** — `build_livingpage_16x9.py` (isaiah/psalm22/
+  bronze) and `_assemble_16x9.py` (EW01) have NOT been re-run since the promotions. The
+  currently-shipped mp4s (`BronzeSerpent_16x9_scored_sfx.mp4` etc.) still contain the OLD
+  clips throughout — both the 39 fixed ones and the 12 still-broken ones. **Do not consider
+  any film "done" until a rebuild happens.**
+- Nothing from this session is git-committed yet (deliberate — wait until the 12 are
+  resolved and all 4 films are rebuilt, then one clean commit). `git status` shows modified
+  `.clipqc.json` sidecars (39 flipped PASS) + spend ledger + a pile of untracked `_qcfix_*`
+  scripts/docs — all expected, nothing to worry about.
+
+### ⚠️ CRITICAL: scratchpad state was copied into the repo — use `_qcfix_state/`, not the old temp path
+The session's scratchpad directory (`...\82909425-6283-4f57-b9e1-43a682530658\scratchpad\`)
+is SESSION-SPECIFIC and does not exist in a new session. Before wrapping, the 3 essential
+JSONs were copied to a durable repo location:
+- `C:\Users\sanjay\PycharmProjects\JesusInTheBible\_qcfix_state\fix_jobs.json` — all 48
+  re-animation job specs (still path, prompt, model, edit instructions where used). The 21
+  retry slugs have their SECOND-ROUND (reframed) prompts, not the original round-1 prompts.
+- `C:\Users\sanjay\PycharmProjects\JesusInTheBible\_qcfix_state\fix_verify_results.json` —
+  final verdict per slug (39 PASS / 12 FAIL) with issues + notes from every review round.
+- `C:\Users\sanjay\PycharmProjects\JesusInTheBible\_qcfix_state\qc_verdicts.json` — the
+  original 179-clip backfill verdicts (unchanged reference copy).
+Also at repo root (untracked, already durable): `_QCFIX_PLAN.md` (the original battle plan —
+now partly stale, superseded by this RESUME section), `_QCFIX_STUBBORN12.html` (the decision
+gallery — open it, see below), `_qcfix_batch.py` (the render/verify runner — still the right
+tool for the Kling retries), `_qcfix_testgate.py` + `_qcfix_testgate2.py` (spent, historical,
+safe to ignore/delete).
+
+### The 12 stubborn clips — user's decision on how to finish them (already given, not yet executed)
+Gallery (open this first): `file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/_QCFIX_STUBBORN12.html`
+— side-by-side original vs latest retry + filmstrip + defect history for each.
+
+All 12 failed BOTH the original Seedance roll and a reframed retry roll. They fall into two
+groups, and the user has ALREADY DECIDED how to finish both (said right before pausing:
+*"my kling credit is low, use kling via HF and do them"* — meaning route these through
+**HF's `kling3_0` model** (`HFVideoProvider`/`hf generate create kling3_0`), NOT the direct-
+Kling fallback script, because HF Kling credits are the ones running low):
+
+**Group A — action/crowd panels (10 clips): re-animate via HF Kling 3.0.**
+This matches the project's OWN locked bake-off finding (memory `comic-grid-cost-tiered-
+animation`): Seedance invents motion on multi-figure/action panels; Kling is reserved for
+exactly this category. Every one of these 10 is a frozen-action or multi-figure panel that
+Seedance kept animating to completion no matter how the camera was reframed:
+  - `nail_through_hand` (isaiah) — nail pulls out of the palm on retry
+  - `lots_dice_closeup` (psalm22) — knucklebones complete a full fall-and-land, 3 attempts running
+  - `07_make_a_fiery_serpent_set_it_on_a_pole` (bronze) — serpent tongue keeps lengthening/melting
+  - `15_hezekiah_breaks_the_brazen_serpent` (bronze) — hammer swing completes itself, 3rd time
+  - `two_thieves_foreground` (bronze) — retry regenerated Christ's hands/face instead
+  - `17_by_his_own_blood_he_entered_in_once` (EW01) — Jesus still walks through and vanishes
+  - `slice_03` (EW01) — figure still walks to the veil + invents a new foreground man
+  - `slice_21` (EW01) — invented fire + hand grips a jug that shouldn't move
+  - `slice_22` (EW01) — wanderer still visibly walks, 3rd attempt
+  - `10_i_watched_it_go_a_land_not_inhabited` (EW01) — out-paints an extra figure
+
+**Group B — blood-rite scenes (2 clips): STILL needs a redesign, not just a model swap.**
+  - `08_the_first_goat_i_killed_blood_within_the` (EW01) — the still's own content IS a
+    blood-sprinkling action; both Seedance attempts animated it into a growing/pouring
+    stream. Kling has an even WORSE known blood-invention habit (memory
+    `living-light-no-fresh-blood`) — routing this to Kling as-is will likely make it worse,
+    not better. **Before animating, this one needs a still-level redesign**: either (a) a
+    Gemini edit that freezes the sprinkle as a completed static droplet-arc (same drip-
+    removal technique proven on the Bronze crosses, adapted — describe the blood as
+    already-fallen static drops, not mid-motion), or (b) ask the user whether a milder
+    "hands raised over the bowl, about to sprinkle" framing sidesteps the whole action.
+  - `14_every_year_i_came_back_and_did_it_again` (EW01) — same family: a dipping-hand-into-
+    blood-bowl action; latest retry invented a disturbing seated dark figure AND animated
+    blood. Same redesign-first approach as 08 before any re-roll.
+
+### Concrete next steps for tomorrow (in order)
+1. Read `_qcfix_state/fix_jobs.json` for the 10 Group-A stills/prior prompts, re-render via
+   `_qcfix_batch.py`'s pattern but swap `model` to `kling3_0` and `--start-image` flag intact
+   (kling3_0 does NOT need `--image` per `_HF_NEEDS_IMAGE_FLAG`, `--start-image` is correct;
+   check `--mode`/`--sound` flags are required for kling3_0 — see `pipeline/video_render.py`
+   `_HF_KLING_FLAGS` and `config.VIDEO_HF_MODE`/`VIDEO_HF_SOUND`). Cost: kling3_0 = 10 credits
+   vs seedance's 4.8 (confirmed via `cost.hf_estimate` in this session) — ~$1.50/clip, ~$15
+   for 10.
+2. For Group B (08, 14): do the still-redesign-first step BEFORE spending on any roll —
+   either the Gemini "already-fallen static drops" edit or a quick AskUserQuestion on the
+   milder framing. Do not blindly Kling-roll these two.
+3. QC every new render the SAME way as this session: extract_frames -> vision review vs
+   LF_CRITERIA -> Claude's own eye on any flag -> `record_verdict` sidecar -> promote (archive
+   old to `_qcfix_replaced/`, move new into place) ONLY on a real PASS.
+4. Once all 51 defective clips are finally PASS: rebuild all 4 films —
+   `build_livingpage_16x9.py --clips` for isaiah/psalm22/bronze (their own pool dirs),
+   `_assemble_16x9.py` for EW01 — then re-score (`pipeline/score_mix`), re-sfx
+   (`pipeline/sfx_bed`), `check_landing_hold.py`, `pipeline/panel_variety`,
+   `pipeline/animated_gate`, full test suite, refresh `_CLIPQC_REVIEW.html` galleries.
+5. THEN one clean commit covering the whole clip-QC fix arc (backfill sidecars already
+   committed separately; this covers the repair batch + rebuilt films + updated galleries).
+6. Report back to the user with fresh galleries and the 4 rebuilt films' clickable links.
+
+## 🔴 PICK UP HERE SECOND (2026-07-19 second wrap, user said "update RESUME.md and let's wrap up")
 
 ### 0. Everything committed — day ends at `a4bc200` (9 commits today: 67fc015..a4bc200)
 Working tree clean except pre-existing/not-mine scratch (`_run_audio_bs03.py`, `poc_elevate/`,
