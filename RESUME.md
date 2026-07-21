@@ -1,4 +1,170 @@
-# RESUME — next session (updated 2026-07-21 — the WHOLE clip-QC arc is CLOSED: 44/44 clips PASS, all 3 films rebuilt + scored + sfx'd, gates green, suite 447, galleries refreshed, one clean commit landed.)
+# RESUME — next session (updated 2026-07-21 NIGHT — session paused mid-task. ONE open item: EW01 ink migration (§ below) — 25 stills rendered + 13 re-rolled, awaiting eye-audit of the re-rolls before the stills gate. Everything else this session is committed and closed.)
+
+## 🟡 PICK UP HERE FIRST — 2026-07-21 night — EW01 ink migration IN FLIGHT, paused mid-audit
+
+**Where this is:** user approved ~$35 (ceiling ~$40) for the full EW01 Two Goats oil→ink
+migration. Followed the Bronze Serpent precedent (now locked as `v2/LONGFORM_SPEC.md`
+LF-INV-11 — read it, it's the exact recipe). Spend so far: ~$2 (2 test rolls + 23 first-pass
++ 13 re-rolls = 38 still renders total, all ledgered).
+
+**Files (all uncommitted — durable on disk, not yet in git):**
+- `longform/EW01_Two_Goats/_build_inked_scene_plan.py` — ports the archived oil
+  `scene_plan.json` → `v1/visual_16x9_inked/scene_plan.json` (25 scenes). Contains
+  `REDESIGN` (scenes 8+14, blood-rite settled-state rewrite) and `FIXES_APPEND`/
+  `FIXES_REPLACE` maps (13 scenes, eye-audit fixes from the first render pass).
+- `longform/EW01_Two_Goats/_render_inked_stills.py` — the renderer (Bronze pattern,
+  `--only <ids> --force` to target specific scenes).
+- `longform/EW01_Two_Goats/v1/visual_16x9_inked/*.png` — 25 stills on disk, ALL 13
+  flagged ones already re-rolled with fixes (exit 0, no failures). **NOT yet re-audited
+  by eye** — this is the very next step.
+
+**What the first full-set eye-audit found (all 25 stills viewed at full res)** — recorded
+as reusable failure-mode memory [[ink-render-failure-modes]]:
+1. Christ's nail scars rendered as barbed star-scribbles on 6/6 Christ stills (17,18,20,
+   22,25 + others) — fixed via positive-only phrasing ("a single small quiet healed nail
+   scar, a simple dark oval mark... hands and wrists clean"), never naming the defect
+   (seedream has no negative channel).
+2. The aged gray-bearded witness rendered dark-haired in scenes 3, 9, 14 — fixed by naming
+   the identity explicitly in each block.
+3. Scene 5 (Ark) generated Assyrian lamassu guardian statues instead of the Ark's own gold
+   cherubim — full rewrite. Scene 6 (sons' deaths) needed a full rewrite too (composition
+   was muddled). Scene 19 generated a Christian church steeple + rooftop cross in a
+   pre-crucifixion Jerusalem skyline — full rewrite (period-correct flat-roof skyline).
+4. Scene 8's altar pedestal had a stray liquid trickle despite the "settled" redesign —
+   appended "the stone clean and dry".
+5. Scene 12: the setting sun fused into the witness's eye like a glowing socket — appended
+   "sun hangs small and distant, well away from his face."
+
+**Next steps, in order (this is exactly where to resume):**
+1. Eye-audit the 13 re-rolled stills (open each PNG in `v1/visual_16x9_inked/`, check
+   against the 5 failure modes above — especially confirm no NEW barbed-scar recurrence
+   on 17/18/20/22/25, gray hair correct on 3/9/14, no lamassu/steeple on 5/6/19, dry
+   pedestal on 8, no eye-fusion on 12). If any still fails again, add another
+   FIXES_APPEND/REPLACE entry and re-roll just that id — do not hand-edit outside the
+   plan builder (LF-INV-11 step 4).
+2. Once all 25 are clean: build a still-review gallery (index.html, thumbnails +
+   filenames — follow the `_CLIPQC_REVIEW.html` pattern already in this repo) and bring
+   it to the user as the **HUMAN stills gate** — no animation spend until approved.
+3. On approval: tiered animation (Seedance for calm single-figure scenes, Kling 3.0 for
+   action/crowd/complexity per `comic-grid-cost-tiered-animation` — most of these 25 are
+   calm single-figure, so Seedance-heavy; ~$28 of the budget remains). Frozen-tableau
+   prompts (`adhoc/SKILL_locked.md`), clip-QC sidecars fail-closed per clip.
+4. Reassemble via EW01's own window-lane builder (check `longform/EW01_Two_Goats/*.py`
+   for the existing `_build_audio.py`/`_sfx_two_goats.py` — an assembly script may still
+   need to be written or ported same as the scene-plan/render scripts were).
+5. check_landing_hold.py (target 3.0s from the start, no legacy WARN needed) → INV-27
+   watermark (`add_watermark.py`, top-right since this is a 16:9 long) → full test
+   suite → publish pack (6-CLI panel, same discipline as the 6 packs done today) →
+   ONE commit for the whole migration (scripts + stills + clips + film + gates).
+
+**Memory to read before resuming:** [[LF-INV-11]] is IN the spec now (`v2/LONGFORM_SPEC.md`),
+[[ink-render-failure-modes]] and [[ew01-ink-migration-status]] are both in `.claude` memory —
+`ew01-ink-migration-status.md` is the living tracker, update it as each step above completes.
+
+---
+
+## ✅ 2026-07-21 (afternoon/evening) — RELEASE DESK, WATERMARK, INV-27: ALL CLOSED + COMMITTED
+
+Everything below this line and above the "HF KLING PRICING" section is DONE, committed,
+and gate-verified. No open items from these unless the user raises one.
+
+**1. Isaiah 53 landing hold bumped to the 3.0s standard** (was 2.5s WARN) — `outro_s`
+2.5→3.0 in `_add_score_lf.py`, `TOTAL` 407.78→408.28 in `_sfx_isaiah53_lf.py`, re-scored
++ re-SFX'd. `check_landing_hold.py`: 0 FAIL, Isaiah now clean (was the only WARN worth
+fixing; the rest are grandfathered legacy pieces per the standing rule).
+
+**2. Release-desk sync after the clip-QC rebuilds** — `FINAL_VIDEO.txt` pins added/fixed
+for Isaiah 53 (new) and Psalm 22 (RETARGETED from a stale pre-fix copy — real bug, the old
+pin was blessing a superseded film as the postable). Thumbnails + read-page frames
+refreshed from the current finals. `release_check.py`: 7 FAIL → 6 FAIL (remainder = the
+pre-existing "no publish pack" backlog, addressed next).
+
+**3. Six publish packs built + panel-reviewed** (Isaiah 53 long + Psalm 22 shorts
+02/04/05/06/07 — the ones with no `publish_meta.json`, the deterministic fact source).
+Full discipline each: agent-bridge draft → my own hostile red-team → external 5-CLI panel
+(cursor/claude/gemini/codex/grok, 5/5 healthy every run) → convergent findings applied by
+hand. Real fixes the panels forced: Psalm 22:7 vs 22:8 citation, "word for word" →
+"nearly line for line" overclaim, "nation after nation has turned" → "people in nation
+after nation have turned" (nations-as-units overclaim), unmarked KJV fragments
+quote-marked + attributed (esp. Acts 8:34/8:35 exact tense), Facebook titles corrected to
+not oversell scope. Isaiah long also got CHAPTERS + PINNED_COMMENT authored, and
+`v1/audio/alignment.json` built from `narration.alignment.json` (production-note preamble
+stripped, real speech starts 0.435s) so `captions.srt` exists. **`release_check.py`: GREEN,
+78/78 clean, 0 FAIL** (28 WARN = pre-existing backlog like unbuilt long-form packs
+elsewhere, not from today).
+
+**4. Read pages for the 5 new Psalm 22 shorts** — `_website/manifest.yaml` promoted
+ps22-02/04/05/06/07 (read_source + preview fields); `read/` grew from 14 to 19 strips.
+`publish_meta.json` `read_url` set for all 5 + Isaiah; "Read it panel by panel" line
+inserted into each pack's YouTube/Facebook footer. Site was built LOCALLY only — never
+deployed to awakeden.com (no `_website` deploy command was run).
+
+**5. Brand footer: "Follow Awakeden" on TikTok/Instagram/Facebook** (was "Subscribe"
+everywhere) — YouTube keeps "Subscribe". New `cta_line_social` in
+`data/upload_brand.json`; `build_footer()` picks it for non-YouTube platforms. All 57
+existing platform-copy files across 19 pieces updated, every pack re-indexed and
+re-gated GREEN.
+
+**6. AWAKEDEN watermark — designed, locked, and burned into all 22 shipped finals**
+(now **INV-27** in `v2/SPEC.md`). Site-exact wordmark (AWAK bone + EDEN red-bright,
+Arial Black, soft shadow) — the OLD "shared split-E" mark used on thumbnails is retired
+(`pipeline/channel_dress.py draw_wordmark` rewritten; `pipeline/thumbnails.py
+brand_assets` now also writes `_brand/awakeden_watermark_overlay.png`, the transparent
+video-overlay variant). **Position, user-picked from 3 live samples**: 9:16 shorts =
+top-LEFT (200px @ 40,70 on a 1080 page — top-right is where TikTok/Shorts draw their own
+UI icons); 16:9 long films = top-RIGHT (260px @ 28px margins on 1920). New tool
+`add_watermark.py` (repo root) — idempotent, fail-closed on duration drift, archives
+every original as `<stem>.prewm.bak.mp4`. **All 22 finals done, 0 FAIL.** Downstream
+re-keyed: 88 thumbnails, 14 read pages (this was BEFORE the 5 new ones landed — read
+pages got rebuilt twice today, final count 19), all packs re-indexed + copy-staleness
+cleared. Suite 447 passed. Release desk GREEN 78/78 (re-verified after both the
+watermark AND the 5-pack/read-page work — same 78/78 clean, 28 WARN baseline both times).
+
+**Commits from this whole afternoon/evening arc (chronological):** `23c4b89` (release
+sync), `38269f0` (6 publish packs), `1bedea8` (5 read pages), `75fd6ce` (INV-27 lock),
+`7231e29` + `2bba518` (watermark rollout + scratch-file cleanup).
+
+## ✅ 2026-07-21 (evening) — HF KLING PRICING DEEP-DIVE + kling2_6 A/B: CLOSED, all findings documented
+
+**The question:** are we calling HF Kling 3.0 the cheapest way possible (esp. unused audio)?
+**The answer: YES on audio** — every call site passes `--sound off` (a real 25–30% saving;
+the flag defaults ON), veo3_1_lite audio defaults off, seedance audio is free either way.
+
+**Ground truth found by joining 78 real transactions to job records (red-team pass 2):**
+- **kling3_0 pro+sound-off BILLS 7.5cr ≈ $1.13/clip** — the `hf generate cost` estimator
+  overquotes it as 8.75. 43 charges verified, zero at 8.75. Transactions = actuals source.
+- `kling3_0_turbo` saves nothing (1080p turbo quotes 10 > pro-off 7.5 billed). 4k (30cr) unused.
+- 20 legacy charges at 6.25cr are unexplained (job params aged out of HF's 100-job window);
+  possibly old std billing. NOT worth a paid test (~$0.19/clip max gap).
+
+**kling2_6 A/B (user-approved, $1.50 spent, `_bakeoff_kling26/compare.html`): REJECTED.**
+On the #08 gallery hard-cut it INVENTED two gold picture frames (one holding a portrait of a
+man not in the still) + regenerated faces mid-clip; clean on the #19 push-in (5 frames
+eye-verified). Real gap only 2.5cr ≈ $0.38/clip — not worth invention risk in biblical scenes.
+SCOPE NOTE: A/B stills were legacy Baroque (user reconfirmed 2026-07-21: oil DEPRECATED,
+inked comic-strip is the ONLY production style — memory `graphic-novel-style-migration`);
+the verdict still stands for inked via the 2026-07-17 style POC (kling3_0 WIN "inked line
+art fully survives" vs kling2_6 GOOD-but-softer). kling3_0 pro stays the shorts default.
+
+**Code shipped (pipeline tests 392 passed, 1 skipped):**
+- `pipeline/cost.py`: `hf_estimate`/`record_hf` take `params={...}` (the create call's own
+  flags) so ledger rows price the real config, not model defaults (kling3_0 default = 10cr
+  sound-ON). Estimator-vs-billing caveat documented in the docstring.
+- `pipeline/video_render.py`: one params dict drives both the create cmd and the ledger row;
+  fixed latent kling2_6 breakage (boolean `--sound`, no `--mode` — old shared flags would
+  hard-error).
+- `_hf_animate_short.py`: logs exact credits (was flat $0.65 = the direct-Kling figure).
+- `longform/_animate_16x9.py` + `longform/_build_two_goats_visual.py`: removed DOUBLE ledger
+  rows (providers record internally; drivers must not add a second row).
+- Docs updated: `v2/SPEC.md` §7 cost model (billed prices + pricing-facts block), CLAUDE.md
+  comic-grid credits line, memory `hf-video-pricing-sound-off` (+ index).
+- NOTE: old ledger rows keep their inflated/flat estimates — only new rows are exact.
+  `python -m pipeline.cost reconcile` remains the way to true-up against transactions.
+
+**Known foot-gun (no action needed):** root `_hf_animate_short.py` prompt text says "Baroque
+oil painting" — inked pieces already avoid it via piece-local drivers (e.g.
+`batches/cluster_01_cross/father_forgive_them/animate_stills.py`) that reuse only
+`hf_animate()`. Any NEW inked short must do the same, never the root prompt stack.
 
 ## ✅✅✅✅✅✅ 2026-07-21 — CLIP-QC ARC COMPLETE (rebuilds done, committed). Nothing left from this effort.
 
