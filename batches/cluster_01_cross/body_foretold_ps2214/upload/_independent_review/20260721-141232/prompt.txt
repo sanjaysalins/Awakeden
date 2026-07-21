@@ -1,0 +1,223 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: upload
+
+LENS — judge this UPLOAD-METADATA KIT (titles / descriptions / tags /
+hashtags for YouTube, TikTok, Facebook, Instagram). Be specific, cite the exact
+platform + phrase:
+- HOOKY BUT HONEST: does any title clickbait, sensationalise, or overclaim doctrine
+  or history? A curiosity hook is fine ONLY if it is true to the text. Flag any lie
+  or bait-and-switch (metadata promising what the video doesn't deliver).
+- KJV verbatim: any quoted verse must be exact KJV. Flag an altered word.
+- Doctrine: evangelical, Christ-pointing, no fear / gain-loss / works framing.
+- Platform fit: right tone + a strong FIRST line for TikTok/Instagram; long-form vs
+  short framing correct; hashtag counts sane; tags are real search keywords.
+- SEO honesty: keywords/tags are relevant to the actual content (no tag-stuffing).
+- Forgettable / templated titles that won't earn the click honestly.
+- Brand: CTA-to-Jesus present; footer/links not mangled.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block (on the VERDICT line write exactly ONE word —
+PASS or REVISE or FAIL — never the list of options):
+
+VERDICT: <PASS or REVISE or FAIL>
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# Upload Kit — The Body Foretold
+
+**Status:** RED-TEAMED  ·  **Gates:** ALL PASS ✅
+**Video:** `C:\Users\sanjay\PycharmProjects\JesusInTheBible\batches\cluster_01_cross\body_foretold_ps2214\visual\body_foretold_ps2214_sfx.mp4`
+**Format:** short  ·  **Series:** Jesus in the Old Testament  ·  **Anchor:** Psalm 22:14-17
+
+> Copy each block straight into the platform's upload form. Title, description,
+> tags and hashtags are pre-checked, red-teamed and panel-reviewed.
+
+## ✔ Verification
+
+✅ **UK-G1 length** — all fields within hard limits
+✅ **UK-G2 KJV-strict** — anchor verse quoted verbatim
+✅ **UK-G3 doctrine** — no clickbait/overclaim tokens
+✅ **UK-G4 brand** — footer + CTA-to-Jesus present
+✅ **UK-G5 platform** — hashtag counts + link rules OK
+✅ **UK-G6 no-repeat** — no title collisions with siblings
+✅ **UK-G7 lint** — plain ASCII, grace-anchored, verse front-loaded
+
+### Red-team (in-engine hostile auditor)
+
+```
+VERDICT: PASS
+
+- KJV check: both quoted fragments are verbatim ("I am poured out like water, and all my bones are out of joint" - Psalm 22:14; "I may tell all my bones: they look and stare upon me" - Psalm 22:17), quote-marked and attributed at the point of quotation on every platform that quotes them, refs front-loaded. PASS.
+- Historical honesty: the kit keeps the video's precise scoping - "Rome would not make it its instrument for centuries" - and never claims crucifixion was unknown before Rome. The "reads like an eyewitness account" hook carries the video's own "reads like" hedge. No overclaim.
+- Restraint check (verified): the anchor range includes v16 ("they pierced my hands and my feet") but the video never quotes it, and the kit correctly does not lead with it or claim it. Right call - do not add it in any future edit.
+- tiktok (minor, non-blocking): "Poured out like water, bones out of joint, counted and stared at" compresses KJV language without quote marks. It reads as summary allusion beside the named psalm, not as a quotation; acceptable at caption length.
+- Titles: "A King Described a Death He Never Saw" is honest (David wrote ten centuries before the event) and does not collide with the sibling "The Crucifixion Foretold". No clickbait.
+- Grace check: "He was crushed in your place. Come home to him" extends the video's own "to bring you home" landing; invitation, no fear or gain-loss framing. PASS.
+```
+
+## Title options (chosen first)
+
+1. **A King Described a Death He Never Saw** ⟵ CHOSEN  
+   _angle: eyewitness-paradox: David writes crucifixion detail centuries before Rome used it_
+2. **The Dying Body in Psalm 22 Reads Like an Eyewitness Account**  
+   _angle: text-forward: the anatomical precision of the psalm_
+3. **David Wrote a First-Person Death That Was Not His Own**  
+   _angle: authorship-puzzle: first person, someone else's death_
+4. **Poured Out, Out of Joint, Counted Bone by Bone**  
+   _angle: KJV-imagery triple: the psalm's own physical detail_
+
+## YouTube (Short)
+
+**TITLE** (copy):
+```
+A King Described a Death He Never Saw
+```
+_37 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+A king described a dying body so exactly it reads like an eyewitness account of a crucifixion he never saw (Psalm 22:14-17).
+
+"I am poured out like water, and all my bones are out of joint" (Psalm 22:14, KJV). Drained, every joint pulled loose, the way a body hangs when it is suspended by the arms.
+
+"I may tell all my bones: they look and stare upon me" (Psalm 22:17, KJV). Every bone stretched and exposed, while onlookers stood and stared.
+
+David wrote it in the first person, but he was describing someone else's death. He never saw a crucifixion; Rome would not make it its instrument for centuries. Yet the dying man of his song bears the marks of one, written early.
+
+This is what Jesus bore to bring you home: every wrenched joint, every cold stare, recorded centuries early so you would know none of it was chance. He was crushed in your place. Come home to him.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_1100 characters_
+
+**TAGS** (copy — paste into the keyword/tags field):
+```
+psalm 22, psalm 22 14, psalm 22 17, david, messianic psalm, crucifixion foretold in psalms, poured out like water, bones out of joint, the crucifixion, kjv bible, bible shorts, jesus christ, gospel
+```
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Psalm22 #Cross #KJV
+```
+
+---
+## YouTube (Long-form 16:9)
+
+**TITLE** (copy):
+```
+The Body in Psalm 22: Crucifixion Detail Written Centuries Early
+```
+_64 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+David described a dying body so exactly it reads like an eyewitness account of a crucifixion he never saw (Psalm 22:14-17).
+
+"I am poured out like water, and all my bones are out of joint" (Psalm 22:14, KJV). Drained, every joint pulled loose, the way a body hangs suspended by the arms.
+
+"I may tell all my bones: they look and stare upon me" (Psalm 22:17, KJV). Every bone stretched and exposed, under the stares of onlookers.
+
+David wrote in the first person, but he was describing someone else's death, not his own. He never saw a crucifixion; Rome would not make it its instrument for centuries. Yet the dying man of his song bears its marks, written early.
+
+This is what Jesus bore to bring you home: every wrenched joint, every cold stare, recorded centuries in advance so you would know none of it was chance. He was crushed in your place. Come home to him.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_1093 characters_
+
+**TAGS** (copy — paste into the keyword/tags field):
+```
+psalm 22, psalm 22 14, psalm 22 17, david, messianic psalm, old testament prophecy, crucifixion foretold in psalms, poured out like water, bones out of joint, the crucifixion, kjv bible, bible study, jesus christ, gospel
+```
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Psalm22 #Cross #KJV
+```
+
+---
+## TikTok
+
+**DESCRIPTION / CAPTION** (copy):
+```
+A king described a dying body so exactly it reads like an eyewitness account of a crucifixion he never saw. Poured out like water, bones out of joint, counted and stared at. David wrote it centuries before Rome made crucifixion its instrument. Jesus bore it to bring you home.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+```
+_354 characters_
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Psalm22 #Cross #KJV
+```
+
+---
+## Facebook (Reel/Video)
+
+**TITLE** (copy):
+```
+First Person, Someone Else's Death
+```
+_34 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+David described a dying body so exactly it reads like an eyewitness account of a crucifixion he never saw (Psalm 22:14-17).
+
+"I am poured out like water, and all my bones are out of joint" (Psalm 22:14, KJV). "I may tell all my bones: they look and stare upon me" (Psalm 22:17, KJV).
+
+He wrote in the first person, but he was describing someone else's death. Rome would not make crucifixion its instrument for centuries. This is what Jesus bore to bring you home, recorded early so you would know none of it was chance. He was crushed in your place. Come home to him.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_795 characters_
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Psalm22 #KJV
+```
+
+---
+## Instagram (Reel)
+
+**DESCRIPTION / CAPTION** (copy):
+```
+A king described a dying body he never saw: "I am poured out like water, and all my bones are out of joint" (Psalm 22:14). Written centuries before Rome made crucifixion its instrument, yet it reads like an eyewitness account. Jesus bore every wrenched joint and every cold stare to bring you home. He was crushed in your place.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+```
+_406 characters_
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Psalm22 #Cross #KJV #BibleShorts #David #Gospel #Christian #Awakeden
+```
+
+---
+----- ARTIFACT END -----

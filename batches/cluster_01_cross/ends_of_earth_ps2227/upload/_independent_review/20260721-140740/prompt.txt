@@ -1,0 +1,219 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: upload
+
+LENS — judge this UPLOAD-METADATA KIT (titles / descriptions / tags /
+hashtags for YouTube, TikTok, Facebook, Instagram). Be specific, cite the exact
+platform + phrase:
+- HOOKY BUT HONEST: does any title clickbait, sensationalise, or overclaim doctrine
+  or history? A curiosity hook is fine ONLY if it is true to the text. Flag any lie
+  or bait-and-switch (metadata promising what the video doesn't deliver).
+- KJV verbatim: any quoted verse must be exact KJV. Flag an altered word.
+- Doctrine: evangelical, Christ-pointing, no fear / gain-loss / works framing.
+- Platform fit: right tone + a strong FIRST line for TikTok/Instagram; long-form vs
+  short framing correct; hashtag counts sane; tags are real search keywords.
+- SEO honesty: keywords/tags are relevant to the actual content (no tag-stuffing).
+- Forgettable / templated titles that won't earn the click honestly.
+- Brand: CTA-to-Jesus present; footer/links not mangled.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block (on the VERDICT line write exactly ONE word —
+PASS or REVISE or FAIL — never the list of options):
+
+VERDICT: <PASS or REVISE or FAIL>
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# Upload Kit — The Ends of the Earth
+
+**Status:** RED-TEAMED  ·  **Gates:** ALL PASS ✅
+**Video:** `C:\Users\sanjay\PycharmProjects\JesusInTheBible\batches\cluster_01_cross\ends_of_earth_ps2227\visual\ends_of_earth_ps2227_sfx.mp4`
+**Format:** short  ·  **Series:** Jesus in the Old Testament  ·  **Anchor:** Psalm 22:27
+
+> Copy each block straight into the platform's upload form. Title, description,
+> tags and hashtags are pre-checked, red-teamed and panel-reviewed.
+
+## ✔ Verification
+
+✅ **UK-G1 length** — all fields within hard limits
+✅ **UK-G2 KJV-strict** — anchor verse quoted verbatim
+✅ **UK-G3 doctrine** — no clickbait/overclaim tokens
+✅ **UK-G4 brand** — footer + CTA-to-Jesus present
+✅ **UK-G5 platform** — hashtag counts + link rules OK
+✅ **UK-G6 no-repeat** — no title collisions with siblings
+✅ **UK-G7 lint** — plain ASCII, grace-anchored, verse front-loaded
+
+### Red-team (in-engine hostile auditor)
+
+```
+VERDICT: REVISE
+
+- tiktok (precision): "nation after nation has turned to the LORD" quietly upgrades the video's claim. The narration says "people in nation after nation have turned" - people within nations, not nations as converted units. Fix: "people in nation after nation have turned to the LORD."
+- instagram (attribution, minor): the caption opens with a verbatim KJV fragment ("all the ends of the world shall remember and turn unto the LORD") with no quote marks. The next sentence does name Psalm 22, so it is not orphaned, but adding "Psalm 22:" before the line would make the quotation honest at a glance. Non-blocking.
+- Cross-sibling consistency check (non-blocking, verified): this kit says the psalm "ends with every nation" (v27) while the sibling he_hath_done_this kit calls v31 the psalm's "last line." No contradiction: vv27-31 form the psalm's closing movement about the nations, and v31 is its final line; both kits mirror their own video's hook. Leave as is.
+- KJV check: Psalm 22:27 verbatim, correctly attributed, front-loaded in YT/FB. PASS.
+- Titles: chosen title is the video's own arc, honest, no sibling collision. Facebook title is a verbatim line from the narration. PASS.
+- Grace check: "still has room for you to turn to him" is the video's own landing; invitation, no fear framing. PASS.
+```
+
+## Title options (chosen first)
+
+1. **The Psalm That Starts With One Dying Man and Ends With Every Nation** ⟵ CHOSEN  
+   _angle: scale-contrast: one forsaken man to all the kindreds of the earth_
+2. **How Far Does the Cross Reach? Psalm 22 Already Said.**  
+   _angle: reach-question: the psalm names the ends of the world in advance_
+3. **One Man Dying Alone. Then the Ends of the Earth.**  
+   _angle: stark two-beat contrast, the psalm's own arc_
+4. **The Song That Swept the Whole Earth**  
+   _angle: aftermath: what actually happened to this psalm's promise_
+
+## YouTube (Short)
+
+**TITLE** (copy):
+```
+The Psalm That Starts With One Dying Man and Ends With Every Nation
+```
+_67 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+Psalm 22 opens with one forsaken man dying alone, and ends with every nation on earth (Psalm 22:27).
+
+"All the ends of the world shall remember and turn unto the LORD: and all the kindreds of the nations shall worship before thee" (Psalm 22:27, KJV).
+
+A man dying in one corner of the Roman Empire, and his song says the ends of the earth will turn to God. It sounded impossible. But from that cross and the empty tomb, the gospel went out, and people in nation after nation have turned to the LORD, worshipping the One who died and rose. It was never a local tragedy. It was for the nations.
+
+And the ends of the world includes wherever you are, right now. The Lord this song promised still has room for you to turn to him.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_952 characters_
+
+**TAGS** (copy — paste into the keyword/tags field):
+```
+psalm 22, psalm 22 27, ends of the earth, all nations, great commission, reach of the cross, messianic psalm, the crucifixion, resurrection, kjv bible, bible shorts, jesus christ, gospel
+```
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Psalm22 #Gospel #KJV
+```
+
+---
+## YouTube (Long-form 16:9)
+
+**TITLE** (copy):
+```
+From One Forsaken Man to All the Kindreds of the Earth: Psalm 22:27
+```
+_67 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+Psalm 22 opens with the forsaken cry of one man dying alone. It ends with every nation on earth (Psalm 22:27).
+
+"All the ends of the world shall remember and turn unto the LORD: and all the kindreds of the nations shall worship before thee" (Psalm 22:27, KJV).
+
+A man dying in one corner of the Roman Empire, and his song says the ends of the earth will turn to God. It sounded impossible. But from the cross and the empty tomb the gospel went out, and people in nation after nation have turned to the LORD, worshipping the One who died and rose. That is the reach of the cross: never a local tragedy, but for the nations, all the kindreds of the earth.
+
+And the ends of the world includes wherever you are, right now. The Lord this song promised still has room for you to turn to him.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_1013 characters_
+
+**TAGS** (copy — paste into the keyword/tags field):
+```
+psalm 22, psalm 22 27, ends of the earth, all the kindreds of the nations, reach of the cross, messianic psalm, old testament prophecy, spread of the gospel, resurrection, kjv bible, bible study, jesus christ, gospel, the nations
+```
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Psalm22 #Gospel #KJV
+```
+
+---
+## TikTok
+
+**DESCRIPTION / CAPTION** (copy):
+```
+Psalm 22 opens with one forsaken man dying alone and ends with every nation on earth. From that cross the gospel went out, and nation after nation has turned to the LORD. The ends of the world includes wherever you are right now.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+```
+_307 characters_
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Psalm22 #Gospel #KJV
+```
+
+---
+## Facebook (Reel/Video)
+
+**TITLE** (copy):
+```
+It Was Never a Local Tragedy. It Was for the Nations.
+```
+_53 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+Psalm 22 opens with one forsaken man dying alone, and ends with every nation on earth (Psalm 22:27).
+
+"All the ends of the world shall remember and turn unto the LORD: and all the kindreds of the nations shall worship before thee" (Psalm 22:27, KJV).
+
+From the cross and the empty tomb the gospel went out, and people in nation after nation have turned to the LORD, worshipping the One who died and rose. And the ends of the world includes wherever you are, right now. The Lord this song promised still has room for you to turn to him.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_763 characters_
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Psalm22 #KJV
+```
+
+---
+## Instagram (Reel)
+
+**DESCRIPTION / CAPTION** (copy):
+```
+One forsaken man dying alone. Then: all the ends of the world shall remember and turn unto the LORD. Psalm 22 saw the reach of the cross in advance, and the gospel has been crossing nations ever since. Wherever you are is inside the ends of the world. There is still room to turn.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+```
+_358 characters_
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Psalm22 #Gospel #KJV #BibleShorts #Cross #Christian #Nations #Awakeden
+```
+
+---
+----- ARTIFACT END -----

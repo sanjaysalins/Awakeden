@@ -1,0 +1,221 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: upload
+
+LENS — judge this UPLOAD-METADATA KIT (titles / descriptions / tags /
+hashtags for YouTube, TikTok, Facebook, Instagram). Be specific, cite the exact
+platform + phrase:
+- HOOKY BUT HONEST: does any title clickbait, sensationalise, or overclaim doctrine
+  or history? A curiosity hook is fine ONLY if it is true to the text. Flag any lie
+  or bait-and-switch (metadata promising what the video doesn't deliver).
+- KJV verbatim: any quoted verse must be exact KJV. Flag an altered word.
+- Doctrine: evangelical, Christ-pointing, no fear / gain-loss / works framing.
+- Platform fit: right tone + a strong FIRST line for TikTok/Instagram; long-form vs
+  short framing correct; hashtag counts sane; tags are real search keywords.
+- SEO honesty: keywords/tags are relevant to the actual content (no tag-stuffing).
+- Forgettable / templated titles that won't earn the click honestly.
+- Brand: CTA-to-Jesus present; footer/links not mangled.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block (on the VERDICT line write exactly ONE word —
+PASS or REVISE or FAIL — never the list of options):
+
+VERDICT: <PASS or REVISE or FAIL>
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# Upload Kit — Isaiah 53: The Suffering Servant
+
+**Status:** RED-TEAMED  ·  **Gates:** FAILURES ❌
+**Video:** `C:\Users\sanjay\PycharmProjects\JesusInTheBible\longform\01_Isaiah_53_Suffering_Servant\v1\visual_16x9_inked\LivingPage_Isaiah53_16x9_scored_sfx.mp4`
+**Format:** long  ·  **Series:** Jesus in the Old Testament  ·  **Anchor:** Isaiah 53:5
+
+> Copy each block straight into the platform's upload form. Title, description,
+> tags and hashtags are pre-checked, red-teamed and panel-reviewed.
+
+## ✔ Verification
+
+✅ **UK-G1 length** — all fields within hard limits
+✅ **UK-G2 KJV-strict** — anchor verse quoted verbatim
+✅ **UK-G3 doctrine** — no clickbait/overclaim tokens
+✅ **UK-G4 brand** — footer + CTA-to-Jesus present
+✅ **UK-G5 platform** — hashtag counts + link rules OK
+✅ **UK-G6 no-repeat** — no title collisions with siblings
+❌ **UK-G7 lint** — youtube_long: grace violation [works-selfhelp] 'clean yourself'; youtube_long: anchor ref 'isaiah' not in the first 157 chars (front-load the verse/hook before the 'more' fold)
+
+### Red-team (in-engine hostile auditor)
+
+```
+VERDICT: REVISE
+
+- youtube_long (unmarked KJV fragments): the description weaves near-verbatim KJV into prose without quote marks - "of whom speaketh the prophet this" (Acts 8:34) and "all we like sheep have gone astray" (Isaiah 53:6). Both hug the KJV so closely they read as quotations. Fix: quote-mark both at the point of quotation - asks, "of whom speaketh the prophet this?" ... and: "All we like sheep have gone astray" (Isaiah 53:6). The Philip line ("beginning at the same scripture, preaches unto him Jesus") changes tense from Acts 8:35; either quote it exactly or loosen the paraphrase so it cannot be mistaken for the verse.
+- Long-unit completeness: this kit must ship with CHAPTERS (the film's seven movements, timed) and a PINNED_COMMENT in youtube_long.md - the publish gate fails a long unit without them. They are not in this draft and must be authored before the pack is called done.
+- KJV check: Isaiah 53:5 is verbatim as supplied on every platform that quotes it, marked and attributed, ref front-loaded. Instagram's partial quote is marked and labeled (Isaiah 53:5, KJV). PASS.
+- Honesty: "700 years" matches the narration's own claim; the description promises exactly the film's seven movements including the Israel objection treated seriously; "Have you believed the report?" is the film's own closing line. No clickbait, no overclaim.
+- Grace check: the landing ("Already carried. Already taken away. You do not have to clean yourself up before you come") is the film's own grace-anchored wording; no fear or gain-loss framing. PASS.
+- Titles: chosen title is specific, honest, and collides with no sibling. PASS.
+```
+
+## Title options (chosen first)
+
+1. **Isaiah 53: The Death Described 700 Years Before It Happened** ⟵ CHOSEN  
+   _angle: time-paradox: the wounds, silence, grave and rich man written seven centuries early_
+2. **Who Is the Suffering Servant of Isaiah 53?**  
+   _angle: the honest question the chapter itself forces, including the Israel reading_
+3. **The Prophet Who Wrote Down a Death He Never Saw (Isaiah 53)**  
+   _angle: eyewitness-paradox at deep-dive length_
+4. **Isaiah 53: Wounded for Whose Transgressions?**  
+   _angle: the exchange at the chapter's centre, posed as the viewer's question_
+
+## YouTube (Short)
+
+**TITLE** (copy):
+```
+Isaiah 53: The Death Described 700 Years Before It Happened
+```
+_59 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+Seven hundred years before a Roman nail was ever driven, a prophet in Jerusalem wrote down the death of a man he had never met (Isaiah 53).
+
+"But he was wounded for our transgressions, he was bruised for our iniquities: the chastisement of our peace was upon him; and with his stripes we are healed" (Isaiah 53:5, KJV).
+
+The wounds, the silence, the grave, the rich man in his death, and what the wounds were for. Then a traveller on a desert road asks the question the whole chapter waits for: of whom speaketh the prophet this? And the New Testament answers by name.
+
+The report is true. Come to the One it names.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_843 characters_
+
+**TAGS** (copy — paste into the keyword/tags field):
+```
+isaiah 53, suffering servant, isaiah 53 5, wounded for our transgressions, messianic prophecy, acts 8, ethiopian eunuch, old testament prophecy, kjv bible, bible study, jesus christ, gospel
+```
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Isaiah53 #Prophecy #KJV
+```
+
+---
+## YouTube (Long-form 16:9)
+
+**TITLE** (copy):
+```
+Isaiah 53: The Death Described 700 Years Before It Happened
+```
+_59 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+Seven hundred years before a Roman nail was ever driven, a prophet in Jerusalem wrote down the death of a man he had never met: the wounds, the silence, the grave, the rich man in his death, and what the wounds were for (Isaiah 52:13-53:12).
+
+"But he was wounded for our transgressions, he was bruised for our iniquities: the chastisement of our peace was upon him; and with his stripes we are healed" (Isaiah 53:5, KJV).
+
+This deep-dive walks the whole fourth Servant Song, movement by movement: the report no one believed; the Servant exalted and then marred more than any man; the exchange at the chapter's centre, where every line is a transaction; the lamb silent before her shearers; the honest question thoughtful Jewish readers raise, whether the Servant is Israel, taken seriously and answered from the text itself; the moment in Acts 8 when a traveller reading this very chapter asks, of whom speaketh the prophet this, and Philip, beginning at the same scripture, preaches unto him Jesus; the line heavier than all the wounds, that it pleased the LORD to bruise him; and the quiet turn toward morning, a grave that could not be the end of him.
+
+The arm of the LORD is not a thing. It is a person, and he has your name in verse six: all we like sheep have gone astray. Already carried. Already taken away. You do not have to clean yourself up before you come.
+
+The report is true. The arm of the LORD has a name. Have you believed the report?
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_1680 characters_
+
+**TAGS** (copy — paste into the keyword/tags field):
+```
+isaiah 53, suffering servant, isaiah 53 5, isaiah 53 explained, wounded for our transgressions, with his stripes we are healed, messianic prophecy, fourth servant song, is the servant israel, acts 8, ethiopian eunuch, philip preached jesus, old testament prophecy, kjv bible, bible study, jesus christ, gospel
+```
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Isaiah53 #Prophecy #KJV
+```
+
+---
+## TikTok
+
+**DESCRIPTION / CAPTION** (copy):
+```
+A prophet in Jerusalem wrote down the death of a man he never met, 700 years before it happened (Isaiah 53). The wounds, the silence, the grave, and what the wounds were for. A traveller asked who it was about. The New Testament answers by name.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+```
+_323 characters_
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Isaiah53 #Prophecy #KJV
+```
+
+---
+## Facebook (Reel/Video)
+
+**TITLE** (copy):
+```
+A Prophet Wrote Down the Death of a Man He Never Met
+```
+_52 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+Seven hundred years before a Roman nail was ever driven, Isaiah wrote down the wounds, the silence, the grave, and what the wounds were for (Isaiah 53).
+
+"But he was wounded for our transgressions, he was bruised for our iniquities: the chastisement of our peace was upon him; and with his stripes we are healed" (Isaiah 53:5, KJV).
+
+This deep-dive walks the whole chapter, takes the Israel question seriously, and follows the desert road where a traveller reading this very scripture asked who it meant, and was answered by name. The report is true. Come to the One it names.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_804 characters_
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Isaiah53 #KJV
+```
+
+---
+## Instagram (Reel)
+
+**DESCRIPTION / CAPTION** (copy):
+```
+700 years early, Isaiah wrote a death he never saw: "he was wounded for our transgressions" (Isaiah 53:5, KJV). The wounds, the silence, the grave, the rich man's tomb. When a traveller asked who it was about, the New Testament answered by name. The report is true. Come to the One it names.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+```
+_369 characters_
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Isaiah53 #Prophecy #KJV #SufferingServant #Gospel #Christian #BibleStudy #Awakeden
+```
+
+---
+----- ARTIFACT END -----

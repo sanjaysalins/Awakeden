@@ -1,0 +1,188 @@
+# Upload Kit — mockers_words_ps227
+
+**Status:** RED-TEAMED  ·  **Gates:** FAILURES ❌
+**Video:** `C:\Users\sanjay\PycharmProjects\JesusInTheBible\batches\cluster_01_cross\mockers_words_ps227\visual\mockers_words_ps227_sfx.mp4`
+**Format:** short  ·  **Series:** Awakeden  ·  **Anchor:** 
+
+> Copy each block straight into the platform's upload form. Title, description,
+> tags and hashtags are pre-checked, red-teamed and panel-reviewed.
+
+## ✔ Verification
+
+✅ **UK-G1 length** — all fields within hard limits
+❌ **UK-G2 KJV-strict** — could not resolve KJV text for 
+✅ **UK-G3 doctrine** — no clickbait/overclaim tokens
+✅ **UK-G4 brand** — footer + CTA-to-Jesus present
+✅ **UK-G5 platform** — hashtag counts + link rules OK
+✅ **UK-G6 no-repeat** — no title collisions with siblings
+✅ **UK-G7 lint** — plain ASCII, grace-anchored, verse front-loaded
+
+### Red-team (in-engine hostile auditor)
+
+```
+VERDICT: REVISE
+
+- youtube_short + youtube_long + facebook (citation precision): the descriptions attribute "the wagging heads" to Psalm 22:8. The head-shaking is Psalm 22:7 ("they shake the head"); verse 8 carries the words of the taunt. A careful reader checking the reference will catch this. Fix: cite "(Psalm 22:7-8)" wherever the wagging heads + the words are described together (all three descriptions).
+- tiktok (overclaim): "Matthew heard them repeated word for word" claims exact verbal identity. The Matthew wording differs from the psalm ("He trusted in God" vs "He trusted on the LORD"), and the video itself only claims "nearly line for line". Fix: replace "word for word" with "nearly line for line".
+- tiktok (#fyp): algorithm-bait filler on a reverent piece; it earns nothing honest and cheapens the brand voice next to #Psalm22 #KJV. Fix: drop "#fyp".
+- youtube_long (minor, tone): "The Script the Crowd Never Knew It Was Reading" is honest but the double-negative construction is limp for long-form search. Consider "Psalm 22 and the Mockers at the Cross: A Script Written 1,000 Years Early". Not blocking.
+- Verse quotation check: Matthew 27:43 is quoted verbatim KJV, correctly attributed, and front-loaded in YT/FB. PASS on KJV-strictness.
+- Titles: no clickbait, no overclaim; the chosen short title is specific and true to the video. PASS on honesty.
+```
+
+## Title options (chosen first)
+
+1. **The Mockers at the Cross Were Quoting a 1,000-Year-Old Psalm** ⟵ CHOSEN  
+   _angle: prophecy-script: the taunts were written down a millennium in advance_
+2. **They Mocked Jesus With Words Written a Thousand Years Before**  
+   _angle: unwitting-witnesses: the cruelty itself confirmed the prophecy_
+3. **Why the Taunts at the Cross Match Psalm 22 Line for Line**  
+   _angle: curiosity-question: invite the viewer to compare the two texts_
+4. **They Told the King to Come Down. He Never Did.**  
+   _angle: staying-power: the mocked demand becomes the proof of his love_
+
+## YouTube (Short)
+
+**TITLE** (copy):
+```
+The Mockers at the Cross Were Quoting a 1,000-Year-Old Psalm
+```
+_60 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+The crowd at the cross thought they were inventing their taunts. They were reciting a script written a thousand years before (Psalm 22:8; Matthew 27:43).
+
+"He trusted in God; let him deliver him now, if he will have him: for he said, I am the Son of God" (Matthew 27:43, KJV).
+
+Psalm 22 recorded the mockery in advance: the wagging heads, the sneer, the very words. At Golgotha the passers-by and the rulers repeated them nearly line for line, unwilling witnesses that this was the One. They told the King to come down. He stayed, bearing scorn he could have silenced, for the very people throwing it.
+
+And the psalm they never finished ends with all the ends of the world turning to him. Turn, and come to the One who would not come down.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_967 characters_
+
+**TAGS** (copy — paste into the keyword/tags field):
+```
+psalm 22, psalm 22 8, matthew 27 43, mockery of jesus, messianic prophecy, prophecy fulfilled, the crucifixion, words at the cross, come down from the cross, kjv bible, bible shorts, jesus christ, gospel
+```
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Psalm22 #Cross #KJV
+```
+
+---
+## YouTube (Long-form 16:9)
+
+**TITLE** (copy):
+```
+Psalm 22 and the Mockers: The Script the Crowd Never Knew It Was Reading
+```
+_72 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+At the crucifixion, the passers-by wagged their heads and the rulers sneered: let God deliver him. Matthew records their words (Matthew 27:43). A thousand years earlier, Psalm 22 had already written them down: the gestures, the sneer, nearly line for line (Psalm 22:8).
+
+"He trusted in God; let him deliver him now, if he will have him: for he said, I am the Son of God" (Matthew 27:43, KJV).
+
+The mockers thought they were inventing the cruelty. They were reciting prophecy, unwilling witnesses that the man on the cross was the One the whole song was about. They demanded he prove his Sonship by coming down. He proved it by staying: bearing the scorn he could have silenced, for the very people throwing it.
+
+And the psalm has an ending the mockers never read out: all the ends of the world shall remember and turn unto the LORD. The song that begins in mockery ends in worship. Turn, and come to the One who would not come down.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_1160 characters_
+
+**TAGS** (copy — paste into the keyword/tags field):
+```
+psalm 22, psalm 22 8, matthew 27 43, mockery of jesus, messianic prophecy, prophecy fulfilled, crucifixion of jesus, old testament prophecy, words at the cross, he trusted in god, come down from the cross, kjv bible, bible study, jesus christ, gospel
+```
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Psalm22 #Prophecy #KJV
+```
+
+---
+## TikTok
+
+**DESCRIPTION / CAPTION** (copy):
+```
+The mob at the cross was reading from a script written a thousand years earlier. Psalm 22 recorded the taunts in advance, and Matthew heard them repeated word for word. They told the King to come down. He stayed, to win the scorners.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+```
+_311 characters_
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Psalm22 #Cross #KJV #fyp
+```
+
+---
+## Facebook (Reel/Video)
+
+**TITLE** (copy):
+```
+They Thought They Were Inventing the Cruelty. They Were Reciting Prophecy.
+```
+_74 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+A thousand years before the cross, Psalm 22 wrote down the mockery: the wagging heads, the sneer, the very words (Psalm 22:8). At Golgotha the crowd repeated them nearly line for line.
+
+"He trusted in God; let him deliver him now, if he will have him: for he said, I am the Son of God" (Matthew 27:43, KJV).
+
+They told the King to come down. He stayed, for the very people throwing the scorn. And the psalm they never finished ends with all the ends of the world turning to him. Turn, and come to the One who would not come down.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_757 characters_
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Psalm22 #KJV
+```
+
+---
+## Instagram (Reel)
+
+**DESCRIPTION / CAPTION** (copy):
+```
+The taunts at the cross were written down a thousand years before they were shouted. Psalm 22 recorded the mockery in advance; the crowd recited it without knowing. They told the King to come down. He stayed, to win the scorners. The song they never finished ends with the whole world turning to him.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+```
+_378 characters_
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Psalm22 #Cross #KJV #BibleShorts #Prophecy #Gospel #Christian #Awakeden
+```
+
+---
