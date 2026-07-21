@@ -1,0 +1,590 @@
+{
+  "episode": "EW01_Two_Goats",
+  "aspect": "16:9",
+  "look": "period-documentary",
+  "audio_seconds": 584.5,
+  "hero_id": 25,
+  "camera_palette_green": [
+    "dolly_in",
+    "dolly_shot",
+    "pull_back",
+    "smooth_cinematic",
+    "tracking_drone_view",
+    "zoomed_in"
+  ],
+  "camera_palette_avoid": [
+    "360",
+    "aerial_view",
+    "eye_level",
+    "orbit",
+    "pan",
+    "pov_shot",
+    "top_down",
+    "worms_eye_view"
+  ],
+  "scenes": [
+    {
+      "id": 1,
+      "mvt": "M1",
+      "t": [
+        0.0,
+        19.5
+      ],
+      "title": "Once a year, only once",
+      "framing": "wide",
+      "scene_type": "single",
+      "camera": "pull_back",
+      "atmos": "dawn incense smoke, dust haze",
+      "sfx": "low crowd murmur, wind",
+      "directional": false,
+      "face_nbp": false,
+      "subject_block": "The high priest Aaron, small in golden vestments, stands alone before the towering curtained Tabernacle court at first light; behind and below him a vast hushed multitude of Israelites kept in shadow; immense pale sky; the sacred tent dominant and severe.",
+      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "refs": [
+        "aaron"
+      ]
+    },
+    {
+      "id": 2,
+      "mvt": "M1",
+      "t": [
+        19.5,
+        39.0
+      ],
+      "title": "I laid aside gold and glory",
+      "framing": "close",
+      "scene_type": "single",
+      "camera": "zoomed_in",
+      "atmos": "dust motes in a light shaft, faint smoke",
+      "sfx": "cloth rustle",
+      "directional": false,
+      "face_nbp": false,
+      "subject_block": "Still-life: a golden breastplate, ephod and priestly garments laid upon a worn stone bench in a single shaft of light; two weathered hands releasing the gold; plain folded white linen waiting beside it. No face, hands only.",
+      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "refs": []
+    },
+    {
+      "id": 3,
+      "mvt": "M1",
+      "t": [
+        39.0,
+        58.5
+      ],
+      "title": "Plain white linen, like a servant",
+      "framing": "medium-wide",
+      "scene_type": "single",
+      "camera": "dolly_shot",
+      "atmos": "oil-lamp flame flicker, smoke drift",
+      "sfx": "footsteps, lamp hiss",
+      "directional": false,
+      "face_nbp": false,
+      "subject_block": "Aaron, now in plain white linen, standing still before a great heavy veil at the end of a dim colonnaded passage, seen from behind, his head slightly bowed at the threshold; hanging oil lamps light the heavy curtain; he stands arrested at the veil, not walking; his back to us. The walking priest is the aged high priest with long gray hair and a full gray beard, seen from behind.",
+      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "refs": [
+        "aaron"
+      ],
+      "_fix_note": "eye-audit append (2026-07-21): see _build_inked_scene_plan.py"
+    },
+    {
+      "id": 4,
+      "mvt": "M1",
+      "t": [
+        58.5,
+        78.0
+      ],
+      "title": "I went in alone",
+      "framing": "wide",
+      "scene_type": "single",
+      "camera": "dolly_in",
+      "atmos": "smoke and cloud drift, pulsing golden glow",
+      "sfx": "deep silence, low tone",
+      "directional": false,
+      "face_nbp": false,
+      "subject_block": "Aaron's small linen-robed silhouette before an immense temple veil; through a narrow gap, thick darkness and a single faint golden glow of the mercy seat; the curtain towering and swallowing him.",
+      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "refs": [
+        "aaron"
+      ]
+    },
+    {
+      "id": 5,
+      "mvt": "M2",
+      "t": [
+        78.0,
+        99.0
+      ],
+      "title": "That he die not — the cloud upon the mercy seat",
+      "framing": "wide",
+      "scene_type": "ot_echo",
+      "camera": "smooth_cinematic",
+      "atmos": "luminous cloud billow, light shimmer",
+      "sfx": "sustained holy drone",
+      "directional": false,
+      "face_nbp": false,
+      "subject_block": "The Ark of the Covenant alone in the deep darkness of the Holy of Holies: a gold-covered chest with two golden cherubim wrought upon its lid, their wings stretched toward each other over the mercy seat, a radiant cloud of glory glowing above it; tabernacle curtain walls receding into shadow; the aged high priest prostrate on the stone floor before it, tiny beneath the light; the room bare and holy, only the Ark, the cloud, and the man.",
+      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "refs": [],
+      "_fix_note": "eye-audit rewrite (2026-07-21): see _build_inked_scene_plan.py"
+    },
+    {
+      "id": 6,
+      "mvt": "M2",
+      "t": [
+        99.0,
+        120.8
+      ],
+      "title": "I buried two of my own sons",
+      "framing": "medium",
+      "scene_type": "unified",
+      "camera": "smooth_cinematic",
+      "atmos": "smoke, ember glow",
+      "sfx": "low grief tone, distant fire",
+      "directional": false,
+      "face_nbp": false,
+      "subject_block": "The aged high priest, long gray hair and full gray beard, head bowed in grief; behind him in ghosted memory panels his two grown sons in white priestly linen lie still on scorched stone, their bodies whole and unmarked, thin gray smoke drifting up from the blackened ground around them, censers fallen beside their open hands; shrouded biers carried away into darkness; the ground charred, the air full of ash and silence.",
+      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "fill": "forward_slow",
+      "refs": [
+        "aaron"
+      ],
+      "_fix_note": "eye-audit rewrite (2026-07-21): see _build_inked_scene_plan.py"
+    },
+    {
+      "id": 7,
+      "mvt": "M3",
+      "t": [
+        120.8,
+        144.0
+      ],
+      "title": "They brought me two goats, and I cast lots",
+      "framing": "close",
+      "scene_type": "ot_echo",
+      "camera": "zoomed_in",
+      "atmos": "drifting dust, altar smoke",
+      "sfx": "goats, stone clack",
+      "directional": false,
+      "face_nbp": false,
+      "subject_block": "Two goats standing close together before the bronze altar; Aaron's weathered hands in plain white linen sleeves holding two small marked lot-stones over a bronze vessel, the moment held still; the markings only illegible scratches, not readable text; the tabernacle court behind in shadow; Aaron alone, no other priests.",
+      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "fill": "forward_slow",
+      "refs": [
+        "aaron"
+      ]
+    },
+    {
+      "id": 8,
+      "mvt": "M3",
+      "t": [
+        144.0,
+        167.2
+      ],
+      "title": "The first goat I killed — blood within the vail",
+      "framing": "medium",
+      "scene_type": "single",
+      "camera": "dolly_in",
+      "atmos": "smoke, golden glow",
+      "sfx": "drip, low tone",
+      "directional": false,
+      "face_nbp": false,
+      "subject_block": "Aaron in white linen standing perfectly still in thick darkness before the faint golden glow of the mercy seat, the sprinkling already finished: his arm lowered at his side, the shallow bronze basin held level and steady, its blood dark, settled and motionless; a few small already-fallen droplets resting dry and static on the stone floor; seen from behind and side, the quiet after the act, nothing falling, nothing flowing. The stone of the altar pedestal is clean and dry.",
+      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "fill": "forward_slow",
+      "refs": [
+        "aaron"
+      ],
+      "_redesign_note": "blood-rite still redesigned to a settled/completed state before the ink rebuild (2026-07-21) — i2v models complete mid-action blood into growing streams",
+      "_fix_note": "eye-audit append (2026-07-21): see _build_inked_scene_plan.py"
+    },
+    {
+      "id": 9,
+      "mvt": "M3",
+      "t": [
+        167.2,
+        190.6
+      ],
+      "title": "Both my hands upon the live goat",
+      "framing": "medium",
+      "scene_type": "single",
+      "camera": "smooth_cinematic",
+      "atmos": "dust, heat haze",
+      "sfx": "confessing murmur, wind",
+      "directional": false,
+      "face_nbp": false,
+      "subject_block": "Aaron in plain white linen laying both hands upon the head of a living goat, his own head bowed low in confession, the moment held still; a single robed attendant waits quietly at the edge; beyond the camp gate the open wilderness lies pale and vast; Aaron in profile, half-shadowed; no other priests. The priest is the aged high priest with long gray hair and a full gray beard, the same aged man throughout the film.",
+      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "refs": [
+        "aaron"
+      ],
+      "_fix_note": "eye-audit append (2026-07-21): see _build_inked_scene_plan.py"
+    },
+    {
+      "id": 10,
+      "mvt": "M3",
+      "t": [
+        190.6,
+        213.9
+      ],
+      "title": "I watched it go — a land not inhabited",
+      "framing": "wide",
+      "scene_type": "single",
+      "camera": "dolly_shot",
+      "atmos": "drifting desert dust, heat-haze shimmer",
+      "sfx": "wind, faint hooves",
+      "directional": false,
+      "face_nbp": false,
+      "subject_block": "A vast bleached desert wadi to a hazy horizon; far off, a single small goat already reduced to a dark speck, standing still on the cracked valley floor; at the near edge, seen from behind, a lone robed man stands motionless watching, dwarfed by the emptiness; nothing moving, a held silence.",
+      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "refs": []
+    },
+    {
+      "id": 11,
+      "mvt": "M4",
+      "t": [
+        213.9,
+        239.5
+      ],
+      "title": "One offering — yet it took two goats",
+      "framing": "medium-wide",
+      "scene_type": "unified",
+      "camera": "smooth_cinematic",
+      "atmos": "smoke one side, dust and pale light the other",
+      "sfx": "low wondering tone",
+      "directional": false,
+      "face_nbp": false,
+      "subject_block": "One frame holding the riddle: on the left, the slain goat in blood-red altar light and smoke (the price); on the right, the live goat facing an open pale road into the waste (the guilt carried off); the altar standing dark between them. A single unified canvas, soft transition, no hard divider.",
+      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "refs": []
+    },
+    {
+      "id": 12,
+      "mvt": "M4",
+      "t": [
+        239.5,
+        265.0
+      ],
+      "title": "Why two? — two things at once",
+      "framing": "medium",
+      "scene_type": "single",
+      "camera": "dolly_in",
+      "atmos": "low smoke, dusk haze",
+      "sfx": "quiet wind, embers",
+      "directional": false,
+      "face_nbp": false,
+      "subject_block": "Aaron, in plain white linen, standing alone in the emptying court at dusk, turning the question over; behind him one altar still faintly smoking and one empty road running out into the darkening waste; his face lined and contemplative, lit by a single low flame; Aaron alone, standing still, no other priests. The setting sun hangs small and distant in the sky, well away from his face, his eyes calm and human.",
+      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "refs": [
+        "aaron"
+      ],
+      "_fix_note": "eye-audit append (2026-07-21): see _build_inked_scene_plan.py"
+    },
+    {
+      "id": 13,
+      "mvt": "M5",
+      "t": [
+        265.0,
+        289.3
+      ],
+      "title": "The people went home clean",
+      "framing": "wide",
+      "scene_type": "single",
+      "camera": "pull_back",
+      "atmos": "thin altar smoke drifting up, cloth edges barely stirring; the painted light stays exactly steady and unchanged",
+      "sfx": "relieved crowd murmur",
+      "directional": false,
+      "face_nbp": false,
+      "subject_block": "A great multitude of Israel at evening, standing and at rest in the golden dusk, faces lifted and unburdened, a deep sense of relief over the whole field; the crowd kept soft and in shadow; no one mid-stride, a quiet stillness after the day.",
+      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "refs": []
+    },
+    {
+      "id": 14,
+      "mvt": "M5",
+      "t": [
+        289.3,
+        313.6
+      ],
+      "title": "Every year I came back and did it again",
+      "framing": "medium",
+      "scene_type": "unified",
+      "camera": "smooth_cinematic",
+      "atmos": "smoke, slow drifting motes",
+      "sfx": "cyclical low tone",
+      "directional": false,
+      "face_nbp": false,
+      "subject_block": "A unified tableau of weary repetition: Aaron, in plain white linen, at the altar, repeated as the SAME one man in soft ghosted echoes receding into the dark — the same act year upon year, not different priests; the same two goats faintly doubled; turning seasons hinted in the sky; the same bronze basin resting closed and still on the altar stone, its contents dark, settled and motionless; the worn altar stone; soft vignettes melting into one dim recurring canvas; nothing dripping, nothing poured, no liquid in motion; no breastplate, no other priests or bearded men. Aaron and every ghosted echo of him are the aged high priest with long gray hair and a full gray beard.",
+      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "refs": [
+        "aaron"
+      ],
+      "_redesign_note": "blood-rite still redesigned to a settled/completed state before the ink rebuild (2026-07-21) — i2v models complete mid-action blood into growing streams",
+      "_fix_note": "eye-audit append (2026-07-21): see _build_inked_scene_plan.py"
+    },
+    {
+      "id": 15,
+      "mvt": "M5",
+      "t": [
+        313.6,
+        338.0
+      ],
+      "title": "I was only ever pointing — a sign",
+      "framing": "medium",
+      "scene_type": "single",
+      "camera": "dolly_in",
+      "atmos": "lamp flicker, faint distant glow",
+      "sfx": "held breath, low drone",
+      "directional": false,
+      "face_nbp": false,
+      "subject_block": "Aged Aaron, in plain white linen, older and weary, standing alone before the veil at night, looking up toward a faint far light he cannot reach; deep shadow all around; his upturned face caught in a thin edge of light, full of unspoken longing; standing still, Aaron alone.",
+      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "refs": [
+        "aaron"
+      ]
+    },
+    {
+      "id": 16,
+      "mvt": "M6",
+      "t": [
+        338.0,
+        360.6
+      ],
+      "title": "A shadow waits for the body — the body came",
+      "framing": "wide",
+      "scene_type": "jesus_link",
+      "camera": "smooth_cinematic",
+      "atmos": "shifting light, low smoke",
+      "sfx": "tone lifts, dawn swell",
+      "directional": false,
+      "face_nbp": false,
+      "subject_block": "The long shadow of a cross falls across the old altar and the two goats, cast by an unseen figure of light off-frame; the shadow lengthens toward a luminous open doorway in the far dark; the old order dim, the coming light pale and growing. Ancient biblical-period Near-Eastern tabernacle interior. Absolutely NO physical cross, crucifix or wooden cross OBJECT anywhere in the scene — ONLY a faint cross-shaped SHADOW on the ground and the altar.",
+      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "refs": []
+    },
+    {
+      "id": 17,
+      "mvt": "M6",
+      "t": [
+        360.6,
+        383.2
+      ],
+      "title": "By his own blood he entered in once",
+      "framing": "medium-wide",
+      "scene_type": "jesus_link",
+      "camera": "dolly_in",
+      "atmos": "radiant light, cloud",
+      "sfx": "glory swell",
+      "directional": false,
+      "face_nbp": true,
+      "subject_block": "Christ as the true High Priest standing at a torn radiant veil, one hand laid upon the parted curtain, paused at the threshold of the holy light, seen from behind and side; glory opening ahead, darkness behind; he stands arrested, not walking; the fulfillment of the lone priest at the veil. Christ wears a simple luminous undyed white robe with visible nail-wounds in his hands; he is the risen Lord, NOT in any high-priestly breastplate, ephod, jewelled vestments or ornate priestly costume. Each of his palms bears a single small quiet healed nail scar, a simple dark oval mark on otherwise smooth unmarked skin, hands and wrists clean.",
+      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "refs": [
+        "christ"
+      ],
+      "_fix_note": "eye-audit append (2026-07-21): see _build_inked_scene_plan.py"
+    },
+    {
+      "id": 18,
+      "mvt": "M6",
+      "t": [
+        383.2,
+        405.8
+      ],
+      "title": "The LORD laid on him the iniquity of us all",
+      "framing": "medium",
+      "scene_type": "unified",
+      "camera": "smooth_cinematic",
+      "atmos": "Christ's robe and the curtain edges barely stirring, thin incense smoke drifting; the painted light stays exactly steady and unchanged",
+      "sfx": "resolving chord",
+      "directional": false,
+      "face_nbp": true,
+      "subject_block": "A unified fulfillment canvas: the figure of Christ central, reverent, arms open; soft-edged to the left, a single goat lying still and at rest upon the low stone altar (the price paid) — absolutely NO blood, no gore, no wounds, no blood bowl, no red; soft-edged to the right, the scapegoat walking away into the pale wilderness (the guilt carried off); the two resolving into the one Priest at the centre; a faint cross of soft light above Christ. Ancient biblical-period Near-Eastern setting, calm and reverent. Christ wears a simple luminous undyed white robe with visible nail-wounds in his hands; he is the risen Lord, NOT in any high-priestly breastplate, ephod, jewelled vestments or ornate priestly costume. Each of his palms bears a single small quiet healed nail scar, a simple dark oval mark on otherwise smooth unmarked skin, hands and wrists clean.",
+      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "refs": [
+        "christ"
+      ],
+      "_fix_note": "eye-audit append (2026-07-21): see _build_inked_scene_plan.py"
+    },
+    {
+      "id": 19,
+      "mvt": "M6",
+      "t": [
+        405.8,
+        428.4
+      ],
+      "title": "He suffered without the gate",
+      "framing": "wide",
+      "scene_type": "jesus_link",
+      "camera": "dolly_shot",
+      "atmos": "dust, heat haze, low cloud",
+      "sfx": "lonely wind",
+      "directional": false,
+      "face_nbp": false,
+      "subject_block": "The glowing risen Christ seen from behind, standing on a dusty road outside the city wall, looking up the bare hill toward the closed gate. Jerusalem's skyline is low flat-roofed stone houses and simple square watchtowers behind the rampart wall, warm evening haze. Each of his palms bears a single small quiet healed nail scar, a simple dark oval mark on otherwise smooth unmarked skin, hands and wrists clean.",
+      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "refs": [
+        "christ"
+      ],
+      "_fix_note": "eye-audit rewrite (2026-07-21): see _build_inked_scene_plan.py"
+    },
+    {
+      "id": 20,
+      "mvt": "M6",
+      "t": [
+        428.4,
+        451.0
+      ],
+      "title": "He sat down — the veil rent from the top",
+      "framing": "medium-wide",
+      "scene_type": "jesus_link",
+      "camera": "pull_back",
+      "atmos": "pouring light, falling dust, faint fabric stir",
+      "sfx": "deep resonant strike",
+      "directional": false,
+      "face_nbp": true,
+      "subject_block": "Two truths in one frame: the seated High-Priest Christ at rest in glory at the right hand (the chair Aaron never had), and the great temple veil torn from the top downward by no human hand, light pouring through the painted rip. The tear is painted, still, not actively ripping. Christ wears a simple luminous undyed white robe with visible nail-wounds in his hands; he is the risen Lord, NOT in any high-priestly breastplate, ephod, jewelled vestments or ornate priestly costume. Each of his palms bears a single small quiet healed nail scar, a simple dark oval mark on otherwise smooth unmarked skin, hands and wrists clean.",
+      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "fill": "forward_slow",
+      "refs": [
+        "christ"
+      ],
+      "_fix_note": "eye-audit append (2026-07-21): see _build_inked_scene_plan.py"
+    },
+    {
+      "id": 21,
+      "mvt": "M7",
+      "t": [
+        451.0,
+        477.7
+      ],
+      "title": "Do not come to me, or a goat, or an altar",
+      "framing": "medium",
+      "scene_type": "single",
+      "camera": "pull_back",
+      "atmos": "fading smoke, growing light",
+      "sfx": "gentle turn, soft tone",
+      "directional": false,
+      "face_nbp": false,
+      "subject_block": "Aged Aaron in linen steps back and gestures away from himself and from the old altar and goats, turning the viewer's eye past him toward a distant growing light; he diminishes into shadow as the light beyond him grows.",
+      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "refs": [
+        "aaron"
+      ]
+    },
+    {
+      "id": 22,
+      "mvt": "M7",
+      "t": [
+        477.7,
+        504.4
+      ],
+      "title": "Come to Jesus — carried as far as east from west",
+      "framing": "medium-wide",
+      "scene_type": "jesus_link",
+      "camera": "dolly_in",
+      "atmos": "dawn light, dust drifting away",
+      "sfx": "warm rising swell",
+      "directional": false,
+      "face_nbp": true,
+      "subject_block": "A lone everyman figure standing before the risen Christ, who waits with open hands in dawn light; the man stands still, having arrived; far behind him a dark burden already carried off, a small speck at the horizon, never to return; the road bright and open; no one mid-stride. Christ wears a simple luminous undyed white robe with visible nail-wounds in his hands; he is the risen Lord, NOT in any high-priestly breastplate, ephod, jewelled vestments or ornate priestly costume. Each of his palms bears a single small quiet healed nail scar, a simple dark oval mark on otherwise smooth unmarked skin, hands and wrists clean.",
+      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "refs": [
+        "christ"
+      ],
+      "_fix_note": "eye-audit append (2026-07-21): see _build_inked_scene_plan.py"
+    },
+    {
+      "id": 23,
+      "mvt": "M7",
+      "t": [
+        504.4,
+        531.1
+      ],
+      "title": "The way is thrown wide open",
+      "framing": "wide",
+      "scene_type": "single",
+      "camera": "dolly_in",
+      "atmos": "pouring light, dust motes",
+      "sfx": "light pour, airy tone",
+      "directional": false,
+      "face_nbp": false,
+      "subject_block": "The torn temple veil now fully open, brilliant light flooding out into the once-dark holy place; the path through it clear and inviting; no guard, no priest barring the way; the great curtain hanging painted and still, the opening ablaze.",
+      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "fill": "forward_slow",
+      "refs": []
+    },
+    {
+      "id": 24,
+      "mvt": "M7",
+      "t": [
+        531.1,
+        557.8
+      ],
+      "title": "Boldness to enter into the holiest",
+      "framing": "medium-wide",
+      "scene_type": "unified",
+      "camera": "smooth_cinematic",
+      "atmos": "light, drifting dust",
+      "sfx": "many footsteps, hush of awe",
+      "directional": false,
+      "face_nbp": false,
+      "subject_block": "Ordinary people of every kind, all in ancient Near-Eastern robes, tunics and simple head-coverings of the biblical period (NOT European or medieval dress, no peasant caps, no brimmed hats, no bonnets), gathered close AT the opened veil, standing still in quiet awe in the light, unafraid, where once only one man one day a year could go; no one mid-stride, a held hush; kept soft and in gentle shadow so no single face dominates.",
+      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "refs": []
+    },
+    {
+      "id": 25,
+      "mvt": "M7",
+      "t": [
+        557.8,
+        584.5
+      ],
+      "title": "Will you come in? — be carried clean",
+      "framing": "medium",
+      "scene_type": "jesus_link",
+      "camera": "dolly_in",
+      "atmos": "radiant light, gentle dust drift",
+      "sfx": "final tender swell",
+      "directional": false,
+      "face_nbp": true,
+      "subject_block": "HERO CLOSE: the risen Christ stands in the full open doorway of light, the torn veil framing him, one hand extended toward the viewer in welcome; the way wide open behind him; warm, reverent, the whole frame resolving on his face and open hand. The landing. Christ wears a simple luminous undyed white robe with visible nail-wounds in his hands; he is the risen Lord, NOT in any high-priestly breastplate, ephod, jewelled vestments or ornate priestly costume. Each of his palms bears a single small quiet healed nail scar, a simple dark oval mark on otherwise smooth unmarked skin, hands and wrists clean.",
+      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "refs": [
+        "christ"
+      ],
+      "_fix_note": "eye-audit append (2026-07-21): see _build_inked_scene_plan.py"
+    }
+  ],
+  "world": {
+    "era": "Wilderness Tabernacle period, c. 1400 BC, the Exodus generation in the Sinai wilderness, the first Day of Atonement.",
+    "place": "In and around the portable Tabernacle — a tent of skins and woven linen curtains in a desert camp, NOT a stone temple: linen court walls, a bronze altar, the veil and the mercy seat, surrounded by bleached wilderness.",
+    "light": "A single warm key light, dawn-gold and oil-lamp flame from the left with deep Caravaggio shadow opposite, softened by incense and dust haze; the same light direction in every scene.",
+    "palette": "Muted earth tones — sand, bone-white linen, ochre, dried-blood red, bronze and deep shadow-brown, with warm gold highlights only; no bright or saturated modern colour.",
+    "style": "Baroque oil painting, period-documentary, dramatic chiaroscuro in the manner of Caravaggio and Rembrandt, fine canvas texture, reverent sacred art",
+    "period_negatives": [
+      "no European, medieval or Renaissance dress, peasant caps, brimmed hats or bonnets",
+      "no stone-temple or cathedral architecture — it is a tent",
+      "no modern metal, fabric, objects, chairs or furniture out of period",
+      "no Greco-Roman or Buddha idols",
+      "no other elderly bearded men in side or crowd roles unless named",
+      "no legible text or writing",
+      "no artist signature, painter's signature, watermark or caption"
+    ],
+    "cast": {
+      "aaron": {
+        "portrait": "Head-and-shoulders character portrait of Aaron, the first high priest of Israel: an aged man of about eighty with a weathered, sun-darkened Hebrew face, deep-set dark eyes, a strong brow and a long flowing grey-white beard, calm and solemn; he wears plain undyed white linen — a simple linen coat and a white linen turban-mitre — no gold, no jewels, no breastplate; three-quarter view, looking slightly off-camera, plain deep-shadow background, the face clearly lit by a single warm key light from the left"
+      },
+      "christ": {
+        "ref": "image_library/stills/christ_risen_face_scars.png"
+      }
+    }
+  },
+  "style_base": null,
+  "style_tail": null,
+  "image_provider": "hf",
+  "animation": {
+    "model": "tiered",
+    "aspect": "16:9",
+    "note": "Seedance 1.5 Pro for calm single-figure panels, Kling 3.0 for action/crowd/complexity (comic-grid-cost-tiered-animation)"
+  },
+  "film_name": "EW01_Two_Goats_16x9_inked.mp4",
+  "_migration_note": "inked graphic-novel rebuild, 2026-07-21 — ported from the archived oil production (v1/_archived_oil_baroque/visual_16x9/scene_plan.json); scene content/camera/timing unchanged except the user-approved blood-rite redesigns of scenes 8 and 14; per memory graphic-novel-style-migration and the Bronze Serpent precedent."
+}
