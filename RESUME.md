@@ -16,14 +16,45 @@ frozen-stride lock, now holds). Migration spend ~$33/$40.
 `file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/EW01_Two_Goats/v1/visual_16x9_inked/_CLIPS_REVIEW.html`
 (inline video, tier-tagged; built by `_build_clips_review.py`).
 
-**Next:** user reviews clips → assemble via EW01's window-lane builder (check
-`longform/EW01_Two_Goats/*.py`; an assembly script may need writing/porting like the
-scene-plan/render/animate scripts were) → score (`_add_score_lf.py` EW01 entry) → sfx
-(`_sfx_two_goats.py`) → caption → INV-26 landing-hold check (target 3.0s) → INV-27 watermark
-(`add_watermark.py`, top-right 16:9) → full suite → publish pack (6-CLI panel) → ONE commit
-for the whole migration. Uncommitted so far: the 5 EW01 scripts (_build_inked_scene_plan,
-_render_inked_stills, _animate_inked, _build_stills_review, _build_clips_review) + 25 stills
-+ 25 clips + galleries + spend ledger.
+**RED-TEAM (2026-07-21 night, before close — my visual re-check + independent agent, both
+verified myself):**
+- **HEADLINE (verified): clips are fine, 4-5s length is FINE, NO re-render needed.** The shared
+  assembler `longform/_assemble_16x9.py` is built for short clips — boomerang/forward_slow fill,
+  reads the real mp3, `factor=max(1.0,...)` NEVER speeds up. The oil film already shipped from a
+  mix incl. 4.05s clips. So tomorrow is scripting + eye-QC, not spend.
+- **RE-ROLL (my visual find): scene 24** — Christ's head tilts up + face MORPHS across the clip
+  (invented motion on Christ's face). ~$1.31 re-roll on Kling with a firmer "Christ's head/face
+  never move" lock. The one clip that clearly needs redoing.
+- **EYE-CHECK (both flagged): scene 20** — rendered still has unnamed "standing figures" near the
+  enthroned glorified Christ (plan didn't call for them) + an odd floating blue teardrop in the
+  torn-veil panel. Confirm figures read as angels/glory not venerated attendants; else re-roll/crop.
+- **ASSEMBLY TRAP (verified): the inked assembler doesn't exist yet AND has a stem-naming landmine.**
+  `_animate_inked.stem_for` truncates titles to 46 chars but `longform/_episode.py:stem` uses 40 —
+  they DIFFER for scenes 5/8/18/22, so an assembler built on `_episode.stem` silently won't find
+  those 4 clips. Port `_assemble_inked.py` targeting `visual_16x9_inked/clips/`, match clips by the
+  `NN_` id-prefix (sidesteps truncation), NOT `_episode.stem`.
+- **$0 tuning (verified): 5 forward_slow scenes (6,7,8,20,23) stretch 4.3-6.6x** (scene 23 = 6.6x,
+  effectively frozen). Since these are frozen tableaux, flip them forward_slow→boomerang in
+  scene_plan.json to halve the stretch (e.g. 23: 6.6x→3.3x). Eyeball a test assembly FIRST.
+- **PORT NEEDED: `_sfx_two_goats.py`** is hardcoded to the archived oil dir + oil durations — fork
+  it to `visual_16x9_inked` + 588.64s track (like Bronze's `_sfx_bronze_inked.py`). NOTE the SCORE
+  step `_add_score_lf.py` is ALREADY inked-aware (globs by filename) — no stem trap there.
+- **INV-26: bump EW01 `_add_score_lf.py` outro_s 2.5→3.0** (Isaiah got bumped same day, EW01 didn't).
+- **HONEST GAP (no action unless user wants): the visual track now has almost NO blood** (clean hands
+  on all 6 risen-Christ shots + empty basin scene 8 + bloodless goats 11/18) while the NARRATION is
+  soaked in blood/atonement language. Each choice was knowing (reverence + animation-safety); the
+  aggregate is an audio-visual emphasis gap worth the user knowing.
+- MINOR: scenes 5/8 say "stone floor" but the world is the portable TABERNACLE (tent on desert
+  ground, not a stone temple) — inherited period slip from the oil plan; scene 14 priest's hand
+  drifts slightly, scene 6 slight head-bow (both subtle, non-Christ, acceptable); scene 23 doorway
+  reads a bit fiery. Clip-QC so far is manual eye-check (no .clipqc.json sidecars); the SLOWED look
+  (2.4-6.6x) is unverified until a test assembly runs.
+
+**Next (tomorrow):** decide scene 24 re-roll + scene 20 eye-check → write `_assemble_inked.py`
+(id-prefix clip match, `visual_16x9_inked/clips/`) → test assembly → eyeball the 5 forward_slow
+scenes, flip to boomerang if frozen ($0) → score (already inked-aware) → port `_sfx_two_goats.py`
+→ caption → bump outro to 3.0 + INV-26 hold check → INV-27 watermark (top-right 16:9) → suite →
+publish pack (6-CLI panel) → ONE migration commit. Today's clip work is committed (e51ba51).
 
 ## (superseded) 2026-07-21 night #3 — EW01 stills: all 25 clean, awaiting final OK
 
