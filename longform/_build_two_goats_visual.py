@@ -115,8 +115,7 @@ def main():
             try:
                 tag = " [TORN-VEIL minimal/no-tear]" if sid in TORN_VEIL else ""
                 print(f"[anim] #{sid:02d} cam={s['camera']}{tag} (veo3_1_lite 8s) ...", flush=True); t = time.time()
-                vidp.animate(png, mp4, motion_for(s), 8)
-                cost.record_hf("EW01_Two_Goats", "long", "clips", config.VIDEO_HF_MODEL, image=png, note=f"#{sid:02d}")
+                vidp.animate(png, mp4, motion_for(s), 8)   # writes its own ledger row
                 print(f"       ok ({mp4.stat().st_size:,} b, {time.time()-t:.0f}s)"); ok += 1
             except Exception as e:
                 print(f"       FAIL #{sid}: {str(e)[:160]}"); fail += 1

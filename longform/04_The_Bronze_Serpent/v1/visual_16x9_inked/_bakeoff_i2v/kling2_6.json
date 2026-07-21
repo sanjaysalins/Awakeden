@@ -1,0 +1,26 @@
+[
+  {
+    "id": "6e1edb9d-1b8c-48fe-8c16-39c36b92e344",
+    "status": "completed",
+    "display_name": "Kling 2.6 Video",
+    "job_set_type": "kling2_6",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36Civ1twSiHHl6id4ulZrwA34hC/hf_20260717_082017_6e1edb9d-1b8c-48fe-8c16-39c36b92e344.mp4",
+    "created_at": 1784276417.709737,
+    "params": {
+      "width": 1920,
+      "height": 1080,
+      "prompt": "Graphic novel inked illustration, painted tableau, a frozen moment. The risen Christ stands with one hand extended toward the viewer, face turned in mercy, bold ink linework and flat cel shading. The camera performs a slow, reverent push-in toward the extended hand and face. Nothing else moves -- figure, drapery, and light stay fixed as drawn. No invented motion, no morphing, no new elements, no camera shake. Painted tableau stays still; only the camera moves.",
+      "duration": 5,
+      "aspect_ratio": null,
+      "cfg_scale": 0.5,
+      "sound": true,
+      "input_image": {
+        "id": "99d46a2c-fa6c-449c-8ce5-cb9687fa4fb3",
+        "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_36Civ1twSiHHl6id4ulZrwA34hC/99d46a2c-fa6c-449c-8ce5-cb9687fa4fb3_resize.jpg",
+        "type": "media_input"
+      },
+      "negative_prompt": null,
+      "motion": null
+    }
+  }
+]

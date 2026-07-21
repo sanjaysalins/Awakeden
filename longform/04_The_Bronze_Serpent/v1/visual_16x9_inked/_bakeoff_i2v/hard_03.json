@@ -1,0 +1,31 @@
+[
+  {
+    "id": "c0cc8e49-01af-4a20-b5ef-d8487c12a4a3",
+    "status": "completed",
+    "display_name": "Seedance 1.5 Pro",
+    "job_set_type": "seedance1_5",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36Civ1twSiHHl6id4ulZrwA34hC/hf_20260717_085654_c0cc8e49-01af-4a20-b5ef-d8487c12a4a3.mp4",
+    "created_at": 1784278614.246188,
+    "params": {
+      "width": 1280,
+      "height": 720,
+      "prompt": "Graphic novel inked illustration, painted tableau, a frozen moment. In a desert camp at dusk under a blood-red sky, a bitten man kneels in the sand clutching his bleeding foot beside a coiled red serpent; a cloaked man with a hand extended toward the serpent stands nearby, with several distant robed figures fixed among tents and red cliffs behind. The camera performs a slow push-in toward the serpent and the wounded foot. Nothing moves -- every figure, the serpent, and the tents stay fixed as drawn. No invented motion, no morphing, no new elements, no camera shake. Painted tableau stays still; only the camera moves.",
+      "medias": [
+        {
+          "data": {
+            "id": "f90d45a1-0833-4c0a-9065-7fe01272eab8",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_36Civ1twSiHHl6id4ulZrwA34hC/f90d45a1-0833-4c0a-9065-7fe01272eab8_resize.jpg",
+            "type": "media_input"
+          },
+          "role": "start_image"
+        }
+      ],
+      "duration": 4,
+      "fixed_lens": false,
+      "resolution": "720p",
+      "aspect_ratio": "16:9",
+      "seed": 326017,
+      "generate_audio": true
+    }
+  }
+]

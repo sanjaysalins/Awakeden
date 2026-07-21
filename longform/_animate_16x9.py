@@ -12,7 +12,6 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import config
 from pipeline import video_render
-from pipeline import cost  # noqa: E402
 from _episode import resolve  # noqa: E402
 from _test_gate import apply_test_gate  # noqa: E402
 
@@ -65,10 +64,8 @@ for s in ep.scenes:
     print(f"[anim] {s['id']:02d} {s['title'][:38]} ...", flush=True)
     t = time.time()
     try:
-        vp.animate(png, mp4, prompt, DURATION)
+        vp.animate(png, mp4, prompt, DURATION)   # writes its own ledger row (exact, flag-aware)
         print(f"       ok ({mp4.stat().st_size:,} b, {time.time()-t:.0f}s)")
-        cost.record_hf(ep.slug, "long", "clips", config.VIDEO_HF_MODEL, image=png,
-                       note=f"#{s['id']:02d} {s['title'][:34]}")
         ok += 1
     except Exception as e:
         msg = str(e)[:160]
@@ -78,8 +75,7 @@ for s in ep.scenes:
                 if kling is None:
                     kling = video_render.KlingDirectProvider()
                 print("       -> falling back to direct-Kling ...", flush=True)
-                kling.animate(png, mp4, prompt, DURATION); ok += 1
-                cost.record_kling(ep.slug, "long", "clips", note=f"#{s['id']:02d} NSFW fallback")
+                kling.animate(png, mp4, prompt, DURATION); ok += 1   # records its own ledger row
                 print(f"       ok via Kling ({mp4.stat().st_size:,} b)")
             except Exception as e2:
                 print(f"       Kling FAILED too: {str(e2)[:160]}"); fail += 1
