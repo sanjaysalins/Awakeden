@@ -1,65 +1,109 @@
-# RESUME — next session (updated 2026-07-21 NIGHT — session paused mid-task. ONE open item: EW01 ink migration (§ below) — 25 stills rendered + 13 re-rolled, awaiting eye-audit of the re-rolls before the stills gate. Everything else this session is committed and closed.)
+# RESUME — next session (updated 2026-07-21 NIGHT #4 — EW01 ink migration: ALL 25 stills
+clean AND all 25 clips animated + clip-QC'd (~$33/$40). Awaiting user's clip-gallery review;
+then assemble → score → sfx → caption → watermark → commit. Everything else committed.)
 
-## 🟡 PICK UP HERE FIRST — 2026-07-21 night — EW01 ink migration IN FLIGHT, paused mid-audit
+## 🟡 PICK UP HERE FIRST — 2026-07-21 night #4 — EW01: 25 clips animated + QC'd, awaiting review
 
-**Where this is:** user approved ~$35 (ceiling ~$40) for the full EW01 Two Goats oil→ink
-migration. Followed the Bronze Serpent precedent (now locked as `v2/LONGFORM_SPEC.md`
-LF-INV-11 — read it, it's the exact recipe). Spend so far: ~$2 (2 test rolls + 23 first-pass
-+ 13 re-rolls = 38 still renders total, all ledgered).
+**State:** all 25 inked clips rendered via `_animate_inked.py` (tiered: Kling 3.0 for the 8
+multi-figure/crowd scenes 6,11,13,14,18,20,21,24; Seedance 1.5 for the 17 calm ones). Full
+clip-QC by filmstrip + first/last-frame eye check — all pass frozen-tableau (camera push +
+living light, no invented motion). **Two re-rolls fixed:** #08 (Seedance grew the settled
+blood into a flowing drip → re-rendered the STILL blood-free, empty basin + clean floor, then
+re-animated) and #21 (Seedance WALKED the mid-stride priest → moved to Kling with a firm
+frozen-stride lock, now holds). Migration spend ~$33/$40.
+
+**Clip gallery (for the user):**
+`file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/EW01_Two_Goats/v1/visual_16x9_inked/_CLIPS_REVIEW.html`
+(inline video, tier-tagged; built by `_build_clips_review.py`).
+
+**Next:** user reviews clips → assemble via EW01's window-lane builder (check
+`longform/EW01_Two_Goats/*.py`; an assembly script may need writing/porting like the
+scene-plan/render/animate scripts were) → score (`_add_score_lf.py` EW01 entry) → sfx
+(`_sfx_two_goats.py`) → caption → INV-26 landing-hold check (target 3.0s) → INV-27 watermark
+(`add_watermark.py`, top-right 16:9) → full suite → publish pack (6-CLI panel) → ONE commit
+for the whole migration. Uncommitted so far: the 5 EW01 scripts (_build_inked_scene_plan,
+_render_inked_stills, _animate_inked, _build_stills_review, _build_clips_review) + 25 stills
++ 25 clips + galleries + spend ledger.
+
+## (superseded) 2026-07-21 night #3 — EW01 stills: all 25 clean, awaiting final OK
+
+**State:** all 25 inked stills rendered + eye-audited + the user's own two gallery-note
+rounds applied. Resolved: gray-hair witness (3/9/12/14), period Ark/skyline (5/6/19), dry
+altar (8), hand positions (2/19), and ALL gore removed (goats now at rest, no blood — 11 +
+18, both were the seedream "NO blood" negative-channel trap DRAWING blood). **Christ's nail
+scar: after ~5 failed wording rounds (barbed star / 4-sunburst-on-knuckles / 3-on-palm /
+band-aid patch) the user chose CLEAN HANDS on all 6 close-ups (17,18,19,20,22,25)** — scar
+wording stripped, wound theology carried by the narration. See [[ink-render-failure-modes]]
+(now says: default inked risen-Christ to clean hands, never prompt a scar).
+
+**Minor residual (not blocking):** scenes 2 + 19 have bright-white fingernails from the
+natural-anatomy line. Not flagged; anatomy is correct. Re-roll only if the user asks.
+
+**Gallery (final human sign-off):**
+`file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/EW01_Two_Goats/v1/visual_16x9_inked/_STILLS_REVIEW.html`
+Notes-box + "Copy All Notes" built in. Spend so far ~$3 of the ~$35-40 budget.
+
+**Next:** user gives final stills OK → tiered animation (Seedance calm / Kling action,
+~$28 left) → reassemble via EW01 window lane → score → sfx → INV-26 hold → INV-27 watermark
+→ suite → publish pack → ONE commit. (Prior detailed section below kept for reference.)
+
+## (superseded) 2026-07-21 night #2 — EW01 stills gate: 24/25 clean, 1 flagged
+
+**Where this is:** eye-audited all 13 re-rolled stills from the first pass. Found the
+Christ nail-scar fix from round 1 had NOT worked — it produced a black barbed
+star/cross/stitch mark on all 6 Christ-hand scenes (17,18,19,20,22,25), including scene 19
+which never had the old "nail-wounds" boilerplate — proving the words "nail scar"/"wound"
+themselves draw the icon (seedream no-negative-channel strikes again, one level deeper than
+first thought). Root-caused + fixed in `_build_inked_scene_plan.py`: stripped the old
+"with visible nail-wounds in his hands" phrase from the ported base text AND rewrote SCAR
+to avoid "scar"/"wound"/"nail" entirely (now: "one small, faint mark near the centre, the
+same warm skin tone... gently rounded and fully healed"). Re-rendered all 6 (~$0.30) —
+**5/6 came out clean** (17,18,19,22,25 — small warm same-tone dot, no star/stitch).
+**Scene 20 still shows a small orange/red starburst fleck on both palms after 2 separate
+re-renders** (tried once, still there; tried again, still there) — this one scene resists
+the fix in a way the others didn't (its own prompt is glory/light-saturated: seated in
+glory, temple veil, light pouring — likely bleeding a "radiance" quality into the mark).
+**Did not auto-retry a 3rd time** — this is a doctrinally-sensitive detail (Christ's
+wounds) that's had 2 failed automated attempts, so it's flagged for the user rather than
+guessed at again. All other eye-audit items (gray-hair witness on 3/9/14, cherubim-not-
+lamassu on 5, sons'-deaths composition on 6, dry altar pedestal on 8, no eye-fusion on 12,
+no steeple/cross on 19's skyline) are confirmed fixed by direct zoom-crop inspection.
+
+**Gallery built for the HUMAN stills gate:**
+`file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/EW01_Two_Goats/v1/visual_16x9_inked/_STILLS_REVIEW.html`
+— all 25 stills, scene 20 flagged red. Built by
+`longform/EW01_Two_Goats/_build_stills_review.py` (new, $0, reusable if more re-rolls happen).
 
 **Files (all uncommitted — durable on disk, not yet in git):**
-- `longform/EW01_Two_Goats/_build_inked_scene_plan.py` — ports the archived oil
-  `scene_plan.json` → `v1/visual_16x9_inked/scene_plan.json` (25 scenes). Contains
-  `REDESIGN` (scenes 8+14, blood-rite settled-state rewrite) and `FIXES_APPEND`/
-  `FIXES_REPLACE` maps (13 scenes, eye-audit fixes from the first render pass).
-- `longform/EW01_Two_Goats/_render_inked_stills.py` — the renderer (Bronze pattern,
-  `--only <ids> --force` to target specific scenes).
-- `longform/EW01_Two_Goats/v1/visual_16x9_inked/*.png` — 25 stills on disk, ALL 13
-  flagged ones already re-rolled with fixes (exit 0, no failures). **NOT yet re-audited
-  by eye** — this is the very next step.
+- `longform/EW01_Two_Goats/_build_inked_scene_plan.py` — now has the round-2 SCAR fix +
+  STRIP_PHRASES logic (see history in the file's own comments).
+- `longform/EW01_Two_Goats/_build_stills_review.py` — NEW, writes `_STILLS_REVIEW.html`.
+- `longform/EW01_Two_Goats/v1/visual_16x9_inked/*.png` — 25 stills, 24 clean, #20 flagged.
+- `longform/EW01_Two_Goats/v1/visual_16x9_inked/_STILLS_REVIEW.html` — the gate page.
 
-**What the first full-set eye-audit found (all 25 stills viewed at full res)** — recorded
-as reusable failure-mode memory [[ink-render-failure-modes]]:
-1. Christ's nail scars rendered as barbed star-scribbles on 6/6 Christ stills (17,18,20,
-   22,25 + others) — fixed via positive-only phrasing ("a single small quiet healed nail
-   scar, a simple dark oval mark... hands and wrists clean"), never naming the defect
-   (seedream has no negative channel).
-2. The aged gray-bearded witness rendered dark-haired in scenes 3, 9, 14 — fixed by naming
-   the identity explicitly in each block.
-3. Scene 5 (Ark) generated Assyrian lamassu guardian statues instead of the Ark's own gold
-   cherubim — full rewrite. Scene 6 (sons' deaths) needed a full rewrite too (composition
-   was muddled). Scene 19 generated a Christian church steeple + rooftop cross in a
-   pre-crucifixion Jerusalem skyline — full rewrite (period-correct flat-roof skyline).
-4. Scene 8's altar pedestal had a stray liquid trickle despite the "settled" redesign —
-   appended "the stone clean and dry".
-5. Scene 12: the setting sun fused into the witness's eye like a glowing socket — appended
-   "sun hangs small and distant, well away from his face."
-
-**Next steps, in order (this is exactly where to resume):**
-1. Eye-audit the 13 re-rolled stills (open each PNG in `v1/visual_16x9_inked/`, check
-   against the 5 failure modes above — especially confirm no NEW barbed-scar recurrence
-   on 17/18/20/22/25, gray hair correct on 3/9/14, no lamassu/steeple on 5/6/19, dry
-   pedestal on 8, no eye-fusion on 12). If any still fails again, add another
-   FIXES_APPEND/REPLACE entry and re-roll just that id — do not hand-edit outside the
-   plan builder (LF-INV-11 step 4).
-2. Once all 25 are clean: build a still-review gallery (index.html, thumbnails +
-   filenames — follow the `_CLIPQC_REVIEW.html` pattern already in this repo) and bring
-   it to the user as the **HUMAN stills gate** — no animation spend until approved.
+**Next steps, in order:**
+1. **User decision on scene 20**: (a) try a 3rd wording pass (e.g. explicitly de-emphasize
+   glow/radiance on the hand mark specifically, since that scene's prompt is unusually
+   light-saturated), or (b) accept it as-is (it's small, not gruesome, arguably reads as a
+   "glowing" scar which isn't doctrinally wrong for a risen/glorified Christ), or (c) view
+   the gallery and decide it's fine. Whichever the user picks, that's the last still-gate
+   gap.
+2. Once scene 20 is resolved: **HUMAN stills gate** — user reviews the gallery, approves
+   (or calls out anything I missed) before any animation spend.
 3. On approval: tiered animation (Seedance for calm single-figure scenes, Kling 3.0 for
    action/crowd/complexity per `comic-grid-cost-tiered-animation` — most of these 25 are
-   calm single-figure, so Seedance-heavy; ~$28 of the budget remains). Frozen-tableau
-   prompts (`adhoc/SKILL_locked.md`), clip-QC sidecars fail-closed per clip.
+   calm single-figure, so Seedance-heavy; ~$28 of the ~$35-40 budget remains, ~$2.30 spent
+   so far). Frozen-tableau prompts (`adhoc/SKILL_locked.md`), clip-QC sidecars fail-closed.
 4. Reassemble via EW01's own window-lane builder (check `longform/EW01_Two_Goats/*.py`
    for the existing `_build_audio.py`/`_sfx_two_goats.py` — an assembly script may still
    need to be written or ported same as the scene-plan/render scripts were).
-5. check_landing_hold.py (target 3.0s from the start, no legacy WARN needed) → INV-27
-   watermark (`add_watermark.py`, top-right since this is a 16:9 long) → full test
-   suite → publish pack (6-CLI panel, same discipline as the 6 packs done today) →
-   ONE commit for the whole migration (scripts + stills + clips + film + gates).
+5. check_landing_hold.py (target 3.0s) → INV-27 watermark (`add_watermark.py`, top-right,
+   16:9 long) → full test suite → publish pack (6-CLI panel) → ONE commit for the whole
+   migration (scripts + stills + clips + film + gates).
 
-**Memory to read before resuming:** [[LF-INV-11]] is IN the spec now (`v2/LONGFORM_SPEC.md`),
-[[ink-render-failure-modes]] and [[ew01-ink-migration-status]] are both in `.claude` memory —
-`ew01-ink-migration-status.md` is the living tracker, update it as each step above completes.
+**Memory to read before resuming:** [[LF-INV-11]] in `v2/LONGFORM_SPEC.md`,
+[[ink-render-failure-modes]] and [[ew01-ink-migration-status]] in `.claude` memory —
+`ew01-ink-migration-status.md` is the living tracker, updated this session.
 
 ---
 

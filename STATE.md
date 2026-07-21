@@ -1,6 +1,26 @@
 # STATE.md — progress tracker
 
-**Last updated:** 2026-07-15 (5 episodes tracked, red-teamed)
+**Last updated:** 2026-07-21 (EW01 ink migration — 25 stills + 25 clips done, awaiting clip review)
+**Status (2026-07-21 — EW01 TWO GOATS oil→ink migration: VISUALS REBUILT THROUGH CLIPS):**
+Resumed the paused EW01 ink migration (user-approved ~$35, ceiling $40). **All 25 inked stills
+clean** after the user's own two gallery-note passes: fixed gray-hair witness identity (3/9/12/14),
+period Ark/skyline (5/6/19), dry altar (8), hand positions (2/19), and removed ALL gore (goats at
+rest, no blood — 11+18, both the seedream "NO blood" negative-channel trap). **Christ's nail scar:
+after ~5 failed wording rounds (barbed star / multi-sunburst / band-aid patch) the user chose CLEAN
+HANDS** on all 6 close-ups — the ink style can't render a subtle scar; wound theology stays in the
+narration ([[ink-render-failure-modes]] updated). Stills gate PASSED ("looks good"). Then **all 25
+clips animated** via new `_animate_inked.py` (tiered: Kling 3.0 for 8 multi-figure/crowd scenes,
+Seedance 1.5 for 17 calm ones), test-gated first (scenes 1+18), full batch, 0 failures. Full clip-QC
+by filmstrip + first/last-frame check: 23 clean first pass; **2 re-rolls fixed** — #08 (Seedance grew
+settled blood into a flowing drip → re-rendered the still blood-free + re-animated) and #21 (Seedance
+WALKED the mid-stride priest → moved to Kling + frozen-stride lock, now holds). Migration spend ~$33/$40
+(migration-scoped budget teeth in the driver, so the archived-oil $102 doesn't false-trip). New scripts:
+`_build_inked_scene_plan.py` `_render_inked_stills.py` `_animate_inked.py` `_build_stills_review.py`
+`_build_clips_review.py`. Galleries: `v1/visual_16x9_inked/_STILLS_REVIEW.html` + `_CLIPS_REVIEW.html`.
+**NEXT (tomorrow):** user reviews the clip gallery → assemble via EW01 window lane → score → sfx →
+caption → INV-26 hold → INV-27 watermark → suite → publish pack → the ONE migration commit. **Full
+pickup: RESUME.md top.**
+
 **Status (2026-07-15 — episode red-team + 4 new episodes scaffolded from the user's own plan):**
 Red-teamed the Episode concept (2 agents). Confirmed CRITICAL live bug: production_board.py said
 Psalm 22 was "built, ready to release" while build_upload_tracker.py correctly said "not yet marked
