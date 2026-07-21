@@ -29,7 +29,7 @@ EPISODES: dict[str, dict] = {
         "segments": ["lonely_searching_a", "sacred_grace_rise_a"],
         "xfade_s": 6.0,
         "gain_db": -11.0,
-        "outro_s": 2.5,
+        "outro_s": 3.0,   # was 2.5; brought to the INV-26 3.0s standard 2026-07-21 (clip-QC rebuild)
     },
     # Psalm 22 (418.2s) — ache (M1-M4) -> grace enters M5 -> climaxes M6 turn -> resolves M7.
     # Closer is sacred_grace_rise_b (229.9s) so the score covers the final "Come and join"

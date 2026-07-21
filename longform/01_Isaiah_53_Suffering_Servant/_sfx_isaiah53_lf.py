@@ -37,7 +37,7 @@ from pipeline.sfx_bed import build  # noqa: E402
 VIS = Path(__file__).resolve().parent / "v1" / "visual_16x9_inked"
 SCORED = VIS / "LivingPage_Isaiah53_16x9_scored.mp4"
 OUT = VIS / "LivingPage_Isaiah53_16x9_scored_sfx.mp4"
-TOTAL = 407.78  # 405.28s narration + 2.5s outro (matches EPISODES recipe in _add_score_lf.py)
+TOTAL = 408.28  # 405.28s narration + 3.0s outro (matches EPISODES recipe in _add_score_lf.py, INV-26)
 
 CUES = [
     ("wind_desert_bleak",     0.0,   TOTAL, -37),   # continuous base
