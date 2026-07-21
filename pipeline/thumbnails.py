@@ -252,10 +252,12 @@ def compose_tiktok(frame: Image.Image, title: list[str], ref: str) -> Image.Imag
 
 
 def brand_assets(out_dir: Path) -> None:
-    """Site-identity marks: ONE word — AWAKEDEN with the split E — on transparent.
-    The YouTube branding watermark is the same mark, corner-subtle."""
+    """Site-identity marks (AWAK bone + EDEN red, exactly as the website renders
+    the wordmark). The YouTube branding watermark is the same mark, corner-subtle;
+    awakeden_watermark_overlay.png is the transparent shadowed variant for
+    burning into videos (scale it down at overlay time)."""
     from pipeline.channel_dress import (ARIAL_BLK, BONE, RED_BRIGHT,
-                                        draw_split_char, font as cd_font,
+                                        draw_wordmark, font as cd_font,
                                         wordmark_width)
     out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -269,20 +271,32 @@ def brand_assets(out_dir: Path) -> None:
         draw_word_centered(im, (px * 0.04, px * 0.40, px * 0.96, px * 0.60))
         im.save(out_dir / name)
     # horizontal wordmark (transparent)
-    from pipeline.channel_dress import wordmark_width as ww
-    w = int(ww(220, 0.14)) + 80
+    w = int(wordmark_width(220, 0.14)) + 80
     im = Image.new("RGBA", (w, 320), (0, 0, 0, 0))
     dr = ImageDraw.Draw(im)
     f = cd_font(ARIAL_BLK, 220)
     cx = 40.0
     for i, ch in enumerate("AWAKEDEN"):
-        if i == 4:
-            draw_split_char(im, (cx, 40), ch, f, 220, BONE, RED_BRIGHT)
-            dr = ImageDraw.Draw(im)
-        else:
-            dr.text((cx, 40), ch, font=f, fill=(BONE if i < 4 else RED_BRIGHT) + (255,))
+        dr.text((cx, 40), ch, font=f, fill=(BONE if i < 4 else RED_BRIGHT) + (255,))
         cx += dr.textlength(ch, font=f) + 220 * 0.14
     im.save(out_dir / "awakeden_wordmark.png")
+    # video-overlay variant: same wordmark over a soft blurred shadow so the bone
+    # letters survive bright footage, still fully transparent outside the glyphs
+    from PIL import ImageFilter
+    im = Image.new("RGBA", (w, 320), (0, 0, 0, 0))
+    sh = Image.new("RGBA", (w, 320), (0, 0, 0, 0))
+    sd = ImageDraw.Draw(sh)
+    cx = 40.0
+    for ch in "AWAKEDEN":
+        sd.text((cx + 6, 46), ch, font=f, fill=(0, 0, 0, 235))
+        cx += sd.textlength(ch, font=f) + 220 * 0.14
+    im.alpha_composite(sh.filter(ImageFilter.GaussianBlur(7)))
+    dr = ImageDraw.Draw(im)
+    cx = 40.0
+    for i, ch in enumerate("AWAKEDEN"):
+        dr.text((cx, 40), ch, font=f, fill=(BONE if i < 4 else RED_BRIGHT) + (255,))
+        cx += dr.textlength(ch, font=f) + 220 * 0.14
+    im.save(out_dir / "awakeden_watermark_overlay.png")
     print(f"brand assets -> {out_dir}")
 
 

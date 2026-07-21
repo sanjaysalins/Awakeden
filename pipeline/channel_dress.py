@@ -81,8 +81,9 @@ def draw_split_char(im: Image.Image, xy: tuple, ch: str, f: ImageFont.FreeTypeFo
 
 def draw_wordmark(im: Image.Image, x: float, y: float, size: int,
                   tracking: float = 0.14, glow: bool = True, shadow: bool = False) -> float:
-    """Site wordmark: AWAK bone + shared split-E + DEN red-bright (glow),
-    letterspaced Arial Black — reads as AWAKE and EDEN sharing the E."""
+    """Site wordmark exactly as site.css renders it: AWAK bone + EDEN red-bright
+    (with the site's red glow), letterspaced Arial Black. (User call 2026-07-21:
+    match the website - the earlier shared split-E is retired.)"""
     f = font(ARIAL_BLK, size)
     if glow:
         from PIL import ImageFilter
@@ -90,7 +91,7 @@ def draw_wordmark(im: Image.Image, x: float, y: float, size: int,
         gd = ImageDraw.Draw(gl)
         cx = x
         for i, ch in enumerate("AWAKEDEN"):
-            if i >= 5:
+            if i >= 4:
                 gd.text((cx, y), ch, font=f, fill=RED_BRIGHT + (160,))
             cx += gd.textlength(ch, font=f) + size * tracking
         gl = gl.filter(ImageFilter.GaussianBlur(size * 0.09))
@@ -101,11 +102,7 @@ def draw_wordmark(im: Image.Image, x: float, y: float, size: int,
         if shadow:
             dr.text((cx + max(2, size // 30), y + max(2, size // 30)), ch,
                     font=f, fill=(0, 0, 0, 210))
-        if i == 4:                       # the shared E: half bone, half red
-            draw_split_char(im, (cx, y), ch, f, size, BONE, RED_BRIGHT)
-            dr = ImageDraw.Draw(im, "RGBA")
-        else:
-            dr.text((cx, y), ch, font=f, fill=BONE if i < 4 else RED_BRIGHT)
+        dr.text((cx, y), ch, font=f, fill=BONE if i < 4 else RED_BRIGHT)
         cx += dr.textlength(ch, font=f) + size * tracking
     return cx
 
