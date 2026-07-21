@@ -12,7 +12,7 @@ His question was not a curse. It was a diagnosis full of mercy, the spirit indee
 
 He watched that hour alone. Now no hour of yours is watched alone. Bring Jesus the weak flesh he already knows.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/could-ye-not-watch-one-hour.html
 
 Follow:

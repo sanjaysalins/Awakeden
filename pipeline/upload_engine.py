@@ -35,7 +35,12 @@ def build_footer(platform: str, brand: dict, read_url: str = "") -> str:
     """Verbatim brand footer. Full (with links) on YouTube/Facebook; minimal,
     link-free on TikTok/Instagram (links aren't clickable there). `read_url` is
     the piece's own read-the-panels page on awakeden.com."""
-    cta = (brand.get("cta_line") or "").strip()
+    # "Subscribe" is YouTube's verb; TikTok/Facebook/Instagram say "Follow"
+    # (panel-convergent fix, user-approved 2026-07-21). cta_line_social falls
+    # back to cta_line so a brand file without it keeps working.
+    social = not platform.startswith("youtube")
+    cta = ((brand.get("cta_line_social") if social else None)
+           or brand.get("cta_line") or "").strip()
     handles = brand.get("handles", {})
     scripture_note = (brand.get("scripture_note") or "").strip()
     website = brand.get("website")

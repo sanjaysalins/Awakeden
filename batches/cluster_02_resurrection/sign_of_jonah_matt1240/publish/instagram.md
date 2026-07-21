@@ -7,7 +7,7 @@ Jonah went down guilty; the storm was his. Christ went down innocent, bearing ou
 
 However far you have fallen, his mercy reaches further. It cost him the grave. Come up out of the deep, and live.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 Follow @awakeden
 
 ## HASHTAGS

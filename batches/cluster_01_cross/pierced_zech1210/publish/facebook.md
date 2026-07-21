@@ -10,7 +10,7 @@ Look upon ME, God is speaking. John watched the spear go in and knew: this was G
 
 Look at him, and live.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/zechariah-12-10-pierced.html
 
 Follow:

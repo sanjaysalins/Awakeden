@@ -10,7 +10,7 @@ Psalm 22 opens with the forsaken cry Jesus prayed from the cross. But keep readi
 
 Hebrews puts that verse in the mouth of the risen Christ, and adds that he is not ashamed to call them brethren. The One who cried forsaken now lives, and he is calling you into that family.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 
 Follow:
 YouTube: @awakeden (https://youtube.com/@awakeden)

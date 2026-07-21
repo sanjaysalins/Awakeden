@@ -10,7 +10,7 @@ David described a dying body so exactly it reads like an eyewitness account of a
 
 He wrote in the first person, but he was describing someone else's death. Rome would not make crucifixion its instrument for centuries. This is what Jesus bore to bring you home, recorded early so you would know none of it was chance. He was crushed in your place. Come home to him.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 
 Follow:
 YouTube: @awakeden (https://youtube.com/@awakeden)

@@ -10,7 +10,7 @@ Psalm 22 painted the thirst behind the cry a thousand years early: "My strength 
 
 The One who offers living water hung there dry, in your place. Bring him your thirst, and drink. That water is himself.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/ps22-08-i-thirst.html
 
 Follow:

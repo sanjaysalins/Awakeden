@@ -10,7 +10,7 @@ As they divided his clothing, Jesus prayed for the people putting him to death. 
 
 While we were yet sinners, Christ died for us. That mercy is held out to you now. Come, and receive it by faith.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/father-forgive-them.html
 
 Follow:

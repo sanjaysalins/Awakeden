@@ -7,7 +7,7 @@ Psalm 22 painted that thirst a thousand years early: strength dried like a potsh
 
 The Giver of living water hung dry, in your place. Bring him your thirst, and drink.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 Follow @awakeden
 
 ## HASHTAGS

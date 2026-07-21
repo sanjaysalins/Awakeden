@@ -7,7 +7,7 @@ They were a prayer for the men holding the hammer. "Father, forgive them; for th
 
 Mercy was pleading for you before you knew you needed it. It is held out to you now.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 Follow @awakeden
 
 ## HASHTAGS

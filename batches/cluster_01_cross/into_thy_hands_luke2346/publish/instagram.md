@@ -7,7 +7,7 @@ With one word added: Father.
 
 He died like a child falling asleep in his father's arms. On the third day, morning came. You can close your eyes in those same hands. He keeps the morning.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 Follow @awakeden
 
 ## HASHTAGS

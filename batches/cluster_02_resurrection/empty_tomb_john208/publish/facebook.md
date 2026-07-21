@@ -10,7 +10,7 @@ When Peter and John ran to the empty tomb, no angel spoke and no risen Lord stoo
 
 You were not at the tomb. Jesus was speaking about you. Believe what John believed, the Lord is risen.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 
 Follow:
 YouTube: @awakeden (https://youtube.com/@awakeden)

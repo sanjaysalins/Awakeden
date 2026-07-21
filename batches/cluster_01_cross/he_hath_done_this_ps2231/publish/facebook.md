@@ -10,7 +10,7 @@ Psalm 22's final line looks ahead to God's saving work, accomplished and declare
 
 As Jesus hung dying, John records his final word: "It is finished" (John 19:30). Different words, in different tongues, but the same note: a finished work. Nothing is left for you to finish. Only Someone to come home to: the One who said it is done.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 
 Follow:
 YouTube: @awakeden (https://youtube.com/@awakeden)
