@@ -1,0 +1,43 @@
+{
+  "slug": "jericho",
+  "hook_lines": ["l1", "l2", "l3"],
+  "loops": [
+    {
+      "id": "L1",
+      "opened_line": "l1",
+      "loop": "Why would God command His conquering army to march around the strongest walls in the world in total silence -- no war cries, no noise -- instead of attacking?",
+      "payoff_line": "l5",
+      "payoff_phrase": "shouted with a great shout",
+      "status": "PARTIAL",
+      "note": "No line ever states WHY silence was commanded -- the word 'silence' itself never returns. The loop pays off only by dramatic contrast: six days of enforced quiet erupt, on the seventh, into 'a great shout' that brings the wall down in the very next clause. That is a real show-not-tell payoff (matches Joshua 6:10, where the silence is broken exactly at the commanded shout) but it is closed by implication, not by an explicit callback to 'silence.' Creator call: accept as-is -- adding one clause like 'the silence finally broke' would make it explicit if a future re-cut wants it."
+    },
+    {
+      "id": "L2",
+      "opened_line": "l2",
+      "loop": "Why one scarlet cord, specifically, hanging from one window -- singled out as the very last image before the hook ends on Rahab?",
+      "payoff_line": "l9",
+      "payoff_phrase": "scarlet line running from her window to a cross",
+      "status": "PAID"
+    },
+    {
+      "id": "L3",
+      "opened_line": "l3",
+      "loop": "Who is Rahab -- introduced only as 'a woman with a past' -- and why does she matter enough to be named inside a city about to be destroyed?",
+      "payoff_line": "l7",
+      "payoff_phrase": "By faith the harlot Rahab perished not",
+      "status": "PAID"
+    },
+    {
+      "id": "L4",
+      "opened_line": "l3",
+      "loop": "Does Rahab's 'past' ever connect to anything larger, or is she left behind once the walls fall?",
+      "payoff_line": "l8",
+      "payoff_phrase": "The woman behind the scarlet cord became His family",
+      "status": "PAID"
+    }
+  ],
+  "ending": {
+    "verdict_line": "l9",
+    "verdict_phrase": "Bind everything to it."
+  }
+}

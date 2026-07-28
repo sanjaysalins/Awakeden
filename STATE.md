@@ -1,6 +1,172 @@
 # STATE.md — progress tracker
 
-**Last updated:** 2026-07-21 (EW01 ink migration — 25 stills + 25 clips done, awaiting clip review)
+**Last updated:** 2026-07-29 early (LIVING-SKETCHBOOK — user-chosen go-forward direction, 3 episodes proven, tweaks pending)
+
+**Status (2026-07-28/29 — the sketch-documentary direction is CHOSEN, not yet formally locked):**
+User pivot session: loved the cast-bible-adjacent sketch style from a taste piece, asked for an
+independent review of every skill in the sister ArkAIology project, then a full skill-by-skill
+test-and-adapt pass, then two real production episodes. **User's own words at close: "I am
+convinced this is the way to go forward."** Same framing as the earlier painted-comic pivot
+(`memory: painted-comic-visual-direction`) — a CHOSEN go-forward look with real tweaks pending,
+**not yet run through the standing red-team + external 5-CLI panel that formally LOCKS a
+direction** (`enforced-independent-review`). Don't treat this as production-final until that gate
+runs.
+**The arc, in order:** (1) built a 30s "cast-bible look" taste piece (Noah/the door) reusing
+ArkAIology's `/cast-bible` mechanism — user loved it, asked for the FULL "In No Wise Cast Out"
+episode in that style → `poc_castbible_look/episode_door/AT_THE_DOOR_sketch_poc.mp4` (58.3s).
+(2) User flagged the caption box as "alien" — diagnosis: it was ArkAIology's own vox-motion
+VerseQuoteCard UI-chip component, unmodified in structure, just recolored. Rebuilt from zero as
+hand-made lettering (Scribed Ink, Illuminated Rubric, Ink Stamp) — real POCs, real font-metrics
+bug found+fixed. (3) User asked for the skill's first ACTION proving-run → built **JERICHO**
+(Joshua 2+6) from scratch, 13 spreads, multi-stage wall-collapse hard cut, real WhisperX-aligned
+verse reveals, `poc_living_sketchbook/jericho/JERICHO_living_sketchbook.mp4` (64.8s). Real defect
+chain: a wall-collapse stage invented a blood-like pool on the scarlet cord; hardening the ban
+made it WORSE (2 windows bled — textbook proof that naming a thing to forbid it can draw it);
+fixed only by switching model AND stripping every liquid-adjacent word. (4) User: "did you check
+EVERYTHING?" — no, round 1 only covered 5 of ArkAIology's 9 skills. Round 2: **Fable designed 11
+briefs, 11 parallel Sonnet agents executed**, every output independently re-verified before
+counting — **9 ADOPT, 1 confirmed SKIP** (split-flap day-counter: even a good-faith wooden-tally
+reskin still reads as a scoreboard — proves a borrowed STRUCTURE can't be textured away, only the
+material). Full scorecard: `poc_living_sketchbook/_SKILL_ADAPTATIONS_REVIEW.html` +
+`.claude/skills/living-sketchbook/SKILL.md` §5b. (5) User: run this on a REAL mature episode with
+existing narration → **TWO GOATS** (Leviticus 16, the EW01_Two_Goats "punchy short" locked
+narration, unchanged) → `poc_living_sketchbook/two_goats/TWO_GOATS_living_sketchbook.mp4` (70.8s).
+Real WhisperX forced-alignment (189/189 words exact) drove spread timing. Two real defects caught
+and fixed: (a) the SAME Jesus anchor produced two visibly different Jesus stills within one
+episode (user's own eye caught it) — fixed by chaining the first APPROVED render as a second
+reference for every later appearance, now standard practice; (b) a verse card's exit time bled
+into the next spread and sat over Jesus's face — caught on full-assembly QC, whole ~2100-frame
+render rebuilt. **Day spend: $61.86 est.** Full pickup + the concrete tomorrow tweak-list:
+**RESUME.md top.**
+
+---
+
+**Previous status (2026-07-27 — GOLD SEAM DNA — designed, stress-tested, and LOCKED on a full piece)
+
+**Status (2026-07-27 — Gold Seam / Bowed Camera / Witness Edge DNA designed by Fable, proven
+through a full E2E rebuild, LOCKED):** Grew directly out of the 07-26 strategy session's
+launch-bar diagnosis: user pushed back on "just ship" (YouTube rewards a channel that looks
+consistent from video one) and asked for real elevation of the visual weak link instead.
+**Design arc (Fable, `poc_comic_page/_ACTION_PAINTERLY_DNA.md` + `v2/SERIES_DNA.md`):** a
+signature grammar for the "dynamic painted Bible comic" direction — **Gold Seam** (light eats
+the ink line at a figure's lit edge, gold = His glory only), **Bowed Camera** (the low-angle
+hero shot is earned ONLY at glory beats; passion beats stay level, at a witness's eye height —
+this also fixed a real body-gate drift, camera angle was dragging heroic anatomy with it), and
+**Witness Edge** (a foreground crowd silhouette, seam never falls on them — proven on a Golgotha
+mockers stress-test, not yet used in a real piece). Throughline: *"the light is His, the camera
+kneels, we stand in the crowd."* Two honest hostile audits ran mid-session
+(`v2/AUDIENCE_MISSION_AUDIT.md`, `v2/COMPETITIVE_SCAN.md`) — caught real overspend-on-craft
+risk, but ALSO corrected an earlier wrong assumption: comic-style Bible content is actually OPEN
+space right now (the flooded lanes are photoreal AI-vlog and epic-cinematic-AI, not comics); the
+living-comic motion form has no real shorts-native competitor.
+**Full E2E validation + LOCK, same day:** rebuilt "In No Wise Cast Out" (`poc_comic_page/_piece1/`)
+in the new grammar end to end — new period-correct character sheets, 15 stills (2 rounds: camera
+variety/density fixes, a 3-palette bake-off won by gold, one hard Golgotha scene), 15 clips
+(cost-tiered Seedance/Kling, frozen-tableau + steady-seam discipline — proven glitter-free by a
+real animation test before the full run), assembled with the living-page grammar (word-timed
+slams, gold-bordered verse splash, red-letter), scored, captioned, watermarked. **Two real rounds
+of user-caught fixes, both applied:** (1) a full period-accuracy pass — the door/lamp/boots/hood
+had drifted generic-medieval-fantasy (one panel literally had a modern doorknob); corrected to
+plain wood-plank door + wooden bar-latch, terracotta saucer lamp, leather sandals, a draped mantle
+instead of a fitted hood — caught 2 of my own follow-on bugs where a corrected still's animation
+prompt still described a since-removed figure ("invent nothing" can't save you if the prompt
+lies about what's in the source frame). (2) caption em-dashes — 3 hits, a real violation of the
+already-locked `feedback-no-dash-caption-slop` rule (`caption_slop_check.py` doesn't scan this
+POC's file format, so it slipped through; rewritten as short plain sentences), plus a
+cold-to-warm score arc (`lonely_searching_a` → `sacred_grace_rise_a`, existing $0 library tracks,
+crossfaded at the page4→5 turn) replacing the one flat cue that didn't move with the story.
+**LOCKED**: `poc_comic_page/_piece1/IN_NO_WISE_GOLDSEAM_LOCKED.mp4`. Total spend this session
+≈$28-30 across the whole DNA design+validation arc (stills/clips/re-rolls, all pre-quoted).
+**Honest gap:** this is still the POC pipeline (`poc_comic_page/`), not wired into the official
+`cli_visual.py`/`cli_assemble.py` production path or `pipeline/finality.py`'s release tracking —
+"locked" here means user-approved final cut, not yet plumbed into the release board. **NEXT (decided, 2026-07-27 eve):** Piece 2 tomorrow — The Mockers, same Gold Seam grammar,
+Witness Edge debuts for real. Wiring into the real pipeline, the audience test, and the 13
+unpublished packs all stay open but deferred. **Full pickup: RESUME.md top.**
+
+**Status (2026-07-26 — the LIVING COMIC was born; closed mid-p5a-integration):** Morning: the
+user caught a head-twist p4a clip in the built In No Wise cut — root cause was a STALE CLIP
+(the redo-batch replaced the still, nobody re-animated the clip; new standing rule: a still
+re-roll invalidates its whole clip chain). Fixed (2 Seedance takes, hardened INVENT-NOTHING),
+v1 rebuilt. Then a full STRATEGY session (user: "what am I trying to do with this series?"):
+`_SERIES_STRATEGY_REVIEW.html` — the 5 style reboots were CONVERGENCE toward "a comic book
+brought to life," the words/doctrine/audio/funnel never wobbled, and the real gap is ZERO
+audience data ($824 spent, 0 live, 13 GREEN packs idle since Jul 8). User's wish crystallized:
+a universally-loved comic book, "Jesus is the ultimate superhero" — counseled the doctrinally
+safe inversion (the genre's climax is power USED, the gospel's is power LAID DOWN): take the
+superhero CRAFT, not the costume; tagline candidate **"Every hero you've ever loved is an echo
+of this one."** Built a blind 3-film audience test pack (`_audience_test/` + zip, NOT sent):
+A=oil Mockers, B=inked Mockers (same topic!), C=comic + a mock AWAK+EDEN Issue-1 cover. Then
+the user's key creative call: B's living-page ENERGY applied to C's page GRAMMAR → built the
+**LIVING COMIC** `poc_comic_page/rung2/IN_NO_WISE_comic_v2.mp4` ($0, existing clips):
+word-timed panel slams, live-panel focus, ink-bleed page turns, full-bleed splash on the
+IN NO WISE pivot, still held landing, score + paper-thump slam hits — then v2.1 on user
+feedback: 14 verbatim parchment caption boxes (John 6:37 RED-LETTER page-bottom), page
+margin + drop shadows + print-grade halftone, p5b scroll-rock boomerang → forward loop.
+User: "much better." Last flag: the p5a welcome panel loop at 0:45 = "AI slop" → re-rendered
+with the user-approved REAL EMBRACE motion (Kling 10s, ~$1.50 est, first strip promising:
+embrace completes mid-clip then holds) — rendered at close, NOT yet QC'd/integrated. Session
+closed on the user's "some issues we need to resolve" (unspecified — ASK FIRST). Redo items
+p2b + p5c stills still open (both attempt-1 failures, plain PNGs missing). Nothing committed
+to git. **Full pickup: RESUME.md top.**
+**Status (2026-07-23 evening — panel-hardened, NOT yet pilot-ready):** Picked up the DNA session
+(below) and did two things: (1) replaced the B&W→colour trailer-style hook — user feedback "not
+really working for this style" — with a **comic-native splash-panel-slam hook** (ink-bordered
+panels, impact bursts kept OFF passion/veil-tear beats per the DNA's own §5a rule, the locked gold
+kinetic Scripture treatment, a new purpose-built Two-Goats title-card still). Final:
+`_remotion/out/dna_splash_hook_v6.mp4` (12s) + combined proof `_remotion/out/dna_hook_plus_body_v1.mp4`
+(36s, user-approved "looks good"). (2) Ran the **external 5-CLI panel THREE times** on
+`v2/AWAKEDEN_COMIC_DNA.md` (now v0.3) as the user explicitly chose to gate "build the real pipeline"
+behind it first — good call: **round 1 caught a load-bearing false claim** (the locked recipe's
+"Seedream 4.5 proven for identity" evidence was actually a different model, `nano_banana_pro`, per
+the ledger). **Round 2 (full 5/5 quorum)** found more: the round-1 fix itself mis-cited a locked
+memory (user decided directly: keep `nano_banana_pro` for character scenes, memory
+[[locked-stills-provider-split]] updated to note the partial supersession), the DNA build-map was
+stale, no dollar estimate existed, format-split conflicted with the binding `/livingpage` standard
+(user decided: **Remotion stays a separate engine**, real ongoing cost acknowledged), and the A/B
+protocol was mechanically broken (same-piece-twice risks a YouTube duplicate-content flag; Shorts
+swipe feed never shows a thumbnail) — corrected to a between-subjects read against recent shipped
+longs, user-confirmed. **Round 3 (4/5, codex timed out)** found real CODE bugs, not just doc wording:
+`HFProvider` is hardcoded 9:16 but EW01 is 16:9 (turned out to be a non-issue in practice — EW01's
+actual production script `_render_inked_stills.py` already monkeypatches this; the reviewers were
+auditing the wrong script, `visual_runner.py`, which is the SHORTS orchestrator); ref-chaining
+plumbing only ever reached an ad-hoc smoke test, never the real long-form script (**now fixed** —
+`_render_inked_stills.py` resolves `scene["refs"]` → `nano_banana_pro` + the right reference PNG,
+falls back to `seedream_v4_5` for plate scenes); a self-contradiction where §1 said both "Aaron has
+no ref" and "Aaron's ref is DONE" (fixed — reworded honestly: rendered ✅, chain-tested ❌); the new
+`heroic` banned-token could false-fail the DNA's own correct prompt phrasing ("no heroic muscle") —
+traced to a real but CORRECT gate behavior (forces positive-only phrasing, consistent with
+[[seedream-no-negative-channel]]), documented not routed around; RESUME.md was a 3rd source of truth
+still saying "Seedream 4.5 locked" — synced to point at the DNA doc. Full test suite stayed green
+(392 passed) through all of it. **Border-defect finding (this session, real and reproducible):** the
+retro prompt's "vintage 1960s comic" framing draws an actual black-bordered PAGE (not just style) on
+roughly 3 of 4 renders regardless of exact wording — fixed the wording for better odds, but the
+reliable mitigation is a $0 crop-after-the-fact (proven once on Aaron's reference), not a prompt fix.
+Aaron now has a locked retro reference (`longform/EW01_Two_Goats/_retro_dna/aaron_retro_ref.png`) —
+deliberately NOT reusing the old `aaron_pc_ref.png`, which has anachronistic Greek/Roman columns.
+**Honest gap going into tomorrow:** EW01's real `scene_plan.json` is still written in the OLD
+baroque/inked prompt language — the retro-comic recipe has never been applied to its actual 25
+scenes. That rewrite is the next real blocker before any pilot spend, not a code fix. **Full pickup:
+RESUME.md top.**
+
+**Status (prior — 2026-07-23, DNA SESSION pt.1 — reverent MODERATE retro-comic DNA chosen + proven; Seedream 4.5 locked; body POC + B&W→colour hook built):** A long visual-direction session that
+replaced the earlier painted-comic pivot. Journey: bake-offs (inked vs painted → user preferred inked;
+12 ink-variants; a 3-agent web-sourced **retro-comic DNA study**) → committed to **reverent MODERATE
+retro-comic** → drafted `v2/AWAKEDEN_COMIC_DNA.md` + a reference sheet → **4-lens red-team → REVISE** (both
+doctrinal/consistency blockers then PROVEN FIXED: character-lock via **Seedream 4.5 + chained `--image`
+reference**, and an Isaiah-53 **marred** cross) → re-red-team (don't build a big pilot yet; free audience
+test first; ~60% of the pipeline is unbuilt) → **$0 cleanup** + a shareable "premium vs cringe" test
+(`_retro_dna/_KITSCH_TEST.html`, not sent yet) → **14-model HF bake-off → Seedream 4.5 chosen** (user liked
+v4.5 + grok; complex-scene bake-off showed Seedream composes crowds/depth far better; grok flat/holy-card;
+openai_hazel gorgeous pulp but 3:2-only) → **complete DNA reference sheet v1.0** (`_retro_dna/_DNA_REFERENCE.html`,
+8 sections, all on real Seedream frames) → **DNA-lock POC** (`_remotion/out/dna_poc_v1.mp4`, 24s body, 4
+beats, Remotion caption+gold-Scripture+SFX) → **B&W→colour trailer HOOK** (`_remotion/out/dna_hook_v8.mp4`).
+🔴 Hook lesson: **bake true B&W clips (ffmpeg format=gray + S-curve) + fade colour in via OPACITY** — a live
+CSS grayscale filter muddies the retro art to dull grey. **Recipe LOCKED:** seedream_v4_5 + chained
+christ_pc_ref + moderate retro prompt + light print-finish. **NOTHING committed to git.** Open before a paid
+episode: send the free audience test, build the real Remotion tier-grid/lettering pipeline (~60% unbuilt),
+external 5-CLI panel. Full pickup: **RESUME.md top.** Memory: [[awakeden-comic-dna]].
+
+**Status (prior — 2026-07-22, EW01 ink migration):** (superseded by the DNA direction above)
 **Status (2026-07-21 — EW01 TWO GOATS oil→ink migration: VISUALS REBUILT THROUGH CLIPS):**
 Resumed the paused EW01 ink migration (user-approved ~$35, ceiling $40). **All 25 inked stills
 clean** after the user's own two gallery-note passes: fixed gray-hair witness identity (3/9/12/14),
@@ -17,9 +183,17 @@ WALKED the mid-stride priest → moved to Kling + frozen-stride lock, now holds)
 (migration-scoped budget teeth in the driver, so the archived-oil $102 doesn't false-trip). New scripts:
 `_build_inked_scene_plan.py` `_render_inked_stills.py` `_animate_inked.py` `_build_stills_review.py`
 `_build_clips_review.py`. Galleries: `v1/visual_16x9_inked/_STILLS_REVIEW.html` + `_CLIPS_REVIEW.html`.
-**NEXT (tomorrow):** user reviews the clip gallery → assemble via EW01 window lane → score → sfx →
-caption → INV-26 hold → INV-27 watermark → suite → publish pack → the ONE migration commit. **Full
-pickup: RESUME.md top.**
+**2026-07-22 UPDATE — the two night-#4 red-team clip items are CLOSED:** scene 20's floating teardrop
+(root cause = "tear" homograph → seedream drew a literal drop; fixed the still by tear→rip + positive
+light-fill, re-rendered + re-animated, QC clean, now a unified veil→enthroned-Christ frame) and scene 24's
+Christ face-morph (re-animated on Kling with a firm per-scene face-lock in `_animate_inked.py` MOTION[24];
+the identity morph is FIXED, a subtle reverent upward-gaze residual remains = my call ACCEPT, pending the
+user eyeballing the motion). Migration ~$35.80/$40 (both Kling re-roll costs recorded manually — jobs
+bypassed the script auto-record; the HF backend was degraded/slow today). Gallery `_CLIPS_REVIEW.html`
+rebuilt with both. **NEXT:** user eyeballs the clip gallery → write `_assemble_inked.py` (id-prefix clip
+match, NOT `_episode.stem`) → test assembly → flip frozen forward_slow scenes (6,7,8,20,23) to boomerang →
+score (bump outro→3.0, INV-26) → port `_sfx_two_goats.py` → caption → INV-27 watermark → suite → publish
+pack → the ONE migration commit. **Full pickup: RESUME.md top.**
 
 **Status (2026-07-15 — episode red-team + 4 new episodes scaffolded from the user's own plan):**
 Red-teamed the Episode concept (2 agents). Confirmed CRITICAL live bug: production_board.py said

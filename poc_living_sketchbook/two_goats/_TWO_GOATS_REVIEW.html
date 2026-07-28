@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TWO GOATS — living-sketchbook, production build</title>
+<style>
+  body { background:#16181d; color:#e8e4d8; font-family:Georgia, serif; line-height:1.55; padding:28px 18px 100px; }
+  .wrap { max-width:1220px; margin:0 auto; }
+  h1 { color:#e9c877; font-size:1.9rem; margin-bottom:6px; }
+  h2 { color:#e9c877; font-size:1.3rem; margin:34px 0 12px; border-bottom:1px solid #333a47; padding-bottom:8px; }
+  .sub { color:#9aa0ad; margin-bottom:24px; }
+  video { width:100%; max-width:420px; border-radius:8px; display:block; margin:12px 0; }
+  .v { background:#1e2129; border-left:5px solid #e9c877; padding:16px 18px; border-radius:8px; margin:14px 0; }
+  .good { border-left-color:#7fc97f; }
+  .warn { border-left-color:#e07a5f; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:12px; }
+  .grid img { width:100%; border-radius:6px; border:1px solid #333a47; }
+  figcaption { color:#9aa0ad; font-size:.88rem; margin-top:4px; }
+  .device { display:inline-block; background:#333a47; color:#e9c877; border-radius:10px; padding:3px 12px; font-size:.85rem; font-family:Arial, sans-serif; margin:2px 4px 2px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>TWO GOATS — Leviticus 16, the first production-ready /living-sketchbook episode</h1>
+<div class="sub">Built 2026-07-28 late night on the user's ≤200cr authorization, using the LOCKED "punchy short" narration
+from the existing EW01_Two_Goats production (no new script/audio authored). 70.8s · 9:16 · watermarked ·
+landing hold 3.37s · audio==video · real WhisperX forced-alignment (189/189 words exact).</div>
+
+<h2>▶ Watch (with sound)</h2>
+<video controls src="TWO_GOATS_living_sketchbook.mp4"></video>
+
+<div class="v good"><b>Every device from the skill fired, and held under real production scrutiny:</b>
+<span class="device">reused Jesus anchor (Door episode, $0)</span>
+<span class="device">new Priest cast anchor</span>
+<span class="device">multi-stage veil-tear hard cut</span>
+<span class="device">Illuminated Rubric (Isaiah 53:6)</span>
+<span class="device">Ink Stamp display words</span>
+<span class="device">paperRip/inkSwipe transitions</span>
+<span class="device">grain-boil</span>
+<span class="device">Scripture-silence score duck</span>
+<span class="device">torn-page Christ landing</span>
+</div>
+
+<h2>The story, in one line</h2>
+<div class="v">An aging priest relives his one day a year behind the veil — one goat killed, its blood carried in;
+one goat sent alive into the desert, carrying the people's confessed sin away. He spent years not
+understanding why it took two. Then: a Man named Jesus did what the two goats only pictured —
+the price paid, and the One the guilt was laid on. The curtain tears. "I was only the sign; He is
+the substance." The way in is torn wide open. Walk in.</div>
+
+<h2>Real defects hit and fixed during this build (honest log)</h2>
+<div class="v warn">
+<ul style="margin-left:20px">
+<li><b>Jesus identity drift, caught by the user's own eye (g08 vs g10):</b> the first g08 render
+(front-facing pivot) matched the reused Door-episode anchor loosely but drifted on a straight
+retry — a re-roll naming the drift (hair curl, beard fullness, skin tone) fixed it. Then g10
+(a different pose, seen from behind) was generated against the SAME anchor alone and drifted
+AGAIN — visibly different hair color/length and beard fullness from g08, even though both used
+the identical reference file. <b>Root cause: one anchor image alone doesn't lock identity tightly
+enough across dramatically different poses within a new episode.</b> Fixed by chaining the
+NOW-APPROVED g08 render itself as a second reference alongside the original anchor when
+regenerating g10 — using our own best output as an additional lock, not just the source anchor.
+The clip that had already been animated from the bad still was caught and re-animated in the
+same pass (a still re-roll invalidates its clip — standing rule, held again here).</li>
+<li><b>Isaiah 53:6 verse card lingering onto Jesus's face:</b> the Illuminated Rubric card's
+on-screen window ran 0.6s past its own spread into the next one (g10, Jesus at rest) — a real
+violation of the letterer law "type never covers a face," caught on the first full assembly QC
+pass, not before. Fixed by tightening the card's exit time to close before the next spread
+begins; the whole ~2100-frame assembly was rebuilt to apply the fix, not patched around it.</li>
+</ul>
+</div>
+
+<h2>The 14 spreads</h2>
+<div class="grid">
+  <figure><img src="stills/g01_hook.png"><figcaption>1 · Behind the curtain, once a year</figcaption></figure>
+  <figure><img src="stills/g02_bloodgoat.png"><figcaption>2 · The first goat's blood, carried within</figcaption></figure>
+  <figure><img src="stills/g03_scapegoat.png"><figcaption>3 · Hands on the scapegoat's head</figcaption></figure>
+  <figure><img src="stills/g04_intodesert.png"><figcaption>4 · Driven into the desert, alone</figcaption></figure>
+  <figure><img src="stills/g05_onepay_onecarry.png"><figcaption>5 · One to pay. One to carry.</figcaption></figure>
+  <figure><img src="stills/g06_yearsasked.png"><figcaption>6 · Years of not understanding</figcaption></figure>
+  <figure><img src="stills/g07_bothhalves.png"><figcaption>7 · No single creature could hold both halves</figcaption></figure>
+  <figure><img src="stills/g08_jesuspivot.png"><figcaption>8 · THE PIVOT — Jesus (re-rolled, identity confirmed)</figcaption></figure>
+  <figure><img src="stills/g09_isaiah536.png"><figcaption>9 · Isaiah 53:6 — Illuminated Rubric</figcaption></figure>
+  <figure><img src="stills/g10_finished.png"><figcaption>10 · "Finished." (2-reference identity lock)</figcaption></figure>
+  <figure><img src="stills/g11_veil_whole.png"><figcaption>11 · The veil, whole (stage A)</figcaption></figure>
+  <figure><img src="stills/g12_veil_tearing.png"><figcaption>12 · Tearing (stage B)</figcaption></figure>
+  <figure><img src="stills/g13_veil_torn.png"><figcaption>13 · Torn open, light flooding in (stage C)</figcaption></figure>
+  <figure><img src="stills/g14_landing.png"><figcaption>14 · Landing — the torn page, gold beneath</figcaption></figure>
+</div>
+
+<h2>What this proves</h2>
+<div class="v good">
+This is the first /living-sketchbook build made from a MATURE, already-produced episode rather
+than a fresh POC narration — the story, doctrine, and pacing were already locked; only the visual
+language was new. Everything the skill promised held under that real production pressure: the
+veil-tear multi-stage cut is the cleanest execution of that device yet (3 stages, zero collapse
+artifacts); the Illuminated Rubric finally got a genuine formal Scripture-voice beat to justify its
+register; and the two identity-drift catches — one from the user's own eye, one from a systematic
+frame-by-frame QC pass — are now standing lessons in the skill file, not just this episode's scars.
+</div>
+
+<h2>Cost</h2>
+<div class="v">Episode: <b>$20.68 est</b> (anchor + 14 stills + 1 re-roll + 14 clips + 1 re-animate,
+inside the ≤200cr / ~$30 authorization). Day total across all of today's builds: <b>$61.86 est</b>.</div>
+</div>
+</body>
+</html>

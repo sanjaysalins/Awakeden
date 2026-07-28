@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JERICHO — the first full /living-sketchbook build</title>
+<style>
+  body { background:#16181d; color:#e8e4d8; font-family:Georgia, serif; line-height:1.55; padding:28px 18px 80px; }
+  .wrap { max-width:1180px; margin:0 auto; }
+  h1 { color:#e9c877; font-size:1.9rem; margin-bottom:6px; }
+  h2 { color:#e9c877; font-size:1.3rem; margin:34px 0 12px; border-bottom:1px solid #333a47; padding-bottom:8px; }
+  .sub { color:#9aa0ad; margin-bottom:24px; }
+  video { width:100%; max-width:420px; border-radius:8px; display:block; margin:12px 0; }
+  .v { background:#1e2129; border-left:5px solid #e9c877; padding:16px 18px; border-radius:8px; margin:14px 0; }
+  .good { border-left-color:#7fc97f; }
+  .warn { border-left-color:#e07a5f; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px; }
+  .grid img { width:100%; border-radius:6px; border:1px solid #333a47; }
+  figcaption { color:#9aa0ad; font-size:.9rem; margin-top:4px; }
+  .device { display:inline-block; background:#333a47; color:#e9c877; border-radius:10px; padding:3px 12px; font-size:.85rem; font-family:Arial, sans-serif; margin:2px 4px 2px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>JERICHO — Joshua 2 &amp; 6, the first full /living-sketchbook proving run</h1>
+<div class="sub">Built 2026-07-28 on the user's ≤200cr authorization to prove the new draft skill for real,
+on a story with genuine EVENT beats (the quiet Door episode couldn't exercise the action grammar).
+64.8s · 9:16 · watermarked · landing hold 3.3s · audio==video.</div>
+
+<h2>▶ Watch (with sound)</h2>
+<video controls src="JERICHO_living_sketchbook.mp4"></video>
+
+<div class="v good"><b>Every device from the skill fired, and held up:</b>
+<span class="device">cast-bible (Rahab anchor)</span>
+<span class="device">multi-stage hard-cut wall collapse</span>
+<span class="device">word-timed verse reveal + gold sweep</span>
+<span class="device">hunt-and-lock camera</span>
+<span class="device">MarkerCircle draw-on</span>
+<span class="device">countup chip (13 LAPS)</span>
+<span class="device">paperRip / inkSwipe transitions</span>
+<span class="device">grain-boil paper life</span>
+<span class="device">Scripture-silence score ducks</span>
+<span class="device">torn-page Christ landing</span>
+</div>
+
+<h2>The story, in one line</h2>
+<div class="v">Jericho's walls fall to silence and a shout — but the real story is the ONE window that
+doesn't fall, because a woman named Rahab believed and tied a scarlet cord to it. That same
+scarlet line runs through the family tree of Jesus (Matthew 1:5) to a cross. Every beat of the
+grammar below exists to make that thread visible and inevitable.</div>
+
+<h2>The 13 spreads</h2>
+<div class="grid">
+  <figure><img src="stills/j01_walls.png"><figcaption>1 · The walls, the silent march</figcaption></figure>
+  <figure><img src="stills/j02_feet.png"><figcaption>2 · Feet on sand</figcaption></figure>
+  <figure><img src="stills/j03_laps.png"><figcaption>3 · The siege plan — 13 LAPS countup</figcaption></figure>
+  <figure><img src="stills/j04_wallface.png"><figcaption>4 · The wall face — hunt-and-lock onto the cord</figcaption></figure>
+  <figure><img src="stills/j05_rahab.png"><figcaption>5 · Rahab ties the cord (accepted motion, see flags)</figcaption></figure>
+  <figure><img src="stills/j06_thread.png"><figcaption>6 · The thread, alone on the page</figcaption></figure>
+  <figure><img src="stills/j07_trumpets.png"><figcaption>7 · The trumpets (Kling, frozen silhouettes)</figcaption></figure>
+  <figure><img src="stills/j08_stage_a.png"><figcaption>8 · Stage A — cracks (multi-stage hard cut)</figcaption></figure>
+  <figure><img src="stills/j09_stage_b.png"><figcaption>9 · Stage B — mid-collapse (3 rolls, see flags)</figcaption></figure>
+  <figure><img src="stills/j10_stage_c.png"><figcaption>10 · Stage C — rubble, one fragment standing</figcaption></figure>
+  <figure><img src="stills/j11_spared.png"><figcaption>11 · Spared — Rahab and family</figcaption></figure>
+  <figure><img src="stills/j12_line.png"><figcaption>12 · The genealogy thread to Matthew 1:5</figcaption></figure>
+  <figure><img src="stills/j13_landing.png"><figcaption>13 · Landing — the torn page, the cross</figcaption></figure>
+</div>
+
+<h2>Real defects hit and fixed during the build (honest log)</h2>
+<div class="v warn">
+<ul style="margin-left:20px">
+<li><b>j01_walls + j12_line:</b> both NSFW-REJECTED twice on Seedance — the stills are completely
+clean (a wide landscape with a distant crowd; a mother-and-child/harpist/carpenter genealogy
+spread). Classifier false-positives, same class as earlier sessions. Fixed by re-tiering to
+Kling, which also happens to be the correct tier for j01's crowd content per the locked rule.</li>
+<li><b>j09_stage_b — a REAL content defect, 3 rolls to fix:</b> Seedance invented a blood-like pool
+at the base of the scarlet cord (roll 1). Hardening the prompt with explicit "never drips, never
+pools" made it WORSE — two windows bled, textbook proof of this project's own locked rule that
+naming a thing to forbid it can draw it (roll 2). Fixed by switching to Kling with PURE positive
+wording — the cord described only as "a thin steady red line," no liquid-adjacent verbs
+anywhere in the prompt (roll 3, clean). Failed takes kept: r1_CORDPOOLED, r2_DOUBLEDRIP.</li>
+</ul>
+</div>
+
+<h2>Accepted-motion flag for your eye</h2>
+<div class="v">
+<b>j05_rahab:</b> the prompt asked for frozen hands; Seedance instead showed her actively tying
+the cord — a real, deliberate hand motion, not a defect. I kept it: her face stayed completely
+consistent (no identity drift), no objects were invented, and the motion is thematically the
+single most important gesture in the whole story. This is exactly the "designed acting spread"
+class the skill calls for — even though this one was Seedance's idea, not mine.</li>
+</div>
+
+<h2>What this proves about the skill</h2>
+<div class="v good">
+The Door episode (calm, one setting) could only test half the grammar. Jericho tested the other
+half: real historical VIOLENCE told through cuts, not morphs (3 clean stages, zero rubble
+artifacts on the second still); a data/plan beat (the siege map + countup) that never existed in
+the Door build; the hunt-and-lock device finding a story detail on its own; and — the whole
+point of the skill — every thread in the story (the cord, the genealogy, the torn page)
+converging on Christ by construction, not as an afterthought bolted onto the end.
+</div>
+
+<h2>Cost</h2>
+<div class="v">Episode: <b>$18.09 est</b> (anchor + 13 stills + 12 clips + 4 re-rolls). Day total
+across today's builds: $41.18 est. Comfortably inside the 200cr / ~$30 authorization for this
+build alone.</div>
+</div>
+</body>
+</html>

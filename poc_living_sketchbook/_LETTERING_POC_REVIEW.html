@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lettering redesign — ArkAIology vs Awakeden, real POCs</title>
+<style>
+  body { background:#16181d; color:#e8e4d8; font-family:Georgia, serif; line-height:1.55; padding:28px 18px 90px; }
+  .wrap { max-width:1200px; margin:0 auto; }
+  h1 { color:#e9c877; font-size:1.9rem; margin-bottom:6px; }
+  h2 { color:#e9c877; font-size:1.3rem; margin:38px 0 12px; border-bottom:1px solid #333a47; padding-bottom:8px; }
+  .sub { color:#9aa0ad; margin-bottom:22px; }
+  .v { background:#1e2129; border-left:5px solid #e9c877; padding:16px 18px; border-radius:8px; margin:14px 0; }
+  .bad { border-left-color:#c25b5b; }
+  .good { border-left-color:#7fc97f; }
+  .row { display:flex; gap:16px; flex-wrap:wrap; margin:16px 0; }
+  .card { flex:1; min-width:230px; max-width:280px; background:#1e2129; border-radius:10px; overflow:hidden; }
+  .card img { width:100%; display:block; }
+  .card .cap { padding:10px 12px; font-size:.9rem; color:#c9c4b6; }
+  .card .cap b { color:#e9c877; }
+  .pick { border:2px solid #7fc97f; }
+  .tag { display:inline-block; font-family:Arial,sans-serif; font-weight:bold; font-size:.72rem; border-radius:9px; padding:2px 9px; margin-right:6px; }
+  .t-bad { background:#4a2c2c; color:#e0a0a0; }
+  .t-rec { background:#2c4a2c; color:#a9e0a9; }
+  .t-alt { background:#3a3620; color:#d8c98a; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Lettering redesign — why the caption box feels alien, and 4 real replacements</h1>
+<div class="sub">2026-07-28 night. Every frame below is a REAL composited render over our own Jericho art
+(or a real extracted frame from ArkAIology's own project) — not mockups or descriptions.</div>
+
+<div class="v bad"><span class="tag t-bad">DIAGNOSIS</span>
+<b>The caption box isn't loosely inspired by ArkAIology — it IS ArkAIology's own vox-motion
+VerseQuoteCard component, just recolored.</b> Their own rendered reference (below) shows the exact
+same structure we shipped in Jericho: a translucent rectangular card, bold sans-serif caps, a
+yellow highlighter band on the emphasis phrase, a small caps reference line. That grammar is a
+<i>data-explainer / Instagram-infographic</i> convention — built for ArkAIology's documentary-data
+brand. Painting it warm colors doesn't change what it structurally IS: a UI chip laid on top of a
+hand-painted page, like a phone notification over a museum painting. It will always read as alien
+no matter the palette, because the STRUCTURE is the problem, not the color.</div>
+
+<h2>ArkAIology's actual look (real frames, their repo)</h2>
+<div class="row">
+  <div class="card"><img src="_lettering_compare/ark_ref/six_10.png"><div class="cap">Their VerseQuoteCard — translucent card, Bangers-style bold caps, yellow highlighter on the emphasis phrase, small-caps reference</div></div>
+  <div class="card"><img src="_lettering_compare/ark_ref/six_42.png"><div class="cap">Their data/countup treatment — line chart card + 3D printed numerals. Built for THEIR docu-data brand, not ours</div></div>
+  <div class="card"><img src="_lettering_compare/ark_ref/ts1_12.png"><div class="cap">Their sticker-style die-cut label chip ("VERY GOOD") — same highlighter-caps grammar</div></div>
+</div>
+
+<h2>What we shipped in Jericho (the one you hate)</h2>
+<div class="row">
+  <div class="card"><img src="_lettering_compare/candidates/0_current_hated.png"><div class="cap"><b>Structurally identical</b> to ArkAIology's card above — cream instead of gray, italic instead of Bangers, but the same rectangular translucent chip sitting on top of hand-painted ink wash</div></div>
+</div>
+
+<h2>Four real replacements — all rendered on the same Jericho art</h2>
+<div class="row">
+  <div class="card pick">
+    <img src="_lettering_compare/candidates/1_scribed_ink.png">
+    <div class="cap"><span class="tag t-rec">RECOMMENDED</span><b>1 — Scribed Ink.</b> The verse hand-written in real ink calligraphy (Kunstler script), no box at all. Ties directly into the "page draws itself" ink-in device already built for the comic pipeline — same DNA, one visual language across the whole series.</div>
+  </div>
+  <div class="card">
+    <img src="_lettering_compare/candidates/2_illuminated_rubric.png">
+    <div class="cap"><span class="tag t-alt">STRONG ALT</span><b>2 — Illuminated Rubric.</b> A gold-leaf dropped capital + printed-Bible serif body + hairline page rules + red rubric reference. Reads like an actual historic Scripture page. Best choice if a beat needs to feel more FORMAL/canonical than handwritten.</div>
+  </div>
+  <div class="card">
+    <img src="_lettering_compare/candidates/3_pinned_scrap.png">
+    <div class="cap"><span class="tag t-alt">FALLBACK</span><b>3 — Pinned Scrap.</b> A torn parchment note physically laid on the page, rotated, wax-sealed. Closest cousin to the old box, but transformed into an OBJECT rather than a UI card. Safe if a verse is too long for hand-lettering to stay legible.</div>
+  </div>
+  <div class="card">
+    <img src="_lettering_compare/candidates/4_marginalia.png">
+    <div class="cap"><span class="tag t-alt">SECONDARY USE</span><b>4 — Marginalia.</b> A small neat annotation in the page's own margin with a hand-drawn leader pointing at the detail. Elegant, but too subtle at video size for a MAIN verse reveal — better reserved for a secondary "field note" beat, not the primary Scripture display.</div>
+  </div>
+</div>
+
+<h2>The display-type beats ("13 LAPS", "THE WALL FELL DOWN FLAT") need the same fix</h2>
+<div class="row">
+  <div class="card"><img src="_lettering_compare/candidates/5_display_current.png"><div class="cap"><span class="tag t-bad">CURRENT</span>Arial Black + yellow highlighter — the same internet-explainer grammar, lifted directly, on the headline beats too.</div></div>
+  <div class="card pick"><img src="_lettering_compare/candidates/6_display_stamp.png"><div class="cap"><span class="tag t-rec">RECOMMENDED</span><b>Ink Stamp.</b> Rough-pressed rubric-red serif caps, unevenly inked like a real stamp — no box, no highlighter. Reads as PRESSED onto the page, not typed onto a screen.</div></div>
+</div>
+
+<h2>My recommendation</h2>
+<div class="v good">Adopt <b>Scribed Ink</b> for verse reveals and <b>Ink Stamp</b> for display-type beats as the
+new default. Both share one root idea — everything on the page should look HAND-MADE, pressed or
+written, never a floating screen element — which finally makes the lettering system feel like it
+grew from the same hand that drew the art, instead of being pasted on top of it. Keep Illuminated
+Rubric in reserve for formal/glory beats (e.g. the gospel pivot verse) where a more ceremonial
+register earns its weight.</div>
+
+<h2>ROUND 2 — the full 9-skill audit (the first pass only covered 5 of 9)</h2>
+<div class="v bad">The user asked directly: had I checked everything? No — round 1 covered
+cast-bible, vox-motion, mixed-media-explainer, sound-design, higgsfield-video-explainer.
+Missed entirely: <b>produce-episode, payoff-ledger, threads, vox-type</b>, plus the four
+foundational style pipelines (vox-3d/vox-flat/vox-blend/vox-map, which turned out to be repo-root
+directories + slash-commands, not `.claude/skills/`, which is why the first `ls` missed them).
+This section closes that gap.</div>
+
+<div class="row">
+  <div class="card pick">
+    <img src="_lettering_compare/candidates/7_thread_device.png">
+    <div class="cap"><span class="tag t-rec">HIGH VALUE — NEW</span><b>7 — Thread Device</b> (from
+    ArkAIology's <code>/threads</code>). Two verified KJV cross-reference verses (Gen 1:1 → John 1:1,
+    verified live via <code>pipeline.scripture.fetch_kjv</code>, not memory) stitched by a real gold
+    thread. This is the single best find of the second pass — it makes our own locked doctrine
+    ("every thread traces to Jesus," already the whole spine of tonight's Jericho piece) into a
+    literal, repeatable ON-SCREEN DEVICE, and the gold thread already matches Jericho's own visual
+    vocabulary (the scarlet cord, the genealogy thread, the torn-page landing). Honest tension: it
+    still uses a card boundary — worth deciding deliberately whether two DISTINCT verses need a
+    visible edge to read as separate things, even though single verses now don't.</div>
+  </div>
+  <div class="card pick">
+    <img src="_lettering_compare/candidates/8_circled_word.png">
+    <div class="cap"><span class="tag t-rec">CONFIRMS THE FIX</span><b>8 — Circled Word</b> (from
+    ArkAIology's <code>/vox-type</code> "circled" treatment). Their own house history is the
+    strongest independent confirmation of tonight's diagnosis: their v1 "felt alien" and they
+    rebuilt it as a hand-circled word on a diegetic printed page — the EXACT lesson relearned here
+    tonight. Extends MarkerCircle (which points at image details) to point at a single WORD instead
+    — "look at THIS word on the page," forensic pointing, book-serif required (their one sanctioned
+    exception to house type, same instinct as our Illuminated Rubric).</div>
+  </div>
+</div>
+
+<div class="v">
+<b>Also found, not yet prototyped (real, but lower priority or needs a decision first):</b>
+<ul style="margin:10px 0 0 22px">
+<li><b>payoff-ledger</b> — NOT a visual device. A deterministic script-stage gate: every curiosity
+loop the hook opens must be paid off by verbatim words later in the narration, and the ending must
+land a real verdict (anti-abrupt-ending). This repo already has <code>narration_gate.py</code>
+(earned-hook/landing) but nothing that tracks INDIVIDUAL loops by id and checks each one gets
+cashed. Worth adopting as a new $0 gate on the TEXT side of the pipeline — orthogonal to any visual
+style, applies to every format we make.</li>
+<li><b>vox-type's other treatments</b> (ghost/lowerThird/echo/typeset) — a title-card and refrain
+system. `echo` (print-misregistration triple-exposure on a repeated word) and `typeset`
+(letters set by a printing press, blinking gold cursor) both fit our printed-page world if
+reframed in our palette; `flap` (split-flap departure board for day-counts) is flagged SKIP —
+too mechanical/modern, real anachronism risk against an ancient setting.</li>
+<li><b>vox-map's extra moves</b> (ARC+counter, CHRONO SWEEP era timeline, ANCIENT REGION dashed
+territory marker) — our own <code>/map</code> skill already does route+caravan+sea-parting but
+has no equivalent of these three. Only relevant once a map-heavy episode is on the slate.</li>
+<li><b>produce-episode</b> — not a creative device, a master-runbook PATTERN (stage order + gate
+interlocks + "3rd hand-fix of the same kind → encode it in code/skill"). This repo already has
+most of this discipline (v2/SPEC.md, the skill registry) but not as one consolidated router file
+the way ArkAIology has it. Worth considering once /living-sketchbook has more than 2 proven
+episodes.</li>
+</ul>
+</div>
+
+<h2>The rest of the ArkAIology survey — already working, no redesign needed</h2>
+<div class="v">Checking against the same "does it feel alien or does it feel ours" test, across every
+device pulled from ArkAIology and proven in Jericho tonight:
+<ul style="margin:10px 0 0 22px">
+<li><b>cast-bible</b> (casting/anchors) — invisible to the viewer by design, just makes faces consistent. No look to critique. Working.</li>
+<li><b>Multi-stage hard cuts</b> (the wall collapse) — pure cinematography, no on-screen graphic language at all. Nothing to adapt.</li>
+<li><b>Transitions</b> (paperRip / inkSwipe) — already paper-native by construction (torn edges, ink bleed), not borrowed UI. Held up clean in QC.</li>
+<li><b>Hunt-and-lock + MarkerCircle</b> — a hand-wobble ink circle, not a UI reticle. Already in our hand-drawn language.</li>
+<li><b>Sound doctrine</b> (motif + Scripture-silence) — an audio device, no visual footprint to clash.</li>
+</ul>
+Lettering was the one device ArkAIology's DNA (bold motion-graphics/explainer) couldn't be
+recolored into ours — it needed a structural rebuild, which is what's above.</div>
+
+</div>
+</body>
+</html>

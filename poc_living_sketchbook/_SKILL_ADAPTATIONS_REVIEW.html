@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All 9 ArkAIology skills — adapted, tested, judged</title>
+<style>
+  body { background:#16181d; color:#e8e4d8; font-family:Georgia, serif; line-height:1.55; padding:28px 18px 100px; }
+  .wrap { max-width:1220px; margin:0 auto; }
+  h1 { color:#e9c877; font-size:2rem; margin-bottom:6px; }
+  h2 { color:#e9c877; font-size:1.4rem; margin:44px 0 6px; border-bottom:2px solid #333a47; padding-bottom:10px; }
+  h3 { color:#e9c877; font-size:1.05rem; margin:0 0 4px; }
+  .sub { color:#9aa0ad; margin-bottom:26px; font-size:1.05rem; }
+  .item { display:flex; gap:22px; background:#1e2129; border-radius:10px; padding:18px; margin:18px 0; flex-wrap:wrap; }
+  .item img { width:280px; border-radius:6px; border:1px solid #333a47; flex-shrink:0; }
+  .item .txt { flex:1; min-width:320px; }
+  .verdict { font-family:Arial,sans-serif; font-weight:bold; font-size:.78rem; border-radius:10px; padding:3px 12px; margin-right:8px; display:inline-block; }
+  .v-adopt { background:#2c4a2c; color:#a9e0a9; }
+  .v-choose { background:#2c4a2c; color:#a9e0a9; }
+  .v-alt { background:#4a3f22; color:#e9c877; }
+  .v-skip { background:#4a2c2c; color:#e0a0a0; }
+  .v-real { background:#22394a; color:#8ec9e9; }
+  p { margin: 8px 0; }
+  .found { background:#232a22; border-left:4px solid #7fc97f; padding:8px 12px; border-radius:6px; margin-top:8px; font-size:.94rem; }
+  .flag { background:#2a2622; border-left:4px solid #e9c877; padding:8px 12px; border-radius:6px; margin-top:8px; font-size:.94rem; }
+  code { background:#0f1114; padding:1px 6px; border-radius:4px; font-size:.88em; }
+  .toc { background:#1e2129; border-radius:8px; padding:16px 20px; margin:18px 0; }
+  .toc a { color:#e9c877; text-decoration:none; }
+  .toc li { margin:3px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>All 9 ArkAIology skills — adapted to /living-sketchbook, tested, judged</h1>
+<div class="sub">2026-07-28 late night. The user asked for every skill to be tested and adapted, not
+assumed. Fable designed 11 briefs; 11 Sonnet agents executed in parallel; every single output was
+independently re-verified by reading the actual file (and, for code, re-running it) before being
+trusted. All $0 — pure compositing over art already made tonight, no new AI generation.</div>
+
+<div class="toc"><b>Jump to:</b>
+<ul>
+<li><a href="#thread">1. Thread Device v2</a> — resolved, chosen, and a real bug caught in our core lettering</li>
+<li><a href="#type">2–6. Five vox-type treatments</a> — ghost, lowerThird, echo, typeset, flap</li>
+<li><a href="#map">7–9. Three vox-map moves</a> — ARC+counter, CHRONO SWEEP, ANCIENT REGION</li>
+<li><a href="#process">10–11. Two non-visual adaptations</a> — payoff-ledger (code, tested for real), produce-episode (runbook)</li>
+<li><a href="#verdict">The scorecard</a></li>
+</ul>
+</div>
+
+<h2 id="thread">1 · Thread Device v2</h2>
+<div class="item">
+  <img src="_skill_adaptations/thread_v2/variant_a_nobox.png">
+  <div class="txt">
+    <span class="verdict v-choose">CHOSEN — Variant A, No Box</span>
+    <p>Two verified verses (Gen 1:1 → John 1:1) hand-written in Scribed Ink, connected by a real
+    gold thread through open whitespace — no card at all. The existing scarlet/blue ribbon on this
+    still sits right between them, so the gold thread reads as ONE MORE thread on a page that
+    already has threads on it, not a UI element laid over the art.</p>
+    <div class="found"><b>Real bug found and fixed here, worth carrying back into the CORE lettering
+    system:</b> Kunstler Script's comma/period glyphs are nearly invisible at render size (~16×7px)
+    — verbatim KJV punctuation was silently disappearing. Fixed by drawing punctuation from a
+    1.7×-larger stroked instance of the same font. This affects every Scribed Ink verse render
+    already shipped tonight (Door episode, Jericho) — flagged for backport below.</div>
+  </div>
+</div>
+<div class="item">
+  <img src="_skill_adaptations/thread_v2/variant_b_unified_card.png">
+  <div class="txt">
+    <span class="verdict v-alt">REJECTED</span>
+    <p><b>Variant B, unified torn-scrap card.</b> A genuine object (pinned parchment, both verses
+    inside one scrap), but it visually competes with the still's own ribbon motif right below it —
+    two separate "thread" ideas stacked in one frame — and front-loads all content into the top
+    third, leaving the page's natural centerpiece unused.</p>
+  </div>
+</div>
+
+<h2 id="type">2–6 · Five vox-type treatments</h2>
+
+<div class="item">
+  <img src="_skill_adaptations/vox_ghost/ghost_believed.png">
+  <div class="txt">
+    <span class="verdict v-adopt">ADOPT — Ghost</span>
+    <h3>Word pressed into wet paper, not floating on top</h3>
+    <p>"BELIEVED" built as a real shallow deboss (offset highlight/shadow rims + darkened interior +
+    blurred ink-bleed halo) — the watercolor wash and paper grain visibly show through the letter
+    strokes. Zero flat-overlay artifact, confirmed legible even shrunk to thumbnail size. Worked on
+    the first attempt.</p>
+  </div>
+</div>
+
+<div class="item">
+  <img src="_skill_adaptations/vox_lowerthird/lowerthird_act2.png">
+  <div class="txt">
+    <span class="verdict v-adopt">ADOPT — lowerThird</span>
+    <h3>Chapter/act title card</h3>
+    <p>"ACT TWO — THE FALL OF THE WALL," rubric kicker + italic serif title + hairline rules, no
+    card. The agent ran a genuine A/B rather than guessing: a real cropped gold-leaf texture (this
+    still's own strip, rotated) beat a drawn-and-noised rectangle outright — the drawn version
+    stayed a flat mustard bar no matter how much noise was added; the real texture carries genuine
+    tonal variegation. Minor polish note: a faint rectangular halo is visible just behind the gold
+    strip.</p>
+  </div>
+</div>
+
+<div class="item">
+  <img src="_skill_adaptations/vox_echo/echo_come.png">
+  <div class="txt">
+    <span class="verdict v-adopt">ADOPT — Echo</span>
+    <h3>Print-misregistration refrain word</h3>
+    <p>"COME" as 3 offset letterpress plates (rubric / gold / faded-ink) with a stamped, grain-
+    roughened edge instead of a clean channel-split. Placed at the open doorway threshold — the
+    word and the image now say the same thing at once. Reads as an old three-plate press slightly
+    out of register, not a digital glitch, because the colors are our muted triad, not saturated
+    RGB, and the edges are rough, not symmetric.</p>
+  </div>
+</div>
+
+<div class="item">
+  <img src="_skill_adaptations/vox_typeset/typeset_beginning.png">
+  <div class="txt">
+    <span class="verdict v-adopt">ADOPT — Typeset</span>
+    <h3>The mechanical register, alongside Scribed Ink's handwritten one</h3>
+    <p>"IN THE BEGINNING" set in rigid stamped slab caps with a gold fleuron ornament standing in
+    for a cursor — deliberately the OPPOSITE hand from Scribed Ink (compositor vs. scribe). Genuinely
+    distinct side by side, not redundant. Gives the show two legitimate lettering voices instead of
+    one.</p>
+  </div>
+</div>
+
+<div class="item">
+  <img src="_skill_adaptations/vox_flap/flap_13laps.png">
+  <div class="txt">
+    <span class="verdict v-skip">CONFIRMED SKIP — Flap</span>
+    <h3>The one device asked to prove itself wrong</h3>
+    <p>A genuinely good-faith attempt — hand-carved wooden tally tiles, rope lashing, wobbled frame —
+    still reads as a departure board/scoreboard on sight, because the GRID-OF-CELLS shape is the
+    anachronism, not the material. This is the exact lesson from the original caption-box diagnosis,
+    proven a second time: you cannot texture your way out of a borrowed structure. I verified the
+    image myself and agree — it reads as a display board before the wood grain registers at all.
+    Recommendation: skip outright, or redesign from zero as a single hand-carved numeral with no
+    frame at all (not attempted here).</p>
+  </div>
+</div>
+
+<h2 id="map">7–9 · Three vox-map moves</h2>
+
+<div class="item">
+  <img src="_skill_adaptations/map_arc/arc_counter.png">
+  <div class="txt">
+    <span class="verdict v-adopt">ADOPT — ARC + counter</span>
+    <h3>A measurement note in the cartographer's own hand</h3>
+    <p>"13 LAPS" on a dashed arc beside Jericho's existing siege-map route. The agent caught its own
+    mismatch mid-build — a filled arrowhead read as a pennant, not this map's actual open two-stroke
+    chevron — cropped the source tight and rebuilt to match. Reads as the same hand that drew the
+    rest of the map.</p>
+  </div>
+</div>
+
+<div class="item">
+  <img src="_skill_adaptations/map_chrono/chrono_sweep.png">
+  <div class="txt">
+    <span class="verdict v-adopt">ADOPT — CHRONO SWEEP</span>
+    <h3>Era timeline, honestly caveated</h3>
+    <p>Exodus → 40 Years Wilderness → Jericho Falls on a hand-ruled ledger rail, gold marking the
+    sacred arrival point, each stop citing a real verse (Exodus 12:41 / Numbers 14:33-34 / Joshua
+    6:20 — all checked). No invented BC dates — a clearly legible "(illustrative order, not to
+    scale)" disclaimer is a hard requirement here, not decoration, and it's present and readable.</p>
+  </div>
+</div>
+
+<div class="item">
+  <img src="_skill_adaptations/map_region/ancient_region.png">
+  <div class="txt">
+    <span class="verdict v-adopt">ADOPT — ANCIENT REGION</span>
+    <h3>Territory marker with a mandatory honesty tag</h3>
+    <p>A hand-wobbled dashed ring labeling "THE LAND OF CANAAN," with the mandatory
+    "APPROXIMATE EXTENT · BOUNDARIES NOT PRECISELY KNOWN" caveat clearly legible beneath it —
+    exactly ArkAIology's own rule (never claim precision about ancient borders), preserved and
+    re-skinned. Integrates in the map's open paper space without colliding with existing linework.</p>
+  </div>
+</div>
+
+<h2 id="process">10–11 · Two non-visual adaptations</h2>
+
+<div class="item">
+  <div class="txt" style="width:100%">
+    <span class="verdict v-real">REAL, TESTED, ADOPT</span>
+    <h3>payoff-ledger — a real deterministic gate, run against Jericho's actual narration</h3>
+    <p>Not a mockup: a working Python validator
+    (<code>poc_living_sketchbook/_skill_adaptations/payoff_ledger/payoff_ledger.py</code>) adapted
+    to this project's line/timestamp narration format (ArkAIology's version assumes shot numbers we
+    don't have). <b>I independently re-ran both the self-test and the real check myself</b> rather
+    than trusting the report:</p>
+    <div class="found">
+    Self-test: a ledger with a real verbatim payoff phrase PASSED; a planted fake ("Apollo 11 lands
+    on the Moon") was REJECTED, exit 1, naming the exact bad claim. Fail-closed behavior confirmed,
+    not assumed.<br><br>
+    Real result against Jericho's actual narration: <b>GATE PASS — 3 of 4 loops PAID, 1 genuinely
+    PARTIAL.</b> The hook asks four questions; three get explicit verbatim payoffs later in the
+    script. The fourth — "why silence?" — is never answered by name; it's paid off only by dramatic
+    CONTRAST (six days of silence broken by one shout), which the ledger correctly flags as
+    PARTIAL rather than a false PASS. That's a genuine, honest finding about our own finished
+    episode, produced by a tool that didn't exist three hours ago.
+    </div>
+  </div>
+</div>
+
+<div class="item">
+  <div class="txt" style="width:100%">
+    <span class="verdict v-real">REAL, GROUNDED, ADOPT</span>
+    <h3>produce-episode → RUNBOOK.md — grounded in real files, not invented</h3>
+    <p>Written to <code>.claude/skills/living-sketchbook/RUNBOOK.md</code>. Every stage traces to a
+    script that actually exists (verified by reading the real files, not assumed) across both proven
+    episodes. It found two real gaps rather than describing an idealized pipeline that doesn't
+    exist:</p>
+    <div class="flag">
+    <b>Gap 1:</b> Jericho's narration was hand-authored and synthesized directly
+    (<code>_j2_audio.py</code>), completely bypassing this repo's own locked <code>cli.py</code>
+    draft-tournament + G1-G7 self-review + red-team + <code>narration_gate.py</code> chain — unlike
+    the Door episode, which reused a fully-gated prior narration. Neither is documented as
+    equivalent; the runbook says so plainly.<br><br>
+    <b>Gap 2:</b> <code>check_landing_hold.py</code> (the repo's real INV-26 deterministic hold gate)
+    only scans <code>batches/</code> and <code>longform/</code> — neither POC folder is in its path.
+    The "3.3s/3.65s hold" claims for both finished episodes were checked by manual ffprobe, never by
+    the actual gate script.
+    </div>
+  </div>
+</div>
+
+<h2 id="verdict">The scorecard</h2>
+<div class="item" style="display:block">
+<table style="width:100%; border-collapse:collapse; font-size:.95rem">
+<tr style="color:#e9c877; text-align:left"><th style="padding:6px">Device</th><th>Verdict</th><th>Note</th></tr>
+<tr><td style="padding:6px">Thread Device</td><td>ADOPT (Variant A)</td><td>Also fixed a real punctuation bug in core Scribed Ink</td></tr>
+<tr><td style="padding:6px">Ghost</td><td>ADOPT</td><td>Genuine deboss, no flat-overlay tell</td></tr>
+<tr><td style="padding:6px">lowerThird</td><td>ADOPT</td><td>Real gold-leaf crop beat a drawn rectangle</td></tr>
+<tr><td style="padding:6px">Echo</td><td>ADOPT</td><td>Reads as old letterpress, not digital glitch</td></tr>
+<tr><td style="padding:6px">Typeset</td><td>ADOPT</td><td>A genuinely second lettering voice, not redundant</td></tr>
+<tr><td style="padding:6px">Flap</td><td>SKIP (confirmed)</td><td>Grid-of-cells shape is the anachronism, not the texture</td></tr>
+<tr><td style="padding:6px">ARC + counter</td><td>ADOPT</td><td>Self-corrected to match the map's real arrowhead style</td></tr>
+<tr><td style="padding:6px">CHRONO SWEEP</td><td>ADOPT</td><td>Verified verses, honest no-fabricated-dates disclaimer</td></tr>
+<tr><td style="padding:6px">ANCIENT REGION</td><td>ADOPT</td><td>Mandatory honesty tag preserved and legible</td></tr>
+<tr><td style="padding:6px">payoff-ledger</td><td>ADOPT (real code)</td><td>Found a genuine PARTIAL loop in Jericho's own narration</td></tr>
+<tr><td style="padding:6px">produce-episode runbook</td><td>ADOPT (real doc)</td><td>Found 2 real process gaps, didn't paper over either</td></tr>
+</table>
+</div>
+
+<div class="item" style="display:block; background:#232a22; border-left:4px solid #7fc97f">
+<h3>What's next</h3>
+<p>Nine ADOPTs, one confirmed SKIP, one real bug to backport (Kunstler punctuation, affects every
+already-shipped Scribed Ink verse), two real process gaps now on paper instead of hidden. Nothing
+here has been wired into the actual assembler yet — every image on this page is a standalone
+composite, not yet built into a moving episode. The skill file and memory are being updated now
+with the full scorecard; wiring these into a real cut is the natural next step whenever you want to
+see it in motion rather than as stills.</p>
+</div>
+
+</div>
+</body>
+</html>
