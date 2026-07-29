@@ -53,11 +53,18 @@ def hf_balance() -> float:
     return float(_hf("account", "status", "--json")["credits"])
 
 
-def hf_estimate(model: str, prompt: str = "estimate", image=None) -> float:
-    """Exact credits for ONE generation of `model` (a query — creates no job, spends nothing)."""
+def hf_estimate(model: str, prompt: str = "estimate", image=None, params=None) -> float:
+    """Exact credits for ONE generation of `model` (a query — creates no job, spends nothing).
+    `params` = the SAME CLI params the real create call uses ({"mode": "pro", "sound": "off", ...});
+    omit it and the query prices the model DEFAULTS (kling3_0: std + sound ON = 10cr, not
+    the ~7.5 the sound-off pipeline actually pays). NOTE the estimator can overquote vs real
+    billing: kling3_0 pro+sound-off quotes 8.75 but every observed transaction bills 7.5
+    (43 rows, 2026-07-21) — `reconcile` against transactions remains the actuals source."""
     args = ["generate", "cost", model, "--prompt", prompt, "--json"]
     if image:
         args += ["--image", str(image)]
+    for k, v in (params or {}).items():
+        args += [f"--{k}", str(v)]
     d = _hf(*args)
     return float(d.get("credits_exact", d.get("credits", 0)))
 
@@ -83,9 +90,11 @@ def record(episode, kind, stage, provider, model="", units=1, est_credits=None,
     return row
 
 
-def record_hf(episode, kind, stage, model, units=1, prompt="estimate", image=None, note="") -> dict:
-    """Estimate (exact) + log an HF op (images/animation). Call this around each render."""
-    cr = hf_estimate(model, prompt, image) * units
+def record_hf(episode, kind, stage, model, units=1, prompt="estimate", image=None, note="",
+              params=None) -> dict:
+    """Estimate (exact) + log an HF op (images/animation). Call this around each render.
+    Pass `params` = the create call's own CLI params so the row prices the real config."""
+    cr = hf_estimate(model, prompt, image, params) * units
     return record(episode, kind, stage, "hf", model, units, est_credits=round(cr, 2),
                   est_usd=round(cr * CREDITS_TO_USD, 3), mode="metered", note=note)
 

@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Comic text-box layer POC — Penitent Thief page 2</title>
+<style>
+  body { background:#1a1715; color:#e8dfc8; font-family: Georgia, serif; margin: 24px; }
+  h1 { font-size: 22px; } h2 { font-size: 17px; margin-top: 36px; }
+  .row { display:flex; gap:24px; flex-wrap:wrap; }
+  .card { background:#252019; padding:14px; border-radius:8px; }
+  .card p { margin:6px 0 0; font-size:14px; }
+  video { width: 420px; max-width: 90vw; }
+  img { width: 300px; max-width: 90vw; display:block; }
+  .note { color:#b8ad8f; font-size:14px; max-width: 900px; line-height:1.5; }
+</style>
+</head>
+<body>
+<h1>Comic text-box layer POC — $0, code-drawn, post-animation</h1>
+<p class="note">
+  Speech bubbles + parchment caption boxes drawn by PIL (never baked into the AI art —
+  baked text garbles under animation), overlaid with timed pop-ins on the already-animated
+  crop-and-recomposite page. Text is KJV verbatim (Luke 23:40&ndash;43, checked against
+  data/kjv_cache.json). Jesus&rsquo; words in red-letter per printed-KJV convention.
+  The rebuke bubble&rsquo;s tail points OFF-PANEL LEFT because the figure drawn in that
+  panel reads as Christ &mdash; the tail must never attribute the thief&rsquo;s words to him.
+</p>
+
+<h2>Before / after (12s, panel-by-panel spotlight sweep)</h2>
+<div class="row">
+  <div class="card"><video src="../_crop_test/page2_recomposite.mp4" controls loop muted></video><p>BEFORE — animated page, no text</p></div>
+  <div class="card"><video src="page2_with_text.mp4" controls loop muted></video><p>AFTER — comic text layer, timed to the panel sweep</p></div>
+</div>
+
+<h2>QC frames (start / each panel focus / end)</h2>
+<div class="row">
+  <div class="card"><img src="_frames/t1_0.png"><p>t=1.0 — rebuke bubble + caption (P1)</p></div>
+  <div class="card"><img src="_frames/t4_5.png"><p>t=4.5 — admission (P2)</p></div>
+  <div class="card"><img src="_frames/t7_5.png"><p>t=7.5 — the plea (P3)</p></div>
+  <div class="card"><img src="_frames/t10_2.png"><p>t=10.2 — the promise, red-letter (P4)</p></div>
+  <div class="card"><img src="_frames/t11_9.png"><p>t=11.9 — full page, all text on</p></div>
+</div>
+
+<h2>Known POC limitation</h2>
+<p class="note">
+  Overlays are static in page space while grid_choreography&rsquo;s virtual camera pushes
+  panels — text placement was chosen to stay safe across all camera states, but the
+  production tool should draw text cell-relative INSIDE the choreography pass so bubbles
+  ride their panels exactly. See COMIC_PAGE_ENGINE_DESIGN.md next to poc_thief_e2e/.
+</p>
+</body>
+</html>

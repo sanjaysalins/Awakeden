@@ -91,7 +91,7 @@ narration.md + audio/ (Stage 0-1b, unchanged — incl. HUMAN GATE 1)
   │     → render → pending-FAIL audit sidecar (LP-ARM) → ledger row
   │  ══ HUMAN GATE 2: stills_gate.py --build → rubric + adversarial review → --approve ══
   │     + bib_validate (reads the spec; BC-G1/G2 $0)
-  ▼  run_piece --stage animate                   [PAID HF kling3_0 pro ~$0.65/clip]
+  ▼  run_piece --stage animate                   [PAID HF kling3_0 pro 7.5cr ≈ $1.13/clip billed]
   │     PASS-sidecar gate → budget ceiling → render → .src.sha hash-bind → ledger
   │     (flow_check pre-filter: PASS skips vision NOMORPH; ESCALATE → vision QC)
   ▼  build_livingpage_16x9 --clips --no-ticks    ($0 ffmpeg; refuses on a red stills gate)
@@ -338,9 +338,22 @@ LLM lines drop to $0**, so a Psalm-22 short budgets to ~$17–18 (ceiling $25).
 - **Provider split (locked):** NBP $0.50 (Christ/face), HF `nano_banana_2` $0.30
   (neutral plate), direct-Kling $0.65 (animation). Agent-mode LLM = $0.
 - **Living-page lane (inked batch shorts):** BytePlus `seedream-4-5` ~$0.05/still ·
-  HF `kling3_0 --mode pro` ~$0.65/clip · everything else $0 ffmpeg/PIL. A finished
-  piece runs ~$3–6. The $25/short ceiling is ENFORCED IN CODE at the Kling
+  HF `kling3_0 --mode pro --sound off` **7.5cr ≈ $1.13/clip BILLED** (verified against
+  43 real transactions joined to job records, 2026-07-21; the `hf generate cost`
+  estimator overquotes pro+sound-off as 8.75cr — transactions are the actuals source,
+  the old ~$0.65 figure was the direct-Kling price) · everything else $0 ffmpeg/PIL.
+  A finished piece runs ~$3–6. The $25/short ceiling is ENFORCED IN CODE at the Kling
   chokepoint (`cost.check_budget`, 2026-07-08), not advisory.
+- **HF Kling pricing facts (verified 2026-07-21, style-independent):** the `sound`
+  param defaults ON and is a real surcharge (pro quotes 12.5 ON → 8.75 OFF; std 10 →
+  7.5) — every call site passes sound-off, keep it that way. `kling3_0_turbo` is NOT
+  cheaper at equal output (1080p turbo quotes 10 > pro-off). `kling2_6` (5cr, boolean
+  `--sound false`, no `--mode`) is REJECTED as shorts default: invents content on the
+  gallery hard-cut (`_bakeoff_kling26/compare.html`, legacy-Baroque substrate) and the
+  2026-07-17 inked style POC ranks it below kling3_0 ("inked line art fully survives"
+  only on kling3_0). Ledger rows are flag-aware since 2026-07-21: pass `params={...}`
+  (the create call's own flags) to `cost.record_hf`; never add a driver-side ledger row
+  after `vp.animate()` — providers record internally.
 - **Cost levers:** exclude bad images at GATE 2 (never animate them) · reuse
   pre-flight copies an identical sibling PASS still for $0 · `choose_engine`
   policy (static/dyncam/kling by value) · `flow_check` PASS skips a vision call ·

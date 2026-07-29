@@ -1,0 +1,41 @@
+<!doctype html><meta charset=utf-8>
+<title>Panel-animation technique test — frame comparison</title>
+<style>
+ body{background:#14110d;color:#efe7d6;font-family:system-ui,Arial;margin:0;padding:24px}
+ h1{font-size:20px;margin:0 0 4px} h2{font-size:16px;color:#e9c877;margin:28px 0 8px}
+ p.sub{color:#b7ab97;margin:0 0 16px;max-width:900px}
+ .row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:8px}
+ .row img{width:100%;border-radius:4px;border:1px solid #000}
+ video{width:280px;border-radius:6px;border:1px solid #000;background:#000}
+ .verdict{color:#e9c877;font-size:13px;margin:4px 0 0}
+</style>
+<h1>Panel-animation technique test — same source page, two prompt strategies</h1>
+<p class="sub">Frames pulled at start / mid / end of each 5s clip to see whether panels genuinely change over time, not just the camera moving.</p>
+
+<h2>Variant 1 — static camera, amped environmental motion, all-panels mandate</h2>
+<div class="row">
+<img src="_frames/v1_1.png"><img src="_frames/v1_2.png"><img src="_frames/v1_3.png">
+</div>
+<p class="verdict">Dust genuinely grows top+bottom panels; mist crosses Goliath's face by frame 3. David close-up stays inert. David's arm pose drifts in the bottom panel (rule break).</p>
+<video src="technique_v1_static_amped.mp4" controls loop muted playsinline></video>
+
+<h2>Variant 2 — panel motion described first, camera rack demoted to afterthought</h2>
+<div class="row">
+<img src="_frames/v2_1.png"><img src="_frames/v2_2.png"><img src="_frames/v2_3.png">
+</div>
+<p class="verdict">Invents a lightning bolt not in the source; David's sling goes into active motion; by the last frame the Goliath close-up panel is replaced entirely with an invented new shot. Hallucination, not animation.</p>
+<video src="technique_v2_panelfirst_camera.mp4" controls loop muted playsinline></video>
+
+<h2>Variant 3 — same as v1, but every reference to hair/cloth/held objects removed; motion strictly sky/clouds/distant ground; freeze rule hardened to explicitly name hair/cloth/objects</h2>
+<div class="row">
+<img src="_frames/v3_1.png"><img src="_frames/v3_2.png"><img src="_frames/v3_3.png">
+</div>
+<p class="verdict">Mildest leak of the three, but still real: a scratch mark appears on Goliath's helmet that was never in the source, David's expression shifts from calm to furrowed, and two birds appear in the bottom panel's sky. No panel replacement, no limb drift -- but the "invent nothing" rule still breaks even with zero figure-adjacent language.</p>
+<video src="technique_v3_env_only.mp4" controls loop muted playsinline></video>
+
+<h2>Variant 4 — same image passed as BOTH --start-image and --end-image (forced loop)</h2>
+<div class="row">
+<img src="_frames/v4_1.png"><img src="_frames/v4_2.png"><img src="_frames/v4_3.png">
+</div>
+<p class="verdict">Zero drift, zero invention -- but also zero visible motion. All 5 sampled frames across the full clip (start/quarter/mid/three-quarter/end) are visually identical to the source. Forcing a return-to-start apparently made "don't move much" the safest path for Kling, so this trades away the aliveness to buy the cleanliness.</p>
+<video src="technique_v4_loop_startend.mp4" controls loop muted playsinline></video>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<title>Comic Style Stress Test — Cross, Resurrection, Noah + Rainbow, Ark Boarding</title>
+<style>
+  body{background:#1c1a17;color:#eee;font-family:Georgia,serif;margin:0;padding:24px 32px 60px}
+  h1{font-size:22px;margin:0 0 4px}
+  h2{font-size:17px;color:#f3d38a;margin:34px 0 10px}
+  .sub{color:#bbb;font-size:14px;margin-bottom:10px}
+  .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;max-width:1900px}
+  figure{margin:0;background:#26221d;border:1px solid #443c33;border-radius:6px;padding:8px}
+  figure img{width:100%;border-radius:3px;display:block}
+  figcaption{padding-top:8px}
+  figcaption b{font-size:14px;color:#f3d38a}
+  figcaption p{font-size:12px;color:#ccc;line-height:1.4;margin:5px 0 0}
+  .tag{display:inline-block;font-size:10px;padding:2px 6px;border-radius:3px;background:#3a3226;color:#f3d38a;margin-left:4px}
+  .warn{background:#4a2f2a;color:#e8846b}
+  .good{background:#2a3f2e;color:#8ed99a}
+  .callout{max-width:1900px;margin:16px 0 8px;font-size:14px;color:#ddd;background:#2a2620;padding:14px 18px;border-radius:6px;border:1px solid #443c33}
+  .callout b{color:#f3d38a}
+  .headline{max-width:1900px;background:#26221d;padding:18px 22px;border-radius:6px;border:1px solid #443c33;font-size:14px;line-height:1.6}
+  .headline b{color:#f3d38a}
+  a{color:#8ab4f0}
+</style></head>
+<body>
+<h1>Comic Style Stress Test — 5 styles x 4 hard scenes</h1>
+<div class="sub">A (Storybook Bible Strip) · B (Action Painterly) · C (Clean-Line European) · G (Mainstream Ink) · F (Manga Ink). 20 stills, $6.00 spent (NBP nano_banana_pro). Click any image to open full-res.</div>
+
+<div class="headline">
+<b>Two headline findings from this round:</b><br><br>
+1. <b>The cross scene is MUCH better this time</b> — hardening the blood wording to "dried into dark matted stains, fixed and still" (positive end-state only, no negation) fixed most of the dripping-blood problem from the last round. Small drip marks still show up on B/C/G/F (minor, not the flowing streams seen before) — worth one more wording pass, but this is a real, working fix.<br><br>
+2. <b>Noah + Rainbow scene: the ark is drawn as a curved BOAT/SHIP in ALL 5 styles</b> — a direct violation of the locked canon ("NOT a sailing ship, NOT a boat with a curved or pointed hull") even though the correct box-shaped ark reference image was chained every time. Strange and important: the very next scene (Ark Boarding) gets the box-shape RIGHT in all 5 styles. The richer boarding composition (ramp + door prominent) seems to anchor the geometry; the simpler rainbow composition lets the model's default "storybook ark" bias win. This needs a fix (stronger shape wording, or lead with the ark reference image) before any rainbow-scene content ships.
+</div>
+
+<h2>Scene 1 — Jesus on the cross (hardened wording)</h2>
+<div class="grid">
+<figure><a href="_style_bakeoff/_stresstest/A_storybook__cross.png"><img src="_style_bakeoff/_stresstest/A_storybook__cross.png"></a>
+<figcaption><b>A — Storybook</b><span class="tag good">clean</span><p>Single cross, gaunt body, wound marks dark and still — no dripping. Dusk sky, no storm. Best of the five here.</p></figcaption></figure>
+<figure><a href="_style_bakeoff/_stresstest/B_action_painterly__cross.png"><img src="_style_bakeoff/_stresstest/B_action_painterly__cross.png"></a>
+<figcaption><b>B — Action Painterly</b><span class="tag warn">storm risk</span><p>Small wrist drip, minor. Real issue: the painterly sky rendered as swirling storm clouds — the fact-card rule is darkness, explicitly NOT storm weather. This style's own drama fights that rule.</p></figcaption></figure>
+<figure><a href="_style_bakeoff/_stresstest/C_clean_line__cross.png"><img src="_style_bakeoff/_stresstest/C_clean_line__cross.png"></a>
+<figcaption><b>C — Clean-Line</b><span class="tag warn">minor drip</span><p>Small drip streak at the feet recurs. Body clean, sky correctly still and dark, no storm. Otherwise strong.</p></figcaption></figure>
+<figure><a href="_style_bakeoff/_stresstest/G_mainstream_ink__cross.png"><img src="_style_bakeoff/_stresstest/G_mainstream_ink__cross.png"></a>
+<figcaption><b>G — Mainstream Ink</b><span class="tag warn">minor drip + tone</span><p>Small drips at wrist and feet; some ab definition present (moderate, not egregious like the earlier H render). Watch this one closest on the body-gate.</p></figcaption></figure>
+<figure><a href="_style_bakeoff/_stresstest/F_manga_ink__cross.png"><img src="_style_bakeoff/_stresstest/F_manga_ink__cross.png"></a>
+<figcaption><b>F — Manga Ink</b><span class="tag">mono</span><p>Rendered fully monochrome (the model's own instinct for "manga," not requested). Clean wounds, dignified, small ground spatter marks near the base worth a look.</p></figcaption></figure>
+</div>
+
+<h2>Scene 2 — Jesus at the resurrection tomb (glory beat)</h2>
+<div class="grid">
+<figure><a href="_style_bakeoff/_stresstest/A_storybook__resurrection.png"><img src="_style_bakeoff/_stresstest/A_storybook__resurrection.png"></a>
+<figcaption><b>A</b><span class="tag good">clean</span><p>Radiant, warm, hands healed and empty. Grave-clothes visible in the tomb.</p></figcaption></figure>
+<figure><a href="_style_bakeoff/_stresstest/B_action_painterly__resurrection.png"><img src="_style_bakeoff/_stresstest/B_action_painterly__resurrection.png"></a>
+<figcaption><b>B</b><span class="tag good">clean</span><p>Dramatic god-ray light through trees. Tomb interior darker, grave-clothes less clearly visible.</p></figcaption></figure>
+<figure><a href="_style_bakeoff/_stresstest/C_clean_line__resurrection.png"><img src="_style_bakeoff/_stresstest/C_clean_line__resurrection.png"></a>
+<figcaption><b>C</b><span class="tag good">clean</span><p>Calm, clear, simple — reads very well at a glance.</p></figcaption></figure>
+<figure><a href="_style_bakeoff/_stresstest/G_mainstream_ink__resurrection.png"><img src="_style_bakeoff/_stresstest/G_mainstream_ink__resurrection.png"></a>
+<figcaption><b>G</b><span class="tag good">clean</span><p>Bold and warm, good depth in the garden.</p></figcaption></figure>
+<figure><a href="_style_bakeoff/_stresstest/F_manga_ink__resurrection.png"><img src="_style_bakeoff/_stresstest/F_manga_ink__resurrection.png"></a>
+<figcaption><b>F</b><span class="tag good">clean</span><p>The one full-color, radiant manga render of the set — halo rays read well in this style.</p></figcaption></figure>
+</div>
+
+<h2>Scene 3 — Noah after the ark, with the rainbow</h2>
+<div class="grid">
+<figure><a href="_style_bakeoff/_stresstest/A_storybook__noah_rainbow.png"><img src="_style_bakeoff/_stresstest/A_storybook__noah_rainbow.png"></a>
+<figcaption><b>A</b><span class="tag warn">ark shape wrong</span><p>Noah's face/dress consistent with reference. Ark drawn as a curved wooden boat hull, not the canon box-shape.</p></figcaption></figure>
+<figure><a href="_style_bakeoff/_stresstest/B_action_painterly__noah_rainbow.png"><img src="_style_bakeoff/_stresstest/B_action_painterly__noah_rainbow.png"></a>
+<figcaption><b>B</b><span class="tag warn">ark shape wrong</span><p>Same issue — pointed boat hull, dramatic praying pose (a nice touch, but not asked for — check against over-embellishing).</p></figcaption></figure>
+<figure><a href="_style_bakeoff/_stresstest/C_clean_line__noah_rainbow.png"><img src="_style_bakeoff/_stresstest/C_clean_line__noah_rainbow.png"></a>
+<figcaption><b>C</b><span class="tag warn">ark shape wrong</span><p>Same ark issue. Cleanest, calmest composition of the five otherwise.</p></figcaption></figure>
+<figure><a href="_style_bakeoff/_stresstest/G_mainstream_ink__noah_rainbow.png"><img src="_style_bakeoff/_stresstest/G_mainstream_ink__noah_rainbow.png"></a>
+<figcaption><b>G</b><span class="tag warn">ark shape wrong</span><p>Same ark issue. Good Noah likeness.</p></figcaption></figure>
+<figure><a href="_style_bakeoff/_stresstest/F_manga_ink__noah_rainbow.png"><img src="_style_bakeoff/_stresstest/F_manga_ink__noah_rainbow.png"></a>
+<figcaption><b>F</b><span class="tag warn">ark shape wrong</span><p>Same ark issue, monochrome again except the rainbow itself.</p></figcaption></figure>
+</div>
+
+<h2>Scene 4 — The ark: animals and family boarding</h2>
+<div class="grid">
+<figure><a href="_style_bakeoff/_stresstest/A_storybook__ark_boarding.png"><img src="_style_bakeoff/_stresstest/A_storybook__ark_boarding.png"></a>
+<figcaption><b>A</b><span class="tag good">ark shape correct</span><p>Box hull, gable roof, ramp to single door — all correct. Family + orderly animal line clean.</p></figcaption></figure>
+<figure><a href="_style_bakeoff/_stresstest/B_action_painterly__ark_boarding.png"><img src="_style_bakeoff/_stresstest/B_action_painterly__ark_boarding.png"></a>
+<figcaption><b>B</b><span class="tag good">ark shape correct</span><p>Correct shape, moodier stormy-grey sky (fits "threatening rain," not a doctrine issue here).</p></figcaption></figure>
+<figure><a href="_style_bakeoff/_stresstest/C_clean_line__ark_boarding.png"><img src="_style_bakeoff/_stresstest/C_clean_line__ark_boarding.png"></a>
+<figcaption><b>C</b><span class="tag good">ark shape correct</span><p>Correct shape, calm and legible, good animal variety.</p></figcaption></figure>
+<figure><a href="_style_bakeoff/_stresstest/G_mainstream_ink__ark_boarding.png"><img src="_style_bakeoff/_stresstest/G_mainstream_ink__ark_boarding.png"></a>
+<figcaption><b>G</b><span class="tag good">ark shape correct</span><p>Correct shape, bold and dramatic sky, strong composition.</p></figcaption></figure>
+<figure><a href="_style_bakeoff/_stresstest/F_manga_ink__ark_boarding.png"><img src="_style_bakeoff/_stresstest/F_manga_ink__ark_boarding.png"></a>
+<figcaption><b>F</b><span class="tag good">ark shape correct</span><p>Correct shape, monochrome again, birds/fowls a nice touch (chicken + pigeons visible).</p></figcaption></figure>
+</div>
+
+<div class="callout">
+<b>Overall per-style take across all 4 scenes:</b><br>
+<b>A (Storybook)</b> — most consistent all-rounder; cleanest cross this round, warm throughout, no storm/tone risk.<br>
+<b>B (Action Painterly)</b> — most dramatic and cinematic, but its own style tendency risks storm-weather skies on the ONE scene that must never look stormy (the cross).<br>
+<b>C (Clean-Line)</b> — calmest and most legible across all four; minor recurring blood-drip at the cross, otherwise very solid.<br>
+<b>G (Mainstream Ink)</b> — bold and energetic; keep an eye on body definition at passion scenes, it runs closest to the muscle-gate line.<br>
+<b>F (Manga Ink)</b> — defaults to monochrome far more than intended when not explicitly told to use color; technique is clean and dignified but doesn't give the "manga" identity as strongly as hoped.
+</div>
+
+</body></html>

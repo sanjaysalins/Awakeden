@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Rung 1 Phase 1 -- In No Wise Cast Out, Page 3 panels</title>
+<style>
+  body { background:#1b1810; color:#e8ddc8; font-family: Georgia, 'Times New Roman', serif; margin:0; padding:24px 32px 60px; }
+  h1 { font-size:22px; margin:0 0 4px; }
+  .sub { color:#a99b7c; font-size:14px; margin:0 0 20px; }
+  .kjv { color:#d8c48a; font-style:italic; font-size:15px; margin:0 0 24px; max-width:900px; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; max-width:1100px; }
+  figure { margin:0; background:#26221a; border:1px solid #4a4230; border-radius:6px; padding:10px; }
+  figure img { width:100%; height:auto; display:block; border-radius:3px; }
+  figcaption { margin-top:8px; font-size:13px; line-height:1.4; }
+  figcaption .cell { color:#8a9bab; font-weight:bold; }
+  figcaption .file { color:#c9bd9d; font-family: Consolas, monospace; }
+  figcaption .note { color:#93a887; display:block; margin-top:4px; }
+  .meta { max-width:1100px; margin-top:26px; font-size:13px; color:#a99b7c; border-top:1px solid #4a4230; padding-top:14px; }
+  a { color:#d8c48a; }
+</style>
+</head>
+<body>
+  <h1>Comic Page Pipeline POC -- Rung 1, Phase 1 (panel stills only, no animation)</h1>
+  <p class="sub">Page 3 of "In No Wise Cast Out" &middot; layout 2x2 &middot; narration span 21.04s-33.14s</p>
+  <p class="kjv">"and him that cometh to me I will in no wise cast out." In no wise. Not maybe. Not if you clean up first. You think your case might be the exception &mdash;</p>
+
+  <div class="grid">
+    <figure>
+      <img src="stills/panel_b_door.png" alt="panel B: the Seeker approaching the door">
+      <figcaption>
+        <span class="cell">Cell: TOP-LEFT</span> &middot; <span class="file">panel_b_door.png</span>
+        <span class="note">The Seeker, seen from behind, stepping toward the great door standing ajar, warm light spilling through the gap. Action tier (later). Clean on first render.</span>
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="stills/panel_a_jesus.png" alt="panel A: Jesus close-up">
+      <figcaption>
+        <span class="cell">Cell: TOP-RIGHT</span> &middot; <span class="file">panel_a_jesus.png</span>
+        <span class="note">Close-up of Jesus, quiet certain welcome -- "I will in no wise cast out." Calm tier (later). RE-ROLLED ONCE: the first render fused two scenes into one image (an internal panel divider appeared); reroll chained backward off panel_d_threshold.png to hold identity. Clean on reroll.</span>
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="stills/panel_c_ledger.png" alt="panel C: the Seeker's hands on the ledger">
+      <figcaption>
+        <span class="cell">Cell: BOTTOM-LEFT</span> &middot; <span class="file">panel_c_ledger.png</span>
+        <span class="note">Extreme close-up of the Seeker's hands clutching the worn ledger, knuckles tense, a frayed strap hanging. Calm tier (later). Clean on first render.</span>
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="stills/panel_d_threshold.png" alt="panel D: crossing the threshold">
+      <figcaption>
+        <span class="cell">Cell: BOTTOM-RIGHT</span> &middot; <span class="file">panel_d_threshold.png</span>
+        <span class="note">Wide shot -- the Seeker crossing the threshold into the light, Jesus beyond with a hand extended in welcome. Action tier (later). Clean on first render.</span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="meta">
+    <p>Model: nano_banana_pro, 2k, 9:16, sequentially chained A&rarr;B&rarr;C&rarr;D (+ one backward-chained reroll of A off D).</p>
+    <p>Spend: 5 renders (4 originals + 1 reroll) &times; ~$0.30 = <b>~$1.50</b> of the $3.00 hard cap (target was ~$1.20).</p>
+    <p>Self-check passed: zero baked text on any panel; each panel is exactly one coherent scene (the one fused-panel defect was caught and rerolled); Jesus reads gentle/welcoming with no wounds or crown of thorns; character anchors (Jesus, the Seeker, the door) hold across all four panels.</p>
+    <p>Superseded fused-render kept for the record: <span class="file">stills/panel_a_jesus.reroll0_FAILED.png</span></p>
+  </div>
+</body>
+</html>

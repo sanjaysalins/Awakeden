@@ -157,11 +157,16 @@ def hf_animate(png: Path, out: Path, prompt: str, duration: int, aspect_ratio: s
     subprocess.run(["curl", "-s", "-L", m.group(0), "-o", str(out)], check=True)
     ok = out.exists() and out.stat().st_size > 0
     if ok and _cost:
-        try:
-            _cost.record(ep, "clip", "animate", "hf", "kling3_0", 1,
-                         est_usd=_cost.KLING_USD_PER_CLIP, est_only=True, note=png.name)
+        try:  # exact credits at the flags actually used (pro + sound off = 8.75cr/5s)
+            _cost.record_hf(ep, "clip", "animate", "kling3_0", note=png.name,
+                            params={"duration": duration, "mode": "pro", "sound": "off",
+                                    "aspect_ratio": aspect_ratio})
         except Exception:  # noqa - never fail a finished clip on a logging error
-            pass
+            try:
+                _cost.record(ep, "clip", "animate", "hf", "kling3_0", 1,
+                             est_usd=_cost.KLING_USD_PER_CLIP, est_only=True, note=png.name)
+            except Exception:
+                pass
     return ok
 
 def ffmpeg_fallback(png: Path, out: Path):

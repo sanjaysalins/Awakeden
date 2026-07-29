@@ -1,0 +1,44 @@
+<!doctype html><meta charset=utf-8>
+<title>Reproducibility check — christ_pc_ref prompt</title>
+<style>
+ body{background:#14110d;color:#efe7d6;font-family:system-ui,Arial;margin:0;padding:24px}
+ h1{font-size:20px} p.sub{color:#b7ab97;max-width:900px}
+ .grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;max-width:1500px}
+ figure{margin:0} figcaption{font-size:13px;color:#e9c877;font-weight:700;margin:0 0 6px}
+ img{width:100%;border-radius:7px;display:block;border:2px solid #000}
+</style>
+<h1>Same prompt, run twice — face/style holds, pose does not</h1>
+<p class="sub">Left: the source identity photo used as the --image reference. Middle: the ORIGINAL
+christ_pc_ref.png (made 2026-07-22). Right: re-running the EXACT same prompt + same reference,
+today. Same man, same ink/chiaroscuro treatment — different pose each time (no fixed seed).</p>
+<div class="grid">
+<figure><figcaption>SOURCE reference image (chained via --image)</figcaption>
+<img src="../../../image_library/stills/christ_risen_face_scars.png"></figure>
+<figure><figcaption>ORIGINAL christ_pc_ref.png (2026-07-22)</figcaption>
+<img src="../v1/visual_16x9_inked/_painted_comic_test/christ_pc_ref.png"></figure>
+<figure><figcaption>REPRO #1 — same prompt, run again (2026-07-24)</figcaption>
+<img src="christ_pc_ref_REPRO.png"></figure>
+</div>
+<h1 style="margin-top:36px">Attempt 2 — tightened crop language (hands/arms explicitly out of frame)</h1>
+<p class="sub">Same style + reference, wording added to lock the chest-up crop that made the original distinct.
+Roll 1 landed very close to the original. Roll 2 drifted back to the reference's own arms-raised pose —
+this is genuinely stochastic (no fixed seed), not something wording alone fully controls.</p>
+<div class="grid">
+<figure><figcaption>ORIGINAL (for reference)</figcaption>
+<img src="../v1/visual_16x9_inked/_painted_comic_test/christ_pc_ref.png"></figure>
+<figure><figcaption>REPRO v2, roll 1 — close match</figcaption>
+<img src="christ_pc_ref_REPRO_v2_1.png"></figure>
+<figure><figcaption>REPRO v2, roll 2 — drifted again</figcaption>
+<img src="christ_pc_ref_REPRO_v2_2.png"></figure>
+</div>
+<h1 style="margin-top:36px">Attempt 3 — explicit desaturation (muted sepia, not vivid gold)</h1>
+<p class="sub">The user's instinct was right: the earlier repros leaned toward a richer, more saturated
+golden glow than the original's muted warm-black palette. Added explicit desaturation language.</p>
+<div class="grid">
+<figure><figcaption>ORIGINAL (for reference)</figcaption>
+<img src="../v1/visual_16x9_inked/_painted_comic_test/christ_pc_ref.png"></figure>
+<figure><figcaption>REPRO v3, roll 1 — near-monochrome, slightly too far</figcaption>
+<img src="christ_pc_ref_REPRO_v3_1.png"></figure>
+<figure><figcaption>REPRO v3, roll 2 — closest match yet</figcaption>
+<img src="christ_pc_ref_REPRO_v3_2.png"></figure>
+</div>

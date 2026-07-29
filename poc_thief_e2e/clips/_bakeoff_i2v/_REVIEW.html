@@ -1,0 +1,49 @@
+<!doctype html><meta charset=utf-8>
+<title>i2v model bake-off — David & Goliath comic page</title>
+<style>
+ body{background:#14110d;color:#efe7d6;font-family:system-ui,Arial;margin:0;padding:24px}
+ h1{font-size:20px;margin:0 0 4px} h2{font-size:15px;color:#e9c877;margin:26px 0 4px}
+ p.sub{color:#b7ab97;margin:0 0 16px;max-width:900px}
+ .tier{border-left:3px solid #444;padding-left:14px;margin-bottom:22px}
+ .tier.good{border-color:#5a8f5a} .tier.mixed{border-color:#c9a227} .tier.bad{border-color:#a33}
+ .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:8px}
+ figure{margin:0} figcaption{font-size:13px;font-weight:700;margin:6px 0 0;color:#e9c877}
+ figcaption .note{display:block;font-weight:400;font-size:12px;color:#b7ab97;margin-top:3px}
+ video{width:100%;border-radius:6px;border:1px solid #000;background:#000}
+</style>
+<h1>i2v model bake-off — same page, same simple prompt, 10 models</h1>
+<p class="sub">"Animate this comic book page. Bring all four panels to life with subtle, natural motion in each one, while keeping every character, face, and caption exactly as drawn." No heavy prompt engineering this round — testing native default behavior.</p>
+
+<div class="tier good">
+<h2>Panels intact, text clean, motion present</h2>
+<div class="grid">
+<figure><video src="kling3_0.mp4" controls loop muted playsinline></video><figcaption>Kling 3.0<span class="note">Clean text, intact layout. Added a genuine "impact" beat at the climax -- but with real pose drift since no freeze rule was given this round.</span></figcaption></figure>
+<figure><video src="grok_video_v15.mp4" controls loop muted playsinline></video><figcaption>Grok Video 1.5<span class="note">Clean text, intact layout, moderate expression drift, added an impact-flash effect.</span></figcaption></figure>
+<figure><video src="seedance_2_0.mp4" controls loop muted playsinline></video><figcaption>Seedance 2.0 (full)<span class="note">Clean text, intact layout, Goliath's expression shifts to wide-eyed shock.</span></figcaption></figure>
+<figure><video src="minimax_hailuo.mp4" controls loop muted playsinline></video><figcaption>Minimax Hailuo<span class="note">Mostly clean text (minor typos: "HORTS", "SLINS"), some pose drift.</span></figcaption></figure>
+</div>
+</div>
+
+<div class="tier mixed">
+<h2>Panels intact, text clean, but barely animated</h2>
+<div class="grid">
+<figure><video src="wan2_7.mp4" controls loop muted playsinline></video><figcaption>Wan 2.7<span class="note">Perfect text, perfect layout, next to no visible motion -- plays it safe.</span></figcaption></figure>
+</div>
+</div>
+
+<div class="tier bad">
+<h2>Text garbled (disqualifying for scripture captions)</h2>
+<div class="grid">
+<figure><video src="seedance_2_0_mini.mp4" controls loop muted playsinline></video><figcaption>Seedance 2.0 Mini<span class="note">"FLESH UNT THE BUCKS OF HE AIR", "GILA AND A STONE" -- reads well as motion, but the caption text itself is wrong.</span></figcaption></figure>
+</div>
+</div>
+
+<div class="tier bad">
+<h2>Structural collapse -- reimagined, not animated</h2>
+<div class="grid">
+<figure><video src="kling3_0_turbo.mp4" controls loop muted playsinline></video><figcaption>Kling 3.0 Turbo<span class="note">Two of four panels replaced with duplicates of the bottom panel.</span></figcaption></figure>
+<figure><video src="veo3_1_lite.mp4" controls loop muted playsinline></video><figcaption>Veo 3.1 Lite<span class="note">Invents a shield David never had, a helmet on the ground, and a nonsense speech bubble. Matches the earlier locked finding that Veo reimagines rather than animates.</span></figcaption></figure>
+<figure><video src="happy_horse_video.mp4" controls loop muted playsinline></video><figcaption>Happy Horse Video<span class="note">Whole page collapses into one reimagined shot, exaggerated debris, gibberish text.</span></figcaption></figure>
+<figure><video src="seedance1_5.mp4" controls loop muted playsinline></video><figcaption>Seedance 1.5 Pro<span class="note">Entire page replaced with a different art style and an invented scene. No panels or captions survive.</span></figcaption></figure>
+</div>
+</div>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Depth-composition still discipline — EW01 Two Goats</title>
+<style>
+  :root{ --bg:#14110c; --card:#1e1a13; --ink:#f3e8cc; --muted:#a99b7f; --gold:#c9a227; --red:#d84a3a; --green:#5fae6b; }
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:"Segoe UI",system-ui,sans-serif; line-height:1.5; }
+  header{ padding:34px 40px 10px; }
+  h1{ margin:0 0 6px; font-size:30px; letter-spacing:.3px; }
+  .sub{ color:var(--muted); max-width:900px; }
+  .sub b{ color:var(--ink); }
+  h2{ margin:38px 40px 6px; font-size:20px; border-bottom:1px solid #33291a; padding-bottom:8px; }
+  .note{ color:var(--muted); margin:0 40px 8px; font-size:14px; }
+  .wrap{ padding:0 30px 60px; }
+  .scene{ background:var(--card); border:1px solid #2c2417; border-radius:10px; margin:14px 10px; padding:14px 16px; }
+  .scene h3{ margin:0 0 10px; font-size:16px; color:var(--gold); }
+  .scene h3 span{ color:var(--muted); font-weight:400; font-size:13px; }
+  .pair{ display:flex; gap:14px; flex-wrap:wrap; }
+  figure{ margin:0; flex:1 1 46%; min-width:320px; }
+  figure img{ width:100%; border-radius:6px; display:block; border:1px solid #000; }
+  figcaption{ font-size:12px; color:var(--muted); margin-top:5px; text-transform:uppercase; letter-spacing:.6px; }
+  figcaption.now{ color:var(--muted); }
+  figcaption.new{ color:var(--green); }
+  figcaption.bad{ color:var(--red); }
+  a.lb{ display:block; }
+  .verdict{ background:#191f17; border:1px solid #2c3a26; border-radius:10px; margin:14px 10px; padding:14px 18px; }
+  .verdict b{ color:var(--green); }
+  .redsec h2{ color:var(--red); border-color:#4a2620; }
+</style></head>
+<body>
+<header>
+  <h1>Depth-composition still discipline — <span style="color:var(--muted)">EW01 Two Goats</span></h1>
+  <p class="sub">Technique borrowed from the ArkAIology vox-blend SHOT formula (composition only — <b>not</b> their look).
+  <b>Left = our current flat still. Right = the validated depth v2</b> (ink-native depth via overlap + line-weight +
+  atmospheric recession, object/silhouette foregrounds, one committed angle; sacred beats guarded). Red-teamed + panel-revised
+  (4/4 REVISE on the naive version) → this v2 passed a stratified n=10 bake-off clean. Click any image for full-res.</p>
+</header>
+<div class="wrap">
+
+  <div class="verdict"><b>Scorecard (n=10):</b> depth 10/10 · ink-purity (no photoreal drift) 10/10 · doctrine preserved (sacred) 3/3 · animation-safe 10/10 · ~1 minor defect.</div>
+
+  <h2>Establishing</h2>
+  <div class="scene"><h3>Scene 1 — Once a year, only once</h3><div class="pair">
+    <figure><a class="lb" href="../01_once_a_year_only_once.png" target="_blank"><img src="../01_once_a_year_only_once.png"></a><figcaption class="now">current — flat</figcaption></figure>
+    <figure><a class="lb" href="bakeoff_v2/bo2_01_establishing.png" target="_blank"><img src="bakeoff_v2/bo2_01_establishing.png"></a><figcaption class="new">depth v2 — silhouette FG, towering tent deep</figcaption></figure></div></div>
+  <div class="scene"><h3>Scene 10 — I watched it go</h3><div class="pair">
+    <figure><a class="lb" href="../10_i_watched_it_go_a_land_not_inhabited.png" target="_blank"><img src="../10_i_watched_it_go_a_land_not_inhabited.png"></a><figcaption class="now">current — flat</figcaption></figure>
+    <figure><a class="lb" href="bakeoff_v2/bo2_10_establishing.png" target="_blank"><img src="bakeoff_v2/bo2_10_establishing.png"></a><figcaption class="new">depth v2 — rocky ledge FG, vast wadi deep</figcaption></figure></div></div>
+
+  <h2>Action</h2>
+  <div class="scene"><h3>Scene 7 — Two goats, and I cast lots</h3><div class="pair">
+    <figure><a class="lb" href="../07_they_brought_me_two_goats_and_i_cast_lots.png" target="_blank"><img src="../07_they_brought_me_two_goats_and_i_cast_lots.png"></a><figcaption class="now">current — flat</figcaption></figure>
+    <figure><a class="lb" href="bakeoff_v2/bo2_07_action.png" target="_blank"><img src="bakeoff_v2/bo2_07_action.png"></a><figcaption class="new">depth v2 — altar-edge FG (not macro hands)</figcaption></figure></div></div>
+  <div class="scene"><h3>Scene 9 — Both my hands upon the live goat</h3><div class="pair">
+    <figure><a class="lb" href="../09_both_my_hands_upon_the_live_goat.png" target="_blank"><img src="../09_both_my_hands_upon_the_live_goat.png"></a><figcaption class="now">current — flat</figcaption></figure>
+    <figure><a class="lb" href="bakeoff_v2/bo2_09_action.png" target="_blank"><img src="bakeoff_v2/bo2_09_action.png"></a><figcaption class="new">depth v2 — attendant silhouette FG</figcaption></figure></div></div>
+
+  <h2>Teaching</h2>
+  <div class="scene"><h3>Scene 3 — Plain white linen, like a servant</h3><div class="pair">
+    <figure><a class="lb" href="../03_plain_white_linen_like_a_servant.png" target="_blank"><img src="../03_plain_white_linen_like_a_servant.png"></a><figcaption class="now">current — flat</figcaption></figure>
+    <figure><a class="lb" href="bakeoff_v2/bo2_03_teaching.png" target="_blank"><img src="bakeoff_v2/bo2_03_teaching.png"></a><figcaption class="new">depth v2 — lamp/chain FG, one-point perspective</figcaption></figure></div></div>
+  <div class="scene"><h3>Scene 12 — Why two? Two things at once</h3><div class="pair">
+    <figure><a class="lb" href="../12_why_two_two_things_at_once.png" target="_blank"><img src="../12_why_two_two_things_at_once.png"></a><figcaption class="now">current — flat</figcaption></figure>
+    <figure><a class="lb" href="bakeoff_v2/bo2_12_teaching.png" target="_blank"><img src="bakeoff_v2/bo2_12_teaching.png"></a><figcaption class="new">depth v2 — altar-edge + flame FG</figcaption></figure></div></div>
+
+  <h2>Crowd</h2>
+  <div class="scene"><h3>Scene 13 — The people went home clean</h3><div class="pair">
+    <figure><a class="lb" href="../13_the_people_went_home_clean.png" target="_blank"><img src="../13_the_people_went_home_clean.png"></a><figcaption class="now">current — flat</figcaption></figure>
+    <figure><a class="lb" href="bakeoff_v2/bo2_13_crowd.png" target="_blank"><img src="bakeoff_v2/bo2_13_crowd.png"></a><figcaption class="new">depth v2 — silhouette crowd FG, dusk field deep</figcaption></figure></div></div>
+
+  <h2>Sacred — guarded variant <span style="font-size:13px;color:var(--muted)">(doctrine preserved, calm framing)</span></h2>
+  <div class="scene"><h3>Scene 20 — He sat down, the veil rent <span>· the throne test</span></h3><div class="pair">
+    <figure><a class="lb" href="../20_he_sat_down_the_veil_rent_from_the_top.png" target="_blank"><img src="../20_he_sat_down_the_veil_rent_from_the_top.png"></a><figcaption class="now">current — flat</figcaption></figure>
+    <figure><a class="lb" href="bakeoff_v2/bo2_20_sacred.png" target="_blank"><img src="bakeoff_v2/bo2_20_sacred.png"></a><figcaption class="new">depth v2 — enthroned on the throne ✓, veil-edge FG</figcaption></figure></div></div>
+  <div class="scene"><h3>Scene 17 — By his own blood he entered in</h3><div class="pair">
+    <figure><a class="lb" href="../17_by_his_own_blood_he_entered_in_once.png" target="_blank"><img src="../17_by_his_own_blood_he_entered_in_once.png"></a><figcaption class="now">current — flat</figcaption></figure>
+    <figure><a class="lb" href="bakeoff_v2/bo2_17_sacred.png" target="_blank"><img src="bakeoff_v2/bo2_17_sacred.png"></a><figcaption class="new">depth v2 — curtain-edge FG, glory deep</figcaption></figure></div></div>
+  <div class="scene"><h3>Scene 25 — Will you come in? (hero landing)</h3><div class="pair">
+    <figure><a class="lb" href="../25_will_you_come_in_be_carried_clean.png" target="_blank"><img src="../25_will_you_come_in_be_carried_clean.png"></a><figcaption class="now">current — flat</figcaption></figure>
+    <figure><a class="lb" href="bakeoff_v2/bo2_25_sacred.png" target="_blank"><img src="bakeoff_v2/bo2_25_sacred.png"></a><figcaption class="new">depth v2 — doorway-frame FG, hand extended</figcaption></figure></div></div>
+
+  <div class="redsec">
+  <h2>What the red-team caught (naive v1 — rejected)</h2>
+  <p class="note">The reason we red-teamed before adopting. These v1 renders looked fine in isolation but hid real failures.</p>
+  <div class="scene"><h3>Scene 20 — v1 dropped the throne</h3><div class="pair">
+    <figure><a class="lb" href="redteam/rt_20_reverent.png" target="_blank"><img src="redteam/rt_20_reverent.png"></a><figcaption class="bad">v1 — Christ cross-legged on the floor (throne lost = doctrinal regression)</figcaption></figure>
+    <figure><a class="lb" href="bakeoff_v2/bo2_20_sacred.png" target="_blank"><img src="bakeoff_v2/bo2_20_sacred.png"></a><figcaption class="new">v2 (guarded) — enthroned, doctrine restored</figcaption></figure></div></div>
+  <div class="scene"><h3>Scene 7 — v1 drifted to photoreal skin</h3><div class="pair">
+    <figure><a class="lb" href="depth_07.png" target="_blank"><img src="depth_07.png"></a><figcaption class="bad">v1 — extreme-macro hands, rendered skin (photoreal drift + also grew a cross finial)</figcaption></figure>
+    <figure><a class="lb" href="bakeoff_v2/bo2_07_action.png" target="_blank"><img src="bakeoff_v2/bo2_07_action.png"></a><figcaption class="new">v2 — ink-native depth, flat cel-shade</figcaption></figure></div></div>
+  </div>
+
+</div>
+</body></html>

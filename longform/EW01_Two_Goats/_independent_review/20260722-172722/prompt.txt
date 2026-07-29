@@ -1,0 +1,71 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: plan
+
+LENS — judge this PLAN on (be specific, cite the exact step/claim):
+- Feasibility against the real codebase / tools (does it assume things that exist?).
+- Hidden risks, false assumptions, single points of failure.
+- Over-engineering / premature building before the idea is proven.
+- Missing steps, edge cases, or verification gaps.
+- Reuse: does it duplicate tools that already exist instead of reusing them?
+- Cost / spend and whether it's justified.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block (on the VERDICT line write exactly ONE word —
+PASS or REVISE or FAIL — never the list of options):
+
+VERDICT: <PASS or REVISE or FAIL>
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# PROPOSAL: adopt a "depth-composition discipline" as the standard for our inked still prompts
+
+## The change
+Add four composition rules to every inked still prompt (the `subject_block` we write for
+each scene), borrowed from the ArkAIology vox-blend SHOT formula — WITHOUT adopting their
+paper-diorama/collage *look*:
+
+1. **Name at least two explicit depth layers** (foreground / mid-ground / background) — their
+   claim: "if depth isn't stated, the model flattens it."
+2. **Shallow depth of field** — one plane sharp, others soft.
+3. **A foreground element crossing close to the lens** (silhouettes, hands, an object).
+4. **One committed camera angle** (low three-quarter, macro, crane) — not a flat centered shot.
+
+Our inked style block (`VISUAL_STYLE_BASE_GN` / `_TAIL_GN`), model (seedream via HF), and the
+frozen-tableau content stay identical. Only the spatial composition language changes.
+
+## Evidence so far (small, possibly biased)
+A/B on 2 scenes (same style block, same model, only the depth language added):
+- Scene 1 (Aaron before the court): flat centered postcard → deep establishing panel (foreground
+  crowd silhouettes, tiny priest, towering tent). Clear improvement.
+- Scene 7 (the lots): flat medium → hero macro (lots huge in the palms, priest soft behind, goats deep).
+Both stayed fully in our inked graphic-novel look. **BUT n=2, scenes chosen for obvious depth
+potential, and one of the two grew an anachronistic cross finial (a 50% period-slip in this tiny sample).**
+
+## Claimed advantages (please pressure-test)
+1. Fixes flatness at the SOURCE — deep stills give the camera real layers to move through, and make
+   our `parallax_25d` 2.5D tool actually work (a flat still has nothing to separate).
+2. "Comic level" at zero marginal cost — it's composition, not a new art style or a new tool.
+3. Repeatable + consistent — a prompt-system rule applied to every still in every episode.
+4. Anti-slideshow variety across a long-form (varied deep compositions, not 20 similar flat tableaux).
+
+## Risks / open questions I want attacked
+- **DoF → photoreal drift:** "shallow depth of field" is a lens/3D concept; real comics build depth
+  with linework/overlap, not blur. Does this quietly erode our INK purity toward "AI photo + comic filter"?
+- **Reverent beats:** does an assertive foreground-macro/low-angle CHEAPEN the holy, still moments
+  (Christ enthroned, the veil, the landing)? Should sacred scenes be exempt or use a calm variant?
+- **Animation-safety regression:** more depth = more elements = more for the i2v model to invent/move —
+  a foreground figure near the lens is prime for the model to animate. Does this undo the frozen-tableau
+  discipline that exists to stop invented motion?
+- **QC/defect rate:** more complex compositions may raise period-slip / extra-figure / anatomy defects
+  and re-roll cost — is the "$0 going forward" claim honest?
+- **Generalization:** does it hold on multi-figure and reverent scenes, or only easy "action" ones?
+
+## The decision
+Adopt this as the standard for all NEW inked still work? And separately, is it worth retrofitting
+EW01's 25 existing stills (~$7.50 + re-animation)? Reject or bound the change if the risks outweigh it.
+----- ARTIFACT END -----

@@ -1,0 +1,17 @@
+<!doctype html><meta charset=utf-8>
+<title>Native-resolution detail comparison</title>
+<style>
+ body{background:#14110d;color:#efe7d6;font-family:system-ui,Arial;margin:0;padding:24px}
+ h1{font-size:20px;margin:0 0 4px} p.sub{color:#b7ab97;margin:0 0 20px;max-width:900px}
+ .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+ figure{margin:0} figcaption{font-size:13px;font-weight:700;margin:6px 0 0;color:#e9c877}
+ figcaption .note{display:block;font-weight:400;font-size:12px;color:#b7ab97;margin-top:3px}
+ img{width:100%;border-radius:6px;border:1px solid #000;display:block}
+</style>
+<h1>Native-resolution crops -- same face, no scaling, 650x650px straight from each source PNG</h1>
+<p class="sub">Requested after the earlier full-page comparison was challenged as not rigorous enough. This is the direct check.</p>
+<div class="grid">
+<figure><img src="nbp_crop.png"><figcaption>nano_banana_pro<span class="note">Crisp, bold, high-contrast ink lines. Clean edges, no blur.</span></figcaption></figure>
+<figure><img src="seedream_crop.png"><figcaption>Seedream 5.0 Pro<span class="note">Softer at native res -- edges blur, colors blend more painterly than cel-clean.</span></figcaption></figure>
+<figure><img src="gpt_crop.png"><figcaption>GPT Image 2<span class="note">Densest hatching/texture, lines stay crisp -- but denser is not the same claim as sharper.</span></figcaption></figure>
+</div>

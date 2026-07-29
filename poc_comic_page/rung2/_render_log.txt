@@ -1,0 +1,38 @@
+[img ] p1a_night_door (AR 1:1, ref panel_b_door.png) ...
+   no url: 584597a4-fd78-4d86-8e2d-8d3df6199317 ended with status "failed"
+Error: job 584597a4-fd78-4d86-8e2d-8d3df6199317 ended with status "failed"
+   FAILED
+[img ] p1b_hesitant_hand (AR 1:1, ref panel_c_ledger.png) ...
+   ok (52s)  running spend ~$0.30
+[img ] p2a_rehearsing (AR 9:16, ref panel_d_threshold.png) ...
+   ok (66s)  running spend ~$0.60
+[img ] p2b_jesus_speaks (AR 9:16, ref panel_a_jesus.png) ...
+   ok (40s)  running spend ~$0.90
+[img ] p2c_light_line (AR 9:16, ref panel_b_door.png) ...
+   ok (250s)  running spend ~$1.20
+[img ] p4a_turning_away (AR 9:16, ref panel_d_threshold.png) ...
+   ok (50s)  running spend ~$1.50
+[img ] p4b_open_hands (AR 9:16, ref panel_a_jesus.png) ...
+   ok (40s)  running spend ~$1.80
+[img ] p4c_empty_doorway (AR 9:16, ref panel_d_threshold.png) ...
+   ok (42s)  running spend ~$2.10
+[img ] p5a_the_welcome (AR 1:1, ref panel_d_threshold.png) ...
+   ok (38s)  running spend ~$2.40
+[img ] p5b_record_received (AR 3:4, ref panel_c_ledger.png) ...
+   ok (42s)  running spend ~$2.70
+[img ] p5c_never_locked (AR 3:4, ref panel_b_door.png) ...
+   ok (40s)  running spend ~$3.00
+
+[out] C:\Users\sanjay\PycharmProjects\JesusInTheBible\poc_comic_page\rung2\stills
+[spend] ~$3.00 of $4.50 cap
+  p1a_night_door: FAILED
+  p1b_hesitant_hand: clean -> C:\Users\sanjay\PycharmProjects\JesusInTheBible\poc_comic_page\rung2\stills\p1b_hesitant_hand.png
+  p2a_rehearsing: clean -> C:\Users\sanjay\PycharmProjects\JesusInTheBible\poc_comic_page\rung2\stills\p2a_rehearsing.png
+  p2b_jesus_speaks: clean -> C:\Users\sanjay\PycharmProjects\JesusInTheBible\poc_comic_page\rung2\stills\p2b_jesus_speaks.png
+  p2c_light_line: clean -> C:\Users\sanjay\PycharmProjects\JesusInTheBible\poc_comic_page\rung2\stills\p2c_light_line.png
+  p4a_turning_away: clean -> C:\Users\sanjay\PycharmProjects\JesusInTheBible\poc_comic_page\rung2\stills\p4a_turning_away.png
+  p4b_open_hands: clean -> C:\Users\sanjay\PycharmProjects\JesusInTheBible\poc_comic_page\rung2\stills\p4b_open_hands.png
+  p4c_empty_doorway: clean -> C:\Users\sanjay\PycharmProjects\JesusInTheBible\poc_comic_page\rung2\stills\p4c_empty_doorway.png
+  p5a_the_welcome: clean -> C:\Users\sanjay\PycharmProjects\JesusInTheBible\poc_comic_page\rung2\stills\p5a_the_welcome.png
+  p5b_record_received: clean -> C:\Users\sanjay\PycharmProjects\JesusInTheBible\poc_comic_page\rung2\stills\p5b_record_received.png
+  p5c_never_locked: clean -> C:\Users\sanjay\PycharmProjects\JesusInTheBible\poc_comic_page\rung2\stills\p5c_never_locked.png

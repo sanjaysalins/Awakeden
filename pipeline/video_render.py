@@ -38,11 +38,13 @@ _NSFW_RE = re.compile(r"nsfw", re.IGNORECASE)
 # Per-model HF CLI quirks (discovered in the 2026-05-30 video bake-off):
 #   - media flag: most image-to-video models take --start-image, but a few only
 #     accept --image (they error "Model accepts only --image").
-#   - --mode/--sound are Kling-only flags; other models reject them.
+#   - --mode/--sound are Kling-only flags; other models reject them. kling3_0 takes
+#     --mode std|pro|4k + --sound on|off; kling2_6 takes ONLY a boolean --sound (no
+#     --mode). Sound is a real surcharge on kling3_0 (pro 12.5cr ON -> 8.75cr OFF,
+#     std 10 -> 7.5) and doubles kling2_6 — always mute it (verified 2026-07-21).
 #   - duration is a fixed per-model allow-list; we snap to the nearest legal value
 #     (e.g. VIDEO_DURATION=10 -> 8 for veo, whose legal set is 4/6/8).
 _HF_NEEDS_IMAGE_FLAG = {"minimax_hailuo", "kling2_6", "veo3_1", "cinematic_studio_video_v2"}
-_HF_KLING_FLAGS = {"kling3_0", "kling2_6"}
 _HF_DURATIONS = {
     "veo3_1_lite": (4, 6, 8),
     "veo3_1": (4, 6, 8),
@@ -141,7 +143,7 @@ def _episode_of(path: Path) -> str:
     return path.parent.name
 
 
-def _record_clip_cost(provider: str, model: str, png_path: Path) -> None:
+def _record_clip_cost(provider: str, model: str, png_path: Path, params=None) -> None:
     """Spend-ledger row for one rendered clip. Never breaks the render."""
     try:
         from pipeline import cost
@@ -149,8 +151,9 @@ def _record_clip_cost(provider: str, model: str, png_path: Path) -> None:
         if provider == "kling":
             cost.record_kling(ep, "clip", "animate", note=png_path.name)
             return
-        try:  # exact per-model estimate; flat fallback if the cost query flakes
-            cost.record_hf(ep, "clip", "animate", model, image=png_path, note=png_path.name)
+        try:  # exact per-model estimate at the create call's own flags; flat fallback if the query flakes
+            cost.record_hf(ep, "clip", "animate", model, image=png_path, note=png_path.name,
+                           params=params)
         except Exception:
             cost.record(ep, "clip", "animate", "hf", model, 1,
                         est_usd=cost.KLING_USD_PER_CLIP, est_only=True,
@@ -172,15 +175,17 @@ class HFVideoProvider(VideoProvider):
     def animate(self, png_path: Path, out_mp4: Path, prompt: str, duration: int) -> Path:
         model = config.anim_model()
         media_flag = "--image" if model in _HF_NEEDS_IMAGE_FLAG else "--start-image"
-        cmd = [
-            self._cli, "generate", "create", model,
-            media_flag, str(png_path),
-            "--prompt", prompt,
-            "--duration", str(_hf_duration(model, duration)),
-            "--aspect_ratio", config.VIDEO_HF_ASPECT,
-        ]
-        if model in _HF_KLING_FLAGS:          # --mode/--sound are Kling-only flags
-            cmd += ["--mode", config.VIDEO_HF_MODE, "--sound", config.VIDEO_HF_SOUND]
+        params = {"duration": _hf_duration(model, duration),
+                  "aspect_ratio": config.VIDEO_HF_ASPECT}
+        if model == "kling3_0":
+            params["mode"] = config.VIDEO_HF_MODE
+            params["sound"] = config.VIDEO_HF_SOUND
+        elif model == "kling2_6":   # boolean --sound only, no --mode (see quirks above)
+            params["sound"] = "false" if config.VIDEO_HF_SOUND == "off" else "true"
+        cmd = [self._cli, "generate", "create", model,
+               media_flag, str(png_path), "--prompt", prompt]
+        for k, v in params.items():
+            cmd += [f"--{k}", str(v)]
         cmd += ["--wait"]
         result = subprocess.run(
             cmd, capture_output=True, text=True, encoding="utf-8",
@@ -203,7 +208,7 @@ class HFVideoProvider(VideoProvider):
         req = urllib.request.Request(url, headers={"User-Agent": "JesusInTheBible/1.0"})
         with urllib.request.urlopen(req, timeout=300) as resp:
             out_mp4.write_bytes(resp.read())
-        _record_clip_cost("hf", model, png_path)
+        _record_clip_cost("hf", model, png_path, params=params)
         return out_mp4
 
 

@@ -1,0 +1,82 @@
+{
+  "piece": "C:\\Users\\sanjay\\PycharmProjects\\PythonProject1\\jesus\\narration\\36_In_No_Wise_Cast_Out\\v1",
+  "T_word_end_s": 54.44,
+  "T_audio_s": 54.649,
+  "T_used_s": 54.44,
+  "n_pages": 5,
+  "pages": [
+    {
+      "n": 1,
+      "t0": 0.0,
+      "t1": 10.08,
+      "dwell_s": 10.08,
+      "phrase_count": 3,
+      "panel_count": 2,
+      "layout": "2v",
+      "repairs": []
+    },
+    {
+      "n": 2,
+      "t0": 10.08,
+      "t1": 21.04,
+      "dwell_s": 10.96,
+      "phrase_count": 4,
+      "panel_count": 3,
+      "layout": "3-big-left",
+      "repairs": []
+    },
+    {
+      "n": 3,
+      "t0": 21.04,
+      "t1": 33.14,
+      "dwell_s": 12.1,
+      "phrase_count": 6,
+      "panel_count": 4,
+      "layout": "2x2",
+      "repairs": []
+    },
+    {
+      "n": 4,
+      "t0": 33.14,
+      "t1": 43.78,
+      "dwell_s": 10.64,
+      "phrase_count": 4,
+      "panel_count": 3,
+      "layout": "3-big-left",
+      "repairs": []
+    },
+    {
+      "n": 5,
+      "t0": 43.78,
+      "t1": 54.44,
+      "dwell_s": 10.66,
+      "phrase_count": 5,
+      "panel_count": 3,
+      "layout": "3-big-top",
+      "repairs": []
+    }
+  ],
+  "checks": {
+    "sum_dwells_eq_T": {
+      "pass": true,
+      "detail": "sum=54.440s vs T=54.440s"
+    },
+    "boundaries_are_phrase_ends": {
+      "pass": true,
+      "detail": "all interior boundaries match a phrase end"
+    },
+    "dwells_in_band_or_repaired": {
+      "pass": true,
+      "detail": "all pages in 8-16s band or carry a logged repair"
+    },
+    "n_pages_matches_formula": {
+      "pass": true,
+      "detail": "formula=5 recheck=5"
+    },
+    "no_unlogged_consecutive_layout_repeat": {
+      "pass": true,
+      "detail": "no unlogged consecutive repeats"
+    }
+  },
+  "escalations": []
+}

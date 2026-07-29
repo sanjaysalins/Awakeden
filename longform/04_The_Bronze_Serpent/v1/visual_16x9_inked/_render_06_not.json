@@ -1,0 +1,31 @@
+[
+  {
+    "id": "5aa6811a-7e49-4542-a574-cffaa3343353",
+    "status": "completed",
+    "display_name": "Seedance 1.5 Pro",
+    "job_set_type": "seedance1_5",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36Civ1twSiHHl6id4ulZrwA34hC/hf_20260717_094356_5aa6811a-7e49-4542-a574-cffaa3343353.mp4",
+    "created_at": 1784281436.10187,
+    "params": {
+      "width": 1280,
+      "height": 720,
+      "prompt": "Graphic novel inked illustration, painted tableau, a frozen moment. An old grey-bearded man kneels beside a softly glowing pool of water at the edge of a desert camp, looking up into the dark sky; a small group of desert-robed figures stand at a distance near tents. The camera performs a slow, reverent push-in toward the kneeling man's face and the glowing water. Nothing moves -- the man's pose, the distant figures, and the light stay fixed as drawn. No invented motion, no morphing, no new elements, no camera shake. Painted tableau stays still; only the camera moves.",
+      "medias": [
+        {
+          "data": {
+            "id": "82b994cc-74fd-47e9-afee-e960ed73a458",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_36Civ1twSiHHl6id4ulZrwA34hC/82b994cc-74fd-47e9-afee-e960ed73a458_resize.jpg",
+            "type": "media_input"
+          },
+          "role": "start_image"
+        }
+      ],
+      "duration": 4,
+      "fixed_lens": false,
+      "resolution": "720p",
+      "aspect_ratio": "16:9",
+      "seed": 152537,
+      "generate_audio": true
+    }
+  }
+]

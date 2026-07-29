@@ -1,0 +1,905 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: plan
+
+LENS — judge this PLAN on (be specific, cite the exact step/claim):
+- Feasibility against the real codebase / tools (does it assume things that exist?).
+- Hidden risks, false assumptions, single points of failure.
+- Over-engineering / premature building before the idea is proven.
+- Missing steps, edge cases, or verification gaps.
+- Reuse: does it duplicate tools that already exist instead of reusing them?
+- Cost / spend and whether it's justified.
+
+ADDITIONAL CONTEXT / BRIEF:
+This document builds on .claude/skills/comic-strip-native/COMIC_STRIP_NATIVE_SPEC.md, which failed independent review (confirmed: wrong per-page cost, Christ body-gate stricter than the real locked rule in v2/AWAKEDEN_COMIC_DNA.md section 5a which also warns against negated prompt phrasing, animation invention accepted on doctrine-sensitive passion panels, and a false claim that external Christ-reference chaining was never tried -- poc_thief_e2e/_comic_strip_native.py tested it on 2026-07-24 and was silently dropped). Review this E2E document on its own merits and flag anywhere it inherits, compounds, or independently adds to those problems.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block (on the VERDICT line write exactly ONE word —
+PASS or REVISE or FAIL — never the list of options):
+
+VERDICT: <PASS or REVISE or FAIL>
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# End-to-End Workflow — Topic to Published Website Content
+## (integrating the comic-strip-native visual technique)
+
+> ## STATUS: DRAFT — DESIGN PROPOSAL. NOT LOCKED. NOT PART OF `v2/SPEC.md`.
+> Written 2026-07-25, same day and same standing as
+> `.claude/skills/comic-strip-native/COMIC_STRIP_NATIVE_SPEC.md` (today's other
+> deliverable). This document does not bind anything by itself. Every stage
+> below that is marked "existing" is real, working, cited code — verified by
+> reading it, not assumed. Every stage marked "new" is either the
+> comic-strip-native technique (itself still DRAFT) or a proposal invented
+> here to fill a real gap, clearly labeled as such. **Nothing here becomes a
+> project rule until it clears independent red-team + the external 5-CLI
+> panel** per `CLAUDE.md`'s "Enforced independent review" section — the same
+> bar every other spec in this repo is held to.
+>
+> **Why `v2/`, not `.claude/skills/`:** this document is pipeline-orchestration
+> scope — it sequences and cross-references *every* existing stage skill
+> (`/study`, `/narrate`, `/voice`, `/scene-plan`, `/stills`, `/animate`,
+> `/assemble`, `/sfx`, `/caption`, `/upload`, `/publish`, `/update-website`)
+> plus the new comic-strip-native technique, rather than owning one stage
+> itself. That is the same shape as `v2/SPEC.md`, `v2/LIVINGPAGE_STANDARD.md`,
+> and `v2/RELEASE_SYNC.md` — orchestration/standard documents that live in
+> `v2/` without being *the* binding contract. It deliberately sits **beside**
+> `v2/SPEC.md`, not inside it, so it can be argued with and revised without
+> touching the contract those other documents already answer to.
+
+---
+
+## 0. What this replaces and what it doesn't
+
+This document walks ONE piece (a comic-strip-native short) from a blank topic
+slot to a live, published, website-indexed video. It **reuses nearly
+everything already built** — Stages 0, 1, 1b, 3b (SFX), 4 (caption
+mechanism), 5, 6 are the existing pipeline, unchanged. The **only stage this
+document redesigns is Stage 2 (Visual)** — replacing the single-image
+scene-plan → render → animate flow (`cli_visual.py`) with the
+comic-strip-native multi-panel-page flow for pieces that choose this visual
+identity. It is an **option**, not a replacement for the existing Baroque/
+scene-plan lane or the living-page lane (`v2/SPEC.md` §2/§2L) — a piece picks
+one visual lane; this document assumes comic-strip-native was picked.
+
+**Nothing in Stage 2 below is wired into code.** Per
+`COMIC_STRIP_NATIVE_SPEC.md` §9, every comic-strip-native call today is a
+hand-run `hf.exe` command from an ad-hoc script in `poc_thief_e2e/`. This
+document proposes the sequence a human (or a future Claude session) should
+hand-run until that wiring exists — it is a **runbook**, not a description of
+a working `--continue` flag.
+
+---
+
+## 1. The full sequence, at a glance
+
+```
+STAGE 0   Topic selection (series/season/cluster routing)         — existing
+STAGE 0.5 Research (KJV + fact cards + apocryphal-detail sweep)   — existing + new sweep
+STAGE 1   Narration: hook → point → proof → conviction → CTA      — existing, unchanged
+STAGE 1b  Audio (multi-voice, duration-locked)                    — existing, unchanged
+          ═══ HUMAN GATE 1: approve audio by ear ═══
+STAGE 2   VISUAL — comic-strip-native pages                       — NEW (this doc)
+          2a  Blueprint + Character Anchors (once per piece)
+          2b  Page-by-page generation, chained
+          2c  Full-resolution eye-check QC (CSN-G1..G4)
+          ═══ HUMAN GATE 2: approve pages BEFORE animating ═══
+          2d  Animate each page (Kling 3.0 direct)
+          2e  Multi-timestamp clip QC (CSN-G5)
+          ═══ HUMAN GATE 3: approve clips BEFORE build ═══
+STAGE 3   Build / assembly (word-timed choreography over pages)   — NEW (this doc, proposal)
+STAGE 3b  Score + SFX                                             — existing, unchanged
+STAGE 4   Captions                                                — existing, PROPOSED default
+STAGE 5   Thumbnail                                                — existing, unchanged
+STAGE 6   Upload metadata + publish pack                          — existing, unchanged
+STAGE 7   Website content (promote to a rich study page)          — existing, unchanged
+STAGE 8   Release sync / finality — the "is this actually done" gate — existing, unchanged
+```
+
+---
+
+## 2. STAGE 0 — Topic selection
+
+**Reused:** `data/series.json` (10 greenlit series via `pipeline/series.py`
+`load_series()`/`get_series()`), `pipeline/episode_state.py`
+(`EpisodeState`, `gather_episodes()`) for the long+shorts-as-one-unit view.
+
+**What's new here:** nothing in code — the discipline of routing every pick
+through continuity rather than picking in isolation. Concretely, before
+"generate a topic," check three things that already exist and answer three
+different questions:
+
+1. **Which series/episode?** `data/series.json` — 10 greenlit series, each
+   with a hook/CTA pattern and guardrails. A topic pick is a pick from this
+   list (or a deliberate, named exception), not an arbitrary Bible verse.
+2. **Which season?** The release calendar (`RELEASE_CALENDAR.md`, repo root)
+   groups the whole catalogue into a redemptive-arc sequence (S1 The Cross →
+   S2 He Is Risen → S3 Shadows of the Cross → ...). Picking a topic from the
+   CURRENT season keeps the "one story" promise; picking ahead breaks it
+   without a reason.
+3. **Which visual-world cluster?** (memory `awakeden-batch-by-visual-world`,
+   `BATCH_PLAN.md` at repo root) — pieces are batched by shared visual world
+   (Cross, Resurrection, Wilderness/Exodus, ...), not by series, so stills and
+   clips amortize. Comic-strip-native is a NEW visual world in its own right
+   today (nothing built yet shares its aesthetic) — the first several
+   comic-strip-native pieces should be deliberately clustered together (e.g.
+   one small "Passion Narrative in comic-strip-native" batch) so the
+   Character Design Anchor text blocks and any locked reference images can be
+   reused across them, rather than each piece re-deriving its own anchors
+   from scratch. This is a direct consequence of the character/world-bible
+   gap in §6 below — cluster discipline is *how* that gap gets closed at
+   series scale, not a separate concern.
+4. **Is this piece part of an existing Episode?** `pipeline/episode_state.py`
+   detects (not declares) a long + its parent-linked shorts as one unit via
+   `parent:` in `_website/manifest.yaml`. If the topic is a short distilled
+   from an existing long, its `parent:` link must be set at Stage 7 (website),
+   not invented later — decide this now, because it changes how Stage 5/6/7
+   below batch this piece with its siblings.
+
+**Gate:** none deterministic — a human/continuity judgment call. **Cost:** $0.
+
+---
+
+## 3. STAGE 0.5 — Research
+
+**Reused:** `pipeline/scripture.py` (`fetch_kjv`, `fetch_kjv_context`,
+`fetch_kjv_passage` — exact KJV + ±window pericope, cached in
+`data/kjv_cache.json`); `pipeline/bible_kb.py` (fact-card derivation +
+Scripture-cited KB, the "every still biblically driven" discipline) — used
+today by the Bible-Check stage (`/bible-check`, BC-G1..G4) for the
+single-image scene-plan lane.
+
+**What's new:** an explicit, named **apocryphal/traditional-detail sweep**,
+generalized from today's Penitent Thief lesson. Before any name, detail, or
+embellishment reaches a narration draft OR a comic-page prompt, check whether
+it is actually IN the cited KJV text or is inherited from extra-biblical
+tradition (the Gospel of Nicodemus supplying "Gestas"/"Dismas" for Luke's
+unnamed "malefactors" is the validated case —
+`.claude/skills/comic-strip-native/COMIC_STRIP_NATIVE_SPEC.md` §2b). This is
+not a new tool — it is the existing "verify witness narrative facts"
+discipline (memory `learn-verify-witness-narrative-facts`) and
+`bible_kb.py`'s specified/constrained/free trichotomy, pointed explicitly at
+NAMES and TRADITIONAL DETAILS rather than only physical/scene facts. **Concrete
+recommendation:** run this sweep BEFORE Stage 1 drafting starts, not after —
+a narration draft that already contains "Dismas" costs a full narration
+revise to fix; catching it at research time costs nothing.
+
+**Gate:** BC-G1 (citation integrity) / BC-G2 (over-reach) are $0 deterministic
+today for the fact-card system; the apocryphal-name sweep itself has no
+deterministic validator yet (see Open Items §10). **Cost:** $0.
+
+---
+
+## 4. STAGE 1 — Narration (hook to CTA)
+
+**Reused, unchanged, cite exactly:**
+- `pipeline/engine.py`: `discover_thread()` (Stage 0 thread pick),
+  `generate_candidates()` + `judge_drafts()` + `synthesize_draft()` +
+  `generate_best()` (the 4-candidate draft tournament), `review()` (6-agent
+  self-review against G1-G8), `independent_review()` (the in-engine red-team
+  pass), `revise()`.
+- `pipeline/structures.py` + `data/structures.json`: the default
+  `gospel-five-beat` structure — Hook (0-8s) → Point (8-18s) → Proof (18-40s,
+  carries the verbatim KJV quote) → Conviction (40-52s) → Landing (52-60s).
+- `pipeline/handoff.py`: `write_narration_folder()` writes `narration.md` +
+  `voices.json` + `narration.creation.json` + the review markdown.
+- `narration_gate.py`: the $0 earned-hook + earned-landing check — FAILs
+  stock closers, unearned landings, template hooks; run BEFORE the audio
+  spend and BEFORE the external panel.
+- `independent_review.py --type narration`: the external 5-CLI panel
+  (cursor + claude/gemini/codex/grok), mandatory before LOCK.
+
+**What's new here:** nothing. This is the one stage in the whole workflow
+that comic-strip-native does not touch at all — the narration is generated
+and locked exactly as it is today, regardless of which visual technique
+Stage 2 will use. **This is deliberate and worth stating plainly:** the
+visual-stage choice should never leak backward into how the words are
+written.
+
+**Gate:** G1-G8 (self-review) + red-team + `narration_gate.py` + the external
+panel, all as today. **Cost:** ~$5-6 Opus planning per the existing cost
+model (§7 of `v2/SPEC.md`), or $0 in agent-mode.
+
+---
+
+## 5. STAGE 1b — Audio
+
+**Reused, unchanged:** `PythonProject1/jesus/narration_pipeline.py` +
+`per_turn_synth.py` (subprocess'd, never duplicated — INV-15), invoked by
+`pipeline/handoff.py::run_audio_pipeline()`. Produces a duration-locked
+~59s multi-voice `narration.mp3`.
+
+**═══ HUMAN GATE 1 (existing): approve the audio by ear. ═══** Nothing about
+comic-strip-native changes this gate — the audio is finished, word-timed,
+and locked before Stage 2 ever starts (this ordering matters for §8, the
+build/caption discussion below: the whole point of choosing WhisperX-timed
+captions over baked art-text is that the audio, not the art, is the timing
+source of truth).
+
+**Cost:** ~$0.50/piece (ElevenLabs), per the existing cost model.
+
+---
+
+## 6. STAGE 2 — VISUAL: comic-strip-native (the technique this document exists to integrate)
+
+This is the stage the whole document is built around. Full technical detail
+lives in `COMIC_STRIP_NATIVE_SPEC.md` — this section sequences it into the
+pipeline and adds the pipeline-level decisions the spec itself explicitly
+leaves open (§9-§10 there).
+
+### 6a. Page-count mapping to the locked narration structure (PROPOSED, UNTESTED)
+
+Today's validated recipe used exactly 3 pages for a 3-movement story
+(Penitent Thief). No piece has ever been built by deliberately mapping pages
+onto the Gospel Five-Beat structure — `COMIC_STRIP_NATIVE_SPEC.md` §10 item 3
+says outright that "full end-to-end assembly... has never been assembled."
+**Proposed starting default**, to be confirmed or discarded after the first
+real attempt: 1 page per 1-2 narration beats, so a standard 5-beat short
+maps to roughly 3 pages —
+
+```
+Page 1  ≈ Hook + Point   (0-18s)
+Page 2  ≈ Proof + Conviction   (18-52s)   — usually the densest page; the
+                                              KJV-quote beat lives here
+Page 3  ≈ Landing   (52-60s)   — the gospel-pivot page; carries the hero close
+```
+
+This happens to match today's 3-page test by coincidence of scale, not
+because the mapping was deliberately designed against the structure. **Treat
+this as the starting hypothesis for the first production attempt, not a
+locked rule** — a Proof beat that is unusually dense (a long KJV quote plus a
+steel-manned objection) may need its own page.
+
+### 6b. The Master Comic Blueprint (existing technique, cited not duplicated)
+
+Full template and validated wording: `COMIC_STRIP_NATIVE_SPEC.md` §1.2. In
+order: Core Aesthetic Blueprint (frozen, reused verbatim every page) → Global
+Textual Constraint (no baked text) → Character Design Anchors (every named
+figure, written BEFORE panel content, reused verbatim page-to-page, carrying
+the Christ body gate §2a and the canonical-wording rule §2b explicitly and
+REPEATEDLY — a first-pass render can still drift even when the rule is
+understood, confirmed twice now including the 2026-07-25 reproducibility
+re-test, spec §1.4) → Panel-by-panel spec (Scene Type / Composition /
+Lighting per panel, closing with a redundant style/no-text restatement).
+
+**Write the Character Design Anchors using the fact cards from Stage 0.5,
+not from memory.** This is a genuine, buildable near-term hardening this
+document proposes: the existing `pipeline/bible_kb.py` fact-card discipline
+(specified/constrained/free) already exists for the single-image scene-plan
+lane; nothing stops a comic-strip-native piece's panel-by-panel spec from
+being written against the SAME derived fact cards before generation, and
+checked against them after (a text-level version of BC-G1/BC-G2, today
+manual — see §10 Open Items for the deterministic-gate proposal).
+
+### 6c. Generation + chaining
+
+`hf generate create nano_banana_pro --prompt "..." [--image <prev_page.png>]
+--aspect_ratio 9:16 --resolution 2k --wait` — page 1 has no `--image`; every
+later page chains to the immediately preceding page (`COMIC_STRIP_NATIVE_SPEC.md`
+§1.3). If an early page drifts from where later pages converged, re-roll it
+chained BACKWARD to the later page, not from scratch (validated once, spec
+§1.3).
+
+### 6d. Full-resolution eye-check QC — the cheap gate (CSN-G1..G4)
+
+Every item is human-eye-only today (`COMIC_STRIP_NATIVE_SPEC.md` §7):
+
+| Gate | Checks |
+|---|---|
+| CSN-G1 No baked text | zero letters/lettering anywhere |
+| CSN-G2 Character anchor fidelity | every named figure matches face/build/hair across every page |
+| CSN-G3 Christ body gate | no heroic/athletic musculature, no ab-definition, no blood beyond faint brow marks, on EVERY passion-beat panel, EVERY time — §1.4's re-test proved this recurs even with "fixed" wording; never skip this because "we already fixed it" |
+| CSN-G4 Canonical wording only | no apocryphal/traditional-but-non-canonical name or detail (ties directly to Stage 0.5's sweep) |
+
+**Never a thumbnail glance — Read the actual PNG at full resolution.** This
+is the cheapest point in the whole pipeline to catch a doctrine miss:
+~$0.40/page vs. the cost of an animated clip built on a bad page.
+
+**═══ HUMAN GATE 2 (this document's proposal, mirroring the existing
+image-gate-before-Kling cost saver already locked in
+`pipeline/orchestrator.py` for the old lane): approve every page BEFORE any
+animation spend. Reroll/exclude here, same principle as the existing
+`cli_pipeline.py --reroll` / `--exclude` at its own GATE 2. ═══**
+
+**Cost:** ~$0.40/page at 2k, 9:16 (today's actual rate,
+`COMIC_STRIP_NATIVE_SPEC.md` §8). Budget rerolls on top — nothing in that
+figure assumes zero.
+
+### 6e. Animate with intent (Kling 3.0 direct — the current best-of-tested default)
+
+`hf generate create kling3_0 --start-image "<page.png>" --prompt "<motion
+prompt>" --mode pro --sound off --duration 5 --aspect_ratio 9:16 --wait`.
+
+**"With intent" means naming the accepted cost, not chasing a clean prompt
+that doesn't exist yet.** Four prompt strategies were tried
+(`COMIC_STRIP_NATIVE_SPEC.md` §5.1); none eliminated invention without also
+killing the motion. The current instruction: write a motion prompt that
+grants the LEAST "license to move" that still produces visible life (§5.1's
+finding that invention risk scales with license granted, not with
+camera-vs-static framing), then accept some invention as a real, named cost
+— not a solvable prompting problem with more iteration.
+
+A **10-model bake-off** (`COMIC_STRIP_NATIVE_SPEC.md` §5.2) ranks Kling 3.0
+the best cost-to-quality tier (~$1.13-1.31/clip at 5s, real billed rate);
+Grok Video 1.5 / Seedance 2.0 full are clean but 2.5-3x the price; several
+others (Kling 3.0 Turbo, Veo 3.1 Lite, Seedance 1.5 Pro, Happy Horse) show
+structural collapse and are avoid-entirely.
+
+**If invention becomes unacceptable for a specific real piece** (e.g. a
+sacred beat where an invented gesture on Christ is a doctrine problem, not
+just an aesthetic one), the flagged next experiment is **crop-and-recomposite**
+(spec §5.3): crop each panel out of an already-consistent page, animate each
+independently (nothing else in frame to invent onto), then recomposite via
+`panel_animator/grid_choreography.py` — **this tool already exists and is
+already proven, just on a different (composited-stills) pipeline** (see
+`panel_animator/README.md`: it composites separately-rendered clips into a
+grid with a virtual page camera). Crop-and-recomposite is the one approach
+that could reuse it directly. Reasoned through in detail, never actually run
+— name it as a real decision point when a piece's stakes justify the
+~$12/3-page test, not a proven fallback.
+
+### 6f. Multi-timestamp clip QC (CSN-G5) — the second cheap-relative-to-waste gate
+
+Extract and eyeball frames at 5 timestamps spanning the full clip (start /
+quarter / mid / three-quarter / end) before calling ANY clip done — a single
+glance or trusting the render-success log caught nothing real today; only
+full-duration inspection did (`COMIC_STRIP_NATIVE_SPEC.md` §6 item 2:
+real failures caught this way included a forced-loop clip motion-dead across
+all 5 samples, a silent panel duplication, and an invented mid-clip panel).
+
+**═══ HUMAN GATE 3 (this document's proposal): approve every animated clip
+before build. ═══** Mirrors the existing clips gate at the end of
+`cli_pipeline.py`'s three-gate model.
+
+**Cost:** ~$1.13-1.31/clip × 3 pages ≈ **$3.39-3.93** for a 3-page short's
+animation layer, before reroll budget.
+
+---
+
+## 7. STAGE 3 — Build / assembly (PROPOSAL — no existing tool does this shape of job)
+
+**This is a genuine gap, not a citation.** `cli_assemble.py` +
+`pipeline/assembly_engine.py` do a JIGSAW: many short single-scene clips fit
+to word-timed slots via LLM-planned speed/trim allocation (AS-G1..G9). A
+comic-strip-native piece produces the opposite shape — 2-4 LONG clips, each
+one already a whole 4-panel page moving together, not atomic clips to be
+diced and speed-ramped into word slots.
+
+**The much closer existing analog is the LIVING-PAGE lane**
+(`v2/SPEC.md` §2L, `v2/LIVINGPAGE_STANDARD.md`): `run_piece.py` +
+`build_livingpage_16x9.py` already choreograph word-timed panel arrivals
+(SLAM/TAKEOVER/SACRED STILLNESS) over a `piece.json` manifest of stills+clips,
+and `panel_animator/grid_choreography.py` already does a "virtual page
+camera" pass over a live grid (racking focus toward whichever panel currently
+holds attention, dimming the others) — exactly the move a comic-strip-native
+page needs once it has 3-4 live panels in one frame simultaneously.
+
+**Proposed shape (untested, this document's synthesis, not an existing
+tool):** treat each comic-strip-native PAGE the way the living-page engine
+treats one beat's panel grid — a `grid_choreography` pass timed to the
+narration's word-alignment (already produced at Stage 1b) sweeps attention
+across the page's live panels in narration order, landing on the panel whose
+content matches the words currently spoken. **SACRED STILLNESS applies
+unmodified**: a red-letter/passion panel never slams or shakes — the same
+locked rule already in `v2/LIVINGPAGE_STANDARD.md` §1. The hero close
+(gospel-pivot, per the existing AS-G6/AS-G7 discipline) is the final page's
+climactic panel, held.
+
+**Gate:** none of AS-G1..G9 apply as written (they assume the jigsaw's atomic
+clip model). This document does NOT propose new gate names for this stage —
+that is real, unbuilt work flagged in Open Items §10, not something to
+invent casually here.
+
+**Cost:** $0 (ffmpeg/PIL compositing, same as the existing living-page and
+`grid_choreography` tooling).
+
+---
+
+## 8. STAGE 3b — Score + SFX
+
+**Reused, unchanged:** the $0 Suno library chain (memory
+`longform-score-from-suno-library`), ElevenLabs `composition_plan` for timed
+sections (memory `elevenlabs-music-composition-plan`), the locked audio layer
+stack (narration → MUSIC → SFX, ducked — memory `feedback-audio-layer-stack`),
+full orchestral score standard, never sparse (memory
+`feedback-cinematic-score-standard`), SFX beds as ambience only, never a choir
+pad under score (memory `feedback-no-choir-pad-under-score`), CTA felt in the
+bones — convicting, grace-anchored, never fear (memory
+`feedback-cta-felt-in-bones`). `/sfx` skill: `sfx_pilots/sfxlib.py`.
+
+**Nothing about comic-strip-native changes any of this** — score/SFX operate
+on the finished video track, indifferent to whether the art underneath is a
+single Baroque still, a living-page grid, or a comic-strip-native page.
+
+**Gate:** INV-18 (ambient/SFX bed by default), INV-26 (≥3.0s landing hold,
+`check_landing_hold.py`). **Cost:** $0.
+
+---
+
+## 9. STAGE 4 — Captions: the direct integration point (a real, engaged answer)
+
+This is the one place today's finding and the existing system collide
+directly, and the task explicitly asks for a real answer, not a dodge. Here
+it is, reasoned through:
+
+**The question:** comic-strip-native's own §3 decision drops ALL baked text
+from the art — no speech bubbles, no caption boxes, nothing. The existing
+`caption-policy-comic-boxes` rule says a **living-page** final skips the
+WhisperX ivory overlay because *"the comic box IS the caption"* — the
+living-page engine's own code (`build_livingpage_16x9.py` +
+`caption_layout.py`/`caption_render16.py`) draws in-world parchment-band
+captions as part of assembling the page. **Comic-strip-native has no
+equivalent code layer.** The model draws a finished page with nothing left
+over for code to compose a caption box around — the caption-policy rule's
+PRECONDITION (a code-composited box exists to skip an overlay for) is simply
+absent.
+
+**The answer this document proposes:** a comic-strip-native piece is **not**
+a living-page piece in the caption-policy sense, and should default to the
+**Baroque/scene-plan lane's caption rule** — WhisperX-timed ivory captions via
+`veed_io/serif_captions.py` (INV-16, "caption is the final step on every
+finished clip") — **unchanged, unmodified, exactly as it runs today.** Three
+reasons this is the right default, not just the only available one:
+
+1. It is the reason comic-strip-native's §3 gave for dropping baked text in
+   the first place — "the project already has a separate, working, $0
+   solution for on-screen text... applied at final assembly, timed to the
+   actual narration audio." Choosing anything else here would contradict the
+   technique's own stated justification for its central design decision.
+2. It has zero assumptions about panel/page geometry baked in — it overlays
+   on a finished video regardless of what's under it, so it works whether
+   Stage 3's build produces a single held page, a grid-choreography sweep, or
+   anything else this document's proposal in §7 gets replaced by later.
+3. It is already proven, already $0, already the standing default (INV-16).
+
+**What is genuinely still open, flagged not decided:** whether a BESPOKE
+in-world caption-box layer — a parchment band styled to match the vintage
+graphic-novel aesthetic, placed panel-aware (tucked into a gutter or a
+deliberately reserved quiet zone, the way `PAINTED_COMIC_SPEC.md` §6 already
+reserves "in-scene negative space" for its own captions) — would look and
+read better than a generic ivory lower-third sitting on top of dense ink
+linework. This is plausible; **the user's own phrase "great remotion captions
+for a comic book" reads as wanting exactly this.** But: (a) no such layer
+exists for native multi-panel pages today (nothing tracks panel boundaries in
+a comic-strip-native output the way `panel_animator/`'s tools track them for
+COMPOSITED grids), (b) building it is real, unbuilt work, not a config flag,
+and (c) `PAINTED_COMIC_SPEC.md`'s own prime directive uses "Remotion" for
+"the code layer that draws text" in a way that may be aspirational/generic
+rather than literally the paused `_remotion/` Node engine (memory
+`noir-trailer-remotion-engine` describes that engine as built for one noir
+trailer, not general captions) — this naming is itself ambiguous and worth
+resolving before anyone commits to "build it in Remotion" literally.
+
+**Recommendation:** ship the FIRST comic-strip-native production piece with
+the WhisperX/`serif_captions.py` default, unmodified. Judge legibility over
+the dense ink art by eye on that real piece. Only THEN decide whether a
+bespoke panel-aware caption layer is worth building — with real evidence
+instead of a guess. This is a proposal, explicitly not a certainty.
+
+**Gate:** the existing `/caption` skill's recipe, unmodified. **Cost:** $0
+(offline WhisperX + ffmpeg/libass).
+
+---
+
+## 10. STAGE 5 — Thumbnail
+
+**Correction to the task's framing: a dedicated thumbnail tool already
+exists and is substantial** — `pipeline/thumbnails.py`. Verified by reading
+it, not assumed. It:
+- Pulls the piece's list from `_website/manifest.yaml` via
+  `pipeline/release_state.py::gather()` (no hardcoded piece list).
+- Grabs a hero FRAME from the piece's finished final video (per the ONE
+  finality rule, `pipeline/finality.py::final_video()` — indifferent to
+  which visual technique produced that final), at a timestamp from
+  `publish_meta.json`'s `"thumb": {"t": ..., "title": [...], "ref": "..."}`
+  spec, defaulting to 40% of the video's duration if unspecified.
+- `blank_fraction()` auto-avoids landing the grab on unpainted canvas (a
+  panel mid-slam that hasn't finished drawing in yet) by walking nearby
+  offsets — a real, already-solved problem for comic-panel-style content
+  specifically.
+- Composes `thumb_16x9.jpg` / `thumb_9x16.jpg` / `thumb_1x1.jpg` +
+  `thumb_tiktok.jpg` (centre-safe cover variant) with cover-crop, a bottom
+  ink gradient, fitted title text, the verse ref, and the AWAKEDEN wordmark
+  (`brand_assets()`, `compose()`, `compose_tiktok()`).
+- Writes a hash-stamped `_meta.json` (`final_sha`) so `release_check.py`
+  SYNC-G4 can detect staleness.
+
+**What comic-strip-native changes here: nothing structural.** This tool
+already works on ANY finished final video regardless of visual technique —
+it does not know or care whether the frame under it came from a Baroque
+still, a living-page grid, or a comic-strip-native page. **One concrete,
+grounded recommendation specific to this technique:** with only 2-4 pages
+(vs. 14-25 scenes in the old lane), the 40%-of-duration default heuristic has
+much less material to land well on — set `publish_meta.json`'s `thumb.t`
+explicitly to the exact timestamp of the piece's climactic page/panel (the
+gospel-pivot, matching the same figure that closes the cut per AS-G6/AS-G7's
+existing "hero = gospel-pivot" principle) rather than trusting the default on
+a comic-strip-native piece.
+
+**Gate:** SYNC-G4 (thumbs fresh vs. current final, `release_check.py`).
+**Cost:** $0.
+
+---
+
+## 11. STAGE 6 — Upload creation
+
+**Reused, unchanged:**
+- `/upload` skill → `pipeline/upload_gates.py` (`run_all()`, UK-G1..G7:
+  length, KJV-strict, doctrine, brand, platform, no-repeat, lint) produces
+  `upload/upload_kit.{json,md}`.
+- `/publish` skill → `cli_publish.py` folds the Upload Kit in, auto-drafts
+  copy, stamps the footer, runs UK-G1..G7 + in-engine red-team + the external
+  panel, renders per-platform PACK files + `captions.srt` + a clickable
+  `PUBLISH_INDEX.html`, gated GREEN by `pipeline/publish_check.py` (re-parses
+  the ON-DISK pack, re-runs UK-G1..G7 + placeholder scan + `final_sha`
+  freshness).
+- `upload_tracker.py --set <slug> <platform> <url>` — the ONE write path for
+  a posted URL, after the human pastes it in by hand. Never uploads, never
+  auto-posts.
+- `production_board.py` — the human board, same `release_state.py`
+  computation, rendered.
+
+**Nothing about comic-strip-native changes this stage** — it operates on the
+finished, captioned, thumbnailed video and its narration text, indifferent to
+visual technique. **One thing worth naming for episode-unit-of-work reasons
+(§13 below):** if this piece is a short with a `parent:` long, `/publish`'s
+copy should funnel toward the long (memory `shorts-longform-funnel`) — decide
+the `parent:` link at Stage 0, not here, so this stage doesn't have to guess.
+
+**Gate:** UK-G1..G7 + publish-pack GREEN. **Cost:** $0 (agent-mode LLM) or
+small metered if not.
+
+---
+
+## 12. STAGE 7 — Website content creation (what actually backs "website = main meal")
+
+**Checked directly, not assumed to exist:** the "three-course strategy"
+(shorts=snack, longs=pudding, website=main meal — memory
+`awakeden-three-course-strategy`) IS backed by real, working code, not just a
+brand phrase. Verified:
+- `_website/` is a real static site (Netlify, auto-deploys on push to
+  `main`) with `build_catalog.py`, `build_readpage.py`, `manifest.yaml`
+  (the hard-join registry), `make_cutouts.py` (rembg silhouette extraction),
+  `make_og_cards.py`, and a real content model: `catalogue.html` (the shelf
+  view), `series/*.html`, `work/<slug>.html` (per-piece landing pages, 60
+  exist today, verified by direct directory listing), `read/<slug>.html`
+  (the "rich study page" — illustrated Prophecy→Fulfilment reading, 20 exist
+  today by the same direct count; `WEBSITE_HANDOFF.md`'s own figure of "11
+  rich v2 studies" is dated 2026-06-20 and is stale — cite the live
+  directory, not that handoff note, for a current count).
+- The model (`WEBSITE_HANDOFF.md`, `.claude/skills/update-website/SKILL.md`):
+  the catalogue is a public tracker of the v2 migration. A finished v2 piece
+  gets wired into `manifest.yaml` (`preview_source`/`study_source` pointing
+  at its v2 folder) and its rich page **builds itself** from
+  `narration.md` + rendered stills via `build_catalog.py::load_study()` /
+  `render_study_html()` / `build_study_figures()` (keyword-matches scene
+  paintings to narration moments).
+- **This is honest infrastructure, not aspirational** — but it currently
+  expects a v1 folder shaped like the existing scene-plan lane (`narration.md`
+  + `visual/nbp/*.png` stills that `build_study_figures()` keyword-matches
+  into the reading). **A comic-strip-native piece's "stills" are full
+  multi-panel PAGES, not single-subject scene paintings** — whether
+  `build_study_figures()`'s keyword-matching produces sensible illustration
+  placement against a page (vs. a single clean subject shot) is untested and
+  should be checked on the first real piece, not assumed to just work.
+
+**What comic-strip-native changes:** the promote-to-rich-page flow
+(`/update-website` skill) is unchanged in PROCEDURE — find the finished
+folder, wire `manifest.yaml`, cut-outs + OG card, build (AI-slop guard),
+verify, `release_check.py` GREEN, deploy. The open risk is purely in step 4
+of that skill (cut-outs: `make_cutouts.py` needs a clean single-figure
+Christ painting to background-remove — a comic-strip-native page is a
+4-panel composition, not a single figure, so the cut-out step will likely
+need a CROPPED panel, not the whole page, as its source image; flag this as
+a real thing to check on the first real piece rather than assume it degrades
+gracefully).
+
+**Gate:** the AI-slop guard (`check_ai_slop` in `build_catalog.py` — no
+em-dashes/en-dashes/curly-quotes/ellipsis in shipped copy), `release_check.py`
+GREEN before deploy. **Cost:** $0.
+
+---
+
+## 13. STAGE 8 — Release sync / finality (the one "are we actually done" gate)
+
+**Reused, unchanged, cite exactly:**
+- `pipeline/finality.py::final_video()` — the ONE "what is the final video"
+  rule, content-sha anchored (`content_sha()`, cache trusted only on
+  size+fingerprint match, never mtime alone), `.bak`-proof.
+- `pipeline/release_state.py` — one computation of per-piece state, shared by
+  `release_check.py` (the $0 fail-closed SYNC gate, SYNC-G1..G8) and
+  `production_board.py` (the human board).
+- `pipeline/episode_state.py::gather_episodes()` — renders the long+shorts
+  roll-up; if this piece set a `parent:` at Stage 0, it shows up here bundled
+  with its siblings, not as an isolated card.
+- `upload_tracker.py` — the one write path for posted URLs → dated
+  `data/release_ledger.json`.
+
+**Nothing about comic-strip-native changes this stage's mechanics.**
+SYNC-G8 (the Baroque-legacy ban) is worth naming explicitly here though:
+`pipeline/art_style.py::detect_art_style()` scans for Baroque-era markers to
+block legacy-style finals from shipping. **A comic-strip-native piece will
+almost certainly scan as `"unknown"` today** (the heuristic has no
+comic-strip-native marker to detect either direction) — which is fail-SAFE
+(unknown is left alone, never blocked) but also means this piece gets no
+positive protection from SYNC-G8 either. Not urgent, but real: if
+comic-strip-native ships at scale, `art_style.py` should learn to recognize
+it explicitly rather than silently falling through as `"unknown"` forever.
+
+**Gate:** SYNC-G1..G8, all fail-closed except G1/G4/G5 which WARN at
+`in_production`/`studio_complete` and FAIL only at `live`. **Cost:** $0.
+
+---
+
+## 14. The character/world-bible persistence gap — the single most important open item
+
+This deserves its own section, not a bullet, because it is the gap that
+decides whether comic-strip-native can ever be more than a one-off technique.
+
+**What's proven today:** character consistency WITHIN one piece — page N
+chained to page N-1 via `--image`, holding a figure's appearance across 2-3
+pages of the SAME story. Rock-solid when the figure has strong distinguishing
+detail (Goliath's armor); weaker on plain figures (the Penitent Criminal's
+face drifted).
+
+**What's NOT proven, at all:** whether Jesus (or any recurring figure) looks
+like the SAME MAN across TWO DIFFERENT PIECES. Nothing in today's testing
+ever generated a comic-strip-native page for a second story and checked it
+against the first. This is a completely different, harder problem than
+page-to-page chaining within one narrative.
+
+**How the EXISTING single-image pipeline already solves this, for
+comparison:** `pipeline/visual_render.py`'s `NBPProvider` attaches a locked
+`ref_jesus_<variant>.png` from `nano_banana_pro_batch_output` on every
+relevant scene, across every piece that uses it — one small set of locked
+reference IMAGES, reused by attachment, not by re-describing Jesus in prose
+each time. `locked-stills-provider-split` (memory) already establishes this
+as the working answer for that lane: NBP handles Christ/face consistency via
+reference attachment; HF handles neutral plates.
+
+**Comic-strip-native has never been tried against a locked EXTERNAL
+reference image — only page-to-page self-chaining within one piece.** This
+is the concrete gap, stated precisely: `--image` today always points at "the
+piece's own previous page," never at a pre-existing, cross-piece-locked
+portrait.
+
+**The concrete next experiment this document proposes** (untested — a
+hypothesis, not a claim): take an existing locked `ref_jesus_<variant>.png`,
+or a newly-approved comic-strip-native portrait treated as a locked anchor,
+and pass it as `--image` for comic-strip-native's PAGE 1 (instead of leaving
+page 1 with no reference, as today's recipe does). Test whether
+`nano_banana_pro`'s chain mechanism holds fidelity when the reference is a
+single portrait/still rather than a same-technique previous page. This
+directly tests whether series-scale reuse is possible at all.
+
+**A second-order problem to expect even if that works:** a single reference
+image can't cover every register a real series needs — passion Christ,
+teaching Christ, risen Christ are visually different scenes, the same way
+the existing pipeline already needs multiple `ref_jesus_<variant>` files, not
+one. **Proposed shape (this document's synthesis, clearly a proposal, not a
+finding):** a small "Character Anchor library" — a handful of LOCKED
+Character Design Anchor TEXT BLOCKS (not just images) per recurring figure
+per register, reused verbatim across pieces the same way the Aesthetic
+Blueprint is already reused verbatim across pages of ONE piece — optionally
+paired with a locked reference image per register for the `--image` chain.
+Building this is real, unbuilt work; it does not exist today in any form for
+this technique.
+
+**Why this gets real weight, not a footnote:** without it, comic-strip-native
+stays a one-piece-at-a-time technique — usable, but not a series identity.
+Every downstream promise in this document (visual-world clustering in §2,
+"cluster the first several pieces together" recommendation) exists BECAUSE
+this gap is open, not despite it. Resolve this before treating
+comic-strip-native as more than a validated one-off.
+
+---
+
+## 15. Reuse-first discipline — does it apply here?
+
+**Honest answer: not cleanly, and this document does not force it to.**
+INV-19 ("library reuse is topical-fit-gated AND clean-gated") governs reusing
+an existing RENDERED ASSET (a still or clip) across pieces when a
+topically-matched one already exists. Comic-strip-native pages are, by
+design, bespoke multi-panel compositions built for one specific narration's
+specific beats — there is no meaningful sense in which a Penitent Thief page
+could be "reused" for a different story's different beats the way a neutral
+crowd-scene plate can be.
+
+**The reuse that DOES apply here is a different kind: prompt-TEXT reuse, not
+asset reuse.** The Aesthetic Blueprint block and (per §14 above, once built)
+a locked Character Anchor block are reused VERBATIM — this is real reuse
+discipline, just operating on prompt text rather than rendered pixels. Don't
+force INV-19's asset-reuse frame onto this stage; name the difference
+explicitly instead, as this section does.
+
+---
+
+## 16. Cost / spend discipline — POC mode vs. production mode
+
+**Today's exploration was deliberately expensive, and that was correct, not
+wasteful.** `COMIC_STRIP_NATIVE_SPEC.md` §8 records **$37.36** spent across a
+full day systematically testing prompt strategies, chaining protocols, 10
+animation models, and (in the two follow-up findings folded into that spec
+today) a reproducibility re-test and a 5-model image bake-off. That is what
+`feedback-test-gate-before-batch` and `ask-before-spending` (INV-20) are FOR —
+paying to learn the recipe once, deliberately, before ever running it at
+production scale.
+
+**A PRODUCTION run following the validated recipe should cost far less** —
+per `COMIC_STRIP_NATIVE_SPEC.md` §8's own planning number, restated and
+extended here to the WHOLE piece, not just the visual layer:
+
+| Line | Cost | Basis |
+|---|---|---|
+| Narration (Opus planning) | ~$5-6, or $0 in agent-mode | existing cost model, `v2/SPEC.md` §7 |
+| Audio (ElevenLabs) | ~$0.50 | existing cost model |
+| Comic pages, 3 pages @ $0.40 | ~$1.20 | `COMIC_STRIP_NATIVE_SPEC.md` §8 |
+| Animation, 3 clips @ ~$1.13-1.31 | ~$3.39-3.93 | `COMIC_STRIP_NATIVE_SPEC.md` §8 |
+| Build/score/SFX/caption/thumbnail/upload/website | $0 | all ffmpeg/PIL/offline, this document §7-13 |
+| **Total (before reroll budget)** | **≈ $4.80-5.63 visual + $5.50-6.50 narration/audio ≈ $10-12/piece** | |
+
+This sits well under the existing `$25/short` ceiling
+(`LP-BUDGET`/`cost.check_budget`, enforced in code for the living-page lane)
+— **but that ceiling is not yet wired to check a comic-strip-native run at
+all**, since nothing calls `cost.check_budget` from the ad-hoc
+`poc_thief_e2e/` scripts. Until this technique is wired into a real CLI
+entry point, **the $25 ceiling is advisory for this lane, not enforced** —
+say so honestly rather than implying a code-level ceiling exists where it
+doesn't yet.
+
+**INV-20 (ask before spending) and the test-gate-before-batch discipline
+apply to REAL production runs too, not only to experimentation.** The first
+comic-strip-native piece run under this proposed workflow is itself a kind of
+test — quote the estimated spend, get explicit OK, treat rerolls as a real
+possible line item, and do not silently assume the $10-12 planning number
+holds until it's been proven once on a real piece with real rerolls counted.
+
+---
+
+## 17. Episode-unit-of-work implications
+
+If this piece is a short with a `parent:` long (or vice versa — the long
+that will later spawn this technique's shorts), `pipeline/episode_state.py`
+treats the pair as ONE unit, and three downstream stages need to account for
+that rather than process this piece in isolation:
+
+- **Thumbnail (§10):** `pipeline/thumbnails.py` already processes per-piece,
+  but the long's thumbnail and its shorts' thumbnails should read as a
+  visually coherent family (same title typography, same wordmark treatment)
+  — nothing enforces this today; it is an eye-check, not a gate.
+- **Upload (§11):** `build_upload_tracker.py` already wraps an episode's long
+  + shorts in one release-campaign card (`epblock`), long first then shorts
+  — this already works, no change needed, just confirm the `parent:` link
+  was set at Stage 0 so this piece lands in the right campaign card instead
+  of appearing as an orphaned standalone.
+- **Website (§12):** SYNC-G7 (`release_check.py`) already FAILs a short in a
+  cluster that has a long but carries no `parent:` — this is real
+  enforcement, not just documentation; a comic-strip-native short skipping
+  the Stage 0 continuity decision will get caught here, late and
+  expensively, rather than never.
+
+---
+
+## 18. Gate placement — threaded through every stage, stated explicitly (not a footnote)
+
+| Stage | Doctrine/red-team/panel gate | Type today |
+|---|---|---|
+| 1 Narration | G1-G8 self-review, in-engine red-team, `narration_gate.py`, external 5-CLI panel | Live: D+P, mandatory |
+| 0.5 Research | apocryphal-detail sweep (proposed, §3) | Manual only — no validator yet |
+| 2b-2d Comic pages | CSN-G1..G4 (no baked text, anchor fidelity, Christ body gate, canonical wording) | Human eye only, per `COMIC_STRIP_NATIVE_SPEC.md` §7 — NOT wired as code |
+| 2e Animated clips | CSN-G5 (multi-timestamp QC) | Human eye only |
+| 3 Build | none named yet (§7 above is unbuilt) | Gap — flagged, not invented here |
+| 6 Upload | UK-G1..G7 | Live: D, mandatory before publish pack GREEN |
+| 6 Publish | external 5-CLI panel again (per `cli_publish.py`) | Live |
+| 7 Website | AI-slop guard | Live: D |
+| 8 Release | SYNC-G1..G8 | Live: D, fail-closed at `live` |
+
+**The honest summary:** text-stage and upload/publish/release-stage gates are
+real, coded, and enforced. The NEW visual-stage gates this technique needs
+(CSN-G1..G6) are named and documented but exist only as a human checklist
+today — this is not a small omission, it is the reason
+`COMIC_STRIP_NATIVE_SPEC.md` §9 explicitly refuses to wire this into
+`cli_visual.py` yet. **A comic-strip-native piece cannot run through one
+`--continue`-style command today** the way the existing scene-plan lane can
+via `cli_pipeline.py` — every visual-stage step above is a hand-run command
+from this document/skill until real code wiring exists.
+
+---
+
+## 19. OPEN ITEMS — merged, honest, DRAFT
+
+Everything below is a genuine gap. Items 1-11 are carried directly from
+`COMIC_STRIP_NATIVE_SPEC.md` §10 (now including today's two follow-up
+findings, folded into that spec directly rather than duplicated here — see
+its §1.4, §5.4, and its own updated §10). Items 12+ are new, found while
+designing this pipeline-level document specifically.
+
+**From the technique spec (see `COMIC_STRIP_NATIVE_SPEC.md` §10 for full text):**
+1. Crop-and-recomposite animation — reasoned, never tested.
+2. Panel-layout variety for native generation — only one skeleton tested.
+3. Full end-to-end assembly — never actually built (this document's §7 is a
+   proposal for that assembly, itself untested).
+4. Minimal baked-text exception (e.g. a location tag) — undecided either way.
+5. Long-form (16:9) — untested.
+6. Series-scale generalization — proven on exactly two stories.
+7. The `PAINTED_COMIC_SPEC.md` §5 contradiction — needs an explicit decision.
+8. Cross-session color/tone consistency — no seed control, real drift found.
+9. Christ body-gate is a per-generation risk, not a one-time fix — confirmed
+   by re-test.
+10. Seedream 5.0 Pro as a possible alternative default — one small test only.
+11. GPT Image 2 / flux_2 / flux_kontext / kling_omni_image — rejected or
+    unverified.
+
+**New, found while designing this document:**
+12. **`cli_visual.py` (or an equivalent) wiring does not exist** — this whole
+    workflow is a hand-run runbook, not a resumable pipeline command, until
+    someone builds it (§18).
+13. **Stage 3 (build/assembly for multi-panel pages) has no built tool** —
+    §7's proposal (word-timed `grid_choreography` sweep over live pages) is
+    this document's synthesis, never implemented or tested.
+14. **The caption-layer question (§9) is a reasoned proposal, not a proven
+    answer** — ship the first real piece with WhisperX default, then judge
+    by eye whether a bespoke panel-aware layer is worth building.
+15. **The character/world-bible persistence gap (§14) is the single biggest
+    open item for series-scale use** — nothing today ties a
+    comic-strip-native Jesus to the existing `ref_jesus_<variant>.png`
+    anchors or to any other comic-strip-native piece's Jesus.
+16. **Bible-Check fact-card discipline (`pipeline/bible_kb.py`) has never
+    been pointed at a comic-strip-native panel spec** — §6b proposes it
+    could be, cheaply; unbuilt.
+17. **`VISUAL_BANNED_TOKENS` (`config.py`) is currently only lint-checked
+    against the OLD scene-plan lane's `subject_block` text (SP-G5)** — a
+    cheap, real, near-term hardening would be linting the Character Anchor +
+    panel-spec text against the SAME token list before every comic-strip-native
+    generation call; not built.
+18. **`pipeline/art_style.py`'s Baroque-legacy detector has no
+    comic-strip-native signature** — a comic-strip-native piece scans as
+    `"unknown"` (fail-safe, not fail-closed) rather than being positively
+    recognized (§13).
+19. **`make_cutouts.py`'s single-figure Christ silhouette extraction has
+    never been tried against a 4-panel comic-strip-native page** — likely
+    needs a cropped panel as its source, not the whole page; unverified
+    (§12).
+20. **`build_study_figures()`'s keyword-matching of stills to narration
+    moments** has never been tried against multi-panel PAGES instead of
+    single-subject scene paintings (§12) — unverified, may need adjustment.
+21. **`v2/AWAKEDEN_COMIC_DNA.md`** is a separate, parallel, also-unlocked
+    visual-identity effort (single-image retro-tier comic grammar, not
+    native multi-panel) running through its own red-team/panel process —
+    not reconciled with comic-strip-native, and this document does not
+    attempt to reconcile them; flagged so nobody assumes they're the same
+    initiative.
+22. **The `$25/short` cost ceiling is not code-enforced for this lane**
+    (§16) — `cost.check_budget` is never called from any comic-strip-native
+    script today.
+
+---
+
+## Provenance
+
+Written 2026-07-25, same session as `COMIC_STRIP_NATIVE_SPEC.md`'s two
+follow-up findings (folded into that document directly: §1.4 reproducibility
+re-test + color/tone drift; §5.4 image-model bake-off). Grounded in a direct
+read of: `v2/SPEC.md`, `v2/LIVINGPAGE_STANDARD.md`, `v2/RELEASE_SYNC.md`,
+`.claude/skills/comic-strip-native/{SKILL.md,COMIC_STRIP_NATIVE_SPEC.md}`,
+`.claude/skills/painted-comic/PAINTED_COMIC_SPEC.md`,
+`.claude/skills/update-website/SKILL.md`, `v2/AWAKEDEN_COMIC_DNA.md`,
+`WEBSITE_HANDOFF.md`, `pipeline/{engine,handoff,runner,visual_engine,
+orchestrator,episode_state,cost,thumbnails,series,scripture,bible_kb,
+finality,upload_gates}.py`, `narration_gate.py`, `independent_review.py`,
+`upload_tracker.py`, `production_board.py`, `cli_pipeline.py`,
+`cli_publish.py`, `config.py` (`VISUAL_BANNED_TOKENS`),
+`panel_animator/README.md`, `data/{series,structures}.json`, and the memory
+index for `release-season-calendar`, `awakeden-batch-by-visual-world`,
+`awakeden-three-course-strategy`.
+
+**Not yet done:** independent red-team, the external 5-CLI panel (per
+`independent_review.py --type plan`), and resolution of any of the 22 open
+items above. This document is an input to that process, not its output. Per
+`CLAUDE.md`'s "Enforced independent review" section, this is mandatory before
+any part of this document could become a project rule.
+----- ARTIFACT END -----

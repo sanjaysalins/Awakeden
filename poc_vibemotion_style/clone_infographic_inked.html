@@ -1,0 +1,97 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  @font-face { font-family: "BookAntiquaBold"; src: url("file:///C:/Windows/Fonts/BOOKOSB.TTF"); font-weight: 700; }
+  @font-face { font-family: "GeorgiaSerif"; src: url("file:///C:/Windows/Fonts/georgia.ttf"); }
+  @font-face { font-family: "GeorgiaItalic"; src: url("file:///C:/Windows/Fonts/georgiai.ttf"); font-style: italic; }
+  @font-face { font-family: "GeorgiaBold"; src: url("file:///C:/Windows/Fonts/georgiab.ttf"); font-weight:700; }
+
+  html,body { margin:0; padding:0; width:1920px; height:1080px; overflow:hidden; }
+  .bg { position:absolute; top:0; left:0; width:1920px; height:1080px;
+        background: url("parchment_bg.png") center/cover no-repeat; }
+  .card { position:relative; width:1760px; height:920px; margin:80px; }
+  .kicker { font-family:"GeorgiaItalic", Georgia, serif; font-style:italic; font-size:28px; font-weight:400;
+            color:#c4963e; letter-spacing:3px; }
+  .title { font-family:"BookAntiquaBold", Georgia, serif; font-weight:700; font-size:60px; color:#f4f0d8;
+           margin-top:8px; text-shadow:0 2px 8px rgba(0,0,0,0.5); }
+  .counter-wrap { position:absolute; top:0; right:0; text-align:right; }
+  .counter { font-family:"BookAntiquaBold", Georgia, serif; font-weight:700; font-size:92px; color:#c4963e;
+             text-shadow:0 0 30px rgba(196,150,62,0.45); }
+  .counter-label { font-family:"GeorgiaItalic", Georgia, serif; font-style:italic; font-size:24px; color:#cabfa0; }
+
+  .chart { position:absolute; left:0; right:0; bottom:60px; height:560px; }
+  .gridline { position:absolute; left:0; right:0; height:1px; background:rgba(244,240,216,0.10); }
+  .bars { position:absolute; left:0; right:0; bottom:0; height:100%; display:flex; align-items:flex-end; gap:46px; padding:0 10px; }
+  .bar {
+    flex:1; background:linear-gradient(180deg,#d9b465,#8a6423);
+    border-radius:10px 10px 0 0;
+    height:0%;
+    box-shadow: 0 0 24px rgba(196,150,62,0.25);
+    animation: grow 1.1s cubic-bezier(.16,1,.3,1) forwards;
+  }
+  @keyframes grow { from { height:0%; } to { height: var(--h); } }
+  .b0{--h:22%; animation-delay:.15s;} .b1{--h:34%; animation-delay:.30s;}
+  .b2{--h:30%; animation-delay:.45s;} .b3{--h:52%; animation-delay:.60s;}
+  .b4{--h:61%; animation-delay:.75s;} .b5{--h:88%; animation-delay:.90s;}
+
+  .sparkline { position:absolute; left:0; top:0; width:100%; height:100%; overflow:visible; }
+  .sparkline path {
+    fill:none; stroke:#f4f0d8; stroke-width:5; stroke-linecap:round; stroke-linejoin:round;
+    stroke-dasharray: 1400; stroke-dashoffset: 1400;
+    filter: drop-shadow(0 0 6px rgba(244,240,216,0.5));
+    animation: draw 1.6s cubic-bezier(.4,0,.2,1) forwards;
+    animation-delay: .5s;
+  }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+
+  .month { position:absolute; bottom:-40px; text-align:center; font-family:"GeorgiaBold", Georgia, serif;
+           font-weight:700; font-size:22px; color:#cabfa0; }
+</style></head>
+<body>
+  <div class="bg"></div>
+  <div class="card">
+    <div class="kicker">MONTHLY REPORT</div>
+    <div class="title">COMMUNITY GROWTH</div>
+
+    <div class="counter-wrap">
+      <div class="counter" id="counter">+0%</div>
+      <div class="counter-label">vs last quarter</div>
+    </div>
+
+    <div class="chart">
+      <div class="gridline" style="bottom:0%"></div>
+      <div class="gridline" style="bottom:25%"></div>
+      <div class="gridline" style="bottom:50%"></div>
+      <div class="gridline" style="bottom:75%"></div>
+
+      <div class="bars">
+        <div class="bar b0"></div>
+        <div class="bar b1"></div>
+        <div class="bar b2"></div>
+        <div class="bar b3"></div>
+        <div class="bar b4"></div>
+        <div class="bar b5"></div>
+      </div>
+
+      <svg class="sparkline" viewBox="0 0 1760 560" preserveAspectRatio="none">
+        <path d="M 65,438 L 358,370 L 651,392 L 944,269 L 1237,218 L 1530,74" />
+      </svg>
+
+      <div class="month" style="left:0%; width:16.6%;">JAN</div>
+      <div class="month" style="left:16.6%; width:16.6%;">FEB</div>
+      <div class="month" style="left:33.2%; width:16.6%;">MAR</div>
+      <div class="month" style="left:49.8%; width:16.6%;">APR</div>
+      <div class="month" style="left:66.4%; width:16.6%;">MAY</div>
+      <div class="month" style="left:83.0%; width:16.6%;">JUN</div>
+    </div>
+  </div>
+<script>
+  window.setCounterTime = function(tMs) {
+    var start = 900, dur = 1400;
+    var t = Math.max(0, Math.min(1, (tMs - start) / dur));
+    var eased = 1 - Math.pow(1 - t, 3);
+    var val = Math.round(eased * 248);
+    document.getElementById('counter').textContent = '+' + val + '%';
+  };
+</script>
+</body></html>

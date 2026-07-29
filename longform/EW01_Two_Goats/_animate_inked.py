@@ -85,7 +85,10 @@ MOTION = {
                "fine dust drifts"),
     22: (PUSH, "the golden radiance around Christ breathes brighter and dimmer, dust drifts across the road, the far speck on the horizon holds still"),
     23: (WIDE, "warm light pours and breathes through the opening, fine motes drift, robe hems stir faintly"),
-    24: (PUSH, "the light through the open way glows and breathes, golden motes drift -- the figures hold perfectly still"),
+    24: (PUSH, "Christ at the centre stays perfectly frozen -- his head, face, eyes, gaze and "
+               "expression do NOT move, tilt, turn, rise or change at all; he stays locked exactly "
+               "as drawn like a statue; every other figure holds perfectly still too; only the light "
+               "through the open way glows and breathes and fine golden motes drift"),
     25: (HERO, "the warm golden radiance behind Christ glows and breathes gently brighter and dimmer, his robe and hair stir almost imperceptibly, his gentle expression never changes"),
 }
 

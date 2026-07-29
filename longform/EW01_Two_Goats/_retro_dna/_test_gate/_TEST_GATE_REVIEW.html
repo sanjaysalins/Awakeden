@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>EW01 retro-comic test-gate (2026-07-24)</title>
+<style>
+body{font-family:system-ui,sans-serif;background:#111;color:#eee;margin:0;padding:24px}
+h1{font-size:20px} .grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1400px}
+.card{background:#1b1b1b;border-radius:8px;overflow:hidden}
+.card img{width:100%;display:block}
+.card .meta{padding:12px 16px}
+.card h2{font-size:15px;margin:0 0 6px}
+.tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:10px;margin-right:6px}
+.bad{background:#5a1f1f;color:#ffb3b3} .ok{background:#1f5a2b;color:#b3ffc0}
+ul{margin:6px 0 0;padding-left:18px;font-size:13px;line-height:1.5}
+</style></head>
+<body>
+<h1>EW01 Two Goats — retro-comic DNA test-gate (4 scenes, 2026-07-24)</h1>
+<p style="max-width:900px">First real render through the fixed pipeline (config.VISUAL_STYLE=retro).
+Eye-audited, not just script-passed. 2 of 4 verdicts below are honest problems, not a clean pass.</p>
+<div class="grid">
+
+<div class="card">
+<img src="01_test_once_a_year_only_once.png">
+<div class="meta"><h2>#1 Once a year, only once (Aaron, nano_banana_pro+ref)</h2>
+<span class="tag ok">Ben-Day dots + ink hold up</span>
+<span class="tag bad">Bordered page</span>
+<span class="tag bad">Greco-Roman fluted columns</span>
+<ul>
+<li>Style itself reads right: bold ink, dots, cream/warm palette.</li>
+<li>Black rule + cream margin around the whole frame — the border defect the DNA doc flagged as unsolved recurred here.</li>
+<li>The Tabernacle is drawn with classical fluted columns holding up the curtain — it should be a woven-cloth TENT, no columns (world.place says so explicitly). Model default-associates "1960s comic" with epic-movie temple architecture.</li>
+</ul></div></div>
+
+<div class="card">
+<img src="05_test_that_he_die_not__the_cloud_upon_the_mercy_seat.png">
+<div class="meta"><h2>#5 The cloud upon the mercy seat (plate, seedream_v4_5)</h2>
+<span class="tag ok">Strong glory-light staging</span>
+<span class="tag bad">Bordered page</span>
+<span class="tag bad">Greco-Roman columns</span>
+<ul>
+<li>Composition and mood are good — the Ark + cherubim + prostrate priest read clearly.</li>
+<li>Same border defect.</li>
+<li>Same column anachronism, worse here — full classical colonnade around the Holy of Holies.</li>
+</ul></div></div>
+
+<div class="card">
+<img src="11_test_one_offering__yet_it_took_two_goats.png">
+<div class="meta"><h2>#11 One offering, yet it took two goats (plate, seedream_v4_5)</h2>
+<span class="tag ok">Full-bleed, no border</span>
+<span class="tag bad">Blood-red altar/steps</span>
+<ul>
+<li>No border this time — proves it's not 100% guaranteed to fail, consistent with the doc's "stochastic" note.</li>
+<li>The altar steps show clear red streaks read as blood. This scene was DELIBERATELY rewritten during the ink migration specifically to remove blood ("bathed in the warm red glow of the altar fire," not blood) — it recurred under this new style. Needs another wording pass or it will fail the same content gate that caught it before.</li>
+</ul></div></div>
+
+<div class="card">
+<img src="17_test_by_his_own_blood_he_entered_in_once.png">
+<div class="meta"><h2>#17 By his own blood he entered in once (Christ, nano_banana_pro+ref)</h2>
+<span class="tag ok">Face/hair/robe read correctly</span>
+<span class="tag bad">Bordered page</span>
+<ul>
+<li>Christ likeness holds up against the reference; plain robe, not priestly vestments — correct per spec.</li>
+<li>Same border defect a third time (3 of 4 renders).</li>
+</ul></div></div>
+
+</div>
+<h1 style="margin-top:40px">ROUND 2 (same day) — re-render 1/5/11 after 2 wording fixes</h1>
+<p style="max-width:900px">Fix 1: mood_block now carries a positive tent-architecture anchor on any scene mentioning
+tabernacle/veil/mercy-seat (was blank before — the columns had NO textual cause, a pure style-level default).
+Fix 2: scene 11's subject_block reworded, dropping "red glow" near the altar/goat entirely.</p>
+<div class="grid">
+
+<div class="card">
+<img src="01_test_once_a_year_only_once_v2.png">
+<div class="meta"><h2>#1 v2 — tent-anchor fix</h2>
+<span class="tag ok">Columns GONE — real tent poles/ropes/cloth now</span>
+<span class="tag bad">Bordered page (still)</span>
+<ul><li>Architecture fix worked cleanly. Border defect persists — matches the DNA doc's own note that this is stochastic, not solved by wording.</li></ul></div></div>
+
+<div class="card">
+<img src="05_test_that_he_die_not__the_cloud_upon_the_mercy_seat_v2.png">
+<div class="meta"><h2>#5 v2 — tent-anchor fix</h2>
+<span class="tag ok">Columns GONE — tent poles/ropes/cloth</span>
+<span class="tag ok">No border this time</span>
+<span class="tag bad">Small cross emblem carved on the Ark's front panel</span>
+<ul><li>Architecture fix worked, full-bleed. NEW catch on closer look: the Ark of the Covenant shows a small cross-shaped emblem on its front face — the cross had no meaning/use as a symbol in the Old Testament period, so this is a real anachronism (OT decoration for the Ark itself is not scripturally specified, but a cross motif is a clear miss). Needs a positive-phrasing fix (describe real period ornamentation) before this scene is used for real.</li></ul></div></div>
+
+<div class="card">
+<img src="11_test_one_offering__yet_it_took_two_goats_v2.png">
+<div class="meta"><h2>#11 v2 — blood-wording fix</h2>
+<span class="tag ok">Blood GONE — clean stone steps, warm firelight only</span>
+<span class="tag bad">Altar itself still classical fluted columns</span>
+<ul><li>Blood fix worked. Separate, smaller issue: scene 11 was never in the tent-keyword scope (it's an open-air altar shot, not inside the tent), and the ALTAR object itself (not the surrounding walls) still renders with classical column-fluting. Would need its own positive-phrasing anchor for the altar's actual look (a bronze-plated acacia-wood box altar, not a stone plinth) before the full pilot.</li></ul></div></div>
+
+</div>
+<h1 style="margin-top:40px">ROUND 3 (same day) — re-render 5/11 after 2 more wording fixes</h1>
+<p style="max-width:900px">Fix 3: scene 5's Ark fully specified as plain smooth gold + a moulded rim (no room left for an
+invented emblem). Fix 4: scene 11's altar fully specified as a bronze-plated acacia-wood box with 4 horns,
+on sand (no room left for a stone plinth).</p>
+<div class="grid">
+
+<div class="card">
+<img src="05_test_that_he_die_not__the_cloud_upon_the_mercy_seat_v3.png">
+<div class="meta"><h2>#5 v3 — Ark ornament fix</h2>
+<span class="tag ok">Cross emblem GONE — plain gold + beaded rim only</span>
+<span class="tag ok">No border</span>
+<ul><li>Clean. This one's ready.</li></ul></div></div>
+
+<div class="card">
+<img src="11_test_one_offering__yet_it_took_two_goats_v3.png">
+<div class="meta"><h2>#11 v3 — altar-object fix</h2>
+<span class="tag ok">Centre altar GONE columns — correct bronze box + 4 horns</span>
+<span class="tag bad">NEW: a separate gothic/pointed-arch stone structure appeared far left (the "altar step" where the first goat rests, a DIFFERENT mention in the same subject_block from the "altar between them" I fixed)</span>
+<ul><li>The fix worked for the object I described. But the text has two altar references (the "low altar step" the resting goat lies on, and "the altar between them" in the middle) — I only fully specified the second one. The first is still under-described and free-rendered as an unrelated medieval-looking stone nook. Needs the two reconciled into ONE consistently-described altar before this scene is trusted.</li></ul></div></div>
+
+</div>
+<p style="margin-top:24px;max-width:900px;color:#aaa;font-size:13px">
+No Vision audit ran (Anthropic API key dead) — this is a human eye-check only, same as the rest of the ink migration.
+Total test-gate spend: 9 renders, ~$1.80.
+</p>
+</body></html>

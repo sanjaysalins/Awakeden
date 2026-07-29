@@ -103,7 +103,7 @@ EPISODES: dict[str, dict] = {
         "segments": ["ew01_ancient_epic_ascent", "ew01_ancient_epic_triumph"],
         "xfade_s": 6.0,
         "gain_db": -9.0,
-        "outro_s": 2.5,
+        "outro_s": 3.0,   # was 2.5; brought to the INV-26 3.0s standard 2026-07-22 (ink rebuild)
     },
 }
 

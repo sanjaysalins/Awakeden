@@ -22,22 +22,23 @@ from PIL import Image
 W, H = 1920, 1080
 
 
-def make_reveal_field(mode: str, origin: tuple[float, float], seed: int = 7) -> np.ndarray:
+def make_reveal_field(mode: str, origin: tuple[float, float], seed: int = 7,
+                       w: int = W, h: int = H) -> np.ndarray:
     """0..1 field: low values reveal first, high values reveal last."""
     rng = np.random.default_rng(seed)
-    field = np.zeros((H, W), dtype=float)
+    field = np.zeros((h, w), dtype=float)
     for scale, weight in [(6, 1.0), (3, 0.55), (1.5, 0.28)]:
-        small = rng.random((int(H / 40 * scale) + 2, int(W / 40 * scale) + 2))
-        img = Image.fromarray((small * 255).astype("uint8")).resize((W, H), Image.BICUBIC)
+        small = rng.random((int(h / 40 * scale) + 2, int(w / 40 * scale) + 2))
+        img = Image.fromarray((small * 255).astype("uint8")).resize((w, h), Image.BICUBIC)
         field += np.asarray(img, dtype=float) * weight
     field = (field - field.min()) / (field.max() - field.min())
 
-    yy, xx = np.mgrid[0:H, 0:W]
+    yy, xx = np.mgrid[0:h, 0:w]
     if mode == "blot":
-        cx, cy = origin[0] * W, origin[1] * H
-        dist = np.sqrt(((xx - cx) / W) ** 2 + ((yy - cy) / H) ** 2)
+        cx, cy = origin[0] * w, origin[1] * h
+        dist = np.sqrt(((xx - cx) / w) ** 2 + ((yy - cy) / h) ** 2)
     else:  # directional brush wipe, angled slightly off-horizontal
-        dist = (xx / W) * 0.92 + (yy / H) * 0.08
+        dist = (xx / w) * 0.92 + (yy / h) * 0.08
     dist = (dist - dist.min()) / (dist.max() - dist.min())
 
     combined = 0.32 * field + 0.68 * dist
@@ -58,14 +59,14 @@ def _run(cmd):
 
 
 def render(a_clip: Path, b_clip: Path, out_mp4: Path, duration: float,
-           mode: str, origin: tuple[float, float], fps: int):
+           mode: str, origin: tuple[float, float], fps: int, w: int = W, h: int = H):
     work = out_mp4.parent / (out_mp4.stem + "_work")
     if work.exists():
         shutil.rmtree(work)
     work.mkdir(parents=True)
 
     a_seg, b_seg = work / "a_seg.mp4", work / "b_seg.mp4"
-    scale = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}"
+    scale = f"scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h}"
     _run(["ffmpeg", "-y", "-sseof", f"-{duration:.3f}", "-i", str(a_clip),
           "-t", f"{duration:.3f}", "-vf", scale, "-r", str(fps),
           "-c:v", "libx264", "-pix_fmt", "yuv420p", str(a_seg)])
@@ -73,7 +74,7 @@ def render(a_clip: Path, b_clip: Path, out_mp4: Path, duration: float,
           "-r", str(fps), "-c:v", "libx264", "-pix_fmt", "yuv420p", str(b_seg)])
 
     n_frames = int(duration * fps)
-    field = make_reveal_field(mode, origin)
+    field = make_reveal_field(mode, origin, w=w, h=h)
     mask_dir = work / "mask_frames"
     render_mask_frames(field, n_frames, edge=0.09, out_dir=mask_dir)
     mask_mp4 = work / "mask.mp4"
@@ -96,6 +97,8 @@ if __name__ == "__main__":
     ap.add_argument("--mode", choices=["blot", "wipe"], default="blot")
     ap.add_argument("--origin", default="0.5,0.55")
     ap.add_argument("--fps", type=int, default=30)
+    ap.add_argument("--w", type=int, default=W, help="output width (default 1920, 16:9)")
+    ap.add_argument("--h", type=int, default=H, help="output height (default 1080, 16:9)")
     a = ap.parse_args()
     ox, oy = (float(v) for v in a.origin.split(","))
-    render(Path(a.a), Path(a.b), Path(a.out), a.duration, a.mode, (ox, oy), a.fps)
+    render(Path(a.a), Path(a.b), Path(a.out), a.duration, a.mode, (ox, oy), a.fps, a.w, a.h)

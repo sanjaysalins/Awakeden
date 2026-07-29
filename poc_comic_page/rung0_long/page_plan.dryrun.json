@@ -1,0 +1,434 @@
+{
+  "piece": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\longform\\04_The_Bronze_Serpent\\v1",
+  "T_word_end_s": 473.98,
+  "T_audio_s": 474.23,
+  "T_used_s": 473.98,
+  "n_pages": 39,
+  "pages": [
+    {
+      "n": 1,
+      "t0": 0.0,
+      "t1": 12.8,
+      "dwell_s": 12.8,
+      "phrase_count": 19,
+      "panel_count": 4,
+      "layout": "2x2",
+      "repairs": []
+    },
+    {
+      "n": 2,
+      "t0": 12.8,
+      "t1": 23.68,
+      "dwell_s": 10.88,
+      "phrase_count": 4,
+      "panel_count": 3,
+      "layout": "3-big-left",
+      "repairs": []
+    },
+    {
+      "n": 3,
+      "t0": 23.68,
+      "t1": 37.04,
+      "dwell_s": 13.36,
+      "phrase_count": 5,
+      "panel_count": 3,
+      "layout": "3-big-top",
+      "repairs": []
+    },
+    {
+      "n": 4,
+      "t0": 37.04,
+      "t1": 48.76,
+      "dwell_s": 11.72,
+      "phrase_count": 5,
+      "panel_count": 3,
+      "layout": "3-big-left",
+      "repairs": []
+    },
+    {
+      "n": 5,
+      "t0": 48.76,
+      "t1": 59.72,
+      "dwell_s": 10.96,
+      "phrase_count": 6,
+      "panel_count": 4,
+      "layout": "2x2",
+      "repairs": []
+    },
+    {
+      "n": 6,
+      "t0": 59.72,
+      "t1": 72.5,
+      "dwell_s": 12.78,
+      "phrase_count": 6,
+      "panel_count": 4,
+      "layout": "2x2",
+      "repairs": [
+        "2x2 repeats consecutively (only legal layout at panel_count=4)"
+      ]
+    },
+    {
+      "n": 7,
+      "t0": 72.5,
+      "t1": 84.44,
+      "dwell_s": 11.94,
+      "phrase_count": 6,
+      "panel_count": 4,
+      "layout": "2x2",
+      "repairs": [
+        "2x2 repeats consecutively (only legal layout at panel_count=4)"
+      ]
+    },
+    {
+      "n": 8,
+      "t0": 84.44,
+      "t1": 96.86,
+      "dwell_s": 12.42,
+      "phrase_count": 5,
+      "panel_count": 3,
+      "layout": "3-big-left",
+      "repairs": []
+    },
+    {
+      "n": 9,
+      "t0": 96.86,
+      "t1": 109.42,
+      "dwell_s": 12.56,
+      "phrase_count": 4,
+      "panel_count": 3,
+      "layout": "3-big-top",
+      "repairs": []
+    },
+    {
+      "n": 10,
+      "t0": 109.42,
+      "t1": 121.76,
+      "dwell_s": 12.34,
+      "phrase_count": 6,
+      "panel_count": 4,
+      "layout": "2x2",
+      "repairs": []
+    },
+    {
+      "n": 11,
+      "t0": 121.76,
+      "t1": 132.78,
+      "dwell_s": 11.02,
+      "phrase_count": 6,
+      "panel_count": 4,
+      "layout": "2x2",
+      "repairs": [
+        "2x2 repeats consecutively (only legal layout at panel_count=4)"
+      ]
+    },
+    {
+      "n": 12,
+      "t0": 132.78,
+      "t1": 145.74,
+      "dwell_s": 12.96,
+      "phrase_count": 4,
+      "panel_count": 3,
+      "layout": "3-big-left",
+      "repairs": []
+    },
+    {
+      "n": 13,
+      "t0": 145.74,
+      "t1": 158.96,
+      "dwell_s": 13.22,
+      "phrase_count": 6,
+      "panel_count": 4,
+      "layout": "2x2",
+      "repairs": []
+    },
+    {
+      "n": 14,
+      "t0": 158.96,
+      "t1": 169.7,
+      "dwell_s": 10.74,
+      "phrase_count": 7,
+      "panel_count": 4,
+      "layout": "2x2",
+      "repairs": [
+        "2x2 repeats consecutively (only legal layout at panel_count=4)"
+      ]
+    },
+    {
+      "n": 15,
+      "t0": 169.7,
+      "t1": 182.46,
+      "dwell_s": 12.76,
+      "phrase_count": 6,
+      "panel_count": 4,
+      "layout": "2x2",
+      "repairs": [
+        "2x2 repeats consecutively (only legal layout at panel_count=4)"
+      ]
+    },
+    {
+      "n": 16,
+      "t0": 182.46,
+      "t1": 194.0,
+      "dwell_s": 11.54,
+      "phrase_count": 5,
+      "panel_count": 3,
+      "layout": "3-big-left",
+      "repairs": []
+    },
+    {
+      "n": 17,
+      "t0": 194.0,
+      "t1": 206.98,
+      "dwell_s": 12.98,
+      "phrase_count": 4,
+      "panel_count": 3,
+      "layout": "3-big-top",
+      "repairs": []
+    },
+    {
+      "n": 18,
+      "t0": 206.98,
+      "t1": 217.5,
+      "dwell_s": 10.52,
+      "phrase_count": 5,
+      "panel_count": 3,
+      "layout": "3-big-left",
+      "repairs": []
+    },
+    {
+      "n": 19,
+      "t0": 217.5,
+      "t1": 229.96,
+      "dwell_s": 12.46,
+      "phrase_count": 4,
+      "panel_count": 3,
+      "layout": "3-big-top",
+      "repairs": []
+    },
+    {
+      "n": 20,
+      "t0": 229.96,
+      "t1": 243.0,
+      "dwell_s": 13.04,
+      "phrase_count": 6,
+      "panel_count": 4,
+      "layout": "2x2",
+      "repairs": []
+    },
+    {
+      "n": 21,
+      "t0": 243.0,
+      "t1": 253.86,
+      "dwell_s": 10.86,
+      "phrase_count": 5,
+      "panel_count": 3,
+      "layout": "3-big-left",
+      "repairs": []
+    },
+    {
+      "n": 22,
+      "t0": 253.86,
+      "t1": 266.32,
+      "dwell_s": 12.46,
+      "phrase_count": 6,
+      "panel_count": 4,
+      "layout": "2x2",
+      "repairs": []
+    },
+    {
+      "n": 23,
+      "t0": 266.32,
+      "t1": 279.34,
+      "dwell_s": 13.02,
+      "phrase_count": 4,
+      "panel_count": 3,
+      "layout": "3-big-left",
+      "repairs": []
+    },
+    {
+      "n": 24,
+      "t0": 279.34,
+      "t1": 290.6,
+      "dwell_s": 11.26,
+      "phrase_count": 6,
+      "panel_count": 4,
+      "layout": "2x2",
+      "repairs": []
+    },
+    {
+      "n": 25,
+      "t0": 290.6,
+      "t1": 304.26,
+      "dwell_s": 13.66,
+      "phrase_count": 5,
+      "panel_count": 3,
+      "layout": "3-big-left",
+      "repairs": []
+    },
+    {
+      "n": 26,
+      "t0": 304.26,
+      "t1": 315.98,
+      "dwell_s": 11.72,
+      "phrase_count": 6,
+      "panel_count": 4,
+      "layout": "2x2",
+      "repairs": []
+    },
+    {
+      "n": 27,
+      "t0": 315.98,
+      "t1": 329.9,
+      "dwell_s": 13.92,
+      "phrase_count": 5,
+      "panel_count": 3,
+      "layout": "3-big-left",
+      "repairs": []
+    },
+    {
+      "n": 28,
+      "t0": 329.9,
+      "t1": 340.6,
+      "dwell_s": 10.7,
+      "phrase_count": 4,
+      "panel_count": 3,
+      "layout": "3-big-top",
+      "repairs": []
+    },
+    {
+      "n": 29,
+      "t0": 340.6,
+      "t1": 353.1,
+      "dwell_s": 12.5,
+      "phrase_count": 4,
+      "panel_count": 3,
+      "layout": "3-big-left",
+      "repairs": []
+    },
+    {
+      "n": 30,
+      "t0": 353.1,
+      "t1": 363.98,
+      "dwell_s": 10.88,
+      "phrase_count": 6,
+      "panel_count": 4,
+      "layout": "2x2",
+      "repairs": []
+    },
+    {
+      "n": 31,
+      "t0": 363.98,
+      "t1": 377.14,
+      "dwell_s": 13.16,
+      "phrase_count": 4,
+      "panel_count": 3,
+      "layout": "3-big-left",
+      "repairs": []
+    },
+    {
+      "n": 32,
+      "t0": 377.14,
+      "t1": 388.7,
+      "dwell_s": 11.56,
+      "phrase_count": 5,
+      "panel_count": 3,
+      "layout": "3-big-top",
+      "repairs": []
+    },
+    {
+      "n": 33,
+      "t0": 388.7,
+      "t1": 402.9,
+      "dwell_s": 14.2,
+      "phrase_count": 6,
+      "panel_count": 4,
+      "layout": "2x2",
+      "repairs": []
+    },
+    {
+      "n": 34,
+      "t0": 402.9,
+      "t1": 412.72,
+      "dwell_s": 9.82,
+      "phrase_count": 3,
+      "panel_count": 2,
+      "layout": "2v",
+      "repairs": []
+    },
+    {
+      "n": 35,
+      "t0": 412.72,
+      "t1": 424.14,
+      "dwell_s": 11.42,
+      "phrase_count": 4,
+      "panel_count": 3,
+      "layout": "3-big-left",
+      "repairs": []
+    },
+    {
+      "n": 36,
+      "t0": 424.14,
+      "t1": 437.68,
+      "dwell_s": 13.54,
+      "phrase_count": 5,
+      "panel_count": 3,
+      "layout": "3-big-top",
+      "repairs": []
+    },
+    {
+      "n": 37,
+      "t0": 437.68,
+      "t1": 447.86,
+      "dwell_s": 10.18,
+      "phrase_count": 5,
+      "panel_count": 3,
+      "layout": "3-big-left",
+      "repairs": []
+    },
+    {
+      "n": 38,
+      "t0": 447.86,
+      "t1": 460.64,
+      "dwell_s": 12.78,
+      "phrase_count": 4,
+      "panel_count": 3,
+      "layout": "3-big-top",
+      "repairs": []
+    },
+    {
+      "n": 39,
+      "t0": 460.64,
+      "t1": 473.98,
+      "dwell_s": 13.34,
+      "phrase_count": 5,
+      "panel_count": 3,
+      "layout": "3-big-left",
+      "repairs": []
+    }
+  ],
+  "checks": {
+    "sum_dwells_eq_T": {
+      "pass": true,
+      "detail": "sum=473.980s vs T=473.980s"
+    },
+    "boundaries_are_phrase_ends": {
+      "pass": true,
+      "detail": "all interior boundaries match a phrase end"
+    },
+    "dwells_in_band_or_repaired": {
+      "pass": true,
+      "detail": "all pages in 8-16s band or carry a logged repair"
+    },
+    "n_pages_matches_formula": {
+      "pass": true,
+      "detail": "formula=39 recheck=39"
+    },
+    "no_unlogged_consecutive_layout_repeat": {
+      "pass": true,
+      "detail": "no unlogged consecutive repeats"
+    }
+  },
+  "escalations": [
+    "ESCALATE: alignment word stream has 68 leading zero-duration junk tokens (e.g. ['4-voice', 'long-form', 'read:', 'narrator', '(default)']...) that are not spoken narration — traced to a multi-line <!-- --> HTML comment in narration-tagged.md not being fully stripped by pipeline/assembly_timing.py::_parse_tagged_chunks (it only checks if a line STARTS WITH '<!--', so continuation lines of a multi-line comment block leak into the transcript that pipeline/assembly_align.py::transcript() feeds to whisper alignment). This corrupts phrase 0's word span and inflates page 1's phrase/panel count. NOT fixed here (outside poc_comic_page/, a design decision per the brief) — reported for Fable/user triage."
+  ]
+}

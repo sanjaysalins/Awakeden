@@ -1,0 +1,121 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Serif,Inter,90,&H00D8F0F4,&H00D8F0F4,&H00101214,&H64000000,0,0,0,0,100,100,0,0,1,0,1,1,60,40,460,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.16,0:00:01.10,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs139\i0\b1\1c&H00D8F0F4}collector,
+Dialogue: 1,0:00:00.16,0:00:01.10,Serif,,0,0,0,,{\an1\pos(60,1277)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}A {\fs90\i0\b0\1c&H00D8F0F4}rich {\fs112\i1\b0\1c&H00D8F0F4}tax
+Dialogue: 1,0:00:01.34,0:00:02.67,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs174\i0\b1\1c&H00D8F0F4}Jericho,
+Dialogue: 1,0:00:01.34,0:00:02.67,Serif,,0,0,0,,{\an1\pos(60,1253)\fad(180,120)}{\fs112\i1\b0\1c&H00D8F0F4}everyone {\fs90\i0\b0\1c&H00D8F0F4}in
+Dialogue: 1,0:00:01.34,0:00:02.67,Serif,,0,0,0,,{\an1\pos(60,1174)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}hated {\fs90\i0\b0\1c&H00D8F0F4}by
+Dialogue: 1,0:00:02.91,0:00:04.01,Serif,,0,0,0,,{\an1\pos(381,1500)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}at
+Dialogue: 1,0:00:02.91,0:00:04.01,Serif,,0,0,0,,{\an1\pos(381,1437)\fad(180,120)}{\fs112\i1\b0\1c&H00D8F0F4}just {\fs90\i0\b0\1c&H00D8F0F4}one {\fs90\i0\b0\1c&H00D8F0F4}look
+Dialogue: 1,0:00:02.91,0:00:04.01,Serif,,0,0,0,,{\an1\pos(60,1358)\fad(180,120)}{\fs220\i0\b1\1c&H00D8F0F4}wanted
+Dialogue: 1,0:00:04.05,0:00:04.65,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs224\i0\b1\1c&H00D8F0F4}Jesus.
+Dialogue: 1,0:00:05.54,0:00:06.23,Serif,,0,0,0,,{\an1\pos(327,1438)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}to
+Dialogue: 1,0:00:05.54,0:00:06.23,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs220\i0\b1\1c&H00D8F0F4}short
+Dialogue: 1,0:00:05.54,0:00:06.23,Serif,,0,0,0,,{\an1\pos(60,1221)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}He {\fs90\i0\b0\1c&H00D8F0F4}was {\fs112\i1\b0\1c&H00D8F0F4}too
+Dialogue: 1,0:00:06.27,0:00:06.95,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs221\i0\b1\1c&H00D8F0F4}crowd,
+Dialogue: 1,0:00:06.27,0:00:06.95,Serif,,0,0,0,,{\an1\pos(60,1220)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}see {\fs112\i1\b0\1c&H00D8F0F4}over {\fs90\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:00:07.36,0:00:08.21,Serif,,0,0,0,,{\an1\pos(399,1438)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}no
+Dialogue: 1,0:00:07.36,0:00:08.21,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs155\i0\b1\1c&H00D8F0F4}something
+Dialogue: 1,0:00:07.36,0:00:08.21,Serif,,0,0,0,,{\an1\pos(60,1266)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}so {\fs90\i0\b0\1c&H00D8F0F4}he {\fs112\i1\b0\1c&H00D8F0F4}did
+Dialogue: 1,0:00:08.25,0:00:09.36,Serif,,0,0,0,,{\an1\pos(320,1500)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}do.
+Dialogue: 1,0:00:08.25,0:00:09.36,Serif,,0,0,0,,{\an1\pos(320,1437)\fad(180,120)}{\fs112\i1\b0\1c&H00D8F0F4}man {\fs90\i0\b0\1c&H00D8F0F4}would {\fs90\i0\b0\1c&H00D8F0F4}ever
+Dialogue: 1,0:00:08.25,0:00:09.36,Serif,,0,0,0,,{\an1\pos(60,1358)\fad(180,120)}{\fs214\i0\b1\1c&H00D8F0F4}grown
+Dialogue: 1,0:00:10.09,0:00:10.86,Serif,,0,0,0,,{\an1\pos(399,1453)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}a {\fs112\i1\b0\1c&H00D8F0F4}tree.
+Dialogue: 1,0:00:10.09,0:00:10.86,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs199\i0\b1\1c&H00D8F0F4}climbed
+Dialogue: 1,0:00:10.09,0:00:10.86,Serif,,0,0,0,,{\an1\pos(60,1235)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}He
+Dialogue: 1,0:00:12.29,0:00:13.50,Serif,,0,0,0,,{\an1\pos(318,1500)\fad(180,120)}{\fs112\i1\b0\1c&H00D8F0F4}spot,
+Dialogue: 1,0:00:12.29,0:00:13.50,Serif,,0,0,0,,{\an1\pos(318,1421)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}reached {\fs90\i0\b0\1c&H00D8F0F4}that
+Dialogue: 1,0:00:12.29,0:00:13.50,Serif,,0,0,0,,{\an1\pos(60,1358)\fad(180,120)}{\fs212\i0\b1\1c&H00D8F0F4}Jesus
+Dialogue: 1,0:00:12.29,0:00:13.50,Serif,,0,0,0,,{\an1\pos(60,1210)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}When
+Dialogue: 1,0:00:13.62,0:00:14.22,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs174\i0\b1\1c&H00D8F0F4}stopped.
+Dialogue: 1,0:00:13.62,0:00:14.22,Serif,,0,0,0,,{\an1\pos(60,1253)\fad(180,120)}{\fs112\i1\b0\1c&H00D8F0F4}he
+Dialogue: 1,0:00:14.64,0:00:15.24,Serif,,0,0,0,,{\an1\pos(377,1453)\fad(180,120)}{\fs112\i1\b0\1c&H00D8F0F4}up.
+Dialogue: 1,0:00:14.64,0:00:15.24,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs217\i0\b1\1c&H00D8F0F4}looked
+Dialogue: 1,0:00:14.64,0:00:15.24,Serif,,0,0,0,,{\an1\pos(60,1223)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}He
+Dialogue: 1,0:00:15.78,0:00:16.61,Serif,,0,0,0,,{\an1\pos(378,1453)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}this {\fs112\i1\b0\1c&H00D8F0F4}man
+Dialogue: 1,0:00:15.78,0:00:16.61,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs218\i0\b1\1c&H00D8F0F4}called
+Dialogue: 1,0:00:15.78,0:00:16.61,Serif,,0,0,0,,{\an1\pos(60,1222)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}And {\fs90\i0\b0\1c&H00D8F0F4}he
+Dialogue: 1,0:00:16.65,0:00:17.25,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs211\i0\b1\1c&H00D8F0F4}name:
+Dialogue: 1,0:00:16.65,0:00:17.25,Serif,,0,0,0,,{\an1\pos(60,1227)\fad(180,120)}{\fs112\i1\b0\1c&H00D8F0F4}by
+Dialogue: 1,0:00:17.62,0:00:18.22,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs139\i0\b1\1c&H00D8F0F4}Zacchaeus,
+Dialogue: 1,0:00:18.55,0:00:19.15,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs211\i0\b1\1c&H00D8F0F4}haste,
+Dialogue: 1,0:00:18.55,0:00:19.15,Serif,,0,0,0,,{\an1\pos(60,1227)\fad(180,120)}{\fs112\i1\b0\1c&H00D8F0F4}make
+Dialogue: 1,0:00:19.19,0:00:19.81,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs213\i0\b1\1c&H00D8F0F4}down;
+Dialogue: 1,0:00:19.19,0:00:19.81,Serif,,0,0,0,,{\an1\pos(60,1225)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}and {\fs112\i1\b0\1c&H00D8F0F4}come
+Dialogue: 1,0:00:20.54,0:00:21.83,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs211\i0\b1\1c&H00D8F0F4}must
+Dialogue: 1,0:00:20.54,0:00:21.83,Serif,,0,0,0,,{\an1\pos(60,1227)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}for {\fs90\i0\b0\1c&H00D8F0F4}to {\fs112\i1\b0\1c&H00D8F0F4}day {\fs90\i0\b0\1c&H00D8F0F4}I
+Dialogue: 1,0:00:21.91,0:00:23.14,Serif,,0,0,0,,{\an1\pos(320,1453)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}at {\fs90\i0\b0\1c&H00D8F0F4}thy {\fs112\i1\b0\1c&H00D8F0F4}house.
+Dialogue: 1,0:00:21.91,0:00:23.14,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs214\i0\b1\1c&H00D8F0F4}abide
+Dialogue: 1,0:00:23.33,0:00:24.18,Serif,,0,0,0,,{\an1\pos(399,1453)\fad(180,120)}{\fs112\i1\b0\1c&H00D8F0F4}leaders.
+Dialogue: 1,0:00:23.33,0:00:24.18,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs155\i0\b1\1c&H00D8F0F4}religious
+Dialogue: 1,0:00:23.33,0:00:24.18,Serif,,0,0,0,,{\an1\pos(60,1266)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}Not {\fs90\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:00:24.91,0:00:25.75,Serif,,0,0,0,,{\an1\pos(332,1453)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}who {\fs112\i1\b0\1c&H00D8F0F4}thought
+Dialogue: 1,0:00:24.91,0:00:25.75,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs224\i0\b1\1c&H00D8F0F4}crowd
+Dialogue: 1,0:00:24.91,0:00:25.75,Serif,,0,0,0,,{\an1\pos(60,1218)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}Not {\fs90\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:00:25.77,0:00:26.58,Serif,,0,0,0,,{\an1\pos(399,1453)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}him {\fs112\i1\b0\1c&H00D8F0F4}more.
+Dialogue: 1,0:00:25.77,0:00:26.58,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs174\i0\b1\1c&H00D8F0F4}deserved
+Dialogue: 1,0:00:25.77,0:00:26.58,Serif,,0,0,0,,{\an1\pos(60,1253)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}they
+Dialogue: 1,0:00:27.69,0:00:28.29,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs211\i0\b1\1c&H00D8F0F4}cheat,
+Dialogue: 1,0:00:27.69,0:00:28.29,Serif,,0,0,0,,{\an1\pos(60,1227)\fad(180,120)}{\fs112\i1\b0\1c&H00D8F0F4}A
+Dialogue: 1,0:00:28.62,0:00:29.22,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs217\i0\b1\1c&H00D8F0F4}tree.
+Dialogue: 1,0:00:28.62,0:00:29.22,Serif,,0,0,0,,{\an1\pos(60,1223)\fad(180,120)}{\fs112\i1\b0\1c&H00D8F0F4}up {\fs90\i0\b0\1c&H00D8F0F4}a
+Dialogue: 1,0:00:30.19,0:00:31.36,Serif,,0,0,0,,{\an1\pos(399,1500)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}and {\fs90\i0\b0\1c&H00D8F0F4}said:
+Dialogue: 1,0:00:30.19,0:00:31.36,Serif,,0,0,0,,{\an1\pos(399,1437)\fad(180,120)}{\fs112\i1\b0\1c&H00D8F0F4}climbed {\fs90\i0\b0\1c&H00D8F0F4}down
+Dialogue: 1,0:00:30.19,0:00:31.36,Serif,,0,0,0,,{\an1\pos(60,1358)\fad(180,120)}{\fs155\i0\b1\1c&H00D8F0F4}Zacchaeus
+Dialogue: 1,0:00:31.95,0:00:32.55,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs199\i0\b1\1c&H00D8F0F4}Behold,
+Dialogue: 1,0:00:32.45,0:00:33.05,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs224\i0\b1\1c&H00D8F0F4}Lord,
+Dialogue: 1,0:00:33.36,0:00:34.41,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs216\i0\b1\1c&H00D8F0F4}goods
+Dialogue: 1,0:00:33.36,0:00:34.41,Serif,,0,0,0,,{\an1\pos(60,1223)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}the {\fs112\i1\b0\1c&H00D8F0F4}half {\fs90\i0\b0\1c&H00D8F0F4}of {\fs90\i0\b0\1c&H00D8F0F4}my
+Dialogue: 1,0:00:34.45,0:00:35.05,Serif,,0,0,0,,{\an1\pos(280,1453)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}to {\fs90\i0\b0\1c&H00D8F0F4}the {\fs112\i1\b0\1c&H00D8F0F4}poor;
+Dialogue: 1,0:00:34.45,0:00:35.05,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs226\i0\b1\1c&H00D8F0F4}give
+Dialogue: 1,0:00:34.45,0:00:35.05,Serif,,0,0,0,,{\an1\pos(60,1216)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}I
+Dialogue: 1,0:00:36.22,0:00:37.05,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs225\i0\b1\1c&H00D8F0F4}taken
+Dialogue: 1,0:00:36.22,0:00:37.05,Serif,,0,0,0,,{\an1\pos(60,1217)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}and {\fs90\i0\b0\1c&H00D8F0F4}if {\fs90\i0\b0\1c&H00D8F0F4}I {\fs112\i1\b0\1c&H00D8F0F4}have
+Dialogue: 1,0:00:37.27,0:00:38.48,Serif,,0,0,0,,{\an1\pos(319,1453)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}from {\fs90\i0\b0\1c&H00D8F0F4}any {\fs112\i1\b0\1c&H00D8F0F4}man
+Dialogue: 1,0:00:37.27,0:00:38.48,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs213\i0\b1\1c&H00D8F0F4}thing
+Dialogue: 1,0:00:37.27,0:00:38.48,Serif,,0,0,0,,{\an1\pos(60,1225)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}any
+Dialogue: 1,0:00:38.58,0:00:39.83,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}accusation,
+Dialogue: 1,0:00:38.58,0:00:39.83,Serif,,0,0,0,,{\an1\pos(60,1286)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}by {\fs112\i1\b0\1c&H00D8F0F4}false
+Dialogue: 1,0:00:40.59,0:00:42.08,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs155\i0\b1\1c&H00D8F0F4}fourfold.
+Dialogue: 1,0:00:40.59,0:00:42.08,Serif,,0,0,0,,{\an1\pos(60,1266)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}I {\fs112\i1\b0\1c&H00D8F0F4}restore {\fs90\i0\b0\1c&H00D8F0F4}him
+Dialogue: 1,0:00:42.61,0:00:43.98,Serif,,0,0,0,,{\an1\pos(410,1500)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}he
+Dialogue: 1,0:00:42.61,0:00:43.98,Serif,,0,0,0,,{\an1\pos(410,1437)\fad(180,120)}{\fs112\i1\b0\1c&H00D8F0F4}changed {\fs90\i0\b0\1c&H00D8F0F4}what
+Dialogue: 1,0:00:42.61,0:00:43.98,Serif,,0,0,0,,{\an1\pos(60,1358)\fad(180,120)}{\fs120\i0\b1\1c&H00D8F0F4}conversation
+Dialogue: 1,0:00:42.61,0:00:43.98,Serif,,0,0,0,,{\an1\pos(60,1274)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}One
+Dialogue: 1,0:00:43.99,0:00:44.64,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs221\i0\b1\1c&H00D8F0F4}money,
+Dialogue: 1,0:00:43.99,0:00:44.64,Serif,,0,0,0,,{\an1\pos(60,1220)\fad(180,120)}{\fs112\i1\b0\1c&H00D8F0F4}did {\fs90\i0\b0\1c&H00D8F0F4}with {\fs90\i0\b0\1c&H00D8F0F4}his
+Dialogue: 1,0:00:45.08,0:00:45.68,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs211\i0\b1\1c&H00D8F0F4}life,
+Dialogue: 1,0:00:45.08,0:00:45.68,Serif,,0,0,0,,{\an1\pos(60,1227)\fad(180,120)}{\fs112\i1\b0\1c&H00D8F0F4}his
+Dialogue: 1,0:00:46.10,0:00:46.70,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs211\i0\b1\1c&H00D8F0F4}name.
+Dialogue: 1,0:00:46.10,0:00:46.70,Serif,,0,0,0,,{\an1\pos(60,1227)\fad(180,120)}{\fs112\i1\b0\1c&H00D8F0F4}his
+Dialogue: 1,0:00:47.51,0:00:48.34,Serif,,0,0,0,,{\an1\pos(315,1453)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}told {\fs90\i0\b0\1c&H00D8F0F4}him {\fs112\i1\b0\1c&H00D8F0F4}why:
+Dialogue: 1,0:00:47.51,0:00:48.34,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs210\i0\b1\1c&H00D8F0F4}Jesus
+Dialogue: 1,0:00:48.34,0:00:48.94,Serif,,0,0,0,,{\an1\pos(203,1453)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}of {\fs112\i1\b0\1c&H00D8F0F4}man
+Dialogue: 1,0:00:48.34,0:00:48.94,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs196\i0\b1\1c&H00D8F0F4}Son
+Dialogue: 1,0:00:48.34,0:00:48.94,Serif,,0,0,0,,{\an1\pos(60,1237)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}For {\fs90\i0\b0\1c&H00D8F0F4}the
+Dialogue: 1,0:00:48.59,0:00:49.19,Serif,,0,0,0,,{\an1\pos(250,1453)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}to {\fs112\i1\b0\1c&H00D8F0F4}seek {\fs90\i0\b0\1c&H00D8F0F4}and
+Dialogue: 1,0:00:48.59,0:00:49.19,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs196\i0\b1\1c&H00D8F0F4}come
+Dialogue: 1,0:00:48.59,0:00:49.19,Serif,,0,0,0,,{\an1\pos(60,1237)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}is
+Dialogue: 1,0:00:48.84,0:00:49.44,Serif,,0,0,0,,{\an1\pos(298,1438)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}was
+Dialogue: 1,0:00:48.84,0:00:49.44,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs196\i0\b1\1c&H00D8F0F4}which
+Dialogue: 1,0:00:48.84,0:00:49.44,Serif,,0,0,0,,{\an1\pos(60,1237)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}to {\fs112\i1\b0\1c&H00D8F0F4}save {\fs90\i0\b0\1c&H00D8F0F4}that
+Dialogue: 1,0:00:49.09,0:00:49.69,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs224\i0\b1\1c&H00D8F0F4}lost.
+Dialogue: 1,0:00:49.14,0:00:49.74,Serif,,0,0,0,,{\an1\pos(397,1453)\fad(180,120)}{\fs112\i1\b0\1c&H00D8F0F4}story.
+Dialogue: 1,0:00:49.14,0:00:49.74,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs126\i0\b1\1c&H00D8F0F4}Zacchaeus's
+Dialogue: 1,0:00:49.14,0:00:49.74,Serif,,0,0,0,,{\an1\pos(60,1286)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}That's {\fs90\i0\b0\1c&H00D8F0F4}not {\fs90\i0\b0\1c&H00D8F0F4}just
+Dialogue: 1,0:00:49.64,0:00:50.24,Serif,,0,0,0,,{\an1\pos(273,1438)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}for
+Dialogue: 1,0:00:49.64,0:00:50.24,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs219\i0\b1\1c&H00D8F0F4}came
+Dialogue: 1,0:00:49.64,0:00:50.24,Serif,,0,0,0,,{\an1\pos(60,1221)\fad(180,120)}{\fs112\i1\b0\1c&H00D8F0F4}Jesus
+Dialogue: 1,0:00:49.64,0:00:50.24,Serif,,0,0,0,,{\an1\pos(60,1143)\fad(180,120)}{\fs90\i0\b0\1c&H00D8F0F4}That's {\fs90\i0\b0\1c&H00D8F0F4}why
+Dialogue: 1,0:00:50.32,0:00:50.92,Serif,,0,0,0,,{\an1\pos(60,1375)\fad(180,120)}{\fs184\i0\b1\1c&H00D8F0F4}too.
+Dialogue: 1,0:00:50.32,0:00:50.92,Serif,,0,0,0,,{\an1\pos(60,1246)\fad(180,120)}{\fs112\i1\b0\1c&H00D8F0F4}you

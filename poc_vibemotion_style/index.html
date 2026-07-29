@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vibe Motion style POC — ink typography + infographic</title>
+<style>
+  body { background:#1a140f; color:#f0e6d2; font-family: Georgia, serif; padding: 30px; max-width: 1000px; margin: auto; }
+  h1 { color:#c8a24a; font-size: 26px; }
+  h2 { color:#e9c877; font-size: 20px; margin-top: 40px; }
+  p { line-height: 1.5; }
+  video { width: 100%; max-width: 900px; border: 2px solid #4a3a28; border-radius: 6px; margin: 12px 0; }
+  code { background:#2a2018; padding: 2px 6px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<h1>POC — replicating Higgsfield "Typography Animator" / "Infographic Animator"</h1>
+
+<div style="border:2px solid #c4963e; border-radius:10px; padding:20px; margin-bottom:30px; background:#241a12;">
+<h2 style="margin-top:0; color:#f4f0d8;">ROUND 4 (latest) — the counter mechanic + punchier motion</h2>
+<p>Per your feedback: bigger spring overshoot, faster stagger, a warm gold impact-glow flash on landing.
+Also builds the ticking-counter mechanic you asked for — digits scramble rapidly like a real stat reveal,
+then land. Since Numbers 21:6 gives no death count (checked again — genuinely isn't one, anywhere), it lands
+honestly on a drawn ink dash instead of a fabricated number, with a caption explaining why. Swap in a real
+number the moment you have a sourced one — one line of script.</p>
+<video controls src="SNAKEBITE_A_v3_counter.mp4"></video>
+
+<h3>Infographic Animator — same punch treatment</h3>
+<p>Same bigger scale-bounce overshoot, tighter stagger, and impact-glow flashes (panel lands &rarr; glow,
+arrow strikes &rarr; glow, second panel lands &rarr; glow) applied to the real-stills diptych.</p>
+<video controls src="SNAKEBITE_B_v3_infographic.mp4"></video>
+</div>
+
+<div style="border:2px solid #c4963e; border-radius:10px; padding:20px; margin-bottom:30px; background:#241a12;">
+<h2 style="margin-top:0; color:#f4f0d8;">ROUND 3 — feels like your stills, not a slide</h2>
+<p>Dropped ALL presentation chrome (rounded cards, drop-shadow boxes, gold-border plaques, corporate headers).
+Typography = a torn hand-inked parchment caption band sitting directly on the real still, ink-brown lettering,
+red "rubrication" ink accent on the emphasis word (illuminated-manuscript convention) instead of a highlight chip.
+Infographic = a genuine comic DIPTYCH — your two real stills, full-bleed, divided by a torn ink gutter, joined by
+a hand-drawn brush-stroke arrow, captions on the same torn parchment band as the typography panel (one consistent
+in-world caption language across both).</p>
+
+<h3>Typography Animator v2 — over your actual still <code>01_snakebite.png</code></h3>
+<video controls src="SNAKEBITE_A_v2_typography.mp4"></video>
+
+<h3>Infographic Animator v2 — real diptych, torn ink gutter + brush arrow</h3>
+<video controls src="SNAKEBITE_B_v2_infographic.mp4"></video>
+
+<p><b>Accuracy note (unchanged):</b> Numbers 21:6 KJV only says "much people of Israel died" — no death count
+anywhere in Scripture or your own scene prompts — so no casualty number was invented; used the exact verbatim
+clause instead.</p>
+</div>
+
+<div style="border:2px solid #8a4a3a; border-radius:10px; padding:20px; margin-bottom:30px; background:#2a1712;">
+<h2 style="margin-top:0; color:#e8b199;">Tested and rejected: purpose-built diagram via the real image model</h2>
+<p>Also tried the other path you offered — commissioning an actual still from the seedream_v4_5 pipeline
+(same style_base/tail as every other Bronze Serpent panel) depicting a "venom pathway" diagram, explicitly
+prompted <code>NO text, NO lettering, NO numerals</code> (on top of the style tail's own standing
+<code>no text, no lettering</code> ban). Result below — the model painted a box of garbled fake
+Hebrew/Arabic-looking script anyway, plus anatomical callout leader-lines:</p>
+<img src="PURPOSE_BUILT_diagram.png" style="width:100%; max-width:900px; border-radius:6px; border:2px solid #4a3a28;">
+<p><b>Verdict:</b> disqualified — invented gibberish "scripture-like" lettering next to a KJV-sourced video is a
+real credibility risk, and it's exactly the failure your locked style-tail rule (<code>no text, no lettering</code>)
+exists to prevent. Confirms the deterministic overlay (Round 3 above) is the only reliable path for anything
+diagram- or label-shaped — the image model won't reliably omit text even when told to twice. Cost: 1 credit (~$0.30).</p>
+</div>
+
+<p>Round 2: exact-style clones (below), built after actually inspecting Higgsfield's Vibe Motion template
+thumbnails on their site — bold black Arial-Black type + neon-green accent chip; white card, gradient bars,
+black sparkline, ticking green counter. Rendered via a new local tool: <b>Playwright driving real Chromium
+CSS animations</b> (frame-exact, not hand-rolled PIL math) &rarr; ffmpeg. $0, no Higgsfield spend, no login needed.</p>
+
+<h2>CLONE A — Typography Animator, exact style</h2>
+<p>Arial Black, neon-green accent chip on the emphasis word, spring/back-out pop-in easing — matches their
+"TAKE ACTION NOW" template thumbnail directly.</p>
+<video controls src="CLONE_A_typography.mp4"></video>
+
+<h2>CLONE B — Infographic Animator, exact style</h2>
+<p>White card, staggered gradient bar growth, animated SVG sparkline draw, ticking counter — matches their
+"COMMUNITY GROWTH" template thumbnail directly.</p>
+<video controls src="CLONE_B_infographic.mp4"></video>
+
+<hr style="margin:40px 0; border-color:#3a2e22;">
+
+<h2 style="color:#e9c877;">Ink/gold reskin — same technique, our palette (final candidates)</h2>
+<p>Same HTML/CSS + Playwright frame-exact rendering as CLONE A/B above (same spring easing, same SVG line-draw,
+same ticking counter) — only the skin changed: our procedural parchment_bg.png, Bookman Old Style / Georgia,
+ivory + gold instead of Arial Black + neon green.</p>
+
+<h3>INKED A — Typography Animator, our palette</h3>
+<video controls src="INKED_A_typography.mp4"></video>
+
+<h3>INKED B — Infographic Animator, our palette</h3>
+<video controls src="INKED_B_infographic.mp4"></video>
+
+<hr style="margin:40px 0; border-color:#3a2e22;">
+
+<h2 style="color:#8a7a5c;">Round 1 (superseded, PIL-based) — kept for reference only</h2>
+<p>First attempt, before the exact-clone research — hand-rolled PIL frame math instead of real CSS easing.
+The INKED A/B clips above replace these.</p>
+
+<h3>POC1 — Typography Animator analog (ink/gold)</h3>
+<p>Real synced word timings from the locked Bronze Serpent narration ("For God so loved the world...")
+burned over the actual hero still <code>14_for_god_so_loved_the_world.png</code>, "glow" caption style
+(gold key word + halo + gentle pop).</p>
+<video controls src="POC1_typography_animator.mp4"></video>
+
+<h3>POC2 — Infographic Animator analog (ink/gold)</h3>
+<p>A new small script (<code>ink_infographic_poc.py</code>) borrowing mapengine's dashed-glow line reveal
+and pill-plaque labels to animate a typology comparison: Numbers 21:9 &rarr; John 3:14.</p>
+<video controls src="POC2_infographic_animator.mp4"></video>
+
+</body>
+</html>

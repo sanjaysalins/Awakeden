@@ -554,11 +554,19 @@ def render_scene(
     out_dir: Path,
     max_retries: int = 1,
     log=print,
+    extra_ref_paths: list[Path] | None = None,
 ) -> tuple[Path, ImageAudit]:
     """Generate the scene's PNG via `provider`, run Claude Vision content
     audit, retry-with-feedback on FAIL up to `max_retries` times. Idempotent
     by `<i>_<slug>.png` existence: if both the PNG and a passed audit exist,
     skip and return them.
+
+    `extra_ref_paths` are chained `--image` / uploaded-file character
+    references (e.g. a locked Christ or Aaron reference PNG) passed straight
+    through to `provider.generate()`. Both providers already accept this
+    parameter; until this fix, no production call site ever supplied it, so
+    every ref-chained render happened only via ad-hoc scripts outside the
+    real pipeline (found by the 2026-07-23 external panel).
 
     Also writes a `<stem>.cut_hint.json` sidecar with macro_elements, pacing,
     and viral_role for the downstream Kling cut planner (V8 consumes it).
@@ -589,7 +597,7 @@ def render_scene(
         label = "first attempt" if attempt == 0 else f"retry {attempt}/{max_retries}"
         log(f"      [{provider.name}] {stem} — {label}")
         t0 = time.monotonic()
-        png_bytes = provider.generate(scene, audit_feedback=feedback)
+        png_bytes = provider.generate(scene, audit_feedback=feedback, extra_ref_paths=extra_ref_paths)
         elapsed = time.monotonic() - t0
         _record_still_cost(provider, out_dir, stem, log=log)
         png_path.write_bytes(png_bytes)

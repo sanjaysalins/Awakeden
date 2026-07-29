@@ -1,0 +1,31 @@
+[
+  {
+    "id": "5b0be177-699f-4d71-8345-dff04e55ca05",
+    "status": "completed",
+    "display_name": "Seedance 1.5 Pro",
+    "job_set_type": "seedance1_5",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36Civ1twSiHHl6id4ulZrwA34hC/hf_20260717_085808_5b0be177-699f-4d71-8345-dff04e55ca05.mp4",
+    "created_at": 1784278688.574328,
+    "params": {
+      "width": 1280,
+      "height": 720,
+      "prompt": "Graphic novel inked illustration, painted tableau, a frozen moment. An elder in a hooded cloak stands with his back to the camera before a large fearful crowd of desert-robed people, hands raised in pleading, a striped serpent coiled on the sand between them and a distant line of tents beneath red cliffs. The camera performs a slow push-in toward the elder and the raised pleading hands. Nothing moves -- every face, hand, and the serpent stay fixed as drawn. No invented motion, no morphing, no new elements, no camera shake. Painted tableau stays still; only the camera moves.",
+      "medias": [
+        {
+          "data": {
+            "id": "a16ae260-bf35-48ea-96d3-42951cfbbd20",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_36Civ1twSiHHl6id4ulZrwA34hC/a16ae260-bf35-48ea-96d3-42951cfbbd20_resize.jpg",
+            "type": "media_input"
+          },
+          "role": "start_image"
+        }
+      ],
+      "duration": 4,
+      "fixed_lens": false,
+      "resolution": "720p",
+      "aspect_ratio": "16:9",
+      "seed": 224753,
+      "generate_audio": true
+    }
+  }
+]

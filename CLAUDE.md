@@ -295,7 +295,9 @@ they're never animated; `VISION_AUDIT_MODEL`=Haiku for the coarse assembly verif
   full stop.** (Earlier same-day framing allowed ≥1 real panel per grid with the rest
   on $0 Ken Burns — the user explicitly overrode that a few hours later: "every screen
   should use animated clips.") Default clip animator is **Seedance 1.5 Pro** (~4.8cr
-  vs Kling's ~10cr). The 2026-07-17 bake-off (`longform/04_The_Bronze_Serpent/v1/
+  vs Kling's 7.5cr at 5s sound-off — that's the BILLED price for pro+sound-off, 43
+  transactions verified 2026-07-21; the `hf generate cost` estimator overquotes it
+  as 8.75. Sound ON would quote 10/12.5cr; the pipeline always mutes it). The 2026-07-17 bake-off (`longform/04_The_Bronze_Serpent/v1/
   visual_16x9_inked/_bakeoff_i2v/index.html`) showed Seedance matches Kling on a calm
   single-figure panel but INVENTS motion on multi-figure/action panels (a coiled
   serpent uncoiled and slithered, a raised hand moved to a different pose, a frozen

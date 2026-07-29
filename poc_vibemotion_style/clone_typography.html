@@ -1,0 +1,48 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  html,body { margin:0; padding:0; width:1920px; height:1080px; background:#f5f4f0; overflow:hidden; }
+  .stage { width:1920px; height:1080px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px; }
+  .line { display:flex; gap:26px; flex-wrap:wrap; justify-content:center; max-width:1700px; }
+  .word {
+    font-family:"Arial Black", Arial, sans-serif;
+    font-weight:900;
+    font-size:120px;
+    line-height:1.0;
+    color:#111111;
+    letter-spacing:-2px;
+    text-transform:uppercase;
+    opacity:0;
+    transform: translateY(40px) scale(0.55);
+    animation: pop 0.62s cubic-bezier(.34,1.56,.64,1) forwards;
+  }
+  .word.accent {
+    color:#ffffff;
+    background:#caff33;
+    padding:6px 26px;
+    border-radius:10px;
+  }
+  @keyframes pop {
+    0%   { opacity:0; transform: translateY(40px) scale(0.55); }
+    60%  { opacity:1; transform: translateY(-6px) scale(1.08); }
+    100% { opacity:1; transform: translateY(0)    scale(1.0); }
+  }
+  .w0 { animation-delay: 0.10s; }
+  .w1 { animation-delay: 0.28s; }
+  .w2 { animation-delay: 0.46s; }
+  .w3 { animation-delay: 0.64s; }
+  .w4 { animation-delay: 0.90s; }
+</style></head>
+<body>
+  <div class="stage">
+    <div class="line">
+      <span class="word w0">FOR</span>
+      <span class="word w1">GOD</span>
+      <span class="word w2 accent">SO</span>
+      <span class="word w3">LOVED</span>
+    </div>
+    <div class="line">
+      <span class="word w4">THE WORLD</span>
+    </div>
+  </div>
+</body></html>

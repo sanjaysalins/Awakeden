@@ -1,0 +1,37 @@
+<!doctype html><meta charset=utf-8>
+<title>Crop-and-recomposite test — full result</title>
+<style>
+ body{background:#14110d;color:#efe7d6;font-family:system-ui,Arial;margin:0;padding:24px}
+ h1{font-size:22px;margin:0 0 4px} h2{font-size:15px;color:#e9c877;margin:26px 0 6px}
+ p.sub{color:#b7ab97;margin:0 0 20px;max-width:900px}
+ .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+ figure{margin:0} figcaption{font-size:14px;font-weight:700;margin:8px 0 0;color:#e9c877}
+ figcaption .note{display:block;font-weight:400;font-size:12px;color:#b7ab97;margin-top:4px}
+ video{width:100%;border-radius:6px;display:block;border:1px solid #000;background:#000}
+ .verdict{background:#1e1a14;border-left:3px solid #5a8f5a;padding:14px 18px;margin:20px 0;font-size:14px;line-height:1.6;color:#d8cdb8}
+</style>
+<h1>Crop-and-recomposite test — Penitent Thief, all 3 pages</h1>
+<p class="sub">Each page's 4 panels cropped and animated separately (nothing else in frame to invent onto), then recomposited into a page-shaped grid via panel_animator/grid_choreography.py -- a real 2x2 grid, ink-gutter borders, virtual-camera spotlight sweep across the live panels.</p>
+
+<div class="verdict"><b>Verdict: the mechanism works.</b> 11 of 12 individually-animated panels showed zero detectable change from source across both mid and last frame checks -- a real, confirmed fix for the invention problem whole-page Kling animation couldn't solve. One panel (page 2, Christ close-up) showed the brow blood becoming slightly more visible, which is actually the doctrinally correct detail under our corrected body-gate rule, not a violation. This is now real evidence, not just a reasoned proposal -- crop-and-recomposite should be updated from "required but untested" to "required and validated" in the spec.</div>
+
+<h2>Page 1 — The Setting and the Mockery</h2>
+<div class="grid">
+<figure><video src="page1_recomposite.mp4" controls loop muted playsinline></video><figcaption>Recomposited page</figcaption></figure>
+<figure><video src="page1_panel1.mp4" controls loop muted playsinline></video><figcaption>Panel 1 (individual)</figcaption></figure>
+<figure><video src="page1_panel4.mp4" controls loop muted playsinline></video><figcaption>Panel 4 — Christ (individual)</figcaption></figure>
+</div>
+
+<h2>Page 2 — The Rebuke and the Plea</h2>
+<div class="grid">
+<figure><video src="page2_recomposite.mp4" controls loop muted playsinline></video><figcaption>Recomposited page</figcaption></figure>
+<figure><video src="page2_panel3.mp4" controls loop muted playsinline></video><figcaption>Panel 3 (individual)</figcaption></figure>
+<figure><video src="page2_panel4.mp4" controls loop muted playsinline></video><figcaption>Panel 4 — Christ (individual, brow blood slightly more visible)</figcaption></figure>
+</div>
+
+<h2>Page 3 — The Promise and the Landing</h2>
+<div class="grid">
+<figure><video src="page3_recomposite.mp4" controls loop muted playsinline></video><figcaption>Recomposited page</figcaption></figure>
+<figure><video src="page3_panel1.mp4" controls loop muted playsinline></video><figcaption>Panel 1 — Christ speaking (individual)</figcaption></figure>
+<figure><video src="page3_panel4.mp4" controls loop muted playsinline></video><figcaption>Panel 4 — landing shot (individual)</figcaption></figure>
+</div>

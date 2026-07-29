@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "The Lord Jesus Christ standing and teaching a small gathered crowd on a grassy hillside, a gentle open-handed gesture, warm afternoon daylight, ancient Near-Eastern",
+      "actual": "Correct: Christ stands centre with both hands open in a teaching gesture, a small crowd (~10 figures) seated/standing around him on a grassy hillside with rolling hills behind, warm cream/gold sky."
+    },
+    {
+      "claim": "REQUIRED VISIBLE ELEMENTS: Jesus Christ, a hillside, a small gathered crowd",
+      "actual": "All three present and recognisable."
+    },
+    {
+      "claim": "no panel borders (this render was re-tested after a prior render had a visible black-line border/frame)",
+      "actual": "Fixed: the artwork now bleeds full-frame edge-to-edge, no border, no frame, no canvas margin visible anywhere."
+    },
+    {
+      "claim": "anatomy check",
+      "actual": "Both of Christ's hands show correct finger counts, no fusion/duplication. Crowd hands mostly folded/hidden, none visibly malformed."
+    },
+    {
+      "claim": "iconography/cultural accuracy",
+      "actual": "Robes, headwear, sandals read as ancient Near-Eastern, no anachronisms."
+    }
+  ],
+  "banned_token_hits": []
+}

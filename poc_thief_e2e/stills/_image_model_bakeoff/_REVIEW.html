@@ -1,0 +1,48 @@
+<!doctype html><meta charset=utf-8>
+<title>Image-model bake-off — native comic-strip generation</title>
+<style>
+ body{background:#14110d;color:#efe7d6;font-family:system-ui,Arial;margin:0;padding:24px}
+ h1{font-size:22px;margin:0 0 4px} h2{font-size:15px;color:#e9c877;margin:26px 0 4px}
+ p.sub{color:#b7ab97;margin:0 0 16px;max-width:900px}
+ .tier{border-left:3px solid #444;padding-left:14px;margin-bottom:22px}
+ .tier.good{border-color:#5a8f5a} .tier.mixed{border-color:#c9a227} .tier.bad{border-color:#a33}
+ .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;margin-top:8px}
+ figure{margin:0} figcaption{font-size:13px;font-weight:700;margin:6px 0 0;color:#e9c877}
+ figcaption .note{display:block;font-weight:400;font-size:12px;color:#b7ab97;margin-top:3px}
+ img{width:100%;border-radius:6px;border:1px solid #000;display:block}
+ a{color:inherit}
+</style>
+<h1>Image-model bake-off — native comic-strip generation</h1>
+<p class="sub">Same Thief page1+page2 prompts (tightened Christ-gate wording) across 5 HF-hosted image models. None expose seed control through this CLI -- the real variable is each model's reference-image consistency. Click any image to open full resolution.</p>
+
+<div class="tier good">
+<h2>Seedream 5.0 Pro -- the standout</h2>
+<div class="grid">
+<figure><a href="seedream_v5_pro_page1.png" target="_blank"><img src="seedream_v5_pro_page1.png"></a>
+<figcaption>Page 1<span class="note">Correct layout, zero baked text, minor blood/rib concern.</span></figcaption></figure>
+<figure><a href="seedream_v5_pro_page2.png" target="_blank"><img src="seedream_v5_pro_page2.png"></a>
+<figcaption>Page 2 (chained)<span class="note">Character AND color/tone both held rock-solid vs page 1 -- no drift.</span></figcaption></figure>
+</div>
+</div>
+
+<div class="tier mixed">
+<h2>GPT Image 2 -- most beautiful art, worst body-gate compliance</h2>
+<div class="grid">
+<figure><a href="gpt_image_2_page1.png" target="_blank"><img src="gpt_image_2_page1.png"></a>
+<figcaption>Page 1<span class="note">Stunning linework, correct layout, no text -- but visibly muscular/toned Christ.</span></figcaption></figure>
+<figure><a href="gpt_image_2_page2.png" target="_blank"><img src="gpt_image_2_page2.png"></a>
+<figcaption>Page 2 (chained)<span class="note">Consistency holds well; body-gate issue persists.</span></figcaption></figure>
+</div>
+</div>
+
+<div class="tier bad">
+<h2>Rejected</h2>
+<div class="grid">
+<figure><a href="flux_2_page1.png" target="_blank"><img src="flux_2_page1.png"></a>
+<figcaption>flux_2 -- Page 1<span class="note">6 panels not 4, baked garbled text ("PENITENT CRIMIUAL"), visible dripping blood, worst violations of the set.</span></figcaption></figure>
+<figure><a href="flux_kontext_page1.png" target="_blank"><img src="flux_kontext_page1.png"></a>
+<figcaption>flux_kontext -- Page 1<span class="note">Wrong layout (4 stacked full-width panels), tone reads as horror/demonic, not reverent.</span></figcaption></figure>
+</div>
+</div>
+
+<p class="sub">kling_omni_image failed to render (server-side error) -- no verdict either way, could retry.</p>

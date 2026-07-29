@@ -1,0 +1,64 @@
+{
+  "episode": "EW_Thief_POC",
+  "aspect": "9:16",
+  "style": "painted_comic (full-colour variant, PAINTED_COMIC_SPEC.md §10)",
+  "audio_seconds": 63.4,
+  "scenes": [
+    {
+      "id": 1,
+      "t": [0.0, 8.0],
+      "title": "HOOK - three crosses, Golgotha",
+      "refs": ["christ"],
+      "subject_block": "Three crosses on the hill of Golgotha at midday beneath a dark storm sky; Jesus on the centre cross, wearing a simple pale robe fully covering his body, a THIN gaunt marred frame, NO heroic muscle; the two criminals crucified on either side of him; a small crowd gathered below in hushed shadow; the scene wide and desolate, deeply reverent and sorrowful."
+    },
+    {
+      "id": 2,
+      "t": [8.0, 13.0],
+      "title": "the mocking thief",
+      "refs": [],
+      "subject_block": "One of the two criminals crucified beside Jesus, a rough weathered man, his face twisted in scorn and pain, sneering sideways off-frame toward the centre cross; rope-bound wrists on rough wood, harsh midday sun, no other figures close, no blood, restrained."
+    },
+    {
+      "id": 3,
+      "t": [13.0, 27.0],
+      "title": "the penitent thief rebukes him",
+      "refs": [],
+      "subject_block": "The other crucified criminal, a gaunt weathered man, his face grave and honest, turning to rebuke the first thief beside him; both crosses visible close together, the centre cross with Jesus faintly beyond in the haze; harsh daylight, dust in the air, restrained, no blood."
+    },
+    {
+      "id": 4,
+      "t": [27.0, 36.0],
+      "title": "his eyes turn toward Jesus",
+      "refs": ["christ"],
+      "subject_block": "Close on the penitent thief's weary, resigned face, his eyes now turning toward Jesus on the centre cross in the soft distance -- Jesus robed in simple pale cloth, thin and marred, head bowed -- a flicker of honesty and hope breaking through the thief's pain."
+    },
+    {
+      "id": 5,
+      "t": [36.0, 40.0],
+      "title": "Lord, remember me",
+      "refs": ["christ"],
+      "subject_block": "The penitent thief straining toward Jesus on the centre cross, his face pleading, his bound hand slightly lifted toward him in a final request; Jesus present in the same frame, wearing a simple pale robe fully covering his body, a thin gaunt marred frame, bowed in sorrow on the cross."
+    },
+    {
+      "id": 6,
+      "t": [40.0, 47.0],
+      "title": "Jesus turns his head",
+      "refs": ["christ"],
+      "subject_block": "Jesus on the cross turning his head gently toward the penitent thief beside him, wearing a simple pale robe fully covering his body, a thin gaunt marred frame, NO heroic muscle, his face full of compassion; storm clouds parting faintly with a soft light behind him."
+    },
+    {
+      "id": 7,
+      "t": [47.0, 52.0],
+      "title": "today shalt thou be with me",
+      "refs": ["christ"],
+      "subject_block": "Close on Jesus's face on the cross, wearing a simple pale robe fully covering his body, gaunt and marred yet radiant with tenderness, speaking gently to the thief beside him; a soft break of light in the storm clouds behind his head; deeply reverent, no bright blood."
+    },
+    {
+      "id": 8,
+      "t": [52.0, 63.4],
+      "title": "LANDING - the gate of light",
+      "refs": ["christ"],
+      "subject_block": "The risen Christ standing in a gate of golden light breaking through parted storm clouds above Golgotha, wearing a simple luminous undyed white robe, one hand extended toward the viewer in welcome, warm and radiant; the crosses small and distant below; reverent, hopeful, inviting, the landing."
+    }
+  ]
+}

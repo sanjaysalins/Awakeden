@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>IN NO WISE — redo picker (still + animation per panel)</title>
+<style>
+  body { background:#14120f; color:#e8d9b5; font-family:Georgia,serif; margin:0; padding:24px; }
+  h1 { font-size:26px; margin:0 0 6px; }
+  .hint { color:#a89970; font-size:15px; margin-bottom:26px; line-height:1.5; }
+  .hint b { color:#e8d9b5; }
+  h2 { font-size:20px; border-bottom:2px solid #3a342a; padding-bottom:6px; margin:34px 0 14px; }
+  .row { display:flex; flex-wrap:wrap; gap:18px; }
+  .card { background:#1e1a15; border:1px solid #3a342a; border-radius:10px; padding:14px; width:560px; }
+  .card h3 { margin:0 0 2px; font-size:22px; color:#f3e6c2; }
+  .card h3 .id { background:#5a1f1f; color:#fff; padding:2px 10px; border-radius:6px; margin-right:8px; font-family:Consolas,monospace; }
+  .meta { color:#a89970; font-size:13px; margin-bottom:10px; }
+  .meta .anim { color:#c9a24b; }
+  .pair { display:flex; gap:10px; }
+  .pair > div { flex:1; }
+  .pair .label { font-size:12px; color:#8a7c5a; text-transform:uppercase; letter-spacing:1px; margin-bottom:4px; }
+  img, video { width:100%; border-radius:6px; display:block; background:#000; }
+  .note { width:100%; box-sizing:border-box; margin-top:10px; background:#14120f; color:#f3e6c2;
+          border:1px dashed #6b5d3a; border-radius:6px; padding:10px; font-family:Georgia,serif;
+          font-size:15px; min-height:52px; }
+  .note:focus { border-color:#c9a24b; outline:none; }
+  .copybar { position:sticky; top:0; z-index:9; background:#14120f; padding:10px 0; }
+  .copybar button { background:#5a1f1f; color:#fff; border:none; border-radius:8px;
+          padding:12px 22px; font-size:17px; font-family:Georgia,serif; cursor:pointer; }
+  .copybar button:hover { background:#7a2a2a; }
+  .copybar .status { margin-left:12px; color:#8fbf6f; font-size:15px; }
+  #summary { width:100%; box-sizing:border-box; margin-top:10px; background:#1e1a15; color:#e8d9b5;
+          border:1px solid #3a342a; border-radius:6px; padding:10px; font-family:Consolas,monospace;
+          font-size:14px; min-height:80px; display:none; }
+</style>
+</head>
+<body>
+<h1>Redo picker — every panel: STILL next to its ANIMATION</h1>
+<div class="hint">
+  Type your note in the box under any panel — start with <b>STILL</b>, <b>ANIMATION</b>, or <b>BOTH</b>, then what's wrong.<br>
+  Leave a box empty = keep that panel. Notes save themselves as you type.<br>
+  When done, press <b>Copy my notes</b> and paste into the chat.<br>
+  Rough redo cost each: still ≈ $0.50 · Seedance clip ≈ $0.36 · Kling clip ≈ $1.13 (a redone still needs its clip redone too).
+</div>
+<div class="copybar">
+  <button onclick="copyNotes()">📋 Copy my notes</button><span class="status" id="copystatus"></span>
+  <textarea id="summary" readonly></textarea>
+</div>
+
+<h2>PAGE 1 — the seeker at the night door (2 panels)</h2>
+<div class="row">
+  <div class="card"><h3><span class="id">p1a</span>night door</h3>
+    <div class="meta">animation: <span class="anim">Seedance</span></div>
+    <div class="pair"><div><div class="label">Still</div><img src="stills/p1a_night_door.png"></div>
+    <div><div class="label">Animation</div><video src="clips/p1a.mp4" autoplay muted loop controls playsinline></video></div></div></div>
+  <div class="card"><h3><span class="id">p1b</span>hesitant hand</h3>
+    <div class="meta">animation: <span class="anim">Seedance</span></div>
+    <div class="pair"><div><div class="label">Still</div><img src="stills/p1b_hesitant_hand.png"></div>
+    <div><div class="label">Animation</div><video src="clips/p1b.mp4" autoplay muted loop controls playsinline></video></div></div></div>
+</div>
+
+<h2>PAGE 2 — leaning at the door / Jesus speaks (3 panels)</h2>
+<div class="row">
+  <div class="card"><h3><span class="id">p2a</span>rehearsing</h3>
+    <div class="meta">animation: <span class="anim">Seedance</span></div>
+    <div class="pair"><div><div class="label">Still</div><img src="stills/p2a_rehearsing.png"></div>
+    <div><div class="label">Animation</div><video src="clips/p2a.mp4" autoplay muted loop controls playsinline></video></div></div></div>
+  <div class="card"><h3><span class="id">p2b</span>jesus speaks</h3>
+    <div class="meta">animation: <span class="anim">Seedance</span></div>
+    <div class="pair"><div><div class="label">Still</div><img src="stills/p2b_jesus_speaks.png"></div>
+    <div><div class="label">Animation</div><video src="clips/p2b.mp4" autoplay muted loop controls playsinline></video></div></div></div>
+  <div class="card"><h3><span class="id">p2c</span>light line under the door</h3>
+    <div class="meta">animation: <span class="anim">Seedance</span></div>
+    <div class="pair"><div><div class="label">Still</div><img src="stills/p2c_light_line.png"></div>
+    <div><div class="label">Animation</div><video src="clips/p2c.mp4" autoplay muted loop controls playsinline></video></div></div></div>
+</div>
+
+<h2>PAGE 3 — the John 6:37 pivot (2x2 grid)</h2>
+<div class="row">
+  <div class="card"><h3><span class="id">panel_b</span>opening the door</h3>
+    <div class="meta">animation: <span class="anim">Kling</span> (re-rolled once already — first try invented the door opening)</div>
+    <div class="pair"><div><div class="label">Still</div><img src="../rung1/stills/panel_b_door.png"></div>
+    <div><div class="label">Animation</div><video src="clips/panel_b.mp4" autoplay muted loop controls playsinline></video></div></div></div>
+  <div class="card"><h3><span class="id">panel_a</span>jesus portrait</h3>
+    <div class="meta">animation: <span class="anim">Seedance</span> (from rung 1, as used in the film)</div>
+    <div class="pair"><div><div class="label">Still</div><img src="../rung1/stills/panel_a_jesus.png"></div>
+    <div><div class="label">Animation</div><video src="../rung1/clips/extended/panel_a.mp4" autoplay muted loop controls playsinline></video></div></div></div>
+  <div class="card"><h3><span class="id">panel_c</span>the scroll ledger</h3>
+    <div class="meta">animation: <span class="anim">Seedance</span></div>
+    <div class="pair"><div><div class="label">Still</div><img src="../rung1/stills/panel_c_ledger.png"></div>
+    <div><div class="label">Animation</div><video src="clips/panel_c.mp4" autoplay muted loop controls playsinline></video></div></div></div>
+  <div class="card"><h3><span class="id">panel_d</span>at the threshold</h3>
+    <div class="meta">animation: <span class="anim">Kling</span></div>
+    <div class="pair"><div><div class="label">Still</div><img src="../rung1/stills/panel_d_threshold.png"></div>
+    <div><div class="label">Animation</div><video src="clips/panel_d.mp4" autoplay muted loop controls playsinline></video></div></div></div>
+</div>
+
+<h2>PAGE 4 — no man is turned away (3 panels)</h2>
+<div class="row">
+  <div class="card"><h3><span class="id">p4a</span>turning away</h3>
+    <div class="meta">animation: <span class="anim">Seedance</span></div>
+    <div class="pair"><div><div class="label">Still</div><img src="stills/p4a_turning_away.png"></div>
+    <div><div class="label">Animation</div><video src="clips/p4a.mp4" autoplay muted loop controls playsinline></video></div></div></div>
+  <div class="card"><h3><span class="id">p4b</span>open hands of light</h3>
+    <div class="meta">animation: <span class="anim">Seedance</span></div>
+    <div class="pair"><div><div class="label">Still</div><img src="stills/p4b_open_hands.png"></div>
+    <div><div class="label">Animation</div><video src="clips/p4b.mp4" autoplay muted loop controls playsinline></video></div></div></div>
+  <div class="card"><h3><span class="id">p4c</span>empty doorway</h3>
+    <div class="meta">animation: <span class="anim">Seedance</span></div>
+    <div class="pair"><div><div class="label">Still</div><img src="stills/p4c_empty_doorway.png"></div>
+    <div><div class="label">Animation</div><video src="clips/p4c.mp4" autoplay muted loop controls playsinline></video></div></div></div>
+</div>
+
+<h2>PAGE 5 — the welcome (3 panels, landing page)</h2>
+<div class="row">
+  <div class="card"><h3><span class="id">p5a</span>the welcome</h3>
+    <div class="meta">animation: <span class="anim">Kling</span></div>
+    <div class="pair"><div><div class="label">Still</div><img src="stills/p5a_the_welcome.png"></div>
+    <div><div class="label">Animation</div><video src="clips/p5a.mp4" autoplay muted loop controls playsinline></video></div></div></div>
+  <div class="card"><h3><span class="id">p5b</span>the record received</h3>
+    <div class="meta">animation: <span class="anim">Seedance</span></div>
+    <div class="pair"><div><div class="label">Still</div><img src="stills/p5b_record_received.png"></div>
+    <div><div class="label">Animation</div><video src="clips/p5b.mp4" autoplay muted loop controls playsinline></video></div></div></div>
+  <div class="card"><h3><span class="id">p5c</span>never locked</h3>
+    <div class="meta">animation: <span class="anim">Seedance</span></div>
+    <div class="pair"><div><div class="label">Still</div><img src="stills/p5c_never_locked.png"></div>
+    <div><div class="label">Animation</div><video src="clips/p5c.mp4" autoplay muted loop controls playsinline></video></div></div></div>
+</div>
+<script>
+// add a self-saving note box to every card
+document.querySelectorAll('.card').forEach(function (card) {
+  var id = card.querySelector('h3 .id').textContent.trim();
+  var name = card.querySelector('h3').textContent.replace(id, '').trim();
+  var ta = document.createElement('textarea');
+  ta.className = 'note';
+  ta.placeholder = 'note for ' + id + ' — e.g. BOTH — hand looks wrong';
+  ta.dataset.id = id;
+  ta.dataset.name = name;
+  ta.value = localStorage.getItem('redo_' + id) || '';
+  ta.addEventListener('input', function () { localStorage.setItem('redo_' + id, ta.value); });
+  card.appendChild(ta);
+});
+
+function copyNotes() {
+  var lines = [];
+  document.querySelectorAll('.note').forEach(function (ta) {
+    if (ta.value.trim()) lines.push(ta.dataset.id + ' (' + ta.dataset.name + '): ' + ta.value.trim());
+  });
+  var text = lines.length ? 'REDO NOTES:\n' + lines.join('\n') : '(no notes yet — all boxes are empty)';
+  var box = document.getElementById('summary');
+  box.style.display = 'block';
+  box.value = text;
+  box.select();
+  var status = document.getElementById('copystatus');
+  try {
+    navigator.clipboard.writeText(text).then(
+      function () { status.textContent = 'Copied! Now paste into the chat.'; },
+      function () { document.execCommand('copy'); status.textContent = 'Copied (select shown below too).'; });
+  } catch (e) {
+    document.execCommand('copy');
+    status.textContent = 'Text is selected below — press Ctrl+C, then paste into the chat.';
+  }
+}
+</script>
+</body>
+</html>

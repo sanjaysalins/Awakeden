@@ -406,7 +406,11 @@ VISUAL_STYLE_TAIL = (
 # ships — graphic_novel is the standard now, default flipped accordingly.
 # Baroque stays selectable only for one-off reference/back-compat renders via
 # an explicit VISUAL_STYLE=baroque override.
-# Style versions: "baroque" (LEGACY oil-painting, never ships) | "graphic_novel" (standard).
+# Style versions: "baroque" (LEGACY oil-painting, never ships) | "graphic_novel" (standard) |
+# "retro" (PARKED — Awakeden Comic DNA, v2/AWAKEDEN_COMIC_DNA.md; rejected by the user 2026-07-24) |
+# "painted_comic" (PROVISIONAL 2026-07-24 — .claude/skills/painted-comic/PAINTED_COMIC_SPEC.md §10;
+# an ad-hoc bake-off preference for EW01, not yet run through this registry path or given the
+# user's final sign-off — see the 2026-07-24 independent review before treating as settled).
 # ----------------------------------------------------------------------------
 VISUAL_STYLE = os.getenv("VISUAL_STYLE", "graphic_novel").strip().lower()
 
@@ -445,6 +449,51 @@ STYLE_AUDIT_RUBRIC = {
         "first-century Judeans, reverent not sensational. When in doubt on tone, "
         "FAIL.\n\n"
     ),
+    "retro": (
+        "7. **Style fidelity, period authenticity & reverent tone (CHECK THIS "
+        "EXPLICITLY).** The image must read as a VINTAGE 1960s SILVER AGE COMIC "
+        "BOOK illustration of the ANCIENT biblical world: bold black ink holding "
+        "lines, flat limited four-colour comic colour with no gradients, clearly "
+        "visible coarse Ben-Day halftone dots in skies/shadows, a warm cream "
+        "palette. FAIL (passed:false) on any of: a smooth modern digital-illustration "
+        "look with no visible Ben-Day dots or ink holding lines; an OIL-PAINTING / "
+        "painterly-brushstroke look (that is the OLD baroque style, wrong for "
+        "this piece); a soft cel-shaded / cinematic-manga look with no dot "
+        "texture (that is the OLD graphic_novel style, wrong for this piece); a "
+        "PHOTOREALISTIC or glossy 3D-render look; faces/hair/grooming/clothing "
+        "that look like MODERN contemporary people rather than ancient "
+        "Near-Eastern figures; a physical printed PAGE composition (a black "
+        "border/rule + cream margin around the art) rather than full-bleed art "
+        "filling the frame; a HORROR-film tone — lurid gore, zombie/corpse-horror, "
+        "ghoulish or grotesque faces; or an NSFW feel — a gratuitously sexualised "
+        "pose or exposure beyond a modest loincloth. The figures must read as "
+        "ancient first-century Judeans, reverent not sensational. When in doubt "
+        "on tone, FAIL.\n\n"
+    ),
+    "painted_comic": (
+        "7. **Style fidelity, period authenticity & reverent tone (CHECK THIS "
+        "EXPLICITLY).** The image must read as a bold INKED GRAPHIC-NOVEL "
+        "ILLUSTRATION: heavy black ink linework, dry-brush painterly texture, "
+        "dramatic single-key chiaroscuro lighting, rich full natural colour. "
+        "FAIL (passed:false) on any of: a smooth airbrushed / photoreal / "
+        "3D-render look with no visible ink linework; a flat comic-book "
+        "primary-colour look with Ben-Day dots or CMYK misregistration (that "
+        "is a DIFFERENT style, wrong for this piece); faces/hair/grooming/"
+        "clothing that look like MODERN contemporary people rather than "
+        "ancient Near-Eastern figures; on any PASSION-beat Christ (cross / "
+        "scourging / suffering) an idealized athletic, heroic or defined-"
+        "muscle body — Christ must read marred, gaunt and sorrowful, per "
+        "Isaiah 53 (a full robe covering the torso is the practical technique "
+        "that has reliably avoided this on a small sample so far — see "
+        "PAINTED_COMIC_SPEC.md §10 — but the actual FAIL criterion is "
+        "idealized/heroic musculature, not bare skin per se: a genuinely "
+        "gaunt, non-toned bare torso should still PASS); a HORROR-film tone — "
+        "lurid gore, zombie/corpse-horror, ghoulish or grotesque faces; or an "
+        "NSFW feel — a gratuitously sexualised pose or exposure beyond a "
+        "modest robe/loincloth. The figures must read as ancient "
+        "first-century Judeans, reverent not sensational. When in doubt on "
+        "tone, FAIL.\n\n"
+    ),
 }
 
 # Short human-readable name of the required medium, spliced into the audit's
@@ -452,6 +501,8 @@ STYLE_AUDIT_RUBRIC = {
 STYLE_MEDIUM_PHRASE = {
     "baroque": "reverent, period-authentic Baroque devotional painting",
     "graphic_novel": "reverent, period-authentic inked biblical graphic-novel illustration",
+    "retro": "reverent, period-authentic vintage 1960s retro-comic illustration",
+    "painted_comic": "reverent, period-authentic painted-comic ink illustration",
 }
 
 # Graphic-novel style prompt halves (mirror the validated EW04 POC look). Used by
@@ -467,6 +518,64 @@ VISUAL_STYLE_TAIL_GN = (
     "visible ink lines, no oil-painting brushstrokes, not photorealistic, not a "
     "glossy 3D render, not soft airbrushed anime, no text, no lettering, no "
     "panels, no speech bubbles, no watermark --ar 9:16"
+)
+
+# ----------------------------------------------------------------------------
+# Retro-comic DNA style prompt halves (v2/AWAKEDEN_COMIC_DNA.md §1, PILOT
+# recipe). Ported verbatim from the proven ad-hoc test scripts
+# (longform/EW01_Two_Goats/_retro_dna/_hook_splash.py, _seedream_ref.py,
+# _aaron_ref.py — the FIXED versions, post border-defect finding). Deliberately
+# does NOT say "printed on newsprint" / "no panel borders" — naming the
+# physical-page object (even to forbid it) drew an actual bordered page on 2
+# separate renders; the fix is positive full-bleed phrasing instead
+# (seedream-no-negative-channel). No "--ar" suffix — HFProvider.ASPECT /
+# --aspect_ratio controls aspect, the old baroque/GN tails' "--ar 9:16" is
+# vestigial for this CLI.
+# ----------------------------------------------------------------------------
+VISUAL_STYLE_BASE_RETRO = (
+    "Vintage 1960s Silver Age comic book illustration style, bold black ink "
+    "holding lines, flat limited four-colour comic colour with NO gradients, "
+    "clearly visible coarse Ben-Day halftone dots in the sky and shadows, "
+    "slight CMYK misregistration, warm cream colour palette,"
+)
+VISUAL_STYLE_TAIL_RETRO = (
+    "reverent, ancient Near-Eastern period-accurate, a full-bleed digital "
+    "illustration filling the entire canvas edge-to-edge, no text, no "
+    "lettering, no captions, no speech balloons, no title box, no watermark, "
+    "no gore, no modern items"
+)
+
+# ----------------------------------------------------------------------------
+# Painted-comic style prompt halves (.claude/skills/painted-comic/
+# PAINTED_COMIC_SPEC.md — bold ink + dry-brush + single-key chiaroscuro over
+# NBP nano_banana_pro, chained character refs). Originally prototyped on
+# Noah's Ark (ArkAIology); trialled on EW01 Two Goats 2026-07-24 in an ad-hoc
+# bake-off (§10 of the spec, NOT yet a full-episode pilot) after the "retro"
+# Ben-Day-dot direction above was tried and rejected by the user for reading
+# like a printed comic page rather than a premium illustration. FULL rich
+# colour throughout, not the original Noah-era "muted earth base + one
+# accent" rule (§2.3) — §10 records this as a same-day, small-sample (2
+# subjects) preference finding, NOT a validated replacement for §2.3; the
+# two sections currently disagree and haven't been reconciled (see the
+# 2026-07-24 independent review, `.claude/skills/painted-comic/
+# _independent_review/20260724-141235/`). No "--ar" suffix, same reasoning
+# as retro (the CLI --aspect_ratio flag controls it, not text in the prompt).
+# ----------------------------------------------------------------------------
+VISUAL_STYLE_BASE_PAINTED_COMIC = (
+    "Bold inked biblical graphic-novel illustration: heavy confident black "
+    "ink linework and dry-brush texture over rich painting, dramatic single "
+    "strong key light with deep chiaroscuro shadow, a premium comic-cover "
+    "finish. Non-photoreal, not smooth airbrushed, not a 3D render, no "
+    "halftone dots, no vintage newsprint,"
+)
+VISUAL_STYLE_TAIL_PAINTED_COMIC = (
+    "no text, no lettering, no numbers, no captions, no speech balloons, no "
+    "title box, no page margin, no gutter line, no panel border, no logo, no "
+    "watermark, no photoreal live-action, no smooth 3D render, no halftone "
+    "dots, no modern machinery, clothing or tools, no gore. Render in full "
+    "rich natural colour throughout, painterly and reverent, not flat or "
+    "garish, not a comic-book primary-colour look, no Ben-Day dots, no CMYK "
+    "misregistration"
 )
 
 # ----------------------------------------------------------------------------
@@ -491,6 +600,31 @@ STYLE_REGISTRY = {
         "anim_model": ("hf", "cinematic_studio_video_v2"),
         "audit_rubric": STYLE_AUDIT_RUBRIC["graphic_novel"],
         "audit_medium": STYLE_MEDIUM_PHRASE["graphic_novel"],
+    },
+    "retro": {                                    # PARKED 2026-07-24: Awakeden Comic DNA v0.3 (v2/AWAKEDEN_COMIC_DNA.md)
+        "style_base": VISUAL_STYLE_BASE_RETRO,    # -- rejected by the user in favour of "painted_comic" below (read
+        "style_tail": VISUAL_STYLE_TAIL_RETRO,    #    too much like a printed comic page); left wired, not deleted.
+        "still_model": ("hf", "seedream_v4_5"),   # neutral plates; character scenes override to nano_banana_pro + ref
+        "anim_model": ("hf", "seedance1_5"),      # calm-scene default; action/crowd scenes override to kling3_0
+        "audit_rubric": STYLE_AUDIT_RUBRIC["retro"],
+        "audit_medium": STYLE_MEDIUM_PHRASE["retro"],
+    },
+    # PROVISIONAL 2026-07-24 — EW01 ad-hoc bake-off preference (.claude/skills/painted-comic/
+    # PAINTED_COMIC_SPEC.md §9/§10), NOT yet proven equivalent to the ad-hoc tests that produced
+    # the evidence: assemble_final_prompt()'s shape ({base} {subject}, {mood} {tail}) differs from
+    # the tested recipe's "<STYLE> Compose this frame: <SHOT> <AVOID> + MATCH" shape (caught by the
+    # 2026-07-24 independent review, `.claude/skills/painted-comic/_independent_review/
+    # 20260724-141235/`). No ref-map/character-chain convention in this entry either — still_model/
+    # anim_model are transcribed from the ad-hoc scripts, not independently re-verified through this
+    # dict. Run one real render via VISUAL_STYLE=painted_comic through the actual pipeline before
+    # calling this equivalent to what was tested.
+    "painted_comic": {
+        "style_base": VISUAL_STYLE_BASE_PAINTED_COMIC,
+        "style_tail": VISUAL_STYLE_TAIL_PAINTED_COMIC,
+        "still_model": ("hf", "nano_banana_pro"),
+        "anim_model": ("hf", "seedance1_5"),
+        "audit_rubric": STYLE_AUDIT_RUBRIC["painted_comic"],
+        "audit_medium": STYLE_MEDIUM_PHRASE["painted_comic"],
     },
 }
 
@@ -531,6 +665,13 @@ VISUAL_BANNED_TOKENS = (
     # negation-prone words like 'lettering'/'flag'/'panel' stay out of this substring check
     # and are covered by the constitution rules + the vision gate F1-F5 instead).
     "diptych", "triptych", "gem", "jewel", "faceted", "glossy bead",
+    # AWAKEDEN COMIC DNA §5a passion-Christ body gate (2026-07-23) — "servant register only,
+    # NO heroic/athletic musculature" was Vision-only prose with no deterministic teeth; the
+    # 2026-07-23 external panel caught these tokens missing from this list. Safe to add here
+    # (SP-G5 lints the SCENE-PLAN TEXT pre-render + the Vision audit checks the RENDERED image
+    # post-render — neither path feeds these words into the generation prompt itself, so this
+    # does not risk the seedream-no-negative-channel trap).
+    "muscular", "heroic", "athletic", "six-pack", "v-taper", "bodybuilder",
 )
 
 

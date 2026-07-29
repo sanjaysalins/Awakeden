@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Elevating the graphic-comic-strip style — 6 POCs</title>
+<style>
+  body { background:#1a140f; color:#f0e6d2; font-family: Georgia, serif; padding: 30px; max-width: 1000px; margin: auto; }
+  h1 { color:#c8a24a; font-size: 26px; }
+  h2 { color:#e9c877; font-size: 21px; margin-top: 46px; }
+  p { line-height: 1.55; }
+  video { width: 100%; max-width: 900px; border: 2px solid #4a3a28; border-radius: 6px; margin: 12px 0; background:#000; }
+  code { background:#2a2018; padding: 2px 6px; border-radius: 4px; }
+  .verdict { border-left: 4px solid #c4963e; padding: 8px 16px; margin: 12px 0; background:#241a12; }
+  .caveat  { border-left: 4px solid #8a4a3a; padding: 8px 16px; margin: 12px 0; background:#2a1712; }
+</style>
+</head>
+<body>
+
+<h1>Elevating the graphic-comic-strip animation — 6 small POCs, all tested on real Bronze Serpent footage</h1>
+<p>All $0, deterministic (PIL/Playwright/ffmpeg), no Higgsfield spend. Engine lives in
+<code>panel_animator/</code> alongside the typography/infographic panel skills.</p>
+
+<h2>1. Ink-bleed / brush-wipe transitions</h2>
+<p>Instead of a hard cut between panels, an organic noise-field reveal (not a generic crossfade)
+lets clip B bleed through clip A along a mottled ink-like edge. Two variants: an organic "blot"
+(ink dropped on wet paper) and a directional "wipe" (brush stroke sweep).</p>
+<video controls src="01_ink_bleed_transition_blot.mp4"></video>
+<video controls src="01_ink_bleed_transition_wipe.mp4"></video>
+<div class="verdict"><b>Verdict:</b> works well, genuinely reads as ink not a video dissolve.
+Reusable engine: <code>panel_animator/ink_transition.py</code>.</div>
+
+<h2>2. Hand-drawn ink "impact" burst, synced to the exact hit moment</h2>
+<p>A jagged comic-book impact star + speed lines, composited exactly at the bite point on a real
+clip. In production the hit timestamp would come from the same forced-aligned SFX timing already
+driving your captions/SFX beds.</p>
+<video controls src="02_impact_burst_sfx_sync.mp4"></video>
+<div class="verdict"><b>Verdict:</b> strongest new capability of the six — this comic-book vocabulary
+(motion lines, impact stars) doesn't exist anywhere in the current pipeline. Engine:
+<code>panel_animator/impact_burst.py</code>.</div>
+
+<h2>3. Halftone + print-texture grade pass</h2>
+<p>A subtle 45-degree dot screen (multiply-blended, so it reads in shadow/midtone, not flat),
+a whisper of CMYK-style channel misregistration, and light film grain — the difference between
+"nice 2D illustration" and "looks like an actual printed comic."</p>
+<video controls src="03_halftone_print_grade.mp4"></video>
+<div class="verdict"><b>Verdict:</b> cheap enough to be an always-on final pass over every finished
+clip. Tuned down from the first attempt (2px fringe read as a glitch) to 1px + lower opacity.
+Engine: <code>panel_animator/print_grade.py</code>.</div>
+
+<h2>4. Line-boil (per-frame ink jitter)</h2>
+<p>A very small smooth (not random-flicker) wobble — sub-pixel translate + a fraction of a degree
+rotation — so a clip reads as hand-inked frame-by-frame animation rather than a computer-locked
+render. This is a motion-only effect: judge it by playing the clip, a single still frame won't show it.</p>
+<video controls src="04_line_boil_jitter.mp4"></video>
+<div class="verdict"><b>Verdict:</b> geometry verified clean (no exposed edges from the
+rotate+crop), no visible artifacts. Counterintuitive but real: imperfection reads as MORE premium,
+not less. Engine: <code>panel_animator/line_boil.py</code>.</div>
+
+<h2>5. 2.5D parallax depth (cheaper alternative to a generated push-in)</h2>
+<p><code>rembg</code> pulls the nearest salient subject (here: the hand + snake) off the still as
+its own layer with alpha; it drifts at a different rate than the base plate underneath, giving real
+depth instead of a flat push.</p>
+<video controls src="05_parallax_25d.mp4"></video>
+<div class="verdict"><b>Verdict:</b> works, subtle but real separation, no visible seams at this
+motion amplitude. Best suited to calm/held panels as a $0 alternative to a generated push-in clip,
+not a replacement for action panels. Engine: <code>panel_animator/parallax_25d.py</code>.</div>
+
+<h2>6. Camera choreography across a live grid</h2>
+<p>A virtual "page camera" racks focus toward whichever of 4 panels currently holds attention
+(brighten + slight push), dims the other three, and smoothly carries on to the next — tested on a
+synthetic 2x2 grid built from 4 real clips.</p>
+<video controls src="06_grid_camera_choreography.mp4"></video>
+<div class="caveat"><b>Honest caveat found during testing:</b> scene 3 ("the LORD sent fiery
+serpents") is intentionally dusk/blue-toned by design — even at full "spotlight" brightness it can
+still look dimmer than a bright noon scene sitting at reduced brightness. The choreography math is
+correct (relative brightness modulation), but a genuinely convincing "spotlight" read may need
+exposure-matching across panels with very different baseline lighting first. Worth knowing before
+leaning on this for a real cut. Engine: <code>panel_animator/grid_choreography.py</code>.</div>
+
+<hr style="margin:44px 0; border-color:#3a2e22;">
+<p style="color:#8a7a5c;">All six scripts are standalone and reusable right now from
+<code>panel_animator/</code> — none of them are wired into a <code>/skill</code> yet (unlike
+<code>/typography-panel</code> and <code>/infographic-panel</code>). Say the word if you want any of
+these turned into a proper skill next.</p>
+
+</body>
+</html>

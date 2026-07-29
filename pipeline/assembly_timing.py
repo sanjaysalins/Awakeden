@@ -56,10 +56,12 @@ def _parse_tagged_chunks(tagged_md: Path) -> list[tuple[str, str]]:
     """Parse narration-tagged.md into ordered (speaker, text) chunks. Narrator
     text is everything outside <speaker> tags, with [emotion] tags stripped."""
     raw = tagged_md.read_text(encoding="utf-8")
-    lines = [
-        ln for ln in raw.splitlines()
-        if ln.strip() and not ln.strip().startswith("<!--")
-    ]
+    # Strip whole HTML comment blocks, including multi-line ones — a
+    # startswith("<!--") line filter lets continuation lines of a multi-line
+    # comment leak into the "spoken" text (caught by the comic-page Rung 0
+    # dry-run on Bronze Serpent: 68 junk tokens fed to alignment).
+    raw = re.sub(r"<!--.*?-->", " ", raw, flags=re.S)
+    lines = [ln for ln in raw.splitlines() if ln.strip()]
     full = " ".join(lines)
     full = _BRACKET_TAG_RE.sub(" ", full)
     chunks: list[tuple[str, str]] = []

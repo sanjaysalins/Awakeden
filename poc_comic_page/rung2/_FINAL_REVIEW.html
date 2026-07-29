@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>IN NO WISE CAST OUT — Comic Page Rung 2 Final Review</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    background: #14120f;
+    color: #e9e2d3;
+    font-family: Georgia, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0 0 80px;
+  }
+  header {
+    padding: 28px 24px 18px;
+    border-bottom: 1px solid #3a352c;
+    background: linear-gradient(180deg, #1c1912, #14120f);
+  }
+  header h1 {
+    margin: 0 0 6px;
+    font-size: 1.6rem;
+    letter-spacing: 0.04em;
+    color: #f3e6c4;
+  }
+  header .sub {
+    color: #a99f8a;
+    font-size: 0.92rem;
+  }
+  header .ref {
+    color: #c9a24a;
+    font-style: italic;
+  }
+  main {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  section {
+    margin-top: 46px;
+  }
+  h2 {
+    font-size: 1.15rem;
+    color: #f3e6c4;
+    border-bottom: 1px solid #3a352c;
+    padding-bottom: 8px;
+    letter-spacing: 0.03em;
+  }
+  h3 {
+    color: #cbbf9e;
+    font-size: 0.98rem;
+    margin-bottom: 6px;
+  }
+  .hero-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 6px;
+  }
+  video {
+    background: #000;
+    display: block;
+    max-width: 100%;
+  }
+  .hero-wrap video {
+    width: 340px;
+    max-width: 90vw;
+    border: 1px solid #4a4436;
+    border-radius: 4px;
+  }
+  .hero-caption {
+    text-align: center;
+    color: #a99f8a;
+    font-size: 0.85rem;
+    margin-top: 10px;
+  }
+  .pages-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+  .page-card {
+    width: 190px;
+    background: #1c1912;
+    border: 1px solid #3a352c;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  .page-card video {
+    width: 100%;
+    border-radius: 2px;
+  }
+  .page-card .cap {
+    margin-top: 8px;
+    font-size: 0.78rem;
+    color: #b9ae95;
+    line-height: 1.4;
+  }
+  .page-card .cap b {
+    color: #e9e2d3;
+  }
+  .qc-block {
+    margin-bottom: 30px;
+  }
+  .qc-strip {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+  }
+  .qc-strip img {
+    height: 180px;
+    border: 1px solid #3a352c;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+  .qc-strip .frame-cell {
+    text-align: center;
+  }
+  .qc-strip .frame-cell .lbl {
+    font-size: 0.68rem;
+    color: #8c8370;
+    margin-top: 3px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.84rem;
+    margin-top: 10px;
+  }
+  th, td {
+    text-align: left;
+    padding: 6px 10px;
+    border-bottom: 1px solid #2c281f;
+  }
+  th {
+    color: #cbbf9e;
+    font-weight: normal;
+    border-bottom: 1px solid #4a4436;
+  }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  tr.total-row td {
+    border-top: 2px solid #4a4436;
+    font-weight: bold;
+    color: #f3e6c4;
+  }
+  .status-PASS { color: #7fbf7f; }
+  .status-WARN { color: #d9b25a; }
+  .status-FAIL-static { color: #d97a6a; font-weight: bold; }
+  .scroll-table {
+    max-height: 520px;
+    overflow-y: auto;
+    border: 1px solid #2c281f;
+  }
+  .scroll-table table { margin-top: 0; }
+  .scroll-table thead th {
+    position: sticky;
+    top: 0;
+    background: #1c1912;
+  }
+  .buildlog {
+    background: #1c1912;
+    border: 1px solid #3a352c;
+    border-radius: 4px;
+    padding: 16px 20px;
+  }
+  .buildlog .step {
+    margin-bottom: 16px;
+  }
+  .buildlog .step .name {
+    color: #f3e6c4;
+    font-weight: bold;
+    margin-bottom: 3px;
+  }
+  .buildlog .step .detail {
+    color: #b9ae95;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+  .buildlog .step .ok { color: #7fbf7f; }
+  .buildlog .step .warn { color: #d9b25a; }
+  .footer-note {
+    max-width: 1180px;
+    margin: 60px auto 0;
+    padding: 18px 24px;
+    border-top: 1px solid #3a352c;
+    color: #8c8370;
+    font-size: 0.82rem;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>IN NO WISE CAST OUT — Comic Page Rung 2, Final Build</h1>
+  <div class="sub">John 6:37 · Comic Page Pipeline POC · Rung 2 final assembly review — built <span class="ref">2026-07-26</span></div>
+  <div class="sub">This is a build-verification page. Every step below was run and probed with ffprobe. The supervisor still needs to do the eye pass before this is called done.</div>
+</header>
+
+<main>
+
+<section id="hero">
+  <h2>Final cut</h2>
+  <div class="hero-wrap">
+    <video controls preload="metadata" poster="">
+      <source src="IN_NO_WISE_comic_v1.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-caption">IN_NO_WISE_comic_v1.mp4 — 1080×1920, 57.708s (video 57.667s / audio 57.708s), watermarked, narration.mp3 apad-filled tail</div>
+</section>
+
+<section id="pages">
+  <h2>The 5 pages</h2>
+  <div class="pages-row">
+    <div class="page-card">
+      <video controls preload="metadata"><source src="page1_composite.mp4" type="video/mp4"></video>
+      <div class="cap"><b>Page 1</b> — layout 2v<br>dwell 10.08s (no text overlay)</div>
+    </div>
+    <div class="page-card">
+      <video controls preload="metadata"><source src="page2_with_text.mp4" type="video/mp4"></video>
+      <div class="cap"><b>Page 2</b> — layout 3-big-left<br>dwell 10.96s · "JOHN 6:37" 8.60–10.96s</div>
+    </div>
+    <div class="page-card">
+      <video controls preload="metadata"><source src="page3_with_text.mp4" type="video/mp4"></video>
+      <div class="cap"><b>Page 3</b> — layout 2x2<br>dwell 12.10s · "JOHN 6:37" 0.2–4.525s + "IN NO WISE" 5.02–7.55s</div>
+    </div>
+    <div class="page-card">
+      <video controls preload="metadata"><source src="page4_composite.mp4" type="video/mp4"></video>
+      <div class="cap"><b>Page 4</b> — layout 3-big-left<br>dwell 10.64s (no text overlay)</div>
+    </div>
+    <div class="page-card">
+      <video controls preload="metadata"><source src="page5_with_text.mp4" type="video/mp4"></video>
+      <div class="cap"><b>Page 5</b> — layout 3-big-top<br>dwell 13.90s · "COME" 1.52–5.86s</div>
+    </div>
+  </div>
+</section>
+
+<section id="qc">
+  <h2>QC frame strips (start / quarter / mid / three-quarter / end)</h2>
+
+  <div class="qc-block">
+    <h3>IN_NO_WISE_comic_v1.mp4 (final)</h3>
+    <div class="qc-strip">
+      <div class="frame-cell"><img src="clips/_frames/IN_NO_WISE_comic_v1/start_t0.00.png"><div class="lbl">start · t0.00</div></div>
+      <div class="frame-cell"><img src="clips/_frames/IN_NO_WISE_comic_v1/quarter_t14.43.png"><div class="lbl">quarter · t14.43</div></div>
+      <div class="frame-cell"><img src="clips/_frames/IN_NO_WISE_comic_v1/mid_t28.85.png"><div class="lbl">mid · t28.85</div></div>
+      <div class="frame-cell"><img src="clips/_frames/IN_NO_WISE_comic_v1/three_quarter_t43.28.png"><div class="lbl">3/4 · t43.28</div></div>
+      <div class="frame-cell"><img src="clips/_frames/IN_NO_WISE_comic_v1/end_t56.55.png"><div class="lbl">end · t56.55</div></div>
+    </div>
+  </div>
+
+  <div class="qc-block">
+    <h3>page1_composite.mp4</h3>
+    <div class="qc-strip">
+      <div class="frame-cell"><img src="clips/_frames/page1_composite/start_t0.00.png"><div class="lbl">start · t0.00</div></div>
+      <div class="frame-cell"><img src="clips/_frames/page1_composite/quarter_t2.52.png"><div class="lbl">quarter · t2.52</div></div>
+      <div class="frame-cell"><img src="clips/_frames/page1_composite/mid_t5.03.png"><div class="lbl">mid · t5.03</div></div>
+      <div class="frame-cell"><img src="clips/_frames/page1_composite/three_quarter_t7.55.png"><div class="lbl">3/4 · t7.55</div></div>
+      <div class="frame-cell"><img src="clips/_frames/page1_composite/end_t9.87.png"><div class="lbl">end · t9.87</div></div>
+    </div>
+  </div>
+
+  <div class="qc-block">
+    <h3>page2_with_text.mp4</h3>
+    <div class="qc-strip">
+      <div class="frame-cell"><img src="clips/_frames/page2_with_text/start_t0.00.png"><div class="lbl">start · t0.00</div></div>
+      <div class="frame-cell"><img src="clips/_frames/page2_with_text/quarter_t2.73.png"><div class="lbl">quarter · t2.73</div></div>
+      <div class="frame-cell"><img src="clips/_frames/page2_with_text/mid_t5.47.png"><div class="lbl">mid · t5.47</div></div>
+      <div class="frame-cell"><img src="clips/_frames/page2_with_text/three_quarter_t8.20.png"><div class="lbl">3/4 · t8.20</div></div>
+      <div class="frame-cell"><img src="clips/_frames/page2_with_text/end_t10.71.png"><div class="lbl">end · t10.71</div></div>
+    </div>
+  </div>
+
+  <div class="qc-block">
+    <h3>page3_with_text.mp4</h3>
+    <div class="qc-strip">
+      <div class="frame-cell"><img src="clips/_frames/page3_with_text/start_t0.00.png"><div class="lbl">start · t0.00</div></div>
+      <div class="frame-cell"><img src="clips/_frames/page3_with_text/quarter_t3.02.png"><div class="lbl">quarter · t3.02</div></div>
+      <div class="frame-cell"><img src="clips/_frames/page3_with_text/mid_t6.05.png"><div class="lbl">mid · t6.05</div></div>
+      <div class="frame-cell"><img src="clips/_frames/page3_with_text/three_quarter_t9.07.png"><div class="lbl">3/4 · t9.07</div></div>
+      <div class="frame-cell"><img src="clips/_frames/page3_with_text/end_t11.86.png"><div class="lbl">end · t11.86</div></div>
+    </div>
+  </div>
+
+  <div class="qc-block">
+    <h3>page4_composite.mp4</h3>
+    <div class="qc-strip">
+      <div class="frame-cell"><img src="clips/_frames/page4_composite/start_t0.00.png"><div class="lbl">start · t0.00</div></div>
+      <div class="frame-cell"><img src="clips/_frames/page4_composite/quarter_t2.66.png"><div class="lbl">quarter · t2.66</div></div>
+      <div class="frame-cell"><img src="clips/_frames/page4_composite/mid_t5.32.png"><div class="lbl">mid · t5.32</div></div>
+      <div class="frame-cell"><img src="clips/_frames/page4_composite/three_quarter_t7.97.png"><div class="lbl">3/4 · t7.97</div></div>
+      <div class="frame-cell"><img src="clips/_frames/page4_composite/end_t10.42.png"><div class="lbl">end · t10.42</div></div>
+    </div>
+  </div>
+
+  <div class="qc-block">
+    <h3>page5_with_text.mp4</h3>
+    <div class="qc-strip">
+      <div class="frame-cell"><img src="clips/_frames/page5_with_text/start_t0.00.png"><div class="lbl">start · t0.00</div></div>
+      <div class="frame-cell"><img src="clips/_frames/page5_with_text/quarter_t3.48.png"><div class="lbl">quarter · t3.48</div></div>
+      <div class="frame-cell"><img src="clips/_frames/page5_with_text/mid_t6.95.png"><div class="lbl">mid · t6.95</div></div>
+      <div class="frame-cell"><img src="clips/_frames/page5_with_text/three_quarter_t10.43.png"><div class="lbl">3/4 · t10.43</div></div>
+      <div class="frame-cell"><img src="clips/_frames/page5_with_text/end_t13.62.png"><div class="lbl">end · t13.62</div></div>
+    </div>
+  </div>
+
+  <div class="qc-block">
+    <h3>Final-verify frames from the watermarked final (11 timestamps, for the supervisor's eye pass)</h3>
+    <div class="qc-strip">
+      <div class="frame-cell"><img src="clips/_frames/_final_verify/t2.png"><div class="lbl">t2</div></div>
+      <div class="frame-cell"><img src="clips/_frames/_final_verify/t8.png"><div class="lbl">t8</div></div>
+      <div class="frame-cell"><img src="clips/_frames/_final_verify/t12.png"><div class="lbl">t12</div></div>
+      <div class="frame-cell"><img src="clips/_frames/_final_verify/t18.png"><div class="lbl">t18</div></div>
+      <div class="frame-cell"><img src="clips/_frames/_final_verify/t25.png"><div class="lbl">t25</div></div>
+      <div class="frame-cell"><img src="clips/_frames/_final_verify/t32.png"><div class="lbl">t32</div></div>
+      <div class="frame-cell"><img src="clips/_frames/_final_verify/t38.png"><div class="lbl">t38</div></div>
+      <div class="frame-cell"><img src="clips/_frames/_final_verify/t45.png"><div class="lbl">t45</div></div>
+      <div class="frame-cell"><img src="clips/_frames/_final_verify/t50.png"><div class="lbl">t50</div></div>
+      <div class="frame-cell"><img src="clips/_frames/_final_verify/t55.png"><div class="lbl">t55</div></div>
+      <div class="frame-cell"><img src="clips/_frames/_final_verify/t57.5.png"><div class="lbl">t57.5</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="lint">
+  <h2>Freeze-lint results (CP-G8 draft gate)</h2>
+  <p style="color:#a99f8a; font-size:0.85rem;">Self-calibrated threshold: <b>0.5</b> (smallest threshold where the known-good clip panel_a.mp4 still PASSes and a static-PNG control clip FAILs). FAIL-static = static run &gt;2.0s. No clip failed. Two WARNs recorded below (static run &gt;0.8s but ≤2.0s) — both proceeded per the brief's instructions.</p>
+  <table>
+    <thead><tr><th>clip</th><th>result</th><th class="num">mean_diff</th><th class="num">worst_static_run_s</th><th>flagged_runs (s)</th></tr></thead>
+    <tbody>
+      <tr><td>panel_a.mp4 (rung1, pre-extended)</td><td class="status-PASS">PASS</td><td class="num">7.492</td><td class="num">0.0</td><td>—</td></tr>
+      <tr><td>p1a.mp4</td><td class="status-PASS">PASS</td><td class="num">2.872</td><td class="num">0.0</td><td>—</td></tr>
+      <tr><td>p1b.mp4</td><td class="status-PASS">PASS</td><td class="num">2.003</td><td class="num">0.0</td><td>—</td></tr>
+      <tr><td>p2a.mp4</td><td class="status-PASS">PASS</td><td class="num">3.913</td><td class="num">0.0</td><td>—</td></tr>
+      <tr><td>p2b.mp4</td><td class="status-PASS">PASS</td><td class="num">6.794</td><td class="num">0.0</td><td>—</td></tr>
+      <tr><td>p2c.mp4</td><td class="status-PASS">PASS</td><td class="num">1.171</td><td class="num">0.0</td><td>—</td></tr>
+      <tr><td>panel_b.mp4</td><td class="status-PASS">PASS</td><td class="num">1.659</td><td class="num">0.75</td><td>—</td></tr>
+      <tr><td>panel_c.mp4</td><td class="status-PASS">PASS</td><td class="num">3.625</td><td class="num">0.0</td><td>—</td></tr>
+      <tr><td>panel_d.mp4</td><td class="status-WARN">WARN</td><td class="num">1.222</td><td class="num">0.88</td><td>(9.38, 10.25)</td></tr>
+      <tr><td>p4a.mp4 <em>(re-roll v3, 2026-07-26)</em></td><td class="status-PASS">PASS</td><td class="num">0.716</td><td class="num">0.75</td><td>—</td></tr>
+      <tr><td>p4b.mp4</td><td class="status-PASS">PASS</td><td class="num">2.427</td><td class="num">0.0</td><td>—</td></tr>
+      <tr><td>p4c.mp4</td><td class="status-PASS">PASS</td><td class="num">2.363</td><td class="num">0.0</td><td>—</td></tr>
+      <tr><td>p5a.mp4</td><td class="status-PASS">PASS</td><td class="num">2.882</td><td class="num">0.25</td><td>—</td></tr>
+      <tr><td>p5b.mp4</td><td class="status-WARN">WARN</td><td class="num">2.111</td><td class="num">1.12</td><td>(11.5, 12.62)</td></tr>
+      <tr><td>p5c.mp4</td><td class="status-PASS">PASS</td><td class="num">1.778</td><td class="num">0.38</td><td>—</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="text-timing">
+  <h2>Text-timing table</h2>
+  <table>
+    <thead><tr><th>page</th><th>text</th><th>window (page-local)</th><th>aligned word it lands on</th></tr></thead>
+    <tbody>
+      <tr><td>page2</td><td>"JOHN 6:37"</td><td>8.60s – 10.96s</td><td>"All" (opens on "All that the Father giveth me...")</td></tr>
+      <tr><td>page3</td><td>"JOHN 6:37"</td><td>0.2s – 4.525s</td><td>reference card, not word-locked</td></tr>
+      <tr><td>page3</td><td>"IN NO WISE"</td><td>5.02s – 7.55s</td><td>standalone emphasis card — the "in no wise" phrase itself</td></tr>
+      <tr><td>page5</td><td>"COME"</td><td>1.52s – 5.86s</td><td>first "come" of "So come" — lands on the invitation</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="spend">
+  <h2>Spend</h2>
+  <table style="margin-bottom:6px;">
+    <tbody>
+      <tr class="total-row"><td>CPP_Rung2_InNoWise total (incl. 2026-07-26 redo/fix rows)</td><td class="num">44 rows</td><td class="num">$22.288</td></tr>
+      <tr class="total-row"><td>CPP_Rung1_InNoWise total (reference)</td><td class="num">17 rows</td><td class="num">$11.188</td></tr>
+      <tr class="total-row"><td>Combined Rung1 + Rung2</td><td class="num">61 rows</td><td class="num">$33.476</td></tr>
+    </tbody>
+  </table>
+  <h3 style="margin-top:22px;">CPP_Rung2_InNoWise — per-row detail</h3>
+  <div class="scroll-table">
+  <table>
+    <thead><tr><th>timestamp</th><th>stage</th><th>provider</th><th>model</th><th>item / note</th><th class="num">est_usd</th></tr></thead>
+    <tbody>
+<tr><td>2026-07-25 19:31:48</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[rung2-phase-a] p1b_hesitant_hand</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-25 19:32:54</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[rung2-phase-a] p2a_rehearsing</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-25 19:33:34</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[rung2-phase-a] p2b_jesus_speaks</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-25 19:37:45</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[rung2-phase-a] p2c_light_line</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-25 19:38:35</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[rung2-phase-a] p4a_turning_away</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-25 19:39:14</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[rung2-phase-a] p4b_open_hands</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-25 19:39:57</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[rung2-phase-a] p4c_empty_doorway</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-25 19:40:34</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[rung2-phase-a] p5a_the_welcome</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-25 19:41:16</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[rung2-phase-a] p5b_record_received</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-25 19:41:56</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[rung2-phase-a] p5c_never_locked</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-25 19:43:16</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[rung2-phase-a] p1a_night_door REROLL-1</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-25 19:55:28</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[rung2-phase-a] p4a_turning_away REROLL-1 (content reroll: dropped Jesus/handle-reach, enforce single Seeker turning away)</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-25 20:40:51</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[period-fix] panel_d_threshold CP-G10 re-roll</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-25 20:41:31</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[period-fix] panel_b_door CP-G10 re-roll</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-25 20:44:25</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[period-fix] panel_c_ledger CP-G10 re-roll</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-25 20:45:05</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[period-fix] p5a_the_welcome CP-G10 re-roll</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-25 20:45:45</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[period-fix] p1a_night_door CP-G10 re-roll</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-25 20:46:24</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[period-fix] p1b_hesitant_hand CP-G10 re-roll</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-25 20:47:04</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[period-fix] p2a_rehearsing CP-G10 re-roll</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-25 20:48:01</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[period-fix] p4a_turning_away CP-G10 re-roll</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-25 20:49:48</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[period-fix] p5b_record_received CP-G10 re-roll</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-25 22:51:16</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[rung2-final-phase] p2c_light_line CORRECTIVE</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-25 22:51:56</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[rung2-final-phase] p1a_night_door CORRECTIVE</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-25 22:54:31</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[rung2-final-phase] p1a_night_door REROLL2-scrollfix</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-25 22:56:02</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[rung2-final-phase] p1a_night_door REROLL3-combined</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-25 22:59:14</td><td>animate</td><td>hf</td><td>seedance1_5</td><td>[rung2-final-phase] p1a</td><td class=num>$0.720</td></tr>
+<tr><td>2026-07-25 23:00:37</td><td>animate</td><td>hf</td><td>seedance1_5</td><td>[rung2-final-phase] p1b</td><td class=num>$0.720</td></tr>
+<tr><td>2026-07-25 23:01:37</td><td>animate</td><td>hf</td><td>seedance1_5</td><td>[rung2-final-phase] p2a</td><td class=num>$0.720</td></tr>
+<tr><td>2026-07-25 23:03:38</td><td>animate</td><td>hf</td><td>seedance1_5</td><td>[rung2-final-phase] p2c</td><td class=num>$0.720</td></tr>
+<tr><td>2026-07-25 23:04:40</td><td>animate</td><td>hf</td><td>seedance1_5</td><td>[rung2-final-phase] p4a</td><td class=num>$0.720</td></tr>
+<tr><td>2026-07-25 23:05:43</td><td>animate</td><td>hf</td><td>seedance1_5</td><td>[rung2-final-phase] p4b</td><td class=num>$0.720</td></tr>
+<tr><td>2026-07-25 23:06:42</td><td>animate</td><td>hf</td><td>seedance1_5</td><td>[rung2-final-phase] p4c</td><td class=num>$0.720</td></tr>
+<tr><td>2026-07-25 23:08:10</td><td>animate</td><td>hf</td><td>seedance1_5</td><td>[rung2-final-phase] p5b</td><td class=num>$0.720</td></tr>
+<tr><td>2026-07-25 23:09:11</td><td>animate</td><td>hf</td><td>seedance1_5</td><td>[rung2-final-phase] p5c</td><td class=num>$0.720</td></tr>
+<tr><td>2026-07-25 23:10:15</td><td>animate</td><td>hf</td><td>seedance1_5</td><td>[rung2-final-phase] panel_c</td><td class=num>$0.720</td></tr>
+<tr><td>2026-07-25 23:13:55</td><td>animate</td><td>hf</td><td>kling3_0</td><td>[rung2-final-phase] panel_b</td><td class=num>$1.312</td></tr>
+<tr><td>2026-07-25 23:18:06</td><td>animate</td><td>hf</td><td>kling3_0</td><td>[rung2-final-phase] panel_b REROLL-doorlock</td><td class=num>$1.312</td></tr>
+<tr><td>2026-07-25 23:21:58</td><td>animate</td><td>hf</td><td>kling3_0</td><td>[rung2-final-phase] panel_d</td><td class=num>$1.312</td></tr>
+<tr><td>2026-07-25 23:26:02</td><td>animate</td><td>hf</td><td>kling3_0</td><td>[rung2-final-phase] p5a</td><td class=num>$1.312</td></tr>
+<tr><td>2026-07-26 08:05:37</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[redo-batch1] p2b_jesus_speaks (attempt FAILED: bolted door — kept as .r1_BOLTED)</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-26 08:21:30</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[redo-batch1] p5c_never_locked (attempt FAILED: bar span — kept as .r1_BARSPAN)</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-26 08:23:04</td><td>stills</td><td>hf</td><td>nano_banana_pro</td><td>[redo-batch1] p4a_turning_away (ACCEPTED — seeker from behind)</td><td class=num>$0.300</td></tr>
+<tr><td>2026-07-26 12:14:39</td><td>animate</td><td>hf</td><td>seedance1_5</td><td>[rung2-final-phase] p4a REROLL (from redo still; FAILED QC: Jesus moved arms, shadow morphed)</td><td class=num>$0.720</td></tr>
+<tr><td>2026-07-26 12:17:12</td><td>animate</td><td>hf</td><td>seedance1_5</td><td>[rung2-final-phase] p4a REROLL v3 hardened INVENT-NOTHING (PASSED QC)</td><td class=num>$0.720</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="buildlog">
+  <h2>Build log (this run, 2026-07-26)</h2>
+  <div class="buildlog">
+
+    <div class="step">
+      <div class="name">V2 — LIVING-COMIC treatment (2026-07-26 afternoon, $0): <code>IN_NO_WISE_comic_v2.mp4</code></div>
+      <div class="detail">
+        The living-page energy applied to the comic-page grammar (user-directed): panels SLAM in
+        word-timed (12 slams on narration word-starts), live panel bright / others dimmed, ink-bleed
+        page turns, full-bleed SPLASH of the Jesus portrait on the IN NO WISE pivot, page 5 = still
+        held landing. Score sacred_grace_rise_a ducked −8dB + paper-thump slam hits. 57.767s,
+        3.12s hold, audio==video, watermarked. Scripts: <code>_compose_pages_v2.py</code> /
+        <code>_text_layer_v2.py</code> / <code>_assemble_final_v2.py</code>. v1 kept untouched.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="name">FIX (2026-07-26 midday) — p4a head-twist clip caught by the USER in the final cut</div>
+      <div class="detail">
+        Root cause: the morning redo-batch replaced the p4a STILL (seeker from behind) but its CLIP was
+        never re-animated — page 4 still carried the animation of the old .v2_HEADTWIST still. My clip QC
+        missed it because the clip was internally consistent with the (wrong) source. Fix: re-animated from
+        the accepted still — first Seedance take FAILED eye QC (Jesus' raised hand drifted into an open-arms
+        gesture; floor shadow morphed; kept as .v2_JESUSMOVED_FAILED), second take with hardened
+        INVENT-NOTHING language PASSED at 5 timestamps + freeze-lint (mean-diff 0.716, worst run 0.75s).
+        Extended to 10.64s, page 4 recomposed, final re-concat + narration re-mux (3.06s landing hold,
+        audio==video) + watermark re-applied. New standing rule: a still re-roll INVALIDATES its clip —
+        re-animation is part of the same redo, never a separate later step.
+        <br><strong>Still outstanding from the user's redo notes (batch died mid-run):</strong> p2b BOTH
+        (still attempt 1 failed: bolted door) · p5c BOTH (still attempt 1 failed: bar span) · p5a CLIP
+        (real-motion embrace re-animation, user-approved frozen-discipline exception). The current cut
+        still shows the OLD p2b / p5a / p5c.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="name">STEP 1 — Loop-extend all 14 clips <span class="ok">✓ all 14 within ±0.05s</span></div>
+      <div class="detail">
+        p1a 10.083s · p1b 10.083s · p2a 11.000s · p2b 11.000s · p2c 11.000s ·
+        panel_b 12.125s · panel_c 12.125s · panel_d 12.125s ·
+        p4a 10.667s · p4b 10.667s · p4c 10.667s ·
+        p5a 13.917s · p5b 13.917s · p5c 13.917s — all confirmed 24fps via ffprobe.
+        Targets: p1a/p1b=10.08, p2*=10.96, panel_b/c/d=12.10, p4*=10.64, p5*=13.90 — all within tolerance.
+        This run overwrote the stale partial extended/ folder (p1a/p1b/p2a had been fine, p2b was truncated/moov-atom-missing).
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="name">STEP 2 — Freeze-lint (15 clips: 14 rung2 + rung1's panel_a.mp4) <span class="ok">✓ no FAIL-static</span></div>
+      <div class="detail">
+        Self-calibrated threshold 0.5. 13/15 PASS, 2 WARN (panel_d worst_static_run 0.88s @ 9.38-10.25s;
+        p5b worst_static_run 1.12s @ 11.5-12.62s). Both WARNs are under the 2.0s FAIL-static bar, so per the
+        brief's instructions the run proceeded to compose without escalating. Full table above.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="name">STEP 3 — Compose 5 pages <span class="ok">✓ all 5 within ±0.05s, 1080x1920</span></div>
+      <div class="detail">
+        page1 10.067s (target 10.08) · page2 10.933s (target 10.96) · page3 12.100s (target 12.10) ·
+        page4 10.633s (target 10.64) · page5 13.900s (target 13.90). All 1080x1920 30fps.
+        page3 correctly pulled panel_a.mp4 from rung1's extended/ folder (not touched/re-rendered).
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="name">STEP 4 — Text overlays (page2, page3, page5) <span class="ok">✓ durations unchanged, all QC frames eyeballed</span></div>
+      <div class="detail">
+        page2_with_text.mp4 10.933s · page3_with_text.mp4 12.100s · page5_with_text.mp4 13.900s — identical to
+        their source composites (overlay does not change duration). QC frames in
+        clips/_frames/_text_qc_page{2,3,5}/ opened and visually confirmed: parchment caption box fully
+        on-screen and readable on every "in-window" frame, and absent on every frame before t_in
+        (page2 t0.5/t4.0 clean; page3 t9.0/t11.5 clean; page5 t0.5/t1.5/t5.9/t10.0/t13.5 clean).
+        Text: page2 "JOHN 6:37" 8.60–10.96s · page3 "JOHN 6:37" 0.2–4.525s + "IN NO WISE" 5.02–7.55s ·
+        page5 "COME" 1.52–5.86s.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="name">STEP 5 — Assemble + mux <span class="ok">✓ audio/video duration match</span></div>
+      <div class="detail">
+        _concat_silent.mp4 → 57.708s. narration.mp3 → 54.649s. IN_NO_WISE_comic_v1.mp4 (pre-watermark) → 57.708s
+        overall; per-stream: video 57.667s, audio 57.708s (audio apad'd with whole_dur=&lt;video duration&gt;,
+        the fixed correct form of the apad fill per the INV-26 bug history — not the buggy pad_dur=X form).
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="name">STEP 6 — Landing-hold verify (INV-26) <span class="ok">✓ PASS, 3.268s ≥ 3.0s</span></div>
+      <div class="detail">
+        Last aligned word in narration.alignment.json: "locked." ending at <b>54.44s</b>.
+        Final video duration: <b>57.708s</b>. Hold = 57.708 − 54.44 = <b>3.268s</b> ≥ 3.0s required. PASS.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="name">STEP 7 — Watermark <span class="ok">✓ applied, duration unchanged</span></div>
+      <div class="detail">
+        add_watermark.py OK: 1080x1920, wm 200px at (40,70) — top-left, 9:16 position per the locked standard.
+        Backup preserved at IN_NO_WISE_comic_v1.prewm.bak.mp4 (57.708s). Post-watermark final: 57.708005s
+        overall, video stream 57.667s / audio stream 57.708s — unchanged from pre-watermark.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="name">STEP 8 — QC frames <span class="ok">✓ all 6 videos × 5 frames + 11 final-verify frames extracted</span></div>
+      <div class="detail">
+        start/quarter/mid/three_quarter/end frames pulled for the final + all 5 page videos into
+        clips/_frames/&lt;name&gt;/. Additional 11 timestamped frames (t=2,8,12,18,25,32,38,45,50,55,57.5)
+        pulled from the watermarked final into clips/_frames/_final_verify/ for the supervisor's eye pass.
+        Spot-checked t2 and t57.5 directly (Read tool) — AWAKEDEN watermark visible top-left on both,
+        content renders correctly.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="name">STEP 9 — This review page <span class="ok">✓ built</span></div>
+      <div class="detail">
+        Self-contained, relative paths, dark theme. No external assets.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<div class="footer-note">
+  Build executor run only — this page reports what ran and what ffprobe/eye-check confirmed.
+  It does not declare the piece finished. The supervisor does the eye pass on the final cut and the
+  _final_verify frame strip above before this is called done.
+</div>
+
+</body>
+</html>

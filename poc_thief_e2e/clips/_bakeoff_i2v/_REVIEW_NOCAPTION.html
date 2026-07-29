@@ -1,0 +1,24 @@
+<!doctype html><meta charset=utf-8>
+<title>Captionless re-test — Kling 3.0 vs Seedance 2.0 Mini</title>
+<style>
+ body{background:#14110d;color:#efe7d6;font-family:system-ui,Arial;margin:0;padding:24px}
+ h1{font-size:20px;margin:0 0 4px} p.sub{color:#b7ab97;margin:0 0 20px;max-width:900px}
+ .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
+ figure{margin:0} figcaption{font-size:14px;font-weight:700;margin:8px 0 0;color:#e9c877}
+ figcaption .note{display:block;font-weight:400;font-size:12px;color:#b7ab97;margin-top:4px}
+ video,img{width:100%;border-radius:6px;border:1px solid #000;background:#000}
+</style>
+<h1>Captionless re-test — does Seedance 2.0 Mini hold up without the text confound?</h1>
+<p class="sub">Fresh captionless page (same template/characters, zero baked text), animated with both models on the same simple prompt.</p>
+<div class="grid">
+
+<figure><img src="../../stills/_comic_strip_template_test/david_goliath_nocaption.png"></figure>
+<figcaption style="visibility:hidden">spacer</figcaption>
+
+<figure><video src="kling3_0_nocaption.mp4" controls loop muted playsinline></video>
+<figcaption>Kling 3.0<span class="note">Layout stays intact, no duplication. But invents a close-quarters weapon-clash action beat not in the source, and David's build shifts more adult/muscular.</span></figcaption></figure>
+
+<figure><video src="seedance_2_0_mini_nocaption.mp4" controls loop muted playsinline></video>
+<figcaption>Seedance 2.0 Mini<span class="note">Layout distorts -- top panel compresses, Goliath's face is nearly duplicated across two panels. Bottom panel invents an aggressive confrontation pose not in the source. The caption garbling wasn't masking a clean result underneath.</span></figcaption></figure>
+
+</div>

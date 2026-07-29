@@ -1,0 +1,44 @@
+<!doctype html><meta charset=utf-8>
+<title>Zacchaeus (Luke 19:1-10) — full E2E flow, finished piece</title>
+<style>
+ body{background:#14110d;color:#efe7d6;font-family:system-ui,Arial;margin:0;padding:24px}
+ h1{font-size:22px;margin:0 0 4px} h2{font-size:15px;color:#e9c877;margin:26px 0 8px}
+ p.sub{color:#b7ab97;margin:0 0 20px;max-width:900px}
+ .row{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start}
+ video{width:340px;border-radius:6px;border:1px solid #000;background:#000}
+ .thumbs{display:flex;gap:16px}
+ .thumbs img{height:200px;border-radius:6px;border:1px solid #000}
+ .stage{background:#1e1a14;border-left:3px solid #5a8f5a;padding:10px 16px;margin:6px 0;font-size:13px}
+ ol{line-height:1.9}
+</style>
+<h1>Zacchaeus (Luke 19:1-10) — full topic-to-finished-piece E2E test</h1>
+<p class="sub">First complete run of the pipeline on a genuinely new topic, using the pivoted comic-strip-native architecture (separate purpose-built panel stills, not native whole-page generation). Every stage below actually ran, not just planned.</p>
+
+<div class="row">
+<video src="ZACCHAEUS_CAPTIONED.mp4" controls></video>
+<div>
+<h2>Every stage, real not simulated</h2>
+<ol>
+<li>Research — exact KJV (Luke 19:1-10), apocryphal-tradition check</li>
+<li>Narration drafted — Gospel hook-to-CTA, KJV-verbatim quotes</li>
+<li>Real audio synthesized — ElevenLabs, 3 voices (narrator/Jesus/Zacchaeus), duration-locked to 58.99s via per_turn_synth.py</li>
+<li>3 panel stills — new separate-stills architecture, chained, one character-drift caught + fixed before animating</li>
+<li>Animated, cost-tiered — Kling on the crowd panel, cheaper Minimax Hailuo on both close-ups</li>
+<li>Assembled (Stage 3, first real build) — held-frame extension to fill each narration beat, landing hold added</li>
+<li>Score mixed — reused $0 Suno library track ("sacred_grace_rise_a"), ducked under narration</li>
+<li>Captions — WhisperX forced-alignment (167/167 words recovered) + serif_captions.py burn-in</li>
+<li>Thumbnail — reused pipeline/thumbnails.py hero-frame + compose</li>
+</ol>
+</div>
+</div>
+
+<h2>Thumbnails</h2>
+<div class="thumbs">
+<img src="thumbs/thumb_9x16.jpg"><img src="thumbs/thumb_16x9.jpg"><img src="thumbs/thumb_1x1.jpg">
+</div>
+
+<h2>Real findings from actually running this, not from planning it</h2>
+<div class="stage">Narration ran long — atempo needed (1.283) came out slightly above the previously-validated safe band (1.10-1.25). Minor, not blocking, but the narration draft should be tightened next time.</div>
+<div class="stage">Character consistency drift recurred on Zacchaeus (less-specific anchor than Jesus's) -- caught and fixed with one re-roll before spending on animation, same discipline validated on the Thief piece.</div>
+<div class="stage">Stage 3's "held-frame extension" build approach works and passes the landing-hold gate cleanly, but is a genuinely simple v1 -- no per-beat camera movement, just holds. A real next-level version would vary the hold treatment per beat.</div>
+<div class="stage">pipeline/thumbnails.py's blank-canvas detection false-positives on our new padded-canvas (paper-bar) output shape -- a real, minor integration gap between the new architecture and this reused tool, not a failure of either.</div>

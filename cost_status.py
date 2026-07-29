@@ -6,7 +6,10 @@ instant and must never touch .env / sitecustomize / WMI. The ledger rows already
 carry est_usd + credits, so summing needs no rate tables.
 
 Modes:
-  --statusline   print one line for the Claude Code status bar (nothing if no ledger)
+  --statusline   print one colored bar for the Claude Code status line —
+                 [FOLDER] [⎇ branch]  💰 today spend  · Model · ctx:NN%
+                 (mirrors HF-POC series/03_furgiven/tools/status_line.py; folder
+                 + branch + model always show, spend only when the ledger exists)
   --hook         PostToolUse: (1) log ad-hoc `hf generate create <model>` commands
                  typed in chat (pipeline renders call hf.exe INSIDE python subprocesses,
                  so they never match — no double count); (2) emit {"systemMessage": ...}
@@ -26,6 +29,9 @@ ROOT = Path(__file__).resolve().parent
 LEDGER = ROOT / "data" / "spend_ledger.jsonl"
 STATE_DIR = ROOT / "data" / ".cost_state"  # one state file per Claude session
 CREDITS_TO_USD = 0.15  # mirrors config.HF_CREDITS_TO_USD (nano_banana_2 2cr ~= $0.30)
+# git/hf are console apps; under pythonw (no console) each call pops a visible
+# console window unless CREATE_NO_WINDOW is passed.
+NO_WIN = 0x08000000 if os.name == "nt" else 0
 
 # ad-hoc hf spend typed straight into chat. Anchored at a COMMAND position (start
 # or after ;/&&/|/newline, optional path prefix) and matched only after quoted
@@ -43,6 +49,69 @@ try:  # emoji-safe output on Windows consoles
     sys.stdout.reconfigure(encoding="utf-8")
 except Exception:
     pass
+
+# ---- statusline chips (mirror HF-POC series/03_furgiven/tools/status_line.py) ----
+R = "\033[0m"
+
+
+def chip(text: str, fg: str, bg: str) -> str:
+    """A bold colored background block, e.g. ' JesusInTheBible ' on blue."""
+    return f"\033[1;{fg};{bg}m {text} {R}"
+
+
+def _read_stdin() -> dict:
+    """Claude Code pipes the status JSON (model/workspace/context_window) on stdin;
+    a real terminal (isatty) or empty pipe -> {} so a manual run never hangs."""
+    try:
+        if not sys.stdin.isatty():
+            return json.loads(sys.stdin.read() or "{}")
+    except Exception:
+        pass
+    return {}
+
+
+def _root_dir(data: dict) -> str:
+    ws = data.get("workspace") or {}
+    return (ws.get("project_dir") or ws.get("current_dir")
+            or data.get("cwd") or str(ROOT))
+
+
+def _branch(cwd: str) -> str:
+    try:
+        out = subprocess.run(
+            ["git", "-C", cwd, "rev-parse", "--abbrev-ref", "HEAD"],
+            capture_output=True, text=True, timeout=3, creationflags=NO_WIN)
+        return out.stdout.strip()
+    except Exception:
+        return ""
+
+
+def render_statusline(data: dict) -> str:
+    cwd = _root_dir(data)
+    folder = os.path.basename(cwd.rstrip("/\\")) or cwd
+    branch = _branch(cwd)
+    model = (data.get("model") or {}).get("display_name") or ""
+    used = (data.get("context_window") or {}).get("used_percentage")
+
+    parts = [chip(folder, "97", "44")]                       # bold white on blue
+    if branch:
+        parts.append(chip("⎇ " + branch, "30", "103"))  # black on bright yellow
+    if LEDGER.exists():
+        by_p = today_by_provider()
+        spend = _line(by_p) if by_p else "\U0001F4B0 today clean"
+        parts.append(f"\033[93m{spend}{R}")                  # gold
+
+    tail = []
+    if model:
+        tail.append(model)
+    if used is not None:
+        try:
+            tail.append(f"ctx:{float(used):.0f}%")
+        except Exception:
+            pass
+    if tail:
+        parts.append(f"\033[2m{' · '.join(tail)}{R}")   # dim
+    return "  ".join(parts)
 
 
 def _usd(v) -> float:
@@ -107,7 +176,7 @@ def _adhoc_usd(model: str, command: str = "") -> tuple[float, str]:
     hf = Path(os.environ.get("USERPROFILE", "")) / "bin" / "hf.exe"
     try:
         r = subprocess.run([str(hf), "generate", "cost", model, "--prompt", "estimate", "--json"],
-                           capture_output=True, text=True, timeout=15)
+                           capture_output=True, text=True, timeout=15, creationflags=NO_WIN)
         d = json.loads(r.stdout)
         cr = float(d.get("credits_exact", d.get("credits", 0)))
         return round(cr * CREDITS_TO_USD, 3), ""
@@ -190,9 +259,7 @@ def main() -> int:
         if mode == "--hook":
             run_hook()
             return 0
-        if not LEDGER.exists():
-            return 0
-        print(_line(today_by_provider(), sep=" | "))
+        print(render_statusline(_read_stdin()))
     except Exception as e:
         # this runs after EVERY shell command / statusline tick — it must never
         # brick the session, whatever is on disk

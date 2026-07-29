@@ -1,7 +1,7 @@
 {
   "episode": "EW01_Two_Goats",
   "aspect": "16:9",
-  "look": "period-documentary",
+  "look": "retro-comic",
   "audio_seconds": 584.5,
   "hero_id": 25,
   "camera_palette_green": [
@@ -39,7 +39,7 @@
       "directional": false,
       "face_nbp": false,
       "subject_block": "The high priest Aaron, small in golden vestments, stands alone before the towering curtained Tabernacle court at first light; behind and below him a vast hushed multitude of Israelites kept in shadow; immense pale sky; the sacred tent dominant and severe.",
-      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "style_base": "Vintage 1960s Silver Age retro-comic illustration — bold black ink holding lines, flat limited four-colour comic colour with no gradients, clearly visible coarse Ben-Day halftone dots in skies and shadows, slight CMYK misregistration, warm cream colour palette; reverent, ancient Near-Eastern period-accurate, full-bleed edge-to-edge; no text, no lettering, no captions, no speech balloons, no title box, no watermark, no gore, no modern items. (Documentation only — the renderer pulls style_base/style_tail from config.STYLE_REGISTRY['retro'], not this field; see v2/AWAKEDEN_COMIC_DNA.md §1.)",
       "refs": [
         "aaron"
       ]
@@ -60,7 +60,7 @@
       "directional": false,
       "face_nbp": false,
       "subject_block": "Still-life: a golden breastplate, ephod and priestly garments laid upon a worn stone bench in a single shaft of light; two weathered hands releasing the gold; plain folded white linen waiting beside it. No face, hands only. Both hands are ordinary human hands, thumb and four fingers each in their own natural anatomical place, wrists straight, nothing bent, fused or reversed.",
-      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "style_base": "Vintage 1960s Silver Age retro-comic illustration — bold black ink holding lines, flat limited four-colour comic colour with no gradients, clearly visible coarse Ben-Day halftone dots in skies and shadows, slight CMYK misregistration, warm cream colour palette; reverent, ancient Near-Eastern period-accurate, full-bleed edge-to-edge; no text, no lettering, no captions, no speech balloons, no title box, no watermark, no gore, no modern items. (Documentation only — the renderer pulls style_base/style_tail from config.STYLE_REGISTRY['retro'], not this field; see v2/AWAKEDEN_COMIC_DNA.md §1.)",
       "refs": [],
       "_fix_note": "eye-audit append (2026-07-21): see _build_inked_scene_plan.py"
     },
@@ -80,7 +80,7 @@
       "directional": false,
       "face_nbp": false,
       "subject_block": "Aaron, now in plain white linen, standing still before a great heavy veil at the end of a dim colonnaded passage, seen from behind, his head slightly bowed at the threshold; hanging oil lamps light the heavy curtain; he stands arrested at the veil, not walking; his back to us. The walking priest is the aged high priest with long gray hair and a full gray beard, seen from behind.",
-      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "style_base": "Vintage 1960s Silver Age retro-comic illustration — bold black ink holding lines, flat limited four-colour comic colour with no gradients, clearly visible coarse Ben-Day halftone dots in skies and shadows, slight CMYK misregistration, warm cream colour palette; reverent, ancient Near-Eastern period-accurate, full-bleed edge-to-edge; no text, no lettering, no captions, no speech balloons, no title box, no watermark, no gore, no modern items. (Documentation only — the renderer pulls style_base/style_tail from config.STYLE_REGISTRY['retro'], not this field; see v2/AWAKEDEN_COMIC_DNA.md §1.)",
       "refs": [
         "aaron"
       ],
@@ -102,7 +102,7 @@
       "directional": false,
       "face_nbp": false,
       "subject_block": "Aaron's small linen-robed silhouette before an immense temple veil; through a narrow gap, thick darkness and a single faint golden glow of the mercy seat; the curtain towering and swallowing him.",
-      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "style_base": "Vintage 1960s Silver Age retro-comic illustration — bold black ink holding lines, flat limited four-colour comic colour with no gradients, clearly visible coarse Ben-Day halftone dots in skies and shadows, slight CMYK misregistration, warm cream colour palette; reverent, ancient Near-Eastern period-accurate, full-bleed edge-to-edge; no text, no lettering, no captions, no speech balloons, no title box, no watermark, no gore, no modern items. (Documentation only — the renderer pulls style_base/style_tail from config.STYLE_REGISTRY['retro'], not this field; see v2/AWAKEDEN_COMIC_DNA.md §1.)",
       "refs": [
         "aaron"
       ]
@@ -122,8 +122,9 @@
       "sfx": "sustained holy drone",
       "directional": false,
       "face_nbp": false,
-      "subject_block": "The Ark of the Covenant alone in the deep darkness of the Holy of Holies: a gold-covered chest with two golden cherubim wrought upon its lid, their wings stretched toward each other over the mercy seat, a radiant cloud of glory glowing above it; tabernacle curtain walls receding into shadow; the aged high priest prostrate on the stone floor before it, tiny beneath the light; the room bare and holy, only the Ark, the cloud, and the man.",
-      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "subject_block": "The Ark of the Covenant alone in the deep darkness of the Holy of Holies: a rectangular chest entirely overlaid in smooth plain gold, its only ornament a moulded gold rim running around the top edge, with two golden cherubim wrought upon its lid, their wings stretched toward each other over the mercy seat, a radiant cloud of glory glowing above it; tabernacle curtain walls receding into shadow; the aged high priest prostrate on the ground before it, tiny beneath the light; the room bare and holy, only the Ark, the cloud, and the man.",
+      "_retro_reroll_note": "round-2 test render (2026-07-24) showed a small cross-shaped emblem carved on the Ark's front panel -- an OT-period anachronism (the cross had no symbolic use in that era). Reworded to fully specify the Ark's real plain-gold construction (Exodus 25:10-16) so there's no room left for invented ornament.",
+      "style_base": "Vintage 1960s Silver Age retro-comic illustration — bold black ink holding lines, flat limited four-colour comic colour with no gradients, clearly visible coarse Ben-Day halftone dots in skies and shadows, slight CMYK misregistration, warm cream colour palette; reverent, ancient Near-Eastern period-accurate, full-bleed edge-to-edge; no text, no lettering, no captions, no speech balloons, no title box, no watermark, no gore, no modern items. (Documentation only — the renderer pulls style_base/style_tail from config.STYLE_REGISTRY['retro'], not this field; see v2/AWAKEDEN_COMIC_DNA.md §1.)",
       "refs": [],
       "_fix_note": "eye-audit rewrite (2026-07-21): see _build_inked_scene_plan.py"
     },
@@ -143,7 +144,7 @@
       "directional": false,
       "face_nbp": false,
       "subject_block": "The aged high priest, long gray hair and full gray beard, head bowed in grief; behind him in ghosted memory panels his two grown sons in white priestly linen lie still on scorched stone, their bodies whole and unmarked, thin gray smoke drifting up from the blackened ground around them, censers fallen beside their open hands; shrouded biers carried away into darkness; the ground charred, the air full of ash and silence.",
-      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "style_base": "Vintage 1960s Silver Age retro-comic illustration — bold black ink holding lines, flat limited four-colour comic colour with no gradients, clearly visible coarse Ben-Day halftone dots in skies and shadows, slight CMYK misregistration, warm cream colour palette; reverent, ancient Near-Eastern period-accurate, full-bleed edge-to-edge; no text, no lettering, no captions, no speech balloons, no title box, no watermark, no gore, no modern items. (Documentation only — the renderer pulls style_base/style_tail from config.STYLE_REGISTRY['retro'], not this field; see v2/AWAKEDEN_COMIC_DNA.md §1.)",
       "fill": "forward_slow",
       "refs": [
         "aaron"
@@ -166,8 +167,7 @@
       "directional": false,
       "face_nbp": false,
       "subject_block": "Two goats standing close together before the bronze altar; Aaron's weathered hands in plain white linen sleeves holding two small marked lot-stones over a bronze vessel, the moment held still; the markings only illegible scratches, not readable text; the tabernacle court behind in shadow; Aaron alone, no other priests.",
-      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
-      "fill": "forward_slow",
+      "style_base": "Vintage 1960s Silver Age retro-comic illustration — bold black ink holding lines, flat limited four-colour comic colour with no gradients, clearly visible coarse Ben-Day halftone dots in skies and shadows, slight CMYK misregistration, warm cream colour palette; reverent, ancient Near-Eastern period-accurate, full-bleed edge-to-edge; no text, no lettering, no captions, no speech balloons, no title box, no watermark, no gore, no modern items. (Documentation only — the renderer pulls style_base/style_tail from config.STYLE_REGISTRY['retro'], not this field; see v2/AWAKEDEN_COMIC_DNA.md §1.)",
       "refs": [
         "aaron"
       ]
@@ -188,7 +188,7 @@
       "directional": false,
       "face_nbp": false,
       "subject_block": "Aaron in white linen standing perfectly still in thick darkness before the faint golden glow of the mercy seat, the rite already finished and quiet: his arm lowered gently at his side, an empty shallow bronze basin resting level and still in his hand; seen from behind and side, the hush after the act; the pale stone floor entirely clean, smooth, dry and unmarked; only the soft golden glow and a thin thread of rising incense in the still air. The stone of the altar pedestal is clean and dry.",
-      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "style_base": "Vintage 1960s Silver Age retro-comic illustration — bold black ink holding lines, flat limited four-colour comic colour with no gradients, clearly visible coarse Ben-Day halftone dots in skies and shadows, slight CMYK misregistration, warm cream colour palette; reverent, ancient Near-Eastern period-accurate, full-bleed edge-to-edge; no text, no lettering, no captions, no speech balloons, no title box, no watermark, no gore, no modern items. (Documentation only — the renderer pulls style_base/style_tail from config.STYLE_REGISTRY['retro'], not this field; see v2/AWAKEDEN_COMIC_DNA.md §1.)",
       "fill": "forward_slow",
       "refs": [
         "aaron"
@@ -212,7 +212,7 @@
       "directional": false,
       "face_nbp": false,
       "subject_block": "Aaron in plain white linen laying both hands upon the head of a living goat, his own head bowed low in confession, the moment held still; a single robed attendant waits quietly at the edge; beyond the camp gate the open wilderness lies pale and vast; Aaron in profile, half-shadowed; no other priests. The priest is the aged high priest with long gray hair and a full gray beard, the same aged man throughout the film.",
-      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "style_base": "Vintage 1960s Silver Age retro-comic illustration — bold black ink holding lines, flat limited four-colour comic colour with no gradients, clearly visible coarse Ben-Day halftone dots in skies and shadows, slight CMYK misregistration, warm cream colour palette; reverent, ancient Near-Eastern period-accurate, full-bleed edge-to-edge; no text, no lettering, no captions, no speech balloons, no title box, no watermark, no gore, no modern items. (Documentation only — the renderer pulls style_base/style_tail from config.STYLE_REGISTRY['retro'], not this field; see v2/AWAKEDEN_COMIC_DNA.md §1.)",
       "refs": [
         "aaron"
       ],
@@ -234,7 +234,7 @@
       "directional": false,
       "face_nbp": false,
       "subject_block": "A vast bleached desert wadi to a hazy horizon; far off, a single small goat already reduced to a dark speck, standing still on the cracked valley floor; at the near edge, seen from behind, a lone robed man stands motionless watching, dwarfed by the emptiness; nothing moving, a held silence.",
-      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "style_base": "Vintage 1960s Silver Age retro-comic illustration — bold black ink holding lines, flat limited four-colour comic colour with no gradients, clearly visible coarse Ben-Day halftone dots in skies and shadows, slight CMYK misregistration, warm cream colour palette; reverent, ancient Near-Eastern period-accurate, full-bleed edge-to-edge; no text, no lettering, no captions, no speech balloons, no title box, no watermark, no gore, no modern items. (Documentation only — the renderer pulls style_base/style_tail from config.STYLE_REGISTRY['retro'], not this field; see v2/AWAKEDEN_COMIC_DNA.md §1.)",
       "refs": []
     },
     {
@@ -252,8 +252,9 @@
       "sfx": "low wondering tone",
       "directional": false,
       "face_nbp": false,
-      "subject_block": "One frame holding the riddle: on the left, the first goat lying still and peacefully at rest on the low altar step, as if asleep, its pale coat clean and whole, bathed in the warm red glow of the altar fire and rising smoke (the price); on the right, the live goat facing an open pale road into the waste (the guilt carried off); the altar standing dark between them. A single unified canvas, soft transition, no hard divider, calm and reverent, the stone clean and dry.",
-      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "subject_block": "One frame holding the riddle: on the left, the first goat lying still and peacefully at rest on the low altar step, as if asleep, its pale unblemished coat clean and whole, gently lit by warm amber firelight and rising smoke, the pale stone steps beneath it bare and unmarked (the price); on the right, the live goat facing an open pale road into the waste (the guilt carried off); the altar between them a low box-shaped structure of dark acacia wood plated in dull bronze, a small blunt bronze horn projecting from each of its four corners, resting directly on the sand. A single unified canvas, soft transition, no hard divider, calm and reverent, the stone clean, dry and pale throughout.",
+      "_retro_reroll_note": "blood recurred under the retro-comic style's first test render (2026-07-24) despite this scene's earlier oil-era blood-free redesign -- reworded again, dropping 'red glow' entirely (avoid the word 'red' near an altar/goat) in favour of 'warm amber firelight' + explicit 'bare and unmarked' stone. Round-2 render also showed the altar itself styled with classical fluted columns (outside the tent-keyword mood_block scope) -- fully specified the real bronze/acacia-wood box-with-horns construction (Exodus 27:1-2) so there's no room left for a stone plinth.",
+      "style_base": "Vintage 1960s Silver Age retro-comic illustration — bold black ink holding lines, flat limited four-colour comic colour with no gradients, clearly visible coarse Ben-Day halftone dots in skies and shadows, slight CMYK misregistration, warm cream colour palette; reverent, ancient Near-Eastern period-accurate, full-bleed edge-to-edge; no text, no lettering, no captions, no speech balloons, no title box, no watermark, no gore, no modern items. (Documentation only — the renderer pulls style_base/style_tail from config.STYLE_REGISTRY['retro'], not this field; see v2/AWAKEDEN_COMIC_DNA.md §1.)",
       "refs": [],
       "_fix_note": "eye-audit rewrite (2026-07-21): see _build_inked_scene_plan.py"
     },
@@ -273,7 +274,7 @@
       "directional": false,
       "face_nbp": false,
       "subject_block": "Aaron, in plain white linen, standing alone in the emptying court at dusk, turning the question over; behind him one altar still faintly smoking and one empty road running out into the darkening waste; his face lined and contemplative, lit by a single low flame; Aaron alone, standing still, no other priests. The setting sun hangs small and distant in the sky, well away from his face, his eyes calm and human. Aaron is the aged high priest with long gray hair and a full gray beard, the same aged man throughout the film.",
-      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "style_base": "Vintage 1960s Silver Age retro-comic illustration — bold black ink holding lines, flat limited four-colour comic colour with no gradients, clearly visible coarse Ben-Day halftone dots in skies and shadows, slight CMYK misregistration, warm cream colour palette; reverent, ancient Near-Eastern period-accurate, full-bleed edge-to-edge; no text, no lettering, no captions, no speech balloons, no title box, no watermark, no gore, no modern items. (Documentation only — the renderer pulls style_base/style_tail from config.STYLE_REGISTRY['retro'], not this field; see v2/AWAKEDEN_COMIC_DNA.md §1.)",
       "refs": [
         "aaron"
       ],
@@ -295,7 +296,7 @@
       "directional": false,
       "face_nbp": false,
       "subject_block": "A great multitude of Israel at evening, standing and at rest in the golden dusk, faces lifted and unburdened, a deep sense of relief over the whole field; the crowd kept soft and in shadow; no one mid-stride, a quiet stillness after the day.",
-      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "style_base": "Vintage 1960s Silver Age retro-comic illustration — bold black ink holding lines, flat limited four-colour comic colour with no gradients, clearly visible coarse Ben-Day halftone dots in skies and shadows, slight CMYK misregistration, warm cream colour palette; reverent, ancient Near-Eastern period-accurate, full-bleed edge-to-edge; no text, no lettering, no captions, no speech balloons, no title box, no watermark, no gore, no modern items. (Documentation only — the renderer pulls style_base/style_tail from config.STYLE_REGISTRY['retro'], not this field; see v2/AWAKEDEN_COMIC_DNA.md §1.)",
       "refs": []
     },
     {
@@ -314,7 +315,7 @@
       "directional": false,
       "face_nbp": false,
       "subject_block": "A unified tableau of weary repetition: Aaron, in plain white linen, at the altar, repeated as the SAME one man in soft ghosted echoes receding into the dark — the same act year upon year, not different priests; the same two goats faintly doubled; turning seasons hinted in the sky; the same bronze basin resting closed and still on the altar stone, its contents dark, settled and motionless; the worn altar stone; soft vignettes melting into one dim recurring canvas; nothing dripping, nothing poured, no liquid in motion; no breastplate, no other priests or bearded men. Aaron and every ghosted echo of him are the aged high priest with long gray hair and a full gray beard.",
-      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "style_base": "Vintage 1960s Silver Age retro-comic illustration — bold black ink holding lines, flat limited four-colour comic colour with no gradients, clearly visible coarse Ben-Day halftone dots in skies and shadows, slight CMYK misregistration, warm cream colour palette; reverent, ancient Near-Eastern period-accurate, full-bleed edge-to-edge; no text, no lettering, no captions, no speech balloons, no title box, no watermark, no gore, no modern items. (Documentation only — the renderer pulls style_base/style_tail from config.STYLE_REGISTRY['retro'], not this field; see v2/AWAKEDEN_COMIC_DNA.md §1.)",
       "refs": [
         "aaron"
       ],
@@ -337,7 +338,7 @@
       "directional": false,
       "face_nbp": false,
       "subject_block": "Aged Aaron, in plain white linen, older and weary, standing alone before the veil at night, looking up toward a faint far light he cannot reach; deep shadow all around; his upturned face caught in a thin edge of light, full of unspoken longing; standing still, Aaron alone.",
-      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "style_base": "Vintage 1960s Silver Age retro-comic illustration — bold black ink holding lines, flat limited four-colour comic colour with no gradients, clearly visible coarse Ben-Day halftone dots in skies and shadows, slight CMYK misregistration, warm cream colour palette; reverent, ancient Near-Eastern period-accurate, full-bleed edge-to-edge; no text, no lettering, no captions, no speech balloons, no title box, no watermark, no gore, no modern items. (Documentation only — the renderer pulls style_base/style_tail from config.STYLE_REGISTRY['retro'], not this field; see v2/AWAKEDEN_COMIC_DNA.md §1.)",
       "refs": [
         "aaron"
       ]
@@ -358,7 +359,7 @@
       "directional": false,
       "face_nbp": false,
       "subject_block": "The long shadow of a cross falls across the old altar and the two goats, cast by an unseen figure of light off-frame; the shadow lengthens toward a luminous open doorway in the far dark; the old order dim, the coming light pale and growing. Ancient biblical-period Near-Eastern tabernacle interior. Absolutely NO physical cross, crucifix or wooden cross OBJECT anywhere in the scene — ONLY a faint cross-shaped SHADOW on the ground and the altar.",
-      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "style_base": "Vintage 1960s Silver Age retro-comic illustration — bold black ink holding lines, flat limited four-colour comic colour with no gradients, clearly visible coarse Ben-Day halftone dots in skies and shadows, slight CMYK misregistration, warm cream colour palette; reverent, ancient Near-Eastern period-accurate, full-bleed edge-to-edge; no text, no lettering, no captions, no speech balloons, no title box, no watermark, no gore, no modern items. (Documentation only — the renderer pulls style_base/style_tail from config.STYLE_REGISTRY['retro'], not this field; see v2/AWAKEDEN_COMIC_DNA.md §1.)",
       "refs": []
     },
     {
@@ -377,7 +378,7 @@
       "directional": false,
       "face_nbp": true,
       "subject_block": "Christ as the true High Priest standing at a torn radiant veil, one hand laid upon the parted curtain, paused at the threshold of the holy light, seen from behind and side; glory opening ahead, darkness behind; he stands arrested, not walking; the fulfillment of the lone priest at the veil. Christ wears a simple luminous undyed white robe; he is the risen Lord, NOT in any high-priestly breastplate, ephod, jewelled vestments or ornate priestly costume.",
-      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "style_base": "Vintage 1960s Silver Age retro-comic illustration — bold black ink holding lines, flat limited four-colour comic colour with no gradients, clearly visible coarse Ben-Day halftone dots in skies and shadows, slight CMYK misregistration, warm cream colour palette; reverent, ancient Near-Eastern period-accurate, full-bleed edge-to-edge; no text, no lettering, no captions, no speech balloons, no title box, no watermark, no gore, no modern items. (Documentation only — the renderer pulls style_base/style_tail from config.STYLE_REGISTRY['retro'], not this field; see v2/AWAKEDEN_COMIC_DNA.md §1.)",
       "refs": [
         "christ"
       ],
@@ -399,7 +400,7 @@
       "directional": false,
       "face_nbp": true,
       "subject_block": "A unified fulfillment canvas: the figure of Christ central, reverent, arms open; soft-edged to the left, a single goat lying still and peacefully at rest upon the low stone altar as if asleep, its pale coat clean and whole (the price paid); soft-edged to the right, the scapegoat walking away into the pale wilderness (the guilt carried off); the two resolving into the one Priest at the centre; a faint cross of soft light above Christ. Ancient biblical-period Near-Eastern setting, calm and reverent. Christ wears a simple luminous undyed white robe; he is the risen Lord, in a plain robe, not any high-priestly breastplate, ephod or jewelled vestments.",
-      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "style_base": "Vintage 1960s Silver Age retro-comic illustration — bold black ink holding lines, flat limited four-colour comic colour with no gradients, clearly visible coarse Ben-Day halftone dots in skies and shadows, slight CMYK misregistration, warm cream colour palette; reverent, ancient Near-Eastern period-accurate, full-bleed edge-to-edge; no text, no lettering, no captions, no speech balloons, no title box, no watermark, no gore, no modern items. (Documentation only — the renderer pulls style_base/style_tail from config.STYLE_REGISTRY['retro'], not this field; see v2/AWAKEDEN_COMIC_DNA.md §1.)",
       "refs": [
         "christ"
       ],
@@ -421,7 +422,7 @@
       "directional": false,
       "face_nbp": false,
       "subject_block": "The glowing risen Christ seen from behind, standing on a dusty road outside the city wall, looking up the bare hill toward the closed gate. Jerusalem's skyline is low flat-roofed stone houses and simple square watchtowers behind the rampart wall, warm evening haze. Both hands are ordinary human hands, thumb and four fingers each in their own natural anatomical place, wrists straight, nothing bent, fused or reversed.",
-      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "style_base": "Vintage 1960s Silver Age retro-comic illustration — bold black ink holding lines, flat limited four-colour comic colour with no gradients, clearly visible coarse Ben-Day halftone dots in skies and shadows, slight CMYK misregistration, warm cream colour palette; reverent, ancient Near-Eastern period-accurate, full-bleed edge-to-edge; no text, no lettering, no captions, no speech balloons, no title box, no watermark, no gore, no modern items. (Documentation only — the renderer pulls style_base/style_tail from config.STYLE_REGISTRY['retro'], not this field; see v2/AWAKEDEN_COMIC_DNA.md §1.)",
       "refs": [
         "christ"
       ],
@@ -442,9 +443,8 @@
       "sfx": "deep resonant strike",
       "directional": false,
       "face_nbp": true,
-      "subject_block": "Two truths in one frame: the seated High-Priest Christ at rest in glory at the right hand (the chair Aaron never had), and the great temple veil torn from the top downward by no human hand, light pouring through the painted rip. The tear is painted, still, not actively ripping. Christ wears a simple luminous undyed white robe; he is the risen Lord, NOT in any high-priestly breastplate, ephod, jewelled vestments or ornate priestly costume.",
-      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
-      "fill": "forward_slow",
+      "subject_block": "Two truths in one frame: the seated High-Priest Christ at rest in glory at the right hand (the chair Aaron never had), and the great temple veil rent from the top downward by no human hand, a clean shaft of pale light pouring through the painted rip, the opening showing only light and drifting dust. The rip is painted, still, not actively ripping. Christ wears a simple luminous undyed white robe; he is the risen Lord, NOT in any high-priestly breastplate, ephod, jewelled vestments or ornate priestly costume.",
+      "style_base": "Vintage 1960s Silver Age retro-comic illustration — bold black ink holding lines, flat limited four-colour comic colour with no gradients, clearly visible coarse Ben-Day halftone dots in skies and shadows, slight CMYK misregistration, warm cream colour palette; reverent, ancient Near-Eastern period-accurate, full-bleed edge-to-edge; no text, no lettering, no captions, no speech balloons, no title box, no watermark, no gore, no modern items. (Documentation only — the renderer pulls style_base/style_tail from config.STYLE_REGISTRY['retro'], not this field; see v2/AWAKEDEN_COMIC_DNA.md §1.)",
       "refs": [
         "christ"
       ],
@@ -466,7 +466,7 @@
       "directional": false,
       "face_nbp": false,
       "subject_block": "Aged Aaron in linen steps back and gestures away from himself and from the old altar and goats, turning the viewer's eye past him toward a distant growing light; he diminishes into shadow as the light beyond him grows.",
-      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "style_base": "Vintage 1960s Silver Age retro-comic illustration — bold black ink holding lines, flat limited four-colour comic colour with no gradients, clearly visible coarse Ben-Day halftone dots in skies and shadows, slight CMYK misregistration, warm cream colour palette; reverent, ancient Near-Eastern period-accurate, full-bleed edge-to-edge; no text, no lettering, no captions, no speech balloons, no title box, no watermark, no gore, no modern items. (Documentation only — the renderer pulls style_base/style_tail from config.STYLE_REGISTRY['retro'], not this field; see v2/AWAKEDEN_COMIC_DNA.md §1.)",
       "refs": [
         "aaron"
       ]
@@ -487,7 +487,7 @@
       "directional": false,
       "face_nbp": true,
       "subject_block": "A lone everyman figure standing before the risen Christ, who waits with open hands in dawn light; the man stands still, having arrived; far behind him a dark burden already carried off, a small speck at the horizon, never to return; the road bright and open; no one mid-stride. Christ wears a simple luminous undyed white robe; he is the risen Lord, NOT in any high-priestly breastplate, ephod, jewelled vestments or ornate priestly costume.",
-      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "style_base": "Vintage 1960s Silver Age retro-comic illustration — bold black ink holding lines, flat limited four-colour comic colour with no gradients, clearly visible coarse Ben-Day halftone dots in skies and shadows, slight CMYK misregistration, warm cream colour palette; reverent, ancient Near-Eastern period-accurate, full-bleed edge-to-edge; no text, no lettering, no captions, no speech balloons, no title box, no watermark, no gore, no modern items. (Documentation only — the renderer pulls style_base/style_tail from config.STYLE_REGISTRY['retro'], not this field; see v2/AWAKEDEN_COMIC_DNA.md §1.)",
       "refs": [
         "christ"
       ],
@@ -509,8 +509,7 @@
       "directional": false,
       "face_nbp": false,
       "subject_block": "The torn temple veil now fully open, brilliant light flooding out into the once-dark holy place; the path through it clear and inviting; no guard, no priest barring the way; the great curtain hanging painted and still, the opening ablaze.",
-      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
-      "fill": "forward_slow",
+      "style_base": "Vintage 1960s Silver Age retro-comic illustration — bold black ink holding lines, flat limited four-colour comic colour with no gradients, clearly visible coarse Ben-Day halftone dots in skies and shadows, slight CMYK misregistration, warm cream colour palette; reverent, ancient Near-Eastern period-accurate, full-bleed edge-to-edge; no text, no lettering, no captions, no speech balloons, no title box, no watermark, no gore, no modern items. (Documentation only — the renderer pulls style_base/style_tail from config.STYLE_REGISTRY['retro'], not this field; see v2/AWAKEDEN_COMIC_DNA.md §1.)",
       "refs": []
     },
     {
@@ -529,7 +528,7 @@
       "directional": false,
       "face_nbp": false,
       "subject_block": "Ordinary people of every kind, all in ancient Near-Eastern robes, tunics and simple head-coverings of the biblical period (NOT European or medieval dress, no peasant caps, no brimmed hats, no bonnets), gathered close AT the opened veil, standing still in quiet awe in the light, unafraid, where once only one man one day a year could go; no one mid-stride, a held hush; kept soft and in gentle shadow so no single face dominates.",
-      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "style_base": "Vintage 1960s Silver Age retro-comic illustration — bold black ink holding lines, flat limited four-colour comic colour with no gradients, clearly visible coarse Ben-Day halftone dots in skies and shadows, slight CMYK misregistration, warm cream colour palette; reverent, ancient Near-Eastern period-accurate, full-bleed edge-to-edge; no text, no lettering, no captions, no speech balloons, no title box, no watermark, no gore, no modern items. (Documentation only — the renderer pulls style_base/style_tail from config.STYLE_REGISTRY['retro'], not this field; see v2/AWAKEDEN_COMIC_DNA.md §1.)",
       "refs": []
     },
     {
@@ -548,7 +547,7 @@
       "directional": false,
       "face_nbp": true,
       "subject_block": "HERO CLOSE: the risen Christ stands in the full open doorway of light, the torn veil framing him, one hand extended toward the viewer in welcome; the way wide open behind him; warm, reverent, the whole frame resolving on his face and open hand. The landing. Christ wears a simple luminous undyed white robe; he is the risen Lord, NOT in any high-priestly breastplate, ephod, jewelled vestments or ornate priestly costume.",
-      "style_base": "Baroque oil painting, dramatic chiaroscuro, Caravaggio and Rembrandt lighting, deep shadow and warm golden light, reverent sacred art, muted earth tones, fine visible brushwork, ancient biblical-period Near-Eastern setting, no text, no modern elements, cinematic 16:9 widescreen.",
+      "style_base": "Vintage 1960s Silver Age retro-comic illustration — bold black ink holding lines, flat limited four-colour comic colour with no gradients, clearly visible coarse Ben-Day halftone dots in skies and shadows, slight CMYK misregistration, warm cream colour palette; reverent, ancient Near-Eastern period-accurate, full-bleed edge-to-edge; no text, no lettering, no captions, no speech balloons, no title box, no watermark, no gore, no modern items. (Documentation only — the renderer pulls style_base/style_tail from config.STYLE_REGISTRY['retro'], not this field; see v2/AWAKEDEN_COMIC_DNA.md §1.)",
       "refs": [
         "christ"
       ],
@@ -560,7 +559,7 @@
     "place": "In and around the portable Tabernacle — a tent of skins and woven linen curtains in a desert camp, NOT a stone temple: linen court walls, a bronze altar, the veil and the mercy seat, surrounded by bleached wilderness.",
     "light": "A single warm key light, dawn-gold and oil-lamp flame from the left with deep Caravaggio shadow opposite, softened by incense and dust haze; the same light direction in every scene.",
     "palette": "Muted earth tones — sand, bone-white linen, ochre, dried-blood red, bronze and deep shadow-brown, with warm gold highlights only; no bright or saturated modern colour.",
-    "style": "Baroque oil painting, period-documentary, dramatic chiaroscuro in the manner of Caravaggio and Rembrandt, fine canvas texture, reverent sacred art",
+    "style": "Vintage 1960s Silver Age retro-comic illustration, bold black ink holding lines, flat limited four-colour comic colour, visible Ben-Day halftone dots in skies/shadows, warm cream palette, slight CMYK misregistration, reverent sacred art",
     "period_negatives": [
       "no European, medieval or Renaissance dress, peasant caps, brimmed hats or bonnets",
       "no stone-temple or cathedral architecture — it is a tent",
@@ -587,6 +586,7 @@
     "aspect": "16:9",
     "note": "Seedance 1.5 Pro for calm single-figure panels, Kling 3.0 for action/crowd/complexity (comic-grid-cost-tiered-animation)"
   },
-  "film_name": "EW01_Two_Goats_16x9_inked.mp4",
-  "_migration_note": "inked graphic-novel rebuild, 2026-07-21 — ported from the archived oil production (v1/_archived_oil_baroque/visual_16x9/scene_plan.json); scene content/camera/timing unchanged except the user-approved blood-rite redesigns of scenes 8 and 14; per memory graphic-novel-style-migration and the Bronze Serpent precedent."
+  "film_name": "EW01_Two_Goats_16x9.mp4",
+  "_migration_note": "inked graphic-novel rebuild, 2026-07-21 — ported from the archived oil production (v1/_archived_oil_baroque/visual_16x9/scene_plan.json); scene content/camera/timing unchanged except the user-approved blood-rite redesigns of scenes 8 and 14; per memory graphic-novel-style-migration and the Bronze Serpent precedent.",
+  "_retro_dna_note": "retro-comic DNA pilot text sync, 2026-07-24 — 'look', 'world.style' and every scene's 'style_base' rewritten from the stale leftover Baroque-oil wording (carried over untouched from the archived oil plan, never actually read at render time) to describe the real recipe now in config.STYLE_REGISTRY['retro'] (v2/AWAKEDEN_COMIC_DNA.md §1). Scene subject_block content (who/what/composition) is UNCHANGED — only the style-description text was corrected. The actual style switch lives in code: longform/EW01_Two_Goats/_render_inked_stills.py now forces config.VISUAL_STYLE='retro' before rendering. NOT YET RENDERED on this text — run a 3-5 scene test-gate before the full 25-scene pilot spend (§9 cost table, ~$29-34)."
 }

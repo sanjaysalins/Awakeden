@@ -1,0 +1,24 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Serif,Inter,51,&H00D8F0F4,&H00D8F0F4,&H00101214,&H64000000,0,0,0,0,100,100,0,0,1,0,1,1,126,40,259,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.60,0:00:01.52,Serif,,0,0,0,,{\an1\pos(210,945)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}so {\fs63\i1\b0\1c&H00D8F0F4}loved {\fs51\i0\b0\1c&H00D8F0F4}the
+Dialogue: 0,0:00:00.60,0:00:01.52,Serif,,0,0,0,,{\an1\pos(126,901)\b1\fs115\1c&H004CC2F2\bord0\shad0\blur7\fad(160,160)}God
+Dialogue: 1,0:00:00.60,0:00:01.52,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs115\i0\b1\1c&H004CC2F2\t(0,130,\fscx116\fscy116)\t(130,260,\fscx100\fscy100)}God
+Dialogue: 1,0:00:00.60,0:00:01.52,Serif,,0,0,0,,{\an1\pos(126,820)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}For
+Dialogue: 0,0:00:01.52,0:00:02.12,Serif,,0,0,0,,{\an1\pos(126,901)\b1\fs126\1c&H004CC2F2\bord0\shad0\blur7\fad(160,160)}world,
+Dialogue: 1,0:00:01.52,0:00:02.12,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs126\i0\b1\1c&H004CC2F2\t(0,130,\fscx116\fscy116)\t(130,260,\fscx100\fscy100)}world,
+Dialogue: 0,0:00:02.30,0:00:03.45,Serif,,0,0,0,,{\an1\pos(126,901)\b1\fs121\1c&H004CC2F2\bord0\shad0\blur7\fad(160,160)}only
+Dialogue: 1,0:00:02.30,0:00:03.45,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs121\i0\b1\1c&H004CC2F2\t(0,130,\fscx116\fscy116)\t(130,260,\fscx100\fscy100)}only
+Dialogue: 1,0:00:02.30,0:00:03.45,Serif,,0,0,0,,{\an1\pos(126,816)\fad(180,120)}{\fs51\i0\b0\1c&H00D8F0F4}that {\fs51\i0\b0\1c&H00D8F0F4}he {\fs63\i1\b0\1c&H00D8F0F4}gave {\fs51\i0\b0\1c&H00D8F0F4}his
+Dialogue: 1,0:00:03.45,0:00:04.35,Serif,,0,0,0,,{\an1\pos(357,945)\fad(180,120)}{\fs63\i1\b0\1c&H00D8F0F4}Son.
+Dialogue: 0,0:00:03.45,0:00:04.35,Serif,,0,0,0,,{\an1\pos(126,901)\b1\fs119\1c&H004CC2F2\bord0\shad0\blur7\fad(160,160)}begotten
+Dialogue: 1,0:00:03.45,0:00:04.35,Serif,,0,0,0,,{\an1\pos(126,901)\fad(180,120)}{\fs119\i0\b1\1c&H004CC2F2\t(0,130,\fscx116\fscy116)\t(130,260,\fscx100\fscy100)}begotten

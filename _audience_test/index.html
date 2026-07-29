@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Three little films — 3 minutes of your help</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0 0 70px;
+    background: #efe7d3; color: #231f20;
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.6;
+  }
+  header {
+    background: #231f20; color: #e8d9b0;
+    padding: 26px 20px 22px; text-align: center;
+  }
+  header h1 { margin: 0 0 8px; font-size: 1.45rem; letter-spacing: .02em; }
+  header p { margin: 0; color: #bfb193; font-size: 1rem; }
+  main { max-width: 560px; margin: 0 auto; padding: 0 16px; }
+  section { margin: 34px 0; }
+  h2 {
+    font-size: 1.2rem; letter-spacing: .06em;
+    border-bottom: 3px solid #231f20; padding-bottom: 6px;
+  }
+  .film-note { font-size: .92rem; color: #6b5f4c; font-style: italic; margin: 6px 0 10px; }
+  video {
+    display: block; width: 100%; max-width: 380px;
+    margin: 0 auto; border: 4px solid #231f20; border-radius: 6px;
+    background: #000;
+  }
+  .qcard {
+    background: #fbf6e8; border: 3px solid #231f20; border-radius: 10px;
+    padding: 18px 20px; margin: 16px 0;
+  }
+  .qcard .qnum { font-weight: bold; color: #8e1f1f; }
+  .qcard p { margin: 6px 0; font-size: 1.05rem; }
+  .choices { font-size: 1.05rem; font-weight: bold; letter-spacing: .12em; }
+  img.cover {
+    display: block; width: 100%; max-width: 380px;
+    margin: 0 auto; border: 4px solid #231f20; border-radius: 6px;
+  }
+  .template {
+    background: #231f20; color: #e8d9b0; border-radius: 10px;
+    padding: 16px 18px; font-family: Consolas, monospace; font-size: .95rem;
+    white-space: pre-line;
+  }
+  .thanks { text-align: center; font-style: italic; color: #6b5f4c; margin-top: 40px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Can you spare 3 minutes?</h1>
+  <p>Watch three short films (about a minute each, sound ON if you can),<br>
+  then answer three quick questions. Honest answers only — you can't hurt my feelings.</p>
+</header>
+<main>
+
+<section>
+  <h2>FILM A</h2>
+  <video controls playsinline preload="metadata" src="film_a.mp4"></video>
+</section>
+
+<section>
+  <h2>FILM B</h2>
+  <video controls playsinline preload="metadata" src="film_b.mp4"></video>
+</section>
+
+<section>
+  <h2>FILM C</h2>
+  <video controls playsinline preload="metadata" src="film_c.mp4"></video>
+</section>
+
+<section>
+  <h2>THE THREE QUESTIONS</h2>
+  <div class="qcard">
+    <p><span class="qnum">1.</span> Which film did you watch to the end — without wanting to skip?</p>
+    <p class="choices">A &nbsp;·&nbsp; B &nbsp;·&nbsp; C</p>
+  </div>
+  <div class="qcard">
+    <p><span class="qnum">2.</span> Which one would you actually send to a friend?</p>
+    <p class="choices">A &nbsp;·&nbsp; B &nbsp;·&nbsp; C</p>
+  </div>
+  <div class="qcard">
+    <p><span class="qnum">3.</span> Which one feels like it takes the Bible seriously?</p>
+    <p class="choices">A &nbsp;·&nbsp; B &nbsp;·&nbsp; C</p>
+  </div>
+</section>
+
+<section>
+  <h2>ONE MORE THING</h2>
+  <p>If this comic book existed — would you open it?</p>
+  <img class="cover" src="cover_mock.png" alt="Mock comic cover">
+  <div class="qcard">
+    <p><span class="qnum">4.</span> Yes or no — and one word for why.</p>
+  </div>
+</section>
+
+<section>
+  <h2>REPLY LIKE THIS</h2>
+  <div class="template">1. Watched to the end: __
+2. Would send to a friend: __
+3. Takes the Bible seriously: __
+4. Open the comic? __ — because: __
+Anything that felt off or cringe? __</div>
+</section>
+
+<p class="thanks">Thank you. Truly. — Sanjay</p>
+
+</main>
+</body>
+</html>

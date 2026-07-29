@@ -234,6 +234,7 @@ def run_one(name: str, prompt: str, outdir: Path) -> tuple[str, bool, str, float
             cmd, input=stdin_payload, capture_output=True, text=True, env=sub_env,
             encoding="utf-8", errors="replace", timeout=tmo,
             stdin=None if stdin_payload is not None else subprocess.DEVNULL,
+            creationflags=subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0,
         )
         dur = time.monotonic() - t
         out = (r.stdout or "").strip()
