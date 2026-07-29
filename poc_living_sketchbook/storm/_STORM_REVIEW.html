@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STORM v3 — living-sketchbook, Scribed Ink + world-bible build</title>
+<style>
+  body { background:#16181d; color:#e8e4d8; font-family:Georgia, serif; line-height:1.55; padding:28px 18px 100px; }
+  .wrap { max-width:1220px; margin:0 auto; }
+  h1 { color:#e9c877; font-size:1.9rem; margin-bottom:6px; }
+  h2 { color:#e9c877; font-size:1.3rem; margin:34px 0 12px; border-bottom:1px solid #333a47; padding-bottom:8px; }
+  .sub { color:#9aa0ad; margin-bottom:24px; }
+  video { width:100%; max-width:420px; border-radius:8px; display:block; margin:12px 0; }
+  .v { background:#1e2129; border-left:5px solid #e9c877; padding:16px 18px; border-radius:8px; margin:14px 0; }
+  .good { border-left-color:#7fc97f; }
+  .warn { border-left-color:#e07a5f; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:12px; }
+  .grid img { width:100%; border-radius:6px; border:1px solid #333a47; }
+  figcaption { color:#9aa0ad; font-size:.88rem; margin-top:4px; }
+  .device { display:inline-block; background:#333a47; color:#e9c877; border-radius:10px; padding:3px 12px; font-size:.85rem; font-family:Arial, sans-serif; margin:2px 4px 2px 0; }
+  .refgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:14px; }
+  .refgrid img { width:100%; border-radius:6px; border:1px solid #333a47; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>STORM v3 — Matthew 8:23-27, Scribed Ink + world-bible rebuild</h1>
+<div class="sub">v1 (2026-07-29 morning) proved Scribed Ink live in motion for the first time, but user
+review found 4 real gaps: no proper /cast-bible Christ reference, boat design drifting scene to
+scene, too many sharp crowd faces (T5 guardrail violation), and stills wasting page space instead of
+using it. v2 fixed all four with a world-bible pass + full redo. v3 (same day) fixes a second round
+of user-caught defects the v2 QC pass missed: modern-reading trouser hems, a duplicate hand, a scale
+mismatch, and the Fisherman reading as Jesus — plus, applying the same checklist myself, a disciple-
+count violation v2 still had. Uses the already-LOCKED "20 He Was Asleep in the Storm" narration
+throughout (no new text/audio). 63.0s &middot; 9:16 &middot; watermarked &middot; landing hold 3.60s
+&middot; audio==video.</div>
+
+<h2>&#9654; Watch v3 (with sound)</h2>
+<video controls src="STORM_living_sketchbook.mp4"></video>
+
+<h2>The world-bible reference sheet (built + user-approved before any redo)</h2>
+<div class="refgrid">
+  <figure><img src="../cast/jesus_ref.png"><figcaption>JESUS &mdash; proper /cast-bible canon (face geometry, hair/beard shape, build, hands), repo-level for series-wide reuse</figcaption></figure>
+  <figure><img src="../cast/disciples_ref.png"><figcaption>DISCIPLES &mdash; 3 distinct mixed-age fishermen, locks the crowd so it isn't re-invented every scene</figcaption></figure>
+  <figure><img src="world/boat_ref.png"><figcaption>BOAT &mdash; single-mast Galilee fishing boat, locks the design that drifted in v1</figcaption></figure>
+</div>
+
+<div class="v good"><b>Devices used:</b>
+<span class="device">proper /cast-bible Jesus ref (repo-level)</span>
+<span class="device">Disciples group ref (T5 guardrail fix, &le;3 sharp faces)</span>
+<span class="device">Boat world reference (consistency fix)</span>
+<span class="device">full-bleed vector-ready framing</span>
+<span class="device">multi-pose identity lock (2nd in-episode reference)</span>
+<span class="device">designed acting spread (s06 completing grip)</span>
+<span class="device">multi-stage hard cut, rebuke&#8594;calm (s09/s10)</span>
+<span class="device">SCRIBED INK — Matthew 8:26 (live, in motion)</span>
+<span class="device">Ink Stamp ("EXACTLY.")</span>
+<span class="device">paperRip transition</span>
+<span class="device">grain-boil</span>
+<span class="device">near-silence + low tone under the KJV quote</span>
+<span class="device">cold&#8594;warm score arc turning on the rebuke</span>
+<span class="device">torn-page Christ landing</span>
+</div>
+
+<h2>The story, in one line</h2>
+<div class="v">The storm is real, the fear is real, and Jesus sleeps through it — not because He doesn't
+care, but because He has nothing to fear from the very thing that's killing them. He wakes, asks one
+question, and silences the sea with a word. You've admired this scene your whole life — but when the
+water reaches your own knees, you don't trust the Christ in the boat either. He isn't asking for your
+composure. He's asking: why are you afraid?</div>
+
+<h2>v2 — what the user's feedback caught, and how it was fixed</h2>
+<div class="v warn">
+<ul style="margin-left:20px">
+<li><b>No proper Christ reference:</b> the Jesus anchor reused across every living-sketchbook episode
+so far was a single quick roll from the Door-episode POC, no iteration, no real /cast-bible rigor.
+Fixed: a full canon sheet (face geometry, hair/beard shape, skin, build, hands, garment) and a
+close-crop anchor, built via `poc_living_sketchbook/_r1_worldbible.py`, saved repo-level at
+`poc_living_sketchbook/cast/` for reuse across future episodes, user-approved before any stills were
+touched.</li>
+<li><b>Boat design drifted scene to scene</b> — masted in some v1 shots, oar-only in others, because
+nothing locked it. Fixed: one boat reference image, chained into every boat-visible shot.</li>
+<li><b>T5 render-guardrail violation</b> (`data/render_guardrails.md`, &le;3 sharp crowd faces or the
+animator hallucinates on push-in) — s09/s10 rendered 5-6 individually sharp disciple faces. Fixed: a
+3-person Disciples reference, capped at exactly 3 in every crowd shot.</li>
+<li><b>Stills wasted page real estate</b> — large blank cream/kraft margins around a small inset
+scene. First fix pass helped some shots (s04/s09/s10) but not others; caught on full-resolution
+review, not the thumbnail contact sheet. Fixed with a stronger, more explicit framing instruction
+("zoom in until the subject fills the entire frame, corner to corner, no blank kraft-paper region")
+and re-rendered the 8 shots that still had the problem.</li>
+</ul>
+Full redo: 3 world-bible references + 13 stills (rendered twice — first pass, then 8 re-rendered for
+the real-estate fix) + 13 clips + full re-assembly. The Scribed Ink and torn-page-landing fixes from
+v1 carried over clean (re-verified on the v2 render, no drip, verse still legible).
+</div>
+
+<h2>The 13 spreads (v2)</h2>
+<div class="grid">
+  <figure><img src="stills/s01_waves.png"><figcaption>1 &middot; Waves breaking over the rail</figcaption></figure>
+  <figure><img src="stills/s02_water.png"><figcaption>2 &middot; Water in the boat, past your knees</figcaption></figure>
+  <figure><img src="stills/s03_screaming.png"><figcaption>3 &middot; Men screaming for their lives (3 disciples, ref-locked)</figcaption></figure>
+  <figure><img src="stills/s04_asleep.png"><figcaption>4 &middot; And in the stern &mdash; He is asleep</figcaption></figure>
+  <figure><img src="stills/s05_hands.png"><figcaption>5 &middot; Nothing to fear from the very thing killing them</figcaption></figure>
+  <figure><img src="stills/s06_shaken.png"><figcaption>6 &middot; They shake Him awake (designed acting spread)</figcaption></figure>
+  <figure><img src="stills/s07_eyes.png"><figcaption>7 &middot; He opens His eyes</figcaption></figure>
+  <figure><img src="stills/s08_verse.png"><figcaption>8 &middot; SCRIBED INK &mdash; Matthew 8:26</figcaption></figure>
+  <figure><img src="stills/s09_rebuke.png"><figcaption>9 &middot; He rebuked the winds and the sea (stage A, 3 disciples)</figcaption></figure>
+  <figure><img src="stills/s10_calm.png"><figcaption>10 &middot; A great calm (stage B, hard cut)</figcaption></figure>
+  <figure><img src="stills/s11_exactly.png"><figcaption>11 &middot; "Exactly." &mdash; Ink Stamp</figcaption></figure>
+  <figure><img src="stills/s12_knees.png"><figcaption>12 &middot; When the water reaches your own knees</figcaption></figure>
+  <figure><img src="stills/s13_landing.png"><figcaption>13 &middot; Landing &mdash; why are you afraid?</figcaption></figure>
+</div>
+
+<h2>v3 — the user's own eyes caught 4 more real defects; a self-applied checklist caught a 5th</h2>
+<div class="v warn">
+<ul style="margin-left:20px">
+<li><b>s02_water / s12_knees read as modern trousers</b>, not a period tunic — the hitched-tunic hem
+was rendering as two separate leg-shapes at the ankle/knee. Fixed by describing the hem explicitly as
+ONE continuous garment ending above the knee, "never separate trouser legs."</li>
+<li><b>s05_hands rendered TWO overlapping hands</b> when the prompt asked for one resting hand alone
+— a duplicate-limb glitch invisible at contact-sheet scale. Fixed by stating "only ONE hand visible
+in frame" explicitly; "a hand" alone doesn't reliably read as singular to the model.</li>
+<li><b>s07_eyes: "a giant Jesus in a small boat"</b> — the close crop left his head disproportionately
+huge against a sliver of boat rail. Fixed by pulling the framing back to a mid-shot that keeps the
+boat's mast/bench/rail in frame as a scale reference.</li>
+<li><b>The Fisherman read as Jesus</b> — the two canon sheets both said "dark hair, short beard" and
+were never compared against EACH OTHER, only each against its own text. Fixed: Fisherman is now
+short-cropped hair (Jesus is long/wavy), a thick rough beard (Jesus is close-cropped), broader/
+stockier build, forties (Jesus is early thirties) — a fully re-rendered anchor and s02/s06/s12.</li>
+<li><b>Self-caught applying the new checklist: s09/s10 still showed 4 disciples</b>, not the capped 3
+— the "exactly three" wording in the prompt wasn't being enforced strictly enough. Fixed with an
+explicit numbered list + "no fourth person, no partial figure, even partially hidden."</li>
+</ul>
+These 5 defects prompted a standing process fix, not just a one-off patch: a new full-resolution
+Still QC Checklist is now locked into <code>.claude/skills/living-sketchbook/SKILL.md</code> &sect;8a
+&mdash; anatomy (hand/limb count), period costume at full res (not gestalt), scale/proportion vs. the
+intended shot type, and cross-character distinctness checked BEFORE any scene stills are rendered.
+The rule it replaces ("eye-QC vs anchors + period + no baked text" on a thumbnail contact sheet) is
+exactly what let all 5 of these through undetected in v2.
+</div>
+
+<h2>v4 — two more user notes: s12 scale, and the landing needed to feel more alive</h2>
+<div class="v good">
+<ul style="margin-left:20px">
+<li><b>s12_knees: "this man looks like a giant on a boat"</b> &mdash; same scale problem as v3's s07
+fix, just missed on this spread. Fixed the same way: pulled the framing back to a mid-shot that keeps
+the boat's hull/mast/bench in view as a scale reference.</li>
+<li><b>s13_landing: "should be more animated"</b> &mdash; SKILL.md's "sacred stillness, camera never
+moves" rule is deliberate everywhere else, but the user wanted the FINAL spread to feel more alive.
+Chose a slow push-in toward the golden light. First attempt used ffmpeg's <code>zoompan</code> filter
+and produced NO visible zoom at all (3 attempts, various fixes, all static) &mdash; a real environment
+quirk, not a scripting typo. Switched to a fully deterministic approach instead: a Python/PIL loop
+that crops+resizes the still at 420 discrete zoom steps (1.0&rarr;1.32 over 14s) and encodes the
+sequence with ffmpeg &mdash; the same frame-sequence technique already proven reliable in this
+project's own assembly script. $0 cost, no AI re-render needed.</li>
+</ul>
+</div>
+
+<h2>v1 — real defects hit and fixed during the first build (honest log, kept for the record)</h2>
+<div class="v warn">
+<ul style="margin-left:20px">
+<li><b>The Scribed Ink verse card was rendering but was effectively invisible:</b> v1's first
+assembly placed the Matthew 8:26 card low, over Jesus's robe/lap — the thin hand-inked strokes had
+almost no contrast against the busy tunic linework. Fixed by moving the card to the open stormy sky
+above his head, clear of his face.</li>
+<li><b>Seedance invented a dripping trail on the landing spread (s13)</b> that isn't in the original
+still — the same failure class as Jericho's invented blood-pool. Fixed by switching Seedance&#8594;Kling
+and locking the exact boundary with zero liquid-adjacent vocabulary. Re-verified clean on v2's fresh
+render of the same spread.</li>
+</ul>
+</div>
+
+<h2>What this proves</h2>
+<div class="v good">
+Scribed Ink has a real, moving, finished proof, now on a properly world-bible-anchored episode:
+Jesus's identity holds across his widest pose range in this style (asleep, shaken, speaking,
+commanding, calm) against a real /cast-bible reference, not an ad-hoc one-off; the boat reads as the
+SAME boat in every shot; crowd scenes hold to the &le;3 sharp-face discipline this repo already had a
+rule for but I wasn't applying; and the page is used, not wasted. Two rounds of "look at the actual
+render, not the exit code" caught real defects each time in v1/v2 — and a third round (v3) confirms
+this needed to become a repeatable checklist, not repeated luck.
+</div>
+
+<h2>Cost</h2>
+<div class="v">v1 build: <b>$21.86 est</b>. v2 redo (world-bible refs + full still/clip redo):
+<b>~$22.40 est</b>. v3 fixes (Fisherman re-anchor, 6 stills re-rendered, 6 clips re-animated):
+<b>~$7.73 est</b>. v4 fixes (s12 re-render/re-animate; landing push-in was $0, deterministic):
+<b>~$1.74 est</b>. <b>Combined: $53.73 est</b> (spend ledger, episodes LS_Storm + LS_Storm_v2 +
+LS_WorldBible) &mdash; more than double the original quote. Every round of spend bought a real,
+user-verified fix, but the v3 checklist is specifically meant to catch this class of defect on the
+FIRST pass for the next episode, not the fourth.</div>
+</div>
+</body>
+</html>
