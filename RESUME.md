@@ -1,3 +1,181 @@
+# RESUME — next session (updated 2026-07-29 late night — Storm episode v1-v4 + Fable's 8 device skills built, v5 integration paused mid-test)
+
+# ══════ START HERE TOMORROW ══════
+# The v5 assembly script (_s4_assemble.py) is edited and WORKING (no errors on 2 of 3
+# test windows) but NOT fully verified and NOT run as a full render yet. Do this first:
+#
+# 1. Look at the two test renders already on disk (both already extracted to individual
+#    frame PNGs in poc_living_sketchbook/storm/_qc2/, or re-extract fresh):
+#    - poc_living_sketchbook/storm/_test_0.0_3.0.mp4  (S01: blue-line + wash-creep +
+#      tide-mark + damp-cockle stack) — eye-checked already, looked clean, no bugs found.
+#    - poc_living_sketchbook/storm/_test_29.0_33.0.mp4  (S10: still-water-mirror + gold
+#      flare + tide recede + damp-cockle taper) — eye-checked already (frames at t=1.96
+#      and t=3.0), looked clean: no blown-out flare, no inverted reflection, mirror reads
+#      naturally. NOT checked: the very start of the window (t=0/local 29.0s) or whether
+#      the gold flare timing (peaks at 30.96s, "and there was a great calm") is centered
+#      correctly — worth one more look before trusting it fully.
+# 2. NOT YET TESTED: S13's landing window (Set-Off — the mirrored verse bleed-through).
+#    Run: `.venv\Scripts\python.exe poc_living_sketchbook/storm/_s4_assemble.py
+#    --test-window 52 59` and eye-check around t=53.5-58s (the fade-in window) — the last
+#    background render for this was started but the conversation ended before results
+#    came back (command was mid-flight: ffmpeg -ss extraction on _test_29.0_33.0.mp4 had
+#    just been kicked off when the user asked to stop — that specific extraction may or
+#    may not have finished, re-run if the files aren't there).
+# 3. If S13 looks right (or after fixing anything wrong), run the FULL render:
+#    `.venv\Scripts\python.exe poc_living_sketchbook/storm/_s4_assemble.py`
+#    (no --test-window flag = full 63.0s render). This will take LONGER than v1-v4's
+#    ~15min full renders — every frame now also runs wash-creep/tide-mark/damp-cockle/
+#    still-water-mirror/raking-light math on top of the existing overlay+grain-boil
+#    pipeline. Budget 30-45+ min, run in background, don't block on it.
+# 4. After it renders: verify duration (63.0s video==audio via ffprobe, same as every
+#    prior round), spot-check frames across ALL the device windows one more time in the
+#    FULL context (transitions/overlays/grain-boil stacked together can interact in ways
+#    a 2-3s isolated test window won't show), watermark (check for /move aside any stale
+#    .prewm.bak.mp4 first — this has bitten every prior watermark run this project, it's
+#    now a known gotcha, not a surprise), update _STORM_REVIEW.html with a "v5" section,
+#    and present to the user.
+# 5. Optional cleanup once v5 is confirmed good: poc_living_sketchbook/storm/stills_v1/
+#    and clips_v1/ are the abandoned v1 render backups (from before the world-bible
+#    redo) — ask the user whether to delete them or leave them as historical record.
+#
+# ══════ WHAT HAPPENED TONIGHT (long session, in order) ══════
+#
+# 1. Picked up from RESUME.md's own tweak list (Scribed Ink had never shipped in motion)
+#    → built /living-sketchbook's Storm episode (Matthew 8:23-27, "20 He Was Asleep in
+#    the Storm" — narration reused, LOCKED, no new text/audio). v1 finished: 63.0s,
+#    proved Scribed Ink live for the first time. Found+fixed 2 real bugs (verse card
+#    unreadable over busy robe; Seedance invented a drip on the landing) before calling
+#    it done. Full writeup + honest defect log: poc_living_sketchbook/storm/_STORM_REVIEW.html
+#
+# 2. User reviewed v1, gave 4 pieces of feedback: no proper /cast-bible Christ reference,
+#    boat design drifting scene to scene, T5 crowd-face guardrail violation (5-6 sharp
+#    disciple faces in s09/s10), stills wasting page space. User wanted to SEE the ref
+#    chart before any redo. Built poc_living_sketchbook/_r1_worldbible.py → JESUS.md/
+#    jesus_ref.png (repo-level, poc_living_sketchbook/cast/) + DISCIPLES.md/
+#    disciples_ref.png (3-person group ref) + storm/world/BOAT.md/boat_ref.png, all
+#    user-approved before touching any stills. Redid all 13 stills + 13 clips (v2) with
+#    world-bible references chained + stronger full-bleed framing + disciples capped at 3.
+#
+# 3. User also said (mid-flight): "we should also see how we can fix the process and
+#    pipeline and workflow and verification, so that we dont do this again." Wrote a new
+#    Still QC Checklist into .claude/skills/living-sketchbook/SKILL.md §8a (four checks:
+#    anatomy/hand-count, period-costume AT FULL RES not gestalt, scale/proportion vs
+#    intended shot type, cross-character distinctness checked at the anchor-approval gate
+#    BEFORE any scene stills) — this exists because v2 STILL shipped with 5 real defects
+#    (see below) that a thumbnail contact-sheet pass missed.
+#
+# 4. User sent the stills feedback tool back with 4 specific notes (s02 modern trousers,
+#    s05 two hands, s07 giant-Jesus-tiny-boat scale, s12 Fisherman looks like Jesus).
+#    Fixed all 4 (Fisherman canon rewritten to be deliberately DISTINCT from Jesus —
+#    short-cropped hair vs long wavy, broader/stockier vs lean, 40s vs early-30s; tunic
+#    hem wording fixed to forbid trouser-legs explicitly; s05 locked to one hand only;
+#    s07/s12 pulled back to mid-shots for correct scale). Self-applying the NEW checklist
+#    caught a 5th defect nobody flagged: s09/s10 still had 4 disciples, not the capped 3
+#    — fixed with a stronger "count them: (1)/(2)/(3), no fourth person" prompt lock.
+#    This became v3. Full round-by-round log is in _STORM_REVIEW.html (v1 through v4
+#    sections, each with its own honest defect log — read those before assuming anything
+#    "just works").
+#
+# 5. Two more user notes: s12 STILL read as a giant on the boat (a second scale pass
+#    needed), and s13's landing "should be more animated." Asked which direction for the
+#    landing (figure-steps / stronger-glow / camera-push-in) — user picked push-in.
+#    ffmpeg's zoompan filter produced ZERO visible zoom across 3 separate attempts despite
+#    looking correct in code — a real environment quirk (documented in the storm skill
+#    files' lessons), not a scripting mistake; switched to a deterministic Python/PIL
+#    frame-by-frame crop+resize approach instead, which worked cleanly, $0 extra cost.
+#    This became v4 — the version currently live as poc_living_sketchbook/storm/
+#    STORM_living_sketchbook.mp4 and reflected in _STORM_REVIEW.html.
+#
+# 6. User: "could we ask fable to be creative and create some skills to enhance this
+#    clip... inspired by the vox skills and builds in ArkAIology." Launched Fable
+#    (model=fable) as a research+creative agent — it read living-sketchbook/SKILL.md, all
+#    of panel_animator/, every ArkAIology vox skill, and 6 real stills at full res before
+#    proposing. Its thesis: every existing device acts on the DRAWING, nothing acts on
+#    the PAPER the drawing sits on — and paper-layer effects are $0, deterministic, and
+#    structurally incapable of inventing doctrine (they can't grow a 4th disciple or an
+#    extra hand, because they don't touch the generated content at all). Full brief:
+#    poc_living_sketchbook/storm/_FABLE_ENHANCEMENT_BRIEFS.md — 8 devices: Tide-Mark
+#    (Fable's own #1 pick — a damp waterline that physically links the narration's own
+#    callback, "water past THEIR knees" → "water past YOUR knees"), Wash-Creep (#2 —
+#    the storm wash itself retreats on the rebuke, rendering the miracle via the MEDIUM
+#    not a generated frame), Damp Cockle, Set-Off, Still-Water Mirror, Blue-Line, Raking
+#    Light, Held Breath (#3 — infrastructure: reads the narration's real silences and
+#    damps every other device's motion during them; the biggest gap in this narration,
+#    1.64s, sits right after "He is asleep" and was previously wasted).
+#
+# 7. User approved: "if these are good, we can create them as project skills that we can
+#    apply in all videos as needed, so go ahead and test them, ~200cr authorized." (Note:
+#    all 8 devices are $0/deterministic — no AI credits were actually needed or spent
+#    building/testing any of them; the 200cr authorization went unused.) Dispatched 7
+#    parallel agents (one per device, Held Breath built directly by me last since it
+#    needed to reference the others' conventions) — each built a panel_animator/<name>.py
+#    + a .claude/skills/<name>/SKILL.md, rendered a real test clip, and self-verified by
+#    LOOKING at extracted frames (not trusting exit codes) before reporting back. 6 of 7
+#    landed clean on the first pass; several caught real bugs during their own
+#    verification: Wash-Creep bled through the boat's mast/rope (fixed with a proper
+#    grassfire/barrier growth algorithm, validated against a 2nd still with Jesus in it
+#    to confirm no bleed onto his robe); Still-Water-Mirror's detect_horizon() picked the
+#    torn-paper deckle edge instead of the sea horizon (fixed by requiring an explicit
+#    --horizon-y, now a documented Locked Lesson); Raking-Light hit an ffmpeg -ss seek
+#    quirk mid-verification that initially looked like a silent-no-op bug, dug in instead
+#    of trusting the scary result, confirmed the renderer was actually fine. Tide-Mark's
+#    FIRST attempt ran far longer than the other 6 (45+ min vs their 7-45min) — killed it
+#    (couldn't find a TaskStop-compatible ID for a plain Agent-tool background dispatch,
+#    so it may still be running/finish harmlessly in the background, disregarded either
+#    way) and relaunched with a much tighter, more bounded brief + a hard one-fix-then-
+#    stop instruction. The retry found the FIRST attempt's already-written .py file on
+#    disk, reused it, found and fixed one real bug in it (a warm tint bleeding across the
+#    WHOLE frame instead of just the bottom tide band), verified with a lossless PNG diff
+#    (bypassing video-compression noise) — clean bottom-only effect, wavy 159px boundary.
+#    All 8 are now real, working, independently-verified reusable skills under
+#    panel_animator/ + .claude/skills/<name>/ (note: .claude/ is GITIGNORED repo-wide —
+#    same as every other existing skill in this project — so the SKILL.md docs live
+#    local-machine-only; only the panel_animator/*.py code is in git history).
+#
+# 8. Started integrating all 8 into the actual Storm cut (v5) — edited _s4_assemble.py:
+#    added imports, a storm_tide_curve(t) authored to the real word-timing (rises
+#    0→6.67s, frozen 23.55-27.43s under the KJV verse, recedes 29.8-32.2s, snaps back to
+#    full height at 43.16s on the word "knees", fades out by 49.11s), a
+#    STILL_WATER_HORIZON dict (hand-picked horizon rows for s10/s11, NOT run through
+#    detect_horizon() — that heuristic is known-unreliable per still-water-mirror's own
+#    Locked Lessons), a build_paper_resources() that precomputes masks/plates ONCE per
+#    still (not per-frame, per every device's own docstring guidance), an
+#    apply_paper_devices() dispatch function keyed by spread name, and a --test-window
+#    START END CLI flag for fast partial-render iteration instead of committing to a full
+#    ~30-45min render blind. Two test windows rendered + eye-checked clean (S01, S10 — see
+#    "START HERE TOMORROW" above for exact status). This is where the session paused.
+#
+# ══════ KEY FILES ══════
+# Episode root: poc_living_sketchbook/storm/
+#   _s4_assemble.py          the v5 integration (edited tonight, mid-verification)
+#   _s2_stills.py / _s3_animate.py / _s1_anchor.py / _s0_align.py   v1-v4 pipeline stages
+#   _STORM_REVIEW.html        the human-readable review/gate doc, v1 through v4 sections
+#   _FABLE_ENHANCEMENT_BRIEFS.md   Fable's full creative brief, all 8 devices
+#   _PLAN.md                  the original spread-by-spread plan
+#   stills/ clips/            the CURRENT (v4) rendered assets; stills_v1/ clips_v1/ are
+#                              the abandoned pre-world-bible originals, not yet cleaned up
+#   cast/FISHERMAN.md          + fisherman_sketch_ref.png (episode-local witness anchor)
+#   world/BOAT.md              + boat_ref.png (episode-local prop anchor)
+# Repo-level (reusable across episodes):
+#   poc_living_sketchbook/cast/JESUS.md, DISCIPLES.md   (+ *_ref.png anchors)
+#   panel_animator/tide_mark.py, wash_creep.py, damp_cockle.py, set_off.py,
+#     still_water_mirror.py, blue_line.py, raking_light.py, held_breath.py
+#   .claude/skills/<device-name>/SKILL.md   (one per device, local-machine only, gitignored)
+#   .claude/skills/living-sketchbook/SKILL.md §8a   the new Still QC Checklist
+#
+# ══════ COST TONIGHT ══════
+# Storm v1-v4: $53.73 est (spend ledger, episodes LS_Storm + LS_Storm_v2 + LS_WorldBible).
+# Fable's 8 devices + v5 integration work: $0 (all deterministic PIL/numpy/cv2/ffmpeg, no
+# AI generation). The user's 200cr authorization for testing the devices went unused.
+#
+# ══════ COMMITTED TO GIT TONIGHT ══════
+# Yes (user confirmed) — commit 8d7947f: the 8 panel_animator device .py files, the
+# world-bible script, cast/world canon .md files, and all the Storm episode's non-media
+# pipeline scripts/docs/json. Media (mp4/png) stays gitignored per repo policy, as always.
+# The 8 new .claude/skills/<name>/SKILL.md docs are NOT in git (gitignored, matching every
+# pre-existing skill in this repo) — they exist only on this machine.
+#
+# ══════════ PREVIOUS (2026-07-29 early) BELOW ══════════
 # RESUME — next session (updated 2026-07-29 early — DIRECTION CHOSEN by the user, session closed clean)
 #
 # ══════ START HERE TOMORROW: the user's own words closing tonight ══════

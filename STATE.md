@@ -1,6 +1,19 @@
 # STATE.md — progress tracker
 
-**Last updated:** 2026-07-29 early (LIVING-SKETCHBOOK — user-chosen go-forward direction, 3 episodes proven, tweaks pending)
+**Last updated:** 2026-07-29 late night — Storm episode (Matthew 8:23-27) built v1-v4
+through 4 rounds of real user-caught defects, each fixed and logged honestly in
+`poc_living_sketchbook/storm/_STORM_REVIEW.html`. A new Still QC Checklist is now locked
+into `.claude/skills/living-sketchbook/SKILL.md` §8a (anatomy, period-costume at full
+res, scale/proportion, cross-character distinctness) after v2 shipped with 5 real defects
+a thumbnail contact-sheet pass missed. Fable (creative agent) then proposed 8 new $0
+deterministic "paper-layer" enhancement devices (act on the page, not the drawing —
+structurally can't reintroduce those defect classes); all 8 built + independently
+verified as reusable `panel_animator/` skills (`tide_mark`, `wash_creep`, `damp_cockle`,
+`set_off`, `still_water_mirror`, `blue_line`, `raking_light`, `held_breath`). Integration
+into a v5 Storm cut is IN PROGRESS, paused mid-verification — **full detail + exact next
+steps are in `RESUME.md`'s top section, read that first.** Committed to git (8d7947f).
+
+**Previous status (2026-07-29 early, still relevant — the living-sketchbook direction choice):**
 
 **Status (2026-07-28/29 — the sketch-documentary direction is CHOSEN, not yet formally locked):**
 User pivot session: loved the cast-bible-adjacent sketch style from a taste piece, asked for an
