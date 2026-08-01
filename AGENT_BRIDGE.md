@@ -71,3 +71,20 @@ for the reply. The agent writes the reply; the engine reads it and continues.
 If a run hangs, it is almost always an **unserviced request** — check
 `.agent_bridge/requests/`. To kill the wait, write the reply, or stop the process
 and re-run with `LLM_PROVIDER=api`.
+
+## Watcher (don't lose track of a stuck request)
+
+`watcher_service.py` (start once via `start_watcher.vbs`, keeps running in the
+background with zero visible window — not even a flash, unlike a `.bat` launcher) polls `.agent_bridge/requests/` and flags an
+unanswered request in the Claude Code **status line** once it's been waiting a
+while — kept deliberately short so it doesn't get cut off in a narrow terminal:
+dim "⏳ bridge 45s" at 30s, red "🚨 bridge 6m" at 5min (needs you now), red
+"☠ bridge 5.9d" past 1hr (the engine has already given up and crashed — this
+one's just debris, go delete/archive the request file). A count suffix like
+"x2" appears if more than one request is stuck at once. The chip clears itself
+within seconds of the underlying request being answered or archived — no
+restart needed, it re-scans from scratch every ~10s. It also keeps the PC awake
+only while a request is actively pending/stalled, so an unattended run doesn't
+get killed by Windows sleep. It cannot write a real reply for you — it only
+makes sure a stuck request shows up where you'll see it. See `watcher_service.py`
+for the env knobs (`WATCHER_POLL_SEC`, `WATCHER_PENDING_SEC`, etc.).

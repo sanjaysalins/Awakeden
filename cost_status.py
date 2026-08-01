@@ -7,14 +7,20 @@ carry est_usd + credits, so summing needs no rate tables.
 
 Modes:
   --statusline   print one colored bar for the Claude Code status line —
-                 [FOLDER] [⎇ branch]  💰 today spend  · Model · ctx:NN%
+                 [FOLDER] [⎇ branch]  💬 turn  ☠ bridge  💰 today spend  · Model · ctx:NN%
                  (mirrors HF-POC series/03_furgiven/tools/status_line.py; folder
                  + branch + model always show, spend only when the ledger exists)
   --hook         PostToolUse: (1) log ad-hoc `hf generate create <model>` commands
                  typed in chat (pipeline renders call hf.exe INSIDE python subprocesses,
                  so they never match — no double count); (2) emit {"systemMessage": ...}
                  ONLY when today's total changed since the last report.
-State: data/.cost_report_state.json  ·  Ledger: data/spend_ledger.jsonl
+  --turn-hook    Stop / Notification / UserPromptSubmit: tracks whether Claude is
+                 currently waiting on the USER (turn done, permission needed, or
+                 Claude Code's own idle nudge) so the statusline can show it —
+                 the flip side of the agent-bridge watcher (that one flags when
+                 Claude is waiting on YOU to service a stuck background request;
+                 this one flags when Claude is waiting on you to just respond).
+State: data/.cost_report_state.json · data/.turn_state/ · Ledger: data/spend_ledger.jsonl
 """
 from __future__ import annotations
 import json
@@ -22,12 +28,16 @@ import os
 import re
 import subprocess
 import sys
+import time
 from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 LEDGER = ROOT / "data" / "spend_ledger.jsonl"
 STATE_DIR = ROOT / "data" / ".cost_state"  # one state file per Claude session
+WATCHER_STATUS = ROOT / "data" / ".watcher_status.json"  # written by watcher_service.py
+WATCHER_STALE_SEC = 60  # no update this long -> watcher_service.py itself has died
+TURN_DIR = ROOT / "data" / ".turn_state"  # one state file per Claude session (Stop/Notification/UserPromptSubmit)
 CREDITS_TO_USD = 0.15  # mirrors config.HF_CREDITS_TO_USD (nano_banana_2 2cr ~= $0.30)
 # git/hf are console apps; under pythonw (no console) each call pops a visible
 # console window unless CREATE_NO_WINDOW is passed.
@@ -60,8 +70,8 @@ def chip(text: str, fg: str, bg: str) -> str:
 
 
 def _read_stdin() -> dict:
-    """Claude Code pipes the status JSON (model/workspace/context_window) on stdin;
-    a real terminal (isatty) or empty pipe -> {} so a manual run never hangs."""
+    """Claude Code pipes the status JSON (model/workspace/context_window/session_id)
+    on stdin; a real terminal (isatty) or empty pipe -> {} so a manual run never hangs."""
     try:
         if not sys.stdin.isatty():
             return json.loads(sys.stdin.read() or "{}")
@@ -86,6 +96,63 @@ def _branch(cwd: str) -> str:
         return ""
 
 
+def _fmt_age(sec) -> str:
+    sec = max(0, int(sec or 0))
+    if sec < 60:
+        return f"{sec}s"
+    if sec < 3600:
+        return f"{sec // 60}m"
+    if sec < 86400:
+        return f"{sec / 3600:.1f}h"
+    return f"{sec / 86400:.1f}d"
+
+
+def watcher_chip() -> str | None:
+    """Reads watcher_service.py's status file only -- must stay instant, so this
+    NEVER scans .agent_bridge/ itself (that scanning work belongs to the standalone
+    watcher process). None means show nothing, same as the spend chip's precedent."""
+    try:
+        status = json.loads(WATCHER_STATUS.read_text(encoding="utf-8"))
+    except Exception:
+        return None  # watcher never started -- not an error, just nothing to show
+
+    if time.time() - float(status.get("updated_ts", 0)) > WATCHER_STALE_SEC:
+        return chip("watcher offline", "97", "100")  # white on grey: the watcher itself died
+
+    state = status.get("state", "ok")
+    if state == "ok":
+        return None
+    age = _fmt_age(status.get("oldest_age_sec"))
+    n = f" x{status['count']}" if status.get("count", 1) > 1 else ""
+    # kept deliberately short -- the full picture (which request, what to do about
+    # it) lives in AGENT_BRIDGE.md; a status-line chip just needs to catch the eye
+    if state == "pending":
+        return f"\033[2m⏳ bridge {age}{n}{R}"                  # dim: normal wait, not alarming yet
+    if state == "stalled":
+        return chip(f"\U0001f6a8 bridge {age}{n}", "97", "41")  # white on red
+    if state == "abandoned":
+        return chip(f"☠ bridge {age}{n}", "97", "41")
+    return None
+
+
+def turn_chip(data: dict) -> str | None:
+    """Is Claude currently waiting on the USER? Reads the per-session file
+    run_turn_hook() writes -- None means not waiting (file missing = the normal
+    mid-turn/working state, same no-chip precedent as the other chips)."""
+    sid = _session_id(data)
+    try:
+        st = json.loads((TURN_DIR / f"{sid}.json").read_text(encoding="utf-8"))
+    except Exception:
+        return None
+    reason = st.get("reason", "stop")
+    age = _fmt_age(time.time() - float(st.get("since", 0)))
+    if reason == "permission":
+        return chip(f"\U0001f513 permission {age}", "97", "41")   # white on red: needs a click
+    if reason == "idle":
+        return chip(f"\U0001f4ac waiting {age}", "30", "103")     # black on yellow: idle nudge
+    return f"\033[2m\U0001f4ac your turn{R}"                       # dim: normal end-of-turn
+
+
 def render_statusline(data: dict) -> str:
     cwd = _root_dir(data)
     folder = os.path.basename(cwd.rstrip("/\\")) or cwd
@@ -96,6 +163,12 @@ def render_statusline(data: dict) -> str:
     parts = [chip(folder, "97", "44")]                       # bold white on blue
     if branch:
         parts.append(chip("⎇ " + branch, "30", "103"))  # black on bright yellow
+    tchip = turn_chip(data)
+    if tchip:
+        parts.append(tchip)
+    wchip = watcher_chip()
+    if wchip:
+        parts.append(wchip)
     if LEDGER.exists():
         by_p = today_by_provider()
         spend = _line(by_p) if by_p else "\U0001F4B0 today clean"
@@ -197,6 +270,10 @@ def _log_adhoc(model: str, command: str) -> str:
     return f"adhoc {model} ${usd:.2f}" + (" ⚠ UNKNOWN RATE" if warn else "")
 
 
+def _session_id(payload: dict) -> str:
+    return re.sub(r"[^\w-]", "", str(payload.get("session_id") or "global"))[:40] or "global"
+
+
 def run_hook() -> None:
     try:
         payload = json.load(sys.stdin)
@@ -207,7 +284,7 @@ def run_hook() -> None:
     if LEDGER.parent.exists():
         adhoc_notes = [_log_adhoc(m, command) for m in adhoc_models(command)]
 
-    sid = re.sub(r"[^\w-]", "", str(payload.get("session_id") or "global"))[:40] or "global"
+    sid = _session_id(payload)
     state = STATE_DIR / f"{sid}.json"
 
     # fast path: no adhoc row and ledger untouched since this session's last report
@@ -236,21 +313,60 @@ def run_hook() -> None:
     if adhoc_notes:
         msg += "  [" + ", ".join(adhoc_notes) + "]"
     print(json.dumps({"systemMessage": msg}, ensure_ascii=False))
-    _prune_state()
+    _prune_dir(STATE_DIR)
 
 
-def _prune_state() -> None:
-    """Old sessions leave state files behind; keep the dir small without deleting
+def _prune_dir(dir_path: Path, keep: int = 50, days: float = 7) -> None:
+    """Old sessions leave state files behind; keep a dir small without deleting
     a still-live session's state (age guard, not just count)."""
     try:
-        import time
-        files = sorted(STATE_DIR.glob("*.json"), key=lambda p: p.stat().st_mtime)
-        week = time.time() - 7 * 86400
-        for p in files[:-50]:
-            if p.stat().st_mtime < week:
+        files = sorted(dir_path.glob("*.json"), key=lambda p: p.stat().st_mtime)
+        cutoff = time.time() - days * 86400
+        for p in files[:-keep]:
+            if p.stat().st_mtime < cutoff:
                 p.unlink()
     except Exception:
         pass
+
+
+def run_turn_hook() -> None:
+    """Stop / Notification / UserPromptSubmit -> is Claude currently waiting on
+    the user? Dispatches on the hook's OWN payload (hook_event_name / for
+    Notification also notification_type) rather than a hardcoded CLI arg, so all
+    three hook entries in settings.json can point at the same command."""
+    try:
+        payload = json.load(sys.stdin)
+    except Exception:
+        payload = {}
+    event = payload.get("hook_event_name", "")
+    sid = _session_id(payload)
+    path = TURN_DIR / f"{sid}.json"
+
+    if event == "UserPromptSubmit":
+        try:
+            path.unlink()
+        except FileNotFoundError:
+            pass
+        return
+
+    if event == "Stop":
+        reason = "stop"
+    elif event == "Notification":
+        ntype = payload.get("notification_type", "")
+        if ntype == "permission_prompt":
+            reason = "permission"
+        elif ntype == "idle_prompt":
+            reason = "idle"
+        else:
+            return  # some other notification (auth_success etc.) -- not tracked
+    else:
+        return
+
+    TURN_DIR.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(".json.tmp")
+    tmp.write_text(json.dumps({"reason": reason, "since": time.time()}), encoding="utf-8")
+    tmp.replace(path)
+    _prune_dir(TURN_DIR)
 
 
 def main() -> int:
@@ -258,6 +374,9 @@ def main() -> int:
         mode = sys.argv[1] if len(sys.argv) > 1 else "--statusline"
         if mode == "--hook":
             run_hook()
+            return 0
+        if mode == "--turn-hook":
+            run_turn_hook()
             return 0
         print(render_statusline(_read_stdin()))
     except Exception as e:
