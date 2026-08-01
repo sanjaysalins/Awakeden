@@ -229,10 +229,60 @@ No lock-in into `CLAUDE.md` is proposed from n=1-2 episodes either way.
 - Step 0: `git status` shows the 3 stale requests moved (not deleted) and
   the watcher files committed; `watcher_service.py` confirmed reporting 0
   stale requests. DONE.
-- Step 1: panel verdicts read and addressed (or explicitly disputed) before
-  Step 2 starts.
-- Step 2A: `data/stage_timings.jsonl` shows real entries after the next
-  episode run — spot-check by hand against known milestone file mtimes.
-- Step 2B/2C: direct before/after comparison table (reroll count, elapsed
-  hours, bridge stale-request age) against the Storm/Bronze Serpent
-  baseline, shown before deciding whether to lock the checklist in.
+- Step 1: panel verdicts read and addressed. DONE (3/5 quorum, REVISE ->
+  Step 2A/2B/2C retargeted per the findings — see above).
+- Step 2A/2B code: `py_compile` clean on all 4 files; an isolated $0 mock
+  test (no network calls) proved `run_job_with_fallback()`'s three branches
+  (primary succeeds / primary fails then fallback succeeds / both fail) and
+  confirmed `record_stage()` doesn't disturb `cost.summary()`/
+  `today_summary()`. DONE — this proves the CODE is correct, not that it has
+  fired in production yet (no living-sketchbook episode has run since the
+  change).
+
+## Status as of 2026-08-01 — what's proven vs. what's still open
+
+| Piece | Built? | $0-verified? | Proven in production? |
+|---|---|---|---|
+| Watcher (Step 0) | yes, running now | yes (reports `ok, count 0`) | live and protecting, but hasn't yet caught a real stall since cleanup |
+| Bridge latency baseline | yes | yes — real historical data, done | n/a — this IS the metric, not a thing awaiting proof |
+| NSFW auto-fallback (Step 2B) | yes | yes — mock-tested, 3/3 branches pass | **NOT YET** — needs a real NSFW rejection to fire |
+| Stage timing (Step 2A) | yes | yes — doesn't break cost reporting | **NOT YET** — 0 real rows exist; needs `_s3_animate.py` to run again |
+
+**Nothing above counts as "fixed and confirmed" in production yet.** The
+code is correct; whether it actually helps still needs a real run to watch.
+That's the one remaining POC (Step 2C/3), and it isn't optional — it's the
+only way to close the loop.
+
+## Concrete metrics to watch on the next real animate run
+
+The natural next trigger already exists and needs no new work invented:
+Bronze Serpent has 9 spreads still held back by its own TEST GATE (see
+`poc_living_sketchbook/bronze_serpent/_s3_animate.py`'s docstring) — those
+still need the SKILL.md §8a full-resolution eye-verify pass first, and
+running them is a real spend decision requiring an explicit quote + go-ahead
+first, same as any other batch. A fresh new episode's first animate pass
+works just as well as the trigger.
+
+Whichever happens first, check:
+
+1. **NSFW auto-recovery** — in the run's console output / final summary,
+   look for `retrying with <X> instead of <Y>` followed by
+   `clean (fallback:<X>)`. That line appearing and ending in success (not
+   `FAILED`) is the fix working — no human had to notice and hand-edit a
+   JOBS tuple. Absence of any NSFW rejection this round means the metric
+   simply didn't get exercised yet, not that the fix failed.
+2. **Stage timing data exists** —
+   `.venv\Scripts\python.exe -c "from pipeline import cost; [print(r) for r in cost.load() if r.get('kind')=='milestone']"`
+   should show real `animate_start`/`animate_end` rows for the episode, with
+   a real elapsed-time gap between them.
+3. **Bridge stall detection** — if any bridge request stalls during the
+   session, `data/.watcher_status.json`'s `state` should flip to `pending`/
+   `stalled` and show up in the statusline chip within the watcher's own
+   30s/5min thresholds — not sit silent for days like the 3 cleared ones did.
+4. **Reroll count / wall-clock** (secondary, directional only — confounded
+   by the format-learning-curve effect per the panel's finding, so this
+   alone never proves the fix worked) — compare against Storm (6 versions /
+   38h) and Bronze Serpent (5+ rerolls / 14h24m).
+
+None of these four need new tooling — they're all readable from what
+already exists (console output, the spend ledger, the watcher status file).

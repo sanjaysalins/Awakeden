@@ -223,6 +223,10 @@ def run_job_with_fallback(name, provider, still, ar, prompt, duration=None):
         return False, provider
     print(f"   retrying with {fallback} instead of {provider} ...")
     ok = run_job(name, fallback, still, ar, prompt, duration=duration)
+    # Persist the event to the ledger, not just the console -- the console
+    # output is gone by the time anyone re-visits this a few episodes later.
+    stage = "nsfw_fallback_recovered" if ok else "nsfw_fallback_failed"
+    cost.record_stage(EPISODE, stage, note=f"{name}: {provider}->{fallback}")
     return ok, (fallback if ok else provider)
 
 

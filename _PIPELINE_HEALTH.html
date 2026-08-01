@@ -1,0 +1,35 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Pipeline Health</title>
+<style>
+body { font-family: system-ui, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem;
+        background: #fafafa; color: #222; }
+h1 { font-size: 1.4rem; } h2 { font-size: 1.1rem; margin-top: 2rem; border-bottom: 2px solid #ddd; padding-bottom: .3rem; }
+table { border-collapse: collapse; width: 100%; margin-top: .5rem; }
+td, th { text-align: left; padding: .4rem .6rem; border-bottom: 1px solid #eee; font-size: .9rem; }
+.stat { font-size: 1.3rem; font-weight: 600; }
+.note { color: #666; font-size: .85rem; }
+.bad { color: #b3261e; font-weight: 600; }
+.ok { color: #1e7b34; font-weight: 600; }
+</style></head><body>
+<h1>Pipeline health -- generated 2026-08-01T09:26:52.301970+00:00</h1>
+<p class="note">Re-run every couple of episodes: <code>.venv\Scripts\python.exe pipeline_health.py --html</code>.
+See <code>PIPELINE_SLOWDOWN_POC_PLAN.md</code> for the diagnosis this tracks against.</p>
+
+<h2>1. NSFW auto-fallback</h2>
+<p><span class="stat">0</span> recovered automatically &middot;
+<span class="stat ">0</span> failed both providers</p>
+<table><tr><th>episode</th><th>result</th><th>note</th><th>when</th></tr><tr><td colspan=4>no fallback events logged yet</td></tr></table>
+
+<h2>2. Animate stage wall-clock</h2>
+<table><tr><th>episode</th><th>elapsed</th></tr><tr><td colspan=2>no complete animate_start/animate_end pair yet</td></tr></table>
+<p class="note">Baseline: Storm 6 rebuild versions / 38h total, Bronze Serpent 5+ reroll cycles / 14h24m.
+A single faster episode is directional only, not proof (format-learning-curve confound).</p>
+
+<h2>3. Agent-bridge service latency (live)</h2>
+<p><span class="stat">n=2340</span> &middot; median 27s &middot; p90 1.4m &middot; p99 4.9m &middot; max 15.6m</p>
+<p class="note">2026-08-01 baseline: median 27.5s, p90 85s. Watch for this drifting up over time.</p>
+
+<h2>4. Watcher (stall detection)</h2>
+<p class="stat ok">state=ok</p>
+
+</body></html>
