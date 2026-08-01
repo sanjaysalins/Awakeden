@@ -1,5 +1,19 @@
 # STATE.md — progress tracker
 
+**Last updated:** 2026-08-01 evening — **Bronze Serpent (short) fully FINISHED and
+LOCKED** (score/SFX/watermark/hand-written-ink-captions, all user-approved). Session
+also produced a full oil→ink→sketchbook migration ledger and a launch plan, both
+published as artifacts (links + full detail in RESUME.md top). **Next session's
+opening task: pilot the first-ever full-length (6-8 min) sketchbook LONG film**,
+on Bronze Serpent — every sketchbook piece built so far is a ~60-70s short, this
+format has never been attempted. Also found (and the other session self-fixed) a
+real hazard: a second, separate Claude Code session was running autonomously in
+this same repo at the same time and its git commit briefly swept up 2 unrelated
+files — no data lost, but a real concurrent-write risk to remember. Full detail:
+**RESUME.md top.**
+
+**Previous status (2026-08-01 morning — still relevant, superseded by the above):**
+
 **Last updated:** 2026-08-01 — **Bronze Serpent living-sketchbook episode BUILT END-TO-END
 through animation + assembly, user-approved and LOCKED for the day.** Picked up the
 2026-07-30 style-toolkit bake-off thread: user reacted to Style 3 (Scholar's Margin) and

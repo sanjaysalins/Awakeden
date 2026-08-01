@@ -1,3 +1,96 @@
+# RESUME — next session (updated 2026-08-01 evening — Bronze Serpent fully FINISHED
+# (score/sfx/watermark/captions, all locked); migration ledger + launch plan built;
+# next session opens with the FIRST-EVER full-length sketchbook LONG, piloted on
+# Bronze Serpent)
+
+# ══════ START HERE NEXT SESSION ══════
+#
+# THE ONE THING TO DO FIRST: Phase 0 of the migration plan — build a full-length
+# (6-8 min) living-sketchbook LONG FILM. No one has ever been built; every sketchbook
+# piece so far (Storm, Bronze Serpent, Jericho, Two Goats) is a ~60-70s SHORT, even
+# the two that condensed a long-form Eyewitness script. Pilot subject: BRONZE SERPENT
+# (my call, user didn't override it) -- reuse EW04_Bronze_Serpent's own narration/voice
+# (longform/EW04_Bronze_Serpent/v1/short/narration.mp3, 69.3s spoken) but this time
+# design a FULL long-form spread count/pacing for it, not a 14-spread condensed cut.
+# Cast/world already exists (poc_living_sketchbook/cast/MOSES.md + moses_ref.png) and
+# the score/sfx/caption recipes are now all proven -- reuse them, don't reinvent.
+# Success bar for the pilot (from the plan): real spread count at 6-8 min pacing, a
+# real cost/time reading (this sizes Phase 1's other 3 longs), INV-26 landing hold +
+# watermark + validate all still pass at length. This is a genuine format risk --
+# nothing this long has been tried in this style -- so treat it as a real pilot, not
+# a guaranteed rubber-stamp: watch it end to end before calling it proven.
+#
+# ══════ 1. WHERE THIS FITS — the bigger plan ══════
+# Full migration + launch plan (published this session, read before starting):
+#   https://claude.ai/code/artifact/318987a9-2c83-4403-ac18-f6a603d88b08
+# Full oil->ink->sketchbook status ledger (published this session):
+#   https://claude.ai/code/artifact/f97ac7d2-35a3-46f2-a3fb-1c5a717cd257
+# Recommended launch bundle (4 Longs, user hasn't overridden): Isaiah 53 + Psalm 22
+# (Season 1 The Cross, the channel's own flagship) + Two Goats + Bronze Serpent
+# (Season 3 Shadows, already proven at short length) + a 6-short launch slice (Pierced,
+# Thirty Pieces, Crucifixion Foretold, Watch One Hour, Father Forgive Them, Today in
+# Paradise -- reused from the OLD ink-era RELEASE_CALENDAR.md's own "launch day bulk
+# drop", all narration already locked, zero new writing). After the pilot: build the
+# other 3 longs, then the 6 shorts, then QC/publish/go-live, then roll out the rest of
+# the season order (RELEASE_CALENDAR.md, S1->S2->...->S7).
+#
+# ══════ 2. BRONZE SERPENT (SHORT) — NOW FULLY DONE, nothing left ══════
+# poc_living_sketchbook/bronze_serpent/BRONZESERPENT_living_sketchbook_cc.mp4 (71.5s)
+# is the current final: build -> score+SFX -> watermark -> hand-written ink captions,
+# all done, all user-approved ("its good", then "good, lock it"). Landing hold passes
+# (v=71.50s a=71.52s). Do NOT confuse this SHORT with the Phase-0 LONG pilot above --
+# they're different deliverables from the same story, per the user's explicit call
+# ("we need to do both long and shorts, but grouped").
+# New scripts this session: _s5_score_sfx.py (chains lonely_searching_a ->
+# sacred_grace_rise_a, crossfades exactly at the s07 narrative pivot; wilderness
+# ambient bed: wind/crowd/fire/rumble), _s6_captions.py (the production caption
+# script -- see §3), _caption_test.py (the prototype it was promoted from).
+#
+# ══════ 3. CAPTIONS — DECIDED, recipe proven, NOT yet rolled out to the other 5 ══════
+# Open question from earlier ("shorts feel 80% done") is CLOSED: hand-written ink
+# captions, same register as the Keeper's Hand marginalia (Inkfree.ttf), BOLD stroke
+# (stroke_width=2 -- user's one round of feedback was "a bit faint"), word-timed
+# chunks off the real alignment JSON (break >=0.35s pause or 6 words), soft parchment
+# scrim for legibility, baseline at H*0.78 (clear of the 9:16 bottom-18% UI band).
+# Full recipe + reference implementation: poc_living_sketchbook/bronze_serpent/
+# _s6_captions.py. Memory: sketchbook-shorts-finishing-gap.md (now marked RESOLVED).
+# STILL TO DO (offered to user, they redirected to the long pilot instead -- not
+# forgotten, just after the pilot): apply this same script/recipe to Storm, Jericho,
+# Two Goats, At the Door, Noah's Door. "Final touches" beyond captions was asked
+# about directly -- nothing else surfaced when the user watched the captioned cut,
+# treat as answered/closed unless raised again.
+#
+# ══════ 4. A REAL OPERATIONAL HAZARD FOUND THIS SESSION ══════
+# A SECOND, SEPARATE Claude Code session was running autonomously in this SAME repo
+# at the same time (the agent-bridge watcher infrastructure, working an unrelated
+# "pipeline slowdown" investigation -- PIPELINE_SLOWDOWN_POC_PLAN.md, watcher_service.py,
+# NSFW auto-fallback + $0 stage timing, commits d6d2e03/6604b93). Its `git commit` ran
+# while my caption files were staged in the SHARED git index and swept them into its
+# own commit. That other session caught it and cleanly fixed it itself (2199c41 untrack
+# + df6fd86 "captions scripts (from a parallel session)") -- no data lost, but it's a
+# real concurrent-write hazard worth knowing about: two sessions, one repo, one git
+# index. If you start a new session while an autonomous one may still be running,
+# expect this again and don't assume `git status` reflects only your own changes --
+# read the log, not just the diff, before committing.
+#
+# ══════ 5. OPEN DECISIONS (from the plan, not yet resolved, not blocking) ══════
+# - Exact launch-bundle 4: my cross-season pick (Isaiah53+Psalm22+TwoGoats+BronzeSerpent)
+#   vs. the alternative of all 4 from Season 3 as RELEASE_CALENDAR.md originally named
+#   them (Passover Lamb, Bronze Serpent, Seed of the Woman, Two Goats). User hasn't
+#   picked either explicitly -- I made the call, flagged it, they didn't object, but
+#   also didn't confirm in so many words. Worth a real check-in before Phase 1 starts.
+# - Two Goats / Bronze Serpent companion shorts: ship long-only at launch (my call) or
+#   write new short scripts for them now? Deferred, not decided.
+# - At the Door / Noah's Door (cast-bible taste-piece lane, already sketchbook-done):
+#   fold into the season map or keep as a separate experimental lane? Untouched.
+#
+# ══════ 6. COMMITTED TO GIT (this session, mine specifically) ══════
+# f5f5d1d (score+sfx script), df6fd86 (caption scripts, after the mix-up above).
+# Everything else in the log between those (d6d2e03, 6604b93, 2199c41) belongs to the
+# OTHER concurrent session's unrelated work -- do not attribute it to this thread.
+#
+# ══════════ PREVIOUS (2026-08-01 morning) BELOW ══════════
+#
 # RESUME — next session (updated 2026-08-01 — Bronze Serpent living-sketchbook episode
 # BUILT END-TO-END through animation+assembly, user said "save this, lock it, work on the
 # next one tomorrow" — committing this session's work now)
