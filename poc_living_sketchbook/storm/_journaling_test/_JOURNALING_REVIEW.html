@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sketchbook Journaling — still tests</title>
+<style>
+  body { background:#16181d; color:#e8e4d8; font-family:Georgia, serif; line-height:1.55; padding:28px 18px 100px; }
+  .wrap { max-width:1280px; margin:0 auto; }
+  h1 { color:#e9c877; font-size:1.9rem; margin-bottom:6px; }
+  h2 { color:#e9c877; font-size:1.25rem; margin:38px 0 12px; border-bottom:1px solid #333a47; padding-bottom:8px; }
+  .sub { color:#9aa0ad; margin-bottom:24px; max-width:900px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:22px; }
+  figure { background:#1e2129; border-radius:10px; padding:12px; margin:0; }
+  figure a { display:block; }
+  figure img { width:100%; border-radius:6px; border:1px solid #333a47; display:block; cursor:zoom-in; }
+  figcaption { margin-top:10px; }
+  .tag { display:inline-block; font-family:Arial, sans-serif; font-size:.72rem; letter-spacing:.04em; text-transform:uppercase; color:#16181d; background:#e9c877; border-radius:4px; padding:2px 8px; margin-bottom:6px; }
+  .tag.weak { background:#e07a5f; }
+  .tag.strong { background:#7fc97f; }
+  .cap-title { font-weight:bold; color:#e9c877; }
+  .cap-note { color:#c9c4b6; font-size:.92rem; margin-top:4px; }
+  .hint { color:#9aa0ad; font-size:.85rem; margin-top:6px; }
+  .v { background:#1e2129; border-left:5px solid #e9c877; padding:16px 18px; border-radius:8px; margin:14px 0; }
+  .v.warn { border-left-color:#e07a5f; }
+  .v ul { margin-left:20px; }
+  .full-width { grid-column:1/-1; max-width:520px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Sketchbook Journaling — still tests (round 5)</h1>
+<div class="sub">Not the show narrating Scripture — the voice of the person KEEPING the sketchbook.
+Six elements tested as real composited stills over Storm's own approved artwork: a second, casual
+pencil handwriting voice, idle margin doodles, a bright highlighter swipe (kept distinct from the
+show's sacred rubric-red), a dated diary-corner note, and how they read alone vs stacked together.
+$0 PIL compositing, no motion yet, nothing shipped. Click any image to open it full-size and zoom.</div>
+
+<h2>Individual elements</h2>
+<div class="grid">
+  <figure>
+    <a href="01_doodles_only.png" target="_blank"><img src="01_doodles_only.png"></a>
+    <figcaption>
+      <span class="tag strong">Working</span>
+      <div class="cap-title">1 &middot; Margin doodles only</div>
+      <div class="cap-note">Cross, boat, waves, sun, spiral — hand-wobbled, idle, tucked in the
+      blank margins. Reads as absent-minded page-filling, not pasted-on clip art.</div>
+    </figcaption>
+  </figure>
+  <figure>
+    <a href="02_handwritten_reaction.png" target="_blank"><img src="02_handwritten_reaction.png"></a>
+    <figcaption>
+      <span class="tag strong">Strongest</span>
+      <div class="cap-title">2 &middot; Handwritten reaction note</div>
+      <div class="cap-note">"why does He sleep?" in a light casual hand, clearly a different person
+      than the formal Scribed Ink verse lettering. This is the one that actually feels personal.</div>
+    </figcaption>
+  </figure>
+  <figure>
+    <a href="03_highlighter_swipe.png" target="_blank"><img src="03_highlighter_swipe.png"></a>
+    <figcaption>
+      <span class="tag strong">Working</span>
+      <div class="cap-title">3 &middot; Highlighter swipe</div>
+      <div class="cap-note">Yellow marker under "fearful" on the real Matthew 8:26 card. Reads as
+      its own thing next to the sacred rubric-red reference below it — never confused with it.</div>
+    </figcaption>
+  </figure>
+  <figure>
+    <a href="04_diary_corner.png" target="_blank"><img src="04_diary_corner.png"></a>
+    <figcaption>
+      <span class="tag strong">Working</span>
+      <div class="cap-title">4 &middot; Diary corner note</div>
+      <div class="cap-note">"Sea of Galilee, night." printed small, top-right — the "I was here"
+      feeling of a real travel journal, for almost no visual cost.</div>
+    </figcaption>
+  </figure>
+</div>
+
+<h2>Stacked together — how much is too much?</h2>
+<div class="grid">
+  <figure>
+    <a href="05_restrained_combo.png" target="_blank"><img src="05_restrained_combo.png"></a>
+    <figcaption>
+      <span class="tag">Sparse</span>
+      <div class="cap-title">5 &middot; Restrained combo</div>
+      <div class="cap-note">Just the diary corner + one reaction note. Quiet, safe baseline.</div>
+    </figcaption>
+  </figure>
+  <figure>
+    <a href="06_fuller_combo.png" target="_blank"><img src="06_fuller_combo.png"></a>
+    <figcaption>
+      <span class="tag strong">Favorite</span>
+      <div class="cap-title">6 &middot; Fuller combo</div>
+      <div class="cap-note">Diary + note + 4 doodles + a small "?" and heart, all at once. Still
+      alive, not cluttered — because nothing touches the painting itself, only the margins.</div>
+    </figcaption>
+  </figure>
+</div>
+
+<h2>The landing spread — should this touch it at all?</h2>
+<div class="grid">
+  <figure class="full-width">
+    <a href="07_landing_touch.png" target="_blank"><img src="07_landing_touch.png"></a>
+    <figcaption>
+      <span class="tag weak">Open question</span>
+      <div class="cap-title">7 &middot; One whisper-quiet pencil cross on the landing</div>
+      <div class="cap-note">Fable's own honest recommendation: leave the landing untouched
+      entirely. The strongest version of this idea is the journaler's chatter going SILENT right
+      when the page stops being commentary and becomes revelation — the absence, not a quieter
+      mark, is what should carry the "sacred stillness" rule here.</div>
+    </figcaption>
+  </figure>
+</div>
+
+<h2>Three things to decide</h2>
+<div class="v warn">
+<ul>
+<li><b>The heart doodle</b> reads a little cute/juvenile against how reverent this show is —
+candidate to cut.</li>
+<li><b>Pencil marks disappear over dark paint</b> — a real limit found during testing. The fix
+(and the rule going forward): every mark lives on open paper margin, never over the art.</li>
+<li><b>The landing spread</b> — touch it with one whisper-quiet mark, or leave it completely
+silent as the visual embodiment of "sacred stillness"?</li>
+</ul>
+</div>
+</div>
+</body>
+</html>

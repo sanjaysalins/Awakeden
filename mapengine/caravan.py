@@ -93,7 +93,40 @@ def draw_caravan(layer, x, y, facing=1, phase=0.0, scale=1.0):
     # two followers trailing behind the camel, staggered
     _figure(d, x - f * 40 * s, y + 1 * s, f, phase + 1.1, 0.6 * s, (*INK, 255), staff=True)
     _figure(d, x - f * 55 * s, y + 2 * s, f, phase + 2.3, 0.55 * s, (*INK, 255))
-    # cream halo for legibility over dark hatching
+    _halo_and_composite(layer, sil)
+
+
+def draw_boat(layer, x, y, facing=1, phase=0.0, scale=1.0):
+    """Composite a small ink fishing-boat marker onto RGBA `layer`; (x, y) is the
+    waterline point at the boat's centre. A gentle bob (driven by the same
+    distance-cadenced `phase` the caravan's walk cycle uses) stands in for a
+    walk cycle — there are no legs to animate crossing open water. For a sea
+    crossing (mapengine route.json config `"marker": "boat"`), used instead of
+    draw_caravan so the marker doesn't read as a camel walking on the lake."""
+    s, f = scale, (1 if facing >= 0 else -1)
+    bob = math.sin(phase) * 3 * s
+    y = y + bob
+    sil = Image.new("RGBA", layer.size, (0, 0, 0, 0))
+    d = ImageDraw.Draw(sil)
+    col = (*INK, 255)
+    # hull: a shallow ink crescent, bow toward the travel direction
+    d.polygon([(x - f * 34 * s, y), (x - f * 20 * s, y + 10 * s), (x + f * 20 * s, y + 10 * s),
+               (x + f * 34 * s, y), (x + f * 20 * s, y - 4 * s), (x - f * 20 * s, y - 4 * s)], fill=col)
+    # mast + single billowed sail
+    d.line([(x, y - 4 * s), (x, y - 46 * s)], fill=col, width=max(1, int(2.4 * s)))
+    d.polygon([(x, y - 44 * s), (x + f * 24 * s, y - 30 * s), (x, y - 12 * s)], fill=col)
+    # two small seated figures amidships
+    for dx in (-10, 8):
+        fx = x + dx * s
+        d.ellipse([fx - 4 * s, y - 20 * s, fx + 4 * s, y - 12 * s], fill=col)
+        d.polygon([(fx - 5 * s, y - 12 * s), (fx + 5 * s, y - 12 * s),
+                   (fx + 3 * s, y - 2 * s), (fx - 3 * s, y - 2 * s)], fill=col)
+    _halo_and_composite(layer, sil)
+
+
+def _halo_and_composite(layer, sil):
+    """Soft cream halo for legibility over dark hatching, then composite the
+    silhouette on top. Shared by draw_caravan and draw_boat."""
     halo = sil.filter(ImageFilter.MaxFilter(5))
     halo = halo.point(lambda a: 255 if a > 8 else 0).convert("L")
     halo_rgba = Image.new("RGBA", layer.size, (*CREAM, 0))

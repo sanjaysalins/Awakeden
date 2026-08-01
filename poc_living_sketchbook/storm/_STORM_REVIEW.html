@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>STORM v3 — living-sketchbook, Scribed Ink + world-bible build</title>
+<title>STORM v5 — living-sketchbook, paper-layer enhancement pass</title>
 <style>
   body { background:#16181d; color:#e8e4d8; font-family:Georgia, serif; line-height:1.55; padding:28px 18px 100px; }
   .wrap { max-width:1220px; margin:0 auto; }
@@ -24,19 +24,131 @@
 </head>
 <body>
 <div class="wrap">
-<h1>STORM v3 — Matthew 8:23-27, Scribed Ink + world-bible rebuild</h1>
-<div class="sub">v1 (2026-07-29 morning) proved Scribed Ink live in motion for the first time, but user
-review found 4 real gaps: no proper /cast-bible Christ reference, boat design drifting scene to
-scene, too many sharp crowd faces (T5 guardrail violation), and stills wasting page space instead of
-using it. v2 fixed all four with a world-bible pass + full redo. v3 (same day) fixes a second round
-of user-caught defects the v2 QC pass missed: modern-reading trouser hems, a duplicate hand, a scale
-mismatch, and the Fisherman reading as Jesus — plus, applying the same checklist myself, a disciple-
-count violation v2 still had. Uses the already-LOCKED "20 He Was Asleep in the Storm" narration
-throughout (no new text/audio). 63.0s &middot; 9:16 &middot; watermarked &middot; landing hold 3.60s
-&middot; audio==video.</div>
+<h1>STORM v6 — Matthew 8:23-27, paper-layer + round-4 devices</h1>
+<div class="sub">v1-v4 (2026-07-29, see below) proved Scribed Ink live and fixed five rounds of
+real user- and self-caught defects. v5 (2026-07-30) integrates Fable's 8 new $0 deterministic
+"paper-layer" devices (tide-mark, wash-creep, damp-cockle, set-off, still-water-mirror, blue-line,
+raking-light, held-breath) into the actual cut — everything acts on the PAGE the drawing sits on,
+never the drawing itself, so none of it can invent a 4th disciple or an extra hand. A full-context
+eye-check (not just the exit code) turned up one real defect that had survived all four earlier
+review rounds: a hallucinated cursive signature baked into the <code>s09_rebuke</code> Kling clip,
+growing into the wave-spray corner from ~1s in — present since v4, missed because it's small and
+low in a busy action frame. Fixed by re-animating that one clip with a tightened, positive-framed
+motion prompt (~$1.31 est); verified clean across the whole shot before rebuilding. A follow-up
+round then had Fable design a THIRD wave of series skills, inspired by the finished v5 cut; the
+first one built — Margin Sentinel, a $0 pixel-watcher for exactly this defect class — immediately
+caught a SECOND, previously-unknown defect in the same episode: <code>s02_water</code>'s Seedance
+clip had invented an entire upper body (torso, two arms) that never existed in the approved still,
+which is cropped tight at the hem. Fixed the same way (tightened crop-boundary prompt, re-rendered,
+re-verified — both by eye and by the new detector), then the full cut was rebuilt end to end a
+second time. Uses the already-LOCKED "20 He Was Asleep in the Storm" narration throughout (no new
+text/audio). 63.0s &middot; 9:16 &middot; watermarked &middot; audio==video.</div>
 
-<h2>&#9654; Watch v3 (with sound)</h2>
+<h2>&#9654; Watch v5 (with sound)</h2>
 <video controls src="STORM_living_sketchbook.mp4"></video>
+
+<h2>v5 — Fable's 8 paper-layer devices, integrated + a real pre-existing defect caught</h2>
+<div class="v warn">
+<ul style="margin-left:20px">
+<li><b>Devices live in the actual cut, not just isolated demos:</b> a narration-timed tide-mark curve
+(rises with the fear, freezes under the KJV quote, recedes at the calm, snaps back to full height on
+"knees," fades by the landing) plus wash-creep/damp-cockle on the storm spreads, raking-light sweeps
+on s05 and the s10 gold-flare turn ("and there was a great calm"), still-water-mirror on the two calm
+spreads (s10/s11), blue-line's reveal on the open, and Set-Off's mirrored verse bleed-through on the
+s13 landing page — the one device that had never shipped in any prior version, now proven live.</li>
+<li><b>still_water_mirror's own fail-closed guardrail fired 9 times</b> ("possible figure/skin-tone
+content detected... EYE-CHECK before shipping") on s10/s11 — investigated by pulling actual frames
+rather than trusting the warning's advisory-only status. Confirmed a false positive: the boat's warm
+wood tones trip the same HSV heuristic built to catch a reflected human figure. No figure appears
+inverted in either reflection; no fix needed, but worth the look given the locked
+"reflected cross upright" lesson this guardrail exists to enforce.</li>
+<li><b>The s09_rebuke signature — a real, confirmed defect, not new tonight.</b> Traced directly to
+the source clip <code>clips/s09_rebuke.mp4</code> (independent of any paper-device compositing), and
+confirmed present in the v4 build the user already reviewed and approved — four rounds of QC missed
+it. Root cause: Kling (correctly tiered for this action/multi-figure shot) hallucinated a cursive
+mark growing out of the wave-foam texture over the clip's first ~1.5s. Fixed by re-rendering just
+that one clip (<code>_s3_animate.py</code> is idempotent per-clip, so only s09 re-ran) with the
+motion prompt strengthened to describe what SHOULD be there ("the white wave spray stays plain water
+foam and droplets only... the blank paper margin in every corner stays perfectly empty") rather than
+naming the defect directly, per this project's own positive-framing lesson. Re-verified clean across
+the whole shot, then the full 63s cut was rebuilt end to end.</li>
+</ul>
+Old clip kept for the record at
+<code>clips/s09_rebuke.v4_signature_defect.bak.mp4</code>.
+</div>
+
+<h2>Round 3 — Fable designs new series skills; the first one built catches a SECOND defect</h2>
+<div class="v warn">
+<ul style="margin-left:20px">
+<li><b>Fable proposed 7 new skills</b> after watching the finished v5 cut and mining ArkAIology's
+still-untouched skills (red-team, sound-design, threads, thumbnail-forge, retention-review,
+vox-blend) — full brief at
+<code>poc_living_sketchbook/_FABLE_ROUND3_SERIES_SKILLS.md</code>. Top 3 built this round:
+<b>Margin Sentinel</b> (a $0 detector that watches every pixel that was blank paper margin in a
+clip's first frame and flags anything that grows in and never leaves), <b>Scriptorium Foley</b>
+(gives every lettering/paper device's already-known schedule a matching diegetic sound — nib
+scratch, brush drag, felt press-tap — from the existing sound library), and <b>Concordance Loom</b>
+(a $0 full-KJV cross-book verbatim concordance feeding Stage 0's thread-finding — confirmed this
+episode shipped with zero Old Testament echo, and found a genuine unclaimed candidate, Jonah 1:4,
+sharing real verbatim phrases with this exact passage).</li>
+<li><b>Margin Sentinel immediately paid for itself.</b> Run over every raw clip in this episode
+(the exact use case it was built for — "run it before any paper-device compositing"), it caught the
+s09 signature cleanly on the old defective clip, stayed quiet on the fix, and then caught a SECOND,
+genuinely unknown defect: <code>s02_water</code>'s Seedance clip had grown a full torso and two
+arms into frame by ~4s in, none of which exist in the approved still (which crops tight at the
+tunic hem). Verified by eye against the still before believing it. Fixed by tightening the motion
+prompt to lock the crop boundary itself ("this is a close, cropped shot of legs and feet only...
+nothing above it ever comes into view"), re-rendering just that one clip, and re-verifying with
+both a human eye-check and the Sentinel itself (0 hits on the fix). Old clip kept for the record at
+<code>clips/s02_water.v4_invented_torso_defect.bak.mp4</code>.</li>
+<li><b>Scriptorium Foley and Concordance Loom are built and verified, not yet adopted into any
+shipped cut.</b> Foley produced 5 A/B test clips (including both a scratch-on and scratch-off
+variant of its one real rule conflict — a nib-scratch under the locked near-silence-under-Scripture
+rule) that still need a human ear-check before locking; Concordance Loom is read-only infrastructure
+ready for the next episode's Stage 0. All three now have <code>.claude/skills/</code> docs for
+series-wide reuse.</li>
+</ul>
+</div>
+
+<h2>Round 4 — what Remotion actually had left to teach this series</h2>
+<div class="v good">
+<ul style="margin-left:20px">
+<li><b>The headline finding: the one real case for Remotion was already dead.</b> The user asked
+Fable to mine ArkAIology's Remotion-based skills (vox-motion/vox-type/vox-map) for this series.
+The one capability PIL/cv2 genuinely can't do — vox-map's true 3D terrain flyover — turned out to
+have been archived inside ArkAIology itself on 2026-07-25, the SAME DAY this repo killed its own
+Remotion track, for the identical reason (fragile WebGL path, real ongoing cost of two rendering
+engines). Verified directly against the source, not taken on the brief's word. Result: zero
+proposals need Remotion. Full brief:
+<code>poc_living_sketchbook/_FABLE_ROUND4_REMOTION_SKILLS.md</code>.</li>
+<li><b>Annotator's Circle — built, verified, and LIVE in this cut.</b> A hand-drawn red ink circle
+draws itself, in two wobbled passes, around the word "faith" on the Matthew 8:26 verse card at
+26.46s — the exact instant the narrator speaks it (real forced-alignment data, not a guess). The
+word's on-screen bounding box was computed from the real Scribed Ink letter-cursor math, not
+eyeballed, and verified with a debug rectangle before trusting it. Confirmed by eye in both an
+isolated test-window render and the full v6 rebuild: lands correctly on "faith," never obscures
+legibility, holds through the cut. One open question flagged, not resolved silently: does red ink
+circling KJV text read as reverent marginalia or as defacing it? Both the builder and this review
+independently read it as marginalia (the rubric-red is already this show's reference-citation
+color) — but the user should form their own view before this becomes a standing practice.</li>
+<li><b>Voyage Camera and Measuring Reed — built and verified, tested standalone, not in this
+episode.</b> Storm has no map scene and states no measurement, so forcing either into this
+episode's content would have broken the very verbatim-only discipline these devices exist to
+enforce (Fable's own honest finding). Voyage Camera gives the <code>/map</code> engine an actual
+traveling keyframed camera (log-space zoom, smootherstep easing, moves that lead their beat by
+~10 frames) in place of the old single-centroid linear push-in, proven on a real Sea-of-Galilee
+crossing map (Capernaum → the storm → the far shore, watch it at
+<code>poc_living_sketchbook/storm/_voyage_camera_test/journey.mp4</code>) — a genuine traveling
+camera confirmed by eye (wide → push on Capernaum → follows the boat across the water → push on
+the storm midpoint → arrives at the Gadarenes → wide title outro), with the OLD single-camera
+fallback path re-verified unbroken on <code>mapengine/route.example.json</code>. The natural home
+for it is the next journey episode (Exodus, Paul's voyage). Measuring Reed draws a
+Scripture-stated magnitude to
+scale with staggered tick marks and a Scribed-Ink label, proven honestly on Genesis 6:15's "three
+hundred cubits" over existing Noah reference art (a technical proof surface, not a finished
+living-sketchbook still) — it waits for a real Noah episode.</li>
+</ul>
+</div>
 
 <h2>The world-bible reference sheet (built + user-approved before any redo)</h2>
 <div class="refgrid">
@@ -185,10 +297,19 @@ this needed to become a repeatable checklist, not repeated luck.
 <div class="v">v1 build: <b>$21.86 est</b>. v2 redo (world-bible refs + full still/clip redo):
 <b>~$22.40 est</b>. v3 fixes (Fisherman re-anchor, 6 stills re-rendered, 6 clips re-animated):
 <b>~$7.73 est</b>. v4 fixes (s12 re-render/re-animate; landing push-in was $0, deterministic):
-<b>~$1.74 est</b>. <b>Combined: $53.73 est</b> (spend ledger, episodes LS_Storm + LS_Storm_v2 +
-LS_WorldBible) &mdash; more than double the original quote. Every round of spend bought a real,
-user-verified fix, but the v3 checklist is specifically meant to catch this class of defect on the
-FIRST pass for the next episode, not the fourth.</div>
+<b>~$1.74 est</b>. v5: the 8 paper-layer devices + integration were $0 (deterministic
+PIL/numpy/cv2/ffmpeg, no AI generation); the s09_rebuke re-render was <b>~$1.31 est</b> (1 Kling
+clip). Round 3: Margin Sentinel/Scriptorium Foley/Concordance Loom builds were $0 (agent time only,
+no AI generation); the s02_water re-render was <b>~$0.72 est</b> (1 Seedance clip). Round 4:
+Annotator's Circle build + integration was $0; Measuring Reed's build + test was $0 (existing Noah
+art, no new render); Voyage Camera's build was $0 plus <b>~$0.15 est</b> for the one Sea-of-Galilee
+base map render.
+<b>Combined: $56.91 est</b> (spend ledger, episodes LS_Storm + LS_Storm_v2 + LS_WorldBible +
+LS_Storm_voyage_camera_test)
+&mdash; every round of spend bought a real, user-verified fix or a real, user-verified new device,
+and this episode's two silent catches (shipped through four review rounds each) are the clearest
+case yet for why a full-context eye-check — and now a deterministic detector — beats trusting a
+clean exit code.</div>
 </div>
 </body>
 </html>

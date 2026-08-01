@@ -43,7 +43,17 @@ and an optional **sea-parting** beat — all deterministic ($0, no morphing).
 {
   "title": "THE EXODUS",
   "subtitle": "from Egypt  to  the Promised Land",
-  "config": { "caravan_scale": 1.5, "travel_s": 8.0, "camera_zoom": 0.05 },
+  "config": {
+    "caravan_scale": 1.5, "travel_s": 8.0, "camera_zoom": 0.05,
+    "camera": {
+      "lead_frames": 10,
+      "keyframes": [
+        { "at": 0.0,         "zoom": 1.0, "cx": 0.5, "cy": 0.5, "hold_s": 0.5 },
+        { "at": "RAMESES",   "zoom": 1.6, "hold_s": 0.8 },
+        { "at": 1.0,         "zoom": 1.0, "cx": 0.5, "cy": 0.5 }
+      ]
+    }
+  },
   "waypoints": [
     { "name": "RAMESES", "x": 0.30, "y": 0.82, "label_dx": 0, "label_dy": 0.055 },
     { "name": "RED SEA CROSSING", "x": 0.60, "y": 0.72, "label_dy": -0.055,
@@ -55,7 +65,18 @@ and an optional **sea-parting** beat — all deterministic ($0, no morphing).
 
 - `x,y,label_dx,label_dy` are fractions of the frame (0..1).
 - `config` is optional (see `DEFAULTS` in `mapengine.py`): `fps`, `travel_s`,
-  `dwell_s`, `intro_s`, `outro_s`, `caravan_scale`, `camera_zoom`.
+  `dwell_s`, `intro_s`, `outro_s`, `caravan_scale`, `marker` ("caravan" or "boat" —
+  boat is a small bobbing ink hull+sail for a sea crossing, no legs to animate),
+  `camera_zoom`, `camera`.
 - `sea_parting` on any waypoint opens a dry corridor through the water on the leg
   to the NEXT waypoint: `cx,cy` = centre on the water, `gap` = corridor width,
   `length` = how far it runs (all fractions of frame height; masked to real water).
+- `camera` (optional — the "Voyage Camera") replaces the flat `camera_zoom`
+  single-centroid push-in with a traveling keyframe camera: wide establishing ->
+  push to a waypoint -> hold -> glide to the next -> ... -> wide outro. Log-space
+  zoom interpolation + the engine's shared smootherstep `ease()` + each keyframe
+  arriving `lead_frames` early (camera parks at the payoff before the route/marker
+  gets there). `at` = a waypoint name or a bare 0..1 progress fraction; the first
+  and last keyframes are always the clip's literal first/last frame (bookends).
+  Omit `camera` entirely and the old behaviour runs unchanged — see `.claude/skills/map/SKILL.md`
+  for the full field reference.

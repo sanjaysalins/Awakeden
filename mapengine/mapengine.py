@@ -17,7 +17,28 @@ route.json schema:
       "subtitle": "from Egypt  to  the Promised Land",
       "config": {                     # all optional; sensible defaults below
         "fps": 30, "travel_s": 8.0, "dwell_s": 0.5, "intro_s": 0.6,
-        "outro_s": 2.6, "caravan_scale": 0.95, "camera_zoom": 0.05
+        "outro_s": 2.6, "caravan_scale": 0.95, "camera_zoom": 0.05,
+        "marker": "caravan",         # or "boat" (bobs, no walk cycle) for a sea crossing
+
+        # OPTIONAL "camera" block -> a traveling keyframe camera (Voyage Camera).
+        # When present it REPLACES the single fixed-centroid linear zoom above.
+        # When absent, the old camera_zoom/single-centroid behaviour runs unchanged.
+        "camera": {
+          "lead_frames": 10,          # camera arrives ~this many frames BEFORE
+                                       # the route-reveal actually reaches a waypoint
+          "keyframes": [
+            # first + last entries are the bookend shots (pinned to the clip's
+            # very first / very last frame); "at" is ignored for positioning
+            # there but keep it 0.0/1.0 for readability. Interior entries name
+            # a waypoint (pinned ~lead_frames early) OR a bare 0..1 progress
+            # fraction. cx/cy (0..1 frame fractions) default to the named
+            # waypoint's own position; give them explicitly for a bare-fraction
+            # entry that isn't tied to a waypoint.
+            {"at": 0.0,        "zoom": 1.0, "cx": 0.5, "cy": 0.5, "hold_s": 0.5},
+            {"at": "RAMESES",  "zoom": 1.6, "hold_s": 0.8},
+            {"at": 1.0,        "zoom": 1.0, "cx": 0.5, "cy": 0.5}
+          ]
+        }
       },
       "waypoints": [
         {"name": "RAMESES", "x": 0.30, "y": 0.82, "label_dx": 0, "label_dy": 0.055},
@@ -46,7 +67,15 @@ GOLD = (196, 150, 62)
 PILL = (241, 228, 200, 225)
 
 DEFAULTS = dict(fps=30, travel_s=8.0, dwell_s=0.5, intro_s=0.6, outro_s=2.6,
-                title_fade_s=1.1, caravan_scale=0.95, camera_zoom=0.05)
+                title_fade_s=1.1, caravan_scale=0.95, camera_zoom=0.05, marker="caravan")
+
+
+def ease(t):
+    """Smootherstep: a constant-feel accelerate/decelerate, never a linear ramp.
+    Shared by build_timeline (route reveal + title fade), parting_amount (sea
+    parting), and build_camera_track (Voyage Camera keyframe glides)."""
+    t = min(1.0, max(0.0, t))
+    return t * t * (3 - 2 * t)
 
 
 # ----------------------------------------------------------------------------- geometry
@@ -76,9 +105,6 @@ def densify(vertices, step=STEP):
 def build_timeline(vfrac, cfg):
     fps = cfg["fps"]
 
-    def ease(t):
-        return t * t * (3 - 2 * t)
-
     frames = []
     for _ in range(int(cfg["intro_s"] * fps)):
         frames.append((0.0, 0.0))
@@ -97,6 +123,108 @@ def build_timeline(vfrac, cfg):
     return frames
 
 
+# ----------------------------------------------------------------------------- Voyage Camera
+def resolve_camera_keyframes(cam_cfg, wps, vfrac):
+    """Turn route.json's authored `camera.keyframes` (name-or-fraction + optional
+    cx/cy) into resolved dicts {p, zoom, cx, cy, hold_s} in the SAME order they
+    were authored (list order = time order, not sorted by p — mirrors how
+    waypoints themselves are ordered). p = the route-progress fraction (0..1)
+    this keyframe is pinned near; cx/cy are pixel coords, defaulting to the
+    named waypoint's own position (or the overall centroid for a bare fraction)."""
+    name_to_i = {name: i for i, (_, name, _) in enumerate(wps)}
+    centroid_x = sum(p[0] for p, _, _ in wps) / len(wps)
+    centroid_y = sum(p[1] for p, _, _ in wps) / len(wps)
+    out = []
+    for kf in cam_cfg["keyframes"]:
+        at = kf["at"]
+        if isinstance(at, str):
+            if at not in name_to_i:
+                raise ValueError(f"camera keyframe at={at!r} matches no waypoint name")
+            i = name_to_i[at]
+            p = vfrac[i]
+            wx, wy = wps[i][0]
+        else:
+            p = float(at)
+            wx, wy = centroid_x, centroid_y
+        cx = kf["cx"] * W if "cx" in kf else wx
+        cy = kf["cy"] * H if "cy" in kf else wy
+        out.append(dict(p=p, zoom=float(kf.get("zoom", 1.0)), cx=cx, cy=cy,
+                         hold_s=float(kf.get("hold_s", 0.0))))
+    return out
+
+
+def build_camera_track(timeline, cfg, wps, vfrac):
+    """Per-frame (zoom, cx, cy) driven by route.json's optional `camera` block:
+    wide establishing -> push to a waypoint -> hold -> glide to the next -> ...
+    -> wide outro. Returns None (old single-centroid/linear-zoom camera runs
+    instead) when no `camera` block is present.
+
+    Three techniques, ported from vox-map's camera.ts (see
+    _FABLE_ROUND4_REMOTION_SKILLS.md #1):
+      - log-space zoom interpolation (exp(lerp(log a, log b, t))) so the zoom
+        FEELS constant-rate at every scale, not slow-then-fast.
+      - the shared smootherstep `ease()` for every keyframe-to-keyframe glide.
+      - each keyframe's own camera transition ARRIVES ~lead_frames before the
+        route-reveal/caravan actually reaches that same waypoint, so the eye is
+        already parked at the payoff before it lands. The first and last
+        keyframes are bookends pinned to the clip's literal first/last frame
+        (no lead applied there — nothing to lead into at the open/close, and
+        progress is flat at 0.0/1.0 through the whole intro/outro so a
+        progress-based lookup can't tell those frames apart anyway)."""
+    cam_cfg = cfg.get("camera")
+    if not cam_cfg or not cam_cfg.get("keyframes"):
+        return None
+    fps = cfg["fps"]
+    lead = int(cam_cfg.get("lead_frames", 10))
+    kfs = resolve_camera_keyframes(cam_cfg, wps, vfrac)
+    N = len(timeline)
+    # floor glide so a keyframe pinned to the route's FIRST/LAST waypoint (progress
+    # 0.0/1.0 — the same instant the clip itself starts/ends) still gets a real,
+    # visible transition instead of colliding with that bookend at the same frame.
+    min_glide = max(1, int(0.5 * fps))
+
+    def frame_at_progress(p):
+        for i, (pr, _) in enumerate(timeline):
+            if pr >= p:
+                return i
+        return N - 1
+
+    arrivals = []
+    for i in range(len(kfs)):
+        if i == 0:
+            fr = 0
+        elif i == len(kfs) - 1:
+            fr = N - 1
+        else:
+            fr = max(0, frame_at_progress(kfs[i]["p"]) - lead)
+        if arrivals:
+            fr = max(fr, arrivals[-1] + int(kfs[i - 1]["hold_s"] * fps) + min_glide)
+        arrivals.append(min(fr, N - 1))
+
+    track = []
+    j = 0
+    for idx in range(N):
+        while j + 2 < len(kfs) and idx >= arrivals[j + 1]:
+            j += 1
+        a, b = kfs[j], kfs[j + 1]
+        seg_start, seg_end = arrivals[j], arrivals[j + 1]
+        if idx <= seg_start:
+            zoom, cx, cy = a["zoom"], a["cx"], a["cy"]
+        elif idx >= seg_end:
+            zoom, cx, cy = b["zoom"], b["cx"], b["cy"]
+        else:
+            hold_frames = int(a["hold_s"] * fps)
+            glide_start = min(seg_end, seg_start + hold_frames)
+            t = 0.0 if idx <= glide_start else (idx - glide_start) / max(1, seg_end - glide_start)
+            e = ease(t)
+            zoom = math.exp(math.log(max(1e-6, a["zoom"])) * (1 - e)
+                             + math.log(max(1e-6, b["zoom"])) * e)
+            cx = a["cx"] + (b["cx"] - a["cx"]) * e
+            cy = a["cy"] + (b["cy"] - a["cy"]) * e
+        track.append((zoom, cx, cy))
+    return track
+
+
 # ----------------------------------------------------------------------------- drawing
 def draw_route(layer, pts, n_rev):
     """Dashed revealed route with a soft glow (no marker — caravan draws that)."""
@@ -113,8 +241,9 @@ def draw_route(layer, pts, n_rev):
             d.line([pts[i - 1], pts[i]], fill=(*ROUTE, 255), width=6)
 
 
-def draw_marker(layer, pts, n_rev, scale):
-    """Walking caravan at the revealed tip; walk phase driven by distance."""
+def draw_marker(layer, pts, n_rev, scale, marker="caravan"):
+    """Walking caravan (or, for a sea crossing, a boat — route.json config
+    `"marker": "boat"`) at the revealed tip; walk/bob phase driven by distance."""
     if n_rev < 1:
         return
     tip = pts[min(n_rev, len(pts)) - 1]
@@ -127,7 +256,10 @@ def draw_marker(layer, pts, n_rev, scale):
     ImageDraw.Draw(sh).ellipse([tip[0] - 26 * scale, tip[1] - 5 * scale,
                                 tip[0] + 26 * scale, tip[1] + 7 * scale], fill=(30, 20, 12, 90))
     layer.alpha_composite(sh.filter(ImageFilter.GaussianBlur(4)))
-    caravan.draw_caravan(layer, tip[0], tip[1], facing=facing, phase=phase, scale=scale)
+    if marker == "boat":
+        caravan.draw_boat(layer, tip[0], tip[1], facing=facing, phase=phase, scale=scale)
+    else:
+        caravan.draw_caravan(layer, tip[0], tip[1], facing=facing, phase=phase, scale=scale)
 
 
 SAND = (214, 193, 150)
@@ -147,10 +279,6 @@ def water_mask(base_rgb):
 def parting_amount(progress, fc, fn):
     """0..1 openness: parts as the caravan reaches the crossing, holds while it
     walks through, closes behind it on the way to the next stop."""
-    def ease(t):
-        t = min(1.0, max(0.0, t))
-        return t * t * (3 - 2 * t)
-
     open_before = 0.06
     span = max(1e-6, fn - fc)
     if progress < fc - open_before:
@@ -260,10 +388,11 @@ def render(base_png, route_json, out_mp4):
     vertices = [p for p, _, _ in wps]
     pts, vfrac = densify(vertices)
     timeline = build_timeline(vfrac, cfg)
+    camera_track = build_camera_track(timeline, cfg, wps, vfrac)   # None -> old camera
 
     base = Image.open(base_png).convert("RGB").resize((W, H), Image.LANCZOS)
-    cx = sum(p[0] for p in vertices) / len(vertices)
-    cy = sum(p[1] for p in vertices) / len(vertices)
+    centroid_x = sum(p[0] for p in vertices) / len(vertices)
+    centroid_y = sum(p[1] for p in vertices) / len(vertices)
     wmask = water_mask(base)
 
     # locate an optional sea-parting event (angle = the crossing leg's direction)
@@ -292,7 +421,7 @@ def render(base_png, route_json, out_mp4):
         for i, (p, name, dl) in enumerate(wps):
             la = 1.0 if progress >= 1.0 else min(1.0, max(0.0, (progress - vfrac[i]) / 0.04))
             draw_label(layer, p[0], p[1], dl[0], dl[1], name, la)
-        draw_marker(layer, pts, n_rev, cfg["caravan_scale"])
+        draw_marker(layer, pts, n_rev, cfg["caravan_scale"], cfg["marker"])
         draw_title(layer, data, talpha)
 
         frame = base.convert("RGBA")
@@ -301,8 +430,12 @@ def render(base_png, route_json, out_mp4):
             draw_sea_parting(frame, parting["C"], parting["angle"],
                              parting["length"], parting["gap"], amt, wmask)
         frame.alpha_composite(layer)
-        zoom = 1.0 + cfg["camera_zoom"] * (idx / N)
-        apply_camera(frame.convert("RGB"), zoom, cx, cy).save(frames_dir / f"f{idx:05d}.png")
+        if camera_track is not None:
+            zoom, fcx, fcy = camera_track[idx]
+        else:
+            zoom = 1.0 + cfg["camera_zoom"] * (idx / N)
+            fcx, fcy = centroid_x, centroid_y
+        apply_camera(frame.convert("RGB"), zoom, fcx, fcy).save(frames_dir / f"f{idx:05d}.png")
         if idx % 30 == 0:
             print(f"  frame {idx}/{N}", flush=True)
 

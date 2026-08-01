@@ -39,10 +39,20 @@ JOBS = [
      "further. Only: the black storm clouds churn slowly overhead, spray "
      "continues flying off the near wave crest. Nothing else changes."),
 
+    # Re-render (2026-07-30): Margin Sentinel (a new $0 detector) caught a
+    # real defect the first render shipped with -- Seedance had invented an
+    # entire upper body (torso, one arm gripping the rail, another hanging)
+    # that never existed in the approved still, which is cropped tight at
+    # the hem. Tightened to lock the crop boundary itself, not just "no new
+    # marks" (which the original LOCK constant already said and which this
+    # slipped past).
     ("s02_water", "seedance", 4,
-     "The rope and the boat planks hold perfectly still. Only: the dark "
-     "water sloshes gently back and forth past the feet, a little spray "
-     "drifts in the air. Nothing else changes."),
+     "The rope and the boat planks hold perfectly still. This is a close, "
+     "cropped shot of legs and feet only, ending at the hem of the garment "
+     "-- that exact framing and crop boundary holds for the entire clip, "
+     "nothing above it ever comes into view. Only: the dark water sloshes "
+     "gently back and forth past the feet, a little spray drifts in the "
+     "air. Nothing else changes."),
 
     ("s03_screaming", "kling", 5,
      "All three figures stay frozen in their exact braced, straining poses -- "
@@ -82,13 +92,21 @@ JOBS = [
      "focus behind him continues faintly, the warm lamplight on his face "
      "breathes gently, " + NOGLITTER + "Nothing else changes."),
 
+    # Re-render (2026-07-30): the first render grew a hallucinated cursive
+    # mark into the bottom-right wave spray around t=1s, present through the
+    # rest of the clip -- missed through v1-v4 review, caught on a v5 full-
+    # context eye-check. Tightened per the project's positive-framing lesson
+    # (describe what IS there, don't name the defect): spray stays plain
+    # foam/droplets, paper margins stay empty.
     ("s09_rebuke", "kling", 5,
      "Jesus stays perfectly frozen like a statue in his exact standing pose, "
      "arm already extended toward the storm -- no further gesture, no step, "
      "no change of expression. The disciples below stay frozen, watching. "
      "INVENT NOTHING new. Only: the towering dark wave and torn storm "
-     "clouds continue their motion around the boat. Nothing else in the "
-     "frame changes."),
+     "clouds continue their motion around the boat, the white wave spray "
+     "stays plain water foam and droplets only. The blank paper margin in "
+     "every corner of the frame stays perfectly empty and untouched "
+     "throughout. Nothing else in the frame changes."),
 
     ("s10_calm", "seedance", 4,
      "Jesus and the disciples hold their exact positions, perfectly still -- "

@@ -1,6 +1,80 @@
 # STATE.md — progress tracker
 
-**Last updated:** 2026-07-29 late night — Storm episode (Matthew 8:23-27) built v1-v4
+**Last updated:** 2026-08-01 — **Bronze Serpent living-sketchbook episode BUILT END-TO-END
+through animation + assembly, user-approved and LOCKED for the day.** Picked up the
+2026-07-30 style-toolkit bake-off thread: user reacted to Style 3 (Scholar's Margin) and
+the new Mariner's Chart with "keep Style 1 as the spine, insert pages like these
+occasionally" — ran two more Fable/Sonnet design rounds proving that idea out (Round 7:
+2 storm-specific insert-page proofs incl. the missing Jonah/Psalm 107 echo; Round 8: 12
+more insert-page "modes" — Wilderness Road, Tabernacle Cutaway, Psalm Leaf, Star Chart,
+etc. — plus the hard-won finding that scripture-stated COUNTS can't be trusted to the
+generative page, only to code). User then asked for a full E2E test on a NEW episode
+picked Bronze Serpent (Numbers 21 -> John 3:14, reusing the already-locked
+`EW04_Bronze_Serpent` short narration). Round 9 (Sonnet, after Fable hit its usage limit
+mid-round) produced the real beat plan off real WhisperX timing + 3 new skill specs.
+**Then a long, fully verified production run:** Moses cast anchor (`cast/MOSES.md` +
+`moses_ref.png`), 3 new reusable `panel_animator/` skills built+self-tested+proof-rendered
+(`lift_away.py` calm page-turn, `tally.py` exact-count device, `insert_page_camera.py`
+generalized insert-page pan — 19 self-tests, all independently re-run and confirmed), all
+14 stills rendered and QC'd (2 real defects caught+fixed: s04 had 7-8 sharp crowd faces,
+capped to 2; s07/s09/s11 all collapsed to the same "Moses standing with staff" pose,
+caught by eye + a new reusable `pipeline/spread_variety.py` lint ported from the comic-
+grid pipeline, re-shot with genuinely different blocking), all 12 narrative spreads
+animated (s01 needed a Kling fallback after 2x Seedance NSFW-false-positives; s06's
+hammer-strike animation genuinely failed on ALL THREE tried providers — 2x Kling + 1x
+Seedance, all three inventing the same completed-swing motion — resolved with the
+project's own documented $0 deterministic-push-in fallback), full assembly with the new
+`lift_away` transition + the existing `torn_out_page` landing device + a working Scribed-
+Ink verse card on the John 3:14 insert page. **User caught 2 real problems by actually
+watching the finished cut** (not caught by frame-sampling): a repeated "Moses standing"
+pose issue (fixed pre-assembly, see above) and mid-clip "dancing" on the Golgotha spread
+(s10) that a first/last-frame check had missed — re-rolled and re-verified with a real
+full-duration multi-frame check this time. User then asked to review the existing
+`panel_animator/` device library for a genuine (not forced) addition — one real fit found
+and shipped: `candle_only` on the forge spread (s06), whose light now visibly closes down
+during "forge the image" and opens back to full warmth the instant "look — and live"
+lands, filling what had been the most mechanically-dead stretch in the cut (the $0
+push-in fallback clip is short and was being ping-ponged to fill s06's long window).
+**Final:** `poc_living_sketchbook/bronze_serpent/BRONZESERPENT_living_sketchbook.mp4`,
+71.5s, video/audio matched, INV-26 landing hold satisfied. **Honest process notes:**
+several background agents this session kicked off their own long-running renders and
+then went silent mid-task (their own turn ending while genuinely still working, not
+actually stalled) — a new "watch the real output file's mtime, not the agent's own
+status" pattern held up reliably every time and is worth reusing; the OLD "watch the
+agent's raw output-file byte size" approach from earlier in the session turned out to be
+meaningless for agent-type tasks and was dropped. **NOT done yet:** score, ambient SFX
+bed, captions, watermark (INV-27), gate validation — the standard finishing stages, still
+open. **NOT committed until the user said "save this, lock it, work on the next one
+tomorrow"** — this session's whole `panel_animator/`, `poc_living_sketchbook/`,
+`pipeline/concordance.py` + `spread_variety.py`, `mapengine/` toolkit, and the Bronze
+Serpent episode are being committed together now. **NEXT:** finish Bronze Serpent's
+remaining stages (score/sfx/caption/watermark), then start a new episode — no episode
+chosen yet for "the next one," ask the user. Full pickup: **RESUME.md top.**
+
+**Previous status (2026-07-30 night — still relevant, superseded by the above):**
+
+**Last updated:** 2026-07-30 night — Storm shipped as v6 (two real defects found+fixed:
+s09_rebuke's hallucinated signature, s02_water's invented torso/arms; Annotator's Circle now
+live on the Matthew 8:26 card). 8 new reusable skills built and verified this session:
+margin-sentinel (the $0 detector that actually caught the s02 defect), scriptorium-foley
+(device-timed sound, awaiting the user's ear-review), concordance-loom (real KJV cross-
+reference finder, already surfaced Jonah 1:4 for Storm), annotators-circle, measuring-reed,
+and a Voyage Camera upgrade to mapengine.py (real keyframed traveling camera, proven on a
+Sea-of-Galilee crossing map). Then a funded (up to 200cr, ~61cr spent) STYLE TOOLKIT bake-off:
+10 complementary sketchbook styles rendered and eye-verified beyond the existing Style 1 —
+user's own top pick is Style 3 "Scholar's Margin" (typology/diagram-native, real lettering,
+a $0 controlled-camera pan test built and confirmed excellent), Style 4 "Hearth Storybook"
+explicitly accepted, Style 6 "Gilded Proclamation" flagged for a user voice-decision
+(rendered fully Byzantine-icon rather than sketchbook-native), two real render bugs caught
+and fixed (Style 10's green skin tone, Style 9's European-looking village). Honest process
+note: the first Fable agent doing the style design work stalled silently for ~3.5 hours and
+had to be manually restarted, then its session expired before finishing its own write-up —
+verification and the review galleries were completed independently afterward. Full pickup +
+every open decision: **RESUME.md's top section.**
+
+**Previous status (2026-07-29 late night — still relevant, superseded by the above):**
+
+**Last updated (prior):** 2026-07-29 late night — Storm episode (Matthew 8:23-27) built v1-v4
 through 4 rounds of real user-caught defects, each fixed and logged honestly in
 `poc_living_sketchbook/storm/_STORM_REVIEW.html`. A new Still QC Checklist is now locked
 into `.claude/skills/living-sketchbook/SKILL.md` §8a (anatomy, period-costume at full

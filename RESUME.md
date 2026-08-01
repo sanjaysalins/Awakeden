@@ -1,5 +1,254 @@
-# RESUME — next session (updated 2026-07-29 late night — Storm episode v1-v4 + Fable's 8 device skills built, v5 integration paused mid-test)
+# RESUME — next session (updated 2026-08-01 — Bronze Serpent living-sketchbook episode
+# BUILT END-TO-END through animation+assembly, user said "save this, lock it, work on the
+# next one tomorrow" — committing this session's work now)
 
+# ══════ START HERE TOMORROW ══════
+#
+# ══════ 1. WHAT'S DONE, RIGHT NOW ══════
+# Bronze Serpent (Numbers 21 -> John 3:14, "Look and Live", reusing the already-locked
+# EW04_Bronze_Serpent short narration) is a FINISHED, user-approved rough cut:
+#   poc_living_sketchbook/bronze_serpent/BRONZESERPENT_living_sketchbook.mp4
+#   71.5s, video/audio matched, INV-26 landing hold satisfied.
+# 14 spreads: 12 narrative (all animated, real Kling/Seedance clips, one -- s06 the forge
+# -- on a $0 deterministic push-in after 3 real animation failures) + 2 insert pages (s08
+# Scholar's-Margin Numbers21/John3 typology w/ a working Scribed-Ink verse card, s12
+# Gilded Proclamation echo) animated via the new insert_page_camera tool + the s14 landing
+# via the existing torn_out_page device. `candle_only` (an existing but never-yet-used
+# device) is now live on s06, timed to the real word-onset turn from struggle to hope.
+#
+# ══════ 2. WHAT'S NOT DONE — the standard finishing stages ══════
+# Score, ambient SFX bed, captions, watermark (INV-27), gate validation. None of these
+# were started -- this session stopped at a clean, user-approved VISUAL+NARRATION cut.
+# Next session: run these in the usual order (score -> sfx -> caption -> watermark ->
+# validate), same as every other finished episode in this project.
+#
+# ══════ 3. NEW REUSABLE SKILLS BUILT THIS SESSION (all in panel_animator/, all $0) ══════
+#   lift_away.py         -- calm page-turn transition (sibling to the existing
+#                            torn_out_page rip -- same grab, opposite resolution: settles
+#                            instead of tearing). Used once, s07->s08.
+#   tally.py              -- exact-count device (code draws N discrete objects --
+#                            coins/tallies/marks -- a still can never be trusted to get a
+#                            scripture-stated COUNT right; proven 3x in the round-8
+#                            research). NOT used in Bronze Serpent (no counted things in
+#                            this text) -- banked for the next episode that needs one
+#                            (Passover firstborn, 12 tribes, 5 loaves, 30 pieces, 7 seals).
+#   insert_page_camera.py -- generalized the earlier one-off Style-3 pan test into a
+#                            reusable $0 deterministic camera engine for ANY insert page
+#                            (keyframes, hold_s reusing mapengine's own field name,
+#                            optional raking-light/grid-choreography layering). Used on
+#                            both s08 and s12.
+#   pipeline/spread_variety.py + poc_living_sketchbook/spread_variety_lint.py
+#                         -- ported the comic-grid pipeline's panel_variety.py tagging
+#                            approach to a LINEAR spread sequence (whole-episode collision
+#                            scope, not within-one-grid) -- catches a character repeating
+#                            the same pose/framing across an episode. This is what caught
+#                            the s07/s09/s11 "Moses standing with staff" collision below.
+#
+# ══════ 4. REAL DEFECTS FOUND + FIXED THIS SESSION (read before assuming a render is fine) ══════
+#   - s01_wide: Seedance NSFW-false-positived it TWICE (unclear cause, likely the
+#     stricken-family group) -- switched to Kling, clean first try. Lesson: if Seedance
+#     NSFW-rejects something that isn't actually NSFW, try Kling before troubleshooting
+#     the prompt itself.
+#   - s04_serpents: shipped with 7-8 sharp-detail crowd faces, way past the project's
+#     <=3-face rule -- caught by Claude's own eye before animating (not by the render
+#     pipeline), fixed with an EXACT-headcount prompt (Storm's DISCIPLES-constant pattern,
+#     capped to 2 not 3 this time since "at most 3" had already let one failure through).
+#   - s06_forge (the hammer-strike): failed identically on THREE separate providers/
+#     prompts -- 2x Kling, 1x Seedance -- every attempt invented a completed hammer swing
+#     despite explicit "hold perfectly still" prompting. This is now documented as a real,
+#     reproducible content-class failure (action-over-glowing-metal), not a fluke. Fixed
+#     with the project's own precedented $0 fallback: a deterministic InsertPageCamera
+#     push-in instead of any generative motion.
+#   - s07_horizon / s09_shadow / s11_hearme: all three independently rendered as the SAME
+#     "Moses standing, staff in hand, waist-up, 3/4 view" composition -- caught by the
+#     USER looking at the finished stills gallery ("some look exactly similar"), confirmed
+#     by eye (4 of 14 stills, ~30%, one repeated pose), fixed by re-shooting s07 (now an
+#     extreme face-only close-up) and s11 (now seated, staff laid down, facing camera) with
+#     genuinely different blocking -- not just a new background. s01/s03 were correctly
+#     spared (both have a second compositional element the others lack).
+#   - s10_golgotha: passed a first-frame-vs-last-frame check TWICE (once at the clip level,
+#     once in early assembly) but the USER caught it "doing a bit of a dance" watching the
+#     actual finished cut -- the clip swayed away from its start pose and back to it by the
+#     end, a real blind spot in start/end-only verification. Re-rolled, re-verified with a
+#     real full-duration multi-frame check (7+ points across the clip, not 2), confirmed
+#     stable. LESSON, now proven twice this session: watching real playback catches things
+#     sparse frame sampling misses -- when in doubt, sample MORE points across a clip's
+#     full duration, not just start/end.
+#
+# ══════ 5. PROCESS LESSON — how to watch a background render reliably ══════
+# Several agents this session kicked off their own long-running renders (ffmpeg encodes,
+# a 14-spread full assembly) and then their OWN turn ended while that render was still
+# genuinely in progress -- NOT a stall, just how background bash processes outlive an
+# agent's own conversational turn. Early in the session a byte-size watch on the agent's
+# raw output-transcript file was used to detect stalls -- this turned out to be MEANINGLESS
+# for agent-type tasks (it stayed at 0 bytes the whole time even for tasks that finished
+# in 5 minutes). What worked reliably instead, every time: watch the ACTUAL OUTPUT FILE's
+# mtime/size directly (e.g. the episode .mp4 itself), not the agent's own status. When an
+# agent goes quiet mid-render, checking the real target file (and, if genuinely stalled,
+# just running the remaining step directly instead of re-dispatching another agent) is
+# faster and more reliable than trying to resume/nudge the original agent.
+#
+# ══════ 6. COMMITTED TO GIT (this session) ══════
+# User said "save this, lock it" -- committed: all of panel_animator/ (the whole device
+# library, including several skills from EARLIER uncommitted sessions this now builds on
+# top of -- keeper_hand, bleeding_word, elder_leaf, frottage, margin_study, measuring_reed,
+# page_transitions, papermakers_mark, ribbon_marker, scriptorium_foley, annotators_circle),
+# poc_living_sketchbook/ in full (Bronze Serpent + Storm's newer files + all the Fable
+# round docs + cast/ + the style bake-off), pipeline/concordance.py + spread_variety.py +
+# its tests, mapengine/ updates, keeper_lint.py, margin_sentinel.py, data/kjv_full/ (the
+# concordance's data dependency), data/spend_ledger.jsonl. Media (mp4/png) stays
+# gitignored per repo policy, as always -- only code/docs/data went in.
+# NOT included (pre-existing, unrelated to this thread, left for the user to decide on
+# separately): AGENT_BRIDGE.md, cost_status.py, watcher_service.py, start_watcher.vbs,
+# data/.watcher.pid, data/.turn_state/, data/.watcher_status.json, _audience_test_pack.zip
+# -- these belong to a different, separate feature (an agent-bridge stall watcher) that
+# was already sitting uncommitted before this session started.
+#
+# ══════ 7. NEXT SESSION ══════
+# 1. Finish Bronze Serpent: score -> sfx -> caption -> watermark -> validate (standard
+#    order, same as every other episode).
+# 2. Pick "the next one" -- no episode chosen yet, ask the user. The Style Toolkit /
+#    insert-page work (Rounds 5-9) is now proven on a real full episode, so the natural
+#    next step is either (a) another episode in the same living-sketchbook style putting
+#    the new tools to a second, independent test, or (b) more style-toolkit exploration if
+#    the user wants a different register first. Their call.
+#
+# ══════════ PREVIOUS (2026-07-30 night) BELOW ══════════
+#
+# RESUME — next session (updated 2026-07-30 night — Storm v6 shipped, 8 new skills built,
+# style-toolkit bake-off (11 styles) run, several decisions waiting on the user)
+
+# ══════ START HERE TOMORROW ══════
+#
+# ══════ 1. DECISIONS ONLY THE USER CAN MAKE (read this first) ══════
+# A. Scriptorium Foley's 5 A/B audio test clips need EARS, not eyes -- I cannot listen.
+#    poc_living_sketchbook/storm/_qc2/foley_test_*.mp4 (5 files, incl. scratch-ON vs
+#    scratch-OFF variants of the KJV-verse-card nib-scratch question). Nothing is wired
+#    into the shipped episode yet -- these are standalone proofs.
+# B. Git: nothing from today is committed. Storm v6 fixes, the 8 new skills
+#    (margin-sentinel, scriptorium-foley, concordance-loom, annotators-circle,
+#    measuring-reed, plus mapengine's Voyage Camera upgrade), and all _style_bakeoff/
+#    output are sitting as local changes/untracked files. Ask before committing.
+# C. Cleanup: poc_living_sketchbook/storm/stills_v1/ and clips_v1/ (abandoned pre-world-
+#    bible originals) still not deleted -- ask whether to keep as historical record.
+# D. Journaling marginalia (poc_living_sketchbook/storm/_journaling_test/, see its own
+#    _JOURNALING_REVIEW.html): user liked the direction overall. Three open calls: (1) cut
+#    the heart doodle (reads slightly cute/juvenile) or keep it, (2) touch the landing
+#    spread with a whisper-quiet mark or leave it fully silent (Fable's own recommendation:
+#    leave it silent -- the chatter stopping IS the sacred-stillness beat), (3) the "pencil
+#    dies on dark paint" rule (marks must live on open paper margin only) needs to become
+#    a documented law if any of this gets built into real motion devices.
+# E. Style Toolkit voice call: Style 6 (Gilded Proclamation) rendered fully Byzantine-icon,
+#    not sketchbook-native. Beautiful, but is that the right voice for "glory" beats in this
+#    show, or should gold leaf stay closer to the existing torn-collage gold-strip idiom?
+#    User's own call, not a technical one.
+# F. Style Toolkit adoption: which of the 10 tested styles actually get built into real
+#    per-style anchors + a first production episode? See full ranking in section 3 below.
+#    Style 4 (Hearth Storybook) was explicitly ACCEPTED by the user today.
+#
+# ══════ 2. WHAT'S ACTUALLY SHIPPED / WORKING RIGHT NOW ══════
+# - poc_living_sketchbook/storm/STORM_living_sketchbook.mp4 is v6, LOCKED-CLEAN: two real
+#   defects found and fixed (s09_rebuke hallucinated signature; s02_water invented an
+#   entire torso+arms that never existed in the approved still), plus Annotator's Circle
+#   now genuinely LIVE in the episode (circles "faith" on the Matthew 8:26 card at 26.46s,
+#   the instant it's spoken). 63.000s video==audio, watermarked. Full log:
+#   poc_living_sketchbook/storm/_STORM_REVIEW.html (read the v5/v6/round-3/round-4
+#   sections for the complete defect+fix history).
+# - 8 NEW REUSABLE SKILLS built + verified this session (all $0 except where noted),
+#   each with a .claude/skills/<name>/SKILL.md (local-only, gitignored, same as every
+#   other skill in this repo):
+#     margin-sentinel     -- $0 detector: catches hallucinated marks growing into a raw
+#                             clip's blank paper margins. THE reason the s02 defect was
+#                             found. Run on every new clip BEFORE paper-device compositing.
+#     scriptorium-foley    -- device-timed diegetic sound layer (nib-scratch, press-tap,
+#                             etc.) from the existing sound_library. Awaiting ear-review (1A).
+#     concordance-loom     -- $0 full-KJV verbatim + thematic cross-reference finder, feeds
+#                             Stage 0's OT-echo search. Already found real candidates
+#                             (Jonah 1:4 verbatim match, Psalm 107:29 thematic) for Storm.
+#     annotators-circle    -- hand-drawn 2-pass wobbled ink circle around ONE spoken word on
+#                             a verse card. Now live in Storm (see above).
+#     measuring-reed        -- a Scripture-STATED magnitude (e.g. Gen 6:15's 300 cubits)
+#                             draws itself to scale with staggered tick marks + a Scribed-
+#                             Ink label. Proven on Noah's ark art (borrowed test surface,
+#                             not a finished still). Verbatim-only, <=1/episode.
+#     Voyage Camera (mapengine/mapengine.py upgrade, no separate skill file -- it's a
+#                             direct engine change) -- gives the existing /map skill a real
+#                             keyframed traveling camera instead of one fixed push-in.
+#                             Proven on a real Sea-of-Galilee crossing map:
+#                             poc_living_sketchbook/storm/_voyage_camera_test/journey.mp4
+#                             Backward-compat with the old format re-verified (route.example.json
+#                             still renders correctly with zero camera block).
+# - _FABLE_ROUND3_SERIES_SKILLS.md, _FABLE_ROUND4_REMOTION_SKILLS.md,
+#   _FABLE_STYLE_TOOLKIT.md (all under poc_living_sketchbook/) -- the written design briefs
+#   behind everything above, each with an honest ranked verdict and named skips.
+#
+# ══════ 3. THE STYLE TOOLKIT BAKE-OFF (today's biggest single piece of work) ══════
+# User funded up to 200cr to explore COMPLEMENTARY sketchbook styles beyond Style 1 (the
+# one Storm uses) -- not a replacement, a toolkit to reach for per episode's real content.
+# Gallery (open this first): poc_living_sketchbook/_style_bakeoff/_STYLE_BAKEOFF_REVIEW.html
+# Written catalog: poc_living_sketchbook/_FABLE_STYLE_TOOLKIT.md
+# Spend so far: ~61 of 200cr (data/spend_ledger.jsonl, episode LS_StyleBakeoff).
+#
+# 10 styles tested (2 rounds), ranked:
+#   1. Style 3 SCHOLAR'S MARGIN (typology/evidence/timeline diagrams, native short lettering
+#      PROVEN legible) -- user's own top pick. Real controlled-camera animation test built
+#      and confirmed excellent: poc_living_sketchbook/_style_bakeoff/style3_controlled_pan_test.mp4
+#      ($0, deterministic pan/zoom, never generative -- protects the baked lettering).
+#      NEXT: this is the one to actually build out for a real episode (Types & Shadows or
+#      Jesus in the OT are the natural first production test).
+#   2. Style 5 PASSION VIGIL (grave Passion-week register) -- hero-tier first pass, animation
+#      confirmed clean (Seedance).
+#   3. Style 8 SANGUINE RED CHALK (intimate encounter/portrait register, round 2) -- warmest,
+#      most human result of the whole bake-off. No animation test yet.
+#   4. Style 11 SILHOUETTE POSTER (dramatic single-power-beat register, round 2) -- most
+#      visually striking/"thumbnail-ready" image of the round. Minor note: swirling sky reads
+#      a bit like a recognizable art-historical homage, worth toning down in production
+#      wording. No animation test yet.
+#   5. Style 6 GILDED PROCLAMATION (glory/deity-claim register) -- ADOPT pending the voice
+#      call in 1E above. Animation tested (Kling) and confirmed to do almost nothing --
+#      measured pixel diff ~5/255 -- a real content-type limit (static icon portrait gives
+#      a video model nothing to move), not a bug.
+#   6. Style 7 WOODCUT/LINOCUT (round 2, action/power beats) -- strong; minor note: wrapped
+#      grave-clothes on Lazarus read slightly "mummy-trope" at a glance.
+#   7. Style 9 REED-PEN WASH (round 2, atmospheric/travel beats) -- v1 rendered a European-
+#      looking village (church-spire silhouette); RE-ROLLED clean with explicit ancient-
+#      Judean flat-roof architecture wording -- now good.
+#   8. Style 2 CHARCOAL GESTURE (fast action/transitional beats) -- good still register;
+#      animation test (Seedance) held together but this loose a line style is more
+#      animation-fragile than the others -- lean on $0 camera/light devices for its motion,
+#      not generative video.
+#   9. Style 10 STAINED GLASS (round 2, alternate glory register) -- v1 rendered Jesus's face
+#      and hands GREEN, a real color bug; RE-ROLLED clean with explicit warm amber/honey
+#      flesh-tone wording -- now good.
+#   10. Style 4 HEARTH STORYBOOK (parable/warm register) -- ACCEPTED by user today as-is;
+#      brief's own note: father's face reads one notch too animated-film, worth one iteration
+#      before first real production use, but not blocking.
+#
+# HONEST PROCESS NOTE for tomorrow: the first Fable agent doing this design work stalled
+# SILENTLY for ~3.5 hours mid-task with no warning, had to be manually restarted via
+# SendMessage, then its session expired before it finished its own write-up -- I completed
+# the verification and built the gallery myself afterward. Root cause of the stall is NOT
+# fully understood (not machine sleep -- AC sleep was already disabled; likely an
+# orchestration/scheduling gap). Windows sleep/hibernate timeouts have now been fully
+# disabled (both AC and battery) as a precaution. If tomorrow's session dispatches another
+# long-running background agent, check in on it proactively rather than assuming silence
+# means it's still working.
+#
+# ══════ 4. NEXT CONCRETE STEPS (pick up here) ══════
+# 1. User reviews poc_living_sketchbook/_style_bakeoff/_STYLE_BAKEOFF_REVIEW.html and
+#    poc_living_sketchbook/storm/_journaling_test/_JOURNALING_REVIEW.html, makes the calls
+#    in section 1 (D, E, F).
+# 2. Ear-review Scriptorium Foley's 5 test clips (1A).
+# 3. Once styles are chosen: mint per-style-family Jesus/cast anchors (SKILL.md sec.2 rule
+#    -- anchors are per style family, not shared, or they drag Style 1's look into the new
+#    ones) and pick a first real production episode per style (Style 3 -> a Types & Shadows
+#    or Jesus-in-the-OT episode is the obvious test).
+# 4. Decide on git commit + the stills_v1/clips_v1 cleanup (1B, 1C).
+# 5. If continuing the style bake-off: no more untested candidates are sitting designed-but-
+#    unbuilt -- a further round would need fresh design work from Fable first.
+#
+# ══════════ PREVIOUS (2026-07-29 late night) BELOW ══════════
+#
 # ══════ START HERE TOMORROW ══════
 # The v5 assembly script (_s4_assemble.py) is edited and WORKING (no errors on 2 of 3
 # test windows) but NOT fully verified and NOT run as a full render yet. Do this first:

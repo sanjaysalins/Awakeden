@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ROUND 6 SELECTION — every device, one page, your verdicts</title>
+<style>
+  body { background:#f2ead8; color:#241f19; font-family: Georgia, serif; margin:0; padding:0 20px 120px; }
+  .wrap { max-width:1220px; margin:0 auto; }
+  h1 { font-size:28px; margin:18px 0 2px; } h1 .gold { color:#a97e2f; }
+  .sub { color:#6b5f4d; margin-bottom:14px; font-size:14.5px; }
+  .tally { position:sticky; top:0; z-index:9; background:#241f19; color:#f2ead8; padding:10px 16px;
+           border-radius:0 0 10px 10px; font-size:15px; display:flex; gap:22px; align-items:center; }
+  .tally b.k { color:#8fce9a; } .tally b.x { color:#e89a8f; } .tally b.u { color:#e8cf8f; }
+  h2.batch { font-size:20px; color:#5c4a22; border-bottom:2px solid #d8cbaa; padding-bottom:4px; margin:34px 0 14px; }
+  .card { background:#faf5e6; border:1px solid #d8cbaa; border-radius:10px; padding:16px 20px; margin-bottom:18px;
+          display:flex; gap:20px; flex-wrap:wrap; box-shadow:0 2px 6px rgba(60,45,20,.07); }
+  .card.keep { border-left:6px solid #2e6b3a; } .card.kill { border-left:6px solid #962c24; opacity:.75; }
+  .card.unsure { border-left:6px solid #a97e2f; }
+  .vids { display:flex; gap:10px; }
+  video { width:220px; border-radius:6px; border:1px solid #c9ba95; background:#000; }
+  .info { flex:1; min-width:300px; }
+  .info h3 { margin:0 0 4px; font-size:17.5px; } .info h3 .n { color:#962c24; }
+  .info p { margin:0 0 10px; font-size:14px; line-height:1.5; color:#4a4030; }
+  .btns button { font-family:inherit; font-size:14px; padding:7px 18px; margin-right:8px; border-radius:20px;
+                 border:2px solid #b7a87f; background:#f2ead8; cursor:pointer; }
+  .btns button.on-keep { background:#2e6b3a; color:#fff; border-color:#2e6b3a; }
+  .btns button.on-kill { background:#962c24; color:#fff; border-color:#962c24; }
+  .btns button.on-unsure { background:#a97e2f; color:#fff; border-color:#a97e2f; }
+  .note { margin-top:10px; width:95%; font-family:inherit; font-size:13.5px; padding:7px 10px;
+          border:1px solid #c9ba95; border-radius:6px; background:#fffdf4; }
+  .dead { font-weight:bold; color:#962c24; font-size:15px; }
+  .endbox { background:#faf5e6; border:2px solid #a97e2f; border-radius:10px; padding:20px 24px; margin-top:40px; }
+  .endbox textarea { width:97%; height:130px; font-family:inherit; font-size:15px; padding:10px;
+                     border:1px solid #c9ba95; border-radius:6px; background:#fffdf4; }
+  .endbox button { font-family:inherit; font-size:15px; padding:10px 22px; margin:12px 10px 0 0;
+                   border-radius:8px; border:0; background:#2e6b3a; color:#fff; cursor:pointer; }
+  .endbox button.alt { background:#5c4a22; }
+</style>
+</head>
+<body><div class="wrap">
+<h1>ROUND 6 SELECTION — <span class="gold">every device from today</span></h1>
+<div class="sub">Click <b>KEEP</b> / <b>UNSURE</b> / <b>KILL</b> on each card (saved automatically in this browser — safe to
+close and come back). Add a short note on any card if you want. Global notes + the download button are at the very bottom.
+KEEP = it goes into Round 6 as a real engine with governors and the panel pass.</div>
+<div class="tally" id="tally">loading…</div>
+<div id="cards"></div>
+
+<div class="endbox">
+  <h2 style="margin-top:0">Your notes (anything — direction, feelings, combinations you want)</h2>
+  <textarea id="globalnote" placeholder="e.g. the erasure + the calm line together on the rebuke… / less of X, more of Y…"></textarea><br>
+  <button onclick="downloadVerdicts()">⬇ Download my verdicts (.txt)</button>
+  <button class="alt" onclick="copyVerdicts()">Copy verdicts to clipboard</button>
+  <span id="savedmsg" style="margin-left:10px;color:#2e6b3a;font-weight:bold"></span>
+</div>
+</div>
+
+<script>
+const CARDS = [
+ {b:"BATCH 1 — The Keeper (journaling)", items:[
+  {id:"performing_hand", t:"The Performing Handwriting", vids:["_keeper_poc/keeper_A_panic_entry.mp4","_keeper_poc/keeper_B_calm_line.mp4"],
+   p:"One engine, one energy number: jagged + heaving + word-search strikes + the skid in the storm — dead steady after the rebuke. Watch A then B: the story told by HOW a person writes."},
+  {id:"margin_studies", t:"Margin Studies (doodles)", vids:["_keeper_poc/keeper_C_lamp_studies.mp4"],
+   p:"Two quick pencil tries of the lamp + leader line + “still burning.” The Keeper draws what they can't stop looking at. (Needs ~2x more graphite contrast — one parameter.)"},
+  {id:"field_header", t:"The Field Header", vids:["_keeper_poc/keeper_D_field_header.mp4"],
+   p:"“Galilee. evening. crossing over.” — every episode opens as an ENTRY; the series becomes one book."}
+ ]},
+ {b:"BATCH 2 — Bold (the page acts)", items:[
+  {id:"erasure", t:"The Erasure", vids:["_bold_poc/bold_1_erasure.mp4"],
+   p:"The storm scrubbed out in 1.3s — what remains is the whole scene as a pencil ghost, no ink left in it. “and it was gone.” Calm as removal, not struggle."},
+  {id:"torn_page", t:"The Torn-Out Page", vids:["_bold_poc/bold_2_torn_page.mp4"],
+   p:"The Keeper rips the panic page out on camera; the next page is already waiting. Never a page carrying the Word."},
+  {id:"bleeding_word", t:"The Bleeding Word", vids:["_bold_poc/bold_3_bleed.mp4"],
+   p:"A drop hits “fear.” and the word blooms, dissolves, runs. Rain or tears; the page doesn't say."},
+  {id:"dive", t:"The Dive (brave camera)", vids:["_bold_poc/bold_4_dive.mp4"],
+   p:"Masthead → plunge → waterline with an arrival shudder. The calm setting of this same engine gives every episode push-ins and drifts."}
+ ]},
+ {b:"BATCH 3 — Vault I (how the Word arrives)", items:[
+  {id:"word_whole", t:"The Word Arrives Whole", vids:["_vault_poc/vault_1_word_whole.mp4"],
+   p:"The Keeper interrupted mid-word — because “Peace, be still.” is simply THERE between one frame and the next. Human words take strokes; His word doesn't take time."},
+  {id:"negspace", t:"Negative-Space Light", vids:["_vault_poc/vault_2_negative_space.mp4"], dead:true,
+   p:"KILLED by your call (didn't fit the world — poster grammar, not journal grammar). Kept here only for the record."},
+  {id:"two_days", t:"Entries Across Days", vids:["_vault_poc/vault_3_two_days.mp4"],
+   p:"“the end.” struck through by a later, steadier hand: “the third day.” — with the frame's only gold. The strike-through as gospel."},
+  {id:"inkwell", t:"The Inkwell Runs Dry", vids:["_vault_poc/vault_4_inkwell.mp4"],
+   p:"The ink starves mid-word, a re-dip blot, “water kept coming.” resumes darker. Frailty inside the act of writing."}
+ ]},
+ {b:"BATCH 4 — Vault II (the remaining eleven)", items:[
+  {id:"permanence", t:"The Permanence Split", vids:["_vault2_poc/v2_01_permanence_split.mp4"],
+   p:"The Keeper's line ages and browns in fast-time; the gold verse — “my words shall not pass away.” — doesn't move. Decay as proof."},
+  {id:"dog_ear", t:"The Dog-Ear", vids:["_vault2_poc/v2_02_dog_ear.mp4"],
+   p:"At THE verse, the Keeper folds the corner down, on camera. “This one I keep.”"},
+  {id:"breathes", t:"The Page Breathes", vids:["_vault2_poc/v2_03_page_breathes.mp4"],
+   p:"On the asleep spread the page rises and falls, barely, like a chest — then holds its breath, then resumes deeper. The book as a body. (Very subtle — judge on a big screen.)"},
+  {id:"rain_shadow", t:"Rain-Shadow", vids:["_vault2_poc/v2_04_rain_shadow.mp4"],
+   p:"Soft shadows of rain on an unseen window run down the page — the world outside the book touching the light that falls on it."},
+  {id:"candle_only", t:"The Candle-Only Spread", vids:["_vault2_poc/v2_05_candle_only.mp4"],
+   p:"Night closes in until the drawn lamp is the only light on the page; its radius breathes; at the end, it grows. The light budget IS the drama."},
+  {id:"wax_seal", t:"The Wax Seal", vids:["_vault2_poc/v2_06_wax_seal.mp4"],
+   p:"Three drips, one press, a seal that stays forever. For covenant beats. (Signet symbol = your decision, series-constant.)"},
+  {id:"blind_emboss", t:"The Blind Emboss", vids:["_vault2_poc/v2_07_blind_emboss.mp4"],
+   p:"No ink at all: the PREVIOUS episode's last line pressed through the page above, caught by a passing light. Seriality you can touch."},
+  {id:"flyleaf", t:"The Flyleaf Census", vids:["_vault2_poc/v2_08_flyleaf_census.mp4"],
+   p:"The inside cover fills, one line per finished episode — the door, jericho, the two goats… and now “the storm — stilled.” writes itself in."},
+  {id:"pricked", t:"The Pricked Margin", vids:["_vault2_poc/v2_09_pricked_margin.mp4"],
+   p:"13 scribe's pricks down the edge — one per spread — and the lit one is where we are. A progress bar no interface designer could ship."},
+  {id:"second_hand", t:"The Second Hand", vids:["_vault2_poc/v2_10_second_hand.mp4"],
+   p:"Years later, a different hand in different ink: “this was my father's book.” The book outlives its keeper; the Word outlives the book."},
+  {id:"two_hands", t:"Two Hands at Once", vids:["_vault2_poc/v2_11_two_hands.mp4"],
+   p:"The Keeper writes IN PANIC while the drawing itself moves (the real episode clip underneath). Simultaneity — the density professional sequences have."}
+ ]}
+];
+
+const NAMES = {}; CARDS.forEach(b=>b.items.forEach(it=>NAMES[it.id]=it.t));
+function verdict(id){ return localStorage.getItem('r6sel_'+id) || ''; }
+function setVerdict(id,v){ localStorage.setItem('r6sel_'+id,v); paint(); }
+function paint(){
+  let k=0,x=0,u=0,tot=0;
+  CARDS.forEach(b=>b.items.forEach(it=>{
+    if(it.dead) return; tot++;
+    const v=verdict(it.id); if(v==='KEEP')k++; else if(v==='KILL')x++; else if(v==='UNSURE')u++;
+    const card=document.getElementById('card_'+it.id);
+    card.className='card '+(v?v.toLowerCase():'');
+    ['KEEP','UNSURE','KILL'].forEach(w=>{
+      const btn=document.getElementById('btn_'+it.id+'_'+w);
+      btn.className = (v===w) ? 'on-'+w.toLowerCase() : '';
+    });
+  }));
+  document.getElementById('tally').innerHTML =
+    `<b class="k">KEEP ${k}</b> <b class="u">UNSURE ${u}</b> <b class="x">KILL ${x}</b> · ${tot-k-x-u} undecided of ${tot} · verdicts save automatically`;
+}
+function summary(){
+  const lines=['ROUND 6 SELECTION — user verdicts — '+new Date().toLocaleString(),''];
+  ['KEEP','UNSURE','KILL'].forEach(w=>{
+    lines.push(w+':');
+    CARDS.forEach(b=>b.items.forEach(it=>{
+      if(it.dead){ if(w==='KILL') lines.push('  - '+it.t+' (pre-killed verbally)'); return; }
+      if(verdict(it.id)===w){
+        const n=localStorage.getItem('r6note_'+it.id)||'';
+        lines.push('  - '+it.t+(n?('  |  note: '+n):''));
+      }
+    }));
+    lines.push('');
+  });
+  lines.push('UNDECIDED:');
+  CARDS.forEach(b=>b.items.forEach(it=>{ if(!it.dead && !verdict(it.id)) lines.push('  - '+it.t); }));
+  lines.push('','GLOBAL NOTES:', document.getElementById('globalnote').value || '(none)');
+  return lines.join('\n');
+}
+function downloadVerdicts(){
+  const blob=new Blob([summary()],{type:'text/plain'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob);
+  a.download='ROUND6_VERDICTS.txt'; a.click();
+  document.getElementById('savedmsg').textContent='downloaded ✓ (drop it in chat or tell Fable where it is)';
+}
+function copyVerdicts(){
+  navigator.clipboard.writeText(summary()).then(()=>{
+    document.getElementById('savedmsg').textContent='copied ✓ — paste it to Fable in chat';
+  });
+}
+const root=document.getElementById('cards');
+CARDS.forEach(b=>{
+  root.insertAdjacentHTML('beforeend','<h2 class="batch">'+b.b+'</h2>');
+  b.items.forEach(it=>{
+    const vids=it.vids.map(v=>'<video src="'+v+'" controls loop muted></video>').join('');
+    const btns = it.dead ? '<span class="dead">❌ KILLED (your call, recorded)</span>' :
+      ['KEEP','UNSURE','KILL'].map(w=>'<button id="btn_'+it.id+'_'+w+'" onclick="setVerdict(\''+it.id+'\',\''+w+'\')">'+w+'</button>').join('');
+    root.insertAdjacentHTML('beforeend',
+      '<div class="card" id="card_'+it.id+'"><div class="vids">'+vids+'</div><div class="info">'+
+      '<h3><span class="n">'+it.t+'</span></h3><p>'+it.p+'</p><div class="btns">'+btns+'</div>'+
+      (it.dead?'':'<input class="note" id="note_'+it.id+'" placeholder="note on this one (optional)…">')+
+      '</div></div>');
+  });
+});
+CARDS.forEach(b=>b.items.forEach(it=>{
+  if(it.dead) return;
+  const n=document.getElementById('note_'+it.id);
+  n.value=localStorage.getItem('r6note_'+it.id)||'';
+  n.addEventListener('input',()=>localStorage.setItem('r6note_'+it.id,n.value));
+}));
+const g=document.getElementById('globalnote');
+g.value=localStorage.getItem('r6_global')||'';
+g.addEventListener('input',()=>localStorage.setItem('r6_global',g.value));
+paint();
+</script>
+</body>
+</html>

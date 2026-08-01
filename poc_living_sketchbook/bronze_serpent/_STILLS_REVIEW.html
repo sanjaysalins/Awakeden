@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bronze Serpent — living-sketchbook stills review</title>
+<style>
+  body { background:#16181d; color:#e8e4d8; font-family:Georgia, serif; line-height:1.55; padding:28px 18px 90px; }
+  .wrap { max-width:1320px; margin:0 auto; }
+  h1 { color:#e9c877; font-size:1.8rem; margin-bottom:6px; }
+  .sub { color:#9aa0ad; margin-bottom:24px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:16px; }
+  .card { background:#1e2129; border-radius:8px; overflow:hidden; border:2px solid transparent; }
+  .card.ok { border-color:#3a4a3a; }
+  .card.reroll { border-color:#8a7a2a; }
+  .card.fail { border-color:#8a2a2a; }
+  .card img { width:100%; display:block; }
+  .cap { padding:10px 12px; font-size:.85rem; color:#c9c4b6; }
+  .cap b { color:#e8e4d8; }
+  .win { color:#8a95a8; font-size:.78rem; display:block; margin:3px 0 6px; }
+  .status { display:inline-block; font-size:.72rem; padding:2px 7px; border-radius:4px; margin-top:6px; }
+  .status.ok { background:#2a3a2a; color:#9fd39f; }
+  .status.reroll { background:#3a3320; color:#e9c877; }
+  .status.fail { background:#3a2020; color:#e88; }
+  .v { background:#1e2129; border-left:4px solid #e9c877; padding:12px 16px; border-radius:8px; margin-bottom:20px; }
+  .v.warn { border-left-color:#c0504a; }
+  code { color:#e9c877; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>BRONZE SERPENT — 14 spreads, living-sketchbook stills</h1>
+<div class="sub">Numbers 21 / John 3:14 typology, eyewitness Moses narration (real 69.31s, forced-aligned). Test gate (s01, s10) + s08 (Round 9 insert page 1) already approved; two insert pages now (s08 Scholar's-Margin, s12 Gilded Proclamation).</div>
+
+<div class="v">
+<b>s04_serpents — CROWD-FACE-COUNT FIX (2026-07-31, post-ship eye-check).</b>
+The original render (approved as "clean first try" without a full-res face count) was caught by a
+direct human/Claude eye-check showing 7-8 distinct people with sharp, detailed faces — a man
+clutching his forehead in grief, a bowing man in front of him, a woman kneeling with a child, a
+woman clutching her chest, a hooded woman facing away, a man+child pair in the background, and a
+woman entering a tent — a clear violation of the project's ≤3-sharp-face crowd rule. Root cause:
+the shared <code>PEOPLE</code> constant's "at most three faces... rest turned away/downcast/in
+shadow" wording capped DETAIL but never capped the total headcount, so the model kept adding
+figures. Fixed with a scene-specific <code>PEOPLE_S04</code> constant, porting Storm's proven
+<code>DISCIPLES</code> wording exactly: an enumerated EXACT headcount (two figures, not three —
+tightened further given this constant had already let one failure through) — "(1) a man clutching
+his own forehead in grief... (2) a woman clutching her chest in distress..." — closed with a hard
+"no third person, no fourth person, no fifth person, no partial figure, no extra head or body
+visible anywhere in the frame, even partially hidden, turned away, silhouetted near a tent flap,
+or in the far background... only these two figures and no one else," plus an explicit "tents and
+rocks behind them are empty environment only." Re-rendered clean on the FIRST attempt: exactly 2
+sharp-detail faces (the grief-stricken man, the distressed woman), no third person anywhere, no
+visible wound/blood/bite, sandal/costume/anatomy/scale all clean at full res. The 4-5 small
+serpent shapes on the ground are correct content (Numbers 21's "much people," not a face-count
+issue) and were left alone. Old defective render kept for the record at
+<code>stills/s04_serpents.v1_crowdface_defect.png</code>. 1 × nano_banana_pro ledgered under
+<code>LS_BronzeSerpent</code>, note <code>[bronzeserpent] s04_serpents_facecount_fix</code>
+(~2cr / ~$0.30). <code>spread_variety_lint.py</code> re-run clean: 0 collisions, no new pose
+overlap introduced.
+</div>
+
+<div class="v">
+<b>s12_echo — REBUILT AS INSERT PAGE 2, Style 6 Gilded Proclamation (2026-07-31, second insert page round).</b>
+User asked for one more page like s08 after approving it. s12 was already a "show two things
+together" beat ("The cure was never in you; it hangs in plain sight...") and sits 3 spreads /
+13+ seconds from s08 — well spaced, and rebuilt in a DIFFERENT register (Style 6, not Style 3
+again) so it reads as genuinely fresh, not a repeat of the same device. UNLIKE s08's two-panel
+labeled comparison, s12 is ONE UNIFIED gold-ground composition, no labels, no verse references:
+the dull bronze serpent low and small in the earthbound foreground, Christ lifted on the cross
+rising radiant in burnished gold leaf above/behind it — echo, not diagram. Gold touches ONLY
+the Christ/cross element; the serpent stays plain dull bronze throughout (same theology as s08 —
+gilding the serpent would be the Nehushtan error). Two real defects caught and fixed across 3
+render attempts: attempt 1's serpent pole grew a crossbar (reading as a second small cross —
+undercuts the pole-vs-cross typology point) and showed visible nail-wound blood; attempt 2 fixed
+both but left a faint red spear-wound streak on the torso (a $0 inpaint retouch was tried first
+and rejected — it blurred the linework worse than the defect it fixed); attempt 3 explicitly
+named "no wound/mark on the ribs or side" and rendered clean. Old Style-1 version kept for the
+record at <code>stills/s12_echo.v1_style1.png</code>. 3 × nano_banana_pro ledgered under
+<code>LS_BronzeSerpent</code>, note <code>[bronzeserpent] s12_echo_style6</code> (~6cr / ~$0.90
+quoted total for the round).
+</div>
+
+<div class="v">
+<b>s09_shadow + s13_lifted — RE-ROLLED AND FIXED (2026-07-31, targeted re-roll round).</b>
+User eye-checked both at full resolution and confirmed both needed fixing.
+<b>s09</b> previously staged the bronze serpent raised prominently near the top of the pole,
+eye-level and gleaming — a hero/display shot, the opposite of "only a shadow." SCENE prompt
+reworded to require the serpent held down at waist height or lower, small relative to Moses,
+in his own body's shade, unremarkable — fixed on the 1st attempt this round.
+<b>s13</b> previously showed Christ floating/ascending in golden clouds, arms spread, feet
+dangling, NO cross anywhere in frame — reading as the Ascension, not the crucifixion, breaking
+the John 3:14 "lifted up" typology this whole episode builds toward. SCENE prompt reworded to
+require Christ lifted up ON a plain wooden cross, arms outstretched along the crossbeam, feet
+at the foot of the upright, cross beams unmistakably visible even as glory light pours around
+them — fixed on the 1st attempt this round. Both prior (rejected) renders kept for the record
+at <code>stills/s09_shadow.v1_reject.png</code> and <code>stills/s13_lifted.v1_reject.png</code>.
+</div>
+
+<div class="v">
+<b>s07_horizon + s11_hearme — REPEATED-POSE FIX (2026-07-31, spread-variety lint round).</b>
+User caught by eye that s01/s03/s07/s11 all rendered the same "Moses standing, staff gripped,
+waist-up, three-quarter view, looking off to one side" composition — 4 of 14 spreads on one
+pose. s01/s03 keep a redeeming second element (tent camp + family; the complaining crowd) so
+they stay; <b>s07</b> and <b>s11</b> had none, so both were given genuinely different blocking,
+confirmed by the new deterministic <code>poc_living_sketchbook/spread_variety_lint.py</code>
+(0 collisions after the fix, full report below the gallery). <b>s07</b> is now an extreme
+close-up on just Moses's face and eyes turned toward unseen light — no staff, hands, or
+shoulders in frame at all. <b>s11</b> is now seated on a rock, staff laid down rather than
+gripped, hands open, facing the viewer fully straight-on rather than three-quarter — fixed on
+the 1st attempt for s07, and on a 2nd attempt for s11 (1st attempt rendered bare feet, breaking
+the Moses canon's "plain leather sandals" — the seated pose brought feet into frame for the
+first time in the episode and the sandals weren't named explicitly; reworded and re-rolled
+clean). Rejected/superseded renders kept for the record at
+<code>stills/s07_horizon.v1_repeat_pose.png</code>, <code>stills/s11_hearme.v1_repeat_pose.png</code>
+(original pose collision), and <code>stills/s11_hearme.v2_reject.png</code> (bare-feet re-roll).
+</div>
+
+<div class="grid">
+  <div class="card ok"><img src="stills/s01_wide.png">
+    <div class="cap"><b>s01 · wide establishing</b><span class="win">Beat 1 · 0.387–3.657s</span>
+    "I am Moses. My people were dying of snakebite..."
+    <div class="status ok">APPROVED — test gate (pre-round), sky/glow notes accepted as-is</div></div></div>
+
+  <div class="card ok"><img src="stills/s02_grief.png">
+    <div class="cap"><b>s02 · grief, close/mid</b><span class="win">Beat 1 · 3.657–8.230s</span>
+    "...and God told me to forge a snake of bronze and lift it on a pole."
+    <div class="status ok">APPROVED — clean first try</div></div></div>
+
+  <div class="card reroll"><img src="stills/s03_complaint.png">
+    <div class="cap"><b>s03 · the complaint</b><span class="win">Beat 2 · 8.230–11.433s</span>
+    "The serpents were no accident — we had spoken against God..."
+    <div class="status reroll">APPROVED — 1 re-roll (1st attempt had 6+ clearly-detailed crowd
+    faces, violates the ≤3-face rule; 2nd attempt corrected to 3 clear faces + rest
+    downcast/turned away)</div></div></div>
+
+  <div class="card reroll"><img src="stills/s04_serpents.png">
+    <div class="cap"><b>s04 · serpents among the rocks</b><span class="win">Beat 2 · 11.433–14.856s</span>
+    "...and the venom was the judgment our sin had earned." (real spoken text per _TIMING.md,
+    not the plan's paraphrase)
+    <div class="status reroll">APPROVED — re-rolled 2026-07-31 for crowd-face-count fix (7-8
+    detailed faces found on eye-check &gt; now exactly 2), 1st attempt this round, see note above</div></div></div>
+
+  <div class="card ok"><img src="stills/s05_intercession.png">
+    <div class="cap"><b>s05 · intercession</b><span class="win">Beat 2 · 14.856–18.798s</span>
+    "I begged Him to take the snakes away. He would not."
+    <div class="status ok">APPROVED — clean first try</div></div></div>
+
+  <div class="card ok"><img src="stills/s06_forge.png">
+    <div class="cap"><b>s06 · hands at the forge</b><span class="win">Beat 2 · 18.798–28.105s</span>
+    "Instead He told me to forge the image... The bitten had only to look — and live."
+    <div class="status ok">APPROVED — clean first try</div></div></div>
+
+  <div class="card ok"><img src="stills/s07_horizon.png">
+    <div class="cap"><b>s07 · the horizon — extreme close, face/eyes only</b><span class="win">Beat 3 · 28.105–36.879s</span>
+    "I speak now from the far side of my life... a night I never saw, when one they called
+    Teacher answered a seeker:"
+    <div class="status ok">APPROVED — re-rolled 2026-07-31 for repeated-pose fix (spread-variety
+    lint), 1st attempt this round, see note above</div></div></div>
+
+  <div class="card ok"><img src="../_style_bakeoff/bronzeserpent_typology_numbers21_john3.png">
+    <div class="cap"><b>s08 · INSERT PAGE 1 of 2 — Scholar's Margin (Style 3)</b><span class="win">Beat 3 · 36.879–43.887s
+    (quote 36.879–42.316s)</span>
+    "And as Moses lifted up the serpent in the wilderness, even so must the Son of man be
+    lifted up:" (red-letter, John 3:14)
+    <div class="status ok">APPROVED — Round 9, pre-existing (known photographed-codex crop flaw,
+    fix deferred to assembly)</div></div></div>
+
+  <div class="card ok"><img src="stills/s09_shadow.png">
+    <div class="cap"><b>s09 · "only a shadow"</b><span class="win">Beat 3 · 43.887–46.386s</span>
+    "My bronze was only a shadow."
+    <div class="status ok">APPROVED — re-rolled 2026-07-31, 1st attempt this round, see note above</div></div></div>
+
+  <div class="card ok"><img src="stills/s10_golgotha.png">
+    <div class="cap"><b>s10 · Golgotha</b><span class="win">Beat 3 · 46.386–52.572s</span>
+    "They lifted Jesus on a Roman pole, made a curse for us, bearing our judgment in our place."
+    <div class="status ok">APPROVED — test gate (pre-round), sky/glow notes accepted as-is, do
+    NOT re-roll</div></div></div>
+
+  <div class="card ok"><img src="stills/s11_hearme.png">
+    <div class="cap"><b>s11 · "hear me" — seated, direct address</b><span class="win">Beat 4 · 52.572–57.128s</span>
+    "So hear me, you who are bitten — that is every one of us."
+    <div class="status ok">APPROVED — re-rolled 2026-07-31 for repeated-pose fix (spread-variety
+    lint), 2nd attempt this round (1st had bare feet, see note above)</div></div></div>
+
+  <div class="card ok"><img src="stills/s12_echo.png">
+    <div class="cap"><b>s12 · INSERT PAGE 2 of 2 — Gilded Proclamation (Style 6)</b><span class="win">Beat 4 · 57.128–62.936s</span>
+    "The cure was never in you; it hangs in plain sight, and costs you nothing but a look."
+    <div class="status ok">APPROVED — REBUILT 2026-07-31 from a plain Style-1 render, 3rd attempt
+    clean (see note above); old version at <code>stills/s12_echo.v1_style1.png</code></div></div></div>
+
+  <div class="card ok"><img src="stills/s13_lifted.png">
+    <div class="cap"><b>s13 · lifted, radiant, ON the cross</b><span class="win">Beat 4 · 62.936–66.723s</span>
+    "Lift your eyes to Jesus, lifted up for you."
+    <div class="status ok">APPROVED — re-rolled 2026-07-31, 1st attempt this round, see note above</div></div></div>
+
+  <div class="card ok"><img src="stills/s14_landing.png">
+    <div class="cap"><b>s14 · THE LANDING</b><span class="win">Beat 4 · 66.723–68.297s + ≥3.0s hold</span>
+    "Look, and live."
+    <div class="status ok">APPROVED — clean first try, torn-page device + gold light beneath</div></div></div>
+</div>
+
+<div class="v">
+<b>spread-variety lint — full report (<code>poc_living_sketchbook/spread_variety_lint.py
+poc_living_sketchbook/bronze_serpent</code>).</b>
+<br><br>
+<u>BEFORE the fix</u> (s07/s11 at their original pose):
+<pre style="white-space:pre-wrap; color:#c9c4b6;">[spread-variety] 14 spreads scanned
+[spread-variety] 1 REPEATED-COMPOSITION FAIL(s):
+  FAIL  's07_horizon' and 's11_hearme' share subject+pose+framing (subject='moses-alone' pose='standing-staff-grip-three-quarter' framing='mid')</pre>
+s01_wide and s03_complaint were correctly NOT flagged — their <code>visual_tags.json</code>
+subject tags ("moses+family", "moses+crowd") differ from s07/s11's ("moses-alone"), which is
+the mechanism that spares a pose repeat carrying a redeeming second element while still
+catching a genuine duplicate.
+<br><br>
+<u>AFTER the fix</u> (s07 re-blocked as extreme-close face-only, s11 re-blocked as seated
+direct-address):
+<pre style="white-space:pre-wrap; color:#c9c4b6;">[spread-variety] 14 spreads scanned
+[spread-variety] 0 repeated compositions -- every spread reads distinct.</pre>
+Exit 0, no other collisions anywhere in the 14-spread sequence.
+</div>
+</div>
+</body>
+</html>

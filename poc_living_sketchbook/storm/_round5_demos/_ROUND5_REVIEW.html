@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Round 5 — the book itself · built + tested</title>
+<style>
+  body { background:#f2ead8; color:#241f19; font-family: Georgia, serif; margin:0; padding:32px 20px 80px; }
+  .wrap { max-width:1180px; margin:0 auto; }
+  h1 { font-size:30px; margin:0 0 4px; } h1 .gold { color:#a97e2f; }
+  .sub { color:#6b5f4d; margin-bottom:26px; font-size:15px; }
+  .card { background:#faf5e6; border:1px solid #d8cbaa; border-radius:10px; padding:22px 24px; margin-bottom:30px;
+          box-shadow:0 2px 8px rgba(60,45,20,.08); }
+  .card h2 { margin:0 0 2px; font-size:21px; } .card h2 .n { color:#962c24; }
+  .verdict { display:inline-block; font-family:'Zilla Slab',Georgia,serif; font-weight:bold; font-size:13px;
+             padding:2px 10px; border-radius:12px; margin-left:10px; vertical-align:middle; }
+  .built { background:#2e6b3a; color:#fff; } .ab { background:#a97e2f; color:#fff; }
+  .pitch { font-style:italic; color:#4a4030; margin:6px 0 14px; font-size:15.5px; }
+  .row { display:flex; gap:22px; flex-wrap:wrap; }
+  video { width:300px; border-radius:6px; border:1px solid #c9ba95; background:#000; }
+  .facts { flex:1; min-width:320px; font-size:14.5px; line-height:1.55; }
+  .facts b { color:#5c4a22; }
+  .eye { background:#efe6cd; border-left:4px solid #2e6b3a; padding:8px 12px; margin:10px 0; font-size:14px; }
+  .flag { background:#f3e3df; border-left:4px solid #962c24; padding:8px 12px; margin:10px 0; font-size:14px; }
+  code { background:#e9dfc4; padding:1px 5px; border-radius:4px; font-size:12.5px; }
+  .paths { font-size:12px; color:#6b5f4d; margin-top:10px; word-break:break-all; line-height:1.7; }
+  .abrow { display:flex; gap:18px; flex-wrap:wrap; }
+  .abcol { text-align:center; font-size:13px; color:#5c4a22; font-weight:bold; }
+</style>
+</head>
+<body><div class="wrap">
+<h1>Round 5 — <span class="gold">the book itself</span> · built + self-tested</h1>
+<div class="sub">2026-07-30 · Fable designed, built, and machine-tested all five. All $0 deterministic, none can touch the
+generated layer. <b>Your eye decides what ships</b> — two of them are explicit A/Bs. Design doc:
+<a href="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/poc_living_sketchbook/_FABLE_ROUND5_THE_BOOK_ITSELF.md">_FABLE_ROUND5_THE_BOOK_ITSELF.md</a></div>
+
+<!-- 1 ELDER LEAF -->
+<div class="card">
+<h2><span class="n">1 · Elder Leaf</span> — the Old Testament, physically present <span class="verdict built">BUILT · SELF-TEST PASS</span></h2>
+<div class="pitch">The OT echo arrives as an older foxed leaf taped into the book — Psalm 107:29 finally on the calm spread,
+ready for the gold thread to run to Christ. The Loom finds &rarr; the panel judges &rarr; the Leaf cites.</div>
+<div class="row">
+  <video src="elder_leaf_demo.mp4" controls loop muted></video>
+  <div class="facts">
+    <b>Watch for:</b> the sheet lays down at 0.8s (scale + shadow tightening, then byte-still) · elder ink register
+    (faded iron-gall, same scribe's hand) · deckled edge, linen-tape corners · foxing sparse — aged, never dirty.<br><br>
+    <b>Self-test:</b> deckle alpha bounds · invisible before settle · byte-stable after (np.array_equal) · foley
+    <code>paper_lay</code> cue export.<br>
+    <b>Reverence law:</b> older &ne; lesser. The leaf is immaculate — the root, not the relic.
+    <div class="eye">Fable's eye-check: sits clear of Christ and every face; verse + ref legible at full res; tape reads as
+    translucent linen. One taste note for you: the script is on the small side — if it fights you at phone size, bump
+    <code>--width-frac</code> to 0.62.</div>
+    <div class="paths">Engine: C:\Users\sanjay\PycharmProjects\JesusInTheBible\panel_animator\elder_leaf.py ·
+    Skill: .claude\skills\elder-leaf\SKILL.md</div>
+  </div>
+</div>
+</div>
+
+<!-- 2 PAPERMAKERS MARK -->
+<div class="card">
+<h2><span class="n">2 · Papermaker's Mark</span> — Christ in the substrate <span class="verdict built">BUILT · SELF-TEST PASS</span></h2>
+<div class="pitch">An ichthys watermark IN the paper of the "he was asleep" spread — invisible at rest, found only when the
+raking lamp crosses it (~5s), gone again as the light moves on. Power hidden in the boat; the mark hidden in the sheet.</div>
+<div class="row">
+  <video src="papermakers_mark_demo.mp4" controls loop muted></video>
+  <div class="facts">
+    <b>Watch for:</b> bottom margin, just right of center, around 5s — two faint lighter wire-arcs (the fish). It is
+    DESIGNED to be missable on first watch: a gift to the rewatcher. Machine-proof it's there and then gone:
+    mark-region delta 0.000 &rarr; 1.6 &rarr; 0.000.<br><br>
+    <b>Self-test:</b> invisible at &ge;3.2&sigma; from the sweep (both sides) · visible at sweep peak · strength
+    hard-capped 0.12 · shares raking-light's own band (one lamp, never two).
+    <div class="flag">YOUR call, once, series-constant: <b>ichthys or plain cross?</b> (<code>--symbol</code>). Decided
+    with you, then it's the same wire in every sheet, forever.</div>
+    <div class="paths">Engine: C:\Users\sanjay\PycharmProjects\JesusInTheBible\panel_animator\papermakers_mark.py ·
+    Skill: .claude\skills\papermakers-mark\SKILL.md</div>
+  </div>
+</div>
+</div>
+
+<!-- 3 RIBBON MARKER -->
+<div class="card">
+<h2><span class="n">3 · Ribbon Marker</span> — the episode ends kept <span class="verdict ab">BUILT · YOUR A/B</span></h2>
+<div class="pitch">After the last word, a rubric-red silk ribbon settles into the landing's margin lane — the CTA in the
+book's own language: <i>this page is meant to be returned to.</i> Blue-line opens the show; the ribbon closes it.</div>
+<div class="row">
+  <video src="ribbon_marker_demo.mp4" controls loop muted></video>
+  <div class="facts">
+    <b>Watch for:</b> the drop at 1.0s — cloth sway while falling, one ~6px bounce (an object with mass), contact shadow,
+    then ABSOLUTE stillness. Lane x=0.77 ends above the torn hole; never touches the hole, Christ, or the gold strip.<br><br>
+    <b>Self-test:</b> byte-identical frames after settle (asserted — the stillness law in code) · frayed tip · bounded
+    bounce · foley <code>fabric_slip</code> cue export.
+    <div class="flag">THE A/B (not resolved silently): does even a 0.6s settle intrude on the torn page's sacred stillness?
+    Watch this, then the plain landing in the v5 film. If the ribbon loses — it dies, or retreats to the final second
+    before the endcard.</div>
+    <div class="paths">Engine: C:\Users\sanjay\PycharmProjects\JesusInTheBible\panel_animator\ribbon_marker.py ·
+    Skill: .claude\skills\ribbon-marker\SKILL.md</div>
+  </div>
+</div>
+</div>
+
+<!-- 4 FROTTAGE -->
+<div class="card">
+<h2><span class="n">4 · The Rubbing (frottage)</span> — evidence taken by hand <span class="verdict built">BUILT · SELF-TEST PASS</span></h2>
+<div class="pitch">An OBJECT emerges as a graphite rubbing — strokes accumulate in real wrist order and the boat appears
+under them. Storm has no artifact beat, so this demo documents the world-bible boat; the device waits for the denarius,
+the nails, the Ark's pitch-seams.</div>
+<div class="row">
+  <video src="frottage_demo.mp4" controls loop muted></video>
+  <div class="facts">
+    <b>Watch for:</b> band-by-band hand order (top&rarr;bottom, each row swept left&rarr;right, jittered — never a wipe) ·
+    relief edges catching darker · paper breathing through every stroke (opacity capped 0.92).<br><br>
+    <b>Self-test:</b> monotonic coverage · revealed-centroid moves DOWN the region (hand order proven) · cap honored ·
+    foley <code>graphite_scratch</code> cue export.
+    <div class="flag">Hard governor, outranks everything: objects and inscriptions ONLY. Never a figure, never a face,
+    absolutely never the Face (Veronica-relic territory).</div>
+    <div class="paths">Engine: C:\Users\sanjay\PycharmProjects\JesusInTheBible\panel_animator\frottage.py ·
+    Skill: .claude\skills\frottage\SKILL.md</div>
+  </div>
+</div>
+</div>
+
+<!-- 5 SECOND SITTING -->
+<div class="card">
+<h2><span class="n">5 · Second Sitting</span> — the book in time <span class="verdict ab">PROTOTYPE · YOUR A/B</span></h2>
+<div class="pitch">Late in the episode, cut BACK to the page that screamed "carest thou not that we perish?" — unchanged,
+except one new margin line in elder ink: <i>"…and there was a great calm."</i> The panic page, annotated by its own answer.</div>
+<div class="abrow">
+  <div><div class="abcol">B — the revisit, annotated</div><video src="second_sitting_B_annotated.mp4" controls loop muted></video></div>
+  <div><div class="abcol">A — same plate, straight</div><video src="second_sitting_A_straight.mp4" controls loop muted></video></div>
+  <div class="facts">
+    <b>The question only you can answer:</b> in a 60s format whose law is forward motion, does 2.5s of revisited footage
+    read as PAYOFF (build it into the cut at ~52s, before the landing) or as padding (kill it — the split-flap's death,
+    and the doc will say so)?<br><br>
+    No engine — this is an assembler pattern, ~40 lines, overlay ink only: the plate is never re-rendered, so it cannot
+    drift. Governor: &le;1 per episode, only when the narration itself verbally returns, and the payoff-ledger must show
+    the revisited question as a registered loop.
+    <div class="paths">Prototype: C:\Users\sanjay\PycharmProjects\JesusInTheBible\poc_living_sketchbook\storm\_second_sitting_ab.py</div>
+  </div>
+</div>
+</div>
+
+<div class="sub" style="margin-top:30px">
+<b>What did NOT get built</b> (still design-only, by round-5's own ranking): Wet Ink + Selah + the 16:9 Gutter are polish/grammar
+notes inside the round doc, and rounds 3–4 still hold Frontispiece, Light Table, Unmade Page, Voyage Camera. ·
+<b>Foley:</b> every new device exports its cue (<code>paper_lay</code>, <code>fabric_slip</code>, <code>graphite_scratch</code>) —
+wiring them into scriptorium_foley's Storm cue list happens when a device wins its gate.</div>
+</div></body>
+</html>

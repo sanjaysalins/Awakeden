@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STORM v6 — full-coverage device pass, review</title>
+<style>
+  body { background:#16181d; color:#e8e4d8; font-family:Georgia, serif; line-height:1.55; padding:28px 18px 100px; }
+  .wrap { max-width:1220px; margin:0 auto; }
+  h1 { color:#e9c877; font-size:1.9rem; margin-bottom:6px; }
+  h2 { color:#e9c877; font-size:1.3rem; margin:34px 0 12px; border-bottom:1px solid #333a47; padding-bottom:8px; }
+  .sub { color:#9aa0ad; margin-bottom:24px; }
+  video { width:100%; max-width:420px; border-radius:8px; display:block; margin:12px 0; }
+  .v { background:#1e2129; border-left:5px solid #e9c877; padding:16px 18px; border-radius:8px; margin:14px 0; }
+  .good { border-left-color:#7fc97f; }
+  .warn { border-left-color:#e07a5f; }
+  .flag { border-left-color:#e0475f; }
+  table { border-collapse:collapse; width:100%; margin:14px 0; font-size:.92rem; }
+  th, td { border:1px solid #333a47; padding:8px 10px; text-align:left; vertical-align:top; }
+  th { background:#1e2129; color:#e9c877; }
+  .device { display:inline-block; background:#333a47; color:#e9c877; border-radius:10px; padding:3px 12px; font-size:.85rem; font-family:Arial, sans-serif; margin:2px 4px 2px 0; }
+  .cmpgrid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:10px 0 20px; }
+  .cmpgrid figure { margin:0; background:#1e2129; border-radius:8px; padding:8px; }
+  .cmpgrid img { width:100%; border-radius:6px; border:1px solid #333a47; display:block; }
+  figcaption { color:#9aa0ad; font-size:.85rem; margin-top:6px; }
+  .qcgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:12px; }
+  .qcgrid img { width:100%; border-radius:6px; border:1px solid #333a47; }
+  code { background:#1e2129; padding:1px 6px; border-radius:4px; color:#cfd6e0; }
+  .gate-pass { color:#7fc97f; font-weight:bold; }
+  .gate-fail { color:#e0475f; font-weight:bold; }
+  a { color:#9ecbff; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>STORM v6 — Matthew 8:23-27, full-coverage device pass</h1>
+<div class="sub">Fable's design (<code>_STORM_V6_SCORE.md</code>) implemented over the v5 base (63.0s, 13
+spreads, Fable's 8 v5 paper-layer devices already live). v6 applies the full ROUND 6 device roster
+(9 approved devices) across the spreads the score assigns them to: Field Header (s01), Bleeding
+Word + Two-Hands (s03), Candle-Only (s04), Inkwell Runs Dry + Margin Studies fallback (s05),
+Torn-Out Page (s06&rarr;s07), THE WORD ARRIVES WHOLE / LAW 1 (s08), and a calm-register Entry
+(s10). s02/s09/s11/s12/s13 are untouched per the score's own governor (spread budget, "the
+spread IS the beat", and the landing's sacred stillness). Every timestamp is bound to a real
+word in <code>_storm_alignment.json</code> or a real spread boundary — none guessed.</div>
+
+<h2>&#9654; Watch v6 (with sound)</h2>
+<video controls src="STORM_living_sketchbook_v6.mp4"></video>
+<p class="sub">Full path: <code>C:\Users\sanjay\PycharmProjects\JesusInTheBible\poc_living_sketchbook\storm\STORM_living_sketchbook_v6.mp4</code></p>
+
+<h2>Device map — as built</h2>
+<table>
+<tr><th>Spread</th><th>Device</th><th>As-built timing</th><th>Notes</th></tr>
+<tr><td>s01 waves</td><td>Field Header</td><td>write 1.50–3.30, exits 4.25</td><td>"Galilee. evening. crossing over." — clear of the logo zone. Eye: <span class="gate-pass">clean</span></td></tr>
+<tr><td>s03 screaming</td><td>Bleeding Word (Two-Hands)</td><td>entry 4.35–5.00 · drop 5.032 · bloom→6.67</td><td>drop bound to "screaming"'s end — the real fear-word in the audio; strikes land on cream (top lane). Eye: <span class="gate-pass">reads</span></td></tr>
+<tr><td>s04 asleep</td><td>Candle-Only</td><td>collapse 8.843→10.043 · flicker-hold · reopen 10.34–10.84</td><td>night closes to the lamp on "asleep." Eye: <span class="gate-pass">the best frame of the film</span></td></tr>
+<tr><td>s05 hands</td><td>Inkwell + Margin Studies (fallback siting)</td><td>write 11.628–14.146 · blot 14.146 · resume 14.589–16.551 · studies 16.551–17.95</td><td>score's escape hatch used: studies moved here, s05 raking-light dropped. Eye: <span class="gate-fail">works but flagged</span> (crowding + faint studies, see flags)</td></tr>
+<tr><td>s06&rarr;s07</td><td>Torn-Out Page</td><td>grab 21.30–21.60 · rip 21.60–21.95</td><td>lands exactly on the spread cut; neither page carries the Word. Eye: <span class="gate-pass">a hand's violence, not a transition</span></td></tr>
+<tr><td>s08 verse</td><td>THE WORD ARRIVES WHOLE (LAW 1)</td><td>stub 22.756 → interrupted 23.545 · card complete frame 23.567</td><td>frame-exact between-two-frames arrival verified by eye (23.533 no card / 23.567 full card); keeper stub "he stoo—" frozen forever. Eye: <span class="gate-pass">the law works on film</span></td></tr>
+<tr><td>s10 calm</td><td>Entry 3 (calm register)</td><td>write 31.35–33.35 (documented 1.15s bleed into s11)</td><td>"not a breath of wind. not one." — dead steady; the A/B pair with s03 inside one film. Eye: <span class="gate-pass">clean</span></td></tr>
+</table>
+
+<h2>Gates (all $0, deterministic)</h2>
+<div class="v good" id="gates-section">
+<span class="gate-pass">PASS</span> stream match — video 63.000s = audio 63.000s (ffprobe)<br>
+<span class="gate-pass">PASS</span> INV-26 landing hold — last word "afraid?" ends 59.395; hold = 3.605s ≥ 3.0<br>
+<span class="gate-pass">PASS</span> INV-27 watermark — AWAKEDEN 200px at (40,70); pre-watermark master kept as
+<code>STORM_living_sketchbook_v6.prewm.bak.mp4</code><br>
+<span class="gate-pass">PASS</span> sacred stillness — landing untouched (verified by eye at 61.5s)<br>
+<b>Build incident, for the record:</b> the first mux failed on a real ffmpeg bug (one sidechain key pad consumed
+twice); diagnosed from the log, fixed with <code>asplit=3</code> (already in the corrected assembler), re-muxed via
+<code>_s6_mixfix.py</code> without re-rendering a single frame. v5 and its assembler untouched throughout.</div>
+
+<h2>QC — v5 vs v6 at every changed moment (looked at by eye, not just rendered)</h2>
+<div id="qc-section"><div class="qcgrid">
+<figure><img src="_qc_v6/v6_2.5.png"><figcaption>2.5s — field header writing</figcaption></figure>
+<figure><img src="_qc_v6/v6_6.2.png"><figcaption>6.2s — strikes + "fear." bleeding</figcaption></figure>
+<figure><img src="_qc_v6/v6_9.8.png"><figcaption>9.8s — candle-only: night down to the lamp</figcaption></figure>
+<figure><img src="_qc_v6/v6_13.5.png"><figcaption>13.5s — inkwell entry writing</figcaption></figure>
+<figure><img src="_qc_v6/v6_17.3.png"><figcaption>17.3s — resume + studies (see flags)</figcaption></figure>
+<figure><img src="_qc_v6/v6_21.75.png"><figcaption>21.75s — the page ripped out</figcaption></figure>
+<figure><img src="_qc_v6/v6_23.53.png"><figcaption>23.53s — last frame BEFORE: only "he stoo—"</figcaption></figure>
+<figure><img src="_qc_v6/v6_23.58.png"><figcaption>23.58s — the Word, arrived whole</figcaption></figure>
+<figure><img src="_qc_v6/v6_32.5.png"><figcaption>32.5s — the calm line, dead steady</figcaption></figure>
+<figure><img src="_qc_v6/v6_61.5.png"><figcaption>61.5s — landing untouched, hold 3.6s</figcaption></figure>
+</div></div>
+
+<h2>Honest flags</h2>
+<div class="v flag" id="flags-section">
+<b>1 · s05 lane crowding.</b> "water kept coming." crowds up into the starved ghost of "and the" — legible but tangled.
+A v6.1 lane pass (indent line 2, +30px spacing) fixes it; costs one ~35-min re-render. User's call.<br><br>
+<b>2 · Watermark adjacency.</b> The inkwell entry's first word sits directly above the AWAKEDEN mark — both legible,
+but tighter than the letterer law likes. Same v6.1 pass fixes it.<br><br>
+<b>3 · Studies faint in context.</b> The lamp studies at s05's tail read weaker over the busy hand-spread than on the
+POC's calm ground — more contrast or their own beat.<br><br>
+<b>4 · §5 amendment demonstration.</b> The whole-arrival verse card replaces the locked letter-by-letter reveal for
+red-letter speech — applied at the user's direction, PENDING the panel gate (Round 6 doc step 5) before it becomes law.
+Shipped episodes grandfathered either way.</div>
+
+</div>
+</body>
+</html>

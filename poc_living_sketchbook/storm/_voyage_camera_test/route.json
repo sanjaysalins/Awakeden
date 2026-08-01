@@ -1,0 +1,27 @@
+{
+  "_note": "VOYAGE CAMERA test route (mapengine camera keyframe block) — NOT spliced into the shipped STORM_living_sketchbook.mp4. Sea of Galilee crossing, Matthew 8:23-27: Capernaum (near/west shore) -> the storm (midpoint on the water) -> the country of the Gadarenes (far/east shore). Coords are normalized fractions of base_map.png, read by eye.",
+  "title": "HE WAS ASLEEP IN THE STORM",
+  "subtitle": "Capernaum  to  the country of the Gadarenes",
+  "config": {
+    "marker": "boat",
+    "caravan_scale": 1.3,
+    "travel_s": 9.0,
+    "dwell_s": 0.6,
+    "outro_s": 2.6,
+    "camera": {
+      "lead_frames": 10,
+      "keyframes": [
+        { "at": 0.0,             "zoom": 1.00, "cx": 0.50, "cy": 0.55, "hold_s": 0.5 },
+        { "at": "CAPERNAUM",     "zoom": 1.60, "hold_s": 0.9 },
+        { "at": "THE STORM",     "zoom": 1.90, "hold_s": 0.5 },
+        { "at": "THE GADARENES", "zoom": 1.50, "hold_s": 0.7 },
+        { "at": 1.0,             "zoom": 1.00, "cx": 0.50, "cy": 0.55 }
+      ]
+    }
+  },
+  "waypoints": [
+    { "name": "CAPERNAUM",     "x": 0.200, "y": 0.560, "label_dx":  0.030, "label_dy": -0.060 },
+    { "name": "THE STORM",     "x": 0.530, "y": 0.500, "label_dx":  0.000, "label_dy":  0.070 },
+    { "name": "THE GADARENES", "x": 0.830, "y": 0.400, "label_dx": -0.020, "label_dy": -0.060 }
+  ]
+}

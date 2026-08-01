@@ -1,0 +1,19 @@
+# Independent review — claude (OK, 201s)
+
+## Independent review — Fable Round 6 promotion plan
+
+I checked the plan's factual claims against the actual repo state (not just prose). Most of the "build cards" are in fact already built and largely honor round 1's panel corrections (held-breath NOT driving keeper-hand energy per `panel_animator/keeper_hand.py:28-30`; `page_transitions.py` shipping `torn_out_page` only, `slide_under`/`lift_away` left as named candidates per lines 10-18; the regression pair-render folder `poc_living_sketchbook/storm/_round6_regression/` exists with ENGINE vs ORIGINAL clips for all 6 named devices). That part is solid. Three concrete problems survive:
+
+**1. The "$0 foley, map to existing assets" claim is contradicted by the plan's own referenced code.** Engine 1 says each keeper entry exports a `pencil_scratch` cue ("dry-scratch + dip variants for starve"); Engine 2 wants `graphite_scratch`; Engine 4 wants a `drop` one-shot; Build order step 4 says "map every cue to EXISTING sound_library assets first ($0); only if a cue has no usable asset, quote... and ask." But `sound_library/sound_library.py` has zero entries matching scratch/quill/pen/ink/drop, and `panel_animator/scriptorium_foley.py` — already built — explicitly documents "NO textural scratch asset exists in this library" for `nib_scratch`, flags `keeper_scratch` as a "substitute-weak" reuse of the same wrong asset, and calls this out as "THE ONE FLAGGED CONFLICT (do not resolve silently)" (lines 21-24, 108-155). This is a known gap today, not a hypothetical "only if" — the plan should say so plainly and put a number on the ElevenLabs quote instead of framing it as a probably-free lookup. There's also a naming mismatch never reconciled: the plan's `pencil_scratch`/`drop` vs. the actual library's `nib_scratch`/`keeper_scratch`/`ink_drop`.
+
+**2. Missing step: nothing produces the manifest `keeper_lint.py` consumes.** `keeper_lint.py` is fully built and self-tests clean, but it only reads a hand-authored "Keeper-Entry Manifest" JSON (`spreads[].entries[]` with origin/size/t_start/t_end). A repo-wide search for any code that emits this manifest from an actual `KeeperEntry(...)` call turns up nothing — only `keeper_lint.py` itself references the concept. Build order (steps 1-6) never schedules the glue that makes the episode assembler write this manifest, so the governor currently can't run against real production output, only against fixtures. This should be an explicit step before "3. Demos + user eye gate."
+
+**3. Doctrine WARN has no assigned closer.** `keeper_lint.py`'s doctrine-keyword check is WARN-only by design ("a human judgment call, not automatable" — line 26-27 of the file), which is a reasonable choice, but the plan never says *who* reads and closes those WARNs or *when*, given the project's LOCKED rule that doctrine must be proven both by self-check AND the panel (memory: `nonneg-doctrine-and-christ-lens`). "Flagged for the panel" (plan text) isn't the same as a scheduled review step — Panel round 2 (step 6) reviews the doc/skill, not per-episode Keeper voice lines going forward.
+
+Everything else — the two laws, the engine consolidation, the kill record, the reordering that puts governance before lock — is sound and matches what's actually on disk.
+
+VERDICT: REVISE
+TOP FIXES:
+1. Replace the foley step's "$0 first" framing with the truth already documented in `scriptorium_foley.py`: pencil/quill-scratch and dip/drop assets don't exist yet as clean matches — get an ElevenLabs quote and user OK now, not deferred as an "only if."
+2. Add a Build-order step for the assembler code that emits the Keeper-Entry Manifest JSON `keeper_lint.py` reads — the lint is inert without it.
+3. Name who/when closes `keeper_lint`'s doctrine-adjacent WARNs per episode, consistent with the locked both-self-and-panel doctrine rule.

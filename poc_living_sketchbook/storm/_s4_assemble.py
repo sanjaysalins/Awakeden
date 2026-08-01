@@ -34,6 +34,7 @@ import still_water_mirror
 import raking_light
 import set_off as set_off_mod
 import blue_line
+import annotators_circle
 from held_breath import energy_envelope  # noqa
 
 HERE = Path(__file__).resolve().parent
@@ -103,6 +104,23 @@ def storm_tide_curve(t):
 # this style's painted skies per still-water-mirror's own Locked Lessons --
 # always verify by eye per still, never trust the heuristic blind).
 STILL_WATER_HORIZON = {"s10_calm": 760, "s11_exactly": 700}
+
+# Annotator's Circle (_FABLE_ROUND4_REMOTION_SKILLS.md sec.2): the pixel bbox
+# of the word "faith" inside verse_card's own scribed_ink_card() raster --
+# NOT eyeballed. Computed by replicating scribed_ink_card's own char_w()
+# cursor math (line 2 "O ye of little faith?", chars 15-19), then verified
+# pixel-identical against the real function's own output and against a
+# rendered debug rectangle before use. Card-relative tight alpha-bbox was
+# (578, 84, 662, 123); the card pastes onto the frame at ox=0 (card width ==
+# frame width W, settled pop-in) and oy=160 (== WM_TOP, since
+# int(H*0.134 - card.height/2) == 160 for this card's height of 194) --
+# so the frame-absolute bbox is (578, 244, 662, 283).
+FAITH_BBOX = (578, 244, 662, 283)
+# "faith?" is spoken 26.46-26.782s (_storm_alignment.json, first occurrence,
+# inside the s08_verse/verse-card window 23.75-27.10s). The circle draws
+# across 26.46 -> 27.00s (two passes), settling with ~0.10s to spare before
+# the verse card itself exits at 27.10 -- it must never outlive its host card.
+CIRCLE_T0, CIRCLE_T_DRAW = 26.46, 27.00
 
 
 def ease(t):
@@ -419,6 +437,18 @@ def main():
                 ox = int(W * cxf - oimg.width / 2)
                 oy = max(WM_TOP, int(H * cyf - oimg.height / 2))
                 frame.paste(oimg, (ox, oy), oimg)
+
+                # Annotator's Circle -- the narrator speaks "faith" and a
+                # hand-drawn ink ellipse circles it on the card, two passes
+                # (SKILL.md annotators-circle). Only ever runs while its host
+                # card is on screen (this whole block is inside the card's own
+                # oi0<=t<=oi1 window) and only once the pop-in settle is done.
+                if img is verse_card and k >= 1.0 and t >= CIRCLE_T0:
+                    circle_progress = max(0.0, min(
+                        1.0, (t - CIRCLE_T0) / (CIRCLE_T_DRAW - CIRCLE_T0)))
+                    frame = annotators_circle.apply_annotators_circle(
+                        frame, FAITH_BBOX, circle_progress,
+                        color=annotators_circle.RUBRIC)
 
         g = grain[i % len(grain)]
         frame = Image.composite(

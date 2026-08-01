@@ -1,0 +1,72 @@
+{
+  "s01_wide": {
+    "subject": "moses+family",
+    "pose": "standing-staff-grip-three-quarter",
+    "framing": "wide"
+  },
+  "s02_grief": {
+    "subject": "moses+stricken-figure",
+    "pose": "kneeling-reaching",
+    "framing": "close"
+  },
+  "s03_complaint": {
+    "subject": "moses+crowd",
+    "pose": "standing-staff-grip-three-quarter",
+    "framing": "wide"
+  },
+  "s04_serpents": {
+    "subject": "serpents+crowd",
+    "pose": "recoiling",
+    "framing": "wide"
+  },
+  "s05_intercession": {
+    "subject": "moses-alone",
+    "pose": "kneeling-praying",
+    "framing": "wide"
+  },
+  "s06_forge": {
+    "subject": "moses-hands",
+    "pose": "action-forging",
+    "framing": "extreme-close"
+  },
+  "s07_horizon": {
+    "subject": "moses-alone",
+    "pose": "extreme-close-face-eyes-only",
+    "framing": "extreme-close"
+  },
+  "s08_typology": {
+    "subject": "typology-insert-page",
+    "pose": "symbolic-diagram",
+    "framing": "insert-diagram"
+  },
+  "s09_shadow": {
+    "subject": "moses+bronze-serpent",
+    "pose": "humble-lowered-object",
+    "framing": "mid"
+  },
+  "s10_golgotha": {
+    "subject": "jesus-alone",
+    "pose": "crucified-head-bowed-restrained-darkness",
+    "framing": "mid"
+  },
+  "s11_hearme": {
+    "subject": "moses-alone",
+    "pose": "seated-direct-address-hands-open",
+    "framing": "close"
+  },
+  "s12_echo": {
+    "subject": "echo-insert-page",
+    "pose": "unified-echo-composition",
+    "framing": "insert-diagram"
+  },
+  "s13_lifted": {
+    "subject": "jesus-alone",
+    "pose": "crucified-head-lifted-radiant-glory",
+    "framing": "mid"
+  },
+  "s14_landing": {
+    "subject": "landing-jesus-silhouette",
+    "pose": "torn-page-silhouette-distant",
+    "framing": "wide"
+  }
+}
