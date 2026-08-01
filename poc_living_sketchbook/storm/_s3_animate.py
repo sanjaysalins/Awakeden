@@ -143,6 +143,7 @@ JOBS = [
 
 
 def main():
+    A.cost.record_stage(A.EPISODE, "animate_start")
     results = []
     for name, provider, dur, motion in JOBS:
         still = STILLS / f"{name}.png"
@@ -156,11 +157,15 @@ def main():
             results.append((name, "NO-STILL"))
             continue
         prompt = LOCK + motion
-        ok = A.run_job(name, provider, still, "9:16", prompt, duration=dur)
+        ok, used = A.run_job_with_fallback(name, provider, still, "9:16", prompt, duration=dur)
         if not ok:
-            print("   retrying once ...")
-            ok = A.run_job(name, provider, still, "9:16", prompt, duration=dur)
-        results.append((name, "clean" if ok else "FAILED"))
+            status = "FAILED"
+        elif used == provider:
+            status = "clean"
+        else:
+            status = f"clean (fallback:{used})"
+        results.append((name, status))
+    A.cost.record_stage(A.EPISODE, "animate_end", note=f"{len(results)} jobs processed")
     print("\n=== summary ===")
     for name, status in results:
         print(f"  {name}: {status}")

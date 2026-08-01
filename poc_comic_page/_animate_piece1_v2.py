@@ -202,6 +202,30 @@ def run_job(name, provider, still, ar, prompt, duration=None):
     return False
 
 
+_OTHER_PROVIDER = {"kling": "seedance", "seedance": "kling"}
+
+
+def run_job_with_fallback(name, provider, still, ar, prompt, duration=None):
+    """Try `provider`; on failure, retry ONCE with the OTHER provider instead of
+    blindly retrying the same one. A same-provider retry does nothing for an NSFW
+    rejection (moderation is deterministic-ish on the same input) -- confirmed by
+    bronze_serpent/_s3_animate.py's s01_wide, which needed a human to notice the
+    NSFW-REJECTED print and hand-edit the JOBS tuple to switch providers. The two
+    providers have different moderation profiles (same file's own comment), so a
+    provider swap is the retry that can actually recover. Mirrors the proven
+    HybridVideoProvider fallback pattern in pipeline/video_render.py. Returns
+    (ok, provider_used)."""
+    ok = run_job(name, provider, still, ar, prompt, duration=duration)
+    if ok:
+        return True, provider
+    fallback = _OTHER_PROVIDER.get(provider)
+    if not fallback:
+        return False, provider
+    print(f"   retrying with {fallback} instead of {provider} ...")
+    ok = run_job(name, fallback, still, ar, prompt, duration=duration)
+    return ok, (fallback if ok else provider)
+
+
 def main():
     results = []
     for job in JOBS:

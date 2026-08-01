@@ -267,6 +267,7 @@ def _note_override(note):
 
 def main(only=None):
     jobs = JOBS if only is None else [j for j in JOBS if j[0] in only]
+    A.cost.record_stage(A.EPISODE, "animate_start", note=f"{len(jobs)} jobs")
     results = []
     for name, provider, dur, motion in jobs:
         still = STILLS / f"{name}.png"
@@ -281,11 +282,15 @@ def main(only=None):
             continue
         prompt = LOCK + motion
         with _note_override(f"[bronzeserpent] {name}"):
-            ok = A.run_job(name, provider, still, "9:16", prompt, duration=dur)
-            if not ok:
-                print("   retrying once ...")
-                ok = A.run_job(name, provider, still, "9:16", prompt, duration=dur)
-        results.append((name, "clean" if ok else "FAILED"))
+            ok, used = A.run_job_with_fallback(name, provider, still, "9:16", prompt, duration=dur)
+        if not ok:
+            status = "FAILED"
+        elif used == provider:
+            status = "clean"
+        else:
+            status = f"clean (fallback:{used})"
+        results.append((name, status))
+    A.cost.record_stage(A.EPISODE, "animate_end", note=f"{len(results)} jobs processed")
     print("\n=== summary ===")
     for name, status in results:
         print(f"  {name}: {status}")

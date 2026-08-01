@@ -121,6 +121,20 @@ def record_kling(episode, kind, stage, units=1, note="") -> dict:
                   est_usd=round(units * KLING_USD_PER_CLIP, 3), est_only=True, note=note)
 
 
+def record_stage(episode, stage, note="") -> dict | None:
+    """$0 wall-clock milestone marker (est_usd=0) in the SAME ledger as spend rows,
+    not a parallel file -- summary()/today_summary() already coerce a missing
+    est_usd to 0.0, so this doesn't disturb any existing total. Lets elapsed
+    per-episode time be reconstructed from data/spend_ledger.jsonl instead of
+    fragile file mtimes. Best-effort: a write failure must never block the
+    caller (matches cost_status.py's fire-and-forget hook writes)."""
+    try:
+        return record(episode, "milestone", stage, "internal", est_usd=0.0, note=note)
+    except Exception as e:
+        print(f"   (stage-log skipped: {e})")
+        return None
+
+
 def record_llm(episode, stage, model, input_tokens=0, output_tokens=0, note="") -> dict:
     """The third chokepoint — never go blind on LLM_PROVIDER. agent => $0 row; api => token cost."""
     mode = getattr(config, "LLM_PROVIDER", "agent")
