@@ -259,12 +259,12 @@
       },
       "jesus": {
         "handmade_alive": 5,
-        "identity_lock": 2,
-        "note": "IDENTITY FAIL: wide landscape, figure tiny/distant, can't confirm identity"
+        "identity_lock": 5,
+        "note": "v2 reroll 2026-08-03, user-requested re-check after the 2026-08-01 override: face now large and fully clear inside a tree-branch threshold frame, occlusion sits at the edge only -- verified by eye, not the original scoring agent. The v1 wide/distant IDENTITY FAIL is gone."
       }
     },
-    "status": "rejected",
-    "manifest_note": ""
+    "status": "production_approved",
+    "manifest_note": "REQUIRES the v2 prompt (_reroll_sl10_sl16.py) -- the v1 prompt still reads as a wide distant landscape on Jesus and should not be used. Also proven on REAL production content 2026-08-03: applied to Bronze Serpent LONG's own s54_timeshift_enshrined (the enshrined-serpent idolatry beat, no named character) via _test_real_spreads.py -- reads as a hidden-observer/threshold shot, worked well on an object-centered scene not just a character portrait. User liked it, kept as a candidate for a future episode rather than swapped into the already-finished film. See poc_living_sketchbook/_style_identity_bakeoff/_test_out/s54_sl16_TEST.png."
   },
   "sl10_overhead_plan": {
     "id": "sl10_overhead_plan",
@@ -283,17 +283,17 @@
     "scores": {
       "moses": {
         "handmade_alive": 5,
-        "identity_lock": 5,
-        "note": "PROMPT-FIDELITY MISS: beautiful close crop but NOT overhead as named"
+        "identity_lock": 4,
+        "note": "v2 reroll 2026-08-03: genuinely reads as an elevated/aerial angle now (the v1 prompt-fidelity miss is fixed), no baked-in text. Identity is honestly softer than face-forward styles -- smaller in frame at this angle -- but hair/beard/robe/staff all still match the reference. Verified by eye, not the original scoring agent."
       },
       "jesus": {
         "handmade_alive": 5,
         "identity_lock": 4,
-        "note": "HARD-RULE VIOLATION: visible survey text/labels/signature baked into image"
+        "note": "v2 reroll 2026-08-03: the HARD-RULE text/label violation is gone, genuine overhead framing. Same softer-but-recognizable identity trade-off as Moses at this angle. Verified by eye, not the original scoring agent."
       }
     },
-    "status": "rejected",
-    "manifest_note": "UNRELIABLE -- did not render top-down, re-test wording before use"
+    "status": "production_approved",
+    "manifest_note": "REQUIRES the v2 prompt (_reroll_sl10_sl16.py) -- the v1 prompt bakes in survey text/labels and doesn't reliably render top-down, do not use it. Also proven on REAL production content 2026-08-03: applied to Bronze Serpent LONG's own s41_moses_long_road (isolation/scale beat, Moses at the camp's edge looking down a long road) via _test_real_spreads.py -- a genuinely strong result, arguably stronger than a normal portrait for this beat. Minor gap: the render didn't include the camp itself in frame, would want a re-prompt tweak if used for real. User liked it, kept as a candidate for a future episode rather than swapped into the already-finished film. See poc_living_sketchbook/_style_identity_bakeoff/_test_out/s41_sl10_TEST.png."
   },
   "sl17_gold_leaf_as_structure": {
     "id": "sl17_gold_leaf_as_structure",

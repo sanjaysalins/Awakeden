@@ -102,17 +102,30 @@
 # assembly (only s68's own tear_hole landing device was genuinely custom-
 # built fresh, which it already was via the existing pipeline).
 #
-# ── OPEN DECISIONS (unchanged from 2026-08-02 + the new one above) ──
-#   0. NEW: user watches the finished film (item 0 above) -- the actual
-#      next thing to do, everything else here is unchanged and still open.
-#   1. Update style_manifest.json for sl10/sl16 reroll, or leave as-is.
+# ── OPEN DECISIONS (updated 2026-08-03 later) ──
+#   0. User watches the finished film (item 0 above) -- still the actual
+#      next thing to do if not already done.
+#   1. RESOLVED 2026-08-03: sl10_overhead_plan + sl16_foreground_occlusion
+#      both promoted to production_approved in style_manifest.json (scores/
+#      notes updated, verified by eye on the real .v2 renders, not just the
+#      prior session's write-up). THEN, per user ask, both also test-
+#      rendered on REAL Bronze Serpent LONG content (not just the bake-off's
+#      generic scene) via new poc_living_sketchbook/_style_identity_bakeoff/
+#      _test_real_spreads.py: sl10 on s41_moses_long_road (isolation/scale),
+#      sl16 on s54_timeshift_enshrined (hidden-observer/threshold, no named
+#      character -- the enshrined serpent itself fills the gap). Both came
+#      out strong -- user's own call: "keep them for next episode," NOT
+#      swapped into the already-finished/watermarked film (that would mean
+#      re-animating the clip + rerunning the ENTIRE score/sfx/caption/
+#      watermark chain again). Manifest notes point at the test PNGs
+#      (poc_living_sketchbook/_style_identity_bakeoff/_test_out/) for
+#      whoever picks styles on the next episode.
 #   2. Pick a website redesign direction (or none yet) among the 6 mockups.
 #   3. Decide next steps for the ArkAIology plate-pack POC (standing
 #      recipe vs. one-off).
-#   4. Git commit checkpoint for ALL of this (Bronze Serpent LONG in full
-#      incl. today's finishing chain, the website mockups, style bake-off,
-#      AI pre-check notes) -- still nothing committed to git this whole
-#      multi-session arc.
+#   4. Git commit checkpoint for today's newest additions (item 1's manifest
+#      update + _test_real_spreads.py) -- everything through the finished
+#      film itself was already committed (commit 84f89a1).
 #
 # ══════════════════════════════════════════════════════════════════════════
 # ══════════════════════════════════════════════════════════════════════════
