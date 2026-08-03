@@ -1,6 +1,19 @@
 # STATE.md — progress tracker
 
-**2026-08-03 (later — BRONZE SERPENT LONG FINISHED END-TO-END, the first-ever
+**2026-08-03 (session close — NEXT LONG PICKED, planning-only, $0 spent):**
+After Bronze Serpent LONG shipped (below) and sl10/sl16 were promoted +
+test-validated on real content, picked the next living-sketchbook LONG:
+**Day of Atonement (Leviticus 16)**, reusing `longform/EW01_Two_Goats/v1/
+narration.mp3` (588.64s, already locked) verbatim — user's explicit call:
+narration is reused as-is, everything else gets rebuilt fresh. Real per-turn
+timing extracted (33 turns), content arc mapped to the 7-movement spine, one
+concrete gap found (Aaron needs a fresh sketchbook cast anchor — existing
+refs are for other visual styles and one is already flagged elsewhere as
+anachronistic). Also compiled 8 concrete learnings from the Bronze Serpent
+LONG build to carry into this one. Nothing rendered yet. **Full handover +
+exact starting point: RESUME.md's very top section.**
+
+**2026-08-03 (earlier — BRONZE SERPENT LONG FINISHED END-TO-END, the first-ever
 full-length 9:55 living-sketchbook film):** After the AI pre-check + the
 s49/s65 Ken Burns fix (below), user said "assemble it and do the next steps."
 Built the full finishing chain fresh this session, all $0/deterministic:

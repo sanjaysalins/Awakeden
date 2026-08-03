@@ -1,4 +1,110 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★ SESSION HANDOVER 2026-08-03 (end of session) — READ THIS FIRST.
+# Bronze Serpent LONG is DONE (finished film + committed to git, see the
+# ★★★ block just below for full detail). This session then promoted sl10/
+# sl16 styles, test-validated them on real content, and picked + scoped the
+# NEXT living-sketchbook LONG: **Day of Atonement (Leviticus 16)**.
+# User's own instruction closing the session: reuse the EXISTING narration
+# as-is, don't touch it -- everything downstream (cast, visual plan, stills,
+# clips, assembly, finishing) gets rebuilt fresh next session, same as
+# Bronze Serpent LONG's own process. Nothing rendered yet, $0 spent on this
+# new episode so far -- this is a planning-only handover.
+#
+# ── NEXT SESSION: START HERE ──
+# Source narration (LOCKED, reuse verbatim, do NOT rewrite):
+#   longform/EW01_Two_Goats/v1/narration.mp3 -- 588.64s, Aaron's first-person
+#   witness account of Lev 16 (the Day of Atonement / two goats), already
+#   multi-voice (33 real turns in v1/_turns/: witness/scripture/the_LORD).
+#   This is the SAME narration `poc_living_sketchbook/two_goats/` used for
+#   the SHORT (that's a separate `short/` sibling folder with its OWN
+#   shorter narration -- don't confuse the two; the LONG pilot needs the
+#   v1/ root narration, 588.64s, not the short/ one).
+# Real per-turn durations already ffprobe'd this session (don't re-derive,
+# just re-run ffprobe fresh if any turn file changes):
+#   00_witness 87.92s, 01_the_LORD 18.32s, 02_witness 27.04s, 03_scripture
+#   3.92s, 04_witness 18.88s, 05_scripture 7.28s, 06_witness 12.08s, 07_
+#   scripture 6.72s, 08_witness 11.76s, 09_scripture 21.52s, 10_witness
+#   8.24s, 11_scripture 6.24s, 12_witness 9.28s, 13_scripture 7.04s, 14_
+#   witness 106.64s, 15_scripture 10.48s, 16_witness 18.72s, 17_scripture
+#   10.40s, 18_witness 19.20s, 19_scripture 3.92s, 20_witness 21.20s, 21_
+#   scripture 7.68s, 22_witness 9.52s, 23_scripture 7.28s, 24_witness
+#   14.56s, 25_scripture 6.24s, 26_witness 44.00s, 27_scripture 6.24s, 28_
+#   witness 14.88s, 29_scripture 6.00s, 30_witness 35.44s (+ pre/post
+#   silence pads 0.4s/0.3s). Total narration 588.64s -- almost identical
+#   length to Bronze Serpent LONG's 590s, so the same ~68-spread/8.7s-avg
+#   pacing model is a reasonable starting point, not a rule.
+# Content arc (falls out of the narration itself, maps onto BOTH the Gospel
+# Five-Beat and the Types & Shadows 7-movement spine -- see longform/
+# LONGFORM_TYPES_SHADOWS_SLATE.md item 4 for the original framing):
+#   1. Aaron's introduction -- the veil, the fear, his sons' death (Nadab/
+#      Abihu struck down for strange fire)
+#   2. The charge from the LORD via Moses; the meaning of blood ("it is the
+#      blood that maketh an atonement for the soul")
+#   3. The ritual performed -- two goats, lots cast, the first goat's blood
+#      carried behind the veil, hands laid + confession on the live goat,
+#      the scapegoat sent away into the wilderness
+#   4. The riddle: "why two?" -- one to pay the price, one to carry the
+#      guilt away, no single creature could show both
+#   5. The honest confession -- it worked, but never finished; had to be
+#      repeated every single year
+#   6. The turn to Christ -- Hebrews' verdict (blood of bulls/goats CAN'T
+#      take away sins), the veil torn at His death, He "sat down" (no
+#      priest ever had a chair)
+#   7. Direct invitation -- "will you come in?" landing on Jesus
+# ONE real asset gap identified, first concrete task next session: **Aaron
+# has no living-sketchbook cast anchor.** Existing Aaron refs (`longform/
+# EW01_Two_Goats/v1/visual_16x9_inked/_painted_comic_test/aaron_pc_ref.png`,
+# `longform/EW01_Two_Goats/_retro_dna/aaron_retro_ref*.png`) are for OTHER
+# visual styles (painted-comic, retro-comic) -- do NOT reuse, and note
+# `aaron_pc_ref.png` is already flagged elsewhere in this project's own
+# history as having anachronistic Greek/Roman columns in its background.
+# Build a fresh `cast/AARON.md` + `aaron_ref.png` the same way Moses got one
+# for Bronze Serpent LONG (age/appearance grounded in explicit Scripture --
+# check Aaron's actual stated age/timeframe before locking anything, per
+# the standing rule this project already learned the hard way on Moses).
+# Jesus already HAS a sketchbook anchor (`cast/JESUS.md` + `jesus_ref.png`)
+# and is directly reusable, no rebuild needed there.
+# Old/archived reference, NOT the sketchbook style but useful for content
+# grounding: `archive/day_of_atonement_baroque/visual_16x9/` -- a prior
+# Baroque-oil-pipeline attempt at this same narration, 10+ clips, archived
+# (superseded), different visual language entirely -- look at it for what
+# beats were chosen, not for reusable art.
+#
+# ── LEARNINGS FROM BRONZE SERPENT LONG, apply to the next build ──
+#   1. Frame-sampled AI pre-checks (3 frames/clip) miss real defects a full
+#      watch catches (s49/s65's "dancing" motion) -- narrows the human
+#      review, never replaces watching the real clip end to end.
+#   2. Any time a clip gets regenerated, `_spread_windows.json` (or its
+#      equivalent) MUST be rebuilt fresh before the next assembly pass --
+#      it caches clip durations, and a stale cache can silently reintroduce
+#      a bug (nearly did, this episode: reintroduced a pingpong bounce into
+#      a just-fixed static clip).
+#   3. The finishing chain is now REUSABLE, not a rebuild: `_s8_score.py`,
+#      `_s9_sfx.py`, `_s10_captions.py` (in `poc_living_sketchbook/
+#      bronze_serpent_long/`) are all decent starting templates -- copy and
+#      retarget paths/cues, don't re-derive the engines from scratch.
+#   4. Captions at long-form length (300+ word-timed chunks) break a single
+#      ffmpeg filter graph -- start the caption script BATCHED into ~60s
+#      segments from day one, don't discover this partway through again.
+#   5. The watermark stage is a FULL re-encode (not stream-copy) -- budget
+#      real wall-clock time (~45min on a 10-min film under the 33% CPU
+#      throttle), don't expect short-episode speed.
+#   6. Check first whether the SAME topic already has an approved score arc
+#      from another visual treatment (it did here -- reused verbatim,
+#      saved real authoring risk and fit almost perfectly).
+#   7. `pipeline/style_select.py` + `style_variety.py` exist (LLM propose ->
+#      deterministic gate -> human eye-gate) but were NEVER used on Bronze
+#      Serpent LONG -- all 68 spreads rendered off one fixed STYLE constant.
+#      Now that 5 styles are `production_approved` (sl10/12/13/14/16),
+#      strongly consider actually routing the Day of Atonement stills
+#      through that system for genuine visual variety across ~10 minutes,
+#      instead of one unchanging look start to finish.
+#   8. Re-run the gallery/review builder script before writing any "what's
+#      done" summary -- this session found 2 real documentation-drift bugs
+#      (clips built-but-never-logged, a wrong "not yet built" count) from
+#      trusting stale notes instead of re-scanning the actual files.
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★ 2026-08-03: BRONZE SERPENT LONG IS FINISHED END-TO-END — the
 # FIRST-EVER full-length (9:55) living-sketchbook film exists. User
 # reviewed the clips (approved, minus the s49/s65 fix below), said
