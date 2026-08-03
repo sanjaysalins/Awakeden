@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Index — Awakeden Archive (mockup B: Scholar's Margin register)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Caveat:wght@500;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   AWAKEDEN — THE ARCHIVE OF INSERT PAGES
+   Register of this page: SCHOLAR'S MARGIN (an insert page).
+   The catalogue IS an index, so it is filed in the indexing
+   hand: engineering grid, a ruled ledger margin, plate numbers,
+   drawn thread-arrows from OT shadow to NT body.
+   Nav, wordmark and body text stay in the Style-One voice.
+   ============================================================ */
+:root{
+  --paper:#ece2c8; --sheet:#f6efdc; --sheet-hi:#fbf6e9; --sheet-deep:#e7dbbc;
+  --kraft:#c2a87e; --kraft-deep:#a78d62;
+  --ink:#2e2820; --ink-mid:#57503f; --ink-faint:#857a62;
+  --red:#a23b28; --red-deep:#7e2c1e;
+  --blue:#5c74a0; --blue-deep:#3c5480; --grid:rgba(92,116,160,.16);
+  --gold:#c09a3e; --gold-hi:#e9ce7b; --gold-deep:#8f6e23;
+  --shadow:rgba(60,48,28,.22);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--paper);color:var(--ink);
+  font:400 17.5px/1.75 "Spectral",Georgia,serif;
+  overflow-x:hidden;position:relative;
+}
+/* THE REGISTER SHIFT: the whole page sits on faint graph paper */
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),
+                   linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:26px 26px;opacity:.5;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:5;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+main,nav,.filing,footer{position:relative;z-index:1}
+
+/* ---------- archive chrome (same voice as every page) ---------- */
+.filing{
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  padding:8px 28px;border-bottom:1px solid rgba(46,40,32,.22);
+  font:400 11px/1.6 "Courier Prime",monospace;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-mid);background:var(--paper);
+}
+.nav{display:flex;align-items:center;gap:34px;flex-wrap:wrap;padding:20px 28px;max-width:1220px;margin:0 auto}
+.wordmark{font-family:"Libre Caslon Display",serif;font-size:27px;letter-spacing:.05em;text-decoration:none}
+.wordmark em{font-style:normal;color:var(--red)}
+.nav-links{display:flex;gap:26px;margin-left:auto;flex-wrap:wrap}
+.nav-links a{font:500 14px/1 "Spectral",serif;letter-spacing:.10em;text-transform:uppercase;
+  text-decoration:none;color:var(--ink-mid);padding:6px 0;border-bottom:2px solid transparent}
+.nav-links a:hover,.nav-links a[aria-current]{color:var(--ink);border-bottom-color:var(--red)}
+
+.hand{font-family:"Caveat",cursive;font-weight:500;color:var(--ink-mid)}
+.label{font:400 11.5px/1.7 "Courier Prime",monospace;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-mid)}
+.label b{color:var(--red);font-weight:700}
+.link-ink{font:600 15px/1.4 "Spectral",serif;text-decoration:none;color:var(--ink);
+  border-bottom:2px solid rgba(162,59,40,.55);padding-bottom:1px}
+.link-ink:hover{border-bottom-color:var(--red)}
+.thread{display:inline-flex;align-items:center;gap:10px;white-space:nowrap;color:var(--ink)}
+.thread svg{width:58px;height:15px;color:var(--red);flex:none}
+.thread .ref{font:700 12.5px/1 "Courier Prime",monospace;letter-spacing:.08em}
+.thread .ref.nt{color:var(--red)}
+
+/* ---------- the ledger: red margin rule + numbered entries ---------- */
+main{max-width:1220px;margin:0 auto;padding:30px 28px 0}
+.ledger{position:relative;padding-left:118px}
+.ledger::before{ /* the scholar's ruled margin line */
+  content:"";position:absolute;top:0;bottom:0;left:86px;width:2px;
+  background:rgba(162,59,40,.5);
+}
+.marginno{
+  position:absolute;left:-118px;width:70px;text-align:right;
+  font:700 13px/1.5 "Courier Prime",monospace;letter-spacing:.06em;color:var(--red);
+}
+.marginno small{display:block;font-weight:400;color:var(--ink-faint);letter-spacing:.12em}
+
+/* header */
+.index-head{position:relative;margin:26px 0 58px}
+h1{font-family:"Libre Caslon Display",serif;font-weight:400;
+  font-size:clamp(40px,5vw,66px);line-height:1.05;margin:12px 0 18px}
+.index-head p{max-width:60ch;color:var(--ink-mid)}
+.register-note{
+  position:relative;margin-top:30px;max-width:520px;background:rgba(194,168,126,.30);
+  border:1px solid rgba(167,141,98,.55);padding:18px 22px 14px;transform:rotate(-.6deg);
+}
+.register-note p{font-family:"Caveat",cursive;font-size:23px;line-height:1.35;color:var(--ink)}
+.register-note .sig{display:block;text-align:right;font-size:20px;color:var(--ink-mid)}
+
+/* collection divider tab */
+.divider{position:relative;margin:74px 0 34px}
+.divider .tab{
+  display:inline-block;background:var(--sheet-hi);border:1px solid rgba(46,40,32,.3);
+  padding:10px 22px 8px;font:700 13px/1 "Courier Prime",monospace;
+  letter-spacing:.2em;text-transform:uppercase;
+  box-shadow:0 4px 12px rgba(60,48,28,.14);transform:rotate(-.5deg);
+}
+.divider .tab b{color:var(--red)}
+.divider p{margin-top:12px;color:var(--ink-mid);max-width:62ch}
+
+/* filed entry cards */
+.entry{
+  position:relative;background:var(--sheet-hi);border:1px solid rgba(46,40,32,.18);
+  border-top:3px solid rgba(162,59,40,.65); /* the index-card head rule */
+  box-shadow:0 10px 26px rgba(60,48,28,.14);
+  display:grid;grid-template-columns:300px minmax(0,1fr);gap:30px;
+  padding:24px;margin-bottom:34px;
+}
+.entry .thumb{position:relative;box-shadow:0 8px 20px var(--shadow);align-self:start}
+.entry .thumb img{aspect-ratio:16/10;object-fit:cover;width:100%}
+.entry .thumb.tall img{aspect-ratio:4/5;object-fit:cover}
+.entry h3{font-family:"Libre Caslon Display",serif;font-weight:400;font-size:30px;margin:6px 0 8px}
+.entry h3 a{text-decoration:none}
+.entry h3 a:hover{color:var(--red-deep)}
+.entry .desc{color:var(--ink-mid);max-width:56ch;margin-bottom:14px}
+.entry .threadline{margin:2px 0 16px}
+.chips{display:flex;gap:10px;flex-wrap:wrap}
+.chip{font:700 11px/1 "Courier Prime",monospace;letter-spacing:.14em;text-transform:uppercase;
+  border:1.5px solid rgba(46,40,32,.4);padding:7px 12px 6px;color:var(--ink-mid)}
+.chip.on{border-color:var(--red);color:var(--red)}
+.stamp{
+  position:absolute;top:18px;right:20px;font:700 11.5px/1.4 "Courier Prime",monospace;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--red);
+  border:2.5px solid var(--red);border-radius:4px;padding:6px 12px 5px;
+  transform:rotate(3deg);opacity:.8;
+}
+
+/* blueprint (cyanotype) coming-soon entries */
+.entry.blueprint{
+  background:#e9edf4;border:1px solid rgba(60,84,128,.35);border-top:3px solid var(--blue-deep);
+  color:var(--blue-deep);
+}
+.entry.blueprint .thumb{
+  aspect-ratio:16/10;display:grid;place-items:center;box-shadow:none;
+  border:2px dashed rgba(60,84,128,.55);
+  background-image:linear-gradient(rgba(92,116,160,.22) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(92,116,160,.22) 1px,transparent 1px);
+  background-size:18px 18px;
+}
+.entry.blueprint .thumb span{font:700 12px/1.7 "Courier Prime",monospace;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--blue-deep);text-align:center;padding:0 18px}
+.entry.blueprint h3{color:var(--blue-deep)}
+.entry.blueprint .desc{color:#4a608a}
+.entry.blueprint .thread svg{color:var(--blue-deep)}
+.entry.blueprint .thread .ref,.entry.blueprint .thread .ref.nt{color:var(--blue-deep)}
+.entry.blueprint .stamp{color:var(--blue-deep);border-color:var(--blue-deep)}
+.entry.blueprint .chip{border-color:rgba(60,84,128,.5);color:var(--blue-deep)}
+
+/* ledger rows (filed shorts + legacy collection) */
+.rows{border-top:1px solid rgba(46,40,32,.3)}
+.row{
+  position:relative;display:grid;
+  grid-template-columns:150px minmax(0,1fr) minmax(0,1fr) 110px;
+  gap:20px;align-items:baseline;
+  padding:16px 6px;border-bottom:1px solid rgba(46,40,32,.18);text-decoration:none;
+}
+.row:hover{background:rgba(251,246,233,.75)}
+.row .ref{font:700 12.5px/1.6 "Courier Prime",monospace;letter-spacing:.08em;color:var(--ink-mid)}
+.row .title{font:600 18px/1.4 "Spectral",serif}
+.row .rthread{justify-self:start}
+.row .status{font:700 11px/1.6 "Courier Prime",monospace;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-faint);justify-self:end;text-align:right}
+.row .status.live{color:var(--red)}
+.rows-note{margin-top:16px}
+
+/* footer */
+footer{margin-top:110px;border-top:1px solid rgba(46,40,32,.25);
+  padding:54px 28px 64px;text-align:center;background:var(--paper)}
+footer .wordmark{font-size:34px}
+footer p{color:var(--ink-mid);margin:14px auto 26px;max-width:52ch}
+.filed-stamp{display:inline-block;font:700 12px/1.5 "Courier Prime",monospace;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--red);border:2.5px solid var(--red);border-radius:4px;
+  padding:8px 18px;transform:rotate(-2deg);opacity:.85}
+
+@media (prefers-reduced-motion:no-preference){
+  .entry{transition:transform .25s ease,box-shadow .25s ease}
+  .entry:hover{transform:translateY(-3px);box-shadow:0 18px 38px rgba(60,48,28,.2)}
+}
+@media (max-width:980px){
+  .ledger{padding-left:0}
+  .ledger::before{display:none}
+  .marginno{position:static;width:auto;text-align:left;margin-bottom:8px}
+  .marginno small{display:inline;margin-left:8px}
+  .entry{grid-template-columns:1fr}
+  .entry .thumb img,.entry .thumb.tall img{aspect-ratio:16/9}
+  .row{grid-template-columns:minmax(0,1fr);gap:6px}
+  .row .status{justify-self:start;text-align:left}
+}
+</style>
+</head>
+<body>
+
+<div class="filing" role="note">
+  <span>Awakeden Archive &mdash; the whole Bible, through Jesus</span>
+  <span>Folio II &middot; The Index &middot; register: <b style="color:var(--red)">Scholar&rsquo;s Margin</b> (insert page)</span>
+</div>
+
+<nav class="nav" aria-label="Main">
+  <a class="wordmark" href="index.html">AWAK<em>EDEN</em></a>
+  <div class="nav-links">
+    <a href="index.html">The Spine</a>
+    <a href="catalogue.html" aria-current="page">The Index</a>
+    <a href="study.html">The Studies</a>
+  </div>
+</nav>
+
+<main>
+  <div class="ledger">
+
+    <!-- ============ HEADER ============ -->
+    <header class="index-head">
+      <span class="marginno" aria-hidden="true">FOLIO<small>II</small></span>
+      <p class="label">The catalogue is an index &mdash; so it is filed in the indexing hand</p>
+      <h1>The Index.</h1>
+      <p>Every piece in the archive, filed by collection: its passage, its runtime &mdash; and its <strong>thread</strong>, the drawn red line from the Old Testament shadow to where it lands on Jesus. Follow any thread; they all run the same direction.</p>
+      <div class="register-note">
+        <p>this page is an insert &mdash; the Scholar&rsquo;s hand, for filing &amp; cross-reference. the stories themselves stay in the plain hand.<span class="sig">&mdash; the Keeper</span></p>
+      </div>
+    </header>
+
+    <!-- ============ TYPES & SHADOWS ============ -->
+    <section aria-labelledby="ts-h">
+      <div class="divider">
+        <span class="marginno" aria-hidden="true">COLL.<small>01</small></span>
+        <span class="tab" id="ts-h">Types &amp; Shadows &middot; <b>the long films</b></span>
+        <p>Old Testament pictures that Jesus and His apostles named as pictures of Him. One film and one full study per shadow.</p>
+      </div>
+
+      <article class="entry">
+        <span class="marginno" aria-hidden="true">No. 04<small>FILED</small></span>
+        <span class="stamp">Now showing</span>
+        <figure class="thumb">
+          <img src="_media/bs_s32_pole_dusk.jpg" alt="The brass serpent coiled on a pole, silhouetted against a dusk sky over the tent camp" loading="lazy">
+        </figure>
+        <div>
+          <h3><a href="study.html">The Bronze Serpent</a></h3>
+          <p class="desc">Israel is bitten in the wilderness, and the cure God commands makes no sense at all: a brass image of the very thing that is killing them, lifted on a pole. Look and live. Fifteen centuries later, Jesus tells Nicodemus that pole was about Him.</p>
+          <p class="threadline"><span class="thread"><span class="ref">NUM 21:8</span><svg viewBox="0 0 90 20" aria-hidden="true"><path d="M4 12 C 26 6, 54 8, 76 10" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M67 4 L 80 10 L 66 16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ref nt">JOHN 3:14</span></span></p>
+          <div class="chips">
+            <span class="chip on">Film &middot; 8 min</span>
+            <span class="chip on">Study &middot; no clock</span>
+            <span class="chip">Short &middot; 60 sec</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="entry blueprint">
+        <span class="marginno" aria-hidden="true">No. 05<small>PLAN</small></span>
+        <span class="stamp">Not yet inked</span>
+        <div class="thumb" role="img" aria-label="Blueprint placeholder: plate not yet inked">
+          <span>Blueprint &middot; plate<br>not yet inked</span>
+        </div>
+        <div>
+          <h3>The Passover Lamb</h3>
+          <p class="desc">A lamb without blemish, its blood on the doorposts, and a judgment that passes over. &ldquo;For even Christ our passover is sacrificed for us.&rdquo;</p>
+          <p class="threadline"><span class="thread"><span class="ref">EXOD 12:13</span><svg viewBox="0 0 90 20" aria-hidden="true"><path d="M4 12 C 26 6, 54 8, 76 10" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M67 4 L 80 10 L 66 16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ref nt">1 COR 5:7</span></span></p>
+          <div class="chips"><span class="chip">In the plan</span></div>
+        </div>
+      </article>
+
+      <article class="entry blueprint">
+        <span class="marginno" aria-hidden="true">No. 06<small>PLAN</small></span>
+        <span class="stamp">Not yet inked</span>
+        <div class="thumb" role="img" aria-label="Blueprint placeholder: plate not yet inked">
+          <span>Blueprint &middot; plate<br>not yet inked</span>
+        </div>
+        <div>
+          <h3>The Rock That Followed</h3>
+          <p class="desc">Water from a struck rock in a dead-dry wilderness &mdash; twice. Paul&rsquo;s filing note on the incident is four words long: &ldquo;that Rock was Christ.&rdquo;</p>
+          <p class="threadline"><span class="thread"><span class="ref">EXOD 17:6</span><svg viewBox="0 0 90 20" aria-hidden="true"><path d="M4 12 C 26 6, 54 8, 76 10" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M67 4 L 80 10 L 66 16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ref nt">1 COR 10:4</span></span></p>
+          <div class="chips"><span class="chip">In the plan</span></div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ SKETCHBOOK SHORTS ============ -->
+    <section aria-labelledby="sk-h">
+      <div class="divider">
+        <span class="marginno" aria-hidden="true">COLL.<small>02</small></span>
+        <span class="tab" id="sk-h">The Sketchbook Shorts &middot; <b>sixty seconds each</b></span>
+        <p>One story, one minute, drawn live. The newest filing gets the card; the rest sit in the ledger below it.</p>
+      </div>
+
+      <article class="entry">
+        <span class="marginno" aria-hidden="true">No. 11<small>FILED</small></span>
+        <span class="stamp">New filing</span>
+        <figure class="thumb tall">
+          <img src="_media/jericho_j01_walls.jpg" alt="The stepped walls of Jericho drawn in ink and wash, tiny figures circling below" loading="lazy">
+        </figure>
+        <div>
+          <h3><a href="study.html">Jericho</a></h3>
+          <p class="desc">Seven days of silent circles around a shut city &mdash; and one scarlet cord in one window. The walls fall; the thread holds. The woman who tied it walks straight into the family line of Jesus.</p>
+          <p class="threadline"><span class="thread"><span class="ref">JOSH 2:18</span><svg viewBox="0 0 90 20" aria-hidden="true"><path d="M4 12 C 26 6, 54 8, 76 10" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M67 4 L 80 10 L 66 16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ref nt">MATT 1:5</span></span></p>
+          <div class="chips">
+            <span class="chip on">Short &middot; 60 sec</span>
+            <span class="chip on">Study &middot; no clock</span>
+          </div>
+        </div>
+      </article>
+
+      <div class="rows">
+        <a class="row" href="study.html">
+          <span class="ref">S&ndash;08</span>
+          <span class="title">At the Door</span>
+          <span class="rthread"><span class="thread"><span class="ref">GEN 7:16</span><svg viewBox="0 0 90 20" aria-hidden="true"><path d="M4 12 C 26 6, 54 8, 76 10" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M67 4 L 80 10 L 66 16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ref nt">JOHN 10:9</span></span></span>
+          <span class="status live">Filed</span>
+        </a>
+        <a class="row" href="study.html">
+          <span class="ref">S&ndash;09</span>
+          <span class="title">The Two Goats</span>
+          <span class="rthread"><span class="thread"><span class="ref">LEV 16:22</span><svg viewBox="0 0 90 20" aria-hidden="true"><path d="M4 12 C 26 6, 54 8, 76 10" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M67 4 L 80 10 L 66 16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ref nt">HEB 9:28</span></span></span>
+          <span class="status live">Filed</span>
+        </a>
+        <a class="row" href="study.html">
+          <span class="ref">S&ndash;10</span>
+          <span class="title">The Storm</span>
+          <span class="rthread"><span class="thread"><span class="ref">PS 107:29</span><svg viewBox="0 0 90 20" aria-hidden="true"><path d="M4 12 C 26 6, 54 8, 76 10" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M67 4 L 80 10 L 66 16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ref nt">MARK 4:39</span></span></span>
+          <span class="status live">Filed</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ THE CROSS (legacy) ============ -->
+    <section aria-labelledby="cx-h">
+      <div class="divider">
+        <span class="marginno" aria-hidden="true">COLL.<small>03</small></span>
+        <span class="tab" id="cx-h">The Cross &middot; <b>seven last words &amp; the prophecies</b></span>
+        <p>Eleven pieces first inked in the old black-paper hand. They are being re-inked into the sketchbook, one by one; every study stays readable meanwhile.</p>
+      </div>
+
+      <div class="rows">
+        <a class="row" href="study.html">
+          <span class="ref">C&ndash;01</span>
+          <span class="title">The Crucifixion Foretold</span>
+          <span class="rthread"><span class="thread"><span class="ref">PS 22:18</span><svg viewBox="0 0 90 20" aria-hidden="true"><path d="M4 12 C 26 6, 54 8, 76 10" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M67 4 L 80 10 L 66 16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ref nt">JOHN 19:24</span></span></span>
+          <span class="status">Re-inking</span>
+        </a>
+        <a class="row" href="study.html">
+          <span class="ref">C&ndash;02</span>
+          <span class="title">The One They Pierced</span>
+          <span class="rthread"><span class="thread"><span class="ref">ZECH 12:10</span><svg viewBox="0 0 90 20" aria-hidden="true"><path d="M4 12 C 26 6, 54 8, 76 10" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M67 4 L 80 10 L 66 16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ref nt">JOHN 19:37</span></span></span>
+          <span class="status">Re-inking</span>
+        </a>
+        <a class="row" href="study.html">
+          <span class="ref">C&ndash;03</span>
+          <span class="title">Father, Forgive Them</span>
+          <span class="rthread"><span class="label">Luke 23:34 &middot; first word from the cross</span></span>
+          <span class="status">Re-inking</span>
+        </a>
+        <a class="row" href="study.html">
+          <span class="ref">C&ndash;06</span>
+          <span class="title">Today in Paradise</span>
+          <span class="rthread"><span class="label">Luke 23:43 &middot; two thieves &middot; same cross &middot; two answers</span></span>
+          <span class="status">Re-inking</span>
+        </a>
+        <a class="row" href="study.html">
+          <span class="ref">C&ndash;09</span>
+          <span class="title">It Is Finished</span>
+          <span class="rthread"><span class="label">John 19:30 &middot; the sixth word &middot; one word in the greek</span></span>
+          <span class="status">Re-inking</span>
+        </a>
+      </div>
+      <p class="rows-note hand" style="font-size:22px">six more pieces of The Cross sit in the drawer &mdash; the index grows as they are re-inked.</p>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <a class="wordmark" href="index.html">AWAK<em>EDEN</em></a>
+  <p>The whole Bible, through Jesus &mdash; every thread in the index runs the same direction.</p>
+  <span class="filed-stamp">Filed &middot; awakeden.com &middot; MMXXVI</span>
+</footer>
+
+</body>
+</html>

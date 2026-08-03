@@ -1,0 +1,1044 @@
+{
+  "sl02_continuous_contour_line": {
+    "id": "sl02_continuous_contour_line",
+    "name": "Continuous contour line",
+    "source": "STYLE_LAB.md",
+    "family": "linework",
+    "beat_signal": [
+      "calm",
+      "single-gesture"
+    ],
+    "avoid_on": [],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 4,
+        "identity_lock": 5,
+        "note": "Clean linework; contour line not strongly distinct from baseline"
+      },
+      "jesus": {
+        "handmade_alive": 5,
+        "identity_lock": 3,
+        "note": "Line-only render reads hair much lighter/blonder than baseline"
+      }
+    },
+    "status": "caution",
+    "manifest_note": ""
+  },
+  "sv02_chiaroscuro_pocket_wash": {
+    "id": "sv02_chiaroscuro_pocket_wash",
+    "name": "Chiaroscuro Pocket Wash",
+    "source": "STYLE_VARIANTS.md",
+    "family": "light-contrast",
+    "beat_signal": [
+      "dread",
+      "judgment",
+      "before-a-turn",
+      "night"
+    ],
+    "avoid_on": [
+      "landing",
+      "glory"
+    ],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 4,
+        "identity_lock": 5,
+        "note": "Close to baseline; contrast subtle, not strongly dramatic"
+      },
+      "jesus": {
+        "handmade_alive": 3,
+        "identity_lock": 5,
+        "note": "WEAK ON PORTRAIT: barely differentiated, minimal chiaroscuro"
+      }
+    },
+    "status": "caution",
+    "manifest_note": ""
+  },
+  "sl03_notan_pure_silhouette": {
+    "id": "sl03_notan_pure_silhouette",
+    "name": "Notan / pure silhouette",
+    "source": "STYLE_LAB.md",
+    "family": "reduction",
+    "beat_signal": [
+      "threshold",
+      "judgment",
+      "stark"
+    ],
+    "avoid_on": [
+      "face-detail-critical"
+    ],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 5,
+        "identity_lock": 4,
+        "note": "Bold solid-black silhouette body; face/beard still clearly match"
+      },
+      "jesus": {
+        "handmade_alive": 5,
+        "identity_lock": 3,
+        "note": "Bold B&W silhouette; composition turned 3/4, off-center"
+      }
+    },
+    "status": "caution",
+    "manifest_note": ""
+  },
+  "sl18_macro_crop": {
+    "id": "sl18_macro_crop",
+    "name": "Macro crop",
+    "source": "STYLE_LAB.md",
+    "family": "camera",
+    "beat_signal": [
+      "tactile",
+      "intimate-detail",
+      "object-focus"
+    ],
+    "avoid_on": [],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 5,
+        "identity_lock": 5,
+        "note": "Excellent extreme close detail; clean, no issues"
+      },
+      "jesus": {
+        "handmade_alive": 5,
+        "identity_lock": 3,
+        "note": "Extreme hand/rope macro; only nose+beard of face visible"
+      }
+    },
+    "status": "caution",
+    "manifest_note": ""
+  },
+  "sv09_hand_pulled_monotype_and_smudged_transfer": {
+    "id": "sv09_hand_pulled_monotype_and_smudged_transfer",
+    "name": "Hand-Pulled Monotype and Smudged Transfer",
+    "source": "STYLE_VARIANTS.md",
+    "family": "print-process",
+    "beat_signal": [
+      "doubt",
+      "hesitation",
+      "half-remembered"
+    ],
+    "avoid_on": [
+      "clear-resolve"
+    ],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 5,
+        "identity_lock": 5,
+        "note": "Visible smudged transfer texture, distinct and alive"
+      },
+      "jesus": {
+        "handmade_alive": 4,
+        "identity_lock": 4,
+        "note": "Nice ink smudges on cheek/chest; slightly obscures face"
+      }
+    },
+    "status": "production_approved",
+    "manifest_note": ""
+  },
+  "sv11_ink_wash_chiaroscuro_and_scratched_light": {
+    "id": "sv11_ink_wash_chiaroscuro_and_scratched_light",
+    "name": "Ink-Wash Chiaroscuro and Scratched Light",
+    "source": "STYLE_VARIANTS.md",
+    "family": "light-contrast",
+    "beat_signal": [
+      "dread-with-one-focal-light"
+    ],
+    "avoid_on": [
+      "landing",
+      "glory"
+    ],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 4,
+        "identity_lock": 5,
+        "note": "Close to baseline; scratched-light effect not strongly visible"
+      },
+      "jesus": {
+        "handmade_alive": 5,
+        "identity_lock": 4,
+        "note": "Dramatic dark ink wash; hair/beard read notably darker"
+      }
+    },
+    "status": "production_approved",
+    "manifest_note": ""
+  },
+  "sl11_shadow_as_subject": {
+    "id": "sl11_shadow_as_subject",
+    "name": "Shadow as subject",
+    "source": "STYLE_LAB.md",
+    "family": "light",
+    "beat_signal": [
+      "foreboding",
+      "the-past-looms"
+    ],
+    "avoid_on": [],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 4,
+        "identity_lock": 4,
+        "note": "Creative inverted-shadow concept; figure small, fine detail less certain"
+      },
+      "jesus": {
+        "handmade_alive": 5,
+        "identity_lock": 2,
+        "note": "IDENTITY FAIL: tiny distant figure, unintended halo-like light behind head"
+      }
+    },
+    "status": "rejected",
+    "manifest_note": ""
+  },
+  "sl20_sketchbook_spread": {
+    "id": "sl20_sketchbook_spread",
+    "name": "Sketchbook spread",
+    "source": "STYLE_LAB.md",
+    "family": "composite",
+    "beat_signal": [
+      "study",
+      "culmination",
+      "character-intro"
+    ],
+    "avoid_on": [],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 5,
+        "identity_lock": 5,
+        "note": "v2 (text-free prompt) + caption overlay, user-approved 2026-08-01 -- verified by eye, not the original scoring agent"
+      },
+      "jesus": {
+        "handmade_alive": 5,
+        "identity_lock": 5,
+        "note": "v2 (text-free prompt) + caption overlay, user-approved 2026-08-01 -- verified by eye, not the original scoring agent"
+      }
+    },
+    "status": "production_approved",
+    "manifest_note": "REQUIRES the v2 prompt (STYLE_LAB.md) + a caption-overlay pass (_caption_mockup.py pattern) -- the raw v1 single-render prompt is still text-unsafe, only the two-step combo is approved. User-loved this look 2026-08-01: 'we should use more of this visual.'"
+  },
+  "sl16_foreground_occlusion": {
+    "id": "sl16_foreground_occlusion",
+    "name": "Foreground occlusion",
+    "source": "STYLE_LAB.md",
+    "family": "camera",
+    "beat_signal": [
+      "hidden-observer",
+      "threshold"
+    ],
+    "avoid_on": [],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 4,
+        "identity_lock": 5,
+        "note": "Dark rock/branch occludes foreground nicely; face fully clear"
+      },
+      "jesus": {
+        "handmade_alive": 5,
+        "identity_lock": 2,
+        "note": "IDENTITY FAIL: wide landscape, figure tiny/distant, can't confirm identity"
+      }
+    },
+    "status": "rejected",
+    "manifest_note": ""
+  },
+  "sl10_overhead_plan": {
+    "id": "sl10_overhead_plan",
+    "name": "Overhead plan",
+    "source": "STYLE_LAB.md",
+    "family": "camera",
+    "beat_signal": [
+      "scale",
+      "isolation",
+      "map-like"
+    ],
+    "avoid_on": [],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 5,
+        "identity_lock": 5,
+        "note": "PROMPT-FIDELITY MISS: beautiful close crop but NOT overhead as named"
+      },
+      "jesus": {
+        "handmade_alive": 5,
+        "identity_lock": 4,
+        "note": "HARD-RULE VIOLATION: visible survey text/labels/signature baked into image"
+      }
+    },
+    "status": "rejected",
+    "manifest_note": "UNRELIABLE -- did not render top-down, re-test wording before use"
+  },
+  "sl17_gold_leaf_as_structure": {
+    "id": "sl17_gold_leaf_as_structure",
+    "name": "Gold leaf as structure \u26a0\ufe0f gold-leaf flag, see above",
+    "source": "STYLE_LAB.md",
+    "family": "palette",
+    "beat_signal": [
+      "glory-ONLY"
+    ],
+    "avoid_on": [
+      "*-non-glory"
+    ],
+    "gold_leaf_conflict": true,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 5,
+        "identity_lock": 5,
+        "note": "Striking cracked gold-leaf background; strong identity match"
+      },
+      "jesus": {
+        "handmade_alive": 4,
+        "identity_lock": 4,
+        "note": "Whole background cracked gold leaf, reads iconographic/glory-adjacent"
+      }
+    },
+    "status": "production_approved",
+    "manifest_note": ""
+  },
+  "sv08_expressive_gestural_graphite_and_ink": {
+    "id": "sv08_expressive_gestural_graphite_and_ink",
+    "name": "Expressive Gestural Graphite and Ink",
+    "source": "STYLE_VARIANTS.md",
+    "family": "linework",
+    "beat_signal": [
+      "crowd",
+      "busy",
+      "populated"
+    ],
+    "avoid_on": [],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 4,
+        "identity_lock": 5,
+        "note": "Close to baseline; linework not markedly more gestural"
+      },
+      "jesus": {
+        "handmade_alive": 3,
+        "identity_lock": 5,
+        "note": "WEAK ON PORTRAIT: close to baseline, only mildly more gestural"
+      }
+    },
+    "status": "caution",
+    "manifest_note": ""
+  },
+  "sl08_multiple_exposure_motion_ghosting": {
+    "id": "sl08_multiple_exposure_motion_ghosting",
+    "name": "Multiple exposure / motion ghosting",
+    "source": "STYLE_LAB.md",
+    "family": "motion",
+    "beat_signal": [
+      "journey",
+      "repeated-action",
+      "passage-of-time"
+    ],
+    "avoid_on": [],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 5,
+        "identity_lock": 5,
+        "note": "Striking triple-ghost motion blur; all three faces consistent"
+      },
+      "jesus": {
+        "handmade_alive": 5,
+        "identity_lock": 4,
+        "note": "Full pose change: riding donkey with ghost-trail figures (scene drift)"
+      }
+    },
+    "status": "production_approved",
+    "manifest_note": ""
+  },
+  "sl12_scratchboard_inversion": {
+    "id": "sl12_scratchboard_inversion",
+    "name": "Scratchboard inversion \u26a0\ufe0f gold-leaf flag, see above",
+    "source": "STYLE_LAB.md",
+    "family": "texture-inversion",
+    "beat_signal": [
+      "night",
+      "danger",
+      "threshold-into-dark"
+    ],
+    "avoid_on": [
+      "landing"
+    ],
+    "gold_leaf_conflict": true,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 5,
+        "identity_lock": 5,
+        "note": "Striking dark scratchboard etch with gold fleck; clean, alive"
+      },
+      "jesus": {
+        "handmade_alive": 5,
+        "identity_lock": 4,
+        "note": "Striking white-on-black scratchboard, strong likeness"
+      }
+    },
+    "status": "production_approved",
+    "manifest_note": ""
+  },
+  "sl04_visible_underdrawing": {
+    "id": "sl04_visible_underdrawing",
+    "name": "Visible underdrawing",
+    "source": "STYLE_LAB.md",
+    "family": "process-reveal",
+    "beat_signal": [
+      "uncertainty",
+      "deliberation",
+      "in-progress"
+    ],
+    "avoid_on": [],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 4,
+        "identity_lock": 5,
+        "note": "Nice unfinished-sketch edges with pencil grid; face fully resolved"
+      },
+      "jesus": {
+        "handmade_alive": 4,
+        "identity_lock": 4,
+        "note": "Construction grid lines visible; slight smile, arms crossed"
+      }
+    },
+    "status": "production_approved",
+    "manifest_note": ""
+  },
+  "sv05_cyanotype_blue_focus": {
+    "id": "sv05_cyanotype_blue_focus",
+    "name": "Cyanotype Blue Focus",
+    "source": "STYLE_VARIANTS.md",
+    "family": "palette",
+    "beat_signal": [
+      "judgment",
+      "exile",
+      "testimony",
+      "cold-register"
+    ],
+    "avoid_on": [
+      "landing",
+      "glory"
+    ],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 5,
+        "identity_lock": 5,
+        "note": "Full blue cyanotype monochrome, striking and distinct; face clear"
+      },
+      "jesus": {
+        "handmade_alive": 4,
+        "identity_lock": 4,
+        "note": "Strong monochrome cyanotype blue wash, effective and alive"
+      }
+    },
+    "status": "production_approved",
+    "manifest_note": ""
+  },
+  "sl15_frame_break": {
+    "id": "sl15_frame_break",
+    "name": "Frame break",
+    "source": "STYLE_LAB.md",
+    "family": "composition-device",
+    "beat_signal": [
+      "overflow",
+      "breaking-through"
+    ],
+    "avoid_on": [],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 4,
+        "identity_lock": 5,
+        "note": "PROMPT-FIDELITY MISS: good scene but no visible frame-break element"
+      },
+      "jesus": {
+        "handmade_alive": 5,
+        "identity_lock": 5,
+        "note": "Donkey/hand break the frame border; strong, alive (scene drift)"
+      }
+    },
+    "status": "caution",
+    "manifest_note": "UNRELIABLE -- frame-break not visible, re-test wording before use"
+  },
+  "sl13_charcoal_and_eraser": {
+    "id": "sl13_charcoal_and_eraser",
+    "name": "Charcoal and eraser",
+    "source": "STYLE_LAB.md",
+    "family": "tonal",
+    "beat_signal": [
+      "memory",
+      "erasure",
+      "soft-grief"
+    ],
+    "avoid_on": [],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 5,
+        "identity_lock": 5,
+        "note": "Gorgeous grayscale charcoal with erased highlights; hand-crafted feel"
+      },
+      "jesus": {
+        "handmade_alive": 5,
+        "identity_lock": 5,
+        "note": "Great smudged charcoal; soft erased vignette behind head, borderline halo-ish"
+      }
+    },
+    "status": "production_approved",
+    "manifest_note": ""
+  },
+  "sl05_selective_resolution": {
+    "id": "sl05_selective_resolution",
+    "name": "Selective resolution",
+    "source": "STYLE_LAB.md",
+    "family": "focus",
+    "beat_signal": [
+      "one-object-matters",
+      "held-detail"
+    ],
+    "avoid_on": [],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 5,
+        "identity_lock": 5,
+        "note": "Dynamic two-hand grip, striking selective detail; clean"
+      },
+      "jesus": {
+        "handmade_alive": 5,
+        "identity_lock": 5,
+        "note": "Loose pencil body, sharp hands; added staff prop (scene drift)"
+      }
+    },
+    "status": "production_approved",
+    "manifest_note": ""
+  },
+  "sv03_layered_collage_construction": {
+    "id": "sv03_layered_collage_construction",
+    "name": "Layered Collage Construction",
+    "source": "STYLE_VARIANTS.md",
+    "family": "collage",
+    "beat_signal": [
+      "memory",
+      "flashback",
+      "composite"
+    ],
+    "avoid_on": [
+      "single-clear-action"
+    ],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 4,
+        "identity_lock": 5,
+        "note": "Close to baseline with slightly more visible collage layering"
+      },
+      "jesus": {
+        "handmade_alive": 3,
+        "identity_lock": 5,
+        "note": "WEAK ON PORTRAIT: close to baseline, collage not clearly visible"
+      }
+    },
+    "status": "caution",
+    "manifest_note": ""
+  },
+  "sv13_torn_paper_relief_collage_with_translucent_layers": {
+    "id": "sv13_torn_paper_relief_collage_with_translucent_layers",
+    "name": "Torn-Paper Relief Collage with Translucent Layers",
+    "source": "STYLE_VARIANTS.md",
+    "family": "collage",
+    "beat_signal": [
+      "memory",
+      "composite"
+    ],
+    "avoid_on": [
+      "single-clear-action"
+    ],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 5,
+        "identity_lock": 5,
+        "note": "Gold flecks, translucent torn-paper layers, striking"
+      },
+      "jesus": {
+        "handmade_alive": 4,
+        "identity_lock": 4,
+        "note": "Torn-paper layers at edges, gaze turned slightly off-center"
+      }
+    },
+    "status": "production_approved",
+    "manifest_note": ""
+  },
+  "sv14_drypoint_etching_cross_hatching_and_plate_wear": {
+    "id": "sv14_drypoint_etching_cross_hatching_and_plate_wear",
+    "name": "Drypoint Etching, Cross-Hatching, and Plate Wear",
+    "source": "STYLE_VARIANTS.md",
+    "family": "texture",
+    "beat_signal": [
+      "urgent",
+      "ancient",
+      "tactile"
+    ],
+    "avoid_on": [
+      "calm-portrait"
+    ],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 5,
+        "identity_lock": 5,
+        "note": "Visible cross-hatch etching texture, nice plate-wear feel"
+      },
+      "jesus": {
+        "handmade_alive": 5,
+        "identity_lock": 4,
+        "note": "Great plate-wear border and cross-hatching; gaze off-center"
+      }
+    },
+    "status": "production_approved",
+    "manifest_note": ""
+  },
+  "sl19_insect_scale": {
+    "id": "sl19_insect_scale",
+    "name": "Insect scale",
+    "source": "STYLE_LAB.md",
+    "family": "camera",
+    "beat_signal": [
+      "vastness",
+      "smallness-before-God"
+    ],
+    "avoid_on": [],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 4,
+        "identity_lock": 5,
+        "note": "PROMPT-FIDELITY MISS: just a normal close crop, no scale effect applied"
+      },
+      "jesus": {
+        "handmade_alive": 4,
+        "identity_lock": 4,
+        "note": "Doesn't read as insect-scale; just a sepia group close-up"
+      }
+    },
+    "status": "caution",
+    "manifest_note": "UNRELIABLE -- scale effect not visible, re-test wording before use"
+  },
+  "sv15_controlled_abstraction_with_one_precise_focal_point": {
+    "id": "sv15_controlled_abstraction_with_one_precise_focal_point",
+    "name": "Controlled Abstraction with One Precise Focal Point",
+    "source": "STYLE_VARIANTS.md",
+    "family": "composition",
+    "beat_signal": [
+      "single-object-focus",
+      "held-detail"
+    ],
+    "avoid_on": [
+      "wide-establishing"
+    ],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 5,
+        "identity_lock": 5,
+        "note": "Soft abstract color blooms frame a crisp focal face"
+      },
+      "jesus": {
+        "handmade_alive": 5,
+        "identity_lock": 4,
+        "note": "Color-splash background, desaturated hair; striking focal contrast"
+      }
+    },
+    "status": "production_approved",
+    "manifest_note": ""
+  },
+  "sl01_baseline_reference_plate": {
+    "id": "sl01_baseline_reference_plate",
+    "name": "Baseline (reference plate)",
+    "source": "STYLE_LAB.md",
+    "family": "reference",
+    "beat_signal": [],
+    "avoid_on": [
+      "*"
+    ],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 3,
+        "identity_lock": 5,
+        "note": "Near-duplicate of baseline, tighter crop; no distinct technique visible"
+      },
+      "jesus": {
+        "handmade_alive": 3,
+        "identity_lock": 5,
+        "note": "Near-duplicate of baseline, not a distinct style"
+      }
+    },
+    "status": "caution",
+    "manifest_note": "not a real variant, keep as reference row only"
+  },
+  "sv06_sgraffito_surface_scratch_technique": {
+    "id": "sv06_sgraffito_surface_scratch_technique",
+    "name": "Sgraffito Surface Scratch Technique",
+    "source": "STYLE_VARIANTS.md",
+    "family": "texture",
+    "beat_signal": [
+      "hardship",
+      "forge",
+      "roughness"
+    ],
+    "avoid_on": [
+      "calm-portrait"
+    ],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 3,
+        "identity_lock": 5,
+        "note": "WEAK ON PORTRAIT: near-identical, no visible scratch texture"
+      },
+      "jesus": {
+        "handmade_alive": 4,
+        "identity_lock": 4,
+        "note": "Visible scratch/hatch texture on garment; cropped, no hands"
+      }
+    },
+    "status": "caution",
+    "manifest_note": ""
+  },
+  "sv12_ground_level_cinematic_extreme_crop": {
+    "id": "sv12_ground_level_cinematic_extreme_crop",
+    "name": "Ground-Level Cinematic Extreme Crop",
+    "source": "STYLE_VARIANTS.md",
+    "family": "camera",
+    "beat_signal": [
+      "hook",
+      "cold-open",
+      "immediacy"
+    ],
+    "avoid_on": [
+      "establishing-wide"
+    ],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 5,
+        "identity_lock": 5,
+        "note": "Strong desert scene, manna in hand, planted staff; clean"
+      },
+      "jesus": {
+        "handmade_alive": 5,
+        "identity_lock": 4,
+        "note": "Pose changed to kneeling on ground with pebbles (scene drift)"
+      }
+    },
+    "status": "production_approved",
+    "manifest_note": ""
+  },
+  "sl07_misregistered_print": {
+    "id": "sl07_misregistered_print",
+    "name": "Misregistered print",
+    "source": "STYLE_LAB.md",
+    "family": "print-process",
+    "beat_signal": [
+      "documentary",
+      "historical-distance"
+    ],
+    "avoid_on": [],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 5,
+        "identity_lock": 5,
+        "note": "Vibrant red/blue offset registration; strong printmaking feel, clean"
+      },
+      "jesus": {
+        "handmade_alive": 3,
+        "identity_lock": 5,
+        "note": "Odd dark diagonal smudge top-right looks like a glitch"
+      }
+    },
+    "status": "caution",
+    "manifest_note": ""
+  },
+  "sv01_kinetic_storm_focus": {
+    "id": "sv01_kinetic_storm_focus",
+    "name": "Kinetic Storm Focus",
+    "source": "STYLE_VARIANTS.md",
+    "family": "linework",
+    "beat_signal": [
+      "kinetic",
+      "urgent",
+      "storm",
+      "fleeing"
+    ],
+    "avoid_on": [
+      "calm",
+      "landing"
+    ],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 3,
+        "identity_lock": 5,
+        "note": "WEAK ON PORTRAIT: near-identical to baseline, no visible motion/storm"
+      },
+      "jesus": {
+        "handmade_alive": 3,
+        "identity_lock": 5,
+        "note": "WEAK ON PORTRAIT: almost identical to baseline, no storm energy"
+      }
+    },
+    "status": "caution",
+    "manifest_note": ""
+  },
+  "sv04_vertical_pillar_gold_thread": {
+    "id": "sv04_vertical_pillar_gold_thread",
+    "name": "Vertical Pillar Gold-Thread",
+    "source": "STYLE_VARIANTS.md",
+    "family": "camera-light",
+    "beat_signal": [
+      "divine-presence",
+      "theophany",
+      "pillar"
+    ],
+    "avoid_on": [
+      "ordinary-narrative"
+    ],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 4,
+        "identity_lock": 5,
+        "note": "Distinct vertical gold pillar bisecting composition; clean"
+      },
+      "jesus": {
+        "handmade_alive": 3,
+        "identity_lock": 5,
+        "note": "WEAK ON PORTRAIT: near-baseline, thin gold edge only, no pillar motif"
+      }
+    },
+    "status": "caution",
+    "manifest_note": ""
+  },
+  "sv07_deconstructed_lithograph_with_noise": {
+    "id": "sv07_deconstructed_lithograph_with_noise",
+    "name": "Deconstructed Lithograph with \"Noise\"",
+    "source": "STYLE_VARIANTS.md",
+    "family": "print-process",
+    "beat_signal": [
+      "time-shift",
+      "corruption",
+      "drift"
+    ],
+    "avoid_on": [
+      "present-tense-witness"
+    ],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 3,
+        "identity_lock": 5,
+        "note": "WEAK ON PORTRAIT: near-identical, no visible print noise"
+      },
+      "jesus": {
+        "handmade_alive": 3,
+        "identity_lock": 5,
+        "note": "WEAK ON PORTRAIT: subtle halftone dot noise on shoulder only"
+      }
+    },
+    "status": "caution",
+    "manifest_note": ""
+  },
+  "sl06_wet_in_wet_bleed": {
+    "id": "sl06_wet_in_wet_bleed",
+    "name": "Wet-in-wet bleed",
+    "source": "STYLE_LAB.md",
+    "family": "wash-process",
+    "beat_signal": [
+      "grief",
+      "overflow",
+      "water",
+      "weather"
+    ],
+    "avoid_on": [],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 5,
+        "identity_lock": 5,
+        "note": "Gorgeous loose watercolor bleed halo; face crisp and true to baseline"
+      },
+      "jesus": {
+        "handmade_alive": 5,
+        "identity_lock": 5,
+        "note": "Lovely color-bleed edges, tighter crop, strong likeness"
+      }
+    },
+    "status": "production_approved",
+    "manifest_note": ""
+  },
+  "sl09_extreme_low_angle": {
+    "id": "sl09_extreme_low_angle",
+    "name": "Extreme low angle",
+    "source": "STYLE_LAB.md",
+    "family": "camera",
+    "beat_signal": [
+      "awe",
+      "monumental",
+      "hero-moment"
+    ],
+    "avoid_on": [],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 4,
+        "identity_lock": 4,
+        "note": "Wide low-angle full body; face smaller, expression differs from baseline"
+      },
+      "jesus": {
+        "handmade_alive": 4,
+        "identity_lock": 3,
+        "note": "Full-body vs sky; face small/distant, harder to verify"
+      }
+    },
+    "status": "caution",
+    "manifest_note": ""
+  },
+  "sl14_torn_paper_depth_planes": {
+    "id": "sl14_torn_paper_depth_planes",
+    "name": "Torn-paper depth planes",
+    "source": "STYLE_LAB.md",
+    "family": "collage",
+    "beat_signal": [
+      "memory",
+      "layered-time",
+      "composite"
+    ],
+    "avoid_on": [],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 4,
+        "identity_lock": 4,
+        "note": "Nice layered depth panels; face smaller scale reduces certainty"
+      },
+      "jesus": {
+        "handmade_alive": 5,
+        "identity_lock": 4,
+        "note": "Layered torn-paper depth collage, seated with a goat (scene drift)"
+      }
+    },
+    "status": "production_approved",
+    "manifest_note": ""
+  },
+  "sv10_offset_screenprint_with_misregistered_ink_plates": {
+    "id": "sv10_offset_screenprint_with_misregistered_ink_plates",
+    "name": "Offset Screenprint with Misregistered Ink Plates",
+    "source": "STYLE_VARIANTS.md",
+    "family": "print-process",
+    "beat_signal": [
+      "tense",
+      "documentary",
+      "graphic"
+    ],
+    "avoid_on": [
+      "calm"
+    ],
+    "gold_leaf_conflict": false,
+    "max_per_episode": 1,
+    "min_spread_gap": 8,
+    "scores": {
+      "moses": {
+        "handmade_alive": 3,
+        "identity_lock": 5,
+        "note": "WEAK ON PORTRAIT: near-identical, no misregistration visible"
+      },
+      "jesus": {
+        "handmade_alive": 3,
+        "identity_lock": 5,
+        "note": "WEAK ON PORTRAIT: subtle misregistration on shoulder edge only"
+      }
+    },
+    "status": "caution",
+    "manifest_note": ""
+  }
+}

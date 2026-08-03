@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Bronze Serpent — a study in the Field Journal (redesign mockup)</title>
+<!-- DIRECTION: "THE FIELD JOURNAL" — the deep-reading template. The reading measure
+     is kept clean (texture and annotations live in the MARGIN column, never behind
+     the text). Scribed Ink for verses, red letter for Christ's words, the elder
+     leaf + gold thread for the OT->NT join, the torn page for the landing. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Pinyon+Script&family=UnifrakturMaguntia&family=Zilla+Slab:ital,wght@0,500;0,600;0,700;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --desk:#2c251d; --paper:#f2e8d0; --paper-hi:#f8f1e1; --paper-deep:#e9dcbd;
+  --foxed:#e6d2a8; --kraft:#c2a47a; --kraft-deep:#a1855c;
+  --ink:#2e2921; --graphite:#5c554a; --faded:#867c69;
+  --rubric:#a23325; --rubric-deep:#872718; --bluewash:#42566f;
+  --gold:#b8921f; --gold-hi:#e3c25c;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--desk);
+  background-image:
+    radial-gradient(1200px 500px at 50% -10%, rgba(255,236,200,.06), transparent 60%),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/></filter><rect width="220" height="220" filter="url(%23n)"/></svg>');
+  color:var(--ink);font-family:'Source Serif 4', Georgia, serif;line-height:1.65;
+}
+.book{max-width:1420px;margin:26px auto 110px;position:relative;
+  box-shadow:0 2px 0 1px #e3d5b4,0 5px 0 1px #d9c9a4,0 8px 0 1px #e0d1af,0 11px 0 1px #d4c39c,0 30px 70px rgba(0,0,0,.55);}
+.page{background:var(--paper);position:relative;overflow:hidden;
+  background-image:
+    radial-gradient(900px 420px at 18% 6%, rgba(255,250,235,.55), transparent 55%),
+    radial-gradient(700px 500px at 88% 90%, rgba(176,142,84,.10), transparent 60%),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.045 0"/></filter><rect width="220" height="220" filter="url(%23n)"/></svg>');}
+.hand{font-family:'Caveat',cursive;font-weight:600;color:var(--graphite)}
+.scribed{font-family:'Pinyon Script',cursive;font-weight:400;color:var(--ink)}
+.ref{font-family:'Zilla Slab',serif;font-weight:600;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--rubric)}
+.tape{position:absolute;width:96px;height:26px;z-index:3;opacity:.92;pointer-events:none;
+  background:linear-gradient(102deg,rgba(212,190,150,.35),rgba(228,209,172,.8) 20%,rgba(218,198,158,.65) 80%,rgba(198,175,133,.35));
+  box-shadow:0 1px 3px rgba(46,36,20,.22);
+  border-left:1px dashed rgba(120,98,66,.28);border-right:1px dashed rgba(120,98,66,.28);}
+.deckle{clip-path:polygon(1.2% 2.6%, 4% .6%, 9% 2%, 15% .9%, 22% 2.4%, 30% 1%, 38% 2.2%, 47% .8%, 56% 2.5%, 65% 1.2%, 74% 2.6%, 82% 1%, 90% 2.3%, 96% 1.1%, 99% 3.4%, 98.6% 12%, 99.4% 22%, 98.4% 33%, 99.2% 45%, 98.6% 57%, 99.4% 68%, 98.5% 79%, 99.3% 89%, 98.2% 97%, 92% 99%, 84% 97.6%, 75% 99.2%, 65% 97.8%, 55% 99.3%, 45% 98%, 35% 99.4%, 25% 97.9%, 16% 99.2%, 8% 97.7%, 2.2% 98.8%, 1% 92%, 1.8% 82%, .8% 71%, 1.6% 60%, .7% 49%, 1.5% 38%, .8% 27%, 1.7% 17%, .9% 8%)}
+img{display:block;max-width:100%}
+a{color:inherit}
+.gridpatch{position:absolute;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(89,120,153,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(89,120,153,.16) 1px,transparent 1px);
+  background-size:52px 52px;}
+.ring{position:absolute;border-radius:50%;border:9px solid rgba(148,105,48,.13);pointer-events:none}
+
+/* nav tabs */
+.nav{display:flex;align-items:flex-end;gap:10px;flex-wrap:wrap;padding:20px 34px 0;position:relative;z-index:5}
+.wordmark{font-family:'Zilla Slab',serif;font-weight:700;font-size:1.5rem;letter-spacing:.1em;text-decoration:none;color:var(--ink);
+  transform:rotate(-1.4deg);padding:.15rem .6rem .1rem;border:2.5px solid var(--ink);
+  border-radius:255px 12px 225px 12px / 12px 225px 12px 255px;margin-right:auto;margin-bottom:8px}
+.wordmark em{font-style:normal;color:var(--rubric)}
+.tab{font-family:'Zilla Slab',serif;font-weight:600;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;
+  text-decoration:none;color:var(--ink);background:linear-gradient(180deg,var(--kraft),#b3946a);
+  padding:.55rem 1.05rem .8rem;border-radius:8px 8px 0 0;border:1px solid rgba(90,70,42,.45);border-bottom:none;
+  box-shadow:inset 0 1px 0 rgba(255,244,220,.5);transform-origin:bottom center}
+.tab:nth-child(odd){transform:rotate(.7deg)}
+.tab:nth-child(even){transform:rotate(-.8deg)}
+.tab:hover{background:linear-gradient(180deg,#cfb289,#bb9c71)}
+.tab.open{background:var(--paper);border-color:rgba(90,70,42,.35);padding-bottom:1rem;transform:none;font-weight:700}
+.tab.cta{background:linear-gradient(180deg,#b23a2a,#9a2f20);color:#f6ecd9;border-color:#7c2416}
+.navrule{height:3px;background:var(--ink);opacity:.85;margin:0 26px;border-radius:2px;position:relative;z-index:4}
+
+/* reading progress: the ribbon marker slides down the outer edge */
+#ribbon{position:fixed;left:0;top:0;width:7px;height:0;z-index:70;background:linear-gradient(180deg,#b23a2a,#8c2a1e);box-shadow:1px 0 3px rgba(0,0,0,.3)}
+#ribbon::after{content:'';position:absolute;bottom:-9px;left:0;border-left:3.5px solid #8c2a1e;border-right:3.5px solid #8c2a1e;border-bottom:9px solid transparent}
+
+/* ===== study header ===== */
+.study-head{max-width:1120px;margin:0 auto;padding:56px 40px 12px;text-align:center;position:relative}
+.study-head .k{font-family:'Caveat',cursive;font-weight:600;font-size:1.25rem;color:var(--graphite)}
+.study-head h1{font-family:'Pinyon Script',cursive;font-weight:400;font-size:clamp(3.2rem,7.5vw,5.4rem);line-height:1.02;transform:rotate(-1.2deg);margin:.2rem 0 .4rem}
+.study-head .refs{display:flex;gap:14px;justify-content:center;align-items:baseline;flex-wrap:wrap;margin-top:.4rem}
+.study-head .lead{max-width:44rem;margin:1.1rem auto 0;font-size:1.16rem;color:#453e33}
+.study-head .rt{font-family:'Caveat',cursive;font-weight:600;font-size:1.1rem;color:var(--faded);margin-top:.9rem;display:block}
+
+/* hero plate */
+.hero-plate{max-width:1120px;margin:26px auto 0;padding:0 40px;position:relative}
+.hero-plate .ph-wrap{filter:drop-shadow(0 10px 16px rgba(46,36,18,.28));transform:rotate(-.7deg)}
+.hero-plate .mat{background:var(--paper-hi);padding:10px 10px 12px}
+.hero-plate figcaption{display:flex;justify-content:space-between;gap:12px;padding:10px 8px 0}
+.hero-plate .cap{font-family:'Caveat',cursive;font-weight:600;font-size:1.22rem;color:#544c3f}
+
+/* ===== the reading rows: clean measure + working margin ===== */
+.study{max-width:1120px;margin:34px auto 0;padding:0 40px}
+.row{display:grid;grid-template-columns:minmax(0,66ch) 250px;gap:56px;justify-content:center;margin-top:2.6rem}
+.prose{font-size:1.15rem;line-height:1.8;color:var(--ink)}
+.prose p+p{margin-top:1.15rem}
+.prose h2{font-family:'Zilla Slab',serif;font-weight:700;font-size:1.45rem;letter-spacing:.01em;margin-bottom:1rem;position:relative}
+.prose h2 .no{font-family:'Caveat',cursive;font-weight:700;color:var(--faded);font-size:1.2rem;margin-right:.5rem}
+.prose h2::after{content:'';display:block;width:120px;height:2px;margin-top:.45rem;
+  background:repeating-linear-gradient(90deg,var(--graphite) 0 9px,transparent 9px 14px);opacity:.45}
+.dropcap::first-letter{
+  font-family:'UnifrakturMaguntia',serif;font-size:3.6em;float:left;line-height:.82;
+  padding:.06em .12em 0 0;color:var(--ink);
+}
+/* margin column: the working edge of the page */
+.note{position:relative;padding-top:.4rem}
+.note .gridbg{position:absolute;inset:-10px -14px;opacity:.4;pointer-events:none;
+  background-image:linear-gradient(rgba(89,120,153,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(89,120,153,.13) 1px,transparent 1px);
+  background-size:44px 44px}
+.note .n{font-family:'Caveat',cursive;font-weight:600;font-size:1.22rem;line-height:1.42;color:#554c3d;transform:rotate(-.8deg);display:block;position:relative}
+.note .n b{color:var(--rubric);font-weight:700}
+.note .n + .n{margin-top:1.3rem}
+.note .leader{width:64px;height:30px;margin-bottom:2px}
+.note .mstudy{margin-top:1.2rem;position:relative;transform:rotate(1.6deg);filter:drop-shadow(0 6px 9px rgba(46,36,18,.22))}
+.note .mstudy .mat{background:var(--paper-hi);padding:6px}
+.note .mstudy .mcap{font-family:'Caveat',cursive;font-weight:600;font-size:1rem;color:var(--faded);padding:5px 2px 0;transform:none}
+
+/* scribed ink verse card (narration voice) */
+.verse-card{margin:1.9rem 0 .4rem;position:relative;padding:1.2rem 1.4rem 1rem}
+.verse-card .scribed{font-size:clamp(1.5rem,2.6vw,1.95rem);line-height:1.42}
+.verse-card .scribed .emph{
+  background-image:linear-gradient(90deg,transparent,rgba(162,51,37,0) 3%,rgba(162,51,37,.5) 12%,rgba(162,51,37,.45) 88%,transparent 97%);
+  background-repeat:no-repeat;background-size:100% .18em;background-position:0 96%;
+  padding-bottom:.05em}
+.verse-card .ref{display:block;margin-top:.55rem}
+/* elder leaf: the OT verse arrives on older stock */
+.elder{background:var(--foxed);
+  background-image:radial-gradient(500px 160px at 80% 0%, rgba(150,108,48,.18), transparent 60%),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"/></filter><rect width="220" height="220" filter="url(%23n)"/></svg>');
+  clip-path:polygon(1.5% 3.5%, 7% 1%, 16% 3%, 27% .8%, 39% 3.2%, 52% 1%, 64% 3%, 77% 1.2%, 89% 3%, 98% 1.5%, 99.2% 14%, 98.2% 30%, 99.4% 48%, 98.4% 66%, 99.2% 83%, 98% 96%, 88% 99%, 74% 96.8%, 60% 99.2%, 46% 97%, 32% 99.4%, 18% 97.2%, 7% 99%, 1.6% 96.5%, .8% 80%, 2% 62%, .9% 44%, 2.1% 26%, 1% 12%);
+  filter:drop-shadow(0 6px 10px rgba(46,36,18,.2))}
+.elder .tag{display:inline-block;font-family:'Zilla Slab',serif;font-weight:700;font-size:.6rem;
+  letter-spacing:.2em;text-transform:uppercase;color:#6b5836;background:rgba(233,220,189,.8);
+  padding:.2rem .5rem;transform:rotate(-1.2deg);margin-bottom:.55rem}
+/* red letter: His words */
+.redletter{margin:1.9rem 0 .4rem;padding:.4rem 0 .4rem 1.3rem;border-left:4px solid var(--rubric);position:relative}
+.redletter p{font-size:1.28rem;line-height:1.7;color:var(--rubric-deep);font-style:italic}
+.redletter p b{font-style:normal}
+.redletter .ref{display:block;margin-top:.5rem}
+.redletter .rl-tag{position:absolute;top:-13px;left:-4px;font-family:'Zilla Slab',serif;font-weight:700;font-size:.6rem;
+  letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--rubric);padding:.2rem .5rem;transform:rotate(-1.5deg)}
+/* the gold thread joint */
+.thread-joint{position:relative;height:74px;margin:.4rem 0}
+.thread-joint svg{position:absolute;left:10%;top:0;height:74px;width:190px}
+.thread-joint .tnote{position:absolute;left:calc(10% + 150px);top:16px;font-family:'Caveat',cursive;font-weight:600;font-size:1.12rem;color:#8c6a12;transform:rotate(-1.5deg);white-space:nowrap}
+
+/* taped plates inside the flow */
+.plate-inline{margin:2.2rem 0 .6rem;position:relative}
+.plate-inline .ph-wrap{filter:drop-shadow(0 8px 13px rgba(46,36,18,.26));transform:rotate(.8deg)}
+.plate-inline .mat{background:var(--paper-hi);padding:9px 9px 11px}
+.plate-inline figcaption{display:flex;justify-content:space-between;gap:12px;padding:9px 6px 0}
+.plate-inline .cap{font-family:'Caveat',cursive;font-weight:600;font-size:1.18rem;color:#544c3f}
+
+/* ===== the landing: the page gives way ===== */
+.landing{max-width:1120px;margin:64px auto 0;padding:0 40px 30px;text-align:center;position:relative}
+.landing .torn-top{height:40px;margin:0 -40px}
+.landing .ph-wrap{filter:drop-shadow(0 12px 18px rgba(46,36,18,.3));transform:rotate(-.5deg);max-width:820px;margin:1.6rem auto 0}
+.landing .mat{background:var(--paper-hi);padding:10px 10px 12px}
+.landing .scribed{display:block;font-size:clamp(1.9rem,4vw,2.9rem);line-height:1.4;max-width:44rem;margin:2rem auto .3rem}
+.landing .scribed .gold-underline{background-image:linear-gradient(90deg,transparent,rgba(200,158,42,0) 2%,rgba(184,146,31,.62) 10%,rgba(227,194,92,.58) 50%,rgba(184,146,31,.62) 90%,transparent 98%);
+  background-repeat:no-repeat;background-size:100% .32em;background-position:0 93%;padding:0 .08em}
+.landing .amen{font-family:'Caveat',cursive;font-weight:700;font-size:1.5rem;color:var(--graphite);display:block;margin-top:1.6rem;transform:rotate(-1.5deg)}
+.landing .invite{max-width:38rem;margin:1.9rem auto 0;font-size:1.13rem;color:#453e33}
+.stamp-btn{display:inline-block;text-decoration:none;color:#f7eeda;background:var(--rubric);
+  font-family:'Zilla Slab',serif;font-weight:700;font-size:.86rem;letter-spacing:.16em;text-transform:uppercase;
+  padding:.9rem 1.7rem;transform:rotate(-1.3deg);box-shadow:2px 3px 0 rgba(46,41,33,.28);margin-top:1.8rem;position:relative}
+.stamp-btn:hover{background:var(--rubric-deep)}
+
+/* keep going */
+.keep{max-width:1120px;margin:56px auto 0;padding:0 40px 80px}
+.keep .khead{font-family:'Pinyon Script',cursive;font-size:2rem;transform:rotate(-.8deg);margin-bottom:1.4rem}
+.keep .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.kcard{position:relative;display:block;text-decoration:none;color:inherit;background:var(--paper-hi);
+  padding:20px 20px 18px;border:1px solid rgba(110,92,60,.25);box-shadow:0 8px 14px rgba(46,36,18,.14);transform:rotate(-.7deg)}
+.kcard:nth-child(2){transform:rotate(.6deg)}
+.kcard:nth-child(3){transform:rotate(-.3deg)}
+.kcard:hover{transform:translateY(-4px) rotate(0)}
+.kcard .kk{font-family:'Zilla Slab',serif;font-weight:600;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--bluewash)}
+.kcard .kt{font-family:'Zilla Slab',serif;font-weight:700;font-size:1.15rem;margin:.35rem 0 .3rem}
+.kcard p{font-size:.95rem;color:#4a4336}
+.kcard .hand{display:inline-block;margin-top:.5rem;font-size:1.1rem;color:var(--rubric)}
+
+/* colophon + corners */
+.colophon{background:linear-gradient(180deg,var(--kraft),#af8f64);padding:40px 60px 46px;border-top:1px solid rgba(90,70,42,.5)}
+.colophon .inner{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:baseline}
+.colophon .wm{font-family:'Zilla Slab',serif;font-weight:700;font-size:1.05rem;letter-spacing:.1em;color:#3a2f1e}
+.colophon .wm em{font-style:normal;color:var(--rubric-deep)}
+.colophon p{font-size:.92rem;color:#4a3c26;max-width:44rem}
+.page-turn{position:fixed;right:0;bottom:0;width:148px;height:148px;z-index:60;text-decoration:none;display:block}
+.page-turn .fold-tri{position:absolute;inset:0;clip-path:polygon(100% 0,100% 100%,0 100%);
+  background:linear-gradient(315deg,#d8c69e 0 28%, #efe3c2 46%, #c9b489 60%, #b89f70 100%);
+  box-shadow:-6px -6px 14px rgba(30,22,10,.35)}
+.page-turn .fold-tri::before{content:'';position:absolute;inset:0;clip-path:polygon(100% 0,0 100%,26% 100%,100% 26%);background:rgba(64,48,24,.14)}
+.page-turn span{position:absolute;right:8px;bottom:40px;transform:rotate(-45deg);transform-origin:100% 100%;
+  font-family:'Caveat',cursive;font-weight:700;font-size:1.06rem;color:#4a3a20;white-space:nowrap}
+.page-turn:hover{width:160px;height:160px}
+.page-back{position:fixed;left:0;bottom:0;width:110px;height:110px;z-index:60;text-decoration:none;display:block}
+.page-back .fold-tri{position:absolute;inset:0;clip-path:polygon(0 0,100% 100%,0 100%);
+  background:linear-gradient(45deg,#d8c69e 0 28%, #efe3c2 46%, #c9b489 60%, #b89f70 100%);
+  box-shadow:6px -6px 14px rgba(30,22,10,.3)}
+.page-back span{position:absolute;left:6px;bottom:32px;transform:rotate(45deg);transform-origin:0 100%;
+  font-family:'Caveat',cursive;font-weight:700;font-size:.98rem;color:#4a3a20;white-space:nowrap}
+
+@media(max-width:1040px){
+  .row{grid-template-columns:minmax(0,1fr);gap:0}
+  .note{margin:1.6rem 0 .4rem;padding:1rem 1.2rem;background:var(--paper-hi);
+    border:1px solid rgba(110,92,60,.25);box-shadow:0 6px 10px rgba(46,36,18,.12);transform:rotate(-.5deg);max-width:34rem}
+  .note .gridbg{display:none}
+  .note .mstudy{max-width:220px}
+  .study,.study-head,.hero-plate,.landing,.keep{padding-left:24px;padding-right:24px}
+  .keep .cards{grid-template-columns:1fr}
+  .nav{padding:14px 18px 0}
+  .book{margin:10px 8px 90px}
+  .colophon{padding:32px 26px 40px}
+  .page-back{display:none}
+  .thread-joint .tnote{left:auto;right:0;white-space:normal;max-width:180px}
+}
+</style>
+</head>
+<body>
+
+<div id="ribbon" aria-hidden="true"></div>
+
+<div class="book">
+  <div class="page">
+
+    <nav class="nav" aria-label="Main">
+      <a class="wordmark" href="index.html">AWAK<em>EDEN</em></a>
+      <a class="tab" href="index.html">The Journal</a>
+      <a class="tab" href="catalogue.html">Catalogue</a>
+      <a class="tab open" href="the-bronze-serpent.html">Read</a>
+      <a class="tab" href="catalogue.html">The Plan</a>
+      <a class="tab cta" href="#study">Start reading</a>
+    </nav>
+    <div class="navrule"></div>
+
+    <!-- ===== STUDY HEADER ===== -->
+    <header class="study-head">
+      <div class="gridpatch" style="left:0;top:20px;bottom:0;width:120px" aria-hidden="true"></div>
+      <div class="ring" style="width:104px;height:98px;right:9%;top:30px" aria-hidden="true"></div>
+      <span class="k">Types &amp; Shadows &middot; study one &middot; a long read</span>
+      <h1>The Bronze Serpent</h1>
+      <div class="refs">
+        <span class="ref">Numbers 21:4&ndash;9</span>
+        <span class="hand" style="font-size:1.1rem;color:#8c6a12">tied by a gold thread to</span>
+        <span class="ref">John 3:14&ndash;16</span>
+      </div>
+      <p class="lead">Israel is dying of snakebite, and the cure God prescribes is a snake on a pole.
+        It looks like nonsense &mdash; until Jesus, by night, tells a Pharisee that the pole was
+        a picture of Him.</p>
+      <span class="rt">about seven minutes of slow reading &middot; every plate below is from the film</span>
+    </header>
+
+    <!-- hero plate -->
+    <div class="hero-plate">
+      <span class="tape" style="left:38%;top:-8px;transform:rotate(-4deg)" aria-hidden="true"></span>
+      <figure>
+        <div class="ph-wrap"><div class="mat deckle">
+          <img src="_media/hero_wilderness.jpg" alt="Moses with his staff before the tent camp stretching to the horizon">
+        </div></div>
+        <figcaption>
+          <span class="cap">the camp on the long way round Edom &mdash; thousands of tents, one road, no water</span>
+          <span class="ref">plate 1</span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- ===== THE STUDY ===== -->
+    <main class="study" id="study">
+
+      <!-- 1. the road -->
+      <div class="row">
+        <article class="prose">
+          <h2><span class="no">i.</span>The road that broke them</h2>
+          <p class="dropcap">They were nearly there. After forty years of wilderness, Israel stood close
+            to Canaan &mdash; and was sent the long way round. Edom had refused them passage, so the
+            whole nation turned back toward the Red Sea road, away from the promise, to walk around
+            an entire kingdom. Scripture gives the mood of that detour in one line:
+            <em>&ldquo;and the soul of the people was much discouraged because of the way.&rdquo;</em></p>
+          <p>Discouragement curdled into contempt. They spoke against God, and against Moses, and the
+            old accusation came out again &mdash; <em>wherefore have ye brought us up out of Egypt to die
+            in the wilderness?</em> &mdash; and then something new. They looked at the manna, the bread
+            that had fallen from heaven every morning for forty years, and said:</p>
+          <div class="verse-card elder">
+            <span class="tag">the elder leaf &middot; the old page</span>
+            <p class="scribed">&ldquo;&hellip;our soul <span class="emph">loatheth</span> this light bread.&rdquo;</p>
+            <span class="ref">Numbers 21:5 &middot; KJV</span>
+          </div>
+          <p>Loatheth. The miracle had become the complaint. That is the sin under the sin in this
+            chapter: not hunger, but a settled disgust at what God had given.</p>
+        </article>
+        <aside class="note">
+          <span class="gridbg" aria-hidden="true"></span>
+          <svg class="leader" viewBox="0 0 64 30" fill="none" aria-hidden="true">
+            <path d="M60 26 C 42 24, 24 16, 5 6" stroke="#5c554a" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M12 12 L4.5 5.5 L14 4.5" stroke="#5c554a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <span class="n"><b>&ldquo;because of the way&rdquo;</b> &mdash; not because of an enemy. no battle, no famine.
+            just a long detour. the road itself did what Pharaoh couldn&rsquo;t.</span>
+          <span class="n">field note: the complaint contradicts itself &mdash; <b>&ldquo;there is no bread,
+            neither is there any water; and our soul loatheth this light bread.&rdquo;</b> no bread &mdash;
+            and we hate the bread. discontent doesn&rsquo;t need logic.</span>
+        </aside>
+      </div>
+
+      <!-- 2. the serpents -->
+      <div class="row">
+        <article class="prose">
+          <h2><span class="no">ii.</span>The serpents</h2>
+          <p>The answer to the murmuring was not a speech. <em>&ldquo;And the LORD sent fiery serpents among
+            the people, and they bit the people; and much people of Israel died.&rdquo;</em> The desert they
+            had called a death-trap showed them what it actually held, the moment the hedge came down.</p>
+          <p>And the people did something they had not done in the whole chapter: they told the truth.
+            <em>&ldquo;We have sinned, for we have spoken against the LORD, and against thee.&rdquo;</em>
+            No excuses, no blame. They asked Moses to pray &mdash; and the man they had just been
+            speaking against <em>&ldquo;prayed for the people.&rdquo;</em></p>
+          <figure class="plate-inline">
+            <span class="tape" style="left:44%;top:-9px;transform:rotate(-3.5deg)" aria-hidden="true"></span>
+            <div class="ph-wrap"><div class="mat deckle">
+              <img src="_media/panel_hand_study.jpg" alt="Study of a clenched hand, the fever rising up the arm in red wash">
+            </div></div>
+            <figcaption><span class="cap">study of the bite &mdash; the fever climbs the arm. the red wash is the only red on the page.</span><span class="ref">plate 16</span></figcaption>
+          </figure>
+        </article>
+        <aside class="note">
+          <span class="gridbg" aria-hidden="true"></span>
+          <span class="n"><b>&ldquo;fiery&rdquo;</b> likely describes the burning of the bite, not the look of
+            the snake &mdash; the venom felt like fire under the skin.</span>
+          <span class="n">notice what the people ask: <b>take away the serpents</b>. God does not take
+            them away. He gives a cure instead. the danger stays; the remedy arrives.</span>
+          <div class="mstudy"><div class="mat deckle">
+            <img src="_media/insert_wetbleed.jpg" alt="Wet-in-wet ink study of Moses, colours bleeding like grief">
+          </div><div class="mcap">insert leaf &mdash; the wash runs on the day the graves are dug</div></div>
+        </aside>
+      </div>
+
+      <!-- 3. the strange cure -->
+      <div class="row">
+        <article class="prose">
+          <h2><span class="no">iii.</span>The strangest cure in the Bible</h2>
+          <p>What Moses is told to do next has puzzled readers for three thousand years.</p>
+          <div class="verse-card elder">
+            <span class="tag">the elder leaf &middot; the old page</span>
+            <p class="scribed">&ldquo;Make thee a fiery serpent, and set it upon a pole: and it shall come
+              to pass, that every one that is bitten, when he <span class="emph">looketh upon it</span>,
+              shall <span class="emph">live</span>.&rdquo;</p>
+            <span class="ref">Numbers 21:8 &middot; KJV</span>
+          </div>
+          <p>No medicine. No ritual. No payment, no pilgrimage, no proving yourself. The bitten man is
+            not told to fight the serpents, or to climb to the pole, or even to touch it. He is told to
+            <strong>look</strong>. The verse hangs the whole cure on the weakest act a dying person can
+            still perform &mdash; turning the eyes.</p>
+          <p>And Moses made it of brass, and put it upon a pole, <em>&ldquo;and it came to pass, that if a
+            serpent had bitten any man, when he beheld the serpent of brass, he lived.&rdquo;</em> Not
+            <em>might live</em>. Lived. Every time. The cure was absurdly out of proportion to the
+            wound &mdash; which is precisely the point being made about grace, fifteen centuries early.</p>
+          <figure class="plate-inline">
+            <span class="tape" style="left:40%;top:-9px;transform:rotate(3deg)" aria-hidden="true"></span>
+            <div class="ph-wrap"><div class="mat deckle">
+              <img src="_media/panel_pole_dusk.jpg" alt="The brass serpent on its pole against the dusk sky, tents below">
+            </div></div>
+            <figcaption><span class="cap">the pole at dusk &mdash; raised in the middle of the camp, visible from every tent flap</span><span class="ref">plate 32</span></figcaption>
+          </figure>
+        </article>
+        <aside class="note">
+          <span class="gridbg" aria-hidden="true"></span>
+          <span class="n"><b>look &ne; climb.</b> the cure asked for no strength. a man too weak to
+            stand could still be healed &mdash; if he could still turn his head.</span>
+          <span class="n">centuries later this same bronze snake had to be <b>broken</b>. Hezekiah
+            smashed it because Israel had begun burning incense to it &mdash; he called it
+            <b>Nehushtan</b>, &ldquo;a piece of brass&rdquo; <i>(2 Kings 18:4)</i>. even the God-given
+            picture becomes an idol the moment you stare at the picture instead of the God.</span>
+        </aside>
+      </div>
+
+      <!-- 4. why a serpent -->
+      <div class="row">
+        <article class="prose">
+          <h2><span class="no">iv.</span>Why a serpent, of all things?</h2>
+          <p>Here is the question that kept the lamp burning in Moses&rsquo; tent. If the cure is a
+            picture, why is it a picture of <em>the thing that is killing them</em>? Why not a lamb on
+            the pole, or an angel, or bread? Why must the dying look at the very shape of their death?</p>
+          <p>The New Testament answers without flinching: because the cure for the curse is the curse
+            itself, borne up in the sight of all. <em>&ldquo;Christ hath redeemed us from the curse of the
+            law, being made a curse for us: for it is written, Cursed is every one that hangeth on a
+            tree&rdquo;</em> (Galatians 3:13). The serpent of brass had the form of the serpent and none of
+            its venom &mdash; lifted up in the likeness of the killer, itself harmless, so that the
+            stricken could look at their own judgment hanging on a pole and walk away alive.</p>
+          <figure class="plate-inline">
+            <span class="tape" style="left:48%;top:-9px;transform:rotate(-4deg)" aria-hidden="true"></span>
+            <div class="ph-wrap"><div class="mat deckle">
+              <img src="_media/panel_shadow_cross.jpg" alt="Moses studies the pole; its shadow falls across the empty page as a cross">
+            </div></div>
+            <figcaption><span class="cap">the plate the whole study is named for &mdash; look at the shadow, not the pole</span><span class="ref">plate 44</span></figcaption>
+          </figure>
+        </article>
+        <aside class="note">
+          <span class="gridbg" aria-hidden="true"></span>
+          <span class="n">the journal leaves the left half of plate 44 almost empty. the emptiness is
+            the point &mdash; the pole stands in the middle of nothing, and the <b>shadow</b> does the
+            preaching.</span>
+          <div class="mstudy"><div class="mat deckle">
+            <img src="_media/insert_scratchboard.jpg" alt="Scratchboard study: Moses drawn in white lines out of a black ground">
+          </div><div class="mcap">insert leaf &mdash; scratchboard, for the night pages: light cut out of the dark</div></div>
+        </aside>
+      </div>
+
+      <!-- 5. fifteen centuries later -->
+      <div class="row">
+        <article class="prose">
+          <h2><span class="no">v.</span>Fifteen centuries later, at night</h2>
+          <p>A ruler of the Pharisees comes to Jesus by night with careful compliments. Jesus answers
+            with new birth, and Nicodemus &mdash; a master of Israel &mdash; is lost. So Jesus reaches
+            for a page Nicodemus has known since childhood. Of everything in Moses, He chooses the
+            snake on the pole:</p>
+
+          <div class="thread-joint" aria-hidden="true">
+            <svg viewBox="0 0 190 74" fill="none">
+              <path d="M24 4 C 30 30, 70 52, 158 62" stroke="#b8921f" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="1 0"/>
+              <circle cx="24" cy="4" r="3.2" fill="#b8921f"/>
+              <circle cx="158" cy="62" r="3.2" fill="#b8921f"/>
+            </svg>
+            <span class="tnote">the gold thread &mdash; from Numbers 21:8, four pages back</span>
+          </div>
+
+          <div class="redletter">
+            <span class="rl-tag">His words &middot; red letter</span>
+            <p>&ldquo;And as Moses lifted up the serpent in the wilderness, even so must the Son of man be
+              lifted up: That whosoever believeth in him should not perish, but have eternal life.&rdquo;</p>
+            <span class="ref">John 3:14&ndash;15 &middot; KJV</span>
+          </div>
+
+          <p><em>Must.</em> Not <em>may</em>, not <em>will probably</em>. The same necessity that put a
+            brass serpent in the middle of a dying camp put the Son of man on a cross in the middle of
+            a dying world. And the same single, weightless act connects the dying to the cure. In the
+            wilderness it was called <em>looking</em>. On this side of the pole it is called
+            <em>believing</em>. It is the same motion of the same desperate eyes.</p>
+          <figure class="plate-inline">
+            <span class="tape" style="left:36%;top:-9px;transform:rotate(3.5deg)" aria-hidden="true"></span>
+            <div class="ph-wrap"><div class="mat deckle">
+              <img src="_media/panel_golgotha.jpg" alt="Golgotha under an ink-black sky — the cross where the picture came true">
+            </div></div>
+            <figcaption><span class="cap">the picture, come true &mdash; the ink-blue wash is judgment; it breaks against the hill</span><span class="ref">plate 45</span></figcaption>
+          </figure>
+        </article>
+        <aside class="note">
+          <span class="gridbg" aria-hidden="true"></span>
+          <span class="n">Jesus quotes this to a man who could recite Numbers from memory. the shock is
+            not the story &mdash; it&rsquo;s <b>where He puts Himself in it</b>: on the pole.</span>
+          <span class="n">the camp looked at the serpent&rsquo;s <b>form without its venom</b>. we look at
+            One <b>&ldquo;who knew no sin&rdquo;</b> made <b>&ldquo;to be sin for us&rdquo;</b>
+            <i>(2 Cor 5:21)</i> &mdash; the likeness of the killer, none of the poison.</span>
+        </aside>
+      </div>
+
+    </main>
+
+    <!-- ===== THE LANDING ===== -->
+    <section class="landing" id="landing">
+      <svg class="torn-top" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true" style="display:block;width:calc(100% + 80px)">
+        <path fill="#e9dcbd" d="M0,40 L0,16 L52,10 L96,20 L143,7 L190,17 L241,6 L288,18 L341,8 L390,19 L441,7 L489,16 L540,6 L587,17 L639,8 L688,19 L737,6 L788,16 L838,7 L888,18 L939,8 L988,17 L1039,6 L1088,16 L1139,8 L1188,18 L1239,7 L1288,17 L1339,8 L1390,16 L1440,10 L1440,40 Z"/>
+      </svg>
+      <h1 class="scribed" style="font-size:clamp(2.2rem,4.6vw,3.4rem);transform:rotate(-1deg)">The last page</h1>
+      <p style="max-width:36rem;margin:.6rem auto 0;color:#4a4336">Every study in this journal ends the same way.
+        The paper itself gives way, and behind the page there was always the same face.</p>
+
+      <span class="tape" style="left:26%;top:212px;transform:rotate(-4deg)" aria-hidden="true"></span>
+      <figure>
+        <div class="ph-wrap"><div class="mat deckle">
+          <img src="_media/panel_torn_landing.jpg" alt="The page torn open in the shape of a rough circle; Christ stands in gold light beneath the paper">
+        </div></div>
+      </figure>
+
+      <span class="scribed">&ldquo;For God so loved the world, that he gave his only begotten Son, that
+        <span class="gold-underline">whosoever believeth in him</span> should not perish, but have
+        everlasting life.&rdquo;</span>
+      <span class="ref">John 3:16 &middot; KJV</span>
+
+      <p class="invite">If you have read this far, you have already done the hard part of the old cure:
+        you have looked. The serpent&rsquo;s pole asked nothing else, and the cross asks nothing
+        less &mdash; not a climb, not a payment, a look that becomes belief. Look, and live.</p>
+      <span class="amen">the light under this page is the only gold in the book. &mdash; the keeper</span>
+
+      <a class="stamp-btn" href="catalogue.html">Next study &rarr; the register</a>
+    </section>
+
+    <!-- ===== KEEP GOING ===== -->
+    <section class="keep">
+      <h3 class="khead">Keep the book open</h3>
+      <div class="cards">
+        <a class="kcard" href="catalogue.html">
+          <span class="tape" style="left:50%;top:-11px;transform:translateX(-50%) rotate(-3deg)" aria-hidden="true"></span>
+          <span class="kk">Next in Types &amp; Shadows</span>
+          <div class="kt">The Passover Lamb</div>
+          <p>Exodus 12 &mdash; the blood on the doorposts, and the Lamb it pointed to.</p>
+          <span class="hand">being inked now &rarr;</span>
+        </a>
+        <a class="kcard" href="catalogue.html">
+          <span class="tape" style="left:50%;top:-11px;transform:translateX(-50%) rotate(2.5deg)" aria-hidden="true"></span>
+          <span class="kk">Season One &middot; The Cross</span>
+          <div class="kt">The Crucifixion Foretold</div>
+          <p>Psalm 22:18 &mdash; a psalm recorded how a dying man&rsquo;s clothes would be divided, ten centuries early.</p>
+          <span class="hand">read the study &rarr;</span>
+        </a>
+        <a class="kcard" href="index.html">
+          <span class="tape" style="left:50%;top:-11px;transform:translateX(-50%) rotate(-2deg)" aria-hidden="true"></span>
+          <span class="kk">The Journal</span>
+          <div class="kt">Back to the cover</div>
+          <p>Three ways into one book &mdash; the short, the film, and these pages.</p>
+          <span class="hand">turn back &rarr;</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="colophon">
+      <div class="inner">
+        <div>
+          <p class="wm">AWAK<em>EDEN</em> &mdash; the field journal</p>
+          <p style="margin-top:.5rem">Scripture quoted from the King James Version (KJV), public domain.
+            The ink is ours. The words are His.</p>
+        </div>
+        <p class="hand" style="color:#5d4b2e;font-size:1.15rem">gold is kept for His glory only. red is kept for His words. everything else is pencil.</p>
+      </div>
+    </footer>
+
+  </div>
+</div>
+
+<a class="page-back" href="catalogue.html" aria-label="Turn back to the catalogue">
+  <span class="fold-tri" aria-hidden="true"></span>
+  <span>&larr; the catalogue</span>
+</a>
+<a class="page-turn" href="index.html" aria-label="Turn the page: back to the journal cover">
+  <span class="fold-tri" aria-hidden="true"></span>
+  <span>turn the page &rarr;</span>
+</a>
+
+<script>
+/* the ribbon marker doubles as reading progress */
+(function(){
+  var r=document.getElementById('ribbon');
+  function u(){
+    var h=document.documentElement, max=h.scrollHeight-h.clientHeight;
+    r.style.height=(max>0 ? (h.scrollTop/max)*100 : 0)+'vh';
+  }
+  addEventListener('scroll',u,{passive:true}); addEventListener('resize',u);
+})();
+</script>
+
+</body>
+</html>

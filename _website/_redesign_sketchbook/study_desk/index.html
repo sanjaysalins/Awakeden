@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Awakeden — The Study Desk | The whole Bible, studied slowly, landing on Jesus</title>
+<meta name="description" content="Hand-inked Bible shorts, films and studies, Old Testament to New. This is the desk they are made at — every passage laid open to be read.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,400;1,7..72,500&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+/* ================= THE STUDY DESK — design tokens =================
+   Every value below is sampled from the real sketchbook renders:
+   paper cream, kraft tape, sepia ink, wash-blue apparatus, madder
+   red-letter, gold leaf (once per page, Christ only).            */
+:root{
+  --paper:#f6efdf;        /* the desk paper */
+  --paper-2:#efe5cd;      /* aged card stock */
+  --paper-3:#fbf5e6;      /* fresh leaf (KJV cards) */
+  --kraft:#c8b28d;        /* torn tape */
+  --kraft-2:#a8916a;
+  --ink:#33291d;          /* reading ink */
+  --ink-2:#75664f;        /* graphite / apparatus grey */
+  --blue:#44597a;         /* wash-blue: links + study apparatus */
+  --grid:rgba(68,89,122,.11);
+  --madder:#9c392a;       /* red-letter: His words (and EDEN) */
+  --gold-d:#8a6410;       /* gold text-safe */
+  --leaf:linear-gradient(100deg,#8a6410,#caa54a 28%,#8f6d1a 52%,#e2c368 74%,#a37c1e);
+  --line:rgba(51,41,29,.16);
+  --disp:"Fraunces",Georgia,serif;
+  --body:"Literata",Georgia,serif;
+  --hand:"Caveat",cursive;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 1.05rem/1.7 var(--body)}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--blue)}
+a:focus-visible,button:focus-visible{outline:2px dashed var(--blue);outline-offset:3px}
+h1,h2,h3{font-family:var(--disp);font-weight:600;line-height:1.1;letter-spacing:-.005em}
+.madder{color:var(--madder)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(1.2rem,4vw,3rem)}
+
+/* ---------- nav ---------- */
+.nav{display:flex;align-items:center;gap:1.6rem;flex-wrap:wrap;padding:1.05rem clamp(1.2rem,4vw,3rem);border-bottom:1px solid var(--line)}
+.wordmark{font:600 1.5rem var(--disp);color:var(--ink);text-decoration:none;letter-spacing:.01em}
+.wordmark em{font-style:normal;font-weight:700;color:var(--madder)}
+.nav-links{margin-left:auto;display:flex;gap:1.5rem;flex-wrap:wrap}
+.nav-links a{color:var(--ink);text-decoration:none;font:500 .95rem var(--body)}
+.nav-links a:hover{color:var(--madder)}
+.nav-cta{border:1.5px solid var(--ink);background:var(--ink);color:var(--paper)!important;text-decoration:none;font:600 .9rem var(--body);padding:.55rem 1.05rem}
+.nav-cta:hover{background:transparent;color:var(--ink)!important}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;
+  background-image:
+    repeating-linear-gradient(0deg,var(--grid) 0 1px,transparent 1px 132px),
+    repeating-linear-gradient(90deg,var(--grid) 0 1px,transparent 1px 132px);}
+.hero::before{ /* one confined halftone patch, like the stills */
+  content:"";position:absolute;top:8%;right:-40px;width:360px;height:460px;
+  background:radial-gradient(rgba(110,98,80,.20) 1px,transparent 1.35px) 0 0/12px 12px;
+  -webkit-mask-image:radial-gradient(closest-side,#000 30%,transparent 100%);
+  mask-image:radial-gradient(closest-side,#000 30%,transparent 100%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);
+  gap:clamp(2rem,5vw,4.5rem);align-items:center;max-width:1180px;margin:0 auto;
+  padding:clamp(2.6rem,6vw,5rem) clamp(1.2rem,4vw,3rem) clamp(3rem,7vw,5.5rem)}
+.eyebrow{font:600 .74rem var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2)}
+.hero h1{font-size:clamp(2.5rem,5.4vw,4.3rem);margin:.9rem 0 1.2rem;max-width:13em}
+.hero .sub{font-size:1.13rem;color:var(--ink);max-width:34em;margin-bottom:1.8rem}
+.ctas{display:flex;gap:.9rem;flex-wrap:wrap;align-items:center}
+.btn{display:inline-block;text-decoration:none;font:600 .95rem var(--body);padding:.75rem 1.25rem;border:1.5px solid var(--ink)}
+.btn-ink{background:var(--ink);color:var(--paper)}
+.btn-ink:hover{background:transparent;color:var(--ink)}
+.btn-ghost{color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.hero-note{font:500 1.25rem var(--hand);color:var(--ink-2);margin-top:1.2rem;transform:rotate(-.6deg)}
+
+/* taped study plate */
+.plate{position:relative;background:#fdf8ec;padding:10px;border:1px solid rgba(51,41,29,.13);
+  box-shadow:0 1px 0 rgba(51,41,29,.07),0 16px 34px -20px rgba(51,41,29,.5)}
+.plate::before,.plate::after{content:"";position:absolute;top:-13px;width:88px;height:27px;
+  background:linear-gradient(rgba(200,178,141,.88),rgba(180,156,118,.82));
+  box-shadow:inset 0 0 6px rgba(51,41,29,.18)}
+.plate::before{left:9%;transform:rotate(-4deg)}
+.plate::after{right:9%;transform:rotate(3deg)}
+.plate figcaption{font:500 1.3rem/1.3 var(--hand);color:var(--ink-2);padding:.7rem .3rem .2rem;transform:rotate(-.5deg)}
+.hero .plate{animation:settle .7s ease-out both .1s}
+@keyframes settle{from{opacity:0;transform:translateY(12px) rotate(-.8deg)}to{opacity:1;transform:none}}
+
+/* torn-paper divider: fill = the section BELOW's paper colour */
+.tear{display:block;width:100%;height:30px;margin-bottom:-1px}
+
+/* ---------- sections ---------- */
+.section{padding:clamp(2.4rem,5vw,4rem) 0}
+.section.alt{background:var(--paper-2)}
+.shead{display:flex;align-items:baseline;gap:1.2rem;flex-wrap:wrap;margin-bottom:1.8rem}
+.shead h2{font-size:clamp(1.5rem,2.6vw,2rem)}
+.shead .hint{font:600 .74rem var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2);margin-left:auto}
+.slabel{font:600 .74rem var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);display:flex;align-items:center;gap:1rem;margin-bottom:1rem}
+.slabel::after{content:"";flex:1;height:1px;background:var(--line)}
+
+/* three ways in */
+.ways{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
+.way{background:var(--paper-3);border:1px solid var(--line);padding:1.5rem 1.4rem;display:flex;flex-direction:column;gap:.6rem}
+.way .kicker{font:600 .72rem var(--body);letter-spacing:.15em;text-transform:uppercase;color:var(--ink-2)}
+.way h3{font-size:1.35rem}
+.way p{font-size:.98rem;color:var(--ink)}
+.way.main{border:1.5px solid var(--ink);box-shadow:4px 4px 0 rgba(51,41,29,.14)}
+.way.main .kicker{color:var(--madder)}
+.way .btn{margin-top:auto;align-self:flex-start}
+
+/* featured study */
+.feature{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(1.6rem,4vw,3.2rem);align-items:center}
+.stamp{display:inline-block;border:1.6px solid var(--madder);color:var(--madder);border-radius:3px;
+  font:600 .7rem var(--body);letter-spacing:.14em;text-transform:uppercase;padding:.34rem .7rem;transform:rotate(-1.4deg)}
+.feature h3{font-size:clamp(1.7rem,3vw,2.4rem);margin:.8rem 0 .4rem}
+.ref{font:600 .74rem var(--body);letter-spacing:.15em;text-transform:uppercase;color:var(--ink-2)}
+.feature p{margin:.9rem 0 1.4rem;max-width:32em}
+
+/* craft band */
+.craft{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(1.6rem,4vw,3.2rem);align-items:center}
+.craft .plate{max-width:390px}
+.craft h3{font-size:clamp(1.5rem,2.6vw,2rem);margin-bottom:.8rem}
+.craft p{max-width:34em;margin-bottom:.8rem}
+
+/* catalogue teaser cards */
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
+.card{background:var(--paper-3);border:1px solid var(--line);padding:10px;text-decoration:none;color:var(--ink);
+  transition:transform .18s ease,box-shadow .18s ease;position:relative}
+.card:hover{transform:translateY(-4px) rotate(-.35deg);box-shadow:0 18px 30px -18px rgba(51,41,29,.45)}
+.card .thumb{position:relative;overflow:hidden;aspect-ratio:4/5;background:var(--paper-2)}
+.card .thumb img{width:100%;height:100%;object-fit:cover}
+.card .ref{position:absolute;top:10px;left:10px;background:rgba(246,239,223,.92);padding:.3rem .55rem;border:1px solid var(--line)}
+.card h3{font-size:1.2rem;margin:.75rem .35rem .25rem}
+.card p{font-size:.92rem;color:var(--ink-2);margin:0 .35rem .5rem}
+.card .fmt{display:flex;gap:.8rem;font:600 .68rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--ink);padding:.3rem .35rem .4rem;border-top:1px dashed var(--line)}
+.card .fmt .off{color:rgba(117,102,79,.5)}
+.more{margin-top:1.6rem}
+
+/* landing (the only gold on the page) */
+.goldseam{height:6px;background:var(--leaf);box-shadow:0 1px 0 rgba(51,41,29,.3)}
+.landing{background:var(--paper-2)}
+.landing .inner{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(1.8rem,4vw,3.4rem);align-items:center;padding:clamp(2.6rem,5vw,4.2rem) 0}
+.landing .slabel{color:var(--gold-d)}
+.landing .slabel::after{background:rgba(138,100,16,.4)}
+.landing h2{font-size:clamp(1.7rem,3.2vw,2.5rem);margin-bottom:.9rem}
+.kjv{background:var(--paper-3);border:1px solid var(--line);padding:1.4rem 1.6rem;margin:1.3rem 0;font-size:1.12rem;line-height:1.8}
+.kjv .src{display:block;font:600 .72rem var(--body);letter-spacing:.15em;text-transform:uppercase;color:var(--ink-2);margin-bottom:.6rem}
+.landing .kjv{border-color:rgba(138,100,16,.45)}
+.landing .plate{max-width:330px;justify-self:center}
+
+/* footer */
+.foot{border-top:1px solid var(--line);padding:2.2rem clamp(1.2rem,4vw,3rem);display:flex;gap:1.6rem;flex-wrap:wrap;align-items:baseline;color:var(--ink-2);font-size:.92rem}
+.foot .wordmark{font-size:1.15rem}
+.foot .mock{margin-left:auto;font-style:italic}
+
+@media (max-width:960px){
+  .hero-grid,.feature,.craft,.landing .inner{grid-template-columns:1fr}
+  .ways,.cards{grid-template-columns:1fr 1fr}
+  .hero .plate{max-width:440px}
+  .craft .plate{order:-1}
+}
+@media (max-width:620px){
+  .ways,.cards{grid-template-columns:1fr}
+  .nav-links{gap:1rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <a class="wordmark" href="index.html">AWAK<em>EDEN</em></a>
+  <div class="nav-links">
+    <a href="catalogue.html">Catalogue</a>
+    <a href="study-look-and-live.html">Studies</a>
+    <a href="#craft">The desk</a>
+  </div>
+  <a class="nav-cta" href="study-look-and-live.html">Start a study</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-grid">
+    <div>
+      <p class="eyebrow">Hand-inked &middot; KJV throughout &middot; Old Testament to New</p>
+      <h1>The whole Bible, studied slowly &mdash; until it lands on <span class="madder">Jesus</span>.</h1>
+      <p class="sub">Awakeden makes sixty-second shorts and hand-inked films. This is the desk they are
+        made at &mdash; every passage laid open to be read: the verses verbatim, the margins full,
+        the thread always traced to Christ.</p>
+      <div class="ctas">
+        <a class="btn btn-ink" href="study-look-and-live.html">Start with a study</a>
+        <a class="btn btn-ghost" href="catalogue.html">Browse the catalogue</a>
+      </div>
+      <p class="hero-note">new here? watch a sixty-second short first &mdash; then come back and read.</p>
+    </div>
+    <figure class="plate">
+      <img src="_media/bs_serpent_pole.jpg" alt="Hand-inked study plate: Moses beside the serpent of brass wound around a wooden pole, the tents of Israel sketched behind" width="1800" height="1005">
+      <figcaption>the serpent of brass, lifted in the camp &mdash; Numbers 21</figcaption>
+    </figure>
+  </div>
+</header>
+
+<svg class="tear" viewBox="0 0 1440 30" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <path transform="translate(0,3)" fill="rgba(51,41,29,.12)" d="M0,30 L0,12 L38,16 L74,6 L109,14 L151,9 L197,17 L243,8 L288,15 L332,5 L378,13 L423,18 L467,7 L512,14 L559,10 L603,17 L648,6 L694,13 L739,16 L784,8 L829,15 L874,11 L919,17 L963,5 L1008,12 L1053,16 L1097,7 L1141,14 L1186,10 L1231,16 L1276,6 L1320,13 L1365,17 L1404,9 L1440,14 L1440,30 Z"/>
+  <path style="fill:var(--paper-2)" d="M0,30 L0,12 L38,16 L74,6 L109,14 L151,9 L197,17 L243,8 L288,15 L332,5 L378,13 L423,18 L467,7 L512,14 L559,10 L603,17 L648,6 L694,13 L739,16 L784,8 L829,15 L874,11 L919,17 L963,5 L1008,12 L1053,16 L1097,7 L1141,14 L1186,10 L1231,16 L1276,6 L1320,13 L1365,17 L1404,9 L1440,14 L1440,30 Z"/>
+</svg>
+
+<section class="section alt" aria-labelledby="ways-h">
+  <div class="wrap">
+    <div class="shead">
+      <h2 id="ways-h">Three ways into one passage</h2>
+      <span class="hint">watch &#9656; sit &#9656; stay</span>
+    </div>
+    <div class="ways">
+      <div class="way">
+        <span class="kicker">The short &middot; 60 seconds</span>
+        <h3>Watch</h3>
+        <p>One truth from the passage, timed to the word. Enough to stop the scroll and point it at Jesus.</p>
+      </div>
+      <div class="way">
+        <span class="kicker">The film &middot; 8&ndash;10 minutes</span>
+        <h3>Sit</h3>
+        <p>The whole passage drawn scene by scene, told by the one who was there to see it.</p>
+      </div>
+      <div class="way main">
+        <span class="kicker">The study &middot; no clock</span>
+        <h3>Stay</h3>
+        <p>The desk itself. Every verse laid out with its margins &mdash; cross-references, the honest
+          questions, and where it lands.</p>
+        <a class="btn btn-ink" href="study-look-and-live.html">Start reading</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" aria-labelledby="feature-h" style="padding-top:0">
+  <div class="wrap">
+    <p class="slabel">Now on the desk</p>
+    <div class="feature">
+      <a class="plate" href="study-look-and-live.html" aria-label="Open the study: Look and Live">
+        <img src="_media/bs_pole_dusk.jpg" alt="The bronze serpent on its pole, silhouetted over the tents of the camp at dusk" width="1800" height="1005">
+      </a>
+      <div>
+        <span class="stamp">Study ready</span>
+        <h3 id="feature-h">Look and Live</h3>
+        <p class="ref">Numbers 21:4&ndash;9 &rarr; John 3:14</p>
+        <p>A camp full of dying people, a serpent of brass on a pole, and the night Jesus said the whole
+          scene had always been a picture of His cross. Read it slowly, with Moses as your guide.</p>
+        <a class="btn btn-ink" href="study-look-and-live.html">Read the study &mdash; about 12 minutes</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg class="tear" viewBox="0 0 1440 30" preserveAspectRatio="none" aria-hidden="true" focusable="false" style="background:var(--paper-2)">
+  <path transform="translate(0,3)" fill="rgba(51,41,29,.12)" d="M0,30 L0,12 L44,15 L86,7 L131,14 L176,9 L222,16 L266,6 L311,14 L357,10 L402,17 L448,7 L493,13 L538,16 L583,8 L629,15 L674,5 L719,13 L765,17 L810,8 L855,14 L901,10 L946,16 L991,6 L1037,13 L1082,17 L1127,8 L1172,14 L1218,10 L1263,16 L1308,6 L1353,13 L1398,16 L1440,10 L1440,30 Z"/>
+  <path style="fill:var(--paper)" d="M0,30 L0,12 L44,15 L86,7 L131,14 L176,9 L222,16 L266,6 L311,14 L357,10 L402,17 L448,7 L493,13 L538,16 L583,8 L629,15 L674,5 L719,13 L765,17 L810,8 L855,14 L901,10 L946,16 L991,6 L1037,13 L1082,17 L1127,8 L1172,14 L1218,10 L1263,16 L1308,6 L1353,13 L1398,16 L1440,10 L1440,30 Z"/>
+</svg>
+
+<section class="section" id="craft" aria-labelledby="craft-h">
+  <div class="wrap craft">
+    <figure class="plate">
+      <img src="_media/moses_studysheet.jpg" alt="A sketchbook spread of pencil studies of Moses: profile, grip on the staff, eyes, sandalled foot, full figure walking" width="1005" height="1800">
+      <figcaption>Moses &mdash; study sheet for <em>Look and Live</em></figcaption>
+    </figure>
+    <div>
+      <p class="slabel">From the sketchbooks</p>
+      <h3 id="craft-h">Studied before it is drawn</h3>
+      <p>Every witness is studied on paper before a single scene is inked &mdash; face, hands, the grip on
+        the staff. Every verse is fetched verbatim from the King James text and checked both ways:
+        the drawings against the Book, the Book against the drawings.</p>
+      <p>The films and these study pages come from the same desk. What you read here is the desk copy
+        &mdash; the passage in full, the margins showing their working.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="cat-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="shead">
+      <h2 id="cat-h">In the catalogue</h2>
+      <span class="hint">shorts &middot; films &middot; studies</span>
+    </div>
+    <div class="cards">
+      <a class="card" href="catalogue.html">
+        <span class="thumb"><img src="_media/goats_scapegoat.jpg" alt="A priest kneels and lays both hands on the head of a live goat" loading="lazy"><span class="ref">Leviticus 16</span></span>
+        <h3>The Two Goats</h3>
+        <p>One dies, one carries the sins away. Both halves of one Saviour.</p>
+        <span class="fmt"><span>60s</span><span>Film</span><span class="off">Study soon</span></span>
+      </a>
+      <a class="card" href="catalogue.html">
+        <span class="thumb"><img src="_media/storm_calm.jpg" alt="Jesus stands in the fishing boat, hand stretched over a becalmed sea, the disciples looking on" loading="lazy"><span class="ref">Mark 4:35&ndash;41</span></span>
+        <h3>The Storm</h3>
+        <p>Peace, be still &mdash; and the sea that drowns fishermen obeyed a Carpenter.</p>
+        <span class="fmt"><span>60s</span><span>Film</span><span class="off">Study soon</span></span>
+      </a>
+      <a class="card" href="catalogue.html">
+        <span class="thumb"><img src="_media/jericho_thread.jpg" alt="A single scarlet cord drawn in ink across a handmade paper page" loading="lazy"><span class="ref">Joshua 2</span></span>
+        <h3>The Scarlet Thread</h3>
+        <p>A cord in a window saved a family in a falling city.</p>
+        <span class="fmt"><span>60s</span><span class="off">Film soon</span><span class="off">Study soon</span></span>
+      </a>
+    </div>
+    <p class="more"><a class="btn btn-ghost" href="catalogue.html">See the whole catalogue</a></p>
+  </div>
+</section>
+
+<div class="goldseam" role="presentation"></div>
+<section class="landing" aria-labelledby="land-h">
+  <div class="wrap inner">
+    <div>
+      <p class="slabel">Where every page lands</p>
+      <h2 id="land-h">Different doors. One room.</h2>
+      <p>Shorts, films, studies &mdash; Old Testament and New &mdash; the whole Book keeps saying one name.
+        Every page on this desk ends in the same place, because every page of the Bible does.</p>
+      <blockquote class="kjv">
+        <span class="src">John 3:16 &middot; KJV</span>
+        For God so loved the world, that he gave his only begotten Son, that whosoever believeth in
+        him should not perish, but have everlasting life.
+      </blockquote>
+      <a class="btn btn-ink" href="study-look-and-live.html">Begin: Look and Live</a>
+    </div>
+    <figure class="plate">
+      <img src="_media/jesus_portrait.jpg" alt="Hand-inked portrait study of Jesus in a plain white garment, drawn in graphite, ink and muted wash" width="1005" height="1800">
+      <figcaption>the face every study is drawn toward</figcaption>
+    </figure>
+  </div>
+</section>
+
+<footer class="foot">
+  <a class="wordmark" href="index.html">AWAK<em>EDEN</em></a>
+  <span>The whole Bible, through Jesus. KJV verbatim. Hand-inked.</span>
+  <span class="mock">Design exploration &mdash; &ldquo;The Study Desk&rdquo; direction. Not the live site.</span>
+</footer>
+
+</body>
+</html>

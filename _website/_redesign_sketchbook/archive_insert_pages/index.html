@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Awakeden — The Archive of Insert Pages (mockup A: the Spine)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Caveat:wght@500;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   AWAKEDEN — THE ARCHIVE OF INSERT PAGES
+   Register of this page: STYLE ONE (the Spine).
+   One plain hand: ivory paper, ink, wash, kraft tape, faint
+   engineering grid, gold kept for His glory alone.
+   ============================================================ */
+:root{
+  --paper:#ece2c8;        /* the desk / binder ground            */
+  --sheet:#f6efdc;        /* a pasted working sheet              */
+  --sheet-hi:#fbf6e9;
+  --sheet-deep:#e7dbbc;
+  --kraft:#c2a87e;
+  --kraft-deep:#a78d62;
+  --ink:#2e2820;
+  --ink-mid:#57503f;
+  --ink-faint:#857a62;
+  --red:#a23b28;          /* madder — the scarlet thread, red letter */
+  --red-deep:#7e2c1e;
+  --blue:#5c74a0;         /* engineering-grid / blueprint ink    */
+  --grid:rgba(92,116,160,.16);
+  --gold:#c09a3e;
+  --gold-hi:#e9ce7b;
+  --gold-deep:#8f6e23;
+  --shadow:rgba(60,48,28,.22);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font:400 17.5px/1.75 "Spectral",Georgia,serif;
+  position:relative;
+  overflow-x:hidden;
+}
+/* paper tooth — one quiet noise layer over everything */
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:5;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+
+/* ---------- archive chrome (identical voice on every page) ---------- */
+.filing{
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  padding:8px 28px;border-bottom:1px solid rgba(46,40,32,.22);
+  font:400 11px/1.6 "Courier Prime",monospace;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-mid);
+}
+.nav{
+  display:flex;align-items:center;gap:34px;flex-wrap:wrap;
+  padding:20px 28px;max-width:1280px;margin:0 auto;
+}
+.wordmark{
+  font-family:"Libre Caslon Display",serif;font-size:27px;letter-spacing:.05em;
+  text-decoration:none;
+}
+.wordmark em{font-style:normal;color:var(--red)}
+.nav-links{display:flex;gap:26px;margin-left:auto;flex-wrap:wrap}
+.nav-links a{
+  font:500 14px/1 "Spectral",serif;letter-spacing:.10em;text-transform:uppercase;
+  text-decoration:none;color:var(--ink-mid);padding:6px 0;
+  border-bottom:2px solid transparent;
+}
+.nav-links a:hover,.nav-links a[aria-current]{color:var(--ink);border-bottom-color:var(--red)}
+
+/* ---------- shared hand-drawn devices ---------- */
+.hand{font-family:"Caveat",cursive;font-weight:500;color:var(--ink-mid)}
+.label{
+  font:400 11.5px/1.7 "Courier Prime",monospace;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--ink-mid);
+}
+.label b{color:var(--red);font-weight:700}
+.btn{
+  display:inline-block;background:var(--red);color:var(--sheet-hi);
+  font:600 14px/1 "Spectral",serif;letter-spacing:.12em;text-transform:uppercase;
+  padding:16px 28px 15px;text-decoration:none;
+  box-shadow:3px 4px 0 rgba(46,40,32,.28);transform:rotate(-.6deg);
+}
+.btn:hover{background:var(--red-deep)}
+.link-ink{
+  font:600 15px/1.4 "Spectral",serif;text-decoration:none;color:var(--ink);
+  border-bottom:2px solid rgba(162,59,40,.55);padding-bottom:1px;
+}
+.link-ink:hover{border-bottom-color:var(--red)}
+.tape{
+  position:absolute;width:96px;height:26px;background:rgba(194,168,126,.62);
+  box-shadow:0 1px 2px rgba(60,48,28,.18);
+  clip-path:polygon(3% 8%,97% 0,100% 88%,2% 100%);
+}
+.plate{position:relative;box-shadow:0 14px 34px var(--shadow)}
+.plate img{width:100%;height:auto}
+.plate figcaption{margin-top:12px}
+.gridpatch{
+  position:absolute;pointer-events:none;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),
+                   linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:22px 22px;
+  -webkit-mask-image:radial-gradient(closest-side,#000 40%,transparent 100%);
+          mask-image:radial-gradient(closest-side,#000 40%,transparent 100%);
+}
+.dotpatch{
+  position:absolute;pointer-events:none;
+  background-image:radial-gradient(rgba(92,116,160,.30) 1.1px,transparent 1.35px);
+  background-size:8px 8px;
+  -webkit-mask-image:radial-gradient(closest-side,#000 30%,transparent 100%);
+          mask-image:radial-gradient(closest-side,#000 30%,transparent 100%);
+}
+.goldstrip{ /* the ONE thin gold-leaf edge Style One allows itself */
+  position:absolute;top:24px;bottom:24px;right:10px;width:9px;
+  background:linear-gradient(180deg,#d8b254,#a67f28 28%,var(--gold-hi) 46%,#96742a 72%,#d8b254);
+  box-shadow:0 0 8px rgba(192,154,62,.5);
+}
+/* the scarlet thread — a drawn red arrow, OT to NT */
+.thread{display:inline-flex;align-items:center;gap:10px;white-space:nowrap}
+.thread svg{width:64px;height:16px;color:var(--red);flex:none}
+.thread .ref{font:700 12.5px/1 "Courier Prime",monospace;letter-spacing:.1em}
+
+/* ---------- hero spread ---------- */
+.hero{max-width:1280px;margin:18px auto 0;padding:0 28px}
+.hero-sheet{
+  position:relative;background:var(--sheet);
+  box-shadow:0 18px 44px var(--shadow);
+  padding:64px 64px 58px;
+  display:grid;grid-template-columns:minmax(0,7fr) minmax(0,6fr);gap:56px;
+  align-items:center;
+}
+.hero-sheet>.gridpatch{top:6%;left:2%;width:34%;height:52%;opacity:.8}
+.hero-sheet>.dotpatch{bottom:5%;left:38%;width:22%;height:30%}
+.hero-eyebrow{margin-bottom:26px}
+h1{
+  font-family:"Libre Caslon Display",serif;font-weight:400;
+  font-size:clamp(42px,5.4vw,74px);line-height:1.04;letter-spacing:-.01em;
+  margin-bottom:26px;
+}
+h1 .red{color:var(--red)}
+h1 .uline{position:relative;white-space:nowrap}
+h1 .uline svg{
+  position:absolute;left:-2%;right:-2%;bottom:-.14em;width:104%;height:.28em;
+  color:var(--red);opacity:.85;
+}
+.hero-hook{max-width:46ch;font-size:19px;color:var(--ink-mid);margin-bottom:34px}
+.hero-hook b{color:var(--ink);font-weight:600}
+.hero-ctas{display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+.hero-note{
+  margin-top:40px;font-size:23px;transform:rotate(-1.6deg);max-width:30ch;
+}
+.hero-note .thread svg{width:52px}
+.hero-plate{transform:rotate(1.1deg)}
+.hero-plate .tape.t1{top:-12px;left:8%;transform:rotate(-5deg)}
+.hero-plate .tape.t2{top:-10px;right:10%;transform:rotate(4deg)}
+
+/* ---------- sections ---------- */
+.section{max-width:1280px;margin:0 auto;padding:84px 28px 0}
+.section-head{max-width:760px;margin-bottom:44px}
+h2{
+  font-family:"Libre Caslon Display",serif;font-weight:400;
+  font-size:clamp(30px,3.4vw,44px);line-height:1.12;margin:14px 0 16px;
+}
+.section-head p{color:var(--ink-mid)}
+
+/* three ways in — filed index cards */
+.ways{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.way{
+  position:relative;background:var(--sheet-hi);padding:44px 30px 34px;
+  border:1px solid rgba(46,40,32,.16);box-shadow:0 8px 22px rgba(60,48,28,.12);
+  text-decoration:none;display:block;
+}
+.way:nth-child(1){transform:rotate(-.5deg)}
+.way:nth-child(3){transform:rotate(.5deg)}
+.way .tab{
+  position:absolute;top:-15px;left:20px;background:var(--sheet-hi);
+  border:1px solid rgba(46,40,32,.22);border-bottom:none;padding:5px 16px 3px;
+}
+.way h3{font-family:"Libre Caslon Display",serif;font-weight:400;font-size:27px;margin-bottom:10px}
+.way p{color:var(--ink-mid);font-size:16px}
+.way.main{background:var(--sheet);border:2px solid var(--red)}
+.way.main .tab{border:2px solid var(--red);border-bottom:none;color:var(--red)}
+.way.main h3 em{font-style:normal;color:var(--red)}
+.way .way-note{font-size:21px;margin-top:16px;transform:rotate(-1deg)}
+.way .btn{margin-top:22px;font-size:13px;padding:13px 22px 12px}
+
+/* ---------- the gilded proclamation (the one gold moment) ---------- */
+.gilded-wrap{max-width:1280px;margin:96px auto 0;padding:0 28px}
+.gilded-sheet{
+  position:relative;background:var(--sheet);box-shadow:0 18px 44px var(--shadow);
+  padding:26px;
+}
+.gilded{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(120% 90% at 20% 10%,rgba(255,240,190,.5),transparent 55%),
+    radial-gradient(100% 80% at 85% 90%,rgba(120,86,20,.38),transparent 60%),
+    repeating-linear-gradient(112deg,transparent 0 90px,rgba(120,86,20,.16) 90px 91px,transparent 91px 200px),
+    repeating-linear-gradient(23deg,transparent 0 140px,rgba(255,236,170,.20) 140px 141px,transparent 141px 260px),
+    linear-gradient(160deg,#cfa94c,#b98f33 45%,#d9b95e 70%,#ab8228);
+  display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:48px;
+  align-items:center;padding:56px;
+}
+.gilded .plate{transform:rotate(-1deg);box-shadow:0 16px 36px rgba(70,50,10,.45)}
+.gilded-copy .label{color:#4a3a12}
+.gilded-copy .label b{color:var(--red-deep)}
+.gilded blockquote{
+  font-family:"Libre Caslon Display",serif;
+  font-size:clamp(24px,2.6vw,36px);line-height:1.28;color:var(--red-deep);
+  border-left:4px solid var(--red-deep);padding-left:24px;margin:24px 0 12px;
+}
+.gilded cite{
+  display:block;font:700 13px/1 "Courier Prime",monospace;font-style:normal;
+  letter-spacing:.16em;color:#4a3a12;margin-top:16px;
+}
+.gilded .gilded-desc{color:#3c2f10;max-width:44ch;margin-top:18px}
+.gilded .gilded-ctas{display:flex;gap:26px;align-items:center;margin-top:30px;flex-wrap:wrap}
+.gilded .btn{background:var(--ink);box-shadow:3px 4px 0 rgba(50,36,6,.4)}
+.gilded .btn:hover{background:#000}
+.gilded .link-ink{color:#3c2f10;border-bottom-color:rgba(60,47,16,.5)}
+
+/* ---------- pages from the folio ---------- */
+.folio-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.folio-strip figure{position:relative;background:var(--sheet-hi);padding:12px 12px 14px;
+  box-shadow:0 8px 22px rgba(60,48,28,.14);border:1px solid rgba(46,40,32,.12)}
+.folio-strip figure:nth-child(odd){transform:rotate(-.7deg)}
+.folio-strip figure:nth-child(even){transform:rotate(.6deg)}
+.folio-strip figcaption{padding-top:10px}
+.folio-more{margin-top:34px}
+
+/* ---------- the registers legend ---------- */
+.registers{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.register{
+  background:var(--sheet-hi);border:1px solid rgba(46,40,32,.16);
+  padding:14px 14px 18px;box-shadow:0 8px 22px rgba(60,48,28,.12);
+}
+.register img{aspect-ratio:3/4;object-fit:cover;object-position:top}
+.register h4{font:600 15px/1.4 "Spectral",serif;letter-spacing:.06em;text-transform:uppercase;margin:14px 0 6px}
+.register h4 span{color:var(--red)}
+.register p{font-size:14.5px;color:var(--ink-mid);line-height:1.6}
+.register.gold h4 span{color:var(--gold-deep)}
+.register.blue h4 span{color:var(--blue)}
+
+/* ---------- footer ---------- */
+footer{
+  margin-top:110px;border-top:1px solid rgba(46,40,32,.25);
+  padding:54px 28px 64px;text-align:center;position:relative;
+}
+footer .wordmark{font-size:34px}
+footer p{color:var(--ink-mid);margin:14px auto 26px;max-width:52ch}
+.filed-stamp{
+  display:inline-block;font:700 12px/1.5 "Courier Prime",monospace;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--red);
+  border:2.5px solid var(--red);border-radius:4px;padding:8px 18px;
+  transform:rotate(-2deg);opacity:.85;
+}
+
+/* ---------- motion & responsive ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .way,.folio-strip figure,.register{transition:transform .25s ease,box-shadow .25s ease}
+  .way:hover,.folio-strip figure:hover,.register:hover{transform:rotate(0) translateY(-4px);box-shadow:0 16px 34px rgba(60,48,28,.2)}
+}
+@media (max-width:980px){
+  .hero-sheet{grid-template-columns:1fr;padding:44px 36px;gap:40px}
+  .gilded{grid-template-columns:1fr;padding:38px 30px}
+  .ways{grid-template-columns:1fr;max-width:560px}
+  .folio-strip,.registers{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  .folio-strip,.registers{grid-template-columns:1fr}
+  .nav{gap:18px}
+  .filing span:last-child{display:none}
+  .hero-sheet{padding:36px 22px}
+  .goldstrip{right:5px;width:6px}
+}
+</style>
+</head>
+<body>
+
+<div class="filing" role="note">
+  <span>Awakeden Archive &mdash; the whole Bible, through Jesus</span>
+  <span>Folio I &middot; The Spine &middot; register: Style One</span>
+</div>
+
+<nav class="nav" aria-label="Main">
+  <a class="wordmark" href="index.html" aria-current="page">AWAK<em>EDEN</em></a>
+  <div class="nav-links">
+    <a href="index.html" aria-current="page">The Spine</a>
+    <a href="catalogue.html">The Index</a>
+    <a href="study.html">The Studies</a>
+  </div>
+</nav>
+
+<!-- ================= HERO — a working spread in the plain hand ================= -->
+<header class="hero">
+  <div class="hero-sheet">
+    <span class="gridpatch" aria-hidden="true"></span>
+    <span class="dotpatch" aria-hidden="true"></span>
+    <span class="goldstrip" aria-hidden="true"></span>
+
+    <div class="hero-copy">
+      <p class="label hero-eyebrow">Hand-inked &middot; Old Testament to New &middot; <b>every page lands on Jesus</b></p>
+      <h1>Finding <span class="red">Jesus</span><br>in the whole Bible,<br><span class="uline">one page at a time.<svg viewBox="0 0 220 14" preserveAspectRatio="none" aria-hidden="true"><path d="M3 8 C 40 3, 90 11, 132 6 S 200 4, 217 8" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/></svg></span></h1>
+      <p class="hero-hook">Awakeden is a working sketchbook: Bible history drawn out by hand on aged paper. <b>Watch a short in a minute. Sit with a film for ten. Then stay</b> &mdash; the full studies live here, laid out to be read slowly.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="study.html">Start reading</a>
+        <a class="link-ink" href="catalogue.html">Open the index &rarr;</a>
+      </div>
+      <p class="hero-note hand">every thread in this book runs to Him
+        <span class="thread" aria-hidden="true"><svg viewBox="0 0 90 20"><path d="M4 12 C 26 6, 54 8, 76 10" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M67 4 L 80 10 L 66 16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </p>
+    </div>
+
+    <figure class="plate hero-plate">
+      <span class="tape t1" aria-hidden="true"></span>
+      <span class="tape t2" aria-hidden="true"></span>
+      <img src="_media/bs_s01_camp_wide.jpg" alt="Hand-inked plate: Moses standing before the tent camp of Israel spread across the wilderness, ink and watercolour on aged paper" width="1600" height="893">
+      <figcaption class="label">Plate 001 &middot; Numbers 21 &middot; Israel at the edge of the land &mdash; from <b>The Bronze Serpent</b></figcaption>
+    </figure>
+  </div>
+</header>
+
+<!-- ================= THREE WAYS IN ================= -->
+<section class="section" aria-labelledby="ways-h">
+  <div class="section-head">
+    <p class="label">One book &middot; three ways in</p>
+    <h2 id="ways-h">Start with a minute. Stay for the study.</h2>
+  </div>
+  <div class="ways">
+    <a class="way" href="catalogue.html">
+      <span class="tab label">The short &middot; 60 sec</span>
+      <h3>Watch the short</h3>
+      <p>One truth, word-timed, drawn before your eyes. Enough to stop the scroll and point it at Jesus.</p>
+    </a>
+    <a class="way" href="catalogue.html">
+      <span class="tab label">The film &middot; 8&ndash;10 min</span>
+      <h3>Sit with the film</h3>
+      <p>The whole passage, spread by spread &mdash; the full story behind the short, told in the same hand.</p>
+    </a>
+    <div class="way main">
+      <span class="tab label">The study &middot; no clock</span>
+      <h3>Read the <em>whole study</em></h3>
+      <p>Every page, every verse, every red-letter word &mdash; laid out to be read slowly. This is where it all lives.</p>
+      <p class="way-note hand">this site is the main meal &mdash;</p>
+      <a class="btn" href="study.html">Start reading</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INSERT PAGE: THE GILDED PROCLAMATION ================= -->
+<section class="gilded-wrap" aria-labelledby="gilded-h">
+  <div class="gilded-sheet">
+    <div class="gilded">
+      <figure class="plate">
+        <img src="_media/insert_gilded_proclamation.jpg" alt="Gilded plate: Jesus with open arms on a cracked gold-leaf ground, the brass serpent on a pole before him" width="1600" height="893">
+      </figure>
+      <div class="gilded-copy">
+        <p class="label">Insert page &middot; <b>the Gilded Proclamation</b> &mdash; gold is kept for His glory alone</p>
+        <h2 id="gilded-h" style="position:absolute;left:-9999px">Now showing: The Bronze Serpent</h2>
+        <blockquote>&ldquo;And as Moses lifted up the serpent in the wilderness, even so must the Son of man be lifted up:&rdquo;
+          <cite>John 3:14 &middot; red letter &mdash; His words, verbatim KJV</cite>
+        </blockquote>
+        <p class="gilded-desc">Now showing: <strong>The Bronze Serpent</strong> &mdash; a night of fiery serpents in Numbers 21, and the strange mercy on a pole that Jesus said was a picture of Himself.</p>
+        <div class="gilded-ctas">
+          <a class="btn" href="study.html">Read the study</a>
+          <a class="link-ink" href="catalogue.html">All films &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PAGES FROM THE CURRENT FOLIO ================= -->
+<section class="section" aria-labelledby="folio-h">
+  <div class="section-head">
+    <p class="label">From the current folio &middot; Types &amp; Shadows &middot; No. 04</p>
+    <h2 id="folio-h">Pages from The Bronze Serpent</h2>
+    <p>Sixty-eight hand-inked plates, Numbers 21 to John 3. A few of them, straight off the desk.</p>
+  </div>
+  <div class="folio-strip">
+    <figure>
+      <img src="_media/bs_s19_kneel.jpg" alt="Plate: the people of Israel kneeling around Moses, heads bowed" loading="lazy" width="1600" height="893">
+      <figcaption class="label">Plate 019 &middot; &ldquo;We have sinned&rdquo; &mdash; the camp kneels</figcaption>
+    </figure>
+    <figure>
+      <img src="_media/bs_s28_forge.jpg" alt="Plate: hands working brass at a forge, sparks and firelight" loading="lazy" width="1600" height="893">
+      <figcaption class="label">Plate 028 &middot; The forge &mdash; brass, fire, a form taking shape</figcaption>
+    </figure>
+    <figure>
+      <img src="_media/bs_s45_golgotha.jpg" alt="Plate: Golgotha from a distance, three crosses on the hill under a heavy sky" loading="lazy" width="1600" height="893">
+      <figcaption class="label">Plate 045 &middot; Golgotha &mdash; the shadow the pole was pointing to</figcaption>
+    </figure>
+    <figure>
+      <img src="_media/bs_s58_john316_card.jpg" alt="Plate: Jesus with open hands before radiating light, the John 3:16 spread" loading="lazy" width="1600" height="893">
+      <figcaption class="label">Plate 058 &middot; Scribed ink &middot; John 3:16</figcaption>
+    </figure>
+  </div>
+  <p class="folio-more"><a class="link-ink" href="study.html">Read The Bronze Serpent, page by page &rarr;</a></p>
+</section>
+
+<!-- ================= THE REGISTERS LEGEND ================= -->
+<section class="section" aria-labelledby="reg-h">
+  <div class="section-head">
+    <p class="label">How this archive is inked</p>
+    <h2 id="reg-h">One hand &mdash; and its insert pages</h2>
+    <p>The whole archive is drawn in one plain hand: Style One. A few pages are deliberately different &mdash; <em>insert pages</em>, each register kept for one kind of moment. Never a costume change; always a reason.</p>
+  </div>
+  <div class="registers">
+    <div class="register">
+      <img src="_media/style1_baseline_portrait.jpg" alt="Style One sample: ink-and-wash portrait of Moses on ivory collage paper" loading="lazy">
+      <h4><span>Style One</span> &mdash; the spine</h4>
+      <p>Aged paper, ink and wash. Every story page, every reading page. The default is the identity.</p>
+    </div>
+    <div class="register">
+      <img src="_media/insert_scholars_margin.jpg" alt="Scholar's Margin sample: a two-panel typology diagram joined by a drawn arrow" loading="lazy" style="aspect-ratio:3/4;object-fit:cover">
+      <h4><span>Scholar&rsquo;s Margin</span></h4>
+      <p>Diagrams, threads, cross-references. The index is filed in this hand &mdash; and so is every &ldquo;shadow &rarr; body&rdquo; breakdown.</p>
+    </div>
+    <div class="register gold">
+      <img src="_media/register_gilded_moses.jpg" alt="Gilded Proclamation sample: figure against cracked gold leaf" loading="lazy">
+      <h4><span>Gilded Proclamation</span></h4>
+      <p>Cracked gold ground. Kept for declared Scripture and Christ&rsquo;s glory &mdash; one gold moment per page, at most.</p>
+    </div>
+    <div class="register blue">
+      <img src="_media/register_cyanotype_blueprint.jpg" alt="Cyanotype sample: portrait rendered entirely in blueprint blue wash" loading="lazy">
+      <h4><span>The Blueprint</span> (cyanotype)</h4>
+      <p>Cold blue for what is announced but not yet inked. Coming episodes are filed as blueprints in the index.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a class="wordmark" href="index.html">AWAK<em>EDEN</em></a>
+  <p>The whole Bible, through Jesus &mdash; hand-inked in one book. Shorts for the scroll, films for the table, and this archive to read slowly.</p>
+  <span class="filed-stamp">Filed &middot; awakeden.com &middot; MMXXVI</span>
+</footer>
+
+</body>
+</html>

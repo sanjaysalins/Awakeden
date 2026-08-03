@@ -1,0 +1,691 @@
+[
+ {
+  "num": 1,
+  "name": "s01_wide",
+  "beat": 1,
+  "start": 0.0,
+  "end": 7.449,
+  "dur": 7.449,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 2,
+  "name": "s02_triptych",
+  "beat": 1,
+  "start": 7.449,
+  "end": 17.091,
+  "dur": 9.642,
+  "mode": "pingpong",
+  "clip_dur": 5.041667
+ },
+ {
+  "num": 3,
+  "name": "s03_eyes_haunted",
+  "beat": 1,
+  "start": 17.091,
+  "end": 21.486,
+  "dur": 4.395,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 4,
+  "name": "s04_icon_pole",
+  "beat": 1,
+  "start": 21.486,
+  "end": 27.594,
+  "dur": 6.108,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 5,
+  "name": "s05_graves",
+  "beat": 1,
+  "start": 27.594,
+  "end": 32.388,
+  "dur": 4.794,
+  "mode": "once_trim",
+  "clip_dur": 5.041667
+ },
+ {
+  "num": 6,
+  "name": "s06_dying_hand_eye",
+  "beat": 1,
+  "start": 32.388,
+  "end": 36.726,
+  "dur": 4.338,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 7,
+  "name": "s07_ungrateful_camp",
+  "beat": 2,
+  "start": 36.726,
+  "end": 42.894,
+  "dur": 6.168,
+  "mode": "pingpong",
+  "clip_dur": 5.041667
+ },
+ {
+  "num": 8,
+  "name": "s08_wandering_column",
+  "beat": 2,
+  "start": 42.894,
+  "end": 52.4,
+  "dur": 9.506,
+  "mode": "fwd_tail_bounce",
+  "clip_dur": 5.041667,
+  "tail_s": 1.5
+ },
+ {
+  "num": 9,
+  "name": "s09_manna_scorned",
+  "beat": 2,
+  "start": 52.4,
+  "end": 62.312,
+  "dur": 9.912,
+  "mode": "fwd_tail_bounce",
+  "clip_dur": 5.041667,
+  "tail_s": 1.5
+ },
+ {
+  "num": 10,
+  "name": "s10_vc_discouraged",
+  "beat": 2,
+  "start": 62.312,
+  "end": 68.313,
+  "dur": 6.001,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 11,
+  "name": "s11_crowd_angry",
+  "beat": 2,
+  "start": 68.313,
+  "end": 76.808,
+  "dur": 8.495,
+  "mode": "pingpong",
+  "clip_dur": 5.041667
+ },
+ {
+  "num": 12,
+  "name": "s12_vc_wherefore",
+  "beat": 2,
+  "start": 76.808,
+  "end": 88.396,
+  "dur": 11.588,
+  "mode": "once_hold",
+  "clip_dur": 10.866667
+ },
+ {
+  "num": 13,
+  "name": "s13_vignette_calf",
+  "beat": 2,
+  "start": 88.396,
+  "end": 97.944,
+  "dur": 9.548,
+  "mode": "pingpong",
+  "clip_dur": 5.041667
+ },
+ {
+  "num": 14,
+  "name": "s14_serpent_hint",
+  "beat": 2,
+  "start": 97.944,
+  "end": 104.989,
+  "dur": 7.045,
+  "mode": "once_hold",
+  "clip_dur": 6.166667
+ },
+ {
+  "num": 15,
+  "name": "s15_vc_fiery_serpents",
+  "beat": 2,
+  "start": 104.989,
+  "end": 112.814,
+  "dur": 7.825,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 16,
+  "name": "s16_bite_closeup",
+  "beat": 2,
+  "start": 112.814,
+  "end": 116.368,
+  "dur": 3.554,
+  "mode": "once_trim",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 17,
+  "name": "s17_vignette_collapse",
+  "beat": 2,
+  "start": 116.368,
+  "end": 125.046,
+  "dur": 8.678,
+  "mode": "pingpong",
+  "clip_dur": 5.041667
+ },
+ {
+  "num": 18,
+  "name": "s18_moses_empty_hands",
+  "beat": 2,
+  "start": 125.046,
+  "end": 132.574,
+  "dur": 7.528,
+  "mode": "once_hold",
+  "clip_dur": 6.6
+ },
+ {
+  "num": 19,
+  "name": "s19_people_kneel",
+  "beat": 3,
+  "start": 132.574,
+  "end": 138.418,
+  "dur": 5.844,
+  "mode": "pingpong",
+  "clip_dur": 5.041667
+ },
+ {
+  "num": 20,
+  "name": "s20_vc_we_have_sinned",
+  "beat": 3,
+  "start": 138.418,
+  "end": 148.127,
+  "dur": 9.709,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 21,
+  "name": "s21_moses_intercede",
+  "beat": 3,
+  "start": 148.127,
+  "end": 154.015,
+  "dur": 5.888,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 22,
+  "name": "s22_moses_listening",
+  "beat": 3,
+  "start": 154.015,
+  "end": 164.606,
+  "dur": 10.591,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 23,
+  "name": "s23_lord_presence",
+  "beat": 3,
+  "start": 164.606,
+  "end": 168.472,
+  "dur": 3.866,
+  "mode": "once_trim",
+  "clip_dur": 8.041667
+ },
+ {
+  "num": 24,
+  "name": "s24_vc_make_thee",
+  "beat": 3,
+  "start": 168.472,
+  "end": 178.074,
+  "dur": 9.602,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 25,
+  "name": "s25_moses_empty_negation",
+  "beat": 3,
+  "start": 178.074,
+  "end": 184.114,
+  "dur": 6.04,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 26,
+  "name": "s26_moses_resolve_serpent",
+  "beat": 3,
+  "start": 184.114,
+  "end": 192.506,
+  "dur": 8.392,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 27,
+  "name": "s27_hands_gather_ore",
+  "beat": 3,
+  "start": 192.506,
+  "end": 197.068,
+  "dur": 4.562,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 28,
+  "name": "s28_forge_acting",
+  "beat": 3,
+  "start": 197.068,
+  "end": 204.032,
+  "dur": 6.964,
+  "mode": "once_trim",
+  "clip_dur": 7.033333
+ },
+ {
+  "num": 29,
+  "name": "s29_pole_first_healing",
+  "beat": 3,
+  "start": 204.032,
+  "end": 209.792,
+  "dur": 5.76,
+  "mode": "pingpong",
+  "clip_dur": 5.041667
+ },
+ {
+  "num": 30,
+  "name": "s30_payoff_fever_breaks",
+  "beat": 3,
+  "start": 209.792,
+  "end": 228.248,
+  "dur": 18.456,
+  "mode": "slow_pingpong",
+  "clip_dur": 5.041667,
+  "factor": 1.8303
+ },
+ {
+  "num": 31,
+  "name": "s31_moses_why_serpent",
+  "beat": 4,
+  "start": 228.248,
+  "end": 232.89,
+  "dur": 4.642,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 32,
+  "name": "s32_pole_silhouette_dusk",
+  "beat": 4,
+  "start": 232.89,
+  "end": 258.827,
+  "dur": 25.937,
+  "mode": "slow_pingpong",
+  "clip_dur": 8.041667,
+  "factor": 1.6127
+ },
+ {
+  "num": 33,
+  "name": "s33_vignette_universal",
+  "beat": 4,
+  "start": 258.827,
+  "end": 272.608,
+  "dur": 13.781,
+  "mode": "pingpong",
+  "clip_dur": 5.041667
+ },
+ {
+  "num": 34,
+  "name": "s34_moses_walking_dusk",
+  "beat": 4,
+  "start": 272.608,
+  "end": 284.163,
+  "dur": 11.555,
+  "mode": "fwd_tail_bounce",
+  "clip_dur": 4.041667,
+  "tail_s": 1.5
+ },
+ {
+  "num": 35,
+  "name": "s35_moses_honest_close",
+  "beat": 5,
+  "start": 284.163,
+  "end": 293.197,
+  "dur": 9.034,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 36,
+  "name": "s36_proud_man_turns_away",
+  "beat": 5,
+  "start": 293.197,
+  "end": 314.617,
+  "dur": 21.42,
+  "mode": "slow_pingpong",
+  "clip_dur": 5.041667,
+  "factor": 2.0
+ },
+ {
+  "num": 37,
+  "name": "s37_calf_flashback",
+  "beat": 5,
+  "start": 314.617,
+  "end": 325.409,
+  "dur": 10.792,
+  "mode": "pingpong",
+  "clip_dur": 5.041667
+ },
+ {
+  "num": 38,
+  "name": "s38_dread_image",
+  "beat": 5,
+  "start": 325.409,
+  "end": 344.765,
+  "dur": 19.356,
+  "mode": "slow_pingpong",
+  "clip_dur": 4.041667,
+  "factor": 2.0
+ },
+ {
+  "num": 39,
+  "name": "s39_moses_sleepless_candle",
+  "beat": 5,
+  "start": 344.765,
+  "end": 350.2,
+  "dur": 5.435,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 40,
+  "name": "s40_moses_resolve_returning",
+  "beat": 5,
+  "start": 350.2,
+  "end": 364.474,
+  "dur": 14.274,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 41,
+  "name": "s41_moses_long_road",
+  "beat": 5,
+  "start": 364.474,
+  "end": 382.984,
+  "dur": 18.51,
+  "mode": "slow_pingpong",
+  "clip_dur": 8.041667,
+  "factor": 1.1509
+ },
+ {
+  "num": 42,
+  "name": "s42_hands_finish_forge",
+  "beat": 5,
+  "start": 382.984,
+  "end": 388.667,
+  "dur": 5.683,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 43,
+  "name": "s43_insert_scholars_margin2",
+  "beat": 6,
+  "start": 388.667,
+  "end": 402.898,
+  "dur": 14.231,
+  "mode": "once_hold",
+  "clip_dur": 13.6
+ },
+ {
+  "num": 44,
+  "name": "s44_shadow_cross",
+  "beat": 6,
+  "start": 402.898,
+  "end": 408.919,
+  "dur": 6.021,
+  "mode": "once_trim",
+  "clip_dur": 7.166667
+ },
+ {
+  "num": 45,
+  "name": "s45_golgotha_wide",
+  "beat": 6,
+  "start": 408.919,
+  "end": 419.9,
+  "dur": 10.981,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 46,
+  "name": "s46_thesis_pair",
+  "beat": 6,
+  "start": 419.9,
+  "end": 424.938,
+  "dur": 5.038,
+  "mode": "once_hold",
+  "clip_dur": 5.0
+ },
+ {
+  "num": 47,
+  "name": "s47_golgotha_midshot",
+  "beat": 6,
+  "start": 424.938,
+  "end": 434.256,
+  "dur": 9.318,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 48,
+  "name": "s48_vc_curse_for_us",
+  "beat": 6,
+  "start": 434.256,
+  "end": 442.319,
+  "dur": 8.063,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 49,
+  "name": "s49_christ_radiant_begin",
+  "beat": 6,
+  "start": 442.319,
+  "end": 450.962,
+  "dur": 8.643,
+  "mode": "once_trim",
+  "clip_dur": 8.8
+ },
+ {
+  "num": 50,
+  "name": "s50_christ_close_words",
+  "beat": 6,
+  "start": 450.962,
+  "end": 457.296,
+  "dur": 6.334,
+  "mode": "once_hold",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 51,
+  "name": "s51_christ_draw_all_men",
+  "beat": 6,
+  "start": 457.296,
+  "end": 464.839,
+  "dur": 7.543,
+  "mode": "once_hold",
+  "clip_dur": 6.866667
+ },
+ {
+  "num": 52,
+  "name": "s52_moses_reflecting",
+  "beat": 6,
+  "start": 464.839,
+  "end": 475.462,
+  "dur": 10.623,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 53,
+  "name": "s53_moses_know_that_now",
+  "beat": 6,
+  "start": 475.462,
+  "end": 478.912,
+  "dur": 3.45,
+  "mode": "once_trim",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 54,
+  "name": "s54_timeshift_enshrined",
+  "beat": 6,
+  "start": 478.912,
+  "end": 486.241,
+  "dur": 7.329,
+  "mode": "fwd_tail_bounce",
+  "clip_dur": 5.041667,
+  "tail_s": 1.5
+ },
+ {
+  "num": 55,
+  "name": "s55_hezekiah_breaks",
+  "beat": 6,
+  "start": 486.241,
+  "end": 493.646,
+  "dur": 7.405,
+  "mode": "once_hold",
+  "clip_dur": 7.4
+ },
+ {
+  "num": 56,
+  "name": "s56_moses_affirms",
+  "beat": 6,
+  "start": 493.646,
+  "end": 498.303,
+  "dur": 4.657,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 57,
+  "name": "s57_bridge_moses_christ",
+  "beat": 6,
+  "start": 498.303,
+  "end": 508.414,
+  "dur": 10.111,
+  "mode": "once_hold",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 58,
+  "name": "s58_vc_john316",
+  "beat": 6,
+  "start": 508.414,
+  "end": 518.14,
+  "dur": 9.726,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 59,
+  "name": "s59_moses_be_still",
+  "beat": 7,
+  "start": 518.14,
+  "end": 523.896,
+  "dur": 5.756,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 60,
+  "name": "s60_vignette_selfeffort",
+  "beat": 7,
+  "start": 523.896,
+  "end": 532.07,
+  "dur": 8.174,
+  "mode": "pingpong",
+  "clip_dur": 5.041667
+ },
+ {
+  "num": 61,
+  "name": "s61_moses_thatisyou",
+  "beat": 7,
+  "start": 532.07,
+  "end": 539.334,
+  "dur": 7.264,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 62,
+  "name": "s62_moses_neverasked",
+  "beat": 7,
+  "start": 539.334,
+  "end": 544.904,
+  "dur": 5.57,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 63,
+  "name": "s63_vignette_least_last_child",
+  "beat": 7,
+  "start": 544.904,
+  "end": 553.365,
+  "dur": 8.461,
+  "mode": "pingpong",
+  "clip_dur": 8.041667
+ },
+ {
+  "num": 64,
+  "name": "s64_moses_sit_with_that",
+  "beat": 7,
+  "start": 553.365,
+  "end": 559.119,
+  "dur": 5.754,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 65,
+  "name": "s65_christ_open_invite",
+  "beat": 7,
+  "start": 559.119,
+  "end": 565.025,
+  "dur": 5.906,
+  "mode": "once_trim",
+  "clip_dur": 6.0
+ },
+ {
+  "num": 66,
+  "name": "s66_moses_direct_question",
+  "beat": 7,
+  "start": 565.025,
+  "end": 575.98,
+  "dur": 10.955,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 67,
+  "name": "s67_insert_gilded_proclamation2",
+  "beat": 7,
+  "start": 575.98,
+  "end": 584.974,
+  "dur": 8.994,
+  "mode": "once_trim",
+  "clip_dur": 9.0
+ },
+ {
+  "num": 68,
+  "name": "s68_landing",
+  "beat": 7,
+  "start": 584.974,
+  "end": 592.339,
+  "dur": 7.365,
+  "mode": "static_still",
+  "clip_dur": null
+ }
+]

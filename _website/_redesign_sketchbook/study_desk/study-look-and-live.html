@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Look and Live — a study in Numbers 21 &amp; John 3 | Awakeden</title>
+<meta name="description" content="Moses, the serpent of brass, and the night Jesus said it had always pointed to Him. Numbers 21:4–9 read slowly, verbatim KJV, with full margins.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,400;1,7..72,500&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f6efdf; --paper-2:#efe5cd; --paper-3:#fbf5e6;
+  --kraft:#c8b28d; --kraft-2:#a8916a;
+  --ink:#33291d; --ink-2:#75664f;
+  --blue:#44597a; --grid:rgba(68,89,122,.11);
+  --madder:#9c392a; --gold-d:#8a6410;
+  --leaf:linear-gradient(100deg,#8a6410,#caa54a 28%,#8f6d1a 52%,#e2c368 74%,#a37c1e);
+  --line:rgba(51,41,29,.16);
+  --disp:"Fraunces",Georgia,serif; --body:"Literata",Georgia,serif; --hand:"Caveat",cursive;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font:400 1.05rem/1.7 var(--body)}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--blue)}
+a:focus-visible,button:focus-visible{outline:2px dashed var(--blue);outline-offset:3px}
+h1,h2,h3,h4{font-family:var(--disp);font-weight:600;line-height:1.12}
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:var(--paper);padding:.6rem 1rem;z-index:10}
+.skip:focus{left:0}
+.wrap{max-width:1150px;margin:0 auto;padding:0 clamp(1.2rem,4vw,3rem)}
+.nav{display:flex;align-items:center;gap:1.6rem;flex-wrap:wrap;padding:1.05rem clamp(1.2rem,4vw,3rem);border-bottom:1px solid var(--line)}
+.wordmark{font:600 1.5rem var(--disp);color:var(--ink);text-decoration:none}
+.wordmark em{font-style:normal;font-weight:700;color:var(--madder)}
+.nav-links{margin-left:auto;display:flex;gap:1.5rem;flex-wrap:wrap}
+.nav-links a{color:var(--ink);text-decoration:none;font:500 .95rem var(--body)}
+.nav-links a:hover{color:var(--madder)}
+
+/* ---------- opener ---------- */
+.opener{padding:clamp(2.2rem,5vw,3.8rem) 0 1.8rem;
+  background-image:repeating-linear-gradient(0deg,var(--grid) 0 1px,transparent 1px 132px),
+                   repeating-linear-gradient(90deg,var(--grid) 0 1px,transparent 1px 132px)}
+.crumb{font:600 .74rem var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2)}
+.crumb a{color:var(--ink-2)}
+.opener h1{font-size:clamp(2.5rem,5.5vw,4.2rem);margin:.7rem 0 .6rem}
+.dek{font-size:1.22rem;font-style:italic;color:var(--ink-2);max-width:34em}
+.metarow{display:flex;flex-wrap:wrap;gap:.6rem 1.6rem;margin-top:1.3rem;font:600 .74rem var(--body);
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.metarow .redkey{color:var(--madder)}
+.metarow .redkey::before{content:"";display:inline-block;width:.85em;height:.32em;background:var(--madder);margin-right:.45em;vertical-align:.12em}
+
+/* taped plate */
+.plate{position:relative;background:#fdf8ec;padding:10px;border:1px solid rgba(51,41,29,.13);
+  box-shadow:0 1px 0 rgba(51,41,29,.07),0 16px 34px -20px rgba(51,41,29,.5)}
+.plate::before,.plate::after{content:"";position:absolute;top:-13px;width:88px;height:27px;
+  background:linear-gradient(rgba(200,178,141,.88),rgba(180,156,118,.82));box-shadow:inset 0 0 6px rgba(51,41,29,.18)}
+.plate::before{left:9%;transform:rotate(-4deg)}
+.plate::after{right:9%;transform:rotate(3deg)}
+.plate figcaption{font:500 1.3rem/1.3 var(--hand);color:var(--ink-2);padding:.7rem .3rem .2rem;transform:rotate(-.5deg)}
+.opener .plate{margin-top:2rem}
+
+.tear{display:block;width:100%;height:30px;margin-bottom:-1px}
+
+/* ---------- the reading surface ---------- */
+.study{padding:clamp(2rem,4vw,3.2rem) 0 1rem}
+.row{display:grid;grid-template-columns:minmax(0,1fr) 285px;column-gap:clamp(2.2rem,4.5vw,3.6rem);padding:.4rem 0}
+.main{max-width:63ch;font-size:1.14rem;line-height:1.85}
+.main p{margin:0 0 1.35rem}
+.main .lede::first-letter{font-family:var(--disp);font-weight:600;font-size:3.6em;float:left;line-height:.8;padding:.05em .13em 0 0;color:var(--ink)}
+.slabel{font:600 .74rem var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);
+  display:flex;align-items:center;gap:1rem;margin:2.4rem 0 1.3rem}
+.slabel::after{content:"";flex:1;height:1px;background:var(--line)}
+.byline{font-style:italic;color:var(--ink-2);font-size:1rem;margin-bottom:1.4rem}
+.byline a{color:var(--blue)}
+
+/* scripture cards */
+.kjv{background:var(--paper-3);border:1px solid var(--line);border-top:3px solid var(--ink-2);
+  padding:1.5rem 1.7rem;margin:0 0 1.5rem;font-size:1.16rem;line-height:1.9}
+.kjv .src{display:block;font:600 .72rem var(--body);letter-spacing:.15em;text-transform:uppercase;color:var(--ink-2);margin-bottom:.75rem}
+.kjv .vn{font:600 .62em var(--body);color:var(--ink-2);vertical-align:super;margin:0 .3em 0 .55em}
+.kjv .vn:first-child{margin-left:0}
+.sc{font-variant:small-caps;letter-spacing:.04em}
+.kjv.red{border-top:3px solid var(--madder);color:var(--madder)}
+.kjv.red .src{color:var(--madder)}
+.kjv.gilt{border-color:rgba(138,100,16,.5);border-top:3px solid var(--gold-d)}
+.kjv.gilt .src{color:var(--gold-d)}
+
+/* witness voice */
+.witness p{font-size:1.14rem}
+.witness .voice{font-style:italic}
+
+/* inline figures */
+.fig{margin:2rem 0 2.2rem}
+
+/* ---------- margin apparatus ---------- */
+.aside{padding-top:.5rem}
+.note{border-top:1.5px solid rgba(51,41,29,.24);padding-top:.75rem;margin-bottom:1.7rem;font-size:.92rem;line-height:1.6;color:var(--ink-2)}
+.note h4{font:600 .7rem var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2);margin-bottom:.45rem}
+.note .vref{font:600 .78rem var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+.note q{font-style:italic}
+.handnote{font:500 1.42rem/1.32 var(--hand);color:#4c576e;transform:rotate(-1deg);margin-bottom:1.7rem}
+.handnote .lead{display:block;margin-top:.2rem}
+.chain{list-style:none;border-left:1.5px solid var(--blue);margin:.4rem 0 0 .3rem;padding-left:1rem}
+.chain li{position:relative;padding:.28rem 0;font:600 .8rem var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+.chain li::before{content:"";position:absolute;left:-1.32rem;top:.95em;width:.55rem;height:1.5px;background:var(--blue)}
+.chain .why{display:block;font:400 .85rem/1.45 var(--body);letter-spacing:0;text-transform:none;color:var(--ink-2)}
+.mini{max-width:230px}
+.mini img{width:100%}
+
+/* ---------- landing ---------- */
+.goldseam{height:6px;background:var(--leaf);box-shadow:0 1px 0 rgba(51,41,29,.3);margin-top:2.5rem}
+.landing{background:var(--paper-2);padding:clamp(2.4rem,5vw,4rem) 0}
+.landing .slabel{color:var(--gold-d)}
+.landing .slabel::after{background:rgba(138,100,16,.4)}
+.landing .main{max-width:63ch;font-size:1.14rem;line-height:1.85}
+.landing .main p{margin-bottom:1.35rem}
+.landing .fig{max-width:560px}
+.ctarow{display:flex;gap:.9rem;flex-wrap:wrap;margin-top:1.8rem}
+.btn{display:inline-block;text-decoration:none;font:600 .95rem var(--body);padding:.75rem 1.25rem;border:1.5px solid var(--ink);color:var(--ink)}
+.btn-ink{background:var(--ink);color:var(--paper)}
+.btn-ink:hover{background:transparent;color:var(--ink)}
+.btn:hover{background:var(--ink);color:var(--paper)}
+
+/* next / footer */
+.nextband{border-top:1px solid var(--line);padding:1.8rem clamp(1.2rem,4vw,3rem);display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;font-size:.98rem}
+.nextband .lab{font:600 .7rem var(--body);letter-spacing:.15em;text-transform:uppercase;color:var(--ink-2);display:block}
+.nextband a{color:var(--ink)}
+.foot{border-top:1px solid var(--line);padding:2.2rem clamp(1.2rem,4vw,3rem);display:flex;gap:1.6rem;flex-wrap:wrap;align-items:baseline;color:var(--ink-2);font-size:.92rem}
+.foot .wordmark{font-size:1.15rem}
+.foot .mock{margin-left:auto;font-style:italic}
+
+@media (max-width:980px){
+  .row{grid-template-columns:1fr}
+  .aside{max-width:63ch;border-top:1px dashed rgba(51,41,29,.3);margin-top:.6rem;padding-top:1.2rem}
+  .aside .note,.aside .handnote{margin-bottom:1.2rem}
+  .mini{max-width:200px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#content">Skip to the study</a>
+
+<nav class="nav" aria-label="Main">
+  <a class="wordmark" href="index.html">AWAK<em>EDEN</em></a>
+  <div class="nav-links">
+    <a href="catalogue.html">Catalogue</a>
+    <a href="study-look-and-live.html" aria-current="page">Studies</a>
+    <a href="index.html#craft">The desk</a>
+  </div>
+</nav>
+
+<header class="opener">
+  <div class="wrap">
+    <p class="crumb"><a href="catalogue.html">Types &amp; Shadows</a> &mdash; the Old Testament, drawing Christ in advance</p>
+    <h1>Look and Live</h1>
+    <p class="dek">Moses, the serpent of brass, and the night Jesus said it had always pointed to Him.</p>
+    <div class="metarow">
+      <span>Numbers 21:4&ndash;9 &rarr; John 3:14&ndash;15</span>
+      <span>About 12 minutes</span>
+      <span>KJV, verbatim</span>
+      <span class="redkey">Red ink = His spoken words</span>
+    </div>
+    <figure class="plate">
+      <img src="_media/bs_serpent_pole.jpg" alt="Hand-inked study plate: Moses stands beside a wooden pole with the serpent of brass wound around it; the tents of Israel are sketched in the distance" width="1800" height="1005">
+      <figcaption>study plate &mdash; the pole set up in the midst of the camp (Numbers 21:8&ndash;9)</figcaption>
+    </figure>
+  </div>
+</header>
+
+<main class="study" id="content">
+  <div class="wrap">
+
+    <!-- INTRO -->
+    <div class="row">
+      <div class="main">
+        <p class="lede">Somewhere in the last stretch of the wilderness years, a camp full of dying
+          people was told to do the one thing dying people find hardest to believe: look up, and live.
+          No medicine, no march, no payment &mdash; a serpent of brass on a pole, and a promise attached
+          to it. This study lays the whole passage open: the complaint, the serpents, the strange
+          command, the cure that cost nothing but a look. Then it follows the pole across fourteen
+          centuries, to a night conversation in Jerusalem where Jesus takes the scene and hangs His
+          own cross inside it.</p>
+        <p>Read the text first. Read it slowly. Everything after it is margin.</p>
+      </div>
+      <aside class="aside" aria-label="Margin notes">
+        <p class="handnote">the shape of the thing killing them &mdash; lifted where every eye could find it
+          <svg class="lead" width="120" height="34" viewBox="0 0 120 34" aria-hidden="true"><path d="M4 6 C 30 26, 62 30, 96 18 M96 18 l-10 -2 m10 2 l-7 8" fill="none" stroke="#4c576e" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </p>
+        <div class="note">
+          <h4>How to use this page</h4>
+          The passage is set in full, King James text, verbatim. Grey notes are apparatus. Red ink is
+          kept for the spoken words of Christ. Gold appears once, at the end &mdash; it always does.
+        </div>
+      </aside>
+    </div>
+
+    <!-- THE TEXT -->
+    <div class="row">
+      <div class="main">
+        <h2 class="slabel"><span>The text</span></h2>
+        <blockquote class="kjv">
+          <span class="src">Numbers 21:4&ndash;9 &middot; KJV, verbatim</span>
+          <span class="vn">4</span>And they journeyed from mount Hor by the way of the Red sea, to
+          compass the land of Edom: and the soul of the people was much discouraged because of the way.
+          <span class="vn">5</span>And the people spake against God, and against Moses, Wherefore have
+          ye brought us up out of Egypt to die in the wilderness? for there is no bread, neither is
+          there any water; and our soul loatheth this light bread.
+          <span class="vn">6</span>And the <span class="sc">Lord</span> sent fiery serpents among the
+          people, and they bit the people; and much people of Israel died.
+          <span class="vn">7</span>Therefore the people came to Moses, and said, We have sinned, for
+          we have spoken against the <span class="sc">Lord</span>, and against thee; pray unto the
+          <span class="sc">Lord</span>, that he take away the serpents from us. And Moses prayed for
+          the people.
+          <span class="vn">8</span>And the <span class="sc">Lord</span> said unto Moses, Make thee a
+          fiery serpent, and set it upon a pole: and it shall come to pass, that every one that is
+          bitten, when he looketh upon it, shall live.
+          <span class="vn">9</span>And Moses made a serpent of brass, and put it upon a pole, and it
+          came to pass, that if a serpent had bitten any man, when he beheld the serpent of brass, he
+          lived.
+        </blockquote>
+      </div>
+      <aside class="aside" aria-label="Margin notes">
+        <div class="note">
+          <h4>The route</h4>
+          Mount Hor, round the land of Edom &mdash; the long way. The text is plain about what the road
+          did: <q>the soul of the people was much discouraged because of the way.</q>
+        </div>
+        <div class="note">
+          <h4>Cross-reference</h4>
+          <span class="vref">Deut 8:15</span> &mdash; the same wilderness, remembered: <q>that great and
+          terrible wilderness, wherein were fiery serpents, and scorpions, and drought.</q>
+        </div>
+      </aside>
+    </div>
+
+    <!-- THE WITNESS -->
+    <div class="row">
+      <div class="main witness">
+        <h2 class="slabel"><span>The witness</span></h2>
+        <p class="byline">From the film <a href="#">Look and Live</a> &mdash; the witness account of
+          Moses, spoken from the far side of his life. His words below are from the film&rsquo;s
+          narration; the Scripture he quotes is verbatim KJV.</p>
+        <p class="voice">I am Moses. For forty years I led Israel through the wilderness, and of all
+          the strange works these two hands were given to do &mdash; a rod that became a serpent, a sea
+          split dry, water struck from a rock &mdash; there is one that follows me still into the dark
+          of my old age. A pole driven into the sand. And upon it, a serpent of bronze.</p>
+        <p class="voice">I was there the day the people were dying faster than I could dig the graves.
+          And I was there when God told a dying man that he could be healed by nothing in his hands,
+          nothing in his own strength &mdash; by nothing more than a look.</p>
+        <p class="voice">Fiery, we named the serpents, for the bite burned like a coal beneath the
+          skin. I watched strong men fall. I watched mothers cradle children who had been laughing an
+          hour before. And there was no remedy &mdash; not in all the wisdom of Egypt I had been
+          schooled in, not in anything I knew to do.</p>
+        <figure class="fig plate">
+          <img src="_media/bs_bite_study.jpg" alt="Pencil and wash study of a clenched hand and forearm, the skin flushed red where the serpent struck" width="1800" height="1005">
+          <figcaption>&ldquo;the bite burned like a coal beneath the skin&rdquo;</figcaption>
+        </figure>
+        <p class="voice">Then the people came to me, and for once their words were not complaint but
+          confession. So I did the one thing a mediator can do &mdash; I prayed for the people. I
+          expected the <span class="sc">Lord</span> to take the serpents away. He did not. Instead He
+          gave me a command so strange that I have turned it over in my mind every year since: forge
+          the image of the very thing that was killing us, and lift it high where every eye could
+          find it.</p>
+        <p class="voice">A man would feel the fire spreading in his blood, lift his eyes to that
+          bronze upon the pole &mdash; and live. No payment. No climbing. No cure of his own making.
+          He looked, and the death let go of him.</p>
+      </div>
+      <aside class="aside" aria-label="Margin notes">
+        <figure class="plate mini">
+          <img src="_media/moses_portrait.jpg" alt="Ink and watercolour portrait study of Moses, white-bearded, holding his staff" loading="lazy">
+          <figcaption>the witness &mdash; cast and studied before the first scene was drawn</figcaption>
+        </figure>
+        <p class="handnote">he dug the graves himself &mdash;</p>
+      </aside>
+    </div>
+
+    <!-- THE STRANGE DETAIL -->
+    <div class="row">
+      <div class="main witness">
+        <h2 class="slabel"><span>The strange detail</span></h2>
+        <p class="voice">Here is the thing that never let me rest. Why a serpent?</p>
+        <p class="voice">The serpent was the curse itself. It was the very shape of what was striking
+          them down. I would gladly have lifted up anything else &mdash; a rod, a lamb, the tables of
+          the law in my arms. But God told me to lift up the likeness of the killer, high and plain,
+          in the middle of the camp.</p>
+        <p class="voice">And the cure was a look &mdash; only a look: the strong and the weak, the
+          child and the dying elder, all healed the same poor way, by lifting their eyes. I obeyed it,
+          and the riddle of it walked home with me every evening. Why save a people by the sight of
+          the very thing that slays them?</p>
+      </div>
+      <aside class="aside" aria-label="Margin notes">
+        <p class="handnote">why a serpent? why not the lamb, or the law?</p>
+        <div class="note">
+          <h4>Hold the detail</h4>
+          The sign is not a medicine and not a relic. Verse 8 hangs everything on one verb:
+          <q>when he looketh upon it.</q> The healing is placed entirely outside the dying man.
+        </div>
+      </aside>
+    </div>
+
+    <!-- THE WRESTLING -->
+    <div class="row">
+      <div class="main witness">
+        <h2 class="slabel"><span>The wrestling</span></h2>
+        <p class="voice">And I will be honest with you, for a man this near his grave has no reason to
+          be otherwise. I feared for any who would not look. A cure so simple is its own
+          stumbling-block: a proud heart can scorn to turn its head for a thing so plain &mdash; and
+          the venom does not wait for a man to master his pride.</p>
+        <p class="voice">But the deeper trouble was mine. With these same hands I had ground a calf of
+          gold to powder and made Israel drink it &mdash; and now I was charged to raise an image of
+          bronze and bid the whole camp lift their eyes to it. It kept me awake: had God bidden the
+          very sin I had just broken? Yet I knew the bronze had no power in it &mdash; I of all men
+          knew that metal saves no one. It was God&rsquo;s word that healed, and the look that took Him
+          at His word. So what, then, was the bronze <em>for</em>? I felt as though I were holding up a
+          signpost in the wilderness, pointing past itself, down a long road of years to something I
+          could not yet see. I forged it. I could not have told you what it meant.</p>
+        <figure class="fig plate">
+          <img src="_media/bs_moses_candle.jpg" alt="Moses sits by an oil lamp at night, staff against his shoulder, his shadow washed large on the wall behind him" width="1800" height="1005">
+          <figcaption>the question kept the lamp lit &mdash; had God bidden the very sin he had broken?</figcaption>
+        </figure>
+      </div>
+      <aside class="aside" aria-label="Margin notes">
+        <div class="note">
+          <h4>Cross-reference</h4>
+          <span class="vref">Exodus 32:20</span> &mdash; the calf: <q>And he took the calf which they had
+          made, and burnt it in the fire, and ground it to powder, and strawed it upon the water, and
+          made the children of Israel drink of it.</q>
+        </div>
+        <div class="note">
+          <h4>The offence of simple</h4>
+          <span class="vref">1 Cor 1:18</span> &mdash; <q>For the preaching of the cross is to them that
+          perish foolishness; but unto us which are saved it is the power of God.</q>
+        </div>
+      </aside>
+    </div>
+
+    <!-- THE FULFILLMENT -->
+    <div class="row">
+      <div class="main witness">
+        <h2 class="slabel"><span>The fulfillment</span></h2>
+        <p>Fourteen centuries later, a teacher of Israel came to Jesus by night. Nicodemus was not
+          given a parable. He was given Moses&rsquo; pole.</p>
+        <blockquote class="kjv red">
+          <span class="src">His words &middot; John 3:14&ndash;15 &middot; KJV</span>
+          And as Moses lifted up the serpent in the wilderness, even so must the Son of man be lifted
+          up: That whosoever believeth in him should not perish, but have eternal life.
+        </blockquote>
+        <p class="voice">There it was. My serpent was never the point of it. It was a shadow, and a
+          shadow waits for the body that casts it. The body came. They lifted Jesus up upon a Roman
+          pole of wood, where every eye could find Him &mdash; the very picture my bronze had held up
+          in the wilderness.</p>
+        <p class="voice">And mark why it had to be a serpent &mdash; the cursed thing, the
+          killer&rsquo;s own image. For when they hung Him there, the spotless Son of God was made a
+          curse for us. So the apostle wrote:</p>
+        <blockquote class="kjv">
+          <span class="src">Galatians 3:13 &middot; KJV</span>
+          Christ hath redeemed us from the curse of the law, being made a curse for us: for it is
+          written, Cursed is every one that hangeth on a tree:
+        </blockquote>
+        <p class="voice">He bore, upon that pole, the judgment our sin had earned, taken in our place
+          &mdash; lifted up, so that we who are bitten and dying need only look to Him and live. He
+          said it Himself, of the death He was going to die:</p>
+        <blockquote class="kjv red">
+          <span class="src">His words &middot; John 12:32 &middot; KJV</span>
+          And I, if I be lifted up from the earth, will draw all men unto me.
+        </blockquote>
+        <figure class="fig plate">
+          <img src="_media/bs_golgotha.jpg" alt="The cross on the hill of Golgotha under a dark ink-wash sky, drawn on aged paper" width="1800" height="1005">
+          <figcaption>&ldquo;the very picture my bronze had held up&rdquo; &mdash; Golgotha, drawn as the camp had seen the pole</figcaption>
+        </figure>
+        <p class="voice">And the riddle of the look was answered too. It was never the bronze; it was
+          the looking that God honoured &mdash; the faith that takes Him at His word. For long after
+          me, when men forgot, they kept that serpent and burned incense to the metal of it, until a
+          good king of Judah broke it to pieces and called it Nehushtan &mdash; a nothing, a scrap of
+          brass. He was right to break it. The power was never in my handiwork. The power was in the
+          God who said <em>look and live</em> &mdash; and in the Son He always meant the look to find.</p>
+      </div>
+      <aside class="aside" aria-label="Margin notes">
+        <div class="note">
+          <h4>The thread</h4>
+          <ul class="chain">
+            <li>Num 21:8 <span class="why">the lifted sign; life by a look</span></li>
+            <li>John 3:14 <span class="why">&ldquo;even so must the Son of man be lifted up&rdquo;</span></li>
+            <li>Gal 3:13 <span class="why">made a curse for us &mdash; why it was a serpent</span></li>
+            <li>John 12:32 <span class="why">lifted up, to draw all men</span></li>
+          </ul>
+        </div>
+        <div class="note">
+          <h4>The honest objection</h4>
+          <span class="vref">2 Kings 18:4</span> &mdash; Israel later burned incense to the bronze, and
+          Hezekiah <q>brake in pieces the brasen serpent that Moses had made&hellip; and he called it
+          Nehushtan.</q> If the power had been in the metal, breaking it would have been sacrilege. It
+          was not. Signposts are for pointing past.
+        </div>
+      </aside>
+    </div>
+
+  </div>
+
+  <!-- LANDING -->
+  <div class="goldseam" role="presentation"></div>
+  <section class="landing" aria-labelledby="land-h">
+    <div class="wrap">
+      <div class="row">
+        <div class="main witness">
+          <h2 class="slabel" id="land-h"><span>Where it lands</span></h2>
+          <p class="voice">I watched a camp dying. Strong men tried to walk the fire off and fell;
+            none was healed by his own hands. The venom was in the blood, and the blood could not put
+            it out. That is you. That is me. You cannot climb out of the poison &mdash; you were never
+            asked to.</p>
+          <p class="voice">Jesus was lifted up where every dying eye could find Him &mdash; the least,
+            the last, the child who can only turn his head. Sit with that. The cure is not in you, and
+            never had to be. It is lifted up in plain sight, and costs you nothing but a look.</p>
+          <p class="voice">So I ask what I once asked every man bitten in our wilderness &mdash; only
+            now there is no fear left in it: will you lift your eyes and look? Not to the bronze, nor
+            to me &mdash; but to Jesus, who was made your curse and carried it clean away. Look to
+            Him, and live.</p>
+          <blockquote class="kjv gilt">
+            <span class="src">John 3:16 &middot; KJV</span>
+            For God so loved the world, that he gave his only begotten Son, that whosoever believeth
+            in him should not perish, but have everlasting life.
+          </blockquote>
+          <div class="ctarow">
+            <a class="btn btn-ink" href="#">Watch the film &mdash; Look and Live</a>
+            <a class="btn" href="catalogue.html">All studies</a>
+          </div>
+        </div>
+        <aside class="aside" aria-label="Margin notes">
+          <figure class="fig plate" style="margin-top:3.2rem">
+            <img src="_media/bs_torn_landing.jpg" alt="The page itself torn open; through the hole Jesus stands in warm gold light, hands open" loading="lazy">
+            <figcaption>the page tears open on Him &mdash; the film&rsquo;s landing plate</figcaption>
+          </figure>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="nextband">
+  <span><span class="lab">Back</span><a href="catalogue.html">&larr; The catalogue</a></span>
+  <span><span class="lab">Next on the desk</span>The Two Goats &mdash; Leviticus 16 <em>(in the sketchbooks now)</em></span>
+</div>
+
+<footer class="foot">
+  <a class="wordmark" href="index.html">AWAK<em>EDEN</em></a>
+  <span>The whole Bible, through Jesus. KJV verbatim. Hand-inked.</span>
+  <span class="mock">Design exploration &mdash; &ldquo;The Study Desk&rdquo; direction. Not the live site.</span>
+</footer>
+
+</body>
+</html>

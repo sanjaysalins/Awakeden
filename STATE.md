@@ -1,5 +1,74 @@
 # STATE.md — progress tracker
 
+**2026-08-03 (later — BRONZE SERPENT LONG FINISHED END-TO-END, the first-ever
+full-length 9:55 living-sketchbook film):** After the AI pre-check + the
+s49/s65 Ken Burns fix (below), user said "assemble it and do the next steps."
+Built the full finishing chain fresh this session, all $0/deterministic:
+`_s8_score.py` (reuses the SAME proven Suno recipe as this story's other
+long-form treatment), `_s9_sfx.py` (ambient bed via the shared long-form
+engine, cues read live off real spread timings), `_s10_captions.py` (the
+SHORT's own locked hand-ink caption recipe, adapted for landscape + batched
+into 60s segments — 301 word-timed chunks was too many for one ffmpeg graph),
+then `add_watermark.py` + `check_landing_hold.py` (both existing, called
+directly). Every stage verified by eye, not just script-exit-0. Final:
+`poc_living_sketchbook/bronze_serpent_long/BRONZESERPENT_LONG_living_
+sketchbook_cc.mp4` (594.93s), INV-26 gate PASS. **NEXT: the user's own watch
+of this finished file** — full detail in RESUME.md's top section. Still
+nothing committed to git.
+
+**2026-08-03 (earlier — gentle background session, no spend/commits/decisions):**
+ran the full test suite (473 passed, 1 skipped, all green) and an AI
+pre-check pass over the 65 Bronze Serpent LONG clips to speed up the human
+eye-check — 6 clips flagged, detail in
+`poc_living_sketchbook/bronze_serpent_long/_AI_PRECHECK_NOTES.md`. User then
+did their own eye-check and caught residual "dancing" motion on s49 and s65
+that frame-sampling missed — both swapped to a $0 deterministic Ken Burns
+push per explicit instruction, old generative attempts kept as `.v2_
+dancing_reject.mp4`. Also found while rebuilding the gallery: s43 and s67
+were already built on 2026-08-02 but never logged.
+
+**Last updated:** 2026-08-02 — **SESSION PAUSED BY USER REQUEST** ("let's update
+the todo and pick it up later"), nothing broken/mid-render. Bronze Serpent LONG
+clip set is now COMPLETE (68/68: 65 clean clips incl. 8 new $0 deterministic
+fallbacks for spreads that never got a clean generative render, + 3
+always-$0-by-design insert/landing devices not yet built) and is sitting at the
+human eye-check gate before assembly — nothing else blocks that. Three side
+threads also opened this session, all left as open decisions, none committed:
+(1) a 6-plate ArkAIology "plate pack" POC applied to Bronze Serpent content
+($3.00, all clean — artifact-hero/map/comparison-split/timeline/wilderness-dusk/
+big-stat), 2 of which got wired into one candidate website redesign mockup
+(`_website/_redesign_sketchbook/archive_insert_pages/study.html`) as a live
+proof-of-concept, not screenshotted live (no Chrome connection this session);
+(2) discovered (undocumented before now) 6 full website redesign mockups built
+by a parallel/earlier session, none chosen; (3) rerolled 2 previously-rejected
+bake-off styles (sl10_overhead_plan, sl16_foreground_occlusion) — both now
+genuinely fixed ($1.20, 4 renders) but `style_manifest.json` hasn't been
+updated to reflect it, left as an explicit decision since flipping status makes
+a style auto-eligible for `pipeline/style_select.py`'s automated proposal
+stage. Also built a reusable reference page cataloguing all 35 bake-off styles
++ all 34 panel_animator skills (`poc_living_sketchbook/_SKILLS_AND_STYLES.html`).
+**Nothing from this session is committed to git.** Full detail, every file
+touched, and the 5-item open-decision list: **RESUME.md's top section.**
+
+**Previous status (2026-08-01, later same day — MID-SESSION HANDOVER, user
+switching Claude accounts.** Bronze Serpent LONG pilot (Phase 0 of the
+sketchbook migration plan, the first-ever full-length 9:50 living-sketchbook
+film) is IN PROGRESS, not finished. Test-gate done (3 renders + 1 corrected
+re-roll, $1.20) and user said "go ahead" on the full 66-spread batch, which
+was rendering in the background when usage ran out (7/68 done, $2.70 spent,
+zero rerolls, tracking well under the ~$20-45 estimate). Along the way, a
+real biblical-accuracy catch by the user (Moses's age was wrong — built and
+paid for an unnecessary "younger Moses" cast anchor) triggered a full
+fact-check pass that found 2 more real errors (Hezekiah's age unspecified,
+"the mixed multitude" misapplied to the Numbers-21 crowd) — all fixed, and a
+new standing rule saved to memory: always cite explicit KJV numbers for any
+character age/object scale before rendering, don't estimate. **Full detail,
+exactly how to resume the stills batch, and the ordered next-steps list:
+RESUME.md's very top section — read that first, it's written for a brand
+new session/account to pick this up with zero lost context.**
+
+---
+
 **Last updated:** 2026-08-01 evening — **Bronze Serpent (short) fully FINISHED and
 LOCKED** (score/SFX/watermark/hand-written-ink-captions, all user-approved). Session
 also produced a full oil→ink→sketchbook migration ledger and a launch plan, both

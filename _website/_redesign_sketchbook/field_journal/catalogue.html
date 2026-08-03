@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Catalogue — Awakeden Field Journal (redesign mockup)</title>
+<!-- DIRECTION: "THE FIELD JOURNAL" — the catalogue is the journal's own contents:
+     taped-in plates for the featured study, character leaves from the cast pages,
+     and a hand-ruled register (ledger) for the full season. Mockup only. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Pinyon+Script&family=Zilla+Slab:ital,wght@0,500;0,600;0,700;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --desk:#2c251d; --paper:#f2e8d0; --paper-hi:#f8f1e1; --paper-deep:#e9dcbd;
+  --foxed:#e6d2a8; --kraft:#c2a47a; --kraft-deep:#a1855c;
+  --ink:#2e2921; --graphite:#5c554a; --faded:#867c69;
+  --rubric:#a23325; --rubric-deep:#872718; --bluewash:#42566f;
+  --gold:#b8921f; --gold-hi:#e3c25c;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--desk);
+  background-image:
+    radial-gradient(1200px 500px at 50% -10%, rgba(255,236,200,.06), transparent 60%),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/></filter><rect width="220" height="220" filter="url(%23n)"/></svg>');
+  color:var(--ink);font-family:'Source Serif 4', Georgia, serif;line-height:1.65;
+}
+.book{max-width:1420px;margin:26px auto 110px;position:relative;
+  box-shadow:0 2px 0 1px #e3d5b4,0 5px 0 1px #d9c9a4,0 8px 0 1px #e0d1af,0 11px 0 1px #d4c39c,0 30px 70px rgba(0,0,0,.55);}
+.page{background:var(--paper);position:relative;overflow:hidden;
+  background-image:
+    radial-gradient(900px 420px at 18% 6%, rgba(255,250,235,.55), transparent 55%),
+    radial-gradient(700px 500px at 88% 90%, rgba(176,142,84,.10), transparent 60%),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.045 0"/></filter><rect width="220" height="220" filter="url(%23n)"/></svg>');}
+.hand{font-family:'Caveat',cursive;font-weight:600;color:var(--graphite)}
+.scribed{font-family:'Pinyon Script',cursive;font-weight:400;color:var(--ink)}
+.ref{font-family:'Zilla Slab',serif;font-weight:600;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--rubric)}
+.tape{position:absolute;width:96px;height:26px;z-index:3;opacity:.92;pointer-events:none;
+  background:linear-gradient(102deg,rgba(212,190,150,.35),rgba(228,209,172,.8) 20%,rgba(218,198,158,.65) 80%,rgba(198,175,133,.35));
+  box-shadow:0 1px 3px rgba(46,36,20,.22);
+  border-left:1px dashed rgba(120,98,66,.28);border-right:1px dashed rgba(120,98,66,.28);}
+.ring{position:absolute;border-radius:50%;border:9px solid rgba(148,105,48,.13);pointer-events:none}
+.deckle{clip-path:polygon(1.2% 2.6%, 4% .6%, 9% 2%, 15% .9%, 22% 2.4%, 30% 1%, 38% 2.2%, 47% .8%, 56% 2.5%, 65% 1.2%, 74% 2.6%, 82% 1%, 90% 2.3%, 96% 1.1%, 99% 3.4%, 98.6% 12%, 99.4% 22%, 98.4% 33%, 99.2% 45%, 98.6% 57%, 99.4% 68%, 98.5% 79%, 99.3% 89%, 98.2% 97%, 92% 99%, 84% 97.6%, 75% 99.2%, 65% 97.8%, 55% 99.3%, 45% 98%, 35% 99.4%, 25% 97.9%, 16% 99.2%, 8% 97.7%, 2.2% 98.8%, 1% 92%, 1.8% 82%, .8% 71%, 1.6% 60%, .7% 49%, 1.5% 38%, .8% 27%, 1.7% 17%, .9% 8%)}
+img{display:block;max-width:100%}
+a{color:inherit}
+.gridpatch{position:absolute;pointer-events:none;opacity:.55;
+  background-image:linear-gradient(rgba(89,120,153,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(89,120,153,.16) 1px,transparent 1px);
+  background-size:52px 52px;}
+.dotpatch{position:absolute;pointer-events:none;
+  background-image:radial-gradient(rgba(90,115,150,.16) 1px,transparent 1.3px);background-size:7px 7px;}
+
+/* nav tabs */
+.nav{display:flex;align-items:flex-end;gap:10px;flex-wrap:wrap;padding:20px 34px 0;position:relative;z-index:5}
+.wordmark{font-family:'Zilla Slab',serif;font-weight:700;font-size:1.5rem;letter-spacing:.1em;text-decoration:none;color:var(--ink);
+  transform:rotate(-1.4deg);padding:.15rem .6rem .1rem;border:2.5px solid var(--ink);
+  border-radius:255px 12px 225px 12px / 12px 225px 12px 255px;margin-right:auto;margin-bottom:8px}
+.wordmark em{font-style:normal;color:var(--rubric)}
+.tab{font-family:'Zilla Slab',serif;font-weight:600;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;
+  text-decoration:none;color:var(--ink);background:linear-gradient(180deg,var(--kraft),#b3946a);
+  padding:.55rem 1.05rem .8rem;border-radius:8px 8px 0 0;border:1px solid rgba(90,70,42,.45);border-bottom:none;
+  box-shadow:inset 0 1px 0 rgba(255,244,220,.5);transform-origin:bottom center}
+.tab:nth-child(odd){transform:rotate(.7deg)}
+.tab:nth-child(even){transform:rotate(-.8deg)}
+.tab:hover{background:linear-gradient(180deg,#cfb289,#bb9c71)}
+.tab.open{background:var(--paper);border-color:rgba(90,70,42,.35);padding-bottom:1rem;transform:none;font-weight:700}
+.tab.cta{background:linear-gradient(180deg,#b23a2a,#9a2f20);color:#f6ecd9;border-color:#7c2416}
+.tab.cta:hover{background:linear-gradient(180deg,#bf4534,#a53525)}
+.navrule{height:3px;background:var(--ink);opacity:.85;margin:0 26px;border-radius:2px;position:relative;z-index:4}
+
+.leaf{padding:58px 60px;position:relative}
+.leaf.deep{background:var(--paper-deep);
+  background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/></filter><rect width="220" height="220" filter="url(%23n)"/></svg>')}
+.sec-head{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:2rem}
+.sec-head h2{font-family:'Pinyon Script',cursive;font-weight:400;font-size:clamp(2rem,3.6vw,2.9rem);transform:rotate(-.7deg)}
+.sec-head .rule{flex:1;min-width:80px;height:2px;background:repeating-linear-gradient(90deg,var(--graphite) 0 9px,transparent 9px 14px);opacity:.5;transform:translateY(-6px)}
+.sec-head .aside{font-family:'Caveat',cursive;font-weight:600;font-size:1.15rem;color:var(--faded)}
+.tear{display:block;width:100%;height:44px}
+
+/* title spread */
+.title-leaf{padding:64px 60px 50px;text-align:center;position:relative}
+.title-leaf .k{font-family:'Caveat',cursive;font-weight:600;font-size:1.3rem;color:var(--graphite)}
+.title-leaf h1{font-family:'Pinyon Script',cursive;font-weight:400;font-size:clamp(3rem,7vw,5rem);line-height:1.05;transform:rotate(-1deg)}
+.title-leaf p.sub{max-width:42rem;margin:1rem auto 0;color:#4a4336;font-size:1.08rem}
+.title-leaf .seasons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:1.8rem}
+.pill{font-family:'Zilla Slab',serif;font-weight:600;font-size:.76rem;letter-spacing:.15em;text-transform:uppercase;
+  padding:.5rem 1rem;border:2px solid var(--ink);text-decoration:none;
+  border-radius:255px 15px 225px 15px / 15px 225px 15px 255px}
+.pill.on{background:var(--ink);color:var(--paper-hi)}
+.pill:not(.on):hover{background:rgba(46,41,33,.07)}
+
+/* plate cards */
+.plates{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+.plate{position:relative;text-decoration:none;color:inherit;display:block}
+.plate .ph-wrap{filter:drop-shadow(0 8px 12px rgba(46,36,18,.24))}
+.plate .mat{background:var(--paper-hi);padding:9px 9px 11px}
+.plate:nth-child(3n+1) .ph-wrap{transform:rotate(-1.3deg)}
+.plate:nth-child(3n+2) .ph-wrap{transform:rotate(1deg)}
+.plate:nth-child(3n) .ph-wrap{transform:rotate(-.6deg)}
+.plate:hover .ph-wrap{transform:rotate(0) translateY(-3px)}
+.plate .pmeta{padding:10px 4px 0}
+.plate .pt{font-family:'Zilla Slab',serif;font-weight:700;font-size:1.14rem;line-height:1.25;margin-top:.2rem}
+.plate .ps{font-size:.94rem;color:#4a4336;margin-top:.25rem;line-height:1.5}
+.plate .pcap{font-family:'Caveat',cursive;font-weight:600;font-size:1.1rem;color:var(--faded);margin-top:.3rem}
+.feature-band{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;margin-bottom:3rem}
+.feature-band .photo{position:relative;display:block;text-decoration:none}
+.feature-band .ph-wrap{filter:drop-shadow(0 10px 16px rgba(46,36,18,.28));transform:rotate(-1deg)}
+.feature-band .mat{background:var(--paper-hi);padding:10px 10px 12px}
+.feature-band h3{font-family:'Zilla Slab',serif;font-weight:700;font-size:clamp(1.5rem,2.8vw,2.1rem);line-height:1.15;margin:.4rem 0 .8rem}
+.feature-band p{color:#453e33;max-width:32rem}
+.stamp-btn{display:inline-block;text-decoration:none;color:#f7eeda;background:var(--rubric);
+  font-family:'Zilla Slab',serif;font-weight:700;font-size:.86rem;letter-spacing:.16em;text-transform:uppercase;
+  padding:.9rem 1.7rem;transform:rotate(-1.3deg);box-shadow:2px 3px 0 rgba(46,41,33,.28);margin-top:1.3rem;position:relative}
+.stamp-btn:hover{background:var(--rubric-deep)}
+.status{display:inline-block;font-family:'Zilla Slab',serif;font-weight:700;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;
+  padding:.22rem .55rem;transform:rotate(-2deg);margin-left:.5rem}
+.status.live{color:#3c6e47;border:2px solid #3c6e47;border-radius:255px 10px 225px 10px / 10px 225px 10px 255px}
+.status.soon{color:var(--bluewash);border:2px dashed var(--bluewash);border-radius:255px 10px 225px 10px / 10px 225px 10px 255px}
+
+/* character leaves (portrait cards) */
+.leaves{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;align-items:start}
+.leafcard{position:relative;text-decoration:none;color:inherit;display:block}
+.leafcard .ph-wrap{filter:drop-shadow(0 8px 12px rgba(46,36,18,.24))}
+.leafcard .mat{background:var(--paper-hi);padding:8px 8px 10px}
+.leafcard:nth-child(odd) .ph-wrap{transform:rotate(-1.4deg)}
+.leafcard:nth-child(even) .ph-wrap{transform:rotate(1.2deg)}
+.leafcard:hover .ph-wrap{transform:rotate(0) translateY(-3px)}
+.leafcard .pt{font-family:'Zilla Slab',serif;font-weight:600;font-size:1rem;margin-top:.55rem}
+.leafcard .pcap{font-family:'Caveat',cursive;font-weight:600;font-size:1.08rem;color:var(--faded)}
+
+/* the register */
+.ledger{max-width:900px}
+.lgroup{font-family:'Zilla Slab',serif;font-weight:700;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--bluewash);
+  margin:2rem 0 .4rem;display:flex;align-items:center;gap:12px}
+.lgroup::after{content:'';flex:1;height:2px;background:repeating-linear-gradient(90deg,rgba(66,86,111,.5) 0 8px,transparent 8px 13px)}
+.lrow{display:flex;align-items:baseline;gap:10px;text-decoration:none;color:inherit;padding:.6rem 6px .5rem}
+.lrow + .lrow{border-top:1px solid rgba(92,85,74,.18)}
+.lrow .no{font-family:'Caveat',cursive;font-weight:700;font-size:1.15rem;color:var(--faded);width:2.2rem;flex:none}
+.lrow .lref{font-family:'Zilla Slab',serif;font-weight:600;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--rubric);width:8.8rem;flex:none}
+.lrow .lt{font-family:'Zilla Slab',serif;font-weight:600;font-size:1.05rem}
+.lrow .dots{flex:1;border-bottom:2px dotted rgba(92,85,74,.4);transform:translateY(-5px);margin:0 .5rem;min-width:30px}
+.lrow .go{font-family:'Caveat',cursive;font-weight:600;font-size:1.1rem;color:var(--graphite);white-space:nowrap}
+.lrow:hover .lt,.lrow:hover .go{color:var(--rubric)}
+.lrow .st{font-family:'Zilla Slab',serif;font-weight:700;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:#3c6e47;white-space:nowrap;flex:none}
+.lrow .st.soon{color:var(--bluewash)}
+
+/* colophon + corners */
+.colophon{background:linear-gradient(180deg,var(--kraft),#af8f64);padding:40px 60px 46px;border-top:1px solid rgba(90,70,42,.5)}
+.colophon .inner{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:baseline}
+.colophon .wm{font-family:'Zilla Slab',serif;font-weight:700;font-size:1.05rem;letter-spacing:.1em;color:#3a2f1e}
+.colophon .wm em{font-style:normal;color:var(--rubric-deep)}
+.colophon p{font-size:.92rem;color:#4a3c26;max-width:44rem}
+.page-turn{position:fixed;right:0;bottom:0;width:148px;height:148px;z-index:60;text-decoration:none;display:block}
+.page-turn .fold-tri{position:absolute;inset:0;clip-path:polygon(100% 0,100% 100%,0 100%);
+  background:linear-gradient(315deg,#d8c69e 0 28%, #efe3c2 46%, #c9b489 60%, #b89f70 100%);
+  box-shadow:-6px -6px 14px rgba(30,22,10,.35)}
+.page-turn .fold-tri::before{content:'';position:absolute;inset:0;clip-path:polygon(100% 0,0 100%,26% 100%,100% 26%);background:rgba(64,48,24,.14)}
+.page-turn span{position:absolute;right:8px;bottom:40px;transform:rotate(-45deg);transform-origin:100% 100%;
+  font-family:'Caveat',cursive;font-weight:700;font-size:1.06rem;color:#4a3a20;white-space:nowrap}
+.page-turn:hover{width:160px;height:160px}
+.page-back{position:fixed;left:0;bottom:0;width:110px;height:110px;z-index:60;text-decoration:none;display:block}
+.page-back .fold-tri{position:absolute;inset:0;clip-path:polygon(0 0,100% 100%,0 100%);
+  background:linear-gradient(45deg,#d8c69e 0 28%, #efe3c2 46%, #c9b489 60%, #b89f70 100%);
+  box-shadow:6px -6px 14px rgba(30,22,10,.3)}
+.page-back span{position:absolute;left:6px;bottom:32px;transform:rotate(45deg);transform-origin:0 100%;
+  font-family:'Caveat',cursive;font-weight:700;font-size:.98rem;color:#4a3a20;white-space:nowrap}
+.page-back:hover{width:120px;height:120px}
+
+@media(max-width:1040px){
+  .leaf{padding:44px 30px}
+  .title-leaf{padding:46px 26px 40px}
+  .plates{grid-template-columns:1fr 1fr;gap:22px}
+  .leaves{grid-template-columns:1fr 1fr;gap:22px}
+  .feature-band{grid-template-columns:1fr;gap:28px}
+  .nav{padding:14px 18px 0}
+  .book{margin:10px 8px 90px}
+  .colophon{padding:32px 26px 40px}
+}
+@media(max-width:560px){
+  .plates{grid-template-columns:1fr}
+  .leaves{grid-template-columns:1fr}
+  .lrow{flex-wrap:wrap}
+  .lrow .dots{display:none}
+  .lrow .lref{width:auto}
+  .page-back{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="book">
+  <div class="page">
+
+    <nav class="nav" aria-label="Main">
+      <a class="wordmark" href="index.html">AWAK<em>EDEN</em></a>
+      <a class="tab" href="index.html">The Journal</a>
+      <a class="tab open" href="catalogue.html">Catalogue</a>
+      <a class="tab" href="the-bronze-serpent.html">Read</a>
+      <a class="tab" href="catalogue.html">The Plan</a>
+      <a class="tab cta" href="the-bronze-serpent.html">Start reading</a>
+    </nav>
+    <div class="navrule"></div>
+
+    <!-- ===== TITLE LEAF ===== -->
+    <header class="title-leaf">
+      <div class="gridpatch" style="left:0;top:0;bottom:0;width:130px" aria-hidden="true"></div>
+      <div class="dotpatch" style="right:20px;top:30px;width:120px;height:170px" aria-hidden="true"></div>
+      <div class="ring" style="width:110px;height:104px;right:14%;top:18px" aria-hidden="true"></div>
+      <span class="k">the journal&rsquo;s own table of contents</span>
+      <h1>The Catalogue</h1>
+      <p class="sub">Season by season, the whole Bible &mdash; and every study traced to Jesus.
+        Plates are taped in as they are inked; the register at the back keeps the full account.</p>
+      <div class="seasons">
+        <a class="pill on" href="#types">Types &amp; Shadows</a>
+        <a class="pill" href="#register">Season One &middot; The Cross</a>
+        <a class="pill" href="#leaves">The Cast Pages</a>
+      </div>
+    </header>
+
+    <svg class="tear" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true">
+      <path fill="#e9dcbd" d="M0,44 L0,20 L38,14 L61,22 L96,9 L130,18 L177,7 L204,19 L258,10 L301,21 L344,8 L395,17 L437,6 L481,16 L529,9 L561,20 L613,8 L662,18 L706,6 L748,15 L801,7 L843,19 L887,9 L931,17 L976,5 L1013,16 L1058,8 L1102,18 L1147,7 L1189,17 L1231,9 L1274,19 L1317,8 L1352,16 L1393,6 L1440,14 L1440,44 Z"/>
+    </svg>
+
+    <!-- ===== TYPES & SHADOWS ===== -->
+    <section class="leaf deep" id="types">
+      <div class="sec-head">
+        <h2>Types &amp; Shadows</h2>
+        <span class="rule" aria-hidden="true"></span>
+        <span class="aside">Old Testament pictures that were always about Him</span>
+      </div>
+
+      <div class="feature-band">
+        <a class="photo" href="the-bronze-serpent.html" aria-label="Open the Bronze Serpent study">
+          <span class="tape" style="left:30%;top:-9px;transform:rotate(-5deg)" aria-hidden="true"></span>
+          <figure>
+            <div class="ph-wrap"><div class="mat deckle">
+              <img src="_media/panel_golgotha.jpg" alt="Golgotha under an ink-dark sky — the fulfilment plate of the Bronze Serpent study">
+            </div></div>
+          </figure>
+        </a>
+        <div>
+          <span class="ref">Study one &middot; Numbers 21 &rarr; John 3</span><span class="status live">study live</span>
+          <h3>The Bronze Serpent</h3>
+          <p>The camp is dying of snakebite, and the cure God gives is a snake on a pole.
+            One look, and you live. Jesus said that pole was a picture of His cross.</p>
+          <p class="hand" style="font-size:1.2rem;margin-top:.6rem">read it slowly &mdash; the margins carry the field notes.</p>
+          <a class="stamp-btn" href="the-bronze-serpent.html">Open the study</a>
+        </div>
+      </div>
+
+      <div class="plates">
+        <a class="plate" href="the-bronze-serpent.html">
+          <span class="tape" style="left:50%;top:-10px;transform:translateX(-50%) rotate(-4deg)" aria-hidden="true"></span>
+          <div class="ph-wrap"><div class="mat deckle"><img src="_media/panel_pole_dusk.jpg" alt="The brass serpent on its pole at dusk"></div></div>
+          <div class="pmeta"><span class="ref">Numbers 21:9</span><span class="status live">study live</span>
+            <div class="pt">The Pole at Dusk</div>
+            <p class="ps">Raised in the middle of the camp, where anyone could look.</p></div>
+        </a>
+        <a class="plate" href="the-bronze-serpent.html">
+          <span class="tape" style="left:50%;top:-10px;transform:translateX(-50%) rotate(3deg)" aria-hidden="true"></span>
+          <div class="ph-wrap"><div class="mat deckle"><img src="_media/panel_shadow_cross.jpg" alt="The pole's shadow falls across the page as a cross"></div></div>
+          <div class="pmeta"><span class="ref">John 3:14</span><span class="status live">study live</span>
+            <div class="pt">The Shadow It Casts</div>
+            <p class="ps">Moses studies the pole; the page shows the shadow it was always casting.</p></div>
+        </a>
+        <a class="plate" href="the-bronze-serpent.html">
+          <span class="tape" style="left:50%;top:-10px;transform:translateX(-50%) rotate(-2.5deg)" aria-hidden="true"></span>
+          <div class="ph-wrap"><div class="mat deckle"><img src="_media/panel_christ_radiant.jpg" alt="Christ with open hands in gold light"></div></div>
+          <div class="pmeta"><span class="ref">John 3:16</span><span class="status live">study live</span>
+            <div class="pt">Look and Live</div>
+            <p class="ps">The landing plate. Gold is kept for this page alone.</p></div>
+        </a>
+      </div>
+      <p class="hand" style="font-size:1.2rem;margin-top:2rem;color:var(--faded)">next in Types &amp; Shadows: the Passover lamb, the scapegoat, the rock in Horeb &mdash; pages still being inked&hellip;</p>
+    </section>
+
+    <svg class="tear" viewBox="0 0 1440 44" preserveAspectRatio="none" style="transform:scaleY(-1)" aria-hidden="true">
+      <path fill="#e9dcbd" d="M0,44 L0,20 L38,14 L61,22 L96,9 L130,18 L177,7 L204,19 L258,10 L301,21 L344,8 L395,17 L437,6 L481,16 L529,9 L561,20 L613,8 L662,18 L706,6 L748,15 L801,7 L843,19 L887,9 L931,17 L976,5 L1013,16 L1058,8 L1102,18 L1147,7 L1189,17 L1231,9 L1274,19 L1317,8 L1352,16 L1393,6 L1440,14 L1440,44 Z"/>
+    </svg>
+
+    <!-- ===== THE CAST PAGES ===== -->
+    <section class="leaf" id="leaves">
+      <div class="sec-head">
+        <h2>The cast pages</h2>
+        <span class="rule" aria-hidden="true"></span>
+        <span class="aside">the journal keeps its own studies of the people it follows</span>
+      </div>
+      <div class="leaves">
+        <a class="leafcard" href="the-bronze-serpent.html">
+          <span class="tape" style="left:50%;top:-10px;transform:translateX(-50%) rotate(-4deg)" aria-hidden="true"></span>
+          <div class="ph-wrap"><div class="mat deckle"><img src="_media/spread_moses_studies.jpg" alt="A sketchbook spread of Moses studies: profile, grip, gait, thumbprint"></div></div>
+          <div class="pt">Moses &mdash; the working spread</div>
+          <div class="pcap">profile &middot; grip &middot; gait &middot; a thumbprint under the coffee ring</div>
+        </a>
+        <a class="leafcard" href="the-bronze-serpent.html">
+          <span class="tape" style="left:50%;top:-10px;transform:translateX(-50%) rotate(3deg)" aria-hidden="true"></span>
+          <div class="ph-wrap"><div class="mat deckle"><img src="_media/study_moses_baseline.jpg" alt="Moses, the settled portrait in ink and wash"></div></div>
+          <div class="pt">Moses &mdash; the settled portrait</div>
+          <div class="pcap">eighty years in the eyes, staff in the right hand</div>
+        </a>
+        <a class="leafcard" href="the-bronze-serpent.html">
+          <span class="tape" style="left:50%;top:-10px;transform:translateX(-50%) rotate(-3deg)" aria-hidden="true"></span>
+          <div class="ph-wrap"><div class="mat deckle"><img src="_media/study_jesus_baseline.jpg" alt="Jesus, the settled portrait in ink and wash"></div></div>
+          <div class="pt">Jesus &mdash; the settled portrait</div>
+          <div class="pcap">every study in the book walks toward this face</div>
+        </a>
+        <a class="leafcard" href="the-bronze-serpent.html">
+          <span class="tape" style="left:50%;top:-10px;transform:translateX(-50%) rotate(4deg)" aria-hidden="true"></span>
+          <div class="ph-wrap"><div class="mat deckle"><img src="_media/insert_charcoal.jpg" alt="Charcoal study of Moses with erased highlights"></div></div>
+          <div class="pt">Insert leaf &mdash; charcoal</div>
+          <div class="pcap">a heavier hand for a heavier day</div>
+        </a>
+      </div>
+      <p class="hand" style="font-size:1.15rem;margin-top:1.6rem;color:var(--faded)">
+        insert leaves &mdash; cyanotype for the cold-register nights, wet wash for grief, scratchboard for the dark &mdash;
+        appear inside studies where the day demands them. the plain pencil page is always the spine.</p>
+    </section>
+
+    <svg class="tear" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true">
+      <path fill="#e9dcbd" d="M0,44 L0,18 L44,12 L79,22 L118,8 L166,19 L209,7 L251,18 L296,9 L340,20 L387,7 L429,17 L474,6 L521,16 L569,8 L610,19 L655,7 L701,17 L744,5 L790,16 L836,8 L879,18 L924,6 L969,17 L1013,8 L1057,19 L1101,7 L1146,16 L1190,6 L1235,18 L1279,8 L1323,17 L1367,7 L1404,15 L1440,10 L1440,44 Z"/>
+    </svg>
+
+    <!-- ===== THE REGISTER ===== -->
+    <section class="leaf deep" id="register">
+      <div class="sec-head">
+        <h2>The register</h2>
+        <span class="rule" aria-hidden="true"></span>
+        <span class="aside">the full account, kept in the back of the book</span>
+      </div>
+      <div class="ledger">
+
+        <div class="lgroup">Season One &middot; The Cross &mdash; seven last words &amp; the prophecies that walked there</div>
+        <a class="lrow" href="#"><span class="no">i.</span><span class="lref">Psalm 22:18</span><span class="lt">The Crucifixion Foretold</span><span class="dots" aria-hidden="true"></span><span class="st">inked &middot; read</span></a>
+        <a class="lrow" href="#"><span class="no">ii.</span><span class="lref">Luke 23:34</span><span class="lt">Father, Forgive Them</span><span class="dots" aria-hidden="true"></span><span class="st">inked &middot; read</span></a>
+        <a class="lrow" href="#"><span class="no">iii.</span><span class="lref">Luke 23:43</span><span class="lt">Today in Paradise</span><span class="dots" aria-hidden="true"></span><span class="st">inked &middot; read</span></a>
+        <a class="lrow" href="#"><span class="no">iv.</span><span class="lref">John 19:26</span><span class="lt">Woman, Behold Thy Son</span><span class="dots" aria-hidden="true"></span><span class="st">inked &middot; read</span></a>
+        <a class="lrow" href="#"><span class="no">v.</span><span class="lref">Psalm 22:1</span><span class="lt">The Forsaken Cry</span><span class="dots" aria-hidden="true"></span><span class="st">inked &middot; read</span></a>
+        <a class="lrow" href="#"><span class="no">vi.</span><span class="lref">John 19:28</span><span class="lt">I Thirst</span><span class="dots" aria-hidden="true"></span><span class="st">inked &middot; read</span></a>
+        <a class="lrow" href="#"><span class="no">vii.</span><span class="lref">John 19:30</span><span class="lt">It Is Finished</span><span class="dots" aria-hidden="true"></span><span class="st">inked &middot; read</span></a>
+        <a class="lrow" href="#"><span class="no">viii.</span><span class="lref">Luke 23:46</span><span class="lt">Father, Into Thy Hands</span><span class="dots" aria-hidden="true"></span><span class="st">inked &middot; read</span></a>
+        <a class="lrow" href="#"><span class="no">ix.</span><span class="lref">Zech 11:13</span><span class="lt">Thirty Pieces of Silver</span><span class="dots" aria-hidden="true"></span><span class="st">inked &middot; read</span></a>
+        <a class="lrow" href="#"><span class="no">x.</span><span class="lref">Zech 12:10</span><span class="lt">The One They Pierced</span><span class="dots" aria-hidden="true"></span><span class="st">inked &middot; read</span></a>
+        <a class="lrow" href="#"><span class="no">xi.</span><span class="lref">Matt 26:40</span><span class="lt">Could Ye Not Watch One Hour</span><span class="dots" aria-hidden="true"></span><span class="st">inked &middot; read</span></a>
+        <a class="lrow" href="#"><span class="no">xii.</span><span class="lref">John 20:8</span><span class="lt">The Empty Tomb</span><span class="dots" aria-hidden="true"></span><span class="st">inked &middot; read</span></a>
+
+        <div class="lgroup">Types &amp; Shadows &mdash; the long studies</div>
+        <a class="lrow" href="the-bronze-serpent.html"><span class="no">i.</span><span class="lref">Num 21 &rarr; Jn 3</span><span class="lt">The Bronze Serpent</span><span class="dots" aria-hidden="true"></span><span class="st">study live &middot; film soon</span></a>
+        <a class="lrow" href="#"><span class="no">ii.</span><span class="lref">Exodus 12</span><span class="lt">The Passover Lamb</span><span class="dots" aria-hidden="true"></span><span class="st soon">being inked</span></a>
+        <a class="lrow" href="#"><span class="no">iii.</span><span class="lref">Leviticus 16</span><span class="lt">The Two Goats</span><span class="dots" aria-hidden="true"></span><span class="st soon">being inked</span></a>
+      </div>
+    </section>
+
+    <footer class="colophon">
+      <div class="inner">
+        <div>
+          <p class="wm">AWAK<em>EDEN</em> &mdash; the field journal</p>
+          <p style="margin-top:.5rem">Scripture quoted from the King James Version (KJV), public domain.
+            The ink is ours. The words are His.</p>
+        </div>
+        <p class="hand" style="color:#5d4b2e;font-size:1.15rem">every entry in this register lands on Jesus. that is what the book is for.</p>
+      </div>
+    </footer>
+
+  </div>
+</div>
+
+<a class="page-back" href="index.html" aria-label="Turn back to the cover">
+  <span class="fold-tri" aria-hidden="true"></span>
+  <span>&larr; back to the cover</span>
+</a>
+<a class="page-turn" href="the-bronze-serpent.html" aria-label="Turn the page: open the Bronze Serpent study">
+  <span class="fold-tri" aria-hidden="true"></span>
+  <span>turn the page &rarr;</span>
+</a>
+
+</body>
+</html>

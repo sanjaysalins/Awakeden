@@ -1,3 +1,1392 @@
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★ 2026-08-03: BRONZE SERPENT LONG IS FINISHED END-TO-END — the
+# FIRST-EVER full-length (9:55) living-sketchbook film exists. User
+# reviewed the clips (approved, minus the s49/s65 fix below), said
+# "assemble it and do the next steps" -- full finishing chain built +
+# run this session, all $0, all deterministic (no LLM/API spend).
+# NOT YET: user's own watch of the FINISHED file, and NOT committed.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ── 0. Final file + what's still open ──
+#   file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/poc_living_sketchbook/bronze_serpent_long/BRONZESERPENT_LONG_living_sketchbook_cc.mp4
+# 594.93s (9:54.9), 1920x1080, watermarked, captioned, scored, sfx'd.
+# check_landing_hold.py: PASS (v=594.93s a=594.96s gap=-0.03s).
+# **NEXT, UNBLOCKED, NOT YET DONE: the user's own watch of this finished
+# file** (not just the clips gallery -- this is the full assembled film,
+# a different thing to review). If it holds up, this is ready for a git
+# commit checkpoint (still not committed, see item 5 further down) and
+# then a normal /publish pass whenever the user wants one.
+# Everything below in this ★ block is HOW it got here this session, kept
+# for the record; the older "REDO ROUND 3e" state further down is now
+# fully superseded by this.
+#
+# ── 0a. What got built this session (all new files, all $0) ──
+#   _s8_score.py    -- reuses the SAME Suno recipe already proven for this
+#                      exact story's other visual treatment (longform/
+#                      04_The_Bronze_Serpent/_add_score_inked.py's own
+#                      RECIPE, verbatim: lonely_searching_a -> glory_
+#                      holy_stillness_a -> sacred_grace_rise_b, 6s xfade,
+#                      -11dB, 2.5s outro) via the shared pipeline/
+#                      score_mix.py engine. Output: BRONZESERPENT_LONG_
+#                      living_sketchbook_scored.mp4 (594.9s).
+#   _s9_sfx.py      -- ambient bed via the shared pipeline/sfx_bed.py
+#                      engine (same one every shipped long-form uses),
+#                      cue windows read LIVE off _spread_windows.json
+#                      (not hand-typed timestamps): wind_desert_bleak
+#                      (whole film), crowd_murmur_distant x2 (the
+#                      discouraged then contrite camp), rumble_deep_sub
+#                      (serpents arrive), fire_crackling x2 (forge,
+#                      bookended at s42), 3x nail_strike_single (the
+#                      hammer actually striking, s28), impact_low_boom
+#                      (s55 Hezekiah's break -- the plan's OWN device
+#                      note explicitly asked for a real SFX hit here to
+#                      sync the impact-burst visual to). Output:
+#                      ..._scored_sfx.mp4.
+#   _s10_captions.py -- the SAME hand-written ink caption recipe already
+#                      locked for the SHORT (bronze_serpent/_s6_
+#                      captions.py, Inkfree font + parchment scrim +
+#                      per-word jitter), adapted for landscape (1920x1080
+#                      not 1080x1920) and this film's length. 301 word-
+#                      timed chunks off the real _alignment.json -- too
+#                      many for one ffmpeg filter graph (the short never
+#                      needed this), so this BATCHES into ~60s segments
+#                      (same segment-then-concat shape _s7_assemble.py
+#                      already uses) -- resumable, each ffmpeg call small.
+#                      Same defensive skip as the short: no caption
+#                      overlay during s43/s67's own on-screen lettering
+#                      windows (read live from _spread_windows.json).
+#                      Output: ..._cc.mp4.
+#   add_watermark.py (existing, repo-root) -- called directly on the
+#                      captioned file; it's resolution-agnostic (16:9 ->
+#                      top-right placement automatically), just wasn't in
+#                      its own hardcoded shipped_finals() list so had to
+#                      be passed as an explicit arg. Backup kept:
+#                      ..._cc.prewm.bak.mp4.
+#   check_landing_hold.py (existing, repo-root) -- run directly on the
+#                      final file (its own bulk-scan mode doesn't look
+#                      inside poc_living_sketchbook/, so always pass the
+#                      path explicitly for this piece). PASS.
+# Every stage verified by eye (real frames pulled + read), not just "the
+# script exited 0" -- caption-vs-insert-page collision checked directly
+# (confirmed clean), watermark placement checked, the landing spread
+# checked (lands on Christ, "Look to Him, and live.", tear_hole intact).
+#
+# ── 0b. The s49/s65 fix, folded into the film this session ──
+# Before assembly, the user's own eye-check (watching the real clips, not
+# the frame-sampled AI pre-check below) caught residual "dancing" motion
+# on s49_christ_radiant_begin and s65_christ_open_invite that survived
+# EARLIER fixes (both already had a documented prior reject in RESUME
+# history -- s49's own "forward-only, no pingpong" fix from 2026-08-02
+# wasn't enough since the raw generative clip itself still had invented
+# motion baked in, not just an assembly-level reversal artifact; s65 had
+# an earlier robe-sway reroll that also didn't fully resolve it). Fixed
+# by swapping BOTH to a deterministic InsertPageCamera push-in (script:
+# _s4c_kenburns_s49_s65.py) -- pure crop+zoom, invented motion now
+# categorically impossible. Old attempts kept, not deleted: clips/
+# s49_christ_radiant_begin.v2_dancing_reject.mp4, clips/
+# s65_christ_open_invite.v2_dancing_reject.mp4.
+# REAL BUG CAUGHT + FIXED mid-fix: `_spread_windows.json` cached the OLD
+# clips' 4.04s duration, so the first rebuild picked the wrong fill mode
+# (pingpong bounce) for the new clips -- would have silently reintroduced
+# a reversal artifact into the very clips just fixed. Caught by reading
+# the JSON before trusting the build log; fixed by regenerating it fresh
+# (_s6b_spread_windows.py re-ffprobes real files) before rebuilding the
+# two segments. Both now correctly resolve to `once_trim` (no bounce).
+#
+# ── 0c. Also found + corrected while rebuilding the gallery (unrelated
+#    to the fix above, just surfaced at the same time) ──
+# s43_insert_scholars_margin2.mp4 and s67_insert_gilded_proclamation2.mp4
+# were ALREADY BUILT on 2026-08-02 but never logged -- RESUME previously
+# said all 3 (s43/s67/s68) were "not yet built." Both spot-checked by eye
+# and match their _PLAN.md description. Real count was 67/68 clean before
+# assembly (only s68's own tear_hole landing device was genuinely custom-
+# built fresh, which it already was via the existing pipeline).
+#
+# ── OPEN DECISIONS (unchanged from 2026-08-02 + the new one above) ──
+#   0. NEW: user watches the finished film (item 0 above) -- the actual
+#      next thing to do, everything else here is unchanged and still open.
+#   1. Update style_manifest.json for sl10/sl16 reroll, or leave as-is.
+#   2. Pick a website redesign direction (or none yet) among the 6 mockups.
+#   3. Decide next steps for the ArkAIology plate-pack POC (standing
+#      recipe vs. one-off).
+#   4. Git commit checkpoint for ALL of this (Bronze Serpent LONG in full
+#      incl. today's finishing chain, the website mockups, style bake-off,
+#      AI pre-check notes) -- still nothing committed to git this whole
+#      multi-session arc.
+#
+# ══════════════════════════════════════════════════════════════════════════
+# ══════════════════════════════════════════════════════════════════════════
+# OLDER: RESUME — SESSION PAUSED BY USER REQUEST ("let's update the todo
+# and pick it up later"), 2026-08-02. Nothing broken, nothing mid-render.
+# Superseded by the ★ block above; kept for the detailed clip-by-clip
+# fallback history that's still occasionally useful.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ── 1. BRONZE SERPENT LONG: clip set now COMPLETE (68/68), awaiting the
+#    human eye-check gate before assembly ──
+# Built the 8 remaining $0 deterministic fallback clips (InsertPageCamera
+# push-ins) for spreads that never got a clean generative render:
+# s28_forge_acting, s55_hezekiah_breaks, s44_shadow_cross, s12_vc_wherefore,
+# s18_moses_empty_hands, s14_serpent_hint, s46_thesis_pair,
+# s51_christ_draw_all_men. Script: `poc_living_sketchbook/bronze_serpent_long/
+# _s4b_fallback_clips.py`. Each rendered at its real _PLAN.md window
+# duration, native 2752x1536 (NOT the engine's 9:16 default -- passed
+# out_w/out_h explicitly). All 8 verified clean by eye (first/last frame):
+# s44's full cross-shadow stays in frame throughout (the one spread with an
+# explicit prior caution about this), s46's paired serpent/cross composition
+# stays balanced, s51's nailed hands never crop. NOTE for assembly: s55
+# still needs the plan's own impact-burst device layered ON TOP at assembly
+# time (not baked into this clip) -- same pattern as the short's
+# candle-only-on-s06_forge precedent.
+# Gallery rebuilt (`_build_clips_review.py`): 65 clean clips + 3
+# always-$0-by-design (s43/s67/s68 insert pages + landing, not yet built,
+# not a failure) = 68/68 accounted for.
+# **CORRECTION 2026-08-03: s43 and s67 were ALREADY BUILT on 2026-08-02
+# (clips/s43_insert_scholars_margin2.mp4, clips/s67_insert_gilded_
+# proclamation2.mp4) -- this just never got logged, so the gallery script
+# wasn't picking them up until re-run today. Both spot-checked by eye and
+# match their _PLAN.md description (s43 = Moses/serpent-on-pole -> Jesus &
+# Nicodemus typology diptych; s67 = serpent-on-pole low + radiant Christ in
+# gold above, the Gilded Proclamation echo). Real count is now 67 clean, only
+# s68 (the landing, tear_hole device) is genuinely not yet built.
+# **NEXT, UNBLOCKED, NOT YET DONE: the user's own eye-check on the full set.**
+#   file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/poc_living_sketchbook/bronze_serpent_long/_CLIPS_REVIEW.html
+# 2026-08-03 UPDATE (gentle background session, no spend, no decisions made):
+# an AI pre-check ran over all 65 clips (frame-sampled + read-only review
+# agents + my own eye-check on anything flagged) to speed up the human pass
+# above -- does NOT replace it. 59/65 came back clean. 6 flagged, full detail
+# + exact frames in poc_living_sketchbook/bronze_serpent_long/
+# _AI_PRECHECK_NOTES.md -- worth checking first when the user does the real
+# eye-check: s19_people_kneel (crowd has too many sharp faces), s39_moses_
+# sleepless_candle (hand pose shifts frame-to-frame), s47_golgotha_midshot
+# (a pale drip appears then vanishes mid-clip -- clearest real one), s62_
+# moses_neverasked + s64_moses_sit_with_that (background shadow/storm-cloud
+# grows in that isn't in the first frame), s42_hands_finish_forge (lower
+# confidence -- might just be a crop artifact, needs real playback to tell).
+# Also ran the full /validate suite + whole pytest suite this session: all
+# green (473 passed, 1 skipped, 0 failures) -- the uncommitted tree isn't
+# broken.
+# 2026-08-03 UPDATE 2 (user's own eye-check on s49 + s65, same session):
+# user watched the real clips (not just frames) and caught residual invented
+# motion the frame-sampling pre-check above couldn't -- Christ's figure still
+# read as "dancing" on BOTH s49_christ_radiant_begin and s65_christ_open_
+# invite even after earlier generative rerolls. Per explicit user instruction,
+# swapped BOTH to the same deterministic InsertPageCamera push-in already used
+# for the 8 fallbacks above -- invented motion is categorically impossible on
+# a pure crop+zoom. Old generative attempts renamed, not deleted:
+# clips/s49_christ_radiant_begin.v2_dancing_reject.mp4,
+# clips/s65_christ_open_invite.v2_dancing_reject.mp4 (both already had earlier
+# v1 rejects too). New script: `poc_living_sketchbook/bronze_serpent_long/
+# _s4c_kenburns_s49_s65.py`, rendered at each spread's real _PLAN.md window
+# (s49=8.8s, s65=6.0s), verified clean by eye (first/mid/last frame): pose,
+# hands, feet, robe all held identical, only the crop moves. Gallery
+# rebuilt again to reflect this + the s43/s67 correction above.
+# THEN assembly (score/SFX/captions/watermark/validate). Two action items
+# already on record for that stage, don't lose them: (a) s65 is now a static
+# push already (superseded, no further arc/swoop needed there) -- but
+# s50_christ_close_words still wants a partial arc/swoop camera move at
+# assembly, $0 deterministic ffmpeg only, NOT generative, per the user's own
+# explicit ask and this project's camera-stays-locked-at-generation
+# architecture; (b) layer s55's impact-burst device at assembly to carry the
+# strike energy the frozen push-in alone can't.
+#
+# ── 2. ArkAIology plate-pack POC (side quest, user-initiated) ──
+# User asked me to check the sibling ArkAIology project's "NBP Plate Pack"
+# recipe (10 documentary ink/watercolor plates, ONE plate chained as
+# style_ref to the rest, flat light, exactly one gold accent, stills-only-
+# by-design) and POC it against Bronze Serpent content. Built
+# `poc_living_sketchbook/_arkaiology_plate_poc/_render.py` -- 6 plates
+# rendered clean on first try, $3.00 total, zero rerolls: artifact-hero (the
+# bronze serpent alone, deliberately kept UN-gilded per this episode's own
+# "gold = Christ's glory only" rule -- the one gold accent sits in the
+# margin, never on the serpent), map (wilderness route), comparison-split
+# (serpent | gold divider | cross -- same pairing idea as the LONG pilot's
+# own s46_thesis_pair), timeline backplate, wilderness-dusk cold-open/
+# closer, big-stat backplate. Gallery: `poc_living_sketchbook/
+# _arkaiology_plate_poc/_GALLERY.html`.
+# The genuinely new/reusable finding: chaining ONE style_ref across a themed
+# SET of non-character documentary plates isn't something this project's
+# existing pipeline does (it chains refs for character identity, not for a
+# themed set) -- and it happens to fill a real content gap the website
+# mockups (see item 3) were already flagging.
+# OPEN DECISION (on the task list): does this become a standing recipe for
+# future episodes, or stay a one-off POC? Not decided.
+#
+# ── 3. Website redesign -- discovered mid-session, one mockup touched ──
+# Found `_website/_redesign_sketchbook/` (6 full mockups: Archive of Insert
+# Pages, Book Made Real, Field Journal, Study Desk, Live Ink, The Arc) --
+# built by a parallel/earlier session, all dated 2026-08-01,
+# UNDOCUMENTED in RESUME.md/STATE.md before now (found only because the
+# user asked about it directly). Read all 6 RATIONALE.md files. Picked
+# "Archive of Insert Pages" as the best-fit target for the plate-pack POC
+# (its own "Scholar's Margin" section already wanted exactly this kind of
+# typology/map content) and edited `archive_insert_pages/study.html`:
+# swapped its placeholder Scholar's Margin plate image for the real
+# comparison-split plate, added the map plate at the "Israel is skirting
+# Edom" paragraph. NOT screenshotted live -- the Chrome extension wasn't
+# connected this session, so this was verified by reading the HTML/CSS
+# (matching surrounding `.plate`/`.tilt-r`/`.tape` classes and dimensions)
+# only, not a real render. Worth an actual look before trusting the layout
+# holds:
+#   file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/_website/_redesign_sketchbook/archive_insert_pages/study.html
+# No other mockup touched. No direction chosen among the 6 -- that's still
+# fully open.
+#
+# ── 4. Style bake-off: sl10 + sl16 rerolled, both fixed, NOT yet promoted
+#    in the manifest ──
+# User asked why sl10_overhead_plan and sl16_foreground_occlusion were
+# rejected in the 35-style identity bake-off
+# (`poc_living_sketchbook/_style_identity_bakeoff/style_manifest.json`).
+# Real failure modes: sl10 baked survey-document text onto the Jesus render
+# and ignored the overhead framing entirely on the Moses render; sl16's
+# Jesus render came out too tiny/distant to confirm identity despite Moses
+# working fine. Also explained the real 3-stage style-selection mechanism
+# now built (`pipeline/style_select.py` LLM-proposes -> `pipeline/
+# style_variety.py` deterministic budget/spacing/theology gate -> human
+# eye-gate) -- this exists but wasn't documented in RESUME/STATE either.
+# **IMPORTANT CORRECTION SURFACED MID-SESSION, don't miss this:**
+# `.claude/skills/living-sketchbook/STYLE_LAB.md` (NOT the JSON manifest)
+# already records that sl10 was "USER-ACCEPTED 2026-08-01 despite the
+# text" -- survey labels judged fine/nice at the time, explicit instruction
+# to NOT reword it, treat it as a manual per-episode override rather than a
+# manifest change. The user was told this directly, mid-session, and chose
+# to reroll anyway -- an informed second attempt, not an accidental
+# override of the prior call.
+# Reroll script: `poc_living_sketchbook/_style_identity_bakeoff/
+# _reroll_sl10_sl16.py`. 4 renders (Moses+Jesus x 2 styles), $1.20, all
+# clean, saved as `.v2` files alongside the originals (nothing overwritten):
+#   - sl16_foreground_occlusion.v2 -- FIXED on both characters, now
+#     production-quality (face large/clear, foreground occludes only the
+#     edges, not the subject's own scale).
+#   - sl10_overhead_plan.v2 -- the document/text-baking bug is GONE on both
+#     characters, and it now genuinely reads as an elevated/aerial angle
+#     instead of ignoring the framing. Identity is honestly softer than
+#     face-forward styles (inherent to any real overhead angle, not a
+#     wording bug) but both faces are recognizable -- hair, beard, robe,
+#     staff all match the reference.
+# **NEXT, OPEN, NOT DONE: decide whether to update style_manifest.json**
+# (new handmade_alive/identity_lock scores + flip status to
+# production_approved for one or both). Deliberately left undone --
+# flipping status makes a style auto-eligible for style_select.py's
+# proposal stage, a real production-affecting change, not something to
+# silently change without a decision.
+#
+# ── 5. Reference page built (user ask) ──
+# `poc_living_sketchbook/_SKILLS_AND_STYLES.html` (+ generator
+# `_build_skills_styles_reference.py`) -- catalogues all 35 bake-off styles
+# (real thumbnails, status-coded green/amber/red) and all 34 panel_animator
+# skills/devices, grouped by category (paper & light, reveal & camera,
+# lettering & data, hand & margin, impact & polish, sound, QC). Re-runnable
+# any time style_manifest.json changes; the skills list itself is
+# hand-maintained (add a line when a new panel_animator skill ships).
+#
+# ── NOTHING FROM THIS SESSION IS COMMITTED TO GIT YET ──
+# Untracked as of this handover (this session's work): the whole
+# `poc_living_sketchbook/bronze_serpent_long/` LONG pilot tree,
+# `_website/_redesign_sketchbook/` (6 mockups, one now edited),
+# `poc_living_sketchbook/_arkaiology_plate_poc/`,
+# `poc_living_sketchbook/_style_identity_bakeoff/` (incl. the new `.v2`
+# reroll renders), `poc_living_sketchbook/_SKILLS_AND_STYLES.html` + its
+# builder script. ALSO untracked but NOT built by this thread (found
+# mid-session, built by a parallel/earlier session): `pipeline/
+# style_select.py` + `pipeline/style_variety.py` + their tests,
+# `panel_animator/marginalia.py`. ALSO pre-existing untracked items, not
+# touched this session either way: `poc_living_sketchbook/
+# _beat_variation_poc/`, `poc_living_sketchbook/_r3_moses_younger_anchor.py`,
+# `poc_living_sketchbook/cast/MOSES_YOUNGER.md`, `_audience_test_pack.zip`.
+# Commit as one checkpoint once the user is happy with where things stand --
+# per this project's usual practice, don't commit piecemeal without asking.
+#
+# ── OPEN DECISIONS LEFT FOR NEXT SESSION (also on the live task list) ──
+#   1. User eye-check on the Bronze Serpent LONG clip gallery (blocking).
+#   2. Update style_manifest.json for sl10/sl16 reroll, or leave as-is.
+#   3. Pick a website redesign direction (or none yet) among the 6 mockups.
+#   4. Decide next steps for the ArkAIology plate-pack POC (standing recipe
+#      vs. one-off).
+#   5. Git commit checkpoint for all of the above.
+#
+# ══════════════════════════════════════════════════════════════════════════
+
+# ══════ ALSO (2026-08-02, same day, SEPARATE thread — does not touch or
+# block Bronze Serpent below): an ArkAIology style-test POC was accidentally
+# run in THIS repo, then corrected. Handover recorded here per this repo's
+# own RESUME.md convention, because the user asked for it explicitly. ══════
+#
+# What happened: 46 stills (Nano Banana Pro) + 38 animations (Kling3.0) were
+# generated across 5 pasted prompt packs, testing a "Vox/Johnny Harris"
+# documentary look, PLUS a 4-model text-fidelity bake-off (Kling vs
+# Seedance1.5 vs Veo3.1-lite vs MiniMax Hailuo — same still, same prompt).
+# None of it was JesusInTheBible content. Once the mistake was caught,
+# everything (scripts, media, galleries, the $83.41 real spend receipt) was
+# moved to C:\Users\sanjay\PycharmProjects\ArkAIology\poc_nbp_kling_style_test\
+# and this repo's own spend_ledger.jsonl was corrected (91 misattributed rows
+# removed, surgically, by episode field — nothing else in the ledger touched).
+# Gallery: file:///C:/Users/sanjay/PycharmProjects/ArkAIology/poc_nbp_kling_style_test/output/index.html
+#
+# The part specifically worth keeping ON RECORD HERE (user's request): the
+# "ArkAIology — NBP Plate Pack v2 (How We Know: The Old Testament)" pack — 10
+# hand-illustrated ink/watercolor plates for the real Dead Sea Scrolls episode.
+#   - PLATE-02 (the artifact-hero clay jar) generates FIRST and becomes
+#     style_ref.png, attached as an NBP reference image to all 9 other plates
+#     for palette/line-weight consistency. This chaining pattern worked cleanly.
+#   - Only PLATE-01 (Qumran cliffs cold-open) and PLATE-10 (cave-threshold
+#     closer) get a Kling I2V pass — dust-only, locked-off static camera,
+#     nothing else moves. The camera push/reveal itself is added afterward in
+#     Remotion, not by Kling.
+#   - The other 8 plates (02, 03 stat-backplate, 04 map, 05 timeline-backplate,
+#     06 scriptorium, 07 comparison-split, 08 fragment-macro, 09 chart-backplate)
+#     are STILLS ONLY BY DESIGN — every plate explicitly bans all baked-in
+#     text/letters/glyphs, because every headline/number/label is meant to be
+#     added afterward in Remotion, never generated or animated by the AI. This
+#     is EXACTLY the architecture this session's bake-off independently proved
+#     correct (every I2V model tested either garbles baked text or invents
+#     content trying to preserve it — see the bake-off gallery). The plate
+#     pack's own author had already solved this before I even tested it.
+#   - Pass mark protocol (verbatim, and all 10 plates + both I2V clips passed
+#     clean, zero rerolls needed): "8 of 10 with no rerolls (per-plate: zero
+#     text/letters/glyphs anywhere; reserved zone genuinely empty; flat even
+#     light, no rim light/flare/shallow DoF; exactly one gold accent in the
+#     specified position; palette + line weight match style_ref.png; nothing
+#     critical inside the 8% edge margin. Across the set: reads as one series;
+#     paper texture consistent enough to cut between; PLATE-08 contains
+#     nothing resembling real script. In motion: every graphic lands on a
+#     stressed syllable; no two consecutive shots share a motion type; no
+#     grain crawl on the two I2V plates; type legible at 360p."
+#
+# A bigger follow-up POC (24 more style concepts, applied to real ArkAIology
+# content) is handed off separately as a fresh session INSIDE the ArkAIology
+# repo — see that repo's own RESUME.md top section and
+# poc_nbp_kling_style_test/HANDOVER_bigger_poc.md there. Nothing further to
+# do on this thread in THIS repo.
+#
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════ HANDOVER FOR TOMORROW (written 2026-08-02, end of session,
+# nothing running in the background -- safe stopping point) ══════
+#
+# WHERE THINGS STAND: a complete ~9:52 "simple first cut" of the Bronze
+# Serpent LONG pilot exists and is believed CLEAN as of this handover:
+#   poc_living_sketchbook/bronze_serpent_long/
+#     BRONZESERPENT_LONG_living_sketchbook.mp4
+# Real narration audio, correct spread-by-spread timing, hard cuts (no
+# music/captions/watermark/special devices yet -- deliberate, see below).
+# check_landing_hold.py passes (v=592.42s a=592.34s gap=+0.08s).
+#
+# TONIGHT'S SESSION: user watched twice and caught 3 real defects across
+# 2 rounds, all fixed and re-verified (details in the dated sections
+# below this one): a cap/headwrap vanishing mid-clip on s30 (fixed at the
+# source clip), and "looks like dancing" on 3 different close-portrait
+# Christ spreads (s50, s49, s57) -- root-caused to the assembly's own
+# forward+reverse bounce-loop interacting badly with a licensed halo-
+# pulse effect on close portraits; fixed by switching those 3 spreads to
+# play-once-and-hold instead of bouncing.
+#
+# ══════ FIRST THING TOMORROW ══════
+# The user has NOT yet confirmed the current (3-fix) version is clean --
+# last message before stopping was "lets pick this up tomorrow", not an
+# approval. DO NOT assume the current file is final. Ask for /expect a
+# fresh watch-through before treating this cut as locked, OR if the user
+# reports another spot, use the SAME diagnostic method that worked 3
+# times tonight:
+#   1. Map the reported timestamp to a spread name via
+#      `_spread_windows.json` (start/end fields).
+#   2. Pull the SOURCE clip from `clips/<name>.mp4` (not just the
+#      assembled segment) and build a dense contact sheet (12-30 evenly
+#      spaced frames tiled into one image, ffmpeg select+tile) -- look
+#      at it yourself before theorizing. This caught the cap-vanish bug
+#      instantly; sparse sampling would have missed it.
+#   3. If the source clip is clean but the ASSEMBLED segment (in
+#      `_segments/seg_<name>.mp4`) looks wrong, the bug is in the fill-
+#      mode/bounce logic, not the animation -- check `_spread_windows.json`
+#      for that spread's `mode`. A pingpong/slow_pingpong bounce on a
+#      close portrait with ANY licensed brightness-pulse motion is a
+#      KNOWN risk (3 confirmed instances tonight) -- the fix is adding
+#      the spread's name to `NO_BOUNCE` in `_s6b_spread_windows.py`.
+#   4. After ANY fix: re-run `_s6b_spread_windows.py` (recompute windows/
+#      modes) -> `_s7_assemble.py --only <name>` (rebuild just that
+#      segment) -> `_s7_assemble.py --concat-only` (rejoin + remux, fast,
+#      does NOT rebuild anything) -> `check_landing_hold.py` on the final
+#      file. This loop is now proven and fast (rebuilding 1-2 segments +
+#      recompositing is minutes, not the multi-hour full-68 build).
+#
+# ══════ ONCE THE CUT IS ACTUALLY APPROVED (not yet, as of this
+# handover) -- the ORIGINAL remaining plan, unchanged ══════
+# 1. Polish pass 2 -- add back the devices deliberately skipped for the
+#    simple-first cut (candle-only on s23/s39, blue-line reveal on s04,
+#    impact-burst on s55, slow camera drift on s32/s41, PARTIAL arc/swoop
+#    on s50/s65 per the user's own earlier explicit request, lift_away
+#    transitions into s43/s67, tear_hole reveal on s68, soft dissolve
+#    s53->s54). The original Fable design doc (search this session's
+#    transcript for "Design long-form assembly script" if needed) has
+#    the concrete per-device implementation plan, still valid, not yet
+#    built.
+# 2. Score + SFX (`_s8_score_sfx.py`, not yet written -- design called
+#    for reusing `longform/_add_score_lf.py`'s existing Bronze Serpent
+#    cue chain: lonely_searching -> glory_holy_stillness -> sacred_
+#    grace_rise, seams at the healing payoff ~210s and the John 3:14
+#    pivot ~388s).
+# 3. Watermark (`add_watermark.py`, reuse as-is, no new code).
+# 4. Captions (`_s9_captions.py`, not yet written -- design flagged the
+#    short's own per-chunk-overlay caption mechanism will NOT scale to
+#    ~1600 words; check `veed_io/serif_captions.py`'s batching approach
+#    first before inventing a new one).
+# 5. check_landing_hold.py + a full user eye/ear check on the truly final
+#    file before calling Phase 0 of the sketchbook-migration plan done --
+#    report real final cost/time back into sizing Phase 1 (Isaiah 53,
+#    Psalm 22, Two Goats).
+#
+# ══════════════════════════════════════════════════════════════════════
+#
+# RESUME — Bronze Serpent LONG pilot: FIRST FULL CUT BUILT (2026-08-02).
+# `BRONZESERPENT_LONG_living_sketchbook.mp4` exists -- 592.34s (~9:52),
+# 1920x1080@30fps, real narration audio, INV-26 landing hold PASSING
+# (check_landing_hold.py: v=592.42s a=592.34s gap=+0.08s). This is a
+# "simple first cut" per the user's own explicit call (2026-08-02): right
+# timing, narration, hard cuts between spreads, NO music/SFX/captions/
+# watermark/special devices (candle-glow, camera drifts, page-turn
+# transitions, impact-burst) yet -- those are a deliberate polish-pass-2,
+# added only after this base cut is seen and approved. Read THIS section
+# first; everything below it is older history superseded by "current
+# state" here.
+#
+# ══════ ASSEMBLY BUILD (2026-08-02) -- NEW SCRIPTS, NEW STAGE ══════
+#
+# Design by Fable (per the standing split), executed by Sonnet. New files,
+# all in `poc_living_sketchbook/bronze_serpent_long/`:
+#   _spread_table.py       -- the 68-row (name/beat/start/end) source of
+#                              truth, mirrors _build_review.py's ROWS
+#   _s4c_insert_pans.py    -- the last 2 "$0 by design" spreads (s43, s67):
+#                              InsertPageCamera reading-order pans, same
+#                              engine as _s4b's 8 fallbacks
+#   _s6_align.py           -- $0 local forced alignment (WhisperX via
+#                              veed_io/aligner.py) of the REAL locked
+#                              long-form narration at
+#                              `longform/EW04_Bronze_Serpent/v1/
+#                              narration.mp3` (NOT the short's own
+#                              narration) -- 1613/1613 words placed. Output:
+#                              `_alignment.json`
+#   _s6b_spread_windows.py -- turns _spread_table.py's plan-ESTIMATED
+#                              windows + _alignment.json into the real,
+#                              word-snapped `_spread_windows.json` (68
+#                              rows: exact start/end/dur + resolved FILL
+#                              MODE). Re-run this any time the alignment
+#                              or clip set changes -- it's the one place
+#                              that decides how each clip stretches to
+#                              its window.
+#   _s7_assemble.py        -- builds one segment per spread (fill modes:
+#                              once_trim / once_hold / pingpong /
+#                              slow_pingpong / fwd_tail_bounce /
+#                              static_still -- see the script's own
+#                              docstring), concats with hard cuts, muxes
+#                              the real narration with INV-26 hold.
+#                              `--only <names>` for a partial rebuild,
+#                              `--concat-only` to just rejoin+remux.
+#
+# REAL BUG FOUND AND FIXED THIS ROUND: the first full 68-segment build
+# PASSED individually (no script errors) but check_landing_hold.py caught
+# a genuine defect -- video track 574.38s vs audio 592.34s, ~18s missing.
+# Root cause: `_s6b_spread_windows.py`'s first version snapped each
+# spread's start AND end independently against the word list -- but a
+# shared boundary (spread i's end == spread i+1's start, same target time)
+# could get snapped to two DIFFERENT nearby words, opening a small gap.
+# 67 boundaries x ~0.27s average gap = the missing 18s. FIX: only the
+# START of each spread is snapped; a spread's END is always set to the
+# NEXT spread's own start (never independently re-snapped) -- guarantees
+# zero gaps by construction. 16 spreads needed their segments rebuilt
+# after the fix (list in git history / conversation, not repeated here);
+# re-verified sum-of-segments == target total before re-muxing. Re-ran
+# check_landing_hold.py -- PASS. LESSON: a script exiting 0 is not proof
+# of correctness -- the landing-hold gate (or any independent duration
+# check) is what actually caught this, not the build succeeding.
+#
+# Visually swept the whole finished film (30-frame timeline contact sheet,
+# one per ~20s) -- story order is correct beat-to-beat, no broken/stuck/
+# black segments anywhere. NOT YET checked: actual audio content/sync by
+# EAR (I can't hear) -- that's the user's own gate, first thing to do.
+#
+# FILE: poc_living_sketchbook/bronze_serpent_long/
+#       BRONZESERPENT_LONG_living_sketchbook.mp4 (536MB, silent+segments
+#       kept in _segments/ and _assemble_work/ for idempotent rebuilds --
+#       do NOT delete those before a polish-pass rebuild needs them)
+#
+# ══════ ROUND 2 FIXES (2026-08-02, same day, from user's own watch) ══════
+# User watched the first cut ("its very nice") and caught 2 real defects:
+#   - 07:31 (s50_christ_close_words): "makes jesus look like he is doing a
+#     dance." The SOURCE clip itself was already proven clean (mouth/halo/
+#     hands all locked, checked repeatedly earlier this session) -- the
+#     cause was ASSEMBLY's own pingpong bounce: a forward+reverse loop on
+#     a close portrait can read as unwanted motion if the clip's own
+#     licensed glow-pulse doesn't return to its exact starting brightness
+#     at the reversal seam. Fix: added a `NO_BOUNCE` override in
+#     `_s6b_spread_windows.py` forcing s50 to `once_hold` (play forward
+#     once, freeze last frame) -- zero reversal, zero risk. Only applied
+#     to s50 (the one actually reported); revisit if the same complaint
+#     recurs on another close-portrait pingpong spread.
+#   - 03:33 (s30_payoff_fever_breaks): "the mans cap dissapeers." CONFIRMED
+#     real in the SOURCE clip itself (present ~1s, gone for the rest) --
+#     unlocked-region-migration, same mechanism as s45's sky/s65's robe
+#     earlier: the motion prompt never named his headwrap, so it was free
+#     to drift/vanish. Fix: explicit "headwrap stays exactly as drawn,
+#     never fading/disappearing" lock added to `_s4_animate.py`, re-
+#     rendered (one transient Higgsfield API error on the first attempt,
+#     clean retry), re-verified clean across the whole clip. The
+#     assembly's slow_pingpong bounce made the defect show TWICE (forward
+#     vanish + reverse un-vanish) but did not cause it.
+# Both segments rebuilt, full film re-concatenated + re-muxed,
+# check_landing_hold.py re-run -- still PASS (v=592.42s a=592.34s
+# gap=+0.08s). Old defective assets archived: `clips/
+# s30_payoff_fever_breaks.v7_cap_vanish_reject.mp4`.
+#
+# ══════ ROUND 3 FIX (2026-08-02, same day): "dancing" recurred on a
+# DIFFERENT spread after s50's own fix ══════
+# User re-watched, reported 07:23 still looked like Christ dancing -- but
+# the timestamp had shifted because s50's fix changed what plays at 07:31.
+# The actual spread at 07:23 is s49_christ_radiant_begin, NOT s50. Root
+# cause: the EXACT SAME mechanism as s50's fix (pingpong bounce on a
+# licensed halo-brightness-pulse, close portrait) -- this is the 2nd
+# confirmed instance of this pattern. Checked every other crucifixion-tier
+# pingpong spread for the same "glow/halo pulses brighter and dimmer"
+# prompt language + close-portrait framing: s57_bridge_moses_christ has
+# near word-for-word the same motion prompt as s49 ("halo glow... breathes
+# very gently brighter and dimmer") -- fixed proactively rather than
+# waiting for a 3rd identical report. `NO_BOUNCE` set in
+# `_s6b_spread_windows.py` now covers s50, s49, s57 (all -> once_hold, no
+# reversal). Deliberately did NOT touch s45/s47/s58/s65 -- their motion is
+# diffuse scene/paper-wide light, not a tight halo directly on the figure,
+# a lower-risk pattern with no evidence yet; revisit only if reported.
+# Segments rebuilt, film re-concatenated + re-muxed, check_landing_hold.py
+# still PASS (v=592.42s a=592.34s gap=+0.08s).
+#
+# ══════ NEXT STEPS ══════
+# 1. USER'S OWN WATCH (with sound) of the CURRENT film, especially
+#    re-checking ~07:23 (s49) and ~09:xx (s57, near the John 3:16 verse
+#    card) for the same dancing pattern, now fixed on both -- this is the
+#    real gate. I verified duration/sync/ordering mechanically and fixed
+#    every reported defect, but only a human ear/eye confirms it actually
+#    plays right now.
+# 2. IF approved: polish pass 2 -- add back the devices deliberately
+#    skipped this round (candle-only on s23/s39, blue-line reveal on s04,
+#    impact-burst on s55, slow camera drift on s32/s41, PARTIAL arc/swoop
+#    on s50/s65 per the user's own earlier request, lift_away transitions
+#    into s43/s67, tear_hole reveal on s68, soft dissolve s53->s54) --
+#    the original Fable design doc (search this conversation / the agent
+#    transcript for "Design long-form assembly script") has the concrete
+#    per-device implementation plan, still valid, not yet built.
+# 3. THEN score + SFX (`_s8_score_sfx.py`, not yet written -- design
+#    called for reusing `longform/_add_score_lf.py`'s existing Bronze
+#    Serpent cue chain: lonely_searching -> glory_holy_stillness ->
+#    sacred_grace_rise, seams at the healing payoff (~210s) and the
+#    John 3:14 pivot (~388s)).
+# 4. THEN watermark (`add_watermark.py`, reuse as-is, no new code).
+# 5. THEN captions (`_s9_captions.py`, not yet written -- design flagged
+#    the short's own per-chunk-overlay caption mechanism will NOT scale to
+#    ~1600 words; check `veed_io/serif_captions.py`'s batching approach
+#    first before inventing a new one).
+# 6. THEN check_landing_hold.py + a full user eye/ear check on the truly
+#    final file before calling Phase 0 of the sketchbook-migration plan
+#    done -- report real final cost/time back into sizing Phase 1 (Isaiah
+#    53, Psalm 22, Two Goats).
+# ══════ REDO ROUND 3 (2026-08-02): 4 stills RESTYLED + 5 clips ENRICHED/
+# FIXED, animation batch IN PROGRESS ══════
+#
+# User reviewed the 68-still and 63-clip galleries directly and gave two
+# kinds of feedback:
+#   1. Recreate 4 stills COMPLETELY DIFFERENTLY using the new style-lab
+#      bake-off library (35 production_approved rendering techniques,
+#      already used once this session for the earlier stills-redo round).
+#   2. 5 clips "felt plain" -- not enough environmental motion, and #45 is
+#      "Jesus is dancing" -- a REAL confirmed defect (see below).
+#
+# Design done by Fable (per the standing Fable=design/Sonnet=execution
+# split, memory feedback-fable-design-sonnet-execution.md), executed by
+# Sonnet. Full design reasoning is in the conversation transcript if needed
+# later; this section has the OUTCOME.
+#
+# --- STILLS: 4 restyled, ALL DONE + approved ---
+#   s47_golgotha_midshot -> sv11_ink_wash_chiaroscuro_and_scratched_light
+#     (dread/one-light register -- the curse being borne)
+#   s49_christ_radiant_begin -> sl17_gold_leaf_as_structure (glory beat,
+#     gold_leaf_conflict=true, DELIBERATE doctrine call -- this IS the
+#     spread where suffering flips to glory, matching the episode's own
+#     s67 Gilded Proclamation precedent for a gold ground)
+#   s50_christ_close_words -> sl06_wet_in_wet_bleed (the glow bleeding
+#     outward = "I will draw all men unto me" enacted in the medium)
+#   s53_moses_know_that_now -> sv05_cyanotype_blue_focus (testimony/memory
+#     register -- "I know that now" looking back from the far side of life)
+# KNOWN, RECORDED spacing-rule tension: these 4 sit within a 6-spread span,
+# well under pipeline/style_variety.py's normal min-gap-8 rule -- DELIBERATE
+# human override (the styles trace the passage's own dramatic arc), not a
+# bug, don't "fix" it by respacing or reverting.
+# REAL DEFECT CAUGHT + FIXED during this round: s49's first gold-icon
+# render had hands reading as GRIPPING the crossbeam (fingers curled
+# over/behind the wood) rather than nail-pinned -- same ambiguity this
+# spread had BEFORE the restyle, resurfaced by the style change. User chose
+# re-roll over accept; second attempt (much more explicit anti-grip
+# anatomy language, see `_s49_regold_nailfix.py`) came back CLEAN -- palms
+# flat, fingers open/relaxed, visible nail marks on both palms AND feet.
+# Approved. Script: `poc_living_sketchbook/bronze_serpent_long/
+# _s5_redo_styles_round2.py` (main 4) + `_s49_regold_nailfix.py` (the fix).
+# Old stills archived as `.v2_style_superseded.png` / `.v2a_grip_reject.png`.
+#
+# --- ANIMATION: #45 dancing (real defect) + 4 clips enriched ---
+# User caught "Jesus is dancing" on s45_golgotha_wide. VERIFIED REAL by a
+# dense 12fps frame-diff analysis (not the earlier sparse 5-point sampling
+# that missed it) -- body-region motion, isolated from the sky background,
+# stayed elevated and roughly CONSTANT across the whole clip rather than
+# spiking once and settling: the signature of continuous sway, not ambient
+# breathing. THIS METHOD (dense fps extraction + numpy frame-diff, isolate
+# the subject's own bounding box from background) is now the standard check
+# for anything doctrinally sensitive going forward -- sparse 5-point
+# sampling can miss a periodic/continuous sway if it happens to land on
+# similar-looking frames. Root cause (Fable's diagnosis, matches the
+# evidence): the old prompt licensed "the sky... drifts" -- a continuous
+# SPATIAL motion -- and this still's dark sky surrounds the thin figure on
+# all sides, so imperfect figure/sky segmentation let that spatial warp
+# bleed across the body boundary for the whole clip. Every OTHER
+# crucifixion clip that passed licenses INTENSITY-only motion ("breathes/
+# pulses evenly"); s45 was the only one licensing spatial drift, and the
+# only one that swayed. Fix: PAGE reframe (added to SELF_CONTAINED), killed
+# all spatial drift, intensity-only whole-sky-at-once motion instead,
+# explicit positive pose statements, wound-lock kept verbatim (already
+# proven clean twice). Also enriched (user: "plain", not using the sky/
+# subtle-bits the still actually offers): s13_vignette_calf,
+# s17_vignette_collapse, s30_payoff_fever_breaks, s33_vignette_universal --
+# each given 2-4 grounded ambient elements (tied to something ACTUALLY
+# VISIBLE in that still) instead of one thin clause. s30 also had a
+# pre-existing risk fixed proactively (Fable's own catch, not asked for):
+# the old prompt licensed color/intensity motion on the man's SKIN --
+# same class that grew a wound on s16 earlier -- moved the light off his
+# skin onto the paper/wash instead.
+#
+# IMPORTANT ARCHITECTURE POINT, told to the user, worth remembering: this
+# project deliberately keeps the AI animation model's CAMERA fully locked;
+# real cinematic push/pull/drift is added later at ASSEMBLY via $0
+# deterministic ffmpeg, NOT by the generative model -- because letting the
+# model attempt camera movement is exactly what caused #45's dancing and
+# (earlier this session) s52/s62's zoom-crop failures. Do NOT add camera-
+# movement language to any future animation prompt for this reason.
+#
+# --- STATUS: all 9 clips rendered, QC'd clean, galleries rebuilt ---
+# All 9 re-animated (s47/s49/s50/s53 restyled-spread re-animations +
+# s45 dancing-fix + s13/s17/s30/s33 richness enrichment). Old clips
+# archived as `.v3_pre_richness.mp4`.
+#
+# QC METHOD USED (now the standing method for anything doctrinally
+# sensitive): two passes, NOT sparse point-sampling alone --
+#   1. Dense 12fps + numpy frame-diff (script written this round, not yet
+#      saved into the repo -- was in the session scratchpad; recreate if
+#      needed, it's ~60 lines: extract @12fps, center-crop 20% margin,
+#      grayscale mean-abs-diff between consecutive frames, flag sustained
+#      near-constant elevated diff vs decay-by-last-third).
+#   2. Contact sheets (8-16 evenly spaced frames tiled into one image,
+#      via ffmpeg select+tile) actually LOOKED AT -- per this project's
+#      standing "verify by looking, not running" rule. THIS is what caught
+#      the real defect below; the numeric method alone flagged ALL 9 as
+#      "suspect" because this round deliberately added ambient motion
+#      everywhere, so elevated-but-intended motion and elevated-because-
+#      broken motion look identical on pure numbers. Eyes are what
+#      discriminate; the frame-diff pass is a triage/prioritization aid,
+#      not a verdict on its own.
+#
+# RESULT: 8 of 9 clean on first look (s45, s47, s49, s53, s13, s17, s30,
+# s33 -- figures hold position, wound-locks intact, only intended
+# background/ambient elements move). ONE real defect found and fixed:
+#
+#   s50_christ_close_words -- the warm halo behind Christ's head grew
+#   MONOTONICALLY across the whole 4s clip, from a faint diffuse wash at
+#   frame 1 to a large sharp concentric bullseye ring by the last frame,
+#   with zero recession at any point (confirmed on a 16-frame dense
+#   sheet). Root cause: the wet-in-wet restyle (this round) bakes a
+#   bloomed halo into the STILL itself, but s50's animation motion prompt
+#   was untouched leftover text from before the restyle ("the light...
+#   breathes very gently") -- vague enough that the animator read the
+#   still's own bloom as something to CONTINUE spreading rather than a
+#   fixed glow to pulse. Same licensed-motion-escalation mechanism as the
+#   s16 wound-growth bug and the risk pre-empted on s30 this same round.
+#   FIX (applied, re-rendered, re-verified clean via a second 16-frame
+#   sheet + a mouth/neck-region crop check): explicit edge-lock on the
+#   glow's exact size/shape + reworded to the proven "pulses brighter/
+#   dimmer within a fixed shape" pattern already used successfully on
+#   s49. Old defective clip archived as
+#   `s50_christ_close_words.v4_halo_escalation_reject.mp4`. Prompt fix is
+#   permanently in `_s4_animate.py`'s JOBS list (search
+#   "REDO ROUND 3 (2026-08-02)" near s50 for the full note).
+#
+# Both galleries rebuilt and current:
+#   file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/poc_living_sketchbook/bronze_serpent_long/_STILLS_REVIEW.html
+#   file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/poc_living_sketchbook/bronze_serpent_long/_CLIPS_REVIEW.html
+# (57 clean clips, 8 deferred to $0 fallback -- unchanged deferred set:
+# s28/s55/s44/s12/s18/s14/s46/s51, none overlap this round's 9)
+#
+# ══════ REDO ROUND 3b (2026-08-02, same day, user's own eye-check caught
+# 2 MORE real defects my QC missed) ══════
+# User watched the rebuilt gallery and caught two things my QC pass missed:
+#   - s50_christ_close_words: real LIP MOVEMENT in the clip (mouth opening/
+#     closing across frames) -- my earlier "mouth crop" verification had
+#     cropped the wrong region (neck/collar, not the mouth) so I never
+#     actually looked at the mouth. User described it as "two Jesus" --
+#     likely the open-mouth frames near the glow reading as a second
+#     face-like shape. Fix: explicit "lips and mouth stay fully closed,
+#     never part or move" lock (the old lock said "no lip movement" but
+#     never named the mouth staying CLOSED specifically enough). Re-rendered,
+#     re-verified clean on a 30-frame dense sheet -- mouth identical in
+#     every frame now. Old defective clip archived as
+#     `s50_christ_close_words.v5_lipmovement_reject.mp4`.
+#   - s65_christ_open_invite (was untouched since an "eye-checked 2026-08-01"
+#     pass, predates round 3 entirely): user said "he seems to be a dance."
+#     CONFIRMED real on a tight figure-crop sheet -- the robe hem and belt
+#     tassels were visibly swinging/billowing between frames, same
+#     unlocked-region-migration mechanism as s45's original dancing bug (the
+#     old lock only named hands/gesture/blink, never the robe). Fix:
+#     explicit lock on robe/hem/sleeves/belt/tassels. Re-rendered,
+#     re-verified clean (robe static, hands stable) on both a 30-frame full
+#     sheet and a tight hand-region crop. Old defective clip archived as
+#     `s65_christ_open_invite.v1_robe_sway_reject.mp4`.
+# Both fixes are permanent in `_s4_animate.py`'s JOBS list (search
+# "REDO ROUND 3b" for the full notes). `_CLIPS_REVIEW.html` rebuilt again.
+#
+# LESSON: sparse spot-checks and even my own "dense" 16-frame sheets can
+# still miss real defects if the crop region is wrong (s50) or if a defect
+# only fully separates from noise at 30 frames (s65's robe was visible at
+# 16 too in hindsight, but the systematic check is what caught it, not the
+# first glance). The USER'S OWN EYE on the real gallery is still the actual
+# gate, not my automated QC -- treat every "I approved this" moment as
+# provisional until they've looked at the real thing.
+#
+# CAMERA-ORBIT REQUEST (asked by user on BOTH s50 and s65, unresolved as of
+# this handover): user asked for the camera to orbit/360 around Christ on
+# both spreads. I have NOT done this and should not without a decision --
+# it directly conflicts with this pilot's locked architecture (camera stays
+# fixed at the generative-animation stage; real camera movement belongs at
+# ASSEMBLY via $0 deterministic ffmpeg, precisely BECAUSE letting the
+# generative model move the camera is what caused s45's and now s65's
+# dancing defects). Also: this project's own prior bake-off history
+# (`longform-camera-variety-moves` memory) found a FULL 360 orbit MORPHS
+# even with the $0 deterministic technique -- partial arc/swoop/crane
+# works, full 360 does not, on ANY method tried so far. Recommended path:
+# partial arc or swoop camera move added at ASSEMBLY on these two locked-
+# motion clips, not a generative orbit and not a full 360. ANSWERED
+# (2026-08-02): user picked partial arc/swoop at ASSEMBLY, $0 deterministic,
+# NOT a generative orbit and NOT a full 360. ACTION ITEM FOR ASSEMBLY STAGE:
+# when building the edit plan, give s50_christ_close_words and
+# s65_christ_open_invite a partial arc or swoop camera move (dynamic_cam,
+# per longform-camera-variety-moves) instead of a plain static hold -- these
+# two are the ones the user specifically wants extra camera life on. Do NOT
+# do this now / do NOT touch the animation clips again for this -- it's a
+# deterministic ffmpeg step applied when clips get cut together, already
+# noted as a MUST for these 2 spread names specifically.
+#
+# ══════ REDO ROUND 3d (2026-08-02, same day, user pressed for an honest
+# recap -- right call, caught the fact my QC hadn't been rigorous on
+# everything) ══════
+# When asked to recap and re-verify, going back over things properly found:
+#   - s13/s17/s33 richness: genuinely confirmed via full-res early/late
+#     frame comparison (not just thumbnails) -- real, visible ambient
+#     motion, figures locked. No action needed.
+#   - s30 richness: confirmed via the SAME full-res method that the motion
+#     was real but too subtle to read as "richer" -- user agreed, asked for
+#     it stronger. Fix: reworded the same licensed elements (light/shadow/
+#     tunic/dust) with explicit "clearly/visibly/noticeable" language,
+#     bigger swing, same locks on the man + serpent. Re-rendered,
+#     re-verified via full-res early/late compare -- the shadow wash behind
+#     him now visibly darkens/lightens, clearly better. Old too-subtle clip
+#     archived as `s30_payoff_fever_breaks.v6_toosubtle_reject.mp4`.
+#   - s50 "extra hand behind him": user clarified what "two Jesus" meant --
+#     a second/phantom hand visible behind Christ. The STILL has NO hands
+#     at all (checked both shoulder edges at full res -- just fabric/hair
+#     reaching the frame edge, arms crop off before any hand). Scanned the
+#     CURRENT clip (already twice-rerendered for the halo + mouth fixes)
+#     at both shoulders across 24 frames AND 6 full uncropped frames across
+#     the whole timeline -- no hand shape anywhere. Most likely explanation:
+#     the artifact was in an EARLIER broken version (this clip has been
+#     archived 3 times this round: v3/v4/v5) and no longer exists in the
+#     current render. NOT independently re-confirmed by the user yet as of
+#     this handover -- flag this specifically when they next look.
+# `_CLIPS_REVIEW.html` rebuilt again with the s30 fix.
+#
+# ══════ REDO ROUND 3e (2026-08-02, same day): user said flatly "you have
+# not yet fixed #50" and asked for a fresh reimage rather than more
+# patching ══════
+# Stopped trying to debug the existing still/clip further -- archived both
+# (still -> `s50_christ_close_words.v3_reimage_reject.png`, clip ->
+# `s50_christ_close_words.v7_prereimage.mp4`) and generated a genuinely NEW
+# still from the same style/scene prompt (`_s50_reimage.py`, one-off
+# script), then re-animated from that new still. Full QC re-run on the new
+# clip: face sheet (16 frames, mouth closed throughout, halo size stable),
+# right-shoulder scan (24 frames) and left-shoulder scan (24 frames) --
+# clean, no hand or doubling anywhere. Both galleries rebuilt.
+#
+# ══════ NEXT STEPS ══════
+# 1. [DONE] Camera-orbit question resolved -- see ANSWERED note above; the
+#    action lives at assembly time, nothing to do now.
+# 1b. User to give the reimaged s50 a fresh look and confirm it's actually
+#    right this time -- 3 rounds of me saying "fixed" on this one spread
+#    without it landing means don't just declare victory again; wait for
+#    their own confirmation before treating #50 as closed.
+# 2. User's own eye-check on the rebuilt galleries (links below) for
+#    everything else -- this round's creative asks are DONE and QC'd, but
+#    only the user's own eye is the real gate per this project's standing
+#    rule (proven again this round -- see LESSON above).
+#      file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/poc_living_sketchbook/bronze_serpent_long/_CLIPS_REVIEW.html
+# 3. THEN continue the standing plan: build the 8 remaining $0 deterministic
+#    fallback clips, user's own full eye-check/GO on the COMPLETE clip set,
+#    then assembly (sequence all 68 spreads against real narration timing,
+#    score+SFX+captions+watermark+validate).
+#
+# ══════ (everything below this line is the PRE-round-3 state, superseded
+# by the above but kept for detailed history) ══════
+#
+# ══════ CURRENT STATE: 63/63 animation clips DONE, $105.76 total episode
+# spend (stills + animation). poc_living_sketchbook/bronze_serpent_long/
+# clips/*.mp4 ══════
+#
+# 2 spreads deliberately have NO generative clip (by design, not a gap):
+#   - s28_forge_acting (hammer-strike) -- known 3-strikes failure, same as
+#     the SHORT's own s06_forge. Needs the $0 deterministic push-in
+#     fallback at assembly (same InsertPageCamera pattern the short used).
+#   - s55_hezekiah_breaks -- same failure class caught by eye-check before
+#     ever spending on it. Also needs the $0 push-in fallback + its planned
+#     impact-burst device (see _PLAN.md row 55) to carry the strike energy.
+# Plus the 3 already-$0-deterministic spreads from the stills stage
+# (s43/s67 insert-page camera pans, s68 landing torn-page device) -- these
+# were never in the animation JOBS list at all, handled separately.
+# That's 63 + 2 + 3 = 68, the full spread count, all accounted for.
+#
+# ══════ REAL BUGS FOUND + FIXED DURING ANIMATION (read before assuming the
+# script is trustworthy as-is for a future episode) ══════
+#   1. 14 of the original 63 Seedance jobs used duration=5 (Seedance only
+#      accepts 4/8/12) -- silently triggered `run_job_with_fallback`'s
+#      generic on-any-failure retry to KLING, including on crucifixion-tier
+#      spreads. The wound-regeneration defect I first attributed to
+#      "Seedance" was actually Kling via this silent substitution -- FIXED
+#      (durations corrected to 4) and RE-VERIFIED clean on genuine Seedance
+#      (5-frame eye-check, s45).
+#   2. Added `NO_KLING_FALLBACK` in `_s4_animate.py` -- all 10 Christ/
+#      crucifixion-tier spread names are now hard-blocked from ever silently
+#      falling back to Kling; a real failure stops and reports instead.
+#      REUSE THIS PATTERN for any future episode with wound-risk content.
+#   3. A same-bug variant hit s36 (Kling-primary job whose Seedance
+#      *fallback* also carried an incompatible duration) -- resolved by
+#      simple retry once the transient Kling API blip passed.
+#   4. Mid-batch Higgsfield API outage (~32 jobs failed with "request failed
+#      (no response received)" / "Higgsfield API request failed" in one
+#      window) -- NOT a content problem, resolved by just re-running the
+#      same idempotent command (`_s4_animate.py all`), which skipped the 31
+#      already-done clips and retried the rest cleanly.
+#   5. s63_vignette_least_last_child NSFW-rejected on Seedance TWICE
+#      (consistent, still shows Christ fully robed, no crucifixion imagery
+#      -- looks like an unexplained false positive). User explicitly
+#      approved ONE deliberate Kling exception for this single spread
+#      (matching this project's own existing bare-torso-cross precedent) --
+#      rendered, then verified clean across 6 sampled frames (2/20/40/60/
+#      80/98%) before accepting. This was a conscious, human-approved,
+#      closely-verified exception -- not a silent fallback.
+#
+# ══════ FULL 63-CLIP QC DONE (2026-08-01) -- 16 REAL DEFECTS FOUND, REDO
+# DESIGN IN PROGRESS ══════
+# Dispatched 2 parallel QC agents (Sonnet, execution/verification work) to
+# multi-frame-check all 59 remaining clips (4 already verified by hand:
+# s03/s11/s45/s63). Result: **47 clean, 16 flagged** -- a real ~25% defect
+# rate this project's own "sample more frames across the FULL clip, not
+# just start/end" discipline caught. Full flagged list, grouped by failure
+# pattern (see the actual conversation history for the complete per-clip
+# QC agent quotes if more detail is needed than this summary):
+#
+#   CAT 1 -- invented gesture/pose change despite "hold perfectly still":
+#     s64_moses_sit_with_that, s49_christ_radiant_begin (CRUCIFIXION-TIER),
+#     s53_moses_know_that_now, s59_moses_be_still, s18_moses_empty_hands
+#   CAT 2 -- real camera zoom despite LOCK's "camera does not move":
+#     s52_moses_reflecting, s62_moses_neverasked
+#   CAT 3 -- serpent/object locomotion despite an explicit freeze:
+#     s26_moses_resolve_serpent, s14_serpent_hint,
+#     s46_thesis_pair (CRUCIFIXION-ADJACENT, serpent's mouth opens/closes)
+#   CAT 4 -- wound/mark growing mid-clip, SAME failure family as this
+#     morning's crucifixion bug but on an ORDINARY bite-mark spread, not
+#     Christ -- suggests the wound-growing defect generalizes beyond
+#     crucifixion content:
+#     s16_bite_closeup
+#   CAT 5 -- misc invented content:
+#     s44_shadow_cross (DOCTRINALLY LOAD-BEARING -- the cross-shaped shadow
+#       IS the spread's meaning, and it morphs into a non-cross shape by
+#       98%; treat this one as higher-stakes than a technical nit),
+#     s09_manna_scorned (invented fog), s12_vc_wherefore (invented
+#     finger-rotation gesture), s51_christ_draw_all_men (CRUCIFIXION-TIER,
+#     small object appears near a figure's head, Christ himself clean),
+#     s58_vc_john316 (CRUCIFIXION-TIER, gold glitter appears despite the
+#     explicit NOGLITTER clause, Christ's hands stayed clean)
+#
+# GOOD NEWS: none of the 8 crucifixion-tier spreads had the wound-
+# regeneration bug recur -- that specific fix (duration correction +
+# NO_KLING_FALLBACK) held. All flagged crucifixion-tier defects (s49, s46,
+# s51, s58) are OTHER content (gesture/serpent/object/glitter), not wounds.
+#
+# QC scratch frames for all 16 flagged clips are KEPT (not deleted) at
+#   poc_living_sketchbook/bronze_serpent_long/_qc_batchA/<name>/
+#   poc_living_sketchbook/bronze_serpent_long/_qc_batchB/<name>/
+# -- these are the actual evidence frames, look at them directly rather
+# than re-deriving the defect from scratch.
+#
+# USER DECIDED (2026-08-01): same process as the stills redo -- a Fable
+# design pass diagnoses root-cause + fix strategy per category BEFORE any
+# more spend, then Sonnet executes. That design agent is RUNNING/may have
+# completed by the time you read this -- check for its report in the
+# conversation history first; if it already returned, apply its proposed
+# fixes to `_s4_animate.py`, then re-render just the 16 (idempotent script,
+# same `_s4_animate.py <name1,name2,...>` pattern used throughout this
+# session), then multi-frame QC the redos before accepting.
+# ══════ REDO ROUND 1: COMPLETE (2026-08-01) -- FINAL TALLY ══════
+# Fable diagnosed root causes for all 16 (negation-priming drawing the
+# forbidden motion, unlocked body regions drifting, a "talking-head"
+# interview prior causing invented lip-sync + push-zoom, licensed ambient
+# motion escalating into unwanted coupled content) and designed a fix per
+# clip -- applied to `_s4_animate.py` (new `PAGE` constant + `SELF_CONTAINED`
+# set for the "finished drawing being filmed" reframe class; surgical
+# per-clip fixes for the crucifixion-tier ones). 14 got a redesigned retry,
+# 2 (s44, s12) were routed straight to the $0 device on Fable's own
+# recommendation (s44's cross-shaped shadow is doctrinally load-bearing and
+# had inverted into a serpent-silhouette -- not worth a 2nd generative
+# roll on content that meaningful).
+#
+# REDO RESULT: 10 of 14 fixed clean (s64, s49, s53, s59, s52, s62, s26, s09,
+# s58, and s16 via a pinned-Seedance-only retry after its first redo
+# attempt fell back to Kling on a transient network blip -- re-verified
+# clean, no wound growth, before accepting). **4 failed the SAME way again**
+# (s18 mouth still opens, s14 serpent still tightens/moves, s46 serpent's
+# mouth still opens -- crucifixion-adjacent, Christ himself stayed clean
+# both times, only the serpent failed, s51 -- a NEW defect this time, an
+# invented hand-to-mouth gesture on a foreground figure, Christ himself
+# clean both rounds). Per the PRE-AGREED 2-strikes rule (stated to the user
+# before this redo round, they approved it): all 4 now go to the $0
+# deterministic fallback, same as s28/s55/s44/s12 -- NO third generative
+# attempt, this was already the agreed policy, no need to re-ask.
+#
+# FINAL SPREAD ACCOUNTING (68 total, all reconciled):
+#   57 clean generative clips (47 original + 10 from the redo round)
+#   8 spreads need the $0 deterministic device:
+#     s28_forge_acting, s55_hezekiah_breaks (excluded before ever attempting,
+#       known 3-strikes failure class from the short)
+#     s44_shadow_cross, s12_vc_wherefore (excluded after round 1, doctrinal/
+#       plan-device reasons -- see _s4_animate.py comments)
+#     s18_moses_empty_hands, s14_serpent_hint, s46_thesis_pair,
+#       s51_christ_draw_all_men (failed twice, now deferred per 2-strikes)
+#   3 spreads already $0 by original design (s43, s67 insert pages,
+#     s68 landing) -- never touched animation JOBS at all
+#   57 + 8 + 3 = 68 ✓
+#
+# All rejected clip versions are archived, not deleted (`.v1_reject.mp4`,
+# `.v2_reject.mp4`, `.v1_kling_fallback_wound_reject.mp4` suffixes in
+# `clips/`) -- kept for the record per this project's own standing practice.
+#
+# ══════ NEXT STEPS ══════
+# 1. Build the 8 $0 deterministic fallback clips via InsertPageCamera
+#    push-ins (same pattern as the short's own s06_forge resolution). s44
+#    needs care: frame the push so the FULL shadow including the crossbar
+#    stays in view throughout (see _s4_animate.py's s44 comment for the
+#    exact concern). s55 also gets its planned impact-burst device layered
+#    on top (see _PLAN.md row 55) to carry the strike energy the frozen
+#    push-in alone can't.
+# 2. THEN the user's own eye-check/GO on the full 65-clip set (57 generative
+#    + 8 deterministic -- human gate, same as every other stage) before
+#    assembly.
+# 3. THEN assembly: sequence all 68 spreads against the real narration
+#    timing from `_PLAN.md`, handle the 12 long-hold spreads via loop/
+#    extension, score+SFX+captions+watermark+validate, reusing the SHORT's
+#    proven recipes adapted for ~10min.
+# 4. Report Phase 0's real final cost/time back into the migration plan --
+#    sizes Phase 1's other 3 longs (Isaiah 53, Psalm 22, Two Goats).
+#
+# ══════════════════════════════════════════════════════════════════════════
+
+# ══════ START HERE — Bronze Serpent LONG pilot, STILLS BATCH IN PROGRESS ══════
+#
+# ONE THING TO CHECK FIRST: how many stills exist right now?
+#   ls poc_living_sketchbook/bronze_serpent_long/stills/*.png   (ignore the one
+#   file with "defect" in its name -- that's an archived reject, not a live spread)
+# ══════ ASPECT-RATIO BUG: NOW FULLY FIXED, 68/68 STILLS DONE AT CORRECT
+# 16:9, $41.40 TOTAL SPEND -- read the section below for the full incident,
+# but the short version: it's DONE. Gallery rebuilt against the corrected
+# images: poc_living_sketchbook/bronze_serpent_long/_STILLS_REVIEW.html.
+# Re-checked the 3 previously-flagged items on the NEW 16:9 renders:
+#   1. LANDING (s68) -- RESOLVED. Now reads smaller/more distant within the
+#      torn-page opening, arms genuinely open -- closer to the plan's
+#      original intent than the old 9:16 version. Consider this one closed.
+#   2. Hezekiah's gold crown (s55) -- UNCHANGED, still present, still an open
+#      call for the user (tension with "gold=Christ only" episode rule).
+#   3. Golgotha's stormy sky (s45) -- UNCHANGED, still reads a bit like
+#      literal storm clouds vs flat supernatural darkness. Still minor/
+#      borderline, no lightning/rain actually present.
+# ══════ USER FLAGGED 12 REDOS (2026-08-01, via _REDO_NOTES.html) — ALL DONE
+# ══════ A new style-selection PIPELINE appeared mid-session (built by a
+# concurrent/parallel session -- NOT this thread): pipeline/style_select.py
+# + pipeline/style_variety.py + poc_living_sketchbook/_style_identity_bakeoff/
+# style_manifest.json (35 rendering-technique variants, bake-off-scored for
+# "handmade/alive" + character identity-lock on BOTH Moses and Jesus; 15
+# production_approved). Built an interactive review tool,
+# `poc_living_sketchbook/bronze_serpent_long/_build_redo_notes.py` ->
+# `_REDO_NOTES.html` (flag-per-spread + note + style-dropdown UI, autosaves
+# to localStorage, "Download notes" exports `_redo_notes.json`). User flagged
+# 12 spreads there; diagnosed each by actually looking at the pixels (not
+# just trusting the note text) and found a REAL BUG the user's note didn't
+# fully capture: s66's render ignored its own prompt and duplicated s68's
+# landing composition instead.
+#
+# Redo plan validated against `pipeline/style_variety.py`'s own deterministic
+# guardrail (budget/spacing/gold-leaf-theology check) BEFORE any spend -- 0
+# fails. Executed via new script
+# `poc_living_sketchbook/bronze_serpent_long/_s3_redo_flagged.py`:
+#   - s06 (hand covering face), s49 (ambiguous gripping-not-nailed hand),
+#     s57 (Moses/Jesus scale -- the ORIGINAL prompt literally said "Moses,
+#     small... Jesus, larger", which is what produced the dwarfism read) --
+#     CONTENT fixes, baseline style unchanged.
+#   - s40, s47, s53 -- genuinely different BLOCKING/camera angle (too close
+#     by spread-number to another variant-assigned spread for the pipeline's
+#     min_spread_gap=8 rule, so fixed via composition change instead of a
+#     style swap).
+#   - s22->sl04_visible_underdrawing, s35->sv09_hand_pulled_monotype_and_
+#     smudged_transfer, s50->sl13_charcoal_and_eraser, s61->sv15_controlled_
+#     abstraction_with_one_precise_focal_point -- 4 genuinely differentiated
+#     styles, all production_approved, spacing/budget-clean.
+#   - s66 -- clean re-roll, SAME prompt (it was already correct; the earlier
+#     render just ignored it). Fixed on the re-roll.
+#   - s68 -- deliberately UNTOUCHED (already correct from the earlier 16:9
+#     fix; the "similar" flag was almost certainly s66's broken duplicate
+#     confusing the visual comparison, not a real problem with s68 itself).
+# ALL 11 redos eye-verified by Claude, one by one, against real pixels --
+# every one confirmed as a genuine improvement. Redo cost: $3.30 (11 renders,
+# zero failures/rerolls needed). **Total episode stills spend: $44.70**
+# (test-gate $1.20 + wrong-aspect-ratio-but-archived $21.00 + corrected 16:9
+# batch ~$20.20 + this redo round $3.30) -- still landing close to the
+# original $20-45 estimate despite two correction rounds.
+# Gallery (rebuilt, reflects all fixes):
+#   poc_living_sketchbook/bronze_serpent_long/_STILLS_REVIEW.html
+#
+# NEXT: user's own full eye-check across all 68 is still worth doing before
+# animation spend (only a sample has been checked by Claude across the
+# several correction passes) -- OR the user may choose to proceed straight
+# to animation quoting/planning given how much correction has already
+# happened. Either way, animation itself is a NEW, larger paid spend and
+# needs its own explicit quote + go-ahead, same ask-before-spending
+# discipline as every stage so far -- don't fire it without asking.
+#
+# ══════ NEW STANDING RULE (2026-08-01): Fable = design/planning agents,
+# Sonnet = execution agents. User's own explicit instruction, saved to
+# memory `feedback-fable-design-sonnet-execution.md`. Apply on every future
+# subagent dispatch in this project.
+#
+# ══════ ANIMATION TEST-GATE BUG FOUND + FIXED (2026-08-01, mid test-gate
+# review) ══════ The 3-clip test gate (s03 calm/Seedance, s11 crowd/Kling
+# both CLEAN) caught a real problem on s45 (crucifixion/Seedance): the clip
+# grew visible wound/blood marks on Christ's hands+feet despite an explicit
+# wound-lock prompt, even though the source still is confirmed completely
+# clean. Root cause, found by digging into the ledger (NOT what it first
+# looked like): 14 of the 63 Seedance jobs in `_s4_animate.py` (Fable's
+# script) used `duration=5`, which is INVALID for seedance1_5 (only 4/8/12
+# accepted) -- every one of them was silently falling back to KLING via
+# `run_job_with_fallback`'s generic on-any-failure retry (built for the
+# short's NSFW-moderation case, not content-aware). The s45 test clip that
+# grew wounds was actually animated by KLING, not Seedance -- its defect is
+# the ALREADY-DOCUMENTED Kling wound-regeneration failure
+# (living-light-no-fresh-blood memory), not new evidence against Seedance.
+# FIXED: all 14 durations corrected to 4 (grep-verified 0 remaining
+# invalid); a `NO_KLING_FALLBACK` set added covering all 10 Christ/
+# crucifixion-tier spreads (45,46,47,49,50,51,57,58,63,65) -- for these,
+# `main()` now calls `A.run_job` DIRECTLY (no fallback) so a genuine Seedance
+# failure stops and gets reported instead of silently reintroducing Kling on
+# wound-risk content. CONFIRMED FIXED: re-ran s45 on genuine Seedance
+# (corrected duration=4, no fallback) -- CLEAN. Eye-verified across 5
+# sampled frames (2/25/50/75/98%), hands+feet stay unmarked the whole clip.
+# Seedance itself is NOT the problem; it was 100% the silent Kling-fallback
+# bug, now fixed. Test gate is 3/3 PASS (s03 calm-Seedance clean, s11
+# crowd-Kling clean, s45 crucifixion-Seedance clean on the real retry).
+# Clear to proceed to the full 63-clip batch pending the user's go-ahead +
+# a fresh cost quote (the duration fix may shift per-clip billing slightly
+# vs the original estimate, since several jobs moved from an invalid 5s to
+# a valid 4s).
+# Old Kling-reject clip archived at
+#   .../clips/s45_golgotha_wide.v1_wound_reject.mp4
+# (mislabeled "wound_reject" in the filename -- it's actually a Kling
+# reject, not a Seedance one; kept for the record regardless).
+# One-off retry script (superseded once the fixed main script re-ran s45
+# directly): poc_living_sketchbook/bronze_serpent_long/_s45_retry_positive_lock.py
+# -- also hit the same duration=5 bug and fell back to Kling; a `wmic
+# process where ... call terminate` was needed to stop it cleanly
+# (`taskkill` alone raced against re-spawning child processes and didn't
+# reliably kill it -- use the wmic terminate form if this happens again).
+#
+# ══════ ANIMATION PLANNING STARTED (2026-08-01, same session, no spend yet)
+# ══════ 65 of 68 spreads need paid animation (spreads #43, #67, #68 are
+# explicitly $0 deterministic devices per the plan's own Device column --
+# insert-page camera pans + the landing's torn-page device -- do NOT send
+# those to any animation batch). A background agent was dispatched to draft
+# `poc_living_sketchbook/bronze_serpent_long/_s4_animate.py` (full 65-spread
+# JOBS list + script), following the SHORT's own proven `_s3_animate.py`
+# pattern EXACTLY: LOCK/NOGLITTER camera-locked prompts, crucifixion spreads
+# ALWAYS Seedance (Kling regenerates wounds/blood -- documented,
+# non-negotiable), serpent spreads explicitly frozen in-prompt (Kling has
+# hallucinated uncoiling), crowd/multi-figure -> Kling, calm single-figure ->
+# Seedance, aspect ratio corrected to 16:9 (NOT the short's 9:16). **Spread
+# 28 (the forge/hammer-strike beat) is flagged as a KNOWN 3-STRIKES FAILURE
+# CASE** -- the short's own equivalent beat (s06_forge) failed identically on
+# 2x Kling + 1x Seedance, all three inventing a completed hammer swing; the
+# agent was told NOT to blindly retry the same failure and to default that
+# one spread to the $0 deterministic push-in fallback instead, same as the
+# short's own resolution, unless it found a genuinely new strategy. THIS
+# TASK DID NOT RUN ANY RENDERS -- planning/script-writing only, no spend.
+# Once it reports back: review its JOBS list + cost estimate, pick a 2-3
+# spread real test-gate (one per provider-tier risk category), get the
+# user's explicit go-ahead on the test-gate spend first (small, ~$2-4), THEN
+# the full 65-clip batch (~$50-100 rough order of magnitude, needs a real
+# quote from the agent's report, don't guess a number here).
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════ CRITICAL BUG FOUND + BEING FIXED (2026-08-01, right after the 68/68
+# "complete" message below -- READ THIS FIRST, it supersedes "complete") ══════
+# The user caught it: ALL 68 stills were rendered at 9:16 (vertical, the
+# SHORT format) instead of 16:9 (landscape, the CORRECT long-form format --
+# CLAUDE.md states this explicitly, "Long-form (16:9 deep-dives)", and every
+# existing long-form folder uses `visual_16x9_*` naming). Root cause: my own
+# error -- `_s2_stills.py` copied the short's script pattern for CODE
+# structure but never updated `--aspect_ratio "9:16"` to `"16:9"`, and
+# `_PLAN.md` never specified aspect ratio at all so the fact-check pass didn't
+# catch it either.
+# STATUS OF THE FIX:
+#   - Code fixed: `poc_living_sketchbook/bronze_serpent_long/_s2_stills.py`
+#     now uses `--aspect_ratio "16:9"`.
+#   - Old wrong-format renders ARCHIVED (not deleted, kept for the record):
+#     `poc_living_sketchbook/bronze_serpent_long/stills_9x16_WRONG_ASPECT/`
+#     (69 files -- all 68 spreads + one old copy). The live `stills/` folder
+#     was CLEARED and is starting fresh.
+#   - User chose the cautious path: a 3-spread 16:9 TEST before re-running the
+#     full 68, since several prompts (s02_triptych, s13_vignette_calf) were
+#     composed as multi-vignette collages that may or may not translate
+#     cleanly from portrait to landscape. Test command already run/running:
+#       .venv\Scripts\python.exe poc_living_sketchbook/bronze_serpent_long/
+#       _s2_stills.py s01_wide,s02_triptych,s13_vignette_calf
+#   - 3-SPREAD 16:9 TEST: DONE, PASSED. s01/s02/s13 all confirmed genuine
+#     2752x1536 landscape (ffprobe/file-size verified, not just the flag).
+#     Both multi-vignette worry-cases (s02_triptych, s13_vignette_calf)
+#     rearranged their "around him / to one side / above" vignettes into
+#     clean LEFT-RIGHT layouts automatically -- nothing broke, no reword
+#     needed. Golden calf in s13 still correct (dull green-bronze, large,
+#     not gilded).
+#   - FULL 65-SPREAD RE-RENDER: STARTED, running in the background (native
+#     process, same idempotent command, survives account-switch same as
+#     before):
+#       .venv\Scripts\python.exe poc_living_sketchbook/bronze_serpent_long/_s2_stills.py
+#     NOTE: this was launched with a trailing `&` inside an already-
+#     backgrounded Bash call, which caused the TOOL's own completion signal
+#     to fire early/wrongly (reported "completed" after only 2 files) even
+#     though the real python process kept running fine -- don't trust that
+#     particular signal, ALWAYS verify by counting files in `stills/` and
+#     checking `wmic process where "name='python.exe'" get CommandLine` for
+#     `bronze_serpent_long/_s2_stills.py` directly, same as every other check
+#     in this file.
+#   - Expect ANOTHER ~$20 spend (65 more renders x ~$0.30) on top of what's
+#     already sunk -- this is a real SECOND cost from my own aspect-ratio
+#     error, already flagged/owned to the user, they did NOT need to
+#     re-approve the redo itself once the 3-spread test passed. Total pilot
+#     stills spend will land around ~$41-45 once this finishes (test-gate
+#     $1.20 + wrong-format $21.00 sunk-but-archived + corrected ~$20-21).
+#   - Once the corrected 68 are done: re-run `_build_review.py` to rebuild
+#     `_STILLS_REVIEW.html` fresh (it's currently showing the WRONG 9:16
+#     images' status as "rendered" -- treat that gallery as STALE until
+#     rebuilt against the new 16:9 stills/ folder).
+#   - The 3 flagged eye-check items from the (now superseded) 9:16 batch --
+#     Hezekiah's gold crown, the landing's silhouette-vs-portrait framing,
+#     Golgotha's stormy-looking sky -- are STILL WORTH RE-CHECKING on the new
+#     16:9 renders once they exist; don't assume they carry over identically,
+#     a different aspect ratio can change how a composition reads.
+#
+# ══════════ BELOW: the (now-superseded) "stills complete" note, kept for
+# the cost/process history, but the 9:16 aspect ratio it describes is WRONG,
+# see the correction above ══════════
+#
+# **STILLS BATCH IS COMPLETE: 68/68, $21.00 total spend** (real ledger total,
+# `grep LS_BronzeSerpentLong data/spend_ledger.jsonl`) -- one spread (s13) needed
+# a single re-run after the main batch process ended one short, otherwise zero
+# rerolls, well under the original $20-45 estimate. (Confirmed: this render
+# process survives an account-switch/re-login cleanly -- it's a native
+# background process on this machine, independent of the Claude Code
+# session/account.) Gallery: poc_living_sketchbook/bronze_serpent_long/
+# _STILLS_REVIEW.html (rebuild anytime with `_build_review.py` if stale).
+#
+# ══════ MY OWN EYE-CHECK (done, sampled ~15 of 68 -- not exhaustive) ══════
+# Crowd headcount discipline, THE LORD's presence (s23/s24), Hezekiah's young
+# appearance (s55), both golden-calf spreads (s13/s37), the two insert pages
+# (s43/s67), and most Golgotha spreads all read clean -- no gore, no
+# anachronisms, no doctrine violations found. THREE items flagged for the
+# USER's own eye before animation (not fixed, not rejected -- genuine judgment
+# calls):
+#   1. s55_hezekiah_breaks -- Hezekiah wears a plain gold circlet/crown. Real
+#      tension with this episode's own "gold reserved for Christ/LORD only"
+#      rule, held strictly everywhere else (the bronze serpent, the golden
+#      calf both stay deliberately un-gilded). Historically plausible for a
+#      king, but worth a direct call: keep, or re-roll without the gold trim.
+#   2. s68_landing -- THE most important frame in the film (final image, the
+#      CTA). Plan spec (_PLAN.md row 68) called for "a SMALL STILL SILHOUETTE
+#      of Jesus... arms open." What rendered is a LARGE, fully detailed,
+#      front-facing portrait, arms down at sides -- a real deviation from the
+#      written spec. Could read as more inviting (my instinct) or could lose
+#      the intended "quiet distant call" feeling the small-silhouette spec was
+#      going for -- needs the user's own eye, not a unilateral call either way.
+#   3. s45_golgotha_wide -- the "darkened sky" reads a bit more like literal
+#      storm clouds (heavy, rolling) than flat supernatural darkness. Minor,
+#      but this project has a LOCKED rule against storm imagery at Golgotha
+#      (crucifixion-still-facts memory: "darkness NOT a storm, no lightning").
+#      No lightning/rain/wind-debris actually present, so it's borderline, not
+#      a clear violation -- still worth a look.
+# The other ~53 unsampled spreads were NOT individually eye-checked by me --
+# a full pass by the user (or a fresh full sweep) is still worth doing before
+# committing to paid animation, per this project's own standing rule
+# (`feedback-verify-by-looking-not-running`, `stills-first-human-gate`).
+#
+# A background bash process running `poc_living_sketchbook/bronze_serpent_long/
+# _s2_stills.py` was rendering all 68 spreads sequentially when this session's
+# usage ran out. That process may or may not survive past this session/account
+# ending -- CHECK, don't assume either way:
+#   - If the count is already 68/68: batch finished, skip to "NEXT STEPS" below.
+#   - If it's stuck partway with no python process still running the script
+#     (`wmic process where "name='python.exe'" get CommandLine` and look for
+#     `_s2_stills.py`): just RE-RUN the exact same command, it's idempotent --
+#     `main()` skips any spread whose output file already exists, so it will
+#     pick up exactly where it left off, no wasted spend, no duplicate renders:
+#       .venv\Scripts\python.exe poc_living_sketchbook/bronze_serpent_long/_s2_stills.py
+#   - This will take a while either way (each render is a few minutes, run
+#     sequentially) -- expect roughly 1-3 more hours of wall-clock for whatever's
+#     left, same as it was running before.
+#
+# ══════ WHAT THIS TASK IS (context for a fresh session) ══════
+# Phase 0 of the sketchbook migration plan: pilot the FIRST-EVER full-length
+# (9:50) living-sketchbook film, on Bronze Serpent (Numbers 21 -> John 3:14),
+# using the ALREADY-LOCKED long-form "Types & Shadows" narration at
+# `longform/EW04_Bronze_Serpent/v1/narration.md` (NOT the short's Eyewitness
+# script -- that's a different, shorter, already-finished deliverable, see the
+# PREVIOUS section below for its own separate wrap-up). Full plan (68 spreads,
+# fact-checked, FINAL as of this session):
+#   poc_living_sketchbook/bronze_serpent_long/_PLAN.md
+#
+# ══════ REAL BIBLICAL-ACCURACY BUGS CAUGHT + FIXED THIS SESSION (read before
+# assuming any earlier assumption in this pilot is safe) ══════
+# The user caught a real error by eye (Moses's age), which triggered a full
+# fact-check pass that caught 2 more. All fixed now, but worth knowing the
+# PATTERN for the rest of this pilot and any future one:
+#   1. Moses's age was WRONG. `cast/MOSES.md` said "in his eighties" for the
+#      Numbers-21/Bronze-Serpent scene, and a whole SEPARATE "younger Moses"
+#      cast anchor (~30s-40s) was built and PAID FOR on the assumption the
+#      golden-calf flashback (Exodus 32) needed a dramatically younger face.
+#      Both wrong. KJV is explicit: Exodus 7:7 = Moses was 80 ("fourscore") at
+#      the Exodus; Deuteronomy 34:7 = 120 when he died; Numbers 33:38 pins the
+#      Bronze Serpent to "the fortieth year" after the Exodus. So Moses is
+#      ~120 at the Bronze Serpent and ~80 (NOT 30s-40s) at the golden calf --
+#      only ~40 years apart, BOTH elderly. FIXED: `cast/MOSES.md`'s canon text
+#      corrected with citations; `cast/MOSES_YOUNGER.md` marked SUPERSEDED at
+#      its own top (kept on disk for the record only -- DO NOT use it for
+#      anything, DO NOT chain `moses_younger_ref.png` in any future render);
+#      `_PLAN.md` §4 item 4 + spread 37's row updated; `_s2_stills.py`'s MOSES
+#      constant corrected to match.
+#   2. The golden calf was rendered too SMALL (figurine-scale). Scripture gives
+#      no exact size, but the gold came from the whole camp's jewelry (Exodus
+#      32:2-3, a nation of 600,000+ men) and the whole camp gathered to worship
+#      it (32:6) -- a substantial public cult object, not a trinket. FIXED:
+#      `_PLAN.md` §4 item 3 + `_s2_stills.py`'s GOLDEN_CALF constant both now
+#      say render LARGE, "as big as a real young bull calf or bigger."
+#   3. Hezekiah (spread 55, breaks the bronze serpent per 2 Kings 18:4) had NO
+#      age/appearance note in the plan at all -- real risk of defaulting to an
+#      "old wise king" stereotype. 2 Kings 18:2 states he was 25 at accession,
+#      and the Nehushtan-breaking sits in his early-reign reform block (2 Chron
+#      29:3 dates the parallel reforms to his first year). FIXED: `_PLAN.md`
+#      §4 item 2 + spread 55's row now say YOUNG king, mid-to-late 20s, NOT
+#      elderly. `_s2_stills.py` needs (or already has, check) a HEZEKIAH
+#      constant written to match -- confirm before that spread renders.
+#   4. "The mixed multitude" (spread 7) was the WRONG scriptural term -- that
+#      label (Exodus 12:38) is for the generation that left Egypt at year 0-2;
+#      by Numbers 21 (year 40) that entire 20-and-over generation had already
+#      died per Numbers 14:29-35. It wasn't even in the narration script --
+#      self-added. REMOVED from `_PLAN.md` spread 7's row.
+#   5. Minor precision fix: golden-calf timing loosened as "within about a
+#      year" of the Exodus, tightened to "roughly 3-4 months" (Exodus 19:1 +
+#      24:18). No asset impact, prose-only.
+# New STANDING RULE saved to memory (applies to every future episode, not just
+# this one): `feedback-verify-character-age-scale-before-render.md` -- always
+# cite an explicit KJV number (age/count/measurement) before locking a cast
+# canon sheet or an object's scale, don't estimate from genre convention. This
+# memory file is on local disk, tied to the project folder, NOT to the Claude
+# account -- it WILL be there in a new session on this same machine.
+#
+# ══════ TEST-GATE RENDERS (already done + user-approved, don't re-touch) ══════
+# poc_living_sketchbook/bronze_serpent_long/stills/s23_lord_presence.png --
+#   THE LORD's unseen presence (Moses shielding his eyes before radiant light,
+#   no human figure anywhere in the light) -- clean pass, approved.
+# poc_living_sketchbook/bronze_serpent_long/stills/s37_calf_flashback.png --
+#   corrected version (elder Moses reused, large calf, hazy desaturated
+#   soft-focus memory treatment). User's own call: "a bit too dark, dont mind
+#   if its a one off" -- APPROVED as a deliberate ONE-OFF darker/hazier look
+#   for this single flashback spread, NOT a treatment to repeat on any other
+#   spread. Old defective v1 (used the now-superseded younger-Moses anchor,
+#   rendered sharp/present-tense instead of a flashback) kept at
+#   `s37_calf_flashback.v1_youngermoses_defect.png` for the record only.
+# Full review page with both + the superseded younger-Moses anchor, annotated:
+#   poc_living_sketchbook/bronze_serpent_long/_TEST_GATE_REVIEW.html
+#
+# ══════ USER EXPLICITLY APPROVED THE FULL 66-SPREAD BATCH ("go ahead") ══════
+# after seeing the test-gate renders + all 5 fact-check corrections above.
+# `_s2_stills.py` was extended this session (from the 2-spread test-gate
+# version) to cover all 68 spreads: added JESUS/PEOPLE constants (reused
+# verbatim from the SHORT's own proven `bronze_serpent/_s2_stills.py`),
+# per-spread exact-headcount crowd constants (PEOPLE_S17/S33/S60 etc, same
+# proven pattern), a new HEZEKIAH constant, and multi-pose identity-lock
+# chaining (every Moses spread chains BOTH `cast/moses_ref.png` AND the
+# approved in-episode `s23_lord_presence.png` as a second reference; every
+# Jesus spread chains BOTH `cast/jesus_ref.png` AND the SHORT's own approved
+# `bronze_serpent/stills/s10_golgotha.png`).
+#
+# ══════ NEXT STEPS, IN ORDER (once the stills batch reaches 68/68) ══════
+# 1. Build/open the full review gallery -- `_build_review.py` already exists
+#    in `poc_living_sketchbook/bronze_serpent_long/`, run it if
+#    `_STILLS_REVIEW.html` isn't already current.
+# 2. EYE-CHECK EVERY STILL YOURSELF before trusting the render pipeline (this
+#    project's standing rule -- memory `feedback-verify-by-looking-not-running`
+#    + `stills-first-human-gate`). Look hardest at: Hezekiah (reads young, not
+#    elderly?), both golden-calf appearances (large? dull-not-gold?), every
+#    crowd spread (face-count discipline held?), Golgotha spreads 45-51
+#    (reverent, restrained, no gore?), THE LORD spreads 23-24 (definitely no
+#    human figure anywhere?).
+# 3. Get the USER's own eye-check / GO on the full stills set -- this is a
+#    human GATE in this project, same as every other episode, don't skip to
+#    animation without it (GATE 2 equivalent).
+# 4. THEN animate (66 of 68 spreads need paid animation, Seedance/Kling tiered
+#    by content per this project's locked cost model; spreads 43 + 67 are
+#    insert pages using the $0 deterministic `insert_page_camera` pan instead
+#    -- see `_PLAN.md`'s own per-spread device column).
+# 5. THEN assemble + score/SFX + captions + watermark + validate -- reuse the
+#    SHORT's proven recipes (`bronze_serpent/_s5_score_sfx.py`,
+#    `bronze_serpent/_s6_captions.py`) as the starting pattern, adapted for
+#    the ~10-minute runtime.
+# 6. Report Phase 0's real cost/time reading back into the migration plan --
+#    it sizes Phase 1's other 3 longs (Isaiah 53, Psalm 22, Two Goats).
+#
+# ══════ SEPARATE OPEN THREAD, NOT TOUCHED THIS SESSION ══════
+# The user previously asked about applying the SHORT's proven hand-written-ink
+# caption recipe to the other 5 already-shipped sketchbook shorts (Storm,
+# Jericho, Two Goats, At the Door, Noah's Door) -- still deferred, see the
+# PREVIOUS section below for the original ask. Not started, not forgotten.
+#
+# ══════ GIT STATUS ══════
+# Nothing committed this session (standing rule: never commit without being
+# asked, and wasn't asked). New/modified files this session, all on local
+# disk regardless of account switch: `poc_living_sketchbook/bronze_serpent_long/`
+# (new folder: _PLAN.md, _s2_stills.py, _TEST_GATE_REVIEW.html, _build_review.py,
+# stills/), `poc_living_sketchbook/cast/MOSES.md` (corrected),
+# `poc_living_sketchbook/cast/MOSES_YOUNGER.md` (new, superseded),
+# `poc_living_sketchbook/cast/moses_younger_ref.png` (new, superseded asset),
+# `poc_living_sketchbook/_r3_moses_younger_anchor.py` (new), this file, and the
+# memory file at `C:\Users\sanjay\.claude\projects\C--Users-sanjay-PycharmProjects-
+# JesusInTheBible\memory\feedback-verify-character-age-scale-before-render.md`
+# (+ its MEMORY.md index line) -- memory persists regardless of which Claude
+# account is used, it's tied to this project folder on this machine.
+#
+# ══════════ PREVIOUS (2026-08-01 evening, before this pilot started) BELOW ══════════
+
 # RESUME — next session (updated 2026-08-01 evening — Bronze Serpent fully FINISHED
 # (score/sfx/watermark/captions, all locked); migration ledger + launch plan built;
 # next session opens with the FIRST-EVER full-length sketchbook LONG, piloted on

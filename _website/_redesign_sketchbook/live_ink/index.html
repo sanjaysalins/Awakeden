@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Bronze Serpent · Awakeden — a page that inks itself</title>
+<style>
+/* ============================================================
+   THE LIVE INK — Awakeden redesign sketch no. 2
+   One sheet of paper, made in front of the reader.
+   Palette is taken from the device code itself:
+     RUBRIC (150,26,22) / GOLD (185,146,74)  annotators_circle.py
+     INK_BLUE (90,140,200) / PAPER (248,245,235)  blue_line.py
+   ============================================================ */
+:root{
+  --paper:#f1e9d6;
+  --paper-deep:#e9dfc6;
+  --night:#232c39;
+  --night-deep:#1c2430;
+  --ink:#2b241a;
+  --ink-soft:#4a4033;
+  --ink-pale:#ddd2b8;
+  --ink-pale-soft:#b4a98d;
+  --rubric:#961a16;
+  --rubric-lit:#cf463b;
+  --gold:#b9924a;
+  --gold-lit:#e8c87a;
+  --npblue:#5a8cc8;
+  --kraft:#c9b18f;
+  --serif:'Palatino Linotype','Book Antiqua',Georgia,serif;
+  --hand:'Ink Free','Segoe Print','Comic Sans MS',cursive;
+  --scribe:'Kunstler Script','Segoe Script','Brush Script MT',cursive;
+  --colw:44rem;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{overflow-x:clip;scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--serif);
+  font-size:clamp(1.06rem,1.5vw,1.22rem);
+  line-height:1.72;
+  overflow-x:clip;
+}
+::selection{background:var(--gold);color:#fff}
+
+/* --- the sheet itself: grain + faint engineering grid + gold-leaf edge --- */
+#grain{
+  position:fixed;inset:0;z-index:40;pointer-events:none;
+  background:url('_media/grain.png');
+  opacity:.16;mix-blend-mode:multiply;
+}
+#grid{
+  position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;
+  background:
+    repeating-linear-gradient(to right, transparent 0 119px, rgba(90,110,140,.055) 119px 120px),
+    repeating-linear-gradient(to bottom, transparent 0 119px, rgba(90,110,140,.045) 119px 120px);
+}
+#goldedge{
+  position:fixed;top:0;bottom:0;right:0;width:7px;z-index:41;pointer-events:none;
+  background:linear-gradient(to bottom,#caa050,#e8c87a 18%,#a8843e 42%,#dfbd6c 60%,#b9924a 84%,#d9b765);
+  box-shadow:-1px 0 4px rgba(120,90,30,.35);
+  filter:brightness(var(--goldflare,1));
+}
+#goldedge::before{content:'';position:absolute;inset:0;background:url('_media/grain.png');opacity:.5;mix-blend-mode:overlay}
+
+/* --- the gold thread (the spine of the whole document) --- */
+#threadsvg{position:absolute;top:0;left:0;z-index:6;pointer-events:none;overflow:visible}
+#threadsvg path{fill:none;stroke:var(--gold);stroke-width:2.1;stroke-linecap:round;opacity:.9}
+#threadsvg .glint{fill:var(--gold-lit)}
+
+main{position:relative;z-index:5}
+
+/* ------------------------------------------------ title leaf */
+.titleleaf{
+  min-height:96vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center;padding:9vh 6vw 4vh;position:relative;
+}
+.wordmark{width:min(92vw,660px);height:auto;overflow:visible}
+.wordmark text{
+  font-family:var(--serif);font-weight:bold;font-size:92px;letter-spacing:.14em;
+}
+.wm-awak{fill:var(--ink);stroke:var(--ink);fill-opacity:0;stroke-width:1.1;
+  stroke-dasharray:340;stroke-dashoffset:340;
+  animation:wmdraw 1.5s ease-in .15s forwards, wmfill .8s ease 1.3s forwards}
+.wm-eden{fill:var(--gold);stroke:#8d6c2e;fill-opacity:0;stroke-width:1.2;
+  stroke-dasharray:340;stroke-dashoffset:340;
+  animation:wmdraw 1.4s ease-in 1.05s forwards, wmfill .9s ease 2.05s forwards}
+@keyframes wmdraw{to{stroke-dashoffset:0}}
+@keyframes wmfill{to{fill-opacity:1}}
+.wm-rule{stroke:var(--gold);stroke-width:2.4;fill:none;stroke-linecap:round}
+.tagline{
+  margin-top:1.4rem;font-variant:small-caps;letter-spacing:.34em;
+  font-size:.95rem;color:var(--ink-soft);
+  opacity:0;animation:soak 1.2s ease 2.5s forwards;
+}
+@keyframes soak{to{opacity:1}}
+.keepnote{
+  margin-top:3.2rem;max-width:30rem;font-family:var(--hand);
+  font-size:1.12rem;line-height:1.65;color:var(--ink-soft);
+  transform:rotate(-1.1deg);
+  opacity:0;animation:soak 1.2s ease 3s forwards;
+}
+.keepnote b{color:var(--rubric);font-weight:600}
+#knot0{display:block;height:2px;width:2px;margin:2.4rem auto 0}
+.downcue{margin-top:.6rem;overflow:visible}
+.downcue path{stroke:var(--ink-soft);stroke-width:2.4;fill:none;stroke-linecap:round}
+
+/* ------------------------------------------------ movements */
+.movement{position:relative;padding:10vh 6vw}
+.inner{max-width:var(--colw);margin:0 auto;position:relative;z-index:7}
+.folio{
+  font-family:var(--hand);font-size:1.05rem;color:var(--ink-pale-soft);
+  transform:rotate(-1.4deg);margin-bottom:2.6rem;letter-spacing:.04em;
+}
+.dark .folio{color:#6e7a8d}
+.movement p{margin:0 0 1.35em}
+.voice{
+  font-variant:small-caps;letter-spacing:.28em;font-size:.78rem;color:var(--ink-pale-soft);
+  margin:3.2rem 0 .9rem;
+}
+.dark .voice{color:#77839a}
+.voice.red{color:var(--rubric)}
+.dark .voice.red{color:var(--rubric-lit)}
+
+/* ink-wipe: prose paragraphs are brushed on, quickly, never a fade */
+.wipe{
+  -webkit-mask-image:linear-gradient(100deg,#000 44%,transparent 56%);
+  mask-image:linear-gradient(100deg,#000 44%,transparent 56%);
+  -webkit-mask-size:260% 100%;mask-size:260% 100%;
+  -webkit-mask-position:98% 0;mask-position:98% 0;
+  transition:-webkit-mask-position .9s cubic-bezier(.3,.6,.3,1),mask-position .9s cubic-bezier(.3,.6,.3,1);
+}
+.wipe.on{-webkit-mask-position:0% 0;mask-position:0% 0}
+
+/* the scribe: KJV in the film's own lettering hand, written glyph by glyph */
+.versecard{margin:3.4rem auto;max-width:46rem;position:relative}
+.scribe{
+  font-family:var(--scribe);font-size:clamp(2.35rem,5.4vw,3.3rem);line-height:1.38;
+  color:var(--ink);-webkit-text-stroke:.4px currentColor;
+  text-align:center;
+}
+.dark .scribe{color:var(--ink-pale)}
+.scribe .L{opacity:0;display:inline-block;transform:rotate(var(--r,0deg)) translateY(var(--dy,0px))}
+.scribe .L.on{opacity:1;animation:dry 1.1s ease forwards}
+@keyframes dry{from{color:#0e0a05}to{color:inherit}}
+.dark .scribe .L.on{animation-name:drydark}
+@keyframes drydark{from{color:#fff8e2}to{color:inherit}}
+.cite{
+  text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.74rem;
+  color:var(--ink-pale-soft);margin-top:1.1rem;
+}
+.dark .cite{color:#77839a}
+
+/* red letter — LAW 1: divine speech never letter-reveals. It arrives WHOLE,
+   complete between two frames. No transition on purpose. */
+.redletter{visibility:hidden;margin:3.2rem auto;max-width:44rem;position:relative}
+.redletter.arrived{visibility:visible}
+.redletter blockquote{
+  font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.05rem);line-height:1.6;
+  color:var(--rubric);text-align:center;font-style:italic;
+}
+.dark .redletter blockquote{color:var(--rubric-lit)}
+.circlelayer{position:absolute;inset:0;overflow:visible;pointer-events:none}
+.circlelayer polyline{fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+/* figures: plates laid onto the sheet */
+figure.plate{margin:5rem auto;width:min(94vw,1000px);position:relative}
+figure.plate .art{width:100%;height:auto;display:block;border-radius:2px;
+  aspect-ratio:2752/1536;object-fit:cover; /* reserve space before lazy load — the thread's waypoints depend on stable layout */
+  box-shadow:0 3px 14px rgba(60,42,18,.22), 0 22px 44px -18px rgba(60,42,18,.28)}
+figure.plate.tilt{transform:rotate(-.5deg)}
+figure.plate.tilt2{transform:rotate(.4deg)}
+figcaption{
+  font-family:var(--hand);font-size:1.02rem;color:var(--ink-soft);margin-top:.9rem;
+  transform:rotate(-.8deg);
+}
+.dark figcaption{color:#8a95a8}
+
+/* blue-line: opening plate arrives as underdrawing, ink lands once */
+#blueline-wrap{position:relative}
+#blueline-canvas{width:100%;height:auto;display:block;border-radius:2px;
+  box-shadow:0 3px 14px rgba(60,42,18,.22),0 22px 44px -18px rgba(60,42,18,.28)}
+
+/* ------------------------------------------------ night: paper turns */
+.dark{background:var(--night);color:#d9cfb8}
+.dark p{color:#d9cfb8}
+.inkbound{position:relative;height:130vh;pointer-events:none;overflow:hidden}
+.inkbound canvas{position:absolute;inset:0;width:100%;height:100%;display:block;
+  filter:blur(6px);transform:scale(1.04)}
+
+/* ------------------------------------------------ hunt-and-lock camera */
+.camera{position:relative}
+.cam-stage-outer{position:sticky;top:0;height:100vh;display:flex;align-items:center;justify-content:center}
+.cam-stage{
+  position:relative;overflow:hidden;border-radius:2px;
+  width:min(94vw,calc(88vh * 1.7917));aspect-ratio:2752/1536;
+  box-shadow:0 4px 18px rgba(20,14,4,.35),0 30px 60px -20px rgba(20,14,4,.4);
+  background:#0e0c08;
+}
+.cam-stage img{position:absolute;inset:0;width:100%;height:100%;display:block;will-change:transform}
+.cam-vignette{
+  position:absolute;inset:0;pointer-events:none;opacity:0;
+  background:radial-gradient(ellipse 62% 58% at 50% 50%, transparent 42%, rgba(10,8,4,.55) 100%);
+}
+.mlabel{position:absolute;opacity:0;pointer-events:none;max-width:16rem}
+.mlabel .mtext{
+  font-family:var(--hand);font-size:clamp(1rem,1.9vw,1.3rem);color:#f4ead2;
+  text-shadow:0 1px 4px rgba(0,0,0,.8),0 0 12px rgba(0,0,0,.35);transform:rotate(-1.2deg);
+}
+.mlabel svg{position:absolute;overflow:visible;pointer-events:none}
+.mlabel polyline{fill:none;stroke:#f4ead2;stroke-width:2.6;stroke-linecap:round;
+  filter:drop-shadow(0 1px 2px rgba(0,0,0,.6))}
+.mlabel circle{fill:#f4ead2;filter:drop-shadow(0 1px 2px rgba(0,0,0,.6))}
+.cam-note{position:absolute;left:50%;bottom:3.5vh;transform:translateX(-50%);
+  font-family:var(--hand);font-size:1rem;color:var(--ink-pale-soft);white-space:nowrap}
+.dark .cam-note{color:#77839a}
+
+/* static marginalia (the s44 shadow label) */
+.smargin{position:absolute;pointer-events:none;opacity:0;transition:opacity .5s ease .1s}
+.smargin.on{opacity:1}
+.smargin .mtext{font-family:var(--hand);font-size:clamp(1rem,1.8vw,1.28rem);color:var(--ink);
+  transform:rotate(-1.6deg);background:rgba(241,233,214,.55);padding:.05em .3em;border-radius:2px}
+.smargin svg{position:absolute;overflow:visible}
+.smargin polyline{fill:none;stroke:var(--ink);stroke-width:2.4;stroke-linecap:round}
+.smargin circle{fill:var(--ink)}
+
+/* raking light sweep (s44) */
+.rakewrap{position:relative;overflow:hidden;border-radius:2px}
+.rake{
+  position:absolute;inset:-2% -60%;pointer-events:none;mix-blend-mode:soft-light;opacity:.85;
+  background:linear-gradient(105deg,transparent 38%,rgba(255,246,214,.95) 50%,transparent 62%);
+  transform:translateX(var(--rx,-70%));
+}
+
+/* ------------------------------------------------ landing */
+.landing{padding-bottom:14vh}
+.landing .scribe{font-size:clamp(2.8rem,7vw,4.6rem)}
+#ribbon{
+  position:absolute;top:8px;right:12%;width:26px;height:min(46vh,420px);z-index:9;
+  background:
+    repeating-linear-gradient(to right, rgba(255,255,255,.08) 0 2px, transparent 2px 4px),
+    linear-gradient(to right,#7e120f,#a72420 30%,#8c1613 65%,#6e0f0d);
+  clip-path:polygon(0 0,100% 0,100% 94%,50% 100%,0 94%);
+  box-shadow:2px 3px 8px rgba(60,20,10,.4);
+  transform:translateY(-130%) rotate(-1deg);transition:transform .65s cubic-bezier(.25,1.25,.45,1);
+}
+#ribbon.settled{transform:translateY(0) rotate(1.6deg)}
+
+/* colophon — the index lives at the END of the book, where it belongs */
+.colophon{margin-top:12vh;border-top:1px solid rgba(90,70,40,.25);padding-top:5rem;
+  overflow:hidden /* clips the ribbon until it slips down past the divider */}
+.colophon h2{font-variant:small-caps;letter-spacing:.3em;font-weight:normal;
+  font-size:1rem;color:var(--ink-soft);margin-bottom:2.6rem;text-align:center}
+.course{display:block;text-decoration:none;color:var(--ink);margin:0 0 2.1rem;position:relative}
+.course .c-name{font-family:var(--serif);font-size:clamp(1.3rem,2.6vw,1.7rem);font-style:italic}
+.course .c-note{font-family:var(--hand);font-size:1rem;color:var(--ink-soft);margin-top:.15rem}
+.course .c-line{display:block;height:8px;margin-top:.4rem;overflow:visible}
+.course .c-line path{fill:none;stroke:var(--gold);stroke-width:2;stroke-linecap:round;
+  stroke-dasharray:1000;stroke-dashoffset:1000;transition:stroke-dashoffset .7s ease}
+.course:hover .c-line path,.course:focus-visible .c-line path{stroke-dashoffset:0}
+.course:focus-visible{outline:2px solid var(--gold);outline-offset:6px}
+.smallprint{margin-top:6rem;text-align:center;font-variant:small-caps;letter-spacing:.26em;
+  font-size:.72rem;color:var(--ink-pale-soft);line-height:2.2}
+.smallprint .red{color:var(--rubric)}
+
+/* ------------------------------------------------ reduced motion */
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .wm-awak,.wm-eden{animation:none;stroke-dashoffset:0;fill-opacity:1}
+  .tagline,.keepnote{animation:none;opacity:1}
+  .wipe{-webkit-mask-image:none;mask-image:none;transition:none}
+  .scribe .L{opacity:1;animation:none}
+  .redletter{visibility:visible}
+  #ribbon{transition:none;transform:translateY(0) rotate(1.6deg)}
+  .rake{display:none}
+  .course .c-line path{transition:none;stroke-dashoffset:0}
+}
+
+@media (max-width:760px){
+  .movement{padding:8vh 7vw}
+  #goldedge{width:4px}
+  .cam-note{font-size:.85rem;bottom:1.5vh}
+  #ribbon{right:6%}
+}
+</style>
+</head>
+<body>
+
+<div id="grid" aria-hidden="true"></div>
+<div id="grain" aria-hidden="true"></div>
+<div id="goldedge" aria-hidden="true"></div>
+<svg id="threadsvg" aria-hidden="true" width="10" height="10">
+  <path id="threadpath" d=""/>
+  <circle id="threadglint" class="glint" r="3.2" opacity="0"/>
+</svg>
+
+<main id="top">
+
+  <!-- ==================== the title leaf. No hero. No buttons.
+       A manuscript opens; the name is inked on; the thread begins. -->
+  <header class="titleleaf">
+    <svg class="wordmark" viewBox="0 0 690 130" role="img" aria-label="AWAKEDEN">
+      <text class="wm-awak" x="12" y="96">AWAK</text>
+      <text class="wm-eden" x="349" y="96">EDEN</text>
+      <path class="wm-rule" d="M355,112 C420,117 580,109 648,113" pathLength="100"
+            stroke-dasharray="100" stroke-dashoffset="100"
+            style="animation:wmdraw .7s ease 2.3s forwards"/>
+    </svg>
+    <p class="tagline">The whole Bible, through Jesus</p>
+    <p class="keepnote">Study n<u>o</u> 4 — <b>the bronze serpent</b>.<br>
+      Numbers 21:4–9 &nbsp;&rarr;&nbsp; John 3:14.<br>
+      This page is inked while you read it.<br>
+      Follow the gold thread down. Go gently.</p>
+    <span id="knot0" data-thread="start"></span>
+    <svg class="downcue" width="30" height="46" viewBox="0 0 30 46" aria-hidden="true">
+      <path id="cuepath" d="M15,3 C13,14 17,22 14,33 M6,26 C9,32 12,37 14,41 M24,25 C21,31 17,36 14,41"/>
+    </svg>
+  </header>
+
+  <!-- ==================== i. I was there -->
+  <section class="movement" id="m1">
+    <div class="inner">
+      <p class="folio">i. — I was there.</p>
+      <p class="voice">Moses, remembering · from the film <i>Look&nbsp;and&nbsp;Live</i></p>
+      <p class="wipe">I am Moses. For forty years I led Israel through the wilderness, and of all
+        the strange works these two hands were given to do — a rod that became a serpent, a sea
+        split dry, water struck from a rock — there is one that follows me still into the dark of
+        my old age. A pole driven into the sand. And upon it, a serpent of bronze.</p>
+      <p class="wipe">I was there the day the people were dying faster than I could dig the graves.
+        And I was there when God told a dying man that he could be healed by nothing in his hands,
+        nothing in his own strength — by nothing more than a look.</p>
+    </div>
+    <figure class="plate tilt" data-thread="left">
+      <div id="blueline-wrap">
+        <canvas id="blueline-canvas" width="1200" height="670"
+          role="img" aria-label="Moses standing before the tent camp at mount Hor, graphite and wash"></canvas>
+      </div>
+      <figcaption>the camp under mount Hor — first the blue underdrawing, then the ink arrives, once.</figcaption>
+    </figure>
+  </section>
+
+  <!-- ==================== ii. the world -->
+  <section class="movement" id="m2a">
+    <div class="inner">
+      <p class="folio">ii. — the world.</p>
+      <p class="wipe">We were a freed people who had forgotten how to be grateful. The road was
+        bitter and seemed to have no end. The manna fell as faithfully as the morning, and still we
+        despised it; and the Scripture does not flatter us — it tells the plain truth:</p>
+    </div>
+    <div class="versecard" data-thread="gutter">
+      <p class="scribe" data-scribe>the soul of the people was much discouraged because of the way.</p>
+      <p class="cite">Numbers 21 : 4 · KJV</p>
+    </div>
+  </section>
+
+  <!-- the paper itself turns to night — an ink bleed, not a fade -->
+  <div class="inkbound" data-bound="night" aria-hidden="true"><canvas></canvas></div>
+
+  <section class="movement dark" id="m2b">
+    <div class="inner">
+      <p class="wipe">Discouraged turned to anger, and anger turned its mouth against heaven.
+        But this time the answer came not in thunder — it came in the dust between our tents,
+        in a thing that slid and struck:</p>
+    </div>
+    <div class="versecard" data-thread="gutter">
+      <p class="scribe" data-scribe>And the LORD sent fiery serpents among the people, and they bit the people; and much people of Israel died.</p>
+      <p class="cite">Numbers 21 : 6 · KJV</p>
+    </div>
+    <div class="inner">
+      <p class="wipe">Fiery, we named them, for the bite burned like a coal beneath the skin.
+        I watched strong men fall. And there was no remedy — not in all the wisdom of Egypt I had
+        been schooled in, not in anything I knew to do.</p>
+    </div>
+  </section>
+
+  <!-- camera 1: the bite. The page's own camera hunts the detail the text names. -->
+  <section class="camera dark" id="cam-bite" data-thread="left" style="height:320vh"
+    data-cam='{"img":"_media/s16_bite.jpg","alt":"a bitten hand, clenched, venom spreading under the skin","note":"plate xvi — the bite. keep scrolling: the page looks closer so you do not have to.",
+      "shots":[{"x":0.615,"y":0.42,"s":2.3,"label":"fiery — a coal beneath the skin","lx":0.60,"ly":0.24},
+               {"x":0.795,"y":0.54,"s":2.6,"label":"no remedy in these hands","lx":0.22,"ly":0.70}]}'>
+    <div class="cam-stage-outer"><div class="cam-stage"></div></div>
+  </section>
+
+  <!-- ==================== iii. the act -->
+  <section class="movement dark" id="m3">
+    <div class="inner">
+      <p class="folio">iii. — the act.</p>
+      <p class="wipe">Then the people came to me, and for once their words were not complaint
+        but confession:</p>
+    </div>
+    <div class="versecard" id="confession" data-thread="gutter" data-breath>
+      <p class="scribe" data-scribe>We have sinned, for we have spoken against the LORD, and against thee; pray unto the LORD, that he take away the serpents from us.</p>
+      <p class="cite">the people · Numbers 21 : 7 · KJV</p>
+    </div>
+    <div class="inner">
+      <p class="wipe">So I prayed. I expected the LORD to take the serpents away. He did not.
+        Instead He gave me a command so strange that I have turned it over in my mind every
+        year since:</p>
+      <p class="voice red">the LORD spoke · Numbers 21 : 8 · KJV</p>
+    </div>
+    <!-- LAW 1: the Word arrives WHOLE — between two frames, never letter by letter -->
+    <div class="redletter" id="command" data-thread="knot">
+      <blockquote>&ldquo;Make thee a fiery serpent, and set it upon a pole: and it shall come to
+        pass, that every one that is bitten, when he <span id="w-looketh">looketh</span> upon it,
+        shall live.&rdquo;</blockquote>
+    </div>
+    <div class="inner">
+      <p class="wipe">He told me to forge the image of the very thing that was killing us, and
+        lift it high where every eye could find it. And so, with these hands, I did exactly as
+        I was told.</p>
+    </div>
+    <figure class="plate tilt2" data-thread="left">
+      <img class="art" src="_media/s28_forge.jpg" loading="lazy"
+        alt="Moses' hands hammering the bronze serpent on a stone anvil, sparks flying">
+      <figcaption>brass, hammered. I could not have told you what it meant.</figcaption>
+    </figure>
+  </section>
+
+  <!-- the healing spreads out from the pole: cream paper reclaims the night -->
+  <div class="inkbound" data-bound="heal" aria-hidden="true"><canvas></canvas></div>
+
+  <!-- ==================== iv. look and live -->
+  <section class="movement" id="m4a">
+    <div class="inner">
+      <p class="folio">iv. — the strange detail.</p>
+      <p class="wipe">A man would feel the fire spreading in his blood, lift his eyes to that
+        bronze upon the pole — and live. No payment. No climbing. No cure of his own making.
+        He looked, and the death let go of him.</p>
+    </div>
+  </section>
+
+  <!-- camera 2: the pole. Push to the brass; rack to the lifted eyes. -->
+  <section class="camera" id="cam-pole" data-thread="left" style="height:320vh"
+    data-cam='{"img":"_media/s29_pole.jpg","alt":"the serpent of brass wound on the pole; a woman lifts her eyes to it","note":"plate xxix — look and live.",
+      "shots":[{"x":0.505,"y":0.322,"s":2.5,"label":"brass — not medicine","lx":0.63,"ly":0.22},
+               {"x":0.6925,"y":0.47,"s":2.3,"label":"the look God honoured","lx":0.20,"ly":0.68}]}'>
+    <div class="cam-stage-outer"><div class="cam-stage"></div></div>
+  </section>
+
+  <section class="movement" id="m4b">
+    <div class="inner">
+      <p class="wipe">Here is the thing that never let me rest. Why a serpent? The serpent was
+        the curse itself — the very shape of what was striking them down. I would gladly have
+        lifted up anything else. And the cure was a look — only a look: the strong and the weak,
+        the child and the dying elder, all healed the same poor way, by lifting their eyes.</p>
+      <p class="wipe">Why save a people by the sight of the very thing that slays them?</p>
+    </div>
+  </section>
+
+  <!-- ==================== v. the wrestling -->
+  <section class="movement" id="m5">
+    <div class="inner">
+      <p class="folio">v. — the wrestling.</p>
+      <p class="wipe">With these same hands I had ground a calf of gold to powder — and now I was
+        charged to raise an image of bronze and bid the whole camp lift their eyes to it. It kept
+        me awake: had God bidden the very sin I had just broken? Yet I knew the bronze had no
+        power in it — I of all men knew that metal saves no one.</p>
+      <p class="wipe">I felt as though I were holding up a signpost in the wilderness, pointing
+        past itself, down a long road of years to something I could not yet see. I forged it.
+        I could not have told you what it meant.</p>
+    </div>
+    <figure class="plate tilt" data-thread="left">
+      <img class="art" src="_media/s39_candle.jpg" loading="lazy"
+        alt="Moses sleepless by an oil lamp, his shadow heavy on the wall behind him">
+      <figcaption>sleepless. the question sat with me like a second shadow.</figcaption>
+    </figure>
+    <figure class="plate tilt2" id="shadowplate" data-thread="gutter">
+      <div class="rakewrap">
+        <img class="art" src="_media/s44_shadow.jpg" loading="lazy"
+          alt="the serpent pole standing in the sand — its shadow falls as a cross">
+        <div class="rake" aria-hidden="true"></div>
+      </div>
+      <div class="smargin" id="shadowlabel"><span class="mtext">mark the shadow it cast</span></div>
+      <figcaption>forty years I looked at the pole. I never once looked at the sand.</figcaption>
+    </figure>
+  </section>
+
+  <!-- ==================== vi. the reveal -->
+  <section class="movement" id="m6">
+    <div class="inner">
+      <p class="folio">vi. — the reveal.</p>
+      <p class="wipe">I did not see the answer in my own day. I tell you this from the far side
+        of my life, by the light that came long after I laid down my staff. For there came a
+        Teacher in Israel, and to a man who sought Him by night He spoke of me, and of my serpent,
+        and said the very thing I had been waiting for without knowing it:</p>
+      <p class="voice red">Jesus · John 3 : 14–15 · KJV</p>
+    </div>
+    <div class="redletter" id="john314" data-thread="knot">
+      <blockquote>&ldquo;And as Moses lifted up the serpent in the wilderness, even so must the
+        Son of man be lifted up: That whosoever believeth in him should not perish, but have
+        eternal life.&rdquo;</blockquote>
+    </div>
+    <div class="inner">
+      <p class="wipe">There it was. My serpent was never the point of it. It was a shadow, and a
+        shadow waits for the body that casts it. The body came. They lifted Jesus up upon a Roman
+        pole of wood, where every eye could find Him — the very picture my bronze had held up in
+        the wilderness. For so the apostle wrote of Him:</p>
+    </div>
+    <div class="versecard" data-thread="gutter">
+      <p class="scribe" data-scribe>being made a curse for us: for it is written, Cursed is every one that hangeth on a tree:</p>
+      <p class="cite">Galatians 3 : 13 · KJV</p>
+    </div>
+    <figure class="plate tilt" data-thread="left">
+      <img class="art" src="_media/s57_bridge.jpg" loading="lazy"
+        alt="Moses with his staff beside a portrait of Jesus — the type and the fulfillment on one spread">
+      <figcaption>the signpost, and the country it pointed to.</figcaption>
+    </figure>
+    <div class="inner">
+      <p class="wipe">And the riddle of the look was answered too. It was never the bronze; it was
+        the looking that God honoured — the faith that takes Him at His word. The power was never
+        in my handiwork. It was in the God who said look and live — and in the Son He always meant
+        the look to find. For so the gospel was written:</p>
+    </div>
+    <div class="versecard" data-thread="gutter">
+      <p class="scribe" data-scribe>For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.</p>
+      <p class="cite">John 3 : 16 · KJV</p>
+    </div>
+  </section>
+
+  <!-- ==================== vii. the invitation -->
+  <section class="movement landing" id="m7">
+    <div class="inner">
+      <p class="folio">vii. — the invitation.</p>
+      <p class="wipe">So hear me — be still. I watched a camp dying. Strong men tried to walk the
+        fire off, and fell; none was healed by his own hands. That is you. That is me. You cannot
+        climb out of the poison — you were never asked to.</p>
+      <p class="wipe">Jesus was lifted up where every dying eye could find Him — the least, the
+        last, the child who can only turn his head. The cure is not in you, and never had to be.
+        It is lifted up in plain sight, and costs you nothing but a look.</p>
+    </div>
+    <figure class="plate" id="landingplate" data-thread="tear" data-breath>
+      <img class="art" src="_media/s68_landing.jpg" loading="lazy"
+        alt="the page itself torn open — Jesus standing in gold light beneath the paper">
+      <figcaption>the page keeps its own promise: it tears open on Him.</figcaption>
+    </figure>
+    <div class="versecard" data-scribe-big>
+      <p class="scribe" data-scribe>Look to Him, and live.</p>
+    </div>
+
+    <div class="inner colophon" style="position:relative">
+      <div id="ribbon" aria-hidden="true"></div>
+      <h2>Awakeden — set table</h2>
+      <a class="course" href="#top" title="sketch only — not wired">
+        <span class="c-name">The shorts</span>
+        <span class="c-note">one look, sixty seconds — the taste that brings you here.</span>
+        <svg class="c-line" viewBox="0 0 700 8" preserveAspectRatio="none"><path d="M2,5 C160,2 420,7 698,3"/></svg>
+      </a>
+      <a class="course" href="#top" title="sketch only — not wired">
+        <span class="c-name">The films</span>
+        <span class="c-note">Look and Live, and studies like it — six to ten minutes, hand-inked.</span>
+        <svg class="c-line" viewBox="0 0 700 8" preserveAspectRatio="none"><path d="M2,4 C200,7 460,2 698,5"/></svg>
+      </a>
+      <a class="course" href="#top" title="sketch only — not wired">
+        <span class="c-name">This table</span>
+        <span class="c-note">the studies themselves, made to be read slowly. You are at it now.</span>
+        <svg class="c-line" viewBox="0 0 700 8" preserveAspectRatio="none"><path d="M2,5 C240,2 400,8 698,4"/></svg>
+      </a>
+      <p class="smallprint">
+        hand-inked · KJV verbatim · <span class="red">red letter for His words</span><br>
+        the whole Bible, through Jesus
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<script>
+/* ============================================================
+   THE LIVE INK — runtime.
+   Every effect here is a port of a real Awakeden device:
+     scribed-ink letter reveal . . . living-sketchbook SKILL §5
+     whole-arrival red letter  . . . LAW 1 (the Word arrives whole)
+     annotator's circle  . . . . . . panel_animator/annotators_circle.py
+     gold thread spine . . . . . . . living-sketchbook gold-thread device
+     blue-line arrival . . . . . . . panel_animator/blue_line.py
+     ink-bleed boundaries  . . . . . panel_animator/ink_transition.py
+     hunt-and-lock camera  . . . . . SKILL hunt-and-lock + grid_choreography.py
+     marginalia leaders  . . . . . . panel_animator/marginalia.py
+     raking light + gold flare . . . panel_animator/raking_light.py
+     held-breath energy  . . . . . . panel_animator/held_breath.py
+   ============================================================ */
+'use strict';
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches
+        || location.search.indexOf('rm=1') >= 0;
+
+/* ---------- tiny seeded RNG (deterministic wobble, fixed per gesture) */
+function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;
+  let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;
+  return((t^t>>>14)>>>0)/4294967296;}}
+const clamp=(v,a,b)=>v<a?a:(v>b?b:v);
+const smooth=t=>{t=clamp(t,0,1);return t*t*(3-2*t);};
+const lerp=(a,b,t)=>a+(b-a)*t;
+
+let vh=innerHeight, vw=innerWidth, docH=document.body.scrollHeight;
+let readLine=0, sy=0;
+
+/* ============================================================ held breath
+   held_breath.py: energy in [floor,1], eased ramps, never a true freeze.
+   Web mapping: the reader is the narrator. Scroll = speech; dwell = silence.
+   Plus AUTHORED gaps in scroll-space around [data-breath] elements
+   (the confession, the landing) — the page holds its breath there. */
+const BREATH={floor:0.25, energy:1, vel:0, gaps:[]};
+function rebuildGaps(){
+  BREATH.gaps=[];
+  document.querySelectorAll('[data-breath]').forEach(el=>{
+    const r=el.getBoundingClientRect();
+    BREATH.gaps.push({c:r.top+scrollY+r.height/2, sig:vh*0.55});
+  });
+}
+function breathTick(dt,dy){
+  const v=Math.abs(dy)/Math.max(1,dt);                 // px per ms
+  BREATH.vel=lerp(BREATH.vel, v, 0.25);
+  const velTarget = BREATH.vel>0.04 ? 1 : BREATH.floor;
+  const k = velTarget>BREATH.energy ? 0.10 : 0.02;      // fast attack, slow settle
+  let e = BREATH.energy + (velTarget-BREATH.energy)*k;
+  let pos=1;
+  for(const g of BREATH.gaps){
+    const d=(readLine-g.c)/g.sig;
+    pos=Math.min(pos, 1-(1-BREATH.floor)*Math.exp(-d*d));
+  }
+  BREATH.energy=Math.min(e,pos);
+  return BREATH.energy;
+}
+
+/* ============================================================ scribed ink
+   letter-by-letter reveal with a fixed seeded per-glyph wobble.
+   Narration-voice verses ONLY (LAW 1 exempts divine speech). */
+const scribeBlocks=[];
+document.querySelectorAll('[data-scribe]').forEach((el,bi)=>{
+  const words=el.textContent.split(/\s+/).filter(Boolean);
+  el.textContent='';
+  const rnd=mulberry32(101+bi*17);
+  const letters=[];
+  words.forEach((w,wi)=>{
+    const wspan=document.createElement('span');
+    wspan.style.display='inline-block'; wspan.style.whiteSpace='nowrap';
+    for(const ch of w){
+      const s=document.createElement('span');
+      s.className='L'; s.textContent=ch;
+      s.style.setProperty('--r',((rnd()-0.5)*3.2).toFixed(2)+'deg');
+      s.style.setProperty('--dy',((rnd()-0.5)*2.6).toFixed(2)+'px');
+      wspan.appendChild(s); letters.push(s);
+    }
+    el.appendChild(wspan);
+    if(wi<words.length-1) el.appendChild(document.createTextNode(' '));
+  });
+  scribeBlocks.push({el,letters,shown:0});
+});
+function scribeTick(){
+  for(const b of scribeBlocks){
+    const r=b.el.getBoundingClientRect();
+    if(r.bottom<-vh||r.top>vh*1.5) continue;
+    const span=Math.min(r.height*1.1, vh*0.42);
+    const p=clamp((readLine-(r.top+scrollY))/span,0,1);
+    const n=Math.round(smooth(p)*b.letters.length);
+    if(n>b.shown){for(let i=b.shown;i<n;i++)b.letters[i].classList.add('on');b.shown=n;}
+    /* the ink never un-writes — a made page stays made */
+  }
+}
+
+/* ============================================================ red letter
+   LAW 1: arrives WHOLE, complete between two frames. No transition. */
+const redletters=[...document.querySelectorAll('.redletter')].map(el=>({el,done:false}));
+function redTick(){
+  for(const r of redletters){
+    if(r.done) continue;
+    const rect=r.el.getBoundingClientRect();
+    if(rect.top+scrollY < readLine){
+      r.el.classList.add('arrived'); r.done=true;
+      if(r.el.id==='command' && !RM) setTimeout(drawCircle,650);
+      if(r.el.id==='command' && RM) drawCircle();
+    }
+  }
+}
+
+/* ============================================================ annotator's circle
+   Port of annotators_circle.py: seeded sum-of-sines wobbled ellipse,
+   TWO passes (full sweep, then a lighter offset second loop).
+   Governors kept: ONE circle on the whole page, on a word already
+   lettered verbatim on it ("looketh", Numbers 21:8). */
+function wobbledEllipse(cx,cy,rx,ry,seed,startDeg,n){
+  n=n||181;
+  const rnd=mulberry32(seed);
+  const terms=3+Math.floor(rnd()*2);
+  const freqs=[],phases=[],rel=[1,.55,.3,.18],ws=[];let sum=0;
+  for(let i=0;i<terms;i++){freqs.push(1.6+rnd()*2.7);phases.push(rnd()*Math.PI*2);}
+  for(let i=0;i<terms;i++){const w=rel[i]*(0.8+rnd()*0.4);ws.push(w);sum+=w;}
+  for(let i=0;i<terms;i++)ws[i]/=sum;
+  const start=startDeg*Math.PI/180,pts=[];
+  for(let i=0;i<n;i++){
+    const frac=i/(n-1),th=start+frac*2*Math.PI;let wob=0;
+    for(let k=0;k<terms;k++)wob+=ws[k]*Math.sin(freqs[k]*frac*2*Math.PI+phases[k]);
+    const m=1+0.055*wob;
+    pts.push((cx+rx*m*Math.cos(th)).toFixed(1)+','+(cy+ry*m*Math.sin(th)).toFixed(1));
+  }
+  return pts;
+}
+let circleDrawn=false;
+function drawCircle(){
+  if(circleDrawn)return; circleDrawn=true;
+  const holder=document.getElementById('command');
+  const word=document.getElementById('w-looketh');
+  const hr=holder.getBoundingClientRect(), wr=word.getBoundingClientRect();
+  const x0=wr.left-hr.left, y0=wr.top-hr.top, bw=wr.width, bh=wr.height;
+  const cx=x0+bw/2, cy=y0+bh/2;
+  const rx=(bw/2)*1.32, ry=(bh/2)*2.05;           /* pad_x .32 / pad_y 1.05 */
+  const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+  svg.setAttribute('class','circlelayer');
+  svg.setAttribute('viewBox','0 0 '+hr.width+' '+hr.height);
+  svg.setAttribute('width',hr.width);svg.setAttribute('height',hr.height);
+  const isDark=!!holder.closest('.dark');
+  const col=isDark?'#cf463b':'#961a16';
+  const p1=document.createElementNS('http://www.w3.org/2000/svg','polyline');
+  const p2=document.createElementNS('http://www.w3.org/2000/svg','polyline');
+  p1.setAttribute('stroke',col);p1.setAttribute('stroke-width','4');p1.setAttribute('stroke-opacity','.91');
+  p2.setAttribute('stroke',col);p2.setAttribute('stroke-width','2.4');p2.setAttribute('stroke-opacity','.55');
+  svg.appendChild(p1);svg.appendChild(p2);holder.appendChild(svg);
+  const off=Math.max(2,Math.min(rx,ry)*0.09);
+  const pts1=wobbledEllipse(cx,cy,rx,ry,17,-100);
+  const pts2=wobbledEllipse(cx+off*0.4,cy-off*0.5,rx*1.05,ry*1.06,17+101,-100+24);
+  if(RM){p1.setAttribute('points',pts1.join(' '));p2.setAttribute('points',pts2.join(' '));return;}
+  const D=1400,t0=performance.now();          /* whole two-pass gesture: 1.4s */
+  (function step(now){
+    const prog=clamp((now-t0)/D,0,1);
+    const q1=smooth(Math.min(1,prog/0.6));    /* PASS1_END = 0.6 */
+    p1.setAttribute('points',pts1.slice(0,Math.max(2,Math.round(q1*pts1.length))).join(' '));
+    if(prog>0.6){
+      const q2=smooth((prog-0.6)/0.4);
+      p2.setAttribute('points',pts2.slice(0,Math.max(2,Math.round(q2*pts2.length))).join(' '));
+    }
+    if(prog<1)requestAnimationFrame(step);
+  })(t0);
+}
+
+/* ============================================================ gold thread
+   One SVG path down the whole document. Its drawn tip rides the reader's
+   reading line; it knots at Numbers 21:8 and John 3:14 and finally dives
+   into the torn page. Waypoints come from the real laid-out elements. */
+const T={path:document.getElementById('threadpath'),
+         glint:document.getElementById('threadglint'),
+         svg:document.getElementById('threadsvg'),
+         samples:[],len:0,built:false,lastLen:-1};
+function gutterX(){const cw=Math.min(vw*0.92,760);return Math.max(16,(vw-cw)/2*0.42);}
+function buildThread(){
+  vh=innerHeight;vw=innerWidth;docH=document.body.scrollHeight;
+  T.svg.setAttribute('width',vw);T.svg.setAttribute('height',docH);
+  T.svg.setAttribute('viewBox','0 0 '+vw+' '+docH);
+  const gx=gutterX(), pts=[];
+  document.querySelectorAll('[data-thread]').forEach(el=>{
+    const r=el.getBoundingClientRect(), top=r.top+scrollY, mode=el.dataset.thread;
+    if(mode==='start'){ pts.push([vw/2, top+6]); pts.push([gx+26, top+vh*0.35]); }
+    else if(mode==='left'){ pts.push([Math.max(10,gx*0.5), top+r.height*0.5]); }
+    else if(mode==='gutter'){ pts.push([gx, top+r.height*0.45]); }
+    else if(mode==='knot'){
+      const kx=Math.max(gx, r.left-38), ky=top+r.height*0.5;
+      pts.push([kx-14, ky-vh*0.12]);
+      /* a loose tied loop */
+      pts.push([kx,ky-16]);pts.push([kx+20,ky-6]);pts.push([kx+8,ky+14]);
+      pts.push([kx-12,ky+4]);pts.push([kx-2,ky-12]);pts.push([kx+16,ky+2]);
+      pts.push([kx-6, ky+vh*0.12]);
+    }
+    else if(mode==='tear'){
+      /* dive over the art, into the torn hole (authored: 49.5% / 46.6%) */
+      pts.push([Math.max(10,gx*0.5), top-vh*0.1]);
+      pts.push([r.left+r.width*0.30, top+r.height*0.18]);
+      pts.push([r.left+r.width*0.495, top+r.height*0.466]);
+    }
+  });
+  if(pts.length<3)return;
+  /* Catmull-Rom -> cubic bezier */
+  let d='M'+pts[0][0].toFixed(1)+','+pts[0][1].toFixed(1);
+  for(let i=0;i<pts.length-1;i++){
+    const p0=pts[Math.max(0,i-1)],p1=pts[i],p2=pts[i+1],p3=pts[Math.min(pts.length-1,i+2)];
+    const c1=[p1[0]+(p2[0]-p0[0])/6,p1[1]+(p2[1]-p0[1])/6];
+    const c2=[p2[0]-(p3[0]-p1[0])/6,p2[1]-(p3[1]-p1[1])/6];
+    d+='C'+c1[0].toFixed(1)+','+c1[1].toFixed(1)+' '+c2[0].toFixed(1)+','+c2[1].toFixed(1)
+      +' '+p2[0].toFixed(1)+','+p2[1].toFixed(1);
+  }
+  T.path.setAttribute('d',d);
+  T.len=T.path.getTotalLength();
+  T.path.style.strokeDasharray=T.len+' '+T.len;
+  T.path.style.strokeDashoffset=RM?0:T.len;
+  /* sample table length->y (monotonized) for the scroll mapping */
+  T.samples=[];let maxy=0;
+  const N=700;
+  for(let i=0;i<=N;i++){
+    const l=T.len*i/N,p=T.path.getPointAtLength(l);
+    maxy=Math.max(maxy,p.y);T.samples.push([l,maxy]);
+  }
+  T.built=true;T.lastLen=-1;
+}
+function threadTick(e,t){
+  if(!T.built)return;
+  if(RM){const p=T.path.getPointAtLength(T.len);
+    T.glint.setAttribute('cx',p.x);T.glint.setAttribute('cy',p.y);
+    T.glint.setAttribute('opacity','.9');return;}
+  /* binary search: longest length whose (monotonized) y <= readLine */
+  let lo=0,hi=T.samples.length-1;
+  if(T.samples[0][1]>readLine){lo=hi=0;}
+  else{while(lo<hi){const mid=(lo+hi+1)>>1;
+    if(T.samples[mid][1]<=readLine)lo=mid;else hi=mid-1;}}
+  const target=T.samples[lo][0];
+  if(Math.abs(target-T.lastLen)>0.5){
+    T.path.style.strokeDashoffset=Math.max(0,T.len-target);
+    T.lastLen=target;
+  }
+  const tip=T.path.getPointAtLength(target);
+  T.glint.setAttribute('cx',tip.x);T.glint.setAttribute('cy',tip.y);
+  const tt=t/1000;
+  T.glint.setAttribute('r',(2.6+1.3*e*(0.5+0.5*Math.sin(tt*2.4))).toFixed(2));
+  T.glint.setAttribute('opacity',(0.55+0.4*e).toFixed(2));
+}
+
+/* ============================================================ reveal fields
+   Port of ink_transition.make_reveal_field: 3-octave value noise (cells at
+   h/40*scale) + distance term, combined 0.32*noise + 0.68*dist, normalized.
+   Low values reveal first — thresholded per frame exactly like
+   render_mask_frames (mask = clip((t-(field-edge))/(2*edge))). */
+function valueNoise(w,h,gw,gh,rnd){
+  const grid=new Float32Array((gw+2)*(gh+2));
+  for(let i=0;i<grid.length;i++)grid[i]=rnd();
+  const out=new Float32Array(w*h);
+  for(let y=0;y<h;y++){
+    const gy=y/h*gh,y0=Math.floor(gy),fy=smooth(gy-y0);
+    for(let x=0;x<w;x++){
+      const gxx=x/w*gw,x0=Math.floor(gxx),fx=smooth(gxx-x0);
+      const i00=grid[y0*(gw+2)+x0],i10=grid[y0*(gw+2)+x0+1];
+      const i01=grid[(y0+1)*(gw+2)+x0],i11=grid[(y0+1)*(gw+2)+x0+1];
+      out[y*w+x]=lerp(lerp(i00,i10,fx),lerp(i01,i11,fx),fy);
+    }
+  }
+  return out;
+}
+function makeRevealField(w,h,ox,oy,seed){
+  const rnd=mulberry32(seed);
+  const field=new Float32Array(w*h);
+  const scales=[[6,1.0],[3,0.55],[1.5,0.28]];
+  for(const[s,wt]of scales){
+    const gw=Math.max(2,Math.round(w/40*s)),gh=Math.max(2,Math.round(h/40*s));
+    const n=valueNoise(w,h,gw,gh,rnd);
+    for(let i=0;i<field.length;i++)field[i]+=n[i]*wt;
+  }
+  let mn=1e9,mx=-1e9;
+  for(let i=0;i<field.length;i++){if(field[i]<mn)mn=field[i];if(field[i]>mx)mx=field[i];}
+  for(let i=0;i<field.length;i++)field[i]=(field[i]-mn)/(mx-mn);
+  const out=new Float32Array(w*h);
+  let mn2=1e9,mx2=-1e9;
+  for(let y=0;y<h;y++)for(let x=0;x<w;x++){
+    const dx=(x-ox*w)/w,dy=(y-oy*h)/h;
+    const v=0.32*field[y*w+x]+0.68*Math.sqrt(dx*dx+dy*dy);
+    out[y*w+x]=v;if(v<mn2)mn2=v;if(v>mx2)mx2=v;
+  }
+  for(let i=0;i<out.length;i++)out[i]=(out[i]-mn2)/(mx2-mn2);
+  return out;
+}
+
+/* ---------- ink-bleed boundaries: the paper itself turns, no fade */
+const NIGHT=[35,44,57], PAPER_RGB=[241,233,214];
+const bounds=[];
+document.querySelectorAll('.inkbound').forEach(el=>{
+  const kind=el.dataset.bound;
+  bounds.push({el,canvas:el.querySelector('canvas'),kind,field:null,lastT:-1,
+    color:kind==='night'?NIGHT:PAPER_RGB,
+    /* night bleeds in from the upper right (where the serpents came);
+       healing spreads from high center — where the pole stands */
+    ox:kind==='night'?0.72:0.5, oy:kind==='night'?0.25:0.18,
+    seed:kind==='night'?7:23});
+});
+const FW=520,FH=640,EDGE=0.09;
+function boundTick(){
+  for(const b of bounds){
+    const r=b.el.getBoundingClientRect();
+    if(r.bottom<-20||r.top>vh+20){
+      if(RM&&b.lastT<0){/* reduced motion: paint final state once */}
+      else continue;
+    }
+    if(!b.field){
+      b.field=makeRevealField(FW,FH,b.ox,b.oy,b.seed);
+      b.canvas.width=FW;b.canvas.height=FH;
+      b.ctx=b.canvas.getContext('2d');
+      b.img=b.ctx.createImageData(FW,FH);
+      const d=b.img.data;
+      for(let i=0;i<FW*FH;i++){d[i*4]=b.color[0];d[i*4+1]=b.color[1];d[i*4+2]=b.color[2];d[i*4+3]=0;}
+    }
+    const t=RM?1:clamp((vh-r.top)/(r.height+vh),0,1);
+    if(Math.abs(t-b.lastT)<0.004)continue;
+    b.lastT=t;
+    const d=b.img.data,f=b.field;
+    for(let i=0;i<FW*FH;i++){
+      d[i*4+3]=Math.max(0,Math.min(255,((t-(f[i]-EDGE))/(2*EDGE))*255))|0;
+    }
+    b.ctx.putImageData(b.img,0,0);
+  }
+}
+
+/* ============================================================ blue-line
+   blue_line.py: the plate opens as pale underdrawing; the ink arrives ONCE
+   along a hand-wobbled diagonal front (~0.9s), then the page is finished
+   for good. Underdrawing plate was generated by the repo's own
+   make_underdrawing_plate. Front field = port of _wobbled_diagonal_mask. */
+const BL={canvas:document.getElementById('blueline-canvas'),t:0,done:false,started:false};
+function blueFrontField(w,h,seed,feather){
+  const rnd=mulberry32(seed);
+  const step=Math.max(8,Math.round(h/15)), jitter=feather*0.55;
+  const ys=[],js=[];
+  for(let y=-step;y<=h+2*step;y+=step){ys.push(y);js.push((rnd()*2-1)*jitter);}
+  const out=new Float32Array(w*h), margin=feather*3, diag=w+h;
+  for(let y=0;y<h;y++){
+    let j=js[js.length-1];
+    for(let k=0;k<ys.length-1;k++){
+      if(y>=ys[k]&&y<=ys[k+1]){const f=(y-ys[k])/(ys[k+1]-ys[k]);j=lerp(js[k],js[k+1],f);break;}
+    }
+    for(let x=0;x<w;x++)out[y*w+x]=(x+y-j+margin)/(diag+2*margin);
+  }
+  return out;
+}
+function initBlueline(){
+  const W=1200,H=670;
+  const under=new Image(),fin=new Image();
+  let loaded=0;
+  function ready(){
+    if(++loaded<2)return;
+    BL.ctx=BL.canvas.getContext('2d');
+    BL.under=under;BL.fin=fin;
+    BL.mw=300;BL.mh=168;
+    BL.fieldArr=blueFrontField(BL.mw,BL.mh,11,26);
+    BL.mask=document.createElement('canvas');BL.mask.width=BL.mw;BL.mask.height=BL.mh;
+    BL.mctx=BL.mask.getContext('2d');
+    BL.mimg=BL.mctx.createImageData(BL.mw,BL.mh);
+    const d=BL.mimg.data;
+    for(let i=0;i<BL.mw*BL.mh;i++){d[i*4]=255;d[i*4+1]=255;d[i*4+2]=255;d[i*4+3]=0;}
+    BL.off=document.createElement('canvas');BL.off.width=W;BL.off.height=H;
+    BL.octx=BL.off.getContext('2d');
+    drawBlue(RM?1:0);
+    if(RM){BL.done=true;return;}
+    new IntersectionObserver((es,io)=>{
+      for(const e of es)if(e.isIntersecting&&!BL.started){
+        BL.started=true;io.disconnect();
+        const t0=performance.now(),D=1050;
+        (function step(now){
+          const p=clamp((now-t0)/D,0,1);
+          drawBlue(0.5-0.5*Math.cos(Math.PI*p));   /* blue_line._ease */
+          if(p<1)requestAnimationFrame(step);else BL.done=true;
+        })(t0);
+      }
+    },{threshold:0.38}).observe(BL.canvas);
+  }
+  under.onload=ready;fin.onload=ready;
+  under.src='_media/s01_wide_blueline.jpg';fin.src='_media/s01_wide.jpg';
+}
+function drawBlue(t){
+  const W=BL.canvas.width,H=BL.canvas.height,edge=0.05;
+  BL.ctx.drawImage(BL.under,0,0,W,H);
+  if(t<=0)return;
+  if(t>=1){BL.ctx.drawImage(BL.fin,0,0,W,H);return;}
+  const d=BL.mimg.data,f=BL.fieldArr;
+  for(let i=0;i<BL.mw*BL.mh;i++)
+    d[i*4+3]=Math.max(0,Math.min(255,((t-(f[i]-edge))/(2*edge))*255))|0;
+  BL.mctx.putImageData(BL.mimg,0,0);
+  BL.octx.globalCompositeOperation='source-over';
+  BL.octx.clearRect(0,0,W,H);
+  BL.octx.drawImage(BL.fin,0,0,W,H);
+  BL.octx.globalCompositeOperation='destination-in';
+  BL.octx.imageSmoothingEnabled=true;
+  BL.octx.drawImage(BL.mask,0,0,W,H);
+  BL.ctx.drawImage(BL.off,0,0);
+}
+
+/* ============================================================ cameras
+   Hunt-and-lock, scroll-scrubbed: full frame -> push into the named detail
+   -> hold while the marginalia label letters itself and its wobbled leader
+   line draws -> rack to the second detail -> release. The reader's scroll
+   is the camera operator. (grid_choreography's rack-focus dimming = the
+   vignette that rises while locked.) */
+const cameras=[];
+document.querySelectorAll('.camera').forEach((sec,ci)=>{
+  const cfg=JSON.parse(sec.dataset.cam);
+  const stage=sec.querySelector('.cam-stage');
+  const img=new Image();
+  img.src=cfg.img;img.alt=cfg.alt;stage.appendChild(img);
+  const vig=document.createElement('div');vig.className='cam-vignette';stage.appendChild(vig);
+  const note=document.createElement('div');note.className='cam-note';
+  note.textContent=cfg.note;sec.querySelector('.cam-stage-outer').appendChild(note);
+  const labels=cfg.shots.map((sh,si)=>{
+    const el=document.createElement('div');el.className='mlabel';
+    el.style.left=(sh.lx*100)+'%';el.style.top=(sh.ly*100)+'%';
+    const txt=document.createElement('div');txt.className='mtext';txt.textContent=sh.label;
+    const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+    const pl=document.createElementNS('http://www.w3.org/2000/svg','polyline');
+    const dot=document.createElementNS('http://www.w3.org/2000/svg','circle');
+    dot.setAttribute('r','4');
+    svg.appendChild(pl);svg.appendChild(dot);
+    el.appendChild(txt);el.appendChild(svg);stage.appendChild(el);
+    return {el,txt,svg,pl,dot,sh,seed:400+ci*31+si*7,built:false,len:0};
+  });
+  cameras.push({sec,stage,img,vig,labels,cfg,active:false,lastP:-1});
+});
+/* wobbled leader line: marginalia.py's 12-step jittered polyline */
+function buildLeader(lb,stageW,stageH){
+  const rnd=mulberry32(lb.seed);
+  const lr={x:lb.sh.lx*stageW,y:lb.sh.ly*stageH};
+  /* reduced motion: the camera never zooms, so the leader points at the
+     detail itself instead of the locked (centered) position */
+  const target=RM?{x:lb.sh.x*stageW,y:lb.sh.y*stageH}:{x:stageW*0.5,y:stageH*0.5};
+  const start={x:lr.x+(target.x>lr.x?10:-6), y:lr.y+28};
+  const pts=[];const STEPS=12,J=3;
+  for(let i=0;i<=STEPS;i++){
+    const t=i/STEPS;
+    pts.push([(start.x+(target.x-start.x)*t+(rnd()*2-1)*J).toFixed(1),
+              (start.y+(target.y-start.y)*t+(rnd()*2-1)*J).toFixed(1)]);
+  }
+  lb.svg.style.left='0px';lb.svg.style.top='0px';
+  lb.svg.setAttribute('width',stageW);lb.svg.setAttribute('height',stageH);
+  lb.svg.style.position='fixed';lb.svg.style.position='absolute';
+  lb.svg.style.left=(-lr.x)+'px';lb.svg.style.top=(-lr.y)+'px';
+  lb.pl.setAttribute('points',pts.map(p=>p.join(',')).join(' '));
+  const L=lb.pl.getTotalLength();
+  lb.len=L;lb.pl.style.strokeDasharray=L+' '+L;lb.pl.style.strokeDashoffset=L;
+  lb.dot.setAttribute('cx',target.x);lb.dot.setAttribute('cy',target.y);
+  lb.dot.setAttribute('opacity','0');
+  lb.built=true;
+}
+/* keyframes on section progress p */
+const CAM_K=[
+  {a:0.00,b:0.10,from:null,to:null},        /* full  */
+  {a:0.10,b:0.30,from:'full',to:0},         /* push A */
+  {a:0.30,b:0.48,hold:0},
+  {a:0.48,b:0.64,from:0,to:1},              /* rack B */
+  {a:0.64,b:0.82,hold:1},
+  {a:0.82,b:1.00,from:1,to:'full'}          /* release */
+];
+function camPose(cam,which){
+  if(which==='full')return{x:0.5,y:0.5,s:1};
+  const sh=cam.cfg.shots[which];return{x:sh.x,y:sh.y,s:sh.s};
+}
+function cameraTick(e,t){
+  for(const cam of cameras){
+    const r=cam.sec.getBoundingClientRect();
+    if(r.bottom<0||r.top>vh)continue;
+    const p=RM?0:clamp((-r.top)/(r.height-vh),0,1);
+    const stageW=cam.stage.clientWidth,stageH=cam.stage.clientHeight;
+    let pose={x:0.5,y:0.5,s:1},lockAmt=0,holdIdx=-1;
+    for(const k of CAM_K){
+      if(p<k.a||p>k.b)continue;
+      const f=smooth((p-k.a)/(k.b-k.a));
+      if(k.hold!==undefined){pose=camPose(cam,k.hold);holdIdx=k.hold;lockAmt=1;}
+      else if(k.from===null){pose=camPose(cam,'full');}
+      else{
+        const A=camPose(cam,k.from),B=camPose(cam,k.to);
+        pose={x:lerp(A.x,B.x,f),y:lerp(A.y,B.y,f),s:lerp(A.s,B.s,f)};
+        lockAmt=(k.to==='full')?(1-f):f;
+      }
+      break;
+    }
+    /* breathing on hold — amplitude rides the held-breath envelope */
+    let s=pose.s;
+    if(holdIdx>=0&&!RM)s+=0.006*Math.sin(t/420)*e;
+    const tx=-(pose.x-0.5)*100*s, ty=-(pose.y-0.5)*100*s;
+    cam.img.style.transform='translate('+tx.toFixed(2)+'%,'+ty.toFixed(2)+'%) scale('+s.toFixed(3)+')';
+    cam.vig.style.opacity=(lockAmt*0.85*(pose.s>1.05?1:0)).toFixed(2);
+    /* labels: letter + leader while their shot holds */
+    cam.labels.forEach((lb,si)=>{
+      if(!lb.built&&stageW>0)buildLeader(lb,stageW,stageH);
+      let vis=0;
+      if(RM){vis=1;}
+      else{
+        const win=si===0?[0.30,0.52]:[0.64,0.86];
+        if(p>=win[0]&&p<=win[1]){
+          const q=clamp((p-win[0])/0.07,0,1);   /* draws fast on arrival */
+          vis=q*(p>win[1]-0.04?clamp((win[1]-p)/0.04,0,1):1);
+        }
+      }
+      lb.el.style.opacity=vis.toFixed(2);
+      if(lb.built){
+        lb.pl.style.strokeDashoffset=(lb.len*(1-vis)).toFixed(1);
+        lb.dot.setAttribute('opacity',vis>0.9?'1':'0');
+        if(vis>0&&!RM){ /* line-boil: tiny smooth wobble, held-breath scaled */
+          const w1=Math.sin(t/300+lb.seed)*0.6*e,w2=Math.cos(t/270+lb.seed)*0.5*e;
+          lb.txt.style.transform='rotate('+(-1.2+w1*0.3)+'deg) translate('+w1+'px,'+w2+'px)';
+        }
+      }
+    });
+  }
+}
+
+/* ============================================================ raking light
+   raking_light.py: a broad slow grazing band sweeps the sheet; when it
+   crosses the gold-leaf strip, the leaf flares once. Here the sweep is
+   scroll-scrubbed across the shadow-cross plate, and the flare fires on
+   the page's own gold edge. */
+const rakePlate=document.getElementById('shadowplate');
+const rakeEl=rakePlate?rakePlate.querySelector('.rake'):null;
+function rakeTick(){
+  if(!rakeEl||RM)return;
+  const r=rakePlate.getBoundingClientRect();
+  if(r.bottom<0||r.top>vh){document.documentElement.style.setProperty('--goldflare',1);return;}
+  const p=clamp(1-(r.top+r.height*0.5-vh*0.15)/(vh*0.9),0,1);
+  rakeEl.style.setProperty('--rx',(lerp(-70,70,p)).toFixed(1)+'%');
+  /* flare when the band reaches the right edge (the gold strip side) */
+  const g=Math.exp(-Math.pow((p-0.88)/0.09,2));
+  document.documentElement.style.setProperty('--goldflare',(1+g*0.9).toFixed(3));
+}
+
+/* ---------- static marginalia on the shadow plate */
+const shadowLabel=document.getElementById('shadowlabel');
+if(shadowLabel){
+  const ANCH={x:0.30,y:0.712},POS={x:0.54,y:0.84};
+  shadowLabel.style.left=(POS.x*100)+'%';shadowLabel.style.top=(POS.y*100)+'%';
+  const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+  const pl=document.createElementNS('http://www.w3.org/2000/svg','polyline');
+  const dot=document.createElementNS('http://www.w3.org/2000/svg','circle');
+  dot.setAttribute('r','4');svg.appendChild(pl);svg.appendChild(dot);shadowLabel.appendChild(svg);
+  let built=false;
+  new IntersectionObserver(es=>{
+    for(const e of es)if(e.isIntersecting){
+      if(!built){
+        const wrap=rakePlate.querySelector('.rakewrap');
+        const W=wrap.clientWidth,H=wrap.clientHeight;
+        const rnd=mulberry32(77);
+        const sx=POS.x*W-8,sy2=POS.y*H+16,tx=ANCH.x*W,ty=ANCH.y*H;
+        const pts=[];for(let i=0;i<=12;i++){const q=i/12;
+          pts.push([(sx+(tx-sx)*q+(rnd()*2-1)*3).toFixed(1),(sy2+(ty-sy2)*q+(rnd()*2-1)*3).toFixed(1)]);}
+        svg.setAttribute('width',W);svg.setAttribute('height',H);
+        svg.style.left=(-POS.x*W)+'px';svg.style.top=(-POS.y*H)+'px';
+        pl.setAttribute('points',pts.map(p=>p.join(',')).join(' '));
+        const L=pl.getTotalLength();
+        pl.style.strokeDasharray=L+' '+L;pl.style.strokeDashoffset=RM?0:L;
+        pl.style.transition='stroke-dashoffset 1s ease .3s';
+        dot.setAttribute('cx',tx);dot.setAttribute('cy',ty);
+        built=true;
+        requestAnimationFrame(()=>{shadowLabel.classList.add('on');pl.style.strokeDashoffset=0;});
+      } else shadowLabel.classList.add('on');
+    }
+  },{threshold:0.45}).observe(rakePlate);
+}
+
+/* ---------- prose ink-wipes + ribbon + down-cue */
+const wipeIO=new IntersectionObserver(es=>{
+  for(const e of es)if(e.isIntersecting){e.target.classList.add('on');wipeIO.unobserve(e.target);}
+},{threshold:0.18});
+document.querySelectorAll('.wipe').forEach(el=>wipeIO.observe(el));
+const ribbon=document.getElementById('ribbon');
+new IntersectionObserver(es=>{
+  for(const e of es)if(e.isIntersecting){setTimeout(()=>ribbon.classList.add('settled'),350);}
+},{threshold:0.3}).observe(document.querySelector('.colophon'));
+(function(){
+  const cue=document.getElementById('cuepath');
+  const L=cue.getTotalLength();
+  cue.style.strokeDasharray=L+' '+L;
+  cue.style.strokeDashoffset=RM?0:L;
+  if(!RM){cue.style.transition='stroke-dashoffset 1s ease 3.4s';
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{cue.style.strokeDashoffset=0;}));}
+})();
+
+/* ============================================================ main loop */
+let lastY=scrollY,lastT=performance.now();
+function frame(now){
+  const dy=scrollY-lastY,dt=now-lastT;
+  lastY=scrollY;lastT=now;sy=scrollY;
+  readLine=sy+vh*0.7;
+  const e=RM?1:breathTick(Math.max(1,dt),dy);
+  scribeTick();
+  redTick();
+  threadTick(e,now);
+  boundTick();
+  cameraTick(e,now);
+  rakeTick();
+  requestAnimationFrame(frame);
+}
+addEventListener('resize',()=>{clearTimeout(window.__rz);
+  window.__rz=setTimeout(()=>{buildThread();rebuildGaps();},250);});
+addEventListener('load',()=>{setTimeout(()=>{buildThread();rebuildGaps();},120);});
+/* late lazy-image loads can still nudge layout — re-anchor the thread */
+document.querySelectorAll('img.art').forEach(im=>im.addEventListener('load',()=>{
+  clearTimeout(window.__rz2);window.__rz2=setTimeout(()=>{buildThread();rebuildGaps();},200);
+}));
+initBlueline();
+buildThread();rebuildGaps();
+if(RM){
+  document.querySelectorAll('.scribe .L').forEach(s=>s.classList.add('on'));
+  document.querySelectorAll('.redletter').forEach(r=>r.classList.add('arrived'));
+  drawCircle();
+  document.querySelectorAll('.wipe').forEach(el=>el.classList.add('on'));
+}
+requestAnimationFrame(frame);
+</script>
+</body>
+</html>

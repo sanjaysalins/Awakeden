@@ -1,0 +1,415 @@
+/* ============================================================
+   THE ARC — Awakeden round-3 mockup
+   One stylesheet for index.html (the porch) + bronze-serpent.html (the road).
+   Palette is sampled from the Bronze Serpent film plates.
+   Ink discipline (from the films, kept ruthlessly):
+     - wash-blue  = study apparatus only (refs, labels, links)
+     - rubric red = the words of Jesus + the sparest accents
+     - GOLD       = the thread and the landing. Nowhere else.
+   ============================================================ */
+
+@font-face {
+  font-family: "HandScript";               /* the films' own lettering hand */
+  src: url("_media/kunstler.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Illum";                    /* illuminated drop cap, landing only */
+  src: url("_media/oldengl.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  --paper:        #f2ead8;
+  --paper-lift:   #f8f2e3;
+  --paper-deep:   #eadfc6;
+  --kraft:        #d9c49c;
+  --kraft-deep:   #b3925f;
+  --hairline:     #d8cbae;
+  --ink:          #2c2820;
+  --ink-soft:     #6b5f4b;
+  --blue:         #54677f;
+  --rubric:       #9c2f1f;
+  --gold:         #a8801f;
+  --gold-bright:  #d9b45a;
+  --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Times New Roman", serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* The reading column. One column; reading, not browsing. */
+.page { max-width: 700px; margin: 0 auto; padding: 0 22px 40px; }
+
+a { color: var(--blue); text-decoration-color: rgba(84,103,127,.45); text-underline-offset: 3px; }
+a:hover { text-decoration-color: var(--blue); }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 2px; }
+
+h1, h2 { font-weight: 700; letter-spacing: -0.012em; line-height: 1.12; margin: 8px 0 18px; }
+h1 { font-size: clamp(2rem, 5.4vw, 2.9rem); }
+h2 { font-size: clamp(1.65rem, 3.8vw, 2.25rem); }
+p  { margin: 0 0 1.15em; }
+
+.smallcaps, .beatTag, .ref, .pn {
+  font-variant-caps: all-small-caps;
+  letter-spacing: .14em;
+}
+
+/* ------------------------------------------------------------
+   Masthead
+   ------------------------------------------------------------ */
+.masthead {
+  display: flex; align-items: baseline; justify-content: space-between;
+  padding: 20px 0 10px; border-bottom: 1px solid var(--hairline);
+}
+.wordmark {
+  font-size: 1rem; font-weight: 700; letter-spacing: .22em;
+  color: var(--ink); text-decoration: none;
+}
+.wordmark b { color: var(--rubric); font-weight: 700; }
+.mastnote { font-size: .8rem; color: var(--ink-soft); font-style: italic; }
+.masthead a.shelfLink { font-size: .82rem; }
+
+/* ------------------------------------------------------------
+   The route strip — the road announced before you walk it
+   ------------------------------------------------------------ */
+.route { padding: 18px 0 14px; border-bottom: 1px solid var(--hairline); }
+.route .routeLabel { font-size: .8rem; color: var(--blue); margin-bottom: 6px; }
+.stops { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 8px; padding: 0; margin: 0 0 10px; list-style: none; }
+.stops li { display: flex; align-items: center; gap: 8px; }
+.stops a {
+  font-variant-caps: all-small-caps; letter-spacing: .1em; font-size: .95rem;
+  color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
+}
+.stops a:hover { color: var(--blue); }
+.stops a::before {
+  content: ""; width: 9px; height: 9px; border-radius: 50%;
+  border: 1.6px solid var(--gold); background: transparent; display: inline-block;
+}
+.stops li:last-child a::before { background: var(--gold); }
+.stops .sep { color: var(--kraft-deep); font-size: .85rem; }
+.route .fine { font-size: .875rem; font-style: italic; color: var(--ink-soft); margin: 0; }
+
+/* ------------------------------------------------------------
+   The thread rail — the page's spine, five knots
+   Desktop: fixed left. Small screens: a slim strip pinned on top.
+   ------------------------------------------------------------ */
+#rail { z-index: 40; }
+#rail .klabel { text-decoration: none; }
+
+@media (min-width: 1120px) {
+  #rail {
+    position: fixed; top: 50%; transform: translateY(-50%);
+    left: clamp(18px, calc(50vw - 496px), 300px);
+    display: flex; flex-direction: column; gap: 44px; padding: 6px 0;
+  }
+  #rail .railLine {
+    position: absolute; top: 10px; bottom: 10px; left: 5px; width: 2px;
+    background: var(--hairline); overflow: hidden;
+  }
+  #rail .railLine i {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(var(--gold), var(--gold-bright));
+    transform: scaleY(0); transform-origin: top; transition: transform .2s linear;
+  }
+  #rail .knot { position: relative; display: block; width: 12px; height: 12px; }
+  #rail .kdot {
+    position: absolute; inset: 0; border-radius: 50%;
+    border: 2px solid var(--gold); background: var(--paper);
+    transition: background .3s, box-shadow .3s;
+  }
+  #rail .knot.passed .kdot { background: var(--gold); }
+  #rail .knot.current .kdot {
+    background: var(--gold-bright); border-color: var(--gold);
+    box-shadow: 0 0 0 5px rgba(168,128,31,.18);
+  }
+  #rail .klabel {
+    position: absolute; left: 24px; top: 50%; transform: translateY(-50%);
+    white-space: nowrap; font-variant-caps: all-small-caps; letter-spacing: .12em;
+    font-size: .85rem; color: var(--ink-soft); opacity: 0; transition: opacity .25s;
+    pointer-events: none;
+  }
+  #rail .knot.current .klabel, #rail .knot:hover .klabel, #rail .knot:focus-visible .klabel { opacity: 1; }
+  #rail #nowLabel { display: none; }
+}
+@media (max-width: 1119.98px) {
+  #rail {
+    position: fixed; top: 0; left: 0; right: 0;
+    display: flex; align-items: center; gap: 9px;
+    padding: 9px 16px;
+    background: rgba(242,234,216,.93);
+    border-bottom: 1px solid var(--hairline);
+    backdrop-filter: blur(3px);
+  }
+  #rail .railLine {
+    position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; overflow: hidden;
+  }
+  #rail .railLine i {
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, var(--gold), var(--gold-bright));
+    transform: scaleX(0); transform-origin: left; transition: transform .2s linear;
+  }
+  #rail .knot { position: relative; width: 11px; height: 11px; display: block; }
+  #rail .kdot {
+    position: absolute; inset: 0; border-radius: 50%;
+    border: 1.8px solid var(--gold); background: var(--paper); transition: background .3s;
+  }
+  #rail .knot.passed .kdot, #rail .knot.current .kdot { background: var(--gold); }
+  #rail .klabel { display: none; }
+  #rail #nowLabel {
+    font-variant-caps: all-small-caps; letter-spacing: .12em;
+    font-size: .85rem; color: var(--ink-soft); margin-left: 4px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  body.hasRail .page > .masthead { padding-top: 52px; }
+}
+
+/* ------------------------------------------------------------
+   Sections + the knotline seams
+   ------------------------------------------------------------ */
+section.beat { padding-top: 8px; scroll-margin-top: 64px; }
+.beatTag { display: block; font-size: .8rem; color: var(--blue); margin: 30px 0 2px; }
+
+.knotline { margin: 44px 0 0; text-align: center; }
+.knotline svg { width: min(100%, 460px); height: 44px; display: block; margin: 0 auto; }
+.knotline path { fill: none; stroke: var(--gold); stroke-width: 2; stroke-linecap: round; opacity: .85; }
+
+/* ------------------------------------------------------------
+   Scripture. The reason the page exists.
+   .kjv        — verbatim KJV block, study-Bible register, copyable
+   .kjv.red    — red letter: the words of Jesus. ARRIVES WHOLE (LAW 1):
+                 never given a reveal/entrance animation, in CSS or JS.
+   .kjv.divine — the LORD speaking. Ink black, but same law: arrives whole.
+   ------------------------------------------------------------ */
+.kjv {
+  margin: 26px 0; padding: 2px 0 2px 20px;
+  border-left: 2px solid var(--hairline);
+}
+.kjv p { font-size: 1.16rem; line-height: 1.78; margin: 0; }
+.kjv .ref { display: block; margin-top: 9px; font-size: .8rem; color: var(--blue); }
+.kjv.red { border-left-color: rgba(156,47,31,.4); }
+.kjv.red p { color: var(--rubric); }
+.kjv .rednote {
+  display: block; font-family: "HandScript", cursive; font-size: 27px; line-height: 1;
+  color: var(--rubric); opacity: .8; transform: rotate(-2deg); margin-top: 10px;
+}
+
+/* the annotator's circle — ONE per page, around one word */
+.circ { position: relative; white-space: nowrap; }
+.circ svg { position: absolute; left: -12%; top: -38%; width: 124%; height: 176%; overflow: visible; pointer-events: none; }
+.circ ellipse {
+  fill: none; stroke: var(--rubric); stroke-linecap: round;
+  stroke-dasharray: 100; stroke-dashoffset: 100;
+}
+.circ ellipse.p1 { stroke-width: 2.1; opacity: .75; transition: stroke-dashoffset .9s cubic-bezier(.4,0,.3,1) .9s; }
+.circ ellipse.p2 { stroke-width: 1.4; opacity: .45; transition: stroke-dashoffset .7s cubic-bezier(.4,0,.3,1) 1.8s; }
+.circ.on ellipse { stroke-dashoffset: 0; }
+
+/* the film's voice — Moses speaking, from the locked narration */
+.voice { margin: 26px 0; padding-left: 20px; border-left: 2px dotted var(--kraft-deep); }
+.voice p { font-style: italic; color: #4d4432; font-size: 1.08rem; margin: 0; }
+.voice .who { display: block; margin-top: 8px; font-variant-caps: all-small-caps; letter-spacing: .13em; font-size: .8rem; color: var(--ink-soft); }
+
+/* ------------------------------------------------------------
+   Plates — the film's real art, tipped into the study
+   ------------------------------------------------------------ */
+figure.plate { margin: 34px 0; }
+figure.plate img {
+  width: 100%; height: auto; display: block;
+  border: 1px solid #d2c3a0;
+  box-shadow: 0 12px 28px -16px rgba(60,45,20,.4);
+}
+figure.plate figcaption {
+  display: block; font-size: .8rem; color: var(--ink-soft); margin-top: 9px;
+}
+figure.plate .pn { color: var(--blue); font-size: .78rem; margin-right: 10px; }
+.duo { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 620px) { .duo { grid-template-columns: 1fr; } }
+.duo figure.plate { margin: 0; }
+.duoWrap { margin: 34px 0; }
+
+/* a hand note in the margin voice — used three times, not thirty */
+.hand {
+  font-family: "HandScript", cursive; font-size: clamp(27px, 3.4vw, 34px);
+  line-height: 1.05; color: #59493a; transform: rotate(-2deg);
+  display: block; margin: 6px 0 14px;
+}
+.hand.rubric { color: var(--rubric); }
+
+/* ------------------------------------------------------------
+   The honest question — kraft interruption, tape and all
+   ------------------------------------------------------------ */
+.objection {
+  position: relative; margin: 44px -8px; padding: 26px 26px 20px;
+  background: var(--kraft);
+  border: 1px solid #a98d5e;
+  border-radius: 7px 3px 9px 4px;
+  transform: rotate(-.5deg);
+  box-shadow: 0 14px 30px -18px rgba(60,45,20,.5);
+}
+.objection::before, .objection::after {
+  content: ""; position: absolute; width: 86px; height: 24px;
+  background: rgba(222,205,166,.8); border: 1px solid rgba(150,125,80,.35);
+  top: -12px; transform: rotate(-4deg);
+}
+.objection::before { left: 34px; }
+.objection::after { right: 40px; transform: rotate(3deg); }
+.objection .hand { margin-top: 0; }
+.objection .kjv { border-left-color: #a98d5e; }
+.objection .kjv .ref { color: #4d5c72; }
+.objection p { font-size: .98rem; }
+.objection figure.plate img { border-color: #a98d5e; }
+.objection .why { font-style: italic; font-size: .9rem; color: #574a35; margin-bottom: 0; }
+
+/* ------------------------------------------------------------
+   Conviction — shorter lines, slower page
+   ------------------------------------------------------------ */
+.slow p { max-width: 54ch; }
+.slow .bigline {
+  font-size: clamp(1.35rem, 3vw, 1.7rem); line-height: 1.45; font-style: italic;
+  margin: 30px 0;
+}
+
+/* ------------------------------------------------------------
+   The landing. The page goes quiet here.
+   Gold is allowed now. Nothing moves except the reader.
+   ------------------------------------------------------------ */
+.landing { padding-top: 10px; }
+.landing .illum {
+  margin: 40px 0 8px; padding: 26px 0 18px;
+  border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline);
+}
+.landing .illum p { font-size: 1.34rem; line-height: 1.75; font-style: italic; margin: 0; }
+.landing .illum .cap {
+  font-family: "Illum", serif; font-style: normal; float: left;
+  font-size: 4.4rem; line-height: .82; color: var(--gold);
+  padding: 6px 12px 0 0; text-shadow: 0 1px 0 rgba(217,180,90,.5);
+}
+.landing .illum .ref { display: block; margin-top: 12px; font-size: .8rem; color: var(--blue); font-style: normal; }
+.lookline {
+  text-align: center; font-size: clamp(1.8rem, 4.4vw, 2.5rem);
+  font-weight: 700; letter-spacing: -0.01em; margin: 46px 0 2px;
+}
+.swash { display: block; width: min(320px, 70%); height: 26px; margin: 2px auto 40px; }
+.swash path { fill: none; stroke: var(--gold); stroke-width: 2.6; stroke-linecap: round; opacity: .9; }
+
+.prayer {
+  margin: 40px auto; padding: 24px 26px 20px; max-width: 480px;
+  background: var(--paper-lift);
+  border: 1.5px solid var(--ink);
+  border-radius: 12px 5px 14px 6px / 6px 13px 5px 12px;
+  transform: rotate(.35deg);
+}
+.prayer .hand { margin-top: 0; }
+.prayer p { font-size: 1.05rem; font-style: italic; margin-bottom: 0; }
+.honest { font-size: .92rem; color: var(--ink-soft); font-style: italic; max-width: 56ch; }
+
+.tieoff { text-align: center; margin: 44px 0 10px; }
+.tieoff svg { width: 40px; height: 74px; }
+.tieoff path { fill: none; stroke: var(--gold); stroke-width: 2; stroke-linecap: round; opacity: .9; }
+
+/* ------------------------------------------------------------
+   After the landing: the quiet aside + shelf + colophon
+   ------------------------------------------------------------ */
+.stay { margin-top: 40px; padding-top: 26px; border-top: 1px solid var(--hairline); }
+.stay h3 { font-size: 1.1rem; margin: 0 0 12px; }
+.stay ul { list-style: none; padding: 0; margin: 0; }
+.stay li { padding: 7px 0; border-bottom: 1px dotted var(--hairline); font-size: .98rem; }
+.stay .note { font-size: .8rem; color: var(--ink-soft); font-style: italic; }
+
+.shelf { list-style: none; padding: 0; margin: 18px 0 0; }
+.shelf li { display: flex; align-items: baseline; gap: 10px; padding: 11px 0; border-bottom: 1px dotted var(--hairline); }
+.shelf .t { font-weight: 700; white-space: nowrap; }
+.shelf .t a { color: var(--ink); text-decoration: none; }
+.shelf .t a:hover { color: var(--blue); }
+.shelf .dots { flex: 1; border-bottom: 2px dotted var(--kraft-deep); opacity: .55; transform: translateY(-4px); }
+.shelf .refcol { font-size: .8rem; color: var(--blue); white-space: nowrap; }
+.shelf .status { font-size: .78rem; font-style: italic; color: var(--ink-soft); white-space: nowrap; }
+.shelf .claimline { display: block; font-size: .88rem; color: var(--ink-soft); font-style: italic; }
+.shelf li > div { min-width: 0; }
+@media (max-width: 560px) {
+  .shelf li { flex-wrap: wrap; gap: 2px 10px; }
+  .shelf .dots { display: none; }
+  .shelf li > div { flex: 1 1 100%; }
+}
+
+.colophon {
+  margin-top: 46px; padding: 22px 0 8px; border-top: 1px solid var(--hairline);
+  font-size: .85rem; color: var(--ink-soft); text-align: center;
+}
+.colophon .wordmark { font-size: .85rem; }
+.colophon p { margin: 8px 0 0; font-style: italic; }
+
+/* ------------------------------------------------------------
+   Homepage: the two slips and the thread between them
+   ------------------------------------------------------------ */
+.porchHook { padding: 34px 0 0; }
+.kicker {
+  margin-bottom: 2px; font-size: clamp(34px, 4.8vw, 46px);
+  color: #4a3a2a; transform: rotate(-2.2deg);
+}
+.slipCol { max-width: 560px; margin: 26px auto 0; }
+.slip {
+  background: var(--paper-lift); border: 1px solid #ddceac;
+  padding: 18px 22px 14px; position: relative;
+  box-shadow: 0 12px 26px -18px rgba(60,45,20,.45);
+}
+.slip .kjv { margin: 0; border-left: none; padding-left: 0; }
+.slip.a { transform: rotate(-.6deg); }
+.slip.b { transform: rotate(.45deg); }
+.slip.a::before {
+  content: ""; position: absolute; width: 92px; height: 26px; top: -13px; left: 50%;
+  transform: translateX(-50%) rotate(-2.5deg);
+  background: rgba(217,196,156,.75); border: 1px solid rgba(150,125,80,.35);
+}
+.threadDrop { display: block; width: 46px; height: 92px; margin: -2px auto; position: relative; z-index: 2; }
+.threadDrop path { fill: none; stroke: var(--gold); stroke-width: 2.2; stroke-linecap: round; }
+.walkLine { text-align: center; margin: 4px 0 0; }
+.walkLine a {
+  display: inline-block; font-variant-caps: all-small-caps; letter-spacing: .1em;
+  font-size: 1.22rem; color: var(--ink); text-decoration: none;
+  border-bottom: 2px solid var(--gold); padding-bottom: 2px;
+}
+.walkLine a:hover { color: var(--gold); }
+.walkNote { text-align: center; font-size: .875rem; font-style: italic; color: var(--ink-soft); margin-top: 10px; }
+
+.rules { margin: 20px 0 0; padding: 0; list-style: none; }
+.rules li {
+  padding: 10px 0 10px 26px; border-bottom: 1px dotted var(--hairline);
+  position: relative; font-size: .98rem;
+}
+.rules li::before {
+  content: ""; position: absolute; left: 4px; top: 1.35em; width: 9px; height: 9px;
+  border-radius: 50%; border: 1.6px solid var(--kraft-deep);
+}
+.rules b { font-weight: 700; }
+
+/* ------------------------------------------------------------
+   Reveals — plates and headers only; body text is always there.
+   LAW 1: nothing with .kjv inside it ever gets .reveal.
+   ------------------------------------------------------------ */
+.reveal { opacity: 0; transform: translateY(10px); }
+.reveal.on { opacity: 1; transform: none; transition: opacity .7s ease, transform .7s ease; }
+html.nojs .reveal { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .circ ellipse { stroke-dashoffset: 0 !important; transition: none !important; }
+  #rail .railLine i { transition: none !important; }
+}
+
+@media print {
+  #rail { display: none; }
+  figure.plate img { box-shadow: none; }
+}

@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AWAKEDEN — the Book</title>
+<style>
+/* ============================================================
+   THE BOOK MADE REAL — the site IS a book on a desk.
+   No hero. No cards. No sidebar. Every surface is a leaf face.
+   Device ports (see RATIONALE.md):
+     page_transitions.py  -> the live torn-out page (leaf 6)
+     ink_transition.py    -> canvas ink-blot plate reveal (spread 2)
+     annotators_circle.py -> two-pass wobbled ellipse (spread 3)
+     raking_light.py      -> cover light sweep + gold flare
+     grid_choreography.py -> pointer-driven rack focus (spread 5)
+     ribbon_marker.py     -> settling ribbon CTA (spread 8)
+   ============================================================ */
+@font-face{font-family:'Kunstler';src:url('_media/kunstler.ttf');font-display:swap}
+@font-face{font-family:'OldEnglish';src:url('_media/oldengl.ttf');font-display:swap}
+
+:root{
+  --ink:#2b241c; --ink-soft:rgba(43,36,28,.62);
+  --rubric:#961a16;            /* annotators_circle.RUBRIC */
+  --red:#a3231c;               /* red letter — Christ's words */
+  --gold:#b9924a; --goldhi:#e9cd85;   /* annotators_circle.GOLD */
+  --paper:#ece0c8; --paper2:#e3d5b6; --fox:#e0caa2;
+  --desk:#171210; --board:#2c2017;
+  --serif:'Palatino Linotype','Book Antiqua',Georgia,serif;
+  --hand:'Kunstler','Kunstler Script',cursive;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{
+  background:radial-gradient(120% 90% at 50% 38%, #241b15 0%, var(--desk) 58%, #0d0a08 100%);
+  overflow:hidden; font-family:var(--serif); color:var(--ink);
+  -webkit-user-select:none; user-select:none;
+}
+/* faint desk wood grain */
+body::before{content:''; position:fixed; inset:0; pointer-events:none; opacity:.35;
+  background:repeating-linear-gradient(88deg, rgba(0,0,0,.13) 0 2px, transparent 2px 90px),
+             repeating-linear-gradient(92deg, rgba(255,255,255,.015) 0 1px, transparent 1px 34px);}
+
+#stage{position:absolute; left:50%; top:50%; width:1620px; height:1060px;
+  transform:translate(-50%,-50%) scale(1); transform-origin:center;}
+
+#book-shift{position:absolute; left:130px; top:64px; width:1360px; height:910px;
+  transition:transform 1.05s cubic-bezier(.55,.06,.28,.99);}
+#book-shift.closed{transform:translateX(-340px)}
+
+#book{position:absolute; inset:0; perspective:2600px; perspective-origin:50% 46%}
+
+/* under-board + big desk shadow */
+#board{position:absolute; inset:-9px; background:
+   linear-gradient(120deg,#33251a,#241a12 60%,#2e2116);
+  border-radius:4px 10px 10px 4px;
+  box-shadow:0 34px 80px rgba(0,0,0,.62), 0 8px 22px rgba(0,0,0,.5);
+  transition:left 1.05s cubic-bezier(.55,.06,.28,.99);}
+#book-shift.closed #board{left:calc(50% - 9px)}
+
+/* fore-edge stacks — the book's own progress bar. Buttons. */
+.edge{position:absolute; top:7px; bottom:5px; width:14px; border:0; cursor:pointer; padding:0;
+  background:repeating-linear-gradient(0deg,#d9cba9 0 2px,#cbbb95 2px 3px,#e2d5b4 3px 5px);
+  box-shadow:inset 0 0 4px rgba(80,60,30,.45); transition:width .5s ease .3s;}
+.edge:focus-visible{outline:3px solid var(--goldhi); outline-offset:2px}
+#edge-left{right:100%; border-radius:3px 0 0 3px}
+#edge-right{left:100%; border-radius:0 3px 3px 0}
+#book-shift.closed #edge-left{opacity:0; pointer-events:none}
+
+/* ------------------------------------------------ leaves */
+.leaf{position:absolute; left:680px; top:0; width:680px; height:910px;
+  transform-style:preserve-3d; transform-origin:left center;}
+.face{position:absolute; inset:0; overflow:hidden; background:var(--paper);
+  -webkit-backface-visibility:hidden; backface-visibility:hidden;}
+.face.front{transform:translateZ(.35px)}
+.face.back{transform:rotateY(180deg) translateZ(.35px)}
+/* paper grain (data-uri set from JS --grain) + tone */
+.face::before{content:''; position:absolute; inset:0; pointer-events:none;
+  background-image:var(--grain); opacity:.6; mix-blend-mode:multiply;}
+/* resting gutter shade: front spine=DOM-left, back spine=DOM-right */
+.face.front::after{content:''; position:absolute; inset:0; pointer-events:none;
+  background:linear-gradient(90deg, rgba(70,52,28,.20), rgba(70,52,28,.05) 7%, transparent 15%, transparent 90%, rgba(70,52,28,.05));}
+.face.back::after{content:''; position:absolute; inset:0; pointer-events:none;
+  background:linear-gradient(270deg, rgba(70,52,28,.20), rgba(70,52,28,.05) 7%, transparent 15%, transparent 90%, rgba(70,52,28,.05));}
+/* dynamic shade while a leaf turns */
+.shade{position:absolute; inset:0; opacity:0; pointer-events:none; z-index:40;
+  background:linear-gradient(90deg, rgba(30,20,8,.55), rgba(30,20,8,.12) 45%, transparent 75%);}
+
+/* ------------------------------------------------ page anatomy */
+.page-inner{position:absolute; inset:0; padding:58px 54px 64px 60px}
+.face.back .page-inner{padding:58px 60px 64px 54px}
+.runhead{font-size:11px; letter-spacing:.34em; color:var(--ink-soft); text-transform:uppercase;
+  text-align:center; margin-bottom:26px}
+.folio{position:absolute; bottom:26px; font-size:12.5px; color:var(--rubric); letter-spacing:.08em}
+.face.front .folio{right:30px} .face.back .folio{left:30px}
+p.body{font-size:16.5px; line-height:1.62; margin-bottom:14px; text-align:justify; hyphens:auto}
+p.body.first::first-letter{font-family:var(--serif); font-size:52px; line-height:.82;
+  float:left; padding:6px 8px 0 0; color:var(--rubric)}
+.smallcaps{letter-spacing:.22em; text-transform:uppercase; font-size:12px; color:var(--ink-soft)}
+
+/* KJV blocks */
+.kjv{font-style:italic; font-size:16.5px; line-height:1.58; margin:14px 10px 4px; color:var(--ink)}
+.kjv.red{color:var(--red)}
+.cite{display:block; font-style:normal; font-size:11px; letter-spacing:.26em; color:var(--rubric);
+  margin:6px 10px 16px; text-transform:uppercase}
+.kjv-intro{font-size:11.5px; letter-spacing:.3em; color:var(--ink-soft); text-transform:uppercase;
+  margin:18px 10px 2px}
+
+/* scribed ink (letter-reveal verse, narration voice only — LAW 1) */
+.scribed{font-family:var(--hand); font-size:31px; line-height:1.35; color:var(--ink);
+  -webkit-text-stroke:.45px var(--ink); margin:16px 6px 2px}
+.scribed .ch{display:inline-block; opacity:0; transform:translateY(2px);
+  transition:opacity .16s ease, transform .16s ease}
+.scribed.on .ch{opacity:1; transform:none}
+.keeper{font-family:var(--hand); font-size:29px; line-height:1.3; color:var(--ink);
+  -webkit-text-stroke:.4px currentColor}
+.keeper.red{color:var(--rubric); -webkit-text-stroke:.4px var(--rubric)}
+
+/* tipped-in plates */
+.tipped{position:relative; background:#f6efdd; padding:7px; margin:14px auto 6px;
+  box-shadow:0 3px 9px rgba(60,44,20,.30), 0 1px 2px rgba(60,44,20,.25); transform:rotate(-.55deg)}
+.tipped.r2{transform:rotate(.4deg)}
+.tipped img{display:block; width:100%; height:auto}
+.tipped::before,.tipped::after{content:''; position:absolute; top:-9px; width:56px; height:20px;
+  background:rgba(196,172,128,.65); box-shadow:0 1px 2px rgba(0,0,0,.15); transform:rotate(-3deg)}
+.tipped::before{left:14px} .tipped::after{right:14px; transform:rotate(2.5deg)}
+.plate-cap{font-family:var(--hand); font-size:24px; color:var(--ink-soft); text-align:center;
+  margin:8px 0 12px; -webkit-text-stroke:.3px rgba(43,36,28,.6)}
+
+/* hand-inked links — never buttons */
+a.inklink{font-family:var(--hand); font-size:30px; color:var(--rubric); text-decoration:none;
+  -webkit-text-stroke:.45px var(--rubric); border-bottom:2px solid rgba(150,26,22,.55); cursor:pointer}
+a.inklink:hover{border-bottom-color:var(--rubric)}
+a.inklink:focus-visible{outline:2px solid var(--rubric); outline-offset:3px}
+
+/* ------------------------------------------------ cover */
+.cover{position:absolute; inset:0; background:
+   radial-gradient(130% 120% at 30% 20%, #3a2a1c 0%, #2c2015 55%, #221810 100%);
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.5), inset 0 0 60px rgba(0,0,0,.45);}
+.cover .blind{position:absolute; inset:26px; border:1.5px solid rgba(0,0,0,.42);
+  box-shadow:0 0 0 1px rgba(255,235,190,.05), inset 0 0 0 5px transparent}
+.cover .blind::after{content:''; position:absolute; inset:9px; border:1px solid rgba(0,0,0,.38);
+  box-shadow:0 0 0 1px rgba(255,235,190,.04)}
+.cover-mark{position:absolute; top:118px; width:100%; text-align:center;
+  font-size:52px; letter-spacing:.22em; color:#4c3b25; text-indent:.22em;
+  text-shadow:0 1px 0 rgba(255,240,200,.06), 0 -1px 1px rgba(0,0,0,.7)}
+.cover-mark .eden{position:relative; color:transparent;
+  background:linear-gradient(168deg, #a37c3c 6%, var(--goldhi) 34%, #d4b268 58%, #8a6a33 96%);
+  -webkit-background-clip:text; background-clip:text}
+.cover-tag{position:absolute; top:196px; width:100%; text-align:center; font-size:11.5px;
+  letter-spacing:.4em; text-indent:.4em; color:#54412a; text-transform:uppercase}
+.cover-plate{position:absolute; left:50%; top:298px; transform:translateX(-50%) rotate(-.8deg);
+  width:270px; height:330px; background:#efe6cf; padding:9px;
+  box-shadow:0 4px 14px rgba(0,0,0,.55)}
+.cover-plate i{display:block; width:100%; height:100%;
+  background:url('_media/plate_pole.jpg') no-repeat; background-size:255%; background-position:26% 12%}
+.cover-ch{position:absolute; top:672px; width:100%; text-align:center; font-size:14px;
+  letter-spacing:.34em; text-indent:.34em; color:#6b5433; text-transform:uppercase}
+.cover-open{position:absolute; top:790px; width:100%; text-align:center;
+  font-family:var(--hand); font-size:27px; color:#7a6238; -webkit-text-stroke:.3px #7a6238}
+.gold-strip{position:absolute; left:16px; top:26px; bottom:26px; width:7px;
+  background:linear-gradient(180deg,#6f5527,var(--gold) 30%,#8a6a33 55%,var(--goldhi) 78%,#6f5527)}
+#strip-glow{position:absolute; inset:0; opacity:0; background:var(--goldhi);
+  box-shadow:0 0 16px 3px rgba(233,205,133,.8)}
+#rake{position:absolute; top:-15%; bottom:-15%; width:44%; left:0; opacity:.85; pointer-events:none;
+  background:linear-gradient(100deg, transparent 8%, rgba(255,243,210,.11) 42%, rgba(255,246,220,.17) 50%, rgba(255,243,210,.11) 58%, transparent 92%);
+  transform:translateX(-130%) rotate(4deg)}
+
+/* paste-down bookplate */
+.pastedown{background:var(--paper2)}
+.bookplate{margin:190px 92px 0; border:2px solid rgba(43,36,28,.55); padding:34px 30px 30px;
+  text-align:center; box-shadow:inset 0 0 0 4px var(--paper2), inset 0 0 0 5px rgba(43,36,28,.3)}
+.bookplate .exl{font-size:12px; letter-spacing:.5em; text-indent:.5em; color:var(--rubric); text-transform:uppercase}
+.bookplate h2{font-size:30px; letter-spacing:.2em; text-indent:.2em; margin:16px 0 4px; font-weight:600}
+.bookplate h2 .eden{color:var(--gold)}
+.bookplate .rule{width:60px; height:1.5px; background:rgba(43,36,28,.5); margin:14px auto}
+.bookplate p{font-size:15px; font-style:italic; line-height:1.6; color:var(--ink-soft)}
+.bookplate .tiny{font-size:11px; letter-spacing:.22em; margin-top:16px; color:var(--ink-soft); text-transform:uppercase}
+
+/* ------------------------------------------------ index page */
+.index-h{font-size:38px; letter-spacing:.3em; text-indent:.3em; text-align:center; font-weight:600; margin:8px 0 6px}
+.index-sub{text-align:center; font-size:11.5px; letter-spacing:.3em; color:var(--ink-soft); text-transform:uppercase; margin-bottom:30px}
+.tocline{display:flex; align-items:baseline; width:100%; background:none; border:0; cursor:pointer;
+  font-family:var(--serif); color:var(--ink); font-size:17px; padding:9px 2px; text-align:left}
+.tocline:hover .toc-t{color:var(--rubric)} .tocline:focus-visible{outline:2px solid var(--rubric); outline-offset:2px}
+.tocline .dots{flex:1; margin:0 10px; border-bottom:2.5px dotted rgba(43,36,28,.4); transform:translateY(-4px)}
+.tocline .toc-f{color:var(--rubric); font-size:15px}
+.toc-part{margin-top:26px; font-size:12px; letter-spacing:.26em; color:var(--ink-soft); text-transform:uppercase}
+.uncut{display:flex; align-items:baseline; font-size:16.5px; color:rgba(43,36,28,.45);
+  padding:8px 2px; font-style:italic}
+.uncut .dots{flex:1; margin:0 10px; border-bottom:2.5px dotted rgba(43,36,28,.18); transform:translateY(-4px)}
+.uncut .cut-note{font-size:13px; letter-spacing:.08em}
+.index-foot{margin-top:30px; font-family:var(--hand); font-size:25px; color:var(--ink-soft);
+  -webkit-text-stroke:.3px rgba(43,36,28,.55)}
+
+/* ------------------------------------------------ chapter plate spread */
+.pano{position:absolute; left:0; right:0; top:0; height:424px; background:#dfd2b2}
+.pano canvas{width:100%; height:100%; display:block}
+.below-pano{position:absolute; left:60px; right:54px; top:452px; bottom:64px}
+.face.back .below-pano{left:54px; right:60px}
+.ch-eyebrow{font-size:12.5px; letter-spacing:.4em; color:var(--rubric); text-transform:uppercase; margin-top:36px}
+.ch-title{font-size:56px; font-weight:600; letter-spacing:.02em; margin:10px 0 12px}
+.ch-refs{font-size:12.5px; letter-spacing:.3em; color:var(--ink-soft); text-transform:uppercase; line-height:2}
+
+/* ------------------------------------------------ gold thread spread */
+.anchor-word{position:relative; white-space:nowrap}
+.anchor-word.lit{border-bottom:2px solid rgba(185,146,74,.75)}
+
+/* ------------------------------------------------ studies (rack focus) */
+.studies{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:18px}
+.study{position:relative; height:280px; overflow:hidden; cursor:pointer; border:2.5px solid var(--ink);
+  border-radius:255px 8px 225px 10px/10px 225px 8px 255px;  /* hand-inked border */
+  filter:brightness(.74) saturate(.9); transition:filter .38s ease}
+.study img{width:100%; height:100%; object-fit:cover; object-position:50% 12%}
+.study.active{filter:brightness(1.05) saturate(1)}
+.study span{position:absolute; left:0; right:0; bottom:0; padding:5px 10px 4px;
+  font-family:var(--hand); font-size:21px; color:#f3ead2; background:linear-gradient(transparent, rgba(20,14,8,.72));
+  -webkit-text-stroke:.3px #f3ead2}
+
+/* ------------------------------------------------ tear page */
+.tearpage{background:var(--fox); cursor:grab}
+.tearpage:active{cursor:grabbing}
+.tearpage .page-inner{padding-top:80px}
+.tear-h{font-size:40px; letter-spacing:.3em; text-indent:.3em; text-align:center; color:var(--rubric); font-weight:600}
+.tear-sub{text-align:center; font-size:11.5px; letter-spacing:.16em; color:rgba(90,60,30,.75); text-transform:uppercase; margin:10px 0 30px}
+.fox-spots{position:absolute; inset:0; pointer-events:none; opacity:.8; background:
+  radial-gradient(26px 20px at 18% 24%, rgba(150,110,50,.16), transparent 70%),
+  radial-gradient(34px 30px at 76% 62%, rgba(150,110,50,.13), transparent 70%),
+  radial-gradient(20px 16px at 62% 18%, rgba(150,110,50,.12), transparent 70%),
+  radial-gradient(30px 22px at 30% 84%, rgba(150,110,50,.14), transparent 70%)}
+.tear-cta{margin-top:34px; text-align:center; font-size:31px}
+.tear-cta.pulse{animation:tearpulse 2.6s ease-in-out infinite}
+@keyframes tearpulse{0%,100%{opacity:.78}50%{opacity:1}}
+#deckle-fly{position:absolute; left:0; top:0; bottom:0; width:30px; opacity:0; pointer-events:none;
+  background:#f7f2e4; filter:drop-shadow(1px 0 1px rgba(60,40,20,.3))}
+.scar-strip{position:absolute; left:0; top:0; bottom:0; width:17px; background:#f2ecdb;
+  filter:drop-shadow(2px 0 2px rgba(50,35,15,.35))}
+/* verso ghost */
+.ghost{position:absolute; inset:0; background:url('_media/plate_nehushtan.jpg') center 30%/130% no-repeat;
+  transform:scaleX(-1); opacity:.07; filter:sepia(.7)}
+
+/* ------------------------------------------------ illuminated rubric */
+.illum{margin:22px 8px 0}
+.illum .dcap{font-family:'OldEnglish','Old English Text MT',serif; font-size:74px; line-height:.8;
+  float:left; padding:8px 10px 0 0; color:transparent;
+  background:linear-gradient(160deg,#8a6a33 10%, var(--goldhi) 45%, #a37c3c 75%);
+  -webkit-background-clip:text; background-clip:text;
+  filter:drop-shadow(0 1px 1px rgba(90,60,10,.4))}
+.illum .body{font-family:Georgia,serif; font-style:italic; font-size:19px; line-height:1.7}
+
+/* ------------------------------------------------ landing / ribbon */
+#ribbon{position:absolute; right:16px; top:0; width:26px; height:352px; z-index:30;
+  transform:translateY(-420px);
+  background:
+    repeating-linear-gradient(0deg, rgba(0,0,0,.09) 0 1px, transparent 1px 5px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.06) 0 1px, transparent 1px 3px),
+    linear-gradient(90deg,#5f100e,#a02420 20%,#8c1d18 50%,#a02420 80%,#5f100e);
+  box-shadow:2px 4px 7px rgba(25,18,12,.4)}
+.swash{display:block; margin:2px 0 0 8px}
+
+/* ------------------------------------------------ overlays (thread/circle) */
+.overlay{position:absolute; left:0; top:0; width:1360px; height:910px; z-index:450;
+  pointer-events:none; opacity:0; transition:opacity .3s ease}
+.overlay.show{opacity:1}
+
+/* ------------------------------------------------ desk notes */
+.desk-note{position:absolute; color:#6d5a41; font-family:var(--hand); font-size:26px;
+  -webkit-text-stroke:.3px #6d5a41; text-align:center; transition:opacity .8s ease}
+#note-open{left:0; right:0; top:1002px}
+#note-keys{left:0; right:0; top:1002px; opacity:0; font-size:22px; color:#544636}
+#brand-corner{position:fixed; left:26px; bottom:18px; font-size:11px; letter-spacing:.28em;
+  color:#4c3d2c; text-transform:uppercase}
+#sr{position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden}
+
+@media (prefers-reduced-motion: reduce){
+  #book-shift,#board,.edge{transition:none}
+  .scribed .ch{transition:none}
+  .tear-cta.pulse{animation:none}
+}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="book-shift" class="closed">
+    <div id="board"></div>
+    <button class="edge" id="edge-left" aria-label="Turn back a leaf"></button>
+    <button class="edge" id="edge-right" aria-label="Turn forward a leaf"></button>
+    <div id="book"></div>
+    <svg class="overlay" id="thread-svg" viewBox="0 0 1360 910" aria-hidden="true">
+      <defs>
+        <linearGradient id="goldgrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#8a6a33"/><stop offset=".4" stop-color="#e9cd85"/>
+          <stop offset=".62" stop-color="#b9924a"/><stop offset="1" stop-color="#8a6a33"/>
+        </linearGradient>
+        <filter id="soft"><feGaussianBlur stdDeviation="2.2"/></filter>
+      </defs>
+      <path id="thread-glow" fill="none" stroke="#e9cd85" stroke-width="6" opacity=".16" filter="url(#soft)"/>
+      <path id="thread-main" fill="none" stroke="url(#goldgrad)" stroke-width="2.3" stroke-linecap="round"/>
+      <path id="thread-glint" fill="none" stroke="#fff6d8" stroke-width="2.6" stroke-linecap="round" opacity="0"/>
+      <circle id="bead-a" r="0" fill="#b9924a"/><circle id="bead-b" r="0" fill="#b9924a"/>
+    </svg>
+    <svg class="overlay" id="circle-svg" viewBox="0 0 1360 910" aria-hidden="true">
+      <polyline id="circ-p1" fill="none" stroke="#961a16" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round" opacity=".92"/>
+      <polyline id="circ-p2" fill="none" stroke="#961a16" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" opacity=".55"/>
+    </svg>
+  </div>
+  <div class="desk-note" id="note-open">&mdash;&nbsp; take hold of the cover &nbsp;&mdash;</div>
+  <div class="desk-note" id="note-keys">arrow keys turn the leaves &nbsp;&middot;&nbsp; the Index is two leaves in &nbsp;&middot;&nbsp; one page asks more of you</div>
+</div>
+<div id="brand-corner">AWAKEDEN &middot; the book made real &middot; mockup</div>
+<div id="sr" role="status" aria-live="polite"></div>
+
+<script>
+'use strict';
+/* ================= utilities ================= */
+const $=s=>document.querySelector(s);
+function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+const smootherstep=t=>{t=Math.min(1,Math.max(0,t));return t*t*t*(t*(t*6-15)+10)};
+const easeCos=t=>0.5-0.5*Math.cos(Math.PI*Math.min(1,Math.max(0,t)));  /* grid_choreography.ease */
+const PRM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const M='_media/';
+const PAGE_W=680, PAGE_H=910;
+
+/* paper grain: tiny noise canvas -> CSS var (feTurbulence stand-in, $0) */
+(function(){const c=document.createElement('canvas');c.width=c.height=180;
+ const x=c.getContext('2d');const d=x.createImageData(180,180);const r=mulberry32(7);
+ for(let i=0;i<d.data.length;i+=4){const v=205+r()*50;d.data[i]=d.data[i+1]=v;d.data[i+2]=v-8;d.data[i+3]=14+r()*14}
+ x.putImageData(d,0,0);
+ document.documentElement.style.setProperty('--grain',`url(${c.toDataURL()})`);})();
+
+/* ================= face content ================= */
+const FACES=[
+/* f0 cover */ `
+<div class="cover">
+  <div class="blind"></div>
+  <div class="gold-strip"><i id="strip-glow"></i></div>
+  <div class="cover-mark">AWAK<span class="eden" id="eden-mark">EDEN</span></div>
+  <div class="cover-tag">The whole Bible, through Jesus</div>
+  <div class="cover-plate"><i></i></div>
+  <div class="cover-ch">Chapter I &middot; Look and Live</div>
+  <div class="cover-open">a book, not a website &mdash; open it</div>
+  <div id="rake"></div>
+  <div class="shade"></div>
+</div>`,
+/* f1 paste-down */ `
+<div class="pastedown" style="position:absolute;inset:0">
+  <div class="bookplate">
+    <div class="exl">Ex Libris</div>
+    <h2>AWAK<span class="eden">EDEN</span></h2>
+    <div class="rule"></div>
+    <p>The films are a minute long.<br>This book is where the minutes come to rest.</p>
+    <div class="tiny">Reading copy &middot; hand-inked &middot; hand-lettered</div>
+  </div>
+  <div class="shade"></div>
+</div>`,
+/* f2 index */ `
+<div class="page-inner">
+  <h1 class="index-h">INDEX</h1>
+  <div class="index-sub">Chapter I &middot; Look and Live &middot; Numbers xxi &rarr; John iii</div>
+  <button class="tocline" data-go="2"><span class="toc-t">The chapter plate</span><span class="dots"></span><span class="toc-f">2</span></button>
+  <button class="tocline" data-go="3"><span class="toc-t">The plague, and the pole</span><span class="dots"></span><span class="toc-f">4</span></button>
+  <button class="tocline" data-go="4"><span class="toc-t">The lifting up &mdash; the gold thread</span><span class="dots"></span><span class="toc-f">6</span></button>
+  <button class="tocline" data-go="5"><span class="toc-t">The drawing desk, and the film</span><span class="dots"></span><span class="toc-f">8</span></button>
+  <button class="tocline" data-go="6"><span class="toc-t">Nehushtan &mdash; a page to be torn</span><span class="dots"></span><span class="toc-f">10</span></button>
+  <button class="tocline" data-go="7"><span class="toc-t">Look and live</span><span class="dots"></span><span class="toc-f">12</span></button>
+  <button class="tocline" data-go="8"><span class="toc-t">The invitation</span><span class="dots"></span><span class="toc-f">14</span></button>
+  <div class="toc-part">Bound in as they are finished</div>
+  <div class="uncut"><span>II &middot; The Passover Lamb</span><span class="dots"></span><span class="cut-note">pages uncut</span></div>
+  <div class="uncut"><span>III &middot; The Two Goats</span><span class="dots"></span><span class="cut-note">pages uncut</span></div>
+  <div class="uncut"><span>IV &middot; At the Door</span><span class="dots"></span><span class="cut-note">pages uncut</span></div>
+  <div class="index-foot">uncut pages are opened as each chapter is bound in.</div>
+  <span class="folio">1</span><div class="shade"></div>
+</div>`,
+/* f3 chapter plate, left half */ `
+<div class="pano"><canvas id="ink-l" width="320" height="360"></canvas></div>
+<div class="below-pano">
+  <div class="ch-eyebrow">Chapter I</div>
+  <div class="ch-title">Look and Live</div>
+  <div class="ch-refs">Numbers xxi &middot; John iii<br>as told by Moses</div>
+</div>
+<span class="folio">2</span><div class="shade"></div>`,
+/* f4 chapter plate, right half + opening */ `
+<div class="pano"><canvas id="ink-r" width="320" height="360"></canvas></div>
+<div class="below-pano">
+  <p class="body first">I am Moses. For forty years I led Israel through the wilderness, and of all the strange works these two hands were given to do &mdash; a rod that became a serpent, a sea split dry, water struck from a rock &mdash; there is one that follows me still into the dark of my old age. A pole driven into the sand. And upon it, a serpent of bronze.</p>
+  <p class="body">I was there the day the people were dying faster than I could dig the graves.</p>
+</div>
+<span class="folio">3</span><div class="shade"></div>`,
+/* f5 plague left */ `
+<div class="page-inner">
+  <div class="runhead">Look and Live</div>
+  <p class="body">We had come up from mount Hor, going the long way round to compass the land of Edom, and the road was bitter and seemed to have no end. The manna fell as faithfully as the morning, and still we despised it; and the Scripture does not flatter us &mdash; it tells the plain truth:</p>
+  <div class="scribed" id="scribed-verse"></div>
+  <span class="cite">Numbers xxi &middot; 4</span>
+  <div class="kjv">And the LORD sent fiery serpents among the people, and they bit the people; and much people of Israel died.</div>
+  <span class="cite">Numbers xxi &middot; 6</span>
+  <div class="tipped" style="width:78%"><img src="${M}plate_bite.jpg" alt="A hand gripped in pain — the serpent's bite"></div>
+  <div class="plate-cap">the bite burned like a coal beneath the skin</div>
+  <span class="folio">4</span><div class="shade"></div>
+</div>`,
+/* f6 plague right */ `
+<div class="page-inner">
+  <div class="runhead">Look and Live</div>
+  <p class="body">Then the people came to me, and for once their words were not complaint but confession. So I did the one thing a mediator can do &mdash; I prayed for the people. I expected the LORD to take the serpents away. He did not. Instead He gave me a command so strange that I have turned it over in my mind every year since:</p>
+  <div class="kjv-intro">And the LORD said</div>
+  <div class="kjv">Make thee a fiery serpent, and set it upon a pole: and it shall come to pass, that every one that is bitten, when he <span id="circ-word">looketh</span> upon it, shall live.</div>
+  <span class="cite">Numbers xxi &middot; 8</span>
+  <div class="tipped r2" style="width:76%"><img src="${M}plate_healing.jpg" alt="A dying man lifts his eyes to the bronze serpent"></div>
+  <div class="plate-cap">he looked, and the death let go of him</div>
+  <span class="folio">5</span><div class="shade"></div>
+</div>`,
+/* f7 gold thread left — the type */ `
+<div class="page-inner">
+  <div class="runhead">The Type</div>
+  <div class="tipped" style="width:94%"><img src="${M}plate_pole.jpg" alt="Moses sets the serpent of brass upon the pole"></div>
+  <div class="kjv" style="margin-top:20px">And Moses made a serpent of brass, and put it upon <span class="anchor-word" id="th-a">a pole</span>, and it came to pass, that if a serpent had bitten any man, when he beheld the serpent of brass, he lived.</div>
+  <span class="cite">Numbers xxi &middot; 9</span>
+  <div class="keeper" style="margin:16px 6px 0">Why the likeness of the killer? I forged it. I could not have told you what it meant.</div>
+  <span class="folio">6</span><div class="shade"></div>
+</div>`,
+/* f8 gold thread right — the fulfilment */ `
+<div class="page-inner">
+  <div class="runhead">The Fulfilment</div>
+  <div class="tipped r2" style="width:94%"><img src="${M}plate_film_frame.jpg" alt="Christ lifted up on the cross, drawing all men"></div>
+  <p class="body" style="margin-top:18px">There came a Teacher in Israel, and to a man who sought Him by night He spoke of me, and of my serpent:</p>
+  <div class="kjv red">And as Moses lifted up the serpent in the wilderness, even so must the Son of man be <span class="anchor-word" id="th-b">lifted up</span>: That whosoever believeth in him should not perish, but have eternal life.</div>
+  <span class="cite">John iii &middot; 14&ndash;15</span>
+  <div class="plate-cap">the gold thread runs from the shadow to the body that cast it</div>
+  <span class="folio">7</span><div class="shade"></div>
+</div>`,
+/* f9 the film */ `
+<div class="page-inner">
+  <div class="runhead">The Film of this Chapter</div>
+  <div class="tipped" style="width:94%"><img src="${M}plate_shadow_cross.jpg" alt="The pole in the sand casting the shadow of a cross"></div>
+  <p class="body" style="margin-top:20px">Every chapter of this book is also a film &mdash; six minutes, hand-inked and narrated, scored and lettered. The films are the taste. This book is the meal.</p>
+  <p style="margin:20px 6px 8px"><a class="inklink" href="https://www.youtube.com/@awakeden" target="_blank" rel="noopener">&rarr; watch &ldquo;Look and Live&rdquo;</a></p>
+  <p class="body" style="font-size:14.5px;color:var(--ink-soft)">The sixty-second cuts run where short films run; all of them walk back to this page.</p>
+  <span class="folio">8</span><div class="shade"></div>
+</div>`,
+/* f10 studies — rack focus */ `
+<div class="page-inner">
+  <div class="runhead">From the Drawing Desk</div>
+  <p class="body">Fifteen inks were tried for this chapter before one was chosen. Four survived the desk. Rest your eye on one &mdash; the page follows it.</p>
+  <div class="studies" id="studies">
+    <div class="study active"><img src="${M}study_storm.jpg" alt="Kinetic storm ink study"><span>kinetic storm</span></div>
+    <div class="study"><img src="${M}study_cyanotype.jpg" alt="Cyanotype blue ink study"><span>cyanotype blue</span></div>
+    <div class="study"><img src="${M}study_gestural.jpg" alt="Gestural graphite study"><span>gestural graphite</span></div>
+    <div class="study"><img src="${M}study_drypoint.jpg" alt="Drypoint etching study"><span>drypoint</span></div>
+  </div>
+  <span class="folio">9</span><div class="shade"></div>
+</div>`,
+/* f11 nehushtan narrative */ `
+<div class="page-inner">
+  <div class="runhead">Nehushtan</div>
+  <p class="body">Long after me, when men forgot, they kept that serpent and burned incense to the metal of it, until a good king of Judah broke it to pieces and called it Nehushtan &mdash; a nothing, a scrap of brass.</p>
+  <div class="tipped" style="width:82%"><img src="${M}plate_nehushtan.jpg" alt="The bronze serpent enshrined, incense burning before it"></div>
+  <div class="plate-cap">the sign, become a shrine</div>
+  <span class="folio">10</span><div class="shade"></div>
+</div>`,
+/* f12 THE TEAR PAGE */ `
+<div class="tearpage" id="tearpage">
+  <div class="fox-spots"></div>
+  <div class="page-inner">
+    <div class="tear-h">NEHUSHTAN</div>
+    <div class="tear-sub">the pointer, worshipped in place of what it pointed to</div>
+    <p class="body" style="text-align:center;font-style:italic">This page is that shrine.<br>The book keeps nothing the King has judged.</p>
+    <div class="tear-cta keeper red" id="tear-cta">Do what the king did.<br>Take hold of this page &mdash; and tear it out.</div>
+    <span class="folio">11</span>
+  </div>
+  <div id="deckle-fly"></div>
+  <div class="shade"></div>
+</div>`,
+/* f13 verso ghost (seen only if the reader turns instead of tearing) */ `
+<div class="page-inner">
+  <div class="ghost"></div>
+  <div class="keeper" style="margin-top:330px;text-align:center">You turned past the king&rsquo;s work.<br>Go back one leaf &mdash; and tear.</div>
+  <span class="folio">12</span><div class="shade"></div>
+</div>`,
+/* f14 revelation — beneath the torn page */ `
+<div class="page-inner">
+  <div class="runhead">Look and Live</div>
+  <div class="tipped r2" style="width:64%"><img src="${M}plate_hezekiah.jpg" alt="Hezekiah breaks the bronze serpent in pieces"></div>
+  <p class="body" style="margin-top:16px">He was right to break it. The power was never in my handiwork. The power was in the God who said <em>look and live</em> &mdash; and in the Son He always meant the look to find.</p>
+  <div class="illum">
+    <span class="dcap">F</span>
+    <div class="body">or God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.</div>
+  </div>
+  <span class="cite" style="margin-top:10px">John iii &middot; 16</span>
+  <span class="folio">13</span><div class="shade"></div>
+</div>`,
+/* f15 landing left */ `
+<div class="page-inner">
+  <div class="tipped" style="width:96%;margin-top:60px"><img src="${M}plate_invite.jpg" alt="Jesus, arms open, inviting the reader"></div>
+  <div class="keeper" style="margin:22px 4px 0;text-align:center">lifted up where every dying eye could find Him &mdash;<br>the least, the last, the child who can only turn his head.</div>
+  <span class="folio">14</span><div class="shade"></div>
+</div>`,
+/* f16 landing right — the invitation + ribbon */ `
+<div class="page-inner">
+  <div class="runhead">The Invitation</div>
+  <p class="body">You cannot climb out of the poison &mdash; you were never asked to. The cure is not in you, and never had to be. It is lifted up in plain sight, and costs you nothing but a look.</p>
+  <p class="body">So I ask what I once asked every man bitten in our wilderness &mdash; only now there is no fear left in it: will you lift your eyes and look?</p>
+  <div class="keeper" style="font-size:41px;margin:30px 6px 0">Look to Him, and live.</div>
+  <svg class="swash" width="330" height="16" viewBox="0 0 330 16" aria-hidden="true">
+    <path d="M4 10 C 60 2, 130 14, 200 8 S 310 4, 326 9" fill="none" stroke="#b9924a" stroke-width="3.2" stroke-linecap="round" opacity=".85"/>
+  </svg>
+  <p style="margin:40px 6px 8px"><a class="inklink" href="https://www.youtube.com/@awakeden" target="_blank" rel="noopener">&rarr; watch the chapter film</a></p>
+  <p class="body" style="font-size:12px;letter-spacing:.18em;color:var(--ink-soft);margin-top:44px;text-align:center;text-transform:uppercase">Awakeden &middot; the whole Bible, through Jesus<br>hand-inked &middot; hand-lettered &middot; hand-bound</p>
+  <div id="ribbon"></div>
+  <span class="folio">15</span><div class="shade"></div>
+</div>`,
+/* f17 back board (never shown) */ `
+<div style="position:absolute;inset:0;background:#241a12"></div>`
+];
+
+/* ================= build leaves ================= */
+const book=$('#book');
+const N_LEAVES=9;
+const leaves=[];
+for(let i=0;i<N_LEAVES;i++){
+  const leaf=document.createElement('div'); leaf.className='leaf'; leaf.dataset.i=i;
+  const f=document.createElement('div'); f.className='face front'; f.innerHTML=FACES[2*i]||'';
+  const b=document.createElement('div'); b.className='face back';  b.innerHTML=FACES[2*i+1]||'';
+  leaf.appendChild(f); leaf.appendChild(b); book.appendChild(leaf);
+  leaves.push({el:leaf,front:f,back:b,turned:false,torn:false});
+}
+
+/* ================= state + render ================= */
+let busy=false;
+const shift=$('#book-shift');
+function spreadIndex(){          /* index of first unturned, untorn leaf; 0 = closed */
+  for(let i=0;i<N_LEAVES;i++){const L=leaves[i]; if(L.torn)continue; if(!L.turned)return i;}
+  return N_LEAVES;
+}
+const LABELS={0:'The cover — closed',1:'The index',2:'Chapter I — the plate',3:'The plague, and the pole',
+  4:'The lifting up — the gold thread',5:'The drawing desk, and the film',6:'Nehushtan — a page to be torn',
+  7:'Look and live',8:'The invitation'};
+function announce(){$('#sr').textContent=LABELS[spreadIndex()]||'';}
+function render(){
+  const s=spreadIndex();
+  leaves.forEach((L,i)=>{
+    if(L.tearing)return;
+    if(L.torn){L.el.style.transform='none'; L.el.style.zIndex=300-i; return;}
+    L.el.style.transform=`rotateY(${L.turned?-180:0}deg)`;
+    L.el.style.zIndex=L.turned?(40+i):(300-i);
+  });
+  shift.classList.toggle('closed', !leaves[0].turned);
+  const tc=leaves.filter(L=>L.turned&&!L.torn).length;
+  $('#edge-left').style.width =(2+tc*2.6)+'px';
+  $('#edge-right').style.width=(2+(N_LEAVES-1-tc)*2.6)+'px';
+  $('#note-open').style.opacity=leaves[0].turned?0:1;
+  $('#note-keys').style.opacity=leaves[0].turned?1:0;
+  $('#thread-svg').classList.toggle('show', s===4&&threadDrawn);
+  $('#circle-svg').classList.toggle('show', s===3&&circleDrawn);
+  announce();
+}
+
+/* ================= the leaf-turn engine ================= */
+function turnLeaf(dir,fast){
+  return new Promise(res=>{
+    if(busy)return res(false);
+    let idx=-1;
+    if(dir>0){ for(let i=0;i<N_LEAVES-1;i++){const L=leaves[i]; if(!L.torn&&!L.turned){idx=i;break;}} }
+    else{ for(let i=N_LEAVES-1;i>=0;i--){const L=leaves[i]; if(!L.torn&&L.turned){idx=i;break;}} }
+    if(idx<0)return res(false);
+    const L=leaves[idx]; busy=true;
+    hideOverlays();
+    L.el.style.zIndex=500;
+    const dur=PRM?0:(idx===0?1050:(fast?300:950));
+    const from=L.turned?-180:0, to=L.turned?0:-180;
+    if(idx===0) shift.classList.toggle('closed', dir<0);   /* slide while the cover swings */
+    const shades=L.el.querySelectorAll('.shade');
+    const t0=performance.now();
+    (function step(now){
+      const u=dur?Math.min(1,(now-t0)/dur):1, e=easeCos(u);
+      L.el.style.transform=`rotateY(${from+(to-from)*e}deg)`;
+      const sh=Math.sin(Math.PI*u)*0.34;
+      shades.forEach(x=>x.style.opacity=sh);
+      if(u<1){requestAnimationFrame(step);}
+      else{
+        L.turned=(dir>0); shades.forEach(x=>x.style.opacity=0);
+        busy=false; render();
+        if(!fast)onArrive(spreadIndex());   /* riffle passes through; devices fire on true arrivals */
+        res(true);
+      }
+    })(t0);
+  });
+}
+async function turnTo(target){
+  if(leaves[6].torn&&target===6)target=7;
+  let guard=24;
+  while(guard--){
+    const s=spreadIndex();
+    if(s===target)break;
+    const ok=await turnLeaf(s<target?1:-1, Math.abs(s-target)>1);
+    if(!ok)break;
+  }
+}
+
+/* ================= devices ================= */
+let threadDrawn=false, circleDrawn=false;
+function hideOverlays(){$('#thread-svg').classList.remove('show');$('#circle-svg').classList.remove('show');}
+
+/* ---- raking_light.py port: sweep band + gaussian gold flare (cover) ---- */
+(function rake(){
+  const band=$('#rake');
+  const eden=$('#eden-mark');
+  function loop(now){
+    if(spreadIndex()!==0||PRM){band.style.opacity=0;
+      eden.style.textShadow='none';$('#strip-glow').style.opacity=0;
+      requestAnimationFrame(loop);return;}
+    band.style.opacity=.85;
+    const p=(now%8000)/8000;                       /* sweep_progress */
+    const x=(-0.55+1.75*p)*PAGE_W;
+    band.style.transform=`translateX(${x}px) rotate(4deg)`;
+    const flare=(cx,sig)=>Math.exp(-0.5*Math.pow((x+0.22*PAGE_W-cx)/sig,2));
+    const g=flare(430,130);
+    eden.style.textShadow=`0 0 ${(18*g).toFixed(1)}px rgba(233,205,133,${(0.85*g).toFixed(3)}), 0 0 ${(40*g).toFixed(1)}px rgba(233,205,133,${(0.4*g).toFixed(3)})`;
+    $('#strip-glow').style.opacity=(flare(20,90)*.95).toFixed(3);
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+})();
+
+/* ---- ink_transition.py port: canvas threshold reveal over the real field ---- */
+const inkState={ran:false,field:null,srcL:null,srcR:null};
+function prepInk(cb){
+  if(inkState.field)return cb();
+  const fieldImg=new Image(), pano=new Image(); let n=0;
+  const done=()=>{ if(++n<2)return;
+    try{
+      const fc=document.createElement('canvas');fc.width=640;fc.height=360;
+      const fx=fc.getContext('2d');fx.drawImage(fieldImg,0,0);
+      inkState.field=fx.getImageData(0,0,640,360).data;
+      const mk=(sx)=>{const c=document.createElement('canvas');c.width=320;c.height=360;
+        c.getContext('2d').drawImage(pano,sx,0,900,1005,0,0,320,360);
+        return c.getContext('2d').getImageData(0,0,320,360);};
+      inkState.srcL=mk(0); inkState.srcR=mk(900); cb();
+    }catch(err){   /* file:// canvas taint — show the plate whole, no blot */
+      [['#ink-l',0],['#ink-r',900]].forEach(([sel,sx])=>{
+        const c=$(sel); if(c)c.getContext('2d').drawImage(pano,sx,0,900,1005,0,0,320,360);});
+    }
+  };
+  fieldImg.onload=done; pano.onload=done;
+  fieldImg.src=M+'ink_field.png'; pano.src=M+'pano_wilderness.jpg';
+}
+function inkReveal(){
+  if(inkState.ran)return; inkState.ran=true;
+  prepInk(()=>{
+    const cl=$('#ink-l'),cr=$('#ink-r'); if(!cl||!cr)return;
+    const xl=cl.getContext('2d'),xr=cr.getContext('2d');
+    const outL=xl.createImageData(320,360), outR=xr.createImageData(320,360);
+    const EDGE=0.09, DUR=PRM?0:1500, t0=performance.now();
+    (function frame(now){
+      const t=DUR?Math.min(1,(now-t0)/DUR):1;
+      for(const [out,src,off] of [[outL,inkState.srcL,0],[outR,inkState.srcR,320]]){
+        const od=out.data, sd=src.data, fd=inkState.field;
+        for(let y=0;y<360;y++)for(let x=0;x<320;x++){
+          const pi=(y*320+x)*4, fi=(y*640+(x+off))*4;
+          const f=fd[fi]/255;
+          let a=(t-(f-EDGE))/(2*EDGE); a=a<0?0:(a>1?1:a);     /* render_mask_frames */
+          od[pi]=sd[pi]; od[pi+1]=sd[pi+1]; od[pi+2]=sd[pi+2]; od[pi+3]=a*255;
+        }
+      }
+      xl.putImageData(outL,0,0); xr.putImageData(outR,0,0);
+      if(t<1)requestAnimationFrame(frame);
+    })(t0);
+  });
+}
+
+/* ---- scribed ink letter reveal (narration-voice verse only — LAW 1) ---- */
+const VERSE='the soul of the people was much discouraged because of the way.';
+(function buildScribed(){
+  const host=document.getElementById('scribed-verse'); if(!host)return;
+  const r=mulberry32(21);
+  VERSE.split('').forEach((ch,i)=>{
+    const s=document.createElement('span'); s.className='ch';
+    s.textContent=ch; if(ch===' ')s.innerHTML='&nbsp;';
+    if(ch===','||ch==='.')s.style.fontSize='1.6em';   /* Kunstler punctuation gotcha (SKILL §5) */
+    s.style.rotate=((r()-0.5)*2.6)+'deg';
+    s.style.translate='0 '+((r()-0.5)*2.2)+'px';
+    s.style.transitionDelay=(i*22)+'ms';
+    host.appendChild(s);
+  });
+})();
+
+/* ---- annotators_circle.py port: seeded wobbled ellipse, two passes ---- */
+function wobbledEllipse(cx,cy,rx,ry,seed,startDeg,amp,n){
+  const rng=mulberry32(seed), pts=[];
+  const terms=3+Math.floor(rng()*2);
+  const freqs=[],phases=[],rel=[1,.55,.3,.18];let ws=0;const w=[];
+  for(let k=0;k<terms;k++){freqs.push(1.6+rng()*2.7);phases.push(rng()*Math.PI*2);
+    w.push(rel[k]*(0.8+rng()*0.4));ws+=w[k];}
+  const start=startDeg*Math.PI/180;
+  for(let i=0;i<n;i++){const fr=i/(n-1),th=start+fr*2*Math.PI;
+    let wob=0;for(let k=0;k<terms;k++)wob+=(w[k]/ws)*Math.sin(freqs[k]*fr*2*Math.PI+phases[k]);
+    const m=1+amp*wob;
+    pts.push([cx+rx*m*Math.cos(th), cy+ry*m*Math.sin(th)]);}
+  return pts;
+}
+function bookRect(el){ /* element rect in 1360x910 book coords, scale-corrected */
+  const b=book.getBoundingClientRect(), r=el.getBoundingClientRect();
+  const k=1360/b.width;
+  return {x:(r.left-b.left)*k, y:(r.top-b.top)*k, w:r.width*k, h:r.height*k};
+}
+function drawCircle(){
+  if(circleDrawn){render();return;}
+  if(spreadIndex()!==3||busy)return;      /* only mark the word while its page is open */
+  const word=document.getElementById('circ-word'); if(!word)return;
+  const bb=bookRect(word);
+  const cx=bb.x+bb.w/2, cy=bb.y+bb.h/2;
+  const rx=bb.w/2*1.32, ry=bb.h/2*2.05;                     /* pad fracs from the .py */
+  const p1=wobbledEllipse(cx,cy,rx,ry,17,-100,.055,181);
+  const p2=wobbledEllipse(cx+2,cy+1.5,rx*1.04,ry*1.06,18,-80,.055,181);
+  circleDrawn=true; $('#circle-svg').classList.add('show');
+  const e1=$('#circ-p1'),e2=$('#circ-p2');
+  const DUR=PRM?0:1400, t0=performance.now();
+  (function frame(now){
+    const u=DUR?Math.min(1,(now-t0)/DUR):1;
+    const g1=Math.min(1,u/0.6), g2=u<0.6?0:(u-0.6)/0.4;     /* PASS1_END / PASS2_START */
+    e1.setAttribute('points',p1.slice(0,Math.max(2,Math.floor(smootherstep(g1)*p1.length))).map(p=>p.join(',')).join(' '));
+    if(g2>0)e2.setAttribute('points',p2.slice(0,Math.max(2,Math.floor(smootherstep(g2)*p2.length*0.9))).map(p=>p.join(',')).join(' '));
+    if(u<1)requestAnimationFrame(frame);
+  })(t0);
+}
+
+/* ---- the gold thread: OT anchor -> NT anchor across the gutter ---- */
+function catmull(pts){
+  let d=`M ${pts[0][0]} ${pts[0][1]}`;
+  for(let i=0;i<pts.length-1;i++){
+    const p0=pts[Math.max(0,i-1)],p1=pts[i],p2=pts[i+1],p3=pts[Math.min(pts.length-1,i+2)];
+    d+=` C ${p1[0]+(p2[0]-p0[0])/6} ${p1[1]+(p2[1]-p0[1])/6}, ${p2[0]-(p3[0]-p1[0])/6} ${p2[1]-(p3[1]-p1[1])/6}, ${p2[0]} ${p2[1]}`;
+  }
+  return d;
+}
+function drawThread(){
+  const A=document.getElementById('th-a'),B=document.getElementById('th-b');
+  if(!A||!B)return;
+  if(threadDrawn){render();return;}
+  const ra=bookRect(A), rb=bookRect(B);
+  const ax=ra.x+ra.w/2, ay=ra.y+ra.h+4, bx=rb.x+rb.w/2, by=rb.y+rb.h+4;
+  const rng=mulberry32(31), pts=[[ax,ay]];
+  for(let i=1;i<=5;i++){const f=i/6;
+    pts.push([ax+(bx-ax)*f, ay+(by-ay)*f + Math.sin(Math.PI*f)*54 + (rng()-0.5)*12]);}
+  pts.push([bx,by]);
+  const d=catmull(pts);
+  const main=$('#thread-main'),glow=$('#thread-glow'),glint=$('#thread-glint');
+  main.setAttribute('d',d); glow.setAttribute('d',d); glint.setAttribute('d',d);
+  const L=main.getTotalLength();
+  main.style.strokeDasharray=L; main.style.strokeDashoffset=L;
+  glow.style.strokeDasharray=L; glow.style.strokeDashoffset=L;
+  threadDrawn=true; $('#thread-svg').classList.add('show');
+  const DUR=PRM?0:1700, t0=performance.now();
+  (function frame(now){
+    const u=DUR?Math.min(1,(now-t0)/DUR):1, e=smootherstep(u);
+    main.style.strokeDashoffset=L*(1-e); glow.style.strokeDashoffset=L*(1-e);
+    $('#bead-a').setAttribute('cx',ax);$('#bead-a').setAttribute('cy',ay);
+    $('#bead-a').setAttribute('r',(3*Math.min(1,u*4)).toFixed(2));
+    if(u>0.92){$('#bead-b').setAttribute('cx',bx);$('#bead-b').setAttribute('cy',by);
+      $('#bead-b').setAttribute('r',(3*(u-0.92)/0.08).toFixed(2));}
+    if(u<1){requestAnimationFrame(frame);}
+    else{
+      A.classList.add('lit');B.classList.add('lit');
+      if(!PRM){const g0=performance.now();          /* one glint travels the thread */
+        glint.setAttribute('stroke-dasharray',`40 ${L}`);
+        (function gl(now2){const v=Math.min(1,(now2-g0)/2100);
+          glint.setAttribute('stroke-dashoffset',String(L+40-(L+80)*v));
+          glint.setAttribute('opacity',String(0.9*Math.sin(Math.PI*v)));
+          if(v<1)requestAnimationFrame(gl); else glint.setAttribute('opacity','0');
+        })(g0);}
+    }
+  })(t0);
+}
+
+/* ---- grid_choreography.py port: the reader's eye is the camera ---- */
+const rack={last:0,lastMove:0,idx:0};
+(function initRack(){
+  const host=document.getElementById('studies'); if(!host)return;
+  const cells=[...host.children];
+  cells.forEach((c,i)=>{
+    c.addEventListener('pointerenter',()=>{rack.lastMove=performance.now();setActive(i);});
+  });
+  function setActive(i){rack.idx=i;cells.forEach((c,k)=>c.classList.toggle('active',k===i));}
+  setInterval(()=>{
+    if(spreadIndex()!==5||busy||PRM)return;
+    const now=performance.now();
+    if(now-rack.lastMove<2600)return;             /* the pointer holds attention */
+    if(now-rack.last<1750)return;
+    rack.last=now; setActive((rack.idx+1)%cells.length);
+  },240);
+})();
+
+/* ---- page_transitions.py port: the LIVE torn-out page (leaf 6) ---- */
+function deckleClip(seed,step,maxX){   /* _deckle_layer wobble -> CSS clip-path */
+  const rng=mulberry32(seed), pts=['100% 0%'];
+  for(let y=0;y<=100;y+=step){pts.push(`${(maxX+(rng()-0.5)*2*maxX*0.65).toFixed(1)}% ${y}%`);}
+  pts.push('100% 100%');
+  return `polygon(${pts.join(',')})`;
+}
+(function initTear(){
+  $('#deckle-fly').style.clipPath=deckleClip(13,3,46);
+  const page=document.getElementById('tearpage');
+  page.addEventListener('pointerdown',e=>{
+    if(spreadIndex()!==6||busy||leaves[6].torn)return;
+    e.stopPropagation();
+    tearOut();
+  });
+})();
+function tearOut(){
+  const L=leaves[6]; if(L.torn||busy)return;
+  busy=true; L.tearing=true;
+  const el=L.el, deckle=$('#deckle-fly');
+  el.style.zIndex=600;
+  el.style.transformOrigin='60px 60%';            /* rotate center from the .py */
+  const GRAB=0.0, LIFT=0.55, RIP=1.05, GONE=1.05+0.45;   /* same phase shape, web-tempo */
+  const t0=performance.now();
+  if(PRM){finishTear();return;}
+  (function frame(now){
+    const t=(now-t0)/1000;
+    let ang=0,dx=0,dy=0,lift=0;
+    if(t<LIFT){const p=smootherstep((t-GRAB)/(LIFT-GRAB));
+      ang=-2.2*p; dx=5*p; dy=-4*p; lift=p;
+      if(t>LIFT-0.35)deckle.style.opacity=Math.min(1,(t-(LIFT-0.35))/0.3);
+    }else if(t<GONE){const p=Math.pow((t-LIFT)/(GONE-LIFT),1.8);   /* accelerates away */
+      ang=-2.2-16*p; dx=5+PAGE_W*1.45*p; dy=-4-PAGE_H*0.22*p; lift=1;
+      deckle.style.opacity=1;
+    }else{finishTear();return;}
+    el.style.transform=`translate(${dx}px,${dy}px) rotate(${ang}deg)`;
+    el.style.filter=`drop-shadow(${8+8*lift}px ${10+10*lift}px ${7+9*lift}px rgba(25,18,12,${0.22+0.16*lift}))`;
+    requestAnimationFrame(frame);
+  })(t0);
+}
+function finishTear(){
+  const L=leaves[6];
+  L.torn=true; L.tearing=false;
+  L.el.style.filter=''; L.el.style.transform='none'; L.el.style.transformOrigin='left center';
+  L.el.innerHTML='<div class="scar-strip" style="clip-path:'+deckleClip(13,4,78).replace(/78/g,'82')+'"></div>';
+  L.el.querySelector('.scar-strip').style.clipPath=deckleClip(14,4,70);
+  L.el.style.pointerEvents='none';
+  busy=false; render(); onArrive(spreadIndex());
+  $('#sr').textContent='The page is torn out. Beneath it: John three, sixteen.';
+}
+
+/* ---- ribbon_marker.py port: the settle curve, then absolute stillness ---- */
+let ribbonDone=false;
+function ribbonDrop(){
+  if(ribbonDone)return; ribbonDone=true;
+  const rb=document.getElementById('ribbon'); if(!rb)return;
+  const rng=mulberry32(3), fray=[];                 /* frayed tip */
+  fray.push('0% 0%','100% 0%');
+  for(let x=100;x>=0;x-=9){fray.push(`${x}% ${(96+rng()*4).toFixed(1)}%`);}
+  rb.style.clipPath=`polygon(${fray.join(',')})`;
+  const TRAVEL=420;
+  if(PRM){rb.style.transform='translateY(0)';return;}
+  const t0=performance.now();
+  (function frame(now){
+    const tt=(now-t0)/1000-0.6;                     /* settle begins .6s after arrival */
+    let y;
+    if(tt<=0)y=-TRAVEL;
+    else if(tt<0.4)y=-(1-smootherstep(tt/0.4))*TRAVEL;
+    else{const u=tt-0.4;
+      y=-6*Math.exp(-7*u)*Math.abs(Math.sin(2*Math.PI*2.2*u));  /* fixed 6px micro-bounce */
+      if(Math.abs(y)<0.15){rb.style.transform='translateY(0)';return;}   /* byte-still */
+    }
+    rb.style.transform=`translateY(${y.toFixed(2)}px)`;
+    requestAnimationFrame(frame);
+  })(t0);
+}
+
+/* ================= arrivals ================= */
+function onArrive(s){
+  if(s===2)inkReveal();
+  if(s===3){const v=document.getElementById('scribed-verse');
+    if(v&&!v.classList.contains('on')){v.classList.add('on');setTimeout(drawCircle,PRM?0:1250);}
+    else if(circleDrawn)render();}
+  if(s===4)drawThread();
+  if(s===6&&!leaves[6].torn)document.getElementById('tear-cta').classList.add('pulse');
+  if(s===8)setTimeout(ribbonDrop,50);
+  render();
+}
+
+/* ================= input ================= */
+$('#edge-right').addEventListener('click',()=>turnLeaf(1,false));
+$('#edge-left').addEventListener('click',()=>turnLeaf(-1,false));
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight')turnLeaf(1,false);
+  if(e.key==='ArrowLeft')turnLeaf(-1,false);
+  if(e.key==='Home')turnTo(1);
+  if(e.key==='End')turnTo(8);
+});
+document.addEventListener('click',e=>{
+  const toc=e.target.closest('.tocline');
+  if(toc){turnTo(+toc.dataset.go);return;}
+});
+/* click / swipe on the book itself */
+let pd=null;
+$('#stage').addEventListener('pointerdown',e=>{pd={x:e.clientX,y:e.clientY,t:e.target};});
+$('#stage').addEventListener('pointerup',e=>{
+  if(!pd)return;
+  const dx=e.clientX-pd.x, dy=e.clientY-pd.y; const start=pd; pd=null;
+  if(Math.abs(dx)>60&&Math.abs(dx)>2*Math.abs(dy)){turnLeaf(dx<0?1:-1,false);return;}  /* swipe */
+  if(Math.abs(dx)>8||Math.abs(dy)>8)return;
+  if(start.t.closest('a,.tocline,button,#tearpage,.study'))return;
+  const b=book.getBoundingClientRect();
+  if(e.clientX<b.left||e.clientX>b.right||e.clientY<b.top||e.clientY>b.bottom)return;
+  turnLeaf(e.clientX>b.left+b.width/2?1:-1,false);
+});
+
+/* ================= fit the desk ================= */
+function fit(){
+  const s=Math.min(innerWidth/1620, innerHeight/1080);
+  $('#stage').style.transform=`translate(-50%,-50%) scale(${s})`;
+}
+addEventListener('resize',fit); fit();
+
+/* warm the plates */
+['pano_wilderness','plate_pole','plate_bite','plate_healing','plate_film_frame',
+ 'plate_shadow_cross','plate_nehushtan','plate_hezekiah','plate_invite',
+ 'study_storm','study_cyanotype','study_gestural','study_drypoint']
+ .forEach(n=>{const i=new Image();i.src=M+n+'.jpg';});
+
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Bronze Serpent — a study | Awakeden Archive (mockup C: reading page)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Caveat:wght@500;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   AWAKEDEN — THE ARCHIVE OF INSERT PAGES
+   Register of this page: STYLE ONE (the Spine) — the reading
+   hand. Two insert moments are filed INSIDE the page, each
+   labelled: a Scholar's Margin cross-reference panel, and the
+   Gilded landing. Type doctrine: Scripture is SET (Caslon —
+   the Word arrives whole); the Keeper's notes are HANDWRITTEN
+   (Caveat — the human hand shakes); filing labels are TYPED
+   (Courier). Red letter = His words, with the red bar.
+   ============================================================ */
+:root{
+  --paper:#ece2c8; --sheet:#f6efdc; --sheet-hi:#fbf6e9; --sheet-deep:#e7dbbc;
+  --kraft:#c2a87e; --kraft-deep:#a78d62;
+  --ink:#2e2820; --ink-mid:#57503f; --ink-faint:#857a62;
+  --red:#a23b28; --red-deep:#7e2c1e;
+  --blue:#5c74a0; --grid:rgba(92,116,160,.16);
+  --gold:#c09a3e; --gold-hi:#e9ce7b; --gold-deep:#8f6e23;
+  --shadow:rgba(60,48,28,.22);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);
+  font:400 18px/1.8 "Spectral",Georgia,serif;overflow-x:hidden;position:relative}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:5;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E")}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+
+/* ---------- archive chrome ---------- */
+.filing{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  padding:8px 28px;border-bottom:1px solid rgba(46,40,32,.22);
+  font:400 11px/1.6 "Courier Prime",monospace;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-mid)}
+.nav{display:flex;align-items:center;gap:34px;flex-wrap:wrap;padding:20px 28px;max-width:1220px;margin:0 auto}
+.wordmark{font-family:"Libre Caslon Display",serif;font-size:27px;letter-spacing:.05em;text-decoration:none}
+.wordmark em{font-style:normal;color:var(--red)}
+.nav-links{display:flex;gap:26px;margin-left:auto;flex-wrap:wrap}
+.nav-links a{font:500 14px/1 "Spectral",serif;letter-spacing:.10em;text-transform:uppercase;
+  text-decoration:none;color:var(--ink-mid);padding:6px 0;border-bottom:2px solid transparent}
+.nav-links a:hover,.nav-links a[aria-current]{color:var(--ink);border-bottom-color:var(--red)}
+.label{font:400 11.5px/1.7 "Courier Prime",monospace;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-mid)}
+.label b{color:var(--red);font-weight:700}
+.hand{font-family:"Caveat",cursive;font-weight:500;color:var(--ink-mid)}
+.btn{display:inline-block;background:var(--red);color:var(--sheet-hi);
+  font:600 14px/1 "Spectral",serif;letter-spacing:.12em;text-transform:uppercase;
+  padding:16px 28px 15px;text-decoration:none;box-shadow:3px 4px 0 rgba(46,40,32,.28);transform:rotate(-.6deg)}
+.btn:hover{background:var(--red-deep)}
+.link-ink{font:600 15px/1.4 "Spectral",serif;text-decoration:none;color:var(--ink);
+  border-bottom:2px solid rgba(162,59,40,.55);padding-bottom:1px}
+.link-ink:hover{border-bottom-color:var(--red)}
+.tape{position:absolute;width:96px;height:26px;background:rgba(194,168,126,.62);
+  box-shadow:0 1px 2px rgba(60,48,28,.18);clip-path:polygon(3% 8%,97% 0,100% 88%,2% 100%)}
+
+/* ---------- the page sheet ---------- */
+.study-sheet{max-width:1160px;margin:18px auto 0;background:var(--sheet);
+  box-shadow:0 18px 44px var(--shadow);position:relative;
+  padding:76px 90px 90px}
+.study-sheet>.goldedge{position:absolute;top:30px;bottom:30px;right:12px;width:8px;
+  background:linear-gradient(180deg,#d8b254,#a67f28 28%,var(--gold-hi) 46%,#96742a 72%,#d8b254);
+  box-shadow:0 0 8px rgba(192,154,62,.45)}
+
+/* the reading measure + margin lane for the Keeper's notes */
+.measure{max-width:660px;position:relative;padding-right:0}
+@media (min-width:1100px){
+  .measure{max-width:920px}
+  .with-margin{padding-right:300px}
+  header.measure{max-width:720px}
+}
+.sidenote{
+  font-family:"Caveat",cursive;font-weight:500;font-size:23px;line-height:1.35;
+  color:var(--ink-mid);transform:rotate(-1.4deg);
+}
+.sidenote .tick{color:var(--red)}
+@media (min-width:1100px){
+  .sidenote{float:right;clear:right;width:250px;margin-right:-300px;margin-left:24px;margin-bottom:18px}
+}
+@media (max-width:1099px){
+  .sidenote{display:block;max-width:360px;margin:26px 0;padding:14px 18px;
+    background:rgba(194,168,126,.22);border:1px solid rgba(167,141,98,.4)}
+}
+
+/* title block */
+.kicker-row{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-bottom:20px}
+h1{font-family:"Libre Caslon Display",serif;font-weight:400;
+  font-size:clamp(44px,5.6vw,76px);line-height:1.02;margin-bottom:22px}
+.dek{font-size:21px;color:var(--ink-mid);max-width:52ch;margin-bottom:26px}
+.meta-chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:54px}
+.chip{font:700 11px/1 "Courier Prime",monospace;letter-spacing:.14em;text-transform:uppercase;
+  border:1.5px solid rgba(46,40,32,.4);padding:7px 12px 6px;color:var(--ink-mid)}
+.chip.on{border-color:var(--red);color:var(--red)}
+
+/* plates in the flow */
+.plate{position:relative;box-shadow:0 14px 34px var(--shadow);margin:46px 0 10px}
+.plate img{width:100%}
+.plate .tape.t1{top:-12px;left:7%;transform:rotate(-5deg)}
+.plate .tape.t2{top:-10px;right:8%;transform:rotate(4deg)}
+.plate+.label{display:block;margin:12px 0 44px}
+.plate.wide{margin-left:-40px;margin-right:-40px}
+.plate.tilt-l{transform:rotate(-.7deg)}
+.plate.tilt-r{transform:rotate(.6deg)}
+
+/* prose */
+.prose p{margin-bottom:26px}
+.prose p.opener::first-letter{
+  font-family:"Libre Caslon Display",serif;color:var(--red);
+  font-size:76px;line-height:.82;float:left;padding:8px 12px 0 0;
+}
+.prose em{font-style:italic}
+.kjv-inline{font-style:italic}
+.kjv-inline .cite{font:700 12px/1 "Courier Prime",monospace;letter-spacing:.1em;
+  color:var(--ink-mid);font-style:normal;white-space:nowrap}
+
+/* Scripture blocks — the Word arrives whole, set in the book face */
+.scripture{margin:44px 0}
+.scripture .label{display:block;margin-bottom:14px}
+.scripture blockquote{
+  font-family:"Libre Caslon Display",serif;font-size:26px;line-height:1.5;
+  color:var(--ink);
+}
+.scripture blockquote .vno{
+  font:700 13px/1 "Courier Prime",monospace;color:var(--red);
+  vertical-align:.55em;letter-spacing:0;padding:0 4px 0 2px;
+}
+.scripture.redletter blockquote{color:var(--red-deep);border-left:4px solid var(--red);padding-left:26px}
+.scripture .cite{display:block;margin-top:14px;font:700 12px/1.6 "Courier Prime",monospace;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--ink-mid);font-style:normal}
+
+/* ---------- INSERT: Scholar's Margin panel ---------- */
+.insert-scholar{
+  margin:70px -40px;position:relative;background:var(--sheet-hi);
+  border:1px solid rgba(92,116,160,.4);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),
+                   linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:24px 24px;
+  box-shadow:0 14px 34px rgba(60,48,28,.16);
+  padding:34px 40px 38px;
+}
+.insert-scholar>.label{display:block;margin-bottom:22px}
+.insert-scholar .plate{margin:0 0 28px;transform:rotate(-.4deg)}
+.typology{display:grid;grid-template-columns:minmax(0,1fr) 90px minmax(0,1fr);gap:18px;align-items:center}
+.typo-col h4{font:700 13px/1.6 "Courier Prime",monospace;letter-spacing:.18em;text-transform:uppercase;margin-bottom:10px}
+.typo-col.shadow h4{color:var(--ink-mid)}
+.typo-col.body h4{color:var(--red)}
+.typo-col ul{list-style:none}
+.typo-col li{font-size:16.5px;line-height:1.6;padding:7px 0;border-bottom:1px dotted rgba(46,40,32,.3)}
+.typo-col li b{font-weight:600}
+.typo-arrow{color:var(--red);text-align:center}
+.typo-arrow svg{width:100%;max-width:86px;height:26px}
+.insert-scholar .foot{margin-top:24px}
+
+/* ---------- INSERT: the Gilded landing ---------- */
+.landing{
+  margin:80px -40px 0;position:relative;padding:26px;background:var(--sheet-hi);
+  box-shadow:0 16px 40px rgba(60,48,28,.2);
+}
+.landing-gold{
+  background:
+    radial-gradient(120% 90% at 20% 10%,rgba(255,240,190,.5),transparent 55%),
+    radial-gradient(100% 80% at 85% 90%,rgba(120,86,20,.38),transparent 60%),
+    repeating-linear-gradient(112deg,transparent 0 90px,rgba(120,86,20,.16) 90px 91px,transparent 91px 200px),
+    repeating-linear-gradient(23deg,transparent 0 140px,rgba(255,236,170,.20) 140px 141px,transparent 141px 260px),
+    linear-gradient(160deg,#cfa94c,#b98f33 45%,#d9b95e 70%,#ab8228);
+  padding:48px;display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);
+  gap:44px;align-items:center;
+}
+.landing .plate{margin:0;transform:rotate(-.8deg);box-shadow:0 16px 36px rgba(70,50,10,.45)}
+.landing .label{color:#4a3a12}
+.landing .label b{color:var(--red-deep)}
+.landing h2{font-family:"Libre Caslon Display",serif;font-weight:400;
+  font-size:clamp(26px,3vw,38px);line-height:1.2;color:#2e2410;margin:16px 0 14px}
+.landing p{color:#3c2f10;max-width:46ch}
+.landing .gilded-ctas{display:flex;gap:26px;align-items:center;margin-top:28px;flex-wrap:wrap}
+.landing .btn{background:var(--ink);box-shadow:3px 4px 0 rgba(50,36,6,.4)}
+.landing .btn:hover{background:#000}
+.landing .link-ink{color:#3c2f10;border-bottom-color:rgba(60,47,16,.5)}
+
+/* next-in-folio footer nav */
+.folio-nav{max-width:1160px;margin:56px auto 0;padding:0 28px;
+  display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer{margin-top:90px;border-top:1px solid rgba(46,40,32,.25);
+  padding:54px 28px 64px;text-align:center}
+footer .wordmark{font-size:34px}
+footer p{color:var(--ink-mid);margin:14px auto 26px;max-width:52ch}
+.filed-stamp{display:inline-block;font:700 12px/1.5 "Courier Prime",monospace;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--red);border:2.5px solid var(--red);border-radius:4px;
+  padding:8px 18px;transform:rotate(-2deg);opacity:.85}
+
+@media (max-width:980px){
+  .study-sheet{padding:50px 34px 60px;margin:12px 14px 0;max-width:none}
+  .plate.wide,.insert-scholar,.landing{margin-left:-10px;margin-right:-10px}
+  .landing-gold{grid-template-columns:1fr;padding:34px 26px}
+  .typology{grid-template-columns:1fr}
+  .typo-arrow svg{transform:rotate(90deg);max-width:60px}
+  .goldedge{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="filing" role="note">
+  <span>Awakeden Archive &mdash; the whole Bible, through Jesus</span>
+  <span>Folio III &middot; The Studies &middot; register: Style One, with labelled insert pages</span>
+</div>
+
+<nav class="nav" aria-label="Main">
+  <a class="wordmark" href="index.html">AWAK<em>EDEN</em></a>
+  <div class="nav-links">
+    <a href="index.html">The Spine</a>
+    <a href="catalogue.html">The Index</a>
+    <a href="study.html" aria-current="page">The Studies</a>
+  </div>
+</nav>
+
+<main class="study-sheet">
+  <span class="goldedge" aria-hidden="true"></span>
+
+  <!-- ================= TITLE ================= -->
+  <header class="measure">
+    <div class="kicker-row">
+      <span class="label">Types &amp; Shadows &middot; <b>No. 04</b></span>
+      <span class="label">Numbers 21 &rarr; John 3</span>
+    </div>
+    <h1>The Bronze Serpent.</h1>
+    <p class="dek">A night of fiery serpents in the wilderness, a cure that made no sense &mdash; and the moment, fifteen centuries later, when Jesus told a Pharisee at night that the whole strange scene had been about Him.</p>
+    <div class="meta-chips">
+      <span class="chip on">The study &middot; no clock</span>
+      <span class="chip">The film &middot; 8 min</span>
+      <span class="chip">68 hand-inked plates</span>
+    </div>
+  </header>
+
+  <!-- ================= HERO PLATE ================= -->
+  <figure class="plate wide tilt-l">
+    <span class="tape t1" aria-hidden="true"></span>
+    <span class="tape t2" aria-hidden="true"></span>
+    <img src="_media/bs_s08_wandering.jpg" alt="Hand-inked plate: the column of Israel wandering through dust-brown wilderness hills" width="1600" height="893">
+  </figure>
+  <span class="label">Plate 008 &middot; the long way round Edom &mdash; ink &amp; wash on aged stock</span>
+
+  <!-- ================= THE STUDY ================= -->
+  <article class="measure with-margin prose">
+
+    <p class="opener">The road was the short version, and they hated it. Israel is skirting Edom, almost within reach of the land, when the complaining starts again &mdash; against the heat, against Moses, against God, and against the bread that fell from heaven every morning: <span class="kjv-inline">&ldquo;our soul loatheth this light bread.&rdquo; <span class="cite">(NUM 21:5, KJV)</span></span> They are calling the daily miracle <em>contemptible</em>.</p>
+
+    <figure class="plate tilt-r">
+      <span class="tape t1" aria-hidden="true"></span>
+      <img src="_media/poc_map_wilderness.png" alt="Map plate: the wadi route skirting the mountains of Edom, drawn as a hand-inked survey sheet" loading="lazy" width="1600" height="893">
+    </figure>
+    <span class="label">Map plate &middot; the long way round &mdash; the detour that put them on this road</span>
+
+    <aside class="sidenote"><span class="tick">&#10148;</span> &ldquo;light bread&rdquo; &mdash; contempt for the miracle that kept them alive every morning for forty years</aside>
+
+    <p>What comes next is not a tantrum from heaven. The wilderness was always full of serpents &mdash; Deuteronomy calls it <em>&ldquo;that great and terrible wilderness, wherein were fiery serpents&rdquo;</em> &mdash; and now the hedge around the camp comes down. The bites burn like fire. People begin to die. And the people, to their credit, do the one wise thing left: they stop defending themselves.</p>
+
+    <figure class="plate tilt-r">
+      <span class="tape t1" aria-hidden="true"></span>
+      <img src="_media/bs_s19_kneel.jpg" alt="Plate: the camp kneeling around Moses, heads bowed in confession" loading="lazy" width="1600" height="893">
+    </figure>
+    <span class="label">Plate 019 &middot; &ldquo;we have sinned&rdquo; &mdash; no excuses, no bargaining</span>
+
+    <p><span class="kjv-inline">&ldquo;We have sinned, for we have spoken against the <small>LORD</small>, and against thee; pray unto the <small>LORD</small>, that he take away the serpents from us. And Moses prayed for the people.&rdquo; <span class="cite">(NUM 21:7)</span></span> Notice what they ask for: take the serpents <em>away</em>. And notice what God does instead. He doesn&rsquo;t.</p>
+
+    <div class="scripture">
+      <span class="label">Scribed ink &middot; <b>KJV verbatim</b> &middot; Numbers 21:8&ndash;9</span>
+      <blockquote><span class="vno">8</span>And the <small>LORD</small> said unto Moses, Make thee a fiery serpent, and set it upon a pole: and it shall come to pass, that every one that is bitten, when he looketh upon it, shall live. <span class="vno">9</span>And Moses made a serpent of brass, and put it upon a pole, and it came to pass, that if a serpent had bitten any man, when he beheld the serpent of brass, he lived.</blockquote>
+    </div>
+
+    <aside class="sidenote"><span class="tick">&#10148;</span> the cure is shaped like the curse. sit with that.</aside>
+
+    <p>The serpents stay. The cure God commands is an image <em>of the very thing killing them</em>, hammered out of brass, lifted up on a pole where the whole camp can see it. No ointment, no ritual, no seven washings. A dying man&rsquo;s part in his own healing is reduced to one act so small it barely counts as an act at all: <em>look</em>.</p>
+
+    <figure class="plate tilt-l">
+      <span class="tape t2" aria-hidden="true"></span>
+      <img src="_media/bs_s28_forge.jpg" alt="Plate: hands working brass at a forge, the serpent form taking shape in firelight" loading="lazy" width="1600" height="893">
+    </figure>
+    <span class="label">Plate 028 &middot; the forge &mdash; the likeness of the killer, made the shape of the cure</span>
+
+    <p>Any Israelite that night could have told you the pole made no medical sense. That was the point. The look didn&rsquo;t work because looking is powerful; it worked because God attached His promise to that one place and nowhere else. Which is exactly where the story stops being about snakes.</p>
+
+  </article>
+
+  <!-- ================= INSERT PAGE: SCHOLAR'S MARGIN ================= -->
+  <section class="insert-scholar" aria-labelledby="ins-h">
+    <span class="label" id="ins-h">Insert page &middot; <b>Scholar&rsquo;s Margin</b> &mdash; the thread, filed</span>
+    <figure class="plate">
+      <img src="_media/poc_comparison_split.png" alt="Scholar's Margin plate: the bronze serpent on its pole and the plain cross, mirrored either side of a single gold rule" loading="lazy" width="1600" height="893">
+    </figure>
+    <div class="typology">
+      <div class="typo-col shadow">
+        <h4>The shadow &middot; Num 21</h4>
+        <ul>
+          <li><b>The likeness</b> of the killing thing, itself harmless &mdash; brass, no venom</li>
+          <li><b>Lifted up</b> on a pole, in public view of the whole camp</li>
+          <li><b>Look</b> &mdash; the bitten bring nothing but their wound and their eyes</li>
+          <li><b>&ldquo;he lived&rdquo;</b> &mdash; that day, in the body</li>
+        </ul>
+      </div>
+      <div class="typo-arrow" aria-hidden="true">
+        <svg viewBox="0 0 90 26"><path d="M4 15 C 26 8, 54 10, 76 12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M66 5 L 81 12 L 65 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="typo-col body">
+        <h4>The body &middot; John 3</h4>
+        <ul>
+          <li><b>&ldquo;In the likeness of sinful flesh&rdquo;</b> &mdash; made sin for us, who knew no sin</li>
+          <li><b>&ldquo;Even so must the Son of man be lifted up&rdquo;</b> &mdash; His own word for the cross</li>
+          <li><b>Believe</b> &mdash; the look of the soul; nothing in the hands</li>
+          <li><b>&ldquo;Eternal life&rdquo;</b> &mdash; that day, and for ever</li>
+        </ul>
+      </div>
+    </div>
+    <p class="foot label">filed under: types-and-shadows / lifted-up / look-and-live &middot; cross-refs: 2 COR 5:21 &middot; ROM 8:3 &middot; ISA 45:22</p>
+  </section>
+
+  <!-- ================= RED LETTER ================= -->
+  <article class="measure with-margin prose">
+
+    <div class="scripture redletter">
+      <span class="label">Red letter &middot; <b>His words</b> &middot; John 3:14&ndash;15</span>
+      <blockquote>And as Moses lifted up the serpent in the wilderness, even so must the Son of man be lifted up: That whosoever believeth in him should not perish, but have eternal life.</blockquote>
+    </div>
+
+    <p>Jesus chose this picture Himself. Not the Passover lamb, not the temple, not David &mdash; when a teacher of Israel came to Him by night asking how a man can be born again, Jesus reached for the ugliest scene in Numbers. <em>You know the story, Nicodemus. The camp full of dying people. The brass likeness on the pole. That is what is about to happen to me.</em></p>
+
+    <p>And then the sentence the whole Bible had been waiting to say out loud:</p>
+
+    <figure class="plate tilt-r">
+      <span class="tape t1" aria-hidden="true"></span>
+      <img src="_media/bs_s58_john316_card.jpg" alt="Plate: Jesus with open hands before light rendered as radiating beams — the John 3:16 spread" loading="lazy" width="1600" height="893">
+    </figure>
+    <span class="label">Plate 058 &middot; scribed ink &middot; John 3:16</span>
+
+    <div class="scripture redletter">
+      <span class="label">Red letter &middot; <b>His words</b> &middot; John 3:16</span>
+      <blockquote>For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.</blockquote>
+    </div>
+
+    <aside class="sidenote"><span class="tick">&#10148;</span> seven hundred years on they were burning incense to the pole (2 KGS 18:4). the picture is not the Person.</aside>
+
+    <p>One footnote the study should not skip: centuries later, Israel kept the brass serpent &mdash; and ended up worshipping it, until Hezekiah broke it to pieces and called it what it was: <em>Nehushtan</em>, a piece of brass. The shadow had done its work the day it was lifted. Shadows always point away from themselves; so does every page in this book.</p>
+
+  </article>
+
+  <!-- ================= INSERT PAGE: THE GILDED LANDING ================= -->
+  <section class="landing" aria-labelledby="land-h">
+    <div class="landing-gold">
+      <figure class="plate">
+        <img src="_media/bs_s68_landing.jpg" alt="The landing plate: the page torn open, Christ standing in gold light beneath the tear" loading="lazy" width="1600" height="893">
+      </figure>
+      <div>
+        <span class="label">The landing &middot; <b>every page ends here</b> &middot; gilded &mdash; for His glory alone</span>
+        <h2 id="land-h">The serpent was lifted so the bitten could look. The Son was lifted so that <em>whosoever believeth</em>.</h2>
+        <p>Nothing in the camp got better by effort that night, and nothing does now. The look is still the whole of it &mdash; a wound, an upward glance, and a promise God has attached to one lifted Man.</p>
+        <div class="gilded-ctas">
+          <a class="btn" href="catalogue.html">The whole folio</a>
+          <a class="link-ink" href="index.html">Back to the spine &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="folio-nav">
+  <span class="label">Previous &middot; No. 03 &mdash; The Two Goats</span>
+  <a class="link-ink" href="catalogue.html">Next in the folio: The Passover Lamb (not yet inked) &rarr;</a>
+</div>
+
+<footer>
+  <a class="wordmark" href="index.html">AWAK<em>EDEN</em></a>
+  <p>The whole Bible, through Jesus &mdash; read slowly. The films are the minute and the ten; this page has no clock.</p>
+  <span class="filed-stamp">Filed &middot; awakeden.com &middot; MMXXVI</span>
+</footer>
+
+</body>
+</html>
