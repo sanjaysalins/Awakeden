@@ -92,13 +92,45 @@
 # something to bake into the base still prompt -- don't over-engineer the
 # render prompt trying to draw the gold thread or the leaf settle itself.
 #
-# ── SPEND this continued session: $2.10 more (7 renders incl. 3
-# defect re-rolls). Running total for the whole episode: $28.20 (94
-# renders). Gallery has a new "Spreads 49-53" section:
+# ── SPEND this continued session: $2.10 (spreads 49-53). Committed as
+# d9a4262. Continued further the SAME session into spreads 54-61 --
+# **61 of 76 spreads now done.** Built a brand-new world anchor mid-
+# episode (none existed): `world/citygate_ref.png`, a 1st-century
+# Jerusalem gate (Hebrews 13:12 is a DIFFERENT era from the wilderness-
+# camp anchors 1-8 -- see TABERNACLE_WORLD.md item 9). Also fixed a real
+# gap: s51_jesus_pivot is now wired into REF_MAP as "jesus2" and chained
+# alongside the cast anchor ("jesus,jesus2") for every Jesus spread from
+# 54 onward -- the multi-pose identity lock RESUME.md itself flagged
+# earlier but s52/53 had NOT actually used yet.
+#
+# Three more real defects caught and fixed in this batch:
+#   s57 (without the gate, MV split) roll 1: the goat's remains rendered
+#     with an unmistakably HUMAN silhouette on a stretcher, carried like
+#     a body to a pyre -- a serious miss (Lev 16:27 is specific this is
+#     the animal, not a person, and it sat right next to Christ imagery).
+#     Fixed with explicit four-legged-carcass / never-human / never-on-
+#     a-bier language.
+#   s59 (no chair) roll 1: a small extra box/crate visible in the
+#     background -- violates this episode's own locked rule
+#     (TABERNACLE_WORLD.md sec.5) that the room must be bare besides the
+#     ark, since the emptiness IS the line's payoff.
+#   s61 (veil, recall register) roll 1: rendered just as sharp as every
+#     other veil shot -- the 10th near-identical appearance in the film.
+#     Re-shot with genuine heavy softening/desaturation.
+#
+# ── SPEND (city-gate anchor + batch 6, incl. 3 re-rolls): $4.20. Running
+# total for the whole episode: $31.50 (105 renders). Gallery has a new
+# "Spreads 54-61" section:
 #   file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/poc_living_sketchbook/_DAY_OF_ATONEMENT_CAST_REVIEW.html
-# This round's work IS committed (commit d06172b covered everything
-# through spread 48 + the census/anchors/plan; spreads 49-53 + this
-# RESUME/STATE update are the next thing to commit, ask the user first).
+#
+# ── EXACT RESUME POINT ── Next: spread 55 (the ONE Elder Leaf settle --
+# pure compositing over spread 54's art + Scribed Ink text, no new still
+# needed, per SKILL.md's /elder-leaf), then spreads 62-76: Beat 7 "the
+# invitation," the CTA-to-Jesus landing -- the most doctrinally load-
+# bearing stretch of the whole film. Read `_PLAN.md` rows 62-76 fresh
+# before starting; this is a natural point to bring clear eyes rather
+# than push through at the tail of an already-long session. Spreads
+# 54-61 + this update are NOT yet committed -- ask the user first.
 #
 # ── EXACT RESUME POINT ──
 # Next spread to build: **#49**, a DOUBLE Scribed-Ink verse card (Heb 10:3

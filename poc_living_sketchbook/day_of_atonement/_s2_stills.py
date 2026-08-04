@@ -49,11 +49,18 @@ VEIL_REF = WORLD / "veil_ref.png"
 HOLYOFHOLIES_REF = WORLD / "holyofholies_ref.png"
 ALTAR_REF = WORLD / "altar_ref.png"
 GOAT_REF = WORLD / "goat_ref.png"
+CITYGATE_REF = WORLD / "citygate_ref.png"
+JESUS51_REF = Path(__file__).resolve().parent / "stills" / "s51_jesus_pivot.png"
 
 REF_MAP = {
     "aaron": AARON_REF, "moses": MOSES_REF, "jesus": JESUS_REF,
+    # multi-pose identity lock (SKILL.md sec.2): s51_jesus_pivot is the
+    # SECOND reference for every later Jesus spread in this episode --
+    # use tag "jesus,jesus2" going forward, not "jesus" alone.
+    "jesus2": JESUS51_REF,
     "tabernacle": TABERNACLE_REF, "veil": VEIL_REF,
     "holyofholies": HOLYOFHOLIES_REF, "altar": ALTAR_REF, "goat": GOAT_REF,
+    "citygate": CITYGATE_REF,
 }
 
 # Canon text -- pasted VERBATIM from cast/AARON.md and cast/JESUS.md.
@@ -844,7 +851,101 @@ SHOTS_BATCH5 = [
      f"{FULLBLEED}"),
 ]
 
-ALL_SHOTS = SHOTS_TEST + SHOTS_BATCH1 + SHOTS_BATCH2 + SHOTS_BATCH3 + SHOTS_BATCH4 + SHOTS_BATCH5
+# Batch 6: spreads 54, 56, 57, 58, 59, 60, 61 -- skips 55 (Elder Leaf +
+# Scribed Ink is a pure POST-render compositing step over 54's art, no
+# new still needed). First batch chaining the multi-pose Jesus identity
+# lock (jesus + jesus2 = s51_jesus_pivot together) per SKILL.md sec.2.
+SHOTS_BATCH6 = [
+    # spread 54 | Beat 6 | 399.0-411.68s | The two layings-on, paired --
+    # CAMERA: close on Christ upon the cross (deliberately closer/tighter
+    # than s53's vast-wide silhouette, to avoid twinning), small dulled
+    # Aaron+goat memory-vignette in one corner -- the gold THREAD linking
+    # them is a post-process device, not attempted here
+    ("s54_guilt_laid_on_christ", STYLE, "jesus,jesus2,aaron",
+     f"Close, reverent view on {JESUS}'s upper body and bowed head as He "
+     f"hangs upon the cross, arms stretched along the crossbeam, "
+     f"wound-free and restrained, no graphic detail of any kind -- in "
+     f"the near corner of the frame, small and visibly duller and less "
+     f"vivid than He is, a soft memory-vignette: Aaron's hands resting "
+     f"on the goat's bowed head, the old echo laid quietly beside the "
+     f"greater fulfillment. {FULLBLEED}"),
+
+    # spread 56 | Beat 6 | 415.60-426.3s | THE ANSWER -- the film's
+    # thesis image -- CAMERA: Christ large, radiant, dominant; both
+    # goat-memories small and dulled at His feet, no gold light of
+    # their own
+    ("s56_the_answer", STYLE, "jesus,jesus2,goat",
+     f"{JESUS} standing centrally, tall and radiant, gold light "
+     f"gathering richly around His whole figure and dominating the "
+     f"frame -- at His feet, two small, dulled, earthbound "
+     f"memory-vignettes side by side: one the goat at the altar, one "
+     f"the goat receding into the wilderness, both rendered small and "
+     f"without any gold light of their own, the gold belonging to Him "
+     f"alone. {FULLBLEED}"),
+
+    # spread 57 | Beat 6 | 426.3-436.80s | Without the gate -- outside
+    # the camp -- CAMERA: vertical split composition (like spread 37),
+    # each half its own real depth -- crowd count capped per the film's
+    # own standing rule
+    ("s57_without_the_gate", STYLE, "jesus,citygate,goat",
+     f"A vertical split composition, two halves in one frame: LEFT half "
+     f"-- {JESUS} led out through the great arched city gate onto the "
+     f"road beyond, seen from behind and at a distance, small figures "
+     f"of a restrained crowd following -- at most two figures with any "
+     f"individual detail, the rest turned away or in soft shadow; RIGHT "
+     f"half -- outside the wilderness camp's edge, two anonymous men "
+     f"dragging the goat's own hide and remains toward a waiting fire "
+     f"and casting it in -- an unmistakably FOUR-LEGGED ANIMAL carcass "
+     f"shape wrapped in its own brown-and-cream hide, exactly the "
+     f"goat's own coat, NEVER a human silhouette, NEVER on a stretcher "
+     f"or bier, never posed like a body being carried -- thick smoke "
+     f"rising at once to obscure all detail, restrained and reverent, "
+     f"no gore visible. Each half reads with its own real depth. "
+     f"{FULLBLEED}"),
+
+    # spread 58 | Beat 6 | 436.80-444.48s | Verse card bg: Heb 13:12
+    ("s58_gate_card", STYLE, "citygate",
+     f"The great city gate alone, seen from the roadside at a distance, "
+     f"no figure present -- reserved as background art for the verse "
+     f"'suffered without the gate.' {FULLBLEED}"),
+
+    # spread 59 | Beat 6 | 444.48-454.00s | NO CHAIR -- CAMERA: wide
+    # interior, the room's bareness IS the point (TABERNACLE_WORLD.md
+    # sec.5) -- no furniture besides the ark, anywhere
+    ("s59_no_chair", STYLE, "holyofholies,aaron",
+     f"Wide interior view of the Holy of Holies, {AARON} standing at "
+     f"his ministering work beside the ark, upright, as though he has "
+     f"stood so for years -- the room otherwise entirely and "
+     f"completely bare: absolutely no chair, no seat, no box, no "
+     f"crate, no chest, no shelf, no furniture or object of ANY kind "
+     f"anywhere in the room besides the ark itself, only bare stone "
+     f"walls, shadow, and the low golden cloud-glow. {FULLBLEED}"),
+
+    # spread 60 | Beat 6 | 454.00-461.28s | COMPOSITE card: Christ SEATED
+    # in glory -- CAMERA: a genuinely NEW pose (seated, not standing/
+    # entering/on the cross) -- the standing/seated contrast is the
+    # whole point of this card
+    ("s60_seated_glory", STYLE, "jesus,jesus2",
+     f"{JESUS} seated in majesty upon a simple gold throne-like seat, "
+     f"upright and at rest, gold light radiating richly around Him, "
+     f"calm and complete -- reserved as background art for a composite "
+     f"verse card lettered directly over the image. {FULLBLEED}"),
+
+    # spread 61 | Beat 6 | 461.28-468.9s | The veil WHOLE, recall
+    # register -- CAMERA: the 10th veil appearance in this film --
+    # deliberately softened/hazy, distinct from every earlier sharp
+    # appearance
+    ("s61_veil_recall", STYLE, "veil",
+     f"A distant, extremely soft-focus view of {VEIL}, seen as a hazy "
+     f"pale smear of color far across a dim shadowed room, its shape "
+     f"barely legible, no sharp linework anywhere, heavily softened "
+     f"and desaturated as though it is a fading memory rather than a "
+     f"present sight -- a recall register genuinely distinct from "
+     f"every one of its earlier sharp, close, full-color appearances "
+     f"in this film. No figure present. {FULLBLEED}"),
+]
+
+ALL_SHOTS = SHOTS_TEST + SHOTS_BATCH1 + SHOTS_BATCH2 + SHOTS_BATCH3 + SHOTS_BATCH4 + SHOTS_BATCH5 + SHOTS_BATCH6
 
 
 def main(only=None):

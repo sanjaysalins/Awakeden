@@ -175,6 +175,24 @@ plural "basons" for a comparable rite, likewise without describing them).
 Low drift-risk as a small generic prop -- not worth a dedicated reference
 render; use this text description wherever it appears.
 
+## 9. The city gate (1st-century Jerusalem) -- SETTING -- anchor: `world/citygate_ref.png` -- DIFFERENT ERA from items 1-8
+
+Hebrews 13:12 "Jesus... suffered without the gate" places this at
+1st-century Jerusalem (Second Temple period), NOT the wilderness camp of
+items 1-8 above -- spread 57 pairs them as a typological MV (Christ led
+out of the city / the goat's body carried outside the camp), two
+different times shown side by side, never merged into one setting. Added
+2026-08-04, mid-episode, when the plan reached spread 57/58 and no anchor
+existed yet for it.
+
+> A massive ancient city gate built of huge dressed limestone blocks with
+> drafted margins (Herodian-era ashlar masonry), set into a thick
+> sun-baked stone city wall, a tall arched gateway opening onto a rough
+> dirt road leading out into hilly Judean wilderness beyond -- weathered,
+> sun-bleached stone, harsh midday light, no ornament, no modern
+> hardware, no medieval towers or crenellations -- plain functional
+> 1st-century Near Eastern construction.
+
 ## Usage
 
 Chain the relevant anchor via `--image` + append "the SAME [object/room] as

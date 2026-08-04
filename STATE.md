@@ -66,12 +66,30 @@ Session total (both rounds) $8.10; episode running total $28.20 (94
 renders). Gallery covers all of it:
 `poc_living_sketchbook/_DAY_OF_ATONEMENT_CAST_REVIEW.html`.
 
-**Stopped deliberately before spreads 54-61** — that stretch needs a
-brand-new "city-gate" world anchor (not yet built) plus compositing
-devices (Thread Device, Elder Leaf) that belong in a dedicated pass, not
-folded into a quick continuation. Spreads 49-53 + this update are NOT
-yet committed — ask the user first. Full pickup: RESUME.md's top
-section.
+Committed (d9a4262). Continued the same session into spreads 54-61 after
+building the missing city-gate world anchor (`world/citygate_ref.png`,
+a 1st-century Jerusalem gate — Hebrews 13:12 is a different era from the
+wilderness-camp anchors, documented as item 9 in TABERNACLE_WORLD.md).
+Also wired s51_jesus_pivot into the render script as a second Jesus
+reference ("jesus2"), chained alongside the cast anchor for every Jesus
+spread from 54 on — the multi-pose identity lock RESUME.md had already
+flagged but wasn't actually being used yet. **61 of 76 spreads now
+done.** Three more real defects caught and fixed: s57's goat-carcass
+vignette first rendered with an unmistakably human silhouette on a
+stretcher (Lev 16:27 is specific this is the animal, not a person — a
+serious miss, especially sitting next to Christ imagery); s59 had a
+stray box/crate violating this episode's own locked "room bare besides
+the ark" rule; s61 (the veil's 10th appearance) rendered just as sharp
+as every prior one, re-shot with real softening/desaturation. Spend this
+stretch $4.20; episode running total $31.50 (105 renders). Gallery
+covers all of it: `poc_living_sketchbook/_DAY_OF_ATONEMENT_CAST_REVIEW.html`.
+
+**Stopped deliberately before spread 62** — the remaining stretch (62-76)
+is Beat 7, "the invitation," the CTA-to-Jesus landing and the most
+doctrinally load-bearing part of the whole film; better started fresh
+than tacked onto the tail of an already-long session. Spreads 54-61 +
+this update are NOT yet committed — ask the user first. Full pickup:
+RESUME.md's top section.
 
 **2026-08-03 (later session — Day of Atonement LONG: census + anchors +
 plan + 38/76 stills, $20.10 spent, session closed by user request):**
