@@ -927,9 +927,12 @@ SHOTS_BATCH6 = [
     # whole point of this card
     ("s60_seated_glory", STYLE, "jesus,jesus2",
      f"{JESUS} seated in majesty upon a simple gold throne-like seat, "
-     f"upright and at rest, gold light radiating richly around Him, "
-     f"calm and complete -- reserved as background art for a composite "
-     f"verse card lettered directly over the image. {FULLBLEED}"),
+     f"upright and at rest, BOTH hands clearly visible and fully "
+     f"rendered, one resting on each of the two armrests, every finger "
+     f"drawn, neither hand cut off, faded, merged into the gold, nor "
+     f"hidden -- gold light radiating richly around Him, calm and "
+     f"complete -- reserved as background art for a composite verse "
+     f"card lettered directly over the image. {FULLBLEED}"),
 
     # spread 61 | Beat 6 | 461.28-468.9s | The veil WHOLE, recall
     # register -- CAMERA: the 10th veil appearance in this film --
