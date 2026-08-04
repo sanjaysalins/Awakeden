@@ -1,5 +1,234 @@
 # ══════════════════════════════════════════════════════════════════════════
-# ★★★★★ SESSION HANDOVER 2026-08-03 (end of session) — READ THIS FIRST.
+# ★★★★★★★ SESSION HANDOVER 2026-08-04 — READ THIS FIRST — supersedes the
+# ★★★★★★ block just below it for "what to do next."
+# Day of Atonement LONG: resumed gently (checked CPU/RAM before touching
+# anything -- machine was already at 74% CPU / 71% RAM from VirtualBox +
+# other sessions, nothing of ours was mid-render). Rendered spreads 39-48
+# (Beat 5 "the honest confession" + start of Beat 6 "the turn to Christ"),
+# all sequential single-threaded API calls (network-bound, not local-CPU-
+# heavy) -- **48 of 76 spreads now done and eye-approved.**
+#
+# ── FOURTH finding, same session, user-caught: real composition
+# repetition, not just a defect ── User built on the earlier camera-angle
+# rule and pushed further: "I am also sensing that you are doing very
+# similar looking stills, instead of using the rich story and creating
+# very creative and cinematic stills." Built a contact-sheet (grid
+# thumbnail of all 48 spreads, not full-res single reads) specifically to
+# audit composition variety -- confirmed it: spreads 43/44/46/47 were four
+# near-identical "grave old man's face, medium-close" portraits cutting
+# back to back, despite each having a genuinely different camera ANGLE
+# (the existing discipline). Angle alone wasn't enough once the narration
+# turns introspective with no external action to stage. User also flagged
+# s36 directly (two loose lots in an open palm = animation-invention risk
+# on top of being the 4th hand-close shot). Per the user's standing
+# instruction ("always use fable to design and sonnet to execute"), had a
+# Fable agent design 5 fresh compositions grounded in the story + this
+# project's own device vocabulary (shadow-as-subject, extreme scale
+# contrast, object-as-narrator, light-as-event), then executed the
+# renders as Sonnet. All 5 landed clean on the first render, genuinely
+# distinct from each other and from the rest of the film:
+#   s36_two_shadows_one_flame (was s36_lots_at_night) -- the two lots lie
+#     flat and still on a table, casting a long shadow; Aaron dim in the
+#     background, watching.
+#   s43_shadow_on_tent_wall (was s43_dread_lamplit) -- Aaron's own lamp
+#     throws his shadow immense and distorted up the tent canvas; no
+#     face-close at all. The strongest single new image this round.
+#   s44_pointing_smoke (kept name, widened) -- pulled the camera far back
+#     so the smoke-pointing idea reads at vast scale instead of medium-
+#     close, no longer twinning with 43/46/47.
+#   s46_aged_unchanged_veil (kept name, redesigned) -- Fable's first cut
+#     showed Aaron 3 times at staggered ages in one frame; REJECTED that
+#     part (conflicts with this episode's own locked one-appearance rule
+#     for Aaron, plus a real multi-instance-identity render risk) but
+#     kept the real insight -- the veil receding to a vanishing point IS
+#     time itself -- with Aaron shown once, from behind.
+#   s47_light_arrives (kept name, redesigned) -- a single blade of gold
+#     light enters along the tent seam at room scale, reaching Aaron's
+#     feet; deliberate reversal of s43 (there his lamp's circle closed
+#     down; here light from beyond the frame comes to him).
+# Gallery + full fix notes on both rounds:
+#   file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/poc_living_sketchbook/_DAY_OF_ATONEMENT_CAST_REVIEW.html
+# Memory updated with the refinement (contact-sheet check + shot-type
+# variety devices for monologue beats):
+#   feedback-camera-angle-dynamism.md
+# **Apply this from the FIRST prompt for spreads 49-76**: before writing
+# any run of 3+ consecutive introspective/monologue spreads, actively
+# pick a DIFFERENT device for each one (don't default to face-close) --
+# and build a contact-sheet check on the next batch too, don't wait for
+# the user to catch it again.
+#
+# ── EXACT RESUME POINT ──
+# Next spread to build: **#49**, a DOUBLE Scribed-Ink verse card (Heb 10:3
+# then 10:4, stacked on one page) -- read the full spread table from #49
+# onward in
+#   C:\Users\sanjay\PycharmProjects\JesusInTheBible\poc_living_sketchbook\day_of_atonement\_PLAN.md
+# Render script to extend (already has SHOTS_BATCH1-4):
+#   C:\Users\sanjay\PycharmProjects\JesusInTheBible\poc_living_sketchbook\day_of_atonement\_s2_stills.py
+# Follow SHOTS_BATCH4's pattern (explicit camera angle in every prompt,
+# comment citing spread#/beat/timing/camera reasoning) -- see the new VEIL
+# constant (just above LORD_GLOW in the script) and use it in any FUTURE
+# scene where the veil's own cherubim design is the actual subject of the
+# shot (background-only veil use, e.g. Aaron walking past it, is lower risk
+# and doesn't need it).
+#
+# ── ONE REAL BUG FOUND + FIXED AT THE SOURCE THIS SESSION ──
+# `world/veil_ref.png` (the shared reference chained into every "veil"-
+# tagged spread) had TWO small bystander figures baked into the reference
+# image itself, bottom-left and bottom-right of the curtain -- invisible
+# on a casual look, but every new render that chained this ref reproduced
+# them, even when the prompt explicitly said "no figure present." Found by
+# opening the reference PNG directly after two renders (s45, s48) both
+# showed the same unexplained pair. Fixed by CROPPING the reference
+# (bottom 28% off, where the figures sat) -- old file kept as
+#   C:\Users\sanjay\PycharmProjects\JesusInTheBible\poc_living_sketchbook\world\veil_ref_v1_had_baked_in_figures.png
+# New clean file is now `world/veil_ref.png`. Lesson for next time an
+# object/world anchor gets chained into many future spreads: open the raw
+# reference PNG itself, full-res, before trusting it -- a defect baked
+# into a shared anchor silently contaminates every future render, not
+# just the one you're looking at.
+# Second finding, same shot family: even AFTER the crop, one veil-hero
+# render (s48) ignored the reference image entirely and drew a generic
+# red-and-gold tapestry with WESTERN CHERUB-BABY putti -- the exact defect
+# this episode had already caught and banned earlier in the week. Image-
+# conditioning alone isn't 100% reliable for object anchors the way it is
+# for character anchors (which already carry a full text description in
+# every prompt, e.g. "the SAME man as the reference image"). Fix: added a
+# `VEIL` text constant carrying the veil's full canon description (blue/
+# crimson weave, the three specific ancient composite cherubim, explicit
+# "NEVER cherub-babies/putti") and used it inline wherever the veil design
+# itself is the subject, not just chained as an image ref. Worth doing the
+# same for `tabernacle`/`altar`/`holyofholies` if any of them ever become
+# the actual subject of a hero shot rather than background.
+# Third finding, s40 (people going home): two rounds of re-rolls needed --
+# round 1 had 5+ individuated crowd faces (over this episode's own 3-face
+# cap) and a tense mood instead of "real relief"; round 2 fixed the count/
+# mood but rendered the men in modern-style kippahs, a real period-
+# accuracy anachronism. Fixed round 3 with an EXACT headcount (2, named
+# and described individually: one woman, one man, both explicit "loose
+# plain undyed cloth... no fitted skullcaps... nothing resembling modern
+# ceremonial dress") -- clean on the third try.
+#
+# ── SPEND: $6.00 this session total (20 renders incl. 5 defect re-rolls
+# + 5 composition redesigns, all nano_banana_pro stills), all logged to
+# data/spend_ledger.jsonl under episode "LS_DayOfAtonement". Running
+# total for the whole episode: $26.10 (87 renders).
+#
+# ── NOT COMMITTED to git -- everything from this session (_s2_stills.py
+# edits, the 15 new/redesigned PNGs, the veil_ref.png crop + backup, the
+# gallery HTML edits, the memory update) is new/uncommitted, same as the
+# rest of this episode's work so far. Ask the user before committing.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★ SESSION HANDOVER 2026-08-03 (LATER, end of session) — superseded by
+# the ★★★★★★★ block above for "what to do next," kept for its own detail.
+# Day of Atonement LONG is IN PROGRESS: census + all cast/world anchors +
+# the full 76-spread plan are DONE; 38 of 76 stills are rendered and
+# eye-approved (all of Beats 1-4). Session closed by user request
+# ("let's close for the day and resume this tomorrow") — nothing broken,
+# nothing mid-render, just paused between spreads.
+#
+# ── EXACT RESUME POINT ──
+# Next spread to build: **#39**, the start of Beat 5 ("the wrestling") --
+# "I will be honest with you... I obeyed, and I believed." Read the full
+# spread table from #39 onward in
+#   C:\Users\sanjay\PycharmProjects\JesusInTheBible\poc_living_sketchbook\day_of_atonement\_PLAN.md
+# (section 2, the big table -- rows 39-76 are everything still needed:
+# rest of Beat 5, all of Beat 6 "the reveal," all of Beat 7 "the
+# invitation" + the landing). Spread 51 (Jesus's first appearance) is
+# ALREADY rendered and approved (an early identity test, done out of
+# order) -- don't redo it, and remember it must chain as the SECOND
+# Jesus reference for every later Jesus spread (53, 56, 57, 60, 66, 75,
+# 76) per the multi-pose identity lock already in SKILL.md sec.2.
+# The render script to extend is
+#   C:\Users\sanjay\PycharmProjects\JesusInTheBible\poc_living_sketchbook\day_of_atonement\_s2_stills.py
+# -- follow the exact pattern of SHOTS_BATCH3 (the most recent batch,
+# spreads 34-38): every scene prompt must carry EXPLICIT camera-angle
+# language chosen deliberately per beat (see the TWO STANDING RULES below)
+# BEFORE it's ever rendered, not fixed afterward.
+#
+# ── TWO NEW STANDING RULES FROM THIS SESSION, both in SKILL.md + memory,
+#    apply to EVERY remaining spread and every future episode ──
+# 1. **Repeated-element census** (SKILL.md sec.2, memory
+#    `feedback-repeated-element-census`): before any new anchor, list every
+#    character/object/prop/SETTING appearing in >2 stills -- not just
+#    named people. The settings/architecture bucket is the one most likely
+#    to get missed (caught only because the user asked directly).
+# 2. **Camera-angle discipline** (SKILL.md sec.3, memory
+#    `feedback-camera-angle-dynamism`, marked VALIDATED): every still
+#    prompt needs explicit low-angle (glory/heroic beats) / high-overhead
+#    (scale/isolation beats) / depth-staging language -- left unspecified,
+#    the model defaults to a flat, samey, eye-level medium shot no matter
+#    how different the content is. Proven twice this session: 14 of 34
+#    stills needed re-shoots once this was caught; the next 5 (34-38),
+#    built with the discipline from the FIRST prompt, needed ZERO re-rolls
+#    and got the verdict "these are so much better."
+#
+# ── WHAT WAS BUILT THIS SESSION (all new, all reviewed by eye) ──
+#   cast/AARON.md + cast/aaron_ref.png -- Aaron's cast anchor, age verified
+#     against Exodus 7:7 (83 at institution) + Numbers 33:39 (123 at
+#     death) -- ONE anchor for his whole priesthood, no separate elder
+#     anchor (same lesson as Moses's own MOSES_YOUNGER.md, which was
+#     retired for the identical reason).
+#   world/TABERNACLE_WORLD.md + 5 PNGs (tabernacle_ref, veil_ref,
+#     holyofholies_ref, altar_ref, goat_ref) -- the repo's first
+#     "world"-level anchor set for recurring OBJECTS/SETTINGS, not just
+#     characters. Real defects caught+fixed: ink-red/blue wash bleeding
+#     onto the goat's coat (looked like blood/dye -- fixed by confining
+#     page-accent colors to the paper border); the veil's cherubim first
+#     rendered as Western cherub-babies with halos, anachronistic and
+#     inconsistent with the ark's own cherubim -- fixed to ancient
+#     composite winged forms (Ezekiel-style lion/man/eagle faces).
+#   day_of_atonement/_PLAN.md -- the full 76-spread plan (Fable-authored,
+#     self-corrected a wrong pause-model assumption in its own brief by
+#     checking the real narration.meta.json against ffprobe). Section 6
+#     is the style-variant reasoning (sl10/12/13/14/16 checked against
+#     every spread, only sl13+sl12 genuinely earned a spot).
+#   day_of_atonement/_s2_stills.py -- the stills render script, 3 SHOTS_
+#     BATCH lists so far (1-10, 11-33, 34-38) + the original 3-spread
+#     test gate. Uses nano_banana_pro via the hf CLI, 16:9, chains cast/
+#     world anchors via REF_MAP by tag string.
+#   poc_living_sketchbook/_DAY_OF_ATONEMENT_CAST_REVIEW.html -- the
+#     running gallery, every rendered still + every caught-and-fixed
+#     defect documented inline. Open this first to see the actual art
+#     before doing anything else next session:
+#     file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/poc_living_sketchbook/_DAY_OF_ATONEMENT_CAST_REVIEW.html
+#
+# ── OTHER REAL DEFECTS CAUGHT + FIXED THIS SESSION (pattern-matching
+#    value for the remaining 38 spreads) ──
+#   - Crowd face-count violation (s07, first roll): 8-10 sharp faces vs
+#     the 3-face cap -- fixed with an exact enumerated headcount, the
+#     same fix pattern Bronze Serpent already used.
+#   - NSFW filter trip (s19, "blood at its base" wording) -- blood in a
+#     contained basin (s18) renders fine; blood described as pooling/at
+#     an object's base trips the filter. Use smoke/ash or a basin, not
+#     "blood at the base of X."
+#   - Continuity drift (s33): a "same location, now empty" pair needs the
+#     FIRST image chained as a reference for the second, or the terrain
+#     drifts (checked: rocky mesa vs. rolling dunes on the first attempt).
+#   - Extra unexplained figure (s18, during the camera re-shoot): a
+#     "silhouette against a glow" framing invited the model to add a
+#     second attendant priest -- when a scene's MEANING depends on a
+#     figure being ALONE, say so explicitly, don't assume the framing
+#     implies it.
+#
+# ── SPEND: $20.10 total today (67 renders incl. re-rolls), all logged to
+#    data/spend_ledger.jsonl under episode "LS_DayOfAtonement". Rough
+#    order-of-magnitude for the REST of the episode (stills + animation):
+#    plan section 7 estimated ~$55-105 for all 76 spreads + animation;
+#    with 38/76 stills done, roughly half the stills cost is already
+#    spent, animation entirely still ahead.
+#
+# ── NOT COMMITTED to git -- everything from this session (cast/AARON.md,
+#    world/, day_of_atonement/, the review HTML, both SKILL.md edits) is
+#    new/uncommitted. Ask the user before committing, per standing
+#    practice (only commit when explicitly asked).
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★ SESSION HANDOVER 2026-08-03 (earlier — Day of Atonement PICKED,
+# planning-only, $0 spent at the time) — superseded by the ★★★★★★ block
+# above for "what to do next," kept for the original content-arc notes.
 # Bronze Serpent LONG is DONE (finished film + committed to git, see the
 # ★★★ block just below for full detail). This session then promoted sl10/
 # sl16 styles, test-validated them on real content, and picked + scoped the

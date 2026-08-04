@@ -1,5 +1,98 @@
 # STATE.md — progress tracker
 
+**2026-08-04 (gentle resume — Day of Atonement LONG, spreads 39-48, $6.00
+spent):** Resumed after checking system load first (CPU 74%/RAM 71% busy,
+mostly VirtualBox + other sessions, nothing of ours mid-render) and kept
+renders sequential/network-bound rather than parallel. Built SHOTS_BATCH4
+(10 spreads, Beat 5 "the honest confession" + start of Beat 6) with the
+camera-angle discipline applied from the first prompt, per the two
+standing rules from the prior session. **48 of 76 spreads now done.**
+Eye-checked every render at full-res (not just exit code) and caught a
+real, previously-invisible bug: the shared `world/veil_ref.png` anchor had
+two small bystander figures baked into the reference image itself, which
+kept reproducing in every new "veil"-tagged render regardless of what the
+prompt said — traced by opening the raw reference PNG after two renders
+(s45, s48) both showed the same unexplained pair. Fixed at the source:
+cropped the reference (old file kept as `world/veil_ref_v1_had_baked_in_
+figures.png`). A second issue surfaced even after that fix — one veil-hero
+shot (s48) ignored the image reference entirely and drew a generic
+red-and-gold tapestry with Western cherub-baby putti, the exact defect
+already banned earlier in the week — fixed by adding a `VEIL` text
+constant carrying the full canon description inline, not relying on
+image-conditioning alone (object anchors don't get the same reliability
+as character anchors, which already carry a text description every time).
+A third defect took two extra rounds to fix: spread 40 (people going home
+clean) first had 5+ individuated crowd faces over this episode's own
+3-face cap with a tense mood instead of relief; the fix for that then
+introduced modern-style kippahs, a real period-accuracy miss; the third
+attempt (exact 2-person headcount, explicit ancient plain-cloth dress, no
+fitted caps) came out clean.
+
+Then the user pushed further, past defect-hunting into craft: "I am also
+sensing that you are doing very similar looking stills, instead of using
+the rich story and creating very creative and cinematic stills." Built a
+contact-sheet (grid thumbnail of all 48 spreads) specifically to check
+composition variety, not just per-image defects — confirmed spreads
+43/44/46/47 were four near-identical "grave old man's face, medium-close"
+portraits cutting back to back, despite each having a different camera
+ANGLE (the existing rule). Angle alone isn't enough once narration turns
+introspective with no external action to stage. Per the user's standing
+instruction to always use Fable for design and Sonnet for execution, had
+a Fable agent design 5 fresh compositions (shadow-as-subject, extreme
+scale contrast, object-as-narrator, light-as-event) grounded in the
+story and this project's own device vocabulary, then executed them.
+Rejected one part of Fable's own design (showing Aaron 3 times at
+staggered ages in one frame for spread 46) as conflicting with this
+episode's locked one-appearance rule for Aaron, kept the underlying idea
+(the veil receding to a vanishing point = time itself) with Aaron shown
+once. All 5 redesigns (s36, s43, s44, s46, s47) landed clean on the
+first render. Memory `feedback-camera-angle-dynamism.md` updated with
+the refinement (contact-sheet variety check + shot-type devices for
+monologue beats, on top of the existing angle rule). Gallery updated
+covering both rounds of fixes:
+`poc_living_sketchbook/_DAY_OF_ATONEMENT_CAST_REVIEW.html`. Session
+total $6.00 (20 renders); episode running total $26.10 (87 renders).
+Nothing committed to git. Full pickup: RESUME.md's top section.
+
+**2026-08-03 (later session — Day of Atonement LONG: census + anchors +
+plan + 38/76 stills, $20.10 spent, session closed by user request):**
+Picked up the Day of Atonement LONG planning handover (below) and turned it
+into real production. **User-driven process improvement, now a locked
+standing rule:** before building Aaron's cast anchor, the user stopped and
+asked for a repeated-element census (every character/object/prop/setting
+appearing in >2 stills, not just named figures) — caught a real gap in
+`living-sketchbook/SKILL.md` (its casting rule only covered human figures).
+First census pass also missed the SETTINGS bucket entirely (tabernacle,
+Holy of Holies, door-curtain) until the user asked directly — both fixes
+written into SKILL.md sec.2 and memory `feedback-repeated-element-census`.
+Built and eye-verified: `cast/AARON.md` + `aaron_ref.png` (age verified
+against Exodus 7:7/Numbers 33:39 — one anchor for his whole ~39-year
+priesthood, no separate elder anchor, same lesson as Moses), plus 5 new
+repo-level `world/` anchors (tabernacle, veil, Holy of Holies + ark, altar,
+one goat design for both animals) with 2 real defects caught+fixed (ink
+bleeding onto the goat, Western cherub-babies with halos on the veil —
+fixed to ancient composite winged forms matching the ark's own cherubim).
+A Fable agent then produced `day_of_atonement/_PLAN.md` (76 spreads,
+588.64s, corrected a wrong pause-model assumption in its own brief).
+**Second major locked rule, mid-batch:** user caught that all 34 stills
+rendered so far used the same flat eye-level camera angle regardless of
+content — "no thought has been put in making this dynamic and cinematic."
+Fixed by writing an explicit camera-angle discipline into SKILL.md sec.3
+(low angle for glory/heroic beats, high/overhead for scale/isolation,
+depth staging over flat shots) + re-shooting 14 of the 34 stills with real
+angles (one more real defect caught in the process: a re-shoot accidentally
+added a second priest to "his own sin first," fixed). The next 5 spreads
+(34-38) were built with the discipline applied FROM THE START and needed
+zero re-rolls — user's verdict: "these are so much better." Both new rules
+(census, camera-angle) are written into `.claude/skills/living-sketchbook/
+SKILL.md` AND memory (`feedback-repeated-element-census`,
+`feedback-camera-angle-dynamism`), the camera one now marked VALIDATED.
+**Status: 38 of 76 spreads rendered and eye-approved** (all of Beats 1-4 —
+the vesting rite, the charge, the ritual, the riddle), plus spread 51
+(Jesus's first appearance) pre-rendered as an earlier identity test. Total
+spend $20.10 (67 renders incl. re-rolls). **Nothing committed to git.**
+Full exact resume point: RESUME.md top section.
+
 **2026-08-03 (session close — NEXT LONG PICKED, planning-only, $0 spent):**
 After Bronze Serpent LONG shipped (below) and sl10/sl16 were promoted +
 test-validated on real content, picked the next living-sketchbook LONG:
