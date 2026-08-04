@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day of Atonement LONG — animate batch progress</title>
+<style>
+  body { background:#16181d; color:#e8e4d8; font-family:Georgia, serif; line-height:1.55; padding:28px 18px 90px; }
+  .wrap { max-width:1500px; margin:0 auto; }
+  h1 { color:#e9c877; font-size:1.8rem; margin-bottom:6px; }
+  .sub { color:#9aa0ad; margin-bottom:18px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:16px; margin-top:16px; }
+  .card { background:#1e2129; border-radius:8px; overflow:hidden; border:2px solid transparent; position:relative; }
+  .card.dollar { border-color:#3a5a4a; }
+  .card video { width:100%; display:block; background:#000; min-height:80px; }
+  .cap { padding:9px 12px; font-size:.82rem; color:#c9c4b6; }
+  .cap b { color:#e8e4d8; }
+  .tag { display:inline-block; font-size:.68rem; padding:1px 6px; border-radius:4px; background:#1e3226; color:#8fd39f; margin-left:6px; }
+  .pending { opacity:.35; }
+  .pending .cap { color:#6a6f7a; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>DAY OF ATONEMENT LONG — animate stage complete, 76/76</h1>
+<div class="sub">Every spread, story order, all done. Green border = $0 deterministic camera move (12 spreads: 54, 55, 51, 52, 53, 56, 57, 60, 66, 05, 25, 76); plain = paid Kling/Seedance. Real defects found and fixed along the way: s07 (invented figure), s15 (Moses's eyes), s25 (invented blood), s05 (flapping wings, twice). s75 (Christ's hand) passed fail-closed QC clean on the first attempt.</div>
+<div class="grid" id="grid"></div>
+</div>
+<script>
+// [filename-without-ext, isDollarMove]
+const SPREADS = [
+  ["s01_cold_open",0],["s02_tabernacle_wide",0],["s03_golden_garments",0],
+  ["s04_donning_linen",0],["s05_walking_to_veil",0],["s06_holy_of_holies_empty",0],
+  ["s07_nation_outside",0],["s08_curtain_shut",0],["s09_grief_close",0],
+  ["s10_strange_fire",0],["s11_struck_down",0],["s12_bodies_carried_out",0],
+  ["s13_door_curtain_sl13",0],["s14_hand_at_veil",0],["s15_moses_charge",0],
+  ["s16_lords_charge_card",0],["s17_squared_at_veil",0],["s18_own_sin_first",0],
+  ["s19_altar_ministry",0],["s20_blood_atonement_card",0],["s21_goat_innocent",0],
+  ["s22_ritual_hands",0],["s23_two_goats_brought",0],["s24_lots_card",0],
+  ["s25_slaying_stage1",0],["s26_through_veil_stage2",0],["s27_sprinkling",0],
+  ["s28_bring_blood_card",0],["s29_hands_on_goat",0],["s30_confession",0],
+  ["s31_confession_card",0],["s32_goat_led_away",0],["s33_empty_horizon_card",0],
+  ["s34_riddle_recap",0],["s35_two_kids_card",0],["s36_two_shadows_one_flame",0],
+  ["s37_split_two_things",0],["s38_walking_home_dusk",0],["s39_honesty_close",0],
+  ["s40_people_home_clean",0],["s41_repetition_vignettes",0],["s42_basin_linen_ready",0],
+  ["s43_shadow_on_tent_wall",0],["s44_pointing_smoke",0],["s45_sign_before_veil",0],
+  ["s46_aged_unchanged_veil",0],["s47_light_arrives",0],["s48_small_basin_towering_veil",0],
+  ["s49_veil_detail_card",0],["s50_the_shadow",0],
+  ["s51_jesus_pivot",1],["s52_jesus_entering_formal",1],
+  ["s53_the_cross",1],["spread54_thread_leaf",1],["spread55_isaiah536",1],
+  ["s56_the_answer",1],["s57_without_the_gate",1],["s58_gate_card",0],
+  ["s59_no_chair",0],["s60_seated_glory",1],["s61_veil_recall",0],
+  ["s62_veil_torn",0],["s63_torn_veil_card",0],["s64_empty_hands",0],
+  ["s65_ritual_uninks",0],["s66_high_priests_face",1],["s67_same_road_lit",0],
+  ["s68_east_west_horizon",0],["s69_east_west_card",0],["s70_veil_held_open",0],
+  ["s71_the_way_open",0],["s72_boldness_card",0],["s73_aaron_steps_aside",0],
+  ["s74_every_year_gone",0],["s75_the_reach",0],["s76_already_inside",1],
+];
+const grid = document.getElementById('grid');
+for (const [name, dollar] of SPREADS) {
+  const url = "clips/" + name + ".mp4";
+  const card = document.createElement('div');
+  card.className = "card" + (dollar ? " dollar" : "");
+  const v = document.createElement('video');
+  v.src = url; v.controls = true; v.preload = "metadata"; v.muted = true; v.loop = true;
+  v.onerror = () => card.classList.add('pending');
+  card.appendChild(v);
+  const cap = document.createElement('div');
+  cap.className = "cap";
+  cap.innerHTML = `<b>${name}</b>` + (dollar ? '<span class="tag">$0 camera</span>' : '');
+  card.appendChild(cap);
+  grid.appendChild(card);
+}
+</script>
+</body>
+</html>

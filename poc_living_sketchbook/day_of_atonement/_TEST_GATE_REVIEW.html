@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day of Atonement LONG — review so far (devices + animate test gate)</title>
+<style>
+  body { background:#16181d; color:#e8e4d8; font-family:Georgia, serif; line-height:1.55; padding:28px 18px 90px; }
+  .wrap { max-width:1320px; margin:0 auto; }
+  h1 { color:#e9c877; font-size:1.8rem; margin-bottom:6px; }
+  h2 { color:#e9c877; font-size:1.2rem; margin:34px 0 4px; border-top:1px solid #2a2d36; padding-top:22px; }
+  .sub { color:#9aa0ad; margin-bottom:10px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:18px; margin-top:16px; }
+  .card { background:#1e2129; border-radius:8px; overflow:hidden; border:2px solid transparent; }
+  .card.ok { border-color:#3a4a3a; }
+  .card.fixed { border-color:#3a4a5a; }
+  .card.watch { border-color:#8a3a2a; }
+  .card video { width:100%; display:block; background:#000; }
+  .cap { padding:12px 14px; font-size:.88rem; color:#c9c4b6; }
+  .cap b { color:#e8e4d8; }
+  .row { display:flex; align-items:center; gap:8px; margin-top:9px; flex-wrap:wrap; }
+  .status { display:inline-block; font-size:.72rem; padding:2px 8px; border-radius:4px; }
+  .status.ok { background:#2a3a2a; color:#9fd39f; }
+  .status.fixed { background:#24303c; color:#8fb8e0; }
+  .status.watch { background:#3a2420; color:#e08a7a; }
+  .retries { display:inline-block; font-size:.72rem; padding:2px 8px; border-radius:4px; background:#332a1a; color:#e9c877; font-family:Georgia, serif; }
+  .v { background:#1e2129; border-left:4px solid #e9c877; padding:12px 16px; border-radius:8px; margin-bottom:8px; font-size:.92rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>DAY OF ATONEMENT LONG — review so far</h1>
+<div class="sub">Spreads 54-55's devices ($0, compositing) + the 3-clip Phase-C animate test gate (paid, before the 72-clip full batch). All clips below are muted/looping — turn sound on with the player controls if a clip has audio.</div>
+
+<div class="v">
+<b>Read the retry counts as signal, not noise.</b> All 3 test-gate spreads needed a fix before
+they were clean — a crowd spread that invented a figure walking into an empty courtyard (Kling),
+and the crucifixion spread's robe swaying/billowing partway through the clip (Seedance, three
+tightened prompts still didn't hold it). That's a real base rate for this batch, not bad luck on
+one clip — worth weighing before greenlighting the full 72.
+</div>
+
+<div class="v">
+<b>Pivot after s53:</b> rather than a 4th generative attempt fighting the same invention risk,
+s53 was rebuilt with a new $0 deterministic camera move (<code>panel_animator/dynamic_cam3d.py</code>,
+ported from this project's own Bronze Serpent/Psalm 22 <code>dynamic_cam.py</code>) — treats the
+still as a rigid plane and moves a virtual camera over it, a real orbit/arc feel with literally
+zero repaint, so the robe cannot move because nothing is regenerated. Also tried on s07 for the
+genuine drone-orbit feel an aerial shot deserves. Worth reconsidering for other spreads in the
+72-job batch where camera work should carry the scene rather than a frozen figure + ambient dust.
+</div>
+
+<h2>Spreads 54-55 — Thread + letterpressed verse + focal-tour spotlight</h2>
+<div class="sub">$0 deterministic PIL/ffmpeg compositing, no paid render at any point. 4 design rounds before landing here (not API retries — creative iteration, see each card).</div>
+<div class="grid">
+
+  <div class="card ok">
+    <video src="clips/spread54_thread_leaf.mp4" controls preload="metadata" muted loop></video>
+    <div class="cap"><b>Spread 54 — the two layings-on (Thread Device)</b><br>
+    Gold thread from the goat/Aaron's-hand vignette to Christ, the verse letterpressing into the
+    page during the tail, focal-tour spotlight touring goat &rarr; Christ &rarr; verse.
+    <div class="row"><span class="status ok">approved</span><span class="retries">4 design rounds, $0 spend</span></div></div>
+  </div>
+
+  <div class="card ok">
+    <video src="clips/spread55_isaiah536.mp4" controls preload="metadata" muted loop></video>
+    <div class="cap"><b>Spread 55 — Isaiah 53:6 (letterpress hold)</b><br>
+    Continues spread 54's exact state (seamless cut) — verse already pressed in, reference stamps
+    in with a matching gold stitch, spotlight releases to full brightness for the final read.
+    <div class="row"><span class="status ok">approved</span><span class="retries">4 design rounds, $0 spend</span></div></div>
+  </div>
+
+</div>
+
+<h2>Phase-C animate test gate — 3 clips, before the 72-clip batch</h2>
+<div class="sub">One per risk tier: calm single-figure, crowd/gesture, crucifixion. Real Kling/Seedance spend, ~$2.75 for the initial 3 + ~$1.30 for the s07 retry.</div>
+<div class="grid">
+
+  <div class="card ok">
+    <video src="clips/s17_squared_at_veil.mp4" controls preload="metadata" muted loop></video>
+    <div class="cap"><b>Spread 17 — Aaron squared at the veil (calm single-figure)</b><br>
+    Frame-identical start to end on a full-sequence check. Seedance hit a rate limit on the first
+    attempt; the driver's built-in fallback used Kling instead, same run.
+    <div class="row"><span class="status ok">clean</span><span class="retries">1 attempt (auto provider fallback, not a retry)</span></div></div>
+  </div>
+
+  <div class="card ok">
+    <video src="clips/s07_nation_outside.mp4" controls preload="metadata" muted loop></video>
+    <div class="cap"><b>Spread 7 — the nation outside (crowd, Kling drone flyover) — FINAL</b><br>
+    1st attempt invented a figure walking into the empty courtyard partway through (confirmed by
+    cropping the same region across the clip). Re-rendered clean with a "this is ink on paper, not
+    a photograph of a real crowd" reframe + the empty courtyard explicitly named in the prompt, then
+    re-rendered again asking Kling for a drone flyover on top of the same safeguards.
+    <b>User picked the drone-flyover version as final</b> (2026-08-04), over both the static clip
+    and the deterministic orbit-arc alternative (below) — this file now IS that version; the
+    original static clip is kept at <code>s07_nation_outside.v1_static_kling.mp4</code>.
+    <div class="row"><span class="status ok">final</span><span class="retries">3 attempts total (2 retries)</span></div></div>
+  </div>
+
+  <div class="card fixed">
+    <video src="clips/s53_the_cross.mp4" controls preload="metadata" muted loop></video>
+    <div class="cap"><b>Spread 53 — the cross (crucifixion) — now a $0 orbit-arc, not generative</b><br>
+    User caught this by eye on first watch ("Jesus is dancing") — the robe billowed and swung out
+    to the side in the second half of the original Seedance clip. Replaced entirely with
+    <code>dynamic_cam3d.py</code>'s "arc" move: the still is treated as a plane in 3D and a virtual
+    camera yaws/pushes across it — genuine orbit-around-Christ feel, and the robe literally cannot
+    move since nothing is repainted.
+    <div class="row"><span class="status fixed">fixed — swapped technique</span><span class="retries">1 generative attempt (retired) + 1 deterministic render, $0</span></div></div>
+  </div>
+
+  <div class="card watch">
+    <video src="clips/s07_nation_outside_orbit.mp4" controls preload="metadata" muted loop></video>
+    <div class="cap"><b>Spread 7 (not picked) — $0 deterministic drone-orbit</b><br>
+    <code>dynamic_cam3d.py</code> "arc" move on the aerial courtyard shot. Reliable and controllable,
+    but the user preferred Kling's flyover (final, above) by eye.
+    <div class="row"><span class="status watch">not picked</span><span class="retries">1 deterministic render, $0 — kept for the record</span></div></div>
+  </div>
+
+</div>
+
+<div class="sub" style="margin-top:14px;"><b>Decided (2026-08-04):</b> spread 7's final is the Kling drone-flyover version — the user's own
+call, by eye, over the deterministic orbit-arc.</div>
+
+</div>
+</body>
+</html>
