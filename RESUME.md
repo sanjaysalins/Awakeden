@@ -1,6 +1,128 @@
 # ══════════════════════════════════════════════════════════════════════════
-# ★★★★★★★ SESSION HANDOVER 2026-08-04 — READ THIS FIRST — supersedes the
-# ★★★★★★ block just below it for "what to do next."
+# ★★★★★★★★ SESSION HANDOVER 2026-08-04 (END OF SESSION) — READ THIS FIRST
+# — supersedes every block below it for "what to do next." This replaces
+# the earlier same-day ★★★★★★★ block, which had become a messy chain of
+# incremental updates ending in stale info (it said "not committed" --
+# everything below IS committed as of this rewrite, HEAD = f75e9da,
+# working tree clean).
+#
+# ── STATUS: STILLS STAGE 100% COMPLETE, 76/76 SPREADS DONE AND
+# COMMITTED. Nothing left to render for the stills stage of this
+# episode. Next stage is ANIMATION (Phase C), not more stills -- see
+# "EXACT RESUME POINT" below.
+#
+# ── WHAT THIS SESSION DID (2026-08-04, one long session, picking up
+# from a prior session that had left 38/76 done) --
+# Resumed gently: checked CPU/RAM before touching anything (machine was
+# already at 74% CPU / 71% RAM from VirtualBox + other sessions, nothing
+# of ours was mid-render), kept every render sequential/single-threaded
+# (network-bound API calls, not local-CPU-heavy). Then rendered spreads
+# 39 through 76 in ordered batches, built one brand-new world anchor
+# mid-episode (`world/citygate_ref.png`, a 1st-century Jerusalem gate --
+# Hebrews 13:12 is a different era from the wilderness-camp anchors, see
+# TABERNACLE_WORLD.md item 9), and closed out the episode's landing arc.
+# Commits, in order: d06172b (through #48) -> d9a4262 (#49-53) -> 89ca349
+# (#54-61 + city-gate) -> e80319b (s60 hand fix) -> f75e9da (#62-76,
+# stills stage complete).
+#
+# Final spend for the WHOLE stills stage: **$37.20 across 124 renders**
+# (76 spreads + 6 cast/world anchors incl. city-gate). Full gallery,
+# every spread, every fix documented inline:
+#   file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/poc_living_sketchbook/_DAY_OF_ATONEMENT_CAST_REVIEW.html
+#
+# ── STANDING LESSONS FROM THIS SESSION (apply to the NEXT episode's
+# stills stage from the first prompt, not as an after-the-fact fix) --
+# all written into memory, not just here:
+#   1. Camera-angle variety (low/high/eye-level/depth) is NOT enough on
+#      its own for introspective/monologue beats -- 4 spreads with 4
+#      different angles still read as near-identical "grave face, medium
+#      close" portraits back to back. Fix: reach for a genuinely
+#      different DEVICE (shadow-as-subject, extreme scale contrast,
+#      object-as-narrator, light-as-event), not just a new angle on the
+#      same idea. Memory: `feedback-camera-angle-dynamism.md`
+#      (REFINEMENT section).
+#   2. Build a CONTACT SHEET (cheap grid thumbnail of a whole batch) to
+#      audit composition variety before calling a batch done -- the
+#      repetition is invisible one image at a time but obvious in a
+#      grid. This caught the SAME class of problem twice in one session,
+#      on two unrelated subjects (Aaron's portraits, then independently
+#      the torn-veil sequence) -- treat it as a general risk on any
+#      recurring visual element, not a one-off.
+#   3. A shared reference image (e.g. `veil_ref.png`) can have a defect
+#      baked INTO it that silently contaminates every future render
+#      chaining it, even when the prompt explicitly contradicts the
+#      defect. Open the raw reference PNG itself at full-res before
+#      trusting it, not just the renders that use it.
+#   4. Image-conditioning alone is NOT fully reliable for OBJECT/world
+#      anchors the way it is for CHARACTER anchors (which already carry
+#      a full text description every time, e.g. "the SAME man as the
+#      reference image"). When an object anchor's exact design matters
+#      (e.g. the veil's specific cherubim), also write its full canon
+#      description into the prompt text, not just the image ref.
+#   5. On heavily gold/glory-lit figures, a hand or limb resting against
+#      a bright highlight can visually MERGE into it and lose its
+#      fingers entirely -- check each hand/limb individually against its
+#      own local background during QC, not just "is a hand present" for
+#      the pose overall. (User caught this one after my own eye-check
+#      missed it -- spread 60.)
+#   6. The Fable-design / Sonnet-execute split (user's standing
+#      instruction) worked well twice this session for "we need
+#      genuinely different ideas, not a parameter tweak" problems --
+#      12 of 12 Fable-designed shots across both rounds landed clean on
+#      the first render. Still always check a Fable concept against the
+#      episode's own locked rules before executing -- one proposal
+#      (3 ages of Aaron in one frame) was rejected for conflicting with
+#      this episode's locked one-appearance rule.
+#   7. An object described as loose/at-rest-but-touchable (e.g. lots
+#      resting in an open palm) is an animation-safety risk on top of
+#      any composition concern -- a Kling/Seedance animator reads "loose
+#      in an open hand" as an invitation to invent motion. Objects
+#      should read as unambiguously at rest (lying flat, set down)
+#      unless the shot's whole point IS controlled motion (see the ONE
+#      designed acting spread, #75).
+#
+# ── EXACT RESUME POINT -- the stills stage is DONE, next real steps for
+# this episode, IN ORDER:
+#   1. Spread 55's Elder Leaf settle -- PURE COMPOSITING over spread
+#      54's already-rendered art + Scribed Ink text (Isaiah 53:6), via
+#      the existing `/elder-leaf` skill. No new still needed.
+#   2. The multi-stage hard-cut animation PAIRS need to be built as
+#      actual cut-together clips at the animate stage, not left as
+#      merely-adjacent stills: spreads 10/11 (strange fire), 25/26/27
+#      (slaying through the veil), 61/62 (whole veil -> torn veil).
+#      "Never a morph" is this project's own rule for these -- a hard
+#      cut between the two already-rendered images, not a generated
+#      transition.
+#   3. Phase C animation proper -- all 76 stills need to become clips.
+#      This is LONG-FORM, so default is `veo3_1_lite` via HF
+#      (`VIDEO_PROVIDER=hybrid`, `VIDEO_HF_MODEL=veo3_1_lite`,
+#      `VIDEO_DURATION=8`) per this project's locked format split --
+#      NOT the shorts' Kling pipeline. See `/animate-long` skill.
+#   4. Spread #75 (the designed acting spread, Christ's hand reaching
+#      toward the viewer) needs its Kling-tier, fail-closed Jesus QC
+#      specifically per the plan's own note -- this is the one spread
+#      where real controlled motion is intentional, so it needs extra
+#      scrutiny that the motion completes and holds cleanly rather than
+#      drifting or inventing anything further.
+#   5. Standard finishing chain after animation: assembly (jigsaw the
+#      588.64s narration against the clips), score (check first whether
+#      this same topic already has an approved Suno arc reusable, per
+#      this project's own "check first" lesson from Bronze Serpent),
+#      ambient SFX bed, captions (batch into ~60s segments from the
+#      start -- 300+ word-timed chunks broke a single ffmpeg graph on
+#      Bronze Serpent), INV-27 watermark, INV-26 landing-hold check
+#      (`check_landing_hold.py`, ≥3.0s hold, audio=video duration).
+#
+# ── NOTHING FURTHER TO ASK PERMISSION FOR AT THE STILLS STAGE -- it's
+# committed and closed. Animation is a new cost center (real per-clip
+# spend, roughly $0.65-1+ per clip at this project's usual rates) and
+# deserves its own fresh quote + explicit go-ahead when that session
+# starts, per the standing ask-before-spending practice.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★ SESSION HANDOVER 2026-08-04 (mid-session, superseded by the
+# ★★★★★★★★ block above) — kept for its own narrower detail if needed.
 # Day of Atonement LONG: resumed gently (checked CPU/RAM before touching
 # anything -- machine was already at 74% CPU / 71% RAM from VirtualBox +
 # other sessions, nothing of ours was mid-render). Rendered spreads 39-48

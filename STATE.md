@@ -1,7 +1,8 @@
 # STATE.md — progress tracker
 
-**2026-08-04 (gentle resume — Day of Atonement LONG, spreads 39-48, $6.00
-spent):** Resumed after checking system load first (CPU 74%/RAM 71% busy,
+**2026-08-04 (Day of Atonement LONG — STILLS STAGE COMPLETE, 76/76,
+$37.20 total spend, all committed through f75e9da):** Resumed after
+checking system load first (CPU 74%/RAM 71% busy,
 mostly VirtualBox + other sessions, nothing of ours mid-render) and kept
 renders sequential/network-bound rather than parallel. Built SHOTS_BATCH4
 (10 spreads, Beat 5 "the honest confession" + start of Beat 6) with the
@@ -114,9 +115,12 @@ Gallery, all 76 spreads with every fix documented:
 (pure post-process, no new still); the multi-stage hard-cut animation
 pairs need building as actual clips; Phase C animation for all 76
 stills; the designed acting spread (#75) needs its Kling-tier fail-closed
-QC; assembly, score, sfx, captions, watermark, INV-26 hold check.
-Spreads 54-76 + this update are NOT yet committed — ask the user first.
-Full pickup: RESUME.md's top section.
+QC; assembly, score, sfx, captions, watermark, INV-26 hold check. All
+work through spread 76 IS committed (f75e9da). Session closed here by
+user request — animation is a new cost center and gets its own
+fresh session, quote, and go-ahead. Full pickup: RESUME.md's top
+section (rewritten as one clean consolidated handover, not a chain of
+mid-session updates).
 
 **2026-08-03 (later session — Day of Atonement LONG: census + anchors +
 plan + 38/76 stills, $20.10 spent, session closed by user request):**
