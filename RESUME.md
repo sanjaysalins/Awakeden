@@ -1,4 +1,135 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★ SESSION HANDOVER 2026-08-04 (LATE, END OF SESSION) — READ THIS
+# FIRST — supersedes every block below it, including the same-day ★★★★★★★★
+# stills-complete block (still accurate for the stills stage, just no
+# longer the resume point -- Phase C below is further along now).
+#
+# ── STATUS: PHASE C ANIMATE COMPLETE, 76/76 SPREADS HAVE A FINISHED CLIP.
+# Committed at f70cc66 ("Phase C animate stage complete, 76/76 spreads"),
+# working tree clean. User is reviewing everything tomorrow before we move
+# to assembly -- read the "EXACT RESUME POINT" section below before doing
+# ANYTHING else next session; there is likely a short punch-list of fixes
+# from that review waiting, not a green light to run assembly blind.
+#
+# ── WHAT THIS SESSION DID, IN ORDER --
+# 1. Spreads 54-55 (Thread Device + Isaiah 53:6 verse): 4 real design
+#    rounds before landing. R1 hand-cursive Kunstler Script on a foxed
+#    "leaf" card -- user: "I hate that note, it does not work for me"
+#    (unreadable, looked cheap, dyslexia-relevant). R2 flat ArkAIology-
+#    style caption card (bold sans, word-pop-in) -- functional but user
+#    wanted a stronger creative pass, invoked their standing Fable-designs/
+#    Sonnet-builds practice. R3: Fable proposed 3 concepts, user picked
+#    "pressed into the page" -- letterpress ink effect, no card object at
+#    all. R4: user flagged the camera as "very very basic" and pointed at
+#    prior art in a SIBLING PROJECT (C:\Users\sanjay\PycharmProjects\
+#    edenradios\pipeline\utils\motion_styles.py) -- ported its
+#    "dramatic_spotlight" technique into this repo as the new
+#    `panel_animator/focal_tour.py` (a soft halo tours a still's own named
+#    elements instead of a flat push-in). New skill: `.claude/skills/
+#    focal-tour/SKILL.md`.
+# 2. Phase C animate batch: an earlier same-day assumption that the
+#    shorts' veo3_1_lite pipeline applied to this living-sketchbook
+#    episode was WRONG -- corrected by finding bronze_serpent_long's own
+#    proven Kling/Seedance recipe and mirroring it in the new
+#    `_s4_animate.py` (66 jobs run, ~$50 real spend). A 3-job test gate
+#    caught 2 real defects before the full batch (an invented crowd figure,
+#    a "dancing" Christ robe) -- both fixed (one by a stronger prompt, the
+#    crucifixion robe by a NEW $0 deterministic camera module instead of a
+#    3rd generative attempt: `panel_animator/dynamic_cam3d.py`, ported from
+#    Bronze Serpent/Psalm 22's per-episode `dynamic_cam.py` -- treats the
+#    still as a plane in 3D, moves a virtual camera, zero repaint so zero
+#    invention risk). Applied that lesson proactively to all 6 remaining
+#    Christ-iconography spreads BEFORE running them generatively at all.
+#    Post-batch dense-frame QC (not spaced-sample checks -- those miss
+#    real defects, confirmed twice this session) caught 2 MORE real
+#    defects the batch's own "clean" self-report missed: Moses's eyebrows
+#    doing an invented squint cycle (s15, fixed by prompt), and invented
+#    BLOOD on the Lev-16 slaying-stage goat (s25, fixed via dynamic_cam3d
+#    -- doctrinal "no gore" line, not worth a retry gamble). The veil's
+#    embroidered cherub wings (s05) flapped on 2 separate generative
+#    attempts despite explicit "these are needlework, not living
+#    creatures" language -- 3rd attempt was the deterministic swap.
+# 3. Spreads 75 (Christ's hand reaching, "the reach") and 76 (the landing,
+#    "already inside") closed out the episode. s75 modeled tightly on
+#    s29's proven "one completing motion, then holds" acting-spread
+#    pattern + an explicit no-wound guard on the hand specifically --
+#    passed fail-closed QC clean on the FIRST attempt (dense-frame checked
+#    the hand and face separately, both stable). s76: `tear_hole` (the
+#    plan's own "mandatory" landing device -- page tears open, gold light
+#    beneath) turned out to have NEVER been actually built anywhere in
+#    this repo despite being referenced in several files' comments as "the
+#    landing's own device" -- checked Bronze Serpent's own landing (the
+#    only precedent) and found it was explicitly deferred there too,
+#    shipped as "just a plain held frame." Did the same here: a gentle
+#    dynamic_cam3d push, real and finished, tear_hole flagged as a
+#    possible future polish pass rather than pretending to have built it.
+#
+# ── STANDING LESSONS FROM THIS SESSION (apply from the first prompt next
+# time a piece needs animation, not as an after-the-fact fix) --
+#   1. DENSE-FRAME eye-check, not spaced start/mid/end samples. Half of
+#      this session's real defects (Moses's eyes, the goat's blood) were
+#      MISSED by an initial 3-frame check and only caught by extracting a
+#      contact sheet / dense frame sequence across the whole clip. The
+#      user caught the crucifixion robe issue by eye in real playback
+#      after a spaced-frame check had called it fine -- always assume a
+#      spaced check can miss motion that only shows up mid-clip.
+#   2. When a generative model invents something DESPITE explicit prompt
+#      language telling it not to (twice, for the same content), stop
+#      retrying prompts and switch to the $0 deterministic camera module
+#      instead. Two confirmed failure classes this session: fine
+#      embroidered/fabric detail (veil wings, Christ's robe), and anything
+#      Christ-iconography-adjacent generally (higher doctrinal stakes than
+#      the retry is worth). `panel_animator/dynamic_cam3d.py` (arc/swoop/
+#      push/tour/parallax, zero repaint) is the standing fallback -- reach
+#      for it proactively on Christ spreads, not just after a failure.
+#   3. Before assuming a pipeline/recipe applies to a NEW episode, check
+#      for the closest actual PRECEDENT episode first (bronze_serpent_long
+#      here) rather than defaulting to the most recently-documented skill
+#      (`/animate-long`, which turned out to be for a different visual
+#      style entirely). Cost real time this session.
+#   4. The user has other projects with reusable prior art worth checking
+#      (edenradios' motion_styles.py this session) -- when stuck on "this
+#      feels too basic," it's worth asking rather than assuming nothing
+#      better exists.
+#   5. User gave explicit permission this session to drop the earlier
+#      "gentle CPU/memory" throttling for local renders going forward
+#      ("you can use a more agresive use of cpu and memory going
+#      forward") -- don't reintroduce POLITE_CPU/_polite.be_polite() calls
+#      next session unless asked again.
+#
+# ── EXACT RESUME POINT for next session --
+#   1. FIRST: wait for the user's review of all 76 clips (they're doing
+#      this "tomorrow," i.e. after this handover). Open
+#      `poc_living_sketchbook/day_of_atonement/_BATCH_PROGRESS.html` for
+#      the full gallery, `_TEST_GATE_REVIEW.html` for the specific
+#      defect/fix history. Expect a punch-list of a few more spreads
+#      needing a fix, same pattern as s05/s07/s15/s25 -- don't assume the
+#      66-job batch's un-reviewed ~46 Seedance clips are all clean just
+#      because the script said "clean" (see lesson 1 above).
+#   2. Apply whatever fixes the user flags, using the SAME dense-frame QC
+#      discipline before calling each one done.
+#   3. Once the user is satisfied with the clip set: assembly stage next
+#      (jigsaw the clips against the 588.64s narration timeline -- 27
+#      spreads run longer than their generated clip via the DURATION GAPS
+#      list in `_s4_animate.py`'s own docstring, need assembly-stage
+#      looping/hold-extension per longform-motion-fill). Then score
+#      (check first whether this topic already has an approved Suno arc
+#      reusable), ambient SFX bed, captions (batch into ~60s segments from
+#      the start), INV-27 watermark, INV-26 landing-hold check.
+#   4. The multi-stage hard-cut PAIRS (10/11, 25/26/27, 61/62) still need
+#      to be spliced as true hard cuts at assembly, never a dissolve --
+#      each spread already has its own individual clip, this is purely an
+#      assembly-stage splice decision, not a re-render.
+#
+# ── NOTHING FURTHER TO ASK PERMISSION FOR ON WHAT'S ALREADY BUILT -- the
+# 76-clip set is committed and closed for tonight. Any NEW spend next
+# session (re-renders for whatever the user's review flags, or assembly-
+# stage work) is small/incremental, not a fresh batch-sized decision --
+# still worth a quick heads-up on cost before running, per standing
+# practice, but not a full re-quote.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★ SESSION HANDOVER 2026-08-04 (END OF SESSION) — READ THIS FIRST
 # — supersedes every block below it for "what to do next." This replaces
 # the earlier same-day ★★★★★★★ block, which had become a messy chain of
