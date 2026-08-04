@@ -780,7 +780,71 @@ SHOTS_BATCH4 = [
      f"vast unfinished curtain. {FULLBLEED}"),
 ]
 
-ALL_SHOTS = SHOTS_TEST + SHOTS_BATCH1 + SHOTS_BATCH2 + SHOTS_BATCH3 + SHOTS_BATCH4
+# Batch 5: spreads 49, 50, 52, 53 (start of Beat 6's Christ section) --
+# skips 51 (already rendered/approved as the Jesus identity-lock ref) and
+# 54-61 (multi-vignette Thread Device + new city-gate asset -- own pass).
+SHOTS_BATCH5 = [
+    # spread 49 | Beat 6 | 352.88-363.36s | DOUBLE verse card bg (Heb
+    # 10:3/10:4) -- CAMERA: close DETAIL crop on one cherub panel, not
+    # the whole curtain -- this is the 9th veil appearance in the film,
+    # needs a genuinely different framing from the previous 8 wide/
+    # full-curtain shots
+    ("s49_veil_detail_card", STYLE, "veil",
+     f"A medium view on a single panel of {VEIL} from its gold-capped "
+     f"pillar-hooks at the top down to its hem at the floor, the "
+     f"panel's own crossed-wing cherub woven FLAT into the fabric "
+     f"exactly as part of the weave, thread and dye, not a separate "
+     f"three-dimensional being standing apart from the curtain -- soft "
+     f"dim raking light, no figure present, the fabric utterly still. "
+     f"Reserved as calm background art for the film's two-verse "
+     f"Scribed Ink card. {FULLBLEED}"),
+
+    # spread 50 | Beat 6 | 363.36-368.3s | THE SHADOW, no-figure
+    # atmosphere -- CAMERA: elevated, looking down the shadow's length
+    # stretching toward camera from an unseen source -- distinct from
+    # the film's other wide desert horizons (32/33/38)
+    ("s50_the_shadow", STYLE, "",
+     f"Elevated view looking down across open wilderness sand at dusk, "
+     f"warm dying light raking low across the ground -- a single long "
+     f"dark shadow stretches from just beyond the frame's own edge "
+     f"toward the camera, its source entirely unseen, the rest of the "
+     f"vast sand otherwise empty and undisturbed. No figure, no object, "
+     f"only the shadow and the waiting ground. {FULLBLEED}"),
+
+    # spread 52 | Beat 6 | 382.08-392.48s | Illuminated Rubric bg, Jesus
+    # entering -- CAMERA: wide, formal, symmetrical threshold framing,
+    # deliberately distinct from s51's close push-in (this is reserved
+    # background for a formal dropped-cap card, not the pivot moment
+    # itself)
+    ("s52_jesus_entering_formal", STYLE, "jesus",
+     f"WIDE, formal, symmetrical view from just inside a grand gold-"
+     f"walled passage that fills the ENTIRE frame edge to edge -- its "
+     f"gold walls occupy the full left and right of the frame in "
+     f"architectural perspective lines receding toward the far "
+     f"threshold, no blank margin anywhere. {JESUS} entering fully "
+     f"into frame through that far threshold, centered, full figure "
+     f"visible head to foot, gold light gathering low around His feet "
+     f"and rising -- calm and resolute, a wide ceremonial framing left "
+     f"open for a formal dropped-cap verse card. {FULLBLEED}"),
+
+    # spread 53 | Beat 6 | 392.48-399.0s | The cross, reverent restrained
+    # -- CAMERA: extreme wide, low horizon, small solitary silhouette
+    # against a vast darkened sky -- matches this project's established
+    # crucifixion treatment (darkness not storm, nothing graphic)
+    ("s53_the_cross", STYLE, "jesus",
+     f"VAST WIDE view, low horizon: a single cross stands small and "
+     f"solitary in silhouette against a vast sky gone unnaturally dark "
+     f"at midday, as though the sun itself has been blotted out -- a "
+     f"flat, heavy, even blackness settling over the whole sky, "
+     f"perfectly still, NOT storm clouds, NOT billowing weather, no "
+     f"wind, no rain, no roiling cloud shapes -- an eerie, supernatural "
+     f"dimming of the light itself. The figure of {JESUS} upon the "
+     f"cross seen only in reverent, restrained wound-free silhouette -- "
+     f"no visible wound, no blood, no graphic detail of any kind. "
+     f"{FULLBLEED}"),
+]
+
+ALL_SHOTS = SHOTS_TEST + SHOTS_BATCH1 + SHOTS_BATCH2 + SHOTS_BATCH3 + SHOTS_BATCH4 + SHOTS_BATCH5
 
 
 def main(only=None):

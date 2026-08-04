@@ -48,11 +48,30 @@ episode's locked one-appearance rule for Aaron, kept the underlying idea
 once. All 5 redesigns (s36, s43, s44, s46, s47) landed clean on the
 first render. Memory `feedback-camera-angle-dynamism.md` updated with
 the refinement (contact-sheet variety check + shot-type devices for
-monologue beats, on top of the existing angle rule). Gallery updated
-covering both rounds of fixes:
-`poc_living_sketchbook/_DAY_OF_ATONEMENT_CAST_REVIEW.html`. Session
-total $6.00 (20 renders); episode running total $26.10 (87 renders).
-Nothing committed to git. Full pickup: RESUME.md's top section.
+monologue beats, on top of the existing angle rule). Committed
+(d06172b, everything through spread 48).
+
+Continued the same session into spreads 49/50/52/53 (51 already existed
+from an earlier out-of-order test — re-verified it as a strong Jesus
+identity-lock reference before building on it). **51 of 76 spreads now
+done.** Two more real defects caught and fixed: s49's cherub rendered as
+an independent 3D angel rather than the flat woven-fabric pattern the
+veil's own design uses; s52 left large dead blank-paper margins, a
+FULLBLEED violation. Also caught a real doctrinal-accuracy miss on s53
+(the cross) — the sky rendered as classic storm clouds, directly
+contradicting this project's own locked fact card
+`crucifixion-still-facts.md` ("darkness... NOT thunderstorm weather,"
+Luke 23:44-45) — fixed with explicit non-storm darkness language.
+Session total (both rounds) $8.10; episode running total $28.20 (94
+renders). Gallery covers all of it:
+`poc_living_sketchbook/_DAY_OF_ATONEMENT_CAST_REVIEW.html`.
+
+**Stopped deliberately before spreads 54-61** — that stretch needs a
+brand-new "city-gate" world anchor (not yet built) plus compositing
+devices (Thread Device, Elder Leaf) that belong in a dedicated pass, not
+folded into a quick continuation. Spreads 49-53 + this update are NOT
+yet committed — ask the user first. Full pickup: RESUME.md's top
+section.
 
 **2026-08-03 (later session — Day of Atonement LONG: census + anchors +
 plan + 38/76 stills, $20.10 spent, session closed by user request):**

@@ -51,11 +51,54 @@
 # Memory updated with the refinement (contact-sheet check + shot-type
 # variety devices for monologue beats):
 #   feedback-camera-angle-dynamism.md
-# **Apply this from the FIRST prompt for spreads 49-76**: before writing
+# **Apply this from the FIRST prompt for spreads 54-76**: before writing
 # any run of 3+ consecutive introspective/monologue spreads, actively
 # pick a DIFFERENT device for each one (don't default to face-close) --
 # and build a contact-sheet check on the next batch too, don't wait for
 # the user to catch it again.
+#
+# ── SAME SESSION, CONTINUED: spreads 49/50/52/53 rendered (51 already
+# existed) -- **51 of 76 spreads now done.** Two more real defects caught
+# and fixed by eye before calling this round done:
+#   s49 (veil detail card) roll 1: the cherub rendered as an independent
+#     3D angel portrait, not the flat WOVEN fabric pattern the veil's own
+#     established design uses -- fixed with explicit "woven flat into the
+#     weave, not a separate being" language.
+#   s52 (Jesus entering, formal) roll 1: large dead blank-paper margins on
+#     both sides of the frame -- a direct FULLBLEED violation (this
+#     style's own rule against empty paper regions). Fixed by having the
+#     gold-walled passage fill the whole frame edge to edge.
+#   s53 (the cross) roll 1: the sky rendered as classic billowing storm
+#     clouds -- a DIRECT violation of this project's own locked fact card
+#     `crucifixion-still-facts.md`: "darkness over all the earth... NOT
+#     thunderstorm weather" (Luke 23:44-45). Fixed with explicit "flat,
+#     heavy, even blackness... NOT storm clouds, NOT billowing weather"
+#     language. Worth re-reading that whole fact card before any further
+#     Golgotha/crucifixion stills in this episode (vinegar/hyssop, nail
+#     wording, crucifixion pose -- all documented gotchas there).
+#
+# ── EXACT RESUME POINT, updated ── Next: spreads 54-61, a genuinely
+# harder stretch -- multi-vignette Thread Device (OT echo -> Christ, gold
+# thread), an Elder Leaf settle (spread 55, ≤1 per episode, budget it
+# here), and a BRAND NEW ASSET NOT YET BUILT: a "city-gate plate" (spread
+# 57, Christ led out of the city gate / the sin-offering's body carried
+# outside the camp -- Lev 16:27, the SLAIN goat not the scapegoat, the
+# narration's own locked distinction). Build the city-gate world anchor
+# the same way tabernacle/veil/altar/goat were built (see
+# `poc_living_sketchbook/_r5_world_anchors.py` as the pattern) BEFORE
+# attempting spread 57/58. Read `_PLAN.md` rows 54-61 closely -- several
+# of these (54, 55, 60) describe compositing DEVICES (Thread Device,
+# Elder Leaf, composite verse-over-art) that are POST-render steps, not
+# something to bake into the base still prompt -- don't over-engineer the
+# render prompt trying to draw the gold thread or the leaf settle itself.
+#
+# ── SPEND this continued session: $2.10 more (7 renders incl. 3
+# defect re-rolls). Running total for the whole episode: $28.20 (94
+# renders). Gallery has a new "Spreads 49-53" section:
+#   file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/poc_living_sketchbook/_DAY_OF_ATONEMENT_CAST_REVIEW.html
+# This round's work IS committed (commit d06172b covered everything
+# through spread 48 + the census/anchors/plan; spreads 49-53 + this
+# RESUME/STATE update are the next thing to commit, ask the user first).
 #
 # ── EXACT RESUME POINT ──
 # Next spread to build: **#49**, a DOUBLE Scribed-Ink verse card (Heb 10:3
