@@ -84,12 +84,39 @@ as every prior one, re-shot with real softening/desaturation. Spend this
 stretch $4.20; episode running total $31.50 (105 renders). Gallery
 covers all of it: `poc_living_sketchbook/_DAY_OF_ATONEMENT_CAST_REVIEW.html`.
 
-**Stopped deliberately before spread 62** — the remaining stretch (62-76)
-is Beat 7, "the invitation," the CTA-to-Jesus landing and the most
-doctrinally load-bearing part of the whole film; better started fresh
-than tacked onto the tail of an already-long session. Spreads 54-61 +
-this update are NOT yet committed — ask the user first. Full pickup:
-RESUME.md's top section.
+Committed (89ca349). Continued the same session through the landing arc,
+spreads 62-76 (Beat 7, "the invitation" — the veil tears, Aaron steps
+aside, Christ reaches out, the film lands on Him). **76 of 76 spreads
+now done — the entire stills stage of this episode is complete.**
+
+Caught one more real gap along the way: the user spotted that spread 60
+(seated Christ) had a hand fading into the gold armrest with no fingers
+— my own eye-check had missed it too. Re-shot clean; the lesson (check
+each hand/limb individually against its own local background on
+glory-lit figures) is now in memory. Per the user's standing "Fable
+designs, Sonnet executes" instruction, had Fable design the 7 truly
+creative beats of the landing arc (Empty Hands, The Ritual Un-inks, The
+High Priest's Face, The Same Road Lit, Every Year Gone, The Reach,
+Already Inside) — all 7 landed clean on the first render. Also caught a
+repetition problem recurring on a NEW subject (not the earlier Aaron
+portraits but the torn-veil sequence): 3 of 4 torn-veil shots came out
+as near-identical wide shots, fixed with genuinely different vantages
+(a macro on the torn fibers, a reverse angle from inside the Holy of
+Holies, a full exterior tabernacle view). This confirms the
+repetition-audit discipline needs to apply to every recurring visual
+element in an episode, not just one character's portraits.
+
+**Final spend for the whole stills stage: $37.20 (124 renders).**
+Gallery, all 76 spreads with every fix documented:
+`poc_living_sketchbook/_DAY_OF_ATONEMENT_CAST_REVIEW.html`.
+
+**Not done yet for this episode:** spread 55's Elder Leaf compositing
+(pure post-process, no new still); the multi-stage hard-cut animation
+pairs need building as actual clips; Phase C animation for all 76
+stills; the designed acting spread (#75) needs its Kling-tier fail-closed
+QC; assembly, score, sfx, captions, watermark, INV-26 hold check.
+Spreads 54-76 + this update are NOT yet committed — ask the user first.
+Full pickup: RESUME.md's top section.
 
 **2026-08-03 (later session — Day of Atonement LONG: census + anchors +
 plan + 38/76 stills, $20.10 spent, session closed by user request):**

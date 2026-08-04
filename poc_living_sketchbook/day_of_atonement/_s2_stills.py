@@ -61,6 +61,9 @@ REF_MAP = {
     "tabernacle": TABERNACLE_REF, "veil": VEIL_REF,
     "holyofholies": HOLYOFHOLIES_REF, "altar": ALTAR_REF, "goat": GOAT_REF,
     "citygate": CITYGATE_REF,
+    # spread 67 chains spread 32's own render directly for a true
+    # compositional rhyme (same camera/path/horizon, transfigured light).
+    "s32goat": Path(__file__).resolve().parent / "stills" / "s32_goat_led_away.png",
 }
 
 # Canon text -- pasted VERBATIM from cast/AARON.md and cast/JESUS.md.
@@ -948,7 +951,175 @@ SHOTS_BATCH6 = [
      f"in this film. No figure present. {FULLBLEED}"),
 ]
 
-ALL_SHOTS = SHOTS_TEST + SHOTS_BATCH1 + SHOTS_BATCH2 + SHOTS_BATCH3 + SHOTS_BATCH4 + SHOTS_BATCH5 + SHOTS_BATCH6
+# Batch 7: spreads 62-76, the film's landing arc (Beat 7 "the invitation"
+# + the mandatory landing device). 64/65/66/67/74/75/76 designed by
+# Fable (the true creative beats); 62/63/68-73 are precedented
+# continuations of already-established devices.
+SHOTS_BATCH7 = [
+    # spread 62 | Beat 6 | 468.9-475.84s | THE TEAR -- hard cut from 61,
+    # veil torn top to bottom, gold light through the rent, no hand
+    ("s62_veil_torn", STYLE, "veil",
+     f"{VEIL}, but now torn violently from the very top edge to the "
+     f"bottom in one great rent down the center, the two torn halves "
+     f"hanging apart, brilliant gold light pouring through the tear "
+     f"from behind -- no human hand or figure present anywhere in "
+     f"frame, the tearing already complete and still. {FULLBLEED}"),
+
+    # spread 63 | Beat 6 | 475.84-482.08s | Composite card: Matt 27:51
+    ("s63_torn_veil_card", STYLE, "veil",
+     f"EXTREME macro close-up, filling the entire frame: only the "
+     f"ragged torn edge of {VEIL}'s own fabric, individual threads and "
+     f"fibers visible fraying loose at the tear, brilliant gold light "
+     f"blazing through the narrow gap and overexposing the frame's "
+     f"center -- no pillars, no hooks, no wider curtain visible at all, "
+     f"only torn fiber and light this close. No figure present. "
+     f"Reserved as background art for the verse card lettered directly "
+     f"over the image. {FULLBLEED}"),
+
+    # spread 64 | Beat 7 | 482.08-489.5s | "So hear me -- and be still a
+    # moment" -- Fable "The Empty Hands": top-down macro on Aaron's
+    # empty open hands, not his face (saves the face for 74)
+    ("s64_empty_hands", STYLE, "aaron",
+     f"Top-down macro shot, closer than any other frame in this film: "
+     f"{AARON}'s two open hands resting palm-up in his white linen lap, "
+     f"completely empty and still, every age line and old callus sharp "
+     f"in focus -- the linen lap dissolves soft below, nothing else in "
+     f"frame but paper grain. The hands that carried blood and incense "
+     f"every year, now holding nothing. {FULLBLEED}"),
+
+    # spread 65 | Beat 7 | 489.5-501.0s | MV -- Fable "The Ritual
+    # Un-inks": the old apparatus visibly reverting to unfinished
+    # underdrawing as it's let go of, not just dulled
+    ("s65_ritual_uninks", STYLE, "aaron,goat,altar",
+     f"Wide shot, diagonal recession toward the upper-left: three "
+     f"memory-vignettes walking away from camera -- the goat led out, "
+     f"the altar with smoke, young Aaron in linen -- each one further "
+     f"back rendered with LESS ink than the last: the nearest a "
+     f"half-strength wash, the middle line-only with no color, the "
+     f"farthest barely a ghost of pale pencil underdrawing on the "
+     f"paper. Lower-right foreground: {AARON}'s own shoulder and "
+     f"profile today, fully inked and solid, turned away from them. "
+     f"{FULLBLEED}"),
+
+    # spread 66 | Beat 7 | 501.0-507.6s | Fable "The High Priest's
+    # Face" -- the film's FIRST close-up on Christ (every prior
+    # appearance is full-figure standing); hard contrast cut against
+    # 65's fading pencil ghosts
+    ("s66_high_priests_face", STYLE, "jesus,jesus2",
+     f"Hard cut to a full-bleed extreme close-up on {JESUS}'s face "
+     f"alone, eye-level, brow to beard, warm calm eyes looking directly "
+     f"at the viewer -- the densest ink and richest color anywhere in "
+     f"this film, full-strength wash, deep confident line, doubled gold "
+     f"leaf at the frame's edge. Total, undeniable presence. "
+     f"{FULLBLEED}"),
+
+    # spread 67 | Beat 7 | 507.6-516.6s | Fable "The Same Road, Lit" --
+    # byte-matches spread 32's own composition (chained directly),
+    # transfiguring the SAME journey from desolate to gold-lit hope
+    ("s67_same_road_lit", STYLE, "s32goat",
+     f"The EXACT same composition as the reference image (the goat "
+     f"receding on a diagonal path toward the same horizon) -- but the "
+     f"world transfigured: warm dawn gold wash replaces the ink-blue "
+     f"desolation, the horizon itself glows, and the goat's own trail "
+     f"is rendered as a thin strip of gold leaf running along the path "
+     f"and off the page's edge. The same goat in the same standing "
+     f"pose, carried away -- but the road itself is gold now. "
+     f"{FULLBLEED}"),
+
+    # spread 68 | Beat 7 | 516.6-526.08s | Vast wide: east/west horizon,
+    # dawn at one edge
+    ("s68_east_west_horizon", STYLE, "",
+     f"VAST WIDE view of the open wilderness horizon stretching from "
+     f"one edge of the frame to the other, dawn's first warm light "
+     f"breaking at one edge while the opposite edge still holds the "
+     f"cool blue of night -- no figure, the whole width of the earth "
+     f"held in one frame. {FULLBLEED}"),
+
+    # spread 69 | Beat 7 | 526.08-532.32s | Composite card: Ps 103:12
+    ("s69_east_west_card", STYLE, "",
+     f"The same vast dawn-breaking horizon as before, no figure present "
+     f"-- reserved as background art for the verse 'as far as the east "
+     f"is from the west.' {FULLBLEED}"),
+
+    # spread 70 | Beat 7 | 532.32-538.7s | The torn veil, held open,
+    # steady -- distinct from 62/63: settled/steady, not the fresh tear
+    ("s70_veil_held_open", STYLE, "holyofholies",
+     f"REVERSE ANGLE, from deep INSIDE the Holy of Holies looking back "
+     f"OUT: the ark and mercy seat a dark, near silhouette in the close "
+     f"foreground, and beyond them, far across the room, the torn "
+     f"opening in the curtain glows small and bright in the distance -- "
+     f"a genuinely different vantage from every other torn-veil shot in "
+     f"this film, which all look AT the curtain from outside it. No "
+     f"figure present. {FULLBLEED}"),
+
+    # spread 71 | Beat 7 | 538.7-547.20s | THE WAY OPEN -- POV through
+    # the rent toward the mercy seat, light pouring OUT toward viewer
+    ("s71_the_way_open", STYLE, "veil,holyofholies",
+     f"Looking directly THROUGH the torn rent in {VEIL} toward the Holy "
+     f"of Holies beyond -- the ark and mercy seat visible past the "
+     f"opening, brilliant light pouring OUT through the tear toward the "
+     f"viewer, no longer contained. No figure present, the way itself "
+     f"now open. {FULLBLEED}"),
+
+    # spread 72 | Beat 7 | 547.20-553.20s | Verse card: Heb 10:19
+    ("s72_boldness_card", STYLE, "tabernacle",
+     f"EXTERIOR view of the whole humble tabernacle tent structure, "
+     f"the same plain weathered hide roof as the reference image, but "
+     f"now a single brilliant shaft of gold light escapes upward "
+     f"through a narrow gap in that roof, visible from outside against "
+     f"the sky -- the event's outward sign, a genuinely different "
+     f"vantage from every interior curtain shot in this film. No "
+     f"figure present. Reserved as background art for the verse "
+     f"'boldness to enter into the holiest by the blood of Jesus.' "
+     f"{FULLBLEED}"),
+
+    # spread 73 | Beat 7 | 553.20-558.3s | Aaron steps aside, gesturing
+    # the viewer forward
+    ("s73_aaron_steps_aside", STYLE, "aaron,veil",
+     f"{AARON} stepping aside from the torn veil's opening, one hand "
+     f"extended in a gesture inviting the viewer forward through the "
+     f"gap, his own face turned toward the viewer -- the mediator's own "
+     f"posture of stepping back, making way. {FULLBLEED}"),
+
+    # spread 74 | Beat 7 | 558.3-571.0s | Fable "Every Year, Gone" --
+    # the film's tightest crop, the linework itself softer/lighter than
+    # any earlier Aaron, pure blank paper, no tent/veil/anything
+    ("s74_every_year_gone", STYLE, "aaron",
+     f"The tightest crop in the entire film: {AARON} from brow to "
+     f"beard, background pure blank aged paper, no tent, no veil, "
+     f"nothing else at all. The drawing itself relaxes here -- fewer "
+     f"lines, lighter graphite pressure than any earlier appearance of "
+     f"him in this film, the fear visibly gone from the linework "
+     f"itself. His eyes wet-bright, the faint smile of a man who has "
+     f"just set something down at last. {FULLBLEED}"),
+
+    # spread 75 | Beat 7 | 571.0-583.3s | DESIGNED ACTING SPREAD -- Fable
+    # "The Reach": the ONE deliberate exception to frozen-tableau in
+    # this film -- pose is the START of a closed, obvious single motion
+    # (Kling tier, fail-closed Jesus QC per the plan)
+    ("s75_the_reach", STYLE, "jesus,jesus2,veil",
+     f"{JESUS} standing in the torn veil's opening, the ragged torn "
+     f"edges framing Him like an aperture aimed straight at the viewer. "
+     f"Feet planted on the threshold, His far hand resting visibly at "
+     f"His side, at rest. His near arm bent, hand at waist height, "
+     f"palm already turning up close to His body -- the clear START of "
+     f"a single reaching gesture, not a completed one. Gold light "
+     f"through the tear backlights that arm alone. {FULLBLEED}"),
+
+    # spread 76 | Beat 7/LAND | 583.3-588.64s | THE LANDING -- Fable
+    # "Already Inside": the art that sits inside the mandatory tear_hole
+    # device (applied at finishing, not part of this render) -- nearness
+    # and rest, not formal glory (contrast with s60's throne)
+    ("s76_already_inside", STYLE, "jesus,jesus2",
+     f"Through a warm gold interior haze: {JESUS} seated on a plain low "
+     f"stone step, leaning slightly forward, forearms resting on His "
+     f"knees, hands loosely clasped and at rest -- the posture of a "
+     f"friend who has been waiting, not a king holding court. His face "
+     f"turned toward the viewer, calm, a faint warm smile. Soft deep "
+     f"gold fills the space behind Him. {FULLBLEED}"),
+]
+
+ALL_SHOTS = SHOTS_TEST + SHOTS_BATCH1 + SHOTS_BATCH2 + SHOTS_BATCH3 + SHOTS_BATCH4 + SHOTS_BATCH5 + SHOTS_BATCH6 + SHOTS_BATCH7
 
 
 def main(only=None):

@@ -123,14 +123,66 @@
 # "Spreads 54-61" section:
 #   file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/poc_living_sketchbook/_DAY_OF_ATONEMENT_CAST_REVIEW.html
 #
-# ── EXACT RESUME POINT ── Next: spread 55 (the ONE Elder Leaf settle --
-# pure compositing over spread 54's art + Scribed Ink text, no new still
-# needed, per SKILL.md's /elder-leaf), then spreads 62-76: Beat 7 "the
-# invitation," the CTA-to-Jesus landing -- the most doctrinally load-
-# bearing stretch of the whole film. Read `_PLAN.md` rows 62-76 fresh
-# before starting; this is a natural point to bring clear eyes rather
-# than push through at the tail of an already-long session. Spreads
-# 54-61 + this update are NOT yet committed -- ask the user first.
+# ── SAME SESSION, CONTINUED FURTHER: spreads 62-76 rendered --
+# **76 of 76 spreads DONE. THE ENTIRE STILLS STAGE OF THIS EPISODE IS
+# COMPLETE.** This was the landing arc (Beat 7, "the invitation") -- the
+# veil tears, Aaron steps aside, Christ reaches out, the film lands on
+# Him. Also caught + fixed one real gap along the way: s60's seated
+# Christ had a hand that faded into the gold armrest with no fingers
+# rendered -- the API returned success and my own first eye-check missed
+# it too; the USER caught it on their own look. Re-shot clean, and the
+# lesson (check each hand/limb individually against its own local
+# background on glory-lit figures, not just "a hand is present" for the
+# pose) is now in memory `living-sketchbook-skill.md`.
+#
+# Per the user's standing instruction ("always use fable to design and
+# sonnet to execute"), had a Fable agent design the true creative beats
+# of the landing arc (spreads 64/65/66/67/74/75/76 -- Empty Hands, The
+# Ritual Un-inks, The High Priest's Face, The Same Road Lit, Every Year
+# Gone, The Reach, Already Inside), executed by Sonnet. All 7 landed
+# clean on the first render -- no re-rolls needed on any of them, a good
+# sign the design-then-execute split works well for genuinely creative
+# beats (same pattern that already worked once this session on the
+# repetitive-portrait fix, spreads 36/43/44/46/47). Sonnet still checks
+# every Fable concept against this episode's own locked rules before
+# executing -- the earlier round caught Fable proposing 3 ages of Aaron
+# in one frame (rejected, conflicts with the one-appearance rule); this
+# round had no such conflict to catch.
+#
+# Real defect this round (repetition, not the usual content-accuracy
+# kind): the torn-veil sequence (62/63/70/72) independently hit the SAME
+# "too many similar-looking stills" problem the user caught earlier in
+# this session on the Aaron-portrait run -- 3 of 4 torn-veil shots came
+# out as near-identical wide 4-panel shots. Fixed with genuinely
+# different vantages for each: #63 an extreme macro on just the torn
+# fibers, #70 a reverse angle from inside the Holy of Holies looking
+# OUT, #72 a full exterior view of the tabernacle tent with light
+# escaping through the roof. **Lesson for the NEXT episode:** the
+# repetition-audit discipline (contact-sheet review, genuinely different
+# vantage per appearance of a recurring symbol) needs to apply to EVERY
+# recurring visual element across a whole episode, not just to one
+# character's portrait shots -- it recurred here on a different subject
+# within the same session, so it's a general pattern risk, not a one-off.
+#
+# ── FINAL SPEND for the whole episode's stills stage: $37.20 (124
+# renders across the full 76 spreads + 6 cast/world anchors incl. the
+# mid-episode city-gate addition). Gallery has the final "Spreads 62-76"
+# section, explicitly marked 76/76 COMPLETE:
+#   file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/poc_living_sketchbook/_DAY_OF_ATONEMENT_CAST_REVIEW.html
+#
+# ── EXACT RESUME POINT ── Stills stage is DONE. Next real steps for this
+# episode, in order: (1) spread 55's Elder Leaf settle -- pure
+# compositing over spread 54's art + Scribed Ink text via the existing
+# /elder-leaf skill, no new still needed; (2) the multi-stage hard-cut
+# animation pairs (10/11 strange fire, 25/26/27 slaying-through-veil,
+# 61/62 whole-to-torn veil) need to be built as actual cut-together clips
+# at the animate stage, not just adjacent stills; (3) Phase C animation
+# proper -- 76 stills need clips (see `/animate-long` skill, veo3_1_lite
+# via HF for long-form, this project's existing tiering rules); (4) the
+# designed acting spread (#75) needs its Kling-tier fail-closed Jesus QC
+# per the plan's own note; (5) assembly, score, sfx, captions, watermark,
+# INV-26 landing-hold check -- the standard finishing chain. Nothing from
+# spreads 54-76 is committed yet -- ask the user first.
 #
 # ── EXACT RESUME POINT ──
 # Next spread to build: **#49**, a DOUBLE Scribed-Ink verse card (Heb 10:3
