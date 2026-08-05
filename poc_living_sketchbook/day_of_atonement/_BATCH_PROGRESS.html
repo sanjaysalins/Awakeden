@@ -5,25 +5,43 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Day of Atonement LONG — animate batch progress</title>
 <style>
-  body { background:#16181d; color:#e8e4d8; font-family:Georgia, serif; line-height:1.55; padding:28px 18px 90px; }
+  body { background:#16181d; color:#e8e4d8; font-family:Georgia, serif; line-height:1.55; padding:0 18px 90px; }
   .wrap { max-width:1500px; margin:0 auto; }
-  h1 { color:#e9c877; font-size:1.8rem; margin-bottom:6px; }
+  h1 { color:#e9c877; font-size:1.8rem; margin-bottom:6px; padding-top:20px; }
   .sub { color:#9aa0ad; margin-bottom:18px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:16px; margin-top:16px; }
   .card { background:#1e2129; border-radius:8px; overflow:hidden; border:2px solid transparent; position:relative; }
   .card.dollar { border-color:#3a5a4a; }
+  .card.flagged { border-color:#c9553d; }
   .card video { width:100%; display:block; background:#000; min-height:80px; }
-  .cap { padding:9px 12px; font-size:.82rem; color:#c9c4b6; }
+  .cap { padding:9px 12px 4px; font-size:.82rem; color:#c9c4b6; display:flex; align-items:center; justify-content:space-between; gap:8px; }
   .cap b { color:#e8e4d8; }
   .tag { display:inline-block; font-size:.68rem; padding:1px 6px; border-radius:4px; background:#1e3226; color:#8fd39f; margin-left:6px; }
   .pending { opacity:.35; }
   .pending .cap { color:#6a6f7a; }
+  .flagbtn { flex-shrink:0; cursor:pointer; border:1px solid #4a4f5a; background:#262a33; color:#9aa0ad; font-size:.78rem; padding:2px 8px; border-radius:5px; font-family:Georgia,serif; }
+  .flagbtn.on { background:#c9553d; border-color:#c9553d; color:#fff; }
+  .note { display:block; width:100%; box-sizing:border-box; margin:0 12px 10px; padding:6px 8px; background:#14161b; color:#e8e4d8; border:1px solid #363a44; border-radius:5px; font-family:Georgia,serif; font-size:.85rem; resize:vertical; min-height:38px; }
+  .note::placeholder { color:#565b66; }
+  .toolbar { position:sticky; top:0; z-index:10; background:#16181d; padding:12px 0 10px; border-bottom:1px solid #2a2d35; display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  .toolbar button { cursor:pointer; border:1px solid #4a4f5a; background:#262a33; color:#e8e4d8; font-size:.9rem; padding:7px 14px; border-radius:6px; font-family:Georgia,serif; }
+  .toolbar button.primary { background:#e9c877; color:#1e2129; border-color:#e9c877; font-weight:bold; }
+  .count { color:#c9553d; font-weight:bold; }
+  .savedmsg { color:#8fd39f; font-size:.85rem; opacity:0; transition:opacity .3s; }
+  .savedmsg.show { opacity:1; }
 </style>
 </head>
 <body>
 <div class="wrap">
+<div class="toolbar">
+  <button id="exportBtn" class="primary">Save My Notes</button>
+  <button id="clearBtn">Clear All Notes</button>
+  <span><span class="count" id="flagCount">0</span> flagged of 76</span>
+  <span class="savedmsg" id="savedMsg">saved ✓</span>
+</div>
 <h1>DAY OF ATONEMENT LONG — animate stage complete, 76/76</h1>
-<div class="sub">Every spread, story order, all done. Green border = $0 deterministic camera move (12 spreads: 54, 55, 51, 52, 53, 56, 57, 60, 66, 05, 25, 76); plain = paid Kling/Seedance. Real defects found and fixed along the way: s07 (invented figure), s15 (Moses's eyes), s25 (invented blood), s05 (flapping wings, twice). s75 (Christ's hand) passed fail-closed QC clean on the first attempt.</div>
+<div class="sub">Every spread, story order, all done. Green border = $0 deterministic camera move (12 spreads: 54, 55, 51, 52, 53, 56, 57, 60, 66, 05, 25, 76); plain = paid Kling/Seedance. Real defects found and fixed along the way: s07 (invented figure), s15 (Moses's eyes), s25 (invented blood), s05 (flapping wings, twice). s75 (Christ's hand) passed fail-closed QC clean on the first attempt.
+<br><br><b>How to leave notes:</b> click the ⚑ button on any spread that needs a fix, then type a short note in the box under it (e.g. "hand looks wrong" or "too fast"). It saves as you type — safe to close the tab and come back. When done, click <b>Save My Notes</b> at the top — it downloads one file, tell me when it's done and I'll read it.</div>
 <div class="grid" id="grid"></div>
 </div>
 <script>
@@ -56,21 +74,99 @@ const SPREADS = [
   ["s71_the_way_open",0],["s72_boldness_card",0],["s73_aaron_steps_aside",0],
   ["s74_every_year_gone",0],["s75_the_reach",0],["s76_already_inside",1],
 ];
+const STORAGE_KEY = "doa_batch_notes_v1";
+
+function loadNotes() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
+  catch (e) { return {}; }
+}
+function saveNotes(notes) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(notes));
+  const msg = document.getElementById('savedMsg');
+  msg.classList.add('show');
+  clearTimeout(saveNotes._t);
+  saveNotes._t = setTimeout(() => msg.classList.remove('show'), 900);
+}
+function updateFlagCount(notes) {
+  const n = SPREADS.filter(([name]) => notes[name] && notes[name].flagged).length;
+  document.getElementById('flagCount').textContent = n;
+}
+
+let notes = loadNotes();
 const grid = document.getElementById('grid');
+
 for (const [name, dollar] of SPREADS) {
   const url = "clips/" + name + ".mp4";
+  const entry = notes[name] || { flagged: false, text: "" };
   const card = document.createElement('div');
-  card.className = "card" + (dollar ? " dollar" : "");
+  card.className = "card" + (dollar ? " dollar" : "") + (entry.flagged ? " flagged" : "");
   const v = document.createElement('video');
   v.src = url; v.controls = true; v.preload = "metadata"; v.muted = true; v.loop = true;
   v.onerror = () => card.classList.add('pending');
   card.appendChild(v);
+
   const cap = document.createElement('div');
   cap.className = "cap";
   cap.innerHTML = `<b>${name}</b>` + (dollar ? '<span class="tag">$0 camera</span>' : '');
+  const flagBtn = document.createElement('button');
+  flagBtn.className = "flagbtn" + (entry.flagged ? " on" : "");
+  flagBtn.textContent = entry.flagged ? "⚑ flagged" : "⚑ flag";
+  flagBtn.onclick = () => {
+    entry.flagged = !entry.flagged;
+    notes[name] = entry;
+    card.classList.toggle('flagged', entry.flagged);
+    flagBtn.classList.toggle('on', entry.flagged);
+    flagBtn.textContent = entry.flagged ? "⚑ flagged" : "⚑ flag";
+    saveNotes(notes);
+    updateFlagCount(notes);
+  };
+  cap.appendChild(flagBtn);
   card.appendChild(cap);
+
+  const note = document.createElement('textarea');
+  note.className = "note";
+  note.placeholder = "note (optional) — what's wrong with this one?";
+  note.value = entry.text || "";
+  note.rows = 2;
+  note.oninput = () => {
+    entry.text = note.value;
+    notes[name] = entry;
+    saveNotes(notes);
+  };
+  card.appendChild(note);
+
   grid.appendChild(card);
 }
+updateFlagCount(notes);
+
+document.getElementById('exportBtn').onclick = () => {
+  const lines = ["DAY OF ATONEMENT LONG — clip review notes", ""];
+  let any = false;
+  for (const [name] of SPREADS) {
+    const e = notes[name];
+    if (e && (e.flagged || (e.text && e.text.trim()))) {
+      any = true;
+      lines.push(`${name}${e.flagged ? "  [FLAGGED]" : ""}`);
+      if (e.text && e.text.trim()) lines.push(`  note: ${e.text.trim()}`);
+      lines.push("");
+    }
+  }
+  if (!any) lines.push("(no spreads flagged or noted)");
+  const blob = new Blob([lines.join("\n")], { type: "text/plain" });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = "day_of_atonement_review_notes.txt";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+};
+
+document.getElementById('clearBtn').onclick = () => {
+  if (!confirm("Clear all flags and notes? This can't be undone.")) return;
+  notes = {};
+  saveNotes(notes);
+  location.reload();
+};
 </script>
 </body>
 </html>
