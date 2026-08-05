@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>No-camera hold POC — static vs spotlight family</title>
+<style>
+  body { background:#16181d; color:#e8e4d8; font-family:Georgia, serif; line-height:1.55; padding:28px 18px 90px; }
+  .wrap { max-width:1500px; margin:0 auto; }
+  h1 { color:#e9c877; font-size:1.7rem; margin-bottom:6px; }
+  .sub { color:#9aa0ad; margin-bottom:24px; max-width:950px; }
+  .row { margin-bottom:36px; }
+  .row h2 { color:#e8e4d8; font-size:1.15rem; margin-bottom:4px; font-weight:normal; }
+  .row .note { color:#8a8f9a; font-size:.85rem; margin-bottom:10px; }
+  .grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+  .card { background:#1e2129; border-radius:8px; overflow:hidden; }
+  .card video { width:100%; display:block; background:#000; }
+  .cap { padding:9px 12px; font-size:.85rem; color:#c9c4b6; }
+  .cap b { color:#e8e4d8; }
+  .warn { color:#d38f8f; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>No-camera hold POC — plain static vs the "spotlight" family</h1>
+<div class="sub">These are spreads that used a slow camera push/arc as their MAIN animation (a substitute for a generative clip that invented bad content). With all camera movement removed, they become plain frozen stills unless something else carries them. Compared here: a true static hold (nothing moving at all) against 3 light-only "spotlight" treatments from panel_animator/focal_tour.py — light settles on the face, everything else dims slightly. No camera, no crop, no zoom in any of these.</div>
+
+<div class="row">
+  <h2>#51 — Jesus, the pivot (13.3s, the longest Christ hold in the film)</h2>
+  <div class="grid4">
+    <div class="card"><video src="s51_jesus_pivot_static.mp4" controls preload="metadata"></video><div class="cap"><b>Plain static</b> — nothing moves</div></div>
+    <div class="card"><video src="s51_jesus_pivot_dramatic_spotlight.mp4" controls preload="metadata"></video><div class="cap"><b>Dramatic spotlight</b> — settles once, holds</div></div>
+    <div class="card"><video src="s51_jesus_pivot_caravaggio_pulse.mp4" controls preload="metadata"></video><div class="cap"><b>Caravaggio pulse</b> — settles, then breathes gently</div></div>
+    <div class="card"><video src="s51_jesus_pivot_slow_breath.mp4" controls preload="metadata"></video><div class="cap"><b>Slow breath</b> <span class="warn">— its own pacing wants ~17s; at 13.3s it doesn't finish settling (watch it cut off early)</span></div></div>
+  </div>
+</div>
+
+<div class="row">
+  <h2>#60 — Christ seated in glory (7.4s, a shorter hold)</h2>
+  <div class="grid4">
+    <div class="card"><video src="s60_seated_glory_static.mp4" controls preload="metadata"></video><div class="cap"><b>Plain static</b> — nothing moves</div></div>
+    <div class="card"><video src="s60_seated_glory_dramatic_spotlight.mp4" controls preload="metadata"></video><div class="cap"><b>Dramatic spotlight</b> — timing tightened to fit 7.4s</div></div>
+    <div class="card"><video src="s60_seated_glory_caravaggio_pulse.mp4" controls preload="metadata"></video><div class="cap"><b>Caravaggio pulse</b> — timing tightened to fit 7.4s</div></div>
+    <div class="card"><video src="s60_seated_glory_slow_breath.mp4" controls preload="metadata"></video><div class="cap"><b>Slow breath</b> <span class="warn">— way too short for this style, mostly doesn't move at all</span></div></div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>

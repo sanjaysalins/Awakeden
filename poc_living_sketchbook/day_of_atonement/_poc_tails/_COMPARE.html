@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hold-filler POC — Ken Burns vs Living Light</title>
+<style>
+  body { background:#16181d; color:#e8e4d8; font-family:Georgia, serif; line-height:1.55; padding:28px 18px 90px; }
+  .wrap { max-width:1400px; margin:0 auto; }
+  h1 { color:#e9c877; font-size:1.7rem; margin-bottom:6px; }
+  .sub { color:#9aa0ad; margin-bottom:24px; max-width:900px; }
+  .row { margin-bottom:36px; }
+  .row h2 { color:#e8e4d8; font-size:1.15rem; margin-bottom:10px; font-weight:normal; }
+  .pair { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .card { background:#1e2129; border-radius:8px; overflow:hidden; border:2px solid transparent; }
+  .card.old { border-color:#5a3a3a; }
+  .card.new { border-color:#3a5a4a; }
+  .card video { width:100%; display:block; background:#000; }
+  .cap { padding:9px 12px; font-size:.85rem; color:#c9c4b6; }
+  .cap b { color:#e8e4d8; }
+  .tag { font-size:.7rem; padding:1px 7px; border-radius:4px; margin-left:6px; }
+  .tag.old { background:#3a2626; color:#d38f8f; }
+  .tag.new { background:#1e3226; color:#8fd39f; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Hold-filler POC — Ken Burns push/arc vs "The Lamp Finds the Page"</h1>
+<div class="sub">Same 3 spreads, two treatments. LEFT (red border) = the old camera push/arc you flagged as amateurish. RIGHT (green border) = the new treatment: the real clip plays once, then the camera stops moving entirely and a slow raking-light sweep + a faint hand-inked wobble carries the rest of the hold — the page stays still, the light moves. Watch each pair back to back.</div>
+
+<div class="row">
+  <h2>#42 — object close-up (basin + linen)</h2>
+  <div class="pair">
+    <div class="card old"><video src="../_segments/seg_s42_basin_linen_ready.mp4" controls preload="metadata"></video><div class="cap"><b>Old</b> <span class="tag old">zoom</span></div></div>
+    <div class="card new"><video src="s42_basin_linen_ready_livinglight.mp4" controls preload="metadata"></video><div class="cap"><b>New</b> <span class="tag new">living light</span></div></div>
+  </div>
+</div>
+
+<div class="row">
+  <h2>#68 — wide landscape (east/west horizon)</h2>
+  <div class="pair">
+    <div class="card old"><video src="../_segments/seg_s68_east_west_horizon.mp4" controls preload="metadata"></video><div class="cap"><b>Old</b> <span class="tag old">zoom</span></div></div>
+    <div class="card new"><video src="s68_east_west_horizon_livinglight.mp4" controls preload="metadata"></video><div class="cap"><b>New</b> <span class="tag new">living light</span></div></div>
+  </div>
+</div>
+
+<div class="row">
+  <h2>#16 — verse card (the LORD's charge, longest hold in the film)</h2>
+  <div class="pair">
+    <div class="card old"><video src="../_segments/seg_s16_lords_charge_card.mp4" controls preload="metadata"></video><div class="cap"><b>Old</b> <span class="tag old">zoom</span></div></div>
+    <div class="card new"><video src="s16_lords_charge_card_livinglight.mp4" controls preload="metadata"></video><div class="cap"><b>New</b> <span class="tag new">living light</span></div></div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>

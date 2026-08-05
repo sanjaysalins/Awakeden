@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Motion-design POC — 6 options</title>
+<style>
+  body { background:#16181d; color:#e8e4d8; font-family:Georgia, serif; line-height:1.55; padding:28px 18px 90px; }
+  .wrap { max-width:1400px; margin:0 auto; }
+  h1 { color:#e9c877; font-size:1.7rem; margin-bottom:6px; }
+  .sub { color:#9aa0ad; margin-bottom:24px; max-width:950px; }
+  .row { margin-bottom:32px; }
+  .row h2 { color:#e8e4d8; font-size:1.15rem; margin-bottom:4px; font-weight:normal; }
+  .row .note { color:#8a8f9a; font-size:.85rem; margin-bottom:10px; }
+  .row .warn { color:#d3a86f; font-size:.85rem; margin-bottom:10px; }
+  .card { background:#1e2129; border-radius:8px; overflow:hidden; max-width:640px; }
+  .card video { width:100%; display:block; background:#000; }
+  .cap { padding:9px 12px; font-size:.85rem; color:#c9c4b6; }
+  .cap b { color:#e8e4d8; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Motion-design POC — a different lens from the paper-physics family</h1>
+<div class="sub">Not more light/paper effects (rounds 1-2 covered that ground) — real motion-design thinking: rhythm, layering, graphic accents, colour choreography. Still zero camera movement, zero repaint, $0 deterministic throughout.</div>
+
+<div class="row">
+  <h2>1. Registration Snap — verse card, out-of-register print snaps sharp on the key word</h2>
+  <div class="note">Watch closely: a faint dot-screen and colour fringe sits over the card, then clears at ~4s into a sharp, clean page. A discrete BEAT, not a continuous effect — the first thing built so far that isn't.</div>
+  <div class="card"><video src="s24_lots_card_registration_snap.mp4" controls preload="metadata"></video><div class="cap"><b>#24 The lots</b></div></div>
+</div>
+
+<div class="row">
+  <h2>2. Ink-Up Build — multi-figure "argument" scene, attention by finish not light</h2>
+  <div class="note">Each goat visibly ghosts back into the paper when not the current focus, then re-inks when its turn comes. No lighting changes anywhere — purely how "finished" each drawing looks.</div>
+  <div class="card"><video src="s56_the_answer_ink_up_build.mp4" controls preload="metadata"></video><div class="cap"><b>#56 The Answer</b></div></div>
+</div>
+
+<div class="row">
+  <h2>3. Locked-Plate Parallax — the page never moves, one layer floats behind Christ</h2>
+  <div class="note">Deliberately subtle (6px drift) and eye-checked at full resolution for a clean cutout edge, no haloing. May read as too subtle in real playback — easy to make more pronounced if wanted.</div>
+  <div class="card"><video src="s51_jesus_pivot_locked_parallax.mp4" controls preload="metadata"></video><div class="cap"><b>#51 Jesus, the pivot</b></div></div>
+</div>
+
+<div class="row">
+  <h2>4. East/West Palette Pivot — colour itself separates as the words describe it</h2>
+  <div class="note">Opens near-uniform, ends with the left half warm and the right half cool — the doctrine (transgressions removed "as far as the east is from the west") IS the colour move.</div>
+  <div class="card"><video src="s68_east_west_horizon_palette_pivot.mp4" controls preload="metadata"></video><div class="cap"><b>#68 East/west horizon</b></div></div>
+</div>
+
+<div class="row">
+  <h2>5. Crop-Mark Approval — pale graphite marks draw in, page "passed for press"</h2>
+  <div class="warn">Honest flag: the closing rule line landed over busy artwork on THIS test still (needs a proper blank-margin position per spread, not the fixed spot I used for the POC) — the corner marks themselves are working correctly.</div>
+  <div class="card"><video src="s20_blood_atonement_card_crop_mark.mp4" controls preload="metadata"></video><div class="cap"><b>#20 Blood atonement card</b></div></div>
+</div>
+
+<div class="row">
+  <h2>6. Letterpress Beat — the linework presses slightly darker on real speech beats</h2>
+  <div class="note">7 beats, timed from this spread's own real word-alignment. Very subtle by design (felt, not seen) — confirmed firing on close inspection, but may want strengthening.</div>
+  <div class="card"><video src="s39_honesty_close_letterpress_beat.mp4" controls preload="metadata"></video><div class="cap"><b>#39 Honesty close</b></div></div>
+</div>
+
+</div>
+</body>
+</html>
