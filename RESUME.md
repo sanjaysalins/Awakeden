@@ -1,5 +1,177 @@
 # ══════════════════════════════════════════════════════════════════════════
-# ★★★★★★★★★★★★ SESSION HANDOVER 2026-08-05 (LATEST) — READ THIS FIRST —
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-05 (END OF SESSION) — READ THIS
+# FIRST — supersedes every block below, including the motion-design-toolkit
+# block right under this one (still fully accurate for what was BUILT, just
+# not the resume point anymore -- the user said "keep them all" and paused
+# the actual rollout here deliberately, to pick up fresh next session rather
+# than rush a 76-spread build late in a long session).
+#
+# ── STATUS: user reviewed the full `_KEEPER_PICKER.html` menu (27 options
+# across transitions/holds/motion-design/text-combos) and said "keep them
+# all" -- i.e. don't narrow to a curated subset, use ALL of them somewhere
+# in the real film, matched to content. This is a genuinely large rollout
+# (every one of 76 spreads needs a content-fit decision, every verse card
+# needs real KJV text authored, every one of ~73 ordinary cuts needs a
+# transition pick) -- started the planning, did NOT start the build. User's
+# own words mid-planning: "when this is done, please save and commit
+# everything, prep handover and resume and lets pick this tomorrow."
+#
+# ── THE PLAN WORKED OUT SO FAR (read this before re-deriving it) --
+#
+# 1. REAL SCOPE DISCOVERY: none of the 14 verse-card (VC-type) spreads have
+#    any real lettering yet -- every one is still a blank paper margin. The
+#    Scribed-Ink/Illuminated-Rubric compositing pass was always planned as
+#    a SEPARATE step (per _s4_animate.py's own docstring) and has never
+#    actually been done for this episode. "Keep them all" + the earlier
+#    "motion design must serve the real text" correction together mean:
+#    this rollout is also the FIRST time these cards get real text at all.
+#
+# 2. VERSE-CARD SCOPE SPLIT (don't try to do all 14 the same way):
+#    - 8 "plain" cards (Device column = "none" in _PLAN.md sec 2) get one
+#      of the new text-combo devices (Registration Snap+Verse / Ink-Up
+#      Build+Verse / Letterpress Beat+Verse, rotated for variety):
+#      s20_blood_atonement_card (Lev 17:11, "for it is the blood that
+#      maketh an atonement for the soul."), s24_lots_card (Lev 16:8,
+#      ALREADY BUILT as the round-4/5 test case -- reuse, don't rebuild),
+#      s28_bring_blood_card (Lev 16:15, "…bring his blood within the
+#      vail."), s33_empty_horizon_card (Lev 16:22, "…unto a land not
+#      inhabited."), s35_two_kids_card (Lev 16:5, "…two kids of the goats
+#      for a sin offering."), s58_gate_card (Heb 13:12, "…suffered without
+#      the gate."), s69_east_west_card (Ps 103:12, "As far as the east is
+#      from the west…"), s72_boldness_card (Heb 10:19, "…boldness to enter
+#      into the holiest by the blood of Jesus."). Verse text quoted exactly
+#      as _PLAN.md's own on-screen excerpt -- KJV-verbatim, don't paraphrase
+#      or expand to the full verse.
+#    - 6 "specially-named-device" cards (s16 + s52 Illuminated Rubric, s31
+#      Scribed-Ink LIVE-WRITE, s49 double-stacked two-verse, s60 + s63
+#      composite-verse-over-art already paired with Jesus-seated/torn-veil
+#      art) each want their OWN distinct visual grammar that wasn't built
+#      this session -- do NOT force today's text-combo devices onto these.
+#      For THIS rollout just remove their camera push (raking light is the
+#      safe placeholder -- doesn't disturb whatever pairing already exists)
+#      and leave the real Illuminated-Rubric/LIVE-WRITE/double-stack builds
+#      as explicitly deferred, separate future work.
+#
+# 3. THE 18 "DETERMINISTIC" SPREADS ALSO NEED THEIR CAMERA REPLACED --
+#    the user's "no camera movement" rule was clarified to cover ALL held
+#    content, not just hold-filler tails, so the push/arc still driving
+#    these as PRIMARY content must go too. Natural per-spread substitutions
+#    already worked out:
+#      s51_jesus_pivot -> Locked-Plate Parallax (literally already tested
+#        on THIS exact spread in the motion-design POC round -- reuse the
+#        same fg_amp=6/bg_amp=0 call, don't re-derive).
+#      s74_every_year_gone, s04_donning_linen -> Breath-Synced Halo.
+#      s47_light_arrives (plan's own "halftone dissolve, time-shift
+#        grammar") -> Registration Snap (thematically apt: both are a
+#        print/halftone-register concept).
+#      s43_shadow_on_tent_wall (plan wants candle-only, never built) ->
+#        Dramatic Spotlight as a placeholder (low dim_floor reads close to
+#        candle-only's "light budget" idea; real candle_only.py device is
+#        still a good future upgrade).
+#      s60_seated_glory, s63_torn_veil_card -> Raking Light (see verse-card
+#        note above -- these are also VC-type with existing pairings).
+#      s76_already_inside (the LANDING) -> PLAIN STATIC HOLD, not any
+#        effect -- this is the one spread where doing nothing is the most
+#        correct choice: INV-26/sacred-stillness already requires the glow
+#        breathing only, no motion, so plain static is not a placeholder
+#        here, it's the actual right answer.
+#      s45_sign_before_veil, s64_empty_hands (the plan's own "held-breath
+#        quiet point" spreads) -> Breath-Synced Halo (direct fit -- it's
+#        literally built on held_breath.energy_envelope, the same pacing
+#        concept the plan already names for these two).
+#      s05_walking_to_veil, s25_slaying_stage1, s26_through_veil_stage2,
+#        s27_sprinkling, s34_riddle_recap, s50_the_shadow, s52_jesus_
+#        entering_formal, s53_the_cross, s56_the_answer, s57_without_the_
+#        gate, s66_high_priests_face -> NOT YET ASSIGNED, pick per content
+#        type using the same rotation logic as the ~50 "plain" spreads
+#        below (s53/s56 are Jesus spreads -- lean toward Locked-Plate
+#        Parallax or a gentle spotlight variant, reverent register).
+#    LEAVE UNTOUCHED (already correct, not part of this rollout):
+#      s01_cold_open (blue-line, a different already-planned device),
+#      s29_hands_on_goat / s75_the_reach (real Kling acting-spread motion,
+#      don't add another effect on top), spread54_thread_leaf /
+#      spread55_isaiah536 (Thread Device + Elder Leaf, already built+used).
+#
+# 4. THE ~50 REMAINING "PLAIN" NS/MV SPREADS (never had a camera at all --
+#    currently fwd_drift with a real generative clip + whatever tail):
+#    rotate across the kept device pools by content type, not one universal
+#    choice (matches the design panel's own "rotation principle" from
+#    earlier this session -- a single device on 50+ spreads becomes a tic):
+#      Portrait/close-face, direct address or contemplative -> spotlight
+#        family (Dramatic Spotlight / Caravaggio Pulse / Breath-Synced
+#        Halo), rotate three-ways; throw in Plain Static occasionally so
+#        not EVERY portrait spotlights.
+#      Object close-ups (hands, basin, props, lots) -> Raking Light,
+#        Ink-Up Build (if it has 2+ sub-elements), or Locked-Plate Parallax
+#        where there's a clean subject/background split.
+#      Landscape/wide (wilderness, courtyard, horizon) -> East/West Palette
+#        Pivot or Desat Focus, rotate.
+#      MV multi-vignette spreads (s34, s41, s57, s65 -- s54 already done)
+#        -> Ink-Up Build or Chiaroscuro Reveal, rotate.
+#      Crop-Mark Approval -> reserve for 2-3 spreads only, deliberately
+#        rare (matches its own "page passed for press" once-in-a-while
+#        register) -- good candidates: a settled/certain doctrinal beat,
+#        not a raw narrative moment.
+#
+# 5. TRANSITIONS (~73 ordinary cuts, the 3 mandatory hard-cut pairs --
+#    10/11, 25/26/27, 61/62 -- MUST stay untouched, no transition device of
+#    any kind, per _PLAN.md's own explicit "the cut tells the event, never
+#    a morph" rule):
+#      Unseen Hand = the default workhorse for most ordinary cuts (nearly
+#        invisible, per the design panel's own recommendation).
+#      Verse-Mask Reveal: s20_blood_atonement_card -> s21_goat_innocent
+#        (ALREADY BUILT AND TESTED -- "BLOOD" -> the goat's face). Look for
+#        1-2 more genuinely apt word/scene pairs among the other 7 target
+#        verse cards above (e.g. does "GATE" (s58) lead well into s59's
+#        "no chair" wide shot? does "BOLDNESS" (s72) lead into s73's Aaron-
+#        steps-aside?) -- don't force it on cuts where the word doesn't
+#        actually connect to the next image.
+#      Through-the-Object Cut: s44_pointing_smoke -> s45_sign_before_veil
+#        (ALREADY BUILT AND TESTED -- the smoke's tip opens into the veil).
+#        Look for a second candidate -- e.g. s19_altar_ministry's own
+#        rising smoke into s20's card, or s09/s10 grief-into-strange-fire
+#        IF that pair weren't already claimed by the mandatory hard cut
+#        rule (it's spread 9->10, NOT the same as the protected 10/11 pair,
+#        so it's actually available -- check the exact seam before using).
+#      Leaf-Flick / Tipped-In Plate / Lift-Away / ink-bleed blot+wipe ->
+#        used selectively at beat-change boundaries (per _PLAN.md's own
+#        Beat column -- a beat change is a natural place for a slightly
+#        more noticeable transition than the invisible default) and for
+#        pacing variety, not evenly distributed by formula.
+#
+# ── ENGINEERING APPROACH (not yet built) --
+#   - Extend `_s5b_spread_windows.py`'s fill-mode assignment to cover the
+#     full device roster (currently only once_trim/once_hold/fwd_drift).
+#   - Extend `_s6_assemble.py`'s `build_segment()` dispatch to call whichever
+#     module the spread's assigned device needs (most already work directly
+#     on a still + produce a clip -- the glue code is mostly straightforward
+#     per-device dispatch, not new rendering logic).
+#   - The verse-card devices need a still + real text lines/word choice per
+#     card (see the 8 clauses above) -- extend the combo-render functions
+#     from `_poc_motion_text_combo.py` into a proper per-card table instead
+#     of the one hardcoded Lev 16:8 test.
+#   - Transitions need a NEW insertion step in the concat stage (currently
+#     pure hard-cut concat) -- build a bridge segment at each non-hard-cut
+#     boundary and splice it in between the two spread segments, matching
+#     the exact head/bridge/tail pattern already proven in every _poc_
+#     transitions*.py script this session.
+#   - TEST ON A SMALL SUBSET FIRST (5-10 spreads/cuts) before committing to
+#     the full 76-spread render, exactly like every round this session --
+#     do not skip the dense-frame eye-check discipline just because the
+#     individual devices are already proven; the INTEGRATION is new even
+#     when the devices aren't.
+#
+# ── EXACT RESUME POINT for next session -- pick up the rollout build
+# directly from section 3/4/5 above (the categorization work is DONE,
+# start writing the assignment tables + dispatch code). Nothing was built
+# or rendered this stage -- working tree has no real changes beyond the
+# already-committed toolkit (only disposable `_assemble_work/*.txt` scratch
+# files are uncommitted, same class deliberately excluded from every prior
+# commit this session -- harmless, ignore them).
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★ SESSION HANDOVER 2026-08-05 (motion-design toolkit round) —
 # supersedes every block below, including the same-day assembly-first-cut
 # block right under this one (still accurate for what it describes, just not
 # the resume point anymore -- the hold/transition treatment has moved a lot).
