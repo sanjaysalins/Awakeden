@@ -1,5 +1,103 @@
 # ══════════════════════════════════════════════════════════════════════════
-# ★★★★★★★★★★ SESSION HANDOVER 2026-08-05 — READ THIS FIRST — supersedes
+# ★★★★★★★★★★★ SESSION HANDOVER 2026-08-05 (LATER, SAME DAY) — READ THIS
+# FIRST — supersedes every block below, including the earlier same-day
+# punch-list-fix block right under this one (still accurate for what it
+# describes, just not the resume point anymore -- assembly is built now).
+#
+# ── STATUS: FIRST ASSEMBLED CUT OF THE FULL FILM EXISTS, $0, COMMITTED
+# (a5ba766). Not yet watched/heard by the user -- that is the resume point.
+#
+# `poc_living_sketchbook/day_of_atonement/DAYOFATONEMENT_LONG_living_
+# sketchbook.mp4` -- 591.01s (~9:51), 1920x1080, video/audio duration parity
+# within 0.07s, INV-26 landing hold exactly 3.0s. Gitignored (*.mp4) so not
+# itself committed; the pipeline that builds it is.
+#
+# Built by mirroring bronze_serpent_long's proven align -> spread-windows ->
+# assemble recipe exactly (same pattern _s4_animate.py already mirrored for
+# the animate stage):
+#   1. `_s5_align.py` -- $0 local WhisperX force-alignment of the real
+#      EW01_Two_Goats narration.mp3 against narration.spoken.txt. 1613/1613
+#      script words matched cleanly.
+#   2. `_spread_table.py` -- the 76-spread plan-ESTIMATED timing table
+#      transcribed from _PLAN.md sec 2 (verified programmatically: 76 rows,
+#      zero gaps/overlaps, sums to exactly 588.64s).
+#   3. `_s5b_spread_windows.py` -- snaps each spread's start to the nearest
+#      real aligned word (only #76's window drifted >1.5s from the
+#      estimate, expected since it also gets the landing hold added), then
+#      resolves a fill mode per spread. DETERMINISTIC set = all 18
+#      dynamic_cam3d camera-only spreads (the 12 from the original animate
+#      batch + the 6 fixed in the punch-list session earlier today) -- these
+#      hold their last frame rather than ever reverse-bouncing a camera
+#      push. ONE_WAY set = the 2 designed acting spreads (s29 hands-on-goat,
+#      s75 the reach) -- play forward once, calm tail only, never a full
+#      reverse of a completing gesture (verified by eye-check on a contact
+#      sheet before the full build ran). NO_BOUNCE is deliberately EMPTY --
+#      bronze_serpent_long's own NO_BOUNCE spreads (glow-pulse portraits
+#      that looked like "dancing" in reverse) were only found by the user
+#      watching the assembled cut, not predicted in advance; same
+#      discipline here -- don't guess, watch first, then add offenders.
+#   4. `_s6_assemble.py` -- builds each of the 76 spreads as its own ffmpeg
+#      segment (once_trim/once_hold/pingpong/slow_pingpong/fwd_tail_bounce),
+#      hard-cut concats all of them (no dissolve mode exists in this recipe
+#      at all, which satisfies _PLAN.md's multi-stage hard-cut PAIRS
+#      requirement -- 10/11, 25/26/27, 61/62 -- for free), then muxes the
+#      real narration.mp3 on top with the landing hold.
+#
+# Ran the 2-spread test gate first (once_trim/fwd_tail_bounce/once_hold),
+# eye-checked s29's fwd_tail_bounce segment on a contact sheet to confirm
+# the hand-settling gesture completes cleanly with no visible reversal,
+# THEN ran the full 76-spread build. All 76 segments built clean, concat +
+# mux succeeded first try. Coarse whole-film contact sheet (1 frame/8s,
+# ~74 frames) confirms correct story order, no black/corrupted frames
+# (the black backgrounds on s11 struck-down and s53 the-cross are
+# INTENTIONAL restraint, not a bug), hard cuts landing where the plan says.
+# This is a first-pass structural check, NOT the dense-frame per-transition
+# QC that caught real defects earlier today -- the user watching (and
+# listening -- this is a narration-led film, the audio is the primary
+# content and I cannot verify it myself) is still the real gate.
+#
+# Entirely $0 -- every step (WhisperX alignment, all 76 ffmpeg segment
+# builds, concat, mux) is local, no API spend. Ran at the gentle CPU cap
+# throughout per the user's standing 2026-08-05 request.
+#
+# ── WHAT THIS IS NOT YET: a "simple first cut" only, matching
+# bronze_serpent_long's own explicit two-phase discipline ("simple first,
+# polish after"). None of _PLAN.md's named devices are composited in yet --
+# blue-line (s01 cold open), candle-only (s43), halftone dissolve (s47),
+# Thread Device + Elder Leaf (s54/55, ALREADY built as their own clip by
+# _s3_thread_leaf_54_55.py so they're already IN this cut, just without any
+# extra polish beyond that), tear_hole (s76 landing). Also not yet done:
+# score (check first whether an approved Suno arc already fits this topic),
+# ambient SFX bed, captions, INV-27 watermark. All deliberately deferred
+# until this base cut is seen/heard and approved, per that same discipline.
+#
+# ── EXACT RESUME POINT for next session --
+#   1. User needs to WATCH AND LISTEN to
+#      `poc_living_sketchbook/day_of_atonement/DAYOFATONEMENT_LONG_living_
+#      sketchbook.mp4` end to end -- this is the real gate, nothing above
+#      substitutes for it. Likely punch-list items to watch for specifically
+#      (informed by bronze_serpent_long's own post-cut findings): any
+#      pingpong/slow_pingpong spread whose bounce reads as unwanted motion
+#      (glow pulses on close portraits are the known risk pattern -- add to
+#      NO_BOUNCE in _s5b and rebuild just that spread's segment with
+#      --only, no need to redo the whole film) and the two long slow_
+#      pingpong verse cards (s16 18.3s, s31 21.5s) for any visible seam at
+#      the bounce reversal.
+#   2. Once the base cut is approved: score (check first whether an
+#      approved Suno arc fits this topic), ambient SFX bed
+#      (`/sfx`-equivalent for this custom pipeline, not the standard
+#      cli_assemble.py path), captions, INV-27 watermark, then the named
+#      devices above as a deliberate polish pass.
+#   3. `check_landing_hold.py` does not yet cover this file (it only scans
+#      batches/ and longform/ for *_sfx.mp4 -- this piece lives under
+#      poc_living_sketchbook/ and isn't scored+sfx'd yet). Duration parity
+#      and the 3.0s hold were verified manually this session; re-verify
+#      with that gate once the piece reaches its scored+sfx'd final form
+#      and ideally lands in a directory the gate actually scans.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★ SESSION HANDOVER 2026-08-05 (EARLIER) — supersedes
 # every block below, including the 2026-08-04 Phase C animate-complete
 # block right under this one (still accurate for what was built that
 # session, just not the resume point anymore).
