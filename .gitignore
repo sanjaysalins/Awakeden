@@ -52,6 +52,7 @@ _website/COPY_REWRITE.md
 *.gif
 *.bmp
 *.tiff
+*.zip
 
 # Re-allow committed Awakeden site previews + share image (MUST come after the media ignores) ──
 !_website/assets/previews/
