@@ -1,8 +1,121 @@
 # ══════════════════════════════════════════════════════════════════════════
-# ★★★★★★★★★★★ SESSION HANDOVER 2026-08-05 (LATER, SAME DAY) — READ THIS
-# FIRST — supersedes every block below, including the earlier same-day
-# punch-list-fix block right under this one (still accurate for what it
-# describes, just not the resume point anymore -- assembly is built now).
+# ★★★★★★★★★★★★ SESSION HANDOVER 2026-08-05 (LATEST) — READ THIS FIRST —
+# supersedes every block below, including the same-day assembly-first-cut
+# block right under this one (still accurate for what it describes, just not
+# the resume point anymore -- the hold/transition treatment has moved a lot).
+#
+# ── STATUS: A FULL MOTION-DESIGN TOOLKIT EXISTS, POC-VERIFIED, COMMITTED
+# (5df5efd). NOTHING IS WIRED INTO THE MAIN 76-SPREAD ASSEMBLY YET -- the
+# resume point is the user picking actual keepers, then a rollout pass.
+#
+# ── HOW THIS ROUND STARTED: the user watched the assembled first cut and
+# said "I hate this animation, stop zoom in kenburns, it makes it look very
+# amateurish" -- the dynamic_cam3d push/arc used to fill hold-time on short
+# clips. Asked for a small POC of alternatives before committing to anything.
+# That one request turned into 4 full device families, each shown to the
+# user as a side-by-side gallery before the next round started -- NONE of
+# this was built blind; every round waited for the user's reaction first.
+#
+# ── THE 4 FAMILIES (all $0, deterministic, panel_animator/*.py, no camera
+# crop/zoom/pan ever, no generative regeneration, no repaint risk):
+#   1. Cut transitions (replace the old hard-cut-only concat): ink_transition
+#      .py blot/wipe (already existed, re-tested with tailored origins +
+#      slower duration), unseen_hand.py (soft passing shadow hides the cut),
+#      leaf_flick.py (fast blank page-edge whip), tipped_in_plate.py (next
+#      scene arrives as a settling sheet), lift_away.py (already existed,
+#      unused until now -- calm page-turn, retimed to ~0.9s).
+#   2. Motion design (a fresh lens, NOT more paper-physics): registration_
+#      snap.py (misregistered print sharpens into focus on a beat),
+#      ink_up_build.py (attention by drawn completeness, not light),
+#      palette_pivot.py (colour itself separates -- east/west), crop_mark_
+#      approval.py (graphite corner marks draw in), locked-plate parallax
+#      (parallax_25d.py called with bg_amp=0 -- zero new code), letterpress_
+#      beat.py (linework presses darker on real speech beats from THIS
+#      episode's own _alignment.json).
+#   3. Text integration -- THE KEY USER CORRECTION: "we use motion design
+#      along with the narrative text... not just for the animation part."
+#      Round 3's devices only animated the ART; the user wants the actual
+#      verse lettering's ARRIVAL to be part of each device's own beat.
+#      _poc_motion_text_combo.py combines Registration Snap / Ink-Up Build /
+#      Letterpress Beat with real KJV verse text (Lev 16:8) pressing in via
+#      the exact letterpress-ink technique already proven on spreads 54-55
+#      (_s3_thread_leaf_54_55.py's make_line_mask/compose_pressed_tile,
+#      reused not reinvented). All 3 combos landed well.
+#   4. Adapted from the SIBLING project ArkAIology (`C:\Users\sanjay\
+#      PycharmProjects\ArkAIology`, a different-style biblical-archaeology
+#      series with its own motion-design toolkit built from an earlier
+#      creative-brainstorm panel): verse_mask_reveal.py (ported from
+#      visual_bakeoff/iris_mask.py's text_mask_reveal -- the NEXT spread's
+#      art grows outward from inside a pressed word's own letterforms,
+#      "BLOOD" -> the goat's face arriving through the letters) and
+#      through_object_cut.py (ported from radial_iris -- a cut opens exactly
+#      on a meaningful drawn element, e.g. the rising smoke's tip, and the
+#      next scene blooms out from that point, run through THIS project's own
+#      ink-bleed noise field instead of a clean lens iris). Both fully
+#      re-skinned in JITB's own vocabulary -- nothing from ArkAIology's
+#      photoreal look carried over, only the mechanism. Fable (a separate
+#      model call) did the survey-and-adapt design pass both times this
+#      session needed genuinely fresh ideas (the motion-design menu AND the
+#      ArkAIology cross-project mining) -- matches this project's own
+#      standing Fable-designs/Sonnet-builds practice, worked well twice more.
+#
+# ── STANDING LESSONS FROM THIS ROUND (apply from the first prompt next time
+# a similar "give me creative options" request comes in):
+#   1. When the user rejects an effect, get a design PANEL's fresh menu
+#      before building again -- don't just tweak the rejected thing's
+#      parameters. Every round this session that started with a genuine
+#      design-panel pass (not a guess) landed well on the first POC.
+#   2. ALWAYS build the POC before asking the user to judge a design menu in
+#      the abstract -- text descriptions of "a soft shadow hides the cut"
+#      are not enough to approve/reject; the actual side-by-side video is.
+#   3. Dense-frame eye-check EVERY new module before showing it, even when
+#      confident -- this round caught 2 real bugs this way (leaf_flick's A/B
+#      reversed, tipped_in_plate's imperceptible-at-small-thumbnail settle)
+#      that a "does it run without error" check would have missed entirely.
+#      Also caught and CORRECTED myself (out loud, to the user) a false
+#      "found a bug" claim on the raking-light POC -- the growing glow that
+#      looked like an invented flare was already baked into the original
+#      approved generative clips, not new code. Verify before claiming.
+#   4. A small compressed thumbnail can make a REAL effect look broken (the
+#      tipped_in_plate case) -- when a POC looks suspiciously like "nothing
+#      happened," check a full-resolution frame crop before concluding it's
+#      a bug, not just a bigger thumbnail grid.
+#   5. Sibling projects are a real design resource, not just JITB's own
+#      toolkit -- ArkAIology's `visual_bakeoff/iris_mask.py` and `hunt_and_
+#      lock.py` are genuinely reusable $0 primitives (already deterministic,
+#      already camera-free) that just needed re-skinning into JITB's ink/
+#      paper vocabulary. Worth checking other sibling projects' own bake-off
+#      dirs next time this project needs a creative option it doesn't have.
+#
+# ── EXACT RESUME POINT for next session --
+#   1. User needs to pick the ACTUAL KEEPERS across all 4 families +
+#      combos -- there are now far more built options than the film needs;
+#      nothing should ship just because it exists. Likely a per-scene-type
+#      decision (verse cards want one thing, portraits another, meaningful
+#      cut pairs a third) rather than one universal choice.
+#   2. Once keepers are picked: a rollout pass across the real 76-spread
+#      film -- replace _s6_assemble.py's current fwd_drift/once_hold modes
+#      with whichever hold treatment(s) won, and replace the plain hard-cut
+#      concat with whichever transition device(s) won (remembering the 3
+#      plan-mandated hard-cut pairs -- 10/11, 25/26/27, 61/62 -- must stay
+#      untouched, no transition device of any kind). Verse-Mask Reveal and
+#      the letterpress text-combos need real per-spread verse text + word
+#      choices authored, not just the one Lev 16:8 test case.
+#   3. Everything built this round is POC-only in _poc_*/ subfolders --
+#      none of it touches clips/, _segments/, or the real assembled film.
+#      Quick orientation for next session: `_poc_transitions/_COMPARE.html`
+#      + `_COMPARE_ROUND2.html` (8 transition options), `_poc_spotlight/
+#      _COMPARE.html` + `_poc_holds2/_COMPARE.html` (8 hold options),
+#      `_poc_motion_design/_COMPARE.html` (6 motion-design options),
+#      `_poc_motion_text_combo/_COMPARE.html` (3 text-integrated combos),
+#      `_poc_arkaiology_adapt/_COMPARE.html` (2 ArkAIology-adapted devices).
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★ SESSION HANDOVER 2026-08-05 (LATER, SAME DAY) — supersedes
+# every block below, including the earlier same-day punch-list-fix block
+# right under this one (still accurate for what it describes, just not the
+# resume point anymore -- assembly is built now).
 #
 # ── STATUS: FIRST ASSEMBLED CUT OF THE FULL FILM EXISTS, $0, COMMITTED
 # (a5ba766). Not yet watched/heard by the user -- that is the resume point.
