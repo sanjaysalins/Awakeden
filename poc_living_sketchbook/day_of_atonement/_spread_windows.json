@@ -1,0 +1,766 @@
+[
+ {
+  "num": 1,
+  "name": "s01_cold_open",
+  "beat": 1,
+  "start": 0.0,
+  "end": 3.918,
+  "dur": 3.918,
+  "mode": "once_trim",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 2,
+  "name": "s02_tabernacle_wide",
+  "beat": 1,
+  "start": 3.918,
+  "end": 8.714,
+  "dur": 4.796,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 3,
+  "name": "s03_golden_garments",
+  "beat": 1,
+  "start": 8.714,
+  "end": 13.29,
+  "dur": 4.576,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 4,
+  "name": "s04_donning_linen",
+  "beat": 1,
+  "start": 13.29,
+  "end": 22.041,
+  "dur": 8.751,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 5,
+  "name": "s05_walking_to_veil",
+  "beat": 1,
+  "start": 22.041,
+  "end": 26.071,
+  "dur": 4.03,
+  "mode": "once_hold",
+  "clip_dur": 4.0
+ },
+ {
+  "num": 6,
+  "name": "s06_holy_of_holies_empty",
+  "beat": 1,
+  "start": 26.071,
+  "end": 33.801,
+  "dur": 7.73,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 7,
+  "name": "s07_nation_outside",
+  "beat": 1,
+  "start": 33.801,
+  "end": 39.617,
+  "dur": 5.816,
+  "mode": "pingpong",
+  "clip_dur": 5.041667
+ },
+ {
+  "num": 8,
+  "name": "s08_curtain_shut",
+  "beat": 1,
+  "start": 39.617,
+  "end": 46.466,
+  "dur": 6.849,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 9,
+  "name": "s09_grief_close",
+  "beat": 2,
+  "start": 46.466,
+  "end": 49.259,
+  "dur": 2.793,
+  "mode": "once_trim",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 10,
+  "name": "s10_strange_fire",
+  "beat": 2,
+  "start": 49.259,
+  "end": 54.404,
+  "dur": 5.145,
+  "mode": "pingpong",
+  "clip_dur": 5.041667
+ },
+ {
+  "num": 11,
+  "name": "s11_struck_down",
+  "beat": 2,
+  "start": 54.404,
+  "end": 59.042,
+  "dur": 4.638,
+  "mode": "once_trim",
+  "clip_dur": 5.041667
+ },
+ {
+  "num": 12,
+  "name": "s12_bodies_carried_out",
+  "beat": 2,
+  "start": 59.042,
+  "end": 65.616,
+  "dur": 6.574,
+  "mode": "pingpong",
+  "clip_dur": 5.041667
+ },
+ {
+  "num": 13,
+  "name": "s13_door_curtain_sl13",
+  "beat": 2,
+  "start": 65.616,
+  "end": 72.168,
+  "dur": 6.552,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 14,
+  "name": "s14_hand_at_veil",
+  "beat": 2,
+  "start": 72.168,
+  "end": 81.755,
+  "dur": 9.587,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 15,
+  "name": "s15_moses_charge",
+  "beat": 2,
+  "start": 81.755,
+  "end": 87.994,
+  "dur": 6.239,
+  "mode": "pingpong",
+  "clip_dur": 5.041667
+ },
+ {
+  "num": 16,
+  "name": "s16_lords_charge_card",
+  "beat": 2,
+  "start": 87.994,
+  "end": 106.308,
+  "dur": 18.314,
+  "mode": "slow_pingpong",
+  "clip_dur": 8.041667,
+  "factor": 1.1387
+ },
+ {
+  "num": 17,
+  "name": "s17_squared_at_veil",
+  "beat": 2,
+  "start": 106.308,
+  "end": 112.637,
+  "dur": 6.329,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 18,
+  "name": "s18_own_sin_first",
+  "beat": 2,
+  "start": 112.637,
+  "end": 122.934,
+  "dur": 10.297,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 19,
+  "name": "s19_altar_ministry",
+  "beat": 2,
+  "start": 122.934,
+  "end": 133.358,
+  "dur": 10.424,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 20,
+  "name": "s20_blood_atonement_card",
+  "beat": 2,
+  "start": 133.358,
+  "end": 137.112,
+  "dur": 3.754,
+  "mode": "once_trim",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 21,
+  "name": "s21_goat_innocent",
+  "beat": 2,
+  "start": 137.112,
+  "end": 142.045,
+  "dur": 4.933,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 22,
+  "name": "s22_ritual_hands",
+  "beat": 3,
+  "start": 142.045,
+  "end": 147.756,
+  "dur": 5.711,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 23,
+  "name": "s23_two_goats_brought",
+  "beat": 3,
+  "start": 147.756,
+  "end": 156.17,
+  "dur": 8.414,
+  "mode": "pingpong",
+  "clip_dur": 5.041667
+ },
+ {
+  "num": 24,
+  "name": "s24_lots_card",
+  "beat": 3,
+  "start": 156.17,
+  "end": 163.435,
+  "dur": 7.265,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 25,
+  "name": "s25_slaying_stage1",
+  "beat": 3,
+  "start": 163.435,
+  "end": 167.446,
+  "dur": 4.011,
+  "mode": "once_trim",
+  "clip_dur": 5.0
+ },
+ {
+  "num": 26,
+  "name": "s26_through_veil_stage2",
+  "beat": 3,
+  "start": 167.446,
+  "end": 171.713,
+  "dur": 4.267,
+  "mode": "once_hold",
+  "clip_dur": 4.0
+ },
+ {
+  "num": 27,
+  "name": "s27_sprinkling",
+  "beat": 3,
+  "start": 171.713,
+  "end": 175.543,
+  "dur": 3.83,
+  "mode": "once_trim",
+  "clip_dur": 4.0
+ },
+ {
+  "num": 28,
+  "name": "s28_bring_blood_card",
+  "beat": 3,
+  "start": 175.543,
+  "end": 182.208,
+  "dur": 6.665,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 29,
+  "name": "s29_hands_on_goat",
+  "beat": 3,
+  "start": 182.208,
+  "end": 188.35,
+  "dur": 6.142,
+  "mode": "fwd_tail_bounce",
+  "clip_dur": 5.041667,
+  "tail_s": 1.5
+ },
+ {
+  "num": 30,
+  "name": "s30_confession",
+  "beat": 3,
+  "start": 188.35,
+  "end": 194.042,
+  "dur": 5.692,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 31,
+  "name": "s31_confession_card",
+  "beat": 3,
+  "start": 194.042,
+  "end": 215.54,
+  "dur": 21.498,
+  "mode": "slow_pingpong",
+  "clip_dur": 8.041667,
+  "factor": 1.3367
+ },
+ {
+  "num": 32,
+  "name": "s32_goat_led_away",
+  "beat": 3,
+  "start": 215.54,
+  "end": 223.527,
+  "dur": 7.987,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 33,
+  "name": "s33_empty_horizon_card",
+  "beat": 3,
+  "start": 223.527,
+  "end": 229.941,
+  "dur": 6.414,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 34,
+  "name": "s34_riddle_recap",
+  "beat": 4,
+  "start": 229.941,
+  "end": 239.202,
+  "dur": 9.261,
+  "mode": "once_hold",
+  "clip_dur": 4.0
+ },
+ {
+  "num": 35,
+  "name": "s35_two_kids_card",
+  "beat": 4,
+  "start": 239.202,
+  "end": 246.354,
+  "dur": 7.152,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 36,
+  "name": "s36_two_shadows_one_flame",
+  "beat": 4,
+  "start": 246.354,
+  "end": 255.359,
+  "dur": 9.005,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 37,
+  "name": "s37_split_two_things",
+  "beat": 4,
+  "start": 255.359,
+  "end": 264.661,
+  "dur": 9.302,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 38,
+  "name": "s38_walking_home_dusk",
+  "beat": 4,
+  "start": 264.661,
+  "end": 269.257,
+  "dur": 4.596,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 39,
+  "name": "s39_honesty_close",
+  "beat": 5,
+  "start": 269.257,
+  "end": 277.186,
+  "dur": 7.929,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 40,
+  "name": "s40_people_home_clean",
+  "beat": 5,
+  "start": 277.186,
+  "end": 288.219,
+  "dur": 11.033,
+  "mode": "pingpong",
+  "clip_dur": 5.041667
+ },
+ {
+  "num": 41,
+  "name": "s41_repetition_vignettes",
+  "beat": 5,
+  "start": 288.219,
+  "end": 297.204,
+  "dur": 8.985,
+  "mode": "pingpong",
+  "clip_dur": 5.041667
+ },
+ {
+  "num": 42,
+  "name": "s42_basin_linen_ready",
+  "beat": 5,
+  "start": 297.204,
+  "end": 307.189,
+  "dur": 9.985,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 43,
+  "name": "s43_shadow_on_tent_wall",
+  "beat": 5,
+  "start": 307.189,
+  "end": 314.028,
+  "dur": 6.839,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 44,
+  "name": "s44_pointing_smoke",
+  "beat": 5,
+  "start": 314.028,
+  "end": 323.732,
+  "dur": 9.704,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 45,
+  "name": "s45_sign_before_veil",
+  "beat": 5,
+  "start": 323.732,
+  "end": 326.78,
+  "dur": 3.048,
+  "mode": "once_trim",
+  "clip_dur": 4.0
+ },
+ {
+  "num": 46,
+  "name": "s46_aged_unchanged_veil",
+  "beat": 6,
+  "start": 326.78,
+  "end": 334.443,
+  "dur": 7.663,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 47,
+  "name": "s47_light_arrives",
+  "beat": 6,
+  "start": 334.443,
+  "end": 342.71,
+  "dur": 8.267,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 48,
+  "name": "s48_small_basin_towering_veil",
+  "beat": 6,
+  "start": 342.71,
+  "end": 352.818,
+  "dur": 10.108,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 49,
+  "name": "s49_veil_detail_card",
+  "beat": 6,
+  "start": 352.818,
+  "end": 363.511,
+  "dur": 10.693,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 50,
+  "name": "s50_the_shadow",
+  "beat": 6,
+  "start": 363.511,
+  "end": 368.858,
+  "dur": 5.347,
+  "mode": "once_hold",
+  "clip_dur": 4.0
+ },
+ {
+  "num": 51,
+  "name": "s51_jesus_pivot",
+  "beat": 6,
+  "start": 368.858,
+  "end": 382.183,
+  "dur": 13.325,
+  "mode": "once_hold",
+  "clip_dur": 8.0
+ },
+ {
+  "num": 52,
+  "name": "s52_jesus_entering_formal",
+  "beat": 6,
+  "start": 382.183,
+  "end": 392.566,
+  "dur": 10.383,
+  "mode": "once_hold",
+  "clip_dur": 4.5
+ },
+ {
+  "num": 53,
+  "name": "s53_the_cross",
+  "beat": 6,
+  "start": 392.566,
+  "end": 399.122,
+  "dur": 6.556,
+  "mode": "once_hold",
+  "clip_dur": 4.5
+ },
+ {
+  "num": 54,
+  "name": "spread54_thread_leaf",
+  "beat": 6,
+  "start": 399.122,
+  "end": 411.746,
+  "dur": 12.624,
+  "mode": "once_trim",
+  "clip_dur": 12.7
+ },
+ {
+  "num": 55,
+  "name": "spread55_isaiah536",
+  "beat": 6,
+  "start": 411.746,
+  "end": 415.691,
+  "dur": 3.945,
+  "mode": "once_hold",
+  "clip_dur": 3.933333
+ },
+ {
+  "num": 56,
+  "name": "s56_the_answer",
+  "beat": 6,
+  "start": 415.691,
+  "end": 425.485,
+  "dur": 9.794,
+  "mode": "once_hold",
+  "clip_dur": 4.5
+ },
+ {
+  "num": 57,
+  "name": "s57_without_the_gate",
+  "beat": 6,
+  "start": 425.485,
+  "end": 436.929,
+  "dur": 11.444,
+  "mode": "once_hold",
+  "clip_dur": 5.0
+ },
+ {
+  "num": 58,
+  "name": "s58_gate_card",
+  "beat": 6,
+  "start": 436.929,
+  "end": 444.462,
+  "dur": 7.533,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 59,
+  "name": "s59_no_chair",
+  "beat": 6,
+  "start": 444.462,
+  "end": 454.033,
+  "dur": 9.571,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 60,
+  "name": "s60_seated_glory",
+  "beat": 6,
+  "start": 454.033,
+  "end": 461.457,
+  "dur": 7.424,
+  "mode": "once_hold",
+  "clip_dur": 4.5
+ },
+ {
+  "num": 61,
+  "name": "s61_veil_recall",
+  "beat": 6,
+  "start": 461.457,
+  "end": 468.96,
+  "dur": 7.503,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 62,
+  "name": "s62_veil_torn",
+  "beat": 6,
+  "start": 468.96,
+  "end": 475.77,
+  "dur": 6.81,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 63,
+  "name": "s63_torn_veil_card",
+  "beat": 6,
+  "start": 475.77,
+  "end": 482.162,
+  "dur": 6.392,
+  "mode": "once_hold",
+  "clip_dur": 4.0
+ },
+ {
+  "num": 64,
+  "name": "s64_empty_hands",
+  "beat": 7,
+  "start": 482.162,
+  "end": 489.49,
+  "dur": 7.328,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 65,
+  "name": "s65_ritual_uninks",
+  "beat": 7,
+  "start": 489.49,
+  "end": 501.139,
+  "dur": 11.649,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 66,
+  "name": "s66_high_priests_face",
+  "beat": 7,
+  "start": 501.139,
+  "end": 507.562,
+  "dur": 6.423,
+  "mode": "once_hold",
+  "clip_dur": 4.5
+ },
+ {
+  "num": 67,
+  "name": "s67_same_road_lit",
+  "beat": 7,
+  "start": 507.562,
+  "end": 516.847,
+  "dur": 9.285,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 68,
+  "name": "s68_east_west_horizon",
+  "beat": 7,
+  "start": 516.847,
+  "end": 526.206,
+  "dur": 9.359,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 69,
+  "name": "s69_east_west_card",
+  "beat": 7,
+  "start": 526.206,
+  "end": 532.41,
+  "dur": 6.204,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 70,
+  "name": "s70_veil_held_open",
+  "beat": 7,
+  "start": 532.41,
+  "end": 538.66,
+  "dur": 6.25,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 71,
+  "name": "s71_the_way_open",
+  "beat": 7,
+  "start": 538.66,
+  "end": 547.323,
+  "dur": 8.663,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 72,
+  "name": "s72_boldness_card",
+  "beat": 7,
+  "start": 547.323,
+  "end": 553.268,
+  "dur": 5.945,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 73,
+  "name": "s73_aaron_steps_aside",
+  "beat": 7,
+  "start": 553.268,
+  "end": 558.315,
+  "dur": 5.047,
+  "mode": "pingpong",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 74,
+  "name": "s74_every_year_gone",
+  "beat": 7,
+  "start": 558.315,
+  "end": 571.365,
+  "dur": 13.05,
+  "mode": "pingpong",
+  "clip_dur": 8.041667
+ },
+ {
+  "num": 75,
+  "name": "s75_the_reach",
+  "beat": 7,
+  "start": 571.365,
+  "end": 583.07,
+  "dur": 11.705,
+  "mode": "fwd_tail_bounce",
+  "clip_dur": 5.041667,
+  "tail_s": 1.5
+ },
+ {
+  "num": 76,
+  "name": "s76_already_inside",
+  "beat": 7,
+  "start": 583.07,
+  "end": 591.011,
+  "dur": 7.941,
+  "mode": "once_hold",
+  "clip_dur": 5.3
+ }
+]
