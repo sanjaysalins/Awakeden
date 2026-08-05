@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day of Atonement — pick the keepers</title>
+<style>
+  body { background:#16181d; color:#e8e4d8; font-family:Georgia, serif; line-height:1.55; padding:0 18px 90px; }
+  .wrap { max-width:1500px; margin:0 auto; }
+  h1 { color:#e9c877; font-size:1.8rem; margin-bottom:6px; padding-top:20px; }
+  .sub { color:#9aa0ad; margin-bottom:10px; max-width:1000px; }
+  .section { margin-top:36px; margin-bottom:10px; }
+  .section h2 { color:#e9c877; font-size:1.25rem; border-bottom:1px solid #2a2d35; padding-bottom:8px; }
+  .section .shint { color:#8a8f9a; font-size:.85rem; margin:6px 0 16px; max-width:950px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:16px; margin-top:6px; }
+  .card { background:#1e2129; border-radius:8px; overflow:hidden; border:2px solid transparent; }
+  .card.flagged { border-color:#8fd39f; }
+  .card video { width:100%; display:block; background:#000; min-height:80px; }
+  .cap { padding:9px 12px 4px; font-size:.85rem; color:#c9c4b6; display:flex; align-items:flex-start; justify-content:space-between; gap:8px; }
+  .cap .txt b { color:#e8e4d8; display:block; }
+  .cap .txt span { color:#8a8f9a; font-size:.78rem; }
+  .flagbtn { flex-shrink:0; cursor:pointer; border:1px solid #4a4f5a; background:#262a33; color:#9aa0ad; font-size:.78rem; padding:3px 9px; border-radius:5px; font-family:Georgia,serif; white-space:nowrap; }
+  .flagbtn.on { background:#3a7a4a; border-color:#3a7a4a; color:#fff; }
+  .note { display:block; width:100%; box-sizing:border-box; margin:0 12px 10px; padding:6px 8px; background:#14161b; color:#e8e4d8; border:1px solid #363a44; border-radius:5px; font-family:Georgia,serif; font-size:.82rem; resize:vertical; min-height:34px; }
+  .note::placeholder { color:#565b66; }
+  .toolbar { position:sticky; top:0; z-index:10; background:#16181d; padding:12px 0 10px; border-bottom:1px solid #2a2d35; display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  .toolbar button { cursor:pointer; border:1px solid #4a4f5a; background:#262a33; color:#e8e4d8; font-size:.9rem; padding:7px 14px; border-radius:6px; font-family:Georgia,serif; }
+  .toolbar button.primary { background:#e9c877; color:#1e2129; border-color:#e9c877; font-weight:bold; }
+  .count { color:#8fd39f; font-weight:bold; }
+  .savedmsg { color:#8fd39f; font-size:.85rem; opacity:0; transition:opacity .3s; }
+  .savedmsg.show { opacity:1; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="toolbar">
+  <button id="exportBtn" class="primary">Save My Picks</button>
+  <button id="clearBtn">Clear All</button>
+  <span><span class="count" id="flagCount">0</span> kept of 27</span>
+  <span class="savedmsg" id="savedMsg">saved ✓</span>
+</div>
+<h1>Day of Atonement LONG — pick the keepers</h1>
+<div class="sub">Every option built this round, in one place. Click <b>✓ keep</b> under anything you like (green border), type a short note if you want, and it saves as you go — safe to close and come back. When done, click <b>Save My Picks</b> at the top — it downloads one file, tell me when it's ready and I'll read it and start the rollout.</div>
+
+<div id="sections"></div>
+</div>
+<script>
+const DATA = [
+  { section: "Transitions — between scenes (pick the ones to use, and where)", hint: "Most of the ~73 ordinary cuts need ONE workhorse default; the rest are used selectively for specific moments, not everywhere at once.", items: [
+    { name: "blot_generic", label: "Ink-bleed — blot (generic origin)", desc: "Ink spreads outward from a fixed point.", src: "_poc_transitions/narrative_to_narrative_blot.mp4" },
+    { name: "wipe_generic", label: "Ink-bleed — wipe (generic)", desc: "A diagonal brush-stroke sweep.", src: "_poc_transitions/narrative_to_narrative_wipe.mp4" },
+    { name: "blot_tailored", label: "Ink-bleed — blot (tailored origin)", desc: "Starts right at the subject's eyes, not a generic point.", src: "_poc_transitions/tailored_origin_blot.mp4" },
+    { name: "blot_slow", label: "Ink-bleed — blot (slower, 1.4s)", desc: "A longer, more lingering bleed.", src: "_poc_transitions/slow_duration_blot.mp4" },
+    { name: "unseen_hand", label: "Unseen Hand", desc: "A soft passing shadow hides the cut — nearly invisible, good default.", src: "_poc_transitions/beat_turn_unseen_hand.mp4" },
+    { name: "leaf_flick", label: "Leaf-Flick", desc: "A fast blank page-edge whips across (~0.3s) — visible, quick.", src: "_poc_transitions/narrative_to_narrative_leaf_flick.mp4" },
+    { name: "tipped_in_plate", label: "Tipped-In Plate", desc: "The next scene arrives as a sheet settling onto the desk.", src: "_poc_transitions/narrative_to_narrative_tipped_in_plate.mp4" },
+    { name: "lift_away", label: "Lift-Away", desc: "A calm page-turn — grabs the edge, arcs away.", src: "_poc_transitions/narrative_to_narrative_lift_away.mp4" },
+    { name: "verse_mask_reveal", label: "Verse-Mask Reveal (word → scene)", desc: "The next scene grows out from inside a pressed word's letters — for meaningful word/scene pairs.", src: "_poc_arkaiology_adapt/s20_to_s21_verse_mask_reveal.mp4" },
+    { name: "through_object", label: "Through-the-Object Cut", desc: "The cut opens exactly on a meaningful drawn detail and the next scene blooms from it.", src: "_poc_arkaiology_adapt/s44_to_s45_through_object_cut.mp4" },
+  ]},
+  { section: "No-camera holds — stills that need to stay on screen longer", hint: "Different scene types likely want different treatments: portraits, verse cards/objects, landscapes, and multi-figure scenes each have their own best fit below.", items: [
+    { name: "hold_static", label: "Plain static hold", desc: "Nothing moves at all — the honest baseline.", src: "_poc_spotlight/s51_jesus_pivot_static.mp4" },
+    { name: "hold_dramatic_spotlight", label: "Dramatic Spotlight", desc: "Light settles once on the face, holds. Good for portraits.", src: "_poc_spotlight/s51_jesus_pivot_dramatic_spotlight.mp4" },
+    { name: "hold_caravaggio", label: "Caravaggio Pulse", desc: "Settles, then breathes gently. Good for portraits.", src: "_poc_spotlight/s51_jesus_pivot_caravaggio_pulse.mp4" },
+    { name: "hold_slow_breath", label: "Slow Breath", desc: "Very slow settle — needs a long hold (~17s+) to finish properly.", src: "_poc_spotlight/s51_jesus_pivot_slow_breath.mp4" },
+    { name: "hold_breath_synced", label: "Breath-Synced Halo", desc: "The pulse breathes with this spread's own real narration silences.", src: "_poc_holds2/s51_jesus_pivot_breath_synced.mp4" },
+    { name: "hold_chiaroscuro", label: "Chiaroscuro Reveal", desc: "Page starts dim, each part lights up and stays lit. For multi-figure \"argument\" scenes.", src: "_poc_holds2/s56_the_answer_chiaroscuro.mp4" },
+    { name: "hold_desat", label: "Desat Focus", desc: "Sepia base, full colour only in the light. For daylight/wide scenes.", src: "_poc_holds2/s68_east_west_horizon_desat.mp4" },
+    { name: "hold_raking", label: "Raking Light (cards/objects)", desc: "A slow lamp sweep, page stays fully legible. For verse cards + close objects.", src: "_poc_holds2/s16_lords_charge_card_raking.mp4" },
+  ]},
+  { section: "Motion design — a different flavour of hold treatment", hint: "Not light/paper physics — rhythm, graphic accents, colour, depth. Same purpose as the family above, worth comparing directly against it.", items: [
+    { name: "md_registration_snap", label: "Registration Snap", desc: "An out-of-register print snaps sharp on a key beat.", src: "_poc_motion_design/s24_lots_card_registration_snap.mp4" },
+    { name: "md_ink_up_build", label: "Ink-Up Build", desc: "Attention by how finished the drawing looks, not by light.", src: "_poc_motion_design/s56_the_answer_ink_up_build.mp4" },
+    { name: "md_parallax", label: "Locked-Plate Parallax", desc: "Page never moves; one layer (e.g. a halo) floats very slightly behind the figure.", src: "_poc_motion_design/s51_jesus_pivot_locked_parallax.mp4" },
+    { name: "md_palette_pivot", label: "East/West Palette Pivot", desc: "Colour itself separates warm/cool across the frame.", src: "_poc_motion_design/s68_east_west_horizon_palette_pivot.mp4" },
+    { name: "md_crop_mark", label: "Crop-Mark Approval", desc: "Pale graphite corner marks draw in, like a page passed for press.", src: "_poc_motion_design/s20_blood_atonement_card_crop_mark.mp4" },
+    { name: "md_letterpress_beat", label: "Letterpress Beat", desc: "The linework presses slightly darker on real speech beats.", src: "_poc_motion_design/s39_honesty_close_letterpress_beat.mp4" },
+  ]},
+  { section: "Text-integrated combos — for verse cards specifically", hint: "These three combine a motion-design device with the REAL verse text arriving on the page (Lev 16:8 test case) — the recommended direction for verse cards over the plain image-only versions above.", items: [
+    { name: "combo_registration_verse", label: "A. Registration Snap + Verse", desc: "Text invisible until the print snaps into register, then presses in sharp at the same instant.", src: "_poc_motion_text_combo/s24_lots_card_A_registration_snap_verse.mp4" },
+    { name: "combo_inkup_verse", label: "B. Ink-Up Build + Verse", desc: "Picture ghosts back, verse text inks up line by line as attention moves to it.", src: "_poc_motion_text_combo/s24_lots_card_B_ink_up_build_verse.mp4" },
+    { name: "combo_letterpress_verse", label: "C. Letterpress Beat + Verse", desc: "Each line presses onto the page on its own real speech beat.", src: "_poc_motion_text_combo/s24_lots_card_C_letterpress_beat_verse.mp4" },
+  ]},
+];
+
+const STORAGE_KEY = "doa_keeper_picks_v1";
+
+function loadPicks() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
+  catch (e) { return {}; }
+}
+function savePicks(picks) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(picks));
+  const msg = document.getElementById('savedMsg');
+  msg.classList.add('show');
+  clearTimeout(savePicks._t);
+  savePicks._t = setTimeout(() => msg.classList.remove('show'), 900);
+}
+function updateCount(picks) {
+  let n = 0;
+  for (const s of DATA) for (const it of s.items) if (picks[it.name] && picks[it.name].flagged) n++;
+  document.getElementById('flagCount').textContent = n;
+}
+
+let picks = loadPicks();
+const sectionsEl = document.getElementById('sections');
+
+for (const sec of DATA) {
+  const secDiv = document.createElement('div');
+  secDiv.className = "section";
+  secDiv.innerHTML = `<h2>${sec.section}</h2><div class="shint">${sec.hint}</div>`;
+  const grid = document.createElement('div');
+  grid.className = "grid";
+
+  for (const it of sec.items) {
+    const entry = picks[it.name] || { flagged: false, text: "" };
+    const card = document.createElement('div');
+    card.className = "card" + (entry.flagged ? " flagged" : "");
+
+    const v = document.createElement('video');
+    v.src = it.src; v.controls = true; v.preload = "metadata"; v.muted = true; v.loop = true;
+    card.appendChild(v);
+
+    const cap = document.createElement('div');
+    cap.className = "cap";
+    const txt = document.createElement('div');
+    txt.className = "txt";
+    txt.innerHTML = `<b>${it.label}</b><span>${it.desc}</span>`;
+    const flagBtn = document.createElement('button');
+    flagBtn.className = "flagbtn" + (entry.flagged ? " on" : "");
+    flagBtn.textContent = entry.flagged ? "✓ kept" : "✓ keep";
+    flagBtn.onclick = () => {
+      entry.flagged = !entry.flagged;
+      picks[it.name] = entry;
+      card.classList.toggle('flagged', entry.flagged);
+      flagBtn.classList.toggle('on', entry.flagged);
+      flagBtn.textContent = entry.flagged ? "✓ kept" : "✓ keep";
+      savePicks(picks);
+      updateCount(picks);
+    };
+    cap.appendChild(txt);
+    cap.appendChild(flagBtn);
+    card.appendChild(cap);
+
+    const note = document.createElement('textarea');
+    note.className = "note";
+    note.placeholder = "note (optional) — use this for X, not for Y...";
+    note.value = entry.text || "";
+    note.rows = 2;
+    note.oninput = () => {
+      entry.text = note.value;
+      picks[it.name] = entry;
+      savePicks(picks);
+    };
+    card.appendChild(note);
+
+    grid.appendChild(card);
+  }
+  secDiv.appendChild(grid);
+  sectionsEl.appendChild(secDiv);
+}
+updateCount(picks);
+
+document.getElementById('exportBtn').onclick = () => {
+  const lines = ["DAY OF ATONEMENT LONG — keeper picks", ""];
+  let any = false;
+  for (const sec of DATA) {
+    let secHasAny = false;
+    const secLines = [];
+    for (const it of sec.items) {
+      const e = picks[it.name];
+      if (e && (e.flagged || (e.text && e.text.trim()))) {
+        any = true; secHasAny = true;
+        secLines.push(`  ${it.label}${e.flagged ? "  [KEPT]" : ""}`);
+        if (e.text && e.text.trim()) secLines.push(`    note: ${e.text.trim()}`);
+      }
+    }
+    if (secHasAny) { lines.push(sec.section + ":"); lines.push(...secLines); lines.push(""); }
+  }
+  if (!any) lines.push("(nothing marked yet)");
+  const blob = new Blob([lines.join("\n")], { type: "text/plain" });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = "day_of_atonement_keeper_picks.txt";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+};
+
+document.getElementById('clearBtn').onclick = () => {
+  if (!confirm("Clear all picks and notes? This can't be undone.")) return;
+  picks = {};
+  savePicks(picks);
+  location.reload();
+};
+</script>
+</body>
+</html>
