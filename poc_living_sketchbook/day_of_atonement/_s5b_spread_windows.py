@@ -1,9 +1,7 @@
 """Day of Atonement LONG -- step 5b: turn `_spread_table.py`'s
 plan-estimated 76 windows + `_alignment.json`'s real forced-aligned word
 timings into the one file `_s6_assemble.py` actually reads:
-`_spread_windows.json`. Mirrors `bronze_serpent_long/_s6b_spread_windows.py`
-exactly (same seam-snap + fill-mode logic), adapted for this episode's own
-76 spreads and its own deterministic-camera roster.
+`_spread_windows.json`.
 
 Two corrections applied to the plan's estimated windows:
   1. SEAM SNAP -- every interior (sub-turn) spread boundary is an estimate
@@ -15,13 +13,39 @@ Two corrections applied to the plan's estimated windows:
      word's end to LAST_WORD_END + LANDING_HOLD_S (INV-26, >=3.0s,
      audio=video). Spread 1 always starts at 0.00.
 
-For each spread this also resolves a FILL MODE (how a clip shorter or
-longer than its window gets stretched/trimmed to fill it exactly), given
-each spread's live clip duration (ffprobe'd fresh, not hardcoded) -- v1
-"simple cut" pass only implements the safe default modes; the directional
-fwd_tail_bounce refinement (a completing gesture should never play in
-reverse) is included since a visibly-reversed hand gesture is a correctness
-bug, not a polish nicety -- see ONE_WAY below.
+FILL MODE (how a clip shorter or longer than its window gets stretched to
+fill it exactly), given each spread's live clip duration (ffprobe'd fresh,
+not hardcoded):
+
+  once_trim  -- clip is >= window: play from its start, trimmed to fit.
+  once_hold  -- clip already AT (or extended to) the window duration (the
+                deterministic-camera spreads, corrected by
+                `_s5c_extend_deterministic.py` for the ones that needed a
+                longer render): play as-is, pad any sub-frame remainder by
+                holding the last frame.
+  fwd_drift  -- clip < window: play the clip forward ONCE at native speed
+                (the real licensed motion, exactly as generated -- never
+                reversed), then fill the remainder with a $0 deterministic
+                camera push/arc (panel_animator/dynamic_cam3d.py) over the
+                clip's own LAST FRAME.
+
+REDESIGNED 2026-08-05 after the user watched the first assembled cut and
+flagged two real problems, both fixed by removing this project's OWN
+pingpong/slow_pingpong/fwd_tail_bounce modes entirely:
+  1. "Loads of backwards walking animation" -- any clip with directional
+     motion (walking, carrying, leading an animal) read as walking
+     BACKWARDS during a pingpong bounce's reverse half. The prior version
+     only protected the 2 known "designed acting spread" cases (ONE_WAY);
+     the user's report makes clear that was not enough spreads to protect
+     -- rather than trying to enumerate every clip with directional motion
+     (error-prone, exactly the kind of guessing this project's own
+     standing rules warn against), reverse playback is now eliminated
+     PROJECT-WIDE. Nothing in this film ever plays backward, full stop.
+  2. "Stills that don't have any animation" -- a short clip pingponged many
+     times to fill a long window reads as static/repetitive, not real
+     motion. fwd_drift replaces that repetition with genuine forward motion
+     once, then a real (if gentle) continuing camera move for the rest --
+     more alive, and more "creative" than a mechanical bounce loop.
 
   .venv\\Scripts\\python.exe poc_living_sketchbook/day_of_atonement/_s5b_spread_windows.py
 """
@@ -39,22 +63,11 @@ STILLS = HERE / "stills"
 ALIGNMENT = HERE / "_alignment.json"
 OUT = HERE / "_spread_windows.json"
 
-# Spreads with genuine one-directional COMPLETING motion in the source clip
-# (the plan's own "designed acting spread" tag) -- a reverse (boomerang)
-# bounce would visibly un-do the gesture. Play forward once, then bounce
-# only a short calm TAIL, never a full-clip pingpong.
-ONE_WAY = {
-    "s29_hands_on_goat",   # Aaron's hands settling onto the goat's head
-    "s75_the_reach",       # Christ's hand extending toward the viewer
-}
-
 # The 18 spreads animated by the $0 deterministic camera (panel_animator/
 # dynamic_cam3d.py push/arc over the untouched still, zero repaint) rather
 # than a generative Kling/Seedance clip -- 12 from the original animate
-# batch (_s_christ_spreads_orbit.py + the individual _s05/_s25_orbit.py
-# scripts) + 6 from the 2026-08-05 user-review fix pass
-# (_s_fix_batch2_orbit.py). A reversed camera push/arc would look wrong
-# (the camera un-pushing), so these get once_hold/once_trim, never a bounce.
+# batch + 6 from the 2026-08-05 user-review fix pass. Never gets a drift
+# tail of its own (it IS already a camera move); once_hold/once_trim only.
 DETERMINISTIC = {
     "s05_walking_to_veil", "s25_slaying_stage1",
     "s51_jesus_pivot", "s52_jesus_entering_formal", "s53_the_cross",
@@ -65,13 +78,13 @@ DETERMINISTIC = {
     "s45_sign_before_veil", "s50_the_shadow", "s63_torn_veil_card",
 }
 
-# Not yet populated -- bronze_serpent_long's own NO_BOUNCE set (spreads
-# whose pingpong bounce read as unwanted motion, e.g. "looks like he's
-# dancing") was only discovered by the user watching the ASSEMBLED cut, not
-# predicted in advance. Same discipline here: build the first cut with the
-# general-purpose fill modes below, watch it, and add any offenders here
-# before the next rebuild rather than guessing now.
-NO_BOUNCE = set()
+# Verse-card spreads (name carries "_card") keep the drift tail very gentle
+# and push-only -- lettering needs to stay legible/stable, not swept by a
+# yawing arc.
+DRIFT_AMP_CARD, DRIFT_AMP_DEFAULT = 0.35, 0.5
+DRIFT_FOCUS_DEFAULT = (0.50, 0.45)  # generic "slightly above center" bias;
+# not hand-tuned per spread (76 of them) the way the 6 punch-list fixes
+# were -- reasonable default, not a precision framing decision.
 
 
 def ffprobe_dur(path: Path) -> float:
@@ -89,26 +102,35 @@ def nearest_word_start(t: float, words: list) -> float:
     return best["start"] if abs(best["start"] - t) <= 3.0 else t
 
 
+def _drift_choice(name: str) -> tuple:
+    """(move, amp) for the fwd_drift tail. Cards stay push-only/gentle;
+    everything else alternates push/arc (stable per-name, not random) for
+    some visual variety across 76 spreads rather than the same move on
+    every single one."""
+    if "_card" in name:
+        return "push", DRIFT_AMP_CARD
+    move = "push" if sum(ord(c) for c in name) % 2 == 0 else "arc"
+    return move, DRIFT_AMP_DEFAULT
+
+
 def fill_mode(name: str, window_dur: float, clip_dur: float) -> dict:
     if name in DETERMINISTIC:
         drift = window_dur - clip_dur
         if abs(drift) > 0.5:
-            print(f"[note] {name}: real aligned window ({window_dur:.2f}s) differs from "
-                  f"its deterministic clip's own duration ({clip_dur:.2f}s) by {drift:+.2f}s "
-                  f"-- holding the last frame to cover it (or trimming if the window shrank).")
+            print(f"[note] {name}: real aligned window ({window_dur:.2f}s) still differs from "
+                  f"its clip's own duration ({clip_dur:.2f}s) by {drift:+.2f}s -- run "
+                  f"_s5c_extend_deterministic.py if this is a positive drift not yet corrected.")
         if drift >= 0:
             return {"mode": "once_hold", "clip_dur": clip_dur}
         return {"mode": "once_trim", "clip_dur": clip_dur}
     if clip_dur >= window_dur:
         return {"mode": "once_trim", "clip_dur": clip_dur}
-    if name in NO_BOUNCE:
+    remainder = window_dur - clip_dur
+    if remainder <= 0.5:
         return {"mode": "once_hold", "clip_dur": clip_dur}
-    if name in ONE_WAY:
-        return {"mode": "fwd_tail_bounce", "clip_dur": clip_dur, "tail_s": 1.5}
-    if window_dur <= 15.0:
-        return {"mode": "pingpong", "clip_dur": clip_dur}
-    factor = min(2.0, window_dur / (2.0 * clip_dur))
-    return {"mode": "slow_pingpong", "clip_dur": clip_dur, "factor": round(factor, 4)}
+    move, amp = _drift_choice(name)
+    return {"mode": "fwd_drift", "clip_dur": clip_dur, "tail_s": round(remainder, 3),
+            "move": move, "focus": DRIFT_FOCUS_DEFAULT, "amp": amp}
 
 
 def main():
@@ -123,8 +145,7 @@ def main():
     # Snap only the START of each spread (spread 1 always 0.00). Each
     # spread's END is then set to the NEXT spread's start -- never snapped
     # independently -- so consecutive windows share the exact same boundary
-    # value with zero gap and zero overlap (bronze_serpent_long's own fix
-    # for an ~18s missing-video bug caused by snapping start/end separately).
+    # value with zero gap and zero overlap.
     n = len(ST.SPREADS)
     starts = [0.00] * n
     for i, (num, name, beat, plan_start, plan_end) in enumerate(ST.SPREADS):

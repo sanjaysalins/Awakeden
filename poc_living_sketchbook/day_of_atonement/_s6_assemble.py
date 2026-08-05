@@ -3,10 +3,10 @@
 silent 1920x1080@30fps video, then muxes the real locked narration on top
 with the INV-26 landing hold. Hard cuts between spreads (no crossfade/
 page-turn devices) -- those are a deliberate polish-pass-2 layer added AFTER
-this base cut is seen and approved, exactly mirroring
-`bronze_serpent_long/_s7_assemble.py`'s own "simple first, polish after"
-discipline. Nothing here is generative -- every segment is built by ffmpeg
-trim/loop/reverse/concat over already-approved clips.
+this base cut is seen and approved. Nothing here is generative -- every
+segment is built by ffmpeg trim/pad/concat over already-approved clips plus
+$0 deterministic camera moves (panel_animator/dynamic_cam3d.py) over a
+clip's own last frame; nothing is ever regenerated or played in reverse.
 
 This hard-cut-only concat also satisfies _PLAN.md's own "multi-stage
 hard-cut PAIRS" requirement (10/11 strange fire, 25/26/27 slaying through
@@ -15,23 +15,25 @@ mode in this recipe at all, so every seam in the film is already a hard cut.
 
 Fill modes (resolved per-spread in `_spread_windows.json` by
 `_s5b_spread_windows.py`):
-  once_trim    -- clip is >= window: play from its start, trimmed to fit.
-  once_hold    -- clip already AT (or held to) the window duration (the 18
-                  deterministic-camera spreads): play as-is, pad any
-                  sub-frame remainder by holding the last frame (ffmpeg tpad).
-  pingpong     -- clip < window <= 15s: native-speed forward+reverse bounce,
-                  looped to fill exactly.
-  slow_pingpong-- clip < window, window > 15s: same bounce, slowed so ONE
-                  cycle spans (most of) the window -- a single reverent
-                  drift, not a fast flicker.
-  fwd_tail_bounce -- directional completing motion (the 2 acting spreads,
-                  see _s5b's ONE_WAY set): play the clip forward ONCE at
-                  native speed (so the real gesture is seen the right way
-                  round), then fill the remainder by bouncing only a short
-                  CALM TAIL -- never a full-clip reverse.
-  static_still -- unused this episode (ST.ALWAYS_STATIC_HOLD is empty; every
-                  spread has a real clip) -- kept for interface parity with
-                  bronze_serpent_long in case a future rebuild needs it.
+  once_trim -- clip is >= window: play from its start, trimmed to fit.
+  once_hold -- clip already AT (or extended to, by
+               `_s5c_extend_deterministic.py`) the window duration: play as
+               -is, pad any sub-frame remainder by holding the last frame.
+  fwd_drift -- clip < window: play the clip forward ONCE at native speed
+               (the real motion, exactly as generated, NEVER reversed),
+               then fill the remainder with a $0 deterministic camera
+               push/arc over the clip's own last frame -- real continuing
+               motion instead of a repeated bounce loop.
+  static_still -- unused this episode (every spread has a real clip) --
+               kept for interface parity in case a future rebuild needs it.
+
+REDESIGNED 2026-08-05: this file used to also implement pingpong/
+slow_pingpong/fwd_tail_bounce (forward+reverse bounce loops). Removed
+entirely after the user watched the first cut and reported "loads of
+backwards walking animation" -- any clip with directional motion (walking,
+carrying, leading an animal) read as walking BACKWARDS during a bounce's
+reverse half. Nothing in this recipe plays a clip backward anymore, full
+stop -- see _s5b_spread_windows.py's own docstring for the fuller reasoning.
 
   .venv\\Scripts\\python.exe poc_living_sketchbook/day_of_atonement/_s6_assemble.py                 # full 76-spread build
   .venv\\Scripts\\python.exe poc_living_sketchbook/day_of_atonement/_s6_assemble.py --only s01_cold_open,s76_already_inside   # test gate
@@ -42,6 +44,10 @@ import json
 import subprocess
 import sys
 from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "panel_animator"))
+from dynamic_cam3d import render_move  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 CLIPS = HERE / "clips"
@@ -66,34 +72,6 @@ def run(cmd):
     r = subprocess.run(cmd, capture_output=True, text=True)
     if r.returncode != 0:
         raise RuntimeError(f"FAILED: {' '.join(str(c) for c in cmd)}\n{r.stderr[-3000:]}")
-
-
-def build_bounce_cycle(src: Path, out: Path, speed_factor: float = 1.0):
-    """One forward+reverse cycle of `src`, optionally slowed by speed_factor
-    (>1 = slower). Native speed when speed_factor==1.0."""
-    if speed_factor and speed_factor != 1.0:
-        vf_pre = f"setpts={speed_factor}*PTS,"
-    else:
-        vf_pre = ""
-    filt = (f"[0:v]{vf_pre}split[a][b];[b]reverse[r];"
-            f"[a][r]concat=n=2:v=1:a=0,{SCALE_CROP}[out]")
-    run(["ffmpeg", "-y", "-v", "error", "-i", str(src),
-         "-filter_complex", filt, "-map", "[out]", *VCODEC, str(out)])
-
-
-def loop_to_duration(src: Path, out: Path, target_dur: float):
-    cycle_dur = ffprobe_dur(src)
-    n_loops = max(1, int((target_dur // cycle_dur) + 2))
-    run(["ffmpeg", "-y", "-v", "error", "-stream_loop", str(n_loops), "-i", str(src),
-         "-t", f"{target_dur:.3f}", *VCODEC, str(out)])
-
-
-def ffprobe_dur(path: Path) -> float:
-    out = subprocess.run(
-        ["ffprobe", "-v", "error", "-show_entries", "format=duration",
-         "-of", "default=noprint_wrappers=1:nokey=1", str(path)],
-        capture_output=True, text=True, check=True)
-    return float(out.stdout.strip())
 
 
 def build_segment(row: dict, seg_path: Path):
@@ -121,38 +99,25 @@ def build_segment(row: dict, seg_path: Path):
              "-t", f"{dur:.3f}", *VCODEC, str(seg_path)])
         return
 
-    if mode == "pingpong":
-        cyc = WORK / f"{name}_cycle.mp4"
-        build_bounce_cycle(clip, cyc)
-        loop_to_duration(cyc, seg_path, dur)
-        return
-
-    if mode == "slow_pingpong":
-        cyc = WORK / f"{name}_cycle.mp4"
-        build_bounce_cycle(clip, cyc, speed_factor=row["factor"])
-        loop_to_duration(cyc, seg_path, dur)
-        return
-
-    if mode == "fwd_tail_bounce":
+    if mode == "fwd_drift":
         clip_dur = row["clip_dur"]
         tail_s = row["tail_s"]
-        remainder = max(0.0, dur - clip_dur)
+        move = row["move"]
+        focus = tuple(row["focus"])
+        amp = row["amp"]
+
         fwd = WORK / f"{name}_fwd.mp4"
         run(["ffmpeg", "-y", "-v", "error", "-i", str(clip), "-vf", SCALE_CROP,
              *VCODEC, str(fwd)])
-        if remainder <= 0.05:
-            seg_path.write_bytes(fwd.read_bytes())
-            return
-        tail_src = WORK / f"{name}_tailsrc.mp4"
-        run(["ffmpeg", "-y", "-v", "error", "-sseof", f"-{tail_s:.3f}", "-i", str(clip),
-             "-vf", SCALE_CROP, *VCODEC, str(tail_src)])
-        cyc = WORK / f"{name}_tailcycle.mp4"
-        build_bounce_cycle(tail_src, cyc)
-        tail_filled = WORK / f"{name}_tailfilled.mp4"
-        loop_to_duration(cyc, tail_filled, remainder)
-        # concat fwd + tail_filled
+
+        last_frame = WORK / f"{name}_lastframe.png"
+        run(["ffmpeg", "-y", "-v", "error", "-sseof", "-0.15", "-i", str(clip),
+             "-frames:v", "1", str(last_frame)])
+        drift = WORK / f"{name}_drift.mp4"
+        render_move(last_frame, move, tail_s, focus, drift, amp=amp)
+
         listfile = WORK / f"{name}_concat.txt"
-        listfile.write_text(f"file '{fwd.resolve()}'\nfile '{tail_filled.resolve()}'\n", encoding="utf-8")
+        listfile.write_text(f"file '{fwd.resolve()}'\nfile '{drift.resolve()}'\n", encoding="utf-8")
         run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", str(listfile),
              *VCODEC, str(seg_path)])
         return
@@ -173,11 +138,31 @@ def concat_segments(rows: list, out_path: Path):
          "-c", "copy", str(out_path)])
 
 
+def ffprobe_dur(path: Path) -> float:
+    out = subprocess.run(
+        ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+         "-of", "default=noprint_wrappers=1:nokey=1", str(path)],
+        capture_output=True, text=True, check=True)
+    return float(out.stdout.strip())
+
+
 def mux_narration(video_path: Path, out_path: Path, total_dur: float):
+    # Each segment builder can land up to ~1 frame short of its target dur
+    # (frame-count truncation, e.g. dynamic_cam3d's int(duration*FPS)) --
+    # individually negligible, but summed across 76 segments this can drift
+    # the concatenated silent video noticeably short of total_dur. -c:v copy
+    # can't stretch video to compensate, so INV-26 (video=audio duration)
+    # would silently fail. Pad the video with cloned last-frame tpad to
+    # close that gap explicitly rather than trusting per-segment precision.
+    video_dur = ffprobe_dur(video_path)
+    video_deficit = max(0.0, total_dur - video_dur)
+    vf = f"tpad=stop_mode=clone:stop_duration={video_deficit:.3f}" if video_deficit > 0.001 else "null"
     run(["ffmpeg", "-y", "-v", "error", "-i", str(video_path), "-i", str(NARRATION),
-         "-filter_complex", f"[1:a]aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,"
-                             f"apad=whole_dur={total_dur:.3f}[aout]",
-         "-map", "0:v", "-map", "[aout]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
+         "-filter_complex",
+         f"[0:v]{vf}[vout];"
+         f"[1:a]aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,"
+         f"apad=whole_dur={total_dur:.3f}[aout]",
+         "-map", "[vout]", "-map", "[aout]", *VCODEC, "-c:a", "aac", "-b:a", "192k",
          "-t", f"{total_dur:.3f}", str(out_path)])
 
 
