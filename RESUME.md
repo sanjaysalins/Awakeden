@@ -1,6 +1,72 @@
 # ══════════════════════════════════════════════════════════════════════════
-# ★★★★★★★★★ SESSION HANDOVER 2026-08-04 (LATE, END OF SESSION) — READ THIS
-# FIRST — supersedes every block below it, including the same-day ★★★★★★★★
+# ★★★★★★★★★★ SESSION HANDOVER 2026-08-05 — READ THIS FIRST — supersedes
+# every block below, including the 2026-08-04 Phase C animate-complete
+# block right under this one (still accurate for what was built that
+# session, just not the resume point anymore).
+#
+# ── STATUS: THE USER'S CLIP-REVIEW PUNCH-LIST IS FIXED, VERIFIED, AND
+# COMMITTED (3d2939d). Resumed this session gently per the user's request
+# ("resume using a gentle CPU and memory usage, till I tell you otherwise")
+# -- confirmed the venv's sitecustomize.py polite-throttle (POLITE_CPU=33,
+# Idle priority) was already the live default with no override anywhere, so
+# nothing needed changing; standing rule going forward: don't set
+# POLITE_CPU=0 or skip be_polite() in new scripts until the user lifts this
+# again (see memory `feedback-renders-stay-polite.md`).
+#
+# Built the user a review tool first: `_BATCH_PROGRESS.html` now has a ⚑
+# flag button + note textarea on every one of the 76 cards, autosaves to
+# localStorage as they go, and a "Save My Notes" button that downloads a
+# plain-text punch-list -- reuse this pattern for future episodes' clip
+# review instead of building a new UI each time.
+#
+# User reviewed and flagged 6 spreads: s26, s27, s34, s45, s50, s63. Every
+# note was verified for real by extracting dense-frame contact sheets from
+# the actual clips (not spaced samples -- per the standing lesson) before
+# touching anything:
+#   - s26 / s45: the veil's own woven cherub (Exodus 26:31) flapped its
+#     wings like a living figure -- same defect class as s05 the prior
+#     session.
+#   - s27: worse than the user's note suggested -- the Ark's glory-cloud
+#     morphed into a ghost-like humanoid figure over the clip, AND the
+#     blood escalated from Lev 16:14's single controlled drop into a large
+#     pool, AND the Ark's own cherubim spread their wings further than the
+#     still. Real doctrinal problem, not just a QC nitpick.
+#   - s34: invented a bizarre page-turn/open-book action with zero basis in
+#     the still.
+#   - s50: invented small birds flying over the desert dunes.
+#   - s63: SEVERE -- the two woven cherub heads (same veil embroidery as
+#     s45, just a close-up) were animated into two fully nude winged
+#     humanoid figures holding hands, rendered in a totally unrelated anime
+#     style. Total content and style break; would never have shipped as-is.
+#
+# Fix (no re-prompting -- these are all the same failure class already
+# proven twice last session): all 6 swapped from the generative clip to the
+# $0 deterministic camera-only move over the ORIGINAL untouched still
+# (`panel_animator/dynamic_cam3d.py`, push/arc, zero repaint risk) -- same
+# technique as s05/s07/s25/s53. New script: `_s_fix_batch2_orbit.py`. Every
+# fix re-verified by dense-frame contact sheet before the user said "lock
+# it" and it was committed. Ran at the gentle CPU cap the whole time, ~1-2
+# min per clip instead of full-speed.
+#
+# ── EXACT RESUME POINT for next session --
+#   1. Ask the user whether the 6-spread fix closes out their review, or
+#      whether they still want to look at the rest of the 76 (they may not
+#      have watched every clip before sending these 6 flags).
+#   2. Once clip review is genuinely closed: assembly stage next (jigsaw
+#      the clips against the 588.64s narration timeline -- 27 spreads run
+#      longer than their generated clip via the DURATION GAPS list in
+#      `_s4_animate.py`'s own docstring, need assembly-stage
+#      looping/hold-extension per longform-motion-fill). Then score, ambient
+#      SFX bed, captions, INV-27 watermark, INV-26 landing-hold check.
+#   3. The multi-stage hard-cut PAIRS (10/11, 25/26/27, 61/62) still need to
+#      be spliced as true hard cuts at assembly, never a dissolve -- each
+#      spread already has its own clip, this is purely an assembly-stage
+#      splice decision, not a re-render.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★ SESSION HANDOVER 2026-08-04 (LATE, END OF SESSION)
+# — supersedes every block below it, including the same-day ★★★★★★★★
 # stills-complete block (still accurate for the stills stage, just no
 # longer the resume point -- Phase C below is further along now).
 #
