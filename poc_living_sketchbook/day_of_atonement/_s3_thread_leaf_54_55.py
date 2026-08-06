@@ -42,8 +42,6 @@ Run (sequential, single ffmpeg encode per clip -- gentle on CPU/RAM):
     .venv\\Scripts\\python.exe poc_living_sketchbook/day_of_atonement/_s3_thread_leaf_54_55.py
 """
 from __future__ import annotations
-import math
-import random
 import shutil
 import subprocess
 import sys
@@ -58,6 +56,7 @@ sys.path.insert(0, str(REPO / "panel_animator"))
 sys.path.insert(0, str(ROOT))
 from elder_leaf import smootherstep  # noqa: E402
 from focal_tour import build_tour_schedule, center_at, apply_halo  # noqa: E402
+from thread_device import make_thread_layer, thread_opacity as _thread_opacity, thread_swell as _thread_swell  # noqa: E402
 import _polite  # noqa: E402
 
 STILL = ROOT / "stills" / "s54_guilt_laid_on_christ.png"
@@ -142,51 +141,19 @@ def scale_crop_16x9(im: Image.Image, w: int, h: int) -> Image.Image:
 
 
 # ------------------------------------------------------------- gold thread
-
-def make_thread_layer(w: int, h: int, p0_frac, p1_frac, color, seed=9, n=16, bow=70, width=4) -> Image.Image:
-    """Static gold-stitched-thread RGBA layer, full frame size, transparent bg."""
-    layer = Image.new("RGBA", (w, h), (0, 0, 0, 0))
-    d = ImageDraw.Draw(layer)
-    x0, y0 = p0_frac[0] * w, p0_frac[1] * h
-    x1, y1 = p1_frac[0] * w, p1_frac[1] * h
-    rng = random.Random(seed)
-    dx, dy = x1 - x0, y1 - y0
-    length = math.hypot(dx, dy) or 1
-    nx, ny = -dy / length, dx / length
-    pts = []
-    for i in range(n + 1):
-        t = i / n
-        x = x0 + dx * t
-        y = y0 + dy * t
-        off = bow * math.sin(t * math.pi) + rng.uniform(-3, 3)
-        pts.append((x + nx * off, y + ny * off))
-    for i in range(0, len(pts) - 1, 2):
-        d.line([pts[i], pts[i + 1]], fill=(*color, 255), width=width)
-    r = width + 2
-    d.ellipse([x0 - r, y0 - r, x0 + r, y0 + r], fill=(*color, 255))
-    d.ellipse([x1 - r, y1 - r, x1 + r, y1 + r], fill=(*color, 255))
-    return layer
-
+# make_thread_layer / thread_opacity / thread_swell promoted to
+# panel_animator/thread_device.py (Fable Round 10, Concept C) -- imported
+# above. Thin wrappers here bind this spread's own THREAD_START/THREAD_FADE/
+# REF_TIME constants so the two call sites below (and this file's own CLI/
+# demo path, if any) keep their exact original call shape -- output is
+# byte-identical to before the promotion, only the drawing code moved.
 
 def thread_opacity(t: float) -> float:
-    if t < THREAD_START:
-        return 0.0
-    return smootherstep((t - THREAD_START) / THREAD_FADE)
+    return _thread_opacity(t, THREAD_START, THREAD_FADE)
 
 
 def thread_swell(t_global: float) -> float:
-    """One luminance swell on the thread right as the reference stamps in:
-    rises 0.6s, decays 0.8s, otherwise 0."""
-    rise, decay = 0.6, 0.8
-    lt = t_global - REF_TIME
-    if lt < 0:
-        return 0.0
-    if lt < rise:
-        return smootherstep(lt / rise)
-    lt2 = lt - rise
-    if lt2 < decay:
-        return 1.0 - smootherstep(lt2 / decay)
-    return 0.0
+    return _thread_swell(t_global, REF_TIME)
 
 
 # -------------------------------------------------------- letterpress verse

@@ -50,6 +50,8 @@ sys.path.insert(0, str(ROOT / "panel_animator"))
 from dynamic_cam3d import render_move  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE))
+import _devices as DEV  # noqa: E402
 CLIPS = HERE / "clips"
 STILLS = HERE / "stills"
 SEGMENTS = HERE / "_segments"
@@ -79,6 +81,21 @@ def build_segment(row: dict, seg_path: Path):
     dur = row["dur"]
     mode = row["mode"]
     clip = CLIPS / f"{name}.mp4"
+
+    if name in DEV.VERSE_CARDS:
+        DEV.render_verse_card(name, STILLS / f"{name}.png", seg_path, dur, row["start"])
+        return
+
+    if name in DEV.SPECIAL_CARDS:
+        DEV.render_special_card(name, STILLS / f"{name}.png", seg_path, dur, row["start"])
+        return
+
+    device_info = DEV.DEVICE_ASSIGNMENTS.get(name)
+    if device_info and device_info["scope"] == "full":
+        params = dict(device_info["params"])
+        params.setdefault("abs_start", row["start"])
+        DEV.render_device(device_info["device"], STILLS / f"{name}.png", seg_path, dur, **params)
+        return
 
     if mode == "static_still":
         still = STILLS / f"{name}.png"
@@ -114,7 +131,12 @@ def build_segment(row: dict, seg_path: Path):
         run(["ffmpeg", "-y", "-v", "error", "-sseof", "-0.15", "-i", str(clip),
              "-frames:v", "1", str(last_frame)])
         drift = WORK / f"{name}_drift.mp4"
-        render_move(last_frame, move, tail_s, focus, drift, amp=amp)
+        if device_info and device_info["scope"] == "tail":
+            params = dict(device_info["params"])
+            params.setdefault("abs_start", row["start"] + clip_dur)
+            DEV.render_device(device_info["device"], last_frame, drift, tail_s, **params)
+        else:
+            render_move(last_frame, move, tail_s, focus, drift, amp=amp)
 
         listfile = WORK / f"{name}_concat.txt"
         listfile.write_text(f"file '{fwd.resolve()}'\nfile '{drift.resolve()}'\n", encoding="utf-8")
@@ -125,14 +147,69 @@ def build_segment(row: dict, seg_path: Path):
     raise ValueError(f"{name}: unknown/unresolved fill mode {mode!r}")
 
 
+def _transition_for(seam: tuple) -> dict | None:
+    if seam in DEV.NO_TRANSITION_SEAMS:
+        return None
+    return DEV.TRANSITION_OVERRIDES.get(seam, DEV.DEFAULT_TRANSITION)
+
+
+def _trim_piece(seg: Path, start_trim: float, full_dur: float, end_trim: float, dest: Path):
+    if dest.exists():
+        return
+    piece_dur = max(0.3, full_dur - start_trim - end_trim)
+    if piece_dur < full_dur - start_trim - end_trim - 0.001:
+        print(f"[warn] {dest.name}: transition trims exceeded segment duration, clamped to {piece_dur:.2f}s")
+    tmp = dest.with_suffix(".partial.mp4")
+    run(["ffmpeg", "-y", "-v", "error", "-i", str(seg), "-ss", f"{start_trim:.3f}",
+         "-t", f"{piece_dur:.3f}", *VCODEC, str(tmp)])
+    tmp.replace(dest)  # atomic -- dest only ever appears once fully written (crash-safe cache)
+
+
 def concat_segments(rows: list, out_path: Path):
+    """Splices the ~75 transitions in between the hard cuts (RESUME.md
+    section 5): each 2-clip/2-still transition device produces a standalone
+    `duration`-length clip built from the real tail of A + real head of B (or
+    A/B's own stills), inserted in place of half that duration trimmed off
+    each side's segment -- total film duration (and every later seam's
+    narration-sync timing) is exactly unchanged, only redistributed within
+    the trimmed segments' own tails/heads."""
     listfile = WORK / "_concat_all.txt"
     lines = []
-    for row in rows:
-        seg = SEGMENTS / f"seg_{row['name']}.mp4"
+    n = len(rows)
+    for i, row in enumerate(rows):
+        name = row["name"]
+        seg = SEGMENTS / f"seg_{name}.mp4"
         if not seg.exists():
-            raise RuntimeError(f"missing segment for {row['name']} -- build it first")
-        lines.append(f"file '{seg.resolve()}'")
+            raise RuntimeError(f"missing segment for {name} -- build it first")
+
+        prev_t = _transition_for((rows[i - 1]["name"], name)) if i > 0 else None
+        next_t = _transition_for((name, rows[i + 1]["name"])) if i + 1 < n else None
+        start_trim = prev_t["duration"] / 2.0 if prev_t else 0.0
+        end_trim = next_t["duration"] / 2.0 if next_t else 0.0
+
+        if start_trim > 0 or end_trim > 0:
+            piece = SEGMENTS / f"seg_{name}_trimmed.mp4"
+            _trim_piece(seg, start_trim, row["dur"], end_trim, piece)
+        else:
+            piece = seg
+        lines.append(f"file '{piece.resolve()}'")
+
+        if next_t:
+            nxt_name = rows[i + 1]["name"]
+            trans_path = SEGMENTS / f"trans_{name}_{nxt_name}.mp4"
+            if not trans_path.exists():
+                if next_t["device"] in ("verse_mask_reveal", "through_object_cut"):
+                    a_src, b_src = STILLS / f"{name}.png", STILLS / f"{nxt_name}.png"
+                else:
+                    a_src, b_src = seg, SEGMENTS / f"seg_{nxt_name}.mp4"
+                print(f"[transition] {name} -> {nxt_name}: {next_t['device']} ({next_t['duration']:.2f}s) ...",
+                      flush=True)
+                tmp = trans_path.with_suffix(".partial.mp4")
+                DEV.render_transition(next_t["device"], a_src, b_src, tmp, next_t["duration"],
+                                       **next_t["params"])
+                tmp.replace(trans_path)  # atomic -- crash-safe cache, same as _trim_piece
+            lines.append(f"file '{trans_path.resolve()}'")
+
     listfile.write_text("\n".join(lines) + "\n", encoding="utf-8")
     run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", str(listfile),
          "-c", "copy", str(out_path)])
@@ -157,13 +234,15 @@ def mux_narration(video_path: Path, out_path: Path, total_dur: float):
     video_dur = ffprobe_dur(video_path)
     video_deficit = max(0.0, total_dur - video_dur)
     vf = f"tpad=stop_mode=clone:stop_duration={video_deficit:.3f}" if video_deficit > 0.001 else "null"
+    tmp = out_path.with_suffix(".partial.mp4")
     run(["ffmpeg", "-y", "-v", "error", "-i", str(video_path), "-i", str(NARRATION),
          "-filter_complex",
          f"[0:v]{vf}[vout];"
          f"[1:a]aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,"
          f"apad=whole_dur={total_dur:.3f}[aout]",
          "-map", "[vout]", "-map", "[aout]", *VCODEC, "-c:a", "aac", "-b:a", "192k",
-         "-t", f"{total_dur:.3f}", str(out_path)])
+         "-t", f"{total_dur:.3f}", str(tmp)])
+    tmp.replace(out_path)  # atomic -- OUT_CUT only ever appears fully written
 
 
 def main():

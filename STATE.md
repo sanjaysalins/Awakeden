@@ -1,5 +1,22 @@
 # STATE.md — progress tracker
 
+**2026-08-06 (Day of Atonement LONG — motion-freshness fix pass, Fable
+Round 10, $0 spend, all deterministic):** User watched the 2026-08-05
+motion-design rollout and flagged frozen/amateurish spots + asked for
+"grand text"/redemption animation + a repeatable pipeline. Fable diagnosed
+the root cause (Raking Light overused as the lazy zero-bbox default, 21/76
+spreads) and designed the fix; Sonnet built it — new `panel_animator/
+motion_lint.py` QC gate, Raking Light demoted to 3 legitimate spreads,
+word-timed Grand-Text on all 8 verse cards, 2 Illuminated Rubric cards, 3
+bespoke text layouts, gold-thread `thread_device.py` promotion + a
+redemption reprise on s56, a real `parallax_25d` resolution bug fixed
+project-wide. Several real bugs caught mid-build (a spotlight-schedule that
+silently dimmed a whole card, a stale un-rebuilt segment, a wrong
+transition-target coordinate, a text-overlap bug) — full detail in
+`RESUME.md`'s top block. **Session ended with the final full 76-segment
+rebuild still running in the background** — not yet verified/delivered.
+Full detail + exact resume steps: `RESUME.md` top block.
+
 **2026-08-04 (Day of Atonement LONG — STILLS STAGE COMPLETE, 76/76,
 $37.20 total spend, all committed through f75e9da):** Resumed after
 checking system load first (CPU 74%/RAM 71% busy,

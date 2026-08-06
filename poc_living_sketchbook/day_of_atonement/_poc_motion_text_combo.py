@@ -59,13 +59,86 @@ def _scale_crop(im: Image.Image, w: int, h: int) -> Image.Image:
     return im.crop(((zw - w) // 2, (zh - h) // 2, (zw - w) // 2 + w, (zh - h) // 2 + h))
 
 
+def _norm_line(line):
+    """LINES entries may be a plain string (legacy, single run at BODY_SIZE)
+    or a list of (text, size) run tuples (LAW-2 display-scale key words,
+    same format _s3_thread_leaf_54_55.py already uses on spreads 54-55) --
+    normalize to the run-list form everywhere below."""
+    return [(line, BODY_SIZE)] if isinstance(line, str) else line
+
+
+def _line_plain_text(line) -> str:
+    return "".join(text for text, _ in _norm_line(line))
+
+
 def _build_line_tiles():
-    font = ImageFont.truetype(tl.F_BODY, BODY_SIZE)
-    fonts = {BODY_SIZE: font}
-    masks = [tl.make_line_mask([(line, BODY_SIZE)], fonts) for line in LINES]
+    norm_lines = [_norm_line(ln) for ln in LINES]
+    sizes = sorted({sz for runs in norm_lines for _, sz in runs})
+    fonts = {sz: ImageFont.truetype(tl.F_BODY, sz) for sz in sizes}
+    masks = [tl.make_line_mask(runs, fonts) for runs in norm_lines]
     tiles_dark = [tl.compose_pressed_tile(m[0], tl.INK_DARK) for m in masks]
     tiles_final = [tl.compose_pressed_tile(m[0], tl.INK_FINAL) for m in masks]
     return masks, tiles_dark, tiles_final
+
+
+def _norm_word(s: str) -> str:
+    return "".join(c.lower() for c in s if c.isalnum())
+
+
+def match_line_press_times(lines, alignment, abs_start: float, duration: float) -> list:
+    """Round 10 A0.1 (Fable): for each line, find its OWN leading word's
+    real spoken start time inside the card's alignment window, matching in
+    order (each match consumes words so repeated words like "the" still
+    press lines in sequence, not all on the first hit). Returns LOCAL press
+    times (seconds from abs_start) -- None per line with no match, printing
+    a WARN once; the caller falls back to its own proportional-spacing
+    default on None rather than breaking."""
+    win_words = [w for w in alignment if abs_start - 0.5 <= w["start"] <= abs_start + duration + 1.0]
+    cursor = 0
+    times = []
+    for line in lines:
+        plain = _line_plain_text(line)
+        toks = [_norm_word(t) for t in plain.split() if _norm_word(t)]
+        found_t = None
+        if toks:
+            first_tok = toks[0]
+            for i in range(cursor, len(win_words)):
+                if _norm_word(win_words[i]["w"]) == first_tok:
+                    found_t = win_words[i]["start"] - abs_start
+                    cursor = i + 1
+                    break
+        if found_t is None:
+            print(f"[WARN] motion_text_combo: no alignment match for line {plain!r} "
+                  f"in window [{abs_start:.2f},{abs_start + duration:.2f}]")
+        times.append(found_t)
+    return times
+
+
+def _line_heights(masks: list) -> list:
+    """Round 10 bugfix: a fixed LINE_H (sized off BODY_SIZE alone) let a
+    LAW-2 display-scale run's real glyph height overflow into the next
+    line -- "blood" at 2x scale visibly collided with the line below it.
+    Each line now advances by its own REALIZED mask height (already
+    reflects the tallest run in that line, from make_line_mask), never
+    less than the LINE_H floor, plus a little breathing room."""
+    return [max(LINE_H, m[2] + 6) for m in masks]
+
+
+def _draw_backing(img: Image.Image, masks: list, alpha: int = 165):
+    """Semi-opaque parchment plate behind the verse block. Some cards' own
+    art is dark/busy right where the text lands (e.g. s28's brick wall +
+    gold frame border) and the dark-brown pressed ink nearly disappears
+    against it -- this keeps every card legible regardless of its own
+    background, not just the plain-paper ones the devices were first tried
+    on. Sized from the REALIZED line tiles (Round 10 fix), not a fixed
+    line-count guess -- LAW-2 display-scale key words widen a line well
+    beyond the old flat estimate."""
+    max_w = max((m[1] for m in masks), default=int(0.40 * W))
+    w = max_w + 40
+    h = sum(_line_heights(masks)) + 20
+    x0, y0 = BLOCK_X - 18, BLOCK_Y - 14
+    plate = Image.new("RGBA", (w, h), (*[int(v) for v in PAPER_TONE], alpha))
+    img.alpha_composite(plate, (x0, y0))
 
 
 def _encode(work: Path, dest: Path):
@@ -78,15 +151,21 @@ def _encode(work: Path, dest: Path):
 
 # ---------------------------------------------------------- A: Registration Snap + Verse
 
-def render_combo_a(still: Path, dest: Path, duration: float, snap_frac: float = 0.5):
+def render_combo_a(still: Path, dest: Path, duration: float, abs_start: float = 0.0, snap_frac: float = 0.5):
     base = _scale_crop(Image.open(still).convert("RGB"), W, H)
     arr = np.asarray(base, dtype=np.float32)
     screen = make_halftone_screen(W, H)
     dot_alpha = np.asarray(screen.split()[-1], dtype=np.float32) / 255.0
 
     masks, tiles_dark, tiles_final = _build_line_tiles()
-    snap_t = duration * snap_frac
+    press_times = match_line_press_times(LINES, ALIGNMENT, abs_start, duration)
+    matched = [t for t in press_times if t is not None]
+    # Registration Snap's own print-resolves beat -- ties to the FIRST
+    # matched line's real word (the print settles right as the text starts
+    # arriving), falling back to the old fixed fraction if nothing matched.
+    snap_t = min(matched) if matched else duration * snap_frac
     ease_dur = 0.6
+    line_press = [pt if pt is not None else snap_t for pt in press_times]
 
     work = dest.parent / (dest.stem + "_frames")
     if work.exists():
@@ -110,13 +189,16 @@ def render_combo_a(still: Path, dest: Path, duration: float, snap_frac: float = 
         frame[..., 2] = _shift_channel(arr[..., 2], -dx)
         frame *= (1.0 - screen_op * dot_alpha * 0.9)[..., None]
         img = Image.fromarray(np.clip(frame, 0, 255).astype(np.uint8)).convert("RGBA")
+        _draw_backing(img, masks)
 
-        # verse: faint + blurred before the snap, presses in sharp exactly at
-        # the same moment the print itself resolves -- one unified beat.
-        pre_snap = t < snap_t
+        # each line: faint + blurred before ITS OWN matched word, presses in
+        # sharp exactly when that word is actually spoken (Round 10 A0.1) --
+        # was one global snap for the whole block, now per-line.
         y = BLOCK_Y
+        line_heights = _line_heights(masks)
         for li, line in enumerate(LINES):
             mask, mw, mh, pad, base_local = masks[li]
+            pre_snap = t < line_press[li]
             tile = tiles_dark[li] if pre_snap else tiles_final[li]
             if pre_snap:
                 tile = tile.copy()
@@ -124,7 +206,7 @@ def render_combo_a(still: Path, dest: Path, duration: float, snap_frac: float = 
                 r, g, b, a = tile.split()
                 tile.putalpha(a.point(lambda v: int(v * 0.22)))
             tl.paste_tile(img, tile, BLOCK_X, y + base_local, pad, base_local, 1.0, 1.0)
-            y += LINE_H
+            y += line_heights[li]
 
         Image.fromarray(np.array(img.convert("RGB"))).save(work / f"f{i:04d}.png")
 
@@ -133,7 +215,7 @@ def render_combo_a(still: Path, dest: Path, duration: float, snap_frac: float = 
 
 # ---------------------------------------------------------------- B: Ink-Up Build + Verse
 
-def render_combo_b(still: Path, dest: Path, duration: float):
+def render_combo_b(still: Path, dest: Path, duration: float, abs_start: float = 0.0):
     base = _scale_crop(Image.open(still).convert("RGB"), W, H)
     src = np.asarray(base, dtype=np.float32)
     y_grid, x_grid = np.mgrid[0:H, 0:W].astype(np.float32)
@@ -151,6 +233,7 @@ def render_combo_b(still: Path, dest: Path, duration: float):
     img_field = halo_brightness(x_grid, y_grid, img_cx, img_cy, img_r, dim_floor=0.0)
 
     masks, tiles_dark, tiles_final = _build_line_tiles()
+    press_times = match_line_press_times(LINES, ALIGNMENT, abs_start, duration)
 
     work = dest.parent / (dest.stem + "_frames")
     if work.exists():
@@ -174,14 +257,21 @@ def render_combo_b(still: Path, dest: Path, duration: float):
         if verse_active and verse_reveal_start is None:
             verse_reveal_start = t
         if verse_reveal_start is not None:
-            local = t - verse_reveal_start
-            p = min(1.0, local / 0.4)
+            _draw_backing(img, masks)
             y = BLOCK_Y
+            line_heights = _line_heights(masks)
             for li, line in enumerate(LINES):
                 mask, mw, mh, pad, base_local = masks[li]
-                line_local = local - li * 0.15
+                # Round 10 A0.1: each line presses at ITS OWN matched
+                # narration word, clamped to not fire before the tour's
+                # attention has even reached the verse block; falls back to
+                # the old li*0.15 stagger only when no match was found.
+                matched = press_times[li]
+                line_press_t = max(matched, verse_reveal_start) if matched is not None \
+                    else verse_reveal_start + li * 0.15
+                line_local = t - line_press_t
                 if line_local < 0:
-                    y += LINE_H
+                    y += line_heights[li]
                     continue
                 lp = min(1.0, max(0.0, line_local / 0.4))
                 color_t = min(1.0, max(0.0, (line_local - 0.1) / 0.5))
@@ -189,7 +279,7 @@ def render_combo_b(still: Path, dest: Path, duration: float):
                 tile = tl.compose_pressed_tile(mask, color)
                 tl.paste_tile(img, tile, BLOCK_X, y + base_local, pad, base_local,
                               1.05 - 0.05 * lp, lp)
-                y += LINE_H
+                y += line_heights[li]
 
         Image.fromarray(np.array(img.convert("RGB"))).save(work / f"f{i:04d}.png")
 
@@ -220,15 +310,19 @@ def render_combo_c(still: Path, dest: Path, duration: float, beats_local: list):
             dt = t - b
             if 0 <= dt < letterpress_beat.PULSE_DUR:
                 pulse = max(pulse, 1.0 - dt / letterpress_beat.PULSE_DUR)
-        darken = letterpress_beat.DARKEN_K * pulse
+        darken = letterpress_beat.DARKEN_K * 1.5 * pulse  # Round 10: C-card pulse barely
+        # registered on screen at the module's own default amplitude
         frame = src * (1.0 - darken * ink_mask[..., None])
         img = Image.fromarray(np.clip(frame, 0, 255).astype(np.uint8)).convert("RGBA")
+        if line_beats and t >= line_beats[0]:
+            _draw_backing(img, masks)
 
         y = BLOCK_Y
+        line_heights = _line_heights(masks)
         for li, line in enumerate(LINES):
             beat_t = line_beats[li] if li < len(line_beats) else None
             if beat_t is None or t < beat_t:
-                y += LINE_H
+                y += line_heights[li]
                 continue
             mask, mw, mh, pad, base_local = masks[li]
             lt = t - beat_t
@@ -240,7 +334,7 @@ def render_combo_c(still: Path, dest: Path, duration: float, beats_local: list):
                 scale, alpha, color = 1.0, 1.0, tl.lerp_color(tl.INK_DARK, tl.INK_FINAL, ease)
             tile = tl.compose_pressed_tile(mask, color)
             tl.paste_tile(img, tile, BLOCK_X, y + base_local, pad, base_local, scale, alpha)
-            y += LINE_H
+            y += line_heights[li]
 
         Image.fromarray(np.array(img.convert("RGB"))).save(work / f"f{i:04d}.png")
 

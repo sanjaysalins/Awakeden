@@ -50,15 +50,21 @@ def _scale_crop(im: Image.Image, w: int, h: int) -> Image.Image:
 
 
 def render(still: Path, regions: list[dict], out_mp4: Path, duration: float,
-           w: int = 1920, h: int = 1080):
+           w: int = 1920, h: int = 1080, initial_hold_frac: float = 0.10, final_hold_frac: float = 0.10):
+    """`initial_hold_frac`/`final_hold_frac` (default 0.10/0.10, matching
+    every existing caller byte-for-byte) let a caller re-weight the schedule
+    asymmetrically -- e.g. a smaller initial_hold_frac + larger
+    final_hold_frac stretches the LAST region's arrival later into the
+    window, so the composition settles closer to the spread's own end
+    instead of resting on "full" for a while (Fable Round 10, sec 1a)."""
     base = _scale_crop(Image.open(still).convert("RGB"), w, h)
     src = np.asarray(base, dtype=np.float32)
     y_grid, x_grid = np.mgrid[0:h, 0:w].astype(np.float32)
 
     schedule = build_tour_schedule(regions, duration, w, h,
-                                    initial_hold_sec=max(0.6, duration * 0.10),
+                                    initial_hold_sec=max(0.6, duration * initial_hold_frac),
                                     move_sec=max(0.5, duration * 0.06),
-                                    final_hold_sec=max(0.6, duration * 0.10))
+                                    final_hold_sec=max(0.6, duration * final_hold_frac))
 
     # one soft region-membership field per focal element -- reuses
     # halo_brightness's own Gaussian falloff so "attention" and "ink" share

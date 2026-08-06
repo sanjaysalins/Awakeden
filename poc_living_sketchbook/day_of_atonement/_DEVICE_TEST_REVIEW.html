@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Day of Atonement — device rollout test batch</title>
+<style>
+  body { font-family: Georgia, serif; background: #f4ecdc; color: #2a2016; max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+  h1 { font-size: 1.4em; }
+  p.note { color: #5a4c38; }
+  .card { background: #fff; border: 1px solid #d8c9a8; border-radius: 8px; padding: 16px; margin-bottom: 24px; }
+  .card h2 { margin: 0 0 4px 0; font-size: 1.1em; }
+  .card .meta { color: #7a6c50; font-size: 0.9em; margin-bottom: 10px; }
+  video { width: 100%; max-width: 640px; display: block; background: #000; border-radius: 4px; }
+</style>
+</head>
+<body>
+<h1>Day of Atonement LONG — motion-design rollout, TEST BATCH (5 spreads)</h1>
+<p class="note">Resuming RESUME.md's 2026-08-05 handover. Before running the full 76-spread + transitions
+rollout, these 5 check every device shape the new dispatch code handles: a plain full-still swap, a
+multi-region reveal, a face-anchored pulse, a real-clip + device-tail swap, and a verse card with real
+KJV text. Gentle CPU/memory throttle stayed on the whole time (POLITE_CPU=33 default, unchanged).</p>
+
+<div class="card">
+  <h2>#20 s20_blood_atonement_card — Registration Snap + Verse (combo A)</h2>
+  <div class="meta">Verse card, full duration. Lev 17:11 KJV excerpt, exact wording from _PLAN.md.</div>
+  <video controls src="_segments/seg_s20_blood_atonement_card.mp4"></video>
+</div>
+
+<div class="card">
+  <h2>#56 s56_the_answer — Chiaroscuro Reveal</h2>
+  <div class="meta">Full still swap, 3 regions (Christ centre, goat left, goat right) — reused the exact bboxes already proven on this spread in the round-2 POC.</div>
+  <video controls src="_segments/seg_s56_the_answer.mp4"></video>
+</div>
+
+<div class="card">
+  <h2>#60 s60_seated_glory — Raking Light</h2>
+  <div class="meta">Full still swap, no bbox needed. Replaces the old push/arc camera on a spread that already had a real "fingers fading into the armrest" fix behind it — checked fingers stayed clean.</div>
+  <video controls src="_segments/seg_s60_seated_glory.mp4"></video>
+</div>
+
+<div class="card">
+  <h2>#66 s66_high_priests_face — Caravaggio Pulse</h2>
+  <div class="meta">Full still swap. Face bbox hand-picked from the actual still (eyes/nose centred).</div>
+  <video controls src="_segments/seg_s66_high_priests_face.mp4"></video>
+</div>
+
+<div class="card">
+  <h2>#74 s74_every_year_gone — Breath-Synced Halo (tail swap)</h2>
+  <div class="meta">Real Kling clip plays forward first, THEN the device replaces the generic push/arc tail.
+  Note: the real clip's own motion widened the framing by the last frame, so the hand-picked bbox
+  (from the original still) lands slightly off-centre by the end — visible but not broken. Flagged in
+  the write-up as a real limitation of this approach, not hidden.</div>
+  <video controls src="_segments/seg_s74_every_year_gone.mp4"></video>
+</div>
+
+</body>
+</html>

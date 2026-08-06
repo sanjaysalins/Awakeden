@@ -1,4 +1,174 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-06 (END OF SESSION) — READ THIS
+# FIRST — supersedes every block below, including the 2026-08-05 rollout
+# block right under this one (still fully accurate for what it covers).
+#
+# ── STATUS: the 2026-08-05 rollout (below) finished and the user watched
+# the full film. Feedback: "several places we just a frozen still, it looks
+# very abrupt, it looks very amateurish... can we bring in some grand text
+# or redemption animation... get fable to think of a repeatable pipeline."
+# This session answered that in full: Fable designed (Round 10 doc), Sonnet
+# built every piece, real bugs were caught and fixed along the way. A FULL
+# 76-segment rebuild is RUNNING IN THE BACKGROUND as this session ends --
+# it was NOT finished when the user asked to stop for the day. Resume
+# instructions are at the very bottom of this block.
+#
+# ── FABLE'S DESIGN DOC (read first if picking this back up cold):
+# `poc_living_sketchbook/_FABLE_ROUND10_MOTION_FRESHNESS_PIPELINE.md` --
+# diagnoses the root cause (Raking Light became the lazy zero-bbox default,
+# 21/76 spreads = 28%, because it's the only hold device needing no per-
+# still bbox pick), gives a full disposition table, three "grand text"
+# concepts, the gold-thread redemption reprise, and the repeatable pipeline
+# (taxonomy + quota law + pairing law + cliff rule + the new motion_lint.py
+# gate). Everything below was built FROM that doc.
+#
+# ── WHAT GOT BUILT (all in `poc_living_sketchbook/day_of_atonement/
+# _devices.py` unless noted; all committed this session):
+#
+# 1. `panel_animator/motion_lint.py` (NEW, ~230 lines) -- the standing $0 QC
+#    gate. Samples every segment at 3fps, computes p95 luminance-diff (the
+#    freshness signal -- catches arrival EVENTS a crude start/mid/end sample
+#    misses), checks FROZEN-SPREAD/FROZEN-SHORT/STATIC-RUN/DEVICE-QUOTA/
+#    PLACEHOLDER/MOTION-CLIFF/EXTRACT-ERROR. Thresholds calibrated against
+#    this episode's real pre-fix distribution (narrative=0.15, card=0.10 --
+#    see the file's own header comment for the calibration reasoning).
+#    Baseline BEFORE any fix: 10 FAIL, 11 WARN. Run again after tonight's
+#    full rebuild finishes to get the real final number (see RESUME below).
+#
+# 2. Raking Light demoted from 21 spreads to 3 legitimate ones (s03 gold-
+#    flare, s42 held_breath-paired, s61 hush-decay-before-the-tear). The
+#    other 18 switched to content-matched devices (dramatic_spotlight,
+#    caravaggio_pulse, chiaroscuro_reveal, desat_focus, line_boil, candle_only,
+#    breath_synced_halo) with real per-still bboxes eye-picked against the
+#    actual renders, not guessed. `s43_shadow_on_tent_wall` upgraded from a
+#    spotlight placeholder to the real `candle_only` device (new device
+#    wrapper `_candle_only_still`).
+#
+# 3. Grand-Text baseline (A0) on all 8 plain verse cards
+#    (`_poc_motion_text_combo.py`): word-timed presses matched to real
+#    `_alignment.json` timestamps (new `match_line_press_times`, verified
+#    100% match rate against real transcript, zero fallbacks), one LAW-2
+#    display-scale key word per card (~2x body size), combo C's DARKEN_K
+#    bumped 1.5x. Caught and fixed a REAL bug: the display-scale word
+#    initially overlapped the line below it (fixed line spacing was sized
+#    off body text only) -- new `_line_heights()` helper sizes each line's
+#    own advance from its realized mask height.
+#
+# 4. Two Illuminated Rubric cards built for real (`_render_illuminated_rubric`,
+#    NEW ~140 lines): s16 (Lev 16:2, red-letter LAW-1 whole-arrival, gold
+#    dropped-cap "S", was a raking placeholder) and s52 (Heb 9:12 -- NOT
+#    red-letter since it's Hebrews narrating about Christ, not Christ's own
+#    speech, so it renders in plain ink via a new `body_color` param, not
+#    RUBRIC red -- a real doctrinal-accuracy catch). Caught and fixed a real
+#    bug: the first cut reused focal_tour's spotlight-SCHEDULE, which dimmed
+#    the ENTIRE card (including the text!) once the "tour" arrived at the
+#    glow -- replaced with a localized `_radial_gain` helper that only
+#    breathes the glow itself, never dims anything else.
+#
+# 5. Three bespoke text layouts (Concept A1/A2/A3, each a new render
+#    function): s63 torn-veil card -- Matt 27:51's clauses DESCEND the page,
+#    landing lowest exactly as the voice says "to the bottom"
+#    (`_render_torn_veil_descend`). s69 east-west card -- Ps 103:12 presses
+#    at OPPOSITE frame edges with the horizon between
+#    (`_render_east_west_edges`, deliberately zero ambient motion --
+#    `stillness_authored: True`, see below). s60 seated-glory card -- Heb
+#    10:12's "sat down" physically SETTLES into place with an ease-out
+#    descent + paper-thump (`_render_seated_settle`).
+#
+# 6. Thread device PROMOTED to `panel_animator/thread_device.py` (NEW,
+#    reusable) from `_s3_thread_leaf_54_55.py` (spreads 54-55's own proven
+#    gold-thread primitive) -- regression-verified pixel-identical (hash
+#    differs due to x264 non-determinism across re-encodes, confirmed via
+#    direct pixel diff, max delta ~30/255 = pure recompression noise).
+#    s56_the_answer (the film's thesis image) gets a gold-thread REPRISE:
+#    both goat-memory vignettes' threads fade in and converge on Christ's
+#    chest, swelling together on "one Priest" (new `_render_answer_
+#    thread_reprise`). Caught and fixed a real bug in the SAME spread: the
+#    chiaroscuro regions were ordered [Christ, goat1, goat2] -- Christ was
+#    igniting FIRST, backwards from this project's own locked "climax lands
+#    on Christ" pattern. Reordered so Christ ignites LAST.
+#
+# 7. Real bug, unrelated to text: `parallax_25d.render()` (the
+#    locked_plate_parallax device, 10 spreads) was silently rendering at
+#    each STILL's own native resolution (2752x1536) instead of the film's
+#    1920x1080 -- every other device wrapper scale-crops internally, this
+#    was the one silent passthrough. Fixed at the root in `render_device()`'s
+#    dispatch (always normalizes via an explicit ffmpeg scale-crop pass now).
+#    s51 (fg_amp 6->9 + a new warm gold-in ramp) and s53 (a new Passion-Vigil
+#    edge-darken ramp) also got real per-spread ramps
+#    (`_apply_warm_goldin_ramp` / `_apply_edge_darken_ramp`, NEW).
+#
+# 8. Real bug: s50_the_shadow's device table entry was fixed back in this
+#    session's Task 9 (raking_light -> breath_synced_halo, re-anchored after
+#    confirming wash_creep's storm-HSV mask doesn't catch this warm-toned
+#    shadow at all -- 0.5% coverage, tested directly) but the spread was
+#    NEVER actually rebuilt -- left out of that batch's --only list by
+#    mistake. Caught by the motion_lint transition-cliff audit (still
+#    p95=0.027, FAIL) when re-measuring the CURRENT state. Rebuilt; confirmed
+#    by eye the breathing dim/glow is now real. This is WHY tonight's final
+#    pass forces --rebuild on ALL 76 spreads rather than trusting the
+#    per-task --only lists were each complete.
+#
+# 9. Transition cliff audit (motion_lint's MOTION-CLIFF check): of 3
+#    surviving cliffs, only one needed escalation --
+#    s04_donning_linen->s05_walking_to_veil gets leaf_flick (s05's subtle
+#    parallax has no arrival event to bridge the gap with, and Fable's own
+#    plan says leave s05's motion AS-IS -- "above the frozen band"). The
+#    other two resolved in substance without a transition change: s50 now
+#    has real motion after the rebuild above; s69 has its own text-press
+#    arrival event in the first 1.5s. `motion_lint.py`'s whitelist check
+#    also got extended to look up SPECIAL_CARDS (not just
+#    DEVICE_ASSIGNMENTS) so `stillness_authored` is honored on bespoke cards
+#    like s69 (deliberately near-zero ambient motion per Fable's own A2
+#    spec -- "no halo, no raking, just the two presses").
+#
+# ── RESUME HERE TOMORROW (task #16, the last task, was IN PROGRESS when
+# the user asked to stop):
+#
+#   1. Check whether the background render finished overnight:
+#        - It's an OS-level background process (`_s6_assemble.py --rebuild`,
+#          full 76-segment rebuild, no --only), so it keeps running even
+#          after this session ends -- UNLESS the machine slept/shut down or
+#          the terminal window was closed, in which case it died mid-way
+#          and needs a clean restart.
+#        - Check for a finished silent+muxed film:
+#          `poc_living_sketchbook/day_of_atonement/DAYOFATONEMENT_LONG_
+#          living_sketchbook.mp4` -- check its mtime is from tonight
+#          (2026-08-06 evening) not the earlier 2026-08-05 build.
+#        - If it's NOT there or looks stale/incomplete: just re-run
+#          `.venv\Scripts\python.exe poc_living_sketchbook\day_of_atonement\
+#          _s6_assemble.py --rebuild` (with --rebuild, not --only -- every
+#          device-table edit this session needs a real re-render, don't
+#          trust partial completion from an interrupted run; it will
+#          re-render everything from scratch, this is expected and safe,
+#          not wasted work if it was interrupted).
+#   2. Once the full rebuild + concat + transitions + mux succeed: run
+#      `.venv\Scripts\python.exe panel_animator\motion_lint.py --episode-dir
+#      poc_living_sketchbook\day_of_atonement` for the final FAIL/WARN count
+#      -- compare against the pre-fix baseline (10 FAIL, 11 WARN) and the
+#      mid-session current-state check (2 FAIL, 7 WARN, before tonight's
+#      s50 fix + transition escalation were folded in -- should be lower
+#      still, ideally 0 FAIL).
+#   3. Run `check_landing_hold.py` (repo root) if it exists, to verify
+#      INV-26 wasn't disturbed by any of tonight's changes.
+#   4. Eye-check a handful of spreads across the WHOLE film (not just the
+#      individual ones already verified in isolation this session) -- the
+#      full concat+transitions pass can reveal seam issues invisible in a
+#      single-spread render.
+#   5. Report the finished film back to the user with the full clickable
+#      `file:///` link, the before/after motion_lint numbers, and a summary
+#      of what changed -- this is the actual deliverable for the "make it
+#      feel fresh, get Fable to design a repeatable pipeline" ask.
+#
+# ── NOT YET DONE (lower priority, Fable's original Concept B also named
+# these but the user's core ask didn't require them -- explicitly deferred,
+# not forgotten): s31_confession_card (Scribed-Ink live-write, the film's
+# longest spread) and s49_veil_detail_card (stacked double-verse) are still
+# on their raking_light placeholder from the original 2026-08-05 rollout.
+# Real registers for both are specified in Fable's Round 10 doc, Concept B
+# section, if picked up later.
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-05 (END OF SESSION) — READ THIS
 # FIRST — supersedes every block below, including the motion-design-toolkit
 # block right under this one (still fully accurate for what was BUILT, just
