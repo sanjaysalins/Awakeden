@@ -1025,7 +1025,21 @@ VERSE_CARDS = {
                            "lines": [[("...", BODY_SIZE), ("boldness", 80), (" to enter", BODY_SIZE)],
                                      [("into the holiest by", BODY_SIZE)],
                                      [("the blood of Jesus.", BODY_SIZE)]]},
+    # explicitly deferred (RESUME.md 2026-08-06/07): still on the raking_light
+    # placeholder from the original rollout, not yet given a real bespoke
+    # register (Scribed-Ink live-write for s31, stacked double-verse for s49
+    # -- both specced in Fable's Round 10 doc, Concept B). Registered here
+    # (not just left unlisted) so poc_living_sketchbook/_layer_check.py
+    # reports an explicit WARN instead of silently missing the gap.
+    "s31_confession_card": {"deferred": True},
+    "s49_veil_detail_card": {"deferred": True},
 }
+
+# spreads whose real lettering is built by a standalone script outside the
+# normal VERSE_CARDS/SPECIAL_CARDS dispatch -- e.g. spread55_isaiah536, built
+# by _s3_thread_leaf_54_55.py's Elder Leaf compositing pass. Checked by
+# poc_living_sketchbook/_layer_check.py so these don't false-FAIL.
+EXTERNAL_LETTERING = {"spread55_isaiah536"}
 
 
 # Concept B special cards -- don't fit combo A/B/C, dispatch separately.

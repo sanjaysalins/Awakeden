@@ -45,6 +45,14 @@ FROZEN_MIN_DUR = 5.0  # dur >= this -> FROZEN-SPREAD (FAIL); below -> FROZEN-SHO
 QUOTA_WARN, QUOTA_FAIL = 0.10, 0.15
 QUOTA_FULLSCOPE_FAIL = 0.08
 
+# RES-MISMATCH: catches a device wrapper silently rendering at its still's own
+# native resolution instead of the film's frame (the real parallax_25d bug
+# that survived 10 spreads in Day of Atonement before anyone noticed -- see
+# memory `day-of-atonement-retro-learnings` fix #3). Checked per-segment
+# alongside the freshness score, not a separate pass.
+DEFAULT_EXPECT_RES = (1920, 1080, 30.0)
+FPS_TOLERANCE = 0.5
+
 # Calibrated 2026-08-06 against the Day of Atonement 76-segment set, PRE-FIX
 # (see _FABLE_ROUND10...md sec 3d). The real distribution shows a clean,
 # isolated cluster of 11 segments at p95<=0.036 (exactly the spreads
@@ -112,6 +120,23 @@ def sample_luminance_series(seg_path: Path, fps: int = FPS_SAMPLE) -> np.ndarray
         return None
     arr = np.frombuffer(r.stdout, dtype=np.uint8).reshape(n, h, w).astype(np.float32)
     return arr.mean(axis=(1, 2))  # per-frame mean luminance
+
+
+def probe_resolution_fps(seg_path: Path) -> tuple[int, int, float] | None:
+    """(width, height, fps) of a segment's video stream, or None if unreadable."""
+    r = subprocess.run(
+        ["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries",
+         "stream=width,height,avg_frame_rate", "-of", "csv=s=x:p=0", str(seg_path)],
+        capture_output=True, text=True)
+    if r.returncode != 0 or not r.stdout.strip():
+        return None
+    try:
+        w_s, h_s, fps_s = r.stdout.strip().split("x")
+        num, den = fps_s.split("/")
+        fps = float(num) / float(den) if float(den) != 0 else 0.0
+        return int(w_s), int(h_s), fps
+    except (ValueError, ZeroDivisionError):
+        return None
 
 
 def score_segment(seg_path: Path) -> dict | None:
@@ -188,9 +213,11 @@ def run_calibrate(rows: list, segments_dir: Path, devices_mod):
           "the known-alive cluster, then re-run without --calibrate.")
 
 
-def run_lint(rows: list, segments_dir: Path, devices_mod, thresholds: dict, out_path: Path) -> int:
+def run_lint(rows: list, segments_dir: Path, devices_mod, thresholds: dict, out_path: Path,
+             expect_res: tuple[int, int, float] = DEFAULT_EXPECT_RES) -> int:
     findings = []
     scores = {}
+    exp_w, exp_h, exp_fps = expect_res
     for row in rows:
         name = row["name"]
         seg = segments_dir / f"seg_{name}.mp4"
@@ -206,6 +233,14 @@ def run_lint(rows: list, segments_dir: Path, devices_mod, thresholds: dict, out_
                               "ffmpeg/ffprobe could not read this segment -- fail-closed, not skipped"))
             continue
         scores[name] = s
+        res = probe_resolution_fps(seg)
+        if res is None:
+            findings.append(("FAIL", "RES-MISMATCH", name, "could not read resolution/fps"))
+        else:
+            w, h, fps = res
+            if w != exp_w or h != exp_h or abs(fps - exp_fps) > FPS_TOLERANCE:
+                findings.append(("FAIL", "RES-MISMATCH", name,
+                                  f"{w}x{h}@{fps:.2f} != expected {exp_w}x{exp_h}@{exp_fps:.0f}"))
         if entry and entry.get("placeholder"):
             findings.append(("FAIL", "PLACEHOLDER", name,
                               f"device table still has placeholder:True for {name}"))
@@ -306,6 +341,8 @@ def main():
     ap.add_argument("--calibrate", action="store_true")
     ap.add_argument("--out", default=None, help="defaults to <episode-dir>/_motion_lint_report.md")
     ap.add_argument("--thresholds", default=None, help="JSON string overriding DEFAULT_THRESHOLDS")
+    ap.add_argument("--expect", default="1920x1080@30",
+                     help="expected WxH@FPS for every segment (RES-MISMATCH check)")
     args = ap.parse_args()
 
     ep = args.episode_dir
@@ -326,7 +363,10 @@ def main():
         return
 
     thresholds = json.loads(args.thresholds) if args.thresholds else DEFAULT_THRESHOLDS
-    code = run_lint(rows, segments_dir, devices_mod, thresholds, out_path)
+    res_part, fps_part = args.expect.split("@")
+    exp_w, exp_h = (int(x) for x in res_part.split("x"))
+    expect_res = (exp_w, exp_h, float(fps_part))
+    code = run_lint(rows, segments_dir, devices_mod, thresholds, out_path, expect_res)
     sys.exit(code)
 
 

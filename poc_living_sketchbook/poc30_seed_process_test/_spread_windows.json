@@ -1,0 +1,52 @@
+[
+ {
+  "num": 1,
+  "name": "s01_something_wrong",
+  "beat": 1,
+  "start": 0.0,
+  "end": 5.8,
+  "dur": 5.8,
+  "mode": "device",
+  "clip_dur": 5.8
+ },
+ {
+  "num": 2,
+  "name": "s02_the_hiding",
+  "beat": 1,
+  "start": 5.8,
+  "end": 11.9,
+  "dur": 6.1,
+  "mode": "device",
+  "clip_dur": 6.1
+ },
+ {
+  "num": 3,
+  "name": "s03_verse_card",
+  "beat": 1,
+  "start": 11.9,
+  "end": 24.0,
+  "dur": 12.1,
+  "mode": "device",
+  "clip_dur": 12.1
+ },
+ {
+  "num": 4,
+  "name": "s04_god_walking",
+  "beat": 1,
+  "start": 24.0,
+  "end": 30.7,
+  "dur": 6.7,
+  "mode": "device",
+  "clip_dur": 6.7
+ },
+ {
+  "num": 5,
+  "name": "s05_where_art_thou",
+  "beat": 1,
+  "start": 30.7,
+  "end": 33.03,
+  "dur": 2.33,
+  "mode": "device",
+  "clip_dur": 2.33
+ }
+]

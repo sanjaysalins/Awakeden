@@ -66,11 +66,12 @@ def check_parity(mp4: Path) -> tuple[bool, str]:
 
 def find_finished_mp4s() -> list[Path]:
     found = []
-    for d in (ROOT / "batches", ROOT / "longform"):
+    for d in (ROOT / "batches", ROOT / "longform", ROOT / "poc_living_sketchbook"):
         if not d.exists():
             continue
         found += list(d.glob("**/*_sfx.mp4"))
         found += list(d.glob("**/*_scored_sfx.mp4"))
+        found += list(d.glob("**/*_cc.mp4"))  # living-sketchbook's own final (captioned+watermarked) suffix
     # de-dupe, keep the most specific (already unique by glob, but stay safe)
     return sorted(set(found))
 
