@@ -1,9 +1,11 @@
-"""POC30 Seed's finish_config.py -- the only per-episode content
-_finish_long.py needs (process-validation test, second real proof of fix
-#6 beyond the Day of Atonement regression: applying the SAME shared runner
-to genuinely new, different content, not just reproducing old output)."""
+"""Seed of the Woman LONG's finish_config.py -- the only per-episode
+content _finish_long.py needs. Score/SFX/caption choices below cover
+spreads 1-5 (promoted from the POC30 validation test); revisit SCORE's
+outro_s (currently a short test tail) and SFX_CUES once the full spread
+table exists, and re-point CAPTIONS.skip_spreads at the full set of
+verse-card spreads."""
 
-STEM = "POC30_SEED_living_sketchbook"
+STEM = "SEEDOFTHEWOMAN_LONG_living_sketchbook"
 
 SCORE = {
     "segments": ["lonely_searching_a"],

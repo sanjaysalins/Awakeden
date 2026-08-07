@@ -1,4 +1,6 @@
-"""POC30 Seed -- device table (process-validation test). Mirrors
+"""Seed of the Woman LONG -- device table. Spreads 1-5 promoted from the
+POC30 process-validation test (memory `day-of-atonement-retro-learnings`);
+remaining spreads to be added as the full plan is authored. Mirrors
 day_of_atonement/_devices.py's dict shapes so panel_animator/motion_lint.py
 and poc_living_sketchbook/_layer_check.py both work unmodified against this
 episode too.

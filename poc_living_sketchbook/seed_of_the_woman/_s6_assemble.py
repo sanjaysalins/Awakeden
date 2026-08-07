@@ -1,4 +1,7 @@
-"""POC30 Seed -- assemble stage (process-validation test). Implements the
+"""Seed of the Woman LONG -- assemble stage. Spreads 1-5 promoted from the
+POC30 process-validation test (memory `day-of-atonement-retro-learnings`);
+extend _spread_table.py + SEGMENT_BUILDERS as the full plan is authored.
+Implements the
 Day of Atonement retrospective's fix #1: content-hash freshness stamps
 instead of human --only lists. After building each segment, writes a
 `.stamp.json` hashing (device entry + params + source file mtimes/sizes +
@@ -11,8 +14,8 @@ Reuses day_of_atonement/_devices.py's own proven `_spotlight_family` /
 than re-implementing them -- fix #6's reuse principle applied one level
 below the finishing chain too.
 
-  .venv\\Scripts\\python.exe poc_living_sketchbook/poc30_seed_process_test/_s6_assemble.py
-  .venv\\Scripts\\python.exe poc_living_sketchbook/poc30_seed_process_test/_s6_assemble.py --rebuild
+  .venv\\Scripts\\python.exe poc_living_sketchbook/seed_of_the_woman/_s6_assemble.py
+  .venv\\Scripts\\python.exe poc_living_sketchbook/seed_of_the_woman/_s6_assemble.py --rebuild
 """
 import argparse
 import hashlib
@@ -42,8 +45,8 @@ CLIPS = HERE / "clips"
 SEG_DIR = HERE / "_segments"
 SEG_DIR.mkdir(exist_ok=True)
 
-NARRATION = HERE / "POC30_SEED_living_sketchbook.mp3"
-OUT = HERE / "POC30_SEED_living_sketchbook.mp4"
+NARRATION = HERE / "SEEDOFTHEWOMAN_LONG_living_sketchbook.mp3"
+OUT = HERE / "SEEDOFTHEWOMAN_LONG_living_sketchbook.mp4"
 
 F_KEEPER = "C:/Windows/Fonts/Inkfree.ttf"
 INK = (35, 30, 26, 255)
@@ -63,7 +66,7 @@ def load_devices_here():
     already run would silently resolve to the WRONG module (a real bug
     caught building this exact script -- explicit path-based loading avoids
     the whole class of collision)."""
-    spec = importlib.util.spec_from_file_location("_poc30_devices", HERE / "_devices.py")
+    spec = importlib.util.spec_from_file_location("_seed_devices", HERE / "_devices.py")
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     return mod
@@ -252,7 +255,7 @@ def main():
     concat_list = SEG_DIR / "_concat_all.txt"
     concat_list.write_text(
         "\n".join(f"file '{p.resolve().as_posix()}'" for p in seg_files) + "\n", encoding="utf-8")
-    silent = HERE / "_POC30_silent.mp4"
+    silent = HERE / "_SEEDOFTHEWOMAN_silent.mp4"
     _run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", str(concat_list),
           "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(FPS), str(silent)])
 

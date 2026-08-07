@@ -1,4 +1,6 @@
-"""POC30 Seed -- animate stage (process-validation test). Reuses the shared
+"""Seed of the Woman LONG -- animate stage. Spreads 1-5 promoted from the
+POC30 process-validation test (memory `day-of-atonement-retro-learnings`);
+extend JOBS as the full plan is authored. Reuses the shared
 driver from poc_comic_page/_animate_piece1_v2.py (run_job_with_fallback),
 same pattern day_of_atonement/_s4_animate.py follows -- fix #9 (check the
 sibling episode's real script chain, don't assume a generic skill applies).
@@ -6,7 +8,7 @@ Only 2 clips for this tiny excerpt: s02 (multi-figure -> Kling, per the
 locked comic-grid cost-tiering) and s04 (calm single light-presence ->
 Seedance).
 
-  .venv\\Scripts\\python.exe poc_living_sketchbook/poc30_seed_process_test/_s4_animate.py
+  .venv\\Scripts\\python.exe poc_living_sketchbook/seed_of_the_woman/_s4_animate.py
 """
 import sys
 from pathlib import Path
@@ -20,7 +22,7 @@ HERE = Path(__file__).resolve().parent
 STILLS = HERE / "stills"
 driver.OUT = HERE / "clips"
 driver.OUT.mkdir(parents=True, exist_ok=True)
-driver.EPISODE = "POC30_Seed"
+driver.EPISODE = "SeedOfTheWoman"
 
 LOCK = ("The camera does not move, zoom, or change angle at all. INVENT "
         "NOTHING new -- no new figures, objects, or marks appear; the "

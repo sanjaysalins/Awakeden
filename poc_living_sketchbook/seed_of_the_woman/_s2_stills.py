@@ -1,4 +1,6 @@
-"""POC30 Seed -- stills stage (process-validation test). Follows the exact
+"""Seed of the Woman LONG -- stills stage. Spreads 1-5 promoted from the
+POC30 process-validation test (memory `day-of-atonement-retro-learnings`);
+extend SPREAD_SHOTS as the full plan is authored. Follows the exact
 code pattern of day_of_atonement/_s2_stills.py (same STYLE constant, same
 repo-level cast-bible anchor chaining, same FULLBLEED framing note, same
 run()/resolve_refs()/main() shape) -- fix #9 (check the sibling episode's
@@ -11,7 +13,7 @@ per the fix #7 discipline (camera-angle/shot-type from _PREFLIGHT.md,
 period-accurate detail -- fig-leaf aprons per Gen 3:7, not skin coats,
 which come later at 3:21) BEFORE the first render, not learned via re-roll.
 
-  .venv\\Scripts\\python.exe poc_living_sketchbook/poc30_seed_process_test/_s2_stills.py
+  .venv\\Scripts\\python.exe poc_living_sketchbook/seed_of_the_woman/_s2_stills.py
 """
 import re
 import subprocess
@@ -26,7 +28,7 @@ from pipeline import cost
 
 HF = str(config.HF_CLI_PATH)
 MODEL = "nano_banana_pro"
-EPISODE = "POC30_Seed"
+EPISODE = "SeedOfTheWoman"
 HERE = Path(__file__).resolve().parent
 CAST = HERE.parent / "cast"
 WORLD = HERE.parent / "world"
@@ -204,7 +206,7 @@ def render_set(shots, dest_of, label):
             ok = run(prompt, out, refs)
         if ok:
             try:
-                cost.record_hf(EPISODE, "long", label, MODEL, note=f"[poc30] {name}")
+                cost.record_hf(EPISODE, "long", label, MODEL, note=f"[seed_of_the_woman] {name}")
             except Exception as e:
                 print(f"   (ledger skipped: {e})")
             print("   ok")
