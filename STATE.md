@@ -1,5 +1,27 @@
 # STATE.md — progress tracker
 
+**2026-08-07 (Day of Atonement LONG — Round 10 rebuild FINISHED, $0 spend):**
+Picked up where the 2026-08-06 session got cut off (background `--rebuild`
+died at spread 15/76 when the terminal closed). Restarted
+`_s6_assemble.py --rebuild` (gentle CPU/RAM per the standing
+`feedback-renders-stay-polite` rule — no override needed, the venv's
+`sitecustomize.py` throttle is default-on). Full 76-segment rebuild + concat
++ mux completed clean, no errors: `DAYOFATONEMENT_LONG_living_sketchbook.mp4`,
+591.0s. `motion_lint.py`: **0 FAIL, 5 WARN** (down from the pre-fix baseline
+of 10 FAIL/11 WARN — all 5 remaining WARNs are minor: 2 short calm spreads
+just under the frozen threshold, 2 devices very slightly over their 10%
+quota, 1 motion-cliff suggestion at s68->s69). `check_landing_hold.py`:
+0 FAIL repo-wide; this film's own video/audio duration checked manually
+(591.00s / 591.02s, well inside tolerance) since it lives outside the
+gate's scanned `batches/`+`longform/` dirs. Eye-checked 6 frames spread
+across the whole timeline (cold-open Aaron portrait, s50_the_shadow,
+s56_the_answer's redemption-reprise Christ+two-goats image, s69's
+east/west verse card, and two landing frames) — all clean, no defects.
+**Not yet done:** user's own watch of the finished film (the actual
+deliverable for the "make it feel fresh" ask); the two lower-priority
+deferred cards (s31, s49) still on their raking_light placeholder per the
+2026-08-06 handover, unchanged. Nothing committed to git yet.
+
 **2026-08-06 (Day of Atonement LONG — motion-freshness fix pass, Fable
 Round 10, $0 spend, all deterministic):** User watched the 2026-08-05
 motion-design rollout and flagged frozen/amateurish spots + asked for

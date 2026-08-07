@@ -1,7 +1,54 @@
 # ══════════════════════════════════════════════════════════════════════════
-# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-06 (END OF SESSION) — READ THIS
-# FIRST — supersedes every block below, including the 2026-08-05 rollout
-# block right under this one (still fully accurate for what it covers).
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-07 (REBUILD FINISHED) — READ THIS
+# FIRST — the 2026-08-06 block's "resume here tomorrow" steps 1-4 are now
+# DONE. Only step 5 (the user's own watch + verdict) is still open.
+#
+# ── WHAT HAPPENED: the 2026-08-06 background `--rebuild` died at spread
+# 15/76 when the terminal closed (confirmed via file mtimes -- last segment
+# touched 23:17:04, nothing since). Restarted it fresh this session with the
+# gentle-CPU standing default (no POLITE_CPU override anywhere -- the venv's
+# sitecustomize.py throttle applied automatically). Full 76-segment rebuild
+# + concat + mux completed clean:
+# `poc_living_sketchbook\day_of_atonement\DAYOFATONEMENT_LONG_living_
+# sketchbook.mp4` (591.0s, mtime 2026-08-07).
+#
+# ── VERIFICATION DONE:
+#   - `motion_lint.py --episode-dir poc_living_sketchbook\day_of_atonement`
+#     -> **0 FAIL, 5 WARN** (baseline before any fix was 10 FAIL/11 WARN).
+#     Remaining WARNs: s05/s26 just under the FROZEN-SHORT threshold (both
+#     deliberately calm per Fable's own spec), palette_pivot + locked_plate_
+#     parallax each ~1 spread over their 10% quota, one motion-cliff
+#     suggestion at s68->s69 (not escalated -- s69 has its own text-press
+#     arrival event in its first 1.5s, per the 2026-08-06 notes).
+#   - `check_landing_hold.py` (repo root): 0 FAIL across all 34 tracked
+#     files. This film isn't in that gate's scanned dirs (`batches/`+
+#     `longform/`, this is `poc_living_sketchbook/`), so its own video/audio
+#     duration was checked directly via ffprobe: 591.00s video / 591.02s
+#     audio -- well inside the 0.3s tolerance.
+#   - Eye-checked 6 frames spread across the full timeline via ffmpeg
+#     frame-extract + Read (not just exit codes): cold-open Aaron portrait
+#     (0:02), s50_the_shadow (6:06), s56_the_answer's redemption-reprise
+#     Christ-between-two-goats image (6:59), s69_east_west_card's verse text
+#     (8:46), and two landing frames (9:45, 9:48). All clean -- no anatomy/
+#     text-garble/period-accuracy defects spotted.
+#
+# ── STILL OPEN: the user has not watched the finished film yet -- that
+# review is the actual deliverable RESUME's 2026-08-06 step 5 was pointing
+# at. If picking this up cold: give the user the clickable file:// link
+# first, don't assume it's approved just because the gates are green (gates
+# are necessary, not sufficient -- see `feedback-verify-by-looking-not-
+# running`). The two lower-priority deferred cards (s31_confession_card
+# Scribed-Ink live-write, s49_veil_detail_card double-stack) are still on
+# their raking_light placeholder, unchanged from 2026-08-06 -- real registers
+# for both are in Fable's Round 10 doc if picked up later. Nothing from this
+# session is committed to git yet (only the STATE.md/RESUME.md handover
+# edits + the render output itself, which was never git-tracked media).
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-06 (END OF SESSION) — superseded by
+# the 2026-08-07 block above for the resume point; still accurate for what
+# was BUILT and WHY.
 #
 # ── STATUS: the 2026-08-05 rollout (below) finished and the user watched
 # the full film. Feedback: "several places we just a frozen still, it looks
