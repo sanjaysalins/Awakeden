@@ -1,6 +1,101 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-07 NIGHT (PLAN REVIEWED TWICE, TEST
+# TIER BUILT, S51 DEFERRED) — READ THIS FIRST, supersedes every block below,
+# including the "PROCESS LOCKED, SEED OF THE WOMAN STARTED" block right
+# under this one (still accurate for what IT covers -- the process lock and
+# the initial promotion -- just not the resume point anymore).
+#
+# ── ONE-LINE STATUS: the full 71-spread plan exists, survived two real
+# independent-review rounds (fixing real bugs both times, not just
+# rubber-stamped), and a 3-spread test tier (serpent anchor + s06 + s16) is
+# built end-to-end through the REAL code, not just planned. s51 is
+# deliberately NOT built yet -- real timing drift was found while preparing
+# it, and rendering Christ on unreliable data was refused rather than
+# rushed. Read STATE.md's matching entry for the full narrative; this block
+# is the ACTION list.
+#
+# ── DO THESE IN ORDER (each one blocks real progress on the next):
+#
+# 1. **Fix `_s6_assemble.py`'s NARRATION/OUT constants first** -- they still
+#    point at the 33s test-excerpt MP3 (`SEEDOFTHEWOMAN_LONG_living_
+#    sketchbook.mp3` in this dir), not the real 500.53s narration
+#    (`longform/05_The_Seed_Of_The_Woman/v1/narration.mp3`). Trivial fix,
+#    but nothing past spread 5 can assemble correctly until it's done.
+#
+# 2. **Build a real alignment-correction pass for this episode** -- a
+#    `_s5_align.py` + `_s5b_spread_windows.py` equivalent, following
+#    `day_of_atonement`'s own two scripts as the pattern (they don't exist
+#    for this episode yet -- `_turn_boundaries.json` was a first-pass
+#    approximation, not this). **This is now a CONFIRMED need, not a
+#    suspected one**: while preparing s51 this session, a direct phrase
+#    search for "That is the cross" in the real per-word `_alignment.json`
+#    found it at 346.67s -- but the turn-index-based `_turn_boundaries.json`
+#    claims turn 34 (which should contain that exact line) starts at
+#    353.657s, a ~7s drift. The drift grows through the file (confirmed:
+#    ~0.6s by turn 4, ~1.7s by turn 9, ~7s by turn 34) -- a classic
+#    cumulative tokenization mismatch in how turns were originally split.
+#    Fix it with real per-word/per-phrase matching (the same technique used
+#    to find "That is the cross" above), not word-count proportions.
+#    Re-derive `_spread_table.py`'s timings for spreads 6-71 from the
+#    result (spreads 1-5 and the test-tier s06/s16 are unaffected -- their
+#    drift was small enough to not matter for content, only for exact cut
+#    timing, and s06/s16 sit on genuinely early, low-drift turns 4 and 9).
+#
+# 3. **Then render s51** (Christ on the cross, out of table order, per the
+#    plan's own render-order fix) -- it's the Jesus multi-pose anchor every
+#    later Jesus spread (s42/s43/s50/s53-56/s64/s66/s71) chains off of, so
+#    it has to be right before anything else Jesus-related renders. Use
+#    Seedance, NOT Kling (already fixed in the plan this session -- Kling
+#    regenerates wounds on Christ/cross content, this project's own locked
+#    rule).
+#
+# 4. **Build the Seedance duration-snap + loop/extend table** for this
+#    episode, mirroring Day of Atonement's own `_s4_animate.py` pattern
+#    (Seedance only legally renders at 4/8/12s; the plan assigns arbitrary
+#    durations like 7.2s/9.5s to Seedance spreads with no snap-and-loop
+#    step yet -- a real gap the round-2 panel caught, still unfixed).
+#
+# 5. **Two small honest QC items from the test tier, worth a look before
+#    the serpent's other ~17 appearances get built on top of it:** s06's
+#    serpent rendered on the ground, not "among branches" as `world/
+#    SERPENT.md`'s own pre-curse rule states -- decide whether to re-roll
+#    with stronger language or relax the rule. s16 has no visually distinct
+#    LORD-presence light -- same call.
+#
+# 6. **THEN** extend `_devices.py`/`_s2_stills.py`/`_s4_animate.py`/
+#    `_s6_assemble.py` for the rest of the plan, batch by batch (~10
+#    spreads at a time per SKILL.md sec.8b), running `motion_lint.py` +
+#    `poc_living_sketchbook/_layer_check.py` after every batch, not saved
+#    up for the end. Get a REAL cost quote (the estimator, not the rough
+#    $53-80 hand-count) before spending on the big batch.
+#
+# 7. `torn_out_page` is a proven real device but not wired into
+#    `_s6_assemble.py`'s transition dispatch yet -- only s71 (the very
+#    last spread) needs it, so this can wait until the batch that includes
+#    s71, not urgent now.
+#
+# ── WHERE EVERYTHING LIVES: `poc_living_sketchbook\seed_of_the_woman\
+# _PLAN.md` (the full spread table + reasoning + cost + open questions,
+# now reflecting both review rounds' fixes), `_PREFLIGHT.md` (census,
+# camera plan, device pre-designs), `_turn_boundaries.json` (the
+# first-pass, now-confirmed-imprecise turn timing -- superseded once step 2
+# above is done), `_independent_review\20260807-213312\` (round 1, 3/5
+# degraded) and `_independent_review\20260807-215726\` (round 2, 4/5
+# quorum) -- read the actual reviewer files, not just this summary, before
+# assuming a finding is fully resolved.
+#
+# ── DO NOT re-run the independent-review panel yet -- it's already told
+# you the plan/code gap twice; closing steps 1-6 above IS the fix, not
+# another review round. Re-review only once the code actually covers a
+# real batch (say, through spread 20), to check the NEXT layer of
+# problems, not the same one a third time.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-07 EVENING (PROCESS LOCKED, SEED OF
-# THE WOMAN STARTED) — READ THIS FIRST, supersedes every block below.
+# THE WOMAN STARTED) — accurate for what it covers (the process lock into
+# SKILL.md sec.8b, and the initial POC30->real-episode promotion), superseded
+# above for the resume point.
 #
 # ── WHAT HAPPENED: after Day of Atonement LONG shipped (next block down),
 # user asked for a Fable retrospective on what to fix before the next

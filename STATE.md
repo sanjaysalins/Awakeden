@@ -1,5 +1,89 @@
 # STATE.md — progress tracker
 
+**2026-08-07 (night — Seed of the Woman LONG: full plan authored, sent
+through TWO real independent-review rounds, test tier built, $0 spend
+beyond the ~$5 test-tier stills/clips, all committed):** Continuing the
+same evening's work (below). User said "go ahead" on building the real
+next episode. Fable authored the full 71-spread plan (spreads 6-71) per
+the newly-locked SKILL.md sec.8b point 1 — serpent/Christ/Mary treatment,
+camera plan, verse-card register map, cost estimate.
+
+**Round 1 independent review** (`independent_review.py --type plan`, the
+standing enforced rule for significant plans): came back DEGRADED (3/5,
+quorum 4 — gemini auth error, codex timed out). All 3 that answered
+(cursor/claude/grok) independently converged on the same real problem:
+several devices were planned as "$0, already proven, reuse" when they
+don't exist in the repo or are proven for a much narrower case than
+claimed (`hunt_and_lock`, `tear_hole`, Thread Device progressive draw,
+wash-creep converge, Ink Stamp/Typeset). Verified every claim against the
+actual repo before accepting (grep-confirmed each one true, not trusted
+blindly). Fixed all of them — `hunt_and_lock` promoted from Jericho's
+one-off code to a real shared `panel_animator/hunt_and_lock.py` and tested
+against an existing still; `tear_hole` replaced with Day of Atonement's
+own proven `torn_out_page` + static-hold pattern; Thread Device claims
+scaled back to its real fade/swell functions; wash-creep CONVERGE →
+RETREAT (a real mode); the naming page (s34-36) moved from invented
+lettering tools to the proven Scribed Ink technique; cost tally corrected
+(10 Kling/20 Seedance, not 9/19); Bronze Serpent's doctrinally-flagged
+cross still dropped from the reuse list; Jesus render-order bug fixed
+(s51 must build before s42/s43, not after); wrote the missing
+`cast/ADAM.md`, `cast/EVE.md`, `world/SERPENT.md` canon sheets.
+
+**Round 2 independent review** (same command, longer codex timeout): hit
+real quorum this time (4/5, only gemini's persistent auth issue missing).
+All 4 independently CREDITED round 1's fixes as real and verified — then
+surfaced a deeper finding: the plan described devices/wiring that still
+didn't exist in executable code (`_devices.py`/`_s2_stills.py`/
+`_s4_animate.py`/`_s6_assemble.py` only covered spreads 1-5), plus two
+concrete bugs — s51 (Christ on the cross) was assigned to Kling, directly
+violating this repo's own locked rule ("Seedance ALWAYS for Christ/
+crucifixion iconography," Kling regenerates wounds), and `_devices.py`
+claimed s04 uses `breath_synced_halo` while the code actually builds it
+via `build_clip_hold` on a real clip — a genuine plan/code mismatch that
+would silently break motion_lint/`_layer_check.py` accounting. Fixed both,
+plus a cost-range inconsistency between two plan sections and several
+stale device references `_PREFLIGHT.md` had missed on the first pass.
+
+**Test tier built for real** (not just planned) per the staged build
+order: new serpent anchor (`world/serpent_ref.png`) + s06 (Adam+Eve+
+serpent blame-circle, Kling) + s16 (sentencing tableau) stills, all clean
+first try. s06 animated via Kling (frozen-tableau discipline held across
+the full clip, checked start/mid/end). s16 built via the real
+`hunt_and_lock.py` device with a bbox picked from the actual rendered
+still via `bbox_sheet.py` — clean drift-hunt-lock, marker lands precisely
+on the serpent. Both segments built through the REAL `_s6_assemble.py`
+dispatch code (`build_segment()`, not standalone test scripts), verified
+1920x1080 with correct durations and freshness stamps.
+
+**s51 explicitly deferred, not rushed:** while preparing s51 for the test
+tier, found REAL turn-boundary drift in `_turn_boundaries.json` — ~7
+seconds by turn 34, confirmed by directly searching for "That is the
+cross" in the real per-word alignment data and finding it 7s earlier than
+the turn-index-based mapping claimed. This is large enough to shift WHICH
+WORDS belong to which spread, not just nudge a timestamp — a genuine data
+problem, not a minor estimate. Did not render Christ on data just found
+unreliable. **This needs a real `_s5_align.py`/`_s5b_spread_windows.py`
+equivalent for this episode (doesn't exist yet) before s51 or anything
+past ~turn 30 renders.**
+
+**Two honest, non-blocking stills QC notes** for the user's own eye:
+s06's serpent rendered on the ground rather than "among branches" per
+`world/SERPENT.md`'s own pre-curse rule; s16 doesn't show a visually
+distinct LORD-presence light source.
+
+**Also still open, not yet fixed:** `_s6_assemble.py`'s `NARRATION`/`OUT`
+constants still point at the 33s test-excerpt MP3, not the full 500.53s
+narration (codex's round-2 finding #3) — must fix before the full
+assembly can run past spread 5. Seedance duration-snap + loop/extend
+table (mirroring Day of Atonement's own `_s4_animate.py` pattern) still
+not built — the plan assigns Seedance to arbitrary durations Seedance
+can't legally render. `torn_out_page` is proven as a device but not wired
+into `_s6_assemble.py`'s transition dispatch yet (not urgent — only s71
+needs it, the very last spread).
+
+Everything committed. Full exact resume point, in priority order:
+RESUME.md top.
+
 **2026-08-07 (evening — process fixes LOCKED + validated + Seed of the Woman
 LONG started, $4 spend, all committed 1ce50d0):** After Day of Atonement LONG
 shipped and locked (below), user asked for a Fable retrospective: "what
