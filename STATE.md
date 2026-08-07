@@ -1,5 +1,39 @@
 # STATE.md — progress tracker
 
+**2026-08-07 (later same day — Day of Atonement LONG: score+sfx+captions+
+watermark FINISHED, LOCKED, $0 spend):** After the user watched the Round 10
+motion-freshness rebuild and said "lock it," flagged that the film only had
+narration -- no music/SFX/captions/watermark yet (unlike Bronze Serpent LONG's
+full finishing chain). User: "yes please go ahead." Built 3 new scripts for
+this episode, all reusing the shared long-form engines (`pipeline/score_mix.py`,
+`pipeline/sfx_bed.py`), same pattern `bronze_serpent_long/_s8/_s9/_s10` used:
+- `_s8_score.py`: reused the locked recipe verbatim from `longform/
+  _add_score_lf.py`'s `EPISODES["06_Day_Of_Atonement"]` (lonely_searching_a ->
+  glory_holy_stillness_a -> sacred_grace_rise_b, xfade 6s, gain -11dB, outro
+  2.5s) -> `..._scored.mp4` (593.5s).
+- `_s9_sfx.py`: 12 content-grounded cues (wind bed throughout; footsteps at
+  s05/s73 as a deliberate bookend; crowd, fire, a struck-down impact, the
+  goat-slaying impact, waterpot, veil_tearing at the actual tear, door_gate_
+  creak shut at s08 and answering-open at s70), all windows read live from
+  `_spread_windows.json`. Avoided heavenly_choir_soft/score_reverent_grace
+  (banned dual-score-trap clips) and thunder_low_roll near s53_the_cross
+  (this episode's own crucifixion-still-facts.md: darkness, not storm) ->
+  `..._scored_sfx.mp4`.
+- `_s10_captions.py`: adapted Bronze Serpent's hand-ink Inkfree caption
+  recipe for this film's real 591s/593.5s length, batched into 10x ~60s
+  segments. Skips the 12 spreads that already carry real baked-in lettering
+  from the Round 10 rebuild (8 Grand-Text verse cards + s16/s52 Illuminated
+  Rubric + s60/s63/s69 bespoke layouts) so captions never double up on drawn
+  art -> `..._cc.mp4`.
+Then `add_watermark.py` on the `_cc.mp4` directly (top-right, 1920x1080, no
+duration drift) -- same file is the shipped final. Verified: video/audio
+593.50s/593.55s (well inside INV-26 tolerance); eye-checked 4 frames incl.
+one skipped verse-card window (confirmed no double-caption) and a live
+caption frame near the landing. User approved, said "lock this."
+**Final:** `poc_living_sketchbook/day_of_atonement/DAYOFATONEMENT_LONG_
+living_sketchbook_cc.mp4`. Original pre-watermark kept as `..._cc.prewm.
+bak.mp4` per the watermark script's own idempotent safety.
+
 **2026-08-07 (Day of Atonement LONG — Round 10 rebuild FINISHED, $0 spend):**
 Picked up where the 2026-08-06 session got cut off (background `--rebuild`
 died at spread 15/76 when the terminal closed). Restarted

@@ -1,7 +1,36 @@
 # ══════════════════════════════════════════════════════════════════════════
-# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-07 (REBUILD FINISHED) — READ THIS
-# FIRST — the 2026-08-06 block's "resume here tomorrow" steps 1-4 are now
-# DONE. Only step 5 (the user's own watch + verdict) is still open.
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-07 (FULLY FINISHED + LOCKED) — READ
+# THIS FIRST — episode is DONE end to end: motion rebuild, score, sfx,
+# captions, watermark, all user-approved ("lock it" / "lock this").
+#
+# ── WHAT HAPPENED AFTER THE REBUILD: the user watched the Round 10 rebuild
+# and said "lock it" (see the block below for that part). Flagged in reply
+# that the film still had no score/sfx/captions/watermark -- user said "yes
+# please go ahead." Built the 3 missing stage scripts (`_s8_score.py`,
+# `_s9_sfx.py`, `_s10_captions.py`, all in this dir) reusing the shared
+# long-form engines, same pattern as `bronze_serpent_long`'s own finishing
+# chain. Ran all 4 stages (score -> sfx -> captions -> `add_watermark.py`)
+# clean, no errors. Full detail of the cue design + recipe: STATE.md's
+# 2026-08-07 "later same day" entry.
+#
+# ── FINAL SHIPPED FILE: `poc_living_sketchbook\day_of_atonement\
+# DAYOFATONEMENT_LONG_living_sketchbook_cc.mp4` (593.5s, watermarked,
+# captioned, scored, sfx'd). Pre-watermark original kept as `..._cc.prewm.
+# bak.mp4`. User watched + approved with sound ("lock this").
+#
+# ── IF PICKING THIS EPISODE UP AGAIN: it's done. The only still-open,
+# explicitly-deferred items are cosmetic/low-priority, both from the
+# 2026-08-06 Round 10 pass, unchanged since: s31_confession_card and
+# s49_veil_detail_card are still on their raking_light placeholder rather
+# than a real bespoke text register (Fable's Round 10 doc, Concept B, has
+# the designs if ever picked up). Nothing else outstanding.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-07 (REBUILD FINISHED) — the motion-
+# freshness rebuild part of the day (superseded above for the resume point,
+# accurate for what it covers -- the user's "lock it" here was about THIS
+# rebuild only, before the finishing-stage ask came in).
 #
 # ── WHAT HAPPENED: the 2026-08-06 background `--rebuild` died at spread
 # 15/76 when the terminal closed (confirmed via file mtimes -- last segment
