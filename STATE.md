@@ -1,5 +1,67 @@
 # STATE.md — progress tracker
 
+**2026-08-07 (evening — process fixes LOCKED + validated + Seed of the Woman
+LONG started, $4 spend, all committed 1ce50d0):** After Day of Atonement LONG
+shipped and locked (below), user asked for a Fable retrospective: "what
+learnings would increase quality, reduce time/cost, make the next episode the
+best version of itself." Fable read the real build history (STATE/RESUME
+entries, `_FABLE_ROUND10...md`, both episodes' finishing scripts) and
+returned 9 ranked, concrete fixes — saved as memory
+`day-of-atonement-retro-learnings`. User then asked for the fixes to be
+validated on a real small test BEFORE trusting them on a full episode, not
+just taken on faith.
+
+**Validation build (POC30):** Fable designed the test (content choice,
+per-fix testability verdicts, exact minimal tool specs, comparison
+methodology against real Day of Atonement baseline numbers) — full plan in
+the session transcript. Built and verified, ~$4 spend:
+- 6 new $0 tools, each with a real acceptance test (not staged): `panel_
+  animator/bbox_sheet.py` (confirmed against a known Day of Atonement bbox);
+  `motion_lint.py`'s new RES-MISMATCH check (synthetic bad-res segment
+  FAILs, real segments don't); `poc_living_sketchbook/_layer_check.py`
+  (proven red->green live, and found 2 real still-open gaps + 1 false
+  positive in the SHIPPED Day of Atonement film, fixed at the source);
+  `finish_check.py` (5 staged-refusal tests against Day of Atonement's real
+  files, all correct); `poc_living_sketchbook/_finish_long.py` (regression-
+  tested byte-identical against Day of Atonement's shipped score/sfx/
+  captions, then proven independently on new content).
+- A real 33s test film: Genesis 3:8-10 (Adam and Eve hiding, the Gen 3:8
+  verse card, the LORD's presence, "Where art thou?"), new Adam/Eve/Eden
+  anchors, 5 spreads, 2 clips (Kling + Seedance). **0 re-rolls on all 9
+  renders.** A real mid-build crash (an import-collision bug the run itself
+  caught) proved the freshness-stamp recovery mechanism for real, not as a
+  staged test. motion_lint run on the batch immediately (not at the end)
+  caught a genuinely frozen verse card and it was fixed same-pass — the
+  single strongest piece of evidence for the whole retrospective.
+- Full comparison report published as an artifact (numbers: Day of
+  Atonement's ~34% stills re-roll waste vs 0% here; 10 FAIL/11 WARN on
+  first motion_lint run vs 1 real FAIL caught+fixed immediately here; "done"
+  declared twice while incomplete vs finish_check refusing twice, correctly,
+  on this build too). **Verdict: GREEN, proceed to the real episode.** One
+  new finding: motion_lint's DEVICE-QUOTA thresholds are calibrated for
+  76-spread scale and false-FAIL at N=5 — not a real defect, noted for the
+  gate, irrelevant at real episode scale.
+
+**Locked as mandatory (not advisory):** `.claude/skills/living-sketchbook/
+SKILL.md` sec.8b, new section, written directly into the skill so a future
+session reads it before starting any LONG-form build rather than needing to
+re-derive the retrospective from memory. Memory `day-of-atonement-retro-
+learnings` updated to point at it.
+
+**Seed of the Woman LONG started for real:** user chose to continue the
+validation episode itself (Genesis 3, `longform/05_The_Seed_Of_The_Woman/
+v1/`) rather than discard it and start Passover Lamb fresh — POC30's 5
+spreads + cast/world anchors promoted directly in:
+`poc_living_sketchbook/poc30_seed_process_test/` -> `poc_living_sketchbook/
+seed_of_the_woman/`, all `POC30_SEED_*` names -> `SEEDOFTHEWOMAN_LONG_*`,
+scripts/docs updated to drop the "test" framing. **5 of ~68-76 spreads
+done.** Everything committed (1ce50d0). **NOT done: the full spread-by-spread
+plan** (only turns 0-3 of 41 are planned) — next session's first task per
+SKILL.md sec.8b point 1 is a Fable planning pass over the full ~500s/7-
+movement narration BEFORE any more rendering, then a fresh cost quote for
+the full episode (this 5-spread slice cost ~$4; a full episode is Day of
+Atonement-scale, ~$80-100+). Full exact resume point: RESUME.md top.
+
 **2026-08-07 (later same day — Day of Atonement LONG: score+sfx+captions+
 watermark FINISHED, LOCKED, $0 spend):** After the user watched the Round 10
 motion-freshness rebuild and said "lock it," flagged that the film only had

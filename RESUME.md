@@ -1,6 +1,91 @@
 # ══════════════════════════════════════════════════════════════════════════
-# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-07 (FULLY FINISHED + LOCKED) — READ
-# THIS FIRST — episode is DONE end to end: motion rebuild, score, sfx,
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-07 EVENING (PROCESS LOCKED, SEED OF
+# THE WOMAN STARTED) — READ THIS FIRST, supersedes every block below.
+#
+# ── WHAT HAPPENED: after Day of Atonement LONG shipped (next block down),
+# user asked for a Fable retrospective on what to fix before the next
+# episode. Fable's 9 ranked fixes -> memory `day-of-atonement-retro-
+# learnings`. User then asked to VALIDATE the fixes on a real small test
+# before trusting them, not just take them on faith -- built POC30 (Genesis
+# 3:8-10, 33s, ~$4), a real live test of all 9 fixes plus 6 new $0 tools.
+# Verdict GREEN. User then said "lock this new Fable process" + "let's plan
+# and build the next one" + asked how to make sure the NEXT episode actually
+# keeps to the new process (not just "we wrote it down somewhere").
+#
+# ── WHAT "LOCKED" MEANS HERE, CONCRETELY (read this before assuming the
+# retrospective is just a memory note you can skip): the 9 fixes are now
+# **mandatory gates written directly into `.claude/skills/living-sketchbook/
+# SKILL.md` sec.8b** -- a NEW section, not a side document. Section 8b names
+# each gate, the exact command to run it, and WHY (tied to the specific Day
+# of Atonement failure it prevents), e.g. "run motion_lint.py after every
+# ~10-spread batch, never only at the end" and "build the finishing chain
+# with poc_living_sketchbook/_finish_long.py + finish_config.py, do not
+# hand-copy _s8/_s9/_s10 into a new folder again." **Read SKILL.md sec.8b
+# before writing a single spread of the real plan below** -- it is the
+# actual enforcement mechanism (a skill file gets read at the start of
+# LONG-form work; a memory note might not). Memory `day-of-atonement-retro-
+# learnings` now just points at SKILL.md sec.8b rather than being the
+# operative copy.
+#
+# ── THE 6 NEW REUSABLE TOOLS (all $0, all proven, use them from spread 1):
+#   `panel_animator/bbox_sheet.py`        -- pick motion-device bboxes fast
+#   `panel_animator/motion_lint.py`       -- now also catches wrong-resolution
+#                                             segments (RES-MISMATCH check)
+#   `poc_living_sketchbook/_layer_check.py` -- verse-card lettering gate
+#   `finish_check.py` (repo root)         -- refuses "done" until the real
+#                                             chain exists, all 7 stages
+#   `poc_living_sketchbook/_finish_long.py` -- the ONE shared score/sfx/
+#                                             caption/watermark runner +
+#                                             per-episode finish_config.py
+#   `_s6_assemble.py`'s freshness-stamp pattern (see day_of_atonement's own,
+#     now the reference copy) -- hash-stamp each segment, safe to kill/resume
+#
+# ── SEED OF THE WOMAN LONG: STARTED FOR REAL, 5 of ~68-76 SPREADS DONE.
+# User's own call: continue the POC30 validation episode itself (it already
+# used real Genesis 3:8-10 content + built real Adam/Eve/Eden anchors)
+# rather than throw it away and start Passover Lamb cold. Promoted:
+# `poc_living_sketchbook/poc30_seed_process_test/` -> `poc_living_sketchbook/
+# seed_of_the_woman/`, all `POC30_SEED_*` output names -> `SEEDOFTHEWOMAN_
+# LONG_*`, every script's docstring/paths updated, "process test" framing
+# dropped from `_PLAN.md`/`_PREFLIGHT.md`. Everything committed (1ce50d0).
+#
+# ── EXACT NEXT STEP (do this first, before anything else on this episode):
+#   1. Read `.claude/skills/living-sketchbook/SKILL.md` sec.8b in full --
+#      it's the checklist for everything below, don't skip it because this
+#      handover summarizes it; the skill file is the source of truth.
+#   2. Per sec.8b point 1: a Fable planning pass over the FULL narration
+#      (`longform/05_The_Seed_Of_The_Woman/v1/narration.md`, 41 turns, ~500s,
+#      7 movements -- turns 0-3 are already spreads 1-5, turns 4-40 are
+#      unplanned) BEFORE any more rendering. Extend `_PLAN.md`'s table with
+#      real Type/Device/bbox/Deliverable columns filled at plan time, extend
+#      `_spread_table.py`'s SPREADS list, extend `_PREFLIGHT.md`'s census/
+#      camera-angle/anchor plan for every new spread. Expect roughly the
+#      same episode size as Day of Atonement (76 spreads) or Bronze Serpent
+#      LONG (~68) given similar narration length.
+#   3. Get a FRESH cost quote before spending on the full stills+animate
+#      pass, per the standing ask-before-spending rule -- this 5-spread
+#      slice cost ~$4; Day of Atonement's full visual production was ~$87
+#      (stills $37 + animation ~$50). Quote, get explicit OK, THEN render.
+#   4. Build per SKILL.md sec.8b's gates as you go -- bbox_sheet for every
+#      device pick, motion_lint after every ~10-spread batch (not saved up
+#      for the end), layer_check before any verse card is called done,
+#      finish_check before ever telling the user the episode is finished.
+#   5. Existing assets to reuse, don't rebuild: `poc_living_sketchbook/
+#      cast/adam_ref.png` + `eve_ref.png`, `poc_living_sketchbook/world/
+#      eden_ref.png` -- all already eye-checked clean.
+#
+# ── OPEN QUESTION FOR THE REAL BUILD (not resolved, watch for it): fix #08
+# (Fable pre-designing hard beats to avoid mid-build sameness) was only
+# confirmed at 5-spread scale in POC30 -- its real value (avoiding a long
+# run of near-identical introspective spreads, the actual Day of Atonement
+# defect it targets) can only be tested by this real ~70-spread build. Watch
+# for it, don't assume it's already proven at full scale.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-07 (FULLY FINISHED + LOCKED) —
+# Day of Atonement's own handover, superseded above for the resume point,
+# accurate for what it covers: episode is DONE end to end: motion rebuild, score, sfx,
 # captions, watermark, all user-approved ("lock it" / "lock this").
 #
 # ── WHAT HAPPENED AFTER THE REBUILD: the user watched the Round 10 rebuild
