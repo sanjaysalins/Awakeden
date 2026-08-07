@@ -28,8 +28,17 @@ SPECIAL_CARDS = {}
 EXTERNAL_LETTERING = set()
 
 DEVICE_ASSIGNMENTS = {
+    # FIXED 2026-08-07 -- the independent-review panel caught s04 listed
+    # here as "breath_synced_halo" while _s6_assemble.py actually builds it
+    # via build_clip_hold() on the real Seedance clip -- a real
+    # plan/code/motion_lint/layer_check mismatch, not just documentation
+    # drift. This dict now only lists spreads that ACTUALLY dispatch
+    # through render_device()/hunt_and_lock -- real-clip spreads (s02, s04,
+    # s06) have no entry here, matching how s02 was already correctly
+    # absent.
     "s01_something_wrong": {"device": "dramatic_spotlight", "scope": "full", "params": {}},
-    "s04_god_walking": {"device": "breath_synced_halo", "scope": "full", "params": {}},
+    "s16_sentencing_tableau": {"device": "hunt_and_lock", "scope": "full",
+                                "params": {"target_frac": [0.68, 0.85]}},
 }
 
 SPECIAL_CARDS_LANDING = {}  # s05 handled by its own bespoke render, not a table entry

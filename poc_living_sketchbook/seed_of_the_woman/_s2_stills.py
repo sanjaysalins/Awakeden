@@ -38,8 +38,9 @@ OUT.mkdir(parents=True, exist_ok=True)
 ADAM_REF = CAST / "adam_ref.png"
 EVE_REF = CAST / "eve_ref.png"
 EDEN_REF = WORLD / "eden_ref.png"
+SERPENT_REF = WORLD / "serpent_ref.png"
 
-REF_MAP = {"adam": ADAM_REF, "eve": EVE_REF, "eden": EDEN_REF}
+REF_MAP = {"adam": ADAM_REF, "eve": EVE_REF, "eden": EDEN_REF, "serpent": SERPENT_REF}
 
 # ---- canon text, matching cast/AARON.md's level of detail ----
 
@@ -100,6 +101,15 @@ STYLE = (
     "ANYWHERE on ANY layer -- every paper surface is BLANK textured stock."
 )
 
+SERPENT = (
+    "A real serpent, plainly drawn in loose graphite-and-ink linework "
+    "matching this style's own hand -- no dragon fantasy, no wings, no "
+    "expressive or anthropomorphic face, no upright posture, no charm. "
+    "Ink-blue-toned scales, cool judgment coloring, never gold, never "
+    "warm. Before the curse: coiled low among tree branches or roots, "
+    "still and watching."
+)
+
 LORD_PRESENCE = (
     "the presence of the LORD: no figure, no face, no human or angelic "
     "form of any kind -- only a low warm golden light moving gently among "
@@ -129,6 +139,11 @@ ANCHOR_SHOTS = [
      f"of the same garden, caught mid-motion trying to hide, looking "
      f"back over her shoulder toward the camera with dawning fear. "
      f"{FULLBLEED}"),
+    ("serpent_ref", STYLE, "eden",
+     f"{SERPENT} Resting low among the roots and branches of the same "
+     f"garden's trees, no other figure present, the camera looking DOWN "
+     f"on it (per world/SERPENT.md's locked camera rule -- the lens never "
+     f"kneels to the enemy). {FULLBLEED}"),
 ]
 
 # ---- the 5 real spreads ----
@@ -159,6 +174,30 @@ SPREAD_SHOTS = [
      f"and warm in a gap between two tree trunks, framed by dark "
      f"foliage on both sides so the light itself is the entire subject "
      f"of the frame, quiet and waiting. {FULLBLEED}"),
+    # test-tier spreads (2026-08-07, independent-review staged build order):
+    # serpent's first on-screen appearance + the hardest identity+motion
+    # still in the episode -- full QC here before the serpent's other ~17
+    # appearances build on top of it.
+    ("s06_blame_circle", STYLE, "adam,eve,serpent,eden",
+     f"MEDIUM shot, eye-level: {ADAM} and {EVE} together among the trees, "
+     f"Adam's arm extended toward Eve in a blaming gesture, Eve turning "
+     f"her head down and away toward {SERPENT.split('.')[0]} coiled low "
+     f"in the leaves at the bottom edge of the frame -- exactly three "
+     f"figures present (Adam, Eve, the serpent), count them, no others. "
+     f"{FULLBLEED}"),
+    # s16: the full sentencing tableau in ONE wide frame -- hunt_and_lock
+    # (a real device, panel_animator/hunt_and_lock.py) animates the camera
+    # hunting toward the serpent's own position within this still; the
+    # still itself must show the whole scene, not a pre-cropped close-up.
+    ("s16_sentencing_tableau", STYLE, "adam,eve,serpent,eden",
+     f"WIDE shot, eye-level, the full scene in one frame: {ADAM} and "
+     f"{EVE} standing together braced for judgment on one side, "
+     f"{LORD_PRESENCE} present but not facing them, and "
+     f"{SERPENT.split('.')[0]} low in the dust at the LOWER portion of "
+     f"the frame, clearly visible and separated from the two human "
+     f"figures -- exactly three figures present (Adam, Eve, the "
+     f"serpent) plus the light-presence, count them, no others. "
+     f"{FULLBLEED}"),
 ]
 
 
@@ -186,7 +225,7 @@ def resolve_refs(tag):
     return refs
 
 
-ANCHOR_DEST = {"adam_ref": CAST, "eve_ref": CAST, "eden_ref": WORLD}
+ANCHOR_DEST = {"adam_ref": CAST, "eve_ref": CAST, "eden_ref": WORLD, "serpent_ref": WORLD}
 
 
 def render_set(shots, dest_of, label):

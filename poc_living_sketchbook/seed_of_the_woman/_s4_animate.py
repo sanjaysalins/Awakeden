@@ -36,6 +36,21 @@ PAGE = ("A finished ink-and-watercolor drawing on an aged sketchbook page, "
         "the last. ")
 
 JOBS = [
+    # test-tier (2026-08-07, independent-review staged build order): the
+    # hardest identity+motion still in the episode -- Adam+Eve+serpent,
+    # multi-figure, per the locked comic-grid cost-tiering (Kling for
+    # action/crowd/complexity). Same house convention as every other job
+    # here: the STILL already carries the completed pose (arm extended,
+    # Eve turning), the CLIP only adds named ambient motion -- never a new
+    # gesture, per this project's own camera-locked/invent-nothing rule.
+    ("s06_blame_circle", "kling", 5,
+     PAGE + LOCK +
+     "Both human figures and the serpent hold their exact positions and "
+     "postures, perfectly still -- Adam's extended arm does not move "
+     "further, Eve's turning head does not turn further, the serpent "
+     "does not move at all. Only: the surrounding leaves stir very "
+     "slightly in a light breeze, and the light breathes very gently. "
+     "Nothing else changes."),
     ("s02_the_hiding", "kling", 5,
      PAGE + LOCK +
      "Both figures hold their exact crouched positions and postures, "

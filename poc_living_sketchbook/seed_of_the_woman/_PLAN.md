@@ -104,7 +104,7 @@ estimates.
 | 48 | 341.96–348.00 | 6.0 | 6 | NS | The heel-strike: the serpent's strike at a human heel — fangs at the heel, ink-red accent (sparing) — "real, agonizing, the kind of strike that can kill" | serpent, heel (anonymous figure) | real clip — Kling (action tier) |
 | 49 | 348.00–353.66 | 5.7 | 6 | NS | The head-crush, FROZEN: the descending heel above the serpent's head, held at the instant before — "final." No gore; the stillness carries it | serpent, heel | dramatic_spotlight (still, bbox on heel + head) |
 | 50 | 353.66–359.50 | 5.8 | 6 | NS | HARD CUT — "That is the cross." Golgotha wide, LOW angle (the camera kneels), the cross against an UNNATURAL midday darkness — ink-wash swallowing the sky, never storm clouds, never lightning | **Golgotha plate** (reuse-check §5), Jesus (distant) | real clip — Seedance (darkness thickens; state-only) |
-| 51 | 359.50–365.50 | 6.0 | 6 | NS | Closer: the Son bearing what we had earned — reverent, wound-free staging, head bowed; the thin gold-leaf edge stays present (glory never fully absent) | Jesus (cross pose) | real clip — Kling (fail-closed Jesus QC; NSFW fallback note §5) |
+| 51 | 359.50–365.50 | 6.0 | 6 | NS | Closer: the Son bearing what we had earned — reverent, wound-free staging, head bowed; the thin gold-leaf edge stays present (glory never fully absent) | Jesus (cross pose) | real clip — **Seedance, NOT Kling** (FIXED 2026-08-07, real doctrinal bug the panel caught: this project's OWN locked rule is "Seedance ALWAYS for Christ/crucifixion iconography regardless of complexity" — Kling regenerates wounds/blood even on a retouched-clean still, `living-light-no-fresh-blood`; the original Kling assignment directly violated a rule already locked in this repo's own CLAUDE.md) |
 | 52 | 365.50–371.21 | 5.7 | 6 | NS | THE EXCHANGE: the ink-blue judgment wash that entered the world at s14 now RETREATS and withdraws from the world's edges, cream paper reclaiming what it had taken — the still's OWN composition (not the motion) already shows its last dark trace resting over Him, carried from s51's framing | Jesus (cross) | wash-creep RETREAT ($0, proven real mode — `wash_creep.py` only advances/retreats along an edge, no converge-to-figure geometry exists; the "falls on Him" idea is staged in the STILL, not invented in new motion code) |
 | 53 | 371.21–377.70 | 6.5 | 6 | VC | Composite verse-over-art: Heb 2:14b (89 glyphs / 6.4s = 13.8 g/s) over the cross art — "that through death he might destroy him that had the power of death, that is, the devil." | Jesus (bg art, re-framed s51) | Scribed Ink composite, $0 |
 | 54 | 377.70–384.50 | 6.8 | 6 | NS | "The blow that looked like the serpent winning" — the cross distant and small; the serpent's coil risen LARGE in the foreground shadow, rendered as darkness only (the LIE of the frame — never triumph, never charm) | serpent (shadow), Jesus (cross, distant) | real clip — Seedance (shadow deepens; coil pre-risen in the still, state-only) |
@@ -397,10 +397,14 @@ all 66 spreads at once, even after spend approval.
    (doesn't exist yet; DoA's own versions are the pattern to follow),
    using `_alignment.json`'s real per-word timestamps, not word-count
    proportions. Priority order: turn 27 (s39-42, spot-checked above,
-   confirmed meaningfully off) and turn 36 (s54-59) first, then the
-   narrator lead-ins inside s32-34a, then the remaining ~15 turns before
-   THEIR spreads are batched (does not block s06/s16/s51 below, which sit
-   on already-real turn boundaries).
+   confirmed meaningfully off), turn 34 (s50-52, contains s51 — CORRECTED
+   2026-08-07: the panel caught s51 is a sub-split of turn 34's
+   353.657-371.210 span, NOT already-real as first claimed; it needs this
+   pass BEFORE it renders since it becomes the Jesus anchor for later
+   spreads), and turn 36 (s54-59), then the narrator lead-ins inside
+   s32-34a, then the remaining ~14 turns before THEIR spreads are batched.
+   Only s06 and s16 sit on genuinely already-real single-turn boundaries
+   (turns 4 and 9, no sub-split) — s51 does NOT.
 1. Serpent anchor (`world/serpent_ref.png`) — approve before anything
    using it.
 2. s06 (the hardest identity+motion still: Adam+Eve+serpent, multi-figure
@@ -425,7 +429,9 @@ all 66 spreads at once, even after spend approval.
 3. **Mary with no anchor** (face always averted, angel as light) — OK?
 4. **Variant candidates** (s08 sl13, s65 sl16) — spend 2 test renders, or
    ship both in spine style?
-5. **Spend**: rough ~$50-75; real quote to follow at stills time.
+5. **Spend**: rough ~$53-80, midpoint ~$65 (synced to §6 2026-08-07 — this
+   was previously inconsistent between sections, the panel's own catch);
+   real quote to follow at stills time.
 6. (Mechanical) s05's end extends 33.03 → 33.80 at the alignment-
    correction pass — no rework, its hold just breathes longer.
 

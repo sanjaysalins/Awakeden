@@ -189,12 +189,28 @@ def build_s05(dest, duration, doa):
     doa._plain_static(still, dest, duration)
 
 
+def build_s16(dest, duration, doa):
+    """hunt_and_lock (panel_animator/hunt_and_lock.py) -- the drift-hunt-lock
+    camera move, target_frac read from _devices.py's own DEVICE_ASSIGNMENTS
+    so the bbox picked via bbox_sheet.py stays the single source of truth."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import hunt_and_lock  # noqa: E402
+    still = STILLS / "s16_sentencing_tableau.png"
+    poc_devices = load_devices_here()
+    entry = poc_devices.DEVICE_ASSIGNMENTS["s16_sentencing_tableau"]
+    target_frac = tuple(entry["params"]["target_frac"])
+    hunt_and_lock.render(still, dest, duration, target_frac, W, H)
+
+
 SEGMENT_BUILDERS = {
     "s01_something_wrong": lambda dest, dur, doa: build_s01(dest, dur, doa),
     "s02_the_hiding": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s02_the_hiding.mp4"),
     "s03_verse_card": lambda dest, dur, doa: build_s03(dest, dur, doa),
     "s04_god_walking": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s04_god_walking.mp4"),
     "s05_where_art_thou": lambda dest, dur, doa: build_s05(dest, dur, doa),
+    # test-tier (2026-08-07, independent-review staged build order)
+    "s06_blame_circle": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s06_blame_circle.mp4"),
+    "s16_sentencing_tableau": lambda dest, dur, doa: build_s16(dest, dur, doa),
 }
 
 SOURCE_FILES = {
@@ -203,6 +219,8 @@ SOURCE_FILES = {
     "s03_verse_card": [WORLD / "eden_ref.png", HERE / "_devices.py"],
     "s04_god_walking": [CLIPS / "s04_god_walking.mp4"],
     "s05_where_art_thou": [STILLS / "s05_where_art_thou.png"],
+    "s06_blame_circle": [CLIPS / "s06_blame_circle.mp4"],
+    "s16_sentencing_tableau": [STILLS / "s16_sentencing_tableau.png", HERE / "_devices.py"],
 }
 
 

@@ -95,7 +95,7 @@ making composition decisions.
 |---|---|---|
 | Eden garden | s01-06,08,09,10,11,12,15(far),62,65,68(far),70,71(light) | existing `world/eden_ref.png` — REUSE. One garden, one WORLD |
 | the study desk | s26,32,38,39,40,46,60,66 | **YES (cheap)** — ONE desk base still (aged wood, oil lamp, page field), re-dressed per spread. A recurring setting exactly like Day of Atonement's rooms |
-| Golgotha | s45(silhouette),50,51,52,53,54,55,56 | **Reuse-check FIRST**: `day_of_atonement/stills/s53_the_cross.png`, `s54_guilt_laid_on_christ.png`, `bronze_serpent_long/stills/s44_shadow_cross.png` (topical-fit gate — eye-check for tabernacle/serpent-pole). Expect 1 new wide (s50) minimum; whatever is approved first chains into the rest of the darkness run |
+| Golgotha | s45(silhouette),50,51,52,53,54,55,56 | **Reuse-check FIRST**: `day_of_atonement/stills/s53_the_cross.png` (clean plate), `s54_guilt_laid_on_christ.png` (caveat: multi-vignette Aaron+goat composite, reuse only the cross element if isolatable). `bronze_serpent_long/stills/s44_shadow_cross.png` is REJECTED, not a candidate (flagged doctrinally too risky in that episode's own review). Topical-fit gate on whatever IS reused (no tabernacle, no serpent-pole). Expect ≥1 new wide (s50) even if closer frames reuse |
 | the empty tomb | s57, 64(vignette) | **YES — NEW plate** (banks lack tomb plates, known gap); s64's vignette derives from s57's approved render |
 | annunciation interior | s30, 31(bg) | NO — single scene, minimal set (dark room, one light-presence, bowed figure) |
 | the breach / drawn chasm | s15, 68 | motif, not a render anchor — s68 re-frames s15's approved still (chained) |
@@ -183,7 +183,7 @@ scale (wide-high vs tight-high).
 | 31 | s31_holy_thing_card | card over s30's art, tighter | as s30 | letters live in the calm dark left field (never over the light — no verse over busy gold) |
 | 32 | s32_honest_match | desk overhead, two pages | high, symmetric | the GAP between the two pages is dead center — the composition's subject |
 | 33 | s33_trajectory | very wide lateral | — | the fanned canon-shelf rises on a slight diagonal toward one gold point far right |
-| 34 | s34_naming_serpent | desk overhead, page TOP third | high | one continuous page for 34-36; stamp + pressed lines accumulate |
+| 34 | s34_naming_serpent | desk overhead, page TOP third | high | one continuous page for 34-36; Scribed Ink question+verse lines accumulate |
 | 35 | s35_naming_mission | same page, MIDDLE third | high | camera drifts down the page — in-page beat, not a page turn |
 | 36 | s36_naming_crushing | same page, LOWER third | high | third drift; the page now carries all three testimonies |
 | 37 | s37_promise_planted | macro at the book's fore-edge | low | drawn soil at the bottom page; the thread-sprout rises vertically |
@@ -201,7 +201,7 @@ scale (wide-high vs tight-high).
 | 49 | s49_head_crush | along the dust | ground-level, heel silhouette ABOVE | frozen instant before the crush; spotlight bbox on heel + head |
 | 50 | s50_that_is_the_cross | very wide | LOW (the camera kneels) | Calvary; unnatural midday darkness — ink-wash sky, NEVER storm clouds or lightning |
 | 51 | s51_bearing_wages | closer | low | head bowed, wound-free; thin gold-leaf edge present; fail-closed Jesus QC |
-| 52 | s52_judgment_on_him | page-scale wide | — | the wash CONVERGES onto the cross — the page is the subject again (mirror of s14) |
+| 52 | s52_judgment_on_him | page-scale wide | — | the wash RETREATS from the world's edges (proven mode); its last trace over Him is staged in the still's own composition — the page is the subject again (mirror of s14) |
 | 53 | s53_through_death_card | card over s51 re-framed | low | letters in the dark sky field over a subtle band |
 | 54 | s54_seeming_win | deep-staged | eye-level | the LIE of the frame: coil-shadow LARGE in foreground, cross small and far — enemy near, Christ far |
 | 55 | s55_the_inversion | SAME framing as s54, held | eye-level | the re-read IS the device: identical composition; the beam's shadow travels onto the serpent's head |
