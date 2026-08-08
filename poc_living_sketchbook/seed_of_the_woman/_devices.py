@@ -51,7 +51,18 @@ SPECIAL_CARDS = {
     "s22_promise_card": {"kind": "illuminated_rubric"},
 }
 
-EXTERNAL_LETTERING = set()
+# batch 4 (2026-08-08) -- real lettering built by standalone functions in
+# _s6_assemble.py outside the VERSE_CARDS/SPECIAL_CARDS dict dispatch:
+# s26 (hand-lettered study copy via render_line_png), s29 (Illuminated
+# Rubric, Gal 4:4), s31 (Luke 1:35b letters over s30's art), s34/s35 (the
+# Naming Docket plate, real Constantia typography via render_dom_clip.py).
+EXTERNAL_LETTERING = {
+    "s26_her_seed_study",
+    "s29_fulness_card",
+    "s31_holy_thing_card",
+    "s34_naming_serpent",
+    "s35_naming_mission",
+}
 
 DEVICE_ASSIGNMENTS = {
     # FIXED 2026-08-07 -- the independent-review panel caught s04 listed

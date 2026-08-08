@@ -610,7 +610,12 @@ def build_s26(dest, duration, doa):
 
     abs_start = st.by_name["s26_her_seed_study"][2]
     circle_start = 162.105 - abs_start
-    circle_dur = 1.3
+    # width 14 (up from default 5) still only reached p95=0.079 on motion_lint
+    # (T_frozen=0.15) -- same "too small a fraction of a 1920x1080 frame"
+    # issue as s21/s25's thread. Widened further + shortened the draw window
+    # so the same ink lands in fewer frames (higher per-frame delta), not a
+    # cosmetic change.
+    circle_dur = 0.8
     n = max(1, int(round(duration * FPS)))
     frames = dest.parent / (dest.stem + "_frames")
     frames.mkdir(parents=True, exist_ok=True)
@@ -618,7 +623,8 @@ def build_s26(dest, duration, doa):
         t = i / FPS
         progress = max(0.0, min(1.0, (t - circle_start) / circle_dur))
         frame = annotators_circle.apply_annotators_circle(
-            base.copy(), bbox=her_seed_bbox, progress=progress, color=annotators_circle.RUBRIC)
+            base.copy(), bbox=her_seed_bbox, progress=progress, color=annotators_circle.RUBRIC,
+            stroke_width=20)
         frame.convert("RGB").save(frames / f"f{i:05d}.png")
     _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(FPS), "-i", str(frames / "f%05d.png"),
           "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", str(dest)])
@@ -764,7 +770,7 @@ def build_s31(dest, duration, doa):
     swash = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     ImageDraw.Draw(swash).line(
         [(lx, ly + line_imgs[1].height + 4), (lx + line_imgs[1].width, ly + line_imgs[1].height + 4)],
-        fill=(*INK, 200), width=3)
+        fill=INK[:3] + (200,), width=3)
 
     inputs = ["-loop", "1", "-i", str(cropped)]
     filt_parts = []

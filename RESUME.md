@@ -1,4 +1,69 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-08 EVENING (BATCH 4 FULLY CLOSED:
+# SPREADS 26-35 ASSEMBLED + GATES GREEN, $26.20 EPISODE TOTAL UNCHANGED,
+# ALL COMMITTED) — READ THIS FIRST, supersedes every block below including
+# the "BATCH 4 DONE ... LATE NIGHT" one right under this (still accurate
+# for what IT covers, just not the resume point anymore).
+#
+# ── ONE-LINE STATUS: batch 4 (spreads 26-35, movement 4) is now FULLY
+# closed -- the 4 segments the last session left unbuilt (s28/s30/s31/s33)
+# are built, the batch preview is assembled with real narration, and both
+# gates (motion_lint + layer_check) are green for everything this batch
+# owns. Nothing mid-render or broken. Next session starts batch 5
+# (movement 5, spreads 36-45) fresh, not a continuation.
+#
+# ── WHAT HAPPENED THIS SESSION:
+#   1. Built the 4 leftover segments via build_segment() -- s28, s30 built
+#      clean first try; s31 crashed on a REAL bug (`INK` already carries an
+#      alpha channel, so `(*INK, 200)` in build_s31's underline-swash code
+#      made an invalid 5-value color tuple -- fixed to `INK[:3] + (200,)`).
+#      User eye-checked all 4 raw segments before assembly, approved.
+#   2. Assembled PREVIEW_26_35.mp4 (segments 26-35 + real narration
+#      158.53s-239.68s), same pattern as PREVIEW_17_25.mp4.
+#   3. Regenerated `_spread_windows.json` (was stale since 02:36am --
+#      missing s17/18/20/24/26-35 entirely) and ran motion_lint fresh.
+#      Caught a REAL frozen-spread defect: s26_her_seed_study (the
+#      episode's ONE Annotator's Circle, on "her seed" at 162.105s) was too
+#      thin/slow to register motion against a 1920x1080 frame -- same root
+#      cause as batch 3's gold-thread issue. p95 0.030 (default 5px stroke)
+#      -> 0.079 (14px, still under T=0.15) -> confirmed clear after
+#      widening to 20px + shortening the draw window 1.3s->0.8s. Eye-
+#      checked the final render -- reads as a real bold hand-circle, not a
+#      bounding box.
+#   4. layer_check flagged 9 FAIL; 5 were real gaps (s26/s29/s31/s34/s35 all
+#      have genuine hand-lettering built by standalone functions, never
+#      registered in _devices.py's EXTERNAL_LETTERING set -- exactly what
+#      that set exists for, Day of Atonement precedent). Registered all 5;
+#      remaining 4 FAILs (s36/s47/s53/s56) are just not-built-yet, expected.
+#   5. One FAIL left deliberately UNFIXED, flagged for the user instead of
+#      silently spent on: motion_lint FROZEN-SPREAD on
+#      s24_before_their_sentences (p95=0.145 vs T=0.15, a hair under). It's
+#      a real Kling clip from BATCH 3 the user already eye-checked and
+#      approved -- it only surfaced now because this session's windows
+#      regen is the first time it was actually included in a motion_lint
+#      pass (an old measurement gap, not a new regression). Re-rendering
+#      costs real Kling money to chase a borderline miss on an
+#      already-approved clip -- left alone pending the user's call.
+#      DEVICE-QUOTA FAILs (fwd_drift 38.9%, bespoke 25.0%) are the same
+#      predicted small-N scale artifact every prior batch has hit -- no
+#      action, expected to resolve as the episode grows toward 71 spreads.
+#
+# ── REVIEW: poc_living_sketchbook/seed_of_the_woman/_BATCH4_REVIEW.html
+#
+# ── COST: $0 this session (everything built from already-rendered/
+# already-paid stills and clips -- no new API spend). Episode running
+# total unchanged: $26.20 (data/spend_ledger.jsonl).
+#
+# ── EXACT NEXT STEP FOR THE NEW SESSION: start batch 5 -- spreads 36-45
+# (movement 5, "the honest objection"). Read `_PLAN.md` rows 36-45 first.
+# Note: s36's naming-plate content may already be rendered as part of a
+# prior session's naming-plate master (see the "BATCH 4 DONE ... LATE
+# NIGHT" block below) -- confirm before re-designing it from scratch.
+#
+# ── EVERYTHING THROUGH THIS POINT IS COMMITTED. Nothing pending in git.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-08 LATE NIGHT (BATCH 4 DONE:
 # SPREADS 26-35, MOVEMENT 4 COMPLETE, GATES NOT YET RUN, $26.20 EPISODE
 # TOTAL, ALL COMMITTED) — READ THIS FIRST, supersedes every block below

@@ -160,6 +160,26 @@
   "clip_dur": null
  },
  {
+  "num": 17,
+  "name": "s17_not_adam_not_eve",
+  "beat": 3,
+  "start": 99.16,
+  "end": 103.83,
+  "dur": 4.67,
+  "mode": "once_trim",
+  "clip_dur": 5.041667
+ },
+ {
+  "num": 18,
+  "name": "s18_turns_to_serpent",
+  "beat": 3,
+  "start": 103.83,
+  "end": 108.7,
+  "dur": 4.87,
+  "mode": "fwd_drift",
+  "clip_dur": 4.041667
+ },
+ {
   "num": 19,
   "name": "s19_curse_card",
   "beat": 3,
@@ -168,6 +188,16 @@
   "dur": 10.49,
   "mode": "verse_card",
   "clip_dur": null
+ },
+ {
+  "num": 20,
+  "name": "s20_pure_curse",
+  "beat": 3,
+  "start": 119.19,
+  "end": 124.66,
+  "dur": 5.47,
+  "mode": "fwd_drift",
+  "clip_dur": 4.041667
  },
  {
   "num": 21,
@@ -200,6 +230,16 @@
   "clip_dur": null
  },
  {
+  "num": 24,
+  "name": "s24_before_their_sentences",
+  "beat": 3,
+  "start": 145.88,
+  "end": 152.49,
+  "dur": 6.61,
+  "mode": "fwd_drift",
+  "clip_dur": 5.041667
+ },
+ {
   "num": 25,
   "name": "s25_promise_in_curse",
   "beat": 3,
@@ -207,6 +247,106 @@
   "end": 158.53,
   "dur": 6.04,
   "mode": "thread_device_gleam",
+  "clip_dur": null
+ },
+ {
+  "num": 26,
+  "name": "s26_her_seed_study",
+  "beat": 4,
+  "start": 158.53,
+  "end": 165.0,
+  "dur": 6.47,
+  "mode": "bespoke",
+  "clip_dur": null
+ },
+ {
+  "num": 27,
+  "name": "s27_line_of_fathers",
+  "beat": 4,
+  "start": 165.0,
+  "end": 172.98,
+  "dur": 7.98,
+  "mode": "bespoke",
+  "clip_dur": null
+ },
+ {
+  "num": 28,
+  "name": "s28_clue_lights_up",
+  "beat": 4,
+  "start": 172.98,
+  "end": 183.26,
+  "dur": 10.28,
+  "mode": "fwd_drift",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 29,
+  "name": "s29_fulness_card",
+  "beat": 4,
+  "start": 183.26,
+  "end": 191.53,
+  "dur": 8.27,
+  "mode": "bespoke",
+  "clip_dur": null
+ },
+ {
+  "num": 30,
+  "name": "s30_annunciation",
+  "beat": 4,
+  "start": 191.53,
+  "end": 198.41,
+  "dur": 6.88,
+  "mode": "fwd_drift",
+  "clip_dur": 5.041667
+ },
+ {
+  "num": 31,
+  "name": "s31_holy_thing_card",
+  "beat": 4,
+  "start": 198.41,
+  "end": 204.19,
+  "dur": 5.78,
+  "mode": "bespoke",
+  "clip_dur": null
+ },
+ {
+  "num": 32,
+  "name": "s32_honest_match",
+  "beat": 4,
+  "start": 204.19,
+  "end": 211.71,
+  "dur": 7.52,
+  "mode": "bespoke",
+  "clip_dur": null
+ },
+ {
+  "num": 33,
+  "name": "s33_trajectory",
+  "beat": 4,
+  "start": 211.71,
+  "end": 220.3,
+  "dur": 8.59,
+  "mode": "fwd_drift",
+  "clip_dur": 8.041667
+ },
+ {
+  "num": 34,
+  "name": "s34_naming_serpent",
+  "beat": 4,
+  "start": 220.3,
+  "end": 232.0,
+  "dur": 11.7,
+  "mode": "bespoke",
+  "clip_dur": null
+ },
+ {
+  "num": 35,
+  "name": "s35_naming_mission",
+  "beat": 4,
+  "start": 232.0,
+  "end": 239.68,
+  "dur": 7.68,
+  "mode": "bespoke",
   "clip_dur": null
  },
  {

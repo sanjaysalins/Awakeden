@@ -1,0 +1,48 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Seed of the Woman -- Batch 4 FINAL (spreads 26-35)</title>
+<style>
+body{font-family:Georgia,serif;background:#f3ede3;margin:0;padding:24px;color:#2a2420;}
+h1{font-size:20px;} h2{font-size:16px;margin-top:28px;}
+video{width:100%;max-width:900px;border-radius:6px;display:block;background:#000;}
+.fixlist{background:#fff;border:1px solid #ddd;border-radius:6px;padding:14px 18px;max-width:900px;}
+.fixlist li{margin:6px 0;}
+</style></head><body>
+<h1>Seed of the Woman LONG -- Batch 4 FINAL (spreads 26-35, movement 4)</h1>
+
+<h2>Preview cut, spreads 26-35 with real narration (158.53s-239.68s)</h2>
+<video controls src="PREVIEW_26_35.mp4"></video>
+
+<h2>What this session finished</h2>
+<div class="fixlist">
+<ul>
+<li>Built the 4 segments left over from last session's handover -- s28_clue_lights_up, s30_annunciation, s31_holy_thing_card, s33_trajectory -- through the real dispatch (<code>build_segment()</code>), all from already-rendered/already-paid stills and clips. No new spend.</li>
+<li>Caught and fixed a real bug in <code>build_s31</code>: <code>INK</code> already carries an alpha channel, so <code>(*INK, 200)</code> built an invalid 5-value color tuple and crashed the underline swash. Fixed to <code>INK[:3] + (200,)</code>.</li>
+<li>Assembled the batch 4 preview (concat of segments 26-35 + the real narration slice) and eye-checked all 4 new segments before assembling.</li>
+</ul>
+</div>
+
+<h2>Gates -- caught and fixed for real (not scale artifacts)</h2>
+<div class="fixlist">
+<ul>
+<li><b>motion_lint FROZEN-SPREAD, s26_her_seed_study</b> -- the episode's one Annotator's Circle (on "her seed", real spoken timestamp 162.105s) was too thin/slow to register as real motion against a 1920x1080 frame, same root cause as batch 3's gold-thread fix. p95 went 0.030 (default 5px stroke) -> 0.079 (14px) -> <b>confirmed clear of T_frozen=0.15</b> after widening to 20px stroke and shortening the draw window 1.3s -> 0.8s (more ink landing in fewer frames). Eye-checked the re-rendered clip -- reads as a real bold hand-circling gesture around "her seed", not a bounding box.</li>
+<li><b>layer_check, 5 missing EXTERNAL_LETTERING entries</b> -- s26/s29/s31/s34/s35 all carry real hand-lettering (study copy, Illuminated Rubric, Luke 1:35b letters, the Naming Docket plate) built by standalone functions in <code>_s6_assemble.py</code>, not through the VERSE_CARDS/SPECIAL_CARDS dict dispatch the gate checks by default -- exactly the case <code>EXTERNAL_LETTERING</code> exists for (Day of Atonement precedent). Registered all 5 in <code>_devices.py</code>; gate now shows only the not-yet-built future spreads (s36, s47, s53, s56) as FAIL, which is expected.</li>
+</ul>
+</div>
+
+<h2>Gates -- flagged, not auto-fixed (need your call, not a script fix)</h2>
+<div class="fixlist">
+<ul>
+<li><b>motion_lint FROZEN-SPREAD, s24_before_their_sentences</b> (p95=0.145 vs T=0.15) -- a real Kling clip from BATCH 3, already eye-checked and approved by you. It only shows up now because this session's <code>_spread_windows.json</code> regen is the first time it's actually been included in a motion_lint pass (an old gap, not a new regression). It's missing the threshold by a hair -- re-rendering it costs real Kling money for a borderline metric on an already-approved clip, so I left it alone rather than spend without asking. Your call: leave it, or I re-roll it next paid checkpoint.</li>
+<li><b>motion_lint DEVICE-QUOTA</b> (fwd_drift 38.9%, bespoke 25.0%, both > 15%) -- same predicted small-N scale artifact every prior batch has hit; expected to resolve as the episode grows toward 71 spreads. No action.</li>
+</ul>
+</div>
+
+<h2>Next</h2>
+<div class="fixlist">
+<ul>
+<li>Movement 5 ("the honest objection"), spreads 36-45 -- read <code>_PLAN.md</code> rows 36-45 first. Note: s36's naming-plate content may already be rendered as part of a prior session's naming-plate master -- confirm before re-designing it from scratch.</li>
+</ul>
+</div>
+
+<p style="margin-top:24px;color:#888;font-size:12px;">Episode running total (from data/spend_ledger.jsonl, unchanged this session): $26.20.</p>
+</body></html>
