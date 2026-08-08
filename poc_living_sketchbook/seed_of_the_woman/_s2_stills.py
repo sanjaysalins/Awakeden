@@ -39,8 +39,11 @@ ADAM_REF = CAST / "adam_ref.png"
 EVE_REF = CAST / "eve_ref.png"
 EDEN_REF = WORLD / "eden_ref.png"
 SERPENT_REF = WORLD / "serpent_ref.png"
+JESUS_REF = CAST / "jesus_ref.png"
+DESK_REF = WORLD / "desk_ref.png"
 
-REF_MAP = {"adam": ADAM_REF, "eve": EVE_REF, "eden": EDEN_REF, "serpent": SERPENT_REF}
+REF_MAP = {"adam": ADAM_REF, "eve": EVE_REF, "eden": EDEN_REF, "serpent": SERPENT_REF,
+           "jesus": JESUS_REF, "desk": DESK_REF}
 
 # ---- canon text, matching cast/AARON.md's level of detail ----
 
@@ -110,6 +113,18 @@ SERPENT = (
     "still and watching."
 )
 
+JESUS = (
+    "Jesus: a Judean man in his early thirties. Face geometry: a strong "
+    "straight nose, defined cheekbones, a broad calm forehead, an angular "
+    "jaw beneath the beard. Hair: long dark wavy hair falling past the "
+    "shoulders, parted center. Beard: short, close-cropped, dark, "
+    "well-kept. Skin: sun-weathered olive Mediterranean complexion. "
+    "Build: lean and wiry-strong, a carpenter's and traveler's frame. "
+    "Eyes: warm deep brown, level and calm. Hands: strong, calloused, a "
+    "craftsman's hands -- the SAME man as the reference image, identical "
+    "face, beard, and hair."
+)
+
 LORD_PRESENCE = (
     "the presence of the LORD: no figure, no face, no human or angelic "
     "form of any kind -- only a low warm golden light moving gently among "
@@ -121,6 +136,46 @@ FULLBLEED = (
     "CRITICAL FRAMING: zoom in close enough that the illustrated subject "
     "and its immediate surroundings occupy the ENTIRE frame, corner to "
     "corner, no wide empty margins of bare paper around the main subject."
+)
+
+DESK = (
+    "a worn wooden writing desk in the Keeper's own study nook: aged dark "
+    "timber grain, close and cluttered, a small clay oil lamp burning warm "
+    "at one side, a cut reed pen resting still, a small stoppered ink pot, "
+    "a folded cloth -- ordinary desk-top objects filling the corners of "
+    "the frame, nothing floating in bare space. No hands, no figure "
+    "present unless the scene says otherwise."
+)
+
+MARY = (
+    "a young Judean woman, bowed low, veiled head to shoulder in plain "
+    "undyed cloth, face turned fully down and away from camera so no "
+    "facial features are legible -- identity deliberately withheld, only "
+    "her bowed silhouette and gathered hands read. Hands drawn together "
+    "at her heart, fingers loosely folded, anatomically correct, no "
+    "elongated or extra digits. Garment: plain, rough, unornamented, "
+    "modestly covering."
+)
+
+# ---- sl20 (Sketchbook Spread) style-variant block -- the episode's FIRST
+# committed style-variant use, per _PLAN.md sec.5b + the user's standing
+# note to actually ship the full style library, not just baseline. v2
+# recipe only (STYLE_LAB.md #20) -- the v1 prompt is REJECTED (baked
+# garbled captions); this version renders clean on both bake-off
+# characters and is production_approved on the condition it's used as-is.
+SL20_STYLE = (
+    "Editorial documentary sketch illustration on an aged warm cream "
+    "sketchbook spread: one main resolved drawing surrounded by six or "
+    "seven small loose sketch fragments of the SAME subject's own nearby "
+    "details from other angles, arranged loosely around it as quick "
+    "graphite marks, no notation of any kind. Coffee ring, thumbprint, "
+    "faint binding shadow down the centre. Loose graphite-and-ink "
+    "linework, muted watercolor wash, halftone grain, narrow torn-paper "
+    "margin, a thin strip of gold leaf at one edge. Fills the spread "
+    "corner to corner. CRITICAL: absolutely NO lettering, numerals, "
+    "words, newsprint, printed book-page text, handwriting, ruler "
+    "markings, dates, notes, annotations, or captions ANYWHERE on ANY "
+    "layer -- every paper surface is BLANK textured stock."
 )
 
 # ---- anchors (eden_ref FIRST -- adam/eve chain to it for a consistent
@@ -144,6 +199,15 @@ ANCHOR_SHOTS = [
      f"garden's trees, no other figure present, the camera looking DOWN "
      f"on it (per world/SERPENT.md's locked camera rule -- the lens never "
      f"kneels to the enemy). {FULLBLEED}"),
+    # NEW (batch 4): the study desk -- a recurring SETTING reused across
+    # s26/32/38/39/40/46/60/66 per _PREFLIGHT.md's asset table, built once
+    # here and re-dressed per spread. Rendered in BASELINE style (not the
+    # sl20 variant s26 itself uses) so it stays a stable, plain identity/
+    # geometry reference every later baseline re-dress can chain to.
+    ("desk_ref", STYLE, "",
+     f"MEDIUM shot, eye-level establishing view: {DESK} A single blank "
+     f"page of aged parchment lies flat and empty at the desk's center, "
+     f"entirely blank, no writing of any kind. {FULLBLEED}"),
 ]
 
 # ---- the 5 real spreads ----
@@ -198,6 +262,271 @@ SPREAD_SHOTS = [
      f"figures -- exactly three figures present (Adam, Eve, the "
      f"serpent) plus the light-presence, count them, no others. "
      f"{FULLBLEED}"),
+    # s51: the Jesus multi-pose identity-lock anchor (_PREFLIGHT.md) --
+    # every later Jesus spread (s42/s43/s50/s53-56/s64/s66/s71) chains off
+    # THIS approved render as a 2nd reference. LOW angle, closer framing
+    # per _PREFLIGHT.md's camera table; reverent wound-free treatment,
+    # thin gold-leaf edge present -- reusing this project's own proven
+    # crucifixion wording (day_of_atonement/_s2_stills.py s53/s54).
+    # REDESIGNED (2026-08-08, 3rd attempt): open/gripping hand poses kept
+    # failing anatomy (extra/fused/elongated digits) across 2 tries. Rather
+    # than re-roll the same exposed-hand composition a 3rd time, changed
+    # the STAGING itself, following the proven precedent already shipped
+    # in this exact sibling episode (day_of_atonement/stills/
+    # s54_guilt_laid_on_christ.png): a plain cord/rope wrapped around each
+    # wrist against the beam, low-detail loosely-curled fingers mostly
+    # tucked against the wood rather than fully exposed/splayed -- far
+    # less hand geometry for the model to get wrong, and it already
+    # rendered clean once in this repo's own style.
+    ("s51_bearing_wages", STYLE, "jesus",
+     f"Close, reverent view, LOW angle looking slightly up: {JESUS} upon "
+     f"the cross, head bowed, upper body and bowed face the sharp focus "
+     f"of the frame, arms stretched along the crossbeam. At each wrist, a "
+     f"plain undyed cord is wrapped twice around the wrist and the wood, "
+     f"holding the arm steady against the beam -- the hand itself mostly "
+     f"TUCKED AND CURLED IN toward the wood behind the cord wrap, only a "
+     f"simple soft curled shape of knuckles visible, fingers loosely "
+     f"folded together and NOT individually splayed or spread apart, low "
+     f"anatomical detail, natural proportions, no elongated or extra "
+     f"digits. Wound-free and restrained -- no visible wound, no blood, "
+     f"no graphic detail of any kind. A thin strip of gold leaf remains "
+     f"visible along one edge of the page (glory never fully absent, "
+     f"even here). The sky behind Him unnaturally dark at midday, a flat "
+     f"heavy stillness, NOT storm clouds, no wind, no rain, no roiling "
+     f"shapes. {FULLBLEED}"),
+    # ---- batch 2 (2026-08-07 later night, spreads 7-15) ----
+    # s07 and s14 are $0 composites over EXISTING art (s06's own render /
+    # eden_ref.png) per _PLAN.md's own device column -- no new still here.
+    ("s08_coming_apart", STYLE, "adam,eve,eden",
+     f"WIDE shot, slightly HIGH angle: {ADAM} and {EVE}, separated by "
+     f"empty dead-center negative space between them, both small within "
+     f"the frame, a few autumn-like leaves drifting down through the "
+     f"space between them, the garden's color visibly draining toward "
+     f"grey at the far edges of the frame -- isolation and unraveling. "
+     f"{FULLBLEED}"),
+    ("s09_unexpected_place", STYLE, "eden",
+     f"EXTREME LOW, close crop of bare GROUND and dust, camera HIGH "
+     f"looking straight down: the page gone almost entirely dark, one "
+     f"single small warm gold fleck of light glowing faintly in the dust "
+     f"at the very lowest margin of the frame -- nothing else visible, no "
+     f"figures, no plants, just dark dust and the one gold fleck. "
+     f"{FULLBLEED}"),
+    ("s10_judgment_falls", STYLE, "eden",
+     f"VERY WIDE, HIGH OVERHEAD angle looking straight down: the whole "
+     f"garden of Eden laid out as one unified shape far below, one long "
+     f"dark shadow stretching and lengthening across the canopy, no "
+     f"figures visible, the scale vast and impersonal. {FULLBLEED}"),
+    ("s11_afraid_of_presence", STYLE, "adam,eve,eden",
+     f"MEDIUM two-shot, eye-level, camera positioned low among the tree "
+     f"trunks as if peering between them (occlusion): {ADAM} and {EVE} "
+     f"crouched close together, both bracketed by dark tree trunks in the "
+     f"foreground, a warm light presence glowing beyond them out of "
+     f"frame, both faces turned away and averted from the light. Any "
+     f"visible hand is anatomically correct, exactly five fingers "
+     f"including a clearly separate thumb, natural proportions, no "
+     f"elongated or extra digits. {FULLBLEED}"),
+    ("s12_creatures_word", STYLE, "eve,serpent,eden",
+     f"CLOSE profile shot, eye-level. CRITICAL COLOR TREATMENT: this "
+     f"entire image is rendered almost MONOCHROME, near-grayscale sepia "
+     f"-- every color drained down to faint dusty grey-brown tones only, "
+     f"NO green, NO warm gold light anywhere, as flat and washed-out as a "
+     f"faded old photograph -- this is a flashback memory, not the "
+     f"present moment, and must look visibly, obviously different in "
+     f"color from every other spread in this style. Within that "
+     f"near-grayscale treatment: {EVE} her ear and turned profile "
+     f"inclined toward {SERPENT.split('.')[0]} coiled still and unmoving "
+     f"in the branches just behind her, listening. The tree bark and "
+     f"branches are smooth, plain woodgrain texture ONLY -- absolutely no "
+     f"scratches, scribbles, marks, or squiggles anywhere on the bark "
+     f"that could be mistaken for handwriting or lettering of any kind. "
+     f"{FULLBLEED}"),
+    ("s13_the_fruit", STYLE, "eden",
+     f"MACRO object insert, camera near-ground: a single piece of ripe "
+     f"fruit fallen in the garden dust, one clear bite missing from it, "
+     f"sharp and large in the frame, the garden softly out of focus "
+     f"behind it in shallow depth of field, no figures, no hands. "
+     f"{FULLBLEED}"),
+    # s14: a DEDICATED still, not a raw eden_ref.png reuse -- motion_lint
+    # caught the wash-creep device producing zero real motion (p95=0.000)
+    # because eden_ref.png has no actual blue-grey wash region for
+    # panel_animator/wash_creep.py's isolate_storm_wash() (HSV hue 95-140)
+    # to isolate and grow; a still with the wash already visibly present
+    # at the edges is required, same as Storm's own s01/s04 stills.
+    ("s14_death_enters", STYLE, "eden",
+     f"Wide establishing view, eye-level, no figures present: "
+     f"{EDEN.split(':')[0]}, but a dark ink-blue-grey watercolour wash is "
+     f"visibly bleeding and creeping inward from all four edges of the "
+     f"frame like spreading stain on damp paper -- a clear, fibrous, "
+     f"feathered blue-grey front encroaching from the borders, cool and "
+     f"desaturated (matching this style's own muted ink-blue accent "
+     f"tone), while the center of the frame still shows the garden's "
+     f"natural warm green/gold color untouched. No figures. {FULLBLEED}"),
+    ("s15_the_breach", STYLE, "adam,eve,eden",
+     f"WIDE shot, slightly LOW angle from the near rim: a single DRAWN "
+     f"chasm (an inked line splitting the page itself, never a "
+     f"torn-paper edge) runs diagonally across the frame -- on the far "
+     f"side, the garden sits HIGH and brightly lit; on the near side, "
+     f"{ADAM} and {EVE} stand small and dim at the chasm's edge, no "
+     f"bridge of any kind between the two sides. {FULLBLEED}"),
+    # ---- batch 3 (2026-08-08, spreads 17-25, movement 3 close) ----
+    # s19/s22/s23 are $0 composites over s18's / s21's own already-rendered
+    # art (same reuse pattern as s07 over s06) -- no new stills for those.
+    # The gold thread itself is NEVER painted into any still -- it's a
+    # procedural device overlay (panel_animator/thread_device.py, drawn
+    # from a bbox at build time), so none of these prompts depict it.
+    ("s17_not_adam_not_eve", STYLE, "adam,eve,eden",
+     f"MEDIUM two-shot, eye-level: {ADAM} and {EVE} standing close "
+     f"together, braced and tense as if awaiting judgment, a warm light "
+     f"entering the frame from one edge but NOT falling directly on "
+     f"either of their faces -- both remain in soft shadow, unlit. "
+     f"{FULLBLEED}"),
+    ("s18_turns_to_serpent", STYLE, "serpent,eden",
+     f"WIDE shot, HIGH angle looking DOWN (per world/SERPENT.md's locked "
+     f"camera rule -- the lens never kneels to the enemy): "
+     f"{SERPENT.split('.')[0]} alone, low in the dust, no human figures "
+     f"present, a warm light beginning to fall directly onto it from "
+     f"above, accused and exposed. {FULLBLEED}"),
+    # REDESIGNED (2026-08-08): first render of s20 came back as a
+    # near-duplicate of s18's own wide coiled-in-roots composition -- a
+    # real repetition defect, not a minor nit. _PREFLIGHT.md is explicit
+    # s20 must differ from s18 by real compositional grammar (SCALE), so
+    # this prompt forces a genuinely different crop, not just a re-roll of
+    # the same framing.
+    ("s20_pure_curse", STYLE, "serpent",
+     f"EXTREME CLOSE-UP macro crop, HIGH angle looking straight down -- "
+     f"fill the ENTIRE frame with {SERPENT.split('.')[0]}'s own scaled "
+     f"body and belly pressed flat to the bare ground; NO wide tree-root "
+     f"environment, no cave-like root archway, no surrounding forest "
+     f"visible anywhere in this frame at all, only scales and bare dust "
+     f"filling every edge. Rendered in a cool ink-blue-grey judgment "
+     f"color register, desaturated, no warm garden tones. {FULLBLEED}"),
+    # s21 has NO entry here -- re-scoped 2026-08-08 after 3 wasted re-rolls
+    # (near-duplicate of s18, then a real hidden-lettering defect in the
+    # crack texture, then a regression back to the near-duplicate). Re-read
+    # _PLAN.md's own device column: "Thread draw-on ($0)" -- this spread
+    # was NEVER supposed to be a new paid render, it's a $0 composite
+    # reusing s20's own already-approved extreme-close-up art (same reuse
+    # pattern as s07 over s06), with the gold thread drawn on top
+    # procedurally at build time. See build_s21() in _s6_assemble.py.
+    ("s24_before_their_sentences", STYLE, "adam,eve,eden",
+     f"MEDIUM two-shot, eye-level: {ADAM} and {EVE} standing close "
+     f"together in heavy shadow, waiting, sentences not yet spoken, a "
+     f"soft warm presence-light glowing gently in one corner of the "
+     f"frame only, no thread or lettering visible. {FULLBLEED}"),
+    ("s25_promise_in_curse", STYLE, "serpent",
+     f"WIDE shot, LOW horizon: {SERPENT.split('.')[0]} low within a dark "
+     f"ink-blue judgment-toned band across the lower portion of the "
+     f"frame, the space above open and empty, no figures, no thread or "
+     f"lettering visible. {FULLBLEED}"),
+    # ---- batch 4 (2026-08-08+, spreads 26-35, movement 4) ----
+    # Applying the standing device/style-variety note for real: s26 is the
+    # episode's FIRST committed style-variant (sl20 Sketchbook Spread,
+    # _PLAN.md sec.5b) instead of another baseline render, and every new
+    # prompt below carries explicit fill-frame/cinematic composition
+    # language, not just the generic FULLBLEED tail -- per the user's
+    # 2026-08-08 note (memory feedback-full-style-device-library-cinematic-
+    # fill): no dead paper margins unless the emptiness IS the device
+    # (s32's gap is the one deliberate exception, called out inline).
+    ("s26_her_seed_study", SL20_STYLE, "desk",
+     f"Overhead view looking straight down onto the desk (the Keeper's "
+     f"own view): a single blank page of aged parchment lying flat and "
+     f"empty at the center of the frame -- no writing, no marks -- the "
+     f"oil lamp glowing warm just beyond the page's upper-right corner, "
+     f"casting a pool of light across it, the reed pen and ink pot "
+     f"resting at the page's near edge. No figure, no hands. Small "
+     f"sketch fragments scattered in the margins around this main view: "
+     f"a quick graphite study of the ink pot's curve, the pen's cut nib, "
+     f"the lamp's small flame, a fold of the desk cloth. {FULLBLEED}"),
+    ("s27_line_of_fathers", STYLE, "",
+     f"Page-scale LATERAL composition on plain aged paper, no background "
+     f"setting: a chain of small anonymous robed male figures in "
+     f"profile, one behind the next, each a half-generation older toward "
+     f"the LEFT edge and younger toward the RIGHT, linked by ONE "
+     f"continuous hand-drawn descent-line running through them at chest "
+     f"height -- most faces turned away, lowered, or simplified to a "
+     f"plain dark silhouette (at most one distant figure carries any "
+     f"individual facial detail), no ornament, no lettering of any kind. "
+     f"The figures and their drawn line fill the frame's full width, "
+     f"corner to corner -- no bare empty paper at either end. {FULLBLEED}"),
+    # REDESIGNED (2026-08-08, re-roll 1): first render read Eve as a
+    # normal-scale medium figure, not the small/dwarfed hope-against-vast-
+    # world contrast _PLAN.md calls for -- explicit extreme-scale-contrast
+    # language this time (feedback-camera-angle-dynamism's own device).
+    ("s28_clue_lights_up", STYLE, "eve,eden",
+     f"WIDE, page-scale composition on a hard diagonal, EXTREME SCALE "
+     f"CONTRAST: {EVE} shown TINY and distant, occupying less than "
+     f"one-sixth of the frame's height, seated small in the LOWER-LEFT "
+     f"corner within the shadowed garden setting, dwarfed by the vast "
+     f"dense forest around her; her face turned toward the UPPER-RIGHT "
+     f"where a single small warm point of gold light glows in the far "
+     f"distance -- the wide space between them filled with soft "
+     f"indistinct garden forms, tree trunks, and layered shadow at "
+     f"multiple depths (not bare blank paper), no thread, no lettering "
+     f"visible. {FULLBLEED}"),
+    # s30: designed ACTING spread (Kling) -- Mary deliberately carries NO
+    # character anchor (_PREFLIGHT.md, a reverence choice, not an
+    # omission); the angel is light-presence only, written fresh here
+    # rather than reusing the LORD_PRESENCE constant (angel is not the
+    # LORD -- a doctrine distinction worth keeping textually separate).
+    ("s30_annunciation", STYLE, "",
+     f"MEDIUM shot, camera angled slightly LOW toward the upper field: a "
+     f"single warm searching light -- no figure, no face, no form of any "
+     f"kind, only light -- fills the UPPER portion of the frame; beneath "
+     f"it, {MARY}, her whole bowed figure filling the LOWER portion of "
+     f"the frame, small and still beneath the light, within a plain dim "
+     f"interior room, rough stone and plaster wall texture visible "
+     f"around her (not bare empty space). {FULLBLEED}"),
+    ("s32_honest_match", STYLE, "desk",
+     f"Overhead view looking straight down onto the desk, high angle, "
+     f"perfectly symmetric: TWO separate blank pages of aged parchment "
+     f"lie side by side, one left and one right, entirely blank -- no "
+     f"writing of any kind on either. A deliberate GAP of bare desk wood "
+     f"sits exactly at the center of the frame between them, the desk's "
+     f"own grain and the lamp's warm light filling that gap so it reads "
+     f"as an intentional empty space -- the composition's own subject, "
+     f"not a rendering accident. The two pages and the desk's edges fill "
+     f"the rest of the frame corner to corner. {FULLBLEED}"),
+    # REDESIGNED (2026-08-08, re-roll 1): first render left the TOP HALF
+    # of the frame as bare blank paper (a real FULLBLEED violation) --
+    # "very wide lateral" read as license to leave headroom. This version
+    # forces the fanned books to occupy the frame's full HEIGHT, not just
+    # a diagonal sliver across the bottom.
+    ("s33_trajectory", STYLE, "",
+     f"WIDE composition: dozens of aged book and scroll pages fanned "
+     f"open and overlapping, densely stacked and layered so they fill "
+     f"the ENTIRE HEIGHT of the frame from the very top edge to the very "
+     f"bottom edge -- no bare empty paper sky or background visible "
+     f"above or below the books anywhere. The mass of pages rises on a "
+     f"slight diagonal from the LOWER-LEFT toward the UPPER-RIGHT, page "
+     f"after page densely layered with real texture and shadow between "
+     f"them, the pages themselves are the entire visual content of the "
+     f"frame corner to corner. The whole fanned shape bends like one "
+     f"long drawn curve toward a single small brilliant point of warm "
+     f"gold light glowing at the extreme far-right edge of the frame -- "
+     f"vast in scope, the eye pulled the full width AND height of the "
+     f"frame toward that one distant point. {FULLBLEED}"),
+    # s34: the shared naming-page paper prop (s35/s36 reuse this SAME art,
+    # $0 composites with accumulating Scribed Ink lettering -- no new
+    # render for either, same reuse pattern as s07-over-s06 / s21-over-s20).
+    # REDESIGNED (2026-08-08, re-roll 1): first render was near-identical
+    # to s26/s32/desk_ref (same lamp+pen+inkpot+cloth arrangement in the
+    # same corners) -- a real repetition risk this project's own contact-
+    # sheet lesson exists to catch. Dropped the "desk" chain entirely and
+    # gave the page its OWN distinguishing physical marks instead of
+    # reusing the desk's furniture as the visual identity.
+    ("s34_naming_serpent", STYLE, "",
+     f"Overhead view looking straight down, no desk or furniture visible "
+     f"at all: ONE large open page of aged, heavily worn parchment fills "
+     f"the ENTIRE frame corner to corner -- no lamp, no pen, no inkpot, "
+     f"no cloth, no surrounding objects of any kind. The page is "
+     f"entirely blank of any text, but carries real physical age "
+     f"distinct from any other page in this story: heavy foxing spots "
+     f"clustered in one corner, a faint ring-shaped water stain, a "
+     f"short frayed loose cord looped once across one corner as if it "
+     f"once bound the page shut, soft deep creases. A single dim shaft "
+     f"of light falls across the page's upper third only, leaving the "
+     f"lower two-thirds in cooler shadow. No figure, no hands. "
+     f"{FULLBLEED}"),
 ]
 
 
@@ -225,7 +554,8 @@ def resolve_refs(tag):
     return refs
 
 
-ANCHOR_DEST = {"adam_ref": CAST, "eve_ref": CAST, "eden_ref": WORLD, "serpent_ref": WORLD}
+ANCHOR_DEST = {"adam_ref": CAST, "eve_ref": CAST, "eden_ref": WORLD, "serpent_ref": WORLD,
+               "desk_ref": WORLD}
 
 
 def render_set(shots, dest_of, label):

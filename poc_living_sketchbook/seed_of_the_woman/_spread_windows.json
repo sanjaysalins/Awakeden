@@ -4,49 +4,219 @@
   "name": "s01_something_wrong",
   "beat": 1,
   "start": 0.0,
-  "end": 5.8,
-  "dur": 5.8,
-  "mode": "device",
-  "clip_dur": 5.8
+  "end": 5.44,
+  "dur": 5.44,
+  "mode": "dramatic_spotlight",
+  "clip_dur": null
  },
  {
   "num": 2,
   "name": "s02_the_hiding",
   "beat": 1,
-  "start": 5.8,
-  "end": 11.9,
-  "dur": 6.1,
-  "mode": "device",
-  "clip_dur": 6.1
+  "start": 5.44,
+  "end": 11.15,
+  "dur": 5.71,
+  "mode": "fwd_drift",
+  "clip_dur": 5.041667
  },
  {
   "num": 3,
   "name": "s03_verse_card",
   "beat": 1,
-  "start": 11.9,
-  "end": 24.0,
-  "dur": 12.1,
-  "mode": "device",
-  "clip_dur": 12.1
+  "start": 11.15,
+  "end": 23.57,
+  "dur": 12.42,
+  "mode": "verse_card",
+  "clip_dur": null
  },
  {
   "num": 4,
   "name": "s04_god_walking",
   "beat": 1,
-  "start": 24.0,
-  "end": 30.7,
-  "dur": 6.7,
-  "mode": "device",
-  "clip_dur": 6.7
+  "start": 23.57,
+  "end": 30.07,
+  "dur": 6.5,
+  "mode": "fwd_drift",
+  "clip_dur": 4.041667
  },
  {
   "num": 5,
   "name": "s05_where_art_thou",
   "beat": 1,
-  "start": 30.7,
-  "end": 33.03,
-  "dur": 2.33,
-  "mode": "device",
-  "clip_dur": 2.33
+  "start": 30.07,
+  "end": 33.18,
+  "dur": 3.11,
+  "mode": "bespoke",
+  "clip_dur": null
+ },
+ {
+  "num": 6,
+  "name": "s06_blame_circle",
+  "beat": 1,
+  "start": 33.18,
+  "end": 39.3,
+  "dur": 6.12,
+  "mode": "fwd_drift",
+  "clip_dur": 5.041667
+ },
+ {
+  "num": 7,
+  "name": "s07_beguiled_card",
+  "beat": 1,
+  "start": 39.3,
+  "end": 42.86,
+  "dur": 3.56,
+  "mode": "verse_card",
+  "clip_dur": null
+ },
+ {
+  "num": 8,
+  "name": "s08_coming_apart",
+  "beat": 1,
+  "start": 42.86,
+  "end": 48.0,
+  "dur": 5.14,
+  "mode": "fwd_drift",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 9,
+  "name": "s09_unexpected_place",
+  "beat": 1,
+  "start": 48.0,
+  "end": 52.6,
+  "dur": 4.6,
+  "mode": "candle_only",
+  "clip_dur": null
+ },
+ {
+  "num": 10,
+  "name": "s10_judgment_falls",
+  "beat": 2,
+  "start": 52.6,
+  "end": 60.07,
+  "dur": 7.47,
+  "mode": "fwd_drift",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 11,
+  "name": "s11_afraid_of_presence",
+  "beat": 2,
+  "start": 60.07,
+  "end": 67.56,
+  "dur": 7.49,
+  "mode": "fwd_drift",
+  "clip_dur": 5.041667
+ },
+ {
+  "num": 12,
+  "name": "s12_creatures_word",
+  "beat": 2,
+  "start": 67.56,
+  "end": 75.15,
+  "dur": 7.59,
+  "mode": "fwd_drift",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 13,
+  "name": "s13_the_fruit",
+  "beat": 2,
+  "start": 75.15,
+  "end": 82.06,
+  "dur": 6.91,
+  "mode": "dramatic_spotlight",
+  "clip_dur": null
+ },
+ {
+  "num": 14,
+  "name": "s14_death_enters",
+  "beat": 2,
+  "start": 82.06,
+  "end": 87.98,
+  "dur": 5.92,
+  "mode": "wash_creep_advance",
+  "clip_dur": null
+ },
+ {
+  "num": 15,
+  "name": "s15_the_breach",
+  "beat": 2,
+  "start": 87.98,
+  "end": 94.49,
+  "dur": 6.51,
+  "mode": "parallax_25d",
+  "clip_dur": null
+ },
+ {
+  "num": 16,
+  "name": "s16_watch_closely",
+  "beat": 3,
+  "start": 94.49,
+  "end": 99.16,
+  "dur": 4.67,
+  "mode": "hunt_and_lock",
+  "clip_dur": null
+ },
+ {
+  "num": 19,
+  "name": "s19_curse_card",
+  "beat": 3,
+  "start": 108.7,
+  "end": 119.19,
+  "dur": 10.49,
+  "mode": "verse_card",
+  "clip_dur": null
+ },
+ {
+  "num": 21,
+  "name": "s21_gold_woven_in",
+  "beat": 3,
+  "start": 124.66,
+  "end": 130.67,
+  "dur": 6.01,
+  "mode": "thread_device",
+  "clip_dur": null
+ },
+ {
+  "num": 22,
+  "name": "s22_promise_card",
+  "beat": 3,
+  "start": 130.67,
+  "end": 139.42,
+  "dur": 8.75,
+  "mode": "bespoke",
+  "clip_dur": null
+ },
+ {
+  "num": 23,
+  "name": "s23_let_that_land",
+  "beat": 3,
+  "start": 139.42,
+  "end": 145.88,
+  "dur": 6.46,
+  "mode": "line_boil_hold",
+  "clip_dur": null
+ },
+ {
+  "num": 25,
+  "name": "s25_promise_in_curse",
+  "beat": 3,
+  "start": 152.49,
+  "end": 158.53,
+  "dur": 6.04,
+  "mode": "thread_device_gleam",
+  "clip_dur": null
+ },
+ {
+  "num": 51,
+  "name": "s51_bearing_wages",
+  "beat": 6,
+  "start": 352.47,
+  "end": 358.43,
+  "dur": 5.96,
+  "mode": "fwd_drift",
+  "clip_dur": 4.041667
  }
 ]

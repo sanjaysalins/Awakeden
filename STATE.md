@@ -1,5 +1,324 @@
 # STATE.md — progress tracker
 
+**2026-08-08 (even later — Seed of the Woman LONG: batch 4 done, spreads
+26-35, movement 4 complete, gates not yet run, $6.77 this batch / $26.20
+episode total, ALL COMMITTED, session closed for a clean handover):**
+Continued straight from batch 3 (below). User gave two rounds of real
+design feedback before any spend, both now locked into standing memory:
+
+1. **"Not using all the visual styles... make them feel cinematic and not
+   a lot of empty spaces"** (3rd occurrence of this exact pattern across
+   2 episodes — memory `feedback-full-style-device-library-cinematic-
+   fill`, new). Re-planned batch 4 against BOTH underused inventories —
+   the 35-variant style library (18 `production_approved`, 0 used across
+   spreads 1-25) and the panel_animator device library — before rendering
+   anything. Shipped this episode's FIRST real style-variant use: `sl20_
+   sketchbook_spread` on s26 (chosen over sv15 for s33 after checking the
+   variant's own `avoid_on: wide-establishing` flag against s33's actual
+   composition — a real fit-check, not a coin flip).
+2. Rendered batch 4's 8 stills; 3 needed one re-roll each, all real
+   defects caught before showing the user anything: s28 (Eve rendered
+   too large — no scale contrast against the "small, distant hope"
+   design intent), s33 (top half of frame left as bare blank paper — a
+   genuine FULLBLEED miss), s34 (near-identical to s26/s32's desk
+   arrangement — a repetition risk this project's own contact-sheet
+   lesson exists to catch). All three fixed and reconfirmed clean.
+
+**Then the user flagged s32 ("the honest gap") and s34 (the naming page)
+as "very blank"** even though both were designed that way on purpose (the
+gap IS the doctrinal point; the naming page is meant to receive lettering
+across 3 beats). Offered two paths: deepen the in-book device vocabulary
+(stays inside the sketchbook's own world, the standing default) or a
+deliberate style-BREAK into a real infographic/motion-graphic insert
+(explicitly flagged as tension against the locked `feedback-device-must-
+live-in-the-book` rule before asking, since a near-identical device was
+rejected once before — Negative-Space Light, 2026-07-30). **User chose
+the break.** New scoped memory `feedback-infographic-insert-override`
+records this as an explicit per-spread exception, not a repeal of the
+standing rule.
+
+**Fable designed the actual insert** (creative design work → Fable per
+the standing model split): two "Typeset Plate" pages — s32 "the Honest
+Match" (two title-page bodies, a citation line that draws and fails on
+the word "stops," an evaporating dust-mote un-ink) and s34-36 "the Naming
+Docket" (a formal three-entry inquest: question → held silence → KJV
+strikes whole → citation stamps, gold appearing on EXACTLY "the Son of
+God" / "the God of peace" and nowhere near the serpent — a real color
+doctrine encoded into a design spec, not just prose). Fable also caught
+two things I'd have missed: the "trajectory" narration line actually
+belongs to s33, not s32 (real word-alignment check, not the brief's
+assumption), and s34-36 are ONE continuous plate, so s36 (out of this
+batch's scope) needed authoring now too or the sequence breaks later —
+built the full 28.2s master now, split at the real window boundaries.
+Recommended `panel_animator/render_dom_clip.py` (existing $0 Playwright/
+Chromium CSS renderer) over spinning up a new Remotion composition —
+simpler, already proven, no new dependency; real typography (Constantia,
+already on the machine), zero AI-generated lettering. Built, rendered,
+eye-checked clean both plates on the first real pass (one font-face fix
+—missing `font-style:italic` on the italic face declaration, would have
+faux-double-slanted the quotes — caught and fixed before it became a
+visible defect, not after).
+
+**6 of batch 4's 10 spreads went fully $0 this session**, each built
+through the real `_s6_assemble.py` dispatch (`build_segment()`, not
+standalone scripts): s26 (the episode's ONE annotator's circle, landing
+on "her seed" at its REAL spoken timestamp — 162.105s, pulled from
+`_alignment.json`, not guessed; established `STUDY_COPY_*` constants as
+the fixed letterform anchor this project's own independent-review panel
+flagged as missing for the 6 future re-dresses at s26/40/46/47/60/66),
+s27 (static hold + line_boil — the descent-line is already drawn into
+the still's own art), s29 (a second Illuminated Rubric, Gal 4:4, NOT
+red-letter since Paul is writing about the LORD not voicing Him — fixed
+a real cap-glow mispositioning bug same pass, caught on my own re-check
+not the user's), s32, s34, s35.
+
+**Then a real paid-spend checkpoint** (~$2.75 quoted, user: "go"): 3
+clips, all clean on the first render, no re-rolls. s28 (Seedance, Eve +
+the far glow). **s30 (Kling, the plan's own "designed ACTING spread")
+deliberately built with the SAME frozen-tableau-plus-ambient-only
+discipline as every other spread in this episode, not an open-ended
+gesture-completion prompt** — the STILL already carries the completed
+"hands gathered at her heart" pose, so "motion completes, holds" is
+satisfied by the still itself; asking Kling to invent the gathering
+motion live would have re-run the exact risk class that produced s11's
+earlier invented head-turn. Held her exact pose frame-to-frame, confirmed
+clean. **s33 (Seedance, 8s not the usual 4s) got the real "very cool
+animation" the user asked for** — a dramatic light-bloom from a modest
+point to a full radiant flare, genuinely striking, not just a camera pan.
+
+**Caught and fixed a real continuity bug of my own making**: the naming
+plate's opening light-point started life on a PLACEHOLDER coordinate
+(estimated from the still, since s33 hadn't been animated yet when the
+plate was first built). Once s33's real clip existed, measured its
+actual last-frame brightest pixel (1866, 543 in 1920x1080 space, a
+brightness/warm-hue scan, not eyeballed) and corrected the plate to
+open from that exact position with matching size/glow — re-rendered,
+rebuilt s34/s35, confirmed a pixel-identical seam and a genuinely smooth
+transition, not a jump-cut.
+
+**Wired but not yet SEGMENT-BUILT** (code is ready in `_s6_assemble.py`,
+just needs a run): `build_s28` (thread_device gleam overlay over the
+real clip, endpoints measured off the actual rendered frame's warm-hue
+peak, not eyeballed), `build_s31` (Scribed Ink composite of Luke 1:35b
+over s30's own art, underline swash on "shall be called the Son of God,"
+NOT red-letter — the angel's words, not the LORD's own). s30/s33 wired as
+plain `build_clip_hold`.
+
+**Cost: $6.77 this batch** (stills $3.30 incl. 3 re-rolls + clips $3.47:
+Seedance s28 $0.72, Kling s30 $1.31, Seedance s33 $1.44 for the longer
+8s render). **Episode running total: $26.20** (computed fresh from
+`data/spend_ledger.jsonl`, not carried forward by hand). Full gallery of
+every still built so far (27 renders + 6 anchors, spreads 1-35 + s51):
+`poc_living_sketchbook/seed_of_the_woman/_ALL_STILLS_REVIEW.html`.
+
+**Not yet done, exact next steps**: build the 4 remaining segments
+(s28/s30/s31/s33 — code ready, just run `build_segment()` for each same
+as every prior batch's verification pass), assemble the full batch 4
+preview (26-35) with real narration audio, run `motion_lint.py` +
+`_layer_check.py` and fix anything real (not scale-artifact). Everything
+through this point IS committed. Full exact resume point: RESUME.md top.
+
+**2026-08-08 (later — Seed of the Woman LONG: batch 3 done, spreads 17-25,
+gates green, $19.43 episode total, SESSION CLOSED for the day by user
+request):** Continued from batch 1/2 (below). User approved batch 2's
+stills with one note: "51 the hands are not good shape" (already fixed
+that session) — then, once batch 2 was fully built, said "continue" plus a
+standing design note: **use the full device library, not just the
+common few** (dramatic_spotlight/clips had been doing most of the work).
+
+Batch 3 = spreads 17-25 (closes out movement 3). Stills first, per the
+locked cadence: 5 new renders (s17, s18, s20, s24, s25 — s19/s22/s23 reuse
+other spreads' art, no new render). Two real problems caught before
+showing the user anything: **s20 and s21 both came back as near-duplicates
+of s18** (three coiled-serpent-in-roots shots in a row) — redesigned s20
+as a genuine extreme close-up; for s21, after 3 wasted re-rolls (duplicate
+→ a real hidden-lettering defect in cracked-ground texture → regression
+back to the duplicate), re-read `_PLAN.md`'s own device column and
+realized s21 was never supposed to be a new render at all — it's a $0
+reuse of s20's art with the gold thread drawn on top. User approved the
+batch.
+
+Applied the "use the full device library" note for real this batch,
+building genuinely new (for this episode) $0 devices instead of repeating
+the same handful:
+- **thread_device** (s21, s25) — the gold thread's first appearance +
+  a later gleam-pass, drawn procedurally (never painted into a still).
+- **Illuminated Rubric** (s22) — built as a LOCAL adaptation of Day of
+  Atonement's own device rather than cross-importing it directly: that
+  function reads Day of Atonement's own `ALIGNMENT`/`LAST_WORD_END` as
+  hidden module globals, which would have silently applied the WRONG
+  episode's narration timing to this card's breathing glow. Whole-block
+  verse arrival (LAW 1), red-letter (Gen 3:15 is direct LORD speech per
+  narration.md's own multi-voice tag), gold dropped-cap glow, breathing
+  modulated by this episode's real alignment.
+- **line_boil** (s23) — grain wobble on a held card so "sacred stillness"
+  reads as alive, not a dead freeze.
+- Real clips (s17/s24 Kling, s18/s20 Seedance — s18 auto-fell-back to
+  Kling on a Higgsfield 503).
+
+Eye-checked s17/s24 (both multi-figure Kling, the same risk class that
+produced s11's invented head-turn earlier) frame-by-frame — both came back
+clean this time, the stronger gaze-lock prompt language held.
+
+**Gates caught two more real problems, not scale artifacts:**
+`motion_lint.py` flagged s21 AND s25 as FROZEN-SPREAD (p95 0.036/0.035) —
+the gold thread was too thin (4px default) to move the whole-frame
+luminance-diff metric even though the animation was genuinely happening.
+Fixed by widening the thread (12px, then 20px for s25 specifically) and
+shortening s21's fade window for a punchier arrival; both confirmed fixed
+on re-run. Final: 2 FAIL (both DEVICE-QUOTA, the same predicted small-N
+scale artifact from batch 2, not a real defect) + 7 WARN. `_layer_check.py`:
+9 FAIL, all future spreads (26-71) not yet built — nothing wrong with this
+batch's own 2 verse cards (s19, s22), both correctly green.
+
+**A real process gap caught before the preview built**: had animated
+s17/s18/s20/s24's raw clips but forgot to actually run them through
+`build_segment()` to produce the real `_segments/seg_*.mp4` files the
+assembly reads — the preview-build script failed with a clear "file not
+found" rather than silently producing something wrong. Fixed by running
+the real dispatch for all of spreads 17-25 before building the preview.
+
+Review page (preview video with real narration audio, playable in-browser):
+`poc_living_sketchbook/seed_of_the_woman/_BATCH3_REVIEW.html`. **Today's
+total spend: ~$7.09** (batch 3 stills $2.70 already reported earlier +
+today's animation/device work). **Episode running total: ~$19.43.**
+**Nothing committed to git.**
+
+User then asked to stop for the day at a natural point and do a proper
+save + handover — this entry plus RESUME.md's top block are that handover.
+**25 of 71 spreads are now built** (1-25 contiguous, plus s51 out of
+order). Next session: same cadence, next batch is spreads 26-35ish
+(movement 4 begins) — keep applying the "spread across the device
+library" note. Full exact resume point: RESUME.md top.
+
+**2026-08-08 (Seed of the Woman LONG: batch 1 done for real — spreads 1-16 +
+s51, gates green, $10.12 this session):** Continued straight from the timing
+fix below. User said "go ahead," so rendered s51 (Christ on the cross) as the
+next real step. User caught a real problem I'd missed on my own eye-check:
+the hands were malformed. Redesigned the staging (rope-bound wrists, matching
+Day of Atonement's own shipped precedent, instead of open/gripping fingers) —
+fixed. User then set a new standing process for the rest of this build:
+**render stills in batches, review every ~10 before spending on animation.**
+
+Built batch 2's 7 new stills (spreads 8,9,10,11,12,13,15 — s07/s14 reuse
+existing art, no new render needed). s12 took 2 re-rolls (missing the
+required desaturation, then a hidden scribble baked into the tree bark —
+this project's banned-lettering rule); everything else clean first try,
+hands checked at full-res before ever showing them. User approved the batch.
+
+Animated the real clips (s08/s10/s12 Seedance, s11 Kling) and wired every $0
+device (s07 Scribed Ink over s06's own art, s09 candle_only breathing pulse,
+s13 dramatic_spotlight, s14 wash-creep, s15 parallax_25d). Caught a real
+motion bug by eye-checking start/mid/end frames, not just trusting the exit
+code: s11's Kling render invented a head-turn (the couple ended up facing
+each other instead of staying averted from the light) — re-rolled with
+explicit gaze-lock language, confirmed fixed frame-by-frame.
+
+**Then ran the standing gates and they caught two more real problems**, not
+just scale artifacts: `motion_lint.py` found s14's wash-creep device
+producing literally zero motion (p95=0.000) — the reused background had no
+actual ink-wash for the device's color-isolation logic to find anything to
+animate. Fixed with a dedicated new still (a real blue-grey wash bleeding in
+from the edges) plus a stronger travel distance. s15's parallax was also
+flagged as too subtle (p95=0.117 vs 0.15 threshold) — fixed by raising the
+amplitude. Both confirmed fixed on re-run: final report is 2 FAIL (both
+DEVICE-QUOTA, explicitly predicted as a small-N scale artifact by SKILL.md
+sec.8b itself) + 8 WARN (short deliberate holds, advisory transition notes).
+`_layer_check.py`'s 11 FAILs are all future spreads (19-71) not yet built —
+nothing wrong with what shipped this batch. Also wrote `_s5b_spread_
+windows.py` (new) since the old `_spread_windows.json` was a stale 5-row
+leftover making the gate's own math meaningless.
+
+Built a review page with both cuts playable in-browser (real narration
+audio, not silent): `poc_living_sketchbook/seed_of_the_woman/
+_BATCH2_REVIEW.html`. **Spend: $10.12 this session, $12.34 episode running
+total**, both in `data/spend_ledger.jsonl`. **Nothing committed to git.**
+Next: batch 2 of the real build (spreads 17-25ish), same cadence — stills
+first, human review, then animate/wire, then gates. Full pickup: RESUME.md
+top.
+
+**2026-08-07 (later night — Seed of the Woman LONG: RESUME steps 1-2 done,
+real ~7s alignment drift fixed for real, no new spend):** Picked up the
+"night" handover below (steps 1-7, in order). Did steps 1 and 2 only —
+steps 3+ need real Kling/Seedance spend and a fresh quote+go-ahead per the
+standing ask-before-spending rule, so stopped there rather than spend
+without asking.
+
+1. **`_s6_assemble.py`'s NARRATION/OUT constants fixed**: now point at the
+   real 500.53s `longform/05_The_Seed_Of_The_Woman/v1/narration.mp3`, not
+   the 33s POC30 test-excerpt MP3.
+2. **Built the real alignment-correction pass** (`_s5b_reconcile_timing.py`,
+   new). Confirmed `_turn_boundaries.json`'s claimed turn starts are a
+   proportional ESTIMATE, not real measured boundaries (unlike Day of
+   Atonement, where turn boundaries come from real ffprobe'd per-turn
+   clips) — every one of the 41 turns' real start was re-derived by literal
+   word-sequence search against the real per-word `_alignment.json`
+   (ground truth). Drift grows from 0 at turn 0 to ~9s by turn 29, matching
+   (and extending) the ~7s @ turn 34 the prior session found by hand. Each
+   spread's original FRACTIONAL position within its claimed turn window
+   (the plan's own sub-turn design intent) was re-applied to the turn's
+   REAL window, and the corrected numbers were written into
+   `_spread_table.py`'s SPREADS list (all 71 rows; verified fully
+   continuous, no gaps/overlaps, last spread still ends exactly at the real
+   last-word-end 500.451s). Raw output kept at `_corrected_spreads.json`
+   for audit.
+   - **Found and fixed a real byproduct bug**: the freshness-stamp hash in
+     `_s6_assemble.py`'s `compute_hash()` didn't include `duration` at all
+     — so the corrected timings above would have silently NOT triggered a
+     rebuild of the already-built s01-s06/s16 segments even though their
+     target durations all shifted slightly. Added duration to the hash
+     payload; verified live (s01 correctly went FRESH->BUILT after the
+     duration change, then FRESH again once rebuilt to the new number).
+   - **Found and fixed a second real bug**: spread 16's canonical name in
+     `_spread_table.py` (the plan's own name, "Now watch closely") is
+     `s16_watch_closely`, but the already-built test-tier code
+     (`_devices.py`'s `DEVICE_ASSIGNMENTS`, `_s6_assemble.py`'s
+     `SEGMENT_BUILDERS`/`SOURCE_FILES`) still keyed it under the OLDER
+     working name `s16_sentencing_tableau` — same scene, same already-
+     rendered still/clip, just a stale dict key that would have KeyError'd
+     the very first time `main()` tried to iterate the real spread table.
+     Fixed the 4 reference sites (kept the underlying PNG filename as-is,
+     only the lookup key changed); rebuilt s16's segment clean under the
+     corrected key; deleted the orphaned old-key segment/stamp files.
+   - Rebuilt all 7 existing test-tier segments (s01-s06, s16) against the
+     corrected durations — all clean, all $0/local (no API spend).
+
+User said "go ahead" — read as approval for the small test-scene step
+(matching the standing "1-2 paid test scenes first" pattern), not a
+blank check for the full remaining batch, so **step 3 (render s51) was
+done, real spend, $1.02**: NBP still ($0.30, chained to the repo-level
+`cast/jesus_ref.png` anchor) + Seedance clip ($0.72, 4s, seedance1_5 —
+Kling never touched, per the locked Christ/cross rule). Both eye-checked
+at full res: face/hair/beard consistent with the anchor, no visible
+wounds/blood, gold-leaf edge present, sky flat-dark not stormy, frozen
+pose held identically start-to-end across the clip (compared frame 0 vs
+frame ~119). s51 is now cost-logged in `data/spend_ledger.jsonl` and
+ready to chain as the 2nd Jesus reference for every later Jesus spread,
+per `_PREFLIGHT.md`'s multi-pose identity lock.
+
+**Not done from the RESUME list — genuinely a multi-session undertaking,
+stopped to check in before committing to it:** step 4 (Seedance
+duration-snap/loop table) and step 6 (extend `_devices.py`/
+`_s2_stills.py`/`_s4_animate.py`/`_s6_assemble.py` for the remaining ~63
+spreads, batch by batch per SKILL.md sec.8b) — rough hand-count off
+`_PLAN.md`'s own device column: ~8 more Kling clips, ~18 more Seedance
+clips, ~35 spreads on $0 devices/cards, all needing a still first either
+way. At this episode's own logged per-unit rates (~$0.30/still,
+~$1.31/Kling clip, ~$0.72/Seedance clip) that's roughly **$45-55** for
+the rest of the visual production (consistent with Day of Atonement's
+real $87 total on a similarly-sized 76-spread episode) — a rough
+hand-count, not the real `pipeline/cost.estimate_batch()` figure RESUME's
+own step 6 asks for (can't run that estimator meaningfully until each
+batch's real prompt/device list exists). Step 5 (two small QC calls on
+s06/s16) and step 7 (`torn_out_page` wiring, only needed for the very
+last spread) are both still open, unchanged, still low-priority.
+**Nothing committed to git yet** — the `_s2_stills.py`/`_s4_animate.py`/
+`_s6_assemble.py`/`_devices.py`/`_spread_table.py` edits plus the new
+`_s5b_reconcile_timing.py` + `_corrected_spreads.json` are all sitting as
+local changes, plus the new `stills/s51_bearing_wages.png` +
+`clips/s51_bearing_wages.mp4` (not git-tracked media, same as every
+other render in this project). Full pickup: RESUME.md top.
+
 **2026-08-07 (night — Seed of the Woman LONG: full plan authored, sent
 through TWO real independent-review rounds, test tier built, $0 spend
 beyond the ~$5 test-tier stills/clips, all committed):** Continuing the

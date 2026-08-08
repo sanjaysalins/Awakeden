@@ -1,0 +1,39 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Seed of the Woman -- Batch 2 FINAL (spreads 1-16 + s51)</title>
+<style>
+body{font-family:Georgia,serif;background:#f3ede3;margin:0;padding:24px;color:#2a2420;}
+h1{font-size:20px;} h2{font-size:16px;margin-top:28px;}
+.note{color:#7a4a1f;font-weight:bold;}
+video{width:100%;max-width:900px;border-radius:6px;display:block;background:#000;}
+.fixlist{background:#fff;border:1px solid #ddd;border-radius:6px;padding:14px 18px;max-width:900px;}
+.fixlist li{margin:6px 0;}
+</style></head><body>
+<h1>Seed of the Woman LONG -- Batch 2 FINAL (spreads 1-16, plus s51 out of order)</h1>
+
+<h2>Preview cut, spreads 1-16 with real narration (99.16s)</h2>
+<video controls src="PREVIEW_1_16.mp4"></video>
+
+<h2>s51 (Christ on the cross) with its own narration slice (5.96s)</h2>
+<video controls src="PREVIEW_s51.mp4"></video>
+
+<h2>What changed since the still-only review</h2>
+<div class="fixlist">
+<ul>
+<li><b>s51 hands</b> -- redesigned to rope-bound wrists (matching Day of Atonement's own precedent), checked clean.</li>
+<li><b>s11</b> -- Kling invented a head-turn (couple ended up facing each other instead of staying averted). Re-rolled with explicit gaze-lock language; confirmed fixed frame-by-frame.</li>
+<li><b>s12</b> -- 3 tries: missing desaturation, then hidden scribble-marks in the tree bark (banned lettering). 3rd render clean.</li>
+<li><b>s14</b> -- motion_lint caught this as completely frozen (p95=0.000): the wash-creep device had nothing to animate because the reused background had no real ink-wash in it. Built a dedicated still with a real blue-grey wash bleeding at the edges, then increased the animation's travel distance. Confirmed real motion now.</li>
+<li><b>s15</b> -- motion_lint caught this as too subtle (p95=0.117, just under threshold). Raised the parallax amplitude. Confirmed fixed.</li>
+</ul>
+</div>
+
+<h2>Gates run</h2>
+<div class="fixlist">
+<ul>
+<li><b>motion_lint.py</b>: 2 FAIL remaining, both DEVICE-QUOTA -- a known scale-artifact at 17/71 spreads (any device used more than twice looks "over quota" this early), not a real defect. Everything else clean or WARN-only (short deliberate holds, advisory motion-cliff notes).</li>
+<li><b>_layer_check.py</b>: the 11 flagged verse cards are all future spreads (19-71) not yet built -- nothing wrong with this batch.</li>
+</ul>
+</div>
+
+<p style="margin-top:24px;color:#888;font-size:12px;">This session's spend: ~$10.12 (stills + Kling/Seedance clips, incl. re-rolls). Full episode running total: ~$12.34.</p>
+</body></html>

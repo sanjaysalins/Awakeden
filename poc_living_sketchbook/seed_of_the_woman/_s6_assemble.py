@@ -21,12 +21,14 @@ import argparse
 import hashlib
 import importlib.util
 import json
+import math
 import random
 import subprocess
 import sys
 import time
 from pathlib import Path
 
+import numpy as np
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 HERE = Path(__file__).resolve().parent
@@ -45,11 +47,16 @@ CLIPS = HERE / "clips"
 SEG_DIR = HERE / "_segments"
 SEG_DIR.mkdir(exist_ok=True)
 
-NARRATION = HERE / "SEEDOFTHEWOMAN_LONG_living_sketchbook.mp3"
+ALIGNMENT = json.loads((HERE / "_alignment.json").read_text(encoding="utf-8"))
+
+NARRATION = ROOT / "longform" / "05_The_Seed_Of_The_Woman" / "v1" / "narration.mp3"
 OUT = HERE / "SEEDOFTHEWOMAN_LONG_living_sketchbook.mp4"
 
 F_KEEPER = "C:/Windows/Fonts/Inkfree.ttf"
 INK = (35, 30, 26, 255)
+RUBRIC = (150, 26, 22, 255)  # matches panel_animator's own RUBRIC (annotators_circle.py etc.)
+GOLD = (185, 146, 74)        # matches panel_animator's own GOLD / thread_device.GOLD
+BODY_SIZE = 40               # matches _devices.py's own BODY_SIZE
 
 
 def load_devices_doa():
@@ -110,14 +117,17 @@ def build_clip_hold(dest, duration, clip_path):
               "-r", str(FPS), str(dest)])
 
 
-def render_line_png(line, seed):
+def render_line_png(line, seed, ink=None):
     """One line's own PNG, sized to its own bbox -- rendered separately (not
     baked into one flat card image) so each line can be given its own
     word-timed press-in arrival below. A single static overlay for the
     whole 12s card is exactly the FROZEN-SPREAD defect class motion_lint
     exists to catch (memory `day-of-atonement-retro-learnings` fix #3) --
     caught on THIS card's own first lint run, fixed here rather than
-    silenced."""
+    silenced. `ink` overrides the default ink color (e.g. RUBRIC red-letter
+    for direct LORD/Christ speech, per this project's locked
+    "red-letter speaker = the speaker" rule)."""
+    ink = ink or INK
     probe = ImageDraw.Draw(Image.new("RGB", (8, 8)))
     rng = random.Random(seed)
     runs = [(text, size, ImageFont.truetype(F_KEEPER, size)) for text, size in line]
@@ -129,7 +139,7 @@ def render_line_png(line, seed):
     x = 0
     for (text, size, font), wid in zip(runs, widths):
         jy = rng.uniform(-2, 2)
-        d.text((x, 10 + jy), text, font=font, fill=INK, stroke_width=1, stroke_fill=INK)
+        d.text((x, 10 + jy), text, font=font, fill=ink, stroke_width=1, stroke_fill=ink)
         x += wid
     return img
 
@@ -197,9 +207,638 @@ def build_s16(dest, duration, doa):
     import hunt_and_lock  # noqa: E402
     still = STILLS / "s16_sentencing_tableau.png"
     poc_devices = load_devices_here()
-    entry = poc_devices.DEVICE_ASSIGNMENTS["s16_sentencing_tableau"]
+    entry = poc_devices.DEVICE_ASSIGNMENTS["s16_watch_closely"]
     target_frac = tuple(entry["params"]["target_frac"])
     hunt_and_lock.render(still, dest, duration, target_frac, W, H)
+
+
+def build_s07(dest, duration, doa):
+    """Scribed Ink composite, $0 -- reuses s06's OWN already-rendered still
+    (Eve's turned profile + serpent, cropped tight on her + the serpent's
+    shadow at the bottom edge), not a new render. Fast press-in (39 glyphs
+    over this spread's ~3.5s window)."""
+    bg = STILLS / "s06_blame_circle.png"
+    cropped = SEG_DIR / "_s07_bg_crop.png"
+    _run(["ffmpeg", "-y", "-v", "error", "-i", str(bg), "-vf",
+          f"crop=iw*0.50:ih*0.90:iw*0.48:ih*0.05,"
+          f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},"
+          f"boxblur=1:1,eq=brightness=0.03", "-frames:v", "1", str(cropped)])
+    poc_devices = load_devices_here()
+    card = poc_devices.VERSE_CARDS["s07_beguiled_card"]
+    lines = card["lines"]
+
+    line_imgs = [render_line_png(line, seed=142 + i) for i, line in enumerate(lines)]
+    y = int(H * 0.10)
+    positions = []
+    for im in line_imgs:
+        x = int((W - im.width) / 2)
+        positions.append((x, y))
+        y += im.height + 16
+
+    inputs = ["-loop", "1", "-i", str(cropped)]
+    filt_parts = []
+    last = "0:v"
+    press_start, press_gap, press_fade = 0.2, 0.5, 0.3
+    for i, (im, (x, y)) in enumerate(zip(line_imgs, positions)):
+        p = SEG_DIR / f"_s07_line{i}.png"
+        im.save(p)
+        inputs += ["-loop", "1", "-i", str(p)]
+        idx = i + 1
+        t0 = press_start + i * press_gap
+        faded, label = f"f{idx}", f"v{idx}"
+        filt_parts.append(f"[{idx}:v]format=rgba,fade=t=in:st={t0:.2f}:d={press_fade}:alpha=1[{faded}]")
+        filt_parts.append(f"[{last}][{faded}]overlay=0+{x}:0+{y}:enable='gte(t,{t0:.2f})'[{label}]")
+        last = label
+    filt = ";".join(filt_parts)
+    _run(["ffmpeg", "-y", "-v", "error", *inputs, "-t", f"{duration:.3f}",
+          "-filter_complex", filt, "-map", f"[{last}]",
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(FPS), str(dest)])
+    cropped.unlink(missing_ok=True)
+    for i in range(len(lines)):
+        (SEG_DIR / f"_s07_line{i}.png").unlink(missing_ok=True)
+
+
+def build_s09(dest, duration, doa):
+    """candle_only ($0) -- a gentle breathing pulse (flat base radius +
+    flicker noise, NOT the shrinking 'fear closes it down' curve day_of_
+    atonement's s43 uses) centered on the gold fleck's own real pixel
+    position, picked via bbox_sheet.py against the actual rendered still."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import candle_only  # noqa: E402
+    still = STILLS / "s09_unexpected_place.png"
+    poc_devices = load_devices_here()
+    anchor_frac = poc_devices.DEVICE_ASSIGNMENTS["s09_unexpected_place"]["params"]["anchor_frac"]
+    ax, ay = anchor_frac[0] * W, anchor_frac[1] * H
+    src = Image.open(still).convert("RGB").resize((W, H), Image.LANCZOS)
+    base_curve = lambda t: 45.0  # noqa: E731 -- flat: breathing comes from flicker_R's noise, not a trend
+    R_of_t = candle_only.flicker_R(base_curve, seed=90, amplitude=8.0)
+    n = max(1, int(round(duration * FPS)))
+    frames = dest.parent / (dest.stem + "_frames")
+    frames.mkdir(parents=True, exist_ok=True)
+    for i in range(n):
+        frame = candle_only.apply_candle(src, i / FPS, (ax, ay), R_of_t)
+        frame.save(frames / f"f{i:04d}.png")
+    _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(FPS), "-i", str(frames / "f%04d.png"),
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", str(dest)])
+    import shutil as _shutil
+    _shutil.rmtree(frames)
+
+
+def build_s13(dest, duration, doa):
+    still = STILLS / "s13_the_fruit.png"
+    poc_devices = load_devices_here()
+    bbox = poc_devices.DEVICE_ASSIGNMENTS["s13_the_fruit"]["params"]["bbox"]
+    doa._spotlight_family("dramatic_spotlight", still, dest, duration, bbox)
+
+
+def build_s14(dest, duration, doa):
+    """wash-creep ADVANCE ($0) -- REDESIGNED 2026-08-08: motion_lint caught
+    the first version (raw eden_ref.png reuse) as FROZEN-SPREAD, p95=0.000
+    -- eden_ref.png has no real blue-grey wash region for isolate_storm_
+    wash()'s HSV band to find, so nothing ever advanced. Now uses a
+    DEDICATED still (stills/s14_death_enters.png) that actually has the
+    ink-blue wash bled in at the edges, matching Storm's own s01/s04
+    pattern (the wash must be real content in the still, not synthesized
+    by this device)."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import wash_creep  # noqa: E402
+    base = wash_creep.scale_crop(Image.open(STILLS / "s14_death_enters.png").convert("RGB"), W, H)
+    mask = wash_creep.isolate_storm_wash(base)
+    n = max(1, int(round(duration * wash_creep.FPS)))
+    # NOT wash_creep._build_frame_plan (module default ADVANCE_MAX=15px over
+    # the FULL clip regardless of duration -- calibrated for Storm's own
+    # shorter spreads, too slow-moving to clear motion_lint's threshold on
+    # this spread's 5.9s window, real p95=0.090 < 0.15). Own plan, same
+    # monotonic ease-in advance shape, more total travel (34px) for a
+    # longer spread -- still pure ADVANCE, no backrun/retreat (reserved
+    # for s52's payoff per _PLAN.md).
+    ADVANCE_MAX_LOCAL = 34.0
+    plan = [(wash_creep._ease(i / max(1, n - 1)) * ADVANCE_MAX_LOCAL, False) for i in range(n)]
+    frames = dest.parent / (dest.stem + "_frames")
+    frames.mkdir(parents=True, exist_ok=True)
+    for i, (advance_px, backrun) in enumerate(plan):
+        frame = wash_creep.apply_wash_creep(base, advance_px, mask=mask, backrun=backrun)
+        frame.save(frames / f"f{i:05d}.png")
+    _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(wash_creep.FPS),
+          "-i", str(frames / "f%05d.png"),
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(FPS), str(dest)])
+    import shutil as _shutil
+    _shutil.rmtree(frames)
+
+
+def build_s15(dest, duration, doa):
+    """parallax_25d ($0) -- rembg extracts Adam+Eve (the near rim) as the
+    foreground depth layer against the far-garden base plate."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import parallax_25d  # noqa: E402
+    still = STILLS / "s15_the_breach.png"
+    poc_devices = load_devices_here()
+    params = poc_devices.DEVICE_ASSIGNMENTS["s15_the_breach"]["params"]
+    raw = dest.parent / (dest.stem + "_raw.mp4")
+    parallax_25d.render(still, raw, duration, params["fg_amp"], params["bg_amp"])
+    _run(["ffmpeg", "-y", "-v", "error", "-i", str(raw),
+          "-vf", f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}",
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(FPS), str(dest)])
+    raw.unlink(missing_ok=True)
+
+
+def build_s19(dest, duration, doa):
+    """Scribed Ink composite, $0 -- reuses s18's OWN already-rendered still
+    (the serpent alone, high angle) as the card background, per _PLAN.md's
+    device column. Same press-in pattern as build_s07."""
+    bg = STILLS / "s18_turns_to_serpent.png"
+    cropped = SEG_DIR / "_s19_bg_crop.png"
+    _run(["ffmpeg", "-y", "-v", "error", "-i", str(bg), "-vf",
+          f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},"
+          f"boxblur=1:1,eq=brightness=0.03", "-frames:v", "1", str(cropped)])
+    poc_devices = load_devices_here()
+    card = poc_devices.VERSE_CARDS["s19_curse_card"]
+    lines = card["lines"]
+
+    line_imgs = [render_line_png(line, seed=219 + i) for i, line in enumerate(lines)]
+    y = int(H * 0.10)
+    positions = []
+    for im in line_imgs:
+        x = int((W - im.width) / 2)
+        positions.append((x, y))
+        y += im.height + 16
+
+    inputs = ["-loop", "1", "-i", str(cropped)]
+    filt_parts = []
+    last = "0:v"
+    press_start, press_gap, press_fade = 0.4, 0.9, 0.4
+    for i, (im, (x, y)) in enumerate(zip(line_imgs, positions)):
+        p = SEG_DIR / f"_s19_line{i}.png"
+        im.save(p)
+        inputs += ["-loop", "1", "-i", str(p)]
+        idx = i + 1
+        t0 = press_start + i * press_gap
+        faded, label = f"f{idx}", f"v{idx}"
+        filt_parts.append(f"[{idx}:v]format=rgba,fade=t=in:st={t0:.2f}:d={press_fade}:alpha=1[{faded}]")
+        filt_parts.append(f"[{last}][{faded}]overlay=0+{x}:0+{y}:enable='gte(t,{t0:.2f})'[{label}]")
+        last = label
+    filt = ";".join(filt_parts)
+    _run(["ffmpeg", "-y", "-v", "error", *inputs, "-t", f"{duration:.3f}",
+          "-filter_complex", filt, "-map", f"[{last}]",
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(FPS), str(dest)])
+    cropped.unlink(missing_ok=True)
+    for i in range(len(lines)):
+        (SEG_DIR / f"_s19_line{i}.png").unlink(missing_ok=True)
+
+
+def _s21_composed_base():
+    """s20's own extreme-close-up art + the gold thread drawn across it at
+    FULL opacity -- the one shared background s21/s22 both build from
+    (s22's own _PREFLIGHT.md description: 'the curse-dark page with the
+    gold thread behind'). Cached to a file so callers don't re-render it."""
+    cache = SEG_DIR / "_s21_base.png"
+    if cache.exists():
+        return cache
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import thread_device  # noqa: E402
+    poc_devices = load_devices_here()
+    params = poc_devices.DEVICE_ASSIGNMENTS["s21_gold_woven_in"]["params"]
+    base = Image.open(STILLS / "s20_pure_curse.png").convert("RGB").resize((W, H), Image.LANCZOS)
+    thread = thread_device.make_thread_layer(W, H, params["p0_frac"], params["p1_frac"], thread_device.GOLD,
+                                              width=params.get("width", 4))
+    out = base.convert("RGBA")
+    out.alpha_composite(thread)
+    out.convert("RGB").save(cache)
+    return cache
+
+
+def build_s21(dest, duration, doa):
+    """thread_device ($0) -- the gold thread's FIRST appearance, drawn over
+    s20's own already-approved extreme-close-up art (not a new render, see
+    _s2_stills.py's note). Fade-in + one luminance swell."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import thread_device  # noqa: E402
+    poc_devices = load_devices_here()
+    params = poc_devices.DEVICE_ASSIGNMENTS["s21_gold_woven_in"]["params"]
+    base = Image.open(STILLS / "s20_pure_curse.png").convert("RGB").resize((W, H), Image.LANCZOS)
+    thread = thread_device.make_thread_layer(W, H, params["p0_frac"], params["p1_frac"], thread_device.GOLD,
+                                              width=params.get("width", 4))
+    thread_bright = thread_device.make_thread_layer(W, H, params["p0_frac"], params["p1_frac"],
+                                                      thread_device.GOLD_BRIGHT, width=params.get("width", 4))
+    n = max(1, int(round(duration * FPS)))
+    frames = dest.parent / (dest.stem + "_frames")
+    frames.mkdir(parents=True, exist_ok=True)
+    for i in range(n):
+        t = i / FPS
+        op = thread_device.thread_opacity(t, params["fade_start"], params["fade_dur"])
+        swell = thread_device.thread_swell(t, params["swell_time"])
+        frame = base.convert("RGBA")
+        if op > 0:
+            layer = Image.blend(thread.convert("RGB"), thread_bright.convert("RGB"), swell).convert("RGBA")
+            layer.putalpha(thread.split()[3].point(lambda v: int(v * op)))
+            frame.alpha_composite(layer)
+        frame.convert("RGB").save(frames / f"f{i:04d}.png")
+    _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(FPS), "-i", str(frames / "f%04d.png"),
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", str(dest)])
+    import shutil as _shutil
+    _shutil.rmtree(frames)
+
+
+def build_s22(dest, duration, doa):
+    """Illuminated Rubric, $0 -- LOCAL adaptation of day_of_atonement's own
+    s16/s52 device (NOT cross-imported: that function reads day_of_
+    atonement's own ALIGNMENT/LAST_WORD_END module globals directly, which
+    would silently apply the WRONG episode's narration timing to this
+    episode's card). Reuses the same real building blocks (thread_device
+    for the background, held_breath.energy_envelope for the breathing
+    glow) with THIS episode's own alignment. LAW 1: the verse arrives as
+    ONE whole block, never word-by-word. Gen 3:15 is direct LORD speech
+    (narration.md: "Multi-voice: the_LORD voices Gen 3:14-15") -> red-letter."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    from held_breath import energy_envelope  # noqa: E402
+    base_path = _s21_composed_base()
+    base = Image.open(base_path).convert("RGB")
+    energy = energy_envelope(ALIGNMENT, st.LAST_WORD_END_ESTIMATE, floor=0.25, ramp=0.15)
+    abs_start = st.by_name["s22_promise_card"][2]
+
+    lines = [
+        [("And I will put enmity between thee and the woman,", BODY_SIZE)],
+        [("and between thy seed and her seed;", BODY_SIZE)],
+        [("it shall bruise thy head,", BODY_SIZE)],
+        [("and thou shalt bruise his heel.", BODY_SIZE)],
+    ]
+    line_imgs = [render_line_png(line, seed=522 + i, ink=RUBRIC) for i, line in enumerate(lines)]
+    block_x, y = int(W * 0.08), int(H * 0.14)
+    positions = []
+    for im in line_imgs:
+        positions.append((block_x, y))
+        y += im.height + 18
+    cap_cx, cap_cy = block_x + 30, positions[0][1] + line_imgs[0].height // 2
+    gold_ellipse = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(gold_ellipse).ellipse(
+        [cap_cx - 70, cap_cy - 60, cap_cx + 70, cap_cy + 60], fill=(*GOLD, 130))
+
+    n = max(1, int(round(duration * FPS)))
+    press_t = 1.2
+    frames = dest.parent / (dest.stem + "_frames")
+    frames.mkdir(parents=True, exist_ok=True)
+    for i in range(n):
+        t = i / FPS
+        e = energy(abs_start + t)
+        gain = 1.0 + 0.08 * e * (0.5 + 0.5 * math.sin(2 * math.pi * (t % 4.0) / 4.0))
+        arr = (np.asarray(base, dtype=np.float32) * gain).clip(0, 255).astype(np.uint8)
+        frame = Image.fromarray(arr).convert("RGBA")
+        if t >= press_t:
+            frame.alpha_composite(gold_ellipse)
+            for im, (x, y) in zip(line_imgs, positions):
+                frame.alpha_composite(im, (x, y))
+        frame.convert("RGB").save(frames / f"f{i:04d}.png")
+    _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(FPS), "-i", str(frames / "f%04d.png"),
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", str(dest)])
+    import shutil as _shutil
+    _shutil.rmtree(frames)
+
+
+def build_s23(dest, duration, doa):
+    """$0 hold: s22's own last frame, held, + line_boil grain wobble
+    (panel_animator/line_boil.py) so 'sacred stillness -- nothing moves but
+    the grain' reads as genuinely alive on motion_lint, not frozen."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import line_boil  # noqa: E402
+    s22_seg = SEG_DIR / "seg_s22_promise_card.mp4"
+    if not s22_seg.exists():
+        raise SystemExit("build_s23 needs s22_promise_card built first")
+    held = dest.parent / (dest.stem + "_held.mp4")
+    last_png = dest.parent / (dest.stem + "_last.png")
+    _run(["ffmpeg", "-y", "-v", "error", "-sseof", "-0.1", "-i", str(s22_seg),
+          "-frames:v", "1", str(last_png)])
+    _run(["ffmpeg", "-y", "-v", "error", "-loop", "1", "-i", str(last_png), "-t", f"{duration:.3f}",
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(FPS), str(held)])
+    poc_devices = load_devices_here()
+    amount = poc_devices.DEVICE_ASSIGNMENTS["s23_let_that_land"]["params"]["amount"]
+    line_boil.render(held, dest, amount)
+    held.unlink(missing_ok=True)
+    last_png.unlink(missing_ok=True)
+
+
+def build_s25(dest, duration, doa):
+    """thread_device gleam-pass ($0) -- the thread already drawn across
+    s25's own art (no fade-in, per _PLAN.md's device column), just the
+    luminance swell as it 'rises past the top edge'."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import thread_device  # noqa: E402
+    poc_devices = load_devices_here()
+    params = poc_devices.DEVICE_ASSIGNMENTS["s25_promise_in_curse"]["params"]
+    base = Image.open(STILLS / "s25_promise_in_curse.png").convert("RGB").resize((W, H), Image.LANCZOS)
+    thread = thread_device.make_thread_layer(W, H, params["p0_frac"], params["p1_frac"], thread_device.GOLD,
+                                              width=params.get("width", 4))
+    thread_bright = thread_device.make_thread_layer(W, H, params["p0_frac"], params["p1_frac"],
+                                                      thread_device.GOLD_BRIGHT, width=params.get("width", 4))
+    n = max(1, int(round(duration * FPS)))
+    frames = dest.parent / (dest.stem + "_frames")
+    frames.mkdir(parents=True, exist_ok=True)
+    for i in range(n):
+        t = i / FPS
+        swell = thread_device.thread_swell(t, params["swell_time"])
+        layer = Image.blend(thread.convert("RGB"), thread_bright.convert("RGB"), swell).convert("RGBA")
+        layer.putalpha(thread.split()[3])
+        frame = base.convert("RGBA")
+        frame.alpha_composite(layer)
+        frame.convert("RGB").save(frames / f"f{i:04d}.png")
+    _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(FPS), "-i", str(frames / "f%04d.png"),
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", str(dest)])
+    import shutil as _shutil
+    _shutil.rmtree(frames)
+
+
+# ---- the study copy: Gen 3:15 in the Keeper's own hand, ONE fixed
+# letterform anchor (seed+params) reused identically at every future
+# appearance (s26/40/46/47/60/66 per _PREFLIGHT.md's asset table) -- the
+# independent-review panel flagged an unanchored re-dress as "the same
+# failure class as face drift" for doctrinally load-bearing text
+# ("it shall bruise thy head," never "he"); this constant IS the anchor.
+STUDY_COPY_SEED = 2615
+STUDY_COPY_SIZE = 22
+STUDY_COPY_LINES = [
+    "And I will put enmity between thee and the woman,",
+    "and between thy seed and her seed;",
+    "it shall bruise thy head,",
+    "and thou shalt bruise his heel.",
+]
+# page rect measured against the real rendered still via panel_animator/
+# bbox_sheet.py (not eyeballed) -- the blank page area in s26_her_seed_
+# study.png, in the final 1920x1080 render space.
+STUDY_COPY_PAGE_RECT = (499, 184, 1037, 821)
+
+
+def _study_copy_layout():
+    """Returns (line_imgs, positions, her_seed_bbox) -- pure geometry, no
+    file I/O, so build_s26 and any future re-dress can both call this and
+    get byte-identical placement."""
+    probe = ImageDraw.Draw(Image.new("RGB", (8, 8)))
+    font = ImageFont.truetype(F_KEEPER, STUDY_COPY_SIZE)
+    x0, y0, x1, y1 = STUDY_COPY_PAGE_RECT
+    pw, ph = x1 - x0, y1 - y0
+    line_h = STUDY_COPY_SIZE + 16
+    gap = 16
+    total_h = len(STUDY_COPY_LINES) * line_h + gap * (len(STUDY_COPY_LINES) - 1)
+    y = y0 + (ph - total_h) / 2
+    line_imgs, positions = [], []
+    for i, text in enumerate(STUDY_COPY_LINES):
+        im = render_line_png([(text, STUDY_COPY_SIZE)], seed=STUDY_COPY_SEED + i, ink=RUBRIC)
+        w = probe.textlength(text, font=font)
+        x = x0 + (pw - w) / 2
+        line_imgs.append(im)
+        positions.append((x, y))
+        y += line_h + gap
+    # "her seed" lives in line index 1
+    prefix_w = probe.textlength("and between thy seed and ", font=font)
+    word_w = probe.textlength("her seed", font=font)
+    lx, ly = positions[1]
+    her_seed_bbox = (int(lx + prefix_w), int(ly), int(lx + prefix_w + word_w), int(ly + line_h))
+    return line_imgs, positions, her_seed_bbox
+
+
+def build_s26(dest, duration, doa):
+    """The study copy + the episode's ONE Annotator's Circle ($0). The
+    text is a static prop ("already written", per _PLAN.md -- not a live
+    scribing, so no per-line press-in); only the circle animates, landing
+    on "her seed" at its real spoken moment (162.105s, from _alignment.
+    json -- verified, not guessed)."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import annotators_circle  # noqa: E402
+    still = STILLS / "s26_her_seed_study.png"
+    base = Image.open(still).convert("RGB").resize((W, H), Image.LANCZOS).convert("RGBA")
+    line_imgs, positions, her_seed_bbox = _study_copy_layout()
+    for im, (x, y) in zip(line_imgs, positions):
+        base.alpha_composite(im, (int(x), int(y)))
+
+    abs_start = st.by_name["s26_her_seed_study"][2]
+    circle_start = 162.105 - abs_start
+    circle_dur = 1.3
+    n = max(1, int(round(duration * FPS)))
+    frames = dest.parent / (dest.stem + "_frames")
+    frames.mkdir(parents=True, exist_ok=True)
+    for i in range(n):
+        t = i / FPS
+        progress = max(0.0, min(1.0, (t - circle_start) / circle_dur))
+        frame = annotators_circle.apply_annotators_circle(
+            base.copy(), bbox=her_seed_bbox, progress=progress, color=annotators_circle.RUBRIC)
+        frame.convert("RGB").save(frames / f"f{i:05d}.png")
+    _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(FPS), "-i", str(frames / "f%05d.png"),
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", str(dest)])
+    import shutil as _shutil
+    _shutil.rmtree(frames)
+
+
+def build_s27(dest, duration, doa):
+    """The descent-line is already drawn INTO the still's own art (the
+    rendered image already shows the hand-drawn line linking the father-
+    figures -- see _s2_stills.py's prompt note); this device stays a
+    plain held frame + line_boil grain wobble so "quick graphite marks"
+    reads as hand-inked-alive rather than a locked digital still, same
+    pattern as build_s23's card hold."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import line_boil  # noqa: E402
+    still = STILLS / "s27_line_of_fathers.png"
+    held = dest.parent / (dest.stem + "_held.mp4")
+    _run(["ffmpeg", "-y", "-v", "error", "-loop", "1", "-i", str(still), "-t", f"{duration:.3f}",
+          "-vf", f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}",
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(FPS), str(held)])
+    line_boil.render(held, dest, 0.5)
+    held.unlink(missing_ok=True)
+
+
+def build_s29(dest, duration, doa):
+    """Illuminated Rubric, $0 -- formal peak 2/2 (Gal 4:4, "the promise
+    KEPT"). LOCAL adaptation of build_s22's same technique (own alignment,
+    not day_of_atonement's), first-warm-palette page. NOT red-letter --
+    Gal 4:4 is Paul writing ABOUT the LORD, not the LORD's own first-
+    person speech (per [[redletter-speaker-is-speaker]], contrast s22)."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    from held_breath import energy_envelope  # noqa: E402
+    # procedural warm parchment field (NOT eden_ref -- that's this episode's
+    # cool garden-green world; this card is "the first fully WARM palette
+    # page" per _PLAN.md, a standalone card like s22, not chained to a scene)
+    top, bottom = np.array([232, 214, 176]), np.array([196, 160, 104])
+    grad = np.linspace(0, 1, H).reshape(H, 1, 1)
+    arr0 = (top * (1 - grad) + bottom * grad).astype(np.uint8)
+    base = Image.fromarray(np.repeat(arr0, W, axis=1))
+    energy = energy_envelope(ALIGNMENT, st.LAST_WORD_END_ESTIMATE, floor=0.25, ramp=0.15)
+    abs_start = st.by_name["s29_fulness_card"][2]
+
+    lines = [
+        [("But when the fulness of the time was come,", BODY_SIZE)],
+        [("God sent forth his Son, made of a woman,", BODY_SIZE)],
+        [("made under the law.", BODY_SIZE)],
+    ]
+    line_imgs = [render_line_png(line, seed=629 + i) for i, line in enumerate(lines)]
+    block_x, y = int(W * 0.08), int(H * 0.14)
+    positions = []
+    for im in line_imgs:
+        positions.append((block_x, y))
+        y += im.height + 18
+    cap_cx, cap_cy = block_x + 16, positions[0][1] + line_imgs[0].height // 2
+    gold_ellipse = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(gold_ellipse).ellipse(
+        [cap_cx - 42, cap_cy - 42, cap_cx + 42, cap_cy + 42], fill=(*GOLD, 130))
+
+    n = max(1, int(round(duration * FPS)))
+    press_t = 0.8
+    frames = dest.parent / (dest.stem + "_frames")
+    frames.mkdir(parents=True, exist_ok=True)
+    for i in range(n):
+        t = i / FPS
+        e = energy(abs_start + t)
+        gain = 1.0 + 0.08 * e * (0.5 + 0.5 * math.sin(2 * math.pi * (t % 4.0) / 4.0))
+        arr = (np.asarray(base, dtype=np.float32) * gain).clip(0, 255).astype(np.uint8)
+        frame = Image.fromarray(arr).convert("RGBA")
+        if t >= press_t:
+            frame.alpha_composite(gold_ellipse)
+            for im, (x, y) in zip(line_imgs, positions):
+                frame.alpha_composite(im, (x, y))
+        frame.convert("RGB").save(frames / f"f{i:05d}.png")
+    _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(FPS), "-i", str(frames / "f%05d.png"),
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", str(dest)])
+    import shutil as _shutil
+    _shutil.rmtree(frames)
+
+
+def build_s28(dest, duration, doa):
+    """Eve + the gold thread reaching to the far glow ($0 thread overlay
+    over the real Seedance clip). Gleam-pass only, no fade-in -- "thread
+    pre-drawn" per _PLAN.md's device column, same convention as s25.
+    Endpoints measured against the real rendered clip (warm-hue peak in
+    the archway, panel_animator/bbox_sheet.py-style measurement, not
+    eyeballed); Eve's own position estimated from the same frame."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import thread_device  # noqa: E402
+    base_clip = dest.parent / (dest.stem + "_base.mp4")
+    build_clip_hold(base_clip, duration, CLIPS / "s28_clue_lights_up.mp4")
+    p0_frac, p1_frac = (0.30, 0.72), (0.641, 0.525)
+    thread = thread_device.make_thread_layer(W, H, p0_frac, p1_frac, thread_device.GOLD, width=14)
+    thread_bright = thread_device.make_thread_layer(W, H, p0_frac, p1_frac, thread_device.GOLD_BRIGHT, width=14)
+    n = max(1, int(round(duration * FPS)))
+    src_frames = dest.parent / (dest.stem + "_srcframes")
+    src_frames.mkdir(parents=True, exist_ok=True)
+    _run(["ffmpeg", "-y", "-v", "error", "-i", str(base_clip), str(src_frames / "f%05d.png")])
+    frames = dest.parent / (dest.stem + "_frames")
+    frames.mkdir(parents=True, exist_ok=True)
+    for i in range(n):
+        t = i / FPS
+        swell = thread_device.thread_swell(t, 3.0)
+        layer = Image.blend(thread.convert("RGB"), thread_bright.convert("RGB"), swell).convert("RGBA")
+        layer.putalpha(thread.split()[3])
+        src_path = src_frames / f"f{i + 1:05d}.png"
+        frame = Image.open(src_path).convert("RGBA") if src_path.exists() else Image.new("RGBA", (W, H))
+        frame.alpha_composite(layer)
+        frame.convert("RGB").save(frames / f"f{i:05d}.png")
+    _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(FPS), "-i", str(frames / "f%05d.png"),
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", str(dest)])
+    import shutil as _shutil
+    _shutil.rmtree(frames)
+    _shutil.rmtree(src_frames)
+    base_clip.unlink(missing_ok=True)
+
+
+def build_s31(dest, duration, doa):
+    """Composite verse-over-art, $0 -- Luke 1:35b letters over s30's OWN
+    already-rendered annunciation art (not a new render, same reuse
+    pattern as s07-over-s06), positioned in the calm dark field to the
+    LEFT of Mary's figure, never over the light or her silhouette (per
+    _PREFLIGHT.md's letterer law). NOT red-letter -- this is the angel's
+    speech, not the LORD's own first-person voice (contrast s22)."""
+    bg = STILLS / "s30_annunciation.png"
+    cropped = SEG_DIR / "_s31_bg_crop.png"
+    _run(["ffmpeg", "-y", "-v", "error", "-i", str(bg), "-vf",
+          f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},"
+          f"boxblur=1:1,eq=brightness=-0.02", "-frames:v", "1", str(cropped)])
+    lines = [
+        [("that holy thing which shall be born of thee", BODY_SIZE)],
+        [("shall be called the Son of God.", BODY_SIZE)],
+    ]
+    line_imgs = [render_line_png(line, seed=331 + i) for i, line in enumerate(lines)]
+    x0 = int(W * 0.07)
+    y = int(H * 0.66)
+    positions = []
+    for im in line_imgs:
+        positions.append((x0, y))
+        y += im.height + 16
+    # underline swash under the second line (the designated phrase)
+    lx, ly = positions[1]
+    swash = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(swash).line(
+        [(lx, ly + line_imgs[1].height + 4), (lx + line_imgs[1].width, ly + line_imgs[1].height + 4)],
+        fill=(*INK, 200), width=3)
+
+    inputs = ["-loop", "1", "-i", str(cropped)]
+    filt_parts = []
+    last = "0:v"
+    press_start, press_gap, press_fade = 0.3, 0.55, 0.4
+    for i, (im, (x, y)) in enumerate(zip(line_imgs, positions)):
+        p = SEG_DIR / f"_s31_line{i}.png"
+        im.save(p)
+        inputs += ["-loop", "1", "-i", str(p)]
+        idx = i + 1
+        t0 = press_start + i * press_gap
+        faded, label = f"f{idx}", f"v{idx}"
+        filt_parts.append(f"[{idx}:v]format=rgba,fade=t=in:st={t0:.2f}:d={press_fade}:alpha=1[{faded}]")
+        filt_parts.append(f"[{last}][{faded}]overlay=0+{x}:0+{y}:enable='gte(t,{t0:.2f})'[{label}]")
+        last = label
+    swash_path = SEG_DIR / "_s31_swash.png"
+    swash.save(swash_path)
+    inputs += ["-loop", "1", "-i", str(swash_path)]
+    swash_t0 = press_start + len(lines) * press_gap
+    filt_parts.append(f"[{len(lines) + 1}:v]format=rgba,fade=t=in:st={swash_t0:.2f}:d=0.3:alpha=1[fsw]")
+    filt_parts.append(f"[{last}][fsw]overlay=0:0:enable='gte(t,{swash_t0:.2f})'[vout]")
+    filt = ";".join(filt_parts)
+    _run(["ffmpeg", "-y", "-v", "error", *inputs, "-t", f"{duration:.3f}",
+          "-filter_complex", filt, "-map", "[vout]",
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(FPS), str(dest)])
+    cropped.unlink(missing_ok=True)
+    swash_path.unlink(missing_ok=True)
+    for i in range(len(lines)):
+        (SEG_DIR / f"_s31_line{i}.png").unlink(missing_ok=True)
+
+
+INFOGRAPHIC = HERE / "_infographic"
+
+
+def build_s32(dest, duration, doa):
+    """The Honest Match plate ($0, deliberate style-break infographic
+    insert -- memory feedback-infographic-insert-override, design by
+    Fable 2026-08-08). Rendered once via panel_animator/render_dom_clip.py
+    from _infographic/honest_plate.html; here it's just trimmed to the
+    segment's exact duration, same pattern as every other pre-rendered
+    source clip in this dispatch table."""
+    src = INFOGRAPHIC / "honest_plate.mp4"
+    _run(["ffmpeg", "-y", "-v", "error", "-i", str(src), "-t", f"{duration:.3f}",
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(FPS), str(dest)])
+
+
+def _naming_plate_offset(name: str) -> float:
+    """Seconds into naming_plate.html's own 28.20s master timeline where
+    `name`'s spread begins -- t=0 of the master IS s34's spread start."""
+    return st.by_name[name][2] - st.by_name["s34_naming_serpent"][2]
+
+
+def build_s34(dest, duration, doa):
+    """The Naming Docket plate, entry 1/3 (the serpent, Rev 12:9) -- same
+    deliberate style-break as s32. s34/s35(/s36) are ONE continuous
+    render (_infographic/naming_plate.mp4) split at the real window
+    boundaries per Fable's extensibility design -- never re-rendered
+    per-segment, so the seam between s34 and s35 is pixel-continuous by
+    construction."""
+    src = INFOGRAPHIC / "naming_plate.mp4"
+    offset = _naming_plate_offset("s34_naming_serpent")
+    _run(["ffmpeg", "-y", "-v", "error", "-ss", f"{offset:.3f}", "-i", str(src),
+          "-t", f"{duration:.3f}",
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(FPS), str(dest)])
+
+
+def build_s35(dest, duration, doa):
+    """The Naming Docket plate, entry 2/3 (the mission, 1 John 3:8) --
+    continuation of s34's same rendered plate, see build_s34."""
+    src = INFOGRAPHIC / "naming_plate.mp4"
+    offset = _naming_plate_offset("s35_naming_mission")
+    _run(["ffmpeg", "-y", "-v", "error", "-ss", f"{offset:.3f}", "-i", str(src),
+          "-t", f"{duration:.3f}",
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(FPS), str(dest)])
 
 
 SEGMENT_BUILDERS = {
@@ -210,7 +849,40 @@ SEGMENT_BUILDERS = {
     "s05_where_art_thou": lambda dest, dur, doa: build_s05(dest, dur, doa),
     # test-tier (2026-08-07, independent-review staged build order)
     "s06_blame_circle": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s06_blame_circle.mp4"),
-    "s16_sentencing_tableau": lambda dest, dur, doa: build_s16(dest, dur, doa),
+    "s16_watch_closely": lambda dest, dur, doa: build_s16(dest, dur, doa),
+    # batch 2 (2026-08-08, spreads 7-15)
+    "s07_beguiled_card": lambda dest, dur, doa: build_s07(dest, dur, doa),
+    "s08_coming_apart": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s08_coming_apart.mp4"),
+    "s09_unexpected_place": lambda dest, dur, doa: build_s09(dest, dur, doa),
+    "s10_judgment_falls": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s10_judgment_falls.mp4"),
+    "s11_afraid_of_presence": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s11_afraid_of_presence.mp4"),
+    "s12_creatures_word": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s12_creatures_word.mp4"),
+    "s13_the_fruit": lambda dest, dur, doa: build_s13(dest, dur, doa),
+    "s14_death_enters": lambda dest, dur, doa: build_s14(dest, dur, doa),
+    "s15_the_breach": lambda dest, dur, doa: build_s15(dest, dur, doa),
+    # s51 (Jesus multi-pose anchor, out-of-order per the plan's own note)
+    "s51_bearing_wages": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s51_bearing_wages.mp4"),
+    # batch 3 (2026-08-08, spreads 17-25, movement 3 close)
+    "s17_not_adam_not_eve": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s17_not_adam_not_eve.mp4"),
+    "s18_turns_to_serpent": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s18_turns_to_serpent.mp4"),
+    "s19_curse_card": lambda dest, dur, doa: build_s19(dest, dur, doa),
+    "s20_pure_curse": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s20_pure_curse.mp4"),
+    "s21_gold_woven_in": lambda dest, dur, doa: build_s21(dest, dur, doa),
+    "s22_promise_card": lambda dest, dur, doa: build_s22(dest, dur, doa),
+    "s23_let_that_land": lambda dest, dur, doa: build_s23(dest, dur, doa),
+    "s24_before_their_sentences": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s24_before_their_sentences.mp4"),
+    "s25_promise_in_curse": lambda dest, dur, doa: build_s25(dest, dur, doa),
+    # batch 4 (2026-08-08+, spreads 26-35, movement 4)
+    "s26_her_seed_study": lambda dest, dur, doa: build_s26(dest, dur, doa),
+    "s27_line_of_fathers": lambda dest, dur, doa: build_s27(dest, dur, doa),
+    "s28_clue_lights_up": lambda dest, dur, doa: build_s28(dest, dur, doa),
+    "s29_fulness_card": lambda dest, dur, doa: build_s29(dest, dur, doa),
+    "s30_annunciation": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s30_annunciation.mp4"),
+    "s31_holy_thing_card": lambda dest, dur, doa: build_s31(dest, dur, doa),
+    "s32_honest_match": lambda dest, dur, doa: build_s32(dest, dur, doa),
+    "s33_trajectory": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s33_trajectory.mp4"),
+    "s34_naming_serpent": lambda dest, dur, doa: build_s34(dest, dur, doa),
+    "s35_naming_mission": lambda dest, dur, doa: build_s35(dest, dur, doa),
 }
 
 SOURCE_FILES = {
@@ -220,14 +892,44 @@ SOURCE_FILES = {
     "s04_god_walking": [CLIPS / "s04_god_walking.mp4"],
     "s05_where_art_thou": [STILLS / "s05_where_art_thou.png"],
     "s06_blame_circle": [CLIPS / "s06_blame_circle.mp4"],
-    "s16_sentencing_tableau": [STILLS / "s16_sentencing_tableau.png", HERE / "_devices.py"],
+    "s16_watch_closely": [STILLS / "s16_sentencing_tableau.png", HERE / "_devices.py"],
+    "s07_beguiled_card": [STILLS / "s06_blame_circle.png", HERE / "_devices.py"],
+    "s08_coming_apart": [CLIPS / "s08_coming_apart.mp4"],
+    "s09_unexpected_place": [STILLS / "s09_unexpected_place.png", HERE / "_devices.py"],
+    "s10_judgment_falls": [CLIPS / "s10_judgment_falls.mp4"],
+    "s11_afraid_of_presence": [CLIPS / "s11_afraid_of_presence.mp4"],
+    "s12_creatures_word": [CLIPS / "s12_creatures_word.mp4"],
+    "s13_the_fruit": [STILLS / "s13_the_fruit.png", HERE / "_devices.py"],
+    "s14_death_enters": [STILLS / "s14_death_enters.png"],
+    "s15_the_breach": [STILLS / "s15_the_breach.png", HERE / "_devices.py"],
+    "s51_bearing_wages": [CLIPS / "s51_bearing_wages.mp4"],
+    "s17_not_adam_not_eve": [CLIPS / "s17_not_adam_not_eve.mp4"],
+    "s18_turns_to_serpent": [CLIPS / "s18_turns_to_serpent.mp4"],
+    "s19_curse_card": [STILLS / "s18_turns_to_serpent.png", HERE / "_devices.py"],
+    "s20_pure_curse": [CLIPS / "s20_pure_curse.mp4"],
+    "s21_gold_woven_in": [STILLS / "s20_pure_curse.png", HERE / "_devices.py"],
+    "s22_promise_card": [STILLS / "s20_pure_curse.png", HERE / "_devices.py", HERE / "_alignment.json"],
+    "s23_let_that_land": [SEG_DIR / "seg_s22_promise_card.mp4", HERE / "_devices.py"],
+    "s24_before_their_sentences": [CLIPS / "s24_before_their_sentences.mp4"],
+    "s25_promise_in_curse": [STILLS / "s25_promise_in_curse.png", HERE / "_devices.py"],
+    "s26_her_seed_study": [STILLS / "s26_her_seed_study.png", HERE / "_alignment.json"],
+    "s27_line_of_fathers": [STILLS / "s27_line_of_fathers.png"],
+    "s28_clue_lights_up": [CLIPS / "s28_clue_lights_up.mp4"],
+    "s29_fulness_card": [HERE / "_alignment.json"],
+    "s30_annunciation": [CLIPS / "s30_annunciation.mp4"],
+    "s31_holy_thing_card": [STILLS / "s30_annunciation.png"],
+    "s32_honest_match": [INFOGRAPHIC / "honest_plate.mp4"],
+    "s33_trajectory": [CLIPS / "s33_trajectory.mp4"],
+    "s34_naming_serpent": [INFOGRAPHIC / "naming_plate.mp4"],
+    "s35_naming_mission": [INFOGRAPHIC / "naming_plate.mp4"],
 }
 
 
-def compute_hash(name: str) -> str:
+def compute_hash(name: str, duration: float) -> str:
     payload = {
         "name": name,
         "renderer_version": RENDERER_VERSION,
+        "duration": round(duration, 3),
         "sources": [_stat(p) for p in SOURCE_FILES[name]],
     }
     blob = json.dumps(payload, sort_keys=True).encode("utf-8")
@@ -237,7 +939,7 @@ def compute_hash(name: str) -> str:
 def build_segment(num, name, duration, doa, rebuild, progress_path):
     dest = SEG_DIR / f"seg_{name}.mp4"
     stamp_path = SEG_DIR / f"{name}.stamp.json"
-    new_hash = compute_hash(name)
+    new_hash = compute_hash(name, duration)
     if not rebuild and dest.exists() and stamp_path.exists():
         old = json.loads(stamp_path.read_text(encoding="utf-8")).get("hash")
         if old == new_hash:
