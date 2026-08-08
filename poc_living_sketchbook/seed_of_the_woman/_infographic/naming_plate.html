@@ -13,16 +13,23 @@
    no red (reserved for the LORD's own first-person speech, s22).
    POINT_X/POINT_Y below are the REAL s33 clip's last-frame brightest-pixel
    position (1866,543 in 1920x1080 space), measured 2026-08-08 after s33
-   animated -- not a placeholder anymore, not eyeballed. */
+   animated -- not a placeholder anymore, not eyeballed.
+   BACKGROUND FIX 2026-08-08: was a flat #1B1613 slide -- user (batch 4
+   review) called it blank. The episode already has a painted still built
+   for exactly this spread (stills/s34_naming_serpent.png -- an aged,
+   foxed inquest page under raking light, gold-leaf top strip, a coiled
+   rope top-right near the origin point's real landing spot) that was
+   never wired in. Swapped the flat field for that still + re-tuned every
+   color from pale-on-dark to dark-ink-on-light-paper. */
 
 @font-face { font-family: 'PlateSerif'; src: url('file:///C:/Windows/Fonts/constan.ttf'); font-weight: 400; }
 @font-face { font-family: 'PlateSerif'; src: url('file:///C:/Windows/Fonts/constanb.ttf'); font-weight: 700; }
 @font-face { font-family: 'PlateSerifI'; src: url('file:///C:/Windows/Fonts/constani.ttf'); font-weight: 400; font-style: italic; }
 
 * { margin:0; padding:0; box-sizing:border-box; }
-html, body { width:1920px; height:1080px; overflow:hidden; background:#1B1613; }
+html, body { width:1920px; height:1080px; overflow:hidden; background:#DCD2BE; }
 
-.field { position:absolute; inset:0; background:#1B1613; }
+.field { position:absolute; inset:0; background: url('file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/poc_living_sketchbook/seed_of_the_woman/stills/s34_naming_serpent.png') center/cover no-repeat; }
 .grain {
   position:absolute; inset:-40px; opacity:0.05; mix-blend-mode:screen; pointer-events:none;
   animation: drift 9s linear infinite;
@@ -53,7 +60,7 @@ html, body { width:1920px; height:1080px; overflow:hidden; background:#1B1613; }
 @keyframes pointFade   { to { opacity:0; } }
 
 .masthead-rule {
-  position:absolute; left:290px; top:169px; width:1340px; height:2px; background:#EAE0C9;
+  position:absolute; left:290px; top:169px; width:1340px; height:2px; background:#23201A;
   transform-origin:center; transform:scaleX(0);
   animation: drawRule 1.55s ease-out 3.05s forwards;
 }
@@ -69,27 +76,27 @@ html, body { width:1920px; height:1080px; overflow:hidden; background:#1B1613; }
 .heading {
   position:absolute; left:0; width:1920px; top:206px; text-align:center;
   font-family:'PlateSerif',serif; font-weight:700; font-size:60px;
-  letter-spacing:0.22em; color:#EAE0C9; text-transform:uppercase;
+  letter-spacing:0.22em; color:#23201A; text-transform:uppercase;
   animation-delay: 5.39s;
 }
 
 .entry-q {
   position:absolute; left:0; width:1920px; text-align:center;
   font-family:'PlateSerif',serif; font-weight:700; font-size:44px;
-  letter-spacing:0.16em; color:#948A7C; text-transform:uppercase;
+  letter-spacing:0.16em; color:#6B5A46; text-transform:uppercase;
 }
 .entry-a {
   position:absolute; left:110px; width:1700px; text-align:center;
   font-family:'PlateSerifI',serif; font-style:italic; font-size:50px;
-  line-height:1.28; color:#EAE0C9;
+  line-height:1.28; color:#23201A;
 }
 .entry-c {
   position:absolute; left:0; width:1920px; text-align:center;
   font-family:'PlateSerif',serif; font-weight:700; font-size:28px;
-  letter-spacing:0.20em; color:#948A7C; text-transform:uppercase;
+  letter-spacing:0.20em; color:#6B5A46; text-transform:uppercase;
 }
 .gold {
-  color:#EAE0C9;
+  color:#23201A;
 }
 .gold.bloom1 { animation: bloom 0.9s ease-in-out 13.89s forwards; }
 .gold.bloom2 { animation: bloom 0.9s ease-in-out 22.87s forwards; }

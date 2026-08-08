@@ -51,12 +51,14 @@ def marker_ellipse(frame: Image.Image, cx, cy, rx, ry, prog, width=7, seed=31) -
         d.line(pts, fill=SCARLET, width=width, joint="curve")
 
 
-def hunt_frame(big: Image.Image, t_rel: float, dur: float, target_frac: tuple[float, float],
-               W: int, H: int, marker_rx: float, marker_ry: float) -> Image.Image:
-    """target_frac = (fx, fy), 0..1 fraction of the UPSCALED canvas where the hunt
-    locks. Three phases (drift/hunt/lock), identical math to the proven Jericho
-    original -- only the hardcoded window position became a parameter."""
-    bw, bh = big.size
+def hunt_window(bw: int, bh: int, t_rel: float, dur: float, target_frac: tuple[float, float],
+                 W: int, H: int) -> tuple[int, int, int, int, float, float]:
+    """The drift->hunt->lock crop window (x0,y0,vw,vh) into a (bw,bh)-sized
+    upscaled canvas, plus the target's own on-screen pixel position (wx,wy
+    in canvas space) and lock_prog -- factored out of hunt_frame() so a
+    caller compositing something ELSE onto the same moving camera (e.g. a
+    thread/marker anchored to a second point) can project any (fx,fy)
+    canvas fraction into the current frame's screen space consistently."""
     wx, wy = target_frac[0] * bw, target_frac[1] * bh
     p1, p2 = 0.45, 0.75
     k = t_rel / dur
@@ -77,11 +79,27 @@ def hunt_frame(big: Image.Image, t_rel: float, dur: float, target_frac: tuple[fl
     vw, vh = int(W / z), int(H / z)
     x0 = max(0, min(bw - vw, int(cx - vw / 2)))
     y0 = max(0, min(bh - vh, int(cy - vh / 2)))
-    frame = big.crop((x0, y0, x0 + vw, y0 + vh)).resize((W, H), Image.LANCZOS)
     lock_prog = 0.0 if k < p2 else (k - p2) / (1 - p2)
+    return x0, y0, vw, vh, lock_prog, (wx, wy)
+
+
+def project_point(fx: float, fy: float, bw: int, bh: int, x0: int, y0: int, vw: int, vh: int,
+                   W: int, H: int) -> tuple[float, float]:
+    """Map a (0..1, 0..1) fraction of the (bw,bh) canvas into this frame's
+    on-screen pixel position, given the crop window from hunt_window()."""
+    return (fx * bw - x0) / vw * W, (fy * bh - y0) / vh * H
+
+
+def hunt_frame(big: Image.Image, t_rel: float, dur: float, target_frac: tuple[float, float],
+               W: int, H: int, marker_rx: float, marker_ry: float) -> Image.Image:
+    """target_frac = (fx, fy), 0..1 fraction of the UPSCALED canvas where the hunt
+    locks. Three phases (drift/hunt/lock), identical math to the proven Jericho
+    original -- only the hardcoded window position became a parameter."""
+    bw, bh = big.size
+    x0, y0, vw, vh, lock_prog, (wx, wy) = hunt_window(bw, bh, t_rel, dur, target_frac, W, H)
+    frame = big.crop((x0, y0, x0 + vw, y0 + vh)).resize((W, H), Image.LANCZOS)
     if lock_prog > 0:
-        sx = (wx - x0) / vw * W
-        sy = (wy - y0) / vh * H
+        sx, sy = (wx - x0) / vw * W, (wy - y0) / vh * H
         marker_ellipse(frame, sx, sy, marker_rx, marker_ry, lock_prog)
     return frame
 

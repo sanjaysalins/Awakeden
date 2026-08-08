@@ -1,4 +1,303 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-08 NIGHT, ROUND 4 (s26 REDESIGNED
+# TO MATCH THE "LATER PART" CARD REGISTER -- BIGGER, LEFT-FLUSH, PER USER
+# REQUEST, $0 THIS SESSION, NOT YET COMMITTED) — READ THIS FIRST,
+# supersedes every block below including "ROUND 3" right under this
+# (round 3's bugs were real and are still fixed; the RESULT still read
+# cramped to the user, which round 4 addresses).
+#
+# ── ROUND 4, ONE-LINE STATUS: round 3 made s26 gate-clean and bug-free
+# but the user still didn't like it: "more larger and perhaps be done in
+# the way we did in the later part of the clip." Compared s26 against
+# s29/s32/s34-35 (the "later part" cards) and found the real structural
+# difference: those are big, LEFT-FLUSH text sitting confidently across
+# the real desk/page art; s26 was small text CENTERED inside one tiny
+# blank-page prop. Rewrote `_study_copy_layout()` to match: SIZE=BODY_SIZE
+# (40, same as the plate cards), left-flush from a fixed point (500,460)
+# measured against the real open-desk band (clear of the corner clutter
+# photos and the lit oil lamp) instead of centered in a small rect. Kept
+# RUBRIC red (Gen 3:15 is the LORD's direct speech -- locked red-letter
+# rule, matches s22) and kept the Annotator's Circle on "her seed" (an
+# established locked device, not something the user asked to drop) --
+# re-tuned it against the much bigger bbox via the same local simulator
+# from round 3, landed on pad_x=0.55/pad_y=1.5/stroke=20 clean on the
+# first real attempt this time (simulator said p95=0.164; real
+# motion_lint confirmed s26 off the FAIL list). Eye-checked in the actual
+# rendered video, not just a static PNG preview.
+#
+# ── REVIEW (now covers all 4 rounds):
+# poc_living_sketchbook/seed_of_the_woman/_BATCH4_REVIEW.html
+#
+# ── COST: still $0 across all 4 rounds. Episode total unchanged: $26.20.
+#
+# ── GIT STATE: still NOT committed -- round 4 adds `_study_copy_layout()`
+# and `build_s26`'s rewrite in `_s6_assemble.py`, on top of everything
+# rounds 1-3 already left uncommitted. This is now a 4-round, single-
+# session diff -- read `_BATCH4_REVIEW.html` for the full picture rather
+# than trying to reconstruct it from git diff alone.
+#
+# ── EXACT NEXT STEP: confirm with the user that s26 now reads right (the
+# opening of the whole batch 4 preview), get the commit decision for the
+# WHOLE session (4 rounds), THEN start batch 5 (spreads 36-45). Apply
+# THIS round's lesson from the first prompt of any future card/plate
+# spread: check it against the established "later part" register (big,
+# left-flush, confident) before calling it done, not just against the
+# mechanical gates.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-08 NIGHT, ROUND 3 (s26's STUDY-
+# COPY LAYOUT FIXED FOR REAL -- 2 REAL BUGS + A MOTION_LINT GATE DISCOVERY
+# THAT GENERALIZES BEYOND THIS EPISODE, $0 THIS SESSION, NOT YET
+# COMMITTED) — READ THIS FIRST, supersedes every block below including
+# the "ROUND 2" block right under this (still accurate for what IT
+# covers, just not the resume point anymore).
+#
+# ── ROUND 3, ONE-LINE STATUS: user flagged s26's red study-copy text
+# ("the red text... feels a bit off") -- found it was TWO real layout
+# bugs (wrong page rect, 2x-too-wide font), not a taste issue, plus a
+# genuine motion_lint GATE discovery that explains confusing results
+# from earlier in this same session too. All fixed, real motion_lint
+# re-confirmed clean, preview rebuilt.
+#
+# ── WHAT WAS ACTUALLY WRONG (verified by drawing rects on the real
+# still, not assumed):
+#   1. STUDY_COPY_PAGE_RECT (499,184,1037,821) claimed to be "measured...
+#      not eyeballed" but was mostly bare wood/photo-clutter -- only its
+#      right sliver touched the real blank page. Re-measured directly:
+#      the real page is (760,280,1045,780).
+#   2. Even with the right rect, the verse's longest line (484px at the
+#      old SIZE=22) was 2x too wide for the real page's ~285px width --
+#      guaranteed overflow regardless of rect placement. Shrunk to
+#      SIZE=12 (measured to fit with margin).
+#
+# ── THE MOTION_LINT DISCOVERY (generalizes beyond s26): after the page/
+# font fix shrank the "her seed" bbox, the existing circle tuning
+# (stroke=20, default pads) rendered as a solid blob. Chasing a fix by
+# hand (stroke 10->16->22, duration 0.8->0.6) produced NON-MONOTONIC
+# motion_lint scores (0.069 -> 0.102 -> 0.048 -- worse with objectively
+# more ink in less time). Read `panel_animator/motion_lint.py` directly
+# instead of continuing to guess: it samples luminance at only
+# FPS_SAMPLE=3 (333ms apart) -- a device whose active-motion window is
+# under ~1s can land well or badly on that sparse grid almost by chance.
+# This is very likely the REAL explanation for s30's confusing
+# parallax_25d amplitude result earlier this same session too (24/9 amp
+# -> 0.131, widening to 36/14 -> 0.125 -- I blamed rembg segmentation at
+# the time; 3fps aliasing fits at least as well and should've been
+# checked first). Wrote a local Python simulator replicating motion_
+# lint's exact algorithm to grid-search parameters in seconds instead of
+# 3-minute rebuild+lint round trips -- found the real working point is a
+# genuinely bigger AND rounder loop (pad_x=1.0, pad_y=2.3) with a bold-
+# but-still-a-ring stroke (28px), not a thicker stroke on a small loop
+# (blobs before it registers) or a thin stroke on a huge loop (never
+# registers regardless of size). Confirmed both by eye and by the REAL
+# motion_lint, not just the simulator.
+# Added a comment at `FPS_SAMPLE` in motion_lint.py itself, and saved
+# [[motion-lint-3fps-sampling-aliasing]] to memory -- next time a device
+# scores non-monotonically against small stroke/amplitude/duration
+# changes, widen its active-motion window to >=1s FIRST, don't chase
+# parameters.
+#
+# ── REVIEW (now covers all 3 rounds):
+# poc_living_sketchbook/seed_of_the_woman/_BATCH4_REVIEW.html
+#
+# ── COST: still $0. Episode total unchanged: $26.20.
+#
+# ── GIT STATE: still NOT committed -- round 3 adds the s26 rect/size/
+# circle fix in _s6_assemble.py, a clarifying comment in panel_animator/
+# hunt_and_lock.py... no wait, motion_lint.py (not hunt_and_lock this
+# round), the new memory file, and this handover, on top of everything
+# rounds 1-2 already left uncommitted.
+#
+# ── EXACT NEXT STEP: confirm with the user that s26's red text now
+# reads right, get the commit decision for the WHOLE session (3 rounds),
+# THEN start batch 5 (spreads 36-45). Before calling any future spread
+# with a small/short motion device done, check it clears motion_lint at
+# >=1s of active motion -- don't retune stroke/amplitude against a <1s
+# window and trust the number, per [[motion-lint-3fps-sampling-aliasing]].
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-08 NIGHT, ROUND 2 (BATCH 4 QUALITY
+# FIXES -- USER CAUGHT 2 REAL MISSES IN ROUND 1's OWN FIX, BOTH NOW FIXED
+# AND VERIFIED IN THE ASSEMBLED PREVIEW, $0 THIS SESSION, NOT YET
+# COMMITTED) — READ THIS FIRST, supersedes every block below including
+# the "BATCH 4 CLOSED ... NIGHT" round-1 block right under this (that
+# block's plate/camera fixes were real but incomplete -- see below).
+#
+# ── ROUND 2, ONE-LINE STATUS: after round 1's plate/camera fixes, the
+# user pointed at three timestamps (0:29, 0:48, 1:06) in PREVIEW_26_35.mp4
+# still showing blank backgrounds. Checked and found TWO real misses, not
+# a rendering fluke:
+#   1. s32 + s34 (0:48, 1:06): round 1 fixed the PLATE SOURCE
+#      (honest_plate.mp4/naming_plate.mp4) but never re-ran build_segment
+#      for the segments that actually get cut into the preview -- the old
+#      blank seg_s32_honest_match.mp4/seg_s34_naming_serpent.mp4 sat
+#      untouched and got concatenated anyway. Rebuilt both (+ s35, same
+#      master) from the now-fixed sources.
+#   2. s29 (0:29): missed ENTIRELY in round 1 because it isn't a
+#      render_dom_clip.py "remotion" plate -- it's a plain Python
+#      function painting on a procedural gradient. Its own comment
+#      claimed to follow s22's technique, but s22 actually uses a real
+#      composed still; s29 had quietly diverged. Now backed by
+#      stills/s27_line_of_fathers.png (thematically apt -- Gal 4:4's
+#      "fulness of the time" IS the line of generations arriving).
+# Both gates re-confirmed clean after (motion_lint: no new FAILs;
+# layer_check: unchanged). New PREVIEW_26_35.mp4 assembled from the truly-
+# fixed segments and eye-checked frame-by-frame, not just the source
+# files in isolation.
+#
+# ── LESSON (saved to memory, [[feedback-plate-backgrounds-need-painting]]
+# round-2 addendum): "fixed the source" != "fixed what ships" -- always
+# re-run the actual segment build after touching a shared/upstream asset,
+# then eye-check the ASSEMBLED preview at the real timestamp. And the
+# blank-background sweep isn't scoped to render_dom_clip.py plates --
+# check every bespoke-function spread, not just the ones already named.
+#
+# ── REVIEW (updated with the round-2 section):
+# poc_living_sketchbook/seed_of_the_woman/_BATCH4_REVIEW.html
+#
+# ── COST: still $0 this session. Episode total unchanged: $26.20.
+#
+# ── GIT STATE: still NOT committed (round 1 wasn't committed either --
+# see round-1 block below for the full pre-round-2 diff list; round 2
+# adds _s6_assemble.py's build_s29 rewrite + the two _infographic HTML
+# files' already-covered edits + this handover + the memory update).
+#
+# ── EXACT NEXT STEP: confirm with the user that 0:29/0:48/1:06 (and the
+# rest of the cut) now read right, get the commit decision, THEN start
+# batch 5 (spreads 36-45). Before calling ANY future plate/card spread
+# done, eye-check its frame in the ASSEMBLED preview, not just its own
+# source file -- this round's whole miss was trusting the source fix
+# without checking what actually ships.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-08 NIGHT (BATCH 4 CLOSED + REAL
+# QUALITY FIXES FROM USER REVIEW: PLATE BACKGROUNDS + CAMERA MOTION,
+# $26.20 EPISODE TOTAL UNCHANGED ($0 THIS SESSION), NOT YET COMMITTED) —
+# READ THIS FIRST, supersedes every block below including the "BATCH 4
+# FULLY CLOSED ... EVENING" one right under this (that block was written
+# BEFORE the user's review below landed -- its gate-fix summary is still
+# accurate, its "done" framing is not).
+#
+# ── ONE-LINE STATUS: batch 4 (spreads 26-35) mechanically finished per
+# the EVENING block below, then the user reviewed it and called out two
+# real defects (not taste) -- blank plate backgrounds, near-motionless
+# Kling/Seedance clips. Both fixed this session, $0, gates re-confirmed
+# green. Nothing mid-render. NOT YET COMMITTED (working tree has the
+# fixes; user hadn't been asked about a commit at hand-off).
+#
+# ── THE USER'S FEEDBACK (verbatim gist): "I am not the biggest fan of
+# the remotion text and graphics... we are missing few good options we
+# have already done... the animations done in kling or veo is very very
+# very basic, it does not feel epic and cinematic, the camera is so very
+# simple and basic... It needs to always have a great background."
+#
+# ── WHAT I FOUND WHEN I ACTUALLY LOOKED (not just took the note and
+# patched blind -- pulled real frames first, per [[feedback-verify-by-
+# looking-not-running]]):
+#   1. s32 (Honest Match) + s34/s35 (Naming Docket) -- the "remotion"
+#      plates -- were sitting on a flat #1B1613 CSS gradient. A generic
+#      dark-keynote-slide background, no painting at all. BUT: purpose-
+#      built painted stills for exactly these spreads already existed and
+#      were never wired in -- stills/s32_honest_match.png (two blank torn
+#      paper leaves on a lit desk, sized almost exactly to the existing
+#      text layout) and stills/s34_naming_serpent.png (an aged inquest
+#      page, gold-leaf strip, coiled rope). This IS the "few good options
+#      we have already done" the user meant.
+#   2. s28/s30/s33's raw Kling/Seedance clips -- pulled frames 2-5s apart
+#      from each, near pixel-identical. The paid renders had almost no
+#      real generated motion; `build_clip_hold` just plays once then
+#      freeze-holds. `_s5b_spread_windows.py`'s "fwd_drift" label in the
+#      motion_lint report is a MISNOMER for these -- no drift is actually
+#      built, which is exactly how this shipped unnoticed (memory
+#      [[feedback-static-ai-clips-need-real-camera]], not yet fixed at
+#      the naming-logic level, just flagged).
+#
+# ── FIXES (all $0, reusing devices already proven in this episode):
+#   - honest_plate.html / naming_plate.html: swapped the flat .field
+#     background for the two stills above, re-tuned every text color
+#     pale-on-dark -> dark-ink-on-light-paper (gold bloom kept for "the
+#     Son of God"/"the God of peace" -- reads BETTER on light paper).
+#     Re-rendered via the same $0 render_dom_clip.py pass. Eye-checked --
+#     dramatic improvement, reads as part of the sketchbook's own world.
+#   - s28: hunt_and_lock push toward the tunnel's light (brightest-pixel
+#     measured, not eyeballed). The existing gold-thread overlay (a
+#     PRE-EXISTING design from an earlier session, found via a real bug
+#     -- see below) now re-projects its endpoints into each frame's
+#     moving crop window (new hunt_and_lock.hunt_window/project_point
+#     helpers) instead of floating fixed on a moving background.
+#   - s33: hunt_and_lock push into the light burst, landing exactly where
+#     s34/35's plate animation begins (same measured point, 1866,543) --
+#     the cut now reads as one continuous move.
+#   - s30: tried parallax_25d twice (24.0/9.0 then 36.0/14.0 amplitude) --
+#     p95 went 0.131 -> 0.125, i.e. WORSE with more amplitude. rembg's
+#     segmentation isn't finding a clean cutout on this still (pale robe
+#     against a similarly pale background) -- non-monotonic response is
+#     the tell. Switched to hunt_and_lock; FIRST target (the descending
+#     light's own brightest pixel) was rejected on eye-check -- a large
+#     blown-out glow with zero surrounding detail, so the lock phase's
+#     2.4x zoom landed on a near-blank void. Retargeted to Mary's own
+#     clasped hands -- real fabric/finger detail survives the full push,
+#     reads as a genuine devotional close-up. Confirmed clear of
+#     motion_lint's T_frozen=0.15 on the second target.
+#
+# ── REAL BUGS CAUGHT (not just the ones already in the EVENING block):
+#   - `_s6_assemble.py` had a duplicate `def build_s28` -- my first
+#     camera-only version got silently shadowed by a LATER `def build_s28`
+#     already in the file (Python keeps the last definition). That later
+#     one turned out to be a deliberate, more-developed design from an
+#     earlier session (gold thread reaching to the light over the raw
+#     clip) -- deleted my duplicate, fixed the REAL one in place instead
+#     of replacing it. This is the actual reason the very first "fix"
+#     produced byte-identical output to the unfixed original -- caught by
+#     comparing file sizes, not assumed.
+#   - `panel_animator/hunt_and_lock.py` refactored (non-breaking): the
+#     inline window-transform in `hunt_frame()` is now factored into
+#     `hunt_window()` + `project_point()`, callable by anyone compositing
+#     something else onto the same moving camera. Existing callers
+#     (Jericho, s16) get byte-identical behavior.
+#
+# ── MEMORY SAVED (standing rules, not just this episode):
+#   [[feedback-plate-backgrounds-need-painting]] -- infographic/typography
+#   plates need a real painted background, never a flat gradient, even
+#   under the scoped device-must-live-in-book exception.
+#   [[feedback-static-ai-clips-need-real-camera]] -- a near-motionless
+#   paid render must get a real $0 camera device layered on, not a
+#   freeze-hold; eye-check 2-3 frames spread across every raw clip before
+#   accepting it.
+#
+# ── LEFT FOR THE USER, NOT AUTO-FIXED: s24_before_their_sentences sits a
+# hair under motion_lint's threshold (p95=0.145 vs 0.15) -- a batch-3 clip
+# already eye-checked and approved; re-rendering costs real Kling money
+# for a borderline metric, so it's flagged in _BATCH4_REVIEW.html, not
+# silently fixed.
+#
+# ── REVIEW (rewritten to cover this whole session, plates + camera):
+# poc_living_sketchbook/seed_of_the_woman/_BATCH4_REVIEW.html
+#
+# ── COST: $0 this session (all fixes reuse $0 local devices/tools --
+# render_dom_clip.py, hunt_and_lock.py, parallax_25d.py -- no new paid
+# Kling/Seedance/HF/NBP spend). Episode running total unchanged: $26.20.
+#
+# ── GIT STATE: NOT committed this session -- the EVENING block below was
+# committed (217a137's successor), but everything from the user's review
+# onward (plate HTML edits, _s6_assemble.py build_s28/s30/s33 rewrites,
+# hunt_and_lock.py refactor, new memory files, this handover) is still
+# working-tree only. Ask the user before committing, same as every prior
+# batch boundary in this episode.
+#
+# ── EXACT NEXT STEP FOR THE NEW SESSION: confirm the batch 4 fixes read
+# well to the user (or address any further note), get the commit
+# decision, THEN start batch 5 -- spreads 36-45 (movement 5, "the honest
+# objection"). Read `_PLAN.md` rows 36-45 first, and apply this session's
+# lesson from the FIRST prompt: every plate insert gets a real painted
+# background, every raw-clip spread gets an eye-check for real motion
+# before it ships -- don't wait for the user to notice a 5th time.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-08 EVENING (BATCH 4 FULLY CLOSED:
 # SPREADS 26-35 ASSEMBLED + GATES GREEN, $26.20 EPISODE TOTAL UNCHANGED,
 # ALL COMMITTED) — READ THIS FIRST, supersedes every block below including

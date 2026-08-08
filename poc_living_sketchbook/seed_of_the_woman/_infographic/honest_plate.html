@@ -12,17 +12,26 @@
    speech, s22); KJV/quote arrivals are WHOLE-block only (LAW 1) -- not
    used in this spread since no KJV is quoted here, but the same
    letterpress-whole-press grammar carries the labels/titles instead.
-   Font: Constantia (Windows-installed, zero-download, serif register). */
+   Font: Constantia (Windows-installed, zero-download, serif register).
+   BACKGROUND FIX 2026-08-08: was a flat #1B1613 slide -- user (batch 4
+   review) called it blank. The episode already has a painted still built
+   for exactly this spread (stills/s32_honest_match.png -- two blank torn
+   paper leaves on a lit wooden desk, sized almost exactly to where the
+   two text blocks already sit) that was never wired in. Swapped the flat
+   field for that still + re-tuned every color from pale-on-dark to
+   dark-ink-on-light-paper (the still is a bright lit page, not a night
+   scene -- dimming it to fit the old palette would have defeated the
+   point of using it). */
 
 @font-face { font-family: 'PlateSerif'; src: url('file:///C:/Windows/Fonts/constan.ttf'); font-weight: 400; }
 @font-face { font-family: 'PlateSerif'; src: url('file:///C:/Windows/Fonts/constanb.ttf'); font-weight: 700; }
 
 * { margin:0; padding:0; box-sizing:border-box; }
-html, body { width:1920px; height:1080px; overflow:hidden; background:#1B1613; }
+html, body { width:1920px; height:1080px; overflow:hidden; background:#EDE4D3; }
 
 .field {
   position:absolute; inset:0;
-  background:#1B1613;
+  background: url('file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/poc_living_sketchbook/seed_of_the_woman/stills/s32_honest_match.png') center/cover no-repeat;
 }
 /* grain: SVG turbulence, screen-blended, very low opacity -- no frame ever fully dead */
 .grain {
@@ -84,15 +93,15 @@ html, body { width:1920px; height:1080px; overflow:hidden; background:#1B1613; }
 
 .label {
   font-family:'PlateSerif',serif; font-weight:700; font-size:34px;
-  letter-spacing:0.18em; color:#948A7C; text-transform:uppercase;
+  letter-spacing:0.18em; color:#6B5A46; text-transform:uppercase;
   margin-bottom:22px;
 }
 .main {
   font-family:'PlateSerif',serif; font-weight:400; font-size:76px;
-  letter-spacing:0.02em; color:#EAE0C9;
+  letter-spacing:0.02em; color:#23201A;
 }
 .rule {
-  width:260px; height:1px; background:#948A7C; margin:34px auto 0;
+  width:260px; height:1px; background:#6B5A46; margin:34px auto 0;
   transform-origin:left center; transform:scaleX(0);
   animation: drawRule 0.4s ease-out 0.90s forwards;
 }
@@ -102,7 +111,7 @@ html, body { width:1920px; height:1080px; overflow:hidden; background:#1B1613; }
    then un-inks right-to-left (6.00s-7.20s = 1.2s) via clip-path */
 .citation-line {
   position:absolute; top:544px; left:740px; width:200px; height:2px;
-  background:#948A7C;
+  background:#6B5A46;
   clip-path: inset(0 100% 0 0);
   animation: drawLine 1.4s ease-out 3.64s forwards,
              recoil 0.18s ease-out 4.94s forwards,
@@ -114,7 +123,7 @@ html, body { width:1920px; height:1080px; overflow:hidden; background:#1B1613; }
 
 .mote {
   position:absolute; top:543px; width:2px; height:2px; border-radius:50%;
-  background:#948A7C; opacity:0;
+  background:#6B5A46; opacity:0;
 }
 .mote1 { left:900px; animation: fallMote 0.8s ease-in 6.10s forwards; }
 .mote2 { left:860px; animation: fallMote 0.8s ease-in 6.35s forwards; }

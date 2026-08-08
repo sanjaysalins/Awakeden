@@ -553,17 +553,28 @@ def build_s25(dest, duration, doa):
 # failure class as face drift" for doctrinally load-bearing text
 # ("it shall bruise thy head," never "he"); this constant IS the anchor.
 STUDY_COPY_SEED = 2615
-STUDY_COPY_SIZE = 22
+# STYLING FIX ROUND 4 2026-08-08 (user): "still don't like it... more
+# larger and perhaps be done in the way we did in the later part of the
+# clip." Round 3's fix (SIZE=12, centered on the tiny blank-page prop)
+# was gate-clean but read as cramped -- the "later part" cards (s29,
+# s32, s34/35) are all big, LEFT-FLUSH dark-ink hand-lettering sitting
+# confidently across the real desk art, never confined to one small
+# prop. Matched that register directly: SIZE now equals BODY_SIZE (the
+# same size the plate cards use), left-aligned from a fixed block
+# position instead of centered-in-a-rect.
+STUDY_COPY_SIZE = BODY_SIZE
 STUDY_COPY_LINES = [
     "And I will put enmity between thee and the woman,",
     "and between thy seed and her seed;",
     "it shall bruise thy head,",
     "and thou shalt bruise his heel.",
 ]
-# page rect measured against the real rendered still via panel_animator/
-# bbox_sheet.py (not eyeballed) -- the blank page area in s26_her_seed_
-# study.png, in the final 1920x1080 render space.
-STUDY_COPY_PAGE_RECT = (499, 184, 1037, 821)
+# left-flush block position: the real open-desk band in this still,
+# measured directly -- clear of the corner clutter-photos and the lit
+# oil lamp (top-right); widest line (892px at SIZE=40) ends at x=1392,
+# short of the far-right clutter.
+STUDY_COPY_BLOCK_X = 500
+STUDY_COPY_BLOCK_Y0 = 460
 
 
 def _study_copy_layout():
@@ -572,19 +583,14 @@ def _study_copy_layout():
     get byte-identical placement."""
     probe = ImageDraw.Draw(Image.new("RGB", (8, 8)))
     font = ImageFont.truetype(F_KEEPER, STUDY_COPY_SIZE)
-    x0, y0, x1, y1 = STUDY_COPY_PAGE_RECT
-    pw, ph = x1 - x0, y1 - y0
     line_h = STUDY_COPY_SIZE + 16
-    gap = 16
-    total_h = len(STUDY_COPY_LINES) * line_h + gap * (len(STUDY_COPY_LINES) - 1)
-    y = y0 + (ph - total_h) / 2
+    gap = 18
+    x0, y = STUDY_COPY_BLOCK_X, STUDY_COPY_BLOCK_Y0
     line_imgs, positions = [], []
     for i, text in enumerate(STUDY_COPY_LINES):
         im = render_line_png([(text, STUDY_COPY_SIZE)], seed=STUDY_COPY_SEED + i, ink=RUBRIC)
-        w = probe.textlength(text, font=font)
-        x = x0 + (pw - w) / 2
         line_imgs.append(im)
-        positions.append((x, y))
+        positions.append((x0, y))
         y += line_h + gap
     # "her seed" lives in line index 1
     prefix_w = probe.textlength("and between thy seed and ", font=font)
@@ -610,12 +616,13 @@ def build_s26(dest, duration, doa):
 
     abs_start = st.by_name["s26_her_seed_study"][2]
     circle_start = 162.105 - abs_start
-    # width 14 (up from default 5) still only reached p95=0.079 on motion_lint
-    # (T_frozen=0.15) -- same "too small a fraction of a 1920x1080 frame"
-    # issue as s21/s25's thread. Widened further + shortened the draw window
-    # so the same ink lands in fewer frames (higher per-frame delta), not a
-    # cosmetic change.
-    circle_dur = 0.8
+    # Round 4 (user): after STUDY_COPY_SIZE grew to match the "later
+    # part" register (see above), re-tuned the circle against the much
+    # bigger "her seed" bbox via the same local simulator -- pad_x=0.55,
+    # pad_y=1.5, stroke=20 lands at p95=0.164 (clears T_frozen=0.15 with
+    # margin) and reads as a proportionate ring, not a blob, against the
+    # bigger text.
+    circle_dur = 1.0
     n = max(1, int(round(duration * FPS)))
     frames = dest.parent / (dest.stem + "_frames")
     frames.mkdir(parents=True, exist_ok=True)
@@ -624,7 +631,7 @@ def build_s26(dest, duration, doa):
         progress = max(0.0, min(1.0, (t - circle_start) / circle_dur))
         frame = annotators_circle.apply_annotators_circle(
             base.copy(), bbox=her_seed_bbox, progress=progress, color=annotators_circle.RUBRIC,
-            stroke_width=20)
+            pad_x_frac=0.55, pad_y_frac=1.5, stroke_width=20)
         frame.convert("RGB").save(frames / f"f{i:05d}.png")
     _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(FPS), "-i", str(frames / "f%05d.png"),
           "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", str(dest)])
@@ -650,6 +657,47 @@ def build_s27(dest, duration, doa):
     held.unlink(missing_ok=True)
 
 
+
+def build_s30(dest, duration, doa):
+    """hunt_and_lock ($0 real camera push), replacing the raw Kling clip --
+    same fix as s28/s33 (batch 4 review: paid render had near-zero real
+    motion, confirmed by eye-checking 2s-apart frames). FIRST tried
+    parallax_25d (Mary as the near foreground layer) -- twice: default
+    tuned amplitude (24.0/9.0, s15_the_breach's own values) landed at
+    p95=0.131, and widening further (36.0/14.0) actually landed LOWER
+    (0.125), just under motion_lint's T_frozen=0.15 either way. That
+    non-monotonic response means rembg's segmentation isn't finding a
+    clean, stable foreground cutout on this still (warm robe against a
+    similarly warm/pale background) -- more amplitude on a bad mask
+    doesn't reliably mean more visible motion. Switched to hunt_and_lock,
+    which doesn't depend on segmentation at all. FIRST target was the
+    descending light's own brightest pixel (1361,80) -- rejected after an
+    eye-check: that whole region is a large blown-out glow with no
+    surrounding detail, so the lock phase's 2.4x zoom landed on a
+    near-blank void. Retargeted to Mary's own clasped hands (1393,1135 in
+    the still's 2752x1536 space -> 0.506, 0.739) -- real fabric/finger
+    detail survives the full push, and it's a stronger devotional beat
+    besides (her own answer forming)."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import hunt_and_lock  # noqa: E402
+    still = STILLS / "s30_annunciation.png"
+    hunt_and_lock.render(still, dest, duration, (0.506, 0.739), W, H)
+
+
+def build_s33(dest, duration, doa):
+    """hunt_and_lock ($0 real camera push), replacing the raw Seedance clip
+    -- same fix as s28. target_frac reuses the SAME measured brightest-
+    pixel this episode already found for this exact still (1866,543 in
+    1920x1080 -- see naming_plate.html's origin-point comment), so the
+    camera now physically arrives right where s34/s35's plate animation
+    begins -- s33 and the naming plate read as one continuous move rather
+    than two unrelated shots."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import hunt_and_lock  # noqa: E402
+    still = STILLS / "s33_trajectory.png"
+    hunt_and_lock.render(still, dest, duration, (1866 / 1920, 543 / 1080), W, H)
+
+
 def build_s29(dest, duration, doa):
     """Illuminated Rubric, $0 -- formal peak 2/2 (Gal 4:4, "the promise
     KEPT"). LOCAL adaptation of build_s22's same technique (own alignment,
@@ -658,13 +706,19 @@ def build_s29(dest, duration, doa):
     person speech (per [[redletter-speaker-is-speaker]], contrast s22)."""
     sys.path.insert(0, str(ROOT / "panel_animator"))
     from held_breath import energy_envelope  # noqa: E402
-    # procedural warm parchment field (NOT eden_ref -- that's this episode's
-    # cool garden-green world; this card is "the first fully WARM palette
-    # page" per _PLAN.md, a standalone card like s22, not chained to a scene)
-    top, bottom = np.array([232, 214, 176]), np.array([196, 160, 104])
-    grad = np.linspace(0, 1, H).reshape(H, 1, 1)
-    arr0 = (top * (1 - grad) + bottom * grad).astype(np.uint8)
-    base = Image.fromarray(np.repeat(arr0, W, axis=1))
+    # BACKGROUND FIX 2026-08-08 (user, batch 4 review round 2): this was a
+    # flat procedural gradient, not a real still -- missed in the first
+    # pass because it isn't one of the "remotion" render_dom_clip.py
+    # plates, but the complaint is identical (user: "why is s29 still on
+    # blank background... always overlay on an existing still"). Its own
+    # old comment claimed to follow "build_s22... a standalone card like
+    # s22" -- but s22 actually uses a REAL composed still
+    # (_s21_composed_base()), so this had already diverged from its own
+    # stated precedent. Now uses s27's own line-of-fathers art: Gal 4:4's
+    # "fulness of the time" IS the whole genealogical line arriving, and
+    # the walking-figures band sits low enough that this text block
+    # (upper-left, unchanged position) never competes with them.
+    base = Image.open(STILLS / "s27_line_of_fathers.png").convert("RGB").resize((W, H), Image.LANCZOS)
     energy = energy_envelope(ALIGNMENT, st.LAST_WORD_END_ESTIMATE, floor=0.25, ramp=0.15)
     abs_start = st.by_name["s29_fulness_card"][2]
 
@@ -691,7 +745,10 @@ def build_s29(dest, duration, doa):
     for i in range(n):
         t = i / FPS
         e = energy(abs_start + t)
-        gain = 1.0 + 0.08 * e * (0.5 + 0.5 * math.sin(2 * math.pi * (t % 4.0) / 4.0))
+        # amplitude halved (0.08 -> 0.04) vs the old flat-gradient version --
+        # an 8% brightness pulse read as gentle "breathing" on a flat color
+        # field but risks looking like flicker on a detailed photo.
+        gain = 1.0 + 0.04 * e * (0.5 + 0.5 * math.sin(2 * math.pi * (t % 4.0) / 4.0))
         arr = (np.asarray(base, dtype=np.float32) * gain).clip(0, 255).astype(np.uint8)
         frame = Image.fromarray(arr).convert("RGBA")
         if t >= press_t:
@@ -706,40 +763,51 @@ def build_s29(dest, duration, doa):
 
 
 def build_s28(dest, duration, doa):
-    """Eve + the gold thread reaching to the far glow ($0 thread overlay
-    over the real Seedance clip). Gleam-pass only, no fade-in -- "thread
-    pre-drawn" per _PLAN.md's device column, same convention as s25.
-    Endpoints measured against the real rendered clip (warm-hue peak in
-    the archway, panel_animator/bbox_sheet.py-style measurement, not
-    eyeballed); Eve's own position estimated from the same frame."""
+    """Eve + the gold thread reaching to the far glow ($0 thread overlay),
+    now over a REAL hunt_and_lock camera push toward the light instead of
+    a frozen clip -- batch 4 review (user, 2026-08-08): "the animations
+    done in kling or veo is very very very basic... the camera is so very
+    simple and basic." Eye-checked the raw Seedance clip's frames 2s apart
+    and confirmed near pixel-identical -- almost no real generated motion.
+    Reuses the SAME camera device already proven on s16, driven straight
+    from the still (the target IS the thread's own light endpoint, so the
+    camera lands exactly where the thread points). The thread's endpoints
+    are re-projected into each frame's moving crop window
+    (hunt_and_lock.hunt_window) instead of drawn once in fixed screen
+    space, so it keeps tracking Eve and the light as the camera moves.
+    hunt_and_lock's own scarlet lock-marker is skipped here -- the gold
+    thread already IS this shot's "found it" device; a second marker
+    would be redundant."""
     sys.path.insert(0, str(ROOT / "panel_animator"))
+    import hunt_and_lock  # noqa: E402
     import thread_device  # noqa: E402
-    base_clip = dest.parent / (dest.stem + "_base.mp4")
-    build_clip_hold(base_clip, duration, CLIPS / "s28_clue_lights_up.mp4")
+    still = STILLS / "s28_clue_lights_up.png"
     p0_frac, p1_frac = (0.30, 0.72), (0.641, 0.525)
-    thread = thread_device.make_thread_layer(W, H, p0_frac, p1_frac, thread_device.GOLD, width=14)
-    thread_bright = thread_device.make_thread_layer(W, H, p0_frac, p1_frac, thread_device.GOLD_BRIGHT, width=14)
+    src = Image.open(still).convert("RGB")
+    big = hunt_and_lock.scale_crop(src, int(W * hunt_and_lock.UPSCALE), int(H * hunt_and_lock.UPSCALE))
+    bw, bh = big.size
     n = max(1, int(round(duration * FPS)))
-    src_frames = dest.parent / (dest.stem + "_srcframes")
-    src_frames.mkdir(parents=True, exist_ok=True)
-    _run(["ffmpeg", "-y", "-v", "error", "-i", str(base_clip), str(src_frames / "f%05d.png")])
     frames = dest.parent / (dest.stem + "_frames")
     frames.mkdir(parents=True, exist_ok=True)
     for i in range(n):
         t = i / FPS
+        x0, y0, vw, vh, _lock_prog, _wxy = hunt_and_lock.hunt_window(bw, bh, t, duration, p1_frac, W, H)
+        frame = big.crop((x0, y0, x0 + vw, y0 + vh)).resize((W, H), Image.LANCZOS).convert("RGBA")
+        sx0, sy0 = hunt_and_lock.project_point(p0_frac[0], p0_frac[1], bw, bh, x0, y0, vw, vh, W, H)
+        sx1, sy1 = hunt_and_lock.project_point(p1_frac[0], p1_frac[1], bw, bh, x0, y0, vw, vh, W, H)
+        thread = thread_device.make_thread_layer(
+            W, H, (sx0 / W, sy0 / H), (sx1 / W, sy1 / H), thread_device.GOLD, width=14)
+        thread_bright = thread_device.make_thread_layer(
+            W, H, (sx0 / W, sy0 / H), (sx1 / W, sy1 / H), thread_device.GOLD_BRIGHT, width=14)
         swell = thread_device.thread_swell(t, 3.0)
         layer = Image.blend(thread.convert("RGB"), thread_bright.convert("RGB"), swell).convert("RGBA")
         layer.putalpha(thread.split()[3])
-        src_path = src_frames / f"f{i + 1:05d}.png"
-        frame = Image.open(src_path).convert("RGBA") if src_path.exists() else Image.new("RGBA", (W, H))
         frame.alpha_composite(layer)
         frame.convert("RGB").save(frames / f"f{i:05d}.png")
     _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(FPS), "-i", str(frames / "f%05d.png"),
           "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", str(dest)])
     import shutil as _shutil
     _shutil.rmtree(frames)
-    _shutil.rmtree(src_frames)
-    base_clip.unlink(missing_ok=True)
 
 
 def build_s31(dest, duration, doa):
@@ -883,10 +951,10 @@ SEGMENT_BUILDERS = {
     "s27_line_of_fathers": lambda dest, dur, doa: build_s27(dest, dur, doa),
     "s28_clue_lights_up": lambda dest, dur, doa: build_s28(dest, dur, doa),
     "s29_fulness_card": lambda dest, dur, doa: build_s29(dest, dur, doa),
-    "s30_annunciation": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s30_annunciation.mp4"),
+    "s30_annunciation": lambda dest, dur, doa: build_s30(dest, dur, doa),
     "s31_holy_thing_card": lambda dest, dur, doa: build_s31(dest, dur, doa),
     "s32_honest_match": lambda dest, dur, doa: build_s32(dest, dur, doa),
-    "s33_trajectory": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s33_trajectory.mp4"),
+    "s33_trajectory": lambda dest, dur, doa: build_s33(dest, dur, doa),
     "s34_naming_serpent": lambda dest, dur, doa: build_s34(dest, dur, doa),
     "s35_naming_mission": lambda dest, dur, doa: build_s35(dest, dur, doa),
 }
@@ -920,12 +988,12 @@ SOURCE_FILES = {
     "s25_promise_in_curse": [STILLS / "s25_promise_in_curse.png", HERE / "_devices.py"],
     "s26_her_seed_study": [STILLS / "s26_her_seed_study.png", HERE / "_alignment.json"],
     "s27_line_of_fathers": [STILLS / "s27_line_of_fathers.png"],
-    "s28_clue_lights_up": [CLIPS / "s28_clue_lights_up.mp4"],
-    "s29_fulness_card": [HERE / "_alignment.json"],
-    "s30_annunciation": [CLIPS / "s30_annunciation.mp4"],
+    "s28_clue_lights_up": [STILLS / "s28_clue_lights_up.png"],
+    "s29_fulness_card": [STILLS / "s27_line_of_fathers.png", HERE / "_alignment.json"],
+    "s30_annunciation": [STILLS / "s30_annunciation.png"],
     "s31_holy_thing_card": [STILLS / "s30_annunciation.png"],
     "s32_honest_match": [INFOGRAPHIC / "honest_plate.mp4"],
-    "s33_trajectory": [CLIPS / "s33_trajectory.mp4"],
+    "s33_trajectory": [STILLS / "s33_trajectory.png"],
     "s34_naming_serpent": [INFOGRAPHIC / "naming_plate.mp4"],
     "s35_naming_mission": [INFOGRAPHIC / "naming_plate.mp4"],
 }

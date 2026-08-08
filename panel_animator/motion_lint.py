@@ -40,6 +40,15 @@ from PIL import Image
 import io
 
 FPS_SAMPLE = 3
+# GOTCHA (found 2026-08-08, Seed of the Woman s26 tuning): at 3fps, sample
+# points are 0.333s apart. A device whose real motion window is SHORTER
+# than ~1s can land well or badly on this sparse grid almost by chance --
+# tuning stroke_width/duration against a p95 that swung 0.069 -> 0.102 ->
+# 0.048 as changes got "bigger" turned out to be sampling aliasing, not a
+# real signal. If a device isn't clearing threshold and small parameter
+# bumps produce non-monotonic p95, suspect this FIRST: widen the device's
+# own active-motion window to >=1s (several sample points reliably land
+# inside it) before spending more time on stroke/amplitude tuning.
 STATIC_RUN_LEN = 2  # 2+ consecutive spreads at/below WARN level -> FAIL
 FROZEN_MIN_DUR = 5.0  # dur >= this -> FROZEN-SPREAD (FAIL); below -> FROZEN-SHORT (WARN)
 QUOTA_WARN, QUOTA_FAIL = 0.10, 0.15

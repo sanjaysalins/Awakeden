@@ -6,33 +6,82 @@ h1{font-size:20px;} h2{font-size:16px;margin-top:28px;}
 video{width:100%;max-width:900px;border-radius:6px;display:block;background:#000;}
 .fixlist{background:#fff;border:1px solid #ddd;border-radius:6px;padding:14px 18px;max-width:900px;}
 .fixlist li{margin:6px 0;}
+.tag{display:inline-block;background:#2a2420;color:#f3ede3;font-size:11px;padding:2px 8px;border-radius:4px;margin-right:6px;}
 </style></head><body>
 <h1>Seed of the Woman LONG -- Batch 4 FINAL (spreads 26-35, movement 4)</h1>
 
 <h2>Preview cut, spreads 26-35 with real narration (158.53s-239.68s)</h2>
 <video controls src="PREVIEW_26_35.mp4"></video>
 
-<h2>What this session finished</h2>
+<h2>Your feedback on the first pass of this batch, and what changed</h2>
+<div class="fixlist">
+<p>You called out two things: the "remotion text and graphics" (s32/s34/s35's plates) felt blank, and the Kling/Seedance animation felt very basic with too-simple camera work. I looked at the actual rendered frames myself before touching anything -- both were real defects, not taste calls.</p>
+<ul>
+<li><span class="tag">PLATES</span> <b>s32 (Honest Match) + s34/s35 (Naming Docket)</b> were sitting on a flat near-black CSS gradient -- a generic dark keynote-slide background, completely disconnected from the episode's painted world. Found that painted backgrounds ALREADY EXISTED and were never wired in: <code>stills/s32_honest_match.png</code> (two blank torn paper leaves on a lit desk, sized almost exactly to the existing text layout) and <code>stills/s34_naming_serpent.png</code> (an aged, foxed inquest page under raking light with a gold-leaf strip and coiled rope). Swapped the flat field for these stills and re-tuned every text color from pale-on-dark to dark-ink-on-light-paper (gold bloom kept for "the Son of God" / "the God of peace" -- reads even better on light paper). $0, no new renders -- just re-ran the existing $0 <code>render_dom_clip.py</code> pass.</li>
+<li><span class="tag">CAMERA</span> <b>s28, s30, s33</b> -- pulled frames 2-5s apart from each raw paid clip and confirmed they were near pixel-identical; the paid Kling/Seedance renders came back with almost no real generated motion, and the pipeline was just freeze-holding them. Replaced all 3 with real $0 camera devices already proven elsewhere in this episode:
+  <ul>
+    <li><b>s28</b> -- <code>hunt_and_lock</code> push toward the tunnel's light (measured brightest-pixel, not eyeballed), with the existing gold-thread device now re-projected frame-by-frame so it keeps tracking Eve and the light as the camera moves, instead of floating fixed on a moving background.</li>
+    <li><b>s33</b> -- <code>hunt_and_lock</code> push into the light burst, landing exactly where s34/35's plate animation begins -- reads as one continuous move across the cut.</li>
+    <li><b>s30</b> -- tried <code>parallax_25d</code> twice (rembg's segmentation wasn't finding a clean cutout on the pale robe/background, so more amplitude didn't reliably mean more motion); switched to <code>hunt_and_lock</code>, first targeting the descending light (rejected on eye-check -- a blown-out glow with no detail, zoomed into a blank void), then retargeted to Mary's own clasped hands -- a real devotional close-up that keeps detail through the whole push.</li>
+  </ul>
+</li>
+</ul>
+</div>
+
+<h2>Round 2: you caught two things I missed on the first pass</h2>
+<div class="fixlist">
+<p>You flagged 0:29, 0:48, and 1:06 as still blank after the first "fix." Checked, and you were right on both counts -- this was a real miss, not a matter of degree:</p>
+<ul>
+<li><span class="tag">0:48 &amp; 1:06</span> <b>s32 and s34</b> -- I'd fixed the underlying plate source (<code>honest_plate.mp4</code> / <code>naming_plate.mp4</code>) but never rebuilt the SEGMENT files that actually get cut into the preview. The old, still-blank segments were sitting untouched in <code>_segments/</code> and got concatenated in anyway. Rebuilt <code>seg_s32_honest_match.mp4</code>, <code>seg_s34_naming_serpent.mp4</code>, and <code>seg_s35_naming_mission.mp4</code> from the now-fixed sources and confirmed by pulling a fresh frame from each.</li>
+<li><span class="tag">0:29</span> <b>s29 (the fulness-of-time card)</b> -- missed entirely on the first pass because it isn't one of the "remotion" plates; it's a plain Python function drawing on a procedural warm-color GRADIENT, never a real still. Its own old comment claimed to follow s22's technique, but s22 actually composites onto a real painted still -- s29 had quietly diverged from its own stated precedent. Now uses <code>stills/s27_line_of_fathers.png</code> as the background: thematically apt (Gal 4:4's "fulness of the time" IS the whole genealogical line arriving) and it's the same gold-thread-connected line art already built for s27, three spreads earlier.</li>
+</ul>
+<p>Re-ran both gates after these fixes -- no new FAILs, everything else holds.</p>
+</div>
+
+<h2>Round 3: "the red text... feels a bit off" (s26, the start of this batch)</h2>
+<div class="fixlist">
+<p>Looked at the actual frame myself and found real, measurable bugs, not a matter of taste:</p>
+<ul>
+<li><b>The page rect was wrong.</b> <code>STUDY_COPY_PAGE_RECT</code> claimed to be "measured against the real still," but drawing it on top showed it was mostly bare wood/photo-clutter -- only a sliver touched the actual blank page open on the desk. Re-measured directly: the real page sits at (760,280)-(1045,780) in the 1920x1080 frame.</li>
+<li><b>The text was 2x too wide for that page regardless.</b> At the old font size (22), the longest verse line measured 484px against the real page's ~285px width -- it was never going to fit no matter where the rect sat. Shrunk to size 12 (measured to fit with margin) and fixed the rect -- the verse now sits cleanly on the actual page.</li>
+<li><b>The circle then needed rebalancing</b> against the now-smaller text, which took several honest wrong turns: a straight port of the old stroke width read as a solid red blob; thinning it to look right made it fail motion_lint; widening/shortening to chase the gate made the SCORE swing non-monotonically in a way that stopped making sense (0.069 -> 0.102 -> 0.048, worse with objectively more ink). Stopped guessing and read <code>motion_lint.py</code> directly: it samples luminance at only 3 frames/second, so a &lt;1s draw window can land well or badly on that sparse grid almost by chance -- that was the real cause of the confusing swings, not stroke width. Wrote a quick local simulator matching motion_lint's exact math to search parameters in seconds instead of 3-minute rebuild cycles, and landed on a genuinely bigger, rounder loop with a bold-but-still-a-ring stroke. Confirmed both by eye (a real hand-drawn circle) and by the REAL motion_lint (not just the simulator).</li>
+</ul>
+<p>Saved the 3fps-sampling discovery to memory + a comment in <code>motion_lint.py</code> itself -- it likely also explains s30's confusing parallax_25d amplitude result earlier in this same session, which I'd blamed on rembg segmentation at the time.</p>
+</div>
+
+<h2>Round 4: "still don't like it... more larger and perhaps be done in the way we did in the later part of the clip"</h2>
+<div class="fixlist">
+<p>Round 3 fixed the real layout bugs but the result still read cramped -- correctly clean on the gate, wrong on the page. Looked at the "later part" cards (s29, s32, s34/35) to see what they actually do differently: big text, LEFT-FLUSH (not centered), sitting confidently across the real art rather than confined to one small prop. Rebuilt s26's layout to match that register exactly:</p>
+<ul>
+<li>Font size raised from 12 to <code>BODY_SIZE</code> (40) -- the same size the plate cards use.</li>
+<li>Layout changed from centered-in-a-small-rect to left-flush from a fixed point, like s29 -- measured a real open band on the desk (clear of the corner clutter photos and the lit oil lamp) that the wider text actually fits across.</li>
+<li>Kept the ink in RUBRIC red (Gen 3:15 is the LORD's own direct speech -- red-letter is the locked rule here, same reason s22 is also red) and kept the Annotator's Circle on "her seed" (an established, locked device, not something this note asked to remove) -- just re-tuned it against the much bigger bbox, again via the local simulator, landing on a proportionate ring on the first real try this time.</li>
+</ul>
+<p>Confirmed by eye in the actual rendered video (not just a static preview) and by the real motion_lint -- clean.</p>
+</div>
+
+<h2>Other real bugs caught along the way</h2>
 <div class="fixlist">
 <ul>
-<li>Built the 4 segments left over from last session's handover -- s28_clue_lights_up, s30_annunciation, s31_holy_thing_card, s33_trajectory -- through the real dispatch (<code>build_segment()</code>), all from already-rendered/already-paid stills and clips. No new spend.</li>
-<li>Caught and fixed a real bug in <code>build_s31</code>: <code>INK</code> already carries an alpha channel, so <code>(*INK, 200)</code> built an invalid 5-value color tuple and crashed the underline swash. Fixed to <code>INK[:3] + (200,)</code>.</li>
-<li>Assembled the batch 4 preview (concat of segments 26-35 + the real narration slice) and eye-checked all 4 new segments before assembling.</li>
+<li>A duplicate <code>def build_s28</code> in <code>_s6_assemble.py</code> silently shadowed my first camera fix -- Python just keeps the last definition. The real (later) <code>build_s28</code> turned out to already have a deliberate gold-thread-over-clip design from an earlier session; deleted my duplicate and fixed the real one instead (see above).</li>
+<li><code>build_s31</code>: <code>INK</code> already carries an alpha channel, so <code>(*INK, 200)</code> built an invalid 5-value color tuple and crashed the underline swash. Fixed to <code>INK[:3] + (200,)</code>.</li>
+<li>Refactored <code>panel_animator/hunt_and_lock.py</code> to expose its window-transform (<code>hunt_window</code>/<code>project_point</code>) as reusable functions -- needed so s28's thread overlay could track the moving camera; identical output for existing callers (Jericho, s16).</li>
 </ul>
 </div>
 
 <h2>Gates -- caught and fixed for real (not scale artifacts)</h2>
 <div class="fixlist">
 <ul>
-<li><b>motion_lint FROZEN-SPREAD, s26_her_seed_study</b> -- the episode's one Annotator's Circle (on "her seed", real spoken timestamp 162.105s) was too thin/slow to register as real motion against a 1920x1080 frame, same root cause as batch 3's gold-thread fix. p95 went 0.030 (default 5px stroke) -> 0.079 (14px) -> <b>confirmed clear of T_frozen=0.15</b> after widening to 20px stroke and shortening the draw window 1.3s -> 0.8s (more ink landing in fewer frames). Eye-checked the re-rendered clip -- reads as a real bold hand-circling gesture around "her seed", not a bounding box.</li>
-<li><b>layer_check, 5 missing EXTERNAL_LETTERING entries</b> -- s26/s29/s31/s34/s35 all carry real hand-lettering (study copy, Illuminated Rubric, Luke 1:35b letters, the Naming Docket plate) built by standalone functions in <code>_s6_assemble.py</code>, not through the VERSE_CARDS/SPECIAL_CARDS dict dispatch the gate checks by default -- exactly the case <code>EXTERNAL_LETTERING</code> exists for (Day of Atonement precedent). Registered all 5 in <code>_devices.py</code>; gate now shows only the not-yet-built future spreads (s36, s47, s53, s56) as FAIL, which is expected.</li>
+<li><b>motion_lint FROZEN-SPREAD, s26_her_seed_study</b> -- the episode's one Annotator's Circle was too thin/slow to register as real motion. Widened the stroke and shortened the draw window; confirmed clear of T_frozen=0.15, eye-checked as a real bold hand-circle, not a bounding box.</li>
+<li><b>motion_lint FROZEN-SPREAD, s28/s30/s33</b> -- all three cleared once the camera fixes above landed (s30 needed a retarget after the first attempt zoomed into a blank void -- see above).</li>
+<li><b>layer_check, 5 missing EXTERNAL_LETTERING entries</b> -- s26/s29/s31/s34/s35 all carry real hand-lettering built by standalone functions, never registered in the gate's lettering table. Registered all 5; only the not-yet-built future spreads (s36/s47/s53/s56) show FAIL now, which is expected.</li>
 </ul>
 </div>
 
 <h2>Gates -- flagged, not auto-fixed (need your call, not a script fix)</h2>
 <div class="fixlist">
 <ul>
-<li><b>motion_lint FROZEN-SPREAD, s24_before_their_sentences</b> (p95=0.145 vs T=0.15) -- a real Kling clip from BATCH 3, already eye-checked and approved by you. It only shows up now because this session's <code>_spread_windows.json</code> regen is the first time it's actually been included in a motion_lint pass (an old gap, not a new regression). It's missing the threshold by a hair -- re-rendering it costs real Kling money for a borderline metric on an already-approved clip, so I left it alone rather than spend without asking. Your call: leave it, or I re-roll it next paid checkpoint.</li>
+<li><b>motion_lint FROZEN-SPREAD, s24_before_their_sentences</b> (p95=0.145 vs T=0.15) -- a real Kling clip from batch 3, already eye-checked and approved by you. Missing the threshold by a hair; re-rendering costs real Kling money for a borderline metric on an already-approved clip, so I left it alone rather than spend without asking.</li>
 <li><b>motion_lint DEVICE-QUOTA</b> (fwd_drift 38.9%, bespoke 25.0%, both > 15%) -- same predicted small-N scale artifact every prior batch has hit; expected to resolve as the episode grows toward 71 spreads. No action.</li>
 </ul>
 </div>
@@ -40,9 +89,9 @@ video{width:100%;max-width:900px;border-radius:6px;display:block;background:#000
 <h2>Next</h2>
 <div class="fixlist">
 <ul>
-<li>Movement 5 ("the honest objection"), spreads 36-45 -- read <code>_PLAN.md</code> rows 36-45 first. Note: s36's naming-plate content may already be rendered as part of a prior session's naming-plate master -- confirm before re-designing it from scratch.</li>
+<li>Movement 5 ("the honest objection"), spreads 36-45 -- read <code>_PLAN.md</code> rows 36-45 first, and apply this batch's lesson from the first prompt: every plate insert gets a real painted background, every raw-clip spread gets an eye-check for real motion before it ships.</li>
 </ul>
 </div>
 
-<p style="margin-top:24px;color:#888;font-size:12px;">Episode running total (from data/spend_ledger.jsonl, unchanged this session): $26.20.</p>
+<p style="margin-top:24px;color:#888;font-size:12px;">Episode running total (from data/spend_ledger.jsonl, unchanged this session -- everything above was $0): $26.20.</p>
 </body></html>
