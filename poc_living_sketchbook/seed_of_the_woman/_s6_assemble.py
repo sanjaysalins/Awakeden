@@ -95,22 +95,57 @@ def _stat(p: Path):
 # ------------------------------------------------------------- segment builders
 
 def build_s01(dest, duration, doa):
+    """hunt_and_lock ($0 real camera push) toward Adam and Eve -- HERO-
+    STILLS CINEMATIC PASS (2026-08-09): the still was redesigned (steep
+    high-angle framing, off-center couple, foreground bough) but the OLD
+    animation was dramatic_spotlight alone -- a light-dim/re-brighten
+    pulse with the couple pixel-identical start to end, zero real camera
+    motion on the film's own cold-open hook shot. Target measured via
+    panel_animator/bbox_sheet.py's grid overlay against the new render
+    (couple sit at roughly 63%,58% of frame), not eyeballed. Same proven
+    device as s16/s28/s33/s41; scarlet lock-marker skipped -- this is a
+    quiet dread beat, not a "found it" reveal."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import hunt_and_lock  # noqa: E402
     still = STILLS / "s01_something_wrong.png"
-    doa._spotlight_family("dramatic_spotlight", still, dest, duration, [38, 52, 24, 38])
+    src = Image.open(still).convert("RGB")
+    big = hunt_and_lock.scale_crop(src, int(W * hunt_and_lock.UPSCALE), int(H * hunt_and_lock.UPSCALE))
+    bw, bh = big.size
+    target_frac = (0.64, 0.60)
+    n = max(1, int(round(duration * FPS)))
+    frames = dest.parent / (dest.stem + "_frames")
+    frames.mkdir(parents=True, exist_ok=True)
+    for i in range(n):
+        t = i / FPS
+        x0, y0, vw, vh, _lock_prog, _wxy = hunt_and_lock.hunt_window(bw, bh, t, duration, target_frac, W, H)
+        frame = big.crop((x0, y0, x0 + vw, y0 + vh)).resize((W, H), Image.LANCZOS)
+        frame.save(frames / f"f{i:05d}.png")
+    _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(FPS), "-i", str(frames / "f%05d.png"),
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", str(dest)])
+    import shutil as _shutil
+    _shutil.rmtree(frames)
 
 
-def build_clip_hold(dest, duration, clip_path):
-    """Play the real clip forward once, then hold its last frame for the remainder."""
+def build_clip_hold(dest, duration, clip_path, play_dur=None):
+    """Play the real clip forward once, then hold the last played frame for
+    the remainder. `play_dur` optionally caps how much of the raw clip
+    plays before the hold begins -- useful when the clip's own final frame
+    (e.g. the tightest zoom of a paid provider's push-in) crops something
+    important off-screen or loses the paper deckle-edge border; capping
+    playback slightly earlier lands the freeze-hold on a better-framed
+    moment instead (HERO-STILLS CINEMATIC PASS, 2026-08-09: s44's raw
+    6.04s clip's own last frame crops the serpent's tail off-screen)."""
     cdur = float(subprocess.run(
         ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "default=nw=1:nk=1", str(clip_path)],
         capture_output=True, text=True).stdout.strip())
-    if cdur >= duration:
+    play = min(cdur, play_dur) if play_dur is not None else cdur
+    if play >= duration:
         _run(["ffmpeg", "-y", "-v", "error", "-i", str(clip_path), "-t", f"{duration:.3f}",
               "-vf", f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}",
               "-an", "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(FPS), str(dest)])
     else:
-        hold = duration - cdur
-        _run(["ffmpeg", "-y", "-v", "error", "-i", str(clip_path),
+        hold = duration - play
+        _run(["ffmpeg", "-y", "-v", "error", "-i", str(clip_path), "-t", f"{play:.3f}",
               "-vf", f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},"
                      f"tpad=stop_mode=clone:stop_duration={hold:.3f}",
               "-an", "-t", f"{duration:.3f}", "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p",
@@ -1155,36 +1190,55 @@ def build_s42(dest, duration, doa):
 
 
 def build_s45(dest, duration, doa):
-    """Thread Device ($0) -- full-width fade-in + thread_swell, Eden to
-    the cross (this spread's thread is NOT pre-drawn in the still, unlike
-    s25's convention -- deliberately, to avoid trusting the image model
-    with a coherent gold line across such a wide composition; added
-    procedurally like s37/s42 instead). Endpoints measured against the
-    real still, not eyeballed: Eden's own ground-line at the left
-    (0.12, 0.72), the cross's base at the right (dark-pixel scan found
-    its silhouette at (2400,890) in the still's 2752x1536 space ->
-    (0.872, 0.58); nudged down slightly to its base, 0.66).
-    motion_lint FROZEN-SPREAD fix: width=10 only reached p95=0.078 --
-    same "thin gold line on a huge frame" issue as s37/s21/s25; widened
-    to 26."""
+    """hunt_and_lock camera push ($0) toward the cross, Thread Device
+    ($0) reprojected into the moving crop -- Eden to the cross (this
+    spread's thread is NOT pre-drawn in the still, unlike s25's
+    convention -- deliberately, to avoid trusting the image model with a
+    coherent gold line across such a wide composition; added procedurally
+    like s37/s42 instead). Endpoints measured against the real still, not
+    eyeballed: Eden's own ground-line at the left (0.12, 0.72), the
+    cross's base at the right (dark-pixel scan found its silhouette at
+    (2400,890) in the still's 2752x1536 space -> (0.872, 0.58); nudged
+    down slightly to its base, 0.66).
+    HERO-STILLS CINEMATIC PASS FIX (2026-08-09, parallel review): the
+    prior version composited the thread onto a 100% static base -- zero
+    camera motion for the full clip, the exact "freeze-hold with a
+    graphic mistaken for motion" failure this pass exists to catch. Now
+    reuses the SAME hunt_and_lock camera push already proven on s16/s28/
+    s33, targeting the cross itself (p1_frac) so the shot's true subject
+    gets real visual weight by the end -- same reprojection pattern as
+    s28 (thread endpoints tracked into each frame's moving crop via
+    hunt_and_lock.hunt_window/project_point, scarlet lock-marker skipped
+    since the gold thread is already this shot's "arrived" device).
+    motion_lint FROZEN-SPREAD fix carried over: thread width=26 (a thin
+    10px line on a huge frame under-registers on the luminance-diff
+    metric, same issue as s37/s21/s25)."""
     sys.path.insert(0, str(ROOT / "panel_animator"))
+    import hunt_and_lock  # noqa: E402
     import thread_device  # noqa: E402
     still = STILLS / "s45_eden_to_cross.png"
-    base = Image.open(still).convert("RGB").resize((W, H), Image.LANCZOS).convert("RGBA")
     p0_frac, p1_frac = (0.12, 0.72), (0.872, 0.66)
-    thread = thread_device.make_thread_layer(W, H, p0_frac, p1_frac, thread_device.GOLD, width=26)
-    thread_bright = thread_device.make_thread_layer(W, H, p0_frac, p1_frac, thread_device.GOLD_BRIGHT, width=26)
+    src = Image.open(still).convert("RGB")
+    big = hunt_and_lock.scale_crop(src, int(W * hunt_and_lock.UPSCALE), int(H * hunt_and_lock.UPSCALE))
+    bw, bh = big.size
     n = max(1, int(round(duration * FPS)))
     frames = dest.parent / (dest.stem + "_frames")
     frames.mkdir(parents=True, exist_ok=True)
     for i in range(n):
         t = i / FPS
+        x0, y0, vw, vh, _lock_prog, _wxy = hunt_and_lock.hunt_window(bw, bh, t, duration, p1_frac, W, H)
+        frame = big.crop((x0, y0, x0 + vw, y0 + vh)).resize((W, H), Image.LANCZOS).convert("RGBA")
+        sx0, sy0 = hunt_and_lock.project_point(p0_frac[0], p0_frac[1], bw, bh, x0, y0, vw, vh, W, H)
+        sx1, sy1 = hunt_and_lock.project_point(p1_frac[0], p1_frac[1], bw, bh, x0, y0, vw, vh, W, H)
+        thread = thread_device.make_thread_layer(
+            W, H, (sx0 / W, sy0 / H), (sx1 / W, sy1 / H), thread_device.GOLD, width=26)
+        thread_bright = thread_device.make_thread_layer(
+            W, H, (sx0 / W, sy0 / H), (sx1 / W, sy1 / H), thread_device.GOLD_BRIGHT, width=26)
         opacity = thread_device.thread_opacity(t, start=duration * 0.15, fade=duration * 0.4)
         swell = thread_device.thread_swell(t, duration * 0.6, rise=0.6, decay=0.8)
         layer = Image.blend(thread.convert("RGB"), thread_bright.convert("RGB"), swell).convert("RGBA")
         alpha = thread.split()[3].point(lambda a, opacity=opacity: int(a * opacity))
         layer.putalpha(alpha)
-        frame = base.copy()
         frame.alpha_composite(layer)
         frame.convert("RGB").save(frames / f"f{i:05d}.png")
     _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(FPS), "-i", str(frames / "f%05d.png"),
@@ -1243,7 +1297,7 @@ SEGMENT_BUILDERS = {
     "s41_shape_of_canon": lambda dest, dur, doa: build_s41(dest, dur, doa),
     "s42_from_within": lambda dest, dur, doa: build_s42(dest, dur, doa),
     "s43_under_your_feet": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s43_under_your_feet.mp4"),
-    "s44_stands_on_one": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s44_stands_on_one.mp4"),
+    "s44_stands_on_one": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s44_stands_on_one.mp4", play_dur=5.0),
     "s45_eden_to_cross": lambda dest, dur, doa: build_s45(dest, dur, doa),
 }
 

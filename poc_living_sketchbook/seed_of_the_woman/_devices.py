@@ -80,8 +80,14 @@ DEVICE_ASSIGNMENTS = {
     # closely" -- the underlying still file keeps its original descriptive
     # filename, s16_sentencing_tableau.png, only the dict key changed
     # (real key/spread-table mismatch found reconciling timing 2026-08-07 night).
+    # RETUNED (2026-08-09, hero-stills cinematic pass): the still was
+    # redesigned (serpent now large in the near-foreground lower-left,
+    # not small at the bottom edge) -- re-measured via panel_animator/
+    # bbox_sheet.py's grid overlay against the ACTUAL new render, not
+    # eyeballed. Old value [0.68, 0.85] targeted the OLD composition's
+    # small bottom-right serpent and no longer applies.
     "s16_watch_closely": {"device": "hunt_and_lock", "scope": "full",
-                           "params": {"target_frac": [0.68, 0.85]}},
+                           "params": {"target_frac": [0.44, 0.565]}},
     # batch 2 (2026-08-08) -- bbox/anchor picked via panel_animator/
     # bbox_sheet.py against the real rendered still, per SKILL.md sec.8b
     # gate #2, not eyeballed.

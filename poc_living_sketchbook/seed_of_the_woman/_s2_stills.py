@@ -214,14 +214,29 @@ ANCHOR_SHOTS = [
 
 # ---- the 5 real spreads ----
 SPREAD_SHOTS = [
+    # REDESIGNED (2026-08-09, hero-stills cinematic pass, Fable design):
+    # the OLD prompt used EDEN.split(':')[0], which truncated at the
+    # colon inside "(Genesis 3:8)" -- the model never received the
+    # canopy/light-shaft/mood language at all, only a broken mid-sentence
+    # fragment. Also gave the angle abstractly ("HIGH-ANGLE... looking
+    # down") with no physical anchor forcing it to read -- render came
+    # back flat/eye-level/symmetric. Fixed: full {EDEN}, a near-canopy
+    # bough anchoring the height, figures placed off-center by name, a
+    # light shaft that misses them.
     ("s01_something_wrong", STYLE, "adam,eve,eden",
-     f"HIGH-ANGLE wide view looking down into the garden: {ADAM} and "
-     f"{EVE}, small and distant in the frame against the vast unspoiled "
-     f"canopy of {EDEN.split(':')[0]}, both crouched low near a dense "
-     f"thicket, backs turned to the camera, isolated and small against "
-     f"the scale of the garden -- the first faint wrongness showing only "
-     f"as a cool greyness bleeding in at the frame's far edges. "
-     f"{FULLBLEED}"),
+     f"STEEP HIGH-ANGLE view looking down into {EDEN} The camera hangs "
+     f"HIGH inside a near tree's canopy: one massive dark bough and its "
+     f"leaves cut across the TOP-LEFT corner of the frame, close to the "
+     f"lens and softly out of focus, so the long drop to the forest "
+     f"floor below reads unmistakably. Far below on that floor, {ADAM} "
+     f"and {EVE}, both crouched low near a dense thicket with backs "
+     f"turned to the camera, placed small and OFF-CENTER in the "
+     f"lower-right third of the frame -- a deliberately asymmetric "
+     f"composition, NOT centered, NOT mirror-symmetric, no matching "
+     f"tree trunks framing both edges. One hard diagonal shaft of the "
+     f"late golden light cuts down through the gloom and lands on empty "
+     f"ground AWAY from the two figures, leaving them in the cool "
+     f"shadow. {FULLBLEED}"),
     ("s02_the_hiding", STYLE, "adam,eve,eden",
      f"MEDIUM shot, eye-level, camera positioned low among broad-leafed "
      f"undergrowth as if hiding alongside them: {ADAM} and {EVE} pressed "
@@ -255,15 +270,38 @@ SPREAD_SHOTS = [
     # (a real device, panel_animator/hunt_and_lock.py) animates the camera
     # hunting toward the serpent's own position within this still; the
     # still itself must show the whole scene, not a pre-cropped close-up.
+    # REDESIGNED (2026-08-09, hero-stills cinematic pass, Fable design):
+    # the OLD prompt used SERPENT.split('.')[0], which truncated at the
+    # first period ("...no charm.") -- the model never received the
+    # ink-blue coloring or the "coiled among roots, still and watching"
+    # posture, only "clearly visible... low in the dust," i.e. an
+    # instruction to be small and marginal. Render came back flat,
+    # mirror-symmetric, serpent undersized. Fixed: full {SERPENT}, camera
+    # STILL looks DOWN on it per world/SERPENT.md's locked rule ("the
+    # lens never kneels to the enemy" -- NOT a low angle), but now huge
+    # in the near-foreground by PROXIMITY, Adam/Eve set back and smaller,
+    # on a diagonal instead of a staged lineup. Pre-curse posture kept
+    # (coiled among roots, not belly-flat -- curse isn't spoken until
+    # s19). hunt_and_lock target_frac in _s6_assemble.py's build_s16()
+    # MUST be re-measured against the new render before rebuilding the
+    # segment -- the serpent's on-canvas position is moving.
     ("s16_sentencing_tableau", STYLE, "adam,eve,serpent,eden",
-     f"WIDE shot, eye-level, the full scene in one frame: {ADAM} and "
-     f"{EVE} standing together braced for judgment on one side, "
-     f"{LORD_PRESENCE} present but not facing them, and "
-     f"{SERPENT.split('.')[0]} low in the dust at the LOWER portion of "
-     f"the frame, clearly visible and separated from the two human "
-     f"figures -- exactly three figures present (Adam, Eve, the "
-     f"serpent) plus the light-presence, count them, no others. "
-     f"{FULLBLEED}"),
+     f"STEEP HIGH-ANGLE wide view, the camera looking sharply DOWN on "
+     f"the whole sentencing scene from well above it -- the lens never "
+     f"kneels to the enemy. Dominating the NEAR-FOREGROUND, large and "
+     f"close to the camera in the LOWER-LEFT of the frame: {SERPENT} "
+     f"Here it lies at ground level in the dust among a tree's exposed "
+     f"roots, still COILED (pre-curse posture, NOT belly-flat-crawling), "
+     f"head turned aside in profile, NOT facing the camera, no eye "
+     f"contact with the viewer. Beyond and above it, set back several "
+     f"paces and therefore smaller with distance, {ADAM} and {EVE} "
+     f"standing close together braced for judgment in the upper-right "
+     f"of the frame, with {LORD_PRESENCE} entering from one frame edge, "
+     f"not facing them. A deliberately asymmetric composition on a "
+     f"strong diagonal from the huge near serpent to the small far "
+     f"couple -- NOT centered, NOT mirror-symmetric, NOT a staged "
+     f"lineup. Exactly three figures present (Adam, Eve, the serpent) "
+     f"plus the light-presence, count them, no others. {FULLBLEED}"),
     # s51: the Jesus multi-pose identity-lock anchor (_PREFLIGHT.md) --
     # every later Jesus spread (s42/s43/s50/s53-56/s64/s66/s71) chains off
     # THIS approved render as a 2nd reference. LOW angle, closer framing

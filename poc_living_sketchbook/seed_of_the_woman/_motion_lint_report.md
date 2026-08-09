@@ -15,5 +15,5 @@ Segments analyzed: 46
 - **[WARN] MOTION-CLIFF** `s04_god_walking -> s05_where_art_thou` -- outgoing p95=0.44 vs incoming p95=0.00 (T=0.15), unseen_hand transition -- consider escalating
 - **[WARN] MOTION-CLIFF** `s06_blame_circle -> s07_beguiled_card` -- outgoing p95=0.40 vs incoming p95=0.10 (T=0.1), unseen_hand transition -- consider escalating
 - **[WARN] MOTION-CLIFF** `s08_coming_apart -> s09_unexpected_place` -- outgoing p95=0.68 vs incoming p95=0.09 (T=0.15), unseen_hand transition -- consider escalating
-- **[WARN] MOTION-CLIFF** `s16_watch_closely -> s17_not_adam_not_eve` -- outgoing p95=9.59 vs incoming p95=0.11 (T=0.15), unseen_hand transition -- consider escalating
+- **[WARN] MOTION-CLIFF** `s16_watch_closely -> s17_not_adam_not_eve` -- outgoing p95=8.69 vs incoming p95=0.11 (T=0.15), unseen_hand transition -- consider escalating
 - **[WARN] MOTION-CLIFF** `s23_let_that_land -> s24_before_their_sentences` -- outgoing p95=0.31 vs incoming p95=0.15 (T=0.15), unseen_hand transition -- consider escalating
