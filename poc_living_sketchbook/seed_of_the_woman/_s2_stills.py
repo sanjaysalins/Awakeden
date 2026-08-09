@@ -42,8 +42,10 @@ SERPENT_REF = WORLD / "serpent_ref.png"
 JESUS_REF = CAST / "jesus_ref.png"
 DESK_REF = WORLD / "desk_ref.png"
 
+JESUS_S51_REF = OUT / "s51_bearing_wages.png"
+
 REF_MAP = {"adam": ADAM_REF, "eve": EVE_REF, "eden": EDEN_REF, "serpent": SERPENT_REF,
-           "jesus": JESUS_REF, "desk": DESK_REF}
+           "jesus": JESUS_REF, "desk": DESK_REF, "jesus51": JESUS_S51_REF}
 
 # ---- canon text, matching cast/AARON.md's level of detail ----
 
@@ -527,6 +529,123 @@ SPREAD_SHOTS = [
      f"of light falls across the page's upper third only, leaving the "
      f"lower two-thirds in cooler shadow. No figure, no hands. "
      f"{FULLBLEED}"),
+    # ---- batch 5 (2026-08-08+, spreads 36-45, movement 4 close + 5) ----
+    # s35/s36 need no new entry -- s36 reuses s34's own shared naming-page
+    # art (build_s36 trims naming_plate.mp4's 3rd entry, same pattern as
+    # build_s34/build_s35). s39 needs no new entry either -- $0 reuse of
+    # s38's own wide-desk art, cropped tight to the margin for the
+    # keeper-hand device, same reuse pattern as s07-over-s06.
+    ("s37_promise_planted", STYLE, "",
+     f"EXTREME MACRO, LOW angle looking up along a book's own fore-edge: "
+     f"the stacked, layered page-edges of an old book rise like a cliff "
+     f"face toward the top of the frame, dense packed paper strata "
+     f"filling most of the height; at the very bottom edge, a small "
+     f"patch of loose dark drawn soil sits in the narrow gap where the "
+     f"pages meet the surface beneath them, one small pale seed resting "
+     f"on it -- no sprout, no shoot, no green growth, no thread of any "
+     f"kind yet visible, this still shows the seed alone, untouched. No "
+     f"figure, no hands, no lettering. {FULLBLEED}"),
+    ("s38_skeptic_quiet", STYLE, "desk",
+     f"WIDE eye-level view of the SAME writing desk, pulled back much "
+     f"further than before so the whole desk sits small within a "
+     f"larger, cooler room -- the little clay oil lamp's flame burns "
+     f"small and deliberately dimmed, its warm glow reduced to a faint "
+     f"glow rather than a bright pool of light; the room's overall "
+     f"temperature reads cool and quiet, muted blue-grey tones "
+     f"dominating over the desk's usual warm wood and gold accents. The "
+     f"reed pen, ink pot, and folded cloth remain in their places but "
+     f"small and distant within the wider view. No figure, no hands, no "
+     f"lettering. {FULLBLEED}"),
+    ("s40_partly_fair", STYLE, "desk",
+     f"Overhead view straight down onto the SAME writing desk, close, "
+     f"two balanced elements side by side: on the LEFT half, one blank "
+     f"page of aged parchment lying flat and empty, no writing of any "
+     f"kind; on the RIGHT half, a loose scatter of small quick graphite "
+     f"pencil studies on their own separate scraps of paper -- ordinary "
+     f"human figures at different ages in a simple descending family "
+     f"line: a small child, a young parent, an older grandparent, "
+     f"sketched lightly and loosely, faces mostly turned away or "
+     f"simplified, no individual detail, nothing formal or finished, "
+     f"just quick honest graphite marks. Equal visual weight given to "
+     f"both halves. No hands, no figure, no lettering. {FULLBLEED}"),
+    ("s41_shape_of_canon", STYLE, "",
+     f"HIGH overhead view looking straight down: an entire old book "
+     f"lies open with ALL of its pages fanned out from the spine in "
+     f"one long continuous arc, page after page splayed and "
+     f"overlapping like a deck of cards spread wide, filling the "
+     f"ENTIRE frame edge to edge -- dozens of pages, dense and "
+     f"layered, curving in one long sweeping arc from one side of the "
+     f"frame to the other. No thread, no lettering, no figure, no "
+     f"hands visible on any page. {FULLBLEED}"),
+    # REDESIGNED (2026-08-08, re-roll 1): first render came back as three
+    # equal-sized side-by-side panels with visible torn-paper borders
+    # between them -- a real SP-G6 violation (locked rule: vignettes
+    # never in panels/arches/windows), caused by writing "on the LEFT...
+    # in the CENTER... on the RIGHT" as if briefing three separate boxes.
+    # Rewritten to follow this project's own PROVEN multi-vignette recipe
+    # from day_of_atonement/_s2_stills.py (s34/s41/s56 etc.): ONE
+    # dominant near-foreground figure, gold and vivid, with the other
+    # vignettes staggered at DIFFERENT depths behind/around Him, smaller
+    # and duller, blending into shared paper texture -- never equal
+    # panels.
+    ("s42_from_within", STYLE, "jesus,serpent",
+     f"Eye-level medium shot: {JESUS}, standing centrally in the near "
+     f"foreground, one hand extended in an act of quiet authority, warm "
+     f"gold light gathering richly around His whole figure and "
+     f"dominating the frame -- behind and around Him, two soft hazy "
+     f"memory-vignettes at DIFFERENT depths (true layered staggering, "
+     f"never a flat side-by-side split, no hard edges, no panel "
+     f"borders, no frames of any kind), both rendered smaller and "
+     f"visibly duller/less vivid than He is, without any gold light of "
+     f"their own: nearer at one side, {SERPENT.split('.')[0]} coiled "
+     f"low, named and cool ink-blue toned; farther at the other side, a "
+     f"small dim silhouette of a mother bowed low over a swaddled "
+     f"infant. All vignette elements blend softly into the same page's "
+     f"own paper texture, no separate paper pieces or collage cutouts "
+     f"visible anywhere. No thread yet drawn, no lettering. "
+     f"{FULLBLEED}"),
+    # s43: Kling spread (multi-figure crowd, locked comic-grid cost-
+    # tiering) -- per memory living-light-no-fresh-blood, the still stays
+    # entirely wound-free/unmarked (Kling regenerates blood even from a
+    # healed-mark still); "same figure as reference" carries the
+    # identity, not a visible wound.
+    ("s43_under_your_feet", STYLE, "jesus",
+     f"EXTREME ground-level crop, camera at floor height looking "
+     f"nearly flat across worn stone paving: a crowd of many anonymous "
+     f"bare human feet stand together on the stone, ordinary and "
+     f"undifferentiated, no faces or bodies visible above the ankle, "
+     f"filling most of the frame's width; among them, set slightly "
+     f"apart, ONE pair of feet (the same figure as the reference "
+     f"image, feet entirely healed and unmarked) stands in identical "
+     f"scale and stance to the crowd's feet, not elevated or "
+     f"spotlighted, simply present among them. No hands, no upper "
+     f"bodies, no lettering. {FULLBLEED}"),
+    ("s44_stands_on_one", STYLE, "serpent",
+     f"WIDE shot, LOW angle looking UP toward high ground silhouetted "
+     f"against bright gold sky-light: a cluster of small distant "
+     f"anonymous human figures stand together atop the high ground, "
+     f"lit warm gold from behind and above, too small and distant for "
+     f"any facial detail; far below at the base of the rise, in cooler "
+     f"shadow, {SERPENT.split('.')[0]}'s coiled shape lies flattened "
+     f"and subdued beneath the ground-line's own long shadow, still "
+     f"and defeated, scaled small relative to the height above it. No "
+     f"lettering. {FULLBLEED}"),
+    # s45: reuse-checked FIRST against day_of_atonement/stills/
+    # s53_the_cross.png per _PREFLIGHT.md's own instruction -- rejected,
+    # that candidate is a close frontal devotional portrait on solid
+    # black, not isolatable into a distant landscape silhouette. New
+    # render needed; this is the cross's FIRST appearance in the story.
+    ("s45_eden_to_cross", STYLE, "eden",
+     f"VERY WIDE lateral composition, flat low horizon line running "
+     f"the full width of the frame: at the LEFT edge, the dense dark "
+     f"trees of a garden (the same garden as the reference image); at "
+     f"the FAR RIGHT edge, small and distant, the plain silhouette of "
+     f"a bare wooden cross standing alone against the sky, rendered as "
+     f"a flat dark shape with no figure upon it and no visible detail "
+     f"-- pure silhouette only, reading as a distant landmark, not a "
+     f"close devotional image. Between the two, a long stretch of open "
+     f"horizon and sky fills the middle of the frame. No thread yet "
+     f"drawn, no lettering, no other figures. {FULLBLEED}"),
 ]
 
 

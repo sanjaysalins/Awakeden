@@ -174,6 +174,55 @@ JOBS = [
      "still -- no page turns, lifts, or moves at all. Only: the camera "
      "moves closer, and the gold light grows very slightly brighter and "
      "warmer as it is approached. Nothing else changes."),
+    # batch 5 (2026-08-08+, spreads 36-45) -- s41/s44 both get a real
+    # deliberate camera move (same fix as s33, per this session's own
+    # lesson that ambient-only LOCK reads as "very basic" camera when the
+    # beat calls for real presence -- _PREFLIGHT calls both of these
+    # "ESCAPE" shots, the movement's hero wides). s43 stays ambient-only
+    # on purpose: a genuinely brief (4.6s) ground-level beat that "lives
+    # in the composition, no card" per _PLAN.md -- not every beat needs a
+    # camera move, and a hard push on a floor-height crowd crop would
+    # invent drama the text doesn't ask for.
+    # REDESIGNED (2026-08-08, re-roll 1): duration=6 isn't a valid
+    # seedance1_5 value (only 4/8/12 -- the estimator doesn't validate
+    # this, the API call does), so the driver silently fell back to
+    # Kling -- which then invented real page-fold changes on several
+    # page-tips between frames (caught by eye-checking start/mid/end
+    # frames, not assumed clean because the render succeeded). Fixed to
+    # a valid seedance duration (8s, matching s33's own precedent) so
+    # this stays on the intended calm-content provider.
+    ("s41_shape_of_canon", "seedance", 8,
+     PAGE + LOCK.replace("does not move, zoom, or change angle at all", "does not change angle, and does not invent any new content") +
+     "The camera slowly arcs and glides along the length of the fanned "
+     "pages, tracing their long curved sweep from one end toward the "
+     "other in one smooth, continuous, unhurried movement -- a real "
+     "camera move, not a static hold. Every page holds its EXACT "
+     "fanned shape and position, perfectly still -- no page turns, "
+     "lifts, curls, or shifts at all. Only: the camera itself moves "
+     "along the arc, and the pages' own surface catches the light very "
+     "faintly as the camera passes. Nothing else changes."),
+    ("s43_under_your_feet", "kling", 5,
+     PAGE + LOCK +
+     "Every pair of feet in the crowd holds its EXACT position and "
+     "stance, perfectly still -- none shift weight, step, or move at "
+     "all. Only: the light falling across the stone breathes very "
+     "gently. Nothing else changes."),
+    # NOTE: duration=6 hit the same invalid-value fallback as s41 (only
+    # 4/8/12 valid for seedance1_5) and this one also landed on Kling --
+    # but eye-checked clean (figures/serpent held their exact shapes,
+    # no invention), so the render itself was kept. Left the duration
+    # at 6 here so a future --rebuild doesn't silently re-trigger the
+    # same fallback without this note; change to 8 if this ever needs
+    # a genuine re-render.
+    ("s44_stands_on_one", "seedance", 6,
+     PAGE + LOCK.replace("does not move, zoom, or change angle at all", "does not change angle, and does not invent any new content") +
+     "The camera slowly, steadily pushes upward and inward toward the "
+     "small figures on the high ground, a smooth continuous rise, "
+     "never a jump or cut. Every figure and the serpent's coiled "
+     "shadow hold their EXACT shapes and positions, perfectly still -- "
+     "nothing shifts, no figure moves. Only: the camera moves closer "
+     "and slightly upward, and the gold light grows very slightly "
+     "warmer as it is approached. Nothing else changes."),
 ]
 
 

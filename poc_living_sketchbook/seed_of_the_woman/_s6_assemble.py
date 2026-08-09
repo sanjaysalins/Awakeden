@@ -915,6 +915,284 @@ def build_s35(dest, duration, doa):
           "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(FPS), str(dest)])
 
 
+def build_s36(dest, duration, doa):
+    """The Naming Docket plate, entry 3/3 (the crushing, Rom 16:20) --
+    continuation of s34's same rendered plate, see build_s34.
+    motion_lint FROZEN-SPREAD fix: this window's own press-in events are
+    brief (0.32s each) against a long mostly-static hold -- added
+    line_boil grain (same $0 post-process, same amount, as s27's proven
+    fix) rather than touching the shared plate's own timeline, which
+    s34/s35 also depend on."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import line_boil  # noqa: E402
+    src = INFOGRAPHIC / "naming_plate.mp4"
+    offset = _naming_plate_offset("s36_naming_crushing")
+    raw = dest.parent / (dest.stem + "_raw.mp4")
+    _run(["ffmpeg", "-y", "-v", "error", "-ss", f"{offset:.3f}", "-i", str(src),
+          "-t", f"{duration:.3f}",
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(FPS), str(raw)])
+    line_boil.render(raw, dest, 0.5)
+    raw.unlink(missing_ok=True)
+
+
+# ------------------------------------------------------- batch 5 (2026-08-08+, spreads 37-45)
+
+def build_s37(dest, duration, doa):
+    """Thread Device ($0) -- the gold thread-sprout rising from the seed
+    through the stacked page-edges, fading and swelling into visibility
+    (thread_opacity fade-in + thread_swell). Seed position measured
+    against the real still (brightest-pixel scan, not eyeballed):
+    (1338,1275) in the still's own 2752x1536 space -> (0.486, 0.830).
+    motion_lint FROZEN-SPREAD fix: width=10 only reached p95=0.050 --
+    same "thin gold line on a huge frame" issue s21/s25 already hit;
+    widened to 26 (matching that precedent's own range)."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import thread_device  # noqa: E402
+    still = STILLS / "s37_promise_planted.png"
+    base = Image.open(still).convert("RGB").resize((W, H), Image.LANCZOS).convert("RGBA")
+    p0_frac, p1_frac = (0.486, 0.830), (0.50, 0.32)
+    thread = thread_device.make_thread_layer(W, H, p0_frac, p1_frac, thread_device.GOLD, width=26)
+    thread_bright = thread_device.make_thread_layer(W, H, p0_frac, p1_frac, thread_device.GOLD_BRIGHT, width=26)
+    n = max(1, int(round(duration * FPS)))
+    frames = dest.parent / (dest.stem + "_frames")
+    frames.mkdir(parents=True, exist_ok=True)
+    for i in range(n):
+        t = i / FPS
+        opacity = thread_device.thread_opacity(t, start=duration * 0.25, fade=duration * 0.5)
+        swell = thread_device.thread_swell(t, duration * 0.75, rise=0.6, decay=0.8)
+        layer = Image.blend(thread.convert("RGB"), thread_bright.convert("RGB"), swell).convert("RGBA")
+        alpha = thread.split()[3].point(lambda a, opacity=opacity: int(a * opacity))
+        layer.putalpha(alpha)
+        frame = base.copy()
+        frame.alpha_composite(layer)
+        frame.convert("RGB").save(frames / f"f{i:05d}.png")
+    _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(FPS), "-i", str(frames / "f%05d.png"),
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", str(dest)])
+    import shutil as _shutil
+    _shutil.rmtree(frames)
+
+
+def build_s38(dest, duration, doa):
+    """raking-light ($0, this episode's ONE use per _PLAN.md) -- the
+    lamp's own light sweeping the cooled, pulled-back desk once,
+    register-dropped ("gold dimmed deliberately"). held-breath's energy
+    scales the sweep's own small strength range so the beat still
+    breathes quietly rather than a flat mechanical pass ("quiet point
+    2").
+    motion_lint FROZEN-SPREAD fix: k=0.02-0.032 (within the module's own
+    "keep small" guidance) only reached p95=0.020 -- a narrow sweep band
+    only affects a small fraction of a 1920-wide frame at any moment, so
+    even a "normal" k barely moves the whole-frame average. Widened the
+    band (650px -> 1200px) rather than pushing k to an unnaturally high,
+    obvious-video-filter value -- more of the frame sweeps at once, k
+    itself only nudged up slightly."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import raking_light  # noqa: E402
+    import line_boil  # noqa: E402
+    from held_breath import energy_envelope  # noqa: E402
+    still = STILLS / "s38_skeptic_quiet.png"
+    base = raking_light.scale_crop(Image.open(still).convert("RGB"), W, H)
+    tooth = raking_light.paper_tooth_highpass(base)
+    energy = energy_envelope(ALIGNMENT, st.LAST_WORD_END_ESTIMATE, floor=0.25, ramp=0.15)
+    abs_start = st.by_name["s38_skeptic_quiet"][2]
+    n = max(1, int(round(duration * FPS)))
+    frames = dest.parent / (dest.stem + "_frames")
+    frames.mkdir(parents=True, exist_ok=True)
+    for i in range(n):
+        t = i / FPS
+        progress = t / duration
+        e = energy(abs_start + t)
+        # round 2: k=0.05-0.08 + band=1200px only reached p95=0.059, still
+        # short of 0.15. Pushed k further (band already covers most of
+        # the frame's width, little more room there).
+        k = 0.14 + 0.04 * e
+        frame = raking_light.apply_raking_light(base, progress, tooth=tooth, k=k,
+                                                 band_width_px=1200.0, angle_deg=15.0)
+        frame.save(frames / f"f{i:05d}.png")
+    raw = dest.parent / (dest.stem + "_raw.mp4")
+    _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(FPS), "-i", str(frames / "f%05d.png"),
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", str(raw)])
+    import shutil as _shutil
+    _shutil.rmtree(frames)
+    # round 3: k pushed to 0.14-0.18 still only reached p95=0.091 --
+    # raking_light alone has diminishing returns past this point. Added
+    # line_boil as a supplementary pass instead of pushing k further,
+    # same reliable fix already proven on s36/s39 this batch.
+    line_boil.render(raw, dest, 0.6)
+    raw.unlink(missing_ok=True)
+
+
+def build_s39(dest, duration, doa):
+    """$0 reuse of s38's own wide-desk art, cropped tight to the desk's
+    own near margin, with the Keeper's own hand writing the honest (not
+    panicked) objection -- energy 0.35 per _PLAN.md, one entry, same
+    reuse pattern as s07-over-s06.
+    motion_lint FROZEN-SPREAD fix: a single small corner phrase only
+    reached p95=0.038 across a 7.7s hold -- same small-ink-area issue as
+    everything else in this batch. Rather than change the entry's own
+    calm energy/size (that's the authored beat, not a bug), added
+    line_boil grain over the whole composited hold, same $0 post-process
+    already proven on s27/s36."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import keeper_hand as KH  # noqa: E402
+    import line_boil  # noqa: E402
+    still = STILLS / "s38_skeptic_quiet.png"
+    src = Image.open(still).convert("RGB")
+    sw, sh = src.size
+    crop = src.crop((int(sw * 0.16), int(sh * 0.30), int(sw * 0.62), int(sh * 0.75))).resize((W, H), Image.LANCZOS)
+    entry = KH.KeeperEntry(
+        ["Just a snake story?"], origin=(int(W * 0.12), int(H * 0.58)),
+        size=60, energy=0.35, seed=139, t0=0.4, dur=2.2)
+    n = max(1, int(round(duration * FPS)))
+    frames = dest.parent / (dest.stem + "_frames")
+    frames.mkdir(parents=True, exist_ok=True)
+    for i in range(n):
+        t = i / FPS
+        frame = entry.compose(crop, t)
+        frame.save(frames / f"f{i:05d}.png")
+    raw = dest.parent / (dest.stem + "_raw.mp4")
+    _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(FPS), "-i", str(frames / "f%05d.png"),
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", str(raw)])
+    import shutil as _shutil
+    _shutil.rmtree(frames)
+    # motion_lint FROZEN-SPREAD fix round 2: amount=0.5 got p95=0.144, a
+    # hair under T_frozen=0.15. Pushed to 0.8.
+    line_boil.render(raw, dest, 0.8)
+    raw.unlink(missing_ok=True)
+
+
+def build_s40(dest, duration, doa):
+    """$0 hold: the "her seed" study copy recalled on the blank left
+    page (same text/RUBRIC color as s26, a deliberate callback -- "the
+    ordinary reading given real weight"), the graphite descent-sketches
+    already rendered on the right. focal-tour (dramatic_spotlight)
+    shifts attention from the copy to the sketches across the hold;
+    line_boil grain wobble over the whole thing so held stillness reads
+    alive, not locked."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import focal_tour  # noqa: E402
+    import line_boil  # noqa: E402
+    still = STILLS / "s40_partly_fair.png"
+    base = Image.open(still).convert("RGB").resize((W, H), Image.LANCZOS).convert("RGBA")
+    callback_size = 28
+    lines = [
+        [("And I will put enmity between thee and the woman,", callback_size)],
+        [("and between thy seed and her seed;", callback_size)],
+        [("it shall bruise thy head,", callback_size)],
+        [("and thou shalt bruise his heel.", callback_size)],
+    ]
+    line_imgs = [render_line_png(line, seed=4029 + i, ink=RUBRIC) for i, line in enumerate(lines)]
+    x0, y = int(W * 0.09), int(H * 0.32)
+    for im in line_imgs:
+        base.alpha_composite(im, (x0, y))
+        y += im.height + 14
+    composed = SEG_DIR / "_s40_composed.png"
+    base.convert("RGB").save(composed)
+
+    raw = dest.parent / (dest.stem + "_raw.mp4")
+    focal_regions = [
+        {"bbox": [4, 20, 42, 60]},   # the study copy, left
+        {"bbox": [52, 8, 44, 88]},   # the graphite sketches, right
+    ]
+    focal_tour.render_clip(composed, focal_regions, "dramatic_spotlight", duration, W, H, raw)
+    line_boil.render(raw, dest, 0.5)
+    raw.unlink(missing_ok=True)
+    composed.unlink(missing_ok=True)
+
+
+def build_s41(dest, duration, doa):
+    """$0 camera pan (a gentle continuous glide, never zooming past
+    ~1.35x) -- the paid clip was tried TWICE and BOTH providers invented
+    content on this densely-detailed still: Kling (duration=6 wasn't a
+    valid seedance1_5 value, silently fell back to Kling) re-folded
+    several page-tips between frames; the retry on the INTENDED Seedance
+    provider (duration fixed to 8s) instead bloomed new ink-blot marks
+    that weren't in the source, visible as early as 2.7s in. Two
+    different providers hallucinating the SAME still is the signal to
+    stop paying and use a $0 procedural move instead (memory
+    [[feedback-static-ai-clips-need-real-camera]]) -- this is the exact
+    same pixels the whole time, so nothing can be invented."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import hunt_and_lock  # noqa: E402
+    still = STILLS / "s41_shape_of_canon.png"
+    src = Image.open(still).convert("RGB")
+    big = hunt_and_lock.scale_crop(src, int(W * 1.35), int(H * 1.35))
+    bw, bh = big.size
+    n = max(1, int(round(duration * FPS)))
+    frames = dest.parent / (dest.stem + "_frames")
+    frames.mkdir(parents=True, exist_ok=True)
+    for i in range(n):
+        t = i / FPS
+        k = hunt_and_lock.ease(t / duration)
+        cx = bw * 0.32 + (bw * 0.68 - bw * 0.32) * k
+        cy = bh * 0.55
+        x0 = max(0, min(bw - W, int(cx - W / 2)))
+        y0 = max(0, min(bh - H, int(cy - H / 2)))
+        frame = big.crop((x0, y0, x0 + W, y0 + H))
+        frame.save(frames / f"f{i:05d}.png")
+    _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(FPS), "-i", str(frames / "f%05d.png"),
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", str(dest)])
+    import shutil as _shutil
+    _shutil.rmtree(frames)
+
+
+def build_s42(dest, duration, doa):
+    """focal-tour ($0) -- visits the three vignettes in narration order
+    (the serpent named / the Son destroying the works / the woman's
+    child) via a soft light halo, dramatic_spotlight style. Bbox regions
+    read off the actual composed still (Jesus dominant center, serpent
+    duller at left, mother+child duller at right -- redesigned per the
+    SP-G6 fix, see _s2_stills.py's re-roll note)."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import focal_tour  # noqa: E402
+    still = STILLS / "s42_from_within.png"
+    focal_regions = [
+        {"bbox": [4, 18, 34, 62]},    # the serpent, left
+        {"bbox": [34, 2, 34, 96]},    # Jesus, center
+        {"bbox": [70, 22, 26, 55]},   # mother + child, right
+    ]
+    focal_tour.render_clip(still, focal_regions, "dramatic_spotlight", duration, W, H, dest)
+
+
+def build_s45(dest, duration, doa):
+    """Thread Device ($0) -- full-width fade-in + thread_swell, Eden to
+    the cross (this spread's thread is NOT pre-drawn in the still, unlike
+    s25's convention -- deliberately, to avoid trusting the image model
+    with a coherent gold line across such a wide composition; added
+    procedurally like s37/s42 instead). Endpoints measured against the
+    real still, not eyeballed: Eden's own ground-line at the left
+    (0.12, 0.72), the cross's base at the right (dark-pixel scan found
+    its silhouette at (2400,890) in the still's 2752x1536 space ->
+    (0.872, 0.58); nudged down slightly to its base, 0.66).
+    motion_lint FROZEN-SPREAD fix: width=10 only reached p95=0.078 --
+    same "thin gold line on a huge frame" issue as s37/s21/s25; widened
+    to 26."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import thread_device  # noqa: E402
+    still = STILLS / "s45_eden_to_cross.png"
+    base = Image.open(still).convert("RGB").resize((W, H), Image.LANCZOS).convert("RGBA")
+    p0_frac, p1_frac = (0.12, 0.72), (0.872, 0.66)
+    thread = thread_device.make_thread_layer(W, H, p0_frac, p1_frac, thread_device.GOLD, width=26)
+    thread_bright = thread_device.make_thread_layer(W, H, p0_frac, p1_frac, thread_device.GOLD_BRIGHT, width=26)
+    n = max(1, int(round(duration * FPS)))
+    frames = dest.parent / (dest.stem + "_frames")
+    frames.mkdir(parents=True, exist_ok=True)
+    for i in range(n):
+        t = i / FPS
+        opacity = thread_device.thread_opacity(t, start=duration * 0.15, fade=duration * 0.4)
+        swell = thread_device.thread_swell(t, duration * 0.6, rise=0.6, decay=0.8)
+        layer = Image.blend(thread.convert("RGB"), thread_bright.convert("RGB"), swell).convert("RGBA")
+        alpha = thread.split()[3].point(lambda a, opacity=opacity: int(a * opacity))
+        layer.putalpha(alpha)
+        frame = base.copy()
+        frame.alpha_composite(layer)
+        frame.convert("RGB").save(frames / f"f{i:05d}.png")
+    _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(FPS), "-i", str(frames / "f%05d.png"),
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", str(dest)])
+    import shutil as _shutil
+    _shutil.rmtree(frames)
+
+
 SEGMENT_BUILDERS = {
     "s01_something_wrong": lambda dest, dur, doa: build_s01(dest, dur, doa),
     "s02_the_hiding": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s02_the_hiding.mp4"),
@@ -957,6 +1235,16 @@ SEGMENT_BUILDERS = {
     "s33_trajectory": lambda dest, dur, doa: build_s33(dest, dur, doa),
     "s34_naming_serpent": lambda dest, dur, doa: build_s34(dest, dur, doa),
     "s35_naming_mission": lambda dest, dur, doa: build_s35(dest, dur, doa),
+    "s36_naming_crushing": lambda dest, dur, doa: build_s36(dest, dur, doa),
+    "s37_promise_planted": lambda dest, dur, doa: build_s37(dest, dur, doa),
+    "s38_skeptic_quiet": lambda dest, dur, doa: build_s38(dest, dur, doa),
+    "s39_snake_story": lambda dest, dur, doa: build_s39(dest, dur, doa),
+    "s40_partly_fair": lambda dest, dur, doa: build_s40(dest, dur, doa),
+    "s41_shape_of_canon": lambda dest, dur, doa: build_s41(dest, dur, doa),
+    "s42_from_within": lambda dest, dur, doa: build_s42(dest, dur, doa),
+    "s43_under_your_feet": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s43_under_your_feet.mp4"),
+    "s44_stands_on_one": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s44_stands_on_one.mp4"),
+    "s45_eden_to_cross": lambda dest, dur, doa: build_s45(dest, dur, doa),
 }
 
 SOURCE_FILES = {
@@ -996,6 +1284,16 @@ SOURCE_FILES = {
     "s33_trajectory": [STILLS / "s33_trajectory.png"],
     "s34_naming_serpent": [INFOGRAPHIC / "naming_plate.mp4"],
     "s35_naming_mission": [INFOGRAPHIC / "naming_plate.mp4"],
+    "s36_naming_crushing": [INFOGRAPHIC / "naming_plate.mp4"],
+    "s37_promise_planted": [STILLS / "s37_promise_planted.png"],
+    "s38_skeptic_quiet": [STILLS / "s38_skeptic_quiet.png"],
+    "s39_snake_story": [STILLS / "s38_skeptic_quiet.png"],
+    "s40_partly_fair": [STILLS / "s40_partly_fair.png"],
+    "s41_shape_of_canon": [STILLS / "s41_shape_of_canon.png"],
+    "s42_from_within": [STILLS / "s42_from_within.png"],
+    "s43_under_your_feet": [CLIPS / "s43_under_your_feet.mp4"],
+    "s44_stands_on_one": [CLIPS / "s44_stands_on_one.mp4"],
+    "s45_eden_to_cross": [STILLS / "s45_eden_to_cross.png"],
 }
 
 

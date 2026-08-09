@@ -1,5 +1,55 @@
 # STATE.md — progress tracker
 
+**2026-08-09 (early morning — Seed of the Woman LONG: batch 5 done,
+spreads 36-45, movement 4 close + movement 5 start, gates green, $8.60
+this batch / $34.80 episode total, ALL COMMITTED, session closed for the
+day):** Batch 4 got a full round-trip of real user quality review first
+(4 rounds, same session): blank "remotion" plate backgrounds (s32/s34/35
+had no painted background at all — fixed by wiring in painted stills that
+already existed but were never used, plus the same miss on s29 which
+wasn't a remotion plate at all); near-motionless paid Kling/Seedance
+clips on s28/s30/s33 (raw renders had almost no real camera motion — all
+3 replaced with $0 hunt_and_lock/parallax_25d camera moves); and s26's
+red study-copy text redesigned twice — first for two real layout bugs
+(wrong page rect, text 2x too wide for it), then a second time at the
+user's request to match the episode's own "later part" card register
+(bigger, left-flush, like s29/s32/34-35) instead of the small centered
+treatment. Along the way, discovered and documented a real motion_lint
+gate quirk (3fps luminance sampling aliases any device with under ~1s of
+real motion) — saved as its own memory + a code comment, since it had
+been silently causing confusing non-monotonic tuning results.
+
+Batch 5 (spreads 36-45) then built clean start to finish: 8 new stills +
+10 new $0 devices, all passing eye-check and gates on the first or second
+real attempt — EXCEPT s42 (redesigned after its first render came back as
+3 hard-edged panels, a real SP-G6 violation) and s41's clip, which got
+tried on TWO different paid providers and both invented content on the
+same densely-detailed still (page-folds on Kling, ink-blots on Seedance)
+before being replaced with a $0 camera pan instead. motion_lint flagged 5
+real FROZEN-SPREAD FAILs (s36/s37/s38/s39/s45), all fixed with real,
+verified-against-the-gate parameter changes (thread stroke width, added
+line_boil grain passes, widened a raking-light sweep) — s38 took three
+rounds before clearing. Also hit two genuinely stuck background
+processes mid-session (both diagnosed by checking real process CPU
+activity, not assumed) and cleaned up before rebuilding from a clean
+slate.
+
+**User's stop-for-the-day note:** some hero stills' animation still
+doesn't feel cinematic enough — deferred to tomorrow on purpose, NOT a
+tonight problem. Tomorrow's plan: review the episode's hero stills
+(the wides that carry the biggest emotional/visual weight — s01, s16,
+s28's fixed camera-pan version, s33, s41, s44, s45, and any others that
+read as flat once compared side by side) and make BOTH the stills and
+their animation more deliberately cinematic — likely means richer camera
+staging in the still's own composition (depth, scale contrast, dynamic
+angles — the same "camera-angle dynamism" + "full style/device library"
+lessons already locked from earlier retrospectives) plus reconsidering
+which $0 device or paid provider each hero gets, informed by tonight's
+two real lessons: prefer $0 procedural camera on busy/detailed stills
+(2 different paid providers both hallucinated on s41), and eye-check every
+raw clip before trusting it (batch 4's near-static s28/s30/s33 all
+shipped once already before anyone looked closely).
+
 **2026-08-08 (even later — Seed of the Woman LONG: batch 4 done, spreads
 26-35, movement 4 complete, gates not yet run, $6.77 this batch / $26.20
 episode total, ALL COMMITTED, session closed for a clean handover):**

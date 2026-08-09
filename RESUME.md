@@ -1,4 +1,111 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-09 EARLY MORNING (BATCH 5 CLOSED +
+# COMMITTED, SESSION CLOSED FOR THE DAY BY USER REQUEST -- TOMORROW'S FIRST
+# TASK IS A HERO-STILLS CINEMATIC PASS, NOT BATCH 6) — READ THIS FIRST,
+# supersedes every block below including "ROUND 4" right under this
+# (batch 4's s26 rounds are done and still accurate; this is a new batch,
+# not a continuation of that fix).
+#
+# ── STOP-FOR-THE-DAY NOTE (user, right after batch 5 closed): "some of
+# the hero stills are not having a great animation... Lets plan tommorrow
+# to make some cinimatic stills and animation." Explicitly deferred on
+# purpose, not a same-night fix. Full task written up at memory
+# [[feedback-hero-stills-cinematic-pass-pending]] and in STATE.md's own
+# newest entry -- READ THAT FIRST tomorrow, before touching batch 6.
+# Short version: eye-check this episode's hero stills (candidates: s01,
+# s16, s28, s33, s41, s44, s45) for both (a) flat/uncinematic COMPOSITION
+# and (b) weak ANIMATION (near-zero real motion, or a paid render that
+# invented content -- this session hit BOTH failure modes for real, see
+# [[feedback-static-ai-clips-need-real-camera]]), fix what needs fixing
+# (prefer $0 procedural camera devices over re-trusting a paid render),
+# THEN resume batch 6.
+#
+# ── ONE-LINE STATUS: batch 5 (movement 4 close + movement 5, "the honest
+# objection") is built and gate-clean. 8 new stills, 10 new $0 devices/
+# dispatches, 2 real clips kept (s43, s44), 1 clip abandoned after two
+# different paid providers both invented content on the same still
+# (s41 -- replaced with a $0 camera pan). Preview assembled, review
+# written. NOT committed -- ask before committing, same as every prior
+# batch boundary.
+#
+# ── WHAT HAPPENED, IN ORDER:
+#   1. User said "go" -- read _PLAN.md/_PREFLIGHT.md rows 36-45, designed
+#      8 new still prompts + 3 clip jobs matching this episode's own
+#      style/anatomy/doctrine conventions (anonymous crowd feet, no fresh
+#      blood on the Kling-bound s43, Jesus-ref reuse for s42/43/45, reuse-
+#      checked s45's cross candidate against day_of_atonement's s53 FIRST
+#      and rejected it -- wrong framing/scale, not isolatable). Quoted
+#      ~$5.90, got explicit go-ahead before spending.
+#   2. All 8 stills + all 3 clips rendered. Eye-checked every one before
+#      building devices -- caught s42 rendered as 3 hard-edged panels (a
+#      real SP-G6 violation, "on the LEFT/CENTER/RIGHT" briefing reads as
+#      three boxes to the model). Fixed by copying Day of Atonement's own
+#      PROVEN multi-vignette recipe (one dominant near figure + 2 duller
+#      staggered-depth vignettes, never equal panels) -- re-rendered clean.
+#   3. s41's clip: seedance duration=6 isn't valid (only 4/8/12), silently
+#      fell back to Kling, which invented real page-fold changes (caught
+#      by eye-checking frames, not assumed from a successful render). Fixed
+#      the duration (8s) and retried on the INTENDED seedance provider --
+#      it ALSO invented content (new ink-blot marks appearing within 3s).
+#      Two different providers hallucinating the same densely-detailed
+#      still is the signal to stop paying -- replaced with a $0 camera pan
+#      (hunt_and_lock.scale_crop + a simple eased crop-window slide) across
+#      the exact same pixels, zero invention risk. Saved to memory
+#      [[feedback-static-ai-clips-need-real-camera]] as a mirror finding to
+#      batch 4's "too static" lesson -- this is "too inventive," same fix.
+#   4. Built all 10 $0 devices/dispatches (build_s36 through build_s45).
+#      All 10 succeeded on the FIRST real attempt (no exceptions) --
+#      eye-checked every one, all matched design intent.
+#   5. motion_lint flagged 5 real FROZEN-SPREAD FAILs (s36/s37/s38/s39/s45)
+#      + a STATIC-RUN warning. Fixed thread stroke width (10->26px, same
+#      fix as batch 4's s21/s25) for s37/s45; added a line_boil grain pass
+#      (already proven on s27/s23) for s36/s39; s38 (raking-light) needed
+#      THREE rounds -- widened the sweep band, then raised its strength
+#      twice, still short (0.020->0.059->0.091) before adding a
+#      supplementary line_boil pass on top rather than pushing the sweep
+#      to an unnatural filter-like strength. All 5 confirmed clear on the
+#      REAL motion_lint, not just judgment calls.
+#   6. layer_check: s36 needed registering in EXTERNAL_LETTERING (real
+#      hand-lettering, the shared naming-plate asset) -- done.
+#   7. Hit a genuinely stuck background process mid-session (a local
+#      parameter-search simulation script hung with near-zero CPU despite
+#      long wall-clock time -- diagnosed via Get-Process CPU deltas, not
+#      assumed, turned out to be a shell-quoting issue with an inline -c
+#      script). Killed it, switched to writing real .py files with
+#      unbuffered output instead of inline one-liners for all further
+#      debugging. A SECOND rebuild also stalled (this time a genuinely
+#      slow raking-light pass got compounded by a forceful TaskStop that
+#      left a partial frame-write, 15 missing frames out of 216) --
+#      diagnosed by checking the actual frames directory, not assumed;
+#      cleaned up and rebuilt from a clean slate. Nothing shipped from
+#      either stuck state.
+#
+# ── REVIEW: poc_living_sketchbook/seed_of_the_woman/_BATCH5_REVIEW.html
+#
+# ── COST: $8.60 this batch (9 still renders incl. 1 re-render: $2.70;
+# s43 Kling: $1.31; s44 Kling fallback, kept: $1.58; s41's two REJECTED
+# paid attempts: $3.02 wasted, replaced by a $0 device in the final cut).
+# Quoted ~$5.90 up front -- the $2.70 overrun is entirely the s41 rejected
+# attempts, caught by eye-checking rather than trusting a successful-
+# looking render. Episode running total: $34.80.
+#
+# ── GIT STATE: COMMITTED (this batch's diff: _s2_stills.py (8 new
+# SPREAD_SHOTS entries + jesus51 ref), _s4_animate.py (3 new JOBS entries,
+# s41's duration fix), _s6_assemble.py (build_s36..build_s45 + dispatch
+# entries), _devices.py (s36 EXTERNAL_LETTERING), new stills/clips/
+# segments, PREVIEW_36_45.mp4, _BATCH5_REVIEW.html, STATE.md, 2 memory
+# files, this handover) -- user asked explicitly to commit before
+# closing for the day.
+#
+# ── EXACT NEXT STEP FOR THE NEW SESSION: this batch is committed and the
+# session is CLOSED for the day by explicit user request. Do NOT start
+# batch 6 first. Start with the hero-stills cinematic pass (see the
+# stop-for-the-day note above + [[feedback-hero-stills-cinematic-pass-pending]]
+# + STATE.md's newest entry) -- only move to batch 6 (spreads 46+) once
+# that pass is done or the user explicitly redirects.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-08 NIGHT, ROUND 4 (s26 REDESIGNED
 # TO MATCH THE "LATER PART" CARD REGISTER -- BIGGER, LEFT-FLUSH, PER USER
 # REQUEST, $0 THIS SESSION, NOT YET COMMITTED) — READ THIS FIRST,

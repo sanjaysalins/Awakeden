@@ -56,12 +56,14 @@ SPECIAL_CARDS = {
 # s26 (hand-lettered study copy via render_line_png), s29 (Illuminated
 # Rubric, Gal 4:4), s31 (Luke 1:35b letters over s30's art), s34/s35 (the
 # Naming Docket plate, real Constantia typography via render_dom_clip.py).
+# batch 5 adds s36 (the same Naming Docket plate, entry 3/3).
 EXTERNAL_LETTERING = {
     "s26_her_seed_study",
     "s29_fulness_card",
     "s31_holy_thing_card",
     "s34_naming_serpent",
     "s35_naming_mission",
+    "s36_naming_crushing",
 }
 
 DEVICE_ASSIGNMENTS = {

@@ -1,0 +1,65 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Seed of the Woman -- Batch 5 FINAL (spreads 36-45)</title>
+<style>
+body{font-family:Georgia,serif;background:#f3ede3;margin:0;padding:24px;color:#2a2420;}
+h1{font-size:20px;} h2{font-size:16px;margin-top:28px;}
+video{width:100%;max-width:900px;border-radius:6px;display:block;background:#000;}
+.fixlist{background:#fff;border:1px solid #ddd;border-radius:6px;padding:14px 18px;max-width:900px;}
+.fixlist li{margin:6px 0;}
+.tag{display:inline-block;background:#2a2420;color:#f3ede3;font-size:11px;padding:2px 8px;border-radius:4px;margin-right:6px;}
+</style></head><body>
+<h1>Seed of the Woman LONG -- Batch 5 FINAL (spreads 36-45, movement 4 close + movement 5)</h1>
+
+<h2>Preview cut, spreads 36-45 with real narration (239.68s-321.28s)</h2>
+<video controls src="PREVIEW_36_45.mp4"></video>
+
+<h2>What this batch built</h2>
+<div class="fixlist">
+<ul>
+<li><b>8 new stills</b> -- the seed alone in drawn soil (s37), the desk pulled back and cooled (s38), the study-copy-callback + graphite descent sketches (s40), the whole book fanned in one arc (s41), the redesigned three-vignette "from within" page (s42), ground-level crowd feet (s43), the crowd on high ground with the serpent subdued below (s44), and Eden-to-cross, the cross's first appearance (s45).</li>
+<li><b>10 new $0 devices/dispatches</b> -- thread-sprout fade-in (s37), raking-light + line_boil (s38), keeper-hand margin entry + line_boil (s39, $0 reuse of s38's art), focal-tour spotlight shift + line_boil (s40), a $0 camera pan (s41, after two paid attempts both invented content -- see below), focal-tour across the redesigned vignettes (s42), real Kling/Seedance clips (s43, s44), and a full-width thread gleam (s45).</li>
+</ul>
+</div>
+
+<h2>Real defects caught before they shipped</h2>
+<div class="fixlist">
+<ul>
+<li><span class="tag">SP-G6</span> <b>s42's first render</b> came back as three equal side-by-side panels with visible torn-paper borders -- a real violation of this project's locked "vignettes never in panels" rule, caused by briefing the prompt as "on the LEFT... in the CENTER... on the RIGHT" (reads like three separate boxes). Rewrote it to match this project's own PROVEN multi-vignette recipe from Day of Atonement: one dominant near-foreground figure (Jesus, vivid, gold) with the other two vignettes staggered at different depths behind Him, smaller and duller, blending into shared paper texture. Re-rendered clean.</li>
+<li><span class="tag">Camera</span> <b>s41's paid clip was tried twice and both providers invented content</b> on this densely-detailed still (dozens of fanned book pages): a duration=6 wasn't valid for seedance1_5 (only 4/8/12 -- the estimator doesn't validate this, only the live API call does), so it silently fell back to Kling, which then re-folded several page-tips between frames. The retry on the intended Seedance provider (duration fixed to 8s) instead bloomed new ink-blot marks that weren't in the source, visible within 3 seconds. Two different providers hallucinating the same still is the signal to stop paying and go straight to a $0 procedural camera move -- replaced with a gentle real pan across the same pixels, zero risk of invention. Saved to memory: this is the reason to prefer $0 devices FIRST on busy/detailed multi-object stills, not as a fallback after burning money.</li>
+</ul>
+</div>
+
+<h2>Gates -- real, iterative fixes (not noise-chasing)</h2>
+<div class="fixlist">
+<p>motion_lint flagged 5 real FROZEN-SPREAD FAILs (s36, s37, s38, s39, s45) plus a STATIC-RUN warning (4 consecutive low-motion spreads in a row). All 5 are genuinely quiet-by-design beats (a thread sprouting, a cooled desk, a margin note, a naming-plate tail) -- the fix wasn't to invent motion that isn't there, it was to make sure each device's own real motion actually registers on the gate's whole-frame luminance metric:</p>
+<ul>
+<li><b>s37, s45</b> (thread devices) -- thin gold line on a huge frame barely moved the metric even with a real fade-in; widened the stroke (10px -> 26px, matching the same fix batch 4 already proved on s21/s25).</li>
+<li><b>s36, s39</b> (naming-plate tail / keeper-hand margin note) -- added a line_boil grain pass on top of the existing content, same $0 post-process already proven on s27/s23. Cleared on the first try for s36; s39 needed the grain amount pushed from 0.5 to 0.8 on a second pass.</li>
+<li><b>s38</b> (raking-light) -- the hardest one. Widened the sweep band and raised its strength twice, still short (0.020 -> 0.059 -> 0.091); raking-light alone had diminishing returns past a point. Added a supplementary line_boil pass rather than pushing the sweep to an unnatural, obvious-video-filter strength -- cleared on the third attempt, eye-checked to confirm it still reads as a natural, quiet, cooled room and not a filter effect.</li>
+</ul>
+<p>layer_check: s36 needed registering in EXTERNAL_LETTERING (real hand-lettering, the naming plate's own shared asset) -- done; only the not-yet-built future spreads (s47/s53/s56) show FAIL now, expected.</p>
+</div>
+
+<h2>A note on how this session went</h2>
+<div class="fixlist">
+<p>The gate-fixing round for s38/s39 hit a genuine stuck background process (near-zero CPU usage despite long wall-clock time -- a shell-quoting hang on an inline simulation script, plus later a partial frame-write left over from a forcefully-stopped task). Both were diagnosed by checking real process CPU activity rather than assumed, cleaned up, and the affected segments rebuilt from a clean slate. Nothing shipped from the stuck state.</p>
+</div>
+
+<h2>Spend -- honest accounting</h2>
+<div class="fixlist">
+<ul>
+<li>9 still renders (nano_banana_pro, incl. the s42 re-render): $2.70</li>
+<li>s43 (Kling, kept): $1.31</li>
+<li>s44 (Kling fallback, kept -- eye-checked clean): $1.58</li>
+<li><b>s41, both attempts wasted</b> (Kling fallback $1.58 + Seedance retry $1.44 = $3.02) -- replaced by the $0 camera pan actually used in the final cut. Quoted ~$5.90 for this batch up front; actual spend was $8.60, the difference being these two rejected s41 attempts caught by eye-checking rather than trusting a successful-looking render.</li>
+</ul>
+<p>Episode running total (data/spend_ledger.jsonl): $34.80.</p>
+</div>
+
+<h2>Next</h2>
+<div class="fixlist">
+<ul>
+<li>Batch 6, spreads 46+ (movement 5 continues) -- read <code>_PLAN.md</code> rows 46+ first.</li>
+</ul>
+</div>
+</body></html>

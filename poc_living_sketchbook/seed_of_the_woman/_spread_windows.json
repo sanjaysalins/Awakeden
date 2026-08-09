@@ -350,6 +350,106 @@
   "clip_dur": null
  },
  {
+  "num": 36,
+  "name": "s36_naming_crushing",
+  "beat": 4,
+  "start": 239.68,
+  "end": 248.5,
+  "dur": 8.82,
+  "mode": "bespoke",
+  "clip_dur": null
+ },
+ {
+  "num": 37,
+  "name": "s37_promise_planted",
+  "beat": 4,
+  "start": 248.5,
+  "end": 254.11,
+  "dur": 5.61,
+  "mode": "bespoke",
+  "clip_dur": null
+ },
+ {
+  "num": 38,
+  "name": "s38_skeptic_quiet",
+  "beat": 5,
+  "start": 254.11,
+  "end": 261.29,
+  "dur": 7.18,
+  "mode": "bespoke",
+  "clip_dur": null
+ },
+ {
+  "num": 39,
+  "name": "s39_snake_story",
+  "beat": 5,
+  "start": 261.29,
+  "end": 268.96,
+  "dur": 7.67,
+  "mode": "bespoke",
+  "clip_dur": null
+ },
+ {
+  "num": 40,
+  "name": "s40_partly_fair",
+  "beat": 5,
+  "start": 268.96,
+  "end": 276.94,
+  "dur": 7.98,
+  "mode": "bespoke",
+  "clip_dur": null
+ },
+ {
+  "num": 41,
+  "name": "s41_shape_of_canon",
+  "beat": 5,
+  "start": 276.94,
+  "end": 286.42,
+  "dur": 9.48,
+  "mode": "fwd_drift",
+  "clip_dur": 8.041667
+ },
+ {
+  "num": 42,
+  "name": "s42_from_within",
+  "beat": 5,
+  "start": 286.42,
+  "end": 298.11,
+  "dur": 11.69,
+  "mode": "bespoke",
+  "clip_dur": null
+ },
+ {
+  "num": 43,
+  "name": "s43_under_your_feet",
+  "beat": 5,
+  "start": 298.11,
+  "end": 302.75,
+  "dur": 4.64,
+  "mode": "once_trim",
+  "clip_dur": 5.041667
+ },
+ {
+  "num": 44,
+  "name": "s44_stands_on_one",
+  "beat": 5,
+  "start": 302.75,
+  "end": 311.32,
+  "dur": 8.57,
+  "mode": "fwd_drift",
+  "clip_dur": 6.041667
+ },
+ {
+  "num": 45,
+  "name": "s45_eden_to_cross",
+  "beat": 5,
+  "start": 311.32,
+  "end": 321.28,
+  "dur": 9.96,
+  "mode": "bespoke",
+  "clip_dur": null
+ },
+ {
   "num": 51,
   "name": "s51_bearing_wages",
   "beat": 6,

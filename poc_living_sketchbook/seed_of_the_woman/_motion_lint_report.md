@@ -1,12 +1,12 @@
 # Motion Lint Report
 
 Thresholds used: {"narrative": 0.15, "card": 0.1}
-Segments analyzed: 36
+Segments analyzed: 46
 
 **3 FAIL, 9 WARN**
 
-- **[FAIL] DEVICE-QUOTA** `fwd_drift` -- 14/36 = 38.9% > 15% FAIL threshold
-- **[FAIL] DEVICE-QUOTA** `bespoke` -- 9/36 = 25.0% > 15% FAIL threshold
+- **[FAIL] DEVICE-QUOTA** `fwd_drift` -- 16/46 = 34.8% > 15% FAIL threshold
+- **[FAIL] DEVICE-QUOTA** `bespoke` -- 16/46 = 34.8% > 15% FAIL threshold
 - **[FAIL] FROZEN-SPREAD** `s24_before_their_sentences` -- p95=0.145 < T_frozen(narrative)=0.15, dur=6.6s
 - **[WARN] FROZEN-SHORT** `s05_where_art_thou` -- p95=0.000 < T_frozen(narrative)=0.15, dur=3.1s (short, WARN only)
 - **[WARN] FROZEN-SHORT** `s07_beguiled_card` -- p95=0.099 < T_frozen(card)=0.1, dur=3.6s (short, WARN only)
