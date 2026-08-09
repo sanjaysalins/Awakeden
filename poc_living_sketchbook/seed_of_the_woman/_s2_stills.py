@@ -684,6 +684,126 @@ SPREAD_SHOTS = [
      f"close devotional image. Between the two, a long stretch of open "
      f"horizon and sky fills the middle of the frame. No thread yet "
      f"drawn, no lettering, no other figures. {FULLBLEED}"),
+    # ---- batch 6 (2026-08-09, spreads 46-55, movement 6 "the crushing") ----
+    # Fable-designed, verified against _PREFLIGHT.md E2/E6-C/E6-G/E6-I and
+    # world/SERPENT.md before rendering. s47/s51/s52/s53/s55 are $0 reuse/
+    # device spreads over s46/s50/s51's own art, not new renders.
+    ("s46_look_again", STYLE, "desk",
+     f"MEDIUM shot, EYE-LEVEL, the camera looking straight ACROSS the "
+     f"desk's surface rather than down at it -- near-edge clutter large "
+     f"and soft in the immediate foreground so the low lateral "
+     f"viewpoint reads unmistakably (this frame must differ from every "
+     f"overhead desk spread): {DESK} The small clay oil lamp stands in "
+     f"the LEFT half of the frame, its warm flame burning at eye "
+     f"height, the nearest bright thing to the camera; in the RIGHT "
+     f"half a single blank page of aged parchment lies flat, seen at a "
+     f"shallow raking angle, entirely blank, no writing of any kind. "
+     f"One human hand rests still and relaxed on the wood beside the "
+     f"page, fingers loosely settled, anatomically correct, exactly "
+     f"five fingers including a clearly separate thumb, natural "
+     f"proportions, no elongated or extra digits -- only the hand and "
+     f"part of a forearm visible, no face, no figure. {FULLBLEED}"),
+    # s48: the ONE sanctioned exception to "camera never kneels to the
+    # serpent" (SERPENT.md rule #2 / _PREFLIGHT.md E2 point 2) -- heel-
+    # focused, not serpent-focused. Posture belly-flat (post-curse, s18
+    # onward). NO ink-red/wound mark baked into the still -- this clip
+    # goes to Kling, and memory [[living-light-no-fresh-blood]] found
+    # Kling reliably INVENTS/regenerates blood from any wound-adjacent
+    # mark regardless of prompt locks; the strike reads by proximity
+    # alone, not a mark that could be amplified into gore.
+    ("s48_heel_strike", STYLE, "serpent",
+     f"TIGHT shot, EXTREME GROUND-LEVEL, the camera lying low along the "
+     f"bare dusty ground itself, dust and small stones sharp in the "
+     f"immediate foreground (a heel-focused frame -- world/SERPENT.md's "
+     f"one stated framing exception): filling the upper-right of the "
+     f"frame, large and sharp, the bare HEEL and lower calf of an "
+     f"anonymous man mid-stride -- nothing of him visible above "
+     f"mid-calf, no face anywhere, skin entirely clean and unmarked. "
+     f"Entering low from the lower-left on a hard diagonal, "
+     f"{SERPENT.split('.')[0]} -- its whole body pressed belly-FLAT to "
+     f"the ground (post-curse posture: no coiling upward, no rearing, "
+     f"no upright posture), ink-blue-toned scales, cool judgment "
+     f"coloring, never gold, never warm, only head and neck extended "
+     f"forward flat and low in a strike toward the heel, jaws just "
+     f"reaching the flesh -- contact implied by proximity alone. "
+     f"CRITICAL: no mark, no wound, no blood, no red accent of any "
+     f"kind anywhere on the heel or ground -- entirely clean, unmarked "
+     f"skin, no gore. {FULLBLEED}"),
+    # s49: frozen the instant BEFORE the crush (SERPENT.md rule #6) --
+    # $0 dramatic_spotlight only, never a paid animator, on purpose --
+    # the highest doctrinal stakes frame in the film.
+    # RE-ROLL (2026-08-09, v1 rejected on eye-check): v1 bled a maroon/
+    # warm-red tint into the coil's underside -- a direct violation of
+    # SERPENT.md rule #3 (ink-blue ONLY, never warm) and it read as
+    # blood-adjacent right beside a raised heel, the worst possible
+    # place for that failure. Hardened with a uniform-cool-wash positive
+    # instruction (not just a negation) plus an explicit reddish-tint ban.
+    ("s49_head_crush", STYLE, "serpent",
+     f"Shot ALONG the dust, GROUND-LEVEL, the camera resting on the "
+     f"bare ground looking across it: {SERPENT.split('.')[0]} -- belly "
+     f"pressed flat to the dust (post-curse posture, no coiling, no "
+     f"rearing). Every part of its body -- back, sides, AND underside "
+     f"alike -- is a single uniform cool slate-blue-grey ink wash, "
+     f"perfectly even judgment coloring with no other hue mixed in "
+     f"anywhere on the scales, never gold, never warm, and CRITICALLY "
+     f"no maroon, no red, no pink, no warm reddish or brownish tint "
+     f"anywhere on its body, not even in shadow -- the underside stays "
+     f"the exact same cool grey-blue as the rest, no exceptions. Its "
+     f"head is low against the ground, LOWEST thing in the frame. "
+     f"Directly ABOVE the head, a bare human HEEL in dark silhouette, "
+     f"raised and held mid-air against the pale sky-field -- the frozen "
+     f"instant BEFORE it comes down. CRITICAL: the heel and the "
+     f"serpent's head DO NOT touch anywhere -- clear open air between "
+     f"them, no contact, no impact, no strike landed, no crushing "
+     f"shown, no blood, no gore, no red or warm color anywhere in the "
+     f"frame; the moment is stopped just before. No face, no body above "
+     f"the ankle. {FULLBLEED}"),
+    # s50: a GLORY beat -- "the lens kneels at glory" (s22, s50 per
+    # _PREFLIGHT.md E2 point 2), the deliberate inverse of the serpent
+    # rule. Reuses s51's own locked crucifixion conventions verbatim
+    # (wound-free cord-binding, dark-not-storm sky, gold-leaf edge) --
+    # chains jesus51 (the already-approved s51 render) for identity.
+    ("s50_that_is_the_cross", STYLE, "jesus,jesus51",
+     f"VERY WIDE establishing shot, LOW angle looking UP the rising "
+     f"ground of a bare rocky hill -- the camera kneels at the base of "
+     f"the slope, foreground rocks and dust large along the bottom "
+     f"edge so the upward angle reads unmistakably: at the crest, high "
+     f"in the frame and small with distance, a single plain wooden "
+     f"cross, and upon it {JESUS.split('.')[0]} -- the SAME man as the "
+     f"reference images -- head bowed, arms stretched along the "
+     f"crossbeam, each wrist bound to the wood with a plain undyed "
+     f"cord, hands loosely curled, low anatomical detail at this "
+     f"distance. Wound-free and restrained -- no visible wound, no "
+     f"blood, no graphic detail of any kind. The whole sky unnaturally "
+     f"DARK at midday, a flat heavy ink-wash stillness pressing down "
+     f"over the scene, NOT storm clouds, no lightning, no wind, no "
+     f"rain, no roiling shapes. No crowd, no other figures anywhere. A "
+     f"thin strip of gold leaf remains visible along one edge of the "
+     f"page (glory never fully absent, even here). {FULLBLEED}"),
+    # s54: the LIE of the frame -- the serpent shown only as its own
+    # cast SHADOW (never the drawn creature, per SERPENT.md's ban on a
+    # "fought-and-defeated pose") huge and near; Christ small, far,
+    # silhouette only. Goes to Seedance (calm state-only "shadow
+    # deepens"), not Kling -- lower blood-hallucination risk than s48
+    # since nothing wound-adjacent is in frame at all.
+    ("s54_seeming_win", STYLE, "serpent,jesus51",
+     f"DEEP-STAGED wide shot, EYE-LEVEL, strong near-to-far depth: "
+     f"dominating the near FOREGROUND at the left, huge and close to "
+     f"the camera, the dark SHADOW-MASS of a risen serpent coil -- not "
+     f"the drawn creature itself but its cast shadow-shape, a flat "
+     f"ink-blue-black silhouette of coiled loops, its flat head-shape "
+     f"lying distinctly on open dusty ground at the shadow's leading "
+     f"edge with clear empty ground around it, no scales, no eyes, no "
+     f"face detail, never gold, never warm. Far beyond, across a long "
+     f"stretch of empty ground, small and distant at the upper right, "
+     f"a plain wooden cross stands on rising ground, the figure upon it "
+     f"read only as a dark distant silhouette with bowed head (the SAME "
+     f"bowed pose as the reference image), no detail, no wounds "
+     f"visible. The staging itself tells the lie: the enemy's shadow "
+     f"enormous and near, the cross small and far. The sky a flat heavy "
+     f"unnatural midday darkness, NOT storm clouds, no lightning. A "
+     f"thin strip of gold leaf remains visible along one edge of the "
+     f"page. {FULLBLEED}"),
 ]
 
 

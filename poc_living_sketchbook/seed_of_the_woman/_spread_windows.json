@@ -6,7 +6,7 @@
   "start": 0.0,
   "end": 5.44,
   "dur": 5.44,
-  "mode": "dramatic_spotlight",
+  "mode": "hunt_and_lock",
   "clip_dur": null
  },
  {
@@ -450,6 +450,56 @@
   "clip_dur": null
  },
  {
+  "num": 46,
+  "name": "s46_look_again",
+  "beat": 6,
+  "start": 321.28,
+  "end": 328.14,
+  "dur": 6.86,
+  "mode": "candle_only",
+  "clip_dur": null
+ },
+ {
+  "num": 47,
+  "name": "s47_two_wounds_card",
+  "beat": 6,
+  "start": 328.14,
+  "end": 333.53,
+  "dur": 5.39,
+  "mode": "verse_card",
+  "clip_dur": null
+ },
+ {
+  "num": 48,
+  "name": "s48_heel_strike",
+  "beat": 6,
+  "start": 333.53,
+  "end": 340.35,
+  "dur": 6.82,
+  "mode": "fwd_drift",
+  "clip_dur": 5.041667
+ },
+ {
+  "num": 49,
+  "name": "s49_head_crush",
+  "beat": 6,
+  "start": 340.35,
+  "end": 346.68,
+  "dur": 6.33,
+  "mode": "dramatic_spotlight",
+  "clip_dur": null
+ },
+ {
+  "num": 50,
+  "name": "s50_that_is_the_cross",
+  "beat": 6,
+  "start": 346.68,
+  "end": 352.47,
+  "dur": 5.79,
+  "mode": "hunt_and_lock",
+  "clip_dur": null
+ },
+ {
   "num": 51,
   "name": "s51_bearing_wages",
   "beat": 6,
@@ -458,5 +508,45 @@
   "dur": 5.96,
   "mode": "fwd_drift",
   "clip_dur": 4.041667
+ },
+ {
+  "num": 52,
+  "name": "s52_judgment_on_him",
+  "beat": 6,
+  "start": 358.43,
+  "end": 364.1,
+  "dur": 5.67,
+  "mode": "bespoke",
+  "clip_dur": null
+ },
+ {
+  "num": 53,
+  "name": "s53_through_death_card",
+  "beat": 6,
+  "start": 364.1,
+  "end": 370.8,
+  "dur": 6.7,
+  "mode": "verse_card",
+  "clip_dur": null
+ },
+ {
+  "num": 54,
+  "name": "s54_seeming_win",
+  "beat": 6,
+  "start": 370.8,
+  "end": 377.76,
+  "dur": 6.96,
+  "mode": "fwd_drift",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 55,
+  "name": "s55_the_inversion",
+  "beat": 6,
+  "start": 377.76,
+  "end": 384.92,
+  "dur": 7.16,
+  "mode": "shadow_sweep",
+  "clip_dur": null
  }
 ]

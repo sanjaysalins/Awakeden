@@ -223,6 +223,40 @@ JOBS = [
      "nothing shifts, no figure moves. Only: the camera moves closer "
      "and slightly upward, and the gold light grows very slightly "
      "warmer as it is approached. Nothing else changes."),
+    # batch 6 (2026-08-09, spreads 46-55, "the crushing") -- device table
+    # per _PREFLIGHT.md. s48 is the one sanctioned action-serpent frame
+    # (Kling, the locked action-panel animator); the still ALREADY shows
+    # the strike at contact, so the clip must hold that exact moment, not
+    # complete or extend it -- per memory [[living-light-no-fresh-blood]]
+    # (Kling reliably regenerates/invents blood near wound-adjacent
+    # content, 5/5 + 3/3 reject history on a sibling project), an explicit
+    # no-blood/no-new-mark line is added on TOP of the standard LOCK, not
+    # trusted to the generic wording alone.
+    ("s48_heel_strike", "kling", 5,
+     PAGE + LOCK +
+     "The serpent and the heel hold their EXACT positions, exactly as "
+     "drawn -- the jaws do not close further, the heel does not move or "
+     "flinch, no bite completes, no new contact occurs beyond what is "
+     "already drawn. CRITICAL: no blood, no red mark, no wound, no new "
+     "color of any kind ever appears anywhere in the clip -- the skin "
+     "and the serpent's scales stay exactly as painted, first frame to "
+     "last. Only: the loose dust and small stones on the ground shift "
+     "and settle very slightly. Nothing else changes."),
+    # s54: calm state-only "shadow deepens" per the device table -- the
+    # coil is ALREADY a risen shadow-mass in the still (not a creature),
+    # so the only legal motion is that shadow reading very slightly
+    # darker/denser as the moment holds, matching s52's own wash-retreat
+    # companion beat. Seedance, not Kling -- nothing wound-adjacent in
+    # frame at all, but kept on the calm-content provider regardless.
+    ("s54_seeming_win", "seedance", 4,
+     PAGE + LOCK +
+     "The shadow-mass of the coiled serpent and the small distant cross "
+     "both hold their EXACT shapes and positions, perfectly still -- "
+     "neither moves, grows, or shifts shape at all. Only: the shadow-mass "
+     "reads very slightly darker and denser as the moment holds, and the "
+     "unnatural midday darkness in the sky presses very slightly heavier. "
+     "Nothing else changes -- no storm, no lightning, no wind, no new "
+     "shape ever appears."),
 ]
 
 

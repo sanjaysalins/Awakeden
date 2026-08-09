@@ -1247,6 +1247,270 @@ def build_s45(dest, duration, doa):
     _shutil.rmtree(frames)
 
 
+# ---------------------------------------------------------- batch 6 (2026-08-09, spreads 46-55)
+
+def build_s46(dest, duration, doa):
+    """Local flame-flicker ($0) -- a small warm glow breathes ONLY on the
+    lamp's own drawn flame; everything else in the frame (including the
+    page region s47's text overlay needs byte-static) is untouched.
+    REJECTED v1 (caught on eye-check, not shipped): candle_only.
+    apply_candle's radial light-BUDGET crushed the entire desk to near-
+    black outside a ~50px radius (COLD_GAIN=0.16) -- that module is built
+    for a tiny point-of-light accent in an already-dark scene (its own
+    proven case, s09, is a single gold fleck), not for lighting an entire
+    medium desk shot. This is a plain additive glow instead, reusing only
+    candle_only's flicker_R curve for the breathing rhythm. Anchor
+    measured via bbox_sheet.py against the actual rendered still."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import candle_only  # noqa: E402 -- reused only for its flicker_R curve
+    still = STILLS / "s46_look_again.png"
+    poc_devices = load_devices_here()
+    anchor_frac = poc_devices.DEVICE_ASSIGNMENTS["s46_look_again"]["params"]["anchor_frac"]
+    ax, ay = anchor_frac[0] * W, anchor_frac[1] * H
+    src = np.asarray(Image.open(still).convert("RGB").resize((W, H), Image.LANCZOS), dtype=np.float32)
+    yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+    dist = np.sqrt((xx - ax) ** 2 + (yy - ay) ** 2)
+    # FROZEN-SPREAD fix (2026-08-09): a 90px/amplitude=0.35 glow only
+    # touched a tiny fraction of the 1920x1080 frame -- p95=0.018, the
+    # same "too-thin-to-register" class of miss as this episode's thread-
+    # device spreads (s21/s25/s37/s45). Widened radius + strength; still
+    # local to the lamp, nowhere near s47's page region.
+    glow_mask = np.clip(1.0 - dist / 170.0, 0.0, 1.0) ** 2
+    base_curve = lambda t: 1.0  # noqa: E731 -- flat: breathing comes from flicker_R's own noise
+    flick = candle_only.flicker_R(base_curve, seed=460, amplitude=0.6)
+    n = max(1, int(round(duration * FPS)))
+    frames = dest.parent / (dest.stem + "_frames")
+    frames.mkdir(parents=True, exist_ok=True)
+    for i in range(n):
+        t = i / FPS
+        strength = max(0.0, flick(t)) * 130.0
+        boost = glow_mask * strength
+        arr = np.clip(src + boost[..., None] * np.array([1.0, 0.75, 0.35], np.float32), 0, 255).astype(np.uint8)
+        Image.fromarray(arr).save(frames / f"f{i:05d}.png")
+    _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(FPS), "-i", str(frames / "f%05d.png"),
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", str(dest)])
+    import shutil as _shutil
+    _shutil.rmtree(frames)
+
+
+def build_s47(dest, duration, doa):
+    """Scribed Ink composite, $0 -- Gen 3:15b re-study over s46's OWN
+    already-rendered desk art (not a new render), page-full per the
+    camera table. Red-letter (RUBRIC): the LORD's own Gen 3:14-15 speech
+    restudied, same voice as s22's card."""
+    bg = STILLS / "s46_look_again.png"
+    cropped = SEG_DIR / "_s47_bg_crop.png"
+    _run(["ffmpeg", "-y", "-v", "error", "-i", str(bg), "-vf",
+          f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},"
+          f"boxblur=1:1,eq=brightness=0.03", "-frames:v", "1", str(cropped)])
+    poc_devices = load_devices_here()
+    card = poc_devices.VERSE_CARDS["s47_two_wounds_card"]
+    lines = card["lines"]
+
+    line_imgs = [render_line_png(line, seed=470 + i, ink=RUBRIC) for i, line in enumerate(lines)]
+    y = int(H * 0.35)
+    positions = []
+    for im in line_imgs:
+        x = int((W - im.width) / 2)
+        positions.append((x, y))
+        y += im.height + 20
+
+    inputs = ["-loop", "1", "-i", str(cropped)]
+    filt_parts = []
+    last = "0:v"
+    press_start, press_gap, press_fade = 0.5, 1.1, 0.5
+    for i, (im, (x, y)) in enumerate(zip(line_imgs, positions)):
+        p = SEG_DIR / f"_s47_line{i}.png"
+        im.save(p)
+        inputs += ["-loop", "1", "-i", str(p)]
+        idx = i + 1
+        t0 = press_start + i * press_gap
+        faded, label = f"f{idx}", f"v{idx}"
+        filt_parts.append(f"[{idx}:v]format=rgba,fade=t=in:st={t0:.2f}:d={press_fade}:alpha=1[{faded}]")
+        filt_parts.append(f"[{last}][{faded}]overlay=0+{x}:0+{y}:enable='gte(t,{t0:.2f})'[{label}]")
+        last = label
+    filt = ";".join(filt_parts)
+    _run(["ffmpeg", "-y", "-v", "error", *inputs, "-t", f"{duration:.3f}",
+          "-filter_complex", filt, "-map", f"[{last}]",
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(FPS), str(dest)])
+    cropped.unlink(missing_ok=True)
+    for i in range(len(lines)):
+        (SEG_DIR / f"_s47_line{i}.png").unlink(missing_ok=True)
+
+
+def build_s49(dest, duration, doa):
+    """dramatic_spotlight ($0) -- a soft light pulse over the whole
+    frozen standoff (raised heel above, serpent's head below), bbox
+    spanning both per _PREFLIGHT.md's own device note. No camera move,
+    no paid animator, on purpose -- the highest doctrinal-stakes frame
+    in the film (SERPENT.md rule #6: the head-crush is NEVER an impact
+    frame, freeze the instant before)."""
+    still = STILLS / "s49_head_crush.png"
+    poc_devices = load_devices_here()
+    bbox = poc_devices.DEVICE_ASSIGNMENTS["s49_head_crush"]["params"]["bbox"]
+    doa._spotlight_family("dramatic_spotlight", still, dest, duration, bbox)
+
+
+def build_s50(dest, duration, doa):
+    """hunt_and_lock ($0 real camera push) toward the crucified figure,
+    combined with a slow darkness-deepen luminance ramp -- a GLORY beat
+    ("the lens kneels," _PREFLIGHT.md E2 point 2), flipped from the
+    original plan's paid Seedance clip (batch-6 quote) to avoid any risk
+    of a generative animator inventing storm-cloud motion on this film's
+    "darkness, never storm" sky. Target measured via bbox_sheet.py
+    against the actual rendered still."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import hunt_and_lock  # noqa: E402
+    still = STILLS / "s50_that_is_the_cross.png"
+    poc_devices = load_devices_here()
+    target_frac = tuple(poc_devices.DEVICE_ASSIGNMENTS["s50_that_is_the_cross"]["params"]["target_frac"])
+    src = Image.open(still).convert("RGB")
+    big = hunt_and_lock.scale_crop(src, int(W * hunt_and_lock.UPSCALE), int(H * hunt_and_lock.UPSCALE))
+    bw, bh = big.size
+    n = max(1, int(round(duration * FPS)))
+    frames = dest.parent / (dest.stem + "_frames")
+    frames.mkdir(parents=True, exist_ok=True)
+    for i in range(n):
+        t = i / FPS
+        x0, y0, vw, vh, _lock_prog, _wxy = hunt_and_lock.hunt_window(bw, bh, t, duration, target_frac, W, H)
+        frame = big.crop((x0, y0, x0 + vw, y0 + vh)).resize((W, H), Image.LANCZOS)
+        gain = 1.0 - 0.12 * (t / duration)  # darkness thickens very slightly across the hold
+        arr = (np.asarray(frame, dtype=np.float32) * gain).clip(0, 255).astype(np.uint8)
+        Image.fromarray(arr).save(frames / f"f{i:05d}.png")
+    _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(FPS), "-i", str(frames / "f%05d.png"),
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", str(dest)])
+    import shutil as _shutil
+    _shutil.rmtree(frames)
+
+
+def build_s52(dest, duration, doa):
+    """wash-creep RETREAT ($0) over s50's OWN already-rendered art (not a
+    new render) -- the dark sky isolated as the "storm wash," retreating
+    to reveal more of the hillside as the moment holds; its last trace
+    naturally lingers nearest the cross, per the still's own composition
+    (mirror of s14's ADVANCE -- the payoff planted when s14 was built,
+    per that function's own docstring)."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import wash_creep  # noqa: E402
+    base = wash_creep.scale_crop(Image.open(STILLS / "s50_that_is_the_cross.png").convert("RGB"), W, H)
+    mask = wash_creep.isolate_storm_wash(base)
+    n = max(1, int(round(duration * wash_creep.FPS)))
+    ADVANCE_MAX_LOCAL = 30.0
+    plan = [(ADVANCE_MAX_LOCAL - wash_creep._ease(i / max(1, n - 1)) * (2 * ADVANCE_MAX_LOCAL), False)
+            for i in range(n)]
+    frames = dest.parent / (dest.stem + "_frames")
+    frames.mkdir(parents=True, exist_ok=True)
+    for i, (advance_px, backrun) in enumerate(plan):
+        frame = wash_creep.apply_wash_creep(base, advance_px, mask=mask, backrun=backrun)
+        frame.save(frames / f"f{i:05d}.png")
+    _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(wash_creep.FPS),
+          "-i", str(frames / "f%05d.png"),
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(FPS), str(dest)])
+    import shutil as _shutil
+    _shutil.rmtree(frames)
+
+
+def build_s53(dest, duration, doa):
+    """Scribed Ink composite, $0 -- Heb 2:14b over s51's OWN already-
+    rendered art, re-framed (not a new render). NOT red-letter -- this is
+    the writer of Hebrews explaining Christ, not the LORD's own first-
+    person voice (contrast s47/s22).
+    REDESIGNED (2026-08-09, v1 rejected on eye-check): the original
+    "letters in the dark sky field" plan assumed a wide open-sky margin
+    like s51's own full still, but this close reverent crop leaves almost
+    no clear sky -- v1's text landed directly across Christ's face,
+    illegible against His hair. Fixed with make_ink_assets.torn_band's
+    standard parchment-caption-band technique (CLAUDE.md's own default
+    text treatment): a real opaque parchment patch positioned across the
+    crossbeam/rope area at the TOP of frame (busy wood/rope, not His
+    face), guaranteeing legibility regardless of what's behind it."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import make_ink_assets  # noqa: E402
+    bg = STILLS / "s51_bearing_wages.png"
+    cropped = SEG_DIR / "_s53_bg_crop.png"
+    _run(["ffmpeg", "-y", "-v", "error", "-i", str(bg), "-vf",
+          f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},"
+          f"boxblur=1:1,eq=brightness=-0.04", "-frames:v", "1", str(cropped)])
+    band_path = SEG_DIR / "_s53_band.png"
+    if not band_path.exists():
+        make_ink_assets.torn_band(w=1750, h=280, out=str(band_path))
+    band = Image.open(band_path).convert("RGBA")
+    base = Image.open(cropped).convert("RGBA")
+    base.alpha_composite(band, (int(W * 0.045), 24))
+    base.convert("RGB").save(cropped)
+    poc_devices = load_devices_here()
+    card = poc_devices.VERSE_CARDS["s53_through_death_card"]
+    lines = card["lines"]
+
+    line_imgs = [render_line_png(line, seed=530 + i) for i, line in enumerate(lines)]
+    x0 = int(W * 0.075)
+    y = int(H * 0.06)
+    positions = []
+    for im in line_imgs:
+        positions.append((x0, y))
+        y += im.height + 14
+
+    inputs = ["-loop", "1", "-i", str(cropped)]
+    filt_parts = []
+    last = "0:v"
+    press_start, press_gap, press_fade = 0.4, 0.9, 0.4
+    for i, (im, (x, y)) in enumerate(zip(line_imgs, positions)):
+        p = SEG_DIR / f"_s53_line{i}.png"
+        im.save(p)
+        inputs += ["-loop", "1", "-i", str(p)]
+        idx = i + 1
+        t0 = press_start + i * press_gap
+        faded, label = f"f{idx}", f"v{idx}"
+        filt_parts.append(f"[{idx}:v]format=rgba,fade=t=in:st={t0:.2f}:d={press_fade}:alpha=1[{faded}]")
+        filt_parts.append(f"[{last}][{faded}]overlay=0+{x}:0+{y}:enable='gte(t,{t0:.2f})'[{label}]")
+        last = label
+    filt = ";".join(filt_parts)
+    _run(["ffmpeg", "-y", "-v", "error", *inputs, "-t", f"{duration:.3f}",
+          "-filter_complex", filt, "-map", f"[{last}]",
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(FPS), str(dest)])
+    cropped.unlink(missing_ok=True)
+    for i in range(len(lines)):
+        (SEG_DIR / f"_s53_line{i}.png").unlink(missing_ok=True)
+
+
+def build_s55(dest, duration, doa):
+    """Bespoke shadow-sweep ($0), E6-I -- the SAME still as s54 (a held
+    device, not a new render): the cross-beam's own shadow travels from
+    the cross's position onto the serpent's shadow-head and holds there.
+    No new content, no impact, no strike, no gore -- the shadow of the
+    cross IS the crushing (SERPENT.md rule #6: the narration's own
+    theology does the visual work, not a literal strike). Endpoints
+    measured via bbox_sheet.py against the actual rendered still."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import hunt_and_lock  # noqa: E402 -- reused only for its ease() curve
+    poc_devices = load_devices_here()
+    params = poc_devices.DEVICE_ASSIGNMENTS["s55_the_inversion"]["params"]
+    cross_frac, head_frac = params["cross_frac"], params["head_frac"]
+    base = Image.open(STILLS / "s54_seeming_win.png").convert("RGB").resize((W, H), Image.LANCZOS)
+    base_arr = np.asarray(base, dtype=np.float32)
+    cx, cy = cross_frac[0] * W, cross_frac[1] * H
+    hx, hy = head_frac[0] * W, head_frac[1] * H
+    yy, xx = np.mgrid[0:H, 0:W]
+    xx, yy = xx.astype(np.float32), yy.astype(np.float32)
+    n = max(1, int(round(duration * FPS)))
+    sweep_dur = duration * 0.55
+    radius = 130.0
+    frames = dest.parent / (dest.stem + "_frames")
+    frames.mkdir(parents=True, exist_ok=True)
+    for i in range(n):
+        t = i / FPS
+        k = hunt_and_lock.ease(min(1.0, t / sweep_dur))
+        lead_x, lead_y = cx + (hx - cx) * k, cy + (hy - cy) * k
+        dist = np.sqrt((xx - lead_x) ** 2 + (yy - lead_y) ** 2)
+        darken = np.clip(1.0 - dist / radius, 0.0, 1.0) * 0.55 * k
+        arr = base_arr * (1.0 - darken[..., None])
+        Image.fromarray(arr.clip(0, 255).astype(np.uint8)).save(frames / f"f{i:05d}.png")
+    _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(FPS), "-i", str(frames / "f%05d.png"),
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", str(dest)])
+    import shutil as _shutil
+    _shutil.rmtree(frames)
+
+
 SEGMENT_BUILDERS = {
     "s01_something_wrong": lambda dest, dur, doa: build_s01(dest, dur, doa),
     "s02_the_hiding": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s02_the_hiding.mp4"),
@@ -1299,6 +1563,18 @@ SEGMENT_BUILDERS = {
     "s43_under_your_feet": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s43_under_your_feet.mp4"),
     "s44_stands_on_one": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s44_stands_on_one.mp4", play_dur=5.0),
     "s45_eden_to_cross": lambda dest, dur, doa: build_s45(dest, dur, doa),
+    # batch 6 (2026-08-09, spreads 46-55, "the crushing")
+    "s46_look_again": lambda dest, dur, doa: build_s46(dest, dur, doa),
+    "s47_two_wounds_card": lambda dest, dur, doa: build_s47(dest, dur, doa),
+    "s48_heel_strike": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s48_heel_strike.mp4"),
+    "s49_head_crush": lambda dest, dur, doa: build_s49(dest, dur, doa),
+    "s50_that_is_the_cross": lambda dest, dur, doa: build_s50(dest, dur, doa),
+    # s51_bearing_wages already wired above (out-of-order anchor, built
+    # 2026-08-07) -- not re-listed here to avoid a duplicate dict key.
+    "s52_judgment_on_him": lambda dest, dur, doa: build_s52(dest, dur, doa),
+    "s53_through_death_card": lambda dest, dur, doa: build_s53(dest, dur, doa),
+    "s54_seeming_win": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s54_seeming_win.mp4"),
+    "s55_the_inversion": lambda dest, dur, doa: build_s55(dest, dur, doa),
 }
 
 SOURCE_FILES = {
@@ -1348,6 +1624,16 @@ SOURCE_FILES = {
     "s43_under_your_feet": [CLIPS / "s43_under_your_feet.mp4"],
     "s44_stands_on_one": [CLIPS / "s44_stands_on_one.mp4"],
     "s45_eden_to_cross": [STILLS / "s45_eden_to_cross.png"],
+    # batch 6 (2026-08-09, spreads 46-55)
+    "s46_look_again": [STILLS / "s46_look_again.png", HERE / "_devices.py"],
+    "s47_two_wounds_card": [STILLS / "s46_look_again.png", HERE / "_devices.py"],
+    "s48_heel_strike": [CLIPS / "s48_heel_strike.mp4"],
+    "s49_head_crush": [STILLS / "s49_head_crush.png", HERE / "_devices.py"],
+    "s50_that_is_the_cross": [STILLS / "s50_that_is_the_cross.png", HERE / "_devices.py"],
+    "s52_judgment_on_him": [STILLS / "s50_that_is_the_cross.png"],
+    "s53_through_death_card": [STILLS / "s51_bearing_wages.png", HERE / "_devices.py"],
+    "s54_seeming_win": [CLIPS / "s54_seeming_win.mp4"],
+    "s55_the_inversion": [STILLS / "s54_seeming_win.png", HERE / "_devices.py"],
 }
 
 

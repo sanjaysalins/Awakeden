@@ -40,6 +40,28 @@ VERSE_CARDS = {
             [("and above every beast of the field.", BODY_SIZE)],
         ],
     },
+    # batch 6 (2026-08-09). Gen 3:15b KJV verbatim (matches narration.md
+    # line 53), the LORD's own Gen 3:14-15 speech restudied -- red-letter,
+    # same voice as s22's card, per the locked "red-letter speaker = the
+    # speaker" rule.
+    "s47_two_wounds_card": {
+        "combo": "A",
+        "lines": [
+            [("it shall bruise thy head,", BODY_SIZE)],
+            [("and thou shalt bruise his heel.", BODY_SIZE)],
+        ],
+    },
+    # Heb 2:14b KJV verbatim (matches narration.md line 55) -- the writer
+    # of Hebrews explaining Christ, NOT the LORD's own first-person voice
+    # -- NOT red-letter, contrast s47/s22.
+    "s53_through_death_card": {
+        "combo": "A",
+        "lines": [
+            [("that through death he might destroy him", BODY_SIZE)],
+            [("that had the power of death,", BODY_SIZE)],
+            [("that is, the devil.", BODY_SIZE)],
+        ],
+    },
 }
 
 # s22_promise_card (Illuminated Rubric, Gen 3:15 full verse, red-letter --
@@ -75,7 +97,17 @@ DEVICE_ASSIGNMENTS = {
     # through render_device()/hunt_and_lock -- real-clip spreads (s02, s04,
     # s06) have no entry here, matching how s02 was already correctly
     # absent.
-    "s01_something_wrong": {"device": "dramatic_spotlight", "scope": "full", "params": {}},
+    # RETUNED (2026-08-09, hero-stills cinematic pass): build_s01() no
+    # longer dispatches through doa._spotlight_family (a light-pulse-only
+    # treatment with zero real camera motion, the exact defect the pass
+    # caught) -- it now runs a hunt_and_lock push directly, target_frac
+    # hardcoded in the function to match this entry (measured via
+    # bbox_sheet.py against the redesigned still, couple at ~63%,58%).
+    # Kept here, updated not deleted, so this dict stays an accurate
+    # record of what's actually built (per the s04 mismatch lesson noted
+    # below).
+    "s01_something_wrong": {"device": "hunt_and_lock", "scope": "full",
+                             "params": {"target_frac": [0.64, 0.60]}},
     # key matches _spread_table.py's canonical spread-16 name ("Now watch
     # closely" -- the underlying still file keeps its original descriptive
     # filename, s16_sentencing_tableau.png, only the dict key changed
@@ -129,6 +161,31 @@ DEVICE_ASSIGNMENTS = {
     "s25_promise_in_curse": {"device": "thread_device_gleam", "scope": "full",
                               "params": {"p0_frac": [0.20, 0.92], "p1_frac": [0.55, -0.05],
                                          "swell_time": 3.2, "width": 20}},
+    # batch 6 (2026-08-09, spreads 46-55) -- all params measured via
+    # panel_animator/bbox_sheet.py against the actual rendered stills.
+    "s46_look_again": {"device": "candle_only", "scope": "full",
+                        "params": {"anchor_frac": [0.355, 0.33]}},
+    # s49: dramatic_spotlight bbox spans the vertical gap between the
+    # raised heel and the serpent's head -- one soft light pulse on the
+    # whole frozen standoff, not a multi-region tour (the still IS the
+    # whole point; no camera move on the film's highest-doctrinal-stakes
+    # frame, per SERPENT.md rule #6).
+    "s49_head_crush": {"device": "dramatic_spotlight", "scope": "full",
+                        "params": {"bbox": [33, 8, 32, 60]}},
+    # s50: hunt_and_lock push toward the crucified figure (a GLORY beat,
+    # "the lens kneels" -- _PREFLIGHT.md E2 point 2) + a $0 darkness-
+    # deepen ramp layered on build_s50() itself, flipped from the
+    # original plan's paid Seedance per the batch-6 quote (avoids any
+    # risk of a generative animator inventing storm-cloud motion on the
+    # film's "darkness, never storm" sky).
+    "s50_that_is_the_cross": {"device": "hunt_and_lock", "scope": "full",
+                               "params": {"target_frac": [0.62, 0.16]}},
+    # s55: bespoke shadow-sweep (E6-I) -- the cross-beam's shadow travels
+    # from its own position onto the serpent's shadow-head and holds,
+    # over s54's identical still. Not a shared device module (this is a
+    # one-off compositional beat), params live directly in build_s55().
+    "s55_the_inversion": {"device": "shadow_sweep", "scope": "full",
+                           "params": {"cross_frac": [0.815, 0.20], "head_frac": [0.565, 0.635]}},
 }
 
 SPECIAL_CARDS_LANDING = {}  # s05 handled by its own bespoke render, not a table entry
