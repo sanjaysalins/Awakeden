@@ -46,7 +46,7 @@
 <tr><td>0:19.1</td><td>The cross, crane-rise</td><td>real camera crane (Kling)</td></tr>
 <tr><td>0:21.4</td><td>The empty tomb (trimmed to 0.5s — see fix note below)</td><td>real camera push (Seedance)</td></tr>
 <tr><td>0:21.9</td><td>Quick-cut montage of the film's own imagery, held on the closing tree/cross shot</td><td>$0 recut + $0 freeze-hold</td></tr>
-<tr><td>0:27.0</td><td>Title: "The Seed of the Woman"</td><td>$0 hand lettering + hold</td></tr>
+<tr><td>0:27.0</td><td>Title: "The Seed of the Woman" — over the film's own "eden to cross" still, not a blank card</td><td>$0 hand lettering + hold</td></tr>
 </table>
 
 <h2>Real problems caught along the way</h2>
@@ -56,6 +56,7 @@
 <li>Every other human/creature shot was either distant enough that identity drift doesn't read (the sentencing, the cross) or non-human (the fruit, the shadow) — those were left as real paid motion since the risk genuinely doesn't apply there.</li>
 <li>Hit a run of transient Higgsfield API timeouts mid-batch — not content rejections, just slow responses. Cost some real retry spend (~$0.90) figuring that out, tracked honestly in the ledger.</li>
 <li><b>Follow-up fix (next session):</b> you caught a real AI motion glitch in the tomb doorway around 0:22 — a subtle geometric wobble reading as "gate opening and closing." Confirmed by frame-by-frame and frame-difference analysis: the wobble's real onset is ~0.55-0.7s into that clip; the first 0.5s is clean. Fixed with a $0 trim (cut S10 to its clean first 0.5s) rather than a re-render — no new paid spend. The removed 1.7s was recovered by holding the montage's own closing tree/cross frame a little longer, so the total trailer length and narration sync are unchanged.</li>
+<li><b>Second follow-up:</b> you flagged the closing title card as a blank black screen. Rebuilt it over the film's own <code>s45_eden_to_cross.png</code> hero still (the same image the montage already lands on, so the title fades in as a continuation rather than a cut to black) with a dark vertical scrim behind the text band for legibility. $0, no new render.</li>
 </ul>
 
 </body>

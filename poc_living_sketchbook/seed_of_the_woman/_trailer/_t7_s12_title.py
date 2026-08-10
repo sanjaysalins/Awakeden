@@ -1,7 +1,9 @@
 """S12 ($0): the title card -- "The Seed of the Woman" arrives WHOLE (LAW
-1, not letter-by-letter), $0 hand-lettering over dark aged paper, with a
-gold underline flare, then a still hold before the hard cut into the
-film's own s01 opening."""
+1, not letter-by-letter), $0 hand-lettering over the film's own "eden to
+cross" hero still (not a blank card -- the same image the montage lands
+on, so the cut into the title is a continuation, not a jump to black),
+with a gold underline flare, then a still hold before the hard cut into
+the film's own s01 opening."""
 import subprocess
 from pathlib import Path
 
@@ -12,17 +14,35 @@ W, H, FPS = 1920, 1080, 30
 DURATION = 2.6
 HERE = Path(__file__).resolve().parent
 dest = HERE / "clips" / "t_s12_title.mp4"
+BG_STILL = HERE.parent / "stills" / "s45_eden_to_cross.png"
 
 F_KEEPER = "C:/Windows/Fonts/Inkfree.ttf"
 GOLD = (185, 146, 74)
-INK = (238, 224, 200)  # light ink on dark paper
+INK = (238, 224, 200)  # light ink, held legible by the scrim below
 
-# dark aged-paper background (same tone family as the earlier overture work)
-bg = np.full((H, W, 3), (18, 15, 13), dtype=np.uint8).astype(np.float32)
-rng = np.random.default_rng(11)
-bg += rng.normal(0, 2.2, (H, W, 1))
-bg = bg.clip(0, 255).astype(np.uint8)
-base = Image.fromarray(bg).convert("RGB")
+# the film's own eden-to-cross still, cover-scaled + center-cropped to
+# 1920x1080 (same convention as every other trailer beat), then a dark
+# vertical scrim (strongest across the text band, fading at top/bottom)
+# so the hand-lettering stays legible without hiding the art
+still = Image.open(BG_STILL).convert("RGB")
+sw, sh = still.size
+scale = max(W / sw, H / sh)
+still = still.resize((round(sw * scale), round(sh * scale)), Image.LANCZOS)
+sw, sh = still.size
+left, top = (sw - W) // 2, (sh - H) // 2
+still = still.crop((left, top, left + W, top + H))
+
+scrim = np.zeros((H, W), dtype=np.float32)
+yy = np.arange(H)
+band_center, band_half = H * 0.5, H * 0.30
+falloff = np.clip(1.0 - np.abs(yy - band_center) / band_half, 0.0, 1.0) ** 1.4
+scrim[:, :] = falloff[:, None] * 0.62
+scrim_rgba = np.zeros((H, W, 4), dtype=np.uint8)
+scrim_rgba[..., 3] = (scrim * 255).astype(np.uint8)
+scrim_img = Image.fromarray(scrim_rgba, mode="RGBA")
+base = still.convert("RGBA")
+base.alpha_composite(scrim_img)
+base = base.convert("RGB")
 
 font = ImageFont.truetype(F_KEEPER, 118)
 text = "The Seed of the Woman"
