@@ -1,5 +1,26 @@
 # STATE.md — progress tracker
 
+**2026-08-10 later still (Seed of the Woman LONG: the FILM ITSELF finished
+-- score+sfx+captions+watermark, $0, committed 9c599bf, PUSHED):** The
+71-spread film had only ever been silent (narration-only) preview builds;
+this pass ran the real finishing chain via `_finish_long.py`, replacing
+POC30's 5-spread validation `finish_config.py` stub (archived, its job
+done) with real per-episode content: SCORE reuses Day of Atonement's
+proven lonely->glory->sacred-rise 3-mood arc, swapped to the shorter `_b`
+takes of the first two moods so the landing's `sacred_grace_rise_b` gets
+real runway (~66% through itself vs ~34% with DoA's own takes, on this
+shorter 500.5s film) -- worth an EAR check, flagged to the user, not
+silently assumed perfect. outro_s=3.0 (current INV-26 standard, not DoA's
+older 2.5s). SFX_CUES: dawn/garden base bed + 7 event accents verified
+against sound_library's real inventory (no choir pad, per the locked
+rule). CAPTIONS.skip_spreads: all 13 baked-lettering spreads read
+directly off `_devices.py`'s own dicts. All 4 stages ran for real;
+`check_landing_hold.py` passes clean (v=503.53s a=503.57s). Spot-checked
+frames confirm no double-captioning, watermark placement, and the landing
+hold on the "found by Him" Christ still. **Not done:** Stage 5/6
+(upload/publish pack) is now the real next step. Full detail: RESUME.md
+top.
+
 **2026-08-10 later (Seed of the Woman LONG: trailer's two flagged defects
 fixed, committed (85276de, a1e92aa), PUSHED to origin/main):** Closed the
 one fix queued from the entry directly below (the tomb-doorway AI wobble

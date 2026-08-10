@@ -1,4 +1,36 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-10 LATEST (SEED OF THE WOMAN LONG:
+# THE FILM ITSELF IS NOW FINISHED -- score+sfx+captions+watermark, $0,
+# committed 9c599bf, PUSHED) — READ THIS FIRST, supersedes the "TRAILER
+# FULLY DONE" block right below (that block's own trailer-fix history is
+# still accurate; this is the next real milestone after it).
+#
+# ── ONE-LINE STATUS: every full-length build of this film until now was
+# silent (narration only) -- "PREVIEW" in every filename, no score/SFX/
+# captions/watermark. This pass ran the real finishing chain for the
+# first time. Finished file: poc_living_sketchbook/seed_of_the_woman/
+# SEEDOFTHEWOMAN_LONG_living_sketchbook_cc.mp4 (503.5s incl. the 3.0s
+# INV-26 landing hold, watermarked). The OLD stem-named POC30 test outputs
+# (which had squatted on this exact filename) are archived at
+# poc_living_sketchbook/seed_of_the_woman/_poc30_finish_test_archive/.
+#
+# ── ONE THING WORTH AN EAR CHECK (not silently assumed perfect): the
+# SCORE's 3rd movement (sacred_grace_rise_b, meant to carry the landing's
+# grace-climax) only gets ~66% of its own way through before the film's
+# own 500.5s runtime ends -- real math (see finish_config.py's own
+# comment), an improvement over the naive DoA-take swap (~34%) but still
+# short of DoA's own validated ~74%. Listen to the landing (~7:20 onward)
+# and confirm the grace swell actually lands before the outro fade --
+# if it doesn't, the fix is trying sacred_grace_rise_a (197.9s, shorter,
+# would get proportionally further through) or accepting a slightly
+# different mood combination.
+#
+# ── NOT DONE, the real next step: Stage 5/6 (upload metadata + publish
+# pack) for this now-finished film. Nothing else queued on the film.
+# Full detail of what was built and why: STATE.md's newest entry.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-10 LATER (SEED OF THE WOMAN LONG:
 # TRAILER FULLY DONE -- both queued/flagged fixes closed out, committed,
 # PUSHED to origin/main. Nothing open on the film or the trailer.) — READ
