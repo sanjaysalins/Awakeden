@@ -1,4 +1,47 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-10 CLOSED FOR THE DAY (trackers +
+# caption-burn sweep) — READ THIS FIRST, supersedes every block below.
+#
+# ── WHAT HAPPENED THIS SESSION (after the Seed of the Woman lock below):
+# 1. Built two local review pages (the old migration ledger only ever lived
+#    as a claude.ai artifact, now deleted -- these replace it for good):
+#    - STYLE_MIGRATION_TRACKER.html (repo root) -- full oil/ink/sketchbook
+#      inventory across every long, short, and Eyewitness episode.
+#    - SKETCHBOOK_REVIEW.html (repo root) -- 9 finished sketchbook pieces,
+#      playable inline (open from its real repo location; video paths are
+#      relative).
+# 2. Refreshed _UPLOAD_TRACKER.html (was stale since July 15 -- predates
+#    all the sketchbook work).
+# 3. Burned real ink captions onto 4 of 5 sketchbook shorts that were
+#    watermarked but never captioned: Storm, Two Goats, Jericho, At the
+#    Door. Same recipe proven on Bronze Serpent (_s6_captions.py), factored
+#    into a shared poc_living_sketchbook/_short_captions.py so it isn't
+#    re-copied per piece. Each output verified by eyeballing extracted
+#    frames, INCLUDING inside every on-screen-text skip window (verse
+#    cards / word-timed reveals / type-stamps) to confirm no double-text.
+#    New files (all committed, pushed):
+#      poc_living_sketchbook/_short_captions.py            (shared burner)
+#      poc_living_sketchbook/storm/_s7_captions.py       -> STORM_living_sketchbook_cc.mp4
+#      poc_living_sketchbook/two_goats/_g5_captions.py   -> TWO_GOATS_living_sketchbook_cc.mp4
+#      poc_living_sketchbook/jericho/_j6_captions.py     -> JERICHO_living_sketchbook_cc.mp4
+#      poc_castbible_look/episode_door/_e5_captions.py   -> AT_THE_DOOR_sketch_poc_cc.mp4
+#    (the rendered .mp4 outputs are gitignored, as usual -- only the
+#    scripts are tracked; re-run each script to rebuild its _cc.mp4)
+#
+# ── NOT DONE, next session starts here: Noah/The Builder (poc_castbible_look/
+# NOAH_THE_DOOR_castbible_poc.mp4) is the ONLY piece still missing captions.
+# Unlike the other 4, it has NO word-level timing at all -- poc_castbible_look/
+# audio/timing.json only has line-level start/end, no per-word "words" array.
+# Plan: run forced alignment (veed_io.aligner.forced_align_script -- the same
+# tool already used for the Seed of the Woman trailer, see _t12_build_words_json.py
+# for the pattern) against audio/narration.mp3 using the known line "text"
+# fields as the script, to get real word timing. Then write
+# poc_castbible_look/_captions.py (or similar) using the same shared
+# _short_captions.burn() and apply it. Also check _04_assemble.py for any
+# on-screen text overlay windows to skip (didn't check yet).
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-10 LOCKED (SEED OF THE WOMAN LONG,
 # film + trailer -- the user's own words: "lock it") — READ THIS FIRST,
 # supersedes every block below. This episode's own production work is

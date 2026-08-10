@@ -1,5 +1,19 @@
 # STATE.md — progress tracker
 
+**2026-08-10 Trackers rebuilt + 4/5 sketchbook shorts captioned:**
+Built two local review pages, both committed to repo root (the old migration
+ledger was artifact-only and is now gone, so these replace it for good):
+`STYLE_MIGRATION_TRACKER.html` (full oil/ink/sketchbook inventory) and
+`SKETCHBOOK_REVIEW.html` (9 finished pieces, playable inline). Refreshed the
+stale `_UPLOAD_TRACKER.html` (hadn't been rebuilt since July 15). Then burned
+real ink captions onto Storm, Two Goats, Jericho, and At the Door -- all four
+were watermarked but had never been through a caption pass. Reused the Bronze
+Serpent recipe via a new shared `poc_living_sketchbook/_short_captions.py`.
+Every output verified by eye, including inside each on-screen-text skip
+window. Noah/The Builder is the one piece still left -- it has no word-level
+timing at all, needs a forced-alignment pass first. See RESUME.md's top
+handover block for the exact next-session plan.
+
 **2026-08-10 LOCKED (Seed of the Woman LONG, film + cold-open trailer):**
 User said "lock it" after the caption fix rebuild. Final approved deliverable:
 `poc_living_sketchbook/seed_of_the_woman/SEEDOFTHEWOMAN_LONG_WITH_TRAILER.mp4`
