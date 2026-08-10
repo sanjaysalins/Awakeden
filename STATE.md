@@ -1,5 +1,37 @@
 # STATE.md — progress tracker
 
+**2026-08-10 truly latest (Seed of the Woman LONG: PUBLISHED -- Stage 6 pack
+built, GREEN gate, committed 64f4a58, PUSHED):** Ran `/publish`. Found a real
+gap: `pipeline/upload_engine.py`/`finality.py` had never been wired for the
+living-sketchbook long-form layout (`poc_living_sketchbook/<slug>/`) -- only
+shorts and the older "inked" `visual_16x9_inked/` layout worked. Day of
+Atonement, already shipped weeks ago, was in the same unpublished boat. User
+chose "properly wire it in" over a one-off hack. Fixed by extending
+`harvest_facts()`'s routing to also use the existing `publish_meta.json`
+harvest path whenever a `FINAL_VIDEO.txt` pin is present -- reuses
+`finality.py`'s own documented pin escape hatch rather than adding new code,
+so it benefits Day of Atonement and any future living-sketchbook long-form
+too. Pinned `longform/05_The_Seed_Of_The_Woman/v1/FINAL_VIDEO.txt` at the
+real merged file.
+
+Drafted the upload copy + in-engine red-team via this project's standing
+agent-bridge pattern (fulfilled both LLM calls in-session). Built real word-
+level timing for captions.srt: the trailer's own narration had never been
+forced-aligned (only the film had one), so ran `veed_io.aligner.
+forced_align_script()` against its known exact script (matched all 63/63
+words) and combined it with the film's own `_alignment.json` shifted by the
+trailer's 29.667s. Caught a real double-watermark bug in
+`pipeline/thumbnails.py` while eyeballing the generated thumbnail (it grabbed
+a frame from the already-watermarked final and stamped its own brand mark on
+top) -- fixed by temporarily pointing the pin at the pre-watermark backup for
+thumbnail generation, then restoring it. Hand-authored real CHAPTERS +
+PINNED_COMMENT from the film's actual beat timing and front-loaded "Genesis
+3:15" into the description to pass UK-G7. **Gate: GREEN (0 fail, 0 warn).**
+
+Review pack: `longform/05_The_Seed_Of_The_Woman/v1/publish/PUBLISH_INDEX.html`.
+**Not done:** the user hasn't reviewed/approved the pack yet (per the skill's
+own success criteria, sign-off is still open). Full detail: RESUME.md top.
+
 **2026-08-10 latest (Seed of the Woman LONG: trailer scored via ElevenLabs
 Music, ~$1 metered, logged to the ledger, combined final rebuilt):** User
 asked for a real cinematic score under the trailer/hook specifically

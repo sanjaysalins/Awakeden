@@ -1,4 +1,55 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-10 THE ACTUAL FINAL (SEED OF THE
+# WOMAN LONG: PUBLISHED -- Stage 6 pack built, GREEN gate, pushed 64f4a58)
+# — READ THIS FIRST, supersedes "trailer now has its own ElevenLabs score"
+# right below (that score is still in the final file; this is the next
+# and last real milestone after it, same session).
+#
+# ── ONE-LINE STATUS: Seed of the Woman LONG is fully built, scored,
+# captioned, watermarked, AND now has a real, GREEN-gated publish pack
+# ready to paste. The only thing left is the user's own sign-off read.
+#
+# ── REAL GAP FOUND + FIXED: /publish had never been wired for the
+# living-sketchbook long-form layout (poc_living_sketchbook/<slug>/) --
+# only shorts and the older "inked" visual_16x9_inked/ layout (Bronze
+# Serpent etc.) worked. Day of Atonement, shipped weeks ago, was ALSO
+# never published -- this wasn't a Seed-of-the-Woman-only problem. User
+# chose the proper fix over a one-off hack: pipeline/upload_engine.py's
+# harvest_facts() now routes into the existing publish_meta.json-driven
+# harvest path whenever a FINAL_VIDEO.txt pin exists (reusing finality.
+# py's own documented pin escape hatch, not new bespoke code) -- Day of
+# Atonement can go through /publish the same way now, whenever wanted.
+#
+# ── WHAT ELSE GOT BUILT: drafted the upload copy + in-engine red-team
+# myself via this project's standing agent-bridge pattern (both LLM
+# calls fulfilled in-session, no metered API). Built REAL word-level
+# timing for captions.srt across the whole video -- the trailer's own
+# narration had never been forced-aligned (only the film had); ran
+# veed_io's forced_align_script() against its known script text (matched
+# 63/63 words exactly) and combined it with the film's own
+# _alignment.json shifted by the trailer's 29.667s duration. Caught a
+# real double-watermark bug in pipeline/thumbnails.py by eyeballing the
+# generated thumbnail (it grabbed a frame from the ALREADY-watermarked
+# final and stamped its own brand mark on top of the burned-in one) --
+# fixed by generating thumbnails from the pre-watermark backup instead.
+# Hand-authored real CHAPTERS + PINNED_COMMENT from the film's actual
+# beat timing (not placeholder text), and front-loaded "Genesis 3:15"
+# into the description's first 157 chars to clear UK-G7.
+#
+# ── REVIEW + SIGN OFF: poc_living_sketchbook/seed_of_the_woman is the
+# episode; the pack itself is at longform/05_The_Seed_Of_The_Woman/v1/
+# publish/PUBLISH_INDEX.html -- open it, copy-paste each platform's
+# fields when ready to actually post. Gate is GREEN (0 fail, 0 warn) but
+# per the skill's own success criteria, the user's own eyeball-and-
+# approve step is still open -- don't skip it just because the gate is
+# green.
+#
+# ── NOT DONE: nothing else queued on Seed of the Woman. Day of Atonement
+# could now go through /publish too if wanted (same fix unblocks it) --
+# not started, not asked for yet.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-10 THE REAL LATEST (SEED OF THE
 # WOMAN LONG: trailer now has its own ElevenLabs cinematic score, ~$1
 # metered, combined final rebuilt + re-watermarked for real) — READ THIS
