@@ -1,5 +1,55 @@
 # STATE.md — progress tracker
 
+**2026-08-10 latest (Seed of the Woman LONG: trailer scored via ElevenLabs
+Music, ~$1 metered, logged to the ledger, combined final rebuilt):** User
+asked for a real cinematic score under the trailer/hook specifically
+(the main film already has its own -- the trailer had none; confirmed by
+comparing its audio's volumedetect profile byte-for-byte against the raw
+narration.mp3, proving no music had ever been mixed in despite the
+original design brief calling for "its own score treatment"). Researched
+the project's real ElevenLabs Music path first (a background agent read
+`sfx_pilots/add_music.py` in full): the `composition_plan` structured
+format a memory described turned out to be stale/never actually built
+anywhere runnable -- the real, working pattern is a free-text prompt
+(concrete musical tags, not prose) + `music_length_ms` + Eleven's
+known early-fade quirk fixed by `add_music.py`'s own proven
+`reshape_music()`. Quoted the user ~$1 (one real prior ledger precedent)
+before spending, per the standing ask-before-spending rule.
+
+Wrote `poc_living_sketchbook/seed_of_the_woman/_trailer/_t11_add_score.py`,
+reusing `reshape_music()` directly (nontrivial crest-fix logic, not worth
+reimplementing) but writing a fresh, simpler mix step instead of reusing
+`add_music.py`'s own `_mix_and_caption()` -- that function pads its own
+outro tail onto the video, which would have duplicated the trailer's
+already-correct built-in title-card hold. Prompt: tense strings/cello
+building dread through the fall, pulling back to near-silence for the
+LORD's own Gen 3:15 line, then rising to a warm orchestral resolve --
+mixed in via sidechain ducking keyed on the trailer's own existing
+narration track, so it always sits under the voice automatically without
+hand-timing anything. Real generation + reshape ran clean first try.
+
+**Real bug caught rebuilding the combined file**: re-ran the trailer+film
+concat with the newly-scored trailer, then re-ran `add_watermark.py` on
+top -- it silently SKIPPED ("already watermarked") because the stale
+`.prewm.bak.mp4` backup from the FIRST watermark pass (on the unscored
+version) was still sitting on disk, and the script's own idempotent
+"skip if backup exists" check doesn't know the file it's protecting was
+just replaced out from under it. Caught by spot-checking a frame (no
+watermark visible) rather than trusting the script's own success message
+blindly -- deleted the stale backup, re-ran for real, confirmed watermark
+now actually present.
+
+**Real final deliverable** (unchanged filename, freshly rebuilt):
+`poc_living_sketchbook/seed_of_the_woman/SEEDOFTHEWOMAN_LONG_WITH_TRAILER.mp4`
+(533.27s, v/a match to 0.009s, watermarked, scored trailer + finished
+film). Spend logged: `data/spend_ledger.jsonl`, provider
+`elevenlabs-music`, ~$1, cost unverified since Eleven Music bills a
+separate quota not visible via the normal balance check (same known
+limitation as every other Eleven Music spend in this project's history).
+**Not yet done: the user hasn't heard the actual score yet** -- flagged,
+not assumed good; I have no way to listen myself. Full detail: RESUME.md
+top.
+
 **2026-08-10 later still still (Seed of the Woman LONG: trailer + film
 MERGED into one real final deliverable, $0, media untracked per repo
 policy):** User caught a real gap right after the finishing pass below:

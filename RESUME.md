@@ -1,4 +1,52 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-10 THE REAL LATEST (SEED OF THE
+# WOMAN LONG: trailer now has its own ElevenLabs cinematic score, ~$1
+# metered, combined final rebuilt + re-watermarked for real) — READ THIS
+# FIRST, supersedes "TRAILER + FILM MERGED" right below (that merge is
+# still the right structure; this just adds the score that was missing
+# from the trailer half of it, same session).
+#
+# ── WHAT HAPPENED: user asked for a cinematic ElevenLabs score under the
+# trailer/hook specifically. Checking first (before spending) found the
+# trailer had genuinely NEVER been scored despite its own design brief
+# calling for it -- confirmed by comparing its audio's volumedetect
+# profile against the raw narration.mp3 (identical, proving no music was
+# ever mixed in). Quoted ~$1 (real prior precedent), got explicit go,
+# generated via `poc_living_sketchbook/seed_of_the_woman/_trailer/
+# _t11_add_score.py` (new script, reuses `sfx_pilots/add_music.py`'s
+# proven `reshape_music()` for Eleven Music's early-fade quirk, but a
+# fresh custom mix step -- add_music.py's own mix function pads its own
+# outro tail, which would've duplicated the trailer's already-correct
+# title-card hold). Score ducks under the trailer's own narration via
+# sidechain compression, automatically quiet under speech.
+#
+# ── REAL BUG CAUGHT: rebuilding the combined trailer+film file and
+# re-running add_watermark.py on it SILENTLY SKIPPED ("already
+# watermarked") because a stale `.prewm.bak.mp4` from the FIRST watermark
+# pass (on the old, unscored version) was still on disk -- the script's
+# own idempotency check can't tell its protected file was replaced out
+# from under it. Caught by spot-checking a frame myself (no watermark
+# visible), not by trusting the script's success-looking output. Deleted
+# the stale backup, re-ran for real, confirmed the mark is actually there.
+#
+# ── THE REAL FINAL FILE (same path as before, freshly rebuilt):
+# poc_living_sketchbook/seed_of_the_woman/SEEDOFTHEWOMAN_LONG_WITH_TRAILER.mp4
+# (533.27s, v/a match to 0.009s, watermarked throughout, trailer now
+# scored). Spend logged to data/spend_ledger.jsonl (~$1, elevenlabs-music,
+# cost unverified -- same known limitation as every other Eleven Music
+# spend here, it bills a separate quota not visible via the API).
+#
+# ── NOT DONE: the user has not actually HEARD this score yet -- I have no
+# way to listen myself, so this is flagged, not assumed good. If the
+# score doesn't land right by ear, the fix is `--regen` on
+# `_t11_add_score.py` with an adjusted PROMPT (it's a plain string at the
+# top of the file), which costs another ~$1.
+#
+# ── NOT DONE otherwise: Stage 5/6 (upload/publish pack), unchanged from
+# before, still the real next step once the score is confirmed by ear.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-10 TRULY LATEST (SEED OF THE WOMAN
 # LONG: TRAILER + FILM MERGED -- the real single final deliverable exists
 # now) — READ THIS FIRST, supersedes the "FILM ITSELF IS NOW FINISHED"
