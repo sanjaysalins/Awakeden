@@ -160,15 +160,32 @@ def check_unit(media_dir: str | Path, *, sibling_titles: list[str] | None = None
 
     # anti-slop dash-joint scan (user rule 2026-07-10: "X - Y" template reads as AI slop;
     # memory feedback-no-dash-caption-slop). URLs exempt; hyphenated words unaffected.
+    # Extended 2026-08-10 (real-content audit found 96 burned-in dash-joint/ellipsis
+    # captions across 14 shipped episodes -- this gate never scanned captions.srt at
+    # all, only publish/*.md, so slop introduced downstream of the copy draft (e.g.
+    # by a transcription-based caption builder inheriting the narration script's own
+    # prose punctuation) went undetected until a manual audit caught it. Also added
+    # curly/smart quotes to the token list, matching caption_slop_check.py's own
+    # corpus-wide tool -- keep both lists in sync if either changes.)
     _url = re.compile(r"https?://\S+")
+    _SLOP_TOKENS = (" - ", "—", "–", "...", "…", "“", "”", "‘", "’", "â€")
     for md in sorted(pub.glob("*.md")):
         for n, line in enumerate(md.read_text(encoding="utf-8").splitlines(), 1):
             if line.startswith("#"):
                 continue
             bare = _url.sub("", line)
-            slop = [t for t in (" - ", "—", "–", "...", "…", "â€") if t in bare]
+            slop = [t for t in _SLOP_TOKENS if t in bare]
             if slop:
                 fails.append(f"UK-G7 dash-slop {md.name}:{n}: {slop} in {line.strip()[:60]!r}")
+    srt_path = pub / "captions.srt"
+    if srt_path.exists():
+        _srt_index_or_ts = re.compile(r"^\d+$|-->")
+        for n, line in enumerate(srt_path.read_text(encoding="utf-8", errors="replace").splitlines(), 1):
+            if not line.strip() or _srt_index_or_ts.search(line):
+                continue
+            slop = [t for t in _SLOP_TOKENS if t in line]
+            if slop:
+                fails.append(f"UK-G7 dash-slop captions.srt:{n}: {slop} in {line.strip()[:60]!r}")
 
     # freshness: the pack must be stamped against the CURRENT final (a stale pack
     # cannot be GREEN — the wave-rollout lesson, commit 9007339) + thumbnail
