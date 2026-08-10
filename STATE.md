@@ -1,5 +1,38 @@
 # STATE.md — progress tracker
 
+**2026-08-10 later (Seed of the Woman LONG: trailer's two flagged defects
+fixed, committed (85276de, a1e92aa), PUSHED to origin/main):** Closed the
+one fix queued from the entry directly below (the tomb-doorway AI wobble
+at trailer ~0:22) plus a new one caught live: the closing title card was
+on a flat near-black background and read as "a blank black screen."
+
+**S10 fix:** diagnosed the wobble's real onset (~0.55-0.7s clip-local) via
+frame-by-frame zoom + a frame-difference heatmap before touching anything,
+confirming the first 0.5s is clean. Trimmed S10 to that clean 0.5s ($0, no
+re-render); recovered the removed 1.7s as a freeze-hold on S11's own
+closing frame so total trailer length/narration sync stayed unchanged
+(29.62s vs 29.67s).
+
+**Title-card fix:** rebuilt the card over the film's own
+`stills/s45_eden_to_cross.png` hero still (the same image the preceding
+montage already holds on) instead of a flat procedural dark fill, with a
+dark scrim behind the text band for legibility. $0, no new render — the
+title now reads as a continuation of the held shot, not a cut to black.
+New standing rule saved to memory (`feedback-no-blank-screen-backgrounds`):
+captions/titles/Remotion/designer graphics must always sit over a real
+still or overlay, never a flat blank screen, project-wide going forward.
+
+Both fixes rebuilt + eye-checked clean, committed as their own follow-up
+commits per the prior handover's own instruction, then pushed to
+`origin/main` (was 3 commits ahead, now in sync through a1e92aa).
+
+**Open, not started:** this finished film+trailer hasn't been through
+Stage 5/6 (upload metadata / publish pack) yet — the only `publish_meta.json`
+on disk is a stale July-16 placeholder from the text stage. Also still
+open: unrelated leftover uncommitted files in
+`poc_living_sketchbook/day_of_atonement/_assemble_work/` (flagged to the
+user twice, not yet resolved). Full detail: RESUME.md top.
+
 **2026-08-10 (Seed of the Woman LONG: FILM COMPLETE (all 71 spreads,
 $51.59) + a real cold-open TRAILER built and user-approved ("perfect,
 this is the standard we should keep"), $13.26, one small fix queued —

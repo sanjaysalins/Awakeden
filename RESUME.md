@@ -1,4 +1,57 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-10 LATER (SEED OF THE WOMAN LONG:
+# TRAILER FULLY DONE -- both queued/flagged fixes closed out, committed,
+# PUSHED to origin/main. Nothing open on the film or the trailer.) — READ
+# THIS FIRST, supersedes the "ALL 71 SPREADS DONE... ONE SMALL FIX QUEUED"
+# block right below (that block's own history is still accurate; this is
+# the same-day follow-up that closed its queued item plus one more).
+#
+# ── ONE-LINE STATUS: film (71/71 spreads) + trailer are BOTH fully done,
+# gate-clean/eye-checked, committed, and pushed. No queued fix remains.
+# Two real defects fixed this pass, both $0/no-re-render:
+#   1. The queued S10 tomb-doorway AI wobble (see block below for the full
+#      catch/diagnosis) -- fixed by trimming S10 to its clean first 0.5s
+#      and recovering that time as a freeze-hold on S11's own closing
+#      frame. Commit 85276de.
+#   2. NEW catch (user, this pass): the closing title card ("The Seed of
+#      the Woman") was hand-lettered over a flat near-black procedural
+#      background and read as "a blank black screen." Fixed by rebuilding
+#      it over the film's own poc_living_sketchbook/seed_of_the_woman/
+#      stills/s45_eden_to_cross.png hero still (the same image the
+#      preceding montage already holds on -- title now fades in as a
+#      continuation of that shot, not a cut to black) with a dark scrim
+#      behind the text band for legibility. Commit a1e92aa.
+# Both commits pushed: 13e3488..a1e92aa now on origin/main.
+#
+# ── NEW STANDING RULE, saved to memory this pass (feedback-no-blank-
+# screen-backgrounds): captions/title cards/Remotion/any "designer"
+# graphic work must NEVER sit on a flat blank/solid-color screen -- always
+# composite over a real rendered still or other real visual overlay.
+# Apply this on every future title/caption/credit-card build project-wide,
+# not just this episode.
+#
+# ── WATCH THE FINAL TRAILER: poc_living_sketchbook/seed_of_the_woman/
+# _trailer/SEED_OF_THE_WOMAN_TRAILER.mp4 -- review page (timing table +
+# both fixes documented): poc_living_sketchbook/seed_of_the_woman/
+# _trailer/_FINAL_REVIEW.html
+#
+# ── NOT DONE, genuinely open, NOT yet started this session or before it:
+#   - The finished film+trailer have NOT been through this project's own
+#     Stage 5/6 finishing (upload metadata / publish pack) -- the only
+#     publish_meta.json on disk (longform/05_The_Seed_Of_The_Woman/v1/
+#     publish_meta.json) is a stale July-16 placeholder from the text
+#     stage, predating the finished video by three weeks. If the next
+#     session's job is getting this piece ready to post, that's the real
+#     starting point, not a rerun of anything above.
+#   - Unrelated, NOT part of this episode's work, still sitting uncommitted
+#     from an earlier/different session: poc_living_sketchbook/
+#     day_of_atonement/_assemble_work/ has ~3 modified + ~50 untracked
+#     *_concat.txt files, plus an untracked _caption_segments/ dir. Flagged
+#     to the user twice this session; not yet resolved either way (commit,
+#     discard, or ignore) -- ask before touching, unclear origin/intent.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-10 (SEED OF THE WOMAN LONG: ALL 71
 # SPREADS DONE + LOCKED-STYLE COLD-OPEN TRAILER BUILT + APPROVED ("perfect,
 # this is the standard we should keep") -- ONE SMALL FIX QUEUED, SESSION
