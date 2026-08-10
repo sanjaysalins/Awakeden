@@ -63,15 +63,15 @@ _46 characters_
 
 **DESCRIPTION / CAPTION** (copy):
 ```
-At the cross they shook their heads and sneered a taunt — one a psalm had recorded a thousand years earlier.
+At the cross they shook their heads and sneered a taunt, one a psalm had recorded a thousand years earlier.
 
 Psalm 22:7-8 (KJV): "they shake the head, saying, He trusted on the LORD that he would deliver him: let him deliver him."
 
-Matthew 27 records both: the wagging heads (v.39) and the exact taunt — "let him deliver him now" (v.43). Same gesture. Same words. A millennium apart.
+Matthew 27 records both: the wagging heads (v.39) and the exact taunt, "let him deliver him now" (v.43). Same gesture. Same words. A millennium apart.
 
 They thought they were mocking a failed messiah. They were unknowingly reciting the prophecy that marked Him as the One.
 
-He could have come down. He chose to stay — not from weakness, but because staying was the only way to deliver you.
+He could have come down. He chose to stay, not from weakness, but because staying was the only way to deliver you.
 
 Subscribe to walk through the whole Bible and meet Jesus on every page. ✝
 
@@ -100,15 +100,15 @@ _62 characters_
 
 **DESCRIPTION / CAPTION** (copy):
 ```
-At the cross, the crowd shook their heads and sneered: "He trusted in God — let him deliver him now." They thought they were improvising a taunt. They were reciting a psalm written a thousand years before they were born.
+At the cross, the crowd shook their heads and sneered: "He trusted in God, let him deliver him now." They thought they were improvising a taunt. They were reciting a psalm written a thousand years before they were born.
 
 Psalm 22:7-8 (KJV): "they shake the head, saying, He trusted on the LORD that he would deliver him: let him deliver him."
 
-David wasn't writing a song about himself. He was recording a scene he hadn't witnessed yet — the gesture (wagging the head), the specific taunt, the exact words. Then in Matthew 27:39 and 27:43, both appear at the cross, word for word.
+David wasn't writing a song about himself. He was recording a scene he hadn't witnessed yet, the gesture (wagging the head), the specific taunt, the exact words. Then in Matthew 27:39 and 27:43, both appear at the cross, word for word.
 
 The mockers thought they were exposing a fraud. They were authenticating the Messiah.
 
-He had every power to come down. He stayed — because staying was the only way to deliver you. That's not weakness. That's the love the cross was always about.
+He had every power to come down. He stayed, because staying was the only way to deliver you. That's not weakness. That's the love the cross was always about.
 
 Psalm 22 | Matthew 27 | KJV
 
@@ -155,11 +155,11 @@ _46 characters_
 
 **DESCRIPTION / CAPTION** (copy):
 ```
-Psalm 22:7-8 records the mockers' words — the head-shaking, the exact taunt — written a thousand years before the cross.
+Psalm 22:7-8 records the mockers' words, the head-shaking, the exact taunt, written a thousand years before the cross.
 
 "they shake the head, saying, He trusted on the LORD that he would deliver him: let him deliver him."
 
-Matthew 27 records both at Calvary, word for word. The crowd didn't know they were reciting a prophecy. He stayed on that cross not from weakness — but because leaving would have meant leaving you.
+Matthew 27 records both at Calvary, word for word. The crowd didn't know they were reciting a prophecy. He stayed on that cross not from weakness, but because leaving would have meant leaving you.
 
 Subscribe to walk through the whole Bible and meet Jesus on every page. ✝
 

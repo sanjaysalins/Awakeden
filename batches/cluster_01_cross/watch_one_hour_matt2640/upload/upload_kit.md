@@ -57,7 +57,7 @@ Matthew 26:40 - Jesus asked Peter, James and John to watch with him one hour in 
 
 The cup he asked to pass, he drank - on the cross, for you. He watched that hour alone, so that no hour of yours is watched alone. Bring Jesus the weak flesh he already knows.
 
-Find Jesus in the whole Bible — one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
 
 https://awakeden.com
 
@@ -96,7 +96,7 @@ This episode of Questions Jesus Asked walks through the Gethsemane account in th
 
 He watched that hour alone. Now no hour of yours is watched alone. Bring Jesus the weak flesh he already knows - when you cannot watch, pray anyway.
 
-Find Jesus in the whole Bible — one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
 
 https://awakeden.com
 
@@ -121,7 +121,7 @@ Matthew 26:40, Gethsemane, watch and pray, could ye not watch with me one hour, 
 ```
 Jesus asked three fishermen for ONE thing. They failed inside an hour. Matthew 26:40 - Gethsemane, the night before the cross. His answer was not a curse. It was mercy. He watched that hour alone, so no hour of yours is watched alone.
 
-Find Jesus in the whole Bible — one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
 ```
 _313 characters_
 
@@ -149,7 +149,7 @@ His question was not a curse. It was a diagnosis full of mercy - the spirit inde
 
 He watched that hour alone. Now no hour of yours is watched alone. Bring Jesus the weak flesh he already knows.
 
-Find Jesus in the whole Bible — one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
 
 https://awakeden.com
 
@@ -169,7 +169,7 @@ _747 characters_
 ```
 Jesus asked three fishermen for ONE thing. They failed inside an hour. Matthew 26:40 - Gethsemane, the night before the cross. Not a curse. A diagnosis full of mercy. He watched that hour alone, so no hour of yours is watched alone.
 
-Find Jesus in the whole Bible — one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
 ```
 _311 characters_
 

@@ -27,10 +27,14 @@ OUT = HERE.parent / "SEEDOFTHEWOMAN_LONG_WITH_TRAILER.words.json"
 TRAILER_SCRIPT = (
     "In the garden, everything just broke. "
     "Two people -- hiding from the God who made them. "
-    "But before He sentenced the guilty... "
+    "But before He sentenced the guilty. "
     "He made a promise. To the enemy. "
-    "\"It shall bruise thy head... and thou shalt bruise his heel.\" "
-    "Centuries before the cross. Before the empty tomb... "
+    # KJV-exact Gen 3:15b: a comma, not the tagged script's performance-pacing
+    # "..." (that mark was for the TTS voice direction, never meant to reach
+    # the caption/quote text -- caught by caption_slop_check.py's own new
+    # ellipsis check finding it in the ALREADY-RENDERED captions.srt).
+    "\"It shall bruise thy head, and thou shalt bruise his heel.\" "
+    "Centuries before the cross. Before the empty tomb. "
     "The oldest promise in the Bible is about to be kept. "
     "The Seed of the Woman."
 )
