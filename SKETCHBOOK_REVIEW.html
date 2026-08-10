@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Living-Sketchbook — Finished Screening Room</title>
+<style>
+  :root {
+    --paper: #f7f2e4;
+    --paper-raised: #fdfaf1;
+    --paper-line: #e2d8bf;
+    --ink: #231e1a;
+    --ink-soft: #5c5346;
+    --ink-faint: #93897a;
+    --gold: #b9924a;
+    --gold-deep: #8f6d33;
+    --ok-bg: #e4ead9;
+    --ok-fg: #3c5a2e;
+    --ok-dot: #6a8f4e;
+    --shadow: 0 1px 2px rgba(35,30,26,.06), 0 8px 24px -12px rgba(35,30,26,.18);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #1b1815;
+      --paper-raised: #24201b;
+      --paper-line: #3a332a;
+      --ink: #ede6d6;
+      --ink-soft: #b8ac97;
+      --ink-faint: #7d7364;
+      --gold: #d4ab5f;
+      --gold-deep: #e6c37e;
+      --ok-bg: #253524;
+      --ok-fg: #a9c896;
+      --ok-dot: #7fa860;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.5);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 15px; line-height: 1.5;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 44px 28px 80px; }
+  .eyebrow { font-size: 12px; letter-spacing: .11em; text-transform: uppercase; color: var(--gold-deep); font-weight: 700; margin-bottom: 10px; }
+  h1 { font-family: Georgia, serif; font-weight: 400; font-size: clamp(26px, 3.6vw, 36px); margin: 0 0 10px; letter-spacing: -.01em; }
+  .lede { color: var(--ink-soft); max-width: 68ch; font-size: 15.5px; margin: 0 0 40px; }
+  h2 { font-family: Georgia, serif; font-weight: 400; font-size: 19px; margin: 0 0 4px; }
+  .section-note { color: var(--ink-faint); font-size: 13px; margin: 0 0 18px; }
+  section { margin-bottom: 46px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+  .card {
+    background: var(--paper-raised); border: 1px solid var(--paper-line);
+    border-radius: 10px; overflow: hidden; box-shadow: var(--shadow);
+  }
+  .card video { display: block; width: 100%; background: #000; aspect-ratio: 9/16; object-fit: contain; }
+  .card.long video { aspect-ratio: 16/9; }
+  .card-body { padding: 14px 16px; }
+  .card h3 { font-size: 15.5px; margin: 0 0 4px; font-weight: 600; }
+  .card .meta { display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--ink-faint); font-variant-numeric: tabular-nums; margin-bottom: 6px; }
+  .card .chip { display: inline-flex; align-items: center; gap: 5px; padding: 2px 9px 2px 7px; border-radius: 100px; background: var(--ok-bg); color: var(--ok-fg); font-size: 11.5px; font-weight: 600; }
+  .card .chip .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--ok-dot); }
+  .card p { margin: 0; color: var(--ink-soft); font-size: 13px; }
+  .card a.path { display: block; margin-top: 8px; font-size: 11.5px; color: var(--gold-deep); word-break: break-all; text-decoration: none; }
+  .card a.path:hover { text-decoration: underline; }
+
+  footer { border-top: 1px solid var(--paper-line); padding-top: 20px; margin-top: 50px; color: var(--ink-faint); font-size: 12.5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="eyebrow">Awakeden · living-sketchbook</div>
+  <h1>Everything finished, in one screening room</h1>
+  <p class="lede">Every locked or finished living-sketchbook piece, playable right here. Hit play on any card — video, score, SFX, captions and watermark are all already burned in.</p>
+
+  <section>
+    <h2>The longs</h2>
+    <p class="section-note">Full narration.mp3, stills, animation, score, SFX, captions, watermark — all the way through.</p>
+    <div class="grid">
+
+      <div class="card long">
+        <video controls preload="metadata" src="poc_living_sketchbook/seed_of_the_woman/SEEDOFTHEWOMAN_LONG_WITH_TRAILER.mp4"></video>
+        <div class="card-body">
+          <h3>The Seed of the Woman</h3>
+          <div class="meta">8:53 · 245 MB <span class="chip"><span class="dot"></span>LOCKED</span></div>
+          <p>Film + cold-open trailer merged into one deliverable. 71 spreads.</p>
+          <a class="path" href="poc_living_sketchbook/seed_of_the_woman/SEEDOFTHEWOMAN_LONG_WITH_TRAILER.mp4">poc_living_sketchbook\seed_of_the_woman\SEEDOFTHEWOMAN_LONG_WITH_TRAILER.mp4</a>
+        </div>
+      </div>
+
+      <div class="card long">
+        <video controls preload="metadata" src="poc_living_sketchbook/day_of_atonement/DAYOFATONEMENT_LONG_living_sketchbook_scored_sfx.mp4"></video>
+        <div class="card-body">
+          <h3>Day of Atonement</h3>
+          <div class="meta">9:54 · 282 MB <span class="chip"><span class="dot"></span>LOCKED</span></div>
+          <p>75 spreads. Finished (scored + SFX), not yet run through /publish.</p>
+          <a class="path" href="poc_living_sketchbook/day_of_atonement/DAYOFATONEMENT_LONG_living_sketchbook_scored_sfx.mp4">poc_living_sketchbook\day_of_atonement\DAYOFATONEMENT_LONG_living_sketchbook_scored_sfx.mp4</a>
+        </div>
+      </div>
+
+      <div class="card long">
+        <video controls preload="metadata" src="poc_living_sketchbook/bronze_serpent_long/BRONZESERPENT_LONG_living_sketchbook_scored_sfx.mp4"></video>
+        <div class="card-body">
+          <h3>The Bronze Serpent (long)</h3>
+          <div class="meta">9:55 · 429 MB <span class="chip"><span class="dot"></span>done</span></div>
+          <p>Sketchbook remake of the numbered long — runs alongside the still-published inked version.</p>
+          <a class="path" href="poc_living_sketchbook/bronze_serpent_long/BRONZESERPENT_LONG_living_sketchbook_scored_sfx.mp4">poc_living_sketchbook\bronze_serpent_long\BRONZESERPENT_LONG_living_sketchbook_scored_sfx.mp4</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Shorts</h2>
+    <p class="section-note">60-second, vertical, fully finished.</p>
+    <div class="grid">
+
+      <div class="card">
+        <video controls preload="metadata" src="poc_living_sketchbook/bronze_serpent/BRONZESERPENT_living_sketchbook_sfx.mp4"></video>
+        <div class="card-body">
+          <h3>The Bronze Serpent (short)</h3>
+          <div class="meta">71.5s · 72 MB <span class="chip"><span class="dot"></span>LOCKED</span></div>
+          <p>The first fully-finished sketchbook short — recipe every other one follows.</p>
+          <a class="path" href="poc_living_sketchbook/bronze_serpent/BRONZESERPENT_living_sketchbook_sfx.mp4">poc_living_sketchbook\bronze_serpent\BRONZESERPENT_living_sketchbook_sfx.mp4</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <video controls preload="metadata" src="poc_living_sketchbook/two_goats/TWO_GOATS_living_sketchbook.mp4"></video>
+        <div class="card-body">
+          <h3>Two Goats</h3>
+          <div class="meta">70.8s · 65 MB <span class="chip"><span class="dot"></span>done</span></div>
+          <p>Watermarked. Caption-burn pass still outstanding.</p>
+          <a class="path" href="poc_living_sketchbook/two_goats/TWO_GOATS_living_sketchbook.mp4">poc_living_sketchbook\two_goats\TWO_GOATS_living_sketchbook.mp4</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <video controls preload="metadata" src="poc_living_sketchbook/jericho/JERICHO_living_sketchbook.mp4"></video>
+        <div class="card-body">
+          <h3>Jericho <span style="font-weight:400;color:var(--ink-faint)">— Rahab</span></h3>
+          <div class="meta">64.8s · 51 MB <span class="chip"><span class="dot"></span>done</span></div>
+          <p>Watermarked. Caption-burn pass still outstanding.</p>
+          <a class="path" href="poc_living_sketchbook/jericho/JERICHO_living_sketchbook.mp4">poc_living_sketchbook\jericho\JERICHO_living_sketchbook.mp4</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <video controls preload="metadata" src="poc_living_sketchbook/storm/STORM_living_sketchbook_v6.mp4"></video>
+        <div class="card-body">
+          <h3>Storm <span style="font-weight:400;color:var(--ink-faint)">— Jesus calms the sea</span></h3>
+          <div class="meta">63.0s · 78 MB <span class="chip"><span class="dot"></span>done</span></div>
+          <p>v6, watermarked. 7 revisions on disk before landing here. Caption-burn pass still outstanding.</p>
+          <a class="path" href="poc_living_sketchbook/storm/STORM_living_sketchbook_v6.mp4">poc_living_sketchbook\storm\STORM_living_sketchbook_v6.mp4</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Style taste-pieces (poc_castbible_look)</h2>
+    <p class="section-note">Where the sketchbook look was first proven out — lane still undecided.</p>
+    <div class="grid">
+
+      <div class="card">
+        <video controls preload="metadata" src="poc_castbible_look/episode_door/AT_THE_DOOR_sketch_poc.mp4"></video>
+        <div class="card-body">
+          <h3>At the Door</h3>
+          <div class="meta">58.3s · 57 MB <span class="chip"><span class="dot"></span>done</span></div>
+          <p>Watermarked. Caption-burn pass still outstanding.</p>
+          <a class="path" href="poc_castbible_look/episode_door/AT_THE_DOOR_sketch_poc.mp4">poc_castbible_look\episode_door\AT_THE_DOOR_sketch_poc.mp4</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <video controls preload="metadata" src="poc_castbible_look/NOAH_THE_DOOR_castbible_poc.mp4"></video>
+        <div class="card-body">
+          <h3>Noah / The Builder</h3>
+          <div class="meta">30.5s · 29 MB <span class="chip"><span class="dot"></span>done</span></div>
+          <p>Watermarked. Different caption style — bold yellow-highlight, not hand-ink.</p>
+          <a class="path" href="poc_castbible_look/NOAH_THE_DOOR_castbible_poc.mp4">poc_castbible_look\NOAH_THE_DOOR_castbible_poc.mp4</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    9 finished pieces, built 2026-08-10 by reading the repo directly (ffprobe duration + file size on the actual
+    watermarked-final file, not a filename guess). Companion to
+    <a href="STYLE_MIGRATION_TRACKER.html" style="color:var(--gold-deep)">STYLE_MIGRATION_TRACKER.html</a>.
+    Playback needs this file opened from its real location on disk (video paths are relative) —
+    it won't play if copied elsewhere on its own.
+  </footer>
+
+</div>
+</body>
+</html>
