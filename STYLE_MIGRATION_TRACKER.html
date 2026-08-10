@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Oil → Ink → Sketchbook — Style Migration Ledger</title>
+<style>
+  @font-face {
+    font-family: 'Fraunces';
+    src: local('Georgia');
+  }
+  :root {
+    --paper: #f7f2e4;
+    --paper-raised: #fdfaf1;
+    --paper-line: #e2d8bf;
+    --ink: #231e1a;
+    --ink-soft: #5c5346;
+    --ink-faint: #93897a;
+    --gold: #b9924a;
+    --gold-deep: #8f6d33;
+    --red: #a8231d;
+    --ok-bg: #e4ead9;
+    --ok-fg: #3c5a2e;
+    --ok-dot: #6a8f4e;
+    --warn-bg: #f4e6c8;
+    --warn-fg: #7a5a17;
+    --warn-dot: #b9924a;
+    --stop-bg: #f2ded9;
+    --stop-fg: #8f2e22;
+    --stop-dot: #a8231d;
+    --skip-bg: #e9e4d6;
+    --skip-fg: #6b6151;
+    --skip-dot: #93897a;
+    --shadow: 0 1px 2px rgba(35,30,26,.06), 0 8px 24px -12px rgba(35,30,26,.18);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #1b1815;
+      --paper-raised: #24201b;
+      --paper-line: #3a332a;
+      --ink: #ede6d6;
+      --ink-soft: #b8ac97;
+      --ink-faint: #7d7364;
+      --gold: #d4ab5f;
+      --gold-deep: #e6c37e;
+      --red: #d97066;
+      --ok-bg: #253524;
+      --ok-fg: #a9c896;
+      --ok-dot: #7fa860;
+      --warn-bg: #3a3018;
+      --warn-fg: #e6c37e;
+      --warn-dot: #d4ab5f;
+      --stop-bg: #3a2420;
+      --stop-fg: #e6a89c;
+      --stop-dot: #d97066;
+      --skip-bg: #2a271f;
+      --skip-fg: #9a9080;
+      --skip-dot: #7d7364;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.5);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .wrap { max-width: 1160px; margin: 0 auto; padding: 48px 28px 80px; }
+
+  header { margin-bottom: 8px; }
+  .eyebrow {
+    font-size: 12px; letter-spacing: .11em; text-transform: uppercase;
+    color: var(--gold-deep); font-weight: 700; margin-bottom: 10px;
+  }
+  h1 {
+    font-family: Georgia, 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(28px, 4vw, 40px);
+    margin: 0 0 10px;
+    text-wrap: balance;
+    letter-spacing: -.01em;
+  }
+  .lede {
+    color: var(--ink-soft);
+    max-width: 66ch;
+    font-size: 16px;
+    margin: 0 0 6px;
+  }
+  .provenance {
+    color: var(--ink-faint);
+    font-size: 13px;
+    max-width: 70ch;
+    border-left: 2px solid var(--paper-line);
+    padding-left: 12px;
+    margin: 20px 0 40px;
+  }
+  .provenance a { color: var(--gold-deep); }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1px;
+    background: var(--paper-line);
+    border: 1px solid var(--paper-line);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 44px;
+  }
+  .stat {
+    background: var(--paper-raised);
+    padding: 18px 20px;
+  }
+  .stat .n {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+    color: var(--ink);
+  }
+  .stat .n small { font-size: 16px; color: var(--ink-faint); font-family: inherit; }
+  .stat .lbl { font-size: 12.5px; color: var(--ink-soft); margin-top: 6px; }
+
+  .headline {
+    background: var(--paper-raised);
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    padding: 26px 28px;
+    margin-bottom: 52px;
+    box-shadow: var(--shadow);
+  }
+  .headline .eyebrow { color: var(--gold-deep); }
+  .headline h2 { font-family: Georgia, serif; font-weight: 400; font-size: 22px; margin: 0 0 14px; }
+  .migrate-list { display: flex; flex-direction: column; gap: 10px; }
+  .migrate-row {
+    display: flex; align-items: center; gap: 14px;
+    padding: 10px 0; border-bottom: 1px solid var(--paper-line);
+  }
+  .migrate-row:last-child { border-bottom: none; }
+  .migrate-row .num {
+    font-family: Georgia, serif; font-size: 17px; color: var(--gold-deep);
+    width: 22px; flex: none; text-align: right; font-variant-numeric: tabular-nums;
+  }
+  .migrate-row .who { font-weight: 600; flex: 1; min-width: 160px; }
+  .migrate-row .from { color: var(--ink-faint); font-size: 13px; }
+
+  section { margin-bottom: 52px; }
+  .section-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 16px; margin-bottom: 4px; flex-wrap: wrap;
+  }
+  h2 {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-size: 21px;
+    margin: 0;
+  }
+  .section-note { color: var(--ink-faint); font-size: 13px; }
+
+  .tablewrap { overflow-x: auto; border: 1px solid var(--paper-line); border-radius: 10px; box-shadow: var(--shadow); margin-top: 18px; }
+  table { border-collapse: collapse; width: 100%; min-width: 720px; background: var(--paper-raised); }
+  thead th {
+    text-align: left; font-size: 11.5px; text-transform: uppercase; letter-spacing: .06em;
+    color: var(--ink-faint); font-weight: 600; padding: 12px 16px;
+    border-bottom: 1px solid var(--paper-line);
+    background: var(--paper);
+    position: sticky; top: 0;
+  }
+  tbody td { padding: 14px 16px; border-bottom: 1px solid var(--paper-line); vertical-align: top; }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: rgba(185,146,74,.06); }
+  tbody tr.dim { opacity: .62; }
+  .piece { font-weight: 600; }
+  .ref { display: block; color: var(--ink-faint); font-size: 12.5px; font-weight: 400; margin-top: 2px; }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 3px 10px 3px 8px; border-radius: 100px;
+    font-size: 12.5px; font-weight: 600; white-space: nowrap;
+  }
+  .chip .dot { width: 6px; height: 6px; border-radius: 50%; flex: none; }
+  .chip.ok { background: var(--ok-bg); color: var(--ok-fg); }
+  .chip.ok .dot { background: var(--ok-dot); }
+  .chip.warn { background: var(--warn-bg); color: var(--warn-fg); }
+  .chip.warn .dot { background: var(--warn-dot); }
+  .chip.stop { background: var(--stop-bg); color: var(--stop-fg); }
+  .chip.stop .dot { background: var(--stop-dot); }
+  .chip.skip { background: var(--skip-bg); color: var(--skip-fg); }
+  .chip.skip .dot { background: var(--skip-dot); }
+
+  .note { color: var(--ink-soft); font-size: 13px; max-width: 34ch; }
+  .note b { color: var(--ink); font-weight: 600; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 16px; font-size: 12.5px; color: var(--ink-soft); }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .legend .dot { width: 7px; height: 7px; border-radius: 50%; }
+
+  .aside {
+    background: var(--paper-raised); border: 1px solid var(--paper-line); border-radius: 10px;
+    padding: 20px 22px; font-size: 13.5px; color: var(--ink-soft);
+  }
+  .aside b { color: var(--ink); }
+  .aside ul { margin: 10px 0 0; padding-left: 20px; }
+  .aside li { margin-bottom: 4px; }
+
+  footer { border-top: 1px solid var(--paper-line); padding-top: 22px; margin-top: 60px; color: var(--ink-faint); font-size: 12.5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Awakeden · production ledger</div>
+    <h1>From oil painting, through ink, to the sketchbook</h1>
+    <p class="lede">Everything built so far, across every production line — and exactly what still needs to move to the sketchbook style.</p>
+  </header>
+
+  <p class="provenance">
+    The original migration ledger (published 2026-08-01) only ever existed as a claude.ai
+    artifact — no local copy was ever saved, and that artifact link is now gone ("not found").
+    This file is the fix for that: a real, on-disk, git-tracked copy. Rebuilt 2026-08-10 by
+    reading the repository directly, in two passes — the first only checked the six numbered
+    longs; the second, wider pass found a whole Eyewitness series and two more pilot lines
+    the first pass had missed.
+  </p>
+
+  <div class="stats">
+    <div class="stat"><div class="n">3</div><div class="lbl">fully on sketchbook</div></div>
+    <div class="stat"><div class="n">4</div><div class="lbl">still need migrating</div></div>
+    <div class="stat"><div class="n">8</div><div class="lbl">written, zero visuals in any style</div></div>
+    <div class="stat"><div class="n">~60</div><div class="lbl">real narration.mp3 files, whole repo</div></div>
+  </div>
+
+  <div class="headline">
+    <div class="eyebrow">The direct answer</div>
+    <h2>4 pieces need migrating to sketchbook</h2>
+    <div class="migrate-list">
+      <div class="migrate-row">
+        <span class="num">1</span>
+        <span class="who">Isaiah 53 — The Suffering Servant</span>
+        <span class="from">currently ink graphic-novel, published and studio-complete</span>
+      </div>
+      <div class="migrate-row">
+        <span class="num">2</span>
+        <span class="who">Psalm 22 — Song From the Cross</span>
+        <span class="from">currently ink graphic-novel, published, plus 8 shorts cut from it</span>
+      </div>
+      <div class="migrate-row">
+        <span class="num">3</span>
+        <span class="who">The Passover Lamb</span>
+        <span class="from">Baroque was archived; nothing has replaced it — starts from zero</span>
+      </div>
+      <div class="migrate-row">
+        <span class="num">4</span>
+        <span class="who">EW01 — Two Goats <span class="ref" style="display:inline">(eyewitness format)</span></span>
+        <span class="from">already has Baroque, painted-comic, and retro-comic attempts, plus ink — never sketchbook</span>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="section-head">
+      <h2>The six canonical Types &amp; Shadows / Jesus-in-OT longs</h2>
+      <span class="section-note">every episode that ever had a Baroque still</span>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:20%">Episode</th>
+            <th>Baroque (oil painting)</th>
+            <th>Inked graphic-novel</th>
+            <th>Living-sketchbook</th>
+            <th style="width:24%">Note</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="piece">Isaiah 53</td>
+            <td><span class="chip skip"><span class="dot"></span>25 stills, still live</span></td>
+            <td><span class="chip ok"><span class="dot"></span>88 stills, published</span></td>
+            <td><span class="chip stop"><span class="dot"></span>not started</span></td>
+            <td class="note">Never archived — both style folders sit side by side; inked wins on finality.</td>
+          </tr>
+          <tr>
+            <td class="piece">Psalm 22</td>
+            <td><span class="chip skip"><span class="dot"></span>25 stills, still live</span></td>
+            <td><span class="chip ok"><span class="dot"></span>83 stills, published</span></td>
+            <td><span class="chip stop"><span class="dot"></span>not started</span></td>
+            <td class="note">Same pattern as Isaiah 53.</td>
+          </tr>
+          <tr>
+            <td class="piece">The Passover Lamb</td>
+            <td><span class="chip skip"><span class="dot"></span>29 stills, archived</span></td>
+            <td><span class="chip stop"><span class="dot"></span>never built</span></td>
+            <td><span class="chip stop"><span class="dot"></span>never built</span></td>
+            <td class="note"><b>Stalled.</b> Narration + scene plan exist; no visual stage at all right now.</td>
+          </tr>
+          <tr>
+            <td class="piece">The Bronze Serpent</td>
+            <td><span class="chip skip"><span class="dot"></span>27 stills, archived</span></td>
+            <td><span class="chip ok"><span class="dot"></span>33 stills, published</span></td>
+            <td><span class="chip ok"><span class="dot"></span>85 stills, done</span></td>
+            <td class="note">Runs two styles at once — inked stays live while a full sketchbook long (9:55) <i>and</i> a sketchbook short both shipped.</td>
+          </tr>
+          <tr>
+            <td class="piece">The Seed of the Woman</td>
+            <td><span class="chip skip"><span class="dot"></span>59 stills, archived</span></td>
+            <td><span class="chip skip"><span class="dot"></span>skipped</span></td>
+            <td><span class="chip ok"><span class="dot"></span>71 spreads, LOCKED</span></td>
+            <td class="note">Went straight from Baroque to sketchbook. Own cold-open trailer too, published today.</td>
+          </tr>
+          <tr>
+            <td class="piece">Day of Atonement</td>
+            <td><span class="chip skip"><span class="dot"></span>28 stills, archived</span></td>
+            <td><span class="chip skip"><span class="dot"></span>skipped</span></td>
+            <td><span class="chip ok"><span class="dot"></span>75 spreads, LOCKED</span></td>
+            <td class="note">Same path as Seed of the Woman. LOCKED, unpublished — <code>/publish</code> now works for it, unrun.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="legend">
+      <span><span class="dot" style="background:var(--ok-dot)"></span>finished / current</span>
+      <span><span class="dot" style="background:var(--skip-dot)"></span>archived, skipped, or superseded</span>
+      <span><span class="dot" style="background:var(--stop-dot)"></span>needs work</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>The Eyewitness series (EW01–EW09)</h2>
+      <span class="section-note">a whole line the first pass of this ledger missed entirely</span>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:20%">Episode</th>
+            <th>Long + short narration</th>
+            <th>Visual work</th>
+            <th style="width:32%">Note</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="piece">EW01 — Two Goats</td>
+            <td><span class="chip ok"><span class="dot"></span>both locked</span></td>
+            <td><span class="chip warn"><span class="dot"></span>4 styles, none sketchbook</span></td>
+            <td class="note">Baroque (208 stills), painted-comic (8), retro-comic (25), inked (25). The project's own style bake-off ground.</td>
+          </tr>
+          <tr class="dim">
+            <td class="piece">EW02 — Abraham</td>
+            <td><span class="chip ok"><span class="dot"></span>both locked</span></td>
+            <td><span class="chip stop"><span class="dot"></span>none</span></td>
+            <td class="note">Text stage only.</td>
+          </tr>
+          <tr class="dim">
+            <td class="piece">EW03 — Joseph</td>
+            <td><span class="chip ok"><span class="dot"></span>both locked</span></td>
+            <td><span class="chip stop"><span class="dot"></span>none</span></td>
+            <td class="note">Text stage only.</td>
+          </tr>
+          <tr class="dim">
+            <td class="piece">EW04 — Bronze Serpent</td>
+            <td><span class="chip ok"><span class="dot"></span>both locked</span></td>
+            <td><span class="chip stop"><span class="dot"></span>none</span></td>
+            <td class="note">A separate eyewitness take on the same subject as the numbered long. Text stage only.</td>
+          </tr>
+          <tr class="dim">
+            <td class="piece">EW05 — Jonah</td>
+            <td><span class="chip ok"><span class="dot"></span>both locked</span></td>
+            <td><span class="chip stop"><span class="dot"></span>none</span></td>
+            <td class="note">Text stage only.</td>
+          </tr>
+          <tr class="dim">
+            <td class="piece">EW06 — Noah</td>
+            <td><span class="chip ok"><span class="dot"></span>both locked</span></td>
+            <td><span class="chip stop"><span class="dot"></span>none</span></td>
+            <td class="note">Not the same piece as the poc_castbible_look Noah taste-test below.</td>
+          </tr>
+          <tr class="dim">
+            <td class="piece">EW07 — Isaiah</td>
+            <td><span class="chip ok"><span class="dot"></span>both locked</span></td>
+            <td><span class="chip stop"><span class="dot"></span>none</span></td>
+            <td class="note">Text stage only.</td>
+          </tr>
+          <tr class="dim">
+            <td class="piece">EW08 — Passover</td>
+            <td><span class="chip ok"><span class="dot"></span>both locked</span></td>
+            <td><span class="chip stop"><span class="dot"></span>none</span></td>
+            <td class="note">Text stage only.</td>
+          </tr>
+          <tr class="dim">
+            <td class="piece">EW09 — Boaz</td>
+            <td><span class="chip ok"><span class="dot"></span>both locked</span></td>
+            <td><span class="chip stop"><span class="dot"></span>none</span></td>
+            <td class="note">Text stage only.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="legend">
+      <span><span class="dot" style="background:var(--ok-dot)"></span>done</span>
+      <span><span class="dot" style="background:var(--warn-dot)"></span>partial / mixed</span>
+      <span><span class="dot" style="background:var(--stop-dot)"></span>not started</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Sketchbook shorts &amp; style POCs</h2>
+      <span class="section-note">outside the six canonical longs</span>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:20%">Piece</th>
+            <th>Stills + animation</th>
+            <th>Score / SFX</th>
+            <th>Captions</th>
+            <th>Watermark</th>
+            <th style="width:20%">Note</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="piece">Bronze Serpent<span class="ref">short, 71.5s</span></td>
+            <td><span class="chip ok"><span class="dot"></span>done</span></td>
+            <td><span class="chip ok"><span class="dot"></span>done</span></td>
+            <td><span class="chip ok"><span class="dot"></span>burned in</span></td>
+            <td><span class="chip ok"><span class="dot"></span>done</span></td>
+            <td class="note">The only fully-finished sketchbook short. LOCKED, user-approved.</td>
+          </tr>
+          <tr>
+            <td class="piece">Jericho<span class="ref">Rahab · Joshua 2 / Heb. 11:31</span></td>
+            <td><span class="chip ok"><span class="dot"></span>done</span></td>
+            <td><span class="chip warn"><span class="dot"></span>unchecked</span></td>
+            <td><span class="chip stop"><span class="dot"></span>missing</span></td>
+            <td><span class="chip ok"><span class="dot"></span>done</span></td>
+            <td class="note">Verse card has real lettering; narration is never captioned.</td>
+          </tr>
+          <tr>
+            <td class="piece">Storm<span class="ref">Jesus calms the sea</span></td>
+            <td><span class="chip ok"><span class="dot"></span>done</span></td>
+            <td><span class="chip warn"><span class="dot"></span>unchecked</span></td>
+            <td><span class="chip stop"><span class="dot"></span>missing</span></td>
+            <td><span class="chip ok"><span class="dot"></span>done</span></td>
+            <td class="note">7 watermark-backup revisions on disk — real iteration before landing here.</td>
+          </tr>
+          <tr>
+            <td class="piece">Two Goats<span class="ref">sketchbook short, likely the DoA pilot</span></td>
+            <td><span class="chip ok"><span class="dot"></span>done</span></td>
+            <td><span class="chip warn"><span class="dot"></span>unchecked</span></td>
+            <td><span class="chip stop"><span class="dot"></span>missing</span></td>
+            <td><span class="chip ok"><span class="dot"></span>done</span></td>
+            <td class="note">Not the same piece as EW01 above — this is the sketchbook-style short.</td>
+          </tr>
+          <tr>
+            <td class="piece">At-the-Door<span class="ref">poc_castbible_look, 58s</span></td>
+            <td><span class="chip ok"><span class="dot"></span>done</span></td>
+            <td><span class="chip warn"><span class="dot"></span>unchecked</span></td>
+            <td><span class="chip stop"><span class="dot"></span>missing</span></td>
+            <td><span class="chip ok"><span class="dot"></span>done</span></td>
+            <td class="note">The style's own proving ground. Lane still undecided.</td>
+          </tr>
+          <tr>
+            <td class="piece">Noah / The Builder<span class="ref">poc_castbible_look, 30s</span></td>
+            <td><span class="chip ok"><span class="dot"></span>done</span></td>
+            <td><span class="chip warn"><span class="dot"></span>unchecked</span></td>
+            <td><span class="chip warn"><span class="dot"></span>different style</span></td>
+            <td><span class="chip ok"><span class="dot"></span>done</span></td>
+            <td class="note">16:9, bold yellow-highlight captions, not the hand-ink look. Taste test.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Out of scope for this ledger</h2>
+      <span class="section-note">real, finished work — just never a sketchbook candidate</span>
+    </div>
+    <div class="aside">
+      Two more production lines exist with real locked narration, but neither has ever
+      touched Baroque or sketchbook, so they don't belong on a migration count:
+      <ul>
+        <li><b>19 batches/ viral shorts</b> (cluster_01_cross + cluster_02_resurrection) —
+        all built July 3–12, all ink graphic-novel by default, zero Baroque among them.
+        A separate, ongoing 60-second production line.</li>
+        <li><b>3 v2/pilot prototypes</b> (Isaiah 53:5, the Mockers' Words, Zechariah 12:10) —
+        early shorts for the v2 architecture, own narration + visual folders.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    Rebuilt 2026-08-10 by reading the repository directly — every <code>narration.mp3</code>
+    in the repo (~60 files), every <code>archive/*_baroque</code>, every
+    <code>visual_16x9*</code> variant, <code>poc_living_sketchbook/</code>, and
+    <code>poc_castbible_look/</code> — plus spot-checking real frames from every
+    sketchbook video to confirm captions are actually burned in, not inferred from filenames.
+  </footer>
+
+</div>
+</body>
+</html>
