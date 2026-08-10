@@ -1,5 +1,22 @@
 # STATE.md — progress tracker
 
+**2026-08-10 LOCKED (Seed of the Woman LONG, film + cold-open trailer):**
+User said "lock it" after the caption fix rebuild. Final approved deliverable:
+`poc_living_sketchbook/seed_of_the_woman/SEEDOFTHEWOMAN_LONG_WITH_TRAILER.mp4`
+(533.27s = 29.7s trailer + 8:24 film) -- 71/71 spreads, scored (Suno chain
+for the film, bespoke ElevenLabs for the trailer), sfx bed, hand-ink captions
+burned in throughout (film AND trailer, the last real gap), watermarked, and
+published (Stage 6 pack GREEN at `longform/05_The_Seed_Of_The_Woman/v1/
+publish/PUBLISH_INDEX.html`). Checked `pipeline.release_state.gather()`:
+correctly shows `finality: FINAL (pinned)` via the FINAL_VIDEO.txt pin --
+`status` stays `in_production` until an actual post happens (that's driven
+by `data/release_ledger.json`/`upload_tracker.py`, a separate lifecycle
+stage from creative lock, not something "lock it" changes on its own).
+
+**Not done:** nothing posted yet -- that's the next real action, whenever
+the user is ready to paste from the publish pack. Day of Atonement remains
+unpublished (unblocked, not started). Full detail: RESUME.md top.
+
 **2026-08-10 truest latest (Seed of the Woman LONG: trailer had NO burned-in
 captions at all, fixed, combined final rebuilt again):** User caught it by
 eye: the merged deliverable's first ~30s (the trailer) had zero on-screen

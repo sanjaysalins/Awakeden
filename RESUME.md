@@ -1,4 +1,30 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-10 LOCKED (SEED OF THE WOMAN LONG,
+# film + trailer -- the user's own words: "lock it") — READ THIS FIRST,
+# supersedes every block below. This episode's own production work is
+# DONE. Nothing further needed on the film or trailer themselves.
+#
+# ── THE LOCKED FINAL: poc_living_sketchbook/seed_of_the_woman/
+# SEEDOFTHEWOMAN_LONG_WITH_TRAILER.mp4 (533.27s). 71/71 spreads, scored,
+# sfx bed, captioned throughout (film AND trailer), watermarked, published
+# (GREEN gate pack at longform/05_The_Seed_Of_The_Woman/v1/publish/
+# PUBLISH_INDEX.html). No mechanical "video lock" tooling exists in this
+# repo (cli_lock.py is narration/text-stage only, already done for this
+# piece long before this session) -- "lock it" here means the user's own
+# creative approval, recorded in STATE.md's newest entry.
+#
+# ── ONE THING "LOCK" DOES NOT MEAN: release_state still shows `status:
+# in_production`, not posted. That's driven by data/release_ledger.json /
+# upload_tracker.py once an actual URL gets pasted somewhere -- a separate
+# lifecycle stage from creative lock. Don't confuse the two next session.
+#
+# ── NOT DONE, the real next step whenever the user is ready: actually
+# post it (paste from PUBLISH_INDEX.html), then upload_tracker.py --set
+# to record it. Day of Atonement remains unpublished (the /publish fix
+# from earlier this session unblocked it, nobody's run it yet).
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-10 NO REALLY THE FINAL FINAL (SEED
 # OF THE WOMAN LONG: trailer had NO burned-in captions, fixed, rebuilt
 # again) — READ THIS FIRST, supersedes "PUBLISHED -- Stage 6 pack built"
