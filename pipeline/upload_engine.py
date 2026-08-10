@@ -167,6 +167,14 @@ def harvest_facts(media_dir: str) -> SourceFacts:
         (d / "visual_16x9").is_dir() or (d / "visual_16x9_inked").is_dir()
     ):
         return _harvest_batch_facts(d, "long")    # inked long-form v1 (publish_meta.json)
+    if not (d / "narration.creation.json").is_file() and (d / "FINAL_VIDEO.txt").is_file():
+        # living-sketchbook long-form (poc_living_sketchbook/<slug>/, not visual_16x9*):
+        # the video lives outside this v1/ folder entirely, so there's no directory
+        # signal to key off -- the FINAL_VIDEO.txt pin (finality.py's own documented
+        # escape hatch "for lanes where the rule can't know") IS the layout signal.
+        # _harvest_batch_facts's own _find_video() already honors the pin as its
+        # first-priority check, same publish_meta.json-driven facts as the inked lane.
+        return _harvest_batch_facts(d, "long")
     creation = json.loads((d / "narration.creation.json").read_text(encoding="utf-8"))
     fmt = "short" if "shorts" in d.parts else "long"
 
