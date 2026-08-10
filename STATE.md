@@ -1,5 +1,35 @@
 # STATE.md — progress tracker
 
+**2026-08-10 truest latest (Seed of the Woman LONG: trailer had NO burned-in
+captions at all, fixed, combined final rebuilt again):** User caught it by
+eye: the merged deliverable's first ~30s (the trailer) had zero on-screen
+caption text, while the rest of the film had captions throughout. Root
+cause: the trailer only ever got a captions.srt SIDECAR file (for YouTube's
+own caption upload) built during the /publish work -- nobody had ever burned
+actual caption text into the trailer's own video pixels, unlike the film
+portion which got real ink-caption compositing back when `_finish_long.py`
+built it.
+
+Fixed with a new `_trailer/_t13_caption_trailer.py`, reusing `_finish_long.py`'s
+own chunk_words()/render_chunk_png()/build_caption_segment() functions
+directly against the scored trailer and its real forced-aligned word timing
+(the same 63/63-word alignment built earlier this session). Skips the title-
+card window (27.0-29.7s) so the ink caption doesn't double-text the same
+words the title card already shows on screen -- same discipline as the
+film's own verse-card skip_spreads. Spot-checked 4 frames: captions appear
+correctly through the body of the trailer, cleanly absent under the title
+card, KJV quote line reads correctly ("It shall bruise thy head, and thou
+shalt bruise his heel" -- confirming the earlier ellipsis fix held).
+
+Rebuilt SEEDOFTHEWOMAN_LONG_WITH_TRAILER.mp4 again with the newly-captioned
+trailer + the film, re-watermarked (same delete-stale-backup-first pattern
+as the prior two rebuilds). v/a durations match (533.267/533.258s).
+
+**Not done:** the standalone trailer-only file hasn't been updated to this
+captioned version (only the merged deliverable has it) and still has no
+watermark -- same open item as before, only matters if it gets posted
+separately. Full detail: RESUME.md top.
+
 **2026-08-10 truly latest (Seed of the Woman LONG: PUBLISHED -- Stage 6 pack
 built, GREEN gate, committed 64f4a58, PUSHED):** Ran `/publish`. Found a real
 gap: `pipeline/upload_engine.py`/`finality.py` had never been wired for the

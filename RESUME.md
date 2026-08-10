@@ -1,4 +1,46 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-10 NO REALLY THE FINAL FINAL (SEED
+# OF THE WOMAN LONG: trailer had NO burned-in captions, fixed, rebuilt
+# again) — READ THIS FIRST, supersedes "PUBLISHED -- Stage 6 pack built"
+# right below (publishing is still done and GREEN; this is a real defect
+# in the video itself caught AFTER that, same session).
+#
+# ── WHAT HAPPENED: user watched the merged deliverable and caught it by
+# eye -- the trailer's first ~30s had ZERO on-screen captions, while the
+# rest of the film had them throughout. Root cause: the trailer only ever
+# got a captions.srt SIDECAR file (built during the /publish work, for
+# YouTube's own caption-upload feature) -- nobody had ever burned actual
+# caption text into the trailer's own video pixels. The film portion
+# already had real burned-in captions from `_finish_long.py`; the trailer
+# was assembled/scored separately and that step was simply never done.
+#
+# ── FIX: new poc_living_sketchbook/seed_of_the_woman/_trailer/
+# _t13_caption_trailer.py, reusing _finish_long.py's own caption-rendering
+# functions (chunk_words/render_chunk_png/build_caption_segment) directly
+# -- not reimplemented -- against the scored trailer and its real 63/63-word
+# forced-aligned timing (built earlier this session). Skips the title-card
+# window (27.0-29.7s) so the ink caption doesn't double-text the same words
+# the title card already shows, matching the film's own verse-card
+# skip-window discipline. Rebuilt the full merged deliverable a third time
+# (trailer+film concat, re-watermarked -- same delete-stale-backup-first
+# pattern each rebuild has needed). v/a durations match (533.267/533.258s).
+#
+# ── THE REAL FINAL FILE (same path, rebuilt again, now actually complete):
+# poc_living_sketchbook/seed_of_the_woman/SEEDOFTHEWOMAN_LONG_WITH_TRAILER.mp4
+#
+# ── STILL OPEN: the standalone trailer-only file
+# (_trailer/SEED_OF_THE_WOMAN_TRAILER.mp4) was NOT updated to the captioned
+# version -- only the merged deliverable has captions burned in. A captioned
+# standalone version exists at _trailer/SEED_OF_THE_WOMAN_TRAILER_captioned.mp4
+# if the trailer ever needs to be posted on its own, but it's still not
+# watermarked (same pre-existing open item, not urgent until that's asked for).
+#
+# ── NOT DONE otherwise: nothing else queued. The user should watch the
+# whole thing through once more given how many times this file has been
+# rebuilt today -- worth a final full watch before considering it truly done.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-10 THE ACTUAL FINAL (SEED OF THE
 # WOMAN LONG: PUBLISHED -- Stage 6 pack built, GREEN gate, pushed 64f4a58)
 # — READ THIS FIRST, supersedes "trailer now has its own ElevenLabs score"
