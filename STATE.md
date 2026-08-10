@@ -1,5 +1,27 @@
 # STATE.md — progress tracker
 
+**2026-08-10 later still still (Seed of the Woman LONG: trailer + film
+MERGED into one real final deliverable, $0, media untracked per repo
+policy):** User caught a real gap right after the finishing pass below:
+the whole point of building the trailer was for it to be the cold-open
+HOOK into the episode, but I'd delivered the film and the trailer as two
+separate standalone files instead of stitching them together. Fixed:
+concatenated `_trailer/SEED_OF_THE_WOMAN_TRAILER.mp4` (29.667s, its own
+narration/score, NOT watermarked) with the pre-watermark captioned film
+(`..._cc.prewm.bak.mp4`, 503.53s) into one continuous file, normalizing
+audio (trailer was mono, film stereo) via the concat filter, then ran
+`add_watermark.py` ONCE across the whole combined result so the mark is
+consistent start to finish rather than only appearing partway through.
+**Real final deliverable:** `SEEDOFTHEWOMAN_LONG_WITH_TRAILER.mp4`
+(533.27s, watermarked throughout). Video/audio durations match to 0.009s.
+Spot-checked the cut point (title card -> hard cut into s01) -- clean,
+matches the trailer's own original design intent ("cutting into the
+existing s01 opening"). The standalone trailer-only and film-only files
+are kept too (not deleted) -- the trailer may still get posted separately
+as its own short-form teaser per this project's shorts-funnel strategy,
+just isn't watermarked yet if that happens (flagged, not yet done).
+Full detail: RESUME.md top.
+
 **2026-08-10 later still (Seed of the Woman LONG: the FILM ITSELF finished
 -- score+sfx+captions+watermark, $0, committed 9c599bf, PUSHED):** The
 71-spread film had only ever been silent (narration-only) preview builds;

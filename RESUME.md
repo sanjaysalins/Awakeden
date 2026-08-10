@@ -1,4 +1,40 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-10 TRULY LATEST (SEED OF THE WOMAN
+# LONG: TRAILER + FILM MERGED -- the real single final deliverable exists
+# now) — READ THIS FIRST, supersedes the "FILM ITSELF IS NOW FINISHED"
+# block right below (that block's own finishing-pass detail -- score/sfx/
+# caption/watermark design choices -- is still accurate; this is the very
+# next fix after it, same session).
+#
+# ── WHAT HAPPENED: user caught that the finished film and the finished
+# trailer were two separate files -- but the trailer was always meant to
+# be the episode's own cold-open HOOK, played before the film, not a
+# side deliverable. Fixed by concatenating trailer -> film into one
+# continuous video (audio channel layouts normalized, trailer was mono),
+# then running add_watermark.py ONCE on the combined result so the mark
+# is consistent throughout instead of only appearing once the film
+# portion starts.
+#
+# ── THE REAL FINAL FILE (this is what should get uploaded, not the
+# film-only cc.mp4 from the block below): poc_living_sketchbook/
+# seed_of_the_woman/SEEDOFTHEWOMAN_LONG_WITH_TRAILER.mp4 (533.27s =
+# 29.667s trailer + 503.53s film, watermarked start to finish, v/a
+# durations match to 0.009s). Cut point (trailer's title card -> hard
+# cut into the film's own s01) spot-checked clean.
+#
+# ── STILL OPEN, not urgent: the standalone trailer-only file
+# (_trailer/SEED_OF_THE_WOMAN_TRAILER.mp4) has NO watermark -- fine as
+# long as it's never posted on its own, but if it ever gets used as a
+# separate short-form teaser (this project's own shorts-funnel strategy),
+# it'll need its own watermark pass first. Not done because it wasn't
+# asked for and may not even be needed depending on the release plan.
+#
+# ── NOT DONE, the real next step: Stage 5/6 (upload metadata + publish
+# pack) -- now for SEEDOFTHEWOMAN_LONG_WITH_TRAILER.mp4, the true final,
+# not the film-only file. Nothing else queued.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-10 LATEST (SEED OF THE WOMAN LONG:
 # THE FILM ITSELF IS NOW FINISHED -- score+sfx+captions+watermark, $0,
 # committed 9c599bf, PUSHED) — READ THIS FIRST, supersedes the "TRAILER
