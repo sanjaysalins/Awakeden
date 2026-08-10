@@ -1,13 +1,14 @@
 # Motion Lint Report
 
 Thresholds used: {"narrative": 0.15, "card": 0.1}
-Segments analyzed: 55
+Segments analyzed: 71
 
-**3 FAIL, 9 WARN**
+**4 FAIL, 10 WARN**
 
-- **[FAIL] DEVICE-QUOTA** `fwd_drift` -- 18/55 = 32.7% > 15% FAIL threshold
-- **[FAIL] DEVICE-QUOTA** `bespoke` -- 17/55 = 30.9% > 15% FAIL threshold
+- **[FAIL] DEVICE-QUOTA** `fwd_drift` -- 26/71 = 36.6% > 15% FAIL threshold
+- **[FAIL] DEVICE-QUOTA** `bespoke` -- 24/71 = 33.8% > 15% FAIL threshold
 - **[FAIL] FROZEN-SPREAD** `s24_before_their_sentences` -- p95=0.145 < T_frozen(narrative)=0.15, dur=6.6s
+- **[FAIL] FROZEN-SPREAD** `s70_step_out` -- p95=0.125 < T_frozen(narrative)=0.15, dur=8.4s
 - **[WARN] FROZEN-SHORT** `s05_where_art_thou` -- p95=0.000 < T_frozen(narrative)=0.15, dur=3.1s (short, WARN only)
 - **[WARN] FROZEN-SHORT** `s07_beguiled_card` -- p95=0.099 < T_frozen(card)=0.1, dur=3.6s (short, WARN only)
 - **[WARN] FROZEN-SHORT** `s09_unexpected_place` -- p95=0.091 < T_frozen(narrative)=0.15, dur=4.6s (short, WARN only)
@@ -17,3 +18,4 @@ Segments analyzed: 55
 - **[WARN] MOTION-CLIFF** `s08_coming_apart -> s09_unexpected_place` -- outgoing p95=0.68 vs incoming p95=0.09 (T=0.15), unseen_hand transition -- consider escalating
 - **[WARN] MOTION-CLIFF** `s16_watch_closely -> s17_not_adam_not_eve` -- outgoing p95=8.69 vs incoming p95=0.11 (T=0.15), unseen_hand transition -- consider escalating
 - **[WARN] MOTION-CLIFF** `s23_let_that_land -> s24_before_their_sentences` -- outgoing p95=0.31 vs incoming p95=0.15 (T=0.15), unseen_hand transition -- consider escalating
+- **[WARN] MOTION-CLIFF** `s69_empty_hands -> s70_step_out` -- outgoing p95=2.67 vs incoming p95=0.13 (T=0.15), unseen_hand transition -- consider escalating

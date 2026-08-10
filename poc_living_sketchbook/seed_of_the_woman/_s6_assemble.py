@@ -1511,6 +1511,331 @@ def build_s55(dest, duration, doa):
     _shutil.rmtree(frames)
 
 
+# ---------------------------------------------------------- batch 7 (2026-08-09, spreads 56-71)
+
+def build_s56(dest, duration, doa):
+    """$0 composite over s54's OWN already-rendered art (not a new
+    render, per E5 row 56) -- crops toward the cross, a soft ADDITIVE
+    gold glow bloom centered on it (the cross now "gold-edged" per the
+    camera table), then Col 2:15 KJV as Scribed Ink in the lower-third
+    band. REJECTED first attempt (caught on eye-check, not shipped): a
+    luminance-threshold pixel-replace (lum<90 -> gold) -- sampled, the
+    dark navy SKY (lum~42) and the cross's own ink linework are both
+    "dark," so the threshold couldn't tell them apart and painted a
+    giant gold rectangle over most of the sky instead of just the
+    cross. A soft radial glow (measured center via bbox_sheet.py: this
+    crop's cross sits at ~53%,30%) sidesteps the whole problem -- it
+    brightens/warms the cross by proximity, never needs to segment ink
+    from sky, and never leaves a hard edge."""
+    still = STILLS / "s54_seeming_win.png"
+    base = Image.open(still).convert("RGB")
+    sw, sh = base.size
+    crop = base.crop((int(sw * 0.55), 0, sw, int(sh * 0.62)))
+    crop = crop.resize((W, H), Image.LANCZOS)
+    arr = np.asarray(crop, dtype=np.float32)
+    yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+    cx, cy = W * 0.53, H * 0.30
+    dist = np.sqrt((xx - cx) ** 2 + (yy - cy) ** 2)
+    glow = np.clip(1.0 - dist / 260.0, 0.0, 1.0) ** 1.6
+    boost = glow * 70.0
+    arr = np.clip(arr + boost[..., None] * np.array([1.0, 0.78, 0.35], np.float32), 0, 255)
+    base_frame = Image.fromarray(arr.astype(np.uint8)).convert("RGBA")
+
+    poc_devices = load_devices_here()
+    card = poc_devices.VERSE_CARDS["s56_triumph_card"]
+    lines = card["lines"]
+    line_imgs = [render_line_png(line, seed=560 + i) for i, line in enumerate(lines)]
+    y = int(H * 0.74)
+    positions = []
+    for im in line_imgs:
+        x = int((W - im.width) / 2)
+        positions.append((x, y))
+        y += im.height + 16
+
+    cropped = SEG_DIR / "_s56_bg_crop.png"
+    base_frame.convert("RGB").save(cropped)
+    inputs = ["-loop", "1", "-i", str(cropped)]
+    filt_parts = []
+    last = "0:v"
+    press_start, press_gap, press_fade = 0.5, 0.9, 0.4
+    for i, (im, (x, y)) in enumerate(zip(line_imgs, positions)):
+        p = SEG_DIR / f"_s56_line{i}.png"
+        im.save(p)
+        inputs += ["-loop", "1", "-i", str(p)]
+        idx = i + 1
+        t0 = press_start + i * press_gap
+        faded, label = f"f{idx}", f"v{idx}"
+        filt_parts.append(f"[{idx}:v]format=rgba,fade=t=in:st={t0:.2f}:d={press_fade}:alpha=1[{faded}]")
+        filt_parts.append(f"[{last}][{faded}]overlay=0+{x}:0+{y}:enable='gte(t,{t0:.2f})'[{label}]")
+        last = label
+    filt = ";".join(filt_parts)
+    _run(["ffmpeg", "-y", "-v", "error", *inputs, "-t", f"{duration:.3f}",
+          "-filter_complex", filt, "-map", f"[{last}]",
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(FPS), str(dest)])
+    cropped.unlink(missing_ok=True)
+    for i in range(len(lines)):
+        (SEG_DIR / f"_s56_line{i}.png").unlink(missing_ok=True)
+
+
+def build_s59(dest, duration, doa):
+    """$0 bespoke dual-glow breathe -- the two horizon lights (dawn left,
+    far-brighter gold right) both baked into the still; here they breathe
+    out of phase, never in sync, so the frame never reads as one uniform
+    pulse. Anchors measured via bbox_sheet.py."""
+    still = STILLS / "s59_end_certain.png"
+    src = np.asarray(Image.open(still).convert("RGB").resize((W, H), Image.LANCZOS), dtype=np.float32)
+    yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+    left = (0.07 * W, 0.52 * H)
+    right = (0.93 * W, 0.50 * H)
+    dist_l = np.sqrt((xx - left[0]) ** 2 + (yy - left[1]) ** 2)
+    dist_r = np.sqrt((xx - right[0]) ** 2 + (yy - right[1]) ** 2)
+    mask_l = np.clip(1.0 - dist_l / 420.0, 0.0, 1.0) ** 2
+    mask_r = np.clip(1.0 - dist_r / 420.0, 0.0, 1.0) ** 2
+    n = max(1, int(round(duration * FPS)))
+    frames = dest.parent / (dest.stem + "_frames")
+    frames.mkdir(parents=True, exist_ok=True)
+    for i in range(n):
+        t = i / FPS
+        pulse_l = 0.5 + 0.5 * math.sin(2 * math.pi * t / 5.0)
+        pulse_r = 0.5 + 0.5 * math.sin(2 * math.pi * t / 3.4 + math.pi * 0.6)
+        boost = mask_l * pulse_l * 40.0 + mask_r * pulse_r * 55.0
+        arr = np.clip(src + boost[..., None] * np.array([1.0, 0.82, 0.45], np.float32), 0, 255).astype(np.uint8)
+        Image.fromarray(arr).save(frames / f"f{i:05d}.png")
+    _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(FPS), "-i", str(frames / "f%05d.png"),
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", str(dest)])
+    import shutil as _shutil
+    _shutil.rmtree(frames)
+
+
+def build_s60(dest, duration, doa):
+    """$0 warm-glow breathe (global, gentle) + grain-boil -- the still's
+    own lamp light already pools across the whole open book, so this is
+    a subtle overall brightness pulse (NOT a candle_only radial budget,
+    which would wrongly dim the frame's corners), then line_boil for
+    "held, alive" texture."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import line_boil  # noqa: E402
+    still = STILLS / "s60_still_open.png"
+    src = np.asarray(Image.open(still).convert("RGB").resize((W, H), Image.LANCZOS), dtype=np.float32)
+    n = max(1, int(round(duration * FPS)))
+    frames = dest.parent / (dest.stem + "_frames")
+    frames.mkdir(parents=True, exist_ok=True)
+    for i in range(n):
+        t = i / FPS
+        gain = 1.0 + 0.035 * math.sin(2 * math.pi * t / 4.0)
+        arr = (src * gain).clip(0, 255).astype(np.uint8)
+        Image.fromarray(arr).save(frames / f"f{i:05d}.png")
+    held = dest.parent / (dest.stem + "_held.mp4")
+    _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(FPS), "-i", str(frames / "f%05d.png"),
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", str(held)])
+    import shutil as _shutil
+    _shutil.rmtree(frames)
+    line_boil.render(held, dest, 0.5)
+    held.unlink(missing_ok=True)
+
+
+def build_s61(dest, duration, doa):
+    """focal-tour ($0) -- visits altar then mountain in narration order
+    (Heb-style "not over an altar, not from a mountain"); both regions
+    stay pale non-photo-blue underdrawing throughout -- focal_tour only
+    modulates LIGHT, never adds/removes ink, so the underdrawing can
+    never accidentally "complete" itself. Bboxes read off the actual
+    rendered still via bbox_sheet.py."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import focal_tour  # noqa: E402
+    still = STILLS / "s61_not_altar_not_mountain.png"
+    focal_regions = [
+        {"bbox": [2, 45, 30, 40]},   # the altar, lower-left
+        {"bbox": [55, 5, 42, 35]},   # the mountain, upper-right
+    ]
+    focal_tour.render_clip(still, focal_regions, "dramatic_spotlight", duration, W, H, dest)
+
+
+def build_s62(dest, duration, doa):
+    """thread_device_gleam ($0), composited over the raw Seedance clip --
+    the gold thread glowing visibly between Adam and Eve, per E5 row 62.
+    Endpoints span the clear ground lane deliberately left open between
+    the two figures in the still. Raw clip is 4.04s but this spread's
+    real window is 6.99s -- holds the LAST composited frame for the
+    remainder, matching build_clip_hold's own convention (not just
+    trusting ffmpeg's image-sequence input to pad itself)."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import thread_device  # noqa: E402
+    raw = CLIPS / "s62_into_a_curse.mp4"
+    p0_frac, p1_frac = (0.34, 0.68), (0.62, 0.68)
+    frames_in = dest.parent / (dest.stem + "_in")
+    frames_in.mkdir(parents=True, exist_ok=True)
+    _run(["ffmpeg", "-y", "-v", "error", "-i", str(raw),
+          "-vf", f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS}",
+          str(frames_in / "f%05d.png")])
+    thread = thread_device.make_thread_layer(W, H, p0_frac, p1_frac, thread_device.GOLD, width=14)
+    thread_bright = thread_device.make_thread_layer(W, H, p0_frac, p1_frac, thread_device.GOLD_BRIGHT, width=14)
+    frames_out = dest.parent / (dest.stem + "_frames")
+    frames_out.mkdir(parents=True, exist_ok=True)
+    src_frames = sorted(frames_in.glob("f*.png"))
+    n = max(1, int(round(duration * FPS)))
+    last_frame = None
+    for i in range(n):
+        t = i / FPS
+        swell = thread_device.thread_swell(t, 3.0)
+        layer = Image.blend(thread.convert("RGB"), thread_bright.convert("RGB"), swell).convert("RGBA")
+        layer.putalpha(thread.split()[3])
+        if i < len(src_frames):
+            frame = Image.open(src_frames[i]).convert("RGBA")
+            frame.alpha_composite(layer)
+            last_frame = frame
+        else:
+            frame = last_frame
+        frame.convert("RGB").save(frames_out / f"f{i:05d}.png")
+    _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(FPS), "-i", str(frames_out / "f%05d.png"),
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", str(dest)])
+    import shutil as _shutil
+    _shutil.rmtree(frames_in)
+    _shutil.rmtree(frames_out)
+
+
+def build_s63(dest, duration, doa):
+    """thread_device_gleam ($0) -- the three pencil ghosts stay pre-drawn
+    and untouched; only the ONE solid gold thread animates, running the
+    diagonal lane deliberately left clear in the still. Endpoints
+    measured via bbox_sheet.py."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import thread_device  # noqa: E402
+    base = Image.open(STILLS / "s63_before_temple.png").convert("RGB").resize((W, H), Image.LANCZOS)
+    p0_frac, p1_frac = (0.10, 0.88), (0.88, 0.10)
+    thread = thread_device.make_thread_layer(W, H, p0_frac, p1_frac, thread_device.GOLD, width=22)
+    thread_bright = thread_device.make_thread_layer(W, H, p0_frac, p1_frac, thread_device.GOLD_BRIGHT, width=22)
+    n = max(1, int(round(duration * FPS)))
+    frames = dest.parent / (dest.stem + "_frames")
+    frames.mkdir(parents=True, exist_ok=True)
+    for i in range(n):
+        t = i / FPS
+        opacity = thread_device.thread_opacity(t, start=duration * 0.15, fade=duration * 0.4)
+        swell = thread_device.thread_swell(t, duration * 0.6, rise=0.6, decay=0.8)
+        layer = Image.blend(thread.convert("RGB"), thread_bright.convert("RGB"), swell).convert("RGBA")
+        alpha = thread.split()[3].point(lambda a, opacity=opacity: int(a * opacity))
+        layer.putalpha(alpha)
+        frame = base.convert("RGBA")
+        frame.alpha_composite(layer)
+        frame.convert("RGB").save(frames / f"f{i:05d}.png")
+    _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(FPS), "-i", str(frames / "f%05d.png"),
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", str(dest)])
+    import shutil as _shutil
+    _shutil.rmtree(frames)
+
+
+def build_s66(dest, duration, doa):
+    """focal-tour ($0) visiting the blank left page then the completed
+    right vignette, PLUS a static thread_device overlay connecting them
+    across the center gap (fixed screen position -- no camera move on
+    this spread, so the thread never needs frame-by-frame reprojection,
+    unlike s28/s45). "Copy" left blank per the actual rendered still
+    (no new lettering invented here -- E5's "copy" callback is satisfied
+    by the light visiting the page itself, matching s32's own quiet
+    honest-gap precedent). Bboxes measured via bbox_sheet.py."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import focal_tour  # noqa: E402
+    import thread_device  # noqa: E402
+    still = STILLS / "s66_promise_kept.png"
+    focal_regions = [
+        {"bbox": [5, 10, 32, 85]},    # left blank page
+        {"bbox": [62, 25, 33, 55]},   # right, completed vignette
+    ]
+    raw = dest.parent / (dest.stem + "_raw.mp4")
+    focal_tour.render_clip(still, focal_regions, "dramatic_spotlight", duration, W, H, raw)
+
+    p0_frac, p1_frac = (0.37, 0.5), (0.61, 0.5)
+    thread = thread_device.make_thread_layer(W, H, p0_frac, p1_frac, thread_device.GOLD, width=16)
+    thread_bright = thread_device.make_thread_layer(W, H, p0_frac, p1_frac, thread_device.GOLD_BRIGHT, width=16)
+    n = max(1, int(round(duration * FPS)))
+    frames_in = dest.parent / (dest.stem + "_in")
+    frames_in.mkdir(parents=True, exist_ok=True)
+    _run(["ffmpeg", "-y", "-v", "error", "-i", str(raw), "-vf", f"fps={FPS}", str(frames_in / "f%05d.png")])
+    frames_out = dest.parent / (dest.stem + "_frames")
+    frames_out.mkdir(parents=True, exist_ok=True)
+    src_frames = sorted(frames_in.glob("f*.png"))
+    for i, fp in enumerate(src_frames):
+        t = i / FPS
+        opacity = thread_device.thread_opacity(t, start=duration * 0.35, fade=duration * 0.35)
+        swell = thread_device.thread_swell(t, duration * 0.55, rise=0.6, decay=0.8)
+        layer = Image.blend(thread.convert("RGB"), thread_bright.convert("RGB"), swell).convert("RGBA")
+        alpha = thread.split()[3].point(lambda a, opacity=opacity: int(a * opacity))
+        layer.putalpha(alpha)
+        frame = Image.open(fp).convert("RGBA")
+        frame.alpha_composite(layer)
+        frame.convert("RGB").save(frames_out / f"f{i:05d}.png")
+    _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(FPS), "-i", str(frames_out / "f%05d.png"),
+          "-t", f"{duration:.3f}", "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", str(dest)])
+    import shutil as _shutil
+    raw.unlink(missing_ok=True)
+    _shutil.rmtree(frames_in)
+    _shutil.rmtree(frames_out)
+
+
+def build_s68(dest, duration, doa):
+    """hunt_and_lock camera push ($0), marker SKIPPED (calls hunt_window
+    directly, same pattern as build_s01 -- not the top-level render(),
+    which always draws a scarlet lock-marker; wrong here, this is a hope
+    beat, not a "found it" reveal). Push UP toward the unreachable light
+    gap -- DEVIATION from the original plan's parallax-panel per the
+    batch-7 quote: this composition is a symmetric converging tunnel
+    with no single salient foreground object, the SAME condition that
+    made rembg fail to find a clean cutout on s30 earlier in this
+    episode (non-monotonic amplitude response, the tell). hunt_and_lock
+    needs no segmentation and is proven repeatedly this session -- and a
+    push toward light that never quite arrives suits "unclimbability"
+    thematically as well as a parallax layer-drift would have."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import hunt_and_lock  # noqa: E402
+    still = STILLS / "s68_no_climbing_back.png"
+    target_frac = (0.50, 0.20)
+    src = Image.open(still).convert("RGB")
+    big = hunt_and_lock.scale_crop(src, int(W * hunt_and_lock.UPSCALE), int(H * hunt_and_lock.UPSCALE))
+    bw, bh = big.size
+    n = max(1, int(round(duration * FPS)))
+    frames = dest.parent / (dest.stem + "_frames")
+    frames.mkdir(parents=True, exist_ok=True)
+    for i in range(n):
+        t = i / FPS
+        x0, y0, vw, vh, _lock_prog, _wxy = hunt_and_lock.hunt_window(bw, bh, t, duration, target_frac, W, H)
+        frame = big.crop((x0, y0, x0 + vw, y0 + vh)).resize((W, H), Image.LANCZOS)
+        frame.save(frames / f"f{i:05d}.png")
+    _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(FPS), "-i", str(frames / "f%05d.png"),
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", str(dest)])
+    import shutil as _shutil
+    _shutil.rmtree(frames)
+
+
+def build_s71(dest, duration, doa):
+    """Static/breathing hold ($0), per E6-J's own explicit spec: "nothing
+    moves but the gold glow breathing (period ~4s, amplitude subtle) and
+    grain-boil." More specific than a literal copy of s05's zero-motion
+    _plain_static -- this spread's own duration (~12s) needs real,
+    gentle motion to clear motion_lint at that length, and E6-J already
+    names the exact treatment. The torn_out_page TRANSITION into this
+    spread is a separate seam-level asset (built at the s70->s71 cut,
+    not inside this segment)."""
+    sys.path.insert(0, str(ROOT / "panel_animator"))
+    import line_boil  # noqa: E402
+    still = STILLS / "s71_found_by_him.png"
+    src = np.asarray(Image.open(still).convert("RGB").resize((W, H), Image.LANCZOS), dtype=np.float32)
+    n = max(1, int(round(duration * FPS)))
+    frames = dest.parent / (dest.stem + "_frames")
+    frames.mkdir(parents=True, exist_ok=True)
+    for i in range(n):
+        t = i / FPS
+        gain = 1.0 + 0.045 * math.sin(2 * math.pi * t / 4.0)
+        arr = (src * gain).clip(0, 255).astype(np.uint8)
+        Image.fromarray(arr).save(frames / f"f{i:05d}.png")
+    held = dest.parent / (dest.stem + "_held.mp4")
+    _run(["ffmpeg", "-y", "-v", "error", "-framerate", str(FPS), "-i", str(frames / "f%05d.png"),
+          "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p", str(held)])
+    import shutil as _shutil
+    _shutil.rmtree(frames)
+    line_boil.render(held, dest, 0.4)
+    held.unlink(missing_ok=True)
+
+
 SEGMENT_BUILDERS = {
     "s01_something_wrong": lambda dest, dur, doa: build_s01(dest, dur, doa),
     "s02_the_hiding": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s02_the_hiding.mp4"),
@@ -1575,6 +1900,23 @@ SEGMENT_BUILDERS = {
     "s53_through_death_card": lambda dest, dur, doa: build_s53(dest, dur, doa),
     "s54_seeming_win": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s54_seeming_win.mp4"),
     "s55_the_inversion": lambda dest, dur, doa: build_s55(dest, dur, doa),
+    # batch 7 (2026-08-09, spreads 56-71, movement 6 close + "the invitation")
+    "s56_triumph_card": lambda dest, dur, doa: build_s56(dest, dur, doa),
+    "s57_empty_tomb": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s57_empty_tomb.mp4"),
+    "s58_beaten_enemy": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s58_beaten_enemy.mp4"),
+    "s59_end_certain": lambda dest, dur, doa: build_s59(dest, dur, doa),
+    "s60_still_open": lambda dest, dur, doa: build_s60(dest, dur, doa),
+    "s61_not_altar_not_mountain": lambda dest, dur, doa: build_s61(dest, dur, doa),
+    "s62_into_a_curse": lambda dest, dur, doa: build_s62(dest, dur, doa),
+    "s63_before_temple": lambda dest, dur, doa: build_s63(dest, dur, doa),
+    "s64_named_future": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s64_named_future.mp4"),
+    "s65_oldest_lie": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s65_oldest_lie.mp4"),
+    "s66_promise_kept": lambda dest, dur, doa: build_s66(dest, dur, doa),
+    "s67_matter_of_time": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s67_matter_of_time.mp4"),
+    "s68_no_climbing_back": lambda dest, dur, doa: build_s68(dest, dur, doa),
+    "s69_empty_hands": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s69_empty_hands.mp4"),
+    "s70_step_out": lambda dest, dur, doa: build_clip_hold(dest, dur, CLIPS / "s70_step_out.mp4"),
+    "s71_found_by_him": lambda dest, dur, doa: build_s71(dest, dur, doa),
 }
 
 SOURCE_FILES = {
@@ -1634,6 +1976,23 @@ SOURCE_FILES = {
     "s53_through_death_card": [STILLS / "s51_bearing_wages.png", HERE / "_devices.py"],
     "s54_seeming_win": [CLIPS / "s54_seeming_win.mp4"],
     "s55_the_inversion": [STILLS / "s54_seeming_win.png", HERE / "_devices.py"],
+    # batch 7 (2026-08-09, spreads 56-71)
+    "s56_triumph_card": [STILLS / "s54_seeming_win.png", HERE / "_devices.py"],
+    "s57_empty_tomb": [CLIPS / "s57_empty_tomb.mp4"],
+    "s58_beaten_enemy": [CLIPS / "s58_beaten_enemy.mp4"],
+    "s59_end_certain": [STILLS / "s59_end_certain.png"],
+    "s60_still_open": [STILLS / "s60_still_open.png"],
+    "s61_not_altar_not_mountain": [STILLS / "s61_not_altar_not_mountain.png", HERE / "_devices.py"],
+    "s62_into_a_curse": [CLIPS / "s62_into_a_curse.mp4", HERE / "_devices.py"],
+    "s63_before_temple": [STILLS / "s63_before_temple.png", HERE / "_devices.py"],
+    "s64_named_future": [CLIPS / "s64_named_future.mp4"],
+    "s65_oldest_lie": [CLIPS / "s65_oldest_lie.mp4"],
+    "s66_promise_kept": [STILLS / "s66_promise_kept.png", HERE / "_devices.py"],
+    "s67_matter_of_time": [CLIPS / "s67_matter_of_time.mp4"],
+    "s68_no_climbing_back": [STILLS / "s68_no_climbing_back.png"],
+    "s69_empty_hands": [CLIPS / "s69_empty_hands.mp4"],
+    "s70_step_out": [CLIPS / "s70_step_out.mp4"],
+    "s71_found_by_him": [STILLS / "s71_found_by_him.png"],
 }
 
 

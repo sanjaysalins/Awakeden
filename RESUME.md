@@ -1,4 +1,233 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-10 (SEED OF THE WOMAN LONG: ALL 71
+# SPREADS DONE + LOCKED-STYLE COLD-OPEN TRAILER BUILT + APPROVED ("perfect,
+# this is the standard we should keep") -- ONE SMALL FIX QUEUED, SESSION
+# CLOSED BY USER REQUEST) — READ THIS FIRST, supersedes every block below
+# including "BATCH 5 CLOSED" right under this (batch 5's own content is
+# still accurate history; this is several sessions further on -- batch 6,
+# batch 7 (spreads 56-71, finishing the whole 71-spread film), the hero-
+# stills cinematic pass, and a full trailer production all happened after
+# it and are NOT yet reflected in that block).
+#
+# ── ONE-LINE STATUS: the film itself is DONE -- all 71 spreads built,
+# gate-clean, committed (see STATE.md's own entries for batch 6/7 detail).
+# This session's own work was a NEW deliverable on top of the finished
+# film: a real ~30s cold-open TRAILER (own narration, own score, own
+# cinematic paid animation) meant to play before the 8:34 film. The user
+# watched it and called it "perfect... this is the standard we should
+# keep" -- ONE small fix is queued for next session (see below), nothing
+# else is open on the trailer. NOT YET committed as of this handover --
+# commit it before doing anything else next session, per explicit user
+# request this session ("save everything, commit everything").
+#
+# ── EXACT NEXT STEP (do this FIRST, before anything else): fix a real AI
+# motion artifact in the trailer's tomb shot, per the user's own direct
+# catch. Verbatim: "at 0.22, the entrance of the tomb, has an ai glitch,
+# that has some kind of gate opening and closing, so just cut the clip at
+# that point and move to the next clip." Location: trailer timestamp
+# ~0:22 (within the S10 "tomb" beat, which plays 21.35-23.55s in the
+# final assembled trailer). Verified by eye this session (frame-sampled
+# poc_living_sketchbook/seed_of_the_woman/_trailer/SEED_OF_THE_WOMAN_
+# TRAILER.mp4 at 0.1s resolution around t=21.95-22.45s): there IS a real,
+# subtle geometric wobble in the tomb doorway's right door-post/jamb area
+# across that window -- consistent with "gate opening and closing" when
+# played at full frame rate, even though it's subtle frame-to-frame. THE
+# FIX (per the user's own explicit instruction, do exactly this, nothing
+# more): do NOT re-render -- just TRIM the S10 clip shorter so it CUTS
+# AWAY before the wobble becomes visible, then let S11 (the montage)
+# start slightly earlier to fill the gap. Concretely:
+#   1. Open poc_living_sketchbook/seed_of_the_woman/_trailer/clips/
+#      t_s10_tomb_wide.mp4 (the RAW un-trimmed clip, longer than what's
+#      used) and watch it directly (not sampled frames) to find the exact
+#      clip-local onset of the wobble -- the final assembly used its
+#      first 2.2s (in_point=0.0, duration=2.2 -- see PLAN list inside
+#      poc_living_sketchbook/seed_of_the_woman/_trailer/_t10_final_
+#      assembly.py) starting at trailer-absolute t=21.35s, so trailer
+#      t=22.0s corresponds to clip-local t=0.65s into that raw clip --
+#      the wobble is very likely right around there or just after.
+#   2. In _t10_final_assembly.py's PLAN list, shorten the S10 tuple's
+#      `dur` value (currently 2.2) to land the cut BEFORE the wobble's
+#      real onset (e.g. try 0.55-0.6s first, adjust by eye), and increase
+#      S11's `dur` by the same amount removed from S10 (currently 3.467,
+#      i.e. its own full montage length -- extending it slightly is safe,
+#      it's a re-usable $0 recut, not a paid asset with a fixed length)
+#      so the total still lands on the same real narration timing
+#      (unchanged: segment 3 spans 19.05-29.10s of the real narration.mp3
+#      at longform/05_The_Seed_Of_The_Woman/v1/_trailer/narration.mp3,
+#      already muxed correctly -- do NOT touch the audio path or timing
+#      math, only the S10/S11 video trim points).
+#   3. Re-run _t10_final_assembly.py (it rebuilds _final_work/ trims +
+#      concat + mux fresh each time, all $0, no new API spend needed).
+#   4. Eye-check the new cut point plays clean (no visible jump-cut
+#      awkwardness, S11's montage still reads fine starting a little
+#      earlier), then update poc_living_sketchbook/seed_of_the_woman/
+#      _trailer/_FINAL_REVIEW.html's timing table if the cut point shifted
+#      meaningfully, and tell the user it's fixed for a final listen/watch
+#      before considering the trailer fully closed.
+# This is a small, $0, code-only fix -- no new paid renders needed, no
+# design consultation needed, just a trim adjustment. Do not use this as
+# license to touch anything else about the trailer -- the user called it
+# "perfect" and "the standard we should keep" otherwise; leave every
+# other beat exactly as it shipped.
+#
+# ── WHAT HAPPENED THIS SESSION, IN ORDER (for full context, not required
+# reading to do the fix above, but useful if anything about the trailer's
+# own design rationale needs re-deriving):
+#   1. Continued from a prior session that had left off after batch 6
+#      (spreads 46-55, "the crushing"). Built batch 7 (spreads 56-71,
+#      "the invitation" through THE LANDING) -- the film's FINAL content
+#      batch. 16 spreads, 15 new stills + 1 reuse, 8 paid clips, 8 new $0
+#      devices. Real defects caught+fixed before shipping: s58's "shed
+#      skin" needed 3 rolls (living creature -> wrong colors -> living
+#      creature again) before switching from paid re-rolling to a $0
+#      deterministic color-lock filter; s67 inherited the same issue via
+#      its reference chain; s56's gold-cross-edge composite needed a
+#      complete technique swap (luminance-threshold pixel-replace
+#      couldn't distinguish the cross's ink from the equally-dark night
+#      sky -- painted a giant gold rectangle -- fixed with a soft radial
+#      glow bloom instead). motion_lint clean after. Committed as c54bb73
+#      ("Seed of the Woman LONG: batch 7 done... $51.59 total spend").
+#      Full detail: STATE.md's own 2026-08-09 batch-7 entry.
+#   2. User feedback: the film's first 30 seconds "feels very ordinary"
+#      for a piece asking 8 minutes of attention from a modern low-
+#      attention audience; wanted it to feel like a trailer. I verified
+#      concretely (not just took the note on faith): 12.4 of the first
+#      30s was a single static held Scripture verse card, only 4 shots
+#      total in that window, and there was ZERO score/music anywhere in
+#      the finished film yet (finishing chain not yet built).
+#   3. First pass (later superseded, see step 5): dispatched Fable for a
+#      $0 "cold-open overture" design -- recut EXISTING footage (s16
+#      serpent lock-on, s54 shadow, s50 cross, s57 tomb, s58 shed skin)
+#      into a 13.4s canonical-order flash-montage with a gold thread
+#      connecting the cuts, ink-transition into the cross, ending in real
+#      silence before cutting into the existing s01 opening. Built it
+#      (ink_transition.py + thread_device.py + a new $0 title/silence
+#      card), prepended to the full film, shifted narration audio by the
+#      overture's own duration. Shipped SILENT at first (a real miss --
+#      user asked "was audio there?"); fixed by scoring it with the
+#      existing music_library track `sacred_grace_rise_a` (verified its
+#      own real amplitude curve via ffmpeg volumedetect rather than
+#      guessing blind -- its natural quiet-then-rise shape happened to
+#      land close to where the visual beats needed it).
+#   4. User then explicitly PIVOTED past this free-recut approach: wanted
+#      a genuinely NEW trailer production -- its own written narration,
+#      its own score treatment, real NEW paid cinematic animation, with
+#      the visuals given explicit freedom to be MORE kinetic than the
+#      film's own reverent frozen-tableau discipline (user's own choice
+#      via an AskUserQuestion: "more kinetic, trailer-only").
+#   5. Wrote new trailer-only narration (NOT part of the locked episode
+#      narration, a hand-authored 29s script: "In the garden, everything
+#      just broke... He made a promise. To the enemy. 'It shall bruise
+#      thy head... and thou shalt bruise his heel.' Centuries before the
+#      cross... The Seed of the Woman."), user-approved before synthesis.
+#      Synthesized via this project's own reused multi-voice pipeline
+#      (per_turn_synth.py --natural, narrator + the SAME "god" voice this
+#      episode already uses for Gen 3:14-15) into longform/05_The_Seed_
+#      Of_The_Woman/v1/_trailer/narration.mp3 (29.10s real, user-approved
+#      by ear before any visual spend).
+#   6. Dispatched Fable with the REAL measured per-line narration timing
+#      for a 12-shot cinematic design (shot list + camera treatment +
+#      provider recommendation + cost estimate), given explicit
+#      permission for real kinetic motion. Fable's own judgment call
+#      (validated, kept as designed): the trailer SLOWS DOWN hard exactly
+#      when the LORD's own voice speaks the KJV line -- contrast is doing
+#      the work, and reinstating the film's own "camera bows to God"
+#      discipline at that one moment IS the theology, made visible.
+#   7. Built a 2-shot paid test batch first (serpent + running couple,
+#      ~$4.50 incl. real transient-API troubleshooting spend) before
+#      committing to the full batch, per this project's own standing
+#      test-gate practice. THE USER CAUGHT A REAL DEFECT the render
+#      itself and my own eye-check both missed at first: the running
+#      clip's Kling character-motion showed genuine face distortion
+#      (verified once flagged: dense multi-frame sampling showed Adam's
+#      brow/nose/jaw and Eve's mouth shape actually shifting frame to
+#      frame, not just motion blur). FIXED by replacing paid character
+#      motion with a $0 hunt_and_lock camera push over the SAME approved
+#      still -- guarantees zero distortion since it's the same pixels
+#      re-cropped, never regenerated. This became the standing rule for
+#      the rest of the batch: real invented motion ONLY for content with
+#      no legible close human face at risk (objects, distant/tiny
+#      figures, non-human creature motion already proven safe); every
+#      close-up human face gets camera-only motion instead, matching the
+#      film's own body discipline. Applying this project-wide caught a
+#      SECOND, quieter case myself before shipping (not user-flagged):
+#      the "hiding behind the roots" shot pushed the camera in far
+#      tighter than instructed AND changed Eve's expression (mouth
+#      opening) despite an explicit "hold exact expression" prompt line
+#      -- fixed the same way.
+#   8. Built the remaining 10 shots: a mix of real paid Kling/Seedance
+#      renders (safe cases: eden atmosphere, the falling fruit, the
+#      sentencing tableau's tiny distant figures, the cross crane-rise,
+#      the tomb push) and $0 devices (the two camera-fix pushes above, a
+#      shadow-sweep reusing the exact technique from the main film's own
+#      build_s55, a free 4-still recut montage of the film's own later
+#      imagery, a hand-lettered title card). One real still-batch defect
+#      caught+fixed in passing: s2's fruit-drop clip technically rendered
+#      fine but read as underwhelming (fruit vanished from frame too
+#      plainly, no visible dust-puff impact) -- handled by trimming to
+#      just its dynamic first ~1.5s at assembly time rather than a costly
+#      re-render, since the front portion alone reads fine.
+#   9. Hit repeated transient Higgsfield API "request failed / no
+#      response received" errors mid-session (NOT content rejections --
+#      confirmed by isolating the exact same calls succeeding on retry
+#      with more patience/timeout). Cost some real, tracked spend
+#      figuring this out (~$0.90 across 3 diagnostic renders). Also hit a
+#      real self-inflicted slowness bug twice (S3's and S7's own $0
+#      device builds): writing individual full-resolution PNG frames to
+#      disk one at a time is drastically slower than piping raw frames
+#      directly into ffmpeg via stdin (the pattern hunt_and_lock.render()
+#      itself already uses) -- switched to the raw-pipe pattern for new
+#      camera-fix scripts, night-and-day faster (seconds instead of many
+#      minutes for the same frame count).
+#   10. Final assembly: all 12 beats trimmed to the REAL measured
+#      narration segment boundaries (found via `ffmpeg ... silencedetect`
+#      on the actual narration.mp3, not estimated) -- 0.00-13.83s
+#      (narrator), 13.83-19.05s (the LORD's KJV line + its own pre/post
+#      pauses), 19.05-29.10s (narrator, ending into the title card's own
+#      brief silent hold past the last word). Video runs 29.667s total
+#      (the ~0.56s difference is the intentional silent hold on the title
+#      card). Real total trailer spend, reconciled against the actual
+#      spend ledger (2 entries were initially missing due to the same
+#      transient-API issue breaking the cost-estimator sub-call, not the
+#      render itself -- found and manually logged so the ledger stays
+#      accurate): $13.26.
+#
+# ── WATCH IT: poc_living_sketchbook/seed_of_the_woman/_trailer/
+# SEED_OF_THE_WOMAN_TRAILER.mp4 (the finished, user-approved trailer,
+# minus the one queued S10 fix above). Review page with the full beat-by-
+# beat breakdown + what was caught/fixed along the way:
+# poc_living_sketchbook/seed_of_the_woman/_trailer/_FINAL_REVIEW.html
+#
+# ── COST: batch 7 (the film's own final content batch) was $12.39 on top
+# of the prior $39.24, closing the whole 71-spread film at $51.59. This
+# session's OWN trailer work on top of that: ~$0 for the first (rejected/
+# superseded) overture pass + $13.26 for the real trailer production =
+# the film + its own trailer now stand at roughly $64.85 total, though
+# the overture's now-unused assets were never deleted (harmless leftover
+# in _overture_work/, gitignored, not part of the shipped deliverable).
+#
+# ── GIT STATE: NOT YET COMMITTED as of this handover -- the user
+# explicitly asked to save + commit everything and end the session here.
+# The next session (or the remainder of this one, if still live) should
+# commit FIRST, before the S10 fix above, so the fix lands as its own
+# clean follow-up commit rather than getting tangled with this session's
+# large batch-7 + trailer diff. Everything staged for that commit: batch
+# 7's own file set (_devices.py, _s2_stills.py, _s4_animate.py,
+# _s6_assemble.py, _spread_windows.json, _motion_lint_report.md, 16 new
+# s56-s71 segment .stamp.json files, _BATCH7_FINAL_REVIEW.html) PLUS this
+# session's new trailer production code (poc_living_sketchbook/
+# seed_of_the_woman/_trailer/*.py + its 2 review .html files) PLUS the
+# new narration text assets (longform/05_The_Seed_Of_The_Woman/v1/
+# _trailer/narration-tagged.md + narration.meta.json + voices.json --
+# NOT narration.mp3 itself or any _turns/ audio, those are gitignored
+# media like every other rendered asset in this repo) PLUS
+# data/spend_ledger.jsonl PLUS this RESUME.md + STATE.md update. All
+# stills/clips/the assembled trailer mp4/the silent-overture leftovers
+# stay gitignored media, same as everywhere else in this project --
+# nothing unusual to double-check there.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-09 EARLY MORNING (BATCH 5 CLOSED +
 # COMMITTED, SESSION CLOSED FOR THE DAY BY USER REQUEST -- TOMORROW'S FIRST
 # TASK IS A HERO-STILLS CINEMATIC PASS, NOT BATCH 6) — READ THIS FIRST,

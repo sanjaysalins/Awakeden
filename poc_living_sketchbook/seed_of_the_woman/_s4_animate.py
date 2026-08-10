@@ -257,6 +257,79 @@ JOBS = [
      "unnatural midday darkness in the sky presses very slightly heavier. "
      "Nothing else changes -- no storm, no lightning, no wind, no new "
      "shape ever appears."),
+    # batch 7 (2026-08-09, spreads 56-71, movement 6 close + "the
+    # invitation") -- device table per _PREFLIGHT.md. s69 is the batch's
+    # ONE Kling entry and its ONE intentional exception to the frozen-
+    # tableau discipline (a real gesture-completion beat, same sanctioned
+    # class as s06/s30's ACTING clips) -- everything else stays ambient-
+    # only per this project's standard LOCK.
+    ("s57_empty_tomb", "seedance", 4,
+     PAGE + LOCK +
+     "The stone tomb, the rolled-aside stone, and the folded linen all "
+     "hold their EXACT positions, perfectly still -- nothing shifts, no "
+     "figure or shape ever appears anywhere. Only: the warm gold light "
+     "glowing from within the doorway breathes very gently, and a few "
+     "fine motes of dust drift slowly through the light near the "
+     "threshold. Nothing else changes."),
+    # s58: CRITICAL -- the shed skin itself must NOT move, curl, or show
+    # any sign of life at all; the whole point is stillness/defeat. Only
+    # the dust around it is permitted to move.
+    ("s58_beaten_enemy", "seedance", 4,
+     PAGE + LOCK +
+     "The empty shed skin holds its EXACT collapsed, flat shape and "
+     "position, perfectly still -- it does not move, curl, flex, or "
+     "show any sign of life whatsoever, not one part of it shifts. "
+     "Only: fine dust drifts and stirs very slightly across the ground "
+     "around it in a faint dawn breeze. Nothing else changes."),
+    ("s62_into_a_curse", "seedance", 4,
+     PAGE + LOCK +
+     "Both figures hold their EXACT still positions, faces lowered, "
+     "perfectly still -- neither moves, turns, or shifts at all. Only: "
+     "the soft presence-light in the corner of the frame breathes very "
+     "gently. Nothing else changes."),
+    ("s64_named_future", "seedance", 4,
+     PAGE + LOCK +
+     "The small inked vignette holds its EXACT finished linework, "
+     "perfectly still -- nothing about the drawing itself changes or "
+     "moves. Only: the warm gold light hinted within the tomb's opening "
+     "rises very slightly brighter as the moment holds. Nothing else "
+     "changes."),
+    ("s65_oldest_lie", "seedance", 4,
+     PAGE + LOCK +
+     "The branches, the coiled shape in the shadows, and the distant "
+     "clearing all hold their EXACT positions, perfectly still -- the "
+     "coiled shape does not move at all. Only: the near leaves and "
+     "branches stir very slightly in a light breeze, the distant light "
+     "staying steady. Camera locked, no movement. Nothing else changes."),
+    ("s67_matter_of_time", "seedance", 4,
+     PAGE + LOCK +
+     "The horizon, the sky, and the tiny distant skin all hold their "
+     "EXACT positions, perfectly still -- the skin does not move at "
+     "all. Only: a light wind stirs fine dust very faintly along the "
+     "ground, calm and quiet. Nothing else changes."),
+    # s69: the batch's ONE Kling entry, and an intentional exception to
+    # the frozen-tableau discipline -- a real gesture-completion beat
+    # (same sanctioned class as s06/s30's ACTING clips). Anatomy QC
+    # fail-closed before this spends: five fingers per hand, no fused/
+    # extra digits, confirmed on the still before animating.
+    ("s69_empty_hands", "kling", 5,
+     PAGE +
+     "The two open hands begin exactly as shown, empty and still. Over "
+     "the course of the clip they tremble very faintly, a small real "
+     "human tremor, then settle and come fully to rest, ending exactly "
+     "as still as they began. The fingers do not curl further, close, "
+     "or change their shape or position beyond this faint tremble-then-"
+     "still motion -- no new gesture, no grasping, nothing appears in "
+     "the hands at any point, they remain empty throughout. The "
+     "background stays soft blur, unchanged."),
+    ("s70_step_out", "seedance", 4,
+     PAGE + LOCK +
+     "The branches and the near ground hold their EXACT positions, "
+     "perfectly still -- nothing in the foreground moves. Camera "
+     "locked, no camera movement of any kind. Only: the warm light in "
+     "the clearing beyond widens and grows very slightly broader and "
+     "brighter as the moment holds, spilling gently further forward. "
+     "Nothing else changes."),
 ]
 
 

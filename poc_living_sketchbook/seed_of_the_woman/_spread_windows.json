@@ -548,5 +548,165 @@
   "dur": 7.16,
   "mode": "shadow_sweep",
   "clip_dur": null
+ },
+ {
+  "num": 56,
+  "name": "s56_triumph_card",
+  "beat": 6,
+  "start": 384.92,
+  "end": 393.11,
+  "dur": 8.19,
+  "mode": "verse_card",
+  "clip_dur": null
+ },
+ {
+  "num": 57,
+  "name": "s57_empty_tomb",
+  "beat": 6,
+  "start": 393.11,
+  "end": 401.29,
+  "dur": 8.18,
+  "mode": "fwd_drift",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 58,
+  "name": "s58_beaten_enemy",
+  "beat": 6,
+  "start": 401.29,
+  "end": 406.92,
+  "dur": 5.63,
+  "mode": "fwd_drift",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 59,
+  "name": "s59_end_certain",
+  "beat": 6,
+  "start": 406.92,
+  "end": 412.34,
+  "dur": 5.42,
+  "mode": "bespoke",
+  "clip_dur": null
+ },
+ {
+  "num": 60,
+  "name": "s60_still_open",
+  "beat": 7,
+  "start": 412.34,
+  "end": 416.84,
+  "dur": 4.5,
+  "mode": "bespoke",
+  "clip_dur": null
+ },
+ {
+  "num": 61,
+  "name": "s61_not_altar_not_mountain",
+  "beat": 7,
+  "start": 416.84,
+  "end": 423.23,
+  "dur": 6.39,
+  "mode": "bespoke",
+  "clip_dur": null
+ },
+ {
+  "num": 62,
+  "name": "s62_into_a_curse",
+  "beat": 7,
+  "start": 423.23,
+  "end": 430.22,
+  "dur": 6.99,
+  "mode": "fwd_drift",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 63,
+  "name": "s63_before_temple",
+  "beat": 7,
+  "start": 430.22,
+  "end": 436.7,
+  "dur": 6.48,
+  "mode": "bespoke",
+  "clip_dur": null
+ },
+ {
+  "num": 64,
+  "name": "s64_named_future",
+  "beat": 7,
+  "start": 436.7,
+  "end": 442.6,
+  "dur": 5.9,
+  "mode": "fwd_drift",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 65,
+  "name": "s65_oldest_lie",
+  "beat": 7,
+  "start": 442.6,
+  "end": 450.36,
+  "dur": 7.76,
+  "mode": "fwd_drift",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 66,
+  "name": "s66_promise_kept",
+  "beat": 7,
+  "start": 450.36,
+  "end": 457.04,
+  "dur": 6.68,
+  "mode": "bespoke",
+  "clip_dur": null
+ },
+ {
+  "num": 67,
+  "name": "s67_matter_of_time",
+  "beat": 7,
+  "start": 457.04,
+  "end": 463.69,
+  "dur": 6.65,
+  "mode": "fwd_drift",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 68,
+  "name": "s68_no_climbing_back",
+  "beat": 7,
+  "start": 463.69,
+  "end": 469.14,
+  "dur": 5.45,
+  "mode": "bespoke",
+  "clip_dur": null
+ },
+ {
+  "num": 69,
+  "name": "s69_empty_hands",
+  "beat": 7,
+  "start": 469.14,
+  "end": 480.04,
+  "dur": 10.9,
+  "mode": "fwd_drift",
+  "clip_dur": 5.041667
+ },
+ {
+  "num": 70,
+  "name": "s70_step_out",
+  "beat": 7,
+  "start": 480.04,
+  "end": 488.42,
+  "dur": 8.38,
+  "mode": "fwd_drift",
+  "clip_dur": 4.041667
+ },
+ {
+  "num": 71,
+  "name": "s71_found_by_him",
+  "beat": 7,
+  "start": 488.42,
+  "end": 500.45,
+  "dur": 12.03,
+  "mode": "bespoke",
+  "clip_dur": null
  }
 ]

@@ -1,5 +1,102 @@
 # STATE.md — progress tracker
 
+**2026-08-10 (Seed of the Woman LONG: FILM COMPLETE (all 71 spreads,
+$51.59) + a real cold-open TRAILER built and user-approved ("perfect,
+this is the standard we should keep"), $13.26, one small fix queued —
+NOT yet committed, full detail in RESUME.md's own new top block):**
+Continued from batch 6 (below). Built batch 7 (spreads 56-71, "the
+invitation" through THE LANDING) — the film's final content batch, 16
+spreads. Three real defects caught and fixed before shipping: s58's
+"shed skin" needed 3 rolls (living creature → wrong colors → living
+creature again) before switching from paid re-rolling to a $0
+deterministic color-lock filter; s56's gold-cross-edge treatment needed
+a full technique swap (a luminance-threshold approach couldn't tell the
+cross's ink from the equally-dark night sky and painted a giant gold
+rectangle — fixed with a soft radial glow bloom instead). Committed as
+c54bb73, closing the whole 71-spread film at $51.59.
+
+**Then a real creative pivot, in three rounds.** The user watched the
+finished film and said the first 30 seconds "feels very ordinary" for a
+piece asking 8 minutes of a modern audience's attention. Verified
+concretely rather than taking the note on faith: 12.4 of the first 30s
+was a single static Scripture card, only 4 shots total, and zero
+music anywhere yet. Round 1: Fable designed a $0 cold-open overture
+recut from the film's own existing footage — built it, shipped it
+silent by mistake (a real miss, caught when the user asked "was audio
+there?"), fixed by scoring it with an existing `music_library` track
+whose own real amplitude curve (measured via ffmpeg volumedetect, not
+guessed) happened to land close to where the beats needed it.
+
+**Round 2: the user explicitly pivoted past the free recut** — wanted a
+genuine NEW trailer production: its own written narration (hand-
+authored, user-approved before synthesis, then synthesized through this
+project's own reused multi-voice pipeline into a real 29.10s
+`narration.mp3`), its own score, and real NEW paid cinematic animation
+with explicit permission to be more kinetic than the film's own
+reverent frozen-tableau discipline. Fable designed a 12-shot sequence
+timed to the real per-line narration audio, with one real judgment call
+worth keeping: the trailer deliberately SLOWS DOWN hard exactly when
+the LORD's own voice speaks the KJV line — "camera bows to God" is the
+film's own standing discipline, and reinstating it at that one moment
+IS the theology, made visible, not just a pacing choice.
+
+**A 2-shot paid test batch went first** (serpent + running couple, per
+this project's own standing test-gate practice) — and **the user caught
+a real defect neither the render nor my own first eye-check found**:
+the running clip's Kling character motion showed genuine face
+distortion, confirmed once flagged by sampling frames much more
+densely (Adam's brow/nose/jaw and Eve's mouth were actually shifting
+shape frame to frame, not just motion-blurred). Fixed by replacing paid
+character motion with a $0 camera push over the exact same approved
+still — guarantees zero distortion since it's the same pixels re-
+cropped, never regenerated. Turned this into a standing rule for the
+rest of the batch (real invented motion only where no legible close
+human face is at risk) and **caught a second, quieter case of the same
+failure myself** before shipping — a "hiding" shot that pushed the
+camera in far tighter than instructed and changed Eve's expression
+despite an explicit "hold exact expression" prompt line — fixed the
+same way, unprompted.
+
+**Built the remaining 10 shots** (a mix of real paid Kling/Seedance for
+the genuinely low-risk beats — atmosphere, an object drop, tiny distant
+figures, the cross, the tomb — and $0 devices for everything else,
+including a shadow-sweep reusing the main film's own `build_s55`
+technique and a free recut montage of the film's own later imagery).
+Hit real transient Higgsfield API failures mid-session (confirmed NOT
+content rejections, just slow responses needing more patience) and a
+self-inflicted slowness bug twice (writing individual PNG frames to
+disk instead of piping raw frames into ffmpeg directly — switched to
+the faster pattern already proven elsewhere in this project's own
+device library).
+
+**Final assembly**: all 12 beats trimmed to the REAL measured narration
+segment boundaries (found via `ffmpeg silencedetect` on the actual
+audio, not estimated). Final trailer: 29.667s, real cost reconciled
+against the actual ledger (2 entries needed manual logging after the
+same transient-API issue broke their cost-estimator sub-call) at
+$13.26. **The user watched it and called it "perfect... this is the
+standard we should keep."**
+
+**One small fix queued for next session, NOT done yet on explicit user
+instruction** ("do that in a next resume document, not now"): a real AI
+motion artifact in the tomb shot around trailer timestamp 0:22 — a
+subtle geometric wobble in the doorway's door-post, reading as "gate
+opening and closing" in motion. Verified by eye this session (dense
+frame sampling around t=21.95-22.45s confirms it's real, not user
+imagination). Fix is a simple trim (cut S10 shorter before the wobble,
+let the S11 montage start slightly earlier to fill the gap) — no
+re-render needed. Full step-by-step in RESUME.md's own new top block.
+
+**Nothing from this session is committed yet** — user asked explicitly
+to save and commit everything before ending the session. That should
+happen FIRST in the next session, before the S10 fix, so the fix lands
+as its own clean follow-up commit.
+
+Watch the trailer: `poc_living_sketchbook/seed_of_the_woman/_trailer/
+SEED_OF_THE_WOMAN_TRAILER.mp4`. Review page with the full beat-by-beat
+breakdown: `poc_living_sketchbook/seed_of_the_woman/_trailer/
+_FINAL_REVIEW.html`. Full exact resume point: RESUME.md top.
+
 **2026-08-09 (early morning — Seed of the Woman LONG: batch 5 done,
 spreads 36-45, movement 4 close + movement 5 start, gates green, $8.60
 this batch / $34.80 episode total, ALL COMMITTED, session closed for the

@@ -44,8 +44,17 @@ DESK_REF = WORLD / "desk_ref.png"
 
 JESUS_S51_REF = OUT / "s51_bearing_wages.png"
 
+# batch 7 (2026-08-09, spreads 56-71) -- cross-spread chaining refs, same
+# pattern as jesus51: an already-rendered spread reused as a 2nd reference
+# for a later spread that shares its world/composition/identity.
+S15_REF = OUT / "s15_the_breach.png"
+S32_REF = OUT / "s32_honest_match.png"
+S58_REF = OUT / "s58_beaten_enemy.png"
+S65_REF = OUT / "s65_oldest_lie.png"
+
 REF_MAP = {"adam": ADAM_REF, "eve": EVE_REF, "eden": EDEN_REF, "serpent": SERPENT_REF,
-           "jesus": JESUS_REF, "desk": DESK_REF, "jesus51": JESUS_S51_REF}
+           "jesus": JESUS_REF, "desk": DESK_REF, "jesus51": JESUS_S51_REF,
+           "s15": S15_REF, "s32": S32_REF, "s58": S58_REF, "s65": S65_REF}
 
 # ---- canon text, matching cast/AARON.md's level of detail ----
 
@@ -804,6 +813,291 @@ SPREAD_SHOTS = [
      f"unnatural midday darkness, NOT storm clouds, no lightning. A "
      f"thin strip of gold leaf remains visible along one edge of the "
      f"page. {FULLBLEED}"),
+    # ---- batch 7 (2026-08-09, spreads 56-71, movement 6 close + movement 7
+    # "the invitation", ending at s71 THE LANDING) ----
+    # Fable-designed across two passes (56-63, 64-71), verified against
+    # _PREFLIGHT.md's E2/E5/E6 pre-designs (Run 3/Run 4/E6-I/E6-J -- all
+    # already locked at plan time) + world/SERPENT.md before rendering.
+    # s56_triumph_card is NOT here -- $0 composite over s54's own already-
+    # rendered art (crop + gold cross-edge + Col 2:15 Scribed Ink), no new
+    # render, built in _s6_assemble.py.
+    ("s57_empty_tomb", STYLE, "",
+     f"MEDIUM shot, EYE-LEVEL, camera deliberately OFF-AXIS -- standing "
+     f"to one side of a rock-hewn tomb's open mouth so the dark doorway "
+     f"sits clearly off-center in the frame, never centered: a low "
+     f"rough-cut stone tomb entrance in a hillside of pale rock, its "
+     f"great round stone rolled fully aside and resting against the "
+     f"hill. From WITHIN the dark doorway a warm gold light glows "
+     f"steadily outward, spilling across the worn stone threshold -- "
+     f"light only, no source visible. Just inside the threshold, caught "
+     f"by that inner glow, folded LINEN grave-cloths lie neatly at rest "
+     f"on the stone shelf, undisturbed and empty. Outside, the first "
+     f"pale rose-and-amber light of DAWN touches the hillside and the "
+     f"rolled stone. ABSOLUTELY NO figure anywhere -- no person, no "
+     f"angel, no silhouette, no hand, no face, the frame holds only "
+     f"stone, linen, and light. {FULLBLEED}"),
+    # s58: SERPENT.md rule #6 verbatim -- the beaten enemy is the SHED
+    # SKIN, an empty cast husk, NEVER a fought/defeated creature, no
+    # carcass, no gore. Rule #2: HIGH looking DOWN (judgment-view, same
+    # wording as s18/s20). Rule #3 adapted: hollow cast skin reads pale/
+    # papery-translucent but stays COOL grey-blue, never gold, never warm.
+    # RE-ROLL v3 (2026-08-09, v1 rejected -- living creature, visible eye;
+    # v2 rejected -- structurally correct flat/collapsed/faceless husk at
+    # last, but bloomed maroon/burgundy diamond-pattern spots across the
+    # skin, the same "never warm, no reddish tint" violation class as
+    # s49's own earlier reject. v3 keeps v2's proven flat/faceless/
+    # collapsed structure verbatim and adds a positive uniform-color-wash
+    # instruction (not just a negation) -- the same fix that worked for
+    # s49.
+    ("s58_beaten_enemy", STYLE, "serpent",
+     f"WIDE shot, HIGH angle looking DOWN (per world/SERPENT.md's locked "
+     f"camera rule -- the lens never kneels to the enemy): on bare open "
+     f"dusty ground, an EMPTY, DISCARDED SNAKESKIN in the same coloring "
+     f"family as the reference image -- like a dry cicada shell or a "
+     f"sock turned inside-out and dropped, split open along a single "
+     f"torn exit seam down one side, utterly FLAT and COLLAPSED, no "
+     f"three-dimensional body or volume left inside it anywhere, the "
+     f"whole length crumpled and creased where it fell. Where a head "
+     f"would be, the skin is EMPTY AND HOLLOW -- absolutely NO eyes, no "
+     f"eye sockets, no pupils, no face of any kind, just thin collapsed "
+     f"papery material with a faint ghost imprint of the old scale "
+     f"pattern pressed into it. Every part of the skin's surface is a "
+     f"SINGLE UNIFORM pale dusty grey-blue wash, perfectly even and "
+     f"consistent from end to end, dry and brittle and matte -- "
+     f"CRITICAL: no maroon, no burgundy, no red, no pink, no warm "
+     f"reddish-brown blotches, spots, or patches anywhere on the skin, "
+     f"not one, the whole surface stays the same flat cool grey-blue "
+     f"with no other color mixed in. Never gold, never warm. This is a "
+     f"cast-off, empty, lifeless shell only -- absolutely NO living "
+     f"serpent anywhere in the frame, no rounded body, no carcass, no "
+     f"wound, no blood, no gore -- only the flat discarded husk, the "
+     f"dust, and thin drifting dawn-pale morning air at the frame's far "
+     f"edges, kept dim and cool. No figures, no lettering. {FULLBLEED}"),
+    # s59: the Run-3 exhale's widest frame. $0 bespoke dual-glow breathe
+    # animates the two lights out of phase -- static wide, no camera
+    # move, so BOTH lights must be baked into the still.
+    # RE-ROLL (2026-08-09, v1 rejected on eye-check): v1's lower half was
+    # essentially blank unpainted cream paper, not "ground" -- reads as
+    # dead space, not a deliberate minimalist choice. Added explicit
+    # texture instruction for the ground band.
+    ("s59_end_certain", STYLE, "",
+     f"EXTREME WIDE lateral composition, a single FLAT low horizon line "
+     f"running the full width of the frame, vast open sky above; below "
+     f"it, the near foreground ground fills the bottom of the frame "
+     f"corner to corner with real painted texture -- visible dry dust "
+     f"and packed earth, fine cracks, loose stones, soft watercolor "
+     f"tonal variation across it, NOT bare blank unpainted paper -- no "
+     f"figures, no trees, no structures anywhere: at the LEFT edge of "
+     f"the horizon, the natural pale rose-and-amber glow of an ordinary "
+     f"DAWN just breaking, soft and low; at the opposite FAR RIGHT edge "
+     f"of the horizon, a second, FAR BRIGHTER light waits beyond the "
+     f"horizon's rim -- a brilliant warm GOLD radiance, clearly stronger "
+     f"and purer than the dawn, as if a greater morning stands behind "
+     f"the world's edge not yet risen. The two lights sit at opposite "
+     f"extremes of the frame with the long dark quiet horizon stretched "
+     f"between them, the sky graded between their two glows. No sun "
+     f"disc visible for either. No lettering. {FULLBLEED}"),
+    # s60: Run 4 opens page-side. Repetition guard (the s34 contact-sheet
+    # lesson): every prior desk overhead showed LOOSE parchment pages --
+    # this frame's identity is an actual BOUND BOOK, open, centered, warm.
+    ("s60_still_open", STYLE, "desk",
+     f"Overhead view looking straight down onto the desk, HIGH angle: "
+     f"ONE thick, well-worn BOUND BOOK lies OPEN at the exact center of "
+     f"the frame -- a real bound volume with a visible sewn spine "
+     f"gutter running down its middle and two facing pages spread "
+     f"flat, their edges soft with long use, NOT loose sheets of "
+     f"parchment -- both open pages entirely blank, no writing of any "
+     f"kind. {DESK} The oil lamp's warm glow pools generously across "
+     f"the open spread, the whole frame warm, settled, and held -- the "
+     f"book is unmistakably still open, mid-use, not closed or put "
+     f"away. No figure, no hands. {FULLBLEED}"),
+    # s61: Run 4's first MV -- the visual NEGATION: both vignettes stay
+    # pale non-photo-blue underdrawing FOREVER ("this is not where the
+    # promise happened"). $0 focal-tour visits altar then mountain.
+    ("s61_not_altar_not_mountain", STYLE, "",
+     f"Page-scale composition on plain aged warm cream paper, no "
+     f"background setting: TWO unfinished sketch vignettes placed on a "
+     f"strong DIAGONAL at different scales and depths (true staggered "
+     f"placement, never side-by-side panels, no borders, no frames of "
+     f"any kind), BOTH rendered ONLY as pale NON-PHOTO-BLUE pencil "
+     f"UNDERDRAWING -- faint, light, preliminary construction lines "
+     f"that were never inked, never finished, no dark linework, no "
+     f"watercolor wash, no color, no gold anywhere on either vignette: "
+     f"in the LOWER-LEFT, larger, a rough altar of unhewn stacked "
+     f"stones with a thin sketched line of smoke; in the UPPER-RIGHT, "
+     f"smaller and farther, a bare craggy mountain peak. Both blend "
+     f"softly into the same page's own paper texture, deliberately "
+     f"incomplete, abandoned at the underdrawing stage. No figures, no "
+     f"lettering. {FULLBLEED}"),
+    # s62: RECALL REGISTER of s24's own sentencing tableau (same cast,
+    # same shadow + corner presence-light grammar) but WIDER -- a memory
+    # of that frame, not a copy. Thread NEVER painted -- procedural
+    # overlay on the Seedance clip; keep clear open ground for it.
+    ("s62_into_a_curse", STYLE, "adam,eve,eden",
+     f"WIDE tableau, EYE-LEVEL -- the same staging as this story's own "
+     f"earlier sentencing frame, now pulled back much further: {ADAM} "
+     f"and {EVE} standing in heavy shadow within the darkened garden, "
+     f"waiting under judgment, but now SMALL within a much wider frame, "
+     f"a clear stretch of open ground visible between the two figures, "
+     f"the dark garden vast around them, a soft warm presence-light "
+     f"glowing gently in one corner of the frame only. Both figures "
+     f"still, faces lowered, no gestures. No thread, no lettering "
+     f"visible. {FULLBLEED}"),
+    # s63: Run 4's second MV -- deliberately the visual OPPOSITE of s61
+    # (graphite ghosts vs blue underdrawing). Ghosts = things that did
+    # NOT yet exist when the promise was spoken. Thread never painted --
+    # procedural overlay + $0 gleam-pass at build; keep the diagonal lane
+    # clear for it.
+    ("s63_before_temple", STYLE, "",
+     f"Page-scale composition on plain aged warm cream paper, no "
+     f"background setting: THREE faint unfinished GRAPHITE PENCIL "
+     f"GHOSTS -- pale, sketchy, half-erased grey pencil studies that "
+     f"trail off incomplete, visibly less real than a finished drawing "
+     f"-- placed at different scales and depths around a clear EMPTY "
+     f"DIAGONAL LANE of untouched paper running corner to corner "
+     f"through the frame (leave that diagonal band completely clear): "
+     f"in one region, a grand pillared TEMPLE facade, barely begun; in "
+     f"another, a robed PROPHET figure with staff, face turned away and "
+     f"simplified to loose strokes, no facial detail; in a third, a "
+     f"stone ALTAR OF SACRIFICE with sketched smoke, graphite grey "
+     f"only, no red, no blood. All three blend softly into the page's "
+     f"own paper texture, never in panels or borders. No gold, no "
+     f"thread drawn, no lettering. {FULLBLEED}"),
+    # s64: Run 4's landing page -- the vignette the thread has been
+    # travelling toward, now COMPLETE (fully inked, vs s63's pencil
+    # ghosts). Thread is the $0 overlay -- keep the lane quiet.
+    ("s64_named_future", STYLE, "",
+     f"CLOSE shot of a single aged parchment page filling the frame: in "
+     f"the LOWER-RIGHT quarter of the frame, one small fully-inked, "
+     f"completed vignette drawing -- a plain wooden cross standing "
+     f"upright, and beside its base a small open rock-cut tomb mouth "
+     f"with the stone rolled aside, warm gold light hinted from within "
+     f"the tomb's opening, drawn in this style's own confident finished "
+     f"ink line, dawn-warm in palette. The rest of the page -- the whole "
+     f"LEFT half and upper band -- stays bare textured parchment, quiet "
+     f"and empty, its paper grain and age the only content there, a "
+     f"clear open lane running from the left edge toward the vignette. "
+     f"No figures, no other drawings. {FULLBLEED}"),
+    # s65: POV bookend A (axis SHARED with s70 -- s70 chains this render).
+    # Serpent as SHAPE in shadow only, per SERPENT.md + the s54 precedent
+    # (low/flat, cool ink-blue, no face, eye looking down onto it).
+    ("s65_oldest_lie", STYLE, "eden,serpent",
+     f"POV shot from WITHIN the trees looking out, EYE-LEVEL, as if "
+     f"hiding: dark out-of-focus branches and foliage crowd the "
+     f"FOREGROUND, genuinely obstructing roughly forty percent of the "
+     f"frame's edges on all sides so the view reads as peered-through, "
+     f"not framed. Far beyond the branches, small at the center "
+     f"distance, one soft patch of warm light in a clearing. LOW in the "
+     f"frame, down among the shadowed roots at the near ground, a dark "
+     f"COILED SHAPE lies flat against the earth -- read only as a "
+     f"silhouette-mass in the shade, no scales, no eyes, no face "
+     f"detail, no rearing, cool ink-blue-black, never gold, never warm "
+     f"-- the eye looks down on it. {FULLBLEED}"),
+    # s66: s32's framing RETURNED (the designed mirror) -- chain s32's own
+    # render. Left page stays blank (Scribed Ink composited at build);
+    # center gap stays bare (thread overlay lane). Focal-tour at animate.
+    ("s66_promise_kept", STYLE, "desk,s32",
+     f"Overhead view looking straight down onto the desk, HIGH angle, "
+     f"the SAME symmetric two-page composition as the reference image: "
+     f"TWO separate pages of aged parchment side by side, a deliberate "
+     f"GAP of bare desk wood exactly at center between them, warm lamp "
+     f"light in the gap. The LEFT page entirely blank textured "
+     f"parchment, no writing of any kind. The RIGHT page carries one "
+     f"small fully-inked completed vignette -- a plain wooden cross and "
+     f"a small open tomb mouth beside it, stone rolled aside, drawn "
+     f"finished and confident, dawn-warm. Nothing drawn in the central "
+     f"gap. The two pages and desk edges fill the frame corner to "
+     f"corner. {FULLBLEED}"),
+    # s67: the shed skin (s58's, now the v3-corrected render -- flat
+    # discarded husk, no face, uniform cool color) tiny at the horizon --
+    # chains s58 so the husk's form matches. RE-ROLL alongside s58 v3 for
+    # the same reddish-tint reason -- render AFTER s58 v3 exists.
+    ("s67_matter_of_time", STYLE, "s58",
+     f"VERY WIDE shot, a single FLAT horizon line low in the frame, the "
+     f"lower fifth of the frame open empty dust plain, everything above "
+     f"it vast dawn sky -- warm first light rising along one edge of "
+     f"the horizon, the high sky still cool and pale, soft dawn "
+     f"palette. On the horizon band, TINY with distance, the SAME "
+     f"empty discarded snakeskin as the reference image -- utterly "
+     f"flat and collapsed, no eyes, no face, no body volume, a single "
+     f"uniform cool grey-blue color with no maroon, red, or warm tint "
+     f"anywhere on it, just a small dark crumpled papery shape lying in "
+     f"the dust -- no living creature anywhere, no figures, no "
+     f"structures -- the sky and the emptiness are the subject; the "
+     f"tiny skin is the punctuation. {FULLBLEED}"),
+    # s68: s15 re-framed from WITHIN -- same drawn chasm, same world, new
+    # camera position (a new render, chained to s15 for continuity).
+    # Composition pre-splits into parallax layers (near wall / far light).
+    ("s68_no_climbing_back", STYLE, "eden,s15",
+     f"Shot from the CHASM FLOOR looking straight UP, LOW angle: the "
+     f"same drawn inked chasm as the reference image seen from inside "
+     f"it -- two sheer dark chasm walls LOOMING on both sides of the "
+     f"frame, rendered in this style's own heavy ink line, rising and "
+     f"converging toward a narrow opening far above, the walls smooth "
+     f"and featureless, no ledges, no handholds, no path, nothing "
+     f"climbable. Through the narrow opening high overhead, small and "
+     f"bright and unreachable, the garden's warm golden light and a "
+     f"hint of green canopy. The chasm floor and walls cool and dim, "
+     f"all warmth confined to that far high gap. No figures, no bridge. "
+     f"{FULLBLEED}"),
+    # s69: ONE pair of hands, nothing else. The batch's ONE Kling entry --
+    # an intentional exception to the frozen-tableau discipline (real
+    # gesture-completion, tremble->still, same sanctioned class as s06/
+    # s30's ACTING clips).
+    ("s69_empty_hands", STYLE, "",
+     f"EXTREME CLOSE-UP, camera slightly HIGH looking down INTO the "
+     f"hands: ONE pair of ordinary adult human hands, palms UP and "
+     f"open, held side by side and gently cupped, completely EMPTY -- "
+     f"holding nothing at all. Fingers relaxed and resting loosely "
+     f"together, softly curled, NOT splayed or spread apart -- exactly "
+     f"five fingers on each hand, anatomically correct, natural "
+     f"proportions, no elongated, fused, or extra digits. No face, no "
+     f"body, no wrists beyond the frame's soft lower edge, no objects, "
+     f"the background nothing but soft warm-dark blur. The two open "
+     f"empty palms are the entire subject of the frame. {FULLBLEED}"),
+    # s70: POV bookend B -- SAME axis as s65 (chained), same branch
+    # framing. No serpent shape anywhere -- the light has widened.
+    # Seedance is camera-LOCKED, named motion only ("the light widens").
+    ("s70_step_out", STYLE, "eden,s65",
+     f"POV shot from WITHIN the trees looking out, EYE-LEVEL, the SAME "
+     f"camera position and the SAME foreground branch framing as the "
+     f"reference image -- dark branches still crowding the frame's "
+     f"edges -- but the view beyond them transformed: the warm light in "
+     f"the far clearing now BROAD and generous, grown wide between the "
+     f"trees, spilling forward across the ground in a warm path that "
+     f"reaches partway toward the camera, the shadows among the near "
+     f"roots now plain ordinary shade with nothing hiding in them -- no "
+     f"coiled shape, no creature, no figure anywhere. An open invitation "
+     f"of light, room still left for it to grow. {FULLBLEED}"),
+    # s71: THE LANDING (E6-J, locked). torn_out_page transition + the
+    # s05-style static/breathing hold happen at BUILD -- this still is
+    # only the destination frame. jesus_ref + s51-approved render
+    # chained for identity. Light = s04's own seeking-light language,
+    # deliberately near-verbatim (the hook->landing mirror).
+    # ARM-RAISE ANATOMY GUARD (the known pressure-failure class): never
+    # name the ACTION (open/raise/reach) -- only the ACHIEVED, ALREADY-
+    # SETTLED state, same principle as s51's cord-binding fix for
+    # exposed-hand anatomy.
+    ("s71_found_by_him", STYLE, "jesus,jesus51,eden",
+     f"FRONTAL page-scale shot, EYE-LEVEL: {JESUS} -- the SAME man as "
+     f"the reference images, risen, whole, alive -- standing at MID-"
+     f"DISTANCE among the garden trees, His full figure visible, facing "
+     f"the camera, calm and still, clothed in a plain simple undyed "
+     f"robe. Around and behind Him the same low warm golden light of "
+     f"the cold open moves gently among the trees, golden light "
+     f"catching the undersides of leaves and drifting motes of dust in "
+     f"the beams, the light gathered warmest where He stands. His arms "
+     f"ALREADY AT REST in an open welcoming position -- a completed, "
+     f"finished, motionless pose: both arms relaxed and lowered, held "
+     f"slightly away from His sides, palms turned gently outward and "
+     f"open, fingers relaxed and resting together, NOT splayed -- a "
+     f"pose long since settled, held perfectly still, NOT a gesture in "
+     f"progress, no raising, no reaching, no motion of any kind, no "
+     f"motion blur. Low anatomical hand detail at this distance, "
+     f"natural proportions, exactly five fingers per hand, no extra or "
+     f"fused digits. Wound-free and restrained -- no visible wound, no "
+     f"blood, no marks emphasized on hands or feet, no graphic detail "
+     f"of any kind. No other figures. Sacred stillness. {FULLBLEED}"),
 ]
 
 

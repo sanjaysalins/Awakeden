@@ -62,6 +62,17 @@ VERSE_CARDS = {
             [("that is, the devil.", BODY_SIZE)],
         ],
     },
+    # batch 7 (2026-08-09). Col 2:15 KJV verbatim (matches narration.md
+    # line 57), Paul writing ABOUT Christ's victory -- NOT red-letter
+    # (contrast s47/s22, same rule as s53).
+    "s56_triumph_card": {
+        "combo": "A",
+        "lines": [
+            [("And having spoiled principalities and powers,", BODY_SIZE)],
+            [("he made a shew of them openly,", BODY_SIZE)],
+            [("triumphing over them in it.", BODY_SIZE)],
+        ],
+    },
 }
 
 # s22_promise_card (Illuminated Rubric, Gen 3:15 full verse, red-letter --

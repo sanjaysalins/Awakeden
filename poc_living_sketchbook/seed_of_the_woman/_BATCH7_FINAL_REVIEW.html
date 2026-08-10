@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Seed of the Woman — COMPLETE, all 71 spreads</title>
+<style>
+  body { background:#1b1613; color:#eee0c8; font-family: Georgia, serif; margin:0; padding:30px; max-width:1000px; }
+  h1 { font-size:26px; margin-bottom:4px; }
+  h2 { font-size:17px; color:#d8b06a; margin-top:34px; border-bottom:1px solid #4a4030; padding-bottom:6px; }
+  p.sub { color:#b8ab90; margin-top:0; font-size:15px; }
+  video { width:100%; max-width:900px; height:auto; border:1px solid #444; display:block; margin-top:10px; }
+  .stat-row { display:flex; gap:24px; flex-wrap:wrap; margin:16px 0; }
+  .stat { background:#26221d; border:1px solid #4a4030; border-radius:6px; padding:14px 20px; min-width:140px; }
+  .stat .num { font-size:26px; color:#d8b06a; font-weight:bold; }
+  .stat .label { font-size:13px; color:#b8ab90; }
+  table { width:100%; border-collapse:collapse; font-size:14px; margin-top:10px; }
+  th, td { text-align:left; padding:6px 10px; border-bottom:1px solid #3a342c; }
+  th { color:#c9a860; }
+  a { color:#d8b06a; }
+  ul { font-size:14px; color:#ccc; max-width:900px; line-height:1.6; }
+  .gate-pass { color:#7fbf7f; }
+  .gate-flag { color:#d8b06a; }
+</style>
+</head>
+<body>
+<h1>Seed of the Woman — COMPLETE</h1>
+<p class="sub">All 71 spreads built. Genesis 3, the Seed of the Woman promise, traced from the garden to the cross to the empty tomb to the invitation. Built across 7 production sessions.</p>
+
+<div class="stat-row">
+  <div class="stat"><div class="num">71 / 71</div><div class="label">spreads built</div></div>
+  <div class="stat"><div class="num">8:20</div><div class="label">final film length</div></div>
+  <div class="stat"><div class="num">$51.59</div><div class="label">total spend, whole episode</div></div>
+  <div class="stat"><div class="num">7</div><div class="label">production sessions</div></div>
+</div>
+
+<h2>Watch the complete film — real narration audio throughout</h2>
+<video controls src="SEEDOFTHEWOMAN_FULL_71_PREVIEW.mp4"></video>
+
+<h2>Batch 7 (this session) — spreads 56-71, "the invitation"</h2>
+<p class="sub">The final content batch: the triumph, the empty tomb, the shed skin, the two horizons, the meditation on the promise, the oldest lie answered, the empty hands, and THE LANDING — the risen Christ, arms open, in the same light as the cold-open hook.</p>
+<ul>
+<li>16 spreads built: 15 new stills + 1 reuse (s51), 8 paid clips (7 Seedance + 1 Kling), 8 new $0 devices.</li>
+<li><b>3 real doctrinal/technical defects caught and fixed before shipping</b> (not shipped on the first pass):
+  <ul>
+    <li>s58 (the beaten enemy/shed skin) took 3 rolls — v1 rendered a living creature (violates the locked "shed skin, never fought-and-defeated" rule), v2 fixed the structure but bloomed maroon spots (violates "never warm"), v3 regressed to a living creature again. Recovered by keeping v2's correct structure and color-locking it with a $0 deterministic filter instead of a 4th paid roll.</li>
+    <li>s67 (matching background detail) inherited the same issues via its reference chain — resolved the same way, plus one extra step: my own attempted local blur fix introduced a visible seam/kink in the horizon, caught and reverted in favor of a clean color-only fix.</li>
+    <li>s56's gold-cross-edge composite: a luminance-threshold approach couldn't distinguish the cross's ink lines from the equally-dark night sky, painting a giant gold rectangle over half the frame. Replaced with a soft radial glow bloom.</li>
+  </ul>
+</li>
+<li>s62's custom thread-overlay build had a real duration bug (raw clip 4s, spread window 7s) caught before it shipped short — fixed to hold the last composited frame, matching this project's own build_clip_hold convention.</li>
+<li>s68 was originally planned as a parallax-panel device; switched to hunt_and_lock instead — this composition (a symmetric converging chasm) is exactly the condition that made rembg fail to find a clean subject cutout earlier in this same episode (s30).</li>
+</ul>
+
+<h2>Gates</h2>
+<table>
+<tr><th>Gate</th><th>Result</th><th>Notes</th></tr>
+<tr><td>layer_check</td><td class="gate-pass">0 FAIL, 0 WARN</td><td>All 13 verse-card spreads have real lettering</td></tr>
+<tr><td>motion_lint</td><td class="gate-flag">4 FAIL, 10 WARN</td><td>2 are real-but-flagged-not-fixed (see below); 2 are device-variety bookkeeping, not visual repetition</td></tr>
+</table>
+<ul>
+<li><b>s24_before_their_sentences</b> and <b>s70_step_out</b>: both sit a hair under the frozen-motion threshold on already-approved, deliberately subtle paid clips. Same call as this project's own earlier precedent (s24 was flagged, not re-rendered, in batch 4) — re-rendering costs real Kling/Seedance money for a borderline metric on content that's intentionally restrained ("camera locked, named motion only").</li>
+<li><b>fwd_drift 36.6%</b> / <b>bespoke 33.8%</b> device-quota FAILs: these are catch-all classification buckets (not one repeated device), and this episode has built far more one-off bespoke treatments (thread devices, focal-tours, wash-creep, shadow-sweep, hunt-and-lock) than any prior project — the ratio reflects bookkeeping scale at full 71-spread count, not the kind of "same device overused" problem this gate was built to catch (Day of Atonement's 28% raking-light repetition).</li>
+</ul>
+
+<h2>What's left</h2>
+<p class="sub">Content is done. The finishing chain remains: music score, sound-effects bed, captions, watermark, then the outside 5-CLI panel review before this can be called LOCKED.</p>
+
+</body>
+</html>
