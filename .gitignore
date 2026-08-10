@@ -99,3 +99,12 @@ data/.watcher_status.json
 
 # local content-sha perf cache (pipeline/finality.py) — machine-local, regenerable
 data/.sha_cache.json
+
+# ffmpeg concat-list scratch (auto-generated per assembly run, absolute
+# per-machine paths, point at the gitignored media above — no standalone
+# value, regenerate freely; recurs under every episode's _assemble_work/
+# _caption_segments/_mocomic_work-style build dirs)
+*_concat.txt
+_concat_all.txt
+_concat_list.txt
+_ep_concat.txt
