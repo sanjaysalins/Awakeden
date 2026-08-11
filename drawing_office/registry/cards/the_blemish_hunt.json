@@ -1,0 +1,36 @@
+{
+  "name": "the_blemish_hunt",
+  "conceit": "One AI plate of the whole lamb, studied by code alone -- magnified PIL crops (the flank, the eye) zoom into the same raw pixels, never a second generation pretending to be a closer look. The crop-zoom technique itself works cleanly; the real finding this round was in the SUBJECT, not the mechanism: the rendered animal reads as a mature horned ram, not the young lamb without blemish Exodus 12:5 specifies.",
+  "shape_fit": {
+    "primary": ["scrutiny"],
+    "secondary": ["taxonomy"],
+    "anti": [
+      "a subject with no real fine physical detail or textured surface to reward close inspection",
+      "a beat where the close-up itself needs new information not present in the wide plate -- crop-zoom can only reveal what was already rendered, it cannot add detail"
+    ]
+  },
+  "plate_bill": [
+    { "id": "P1", "must_contain": "a single young lamb standing calmly in profile, full body visible, careful naturalist-study linework, plain aged paper background, soft even lighting, centered, nothing else in frame", "count": 1 }
+  ],
+  "derived_views": ["crop_study(box=flank, day 12 study)", "crop_study(box=eye, day 14 study, without blemish)"],
+  "motion_slots": {
+    "max": 0,
+    "earned_by": "the device's whole thesis is a static naturalist study examined by crop-zoom alone; no beat here currently needs invented motion."
+  },
+  "generation_alignment": "forbidden",
+  "risk_flags": ["illustration_lock", "no_baked_text"],
+  "accuracy_spec": [
+    "Exodus 12:5 -- a LAMB, male, of the FIRST YEAR: young, small, NO curled horns. A mature ram is a doctrinal/textual miss, not a style variation."
+  ],
+  "beat_template": {
+    "hook": "the whole lamb, calm, in profile, meant to be studied",
+    "pivot": "the flank, day 12 -- examined for blemish",
+    "landing": "the eye, day 14 -- without blemish, ready"
+  },
+  "caption_lane": "lower-third, center",
+  "lettering": "overlay_only",
+  "score_shape": "a slow, careful, magnifying-glass pulse under each crop-zoom, unhurried and even throughout, no swell until a final beat confirms the animal is without blemish.",
+  "sfx_palette": ["wool_brush_soft", "breath_calm_animal", "paper_page_turn"],
+  "status": "mechanics-proven",
+  "evidence": "poc_bethesda_style_test/round3_devices/stills/blemish_hunt_raw.png, blemish_hunt_flank.png, blemish_hunt_eye.png"
+}

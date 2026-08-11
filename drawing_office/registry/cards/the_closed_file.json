@@ -1,0 +1,36 @@
+{
+  "name": "the_closed_file",
+  "conceit": "An antiquarian card-catalogue drawer full of closed, filed portrait cards stands for every life already judged and shelved; ONE card lies apart, unfinished, on the desk, and only at the landing does its portrait turn to meet the viewer's eyes directly -- the device is a taxonomy the story then breaks.",
+  "shape_fit": {
+    "primary": ["taxonomy"],
+    "secondary": ["filing"],
+    "anti": [
+      "a single unrepeated event with no larger set or catalogue for the one card to stand apart from",
+      "a story whose turn is about MOTION or a physical journey, not about a filed record being reopened"
+    ]
+  },
+  "plate_bill": [
+    { "id": "P1", "must_contain": "open wooden card-catalogue drawer, dozens of tabbed index cards standing closed and filed in tight ranks, a faint portrait-bust silhouette on each tab, lamplight, dust motes", "count": 1 },
+    { "id": "P2", "must_contain": "one single index card lying flat and alone on the desk apart from the filed ranks, an unfinished ink portrait study of a calm bearded man occupying its upper half, dip pen and inkwell beside it", "count": 1 },
+    { "id": "P3", "must_contain": "extreme close-up on one index card: a simple dignified ink portrait, three-quarter turned, eyes meeting the viewer directly, the card's lower portion bare, deep soft shadow around it", "count": 1 }
+  ],
+  "derived_views": [],
+  "motion_slots": {
+    "max": 1,
+    "earned_by": "the portrait turning to meet the viewer's eyes (P3) is the one beat worth animating in motion; the drawer and the desk card hold as $0 stills."
+  },
+  "generation_alignment": "forbidden",
+  "risk_flags": ["illustration_lock", "no_baked_text"],
+  "accuracy_spec": [],
+  "beat_template": {
+    "hook": "rank after rank of closed, filed cards, dense and slightly oppressive",
+    "pivot": "one unfiled card, unfinished, alone on the desk",
+    "landing": "the portrait turns, meets the viewer's own eyes"
+  },
+  "caption_lane": "lower-third, center",
+  "lettering": "overlay_only",
+  "score_shape": "a dry, ticking, orderly bed under the closed-drawer hook, thinning to a single held breath over the lone unfiled card, resolving to one warm sustained tone as the portrait turns and meets the eye.",
+  "sfx_palette": ["paper_card_shuffle", "pen_nib_scratch", "wood_drawer_creak"],
+  "status": "stills-tested-clean",
+  "evidence": "poc_bethesda_style_test/round2_devices/stills/closed_file_01.png, closed_file_02.png, closed_file_03.png"
+}

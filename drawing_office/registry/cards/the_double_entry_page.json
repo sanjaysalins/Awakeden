@@ -1,0 +1,39 @@
+{
+  "name": "the_double_entry_page",
+  "conceit": "A scribe's two-column ledger page -- empty and ruled, then filling with paired vignettes (wounds/thorns on one side, ordinary bowed figures on the other) connected by red transfer lines across the gutter -- until the ruling itself resolves into the shape of a plain cross at the close. One still (_02, the mid-fill transfer-lines still) landed exactly as designed; the empty-page and cross-resolution stills (_01, _03) drifted toward a photoreal accounting-book photograph rather than the intended hand-inked illustration.",
+  "shape_fit": {
+    "primary": ["ledger"],
+    "secondary": ["grammar", "correspondence"],
+    "anti": [
+      "a story with only a single narrative line and no real one-to-one paired correspondence set to enter into two columns",
+      "a beat needing a hand-lettered number or word -- ledgers invite the model to want to write legible entries, which this style forbids"
+    ]
+  },
+  "plate_bill": [
+    { "id": "P1", "must_contain": "ruled two-column ledger page divided by one strong vertical center rule, almost entirely bare and unfilled, warm raking light", "count": 1 },
+    { "id": "P2", "must_contain": "the same ruled ledger page, each column holding several soft-edged ink vignettes (wounds/thorns one side, ordinary bowed figures the other), 2-3 fine red transfer lines crossing the gutter connecting them", "count": 1 },
+    { "id": "P3", "must_contain": "completed ruled ledger page: the vertical and a bottom horizontal rule intersect, red transfer lines from both columns converge there so the ruling resolves into the shape of a plain cross, a closing double rule beneath", "count": 1 }
+  ],
+  "derived_views": [],
+  "motion_slots": {
+    "max": 1,
+    "earned_by": "the red transfer-lines crossing the gutter (P2, the still that landed cleanly) is the one beat worth animating the lines actually being drawn/traveling; the bare-page and cross-resolution stills need a rebuild before any motion budget is spent on them."
+  },
+  "generation_alignment": "forbidden",
+  "risk_flags": [
+    "illustration_lock -- _01 and _03 both drifted toward a photographed-accounting-book look; rebuild with tighter hand-inked/illustration language before reusing either",
+    "no_baked_text"
+  ],
+  "accuracy_spec": [],
+  "beat_template": {
+    "hook": "the empty ruled ledger, two bare columns, expectant",
+    "pivot": "vignettes and red transfer lines fill both columns, crossing the gutter",
+    "landing": "the ruling itself resolves into a plain cross, the account closed"
+  },
+  "caption_lane": "lower-third, center",
+  "lettering": "overlay_only",
+  "score_shape": "a dry, measured ruled-paper tick under the empty page, warming as the vignettes and transfer-lines fill in, resolving to one held plain chord as the ruling becomes a cross.",
+  "sfx_palette": ["pen_nib_scratch", "paper_page_turn", "quill_ink_dip"],
+  "status": "stills-tested-flagged",
+  "evidence": "poc_bethesda_style_test/round2_devices/stills/double_entry_01.png, double_entry_02.png, double_entry_03.png (double_entry_02 is the clean one; 01/03 drifted photoreal)"
+}

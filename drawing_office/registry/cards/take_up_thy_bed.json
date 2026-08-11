@@ -1,0 +1,36 @@
+{
+  "name": "take_up_thy_bed",
+  "conceit": "Museum-artifact macro photography of the man's own mat against a pure black void -- never a person in frame -- so the object itself (its wear, its worn dragged corner, its final standing bundle) carries the whole 38-year weight and the whole miracle without ever needing a figure.",
+  "shape_fit": {
+    "primary": ["trace"],
+    "secondary": ["object-witness"],
+    "anti": [
+      "a beat whose emotional weight is in a face, a crowd, or an event actually in progress -- this device deliberately shows nobody, only what a person left behind",
+      "a subject too young/undamaged/unused to carry visible decades of wear"
+    ]
+  },
+  "plate_bill": [
+    { "id": "P1", "must_contain": "extreme macro of a thin ancient woven mat against pure black void, raking side-light, a faint permanent body-shaped impression pressed into the weave", "count": 1 },
+    { "id": "P2", "must_contain": "extreme macro of the mat's frayed corner edge, fibers visibly thinner from being dragged repeatedly in one direction, black void, raking light", "count": 1 },
+    { "id": "P3", "must_contain": "the same mat rolled into a tight bundle standing unaided on its end in black void, a faint untouched pool outline barely visible in the far negative space", "count": 1 }
+  ],
+  "derived_views": [],
+  "motion_slots": {
+    "max": 0,
+    "earned_by": "this device's whole thesis is stillness -- a static object against black void; no beat in it currently justifies a paid clip over the $0 macro-push camera."
+  },
+  "generation_alignment": "forbidden",
+  "risk_flags": ["illustration_lock", "no_baked_text"],
+  "accuracy_spec": [],
+  "beat_template": {
+    "hook": "macro on the mat's own permanent body-shaped wear",
+    "pivot": "the worn dragged edge, 38 years of struggle told in fiber",
+    "landing": "the mat stands alone, rolled and upright, the untouched pool no longer needed"
+  },
+  "caption_lane": "lower-third, center",
+  "lettering": "overlay_only",
+  "score_shape": "a single sustained low drone under the macro wear-detail, unchanged and patient, opening into one clean resolving chord only as the mat stands upright on the landing.",
+  "sfx_palette": ["fabric_reed_creak", "silence_void_room_tone"],
+  "status": "stills-tested",
+  "evidence": "poc_bethesda_style_test/stills/take_up_thy_bed_01.png, take_up_thy_bed_02.png, take_up_thy_bed_03.png"
+}

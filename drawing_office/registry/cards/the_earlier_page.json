@@ -1,0 +1,39 @@
+{
+  "name": "the_earlier_page",
+  "conceit": "A current journal spread (the assumed order) is followed by an older leaf -- foxed, yellowed, deckled -- carrying an earlier record, then the book itself turns to show the corrected sequence. _03 (the page-turn) landed correctly illustrated; _02 (the older leaf on its own) drifted into looking like a photographed book prop rather than drawn art. The real fix per the architecture design is NOT a third independent generation: the 'earlier leaf' should be CODE-AGED from the SAME already-rendered current-page art (reusing panel_animator/elder_leaf.py's foxed-stock treatment) rather than a second independently-guessed generation trying to look older.",
+  "shape_fit": {
+    "primary": ["sequence"],
+    "secondary": ["taxonomy"],
+    "anti": [
+      "a single-moment scene with no actual prior verse/type on record to reveal as 'earlier'",
+      "a beat that needs the two pages to visually MATCH exactly (registration) rather than merely read as the same book at two different ages -- see the_registration_pull's failure"
+    ]
+  },
+  "plate_bill": [
+    { "id": "P1", "must_contain": "open handwritten journal page, aged cream paper, faint ruled lines, a small margin sketch of two stacked bundle icons suggesting an ordered list", "count": 1 },
+    { "id": "P2", "must_contain": "a much older aged parchment leaf, foxed and yellowed, ink faded pale brown, held apart from a newer page, a small sketched lamb icon near the top, deckled edges, linen-tape corner repair", "count": 1 },
+    { "id": "P3", "must_contain": "an open book spread seen from slightly above, one page caught mid-turn with real page thickness visible, warm raking light, a sketched lamb icon and a checklist icon on the pages", "count": 1 }
+  ],
+  "derived_views": [],
+  "motion_slots": {
+    "max": 1,
+    "earned_by": "the page-turn itself (P3, the clean still) is the one beat worth animating as real page-turn motion; do not animate P2 until it is rebuilt via the code-aging fix below rather than a second independent generation."
+  },
+  "generation_alignment": "forbidden",
+  "risk_flags": [
+    "illustration_lock -- _02 drifted into a photographed-book-prop look; the fix is code-aging the CURRENT page's own art via panel_animator/elder_leaf.py's foxed-stock treatment, not a second independent generation guessing at 'older'",
+    "no_baked_text"
+  ],
+  "accuracy_spec": [],
+  "beat_template": {
+    "hook": "the current spread, the assumed order, a simple ordered list",
+    "pivot": "an older leaf surfaces, already recorded, dated before",
+    "landing": "the page turns, the sequence corrects itself"
+  },
+  "caption_lane": "lower-third, center",
+  "lettering": "overlay_only",
+  "score_shape": "a plain, present-tense reading pulse under the current page, dropping to something older and slower as the earlier leaf surfaces, resolving on a warm settled tone as the page physically turns.",
+  "sfx_palette": ["paper_page_turn", "parchment_foxed_crackle", "quill_ink_dip"],
+  "status": "stills-tested-flagged",
+  "evidence": "poc_bethesda_style_test/round3_devices/stills/earlier_page_01.png, earlier_page_02.png, earlier_page_03.png"
+}

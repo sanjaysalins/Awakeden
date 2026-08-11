@@ -1,0 +1,297 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Today's POC Session — everything in one place</title>
+<style>
+  :root {
+    --bg: #131110; --ink: #EDE7D9; --ink-soft: #B3AB9B; --ink-faint: #7C7568;
+    --rust: #D97C5C; --rust-wash: rgba(217,124,92,0.10); --verdigris: #7FA095;
+    --verdigris-wash: rgba(127,160,149,0.10); --line: #3A342B; --card: #1C1916; --gold: #C7A366;
+  }
+  * { box-sizing: border-box; }
+  body { background:var(--bg); color:var(--ink); font-family: Georgia,"Palatino Linotype",serif;
+         margin:0; padding:0 24px 100px; line-height:1.55; }
+  .wrap { max-width: 1000px; margin:0 auto; }
+  .label { font-family: ui-monospace,"SF Mono",Consolas,monospace; font-size:11px; letter-spacing:.14em;
+            text-transform:uppercase; color:var(--rust); }
+  h1 { font-size:clamp(28px,4.5vw,42px); font-weight:400; margin:60px 0 10px; letter-spacing:-.01em; }
+  .sub { color:var(--ink-soft); font-size:16px; max-width:70ch; margin-bottom:34px; }
+
+  nav { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:50px; padding:16px 18px;
+        background:var(--card); border:1px solid var(--line); border-radius:6px; }
+  nav a { font-family: ui-monospace, Consolas, monospace; font-size:12px; color:var(--ink-soft);
+          text-decoration:none; padding:5px 10px; border:1px solid var(--line); border-radius:20px; }
+  nav a:hover { color:var(--rust); border-color:var(--rust); }
+
+  section { padding:44px 0; border-top:1px solid var(--line); }
+  .num { font-family: ui-monospace, Consolas, monospace; font-size:12px; color:var(--gold); }
+  h2 { font-size:23px; font-weight:600; margin:6px 0 6px; }
+  .status { display:inline-block; font-family: ui-monospace, Consolas, monospace; font-size:10.5px;
+             letter-spacing:.06em; padding:3px 9px; border-radius:20px; margin-left:8px; vertical-align:middle; }
+  .status.win { background:var(--verdigris-wash); color:var(--verdigris); border:1px solid color-mix(in srgb, var(--verdigris) 40%, transparent); }
+  .status.mixed { background:var(--rust-wash); color:var(--rust); border:1px solid color-mix(in srgb, var(--rust) 40%, transparent); }
+  p.desc { color:var(--ink-soft); font-size:14.5px; max-width:78ch; margin:0 0 18px; }
+
+  .links { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:18px; }
+  .links a { font-family: ui-monospace, Consolas, monospace; font-size:12.5px; color:var(--rust);
+             text-decoration:none; padding:7px 13px; border:1px solid color-mix(in srgb, var(--rust) 40%, transparent);
+             border-radius:4px; background:var(--rust-wash); }
+  .links a:hover { background:var(--rust); color:#141210; }
+  .links a.secondary { color:var(--verdigris); border-color:color-mix(in srgb, var(--verdigris) 40%, transparent); background:var(--verdigris-wash); }
+  .links a.secondary:hover { background:var(--verdigris); color:#141210; }
+
+  video { width:100%; max-width:420px; border-radius:4px; background:#000; display:block; margin:14px 0; }
+  .video-row { display:flex; gap:20px; flex-wrap:wrap; }
+  .video-row .cap { max-width:420px; font-size:12.5px; color:var(--ink-faint); margin-top:-6px; }
+
+  .grid4 { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; margin:14px 0 18px; }
+  .chip { padding:10px 12px; background:var(--card); border:1px solid var(--line); border-radius:4px; font-size:13px; }
+  .chip b { color:var(--ink); display:block; margin-bottom:2px; }
+  .chip span { color:var(--ink-faint); font-size:11.5px; }
+
+  .flag { margin-top:6px; font-size:12.5px; color:var(--ink-faint); }
+  .flag b { color:var(--rust); font-weight:600; }
+  footer { padding-top:34px; font-size:12px; color:var(--ink-faint); }
+
+  .style-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:18px; margin-top:22px; }
+  .style-card { background:var(--card); border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+  .style-card .thumbs { display:flex; }
+  .style-card .thumbs img { width:50%; height:200px; object-fit:cover; display:block; }
+  .style-card .thumbs img:first-child { border-right:1px solid var(--line); }
+  .style-card .body { padding:14px 16px 16px; }
+  .style-card .swatch-name { font-size:16px; font-weight:600; color:var(--ink); margin:0 0 2px; }
+  .style-card .recipe { font-family: ui-monospace, Consolas, monospace; font-size:11px; color:var(--gold); letter-spacing:.02em; margin-bottom:8px; display:block; }
+  .style-card p { font-size:13px; color:var(--ink-soft); margin:0 0 8px; }
+  .style-card .used-in { font-size:11.5px; color:var(--ink-faint); }
+  .style-card.flagged { border-color:color-mix(in srgb, var(--rust) 45%, var(--line)); }
+  .style-card.flagged .swatch-name::after { content:" \26A0"; color:var(--rust); }
+  .style-sub-head { font-size:13px; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.1em; margin:36px 0 4px; font-family: ui-monospace, Consolas, monospace; }
+</style></head><body>
+<div class="wrap">
+
+  <span class="label">Session archive &middot; 2026-08-11</span>
+  <h1>Today's POC run, start to finish.</h1>
+  <p class="sub">One fresh look at how this series presents its content, from Fable's first four wild bets through a whole new production pipeline. Nothing here is in the real pipeline yet &mdash; every video below is a throwaway proof, kept so the best ideas can be built for real.</p>
+
+  <nav>
+    <a href="#styles">0. Style library</a>
+    <a href="#r1">1. Four wild bets</a>
+    <a href="#farcorner">2. Far Corner, built</a>
+    <a href="#r2">3. Five more devices</a>
+    <a href="#r3">4. Six more, lessons applied</a>
+    <a href="#drawingoffice">5. The Drawing Office</a>
+    <a href="#father">6. The Father Who Ran</a>
+  </nav>
+
+  <section id="styles">
+    <span class="num">00</span>
+    <h2>The style library &mdash; six named looks, plus three early experiments</h2>
+    <p class="desc">Every prompt today was built from one of these named rendering recipes (they're real reusable code now &mdash; <code>drawing_office/prompts/style_anchors.py</code>). Six became the official library; three more were tried before that library existed and are kept here for reference, two of them flagged because they kept drifting toward photoreal instead of illustration.</p>
+
+    <div class="style-sub-head">The library (6)</div>
+    <div class="style-grid">
+      <div class="style-card">
+        <div class="thumbs">
+          <img src="poc_bethesda_style_test/round3_devices/stills/sightline_01.png">
+          <img src="poc_bethesda_style_test/round3_devices/stills/third_line_02.png">
+        </div>
+        <div class="body">
+          <p class="swatch-name">Sketchbook Ink</p>
+          <span class="recipe">code name: SKETCH</span>
+          <p>Hand-drawn ink line + watercolor wash on aged sketchbook paper, warm sepia/earth palette. The workhorse &mdash; most-used look of the whole session, zero drift issues anywhere it appeared.</p>
+          <p class="used-in">Used in: The Sightline, The Third Line, The Same Fire, The Earlier Page, The Blemish Hunt, Two Goats, The Father Who Ran</p>
+        </div>
+      </div>
+      <div class="style-card">
+        <div class="thumbs">
+          <img src="poc_bethesda_style_test/stills/far_corner_01.png">
+          <img src="poc_bethesda_style_test/round2_devices/stills/sounding_line_02.png">
+        </div>
+        <div class="body">
+          <p class="swatch-name">Survey Plate</p>
+          <span class="recipe">code name: SURVEY_PLATE</span>
+          <p>Archaeological/technical cutaway engraving, muted mineral ink-wash &mdash; slate blue-grey and faded sienna, fine linework, aged parchment. Reads as a 19th-century excavation plate.</p>
+          <p class="used-in">Used in: The Far Corner, The Sounding Line</p>
+        </div>
+      </div>
+      <div class="style-card">
+        <div class="thumbs">
+          <img src="poc_bethesda_style_test/round2_devices/stills/closed_file_01.png">
+          <img src="poc_bethesda_style_test/round2_devices/stills/closed_file_03.png">
+        </div>
+        <div class="body">
+          <p class="swatch-name">Archive Catalogue</p>
+          <span class="recipe">code name: ARCHIVE</span>
+          <p>Antiquarian museum-card illustration, warm low lamplight, cross-hatched linework, sepia/slate/ochre. A 19th-century accession-catalogue engraving, drawn not photographed.</p>
+          <p class="used-in">Used in: The Closed File</p>
+        </div>
+      </div>
+      <div class="style-card">
+        <div class="thumbs">
+          <img src="poc_bethesda_style_test/round2_devices/stills/double_entry_02.png">
+          <img src="poc_bethesda_style_test/round2_devices/stills/double_entry_03.png">
+        </div>
+        <div class="body">
+          <p class="swatch-name">Scribe's Ledger</p>
+          <span class="recipe">code name: LEDGER</span>
+          <p>Ruled account-book page on aged cream paper, sepia ink with rubric-red accents. Flat and drawn, never a photograph of a physical book.</p>
+          <p class="used-in">Used in: The Double-Entry Page</p>
+        </div>
+      </div>
+      <div class="style-card">
+        <div class="thumbs">
+          <img src="poc_bethesda_style_test/round2_devices/stills/one_take_scroll_03.png">
+          <img src="poc_bethesda_style_test/round3_devices/stills/token_01.png">
+        </div>
+        <div class="body">
+          <p class="swatch-name">Ancient Scroll</p>
+          <span class="recipe">code name: SCROLL</span>
+          <p>Papyrus-toned ground, fine sepia linework, illuminated-manuscript register. Written specifically to fight the photoreal drift the scroll concept hit on its first pass.</p>
+          <p class="used-in">Used in: The One-Take Scroll</p>
+        </div>
+      </div>
+      <div class="style-card">
+        <div class="thumbs">
+          <img src="poc_bethesda_style_test/round3_devices/stills/token_03.png">
+          <img src="poc_bethesda_style_test/round3_devices/stills/same_fire_dawn.png">
+        </div>
+        <div class="body">
+          <p class="swatch-name">Night Threshold</p>
+          <span class="recipe">code name: NIGHT_INK</span>
+          <p>Flat night ink-wash, deep blue-grey with warm ochre "pale wash reserve" for light. No lens language, no "torchlight glow" &mdash; that exact phrase is what caused the drift the first time.</p>
+          <p class="used-in">Used in: The Token</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="style-sub-head">Early experiments, not yet codified</div>
+    <div class="style-grid">
+      <div class="style-card">
+        <div class="thumbs">
+          <img src="poc_bethesda_style_test/stills/his_sky_01.png">
+          <img src="poc_bethesda_style_test/stills/his_sky_03.png">
+        </div>
+        <div class="body">
+          <p class="swatch-name">Candlelit POV</p>
+          <span class="recipe">round 1, pre-library</span>
+          <p>Painterly first-person, warm candlelight against dark stone, no visible narrator body. Never revisited after round 1 &mdash; a real candidate for a proper style-library entry later.</p>
+          <p class="used-in">Used in: His Sky</p>
+        </div>
+      </div>
+      <div class="style-card flagged">
+        <div class="thumbs">
+          <img src="poc_bethesda_style_test/stills/the_blur_01.png">
+          <img src="poc_bethesda_style_test/stills/the_blur_02.png">
+        </div>
+        <div class="body">
+          <p class="swatch-name">Long Exposure</p>
+          <span class="recipe">round 1, pre-library &middot; flagged</span>
+          <p>Real long-exposure photography look, motion-smeared ghosts around one sharp figure. Genuinely stunning, but a real departure into photoreal cinematic territory &mdash; every other style stayed illustrated.</p>
+          <p class="used-in">Used in: The Blur</p>
+        </div>
+      </div>
+      <div class="style-card flagged">
+        <div class="thumbs">
+          <img src="poc_bethesda_style_test/stills/take_up_thy_bed_01.png">
+          <img src="poc_bethesda_style_test/stills/take_up_thy_bed_03.png">
+        </div>
+        <div class="body">
+          <p class="swatch-name">Relic Macro</p>
+          <span class="recipe">round 1, pre-library &middot; flagged</span>
+          <p>Museum artifact macro photography, raking side-light on a pure black void. The "museum" framing is exactly the language that later caused photoreal drift elsewhere &mdash; usable, but needs the same illustration-lock fix as Ancient Scroll got.</p>
+          <p class="used-in">Used in: Take Up Thy Bed</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="r1">
+    <span class="num">01</span>
+    <h2>Four wild bets on one short <span class="status mixed">stills only</span></h2>
+    <p class="desc">First ask: forget everything already built, look at "The Race He Could Never Win" (John 5, Bethesda) with completely fresh eyes. Fable pitched four radically different concepts &mdash; The Far Corner (one overhead plate, camera does everything), His Sky (first-person POV), The Blur (long-exposure ghosting), Take Up Thy Bed (object-only, no people). 12 real stills built to compare them side by side.</p>
+    <div class="links">
+      <a href="poc_bethesda_style_test/index.html">Gallery &mdash; 12 stills, 4 concepts</a>
+    </div>
+    <p class="flag">Winner: <b>The Far Corner</b> &mdash; a geometry story got a geometry device.</p>
+  </section>
+
+  <section id="farcorner">
+    <span class="num">02</span>
+    <h2>The Far Corner, built into a full episode <span class="status win">finished</span></h2>
+    <p class="desc">One overhead master plate of the Pool of Bethesda, an intentional $0 camera doing dive/track/pull-back for the whole 62s, two paid animated moments (the water stirring, the man taking up his mat). Scored, SFX bed, captions, watermark, landing hold &mdash; the first real proof this approach works end to end.</p>
+    <div class="video-row">
+      <div>
+        <video controls preload="metadata" src="poc_bethesda_style_test/far_corner_episode/BETHESDA_FAR_CORNER_v1.mp4"></video>
+        <div class="cap">61.86s &middot; ~$0.88 real spend on the video layer</div>
+      </div>
+    </div>
+    <div class="links">
+      <a href="poc_bethesda_style_test/far_corner_episode/_REVIEW.html">Review page + build notes</a>
+    </div>
+  </section>
+
+  <section id="r2">
+    <span class="num">03</span>
+    <h2>Five more devices, five more shapes <span class="status mixed">mixed</span></h2>
+    <p class="desc">Far Corner proved "device fits story shape" on a geography story. Round 2 tested it on five completely different shapes: The Closed File (filing/taxonomy), The Sounding Line (depth), The Registration Pull (two documents aligning), The Double-Entry Page (a ledger), The One-Take Scroll (one continuous unroll). 15 stills, honestly graded.</p>
+    <div class="grid4">
+      <div class="chip"><b>The Closed File</b><span>clean &mdash; all 3 landed</span></div>
+      <div class="chip"><b>The Sounding Line</b><span>clean &mdash; strongest image of the round</span></div>
+      <div class="chip"><b>The Registration Pull</b><span>never worked &mdash; retired</span></div>
+      <div class="chip"><b>The Double-Entry Page</b><span>1 great, 2 drifted photoreal</span></div>
+      <div class="chip"><b>The One-Take Scroll</b><span>drifted photoreal, 1 baked-text miss</span></div>
+    </div>
+    <div class="links">
+      <a href="poc_bethesda_style_test/round2_devices/index.html">Gallery &mdash; 15 stills, 5 concepts</a>
+    </div>
+    <p class="flag">Real lessons banked: <b>never ask two AI generations to align</b> (code does that) &middot; <b>"museum artifact" language causes photoreal drift.</b></p>
+  </section>
+
+  <section id="r3">
+    <span class="num">04</span>
+    <h2>Six more, built around what broke <span class="status win">mostly clean</span></h2>
+    <p class="desc">Round 3 designed directly against Round 2's two failures. The Same Fire (one plate, two code-only relights &mdash; the cleanest proof of the whole session), The Earlier Page (a book physically turning back a page), The Sightline (Zacchaeus, the untouched vertical axis), The Token (a threshold, recovered after a real fight for illustration-mode language), The Blemish Hunt (one lamb plate, code-cropped into 4 studies), The Third Line (the prodigal's unfinished third sentence).</p>
+    <div class="grid4">
+      <div class="chip"><b>The Same Fire</b><span>flagship proof &mdash; code relight nailed it</span></div>
+      <div class="chip"><b>The Sightline</b><span>clean, zero issues</span></div>
+      <div class="chip"><b>The Third Line</b><span>clean &mdash; most powerful stills of the day</span></div>
+      <div class="chip"><b>The Token</b><span>recovered clean after a reword</span></div>
+      <div class="chip"><b>The Earlier Page</b><span>still split photoreal/illustrated</span></div>
+      <div class="chip"><b>The Blemish Hunt</b><span>technique proven, wrong animal rendered</span></div>
+    </div>
+    <div class="links">
+      <a href="poc_bethesda_style_test/round3_devices/index.html">Gallery &mdash; 18 views, 6 concepts</a>
+    </div>
+  </section>
+
+  <section id="drawingoffice">
+    <span class="num">05</span>
+    <h2>The Drawing Office &mdash; a whole new pipeline <span class="status mixed">built, then corrected</span></h2>
+    <p class="desc">Fable designed a real production system: a "Commission" stage that reads each story's own shape and picks the right device before a single pixel is spent, a registry of 16 devices, and $0 primitives (relight, crop-zoom, path-draw) built from today's proofs. Tested on Two Goats (Leviticus 16) against the real existing production version.</p>
+    <div class="video-row">
+      <div>
+        <video controls preload="metadata" src="drawing_office/episodes/two_goats/TWO_GOATS_DRAWING_OFFICE_v1.mp4"></video>
+        <div class="cap">70.38s &middot; $1.18 real spend, vs. ~$20.68 recorded for the existing version</div>
+      </div>
+    </div>
+    <div class="links">
+      <a href="drawing_office/episodes/two_goats/_SIDE_BY_SIDE_COMPARISON.html">Side-by-side vs. the existing production cut</a>
+    </div>
+    <p class="flag"><b>Real feedback after watching this one:</b> too many static held frames, not enough animation &mdash; a direct miss against your own already-locked rule that every panel needs real motion. Corrected in the next build.</p>
+  </section>
+
+  <section id="father">
+    <span class="num">06</span>
+    <h2>The Father Who Ran &mdash; fully animated <span class="status win">the fix</span></h2>
+    <p class="desc">Luke 15:20, chosen specifically because the doctrine itself is motion &mdash; "grace moves first," "Jesus is the running of God." Built on the prodigal stills from round 3. <b>13 of 13 shots are real animated motion. Zero static holds.</b> Every clip eye-checked frame-by-frame against a strict test: does the world actually change, not just the framing.</p>
+    <div class="video-row">
+      <div>
+        <video controls preload="metadata" src="drawing_office/episodes/father_who_ran/THE_FATHER_WHO_RAN_DRAWING_OFFICE_v1.mp4"></video>
+        <div class="cap">62.84s &middot; $6.75 real spend &middot; narration only, no score/SFX/captions this pass</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Everything above is throwaway POC work &mdash; the production pipeline (<code>cli_visual.py</code>, <code>cli_assemble.py</code>, the living-sketchbook skill) is untouched. Source folders: <code>poc_bethesda_style_test/</code> and <code>drawing_office/</code> in this repo.
+  </footer>
+</div>
+</body></html>

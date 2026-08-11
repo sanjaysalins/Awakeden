@@ -1,0 +1,35 @@
+{
+  "name": "the_registration_pull",
+  "conceit": "RETIRED AS DESIGNED. The pitch was two independently-generated vellum drawings (a base psalm-page vignette layer and a separate translucent overlay layer) meant to visually register/align into one match at a single point, printmaker-proof style. Across all 3 stills of the concept, the two 'layers' were rendered as ONE composited plate by the model each time -- there was never a real second independently-generated layer to align against, and nano_banana_pro cannot be relied on to produce two separate generations that align pixel-for-pixel with each other on request. Three real attempts (the base-page still, the overlay-settling still, and the close-match-point still, the last needing an nsfw-false-positive retry on top of that) never produced a genuine two-layer registration. Do not attempt to patch this card -- the working replacement mechanic (a code-only split/unify grade on ONE plate, never two independent generations) is a separate new card, the_undivided.",
+  "shape_fit": {
+    "primary": ["correspondence"],
+    "secondary": [],
+    "anti": [
+      "any beat that requires two independently-generated images to align or register with each other -- no diffusion model call can guarantee pixel-for-pixel alignment across two separate generations; use the_undivided's code-only split/unify primitive on ONE plate instead"
+    ]
+  },
+  "plate_bill": [
+    { "id": "P1", "must_contain": "single manuscript page with 3 soft-edged margin vignettes (pierced hands, mocking crowd, folded garment and lots), bare aged vellum center, no legible script", "count": 1 },
+    { "id": "P2", "must_contain": "manuscript page seen through an offset translucent vellum overlay carrying its own near-matching vignette, two small registration cross-marks at the corners", "count": 1 },
+    { "id": "P3", "must_contain": "extreme close-up on one match point: scattered lots/garment on the lower layer, dice on the upper vellum layer, meant to align precisely, a glowing registration cross-mark at the point of overlap", "count": 1 }
+  ],
+  "derived_views": [],
+  "motion_slots": {
+    "max": 0,
+    "earned_by": "retired -- no motion budget applies; do not animate any of these three stills as this device."
+  },
+  "generation_alignment": "forbidden",
+  "risk_flags": ["illustration_lock", "no_baked_text", "retired_do_not_reuse"],
+  "accuracy_spec": [],
+  "beat_template": {
+    "hook": "the psalm leaf, its own margin vignettes",
+    "pivot": "a second vellum layer settles, meant to register against the first",
+    "landing": "one match point, meant to align precisely -- never actually verified to align"
+  },
+  "caption_lane": "lower-third, center",
+  "lettering": "overlay_only",
+  "score_shape": "n/a -- retired before any score pass was designed against it.",
+  "sfx_palette": [],
+  "status": "retired",
+  "evidence": "poc_bethesda_style_test/round2_devices/stills/registration_pull_01.png, registration_pull_02.png, registration_pull_03.png"
+}

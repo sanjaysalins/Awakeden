@@ -1,0 +1,33 @@
+{
+  "name": "the_same_fire",
+  "conceit": "The flagship $0-alignment-risk primitive: ONE neutral AI plate (a charcoal fire under flat even daylight, meant to be relit) is regraded TWICE by code alone -- a cool desaturated tight-radial-vignette pass for night (fear closes the light down) and a warm wide-open pass for dawn (grace opens it back up) -- literally the same pixels both times, so there is zero risk of two generations failing to match.",
+  "shape_fit": {
+    "primary": ["echo"],
+    "secondary": ["correspondence"],
+    "anti": [
+      "an echo across two spatially or compositionally DIFFERENT subjects -- Same Fire only works when it is genuinely the same object/plate relit, not two different objects being compared (that is Correspondence's job, e.g. the_sounding_line)"
+    ]
+  },
+  "plate_bill": [
+    { "id": "P1", "must_contain": "a small charcoal fire glowing in a simple stone fire-ring, rendered under flat even neutral daylight with no strong directional shadows, plain aged paper background, nothing else in frame", "count": 1 }
+  ],
+  "derived_views": ["relight_radial(mode=night)", "relight_radial(mode=dawn)"],
+  "motion_slots": {
+    "max": 1,
+    "earned_by": "if the narration's own turn lands on the fire (e.g. the exact moment of recognition), a single $0 cross-dissolve between the night and dawn code-regrades already covers the motion; a paid clip is only earned if the narration explicitly asks the camera to move rather than the light to change."
+  },
+  "generation_alignment": "forbidden",
+  "risk_flags": ["illustration_lock", "no_baked_text"],
+  "accuracy_spec": [],
+  "beat_template": {
+    "hook": "the fire, neutral, waiting to be relit",
+    "pivot": "the cold, tight, closed-down night regrade -- the denial",
+    "landing": "the same fire, warm and wide open -- the dawn regrade, grace arriving"
+  },
+  "caption_lane": "lower-third, center",
+  "lettering": "overlay_only",
+  "score_shape": "a cold, close, minor-key held tone under the night regrade, opening on the cross-dissolve into a warm, wide, major-key swell for the dawn regrade -- the score performs the exact same relight the code does.",
+  "sfx_palette": ["fire_crackle_low", "wind_night_cold", "birdsong_dawn"],
+  "status": "proven-poc",
+  "evidence": "poc_bethesda_style_test/round3_devices/stills/same_fire_raw.png, same_fire_night.png, same_fire_dawn.png"
+}

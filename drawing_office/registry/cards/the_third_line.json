@@ -1,0 +1,35 @@
+{
+  "name": "the_third_line",
+  "conceit": "A rehearsed speech never gets to finish: a lone figure walks a road alone (rehearsing what he'll say), the run interrupts him mid-approach, and the landing is an embrace that cuts off the planned words entirely -- the device is the gap between the line a character rehearsed and the event that actually happens to him.",
+  "shape_fit": {
+    "primary": ["interruption"],
+    "secondary": ["threshold"],
+    "anti": [
+      "a beat with no rehearsed or anticipated line of dialogue to interrupt -- the device needs a real 'planned words vs. actual event' gap, not just any emotional scene"
+    ]
+  },
+  "plate_bill": [
+    { "id": "P1", "must_contain": "a lone ragged robed figure walking alone in the distance on a dusty road, small in frame, the road stretching toward a distant home, warm late-afternoon light", "count": 1 },
+    { "id": "P2", "must_contain": "wide view of a dusty road: an older robed figure running toward a smaller ragged figure in the middle distance, both mid-motion, arms outstretched, dust caught in the air", "count": 1 },
+    { "id": "P3", "must_contain": "close view of two robed figures embracing, an older figure's arms wrapped around a smaller ragged figure bowed with his face hidden against the older man's shoulder, warm golden light", "count": 1 }
+  ],
+  "derived_views": [],
+  "motion_slots": {
+    "max": 1,
+    "earned_by": "the run itself (P2) is the one beat worth a paid clip -- real closing-distance motion; the rehearsal and the embrace hold as $0 stills either side of it."
+  },
+  "generation_alignment": "forbidden",
+  "risk_flags": ["illustration_lock", "no_baked_text"],
+  "accuracy_spec": [],
+  "beat_template": {
+    "hook": "alone on the road, rehearsing the line he means to say",
+    "pivot": "the run, interrupted mid-approach, before the line can land",
+    "landing": "the embrace -- the rehearsed line never finishes, unneeded"
+  },
+  "caption_lane": "lower-third, center",
+  "lettering": "overlay_only",
+  "score_shape": "a lone, walking, minor-key figure under the rehearsal, breaking into a running swell as the two figures close the distance, resolving into one sustained warm held chord through the silent embrace.",
+  "sfx_palette": ["footsteps_dust_road", "fabric_robe_rustle", "breath_running_labored"],
+  "status": "stills-tested-clean",
+  "evidence": "poc_bethesda_style_test/round3_devices/stills/third_line_01.png, third_line_02.png, third_line_03.png"
+}

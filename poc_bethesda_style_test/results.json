@@ -1,0 +1,134 @@
+[
+  {
+    "concept": "far_corner",
+    "label": "The Far Corner",
+    "id": "01",
+    "beat": "Hook — the whole complex, overhead",
+    "model": "nano_banana_pro",
+    "prompt": "Detailed archaeological reconstruction illustration, cutaway survey plate style, muted mineral ink-wash palette of ochre, slate grey and faded sienna, fine technical linework, aged parchment ground, cartographic precision, seen from directly overhead, restrained and scholarly like a 19th-century excavation report plate. An overhead cutaway view of the entire Pool of Bethesda complex: a rectangular pool at the center ringed by five covered stone colonnaded porches, each packed with dozens of tiny huddled figures - the sick, the blind, the lame - lying on mats, all oriented toward the water. Fine architectural linework renders the columns and stonework in precise archaeological detail. A faint hand-drawn survey grid overlay, the pool at the exact center a dark still rectangle. Dense with tiny figures, muted and scholarly., no visible text or lettering, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern setting only, no gore, no nsfw",
+    "stem": "far_corner_01",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "far_corner",
+    "label": "The Far Corner",
+    "id": "02",
+    "beat": "Track to the far corner — the measured distance",
+    "model": "nano_banana_pro",
+    "prompt": "Detailed archaeological reconstruction illustration, cutaway survey plate style, muted mineral ink-wash palette of ochre, slate grey and faded sienna, fine technical linework, aged parchment ground, cartographic precision, seen from directly overhead, restrained and scholarly like a 19th-century excavation report plate. An overhead view tracking along the length of one covered stone porch of the Bethesda complex: rows of huddled sick figures on mats grow sparser toward the far end, ending at one man lying utterly alone in the farthest corner, physically separated from the crowd by open bare stone floor. A thin hand-drawn survey line with small tick marks measures the distance from the crowd to the lone man, with a small hand-lettered '38' beside it. Isolated, quiet, the empty stone floor between the crowd and the one man is the subject., no visible text or lettering, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern setting only, no gore, no nsfw",
+    "stem": "far_corner_02",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "far_corner",
+    "label": "The Far Corner",
+    "id": "03",
+    "beat": "Landing — the red path, pulled back",
+    "model": "nano_banana_pro",
+    "prompt": "Detailed archaeological reconstruction illustration, cutaway survey plate style, muted mineral ink-wash palette of ochre, slate grey and faded sienna, fine technical linework, aged parchment ground, cartographic precision, seen from directly overhead, restrained and scholarly like a 19th-century excavation report plate. A close overhead view of two tiny figures at the far corner of a stone colonnaded porch: one man lying on a thin mat, another man standing calmly beside him, unhurried, in plain first-century robed dress. In the far distance at the edge of frame, a sliver of a crowded rectangular pool is visible, its water untouched and still. A single fine red survey-line runs from off-frame into this corner, ending at the standing man's feet - the only mark of color in an otherwise muted palette. Still, resolved, quiet., no visible text or lettering, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern setting only, no gore, no nsfw",
+    "stem": "far_corner_03",
+    "ok": false,
+    "error": "hf CLI exit 3: 2895b3cb-937e-42f2-bc34-2dcdc659dd63 ended with status \"nsfw\"\nError: job 2895b3cb-937e-42f2-bc34-2dcdc659dd63 ended with status \"nsfw\""
+  },
+  {
+    "concept": "his_sky",
+    "label": "His Sky",
+    "id": "01",
+    "beat": "Hook — the ceiling, feet crossing",
+    "model": "nano_banana_pro",
+    "prompt": "First-person point-of-view painting, looking upward, painterly realism with warm candlelight and rippling water-reflected light, soft atmospheric depth, ancient stone architecture, reverent and intimate, cinematic framing, no visible narrator body. Looking straight up from ground level at a weathered ancient stone colonnade ceiling, ribbed stone arches, warm rippling water-light reflections dancing across the stone from an unseen pool below. At the very bottom edge of frame, several pairs of sandaled feet are caught mid-stride, blurred with motion, crossing close past the viewer. Trapped, patient, warm light against cold stone, the passage of time implied by the blur of feet., no visible text or lettering, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern setting only, no gore, no nsfw",
+    "stem": "his_sky_01",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "his_sky",
+    "label": "His Sky",
+    "id": "02",
+    "beat": "The shadow arrives — no face",
+    "model": "nano_banana_pro",
+    "prompt": "First-person point-of-view painting, looking upward, painterly realism with warm candlelight and rippling water-reflected light, soft atmospheric depth, ancient stone architecture, reverent and intimate, cinematic framing, no visible narrator body. A first-person view looking up at a tall stone colonnade archway, backlit by bright daylight; a single robed man's silhouette leans into frame from the side, his shape dark against the bright light beyond, his face entirely lost in shadow and backlight, one hand-shape visible at his side. His shadow falls directly down over the viewer's position. Quiet arrival, no face, only presence, warm bright light behind a dark reverent silhouette., no visible text or lettering, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern setting only, no gore, no nsfw",
+    "stem": "his_sky_02",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "his_sky",
+    "label": "His Sky",
+    "id": "03",
+    "beat": "Landing — standing upright, the world below",
+    "model": "nano_banana_pro",
+    "prompt": "First-person point-of-view painting, looking downward from standing height, painterly realism with warm daylight, soft atmospheric depth, ancient stone architecture, reverent and intimate, cinematic framing, no visible narrator face. A first-person view from standing eye-level height, looking down at one's own hands rolling a thin woven mat into a bundle. Below and beyond, a pool complex with covered stone colonnades is visible at a distance, small, a churning crowd of the sick still gathered at the water's edge. The horizon is level, one's own sandaled feet visible at the bottom of frame, standing upright for the first time. Quiet triumph, warm daylight., no visible text or lettering, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern setting only, no gore, no nsfw",
+    "stem": "his_sky_03",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "the_blur",
+    "label": "The Blur",
+    "id": "01",
+    "beat": "Hook — one sharp man, a river of ghosts",
+    "model": "seedream_v5_pro",
+    "prompt": "Long-exposure night photography aesthetic rendered as a single frame, real motion-blur streaks (not a stylized painting), one subject in tack-sharp focus while everything else is a smeared trail of light and movement, muted warm-cool palette, ancient Near-Eastern setting, cinematic and restrained. A stone porch corner: one gaunt man lies utterly sharp and still on a thin mat in the lower third of frame, while behind him a river of translucent, elongated motion-blur silhouettes streams diagonally across the frame toward an unseen glowing pool off to the side - dozens of blurred ghostly figures in constant motion, none of them resolved, all moving in one direction. Photographic long-exposure realism, warm glow at the frame edge, cold stone, the stillness of the one sharp figure the entire point of the image., no visible text or lettering, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern setting only, no gore, no nsfw",
+    "stem": "the_blur_01",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "the_blur",
+    "label": "The Blur",
+    "id": "02",
+    "beat": "Jesus resolves out of the blur",
+    "model": "seedream_v5_pro",
+    "prompt": "Long-exposure night photography aesthetic rendered as a single frame, real motion-blur streaks (not a stylized painting), one subject in tack-sharp focus while everything else is a smeared trail of light and movement, muted warm-cool palette, ancient Near-Eastern setting, cinematic and restrained. The same stone porch corner: a gaunt man lies sharp and still on a thin mat as before, and a second figure is caught mid-resolution, materializing out of the blurred river of moving ghosts - his lower body still slightly translucent and smeared, his upper body and standing posture already tack-sharp, standing at the feet of the lying man. Blurred motion-trails of the crowd continue streaming past in the background. The moment of arrival, sharpness overtaking blur, a quiet miracle rendered as photographic focus., no visible text or lettering, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern setting only, no gore, no nsfw",
+    "stem": "the_blur_02",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "the_blur",
+    "label": "The Blur",
+    "id": "03",
+    "beat": "Landing — empty porch, one sharp mat",
+    "model": "seedream_v5_pro",
+    "prompt": "Long-exposure night photography aesthetic rendered as a single frame, real photographic realism, tack-sharp and still, muted warm-cool palette, ancient Near-Eastern setting, cinematic and restrained. The same stone porch corner, now empty of any blur or crowd motion - the streaking ghost-trails have faded away entirely, leaving only a plain, sharply focused, tack-still image: an abandoned thin woven mat lying flat on bare stone, slightly rumpled where a body recently lay. In the distance, a pool's surface is calm and glassy, its faint light no longer needed. Stillness after motion, resolution, quiet and empty, warm fading light., no visible text or lettering, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern setting only, no gore, no nsfw",
+    "stem": "the_blur_03",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "take_up_thy_bed",
+    "label": "Take Up Thy Bed",
+    "id": "01",
+    "beat": "Hook — macro on the mat, the body's imprint",
+    "model": "seedream_v5_pro",
+    "prompt": "Museum artifact macro photography, dramatic raking side-light against pure black void, extreme material realism, shallow depth of field, restrained and reverent, like a dark-field relic documentary film still, no people visible. An extreme macro photograph of a thin ancient woven reed sleeping mat, lit by a single hard raking light source from one side against a pure black void background. The weave shows decades of wear, frayed fibers, a faint but unmistakable body-shaped darkened impression pressed permanently into the surface where a person has lain for a very long time. Severe, intimate, museum-relic authority, the black void giving the object total focus., no visible text or lettering, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern setting only, no gore, no nsfw",
+    "stem": "take_up_thy_bed_01",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "take_up_thy_bed",
+    "label": "Take Up Thy Bed",
+    "id": "02",
+    "beat": "The worn edge — 38 years of dragging toward the water",
+    "model": "seedream_v5_pro",
+    "prompt": "Museum artifact macro photography, dramatic raking side-light against pure black void, extreme material realism, shallow depth of field, restrained and reverent, like a dark-field relic documentary film still, no people visible. An extreme macro photograph of the frayed, worn corner edge of an ancient woven reed mat, lit by hard raking side-light against pure black void. The fibers on this one edge are visibly thinner and more worn than the rest of the mat, clear evidence of being dragged repeatedly across stone in one direction over many years. Forensic, quiet, a single detail telling a long story of struggle., no visible text or lettering, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern setting only, no gore, no nsfw",
+    "stem": "take_up_thy_bed_02",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "take_up_thy_bed",
+    "label": "Take Up Thy Bed",
+    "id": "03",
+    "beat": "Landing — the mat stands, the pool untouched",
+    "model": "seedream_v5_pro",
+    "prompt": "Museum artifact macro photography, dramatic raking side-light against pure black void, extreme material realism, shallow depth of field, restrained and reverent, like a dark-field relic documentary film still, no people visible. An ancient woven reed mat, rolled into a tight upright bundle, standing unaided on its end in a pure black void, lit by hard raking side-light. Beside it, in the far negative space of the frame, the faint circular outline of a still, dark, untouched pool of water is barely visible in the blackness. Quiet triumph, an object transformed, restrained and reverent, almost nothing else in frame., no visible text or lettering, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern setting only, no gore, no nsfw",
+    "stem": "take_up_thy_bed_03",
+    "ok": true,
+    "error": null
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "name": "the_one_take_scroll",
+  "conceit": "One continuous scroll, its abstract (never legible) script-texture columns running above a thin frieze that itself carries the story (a chariot halting, Philip approaching, the scroll dissolving into a painted image) -- reading-in-motion without ever cutting away from the scroll itself. This concept flagged twice: both _01 and _02 drifted from hand-inked frieze toward a photographed-museum-artifact look on retry, and the ORIGINAL _01 baked a legible-looking museum placard/label into the frame -- a real no_baked_text guardrail violation caught after the fact, not before.",
+  "shape_fit": {
+    "primary": ["reading-in-motion"],
+    "secondary": ["sequence"],
+    "anti": [
+      "a beat needing a hard punctuated cut for a big reveal -- this device's whole point is continuous unbroken motion along one scroll, it cannot deliver a crash-cut",
+      "any beat where legible text risk is already elevated (ancient-document/manuscript subjects) without an extra-strict lettering guardrail pass"
+    ]
+  },
+  "plate_bill": [
+    { "id": "P1", "must_contain": "long horizontal scroll partially unrolled, dense abstract vertical script-texture (no legible letterforms), a thin ink frieze along the bottom margin: a two-wheeled chariot with two robed figures mid-journey", "count": 1 },
+    { "id": "P2", "must_contain": "close view of the scroll's bottom-margin frieze: the chariot halted, one seated figure gesturing mid-question, a second figure approaching on foot from the roadside", "count": 1 },
+    { "id": "P3", "must_contain": "the scroll's script-texture columns thinning and dissolving into open parchment on the left, giving way on the right to a soft painted devotional scene: a plain wooden cross silhouette against a pale sky", "count": 1 }
+  ],
+  "derived_views": [],
+  "motion_slots": {
+    "max": 0,
+    "earned_by": "until the baked-text and photoreal-drift issues in _01/_02 are fixed and re-verified clean, no motion budget should be spent animating this concept's current stills."
+  },
+  "generation_alignment": "forbidden",
+  "risk_flags": [
+    "illustration_lock -- _01 and _02 both drifted photoreal-museum-artifact on retry, worse than the double_entry drift",
+    "no_baked_text -- SEVERE: the original _01 render baked a legible English museum placard/label into the frame despite the prompt's own explicit no-legible-text guardrail; treat this concept as unsafe to regenerate without an additional, stricter lettering-suppression pass and a full re-audit before reuse"
+  ],
+  "accuracy_spec": [],
+  "beat_template": {
+    "hook": "the scroll unrolling, an ink frieze of a chariot mid-journey beneath abstract script",
+    "pivot": "the chariot halts, a figure approaches on foot to meet it",
+    "landing": "the scroll's script dissolves past its own text into a painted cross"
+  },
+  "caption_lane": "lower-third, center",
+  "lettering": "overlay_only",
+  "score_shape": "a steady unrolling forward pulse under the scroll-hook, a small held pause as the chariot halts and the figure approaches, dissolving into a single sustained open chord as the frieze gives way to the cross.",
+  "sfx_palette": ["parchment_unroll", "cart_wheels_dirt_road", "wind_desert_bleak"],
+  "status": "stills-tested-flagged",
+  "evidence": "poc_bethesda_style_test/round2_devices/stills/one_take_scroll_01.png, one_take_scroll_02.png, one_take_scroll_03.png"
+}

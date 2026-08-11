@@ -1,0 +1,41 @@
+{
+  "name": "the_token",
+  "conceit": "A long street of identical dark doorways at night, the camera never crossing any threshold, so the mark (a dark red stroke on one lintel) and the light it earns are the ONLY visible difference between judgment passing over and judgment landing -- proven this week to need a real fight for illustration-mode language on the retry: the original render's own prompt language ('torchlight glow') pulled the still toward a photoreal torch-lit-photograph look before the ink-wash illustration register was forced back onto it.",
+  "shape_fit": {
+    "primary": ["threshold"],
+    "secondary": ["correspondence"],
+    "anti": [
+      "a beat where the camera needs to cross the threshold and go inside -- Token's whole discipline is the camera never crosses, so it cannot deliver an interior reveal",
+      "a scene with only one doorway/one fate -- the device depends on a visible side-by-side (marked vs unmarked) to read as correspondence"
+    ]
+  },
+  "plate_bill": [
+    { "id": "P1", "must_contain": "a long straight street of mudbrick doorways at night, each doorway a plain dark rectangle, no figures, one pale wash of light low on the horizon", "count": 1 },
+    { "id": "P2", "must_contain": "close view of one mudbrick doorway at night, a dark red ink mark drawn across the lintel and both doorposts in three deliberate strokes, ink slightly bled, no figures", "count": 1 },
+    { "id": "P3", "must_contain": "two doorways side by side at night: one grand and finely built but dark and unmarked, one small and plain but marked with a red stroke and glowing with warm light from within, no figures", "count": 1 }
+  ],
+  "derived_views": [],
+  "motion_slots": {
+    "max": 1,
+    "earned_by": "the moment the light spills out through the marked doorway (P3) is the one beat worth a paid clip -- the glow itself arriving/deepening; the street and the marking hold as $0 stills."
+  },
+  "generation_alignment": "forbidden",
+  "risk_flags": [
+    "illustration_lock -- the phrase 'torchlight glow' specifically pulled the original render toward a photoreal photograph look and had to be fought back to ink-wash illustration language on retry; never use that phrase (or similar photographic-glow language) in this device's prompts again",
+    "no_baked_text"
+  ],
+  "accuracy_spec": [
+    "Exodus 12:7,13,22-23 -- the mark is BLOOD struck on the two side posts and the upper door post with a bunch of hyssop, not paint or generic red ink; keep the mark's material reading consistent with blood-on-hyssop-strokes even though the current stills render it as an unspecified dark red ink mark."
+  ],
+  "beat_template": {
+    "hook": "a street of identical dark doorways, every one alike",
+    "pivot": "the mark is struck on one lintel, deliberate, three strokes",
+    "landing": "two doorways side by side -- one grand and dark, one plain and marked and lit"
+  },
+  "caption_lane": "lower-third, center",
+  "lettering": "overlay_only",
+  "score_shape": "a tense, even, unmarked pulse under the row of dark doorways, one sharp accented strike as the mark is drawn, resolving to a single warm sustained tone under the marked, lit doorway.",
+  "sfx_palette": ["night_wind_low", "hyssop_brush_strokes", "door_wood_creak"],
+  "status": "stills-tested-recovered",
+  "evidence": "poc_bethesda_style_test/round3_devices/stills/token_01.png, token_02.png, token_03.png"
+}

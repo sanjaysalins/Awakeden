@@ -1,0 +1,36 @@
+{
+  "name": "the_sounding_line",
+  "conceit": "A single vertical cutaway cross-section (ship at the waterline down through the depths) carries a ruled fathom-line that connects the fish's belly and the tomb chamber at the SAME measured depth, so 'three days and three nights' reads as one physical datum line rather than two separate illustrations trying to rhyme.",
+  "shape_fit": {
+    "primary": ["depth"],
+    "secondary": ["correspondence"],
+    "anti": [
+      "a story with no real vertical/depth axis, or where the two things being connected genuinely happen at different scales/distances rather than the same measured depth",
+      "an intimate scene needing facial closeness -- the cutaway-diagram register is deliberately technical and distant"
+    ]
+  },
+  "plate_bill": [
+    { "id": "P1", "must_contain": "vertical cross-section: a small ship cut away at the waterline near the top, layered dark water descending in bands, one ruled fathom-line with tick marks descending through the water column", "count": 1 },
+    { "id": "P2", "must_contain": "wide cross-section at depth: a fish cutaway with a robed man curled in its belly on one side, a rock-cut tomb cutaway with a shrouded form on the other, one horizontal ruled datum line connecting the two at the identical depth", "count": 1 },
+    { "id": "P3", "must_contain": "close cutaway of the rock-cut tomb chamber, stone rolled aside, soft light spilling in, an empty folded linen shroud on the ledge, no figure present", "count": 1 }
+  ],
+  "derived_views": [],
+  "motion_slots": {
+    "max": 0,
+    "earned_by": "the device's whole authority is the fixed technical-plate register; nothing in the three beats currently needs invented motion over the $0 camera pushing along the ruled datum line."
+  },
+  "generation_alignment": "forbidden",
+  "risk_flags": ["illustration_lock", "no_baked_text"],
+  "accuracy_spec": [],
+  "beat_template": {
+    "hook": "the ship cut away at the waterline, the fathom-line beginning its descent",
+    "pivot": "the fish-belly and the tomb-chamber held at the identical measured depth by one datum line",
+    "landing": "the tomb cutaway alone, empty, lit, the shroud folded and undisturbed"
+  },
+  "caption_lane": "lower-third, center",
+  "lettering": "overlay_only",
+  "score_shape": "a slow descending low-register cue tracking the fathom-line down through the hook, holding suspended and still at the shared datum depth, then opening into a single clear high tone as the empty tomb resolves.",
+  "sfx_palette": ["water_deep_pressure_hum", "stone_rock_scrape", "silence_void_room_tone"],
+  "status": "stills-tested-clean",
+  "evidence": "poc_bethesda_style_test/round2_devices/stills/sounding_line_01.png, sounding_line_02.png, sounding_line_03.png"
+}

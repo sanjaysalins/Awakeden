@@ -1,0 +1,40 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Bethesda — The Far Corner — v1</title>
+<style>
+  body { background:#141210; color:#EDE7D9; font-family: Georgia, serif; margin:0; padding:40px 24px 80px; }
+  .wrap { max-width: 480px; margin: 0 auto; }
+  h1 { font-size: 22px; font-weight: 400; margin-bottom: 4px; }
+  .meta { color:#B3AB9B; font-family: ui-monospace, monospace; font-size: 12.5px; margin-bottom: 24px; line-height: 1.7; }
+  video { width: 100%; border-radius: 4px; background: #000; display: block; }
+  .notes { margin-top: 28px; font-size: 14.5px; line-height: 1.6; color: #D8D2C4; }
+  .notes h2 { font-size: 15px; color:#D97C5C; font-weight: 600; margin: 22px 0 8px; }
+  .notes ul { margin: 0; padding-left: 20px; }
+  .notes li { margin-bottom: 6px; }
+  .flag { color: #D97C5C; }
+</style></head><body>
+<div class="wrap">
+  <h1>Bethesda — "The Race He Could Never Win" — The Far Corner</h1>
+  <div class="meta">
+    John 5:1&ndash;9 &middot; 61.86s &middot; new technique, throwaway build &middot; not in production pipeline<br>
+    Master plate + $0 camera (panel_animator/insert_page_camera.py) + 2 paid Kling clips
+  </div>
+  <video controls preload="metadata" src="BETHESDA_FAR_CORNER_v1.mp4"></video>
+  <div class="notes">
+    <h2>What's in it</h2>
+    <ul>
+      <li>One overhead master plate the camera dives/tracks/pulls back over for the whole runtime &mdash; no per-scene illustration cuts.</li>
+      <li>2 real animated moments (Kling pro, camera locked): the water stirring/crowd surging, and the man rising and taking up his mat.</li>
+      <li>Score: sacred_grace_rise (swell timed to the CTA) + glory_holy_stillness landing pad, both CTA-safe per the doctrine matrix.</li>
+      <li>SFX: distant crowd murmur, a constant quiet pool-water bed, a lift on the water at the stir, soft stone footsteps under Jesus's approach.</li>
+      <li>Ivory captions, AWAKEDEN watermark, 3.0s landing hold (audio/video parity confirmed by check_landing_hold.py).</li>
+    </ul>
+    <h2>Honest gaps <span class="flag">&mdash; read before calling this done</span></h2>
+    <ul>
+      <li><b>Word-recovery gate: 97.5% vs the project's 98% standard.</b> Tested 4 isolation variants (with/without hook bed, with/without landing pad, swell timing shifted) &mdash; identical result every time, which points to an ASR transcription quirk on archaic KJV phrasing ("Wilt thou be made whole") rather than real audio masking. Worth a human ear-check to confirm before trusting that read.</li>
+      <li><b>The external 5-CLI independent-review panel has NOT been run.</b> This is a brand-new visual technique, not yet the standard self-check + panel discipline this project requires before anything is called LOCKED/ship-ready.</li>
+      <li>This is a bespoke one-off build (like the living-sketchbook episodes), not wired into <code>cli_visual.py</code>/the STYLE_REGISTRY. Turning it into a repeatable format is separate follow-up work.</li>
+      <li>Real spend for the full episode (video only, stills were reused from the earlier POC): 17.5 credits (2 Kling pro clips) &asymp; $0.88 at the corrected $0.05/credit rate.</li>
+    </ul>
+  </div>
+</div>
+</body></html>

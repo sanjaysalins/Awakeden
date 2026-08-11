@@ -1,0 +1,36 @@
+{
+  "name": "the_blur",
+  "conceit": "One long-exposure-photography frame per beat: a single sharp, still figure held in tack focus while the surrounding crowd streams past as unresolved motion-blur ghosts -- the miracle is rendered as the moment sharpness overtakes blur, not as a new pose or a cut.",
+  "shape_fit": {
+    "primary": ["attention"],
+    "secondary": ["arrival"],
+    "anti": [
+      "a calm, uncrowded scene with no real river of motion to hold still against -- the device needs a genuinely busy, moving crowd for the one sharp figure to read against",
+      "a beat that needs to show a face in emotional close-up -- the style's whole point is one small still figure against a blurred field, not a portrait"
+    ]
+  },
+  "plate_bill": [
+    { "id": "P1", "must_contain": "one sharp, still gaunt man on a mat in the lower third, a river of translucent motion-blur crowd-ghosts streaming diagonally toward an unseen pool", "count": 1 },
+    { "id": "P2", "must_contain": "the same porch corner; a second figure caught mid-resolution, lower body still blurred, upper body and stance already tack-sharp, standing at the feet of the lying man", "count": 1 },
+    { "id": "P3", "must_contain": "the same porch corner, now empty and fully sharp with no blur remaining: an abandoned rumpled mat on bare stone, a calm glassy pool in the distance", "count": 1 }
+  ],
+  "derived_views": [],
+  "motion_slots": {
+    "max": 1,
+    "earned_by": "the resolving-out-of-blur moment (P2) is the one beat where real motion earns a paid clip; the hook and landing hold as $0 stills."
+  },
+  "generation_alignment": "forbidden",
+  "risk_flags": ["illustration_lock", "no_baked_text"],
+  "accuracy_spec": [],
+  "beat_template": {
+    "hook": "one sharp man still among a river of blurred, hurrying strangers",
+    "pivot": "a second figure resolves out of the blur into full sharp focus, arriving",
+    "landing": "the porch empty and still, blur gone, one abandoned mat, the pool calm"
+  },
+  "caption_lane": "lower-third, center",
+  "lettering": "overlay_only",
+  "score_shape": "a restless, low string bed under the streaming crowd-blur, cutting to a single clear tone the instant the second figure resolves sharp, settling to near-silence over the empty resolved landing.",
+  "sfx_palette": ["crowd_murmur_distant", "cloth_rush_motion", "water_still_lap"],
+  "status": "stills-tested",
+  "evidence": "poc_bethesda_style_test/stills/the_blur_01.png, the_blur_02.png, the_blur_03.png"
+}

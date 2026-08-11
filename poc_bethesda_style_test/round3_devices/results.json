@@ -1,0 +1,156 @@
+[
+  {
+    "concept": "same_fire",
+    "label": "The Same Fire",
+    "id": "raw",
+    "beat": "AI plate — neutral study, meant to be relit",
+    "model": "nano_banana_pro",
+    "prompt": "Hand-drawn editorial sketch illustration, ink linework with muted watercolor wash on aged sketchbook paper, journal-style, restrained earth and sepia palette, warm and painterly, not photographic, not a photograph, drawn and inked by hand. A small charcoal fire glowing in a simple stone fire-ring, a few embers and sticks of wood, rendered under flat, even, neutral daylight with no strong directional shadows -- a calm neutral study meant to be relit later. Plain aged paper background, nothing else in frame, centered, clean simple linework., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw, fully and modestly clothed",
+    "stem": "same_fire_raw",
+    "ok": false,
+    "error": "hf CLI exit 3: 523e27f8-7858-4a3d-bdd1-8ebf904da466 ended with status \"nsfw\"\nError: job 523e27f8-7858-4a3d-bdd1-8ebf904da466 ended with status \"nsfw\""
+  },
+  {
+    "concept": "earlier_page",
+    "label": "The Earlier Page",
+    "id": "01",
+    "beat": "The current spread — the assumed order",
+    "model": "nano_banana_pro",
+    "prompt": "Hand-drawn editorial sketch illustration, ink linework with muted watercolor wash on aged sketchbook paper, journal-style, restrained earth and sepia palette, warm and painterly, not photographic, not a photograph, drawn and inked by hand. An open handwritten journal page, aged cream paper, faint ruled lines, a small hand-drawn margin sketch of two simple bundle icons stacked one above the other suggesting an ordered list, warm ink linework, quiet and orderly., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw, fully and modestly clothed",
+    "stem": "earlier_page_01",
+    "ok": false,
+    "error": "hf CLI exit 3: 60b72f40-6fd6-401a-a9f6-cafe06b7cb79 ended with status \"nsfw\"\nError: job 60b72f40-6fd6-401a-a9f6-cafe06b7cb79 ended with status \"nsfw\""
+  },
+  {
+    "concept": "earlier_page",
+    "label": "The Earlier Page",
+    "id": "02",
+    "beat": "The earlier leaf — already recorded, dated before",
+    "model": "nano_banana_pro",
+    "prompt": "Hand-drawn editorial sketch illustration, ink linework with muted watercolor wash on aged sketchbook paper, journal-style, restrained earth and sepia palette, warm and painterly, not photographic, not a photograph, drawn and inked by hand. A single much older aged parchment leaf, foxed and yellowed at the edges, its ink faded to pale brown, held slightly apart from a newer page beside it, a small sketched icon of a simple lamb resting near the top of the old leaf, deckled edges, linen-tape corner repair, warm restrained sepia and faint gold-leaf accents., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw, fully and modestly clothed",
+    "stem": "earlier_page_02",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "earlier_page",
+    "label": "The Earlier Page",
+    "id": "03",
+    "beat": "The page turns — the corrected sequence",
+    "model": "nano_banana_pro",
+    "prompt": "Hand-drawn editorial sketch illustration, ink linework with muted watercolor wash on aged sketchbook paper, journal-style, restrained earth and sepia palette, warm and painterly, not photographic, not a photograph, drawn and inked by hand. An open book spread seen from slightly above, one page caught mid-turn, the gutter and real page thickness clearly visible, warm raking light crossing the pages, a small sketched lamb icon near the top of one page and a simple checklist icon below it, aged paper texture throughout., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw, fully and modestly clothed",
+    "stem": "earlier_page_03",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "sightline",
+    "label": "The Sightline",
+    "id": "01",
+    "beat": "Hook — the crowd, the tree, the vertical axis",
+    "model": "nano_banana_pro",
+    "prompt": "Hand-drawn editorial sketch illustration, ink linework with muted watercolor wash on aged sketchbook paper, journal-style, restrained earth and sepia palette, warm and painterly, not photographic, not a photograph, drawn and inked by hand, tall vertical composition. A full-height street scene in an ancient town: a dusty road and a dense crowd of robed figures shown only as backs of heads and shoulders along the bottom of the frame, a tall sycamore tree trunk rising through the center of the frame, its branches spreading near the top. No visible faces in the crowd., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw, fully and modestly clothed",
+    "stem": "sightline_01",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "sightline",
+    "label": "The Sightline",
+    "id": "02",
+    "beat": "Up the trunk — one small figure in the branch",
+    "model": "nano_banana_pro",
+    "prompt": "Hand-drawn editorial sketch illustration, ink linework with muted watercolor wash on aged sketchbook paper, journal-style, restrained earth and sepia palette, warm and painterly, not photographic, not a photograph, drawn and inked by hand. A close view partway up a thick sycamore tree trunk and its lower branches, one small robed figure perched carefully on a branch, seen from a middle distance, looking down and outward, face only lightly suggested. Dappled leaf shadow, warm daylight., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw, fully and modestly clothed",
+    "stem": "sightline_02",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "sightline",
+    "label": "The Sightline",
+    "id": "03",
+    "beat": "Landing — the two lines meet",
+    "model": "nano_banana_pro",
+    "prompt": "Hand-drawn editorial sketch illustration, ink linework with muted watercolor wash on aged sketchbook paper, journal-style, restrained earth and sepia palette, warm and painterly, not photographic, not a photograph, drawn and inked by hand. A view looking up from street level into sycamore branches: a small robed figure sits in the branch above, looking down; far below at the base of the trunk, another robed figure stands looking directly up, one hand slightly raised. Warm daylight, dappled leaf shadow, both figures small and clear, no faces in close detail., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw, fully and modestly clothed",
+    "stem": "sightline_03",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "token",
+    "label": "The Token",
+    "id": "01",
+    "beat": "Hook — the street, every doorway dark",
+    "model": "nano_banana_pro",
+    "prompt": "Flat hand-drawn ink-wash illustration on aged paper, editorial sketch style, restrained muted night palette of deep blue-grey and warm ochre pale wash reserve for light, paper tooth visible, not photographic, not a photograph, drawn and inked by hand. A long straight street of an ancient mudbrick town at night, a row of plain doorways receding into the distance, each doorway a simple dark rectangle in a plain wall, no figures visible, one pale wash of light low on the horizon., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw, fully and modestly clothed",
+    "stem": "token_01",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "token",
+    "label": "The Token",
+    "id": "02",
+    "beat": "The mark blooms on the lintel",
+    "model": "nano_banana_pro",
+    "prompt": "Flat hand-drawn ink-wash illustration on aged paper, editorial sketch style, restrained muted night palette of deep blue-grey and warm ochre pale wash reserve for light, paper tooth visible, not photographic, not a photograph, drawn and inked by hand. A close view of one plain mudbrick doorway at night: a dark red ink mark drawn across the lintel and both doorposts in three deliberate strokes, the ink slightly bled at the edges, the doorway itself a plain dark rectangle, no figures visible., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw, fully and modestly clothed",
+    "stem": "token_02",
+    "ok": false,
+    "error": "hf CLI exit 3: dc5e4e19-2d7b-467a-9e4e-81fb5ce6e8d3 ended with status \"nsfw\"\nError: job dc5e4e19-2d7b-467a-9e4e-81fb5ce6e8d3 ended with status \"nsfw\""
+  },
+  {
+    "concept": "token",
+    "label": "The Token",
+    "id": "03",
+    "beat": "Landing — the judgment pass",
+    "model": "nano_banana_pro",
+    "prompt": "Flat hand-drawn ink-wash illustration on aged paper, editorial sketch style, restrained muted night palette of deep blue-grey and warm ochre pale wash reserve for light, paper tooth visible, not photographic, not a photograph, drawn and inked by hand. Two plain doorways side by side at night: the left doorway grand and finely built but entirely dark and unmarked, the right doorway small and plain but marked with a dark red stroke across its lintel and glowing with a warm pale wash of light spilling from within. No figures visible., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw, fully and modestly clothed",
+    "stem": "token_03",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "blemish_hunt",
+    "label": "The Blemish Hunt",
+    "id": "raw",
+    "beat": "AI plate — the whole lamb, meant to be studied",
+    "model": "nano_banana_pro",
+    "prompt": "Hand-drawn editorial sketch illustration, ink linework with muted watercolor wash on aged sketchbook paper, journal-style, restrained earth and sepia palette, warm and painterly, not photographic, not a photograph, drawn and inked by hand. A single young lamb standing calmly in profile, full body visible, rendered as a careful naturalist study, clean simple linework, plain aged paper background, soft even lighting, centered composition, nothing else in frame., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw, fully and modestly clothed",
+    "stem": "blemish_hunt_raw",
+    "ok": false,
+    "error": "hf CLI exit 3: de84a1fb-d6ef-4a1c-86d4-cefcb2835c0e ended with status \"nsfw\"\nError: job de84a1fb-d6ef-4a1c-86d4-cefcb2835c0e ended with status \"nsfw\""
+  },
+  {
+    "concept": "third_line",
+    "label": "The Third Line",
+    "id": "01",
+    "beat": "The rehearsal — alone on the road",
+    "model": "nano_banana_pro",
+    "prompt": "Hand-drawn editorial sketch illustration, ink linework with muted watercolor wash on aged sketchbook paper, journal-style, restrained earth and sepia palette, warm and painterly, not photographic, not a photograph, drawn and inked by hand. A dusty road scene, a lone ragged robed figure walking alone in the distance, small in frame, the road stretching ahead toward a distant home, warm late-afternoon light, quiet and solitary mood., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw, fully and modestly clothed",
+    "stem": "third_line_01",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "third_line",
+    "label": "The Third Line",
+    "id": "02",
+    "beat": "The run — interrupted mid-approach",
+    "model": "nano_banana_pro",
+    "prompt": "Hand-drawn editorial sketch illustration, ink linework with muted watercolor wash on aged sketchbook paper, journal-style, restrained earth and sepia palette, warm and painterly, not photographic, not a photograph, drawn and inked by hand. A wide view of a dusty road: an older robed figure running toward a smaller ragged figure in the middle distance, both figures caught mid-motion, arms outstretched, warm golden late-afternoon light, dust caught in the air near their feet, emotional and warm., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw, fully and modestly clothed",
+    "stem": "third_line_02",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "third_line",
+    "label": "The Third Line",
+    "id": "03",
+    "beat": "Landing — the embrace, the line unfinished",
+    "model": "nano_banana_pro",
+    "prompt": "Hand-drawn editorial sketch illustration, ink linework with muted watercolor wash on aged sketchbook paper, journal-style, restrained earth and sepia palette, warm and painterly, not photographic, not a photograph, drawn and inked by hand. A close view of two robed figures embracing, an older figure with arms wrapped around a smaller ragged figure who is bowed with his face hidden against the older man's shoulder, warm golden light, tender and quiet mood, no visible faces in close detail., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw, fully and modestly clothed",
+    "stem": "third_line_03",
+    "ok": true,
+    "error": null
+  }
+]

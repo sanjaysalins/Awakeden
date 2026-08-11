@@ -1,0 +1,36 @@
+{
+  "name": "his_sky",
+  "conceit": "A first-person POV plate looking straight up (never down at the protagonist's own body or face), so the ceiling, the light, and whoever leans into frame carry the whole beat -- feet crossing, a faceless shadow arriving, then the same POV inverted to look down at last from standing height.",
+  "shape_fit": {
+    "primary": ["elevation"],
+    "secondary": ["threshold"],
+    "anti": [
+      "scenes that need the viewer to see the protagonist's own face or reaction -- true first-person POV structurally cannot show it",
+      "a story with no real vertical or lying-down/standing-up axis to invert"
+    ]
+  },
+  "plate_bill": [
+    { "id": "P1", "must_contain": "first-person view looking straight up at a stone colonnade ceiling with rippling water-reflected light; sandaled feet crossing at the bottom edge, no narrator body visible", "count": 1 },
+    { "id": "P2", "must_contain": "first-person view looking up at a colonnade archway; one robed man's silhouette leaning into frame, face lost in backlight and shadow, his shadow falling over the viewer", "count": 1 },
+    { "id": "P3", "must_contain": "first-person view looking DOWN from standing eye-level at one's own hands rolling a mat, sandaled feet visible, a distant pool complex below", "count": 1 }
+  ],
+  "derived_views": [],
+  "motion_slots": {
+    "max": 1,
+    "earned_by": "the shadow's arrival (P2) is the only beat with real narrative motion worth a paid clip; the other two stills hold on the $0 camera."
+  },
+  "generation_alignment": "forbidden",
+  "risk_flags": ["illustration_lock", "no_baked_text"],
+  "accuracy_spec": [],
+  "beat_template": {
+    "hook": "feet crossing overhead, trapped at ground level, the passage of time implied only by blur",
+    "pivot": "the shadow arrives, no face, only presence and backlight",
+    "landing": "standing at last, looking down at one's own hands and feet, the pool small and far below"
+  },
+  "caption_lane": "lower-third, center",
+  "lettering": "overlay_only",
+  "score_shape": "close, breath-level and confined under the ceiling-and-feet hook, a single low held note as the faceless shadow arrives, opening into daylight and space on the standing landing.",
+  "sfx_palette": ["footsteps_stone_crowd", "water_ripple_reflection", "fabric_robe_rustle"],
+  "status": "stills-tested",
+  "evidence": "poc_bethesda_style_test/stills/his_sky_01.png, his_sky_02.png, his_sky_03.png"
+}

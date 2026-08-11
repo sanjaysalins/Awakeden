@@ -1,0 +1,44 @@
+{
+  "name": "the_undivided",
+  "conceit": "One composition holding two states of one subject (e.g., two goats at one moment of division); a code-only LEFT/RIGHT linear split-grade (not radial, unlike same_fire) gives each side its own visual fate; at the story's own turn the split resolves in code to one unified grade; a separate reference-chained plate (NOT an independently-guessed generation) receives the payoff the split plate was pointing toward.",
+  "shape_fit": {
+    "primary": ["echo"],
+    "secondary": ["correspondence"],
+    "anti": [
+      "a correspondence-only story where two things simply need to be shown side-by-side without ever becoming one -- use the_double_entry_page or the_sounding_line instead",
+      "a geography or taxonomy story with no fate/state to split -- that is far_corner's or the_closed_file's job",
+      "a beat needing two independently-generated drawings to align -- the_registration_pull already proved that fails; the split here is 100% code on ONE plate, never two generations"
+    ]
+  },
+  "plate_bill": [
+    { "id": "P1", "must_contain": "the veil/curtain of the sanctuary, woven work with cherubim, blue/purple/scarlet and fine linen texture (Exodus 26:31-33), not a plain modern drape", "count": 1 },
+    { "id": "P2", "must_contain": "both goats present at once, ordinary domestic goats (not rams): one calm/still near the altar side, one already turning/oriented toward open ground (Leviticus 16:8-10, 16:21-22)", "count": 1 },
+    { "id": "P3", "must_contain": "the Christ plate, passion register (Isaiah 53), gaunt and sorrowful bearing visible weight/burden, never idealized or heroic musculature, reference-chained off P2's palette/mood", "count": 1, "reference": "P2" }
+  ],
+  "derived_views": ["relight_split(blend=0.0, two-sided grade)", "relight_split(blend=1.0, unified)"],
+  "motion_slots": {
+    "max": 2,
+    "earned_by": "only the narration's own two motion beats -- the live goat actually being driven away, and the veil actually tearing top to bottom -- earn a paid Kling insert; the split-to-unified turn itself is a $0 code cross-dissolve, not a paid clip."
+  },
+  "generation_alignment": "forbidden",
+  "risk_flags": [
+    "illustration_lock -- REQUIRED on all 3 plates, no 'photograph'/'museum'/'archival' language in any prompt",
+    "no_baked_text -- all KJV/verse text is Scribed Ink overlay applied post-render, never baked into a generation"
+  ],
+  "accuracy_spec": [
+    "Leviticus 16:8-10, 16:21-22 -- TWO male goats, one slain (blood brought within the veil), one live goat with the priest's hands laid on its head, confessed sins, sent away by the hand of a fit man; ordinary domestic goats, not rams (do not repeat this week's ram-for-lamb miss on a different animal).",
+    "Isaiah 53:6 (quoted KJV in the narration) -- 'the LORD hath laid on him the iniquity of us all' -- the Christ plate must show the weight/burden being borne, not a triumphant or unmarked figure.",
+    "Exodus 26:31-33 -- the veil is a woven work with cherubim, blue/purple/scarlet/fine linen; avoid a plain modern drape."
+  ],
+  "beat_template": {
+    "hook": "the veil, an uncertain threshold, the law's two goats named",
+    "pivot": "one plate, both goats, split-graded into two fates -- then the split resolves to one unified grade at the story's own words 'no single creature could hold both halves'",
+    "landing": "the Christ plate, reference-chained off the goats, the fulfillment; the veil torn top to bottom, the substance named"
+  },
+  "caption_lane": "lower-third, center -- clear of the veil's woven texture and the goats' heads in every plate",
+  "lettering": "overlay_only -- the Isaiah 53:6 quote is the one verse card in the piece, Scribed Ink, timed to its own spoken window",
+  "score_shape": "echo-shaped: one theme, cold/still under the goats' split state, warming through the unification cross-dissolve, full swell entering the Christ plate, sustained through the torn-veil beat, resolving to a quiet held CTA -- mirrors music_library's sacred_grace_rise arc, glory_holy_stillness as the landing pad.",
+  "sfx_palette": ["crowd_murmur_distant", "wind_desert_bleak", "veil_tearing", "air_hollow_desolate"],
+  "status": "concept",
+  "evidence": "drawing_office/episodes/two_goats/commission.json"
+}

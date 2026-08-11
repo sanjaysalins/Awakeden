@@ -1,0 +1,97 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Two Goats — v2 Living Sketchbook vs. v3 The Drawing Office</title>
+<style>
+  :root {
+    --bg: #131110; --ink: #EDE7D9; --ink-soft: #B3AB9B; --ink-faint: #7C7568;
+    --rust: #D97C5C; --verdigris: #7FA095; --line: #3A342B; --card: #1C1916;
+  }
+  * { box-sizing: border-box; }
+  body { background:var(--bg); color:var(--ink); font-family: Georgia, "Palatino Linotype", serif;
+         margin:0; padding:0 24px 90px; line-height:1.55; }
+  .wrap { max-width: 1180px; margin: 0 auto; }
+  .label { font-family: ui-monospace, "SF Mono", Consolas, monospace; font-size:11.5px;
+            letter-spacing:.14em; text-transform:uppercase; color:var(--rust); }
+  h1 { font-size: clamp(26px,4vw,38px); font-weight:400; margin: 60px 0 8px; letter-spacing:-.01em; }
+  .sub { color:var(--ink-soft); font-size:16px; max-width:70ch; margin-bottom: 40px; }
+
+  .versus { display:grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 48px; }
+  @media (max-width:820px) { .versus { grid-template-columns: 1fr; } }
+  .col { background:var(--card); border:1px solid var(--line); border-radius:6px; padding:22px; }
+  .col h2 { font-size:19px; font-weight:600; margin:0 0 4px; color:var(--ink); }
+  .col .tag { font-family: ui-monospace, monospace; font-size:11px; color:var(--verdigris); margin-bottom:14px; display:block; }
+  .col.new .tag { color:var(--rust); }
+  video { width:100%; border-radius:4px; background:#000; display:block; margin-bottom: 14px; }
+  .stat-row { display:flex; justify-content:space-between; font-size:13.5px; padding:7px 0; border-bottom:1px dashed var(--line); }
+  .stat-row:last-child { border-bottom:none; }
+  .stat-row b { color:var(--ink); font-weight:600; }
+  .stat-row span.v { font-family: ui-monospace, monospace; color:var(--ink-soft); }
+  .col.new .stat-row span.v.highlight { color: var(--rust); font-weight:600; }
+
+  section { padding: 36px 0; border-top:1px solid var(--line); }
+  section h3 { font-size:17px; font-weight:600; margin:0 0 14px; color:var(--rust); }
+  section p { color:var(--ink-soft); font-size:14.5px; max-width:80ch; }
+  .commission-box { background:var(--card); border:1px solid var(--line); border-radius:6px; padding:20px 22px; margin-top: 10px; }
+  .commission-box .cand { padding:10px 0; border-bottom:1px dashed var(--line); font-size:14px; }
+  .commission-box .cand:last-child { border-bottom:none; }
+  .commission-box .cand b { color:var(--ink); }
+  .commission-box .cand.won { color: var(--verdigris); }
+  .commission-box .cand.won b { color: var(--verdigris); }
+
+  .honest { background: rgba(217,124,92,0.08); border-left:3px solid var(--rust); padding:16px 20px; border-radius:0 4px 4px 0; font-size:14px; margin-top:16px; }
+  .honest b { color: var(--rust); }
+  footer { padding-top: 30px; font-size:12.5px; color:var(--ink-faint); }
+</style></head><body>
+<div class="wrap">
+
+  <span class="label">Drawing Office POC &middot; Leviticus 16, the two goats</span>
+  <h1>Same story. Same voice. Two different engines.</h1>
+  <p class="sub">Both cuts use the identical locked narration and the identical narration audio. Everything else — how the pictures were made, what they cost, and who decided how to tell the story — is different.</p>
+
+  <div class="versus">
+    <div class="col old">
+      <span class="tag">v2 &middot; LIVING SKETCHBOOK &middot; existing production</span>
+      <h2>The one already shipped</h2>
+      <video controls preload="metadata" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/poc_living_sketchbook/two_goats/TWO_GOATS_living_sketchbook.mp4"></video>
+      <div class="stat-row"><b>Duration</b><span class="v">70.80s</span></div>
+      <div class="stat-row"><b>Structure</b><span class="v">17 discrete illustrated stills, each its own scene</span></div>
+      <div class="stat-row"><b>Style decided by</b><span class="v">the fixed living-sketchbook template</span></div>
+      <div class="stat-row"><b>Recorded cost</b><span class="v">~$20.68 (historical ledger figure)</span></div>
+    </div>
+    <div class="col new">
+      <span class="tag">v3 &middot; THE DRAWING OFFICE &middot; today's POC</span>
+      <h2>The Undivided</h2>
+      <video controls preload="metadata" src="file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/drawing_office/episodes/two_goats/TWO_GOATS_DRAWING_OFFICE_v1.mp4"></video>
+      <div class="stat-row"><b>Duration</b><span class="v">70.38s</span></div>
+      <div class="stat-row"><b>Structure</b><span class="v">3 plates + 2 code-derived views + 2 paid clips</span></div>
+      <div class="stat-row"><b>Style decided by</b><span class="v">a Commission that read this story's own shape</span></div>
+      <div class="stat-row"><b>Real measured cost</b><span class="v highlight">$1.18 (23.5 credits, verified)</span></div>
+    </div>
+  </div>
+
+  <section>
+    <h3>What the Commission actually decided, and why</h3>
+    <p>Before any plate was generated, a written commission (<code>commission.json</code>) read the narration's own shape and scored three real candidates — the same judgment call a creative director would make by hand, now a repeatable pipeline stage.</p>
+    <div class="commission-box">
+      <div class="cand">Correspondence (two crops from one plate, animated into alignment) &mdash; considered, not chosen. The story's turn isn't "these two things match," it's "these two things become visibly one." Alignment implies meeting; this story needed becoming.</div>
+      <div class="cand">Threshold (the veil as the whole spine, camera never crosses it) &mdash; considered, not chosen as primary. Real and used as a bookend, but making it the spine would leave the two goats &mdash; the passage's most concrete, most quoted image &mdash; as background description only.</div>
+      <div class="cand won">Echo, &ldquo;The Undivided&rdquo; &mdash; CHOSEN. The narration states its own device: <em>&ldquo;No single creature could hold both halves.&rdquo;</em> One plate, split-graded in code into two fates, resolving to one unified grade at the story's own turn, then a reference-chained Christ plate receives the payoff. Zero risk of the alignment failure that killed a similar idea earlier today &mdash; the split is 100% code against one source image, never two generations hoping to match.</div>
+    </div>
+  </section>
+
+  <section>
+    <h3>Where the cost actually went</h3>
+    <p>3 plates (veil, two goats, Christ &mdash; the Christ plate chained off the goats plate as an image reference for palette continuity, not a blind independent generation) at 2 credits each = 6 credits. Two paid animated moments &mdash; the goat driven into the wilderness, and the veil drawn open in light &mdash; at 8.75 credits each = 17.5 credits. Everything else &mdash; the split-grade, the unification cross-dissolve, the torn-veil composite, every camera move, the score placement, the SFX bed, the captions &mdash; is $0 code, reusing this project's own proven infrastructure end to end.</p>
+  </section>
+
+  <section>
+    <h3>Honest gaps &mdash; read before calling this done</h3>
+    <div class="honest">
+      <p><b>This is a first proof, not a finished production.</b> The final audio mix peaked at -0.0 dBFS on the SFX pass &mdash; hotter than the Bethesda build's -3.8 dB margin, worth a real ear-check before this ships. The Commission's reasoning was performed by hand (by the person building the pipeline) rather than by an automated LLM planning call &mdash; the registry, guards, and primitives it would need to run unattended are built and tested, but the actual "read the narration, query the registry, write the commission" step hasn't been automated yet. And this whole pipeline has been proven on exactly one episode &mdash; real confidence comes from running it on a few more, especially ones whose shape is less obviously contested than this one.</p>
+    </div>
+  </section>
+
+  <footer>
+    Drawing Office v3 POC &middot; <code>drawing_office/</code> (registry, primitives, guards, prompts, pipeline all built and self-tested today) &middot; commission: <code>drawing_office/episodes/two_goats/commission.json</code> &middot; production pipeline untouched
+  </footer>
+</div>
+</body></html>

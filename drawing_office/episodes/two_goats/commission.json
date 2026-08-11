@@ -1,0 +1,155 @@
+{
+  "episode": "two_goats",
+  "source_narration": "poc_living_sketchbook/_two_goats_spoken.txt",
+  "source_alignment": "poc_living_sketchbook/_two_goats_alignment.json",
+  "source_audio": "poc_living_sketchbook/two_goats/audio",
+  "passage": "Leviticus 16 (Day of Atonement, the two goats) -> Isaiah 53:6 -> the torn veil",
+  "total_duration_target_s": 70.43,
+  "last_word_end_s": 67.427,
+  "landing_hold_s": 3.0,
+
+  "shape_reading": {
+    "walkthrough": [
+      "0.0-7.9  'Once a year I walked behind a curtain... two goats for one sin.' -- THRESHOLD framing opens the piece: an uncertain crossing, then the mechanism (two goats) is introduced.",
+      "7.9-24.8 'I killed the first...drove it into the desert to be lost. One to pay. One to carry it away.' -- CORRESPONDENCE: two goats, one sin, two fates, named explicitly as two halves of one act.",
+      "24.8-36.4 'For years I asked why it took two. I know now. No single creature could hold both halves.' -- the priest's own meta-commentary: this is ECHO material, not just correspondence -- the two are being named as ONE thing the creature could not hold, waiting to be reunified.",
+      "36.4-51.9 'Long after me a Man named Jesus did what my two goats only pictured -- He was the price paid, and the One the guilt was laid on... Finished.' -- the REVEAL: one Man performs both halves at once. This is the spine's climax, and it is an ECHO collapse (two states -> one), not a spatial-distance or filing/taxonomy event.",
+      "51.9-60.7 'The curtain...tore in two the hour He died... He is the substance.' -- the THRESHOLD reference returns and is resolved (torn), typology stated explicitly.",
+      "60.7-70.4 'Don't come to me, or a goat, or an altar. Come to Jesus -- the way in is torn wide open. Walk in.' -- CTA: the threshold is now open, invitation to cross it."
+    ],
+    "dominant_shape": "echo",
+    "secondary_shape": "threshold (bookend only, not the spine)",
+    "rejected_shapes": [
+      "geography -- there is no measured distance or spatial crossing to interrogate the way Bethesda's porches or Zacchaeus's sightline are; the two goats' fates differ in KIND, not in DISTANCE.",
+      "taxonomy -- nothing is filed, catalogued, or dated across multiple entries; this is one moment examined once, not a ledger of many."
+    ]
+  },
+
+  "candidate_scoring": [
+    {
+      "device": "registration_pull_reborn (correspondence family)",
+      "score": "considered, not chosen",
+      "reasoning": "Two crops from one plate, animated into alignment, could visualize 'two goats, one purpose' -- but the narration's own turn is not 'these two things match', it is 'these two things were never separable and one Man held both at once'. Alignment implies two things meeting; this story needs two things becoming visibly ONE thing. Correspondence is the right shape for a side-by-side proof text (like Psalm 22/Registration Pull's original target); it undersells the collapse this narration is actually built around."
+    },
+    {
+      "device": "token (threshold family)",
+      "score": "considered, not chosen as primary",
+      "reasoning": "The veil genuinely bookends the piece ('walked behind a curtain' / 'the way in is torn wide open') and Token's camera-never-crosses discipline would honor that. But making the veil the SPINE would leave the two goats -- the passage's most concrete, most quoted, most doctrinally load-bearing image -- as background description only. The veil is real, but it frames the story; it is not what the story is ABOUT. Demoted to bookend dressing around the chosen device."
+    },
+    {
+      "device": "same_fire (echo family) -- ADAPTED as a new card, 'the_undivided'",
+      "score": "CHOSEN",
+      "reasoning": "The narration states its own device: 'No single creature could hold both halves.' Same Fire proved that one plate, treated two ways in code, can carry two distinct moments without ever risking an alignment mismatch (proven this week: night/dawn regrade on one fire plate). Two Goats needs the same logic applied to FATE instead of TIME: one composition containing both goats, split-graded so each reads as its own destiny (paid/still vs carried-away/departing), then -- at the exact word 'No single creature could hold both halves' -- the split resolves into one unified grade. The Christ plate that follows is not a second half of a trick; it is the passage's own explicit claim (a NAMED Man, quoted KJV) and gets its own honest plate, chained as a reference off the goats plate's palette/mood rather than an independent unguided generation, so the visual thread (one desaturated-to-warm progression) still reads as one continuous drawing meeting its fulfillment, not two unrelated pictures cut together."
+    }
+  ],
+
+  "chosen_device": {
+    "registry_name": "the_undivided",
+    "based_on": "same_fire (relight primitive) + crop_study (spatial split) -- new registry card, not a reuse of same_fire's card verbatim, because its beat_template and plate_bill differ",
+    "conceit": "One composition holding both goats at their moment of division; a code-only left/right split-grade gives each goat its own visual fate; at the narration's own turn ('no single creature could hold both halves') the split dissolves to a unified grade; a separate, reference-chained Christ plate receives the payoff the goats' plate was always pointing toward.",
+    "risk_reconciliation": {
+      "illustration_lock": "REQUIRED on all 3 plates -- no 'photograph', 'museum', 'archival' language anywhere in any prompt.",
+      "no_baked_text": "REQUIRED -- no legible lettering on any plate; all KJV/verse text is Scribed Ink overlay, applied post-render, per LAW 1.",
+      "generation_alignment": "the goats plate is ONE generation, never two -- the split is 100% code (linear grade mask), zero risk. The Christ plate is a SEPARATE generation but does not need to spatially align with anything; it only needs tonal/mood continuity, achieved by carrying the goats plate as an --image reference (the project's own proven cast-bible chaining pattern, not the banned two-generations-must-match pattern) rather than an independent unguided render.",
+      "accuracy_spec": [
+        "Leviticus 16:8-10, 16:21-22 -- TWO male goats, one slain (blood brought within the veil), one live goat with the priest's hands laid on its head, confessed sins, sent away into the wilderness by the hand of a fit man. The plate must show BOTH goats present at once, ordinary domestic goats (not rams -- do not repeat this week's ram-for-lamb miss on a different animal), one goat calm/still near the altar side, one goat already turning/oriented toward open ground.",
+        "Isaiah 53:6 (quoted KJV in the narration) -- 'the LORD hath laid on him the iniquity of us all' -- the Christ plate must show the weight/burden being borne, not a triumphant or unmarked figure; passion register (Isaiah 53), gaunt and sorrowful per the project's own Christ body-gate rule, never idealized/heroic musculature.",
+        "The veil/curtain: Exodus 26:31-33 describes it as a woven work with cherubim, blue/purple/scarlet/fine linen -- avoid a plain modern drape; some texture/weave detail should read as deliberately woven, not a bedsheet."
+      ]
+    },
+    "beat_plan": [
+      {
+        "beat": "HOOK",
+        "window_s": [0.0, 7.90],
+        "text": "Once a year I walked behind a curtain to meet God -- and I was never sure I would walk back out. The law gave me two goats for one sin.",
+        "visual": "P1 (Veil plate), $0 camera: slow push toward the curtain from the outer court, held on the woven threshold.",
+        "device_step": "establishing threshold, unresolved"
+      },
+      {
+        "beat": "PROOF -- the two fates",
+        "window_s": [7.90, 19.80],
+        "text": "I killed the first and carried its blood inside the veil. The second I did not kill -- I laid my hands on its head, confessed every sin of the people over it,",
+        "visual": "CUT to P2 (Two Goats plate) -> D1 (linear split-grade: left goat cool/still/altar-lit, right goat warm/dust-lit/turning). $0 camera: slow pan left-to-right following the narration's own left-to-right description.",
+        "device_step": "split state -- two fates visible in one frame"
+      },
+      {
+        "beat": "PROOF -- the departure (PAID)",
+        "window_s": [19.80, 24.80],
+        "text": "and drove it into the desert to be lost. One to pay. One to carry it away.",
+        "visual": "PAID INSERT A -- crop of the 'carry away' goat from D1's warm side, animated: the goat turns and walks away, receding into open ground. Camera locked. The one real motion of the first half.",
+        "device_step": "the carrying-away, in motion"
+      },
+      {
+        "beat": "CONVICTION -- held question",
+        "window_s": [24.80, 31.32],
+        "text": "For years I asked why it took two.",
+        "visual": "Hold on D1 (split-grade), both goats visible, static.",
+        "device_step": "held, unresolved"
+      },
+      {
+        "beat": "CONVICTION -- the turn (the device's own thesis stated)",
+        "window_s": [31.32, 36.45],
+        "text": "I know now. No single creature could hold both halves.",
+        "visual": "$0 cross-dissolve D1 -> D2 (the SAME plate, split-grade resolved to one unified neutral-warm grade). This is the device's core move.",
+        "device_step": "unification begins -- code only, zero new generation"
+      },
+      {
+        "beat": "LANDING -- the reveal",
+        "window_s": [36.45, 51.90],
+        "text": "Long after me a Man named Jesus did what my two goats only pictured -- He was the price paid, and the One the guilt was laid on: and the LORD hath laid on him the iniquity of us all. He carried it away Himself -- once -- and sat down. Finished.",
+        "visual": "CUT to P3 (Christ plate, reference-chained off P2's palette). $0 camera: slow push in, held through the KJV quote (Scribed Ink overlay) and 'Finished.'",
+        "device_step": "the fulfillment -- one Man, both halves"
+      },
+      {
+        "beat": "LANDING -- the veil torn (PAID)",
+        "window_s": [51.90, 56.90],
+        "text": "The curtain I trembled behind tore in two the hour He died.",
+        "visual": "PAID INSERT B -- P1 (Veil plate) animated: the woven curtain tears top to bottom (Matthew 27:51), camera locked, light spilling through as it splits.",
+        "device_step": "the threshold destroyed, in motion"
+      },
+      {
+        "beat": "LANDING -- substance named",
+        "window_s": [56.90, 60.73],
+        "text": "I was only the sign. He is the substance.",
+        "visual": "Hold on the torn veil (last frame of Insert B / D3 static derivative).",
+        "device_step": "held on the torn threshold"
+      },
+      {
+        "beat": "CTA",
+        "window_s": [60.73, 70.43],
+        "text": "Don't come to me, or a goat, or an altar. Come to Jesus -- the way in is torn wide open. Walk in.",
+        "visual": "$0 pull-back on the torn veil, light widening through the tear. Landing hold to 70.43s (last word 67.43 + 3.0s, INV-26).",
+        "device_step": "landing"
+      }
+    ],
+    "caption_lane": "lower-third, center -- clear of the veil's woven texture and the goats' heads in every plate",
+    "lettering": "overlay_only -- the Isaiah 53:6 quote is the one verse card in the piece, Scribed Ink, timed to its own spoken window (42.6-51.9s)",
+    "score_shape": "echo-shaped per the_undivided card: one theme, cold/still under the goats' split state, warming through the unification cross-dissolve, full swell entering the Christ plate, sustained through the torn-veil beat, resolving to a quiet held CTA -- mirrors music_library's sacred_grace_rise arc almost exactly; glory_holy_stillness as the landing pad.",
+    "sfx_palette": ["crowd_murmur_distant (very low, the waiting people beyond the court)", "wind_desert_bleak (under Insert A)", "veil_tearing (under Insert B -- already exists in sound_library/clips/)", "air_hollow_desolate (under the torn-veil hold)"]
+  },
+
+  "plate_bill": [
+    {"id": "P1", "label": "veil", "count": 1, "model": "nano_banana_pro", "est_credits": 2},
+    {"id": "P2", "label": "two_goats", "count": 1, "model": "nano_banana_pro", "est_credits": 2},
+    {"id": "P3", "label": "christ", "count": 1, "model": "nano_banana_pro", "reference": "P2", "est_credits": 2}
+  ],
+  "derived_views": [
+    {"id": "D1", "from": "P2", "primitive": "relight.split", "desc": "left cool/still, right warm/departing"},
+    {"id": "D2", "from": "P2", "primitive": "relight.split (t=1.0, unified)", "desc": "resolved unified grade"},
+    {"id": "D3", "from": "P1", "primitive": "compose.tear_static", "desc": "torn-veil static fallback / held frame after Insert B"}
+  ],
+  "paid_inserts": [
+    {"id": "InsertA", "from": "P2 crop (warm/right goat)", "model": "kling3_0", "mode": "pro", "duration_s": 5, "est_credits": 8.75},
+    {"id": "InsertB", "from": "P1", "model": "kling3_0", "mode": "pro", "duration_s": 5, "est_credits": 8.75}
+  ],
+
+  "cost_quote": {
+    "plates_credits": 6,
+    "inserts_credits": 17.5,
+    "total_credits_est": 23.5,
+    "total_usd_est_at_0.05": 1.175,
+    "note": "Excludes retry/reroll headroom (~50% typical this week for nsfw false-positives); realistic ceiling ~$2.00-2.50."
+  },
+
+  "human_gate": "PENDING -- this commission is written for review before any plate is rendered, per the standing ask-before-spending rule."
+}

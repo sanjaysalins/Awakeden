@@ -1,0 +1,167 @@
+[
+  {
+    "concept": "closed_file",
+    "label": "The Closed File",
+    "id": "01",
+    "beat": "Hook — the drawer, rank after rank of closed cards",
+    "model": "nano_banana_pro",
+    "prompt": "Antiquarian museum archive illustration, ink and muted wash on aged card stock, warm low lamplight, meticulous cross-hatched linework, restrained scholarly palette of sepia, slate and faded ochre, like a 19th-century accession-catalogue engraving. A wide view into an open wooden card-catalogue drawer, dozens of tabbed index cards standing upright in tight ranks, each card aged and closed shut, a small hand-drawn portrait bust silhouette faintly visible on the edge of each tab, dust motes in the lamplight. Dense, orderly, slightly oppressive rows of finished, filed things., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image -- any writing-like marks must read as abstract ink texture or blank/illegible surface only, no visible text or captions, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw",
+    "stem": "closed_file_01",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "closed_file",
+    "label": "The Closed File",
+    "id": "02",
+    "beat": "The one loose card, unfiled, on the desk",
+    "model": "nano_banana_pro",
+    "prompt": "Antiquarian museum archive illustration, ink and muted wash on aged card stock, warm low lamplight, meticulous cross-hatched linework, restrained scholarly palette of sepia, slate and faded ochre, like a 19th-century accession-catalogue engraving. A close view of a wooden desk blotter beside the open card drawer: one single index card lies flat and alone on the desk, apart from the filed ranks behind it, its lower portion blank and unfiled. A small unfinished ink portrait study of a calm bearded man's face occupies the card's upper half, rendered with only a few confident lines, not fully resolved. A dip pen and open inkwell rest beside it., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image -- any writing-like marks must read as abstract ink texture or blank/illegible surface only, no visible text or captions, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw",
+    "stem": "closed_file_02",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "closed_file",
+    "label": "The Closed File",
+    "id": "03",
+    "beat": "Landing — the portrait turns, meets your eyes",
+    "model": "nano_banana_pro",
+    "prompt": "Antiquarian museum archive illustration, ink and muted wash on aged card stock, warm low lamplight, meticulous cross-hatched linework, restrained scholarly palette of sepia, slate and faded ochre, like a 19th-century accession-catalogue engraving. An extreme close-up on a single index card: a simple, dignified ink line-drawn portrait of a calm bearded man's face, three-quarter turned toward the viewer, eyes meeting the viewer directly, both eyes level and calm not staring, warm lamplight catching one side of the drawn face. The card's lower portion is bare aged paper, no other cards visible, deep soft shadow surrounding the single card., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image -- any writing-like marks must read as abstract ink texture or blank/illegible surface only, no visible text or captions, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw",
+    "stem": "closed_file_03",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "sounding_line",
+    "label": "The Sounding Line",
+    "id": "01",
+    "beat": "Hook — the cutaway, ship to the depths",
+    "model": "nano_banana_pro",
+    "prompt": "Detailed 19th-century scientific cross-section engraving, cutaway diagram style, muted mineral ink-wash palette of slate blue-grey and faded sienna, fine technical linework, aged parchment ground, restrained and scholarly like a naturalist's survey plate. A tall vertical cross-section: a small wooden sailing ship cut away at the waterline near the top of the frame, layered dark water descending beneath it in horizontal bands growing darker with depth, a single ruled fathom-line with small tick marks descending through the water column. Restrained, measured, scientific., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image -- any writing-like marks must read as abstract ink texture or blank/illegible surface only, no visible text or captions, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw",
+    "stem": "sounding_line_01",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "sounding_line",
+    "label": "The Sounding Line",
+    "id": "02",
+    "beat": "The datum line — belly and tomb at the same depth",
+    "model": "nano_banana_pro",
+    "prompt": "Detailed 19th-century scientific cross-section engraving, cutaway diagram style, muted mineral ink-wash palette of slate blue-grey and faded sienna, fine technical linework, aged parchment ground, restrained and scholarly like a naturalist's survey plate. A wide cross-section at depth: on one side, a great fish shown in anatomical cutaway with a small robed man curled peacefully inside its belly cavity; on the other side of the same plate, a rock-cut tomb chamber cutaway at the identical measured depth, a shrouded form on a stone ledge within. One horizontal ruled datum line with fathom tick marks connects the fish cutaway to the tomb cutaway across the plate., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image -- any writing-like marks must read as abstract ink texture or blank/illegible surface only, no visible text or captions, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw",
+    "stem": "sounding_line_02",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "sounding_line",
+    "label": "The Sounding Line",
+    "id": "03",
+    "beat": "Landing — the tomb cutaway, empty and lit",
+    "model": "nano_banana_pro",
+    "prompt": "Detailed 19th-century scientific cross-section engraving, cutaway diagram style, muted mineral ink-wash palette of slate blue-grey and faded sienna, fine technical linework, aged parchment ground, restrained and scholarly like a naturalist's survey plate. A close cutaway view of a rock-cut tomb chamber: the round stone rolled aside from the entrance, soft light spilling into the chamber from outside, an empty folded linen shroud resting undisturbed on the stone ledge within, no figure present. Quiet, resolved, the same restrained cross-section technical style as the rest of the plate., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image -- any writing-like marks must read as abstract ink texture or blank/illegible surface only, no visible text or captions, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw",
+    "stem": "sounding_line_03",
+    "ok": false,
+    "error": "hf CLI exit 3: acf37a8b-b169-4c65-a727-524d739ac30f ended with status \"nsfw\"\nError: job acf37a8b-b169-4c65-a727-524d739ac30f ended with status \"nsfw\""
+  },
+  {
+    "concept": "registration_pull",
+    "label": "The Registration Pull",
+    "id": "01",
+    "beat": "The psalm leaf — David's own margin vignettes",
+    "model": "nano_banana_pro",
+    "prompt": "Illuminated manuscript page illustration, aged vellum ground, fine ink linework with muted gold and umber wash, restrained devotional palette, like a medieval psalter leaf. A single manuscript page bordered by three small soft-edged margin vignettes fading into the page's edges: pierced open hands, a cluster of mocking robed figures gesturing, a folded garment beside a scatter of small carved lots. The page's central area is bare aged vellum with no legible script, only faint horizontal ruling lines where text would sit. Quiet, ancient, devotional., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image -- any writing-like marks must read as abstract ink texture or blank/illegible surface only, no visible text or captions, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw",
+    "stem": "registration_pull_01",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "registration_pull",
+    "label": "The Registration Pull",
+    "id": "02",
+    "beat": "The vellum overlay settles, registration marks click in",
+    "model": "nano_banana_pro",
+    "prompt": "Illuminated manuscript page illustration layered beneath a translucent vellum overlay sheet, aged vellum ground, fine ink linework with muted gold and umber wash, restrained devotional palette. A manuscript page seen through a slightly offset translucent vellum sheet lying over it: the vellum carries its own faint ink vignette of a crucified figure's pierced hand and a small mocking-crowd sketch, positioned so they nearly overlap the psalm page's own vignettes beneath. Two small fine cross-mark registration symbols are visible at the upper corners where the layers align, thin and precise, like a printmaker's proof sheet., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image -- any writing-like marks must read as abstract ink texture or blank/illegible surface only, no visible text or captions, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw",
+    "stem": "registration_pull_02",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "registration_pull",
+    "label": "The Registration Pull",
+    "id": "03",
+    "beat": "Close on one match point — the lots, aligned",
+    "model": "nano_banana_pro",
+    "prompt": "Illuminated manuscript page illustration layered beneath a translucent vellum overlay sheet, aged vellum ground, fine ink linework with muted gold and umber wash, restrained devotional palette, like a printmaker's registration proof. An extreme close-up on one single match point: a small ink vignette of scattered carved lots and a folded garment on the lower vellum layer, with a near-identical vignette of Roman soldiers' dice on the upper translucent vellum sheet, the two vignettes precisely aligned one over the other, a small fine cross-mark registration symbol glowing faintly at the exact point of overlap., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image -- any writing-like marks must read as abstract ink texture or blank/illegible surface only, no visible text or captions, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw",
+    "stem": "registration_pull_03",
+    "ok": false,
+    "error": "hf CLI exit 3: 88e6ffd4-aef7-478a-ac85-c527c51945bf ended with status \"nsfw\"\nError: job 88e6ffd4-aef7-478a-ac85-c527c51945bf ended with status \"nsfw\""
+  },
+  {
+    "concept": "double_entry",
+    "label": "The Double-Entry Page",
+    "id": "01",
+    "beat": "The empty ledger, two ruled columns",
+    "model": "nano_banana_pro",
+    "prompt": "Scribe's ledger page illustration, aged cream paper, fine hand-ruled ink lines, restrained sepia and rubric-red palette, like an old accounting book's opening page. A wide view of a ruled ledger spread divided into two columns by one strong vertical center rule, each column further divided by faint horizontal ruling lines. The page is almost entirely bare and unfilled -- no legible entries yet, only the empty ruled grid itself, quiet and expectant, warm aged paper texture, gentle raking light crossing the page., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image -- any writing-like marks must read as abstract ink texture or blank/illegible surface only, no visible text or captions, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw",
+    "stem": "double_entry_01",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "double_entry",
+    "label": "The Double-Entry Page",
+    "id": "02",
+    "beat": "Entries and vignettes arrive, transfer lines cross the gutter",
+    "model": "nano_banana_pro",
+    "prompt": "Scribe's ledger page illustration, aged cream paper, fine hand-ruled ink lines, restrained sepia and rubric-red palette, like an old accounting book mid-use. A ruled two-column ledger page, each column now holding several small soft-edged ink vignettes in its ruled rows -- one column's vignettes suggest wounds and a crown of thorns, the facing column's vignettes suggest ordinary anonymous figures bowed under unseen weight. Two or three fine curved red ink lines cross the center gutter, each connecting one vignette on the left to one vignette on the right., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image -- any writing-like marks must read as abstract ink texture or blank/illegible surface only, no visible text or captions, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw",
+    "stem": "double_entry_02",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "double_entry",
+    "label": "The Double-Entry Page",
+    "id": "03",
+    "beat": "Landing — the ruling resolves into a cross",
+    "model": "nano_banana_pro",
+    "prompt": "Scribe's ledger page illustration, aged cream paper, fine hand-ruled ink lines, restrained sepia and rubric-red palette, like an old accounting book's closing page. A wide view of a completed ruled ledger page: the strong vertical center rule and a strong horizontal rule near the bottom of the page intersect, and several fine red ink transfer lines from both columns all converge and terminate at that intersection, so the ruled lines and the red lines together visually resolve into the clear shape of a plain cross. A double rule is drawn beneath, like a closed account. Quiet, resolved, still., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image -- any writing-like marks must read as abstract ink texture or blank/illegible surface only, no visible text or captions, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw",
+    "stem": "double_entry_03",
+    "ok": true,
+    "error": null
+  },
+  {
+    "concept": "one_take_scroll",
+    "label": "The One-Take Scroll",
+    "id": "01",
+    "beat": "Hook — the scroll unrolling, the frieze below",
+    "model": "nano_banana_pro",
+    "prompt": "Ancient scroll illustration, aged papyrus-toned ground, fine sepia ink linework, restrained scholarly palette, like a photographed museum scroll fragment. A long horizontal ancient scroll partially unrolled, its surface covered in dense abstract vertical texture suggesting columns of ancient script but with no legible letterforms at all -- pure abstract ink texture only. Along the scroll's bottom margin runs a thin continuous ink frieze: a small two-wheeled chariot with two robed figures, drawn in a simple ancient frieze style, mid-journey along a dusty road., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image -- any writing-like marks must read as abstract ink texture or blank/illegible surface only, no visible text or captions, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw",
+    "stem": "one_take_scroll_01",
+    "ok": false,
+    "error": "hf CLI exit 3: e76026a8-8ff7-458b-992b-751fffcdd5cc ended with status \"nsfw\"\nError: job e76026a8-8ff7-458b-992b-751fffcdd5cc ended with status \"nsfw\""
+  },
+  {
+    "concept": "one_take_scroll",
+    "label": "The One-Take Scroll",
+    "id": "02",
+    "beat": "The halt — Philip enters the frieze",
+    "model": "nano_banana_pro",
+    "prompt": "Ancient scroll illustration, aged papyrus-toned ground, fine sepia ink linework, restrained scholarly palette, like a photographed museum scroll fragment. A close view of the scroll's bottom-margin frieze: the small chariot has come to a halt, one seated robed figure inside it gesturing outward as if mid-question, a second robed figure approaching on foot from the roadside, mid-stride, about to meet the chariot. Above the frieze, the scroll's script-texture columns are abstract ink marks only, no legible letterforms, dense and even., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image -- any writing-like marks must read as abstract ink texture or blank/illegible surface only, no visible text or captions, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw",
+    "stem": "one_take_scroll_02",
+    "ok": false,
+    "error": "hf CLI exit 3: 1cf6fe1b-5262-4a61-b4cd-ea2a2a4733a9 ended with status \"nsfw\"\nError: job 1cf6fe1b-5262-4a61-b4cd-ea2a2a4733a9 ended with status \"nsfw\""
+  },
+  {
+    "concept": "one_take_scroll",
+    "label": "The One-Take Scroll",
+    "id": "03",
+    "beat": "Landing — the scroll runs past its own text into image",
+    "model": "nano_banana_pro",
+    "prompt": "Ancient scroll illustration transitioning into painted image, aged papyrus-toned ground on the left dissolving into a soft painted devotional scene on the right, fine sepia ink linework giving way to gentle wash colour, restrained and reverent. The left portion of the frame still carries the scroll's abstract script-texture columns (no legible letters), which thin out and dissolve into open aged parchment; from that dissolve, a simple soft-edged image emerges on the right side of the frame: a plain wooden cross silhouette against a pale open sky, distant and still., absolutely no legible text, no legible lettering, no readable words or numerals anywhere in the image -- any writing-like marks must read as abstract ink texture or blank/illegible surface only, no visible text or captions, no modern objects or clothing, reverent and dignified tone, ancient Near-Eastern or period-appropriate setting only, no gore, no nsfw",
+    "stem": "one_take_scroll_03",
+    "ok": true,
+    "error": null
+  }
+]

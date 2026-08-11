@@ -1,0 +1,43 @@
+{
+  "name": "far_corner",
+  "conceit": "One overhead survey world (the whole Bethesda complex, tracked to the far corner, tracked to the red path) covered by a single continuous $0 camera across the whole runtime -- no per-scene cuts to new generations; even the closing 'red survey path' plate is code-drawn (a PIL hand-wobbled dashed line + tick marks + endpoint dot) onto the FIRST plate rather than a fourth AI generation. Only the two narration-mandated motion beats (the water stirring, the man rising) get a paid Kling insert.",
+  "shape_fit": {
+    "primary": ["geography"],
+    "secondary": ["threshold"],
+    "anti": [
+      "no real spatial distance or isolation to measure -- an interior single-room scene gives the overhead survey nothing to plot",
+      "scenes that need the viewer to read a face up close -- the overhead framing flattens every figure to a small distant mark"
+    ]
+  },
+  "plate_bill": [
+    { "id": "P1", "must_contain": "overhead cutaway of the whole Bethesda complex: pool ringed by 5 covered colonnaded porches, dozens of huddled sick figures on mats, faint survey-grid overlay", "count": 1 },
+    { "id": "P2", "must_contain": "overhead track along one porch: rows of sick figures thinning to one man utterly alone in the far corner, measured-distance survey line with tick marks", "count": 1 },
+    { "id": "P3", "must_contain": "overhead close pair: the lone man on his mat and a standing figure (Jesus) beside him, unhurried, distant pool visible at frame edge", "count": 1 }
+  ],
+  "derived_views": [
+    "survey_path_overlay(from=far_corner_01, code-drawn red dashed hand-wobbled line + tick marks + endpoint dot -> final_plate.png)"
+  ],
+  "motion_slots": {
+    "max": 2,
+    "earned_by": "only the two beats the narration itself puts in motion -- the water stirring and the man standing -- get a paid 5s Kling insert; every other beat rides the $0 camera over the already-rendered overhead stills."
+  },
+  "generation_alignment": "forbidden",
+  "risk_flags": [
+    "illustration_lock",
+    "no_baked_text -- far_corner_02's own shipped prompt asked for a hand-lettered '38' distance numeral in the same breath as the guardrail's own 'no visible text or lettering' clause; if rebuilt, that numeral must be added by CODE (like the survey path itself), never baked into the generation prompt"
+  ],
+  "accuracy_spec": [
+    "John 5:2-5 -- Bethesda has FIVE covered porches around the pool (not a generic arbitrary count), and the man had been impotent 38 years -- any distance/measurement numeral used in the device must trace to this verse, never an invented figure."
+  ],
+  "beat_template": {
+    "hook": "the whole complex, overhead, dense with the sick, oriented toward the water",
+    "pivot": "track the length of one porch to the one man utterly alone in the far corner, the measured distance the point",
+    "landing": "pull back on the red survey path from crowd to corner -- code-drawn, not a new generation -- resolved and still"
+  },
+  "caption_lane": "lower-third, center",
+  "lettering": "overlay_only",
+  "score_shape": "a hushed, waiting cue under the overhead survey push, thinning to near-silence at the isolated far corner, then a single warm swell entering with the standing figure and holding through the pull-back landing.",
+  "sfx_palette": ["crowd_murmur_distant", "water_lap_still", "footsteps_stone_measured"],
+  "status": "proven-episode",
+  "evidence": "poc_bethesda_style_test/far_corner_episode/BETHESDA_FAR_CORNER_v1.mp4"
+}

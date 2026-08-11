@@ -1,0 +1,35 @@
+{
+  "name": "the_sightline",
+  "conceit": "A single vertical axis (crowd at street level, a tall tree trunk rising through frame, a small figure in the branches) is climbed and then closed by one returning line of sight -- the small figure looking down, the standing figure below looking directly up -- so the whole beat is carried by convergence along one axis, never a cut to a new angle.",
+  "shape_fit": {
+    "primary": ["elevation"],
+    "secondary": ["convergence"],
+    "anti": [
+      "a scene with no real vertical axis, or where the two parties never actually need to visually find each other across a height difference"
+    ]
+  },
+  "plate_bill": [
+    { "id": "P1", "must_contain": "full-height street scene: a dense crowd shown only as backs of heads along the bottom of frame, a tall tree trunk rising through the center, branches spreading near the top, no visible crowd faces", "count": 1 },
+    { "id": "P2", "must_contain": "close view partway up the trunk and lower branches, one small robed figure perched on a branch, looking down and outward, dappled leaf shadow", "count": 1 },
+    { "id": "P3", "must_contain": "view looking up from street level into the branches: the small figure above looking down, another figure far below at the base of the trunk looking directly up, one hand slightly raised", "count": 1 }
+  ],
+  "derived_views": [],
+  "motion_slots": {
+    "max": 1,
+    "earned_by": "the moment the two lines of sight actually meet (P3) is the one beat worth a paid clip -- a small confirming motion (a raised hand, a head tilt) at the exact convergence; the climb itself (P1-P2) stays on the $0 camera."
+  },
+  "generation_alignment": "forbidden",
+  "risk_flags": ["illustration_lock", "no_baked_text"],
+  "accuracy_spec": [],
+  "beat_template": {
+    "hook": "the crowd at street level, the tree trunk rising through them, the vertical axis established",
+    "pivot": "climbing the trunk to the small figure perched in the branch, looking down",
+    "landing": "the two lines of sight meet -- the figure above and the figure below, looking directly at each other"
+  },
+  "caption_lane": "lower-third, center",
+  "lettering": "overlay_only",
+  "score_shape": "a rising, climbing figure under the ascent from crowd to branch, holding suspended at the perch, resolving into one clear held tone the instant the two lines of sight meet.",
+  "sfx_palette": ["crowd_murmur_distant", "leaves_rustle_branch", "wind_light_daylight"],
+  "status": "stills-tested-clean",
+  "evidence": "poc_bethesda_style_test/round3_devices/stills/sightline_01.png, sightline_02.png, sightline_03.png"
+}
