@@ -1,5 +1,22 @@
 # STATE.md — progress tracker
 
+**2026-08-11 Noah/The Builder captioned (5/5 sketchbook shorts now done):**
+Closed the one item left open from 2026-08-10. Forced-aligned the 5 line-mp3s
+(no word-level timing existed for this piece) via veed_io's
+`forced_align_script`, shifted each by its real `timing.json` start offset.
+First render used the wrong burner (`poc_living_sketchbook/_short_captions.py`
+is 9:16-only; this piece is 16:9) -- captions composited off-screen, invisible,
+even though ffmpeg exited clean. Caught by eye on extracted frames, not by the
+exit code. Fixed by reusing `_finish_long.py`'s 16:9 caption functions instead
+(same ones `_t13_caption_trailer.py` used for the Seed of the Woman trailer).
+New: `poc_castbible_look/_captions.py` + `_polite.py` (CPU-gentle, per the
+user's explicit ask this session -- POLITE_CPU=33, idle priority; no browser/
+player windows opened, verified entirely via inline frame reads). Output:
+`poc_castbible_look/NOAH_THE_DOOR_castbible_poc_cc.mp4` (30.5s, v/a match,
+6 frames spot-checked clean, no double-text under any on-screen title/verse
+card). **Not committed yet** -- 2 new untracked .py files, awaiting the user.
+Full detail: RESUME.md top.
+
 **2026-08-10 Trackers rebuilt + 4/5 sketchbook shorts captioned:**
 Built two local review pages, both committed to repo root (the old migration
 ledger was artifact-only and is now gone, so these replace it for good):

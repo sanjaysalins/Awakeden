@@ -1,4 +1,58 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-11 (Noah/The Builder captioned --
+# closes out the caption-burn sweep from 2026-08-10) — READ THIS FIRST,
+# supersedes the 2026-08-10 block below.
+#
+# ── WHAT HAPPENED: the one item left open from 2026-08-10 (Noah/The Builder,
+# poc_castbible_look/NOAH_THE_DOOR_castbible_poc.mp4, was the only sketchbook
+# short still missing burned-in captions) is now done.
+#
+# 1. No word-level timing existed for this piece (audio/timing.json is
+#    LINE-level only). Forced-aligned each line's own mp3 (l1..l5) against
+#    its known exact text via veed_io.aligner.forced_align_script, shifted
+#    each line's word times by its real timing.json start offset (ffprobe
+#    ground truth from _02_audio.py's own concat). All 5 lines matched
+#    ASR-heard-count == script-word-count (no drops).
+#
+# 2. **Real bug caught by eye, not by the exit code**: first attempt reused
+#    poc_living_sketchbook/_short_captions.py (the burner proven on the other
+#    4 shorts) -- but that module is hardcoded 9:16 (1080x1920) for true
+#    vertical shorts, and this piece (poc_castbible_look/_04_assemble.py) is
+#    16:9 landscape (1920x1080). ffmpeg exited 0 and the file looked fine by
+#    duration/size, but every caption composited BELOW the visible 1080px
+#    frame -- entirely invisible. Caught by extracting real frames and
+#    reading them, not by trusting the render succeeding (see memory
+#    `feedback-verify-by-looking-not-running`). Fixed by reusing
+#    poc_living_sketchbook/_finish_long.py's chunk_words/render_chunk_png/
+#    build_caption_segment instead -- the correct 16:9 equivalent (same
+#    module _t13_caption_trailer.py used for the Seed of the Woman trailer).
+#    Also fixed an off-by-one `parents[N]` path bug caught on the next run.
+#
+# 3. New files: poc_castbible_look/_captions.py (driver) + poc_castbible_look/
+#    _polite.py (CPU/priority throttle copied per this project's own
+#    per-folder convention -- day_of_atonement/bronze_serpent/psalm_22 each
+#    keep their own copy rather than cross-import). Both run at POLITE_CPU=33
+#    (idle priority, ~1/3 of logical CPUs) per the user's explicit ask this
+#    session to keep resource usage gentle while presenting elsewhere; no
+#    browser tabs, players, or other windows were opened at any point --
+#    verification was done entirely by extracting still frames and reading
+#    them inline.
+#
+# ── REAL OUTPUT: poc_castbible_look/NOAH_THE_DOOR_castbible_poc_cc.mp4
+# (30.5s, v/a durations match exactly). Spot-checked 6 frames covering both
+# caption text (clean, correctly positioned) and every on-screen title/verse
+# card window (correctly NO caption double-text). Watermark intact throughout.
+#
+# ── NOT DONE: nothing committed yet (2 new untracked .py files only -- the
+# .mp4/.png outputs are gitignored per repo policy, as usual). This was the
+# last item from the 2026-08-10 caption sweep; all 5 sketchbook shorts now
+# have burned-in captions. Whenever the user's ready: review the file, then
+# decide on committing + whether Noah/The Builder should join the same local
+# review pages (SKETCHBOOK_REVIEW.html / STYLE_MIGRATION_TRACKER.html) the
+# other 4 pieces are already on.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-10 CLOSED FOR THE DAY (trackers +
 # caption-burn sweep) — READ THIS FIRST, supersedes every block below.
 #

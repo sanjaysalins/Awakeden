@@ -440,15 +440,15 @@
             <td class="piece">Jericho<span class="ref">Rahab · Joshua 2 / Heb. 11:31</span></td>
             <td><span class="chip ok"><span class="dot"></span>done</span></td>
             <td><span class="chip warn"><span class="dot"></span>unchecked</span></td>
-            <td><span class="chip stop"><span class="dot"></span>missing</span></td>
+            <td><span class="chip ok"><span class="dot"></span>burned in</span></td>
             <td><span class="chip ok"><span class="dot"></span>done</span></td>
-            <td class="note">Verse card has real lettering; narration is never captioned.</td>
+            <td class="note">Verse card has real lettering; narration now hand-ink captioned too (2026-08-10).</td>
           </tr>
           <tr>
             <td class="piece">Storm<span class="ref">Jesus calms the sea</span></td>
             <td><span class="chip ok"><span class="dot"></span>done</span></td>
             <td><span class="chip warn"><span class="dot"></span>unchecked</span></td>
-            <td><span class="chip stop"><span class="dot"></span>missing</span></td>
+            <td><span class="chip ok"><span class="dot"></span>burned in</span></td>
             <td><span class="chip ok"><span class="dot"></span>done</span></td>
             <td class="note">7 watermark-backup revisions on disk — real iteration before landing here.</td>
           </tr>
@@ -456,7 +456,7 @@
             <td class="piece">Two Goats<span class="ref">sketchbook short, likely the DoA pilot</span></td>
             <td><span class="chip ok"><span class="dot"></span>done</span></td>
             <td><span class="chip warn"><span class="dot"></span>unchecked</span></td>
-            <td><span class="chip stop"><span class="dot"></span>missing</span></td>
+            <td><span class="chip ok"><span class="dot"></span>burned in</span></td>
             <td><span class="chip ok"><span class="dot"></span>done</span></td>
             <td class="note">Not the same piece as EW01 above — this is the sketchbook-style short.</td>
           </tr>
@@ -464,7 +464,7 @@
             <td class="piece">At-the-Door<span class="ref">poc_castbible_look, 58s</span></td>
             <td><span class="chip ok"><span class="dot"></span>done</span></td>
             <td><span class="chip warn"><span class="dot"></span>unchecked</span></td>
-            <td><span class="chip stop"><span class="dot"></span>missing</span></td>
+            <td><span class="chip ok"><span class="dot"></span>burned in</span></td>
             <td><span class="chip ok"><span class="dot"></span>done</span></td>
             <td class="note">The style's own proving ground. Lane still undecided.</td>
           </tr>
@@ -472,9 +472,9 @@
             <td class="piece">Noah / The Builder<span class="ref">poc_castbible_look, 30s</span></td>
             <td><span class="chip ok"><span class="dot"></span>done</span></td>
             <td><span class="chip warn"><span class="dot"></span>unchecked</span></td>
-            <td><span class="chip warn"><span class="dot"></span>different style</span></td>
+            <td><span class="chip ok"><span class="dot"></span>burned in</span></td>
             <td><span class="chip ok"><span class="dot"></span>done</span></td>
-            <td class="note">16:9, bold yellow-highlight captions, not the hand-ink look. Taste test.</td>
+            <td class="note">16:9 caption layout (reused _finish_long.py, not the 9:16 burner). Yellow-highlight cards are separate on-screen titles. Taste test.</td>
           </tr>
         </tbody>
       </table>
@@ -505,6 +505,9 @@
     <code>visual_16x9*</code> variant, <code>poc_living_sketchbook/</code>, and
     <code>poc_castbible_look/</code> — plus spot-checking real frames from every
     sketchbook video to confirm captions are actually burned in, not inferred from filenames.
+    <b>Captions column updated 2026-08-11</b> — Jericho/Storm/Two Goats/At-the-Door/Noah
+    all moved from missing/different to burned in, each confirmed by extracting and
+    reading real frames (not by the render's exit code).
   </footer>
 
 </div>
