@@ -1,5 +1,75 @@
 # STATE.md — progress tracker
 
+**2026-08-11 (same day, latest) Sketchbook title/verse-card standard LOCKED,
+via a full POC on a short (real spend ~$0.60), committed:** User asked for a
+POC proving out Noah's caption+title-card treatment on a short before any
+retrofit of the 3 shipped sketchbook longs. Built it on
+`batches/cluster_01_cross/forsaken_cry_ps221` (an ink-style batches piece,
+not sketchbook -- picked deliberately as a stress test): generated 2 real
+sketchbook-style stills (`_poc_sketchbook_stills.py`, nano_banana_pro, logged
+to the ledger) matching two of the piece's real narration beats, then built
+5 iterations (`_poc_noah_style_captions.py` through `_poc5_fable_cards.py`)
+before landing on `_poc4_full_standard.py` as final.
+
+**Real bugs caught along the way, each by extracting real frames and looking,
+not by trusting a clean render:** (1) first caption pass used
+`_short_captions.py`'s own 9:16 constants instead of Noah's actual fractions
+-- close but not the same standard; (2) a flat static hold on the stills,
+against this project's own locked no-static rule -- replaced with Noah's own
+eased push-in technique; (3) title/citation cards initially ported Noah's
+raw numbers verbatim but user's own eye caught real mismatches across
+several rounds (box width, font size, shadow color) that pure code-diffing
+missed.
+
+**A real design detour**: asked Fable to redesign the title/citation/quote
+cards as book-native (torn parchment, pressed ink, gold-stitch citation --
+reusing real primitives from `day_of_atonement/_s3_thread_leaf_54_55.py` and
+`_devices.py`, not invented). Built and rendered
+(`_poc5_fable_cards.py`/`_POC5_fable_cards.mp4`) -- genuinely good, kept as a
+memory (`sketchbook-title-verse-card-standard-2026-08-11.md`) for future
+reference, but the user compared it against Noah again and asked to go back
+to refining the original yellow/black + red/cream concept instead, step by
+step.
+
+**Final locked spec** (memory: `sketchbook-title-verse-card-standard-LOCKED-
+2026-08-11.md`): title = tight yellow box (Arial Black size 66, explicit
+grey drop-shadow `(110,110,110,190)`, NOT Noah's raw black-at-low-alpha which
+reads smudgy at this size); citation = Noah's own `GENESIS 7:16` size (34)
+verbatim; quote = red text with a white outline (not Noah's gold-underline
+treatment), pairing visually with the citation. All three tuned via repeated
+side-by-side frame comparison against the real Noah video, not from the code
+alone. User confirmed: "good lock it."
+
+**Not yet done**: retrofit onto the 3 shipped sketchbook longs (Day of
+Atonement, Bronze Serpent Long, Seed of the Woman) is the natural next step,
+explicitly deferred until the user asks for it. Full detail: RESUME.md top.
+
+**2026-08-11 (same day, later) Caption discipline extended: long-form verified,
+short-form tested, review page fixed:** User asked to repeat the Noah
+verify-by-eye discipline across long-form content and test it on a short too.
+
+Spot-checked `poc_living_sketchbook/day_of_atonement/DAYOFATONEMENT_LONG_
+living_sketchbook_cc.mp4` and `bronze_serpent_long/BRONZESERPENT_LONG_
+living_sketchbook_cc.mp4` (6 frames each, real timestamps across the full
+~10min runtime): both already have correctly working hand-ink captions --
+they used `_finish_long.py`'s own captions stage natively, so they never
+had Noah's wrong-burner bug. Seed of the Woman LONG was already verified
+in an earlier session. **Real (smaller) bug found instead**: SKETCHBOOK_
+REVIEW.html linked both DoA and Bronze Serpent Long to their pre-caption
+`_scored_sfx.mp4` files, not the real `_cc.mp4` -- same staleness class as
+the Noah review-page gap, just a link, not a broken render. Fixed both.
+
+Tested the short-form side on a piece from a totally different pipeline
+never touched today: `batches/cluster_01_cross/forsaken_cry_ps221` (the
+"living-page" motion-comic engine, word-timed panel text baked into the
+render rather than a separate burned layer). Identified its real canonical
+final via `publish/PUBLISH_INDEX.html` (`visual/forsaken_cry_ps221_sfx.mp4`),
+spot-checked 4 frames -- captions render correctly, red-letter for Jesus'
+words, no bug found. **This pipeline's caption mechanism is fundamentally
+different from the sketchbook style** (in-panel word-reveal vs. a separate
+burn pass) -- worth remembering before assuming "the pattern" transfers
+1:1 if this comes up again.
+
 **2026-08-11 Noah/The Builder captioned (5/5 sketchbook shorts now done):**
 Closed the one item left open from 2026-08-10. Forced-aligned the 5 line-mp3s
 (no word-level timing existed for this piece) via veed_io's

@@ -1,4 +1,89 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-11 (same day, latest — sketchbook
+# title/verse-card standard LOCKED via a full POC, committed) — READ THIS
+# FIRST, supersedes the "caption discipline extended" block below.
+#
+# ── WHAT'S LOCKED (memory files, read these before touching this area again):
+# `noah-caption-gold-standard.md` (spoken caption, unchanged this round) +
+# `sketchbook-title-verse-card-standard-LOCKED-2026-08-11.md` (title/citation/
+# quote cards -- THE current spec, not the earlier same-day draft memory).
+#
+# ── THE FINAL WORKING SCRIPT: `batches/cluster_01_cross/forsaken_cry_ps221/
+# _poc4_full_standard.py` -- read it directly for the literal implementation.
+# Final rendered output (not committed, gitignored): `_POC4_full_standard.mp4`.
+#
+# ── HOW WE GOT THERE (5 iterations, all kept on disk as the real trail):
+# `_poc_noah_style_captions.py` -> `_poc_assemble_sketchbook.py` (POC2) ->
+# `_poc3_final_sketchbook.py` (POC3, fixed a wrong-aspect-ratio caption bug +
+# added real push-in motion) -> `_poc4_full_standard.py` (POC4, THE final one
+# -- added title/citation/quote cards, went through ~6 rounds of user-eye
+# refinement: box width, font size, shadow color) -> `_poc5_fable_cards.py`
+# (a genuinely good Fable-designed book-native alternative, built and
+# rendered, but set aside in favor of refining POC4's original concept
+# instead -- kept as a memory + working script for future reference, NOT
+# the standard that shipped).
+#
+# ── REAL BUGS CAUGHT BY EYE, NOT BY THE RENDER SUCCEEDING: wrong caption
+# aspect-ratio constants; a flat static hold violating the no-static rule;
+# a caption-chunker seam bug (spliced segments < 0.35s apart silently merged
+# across the cut and got skip-dropped -- fixed with a `hard_breaks` param);
+# a citation card clipped by a too-short canvas; a shadow that read as
+# smudgy black instead of grey despite byte-identical code to Noah's own
+# (fixed by using an explicit grey value instead of trusting the code match).
+#
+# ── NOT DONE: retrofit onto the 3 shipped sketchbook longs (Day of
+# Atonement, Bronze Serpent Long, Seed of the Woman) -- explicitly deferred,
+# the natural next ask once the user wants to proceed. Everything through
+# this point IS committed.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-11 (same day, later — caption
+# discipline extended to long-form + tested on a different short-form
+# pipeline) — READ THIS FIRST, supersedes the Noah-only block below.
+#
+# ── WHAT HAPPENED: after fixing Noah's invisible-caption bug (below), the
+# user asked to repeat the same "verify by eye, don't trust the render" habit
+# across long-form content and test it on a short too, since they liked the
+# discipline. Committed (c6d1365) first: Noah fix + review pages + this
+# handover doc.
+#
+# 1. Spot-checked poc_living_sketchbook/day_of_atonement/DAYOFATONEMENT_LONG_
+#    living_sketchbook_cc.mp4 and bronze_serpent_long/BRONZESERPENT_LONG_
+#    living_sketchbook_cc.mp4 (6 real frames each). Both already have
+#    correctly working captions -- they run _finish_long.py's own captions
+#    stage natively, so they never had Noah's wrong-burner problem. Seed of
+#    the Woman LONG was already eye-verified in an earlier session.
+#
+# 2. Real (smaller) bug found: SKETCHBOOK_REVIEW.html linked both DoA and
+#    Bronze Serpent Long to their PRE-caption `_scored_sfx.mp4`, not the real
+#    `_cc.mp4` that already existed on disk. Same staleness class as Noah's
+#    review-page gap -- just a stale link this time, not a broken render.
+#    Fixed both.
+#
+# 3. Short-form test: picked batches/cluster_01_cross/forsaken_cry_ps221
+#    (the "living-page" motion-comic engine -- a DIFFERENT pipeline never
+#    touched today, word-timed panel text baked into the render rather than
+#    a separate burned caption layer). Found its real canonical final via
+#    publish/PUBLISH_INDEX.html (visual/forsaken_cry_ps221_sfx.mp4), spot-
+#    checked 4 frames -- captions render correctly, red-letter for Jesus'
+#    words. No bug. **Worth remembering: this pipeline's caption mechanism
+#    is fundamentally different from the sketchbook style** -- don't assume
+#    "the pattern" (burn a separate hand-ink layer) transfers 1:1 here if
+#    this comes up again; the right check is "does text render visibly and
+#    correctly," not "does a _cc.mp4 exist."
+#
+# ── NOT DONE: this was a spot-check across 3 extra pieces (2 sketchbook
+# longs + 1 batch short), not an exhaustive sweep of every long/short in the
+# repo. If the user wants full coverage (all 6 numbered Types & Shadows
+# longs, the whole Eyewitness series, all 19 batch shorts, etc.) that's a
+# much bigger job -- scope it explicitly before starting, given how many
+# separate pipelines this repo actually has (sketchbook / inked graphic-
+# novel / living-page motion-comic / eyewitness, each with its own caption
+# mechanism). Nothing from this round committed yet.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-11 (Noah/The Builder captioned --
 # closes out the caption-burn sweep from 2026-08-10) — READ THIS FIRST,
 # supersedes the 2026-08-10 block below.
