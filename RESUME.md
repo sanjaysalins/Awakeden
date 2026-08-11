@@ -1,4 +1,110 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-11 (same day, truest latest — the
+# Stationer dynamic multi-style system LOCKED + committed) — READ THIS FIRST,
+# supersedes the "title/verse-card standard" block below.
+#
+# ── WHAT'S LOCKED: `.claude/skills/living-sketchbook/MEDIUM_SELECTION.md`
+# (gitignored, local only) is the design. The CODE that ships it is
+# committed: `pipeline/medium_anchors.py` / `medium_registry.py` /
+# `medium_variety.py` / `medium_select.py` (+ tests, 54 green) and
+# `poc_living_sketchbook/_style_identity_bakeoff/medium_manifest.json` (the
+# 6-medium registry: Sketchbook Ink=home, Survey Plate=production_approved,
+# Archive/Ledger/Scroll/Night Threshold=caution -- real evidence exists,
+# just not yet a finished MOVING episode for any of them).
+#
+# ── HOW A SPREAD PICKS A MEDIUM (for the next episode script): a spread's
+# plan carries a `medium` field (None = home, the default for ~85%+ of any
+# episode). ALWAYS render through `MEDIUMS[id].prompt(scene_text)` --
+# NEVER read `.anchor_text` raw and concatenate it yourself. Skipping
+# `.prompt()` drops the GUARDRAIL suffix (the no-legible-text clause) and
+# WILL produce banned content -- confirmed for real this session (a Survey
+# Plate render came back as a labeled geology diagram with a compass rose).
+#
+# ── THE VALIDATION PILOT: `poc_living_sketchbook/ew01_two_goats_short/`
+# (`_s2_stills.py` is the real render script, `_PLAN.md` has the full
+# 17-spread table + the medium-selection reasoning, `index.html` is the
+# gallery -- stills themselves are NOT committed, matches this repo's
+# always-true convention of never committing generated media). 3 of 6
+# mediums genuinely earned and used (Night Threshold on the hook w/ Aaron,
+# Survey Plate on the scapegoat, Ancient Scroll on the scripture quote); 2
+# deliberately NOT used (Archive, Ledger -- nothing in this narration is an
+# exhibit-object or a debt/reckoning beat, and that absence is itself
+# evidence the mechanism doesn't force styles in).
+#
+# ── REAL BUGS FOUND ON REAL CONTENT, NOT JUST IN CODE REVIEW (each is a
+# reusable lesson, written into MEDIUM_SELECTION.md's own status block too):
+# (1) the GUARDRAIL-wiring gap above; (2) Ancient Scroll's FIRST-EVER real
+# use rendered a page full of dense pseudo-handwriting from wording like
+# "papyrus columns suggesting ancient script" -- reworded to "OVERWHELMINGLY
+# BARE... at most 3-4 isolated ink marks," now clean, use that phrasing
+# pattern for any future Scroll render; (3) a stale cast-anchor pointer --
+# `poc_living_sketchbook/two_goats/cast/PRIEST.md` pointed to the OLD
+# Door-episode Jesus ref (no stated age), one day older than the real
+# promoted canonical anchor (`poc_living_sketchbook/cast/jesus_ref.png` +
+# `JESUS.md`, explicit "early thirties"). User caught it by eye ("Jesus is a
+# young man not the 33 year old Jesus we normally use"). ALWAYS resolve cast
+# anchors against `poc_living_sketchbook/cast/` directly for any future
+# build, never an older episode-local `cast/` folder.
+#
+# ── BEFORE THIS, a full 2-pass red-team (self + independent fresh-context
+# agent) found 8 real bugs in the first-draft Stationer code, most severe
+# being the guardrail CRASHING (not failing closed) on two separate
+# `.get(key, default)`-doesn't-fall-back-on-explicit-None traps, and the
+# Jesus-safety check being exact-string-match only. All fixed, all
+# re-verified. Memory: `stationer-medium-system-locked.md`,
+# `feedback-stationer-objective-style-selection.md`.
+#
+# ── PROCESS GAP, FLAGGED NOT HIDDEN: the standing enforced-independent-
+# review rule calls for an external CLI panel pass (`independent_review.py
+# --type plan`) before something this size counts as fully locked. That did
+# NOT run -- the user locked it on real production evidence (the pilot)
+# instead. Revisit only if the user asks for the panel pass later.
+#
+# ── COMMITTED: 6ba05bb (Stationer system + EW01 pilot code), 0008ace (the
+# REST of today's earlier session work -- Drawing Office, Bethesda style
+# bake-off, sfx pilots -- code/docs only; ~1.8GB of generated PNGs/MP4s
+# deliberately NOT committed, same convention as always).
+#
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ EXPLICIT NEXT-SESSION TASK (user's own words, given at the
+# very end of this session, NOT yet started):
+#
+# "lets create a very clear and distinct road map of a migration plan from
+# oil painting and ink graphic comic completed narration to how we can move
+# them to be sketchbook. In the new session we need to do a very
+# comprehensive checklist of everything has been done with narration, and
+# dedup them from the ink style and then create a migration plan."
+#
+# Three deliverables, in order:
+# 1. A COMPREHENSIVE checklist/inventory of every narration in the whole
+#    project (not just the 6 canonical Types & Shadows longs) and what
+#    visual work exists for each, in what style(s).
+# 2. DEDUP: for any narration with MULTIPLE visual attempts across styles
+#    (several already known: Isaiah 53 has Baroque+inked side by side;
+#    Psalm 22 same pattern; EW01 Two Goats has Baroque+painted-comic+
+#    retro-comic+inked, 4 styles, none sketchbook before this session's
+#    pilot short), determine which is the real canonical/shipping one and
+#    which are superseded -- don't just list, resolve.
+# 3. A MIGRATION PLAN: a clear roadmap for moving what's still on oil
+#    painting or ink graphic-comic onto sketchbook, likely informed by (and
+#    should reference) the now-LOCKED Stationer system above.
+#
+# ── A REAL, PARTIAL START ALREADY EXISTS, DON'T REBUILD FROM ZERO:
+# `STYLE_MIGRATION_TRACKER.html` (repo root, built 2026-08-10, rebuilt by
+# reading the repo directly) already inventories the 6 canonical longs +
+# the Eyewitness series (EW01-09) + sketchbook shorts/POCs, and names 4
+# pieces needing migration: Isaiah 53, Psalm 22, The Passover Lamb, EW01 Two
+# Goats. It is EXPLICITLY NOT exhaustive -- its own provenance note says two
+# passes already, the SECOND pass found a whole series (Eyewitness) the
+# first missed. Treat it as a first draft to verify/extend, not a finished
+# answer -- the user is asking for something "very comprehensive," implying
+# this one still has gaps (e.g. it may not cover `batches/` cluster shorts,
+# `v2/pilot/` prototypes, or newer pieces built since 2026-08-10, and EW01
+# Two Goats' status needs updating now that its SHORT is done -- its LONG
+# form is not).
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-11 (same day, latest — sketchbook
 # title/verse-card standard LOCKED via a full POC, committed) — READ THIS
 # FIRST, supersedes the "caption discipline extended" block below.

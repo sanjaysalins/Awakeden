@@ -1,5 +1,74 @@
 # STATE.md — progress tracker
 
+**2026-08-11 (same day, truest latest) The Stationer — dynamic multi-style
+rendering — designed, built, validated on a real pilot, LOCKED, and
+committed (commits 6ba05bb, 0008ace):** User wanted Fable's fresh-eyes style
+pitches from earlier the same session (6 named paper mediums: Sketchbook
+Ink, Survey Plate, Archive Catalogue, Scribe's Ledger, Ancient Scroll, Night
+Threshold, all built as a throwaway "Drawing Office" POC pipeline) folded
+into the REAL production sketchbook pipeline as a dynamic per-scene style
+choice, not a separate pipeline. Explicit instruction: "stop this poc V3...
+get the current sketchbook pipeline to incorporate these styles... this will
+need to be built for both short and long form."
+
+Had Fable design the integration (`.claude/skills/living-sketchbook/
+MEDIUM_SELECTION.md`, gitignored so not in git) reusing the ALREADY-BUILT
+propose→guardrail→eye-gate mechanism from the sibling technique-variant axis
+(`style_variety.py`/`style_select.py`) rather than inventing new machinery.
+Built it: `pipeline/medium_anchors.py` (promoted from `drawing_office/
+prompts/style_anchors.py`), `medium_registry.py`, `medium_variety.py`,
+`medium_select.py` + tests, `poc_living_sketchbook/_style_identity_bakeoff/
+medium_manifest.json` (the 6-medium registry).
+
+**User then asked for a full red-team of the new code** (self-review +
+independent fresh-context agent, both verified by actually running Python):
+found 8 real bugs, most severe two were the guardrail CRASHING instead of
+failing closed on two different `.get(key, default)`-doesn't-fall-back-on-
+explicit-None traps, plus the one hard Jesus-safety check being exact-string-
+match only (silently never fires against this repo's own real figure-
+annotation format). All 8 fixed, all re-verified against the real manifest,
+54/54 tests green.
+
+**Then validated on a real pilot, not just a design read**: EW01 Two Goats
+(the eyewitness-format short, Aaron/Leviticus 16, locked narration, never
+built in sketchbook before — picked from `STYLE_MIGRATION_TRACKER.html`'s
+own "needs migrating" list). Built `poc_living_sketchbook/ew01_two_goats_
+short/` (17 spreads, real forced word-alignment). First pass used only 1
+medium and was rightly rejected by the user ("I need to understand the
+pipeline will be objective... over different styles") — re-earned a genuinely
+wider pass (3 of 6 mediums used, 2 deliberately still not used since nothing
+in this narration calls for them). Two more REAL bugs found on real content:
+a render-hook wiring gap dropped the no-legible-text clause (one Survey
+Plate render came back as a labeled geology diagram with a compass rose and
+soil-strata text); Ancient Scroll's first-ever real use rendered a page full
+of dense pseudo-handwriting until reworded toward "mostly bare parchment."
+User also caught a real cast-anchor mistake by eye: the build used a stale
+Door-episode Jesus reference (no stated age) instead of the current
+canonical `poc_living_sketchbook/cast/jesus_ref.png` ("early thirties",
+used by Bronze Serpent Long/Storm/Day of Atonement) — Two Goats' own
+`PRIEST.md` pointed to the stale one, written one day before the real
+anchor was promoted. Fixed, all 17 stills re-verified by eye.
+
+User: "this proves it's working. Lets lock this in and commit it." Design
+doc marked LOCKED (flagging, not hiding, that the standing external-panel-
+review process wasn't run — locked on real production evidence instead).
+Committed in 2 commits: the Stationer system + EW01 pilot code (6ba05bb),
+then the rest of today's earlier POC work — Drawing Office, Bethesda style
+bake-off, sfx pilots — code/docs only, ~1.8GB of generated PNGs/MP4s
+deliberately left uncommitted per this repo's existing convention (0008ace).
+Memory: `stationer-medium-system-locked.md`, `feedback-stationer-objective-
+style-selection.md`.
+
+**Not done / next**: no animation or assembly on the EW01 pilot itself (only
+stills). **Explicit next-session task from the user**: build a comprehensive
+checklist of every narration that exists across the whole project, dedup
+which ones are still on oil/ink vs already sketchbook, then write a clear
+migration roadmap. `STYLE_MIGRATION_TRACKER.html` (built 2026-08-10) is a
+real partial start — 4 pieces flagged needing migration (Isaiah 53, Psalm
+22, Passover Lamb, EW01 Two Goats — EW01's SHORT is now done via this
+session's pilot, its LONG is not) — but the user wants something more
+comprehensive than that ledger next session. Full detail: RESUME.md top.
+
 **2026-08-11 (same day, latest) Sketchbook title/verse-card standard LOCKED,
 via a full POC on a short (real spend ~$0.60), committed:** User asked for a
 POC proving out Noah's caption+title-card treatment on a short before any
