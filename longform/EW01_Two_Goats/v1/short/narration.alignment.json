@@ -1,0 +1,1031 @@
+{
+  "backend": "whisper",
+  "model": "base",
+  "words": [
+    {
+      "text": "Once",
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "text": "a",
+      "start": 0.5,
+      "end": 0.68
+    },
+    {
+      "text": "year",
+      "start": 0.68,
+      "end": 0.88
+    },
+    {
+      "text": "I",
+      "start": 0.88,
+      "end": 1.06
+    },
+    {
+      "text": "walked",
+      "start": 1.06,
+      "end": 1.28
+    },
+    {
+      "text": "behind",
+      "start": 1.28,
+      "end": 1.62
+    },
+    {
+      "text": "a",
+      "start": 1.62,
+      "end": 1.76
+    },
+    {
+      "text": "curtain",
+      "start": 1.76,
+      "end": 2.08
+    },
+    {
+      "text": "to",
+      "start": 2.08,
+      "end": 2.3
+    },
+    {
+      "text": "meet",
+      "start": 2.3,
+      "end": 2.44
+    },
+    {
+      "text": "God",
+      "start": 2.44,
+      "end": 2.72
+    },
+    {
+      "text": "—",
+      "start": 2.72,
+      "end": 2.72
+    },
+    {
+      "text": "and",
+      "start": 3.04,
+      "end": 3.72
+    },
+    {
+      "text": "I",
+      "start": 3.72,
+      "end": 3.82
+    },
+    {
+      "text": "was",
+      "start": 3.82,
+      "end": 3.94
+    },
+    {
+      "text": "never",
+      "start": 3.94,
+      "end": 4.06
+    },
+    {
+      "text": "sure",
+      "start": 4.06,
+      "end": 4.4
+    },
+    {
+      "text": "I",
+      "start": 4.4,
+      "end": 4.64
+    },
+    {
+      "text": "would",
+      "start": 4.64,
+      "end": 4.78
+    },
+    {
+      "text": "walk",
+      "start": 4.78,
+      "end": 5.02
+    },
+    {
+      "text": "back",
+      "start": 5.02,
+      "end": 5.22
+    },
+    {
+      "text": "out.",
+      "start": 5.22,
+      "end": 5.58
+    },
+    {
+      "text": "The",
+      "start": 6.38,
+      "end": 6.9
+    },
+    {
+      "text": "law",
+      "start": 6.9,
+      "end": 7.08
+    },
+    {
+      "text": "gave",
+      "start": 7.08,
+      "end": 7.32
+    },
+    {
+      "text": "me",
+      "start": 7.32,
+      "end": 7.56
+    },
+    {
+      "text": "two",
+      "start": 7.56,
+      "end": 7.86
+    },
+    {
+      "text": "goats",
+      "start": 7.86,
+      "end": 8.14
+    },
+    {
+      "text": "for",
+      "start": 8.14,
+      "end": 8.52
+    },
+    {
+      "text": "one",
+      "start": 8.52,
+      "end": 8.74
+    },
+    {
+      "text": "sin.",
+      "start": 8.74,
+      "end": 9.08
+    },
+    {
+      "text": "I",
+      "start": 10.04,
+      "end": 10.24
+    },
+    {
+      "text": "killed",
+      "start": 10.24,
+      "end": 10.46
+    },
+    {
+      "text": "the",
+      "start": 10.46,
+      "end": 10.62
+    },
+    {
+      "text": "first",
+      "start": 10.62,
+      "end": 10.84
+    },
+    {
+      "text": "and",
+      "start": 10.84,
+      "end": 11.38
+    },
+    {
+      "text": "carried",
+      "start": 11.38,
+      "end": 11.7
+    },
+    {
+      "text": "its",
+      "start": 11.7,
+      "end": 11.96
+    },
+    {
+      "text": "blood",
+      "start": 11.96,
+      "end": 12.18
+    },
+    {
+      "text": "inside",
+      "start": 12.18,
+      "end": 12.62
+    },
+    {
+      "text": "the",
+      "start": 12.62,
+      "end": 12.9
+    },
+    {
+      "text": "veil.",
+      "start": 12.9,
+      "end": 13.18
+    },
+    {
+      "text": "The",
+      "start": 14.22,
+      "end": 14.36
+    },
+    {
+      "text": "second",
+      "start": 14.36,
+      "end": 14.68
+    },
+    {
+      "text": "I",
+      "start": 14.68,
+      "end": 14.96
+    },
+    {
+      "text": "did",
+      "start": 14.96,
+      "end": 15.12
+    },
+    {
+      "text": "not",
+      "start": 15.12,
+      "end": 15.32
+    },
+    {
+      "text": "kill",
+      "start": 15.32,
+      "end": 15.64
+    },
+    {
+      "text": "—",
+      "start": 15.64,
+      "end": 15.64
+    },
+    {
+      "text": "I",
+      "start": 16.5,
+      "end": 16.76
+    },
+    {
+      "text": "laid",
+      "start": 16.76,
+      "end": 16.92
+    },
+    {
+      "text": "my",
+      "start": 16.92,
+      "end": 17.18
+    },
+    {
+      "text": "hands",
+      "start": 17.18,
+      "end": 17.46
+    },
+    {
+      "text": "on",
+      "start": 17.46,
+      "end": 17.68
+    },
+    {
+      "text": "its",
+      "start": 17.68,
+      "end": 17.88
+    },
+    {
+      "text": "head,",
+      "start": 17.88,
+      "end": 18.14
+    },
+    {
+      "text": "confessed",
+      "start": 18.56,
+      "end": 18.82
+    },
+    {
+      "text": "every",
+      "start": 18.82,
+      "end": 19.38
+    },
+    {
+      "text": "sin",
+      "start": 19.38,
+      "end": 19.72
+    },
+    {
+      "text": "of",
+      "start": 19.72,
+      "end": 19.9
+    },
+    {
+      "text": "the",
+      "start": 19.9,
+      "end": 20.0
+    },
+    {
+      "text": "people",
+      "start": 20.0,
+      "end": 20.24
+    },
+    {
+      "text": "over",
+      "start": 20.24,
+      "end": 20.54
+    },
+    {
+      "text": "it,",
+      "start": 20.54,
+      "end": 20.74
+    },
+    {
+      "text": "and",
+      "start": 21.16,
+      "end": 21.26
+    },
+    {
+      "text": "sent",
+      "start": 21.26,
+      "end": 21.48
+    },
+    {
+      "text": "it",
+      "start": 21.48,
+      "end": 21.66
+    },
+    {
+      "text": "away",
+      "start": 21.66,
+      "end": 21.92
+    },
+    {
+      "text": "into",
+      "start": 21.92,
+      "end": 22.2
+    },
+    {
+      "text": "the",
+      "start": 22.2,
+      "end": 22.36
+    },
+    {
+      "text": "desert",
+      "start": 22.36,
+      "end": 22.64
+    },
+    {
+      "text": "to",
+      "start": 22.64,
+      "end": 22.98
+    },
+    {
+      "text": "be",
+      "start": 22.98,
+      "end": 23.1
+    },
+    {
+      "text": "lost.",
+      "start": 23.1,
+      "end": 23.34
+    },
+    {
+      "text": "One",
+      "start": 24.42,
+      "end": 24.78
+    },
+    {
+      "text": "to",
+      "start": 24.78,
+      "end": 24.98
+    },
+    {
+      "text": "pay.",
+      "start": 24.98,
+      "end": 25.22
+    },
+    {
+      "text": "One",
+      "start": 25.86,
+      "end": 26.12
+    },
+    {
+      "text": "to",
+      "start": 26.12,
+      "end": 26.36
+    },
+    {
+      "text": "carry",
+      "start": 26.36,
+      "end": 26.64
+    },
+    {
+      "text": "it",
+      "start": 26.64,
+      "end": 26.8
+    },
+    {
+      "text": "away.",
+      "start": 26.8,
+      "end": 27.1
+    },
+    {
+      "text": "For",
+      "start": 28.14,
+      "end": 28.74
+    },
+    {
+      "text": "years",
+      "start": 28.74,
+      "end": 29.02
+    },
+    {
+      "text": "I",
+      "start": 29.02,
+      "end": 29.26
+    },
+    {
+      "text": "asked",
+      "start": 29.26,
+      "end": 29.58
+    },
+    {
+      "text": "why",
+      "start": 29.58,
+      "end": 29.8
+    },
+    {
+      "text": "it",
+      "start": 29.8,
+      "end": 30.0
+    },
+    {
+      "text": "took",
+      "start": 30.0,
+      "end": 30.14
+    },
+    {
+      "text": "two.",
+      "start": 30.14,
+      "end": 30.52
+    },
+    {
+      "text": "I",
+      "start": 31.64,
+      "end": 31.9
+    },
+    {
+      "text": "know",
+      "start": 31.9,
+      "end": 32.08
+    },
+    {
+      "text": "now.",
+      "start": 32.08,
+      "end": 32.4
+    },
+    {
+      "text": "No",
+      "start": 33.66,
+      "end": 33.86
+    },
+    {
+      "text": "single",
+      "start": 33.86,
+      "end": 34.34
+    },
+    {
+      "text": "creature",
+      "start": 34.34,
+      "end": 34.76
+    },
+    {
+      "text": "could",
+      "start": 34.76,
+      "end": 34.96
+    },
+    {
+      "text": "hold",
+      "start": 34.96,
+      "end": 35.28
+    },
+    {
+      "text": "both",
+      "start": 35.28,
+      "end": 35.64
+    },
+    {
+      "text": "halves.",
+      "start": 35.64,
+      "end": 36.1
+    },
+    {
+      "text": "Long",
+      "start": 37.64,
+      "end": 37.78
+    },
+    {
+      "text": "after",
+      "start": 37.78,
+      "end": 38.2
+    },
+    {
+      "text": "me",
+      "start": 38.2,
+      "end": 38.42
+    },
+    {
+      "text": "a",
+      "start": 38.42,
+      "end": 38.68
+    },
+    {
+      "text": "Man",
+      "start": 38.68,
+      "end": 38.9
+    },
+    {
+      "text": "named",
+      "start": 38.9,
+      "end": 39.2
+    },
+    {
+      "text": "Jesus",
+      "start": 39.2,
+      "end": 39.72
+    },
+    {
+      "text": "did",
+      "start": 39.72,
+      "end": 40.14
+    },
+    {
+      "text": "what",
+      "start": 40.14,
+      "end": 40.38
+    },
+    {
+      "text": "my",
+      "start": 40.38,
+      "end": 40.62
+    },
+    {
+      "text": "two",
+      "start": 40.62,
+      "end": 40.92
+    },
+    {
+      "text": "goats",
+      "start": 40.92,
+      "end": 41.14
+    },
+    {
+      "text": "only",
+      "start": 41.14,
+      "end": 41.62
+    },
+    {
+      "text": "pictured",
+      "start": 41.62,
+      "end": 42.04
+    },
+    {
+      "text": "—",
+      "start": 42.04,
+      "end": 42.04
+    },
+    {
+      "text": "He",
+      "start": 42.8,
+      "end": 43.12
+    },
+    {
+      "text": "was",
+      "start": 43.12,
+      "end": 43.32
+    },
+    {
+      "text": "the",
+      "start": 43.32,
+      "end": 43.44
+    },
+    {
+      "text": "price",
+      "start": 43.44,
+      "end": 43.68
+    },
+    {
+      "text": "paid,",
+      "start": 43.68,
+      "end": 44.04
+    },
+    {
+      "text": "and",
+      "start": 44.54,
+      "end": 44.58
+    },
+    {
+      "text": "the",
+      "start": 44.58,
+      "end": 44.68
+    },
+    {
+      "text": "One",
+      "start": 44.68,
+      "end": 44.84
+    },
+    {
+      "text": "the",
+      "start": 44.84,
+      "end": 45.08
+    },
+    {
+      "text": "guilt",
+      "start": 45.08,
+      "end": 45.3
+    },
+    {
+      "text": "was",
+      "start": 45.3,
+      "end": 45.6
+    },
+    {
+      "text": "laid",
+      "start": 45.6,
+      "end": 45.78
+    },
+    {
+      "text": "on:",
+      "start": 45.78,
+      "end": 46.06
+    },
+    {
+      "text": "and",
+      "start": 46.6,
+      "end": 46.86
+    },
+    {
+      "text": "the",
+      "start": 46.86,
+      "end": 46.96
+    },
+    {
+      "text": "LORD",
+      "start": 46.96,
+      "end": 47.26
+    },
+    {
+      "text": "hath",
+      "start": 47.26,
+      "end": 47.58
+    },
+    {
+      "text": "laid",
+      "start": 47.58,
+      "end": 47.86
+    },
+    {
+      "text": "on",
+      "start": 47.86,
+      "end": 48.08
+    },
+    {
+      "text": "him",
+      "start": 48.08,
+      "end": 48.32
+    },
+    {
+      "text": "the",
+      "start": 48.32,
+      "end": 48.92
+    },
+    {
+      "text": "iniquity",
+      "start": 48.92,
+      "end": 49.56
+    },
+    {
+      "text": "of",
+      "start": 49.56,
+      "end": 49.94
+    },
+    {
+      "text": "us",
+      "start": 49.94,
+      "end": 50.14
+    },
+    {
+      "text": "all.",
+      "start": 50.14,
+      "end": 50.48
+    },
+    {
+      "text": "He",
+      "start": 51.04,
+      "end": 51.18
+    },
+    {
+      "text": "carried",
+      "start": 51.18,
+      "end": 51.48
+    },
+    {
+      "text": "it",
+      "start": 51.48,
+      "end": 51.66
+    },
+    {
+      "text": "away",
+      "start": 51.66,
+      "end": 51.86
+    },
+    {
+      "text": "Himself",
+      "start": 51.86,
+      "end": 52.28
+    },
+    {
+      "text": "—",
+      "start": 52.28,
+      "end": 52.28
+    },
+    {
+      "text": "once",
+      "start": 52.82,
+      "end": 53.18
+    },
+    {
+      "text": "—",
+      "start": 53.18,
+      "end": 53.18
+    },
+    {
+      "text": "and",
+      "start": 53.58,
+      "end": 53.66
+    },
+    {
+      "text": "sat",
+      "start": 53.66,
+      "end": 53.84
+    },
+    {
+      "text": "down.",
+      "start": 53.84,
+      "end": 54.22
+    },
+    {
+      "text": "Finished.",
+      "start": 55.1,
+      "end": 55.54
+    },
+    {
+      "text": "The",
+      "start": 56.22,
+      "end": 56.86
+    },
+    {
+      "text": "curtain",
+      "start": 56.86,
+      "end": 57.16
+    },
+    {
+      "text": "I",
+      "start": 57.16,
+      "end": 57.34
+    },
+    {
+      "text": "trembled",
+      "start": 57.34,
+      "end": 57.84
+    },
+    {
+      "text": "behind",
+      "start": 57.84,
+      "end": 58.22
+    },
+    {
+      "text": "tore",
+      "start": 58.22,
+      "end": 58.72
+    },
+    {
+      "text": "in",
+      "start": 58.72,
+      "end": 58.94
+    },
+    {
+      "text": "two",
+      "start": 58.94,
+      "end": 59.26
+    },
+    {
+      "text": "the",
+      "start": 59.26,
+      "end": 59.48
+    },
+    {
+      "text": "hour",
+      "start": 59.48,
+      "end": 59.8
+    },
+    {
+      "text": "He",
+      "start": 59.8,
+      "end": 60.02
+    },
+    {
+      "text": "died.",
+      "start": 60.02,
+      "end": 60.36
+    },
+    {
+      "text": "I",
+      "start": 61.16,
+      "end": 61.38
+    },
+    {
+      "text": "was",
+      "start": 61.38,
+      "end": 61.52
+    },
+    {
+      "text": "only",
+      "start": 61.52,
+      "end": 61.76
+    },
+    {
+      "text": "the",
+      "start": 61.76,
+      "end": 61.92
+    },
+    {
+      "text": "sign;",
+      "start": 61.92,
+      "end": 62.3
+    },
+    {
+      "text": "He",
+      "start": 62.8,
+      "end": 62.96
+    },
+    {
+      "text": "is",
+      "start": 62.96,
+      "end": 63.28
+    },
+    {
+      "text": "the",
+      "start": 63.28,
+      "end": 63.42
+    },
+    {
+      "text": "substance.",
+      "start": 63.42,
+      "end": 63.82
+    },
+    {
+      "text": "The",
+      "start": 64.74,
+      "end": 64.84
+    },
+    {
+      "text": "curtain",
+      "start": 64.84,
+      "end": 65.14
+    },
+    {
+      "text": "I",
+      "start": 65.14,
+      "end": 65.34
+    },
+    {
+      "text": "trembled",
+      "start": 65.34,
+      "end": 65.82
+    },
+    {
+      "text": "behind",
+      "start": 65.82,
+      "end": 66.16
+    },
+    {
+      "text": "is",
+      "start": 66.16,
+      "end": 66.78
+    },
+    {
+      "text": "torn",
+      "start": 66.78,
+      "end": 67.1
+    },
+    {
+      "text": "from",
+      "start": 67.1,
+      "end": 67.4
+    },
+    {
+      "text": "top",
+      "start": 67.4,
+      "end": 67.76
+    },
+    {
+      "text": "to",
+      "start": 67.76,
+      "end": 68.1
+    },
+    {
+      "text": "bottom",
+      "start": 68.1,
+      "end": 68.46
+    },
+    {
+      "text": "—",
+      "start": 68.46,
+      "end": 68.46
+    },
+    {
+      "text": "and",
+      "start": 69.1,
+      "end": 69.44
+    },
+    {
+      "text": "no",
+      "start": 69.44,
+      "end": 69.64
+    },
+    {
+      "text": "hand",
+      "start": 69.64,
+      "end": 69.98
+    },
+    {
+      "text": "will",
+      "start": 69.98,
+      "end": 70.16
+    },
+    {
+      "text": "ever",
+      "start": 70.16,
+      "end": 70.38
+    },
+    {
+      "text": "sew",
+      "start": 70.38,
+      "end": 70.62
+    },
+    {
+      "text": "it",
+      "start": 70.62,
+      "end": 70.76
+    },
+    {
+      "text": "shut.",
+      "start": 70.76,
+      "end": 71.02
+    },
+    {
+      "text": "The",
+      "start": 71.86,
+      "end": 72.22
+    },
+    {
+      "text": "holiest",
+      "start": 72.22,
+      "end": 72.62
+    },
+    {
+      "text": "place",
+      "start": 72.62,
+      "end": 72.94
+    },
+    {
+      "text": "is",
+      "start": 72.94,
+      "end": 73.26
+    },
+    {
+      "text": "open,",
+      "start": 73.26,
+      "end": 73.64
+    },
+    {
+      "text": "and",
+      "start": 74.3,
+      "end": 74.42
+    },
+    {
+      "text": "Jesus",
+      "start": 74.42,
+      "end": 74.82
+    },
+    {
+      "text": "is",
+      "start": 74.82,
+      "end": 75.14
+    },
+    {
+      "text": "already",
+      "start": 75.14,
+      "end": 75.52
+    },
+    {
+      "text": "inside.",
+      "start": 75.52,
+      "end": 76.08
+    },
+    {
+      "text": "Walk",
+      "start": 76.92,
+      "end": 77.72
+    },
+    {
+      "text": "in.",
+      "start": 77.72,
+      "end": 78.1
+    }
+  ]
+}
