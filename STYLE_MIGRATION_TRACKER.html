@@ -31,6 +31,9 @@
     --skip-bg: #e9e4d6;
     --skip-fg: #6b6151;
     --skip-dot: #93897a;
+    --info-bg: #dde5ea;
+    --info-fg: #2e4a5c;
+    --info-dot: #4e7f9c;
     --shadow: 0 1px 2px rgba(35,30,26,.06), 0 8px 24px -12px rgba(35,30,26,.18);
   }
   @media (prefers-color-scheme: dark) {
@@ -56,6 +59,9 @@
       --skip-bg: #2a271f;
       --skip-fg: #9a9080;
       --skip-dot: #7d7364;
+      --info-bg: #1e2b33;
+      --info-fg: #9cc3d9;
+      --info-dot: #6ea3c2;
       --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.5);
     }
   }
@@ -69,7 +75,7 @@
     font-size: 15px;
     line-height: 1.5;
   }
-  .wrap { max-width: 1160px; margin: 0 auto; padding: 48px 28px 80px; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 48px 28px 80px; }
 
   header { margin-bottom: 8px; }
   .eyebrow {
@@ -86,14 +92,14 @@
   }
   .lede {
     color: var(--ink-soft);
-    max-width: 66ch;
+    max-width: 70ch;
     font-size: 16px;
     margin: 0 0 6px;
   }
   .provenance {
     color: var(--ink-faint);
     font-size: 13px;
-    max-width: 70ch;
+    max-width: 78ch;
     border-left: 2px solid var(--paper-line);
     padding-left: 12px;
     margin: 20px 0 40px;
@@ -129,23 +135,25 @@
     border: 1px solid var(--gold);
     border-radius: 12px;
     padding: 26px 28px;
-    margin-bottom: 52px;
+    margin-bottom: 40px;
     box-shadow: var(--shadow);
   }
   .headline .eyebrow { color: var(--gold-deep); }
-  .headline h2 { font-family: Georgia, serif; font-weight: 400; font-size: 22px; margin: 0 0 14px; }
-  .migrate-list { display: flex; flex-direction: column; gap: 10px; }
-  .migrate-row {
-    display: flex; align-items: center; gap: 14px;
-    padding: 10px 0; border-bottom: 1px solid var(--paper-line);
+  .headline h2 { font-family: Georgia, serif; font-weight: 400; font-size: 22px; margin: 0 0 6px; }
+  .headline .sub { color: var(--ink-soft); font-size: 13.5px; margin: 0 0 16px; }
+  .roadmap-list { display: flex; flex-direction: column; gap: 12px; }
+  .roadmap-row {
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 12px 0; border-bottom: 1px solid var(--paper-line);
   }
-  .migrate-row:last-child { border-bottom: none; }
-  .migrate-row .num {
-    font-family: Georgia, serif; font-size: 17px; color: var(--gold-deep);
-    width: 22px; flex: none; text-align: right; font-variant-numeric: tabular-nums;
+  .roadmap-row:last-child { border-bottom: none; }
+  .roadmap-row .num {
+    font-family: Georgia, serif; font-size: 20px; color: var(--gold-deep);
+    width: 26px; flex: none; text-align: right; font-variant-numeric: tabular-nums;
   }
-  .migrate-row .who { font-weight: 600; flex: 1; min-width: 160px; }
-  .migrate-row .from { color: var(--ink-faint); font-size: 13px; }
+  .roadmap-row .body { flex: 1; min-width: 200px; }
+  .roadmap-row .who { font-weight: 700; margin-bottom: 3px; }
+  .roadmap-row .why { color: var(--ink-soft); font-size: 13.5px; }
 
   section { margin-bottom: 52px; }
   .section-head {
@@ -175,6 +183,7 @@
   tbody tr.dim { opacity: .62; }
   .piece { font-weight: 600; }
   .ref { display: block; color: var(--ink-faint); font-size: 12.5px; font-weight: 400; margin-top: 2px; }
+  .path { display: block; color: var(--ink-faint); font-size: 11.5px; font-family: Consolas, monospace; margin-top: 3px; word-break: break-all; }
 
   .chip {
     display: inline-flex; align-items: center; gap: 6px;
@@ -190,8 +199,10 @@
   .chip.stop .dot { background: var(--stop-dot); }
   .chip.skip { background: var(--skip-bg); color: var(--skip-fg); }
   .chip.skip .dot { background: var(--skip-dot); }
+  .chip.info { background: var(--info-bg); color: var(--info-fg); }
+  .chip.info .dot { background: var(--info-dot); }
 
-  .note { color: var(--ink-soft); font-size: 13px; max-width: 34ch; }
+  .note { color: var(--ink-soft); font-size: 13px; max-width: 38ch; }
   .note b { color: var(--ink); font-weight: 600; }
 
   .legend { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 16px; font-size: 12.5px; color: var(--ink-soft); }
@@ -204,9 +215,18 @@
   }
   .aside b { color: var(--ink); }
   .aside ul { margin: 10px 0 0; padding-left: 20px; }
-  .aside li { margin-bottom: 4px; }
+  .aside li { margin-bottom: 6px; }
+
+  .dedup-card {
+    background: var(--paper-raised); border: 1px solid var(--paper-line); border-radius: 10px;
+    padding: 18px 20px; margin-bottom: 14px;
+  }
+  .dedup-card h3 { font-family: Georgia, serif; font-weight: 400; font-size: 16px; margin: 0 0 8px; }
+  .dedup-card .verdict { font-size: 13.5px; color: var(--ink-soft); margin: 8px 0 0; }
+  .dedup-card .verdict b { color: var(--ok-fg); }
 
   footer { border-top: 1px solid var(--paper-line); padding-top: 22px; margin-top: 60px; color: var(--ink-faint); font-size: 12.5px; }
+  footer code { font-family: Consolas, monospace; }
 </style>
 </head>
 <body>
@@ -214,300 +234,493 @@
 
   <header>
     <div class="eyebrow">Awakeden · production ledger</div>
-    <h1>From oil painting, through ink, to the sketchbook</h1>
-    <p class="lede">Everything built so far, across every production line — and exactly what still needs to move to the sketchbook style.</p>
+    <h1>From oil painting and ink, to the sketchbook</h1>
+    <p class="lede">Every narration in the project, every visual attempt across every style, deduped to a canonical build where more than one exists — and a prioritized roadmap for closing the gap to sketchbook.</p>
   </header>
 
   <p class="provenance">
-    The original migration ledger (published 2026-08-01) only ever existed as a claude.ai
-    artifact — no local copy was ever saved, and that artifact link is now gone ("not found").
-    This file is the fix for that: a real, on-disk, git-tracked copy. Rebuilt 2026-08-10 by
-    reading the repository directly, in two passes — the first only checked the six numbered
-    longs; the second, wider pass found a whole Eyewitness series and two more pilot lines
-    the first pass had missed.
+    <b>Rebuilt 2026-08-11</b> by dispatching four parallel research passes directly against the
+    filesystem (not the prior ledger's own claims) — the text/audio narration tree in
+    <code>PythonProject1/jesus/narration/</code>, the six canonical longs + Eyewitness series in
+    <code>longform/</code>, all 19 <code>batches/</code> ink shorts, and every
+    <code>poc_living_sketchbook/</code> + experimental-style folder. Supersedes the 2026-08-10
+    version of this file, which scoped the 19 ink shorts <i>out</i> of the migration count — that
+    scoping no longer holds, since ink now also needs to move to sketchbook, not just Baroque.
   </p>
 
   <div class="stats">
-    <div class="stat"><div class="n">3</div><div class="lbl">fully on sketchbook</div></div>
-    <div class="stat"><div class="n">4</div><div class="lbl">still need migrating</div></div>
-    <div class="stat"><div class="n">8</div><div class="lbl">written, zero visuals in any style</div></div>
-    <div class="stat"><div class="n">~60</div><div class="lbl">real narration.mp3 files, whole repo</div></div>
+    <div class="stat"><div class="n">1</div><div class="lbl">sketchbook, built AND published/live</div></div>
+    <div class="stat"><div class="n">4</div><div class="lbl">sketchbook built, just needs publish wiring</div></div>
+    <div class="stat"><div class="n">3</div><div class="lbl">published on an old style, sketchbook not started</div></div>
+    <div class="stat"><div class="n">19</div><div class="lbl">ink shorts (batches/), now in-scope, 1 mid-pilot</div></div>
+    <div class="stat"><div class="n">44</div><div class="lbl">text/audio narrations — most with zero visuals, any style</div></div>
   </div>
 
   <div class="headline">
-    <div class="eyebrow">The direct answer</div>
-    <h2>4 pieces need migrating to sketchbook</h2>
-    <div class="migrate-list">
-      <div class="migrate-row">
+    <div class="eyebrow">The migration TODO — by episode</div>
+    <h2>Six episodes (long + its manifest-declared shorts), in priority order</h2>
+    <p class="sub">Grouped using the project's own real <code>parent:</code> linkage in
+    <code>_website/manifest.yaml</code> (the same mechanism <code>pipeline/episode_state.py</code>
+    uses to detect an episode) — not theme-guessing. Each episode below is tracked as its own
+    numbered TODO in this session's task list (14 tasks total). "Free wins" close real,
+    already-finished sketchbook work that just never got wired into publish — do these first.</p>
+    <div class="roadmap-list">
+      <div class="roadmap-row">
         <span class="num">1</span>
-        <span class="who">Isaiah 53 — The Suffering Servant</span>
-        <span class="from">currently ink graphic-novel, published and studio-complete</span>
+        <div class="body">
+          <div class="who">Bronze Serpent — long: wire to publish ($0) · 3 shorts: build from zero</div>
+          <div class="why">The long's sketchbook cut (85 stills/106 clips) is finished but
+          <code>publish/_source.json</code> still points at the OLD inked video — a pointer swap,
+          not new work. Its 3 manifest-declared shorts (Look and Live · The Thing That Killed
+          Them · Son of Man Lifted Up) are 100% unbuilt in any style — but all 3 already have
+          locked narration text, so it's straight to visual production, no /narrate needed.
+          <b>Don't confuse with</b> the already-finished <code>poc_living_sketchbook/bronze_serpent</code>
+          short — that's EW04's eyewitness cut, a different piece entirely (see the corrected
+          sketchbook ledger below).</div>
+        </div>
       </div>
-      <div class="migrate-row">
+      <div class="roadmap-row">
         <span class="num">2</span>
-        <span class="who">Psalm 22 — Song From the Cross</span>
-        <span class="from">currently ink graphic-novel, published, plus 8 shorts cut from it</span>
+        <div class="body">
+          <div class="who">Day of Atonement — long: wire to publish ($0) · 3 shorts: write, then build</div>
+          <div class="why">Long's sketchbook cut (75 spreads) is finished but has no publish kit
+          at all yet. Its 3 manifest-declared shorts (Goat That Carried It Away · Blood Behind the
+          Veil · Once for All) have <b>zero narration text anywhere</b> — verified by direct
+          search, no near-match found. These need a full Stage 1 <code>/narrate</code> pass before
+          any visual work — a from-zero build, not a migration.</div>
+        </div>
       </div>
-      <div class="migrate-row">
+      <div class="roadmap-row">
         <span class="num">3</span>
-        <span class="who">The Passover Lamb</span>
-        <span class="from">Baroque was archived; nothing has replaced it — starts from zero</span>
+        <div class="body">
+          <div class="who">Seed of the Woman — long: done · 4 shorts: build from zero</div>
+          <div class="why">Cheapest full episode-completion on this list — the long is already
+          published and live, nothing to do there. Its 4 manifest-declared shorts (First Gospel in
+          the Curse · Her Seed · Heel vs Head · The Serpent-Crusher, Promised) are unbuilt but
+          already have locked text — straight to visual production in sketchbook.</div>
+        </div>
       </div>
-      <div class="migrate-row">
+      <div class="roadmap-row">
         <span class="num">4</span>
-        <span class="who">EW01 — Two Goats <span class="ref" style="display:inline">(eyewitness format)</span></span>
-        <span class="from">already has Baroque, painted-comic, and retro-comic attempts, plus ink — never sketchbook</span>
+        <div class="body">
+          <div class="who">Psalm 22 — finish the live pilot, then migrate long + remaining 7 shorts</div>
+          <div class="why">The biggest single episode: 1 long (88 stills, published ink) + 8
+          manifest-declared shorts, ALL studio_complete on ink. One of the 8
+          (<code>forsaken_cry_ps221</code> = ps22-03) already has an in-progress sketchbook POC
+          sitting unresolved — finish and lock that one first, use it as the proven recipe, then
+          roll the long and the remaining 7 shorts through. Real spend (~$50-90 for the long alone,
+          Seed-of-the-Woman scale).</div>
+        </div>
+      </div>
+      <div class="roadmap-row">
+        <span class="num">5</span>
+        <div class="body">
+          <div class="who">The Passover Lamb — long + 4 shorts, all from zero</div>
+          <div class="why">Most exposed episode on the ledger — the long has ONLY an archived
+          Baroque asset (nothing else exists), and all 4 manifest-declared shorts (Unbroken Bone ·
+          Blood on the Doorposts · Kept Four Days · Christ Our Passover) are unbuilt, though all 4
+          already have locked text. Full from-scratch production, long-form scope on the long,
+          natively sketchbook on the shorts.</div>
+        </div>
+      </div>
+      <div class="roadmap-row">
+        <span class="num">6</span>
+        <div class="body">
+          <div class="who">Isaiah 53 — dedup first, then migrate the long (no shorts set exists yet)</div>
+          <div class="why">The one canonical long with <b>no manifest-declared shorts at all</b> —
+          unlike the other 5 episodes. 3 standalone backlog narrations share its verse (Isaiah
+          53:5) but aren't parented to it. Decide the dedup + whether to formally give it a shorts
+          set (like Psalm 22's) BEFORE spending on the long's rebuild (~$50-90, published ink, 88
+          stills, zero sketchbook work today).</div>
+        </div>
       </div>
     </div>
+    <p class="sub" style="margin-top:18px">
+      <b>Outside the episode pattern, tracked separately (lower priority):</b> EW01 Two Goats'
+      3-way build duplicate needs resolving before it can publish in any style; EW02/EW03 each
+      have a finished-but-unpublished Baroque-gallery short needing a lane decision; 11 batches/
+      shorts (8 Cross + 3 Resurrection) are studio_complete on ink but carry no <code>parent:</code>
+      link to any of the 6 episodes above — a separate standalone-shorts migration line, not yet
+      scheduled.
+    </p>
   </div>
 
   <section>
     <div class="section-head">
-      <h2>The six canonical Types &amp; Shadows / Jesus-in-OT longs</h2>
+      <h2>Dedup calls — resolve before building anything further</h2>
+      <span class="section-note">pieces with more than one build attempt across styles</span>
+    </div>
+    <div class="dedup-card">
+      <h3>Two Goats (Leviticus 16) — three separate build attempts</h3>
+      <p class="note" style="max-width:none">
+        (a) <code>poc_living_sketchbook/two_goats/</code> — finished, captioned, watermarked
+        sketchbook short (70.8s), built 2026-07-28.
+        (b) <code>poc_living_sketchbook/ew01_two_goats_short/</code> — in-progress sketchbook
+        pilot testing the new Stationer medium system, started today, stills-only so far.
+        (c) <code>drawing_office/episodes/two_goats/</code> — a third attempt in a brand-new,
+        separate experimental engine (all files dated today), ~70.4s, finished.
+      </p>
+      <p class="verdict"><b>Recommendation:</b> (a) stays canonical until (b) finishes and is
+      explicitly compared against it — don't let (b) linger unresolved. (c) is a different engine
+      entirely (<code>drawing_office</code>), not sketchbook — park it as a style experiment,
+      out of this migration's scope, unless the user decides <code>drawing_office</code> is a
+      future successor system worth its own evaluation. <b>Red-team addition:</b> the real
+      source-of-truth SHORT-form script both (a) and (b) build from is
+      <code>longform/EW01_Two_Goats/v1/short/narration.md</code> — a separately locked text, not
+      just a copy of the long-form narration (it also carries its own
+      <code>_visual_strategy/SHORT_VISUAL_STRATEGY.md</code> planning doc and a
+      <code>_punchy/</code> alt-pacing take). None of this session's research agents surfaced this
+      folder; found on a direct verification pass.</p>
+    </div>
+    <div class="dedup-card">
+      <h3>EW01 Two Goats' own longform folder — four superseded style attempts, one active</h3>
+      <p class="note" style="max-width:none">
+        <code>longform/EW01_Two_Goats/v1/</code> holds FOUR visual-style folders: archived Baroque
+        (52 stills, the original complete production, archived 2026-07-20), inked (25 stills + one
+        unassembled/uncaptioned raw mp4), painted-comic (8 stills, partial), retro-comic (25 stills,
+        full set, no video assembled). None of these four ever went through <code>/publish</code>.
+      </p>
+      <p class="verdict"><b>Recommendation:</b> all four are superseded by the sketchbook build
+      (see the Two Goats card above) — once a canonical sketchbook EW01 is chosen and published,
+      formally mark these four as archived/superseded rather than leaving them live-looking in
+      the folder.</p>
+    </div>
+    <div class="dedup-card">
+      <h3>v2/pilot orphans — two are dead drafts of pieces that already shipped elsewhere</h3>
+      <p class="note" style="max-width:none">
+        <code>v2/pilot/mockers_words_ps22/</code> is a word-for-word duplicate script of the
+        already-published <code>batches/cluster_01_cross/mockers_words_ps227/</code>.
+        <code>v2/pilot/zechariah_12_10_pierced/</code> covers the same verse as the already-
+        published <code>batches/cluster_01_cross/pierced_zech1210/</code> (rewritten, not
+        verbatim). Both v2/pilot folders are text/audio only — nothing visual to migrate.
+        <code>v2/pilot/isaiah_53_5_with_his_stripes/</code> has no match found anywhere else;
+        genuinely orphaned, also visual-free.
+      </p>
+      <p class="verdict"><b>Recommendation:</b> no action needed for migration purposes (nothing
+      visual exists to move) — these three folders are safe to archive or leave alone as historical
+      trace. Not a blocker for anything above.</p>
+    </div>
+    <div class="dedup-card">
+      <h3>Duplicate-verse narration clusters in the 44-piece text/audio backlog</h3>
+      <p class="note" style="max-width:none">
+        Several verses have 2-4 separately locked, separately-written narration takes sitting in
+        <code>PythonProject1/jesus/narration/</code>: Matthew 8:26 "why are you afraid" (×3: 02,
+        20, 28), John 10:9 "I AM the Door" (×3: 07, 32, 33), John 8:12 "I AM the Light" (×3: 05, 06,
+        31), Matthew 16:15 "Who do you say I am" (×4), John 5:6 "made well" (×4), Isaiah 53:5 "the
+        Suffering Servant" (×3), Genesis 3:15 (×2, deliberately different framing — "Not a Tie" vs
+        "Grace Spoken First"), Numbers 21:9 bronze serpent (×2). The Luke 15:20 Prodigal Son ×4
+        cluster looks like an intentional multi-beat series (four different moments of the same
+        parable), not accidental duplication.
+      </p>
+      <p class="verdict"><b>Recommendation:</b> before any of these enters a visual build queue,
+      pick ONE canonical text per verse (or confirm the Prodigal Son 4-way is staying as a genuine
+      series) — building visuals against near-duplicate scripts wastes real spend. Not urgent since
+      none of them are currently mid-build, but flag it before scheduling backlog work.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>The six canonical Types &amp; Shadows longs</h2>
       <span class="section-note">every episode that ever had a Baroque still</span>
     </div>
     <div class="tablewrap">
       <table>
         <thead>
           <tr>
-            <th style="width:20%">Episode</th>
+            <th style="width:16%">Episode</th>
             <th>Baroque (oil painting)</th>
             <th>Inked graphic-novel</th>
             <th>Living-sketchbook</th>
-            <th style="width:24%">Note</th>
+            <th style="width:26%">Note</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td class="piece">Isaiah 53</td>
             <td><span class="chip skip"><span class="dot"></span>25 stills, still live</span></td>
-            <td><span class="chip ok"><span class="dot"></span>88 stills, published</span></td>
+            <td><span class="chip ok"><span class="dot"></span>88 stills — PUBLISHED, this is the live asset</span></td>
             <td><span class="chip stop"><span class="dot"></span>not started</span></td>
-            <td class="note">Never archived — both style folders sit side by side; inked wins on finality.</td>
+            <td class="note">Roadmap #3. Never archived — both style folders sit side by side; inked wins on finality.</td>
           </tr>
           <tr>
             <td class="piece">Psalm 22</td>
             <td><span class="chip skip"><span class="dot"></span>25 stills, still live</span></td>
-            <td><span class="chip ok"><span class="dot"></span>83 stills, published</span></td>
+            <td><span class="chip ok"><span class="dot"></span>83 stills — PUBLISHED, this is the live asset</span></td>
             <td><span class="chip stop"><span class="dot"></span>not started</span></td>
-            <td class="note">Same pattern as Isaiah 53.</td>
+            <td class="note">Roadmap #3. Also has 8 derived shorts (<span class="path">v1/shorts/</span>) that inherit whatever happens here.</td>
           </tr>
           <tr>
             <td class="piece">The Passover Lamb</td>
-            <td><span class="chip skip"><span class="dot"></span>29 stills, archived</span></td>
+            <td><span class="chip skip"><span class="dot"></span>29 stills — a COMPLETE finished+published video, fully archived intact</span></td>
             <td><span class="chip stop"><span class="dot"></span>never built</span></td>
             <td><span class="chip stop"><span class="dot"></span>never built</span></td>
-            <td class="note"><b>Stalled.</b> Narration + scene plan exist; no visual stage at all right now.</td>
+            <td class="note">Roadmap #4. <b>Most exposed piece on this ledger</b> — zero replacement work exists in any current style.</td>
           </tr>
           <tr>
             <td class="piece">The Bronze Serpent</td>
-            <td><span class="chip skip"><span class="dot"></span>27 stills, archived</span></td>
-            <td><span class="chip ok"><span class="dot"></span>33 stills, published</span></td>
-            <td><span class="chip ok"><span class="dot"></span>85 stills, done</span></td>
-            <td class="note">Runs two styles at once — inked stays live while a full sketchbook long (9:55) <i>and</i> a sketchbook short both shipped.</td>
+            <td><span class="chip skip"><span class="dot"></span>27 stills — complete finished+published video, archived intact</span></td>
+            <td><span class="chip warn"><span class="dot"></span>33 stills — STILL the live published asset</span></td>
+            <td><span class="chip ok"><span class="dot"></span>long: 85 stills/106 clips done · short: 21 stills/18 clips done — both finished, neither wired to publish</span></td>
+            <td class="note">Roadmap #1 (free win). Sketchbook is finished on disk for both long and short — only the publish pointer needs to move.</td>
           </tr>
           <tr>
             <td class="piece">The Seed of the Woman</td>
             <td><span class="chip skip"><span class="dot"></span>59 stills, archived</span></td>
-            <td><span class="chip skip"><span class="dot"></span>skipped</span></td>
-            <td><span class="chip ok"><span class="dot"></span>71 spreads, LOCKED</span></td>
-            <td class="note">Went straight from Baroque to sketchbook. Own cold-open trailer too, published today.</td>
+            <td><span class="chip skip"><span class="dot"></span>skipped entirely</span></td>
+            <td><span class="chip ok"><span class="dot"></span>71 spreads — PUBLISHED, this IS the live asset (with its own trailer)</span></td>
+            <td class="note"><b>Fully migrated, done.</b> The one piece on this ledger with nothing left to do.</td>
           </tr>
           <tr>
             <td class="piece">Day of Atonement</td>
             <td><span class="chip skip"><span class="dot"></span>28 stills, archived</span></td>
-            <td><span class="chip skip"><span class="dot"></span>skipped</span></td>
-            <td><span class="chip ok"><span class="dot"></span>75 spreads, LOCKED</span></td>
-            <td class="note">Same path as Seed of the Woman. LOCKED, unpublished — <code>/publish</code> now works for it, unrun.</td>
+            <td><span class="chip skip"><span class="dot"></span>skipped entirely</span></td>
+            <td><span class="chip warn"><span class="dot"></span>75 spreads/83 clips — finished (cc/scored/scored_sfx mp4s exist) but NOT wired to publish (no publish/ folder, only a stale Jul-16 publish_meta.json)</span></td>
+            <td class="note">Roadmap #1 (free win). Sharper than "LOCKED" — the finished cut just hasn't been promoted through Stage 5/6 yet.</td>
           </tr>
         </tbody>
       </table>
     </div>
     <div class="legend">
-      <span><span class="dot" style="background:var(--ok-dot)"></span>finished / current</span>
+      <span><span class="dot" style="background:var(--ok-dot)"></span>finished / current / published</span>
+      <span><span class="dot" style="background:var(--warn-dot)"></span>finished but not wired in, or a gap to close</span>
       <span><span class="dot" style="background:var(--skip-dot)"></span>archived, skipped, or superseded</span>
-      <span><span class="dot" style="background:var(--stop-dot)"></span>needs work</span>
+      <span><span class="dot" style="background:var(--stop-dot)"></span>needs building</span>
     </div>
   </section>
 
   <section>
     <div class="section-head">
       <h2>The Eyewitness series (EW01–EW09)</h2>
-      <span class="section-note">a whole line the first pass of this ledger missed entirely</span>
+      <span class="section-note">lives inside longform/EW0N_.../ alongside the six numbered longs</span>
     </div>
     <div class="tablewrap">
       <table>
         <thead>
           <tr>
-            <th style="width:20%">Episode</th>
+            <th style="width:16%">Episode</th>
             <th>Long + short narration</th>
-            <th>Visual work</th>
-            <th style="width:32%">Note</th>
+            <th>Visual work found</th>
+            <th style="width:30%">Note</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td class="piece">EW01 — Two Goats</td>
             <td><span class="chip ok"><span class="dot"></span>both locked</span></td>
-            <td><span class="chip warn"><span class="dot"></span>4 styles, none sketchbook</span></td>
-            <td class="note">Baroque (208 stills), painted-comic (8), retro-comic (25), inked (25). The project's own style bake-off ground.</td>
+            <td><span class="chip warn"><span class="dot"></span>4 superseded styles in longform/ + 2 sketchbook builds (1 done, 1 in-progress) — see dedup cards above</span></td>
+            <td class="note">Never went through <code>/publish</code> in ANY style. Roadmap #1 (free win, once the dedup call is made) + #2.</td>
           </tr>
-          <tr class="dim">
+          <tr>
             <td class="piece">EW02 — Abraham</td>
             <td><span class="chip ok"><span class="dot"></span>both locked</span></td>
-            <td><span class="chip stop"><span class="dot"></span>none</span></td>
-            <td class="note">Text stage only.</td>
+            <td><span class="chip warn"><span class="dot"></span>Baroque-oil gallery short finished (33 stills/19 clips, captioned) — not published, no sketchbook</span></td>
+            <td class="note">Roadmap #6 — needs a decision: migrate to sketchbook, or publish as-is on Baroque?</td>
           </tr>
-          <tr class="dim">
+          <tr>
             <td class="piece">EW03 — Joseph</td>
             <td><span class="chip ok"><span class="dot"></span>both locked</span></td>
-            <td><span class="chip stop"><span class="dot"></span>none</span></td>
-            <td class="note">Text stage only.</td>
+            <td><span class="chip warn"><span class="dot"></span>Baroque-oil gallery short finished (58 stills/19 clips, captioned) — not published, no sketchbook</span></td>
+            <td class="note">Roadmap #6, same decision as EW02. Also has a stale cross-reference to a moved EW01 asset path — harmless unless this gets rebuilt.</td>
           </tr>
           <tr class="dim">
             <td class="piece">EW04 — Bronze Serpent</td>
             <td><span class="chip ok"><span class="dot"></span>both locked</span></td>
-            <td><span class="chip stop"><span class="dot"></span>none</span></td>
-            <td class="note">A separate eyewitness take on the same subject as the numbered long. Text stage only.</td>
+            <td><span class="chip stop"><span class="dot"></span>zero visuals</span></td>
+            <td class="note">A separate eyewitness take on the same subject as the numbered long. Text stage only — backlog, not migration.</td>
           </tr>
           <tr class="dim">
             <td class="piece">EW05 — Jonah</td>
             <td><span class="chip ok"><span class="dot"></span>both locked</span></td>
-            <td><span class="chip stop"><span class="dot"></span>none</span></td>
-            <td class="note">Text stage only.</td>
+            <td><span class="chip stop"><span class="dot"></span>zero visuals</span></td>
+            <td class="note">Text stage only — backlog.</td>
           </tr>
           <tr class="dim">
             <td class="piece">EW06 — Noah</td>
             <td><span class="chip ok"><span class="dot"></span>both locked</span></td>
-            <td><span class="chip stop"><span class="dot"></span>none</span></td>
-            <td class="note">Not the same piece as the poc_castbible_look Noah taste-test below.</td>
+            <td><span class="chip stop"><span class="dot"></span>zero visuals</span></td>
+            <td class="note">Not the same piece as the poc_castbible_look Noah taste-test (see below). Text stage only — backlog.</td>
           </tr>
           <tr class="dim">
             <td class="piece">EW07 — Isaiah</td>
             <td><span class="chip ok"><span class="dot"></span>both locked</span></td>
-            <td><span class="chip stop"><span class="dot"></span>none</span></td>
-            <td class="note">Text stage only.</td>
+            <td><span class="chip stop"><span class="dot"></span>zero visuals</span></td>
+            <td class="note">Text stage only — backlog.</td>
           </tr>
           <tr class="dim">
             <td class="piece">EW08 — Passover</td>
             <td><span class="chip ok"><span class="dot"></span>both locked</span></td>
-            <td><span class="chip stop"><span class="dot"></span>none</span></td>
-            <td class="note">Text stage only.</td>
+            <td><span class="chip stop"><span class="dot"></span>zero visuals</span></td>
+            <td class="note">Text stage only — backlog.</td>
           </tr>
           <tr class="dim">
             <td class="piece">EW09 — Boaz</td>
             <td><span class="chip ok"><span class="dot"></span>both locked</span></td>
-            <td><span class="chip stop"><span class="dot"></span>none</span></td>
-            <td class="note">Text stage only.</td>
+            <td><span class="chip stop"><span class="dot"></span>zero visuals</span></td>
+            <td class="note">Text stage only — backlog.</td>
           </tr>
         </tbody>
       </table>
-    </div>
-    <div class="legend">
-      <span><span class="dot" style="background:var(--ok-dot)"></span>done</span>
-      <span><span class="dot" style="background:var(--warn-dot)"></span>partial / mixed</span>
-      <span><span class="dot" style="background:var(--stop-dot)"></span>not started</span>
     </div>
   </section>
 
   <section>
     <div class="section-head">
-      <h2>Sketchbook shorts &amp; style POCs</h2>
-      <span class="section-note">outside the six canonical longs</span>
+      <h2>batches/ — the 19 ink graphic-novel shorts</h2>
+      <span class="section-note">was scoped OUT of the last version of this ledger — now in-scope</span>
+    </div>
+    <p class="note" style="max-width:72ch;margin-bottom:14px">
+      All 19 are published and live on awakeden.com, all on <code>graphic_novel_inked</code> style
+      per their own <code>piece.json</code>. <code>batch_manifest.json</code>'s status field is
+      badly stale — it marks 11 of these "planned" when they're actually built and live; verified
+      status below comes from checking each piece's own <code>publish/PUBLISH_INDEX.html</code>
+      directly, not the manifest.
+    </p>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:22%">Piece</th>
+            <th>Cluster</th>
+            <th>Reference</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="piece">forsaken_cry_ps221</td>
+            <td>01 — Cross</td>
+            <td>Ps 22:1 / Matt 27:46</td>
+            <td><span class="chip warn"><span class="dot"></span>PUBLISHED (ink) — sketchbook migration POC in progress today, not yet adopted</span></td>
+          </tr>
+          <tr><td class="piece">body_foretold_ps2214</td><td>01 — Cross</td><td>Ps 22:14-17</td><td><span class="chip ok"><span class="dot"></span>published, ink</span></td></tr>
+          <tr><td class="piece">crucifixion_foretold_ps2218</td><td>01 — Cross</td><td>Ps 22:18</td><td><span class="chip ok"><span class="dot"></span>published, ink</span></td></tr>
+          <tr><td class="piece">declared_brethren_ps2222</td><td>01 — Cross</td><td>Ps 22:22</td><td><span class="chip ok"><span class="dot"></span>published, ink</span></td></tr>
+          <tr><td class="piece">ends_of_earth_ps2227</td><td>01 — Cross</td><td>Ps 22:27</td><td><span class="chip ok"><span class="dot"></span>published, ink</span></td></tr>
+          <tr><td class="piece">father_forgive_them</td><td>01 — Cross</td><td>Luke 23:34</td><td><span class="chip ok"><span class="dot"></span>published, ink</span></td></tr>
+          <tr><td class="piece">he_hath_done_this_ps2231</td><td>01 — Cross</td><td>Ps 22:31</td><td><span class="chip ok"><span class="dot"></span>published, ink</span></td></tr>
+          <tr><td class="piece">i_thirst_john1928</td><td>01 — Cross</td><td>John 19:28 / Ps 22:15</td><td><span class="chip ok"><span class="dot"></span>published, ink</span></td></tr>
+          <tr><td class="piece">into_thy_hands_luke2346</td><td>01 — Cross</td><td>Luke 23:46</td><td><span class="chip ok"><span class="dot"></span>published, ink</span></td></tr>
+          <tr><td class="piece">it_is_finished_john1930</td><td>01 — Cross</td><td>John 19:30</td><td><span class="chip ok"><span class="dot"></span>published, ink</span></td></tr>
+          <tr><td class="piece">mockers_words_ps227</td><td>01 — Cross</td><td>Ps 22:7-8</td><td><span class="chip ok"><span class="dot"></span>published, ink</span></td></tr>
+          <tr><td class="piece">pierced_zech1210</td><td>01 — Cross</td><td>Zech 12:10</td><td><span class="chip ok"><span class="dot"></span>published, ink</span></td></tr>
+          <tr><td class="piece">thirty_pieces_zech11</td><td>01 — Cross</td><td>Zech 11:12-13</td><td><span class="chip ok"><span class="dot"></span>published, ink</span></td></tr>
+          <tr><td class="piece">today_paradise_luke2343</td><td>01 — Cross</td><td>Luke 23:43</td><td><span class="chip ok"><span class="dot"></span>published, ink</span></td></tr>
+          <tr><td class="piece">watch_one_hour_matt2640</td><td>01 — Cross</td><td>Matt 26:40</td><td><span class="chip ok"><span class="dot"></span>published, ink</span></td></tr>
+          <tr><td class="piece">woman_behold_john1926</td><td>01 — Cross</td><td>John 19:26</td><td><span class="chip ok"><span class="dot"></span>published, ink</span></td></tr>
+          <tr><td class="piece">empty_tomb_john208</td><td>02 — Resurrection</td><td>John 20:8</td><td><span class="chip ok"><span class="dot"></span>published, ink, locked</span></td></tr>
+          <tr><td class="piece">sign_of_jonah_matt1240</td><td>02 — Resurrection</td><td>Matt 12:40</td><td><span class="chip ok"><span class="dot"></span>published, ink</span></td></tr>
+          <tr><td class="piece">women_first_witnesses_luke245</td><td>02 — Resurrection</td><td>Luke 24:5-6</td><td><span class="chip ok"><span class="dot"></span>published, ink, locked</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="legend">
+      <span><span class="dot" style="background:var(--ok-dot)"></span>published, unchanged, needs migrating (roadmap #5)</span>
+      <span><span class="dot" style="background:var(--warn-dot)"></span>migration pilot underway</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>poc_living_sketchbook/ — the production ledger of the new standard</h2>
+      <span class="section-note">what's actually already built on the target style</span>
     </div>
     <div class="tablewrap">
       <table>
         <thead>
           <tr>
             <th style="width:20%">Piece</th>
-            <th>Stills + animation</th>
-            <th>Score / SFX</th>
-            <th>Captions</th>
-            <th>Watermark</th>
-            <th style="width:20%">Note</th>
+            <th>Maps to</th>
+            <th>Scale</th>
+            <th style="width:30%">State</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td class="piece">Bronze Serpent<span class="ref">short, 71.5s</span></td>
-            <td><span class="chip ok"><span class="dot"></span>done</span></td>
-            <td><span class="chip ok"><span class="dot"></span>done</span></td>
-            <td><span class="chip ok"><span class="dot"></span>burned in</span></td>
-            <td><span class="chip ok"><span class="dot"></span>done</span></td>
-            <td class="note">The only fully-finished sketchbook short. LOCKED, user-approved.</td>
-          </tr>
-          <tr>
-            <td class="piece">Jericho<span class="ref">Rahab · Joshua 2 / Heb. 11:31</span></td>
-            <td><span class="chip ok"><span class="dot"></span>done</span></td>
-            <td><span class="chip warn"><span class="dot"></span>unchecked</span></td>
-            <td><span class="chip ok"><span class="dot"></span>burned in</span></td>
-            <td><span class="chip ok"><span class="dot"></span>done</span></td>
-            <td class="note">Verse card has real lettering; narration now hand-ink captioned too (2026-08-10).</td>
-          </tr>
-          <tr>
-            <td class="piece">Storm<span class="ref">Jesus calms the sea</span></td>
-            <td><span class="chip ok"><span class="dot"></span>done</span></td>
-            <td><span class="chip warn"><span class="dot"></span>unchecked</span></td>
-            <td><span class="chip ok"><span class="dot"></span>burned in</span></td>
-            <td><span class="chip ok"><span class="dot"></span>done</span></td>
-            <td class="note">7 watermark-backup revisions on disk — real iteration before landing here.</td>
-          </tr>
-          <tr>
-            <td class="piece">Two Goats<span class="ref">sketchbook short, likely the DoA pilot</span></td>
-            <td><span class="chip ok"><span class="dot"></span>done</span></td>
-            <td><span class="chip warn"><span class="dot"></span>unchecked</span></td>
-            <td><span class="chip ok"><span class="dot"></span>burned in</span></td>
-            <td><span class="chip ok"><span class="dot"></span>done</span></td>
-            <td class="note">Not the same piece as EW01 above — this is the sketchbook-style short.</td>
-          </tr>
-          <tr>
-            <td class="piece">At-the-Door<span class="ref">poc_castbible_look, 58s</span></td>
-            <td><span class="chip ok"><span class="dot"></span>done</span></td>
-            <td><span class="chip warn"><span class="dot"></span>unchecked</span></td>
-            <td><span class="chip ok"><span class="dot"></span>burned in</span></td>
-            <td><span class="chip ok"><span class="dot"></span>done</span></td>
-            <td class="note">The style's own proving ground. Lane still undecided.</td>
-          </tr>
-          <tr>
-            <td class="piece">Noah / The Builder<span class="ref">poc_castbible_look, 30s</span></td>
-            <td><span class="chip ok"><span class="dot"></span>done</span></td>
-            <td><span class="chip warn"><span class="dot"></span>unchecked</span></td>
-            <td><span class="chip ok"><span class="dot"></span>burned in</span></td>
-            <td><span class="chip ok"><span class="dot"></span>done</span></td>
-            <td class="note">16:9 caption layout (reused _finish_long.py, not the 9:16 burner). Yellow-highlight cards are separate on-screen titles. Taste test.</td>
-          </tr>
+          <tr><td class="piece">seed_of_the_woman</td><td>Longform 05</td><td>long, 8:24 (+trailer)</td><td><span class="chip ok"><span class="dot"></span>LOCKED, published, live asset</span></td></tr>
+          <tr><td class="piece">bronze_serpent_long</td><td>Longform 04</td><td>long, 9:55</td><td><span class="chip warn"><span class="dot"></span>finished, not wired to publish</span></td></tr>
+          <tr><td class="piece">bronze_serpent</td><td>EW04 Bronze Serpent <span class="ref" style="display:inline">(eyewitness short — NOT one of the long's 3 declared shorts, corrected on red-team)</span></td><td>short, 71.5s</td><td><span class="chip ok"><span class="dot"></span>LOCKED, user-approved (not published — EW04 has no publish kit)</span></td></tr>
+          <tr><td class="piece">day_of_atonement</td><td>Longform 06</td><td>long, 9:54</td><td><span class="chip warn"><span class="dot"></span>75 spreads, finished, not wired to publish</span></td></tr>
+          <tr><td class="piece">two_goats</td><td>EW01 Two Goats</td><td>short, 70.8s</td><td><span class="chip ok"><span class="dot"></span>finished, captioned, watermarked — current EW01 canonical candidate</span></td></tr>
+          <tr><td class="piece">ew01_two_goats_short</td><td>EW01 Two Goats</td><td>short, 17 spreads</td><td><span class="chip warn"><span class="dot"></span>IN PROGRESS — Stationer medium-system pilot, stills only, started today</span></td></tr>
+          <tr><td class="piece">jericho</td><td>Rahab, Josh 2 / Heb 11:31 (new, no prior style)</td><td>short, 64.8s</td><td><span class="chip ok"><span class="dot"></span>finished, captioned, watermarked</span></td></tr>
+          <tr><td class="piece">storm</td><td>Jesus calms the sea, Matt 8/Mark 4 (new, no prior style)</td><td>short, 63.0s</td><td><span class="chip ok"><span class="dot"></span>finished, captioned, watermarked</span></td></tr>
         </tbody>
       </table>
+    </div>
+    <p class="note" style="max-width:none;margin-top:12px">
+      Shared infrastructure inside this folder, not individual pieces: <code>cast/</code> and
+      <code>world/</code> (reference sheets reused across builds), <code>_style_identity_bakeoff/</code>
+      (the Stationer medium-system R&amp;D), <code>_style_bakeoff/</code> (earlier technique bake-offs).
+    </p>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Real content on other styles — out of the sketchbook migration count, flagged for a lane decision</h2>
+      <span class="section-note">finished, real narrative work — just not Baroque/ink/sketchbook</span>
+    </div>
+    <div class="aside">
+      <ul>
+        <li><b>poc_castbible_look/</b> — Noah/The Builder (Gen 7:16, 30.5s) and At-the-Door (John
+        10:9, 58.3s). Both explicit taste-tests for the ArkAIology cast-bible look, finished and
+        captioned, lane still undecided.</li>
+        <li><b>poc_comic_page/</b> — "In No Wise" (John 6:37), LOCKED in the "Gold Seam"
+        painted-comic style, plus a second comic-strip pass. Real, finished, published-quality work
+        in a style this project has separately marked DEAD for new production (see memory
+        <code>visual-style-deprecation-2026-07-25</code>) — likely not worth migrating, just leave as-is.</li>
+        <li><b>poc_thief_e2e/</b> — The Penitent Thief (Luke 23:39-43), finished in the
+        "comic-strip-native" style, 63.4s. Real content, separate style track, DRAFT/not locked
+        per its own skill status.</li>
+        <li><b>drawing_office/</b> — a brand-new experimental engine (all files dated today):
+        Two Goats (a 3rd attempt, see dedup card) and Father Who Ran (Prodigal Son, Luke 15),
+        both ~60-70s, finished. Worth its own evaluation as a possible successor system, but not
+        sketchbook and not part of this migration.</li>
+        <li><b>poc_bethesda_style_test/far_corner_episode/</b> — "Bethesda Far Corner" (John 5),
+        finished, scored+SFX+captioned across v1-v4 cuts, built in a style adjacent to but distinct
+        from living-sketchbook. The rest of <code>poc_bethesda_style_test/</code> (round2/round3
+        devices) is explicitly throwaway device R&amp;D, not content.</li>
+      </ul>
     </div>
   </section>
 
   <section>
     <div class="section-head">
-      <h2>Out of scope for this ledger</h2>
-      <span class="section-note">real, finished work — just never a sketchbook candidate</span>
+      <h2>The 44-piece text/audio backlog</h2>
+      <span class="section-note">PythonProject1/jesus/narration/ — the shorts pipeline's source of truth</span>
     </div>
     <div class="aside">
-      Two more production lines exist with real locked narration, but neither has ever
-      touched Baroque or sketchbook, so they don't belong on a migration count:
+      <p style="margin:0 0 10px">
+        44 real narrations live here (see the dedup card above for duplicate-verse clusters).
+        Every one of these was cross-checked against every visual-work location found by this
+        audit (longform/, batches/, poc_living_sketchbook/, poc_castbible_look/, drawing_office/,
+        every poc_* folder) — the great majority, roughly 35 of the 44, have <b>zero visual work
+        in any style</b>. A handful likely fed the "other styles" pieces above by topic overlap
+        (e.g. "20 He Was Asleep in the Storm" ≈ the sketchbook <code>storm/</code> piece; the
+        John 5:6 cluster ≈ Bethesda Far Corner; the I AM the Door cluster ≈ At-the-Door; the
+        Prodigal Son 4-way ≈ drawing_office's Father Who Ran) but exact script-to-build matching
+        wasn't verified line-by-line this pass.
+      </p>
       <ul>
-        <li><b>19 batches/ viral shorts</b> (cluster_01_cross + cluster_02_resurrection) —
-        all built July 3–12, all ink graphic-novel by default, zero Baroque among them.
-        A separate, ongoing 60-second production line.</li>
-        <li><b>3 v2/pilot prototypes</b> (Isaiah 53:5, the Mockers' Words, Zechariah 12:10) —
-        early shorts for the v2 architecture, own narration + visual folders.</li>
+        <li><b>2 gaps to close before any visual work can start on them:</b> "05 He Said It Under
+        the Lamps" and "23 The Prepared Belly" are both text-LOCKED with zero audio anywhere —
+        need a <code>/voice</code> pass first (or should be retired: 05 duplicates 06's verse).</li>
+        <li><b>1 dead stub:</b> the top-level <code>psalms 1 - 10</code> folder is completely
+        empty — no content, likely leftover scaffolding. Safe to delete or ignore.</li>
+        <li><b>Not a migration item.</b> When any backlog piece is eventually greenlit for visual
+        production, it starts natively in sketchbook — there's no old-style asset to convert.</li>
       </ul>
     </div>
   </section>
 
   <footer>
-    Rebuilt 2026-08-10 by reading the repository directly — every <code>narration.mp3</code>
-    in the repo (~60 files), every <code>archive/*_baroque</code>, every
-    <code>visual_16x9*</code> variant, <code>poc_living_sketchbook/</code>, and
-    <code>poc_castbible_look/</code> — plus spot-checking real frames from every
-    sketchbook video to confirm captions are actually burned in, not inferred from filenames.
-    <b>Captions column updated 2026-08-11</b> — Jericho/Storm/Two Goats/At-the-Door/Noah
-    all moved from missing/different to burned in, each confirmed by extracting and
-    reading real frames (not by the render's exit code).
+    Rebuilt 2026-08-11 via four parallel disk-verification passes (not from memory or the prior
+    ledger's own claims): the full <code>PythonProject1/jesus/narration/</code> tree (44 real
+    narrations), <code>longform/</code> (6 numbered longs + EW01-EW09), all 19
+    <code>batches/</code> ink shorts (cross-checked against the stale <code>batch_manifest.json</code>),
+    and every <code>poc_living_sketchbook/</code> + experimental-style folder plus
+    <code>v2/pilot/</code>. Every status chip above reflects what's actually on disk — publish
+    kits, FINAL_VIDEO.txt pins, and rendered file counts — not a manifest's stated status, which
+    was found to be stale/wrong in several places (documented inline above).
   </footer>
 
 </div>

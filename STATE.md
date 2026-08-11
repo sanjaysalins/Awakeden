@@ -1,5 +1,75 @@
 # STATE.md — progress tracker
 
+**2026-08-11 (session closed for the day) Stopped at the very start of
+Task #1 execution:** Began wiring Bronze Serpent's finished sketchbook long
+to publish (the first item on the 14-task migration TODO below) — only got
+as far as reading the current (stale, inked-pointing) `publish/_source.json`
+before the user asked to save everything and pick up tomorrow. **Nothing on
+disk was changed** — task #1 was briefly marked in_progress then reverted to
+pending. Exact resume point, including the precomputed FINAL_VIDEO.txt pin
+path and the open decision (bare pin vs full publish-pack regen), is written
+into RESUME.md's top block.
+
+**2026-08-11 (same day, even truer still) Migration TODO regrouped by real
+episode structure + red-teamed:** User asked to red-team the migration
+analysis, then to turn it into a TODO organized by "long + associated
+shorts." Red-team (direct filesystem spot-checks, not re-trusting the
+agents): the load-bearing "free wins" claims held up exactly (verified
+Bronze Serpent's `publish/_source.json` still points at the old inked
+video; Day of Atonement and EW01 genuinely have no publish folder). Found
+and fixed one real gap: `longform/EW01_Two_Goats/v1/short/` — a separately
+locked short-form script none of the 4 research agents surfaced — is the
+real source both existing sketchbook Two Goats builds pull from.
+
+Then pulled the REAL "long + shorts" grouping mechanism this project
+already has (`pipeline/episode_state.py`'s `parent:` link, sourced from
+`_website/manifest.yaml`) instead of grouping by theme-guessing. This
+surfaced a second correction: `poc_living_sketchbook/bronze_serpent` (the
+finished, LOCKED short) turns out to be built from EW04 Bronze Serpent's
+eyewitness script, NOT one of the canonical long's own 3 manifest-declared
+shorts — those 3 (Look and Live / The Thing That Killed Them / Son of Man
+Lifted Up) are confirmed 100% unbuilt. Fixed the mis-attribution in the
+tracker. Also found Day of Atonement's 3 declared shorts have ZERO
+narration text anywhere (need a `/narrate` pass before any visual work,
+unlike Bronze Serpent's and Seed of the Woman's, whose shorts already have
+locked text ready to go straight to visual production).
+
+Rebuilt `STYLE_MIGRATION_TRACKER.html`'s roadmap section around the 6 real
+episodes (Bronze Serpent, Day of Atonement, Seed of the Woman, Psalm 22,
+Passover Lamb, Isaiah 53), each now its own priority-ordered block covering
+both the long AND its declared shorts together. Created 14 tracked tasks
+(TaskCreate) mirroring this structure, so the plan survives into future
+sessions as an actionable checklist, not just a document. **Nothing
+executed yet** — this session only produced the analysis + TODO. Full
+detail: RESUME.md top.
+
+**2026-08-11 (same day, even truer latest) Migration-roadmap checklist DONE
+(not committed yet):** Ran the exact task queued at the end of the Stationer
+session below: a comprehensive checklist of every narration in the project,
+deduped across style attempts, plus a prioritized migration plan (oil + ink
+→ sketchbook). Dispatched 4 parallel fresh-context research agents to
+re-verify everything against the real filesystem rather than trust the
+existing (self-admittedly partial) `STYLE_MIGRATION_TRACKER.html`.
+
+Real findings the old ledger missed: Bronze Serpent's sketchbook build (long
++short) and Day of Atonement's are BOTH finished on disk but never wired
+into `/publish` (Bronze Serpent's live asset is still the old inked video);
+EW01 Two Goats has a live, unresolved THREE-WAY duplicate in progress right
+now (today's Stationer pilot vs. the already-finished 2026-07-28 sketchbook
+build vs. a third attempt in a brand-new untracked `drawing_office/` engine,
+also dated today); the 19 `batches/` ink shorts are now confirmed in-scope
+(previous ledger wrongly scoped them out), and one of them
+(`forsaken_cry_ps221`) already has a live sketchbook migration POC sitting
+in its own folder from today, unresolved; `batch_manifest.json`'s status
+field is confirmed stale/wrong for 11 of ~16 tracked shorts.
+
+Rebuilt `STYLE_MIGRATION_TRACKER.html` in place (same path) with the full
+checklist, 4 dedup cards, and a 6-item priority roadmap (free publish-wiring
+wins first, then Isaiah 53 + Psalm 22 full rebuilds, then Passover Lamb from
+zero, then the batches/ ink line, then EW02/03 decision). **Not yet reviewed
+by the user; nothing executed from the roadmap yet.** Full detail:
+RESUME.md top.
+
 **2026-08-11 (same day, truest latest) The Stationer — dynamic multi-style
 rendering — designed, built, validated on a real pilot, LOCKED, and
 committed (commits 6ba05bb, 0008ace):** User wanted Fable's fresh-eyes style

@@ -1,4 +1,241 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-11 (CLOSED FOR THE DAY — picking up
+# tomorrow at Task #1, Bronze Serpent's publish wiring) — READ THIS FIRST,
+# supersedes every block below.
+#
+# ── WHERE WE STOPPED: right at the start of executing Task #1 ("Bronze
+# Serpent: wire finished sketchbook long+short to publish" — see the 14-task
+# list in this session's TaskList, still all pending/untouched except #1
+# which was briefly `in_progress` then reverted to `pending` since nothing
+# was actually written to disk). User said "just save everything... pick it
+# up tomorrow" right as I'd only READ the current publish metadata — no
+# files were changed. Repo is clean except this session's own doc edits
+# (RESUME.md, STATE.md, STYLE_MIGRATION_TRACKER.html).
+#
+# ── EXACT NEXT STEP FOR TOMORROW (Task #1), already scoped so no re-discovery
+# is needed:
+#
+# 1. The finished sketchbook file to promote is:
+#    `poc_living_sketchbook/bronze_serpent_long/
+#    BRONZESERPENT_LONG_living_sketchbook_cc.mp4` (450MB, captioned +
+#    watermarked + scored + sfx — the most-complete file in that folder;
+#    confirmed by file timestamps: scored_sfx 10:49 -> cc 12:08, with a
+#    `.prewm.bak.mp4` backup at 11:24 in between, matching this project's
+#    known watermark-last pattern).
+#
+# 2. `pipeline/finality.py`'s pin mechanism is the right tool: write
+#    `longform/04_The_Bronze_Serpent/v1/FINAL_VIDEO.txt` with first line
+#    `../../../poc_living_sketchbook/bronze_serpent_long/
+#    BRONZESERPENT_LONG_living_sketchbook_cc.mp4` (exact same relative-path-
+#    with-`../../../`-escape format already used and verified working at
+#    `longform/05_The_Seed_Of_The_Woman/v1/FINAL_VIDEO.txt`, which points at
+#    `../../../poc_living_sketchbook/seed_of_the_woman/
+#    SEEDOFTHEWOMAN_LONG_WITH_TRAILER.mp4`).
+#
+# 3. UNLIKE Day of Atonement (which had NO publish/ folder at all), Bronze
+#    Serpent already has a FULL publish pack built around the OLD inked
+#    video — `longform/04_The_Bronze_Serpent/v1/publish/` contains
+#    PUBLISH_INDEX.html, _source.json, captions.srt, youtube_long.md,
+#    thumbs/. Captured the current (stale) `_source.json` content before
+#    stopping — it points `video` + `words_json` + `thumbnail` at the inked
+#    file, with its own `final_sha`/`copy_final_sha`. Simply pinning
+#    FINAL_VIDEO.txt makes `finality.py` (and anything reading through it —
+#    production_board, release_check) recognize the sketchbook file as
+#    canonical, but the publish PACK ITSELF (captions.srt timing, thumbnail
+#    frame, PUBLISH_INDEX.html copy, _source.json) will still describe the
+#    OLD inked video until it's regenerated. **Open decision for tomorrow:**
+#    is a bare pin enough for now (mirrors what "free win" means — $0,
+#    mechanical), or does closing this task properly require re-running
+#    `/publish` against the new final video to regenerate the whole pack?
+#    Leaning toward the latter being the actually-complete version of "wire
+#    to publish," but flag it to the user before spending the extra steps,
+#    since it's more surface area than a one-line pin.
+#
+# 4. After pinning (and/or republishing), run the deterministic `$0`
+#    verify: `.venv\Scripts\python.exe release_check.py` (the SYNC-G1..G7
+#    fail-closed gate) to confirm nothing else broke — this is the standing
+#    verify-check for any change like this per CLAUDE.md.
+#
+# ── AFTER TASK #1: Task #2 (Bronze Serpent's 3 unbuilt shorts) is next in
+# the same episode, then Task #3 (Day of Atonement's publish wiring, same
+# pin mechanism but from a clean slate — no existing publish/ folder to
+# reconcile). Full 14-task order is in the TaskList and mirrored in
+# `STYLE_MIGRATION_TRACKER.html`'s headline section.
+#
+# ── NOTHING ELSE CHANGED THIS SESSION beyond the 3 doc files already noted.
+# No production media touched, no spend, no commits yet as of this block's
+# writing (see whether a commit follows immediately after in git log).
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-11 (same day, even truer still —
+# migration analysis red-teamed + turned into a real TODO grouped by episode)
+# — READ THIS FIRST, supersedes the "even truer latest" block right below it.
+#
+# ── WHAT HAPPENED: user asked to red-team the migration checklist (block
+# below), then to turn it into a TODO organized in "sets of long and
+# associated shorts."
+#
+# ── RED-TEAM RESULT: the decision-critical claims held up under direct
+# filesystem spot-checks (Bronze Serpent's `publish/_source.json` really does
+# still point at the old inked video; Day of Atonement and EW01 genuinely
+# have no publish folder at all). One real gap found and fixed: NONE of the
+# 4 research agents surfaced `longform/EW01_Two_Goats/v1/short/` — a
+# separately-locked SHORT-form script (own `narration.md`,
+# `SHORT_VISUAL_STRATEGY.md`, a `_punchy/` alt-pacing take) that both
+# existing sketchbook Two Goats builds actually pull from. Added to the EW01
+# dedup card.
+#
+# ── THE REAL EPISODE STRUCTURE: rather than keep grouping by theme-guessing,
+# pulled this project's OWN real "long + shorts" mechanism —
+# `pipeline/episode_state.py`'s `parent:` field, sourced from
+# `_website/manifest.yaml` (NOT from any publish_meta.json, which never
+# carries it). This is the same logic the production board already uses to
+# detect an episode. Grepping the manifest for `parent:` gave the true,
+# authoritative grouping — and it surfaced a SECOND real correction beyond
+# the red-team pass: `poc_living_sketchbook/bronze_serpent` (the finished,
+# LOCKED 71.5s short) is built from `longform/EW04_Bronze_Serpent/v1/short/
+# narration.spoken.txt` — i.e. it's **EW04's eyewitness cut**, NOT one of
+# the canonical Bronze Serpent long's own 3 manifest-declared shorts. Those
+# 3 (bronze-serpent-01-look-and-live / 02-the-thing-that-killed-them /
+# 03-son-of-man-lifted-up) are confirmed 100% unbuilt in any style — the
+# tracker previously mis-labeled the finished short as satisfying one of
+# these. Fixed in the tracker's sketchbook-ledger table.
+#
+# ── ALSO FOUND while building the per-episode TODO: Day of Atonement's 3
+# manifest-declared shorts (Goat That Carried It Away / Blood Behind the
+# Veil / Once for All) have ZERO narration text anywhere — direct search of
+# the whole `PythonProject1/jesus/narration/` tree for matching titles/refs
+# came up empty. Unlike Bronze Serpent's and Seed of the Woman's associated
+# shorts (which already have locked text, ready straight for visual
+# production), Day of Atonement's shorts need a full Stage 1 `/narrate` pass
+# FIRST — a from-zero build, not a migration, and slower than the other two
+# "long is done, just build the shorts" episodes.
+#
+# ── THE REAL 6 EPISODES (long + its manifest `parent:`-linked shorts),
+# priority order, now BOTH written into `STYLE_MIGRATION_TRACKER.html`'s
+# headline section AND tracked as 14 TaskCreate tasks in this session (so
+# the plan survives as an actionable checklist, not just a doc):
+# 1. Bronze Serpent — long: wire to publish ($0) · 3 shorts: build from zero
+#    (text already locked, straight to visual).
+# 2. Day of Atonement — long: wire to publish ($0) · 3 shorts: write text
+#    first (Stage 1), THEN build.
+# 3. Seed of the Woman — long: done, nothing to do · 4 shorts: build from
+#    zero (text already locked, straight to visual) — cheapest full
+#    episode-completion on the list.
+# 4. Psalm 22 — finish the live `forsaken_cry_ps221` sketchbook pilot first
+#    (already in progress, unresolved), use it as the recipe, then migrate
+#    the long (published ink, 88... wait 83 stills, ~$50-90 rebuild) + the
+#    remaining 7 of its 8 manifest-declared shorts (all studio_complete ink).
+#    Biggest single episode by piece count.
+# 5. The Passover Lamb — long (only archived Baroque exists) + all 4
+#    manifest-declared shorts, entirely from zero. Most exposed episode.
+# 6. Isaiah 53 — the ONE canonical long with NO manifest-declared shorts set
+#    at all. Dedup its 3 unparented same-verse backlog narrations and decide
+#    whether to formally give it a shorts set (like Psalm 22's) BEFORE
+#    spending on the long's rebuild (published ink, 88 stills, ~$50-90).
+#
+# ── OUTSIDE THE EPISODE PATTERN, tracked but lower priority (also has its
+# own TaskCreate tasks): EW01 Two Goats' 3-way build duplicate needs
+# resolving before it can publish in ANY style (see the EW01 dedup card);
+# EW02/EW03 each have a finished-but-unpublished Baroque-gallery short
+# needing a lane decision; 11 `batches/` shorts (8 Cross + 3 Resurrection)
+# are studio_complete on ink but carry NO `parent:` link to any of the 6
+# episodes above (confirmed via the manifest, not assumed) — a separate
+# standalone-shorts migration line, unscheduled.
+#
+# ── DELIVERABLES: `STYLE_MIGRATION_TRACKER.html` rebuilt again (same path);
+# 14 tasks in this session's TaskList mirroring the plan above, in the same
+# priority order. **Nothing executed yet** — still purely analysis + TODO.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-11 (same day, even truer latest —
+# the comprehensive migration-roadmap checklist, requested at the end of the
+# Stationer session below, is DONE) — READ THIS FIRST, supersedes the
+# "Stationer" block right after this one for the migration-roadmap task
+# specifically (the Stationer lock itself is still current, read that block
+# for the medium-system details).
+#
+# ── WHAT HAPPENED: ran the exact 3-deliverable task the user asked for at
+# the end of the prior session ("very clear and distinct road map of a
+# migration plan... comprehensive checklist of everything... dedup them from
+# the ink style... create a migration plan"). Did NOT trust the existing
+# `STYLE_MIGRATION_TRACKER.html` — dispatched 4 parallel fresh-context Explore
+# agents to re-verify everything against the real filesystem: (1) the full
+# `PythonProject1/jesus/narration/` tree, (2) `longform/` six numbered longs +
+# EW01-EW09, (3) all 19 `batches/` ink shorts, (4) every `poc_living_sketchbook/`
+# + experimental-style folder + `v2/pilot/`. Then synthesized and rebuilt
+# `STYLE_MIGRATION_TRACKER.html` IN PLACE (same file, same path) as the
+# comprehensive checklist + dedup + roadmap deliverable.
+#
+# ── REAL FINDINGS THE OLD LEDGER GOT WRONG OR MISSED:
+# - Bronze Serpent's sketchbook build (long AND short) is FINISHED on disk but
+#   the live published asset is STILL the old inked video — a publish-pointer
+#   swap, not new work. Same for Day of Atonement (finished, zero publish kit
+#   at all) and EW01 Two Goats (finished sketchbook short, never published in
+#   ANY style, ever). These are now Roadmap #1, "free wins" — $0, no new render.
+# - EW01 has a live, unresolved DUPLICATE build in progress right now: today's
+#   Stationer pilot (`poc_living_sketchbook/ew01_two_goats_short/`, stills-only)
+#   is building the SAME content as the already-finished
+#   `poc_living_sketchbook/two_goats/` (2026-07-28). A THIRD Two Goats attempt
+#   also exists in a brand-new untracked engine, `drawing_office/episodes/
+#   two_goats/` (all files dated today). Three separate builds of one piece —
+#   flagged as a dedup card, not yet resolved by the user.
+# - The `batches/` 19 ink shorts are now confirmed IN SCOPE (the old ledger
+#   explicitly scoped them out as "not a Baroque migration candidate" — wrong
+#   framing now that ink also needs to move). One of them,
+#   `batches/cluster_01_cross/forsaken_cry_ps221/`, already has a live,
+#   in-progress sketchbook migration POC sitting in its own folder from TODAY
+#   (5 iteration scripts + rendered test mp4s) — not yet adopted as the
+#   published version. This is the natural pilot/recipe piece for rolling the
+#   other 18 through later (Roadmap #5).
+# - `batch_manifest.json`'s own status field is confirmed STALE/WRONG for 11
+#   of the ~16 shorts it tracks (says "planned" when the piece is actually
+#   built, rendered, and live on awakeden.com) — don't trust it as a status
+#   source without checking each piece's own `publish/PUBLISH_INDEX.html`.
+# - EW02 Abraham and EW03 Joseph both have a FINISHED (not published) Baroque-
+#   oil gallery-style short nobody had tracked before — a real decision point
+#   (migrate to sketchbook, or just publish as-is on Baroque?), not yet made.
+# - The 44-narration text/audio backlog in `PythonProject1/jesus/narration/`
+#   has real duplicate-verse clusters worth a user decision before any of them
+#   enters a visual build queue (e.g. 3 separate "I AM the Door" narrations,
+#   4 separate "Who do you say I am" narrations) — listed in full in the
+#   ledger's dedup section. Two locked narrations ("05 He Said It Under the
+#   Lamps", "23 The Prepared Belly") have ZERO audio anywhere, a gap before
+#   any /voice pass could even start on them. `psalms 1 - 10` is a totally
+#   empty stub folder, safe to ignore/delete.
+#
+# ── THE ROADMAP ITSELF (full detail + reasoning in the ledger — read it, this
+# is just the priority order): (1) wire up the 4 free wins — Bronze Serpent
+# long+short, Day of Atonement, EW01 — $0, publish-pipeline work only.
+# (2) resolve the EW01 in-progress-pilot-vs-finished-build duplicate before it
+# goes stale. (3) full sketchbook rebuild of Isaiah 53 and Psalm 22 — both
+# currently PUBLISHED on ink, the two biggest/most-visible items still on the
+# old style, real spend (~$50-90 each, Seed-of-the-Woman-scale). (4) full
+# rebuild from zero of The Passover Lamb — the only piece with NOTHING but an
+# archived Baroque asset, no replacement in any current style.
+# (5) roll the 19 `batches/` ink shorts to sketchbook as their own production
+# line, finishing the live `forsaken_cry_ps221` pilot first and using it as
+# the recipe. (6) decide EW02/EW03's lane, then explicitly leave EW04-09 and
+# the 44-narration backlog alone — they have zero visuals in any style, so
+# whenever they're built they start natively in sketchbook; no conversion
+# debt there.
+#
+# ── DELIVERABLE: `C:\Users\sanjay\PycharmProjects\JesusInTheBible\
+# STYLE_MIGRATION_TRACKER.html` — rebuilt in place (same file/path as before,
+# so any existing bookmark still works). Not yet reviewed by the user.
+#
+# ── NOT DONE / EXPLICIT NEXT STEP: this session only produced the roadmap
+# document — none of its 6 action items have been executed yet. The natural
+# next session, once the user has reviewed the ledger, is to start on
+# Roadmap #1 (the 4 free publish-wiring wins) since it's $0 and closes real
+# already-finished work, UNLESS the user wants to resolve a dedup call first
+# (especially the EW01 three-way duplicate, since one of those builds is
+# actively mid-progress and shouldn't be left half-finished).
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-11 (same day, truest latest — the
 # Stationer dynamic multi-style system LOCKED + committed) — READ THIS FIRST,
 # supersedes the "title/verse-card standard" block below.
