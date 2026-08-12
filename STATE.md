@@ -1,5 +1,161 @@
 # STATE.md — progress tracker
 
+**2026-08-12 (session closed for the night — Bronze Serpent Task #1 done,
+Look and Live built through captions, God Hung Up a Snake built through
+title cards, both missing score/sfx/watermark; full detail in RESUME.md's
+top block):** Long session, four real chunks of work.
+
+**1. Task #1 from the 2026-08-11 migration roadmap — Bronze Serpent long
+wired to publish.** Bare $0 pin: `longform/04_The_Bronze_Serpent/v1/
+FINAL_VIDEO.txt` points at `poc_living_sketchbook/bronze_serpent_long/
+BRONZESERPENT_LONG_living_sketchbook_cc.mp4`. Verified via
+`release_check.py` (GREEN, 0 FAIL) and `pipeline.release_state.gather()`
+directly. Known accepted gap: the publish PACK itself (captions/thumbnail/
+copy) still describes the old inked video — user chose bare pin over full
+republish.
+
+**2. Look and Live (Bronze Serpent short #1, Numbers 21:8-9) built end to
+end through captions.** `poc_living_sketchbook/look_and_live/`. Real
+findings along the way: `nano_banana_pro` (this project's usual stills
+default) failed outright twice; `kling_omni_image` (0.5cr, cheapest tested)
+became the working default for this cluster, with `seedream_v4_5` (1cr)
+specifically for the torn-paper landing device Kling couldn't execute after
+2 tries. 6 of 13 first-pass stills needed fixes (numerals/gibberish text,
+camera-angle miss, a doctrine slip — an unchained background object drifted
+to gold). **User then caught a real design mistake**: 8 of 13 spreads
+repeated the same pole/serpent object — redesigned the beat map to mine the
+wider Numbers 21 story (the people's complaint, Moses interceding) instead
+of defaulting to "show the object again," cutting repetition to 5/13. User
+also proposed the landing's real thesis image (Christ on the cross vs. the
+dark serpent below, direct visual contrast) — built via Seedream, chaining
+`cast/jesus_ref.png`. Animation: 13 clips, Seedance/Kling split per the
+locked tiering, 2 real defects caught by filmstrip QC (s04 invented blood on
+a wound, fixed via `dynamic_cam3d`'s $0 deterministic camera push after 2
+providers both hallucinated; s03 camera-zoom violation, fixed via provider
+swap to Kling). Assembly: hard cuts, `pipeline.score_mix.AFMT`, INV-26 hold.
+**Title/quote/citation cards**: applied the LOCKED yellow/black/red/white
+standard from yesterday's session (`_s3b_titlecards.py`, ported from
+`batches/cluster_01_cross/forsaken_cry_ps221/_poc4_full_standard.py`'s
+`type_img()`) — then found and fixed TWO real bugs: a second Scribed-Ink
+verse card baked into the core assembly used a DIFFERENT lettering style
+than the new cards (deprecated it, moved that verse to a matching red/white
+card instead); a copied caption-skip-window pattern from Two Goats silenced
+7.7s of real captions for no reason (Two Goats' card sat near the caption
+baseline, this episode's cards sit in the top third — checked the actual
+positions, removed the unneeded skip). Final: `LOOKANDLIVE_living_sketchbook_
+cc.mp4`, 62.5s (rounds to 62.508 post-caption-reencode), video/audio matched.
+**User said "this episode can be locked" at this point — before score, sfx,
+or watermark were ever added.** Flagged this explicitly to the user this
+session as likely premature; not yet resolved which they want (see RESUME.md).
+
+**3. Cost/process retrospective, mid-session.** User asked what's draining
+credits — found ~340cr/~3hrs of UNRELATED spend from a separate live
+process (`PythonProject1\.venv\Scripts\python.exe scripts/animate_clips.py
+969-year-question-short-one-name-two-roads`, plus a `tools/watchdog.py
+watch` driver) — confirmed as the user's own other pipeline work, not a bug,
+but never got explicit confirmation it's expected; flagged, not resolved.
+User then asked for lessons learned toward "cheaper, faster, higher
+quality" — real lessons written into BOTH memory (`lookandlive-cost-speed-
+quality-learnings.md`) AND `.claude/skills/living-sketchbook/SKILL.md`
+sec.2/3/8/8b (**`.claude/` is entirely gitignored — these skill-file edits
+are LOCAL ONLY, not in git history; they still govern pipeline behavior
+since Claude reads them from disk each session, but a future `git clone` or
+fresh checkout would lose them**). Rules added: chain every appearance of a
+recurring object including small/background ones (not just "dramatically
+different poses"); mine the wider passage + any existing long-form plan for
+scene variety BEFORE locking a spread table, not after a complaint; both
+folded into the LONG-form mandatory gate checklist too, not just the short
+path. **Deferred TODO (explicit user call):** build a real deterministic
+lint (like `panel_variety_lint.py`) for these two rules, but only after a
+SECOND short validates the prose-gate approach — that condition is now met
+(see below), ready to pick up whenever.
+
+**4. God Hung Up a Snake (Bronze Serpent short #2, Numbers 21:9) built
+through title cards, reusing the lessons from #2 immediately.**
+`poc_living_sketchbook/god_hung_up_a_snake/`. Reuse-first: Moses from the
+repo cast anchor (this narration names his action, #1 didn't), the bronze
+serpent object chained from Look and Live's own approved design (visual
+consistency across the mini-series, lower re-roll risk). Object appears in
+only 4/13 spreads by design this time (down from #1's original 8/13
+mistake). Real defects found and fixed across 3 rounds: Moses's costume
+(bare-chested vs. full robe, chaining alone wasn't enough, needed explicit
+"both shoulders covered" language too), a content-miss (asked for hands
+reaching for a wreath, got a man tying cloth around his own face), serpent
+color drift on the landing pair (fixed by chaining the Look and Live
+reference). **User caught two more real issues by eye**: s03's extreme
+close-up scale texture "felt like a water image" (ambiguous, no
+identifying shape) — fixed by pulling back to show the head + pole
+together; s06's mother-and-child "look Asian instead of biblical-timed" —
+fixed with explicit Semitic/Middle Eastern feature language. **User then
+asked directly why the project wasn't using yesterday's own style variety
+tools (Stationer mediums, bolder camera angles)** — honest answer: most of
+the session's attention went into fighting provider correctness, and the
+second short's style block was copied verbatim from the first without
+reconsidering it (same shape of mistake as the caption-skip bug, applied to
+style choice). Fixed live: 2 genuine bird's-eye aerial redos (Look and
+Live's own s08 AND this episode's s04 — both had settled for "high angle"
+instead of true overhead; a forceful "DRONE SHOT... NOT a 3/4 view" prompt
+via `seedream_v4_5` delivered real top-down views on the first retry) and 1
+Stationer medium swap (s08's raw-bronze insert redone in the Survey Plate
+anchor from `pipeline/medium_anchors.py` — a genuine archaeological-cutaway
+register, not just another angle). Animation: 13 clips, 2 camera-lock
+violations caught by filmstrip QC (s02 zoomed out, s07 zoomed in hard —
+neither told to — fixed via provider swap to Kling with explicit
+"framing/distance/zoom never change" language) plus one NSFW false-positive
+on Seedance (s06, the mother-and-child) auto-recovered by the built-in
+Kling fallback. **User then asked to see all 13 clips in HTML and flagged
+4 for a redo** (s08, s11, s12a, s12b) — **explicit user call to use $0
+`dynamic_cam3d` Ken Burns pushes instead of more paid AI attempts** (this
+project's own sanctioned fallback per SKILL.md sec.4: "a still-stuck shot
+is a USER decision, never a silent static fallback" — the user made that
+call). All 4 redone clean, assembly rebuilt (60.8s, matched). Title/quote/
+citation cards applied (same locked standard). **Session closed here** —
+captions, score, sfx, watermark not yet done for this episode either.
+
+**Cost this session** (both shorts combined, stills+animate, excluding the
+unrelated PythonProject1 activity): Look and Live ~115cr (~$17), God Hung
+Up a Snake ~90cr (~$13.50, cheaper as predicted — fewer fix rounds needed
+once the reuse/chaining lessons were applied from the start). Both within
+or under the original per-episode estimates.
+
+**Not done, in priority order for tomorrow:** (1) decide Look and Live's
+real status — score/sfx/watermark or intentionally stop at the cut; (2)
+finish God Hung Up a Snake's own finishing chain (captions were about to
+start when the session closed — same `_s4_captions.py` pattern as #1, then
+score/sfx/watermark); (3) the deferred lint-tool build, now validated twice
+over; (4) Bronze Serpent short #3 ("Even So Must the Son of Man Be Lifted
+Up," John 3:14) — fully unbuilt; (5) Day of Atonement's own $0 publish
+wiring (Task #3 from the original 2026-08-11 roadmap) — still untouched.
+Full exact resume point: RESUME.md top.
+
+**2026-08-12 (Task #1 done — Bronze Serpent long wired to publish, bare pin,
+NOT committed yet):** Resumed exactly where 2026-08-11 stopped. User asked to
+resume "using a gentle CPU and memory usage" first — verified the standing
+POLITE_CPU=33/Idle-priority throttle in `.venv/Lib/site-packages/
+sitecustomize.py` was still intact (not lost to a venv rebuild) and no
+override in `.env`; nothing needed changing, it's the live default.
+
+Asked the user bare-pin vs full-republish (flagged as an open decision in
+RESUME.md) — chose **bare pin**. Wrote `longform/04_The_Bronze_Serpent/v1/
+FINAL_VIDEO.txt` pointing at `poc_living_sketchbook/bronze_serpent_long/
+BRONZESERPENT_LONG_living_sketchbook_cc.mp4` (same relative-path pattern as
+Seed of the Woman's own pin). Verified two ways: `release_check.py`
+(SYNC-G1..G7) stayed GREEN, 0 FAIL, 78 clean; `pipeline.release_state.gather()`
+directly confirms `bronze-serpent` long now reads `finality: FINAL (pinned)`
+with `video` resolving to the sketchbook file.
+
+**Known, accepted gap (by user's own choice):** the publish PACK itself
+(`longform/04_The_Bronze_Serpent/v1/publish/` — captions.srt, thumbnail,
+PUBLISH_INDEX.html copy, `_source.json`) still describes the OLD inked video.
+Not regenerated this pass — bare pin only, per the user's explicit choice.
+
+**Not committed** — only `FINAL_VIDEO.txt` (new file) changed on disk; awaiting
+the user before committing. **Next**: Task #2 in the roadmap (Bronze Serpent's
+3 unbuilt shorts — text already locked, straight to visual) involves real
+Higgsfield/Kling spend, so per the standing ask-before-spending rule that needs
+a cost quote + explicit OK before starting, not a silent continuation. Full
+roadmap: `STYLE_MIGRATION_TRACKER.html`.
+
 **2026-08-11 (session closed for the day) Stopped at the very start of
 Task #1 execution:** Began wiring Bronze Serpent's finished sketchbook long
 to publish (the first item on the 14-task migration TODO below) — only got

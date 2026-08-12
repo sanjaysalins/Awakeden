@@ -1,4 +1,173 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-12 (CLOSED FOR THE NIGHT — Task #1
+# done, Look and Live built through captions, God Hung Up a Snake built
+# through title cards, both missing score/sfx/watermark) — READ THIS FIRST,
+# supersedes every block below including the "Task #1 DONE" block right
+# after this one (that block is still accurate for Task #1 specifically,
+# just superseded as the LATEST state — everything in it still happened).
+#
+# ── WHERE WE STOPPED: mid-pipeline on TWO shorts at once, both missing the
+# same 4 finishing stages (captions [God Hung Up a Snake only — Look and
+# Live HAS captions], score, sfx, watermark). Nothing is broken — every
+# artifact that exists is verified clean — this is a natural pause point,
+# not an interrupted operation.
+#
+# ── EXACT STATE OF EACH EPISODE:
+#
+# **Look and Live** (`poc_living_sketchbook/look_and_live/`):
+#   - Stills: 13/13 done, clean (`_STILLS`... actually `stills/` dir, no
+#     separate review page kept current — see `_FULL_REVIEW.html` for the
+#     last full state, though 3 stills were redone AFTER that page was last
+#     saved — see the aerial/richness pass below).
+#   - Clips: 13/13 animated, clean.
+#   - Core assembly + title/quote/citation cards + captions: DONE.
+#     `LOOKANDLIVE_living_sketchbook_cc.mp4`, 62.508s, video/audio matched.
+#   - Richness pass (2026-08-12, same session, AFTER the cc.mp4 above was
+#     built): s08_crowd_healing REDONE as a genuine bird's-eye drone shot
+#     via seedream_v4_5 (the original never achieved true overhead, settled
+#     for high-angle). **This still was redone but the CLIP for s08 was
+#     NOT re-animated against the new still, and the assembly/captions were
+#     NOT rebuilt after this still changed.** Open loose end: either
+#     re-animate s08 + rebuild `LOOKANDLIVE_living_sketchbook_cc.mp4` to
+#     match the new still, or confirm the shipped cc.mp4 (built from the
+#     OLDER s08 still) is what the user actually wants. Check
+#     `poc_living_sketchbook/look_and_live/stills/s08_crowd_healing.png`
+#     file mtime vs. `clips/s08_crowd_healing.mp4` mtime to confirm the
+#     clip predates the still before doing anything.
+#   - NOT done: score, sfx, watermark. User said "this episode can be
+#     locked" right after captions were fixed (BEFORE this richness pass
+#     and before score/sfx/watermark existed) — flagged mid-session as
+#     likely premature ("I may have said it too early" — user's own words,
+#     partial acknowledgment). **Open decision for tomorrow: does "locked"
+#     mean creative-content-lock only (finish the chain), or did the user
+#     want to stop at the narration+visuals+cards+captions cut on purpose?
+#     Ask directly before spending on score/sfx.**
+#
+# **God Hung Up a Snake** (`poc_living_sketchbook/god_hung_up_a_snake/`):
+#   - Stills: 13/13 done, clean, INCLUDING the richness-pass redos (s04
+#     aerial, s08 Survey Plate medium) — these two redos are baked into
+#     the current assembly already (built after, not before).
+#   - Clips: 13/13 animated; 4 of them (s08, s11, s12a, s12b) are $0
+#     `dynamic_cam3d` Ken Burns pushes per explicit user request (not
+#     AI-generated) — this is intentional, not a shortcut taken without
+#     asking, don't "fix" these back to AI animation without the user
+#     asking again.
+#   - Core assembly: DONE, rebuilt AFTER the Ken Burns swap, 60.8s exact,
+#     video/audio matched.
+#   - Title/quote/citation cards: DONE, same locked standard as Look and
+#     Live. `GODHUNGUPASNAKE_living_sketchbook.mp4` current final state —
+#     NO `_cc` suffix yet, meaning captions have NOT been burned in.
+#   - NOT done: captions (session ended right as this was about to start —
+#     literally the very next command would have been building
+#     `_s4_captions.py`, same pattern as Look and Live's own, reusing
+#     `_short_captions.py`'s `burn()` with `_alignment.json`'s 148 real
+#     words, timeline is NOT compacted/segment-spliced so no offset math
+#     needed — CARD_SKIPS should almost certainly be `[]` again, same
+#     reasoning as Look and Live's own fix: this episode's cards sit at
+#     cy 0.09-0.44, nowhere near the caption baseline at cy=0.78). Then
+#     score, sfx, watermark, same as Look and Live.
+#
+# ── THE 3 CROSS-EPISODE PROCESS FIXES FROM THIS SESSION (already applied to
+# both episodes' remaining stills, but READ THESE before touching a 3rd
+# short or redoing anything, they're now standing practice):
+#   1. Reuse-first: chain the SAME object/cast reference across sibling
+#      shorts in a cluster (Look and Live's serpent design fed God Hung Up
+#      a Snake's), but do NOT reuse whole finished CLIPS across sibling
+#      shorts — that reads as recycled content if watched back-to-back.
+#   2. Chain EVERY appearance of a recurring locked object, including
+#      small/background/blurred ones — skipping the chain because "it's
+#      just in the background" is exactly how a doctrine slip (gold drift)
+#      happened this session. (`.claude/skills/living-sketchbook/SKILL.md`
+#      sec.2 — LOCAL ONLY, not in git, see the note below.)
+#   3. Before locking a spread table, actively mine the wider Bible passage
+#      + any existing long-form plan for the same story for scene VARIETY
+#      and STYLE ideas (Stationer mediums, bolder camera angles) — not just
+#      for reusable assets. Verified twice this session that skipping this
+#      step produces a visually safe/repetitive result the user has to
+#      catch by eye. (Same SKILL.md file, sec.3/8/8b.)
+#
+# ── ⚠️ `.claude/` IS ENTIRELY GITIGNORED. All of this session's SKILL.md
+# edits (the 3 rules above) are LOCAL-ONLY — they will NOT show up in `git
+# log`, `git diff`, or survive a fresh clone of this repo. They still work
+# right now because Claude reads the file straight off disk. If this repo
+# is ever re-cloned or the `.claude/` dir is ever lost, these rules need to
+# be re-added from `data/spend_ledger.jsonl`... no — from THIS handover
+# block, or from memory `lookandlive-cost-speed-quality-learnings.md` (that
+# one WAS saved to the separate memory system, which is NOT part of this
+# git repo either, it lives in `C:\Users\sanjay\.claude\projects\...\
+# memory\`). Bottom line: the actual source of truth for "why" is that
+# memory file + this block; the actual enforcement lives in the gitignored
+# skill file. Not a bug, just worth knowing before assuming `git log` tells
+# the whole story of what changed this session.
+#
+# ── DEFERRED TODO (explicit user decision, still open): build a real
+# deterministic lint (like the comic-grid pipeline's `panel_variety_lint.py`
+# — per-spread subject tags, FAIL if an object/tag repeats past a
+# threshold) for fix #2 and #3 above. User's own call: wait until a SECOND
+# short validates the prose-gate-only approach before building it — **that
+# condition is now met** (God Hung Up a Snake both benefited from and
+# needed manual correction under the same two rules), so this is ready to
+# pick up whenever, not blocked on anything further.
+#
+# ── UNRESOLVED, NOT BLOCKING: mid-session, investigated a large unrelated
+# credit drain (~340cr over ~3hrs) and traced it to a live process
+# (`PythonProject1\.venv\Scripts\python.exe scripts/animate_clips.py
+# 969-year-question-short-one-name-two-roads`, driven by a `tools/
+# watchdog.py watch` process) — concluded it's almost certainly the user's
+# own separate pipeline work, not a bug, but never got explicit
+# confirmation. Not this repo's problem to fix either way, just flagged.
+#
+# ── COMMITTED THIS SESSION: STATE.md, RESUME.md, plus all the new
+# `poc_living_sketchbook/{look_and_live,god_hung_up_a_snake}/` CODE files
+# (align/stills/animate/assemble/titlecards scripts, `_PLAN.md`s, review
+# HTML pages, `_alignment.json`/`_spoken.txt`), `data/spend_ledger.jsonl`,
+# and `longform/04_The_Bronze_Serpent/v1/FINAL_VIDEO.txt` (Task #1's pin,
+# see the block below). Generated media (stills PNGs, clips MP4s, final
+# episode MP4s) is NOT committed — matches this repo's own standing
+# convention, confirmed via `.gitignore`, same as every other episode.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-12 (Task #1 DONE — Bronze Serpent
+# long wired to publish via bare pin, GREEN-verified, NOT committed yet) —
+# READ THIS FIRST, supersedes the 2026-08-11 "CLOSED FOR THE DAY" block right
+# below it.
+#
+# ── WHAT HAPPENED: resumed at the exact point 2026-08-11 stopped. User first
+# asked to resume "using a gentle CPU and memory usage" — confirmed the
+# standing POLITE_CPU=33/Idle-priority throttle in `.venv/Lib/site-packages/
+# sitecustomize.py` was still intact (survived since the venv wasn't rebuilt)
+# and no `.env` override exists; left as-is, it's already the live default.
+#
+# ── TASK #1 EXECUTED: asked the user the open bare-pin-vs-full-republish
+# question flagged below — **user chose bare pin**. Wrote
+# `longform/04_The_Bronze_Serpent/v1/FINAL_VIDEO.txt` = 
+# `../../../poc_living_sketchbook/bronze_serpent_long/
+# BRONZESERPENT_LONG_living_sketchbook_cc.mp4` (same pattern as Seed of the
+# Woman's pin). Verified: `release_check.py` GREEN, 0 FAIL, 78 clean;
+# `pipeline.release_state.gather()` confirms `bronze-serpent` (long) now
+# reads `finality: FINAL (pinned)` with `video` resolved to the sketchbook
+# file. **Known, accepted gap**: the publish pack itself (captions.srt,
+# thumbnail, PUBLISH_INDEX.html copy, `_source.json` in
+# `longform/04_The_Bronze_Serpent/v1/publish/`) still describes the OLD
+# inked video — not regenerated, per the user's explicit bare-pin choice.
+#
+# ── NOT COMMITTED YET: only `FINAL_VIDEO.txt` (new file) is on disk: awaiting
+# the user before committing.
+#
+# ── NEXT: Task #2 in the roadmap — Bronze Serpent's 3 unbuilt shorts (text
+# already locked in `longform/04_The_Bronze_Serpent/v1/` per-short folders,
+# straight to visual production). This involves real Higgsfield/Kling spend,
+# so per the standing ask-before-spending rule it needs a cost quote +
+# explicit user OK before starting — do not just proceed into it. After that:
+# Task #3, Day of Atonement's publish wiring (same pin mechanism, clean
+# slate, no existing publish/ folder to reconcile). Full 14-task order is in
+# `STYLE_MIGRATION_TRACKER.html`'s headline section (this session's TaskList
+# was empty on resume — session-scoped, didn't persist — recreate from the
+# tracker if task-tool tracking is wanted again).
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-11 (CLOSED FOR THE DAY — picking up
 # tomorrow at Task #1, Bronze Serpent's publish wiring) — READ THIS FIRST,
 # supersedes every block below.

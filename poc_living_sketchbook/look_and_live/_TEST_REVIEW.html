@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Look and Live — test batch review</title>
+<style>
+  body { background:#1a1a1a; color:#eee; font-family:Georgia,serif; margin:0; padding:30px; }
+  h1 { font-size:22px; margin-bottom:4px; }
+  .sub { color:#999; margin-bottom:30px; font-size:14px; }
+  .card { display:inline-block; vertical-align:top; width:340px; margin:0 20px 30px 0; background:#242424; border-radius:8px; padding:14px; }
+  .card img { width:100%; border-radius:4px; display:block; }
+  .card h2 { font-size:16px; margin:12px 0 6px; }
+  .tag { display:inline-block; font-size:11px; padding:2px 8px; border-radius:10px; margin-right:6px; }
+  .fail { background:#5a1f1f; color:#ffb3b3; }
+  .pending { background:#3a3a1f; color:#f2e28a; }
+  ul { font-size:13px; line-height:1.5; color:#ccc; padding-left:18px; margin:8px 0; }
+  .note { font-size:12px; color:#888; margin-top:6px; }
+</style>
+</head>
+<body>
+<h1>Look and Live — test batch (2026-08-12)</h1>
+<div class="sub">Bronze Serpent short #1, Numbers 21:8-9. Testing the s02 "object reveal" shot before committing to the full 13-spread render.</div>
+
+<div class="card">
+  <span class="tag fail">nano_banana_pro — FAILED x2</span>
+  <div style="width:100%;aspect-ratio:9/16;background:#111;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#666;font-size:13px;">no image — job failed server-side, no result_url</div>
+  <h2>s02_object_reveal (locked pipeline model)</h2>
+  <div class="note">2 job attempts, both status=failed. ~4cr spent on failed jobs, 2 auto-refunded. Reason unknown — no error detail exposed by the CLI.</div>
+</div>
+
+<div class="card">
+  <span class="tag pending">kling_omni_image — rendered, has real problems</span>
+  <img src="stills/s02_object_reveal_KLINGTEST.png">
+  <h2>s02_object_reveal (diagnostic test, different model)</h2>
+  <ul>
+    <li><b>Stray numbers all over the page</b> ("01","20","22","40"...) — breaks the locked no-lettering-anywhere rule</li>
+    <li><b>Cobra-hood shape</b>, not a plain serpent — reads as Egyptian cobra / medical-symbol snake</li>
+    <li><b>Gold-toned collar ring at the neck</b> — risks gilding the object itself; the serpent must stay plain bronze, gold is Christ's alone</li>
+  </ul>
+  <div class="note">Not usable as-is. Would need a revised prompt (ban numbers/rulers, ban cobra-hood, reinforce never-gold) before this model could be trusted for the episode.</div>
+</div>
+
+<div class="card" style="border:1px solid #3a5a3a;">
+  <span class="tag" style="background:#1f3a1f;color:#b3ffb3;">seedream_v4_5 — clean, one concern</span>
+  <img src="stills/s02_object_reveal_SEEDREAMTEST.png">
+  <h2>s02_object_reveal (LEAN, positive-only prompt)</h2>
+  <ul>
+    <li>No stray text/numerals — clean</li>
+    <li>Slender head, no cobra hood — clean</li>
+    <li>Stays plain bronze/green-copper, not gold — clean (gold only in the page-edge leaf strip, which is the standard house style, not the object)</li>
+    <li><b>But: coils neatly up the pole in a tidy spiral</b> — this is visually close to the medical caduceus / Rod of Asclepius symbol, a risk this project's own earlier planning explicitly flagged and wanted to avoid</li>
+  </ul>
+  <div class="note">Best of the 3 so far. Open question: accept the coiled form (textually defensible — Numbers 21:9 doesn't specify posture), or ask for a cruder/straighter mounted form to steer away from the medical-symbol reading?</div>
+</div>
+
+<div class="card" style="border:1px solid #3a5a3a;">
+  <span class="tag" style="background:#1f3a1f;color:#b3ffb3;">kling_omni_image — retry, fixed</span>
+  <img src="stills/s02_object_reveal_KLINGTEST2.png">
+  <h2>s02_object_reveal (revised prompt: slender head, uniform metal)</h2>
+  <ul>
+    <li>Cobra hood — FIXED, slender head now</li>
+    <li>Gold neck-collar — FIXED, uniform bronze/copper/teal-patina from head to tail</li>
+    <li>Stray numbers — reduced to one small faint "01" near the top (user said this doesn't matter)</li>
+    <li>Still coils in a spiral (shared with the Seedream render — the caduceus-adjacent read wasn't part of this fix request)</li>
+  </ul>
+  <div class="note">This is the accepted look going forward — 0.5cr/still, cheapest of the three tested.</div>
+</div>
+
+</body>
+</html>
