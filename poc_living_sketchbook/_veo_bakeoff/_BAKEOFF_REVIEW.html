@@ -22,11 +22,15 @@
   th { color:#999; font-weight:600; border-bottom:1px solid #333; }
   td { border-bottom:1px solid #2a2a2a; }
   .win-cell { color:#8fce8f; font-weight:700; }
+  .card.lose { border:1px solid #7a4a4a; }
+  .card.lose .cost { color:#ce8f8f; }
+  .card.mixed { border:1px solid #7a6a4a; }
+  .card.mixed .cost { color:#cebf8f; }
 </style>
 </head>
 <body>
-<h1>veo3_1_lite vs Kling/Seedance — bake-off</h1>
-<div class="sub">Same 2 already-approved stills from short #3 (Even So Must the Son of Man Be Lifted Up), same LOCK-prefixed prompts, same 9:16 aspect ratio — only the animation model changes. Real billed cost, not estimates.</div>
+<h1>veo3_1_lite vs Kling/Seedance — bake-off (round 1 + round 2)</h1>
+<div class="sub">Already-approved stills, same prompts (only the animation model changes), same 9:16 aspect ratio. Real billed cost, not estimates. 6 clips total, $3.60.</div>
 
 <table>
 <tr><th>Model</th><th>Duration</th><th>Credits</th><th>Cost/clip</th></tr>
@@ -69,11 +73,71 @@
   </div>
 </div>
 
-<div class="sub" style="margin-top:10px;">
-  Both veo clips held completely frozen across every frame in my own frame-by-frame check — no invented motion, matching
-  this pipeline's "camera-only, INVENT NOTHING new" discipline. Caveat: both tests were "hold perfectly still" cases, the
-  easiest tier for any model — this doesn't yet test an acting-spread shot (designed motion) or a crowd/multi-figure
-  scene, which is where a May 2026 bake-off found veo invented movement and ignored the same instruction.
+<h2 style="margin-top:44px;">Round 2 — filling the gaps</h2>
+
+<div class="pair">
+  <h2>Test 3 — designed motion (a cued gesture, not just hold-still)</h2>
+  <div class="t">s05_acting_memory_bleed — "Jesus's head and hand complete ONE slow, small motion... then holding that position"</div>
+  <div class="row">
+    <div class="card">
+      <video controls muted loop src="../son_of_man_lifted_up/clips/s05_acting_memory_bleed.mp4"></video>
+      <div class="label">Kling pro (shipped)</div>
+      <div class="cost">7.5cr · $1.13</div>
+    </div>
+    <div class="card lose">
+      <video controls muted loop src="clips/s05_acting_memory_bleed_VEO.mp4"></video>
+      <div class="label">veo3_1_lite (test)</div>
+      <div class="cost">4.0cr · $0.60 — but the gesture never happens; veo just held everything static (confirmed by extracting 8 close-cropped frames across the first 3.6s — zero hand movement)</div>
+    </div>
+  </div>
+</div>
+
+<div class="pair">
+  <h2>Test 4 — multi-figure crowd (the exact failure mode a prior May 2026 bake-off found)</h2>
+  <div class="t">s10_crowd_multivignette — "Every figure holds their exact position and pose, perfectly still"</div>
+  <div class="row">
+    <div class="card">
+      <video controls muted loop src="../son_of_man_lifted_up/clips/s10_crowd_multivignette.mp4"></video>
+      <div class="label">Seedance 1.5 Pro (shipped)</div>
+      <div class="cost">4.8cr · $0.72</div>
+    </div>
+    <div class="card win">
+      <video controls muted loop src="clips/s10_crowd_multivignette_VEO.mp4"></video>
+      <div class="label">veo3_1_lite (test)</div>
+      <div class="cost">4.0cr · $0.60 — held completely still, no invented movement on any figure</div>
+    </div>
+  </div>
+</div>
+
+<div class="pair">
+  <h2>Test 5 — 2nd hero/wide replicate (does the round-1 win hold on a different shot?)</h2>
+  <div class="t">Look and Live's s12b_landing_gold — "radiant gold light... stays exactly as warm and steady as it already is"</div>
+  <div class="row">
+    <div class="card">
+      <video controls muted loop src="../look_and_live/clips/s12b_landing_gold.mp4"></video>
+      <div class="label">Kling pro (shipped)</div>
+      <div class="cost">7.5cr · $1.13</div>
+    </div>
+    <div class="card win">
+      <video controls muted loop src="clips/s12b_landing_gold_VEO.mp4"></video>
+      <div class="label">veo3_1_lite (test, 2nd attempt)</div>
+      <div class="cost">4.0cr · $0.60 — 47% cheaper, clean once reworded</div>
+    </div>
+  </div>
+  <div class="t" style="margin-top:8px;">
+    1st attempt reused Kling's own "NOGLITTER" negative-phrasing prompt verbatim and came back with real sparkle/glitter
+    hallucination — matching this project's own already-documented veo weakness (negative "no glitter" text doesn't
+    reliably suppress it on bright/glowing scenes). Reworded to positive-only phrasing ("stays exactly as it is,
+    unchanged" — no particle words at all) and it rendered clean on the 2nd try, same cost.
+  </div>
+</div>
+
+<div class="sub" style="margin-top:20px;">
+  <b>Where this lands:</b> veo3_1_lite is confirmed for wide/hero/reverent-hold shots AND multi-figure "hold still"
+  crowd scenes — cheaper than both alternatives and matched or beat Kling's own version on every one of those. It does
+  NOT reliably execute a designed/cued gesture (Test 3) — it just defaults to full stillness instead, so Kling stays
+  the tool for genuine acting-spread beats. And it needs positive-only prompt phrasing on bright/glowing content —
+  negative "no glitter" language doesn't work on veo the way it does on Kling.
 </div>
 
 </body>

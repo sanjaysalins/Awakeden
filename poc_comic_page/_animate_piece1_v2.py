@@ -164,6 +164,15 @@ def run_job(name, provider, still, ar, prompt, duration=None):
         extra = ["--duration", str(duration or 4), "--resolution", "720p", "--aspect_ratio", ar,
                  "--generate_audio", "false"]
     elif provider == "veo":
+        # Use for wide/hero/atmospheric holds and multi-figure "hold still" crowd
+        # shots ONLY -- bake-off (2026-08-13) found veo does NOT reliably execute a
+        # DESIGNED/cued gesture (an acting-spread's "complete one motion, then
+        # hold"), it just defaults to full stillness regardless. Keep acting-spread
+        # jobs on "kling". Also: on bright/glowing content, the prompt's own light/
+        # glow language must be POSITIVE-ONLY ("stays exactly as warm and steady as
+        # it already is") -- negative "NOGLITTER: does not sparkle" phrasing does
+        # NOT reliably suppress glitter hallucination on veo the way it does on
+        # Kling (feedback-veo-no-glitter-glow).
         model = "veo3_1_lite"
         # legal set is 4/6/8 only -- snap any other requested duration to the nearest
         veo_dur = min((4, 6, 8), key=lambda d: abs(d - (duration or 4)))

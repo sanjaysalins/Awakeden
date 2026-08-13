@@ -1,5 +1,36 @@
 # STATE.md — progress tracker
 
+**2026-08-13 (same day, truest truest latest) veo3_1_lite decision
+REFINED with round 2 of the bake-off (3 more clips + 1 retry, $1.80,
+$3.60 total across both rounds):** User asked for more bake-offs to
+stress-test the round-1 decision. Filled the 2 known gaps + a replicate:
+- **Multi-figure crowd** (the exact scenario a 2026-05-30 bake-off found
+  veo failing at): PASSED clean, no invented movement.
+- **Designed/cued gesture** (an acting-spread's "complete one motion,
+  then hold"): FAILED to deliver — veo just held everything static,
+  confirmed by extracting 8 close-cropped frames across 3.6s, zero hand
+  movement. Kling stays the tool for this tier.
+- **2nd hero/wide replicate** (a different episode's gold-radiant
+  landing shot): 1st attempt reused Kling's own NOGLITTER negative
+  phrasing verbatim and got real sparkle/glitter hallucination —
+  matching this project's own already-documented (68-day-old!)
+  `feedback-veo-no-glitter-glow` weakness. Reworded to positive-only
+  phrasing (no particle words at all) and it rendered clean on the 2nd
+  try, confirming the hero-tier win generalizes once prompted correctly.
+
+**Refined split, now in CLAUDE.md + memory + code comments (3 places, all
+updated)**: veo for wide/hero holds AND multi-figure crowd holds; Kling
+for anything needing a genuine designed/cued motion; Seedance stays for
+close portraits; positive-only phrasing required on bright/glowing
+content. `poc_comic_page/_animate_piece1_v2.py`'s veo branch now has an
+inline comment carrying both gotchas so a future episode script doesn't
+have to rediscover them. Review page updated to show all 6 test clips:
+`poc_living_sketchbook/_veo_bakeoff/_BAKEOFF_REVIEW.html`.
+
+**Not done / next**: still no PRODUCTION use of veo3_1_lite yet — next
+episode with a hero/wide/crowd shot is the real test. Otherwise same
+roadmap as before. Full detail: RESUME.md top.
+
 **2026-08-13 (same day, truest latest) veo3_1_lite ADOPTED as the shorts
 hero-tier animator, POC clips (not committed, $0 to redo):** After the
 bake-off (2 test clips, $1.20 total, real billed cost confirmed cheaper
