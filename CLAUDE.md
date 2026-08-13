@@ -330,11 +330,16 @@ they're never animated; `VISION_AUDIT_MODEL`=Haiku for the coarse assembly verif
   rounds (real billed cost throughout, `poc_living_sketchbook/_veo_bakeoff/
   _BAKEOFF_REVIEW.html` has all 6 side by side): veo3_1_lite is cheaper than both
   existing options every time (4cr/$0.60 vs Kling pro 7.5cr/$1.13 vs Seedance
-  4.8cr/$0.72 at matching 9:16) and won on 2 wide/hero reverent-hold shots (real
-  atmospheric cloud drift, held completely frozen — better than Kling's own version
-  of the same shots) AND a multi-figure crowd "hold still" shot (no invented
-  movement, the exact failure mode a 2026-05-30 bake-off previously found veo
-  failing at). It softened a tight close-portrait's expression/gaze fidelity vs
+  4.8cr/$0.72 at matching 9:16) — that part is settled. **CAVEAT (same day, after
+  the user watched real playback): "its mixed to be honest, in some case veo is
+  just doing simple ken burn."** My own QC only ever compared 3 static frames per
+  clip, which catches invented content but can't judge whether the motion between
+  frames is genuinely cinematic or just a flat pan — so the "won on 2 hero shots /
+  crowd shot" framing below is "no invented content found," NOT a confirmed
+  quality verdict. Which specific clips read as Ken-Burns-equivalent is still open.
+  Treat the cost win as reliable; treat "veo is more cinematic than Kling" as
+  unconfirmed until reviewed by ear/eye on real playback, not frame sampling.
+  It softened a tight close-portrait's expression/gaze fidelity vs
   Seedance, and — this is the one real gap — it does NOT reliably execute a
   DESIGNED/cued gesture (Kling's own acting-spread job: "complete one motion, then
   hold"); veo just defaults to full stillness regardless (confirmed via 8
