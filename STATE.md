@@ -1,5 +1,12 @@
 # STATE.md — progress tracker
 
+**2026-08-13 (same day, truest latest) User confirmed the title-card fix
+— "wonderful, lock it."** All 3 Bronze Serpent shorts stay LOCKED with the
+corrected cards (fix committed as 0e12da7). No further action needed on
+this cluster; session's own roadmap picks up at the deferred spread-
+variety lint tool / Day of Atonement publish wiring / Seed of the Woman's
+unbuilt shorts next.
+
 **2026-08-13 (same day, latest) Real cross-episode bug found and fixed on
 ALL 3 locked Bronze Serpent shorts — title/quote cards were clipping off
 the frame edges:** User caught it by eye on short #3 ("the info graphics...
