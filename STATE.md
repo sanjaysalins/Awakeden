@@ -1,5 +1,53 @@
 # STATE.md — progress tracker
 
+**2026-08-13 (session end) Seed of the Woman short #2 "Her Seed" STARTED,
+stills 7/8 clean, 1 still needs a 3rd attempt tomorrow:** After short #1
+re-locked, user approved starting short #2 (Galatians 4:4, source
+narration `45_Not_Plan_B`). $0 forced-alignment done (166/166 words,
+58.82s). Checked the LOCKED long's own stills for reuse (s26 study-copy,
+s27 line-of-fathers, s30 annunciation) — all 2752×1536 (16:9), none crop
+cleanly to 9:16 vertical (s27 is a full-width horizontal line of 7
+figures, a portrait crop would show 1-2 and lose the point), so this
+short uses them as DESIGN reference only, not pixel reuse (same pattern
+short #1 used for its serpent chain). Built `_PLAN.md`: 8 spreads,
+~$5.49 estimated (cheaper than short #1's $8.35 actual — only 3 shots
+need the expensive Kling/seedream tier, 2 of the 3 $0 slots are proven
+$0 devices decided BEFORE rendering, not paid-then-reverted retries).
+User approved the still spend.
+
+Rendered all 8 stills, first pass. Own eye-check at full res (NOT just
+skimmed) caught **4 real defects**: s01 (Eden coming apart) didn't read
+as "coming apart" at all — lush intact garden, no visible light thread,
+no color draining; s02 (promise over Eve) had no visible light despite
+the prompt asking for it, mood read wary not calm; s05 (line of fathers,
+adapted from the long's horizontal composition) came back with the
+WHOLE image rotated 90° — figures literally lying sideways — instead of
+a true vertical recomposition; s07 (hands reaching) violated an explicit
+"no face in frame" instruction and the gesture read as clawing/aggressive
+rather than calm reaching. Rewrote all 4 prompts with much more explicit
+art direction and re-rendered.
+
+**Round 2 result: 3 of 4 fixed clean** — s02 (light now clearly visible,
+expression reads as awe rather than fear, judged acceptable), s05
+(figures now genuinely upright and stacked vertically, dropped the
+horizontal reference image entirely since it was biasing the rotation
+bug), s07 (face gone, hands read as clasped/intertwined rather than
+literally "reaching" but thematically compatible, no violation). **s01
+is STILL not right** — 2nd attempt overcorrected: shrank the whole scene
+into a small inset panel at the bottom third of the frame with 2/3 blank
+cream paper above it, and dropped Eve from the composition entirely
+(Adam only). Needs a 3rd attempt with a different approach (likely: stop
+asking for "small distant figures" — go back to a moderately-sized
+two-figure composition like round 1's, but add real environmental
+decay — falling leaves integrated INTO a full-frame forest scene, not
+floating over blank space).
+
+**Not done / next**: fix s01 (3rd attempt), then lock the still sheet,
+build `_s2_animate.py` (tiering already decided in `_PLAN.md`: Seedance
+s01/s06, Kling s04/s07, veo s08, $0 device s02/s03/s05), assemble,
+title-card, caption, score/sfx, watermark, verify landing hold. Nothing
+past the still stage started yet. Full detail: RESUME.md top.
+
 **2026-08-13 (round 2, truest latest) Seed of the Woman short #1
 re-fought and RE-LOCKED — fixed the "looks like a slideshow" problem:**
 User's honest read on the round-1 lock: "many of the image is just ken
