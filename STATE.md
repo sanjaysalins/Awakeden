@@ -1,5 +1,55 @@
 # STATE.md — progress tracker
 
+**2026-08-13 (session's final entry) Seed of the Woman short #1 finished
+and LOCKED — first real production use of the veo3_1_lite split:** User
+asked to design animation per-shot ("what you want to convey and
+emphasis, then prompt; if you're doing just Ken Burns, do that via
+code") rather than mechanically apply the tiering. Redesigned all 11
+shots individually: 4 designed as $0 Ken Burns from the start (the
+intended effect genuinely doesn't need generated motion), 4 on
+veo3_1_lite (atmosphere/light-breathing, no body gesture), 1 Kling (the
+one real cued gesture — Adam/Eve turning toward the light), 2 Seedance
+(a hand tremor, a blink+expression shift).
+
+**Two real defects found in the paid renders, both resolved by falling
+back to $0 rather than shipping broken or paying for a 3rd try:**
+- s01 (hands): the designed tremor never happened — 2 straight Seedance
+  attempts (incl. one with much stronger language) came back completely
+  static.
+- s09 (landing transition): veo invented a full raised-hood cobra out of
+  a tiny pale sketch-outline serpent already in the still, TWICE — even
+  the 2nd attempt's explicit lock on that exact element didn't stop it.
+
+**Real bug also found and fixed**: `_s2_animate.py` never actually had
+the `only = set(sys.argv[1:])` argv filter it was supposed to have
+(copied from a version that had it, but the filter line itself got
+dropped) — passing a specific clip name as an argument silently did
+nothing, so a "redo just this one clip" call re-ran the WHOLE job list
+each time. This caused a real race: two concurrent processes both tried
+to regenerate s09 at once, corrupting the output file (`moov atom not
+found`). Fixed the missing filter in `_s2_animate.py` so this can't
+recur; the corrupted file was caught immediately (never shipped) and
+regenerated clean.
+
+**Cost**: $8.35 total ($1.27 stills + $7.07 animation) — close to the
+original $8.85 pre-redesign estimate; the redesign's savings were mostly
+offset by the wasted retries on s01/s09, though both still ended up
+clean via the $0 fallback rather than shipping a defect.
+
+Assembled, title-carded (the width-safety fix built in from day one this
+time, not retrofitted), captioned, scored+sfx'd (crossfade timed to the
+exact moment the narration's own KJV quote begins — "grace spoken first"
+made audible), watermarked. `check_landing_hold.py` GREEN (69.00s/69.00s).
+User confirmed via "assemble it" + review — LOCKED. Added to
+`SKETCHBOOK_REVIEW.html`. Final file: `poc_living_sketchbook/
+first_gospel_in_the_curse/FIRSTGOSPELINTHECURSE_living_sketchbook_cc_scored_sfx.mp4`
+(69.0s, 56MB).
+
+**Not done / next**: 3 more Seed of the Woman shorts to go (Her Seed,
+Heel vs Head, The Serpent-Crusher Promised — all text-locked already).
+Otherwise same roadmap as before (spread-variety lint tool, Day of
+Atonement publish wiring). Full detail: RESUME.md top.
+
 **2026-08-13 (same day, latest of all) Seed of the Woman short #1 started
 — GATE 2 passed, 11/11 stills LOCKED, animation not started:** Moved to
 the next roadmap item after the Bronze Serpent cluster wrapped. Confirmed
