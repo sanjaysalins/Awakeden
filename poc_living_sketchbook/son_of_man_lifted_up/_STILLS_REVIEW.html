@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Even So Must the Son of Man Be Lifted Up — 13 stills</title>
+<style>
+  body { background:#1a1a1a; color:#eee; font-family:Georgia,serif; margin:0; padding:30px; }
+  h1 { font-size:22px; margin-bottom:4px; }
+  .sub { color:#999; margin-bottom:30px; font-size:14px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:18px; }
+  .card { background:#242424; border-radius:8px; padding:10px; }
+  .card img { width:100%; border-radius:4px; display:block; }
+  .card h2 { font-size:14px; margin:8px 0 4px; }
+  .tag { display:inline-block; font-size:10px; padding:2px 7px; border-radius:9px; margin-bottom:4px; }
+  .clean { background:#1f3a1f; color:#b3ffb3; }
+  .fixed { background:#1f3a1f; color:#b3ffb3; }
+  .nbp { background:#2a2440; color:#c9b8ff; }
+</style>
+</head>
+<body>
+<h1>Even So Must the Son of Man Be Lifted Up — Bronze Serpent short #3 (2026-08-13) — STILLS LOCKED</h1>
+<div class="sub">John 3:14-15. 13 stills: kling_omni_image (7) + seedream_v4_5 (2: memory-bleed, crowd) + NBP direct (4: s03/s08/s11/s13, the Jesus-alone face/hero shots). Jesus/Moses reused from repo cast anchors; the bronze serpent object chained from Look and Live's approved design (3rd short on the same design). Nicodemus is a new cast anchor, locked from s01's own first render. 4 of 13 needed fix rounds — real defects caught by eye, not by a clean exit code. The 4 NBP shots were a user-requested side-by-side test (same prompts, direct Google gemini-3-pro-image-preview instead of HF) — confirmed noticeably better anatomy/composition on all 4, swapped in.</div>
+
+<div class="grid">
+<div class="card"><span class="tag clean">clean</span><img src="stills/s01_hook.png"><h2>s01 hook</h2></div>
+<div class="card" style="border:1px solid #3a5a3a;"><span class="tag fixed">fixed — clean</span><img src="stills/s02_close_faces.png"><h2>s02 close faces</h2><ul style="font-size:11.5px;color:#ccc;padding-left:16px;"><li>User caught it: Nicodemus was drawn noticeably larger than Jesus, like he was standing closer to camera. Explicit same-scale/same-distance language fixed it</li></ul></div>
+<div class="card" style="border:1px solid #4a3f6a;"><span class="tag nbp">NBP</span><img src="stills/s03_jesus_split_light.png"><h2>s03 Jesus, split light</h2><ul style="font-size:11.5px;color:#ccc;padding-left:16px;"><li>HF 1st attempt came back evenly lit, missed the split-light concept; HF 2nd attempt (stronger chiaroscuro language) fixed it and was usable</li><li>User-requested NBP test on the same prompt came back stronger — swapped in</li><li>User caught it: Jesus's head read oversized relative to His shoulders, and the oil lamp was miniature-scaled. Explicit natural-proportion + normal-lamp-scale language fixed both</li></ul></div>
+<div class="card" style="border:1px solid #3a5a3a;"><span class="tag fixed">fixed — clean</span><img src="stills/s04_ot_echo.png"><h2>s04 OT echo</h2><ul style="font-size:11.5px;color:#ccc;padding-left:16px;"><li>Flagged the serpent's teal scale tones as a drift, then found they're actually already IN the chained Look and Live reference — false alarm. The real defect was in my own "fix" attempt: a jarring photorealistic sunset panel breaking style consistency. Removed the false teal constraint, added explicit style-consistency language instead</li></ul></div>
+<div class="card"><span class="tag clean">clean</span><img src="stills/s05_acting_memory_bleed.png"><h2>s05 acting — memory bleed</h2></div>
+<div class="card"><span class="tag clean">clean</span><img src="stills/s06_serpent_healed_gaze.png"><h2>s06 serpent, healed gaze</h2></div>
+<div class="card"><span class="tag clean">clean</span><img src="stills/s07_nicodemus_skeptic.png"><h2>s07 Nicodemus, skeptic</h2></div>
+<div class="card" style="border:1px solid #4a3f6a;"><span class="tag nbp">NBP</span><img src="stills/s08_cross_hero.png"><h2>s08 cross hero</h2><ul style="font-size:11.5px;color:#ccc;padding-left:16px;"><li>User caught it: Christ read as standing on the hilltop in front of the cross, not actually elevated on it — undercut the whole "lifted up" thesis. HF redo (low-angle, feet on a footrest) fixed it and was usable</li><li>Then user-requested NBP test on the same fixed prompt came back with cleaner anatomy and a more dramatic sense of height (crowd visible far below) — swapped in</li></ul></div>
+<div class="card" style="border:1px solid #3a5a3a;"><span class="tag fixed">fixed — clean (5 rounds)</span><img src="stills/s09_nailed_hand_insert.png"><h2>s09 nailed hand insert</h2><ul style="font-size:11.5px;color:#ccc;padding-left:16px;"><li>Round 1: real blood streaks down the wrist — fixed with "no blood" language</li><li>Round 2: user caught the real remaining issue — the hand read as actively GRIPPING the plank (a fist clutching an edge), an unclear perspective for "nailed hand." Rewritten frontal/flat/relaxed — but blood reappeared even with the same "no blood" language that worked before (provider inconsistency)</li><li>Round 3: dropped all negative blood language, described the skin positively instead — clean</li><li>Round 4: user asked for the nail centered in the palm and sized like a real Roman crucifixion spike (not a small nail) — this regressed the pose back to a curled fist AND produced a decorative "starburst" hallucination around the nail (the exact failure mode this project's own crucifixion-still-facts memory warns about for close-up nail descriptions)</li><li>Round 5: rewrote combining both fixes — explicit "already flat, already resting, not curled" language for the pose plus calm end-state wording for the spike ("lying flush and quiet... no sparks, no starburst") — clean, palm-centered, correctly sized</li></ul></div>
+<div class="card" style="border:1px solid #3a5a3a;"><span class="tag fixed">fixed — clean (3 rounds)</span><img src="stills/s10_crowd_multivignette.png"><h2>s10 crowd, mixed reactions</h2><ul style="font-size:11.5px;color:#ccc;padding-left:16px;"><li>Round 1: rendered as a literal comic-panel grid with borders + visible blood — violated the locked "vignettes must be soft-edged, never in panels" rule</li><li>Round 2: dropped the panel grid but blood reappeared on the ground even with explicit "no blood" language — the negation itself may have cued it (this project's own known seedream lesson)</li><li>Round 3: switched providers, dropped all blood language, cropped the composition to waist-up so there's no ground for blood to appear on at all — clean</li></ul></div>
+<div class="card" style="border:1px solid #4a3f6a;"><span class="tag nbp">NBP</span><img src="stills/s11_christ_face_reverent.png"><h2>s11 Christ's face, reverent</h2><ul style="font-size:11.5px;color:#ccc;padding-left:16px;"><li>HF version was already clean; user-requested NBP test came back stronger (better composition against the crossbeam) — swapped in</li></ul></div>
+<div class="card"><span class="tag clean">clean</span><img src="stills/s12_nicodemus_tomb_daylight.png"><h2>s12 Nicodemus at the tomb, daylight</h2></div>
+<div class="card" style="border:1px solid #4a3f6a;"><span class="tag nbp">NBP</span><img src="stills/s13_landing_christ_glory.png"><h2>s13 landing — Christ, glory</h2><ul style="font-size:11.5px;color:#ccc;padding-left:16px;"><li>HF version was already clean; user-requested NBP test came back with a more refined radiant-light composition — swapped in</li></ul></div>
+</div>
+
+</body>
+</html>

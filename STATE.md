@@ -1,5 +1,114 @@
 # STATE.md — progress tracker
 
+**2026-08-13 (same day, latest) Bronze Serpent short #3 finished and
+LOCKED — all 3 of the cluster's declared shorts now shipped:** Continued
+straight from GATE 3 (clips locked). Built assembly (`_s3_assemble.py`,
+real word-timed windows from the 122-word alignment, TOTAL=58.0s), title
+cards (`_s3b_titlecards.py`, John 3:14 + John 3:15 quote/citation pairs,
+second pair timed to when the narration itself speaks that half of the
+verse), captions (`_s4_captions.py`, 27 chunks, no card-skip windows
+needed), score+sfx (`_s5_score_sfx.py` — lonely_searching_a held all the
+way through the rooftop dialogue AND the KJV quote, only crossfading into
+sacred_grace_rise_a at s08 where the narration itself names the cross;
+wind_desert_bleak scoped to just the two OT-echo cutaways rather than the
+whole runtime, since this piece is mostly a rooftop scene not a desert
+one; added thunder_low_roll under the storm-clouds cross reveal), then
+watermark. Verified mechanically at every stage (duration match, no
+clipping, `check_landing_hold.py` GREEN at 58.00s/58.00s) and spot-checked
+by eye (title cards, the s05 memory-bleed shot, watermark placement).
+
+User said "lock" — **short #3 is LOCKED.** Added to `SKETCHBOOK_REVIEW.html`
+alongside #1/#2. Final file: `poc_living_sketchbook/son_of_man_lifted_up/
+SONOFMANLIFTEDUP_living_sketchbook_cc_scored_sfx.mp4` (58.0s, 50MB).
+
+**Not done / next**: nothing from this short is committed to git yet —
+about to commit code+docs (no media, matching repo convention). All 3
+Bronze Serpent shorts are now done; the cluster's own long was already
+wired to publish in an earlier session. Remaining roadmap: the deferred
+spread-variety lint tool, Day of Atonement's own publish wiring (Roadmap
+#2), then Seed of the Woman's 4 unbuilt shorts (Roadmap #3). Full detail:
+RESUME.md top.
+
+**2026-08-13 (same day, even later) Bronze Serpent short #3 — 13/13 clips
+animated, GATE 3 material ready, assembly not started:** Quoted animation
+at ~$10.58 (10 Seedance + 3 Kling, same acting/hero/landing tiering as
+#1/#2), user approved, ran all 13 — clean on the first pass per the
+console log. Filmstrip QC (start/mid/end frames per clip, all 13) caught 3
+real defects the exit code missed: s04/s06 (the bronze serpent) had its
+head raise and mouth open/tongue extend mid-clip — the SAME failure Look
+and Live's own s08 hit twice this session on the same chained object; s09
+(nailed hand) was worse — fingers curled and blood gushed down the spike
+despite explicit "hold still, no blood" language, on the same wound this
+episode's own STILL needed 5 rounds to get clean. Given the demonstrated,
+repeated failure pattern, asked the user rather than gambling more paid
+retries — chose the $0 `dynamic_cam3d` push for all 3 (new
+`_kenburns_fixes.py`). All 3 re-verified clean by frame extraction: serpent
+shape identical across every frame, hand/spike static, no blood. Built
+`_CLIPS_REVIEW.html` (all 13, playable). Not yet reviewed by the user.
+
+**Not done / next**: assembly (core cut + title cards + captions + score +
+sfx + watermark) hasn't started. Nothing from this short is committed to
+git yet. Full detail: RESUME.md top.
+
+**2026-08-13 (same day, later) Bronze Serpent short #3 — GATE 2 passed,
+13/13 stills LOCKED, animation not started:** Continued straight into the
+next roadmap item (short #3, "Even So Must the Son of Man Be Lifted Up,"
+John 3:14-15) after locking #1/#2. Text was already locked
+(`PythonProject1/jesus/narration/47_Lifted_Up_in_Shame,_Lifted_Up_in_Glory/`)
+— this narration had actually already gone partway through the OLD Baroque
+HF pipeline before the sketchbook-only migration decision superseded it;
+mined that old 17-scene plan for beat ideas (never reused pixels). New
+folder: `poc_living_sketchbook/son_of_man_lifted_up/`. Built `_PLAN.md`
+(13 spreads), a new episode-local cast anchor for Nicodemus
+(`NICODEMUS.md`, first-render-becomes-reference, same practice as the
+serpent object), reusing Jesus/Moses repo anchors and chaining the bronze
+serpent object from Look and Live's own design (3rd short on the same
+object now).
+
+Rendered all 13 stills, found and fixed 6 real defects across several
+rounds, all caught by eye not by exit code: s09 blood (twice, second time
+via a pose-driven regression), s10 a literal comic-panel grid with blood
+(3 rounds to fix — final fix cropped the ground out entirely so blood had
+nowhere to appear), s04 a false alarm I almost mis-fixed (the "drifting"
+teal serpent scales were actually already in the approved chained
+reference; the real bug was in my own fix attempt, a photorealistic panel
+breaking style consistency), s02 a scale mismatch (Nicodemus drawn larger
+than Jesus), s08 Christ reading as standing in front of the cross instead
+of elevated on it (undercut the whole "lifted up" thesis), s03 Jesus's
+head reading oversized against his shoulders plus a miniature-scaled lamp.
+
+**Real provider decision, user-initiated:** user asked whether NBP (direct
+Google `gemini-3-pro-image-preview`) should be used for a few standout
+shots instead of the cluster's usual kling_omni_image/seedream_v4_5. Ran
+an actual side-by-side test (same prompts, `_nbp_test.py`) rather than
+deciding from opinion alone — confirmed NBP genuinely stronger on the 4
+Jesus-alone face/hero shots (s03/s08/s11/s13), swapped those in (~$2 extra,
+Google-billed); kept the other 9 on the cheaper HF providers. Documented in
+`_s1_stills.py`'s docstring, `_PLAN.md`'s actual-cost note, and the review
+page.
+
+Then a 5-round fix on s09 alone (nailed hand insert): blood, then a
+gripping-not-pinned pose the user caught, then blood again after the pose
+fix (provider inconsistency even with unchanged "no blood" language, fixed
+by switching to positive-only skin description), then the user asked for
+the nail centered in the palm and sized like a real Roman crucifixion
+spike — which regressed the pose back to a fist AND produced a decorative
+"starburst" hallucination around the nail (exactly the failure mode
+`crucifixion-still-facts` memory documents for close-up nail descriptions
+on this provider family). Final fix combined explicit "already flat,
+already resting" pose language with calm end-state spike wording ("lying
+flush and quiet... no starburst") — clean.
+
+User said "lock it" — **stills GATE 2 is LOCKED**, 13/13, review page
+marked LOCKED in its own header:
+`poc_living_sketchbook/son_of_man_lifted_up/_STILLS_REVIEW.html`.
+
+**Not done / next**: animation (Kling/Seedance, ~13 clips) hasn't started
+— needs a cost quote + explicit OK first, per the standing ask-before-
+spending rule (same gate Look and Live/God Hung Up a Snake went through).
+Nothing from this short is committed to git yet. Full detail: RESUME.md
+top.
+
 **2026-08-13 (Look and Live AND God Hung Up a Snake both finished end to
 end — score/sfx/watermark done, both landing-hold GREEN — NOT committed
 yet):** Resumed with the user's now-standing "gentle CPU and memory" ask —

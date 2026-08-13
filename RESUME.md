@@ -1,7 +1,39 @@
 # ══════════════════════════════════════════════════════════════════════════
-# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-13 (BOTH SHORTS FINISHED END TO
-# END — captions/score/sfx/watermark all done, landing-hold GREEN on both,
-# NOT committed yet) — READ THIS FIRST, supersedes every block below.
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-13 (ALL 3 BRONZE SERPENT SHORTS
+# NOW LOCKED — the whole cluster is finished) — READ THIS FIRST, supersedes
+# every block below.
+#
+# ── WHERE THIS LANDED: started the session by finishing #1/#2 (see the
+# block right below this one for that detail), then built #3 from zero
+# through the full pipeline in one continuous run: text was already
+# locked, planned 13 spreads (`_PLAN.md`), rendered stills (6 real defects
+# found+fixed, 4 hero/face shots swapped to NBP after a user-requested
+# side-by-side test), animated 13 clips (~$10.58, 3 fell back to $0 camera
+# pushes after repeated invented-motion/blood failures), assembled,
+# captioned, scored+sfx'd, watermarked. User said "lock" at the end —
+# **short #3 is LOCKED.** All 3 of the cluster's declared shorts
+# (Look and Live / God Hung Up a Snake / Even So Must the Son of Man Be
+# Lifted Up) are now finished. Full blow-by-blow: STATE.md's own 2 entries
+# for this session (search "short #3").
+#
+# ── NOT COMMITTED YET: short #3's code (`_PLAN.md`, `NICODEMUS.md`,
+# `_s0_align.py` through `_s5_score_sfx.py`, `_nbp_test.py`,
+# `_kenburns_fixes.py`, `_STILLS_REVIEW.html`, `_CLIPS_REVIEW.html`) plus
+# `SKETCHBOOK_REVIEW.html`/STATE.md/RESUME.md updates — about to commit,
+# no media (matches repo convention, same as #1/#2 earlier this session).
+#
+# ── NEXT: the deferred spread-variety lint tool (queued twice now), then
+# Day of Atonement's publish wiring (Roadmap #2 — a $0 pointer swap for the
+# long, but its 3 shorts have zero narration text yet, need `/narrate`
+# first), then Seed of the Woman's 4 unbuilt shorts (Roadmap #3, text
+# already locked). Full roadmap: `STYLE_MIGRATION_TRACKER.html`.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-13 (earlier same day — BOTH SHORTS
+# #1/#2 FINISHED END TO END — captions/score/sfx/watermark all done,
+# landing-hold GREEN on both) — superseded by the block above; kept for its
+# own process detail.
 #
 # ── WHAT HAPPENED: user asked to resume "using a gentle CPU and memory
 # usage" (now a recurring ask each session) — verified POLITE_CPU=33/IDLE-
