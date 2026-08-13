@@ -1,5 +1,79 @@
 # STATE.md — progress tracker
 
+**2026-08-13 (Look and Live AND God Hung Up a Snake both finished end to
+end — score/sfx/watermark done, both landing-hold GREEN — NOT committed
+yet):** Resumed with the user's now-standing "gentle CPU and memory" ask —
+verified `POLITE_CPU=33`/IDLE-priority/LOW-memory-priority is still live in
+`.venv/Lib/site-packages/sitecustomize.py`, no `.env` override, nothing to
+change. Asked the user directly what "locked" meant for Look and Live (the
+open question from last session) — chose to finish the chain: re-animate
+s08 against the aerial still, rebuild, then score/sfx/watermark.
+
+**Real defect caught and fixed on s08 (Look and Live):** re-animating
+against the new bird's-eye still, Seedance invented motion TWICE in a row —
+try 1 the serpent's tongue whipped into a long lashing ribbon, try 2 (after
+explicitly locking the tongue too in the prompt) the whole head/neck bent
+downward. Caught both by extracting and eye-checking frames, not by
+trusting a clean exit code. Per this project's own standing rule (a
+stuck/over-inventive shot after repeated tries is a USER decision, not a
+silent fallback), asked the user how to proceed — chose the $0
+`dynamic_cam3d` Ken Burns push, same fallback God Hung Up a Snake's own
+4 clips used last session. `panel_animator/dynamic_cam3d.py` hard-codes
+16:9; wrote `poc_living_sketchbook/look_and_live/_s08_kenburns.py` to patch
+OUT_W/OUT_H to 1080x1920 before calling `render_move` (same undocumented
+patch God Hung Up a Snake's session must have done inline, never saved as
+its own script — confirmed by a leftover `_dyncam_work/` dir and by all 4
+of its own clips probing at 1080x1920). Clean push-in, zero invented
+motion, verified by frame extraction. Also strengthened `_s2_animate.py`'s
+own s08 motion prompt to explicitly lock the tongue (kept in the JOBS list
+for any future re-run, not reverted).
+
+**Both episodes' finishing chains (captions where missing, score, sfx,
+watermark) built and run.** No shared shorts score/sfx script existed
+before this session — found and reused `poc_living_sketchbook/
+bronze_serpent/_s5_score_sfx.py` (the sibling short's own combined
+score+sfx-in-one-pass recipe, chained Suno music crossfaded at each
+piece's own literary turn + a `sound_library` ambience bed, all sidechain-
+ducked under the narration via `pipeline/score_mix.py`'s shared AFMT/
+SIDECHAIN) as the pattern, writing one new `_s5_score_sfx.py` per episode
+with each piece's own real spread windows (from `_s3_assemble.py`'s SHOTS
+list, not re-derived) and its own music-turn timing:
+- **Look and Live**: crossfades `lonely_searching_a` -> `sacred_grace_rise_a`
+  across s07's own window (18.7-24.9s, "when he looketh upon it, shall
+  live" -- the piece's own turn). SFX: wind (whole ep), crowd_murmur (s01
+  panic + s08 healing crowd), rumble_deep_sub (s03/s04 wound), a light
+  dawn_morning_warm touch under s09's own "calm dawn sky" line.
+- **God Hung Up a Snake**: per its own _PLAN.md ("heavier... less
+  invitational... building to Christ BECOMING the curse"), the turn is
+  deliberately LATER than Look and Live's — crossfade doesn't start until
+  s11 (47.3-51.0s, "God hung up a snake so the camp could live"), lonely
+  stays dominant through the forge/mother-child/Moses's face/the darkest
+  line ("He became your curse", s10). SFX: wind, rumble under s01's plague
+  dusk, crowd_murmur under s04's gathered camp, fire_crackling + 2
+  nail_strike_single hits under s05's forge.
+Both verified mechanically (ffprobe duration match to the frame, no
+clipping via volumedetect, `check_landing_hold.py` GREEN on both) and
+spot-checked by eye (title cards, captions, the fixed s08 shot, the
+landing frame, watermark placement) — the actual music/sfx BALANCE still
+needs the user's own ear, same standing caveat as every other score pass
+in this project (Claude has no way to listen).
+
+**Final files:**
+`poc_living_sketchbook/look_and_live/LOOKANDLIVE_living_sketchbook_cc_scored_sfx.mp4`
+(62.5s) and
+`poc_living_sketchbook/god_hung_up_a_snake/GODHUNGUPASNAKE_living_sketchbook_cc_scored_sfx.mp4`
+(60.8s).
+
+**Not done / next**: user needs to actually listen to both mixes before
+either is truly "locked." Nothing committed yet — `data/spend_ledger.jsonl`,
+`look_and_live/_s2_animate.py` (tongue-lock prompt), and 4 new files
+(`god_hung_up_a_snake/_s4_captions.py`, `god_hung_up_a_snake/
+_s5_score_sfx.py`, `look_and_live/_s08_kenburns.py`, `look_and_live/
+_s5_score_sfx.py`) are on disk, awaiting the user. After that: Bronze
+Serpent short #3 (unbuilt), the deferred spread-variety lint tool, Day of
+Atonement's publish wiring — same priority order as last session's own
+list. Full detail: RESUME.md top.
+
 **2026-08-12 (session closed for the night — Bronze Serpent Task #1 done,
 Look and Live built through captions, God Hung Up a Snake built through
 title cards, both missing score/sfx/watermark; full detail in RESUME.md's

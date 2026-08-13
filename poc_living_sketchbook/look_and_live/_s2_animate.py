@@ -79,7 +79,9 @@ JOBS = [
 
     ("s08_crowd_healing", "seedance", 4,
      "Every figure holds their exact head position and pose, perfectly "
-     "still. INVENT NOTHING new, no one moves or turns further. Only: the "
+     "still. The serpent's tongue holds its EXACT current short curved "
+     "shape -- it does not extend, whip, lash, lengthen, or change shape at "
+     "all. INVENT NOTHING new, no one moves or turns further. Only: the "
      "warm glow touching the nearer faces breathes gently. Nothing else "
      "changes."),
 

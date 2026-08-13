@@ -1,10 +1,69 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-13 (BOTH SHORTS FINISHED END TO
+# END — captions/score/sfx/watermark all done, landing-hold GREEN on both,
+# NOT committed yet) — READ THIS FIRST, supersedes every block below.
+#
+# ── WHAT HAPPENED: user asked to resume "using a gentle CPU and memory
+# usage" (now a recurring ask each session) — verified POLITE_CPU=33/IDLE-
+# priority/LOW-memory-priority still live in `.venv/Lib/site-packages/
+# sitecustomize.py`, nothing to change. Asked the open question flagged in
+# the 2026-08-12 block below (does "locked" mean finish the chain or stop
+# as-is for Look and Live) — user chose finish the chain.
+#
+# ── s08 (Look and Live) REAL DEFECT, FOUND AND FIXED: re-animating the
+# richness-pass aerial still, Seedance invented motion on the serpent TWICE
+# (try 1: tongue whipped into a long ribbon; try 2, with the tongue
+# explicitly locked in the prompt too: the whole head/neck bent down).
+# Caught both by extracting frames and looking, not by trusting a clean
+# exit code — see [[always-independent-red-team]] / [[feedback-verify-by-
+# looking-not-running]]. Asked the user (2 straight paid fails = the
+# project's own "USER decision, not a silent fallback" threshold) — chose
+# the $0 `dynamic_cam3d` Ken Burns push, same fallback God Hung Up a Snake's
+# own 4 clips used last session. Wrote `poc_living_sketchbook/look_and_live/
+# _s08_kenburns.py` (patches `dynamic_cam3d.py`'s hard-coded 16:9 to 9:16
+# before calling `render_move` — the same undocumented patch the prior
+# session must have done inline for GHUAS's 4 clips, confirmed by a leftover
+# `_dyncam_work/` dir and by those clips probing at 1080x1920). Clean push,
+# zero invented motion, verified by frame extraction.
+#
+# ── BOTH EPISODES' FINISHING CHAINS BUILT AND RUN THIS SESSION. No shared
+# shorts score/sfx script existed before now — reused `poc_living_sketchbook/
+# bronze_serpent/_s5_score_sfx.py`'s combined score+sfx-in-one-pass recipe
+# (chained Suno music crossfaded at the piece's own literary turn + a
+# sound_library ambience bed, sidechain-ducked under narration via
+# pipeline/score_mix.py's shared AFMT/SIDECHAIN) as the pattern. Wrote one
+# `_s5_score_sfx.py` per episode using each piece's own real spread windows
+# from `_s3_assemble.py`'s SHOTS list:
+#   - Look and Live: crossfade at s07 (18.7-24.9s, the piece's own "look and
+#     live" turn line).
+#   - God Hung Up a Snake: crossfade held off until s11 (47.3-51.0s) per its
+#     own heavier/later-turning register (_PLAN.md's own framing).
+# Both verified mechanically (duration match to the frame, no clipping,
+# `check_landing_hold.py` GREEN) and spot-checked by eye (cards, captions,
+# the fixed s08 shot, landing frame, watermark placement).
+#
+# ── FINAL FILES:
+#   poc_living_sketchbook/look_and_live/
+#     LOOKANDLIVE_living_sketchbook_cc_scored_sfx.mp4  (62.5s)
+#   poc_living_sketchbook/god_hung_up_a_snake/
+#     GODHUNGUPASNAKE_living_sketchbook_cc_scored_sfx.mp4  (60.8s)
+#
+# ── NOT DONE / NEXT: the user hasn't LISTENED to either mix yet — Claude
+# has no way to hear the actual balance, only verify it mechanically
+# (durations, clipping, gate). That's the real next step before calling
+# either one locked. Nothing is committed — see the file list at STATE.md's
+# 2026-08-13 entry. After sign-off: Bronze Serpent short #3 (unbuilt), the
+# deferred spread-variety lint tool, Day of Atonement's publish wiring, same
+# priority order as before.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-12 (CLOSED FOR THE NIGHT — Task #1
 # done, Look and Live built through captions, God Hung Up a Snake built
-# through title cards, both missing score/sfx/watermark) — READ THIS FIRST,
-# supersedes every block below including the "Task #1 DONE" block right
-# after this one (that block is still accurate for Task #1 specifically,
-# just superseded as the LATEST state — everything in it still happened).
+# through title cards, both missing score/sfx/watermark) — superseded by the
+# 2026-08-13 block above; kept for its still-relevant process notes (the 3
+# cross-episode fixes, the deferred lint TODO, the gitignored SKILL.md
+# caveat).
 #
 # ── WHERE WE STOPPED: mid-pipeline on TWO shorts at once, both missing the
 # same 4 finishing stages (captions [God Hung Up a Snake only — Look and
