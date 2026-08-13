@@ -1,5 +1,41 @@
 # STATE.md — progress tracker
 
+**2026-08-13 (same day, latest of all) Seed of the Woman short #1 started
+— GATE 2 passed, 11/11 stills LOCKED, animation not started:** Moved to
+the next roadmap item after the Bronze Serpent cluster wrapped. Confirmed
+Seed of the Woman is the one long that's genuinely done (published, live,
+own trailer) with real locked text for all 4 of its declared shorts —
+verified against the actual PythonProject1 narration folders, not just
+the tracker doc (manifest.yaml's own blurbs still say "narration not yet
+written," confirmed stale). Started with short #1, "The First Gospel in
+the Curse" (Genesis 3:15) — narration folder `44_Grace_Spoken_First`.
+
+Mined real reuse from the LOCKED long itself (not just repo cast anchors):
+chained the serpent design straight from `seed_of_the_woman/stills/
+s18_turns_to_serpent.png`, reused Adam/Eve/Christ repo cast anchors.
+God's presence is never a human figure (locked rule) — represented as
+unseen radiant light, matching the long's own "where-art-thou" convention.
+Built `_PLAN.md` (11 spreads, ~$8.85 estimated — cheaper than any Bronze
+Serpent short since almost everything chains from existing approved
+designs).
+
+Rendered all 11 stills clean on the first pass; own eye-check caught s05
+(heel/foreshadowing insert) as a clear miss (sole-of-foot in a "technical
+measurement diagram" style with dimension numbers) and flagged s07/s08a
+as borderline. User said "lock it" — fixed s05 first since it was a clear
+defect, not a taste call: took 3 rounds (diagram numbers persisted even
+under explicit negation until reframed as a narrative garden moment
+instead of an isolated "specimen" study; round 3 came back sole-view with
+an oversized heel mark, user accepted it as good enough for a quick
+insert). All 11 now locked: `poc_living_sketchbook/first_gospel_in_the_curse/
+_STILLS_REVIEW.html`.
+
+**Not done / next**: animation (Kling/veo3_1_lite/Seedance tiering per
+_PLAN.md, ~$7.75 of the ~$8.85 total) hasn't started — needs a cost quote
++ explicit OK first. This is also the FIRST real production use of the
+newly-adopted veo3_1_lite split (5 of 11 clips planned for veo). Nothing
+from this short is committed to git yet. Full detail: RESUME.md top.
+
 **2026-08-13 (same day, truest truest latest) veo3_1_lite decision
 REFINED with round 2 of the bake-off (3 more clips + 1 retry, $1.80,
 $3.60 total across both rounds):** User asked for more bake-offs to
