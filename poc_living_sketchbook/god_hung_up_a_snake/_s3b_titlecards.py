@@ -28,10 +28,32 @@ HILITE = (250, 230, 90)
 
 SIZE_MAP = {"hilite": 66, "quote": 110, "card": 34}
 
+# Real bug found 2026-08-13 (user caught it on Son of Man Lifted Up):
+# type_img() had no width ceiling at all -- a long quote line just
+# rendered at whatever width the text needed. Measured here too: "AND
+# MOSES MADE A SERPENT" rendered at canvas_w=1111px, over this 1080px
+# frame's own width. Shrink-to-fit keeps every card safely inset (mirrors
+# the Noah caption's own "never wall-to-wall" MAX_TEXT_W discipline).
+MAX_CARD_W = int(W * 0.84)
+MIN_SCALE = 0.55  # never shrink a card below 55% of its designed size
+
+
+def _fit_size(lines, size):
+    fitted = size
+    while fitted > size * MIN_SCALE and fitted > 20:
+        font = ImageFont.truetype(F_BLACK, fitted)
+        pad = int(fitted * 0.35)
+        tw = max(font.getbbox(ln)[2] for ln in lines)
+        if tw + 4 * pad <= MAX_CARD_W:
+            break
+        fitted -= 2
+    return fitted
+
 
 def type_img(text, size, kind):
-    font = ImageFont.truetype(F_BLACK, size)
     lines = text.split("\n")
+    size = _fit_size(lines, size)
+    font = ImageFont.truetype(F_BLACK, size)
     pad = int(size * 0.35)
     line_h = int(size * 1.18)
     tw = max(font.getbbox(ln)[2] for ln in lines)

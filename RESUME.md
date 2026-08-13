@@ -1,7 +1,35 @@
 # ══════════════════════════════════════════════════════════════════════════
-# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-13 (ALL 3 BRONZE SERPENT SHORTS
-# NOW LOCKED — the whole cluster is finished) — READ THIS FIRST, supersedes
-# every block below.
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-13 (LATEST — real title-card
+# clipping bug found + fixed on ALL 3 locked Bronze Serpent shorts, all
+# rebuilt and re-verified GREEN) — READ THIS FIRST, supersedes every block
+# below.
+#
+# ── WHAT HAPPENED: after all 3 shorts were locked, user caught a real bug
+# by eye on short #3 — the title/quote/citation cards (NOT the bottom
+# spoken captions) were running edge-to-edge, some clipped off-frame.
+# Traced it to `_s3b_titlecards.py`'s `type_img()` (verbatim-copied across
+# all 3 episodes) having NO width ceiling at all. Measured (not eyeballed)
+# which cards actually overflowed the 1080px frame, then checked the OTHER
+# 2 already-locked shorts rather than assuming they were fine — found Look
+# and Live's 2nd quote card was ALSO genuinely clipped, God Hung Up a
+# Snake's cards measured over too (less visually obvious). Asked before
+# touching already-locked work — user approved fixing all 3.
+#
+# ── FIX: shrink-to-fit width ceiling added to all 3 `_s3b_titlecards.py`
+# scripts (`MAX_CARD_W = int(W*0.84)`), same fix ported identically. All 3
+# full downstream chains rebuilt (title cards → captions → score/sfx →
+# watermark, $0, no spend). Hit the project's own known stale-`.prewm.bak`
+# skip bug on every re-watermark pass — deleted the stale backup first
+# each time. `check_landing_hold.py` GREEN on all 3 afterward.
+#
+# ── NOT COMMITTED YET: the 3 script fixes + STATE.md/RESUME.md, about to
+# commit (no media). See STATE.md's own latest entry for full detail.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-13 (earlier same day — ALL 3
+# BRONZE SERPENT SHORTS LOCKED — the whole cluster is finished) —
+# superseded by the block above; kept for its own process detail.
 #
 # ── WHERE THIS LANDED: started the session by finishing #1/#2 (see the
 # block right below this one for that detail), then built #3 from zero

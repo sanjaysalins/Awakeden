@@ -31,11 +31,38 @@ HILITE = (250, 230, 90)
 
 SIZE_MAP = {"hilite": 66, "quote": 110, "card": 34}
 
+# Real bug found 2026-08-13 (user caught it on Son of Man Lifted Up, then
+# confirmed here too): type_img() had no width ceiling at all -- a long
+# quote line just rendered at whatever width the text needed, so on this
+# 1080px-wide 9:16 frame a 26+ character line could exceed the frame and
+# get clipped off both edges. Measured: "MAKE THEE A FIERY SERPENT," /
+# "AND SET IT UPON A POLE:" (the s06 card) rendered at canvas_w=1135px,
+# wider than the 1080px frame -- confirmed clipped by eye. Shrink-to-fit
+# keeps every card safely inset (mirrors the Noah caption's own "never
+# wall-to-wall" MAX_TEXT_W discipline, applied here to the title/quote/
+# citation layer instead of the spoken-caption layer).
+MAX_CARD_W = int(W * 0.84)
+MIN_SCALE = 0.55  # never shrink a card below 55% of its designed size
+
+
+def _fit_size(lines, size):
+    fitted = size
+    while fitted > size * MIN_SCALE and fitted > 20:
+        font = ImageFont.truetype(F_BLACK, fitted)
+        pad = int(fitted * 0.35)
+        tw = max(font.getbbox(ln)[2] for ln in lines)
+        if tw + 4 * pad <= MAX_CARD_W:
+            break
+        fitted -= 2
+    return fitted
+
 
 def type_img(text, size, kind):
-    """Verbatim port of forsaken_cry_ps221/_poc4_full_standard.py's type_img()."""
-    font = ImageFont.truetype(F_BLACK, size)
+    """Verbatim port of forsaken_cry_ps221/_poc4_full_standard.py's type_img(),
+    plus a shrink-to-fit width ceiling (see MAX_CARD_W above)."""
     lines = text.split("\n")
+    size = _fit_size(lines, size)
+    font = ImageFont.truetype(F_BLACK, size)
     pad = int(size * 0.35)
     line_h = int(size * 1.18)
     tw = max(font.getbbox(ln)[2] for ln in lines)

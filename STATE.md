@@ -1,5 +1,42 @@
 # STATE.md — progress tracker
 
+**2026-08-13 (same day, latest) Real cross-episode bug found and fixed on
+ALL 3 locked Bronze Serpent shorts — title/quote cards were clipping off
+the frame edges:** User caught it by eye on short #3 ("the info graphics...
+almost to the edge"), specifically NOT the bottom spoken captions. Measured
+the actual bug: `_s3b_titlecards.py`'s `type_img()` (verbatim-copied across
+all 3 episodes) had NO width ceiling at all — a long quote line just
+rendered at whatever pixel width the text needed, with no safe margin, so
+on the 1080px-wide 9:16 frame long lines (26+ characters) could exceed the
+frame and get clipped off both edges.
+
+Measured which cards actually overflowed (canvas_w vs. the 1080px frame,
+not eyeballed): short #3's own two quote cards (1184px, 1136px) and hilite
+title (1007px) — all confirmed clipped by eye too. Then checked the other
+2 already-LOCKED shorts rather than assuming they were fine: Look and
+Live's 2nd quote card ("MAKE THEE A FIERY SERPENT," — 1135px) was ALSO
+confirmed clipped by eye once I looked closely. God Hung Up a Snake's own
+q1 (1111px) and hilite (994px) measured over too, less visually obvious
+but real. Asked the user before touching the other 2 already-locked shorts
+(a bigger rework than a single-episode fix) — approved fixing all 3.
+
+**Fix**: added a shrink-to-fit width ceiling (`MAX_CARD_W = int(W*0.84)`,
+`MIN_SCALE=0.55`) to `type_img()` in all 3 `_s3b_titlecards.py` scripts —
+same fix, ported identically (mirrors the Noah caption's own "never
+wall-to-wall" MAX_TEXT_W discipline, applied here to the title/quote/
+citation layer instead of the spoken-caption layer). Rebuilt all 3 full
+downstream chains (restore pre-card backup → title cards → captions →
+score/sfx → watermark) — all $0, no spend. Hit the known stale-`.prewm.bak`
+skip bug on all 3 re-watermark passes (documented in this project's own
+history) — deleted the stale backup before each real re-watermark.
+Verified: `check_landing_hold.py` GREEN on all 3, spot-checked by eye that
+every previously-clipped card now sits with real margin on both edges.
+
+**Not done / next**: about to commit the 3 script fixes + doc updates (no
+media, matches repo convention). After that: same roadmap as before
+(spread-variety lint tool, Day of Atonement publish wiring, Seed of the
+Woman's 4 unbuilt shorts). Full detail: RESUME.md top.
+
 **2026-08-13 (same day, latest) Bronze Serpent short #3 finished and
 LOCKED — all 3 of the cluster's declared shorts now shipped:** Continued
 straight from GATE 3 (clips locked). Built assembly (`_s3_assemble.py`,
