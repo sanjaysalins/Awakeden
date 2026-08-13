@@ -48,13 +48,16 @@
 #   poc_living_sketchbook/god_hung_up_a_snake/
 #     GODHUNGUPASNAKE_living_sketchbook_cc_scored_sfx.mp4  (60.8s)
 #
-# ── NOT DONE / NEXT: the user hasn't LISTENED to either mix yet — Claude
-# has no way to hear the actual balance, only verify it mechanically
-# (durations, clipping, gate). That's the real next step before calling
-# either one locked. Nothing is committed — see the file list at STATE.md's
-# 2026-08-13 entry. After sign-off: Bronze Serpent short #3 (unbuilt), the
-# deferred spread-variety lint tool, Day of Atonement's publish wiring, same
-# priority order as before.
+# ── USER SAID "YES LOCK IT" — BOTH EPISODES ARE LOCKED. Committed (e3e2b7d,
+# NOT pushed). Added as LOCKED cards to SKETCHBOOK_REVIEW.html's Shorts
+# section. NOT touched: manifest.yaml's own entries for these two slugs are
+# still stale ("public_status: planned") — that's Stage 5/6 publish-pipeline
+# wiring, a bigger step than a creative lock, flag before doing it.
+#
+# ── NEXT: Bronze Serpent short #3 ("Even So Must the Son of Man Be Lifted
+# Up," John 3:14) — fully unbuilt, the last of the cluster's 3 declared
+# shorts. After that: the deferred spread-variety lint tool, Day of
+# Atonement's own publish wiring — same priority order as before.
 # ══════════════════════════════════════════════════════════════════════════
 #
 # ══════════════════════════════════════════════════════════════════════════

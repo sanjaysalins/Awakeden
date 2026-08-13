@@ -64,15 +64,26 @@ in this project (Claude has no way to listen).
 `poc_living_sketchbook/god_hung_up_a_snake/GODHUNGUPASNAKE_living_sketchbook_cc_scored_sfx.mp4`
 (60.8s).
 
-**Not done / next**: user needs to actually listen to both mixes before
-either is truly "locked." Nothing committed yet — `data/spend_ledger.jsonl`,
-`look_and_live/_s2_animate.py` (tongue-lock prompt), and 4 new files
+**User said "yes lock it" immediately after — both episodes are LOCKED.**
+Code committed (e3e2b7d, NOT pushed): `data/spend_ledger.jsonl`,
+`look_and_live/_s2_animate.py` (tongue-lock prompt), 4 new files
 (`god_hung_up_a_snake/_s4_captions.py`, `god_hung_up_a_snake/
 _s5_score_sfx.py`, `look_and_live/_s08_kenburns.py`, `look_and_live/
-_s5_score_sfx.py`) are on disk, awaiting the user. After that: Bronze
-Serpent short #3 (unbuilt), the deferred spread-variety lint tool, Day of
-Atonement's publish wiring — same priority order as last session's own
-list. Full detail: RESUME.md top.
+_s5_score_sfx.py`), plus STATE.md/RESUME.md. Added both as LOCKED cards to
+`SKETCHBOOK_REVIEW.html`'s Shorts section (the project's standing tracker
+for finished sketchbook pieces). Generated media stays untracked, matching
+repo convention.
+
+**Not done / next**: these two are the first 2 of the Bronze Serpent
+cluster's own 3 declared shorts (per manifest.yaml) — short #3 ("Even So
+Must the Son of Man Be Lifted Up," John 3:14) is still fully unbuilt.
+`manifest.yaml`'s own entries for these two are stale ("public_status:
+planned", "Narration not yet written") — NOT touched this session, since
+that's Stage 5/6 publish-pipeline territory (website/manifest wiring), a
+bigger step than a creative lock and not something "lock it" alone implies;
+flag for the user before doing that wiring. Also still open: the deferred
+spread-variety lint tool, Day of Atonement's own publish wiring — same
+priority order as before. Full detail: RESUME.md top.
 
 **2026-08-12 (session closed for the night — Bronze Serpent Task #1 done,
 Look and Live built through captions, God Hung Up a Snake built through
