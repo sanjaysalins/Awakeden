@@ -323,6 +323,31 @@ they're never animated; `VISION_AUDIT_MODEL`=Haiku for the coarse assembly verif
   line-boil, parallax-panel, print-grade) are used SELECTIVELY, spread thin across an
   episode, each one picked deliberately for that still + that narration beat — not
   applied by default or stacked everywhere just because they're available.
+- **Living-sketchbook shorts hero-tier animator: veo3_1_lite** (locked 2026-08-13,
+  `poc_comic_page/_animate_piece1_v2.py`'s `run_job()`/`_s2_animate.py` per-episode
+  tiering — the single-clip-per-spread shorts pipeline used by the Bronze Serpent
+  cluster, NOT the comic-grid multi-panel engine above). A 2-clip bake-off (same
+  stills, same LOCK-prefixed prompts, real billed cost) found veo3_1_lite genuinely
+  cheaper than both existing options (4cr/$0.60 vs Kling pro 7.5cr/$1.13 vs Seedance
+  4.8cr/$0.72 at matching 9:16) AND held a wide reverent cross-hero shot completely
+  frozen with real atmospheric cloud drift — better than Kling's own version of the
+  same shot. But it visibly softened a tight close-portrait's expression/gaze fidelity
+  compared to Seedance on the same test. **Split**: veo3_1_lite for wide/hero/
+  atmospheric holds (drifting clouds, radiant light, depth, scale — real cinematic
+  headroom available); Seedance stays default for close portraits and calm
+  face-fidelity-critical shots; Kling stays the fallback for both tiers via
+  `_OTHER_PROVIDER = {"kling": "seedance", "seedance": "kling", "veo": "kling"}`.
+  Governing principle, not just this one model: judge each shot's own cinematic
+  headroom BEFORE spending — a shot that would only ever read as a camera push,
+  even from the best paid model, should go straight to the $0 `dynamic_cam3d`
+  push instead of spending on any provider (memory:
+  `feedback-spend-only-for-cinematic-value`). This is a proactive judgment call at
+  planning time, distinct from the reactive rule right below it — if a paid render
+  comes back flat anyway despite the shot seeming to have headroom, that's
+  `feedback-static-ai-clips-need-real-camera`'s job to catch, not this one's. Only
+  2 shots tested so far (both "hold still" cases) — an acting-spread/designed-motion
+  shot and a crowd/multi-figure scene haven't been bake-off'd yet; re-test before
+  assuming the wide/hero win generalizes to those.
 - **Landing hold ≥3.0s on every finished cut, short or long-form** (locked
   2026-07-19, INV-26): after the last spoken word, video AND audio both keep
   running for a minimum 3.0s hold before the file ends — audio track duration

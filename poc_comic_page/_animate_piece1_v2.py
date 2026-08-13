@@ -163,6 +163,11 @@ def run_job(name, provider, still, ar, prompt, duration=None):
         model = "seedance1_5"
         extra = ["--duration", str(duration or 4), "--resolution", "720p", "--aspect_ratio", ar,
                  "--generate_audio", "false"]
+    elif provider == "veo":
+        model = "veo3_1_lite"
+        # legal set is 4/6/8 only -- snap any other requested duration to the nearest
+        veo_dur = min((4, 6, 8), key=lambda d: abs(d - (duration or 4)))
+        extra = ["--duration", str(veo_dur), "--aspect_ratio", ar, "--generate_audio", "false"]
     else:
         model = "kling3_0"
         extra = ["--mode", "pro", "--sound", "off", "--duration", str(duration or 5), "--aspect_ratio", ar]
@@ -202,7 +207,7 @@ def run_job(name, provider, still, ar, prompt, duration=None):
     return False
 
 
-_OTHER_PROVIDER = {"kling": "seedance", "seedance": "kling"}
+_OTHER_PROVIDER = {"kling": "seedance", "seedance": "kling", "veo": "kling"}
 
 
 def run_job_with_fallback(name, provider, still, ar, prompt, duration=None):

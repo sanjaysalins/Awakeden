@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>veo3_1_lite vs Kling/Seedance — bake-off</title>
+<style>
+  body { background:#1a1a1a; color:#eee; font-family:Georgia,serif; margin:0; padding:30px; }
+  h1 { font-size:22px; margin-bottom:4px; }
+  .sub { color:#999; margin-bottom:28px; font-size:14px; max-width:80ch; }
+  .pair { margin-bottom:44px; }
+  .pair h2 { font-size:16px; margin:0 0 4px; }
+  .pair .t { font-size:12.5px; color:#888; margin-bottom:14px; }
+  .row { display:grid; grid-template-columns:1fr 1fr; gap:20px; max-width:760px; }
+  .card { background:#242424; border-radius:8px; padding:12px; }
+  .card video { width:100%; border-radius:4px; display:block; background:#000; }
+  .card .label { font-size:13px; font-weight:700; margin:10px 0 2px; }
+  .card .cost { font-size:12px; color:#aaa; }
+  .card.win { border:1px solid #4a7a4a; }
+  .card.win .cost { color:#8fce8f; }
+  table { border-collapse:collapse; margin-top:6px; font-size:13px; }
+  th, td { padding:6px 14px 6px 0; text-align:left; }
+  th { color:#999; font-weight:600; border-bottom:1px solid #333; }
+  td { border-bottom:1px solid #2a2a2a; }
+  .win-cell { color:#8fce8f; font-weight:700; }
+</style>
+</head>
+<body>
+<h1>veo3_1_lite vs Kling/Seedance — bake-off</h1>
+<div class="sub">Same 2 already-approved stills from short #3 (Even So Must the Son of Man Be Lifted Up), same LOCK-prefixed prompts, same 9:16 aspect ratio — only the animation model changes. Real billed cost, not estimates.</div>
+
+<table>
+<tr><th>Model</th><th>Duration</th><th>Credits</th><th>Cost/clip</th></tr>
+<tr><td>Kling pro</td><td>5s</td><td>7.5cr</td><td>$1.13</td></tr>
+<tr><td>Seedance 1.5 Pro</td><td>4s</td><td>4.8cr</td><td>$0.72</td></tr>
+<tr><td class="win-cell">veo3_1_lite</td><td>4s</td><td class="win-cell">4.0cr</td><td class="win-cell">$0.60</td></tr>
+</table>
+
+<div class="pair" style="margin-top:40px;">
+  <h2>Test 1 — the calm/portrait tier (Seedance's job)</h2>
+  <div class="t">s07_nicodemus_skeptic — "holds his exact expression and head position, perfectly still"</div>
+  <div class="row">
+    <div class="card">
+      <video controls muted loop src="../son_of_man_lifted_up/clips/s07_nicodemus_skeptic.mp4"></video>
+      <div class="label">Seedance 1.5 Pro (shipped)</div>
+      <div class="cost">4.8cr · $0.72</div>
+    </div>
+    <div class="card win">
+      <video controls muted loop src="clips/s07_nicodemus_skeptic_VEO.mp4"></video>
+      <div class="label">veo3_1_lite (test)</div>
+      <div class="cost">4.0cr · $0.60 — 17% cheaper</div>
+    </div>
+  </div>
+</div>
+
+<div class="pair">
+  <h2>Test 2 — the reverent hero-hold tier (Kling's job)</h2>
+  <div class="t">s08_cross_hero — "stays perfectly frozen like a statue... INVENT NOTHING new"</div>
+  <div class="row">
+    <div class="card">
+      <video controls muted loop src="../son_of_man_lifted_up/clips/s08_cross_hero.mp4"></video>
+      <div class="label">Kling pro (shipped)</div>
+      <div class="cost">7.5cr · $1.13</div>
+    </div>
+    <div class="card win">
+      <video controls muted loop src="clips/s08_cross_hero_VEO.mp4"></video>
+      <div class="label">veo3_1_lite (test)</div>
+      <div class="cost">4.0cr · $0.60 — 47% cheaper</div>
+    </div>
+  </div>
+</div>
+
+<div class="sub" style="margin-top:10px;">
+  Both veo clips held completely frozen across every frame in my own frame-by-frame check — no invented motion, matching
+  this pipeline's "camera-only, INVENT NOTHING new" discipline. Caveat: both tests were "hold perfectly still" cases, the
+  easiest tier for any model — this doesn't yet test an acting-spread shot (designed motion) or a crowd/multi-figure
+  scene, which is where a May 2026 bake-off found veo invented movement and ignored the same instruction.
+</div>
+
+</body>
+</html>

@@ -1,5 +1,33 @@
 # STATE.md — progress tracker
 
+**2026-08-13 (same day, truest latest) veo3_1_lite ADOPTED as the shorts
+hero-tier animator, POC clips (not committed, $0 to redo):** After the
+bake-off (2 test clips, $1.20 total, real billed cost confirmed cheaper
+than Kling/Seedance), user confirmed: "yes that would make it really
+grrea and cost effective too." Locked in properly, not just noted:
+- `poc_comic_page/_animate_piece1_v2.py`'s `run_job()` now accepts
+  `provider="veo"` (model=veo3_1_lite, duration snapped to the legal 4/6/8
+  set); `_OTHER_PROVIDER` fallback map extended so a failed veo attempt
+  retries on Kling automatically, same pattern as the existing kling↔seedance
+  fallback.
+- CLAUDE.md's own locked-decisions section: new entry documenting the
+  split (veo for wide/hero/atmospheric holds, Seedance stays default for
+  close portraits, Kling is the fallback for both) and the governing
+  principle (judge cinematic headroom before spending, not just cost).
+- Memory `feedback-spend-only-for-cinematic-value.md` upgraded from "worth
+  testing" to "ADOPTED."
+**Honest caveat, carried into all 3 docs**: only 2 shots tested so far,
+both "hold perfectly still" cases. An acting-spread/designed-motion shot
+and a crowd/multi-figure scene haven't been bake-off'd — re-test before
+assuming the wide/hero win generalizes past reverent holds. The 2 POC
+clips themselves (`poc_living_sketchbook/_veo_bakeoff/`) are throwaway
+test media, not committed, matching repo convention.
+
+**Not done / next**: no episode has actually used veo3_1_lite in
+production yet — the next episode with a hero/wide/atmospheric shot is
+the real first test of this in practice. Otherwise same roadmap as
+before. Full detail: RESUME.md top.
+
 **2026-08-13 (same day, truest latest) User confirmed the title-card fix
 — "wonderful, lock it."** All 3 Bronze Serpent shorts stay LOCKED with the
 corrected cards (fix committed as 0e12da7). No further action needed on
