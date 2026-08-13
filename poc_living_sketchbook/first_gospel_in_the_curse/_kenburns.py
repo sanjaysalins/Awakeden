@@ -1,12 +1,17 @@
-"""The First Gospel in the Curse -- $0 Ken Burns pushes for the 4 spreads
-whose intended effect IS a camera move, not generated life: s02 (dread
-closing in), s04 (quiet attention on the serpent, and this project's own
-serpent object has a real history of invented head/tongue motion on paid
-renders -- a push is also the SAFE choice here), s05 (an ominous detail,
-camera language is enough), s08b (stillness/release is the point, the
-deliberate contrast with s01's trembling hands -- motion would undercut
-it). Per the locked spend-only-for-cinematic-value principle: don't pay
-for a shot that would only ever read as a push anyway.
+"""The First Gospel in the Curse -- $0 Ken Burns pushes for the 3 spreads
+that ended up here after real scrutiny, not just caution:
+  s01 (hook hands) -- 2 Seedance attempts came back static; a 3rd on Kling
+    ("tighten the grip") did produce motion, but also invented a visible
+    double-band wrap around both wrists that wasn't in the source still --
+    a real INVENT NOTHING violation, reverted.
+  s05 (heel/head insert) -- a Seedance attempt asked to stir the
+    surrounding grass instead rotated the whole foot to a different pose/
+    angle mid-clip -- also reverted.
+  s08b (open hands) -- deliberate: stillness/release IS the point, the
+    contrast with s01's earlier tense grip. Motion here would undercut it.
+
+Every other spread this episode is real generated motion (see
+_s2_animate.py) -- these 3 are the disciplined $0 calls, not the default.
 
 panel_animator/dynamic_cam3d.py hard-codes 16:9; patches OUT_W/OUT_H to
 9:16 before calling render_move, same pattern as every other Ken Burns
@@ -30,22 +35,9 @@ CLIPS.mkdir(exist_ok=True)
 
 # (name, move, duration, focus)
 JOBS = [
-    # s01 moved here after 2 straight Seedance fails: asked for a small,
-    # visible finger tremor (the whole point of the shot -- fear made
-    # physical), got a completely static hold both times, even with much
-    # stronger language on the 2nd attempt. A push at least gives real
-    # cinematic motion instead of paying twice for a static result.
     ("s01_hook_hands", "push", 4.0, (0.50, 0.42)),
-    ("s02_waiting_in_trees", "push", 4.0, (0.50, 0.38)),
-    ("s04_serpent_in_light", "push", 4.0, (0.50, 0.50)),
     ("s05_heel_and_head_insert", "push", 4.0, (0.50, 0.55)),
     ("s08b_open_hands", "push", 4.0, (0.50, 0.50)),
-    # s09 moved here after 2 straight veo fails: both attempts invented a
-    # full raised-hood cobra out of a small pale sketch-outline serpent in
-    # the still, even with the 2nd attempt explicitly locking that exact
-    # element by name. A push toward Christ still carries the "reveal"
-    # feeling without the invented-content risk.
-    ("s09_landing_transition", "push", 4.0, (0.50, 0.42)),
 ]
 
 

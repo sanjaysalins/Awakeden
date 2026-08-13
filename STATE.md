@@ -1,5 +1,65 @@
 # STATE.md — progress tracker
 
+**2026-08-13 (round 2, truest latest) Seed of the Woman short #1
+re-fought and RE-LOCKED — fixed the "looks like a slideshow" problem:**
+User's honest read on the round-1 lock: "many of the image is just ken
+burns, it looks like a slide show, we need to fix this, some of the helo
+images we shuould animate it properly, perhaps switch the models and do
+that." Re-fought every one of the 6 round-1 $0 shots (s01/s02/s04/s05/
+s08b/s09) with a different provider and a redesigned per-shot prompt
+rather than accepting the fallback everywhere.
+
+**Result: 8 of 11 now genuine paid generation, only 3 stayed $0** — and
+2 of those 3 earned it on a real defect caught on close inspection, not
+caution:
+- s02 (Seedance, blink+breeze) and s04 (veo retry, light-breathe) and
+  s09 (Kling retry, serpent-lock finally held) all came back CLEAN —
+  confirmed via full-resolution close-cropped frames, direct A/B against
+  the source still. Kept.
+- s01 (Kling, redesigned as a discrete grip-tighten) DID produce motion,
+  but also invented a visible double-band wrap around both wrists that
+  isn't in the source still (only faint decorative squiggle lines are).
+  Caught by comparing directly against the source PNG. REVERTED to $0.
+- s05 (Seedance, asked to stir the surrounding grass) instead rotated
+  the whole foot to a different pose/angle mid-clip — an unauthorized
+  change, not the requested effect. REVERTED to $0.
+- s08b stays $0 by design (unchanged from round 1): stillness/release
+  IS the point, the contrast with s01's tense grip.
+
+This is a direct correction to my own round-1 QC method: 3-frame
+sampling had been enough to catch invented CONTENT but not to judge
+motion QUALITY, which is what the user's "mixed... just doing simple ken
+burn" feedback (from the earlier veo bake-off) had already flagged.
+Round 2's QC was full-res, close-cropped, and directly diffed against
+the source still — that rigor is what caught the s01 wrist-band and s05
+foot-rotation defects a cursory look would have missed.
+
+Also fixed a real bug: `_s2_animate.py`'s `main()` was missing the
+`only = set(sys.argv[1:])` argv filter (present in the docstring's
+intent but never actually wired in), so a "just redo this one clip" call
+silently re-ran the whole JOBS list every time. Two concurrent runs both
+tried to write `s09_landing_transition.mp4` at once and corrupted it
+(`moov atom not found`); caught before it could ship, filter fixed,
+regenerated clean.
+
+Rebuilt the full chain on the final clip set: assembled (69.0s, same
+word-timed windows), title-carded, captioned, scored+sfx'd, watermarked
+(cleared the stale `.prewm.bak.mp4` from the round-1 run first, per the
+known project bug — otherwise the watermark step silently no-ops).
+`check_landing_hold.py` GREEN (69.00s video / 69.00s audio). Spot-checked
+12 frames across the full-res watermarked final by eye. Updated
+`_CLIPS_REVIEW.html` and `SKETCHBOOK_REVIEW.html` to the true 3-of-11
+split (was still showing the stale round-1 "6 of 11" figure). Final file:
+`C:\Users\sanjay\PycharmProjects\JesusInTheBible\poc_living_sketchbook\
+first_gospel_in_the_curse\FIRSTGOSPELINTHECURSE_living_sketchbook_cc_scored_sfx.mp4`
+(69.0s). Review: `file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/
+poc_living_sketchbook/first_gospel_in_the_curse/_CLIPS_REVIEW.html`
+
+**Not done / next**: re-commit the round-2 `.py` state (`_kenburns.py`,
+`_s2_animate.py`) and doc updates — not yet committed. Then 3 more Seed
+of the Woman shorts (Her Seed, Heel vs Head, The Serpent-Crusher
+Promised — all text-locked already). Full detail: RESUME.md top.
+
 **2026-08-13 (session's final entry) Seed of the Woman short #1 finished
 and LOCKED — first real production use of the veo3_1_lite split:** User
 asked to design animation per-shot ("what you want to convey and

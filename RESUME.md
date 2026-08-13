@@ -1,8 +1,57 @@
 # ══════════════════════════════════════════════════════════════════════════
-# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-13 (LATEST — real title-card
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-13 (TRUEST LATEST — Seed of the
+# Woman short #1 re-fought round 2 and RE-LOCKED, fixing the "looks like a
+# slideshow" defect) — READ THIS FIRST, supersedes every block below.
+#
+# ── WHAT HAPPENED: user's honest read on the round-1 lock of "The First
+# Gospel in the Curse": "many of the image is just ken burns, it looks
+# like a slide show, we need to fix this, some of the helo images we
+# shuould animate it properly, perhaps switch the models and do that."
+# Re-fought all 6 round-1 $0 shots (s01/s02/s04/s05/s08b/s09) on a
+# different provider + redesigned prompt each, rather than mechanically
+# re-applying the same tiering.
+#
+# ── RESULT: 8 of 11 clips are now genuine paid generation, only 3 stayed
+# $0. s02/s04/s09 came back clean on retry (kept). s01 (Kling) DID move
+# but invented a wrist-band wrap not in the source still — reverted. s05
+# (Seedance, asked to stir grass) instead rotated the whole foot to a
+# different pose mid-clip — reverted. s08b stays $0 by deliberate design
+# (stillness IS the point). QC this round was full-res, close-cropped,
+# and diffed directly against the source still — a real upgrade from
+# round 1's 3-frame sampling, which is what let the wrist-band/foot-
+# rotation defects slip through the first time.
+#
+# ── ALSO FIXED: a real bug in `_s2_animate.py` — `main()` was missing the
+# `only = set(sys.argv[1:])` argv filter, so a "redo just this clip" call
+# silently re-ran the whole JOBS list. Caused a race that corrupted
+# `s09_landing_transition.mp4` (`moov atom not found`); caught before
+# shipping, filter fixed, regenerated clean.
+#
+# ── REBUILT the full chain on the final clip set (assemble → title cards
+# → captions → score/sfx → watermark, cleared the stale `.prewm.bak.mp4`
+# first). `check_landing_hold.py` GREEN (69.00s/69.00s). Spot-checked 12
+# frames by eye on the final watermarked file. Updated `_CLIPS_REVIEW.html`
+# and `SKETCHBOOK_REVIEW.html` off the stale round-1 "6 of 11" figure to
+# the true 3-of-11. Final file: `C:\Users\sanjay\PycharmProjects\
+# JesusInTheBible\poc_living_sketchbook\first_gospel_in_the_curse\
+# FIRSTGOSPELINTHECURSE_living_sketchbook_cc_scored_sfx.mp4` (69.0s).
+# Review: file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/
+# poc_living_sketchbook/first_gospel_in_the_curse/_CLIPS_REVIEW.html
+#
+# ── NOT COMMITTED YET: round-2 `_kenburns.py`/`_s2_animate.py` state +
+# doc updates (STATE.md/RESUME.md/SKETCHBOOK_REVIEW.html/_CLIPS_REVIEW.html),
+# no media (repo convention). About to commit.
+#
+# ── NEXT: 3 more Seed of the Woman shorts (Her Seed, Heel vs Head, The
+# Serpent-Crusher Promised — all text-locked). Then the deferred
+# spread-variety lint tool, then Day of Atonement's publish wiring.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-13 (real title-card
 # clipping bug found + fixed on ALL 3 locked Bronze Serpent shorts, all
-# rebuilt and re-verified GREEN) — READ THIS FIRST, supersedes every block
-# below.
+# rebuilt and re-verified GREEN) — superseded by the block above; kept for
+# its own process detail.
 #
 # ── WHAT HAPPENED: after all 3 shorts were locked, user caught a real bug
 # by eye on short #3 — the title/quote/citation cards (NOT the bottom

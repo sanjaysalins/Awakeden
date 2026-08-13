@@ -46,9 +46,28 @@ LOCK = ("The camera does not move, zoom, or change angle at all. INVENT "
 
 # (name, provider, duration, motion)
 JOBS = [
-    # s01_hook_hands MOVED to _kenburns.py -- 2 straight Seedance attempts
-    # (including one with much stronger tremor language) both came back
-    # completely static. See _kenburns.py's own comment.
+    # ROUND 2 (user: too many Ken Burns, re-fight the important ones with
+    # different providers/redesigned prompts rather than accept the $0
+    # fallback everywhere). s01 and s05 tried here too but reverted back to
+    # _kenburns.py after real defects on inspection: s01 (Kling) invented a
+    # visible double-band wrap around both wrists that wasn't in the
+    # source still; s05 (Seedance) rotated the whole foot to a different
+    # pose/angle mid-clip instead of just stirring the grass. Neither is a
+    # hero shot, so $0 stayed the disciplined choice once the paid retry
+    # showed a real violation rather than a clean win.
+
+    ("s02_waiting_in_trees", "seedance", 4,
+     "Adam and Eve hold their exact positions and poses, perfectly "
+     "still -- only a single slow, natural blink from each of them, and "
+     "the leaves and hanging branches around them stirring very faintly "
+     "as if in a light breeze. INVENT NOTHING new otherwise. Nothing "
+     "else changes."),
+
+    ("s04_serpent_in_light", "veo", 4,
+     "The serpent holds its exact shape and position, perfectly still "
+     "-- it does not move, coil, or change shape at all. Only: the soft "
+     "light falling on it breathes very gently brighter and dimmer. "
+     "Nothing else in the frame changes."),
 
     ("s03_turns_to_serpent", "veo", 4,
      "The serpent holds its exact shape and position, perfectly still -- "
@@ -77,10 +96,15 @@ JOBS = [
      "slightly, quietly, as the weight of what she's just understood "
      "settles in. INVENT NOTHING new otherwise. Nothing else changes."),
 
-    # s09_landing_transition MOVED to _kenburns.py -- 2 straight veo
-    # attempts invented a full raised-hood cobra out of a small sketch-
-    # outline serpent in the still, even with the 2nd attempt explicitly
-    # locking that element by name. See _kenburns.py's own comment.
+    ("s09_landing_transition", "kling", 5,
+     "Christ and the torn paper edges hold their exact position and "
+     "shape, perfectly still -- His pose never changes. The small, pale, "
+     "simple serpent sketch-outline in the upper left holds its EXACT "
+     "current small size and plain coiled shape -- it does NOT grow "
+     "larger, does NOT gain new detail or scales, does NOT raise a hood, "
+     "does NOT become a cobra, does NOT change in any way. Only: the "
+     "warm gold light pouring through the tear breathes and grows very "
+     "gently brighter, alive. Nothing else in the frame changes."),
 
     ("s10_landing_christ", "veo", 4,
      "Christ stays perfectly frozen in His exact pose, no movement at "
