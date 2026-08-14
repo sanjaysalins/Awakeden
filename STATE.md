@@ -1,6 +1,67 @@
 # STATE.md — progress tracker
 
-**2026-08-14 (latest) Heel vs Head (Seed of the Woman short #3) — stills
+**2026-08-14 (latest of all) Heel vs Head FINISHED and LOCKED end to
+end — animation quality fixes + a real shared-infrastructure bug found
+and fixed:** After stills GATE 2 locked, animated all 7 clips (2 $0 +
+5 paid initially: veo3_1_lite x3, Kling x1, ~$3.11). User's GATE 3 read:
+"some don't have any animation, feels like all are ken burn." Labeled
+every clip's mode prominently on the review page (a new standing
+convention for future review pages), then asked which specific clips —
+user named s01 and s04 as the worst.
+
+**s01** had been a $0 static hold (every camera push cropped one of the
+two standoff figures out of frame, even at reduced amplitude) — moved to
+paid Kling. Result was a real surprise: instead of the subtle held-
+breath tension asked for, Kling invented a full style-resolve transform
+(loose wet ink-wash settling into cleaner linework, a red garment
+intensifying) — technically an "invent nothing new" violation, but
+genuinely striking. Flagged honestly to the user; they chose to keep it.
+
+**s04** had been veo3_1_lite's continuous "breathes gently" light
+motion — the same prompt shape as sibling shots s03/s07. Rewritten as a
+DISCRETE before/after light change and moved to Kling; this time
+verified by direct full-resolution first/last-frame comparison, not just
+a diff-stat or a frame-strip glance — confirmed genuinely, unmistakably
+brighter by the end (blown out near-white where the first frame still
+showed beam texture). Real lesson written into memory and RESUME.md: a
+nonzero pixel diff or a clean exit code doesn't mean a human watching
+real playback will perceive the motion as alive.
+
+New total animation spend: ~$5.14 (up from $3.11, both moved from $0/
+veo to paid Kling).
+
+**User said "lock it"** (typo'd "clock it") — GATE 3 locked. Moved to
+assembly: real word-timed spread windows, LOCKED title/quote-card
+standard (Genesis 3:15's actual KJV quote), and a score/sfx arc timed to
+this piece's own real turn (the word "Christ" in "Christ already
+delivered the blow that ends it," 50.819s per the alignment — not the
+earlier KJV-quote moment, which is God stating the terms, not yet the
+resolution).
+
+**Own eye-check of the finished cut (not just the landing-hold gate)
+caught a real, previously-unknown bug in the SHARED caption burner**
+(`poc_living_sketchbook/_short_captions.py`, used by every episode in
+this cluster): each caption chunk gets a fixed 0.12s tail-extension so
+it doesn't cut off abruptly, but when a chunk happens to break exactly
+at the 6-word cap with under 0.12s gap to the next chunk (no real vocal
+pause — here, a quote-mark boundary: "God says to the serpent, 'I" hit
+the word cap right as "will" started almost immediately after), the
+tail-extension visibly ghosts behind the next chunk's text. Fixed at the
+SOURCE (capped the tail extension at the next chunk's own start time),
+so every future piece in this cluster benefits, not just this one.
+Rebuilt captions -> score/sfx -> watermark; re-verified the fix directly
+by pulling the exact frame that had shown the ghosting.
+
+`check_landing_hold.py` GREEN: 65.00s/65.00s. **Heel vs Head is LOCKED.**
+Added to `SKETCHBOOK_REVIEW.html`. Final file: `poc_living_sketchbook/
+heel_vs_head/HEELVSHEAD_living_sketchbook_cc_scored_sfx.mp4` (65.0s).
+This is the 3rd of 4 declared Seed of the Woman shorts — 1 remains (The
+Serpent-Crusher Promised, already text-locked).
+
+**Not done / next**: commit this session's remaining doc updates. Then
+the last Seed of the Woman short. Full detail: RESUME.md top.
+
+**2026-08-14 (same day, earlier) Heel vs Head (Seed of the Woman short #3) — stills
 GATE 2 LOCKED after real creative back-and-forth on 3 of 7 shots:**
 Started the 3rd Seed of the Woman short. Source narration `43_Not_a_Tie`
 (Genesis 3:15's asymmetric heel/head outcome) found by content search,

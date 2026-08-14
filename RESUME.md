@@ -1,45 +1,65 @@
 # ══════════════════════════════════════════════════════════════════════════
-# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-14 (Heel vs Head stills GATE 2
-# LOCKED, 7/7, after real creative rejection + rebuild on 3 shots) — READ
-# THIS FIRST, supersedes every block below.
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-14 (Heel vs Head FINISHED and
+# LOCKED end to end) — READ THIS FIRST, supersedes every block below.
 #
-# ── PICK UP HERE: `poc_living_sketchbook/heel_vs_head/` (Seed of the
-# Woman short #3, Genesis 3:15, source narration `43_Not_a_Tie`). All 7
-# stills locked: `_STILLS_REVIEW.html`. NEXT ACTION: quote animation cost
-# and get explicit OK before spending (standing rule) -- `_PLAN.md`'s
-# tiering section is only a rough sketch, finalize per-shot tier at quote
-# time. Then the LAST remaining Seed of the Woman short (The Serpent-
-# Crusher Promised, already text-locked).
+# ── PICK UP HERE: Heel vs Head (Seed of the Woman short #3) is fully
+# done -- stills, animation, assembly, score/sfx, watermark, landing-hold
+# all GREEN. Final file: `poc_living_sketchbook/heel_vs_head/
+# HEELVSHEAD_living_sketchbook_cc_scored_sfx.mp4` (65.0s). Added to
+# `SKETCHBOOK_REVIEW.html`. NEXT ACTION: the LAST remaining Seed of the
+# Woman short (The Serpent-Crusher Promised, already text-locked) -- once
+# that's done, all 4 declared shorts in this cluster are complete. Then
+# the deferred spread-variety lint tool, Day of Atonement's publish
+# wiring.
 #
-# ── REAL LESSON, worth remembering for any future creative-direction
-# note: when the user's reaction is strong outright rejection ("I hate
-# both of them"), STOP and ask what's wrong before guessing again -- the
-# answer (wrong CONCEPT vs. wrong EXECUTION) changes the fix completely.
-# This session guessed wrong once (dispatched Fable for a full creative
-# redesign when the user's actual ask, revealed only after asking
-# directly, was "much simpler, closer to the established style") --
-# asking first would have skipped a full wasted round.
+# ── TWO REAL LESSONS worth remembering:
+# 1. When the user's reaction to creative direction is strong outright
+#    rejection ("I hate both of them"), STOP and ask what's wrong before
+#    guessing again -- wrong CONCEPT vs. wrong EXECUTION changes the fix
+#    completely. This session guessed wrong once (dispatched Fable for a
+#    full redesign when the actual ask was "much simpler, closer to the
+#    established style") -- asking first would have skipped a wasted round.
+# 2. A nonzero pixel diff or a clean exit code does NOT mean a human
+#    watching real playback will perceive motion as alive. User caught 2
+#    paid clips (s01, s04) reading as static/Ken-Burns-equivalent despite
+#    passing frame-strip checks -- the fix for s04 was only confirmed by
+#    directly comparing full-resolution first/last frames side by side,
+#    not by trusting a diff-stat number.
 #
-# ── WHAT HAPPENED: built the whole piece from scratch (alignment, plan,
-# 7 stills) reusing short #1's own serpent design as a chain reference.
-# 2 real defects on the first pass (a face where none was asked for, a
-# serpent reading alive instead of defeated) fixed quickly. User then
-# said s02/s06 "can be better designed" -- dispatched Fable, got genuinely
-# strong specific concepts (specimen-sheet skull/heel contrast; repeated
-# fist studies shadow-boxing a dead shadow), implemented both, fixed 2
-# more real defects along the way. User's verdict: "I hate both of them."
-# Asked directly why -- wrong concept, not execution. Rebuilt both MUCH
-# simpler (a cracked stone + a footprint; a single figure gripping their
-# own hands) matching short #1's own restrained single-scene grammar.
-# User then flagged s05 too (the original two-part heel+skull insert) --
-# rebuilt as a single continuation of the same serpent from s03/s04, now
-# defeated; took 6 rounds (reference-image bias kept pulling it back to
-# "alive," one attempt hallucinated an unrelated face, a provider swap
-# finally fixed it). User said "ok lock it" -- LOCKED.
+# ── WHAT HAPPENED (stills + GATE 2, chronological): built the whole
+# piece from scratch (alignment, plan, 7 stills) reusing short #1's own
+# serpent design as a chain reference. 2 real defects on the first pass
+# fixed quickly. User said s02/s06 "can be better designed" -- dispatched
+# Fable, got strong specific concepts, implemented both, fixed 2 more
+# real defects along the way. User's verdict: "I hate both of them" --
+# wrong concept, not execution (confirmed by asking). Rebuilt both MUCH
+# simpler, matching short #1's own restrained grammar. User then flagged
+# s05 too -- rebuilt as a continuation of the same serpent from s03/s04,
+# now defeated; took 6 rounds. User said "ok lock it" -- GATE 2 LOCKED.
+#
+# ── WHAT HAPPENED (animation + GATE 3): animated all 7 clips (2 $0 + 5
+# paid: veo x3, Kling x1, ~$3.11). User's GATE 3 read: "feels like all
+# are ken burn." Added prominent mode badges to the review page (new
+# standing convention). User named s01 and s04 as worst -- both moved to
+# paid Kling and re-verified properly (see lesson #2 above). New spend:
+# ~$5.14. User said "clock it" (lock it) -- GATE 3 LOCKED.
+#
+# ── WHAT HAPPENED (assembly): built the full chain fresh (own word-timed
+# windows, LOCKED title-card standard, a score/sfx arc timed to this
+# piece's real turn -- the word "Christ" at 50.819s, not the earlier KJV
+# quote). Own eye-check of the finished cut (not just the landing-hold
+# gate) caught a real bug in the SHARED caption burner
+# (`poc_living_sketchbook/_short_captions.py`, used by every episode in
+# this cluster): a fixed 0.12s tail-extension could ghost-overlap into
+# the next caption chunk when a chunk broke exactly at the word cap with
+# no real vocal pause before the next one. Fixed AT THE SOURCE (capped
+# the tail extension at the next chunk's own start), so every future
+# piece benefits, not just this one. Rebuilt captions -> score/sfx ->
+# watermark. `check_landing_hold.py` GREEN: 65.00s/65.00s.
 #
 # ── NOT COMMITTED YET: STATE.md/RESUME.md updates only (all the
-# heel_vs_head folder changes were committed incrementally through the
-# session already).
+# heel_vs_head folder changes + the _short_captions.py fix were committed
+# incrementally through the session already).
 # ══════════════════════════════════════════════════════════════════════════
 #
 # ══════════════════════════════════════════════════════════════════════════

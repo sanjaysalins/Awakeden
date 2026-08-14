@@ -115,9 +115,18 @@ def burn(src: Path, out: Path, words: list, skip_windows: list[tuple[float, floa
         inputs += ["-i", str(p)]
         idx = i + 1
         label = f"v{idx}"
+        # 0.12s tail extension so the chunk doesn't cut off abruptly -- but
+        # capped at the NEXT chunk's own start so two chunks never overlay
+        # simultaneously. Without this cap, a chunk that happens to break
+        # exactly at MAX_WORDS with <0.12s gap to the next chunk (no real
+        # vocal pause, e.g. a quote-mark boundary) visibly ghosts behind the
+        # next chunk's text -- confirmed real defect, Heel vs Head 2026-08-14.
+        tail = t1 + 0.12
+        if i + 1 < len(pngs):
+            tail = min(tail, pngs[i + 1][1])
         filt_parts.append(
             f"[{last}][{idx}:v]overlay=0:0:enable="
-            f"'between(t,{t0:.3f},{t1 + 0.12:.3f})'[{label}]"
+            f"'between(t,{t0:.3f},{tail:.3f})'[{label}]"
         )
         last = label
 
