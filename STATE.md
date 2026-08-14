@@ -267,6 +267,45 @@ downstream chain a 3rd time. `check_landing_hold.py` GREEN again:
 **Not done / next**: commit this fix. Then the 2 remaining Seed of the
 Woman shorts. Full detail: RESUME.md top.
 
+**2026-08-14 (same day, latest) 3rd real post-lock defect found and
+fixed — Eve's eyes visibly asymmetric on s01:** User: "the first image
+her eyes is still bad in the stills" — note this was the STILL, not the
+clip (a different defect from the earlier Adam far-eye animation issue).
+Zoomed properly on Eve's face (2 earlier crop attempts missed, wrong
+coordinates) and confirmed: her near eye reads noticeably larger and
+rounder than her far eye, a real asymmetry.
+
+Fixed with an explicit "symmetric, evenly matched eyes" instruction —
+but the FIRST wording (heavy negation: "neither eye is larger... than
+the other") tripped the provider's content filter 4 times running, same
+pattern as the earlier "lying down" gotcha. Simplified to plain positive
+phrasing ("Eve's eyes are symmetrical and evenly matched") and it
+rendered clean — but the composition drifted from the locked full-body
+wide forest shot to a closer waist-up crop as a side effect. 6 further
+attempts to recover the wide framing while keeping the eye fix ALL
+failed at the provider level (mix of content-filter-style failures and
+one genuine HTTP 503). Asked the user rather than keep spending blindly
+— chose to keep the closer, eyes-fixed version over continuing to
+gamble on retries.
+
+Re-animated s01 (Kling) against the corrected still, verified both of
+Eve's eyes hold correctly across the whole clip. Rebuilt the entire
+downstream chain a 4th time. `check_landing_hold.py` GREEN again:
+62.00s/62.00s.
+
+**Her Seed re-LOCKED a 3rd time.** Same final filename:
+`poc_living_sketchbook/her_seed/HERSEED_living_sketchbook_cc_scored_sfx.mp4`
+(62.0s). **Pattern worth naming**: this piece needed 3 separate post-lock
+fixes (Adam's animated eye, s05's modern clothing, Eve's still-image eye
+symmetry) — all genuinely different defects the user caught by watching/
+looking at the finished piece that neither my own eye-checks nor the
+mechanical gates (landing hold, duration match) could have caught. Real
+argument for a slower, more thorough visual pass before the FIRST lock,
+though the user's own review remains the final backstop regardless.
+
+**Not done / next**: commit this fix. Then the 2 remaining Seed of the
+Woman shorts. Full detail: RESUME.md top.
+
 **2026-08-13 (session end) Seed of the Woman short #2 "Her Seed" STARTED,
 stills 7/8 clean, 1 still needs a 3rd attempt tomorrow:** After short #1
 re-locked, user approved starting short #2 (Galatians 4:4, source

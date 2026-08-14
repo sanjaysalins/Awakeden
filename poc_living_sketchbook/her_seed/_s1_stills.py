@@ -95,8 +95,10 @@ MARY = (
 # (name, refs, model, scene)
 SHOTS = [
     ("s01_eden_coming_apart", [ADAM_REF, EVE_REF], MODEL,
-     f"{ADAM} {EVE} A vertical portrait composition, right-side up, "
-     "not rotated. Both Adam and Eve stand upright side by side, feet "
+     f"{ADAM} {EVE} Eve's eyes are symmetrical and evenly matched, both "
+     "the same natural size and shape. A vertical portrait composition, "
+     "right-side up, not rotated. Both Adam and Eve stand upright side "
+     "by side, feet "
      "near the bottom of the frame, heads near the top, facing forward "
      "into the scene, both figures present together. A forest clearing "
      "fills the ENTIRE frame edge to edge -- no blank sky, no empty "
