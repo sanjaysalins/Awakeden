@@ -68,13 +68,34 @@ accepted-with-a-caveat (hands read as clasped/intertwined rather than
 literally "reaching," judged thematically compatible, not re-fought this
 session).
 
-**Not done / next**: animation hasn't started — needs a cost quote +
-explicit OK first (standing ask-before-spending rule). `_PLAN.md`'s own
-animation tiering (Seedance s01/s06, Kling s04/s07, veo s08, $0 device
-s02/s03/s05) was written before s06 became a cross scene — worth
-re-checking that tier against the new content before quoting. Nothing
-from this session is committed to git yet (her_seed's whole folder,
-STATE.md/RESUME.md). Full detail: RESUME.md top.
+**Animation done same session, all 8 clips GATE 3 material ready.**
+Committed the stills lock first (a6cd92f). Re-tiered s06 from Seedance
+to veo3_1_lite before quoting (it changed from a close portrait to a
+wide two-element hold with no cued gesture, matching s08's own tier).
+Ran the 3 $0 devices first (`_kenburns.py`: s02 dynamic_cam3d push,
+s03/s05 line_boil hold — same device seed_of_the_woman's own build_s27
+used), then the 5 paid clips (`_s2_animate.py`, ~$4.54: s01 Seedance,
+s04/s07 Kling, s06/s08 veo3_1_lite) — all reported clean on exit code.
+
+**Did not trust the exit code alone.** Extracted frames from all 5 paid
+clips; s01/s07/s08 read clean by eye immediately. s04 and s06 looked
+suspiciously static at coarse sampling (4 frames) — exactly the
+"veo/Kling defaults to stillness" risk this project has hit before.
+Went further: fine-grained frame extraction + a pixel-diff heatmap
+between first/last frame confirmed REAL motion on both, correctly
+localized (concentrated at Mary's hands for s04, at the sky/cloud
+texture for s06) rather than a static hold or noise. Direct full-res
+frame comparison confirmed no invented content on either. Built
+`_CLIPS_REVIEW.html` (all 8, playable) for the user's own eye/ear on
+real playback — motion feel is something frame-diffing can't fully
+judge (same caveat as the project's own veo3_1_lite adoption notes).
+
+**Not done / next**: user hasn't reviewed clip playback yet — that's
+GATE 3. Once confirmed, next is assembly (title cards, captions,
+score/sfx, watermark, landing-hold check) — all $0, no further spend
+needed. Nothing from the animation step is committed to git yet (media
+is gitignored per convention; the two new scripts `_kenburns.py`/
+`_s2_animate.py` still need committing). Full detail: RESUME.md top.
 
 **2026-08-13 (session end) Seed of the Woman short #2 "Her Seed" STARTED,
 stills 7/8 clean, 1 still needs a 3rd attempt tomorrow:** After short #1
