@@ -74,28 +74,15 @@ SHOTS = [
      "grey-blue tones, tense stillness."),
 
     ("s02_bruise_vs_crush_split", [], MODEL,
-     "A single illustrated page, portrait framing, divided into two "
-     "scenes stacked top to bottom -- NOT a hard vertical split, NOT a "
-     "technical drawing, NOT a blueprint, NOT a diagram -- a purely "
-     "artistic illustrated page, like two paintings on one sheet. "
-     "UPPER two-thirds: a loose expressive graphite-and-ink illustration "
-     "of a bare human heel and ankle, mid-stride, walking calmly out of "
-     "the frame, whole and alive -- one single small plum-blue "
-     "watercolor bruise mark on the heel, no bigger than a coin, the "
-     "only cool color in this register, otherwise healthy loose "
-     "painterly linework, purely artistic and expressive, not "
-     "technical. LOWER third: exactly ONE single serpent skull "
-     "image, and only one -- a loose expressive illustration of a "
-     "serpent's skull, utterly shattered and destroyed, completely "
-     "still and lifeless: the cranium caved in, the jaw broken and "
-     "separated, bone fragments drifted apart as if exploded and "
-     "unable to ever reassemble, dark red-ink fracture hatching "
-     "throughout -- the mouth is NOT open in a roar or bite, there are "
-     "no bared fangs, this is a destroyed dead specimen, not a living "
-     "or snarling creature. The paper itself is damaged only in this "
-     "lower register -- a crushed, torn impact-crater texture in the "
-     "page surface beneath the shattered skull, halftone dots scattered "
-     "like debris. No lettering, no numbers anywhere in the image."),
+     "A SIMPLE, QUIET single garden scene, portrait framing, the same "
+     "restrained documentary-sketch style as a plain nature study -- no "
+     "diagram, no split composition, no technical drawing. A single "
+     "large flat stone resting on bare garden soil among a few fallen "
+     "leaves, one faint hairline crack running across the stone, "
+     "otherwise ordinary and still. Beside the stone, a single soft "
+     "footprint pressed lightly into the soft earth, undisturbed, "
+     "gentle. That is the whole image -- one calm, grounded scene, "
+     "nothing more elaborate."),
 
     ("s03_serpent_judged", [SERPENT_TURNS_REF, SERPENT_LIGHT_REF], MODEL,
      "WIDE, portrait framing: a dark serpent coiled low in a garden "
@@ -128,27 +115,18 @@ SHOTS = [
      "whole and standing, calm and steady. The "
      "utterly destroyed, one intact."),
 
-    ("s06_own_blow_straining", [CRUSHED_SKULL_S02_OUTPUT], MODEL,
-     "A single sketchbook page, portrait framing, showing the SAME "
-     "generic human ARM AND CLENCHED FIST (face turned away or in "
-     "shadow, no clear identity) drawn 3 to 4 times overlapping across "
-     "the sheet -- every single one of the repeated drawings is an ARM "
-     "ending in a closed fist, NEVER a leg, NEVER a foot, NEVER any "
-     "other body part, each one a separate attempt mid-swing at "
-     "throwing a punch -- the earlier attempts rendered half-erased, "
-     "smudged, and scratched out with loose correction lines, one of "
-     "them torn away leaving a ragged paper scar. All the attempts are "
-     "aimed at a tall, serpent-shaped patch rising up one side of the "
-     "page that is PURELY a dark ink-wash stain with no linework, no "
-     "scales, no solid form at all -- a shadow, not a creature, "
-     "untouched and unmarked by every attempt. In every drawn attempt, "
-     "the same small plum-blue bruise mark appears on the fist's own "
-     "knuckles -- he only ever bruises himself. Near the bottom edge "
-     "of the page, small and finished, drawn once cleanly with no "
-     "corrections: the same shattered serpent skull from the "
-     "attached reference image, with a thin gold-leaf hairline "
-     "connecting it up toward the root of the shadow. No lettering "
-     "anywhere in the image."),
+    ("s06_own_blow_straining", [], MODEL,
+     "A SIMPLE, QUIET CLOSE shot, portrait framing, the same restrained "
+     "documentary-sketch style as a plain figure study -- no repeated "
+     "figures, no diagram, no multiple studies on one page, just ONE "
+     "single moment. A single generic human figure, seen only from the "
+     "shoulders up or as a close view of two clasped hands, face turned "
+     "away or in shadow so no clear identity is visible -- hands "
+     "gripped tightly together in front of the chest, knuckles pale "
+     "with tension, head bowed low, alone in a plain dim space. Quiet "
+     "exhaustion and strain held in the body, not violent motion -- no "
+     "punching, no swinging, no visible target. Just one tired person "
+     "holding on too tightly."),
 
     ("s07_landing_christ", [JESUS_REF], "seedream_v4_5",
      f"{JESUS} LANDING, sacred stillness, portrait framing: Christ on "
