@@ -102,18 +102,25 @@ SHOTS = [
      "just presence. No human or divine figure, light only. Held as a "
      "single iconic image."),
 
-    ("s05_heel_and_head_insert", [HEEL_HEAD_REF], MODEL,
-     "A CLOSE object-insert, portrait framing, design-reference from the "
-     "attached image: two elements held together in one composition -- "
-     "on one side, a serpent's head, LIFELESS and completely still, "
-     "flattened and fractured under visible weight, its shape caved "
-     "and broken -- eyes closed or empty, mouth fully closed, jaw "
-     "slack, no fangs bared, no tongue extended, not coiled, not "
-     "posed to strike, entirely limp and defeated, like a pressed "
-     "flat object rather than a living creature. On the other side, a "
-     "human heel and ankle, unbroken, a single small mark on it but "
-     "whole and standing, calm and steady. The "
-     "utterly destroyed, one intact."),
+    ("s05_heel_and_head_insert", [], "seedream_v4_5",
+     "A CLOSE-UP portrait framing, filling almost the entire frame "
+     "with no empty margin -- a single serpent's head and the front "
+     "coil of its body only, close and large in the shot. Dark grey-"
+     "blue scale pattern with faint red accents. The head is clearly, "
+     "visibly DAMAGED and lifeless: the skull is caved in and crushed "
+     "flat on one side, an obvious dent breaking the smooth curve of "
+     "the head, a dark fracture line running across the crushed area. "
+     "Both eyes are closed, sunken, and dull -- completely without "
+     "life, no shine, no color visible in them at all. The mouth is "
+     "fully closed, gently shut, resting still -- NOT open, NOT "
+     "gaping, NOT baring fangs, NOT showing the tongue, NOT in a "
+     "striking or threatening pose of any kind, completely calm and "
+     "peaceful in death, like a creature simply fallen still. The "
+     "whole head reads unmistakably as broken and dead, not "
+     "sleeping, not resting, not alert, and absolutely not "
+     "aggressive or attacking. Ordinary "
+     "garden light, calm, quiet aftermath -- nothing else in the "
+     "frame."),
 
     ("s06_own_blow_straining", [], MODEL,
      "A SIMPLE, QUIET CLOSE shot, portrait framing, the same restrained "
