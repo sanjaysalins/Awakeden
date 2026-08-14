@@ -1,17 +1,48 @@
 # ══════════════════════════════════════════════════════════════════════════
-# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-14 (Her Seed stills GATE 2
-# LOCKED, 8/8) — READ THIS FIRST, supersedes every block below.
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-14 (Her Seed FINISHED and
+# LOCKED end to end) — READ THIS FIRST, supersedes every block below.
 #
-# ── PICK UP HERE: `poc_living_sketchbook/her_seed/`. All 8 stills locked
-# by the user: `_STILLS_REVIEW.html` (title says STILLS LOCKED). NEXT
-# ACTION: quote animation cost and get explicit OK before spending
-# (standing ask-before-spending rule) — `_PLAN.md`'s tiering (Seedance
-# s01/s06, Kling s04/s07, veo s08, $0 device s02/s03/s05) was written
-# BEFORE s06 became a Mary-near-the-cross scene, so re-check that tier
-# against the new content before quoting (s06 was Mary-close/Seedance;
-# now it's a wider two-element scene, may fit a different tier). Then
-# build `_s2_animate.py` → assemble → title cards → captions → score/sfx
-# → watermark → landing-hold check. Nothing past stills started yet.
+# ── PICK UP HERE: Her Seed (Seed of the Woman short #2) is fully done —
+# stills, animation, assembly, score/sfx, watermark, landing-hold all
+# GREEN. Final file: `poc_living_sketchbook/her_seed/
+# HERSEED_living_sketchbook_cc_scored_sfx.mp4` (62.0s). Added to
+# `SKETCHBOOK_REVIEW.html`. NEXT ACTION: 2 remaining Seed of the Woman
+# shorts (Heel vs Head, The Serpent-Crusher Promised — both text-locked
+# already, per the 2026-08-13 count of 4 total shorts, 2 done now). Then
+# the deferred spread-variety lint tool, Day of Atonement's publish
+# wiring.
+#
+# ── WHAT HAPPENED THIS SESSION (chronological): fixed s01/s05 still
+# defects, redesigned s06 from a duplicate Mary portrait into Mary near a
+# deliberately bare cross (user-directed pivot) → stills GATE 2 LOCKED →
+# animated all 8 clips (5 paid + 3 $0), verified via frame-diff not just
+# exit code → GATE 3 clips reviewed → user asked whether Fable+creative
+# devices could make the 2 flat line_boil holds (s03/s05) more dynamic →
+# Fable designed "The Lamp Finds It Finished" (raking-light sweep) and
+# "The Rubber-Stamp Genealogy" (stamp-reveal + ink blot), previewed as an
+# HTML/CSS mockup, user approved and this became a NEW STANDING PROJECT
+# RULE (CLAUDE.md + memory: creative device default over line_boil/Ken
+# Burns when nothing else fits) → built the real production clips → user
+# caught s03's motion as invisible in real playback (the reused
+# raking-light device's tuned-subtle k=0.03 default was too subtle for
+# THIS still) → rebuilt with a genuinely visible sweep, confirmed via
+# filmstrip not just diff → user said "lets lock it and assemble it" →
+# built the full assembly chain fresh (`_s3_assemble.py`/`_s3b_
+# titlecards.py`/`_s4_captions.py`/`_s5_score_sfx.py`, own music/SFX arc
+# designed for this piece's actual thesis turn at s06, not copied
+# mechanically from the sibling) → watermarked → `check_landing_hold.py`
+# GREEN 62.00s/62.00s → spot-checked 5 frames by eye → LOCKED.
+#
+# ── NOT COMMITTED YET: this session's assembly scripts (_s3_assemble.py,
+# _s3b_titlecards.py, _s4_captions.py, _s5_score_sfx.py) + STATE.md/
+# RESUME.md/SKETCHBOOK_REVIEW.html — about to commit, no media (repo
+# convention).
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-14 (Her Seed stills GATE 2
+# LOCKED, 8/8) — superseded by the block above; kept for its own process
+# detail.
 #
 # ── WHAT HAPPENED THIS SESSION: fixed s01 (3rd attempt — traced a
 # rotation bug to landscape-shaped Adam/Eve ref images, same root cause

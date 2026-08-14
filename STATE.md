@@ -163,6 +163,43 @@ versions backed up as `.linebo_bak.mp4` alongside, gitignored like all
 media). GATE 3 (clip review) still open — user hasn't confirmed the full
 8-clip set yet. Full detail: RESUME.md top.
 
+**2026-08-14 (same day, latest) Her Seed finished and LOCKED end to end —
+GATE 3 through score/sfx/watermark/landing-hold, all in one pass:** User
+said "lets lock it and assemble it." Built the full assembly chain fresh
+for this episode (no prior scripts existed): `_s3_assemble.py` (8 real
+word-timed spread windows from `_alignment.json`, snapped to the midpoint
+of each inter-spread silence gap — landed within hundredths of a second
+of `_PLAN.md`'s own approximate windows, TOTAL=62.0s = LAST_WORD_END
+58.819 + 3.181s hold, safely above INV-26's 3.0s minimum), `_s3b_
+titlecards.py` (LOCKED yellow/black/red/white standard, "HER SEED." hilite
++ one Galatians 4:4 quote/citation pair over s04's own window — the
+piece's one literal KJV quote), `_s4_captions.py` (reused the shared
+burner, no skip windows needed), `_s5_score_sfx.py` (own arc designed for
+THIS piece's real turn: neutral_teaching_warm_a dominant through the
+"unpacking a detail" section, crossfading to sacred_grace_rise_a exactly
+at s06's window start — the actual thesis reveal "Here, he doesn't...",
+not the earlier KJV-quote moment the sibling used, since Her Seed's
+payoff lands later than its quote; dawn_morning_warm/heavenly_choir_soft/
+wind_desert_bleak as light ambient touches at s02/s04/s06).
+
+Watermarked via the shared `add_watermark.py` (clean first pass, no stale
+`.prewm.bak` conflict since this is a new file). `check_landing_hold.py`
+GREEN: 62.00s/62.00s, gap 0.00s. Spot-checked 5 frames across the full
+runtime by eye (title card, quote+citation card, captions, watermark
+placement, landing) — no clipping, cards and captions never overlap,
+consistent watermark position throughout.
+
+**Her Seed is LOCKED.** Added to `SKETCHBOOK_REVIEW.html`. Final file:
+`poc_living_sketchbook/her_seed/HERSEED_living_sketchbook_cc_scored_sfx.mp4`
+(62.0s, 43MB). This is the 3rd of 4 declared Seed of the Woman shorts
+(Her Seed, Heel vs Head, The Serpent-Crusher Promised were the 3 remaining
+per the 2026-08-13 count — 2 left after this one, both text-locked
+already).
+
+**Not done / next**: commit this session's assembly scripts + doc
+updates (no media, matches repo convention). Then the 2 remaining Seed of
+the Woman shorts. Full detail: RESUME.md top.
+
 **2026-08-13 (session end) Seed of the Woman short #2 "Her Seed" STARTED,
 stills 7/8 clean, 1 still needs a 3rd attempt tomorrow:** After short #1
 re-locked, user approved starting short #2 (Galatians 4:4, source
