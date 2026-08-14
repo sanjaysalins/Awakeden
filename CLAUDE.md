@@ -276,7 +276,19 @@ they're never animated; `VISION_AUDIT_MODEL`=Haiku for the coarse assembly verif
 - **KJV verbatim** in the script; attribution frames stay in narrator voice.
 - **Multi-voice when scene has speakers** — parables = Jesus tells the story,
   inner character lines get their own voice (narrator → jesus → narrator → son
-  for the prodigal).
+  for the prodigal). **Enforced by G9 Multi-voice** (locked 2026-08-14,
+  `pipeline/engine.py`'s `_apply_multivoice_gate`, deterministic — mirrors the
+  eyewitness pipeline's own EW-G6/EW-G11 pattern): FAILs when the narration's
+  own prose explicitly frames a quote as spoken ("...God says, '...'") but no
+  voice is routed; CONDITIONAL (advisory) whenever any KJV quote exists with
+  zero voices at all, regardless of attribution language — added after
+  `39_The_Longer_They_Looked` (Exodus 12:5, no in-text attribution phrase at
+  all) shipped narrator-only while sibling pieces in the same batch correctly
+  split a voice for a similar quote, and the review pipeline had NO gate
+  catching it. Deliberately does not attempt to auto-classify divine-vs-
+  reflective from text patterns (tested unreliable against the real case) —
+  narrator-only for a genuine Pauline/epistle/reflective line stays valid,
+  just now visibly flagged instead of silently defaulting.
 - **Visual scene mix is binding** (SP-G9 deterministic): hero singles +
   multi-vignette unified + Jesus/NT-link + OT-echo. Target 14-20 scenes for
   rich passages; never 100% single.

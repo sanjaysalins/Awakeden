@@ -5,26 +5,28 @@
 #
 # ── PICK UP HERE: Her Seed (Seed of the Woman short #2) is fully done —
 # stills, animation, assembly, score/sfx, watermark, landing-hold all
-# GREEN, FIVE TIMES (the 5th: user caught that multi-voice dialogue has
-# regressed project-wide, no gate catching it -- added a scripture voice
-# for Her Seed's own Paul quote in the PythonProject1 source narration
-# (separate git repo, NOT committed there -- has unrelated pending
-# changes not mine to touch), re-aligned, recomputed every downstream
-# timing, rebuilt the whole chain). STILL OPEN: the "going forward as a
-# rule" half -- build a deterministic multi-voice gate into
-# pipeline/engine.py's G1-G8 review (mirror the eyewitness pipeline's
-# EW-G6/EW-G11) so this can't silently drift again. User approved this,
-# not yet built. Do this NEXT before starting the remaining 2 shorts.
+# GREEN, FIVE TIMES: once at the original lock, then 4 separate post-lock
+# fixes -- s01's animated Adam far-eye (Seedance flattened it 3x, fixed
+# by swapping to Kling), s05's genealogy silhouettes reading as modern
+# men (fixed by rewording the outline to explicit biblical robes), s01's
+# STILL-image Eve asymmetric eyes (fixed with positive-only phrasing
+# after negation hit the content filter -- the wide framing that broke
+# as a side effect was NOT recovered after 6 failed attempts, user chose
+# to keep the eyes-fixed closer crop), and adding a scripture voice for
+# Her Seed's own Paul quote (multi-voice dialogue had regressed project-
+# wide, no gate catching it -- fixed in the PythonProject1 source
+# narration, a separate git repo NOT committed there since it has
+# unrelated pending changes not mine to touch; re-aligned, recomputed
+# every downstream timing, rebuilt the whole chain).
 #
-# ── (of the four prior GREENs) (once before, then 3 separate post-lock fixes: s01's
-# animated Adam far-eye -- Seedance flattened it 3x, fixed by swapping to
-# Kling; s05's genealogy silhouettes reading as modern men -- fixed by
-# rewording the outline to explicit biblical robes; s01's STILL-image
-# Eve asymmetric eyes -- fixed with positive-only symmetric-eyes phrasing
-# after the negated version hit the content filter, though the wide
-# framing that broke as a side effect was NOT recovered after 6 failed
-# attempts -- user chose to keep the eyes-fixed closer crop over more
-# retries). Final file: `poc_living_sketchbook/her_seed/
+# ── BOTH halves of the multi-voice ask are DONE: Her Seed's own fix, AND
+# the "going forward as a rule" gate -- G9 Multi-voice built into
+# pipeline/engine.py (review() + independent_review(), same deterministic-
+# override pattern as the existing KJV gate), 6 real-case-derived tests in
+# pipeline/test_multivoice_gate.py, full pipeline/ suite green (457
+# passed). Documented in CLAUDE.md + memory multivoice-gate-g9-locked.
+#
+# Final file: `poc_living_sketchbook/her_seed/
 # HERSEED_living_sketchbook_cc_scored_sfx.mp4` (62.0s). Added to
 # `SKETCHBOOK_REVIEW.html`. NEXT ACTION: 2 remaining Seed of the Woman
 # shorts (Heel vs Head, The Serpent-Crusher Promised — both text-locked

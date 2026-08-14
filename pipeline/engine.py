@@ -8,6 +8,7 @@ instructions live in a second, un-cached system block.
 from __future__ import annotations
 
 import json
+import re
 from functools import lru_cache
 
 import anthropic
@@ -726,6 +727,69 @@ def _apply_kjv_gate(rev: Review, draft: Draft, passage: str | None) -> Review:
                   priority_fixes=([fix] + list(rev.priority_fixes)) if hard else list(rev.priority_fixes))
 
 
+# Spoken-word attribution verbs only -- deliberately excludes "writes"/"wrote",
+# which signals an EPISTLE quote (Paul, Peter, etc.), the constitution's own
+# stated narrator-only exemption ("a doctrinal Pauline line read reflectively").
+_SPOKEN_ATTRIBUTION_RE = re.compile(
+    r"\b(?:says?|said|declares?|declared|tells?|told|commands?|commanded|"
+    r"speaks?|spoke|answers?|answered|cries?|cried|replies?|replied|asks?|"
+    r"asked|instructs?|instructed|proclaims?|proclaimed)\b[^.!?]{0,20}[\"']",
+    re.IGNORECASE,
+)
+
+
+def _apply_multivoice_gate(rev: Review, draft: Draft) -> Review:
+    """Deterministic multi-voice check (added 2026-08-14 after a confirmed
+    project-wide regression: `39_The_Longer_They_Looked` reads God's own
+    Exodus 12 instruction as plain narrator prose with zero voices, while
+    sibling pieces in the SAME batch correctly split a voice for a similar
+    quote -- and the LLM review has NO gate covering this at all. Mirrors the
+    eyewitness pipeline's own EW-G6/EW-G11 pattern (deterministic, not left to
+    the LLM to remember unprompted).
+
+    Two tiers, deliberately not one:
+    - FAIL only when the narration's OWN prose explicitly frames the quote as
+      spoken ("... said, \"...\"") but draft.speakers is empty -- unambiguous,
+      the text itself declares a speaker that was never voiced.
+    - CONDITIONAL (advisory, matches this project's own CONDITIONAL=advisory
+      severity) whenever ANY KJV quote exists with zero voices at all, with no
+      attempt to guess divine-vs-reflective from text patterns. Tested against
+      the real regression: `39_The_Longer_They_Looked`'s Exodus 12 quote has NO
+      attribution phrase in the narration at all (the reader must already know
+      Exodus 12 is God's own instruction) -- an attribution-pattern-only check
+      would have missed it, so this tier exists specifically to catch that
+      class of case without over-claiming precision it doesn't have."""
+    if not draft.scripture_quoted:
+        return rev
+    if draft.speakers:
+        return rev
+
+    full = "\n".join(b.text for b in draft.beats)
+    spoken_hit = _SPOKEN_ATTRIBUTION_RE.search(full)
+
+    if spoken_hit:
+        snippet = full[max(0, spoken_hit.start() - 30):spoken_hit.end() + 10].strip()
+        verdict = "FAIL"
+        evidence = (f'DETERMINISTIC MULTI-VOICE CHECK: the narration itself frames a quote as '
+                    f'spoken ("...{snippet}...") but speakers is empty.')
+        fix = ('Route the quoted speaker\'s words to their own voice in speakers -- '
+               '"red-letter speaker = the speaker" is a locked rule.')
+    else:
+        verdict = "CONDITIONAL"
+        quoted = draft.scripture_quoted[:70] + ("..." if len(draft.scripture_quoted) > 70 else "")
+        evidence = (f'DETERMINISTIC MULTI-VOICE CHECK: a KJV quote exists ("{quoted}") with zero '
+                    f'voices in speakers. Confirm this is deliberate narrator-only (a reflective/'
+                    f'epistle line per the constitution\'s own exemption) -- not a missed multi-voice '
+                    f'opportunity for God/a character speaking.')
+        fix = "If the quoted speaker should be heard (not read reflectively), add a voice to speakers."
+
+    new_gate = GateResult(gate="G9 Multi-voice", verdict=verdict, evidence=evidence, fix=fix)
+    new_gates = [g for g in rev.gates if not g.gate.upper().startswith("G9")] + [new_gate]
+    overall = "REVISE" if (verdict == "FAIL" and rev.overall.upper() == "LOCKED") else rev.overall
+    return Review(panel=rev.panel, gates=new_gates, overall=overall,
+                  priority_fixes=([fix] + list(rev.priority_fixes)) if verdict == "FAIL" else list(rev.priority_fixes))
+
+
 def review(
     series: Series, episode: Episode, draft: Draft,
     kjv_text: str | None, passage: str | None, structure: Structure,
@@ -753,7 +817,8 @@ def review(
         + beats_rendered
     )
     rev = Review.from_json(_extract_json(_call(_review_role(structure), user)))
-    return _apply_kjv_gate(rev, draft, passage)
+    rev = _apply_kjv_gate(rev, draft, passage)
+    return _apply_multivoice_gate(rev, draft)
 
 
 # --------------------------------------------------------------------------
@@ -804,7 +869,8 @@ def independent_review(
     )
     role = _INDEPENDENT_PREAMBLE + _review_role(structure)
     rev = Review.from_json(_extract_json(_call(role, user, model=config.REVIEW_MODEL)))
-    return _apply_kjv_gate(rev, draft, passage)
+    rev = _apply_kjv_gate(rev, draft, passage)
+    return _apply_multivoice_gate(rev, draft)
 
 
 # --------------------------------------------------------------------------

@@ -316,10 +316,26 @@ matching how 44/43 handled similar quotes.
 filename: `poc_living_sketchbook/her_seed/
 HERSEED_living_sketchbook_cc_scored_sfx.mp4` (62.0s).
 
-**Still open**: the "going forward as a rule" half of the ask — build a
-deterministic multi-voice gate into `pipeline/engine.py`'s G1-G8 review,
-mirroring the eyewitness pipeline's EW-G6/EW-G11, so this can't silently
-drift again. User approved this too; not yet built this session.
+**"Going forward as a rule" half — DONE, same session.** Built
+`_apply_multivoice_gate()` in `pipeline/engine.py`, wired into both
+`review()` and `independent_review()` (same pattern as the existing
+`_apply_kjv_gate` deterministic override). Two tiers, tested against
+real cases before locking, not synthetic ones: FAIL only when the
+narration's own prose explicitly frames a quote as spoken but no voice
+is routed (unambiguous); CONDITIONAL (advisory) whenever any KJV quote
+exists with zero voices at all — this coarser tier exists specifically
+because the real regression case (`39_The_Longer_They_Looked`) has NO
+attribution phrase in its own text at all, so a divine-speech-pattern
+regex (tested first) genuinely missed it. Deliberately does NOT try to
+auto-classify divine-vs-reflective quotes — the constitution's own
+Pauline/epistle/psalm exemption stays valid, just now visibly flagged
+instead of silently defaulting (verified: Her Seed's own Galatians 4:4
+line returns CONDITIONAL, not FAIL). Added `pipeline/
+test_multivoice_gate.py` (6 tests, all real-case-derived) and ran the
+full `pipeline/` suite: 457 passed, 1 pre-existing skip, 0 regressions.
+Documented as a locked standing rule in CLAUDE.md (extends the existing
+"Multi-voice when scene has speakers" bullet) + memory
+`multivoice-gate-g9-locked`.
 
 **2026-08-14 (same day, latest) 3rd real post-lock defect found and
 fixed — Eve's eyes visibly asymmetric on s01:** User: "the first image
