@@ -48,15 +48,21 @@ reuse is limited to the repo cast anchors (Adam/Eve/Christ).
 | s03 | 13.25–20.39 | object insert, close (shot-variety floor) | an old open page, already inked long ago, warm oil-lamp light — design-reference from `s26_her_seed_study.png`'s "already written under lamplight" idea, built fresh in vertical, no writing hand needed (it's ALREADY written, that's the point) | "Jesus wasn't a rescue invented in the fulness of time. He was the plan, named first." |
 | s04 | 20.39–27.88 | ACTING spread, HERO (shot-variety floor) | Mary, veiled, face averted, hands gathering at her heart, unseen radiant light above (no angel figure) — design-reference from `s30_annunciation.png`, built fresh vertical, this is the anchor image of the whole piece | KJV: "Paul writes: 'But when the fulness of the time was come, God sent forth his Son, made of a woman, made under the law.'" |
 | s05 | 27.88–34.66 | device spread, no-figure (shot-variety floor) | a vertical descent-line: small anonymous silhouetted figures linked father-to-father, drawn top to bottom down the page (portrait adaptation of `s27_line_of_fathers.png`'s device, NOT a crop — the line runs DOWN not across) | "Paul could have written son of David, son of Abraham — a line that runs through the man, like every title before it." |
-| s06 | 34.66–41.21 | close portrait, match-cut to s04 | Mary again, close on her veiled face, still averted — self-chained from s04's own output for visual consistency, no new identity | "Here, he doesn't. He writes: made of a woman, the woman promised in the garden." |
+| s06 | 34.66–41.21 | wide, two-element (Mary + distant cross) | REVISED post-lock: Mary near the cross — hands clasped low, head bowed in quiet grief, a bare/empty wooden cross small and distant behind her against a dusky sky (John 19:25). Redesigned twice from the original close-portrait match-cut to s04, which the user caught as a near-duplicate; this ties the "promised in the garden" line to its fulfillment and is the piece's only cross image (landing stays cross-free by design) | "Here, he doesn't. He writes: made of a woman, the woman promised in the garden." |
 | s07 | 41.21–51.26 | conviction, close hands | two human hands reaching out, straining toward something just out of frame, tense — by the end of the clip's motion they stop reaching and go still, unclenched (mirrors short #1's s01→s08b tension/release arc, compressed into one shot's motion arc here) | "You still reach for your own rescue plans — the fix, the resolution, the version of you that finally gets it right. But the plan was never yours to write." |
 | s08 | 51.26–58.82 (+3.0s hold) | LANDING, sacred stillness | Christ in radiant warm gold light, reverent distance, closing on Him per the locked AS-G7 rule | "This was never Plan B. It was the plan, kept word for word — and He has already arrived for you." |
 
 Shot-variety floor: wide (s01/s02) / object insert (s03) / acting/hero
-(s04) / device no-figure (s05) / close portrait (s06) / close hands (s07)
-/ landing (s08) — satisfied, no repeated shot type back-to-back.
+(s04) / device no-figure (s05) / wide two-element (s06, revised) / close
+hands (s07) / landing (s08) — satisfied, no repeated shot type
+back-to-back.
 
 ## Animation tiering (judged per-shot, not mechanically applied)
+
+**s06's tier below (Seedance) was decided when it was a close portrait —
+re-check at quote time now that it's a wide two-element scene (Mary +
+distant bare cross); a wide hold with no cued gesture may fit veo3_1_lite
+better, matching s08's own tier.**
 
 - **Seedance**: s01 (leaves drift, calm — matches the long's own "leaves
   drift, calm" treatment for a coming-apart Eden), s06 (Mary's close

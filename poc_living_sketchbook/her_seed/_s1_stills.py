@@ -95,15 +95,23 @@ MARY = (
 # (name, refs, model, scene)
 SHOTS = [
     ("s01_eden_coming_apart", [ADAM_REF, EVE_REF], MODEL,
-     f"{ADAM} {EVE} WIDE ESTABLISHING SHOT, environment dominates the "
-     "frame: Adam and Eve are SMALL and DISTANT, occupying only the "
-     "lower third of the frame, not a close portrait -- most of the "
-     "frame is the garden itself visibly coming apart around them: "
-     "several individual leaves caught mid-fall in the air, the trees "
-     "and foliage rendered in cold desaturated grey-green tones (not "
-     "lush warm green), the whole scene visibly draining of color. High "
-     "in one corner of the frame, small and faint, one thin barely-lit "
-     "thread of warm gold light -- present but easy to miss."),
+     f"{ADAM} {EVE} A vertical portrait composition, right-side up, "
+     "not rotated. Both Adam and Eve stand upright side by side, feet "
+     "near the bottom of the frame, heads near the top, facing forward "
+     "into the scene, both figures present together. A forest clearing "
+     "fills the ENTIRE frame edge to edge -- no blank sky, no empty "
+     "paper margin, no inset panel, the trees and undergrowth reach "
+     "every edge of the image. Both figures appear at a MODERATE, "
+     "clearly visible size in the middle distance among the trees -- "
+     "not a tight close portrait, but not tiny or distant either, both "
+     "plainly readable, standing together. Leaves fall visibly FROM "
+     "the trees and drift down THROUGH the canopy around and past the "
+     "two figures, part of the living forest, never floating over open "
+     "blank space. The whole forest -- leaves, bark, undergrowth, "
+     "canopy -- is rendered in cold desaturated grey-green tones, "
+     "visibly draining of its earlier warm color. Tucked in one corner "
+     "of the frame, small and easy to miss, one thin faint thread of "
+     "warm gold light."),
 
     ("s02_promise_spoken_over_eve", [EVE_REF], MODEL,
      f"{EVE} WIDE: Eve standing alone in the garden, her face and "
@@ -131,23 +139,36 @@ SHOTS = [
      "light itself is the only sign of a presence."),
 
     ("s05_line_of_fathers_vertical", [], MODEL,
-     "A vertical GENEALOGY LIST diagram, portrait framing. EVERY figure "
+     "A vertical GENEALOGY LINE device, portrait framing. EVERY figure "
      "stands NORMALLY UPRIGHT -- feet at the bottom, head at the top, "
      "exactly like a person standing on the ground; the image itself is "
-     "NOT rotated or sideways. 5 small anonymous silhouetted men's "
-     "figures, faces indistinct and generic, arranged in a vertical "
-     "stack of 5 separate horizontal rows one below another going DOWN "
-     "the page, each figure standing upright within his own row. One "
-     "single continuous thin drawn line zigzags DOWNWARD through the "
-     "page, touching each upright figure in turn as it descends from "
-     "the top row to the bottom row, like a family line passed down "
-     "through father after father."),
+     "NOT rotated or sideways. 5 small anonymous SOLID SILHOUETTED "
+     "men's figures -- flat solid dark ink silhouettes only, no facial "
+     "features, no visible clothing color or pattern, no individual "
+     "detail distinguishing one figure from another -- arranged in a "
+     "vertical stack of 5 separate rows one below another going DOWN "
+     "the page. One single continuous thin drawn line zigzags DOWNWARD "
+     "through the page, touching each upright silhouette in turn as it "
+     "descends from the top row to the bottom row, like a family line "
+     "passed down through father after father. absolutely NO numbers, "
+     "NO digits, NO measurements, NO labels, NO text or lettering of "
+     "any kind anywhere in the image -- this is a plain silhouette "
+     "genealogy line, not a diagram or chart."),
 
     ("s06_mary_close", [MARY_S04_OUTPUT], "seedream_v4_5",
-     f"{MARY} CLOSE portrait framing: THE SAME young woman as the "
-     "reference image, veiled, face still averted and bowed downward, "
-     "calm -- a closer view on her alone, the same soft unseen warm "
-     "light still gently present."),
+     f"{MARY} Mary stands in the foreground at a respectful distance, "
+     "veiled, her face raised upward toward something unseen ahead of "
+     "her -- quiet grief held with reverence, calm contained sorrow, "
+     "not despair, not weeping openly. Her hands stay low and close, "
+     "clasped quietly together at her waist or held gently against "
+     "herself -- NOT raised, NOT outstretched, NOT open to the sky, no "
+     "wide gesture of any kind, her whole posture still and folded "
+     "inward, a mother's silent grief, not a triumphant or worshipful "
+     "pose. Far behind her, a plain wooden cross rises against a "
+     "darkening dusk sky -- the cross itself EMPTY, bare, no figure on "
+     "it or near it, just the bare wooden cross alone against the sky. "
+     "The whole scene is hushed and muted -- deep dusky blues and "
+     "violets in the sky, the ground in soft shadow."),
 
     ("s07_hands_reaching", [], MODEL,
      "EXTREME CLOSE object-insert, hands and forearms ONLY: two human "

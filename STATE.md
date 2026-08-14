@@ -1,5 +1,81 @@
 # STATE.md — progress tracker
 
+**2026-08-14 Seed of the Woman short #2 "Her Seed" — stills GATE 2 LOCKED,
+8/8, animation not started:** Resumed with the user's standing "gentle CPU
+and memory usage" ask — verified `POLITE_CPU=33`/IDLE-priority/LOW-memory-
+priority still live in `.venv/Lib/site-packages/sitecustomize.py`, no
+`.env` override, nothing to change. Picked up exactly where the prior
+session left off: s01 (Eden coming apart) needed a 3rd fix attempt.
+
+**s01 fixed on the 3rd real attempt.** Round 3 (moderate two-figure,
+full-bleed forest per the prior session's own diagnosis) came back with a
+NEW defect — the whole image rotated 90°, Eve dropped again. Traced the
+cause: `adam_ref.png`/`eve_ref.png` are both 2752×1536 landscape refs,
+the same root cause `STATE.md` had already found for short #1's s05
+rotation bug. Added an explicit upright/vertical-portrait lock while
+KEEPING the refs (needed for face consistency, unlike s05's anonymous
+silhouettes which could just drop the ref). First reworded attempt
+included "NOT lying down" as a negation near two bare-chested figures —
+this tripped the provider's content filter 4 times in a row (job-level
+"failed", not a content defect); simplifying the phrasing (dropping the
+negation, keeping the positive upright-portrait language) rendered clean
+immediately. Real lesson: negating a keyword near NSFW-adjacent content
+can still trip a filter even when the negation is the whole point.
+
+**Own eye-check of all 8 stills (not just the ones flagged last
+session)** caught a NEW defect on s05 (line of fathers): the model
+hallucinated diagram-style numbers (31/29/33/37/40) next to each
+silhouette and gave them distinct faces/clothing colors instead of the
+scripted anonymous silhouettes — the same "measurement diagram"
+hallucination failure mode short #1's heel insert hit. Fixed with
+explicit solid-silhouette + no-numbers/no-text language.
+
+**User caught a real repetition defect eye-checking the sheet**: s04 and
+s06 (both Mary) were near-duplicates — same hands-at-heart pose, same
+overhead light beam, s06 just a slightly tighter crop, user correctly
+flagged s04 as the better version. Redesigned s06 as a genuinely tighter
+face-only extreme close-up (no hands, softer light, a small leaf at her
+collar as a garden-echo) — fixed the duplication.
+
+**User then pushed further**: asked to reimagine s06 as Mary near the
+cross instead. Flagged the real tradeoff first (the piece's landing, s08,
+is deliberately Christ-radiant with no cross by design — a second cross
+image mid-piece changes the arc) via AskUserQuestion; user chose "Mary
+near the cross" specifically (John 19:25 is the actual Scriptural anchor
+for this — she was there), landing stays cross-free. Two real content
+defects found and fixed across rounds: round 1 put a separate
+silhouetted figure standing at the cross's base instead of on it (empty
+cross + stray figure read ambiguous, even resurrection-adjacent); round 2
+fixed that (figure explicitly locked onto the crossbeam) but Mary's own
+pose came out arms-flung-wide and triumphant/worshipful instead of
+grieving. Round 3 fixed the pose (hands low, clasped, explicit "NOT
+raised/open" language) — clean. **User then asked to simplify further:
+drop the tiny crucified figure entirely, keep the cross bare/empty** —
+re-rendered with that explicit call; clean, and no longer ambiguous since
+it's now a deliberate choice rather than an accidental artifact.
+
+**A/B'd s06 against NBP** (`_nbp_test.py`, new file, same pattern as
+`son_of_man_lifted_up`'s own NBP comparison): NBP's content was equally
+clean (profile view instead of 3/4, same pose) but composed as a smaller
+inset panel on a kraft-paper mount rather than full-bleed, breaking the
+sheet's visual rhythm against the other 7 stills. User picked the
+original HF/seedream_v4_5 version; deleted the losing NBP candidate file.
+
+User said "lock it" — **Her Seed stills GATE 2 is LOCKED**, 8/8:
+`poc_living_sketchbook/her_seed/_STILLS_REVIEW.html`. One still (s07,
+hands reaching) stays carried forward from last session as
+accepted-with-a-caveat (hands read as clasped/intertwined rather than
+literally "reaching," judged thematically compatible, not re-fought this
+session).
+
+**Not done / next**: animation hasn't started — needs a cost quote +
+explicit OK first (standing ask-before-spending rule). `_PLAN.md`'s own
+animation tiering (Seedance s01/s06, Kling s04/s07, veo s08, $0 device
+s02/s03/s05) was written before s06 became a cross scene — worth
+re-checking that tier against the new content before quoting. Nothing
+from this session is committed to git yet (her_seed's whole folder,
+STATE.md/RESUME.md). Full detail: RESUME.md top.
+
 **2026-08-13 (session end) Seed of the Woman short #2 "Her Seed" STARTED,
 stills 7/8 clean, 1 still needs a 3rd attempt tomorrow:** After short #1
 re-locked, user approved starting short #2 (Galatians 4:4, source

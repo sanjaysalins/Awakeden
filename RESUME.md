@@ -1,30 +1,43 @@
 # ══════════════════════════════════════════════════════════════════════════
-# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-13 (SESSION END, TRUEST LATEST —
-# short #1 re-locked, short #2 "Her Seed" started, stills 7/8 clean) —
-# READ THIS FIRST, supersedes every block below.
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-14 (Her Seed stills GATE 2
+# LOCKED, 8/8) — READ THIS FIRST, supersedes every block below.
 #
-# ── PICK UP HERE TOMORROW: `poc_living_sketchbook/her_seed/`. Plan is
-# written (`_PLAN.md`, 8 spreads, ~$5.49 estimate, animation tiering
-# already decided). Alignment done ($0). Stills rendered twice: round 1
-# caught 4 real defects (s01/s02/s05/s07) via full-res eye-check, round 2
-# fixed 3 of the 4 (s02/s05/s07). **s01 (Eden coming apart) still isn't
-# right** — attempt 1 didn't read as "coming apart" at all (lush intact
-# garden, no visible light, no color drain); attempt 2 overcorrected —
-# shrank the scene into a small inset at the bottom third with 2/3 blank
-# paper above it, and dropped Eve entirely (Adam only). NEXT ACTION: a
-# 3rd attempt on `poc_living_sketchbook/her_seed/_s1_stills.py`'s
-# `s01_eden_coming_apart` prompt — go back to a moderately-sized
-# two-figure composition (like attempt 1) but add real environmental
-# decay integrated into a FULL-FRAME forest scene (falling leaves among
-# the trees, not floating over blank space) rather than asking for
-# "small distant figures" again (that's what caused the inset-panel
-# overcorrection). Command:
-#   .venv\Scripts\python.exe poc_living_sketchbook/her_seed/_s1_stills.py s01_eden_coming_apart
-# (delete the existing `stills/s01_eden_coming_apart.png` first). Once
-# clean, build `_STILLS_REVIEW.html`, get user lock, then `_s2_animate.py`
-# (tiering already decided: Seedance s01/s06, Kling s04/s07, veo s08, $0
-# device s02/s03/s05) → assemble → title cards → captions → score/sfx →
-# watermark → landing-hold check. Nothing past stills started yet.
+# ── PICK UP HERE: `poc_living_sketchbook/her_seed/`. All 8 stills locked
+# by the user: `_STILLS_REVIEW.html` (title says STILLS LOCKED). NEXT
+# ACTION: quote animation cost and get explicit OK before spending
+# (standing ask-before-spending rule) — `_PLAN.md`'s tiering (Seedance
+# s01/s06, Kling s04/s07, veo s08, $0 device s02/s03/s05) was written
+# BEFORE s06 became a Mary-near-the-cross scene, so re-check that tier
+# against the new content before quoting (s06 was Mary-close/Seedance;
+# now it's a wider two-element scene, may fit a different tier). Then
+# build `_s2_animate.py` → assemble → title cards → captions → score/sfx
+# → watermark → landing-hold check. Nothing past stills started yet.
+#
+# ── WHAT HAPPENED THIS SESSION: fixed s01 (3rd attempt — traced a
+# rotation bug to landscape-shaped Adam/Eve ref images, same root cause
+# as short #1's own s05 bug; also hit and fixed a real content-filter
+# trip from negating "lying down" near bare-chested figures). Found and
+# fixed a NEW defect on s05 (hallucinated diagram numbers on the
+# silhouettes, same failure mode as short #1's heel insert). User caught
+# s04/s06 as near-duplicate Mary shots — redesigned s06 as a tighter
+# face-only close-up, then at the user's request redesigned it AGAIN as
+# Mary near the cross (fixed 2 more real defects: empty-cross-plus-
+# stray-figure ambiguity, then a triumphant/worshipful pose instead of
+# grief), then simplified to a deliberately bare cross per the user's
+# call. A/B'd the final s06 against NBP (gemini-3-pro) — content was
+# equally clean but composed as a non-full-bleed inset, so kept the HF/
+# seedream_v4_5 version. User said "lock it" — GATE 2 LOCKED.
+#
+# ── NOT COMMITTED YET: her_seed/ whole folder (_PLAN.md, _s0_align.py,
+# _s1_stills.py, _nbp_test.py, _alignment.json, _spoken.txt,
+# _STILLS_REVIEW.html), plus STATE.md/RESUME.md — about to commit, no
+# media (repo convention, PNGs are gitignored anyway).
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-13 (short #1 re-locked, short #2
+# "Her Seed" started, stills 7/8 clean) — superseded by the block above;
+# kept for its own process detail.
 #
 # ── WHAT HAPPENED THIS SESSION (chronological): fixed a real
 # title-card width-clipping bug on all 3 locked Bronze Serpent shorts →
