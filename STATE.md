@@ -239,6 +239,34 @@ HERSEED_living_sketchbook_cc_scored_sfx.mp4` (62.0s).
 Then the 2 remaining Seed of the Woman shorts. Full detail: RESUME.md
 top.
 
+**2026-08-14 (same day, latest) 2nd real post-lock defect found and
+fixed — s05's silhouettes read as modern men, not biblical-era:** User:
+"the image in which we see vertical men, they look modern, can we make
+them dress as biblical times." Looked at the actual still and confirmed:
+the 5 genealogy silhouettes had fitted trousers, hands in pockets, and a
+blazer-like torso shape — modern business-casual proportions, not
+biblical dress. Reworded the still prompt to explicitly describe the
+silhouette OUTLINE as ancient dress (long flowing robe/tunic to the
+ankle, no pockets, hands clasped or at sides) rather than just
+describing color/pattern (which the earlier "anonymous silhouette"
+language never constrained). Re-rendered clean — flowing robes, beards,
+sandals, unmistakably biblical; came back as full illustrated figures
+rather than flat silhouettes, but all 5 stayed identical to each other,
+so the "anonymous genealogy device" intent still holds.
+
+Re-rendered s05's `_s05_genealogy_reveal.py` clip against the corrected
+still (same device, same wobbled-reveal + stamp-pulse + ink-blot
+mechanics, just the new art underneath) — clean. Rebuilt the entire
+downstream chain a 3rd time. `check_landing_hold.py` GREEN again:
+62.00s/62.00s.
+
+**Her Seed re-LOCKED a 2nd time.** Same final filename:
+`poc_living_sketchbook/her_seed/HERSEED_living_sketchbook_cc_scored_sfx.mp4`
+(62.0s).
+
+**Not done / next**: commit this fix. Then the 2 remaining Seed of the
+Woman shorts. Full detail: RESUME.md top.
+
 **2026-08-13 (session end) Seed of the Woman short #2 "Her Seed" STARTED,
 stills 7/8 clean, 1 still needs a 3rd attempt tomorrow:** After short #1
 re-locked, user approved starting short #2 (Galatians 4:4, source

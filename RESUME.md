@@ -5,10 +5,12 @@
 #
 # ── PICK UP HERE: Her Seed (Seed of the Woman short #2) is fully done —
 # stills, animation, assembly, score/sfx, watermark, landing-hold all
-# GREEN, TWICE (once before, once after fixing a real post-lock defect on
-# s01 -- Adam's far eye kept flattening into a shadow on 3 straight
-# Seedance attempts; fixed by swapping s01 to Kling, clean on the first
-# try). Final file: `poc_living_sketchbook/her_seed/
+# GREEN, THREE TIMES (once before, once after fixing s01 -- Adam's far
+# eye kept flattening into a shadow on 3 straight Seedance attempts,
+# fixed by swapping to Kling -- and once after fixing s05 -- the
+# genealogy silhouettes read as modern men, fixed by rewording the
+# silhouette OUTLINE to explicit biblical-era robes). Final file:
+# `poc_living_sketchbook/her_seed/
 # HERSEED_living_sketchbook_cc_scored_sfx.mp4` (62.0s). Added to
 # `SKETCHBOOK_REVIEW.html`. NEXT ACTION: 2 remaining Seed of the Woman
 # shorts (Heel vs Head, The Serpent-Crusher Promised — both text-locked
