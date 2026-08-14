@@ -1,16 +1,25 @@
 # ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-14 (Heel vs Head FINISHED and
-# LOCKED end to end) — READ THIS FIRST, supersedes every block below.
+# LOCKED end to end; everything committed, clean tree) — READ THIS FIRST,
+# supersedes every block below.
 #
-# ── PICK UP HERE: Heel vs Head (Seed of the Woman short #3) is fully
-# done -- stills, animation, assembly, score/sfx, watermark, landing-hold
-# all GREEN. Final file: `poc_living_sketchbook/heel_vs_head/
+# ── START HERE NEXT SESSION: begin "The Serpent-Crusher Promised" (Seed
+# of the Woman short #4 of 4, Romans 16:20, already text-locked per prior
+# session notes -- confirm source path under `PythonProject1/jesus/
+# narration/` before building the plan). Same recipe as Heel vs Head:
+# `_s0_align.py` -> `_PLAN.md` cast census+spreads -> `_s1_stills.py` ->
+# GATE 2 stills lock -> `_s2_animate.py` (paid vs $0 tiering, mode badges
+# in the review page) -> GATE 3 animation lock -> `_s3_assemble.py` ->
+# `_s3b_titlecards.py` -> `_s4_captions.py` -> `_s5_score_sfx.py` ->
+# watermark -> `check_landing_hold.py`. Once this one locks, all 4
+# declared Seed of the Woman shorts are complete. Then: the deferred
+# spread-variety lint tool, Day of Atonement's publish wiring.
+#
+# ── Heel vs Head recap: fully done -- stills, animation, assembly,
+# score/sfx, watermark, landing-hold all GREEN. Final file:
+# `poc_living_sketchbook/heel_vs_head/
 # HEELVSHEAD_living_sketchbook_cc_scored_sfx.mp4` (65.0s). Added to
-# `SKETCHBOOK_REVIEW.html`. NEXT ACTION: the LAST remaining Seed of the
-# Woman short (The Serpent-Crusher Promised, already text-locked) -- once
-# that's done, all 4 declared shorts in this cluster are complete. Then
-# the deferred spread-variety lint tool, Day of Atonement's publish
-# wiring.
+# `SKETCHBOOK_REVIEW.html`.
 #
 # ── TWO REAL LESSONS worth remembering:
 # 1. When the user's reaction to creative direction is strong outright
@@ -57,9 +66,7 @@
 # piece benefits, not just this one. Rebuilt captions -> score/sfx ->
 # watermark. `check_landing_hold.py` GREEN: 65.00s/65.00s.
 #
-# ── NOT COMMITTED YET: STATE.md/RESUME.md updates only (all the
-# heel_vs_head folder changes + the _short_captions.py fix were committed
-# incrementally through the session already).
+# ── COMMITTED: everything, clean tree at session end.
 # ══════════════════════════════════════════════════════════════════════════
 #
 # ══════════════════════════════════════════════════════════════════════════
