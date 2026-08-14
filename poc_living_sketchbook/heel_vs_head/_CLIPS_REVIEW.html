@@ -12,20 +12,58 @@
   .card video { width:100%; border-radius:4px; display:block; background:#000; }
   .card h2 { font-size:14px; margin:8px 0 2px; }
   .card .t { font-size:11px; color:#888; }
+  .mode { display:inline-block; font-size:12px; font-weight:bold; padding:4px 10px; border-radius:6px; margin-bottom:8px; letter-spacing:0.02em; }
+  .mode-free { background:#3a3320; color:#e8c974; }
+  .mode-paid { background:#1f3a2e; color:#7de8b3; }
 </style>
 </head>
 <body>
 <h1>Heel vs Head — all 7 clips, GATE 3 review</h1>
-<div class="sub">Seed of the Woman short #3 (Genesis 3:15). Stills locked GATE 2, then animated: 3 $0 devices + 4 paid clips (veo3_1_lite x3, Kling x1), ~$3.11. All clips eye-checked at full resolution via frame strips (not just exit code) — real, correctly-targeted motion confirmed on the 4 paid clips, no invented content. One fix along the way: s01's push cropped one of the two standoff figures out of frame even at reduced amplitude, so it's a static hold instead. All clips play automatically on load (muted, looping).</div>
+<div class="sub">Seed of the Woman short #3 (Genesis 3:15). Stills locked GATE 2, then animated: 3 $0 devices + 4 paid clips (veo3_1_lite x3, Kling x1), ~$3.11. All clips eye-checked at full resolution via frame strips (not just exit code). One fix along the way: s01's push cropped one of the two standoff figures out of frame even at reduced amplitude, so it's a static hold instead. All clips play automatically on load (muted, looping).</div>
 
 <div class="grid">
-<div class="card"><video controls autoplay muted loop playsinline src="clips/s01_duel_motif.mp4"></video><h2>s01 duel motif</h2><div class="t">$0 static hold — a push kept cropping one figure out of frame at any amplitude tried; the composition reads fine held still</div></div>
-<div class="card"><video controls autoplay muted loop playsinline src="clips/s02_bruise_vs_crush_split.mp4"></video><h2>s02 a cracked stone, a soft footprint</h2><div class="t">$0 push — draws the eye toward the crack</div></div>
-<div class="card"><video controls autoplay muted loop playsinline src="clips/s03_serpent_judged.mp4"></video><h2>s03 the serpent, judged</h2><div class="t">veo3_1_lite — light breathes gently, serpent holds its exact shape</div></div>
-<div class="card"><video controls autoplay muted loop playsinline src="clips/s04_serpent_pronouncement.mp4"></video><h2>s04 the pronouncement</h2><div class="t">veo3_1_lite — the focused light breathes and intensifies, serpent frozen</div></div>
-<div class="card"><video controls autoplay muted loop playsinline src="clips/s05_heel_and_head_insert.mp4"></video><h2>s05 the serpent, defeated</h2><div class="t">$0 push — deliberately minimal; any generated motion here risked reading as still-alive, the exact defect the still took 6 rounds to fix</div></div>
-<div class="card"><video controls autoplay muted loop playsinline src="clips/s06_own_blow_straining.mp4"></video><h2>s06 holding on too tightly</h2><div class="t">Kling — the clasped hands grip visibly tighter, then hold; a real cued gesture</div></div>
-<div class="card"><video controls autoplay muted loop playsinline src="clips/s07_landing_christ.mp4"></video><h2>s07 landing — Christ on the cross, the defeated serpent beneath</h2><div class="t">veo3_1_lite — reverent radiant hold, frozen pose, light breathes gently</div></div>
+<div class="card">
+  <span class="mode mode-free">$0 — STATIC HOLD</span>
+  <video controls autoplay muted loop playsinline src="clips/s01_duel_motif.mp4"></video>
+  <h2>s01 duel motif</h2>
+  <div class="t">No camera move at all — a push kept cropping one figure out of frame at any amplitude tried; the composition reads fine held still</div>
+</div>
+<div class="card">
+  <span class="mode mode-free">$0 — KEN BURNS PUSH</span>
+  <video controls autoplay muted loop playsinline src="clips/s02_bruise_vs_crush_split.mp4"></video>
+  <h2>s02 a cracked stone, a soft footprint</h2>
+  <div class="t">Camera-only push, draws the eye toward the crack</div>
+</div>
+<div class="card">
+  <span class="mode mode-paid">PAID — veo3_1_lite</span>
+  <video controls autoplay muted loop playsinline src="clips/s03_serpent_judged.mp4"></video>
+  <h2>s03 the serpent, judged</h2>
+  <div class="t">Light breathes gently, serpent holds its exact shape — no camera move, no body motion</div>
+</div>
+<div class="card">
+  <span class="mode mode-paid">PAID — veo3_1_lite</span>
+  <video controls autoplay muted loop playsinline src="clips/s04_serpent_pronouncement.mp4"></video>
+  <h2>s04 the pronouncement</h2>
+  <div class="t">The focused light breathes and intensifies, serpent frozen — no camera move, no body motion</div>
+</div>
+<div class="card">
+  <span class="mode mode-free">$0 — KEN BURNS PUSH</span>
+  <video controls autoplay muted loop playsinline src="clips/s05_heel_and_head_insert.mp4"></video>
+  <h2>s05 the serpent, defeated</h2>
+  <div class="t">Camera-only push, deliberately minimal — any generated motion here risked reading as still-alive, the exact defect the still took 6 rounds to fix</div>
+</div>
+<div class="card">
+  <span class="mode mode-paid">PAID — Kling</span>
+  <video controls autoplay muted loop playsinline src="clips/s06_own_blow_straining.mp4"></video>
+  <h2>s06 holding on too tightly</h2>
+  <div class="t">The clasped hands grip visibly tighter, then hold — a real cued gesture, no camera move</div>
+</div>
+<div class="card">
+  <span class="mode mode-paid">PAID — veo3_1_lite</span>
+  <video controls autoplay muted loop playsinline src="clips/s07_landing_christ.mp4"></video>
+  <h2>s07 landing — Christ on the cross, the defeated serpent beneath</h2>
+  <div class="t">Reverent radiant hold, frozen pose, light breathes gently — no camera move, no body motion</div>
+</div>
 </div>
 
 </body>
