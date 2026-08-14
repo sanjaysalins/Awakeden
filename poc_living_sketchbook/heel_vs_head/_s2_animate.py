@@ -1,13 +1,20 @@
-"""Heel vs Head -- step 2: animate the 4 spreads whose intended effect
-genuinely needs generated motion (s01/s02/s05 are $0 devices, see
+"""Heel vs Head -- step 2: animate the 5 spreads whose intended effect
+genuinely needs generated motion (s02/s05 are $0 devices, see
 _kenburns.py).
 
 Design pass per shot (not a mechanical wide=veo/close=seedance split):
+  s01 -- REVISED: user flagged the $0 static hold as reading dead --
+    every $0 camera move cropped a figure, so this moved to paid. A
+    subtle held-breath tension (a small weight-shift, not a swing) is a
+    real cued gesture -> Kling.
   s03 -- serpent + unseen light arriving, no body gesture -> veo3_1_lite
     (atmospheric light breathing, this cluster's own proven strength).
-  s04 -- serpent + a more intense pronouncement light, no body gesture
-    (the head's raised pose is already baked into the still) ->
-    veo3_1_lite, same reasoning as s03.
+  s04 -- REVISED: user flagged this as one of the worst -- the
+    continuous "breathes gently" veo motion read flat/Ken-Burns-
+    equivalent on real playback. Rewritten as a DISCRETE before/after
+    light change (brightens once, holds at the new level) and moved to
+    Kling, which this project has repeatedly found more reliably
+    decisive than veo's continuous ambient drift.
   s06 -- a real cued gesture: hands gripping tighter under tension ->
     Kling (veo does not reliably execute designed/cued motion, per this
     project's own bake-off).
@@ -41,6 +48,15 @@ LOCK = ("The camera does not move, zoom, or change angle at all. INVENT "
 
 # (name, provider, duration, motion)
 JOBS = [
+    ("s01_duel_motif", "kling", 4,
+     "Both figures hold their exact stance and position, perfectly "
+     "still -- neither one swings, steps, or throws a punch. Only: "
+     "both figures complete ONE slow, small held-breath motion -- a "
+     "subtle weight-shift and tightening of the raised fists, a single "
+     "tensing breath -- then hold that tensed position still for the "
+     "rest of the clip. INVENT NOTHING new otherwise. Nothing else in "
+     "the frame changes."),
+
     ("s03_serpent_judged", "veo", 4,
      "The serpent holds its exact shape and position, perfectly still "
      "-- it does not move, coil, or change shape at all. Only: the "
@@ -48,12 +64,15 @@ JOBS = [
      "and dimmer, as if an unseen presence has just arrived. Nothing "
      "else in the frame changes."),
 
-    ("s04_serpent_pronouncement", "veo", 4,
+    ("s04_serpent_pronouncement", "kling", 4,
      "The serpent holds its exact shape and position, perfectly still "
      "-- it does not move, coil, raise its head further, or change "
      "shape at all. Only: the focused light beam falling on it "
-     "breathes and intensifies very gently, alive and persistent. "
-     "Nothing else in the frame changes."),
+     "completes ONE clear, visible change -- brightening noticeably "
+     "from its current level to a distinctly brighter, more intense "
+     "level -- then holds steady at that new brighter level for the "
+     "rest of the clip. The change in brightness must be clearly "
+     "visible, not subtle. Nothing else in the frame changes."),
 
     ("s06_own_blow_straining", "kling", 5,
      "The figure's clasped hands complete ONE slow, small motion -- "

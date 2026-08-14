@@ -37,14 +37,10 @@ CLIPS.mkdir(exist_ok=True)
 W, H, FPS, DUR = 1080, 1920, 30, 4.0
 
 # (name, move, duration, focus) -- move=None means a plain static hold, no
-# camera motion at all. s01's wide two-figure standoff kept losing one
-# figure to the crop even at reduced push amplitude (0.35) -- the push
-# mechanism doesn't suit this composition's full horizontal extent, and
-# the composition (torn paper, the standoff itself) already reads fine
-# held still, so a static hold is the safer, correct call here, not a
-# lazy default (see CLAUDE.md's creative-device-over-Ken-Burns rule).
+# camera motion at all. s01 MOVED to paid animation (_s2_animate.py) --
+# user flagged the static hold as reading dead/lifeless, and no $0 camera
+# move avoided cropping one of the two standoff figures.
 JOBS = [
-    ("s01_duel_motif", None, 4.0, None),
     ("s02_bruise_vs_crush_split", "push", 4.0, (0.55, 0.50)),
     ("s05_heel_and_head_insert", "push", 4.0, (0.45, 0.55)),
 ]
