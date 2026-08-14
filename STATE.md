@@ -143,6 +143,21 @@ line_boil hold used just because nothing else was decided. line_boil is
 still valid when it's genuinely the right call, just not the automatic
 fallback.
 
+**Real gotcha, same session**: user opened `_CLIPS_REVIEW.html` and
+reported "not seeing s03 graphic motion." Right call — the v1 build's
+flame/motes/grade layer sat on top of raking-light's near-invisible base
+sweep, so the actual "lamp finds it" sweep effect Fable designed (and
+that the mockup clearly showed) was never really visible in the real
+render, only the small supporting details were. Fixed by building the
+sweep directly (a genuinely bright warm diagonal band from the lamp,
+`SWEEP_PEAK=(125,92,34)`, well above raking-light's tuned-for-realism
+k=0.03) instead of relying on the reused device's default strength.
+Confirmed clearly visible via a 12-frame filmstrip this time, not just a
+diff check — real lesson written into memory: a nonzero pixel diff
+proves an effect RAN, not that a human will perceive it; when the actual
+ask is "make this dynamic," verify by describing what should visibly
+move, not just by confirming the diff is nonzero.
+
 **Not done / next**: replaced clips not yet committed (old line_boil
 versions backed up as `.linebo_bak.mp4` alongside, gitignored like all
 media). GATE 3 (clip review) still open — user hasn't confirmed the full
