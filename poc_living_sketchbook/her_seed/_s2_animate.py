@@ -3,8 +3,16 @@ genuinely needs generated motion (s02/s03/s05 are $0 devices, see
 _kenburns.py).
 
 Design pass per shot (not a mechanical wide=veo/close=seedance split):
-  s01 -- leaves continuing to drift is the content, calm, no cued gesture
-    -> Seedance (matches the long's own "leaves drift, calm" treatment).
+  s01 -- REVISED post-lock: leaves continuing to drift is the content,
+    calm, no cued gesture -> originally Seedance (matched the long's own
+    "leaves drift, calm" treatment), but 3 straight Seedance attempts all
+    lost detail on Adam's far eye (foreshortened 3/4 profile) -- 1st
+    attempt also invented a full head-turn. Prompt fixes (lock head
+    angle, lock eye shape, explicit far-eye-detail preservation) fixed
+    the head-turn but the far eye stayed a flat shadow every time --
+    a real Seedance limitation on this specific shot, not a wording
+    problem. Retiered to Kling, clean on the first try: both eyes stay
+    fully detailed through a natural full blink, no head-turn.
   s04 -- a REAL cued gesture (hands gathering at her heart, light
     brightening, then holds) -> Kling (veo does not reliably execute
     designed/cued motion, per this project's own bake-off).
@@ -41,17 +49,27 @@ LOCK = ("The camera does not move, zoom, or change angle at all. INVENT "
 
 # (name, provider, duration, motion)
 JOBS = [
-    ("s01_eden_coming_apart", "seedance", 4,
+    ("s01_eden_coming_apart", "kling", 4,
      "Adam and Eve hold their exact positions and poses, perfectly "
      "still. Adam's head and face stay LOCKED at the exact same fixed "
      "angle and position for the entire clip -- his head does NOT turn, "
      "rotate, or tilt at any point, he does not look toward Eve or "
-     "anywhere else -- the ONLY motion on his face is his eyelids "
-     "closing and opening once for a single slow, natural blink, "
-     "nothing else about his head or face moves even slightly. The "
-     "leaves already drifting down through the canopy continue "
-     "drifting, calm and natural, at the same gentle pace. Nothing "
-     "else in the frame changes."),
+     "anywhere else. Both of Adam's eyes keep their EXACT same shape, "
+     "size, and outline for the entire clip, frame after frame, "
+     "including the far eye partly turned away -- BOTH eyes stay fully "
+     "and clearly drawn the whole time, each showing its own visible "
+     "white sclera and dark iris exactly as detailed as the source "
+     "image, the far eye is NOT simplified, NOT flattened into a "
+     "shadow or a plain eyebrow line, NOT less detailed than the near "
+     "eye -- neither eye ever changes shape, warps, redraws, flickers, "
+     "loses detail, or becomes more or less defined at any point -- "
+     "the ONLY motion anywhere on his face is "
+     "his eyelids closing and opening ONCE for a single slow, natural "
+     "blink, both eyes doing the exact same blink together, nothing "
+     "else about his eyes, head, or face moves or changes even "
+     "slightly. The leaves already drifting down through the canopy "
+     "continue drifting, calm and natural, at the same gentle pace. "
+     "Nothing else in the frame changes."),
 
     ("s04_mary_annunciation", "kling", 5,
      "Mary's hands complete ONE slow, small motion -- gathering closer "

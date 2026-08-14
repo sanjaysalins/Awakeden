@@ -200,6 +200,45 @@ already).
 updates (no media, matches repo convention). Then the 2 remaining Seed of
 the Woman shorts. Full detail: RESUME.md top.
 
+**2026-08-14 (same day, latest) Real defect on s01 found and fixed AFTER
+lock — Adam's eyes, root cause traced to a Seedance limitation, fixed by
+a provider swap to Kling:** User caught it after the piece was already
+locked: "the first clip, the eye moment issues is still looking bad."
+Own eye-check with coarse frame sampling initially misdiagnosed it as
+still-unresolved head rotation (a crop-alignment artifact in the
+diagnostic, not a real defect — full frames showed the head-turn fix
+from earlier in the session HAD worked). Closer, correctly-cropped
+zooms found the real issue: Adam's far eye (foreshortened in his 3/4
+profile pose) reads with full detail — visible white sclera + iris — in
+the original still, but Seedance consistently flattened it into a bare
+shadow/eyebrow line in every render.
+
+**3 straight Seedance attempts, each with progressively more explicit
+prompt language (lock head angle -> lock eye shape -> explicit
+"preserve full far-eye detail, do not flatten to a shadow"), all showed
+the same core defect** — confirming this was a genuine Seedance
+rendering limitation on this specific shot, not a prompt-wording
+problem. Per this project's own established escalation (provider swap
+before either more blind retries or a $0 fallback), switched s01 to
+Kling — clean on the first try: both eyes fully detailed through a
+natural full blink cycle, no head-turn, leaves still drifting correctly.
+
+Rebuilt the entire downstream chain a 2nd time (assemble -> title cards
+-> captions -> score/sfx -> watermark) with the corrected clip.
+`check_landing_hold.py` GREEN again: 62.00s/62.00s. Updated
+`_s2_animate.py`'s docstring and `_PLAN.md`'s tiering section with the
+real final provider + the honest failure history (not just the winning
+attempt) so a future session doesn't retry the same dead end on a
+similar shot.
+
+**Her Seed re-LOCKED** with the corrected s01. Final file unchanged in
+name: `poc_living_sketchbook/her_seed/
+HERSEED_living_sketchbook_cc_scored_sfx.mp4` (62.0s).
+
+**Not done / next**: commit this fix (script + doc updates, no media).
+Then the 2 remaining Seed of the Woman shorts. Full detail: RESUME.md
+top.
+
 **2026-08-13 (session end) Seed of the Woman short #2 "Her Seed" STARTED,
 stills 7/8 clean, 1 still needs a 3rd attempt tomorrow:** After short #1
 re-locked, user approved starting short #2 (Galatians 4:4, source

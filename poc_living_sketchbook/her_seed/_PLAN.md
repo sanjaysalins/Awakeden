@@ -83,6 +83,17 @@ better, matching s08's own tier.**
   or the shot's own content genuinely doesn't need generated motion,
   decided BEFORE rendering, not as a retreat after a paid attempt fails.
 
+**ACTUAL final tiering (post-lock, differs from the plan above):** s01
+moved Seedance -> Kling (3 straight Seedance attempts all lost detail on
+Adam's far eye in this 3/4-profile shot, a real model limitation — Kling
+clean on the first try). s06 moved Seedance -> veo3_1_lite (content
+changed post-lock from a close portrait to a wide two-element scene, see
+the note above). s03/s05 moved from the originally-planned annotators-
+circle/drawn-line-reveal devices to bespoke Fable-designed motion
+graphics ("The Lamp Finds It Finished" / "The Rubber-Stamp Genealogy") —
+see `_MOTION_CONCEPTS_s03_s05.html` and the new standing project rule in
+CLAUDE.md.
+
 ## Cost estimate (real per-unit prices from this cluster's own ledger)
 
 Stills: 5× kling_omni_image ($0.075 — s01/s02/s03/s05/s07) + 3×

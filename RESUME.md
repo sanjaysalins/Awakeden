@@ -1,16 +1,26 @@
 # ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-14 (Her Seed FINISHED and
-# LOCKED end to end) — READ THIS FIRST, supersedes every block below.
+# LOCKED end to end, then RE-LOCKED after a real post-lock defect fix on
+# s01) — READ THIS FIRST, supersedes every block below.
 #
 # ── PICK UP HERE: Her Seed (Seed of the Woman short #2) is fully done —
 # stills, animation, assembly, score/sfx, watermark, landing-hold all
-# GREEN. Final file: `poc_living_sketchbook/her_seed/
+# GREEN, TWICE (once before, once after fixing a real post-lock defect on
+# s01 -- Adam's far eye kept flattening into a shadow on 3 straight
+# Seedance attempts; fixed by swapping s01 to Kling, clean on the first
+# try). Final file: `poc_living_sketchbook/her_seed/
 # HERSEED_living_sketchbook_cc_scored_sfx.mp4` (62.0s). Added to
 # `SKETCHBOOK_REVIEW.html`. NEXT ACTION: 2 remaining Seed of the Woman
 # shorts (Heel vs Head, The Serpent-Crusher Promised — both text-locked
 # already, per the 2026-08-13 count of 4 total shorts, 2 done now). Then
 # the deferred spread-variety lint tool, Day of Atonement's publish
 # wiring.
+#
+# ── LESSON for future shots: if a paid animation render shows the SAME
+# core defect across multiple prompt-wording fixes (not disappearing,
+# not flickering-then-stabilizing-wrong), that's a real provider
+# limitation on that specific shot, not a wording problem -- swap
+# provider next, don't keep iterating prompt text on the same model.
 #
 # ── WHAT HAPPENED THIS SESSION (chronological): fixed s01/s05 still
 # defects, redesigned s06 from a duplicate Mary portrait into Mary near a
