@@ -1,5 +1,62 @@
 # STATE.md — progress tracker
 
+**2026-08-14 (latest) Heel vs Head (Seed of the Woman short #3) — stills
+GATE 2 LOCKED after real creative back-and-forth on 3 of 7 shots:**
+Started the 3rd Seed of the Woman short. Source narration `43_Not_a_Tie`
+(Genesis 3:15's asymmetric heel/head outcome) found by content search,
+not filename — already correctly multi-voice (narrator + god), one of
+the pieces that got the new G9 gate's rule right from the start. Built
+`_PLAN.md` (7 spreads, real word-timed windows), chained the serpent as
+design-reference from short #1's own approved art. Rendered all 7 stills
+clean on the first pass; own eye-check caught 2 real defects (s02
+rendered an actual face despite "no figures, no faces"; s05 showed the
+serpent alive and biting instead of crushed/defeated, inverting the
+piece's point) — both fixed.
+
+**User then said s02 and s06 "can be better designed."** Dispatched
+Fable for genuine creative redesign (not a bug fix) on both — got
+strong, specific concepts (a naturalist specimen-sheet for s02: heel
+walking on vs. a shattered serpent skull; repeated fist studies
+shadow-boxing a dead ink-wash shadow for s06, connected by a gold thread
+to s02's own skull). Implemented both, fixing real defects along the way
+(hallucinated dimension numbers traced to the "specimen/study" framing
+language itself, fixed by dropping that framing; a foot kept bleeding
+into s06 from the full s02 reference image, fixed by cropping the
+reference to just the skull).
+
+**User's verdict: "I hate both of them."** Asked directly what was
+wrong — user clarified it was the wrong CONCEPT entirely, not execution,
+and asked for something simpler, closer to short #1's own restrained
+single-scene grammar. Rebuilt both as quiet, single-moment images: s02
+became a cracked stone and a soft footprint in garden soil; s06 became a
+single shrouded figure gripping their own hands, head bowed. User then
+flagged s05 too (the original two-part heel+skull composite) as needing
+the same treatment — rebuilt as a direct continuation of the same
+serpent tracked across s03/s04, now defeated, one image instead of an
+insert. Took 6 rounds to land: chained reference images kept pulling the
+render back to a "healthy alert" look despite explicit damage language,
+one attempt hallucinated an entire unrelated human face, a provider swap
+(kling_omni_image → seedream_v4_5, dropping the reference) fixed framing
+and produced real visible skull damage but with an aggressively
+bared-fang mouth; a final pass closing the mouth explicitly landed it
+clean.
+
+User said "ok lock it" — **Heel vs Head stills GATE 2 is LOCKED**, 7/7:
+`poc_living_sketchbook/heel_vs_head/_STILLS_REVIEW.html`. Two small
+nitpicks on s05 carried forward as accepted (a tiny tongue-tip, a faint
+ruler graphic in one corner) — flagged on the review page, not re-fought
+since they're minor and peripheral.
+
+**Real lesson from this session's whole arc**: when a creative-direction
+note comes back as strong outright rejection ("I hate both"), stop and
+ask what's wrong rather than guessing a 3rd time — the answer (wrong
+concept vs. wrong execution) changes the fix completely, and guessing
+wrong burns real render cost on the same mistake twice.
+
+**Not done / next**: animation hasn't started — needs a cost quote +
+explicit OK first. Then the last remaining Seed of the Woman short (The
+Serpent-Crusher Promised). Full detail: RESUME.md top.
+
 **2026-08-14 Seed of the Woman short #2 "Her Seed" — stills GATE 2 LOCKED,
 8/8, animation not started:** Resumed with the user's standing "gentle CPU
 and memory usage" ask — verified `POLITE_CPU=33`/IDLE-priority/LOW-memory-

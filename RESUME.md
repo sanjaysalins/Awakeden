@@ -1,7 +1,51 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-14 (Heel vs Head stills GATE 2
+# LOCKED, 7/7, after real creative rejection + rebuild on 3 shots) — READ
+# THIS FIRST, supersedes every block below.
+#
+# ── PICK UP HERE: `poc_living_sketchbook/heel_vs_head/` (Seed of the
+# Woman short #3, Genesis 3:15, source narration `43_Not_a_Tie`). All 7
+# stills locked: `_STILLS_REVIEW.html`. NEXT ACTION: quote animation cost
+# and get explicit OK before spending (standing rule) -- `_PLAN.md`'s
+# tiering section is only a rough sketch, finalize per-shot tier at quote
+# time. Then the LAST remaining Seed of the Woman short (The Serpent-
+# Crusher Promised, already text-locked).
+#
+# ── REAL LESSON, worth remembering for any future creative-direction
+# note: when the user's reaction is strong outright rejection ("I hate
+# both of them"), STOP and ask what's wrong before guessing again -- the
+# answer (wrong CONCEPT vs. wrong EXECUTION) changes the fix completely.
+# This session guessed wrong once (dispatched Fable for a full creative
+# redesign when the user's actual ask, revealed only after asking
+# directly, was "much simpler, closer to the established style") --
+# asking first would have skipped a full wasted round.
+#
+# ── WHAT HAPPENED: built the whole piece from scratch (alignment, plan,
+# 7 stills) reusing short #1's own serpent design as a chain reference.
+# 2 real defects on the first pass (a face where none was asked for, a
+# serpent reading alive instead of defeated) fixed quickly. User then
+# said s02/s06 "can be better designed" -- dispatched Fable, got genuinely
+# strong specific concepts (specimen-sheet skull/heel contrast; repeated
+# fist studies shadow-boxing a dead shadow), implemented both, fixed 2
+# more real defects along the way. User's verdict: "I hate both of them."
+# Asked directly why -- wrong concept, not execution. Rebuilt both MUCH
+# simpler (a cracked stone + a footprint; a single figure gripping their
+# own hands) matching short #1's own restrained single-scene grammar.
+# User then flagged s05 too (the original two-part heel+skull insert) --
+# rebuilt as a single continuation of the same serpent from s03/s04, now
+# defeated; took 6 rounds (reference-image bias kept pulling it back to
+# "alive," one attempt hallucinated an unrelated face, a provider swap
+# finally fixed it). User said "ok lock it" -- LOCKED.
+#
+# ── NOT COMMITTED YET: STATE.md/RESUME.md updates only (all the
+# heel_vs_head folder changes were committed incrementally through the
+# session already).
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-14 (Her Seed FINISHED and
 # LOCKED end to end, then RE-LOCKED after a real post-lock defect fix on
-# s01) — READ THIS FIRST, supersedes every block below.
+# s01) — superseded by the block above; kept for its own process detail.
 #
 # ── PICK UP HERE: Her Seed (Seed of the Woman short #2) is fully done —
 # stills, animation, assembly, score/sfx, watermark, landing-hold all
