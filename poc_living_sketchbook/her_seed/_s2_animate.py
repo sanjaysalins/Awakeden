@@ -43,10 +43,15 @@ LOCK = ("The camera does not move, zoom, or change angle at all. INVENT "
 JOBS = [
     ("s01_eden_coming_apart", "seedance", 4,
      "Adam and Eve hold their exact positions and poses, perfectly "
-     "still -- only a single slow, natural blink from Adam. The leaves "
-     "already drifting down through the canopy continue drifting, calm "
-     "and natural, at the same gentle pace. Nothing else in the frame "
-     "changes."),
+     "still. Adam's head and face stay LOCKED at the exact same fixed "
+     "angle and position for the entire clip -- his head does NOT turn, "
+     "rotate, or tilt at any point, he does not look toward Eve or "
+     "anywhere else -- the ONLY motion on his face is his eyelids "
+     "closing and opening once for a single slow, natural blink, "
+     "nothing else about his head or face moves even slightly. The "
+     "leaves already drifting down through the canopy continue "
+     "drifting, calm and natural, at the same gentle pace. Nothing "
+     "else in the frame changes."),
 
     ("s04_mary_annunciation", "kling", 5,
      "Mary's hands complete ONE slow, small motion -- gathering closer "
