@@ -267,6 +267,60 @@ downstream chain a 3rd time. `check_landing_hold.py` GREEN again:
 **Not done / next**: commit this fix. Then the 2 remaining Seed of the
 Woman shorts. Full detail: RESUME.md top.
 
+**2026-08-14 (same day, latest) User flagged a real narration-pipeline
+regression — multi-voice dialogue has quietly dropped out of recent
+episodes, no gate catching it:** User: "we are no longer using the
+dialog to read out any God saying something or characters saying
+something... can we fix that for this and going forward as a rule."
+Investigated (Explore agent) rather than assuming — found this is real
+but not uniform: `39_The_Longer_They_Looked` reads God's own Exodus 12
+instruction as plain narrator prose while sibling pieces 42/43/44
+correctly split a `god` voice for similar quotes, all from the SAME
+recent batch. Root cause: the multi-voice rule (CLAUDE.md, memory
+`feedback-maximize-multivoice`) only exists as a prompt instruction to
+the drafting LLM — `pipeline/engine.py`'s G1-G8 self-review gates have
+NO check for it at all. The separate eyewitness pipeline already has a
+deterministic gate for exactly this (EW-G6 "cast present" fails if a
+KJV quote exists with no scripture voice routed); the main narrate
+pipeline used for Her Seed and the 37-47 batch has no equivalent.
+
+Her Seed's own text turned out NOT to be a violation — its one quote
+(Paul's Galatians 4:4 commentary) is explicitly exempted by the
+constitution's own rule ("a doctrinal Pauline line read reflectively"
+is correctly narrator-only). User still wanted it voiced for texture,
+matching how 44/43 handled similar quotes.
+
+**Executed both fixes the user approved:**
+1. Added a `scripture` voice to Her Seed's source `voices.json`
+   (`PythonProject1/jesus/narration/45_Not_Plan_B/v1/`, voice_id
+   `puDRtQWF8NtQiPMJygTb`, the SAME id `09_The_Father_Who_Ran` already
+   established as this project's standard scripture voice — reused, not
+   invented). Wrapped Paul's quote in `<speaker name="scripture">` in
+   `narration-tagged.md`, matching the exact format `44_Grace_Spoken_
+   First` uses for its own `god` quote. Re-ran `per_turn_synth.py
+   --target 59 --pre-quote-pause 0.5 --stability 0.65 --force` (matching
+   the ORIGINAL synth params from `narration.meta.json`, not guessed) —
+   clean 3-turn split (narrator/scripture/narrator), final duration
+   58.998s (target 59.0). Backed up the pre-change mp3/_turns.
+2. Re-ran forced alignment (`_s0_align.py`) against the new audio —
+   166/166 words matched, last word now ends 58.877 (was 58.819, tiny
+   shift). Recomputed ALL spread windows in `_s3_assemble.py` from the
+   new alignment's silence-gap midpoints (same methodology as the
+   original build, not eyeballed), updated `_s3b_titlecards.py`'s quote/
+   citation card timing and `_s5_score_sfx.py`'s music-turn + all 3 SFX
+   cue points to match. Rebuilt the entire downstream chain.
+   `check_landing_hold.py` GREEN: 62.00s/62.00s. Spot-checked the quote
+   card frame — lands correctly during the new scripture-voice window.
+
+**Her Seed re-LOCKED a 4th time**, now with real multi-voice. Same final
+filename: `poc_living_sketchbook/her_seed/
+HERSEED_living_sketchbook_cc_scored_sfx.mp4` (62.0s).
+
+**Still open**: the "going forward as a rule" half of the ask — build a
+deterministic multi-voice gate into `pipeline/engine.py`'s G1-G8 review,
+mirroring the eyewitness pipeline's EW-G6/EW-G11, so this can't silently
+drift again. User approved this too; not yet built this session.
+
 **2026-08-14 (same day, latest) 3rd real post-lock defect found and
 fixed — Eve's eyes visibly asymmetric on s01:** User: "the first image
 her eyes is still bad in the stills" — note this was the STILL, not the

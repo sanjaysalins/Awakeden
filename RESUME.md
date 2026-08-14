@@ -5,7 +5,18 @@
 #
 # ── PICK UP HERE: Her Seed (Seed of the Woman short #2) is fully done —
 # stills, animation, assembly, score/sfx, watermark, landing-hold all
-# GREEN, FOUR TIMES (once before, then 3 separate post-lock fixes: s01's
+# GREEN, FIVE TIMES (the 5th: user caught that multi-voice dialogue has
+# regressed project-wide, no gate catching it -- added a scripture voice
+# for Her Seed's own Paul quote in the PythonProject1 source narration
+# (separate git repo, NOT committed there -- has unrelated pending
+# changes not mine to touch), re-aligned, recomputed every downstream
+# timing, rebuilt the whole chain). STILL OPEN: the "going forward as a
+# rule" half -- build a deterministic multi-voice gate into
+# pipeline/engine.py's G1-G8 review (mirror the eyewitness pipeline's
+# EW-G6/EW-G11) so this can't silently drift again. User approved this,
+# not yet built. Do this NEXT before starting the remaining 2 shorts.
+#
+# ── (of the four prior GREENs) (once before, then 3 separate post-lock fixes: s01's
 # animated Adam far-eye -- Seedance flattened it 3x, fixed by swapping to
 # Kling; s05's genealogy silhouettes reading as modern men -- fixed by
 # rewording the outline to explicit biblical robes; s01's STILL-image

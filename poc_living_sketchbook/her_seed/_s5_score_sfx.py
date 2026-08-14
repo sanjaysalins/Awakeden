@@ -4,21 +4,25 @@ recipe as the sibling shorts' own _s5_score_sfx.py scripts -- new
 segments/cues/timings for THIS narration's own register.
 
 Music arc: neutral_teaching_warm_a dominant through the "unpacking a
-detail" section (0-34.663s: the Plan-B subversion, Genesis's own promise,
+detail" section (0-35.061s: the Plan-B subversion, Genesis's own promise,
 Paul's phrase, the expected genealogy pattern) -- crossfading into
-sacred_grace_rise_a EXACTLY at s06's own window start (34.663s), the
+sacred_grace_rise_a EXACTLY at s06's own window start (35.061s), the
 piece's real thesis turn ("Here, he doesn't. He writes: made of a woman,
 the woman promised in the garden") -- not the earlier KJV-quote moment
 (s04), since THIS piece's payoff is the garden-to-gospel connection, not
 the quote itself.
 
 Ambient SFX bed (music_library+sound_library/clips, $0, ambience-only):
-  dawn_morning_warm   s02 window (8.294-13.25s) -- light arriving on Eve,
+  dawn_morning_warm   s02 window (8.087-12.896s) -- light arriving on Eve,
                       reinforces the promise-spoken warmth.
-  heavenly_choir_soft s04 window (20.39-27.877s) -- a reverent touch under
+  heavenly_choir_soft s04 window (19.328-29.274s) -- a reverent touch under
                       Scripture's own words arriving (Galatians 4:4).
-  wind_desert_bleak   s06 window (34.663-41.214s) -- very quiet, the
+  wind_desert_bleak   s06 window (35.061-41.043s) -- very quiet, the
                       outdoor cross scene.
+
+Timings recomputed 2026-08-14 -- adding a dedicated "scripture" voice for
+Paul's KJV quote (s04) shifted word timing throughout the back half of
+the piece; all cue points here re-derived from the new _alignment.json.
 
   .venv\\Scripts\\python.exe poc_living_sketchbook/her_seed/_s5_score_sfx.py
 """
@@ -44,16 +48,16 @@ def main() -> None:
         raise SystemExit(f"missing captioned cut: {SRC} -- run _s4_captions.py first")
 
     filt = (
-        f"[1:a]{AFMT},atrim=0:38,afade=t=in:st=0:d=1.5,"
-        f"afade=t=out:st=28.663:d=6.0,volume=-9dB[musA];"
-        f"[2:a]{AFMT},adelay=34663|34663,atrim=0:{TOTAL},"
-        f"afade=t=in:st=34.663:d=6.0,afade=t=out:st=58.0:d=4.0,volume=-8dB[musB];"
-        f"[3:a]{AFMT},atrim=0:5.5,adelay=8294|8294,"
-        f"afade=t=in:st=8.294:d=1.0,afade=t=out:st=12.3:d=1.5,volume=-18dB[dawn];"
-        f"[4:a]{AFMT},atrim=0:8.0,adelay=20390|20390,"
-        f"afade=t=in:st=20.39:d=1.2,afade=t=out:st=26.5:d=1.5,volume=-16dB[choir];"
-        f"[5:a]{AFMT},atrim=0:7.0,adelay=34663|34663,"
-        f"afade=t=in:st=34.663:d=1.0,afade=t=out:st=40.3:d=1.5,volume=-20dB[wind];"
+        f"[1:a]{AFMT},atrim=0:42,afade=t=in:st=0:d=1.5,"
+        f"afade=t=out:st=29.061:d=6.0,volume=-9dB[musA];"
+        f"[2:a]{AFMT},adelay=35061|35061,atrim=0:{TOTAL},"
+        f"afade=t=in:st=35.061:d=6.0,afade=t=out:st=58.0:d=4.0,volume=-8dB[musB];"
+        f"[3:a]{AFMT},atrim=0:5.5,adelay=8087|8087,"
+        f"afade=t=in:st=8.087:d=1.0,afade=t=out:st=11.95:d=1.5,volume=-18dB[dawn];"
+        f"[4:a]{AFMT},atrim=0:8.0,adelay=19328|19328,"
+        f"afade=t=in:st=19.328:d=1.2,afade=t=out:st=27.9:d=1.5,volume=-16dB[choir];"
+        f"[5:a]{AFMT},atrim=0:7.0,adelay=35061|35061,"
+        f"afade=t=in:st=35.061:d=1.0,afade=t=out:st=40.13:d=1.5,volume=-20dB[wind];"
         f"[musA][musB][dawn][choir][wind]amix=inputs=5:normalize=0[bed];"
         f"[0:a]{AFMT},apad=whole_dur={TOTAL},asplit=2[main][key];"
         f"[bed][key]sidechaincompress={SIDECHAIN}[bedd];"

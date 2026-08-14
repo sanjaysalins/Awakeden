@@ -34,21 +34,23 @@ SRC_AUDIO = (Path(__file__).resolve().parents[3] / "PythonProject1" / "jesus" /
 OUT = HERE / "HERSEED_living_sketchbook.mp4"
 
 W, H, FPS = 1080, 1920, 30
-LAST_WORD_END = 58.819   # "you." real offset, _alignment.json
-HOLD = 3.181              # >= INV-26's 3.0s minimum hold, lands TOTAL on a clean number
+LAST_WORD_END = 58.877   # "you." real offset, _alignment.json (re-aligned after adding the scripture voice)
+HOLD = 3.123              # >= INV-26's 3.0s minimum hold, lands TOTAL on a clean number
 TOTAL = 62.0              # LAST_WORD_END + HOLD, frame-exact at 30fps (1860 frames)
 
 # (name, t0, t1) -- real word-timed windows, midpoint of each inter-spread
-# silence gap in _alignment.json, matching _PLAN.md's spread table.
+# silence gap in _alignment.json, matching _PLAN.md's spread table. Recomputed
+# 2026-08-14 after adding a dedicated "scripture" voice for Paul's Galatians
+# 4:4 quote (s04) shifted timing throughout the back half of the piece.
 SHOTS = [
-    ("s01_eden_coming_apart", 0.00, 8.294),
-    ("s02_promise_spoken_over_eve", 8.294, 13.250),
-    ("s03_already_written_page", 13.250, 20.390),
-    ("s04_mary_annunciation", 20.390, 27.877),
-    ("s05_line_of_fathers_vertical", 27.877, 34.663),
-    ("s06_mary_close", 34.663, 41.214),
-    ("s07_hands_reaching", 41.214, 51.259),
-    ("s08_landing_christ", 51.259, TOTAL),
+    ("s01_eden_coming_apart", 0.00, 8.087),
+    ("s02_promise_spoken_over_eve", 8.087, 12.896),
+    ("s03_already_written_page", 12.896, 19.328),
+    ("s04_mary_annunciation", 19.328, 29.274),
+    ("s05_line_of_fathers_vertical", 29.274, 35.061),
+    ("s06_mary_close", 35.061, 41.043),
+    ("s07_hands_reaching", 41.043, 50.851),
+    ("s08_landing_christ", 50.851, TOTAL),
 ]
 
 

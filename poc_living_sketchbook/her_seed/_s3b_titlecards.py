@@ -96,10 +96,12 @@ def ease(t):
 
 
 # (t0, t1, kind, text, cx_frac, cy_frac)
+# Timings recomputed 2026-08-14 -- adding the scripture voice for the KJV
+# quote (s04) shifted word timing throughout the back half of the piece.
 CARD_DEFS = [
     (0.3, 4.0, "hilite", "HER SEED.", 0.50, 0.09),
-    (20.7, 27.6, "quote", "GOD SENT FORTH HIS SON,\nMADE OF A WOMAN,\nMADE UNDER THE LAW.", 0.50, 0.16),
-    (21.0, 27.6, "card", "GALATIANS 4:4", 0.50, 0.36),
+    (19.6, 29.0, "quote", "GOD SENT FORTH HIS SON,\nMADE OF A WOMAN,\nMADE UNDER THE LAW.", 0.50, 0.16),
+    (19.9, 29.0, "card", "GALATIANS 4:4", 0.50, 0.36),
 ]
 
 
