@@ -97,6 +97,57 @@ needed. Nothing from the animation step is committed to git yet (media
 is gitignored per convention; the two new scripts `_kenburns.py`/
 `_s2_animate.py` still need committing). Full detail: RESUME.md top.
 
+**2026-08-14 (same day) s03/s05 REDESIGNED from flat line_boil holds into
+bespoke creative motion graphics — new standing project rule:** User asked
+whether Fable + Remotion-style motion-graphics could make the two $0
+line_boil slots (s03/s05) more dynamic, "just to see how it could look."
+Dispatched a Fable design pass (per `feedback-fable-design-sonnet-
+execution`, grounded in the actual stills + this project's real
+`panel_animator/` device library, generic-infographic clichés explicitly
+banned) rather than designing it myself. Fable proposed two content-
+specific concepts: s03 "The Lamp Finds It Finished" (a raking-light sweep
+that discovers the already-written ink, never writes it) and s05 "The
+Rubber-Stamp Genealogy" (a metronome stamp-reveal down the page that stops
+mid-stroke past the fifth figure, an ink blot standing in for the
+unwritten sixth name — the visual trapdoor into "Here, he doesn't...").
+Built a fast animated CSS/SVG preview (Artifact) over the real stills so
+the user could react before any real engineering. User: "both are great
+options... lets lock it in."
+
+**Production build, not just the preview.** s03: reused the existing
+`panel_animator/raking_light.py` device directly — but its bare plain
+sweep diff-checked as nearly imperceptible on this specific still (mean
+pixel change ~0.1/255, ~2000 of 2,073,600 pixels affected — the still has
+too little high-tooth texture for the device's luminance-modulation
+approach to read as alive on its own). Built a 2nd compositing pass
+(`_s03_lamp_finds_it.py`) adding a real flickering flame (position
+measured directly off the still: 0.43, 0.11, not guessed), drifting dust
+motes, and a late warm-grade settle — completing the rest of Fable's
+concept the bare device alone didn't cover. s05: no existing device
+matched, so built `_s05_genealogy_reveal.py` reusing `blue_line.py`'s
+hand-wobbled-front mask TECHNIQUE (rotated 90° — a descending horizontal
+front instead of a diagonal one) per that skill's own guardrail against
+hand-rolling a second mask-generation routine; the zigzag line and all 5
+figures are already baked into the still's raster art, so the progressive
+reveal alone makes the whole device feel like it's arriving in sequence.
+Both eye-checked at full resolution (frame strips + targeted crops on the
+flame/hands) before accepting — confirmed real motion, no invented
+content.
+
+**New standing project rule, written into CLAUDE.md's locked decisions
+and memory** (`feedback-creative-device-default-over-linebo-kenburns`):
+when a spread isn't getting a paid AI animation pass and Ken Burns doesn't
+fit the content, the default is now a bespoke $0 creative device (device
+library first, then a Fable design pass if nothing fits) — not a flat
+line_boil hold used just because nothing else was decided. line_boil is
+still valid when it's genuinely the right call, just not the automatic
+fallback.
+
+**Not done / next**: replaced clips not yet committed (old line_boil
+versions backed up as `.linebo_bak.mp4` alongside, gitignored like all
+media). GATE 3 (clip review) still open — user hasn't confirmed the full
+8-clip set yet. Full detail: RESUME.md top.
+
 **2026-08-13 (session end) Seed of the Woman short #2 "Her Seed" STARTED,
 stills 7/8 clean, 1 still needs a 3rd attempt tomorrow:** After short #1
 re-locked, user approved starting short #2 (Galatians 4:4, source

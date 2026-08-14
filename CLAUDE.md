@@ -364,6 +364,23 @@ they're never animated; `VISION_AUDIT_MODEL`=Haiku for the coarse assembly verif
   planning time, distinct from the reactive rule right below it — if a paid render
   comes back flat anyway despite the shot seeming to have headroom, that's
   `feedback-static-ai-clips-need-real-camera`'s job to catch, not this one's.
+- **Creative device default over line_boil/Ken Burns for un-animated spreads**
+  (locked 2026-08-14, Her Seed s03/s05): when a spread is NOT getting a paid
+  AI animation pass and a plain Ken Burns push (`dynamic_cam3d`) doesn't
+  genuinely fit the content, the next default is a bespoke $0 motion graphic
+  designed for that beat's own content — never a flat `line_boil` grain-wobble
+  hold used just because nothing else was decided. Check the existing device
+  library first (`panel_animator/`, the device skills — raking-light,
+  blue-line, measuring-reed, elder-leaf, marginalia, keeper-hand, etc.); if
+  nothing fits, dispatch a Fable design pass (grounded in the real still + the
+  real device library + the beat's own narration line, generic infographic/
+  dashboard clichés explicitly banned) and preview it as an HTML/CSS/SVG
+  Artifact before building the real Python/ffmpeg production version. Reuse
+  existing mask/reveal primitives (e.g. `blue_line.py`'s wobbled-front
+  technique, rotated) rather than hand-rolling parallel implementations of the
+  same trick. `line_boil` is still valid when it's the genuinely right call
+  for that specific content, just not the automatic fallback. Memory:
+  `feedback-creative-device-default-over-linebo-kenburns`.
 - **Landing hold ≥3.0s on every finished cut, short or long-form** (locked
   2026-07-19, INV-26): after the last spoken word, video AND audio both keep
   running for a minimum 3.0s hold before the file ends — audio track duration
