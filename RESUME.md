@@ -1,4 +1,97 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-15 (continued session) — The
+# Serpent-Crusher Promised FINISHED + LOCKED end to end (all 4 Seed of the
+# Woman shorts now complete), PLUS a real multi-voice constitution fix —
+# READ THIS FIRST, supersedes every block below.
+#
+# ── START HERE NEXT SESSION (pick one, no dependency between them):
+#   1. Build the deferred spread-variety lint tool for living-sketchbook
+#      (memory `living-sketchbook-subject-variety-gap`) — this pipeline
+#      still has no `panel_variety_lint.py` equivalent; a real subject-
+#      repetition problem (7 of 9 spreads on feet/serpent) was caught by a
+#      human eye-check mid-session on this very piece, not by tooling.
+#   2. Day of Atonement's publish wiring (queued from before this piece).
+#   3. Optional, not urgent: sweep other already-shipped narrations for the
+#      same unvoiced-epistle-quote pattern just fixed here (G9 only ever
+#      flagged these CONDITIONAL/advisory — nothing is broken, just
+#      possibly inconsistent with the new constitution guidance).
+#
+# ── WHAT HAPPENED (animation, GATE 3): ran the Fable plan from the prior
+# block below (2 $0 pushes + 5 veo3_1_lite + 2 Kling, ~$5.6). User's own
+# real-playback read: s01/s03/s08/s09 (all veo3_1_lite) felt static despite
+# passing frame-strip motion checks — the SAME lesson Heel vs Head already
+# taught (a nonzero diff is not proof a human perceives motion). Re-rendered
+# all 4 on Kling, including a deliberately risky pass on the LANDING Christ
+# shot (Kling does real cued gestures; this shot needed zero body movement)
+# — verified clean by close frame-strip: Christ's pose is frame-identical,
+# only the archway glow breathes. s04 (Paul's letter) was then pulled the
+# OTHER way, from a verified-genuine Kling pen-stroke back to a $0 Ken Burns
+# push, at the user's own explicit call — old Kling clip kept as
+# `s04_pauls_letter.kling.bak.mp4`. Final animation mix: 1 veo + 5 Kling +
+# 3 $0 pushes. Fixed a real shared bug found along the way: the Kling→
+# Seedance auto-fallback in `poc_comic_page/_animate_piece1_v2.py` wasn't
+# snapping `duration` to Seedance's legal set (4/8/12) — a timed-out Kling
+# job's automatic fallback hard-failed instead of recovering. Fixed at the
+# source (now snaps like the veo branch already did).
+#
+# ── WHAT HAPPENED (assembly): built this piece's whole finishing chain
+# fresh — `_s3_assemble.py` / `_s3b_titlecards.py` / `_s4_captions.py` /
+# `_s5_score_sfx.py`, ported from the sibling shorts' own scripts, new
+# per-piece timing/cue numbers. Title/quote card = Romans 16:20's own KJV
+# text. Score arc crossfades exactly at the word "Christ," in "it's Christ,
+# finishing what He won" (the piece's real gospel pivot). Landing-hold
+# GREEN at 61.0s on the first full build.
+#
+# ── WHAT HAPPENED (the multi-voice question — the session's real find):
+# user asked "why wasn't the Romans 16:20 quote voiced separately, is that
+# our rule?" Investigated rather than assuming, found TWO things: (1) this
+# narration predates G9 Multi-voice entirely (locked 2026-07-16, G9 locked
+# 2026-08-14) so it was literally never gate-checked; (2) the REAL gap —
+# `data/constitution.md`, the actual prompt the drafting LLM reads, told it
+# a "doctrinal Pauline line" could stay narrator-only, with NO mention
+# anywhere of the dedicated `scripture` voice already standardized and used
+# elsewhere in the project (Her Seed's own analogous Galatians 4:4 quote,
+# `PythonProject1/jesus/narration/45_Not_Plan_B`). The drafting step wasn't
+# malfunctioning — it followed its actual instructions; the instructions
+# were incomplete. User confirmed: add the voice AND fix it at the source.
+#
+# Added `<speaker name="scripture">` (voice_id `puDRtQWF8NtQiPMJygTb`,
+# project-standard) around the KJV quote in the PythonProject1 source
+# `narration-tagged.md`, re-synthesized via `per_turn_synth.py` (same
+# ORIGINAL params read from `narration.meta.json`: target=59,
+# pre-quote-pause=0.5, stability=0.65) — narration.mp3 shifted 57.15s →
+# 58.86s last-word-end. Re-ran `_s0_align.py`, hand-recomputed every
+# downstream timestamp (spread windows, title/quote-card timing, score/sfx
+# cues, the crossfade pivot word), rebuilt the ENTIRE finishing chain a
+# second time. Final piece: **62.0s, landing-hold GREEN**
+# (`v=62.00s a=62.00s gap=+0.00s`). Eye-checked the quote card + watermark
+# + a mid-piece caption frame at the new timing — all clean.
+#
+# **Fixed the root cause, not just this piece:** `data/constitution.md`'s
+# SPEAKERS section now teaches a THIRD voice lane the drafting model never
+# knew about — any standalone quoted KJV block gets a voice (the speaking
+# character's own if dramatized, the dedicated `scripture` voice
+# otherwise); true narrator-only is now reserved for genuine paraphrase/
+# allusion with no quote-marked block. `pipeline/engine.py`'s G9 gate
+# comments + CONDITIONAL-tier evidence/fix messaging updated to match
+# (severity deliberately UNCHANGED — still advisory CONDITIONAL, not a
+# retroactive hard-FAIL across the whole corpus; that was a scoped decision
+# confirmed with the user, not a silent expansion). Full `pipeline/` test
+# suite green: 457 passed, 1 skipped, nothing broken. Memories
+# `multivoice-gate-g9-locked` and `feedback-maximize-multivoice` updated so
+# a future session sees this as resolved, not still-open.
+#
+# ── SPEND THIS SESSION (continued): animation ≈$5.6 (7 paid clips across
+# round 1, before the 4 Kling re-renders + s04's reversion — those swaps
+# replaced existing spend, no meaningfully large net-new cost beyond the
+# original animation batch). Re-synth: 1 ElevenLabs call (3 turns).
+#
+# ── COMMITTED: everything (scripts, plan, alignment, constitution fix, gate
+# fix, memories — no media per repo convention, PNGs/MP4s gitignored),
+# commit `3fdc040`. Clean tree at session end.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-15 (The Serpent-Crusher Promised
 # — LAST of the 4 Seed of the Woman shorts — stills GATE 2 LOCKED after two
 # real redesign rounds; GATE 3 animation PLANNED by Fable but deliberately

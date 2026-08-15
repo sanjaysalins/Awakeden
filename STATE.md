@@ -1,6 +1,78 @@
 # STATE.md — progress tracker
 
-**2026-08-15 (latest of all) The Serpent-Crusher Promised (Seed of the Woman
+**2026-08-15 (latest of all, continued session) The Serpent-Crusher Promised
+FINISHED and LOCKED end to end — all 4 Seed of the Woman shorts now complete
+— PLUS a real multi-voice constitution fix that closes an actual pipeline
+gap, not just a one-off patch:** Ran the Fable-designed GATE 3 animation
+plan (2 $0 pushes + 5 veo3_1_lite + 2 Kling, ~$5.6). User's real-playback
+read: 4 of the veo3_1_lite clips (s01/s03/s08/s09) felt static despite
+passing frame-strip motion checks — same lesson as Heel vs Head's own
+s01/s04. All 4 re-rendered on Kling, including a deliberately risky pass on
+the LANDING Christ shot (Kling does real cued gestures; this shot needed
+zero body movement) — verified clean by eye, only the archway glow
+breathes. s04 (Paul's letter) was then pulled the OTHER way, from a
+verified-genuine Kling pen-stroke back to a $0 Ken Burns push, at the
+user's own call. Found + fixed a real shared bug along the way: the
+Kling→Seedance auto-fallback in `poc_comic_page/_animate_piece1_v2.py`
+wasn't snapping `duration` to Seedance's legal set (4/8/12), so a
+timed-out Kling job's fallback hard-failed instead of recovering.
+
+Built the whole finishing chain fresh for this piece (`_s3_assemble.py` /
+`_s3b_titlecards.py` / `_s4_captions.py` / `_s5_score_sfx.py`, following the
+sibling shorts' own recipe) — landing-hold GREEN at 61.0s.
+
+**Then the user asked the real question: why wasn't the Romans 16:20 quote
+voiced separately, "is that our rule?"** Investigated rather than assuming.
+Two findings: (1) this narration predates G9 Multi-voice entirely (locked
+2026-07-16, G9 locked 2026-08-14) so it was literally never gate-checked;
+(2) more importantly, `data/constitution.md` — the actual prompt the
+drafting LLM reads — explicitly told it a "doctrinal Pauline line" could
+stay narrator-only, with **no mention anywhere of the dedicated `scripture`
+voice** already standardized and used elsewhere in the project (Her Seed's
+own analogous Galatians 4:4 Paul quote, `45_Not_Plan_B`). The drafting step
+wasn't malfunctioning — it followed its instructions exactly; the
+instructions were incomplete. User confirmed: add the voice + fix it at the
+source.
+
+Added `<speaker name="scripture">` around the KJV quote in the PythonProject1
+source `narration-tagged.md`, re-synthesized via `per_turn_synth.py` (same
+original params: target=59, pre-quote-pause=0.5, stability=0.65) —
+narration.mp3 shifted from 57.15s to 58.86s last-word-end. Re-ran
+`_s0_align.py`, recomputed every downstream timestamp by hand (spread
+windows, title/quote-card timing, score/sfx cue windows, pivot word for the
+music crossfade), and rebuilt the ENTIRE finishing chain again. Final piece:
+**62.0s, landing-hold GREEN** (`v=62.00s a=62.00s gap=+0.00s`).
+
+**Fixed the root cause, not just this piece:** `data/constitution.md`'s
+SPEAKERS section now teaches a THIRD voice lane the model never knew about
+— any standalone quoted KJV block gets a voice (the character's own if
+dramatized, the dedicated `scripture` voice `puDRtQWF8NtQiPMJygTb`
+otherwise); true narrator-only is now reserved for genuine paraphrase/
+allusion with no quote-marked block. `pipeline/engine.py`'s G9 gate
+comments + CONDITIONAL-tier messaging updated to match (severity
+deliberately unchanged — still advisory, not retroactively failing the
+corpus). Full `pipeline/` test suite green: 457 passed, 1 skipped. Memories
+`multivoice-gate-g9-locked` and `feedback-maximize-multivoice` updated so
+future sessions see this as resolved.
+
+Final file: `poc_living_sketchbook/serpent_crusher_promised/
+SERPENTCRUSHERPROMISED_living_sketchbook_cc_scored_sfx.mp4` (62.0s). Added
+to `SKETCHBOOK_REVIEW.html`. All committed (commit `3fdc040`).
+
+**Not done / next:** the deferred spread-variety lint tool for
+living-sketchbook (`living-sketchbook-subject-variety-gap` memory — this
+pipeline still has no `panel_variety_lint.py` equivalent; the subject-
+repetition problem this piece hit mid-session, 7 of 9 spreads centering on
+feet/serpent, was caught by a human eye-check, not tooling). Day of
+Atonement's publish wiring. Optionally: a light sweep of other already-
+shipped narrations for the same unvoiced-epistle-quote pattern, now that
+the constitution's guidance changed (not urgent — G9 only ever flagged
+these as CONDITIONAL/advisory, nothing is broken). Full detail: RESUME.md
+top.
+
+## ════════════════════════════════════════════════════════════════
+
+**2026-08-15 (session 1) The Serpent-Crusher Promised (Seed of the Woman
 short #4, Romans 16:20 — the LAST of the 4 declared shorts) — stills GATE 2
 LOCKED after two real redesign rounds; animation planned (Fable), not yet
 spent:** Source narration found by content search (Romans 16:20 verbatim
