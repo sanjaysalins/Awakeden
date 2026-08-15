@@ -1,14 +1,30 @@
 # The Serpent-Crusher Promised — Seed of the Woman short #4 (Romans 16:20)
 
 Manifest slug: `seed-of-woman-04-serpent-crusher-promised`. Source narration
-(LOCKED, already voiced, reused verbatim, $0): `PythonProject1/jesus/
-narration/46_Old_Story._Unfinished/v1/` — narration.md + narration.mp3
-(57.153s last word end). Real word-level timing: `_alignment.json` (this
-folder), via `_s0_align.py`, 134/134 words matched. **Single-voice
-throughout** (`voices.json` has only `narrator` — no `<speaker>` tags in the
-source; the KJV quote is carried as narrator-reported speech, "Paul writes
-this... echoing Eden's promise: '...'" — not a framed direct quote requiring
-its own voice, matches G9's narrator-only-when-not-explicitly-framed rule).
+(LOCKED): `PythonProject1/jesus/narration/46_Old_Story._Unfinished/v1/` —
+narration.md + narration.mp3 (58.863s last word end). Real word-level
+timing: `_alignment.json` (this folder), via `_s0_align.py`, 134/134 words
+matched.
+
+**2026-08-15 UPDATE — two voices, not one.** Originally single-voice
+throughout (narrator only). The narration predates G9 Multi-voice (locked
+2026-08-14) so it was never actually gate-checked — running G9's real logic
+against this text confirms CONDITIONAL, not FAIL (the "Paul writes..."
+attribution doesn't match the spoken-verb regex), meaning narrator-only was
+a legitimate, gate-allowed choice, matching the documented Pauline/epistle
+exemption (same precedent as Her Seed's own Galatians 4:4 quote). But per
+the standing `feedback-maximize-multivoice` rule and for consistency with
+Her Seed (which DID voice its own analogous Paul quote), the user asked for
+a dedicated Scripture voice on the Romans 16:20 quote too. Added
+`<speaker name="scripture">` (voice_id `puDRtQWF8NtQiPMJygTb`, the
+project-standard Scripture voice) around the KJV quote in
+`narration-tagged.md`, re-synthesized via `per_turn_synth.py` (same original
+params: target=59, pre-quote-pause=0.5, stability=0.65), which shifted
+`narration.mp3` from 57.153s to 58.863s last-word-end. Re-ran `_s0_align.py`
+and rebuilt every downstream timing (spread windows, title/quote cards,
+score/sfx cues) from the fresh alignment — see each script's own file for
+the current numbers, this table below is now STALE for exact timestamps
+(structure/order unchanged, only the numbers shifted).
 
 This is the 4th and last of the 4 declared Seed of the Woman shorts. Its own
 thread is distinct from its 3 siblings: short #1 (First Gospel in the Curse)

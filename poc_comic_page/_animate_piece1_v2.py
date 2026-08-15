@@ -161,7 +161,12 @@ def run_job(name, provider, still, ar, prompt, duration=None):
     out = OUT / f"{name}.mp4"
     if provider == "seedance":
         model = "seedance1_5"
-        extra = ["--duration", str(duration or 4), "--resolution", "720p", "--aspect_ratio", ar,
+        # legal set is 4/8/12 only -- snap any other requested duration to the
+        # nearest, same as the veo branch below (found 2026-08-15: an unsnapped
+        # duration=5 fallback from a timed-out Kling job hard-failed instead of
+        # recovering).
+        seedance_dur = min((4, 8, 12), key=lambda d: abs(d - (duration or 4)))
+        extra = ["--duration", str(seedance_dur), "--resolution", "720p", "--aspect_ratio", ar,
                  "--generate_audio", "false"]
     elif provider == "veo":
         # Use for wide/hero/atmospheric holds and multi-figure "hold still" crowd

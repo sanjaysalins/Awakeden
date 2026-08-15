@@ -48,15 +48,19 @@ LOCK = ("The camera does not move, zoom, or change angle at all. INVENT "
         "texture, torn edges, and every sketch line hold perfectly still. ")
 
 # (name, provider, duration, motion)
+# 2026-08-15: s01/s03/s08/s09 were originally veo3_1_lite (atmospheric-only,
+# no cued gesture) but the user watched real playback and called them too
+# static/Ken-Burns-equivalent -- moved to Kling per the Heel vs Head s01/s04
+# precedent (frame-strip brightness diffs are not proof of visible motion).
 JOBS = [
-    ("s01_recap_curse", "veo", 4,
+    ("s01_recap_curse", "kling", 5,
      "All three figures hold their exact pose and position, perfectly "
      "still -- no one moves, speaks further, or changes expression. "
      "Only: the small oil lamp's flame breathes very gently, flickering "
      "warm light and soft shadow across the three faces. Nothing else "
      "in the frame changes."),
 
-    ("s03_armor_set_aside", "veo", 4,
+    ("s03_armor_set_aside", "kling", 5,
      "The armor and sword hold their exact position, perfectly still -- "
      "nothing shifts or falls. Only: the soft unseen light falling on "
      "the armor breathes very gently brighter and dimmer, as if an "
@@ -87,14 +91,14 @@ JOBS = [
      "are. INVENT NOTHING new otherwise. Nothing else in the frame "
      "changes."),
 
-    ("s08_gold_thread_bridge", "veo", 4,
+    ("s08_gold_thread_bridge", "kling", 5,
      "The dark storm-garden scene and the small distant serpent's head "
      "hold their exact position, perfectly still. Only: the gold beam "
      "of light breathes very gently, growing a little brighter and more "
      "radiant, alive and warm, exactly as golden as it already is, "
      "unchanged in color. Nothing else in the frame changes."),
 
-    ("s09_landing_christ_in_arch", "veo", 5,
+    ("s09_landing_christ_in_arch", "kling", 5,
      "Christ stays perfectly frozen in His exact pose, no movement at "
      "all, His extended hand held steady. The warm gold light flooding "
      "through the archway stays exactly as warm and steady as it "

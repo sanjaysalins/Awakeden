@@ -66,9 +66,11 @@ def test_real_regression_case_flags_conditional():
 
 
 def test_pauline_epistle_exemption_stays_conditional_not_fail():
-    # Her Seed's own Galatians 4:4 quote -- the constitution's own stated
-    # exemption ("a doctrinal Pauline line read reflectively"). Must NOT
-    # hard-fail a legitimate narrator-only choice.
+    # Her Seed's own Galatians 4:4 quote -- an unvoiced epistle line is a
+    # real gap now (2026-08-15: the constitution says it should get the
+    # `scripture` voice, not stay narrator-only), but the deterministic gate
+    # still can't reliably auto-classify dramatized-vs-citation from text
+    # alone, so this stays CONDITIONAL (a human call), not a hard FAIL.
     draft = Draft(
         title="t", hook_type="x",
         beats=[Beat("proof",

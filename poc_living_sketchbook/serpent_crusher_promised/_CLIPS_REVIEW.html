@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Serpent-Crusher Promised — 9 clips</title>
+<style>
+  body { background:#1a1a1a; color:#eee; font-family:Georgia,serif; margin:0; padding:30px; }
+  h1 { font-size:22px; margin-bottom:4px; }
+  .sub { color:#999; margin-bottom:30px; font-size:14px; max-width:900px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:18px; }
+  .card { background:#242424; border-radius:8px; padding:10px; }
+  .card video { width:100%; border-radius:4px; display:block; background:#000; }
+  .card h2 { font-size:14px; margin:8px 0 2px; }
+  .card .t { font-size:11px; color:#888; }
+  .mode { display:inline-block; font-size:12px; font-weight:bold; padding:4px 10px; border-radius:6px; margin-bottom:8px; letter-spacing:0.02em; }
+  .mode-free { background:#3a3320; color:#e8c974; }
+  .mode-paid { background:#1f3a2e; color:#7de8b3; }
+</style>
+</head>
+<body>
+<h1>The Serpent-Crusher Promised — all 9 clips, GATE 3 <span style="color:#7de8b3">LOCKED</span></h1>
+<div class="sub" style="color:#e8c974">2026-08-15 update: added a dedicated Scripture voice for the Romans 16:20 quote (matching Her Seed's own precedent), re-synthesized narration.mp3 (57.15s → 58.86s last word), re-aligned, and rebuilt every downstream timing. Piece is now 62.0s (was 61.0s). Clip content unchanged, only the cut's timing shifted.</div>
+<div class="sub">Seed of the Woman short #4 of 4 (Romans 16:20). Stills locked GATE 2 after 3 redesign rounds.
+Animated per Fable's full per-shot design pass: 2 $0 Ken Burns pushes + 7 paid clips, originally 5 veo3_1_lite + 2 Kling.
+s04's first attempt timed out on Kling and its auto-fallback to Seedance also failed (an unsnapped duration=5 request —
+Seedance only allows 4/8/12); fixed at the source in the shared <code>poc_comic_page/_animate_piece1_v2.py</code> and
+retried clean on Kling. <b>Round 2 (user's own real-playback call):</b> the veo3_1_lite clips on s01/s03/s08/s09 read too
+static/Ken-Burns-equivalent on actual playback despite passing frame-strip checks — same lesson as Heel vs Head's s01/s04.
+All 4 were re-rendered on Kling instead (old veo takes kept as <code>*.veo.bak.mp4</code>); s09 (the landing Christ) kept
+the same strict "no movement" lock language since Kling does real cued gestures and this shot must show zero body
+movement — verified clean, Christ's pose is byte-identical frame to frame, only the archway glow breathes.
+<b>Round 3:</b> s04 was pulled back the other way, from a verified-genuine Kling pen-stroke to a plain $0 Ken Burns
+push, at the user's own call — old Kling take kept as <code>s04_pauls_letter.kling.bak.mp4</code>. Final mix:
+1 veo3_1_lite (s06) + 5 Kling + 3 $0 pushes. Real spend today ≈$10 (animation only, across rounds 1-2). All 9 clips
+eye-checked at full resolution via cropped frame strips on each clip's actual motion region, not just exit code —
+every paid clip shows genuine, visibly-alive motion; the two $0 pushes are clean camera-only holds with the serpent
+staying dead throughout. All clips play automatically on load (muted, looping).</div>
+
+<div class="grid">
+<div class="card">
+  <span class="mode mode-paid">PAID — Kling (was veo)</span>
+  <video controls autoplay muted loop playsinline src="clips/s01_recap_curse.mp4"></video>
+  <h2>s01 recap — a curse in a garden</h2>
+  <div class="t">REVISED — the veo version read too static on real playback (user's own catch). Re-rendered on Kling: same three-figure hold, but the flame and its glow are now clearly, visibly alive across the clip, not a subtle diff.</div>
+</div>
+<div class="card">
+  <span class="mode mode-free">$0 — KEN BURNS PUSH</span>
+  <video controls autoplay muted loop playsinline src="clips/s02_unfinished_arch.mp4"></video>
+  <h2>s02 it isn't finished yet</h2>
+  <div class="t">A half-built Roman triumphal arch, keystone still hanging in the ropes. Camera-only push, no invented motion — a bespoke device beat, not a paid animator's job.</div>
+</div>
+<div class="card">
+  <span class="mode mode-paid">PAID — Kling (was veo)</span>
+  <video controls autoplay muted loop playsinline src="clips/s03_armor_set_aside.mp4"></video>
+  <h2>s03 not handed to a warrior</h2>
+  <div class="t">REVISED — the veo version read too static on real playback. Re-rendered on Kling: the unseen light on the armor now brightens/dims with real visible warmth, not a subtle diff — armor and sword stay untouched.</div>
+</div>
+<div class="card">
+  <span class="mode mode-free">$0 — KEN BURNS PUSH</span>
+  <video controls autoplay muted loop playsinline src="clips/s04_pauls_letter.mp4"></video>
+  <h2>s04 Paul's letter</h2>
+  <div class="t">REVISED (round 3, user's own call) — Kling had actually delivered a genuine confirmed pen-stroke gesture here (see below), but the user asked for a plain push instead. Camera-only push toward the pen tip on the parchment; old Kling take kept as clips/s04_pauls_letter.kling.bak.mp4. Was: a real cued gesture — the hand completes one deliberate pen stroke across the parchment, then lifts and holds. First attempt timed out on Kling, auto-fallback to Seedance failed on an invalid duration (bug now fixed at the source); retried clean on Kling, confirmed genuine hand/pen movement on a close frame-strip.</div>
+</div>
+<div class="card">
+  <span class="mode mode-free">$0 — KEN BURNS PUSH</span>
+  <video controls autoplay muted loop playsinline src="clips/s05_feet_on_crushed_head.mp4"></video>
+  <h2>s05 HERO — under your feet shortly</h2>
+  <div class="t">KJV quote, Romans 16:20. Camera-only push, deliberately kept static — any generated motion here risked the serpent reading alive, the exact defect the still took 6 rounds to solve.</div>
+</div>
+<div class="card">
+  <span class="mode mode-paid">PAID — veo3_1_lite</span>
+  <video controls autoplay muted loop playsinline src="clips/s06_empty_cross_shadow.mp4"></video>
+  <h2>s06 the blow already fell</h2>
+  <div class="t">Empty cross, shadow reaching a small distant crushed serpent. Confirmed the ground shadow genuinely deepens/lightens on a close frame-strip — cross and serpent both hold their exact shape, neither moves.</div>
+</div>
+<div class="card">
+  <span class="mode mode-paid">PAID — Kling</span>
+  <video controls autoplay muted loop playsinline src="clips/s07_night_watchman.mp4"></video>
+  <h2>s07 never yours to crush</h2>
+  <div class="t">A real cued gesture — the watchman's grip on the stone coping visibly tightens, knuckles tensing, while the small lamp beside him catches and flickers once. Confirmed genuine hand tension + flame catching on a close frame-strip.</div>
+</div>
+<div class="card">
+  <span class="mode mode-paid">PAID — Kling (was veo)</span>
+  <video controls autoplay muted loop playsinline src="clips/s08_gold_thread_bridge.mp4"></video>
+  <h2>s08 the garden's promise, present tense</h2>
+  <div class="t">REVISED — the veo version read too static on real playback. Re-rendered on Kling: the gold beam is now clearly, visibly more radiant across the clip — positive-only glow phrasing held clean, no invented sparkle/glitter.</div>
+</div>
+<div class="card">
+  <span class="mode mode-paid">PAID — Kling (was veo)</span>
+  <video controls autoplay muted loop playsinline src="clips/s09_landing_christ_in_arch.mp4"></video>
+  <h2>s09 LANDING — stand where His grace has set your feet</h2>
+  <div class="t">REVISED — the veo version read too static on real playback. Moving the LANDING shot to Kling was a deliberate risk (Kling does real cued gestures; this shot needs zero body movement) — verified clean: Christ's pose is frame-identical throughout, only the archway's gold glow visibly breathes brighter.</div>
+</div>
+</div>
+
+</body>
+</html>

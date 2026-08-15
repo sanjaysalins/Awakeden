@@ -287,6 +287,16 @@ voices wherever the verse contains speech:
   whole verse-19+20 block as Jesus (Jesus narrating ≠ Jesus speaking the son's
   bargain). WRONG: putting the son's line in narrator prose with quotation
   marks (the audio tagger will read it as the narrator).
+- **A quoted KJV block that ISN'T dramatized dialogue still gets its own
+  voice — the dedicated `scripture` voice** (voice_id `puDRtQWF8NtQiPMJygTb`,
+  standardized project-wide — reuse it, never invent a new one). This is a
+  THIRD lane, distinct from both narrator and character: an epistle line
+  ("Paul writes... 'And the God of peace shall bruise Satan...'"), a psalm
+  quoted as its own block, an OT promise quoted verbatim — none of these are
+  a character speaking to another character in-scene, so they don't get a
+  character voice, but they ARE the literal Word set apart, so plain
+  narrator-only under-uses them. Add `scripture` to `speakers` and wrap the
+  quoted block in `<speaker name="scripture">...</speaker>`.
 - **Declare every voice in the `speakers` JSON field.** The audio pipeline
   reads that list (lowercase, no narrator) to assign voices. A speaker whose
   words appear in the script but who is missing from `speakers` will be
@@ -294,11 +304,15 @@ voices wherever the verse contains speech:
   declared speakers who do not actually speak in the script will trigger a
   handoff warning — declare exactly the voices used.
 
-**Narrator-only is still right when** the verse is *about* a scene rather than
-*spoken in* it — an "I AM" statement read reflectively, a doctrinal Pauline
-line, a psalm read as meditation, a Gospel narrator's summary sentence.
-Force is wrong; **opportunity** is right — when the text hands you a voice,
-use it.
+**True narrator-only is the narrow case** — the verse is *alluded to or
+paraphrased* rather than quoted as its own standalone block: a Gospel
+narrator's summary sentence, an "I AM" phrase woven as texture into flowing
+prose with no quotation marks of its own, a reference too brief or too
+blended into the narrator's own sentence to read as a distinct quoted unit.
+The moment KJV text appears as its own quoted block — even one doctrinal
+sentence — reach for a voice: the speaker's own voice if it's dramatized
+dialogue, the `scripture` voice otherwise. Force is wrong; **opportunity**
+is right — when the text hands you a voice, use it.
 
 ---
 

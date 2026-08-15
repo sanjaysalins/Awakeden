@@ -728,8 +728,12 @@ def _apply_kjv_gate(rev: Review, draft: Draft, passage: str | None) -> Review:
 
 
 # Spoken-word attribution verbs only -- deliberately excludes "writes"/"wrote",
-# which signals an EPISTLE quote (Paul, Peter, etc.), the constitution's own
-# stated narrator-only exemption ("a doctrinal Pauline line read reflectively").
+# which signals an EPISTLE quote (Paul, Peter, etc.). The constitution does
+# NOT exempt these from voicing (2026-08-15 update: an epistle quote should
+# get the dedicated `scripture` voice, not stay narrator-only) -- "writes" is
+# still excluded from the FAIL-tier regex because it's a weaker, less
+# unambiguous signal than an explicit spoken-verb attribution; an unvoiced
+# "writes" quote still surfaces via the CONDITIONAL tier below.
 _SPOKEN_ATTRIBUTION_RE = re.compile(
     r"\b(?:says?|said|declares?|declared|tells?|told|commands?|commanded|"
     r"speaks?|spoke|answers?|answered|cries?|cried|replies?|replied|asks?|"
@@ -778,10 +782,12 @@ def _apply_multivoice_gate(rev: Review, draft: Draft) -> Review:
         verdict = "CONDITIONAL"
         quoted = draft.scripture_quoted[:70] + ("..." if len(draft.scripture_quoted) > 70 else "")
         evidence = (f'DETERMINISTIC MULTI-VOICE CHECK: a KJV quote exists ("{quoted}") with zero '
-                    f'voices in speakers. Confirm this is deliberate narrator-only (a reflective/'
-                    f'epistle line per the constitution\'s own exemption) -- not a missed multi-voice '
-                    f'opportunity for God/a character speaking.')
-        fix = "If the quoted speaker should be heard (not read reflectively), add a voice to speakers."
+                    f'voices in speakers. Per the constitution, a quoted block gets a voice unless '
+                    f'it is a mere allusion/paraphrase with no standalone quote marks -- confirm '
+                    f'that is genuinely the case here, not a missed opportunity.')
+        fix = ("If this is a real quoted block: dramatized dialogue gets the speaking character's "
+               "voice; a non-dramatized quote (epistle line, psalm, OT promise) gets the dedicated "
+               "`scripture` voice (voice_id puDRtQWF8NtQiPMJygTb) -- add it to speakers.")
 
     new_gate = GateResult(gate="G9 Multi-voice", verdict=verdict, evidence=evidence, fix=fix)
     new_gates = [g for g in rev.gates if not g.gate.upper().startswith("G9")] + [new_gate]
