@@ -1,6 +1,82 @@
 # STATE.md — progress tracker
 
-**2026-08-14 (latest of all) Heel vs Head FINISHED and LOCKED end to
+**2026-08-15 (latest of all) The Serpent-Crusher Promised (Seed of the Woman
+short #4, Romans 16:20 — the LAST of the 4 declared shorts) — stills GATE 2
+LOCKED after two real redesign rounds; animation planned (Fable), not yet
+spent:** Source narration found by content search (Romans 16:20 verbatim
+quote), not filename: `PythonProject1/jesus/narration/46_Old_Story._
+Unfinished/v1` (title candidate in the JSON was literally "The Serpent-
+Crusher..."), already LOCKED, 57.15s. Force-aligned clean (134/134 words).
+Built a 9-spread `_PLAN.md`, rendered all 9 stills on the first pass — own
+eye-check found 6 of 9 had real defects (alive/open-mouthed serpent instead
+of crushed, blood-look wash on the cross, a photoreal style-break + gore +
+compositional gap on the HERO shot, a totally missed composition on the
+gold-thread bridge, and disembodied "second pair of feet" on the landing
+reading as body horror). Fixed all 6 with reused/strengthened crushed-head
+language from Heel vs Head's own proven paragraph, dropping "alive serpent"
+reference images that were fighting the "make it dead" text instruction.
+
+**User's GATE 2 read, round 1: "sredo 1,2,7,9."** Dispatched Fable for a real
+creative redesign (not a bug fix) on those 4 — got strong concepts, rendered
+them, one real defect surfaced ("heel" alone, near archival/engraving framing,
+rendered as a woman's high-heeled shoe — a genuine anachronism, fixed with
+explicit bare-foot language).
+
+**User's real complaint, round 2: "loads of feet and snake stills... is
+fable not being creative today?"** Tallied it and the user was right: even
+after redesigning 4 shots, 7 of 9 spreads still centered on a foot/footprint
+image and 5 of 9 on the serpent. Root cause wasn't Fable's creativity — it
+was MY briefing: I asked Fable to make each redesigned shot distinct from its
+*neighbors*, never showed it the whole 9-spread board to check subject
+variety across the *entire piece*. Sent Fable back with the full board and an
+explicit ban on feet/footprints/serpent as the default for 3 of the 4 —
+got genuinely different territory: three generations hearing the story told
+by lamplight (s01), a half-built Roman triumphal arch with its keystone
+still hanging in the ropes (s02), a night watchman's futile vigil (s07,
+Psalm 127:1's own image), and Christ standing in that SAME arch now finished,
+offering His hand (s09) — a real setup/payoff pair, and Colossians 2:15's own
+triumph imagery landing right on Paul's Roman audience. User then caught one
+more real defect: s01's first render read modern (shirt collars, contemporary
+haircuts) despite the aged-paper style — fixed with explicit period-dress
+language (head-wrap, collarless robes, unstyled hair).
+
+**User said "lock it" — stills GATE 2 LOCKED, 9/9.** Wrote two new memories
+capturing the real lessons: `living-sketchbook-subject-variety-gap` (this
+pipeline has no `panel_variety_lint.py` equivalent — subject/prop repetition
+across a whole piece needs a tally before rendering, and Fable needs the
+WHOLE spread board, not just flagged shots, to catch it) and
+`living-sketchbook-render-failure-modes` ("heel" as a homograph trigger near
+archival framing, an alive-posed reference image fighting a "render it dead"
+instruction, a shared description's own framing language leaking into every
+reuse, and "ancient style" not automatically enforcing period dress per
+figure).
+
+**Animation (GATE 3) planning: user asked for Fable's real creative input,
+not my own mechanical wide=veo/close=Kling split.** Fable reviewed all 9
+locked stills against the actual tier constraints (veo = atmospheric light
+only, Kling = one real designed gesture, $0 push = stillness-is-the-point or
+serpent-motion-risk) and produced genuinely specific per-shot motion, plus
+two intentional through-lines: a HANDS motif (every human hand in the piece
+moves — teaching, writing, straining — except Christ's, which stays still
+because it's already open) and a FLAME motif (healthy flicker → steady →
+struggling → no flame at all, pure gold light, tracking effort vs. grace).
+Full plan: 4 Kling (elder's hand, keystone sway, Paul's pen lifts off the
+page, watchman's grip tightens) + 3 veo (armor light, gold beam, arch swell)
++ 2 $0 (HERO feet-on-serpent, cross+shadow — both kept static, serpent risk).
+**User chose to defer the actual animation spend to next session** ("let's do
+the fable plan tomorrow... commit everything and create a handover").
+`_kenburns.py` and `_s2_animate.py` are both WRITTEN with Fable's exact
+per-shot motion descriptions, ready to run — nothing has been spent yet on
+this piece beyond the still renders across both redesign rounds (~$3.60
+total per `data/spend_ledger.jsonl`, 33 logged calls including retries).
+
+**Not done / next**: run `_kenburns.py` then `_s2_animate.py` (~$6.30, already
+quoted and the plan already chosen — no need to re-ask unless the user wants
+to revisit budget), review GATE 3, then assemble/caption/score/watermark/
+landing-hold same as every prior piece in this cluster. Once this locks, all 4
+declared Seed of the Woman shorts are complete. Full detail: RESUME.md top.
+
+**2026-08-14 Heel vs Head FINISHED and LOCKED end to
 end — animation quality fixes + a real shared-infrastructure bug found
 and fixed:** After stills GATE 2 locked, animated all 7 clips (2 $0 +
 5 paid initially: veo3_1_lite x3, Kling x1, ~$3.11). User's GATE 3 read:

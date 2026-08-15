@@ -1,6 +1,147 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-15 (The Serpent-Crusher Promised
+# — LAST of the 4 Seed of the Woman shorts — stills GATE 2 LOCKED after two
+# real redesign rounds; GATE 3 animation PLANNED by Fable but deliberately
+# NOT YET SPENT, per the user's own choice to close for the day) — READ
+# THIS FIRST, supersedes every block below.
+#
+# ── START HERE NEXT SESSION: run the animation. The plan is already chosen
+# (the user picked the FULL Fable plan over cost-trimmed the same session,
+# no need to re-ask unless they want to revisit budget):
+#   .venv\Scripts\python.exe poc_living_sketchbook/serpent_crusher_promised/_kenburns.py
+#   .venv\Scripts\python.exe poc_living_sketchbook/serpent_crusher_promised/_s2_animate.py
+# ~$6.30 total (4 Kling + 3 veo3_1_lite + 2 already-written $0 pushes).
+# Every shot's motion instruction is ALREADY WRITTEN into both scripts,
+# verbatim from Fable's own design pass — do not re-derive it. After
+# rendering: build a `_CLIPS_REVIEW.html` (prominent mode badges per this
+# cluster's own standing convention since Heel vs Head), eye-check every
+# clip at full resolution (frame-strip AND direct first/last-frame compare
+# — a clean exit code is not proof of visible motion, lesson from Heel vs
+# Head), then GATE 3 review with the user. After lock: `_s3_assemble.py` /
+# `_s3b_titlecards.py` / `_s4_captions.py` / `_s5_score_sfx.py` / watermark
+# / `check_landing_hold.py`, same recipe as every prior piece in this
+# cluster. Once THIS locks, all 4 declared Seed of the Woman shorts are
+# complete — then the deferred spread-variety lint tool (see below) and
+# Day of Atonement's publish wiring.
+#
+# ── WHAT HAPPENED (stills, round 1): source narration found by CONTENT
+# SEARCH for "Romans 16:20" (not filename) — `PythonProject1/jesus/
+# narration/46_Old_Story._Unfinished/v1` (its own creation-JSON title
+# candidate was literally "The Serpent-Crusher..."), already LOCKED,
+# 57.15s, force-aligned clean 134/134. Built a 9-spread `_PLAN.md`,
+# rendered all 9 on the first pass. Own eye-check (not just the SDK audit)
+# caught real defects on 6 of 9: an alive/open-mouthed serpent where a
+# CRUSHED one was needed (twice — s01 and s02), a photorealistic
+# style-break + visible gore + a compositional gap on the HERO shot, a
+# blood-look red wash down the cross itself, a totally missed composition
+# on the gold-thread bridge (came back blank, then alive, then beam
+# missing — 3 tries), and a "second pair of feet" landing concept that
+# rendered as disembodied severed feet (body horror). Root-caused and
+# fixed: an ALIVE-posed serpent reference image was fighting the "render
+# it dead" text instruction on every shot that used it — dropping that
+# reference (keeping only an already-dead reference or none) fixed it
+# every time. A shared crushed-head description's own "close and large"
+# framing language was also leaking into shots that needed the serpent
+# small/distant — split into a scale-agnostic constant.
+#
+# ── WHAT HAPPENED (stills, round 2 — user: "sredo 1,2,7,9"): dispatched
+# Fable for genuine creative redesign (not a bug fix) on s01/s02/s07/s09.
+# Got strong concepts, implemented them, one real defect surfaced: the
+# word "heel" alone, near an archival/engraving-style framing, rendered as
+# a woman's HIGH-HEELED SHOE — a real anachronism, fixed with explicit
+# bare-human-foot language (interesting: the exact same phrase in a
+# different, non-archival framing elsewhere in the piece rendered a
+# correct bare foot with no fix needed — the trigger seems to be the
+# framing-genre combination, not the word alone).
+#
+# ── WHAT HAPPENED (stills, round 3 — user's REAL complaint: "loads of
+# feet and snake stills... is fable not being creative today?"): tallied
+# it and the user was right — even after redesigning 4 shots, 7 of 9
+# spreads still centered on a foot/footprint image, 5 of 9 on the
+# serpent. This was NOT a Fable-creativity problem — Fable's individual
+# concepts were fine. It was a BRIEFING problem: I'd asked Fable to make
+# each redesigned shot distinct from its immediate NEIGHBORS, but never
+# showed it the whole 9-spread board to check subject variety across the
+# WHOLE piece. Re-briefed with the full board and an explicit ban on
+# feet/footprints/serpent as the default for 3 of the 4 non-hero spreads
+# — got genuinely different territory: three generations hearing the
+# story told by lamplight (s01), a half-built Roman triumphal arch with
+# its keystone still hanging in the ropes (s02), a night watchman's
+# futile vigil (s07, Psalm 127:1's own image — "except the LORD keep the
+# city, the watchman waketh but in vain"), and Christ standing in that
+# SAME arch now finished, offering His hand (s09) — a real setup/payoff
+# pair, and it lands right on Colossians 2:15's own "triumphing over
+# them" imagery for Paul's actual Roman audience. User then caught one
+# more real defect on the new s01: it read modern (shirt collars,
+# contemporary haircuts) despite the aged-paper style — the STYLE block's
+# general "ancient sketchbook" framing does NOT automatically enforce
+# period dress on figures within a scene; fixed with explicit head-wrap/
+# collarless-robe/unstyled-hair language per figure.
+#
+# ── User said "lock it" — stills GATE 2 LOCKED, 9/9. `_STILLS_REVIEW.html`
+# updated to LOCKED status.
+#
+# ── TWO NEW MEMORIES WRITTEN (read these before planning the NEXT living-
+# sketchbook piece, not just this one):
+# 1. `living-sketchbook-subject-variety-gap` — this pipeline has NO
+#    `panel_variety_lint.py` equivalent (that gate only covers the
+#    comic-grid multi-panel pipeline). Add a one-line subject/object tag
+#    per spread to `_PLAN.md` and eyeball the tally BEFORE rendering, and
+#    if using Fable for redesign, always hand it the WHOLE spread table,
+#    not just the flagged shot(s) — a per-shot brief only optimizes for
+#    "different from its neighbor," not "different across the piece."
+#    A real STANDING TODO from this lesson: consider building an actual
+#    lightweight lint script for this pipeline, ported from
+#    `panel_variety_lint.py`'s spirit — not done this session, just
+#    identified and logged.
+# 2. `living-sketchbook-render-failure-modes` — "heel" as a homograph
+#    trigger near archival/engraving framing; an alive-posed reference
+#    image fights a "render it dead" text instruction even when detailed;
+#    a shared description's own framing/scale language leaks into every
+#    downstream reuse; "ancient style" alone does not enforce period dress
+#    per figure, each figure needs its own explicit period-dress line.
+#
+# ── WHAT HAPPENED (animation planning, GATE 3, not yet spent): user
+# explicitly asked for Fable's real creative input on animation tiering,
+# not my own mechanical wide=veo/close=Kling default split. Briefed Fable
+# with the actual tier constraints (veo = atmospheric light-only, reliably
+# FAILS designed gestures; Kling = one real designed gesture, costs ~2x;
+# $0 push = stillness-is-the-point or serpent-motion-risk) and all 9
+# locked stills' real content. Fable found genuinely specific per-shot
+# motion candidates (a keystone swaying in its ropes, a pen lifting off
+# the page mid-thought, a grip visibly tightening) instead of a generic
+# "the light breathes" default everywhere, PLUS two deliberate through-
+# lines worth preserving exactly as designed: a HANDS motif (every human
+# hand in the piece moves — teaching, writing, straining — except
+# Christ's in the landing, which stays still because it's already open,
+# not because nothing was designed for it) and a FLAME motif (healthy
+# flicker → steady → struggling → no flame at all/pure gold light,
+# tracking effort vs. grace across the piece). Full plan: 4 Kling (s01
+# elder's hand emphasis, s02 keystone sway, s04 Paul's pen lifts off the
+# page, s07 watchman's grip tightens) + 3 veo (s03 armor light, s08 gold
+# beam strengthens, s09 arch light swells — deliberately NOT Kling on
+# Christ, resisting the temptation to animate His hand) + 2 $0 pushes
+# (s05 HERO feet-on-serpent, s06 cross+shadow — both kept static, same
+# serpent-reads-alive risk that took many rounds to solve on the stills).
+# User was offered a cost-trimmed alternative (~$4.65, dropping 2 of the 4
+# Klings) and explicitly chose the FULL plan (~$6.30) instead, then chose
+# to defer the actual spend to the next session and close for the day.
+# `_kenburns.py` and `_s2_animate.py` are BOTH FULLY WRITTEN with Fable's
+# exact motion language already in them — next session should just RUN
+# them, not re-plan.
+#
+# ── SPEND THIS SESSION: ~$3.60 (33 logged HF calls across both redesign
+# rounds' still renders + retries, per `data/spend_ledger.jsonl`). Nothing
+# spent yet on animation.
+#
+# ── COMMITTED: everything (scripts, plan, alignment, review HTML — no
+# media per repo convention, PNGs gitignored), clean tree at session end.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-14 (Heel vs Head FINISHED and
-# LOCKED end to end; everything committed, clean tree) — READ THIS FIRST,
+# LOCKED end to end; everything committed, clean tree) — superseded by the
+# block above; kept for its own process detail.
 # supersedes every block below.
 #
 # ── START HERE NEXT SESSION: begin "The Serpent-Crusher Promised" (Seed
