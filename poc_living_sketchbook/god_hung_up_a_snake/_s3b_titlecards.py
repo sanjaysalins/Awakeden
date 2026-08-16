@@ -90,11 +90,13 @@ def ease(t):
 
 
 # (t0, t1, kind, text, cx_frac, cy_frac) -- over s01/s02, same cold-open
-# pattern as Look and Live.
+# pattern as Look and Live. RE-ALIGNED 2026-08-16 against the re-synthesized
+# narration.mp3 (scripture voice added to the Numbers 21:9 quote) -- old
+# values in comments, remapped via the same interpolation used on _s3_assemble.py.
 CARD_DEFS = [
-    (0.3, 4.3, "hilite", "GOD HUNG UP A SNAKE.", 0.50, 0.09),
-    (4.9, 7.0, "quote", "AND MOSES MADE A SERPENT\nOF BRASS, AND PUT IT\nUPON A POLE.", 0.50, 0.20),
-    (5.2, 7.0, "card", "NUMBERS 21:9", 0.50, 0.44),
+    (0.34, 5.01, "hilite", "GOD HUNG UP A SNAKE.", 0.50, 0.09),                                          # was 0.3, 4.3
+    (5.67, 7.91, "quote", "AND MOSES MADE A SERPENT\nOF BRASS, AND PUT IT\nUPON A POLE.", 0.50, 0.20),   # was 4.9, 7.0
+    (6.01, 7.91, "card", "NUMBERS 21:9", 0.50, 0.44),                                                     # was 5.2, 7.0
 ]
 
 

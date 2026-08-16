@@ -1,0 +1,233 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: upload
+
+LENS — judge this UPLOAD-METADATA KIT (titles / descriptions / tags /
+hashtags for YouTube, TikTok, Facebook, Instagram). Be specific, cite the exact
+platform + phrase:
+- HOOKY BUT HONEST: does any title clickbait, sensationalise, or overclaim doctrine
+  or history? A curiosity hook is fine ONLY if it is true to the text. Flag any lie
+  or bait-and-switch (metadata promising what the video doesn't deliver).
+- KJV verbatim: any quoted verse must be exact KJV. Flag an altered word.
+- Doctrine: evangelical, Christ-pointing, no fear / gain-loss / works framing.
+- Platform fit: right tone + a strong FIRST line for TikTok/Instagram; long-form vs
+  short framing correct; hashtag counts sane; tags are real search keywords.
+- SEO honesty: keywords/tags are relevant to the actual content (no tag-stuffing).
+- Forgettable / templated titles that won't earn the click honestly.
+- Brand: CTA-to-Jesus present; footer/links not mangled.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block (on the VERDICT line write exactly ONE word —
+PASS or REVISE or FAIL — never the list of options):
+
+VERDICT: <PASS or REVISE or FAIL>
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# Upload Kit — Day of Atonement / Scapegoat
+
+**Status:** RED-TEAMED  ·  **Gates:** FAILURES ❌
+**Video:** `C:\Users\sanjay\PycharmProjects\JesusInTheBible\poc_living_sketchbook\day_of_atonement\DAYOFATONEMENT_LONG_living_sketchbook_cc.mp4`
+**Format:** long  ·  **Series:** Jesus in the Old Testament  ·  **Anchor:** Leviticus 16:15
+
+> Copy each block straight into the platform's upload form. Title, description,
+> tags and hashtags are pre-checked, red-teamed and panel-reviewed.
+
+## ✔ Verification
+
+✅ **UK-G1 length** — all fields within hard limits
+❌ **UK-G2 KJV-strict** — facebook: quoted verse not verbatim KJV; youtube_short: quoted verse not verbatim KJV
+✅ **UK-G3 doctrine** — no clickbait/overclaim tokens
+✅ **UK-G4 brand** — footer + CTA-to-Jesus present
+✅ **UK-G5 platform** — hashtag counts + link rules OK
+✅ **UK-G6 no-repeat** — no title collisions with siblings
+✅ **UK-G7 lint** — plain ASCII, grace-anchored, verse front-loaded
+
+### Red-team (in-engine hostile auditor)
+
+```
+VERDICT: REVISE
+
+- instagram description: "Your sin is not covered, it is carried away." drops the word "just" that every other platform keeps ("not just covered"). Read on its own this sentence sounds like it denies the goat's blood accomplished any covering at all, which contradicts Leviticus 16 itself and Hebrews 9:22 ("without shedding of blood is no remission") -- the thread's real point is that the OT covering was real but incomplete, not that it never covered anything. Fix: restore "just" -- "Your sin is not just covered. It is carried away."
+
+- youtube_short slot: this entire kit is metadata for a 6-8 minute 16:9 LONG-FORM video (per the source facts), but a "youtube_short" title/description is generated anyway, describing this same long-form content as if it were a YouTube Short. No vertical short-form cut of this episode exists yet -- the project's own notes show Day of Atonement's 3 companion shorts are still unbuilt (zero narration text). Pasting this slot's copy against a ~10-minute 16:9 video would misrepresent the format to viewers expecting a <60s vertical clip. Fix: hold the youtube_short slot until a real short-form cut exists, or confirm with the user what asset it is meant to accompany before pasting it anywhere.
+
+Everything else holds up under a hostile read: both KJV quotes (full and ellipsis-truncated) are exact verbatim substrings of the given anchor verse, no title overclaims or sensationalizes (all four candidates are true to Leviticus 16's actual two-goat structure), the "sat down" / Hebrews 9-10 framing matches the already-panel-locked narration's own resolved thread rather than inventing new doctrine, the landing CTA ("You have only to come") is grace-anchored with no fear or gain-loss pressure, and TikTok/Instagram lead with the same punchy hook line appropriate to short-attention platforms.
+```
+
+## Title options (chosen first)
+
+1. **Why Did One Sacrifice Need Two Goats?** ⟵ CHOSEN  
+   _angle: curiosity hook on an overlooked ceremonial detail in Leviticus 16, true to the text_
+2. **The Goat That Never Died (And What It Means for You)**  
+   _angle: focuses on the live scapegoat, the less-taught half of the ceremony_
+3. **One Sin Offering, Two Goats: Leviticus 16 Explained**  
+   _angle: text-forward, search-friendly framing of the passage itself_
+4. **The Sacrifice With Two Halves, and the Cross That Did Both**  
+   _angle: NT-confirmed OT echo, leads with the thread's own resolution_
+
+## YouTube (Short)
+
+**TITLE** (copy):
+```
+Why Did One Sacrifice Need Two Goats?
+```
+_37 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+In Leviticus 16, one sin offering needs two goats, and only one of them dies.
+
+The first goat is killed, its blood carried behind the veil. The second goat is never touched by a blade. The priest lays his hands on it, confesses the sin of the people, and sends it alive into the wilderness, never to return.
+
+"Then shall he kill the goat of the sin offering... and sprinkle it upon the mercy seat" - Leviticus 16:15
+
+One goat pictures the price paid. The other pictures the guilt carried away. At the cross, one Priest did both, and sat down, because it was finished. Your sin is not just covered. It is carried away. Come to Him.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Read it panel by panel: https://awakeden.com
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_903 characters_
+
+**TAGS** (copy — paste into the keyword/tags field):
+```
+Bible, Jesus, Day of Atonement, Leviticus 16, scapegoat, atonement, Old Testament, Hebrews 9, sin offering, Bible study, Christian, gospel
+```
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #DayOfAtonement #Leviticus #Gospel
+```
+
+---
+## YouTube (Long-form 16:9)
+
+**TITLE** (copy):
+```
+Why Did One Sacrifice Need Two Goats? (Leviticus 16 Explained)
+```
+_62 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+In Leviticus 16, on the Day of Atonement, the high priest does not sacrifice one goat. He needs two, and only one of them dies.
+
+The first goat is killed, and its blood is carried behind the veil, into the Holy of Holies itself. The second goat is never touched by a blade. Aaron lays his hands on its head, confesses the sin of the people over it, and sends it alive into the wilderness, never to return (Leviticus 16:15-22).
+
+Why two goats for one offering? Because forgiveness has two halves that no single animal could picture at once: the penalty that has to be paid, and the guilt that has to be carried away. One goat shows the price. The other shows the distance sin is removed to.
+
+"Then shall he kill the goat of the sin offering, that is for the people, and bring his blood within the vail, and do with that blood as he did with the blood of the bullock, and sprinkle it upon the mercy seat, and before the mercy seat:" - Leviticus 16:15
+
+Every year, the priest does this again. The blood never finally finishes the job, until one Priest does both halves in a single death, and sits down, because the work is actually done (Hebrews 9:12; 10:10-12). What two goats needed a year to picture, the cross did once, for all.
+
+If your sin is on Him, it is not just covered for another year. It is carried away, as far as the east is from the west. You have only to come.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Read it panel by panel: https://awakeden.com
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_1647 characters_
+
+**TAGS** (copy — paste into the keyword/tags field):
+```
+Bible, Jesus, Day of Atonement, Leviticus 16, scapegoat, atonement, Old Testament, Hebrews 9, sin offering, Bible study, Christian, gospel, types and shadows, mercy seat, Bible prophecy, Christian teaching
+```
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #DayOfAtonement #Leviticus16 #Atonement
+```
+
+---
+## TikTok
+
+**DESCRIPTION / CAPTION** (copy):
+```
+Why did ONE sacrifice need TWO goats?
+One died, its blood carried behind the veil. One lived, sent into the wilderness carrying Israel's sin, never to return.
+At the cross, one Priest did both. Your sin is not just covered. It is carried away. Come to Him.
+
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+```
+_328 characters_
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #DayOfAtonement #BibleStudy #Gospel #Scripture
+```
+
+---
+## Facebook (Reel/Video)
+
+**TITLE** (copy):
+```
+Why Did One Sacrifice Need Two Goats?
+```
+_37 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+In Leviticus 16, the priest sacrifices two goats for one sin offering, and only one of them dies.
+
+The first goat's blood is carried behind the veil, into the Holy of Holies. The second goat is never touched by a blade - the priest lays his hands on it, confesses the sin of the people, and sends it alive into the wilderness, never to return.
+
+"Then shall he kill the goat of the sin offering... and sprinkle it upon the mercy seat, and before the mercy seat" - Leviticus 16:15 (KJV)
+
+One goat shows the price paid. The other shows the guilt carried away, two halves no single animal could picture at once. At the cross, one Priest did both, and sat down, because it was finished.
+
+Your sin is not just covered. It is carried away. Come to Him.
+
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Read it panel by panel: https://awakeden.com
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_1012 characters_
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #DayOfAtonement #Gospel
+```
+
+---
+## Instagram (Reel)
+
+**DESCRIPTION / CAPTION** (copy):
+```
+Why did ONE sacrifice need TWO goats?
+One died, blood carried behind the veil. One lived, sent into the wilderness carrying Israel's sin, never to return.
+At the cross, one Priest did both. Your sin is not covered, it is carried away. Come to Him.
+
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+```
+_319 characters_
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #DayOfAtonement #Leviticus #Gospel #Scripture #BibleStudy #JesusChrist #OldTestament #Atonement
+```
+
+---
+----- ARTIFACT END -----

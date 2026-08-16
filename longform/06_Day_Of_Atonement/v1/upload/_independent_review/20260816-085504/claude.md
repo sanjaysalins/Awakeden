@@ -1,0 +1,21 @@
+# Independent review — claude (OK, 146s)
+
+## Independent review — Day of Atonement / Scapegoat upload kit
+
+**1. `youtube_short` block has no video to attach to.** The header states one asset only — `DAYOFATONEMENT_LONG_living_sketchbook_cc.mp4`, **Format: long**. There is no short-form cut of this episode. Yet the kit generates a full "YouTube (Short)" title/description/tags/hashtags block, formatted identically to the real platform blocks, with the top-level instruction "Copy each block straight into the platform's upload form" — no caveat, no warning, nothing distinguishing it as speculative. If pasted, it advertises a <60s Short that doesn't exist. This is the header's own **UK-G2 FAIL** target (youtube_short), and the kit ships it unlabeled anyway.
+
+**2. The in-engine red-team's own fix was never applied.** Its verdict was `REVISE`, flagging the Instagram line — *"Your sin is not covered, it is carried away."* — for dropping "just," and prescribing the exact restore: *"Your sin is not just covered. It is carried away."* Scroll down to the actual Instagram copy-block: it still reads **"Your sin is not covered, it is carried away."** unfixed. Read on its own (as an Instagram caption will be), this sentence denies the scapegoat's blood accomplished any covering at all — flatly contradicting Leviticus 16 and Hebrews 9:22. A doctrinal defect the kit identified is currently live in the deliverable.
+
+**3. UK-G2 FAIL is unresolved and self-contradicted.** Header: "❌ UK-G2 KJV-strict — facebook: quoted verse not verbatim KJV; youtube_short: quoted verse not verbatim KJV." The red-team prose then asserts the opposite — "both KJV quotes (full and ellipsis-truncated) are exact verbatim substrings of the given anchor verse" — without ever reconciling why the deterministic gate fired. Either the gate is wrong (say so and clear it) or the quotes are wrong (fix them). Neither happened; the header still reads **"Gates: FAILURES ❌"** at the top of a document whose first instruction is to paste every block live.
+
+**4. "Come to Him." is a stock closer, not an earned one.** It appears verbatim as the final CTA line in the YouTube Short, TikTok, Facebook, and Instagram blocks (4 of 5 — the long-form uses "You have only to come." instead). The project's own earned-hook-landing-gate (`narration_gate.py`) explicitly FAILs the "come to Jesus" family of closers *unless the piece's own KJV verse uses the verb* — and the only verse actually quoted here, Leviticus 16:15, does not contain "come" anywhere. Identical phrasing bolted onto four different platform captions is exactly the templated-landing pattern that rule exists to catch; it also reads as forgettable rather than earned from this piece's own thread.
+
+**5. Instagram hashtag count is an outlier.** 10 tags on Instagram vs. 4-6 everywhere else (`#Bible #Jesus #DayOfAtonement #Leviticus #Gospel #Scripture #BibleStudy #JesusChrist #OldTestament #Atonement`). Individually the tags are relevant, not junk, but the sudden jump to 10 with no equivalent depth applied to TikTok (which gets 6) reads as an inconsistently-applied convention rather than a deliberate platform-specific strategy — worth a second look, not a hard fail on its own.
+
+Everything else holds: none of the four title candidates clickbait or overclaim (all track Leviticus 16's actual two-goat structure); the full-verse YouTube long-form quote is exact verbatim KJV; the Hebrews 9-10 framing is sound typology, not invented doctrine; TikTok/Instagram lead with a strong, honest first line; KJV public-domain attribution is present on every long block.
+
+VERDICT: FAIL
+TOP FIXES:
+1. Pull the `youtube_short` block entirely (or clearly mark it "NOT YET USABLE — no short-form cut exists") — do not present it as paste-ready for a video that only exists as a long-form 16:9 file.
+2. Fix the Instagram line to restore "just" — "Your sin is not just covered. It is carried away." — the red-team already specified this fix; apply it to the actual copy-block.
+3. Resolve the UK-G2 KJV-strict FAIL on facebook/youtube_short before shipping: either correct the ellipsis quotes or get the deterministic gate to explicitly clear them, and update the header off "Gates: FAILURES ❌" once genuinely green.

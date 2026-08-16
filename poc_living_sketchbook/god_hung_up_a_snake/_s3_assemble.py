@@ -29,26 +29,33 @@ SRC_AUDIO = (Path(__file__).resolve().parents[3] / "PythonProject1" / "jesus" /
 OUT = HERE / "GODHUNGUPASNAKE_living_sketchbook.mp4"
 
 W, H, FPS = 1080, 1920, 30
-LAST_WORD_END = 57.607   # "too." real offset, _alignment.json
-HOLD = 3.193              # >= INV-26's 3.0s minimum hold, small safety margin
-TOTAL = 60.8              # LAST_WORD_END + HOLD, frame-exact at 30fps (1824 frames)
+# RE-ALIGNED 2026-08-16: source narration.mp3 was re-synthesized to add the
+# missing "scripture" voice on the Numbers 21:9 quote (memory
+# living-sketchbook-subject-variety-gap's sibling fix, same recipe as Romans
+# 16:20's own re-synth). Every timestamp below was recomputed from the fresh
+# _alignment.json via the SAME gap-midpoint methodology the original build
+# used (midpoint of each inter-beat silence gap), not a linear rescale --
+# old values kept in comments for the record.
+LAST_WORD_END = 58.9      # "too." real offset, _alignment.json (was 57.607)
+HOLD = 3.1                 # >= INV-26's 3.0s minimum hold, small safety margin (was 3.193)
+TOTAL = 62.0               # LAST_WORD_END + HOLD, frame-exact at 30fps (1860 frames) (was 60.8)
 
 # (name, t0, t1) -- real word-timed windows built against _alignment.json,
-# matching _PLAN.md's spread table.
+# matching _PLAN.md's spread table. (old values in comments)
 SHOTS = [
-    ("s01_hook", 0.00, 4.60),
-    ("s02_pole_reveal", 4.60, 7.30),
-    ("s03_texture_insert", 7.30, 9.50),
-    ("s04_camp_gathered", 9.50, 15.00),
-    ("s05_forge_acting", 15.00, 19.00),
-    ("s06_mother_child_look", 19.00, 26.80),
-    ("s07_moses_face", 26.80, 29.50),
-    ("s08_raw_bronze_insert", 29.50, 35.80),
-    ("s09_reaching_soft", 35.80, 41.60),
-    ("s10_heavy_sky", 41.60, 47.30),
-    ("s11_pole_night", 47.30, 51.00),
-    ("s12a_torn_to_gold", 51.00, 54.00),
-    ("s12b_landing_christ", 54.00, TOTAL),
+    ("s01_hook", 0.00, 5.448),               # was 0.00, 4.60
+    ("s02_pole_reveal", 5.448, 8.072),        # was 4.60, 7.30
+    ("s03_texture_insert", 8.072, 10.291),    # was 7.30, 9.50
+    ("s04_camp_gathered", 10.291, 15.745),    # was 9.50, 15.00
+    ("s05_forge_acting", 15.745, 20.659),     # was 15.00, 19.00
+    ("s06_mother_child_look", 20.659, 28.322),  # was 19.00, 26.80
+    ("s07_moses_face", 28.322, 30.443),       # was 26.80, 29.50
+    ("s08_raw_bronze_insert", 30.443, 36.521),  # was 29.50, 35.80
+    ("s09_reaching_soft", 36.521, 42.510),    # was 35.80, 41.60
+    ("s10_heavy_sky", 42.510, 48.204),        # was 41.60, 47.30
+    ("s11_pole_night", 48.204, 51.657),       # was 47.30, 51.00
+    ("s12a_torn_to_gold", 51.657, 54.853),    # was 51.00, 54.00
+    ("s12b_landing_christ", 54.853, TOTAL),   # was 54.00, TOTAL(60.8)
 ]
 
 
