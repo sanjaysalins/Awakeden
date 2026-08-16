@@ -1,6 +1,45 @@
 # STATE.md — progress tracker
 
-**2026-08-15 (latest of all, continued session) The Serpent-Crusher Promised
+**2026-08-16 (latest of all) Built the deferred spread-variety lint tool for
+living-sketchbook — closes the `living-sketchbook-subject-variety-gap`
+STANDING TODO from the prior session (Serpent-Crusher Promised, 7 of 9
+spreads on feet/serpent, caught only by the user's eye):** extended the
+already-existing `pipeline/spread_variety.py` (which only checked exact
+subject+pose+framing COLLISIONS between spreads) with a new `census()` /
+`check_census()` — tallies a new `objects` field on the same
+`visual_tags.json` and WARNs (non-blocking) when one object anchors more
+than 2 spreads, with a `_mandated` map to exempt a KJV-named occurrence
+(e.g. Romans 16:20's own "under your feet"). Deliberately advisory, not
+fail-closed: a recurring object can be the right call (this cluster's own
+crushed serpent, legitimately central in 5 of 9 Serpent-Crusher spreads,
+staged distinctly each time) — the gate's job is forcing a human to look and
+judge, not auto-rejecting repetition. Wired into the existing thin caller
+`poc_living_sketchbook/spread_variety_lint.py` (now runs both checks in one
+invocation) and documented as the required pre-render step in
+`.claude/skills/living-sketchbook/SKILL.md` §3, §8 step 1, and §8b.1
+(long-form PREFLIGHT).
+
+Proved the gap is real, not theoretical: reconstructed the actual
+before/after Serpent-Crusher Promised object distributions in
+`pipeline/test_spread_variety.py` — confirms the PRE-EXISTING collision
+check found zero problems on the before-fix draft (every spread had a
+distinct subject+pose+framing triple) while the NEW census correctly
+flagged serpent (4) and footprint (4) as dominant, proving the two checks
+catch genuinely different defect classes (5 new tests, all pass). Full
+pipeline suite green: 462 passed, 1 skipped (up from 457/1 baseline).
+
+Memory `living-sketchbook-subject-variety-gap` updated to RESOLVED.
+**Not retrofitted:** no shipped episode has `visual_tags.json` populated
+yet — same grandfathering convention as `panel_variety.py` and the 3.0s
+landing-hold rule; only new episodes are required to tag going forward.
+
+**Next (unchanged from before):** Day of Atonement's publish wiring;
+optionally a light sweep of other shipped narrations for the unvoiced-
+epistle-quote pattern fixed last session (advisory only, not urgent).
+
+## ════════════════════════════════════════════════════════════════
+
+**2026-08-15 (continued session) The Serpent-Crusher Promised
 FINISHED and LOCKED end to end — all 4 Seed of the Woman shorts now complete
 — PLUS a real multi-voice constitution fix that closes an actual pipeline
 gap, not just a one-off patch:** Ran the Fable-designed GATE 3 animation

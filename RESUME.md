@@ -1,4 +1,75 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-16 — built the deferred
+# spread-variety lint tool for living-sketchbook (the STANDING TODO from the
+# prior session) — READ THIS FIRST, supersedes every block below.
+#
+# ── START HERE NEXT SESSION (pick one, no dependency between them):
+#   1. Day of Atonement's publish wiring (queued from before Serpent-Crusher
+#      Promised; still not done).
+#   2. Optional, not urgent: sweep other already-shipped narrations for the
+#      unvoiced-epistle-quote pattern fixed 2026-08-15 (G9 only ever flagged
+#      these CONDITIONAL/advisory — nothing broken, just possibly
+#      inconsistent with the new constitution guidance).
+#   3. Next living-sketchbook episode: author `visual_tags.json` (subject/
+#      pose/framing/objects per spread) straight from `_PLAN.md`'s content
+#      descriptions and run `poc_living_sketchbook/spread_variety_lint.py
+#      <episode_dir>` BEFORE the first render — this is now a real gate, not
+#      a memory of a rule. No episode is chosen yet.
+#
+# ── WHAT HAPPENED: closed the `living-sketchbook-subject-variety-gap`
+# memory (identified but not built at the end of the prior session).
+# `pipeline/spread_variety.py` already had ONE check (`lint()` — exact
+# subject+pose+framing collision between spreads, built 2026-07-31 for
+# Bronze Serpent). Added a SECOND, complementary check: `census()` /
+# `check_census()` tallies a new `objects` field on the same
+# `visual_tags.json` (list of central prop/subject tags per spread) and
+# WARNs — deliberately non-blocking — when one object anchors more than 2
+# spreads, with a top-level `_mandated` map to exempt a KJV-named occurrence
+# (Romans 16:20's own "under your feet") from the count. WARN not FAIL was
+# a deliberate design call: Serpent-Crusher Promised's own FINAL locked plan
+# legitimately has the crushed serpent as central object in 5 of 9 spreads,
+# staged distinctly each time — the gate's job is forcing a human to look
+# and judge (the thing that kept silently not happening), not auto-
+# rejecting repetition that's actually the right call.
+#
+# Wired into the pre-existing thin caller
+# `poc_living_sketchbook/spread_variety_lint.py` (now runs both checks in
+# one invocation, combined exit code) and documented as the required
+# pre-render step in `.claude/skills/living-sketchbook/SKILL.md` §3 (new
+# paragraph after "textual refrain != visual refrain"), §8 step 1 (build
+# order), and §8b.1 (long-form PREFLIGHT gate).
+#
+# ── PROVED IT WORKS, not just built it: reconstructed the REAL before/after
+# Serpent-Crusher Promised object distributions as fixtures in
+# `pipeline/test_spread_variety.py` (5 new tests). Confirms the
+# PRE-EXISTING collision check found ZERO problems on the before-fix draft
+# (every spread had a distinct subject+pose+framing triple — the collision
+# check literally cannot see this class of defect) while the NEW census
+# correctly flagged serpent (4 spreads) and footprint (4 spreads) as
+# dominant — proof the two checks catch genuinely different failure modes,
+# same standard this project holds every new gate to (panel_variety_lint
+# caught 6/9 real collisions when introduced). Also smoke-tested the CLI
+# end-to-end against a reconstructed 9-spread episode (scratchpad, not
+# committed) — correct WARN text, correct non-blocking exit code 0.
+#
+# Full `pipeline/` test suite green: 462 passed, 1 skipped (up from 457/1
+# baseline before this session — 5 net-new tests, nothing regressed).
+#
+# ── NOT retrofitted: no shipped episode has `visual_tags.json` populated
+# yet (same grandfathering convention as `panel_variety.py` and the 3.0s
+# landing-hold rule — only NEW episodes are required to tag going forward).
+# This is a FLOOR, not the ceiling — a human eye pass over composited
+# full-res stills is still required per `feedback-audit-stills-fullres`.
+#
+# ── SPEND THIS SESSION: $0 (code + tests + docs only, no API/render calls).
+#
+# ── COMMITTED: pipeline/spread_variety.py, pipeline/test_spread_variety.py,
+# poc_living_sketchbook/spread_variety_lint.py, .claude/skills/
+# living-sketchbook/SKILL.md, memory `living-sketchbook-subject-variety-gap`
+# (marked RESOLVED) + MEMORY.md index line, STATE.md/RESUME.md handover.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-15 (continued session) — The
 # Serpent-Crusher Promised FINISHED + LOCKED end to end (all 4 Seed of the
 # Woman shorts now complete), PLUS a real multi-voice constitution fix —
