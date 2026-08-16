@@ -1,5 +1,87 @@
 # STATE.md — progress tracker
 
+**2026-08-16 (continued session) Score-swap POC: two candidates built for
+Look and Live (Eleven Music + the user's own Cathedral Loop track); user
+wants to keep pursuing the Robert-Miles-"Children" direction specifically,
+via an AI-panel + Fable "song DNA" research pass before more ElevenLabs
+attempts tomorrow:**
+
+**Candidate 1 (Eleven Music, $ metered):** reused the panel-synthesized
+prompt from `son_of_man_lifted_up/_score_swap_poc/_PANEL_PROMPTS.md`, but the
+original wording named "Robert Miles' Children" directly and ElevenLabs'
+Music API rejected it outright (400 "bad_prompt" — **confirmed real: naming
+an artist/song in a prompt is a hard ToS block, remember this for every
+future attempt**). Reworded to keep every musical descriptor (arpeggiated
+piano, warm pads, cello drone, pipe-organ swell, continuously intensifying,
+never resolving) but dropped the name in favor of "classic 1990s dream-trance
+anthem's opening build" — accepted, generated cleanly, mixed into
+`poc_living_sketchbook/look_and_live/_score_swap_poc/
+LOOKANDLIVE_MILESPOC_cc_scored_sfx.mp4` (candidate only, real final
+untouched). Verified mechanically (61.9s exact, envelope rises -31.8dB→
+-15.5dB, no premature crest) — not yet ear-checked. **Also logged a cost
+mistake honestly**: a debugging script called `.json()` on a successful (200)
+binary audio response instead of saving it, wasting one ~$1 generation before
+the bug was caught — both charges are in `data/spend_ledger.jsonl`
+(episode `look_and_live`, stage `score_swap_poc`) with honest notes.
+
+**Candidate 2 (user's own track, $0):** user dropped 5 mp3s into a new
+top-level `music/` folder; scanned all 5 via a mechanical volume-envelope
+sweep and found `Cathedral Loop.mp3`'s own 0:00–61.9s was a clean sustained
+build (-27dB→held -14/-15dB, no dip), almost exactly Look and Live's target
+length — used as a straight trim, same SFX/duck filter graph reused, produced
+`LOOKANDLIVE_CATHEDRALPOC_cc_scored_sfx.mp4`. Also not yet ear-checked.
+
+**User's verdict:** after seeing both, wants to keep pursuing the
+Robert-Miles-"Children" style specifically (not the Cathedral Loop track) —
+**tomorrow's plan**: dispatch all 5 AI panel voices + Fable to describe
+"Children"'s actual musical DNA in technical detail (BPM, key, chord
+progression, the arpeggio pattern, layering order, instrumentation, dynamics
+arc through just the pre-drop build) — never the name itself in the eventual
+ElevenLabs prompt, per the ToS finding above — then generate + test several
+new variations (not just one).
+
+**Commits this entry:** still none — `_CLIPS_REVIEW.html`, the whole new
+`_score_swap_poc/` folder (scripts + both candidate mp4s + raw/extracted
+mp3s), and the spend-ledger additions are all untracked. Ask the user again
+before/after tomorrow's round.
+
+## ════════════════════════════════════════════════════════════════
+
+**2026-08-16 (new session, after a project migration C:→F:) Look and Live
+REBUILD FINISHED — captions/score+sfx/watermark/landing-hold all clean; a
+`_CLIPS_REVIEW.html` written:** resumed a fresh session on the project's new
+home (`F:\slk\PycharmProjects\JesusInTheBible` — migrated off C: for disk
+space; git commits/file counts/sizes verified identical to the old C: copy
+before starting any work, nothing lost). Found the prior session's background
+fork had actually finished `_s4_captions.py` at 18:44 (2 hours before this
+session started, after the prior handover note was written) — so picked up
+at score+sfx instead of re-running captions. Ran, in order:
+`_s5_score_sfx.py` → `add_watermark.py` (had to rename the stale Aug-13
+`.prewm.bak.mp4` aside first, same `_OLD_2026-08-16` pattern already used on
+God Hung Up a Snake, so the idempotent skip-check didn't false-skip the fresh
+file) → `check_landing_hold.py` (GREEN: `v=61.90s a=61.90s gap=+0.00s`).
+Eye-checked 4 frames by eye (title card, Numbers 21:8 quote card, wound
+macro, landing frame — Christ on the cross with the bronze serpent small
+beneath, tying John 3:14 back to Numbers 21) — all clean, watermark correctly
+placed in all four. Wrote `poc_living_sketchbook/look_and_live/
+_CLIPS_REVIEW.html` (look_and_live had no clip-level review page yet, only
+the older stills-level `_FULL_REVIEW.html`) — modeled on God Hung Up a
+Snake's own `_CLIPS_REVIEW.html`, all 13 clips + the REBUILT banner note.
+
+**Commits this entry:** none yet — `_CLIPS_REVIEW.html` is untracked,
+waiting on user OK before committing (mp4 outputs are gitignored, as usual
+for this project; nothing else changed). The old scoring/pre-watermark mp4s
+were renamed aside with `_OLD_2026-08-13`/`_OLD_2026-08-16` suffixes rather
+than deleted, matching the existing God Hung Up a Snake pattern.
+
+**Next session, in order:** (1) Day of Atonement thumbnail (user's own
+art-direction pick, not automatable), (2) continue the score-swap POC if
+wanted (recipe fully written at `poc_living_sketchbook/son_of_man_lifted_up/
+_score_swap_poc/_PANEL_PROMPTS.md`, needs a spend OK), (3)
+23_The_Prepared_Belly if wanted (first-time audio build, not yet started).
+
+## ════════════════════════════════════════════════════════════════
+
 **2026-08-16 (latest of all, session end) Look and Live confirmed still
 mid-render (timing recomputation committed, chain not finished); started a
 score-swap POC (Eleven Music, Robert Miles "Children" build-up style) via

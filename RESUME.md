@@ -1,4 +1,163 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-16 (continued session) — score-swap
+# POC: two candidates built (Eleven Music + the user's own Cathedral Loop
+# track); user wants to keep pursuing the Robert-Miles-"Children" direction
+# specifically, via an AI-panel + Fable "song DNA" research pass before more
+# ElevenLabs attempts tomorrow. READ THIS FIRST, supersedes every block below.
+#
+# ── START HERE TOMORROW (in priority order):
+#   1. **Score-swap POC, continuing.** User's explicit direction: the
+#      Robert-Miles-"Children"-style build fits Look and Live well and wants
+#      SEVERAL MORE ElevenLabs Music attempts tomorrow — not the Cathedral
+#      Loop candidate (built and available for comparison, but not the
+#      preferred direction going forward). Plan, per the user's own words:
+#        a. Dispatch ALL 5 AI panel voices (cursor/claude/gemini/codex/grok,
+#           via `independent_review.py`'s own `run_one`/`PROVIDERS` dispatch
+#           — local CLI subscriptions, $0, same mechanism already used once
+#           this session) PLUS a Fable pass, each asked to describe Robert
+#           Miles' "Children" song's actual musical DNA in DETAIL: tempo/BPM,
+#           key, chord progression, the specific arpeggio pattern, layering
+#           order (what enters when), instrumentation, dynamics arc through
+#           just the pre-drop build section — NOT vague mood words, the
+#           literal musical structure.
+#        b. Synthesize that DNA into a NEW ElevenLabs Music prompt that's
+#           MORE specific/technical than today's attempt, while still
+#           avoiding ElevenLabs' ToS block on named artist/song references
+#           (confirmed today: naming "Robert Miles' Children" directly gets
+#           a 400 "bad_prompt" rejection — describe the DNA in pure musical
+#           terms, never the name).
+#        c. Generate + test SEVERAL variations tomorrow (not just one) — the
+#           user explicitly said "test a few more scores."
+#      METERED each time (~$1/generation per today's ledger entries) — ask
+#      for spend OK per generation batch, same discipline as today.
+#   2. Day of Atonement thumbnail — still the one remaining `publish_check`
+#      warn, needs the user's own art-direction pick.
+#   3. 23_The_Prepared_Belly (Jonah 1:17) — still optional, not confirmed.
+#
+# ── WHAT HAPPENED TODAY (after the Look and Live rebuild finished, see the
+# block below): built TWO score-swap candidates for Look and Live, retargeted
+# from son_of_man_lifted_up (this morning's plan) to Look and Live per the
+# user's direct request.
+#
+#   Candidate 1 — Eleven Music, Robert-Miles-style prompt
+#     (`poc_living_sketchbook/look_and_live/_score_swap_poc/
+#     _generate_and_mix.py`): reused the panel-synthesized prompt from
+#     `son_of_man_lifted_up/_score_swap_poc/_PANEL_PROMPTS.md` — BUT the
+#     original wording named "Robert Miles' Children" directly and
+#     ElevenLabs' Music API rejected it outright (400 "bad_prompt", confirmed
+#     real ToS enforcement, not a fluke). Reworded to keep every musical
+#     descriptor the panel converged on (arpeggiated piano, warm pads, cello
+#     drone, pipe-organ swell, continuously intensifying, never resolving)
+#     but swapped the named reference for "classic 1990s dream-trance
+#     anthem's opening build" — this version was accepted and generated
+#     cleanly. Mixed into `LOOKANDLIVE_MILESPOC_cc_scored_sfx.mp4` (candidate
+#     only, does NOT touch the real finished/watermarked final). Verified
+#     mechanically: 61.9s exact duration match, volume envelope opens hushed
+#     (-31.8dB) and rises through the piece (-15.5dB by 40s) with no
+#     premature crest, only a deliberate 2.5s anti-click edge-fade at the
+#     very tail (not a musical resolution). NOT ear-checked by a human yet.
+#     **Real ToS-rejection finding worth remembering**: naming an artist/song
+#     directly in an ElevenLabs Music prompt is a hard block, confirmed live
+#     — always describe the target sound in pure musical-DNA terms, never
+#     the name, for every future attempt (including tomorrow's).
+#     **Cost mistake, logged honestly**: while debugging the rejection, a
+#     quick manual test script called `.json()` on the (successful, 200)
+#     binary audio response instead of saving `r.content` — wasted one full
+#     metered generation (~$1) before the bug was caught. Both this session's
+#     Eleven Music charges (the wasted one + the real one used in the mix)
+#     are logged in `data/spend_ledger.jsonl` under episode `look_and_live`,
+#     stage `score_swap_poc`, with honest notes on which was wasted.
+#
+#   Candidate 2 — the user's own uploaded track, $0
+#     (`poc_living_sketchbook/look_and_live/_score_swap_poc/
+#     _mix_library_track.py`): user dropped 5 mp3s into a new top-level
+#     `music/` folder (Cathedral Loop, Cathedral Loop (1), Glass Cathedral,
+#     Luce Di Vetro, Moonlit Mosaics) and asked to find a "build" section in
+#     one and use it instead. Scanned all 5 via a mechanical volume-envelope
+#     sweep (mean_volume every 8s across each full track) — `Cathedral
+#     Loop.mp3`'s own 0:00-61.9s was the cleanest genuine sustained build
+#     found (-27dB hushed open -> steady climb to a held -14/-15dB register,
+#     no dip or resolution anywhere in that window), and it happened to land
+#     almost exactly at Look and Live's 61.9s target length, so used as a
+#     straight trim, no loop/stretch needed. Same SFX layers/sidechain-duck
+#     filter graph reused verbatim. Produced
+#     `LOOKANDLIVE_CATHEDRALPOC_cc_scored_sfx.mp4`. Also NOT ear-checked by a
+#     human yet.
+#
+# ── USER'S OWN VERDICT (why tomorrow's plan looks the way it does): after
+# seeing both candidates, the user said the Robert-Miles-"Children"-style
+# direction "really fits this" and wants to keep pursuing IT specifically —
+# not the Cathedral Loop track — via several more ElevenLabs attempts
+# tomorrow, informed by a proper song-DNA research pass first (all 5 AI panel
+# voices + Fable) rather than another single ad-hoc prompt.
+#
+# ── COMMITS THIS BLOCK: still none. Untracked as of this handover:
+# `poc_living_sketchbook/look_and_live/_CLIPS_REVIEW.html` (from the earlier
+# Look-and-Live-finish block below), the whole new
+# `poc_living_sketchbook/look_and_live/_score_swap_poc/` folder (both mix
+# scripts + both candidate mp4s + the raw/extracted mp3s), and this session's
+# `data/spend_ledger.jsonl` additions. Still waiting on the user's OK to
+# commit — ask again tomorrow before/after the new round of tests.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-16 (new session, after a project
+# migration C:→F: for disk space) — Look and Live REBUILD FINISHED. READ
+# THIS FIRST, supersedes every block below.
+#
+# ── START HERE NEXT SESSION (in priority order):
+#   1. Ask the user whether to commit `poc_living_sketchbook/look_and_live/
+#      _CLIPS_REVIEW.html` (the only new tracked file this session — mp4
+#      outputs stay gitignored per usual). Not committed yet.
+#   2. **Day of Atonement thumbnail** — the one remaining `publish_check`
+#      warn. Needs the user's own art-direction pick, not automatable.
+#   3. **Score-swap POC, if the user wants it continued**: full recipe at
+#      `poc_living_sketchbook/son_of_man_lifted_up/_score_swap_poc/
+#      _PANEL_PROMPTS.md` — READ THAT FILE, don't re-derive. Needs an
+#      explicit spend OK (~$1 historical Eleven Music cost) first.
+#   4. 23_The_Prepared_Belly (Jonah 1:17) — still just an optional future
+#      task, not confirmed wanted.
+#
+# ── PRE-WORK: verified the F: migration itself before touching anything —
+# JesusInTheBible AND PythonProject1 git commits/untracked files match the
+# old C: copy exactly, file counts match to within live session-state
+# files, total size matches exactly (282G = 282G), .venv works on F:. F: is
+# now NTFS (was exFAT, the original cause of the migration running out of
+# space) with 381GB free. Nothing needed re-copying.
+#
+# ── WHAT HAPPENED: the block below ("session end") said Look and Live's
+# render chain was NOT finished — captions/score+sfx/watermark still
+# pending. Checked the actual files on disk first: the prior session's
+# background fork had in fact finished `_s4_captions.py` at 18:44 (~2 hours
+# after that handover note was written, before this new session started) —
+# `LOOKANDLIVE_living_sketchbook_cc.mp4` was fresh. So skipped straight to
+# score+sfx instead of re-running captions:
+#   1. `_s5_score_sfx.py` → fresh `LOOKANDLIVE_living_sketchbook_cc_scored_sfx.mp4`.
+#   2. `add_watermark.py` on that file — first renamed the STALE Aug-13
+#      `.prewm.bak.mp4` aside (as `_LOOKANDLIVE_cc_scored_sfx.prewm.bak.
+#      OLD_2026-08-16.mp4`), same pattern already used on God Hung Up a
+#      Snake, because `add_watermark.py`'s idempotent skip-check
+#      (`if bak.exists(): skip`) would otherwise have silently skipped
+#      watermarking the fresh file. Also renamed the old Aug-13 scored_sfx
+#      final aside as `_LOOKANDLIVE_cc_scored_sfx.OLD_2026-08-13.mp4`.
+#      Watermark applied clean, 0 duration drift.
+#   3. `check_landing_hold.py` — GREEN: `v=61.90s a=61.90s gap=+0.00s`.
+#   4. Eye-checked 4 extracted frames (title card, the Numbers 21:8 quote
+#      card, a wound macro, and the landing frame — Christ on the cross with
+#      the small bronze serpent beneath, John 3:14 tied back to Numbers 21)
+#      — all clean, watermark correctly top-left in all four, no clipped
+#      text, captions synced to the spoken word.
+#   5. Wrote `poc_living_sketchbook/look_and_live/_CLIPS_REVIEW.html` (this
+#      piece never had a clip-level review page, only the older stills-level
+#      `_FULL_REVIEW.html` from Aug 12) — modeled directly on God Hung Up a
+#      Snake's own `_CLIPS_REVIEW.html`: all 13 clips + a REBUILT banner note.
+#
+# ── COMMITS THIS BLOCK: none yet. `_CLIPS_REVIEW.html` is untracked,
+# waiting on the user's OK (per this harness's own "never commit without
+# being asked" rule) — see START HERE #1 above.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-16 (session end — user asked to
 # save everything, commit everything, and hand off to a fresh session) —
 # READ THIS FIRST, supersedes every block below. The block right under this
