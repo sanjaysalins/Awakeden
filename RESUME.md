@@ -1,7 +1,133 @@
 # ══════════════════════════════════════════════════════════════════════════
-# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-16 — built the deferred
-# spread-variety lint tool for living-sketchbook (the STANDING TODO from the
-# prior session) — READ THIS FIRST, supersedes every block below.
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-16 (continued session) — swept
+# every locked narration for the unvoiced-KJV-quote pattern, fixed 8 of 9,
+# rebuilt 2 finished shorts end to end, finished Day of Atonement's publish
+# wiring — READ THIS FIRST, supersedes every block below.
+#
+# ── START HERE NEXT SESSION (pick one, no dependency between them):
+#   1. Day of Atonement thumbnail — the ONE remaining publish_check warn.
+#      Needs the user's own art-direction pick, not automatable.
+#   2. 23_The_Prepared_Belly (Jonah 1:17) — the 9th unvoiced-quote piece is a
+#      DIFFERENT problem than the other 8: it has NO audio at all yet (text
+#      locked, audio stage never run). A first-time build, not a fix — only
+#      start it if the user actually asks, it wasn't confirmed this session.
+#   3. Check whether the Look and Live rebuild (below) finished cleanly and
+#      landed a commit — it was still rendering as this handover was written.
+#
+# ── WHAT HAPPENED: ran a sweep (per the prior session's own "optional, not
+# urgent" queued item) across every LOCKED narration in `PythonProject1\jesus\
+# narration\` for the same defect class fixed on Romans 16:20 last session —
+# a standalone KJV quote left completely unvoiced despite the constitution's
+# now-updated SPEAKERS guidance. Found 9. Fixed 8 this session:
+#   - god voice (voice_id UzI1NsMEV3ni5JRkRSls, divine first-person speech,
+#     matching 43_Not_a_Tie/44_Grace_Spoken_First's convention): 38 (Exodus
+#     12:13), 39 (Exodus 12:5-6), 41 (Numbers 21:8)
+#   - scripture voice (voice_id puDRtQWF8NtQiPMJygTb, non-dramatized
+#     citation, matching Romans 16:20's own fix): 21 (Isaiah 53:5), 37 (John
+#     19:33/36), 40 (1 Cor 5:7), 42 (Numbers 21:9), 10 (Luke 15:20 — a
+#     judgment call, matched sibling piece 09's "Luke writes:" citation
+#     framing over sibling 11/12's "Jesus tells it like this" framing)
+# 21 also needed a light trim (redundant phrasing only — cut "to his face"
+# from the hook, "and the syntax never blinks" from a pronoun-motif line
+# already stated elsewhere, "Quote it at funerals." from a 3-example list —
+# NO doctrine, NO KJV quote text, NO landing line touched) because the voice
+# split alone pushed narrator atempo to 1.34x, above this project's own
+# comfortable 1.10-1.25 band; re-synth after the trim landed at 1.16x.
+# 9th piece, 23_The_Prepared_Belly, is NOT a voice-fix candidate at all — it
+# has no `narration-tagged.md`, no `narration.mp3` yet, audio was never
+# built. Left untouched, flagged above as its own future task.
+#
+# Two of the eight (41, 42) already fed a FINISHED downstream living-
+# sketchbook short, so fixing them meant the FULL Romans-16:20-style rebuild
+# — re-synth, re-align, hand-recompute every downstream timestamp, rebuild
+# assembly/title-cards/captions/score+sfx/watermark, landing-hold check —
+# not a quiet audio swap. The other 6 (10, 21, 37, 38, 39, 40) had no
+# downstream video (checked BEFORE touching audio, per the sweep's own
+# safety rule) so those were a straight edit+re-synth, no rebuild needed.
+#
+# **42 (God Hung Up a Snake): DONE.** 57.67s -> 58.98s audio, full rebuild,
+# final cut 62.0s, `check_landing_hold.py` GREEN (`v=62.00s a=62.00s
+# gap=+0.00s`), eye-checked 4 frames (watermark+title, the quote playing
+# during the forge scene, narrator resuming, the landing frame) — all clean.
+#
+# **41 (Look and Live): rebuild STATUS AS OF THIS HANDOVER — still
+# in progress**, do not assume it finished. `poc_living_sketchbook\
+# look_and_live\` shows: audio fix done (narration re-synthesized in
+# PythonProject1), `_alignment.json`/`_s3_assemble.py`/`_s3b_titlecards.py`/
+# `_s5_score_sfx.py` all freshly edited (2026-08-16 ~12:54-12:58),
+# `LOOKANDLIVE_living_sketchbook.mp4` (the plain assembly output, no cards/
+# captions/score yet) freshly rendered at 13:21 -- but `..._cc.mp4` and
+# `..._cc_scored_sfx.mp4` (the captioned/scored finals) are STILL the OLD
+# 2026-08-13 files, not yet regenerated. Title-cards/captions/score+sfx/
+# watermark stages had not landed as of this check. When it finishes: verify
+# `check_landing_hold.py` GREEN, eye-check the new god-voice quote frame +
+# watermark + a caption frame, update `_CLIPS_REVIEW.html`, then commit
+# BOTH repos' Look-and-Live changes (JesusInTheBible: `poc_living_sketchbook/
+# look_and_live/*`; PythonProject1: `41_The_Cure_Looked_Like_the_Curse`'s
+# narration files were already committed as part of the 8-piece commit
+# below, so only the JesusInTheBible downstream side is still pending).
+#
+# ── WHAT HAPPENED (Day of Atonement publish wiring — queued since before
+# Serpent-Crusher Promised, finally done): the finished film
+# (score+sfx+captions+watermark, already complete) had never been pinned as
+# `longform\06_Day_Of_Atonement\v1\FINAL_VIDEO.txt`, so `/publish` couldn't
+# even find it. Pinned it, ran the full publish stage for real: the external
+# 5-CLI panel (cursor/claude/gemini/codex/grok) converged on 2 real defects
+# in the rendered copy (a stray dash, an SEO-stuffed tag) — fixed both.
+# Hand-authored real chapter markers (7 movements, real timestamps from the
+# actual beat data) and a pinned comment — both had been placeholders. Built
+# real `captions.srt` (593s, 205 cues) from the episode's own forced-
+# alignment data. **`publish_check` gate: GREEN, 0 fail, 1 warn** (missing
+# thumbnail — needs the user's own art-direction pick, deliberately left
+# for them, not guessed). Review pack:
+# `file:///C:/Users/sanjay/PycharmProjects/JesusInTheBible/longform/
+# 06_Day_Of_Atonement/v1/publish/PUBLISH_INDEX.html`. One honest caveat
+# worth remembering: the panel ALSO flagged real doctrine/KJV-verbatim slips
+# in the Facebook/TikTok/Instagram/Shorts DRAFT copy (an Instagram line
+# dropped "just," flipping "not just covered" into a real theology error;
+# ellipsis-truncated KJV quotes failing the verbatim gate) — none of that
+# reached the actual pasteable pack since Day of Atonement is long-form-only
+# and only `youtube_long.md` renders, but if a Day of Atonement SHORT ever
+# gets built later, do not reuse those specific draft lines verbatim.
+#
+# ── ALSO: found + committed (at the user's explicit "yes commit them")
+# 2 unrelated pre-existing PythonProject1 changes that had been sitting
+# uncommitted from EARLIER sessions, discovered only while checking repo
+# state for this session's own work: `45_Not_Plan_B` (Galatians 4:4,
+# already the cited precedent for the Romans 16:20 fix) and
+# `46_Old_Story._Unfinished` (Romans 16:20 itself, from last session — its
+# JesusInTheBible-side changes were committed last session, but the
+# PythonProject1-side narration edit never got its own commit until now).
+# Also committed a batch of unrelated `ai-panel`/`pundayschool` prompt
+# files found the same way — not part of this project's own work, picked up
+# purely because the user asked.
+#
+# ── COMMITS THIS SESSION:
+#   JesusInTheBible: `66856bb` (God Hung Up a Snake full rebuild + Day of
+#     Atonement publish pack) + one more pending for Look and Live once it
+#     finishes (NOT yet committed as of this handover).
+#   PythonProject1: `a3ee5eb` (the 8 voice fixes: 10/21/37/38/39/40/41/42),
+#     `6e1aa26` (the 2 pre-existing scripture-voice fixes: 45/46),
+#     `3e5ee14` (the unrelated ai-panel/pundayschool files).
+#
+# ── SPEND THIS SESSION: several small ElevenLabs re-synth calls (8 pieces,
+# each a few cents) + one HF/Kling-tier rebuild reusing EXISTING clips (no
+# new image/animation spend on either 41 or 42 — only the audio and the
+# cut/score/caption layer were rebuilt). Publish stage used the agent-bridge
+# + local CLI subscriptions, no metered API spend.
+#
+# ── LEFTOVER, deliberately not touched: `29 The Race He Could Never Look`'s
+# untracked `narration.alignment.json` and a `.bak` file from the
+# 45_Not_Plan_B fix, both sitting uncommitted in PythonProject1 — neither
+# was part of what the user asked to commit, left alone on purpose, not
+# forgotten.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-16 (earlier session) — built the
+# deferred spread-variety lint tool for living-sketchbook (the STANDING TODO
+# from the prior session) — superseded by the block above; kept for its own
+# process detail.
 #
 # ── START HERE NEXT SESSION (pick one, no dependency between them):
 #   1. Day of Atonement's publish wiring (queued from before Serpent-Crusher

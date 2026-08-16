@@ -1,6 +1,54 @@
 # STATE.md — progress tracker
 
-**2026-08-16 (latest of all) Built the deferred spread-variety lint tool for
+**2026-08-16 (latest of all, continued session) Swept every locked narration
+for the unvoiced-KJV-quote pattern, fixed 8 of 9, rebuilt 2 finished shorts
+end to end, finished Day of Atonement's publish wiring:** ran the sweep
+queued as "optional, not urgent" from earlier the same day. Found 9 locked
+narrations with a standalone KJV quote never routed to a voice. Fixed 8:
+god voice (38 Exodus 12:13, 39 Exodus 12:5-6, 41 Numbers 21:8, matching
+43_Not_a_Tie/44_Grace_Spoken_First's convention) and scripture voice (21
+Isaiah 53:5, 37 John 19:33/36, 40 1 Cor 5:7, 42 Numbers 21:9, 10 Luke 15:20
+— a judgment call matching a sibling piece's citation framing). 21 also
+needed a light trim of redundant phrasing (no doctrine/quote/landing
+touched) after the voice split pushed its narrator pacing to 1.34x; re-synth
+after the trim landed at 1.16x, back in the comfortable band. The 9th,
+23_The_Prepared_Belly, has no audio built at all yet — a different,
+first-time-build task, left for the user to request separately.
+
+Two of the eight (41 Look and Live, 42 God Hung Up a Snake) already fed a
+FINISHED downstream living-sketchbook short, so fixing them meant a full
+Romans-16:20-style rebuild (re-synth, re-align, hand-recompute every
+downstream timestamp, rebuild assembly/title-cards/captions/score+sfx/
+watermark), not a quiet audio swap — checked for this BEFORE touching any
+audio, per the sweep's own safety rule. **42 is DONE**: 62.0s final cut,
+landing-hold GREEN, eye-checked 4 frames clean. **41 was still mid-rebuild
+as this entry was written** — assembly output freshly rendered, but the
+captioned/scored final not yet regenerated; check its real state before
+assuming done. Full detail: RESUME.md top.
+
+Also finished Day of Atonement's publish wiring (queued since before
+Serpent-Crusher Promised): the finished film had never been pinned as
+`FINAL_VIDEO.txt`, so `/publish` couldn't find it. Fixed that, ran the full
+publish stage for real — external 5-CLI panel caught and fixed 2 real
+defects, hand-authored real chapter markers + pinned comment (both were
+placeholders), built real captions.srt. `publish_check` gate: **GREEN, 0
+fail, 1 warn** (missing thumbnail — needs the user's own art-direction pick).
+
+Also committed 2 unrelated pre-existing PythonProject1 changes found
+sitting uncommitted from earlier sessions (45_Not_Plan_B, 46_Old_Story._
+Unfinished's PythonProject1-side edit) plus a batch of unrelated
+ai-panel/pundayschool files, all at the user's explicit request.
+
+**Commits:** JesusInTheBible `66856bb` (+ one more pending once Look and
+Live finishes). PythonProject1 `a3ee5eb`, `6e1aa26`, `3e5ee14`.
+
+**Next:** Day of Atonement thumbnail (needs the user's pick); 23_The_
+Prepared_Belly if wanted; confirm Look and Live's rebuild landed and commit
+it.
+
+## ════════════════════════════════════════════════════════════════
+
+**2026-08-16 (earlier session) Built the deferred spread-variety lint tool for
 living-sketchbook — closes the `living-sketchbook-subject-variety-gap`
 STANDING TODO from the prior session (Serpent-Crusher Promised, 7 of 9
 spreads on feet/serpent, caught only by the user's eye):** extended the
