@@ -1,8 +1,107 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-16 (session end — user asked to
+# save everything, commit everything, and hand off to a fresh session) —
+# READ THIS FIRST, supersedes every block below. The block right under this
+# one (same date, "continued session") is STILL ACCURATE for the 8-piece
+# narration-voice sweep + fixes + Day of Atonement publish wiring — this
+# block only adds what changed AFTER that one was written: Look and Live's
+# real final status, and a brand-new score-swap POC.
+#
+# ── START HERE NEXT SESSION (in priority order):
+#   1. **Finish the Look and Live rebuild.** Timing recomputation is done
+#      and committed (`3f02cac`); the render chain is NOT finished. Run, in
+#      order, from `poc_living_sketchbook/look_and_live/`:
+#        .venv\Scripts\python.exe poc_living_sketchbook/look_and_live/_s4_captions.py
+#        .venv\Scripts\python.exe poc_living_sketchbook/look_and_live/_s5_score_sfx.py
+#      then the watermark step (check `_s3b_titlecards.py`/the sibling
+#      pieces in this cluster for the exact watermark script name/call if
+#      not obvious), then `.venv\Scripts\python.exe check_landing_hold.py`.
+#      Eye-check the new god-voice quote frame + watermark + one caption
+#      frame before calling it done (same bar as every rebuild this
+#      session). Update `_CLIPS_REVIEW.html`, then commit
+#      `poc_living_sketchbook/look_and_live/*` (the JesusInTheBible side —
+#      PythonProject1's `41_The_Cure_Looked_Like_the_Curse` audio fix is
+#      ALREADY committed, don't redo it).
+#   2. **Day of Atonement thumbnail** — the one remaining `publish_check`
+#      warn. Needs the user's own art-direction pick, not automatable.
+#   3. **Score-swap POC, if the user wants it continued**: full ready-to-run
+#      recipe (a synthesized Eleven Music prompt already panel-reviewed, the
+#      exact API call shape, and where to wire it in) is saved at
+#      `poc_living_sketchbook/son_of_man_lifted_up/_score_swap_poc/
+#      _PANEL_PROMPTS.md` — READ THAT FILE, don't re-derive or re-run the
+#      panel. Nothing has been generated or spent yet; this needs an
+#      explicit spend OK (~$1 historical Eleven Music cost) before the next
+#      step (the actual API call) runs.
+#   4. 23_The_Prepared_Belly (Jonah 1:17) — still just an optional future
+#      task, not confirmed wanted, see the block below for detail.
+#
+# ── WHAT CHANGED since the block below was written: nudged the Look and
+# Live rebuild fork for a final status check twice; confirmed via direct
+# file-timestamp inspection (not trusting the fork's own claims blindly)
+# that assembly is genuinely done (`LOOKANDLIVE_living_sketchbook.mp4`
+# fresh) but captions/score+sfx/watermark are still pending — the fork's
+# own last self-report mid-session was "waiting for captions to finish
+# before running score+sfx," consistent with the file evidence. Committed
+# the timing-recomputation state as-is (`3f02cac`) rather than wait
+# indefinitely, since the user asked to close out the session — the
+# committed scripts are internally consistent and correct (same proven
+# methodology as the already-finished God Hung Up a Snake rebuild), they
+# just haven't been RUN through the remaining render stages yet.
+#
+# ── NEW THIS BLOCK: a score-swap POC, started while waiting on the Look and
+# Live rebuild. User asked: take the shortest finished episode, replace its
+# current score with ONE continuous ElevenLabs Music generation styled after
+# Robert Miles' "Children" AT ITS BUILD-UP STAGE (the slow arpeggiated-piano
+# section before the beat drops) — the whole episode stays in that rising
+# register the entire time, never resolving into a beat. Also asked to use
+# the AI panel to help craft the prompt.
+#   - Confirmed via ffprobe across every finished living-sketchbook episode
+#     that `poc_living_sketchbook/son_of_man_lifted_up/` (58.0s, John
+#     3:14-15, Nicodemus's night conversation) is genuinely the shortest
+#     real episode (excluding tiny bake-off test clips).
+#   - Reused `independent_review.py`'s own provider dispatch (`run_one`/
+#     `PROVIDERS` — local CLI subscriptions, NOT metered API) with a
+#     one-off script to fan a creative brief out to all 5 panel voices
+#     (cursor/claude/gemini/codex/grok). All 5 replied with strong
+#     independent convergence (arpeggiated piano + warm pads + explicit "no
+#     drums/drop/vocals" + "never resolves" language) — synthesized into one
+#     final prompt, dropping "choir" (this project's own locked Suno rule
+#     bans naming it) and dropping narrative specifics (the model responds
+#     to musical language, not story references).
+#   - Full recipe for the NEXT step (generate via the real Eleven Music API
+#     shape already proven in `sfx_pilots/add_music.py`, why NOT to reuse
+#     that file's `reshape_music()` verbatim since it eases DOWN toward the
+#     end and this POC wants the opposite, and exactly where to wire the
+#     result into `son_of_man_lifted_up/_s5_score_sfx.py` in place of its
+#     current two-bed Suno crossfade) is written out in full at
+#     `poc_living_sketchbook/son_of_man_lifted_up/_score_swap_poc/
+#     _PANEL_PROMPTS.md` — this is a real, considered plan, not a stub.
+#   - Deliberately did NOT spend anything or generate audio — paused at this
+#     clean checkpoint specifically because the user asked to wrap the
+#     session, and spending money right before a context-switch without
+#     being able to listen to/verify the result would violate this
+#     project's own "ask before spending" + "verify by ear" discipline.
+#
+# ── COMMITS THIS BLOCK: JesusInTheBible `3f02cac` (Look and Live timing
+# recomputation, mid-render — see above for exactly what's left; + the
+# score-swap POC folder). No PythonProject1 changes this block (all of that
+# repo's session work was already committed in the block below).
+#
+# ── Clean-slate check at session end: both repos' git status only shows
+# pre-existing, unrelated, deliberately-untouched items (PythonProject1: an
+# untracked `29 The Race He Could Never Win` alignment file and a `.bak`
+# backup from an earlier session's work, neither ever raised with the user
+# this session) — nothing from this session's own work is sitting
+# uncommitted except Look and Live's still-rendering downstream output
+# files (mp4s), which can't be committed meaningfully until they're
+# regenerated per item 1 above.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-16 (continued session) — swept
 # every locked narration for the unvoiced-KJV-quote pattern, fixed 8 of 9,
 # rebuilt 2 finished shorts end to end, finished Day of Atonement's publish
-# wiring — READ THIS FIRST, supersedes every block below.
+# wiring — superseded by the block above; kept for its own full detail.
 #
 # ── START HERE NEXT SESSION (pick one, no dependency between them):
 #   1. Day of Atonement thumbnail — the ONE remaining publish_check warn.

@@ -1,6 +1,50 @@
 # STATE.md — progress tracker
 
-**2026-08-16 (latest of all, continued session) Swept every locked narration
+**2026-08-16 (latest of all, session end) Look and Live confirmed still
+mid-render (timing recomputation committed, chain not finished); started a
+score-swap POC (Eleven Music, Robert Miles "Children" build-up style) via
+the AI panel, paused clean before spending — session closed at the user's
+request to hand off to a fresh one:**
+
+Nudged the Look and Live rebuild fork twice for a real status check and
+verified directly via file timestamps (not trusting the fork's self-report
+alone): assembly render is genuinely done, but captions/score+sfx/watermark
+have NOT run yet — the fork's own last word was "waiting for captions to
+finish before running score+sfx." Committed the timing-recomputation state
+as-is (JesusInTheBible `3f02cac`) rather than block on an indefinite wait,
+since the scripts are internally consistent and correct (same proven
+recipe as the already-finished God Hung Up a Snake rebuild) even though the
+render hasn't caught up. **Next session: run `_s4_captions.py` →
+`_s5_score_sfx.py` → watermark → `check_landing_hold.py`, eye-check, commit.**
+
+New POC, started while waiting on the render: user asked to take the
+shortest finished episode and replace its score with ONE continuous Eleven
+Music generation styled after Robert Miles' "Children" at its build-up
+stage (never resolving into a beat), using the AI panel to help craft the
+prompt. Confirmed `son_of_man_lifted_up` (58.0s) is genuinely the shortest
+real episode via ffprobe across the whole tree. Reused
+`independent_review.py`'s own local-CLI-panel dispatch (no metered API) for
+a creative brief — all 5 providers converged strongly on the same musical
+language, synthesized into one final ready-to-use prompt. Full next-step
+recipe (API call shape, a real gotcha about NOT reusing `add_music.py`'s
+ease-down reshaping, exactly where to wire it into
+`son_of_man_lifted_up/_s5_score_sfx.py`) written out at
+`poc_living_sketchbook/son_of_man_lifted_up/_score_swap_poc/
+_PANEL_PROMPTS.md`. Nothing generated or spent — paused deliberately at
+this checkpoint rather than spend money right before a session handoff.
+
+**Commits this entry:** JesusInTheBible `3f02cac` only (Look and Live
+timing + the POC folder). Both repos otherwise clean — only pre-existing,
+unrelated, already-flagged items remain uncommitted (never this session's
+own work).
+
+**Next session, in order:** (1) finish Look and Live's render chain, (2)
+Day of Atonement thumbnail (user's own pick), (3) continue the score-swap
+POC if wanted (needs a spend OK), (4) 23_The_Prepared_Belly if wanted.
+
+## ════════════════════════════════════════════════════════════════
+
+**2026-08-16 (continued session, earlier) Swept every locked narration
 for the unvoiced-KJV-quote pattern, fixed 8 of 9, rebuilt 2 finished shorts
 end to end, finished Day of Atonement's publish wiring:** ran the sweep
 queued as "optional, not urgent" from earlier the same day. Found 9 locked
