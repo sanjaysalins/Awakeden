@@ -38,26 +38,32 @@ SRC_AUDIO = (Path(__file__).resolve().parents[3] / "PythonProject1" / "jesus" /
 OUT = HERE / "LOOKANDLIVE_living_sketchbook.mp4"
 
 W, H, FPS = 1080, 1920, 30
-LAST_WORD_END = 59.271   # "live." real offset, _alignment.json
-HOLD = 3.229              # >= INV-26's 3.0s minimum hold, small safety margin
-TOTAL = 62.5              # LAST_WORD_END + HOLD, frame-exact at 30fps (1875 frames)
+# Rebuilt 2026-08-16 after 41_The_Cure_Looked_Like_the_Curse's narration.mp3
+# was re-synthesized to add a real "god" voice on the Numbers 21:8-9 quote
+# (previously narrator-only) -- old timing below is STALE, kept only as a
+# comment for reference. Every boundary recomputed fresh from the new
+# _alignment.json as the midpoint of each real inter-word silence gap, same
+# methodology as this cluster's own serpent_crusher_promised piece.
+LAST_WORD_END = 58.854   # "live." real offset, _alignment.json (was 59.271)
+HOLD = 3.046              # >= INV-26's 3.0s minimum hold, small safety margin
+TOTAL = 61.900            # LAST_WORD_END + HOLD, frame-exact at 30fps (1857 frames)
 
 # (name, t0, t1) -- real word-timed windows built against _alignment.json,
 # matching _PLAN.md's spread table.
 SHOTS = [
-    ("s01_hook", 0.00, 4.40),
-    ("s02_object_reveal", 4.40, 7.90),
-    ("s03_unused_remedy", 7.90, 9.60),
-    ("s04_bitten_arm", 9.60, 11.90),
-    ("s05_eye_reflection", 11.90, 15.20),
-    ("s06_verse_backdrop", 15.20, 18.70),
-    ("s07_look_and_live_acting", 18.70, 24.90),
-    ("s08_crowd_healing", 24.90, 30.50),
-    ("s09_atmosphere_dawn", 30.50, 38.60),
-    ("s10_own_cure", 38.60, 43.40),
-    ("s11_plain_sight", 43.40, 49.20),
-    ("s12a_torn_to_gold", 49.20, 55.90),
-    ("s12b_landing_gold", 55.90, TOTAL),
+    ("s01_hook", 0.00, 3.859),
+    ("s02_object_reveal", 3.859, 7.692),
+    ("s03_unused_remedy", 7.692, 9.817),
+    ("s04_bitten_arm", 9.817, 12.337),
+    ("s05_eye_reflection", 12.337, 16.129),
+    ("s06_verse_backdrop", 16.129, 20.451),
+    ("s07_look_and_live_acting", 20.451, 26.237),
+    ("s08_crowd_healing", 26.237, 31.458),
+    ("s09_atmosphere_dawn", 31.458, 38.530),
+    ("s10_own_cure", 38.530, 43.070),
+    ("s11_plain_sight", 43.070, 48.274),
+    ("s12a_torn_to_gold", 48.274, 55.202),
+    ("s12b_landing_gold", 55.202, TOTAL),
 ]
 
 # No baked-in verse card here anymore -- deprecated in favor of the

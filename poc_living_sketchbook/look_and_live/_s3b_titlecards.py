@@ -101,15 +101,23 @@ def ease(t):
 # (t0, t1, kind, text, cx_frac, cy_frac) -- over s01/s02, mirrors
 # forsaken_cry's own opening cold-open card sequence (title, then a beat
 # later quote+citation staggered together). A second quote+citation pair
-# sits over s06 (15.20-18.70), replacing the deprecated Scribed-Ink card
-# at the same real word-timed window (the command clause is spoken
-# 15.642-18.196s) so the whole episode uses one consistent card language.
+# sits over s06, replacing the deprecated Scribed-Ink card at the same
+# real word-timed window.
+#
+# Rebuilt 2026-08-16 after 41_The_Cure_Looked_Like_the_Curse's narration.mp3
+# was re-synthesized (added a real "god" voice on the Numbers 21:8-9 quote) --
+# recomputed against the new _alignment.json. The Numbers 21:8 command clause
+# is now spoken 17.202-19.877s (was 15.642-18.196s); same +0.258s/+0.154s
+# start/end offsets from the old design preserved. The Numbers 21:9 card is a
+# design overlay (not tied to spoken words -- that verse's own text isn't in
+# this narration), re-anchored to the new s02 shot window using the same
+# relative offsets as before.
 CARD_DEFS = [
-    (0.3, 4.0, "hilite", "LOOK AND LIVE.", 0.50, 0.09),
-    (4.6, 7.7, "quote", "HE BEHELD THE SERPENT\nOF BRASS, AND HE LIVED.", 0.50, 0.20),
-    (4.9, 7.7, "card", "NUMBERS 21:9", 0.50, 0.38),
-    (15.9, 18.35, "quote", "MAKE THEE A FIERY SERPENT,\nAND SET IT UPON A POLE:", 0.50, 0.15),
-    (16.2, 18.35, "card", "NUMBERS 21:8", 0.50, 0.33),
+    (0.3, 3.459, "hilite", "LOOK AND LIVE.", 0.50, 0.09),
+    (4.059, 7.492, "quote", "HE BEHELD THE SERPENT\nOF BRASS, AND HE LIVED.", 0.50, 0.20),
+    (4.359, 7.492, "card", "NUMBERS 21:9", 0.50, 0.38),
+    (17.46, 20.03, "quote", "MAKE THEE A FIERY SERPENT,\nAND SET IT UPON A POLE:", 0.50, 0.15),
+    (17.76, 20.03, "card", "NUMBERS 21:8", 0.50, 0.33),
 ]
 
 

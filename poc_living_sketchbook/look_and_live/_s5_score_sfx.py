@@ -8,24 +8,27 @@ segments/cues/timings for this narration.
 
 Music arc (chained Suno instrumentals from music_library/clips, $0, per
 [[longform-score-from-suno-library]]): lonely_searching_a (dread/the object
-that isn't medicine) dominant s01-s06 (0-18.7s), crossfading across s07's
-own window (18.7-24.9s) -- the episode's own literary turn ("when he
+that isn't medicine) dominant s01-s06 (0-20.451s), crossfading across s07's
+own window (20.451-26.237s) -- the episode's own literary turn ("when he
 looketh upon it, shall live") -- into sacred_grace_rise_a, dominant through
 the landing. Same pivot-on-the-turn-line discipline as bronze_serpent short.
+(Timings rebuilt 2026-08-16 after the narration's own re-synth added a real
+"god" voice to the Numbers 21:8-9 quote -- old TOTAL/cue numbers were
+62.5s-relative, now 61.9s-relative.)
 
 Ambient SFX bed (sound_library/clips, $0, ambience-only per
 [[feedback-audio-layer-stack]] -- no second musical pad):
-  wind_desert_bleak    looped (source 22s < 62.5s episode), very low, whole
+  wind_desert_bleak    looped (source 22s < episode length), very low, whole
                         episode -- the wilderness ground.
-  crowd_murmur_distant  s01 window (0-4.4s, the panic) AND s08 window
-                        (24.9-30.5s, the healing crowd) -- same slug, two
+  crowd_murmur_distant  s01 window (0-3.859s, the panic) AND s08 window
+                        (26.237-31.458s, the healing crowd) -- same slug, two
                         windows, matching bronze_serpent_long's own pattern
                         for a recurring crowd beat.
-  rumble_deep_sub       s03/s04 window (7.9-11.9s, the unused remedy /
+  rumble_deep_sub       s03/s04 window (7.692-12.337s, the unused remedy /
                         bitten arm) -- dread under the wound, not the cure.
-  dawn_morning_warm     s09 window (30.5-38.6s, "calm dawn sky") -- subtle,
-                        motivated by the plan's own atmosphere description,
-                        not a stretch addition.
+  dawn_morning_warm     s09 window (31.458-38.530s, "calm dawn sky") --
+                        subtle, motivated by the plan's own atmosphere
+                        description, not a stretch addition.
 
 No forge/fire cue here -- unlike short #2, this narration never names Moses
 or the forging (per _PLAN.md's own cast census), so fire_crackling doesn't
@@ -47,7 +50,11 @@ SND = ROOT / "sound_library" / "clips"
 
 SRC = HERE / "LOOKANDLIVE_living_sketchbook_cc.mp4"
 OUT = HERE / "LOOKANDLIVE_living_sketchbook_cc_scored_sfx.mp4"
-TOTAL = 62.5  # matches _s3_assemble.py's TOTAL exactly -- INV-26 hold already in SRC
+# Rebuilt 2026-08-16 after 41_The_Cure_Looked_Like_the_Curse's narration.mp3
+# was re-synthesized (added a real "god" voice on the Numbers 21:8-9 quote,
+# was narrator-only) -- TOTAL and every cue below recomputed against the new
+# _s3_assemble.py SHOTS windows. Old TOTAL was 62.5.
+TOTAL = 61.900  # matches _s3_assemble.py's TOTAL exactly -- INV-26 hold already in SRC
 
 
 def main() -> None:
@@ -55,19 +62,19 @@ def main() -> None:
         raise SystemExit(f"missing captioned cut: {SRC} -- run _s4_captions.py first")
 
     filt = (
-        f"[1:a]{AFMT},atrim=0:25,afade=t=in:st=0:d=1.5,"
-        f"afade=t=out:st=18.7:d=6.2,volume=-9dB[musA];"
-        f"[2:a]{AFMT},adelay=18700|18700,atrim=0:{TOTAL},"
-        f"afade=t=in:st=18.7:d=6.2,afade=t=out:st=59.5:d=3.0,volume=-8dB[musB];"
+        f"[1:a]{AFMT},atrim=0:26.3,afade=t=in:st=0:d=1.5,"
+        f"afade=t=out:st=20.451:d=5.786,volume=-9dB[musA];"
+        f"[2:a]{AFMT},adelay=20451|20451,atrim=0:{TOTAL},"
+        f"afade=t=in:st=20.451:d=5.786,afade=t=out:st=58.9:d=3.0,volume=-8dB[musB];"
         f"[3:a]{AFMT},atrim=0:{TOTAL},afade=t=in:st=0:d=2,volume=-20dB[wind];"
-        f"[4:a]{AFMT},atrim=0:4.4,"
-        f"afade=t=in:st=0:d=0.5,afade=t=out:st=3.6:d=0.8,volume=-15dB[crowd1];"
-        f"[5:a]{AFMT},atrim=0:5.6,adelay=24900|24900,"
-        f"afade=t=in:st=24.9:d=0.8,afade=t=out:st=29.7:d=0.8,volume=-15dB[crowd2];"
-        f"[6:a]{AFMT},atrim=0:4.0,adelay=7900|7900,"
-        f"afade=t=in:st=7.9:d=1.0,afade=t=out:st=11.0:d=0.9,volume=-17dB[rumble];"
-        f"[7:a]{AFMT},atrim=0:8.1,adelay=30500|30500,"
-        f"afade=t=in:st=30.5:d=1.5,afade=t=out:st=37.6:d=1.0,volume=-18dB[dawn];"
+        f"[4:a]{AFMT},atrim=0:3.859,"
+        f"afade=t=in:st=0:d=0.5,afade=t=out:st=3.059:d=0.8,volume=-15dB[crowd1];"
+        f"[5:a]{AFMT},atrim=0:5.221,adelay=26237|26237,"
+        f"afade=t=in:st=26.237:d=0.8,afade=t=out:st=30.658:d=0.8,volume=-15dB[crowd2];"
+        f"[6:a]{AFMT},atrim=0:4.645,adelay=7692|7692,"
+        f"afade=t=in:st=7.692:d=1.0,afade=t=out:st=11.437:d=0.9,volume=-17dB[rumble];"
+        f"[7:a]{AFMT},atrim=0:7.072,adelay=31458|31458,"
+        f"afade=t=in:st=31.458:d=1.5,afade=t=out:st=37.53:d=1.0,volume=-18dB[dawn];"
         f"[musA][musB][wind][crowd1][crowd2][rumble][dawn]amix=inputs=7:normalize=0[bed];"
         f"[0:a]{AFMT},apad=whole_dur={TOTAL},asplit=2[main][key];"
         f"[bed][key]sidechaincompress={SIDECHAIN}[bedd];"
