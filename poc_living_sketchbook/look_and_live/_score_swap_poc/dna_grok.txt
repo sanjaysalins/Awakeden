@@ -1,0 +1,84 @@
+I'll pull verified tempo/key/arrangement details for the "Children" intro so the 8 points stay accurate enough for a production brief.**Opening / pre-drop build of Robert Miles – “Children” (1995)**  
+*(Dream Version reference; radio edits compress the same architecture)*
+
+---
+
+### 1. TEMPO
+**~137 BPM** (standard published/DJ value; some DAW analyses read **135–137**). Feel is straight 4/4, not swung. Best-informed working tempo for recreation: **137 BPM**.
+
+---
+
+### 2. KEY / MODE
+**F♯ natural minor (Aeolian)** — equivalently the same absolute chords as **vi–IV–I–V in A major**.
+
+**No modulation** in the intro/build. The harmony is a single 4-chord loop for the entire pre-drop section. Any “lift” is arrangement/filter/dynamics, not a key change.
+
+---
+
+### 3. CHORD PROGRESSION
+Looped, one bar (or two half-bars) per harmony at 137 BPM:
+
+| Absolute | Roman (in F♯m) | Roman (in A) |
+|---|---|---|
+| **F♯m → D → A → E** | **i – VI – III – VII** | **vi – IV – I – V** |
+
+That loop runs continuously through the build. No secondary dominants, no borrowed chords, no turnaround tag before the drop in the classic arrangement.
+
+---
+
+### 4. ARPEGGIO PATTERN
+- **Subdivision:** continuous **16th notes** (semiquavers), perpetual-motion, almost no rests inside the figure.
+- **Contour:** **broken-chord / arpeggiated melodic cell** — primarily **ascending**, with small internal turns (not a pure “up the triad then reverse” Alberti pattern). Chord tones of each harmony, plus **passing/neighbor tones** that create the recognizable line.
+- **Notes per chord:** the figure typically covers **~8 sixteenth notes per chord change** (one bar per chord at this tempo in many analyses; some transcriptions treat the loop as 8 bars total for i–VI–III–VII).
+- **Variation:** the **note pattern itself is essentially fixed** and loops. What changes in the build is **layering, EQ/filter, and FX wetness**, not a rewritten arpeggio.
+
+Producer takeaway for DNA (not melody copy): *steady 16th broken-chord ostinato over a 4-chord Aeolian loop, same figure every bar.*
+
+---
+
+### 5. LAYERING ORDER
+Approximate Dream Version architecture (bar counts ≈ at 137 BPM; times are estimates):
+
+| Stage | What enters | Rough spacing |
+|---|---|---|
+| **1** | Solo (or near-solo) **piano arpeggio** already in deep reverb/delay | **0:00** — holds alone ~8–16+ bars (~14–30 s) depending on mix |
+| **2** | Soft **atmospheric pad / string-pad bed** under the piano | ~**8–16 bars** after start |
+| **3** | Pad **thickens** (wider, slightly brighter); optional **very soft high air / reverse tail / filter noise** | gradual over next **8–16 bars** |
+| **4** | **Low-end still mostly held back**; subtle filtered bass or sub may ghost in late | last **4–8 bars** pre-drop |
+| **5** | **Drop** = kick + full groove (outside this brief) | after a long, patient pad build |
+
+Core idea: **piano first and alone long enough to lock the ostinato; pads grow under it; drums last.**
+
+---
+
+### 6. INSTRUMENTATION (timbres of the build only)
+- **Lead ostinato:** bright **acoustic / sample piano or early-digital EP** (often heard as slightly chorused, not a dark Rhodes). Attack is clear; decay is short-to-medium so 16ths stay articulate.
+- **Pads:** warm, **slow-attack string/choir-ish synth pads** (classic mid-90s “dream house” — soft saw/string hybrids, high-pass enough not to muddy the piano).
+- **Bass:** **minimal or filtered-closed** until near/at the drop; intro is intentionally mid/high-heavy.
+- **No lead vocal, no brass stabs, no aggressive supersaw lead** in this section.
+- **Character keywords for a patch brief:** *bright piano + long ambient tails; soft evolving pad; restrained low end.*
+
+---
+
+### 7. DYNAMICS ARC (build only)
+- **Start:** soft, sparse, “intimate club afterglow” — high headroom, low RMS.
+- **Mid-build:** **harmonic density rises** as pads fill mids/highs; piano stays the same relative level or is slightly buried under pad bloom.
+- **Stereo width:** starts already wide on piano via delay/reverb; **pads expand width further** toward the drop.
+- **End of build:** higher overall level, denser spectrum, more HF air — still **not** full-band club impact until kick hits.
+- Arc shape: **slow linear/crescendo plateau**, not a sudden one-bar riser-only modern EDM build.
+
+---
+
+### 8. Other producer details (feel DNA, not melody)
+- **Reverb:** long **hall / cathedral** tails on piano; tails overlap so the room never fully clears — harmonic “cloud.”
+- **Delay:** **stereo / ping-pong** delay on the arpeggio (often ~**1/8 or dotted-8th** feel at 137), moderate feedback — creates cascading echoes that densify the ostinato without new notes.
+- **Filter:** pads (and late bass) use **slow filter opening**; optional soft **noise/reverse cymbal** riser into the drop. Not a harsh modern “screech” riser.
+- **Sidechain pumping:** **little to none** on the pure piano intro (no kick yet). Any pumping is mild/late if present at all; the classic feel is **sustained pad wash**, not ducking.
+- **Low-end policy:** **deliberate absence of strong sub/kick** until the drop — the build “floats.”
+- **Groove:** no swing; no percussion grid driving the intro; time is carried by the 16th piano alone.
+- **Emotional register without copying the tune:** *melancholy major-relative warmth (Aeolian i–VI–III–VII), hypnotic repetition, patience before release, reverb-soaked piano as the sole rhythmic engine.*
+
+---
+
+**One-line structure recipe for an original sacred cue (same DNA, different notes):**  
+*137 BPM · F♯m (or any minor with the same function) · looped i–VI–III–VII · continuous 16th broken-chord ostinato · piano alone → soft pads → widen/open filter → hold low end until impact · long hall + stereo delay, minimal sidechain.*

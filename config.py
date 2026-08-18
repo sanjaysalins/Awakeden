@@ -494,6 +494,30 @@ STYLE_AUDIT_RUBRIC = {
         "first-century Judeans, reverent not sensational. When in doubt on "
         "tone, FAIL.\n\n"
     ),
+    "sketchbook": (
+        "7. **Style fidelity, period authenticity & reverent tone (CHECK THIS "
+        "EXPLICITLY).** The image must read as a LOOSE HAND-DRAWN SKETCHBOOK "
+        "illustration of the ANCIENT biblical world: confident graphite-and-ink "
+        "linework, visible pencil construction lines, muted watercolor wash, a "
+        "full-bleed drawing filling the entire frame with no border, margin, "
+        "page, or parchment edge. FAIL (passed:false) on any of: a "
+        "PHOTOREALISTIC or glossy 3D-render look; an OIL-PAINTING / painterly-"
+        "brushstroke look (that is the OLD baroque style, wrong for this "
+        "piece); a flat CEL-SHADED comic-panel look with bold clean ink "
+        "outlines and no visible pencil/graphite texture (that is the OLD "
+        "graphic_novel style, wrong for this piece); any lettering, text, "
+        "numerals, or a printed page/paper-margin composition; faces/hair/"
+        "grooming/clothing that look like MODERN contemporary people rather "
+        "than ancient Near-Eastern figures; a HORROR-film tone — lurid gore, "
+        "zombie/corpse-horror, ghoulish or grotesque faces; or an NSFW feel — "
+        "a gratuitously sexualised pose or exposure beyond a modest "
+        "loincloth. An intentionally UNFINISHED or gesturally-abstracted "
+        "passage — a flat silhouette shape with no interior linework, a study "
+        "cropped tight to just a hand, visible construction lines left in — "
+        "is NOT a failure; that is the native, correct look of this medium, "
+        "not a defect. The figures must read as ancient first-century "
+        "Judeans, reverent not sensational. When in doubt on tone, FAIL.\n\n"
+    ),
 }
 
 # Short human-readable name of the required medium, spliced into the audit's
@@ -503,6 +527,7 @@ STYLE_MEDIUM_PHRASE = {
     "graphic_novel": "reverent, period-authentic inked biblical graphic-novel illustration",
     "retro": "reverent, period-authentic vintage 1960s retro-comic illustration",
     "painted_comic": "reverent, period-authentic painted-comic ink illustration",
+    "sketchbook": "reverent, period-authentic full-bleed sketchbook illustration",
 }
 
 # Graphic-novel style prompt halves (mirror the validated EW04 POC look). Used by
@@ -579,6 +604,39 @@ VISUAL_STYLE_TAIL_PAINTED_COMIC = (
 )
 
 # ----------------------------------------------------------------------------
+# Full-bleed sketchbook style prompt halves (2026-08-17, Jesus-POV bronze-
+# serpent POC). Fable design pass, grounded in the living-sketchbook format's
+# proven graphite-and-ink DNA (poc_living_sketchbook/look_and_live/_s1_stills.py)
+# with the paper/parchment/torn-edge/gold-leaf framing stripped out in favour
+# of full-bleed cinematic scale — same visual grammar as the other styles
+# above, sketch medium instead of oil/ink-comic/halftone. The CRITICAL
+# no-lettering clause is carried over verbatim (proven to suppress hallucinated
+# text on crucifixion scenes in the living-sketchbook format). Adopted after
+# the "baroque"-toned prompts (actually rendered under the graphic_novel
+# default, VISUAL_STYLE was never overridden) hit repeated, unfixable-by-
+# wording failures on 4 of 13 scenes — see the POC's own scene_plan.json
+# self_review for the failure history.
+# ----------------------------------------------------------------------------
+VISUAL_STYLE_BASE_SKETCH = (
+    "Editorial documentary sketch illustration at full cinematic scale: loose "
+    "confident graphite-and-ink linework with muted watercolor wash, "
+    "expressive hand-drawn strokes with visible pencil construction lines, "
+    "one continuous full-bleed scene filling the entire frame edge to edge,"
+)
+VISUAL_STYLE_TAIL_SKETCH = (
+    "dry graphite grain and granulating watercolor texture across the whole "
+    "image, tactile hand-made feel, muted ink-red and ink-blue accents, soft "
+    "cinematic light rendered in graphite shading and wash, the scene "
+    "continuing past all four edges of the frame. One single continuous "
+    "drawing: no panels, no cel shading, no cartoon or anime styling, no flat "
+    "comic outlines, no photorealism, no oil paint. CRITICAL: absolutely NO "
+    "lettering, numerals, words, newsprint, printed book-page text, "
+    "handwriting, ruler markings, dates, or captions ANYWHERE — every surface "
+    "in the scene is blank. No border, no margin, no frame line, no paper "
+    "edge, no parchment, no torn paper, no gold leaf"
+)
+
+# ----------------------------------------------------------------------------
 # STYLE REGISTRY — the single source of truth for what each style version uses.
 # Flipping VISUAL_STYLE selects style prompt + still model + anim model + audit.
 # Only 4 code paths read this (assemble_final_prompt, the still provider,
@@ -625,6 +683,14 @@ STYLE_REGISTRY = {
         "anim_model": ("hf", "seedance1_5"),
         "audit_rubric": STYLE_AUDIT_RUBRIC["painted_comic"],
         "audit_medium": STYLE_MEDIUM_PHRASE["painted_comic"],
+    },
+    "sketchbook": {                               # full-bleed sketchbook (2026-08-17, Jesus-POV POC)
+        "style_base": VISUAL_STYLE_BASE_SKETCH,
+        "style_tail": VISUAL_STYLE_TAIL_SKETCH,
+        "still_model": ("hf", "kling_omni_image"), # proven on this DNA in the living-sketchbook format
+        "anim_model": ("hf", "seedance1_5"),       # matches living-sketchbook's own calm-scene default
+        "audit_rubric": STYLE_AUDIT_RUBRIC["sketchbook"],
+        "audit_medium": STYLE_MEDIUM_PHRASE["sketchbook"],
     },
 }
 

@@ -1,0 +1,39 @@
+Here's my best-informed technical read of the "Children" intro (pre-drop build only). I'm flagging confidence level per point since I can't re-listen to verify absolute pitch — but the structural DNA (progression shape, arpeggio mechanics, layering, arc) is what actually matters for briefing a generator, and I'm confident on that.
+
+**1. TEMPO**
+~95–96 BPM. This is the genre-defining detail — Miles deliberately sat well below the ~130-140 BPM trance norm of 1995-96 to invent what got called "dream house." Brief the generator at 96 BPM.
+
+**2. KEY / MODE**
+Minor mode throughout the build — no modulation, it loops the same tonal center the whole intro (the modulation, if any, happens later in the track, not in this section). I'm not fully certain of the absolute concert key (transcriptions I've seen vary), so don't anchor the brief to a specific key name — use the roman-numeral shape below instead, which is transposable to whatever key the generator lands in.
+
+**3. CHORD PROGRESSION**
+A 4-chord loop with a classic "bittersweet" minor-to-relative-major shape: **i – VII – VI – v** (tonic minor → subtonic major → submediant major → minor dominant), repeated without variation through the whole build. The lift comes from the VI chord (a major chord borrowed from the relative major) sitting against the minor tonic — that's the "hopeful ache" quality to reproduce, not a literal chord-for-chord copy.
+
+**4. ARPEGGIO PATTERN**
+Continuous 16th-note broken-chord arpeggio, right hand, ascending-only per chord (not ascending-then-descending) — it resets to the bottom note at the top of each new chord change rather than reversing direction. Roughly 4 notes per chord voicing (root–3rd–5th–octave, sometimes with an added 9th for color), spanning about 1–1.5 octaves. Left hand plays a sustained/pulsed root note on the downbeat, not its own arpeggio. The pattern itself is unchanged bar-to-bar — the repetition IS the hypnosis; variation comes from what's layered underneath/around it, not from the arpeggio changing.
+
+**5. LAYERING ORDER**
+- Bars 1–4 (~0–10s): solo piano arpeggio, completely alone, dry-ish.
+- Bars 5–8 (~10–20s): a slow-attack pad/string sustain fades in underneath, holding long tones under the chord changes (not rhythmic — just harmonic bed).
+- Bars 9–12 (~20–30s): a soft filtered sub-bass pulse enters, root-note only, low-pass filtered almost fully closed.
+- Bars 13–16 (~30–40s): faint percussion hints — a shaker, closed hi-hat, or filtered noise texture — foreshadowing the beat without committing to it.
+- Final 2–4 bars before the drop: a riser/filter-sweep or reverse-cymbal swell, low-pass filter on the whole bed opening upward, signaling the drop.
+Total build is roughly 40–45 seconds before the kick lands — long by pop standards, which is part of the "dream" patience.
+
+**6. INSTRUMENTATION**
+- Piano: a bright, slightly bell-like synth-piano/EP hybrid patch (era-typical Roland/Korg-style "trance piano" — not a raw acoustic grand; think DX7-ish FM piano layered with a touch of chorus/detune for shimmer), moderate release so notes overlap slightly.
+- Pad: warm analog-style string/choir pad, slow attack (1-2s), wide but not harsh.
+- Bass: a simple sine/filtered sub, no distortion, felt more than heard until it opens up.
+- No lead melody instrument yet in this section — the piano arpeggio IS the melodic content.
+
+**7. DYNAMICS ARC**
+Starts intimate and narrow: mono-leaning stereo image, moderate-dry reverb, mf at most. As each layer enters, three things climb together and roughly in lockstep: overall loudness (gentle continuous crescendo, not sudden jumps), harmonic density (more simultaneous sustained tones under the arpeggio), and stereo width (reverb tail lengthens, pad is wider than the piano, creating a widening "opening up" sensation). It's a smooth, patient swell — no drops in energy, no false starts, just accumulation toward the beat.
+
+**8. OTHER PRODUCTION DETAIL**
+- Low end is essentially absent until the sub-bass enters around bar 9 — the intro is deliberately top/mid-heavy so the eventual kick drop reads as a genuine low-end arrival.
+- Light delay (eighth-note or dotted-eighth slapback) on the piano transients adds sparkle/width without muddying — subtle, not a wash.
+- No sidechain pumping in this section — that's a post-drop technique; the build stays uncompressed and breathing.
+- The pre-drop filter sweep (low-pass opening on the pad/noise layer) is the single most important cue to replicate — it's what tells the listener's ear "something is about to land" a beat or two before it actually does.
+- Reverb character throughout: plate-style, moderate decay, more on the pad than the piano, so the piano stays present/close while the bed feels spacious.
+
+**For the ElevenLabs brief**, the load-bearing, safe-to-describe-without-naming-anyone elements are: 96 BPM, minor-key 4-chord loop with a major submediant lift (i–VII–VI–v shape), continuous unchanging 16th-note ascending broken-chord piano arpeggio, ~40s slow additive layering (piano alone → pad → sub → percussion hint → filter-sweep riser), bright synth-piano + warm pad + filtered sub instrumentation, and a smooth continuous crescendo in loudness/density/width with no low end until late. That's enough for a generator to build an original build with the same DNA.
