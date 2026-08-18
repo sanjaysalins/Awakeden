@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Morph Test — Emmaus</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --ink: #211c16; --paper: #efe6d2; --paper-raised: #f8f2e4;
+    --bronze: #9a5c2c; --bronze-bright: #b8723a;
+    --line: rgba(33,28,22,0.16); --line-strong: rgba(33,28,22,0.32); --muted: #6b5f4e;
+    --shadow: 0 1px 0 rgba(33,28,22,0.06), 0 8px 24px -16px rgba(33,28,22,0.35);
+    --bad: #a53d2f;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #ece3d0; --paper: #17130f; --paper-raised: #201a13;
+      --bronze: #d99a54; --bronze-bright: #e8b374;
+      --line: rgba(236,227,208,0.16); --line-strong: rgba(236,227,208,0.32); --muted: #a89a83;
+      --shadow: 0 1px 0 rgba(0,0,0,0.4), 0 12px 32px -18px rgba(0,0,0,0.7);
+      --bad: #d97862;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Source Serif 4", Georgia, serif; font-size: 17px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 56px 28px 96px; }
+  header.masthead { border-bottom: 1px solid var(--line-strong); padding-bottom: 32px; margin-bottom: 44px; }
+  .eyebrow { font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bronze); display: flex; gap: 10px; align-items: center; margin-bottom: 18px; }
+  .eyebrow::before { content: ""; width: 22px; height: 1px; background: var(--bronze); display: inline-block; }
+  h1 { font-family: "Fraunces", Georgia, serif; font-optical-sizing: auto; font-weight: 600; font-size: clamp(2.2rem, 4.6vw, 3.2rem); line-height: 1.05; letter-spacing: -0.01em; margin: 0 0 18px; text-wrap: balance; max-width: 20ch; }
+  .lede { font-size: 1.05rem; max-width: 72ch; margin: 0; }
+  .finding { margin: 24px 0 0; padding: 18px 22px; border-left: 4px solid var(--bad); background: color-mix(in srgb, var(--bad) 8%, transparent); font-size: 0.98rem; max-width: 76ch; }
+  .finding strong { color: var(--bad); }
+  .strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin: 0 0 12px; }
+  .strip .frame { position: relative; }
+  .strip img { width: 100%; aspect-ratio: 9/16; object-fit: cover; display: block; border: 1px solid var(--line); }
+  .strip .tag { font-family: "IBM Plex Mono", monospace; font-size: 10px; text-align: center; color: var(--muted); margin-top: 6px; }
+  footer.next { margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--line-strong); }
+  footer.next h2 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 1.3rem; margin: 0 0 12px; }
+  footer.next p { max-width: 68ch; font-size: 1rem; margin: 0 0 10px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow">2 renders + 3 free blends &middot; ~$1 spent</div>
+    <h1>Morph Test &mdash; Emmaus</h1>
+    <p class="lede">A composition-matched before/after pair for &ldquo;Knew It Not,&rdquo; crossfaded
+      at 25/50/75% to preview what the on-screen morph would actually look like.</p>
+    <div class="finding"><strong>The honest result: it doesn't read as a morph.</strong> The modern
+      shot came out excellent on its own. But the biblical render didn't match its geometry closely
+      enough &mdash; the hands are in a different position, the empty chair and the seated figure
+      don't line up, and Christ ended up reading a book instead of reaching for the bread. The 50%
+      blend proves it: it reads as two images overlapping, not one thing becoming another. A real
+      morph needs frame-accurate alignment &mdash; same hand pixels, same table edge, same negative
+      space &mdash; which two independently generated stills can't reliably deliver. That's a real
+      production requirement to solve (tight manual compositing, or an actual morph/video tool),
+      not a flaw in the idea itself.</div>
+  </header>
+
+  <div class="strip">
+    <div class="frame"><img src="a_modern.png" alt="Modern frame"><div class="tag">Modern &middot; 0%</div></div>
+    <div class="frame"><img src="c_blend_25.png" alt="25% blend"><div class="tag">25%</div></div>
+    <div class="frame"><img src="c_blend_50.png" alt="50% blend"><div class="tag">50%</div></div>
+    <div class="frame"><img src="c_blend_75.png" alt="75% blend"><div class="tag">75%</div></div>
+    <div class="frame"><img src="b_biblical.png" alt="Biblical frame"><div class="tag">Biblical &middot; 100%</div></div>
+  </div>
+
+  <footer class="next">
+    <h2>What this actually tells us</h2>
+    <p>The idea's mechanic depends entirely on geometric precision the current still-by-still
+      pipeline doesn't naturally produce. Worth deciding: try again with much tighter composition
+      instructions (locking exact hand/chair pixel positions), or treat the morph as a real
+      animation-time problem (image-to-video with a designed transformation) rather than something
+      to prove with two static renders.</p>
+  </footer>
+
+</div>
+</body>
+</html>

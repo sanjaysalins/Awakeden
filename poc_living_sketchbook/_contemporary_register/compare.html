@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contemporary Register — tested</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --ink: #211c16; --paper: #efe6d2; --paper-raised: #f8f2e4;
+    --bronze: #9a5c2c; --bronze-bright: #b8723a;
+    --line: rgba(33,28,22,0.16); --line-strong: rgba(33,28,22,0.32); --muted: #6b5f4e;
+    --shadow: 0 1px 0 rgba(33,28,22,0.06), 0 8px 24px -16px rgba(33,28,22,0.35);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #ece3d0; --paper: #17130f; --paper-raised: #201a13;
+      --bronze: #d99a54; --bronze-bright: #e8b374;
+      --line: rgba(236,227,208,0.16); --line-strong: rgba(236,227,208,0.32); --muted: #a89a83;
+      --shadow: 0 1px 0 rgba(0,0,0,0.4), 0 12px 32px -18px rgba(0,0,0,0.7);
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Source Serif 4", Georgia, serif; font-size: 17px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 56px 28px 96px; }
+  header.masthead { border-bottom: 1px solid var(--line-strong); padding-bottom: 32px; margin-bottom: 44px; }
+  .eyebrow { font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bronze); display: flex; gap: 10px; align-items: center; margin-bottom: 18px; }
+  .eyebrow::before { content: ""; width: 22px; height: 1px; background: var(--bronze); display: inline-block; }
+  h1 { font-family: "Fraunces", Georgia, serif; font-optical-sizing: auto; font-weight: 600; font-size: clamp(2.2rem, 4.6vw, 3.2rem); line-height: 1.05; letter-spacing: -0.01em; margin: 0 0 18px; text-wrap: balance; max-width: 22ch; }
+  .lede { font-size: 1.05rem; max-width: 72ch; margin: 0; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 22px; }
+  .plate { background: var(--paper-raised); border: 1px solid var(--line); box-shadow: var(--shadow); overflow: hidden; }
+  .plate img { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; display: block; }
+  .plate .body { padding: 16px 18px 18px; }
+  .plate-num { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.08em; color: var(--bronze); margin-bottom: 4px; }
+  .plate h2 { font-family: "Fraunces", Georgia, serif; font-optical-sizing: auto; font-weight: 600; font-size: 1.1rem; margin: 0 0 6px; line-height: 1.2; }
+  .verdict { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; display: inline-block; margin-bottom: 8px; }
+  .verdict.good { color: #4d7a3f; background: color-mix(in srgb, #4d7a3f 14%, transparent); }
+  .verdict.flawed { color: #a53d2f; background: color-mix(in srgb, #a53d2f 14%, transparent); }
+  .plate .desc { font-size: 0.88rem; color: var(--muted); margin: 0; }
+  footer.next { margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--line-strong); }
+  footer.next h2 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 1.3rem; margin: 0 0 12px; }
+  footer.next p { max-width: 68ch; font-size: 1rem; margin: 0 0 10px; }
+  footer.next .cost { font-family: "IBM Plex Mono", monospace; font-size: 0.92rem; color: var(--muted); }
+  footer.next .cost b { color: var(--bronze); font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow">4 techniques &middot; ~$2 spent &middot; classical painting media banned entirely</div>
+    <h1>Contemporary Register, Tested</h1>
+    <p class="lede">Same beat, same period dress &mdash; but this time built from prestige
+      animation's own visual language, not a painting medium.</p>
+  </header>
+
+  <div class="grid">
+    <article class="plate"><img src="1_knifelight.png" alt="Knifelight"><div class="body"><div class="plate-num">01</div><h2>Knifelight</h2><div class="verdict good">Reads as Arcane-adjacent</div><p class="desc">Aggressive digital brushwork on a volumetric form, no linework, one hot color against a crushed field.</p></div></article>
+    <article class="plate"><img src="2_emberline.png" alt="Emberline"><div class="body"><div class="plate-num">02</div><h2>Emberline</h2><div class="verdict flawed">Rendered sideways</div><p class="desc">Clever idea (fire graded as shame-flush, cold rim = the Lord's gaze) &mdash; but this render is a technical glitch, not a fair test.</p></div></article>
+    <article class="plate"><img src="3_strokeform.png" alt="Strokeform"><div class="body"><div class="plate-num">03</div><h2>Strokeform</h2><div class="verdict good">Most polished</div><p class="desc">Volumetric CG with baked-in brushwork &mdash; reads like a real finished feature-film frame.</p></div></article>
+    <article class="plate"><img src="4_cockcrow_silver.png" alt="Cockcrow Silver"><div class="body"><div class="plate-num">04</div><h2>Cockcrow Silver</h2><div class="verdict good">Most cinematic</div><p class="desc">Bleach-bypass grade, anamorphic flare &mdash; reads as prestige TV, not painting, not devotional art.</p></div></article>
+  </div>
+
+  <footer class="next">
+    <h2>Does this feel different</h2>
+    <p>Three of four landed clean and genuinely feel like a different register from the classical
+      10 &mdash; Emberline needs a re-render to judge fairly. Does any of these actually feel new,
+      or still not it?</p>
+    <p class="cost">Spent: <b>~$2.00</b> (4 &times; NBP) &middot; logged to data/spend_ledger.jsonl</p>
+  </footer>
+
+</div>
+</body>
+</html>

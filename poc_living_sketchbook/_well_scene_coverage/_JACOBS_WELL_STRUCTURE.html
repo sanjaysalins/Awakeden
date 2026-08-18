@@ -1,0 +1,211 @@
+<title>Jacob's Well</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Courier+Prime:ital,wght@0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+  :root {
+    --ink: #1c1c1a; --paper: #ece8e0; --paper-raised: #f5f2ea;
+    --bronze: #8a6a3a; --line: rgba(28,28,26,0.15); --line-strong: rgba(28,28,26,0.3);
+    --muted: #5f5a4e; --accent: #9a2f2f; --long: #33415c; --short: #9a5c2c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #e8e4d8; --paper: #16150f; --paper-raised: #1e1c15;
+      --bronze: #c9a568; --line: rgba(232,228,216,0.15); --line-strong: rgba(232,228,216,0.3);
+      --muted: #a89f8a; --accent: #d97a7a; --long: #8fa3c7; --short: #d99a54;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #e8e4d8; --paper: #16150f; --paper-raised: #1e1c15;
+    --bronze: #c9a568; --line: rgba(232,228,216,0.15); --line-strong: rgba(232,228,216,0.3);
+    --muted: #a89f8a; --accent: #d97a7a; --long: #8fa3c7; --short: #d99a54;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Source Serif 4", Georgia, serif; font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 60px 28px 130px; }
+
+  .slate { font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bronze); border: 1px solid var(--line-strong); padding: 14px 18px; margin-bottom: 44px; display: flex; flex-direction: column; gap: 4px; }
+  .slate .row { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+  .slate .row span:last-child { color: var(--muted); text-transform: none; letter-spacing: 0; }
+
+  h1 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 2.3rem; margin: 0 0 6px; letter-spacing: -0.01em; }
+  .sub { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0 0 50px; }
+
+  .thesis { padding: 20px 24px; background: var(--paper-raised); border-left: 4px solid var(--bronze); margin-bottom: 56px; font-size: 1rem; }
+  .thesis strong { color: var(--bronze); }
+
+  h2.section { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 1.6rem; margin: 0 0 8px; padding-top: 40px; border-top: 1px solid var(--line-strong); }
+  h2.section:first-of-type { border-top: none; padding-top: 0; }
+  .section-note { font-size: 0.95rem; color: var(--muted); max-width: 62ch; margin: 0 0 30px; }
+
+  .scene { margin-bottom: 40px; }
+  .scene-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 4px; flex-wrap: wrap; }
+  .scene-num { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--bronze); letter-spacing: 0.08em; }
+  .scene-title { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 1.2rem; margin: 0; }
+  .scene-time { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--muted); }
+
+  .coverage { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.05em; color: var(--muted); margin: 6px 0 14px; padding: 6px 12px; background: var(--paper-raised); display: inline-block; border-radius: 2px; }
+  .coverage b { color: var(--ink); font-weight: 600; }
+
+  .beat { display: grid; grid-template-columns: 100px 1fr; gap: 16px; padding: 10px 0; border-bottom: 1px dashed var(--line); font-size: 0.95rem; }
+  .beat:last-child { border-bottom: none; }
+  .beat .shot { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--bronze); padding-top: 2px; }
+  .beat .content p { margin: 0 0 4px; }
+  .beat .content .kjv { color: var(--accent); }
+  .beat .content .action { color: var(--muted); font-style: italic; }
+
+  .short-strip { display: flex; flex-direction: column; gap: 0; margin-top: 10px; }
+  .short-beat { display: grid; grid-template-columns: 60px 90px 1fr; gap: 14px; padding: 9px 0; border-bottom: 1px dashed var(--line); font-size: 0.93rem; align-items: baseline; }
+  .short-beat:last-child { border-bottom: none; }
+  .short-beat .t { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--muted); }
+  .short-beat .shot { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: 0.03em; text-transform: uppercase; color: var(--short); }
+  .short-beat .content .kjv { color: var(--accent); }
+  .short-beat .content .action { color: var(--muted); font-style: italic; }
+  .short-beat .content p { margin: 0; }
+
+  .compare-note { margin: 50px 0; padding: 20px 24px; background: var(--paper-raised); border: 1px solid var(--line); font-size: 0.95rem; }
+  .compare-note .label { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bronze); margin-bottom: 10px; display: block; }
+
+  .principles { list-style: none; margin: 0; padding: 0; }
+  .principles li { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 0.97rem; }
+  .principles li:last-child { border-bottom: none; }
+  .principles b { color: var(--bronze); }
+
+  .notes { margin-top: 60px; padding-top: 30px; border-top: 1px solid var(--line-strong); font-size: 0.95rem; color: var(--muted); }
+  .notes p { max-width: 66ch; margin: 0 0 12px; }
+</style>
+
+<div class="wrap">
+
+  <div class="slate">
+    <div class="row"><span>Structure test</span><span>John 4:1&ndash;30, 39&ndash;42 &mdash; the woman at the well</span></div>
+    <div class="row"><span>Why this passage</span><span>Jesus's longest one-on-one recorded conversation &mdash; a real back-and-forth, not a monologue</span></div>
+    <div class="row"><span>What this is NOT</span><span>not a portrait test &mdash; this is scene coverage: how the camera actually moves through a dialogue</span></div>
+  </div>
+
+  <h1>Jacob's Well</h1>
+  <p class="sub">Long-form and short-form, same conversation, different coverage</p>
+
+  <div class="thesis">The failure mode of everything tested so far: one face, one moment, repeated in
+    different paint. A dialogue scene isn't a face &mdash; it's a <strong>pattern of shots</strong> that
+    changes as the conversation changes. Wide when strangers meet. Tighter as trust builds. A two-shot
+    breaks apart the instant one of them says something true. The camera's distance from these two
+    people <em>is</em> the story of the scene, before either style or line reading matters.</p>
+
+  <h2 class="section">Long-Form Structure</h2>
+  <p class="section-note">Seven scenes, each with its own coverage pattern &mdash; the shots
+    themselves escalate as the conversation gets more dangerous.</p>
+
+  <div class="scene">
+    <div class="scene-head"><span class="scene-num">Scene 1</span><h3 class="scene-title">The Request</h3><span class="scene-time">~60&ndash;90s</span></div>
+    <div class="coverage">Coverage: <b>wide &rarr; wide &rarr; medium</b> &mdash; strangers, kept at a distance</div>
+    <div class="beat"><span class="shot">Wide</span><div class="content"><p class="action">Noon. A stone well in open country. Jesus alone, seated on the well's edge, travel-worn. A woman approaches on the path with a waterpot, sees him, hesitates.</p></div></div>
+    <div class="beat"><span class="shot">Wide, held</span><div class="content"><p class="kjv">"Give me to drink." (John 4:7)</p><p class="action">He doesn't rise. Doesn't turn fully. The distance between them stays &mdash; this is not yet an intimate scene.</p></div></div>
+    <div class="beat"><span class="shot">Medium, her</span><div class="content"><p class="kjv">"How is it that thou, being a Jew, askest drink of me, which am a Samaritan woman?" (4:9)</p></div></div>
+  </div>
+
+  <div class="scene">
+    <div class="scene-head"><span class="scene-num">Scene 2</span><h3 class="scene-title">Living Water</h3><span class="scene-time">~60s</span></div>
+    <div class="coverage">Coverage: <b>medium two-shot, first time they share a frame</b></div>
+    <div class="beat"><span class="shot">2-shot</span><div class="content"><p class="action">She sets the waterpot down &mdash; the first physical sign she's staying. Camera closes to a real two-shot across the well for the first time.</p></div></div>
+    <div class="beat"><span class="shot">2-shot</span><div class="content"><p class="kjv">"If thou knewest the gift of God... thou wouldest have asked of him, and he would have given thee living water." (4:10)</p></div></div>
+    <div class="beat"><span class="shot">Her, medium</span><div class="content"><p class="kjv">"Sir, thou hast nothing to draw with, and the well is deep... Art thou greater than our father Jacob?" (4:11&ndash;12)</p></div></div>
+    <div class="beat"><span class="shot">2-shot</span><div class="content"><p class="kjv">"Whosoever drinketh of this water shall thirst again: but whosoever drinketh of the water that I shall give him shall never thirst." (4:13&ndash;14)</p></div></div>
+  </div>
+
+  <div class="scene">
+    <div class="scene-head"><span class="scene-num">Scene 3</span><h3 class="scene-title">The Turn</h3><span class="scene-time">~45&ndash;60s</span></div>
+    <div class="coverage">Coverage: <b>singles only &mdash; the two-shot breaks apart</b></div>
+    <div class="beat"><span class="shot">Her, close</span><div class="content"><p class="kjv">"Sir, give me this water, that I thirst not, neither come hither to draw." (4:15)</p></div></div>
+    <div class="beat"><span class="shot">Him, medium</span><div class="content"><p class="kjv">"Go, call thy husband, and come hither." (4:16)</p><p class="action">The question lands like a physical thing. Cut wide for one beat &mdash; give the audience room, don't crowd her reaction.</p></div></div>
+    <div class="beat"><span class="shot">Her, close, guarded</span><div class="content"><p class="kjv">"I have no husband." (4:17)</p></div></div>
+    <div class="beat"><span class="shot">Him, close &mdash; the first true close-up of the scene</span><div class="content"><p class="kjv">"Thou hast well said, I have no husband: for thou hast had five husbands; and he whom thou now hast is not thy husband." (4:17&ndash;18)</p><p class="action">This is the first shot in the whole scene that has earned a real close-up &mdash; not because it's the most beautiful shot, but because it's the moment nothing is hidden anymore.</p></div></div>
+  </div>
+
+  <div class="scene">
+    <div class="scene-head"><span class="scene-num">Scene 4</span><h3 class="scene-title">Prophet, Not Threat</h3><span class="scene-time">~50s</span></div>
+    <div class="coverage">Coverage: <b>she moves &mdash; camera follows, restless</b></div>
+    <div class="beat"><span class="shot">Her, close</span><div class="content"><p class="kjv">"Sir, I perceive that thou art a prophet." (4:19)</p><p class="action">She doesn't run. She reaches for the safest large question available &mdash; theology, not herself.</p></div></div>
+    <div class="beat"><span class="shot">Wide, both</span><div class="content"><p class="kjv">"Our fathers worshipped in this mountain; and ye say, that in Jerusalem is the place where men ought to worship." (4:20)</p></div></div>
+    <div class="beat"><span class="shot">2-shot, calmer now</span><div class="content"><p class="kjv">"...the true worshippers shall worship the Father in spirit and in truth." (4:23&ndash;24)</p><p class="action">The two-shot returns here, on purpose &mdash; this is the calmest the scene gets before the reveal.</p></div></div>
+  </div>
+
+  <div class="scene">
+    <div class="scene-head"><span class="scene-num">Scene 5</span><h3 class="scene-title">I That Speak Unto Thee</h3><span class="scene-time">~30s</span></div>
+    <div class="coverage">Coverage: <b>one shot, held, no cutting</b></div>
+    <div class="beat"><span class="shot">Her, close</span><div class="content"><p class="kjv">"I know that Messias cometh... when he is come, he will tell us all things." (4:25)</p></div></div>
+    <div class="beat"><span class="shot">Him, close, held &mdash; the scene's true climax</span><div class="content"><p class="kjv">"I that speak unto thee am he." (4:26)</p><p class="action">No cut away from this line. Everything in the scene has been building the audience's trust that a cut here would be the wrong instinct &mdash; this is the one line that gets to just sit.</p></div></div>
+  </div>
+
+  <div class="scene">
+    <div class="scene-head"><span class="scene-num">Scene 6</span><h3 class="scene-title">She Runs</h3><span class="scene-time">~30&ndash;40s</span></div>
+    <div class="coverage">Coverage: <b>wide, moving &mdash; the stillness breaks</b></div>
+    <div class="beat"><span class="shot">Wide</span><div class="content"><p class="action">The disciples return, unseen conversation implied. She leaves the waterpot at the well &mdash; the one prop that's been in every scene, abandoned in frame.</p></div></div>
+    <div class="beat"><span class="shot">Wide, her, moving away</span><div class="content"><p class="kjv">"Come, see a man, which told me all things that ever I did: is not this the Christ?" (4:29)</p></div></div>
+  </div>
+
+  <div class="scene">
+    <div class="scene-head"><span class="scene-num">Scene 7</span><h3 class="scene-title">Landing</h3><span class="scene-time">~20s</span></div>
+    <div class="coverage">Coverage: <b>wide, the town arriving</b></div>
+    <div class="beat"><span class="shot">Wide</span><div class="content"><p class="kjv">"Now we believe, not because of thy saying: for we have heard him ourselves, and know that this is indeed the Christ, the Saviour of the world." (4:42)</p><p class="action">CTA lands in THEIR words, not a narrator's. Hold 3.0s per the project's own landing-hold standard.</p></div></div>
+  </div>
+
+  <h2 class="section">Short-Form Structure (60s)</h2>
+  <p class="section-note">Same discipline compressed, not abandoned &mdash; the two-shot still breaks apart
+    at the turn, the close-up is still earned, not just cut to because it's a short.</p>
+
+  <div class="short-strip">
+    <div class="short-beat"><span class="t">0&ndash;5s</span><span class="shot">Wide</span><div class="content"><p class="action">Noon well, a woman approaches, Jesus seated, worn.</p><p class="kjv">"Give me to drink."</p></div></div>
+    <div class="short-beat"><span class="t">5&ndash;12s</span><span class="shot">Medium 2-shot</span><div class="content"><p class="kjv">"...he would have given thee living water." / "Art thou greater than our father Jacob?"</p></div></div>
+    <div class="short-beat"><span class="t">12&ndash;20s</span><span class="shot">2-shot &rarr; break to singles</span><div class="content"><p class="kjv">"Whosoever drinketh of this water shall thirst again..." / "Sir, give me this water."</p></div></div>
+    <div class="short-beat"><span class="t">20&ndash;30s</span><span class="shot">Singles, close</span><div class="content"><p class="kjv">"Go, call thy husband." / "I have no husband." / "...thou hast had five husbands..."</p><p class="action">The one true close-up of the short version &mdash; same rule as long-form: earned, not default.</p></div></div>
+    <div class="short-beat"><span class="t">30&ndash;40s</span><span class="shot">Compressed 2-shot</span><div class="content"><p class="kjv">"I perceive that thou art a prophet." / "...worship the Father in spirit and in truth."</p><p class="action">The worship exchange is cut to one line each &mdash; the calm beat still exists, just briefly.</p></div></div>
+    <div class="short-beat"><span class="t">40&ndash;48s</span><span class="shot">Held single, no cut</span><div class="content"><p class="kjv">"I know that Messias cometh..." / "I that speak unto thee am he."</p></div></div>
+    <div class="short-beat"><span class="t">48&ndash;55s</span><span class="shot">Wide, moving</span><div class="content"><p class="action">Waterpot left behind, she runs.</p><p class="kjv">"Come, see a man, which told me all things that ever I did: is not this the Christ?"</p></div></div>
+    <div class="short-beat"><span class="t">55&ndash;60s</span><span class="shot">Wide, landing</span><div class="content"><p class="kjv">"...this is indeed the Christ, the Saviour of the world."</p><p class="action">3.0s hold.</p></div></div>
+  </div>
+
+  <div class="compare-note">
+    <span class="label">What actually got cut going from long to short</span>
+    <p>Not lines &mdash; <em>beats</em>. The worship discussion (scene 4) survives in the short as one
+      exchange instead of three. The turn (scene 3) survives almost intact, because it's the hinge of
+      the whole conversation. Nothing that was earned in coverage got flattened into narration to save
+      time &mdash; the short is smaller, not simpler.</p>
+  </div>
+
+  <h2 class="section">The Governing Principles</h2>
+  <ul class="principles">
+    <li><b>Distance is information.</b> Wide when they're strangers. The two-shot has to be earned by
+      her choosing to stay (setting down the waterpot). It has to break apart the instant the
+      conversation turns dangerous (the husband question). Nobody gets a close-up until the scene has
+      justified one.</li>
+    <li><b>One shot per scene is allowed to just hold.</b> "I that speak unto thee am he" gets zero
+      cuts. If everything is a close-up, nothing is.</li>
+    <li><b>A prop can carry the arc.</b> The waterpot: filled with purpose in scene 1, set down in
+      scene 2 (the first sign of trust), abandoned in scene 6 (she doesn't need it anymore). That's
+      staging doing narrative work no line of dialogue has to do.</li>
+    <li><b>The CTA lands in a character's own mouth, not a narrator's.</b> "This is indeed the Christ,
+      the Saviour of the world" is the town's own verdict, verbatim KJV &mdash; nobody breaks the
+      fourth wall to explain it.</li>
+    <li><b>Short-form compresses beats, not craft.</b> The same shot grammar (wide/two-shot/broken
+      two-shot/earned close-up/wide) survives at 60 seconds. What's cut is repetition inside a beat,
+      never the beat's own shape.</li>
+  </ul>
+
+  <div class="notes">
+    <p>This is what "storytelling" means as distinct from "style" &mdash; the coverage pattern above
+      would hold whether it's rendered in oil, ink, or the video-game-cinematic register from the last
+      round. The visual style question is now a separate, smaller decision sitting on top of a
+      structure that already works.</p>
+    <p>Next real test, if this structure is right: render 3&ndash;4 of these shots (not one portrait)
+      in a candidate style, to see if the STYLE can survive changing distance &mdash; wide, two-shot,
+      and close-up in the same visual language, the way this document assumes it can.</p>
+    <p><strong>Round 2 (2026-08-18, same session):</strong> tested exactly this — the "graphic, bold,
+      clean" style across 4 real shots from this structure (wide / two-shot / earned close-up / wide
+      again), see <code>compare.html</code> in this same folder. The style held up across distance.
+      But it surfaced a real production bug: palette and the woman's own face drifted between
+      independently-generated shots (no reference-image lock was used). Fix before committing: chain
+      each shot as an NBP image input off the previous one, same technique already proven for Noon
+      Frieze earlier this session.</p>
+  </div>
+
+</div>

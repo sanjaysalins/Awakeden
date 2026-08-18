@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contemporary Register — rendered</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --ink: #211c16; --paper: #efe6d2; --paper-raised: #f8f2e4;
+    --bronze: #9a5c2c; --bronze-bright: #b8723a;
+    --line: rgba(33,28,22,0.16); --line-strong: rgba(33,28,22,0.32); --muted: #6b5f4e;
+    --shadow: 0 1px 0 rgba(33,28,22,0.06), 0 8px 24px -16px rgba(33,28,22,0.35);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #ece3d0; --paper: #17130f; --paper-raised: #201a13;
+      --bronze: #d99a54; --bronze-bright: #e8b374;
+      --line: rgba(236,227,208,0.16); --line-strong: rgba(236,227,208,0.32); --muted: #a89a83;
+      --shadow: 0 1px 0 rgba(0,0,0,0.4), 0 12px 32px -18px rgba(0,0,0,0.7);
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Source Serif 4", Georgia, serif; font-size: 17px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 56px 28px 96px; }
+  header.masthead { border-bottom: 1px solid var(--line-strong); padding-bottom: 36px; margin-bottom: 44px; }
+  .eyebrow { font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bronze); display: flex; gap: 10px; align-items: center; margin-bottom: 18px; }
+  .eyebrow::before { content: ""; width: 22px; height: 1px; background: var(--bronze); display: inline-block; }
+  h1 { font-family: "Fraunces", Georgia, serif; font-optical-sizing: auto; font-weight: 600; font-size: clamp(2.2rem, 4.6vw, 3.2rem); line-height: 1.05; letter-spacing: -0.01em; margin: 0 0 20px; text-wrap: balance; max-width: 22ch; }
+  .lede { font-size: 1.05rem; max-width: 68ch; margin: 0; }
+  .lede strong { color: var(--bronze); font-weight: 600; }
+  .note { margin: 24px 0 0; padding: 16px 20px; border-left: 3px solid var(--bronze); background: color-mix(in srgb, var(--bronze) 8%, transparent); font-size: 0.95rem; max-width: 72ch; }
+  .note strong { color: var(--bronze); font-weight: 600; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 26px; }
+  .plate { background: var(--paper-raised); border: 1px solid var(--line); box-shadow: var(--shadow); display: flex; flex-direction: column; overflow: hidden; }
+  .plate img { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; display: block; background: var(--ink); }
+  .plate .body { padding: 20px 22px 22px; }
+  .plate-num { font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: 0.1em; color: var(--bronze); margin-bottom: 8px; }
+  .plate h2 { font-family: "Fraunces", Georgia, serif; font-optical-sizing: auto; font-weight: 600; font-size: 1.35rem; margin: 0 0 4px; line-height: 1.15; text-wrap: balance; }
+  .plate .tag { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; color: var(--muted); margin: 0 0 12px; letter-spacing: 0.02em; }
+  .plate .desc { font-size: 0.94rem; margin: 0; }
+  footer.next { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--line-strong); }
+  footer.next h2 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 1.4rem; margin: 0 0 12px; }
+  footer.next p { max-width: 66ch; font-size: 1rem; margin: 0 0 10px; }
+  footer.next .cost { font-family: "IBM Plex Mono", monospace; font-size: 0.92rem; color: var(--muted); }
+  footer.next .cost b { color: var(--bronze); font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow">3 plates rendered &middot; ~$1.50 spent &middot; round 3</div>
+    <h1>Contemporary Register</h1>
+    <p class="lede">Same scene again (Moses, the pole, the dying camp) &mdash; three takes on pushing the
+      round-2 winner (<strong>Ember &amp; Ink</strong>) past a 90s pastiche into something that reads as
+      made now.</p>
+    <div class="note"><strong>Recurring pattern:</strong> Struck Bronze again drew the pole with a crossbar,
+      same as Plate A in round 2 &mdash; two independent passes both volunteered the cross shape unprompted.
+      Cold Ember and Emberpress kept it a plain stake. Worth deciding on purpose either way: lean into the
+      early cross-echo, or explicitly ban it for this scene.</div>
+  </header>
+
+  <div class="grid">
+    <article class="plate">
+      <img src="e_emberpress.png" alt="Emberpress">
+      <div class="body">
+        <div class="plate-num">Plate E</div>
+        <h2>Emberpress</h2>
+        <p class="tag">Spider-Verse &middot; halftone-in-shadow, ink contours</p>
+        <p class="desc">Dynamic action pose, dust kicked up mid-stride, punchy amber-and-sun graphic.</p>
+      </div>
+    </article>
+    <article class="plate">
+      <img src="f_struck_bronze.png" alt="Struck Bronze">
+      <div class="body">
+        <div class="plate-num">Plate F</div>
+        <h2>Struck Bronze</h2>
+        <p class="tag">Arcane &middot; oil-impasto, one hot color in a desaturated field</p>
+        <p class="desc">No outlines at all &mdash; brushwork is the sculpture. Moodiest, most adult-prestige.</p>
+      </div>
+    </article>
+    <article class="plate">
+      <img src="g_cold_ember.png" alt="Cold Ember">
+      <div class="body">
+        <div class="plate-num">Plate G</div>
+        <h2>Cold Ember</h2>
+        <p class="tag">Prestige grade &middot; teal-crushed shadows, one ember band</p>
+        <p class="desc">Same painted-bg + cel-character structure as C, just regraded. Cleanest read.</p>
+      </div>
+    </article>
+  </div>
+
+  <footer class="next">
+    <h2>Pick a direction</h2>
+    <p>Any of these three feel like the one to build the whole 13-scene set on? Or want a fourth round
+      mixing pieces &mdash; e.g. Emberpress's dynamic energy with Cold Ember's cleaner grade?</p>
+    <p class="cost">Spent so far this round: <b>~$1.50</b> (3 &times; NBP) &middot; logged to
+      data/spend_ledger.jsonl</p>
+  </footer>
+
+</div>
+</body>
+</html>

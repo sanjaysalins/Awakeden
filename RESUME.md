@@ -1,4 +1,123 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-18 — Jesus-POV format/style search,
+# 95 stills, no style locked yet, but a real story-craft asset and a real
+# production bug both came out of it. READ THIS FIRST, supersedes every block
+# below (including the score-swap block right under this one — that thread
+# is paused, not resolved; see its own note further down).
+#
+# ── WHAT THIS SESSION WAS: the user pivoted hard, more than once. Started as
+# "help me find a viral format" for `look_and_live/_jesus_pov_poc/` (Numbers
+# 21:8 → John 3:14). Went through, in order: (1) 8 format/mechanic ideas
+# (loop-rewatch, split-screen typology, optical afterimage, morph-transform,
+# painting-restoration, claymation, tutorial-that-breaks, ASMR) — tested,
+# real findings, none picked. (2) A pivot to "BibleProject's method, our own
+# visual identity" → 3 full thread-tracing house-style systems (Rubrica /
+# Meridian / The Scarlet Line) designed and stills-tested — none picked
+# either. (3) The user's clearest reframe of the day: "it needs to be an
+# animated series... like Chosen, dialogue driven... epic modern score...
+# feel like the viral movie-clip edits, but in this case we are making the
+# movie." That's the real brief going into tomorrow.
+#
+# ── FROM THAT REFRAME ON: wrote one real scene script (`Before the Cock
+# Crow`, Peter's denial, Luke 22:54-62, KJV verbatim dialogue, score/edit
+# notes) to prove the REGISTER before spending on visuals — user confirmed
+# "yes, that's the register." Then spent most of the session on VISUAL STYLE
+# for that register, close-up-only, on one fixed beat (Luke 22:61, "the Lord
+# turned, and looked upon Peter"): 10 classical-media styles (oil/charcoal/
+# gouache/tempera/engraving/etc) → user: "seen, tiered, basic, not new."
+# 8 contemporary-prestige-animation styles (Arcane-adjacent impasto, bleach-
+# bypass grade, rotoscope, video-game cinematic, motion-comic) → real
+# standout: **Ember-Lit Engine Realism** (AAA game-cinematic register,
+# subsurface-scattering skin, volumetric smoke, teal/ember grade) — the most
+# emotionally powerful single image of the session by a clear margin.
+# 4 "wide swing" traditions (Prince of Egypt, mature anime, Ethiopian/Coptic
+# Gondarine manuscript, Persian Herat miniature) → two genuine standouts:
+# **The Herat Ember** (Persian miniature — flame-tongues drawn directly into
+# his own beard, extraordinary and unlike anything else tested) and
+# **Gondar Emberline** (Ethiopian icon tradition, almost never used for
+# Bible content in the West).
+#
+# ── THE USER'S OWN COURSE-CORRECTION (the most important lesson of the
+# day, don't lose it): after ~30 portrait-only renders, the user said
+# "you are not thinking from a storytelling point of view, doing portraits
+# is not going to help... you need to think how best can we tell a dialogue
+# filled story in long and short form." Correct, and I'd drifted. Two things
+# came out of getting this right:
+#   1. `Jacob's Well` — a real long-form (7 scenes) + short-form (60s) scene-
+#      COVERAGE breakdown for John 4 (the woman at the well, Jesus's longest
+#      recorded 1:1 conversation) — wide when strangers meet, a two-shot
+#      that has to be EARNED (she sets the waterpot down) and that BREAKS
+#      apart the instant the conversation turns dangerous (the husband
+#      question), exactly one true close-up per scene, the CTA landing in a
+#      character's own mouth not a narrator's. This is a reusable story-
+#      craft asset independent of whatever visual style gets picked —
+#      published as an artifact AND saved to the repo at
+#      `poc_living_sketchbook/_well_scene_coverage/_JACOBS_WELL_STRUCTURE.html`
+#      (done same session, don't redo it tomorrow).
+#   2. Tested the "graphic, bold, clean, flat shapes, still expressive at a
+#      distance" style (the one style the user spontaneously called back to
+#      as "outside the box" from earlier in the day) across REAL coverage
+#      from that structure — wide / two-shot / earned close-up / wide again
+#      (`poc_living_sketchbook/_well_scene_coverage/`). Proved the style
+#      *can* hold across changing distance. But it also surfaced a real bug.
+#
+# ── THE REAL BUG, CONFIRMED TWICE TODAY: NBP renders drift — palette AND
+# the character's own face/proportions change between independently-
+# generated shots in the same sequence, because nothing is locking them
+# together. First caught in the Peter's-Denial 4-shot test
+# (`_chosen_scene_setup/`, Peter is visibly a different person in shot D
+# than A-C). Confirmed again in the Jacob's Well 4-shot test
+# (`_well_scene_coverage/`): shot 2 has a stray cream border the others
+# don't, the sky treatment changes every shot, the woman isn't consistently
+# the same person. **Before ANY style gets committed to production, this
+# needs the same reference-image-locking technique already proven earlier
+# this session for Noon Frieze (attach shot 1 as an NBP image input to every
+# later shot) — untested for a full multi-shot sequence yet.**
+#
+# ── START HERE TOMORROW (in priority order):
+#   1. Fix the consistency bug for real: pick ONE candidate style (my read:
+#      either the graphic/clean one the user liked twice, or Ember-Lit
+#      Engine Realism, or Herat Ember — user hasn't picked, ask first) and
+#      re-render the Jacob's Well 4-shot sequence WITH a locked reference
+#      image chained shot-to-shot, to prove a real style can hold a real
+#      multi-shot scene together before going further.
+#   2. Only after that holds: this was always meant to end in ANIMATION, not
+#      more stills — "it needs to be some form of animation" (user, today).
+#      Nothing has been animated yet this whole session. The established
+#      per-shot animator split from CLAUDE.md still applies: Kling for any
+#      beat needing one designed/cued motion + hold (a turn, a look — most
+#      of what's in the Jacob's Well breakdown), veo3_1_lite for pure
+#      atmospheric/establishing holds. No lip-sync anywhere — the whole
+#      Jacob's Well shot list was already designed around profile/off-screen/
+#      reaction coverage for every SPOKEN line specifically so this isn't a
+#      problem later; the one rule to keep enforcing: true close-ups only on
+#      wordless beats.
+#   3. Old, still-unresolved from before this session: Day of Atonement
+#      thumbnail (art-direction pick, needs the user); 23_The_Prepared_Belly
+#      (Jonah 1:17), optional, unconfirmed.
+#
+# ── SPEND TODAY: $45.00, 90 metered NBP stills, logged row-by-row in
+# `data/spend_ledger.jsonl` (episode `look_and_live` / `fresh_takes_poc`).
+# All of it was pre-flighted and OK'd in-conversation per round, per the
+# project's own /cost discipline — no batch went unquoted.
+#
+# ── ALL 95 STILLS FROM TODAY, ONE PAGE: `poc_living_sketchbook/
+# _ALL_STILLS_EVER.html` (built by `poc_living_sketchbook/
+# _build_all_stills.py`, safe to re-run if more get added tomorrow — it
+# regenerates from a fixed file list, doesn't scan directories itself, so
+# add new sections to the SECTIONS list at the top of that script when new
+# rounds happen). Worth opening this fresh tomorrow before deciding where to
+# pick back up — 95 images is a lot to hold in memory from one session's
+# handover notes alone.
+#
+# ── COMMITS THIS BLOCK: none. Everything above is untracked new folders
+# under `poc_living_sketchbook/` plus this session's `data/spend_ledger.jsonl`
+# additions. Have NOT asked the user about committing yet — ask tomorrow,
+# there's a lot of new untracked material now (dozens of PNGs across ~19 new
+# subfolders, several `.py` render/build scripts, this RESUME.md edit).
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-16 (continued session) — score-swap
 # POC: two candidates built (Eleven Music + the user's own Cathedral Loop
 # track); user wants to keep pursuing the Robert-Miles-"Children" direction
