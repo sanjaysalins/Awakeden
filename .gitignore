@@ -26,7 +26,7 @@ Thumbs.db
 .agent_bridge_*/
 
 # ── Local Claude Code session state + scratch (per-machine) ────
-.claude/
+.claude/*
 _video_bakeoff/
 _probe*.txt
 _gitcheck.txt
@@ -68,6 +68,14 @@ _website/COPY_REWRITE.md
 *.aac
 *.flac
 *.ogg
+
+# ── /swirls-of-life skill — production skill, tracked in-repo (unlike the
+# other still-local .claude/ skills/scratch above; overrides the media-file
+# ignores too, since its reference PNGs are the point) ─────────────────────
+!.claude/skills/
+.claude/skills/*
+!.claude/skills/swirls-of-life/
+!.claude/skills/swirls-of-life/**
 
 # Asset library (media — lives in _library/, backed up to Drive, regenerable via _build_plates.py)
 _library/

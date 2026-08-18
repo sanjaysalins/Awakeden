@@ -1,0 +1,77 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Living Water F14 — i2v bake-off</title>
+<style>
+  body { background:#141210; color:#EDE7D9; font-family: Georgia, serif; margin:0; padding:40px 24px 100px; }
+  h1 { font-size: 24px; font-weight: 400; }
+  .meta { color:#B3AB9B; font-family: ui-monospace, monospace; font-size: 13px; margin-bottom: 32px; line-height: 1.6; }
+  .grid { display:flex; flex-wrap:wrap; gap:24px; }
+  figure { margin:0; width: 460px; border: 1px solid #3A342B; padding: 14px; border-radius: 4px; }
+  figure.fail { opacity: 0.6; }
+  video { width:100%; display:block; background:#000; border-radius:3px; }
+  figcaption { margin-top:10px; font-size:14px; line-height:1.5; }
+  figcaption b { color:#EDE7D9; font-size:16px; }
+  .verdict { color:#D97C5C; font-size:13px; margin-top:4px; }
+  .cost { color:#7A9E7E; font-size:12px; font-family: ui-monospace, monospace; }
+</style></head><body>
+<h1>Living Water F14 — image-to-video bake-off</h1>
+<div class="meta">
+  Source still: raw_prompt_test/user_prompt_16x9_directgemini_newkey.png (the "SEQ: Living Water / Jesus &amp; Woman" F14 page)<br>
+  Same prompt sent to every model &middot; camera locked, text frozen, subtle localized motion only &middot; 16:9<br>
+  Provider: Higgsfield &middot; total spend this bake-off: ~$5.99 (seedance_2_5 failed twice, both refunded, $0 net)
+</div>
+<div class="grid">
+
+  <figure>
+    <video src="clips/kling3_0.mp4" controls loop muted playsinline></video>
+    <figcaption><b>Kling v3.0</b> (pro, sound off, 5s)
+      <div class="verdict">Held rock-solid: text stayed sharp, hand gesture + swirl motion read as intentional.</div>
+      <div class="cost">7.5cr (~$1.13)</div>
+    </figcaption>
+  </figure>
+
+  <figure>
+    <video src="clips/kling3_0_turbo.mp4" controls loop muted playsinline></video>
+    <figcaption><b>Kling v3.0 Turbo</b> (5s)
+      <div class="verdict">Nearly identical result to full Kling 3.0 at the same price — worth a closer look for a cheaper win.</div>
+      <div class="cost">7.5cr (~$1.13)</div>
+    </figcaption>
+  </figure>
+
+  <figure>
+    <video src="clips/veo3_1.mp4" controls loop muted playsinline></video>
+    <figcaption><b>Google Veo 3.1</b> (4s)
+      <div class="verdict">Stable, text intact, motion very subtle (beard/hand drift). Most expensive of the stable set.</div>
+      <div class="cost">11cr (~$1.65)</div>
+    </figcaption>
+  </figure>
+
+  <figure>
+    <video src="clips/veo3_1_lite.mp4" controls loop muted playsinline></video>
+    <figcaption><b>Google Veo 3.1 Lite</b> (4s)
+      <div class="verdict">Stable and cheap. Matches this project's known pattern: safe, but can read as closer to a still than real motion.</div>
+      <div class="cost">4cr (~$0.60)</div>
+    </figcaption>
+  </figure>
+
+  <figure>
+    <video src="clips/wan2_7.mp4" controls loop muted playsinline></video>
+    <figcaption><b>Wan 2.7</b> (5s)
+      <div class="verdict">Held up well, comparable stability to the Kling pair, worth including going forward.</div>
+      <div class="cost">7.5cr (~$1.13)</div>
+    </figcaption>
+  </figure>
+
+  <figure class="fail">
+    <video src="clips/seedance1_5.mp4" controls loop muted playsinline></video>
+    <figcaption><b>Seedance 1.5 Pro</b> (720p, 4s, sound off)
+      <div class="verdict">Broke down: panel 3 (the running woman) changes environment mid-clip — invents a doorway/interior not in the source. Title underline degrades slightly. Matches this project's prior finding that Seedance invents motion on multi-figure/action content.</div>
+      <div class="cost">2.4cr (~$0.36)</div>
+    </figcaption>
+  </figure>
+
+</div>
+<p style="color:#7A755E;font-size:13px;max-width:640px;margin-top:40px;">
+  Seedance 2.5 (omni_reference mode) failed both attempts server-side, credits fully refunded both times —
+  excluded from this comparison, not a style judgement.
+</p>
+</body></html>

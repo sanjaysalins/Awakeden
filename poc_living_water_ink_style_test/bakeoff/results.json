@@ -1,0 +1,32 @@
+[
+  {
+    "model": "seedance_2_5",
+    "ok": false,
+    "id": "9dc6af98-0002-4536-a19b-ec391a5a8ff7",
+    "error": "job failed"
+  },
+  {
+    "model": "seedance1_5",
+    "ok": true,
+    "id": "776d29c6-88a2-4f7d-8aa4-b915d13bce0c",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36Civ1twSiHHl6id4ulZrwA34hC/hf_20260818_212618_776d29c6-88a2-4f7d-8aa4-b915d13bce0c.mp4",
+    "path": "F:\\slk\\PycharmProjects\\JesusInTheBible\\poc_living_water_ink_style_test\\bakeoff\\clips\\seedance1_5.mp4",
+    "bytes": 7164681
+  },
+  {
+    "model": "wan2_7",
+    "ok": true,
+    "id": "775c8e16-6729-4fc6-bf2a-05f222f7a327",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36Civ1twSiHHl6id4ulZrwA34hC/hf_20260818_212626_775c8e16-6729-4fc6-bf2a-05f222f7a327.mp4",
+    "path": "F:\\slk\\PycharmProjects\\JesusInTheBible\\poc_living_water_ink_style_test\\bakeoff\\clips\\wan2_7.mp4",
+    "bytes": 4860411
+  },
+  {
+    "model": "veo3_1",
+    "ok": true,
+    "id": "aa3bffdd-96ac-463f-ae86-3c996349a3d8",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36Civ1twSiHHl6id4ulZrwA34hC/hf_20260818_212623_aa3bffdd-96ac-463f-ae86-3c996349a3d8.mp4",
+    "path": "F:\\slk\\PycharmProjects\\JesusInTheBible\\poc_living_water_ink_style_test\\bakeoff\\clips\\veo3_1.mp4",
+    "bytes": 3276393
+  }
+]
