@@ -58,7 +58,7 @@ hf generate create nano_banana_pro --prompt "<filled template>" ^
   --aspect_ratio 9:16 --resolution 2k --wait
 ```
 
-A shot with a recurring subject and no chained ref is a hard stop. Eyeball every PNG at 1:1 — baked spelling, ref likeness, layout held, dose matches stage, **AND (added 2026-08-20, Fable design-critique finding) no un-requested text anywhere on the page, and every MUST-SHOW element actually visible in frame** — both failures on the Gold Exemplar passed the original 4-point checklist; an independent review looking specifically for missing/extra elements is what caught them. A Higgsfield 503 is transient — retry, don't rewrite.
+A shot with a recurring subject and no chained ref is a hard stop. **A second aspect ratio of the SAME shot counts as a recurring shot for this rule too (added 2026-08-20, "The Hem" 16:9 finding)** — a brand-new character rendered without a ref in 9:16, then rendered again text-only for 16:9, is two independent generations and will drift exactly like two different shots would; chain her crop into the 16:9 render even though it's "the same page." Eyeball every PNG at 1:1 — baked spelling, ref likeness, layout held, dose matches stage, **AND (added 2026-08-20, Fable design-critique finding) no un-requested text anywhere on the page, and every MUST-SHOW element actually visible in frame** — both failures on the Gold Exemplar passed the original 4-point checklist; an independent review looking specifically for missing/extra elements is what caught them. A Higgsfield 503 is transient — retry, don't rewrite.
 
 ## Validation run — LOCKED 2026-08-19
 

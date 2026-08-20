@@ -508,14 +508,61 @@ proven, but promising enough to keep as the standing template default.
 - Stage 1 single-thread motion (untested; rule says hold it still).
 - Whether tone-only panel treatment actually prevents prop invention
   (inferred from one v3-vs-v4 contrast, not A/B'd).
-- ~~16:9 behavior of all of the above~~ — **checked 2026-08-20, held clean.**
-  Hem F04's exact validated 9:16 still + animation prompts, re-run with only
-  `--aspect_ratio 16:9` changed (same composition text, same prompt): still
-  QC passed (the stain still crossed the frame border into the margin, the
-  thread stayed separate from the halo), and the animation held too — no
-  stain regrowth, no speech bubble, the fingers-closing-into-a-grasp story
-  motion clearly visible. One real result, not yet a broad claim — only
-  this one shot tested in 16:9, and only on Kling.
-- The Fray motif (still-only, no animation claim to test — untested at all,
-  still or clip).
-- The speech-bubble fix above (diagnosed, not yet attempted).
+- ~~16:9 behavior of all of the above~~ — **checked 2026-08-20, held clean
+  on the ANIMATION side; the STILL side surfaced a real new rule.** Hem
+  F04's exact validated 9:16 animation prompt, re-run on a 16:9 still with
+  only the aspect ratio changed, held: no stain regrowth, no speech bubble,
+  the fingers-closing-into-a-grasp story motion clearly visible. But the
+  FIRST 16:9 still (jesus_ref chained, no ref for the woman — she's new to
+  this beat, only introduced on this page) drifted her likeness AND let the
+  wider canvas fill with more individuated crowd detail (including a
+  distinct red-mantled figure competing with the two leads) — user caught
+  both immediately on sight. **New rule: a new character's reference must be
+  chained from the FIRST render, and re-rendering the SAME shot in a second
+  aspect ratio counts as a second shot for this purpose** — two independent
+  text-only generations of the same new character will drift exactly like
+  two different shots would. Fix: chained a crop of her from the approved
+  9:16 render into a 16:9 regen — fixed the likeness AND, as a side effect,
+  the crowd calmed back down to match 9:16's balance (the same ref pressure
+  that locks a face seems to also anchor the model away from inventing
+  extra competing detail). That first ref+regen attempt then broke the
+  touch itself (her fingertips no longer reached the hem) — a separate,
+  ordinary render-variance failure, fixed by a plain same-prompt-same-refs
+  regen (LAW 4: regen, never adapt the clause). Net: 3 attempts to get a
+  correct 16:9 still (no ref → wrong likeness/crowd; ref'd → broken touch;
+  regen → clean), zero changes needed to the animation prompt itself.
+- The speech-bubble fix above (2 clean data points, not fully proven).
+- Fray F02 (the resolution page) and its still-only, between-pages
+  reconciliation — designed, not yet rendered.
+- **The swirl's symbolic placement on Doubting Thomas F01 — flagged by the
+  user, not yet addressed.** Design intent was "the life is in the
+  testimony Thomas won't receive" (the thread rises from the TELLING
+  disciple's hands, not Thomas), but on watch the user said it's "missing
+  what the swirls are meant to be... not sure what it was meant to be
+  here... feels very basic." A clever placement rationale that only makes
+  sense when explained in prose is not the same as a placement that reads
+  on its own, in motion, with no narration to lean on. Open question for
+  next session: does the swirl need a more legible visual language when its
+  meaning is indirect (tied to someone ELSE'S testimony, not the doubting
+  figure) — reconsider before treating this placement pattern as reusable.
+
+**DEAD INK / Fray — FIRST TEST, "Doubting Thomas" F01, 2026-08-20 (moved
+out of OPEN for the still+basic-animation mechanics; swirl MEANING stays
+open, see above):** John 20:24-25, Thomas apart from the other disciples
+who are testifying to him, Jesus deliberately absent from the page. Fray
+FR2 on Thomas — a second faint tremored line beside his true contour,
+scratchy overworked hatching — rendered clean against the other disciples'
+explicitly "steady, confident, single-struck" linework, no ghost/double-
+figure misread, on the FIRST still attempt. Animation held too: the fray
+stayed stable across the clip (page-global fence, same pattern as the
+Stain's fix — "every ink line... stays exactly as drawn — including the
+broken, tremored linework of Thomas's figure"), motion budget deliberately
+sent to the disciples instead of Thomas (near-hold: palm press + tense
+breath) so nothing forced the model to redraw his fray frame-by-frame.
+**Also validated the reference-chaining lesson pre-emptively for the first
+time**: Thomas's ref was cropped from the approved 9:16 render and chained
+into the 16:9 attempt from the start — no drift, no wasted regen cycle,
+unlike Hem's reactive fix. Both ratios passed technical QC (contact sheet +
+no defects); real playback verdict from the user: "ok" — functional but not
+yet meeting the bar the swirl's meaning should clear (see the open item
+above). F02 not yet rendered.
