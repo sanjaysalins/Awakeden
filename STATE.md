@@ -1,5 +1,58 @@
 # STATE.md — progress tracker
 
+**2026-08-20 DEAD INK motif system (Stain + Fray) validated end-to-end;
+animation template rebuilt through real failures; series plan drafted +
+independent-reviewed (degraded panel):** ⚠️ **URGENT: end-of-session ledger
+reconciliation found $95.02 of today's own HF spend (116 transactions, 88x
+Kling v3.0) vs. only ~15-18 renders this session can explicitly account
+for — a recurrence, at much larger scale, of the unresolved
+`project-unexplained-hf-spend` issue first seen 2026-08-18. NOT diagnosed.
+See `RESUME.md`'s top block for the full note — check this before trusting
+any cost estimate or spending more.**
+
+Otherwise, a full day rebuilding the animation side of the style from real
+failures: root-caused the 2026-08-19 swirl-escalation bug (growth/route
+verbs vs. bounded/orbit verbs, not "no cap"); built then REVERTED a $0
+python compositing layer after the user rejected it on watch ("keep the
+animation only driven by Kling and veo"); flipped model tiering to
+veo-first (half Kling's cost, Kling reserved for motions that must
+complete mid-clip); correctly diagnosed shot 7's 5-attempt failure as a
+STILL defect, not animation wording (LAW 0: design still+animation
+together, fixed first-try on a from-scratch redesign, `F07 v2`). Built the
+user's own idea — a companion visual system for sin/fear/doubt the gospel
+motif visibly overcomes — into **DEAD INK**: the Stain (sin, a cold stain
+soaked into the paper itself, crossing the frame border into the margin)
+and the Fray (fear/doubt, a figure's own linework destabilized). Both
+validated on real two-page sequences ("The Hem," Mark 5:25-34; "Doubting
+Thomas" F01, John 20:24-29), both aspect ratios checked, one real new rule
+found (a new character's ref must be chained from their FIRST render, even
+across aspect ratios of the same shot). One open design flag, not yet
+fixed: the swirl's symbolic placement on Thomas F01 doesn't read on watch
+("not sure what it was meant to be here... feels very basic").
+
+Also: dispatched Fable to design a full ongoing series (`SWIRLS_OF_LIFE_
+SERIES_PLAN.md` — a new series.json entry, 15-episode slate grounded in
+the REAL existing catalog, an OT->NT crossing-arc worked example, a
+next-six-builds order). Sent through `independent_review.py --type plan` —
+came back DEGRADED (2/5 reviewers: cursor + gemini hit a "Workspace Trust
+Required" CLI error, grok failed; codex + claude both verified against the
+real codebase and returned REVISE). Biggest finding: none of today's
+validated renders run through the actual production pipeline's gate
+system — all hand-rolled scripts. Do not treat this plan as locked.
+
+**Spend:** see the urgent note above — $95.02 actual today per ledger
+reconciliation, only ~$20-30 confidently attributable to reviewed renders.
+
+**Commits:** yes, several — the animation-template rebuild, DEAD INK, the
+16:9 fixes, and the series plan + review are all on `main`. Nothing large
+left uncommitted.
+
+**Next session:** see `RESUME.md`'s top block — the unexplained spend
+first, then fix the dead reviewers and re-run the independent review for
+real quorum before touching `series.json`.
+
+## ════════════════════════════════════════════════════════════════
+
 **2026-08-19 Swirls of Life north-star prompt pattern LOCKED; first real film
 shipped (John 4, both 9:16 and 16:9):** full day iterating from last night's
 prototype to a finished, dialogue-driven, scored 68.86s piece —

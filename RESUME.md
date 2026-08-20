@@ -1,4 +1,117 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-20 — DEAD INK motif system
+# (Stain + Fray) validated end-to-end; animation template (LAW 0-4) hardened
+# through real failures; a full Swirls-of-Life series plan drafted and sent
+# through independent review (degraded panel, REVISE). READ THIS FIRST,
+# supersedes every block below.
+#
+# ── ⚠️ URGENT, READ FIRST: $95.02 of TODAY'S own HF spend is unexplained.
+# End-of-session ledger reconciliation (`hf account transactions --size 100
+# --json`, paginated, all rows dated 2026-08-20) found 116 transactions /
+# 633.5 credits (~$95.02): 88x Kling v3.0 (567.5cr), 23x Nano Banana Pro
+# (46cr), 5x Google Veo 3.1 Lite (20cr). This session can only explicitly
+# account for ~15-18 distinct Kling renders it actually initiated and
+# reviewed results for — the transaction count is roughly 5x that. This is
+# a RECURRENCE of a smaller issue first flagged 2026-08-18 (memory
+# `project-unexplained-hf-spend`, ~4 stray transactions then, unresolved) —
+# now at a much larger scale. NOT diagnosed. Every per-render cost quoted
+# in conversation today assumed one billing event per render — if that
+# assumption is wrong, every quote given this session undercounted actual
+# spend. Full note in `data/spend_ledger.jsonl` (kind: "reconciliation").
+# **Before quoting or trusting any cost estimate on this project again:**
+# check the Higgsfield web dashboard's own job history directly (may show
+# submitter/session info the CLI list doesn't), and ask the user whether
+# another session/process had account access today. This is a real-money
+# problem, not a bookkeeping nit — treat it as the first thing to look at
+# tomorrow, before any new spend.
+#
+# ── WHAT GOT VALIDATED TODAY: a full day rebuilding the animation-prompt
+# side of Swirls of Life from real failures, ending in a genuinely new
+# capability. In order: (1) shot 6's swirl-escalation bug from 2026-08-19
+# got root-caused — not "no cap," but growth/route verbs vs. bounded/orbit
+# verbs, LAW 2 in `NORTH_STAR_ANIMATION_PROMPT.md`. (2) A user-rejected
+# detour: I started scoping a $0 python compositing layer to guarantee
+# "aliveness," got built once, user rejected it on watch ("keep the
+# animation only driven by Kling and veo... not python based animations") —
+# reverted, standing rule now locked. (3) Model tiering flipped to
+# veo-first (half Kling's cost); Kling stays first choice ONLY for a motion
+# that must complete mid-clip (a blink, a nod) — real evidence both ways
+# (Cross blink test, Storm bake-off). (4) Shot 7's repeated failure (5
+# tries across 2 days) got correctly diagnosed as a STILL defect, not an
+# animation-wording problem — LAW 0, design the still+animation together,
+# an animation-fragility checklist run BEFORE the still even renders.
+# Validated same-day on a from-scratch redesign (F07 v2), first-try clean.
+# (5) The user's own idea — a companion visual system for sin/fear/doubt
+# that the gospel motif visibly overcomes — became DEAD INK: the Stain
+# (sin, a cold stain soaked into the paper itself, crossing the frame
+# border into the margin) and the Fray (fear/doubt, a figure's own
+# linework destabilized). Both validated on real two-page sequences ("The
+# Hem," Mark 5:25-34; "Doubting Thomas" F01, John 20). Both aspect ratios
+# checked. A real new production rule came out of the 16:9 pass too: a new
+# character's reference must be chained from their FIRST render, even if
+# it's "the same shot" in a second aspect ratio — two independent
+# text-only generations of a brand-new character drift exactly like two
+# different shots would.
+#
+# ── ONE REAL OPEN DESIGN FLAG, NOT YET FIXED: the swirl's own symbolic
+# placement on Doubting Thomas F01 doesn't read on watch. Design intent was
+# "the thread rises from the disciple who's testifying, not Thomas,
+# because the life is in the testimony he rejects" — a clever rationale
+# that only makes sense explained in prose, not watching the clip cold.
+# User's own words: "not sure what it was meant to be here... feels very
+# basic." Fix this BEFORE building Thomas F02 or reusing this placement
+# pattern anywhere else — see `NORTH_STAR_ANIMATION_PROMPT.md`'s OPEN
+# ledger for the full note.
+#
+# ── THE SERIES PLAN: dispatched Fable to design an ongoing long+short
+# series using this format, spanning the whole Bible pointing at Jesus.
+# Full plan: `poc_living_water_ink_style_test/test_the_cross/
+# SWIRLS_OF_LIFE_SERIES_PLAN.md` (also published as a Claude.ai artifact).
+# Recommends a NEW `series.json` entry (`id: swirls-of-life`, paste-ready
+# JSON in the plan) curating 15 episodes old-to-new from across the
+# EXISTING catalog (3 of today's 4 test scenes are already scheduled
+# episodes in "Encounters"/"Miracles as Signs" — checked against the real
+# `data/series.json`, not invented). Real OT->NT crossing-arc example
+# (bronze serpent -> John 3:14) with a new "Stage-cap law": OT-type
+# episodes cap the swirl at Stage 1-2, Stage 3 only where fulfilment in
+# Christ is on-page. Sent through `independent_review.py --type plan` —
+# came back DEGRADED (only 2/5 reviewers completed: cursor and gemini both
+# failed with a "Workspace Trust Required" CLI error, grok also failed;
+# codex + claude both returned REVISE). Per the project's own quorum rule
+# (need 4/5), **do NOT treat this as a locked/final review** — full
+# findings in `poc_living_water_ink_style_test/test_the_cross/
+# _independent_review/20260820-213552/`. The single biggest finding
+# (Claude, high severity): NONE of today's validated renders actually run
+# through the real production pipeline (`cli_visual.py`'s scene-plan
+# gates, `cli_assemble.py`'s hero-bookend gates) — it's all hand-rolled
+# one-off scripts in `poc_living_water_ink_style_test/test_the_cross/`.
+# The plan's cost estimates also don't match real ledger history for
+# comparable long-form pieces (Passover ~$45, Bronze Serpent ~$90 vs. the
+# plan's $22-30 estimate) — needs redoing with ledger-backed numbers.
+#
+# ── START HERE TOMORROW, in priority order:
+#   1. The unexplained spend, above — figure out what's actually
+#      generating all those extra Kling charges before spending more.
+#   2. Fix the dead independent-review reviewers (cursor/gemini's
+#      "Workspace Trust Required" error) and re-run for a real 4/5+ quorum
+#      before treating the series plan as reviewed.
+#   3. Address the review's real findings (pipeline-integration gap, cost
+#      estimates, the "validated" label conflating 3 different readiness
+#      axes) and revise the plan accordingly.
+#   4. Only then: pick up the plan's own "next six builds" list, starting
+#      with finishing Thomas F02 + fixing the swirl-legibility flag.
+#
+# ── SPEND TODAY: see the urgent note at the top — $95.02 actual, only
+# ~$20-30 of which is confidently attributable to specific reviewed
+# renders. Full breakdown in `data/spend_ledger.jsonl`'s last entry.
+#
+# ── COMMITS: yes, several this session (unlike recent prior sessions) —
+# the full animation-template rebuild, the DEAD INK system, the 16:9 fixes,
+# and the series plan + review are all committed to `main`. Nothing large
+# left uncommitted as of this handover.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-19 — Swirls of Life north-star
 # prompt pattern LOCKED + first real film shipped in both formats. READ THIS
 # FIRST, supersedes every block below.
