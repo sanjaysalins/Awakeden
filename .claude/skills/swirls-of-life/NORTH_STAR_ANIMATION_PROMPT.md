@@ -508,7 +508,14 @@ proven, but promising enough to keep as the standing template default.
 - Stage 1 single-thread motion (untested; rule says hold it still).
 - Whether tone-only panel treatment actually prevents prop invention
   (inferred from one v3-vs-v4 contrast, not A/B'd).
-- 16:9 behavior of all of the above (every animation test so far was 9:16).
+- ~~16:9 behavior of all of the above~~ — **checked 2026-08-20, held clean.**
+  Hem F04's exact validated 9:16 still + animation prompts, re-run with only
+  `--aspect_ratio 16:9` changed (same composition text, same prompt): still
+  QC passed (the stain still crossed the frame border into the margin, the
+  thread stayed separate from the halo), and the animation held too — no
+  stain regrowth, no speech bubble, the fingers-closing-into-a-grasp story
+  motion clearly visible. One real result, not yet a broad claim — only
+  this one shot tested in 16:9, and only on Kling.
 - The Fray motif (still-only, no animation claim to test — untested at all,
   still or clip).
 - The speech-bubble fix above (diagnosed, not yet attempted).
