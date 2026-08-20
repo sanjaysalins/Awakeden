@@ -1,0 +1,342 @@
+[
+  {
+    "shot": 1,
+    "label": "wide_the_ask",
+    "ratio": "9:16",
+    "model": "veo3_1_lite",
+    "stem": "shot01_wide_the_ask",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 1,
+    "label": "wide_the_ask",
+    "ratio": "9:16",
+    "model": "veo3_1_lite",
+    "stem": "shot01_wide_the_ask",
+    "ok": true,
+    "error": null,
+    "skipped": true
+  },
+  {
+    "shot": 1,
+    "label": "wide_the_ask",
+    "ratio": "16:9",
+    "model": "veo3_1_lite",
+    "stem": "shot01_wide_the_ask",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 2,
+    "label": "medium_2shot_living_water",
+    "ratio": "9:16",
+    "model": "veo3_1_lite",
+    "stem": "shot02_medium_2shot_living_water",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 2,
+    "label": "medium_2shot_living_water",
+    "ratio": "16:9",
+    "model": "veo3_1_lite",
+    "stem": "shot02_medium_2shot_living_water",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 3,
+    "label": "2shot_breaking_to_singles",
+    "ratio": "9:16",
+    "model": "veo3_1_lite",
+    "stem": "shot03_2shot_breaking_to_singles",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 3,
+    "label": "2shot_breaking_to_singles",
+    "ratio": "16:9",
+    "model": "veo3_1_lite",
+    "stem": "shot03_2shot_breaking_to_singles",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 4,
+    "label": "closeup_jesus_five_husbands",
+    "ratio": "9:16",
+    "model": "kling3_0",
+    "stem": "shot04_closeup_jesus_five_husbands",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 4,
+    "label": "closeup_jesus_five_husbands",
+    "ratio": "16:9",
+    "model": "kling3_0",
+    "stem": "shot04_closeup_jesus_five_husbands",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 5,
+    "label": "compressed_2shot_spirit_truth",
+    "ratio": "9:16",
+    "model": "veo3_1_lite",
+    "stem": "shot05_compressed_2shot_spirit_truth",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 5,
+    "label": "compressed_2shot_spirit_truth",
+    "ratio": "16:9",
+    "model": "veo3_1_lite",
+    "stem": "shot05_compressed_2shot_spirit_truth",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 6,
+    "label": "held_single_jesus_i_am_he",
+    "ratio": "9:16",
+    "model": "kling3_0",
+    "stem": "shot06_held_single_jesus_i_am_he",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 6,
+    "label": "held_single_jesus_i_am_he",
+    "ratio": "16:9",
+    "model": "kling3_0",
+    "stem": "shot06_held_single_jesus_i_am_he",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 7,
+    "label": "wide_moving_she_runs",
+    "ratio": "9:16",
+    "model": "kling3_0",
+    "stem": "shot07_wide_moving_she_runs",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 7,
+    "label": "wide_moving_she_runs",
+    "ratio": "16:9",
+    "model": "kling3_0",
+    "stem": "shot07_wide_moving_she_runs",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 8,
+    "label": "wide_landing_town_arrives",
+    "ratio": "9:16",
+    "model": "veo3_1_lite",
+    "stem": "shot08_wide_landing_town_arrives",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 8,
+    "label": "wide_landing_town_arrives",
+    "ratio": "16:9",
+    "model": "veo3_1_lite",
+    "stem": "shot08_wide_landing_town_arrives",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 2,
+    "label": "medium_2shot_living_water",
+    "ratio": "9:16",
+    "model": "veo3_1_lite",
+    "stem": "shot02_medium_2shot_living_water",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 2,
+    "label": "medium_2shot_living_water",
+    "ratio": "16:9",
+    "model": "veo3_1_lite",
+    "stem": "shot02_medium_2shot_living_water",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 4,
+    "label": "closeup_jesus_five_husbands",
+    "ratio": "9:16",
+    "model": "kling3_0",
+    "stem": "shot04_closeup_jesus_five_husbands",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 4,
+    "label": "closeup_jesus_five_husbands",
+    "ratio": "16:9",
+    "model": "kling3_0",
+    "stem": "shot04_closeup_jesus_five_husbands",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 6,
+    "label": "held_single_jesus_i_am_he",
+    "ratio": "9:16",
+    "model": "kling3_0",
+    "stem": "shot06_held_single_jesus_i_am_he",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 6,
+    "label": "held_single_jesus_i_am_he",
+    "ratio": "16:9",
+    "model": "kling3_0",
+    "stem": "shot06_held_single_jesus_i_am_he",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 7,
+    "label": "wide_moving_she_runs",
+    "ratio": "9:16",
+    "model": "kling3_0",
+    "stem": "shot07_wide_moving_she_runs",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 7,
+    "label": "wide_moving_she_runs",
+    "ratio": "16:9",
+    "model": "kling3_0",
+    "stem": "shot07_wide_moving_she_runs",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 4,
+    "label": "closeup_jesus_five_husbands",
+    "ratio": "9:16",
+    "model": "veo3_1_lite",
+    "stem": "shot04_closeup_jesus_five_husbands",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 4,
+    "label": "closeup_jesus_five_husbands",
+    "ratio": "16:9",
+    "model": "veo3_1_lite",
+    "stem": "shot04_closeup_jesus_five_husbands",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 6,
+    "label": "held_single_jesus_i_am_he",
+    "ratio": "9:16",
+    "model": "veo3_1_lite",
+    "stem": "shot06_held_single_jesus_i_am_he",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 6,
+    "label": "held_single_jesus_i_am_he",
+    "ratio": "16:9",
+    "model": "veo3_1_lite",
+    "stem": "shot06_held_single_jesus_i_am_he",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 7,
+    "label": "wide_moving_she_runs",
+    "ratio": "9:16",
+    "model": "veo3_1_lite",
+    "stem": "shot07_wide_moving_she_runs",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 7,
+    "label": "wide_moving_she_runs",
+    "ratio": "16:9",
+    "model": "veo3_1_lite",
+    "stem": "shot07_wide_moving_she_runs",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 7,
+    "label": "wide_moving_she_runs",
+    "ratio": "16:9",
+    "model": "veo3_1_lite",
+    "stem": "shot07_wide_moving_she_runs",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 7,
+    "label": "wide_moving_she_runs",
+    "ratio": "16:9",
+    "model": "veo3_1_lite",
+    "stem": "shot07_wide_moving_she_runs",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  },
+  {
+    "shot": 7,
+    "label": "wide_moving_she_runs",
+    "ratio": "16:9",
+    "model": "kling3_0",
+    "stem": "shot07_wide_moving_she_runs",
+    "ok": true,
+    "error": null,
+    "skipped": false
+  }
+]

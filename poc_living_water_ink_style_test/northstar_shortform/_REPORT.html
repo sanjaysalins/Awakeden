@@ -1,0 +1,168 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>The Well — north-star pattern lock</title>
+<style>
+  :root { --bg:#14120f; --bg2:#1b1814; --paper:#f2ead8; --ink:#EDE7D9; --dim:#B3AB9B; --dimmer:#7A755E;
+    --gold:#D4AF6A; --blue:#5B8DBE; --line:#3A342B; --good:#7A9E7E; --bad:#D97C5C; }
+  * { box-sizing: border-box; }
+  body { background:var(--bg); color:var(--ink); font-family: Georgia, serif; margin:0; padding:0 0 100px; line-height:1.55; }
+  .wrap { max-width: 1100px; margin:0 auto; padding: 46px 26px 0; }
+  header { border-bottom: 2px solid var(--line); padding-bottom: 24px; margin-bottom: 34px; }
+  h1 { font-size: 28px; font-weight: 400; margin: 0 0 8px; color: var(--paper); }
+  .sub { color: var(--dim); font-size: 15px; margin-bottom: 12px; }
+  .meta { color: var(--dimmer); font-family: ui-monospace, monospace; font-size: 12px; line-height:1.7; }
+  .badge { display:inline-block; font-family: ui-monospace, monospace; font-size:11.5px; padding:3px 10px;
+    border-radius:20px; margin-right:8px; border:1px solid var(--gold); color:var(--gold);
+    background: rgba(212,175,106,0.1); }
+  section { margin-bottom: 50px; }
+  h2 { font-size: 21px; font-weight: 400; color: var(--paper); border-left: 3px solid var(--gold); padding-left: 14px; }
+  .card { background: var(--bg2); border: 1px solid var(--line); border-radius: 6px; padding: 22px 26px; }
+  .videos { display:flex; gap: 24px; flex-wrap: wrap; }
+  .videos figure { margin:0; }
+  .videos.tall video { width: 300px; }
+  .videos.wide video { width: 480px; }
+  video { display:block; background:#000; border-radius:4px; border:1px solid var(--line); }
+  figcaption { color: var(--dim); font-size: 13px; margin-top: 8px; font-family: ui-monospace, monospace; }
+  table.bugs { border-collapse: collapse; width:100%; margin-top: 12px; }
+  table.bugs td, table.bugs th { border: 1px solid var(--line); padding: 10px 14px; text-align:left; font-size: 13.5px; vertical-align: top; }
+  table.bugs th { color: var(--gold); font-weight: 400; font-family: ui-monospace, monospace; }
+  .callout { border: 1px solid var(--gold); background: rgba(212,175,106,0.06); border-radius:6px; padding:16px 20px; font-size:14px; margin-top:16px; }
+  .callout.bad { border-color: var(--bad); background: rgba(217,124,92,0.06); }
+  .callout b { color: var(--gold); }
+  .callout.bad b { color: var(--bad); }
+  ul.tight li { margin-bottom: 8px; font-size: 14.5px; }
+  table.cost { border-collapse: collapse; margin-top: 10px; font-size: 13.5px; }
+  table.cost td, table.cost th { border: 1px solid var(--line); padding: 6px 14px; }
+  table.cost th { color: var(--gold); font-weight: 400; font-family: ui-monospace, monospace; text-align:left; }
+  table.cost td.n { text-align: right; font-family: ui-monospace, monospace; }
+  footer { color: var(--dimmer); font-family: ui-monospace, monospace; font-size: 11.5px; text-align:center; margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--line); }
+</style></head><body>
+<div class="wrap">
+
+<header>
+  <h1>The Well — north-star pattern locked, film shipped (rev 2)</h1>
+  <div class="sub">John 4:1-30, 39-42 · Swirls of Life ink style · 68.86s · dialogue + narration + Robert-Miles-direction score, both formats</div>
+  <div class="meta">
+    <span class="badge">PATTERN LOCKED</span><span class="badge">HF CLI only</span><span class="badge">Fable-authored prompts</span><span class="badge">rev 2 — user QC pass</span><br>
+    Shot list + KJV lines: <code>poc_living_sketchbook/_well_scene_coverage/_JACOBS_WELL_STRUCTURE.html</code><br>
+    North-star template: <code>.claude/skills/swirls-of-life/NORTH_STAR_PROMPT.md</code><br>
+    Narration folder: <code>PythonProject1/jesus/narration/SwirlsOfLife_JohnFour_POC/v1/</code>
+  </div>
+</header>
+
+<section>
+  <div class="callout"><b>Rev 2 (this pass):</b> the user watched rev 1 and caught real defects a frame-by-frame contact-sheet review confirmed. Fixed: dead freeze-holds during long narration stretches (replaced with a $0 Ken-Burns push), a hallucinated baked word appearing mid-clip, a blink that ended with eyes closed instead of open, a mouth visibly speaking with no matching audio, and swapped the score to the reused Robert-Miles/"Children"-direction cue. Full detail below.</div>
+</section>
+
+<section>
+  <h2>The two finished cuts</h2>
+  <div class="card">
+    <div class="videos tall">
+      <figure><video src="THE_WELL_9x16.mp4" controls loop muted playsinline></video><figcaption>THE_WELL_9x16.mp4 — 68.86s</figcaption></figure>
+    </div>
+    <div style="height:1px"></div>
+    <div class="videos wide" style="margin-top:20px;">
+      <figure><video src="THE_WELL_16x9.mp4" controls loop muted playsinline></video><figcaption>THE_WELL_16x9.mp4 — 68.86s</figcaption></figure>
+    </div>
+    <div class="callout"><b>4 voices, real dialogue:</b> narrator (existing) + jesus (existing) + <b>woman</b> (new — Olivia J, ElevenLabs, first use anywhere in this pipeline) + <b>townsfolk</b> (new, reused disciples voice). 3 substantial KJV quote spans (Rule-8 cap) + several free-tier quoted fragments + narrator connective prose. Landing hold GREEN (<code>check_landing_hold.py</code>: v=68.80s a=68.86s gap=-0.06s, both ratios). Score: the reused Robert-Miles/"Children"-direction <code>dna_d</code> cue from the Look-and-Live score-swap POC, refit to this piece's length at $0 (reused the existing raw generation).</div>
+  </div>
+</section>
+
+<section>
+  <h2>Rev 2 — the 5 fixes from the user's QC pass</h2>
+  <div class="card">
+    <table class="bugs">
+      <tr><th>issue</th><th>what a contact-sheet review found</th><th>fix</th></tr>
+      <tr>
+        <td>Dead freeze points during narration</td>
+        <td>Several slots ran 7-11s of narration against a 4-5s AI clip — the rest was a literal frozen last frame while the narrator kept talking.</td>
+        <td><code>assemble.py</code> rewritten: real AI motion plays first, then a slow, subtle Ken-Burns push (<code>zoompan</code>, capped at 1.05x, reached exactly at slot end) fills the remainder on that clip's own last frame — continuous motion throughout, never a dead hold, $0.</td>
+      </tr>
+      <tr>
+        <td>Hallucinated baked text mid-clip</td>
+        <td>Shot 2's panel 1 was blank at frame 0; by frame 15 the word "Jesus" had appeared and stayed, in a region the prompt explicitly said to freeze. The model does not reliably obey "stay frozen."</td>
+        <td>New <code>lock_panels.py</code>: composites the SOURCE STILL's own title/panel row back onto every frame of every clip (all 16, not just the fixed 4) — that region is now pixel-guaranteed static, sourced from the real approved art, regardless of what the video model does there.</td>
+      </tr>
+      <tr>
+        <td>Blink ended with eyes closed (shot 4)</td>
+        <td>The prompt said "one deliberate blink... gaze settles on the viewer" — the model closed his eyes and left them closed at the end.</td>
+        <td>Rewrote the motion prompt to state explicitly: closes, then opens fully, ending wide open and steady — confirmed fixed on re-render.</td>
+      </tr>
+      <tr>
+        <td>Talking mouth with no matching audio (shot 6, user's point 4)</td>
+        <td>My own prompt said "Jesus speaks the line once, his mouth... completing one deliberate motion of speech" — exactly what caused it.</td>
+        <td>Removed all speaking/mouth language from every close-up prompt; added an explicit "lips stay closed and completely still, not speaking" clause. Confirmed fixed — mouth closed in all 4 sampled frames on re-render.</td>
+      </tr>
+      <tr>
+        <td>Swirl over-escalation (shots 6 &amp; 7)</td>
+        <td>The blue-gold ink motif grew far past the still's calibrated dosage — a small directed thread became a large flowing river.</td>
+        <td>Tightened prompts with explicit size caps ("stays a thin calligraphic line... barely larger than the very first frame"). Improved substantially on re-render — no longer a runaway river — but still grows more than intended. <b>Not fully solved</b>: real fix is the swirl-as-separate-deterministic-layer rebuild, scoped as a follow-up, not done in this pass.</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>Two real pipeline bugs found and fixed today</h2>
+  <div class="card">
+    <table class="bugs">
+      <tr><th>where</th><th>bug</th><th>fix</th></tr>
+      <tr>
+        <td><code>PythonProject1/jesus/narration_pipeline.py</code></td>
+        <td>The round-trip prose-preservation check (compares narration.md word-for-word against the tagged file, to catch a tagger that drops/paraphrases content) predates this project's <code>**[speaker]**</code> header convention and its title/status front-matter — it was counting header tokens and front-matter as "spoken content the tagger dropped," blocking every multi-voice piece written in the current canonical format.</td>
+        <td>Added <code>strip_block_headers()</code> — strips <code>**[speaker]**</code> header lines and the leading front-matter block (everything up to the first <code>---</code>) from the comparison, mirroring what this project's own parser already does.</td>
+      </tr>
+      <tr>
+        <td><code>pipeline/narration_parse.py</code></td>
+        <td><code>_parse_xml_blocks()</code> (parses a rendered <code>narration-tagged.md</code> for this project's own lock/parity gate) only captured text literally inside <code>&lt;speaker&gt;</code> tags — any narrator prose sitting between/around them (the correct, real convention — matches <code>per_turn_synth.py</code>'s own turn-parser) was silently dropped from the spoken-text hash. A real multi-voice piece could lock against only its quoted dialogue, missing most of its actual narration.</td>
+        <td>Rewrote <code>_parse_xml_blocks()</code> to capture inter-tag gaps as narrator blocks (mirroring <code>per_turn_synth.py</code>'s <code>parse_turns</code> exactly) and strip leading <code>[audio-tag]</code> sequences from every segment. Updated the fail-closed integrity check accordingly.</td>
+      </tr>
+    </table>
+    <div class="callout"><b>Why this matters beyond today:</b> any future multi-voice piece written in this project's own canonical narration.md format would have hit the same wall the first time someone actually ran <code>cli_lock.py</code> against it — this was latent, not something I broke.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Rev 5/6 — the freeze finally solved properly, $0</h2>
+  <div class="card">
+    <p style="margin-top:0;">Every dead hold now carries a devised, per-shot fill instead of a flat freeze — built with a Fable-authored plan grounded in this project's own existing device toolkit (<code>panel_animator/</code>), calibrated and verified before the full build, not just theorized:</p>
+    <table class="bugs">
+      <tr><th>shots</th><th>device</th><th>why</th></tr>
+      <tr><td>1, 5, 7</td><td>Lamplight (<code>line_boil</code> + <code>raking_light</code>)</td><td>calm/atmospheric holds, or (shot 7) a fragile clip not worth more processing risk</td></tr>
+      <tr><td>2, 3, 6</td><td>Live Ink Hold (new: <code>ink_bloom.py</code>)</td><td>the swirl itself deepens at a manually-verified point — color-mask auto-detection was tried first and rejected (it lit up Jesus's robe, not the swirl)</td></tr>
+      <tr><td>4</td><td>Halo Tour (<code>focal_tour.render_clip</code>)</td><td>a soft light visits each of the page's 3 panels in turn — no crop, no resolution loss</td></tr>
+    </table>
+    <p>Every device's amplitude is modulated by <code>held_breath</code>'s energy envelope, built from REAL forced-aligned word timing (this narration had none before — generated via <code>veed_io/aligner.py</code>). Entirely $0 — no new AI generation for any of it.</p>
+  </div>
+</section>
+
+<section>
+  <h2>What's still open</h2>
+  <ul class="tight">
+    <li>Swirl-motif escalation on the raw AI clips themselves (shots 6 &amp; 7's natural motion, not the fill) — tighter prompt language reined it in substantially but not completely. Still a real architectural item if pursued further.</li>
+    <li>No SFX bed or captions yet (this project's own standing defaults on every finished clip) — the ask was dialogue + narration + score specifically; SFX/captions are a natural next pass.</li>
+    <li>Hero-bookend discipline (main pipeline's AS-G6/AS-G7: open AND close on Christ) wasn't enforced here — this cut opens wide on both figures and lands on the crowd+Jesus, not a strict Christ-alone bookend.</li>
+    <li>Not yet panel-reviewed / red-teamed — this is a proof cut, not a LOCKED production piece.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Spend</h2>
+  <div class="card">
+    <table class="cost">
+      <tr><th>stage</th><th>what</th><th class="n">units</th><th class="n">~USD</th></tr>
+      <tr><td>stills</td><td>nano_banana_pro, 8 shots x 2 ratios (1 retry)</td><td class="n">17</td><td class="n">$5.10</td></tr>
+      <tr><td>audio</td><td>ElevenLabs multi-voice synth, 12 turns</td><td class="n">—</td><td class="n">$0.53</td></tr>
+      <tr><td>score</td><td>reused Look-and-Live dna_d raw generation, refit only</td><td class="n">0</td><td class="n">$0.00</td></tr>
+      <tr><td>animation (initial)</td><td>6 Kling3.0 + 10 veo3_1_lite</td><td class="n">16</td><td class="n">$12.75</td></tr>
+      <tr><td>animation (prompt fixes)</td><td>re-render of shots 2/4/6/7 x 2 ratios, corrected prompts</td><td class="n">8</td><td class="n">$7.95</td></tr>
+      <tr><td>animation (Kling&rarr;veo switch)</td><td>shots 4/6/7 re-rendered on veo3_1_lite</td><td class="n">6</td><td class="n">$3.60</td></tr>
+      <tr><td>shot 7 (16:9) troubleshooting</td><td>3 regens (2 veo, 1 Kling) to clear a persistent hallucination</td><td class="n">3</td><td class="n">$2.33</td></tr>
+      <tr><td>freeze-fill devices</td><td>line_boil / raking_light / ink_bloom / focal_tour / held_breath</td><td class="n">—</td><td class="n">$0.00</td></tr>
+      <tr><td><b>total</b></td><td></td><td></td><td class="n"><b>$33.26</b></td></tr>
+    </table>
+  </div>
+</section>
+
+<footer>Swirls of Life — John 4 north-star pattern lock · 2026-08-19 · JesusInTheBible engine</footer>
+</div>
+</body></html>

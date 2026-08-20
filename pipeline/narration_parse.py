@@ -94,11 +94,30 @@ _XML_SPEAKER = re.compile(r'<speaker\s+name="([^"]*)"\s*>(.*?)</speaker>',
 
 
 def _parse_xml_blocks(md: str) -> list[Block]:
+    """Extract (speaker, text) blocks from a rendered narration-tagged.md XML file.
+
+    Mirrors per_turn_synth.py's own `parse_turns`: text BETWEEN/AROUND <speaker>
+    tags is an implicit narrator turn — that script synthesizes it. A prior
+    version of this function only captured <speaker>-wrapped spans, silently
+    dropping every un-wrapped narrator beat from the lock/parity hash (a real
+    piece with real narrator prose could lock/verify against only its quoted
+    dialogue, missing most of the actual spoken text). Leading [tag][tag2]
+    audio-tag sequences are stripped from every resulting segment — delivery
+    directions, not spoken text — matching _parse_prose_blocks's own handling.
+    """
     blocks: list[Block] = []
+    pos = 0
     for m in _XML_SPEAKER.finditer(md):
-        text = re.sub(r"\s+", " ", m.group(2)).strip()
+        pre = _LEADING_BRACKET_TAGS.sub("", re.sub(r"\s+", " ", md[pos:m.start()]).strip(), count=1).strip()
+        if pre:
+            blocks.append(Block(speaker="narrator", ref=None, text=pre))
+        text = _LEADING_BRACKET_TAGS.sub("", re.sub(r"\s+", " ", m.group(2)).strip(), count=1).strip()
         if text:
             blocks.append(Block(speaker=m.group(1).strip().lower(), ref=None, text=text))
+        pos = m.end()
+    tail = _LEADING_BRACKET_TAGS.sub("", re.sub(r"\s+", " ", md[pos:]).strip(), count=1).strip()
+    if tail:
+        blocks.append(Block(speaker="narrator", ref=None, text=tail))
     return blocks
 
 
@@ -138,10 +157,13 @@ def parse_blocks(md: str) -> list[Block]:
     Fail-closed on empty."""
     low = md.lower()
     if "<speaker" in low:
+        md = _HTML_COMMENT.sub("", md)  # strip the pipeline sentinel before scanning
         blocks = _parse_xml_blocks(md)
         # fail-closed: if there are <speaker tokens we couldn't all parse, refuse
-        # (never hash/verify partial text from a malformed tag)
-        if not blocks or len(blocks) != low.count("<speaker"):
+        # (never hash/verify partial text from a malformed tag). Blocks may now
+        # outnumber <speaker> tags (narrator gaps add their own blocks), so the
+        # integrity check is on the REGEX MATCH count, not the block count.
+        if not blocks or len(_XML_SPEAKER.findall(md)) != low.count("<speaker"):
             raise EmptyNarrationError("malformed / unparseable <speaker> tag(s) in tagged file")
         return blocks
     blocks: list[Block] = []

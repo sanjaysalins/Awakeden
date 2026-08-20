@@ -1,5 +1,42 @@
 # STATE.md — progress tracker
 
+**2026-08-19 Swirls of Life north-star prompt pattern LOCKED; first real film
+shipped (John 4, both 9:16 and 16:9):** full day iterating from last night's
+prototype to a finished, dialogue-driven, scored 68.86s piece —
+`poc_living_water_ink_style_test/northstar_shortform/THE_WELL_9x16.mp4` /
+`THE_WELL_16x9.mp4`. Added a 4th voice (the Samaritan woman — genuinely new
+to this project, config.py's VOICE_MAP had zero female voices before today)
+plus a 3rd (townsfolk). Reused the paused Look-and-Live Robert-Miles score
+direction ($0 refit) rather than a fresh brief. Found and fixed 2 real bugs
+in shared audio-pipeline infra (`narration_pipeline.py`'s round-trip check,
+`pipeline/narration_parse.py`'s XML-block parser), both pre-existing, both
+would have blocked any future multi-voice piece the first time someone
+actually ran `cli_lock.py`. Iterated hard on the "freeze gap" problem (raw
+AI clips run ~4s, narration slots run up to ~11s): tried and rejected a
+Ken-Burns zoom and a panel hard-cut gallery tour, landed on a proper
+per-shot devised fill (Lamplight / Live Ink Hold / Halo Tour) built from
+this project's own `panel_animator/` device toolkit + one new small module
+(`ink_bloom.py`) — $0, no new AI spend for any of it. Also chased down and
+fixed a real corrupted clip (shot 7, 16:9 — veo3_1_lite kept inventing a
+pot in a runner's hands across 2 attempts even with explicit positive-frame
+prompting; Kling3.0 rendered it correctly on the 3rd try). Full rev-by-rev
+detail in `poc_living_water_ink_style_test/northstar_shortform/_REPORT.html`;
+locked lessons in `.claude/skills/swirls-of-life/NORTH_STAR_PROMPT.md`.
+
+**Spend:** $33.26 total for the day (episode `SwirlsOfLife_JohnFour_POC` in
+the ledger).
+
+**Commits:** none — everything is untracked (new POC folder + skill doc
+edits + the 2 shared-infra bug fixes). Ask the user before committing.
+
+**Next session:** user's own call — "scope for improvement [remains], but
+let's stop for tonight, tomorrow work on another POC." Topic not chosen;
+ask first. See `RESUME.md`'s top block for the full open-items list
+(swirl-motif escalation on raw clips is the one real unresolved item if
+this style gets picked back up).
+
+## ════════════════════════════════════════════════════════════════
+
 **2026-08-16 (continued session) Score-swap POC: two candidates built for
 Look and Live (Eleven Music + the user's own Cathedral Loop track); user
 wants to keep pursuing the Robert-Miles-"Children" direction specifically,

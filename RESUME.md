@@ -1,4 +1,77 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-19 — Swirls of Life north-star
+# prompt pattern LOCKED + first real film shipped in both formats. READ THIS
+# FIRST, supersedes every block below.
+#
+# ── WHAT SHIPPED: `THE_WELL_9x16.mp4` / `THE_WELL_16x9.mp4` (both 68.86s),
+# `poc_living_water_ink_style_test/northstar_shortform/` — John 4, the woman
+# at the well, 8-shot short-form structure from `poc_living_sketchbook/
+# _well_scene_coverage/_JACOBS_WELL_STRUCTURE.html`. Real dialogue (4 voices:
+# narrator/jesus existing, woman/townsfolk NEW — woman didn't exist anywhere
+# in this project before today, see config.py's own comment about the gap),
+# narration, and the reused Robert-Miles/"Children"-direction score
+# (dna_d, from the paused Look-and-Live score-swap POC, refit at $0). Full
+# build log + spend table: `_SWIRLS_OF_LIFE_FULL_REPORT.html` (last night's
+# swirls-of-life recap) and `northstar_shortform/_REPORT.html` (today's, the
+# one that matters — has the whole session's journey, rev-by-rev).
+#
+# ── THE LOCKED PATTERN: `.claude/skills/swirls-of-life/NORTH_STAR_PROMPT.md`
+# — read this before touching this style again. It has the canonical prompt
+# template (validated both aspect ratios), AND a long "animation-tier
+# lessons" section with real, hard-won findings from today — do not
+# re-litigate any of these without a new reason:
+#   - panels/text must never be trusted to "stay frozen" from prompting
+#     alone (a real hallucination was caught); a panel-lock compositing fix
+#     was tried, worked for that bug, but caused a WORSE side effect (a
+#     hard seam-look between the now-100%-static top and 100%-animated
+#     bottom) and was REMOVED — current pipeline trusts prompting only.
+#   - freeze-fill history: tried hard freeze -> Ken-Burns zoom -> panel
+#     gallery-cuts -> back to plain freeze -> finally a proper per-shot
+#     devised fill (Lamplight / Live Ink Hold / Halo Tour, all $0, reusing
+#     `panel_animator/`'s existing device toolkit + a new small module
+#     `ink_bloom.py`). This last one is the real answer — don't regress to
+#     plain freeze without a reason.
+#   - Kling3.0 had a real line/seam artifact on this style (confirmed in
+#     the RAW render, not this project's fault) but it's NOT universal —
+#     one shot (7) actually rendered better on Kling than veo3_1_lite,
+#     which kept inventing a pot in a runner's hands (survived even an
+#     explicit positive-framing prompt fix). Try the other model when one
+#     is stuck, don't just reroll the same one repeatedly.
+#   - a NEW real capability: `narration.alignment.json` — this piece's
+#     forced word-level timing, generated via `veed_io/aligner.py`'s
+#     `forced_align_script` (WhisperX, CPU, $0). Didn't exist for this
+#     narration before today; needed for `held_breath`'s energy envelope.
+#
+# ── STILL OPEN (real, not urgent): swirl-motif escalation on the RAW AI
+# clips themselves (shots 6/7's own motion, not the fill layer) is improved
+# but not solved — tighter prompts helped, didn't fix it. The real fix
+# (pull the swirl out of AI generation, animate it as its own deterministic
+# layer) is scoped but not built. Also: no SFX bed, no captions (this
+# project's own standing defaults elsewhere), not panel/red-team reviewed —
+# this is a proof cut, not a LOCKED production piece. Hero-bookend-on-Christ
+# discipline (AS-G6/G7) wasn't enforced either.
+#
+# ── SPEND TODAY: $33.26 total (`SwirlsOfLife_JohnFour_POC` in the ledger) —
+# stills ~$5, audio ~$0.53, animation + fixes ~$26.63 (several real bugs
+# needed regens, itemized in the report), the freeze-fill devices themselves
+# were $0 (all deterministic Python/ffmpeg, no new AI spend).
+#
+# ── COMMITS: none — everything today is untracked new files under
+# `poc_living_water_ink_style_test/northstar_shortform/`, plus edits to
+# `.claude/skills/swirls-of-life/NORTH_STAR_PROMPT.md`, plus two small
+# patches to shared infra (`PythonProject1/jesus/narration_pipeline.py`'s
+# round-trip check, `pipeline/narration_parse.py`'s XML-block parser — both
+# real bug fixes found while locking this pattern, documented in this
+# project's own `_REPORT.html`). Ask the user before committing.
+#
+# ── START HERE TOMORROW: the user's own words ending today — "there is
+# scope for improvement, but let's stop for tonight and tomorrow work on
+# another POC." A NEW POC, topic not yet chosen — ask first, don't assume
+# it's more Swirls-of-Life work. If it IS a continuation of this style,
+# the swirl-escalation item above is the natural next thing to tackle.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-18 — Jesus-POV format/style search,
 # 95 stills, no style locked yet, but a real story-craft asset and a real
 # production bug both came out of it. READ THIS FIRST, supersedes every block
