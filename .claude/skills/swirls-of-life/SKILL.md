@@ -65,6 +65,24 @@ well) at both 9:16 and 16:9, on Higgsfield's `nano_banana_pro`.
 
 ## Steps
 
+0. **Design the whole shot list as ONE pass, still + animation together, before
+   rendering anything** (the "Fable design machine" — added 2026-08-20 per the
+   user's own review of the first POC: "keep it simple, get very good at
+   designing what's in the stills and what parts should be animated"). Dispatch
+   a Fable-model design agent over the locked narration + `NORTH_STAR_PROMPT.md`
+   + `NORTH_STAR_ANIMATION_PROMPT.md` and have it produce one table, one row
+   per shot: the still prompt, the real animation prompt (every shot on a
+   short gets real motion by default — see `NORTH_STAR_ANIMATION_PROMPT.md`'s
+   "THE DEFAULT"), and the Focal Tour gap-fill plan for whatever time is left
+   after that clip's natural length. Long-form (or an occasional short, to
+   save credits) may instead choose to skip real motion entirely on a given
+   shot — that's a genuine design-time exception, not the shorts default. This
+   replaces discovering a shot's timing/motion needs AFTER the raw clip comes
+   back wrong — it's all decided on paper, at $0, reviewed by eye, before any
+   still or clip is generated. See `NORTH_STAR_ANIMATION_PROMPT.md` for the
+   full template, the locked rule (the ink/swirl motif is NEVER an AI motion
+   request), and the retroactive check against the 2026-08-19
+   John 4 shots.
 1. **Map the episode's own turning points to the four Swirls stages** before
    writing any prompt. Identify, from the locked narration itself: the
    setup/hook (Stage 0 — ABSENT: little to no blue), the inciting moment — the
