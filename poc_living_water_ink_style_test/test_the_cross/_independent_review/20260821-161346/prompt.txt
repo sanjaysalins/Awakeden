@@ -1,0 +1,109 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: plan
+
+LENS — judge this PLAN on (be specific, cite the exact step/claim):
+- Feasibility against the real codebase / tools (does it assume things that exist?).
+- Hidden risks, false assumptions, single points of failure.
+- Over-engineering / premature building before the idea is proven.
+- Missing steps, edge cases, or verification gaps.
+- Reuse: does it duplicate tools that already exist instead of reusing them?
+- Cost / spend and whether it's justified.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block (on the VERDICT line write exactly ONE word —
+PASS or REVISE or FAIL — never the list of options):
+
+VERDICT: <PASS or REVISE or FAIL>
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# Swirls of Life — the whole Bible in living ink (v3)
+
+JesusInTheBible · series design · 2026-08-21 · supersedes v2 pending final review
+
+> **Why v3 exists.** v2 claimed a full catalog check and was wrong twice over: the finale ("The Name She Knew," Mary Magdalene at the tomb) directly overlapped an already-shipped, studio-complete piece (`the-empty-tomb`, `John 20:8`) that a verse-literal search missed; two OT/NT picks (Melchizedek, Walking on Water) turned out to be sitting in another series' planned backlog. A Fable creative pass and a 4/5 independent-review panel (2 REVISE, 2 FAIL) also caught: a real doctrine error (tagging the Syrophoenician woman's story "uncleanness" for being Gentile — backwards theology, Acts 10 exists to reverse exactly that framing), an episode (Martha) whose signature "hard cut" would have to be invented because the text records no resolution, a motif tag ("shame at being served") that fit neither defined Stain sub-case, and simple arithmetic errors (claimed 15 episodes, built 16). Full detail: `_independent_review/20260821-141811/` and the Fable critique referenced there. Every fix below responds to a specific finding, not a vibe.
+
+## Who this is for, what it's trying to do (unchanged, this part passed review clean)
+
+For the viewer who's quietly decided one specific thing disqualifies them. Every dead-ink motif hands you that episode's own "one real person" — the motif IS the diagnosis. Takeaway: "the cut is the miracle — everything else is dosage." Design brief, in the user's own words: *"Jesus from every lens... the most beautiful, most original, most unique way... never the feeling of heard that, seen that before... truly biblically grounded, never assuming anything not brought from thin air."*
+
+## The dead-ink system (unchanged)
+
+Swirl: blue-gold living ink, Stage 0→3. **Stain** — two sub-cases only, never a third: moral sin/guilt (Isaiah 1:18, Psalm 51:7), or ceremonial/Levitical uncleanness-as-barrier (Leviticus 15), never framed as guilt. **Fray** — fear/doubt only (James 1:6, Matthew 14:31). Never assign either to suffering the text frames as neither. Never mark Christ with either. A story can also be **swirl-only** (no dead ink at all) when forcing a diagnosis onto it would be the invention the brief forbids — that's a legitimate choice, not a gap.
+
+## The slate — 15 episodes (13 shorts, 2 long-form), each independently verified clear
+
+### Old Testament (5)
+
+| # | Episode | Text | Dead ink | Why it earns its place |
+|---|---|---|---|---|
+| 1 | The Queen Who Came to Test Him | 1 Kings 10:1-13 | swirl-only | A foreign queen travels the width of the ancient world to test Solomon's wisdom with hard questions, and is overwhelmed. Jesus cites her by name (Matthew 12:42) as proof "a greater than Solomon is here" — genuinely rare content, a direct line from His own mouth. |
+| 2 | The Ashes That Made Clean | Numbers 19 | Stain (uncleanness) | An unnamed man, made unclean by touching death (the text's own framing — Numbers 19:11 names no one, "whosoever"), is purified by the ashes of a slain heifer mixed with water. Hebrews 9:13-14 draws the line to Christ's own blood directly. |
+| 3 | The Ladder He Saw | Genesis 28:10-17 | swirl-only | Jacob's dream of angels ascending and descending. Echoed, centuries later, in Jesus's own words to a skeptic (#8). |
+| 4 | Naaman in the Jordan | 2 Kings 5 | Stain (uncleanness) | A foreign general, healed of leprosy only after humbling himself to a servant's instruction. |
+| 5 | The Barrel That Did Not Waste | 1 Kings 17:8-16 | Fray | A starving widow feeds a stranger from her last handful of meal; the barrel never runs dry. |
+
+### New Testament — fear & doubt (3)
+
+| # | Episode | Text | Dead ink | Why it earns its place |
+|---|---|---|---|---|
+| 6 | Talitha Cumi | Mark 5:21-24, 35-43 | Fray | "Be not afraid, only believe" — Jairus's fear, the Fray's own vocabulary verbatim. |
+| 7 | Weep Not | Luke 7:11-17 | Fray | A widow burying her only son meets a stranger on the road who tells her to stop crying — and means it. Overshadowed by more famous raisings (Lazarus, Jairus's daughter); arguably more tender than either. |
+| 8 | Can Any Good Thing | John 1:45-51 | Fray | "Can any good thing come out of Nazareth?" Nathanael's skepticism dissolves the instant Jesus reveals He already knew him — and quotes Jacob's ladder (#3) back to him. |
+
+### New Testament — shame & uncleanness (4) + one deliberately unresolved (1)
+
+| # | Episode | Text | Dead ink | Why it earns its place |
+|---|---|---|---|---|
+| 9 | The Woman at the Border | Mark 7:24-30 | swirl-only **[FIX]** | v2 tagged this "Stain — Gentile outsider status," which a reviewer correctly called doctrinally backwards (Acts 10 exists to reverse exactly that framing). Fixed: this episode is about faith crossing a boundary, not an affliction being healed — it doesn't need a diagnosis, and forcing one would be worse than having none. |
+| 10 | She Loved Much | Luke 7:36-50 | Stain (sin/guilt) | A sinful woman washes Jesus's feet with tears, dries them with her hair, at a Pharisee's table. "Her sins, which are many, are forgiven; for she loved much." |
+| 11 | Where Are the Nine | Luke 17:11-19 | Stain (uncleanness) | Ten lepers healed, one returns — a Samaritan, doubly an outsider. |
+| 12 | Ye Are Not All Clean | John 13:1-17 (esp. 13:10-11) | Stain (sin/guilt) — **the season's one Stain that does NOT clear** | **[FIX, replacing v2's "shame at being served" mistag]** Jesus washes every disciple's feet, including Judas's. "Ye are clean, but not all." The washing happens; the stain stays — because grace was present and refused, not because it wasn't offered. Retroactively, every OTHER resolved stain in the season means more: the cut is mercy, not a mechanism. |
+| 13 | The Cross That Wasn't His | Mark 15:21 | motif-free (deliberate) | Simon of Cyrene, pulled at random from the crowd, forced to carry a cross that will save the world, not knowing it. No diagnosis fits, and none is needed — an ordinary man, no motif, just obedience. |
+
+**[CUT]** v2's "Careful and Troubled" (Martha, Luke 10:38-42) is dropped entirely — two independent reviews (Fable, the panel) caught that the text records no resolution to her anxiety, so the season's signature hard-cut device would have to be invented. No replacement; the season doesn't need it.
+
+### Long-form (2)
+
+| # | Episode | Text | Form | Role |
+|---|---|---|---|---|
+| 14 | This Day Is This Scripture Fulfilled | Luke 4:16-30 | LONG, 7 movements, 16:9 | Jesus's first public sermon: reads Isaiah 61, declares it fulfilled in Himself, names Naaman (#4) and the widow-fed-in-famine tradition (#5) as proof grace has always crossed to outsiders — and His hometown tries to throw Him off a cliff for it. **[FIX] Motif now designed, not left blank** — every reviewer flagged that this is the one page where Jesus is present and rejected, and the plan never said what the ink does. Answer: Stage 3 begins the instant He says "this day is fulfilled" — but this is the only page in the season where the swirl is actively pushed toward the frame's edge by the crowd's own rising hostility as they move to throw Him out; it never dies, never dims, and holds steady as He simply passes through the midst of them, untouched, at the very end (John 1:11: "he came unto his own, and his own received him not" — a citation, not an invention). |
+| 15 | The Road to Emmaus | Luke 24:13-35 | LONG, 7 movements, 16:9, season finale **[FIX, replacing v2's colliding finale]** | Two grieving, doubting disciples walk for miles with the risen Jesus and don't recognize Him — until He breaks bread. Closes the season on Jesus's own words: "beginning at Moses and all the prophets, he expounded unto them in all the scriptures the things concerning himself" (Luke 24:27) — the whole series' mission statement, in His own mouth. Every Fray in the season resolves the way theirs does: not gradually, but all at once, at recognition. |
+
+**Ratio:** 13 shorts : 2 longs. **Motif balance:** 5 Stain (one deliberately unresolved) · 5 Fray (including Emmaus) · 3 swirl-only · 1 motif-free. Counts checked against the table this time, not just asserted.
+
+## Cost — proposed, NOT committed for the full season **[FIX]**
+
+v2 committed a $450-920 season budget before a single episode of this slate existed. Two reviewers correctly called that premature scaling. Revised: the numbers below are per-episode planning bands only. **No spend beyond one pilot short is authorized by this document** — get explicit `/cost` sign-off episode by episode, same as always, and re-price the season total only after the pilot proves the format on entirely new content.
+
+- Short: $20-46/episode (art/audio) + ~$5-6 narration.
+- Long: $50-95/episode — zero ledger evidence for this format's own long-form; treat as a rough band, not a budget.
+
+## Build order — one full pilot short first, not "one still" **[FIX]**
+
+v2's build order treated a single rendered still as a proof gate. Two reviewers correctly pointed out that's not a valid gate — it proves nothing about narration, motif readability, ref-chaining, animation, captions, or assembly. Revised gate:
+
+1. **One complete pilot short, start to finish**, on genuinely new content — full page set (not one page), still + animation for every page, narration written and voiced, assembled through the `northstar_shortform/`-style script (per `PRODUCTION_PIPELINE.md`; swirls pages don't go through `cli_visual.py`), landing-hold checked. Candidate: **Talitha Cumi** or **The Ladder He Saw** — both single-location, small cast, no multi-ref complications.
+2. Only after the pilot ships clean: sequence the remaining shorts, spreading Stain/Fray/OT-NT variety.
+3. **This Day Is This Scripture Fulfilled** (#14) — after the grammar is proven on several shorts, and only after Naaman (#4) and the widow of Zarephath (#5) have themselves shipped, since the sermon names them — building the payoff before its own proof-texts exist would be backwards.
+4. **The Road to Emmaus** (#15) — the finale, built last.
+
+## Open risks, honestly named
+
+| Risk | Note |
+|---|---|
+| Multi-ref episodes will silently lose supporting passages | `pipeline/handoff.py` only writes `primary_ref`; `visual_runner._episode_from_creation()` rebuilds `refs` as `[primary_ref]` only. Affects #6 (Talitha, two Mark chunks), #14 (wide Luke 4 pericope), #2 (if depicted across a full ritual sequence). Still unfixed from v1; whoever builds these needs to hand-thread the wider refs or verify they survive. |
+| No production pipeline integration | Unchanged decision from `PRODUCTION_PIPELINE.md`: `swirls_page.py` formalizes the scripts; full deterministic gates (SP-G/AS-G-style) deferred until the format stabilizes on this genuinely new content, not before. One reviewer (gemini) flagged this as a FAIL on principle — that tradeoff was made deliberately with the user earlier the same session, not an oversight. |
+| Zero rendered pixels for any episode in this slate | The template (`NORTH_STAR_ANIMATION_PROMPT.md`, `swirls_page.py`) is proven; Stain/Fray/swirl dosing on THIS content is not. The pilot gate above exists specifically to re-prove it before season-scale commitment. |
+| Long-form feasibility unproven | Neither #14 nor #15 has a swirls long-form precedent to check against — a real gap, not just a cost-estimate gap. Consider a shortened "one movement" spike before committing either full long-form. |
+| Simon of Cyrene (#13) — NSFW render risk | Cross-carrying/cross-adjacent stills have triggered HF content refusals elsewhere in this project (direct-Kling is the standing fallback). Not yet tested on this style; budget for a possible fallback render. |
+| Governance | This v3 responds to every finding from the v2 panel + Fable pass. Needs a fresh `independent_review.py "<plan.md>" --type plan` run (and, if wanted, another Fable pass) before treating it as locked — not yet run as of this document. |
+
+---
+*the cut is the miracle — everything else is dosage*
+----- ARTIFACT END -----
