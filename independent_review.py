@@ -40,8 +40,13 @@ PROVIDERS = {
     # were fact-checking against the repo (panel rounds 2026-07-14) while perfectly
     # healthy on the doctor's smoke test.
     "cursor": {  # PRIMARY — Cursor's own Composer model (= the default that earned 98% OK)
+        # --trust: headless cursor-agent otherwise blocks on an interactive
+        # "Workspace Trust Required" prompt it can never answer (killed both
+        # cursor AND gemini voices on 2026-08-20's plan review). Confirmed fix
+        # 2026-08-21 via `cursor-agent --help`'s own "Trust the current
+        # workspace without prompting" flag.
         "command": "cursor-agent",
-        "args": ["-p", "--mode", "ask", "--model", "composer-2.5-fast"], "mode": "stdin",
+        "args": ["-p", "--mode", "ask", "--model", "composer-2.5-fast", "--trust"], "mode": "stdin",
         "prefix": "", "timeout": 300,
     },
     "claude": {
@@ -52,7 +57,7 @@ PROVIDERS = {
         # was killed 2026 ("IneligibleTierError: migrate to Antigravity") and had a 48%
         # fail rate. cursor's subscription serves gemini-3.1-pro headlessly today.
         "command": "cursor-agent",
-        "args": ["-p", "--mode", "ask", "--model", "gemini-3.1-pro"], "mode": "stdin",
+        "args": ["-p", "--mode", "ask", "--model", "gemini-3.1-pro", "--trust"], "mode": "stdin",
         "prefix": "", "timeout": 300,
     },
     "codex": {
