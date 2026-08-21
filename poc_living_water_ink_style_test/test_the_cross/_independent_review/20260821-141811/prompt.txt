@@ -1,0 +1,117 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: plan
+
+LENS — judge this PLAN on (be specific, cite the exact step/claim):
+- Feasibility against the real codebase / tools (does it assume things that exist?).
+- Hidden risks, false assumptions, single points of failure.
+- Over-engineering / premature building before the idea is proven.
+- Missing steps, edge cases, or verification gaps.
+- Reuse: does it duplicate tools that already exist instead of reusing them?
+- Cost / spend and whether it's justified.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block (on the VERDICT line write exactly ONE word —
+PASS or REVISE or FAIL — never the list of options):
+
+VERDICT: <PASS or REVISE or FAIL>
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# Swirls of Life — the whole Bible in living ink (v2, full restart)
+
+JesusInTheBible · series design · 2026-08-21 · supersedes `SWIRLS_OF_LIFE_SERIES_PLAN.md`
+
+> **Why this exists.** The v1 plan (2026-08-20/21) built its 15-episode slate around stories this project had already told elsewhere — checked and found 8 of 15 already produced, some 3-4 times over, including two full existing long-form films. The user's explicit call: drop every story already made anywhere in this catalog, in any style, and rebuild the slate from zero — nothing carried over, not even the pieces this format had already validated (The Well, The Hem, Doubting Thomas, the Storm test). This document is that rebuild. Every one of the 17 candidate passages below was checked against the full catalog (`_website/manifest.yaml`, `data/series.json`, the real narration folder, `longform/`, every `poc_*` directory) and confirmed clear — full verification detail available on request, not repeated here.
+
+## Who this is for, and what it's trying to do (unchanged from v1 — this part wasn't the problem)
+
+Swirls of Life is for the viewer who has quietly decided one specific thing about themselves disqualifies them — a failure, a status, a fear that won't quiet down. Every episode's dead-ink motif (see below) hands you that episode's own "one real person" for free: the motif IS the diagnosis. A repeat viewer gets a bonus second layer (learning to recognize the ink grammar across episodes) — but no single episode ever depends on prior viewing to land.
+
+**Takeaway:** "the cut is the miracle — everything else is dosage." Whatever you're carrying has a name, and it leaves all at once, not gradually, the moment Jesus is present.
+
+**What makes this series distinct, per the user's own words:** *"Jesus from every lens — old testament, new testament, every perspective of people, location, event... the most beautiful, most original, most unique way... never the feeling of heard that, seen that before... truly biblically grounded, never assuming anything not brought from thin air."* This is the actual design brief. Every pick below was chosen against that bar, not just against collision-clearance.
+
+## The dead-ink system (unchanged mechanics from v1)
+
+A blue-and-gold "living ink" swirl marks the gospel's presence, dosed Stage 0 (absent) → Stage 3 (diffused), page to page. Its counterpart, DEAD INK, falls as the swirl rises:
+- **Stain** — sin/guilt/uncleanness soaked into the paper. Two sub-cases, never conflated: moral sin/guilt (Isaiah 1:18, Psalm 51:7), and ceremonial/Levitical uncleanness-as-barrier (Leviticus 15) — the second is never framed as personal guilt.
+- **Fray** — the afflicted figure's own linework destabilized (fear/doubt, James 1:6, Matthew 14:31).
+
+Both are dispelled only at hard cuts between pages, never within a clip. Never assign either motif to suffering the text frames as neither sin nor uncleanness (John 9:3 discipline). Never mark Christ with either motif. OT-type episodes cap the swirl at Stage 1-2; Stage 3 is reserved for pages where fulfilment in Christ is on-page.
+
+## The slate — 15 episodes, all newly chosen, all verified clear
+
+### Old Testament (5)
+
+| # | Episode | Text | Dead ink | Why it earns its place |
+|---|---|---|---|---|
+| 1 | Melchizedek Blesses Abraham | Genesis 14:18-20 | swirl-only | A king-priest appears with no genealogy, blesses Abraham with bread and wine, vanishes. Hebrews 7 says he's a picture of Christ's own eternal, untraceable priesthood. Genuinely obscure; the bread-and-wine image is free. |
+| 2 | The Ashes That Made Clean | Numbers 19 | Stain (uncleanness) | An obscure purification ritual for anyone made unclean by death. Hebrews 9:13-14 draws the line to Christ's own blood directly. |
+| 3 | The Ladder He Saw | Genesis 28:10-17 | swirl-only | Jacob's dream of angels ascending and descending. Pays off one chapter later, in Jesus's own mouth (see #8, Nathanael). |
+| 4 | Naaman in the Jordan | 2 Kings 5 | Stain (uncleanness) | A foreign general, healed of leprosy only after he humbles himself to a servant's instruction. Grace crossing to an outsider, centuries early. |
+| 5 | The Barrel That Did Not Waste | 1 Kings 17:8-16 | Fray | A starving widow feeds a stranger from her last handful of meal — and the barrel never runs dry. Fear of death resolved by one act of obedience. |
+
+### New Testament — fear & doubt (4)
+
+| # | Episode | Text | Dead ink | Why it earns its place |
+|---|---|---|---|---|
+| 6 | Talitha Cumi | Mark 5:21-24, 35-43 | Fray | "Be not afraid, only believe" — Jairus's fear, verbatim Fray text. |
+| 7 | Wherefore Didst Thou Doubt | Matthew 14:25-33 | Fray | Peter's line fraying FR1→FR3 as he watches the wind instead of Jesus, dead at the caught hand — the motif's own proof text. |
+| 8 | Can Any Good Thing | John 1:45-51 | Fray | Nathanael's skepticism dissolves the instant Jesus names something He couldn't have seen. Jesus's own reply quotes Jacob's ladder (#3) directly — the season's old-to-new pairing, done in His own recorded words. |
+| 9 | Careful and Troubled | Luke 10:38-42 | Fray | Martha, anxious in her own kitchen while her sister sits still. A rarely-dramatized, very human moment. |
+
+### New Testament — shame & uncleanness (5)
+
+| # | Episode | Text | Dead ink | Why it earns its place |
+|---|---|---|---|---|
+| 10 | The Woman at the Border | Mark 7:24-30 | Stain (uncleanness — Gentile outsider status) | A Gentile mother, refused at first, wins the exchange through sheer faith. Real tension, real dialogue, rarely told. |
+| 11 | She Loved Much | Luke 7:36-50 | Stain (sin/guilt) | A sinful woman washes Jesus's feet with tears, dries them with her hair, at a Pharisee's dinner table. Overshadowed by the more famous adultery story but arguably more visually and emotionally potent. |
+| 12 | Where Are the Nine | Luke 17:11-19 | Stain (uncleanness) | Ten lepers healed, one returns — a Samaritan, doubly an outsider. Gratitude against the current. |
+| 13 | Thou Shalt Never Wash My Feet | John 13:1-17 | Stain (shame at being served) | Peter's refusal reversed. The Master kneeling at the servant's job — the whole gospel in one gesture. |
+| 14 | The Cross That Wasn't His | Mark 15:21 | none (unique — a burden borne for another, not the bearer's own) | Simon of Cyrene, pulled at random from the crowd, forced to carry a cross that will save the world, not knowing it. Nobody tells this story from his side. |
+
+### Long-form (2)
+
+| # | Episode | Text | Form | Role |
+|---|---|---|---|---|
+| 15 | This Day Is This Scripture Fulfilled | Luke 4:16-30 | LONG (7 movements, 16:9) | Jesus's first public sermon — reads Isaiah 61 in His hometown synagogue, declares it fulfilled in Himself, then names Naaman (#4) and the widow of Zarephath (#5) by name as proof grace has always crossed to outsiders. The hometown crowd tries to throw Him off a cliff. **This is the crossing-arc, and it is not inferred — Jesus makes the connection Himself, in the text.** |
+| 16 | The Name She Knew | John 19:38-42 + John 20:11-18 | LONG (7 movements, 16:9), season finale | Two movements: Joseph's brand-new, never-used tomb receiving His body (nothing has ever touched this ground — the season's answer to every Stain story, without needing to mark Christ with one); then Mary Magdalene, weeping at the empty tomb, not recognizing Him until He says her name. Every fear and confusion in the season resolves the same way hers does. |
+
+**Ratio:** 14 shorts : 2 longs — matches the project's own flagship-long model (shorts are the first-class product; longs anchor, never a 1:1 tax).
+
+**Motif balance:** 5 Stain · 5 Fray · 3 swirl-only · 1 unique (Simon of Cyrene) · 2 long-form (crossing-arc sermon + two-movement finale).
+
+## Cost model (same ledger-backed methodology as v1, unproven for this exact slate — no episode here has been rendered)
+
+- **Short:** budget $20-46/episode (art/audio) + ~$5-6 narration tournament/panel/red-team, until 3-4 episodes ship clean and give a tighter number.
+- **Long:** budget $50-95/episode, same caveat — zero ledger evidence for this format's own long-form yet.
+- **Total season-one estimate:** 14 shorts (~$280-644 + ~$70-84 narration) + 2 longs (~$100-190) ≈ **$450-920** for the full slate, before any regen overruns. Get explicit `/cost` sign-off before each build, not just once at plan-commit.
+
+## Build order (proposed, first build spends nothing beyond one still)
+
+Sequenced to prove the newest, least-tested things first — every episode here is unbuilt, so there's no "most-tested ground" to start on this time, only textual/doctrinal strength.
+
+1. **Melchizedek** or **Talitha Cumi** — pick whichever the user wants to see first; both are simple, single-scene, low-risk starting points to re-prove the still+animation template on completely new content.
+2. **Nathanael + Jacob's Ladder pairing** — proves the new crossing-arc device (Jesus's own words linking old to new) works visually before committing to the full Nazareth-sermon long-form.
+3. Remaining shorts, in whatever order best spreads Stain/Fray/OT/NT variety across the season.
+4. **This Day Is This Scripture Fulfilled** (Luke 4) — the crossing-arc long-form, once several shorts have proven the grammar.
+5. **The Name She Knew** (Joseph's tomb + Mary Magdalene) — the finale, built last, same reasoning as v1 (needs the season's own weight behind it).
+
+## Open risks, honestly named
+
+| Risk | Note |
+|---|---|
+| Zero rendered pixels for any episode in this slate | Every prior validated test (Well, Hem, Thomas, Storm) belonged to the dropped v1 slate. This is a genuine restart on the art side too, even though the animation/still TEMPLATE itself (`NORTH_STAR_ANIMATION_PROMPT.md`, `swirls_page.py`) stays proven and reusable. |
+| No production pipeline for this format | Same finding as v1, unchanged — `swirls_page.py` (formalized scripts) exists; full deterministic gates deferred until the format stabilizes further. |
+| Finale device is new, unproven | v1's finale (Stain visibly transferred to Christ) had heavy doctrinal review behind it already. This finale (unstained tomb + recognition) is a different mechanism — doctrinally solid (no motif ever touches Christ, arguably a cleaner resolution) but hasn't been panel-reviewed yet. |
+| Simon of Cyrene has no clean Stain/Fray fit | Deliberately motif-light (marked "none" above) — forcing a motif onto him risks inventing something the text doesn't support. Open question: does the episode need one, or does the absence of a motif on him make its own point (an ordinary man, no diagnosis needed, just obedience)? |
+| Governance | This is a SIGNIFICANT plan — needs `independent_review.py "<plan.md>" --type plan` + a Fable creative-critique pass before `series.json` is touched. In progress. |
+
+---
+*the cut is the miracle — everything else is dosage*
+----- ARTIFACT END -----
