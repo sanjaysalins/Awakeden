@@ -320,22 +320,29 @@ F02_STILL_PROMPT = (
 #      Hem's same density justification.
 F02_ANIMATION_PROMPT = (
     "Stationary camera, locked medium shot of the 2D storyboard layout, frame borders and all "
-    "baked text stay static, with no border, box, or speech bubble ever appearing around any "
-    "caption or note. Animate isolated motion inside each panel: panel 1 morning light shifts "
-    "gently across the barred door; panel 2 the warm light across the open sketched palm "
-    "brightens very slightly, nothing else changes; panel 3 the distant figures walk slowly "
-    "onward along the road. Large bottom panel: Thomas, staying on his knees, bows his head "
-    "slowly and deeply toward Jesus, the bow completing and then holding, his half-lifted hand "
-    "held still, just short of the offered hands, one slow deep breath loosening his shoulders "
-    "as the doubt leaves him; his lips stay closed and completely still — he is not speaking "
-    "and his mouth does not move at all; Jesus holds his open hands steady toward Thomas at "
-    "chest height, his expression softening into quiet warmth, his lips closed and still; the "
-    "watching disciples lean gently in toward the two of them; the soft blue threads and small "
-    "bloom above Jesus's open hands drift gently within their own small area; the gold-and-blue "
-    "halo curls rotate slowly around Jesus's head; every ink line and mark on the page is long "
-    "set and stays exactly as drawn, Thomas's steady confident linework included; no line "
-    "anywhere wavers, redraws, or changes, and no new stain, spot, or mark appears anywhere on "
-    "the page at any point."
+    "baked text stay completely static and unchanged the entire clip. Animate isolated motion "
+    "inside each panel: panel 1 morning light shifts gently across the door, but the door "
+    "itself, its wooden bar, and its shut position never move, open, swing, or change in any "
+    "way — it is a fixed drawing, only the light crossing it moves; panel 2 the warm light "
+    "across the open sketched palm brightens very slightly, nothing else changes; panel 3 the "
+    "distant figures walk slowly onward along the road. Large bottom panel: Thomas, staying on "
+    "his knees, bows his head slowly and deeply toward Jesus, the bow completing and then "
+    "holding, his half-lifted hand held still, just short of the offered hands, one slow deep "
+    "breath loosening his shoulders as the doubt leaves him; his lips stay closed and completely "
+    "still — he is not speaking and his mouth does not move at all; Jesus holds his open hands "
+    "steady toward Thomas at chest height, his expression softening into quiet warmth, his lips "
+    "closed and still; the watching disciples lean gently in toward the two of them; the soft "
+    "blue threads and small bloom above Jesus's open hands drift gently within their own small "
+    "area; the gold-and-blue halo curls rotate slowly around Jesus's head; every ink line and "
+    "mark on the page is long set and stays exactly as drawn, Thomas's steady confident "
+    "linework included; no line anywhere wavers, redraws, or changes, and no new stain, spot, "
+    "or mark appears anywhere on the page at any point. The two handwritten caption lines "
+    "beneath the scene, \"My Lord and\" / \"my God\", and the corner note are flat ink already "
+    "dry on the paper — like the other handwritten labels on this page, they are NOT spoken "
+    "dialogue and never gain a speech balloon, thought bubble, tail, outline, box, panel, or "
+    "any drawn shape of any kind around or behind them at any point in the clip; they remain "
+    "bare handwritten ink directly on the aged paper texture, identical in treatment to the "
+    "panel captions above, from the first frame to the last."
 )
 
 
@@ -407,6 +414,15 @@ if __name__ == "__main__":
         render_still(F02_PNG, F02_STILL_PROMPT, [JESUS_REF, str(THOMAS_REF)])
     elif "--animate-f02" in sys.argv:
         render_animation(F02_MP4, F02_PNG, F02_ANIMATION_PROMPT, model="kling3_0")
+    elif "--animate-f02-veo" in sys.argv:
+        # Fallback after 3 consecutive Kling attempts all regrew a speech bubble around
+        # the two-line "My Lord and / my God" caption despite a strengthened no-bubble
+        # clause -- diagnosed as a genuine composition-triggered Kling prior (kneeling
+        # figure + short exclamation reads as a comic dialogue balloon), not prompt
+        # wording. veo3_1_lite doesn't share Kling's speech-bubble failure mode in this
+        # project's history; the known tradeoff is veo's refusal lane may not fully
+        # complete Thomas's head-bow (accepted per the user, 2026-08-21).
+        render_animation(F02_MP4, F02_PNG, F02_ANIMATION_PROMPT, model="veo3_1_lite")
     else:
         # F01 is Thomas's genesis render: no ref exists yet for him, and Jesus
         # is deliberately not in the scene, so this page chains no refs at
