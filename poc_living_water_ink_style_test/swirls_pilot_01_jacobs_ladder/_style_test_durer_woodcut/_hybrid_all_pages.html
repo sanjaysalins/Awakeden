@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hybrid Style — All 8 Pages (Step 1 test)</title>
+<style>
+  :root { --bg:#14131a; --card:#1e1c26; --ink:#ece7f5; --muted:#928da3; --accent:#8fb4e3; --gold:#d7b45a; --bad:#e0967a; --good:#8fd18f; }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:40px 24px 80px; background:var(--bg); color:var(--ink); font-family:Georgia,'Iowan Old Style',serif; }
+  header { max-width:1100px; margin:0 auto 32px; text-align:center; }
+  header h1 { font-size:1.7rem; margin:0 0 8px; }
+  header p { color:var(--muted); margin:4px 0; font-size:.95rem; max-width:820px; margin-left:auto; margin-right:auto; }
+  .grid { max-width:1500px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:24px; }
+  .card { background:var(--card); border:1px solid #33303e; border-radius:10px; padding:14px; }
+  .card img { width:100%; border-radius:6px; display:block; }
+  .label { display:inline-block; background:var(--gold); color:#14131a; font-weight:bold; font-size:.72rem; letter-spacing:.06em; padding:3px 10px; border-radius:4px; margin-bottom:8px; }
+  .verdict { font-size:.85rem; margin-top:10px; line-height:1.5; }
+  .verdict.clean { color:var(--good); }
+  .verdict.issue { color:var(--bad); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Hybrid Style — Step 1: all 8 pages, first pass</h1>
+  <p>Woodcut-cinematic panels + locked ink-wash main scene, same technique validated on F08, now run across every page's real content. Unpolished first attempts — not locked. The style-split mechanism itself works on every page; content-fidelity issues below are the same known fragilities the base pilot had, plus one new one on F06.</p>
+</header>
+<div class="grid">
+
+  <div class="card">
+    <span class="label">F01</span>
+    <img src="f01_hybrid_panels_test.png">
+    <div class="verdict clean">Clean — no issues found.</div>
+  </div>
+
+  <div class="card">
+    <span class="label">F02</span>
+    <img src="f02_hybrid_panels_test.png">
+    <div class="verdict clean">Clean — no issues found.</div>
+  </div>
+
+  <div class="card">
+    <span class="label">F03</span>
+    <img src="f03_hybrid_panels_test.png">
+    <div class="verdict issue">Face panel drifted to a fuller beard (known fragility, same as base-style pilot). Angel's hand sits close to the thread again on the ladder.</div>
+  </div>
+
+  <div class="card">
+    <span class="label">F04</span>
+    <img src="f04_hybrid_panels_test.png">
+    <div class="verdict issue">Brightness rendered as a flower-shaped emblem instead of an edgeless wash; threads swept into big dramatic ribbons instead of restrained dosage. Same exact failure signature we saw in F04's animation tests earlier this session — this content seems inherently prone to it.</div>
+  </div>
+
+  <div class="card">
+    <span class="label">F05</span>
+    <img src="f05_hybrid_panels_test.png">
+    <div class="verdict issue">Jacob shown already fully seated, not mid-rise — the same "already-settled" pose defect fought through multiple regens on this exact page in the base style.</div>
+  </div>
+
+  <div class="card">
+    <span class="label">F06</span>
+    <img src="f06_hybrid_panels_test.png">
+    <div class="verdict issue">NEW defect: "MEDIUM WIDE" baked into the page as invented text — a genuine text-lock violation not seen anywhere in the base-style pilot.</div>
+  </div>
+
+  <div class="card">
+    <span class="label">F07</span>
+    <img src="f07_hybrid_panels_test.png">
+    <div class="verdict issue">Minor: terrain reads as a misty valley/wetland rather than the "bare stony hillside, no meadow" it should be.</div>
+  </div>
+
+  <div class="card">
+    <span class="label">F08</span>
+    <img src="f08_hybrid_panels_test.png">
+    <div class="verdict clean">Clean (validated earlier) — the original proof-of-concept render.</div>
+  </div>
+
+</div>
+</body>
+</html>

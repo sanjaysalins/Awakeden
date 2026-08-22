@@ -1,0 +1,49 @@
+{
+  "folder": "swirls_episode_02_ashes_that_made_clean",
+  "stage": "verify",
+  "generated_at": "2026-08-22T18:03:31Z",
+  "deterministic": {
+    "char_count_after_comment_strip": 855,
+    "char_cap": 2000,
+    "within_cap": true,
+    "non_empty": true
+  },
+  "voice_roster": {
+    "voices_json_present": true,
+    "speakers_in_roster": [
+      "narrator"
+    ]
+  },
+  "anthropic_review": {
+    "coherence": "good",
+    "beat_count": 7,
+    "tonal_register": [
+      "serious",
+      "reflective",
+      "solemn",
+      "devotional"
+    ],
+    "multi_voice_candidates": [
+      {
+        "line_excerpt": "He that toucheth the dead body of any man shall be unclean seven days...",
+        "suggested_speaker": "unspecified",
+        "rationale": "Attributed to 'Scripture says' — the impersonal text of the Mosaic law being quoted, not a named individual speaking in-scene, so it stays narrator-voiced."
+      },
+      {
+        "line_excerpt": "How much more shall the blood of Christ... purge your conscience from dead works",
+        "suggested_speaker": "unspecified",
+        "rationale": "Attributed to 'Hebrews says' — a reflective epistle argument, not a character's spoken dialogue within the narrative, so it stays narrator-voiced."
+      }
+    ],
+    "spoken_length_estimate_seconds": 61,
+    "concerns": [
+      "Two mid-sentence ellipses inside quoted KJV text (Numbers 19:11/12 elision, Hebrews 9:13/14 elision) — confirm the auto-tagger treats '...' as a pause marker, not a truncation error.",
+      "Both quotes are introduced by attribution phrases ('Scripture says:', 'Hebrews says the ashes...') rather than a named speaker, which is the correct narrator-only pattern but should not be auto-flagged as a missing voice.",
+      "No unattributed or ambiguous quoted speech; no exotic punctuation beyond standard em dashes and ellipses."
+    ],
+    "model": "claude-opus-4-7",
+    "request_id": null,
+    "input_tokens": null,
+    "output_tokens": null
+  }
+}

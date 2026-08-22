@@ -1,0 +1,33 @@
+{
+  "folder": "swirls_episode_02_ashes_that_made_clean",
+  "stage": "audit",
+  "generated_at": "2026-08-22T18:07:14Z",
+  "deterministic": {
+    "tag_validation": "passed",
+    "speaker_validation": "passed",
+    "roster": []
+  },
+  "round_trip": {
+    "exact_match": true,
+    "blocking": false,
+    "diff_segments": [],
+    "added_words": 0,
+    "removed_words": 0
+  },
+  "anthropic_audit": {
+    "tag_economy": "appropriate",
+    "tag_quality_overall": "good",
+    "missed_speaker_opportunities": [],
+    "tonal_mismatches": [],
+    "concerns": [
+      "Tag distribution is well varied — no single tag dominates the piece, well under the 70% flat-read threshold.",
+      "Both KJV/epistle quotes stay correctly narrator-voiced with no invented speaker blocks, matching the empty roster.",
+      "No Tier 3 tags present; all tags drawn from Tier 1 (serious, reflective, quietly, slow, deliberate, matter-of-fact, emphasized).",
+      "The rhetorical-peak line now carries [emphasized][slow], giving it the weighted landing the earlier draft's audit recommended."
+    ],
+    "model": "claude-opus-4-7",
+    "request_id": null,
+    "input_tokens": null,
+    "output_tokens": null
+  }
+}

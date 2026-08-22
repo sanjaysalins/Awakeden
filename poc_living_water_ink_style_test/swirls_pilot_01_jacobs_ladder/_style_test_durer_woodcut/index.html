@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Style Test — Durer Woodcut vs Swirls of Life</title>
+<style>
+  :root { --bg:#14131a; --card:#1e1c26; --ink:#ece7f5; --muted:#928da3; --accent:#8fb4e3; --gold:#d7b45a; }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:40px 24px 80px; background:var(--bg); color:var(--ink); font-family:Georgia,'Iowan Old Style',serif; }
+  header { max-width:1000px; margin:0 auto 32px; text-align:center; }
+  header h1 { font-size:1.7rem; letter-spacing:.02em; margin:0 0 8px; }
+  header p { color:var(--muted); margin:4px 0; font-size:.95rem; max-width:760px; margin-left:auto; margin-right:auto; }
+  .row { max-width:1000px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+  .row3 { max-width:1400px; margin:36px auto 0; display:grid; grid-template-columns:1fr 1fr 1fr; gap:22px; }
+  .col { background:var(--card); border:1px solid #33303e; border-radius:10px; padding:16px; text-align:center; }
+  .col img { width:100%; border-radius:6px; }
+  .label { display:inline-block; background:var(--gold); color:#14131a; font-weight:bold; font-size:.72rem; letter-spacing:.06em; padding:3px 10px; border-radius:4px; margin-bottom:10px; }
+  .notes { max-width:1000px; margin:28px auto 0; background:var(--card); border:1px solid #33303e; border-radius:10px; padding:18px 22px; font-size:.92rem; line-height:1.6; color:var(--muted); }
+  .notes b { color:var(--ink); }
+  pre { white-space:pre-wrap; font-family:Georgia,serif; line-height:1.5; margin:10px 0 0; color:var(--muted); font-size:.88rem; }
+  summary { cursor:pointer; color:var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Style Test — Durer Woodcut / Cinematic vs Swirls of Life</h1>
+  <p>A one-off test, NOT part of the locked pilot. Same scene content (F08 — Jacob standing from behind, staff, dawn horizon), two completely different visual languages.</p>
+</header>
+
+<div class="row" style="max-width:1200px">
+  <div class="col">
+    <span class="label">BOOKEND — OPEN (F01, dusk, fleeing, bowed)</span>
+    <img src="f01_hero_open_woodcut.png">
+  </div>
+  <div class="col">
+    <span class="label">BOOKEND — CLOSE (F08, dawn, standing, ready)</span>
+    <img src="f08_durer_woodcut_test.png">
+  </div>
+</div>
+<div class="notes" style="max-width:1200px">
+  <p>The full-woodcut hero bookends for the "book" plan — same framing (wide, small-in-landscape, seen from behind), same figure, opposite light and posture: bowed and sinking into dusk vs. standing straight into the dawn. This is the visual rhyme the narration's own hook→landing arc already writes in.</p>
+</div>
+
+<div class="row">
+  <div class="col">
+    <span class="label">LOCKED PILOT STYLE</span>
+    <img src="../the_ladder_f08_9x16.png">
+  </div>
+  <div class="col">
+    <span class="label">NEW TEST — Durer Woodcut / Cinematic</span>
+    <img src="f08_durer_woodcut_test.png">
+  </div>
+</div>
+
+<div class="row3">
+  <div class="col">
+    <span class="label">LOCKED PILOT STYLE</span>
+    <img src="../the_ladder_f08_9x16.png">
+  </div>
+  <div class="col">
+    <span class="label">FULL WOODCUT (test 1)</span>
+    <img src="f08_durer_woodcut_test.png">
+  </div>
+  <div class="col">
+    <span class="label">HYBRID — woodcut panels, locked main scene (test 2)</span>
+    <img src="f08_hybrid_panels_test.png">
+  </div>
+</div>
+
+<div class="notes" style="max-width:1400px;margin-top:24px">
+  <p><b>Test 2 — the hybrid, per your ask ("without losing the current distinctions... a variant in the small panels"):</b> ONE prompt, reusing F08's real locked content verbatim, explicitly told the 3 top panels to render in the woodcut-cinematic style while the main scene stays in the page's own ink-and-watercolor wash. It worked on the first try — real dense hatching, teal shadows, and light rays in the panels; Jacob's build, the staff, the stone, and the thread+bloom motif all held in the main scene; title, frame number, and both handwritten captions are intact. This reads as a genuinely usable device: the small panels could carry a more dramatic/dreamlike "vision" quality while the main scene keeps its grounded diary-sketch feel — a real visual distinction with a story reason behind it, not just decoration.</p>
+</div>
+
+<div class="row" style="max-width:600px;margin-top:36px">
+  <div class="col" style="grid-column:1/-1">
+    <span class="label">TEST 3 — character portrait, face visible</span>
+    <img src="jacob_char_woodcut_test.png">
+  </div>
+</div>
+<div class="notes" style="max-width:600px">
+  <p>Tests 1 and 2 both show Jacob from behind — neither actually showed his face rendered in this style. This one chains BOTH <code>jacob_ref.png</code> (full figure) and <code>jacob_face_ref.png</code> (the close crop) for the first time in a style test, in a medium 3/4 portrait. Face reads consistent with the locked build: sparse young beard (not full), dark curling hair, olive robe over cream tunic, ochre mantle, straight staff, watchful/weary expression. The hatching follows the folds of his face and robe convincingly.</p>
+</div>
+
+<div class="notes">
+  <p><b>What held up across the style jump (test 1, full woodcut):</b> Jacob's olive-green robe, ochre-brown mantle, dark curling hair, and the straight (no-crook) wooden staff all carried over reasonably well, even though the chained refs were built for a completely different rendering style (flat ink-and-watercolor storyboard vs dense woodcut hatching + cinematic photography).</p>
+  <p><b>What's fundamentally different, not just a filter:</b> no panels, no baked title/frame-number, no handwritten captions, no Swirls-of-Life motif — this is a single full-bleed cinematic image, not a storyboard page. Adopting this style for real would mean redesigning the whole page format, not just swapping a style prompt.</p>
+  <p><b>Feel:</b> much more dramatic/epic — volumetric light rays, teal/gold cinematic grading, denser hatching — versus the current style's flatter, gentler, more "found production sketchbook" feel.</p>
+  <details><summary>test prompt used</summary>
+  <pre>Jacob, a lone ancient figure seen from behind, small in scale against the landscape, his coarse woven robe and mantle stirred by the wind, holding a wooden staff upright, standing still in contemplation, facing the dawn horizon. Vast wind-scoured wilderness, rugged rocky terrain, sweeping desert valleys, carved structural cloud forms in an open sweeping sky. Low golden-hour sun, cinematic atmospheric haze, deep teal shadows, dramatic volumetric light rays piercing the clouds, photographic tonality. 16th-century Albrecht Durer woodcut linework blended with contemporary cinematic landscape photography, dense parallel hatching, hard black contours, ink-on-block texture, vertical 9:16 aspect ratio, figure isolated in the lower third, stationary camera, wide static shot, ultra-crisp. Avoid: modern clothing, busy foreground, bright neon colors, any text or watermarks, deformed anatomy, blurry rendering, smooth photorealism without linework.</pre>
+  </details>
+</div>
+</body>
+</html>

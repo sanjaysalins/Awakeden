@@ -1,5 +1,47 @@
 # STATE.md — progress tracker
 
+**2026-08-22 Swirls of Life episode 2 ("The Ashes That Made Clean," Numbers
+19) built end to end following the Jacob's Ladder "north star" template —
+then found to have genuinely diverged from it in 3 concrete ways.** Fixed
+two real ffmpeg bugs shared by both episodes' assembly scripts (a duplicate
+`-vf` that silently dropped freeze-hold extensions — already shipped
+unnoticed in Jacob's Ladder's own approved cut; a concat-demuxer+`-t`
+truncation quirk). Diagnosed and fixed score audibility twice more (a
+sidechain duck tuned for one ElevenLabs Music generation doesn't transfer
+to the next; a sparse/silent-by-design score needs a different audibility
+target than a driving-groove score). User then watched episode 2 and said
+it "feels very different" from Jacob's Ladder — red-teamed my own
+creative-critique analysis, then the user personally caught 3 sharper,
+confirmed-correct issues my analysis missed: covers lost Jacob's
+color-contrast cinematic lighting (over-desaturated for the "ash" theme)
+AND the back cover picked up an unrequested picture-frame border/caption
+strip nobody caught visually; interior pages used the OLDER pre-hybrid
+plain template instead of the validated hybrid (woodcut panels + ink-wash
+main scene) template built after the pilot shipped; and freeze-mode pages
+(F01/F04) sit on a literal static frame for ~50-63% of their runtime —
+only visible now because my own ffmpeg bug fix let freeze mode actually
+fire for the first time (Jacob's Ladder's shipped cut never really froze,
+the bug silently ate that extension too). **User approved the full fix**
+(redo 2 covers + 4 interior pages properly, ~$5-8 real spend, then fix the
+freeze-frame design) but ended the session before any of it was built —
+this is the very first task next session.
+
+**Spend:** episode 2 build ~$5 stills+clips + ~$1 score (per session), plus
+a second score generation (~$1). The approved covers/pages redo (~$5-8) has
+NOT been spent yet.
+
+**Commits:** yes — this session's work (episode 2, the ffmpeg fixes, the
+score work, the Jacob's Ladder consistency-v2 work carried over uncommitted
+from the morning) is committed together. See `RESUME.md`'s top block for
+full detail and the exact next steps.
+
+**Next session:** see `RESUME.md`'s top block — build the covers+pages
+redo first (real spend, get a quick nod before running if anything looks
+more expensive than ~$5-8), then decide the freeze-frame fix approach,
+then let the user pick between the two Ashes score options.
+
+## ════════════════════════════════════════════════════════════════
+
 **2026-08-20 DEAD INK motif system (Stain + Fray) validated end-to-end;
 animation template rebuilt through real failures; series plan drafted +
 independent-reviewed (degraded panel):** ⚠️ **URGENT: end-of-session ledger

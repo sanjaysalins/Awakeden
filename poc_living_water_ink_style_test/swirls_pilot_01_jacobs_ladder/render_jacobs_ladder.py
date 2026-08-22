@@ -33,10 +33,17 @@ JACOB — brand-new character, never rendered anywhere in this project.
 _JACOB_BUILD below is his locked face/dress build (grounded in Gen 25:27 "a
 plain man, dwelling in tents", Gen 27:11 "I am a smooth man", Gen 32:10 "with
 my staff I passed over this Jordan"): face/dress ONLY, no motif baked in.
-REF-CHAINING (the 2026-08-20 locked rule): F01 renders with NO ref (his
-first-ever render establishes him); after F01 passes eyeball QC, a human crops
-his full figure -> jacob_ref.png in this folder; F02-F08 all chain it (the
-script hard-stops without it). Angels deliberately get NO ref and NO build:
+REF-CHAINING (the 2026-08-20 rule, WIDENED 2026-08-22): EVERY recurring
+subject — character, object, artifact, location — gets its own ref in refs/,
+cropped from its first approved render, and is chained into every later page
+it appears on (swirls_page.render_still hard-stops if a ref file is missing).
+This pilot's refs: jacob_ref (full figure, F01) + jacob_face_ref (F01 close
+crop — the full-figure ref alone let the beard drift to a thick one on F03/
+F04/F05) + stone_ref (F01) + staff_ref (F02 panel) + ladder_ref (F03 panel) +
+bethel_ref (F01 ground + hills). Before refs existed for them, the stone,
+staff, ladder, terrain, and Jacob's dress all drifted across the 8 approved
+stills (stone brown->grey, staff straight->crook, meadow on F07, inverted
+tunic/robe on F06, cape on F08). Angels deliberately get NO ref and NO build:
 drawn "small and simplified, faces indistinct" on both pages — anonymous
 figures like the Hem's crowd, so there is no likeness to drift and no invented
 angel iconography to defend.
@@ -51,7 +58,7 @@ Run order (one page at a time, eyeball between every step — pilot discipline):
   .venv\\Scripts\\python.exe <this file> --print            # review ALL prompts, $0
   .venv\\Scripts\\python.exe <this file> f01                # still F01 (no ref)
   ... eyeball at 1:1 + F01 referent check ...
-  ... CROP Jacob's full figure from the approved F01 -> jacob_ref.png HERE ...
+  ... CROP every recurring subject from its first approved page -> refs/ ...
   .venv\\Scripts\\python.exe <this file> f02                # etc., f02..f08
   ... each still passes its referent check BEFORE ...
   .venv\\Scripts\\python.exe <this file> f01 --animate      # etc.
@@ -59,7 +66,7 @@ Run order (one page at a time, eyeball between every step — pilot discipline):
 Referent checks (LAW 4 — regen the still, never adapt the clause, on any fail):
   F01: Jacob full figure mid-stride L->R-ish, staff in hand, stone on bare
        ground at lower right fully in frame, dusk washes; ZERO blue anywhere.
-       THEN crop jacob_ref.png before touching F02.
+       THEN crop refs/ (jacob, jacob_face, stone, bethel) before touching F02.
   F02: head on the STONE (not the ground), staff beside him, eyes closed;
        night sky grey-black only, ZERO blue anywhere.
   F03: ladder foot ON the earth fully in frame; angels ON the rungs (none
@@ -103,14 +110,38 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent / "test_the_cross"))
 from swirls_page import (  # noqa: E402
-    PageSpec, Panel, assemble_animation_prompt, assemble_still_prompt,
+    PageSpec, Panel, Ref, assemble_animation_prompt, assemble_still_prompt,
     render_animation, render_still,
 )
 
-JACOB_REF = HERE / "jacob_ref.png"  # human-cropped from the approved F01 render
+# Subject refs — each human-cropped from that subject's FIRST approved render.
+REFS_DIR = HERE / "refs"
+
+
+def _ref(name: str, subject: str) -> Ref:
+    return Ref(subject, str(REFS_DIR / name))
+
+
+R_JACOB = _ref("jacob_ref.png",
+               "Jacob, full figure — his face, dark jaw-length curling hair, sparse young beard, "
+               "lean build, olive-green robe over a cream tunic, ochre-brown mantle across one "
+               "shoulder, worn sandals")
+R_FACE = _ref("jacob_face_ref.png",
+              "Jacob's face close up — the exact hair and the first sparse shadow of a young "
+              "beard, never a full or thick beard")
+R_STONE = _ref("stone_ref.png",
+               "the field stone — one rough uncut tan-brown boulder with a flattened top, the "
+               "same single stone on every page")
+R_STAFF = _ref("staff_ref.png",
+               "Jacob's staff — one plain straight wooden pole with no hook, crook, or knob")
+R_LADDER = _ref("ladder_ref.png",
+                "the ladder — plain weathered wood, two straight rails and flat rungs")
+R_BETHEL = _ref("bethel_ref.png",
+                "the place — bare stony red-brown hill country with low hills on the horizon, "
+                "sparse dry grass and small stones, no meadow, no hedges, no trees")
 
 # Locked build — face/dress only, no motif, reused verbatim on every page
-# (F01 bare, F02+ prefixed with "match the attached reference").
+# (F01 bare, F02+ say "match his reference images" — see the refs manifest clause).
 _JACOB_BUILD = (
     "a young man with a smooth, unweathered face, quick watchful dark eyes, dark curling hair "
     "falling to his jaw and the first sparse shadow of a young beard, lean and light of build, a "
@@ -167,7 +198,7 @@ PAGES: dict[str, PageSpec] = {
         caption_lines=("the sun was set",),   # Gen 28:11, verbatim contiguous
         corner_note="NOTE: alone at dusk",
         panel_motions=(
-            "the light across the sketched bow and quiver shifts gently, nothing else changes",
+            "the bowstring and the quiver's arrow-fletching sway once in a passing breeze, then still",
             "the sketched tent cloths ripple faintly once in an evening wind",
             "a thin drift of dust crosses the sketched track",
         ),
@@ -183,7 +214,7 @@ PAGES: dict[str, PageSpec] = {
             "point."
         ),
         fence_kind="none",
-        ref_images=[],          # FIRST-EVER Jacob render — establishes jacob_ref.png
+        refs=[],                # ESTABLISHING page — jacob/face/stone/bethel refs were cropped FROM it
         model_tier="veo3_1_lite",  # continuation of a drawn walk + atmospheric dusk hold;
                                    # nothing has to COMPLETE mid-clip
     ),
@@ -198,11 +229,11 @@ PAGES: dict[str, PageSpec] = {
                   "a small sketch of bare open night sky over a low dark horizon, empty of any "
                   "roof or shelter"),
             Panel("the stone",
-                  "a small plain study of the rough uncut field stone alone, drawn as a quiet "
-                  "dry object"),
+                  "a small plain study of the rough uncut field stone alone (match its "
+                  "reference image), drawn as a quiet dry object"),
             Panel("his staff",
-                  "a small sketch of a plain wooden traveler's staff lying on bare ground, the "
-                  "one possession he carries"),
+                  "a small sketch of Jacob's plain straight wooden staff (match its reference "
+                  "image) lying on bare ground, the one possession he carries"),
         ),
         still_shot_type="MEDIUM WIDE shot",
         anim_shot_desc="medium wide shot",
@@ -211,11 +242,11 @@ PAGES: dict[str, PageSpec] = {
             "ink washes with a scatter of faint pale stars, and no blue anywhere in the sky "
             "itself; Jacob lies on his side on the bare ground in the center of the frame, fully "
             "inside the frame, his body curled under his ochre-brown mantle drawn over him like a "
-            "blanket, his head resting on the rough uncut field stone, his eyes closed, his face "
-            "slack with exhaustion; his wooden staff lies on the ground alongside him within "
-            "reach; sparse dry grass and small stones around him, the land empty to the dark "
-            "horizon, no shelter and no other person anywhere on the page. Jacob (match the "
-            "attached reference): " + _JACOB_BUILD + ". Stage 0 dosage: no blue Swirls of Life "
+            "blanket, his head resting on the rough uncut field stone (match its reference "
+            "image), his eyes closed, his face slack with exhaustion; his straight wooden staff "
+            "(match its reference image) lies on the ground alongside him within reach; sparse dry grass and small stones around him, the land empty to the dark "
+            "horizon, no shelter and no other person anywhere on the page. Jacob (match his "
+            "reference images): " + _JACOB_BUILD + ". Stage 0 dosage: no blue Swirls of Life "
             "ink motif anywhere on this page — no blue ink appears anywhere in the scene, the "
             "panels, or the margins; the night sky is grey-black ink only."
         ),
@@ -226,9 +257,11 @@ PAGES: dict[str, PageSpec] = {
         caption_lines=("tarried there all night",),   # Gen 28:11, verbatim contiguous
         corner_note="NOTE: stone for pillow",
         panel_motions=(
-            "a thin veil of cloud drifts slowly across the sketched night sky",
+            # was "a thin veil of cloud drifts..." — on veo that cloud leaked into the MAIN
+            # night sky twice (plus blue splatter + margin blots on attempt 2), so: tone-only
+            "a few faint stars in the sketched night sky twinkle softly, nothing else in the panel changes",
             "the light across the sketched stone shifts gently, nothing else changes",
-            "the light along the sketched staff shifts gently, nothing else changes",
+            "a wisp of dust drifts past the sketched staff and settles",
         ),
         main_scene_animation=(
             "Jacob lies completely still in sleep, only his chest rising and falling in a slow, "
@@ -241,8 +274,11 @@ PAGES: dict[str, PageSpec] = {
             "spot, or darkening appears anywhere on the page at any point."
         ),
         fence_kind="none",
-        ref_images=[str(JACOB_REF)],
-        model_tier="veo3_1_lite",  # pure atmospheric sleeping hold — veo's validated lane
+        refs=[R_JACOB, R_FACE, R_STONE, R_STAFF, R_BETHEL],
+        model_tier="kling3_0",  # WAS veo3_1_lite: two veo attempts 2026-08-22 both drifted the
+                                # whole page and invented clouds/blue splatter/margin blots on
+                                # this dark page (the darkening-prior bait) — switched per the
+                                # standing switch-models-after-2-fails rule
     ),
 
     # ---------------------------------------------------------------- F03
@@ -255,11 +291,12 @@ PAGES: dict[str, PageSpec] = {
         frame_label="F03",
         panels=(
             Panel("the dreamer",
-                  "a close study of Jacob's sleeping face at rest against the stone, eyes "
-                  "closed, drawn calm and still"),
+                  "a close study of Jacob's sleeping face (match his face reference image — "
+                  "the same sparse young beard) at rest against the stone, eyes closed, drawn "
+                  "calm and still"),
             Panel("first rung",
-                  "a small study of the ladder's lowest rung standing on bare dirt, drawn as "
-                  "plain weathered wood"),
+                  "a small study of the ladder's lowest rung (match the ladder reference "
+                  "image) standing on bare dirt, drawn as plain weathered wood"),
             Panel("under stars",
                   "a small sketch of deep night sky thick with faint stars over bare hills"),
         ),
@@ -267,25 +304,36 @@ PAGES: dict[str, PageSpec] = {
         anim_shot_desc="wide shot",
         main_scene_still=(
             "the dream: the same night country transfigured — from the bare ground beside the "
-            "sleeping Jacob, a great ladder of plain weathered wood rises through the whole "
+            "sleeping Jacob, a great ladder of plain weathered wood (match the ladder reference "
+            "image) rises through the whole "
             "height of the scene, its foot set on the earth among the dry grass and fully inside "
             "the frame, its two rails and every rung drawn in confident dark ink, climbing "
             "straight up into the deep night sky until its top passes out of the upper edge of "
             "the page; upon the ladder, angels of God are ascending and descending — six or "
             "seven robed figures in pale cream and ochre wash, drawn small and simplified with "
             "their faces indistinct, some stepping calmly upward and some stepping calmly "
-            "downward, each one standing on the ladder itself and none of them flying; Jacob lies "
+            "downward, each one standing on the ladder itself and none of them flying, every angel "
+            "keeping to the left half of the rungs with their hands on the left rail or at their "
+            "sides, no angel's hand or foot anywhere on the right rail; Jacob lies "
             "asleep at the ladder's foot at the lower left, small and fully inside the frame, "
-            "curled under his mantle with his head on the stone, exactly as he lay; the night sky "
-            "is laid in deep warm grey-black ink washes with faint pale stars, and no blue "
-            "anywhere in the sky itself. Jacob (match the attached reference): " + _JACOB_BUILD +
+            "curled under his mantle with his head on the field stone (match its reference image — "
+            "this is the ONLY large stone in the scene, his head rests on it, and no other boulder "
+            "or large rock appears anywhere else on the ground), his "
+            "straight wooden staff (match its reference image) on the ground beside him, exactly "
+            "as he lay; the night sky is laid in deep warm grey-black ink washes with faint pale "
+            "stars, and no blue anywhere in the sky itself. Jacob (match his reference images): "
+            + _JACOB_BUILD +
             ". Stage 1 dosage: exactly one restrained thread of blue ink, with the faintest "
-            "trace of muted gold, rising from the ground at the ladder's foot and winding slowly "
+            "trace of muted gold, beginning on the bare ground at the foot of the ladder's RIGHT "
+            "rail — the side of the ladder away from Jacob, with a wide stretch of empty ground "
+            "between its lowest point and any part of Jacob or his clothing — and winding slowly "
             "up alongside the ladder's right rail, woven with the rail's own line the whole way "
             "to the top of the page, drawn as one smooth unbroken calligraphic line of even "
-            "thickness, touching only the wooden rail, touching no angel and never touching "
-            "Jacob, the only blue on the whole page, behaving like a single line of wet ink bled "
-            "upward into the paper."
+            "thickness, its lowest end resting on the ground right at the base of the right rail "
+            "and going no further — it does not run along the ground, does not wander across the "
+            "field, and never reaches the bottom or side edges of the frame — touching only the "
+            "wooden rail, touching no angel and never touching Jacob, the only blue on the whole "
+            "page, behaving like a single line of wet ink bled upward into the paper."
         ),
         material_closer=(
             "the night sky behaves like deep grey-black ink wash with no blue in it, so the "
@@ -296,24 +344,30 @@ PAGES: dict[str, PageSpec] = {
         panel_motions=(
             # face panel -> tone-only (small sketched faces morph under content asks)
             "the light across the sleeping face softens very slightly, nothing else changes",
-            "the light across the sketched rung shifts gently, nothing else changes",
+            "the light across the sketched rung shifts gently, nothing else changes",  # WAS a dust-stir tweak (2026-08-22 v3): reverted with the shimmer, this page kept its
+            # v2-locked clip after 4 straight regens re-triggered the ground-escape defect
             "a thin veil of cloud drifts slowly across the sketched stars",
         ),
         main_scene_animation=(
-            "the angels continue the motion they are drawn in, the ascending figures climbing "
-            "slowly and calmly upward and the descending figures stepping slowly and calmly "
-            "downward, each one staying on the ladder itself for the whole clip, their robes "
-            "swaying gently with their steps; the ladder stays exactly as drawn, every rail and "
+            "the angels continue the motion they are drawn in, very slowly — each one moves at "
+            "most a single rung over the whole clip, the ascending figures easing upward and the "
+            "descending figures easing downward, every angel keeping both feet on the ladder's "
+            "rungs from the first frame to the last, the lowest angel staying high above the "
+            "ground, no angel ever reaching the ground, stepping off the ladder, or standing on "
+            "the earth, and no angel or any other figure appearing in any of the three top "
+            "panels; their robes sway gently with their steps; the ladder stays exactly as drawn, every rail and "
             "rung in place; Jacob lies completely still at the ladder's foot, only his chest "
             "rising and falling slowly in sleep; the single thin blue ink thread woven up the "
-            "ladder's right rail stays exactly as drawn, in place, for the whole clip; the night "
-            "sky and stars stay exactly as they are; no new figure or mark appears anywhere on "
+            "ladder's right rail stays exactly as drawn, in place, for the whole clip, unchanged in shape, thickness, and shade for every frame — this page's composition is already busy with climbing angels, so the thread itself stays completely still ink, none of this clip's motion budget spent on it; the night sky and stars stay exactly as they are; no new figure or mark appears anywhere on "
             "the page at any point."
         ),
         fence_kind="none",
-        ref_images=[str(JACOB_REF)],
-        model_tier="veo3_1_lite",  # continues a drawn, already-in-progress climb; no gesture
-                                   # must complete — veo's exact lane (and half Kling's cost)
+        refs=[R_JACOB, R_FACE, R_STONE, R_STAFF, R_LADDER, R_BETHEL],
+        model_tier="kling3_0",  # WAS veo3_1_lite (continuation climb, veo's lane on paper).
+                                # 2026-08-22: veo job dc29dfba-075d-4a28-b8ad-f88d42e1ed65 sat
+                                # in_progress 45+ min while the account's other jobs completed
+                                # every minute — switched per this page's own "if it fights
+                                # veo, switch to kling3_0" note
     ),
 
     # ---------------------------------------------------------------- F04
@@ -339,7 +393,8 @@ PAGES: dict[str, PageSpec] = {
         still_shot_type="WIDE shot",
         anim_shot_desc="wide shot",
         main_scene_still=(
-            "the dream at its height: the great wooden ladder still rises through the whole "
+            "the dream at its height: the great wooden ladder (match the ladder reference image) "
+            "still rises through the whole "
             "height of the scene from the dry ground to the top of the page, and at its top, "
             "filling the upper reach of the sky and fully inside the frame, a broad soft "
             "brightness of pale gold watercolor wash opens in the night — the ladder's highest "
@@ -350,9 +405,11 @@ PAGES: dict[str, PageSpec] = {
             "half of the ladder, drawn small and simplified with faces indistinct, standing "
             "still upon the rungs with heads bowed toward the light; Jacob lies asleep far below "
             "at the ladder's foot, small at the bottom of the frame and fully inside it, curled "
-            "under his mantle with his head on the stone; the night sky around the brightness "
-            "stays deep warm grey-black ink wash with faint stars, no blue anywhere in the sky "
-            "itself. Jacob (match the attached reference): " + _JACOB_BUILD + ". Stage 2 "
+            "under his mantle with his head on the stone (match its reference image), his straight "
+            "wooden staff (match its reference image) on the ground beside him; the night sky "
+            "around the brightness stays deep warm grey-black ink wash with faint stars, no blue "
+            "anywhere in the sky itself. Jacob (match his reference images): " + _JACOB_BUILD +
+            ". Stage 2 "
             "dosage: the blue ink motif is quietly present — a few soft threads of blue ink and "
             "one small watercolor bloom, with traces of muted gold, curling in the dark air "
             "close around the brightness at the top of the ladder, tied to no figure and "
@@ -370,8 +427,8 @@ PAGES: dict[str, PageSpec] = {
         corner_note="NOTE: no face drawn",   # the restraint, made diegetic
         panel_motions=(
             "the sketched grass on the far hills bows faintly in a passing wind",
-            "the light across the sketched dust shifts gently, nothing else changes",
-            "the light across the sketched sandals shifts gently, nothing else changes",
+            "a few grains of the sketched dust lift and drift a short distance in a passing breath of wind, then settle",
+            "a thin wisp of dust crosses just past the sketched sandals, then settles",
         ),
         main_scene_animation=(
             "the broad pale brightness at the top of the ladder stays exactly as warm and steady "
@@ -381,14 +438,19 @@ PAGES: dict[str, PageSpec] = {
             "rung in place; Jacob lies completely still far below, only his chest rising and "
             "falling slowly in sleep, his lips closed and completely still; the few soft blue "
             "threads and the small bloom around the brightness drift gently within their own "
-            "small area, their traces of muted gold slowly warming and settling; the stars hold "
-            "steady; no new figure, face, or mark appears anywhere on the page at any point."
+            "small area, their traces of muted gold slowly warming and settling; the stars hold steady; no new figure, face, or mark appears anywhere on the page at any point."
         ),
         fence_kind="none",
-        ref_images=[str(JACOB_REF)],
+        refs=[R_JACOB, R_FACE, R_STONE, R_STAFF, R_LADDER, R_BETHEL],
         model_tier="veo3_1_lite",  # atmospheric peak hold, validated drift clause only; the
                                    # light language is veo-safe positive-only ("stays exactly
-                                   # as warm and steady"), no glint/sparkle words
+                                   # as warm and steady"), no glint/sparkle words.
+                                   # NOTE 2026-08-22: this exact clause re-rolled 3x for v3
+                                   # (an angel-glow halo, a ballooning thread streak, and
+                                   # invented flowers) despite rendering clean the first time
+                                   # in v2 -- this page's theophany-brightness composition is
+                                   # inherently flaky on veo. Shipped clip is the v2 take;
+                                   # panel-motion prose above is untested against it.
     ),
 
     # ---------------------------------------------------------------- F05
@@ -403,11 +465,12 @@ PAGES: dict[str, PageSpec] = {
                   "a small sketch of the bare pre-dawn sky over dark hills, first thin light at "
                   "the rim, nothing in it"),
             Panel("wide awake",
-                  "a close study of Jacob's face, eyes wide open and startled, drawn with "
-                  "quick urgent strokes"),
+                  "a close study of Jacob's face (match his face reference image — the same "
+                  "sparse young beard), eyes wide open and startled, drawn with quick urgent "
+                  "strokes"),
             Panel("same stone",
-                  "a small plain study of the rough field stone in first light, exactly as it "
-                  "was"),
+                  "a small plain study of the rough field stone (match its reference image) in "
+                  "first light, exactly as it was"),
         ),
         still_shot_type="MEDIUM shot",
         anim_shot_desc="medium shot",
@@ -422,10 +485,12 @@ PAGES: dict[str, PageSpec] = {
             "still well below head-height off the ground; his other hand clutches the mantle "
             "sliding from his shoulder, his eyes wide open and staring upward at the empty sky, "
             "his mouth closed, his hair disordered from sleep; beneath him, fully inside the "
-            "frame beside his supporting arm, the rough field stone where his head lay a moment "
-            "ago; his staff lies on the ground nearby; the sky above him is empty and ordinary, "
-            "pale wash and fading stars, with plenty of open air above his head inside the "
-            "frame. Jacob (match the attached reference): " + _JACOB_BUILD + ". Fading dosage, "
+            "frame beside his supporting arm, the rough field stone (match its reference image) "
+            "where his head lay a moment ago; his straight wooden staff (match its reference "
+            "image — a plain pole, no crook) lies on the ground nearby; the sky above him is "
+            "empty and ordinary, pale wash and fading stars, with plenty of open air above his "
+            "head inside the frame. Jacob (match his reference images): " + _JACOB_BUILD +
+            ". Fading dosage, "
             "Stage 2 settling toward Stage 1: only two or three small, closed, curled flourishes "
             "of blue ink remain, thinner and paler than in the dream, with the last trace of "
             "muted gold, each one short and self-contained like a single calligraphic curl, "
@@ -442,8 +507,8 @@ PAGES: dict[str, PageSpec] = {
         caption_lines=("Jacob awaked",),   # Gen 28:16, verbatim contiguous
         corner_note="NOTE: dawn begins",
         panel_motions=(
-            "the thin light at the rim of the sketched hills warms very slightly, nothing else "
-            "changes",
+            "the thin light at the rim of the sketched hills brightens by a shade as dawn approaches, "
+            "nothing else changes",
             # full-arc blink, Kling's validated completing-gesture lane
             "his sketched eyes close once, then open again fully, ending wide open",
             "the light across the sketched stone shifts gently, nothing else changes",
@@ -456,12 +521,11 @@ PAGES: dict[str, PageSpec] = {
             "slips further from his shoulder and settles; his lips stay closed and completely "
             "still — he is not speaking and his mouth does not move at all; the two or three "
             "small closed curls of pale blue ink high in the sky stay exactly as drawn, in "
-            "place, for the whole clip, never lengthening, spreading, or trailing downward; the "
-            "stone lies still on the ground; the staff lies still; no new stain, spot, or "
+            "place, for the whole clip, never lengthening, spreading, or trailing downward; the stone lies still on the ground; the staff lies still; no new stain, spot, or "
             "darkening appears anywhere on the page at any point."
         ),
         fence_kind="none",
-        ref_images=[str(JACOB_REF)],
+        refs=[R_JACOB, R_FACE, R_STONE, R_STAFF, R_BETHEL],
         model_tier="kling3_0",  # the startle-rise (propped arm -> sitting) must visibly
                                 # COMPLETE mid-clip — Kling's lane; caption is 1 line so the
                                 # bubble bug's known 2-line trigger is avoided
@@ -497,10 +561,14 @@ PAGES: dict[str, PageSpec] = {
             "awe and fear together in his face, his mouth closed; "
             "one hand is pressed flat against the earth beside him, fully inside the frame; "
             "around him the ground is only dirt, sparse dry grass, and small stones, utterly "
-            "ordinary, stretching away to the hills; the rough field stone sits beside him, "
-            "fully inside the frame; his staff lies on the ground nearby; the sky holds thin "
-            "early light, its stars nearly gone. Jacob (match the attached reference): "
-            + _JACOB_BUILD + ". Stage 1 dosage, lingering: exactly one restrained thread of "
+            "ordinary, stretching away to the hills; the rough field stone (match its reference "
+            "image — the ONLY large stone in the scene, one single boulder, no second boulder "
+            "or large rock anywhere on the ground) sits beside him, fully inside the frame; his "
+            "straight wooden staff (match "
+            "its reference image) lies on the ground nearby; the sky holds thin early light, "
+            "its stars nearly gone. Jacob (match his reference images — the olive-green robe "
+            "worn OVER the cream tunic, exactly as in the reference, the mantle across one "
+            "shoulder): " + _JACOB_BUILD + ". Stage 1 dosage, lingering: exactly one restrained thread of "
             "blue ink, with the faintest trace of muted gold, short and small, curling in the "
             "still air well above the field stone, its lowest point clearly separated from the "
             "stone's own surface by a wide, plainly visible gap of open sky at least as tall as "
@@ -522,8 +590,8 @@ PAGES: dict[str, PageSpec] = {
             "the sketched fingers press a fraction flatter against the ground, then hold",
             "the sketched grass across the little field bows faintly in a passing breath of "
             "wind",
-            "the thin bright band at the sketched horizon warms very slightly, nothing else "
-            "changes",
+            "the thin bright band at the sketched horizon widens and warms slightly as dawn "
+            "advances",
         ),
         main_scene_animation=(
             "Jacob continues the turn of his head downward until his gaze rests on the bare "
@@ -532,12 +600,11 @@ PAGES: dict[str, PageSpec] = {
             "fraction flatter against the earth and stays there; his lips stay closed and "
             "completely still — he is not speaking and his mouth does not move at all; the "
             "single thin blue ink thread in the air above the stone stays exactly as drawn, in "
-            "place, for the whole clip; the stone sits still beside him; the staff lies still; "
-            "the dawn light stays exactly as it already is; no new stain, spot, or darkening "
+            "place, for the whole clip; the stone sits still beside him; the staff lies still; the dawn light stays exactly as it already is; no new stain, spot, or darkening "
             "appears anywhere on the page at any point."
         ),
         fence_kind="none",
-        ref_images=[str(JACOB_REF)],
+        refs=[R_JACOB, R_FACE, R_STONE, R_STAFF, R_BETHEL],
         model_tier="kling3_0",  # the sky-to-ground head-turn must visibly COMPLETE mid-clip,
                                 # plus the palm-press micro-gesture — Kling's lane
     ),
@@ -562,18 +629,22 @@ PAGES: dict[str, PageSpec] = {
         still_shot_type="WIDE shot",
         anim_shot_desc="wide shot",
         main_scene_still=(
-            "a wide, quiet dawn over the whole field, seen from a distance: the open country "
-            "stretching away to low hills, laid in broad half-dry washes of ochre and olive with "
-            "wide bare paper showing between them; Jacob sits small in the middle distance "
-            "beside the field stone, seen from behind, fully inside the frame, his back to us, "
+            "a wide, quiet dawn over the whole field, seen from a distance: the same bare stony "
+            "hill country as the place reference image, stretching away to low hills, laid in "
+            "broad half-dry washes of ochre and dusty clay-red with wide bare paper showing "
+            "between them; Jacob sits small in the middle distance beside the field stone (match "
+            "its reference image), his straight wooden staff on the ground beside him, seen from "
+            "behind, fully inside the frame, his back to us, "
             "still and unmoving, facing the paling horizon; around him the field is empty in "
             "every direction — no tent, no road, no wall, no other person and no animal "
             "anywhere in the scene; well below the sky's upper edge, at roughly the same height "
             "as the distant hilltops, where the ladder stood in the dream, a modest oval patch "
             "of paler air remains, barely lighter than the sky around it, plain thinned wash "
             "with no blue and no gold of its own, its edges well clear of the frame's top border "
-            "on every side, fully inside the frame. Jacob (match the attached reference): "
-            + _JACOB_BUILD + ", small at this distance, his figure simple and quiet. Stage 1 "
+            "on every side, fully inside the frame. Jacob (match his reference image even at this "
+            "size — the same olive-green robe, cream tunic, and ochre-brown mantle across one "
+            "shoulder, the same dark curling hair): " + _JACOB_BUILD + ", small at this "
+            "distance, his figure simple and quiet. Stage 1 "
             "residue dosage: one small, closed, self-contained curl of blue ink, paler than on "
             "any other page, with the barest trace of muted gold, short and compact like a "
             "single calligraphic flourish no larger than a hand's width, floating inside that "
@@ -591,7 +662,7 @@ PAGES: dict[str, PageSpec] = {
         corner_note="NOTE: not alone",
         panel_motions=(
             "one drop of dew slips slowly down a sketched grass blade",
-            "the light in the sketched sky shifts gently, nothing else changes",
+            "the last faint star in the sketched sky fades softly as dawn brightens",
             "the two sketched birds glide slowly onward across the panel",
         ),
         main_scene_animation=(
@@ -600,12 +671,11 @@ PAGES: dict[str, PageSpec] = {
             "the stone, his back to us, unmoving for the whole clip; the modest paler patch in "
             "the sky stays exactly as drawn; the single closed curl of blue ink inside it stays "
             "exactly as drawn, in place, for the whole clip, never lengthening or trailing "
-            "downward; the dawn light stays exactly "
-            "as soft and even as it already is, unchanged; no new figure or mark appears "
+            "downward; the dawn light stays exactly as soft and even as it already is, unchanged; no new figure or mark appears "
             "anywhere on the page at any point."
         ),
         fence_kind="none",
-        ref_images=[str(JACOB_REF)],
+        refs=[R_JACOB, R_STONE, R_STAFF, R_BETHEL],
         model_tier="veo3_1_lite",  # pure wide atmospheric hold, nothing completes — veo lane
     ),
 
@@ -619,8 +689,8 @@ PAGES: dict[str, PageSpec] = {
         frame_label="F08",
         panels=(
             Panel("on the earth",
-                  "a small study of a wooden ladder's lowest rung standing on bare dirt, drawn "
-                  "plain and solid"),
+                  "a small study of the wooden ladder's lowest rung (match the ladder reference "
+                  "image) standing on bare dirt, drawn plain and solid"),
             Panel("heaven open",
                   "a small sketch of the dawn sky parting above the hills, pale light widening "
                   "between soft clouds"),
@@ -634,12 +704,15 @@ PAGES: dict[str, PageSpec] = {
             "full dawn: the whole horizon alight, soft gold wash bled evenly along the meeting "
             "of sky and hills and diffusing high into the paling sky, the field warm with "
             "morning; Jacob stands in the lower third of the frame, seen from behind and fully "
-            "inside the frame, facing the dawn horizon, his mantle settled across both "
-            "shoulders, his staff upright in his hand with its foot on the ground, his stance "
-            "no longer bowed but straight, ready; beside him on the ground, fully inside the "
-            "frame, the rough field stone; the sky is open and empty of any ladder, any figure, "
-            "and any form — only light; the land ahead of him runs open toward the horizon. "
-            "Jacob (match the attached reference): " + _JACOB_BUILD + ", his cross-hatching "
+            "inside the frame, facing the dawn horizon, his long ochre-brown mantle hanging from "
+            "one shoulder and falling down his back to his hem exactly as in his reference, "
+            "never a short cape, his straight wooden staff (match its reference image) upright "
+            "in his hand with its foot on the ground, his stance no longer bowed but straight, "
+            "ready; beside him on the ground, fully inside the frame, the rough field stone "
+            "(match its reference image); the sky is open and empty of any ladder, any figure, "
+            "and any form — only light; the land ahead of him, the same bare stony hill country "
+            "as the place reference image, runs open toward the horizon. Jacob (match his "
+            "reference images): " + _JACOB_BUILD + ", his cross-hatching "
             "laid calmer and more even now than on any earlier page. Stage 2 dosage, held: a "
             "few soft threads of blue ink and one small watercolor bloom, with traces of muted "
             "gold, woven loosely along the band of dawn light where the sky meets the hills, "
@@ -656,7 +729,7 @@ PAGES: dict[str, PageSpec] = {
                                                 # 1:51 carried in words, never as a scene
         corner_note="NOTE: standing open",
         panel_motions=(
-            "the light across the sketched rung shifts gently, nothing else changes",
+            "a fine drift of dust settles across the sketched rung's foot, then stills",
             "the pale light between the sketched clouds slowly warms and settles",
             "a thin drift of dust crosses the sketched track",   # deliberate F01 bookend echo
         ),
@@ -671,7 +744,7 @@ PAGES: dict[str, PageSpec] = {
             "point; no new figure or mark appears anywhere on the page at any point."
         ),
         fence_kind="none",
-        ref_images=[str(JACOB_REF)],
+        refs=[R_JACOB, R_STONE, R_STAFF, R_LADDER, R_BETHEL],
         model_tier="kling3_0",  # the head-lift + shoulder-release must visibly COMPLETE (the
                                 # landing's one human turn, the Hem F05-v2 fix family); "glint
                                 # softly and settle" is Kling-legal wording
@@ -704,12 +777,6 @@ def main() -> int:
     pid = page_ids[0]
     spec = PAGES[pid]
     png, mp4 = _out_paths(pid)
-
-    if pid != "f01" and not JACOB_REF.exists():
-        print(f"  FAILED: {JACOB_REF.name} missing — crop Jacob's full figure from the "
-              f"approved F01 render and save it there first (ref-chaining rule: a recurring "
-              f"subject with no chained ref is a hard stop).")
-        return 1
 
     if "--animate" in args:
         if not png.exists():

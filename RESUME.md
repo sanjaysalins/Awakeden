@@ -1,4 +1,134 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★ SESSION 2026-08-22 (afternoon/evening) — "north star" template
+# confirmed with episode 2, then found to have genuinely diverged from
+# Jacob's Ladder in 3 concrete ways after the user watched it. READ THIS
+# FIRST — supersedes nothing below, just adds the rest of today.
+#
+# ── EPISODE 2 BUILT END-TO-END: "The Ashes That Made Clean" (Numbers 19,
+# Stain/uncleanness motif — chosen specifically to prove Stain since the
+# pilot was swirl-only). Full pipeline: KJV fetch -> narration (157 words,
+# single narrator voice) -> voiced via the real narration_pipeline.py +
+# per_turn_synth.py -> 2 woodcut covers + 4 interior ink-wash pages (leaner
+# than Jacob's 6, by design) -> animated -> assembled. Folder:
+# `poc_living_water_ink_style_test/swirls_episode_02_ashes_that_made_clean/`.
+#
+# ── TWO REAL FFMPEG BUGS FOUND, FIXED IN BOTH EPISODES' assemble scripts
+# (`assemble_book_v2.py` AND `assemble_ashes.py`): (1) a duplicate `-vf`
+# flag silently dropped the freeze-hold tpad extension every time — this
+# had ALREADY shipped unnoticed in Jacob's Ladder's approved final cut
+# (F03 ran 5.03s instead of its 7.46s slot); (2) concat-demuxer + output
+# `-t` truncates only at whole-segment boundaries, not the real target
+# duration, in `make_boomerang()`. Both fixed by switching to single
+# chained `-vf` and the concat FILTER instead of the demuxer. Full detail:
+# memory `feedback-ffmpeg-duplicate-vf-and-duck-transfer`.
+# **NOT YET DONE: Jacob's Ladder's own shipped `THE_LADDER_BOOK_final.mp4`
+# has NOT been rebuilt with this fix** (F03 stays ~2.4s short, harmlessly
+# absorbed by the tail cut) — still the user's call whether that's worth a
+# rebuild.
+#
+# ── SCORE AUDIBILITY, diagnosed and fixed TWICE, two different lessons:
+# (1) episode 2's original score ("dream trance," same family as Jacob's)
+# needed POSITIVE gain instead of Jacob's negative attenuation — a duck
+# tuned for one ElevenLabs Music generation does not transfer to the next,
+# verify every time (see memory above). (2) After a red-team (below) led to
+# generating a genuinely different "somber" score (sparse, minor-key, no
+# beat), it needed a THIRD different target: don't chase "never dips below
+# narration" on a sparse score — some sample points are the composition's
+# own written silences (confirmed by checking raw level at those exact
+# timestamps), forcing them up just blows out the parts that are actually
+# playing. Both scores now exist side by side:
+# `THE_ASHES_BOOK_final.mp4` (original) and `THE_ASHES_BOOK_final_somber.mp4`
+# (new) — **user has not yet listened/picked, both are in that folder's
+# index.html.**
+#
+# ── ⚠️ THE BIG FINDING, NOT YET ACTIONED: user watched episode 2 and said
+# it "feels very very different to the jacobs" — asked for a deep critique,
+# then explicitly "red team and then act on it." Red-teamed my own
+# analysis; only the score-tonal-mismatch hypothesis survived as
+# real+actionable at the time (see above). **Then the user came back with
+# 3 much more concrete, correct complaints I had NOT caught, verified by
+# actually looking at the real files side by side:**
+#   1. **Covers less vibrant/cinematic** — episode 2's cover prompts asked
+#      for "no vivid color anywhere / flat grey sky" to match the ash
+#      theme, which killed the warm-vs-cool color contrast that made
+#      Jacob's covers cinematic. WORSE: episode 2's back cover picked up an
+#      **unrequested picture-frame border + a separate cream caption strip
+#      below the image** — nothing in the prompt asked for this, it's a
+#      hallucinated layout defect nobody caught visually before approving.
+#      Jacob's covers are full-bleed with baked text, no border, ever.
+#   2. **Pages not hybrid** — Jacob's Ladder's VALIDATED hybrid template
+#      (`_style_test_durer_woodcut/render_hybrid_panels.py`, built AFTER
+#      the pilot shipped) renders the 3 small top panels in real woodcut
+#      linework (dense hatching, hard black contours) against a softer
+#      ink-wash main scene. `render_ashes.py` never picked this up — it
+#      copied the OLDER pre-hybrid plain-ink-wash template (small panels
+#      look identical to the main scene, no woodcut texture at all). This
+#      was a straight oversight: episode 2 was built off Jacob's Ladder's
+#      original PageSpec structure without carrying the hybrid upgrade
+#      forward. Confirmed visually comparing
+#      `_style_test_durer_woodcut/f01_hybrid_panels_test.png` (hybrid, has
+#      the woodcut panels) against episode 2's
+#      `the_ashes_f01_9x16.png` (plain, does not).
+#   3. **"Loads of annoying freeze frames"** — and this one is caused by
+#      MY OWN bug fix above. Jacob's Ladder's shipped cut never actually
+#      had a working freeze-hold (the ffmpeg bug was silently eating the
+#      extension every time), so the version the user loved never actually
+#      froze on anything. Episode 2 was built with the fix already live,
+#      so freeze mode fired correctly for the first time — and with only 6
+#      total units (vs Jacob's 8) the slots are wider, so F01 and F04 each
+#      sit on a literal single static frame for ~5 seconds, 50-63% of
+#      their own runtime. The "north star" was accidentally spared this
+#      problem, not actually free of it.
+#
+# **USER'S DECISION (AskUserQuestion): "Full fix" — redo the 2 covers
+# (restore real color-contrast lighting drama, forbid any border/frame,
+# full-bleed only) + redo all 4 interior pages using the real hybrid
+# template, real spend ~$5-8. THEN fix the freeze-frame design (a $0
+# assembly-logic change, but genuinely needs a decision since F01/F04's
+# gestures explicitly "must not reverse," ruling out just flipping them to
+# boomerang — options to weigh: longer native clip renders so less freeze
+# extension is needed, vs. capping freeze-hold length and rebalancing
+# slot-weight away from freeze units, vs. some other extension mode).**
+# **THIS IS THE VERY FIRST THING TO DO NEXT SESSION — nothing on this list
+# has been built yet, it was approved right as the session ended.**
+#
+
+# ── SPEND: NOT a rogue process. `Get-CimInstance Win32_Process` showed 5
+# claude.exe sessions + ArkAIology's WATCHDOG + PythonProject1's
+# `assemble_episode.py 12_jacob_peniel` all running on this box at once,
+# every one billing the same HF account. ArkAIology `WATCHDOG/history.jsonl`
+# has `stills the-ark-v2` / `clips the-ark-v2` jobs at 23:48-23:55 LOCAL
+# (BST=UTC+1) = the 22:48-22:55 UTC Kling/Veo/NanoBanana rows last night's
+# block called unexplained. Same pattern today (Kling 3.0 + Seedream 4.5
+# rows interleaved with my 14 Nano Banana calls). Memory
+# `project-unexplained-hf-spend` rewritten. Rule: ledger counts only what
+# THIS session's scripts submit; never reconcile against the account list.
+#
+# ── THE PRACTICE (user's call): every recurring subject — character,
+# location, object, artifact — gets its own ref, cropped from its first
+# approved page, chained into every later page. Mechanism: `swirls_page.Ref`
+# + `PageSpec.refs` (auto manifest clause at the end of the still prompt;
+# `render_still` hard-stops if a ref file is missing). Pilot refs in
+# `poc_living_water_ink_style_test/swirls_pilot_01_jacobs_ladder/refs/`:
+# jacob, jacob_face (NEW — full-figure alone let the beard thicken on every
+# close panel), stone, staff, ladder, bethel. SKILL.md +
+# PRODUCTION_PIPELINE.md + memory `feedback-refs-for-every-recurring-subject`.
+#
+# ── RESULT: F02-F08 re-rendered (14 stills, 28cr ~ $4.20, ledger logged).
+# All 8 hold Jacob/stone/staff/ladder/terrain now. Before/after:
+# `_consistency_before_after.html` in the pilot folder. Known residue:
+# F03 thread tail touches Jacob's robe edge + passes under one angel hand
+# (few px; 5 rolls, `_f03_compare.html`) — a no-ground-contact thread design
+# is the next fix if it bothers on playback; F04 has two small blooms not
+# one + quote marks on panel captions. v1 pages kept as _superseded_*.
+#
+# ── NEXT: animate, one page at a time with contact-sheet + playback QC
+# (5 veo3_1_lite + 3 kling3_0 pro, ~$7 clean). Get the user's /cost OK.
+# Nothing committed yet this session (swirls_page.py, render script, skill
+# docs, ledger, refs/ all uncommitted; PNGs stay local per .gitignore).
+#
+
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-21/22 — Swirls of Life FULL
 # RESTART (v1→v4), pilot build started, 8 stills approved. READ THIS FIRST,
 # supersedes every block below.

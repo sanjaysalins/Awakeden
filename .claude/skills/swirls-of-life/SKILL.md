@@ -42,6 +42,30 @@ well) at both 9:16 and 16:9, on Higgsfield's `nano_banana_pro`.
   sunset lighting, standing looking at a distant town instead of seated at the
   well) — both faces matched the crops closely. Same finding as
   `/painted-comic`'s Noah/ark lesson, independently re-proven in this style.
+- **Every recurring subject gets a ref — characters, objects, artifacts,
+  AND locations — not just the lead.** Locked 2026-08-22 after the Jacob's
+  Ladder pilot shipped 8 approved stills with only one ref (Jacob, full
+  figure): the stone went brown→grey, the staff grew a crook, the ladder
+  changed wood, F07 became a green meadow, Jacob's tunic/robe inverted, his
+  mantle became a cape, and his beard thickened on every close panel (a
+  full-figure crop is too small to pin a face — add a FACE close-up ref for
+  any character who gets a close panel). Mechanism: `swirls_page.Ref(subject,
+  path)` per subject in `PageSpec.refs`, cropped from the subject's first
+  approved render into the episode's `refs/`; the prompt gets an auto
+  manifest ("image 3 is the field stone — ...") and `render_still` refuses
+  to spend if a ref file is missing.
+- **Score direction is a SERIES-WIDE reference bank, not a per-episode
+  invention.** `SCORE_STYLE_BANK.md` (this folder) holds validated
+  ElevenLabs Music prompts + audio samples (`references/score_bank/`) from
+  the Jacob's Ladder pilot's 2026-08-22 bake-off — a "modern groove" /
+  90s dream-trance-and-house direction, picked over this project's usual
+  ambient-orchestral scores at the user's explicit request. Check it before
+  generating a fresh score prompt for a new episode; regenerate the picked
+  prompt at the new episode's own length rather than reusing the sample
+  file verbatim (it's fitted to Jacob's Ladder's 62.04s). Its own mixing
+  note is important: do NOT reuse `pipeline/score_mix.py`'s shared duck for
+  a rhythmic groove — see that file for why and for the looser duck values
+  that actually work.
 - **Jesus's reference is a SERIES-WIDE constant; everything else is
   per-episode.** `references/jesus_ref.png` is established once, in THIS ink
   style, and reused across every future episode. Do NOT chain the main

@@ -73,10 +73,17 @@ class PageSpec:
         # page-global fence's motif-specific callout)
     caption_lines: list[str]      # 1 or 2 stacked KJV-fragment lines
     corner_note: str
-    ref_images: list[str]         # paths to attach, already resolved by the
-        # caller per the ref-chaining rule (a new character's ref is
-        # established from their first render — this module doesn't infer
-        # that, the episode script still decides it, same as today)
+    refs: list[Ref]               # Ref(subject, path) per RECURRING subject —
+        # character, object, artifact, AND location — each cropped from its
+        # first approved render and chained into every later page it is on.
+        # assemble_still_prompt appends a manifest ("image 1 is Jacob...;
+        # image 3 is the field stone...") so the model knows which ref is
+        # what; render_still hard-stops before spending if a path is missing.
+        # Locked 2026-08-22 after the Jacob's Ladder pilot: with only a
+        # full-figure Jacob ref, the beard, dress, stone, staff, ladder and
+        # terrain ALL drifted across 8 approved stills. A face close-up ref
+        # is needed in addition to a full-figure one for any character who
+        # gets a close panel.
     model_tier: Literal["kling3_0", "veo3_1_lite"]
         # per the locked tiering rule: kling for any page needing a
         # completing gesture (a nod, a blink, a bow); veo for pure holds/

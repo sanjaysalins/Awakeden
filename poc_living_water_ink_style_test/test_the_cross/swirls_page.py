@@ -61,6 +61,18 @@ NO_BUBBLE_CLAUSE = "with no border, box, or speech bubble ever appearing around 
 
 
 @dataclass
+class Ref:
+    """One chained reference image for a RECURRING subject (character, object,
+    artifact, or location). Rule (locked 2026-08-22, Jacob's Ladder pilot): any
+    subject that appears on more than one page gets its own ref, cropped from its
+    first approved render, and is chained into every later page it appears on.
+    Text alone drifted every one of them — beard, dress, stone, staff, ladder,
+    terrain — across the 8 pilot stills."""
+    subject: str    # what it is + what to match, e.g. "Jacob — his face, hair, sparse beard, build and dress"
+    path: str       # local PNG, auto-uploaded by hf; must exist or render_still hard-stops
+
+
+@dataclass
 class Panel:
     label: str      # circled-number caption, e.g. "not with them"
     content: str    # authored prose, NO leading/trailing punctuation, e.g.
@@ -87,7 +99,7 @@ class PageSpec:
                                      # "the broken, tremored linework of Thomas's figure"
     caption_lines: tuple[str, ...] = ()
     corner_note: str = ""
-    ref_images: list[str] = field(default_factory=list)
+    refs: list[Ref] = field(default_factory=list)   # chained subject refs, in attach order
     model_tier: Literal["kling3_0", "veo3_1_lite"] = "kling3_0"
     aspect_ratio: Literal["9:16", "16:9"] = "9:16"
     include_no_bubble_clause: bool = True
@@ -134,6 +146,18 @@ def _fence(kind: Literal["fray", "stain", "none"], callout: str) -> str:
     raise ValueError(f"unknown fence_kind {kind!r}")
 
 
+def _refs_clause(refs: list[Ref]) -> str:
+    if not refs:
+        return ""
+    listing = "; ".join(f"image {i} is {r.subject}" for i, r in enumerate(refs, 1))
+    return (
+        f" Attached reference images, in order: {listing}. Every appearance of each referenced "
+        "subject anywhere on this page — in any of the three top panels or in the main scene, at "
+        "any size, angle, or distance — matches its reference exactly, the same drawing of the "
+        "same thing."
+    )
+
+
 def assemble_still_prompt(spec: PageSpec) -> str:
     parts = [
         STYLE_OPEN.format(seq_title=spec.seq_title, frame_label=spec.frame_label),
@@ -143,6 +167,7 @@ def assemble_still_prompt(spec: PageSpec) -> str:
         _caption_prose(spec.caption_lines, spec.corner_note),
         TEXT_LOCK + " ",
         PALETTE_PREFIX + spec.material_closer.strip(),
+        _refs_clause(spec.refs),
     ]
     return "".join(parts)
 
@@ -211,10 +236,17 @@ def render_still(spec: PageSpec, out_png: Path) -> bool:
     if out_png.exists():
         print(f"  [skip] {out_png.name} already exists")
         return True
+    missing = [r for r in spec.refs if not Path(r.path).exists()]
+    if missing:
+        for r in missing:
+            print(f"  FAILED: ref missing for {r.subject!r}: {r.path}")
+        print("  (ref-chaining rule: a recurring subject with no chained ref is a hard stop — "
+              "crop it from its first approved render before spending.)")
+        return False
     prompt = assemble_still_prompt(spec)
     cmd = [HF_CLI, "generate", "create", "nano_banana_pro", "--prompt", prompt]
-    for ref in spec.ref_images:
-        cmd += ["--image", ref]
+    for r in spec.refs:
+        cmd += ["--image", r.path]
     cmd += ["--aspect_ratio", spec.aspect_ratio, "--resolution", "2k", "--wait"]
     print(f"  [nano_banana_pro] rendering {out_png.name}...")
     ok = _run_hf(cmd, out_png, _IMG_URL_RE, 600)

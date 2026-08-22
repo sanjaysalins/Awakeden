@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dream Trance Score Bake-off</title>
+<style>
+  :root {
+    --bg: #14131a; --card: #1e1c26; --ink: #ece7f5; --muted: #928da3;
+    --accent: #8fb4e3; --gold: #d7b45a; --warn: #e0967a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 40px 24px 80px; background: var(--bg); color: var(--ink);
+    font-family: Georgia, 'Iowan Old Style', serif;
+  }
+  header { max-width: 900px; margin: 0 auto 40px; text-align: center; }
+  header h1 {
+    font-size: 1.9rem; letter-spacing: 0.04em; margin: 0 0 8px; color: var(--ink);
+  }
+  header p { color: var(--muted); margin: 4px 0; font-size: 0.95rem; }
+  .grid {
+    max-width: 900px; margin: 0 auto; display: grid;
+    grid-template-columns: 1fr; gap: 22px;
+  }
+  .card {
+    background: var(--card); border: 1px solid #33303e; border-radius: 10px;
+    padding: 20px 22px;
+  }
+  .label {
+    display: inline-block; background: var(--gold); color: #14131a; font-weight: bold;
+    font-size: 0.75rem; letter-spacing: 0.06em; padding: 3px 10px; border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  .flag {
+    display: inline-block; background: var(--warn); color: #14131a; font-weight: bold;
+    font-size: 0.72rem; letter-spacing: 0.04em; padding: 2px 8px; border-radius: 4px;
+    margin-left: 8px;
+  }
+  .title { font-size: 1.15rem; font-weight: bold; margin: 4px 0 10px; color: var(--ink); }
+  audio { width: 100%; margin: 10px 0 12px; }
+  details { color: var(--muted); font-size: 0.92rem; }
+  summary { cursor: pointer; color: var(--accent); margin-bottom: 6px; }
+  .note { color: var(--warn); font-size: 0.85rem; margin: 6px 0 0; }
+  pre {
+    white-space: pre-wrap; font-family: Georgia, serif; line-height: 1.5;
+    margin: 8px 0 0; color: var(--muted); font-size: 0.9rem;
+  }
+  footer {
+    max-width: 900px; margin: 44px auto 0; text-align: center; color: var(--muted);
+    font-size: 0.85rem; border-top: 1px solid #33303e; padding-top: 18px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Dream Trance Score Bake-off</h1>
+  <p>4 candidate prompts &middot; ElevenLabs Music &middot; 40s each &middot; instrumental</p>
+  <p>Not mixed into any cut yet — pure listening comparison.</p>
+</header>
+
+<div class="grid">
+
+  <div class="card">
+    <span class="label">A</span>
+    <div class="title">90s Dream Trance</div>
+    <audio controls preload="metadata" src="a_dream_trance.mp3"></audio>
+    <details><summary>prompt</summary>
+    <pre>137 BPM 90s dream trance: four-on-the-floor groove, hypnotic melancholic piano motif, warm synth bass, ethereal pads and strings, spacious reverb, gradual progressive arrangement, nostalgic and euphoric but calming, instrumental and cinematic.</pre>
+    </details>
+  </div>
+
+  <div class="card">
+    <span class="label">B</span>
+    <div class="title">1990s Dream Trance (revised)</div>
+    <div class="note">Original block was an image/video prompt (camera framing, a "Negative Prompt:" section) — flagged, and replaced with this proper audio-style prompt.</div>
+    <audio controls preload="metadata" src="b_dream_trance_v2.mp3"></audio>
+    <details><summary>prompt</summary>
+    <pre>1990s dream trance, ethereal acoustic piano lead, melancholic but uplifting melody, driving 4/4 house beat, sweeping ambient synth pads, deep hypnotic bassline, soothing electronic, instrumental, nostalgic club comedown, atmospheric, 135 bpm</pre>
+    </details>
+  </div>
+
+  <div class="card">
+    <span class="label">C</span>
+    <span class="flag">NAME REMOVED</span>
+    <div class="title">Dream House (Robert Miles reference stripped)</div>
+    <div class="note">Original named "Robert Miles 'Children'" — ElevenLabs Music's ToS hard-blocks named artist/song references. That one clause was removed; every stylistic descriptor around it is verbatim.</div>
+    <audio controls preload="metadata" src="c_dream_house_sanitized.mp3"></audio>
+    <details><summary>prompt (as submitted)</summary>
+    <pre>Pioneering dream trance / dream house style: simple looping emotional piano melody in minor key, lush atmospheric synth pads and soft strings, steady but restrained four-on-the-floor kick, heavy reverb and delay creating a spacious dreamy soundscape, subtle acoustic guitar elements, mid-tempo around 138 BPM, instrumental, melancholic yet gently uplifting, nostalgic and hypnotic atmosphere, organic electronic fusion</pre>
+    </details>
+  </div>
+
+  <div class="card">
+    <span class="label">D</span>
+    <div class="title">90s Dream-House, Breakdown-Built</div>
+    <audio controls preload="metadata" src="d_90s_dreamhouse_breakdown.mp3"></audio>
+    <details><summary>prompt</summary>
+    <pre>A mid-90s instrumental dream-house track at 137 BPM. A wistful minor-key piano melody carries the entire hook — no vocals, no acid line, nothing to replace it. Underneath, a soft four-on-the-floor kick and gentle offbeat hats, mixed back rather than forward. Wide ambient pads and string-like synth washes with long reverb tails fill the space. The arrangement is built around its breakdowns rather than its drops: it builds, then withdraws into near-silence with just piano and pad, then returns. Emotionally bittersweet and calming despite the tempo — a come-down record you can still dance to. No aggression, no hoover stabs, no rave riffs.</pre>
+    </details>
+  </div>
+
+</div>
+
+<footer>
+  Generated via ElevenLabs Music (model_id: music_v1), force_instrumental=true, 40s each.<br>
+  Files stay local — nothing mixed into a cut yet. Pick a direction and I'll generate it at full length and mix it in.
+</footer>
+
+</body>
+</html>
