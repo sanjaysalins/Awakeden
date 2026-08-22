@@ -1,0 +1,43 @@
+{
+  "folder": "swirls_pilot_01_jacobs_ladder",
+  "stage": "audit",
+  "generated_at": "2026-08-21T20:54:40Z",
+  "deterministic": {
+    "tag_validation": "passed",
+    "speaker_validation": "passed",
+    "roster": [
+      "god",
+      "jacob"
+    ]
+  },
+  "round_trip": {
+    "exact_match": true,
+    "blocking": false,
+    "diff_segments": [],
+    "added_words": 0,
+    "removed_words": 0
+  },
+  "anthropic_audit": {
+    "tag_economy": "appropriate",
+    "tag_quality_overall": "good",
+    "missed_speaker_opportunities": [],
+    "tonal_mismatches": [
+      {
+        "line_excerpt": "And the LORD Himself stood above it and said:",
+        "current_tags": "[deliberate]",
+        "suggested_tags": "[deliberate][slow]",
+        "rationale": "This is the lead-in to the piece's central divine quote; a second pacing tag would add a touch more weight before the speaker block, though a single tag is defensible for economy."
+      }
+    ],
+    "concerns": [
+      "The [emphasized] tag on the objection-and-rebuttal beat ('Some would call it just a guilty man's dream...') applies to the whole paragraph, but the actual emphasis should land on the second sentence only ('But God does not audition people before He comforts them.'). This schema tags per-beat, not per-sentence, so some register bleeds onto the setup clause -- acceptable, not a defect.",
+      "Study-context.md was empty, so audience framing defaulted per the charter's own devotional-vs-forensic branch to devotional register ([awe]/[reflective] load-bearing) rather than forensic-skeptic register, since the content is plainly a grace-anchored gospel short, not forensic apologetics. Flagging the inference explicitly in case a different framing was intended.",
+      "Tag variety is good (8 distinct Tier 1 tags across 11 beats, no tag exceeds ~55% coverage) -- no flat-read risk.",
+      "Quotation marks are now preserved inside both <speaker> blocks (fixed after the prior round-trip mismatch) so the tagged text should match the original verbatim."
+    ],
+    "model": "claude-opus-4-7",
+    "request_id": null,
+    "input_tokens": null,
+    "output_tokens": null
+  }
+}

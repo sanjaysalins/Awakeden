@@ -1,0 +1,77 @@
+{
+  "folder": "swirls_pilot_01_jacobs_ladder",
+  "stage": "per_turn_synth",
+  "mode": "dialogue_per_turn_with_narrator_atempo",
+  "generated_at": "2026-08-21T20:57:49Z",
+  "model_id": "eleven_v3",
+  "output_format": "mp3_44100_128",
+  "target_seconds": 59.0,
+  "natural_total_seconds": 65.44,
+  "narrator_natural_seconds": 56.32,
+  "quote_total_seconds": 9.12,
+  "narrator_atempo_factor": 1.1475,
+  "pre_quote_pause_seconds": 0.4,
+  "post_quote_pause_seconds": 0.0,
+  "pause_total_seconds": 0.8,
+  "final_total_seconds": 59.035,
+  "delta_vs_target_seconds": 0.035,
+  "turns": [
+    {
+      "index": 0,
+      "speaker": "narrator",
+      "chars": 508,
+      "natural_seconds": 28.0,
+      "final_seconds": 24.417,
+      "atempo_applied": true
+    },
+    {
+      "index": 1,
+      "speaker": "god",
+      "chars": 42,
+      "natural_seconds": 2.8,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 2,
+      "speaker": "narrator",
+      "chars": 173,
+      "natural_seconds": 9.44,
+      "final_seconds": 2.8,
+      "atempo_applied": true
+    },
+    {
+      "index": 3,
+      "speaker": "jacob",
+      "chars": 84,
+      "natural_seconds": 6.32,
+      "final_seconds": 8.238,
+      "atempo_applied": false
+    },
+    {
+      "index": 4,
+      "speaker": "narrator",
+      "chars": 306,
+      "natural_seconds": 18.88,
+      "final_seconds": 0.4,
+      "atempo_applied": true
+    }
+  ],
+  "speakers": {
+    "narrator": {
+      "voice_id": "LSi9zNCeliLuhIGGS0By",
+      "audio_tag": null
+    },
+    "god": {
+      "voice_id": "UzI1NsMEV3ni5JRkRSls",
+      "audio_tag": null
+    },
+    "jacob": {
+      "voice_id": "puDRtQWF8NtQiPMJygTb",
+      "audio_tag": null
+    }
+  },
+  "settings": {
+    "stability": 0.65
+  }
+}

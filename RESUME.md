@@ -1,4 +1,162 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-21/22 — Swirls of Life FULL
+# RESTART (v1→v4), pilot build started, 8 stills approved. READ THIS FIRST,
+# supersedes every block below.
+#
+# ── ⚠️ URGENT, READ FIRST: the unexplained-HF-spend problem is back, a 4th
+# time, and this is the clearest evidence yet that it's a real separate
+# process, not undercounted iteration. Tonight's actual render work was 8
+# STILLS ONLY (nano_banana_pro, `render_jacobs_ladder.py` — `--animate` was
+# never called once). But `hf account transactions --size 60 --json` shows a
+# Kling v3.0 + Google Veo 3.1 Lite + **"Kling 2.6 Video"** pattern running
+# near-continuously from ~16:28 UTC to ~23:10 UTC — nearly 7 hours, spanning
+# this entire session — totalling ~313.5 credits (~$47) in animation spend
+# alone, none of it requested. **"Kling 2.6 Video" does not appear in any
+# script this project has ever written** (every render script, tonight and
+# prior, uses `kling3_0` or `veo3_1_lite` — never Kling's older 2.6 line).
+# That's the strongest single piece of evidence across all four occurrences
+# that something else has live access to this Higgsfield account. Confirmed
+# the pattern had stopped by the time of writing (no new transactions after
+# 00:01:42 UTC, matching this session's own last still render) — not firing
+# at write-time, but it has now recurred and GROWN every single time it's
+# been checked: 2026-08-18 small → 2026-08-20 $95 → 2026-08-21 AM $1.80 →
+# 2026-08-21 PM/night $47+. Full note in `data/spend_ledger.jsonl`
+# (kind: "reconciliation", episode `SwirlsOfLife_JacobsLadder_pilot`) and
+# memory `project-unexplained-hf-spend`. **The CLI-only transaction view has
+# caught this four times but diagnosed it zero times — next session's first
+# move on this topic should be helping the user actually open the
+# Higgsfield web dashboard's job/submitter history (or contact Higgsfield
+# support), not another transaction-log read.**
+#
+# ── THE BIG STORY OF TODAY: the Swirls of Life series slate got fully
+# rebuilt from zero, twice reviewed, and its pilot episode is now mid-build.
+# In order:
+#   1. Locked the series' audience/takeaway/goal (a real gap — no series in
+#      this catalog had ever stated one) — in
+#      `poc_living_water_ink_style_test/test_the_cross/
+#      SWIRLS_OF_LIFE_SERIES_PLAN.md` section 1.
+#   2. Designed and built the "formalize scripts" production pipeline
+#      tier the user picked over full gates or staying hand-rolled:
+#      `poc_living_water_ink_style_test/test_the_cross/swirls_page.py`
+#      (`PageSpec` + prompt-assembly), validated at $0 against two already-
+#      approved pages before any new content touched it. Design doc:
+#      `.claude/skills/swirls-of-life/PRODUCTION_PIPELINE.md`.
+#   3. **The user then said, in their own words: "I have still not
+#      understood what we are trying to do,"** which led to genuinely
+#      re-grounding the whole series in the actual mission ("Jesus from
+#      every lens... the most beautiful, most original, most unique way...
+#      never the feeling of heard that, seen that before... truly biblically
+#      grounded, never assuming anything not brought from thin air") — and
+#      then the user's call: **drop every story already made anywhere in
+#      this catalog, in any style, full restart, including this format's
+#      own validated POC work (The Well, The Hem, Doubting Thomas, the Storm
+#      test).**
+#   4. Systematically re-verified a fresh 15-episode slate against the WHOLE
+#      catalog (5 separate research forks this session) — the original
+#      15-slate turned out to be 8/15 already produced elsewhere, some 3-4
+#      times over. Built a genuinely fresh slate, sent it through **Fable
+#      (creative critique) + the 5-CLI panel, twice** (v2 then v3), each
+#      round catching real things — including a finale that collided with
+#      an already-SHIPPED piece the first verification pass missed (fixed
+#      by switching to the Road to Emmaus), two picks that were merely
+#      *planned* elsewhere but got dropped anyway per the user's stricter
+#      standard, a real doctrine error (Gentile ≠ unclean, fixed), an
+#      episode cut because the text gives it no resolution to film, and two
+#      genuinely better retags Fable caught (Queen of Sheba → Fray, widow
+#      of Nain → Stain via the funeral-bier/red-heifer rhyme).
+#   5. **`SWIRLS_OF_LIFE_SERIES_PLAN_V4.md` is now the live, current slate**
+#      — 15 episodes (13 shorts + 2 longs), twice independently reviewed,
+#      zero doctrinal or collision problems outstanding. v1/v2/v3 are
+#      superseded, kept only for the decision trail.
+#   6. **The pilot (episode: The Ladder He Saw, Genesis 28:10-17, Jacob's
+#      dream) started building for real** — narration written, voiced
+#      (genuinely multi-voice: narrator/god/jacob, duration-locked 59.04s),
+#      and all 8 storyboard pages rendered and approved through
+#      `swirls_page.py` — the first real content this module has ever
+#      produced. Folder: `poc_living_water_ink_style_test/
+#      swirls_pilot_01_jacobs_ladder/`, review page is that folder's own
+#      `index.html` (open it directly — a local gallery, not a hosted
+#      artifact; the PNGs/MP3 stay local-only per this repo's own
+#      `.gitignore`, never committed, only the code/narration/metadata are).
+#
+# ── REAL DEFECTS FOUND AND FIXED TONIGHT (all fixed by rewording the
+# prompt, not blind re-rolling — each fix is now baked into
+# `render_jacobs_ladder.py` for good):
+#   - A "mid-rise"/"mid-turn" pose description rendered as an already-
+#     settled end pose TWICE in a row (F05) — fixed with much more explicit
+#     body-mechanics language (locked supporting arm, legs still flat,
+#     steep diagonal torso angle, nowhere near upright yet).
+#   - The swirl motif rendered as a literal vertical "drip" falling from
+#     the top frame edge whenever it was described as "hanging high in the
+#     sky" with nothing physical to anchor to — hit independently on BOTH
+#     F05 and F07, same root cause. Fixed by switching to "small closed
+#     calligraphic curl, floating with clear air on every side, never
+#     trailing downward" language everywhere the swirl has no ladder/rail/
+#     object to wind around.
+#   - Two separate invented-baked-text artifacts (a garbled sub-label under
+#     a panel caption; a duplicated title line) — plain regens, no wording
+#     fix needed, just LAW 4 discipline.
+#   - A swirl thread rendered visibly touching the stone it was meant to
+#     float near (F06) — fixed with an explicit "gap at least as tall as
+#     the stone itself" clause.
+#   - One NSFW false-positive on a completely innocent waking-up pose —
+#     cleared on a plain retry, no wording change needed.
+#   - Two real bugs in the audio pipeline: hit the known agent-bridge
+#     stale-C:-copy gotcha again (memory `feedback_agent_bridge_no_api`) —
+#     confirmed AGAIN live that `PythonProject1`'s venv writes bridge
+#     requests under the stale `C:\Users\sanjay\PycharmProjects\
+#     JesusInTheBible\.agent_bridge\` copy, not the real `F:` repo, so
+#     watch BOTH locations. Also found and fixed a bug of my own: dropping
+#     literal quote-mark characters when wrapping a narration line in
+#     `<speaker name="X">` tags breaks the pipeline's own round-trip
+#     verbatim check (correctly BLOCKING) — fix is to keep the quote marks
+#     INSIDE the speaker tag.
+#
+# ── ⚠️ OPEN, UNRESOLVED AT SESSION CLOSE: the user said there are
+# "several character consistency issues" across the 8 approved stills. I
+# confirmed ONE concretely on my own re-inspection before the session
+# ended — **F05's Jacob has a visibly fuller, darker beard and messier
+# hair than the locked reference** (compare F01/F02/F06/F08, which all
+# hold the "first sparse shadow of a beard" build faithfully) — but the
+# user was about to give their own fuller list when we closed for the
+# night. **Do not assume F05's beard is the only issue — get the user's
+# actual full list first, before touching any regens.**
+#
+# ── START HERE TOMORROW, in priority order:
+#   1. The unexplained spend, above — this is the 4th time and by far the
+#      most diagnostic evidence yet (a model no script here has ever used).
+#      Push for the Higgsfield web dashboard check this time, not another
+#      CLI pull — four CLI-only checks have found it, zero have diagnosed it.
+#   2. Get the user's full list of character-consistency issues across the
+#      8 approved Jacob's Ladder stills (only F05's beard/hair is confirmed
+#      so far) before regenerating anything.
+#   3. Fix whatever that list turns out to be (most likely F05, possibly
+#      others) — each fix should be a genuine prompt reword per the defects
+#      found tonight, not a blind re-roll, per this project's own LAW 4
+#      discipline, UNLESS the same defect recurs twice, in which case reword.
+#   4. Only once the stills are genuinely locked: render all 8 animation
+#      clips (5 veo3_1_lite ~$0.60 each, 3 kling3_0 pro ~$1.31 each,
+#      ~$6.93 clean estimate, one page at a time, eyeball + contact-sheet
+#      QC between every step, per the script's own pilot discipline).
+#   5. Once the pilot episode fully ships (narration+pages+animation+
+#      assembly+caption+landing-hold all green): that's the exit criterion
+#      for retiring the one-off scripts in favor of `swirls_page.py` for
+#      every future episode, per `PRODUCTION_PIPELINE.md`'s own migration
+#      path step 4.
+#
+# ── SPEND TONIGHT: ~$4.50 confirmed mine (≈15 nano_banana_pro still calls
+# across F01-F08 including regens) + ~$47+ NOT mine (see the urgent flag
+# above) = the account moved by more than $50 this session. Full breakdown
+# in `data/spend_ledger.jsonl`'s last entry.
+#
+# ── COMMITS: yes — the full v2→v3→v4 slate rebuild, the Fable + panel
+# review artifacts, and the pilot script (`render_jacobs_ladder.py` +
+# narration files) are all committed to `main`. The still/animation media
+# themselves are NOT committed (`.gitignore` excludes `*.png`/`*.mp4`/
+# `*.mp3` project-wide) — they exist only on local disk at the path above.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-20 — DEAD INK motif system
 # (Stain + Fray) validated end-to-end; animation template (LAW 0-4) hardened
 # through real failures; a full Swirls-of-Life series plan drafted and sent
