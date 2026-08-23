@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "shoulder-length dark brown hair pushed back from his face",
+      "actual": "Jesus' hair reads as loosely flowing/wavy rather than clearly pushed back -- a minor styling nit, still shoulder-length and dark brown, no halo or glow present"
+    },
+    {
+      "claim": "Nathanael... caught off-balance, his head pulled back in astonishment",
+      "actual": "Nathanael's pose reads more as a purposeful mid-stride approach than clearly off-balance, though his expression is astonished/open-mouthed"
+    }
+  ],
+  "banned_token_hits": [],
+  "png_sha256": "53de84c8eb8e3aa7c19e168dac1cd645408abe6717fe3d0b9aa7f08854f8c93c"
+}

@@ -1,0 +1,42 @@
+{
+  "folder": "swirls_episode_08_can_any_good_thing",
+  "stage": "audit",
+  "generated_at": "2026-08-23T15:48:30Z",
+  "deterministic": {
+    "tag_validation": "passed",
+    "speaker_validation": "passed",
+    "roster": [
+      "jesus",
+      "nathanael"
+    ]
+  },
+  "round_trip": {
+    "exact_match": true,
+    "blocking": false,
+    "diff_segments": [],
+    "added_words": 0,
+    "removed_words": 0
+  },
+  "anthropic_audit": {
+    "tag_economy": "appropriate",
+    "tag_quality_overall": "good",
+    "missed_speaker_opportunities": [],
+    "tonal_mismatches": [
+      {
+        "line_excerpt": "A man insulted Jesus behind His back. Jesus complimented him to his face.",
+        "current_tags": "[matter-of-fact]",
+        "suggested_tags": "[reflective]",
+        "rationale": "Flat delivery lets the paradox land on its own, which is a valid reading, but a slightly more reflective register is worth an ear-test since this is the hook line."
+      }
+    ],
+    "concerns": [
+      "Final Jesus quote keeps the mid-quote ellipsis ('these... Hereafter') verbatim from the source KJV text -- same TTS prosody note as the verify pass, listen for an overlong pause on synth.",
+      "Five narrator transition lines in a row carry [serious] -- deliberate (each sets up a different attributed quote) and stays under the 70% flat-read threshold, but worth a listen for contour.",
+      "All six quoted lines are attributed to jesus or nathanael only, matching the closed roster; no invented speaker names."
+    ],
+    "model": "claude-opus-4-7",
+    "request_id": null,
+    "input_tokens": null,
+    "output_tokens": null
+  }
+}

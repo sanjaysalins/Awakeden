@@ -1,5 +1,41 @@
 # STATE.md — progress tracker
 
+**2026-08-23 (evening) Swirls of Life episode 8 ("Can Any Good Thing," John
+1:45-51) build started through the now-hardened pipeline, stopped mid-visual
+build at the user's request.** Audio is done and locked (61.04s, 3 voices).
+Fable produced the one per-episode design brief (6 pages, character builds,
+Fray FR1→FR3→FR2→FR0 hinge, F06 Jacob's-Ladder callback) — user then said
+Fable was slowing things down and to keep it to major design calls only,
+Sonnet does all execution from here (new memory
+`feedback-fable-design-sonnet-execute`, updated scope). Visual build: F01-F04
+fully done (still+animation, both passing content audit + real contact-sheet
+QC). Three real defects found by actually looking at renders, not trusting
+pass/fail signals — all fixed: (1) F01's animation hallucinated a speech
+bubble, caused by animation prompts running ~2x longer than this project's
+own documented word-count/tone rule — shortened all 6 pages' prompts; (2) the
+Fray (doubt) motif on Nathanael wasn't rendering at all on F01-F03 because it
+was only described in a trailing summary sentence, not inline where his
+figure is drawn — fixed for F02/F03 (F01 left as-is, user's call, subtlest
+dose); (3) Jesus's mantle hallucinated an invented dark lining swinging open
+mid-clip on F03 — two prompt fixes failed (one made it worse), third attempt
+(remove all mantle motion) passed. Mid-session the HF account ran out of
+credits entirely (real billing wall, not a bug) — user topped up, confirmed
+via balance check, continued. **Next session, first task:** F05's still
+baked the literal shot-type label "MEDIUM OVER-SHOULDER shot" onto the page
+as visible text — a real TEXT_LOCK violation, not yet diagnosed or fixed.
+Do not animate F05 until that's resolved. F06 + both covers not started.
+
+**Spend:** ~$6.53 this session (full detail in `data/spend_ledger.jsonl`,
+stage `first_build_session_pages_f01_f05_still`).
+
+**Commits:** see `RESUME.md`'s new top block for full detail; committing
+this session's episode-8 work now.
+
+**Next session:** see `RESUME.md`'s top block — fix F05's baked-text defect
+first, then animate F05, then F06 + both covers, then assemble + verify.
+
+## ════════════════════════════════════════════════════════════════
+
 **2026-08-22 Swirls of Life episode 2 ("The Ashes That Made Clean," Numbers
 19) built end to end following the Jacob's Ladder "north star" template —
 then found to have genuinely diverged from it in 3 concrete ways.** Fixed

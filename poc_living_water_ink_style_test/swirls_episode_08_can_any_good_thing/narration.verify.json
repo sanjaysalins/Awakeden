@@ -1,0 +1,72 @@
+{
+  "folder": "swirls_episode_08_can_any_good_thing",
+  "stage": "verify",
+  "generated_at": "2026-08-23T15:46:20Z",
+  "deterministic": {
+    "char_count_after_comment_strip": 1019,
+    "char_cap": 2000,
+    "within_cap": true,
+    "non_empty": true
+  },
+  "voice_roster": {
+    "voices_json_present": true,
+    "speakers_in_roster": [
+      "jesus",
+      "narrator",
+      "nathanael"
+    ]
+  },
+  "anthropic_review": {
+    "coherence": "good",
+    "beat_count": 16,
+    "tonal_register": [
+      "reflective",
+      "devotional",
+      "intimate",
+      "serious"
+    ],
+    "multi_voice_candidates": [
+      {
+        "line_excerpt": "Can there any good thing come out of Nazareth?",
+        "suggested_speaker": "nathanael",
+        "rationale": "Directly preceded by 'Nathanael's answer:' framing in the narrator line."
+      },
+      {
+        "line_excerpt": "Behold an Israelite indeed, in whom is no guile!",
+        "suggested_speaker": "jesus",
+        "rationale": "Directly preceded by 'Jesus spoke first:' framing."
+      },
+      {
+        "line_excerpt": "Whence knowest thou me?",
+        "suggested_speaker": "nathanael",
+        "rationale": "Directly preceded by 'Nathanael asked:' framing."
+      },
+      {
+        "line_excerpt": "Before that Philip called thee, when thou wast under the fig",
+        "suggested_speaker": "jesus",
+        "rationale": "Directly preceded by 'Jesus answered:' framing."
+      },
+      {
+        "line_excerpt": "Rabbi, thou art the Son of God; thou art the King of",
+        "suggested_speaker": "nathanael",
+        "rationale": "Directly preceded by 'Nathanael said:' framing."
+      },
+      {
+        "line_excerpt": "Thou shalt see greater things than these... Hereafter ye shall",
+        "suggested_speaker": "jesus",
+        "rationale": "Directly preceded by 'And Jesus went further:' framing."
+      }
+    ],
+    "spoken_length_estimate_seconds": 67,
+    "concerns": [
+      "Ellipsis in 'these... Hereafter' (final Jesus quote) may render as an unnaturally long pause in TTS -- check prosody after synthesis.",
+      "Em dashes used as narrator pause punctuation throughout (not speaker breaks) -- confirm the tagger does not mistake them for a voice switch.",
+      "Final Jesus quote is the longest single line (~26 words, two KJV clauses) -- may benefit from an internal breath tag for natural delivery.",
+      "All three named speakers (jesus, narrator, nathanael) already have voice_id entries in voices.json -- no roster gap."
+    ],
+    "model": "claude-opus-4-7",
+    "request_id": null,
+    "input_tokens": null,
+    "output_tokens": null
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "sun coming through them in small coins of light",
+      "actual": "rendered as dramatic radiating light shafts through the leaves rather than small discrete coins of light -- same location and color, a stylistic interpretation not a content mismatch"
+    },
+    {
+      "claim": "one small blue-gold watercolor bloom at the very top of the frame",
+      "actual": "rendered as a soft rising blue-gold cloud/wisp above the canopy rather than a single discrete bloom -- same position and palette, a stylistic variation"
+    }
+  ],
+  "banned_token_hits": [],
+  "png_sha256": "21613aef4a800577cf7e2360db48045f2f3115b6fce5371f0c14891b979179a7"
+}

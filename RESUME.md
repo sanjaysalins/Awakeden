@@ -1,4 +1,185 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★★★ SESSION 2026-08-23 (evening) — episode 8 "Can Any Good
+# Thing" (John 1:45-51) build STARTED through the hardened pipeline, stopped
+# mid-visual-build at the user's own "close for today" request. READ THIS
+# FIRST — supersedes nothing below, adds tonight's work.
+#
+# ── AUDIO IS DONE AND LOCKED: narration.mp3, 61.04s, 3 voices (narrator/
+# nathanael/jesus), via the real narration_pipeline.py (verify/tag/audit,
+# serviced live over the agent-bridge -- watch for the KNOWN stale-C:-mirror
+# gotcha, memory `feedback_agent_bridge_no_api`) + per_turn_synth.py. One
+# real fix needed: the first --target 59 run failed outright (ffmpeg atempo
+# hard-caps at 2.0x single-stage, narrator compression needed 2.07x) --
+# trimmed 2 narrator connective lines (no KJV quote text touched) AND raised
+# target to 61s (still within this series' own precedent, episode 2 shipped
+# at 62s) to bring atempo down to 1.73x. User approved the audio with "go".
+#
+# ── VISUAL DESIGN: dispatched to Fable per the user's OWN standing rule
+# (`~/.claude/CLAUDE.md`) -- but the user then said explicitly, after
+# watching the round-trip cost real time: "looks like fable may be slowing
+# us down, lets just use fable for any major design dections and continue
+# to operate with sonnet." New memory `feedback_fable_design_sonnet_execute`
+# updated with this scope: Fable for the ONE big per-episode design brief
+# only (character builds, page plan, cover concepts) -- everything after
+# that (prompt authoring, fixing bad renders, QC, re-rendering) is Sonnet's
+# job, never round-tripped back to Fable. Fable's actual episode-8 design:
+# 6 interior pages (not 4 like episode 2 or 8 like episode 1 -- sized to
+# THIS episode's own beats), Fray arc FR1(F01)->FR3 PEAK(F02)->FR2(F03)->
+# HARD JUMP->FR0(F04 onward), F06 = a real Jacob's-Ladder visual callback
+# (parted-sky "ladder" of light + angels, echoing episode 1's own F03/F08).
+# Full character-build paragraphs + all 6 pages' content are in `episode.py`
+# itself (`poc_living_water_ink_style_test/swirls_episode_08_can_any_good_
+# thing/episode.py`) -- read that file directly, don't re-derive.
+#
+# ── THREE REAL DEFECTS FOUND AND FIXED, each by looking at the actual
+# render (not trusting a pass/fail signal) -- full detail + exact fix text
+# in tonight's `data/spend_ledger.jsonl` entry (`stage=
+# first_build_session_pages_f01_f05_still`), summary here:
+#   1. F01's animation hallucinated a speech bubble with garbled text.
+#      Root cause: my animation prompts ran ~250 words vs this project's
+#      OWN documented 70-130-word / "short and positive beats long and
+#      defensive" rule (`NORTH_STAR_ANIMATION_PROMPT.md`) -- I'd apparently
+#      never actually re-read that rule before authoring a new episode's
+#      prompts from scratch. Rewrote all 6 pages' animation clauses
+#      shorter (down to 103-186 words each). Fixed on retry, clean.
+#   2. The Fray (doubt) motif on Nathanael WASN'T RENDERING AT ALL on F01,
+#      F02, or F03 -- I'd only described it in the trailing
+#      `material_closer` summary sentence, never inline in `main_scene_
+#      still` where his figure is actually being drawn. Compared against
+#      the validated Stain precedent (`render_the_hem.py`) which embeds
+#      the dead-ink description directly and specifically -- that's the
+#      pattern that actually works. Fixed by moving the Fray clause into
+#      `main_scene_still` for all 3 pages. F02 (the FR3 peak) and F03 (FR2)
+#      re-rendered and CONFIRMED visible via zoomed crops (loose scratchy
+#      hatching + a doubled shoulder stroke on F02; a subtler waver on
+#      F03 -- correctly less extreme than F02, matching the intended
+#      descending-then-jump arc). **F01's FR1 stays unfixed** -- offered
+#      the user a redo (~$1.80), they said leave it (subtlest dose,
+#      already approved+paid, least dramatically important).
+#   3. F03's animation showed Jesus's mantle swinging open mid-clip to
+#      reveal an INVENTED dark lining never in the source still. Two
+#      prompt-based color-lock attempts both failed -- the 2nd was WORSE
+#      (a full black flap, not just a teal edge peek). 3rd attempt removed
+#      ALL mantle motion ("Jesus stands completely still, no motion
+#      anywhere in his robe or mantle") and passed -- only a sub-pixel
+#      trace remains, invisible at normal viewing scale. This is the kind
+#      of composition-fights-the-model case this project's own docs
+#      already warn about (try removing the motion request entirely
+#      rather than iterating prompt language forever). SAME preventive fix
+#      applied to F06's animation prompt BEFORE it was ever rendered --
+#      untested there, first real animate on F06 will confirm or refute it.
+#
+# ── MID-SESSION HARD STOP: the HF account ran out of credits entirely
+# (hf CLI returned `not_enough_credits`, not a code bug) right after F02's
+# still passed its content audit, mid-way through animating F02. User
+# topped up (~2003cr / ~$300.49) and said "go" to resume -- confirmed via
+# `pipeline.cost balance` before continuing. If a render fails with this
+# exact error again, it's a real billing wall, not a script problem --
+# check balance first, don't debug the pipeline.
+#
+# ── ⚠️ NEXT SESSION, FIRST TASK: F05's still baked the internal shot-type
+# label `"MEDIUM OVER-SHOULDER shot"` as LITERAL VISIBLE PAGE TEXT
+# (bottom-left of the page, outside the authored caption "the Son of God" /
+# corner note "NOTE: confession") -- a genuine TEXT_LOCK violation, never
+# seen on F01-F04. Root cause not yet diagnosed -- first guess: the
+# `still_shot_type` string itself ("MEDIUM OVER-SHOULDER shot") reads as
+# caption-adjacent phrasing the model mistook for baked text; worth
+# checking whether other pages' shot-type strings ("WIDE shot", "MEDIUM
+# TWO-SHOT", "WIDE-MEDIUM shot") share that risk or whether this is
+# specific to the word "shot" appearing twice / the hyphenated compound.
+# **DO NOT animate F05 until this is fixed and the still re-rendered
+# clean** -- would waste ~$1.50+ animating a defective still.
+#
+# ── STATUS AT STOP: F01-F04 fully done (still+animation, both passing V2
+# audit + real contact-sheet QC). F05: still rendered but DEFECTIVE (see
+# above), animation not attempted. F06 and both covers: not started at
+# all. `refs/nathanael_ref.png`, `refs/philip_ref.png`, `refs/jesus_ref.png`
+# all cropped and in place (self-cropped via PIL from each character's
+# first approved render, matching the established Jacob's-Ladder-pilot
+# workflow) -- F06 and both covers can proceed straight to rendering once
+# F05 is fixed, no more ref-cropping needed. Spend this session: ~$6.53
+# (full detail + exact credit math in the ledger entry). Folder:
+# `poc_living_water_ink_style_test/swirls_episode_08_can_any_good_thing/`.
+# Scratch QC debug images (frame extracts, zoom crops) were cleaned up
+# before stopping -- only real production files remain on disk.
+# ══════════════════════════════════════════════════════════════════════════
+
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★★★ SESSION 2026-08-23 — swirls-of-life pipeline HARDENED,
+# red-teamed, independently reviewed; episode 2 (Ashes) rebuilt and LOCKED.
+# No open items on either shipped episode. READ THIS FIRST, supersedes the
+# 2026-08-22 block below (that block's "first task next session" is DONE).
+#
+# ── THE BIG PICTURE: user's own framing at session start -- don't just
+# patch episode 2's 3 known defects, "fix the underlying project first...
+# repeatable, consistent pipeline, verification process and north star
+# driven process." Full account (build order, both quality-review passes,
+# all 4 rounds of real user feedback on the finished cut, what's still
+# genuinely open) is in memory `project-swirls-of-life-skill`'s bottom
+# entry -- read that before touching this area again, it's more complete
+# than this summary.
+#
+# ── WHAT'S NEW ON DISK: `NORTH_STAR_COVER_PROMPT.md` (covers finally have
+# a canonical doc, they had none before); `NORTH_STAR_PROMPT.md` gained a
+# "Hybrid panel variant" section; `swirls_cover.py` / `swirls_assemble.py` /
+# `swirls_verify.py` / `swirls_episode.py` (one shared, gated pipeline
+# instead of copy-pasted per-episode scripts); `pipeline/score_mix.py`
+# gained an optional `sidechain` param (default-preserving, all 7 real
+# callers unaffected). `PRODUCTION_PIPELINE.md` has a full 2026-08-23
+# addendum. NOTHING COMMITTED TO GIT YET -- the user hasn't asked.
+#
+# ── TWO REAL REVIEW PASSES BOTH FOUND REAL BUGS, both fixed same session:
+# my own red-team (5 fixes, incl. the freeze gate needing to be scoped to
+# freeze-mode units only) and the ENFORCED 4-CLI independent_review.py
+# panel (4/5 healthy, all REVISE -- caught that the freeze gate couldn't
+# block the FIRST wasted spend, that a validator script was silently
+# overwriting the real shipped episode-1 file, and a genuine pre-existing
+# ffmpeg bug found by actually re-running episode 1 for real: mixed
+# kling/veo resolutions were never scaled before concat). Transcript:
+# `C:\Users\sanjay\.claude\plans\_independent_review\20260823-091020\`.
+#
+# ── EPISODE 2 REBUILT, THEN ITERATED 4 MORE ROUNDS ON REAL USER FEEDBACK
+# AFTER WATCHING THE ACTUAL FINISHED CUT (not guessed at, not assumed):
+#   1. Base rebuild (covers, hybrid pages, longer freeze clips) -- ~$7.54.
+#   2. "the swirls... was missing in the middle pages" -- Fable designed a
+#      Stage-0-to-Stage-2 build-up across F01-F04. Real mistake made and
+#      fixed in the open: animated before updating the ANIMATION prompts
+#      to hold the new ink static -- it visibly vanished mid-clip on F01.
+#      Caught by extracting real frames, not trusting the low-res contact
+#      sheet. Fixed. ~$9.08 (incl. ~$3.94 wasted on the mistake, logged
+#      honestly in the ledger, not hidden).
+#   3. "I still see freeze pain" + "sometimes the swirl looks like
+#      thread" -- USER'S OWN FIX for the freeze problem ("do the boomerang
+#      play immededtny at the end of a clip"), built as a new reusable $0
+#      technique, `make_freeze_tail_loop()` in `swirls_assemble.py` (see
+#      memory `feedback-freeze-tail-loop-technique`). The thread complaint
+#      traced to the LOCKED series-wide template's own wording ("thread of
+#      ink" + object-motion verbs forces a literal-cord render) -- see
+#      memory `feedback-ink-motif-thread-wording-reads-as-cord`. Fixed on
+#      F03 only (user's call); F01/F02/F04 and the LOCKED template itself
+#      still say "thread" -- a real, explicitly-not-yet-actioned finding.
+#      ~$1.50.
+#   4. Score turned down twice on request ($0 each, pure local remix).
+#
+# **LOCKED 2026-08-23** ("much better, lock it"). Final file:
+# `poc_living_water_ink_style_test\swirls_episode_02_ashes_that_made_clean\
+# THE_ASHES_BOOK_final.mp4`, 62.00s, landing-hold clean. Total real spend
+# this whole session: **~$19.62**, all in `data/spend_ledger.jsonl`.
+#
+# ── GENUINELY STILL OPEN (not done, not silently dropped -- see the memory
+# entry for the full list): nothing committed to git; old superseded
+# `render_ashes*.py`/`assemble_ashes.py` scripts still on disk, not
+# deleted; back cover's ink motif has a subtle mid-clip wobble (flagged,
+# matches this project's documented "animating the ink motif is unsafe"
+# history, not re-attempted); F04's Stage 2 upgrade under-delivered vs.
+# the design brief (thicker single band, not the requested vessel+branch+
+# bloom); the "thread" wording fix is proven on 1 page only -- rolling it
+# out to F01/F02/F04 or to the LOCKED template is an explicit future
+# decision; `check_landing_hold.py` still doesn't scan
+# `poc_living_water_ink_style_test/`.
+# ══════════════════════════════════════════════════════════════════════════
+
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★ SESSION 2026-08-22 (afternoon/evening) — "north star" template
 # confirmed with episode 2, then found to have genuinely diverged from
 # Jacob's Ladder in 3 concrete ways after the user watched it. READ THIS
