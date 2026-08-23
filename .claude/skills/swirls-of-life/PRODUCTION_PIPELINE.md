@@ -211,3 +211,77 @@ shared release tooling, not a swirls-only fork of it.
   remains `northstar_shortform/`'s hand-built assemble script, forked per
   episode, until enough episodes exist to justify its own formalization
   pass (a separate, later decision, not bundled into this one).
+
+## Addendum, 2026-08-23 — the deferral above is REVERSED for covers, hybrid
+## panels, and assembly (still NOT the main engine's full SP-G/AS-G suite)
+
+The deferral at the top of this doc ("do NOT build full deterministic gates
+yet... revisit once 4-5 episodes have shipped clean") assumed episodes would
+keep shipping clean while the recipe stabilized. That didn't hold: 2 episodes
+shipped, and episode 2 diverged from episode 1 in 3 concrete ways the user
+only caught by watching the finished video (cover color/lighting silently
+dropped, an unrequested border hallucinated onto a cover, the plain
+interior-page template used instead of the already-validated hybrid one) —
+plus a 4th problem (freeze-frame pages sitting static 50%+ of their slot)
+exposed by an unrelated bug fix. All 4 lived exactly where nothing was
+single-sourced (covers had no shared module, no canonical doc) or checked
+(zero automated verification existed anywhere in this flow). The underlying
+recipes themselves (cover prose, hybrid clause, assemble structure) had
+stopped changing — proven content in the wrong packaging, not a moving
+target anymore.
+
+**What changed, concretely (2026-08-23):**
+- `NORTH_STAR_COVER_PROMPT.md` — covers now have the same canonical-doc
+  treatment interior pages already had via `NORTH_STAR_PROMPT.md`.
+- `swirls_page.py` gained `panel_style="woodcut_hybrid"` (the previously-
+  disconnected hybrid template, now wired into the shared module) and
+  `clip_duration` (the lever for rendering a longer native clip).
+- `swirls_cover.py`, `swirls_assemble.py`, `swirls_episode.py`,
+  `swirls_verify.py` — covers get their own module (mirroring `swirls_page.py`
+  but genuinely separate content, not folded in), assembly stops being
+  copy-pasted per episode, and a small set of deterministic + one Vision-call
+  checks (SW-L*/SW-F*/V2 image audit/SW-A*) catch this exact class of defect
+  automatically, sized to the specific defects actually observed — not the
+  main engine's full LLM-panel gate suite, no JSON scene-plan schema, no
+  palette-histogram tooling, no auto-retry loops. See
+  `NORTH_STAR_COVER_PROMPT.md` and `NORTH_STAR_PROMPT.md`'s "Hybrid panel
+  variant" section for the details.
+- The "No change to how episodes get animated/assembled" line above is now
+  superseded for the two real swirls-of-life episodes specifically —
+  `assemble_book_v2.py`/`assemble_ashes.py` are unified into
+  `swirls_assemble.py`. `northstar_shortform/`'s own separate assemble
+  script (a different POC, John 4) is untouched.
+- Independent-review wiring for individual PAGES is still not added (still
+  correctly out of scope) — but this pipeline design itself went through
+  `independent_review.py --type plan` as a new pipeline/stage, per this
+  repo's own `CLAUDE.md`.
+
+**Independent review run 2026-08-23** (`C:\Users\sanjay\.claude\plans\_independent_review\20260823-091020\`,
+4/5 healthy — cursor/claude/gemini/codex all REVISE, grok failed to run):
+found real bugs, all fixed same session. Most important: SW-F1 originally
+PASSED unconditionally on an unrendered unit, so it could only catch an
+undersized `clip_duration` AFTER a bad clip already existed — fixed to
+project the ratio from the spec's requested duration before any spend.
+`_validate_swirls_assemble.py` was overwriting the real shipped
+`THE_ASHES_BOOK_final.mp4` on every run — fixed to render into an isolated
+scratch dir, never a manifest's live `out=` path. SW-A2 (unit duration
+parity) would have spuriously failed 3 of episode 1's own approved freeze
+units (front/F05/F06, whose native clip already exceeds its slot and is
+never trimmed by design) — fixed to expect `max(slot, native)` for freeze
+units, not `slot`. `cmd_still`/`cmd_assemble` in `swirls_episode.py` now
+actually enforce the gates they claimed to (V0 lints before a still render,
+V2 audit sidecars before assembling) instead of only computing them.
+Audit sidecars are now bound to a sha256 of the PNG so a regenerated image
+can't silently reuse a stale PASS. Added the override-file mechanism
+(`_overrides.json`) that was named in the original plan but never designed.
+Dropped SW-A4 (score-audibility heuristic) outright — 2 reviewers
+independently called it known-flawed noise. Wired SW-L5 (word-count parity)
+in for real, honestly as a WARN-only sanity check (a naive word-split
+doesn't match this project's own hand-counted totals exactly — no
+authoritative counting convention exists). Also found and fixed, by
+actually re-running the real episode-1 assembly for the first time as part
+of this review (not just diffing strings): `make_boomerang()` never scaled
+mixed-resolution source clips (kling 1076×1928 vs veo 720×1280) before
+concat, only after — a real latent bug in the ORIGINAL scripts too, just
+never triggered because nobody had re-run them since the clips' resolutions
+diverged.

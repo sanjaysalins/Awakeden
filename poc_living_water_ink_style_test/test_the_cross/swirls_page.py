@@ -59,6 +59,56 @@ PALETTE_PREFIX = (
 
 NO_BUBBLE_CLAUSE = "with no border, box, or speech bubble ever appearing around any caption or note"
 
+# ---- hybrid panel-style variant (woodcut panels + ink-wash main scene) ---------
+# Extracted verbatim 2026-08-23 from the validated test
+# poc_living_water_ink_style_test/swirls_pilot_01_jacobs_ladder/_style_test_durer_woodcut/
+# render_hybrid_panels.py (F08, rendered clean on its first real attempt). Kept
+# byte-for-byte including phrasing that reads oddly out of its original one-off-test
+# context ("...is the point of this test") -- this constant is validated by exact
+# reproduction, not by re-editing; see _validate_swirls_page_hybrid.py.
+
+WOODCUT_STYLE = (
+    "16th-century Albrecht Durer woodcut linework blended with contemporary cinematic "
+    "landscape photography — dense parallel hatching, hard black contours, ink-on-block "
+    "texture, dramatic volumetric light rays, deep teal shadows, golden-hour glow, "
+    "photographic tonality"
+)
+
+STYLE_OPEN_HYBRID = (
+    'One single storyboard page of hand-drawn animation development art, laid out like a real '
+    'found piece of production art. Top-left title, handwrite: "SEQ: {seq_title}". Top-right '
+    'frame number, handwrite: "{frame_label}". Across the top, a row of exactly three small storyboard '
+    'panels, each with a circled number 1, 2, 3 as its ONLY label — these three panels ONLY '
+    'are rendered in a deliberately different, more intense style from the rest of the page: '
+    '{woodcut_style}. '
+)
+
+HYBRID_MAIN_BRIDGE = (
+    "Below them, ONE large full-scene illustration filling the lower half of the page — "
+    "returning fully to the page's OWN gentle hand-drawn style, delicate ink linework and "
+    "soft watercolor on aged cream paper, NOT the panels' denser woodcut-cinematic treatment — "
+    "a "
+)
+
+TEXT_LOCK_HYBRID = (
+    'No other text, letters, numbers, or words appear anywhere on the page beyond the exact '
+    'handwrite strings given above — no invented captions, signs, inscriptions, or titulus, '
+    'with no border, box, or speech bubble ever appearing around any caption or note.'
+)
+
+HYBRID_PALETTE_PREFIX = (
+    'Palette for the MAIN SCENE ONLY: black ink, ochre, muted brown, olive green, clay-red, '
+    'touches of soft gold wash on aged cream paper with visible grain, not photorealistic, '
+    'not anime, no polished graphic design, no clean comic-book inking, no glowing spiritual '
+    'VFX. '
+)
+
+HYBRID_PALETTE_CLOSER = (
+    " The three top panels keep their own separate deep teal and gold cinematic woodcut "
+    "palette, described above, distinct from the main scene's palette — the contrast between "
+    "the two styles on one page is the point of this test."
+)
+
 
 @dataclass
 class Ref:
@@ -103,6 +153,17 @@ class PageSpec:
     model_tier: Literal["kling3_0", "veo3_1_lite"] = "kling3_0"
     aspect_ratio: Literal["9:16", "16:9"] = "9:16"
     include_no_bubble_clause: bool = True
+    panel_style: Literal["ink_wash", "woodcut_hybrid"] = "ink_wash"
+        # "woodcut_hybrid": the 3 top panels render in denser Durer-woodcut linework
+        # against the main scene's own gentle ink-wash -- validated on Jacob's Ladder
+        # F08 (render_hybrid_panels.py). Does not affect assemble_animation_prompt
+        # (no style/palette language there for either variant).
+    clip_duration: int | None = None
+        # native clip length in seconds, passed to render_animation()'s --duration.
+        # None = the pre-existing hardcoded defaults (kling3_0: 5, veo3_1_lite: 4).
+        # Legal ranges (confirmed 2026-08-23 via `hf generate cost`, no metered spend):
+        # kling3_0 mode=pro sound=off accepts any INTEGER 3-15; veo3_1_lite accepts
+        # only 4, 6, or 8 -- an out-of-range value is rejected by the hf CLI itself.
 
 
 def _panel_prose_still(panels: tuple[Panel, Panel, Panel]) -> str:
@@ -158,7 +219,28 @@ def _refs_clause(refs: list[Ref]) -> str:
     )
 
 
+def _panel_prose_still_hybrid(panels: tuple[Panel, Panel, Panel]) -> str:
+    p1, p2, p3 = panels
+    return (
+        f'panel 1 (handwrite: "{p1.label}") {p1.content}, drawn in that woodcut-cinematic style; '
+        f'panel 2 (handwrite: "{p2.label}") {p2.content}, drawn in that woodcut-cinematic style; '
+        f'panel 3 (handwrite: "{p3.label}") {p3.content}, drawn in that woodcut-cinematic style. '
+    )
+
+
 def assemble_still_prompt(spec: PageSpec) -> str:
+    if spec.panel_style == "woodcut_hybrid":
+        parts = [
+            STYLE_OPEN_HYBRID.format(seq_title=spec.seq_title, frame_label=spec.frame_label,
+                                      woodcut_style=WOODCUT_STYLE),
+            _panel_prose_still_hybrid(spec.panels),
+            HYBRID_MAIN_BRIDGE + spec.still_shot_type + ": " + spec.main_scene_still.strip() + " ",
+            _caption_prose(spec.caption_lines, spec.corner_note),
+            TEXT_LOCK_HYBRID + " ",
+            HYBRID_PALETTE_PREFIX + spec.material_closer.strip() + HYBRID_PALETTE_CLOSER,
+            _refs_clause(spec.refs),
+        ]
+        return "".join(parts)
     parts = [
         STYLE_OPEN.format(seq_title=spec.seq_title, frame_label=spec.frame_label),
         _panel_prose_still(spec.panels),
@@ -266,9 +348,11 @@ def render_animation(spec: PageSpec, png: Path, out_mp4: Path) -> bool:
     cmd = [HF_CLI, "generate", "create", spec.model_tier, "--prompt", prompt,
            "--start-image", str(png), "--aspect_ratio", spec.aspect_ratio]
     if spec.model_tier == "kling3_0":
-        cmd += ["--mode", "pro", "--duration", "5", "--sound", "off"]
+        duration = spec.clip_duration if spec.clip_duration is not None else 5
+        cmd += ["--mode", "pro", "--duration", str(duration), "--sound", "off"]
     else:
-        cmd += ["--duration", "4"]
+        duration = spec.clip_duration if spec.clip_duration is not None else 4
+        cmd += ["--duration", str(duration)]
     cmd += ["--wait"]
     print(f"  [{spec.model_tier}] rendering {out_mp4.name}...")
     ok = _run_hf(cmd, out_mp4, _VID_URL_RE, 900)

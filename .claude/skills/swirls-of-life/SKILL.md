@@ -54,6 +54,20 @@ well) at both 9:16 and 16:9, on Higgsfield's `nano_banana_pro`.
   approved render into the episode's `refs/`; the prompt gets an auto
   manifest ("image 3 is the field stone — ...") and `render_still` refuses
   to spend if a ref file is missing.
+- **Covers have their own canonical doc and module, separate from interior
+  pages.** `NORTH_STAR_COVER_PROMPT.md` (locked lighting-contrast + edge-to-
+  edge laws) + `swirls_cover.py`'s `CoverSpec` — added 2026-08-23 after
+  episode 2's covers silently lost their color contrast and grew an
+  unrequested border, because covers had no single source of truth at all.
+  Interior pages also gained a `panel_style="woodcut_hybrid"` option on
+  `PageSpec` (`NORTH_STAR_PROMPT.md`'s "Hybrid panel variant" section) — now
+  the standard treatment, not the plain `ink_wash` default.
+- **A shared `swirls_assemble.py`/`swirls_episode.py`/`swirls_verify.py`
+  layer now exists** — one assemble path instead of a copy-pasted script per
+  episode, plus a handful of $0 deterministic checks (prompt lints, a
+  freeze-hold budget gate, assembly duration/parity checks) and one Vision
+  content-audit call per rendered still/cover. See `PRODUCTION_PIPELINE.md`'s
+  2026-08-23 addendum for the full rationale and scope.
 - **Score direction is a SERIES-WIDE reference bank, not a per-episode
   invention.** `SCORE_STYLE_BANK.md` (this folder) holds validated
   ElevenLabs Music prompts + audio samples (`references/score_bank/`) from

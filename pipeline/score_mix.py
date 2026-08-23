@@ -27,16 +27,21 @@ AFMT = "aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=44100"
 SIDECHAIN = "threshold=0.12:ratio=2.5:attack=20:release=250"
 
 
-def mix_tail(total: float, outro: float | str, *, fmt_narration: bool = False) -> str:
+def mix_tail(total: float, outro: float | str, *, fmt_narration: bool = False,
+             sidechain: str = SIDECHAIN) -> str:
     """The shared narration-pad + duck + mix + video-hold filter fragment.
     Append after the caller's music chain (which must end in `[mus]`).
     `total` = narration + outro (the absolute final duration); `outro` = the
     last-frame hold. `fmt_narration` inserts the aformat normalizer before the
-    narration pad (the long-form scorers always did; shorts never needed to)."""
+    narration pad (the long-form scorers always did; shorts never needed to).
+    `sidechain` overrides the default duck tuning -- added 2026-08-23 for
+    swirls_assemble.py, whose rhythmic/sparse scores need a much looser duck
+    than this module's ambient-pad-tuned default (see SCORE_STYLE_BANK.md);
+    every existing caller keeps the default and is unaffected."""
     fmt = (AFMT + ",") if fmt_narration else ""
     return (
         f"[0:a]{fmt}apad=whole_dur={total},asplit=2[main][key];"
-        f"[mus][key]sidechaincompress={SIDECHAIN}[musd];"
+        f"[mus][key]sidechaincompress={sidechain}[musd];"
         f"[main][musd]amix=inputs=2:normalize=0,alimiter=limit=0.97,aresample=44100[mix];"
         f"[0:v]tpad=stop_mode=clone:stop_duration={outro}[vout]"
     )

@@ -496,3 +496,17 @@ Honest pushback over validation. Short sentences. No preamble/recap.
 **Look at images yourself with the Read tool** when the user flags a problem —
 don't trust the SDK audit's pass/fail signal blindly (see memory:
 `feedback-kling-skip-audit`, `always-independent-red-team`).
+
+- **Fable designs, Sonnet executes** (user, 2026-08-23, global rule — see
+  `~/.claude/CLAUDE.md`): any design/creative/mockup pass goes to the Fable
+  model; Sonnet does the actual execution/build. Already the pattern for new
+  motion-graphic devices above (dispatch a Fable design pass, preview as an
+  HTML/CSS/SVG Artifact, then build the real Python/ffmpeg version) — now the
+  standing default for all design work, not just devices.
+- **Review output = simple HTML, dyslexia-friendly** (user, 2026-08-23): every
+  review/comparison/status artifact for the user is a compact HTML page — short
+  plain words, big visuals, not wordy.
+- **NEVER auto-open HTML/files/links** (user, 2026-08-23): give the full
+  clickable `file:///...` path and stop. Do not launch a browser or open the
+  file — the user is frequently on calls/presenting and an unexpected window
+  popping up mid-call is a real problem.

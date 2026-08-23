@@ -86,6 +86,55 @@ that reinforced the model's own genre habit). All fixed in the template
 above (MUST-SHOW, panel labels, halo/dose separation, literalism warning,
 global text lock) — see v2 below for the re-render.
 
+## Hybrid panel variant (validated 2026-08-22, F01–F08; wired into `swirls_page.py` 2026-08-23)
+
+The 3 top panels render in denser, more intense Durer-woodcut linework — the
+same woodcut style covers use (see `NORTH_STAR_COVER_PROMPT.md`) — while the
+main scene stays in the page's own gentle ink-and-watercolor wash. The
+contrast between the two is the point: the panels read as sharper, more
+cinematic "cuts," the main scene stays the soft found-page style. Validated
+clean on Jacob's Ladder F08 (`swirls_pilot_01_jacobs_ladder\_style_test_
+durer_woodcut\render_hybrid_panels.py`) — this was a disconnected style test
+never wired into any real production script until now; episode 2 (Ashes)
+shipped with the plain template instead purely because nothing pointed a new
+episode at this validated recipe. **This is now the standard interior-page
+treatment** (the user's own call, after watching episode 2): default new
+episodes to `PageSpec(panel_style="woodcut_hybrid", ...)`; the plain
+all-ink-wash treatment (`panel_style="ink_wash"`, still the field's default)
+remains available by explicit choice, not the norm going forward.
+
+```
+... Across the top, a row of exactly three small storyboard panels, each with
+a circled number 1, 2, 3 as its ONLY label — these three panels ONLY are
+rendered in a deliberately different, more intense style from the rest of the
+page: 16th-century Albrecht Durer woodcut linework blended with contemporary
+cinematic landscape photography — dense parallel hatching, hard black
+contours, ink-on-block texture, dramatic volumetric light rays, deep teal
+shadows, golden-hour glow, photographic tonality. panel 1 (handwrite: "...")
+{content}, drawn in that woodcut-cinematic style; panel 2 ... ; panel 3 ... .
+Below them, ONE large full-scene illustration filling the lower half of the
+page — returning fully to the page's OWN gentle hand-drawn style, delicate
+ink linework and soft watercolor on aged cream paper, NOT the panels' denser
+woodcut-cinematic treatment — a {CAMERA_DISTANCE}: {MAIN_SCENE}. ...
+Palette for the MAIN SCENE ONLY: black ink, ochre, muted brown, olive green,
+clay-red, touches of soft gold wash on aged cream paper with visible grain,
+not photorealistic, not anime, no polished graphic design, no clean
+comic-book inking, no glowing spiritual VFX. {MATERIAL_CLOSER} The three top
+panels keep their own separate deep teal and gold cinematic woodcut palette,
+described above, distinct from the main scene's palette.
+```
+
+Implemented as `swirls_page.py`'s `panel_style="woodcut_hybrid"` branch of
+`assemble_still_prompt()` — the constants above (`WOODCUT_STYLE`,
+`STYLE_OPEN_HYBRID`, `HYBRID_MAIN_BRIDGE`, `TEXT_LOCK_HYBRID`,
+`HYBRID_PALETTE_PREFIX`/`HYBRID_PALETTE_CLOSER`) are sliced verbatim from the
+validated test. Does NOT affect `assemble_animation_prompt()` — neither
+variant's animation prompt describes rendering style, only motion.
+`_validate_swirls_page_hybrid.py` proves byte-identical reproduction (plus
+the module's own standard refs-manifest clause, which the one-off test
+predates and never called — a disclosed, deliberate addition, not a
+deviation from validated content).
+
 ## Animation prompt — see NORTH_STAR_ANIMATION_PROMPT.md (2026-08-20)
 
 The clean, reusable animation-prompt template + the locked "the ink motif is

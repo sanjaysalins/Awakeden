@@ -37,6 +37,20 @@ def test_mix_tail_fmt_narration_flag():
     assert score_mix.AFMT in fmt.split(";")[0]
 
 
+def test_mix_tail_custom_sidechain_overrides_default():
+    """swirls_assemble.py (2026-08-23) needs a per-episode duck profile --
+    a rhythmic groove or sparse score needs a much looser duck than this
+    module's ambient-pad-tuned default (SIDECHAIN). The override must fully
+    replace the default, and every existing caller must still get the
+    default when it doesn't pass one."""
+    custom = "threshold=0.7:ratio=1.15:attack=20:release=500"
+    tail = score_mix.mix_tail(62.0, 3.0, fmt_narration=True, sidechain=custom)
+    assert f"sidechaincompress={custom}[musd]" in tail, tail
+    assert score_mix.SIDECHAIN not in tail, tail
+    default_tail = score_mix.mix_tail(62.0, 3.0)
+    assert f"sidechaincompress={score_mix.SIDECHAIN}[musd]" in default_tail, default_tail
+
+
 def test_output_args_total_bounds():
     args = score_mix.output_args("out.mp4", preset="veryfast", total=421.2)
     assert args[-1] == "out.mp4"

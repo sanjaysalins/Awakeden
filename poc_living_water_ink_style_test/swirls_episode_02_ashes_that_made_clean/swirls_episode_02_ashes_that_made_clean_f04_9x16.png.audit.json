@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "a few soft blue threads... winding around the vessel and running along the upper stem of the dripping hyssop branch... and one small watercolor bloom spreading from the vessel's shoulder",
+      "actual": "the render shows a single thicker/doubled blue thread wrapped around the vessel neck only -- no separate thread on the hyssop branch and no distinct watercolor bloom visible. Reads as more present than the other 3 pages' single thin threads but does not fully deliver the described multi-element Stage 2 escalation. Not a structural or doctrinal defect (zone separation/chromatic reservation still hold), so not failing on it -- flagged for the human's own creative judgment."
+    }
+  ],
+  "banned_token_hits": [],
+  "png_sha256": "46e91e6fc395756d11f19759617cf79ec8615de1c632abb8b1763a695eb95749"
+}
