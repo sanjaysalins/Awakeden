@@ -1,4 +1,80 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★★★ NEXT SESSION, FIRST TASK: episode 1 "The Queen Who Came
+# to Test Him" (1 Kings 10:1-13) — narration + voice casting DONE, audio
+# NOT YET SYNTHESIZED. READ THIS FIRST.
+#
+# ── STATUS: episode 8 is LOCKED, finished, pushed to origin/main (see the
+# block right below this one). This session then started episode #1 from
+# the V4 slate (user picked it over #7/#4 when asked) with the full
+# finishing chain requested this time (SFX + captions + upload pack, not
+# just a raw assembled cut). Stopped deliberately at a clean gate — narration
+# text + voice casting approved, but BEFORE spending on synthesis, per the
+# user's own "bring it to a logical point and stop for the day" request.
+#
+# ── WHAT'S DONE:
+# - `poc_living_water_ink_style_test/swirls_episode_01_queen_who_came_to_test_him/
+#   narration.md` — 180-word draft, user said "ok lock it" (approved).
+#   Passes `narration_gate.py` clean (PASS: landing anchored to the piece's
+#   own material "true", not a template closer -- deliberately avoided
+#   "Come and see" after the user flagged it as tired on episode 8).
+# - Same folder's `voices.json` — 3 voices: narrator (LSi9zNCeliLuhIGGS0By,
+#   series-standard), jesus (UzI1NsMEV3ni5JRkRSls, series-standard), queen
+#   (NbkKnEAZ7Bqw4EAkVEaz = "Olivia J - Confident & Engaging", British
+#   middle-aged female). **This is the FIRST female voice ever used in this
+#   whole project** -- `config.py`'s own `VOICE_MAP` docstring explicitly
+#   says "FEMALE SPEAKERS are intentionally absent... there is no female
+#   voice_id in the core set yet" -- confirmed with the user via
+#   AskUserQuestion (they picked "add a real voice" over "fall through to
+#   narrator", then picked Olivia J from a shortlist I pulled live from the
+#   real ElevenLabs `/v2/voices` API, filtered to `gender=female`).
+#   **This voice_id is proven to EXIST in the account (confirmed via the
+#   live API list) but has never actually been synthesized with yet** --
+#   the first real test of it is next session's first synth call.
+# - Real KJV text fetched and confirmed (`pipeline.scripture.fetch_kjv`):
+#   1 Kings 10:1-13 (the full passage) + Matthew 12:42 (Jesus's own NT echo,
+#   "a greater than Solomon is here") -- both quoted verbatim in narration.md.
+#
+# ── WHAT'S NOT DONE, exact next steps in order:
+# 1. `narration_pipeline.py <folder> --stage verify` (then `--stage tag`,
+#    then `--stage audit`), folder =
+#    `poc_living_water_ink_style_test/swirls_episode_01_queen_who_came_to_test_him`,
+#    run from `F:\slk\PycharmProjects\PythonProject1\jesus\` (the script's
+#    real location -- confirmed this session, NOT inside JesusInTheBible).
+#    **Service the agent-bridge live** (memory `feedback-agent-bridge-no-api`)
+#    -- do not switch to LLM_PROVIDER=api. Watch for the tag stage explicitly
+#    routing the Queen's quote (1 Kings 10:6-7, "It was a true report...")
+#    and Jesus's quote (Matthew 12:42) to `<speaker name="queen">` /
+#    `<speaker name="jesus">` -- both are explicitly attributed spoken lines
+#    per the G9 multi-voice rule, this is not optional.
+# 2. `per_turn_synth.py` (same PythonProject1/jesus/narration/ location as
+#    episode 8 used) with the same flags as episode 8
+#    (`--target 59 --pre-quote-pause 0.4 --stability 0.65`, adjust `--target`
+#    if the 180-word draft needs a different target than 59s -- episode 8's
+#    169 words needed 61s, so 180 words will likely need ~63-65s, work the
+#    exact number out from the actual verified word/syllable count, don't
+#    just guess). **Real-listen to the Queen's voice specifically once this
+#    renders** -- this is a first-time voice, the standard "look at the
+#    actual render, don't trust a pass signal" discipline applies to NEW
+#    audio just as much as new images.
+# 3. Ends at HUMAN GATE 1 (user approves the audio by ear) before ANY visual
+#    spend starts -- same 3-gate discipline as the main engine, matching how
+#    every prior swirls episode worked.
+# 4. After audio approval: Fable design pass (ONE brief -- character build
+#    for the Queen + Solomon, page count/plan, sized to THIS story's own
+#    beats, matching the "Fable for MAJOR decisions only" rule) -> stills ->
+#    animate -> assemble -> score (ask whether to reuse "The Fig Tree"
+#    felt-piano direction from episode 8 or go back to the trance identity
+#    -- NOT assumed either way) -> **THEN, new this episode: /sfx -> /caption
+#    -> /upload**, the full finishing chain through to a paste-ready upload
+#    pack, since the user explicitly asked for something "I can upload"
+#    this time, unlike episode 8 which stopped at the raw assembled cut.
+#
+# ── Nothing spent on this episode yet except $0 KJV fetches and free
+# ElevenLabs voice-list API calls. First real spend next session is the
+# narration synth step above.
+# ══════════════════════════════════════════════════════════════════════════
+
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★★★ EPISODE 8 "CAN ANY GOOD THING" — LOCKED, 2026-08-24
 # (user: "lock it", after reviewing the finished video + review page).
 # No open items. Final file:
