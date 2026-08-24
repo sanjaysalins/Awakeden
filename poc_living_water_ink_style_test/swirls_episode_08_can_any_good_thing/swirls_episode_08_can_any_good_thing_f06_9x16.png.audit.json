@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "two long straight rifts of paler sky... reading unmistakably as the two rails of a ladder",
+      "actual": "rendered as one wide luminous wedge/corridor of open sky between two dark navy triangles rather than two distinct thin parallel rift-lines -- still clearly reads as a parted-sky ladder shape with angels climbing inside it, a stylistic interpretation not a content mismatch"
+    }
+  ],
+  "banned_token_hits": [],
+  "png_sha256": "76200abd004c88e883b52c6cede7358d9f211c02d528fde8a198874758e35797"
+}

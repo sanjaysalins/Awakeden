@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "framed over Philip's near shoulder, soft-focus in the lower-left foreground",
+      "actual": "Philip is correctly placed in the lower-left foreground with his back/side to camera (over-the-shoulder framing read), but rendered in the same crisp ink linework as the rest of the page rather than visibly blurred -- a stylistic limit of this flat-ink style, not a content mismatch"
+    }
+  ],
+  "banned_token_hits": [],
+  "png_sha256": "d63aa75ad2eeb926dfd7f09148453bf594691a229198b9249ce17f714144ace5"
+}

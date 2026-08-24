@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Episode 8 — Can Any Good Thing — status</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #f7f3ea; color: #222; margin: 0; padding: 24px; }
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  h2 { font-size: 20px; margin-top: 0; color: #555; font-weight: normal; }
+  .banner { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 10px; padding: 16px 20px; margin: 20px 0; font-size: 18px; }
+  .banner.warn { background: #fff8e1; border-color: #b8860b; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; margin-top: 20px; }
+  .card { background: white; border-radius: 10px; padding: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.15); text-align: center; }
+  .card img { width: 100%; border-radius: 6px; display: block; }
+  .card .label { font-size: 18px; font-weight: bold; margin: 8px 0 4px; }
+  .card .status { font-size: 15px; color: #2e7d32; font-weight: bold; }
+  .card a { display: block; margin-top: 6px; font-size: 14px; color: #1565c0; text-decoration: none; }
+  .card a:hover { text-decoration: underline; }
+  .fixed-note { font-size: 13px; color: #a15c00; margin-top: 6px; }
+  .card-imgwrap { position: relative; }
+  .zoom-btn {
+    position: absolute; top: 8px; right: 8px; background: rgba(0,0,0,0.6); color: white;
+    border: none; border-radius: 6px; padding: 6px 10px; font-size: 16px; cursor: pointer;
+  }
+  .zoom-btn:hover { background: rgba(0,0,0,0.85); }
+  #lightbox {
+    display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9);
+    z-index: 100; align-items: center; justify-content: center; cursor: zoom-out;
+  }
+  #lightbox.open { display: flex; }
+  #lightbox img { max-width: 92vw; max-height: 92vh; border-radius: 6px; }
+  #lightbox-close {
+    position: absolute; top: 18px; right: 24px; color: white; font-size: 32px;
+    background: none; border: none; cursor: pointer; line-height: 1;
+  }
+</style>
+</head>
+<body>
+
+<h1>Episode 8 — "Can Any Good Thing"</h1>
+<h2>John 1:45-51 — all pictures and clips are done</h2>
+
+<div class="banner">
+  ✅ NEW MUSIC — take 2. You said you hated the first score and it was too loud.<br>
+  Got Fable to suggest 4 new directions, used its top pick: a quiet single piano, opening into strings right when Nathanael says "thou art the Son of God."<br>
+  Also found the real reason it was too loud (measured it, wasn't a guess) and fixed the mix — score now sits under the voice properly.<br>
+  <a href="CAN_ANY_GOOD_THING_final.mp4" style="color:#1565c0; font-weight:bold;">▶ watch the new version (64 seconds)</a>
+</div>
+
+<div class="banner warn">
+  This is a trial for THIS episode only — not yet the new series sound. Say if you want it to become the new standard, or want a different one of Fable's 4 options instead.
+</div>
+
+<div class="grid">
+
+  <div class="card">
+    <div class="card-imgwrap"><img src="front_cover.png"><button class="zoom-btn" onclick="openZoom(&quot;front_cover.png&quot;)">🔍</button></div>
+    <div class="label">Front Cover</div>
+    <div class="status">✅ redone, more epic</div>
+    <div class="fixed-note">Found a real bug: the shared cover code was missing the "big sky" style line every cover should have. Also had a stray "--" in the subtitle text — fixed to a clean "JOHN 1:45-51".</div>
+    <a href="front_cover.mp4">▶ watch the clip</a>
+  </div>
+
+  <div class="card">
+    <div class="card-imgwrap"><img src="swirls_episode_08_can_any_good_thing_f01_9x16.png"><button class="zoom-btn" onclick="openZoom(&quot;swirls_episode_08_can_any_good_thing_f01_9x16.png&quot;)">🔍</button></div>
+    <div class="label">F01 — News Arrives</div>
+    <div class="status">✅ fixed tonight</div>
+    <div class="fixed-note">You caught this — a stray dash in the caption looked pasted-in, not hand-drawn. Fixed the punctuation and re-rendered.</div>
+    <a href="swirls_episode_08_can_any_good_thing_f01_9x16.mp4">▶ watch the clip</a>
+  </div>
+
+  <div class="card">
+    <div class="card-imgwrap"><img src="swirls_episode_08_can_any_good_thing_f02_9x16.png"><button class="zoom-btn" onclick="openZoom(&quot;swirls_episode_08_can_any_good_thing_f02_9x16.png&quot;)">🔍</button></div>
+    <div class="label">F02 — The Sneer</div>
+    <div class="status">✅ clean</div>
+    <a href="swirls_episode_08_can_any_good_thing_f02_9x16.mp4">▶ watch the clip</a>
+  </div>
+
+  <div class="card">
+    <div class="card-imgwrap"><img src="swirls_episode_08_can_any_good_thing_f03_9x16.png"><button class="zoom-btn" onclick="openZoom(&quot;swirls_episode_08_can_any_good_thing_f03_9x16.png&quot;)">🔍</button></div>
+    <div class="label">F03</div>
+    <div class="status">✅ fixed tonight</div>
+    <div class="fixed-note">You caught this — his leg was cycling up and down, looked stuck walking in place. Fixed: foot settles once, then holds still.</div>
+    <a href="swirls_episode_08_can_any_good_thing_f03_9x16.mp4">▶ watch the clip</a>
+  </div>
+
+  <div class="card">
+    <div class="card-imgwrap"><img src="swirls_episode_08_can_any_good_thing_f04_9x16.png"><button class="zoom-btn" onclick="openZoom(&quot;swirls_episode_08_can_any_good_thing_f04_9x16.png&quot;)">🔍</button></div>
+    <div class="label">F04 — Under the Fig Tree</div>
+    <div class="status">✅ clean</div>
+    <a href="swirls_episode_08_can_any_good_thing_f04_9x16.mp4">▶ watch the clip</a>
+  </div>
+
+  <div class="card">
+    <div class="card-imgwrap"><img src="swirls_episode_08_can_any_good_thing_f05_9x16.png"><button class="zoom-btn" onclick="openZoom(&quot;swirls_episode_08_can_any_good_thing_f05_9x16.png&quot;)">🔍</button></div>
+    <div class="label">F05 — The Confession</div>
+    <div class="status">✅ fixed tonight</div>
+    <div class="fixed-note">Picture had stray text on it. Clip drew a fake speech bubble, twice.<br>Both fixed. Took 4 tries on the clip.</div>
+    <a href="swirls_episode_08_can_any_good_thing_f05_9x16.mp4">▶ watch the clip</a>
+  </div>
+
+  <div class="card">
+    <div class="card-imgwrap"><img src="swirls_episode_08_can_any_good_thing_f06_9x16.png"><button class="zoom-btn" onclick="openZoom(&quot;swirls_episode_08_can_any_good_thing_f06_9x16.png&quot;)">🔍</button></div>
+    <div class="label">F06 — The Ladder</div>
+    <div class="status">✅ fixed tonight</div>
+    <div class="fixed-note">You caught this — angels looked like they walked backward when the clip stretched to fill time. Fixed: made the clip longer up front so it never needs to reverse.</div>
+    <a href="swirls_episode_08_can_any_good_thing_f06_9x16.mp4">▶ watch the clip</a>
+  </div>
+
+  <div class="card">
+    <div class="card-imgwrap"><img src="back_cover.png"><button class="zoom-btn" onclick="openZoom(&quot;back_cover.png&quot;)">🔍</button></div>
+    <div class="label">Back Cover</div>
+    <div class="status">✅ new ending</div>
+    <div class="fixed-note">"Come and See" was the wrong line — it was Philip's opening invite, not this story's own payoff. Swapped to Jesus's actual closing words: "Ascending and Descending" (John 1:51).</div>
+    <a href="back_cover.mp4">▶ watch the clip</a>
+  </div>
+
+</div>
+
+<p style="margin-top:30px; font-size:14px; color:#777;">
+  Full write-up in RESUME.md at the top. Money spent tonight logged in the spend ledger, ~$23.84 estimate total (plus one ElevenLabs music generation, cost not tracked in this ledger).<br>
+  Swept every caption/title on every page for stray dashes and quotes — found and fixed 2 real ones (front cover subtitle, F01's caption).
+</p>
+
+<div id="lightbox" onclick="closeZoom()">
+  <button id="lightbox-close" onclick="closeZoom()">×</button>
+  <img id="lightbox-img" src="" onclick="event.stopPropagation()">
+</div>
+
+<script>
+function openZoom(src) {
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox').classList.add('open');
+}
+function closeZoom() {
+  document.getElementById('lightbox').classList.remove('open');
+}
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeZoom(); });
+</script>
+
+</body>
+</html>

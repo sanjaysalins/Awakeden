@@ -1,11 +1,6 @@
 {
   "passed": true,
-  "issues": [
-    {
-      "claim": "the dusty edge of a small Galilean village in early morning light",
-      "actual": "panel 2 (the distant Nazareth village) is rendered under a stormy grey sky with rain streaks rather than early-morning light -- a lighting nit confined to that one small top panel, not the main scene, which itself does read as early morning with long raking shadows"
-    }
-  ],
+  "issues": [],
   "banned_token_hits": [],
-  "png_sha256": "b673e1b2c42e42c00c55779f33ef7b45a4f220735025598cc4a473399bd424c3"
+  "png_sha256": "4d4a6b694def38bd474778890d79fc6966803d1b8dd5bb81294a84abe1bdab14"
 }

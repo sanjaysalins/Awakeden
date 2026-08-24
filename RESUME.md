@@ -1,8 +1,284 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★★★ EPISODE 8 "CAN ANY GOOD THING" — LOCKED, 2026-08-24
+# (user: "lock it", after reviewing the finished video + review page).
+# No open items. Final file:
+# `poc_living_water_ink_style_test/swirls_episode_08_can_any_good_thing/
+# CAN_ANY_GOOD_THING_final.mp4`, 64.04s, 720x1280, check_landing_hold-style
+# duration parity confirmed (SW-A1/A2/A3 all PASS). READ THIS FIRST,
+# supersedes everything below it for this episode.
+#
+# ── WHAT SHIPPED: all 8 units (F01-F06 + front + back cover), each with a
+# passing V2 image audit and a real eye-checked-clean animation; the score
+# is Fable's "The Fig Tree" felt-piano direction (NOT the series' old
+# locked "1990s dream trance" identity); mix levels measured and retuned
+# (narration ~-18.6dB solo, final mix ~-19.3dB, properly balanced); F06 no
+# longer reverses (native duration now exceeds its assembly slot); the back
+# cover lands on the episode's own actual payoff line ("Ascending and
+# Descending," John 1:51) instead of a recycled early-story phrase; every
+# baked caption/title/subtitle was swept for stray em-dashes/double-hyphens
+# and the 2 real instances found were fixed.
+#
+# ── SCORE DECISION, EXPLICITLY SCOPED: the user loved "The Fig Tree"
+# ("perhaps the best north star score") and said "lock it" right after
+# reviewing this episode with no further score changes requested -- treating
+# that as confirming this score FOR THIS EPISODE. Whether to formally adopt
+# it as the new SERIES-WIDE default (replacing the trance identity used on
+# episodes 1 and 2, which are themselves already separately LOCKED and were
+# NOT touched or retrofitted this session) is a distinct, bigger decision --
+# not assumed as part of this lock. If the user wants that too, the next
+# step would be writing a `NORTH_STAR_SCORE_PROMPT.md` (this project has no
+# such doc yet -- score prompts currently live ad hoc per episode's own
+# `generate_score.py`) the same way covers got `NORTH_STAR_COVER_PROMPT.md`,
+# and then a separate decision on whether episodes 1/2 get rebuilt with it.
+# See memory `feedback-score-felt-piano-over-trance`.
+#
+# ── Nothing committed to git yet (the user hasn't asked, matching this
+# project's own standing practice of only committing on explicit request).
+# All rejected/superseded takes from tonight's iteration (old trance score,
+# old F03/F05/F06 clips, old covers, PRE_*/DEFECTIVE_*/REJECTED_* suffixed
+# files) are still on disk, not deleted -- same precedent as episode 2's
+# lock (old scripts kept, explicitly the user's call, never actioned).
+# ══════════════════════════════════════════════════════════════════════════
+
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★★★ SESSION 2026-08-24 — episode 8 "Can Any Good Thing" VISUAL
+# BUILD COMPLETE (all 8 units: F01-F06 + front + back, still+animation each,
+# every one eye-checked clean). Assembly attempted, BLOCKED on a missing
+# score file (not a bug — see below). SUPERSEDED — see the LOCKED block
+# above; full blow-by-blow detail below is still the real record of how it
+# got there.
+#
+# ── FIXED: F05's baked shot-type text. Root cause confirmed: the hyphenated
+# camera-jargon phrase "MEDIUM OVER-SHOULDER shot" read as a caption-style
+# label to the model. Renamed `still_shot_type` to "MEDIUM shot" (matching
+# the plain vocabulary every other page in this project already uses);
+# re-rendered clean, V2 audit PASS. `anim_shot_desc` left untouched (only
+# used inline in a full sentence, never shown to have the same risk).
+#
+# ── F05's ANIMATION then took 4 real attempts, each a genuine defect caught
+# by eye (contact sheet + full-res zoom crops), not by trusting the render:
+#   1. Unrequested speech bubble with garbled text over the whole group.
+#      Root cause: F05 is the one page in this episode whose caption ("the
+#      Son of God") is the ON-PAGE character's (Nathanael's) own quoted
+#      line, but unlike F01/F04 (which correctly pin a "lips still" clause
+#      on whichever character is speaking, per NORTH_STAR_ANIMATION_PROMPT.md's
+#      own documented NO_MOUTH rule) F05 had no such clause for Nathanael
+#      anywhere. Added it to both his panel motion and his main-scene motion.
+#   2. That fix reduced the defect to a smaller hallucinated speech-bubble
+#      TAIL curling from panel 2 down into the main scene — confirmed absent
+#      from the source still by direct crop comparison.
+#   3. First attempt at fixing #2 used NEGATIVE phrasing ("no line or
+#      pointer connects it to the scene below") — this BACKFIRED: Kling drew
+#      an actual arrow. Naming the banned object in a negative clause
+#      partially rendered it anyway — matches the project's existing
+#      veo-no-glitter-glow finding that negation is unreliable on these
+#      video models generally, now confirmed on Kling3.0 too, not just veo.
+#   4. Rewritten as POSITIVE phrasing ("the blank paper margin beneath the
+#      panel staying exactly as drawn") — rendered clean, confirmed at full
+#      resolution at 2 different timestamps. **New standing lesson: when an
+#      animation prompt needs to suppress an invented element, describe the
+#      blank/static TRUTH positively — never name the unwanted object, even
+#      in a "no X" clause.**
+#
+# ── F06 (the Jacob's-Ladder callback, F06 = a real visual rhyme with
+# episode 1's own ladder page): clean still + clean animation, FIRST attempt
+# each, no defects found. Matches the design brief well — angels ascending/
+# descending inside a parted-sky "ladder," Jesus standing beneath, no
+# halo/glow, blue-gold ink pooling only at his feet.
+#
+# ── FRONT COVER: first pass looked "clean" (still + animation, first attempt
+# each) but the user watched it and pushed back: "can Front cover look more
+# epic like we did with the first episode." Investigated and found a REAL
+# shared-code bug: `swirls_cover.py` (used by every episode's covers) was
+# missing an entire sentence `NORTH_STAR_COVER_PROMPT.md` documents as a
+# LOCKED constant -- the "Vast wind-scoured wilderness... sweeping sky"
+# clause that gives covers their epic cinematic scale. It's in episode 1's
+# original validated script but was never actually wired into the shared
+# module when `swirls_cover.py` was built 2026-08-23. Fixed by adding it to
+# `_style_block()` -- likely affects episode 2's already-locked covers too
+# (same shared module), flagged but NOT touched, out of scope. Front cover
+# then took 4 still attempts (1st: full black border, known defect class;
+# 2nd: no border but a blank margin band at the bottom edge -- confirmed
+# this exact margin was ALREADY on the original "approved" render too, a
+# miss in my own earlier audit, not caused by the wilderness-sky edit; 3rd:
+# same margin again, a 3rd occurrence past where plain regen alone was
+# working -- added a new positively-worded per-side clause instead of a 4th
+# blind regen; 4th: clean on all 4 edges, checked by direct pixel crop of
+# each edge) and 2 animation attempts (1st: title text visibly faded out by
+# the clip's end -- the exact documented episode-1 failure mode, which also
+# needed multiple tries there; 2nd: solid, clean). Also checked for AI-slop
+# baked text (stray em-dashes/curly quotes) per the user's flag: found one
+# pre-existing instance (F01's caption uses a real em-dash), but it rendered
+# as a clean natural handwritten stroke with no visible defect, so left the
+# already-approved page alone -- watching for this in NEW work going
+# forward, in both baked captions and my own chat writing.
+#
+# ── BACK COVER: still FAILED TWICE with an unrequested black border/
+# picture-frame drawn around the whole scene. This is a KNOWN, ALREADY-
+# DOCUMENTED defect (`NORTH_STAR_COVER_PROMPT.md` — episode 2's back cover
+# had the identical hallucination). The locked Durer-woodcut cover template
+# is correct and was NOT touched — this is model variance per that doc's
+# own framing ("a pure model hallucination"), not a prompt-wording bug.
+# 3rd plain regen (LAW 4: regen, never adapt the clause) rendered edge-to-
+# edge clean, V2 PASS. Back-cover ANIMATION then hallucinated a small flying
+# bird/bat silhouette crossing the sky mid-clip on its first attempt, despite
+# the shared `ANIM_CLOSER` template already saying "no new figure, mark, or
+# text appears anywhere on the frame at any point" — did NOT edit the shared
+# template (used by every episode's covers), since a single plain regen
+# rendered clean with no recurrence. **Flag for a future session: if this
+# specific bird/figure hallucination recurs on another episode's back cover,
+# that's the signal to revisit `ANIM_CLOSER`'s negative phrasing (same
+# positive-phrasing lesson as F05 above) rather than keep re-rolling.**
+#
+# ── F03 FIX (user caught this on real playback, not from the contact sheet):
+# Nathanael's animation looked "stuck," legs trying to walk forward. Confirmed
+# by extracting 13 frames across the clip and cropping to the leg/foot region
+# -- his front foot was cycling between lifted and lowered repeatedly instead
+# of settling, which with this unit's boomerang playback read as walking in
+# place. Root cause: the prompt asked to hold his off-balance step (a
+# physically unstable mid-stride pose) with no completing-gesture instruction,
+# unlike F01/F02/F05 in this same episode which all correctly give their
+# moving figure a single settle-then-hold early in the clip. Rewrote to match
+# that same pattern (foot completes its step down and plants early, then
+# holds still) -- re-rendered, confirmed clean by the same frame-extraction
+# check. **Lesson: the contact sheet's 6 sparse frames did NOT catch this --
+# a cyclical/oscillating motion can hide between sampled frames. When a
+# figure is meant to be static, worth a denser frame check (or real
+# playback) on any page with a genuinely dynamic starting pose, not just the
+# standard 6-frame sheet.**
+#
+# ── GATES: full `plan` gate suite run clean — 0 FAIL, 2 CONDITIONAL
+# (advisory only, neither blocks): SW-F1[f05] static_ratio 26.4%, just over
+# the 25% warn line for freeze-mode pages; SW-L5 word-count parity within
+# its own documented tolerance. All 8 units (F01-F06 + front + back) have a
+# passing V2 image audit.
+#
+# ── "AI SLOP" DASH SWEEP (user: "the ai slop in the image i.e. emdash and
+# double dashes ect, it feels amaturish"). Full sweep of every baked-text
+# field (captions/corner_notes/titles/subtitles/panel labels) found exactly
+# 2 real instances: (1) front cover subtitle "JOHN 1 -- EPISODE 8" -- a
+# literal double-hyphen baked onto the cover; neither episode 1 nor episode
+# 2 use a dash or an "EPISODE N" label in their subtitle at all, this was
+# an inconsistent one-off -- fixed to a clean "JOHN 1:45-51" verse-range
+# reference matching the series' own convention. (2) F01's caption used a
+# real em-dash -- I initially (WRONGLY) judged this as rendering fine on a
+# lower-zoom look; the user pushed back ("I can see it in the images"), and
+# re-zoomed at 2x it clearly showed the dash rendering as a perfectly
+# straight, ruler-clean line sitting inside otherwise loose cursive
+# handwriting -- reads as a pasted typeset glyph, not a pen stroke. Traces
+# back to `narration.md` itself (already voiced/locked, inaudible in the
+# audio) -- fixed the caption's punctuation only (comma, same words), left
+# narration.md untouched. Visually swept every other page's caption too --
+# no other instances anywhere in the episode. **Lesson: trust the user's
+# direct visual report over my own lower-zoom judgment call -- "it rendered
+# fine" needs the SAME full-resolution zoom-in scrutiny as any other defect
+# check, not a quick glance.** Re-rendered front cover + F01 (still +
+# animation each), all clean first attempt; re-verified F01's walk for the
+# same leg-cycling defect found on F03 earlier (clean). Re-assembled -- one
+# process hiccup (first attempt failed, front cover's animation wasn't
+# regenerated after its still changed; caught immediately by the ffprobe
+# error, fixed, no wasted spend) -- then clean, 0 FAIL gates, mix loudness
+# unchanged (-19.3dB). ~$2.51 this round.
+#
+# ── TWO MORE REAL DEFECTS, both caught by the user on real playback:
+#
+# (1) F06 played backward. Its angels never settle into a static pose (they
+# climb continuously through the whole native clip), so extending it to
+# fill its 8.56s assembly slot via boomerang (reverse playback) made the
+# climb visibly reverse -- read as walking backward. tail_loop was also
+# unsafe per its own docstring (a gesture continuing right to the last
+# frame isn't a safe candidate). Fix: bumped `clip_duration` to 9s
+# (matching F05) so native (9.04s) now exceeds the 8.56s slot --
+# `make_boomerang()` just trims to slot length when native already exceeds
+# it, no reversal ever triggers. Confirmed clean both in isolation and
+# inside the real assembled video at F06's actual timeline position.
+# **Lesson: "continuous cyclical motion, no completing gesture, so this
+# stays boomerang-safe" (this page's own original design comment) was
+# WRONG -- reversed directional motion reads as reversed no matter how
+# "cyclical" the design intent was. A boomerang-mode unit whose native clip
+# is shorter than its slot needs either a genuine completing-gesture+hold
+# (like F01/F05) or a longer native render exceeding the slot -- continuous
+# motion with neither is not actually boomerang-safe.**
+#
+# (2) Back cover ending felt "tired and heard before." Root cause: it was
+# using Philip's EARLY invitation line ("Come and See," John 1:46), not
+# this episode's own landing line -- a real violation of
+# `NORTH_STAR_COVER_PROMPT.md`'s own documented rule (back cover closing
+# text = the episode's own already-locked closing caption verbatim,
+# subtitle = the real NT verse it points to). Fixed to F06's own caption
+# verbatim: "ASCENDING AND DESCENDING" / "JOHN 1:51" -- Jesus's actual
+# payoff line quoting Jacob's Ladder back to Nathanael. Re-rendered still +
+# animation, both clean first attempt.
+#
+# Re-assembled with both fixes -- 0 FAIL gates, F06 confirmed trimmed not
+# reversed, mix loudness unchanged (-19.3dB, the previous round's fix still
+# holding). ~$3.26 this round. Old F06 5s clip / old back cover / old final
+# video all preserved with PRE_-style suffixes, not deleted.
+#
+# ── SCORE REDONE (user: "I hate the score and its too loud. may be get a
+# good suggestion from fable"). Dispatched a Fable design-pass agent with
+# full episode context; it proposed 4 distinct beatless directions (felt
+# piano / sacred drone / harp+celesta / beatless-trance), each specifically
+# designed to duck cleanly under narration, correctly diagnosing the old
+# score's kick drum as the technical reason it fought the sidechain
+# compressor. Generated Fable's top pick, "The Fig Tree" (lone felt piano,
+# opening into a string swell right at the confession). Separately
+# root-caused "too loud" by MEASUREMENT: the old score's own solo mean
+# volume (-13.0dB) was louder than narration's own solo mean (-18.6dB)
+# before any mixing at all, and the duck settings blindly inherited from
+# episode 2 (gain_db=-1, threshold=0.7, ratio=1.15) were far too mild to
+# compensate -- the mixed final's mean volume (-13.2dB) had barely moved
+# off the score's own solo level. **Lesson: a DuckProfile is track-specific,
+# not something safe to carry forward unchanged onto a different score --
+# always re-measure the actual mixed output, don't just trust inherited
+# numbers.** Retuned to `score_mix.py`'s own sane ambient-pad default
+# (gain_db=-6, threshold=0.12, ratio=2.5, release=250) instead of the
+# swirls-specific loosened values (which were tuned for a different,
+# rhythmic/kick-driven track and don't apply to this piano+strings piece).
+# Re-assembled, re-measured: new mix overall mean -19.3dB (vs narration's
+# own -18.6dB, essentially matched); narration-active window (-19.1dB) vs
+# narration-silent outro-hold window (-19.3dB) came back nearly identical --
+# confirms the score now sits under the voice instead of fighting it. Old
+# trance score + old final video kept on disk with a `REJECTED_` suffix
+# (not deleted) for comparison. **This is a one-episode trial of a new
+# candidate score identity, not yet adopted series-wide** -- the user's
+# call once they've actually heard it.
+#
+# ── ASSEMBLY: DONE. User said "pick a score and run assemble." Wrote
+# `generate_score.py` reusing the exact series-wide score identity (same
+# ElevenLabs music prompt validated on the pilot's real bake-off, reused
+# verbatim on episode 2) rather than inventing a new one -- generated at
+# this episode's own 64.04s length, sanity-checked (duration exact, healthy
+# levels, no clipping). Ran `assemble` -- clean, 0 FAIL gates (SW-A1/A2/A3
+# all PASS). Re-checked the finished mix and extracted 14 frames across the
+# whole 64s timeline -- full sequence plays in order, no glitches. **EPISODE
+# 8 IS NOW A COMPLETE, FINISHED VIDEO:**
+# `poc_living_water_ink_style_test/swirls_episode_08_can_any_good_thing/
+# CAN_ANY_GOOD_THING_final.mp4` (64.04s, 720x1280). Nothing left to build.
+# Next natural step, if the user wants it, is /sfx + /caption + /upload
+# per the standard finishing chain -- not started, not requested yet.
+#
+# ── SPEND: logged to `data/spend_ledger.jsonl` (stage=
+# `second_build_session_f05_fix_f06_covers_done`) as a per-render-type
+# estimate (6x nano_banana_pro stills, 4x Kling3.0-pro-9s for F05's
+# animation attempts, 1x Kling3.0-pro-5s for F06, 3x veo3_1_lite-4s for the
+# 2 cover animations combined) — ~95.75cr / ~$14.36 — NOT the raw account
+# balance delta, which is polluted by the user's other concurrent sessions
+# on the same shared HF account (memory `project-unexplained-hf-spend`).
+#
+# ── Scratch QC debug images (frame extracts, zoom crops, contact sheets)
+# were cleaned up as each page finished. Wasted-render artifacts were kept,
+# renamed with a `.DEFECTIVE_<reason>` suffix rather than deleted, for the
+# session's own paper trail: F05 still/anim x3, back cover still x2 + anim
+# x1. Folder: `poc_living_water_ink_style_test/swirls_episode_08_can_any_
+# good_thing/`.
+# ══════════════════════════════════════════════════════════════════════════
+
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★★★ SESSION 2026-08-23 (evening) — episode 8 "Can Any Good
 # Thing" (John 1:45-51) build STARTED through the hardened pipeline, stopped
-# mid-visual-build at the user's own "close for today" request. READ THIS
-# FIRST — supersedes nothing below, adds tonight's work.
+# mid-visual-build at the user's own "close for today" request. SUPERSEDED —
+# see the 2026-08-24 block above; its own "NEXT SESSION, FIRST TASK" is DONE.
 #
 # ── AUDIO IS DONE AND LOCKED: narration.mp3, 61.04s, 3 voices (narrator/
 # nathanael/jesus), via the real narration_pipeline.py (verify/tag/audit,

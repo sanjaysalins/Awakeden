@@ -56,6 +56,21 @@ EDGE_TO_EDGE_CLAUSE = (
     "caption strip, or margin band around the scene."
 )
 
+
+def _opposite_edge_clause(title_position: str) -> str:
+    """Targeted, POSITIVELY-worded fix for a defect the generic EDGE_TO_EDGE_CLAUSE above did
+    NOT reliably prevent: a blank paper margin band at the edge opposite the title, seen on 3/3
+    episode-8 front-cover renders (title_position='top') -- present even in the very first,
+    otherwise-approved render, so this is not one-off variance. Named the edge positively
+    (what the art DOES) rather than negatively (what must not appear) per the same lesson
+    learned on F05's animation prompt the same session -- naming the banned thing tends to
+    partially render it anyway on these models."""
+    edge = "bottom" if title_position == "top" else "top"
+    return (
+        f"At the very {edge} of the frame, the scene's own artwork runs all the way to the "
+        "canvas edge, fully painted with no blank paper showing."
+    )
+
 # Warm/cool token families for SW-L1 (swirls_verify.py) -- kept here so the
 # lint and the doc's own law stay next to the constant they check.
 WARM_TOKENS = ("ochre", "gold", "golden", "amber", "warm", "dawn", "dusk sun", "ember")
@@ -105,6 +120,18 @@ class CoverSpec:
     clip_duration: int = 4         # veo3_1_lite; legal values 4, 6, 8 only (hf CLI enforces)
 
 
+# Present in the validated source (render_covers.py) and documented as a LOCKED constant in
+# NORTH_STAR_COVER_PROMPT.md ("Vast wind-scoured wilderness... sweeping sky"), but was never
+# actually wired into this module -- the gap that let episode 8's front cover render as a
+# soft, intimate ink-wash illustration instead of the epic cinematic-woodcut cover style every
+# episode's cover is supposed to share. Fixed 2026-08-24 (user: "can Front cover look more
+# epic like we did with the first episode").
+WILDERNESS_SKY_CLAUSE = (
+    "Vast wind-scoured wilderness, rugged rocky hill country, sweeping stony valleys, carved "
+    "structural cloud forms in an open sweeping sky."
+)
+
+
 def _style_block(aspect_ratio: str) -> str:
     ratio_desc = "vertical 9:16" if aspect_ratio == "9:16" else "16:9"
     return (
@@ -122,14 +149,14 @@ def _avoid_clause(extra: str) -> str:
 
 def assemble_cover_still_prompt(spec: CoverSpec) -> str:
     position_word = "top" if spec.title_position == "top" else "bottom"
-    parts = [spec.scene.strip(), " ", spec.lighting.strip()]
+    parts = [spec.scene.strip(), " ", WILDERNESS_SKY_CLAUSE, " ", spec.lighting.strip()]
     if spec.background_detail:
         parts += [" ", spec.background_detail.strip()]
     parts += [
         " ", _style_block(spec.aspect_ratio), " ",
         f'Near the {position_word} of the frame, {TITLE_STYLE}, reading: "{spec.title}", '
         f'with smaller matching lettering beneath it reading: "{spec.subtitle}". ',
-        EDGE_TO_EDGE_CLAUSE, " ",
+        EDGE_TO_EDGE_CLAUSE, " ", _opposite_edge_clause(spec.title_position), " ",
         TEXT_LOCK_COVER, " ",
         _avoid_clause(spec.extra_avoid),
         _refs_clause(spec.refs),

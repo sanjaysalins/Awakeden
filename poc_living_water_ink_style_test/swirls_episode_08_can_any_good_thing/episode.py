@@ -120,7 +120,13 @@ F01 = PageSpec(
     ),
     fence_kind="fray",
     fence_callout="the loose, faintly overworked hatching of Nathanael's robe and outer contour",
-    caption_lines=("the Messiah — Jesus, of Nazareth",),   # narration.md verbatim contiguous
+    # RETUNED 2026-08-24 (user: "the ai slop in the image i.e. emdash and double dashes...
+    # I can see it in the images"). Zoomed in: the em-dash rendered as a perfectly straight,
+    # ruler-clean line sitting inside otherwise loose cursive handwriting -- reads as a pasted
+    # typeset glyph, not a pen stroke. Comma-only punctuation, same words (narration.md itself
+    # is untouched -- the dash there is inaudible in the already-voiced audio, only the visible
+    # caption needed fixing).
+    caption_lines=("the Messiah, Jesus, of Nazareth",),   # narration.md verbatim contiguous
     corner_note="NOTE: news arrives",
     refs=[],
     panel_style="woodcut_hybrid",
@@ -228,9 +234,10 @@ F03 = PageSpec(
         "the distant fig tree sits still",
     ),
     main_scene_animation=(
-        "Jesus holds his greeting completely still, no motion anywhere in his robe or mantle; Nathanael holds "
-        "his off-balance step, robe hem swaying; the disciples behind Jesus stay still; the blue threads and "
-        "small bloom at his feet stay exactly as drawn, never fading;"
+        "Jesus holds his greeting completely still, no motion anywhere in his robe or mantle; Nathanael's "
+        "lifted foot completes its step down and plants on the ground early in the clip, then he holds "
+        "completely still for the rest, robe hem settling; the disciples behind Jesus stay still; the blue "
+        "threads and small bloom at his feet stay exactly as drawn, never fading;"
     ),
     fence_kind="fray",
     fence_callout=(
@@ -313,7 +320,7 @@ F05 = PageSpec(
         Panel("greater things",
               "Jesus' hand alone, rising, palm opening toward the upper frame edge"),
     ),
-    still_shot_type="MEDIUM OVER-SHOULDER shot",
+    still_shot_type="MEDIUM shot",
     anim_shot_desc="medium over-the-shoulder shot",
     main_scene_still=(
         f"a medium shot framed over {PHILIP_BUILD}'s near shoulder, soft-focus in the lower-left foreground, "
@@ -333,13 +340,14 @@ F05 = PageSpec(
         "here."
     ),
     panel_motions=(
-        "Nathanael's lifted face holds its wonder",
-        "Philip's breaking smile holds its shape",
+        "Nathanael's lifted face holds its wonder, mouth staying exactly as drawn, not speaking",
+        "Philip's breaking smile holds its shape, the blank paper margin beneath the panel staying "
+        "exactly as drawn",
         "Jesus' hand rises a little further, then settles palm-up, holding",
     ),
     main_scene_animation=(
-        "Jesus' free hand completes its rise early in the clip, palm turning fully upward, then holds still "
-        "for the rest of the clip; Nathanael holds his kneeling pose, hands at his chest; Philip holds his "
+        "Jesus' hand completes its rise early, palm turning upward, then holds still; Nathanael kneels "
+        "still, hands at his chest, lips staying exactly as drawn, not speaking; Philip holds his "
         "half-turned stance in the foreground; the diffused blue-gold threads through the air and ground "
         "stay exactly as drawn, never fading;"
     ),
@@ -411,6 +419,19 @@ F06 = PageSpec(
     caption_lines=("ascending and descending",),   # KJV John 1:51 verbatim contiguous
     corner_note="NOTE: standing open",
     refs=[R_JESUS],
+    # RETUNED 2026-08-24 (user caught it on real playback): this page's angels climb
+    # continuously with no settled pose to hold, so extending it via boomerang (reverse
+    # playback) made the climb visibly reverse -- reads as walking backward. Bumped to
+    # kling3_0's 9s duration (matching F05) so native (9.04s) exceeds this unit's own
+    # assembly slot (8.56s) -- make_boomerang() just trims to slot length when native
+    # already exceeds it, no reversal ever triggers. Cheaper than inventing a new
+    # partial-frame compositing technique, and this page's own docstring already ruled
+    # out tail_loop ("angels CONTINUE a cyclical climb ... no completing gesture") --
+    # the same trait that makes tail_loop unsafe (per make_freeze_tail_loop's own
+    # warning: a page whose gesture continues right up to its last frame is not a safe
+    # candidate) is exactly why boomerang was unsafe too.
+    clip_duration=9,
+    model_tier="kling3_0",
     panel_style="woodcut_hybrid",
 )
 
@@ -438,7 +459,13 @@ FRONT_COVER = CoverSpec(
         "frayed figure under the tree."
     ),
     title="CAN ANY GOOD THING",
-    subtitle="JOHN 1 -- EPISODE 8",
+    # RETUNED 2026-08-24 (user: "the ai slop in the image i.e. emdash and double dashes... it
+    # feels amaturish"). The double-hyphen "--" was getting baked as literal visible text on
+    # the cover, reading as a typo rather than real typography. Neither episode 1 ("GENESIS
+    # 28" / "JOHN 1:51") nor episode 2 ("NUMBERS 19" / "HEBREWS 9:14") use a dash or an
+    # "EPISODE N" label in their subtitle at all -- this was an inconsistent one-off. Matched
+    # to the series' own plain-scripture-reference convention instead.
+    subtitle="JOHN 1:45-51",
     title_position="top",
     animation=(
         "Nathanael sits still beneath the tree; the leaves sway gently in a breeze; the blue thread on the "
@@ -464,8 +491,17 @@ BACK_COVER = CoverSpec(
         "around the base of the empty sitting-stone with one small blue-gold watercolor bloom soaked into "
         "the stone's warm-lit top surface, touching only the stone."
     ),
-    title="COME AND SEE",
-    subtitle="JOHN 1:46",
+    # RETUNED 2026-08-24 (user: "the come and see ending feels very tired and heard
+    # before"). Root cause: this was Philip's EARLY invitation line (John 1:46), not
+    # this episode's own landing line -- violates NORTH_STAR_COVER_PROMPT.md's own rule
+    # ("closing text is the episode's own already-locked closing caption verbatim,
+    # subtitle is the real NT verse the episode's thread points to"). Swapped to F06's
+    # own caption verbatim (the episode's actual payoff -- Jesus quoting Jacob's ladder
+    # back to Nathanael) and its real verse. Scene/lighting/background_detail below
+    # already support this (the "seam of paler sky... stands open" detail was already
+    # a quiet nod to "heaven open") so left unchanged, just the baked text corrected.
+    title="ASCENDING AND DESCENDING",
+    subtitle="JOHN 1:51",
     title_position="bottom",
     animation=(
         "The empty stone and tree stay still; leaves stir faintly in the evening air; the blue threads on "
@@ -508,10 +544,21 @@ MANIFEST = EpisodeManifest(
     scores={
         "original": ScoreVariant(
             score=HERE / "score_final.mp3",
-            # Starting duck matched to Ashes' own FINAL (already-softened-twice) values, not
-            # its original -- no reason to re-discover the same "too loud" feedback from
-            # scratch on a new episode; re-tune from here if this episode's own score needs it.
-            duck=DuckProfile(gain_db=-1, threshold=0.7, ratio=1.15, release_ms=500),
+            # RETUNED 2026-08-24 (user: "I hate the score and its too loud"). The Ashes-
+            # inherited values above (gain_db=-1, threshold=0.7, ratio=1.15) were measured,
+            # not assumed, to be the actual cause: the first trance score's own solo mean
+            # volume (-13.0dB) was LOUDER than narration's own solo mean (-18.6dB) before any
+            # mixing, and that duck was far too mild (threshold=0.7 linear is very
+            # insensitive, ratio=1.15 barely reduces anything) to compensate -- the final
+            # mix's mean volume (-13.2dB) had barely moved off the score's own solo level.
+            # New score (Fable's "The Fig Tree" felt-piano direction) is gentler on its own
+            # (-16.4dB solo mean) but still louder than narration, so still needs real
+            # pre-attenuation + a duck that actually engages. Values below are the shared
+            # score_mix.py module's own sane ambient-pad default (threshold=0.12, ratio=2.5,
+            # release=250) rather than the swirls-specific loosened values tuned for a
+            # rhythmic/kick-driven track that no longer applies to this piano+strings piece --
+            # verify by measuring the ACTUAL mixed output, not by re-assuming these are right.
+            duck=DuckProfile(gain_db=-6, threshold=0.12, ratio=2.5, release_ms=250),
             out=HERE / "CAN_ANY_GOOD_THING_final.mp4",
         ),
     },
