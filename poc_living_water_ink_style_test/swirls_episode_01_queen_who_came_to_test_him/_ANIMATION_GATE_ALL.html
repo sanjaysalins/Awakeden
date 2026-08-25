@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Episode 1 — All 9 Clips</title>
+<style>
+  body { font-family: Verdana, Arial, sans-serif; background: #faf7f0; color: #222;
+         max-width: 1000px; margin: 40px auto; padding: 0 20px; line-height: 1.5; }
+  h1 { font-size: 26px; color: #7a4a12; margin-bottom: 4px; }
+  h2 { font-size: 17px; color: #7a4a12; margin: 0 0 8px; }
+  .sub { color: #666; font-size: 15px; margin-bottom: 24px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 18px; }
+  .card { background: #fff; border: 1px solid #e2d9c8; border-radius: 12px; padding: 12px; }
+  .card video { width: 100%; border-radius: 6px; border: 1px solid #ddd; background: #000; }
+  .note { font-size: 13px; color: #555; margin-top: 8px; }
+  .pill { display: inline-block; font-size: 11px; padding: 2px 7px; border-radius: 9px;
+          font-weight: bold; margin-bottom: 6px; }
+  .pill.good { background: #d9f0d9; color: #1a5c1a; }
+  .pill.fixed { background: #fff3d6; color: #7a5400; }
+  .summary { background: #fff; border: 1px solid #e2d9c8; border-radius: 12px; padding: 18px 22px; margin-bottom: 24px; }
+  .go { background: #f3f8f0; }
+</style>
+</head>
+<body>
+
+<h1>Episode 1 — All 9 Clips, Animated</h1>
+<div class="sub">Click play on any clip. All pass the deterministic checks (no dead-static freeze, cover text-lock). Next spend is assembly + score.</div>
+
+<div class="summary">
+  <b>Real defects caught and fixed while animating:</b>
+  <ul>
+    <li><b>F02</b> — a background panel's lighting dimmed and brightened oddly over about a second, not requested. Retried, now a steady subtle haze.</li>
+    <li><b>F07 (the landing page)</b> — the last ~1 second of the clip drifted into an odd blue tint. This page repeats its own ending to fill time, so that drift would have looped over and over in the final cut. Retried, now clean all the way through.</li>
+    <li><b>F03 and F05 — you caught this one</b>: both clips had ZERO motion, a dead freeze. Root cause: my own animation instructions for those two pages said "stays exactly as drawn" for everything and never asked for anything to move &mdash; every other page had a wind/dust/haze detail, these two didn't. Fixed the instructions (added a faint breeze/dust drift matching the rest of the episode) and re-rendered both. Then double-checked all 9 clips with an actual pixel-difference measurement, not just eyeballing, so this can't hide again &mdash; all 9 now show real motion.</li>
+  </ul>
+  Checked every clip frame-by-frame (a 6-shot contact sheet spanning the whole clip, not just one glance) for: the panel row staying frozen, no invented walking/motion, no color drift, and &mdash; on the covers &mdash; the title text staying pixel-stable (this project's covers have a documented history of title text duplicating or fading, so I watched that closely; both covers passed on the first try).
+</div>
+
+<div class="grid">
+  <div class="card">
+    <h2>Front Cover</h2>
+    <video src="front_cover.mp4" controls></video>
+    <span class="pill good">Good</span>
+    <div class="note">Title text rock-solid throughout. Camel and clouds hold steady.</div>
+  </div>
+  <div class="card">
+    <h2>F01 — To See For Herself</h2>
+    <video src="swirls_episode_01_queen_who_came_to_test_him_f01_9x16.mp4" controls></video>
+    <span class="pill good">Good</span>
+    <div class="note">No drift, no invented motion.</div>
+  </div>
+  <div class="card">
+    <h2>F02 — A True Report</h2>
+    <video src="swirls_episode_01_queen_who_came_to_test_him_f02_9x16.mp4" controls></video>
+    <span class="pill fixed">Fixed</span>
+    <div class="note">Retried &mdash; panel lighting no longer swings.</div>
+  </div>
+  <div class="card">
+    <h2>F03 — The Half Was Not Told Me</h2>
+    <video src="swirls_episode_01_queen_who_came_to_test_him_f03_9x16.mp4" controls></video>
+    <span class="pill fixed">Fixed</span>
+    <div class="note">Had zero motion (my instructions never asked for any). Fixed and re-rendered.</div>
+  </div>
+  <div class="card">
+    <h2>F04 — Homeward</h2>
+    <video src="swirls_episode_01_queen_who_came_to_test_him_f04_9x16.mp4" controls></video>
+    <span class="pill good">Good</span>
+    <div class="note">Caravan holds still, nobody walks.</div>
+  </div>
+  <div class="card">
+    <h2>F05 — Queen of the South</h2>
+    <video src="swirls_episode_01_queen_who_came_to_test_him_f05_9x16.mp4" controls></video>
+    <span class="pill fixed">Fixed</span>
+    <div class="note">You caught this &mdash; had zero motion. Fixed and re-rendered.</div>
+  </div>
+  <div class="card">
+    <h2>F06 — Greater Than Solomon</h2>
+    <video src="swirls_episode_01_queen_who_came_to_test_him_f06_9x16.mp4" controls></video>
+    <span class="pill good">Good</span>
+    <div class="note">Hand settles to his chest early, holds the rest of the clip.</div>
+  </div>
+  <div class="card">
+    <h2>F07 — Ask Him</h2>
+    <video src="swirls_episode_01_queen_who_came_to_test_him_f07_9x16.mp4" controls></video>
+    <span class="pill fixed">Fixed</span>
+    <div class="note">Retried &mdash; the blue-tint drift at the end is gone. This is the page that repeats its ending, so this one mattered.</div>
+  </div>
+  <div class="card">
+    <h2>Back Cover</h2>
+    <video src="back_cover.mp4" controls></video>
+    <span class="pill good">Good</span>
+    <div class="note">Title steady, gentle sand drift in the foreground.</div>
+  </div>
+</div>
+
+<div class="summary go">
+  <b>Spend so far (this episode's visuals, stills + animation + all retries):</b> ~$18.<br><br>
+  <b>Next step:</b> assemble the clips + narration into the finished cut, then score it. I'll ask before spending anything further, but assembly/scoring at this stage is mostly $0 (ffmpeg + the shared score pipeline), not metered credits.
+</div>
+
+</body>
+</html>

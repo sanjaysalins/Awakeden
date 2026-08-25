@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Episode 1 — All 9 Pages</title>
+<style>
+  body { font-family: Verdana, Arial, sans-serif; background: #faf7f0; color: #222;
+         max-width: 1000px; margin: 40px auto; padding: 0 20px; line-height: 1.5; }
+  h1 { font-size: 26px; color: #7a4a12; margin-bottom: 4px; }
+  h2 { font-size: 17px; color: #7a4a12; margin: 0 0 8px; }
+  .sub { color: #666; font-size: 15px; margin-bottom: 24px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 18px; }
+  .card { background: #fff; border: 1px solid #e2d9c8; border-radius: 12px; padding: 12px; }
+  .card img { width: 100%; border-radius: 6px; border: 1px solid #ddd; cursor: zoom-in; }
+  .zoom-hint { font-size: 12px; color: #888; margin-top: 6px; }
+  .note { font-size: 13px; color: #555; margin-top: 8px; }
+  .pill { display: inline-block; font-size: 11px; padding: 2px 7px; border-radius: 9px;
+          font-weight: bold; margin-bottom: 6px; }
+  .pill.good { background: #d9f0d9; color: #1a5c1a; }
+  .pill.minor { background: #fff3d6; color: #7a5400; }
+  .summary { background: #fff; border: 1px solid #e2d9c8; border-radius: 12px; padding: 18px 22px; margin-bottom: 24px; }
+  .go { background: #f3f8f0; }
+  #lightbox { display: none; position: fixed; inset: 0; background: rgba(20,15,8,0.92);
+              z-index: 999; cursor: zoom-out; align-items: center; justify-content: center; }
+  #lightbox.open { display: flex; }
+  #lightbox img { max-width: 94vw; max-height: 94vh; border-radius: 6px; box-shadow: 0 0 40px rgba(0,0,0,0.5); }
+  #lightbox .hint { position: absolute; top: 18px; right: 24px; color: #eee; font-size: 14px; }
+</style>
+</head>
+<body>
+
+<div id="lightbox" onclick="this.classList.remove('open')">
+  <span class="hint">click anywhere to close</span>
+  <img id="lightbox-img" src="">
+</div>
+<script>
+  function zoom(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('open');
+  }
+  window.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.card img').forEach(function (img) {
+      img.addEventListener('click', function () { zoom(img.src); });
+    });
+  });
+</script>
+
+<h1>Episode 1 — All 9 Pages, Ready to Animate</h1>
+<div class="sub">Every page passed the deterministic checks (word count, ref chain, panel style, cover rules). Real spend starts at animation &mdash; worth a last look first.</div>
+
+<div class="summary">
+  <b>What got caught and fixed along the way:</b>
+  <ul>
+    <li>F01 needed 3 tries &mdash; her "doubt" line wasn't showing until I found the right way to ask for it (rough pencil sketch vs. clean ink).</li>
+    <li>F04 needed 1 retry &mdash; the 3 panels came out stacked 2-over-1 instead of the correct side-by-side row.</li>
+    <li>F07 needed 1 retry &mdash; the caption picked up quote marks and the wrong ink color, neither requested.</li>
+    <li>Front cover: retried once for the doubt-line trick too, but on the cover's own dense woodcut style the "rough vs clean" contrast doesn't show clearly &mdash; accepted as a minor miss rather than keep spending.</li>
+    <li>F02: her doubt is meant to fade a little here, came out closer to "already gone." Minor, doesn't affect the story.</li>
+  </ul>
+  Checked every page's baked text closely for stray dashes/quote marks/typos (per your note) &mdash; all clean except the one F07 catch above, which is now fixed.
+</div>
+
+<div class="grid">
+  <div class="card">
+    <h2>Front Cover</h2>
+    <img src="front_cover.png">
+    <div class="zoom-hint">click to enlarge</div>
+    <span class="pill minor">Minor</span>
+    <div class="note">Doubt-line didn't show against the busy woodcut style. Title/verse text clean.</div>
+  </div>
+  <div class="card">
+    <h2>F01 — To See For Herself</h2>
+    <img src="swirls_episode_01_queen_who_came_to_test_him_f01_9x16.png">
+    <div class="zoom-hint">click to enlarge</div>
+    <span class="pill good">Good</span>
+    <div class="note">Doubt line now reads clearly against the confident camel.</div>
+  </div>
+  <div class="card">
+    <h2>F02 — A True Report</h2>
+    <img src="swirls_episode_01_queen_who_came_to_test_him_f02_9x16.png">
+    <div class="zoom-hint">click to enlarge</div>
+    <span class="pill minor">Minor</span>
+    <div class="note">Solomon, throne, gifts all correct. Doubt-fade barely visible.</div>
+  </div>
+  <div class="card">
+    <h2>F03 — The Half Was Not Told Me</h2>
+    <img src="swirls_episode_01_queen_who_came_to_test_him_f03_9x16.png">
+    <div class="zoom-hint">click to enlarge</div>
+    <span class="pill good">Good</span>
+    <div class="note">Her line is clean and confident, as designed. Thread + bloom at her feet.</div>
+  </div>
+  <div class="card">
+    <h2>F04 — Homeward</h2>
+    <img src="swirls_episode_01_queen_who_came_to_test_him_f04_9x16.png">
+    <div class="zoom-hint">click to enlarge</div>
+    <span class="pill good">Good</span>
+    <div class="note">Panel row fixed on retry. Track, thread, and casket all correct.</div>
+  </div>
+  <div class="card">
+    <h2>F05 — Queen of the South</h2>
+    <img src="swirls_episode_01_queen_who_came_to_test_him_f05_9x16.png">
+    <div class="zoom-hint">click to enlarge</div>
+    <span class="pill good">Good</span>
+    <div class="note">Jesus, scribes, and the pointing gesture all match the design.</div>
+  </div>
+  <div class="card">
+    <h2>F06 — Greater Than Solomon</h2>
+    <img src="swirls_episode_01_queen_who_came_to_test_him_f06_9x16.png">
+    <div class="zoom-hint">click to enlarge</div>
+    <span class="pill good">Good</span>
+    <div class="note">The gospel pivot. Thread and gold fully diffused, as designed.</div>
+  </div>
+  <div class="card">
+    <h2>F07 — Ask Him</h2>
+    <img src="swirls_episode_01_queen_who_came_to_test_him_f07_9x16.png">
+    <div class="zoom-hint">click to enlarge</div>
+    <span class="pill good">Good</span>
+    <div class="note">Fixed on retry (quote marks + wrong ink color). Clean now.</div>
+  </div>
+  <div class="card">
+    <h2>Back Cover</h2>
+    <img src="back_cover.png">
+    <div class="zoom-hint">click to enlarge</div>
+    <span class="pill good">Good</span>
+    <div class="note">Empty road, city on the horizon, thread at the viewer's feet.</div>
+  </div>
+</div>
+
+<div class="summary go">
+  <b>Spend so far:</b> 14 stills rendered (5 were retries), roughly $4.20.<br><br>
+  <b>Next step:</b> animate all 9 pages (7 on Kling, 2 covers on veo). Rough cost: <b>~$13</b>.<br>
+  If any page needs a fix first, tell me which one and what's wrong &mdash; otherwise I'll start animating.
+</div>
+
+</body>
+</html>

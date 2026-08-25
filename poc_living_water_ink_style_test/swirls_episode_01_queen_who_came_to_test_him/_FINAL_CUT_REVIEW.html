@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Episode 1 — Final Cut</title>
+<style>
+  body { font-family: Verdana, Arial, sans-serif; background: #faf7f0; color: #222;
+         max-width: 640px; margin: 40px auto; padding: 0 20px; line-height: 1.5; }
+  h1 { font-size: 26px; color: #7a4a12; margin-bottom: 4px; }
+  .sub { color: #666; font-size: 15px; margin-bottom: 24px; }
+  .card { background: #fff; border: 1px solid #e2d9c8; border-radius: 12px;
+          padding: 18px 22px; margin-bottom: 18px; }
+  video { width: 100%; max-width: 380px; display: block; margin: 0 auto; border-radius: 8px; background: #000; }
+  .label { font-size: 13px; color: #777; text-transform: uppercase; letter-spacing: .04em; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 8px; }
+  .pill { display: inline-block; background: #d9f0d9; color: #1a5c1a; font-size: 12px;
+          padding: 3px 9px; border-radius: 10px; font-weight: bold; margin-right: 6px; }
+  .pill.fixed { background: #fff3d6; color: #7a5400; }
+</style>
+</head>
+<body>
+
+<h1>Episode 1 — Finished Cut (v4)</h1>
+<div class="sub">The Queen Who Came to Test Him &middot; 1 Kings 10:1&ndash;13 + Matthew 12:42</div>
+
+<div class="card">
+  <video src="THE_QUEEN_WHO_CAME_TO_TEST_HIM_final.mp4" controls></video>
+</div>
+
+<div class="card">
+  <div class="label">Round 2, from your timestamped notes</div>
+  You caught two more real problems by ear/eye after watching the actual cut, not from anything I measured:
+  <ul>
+    <li><b>0:17 (F02)</b> &mdash; the depth-layer drift read "shaky." Simplified to a plain boomerang of the real clip instead (this page has no camels, so reversing it is safe &mdash; the original "backwards" bug was specifically about camel-leg motion, not ambient drift).</li>
+    <li><b>0:26 (F03)</b> &mdash; same simplification, plain boomerang.</li>
+    <li><b>0:34 (F04)</b> &mdash; still read as a freeze (the light-sweep was too subtle to register). This page DOES have camels, so boomerang was never safe here &mdash; swapped it for the same spotlight-tour device that already worked cleanly on F01, aimed at the small blue-gold bloom in the sand instead.</li>
+  </ul>
+  One more real bug this round: after simplifying F02/F03 to boomerang, the assembly stage silently let their clips run ~1.8s longer than their slot instead of trimming them, throwing the whole video's timing off by several seconds. Caught before sending, not after &mdash; fixed by using the render mode that actually trims an over-length clip.
+</div>
+
+<div class="card">
+  <div class="label">Round 1 (still in place)</div>
+  A plain freeze on the pages needing extra time was replaced with a real designed moment on each one, per Fable's per-page pick: F01's spotlight tour on the horizon thread, and F03's ink pool that deepens on her confession line. All were caught doing something wrong on first attempt and fixed before landing here: a resolution mismatch that corrupted one clip, a concat bug that made a smooth effect jump instead of ramp, an odd-pixel-height crash, and a tour design that didn't fit its own time budget. Checked each by measuring actual pixel/brightness values over time, not by eyeballing a few frames.
+</div>
+
+<div class="card">
+  <div class="label">From the round before that</div>
+  <ul>
+    <li><span class="pill fixed">Fixed</span> Score turned down further (softer).</li>
+    <li><span class="pill fixed">Fixed</span> Ending lingers &mdash; regenerated the score with an explicit instruction to hold the final chord audibly for the last 5 seconds before fading, measured 15&ndash;20dB louder through that stretch than before.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <div class="label">Checks that still pass</div>
+  <ul>
+    <li><span class="pill">PASS</span> All 9 pages' content audits (cached, nothing changed there).</li>
+    <li><span class="pill">PASS</span> Every page's timing lands within 0.03s of its planned slot.</li>
+    <li><span class="pill">PASS</span> Total length: 70.03s (65.03s narration + the 5s landing hold) &mdash; matches exactly.</li>
+  </ul>
+</div>
+
+<div class="card" style="background:#f3f8f0;">
+  <div class="label">Score</div>
+  Fable-designed, carrying the Fig Tree felt-piano identity forward: same lone piano voice, no drums. The piano settles from questioning to resolved at the midpoint (matching her doubt resolving), the string swell blooms later right on "a greater than Solomon is here," then quiets and holds for the closing invitation instead of cutting out.
+</div>
+
+<div class="card">
+  <div class="label">Cost note</div>
+  This round (the timestamped fixes) was entirely $0 &mdash; no re-rendering, just reworking the existing free toolkit and the assembly step.
+</div>
+
+<div class="card">
+  <div class="label">Next</div>
+  Have a proper watch this time &mdash; especially F01&ndash;F04's new moments and the ending. If this reads right, next up is /sfx and /caption, then the upload pack.
+</div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Episode 1 — Audio Gate</title>
+<style>
+  body { font-family: Verdana, Arial, sans-serif; background: #faf7f0; color: #222;
+         max-width: 680px; margin: 40px auto; padding: 0 20px; line-height: 1.5; }
+  h1 { font-size: 26px; color: #7a4a12; margin-bottom: 4px; }
+  .sub { color: #666; font-size: 15px; margin-bottom: 24px; }
+  .card { background: #fff; border: 1px solid #e2d9c8; border-radius: 12px;
+          padding: 20px 24px; margin-bottom: 18px; }
+  .big-num { font-size: 40px; font-weight: bold; color: #1a7a3c; }
+  .label { font-size: 14px; color: #777; text-transform: uppercase; letter-spacing: .04em; }
+  audio { width: 100%; margin-top: 10px; }
+  .voice-row { display: flex; align-items: center; gap: 10px; margin: 8px 0; font-size: 16px; }
+  .dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+  .new-tag { background: #ffe27a; color: #6b4b00; font-size: 12px; padding: 2px 8px;
+             border-radius: 10px; font-weight: bold; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 8px; }
+  .quote { font-style: italic; color: #444; border-left: 3px solid #ddd; padding-left: 12px; margin: 10px 0; }
+</style>
+</head>
+<body>
+
+<h1>Episode 1 — The Queen Who Came to Test Him</h1>
+<div class="sub">1 Kings 10:1&ndash;13 + Matthew 12:42 &nbsp;&middot;&nbsp; HUMAN GATE 1 &mdash; listen and approve before any visual spend</div>
+
+<div class="card">
+  <div class="label">Duration</div>
+  <div class="big-num">65.03s</div>
+  <div class="sub">Target was 65.0s &mdash; landed 0.03s over. Clean.</div>
+  <audio controls src="narration.mp3"></audio>
+</div>
+
+<div class="card">
+  <div class="label">Voices</div>
+  <div class="voice-row"><span class="dot" style="background:#4a90d9"></span> Narrator (standard)</div>
+  <div class="voice-row"><span class="dot" style="background:#d9534f"></span> Jesus (standard)</div>
+  <div class="voice-row"><span class="dot" style="background:#c9a13b"></span> Queen &mdash; Olivia J <span class="new-tag">FIRST TIME</span></div>
+  <div class="sub" style="margin-top:8px;">First female voice ever used in this project. Listen to her lines carefully.</div>
+</div>
+
+<div class="card">
+  <div class="label">What she says</div>
+  <div class="quote">"It was a true report that I heard in mine own land of thy acts and of thy wisdom&hellip; behold, the half was not told me."</div>
+  <div class="label" style="margin-top:16px;">What Jesus says</div>
+  <div class="quote">"&hellip;for she came from the uttermost parts of the earth to hear the wisdom of Solomon; and, behold, a greater than Solomon is here."</div>
+</div>
+
+<div class="card">
+  <div class="label">Worth listening for</div>
+  <ul>
+    <li>The queen's line was re-tagged from a quiet/hushed delivery to <b>awe + matter-of-fact</b> during audit &mdash; she's speaking in Solomon's court, not confiding privately. Check it lands right.</li>
+    <li>Jesus's quote has a mid-verse skip ("&hellip;this generation&hellip; for she came&hellip;"). Check the pause there doesn't sound like a literal "dot dot dot."</li>
+    <li>All pipeline checks passed clean: verify OK, tag OK (round-trip text matched exactly, no banned tags), audit OK.</li>
+  </ul>
+</div>
+
+<div class="card" style="background:#f3f8f0;">
+  <div class="label">Next</div>
+  If this sounds right: say so, and the next step is the visual design pass (Fable) &rarr; scene plan &rarr; stills.<br>
+  If something's off: say what, and it gets fixed before anything else spends money.
+</div>
+
+</body>
+</html>

@@ -34,6 +34,8 @@ import swirls_assemble as sa  # noqa: E402
 import swirls_verify as sv  # noqa: E402
 from swirls_cover import render_cover_animation, render_cover_still  # noqa: E402
 from swirls_page import render_animation, render_still  # noqa: E402
+import build_srt  # noqa: E402
+import swirls_upload_tracker  # noqa: E402
 
 
 def _load_episode(episode_dir: Path):
@@ -205,7 +207,20 @@ def cmd_assemble(ep, score_name: str) -> bool:
     gates += sv.sw_a2_unit_duration(result["units"])
     gates.append(sv.sw_a3_total_duration(result["final_duration"], result["narration_len"],
                                           ep.MANIFEST.outro_hold))
-    return _report(gates, ep.MANIFEST.episode_dir)
+    ok = _report(gates, ep.MANIFEST.episode_dir)
+    if ok:
+        # AUTOMATED (user, 2026-08-25): a clean assemble means a real, current
+        # cut exists, so the timestamped .srt and the tracker board should
+        # exist too -- no separate manual step to remember per episode.
+        try:
+            build_srt.build(ep.MANIFEST.episode_dir)
+        except Exception as e:
+            print(f"[warn] .srt build failed (non-fatal, assemble itself still succeeded): {e}")
+        try:
+            swirls_upload_tracker.build()
+        except Exception as e:
+            print(f"[warn] upload tracker refresh failed (non-fatal): {e}")
+    return ok
 
 
 def main() -> None:

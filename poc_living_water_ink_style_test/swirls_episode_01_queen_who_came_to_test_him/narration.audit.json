@@ -1,0 +1,40 @@
+{
+  "folder": "swirls_episode_01_queen_who_came_to_test_him",
+  "stage": "audit",
+  "generated_at": "2026-08-25T09:09:03Z",
+  "deterministic": {
+    "tag_validation": "passed",
+    "speaker_validation": "passed",
+    "roster": [
+      "jesus",
+      "queen"
+    ]
+  },
+  "round_trip": {
+    "exact_match": true,
+    "blocking": false,
+    "diff_segments": [],
+    "added_words": 0,
+    "removed_words": 0
+  },
+  "anthropic_audit": {
+    "tag_economy": "appropriate",
+    "tag_quality_overall": "good",
+    "missed_speaker_opportunities": [],
+    "tonal_mismatches": [
+      {
+        "line_excerpt": "It was a true report that I heard in mine own land of thy acts and of thy wi",
+        "current_tags": "[quietly][reflective]",
+        "suggested_tags": "[awe][matter-of-fact]",
+        "rationale": "This is the queen's public testimony before Solomon's court, not a private confession — 'quietly' may undersell the declarative weight; awe fits her overwhelmed admission better than a hushed register."
+      }
+    ],
+    "concerns": [
+      "The mid-quote ellipsis in the Matthew 12:42 citation ('generation... for she') carries no tag guidance for how to voice the elision — confirm the synth doesn't render it as a literal pause or verbalized ellipsis."
+    ],
+    "model": "claude-opus-4-7",
+    "request_id": null,
+    "input_tokens": null,
+    "output_tokens": null
+  }
+}

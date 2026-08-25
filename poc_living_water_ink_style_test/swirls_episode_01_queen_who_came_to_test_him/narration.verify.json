@@ -1,0 +1,50 @@
+{
+  "folder": "swirls_episode_01_queen_who_came_to_test_him",
+  "stage": "verify",
+  "generated_at": "2026-08-25T09:06:42Z",
+  "deterministic": {
+    "char_count_after_comment_strip": 950,
+    "char_cap": 2000,
+    "within_cap": true,
+    "non_empty": true
+  },
+  "voice_roster": {
+    "voices_json_present": true,
+    "speakers_in_roster": [
+      "jesus",
+      "narrator",
+      "queen"
+    ]
+  },
+  "anthropic_review": {
+    "coherence": "good",
+    "beat_count": 10,
+    "tonal_register": [
+      "factual",
+      "reflective",
+      "devotional",
+      "urgent"
+    ],
+    "multi_voice_candidates": [
+      {
+        "line_excerpt": "It was a true report that I heard in mine own land of thy acts and of thy wi",
+        "suggested_speaker": "queen",
+        "rationale": "Explicitly attributed via 'She said it plainly:' immediately before the quote."
+      },
+      {
+        "line_excerpt": "The queen of the south shall rise up in the judgment with this generation...",
+        "suggested_speaker": "jesus",
+        "rationale": "Explicitly attributed via 'Jesus pointed straight back to her, to make a claim about Himself:'."
+      }
+    ],
+    "spoken_length_estimate_seconds": 69,
+    "concerns": [
+      "Mid-quote ellipsis in the Matthew 12:42 citation ('generation... for she') may read as a literal pause or be mispronounced by TTS.",
+      "Two attribution colons back-to-back (queen then Jesus) need clean tag boundaries so the narrator voice doesn't bleed into the quoted speaker lines."
+    ],
+    "model": "claude-opus-4-7",
+    "request_id": null,
+    "input_tokens": null,
+    "output_tokens": null
+  }
+}
