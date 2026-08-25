@@ -1,7 +1,78 @@
 # ══════════════════════════════════════════════════════════════════════════
-# ★★★★★★★★★★★★★★★ NEXT SESSION, FIRST TASK: episode 1 "The Queen Who Came
+# ★★★★★★★★★★★★★★★ EPISODE 1 "THE QUEEN WHO CAME TO TEST HIM" — LOCKED,
+# 2026-08-25. Full finishing chain done: audio -> stills -> animation ->
+# assembly -> SFX bed -> SRT -> upload tracker. READ THIS FIRST, supersedes
+# everything below it for this episode.
+#
+# ── FINAL FILE:
+# `poc_living_water_ink_style_test/swirls_episode_01_queen_who_came_to_test_him/
+# THE_QUEEN_WHO_CAME_TO_TEST_HIM_final_sfx.mp4` (SFX-mixed final; the plain
+# `..._final.mp4` also exists, pre-SFX). Captions.srt sits alongside it
+# (real ElevenLabs forced-alignment timestamps, 180 words, matches).
+#
+# ── WHAT SHIPPED THIS SESSION:
+# - Audio: first-ever female voice in this project (queen = Olivia J,
+#   NbkKnEAZ7Bqw4EAkVEaz), narrator + Jesus as usual. Locked by ear.
+# - Visual: Fable design brief (Queen/Solomon character builds) -> 7 pages
+#   (f01-f07) + front/back covers, all stills passing V2 audit.
+# - Animation: NOT plain freeze for the gap-filling pages -- the user
+#   flatly rejected that ("now you are just doing a freeze, which hate").
+#   Built devised fills instead: Halo Tour (spotlight dim/brighten a region)
+#   on f01/f04, Live Ink Hold (radial color-deepen pulse) on f03, plain
+#   boomerang on f02/f05 (simplified after user feedback at 0:17/0:26/0:34
+#   timestamps -- see `_devise_fills.py`). Two real zero-motion pages found
+#   and fixed (prompts said "stays exactly as drawn" with no living-motion
+#   clause -- verify by pixel-diff over time, not by eye, see memory
+#   `feedback-animation-motion-check-by-pixel-diff`).
+# - Score: Fable's felt-piano "Fig Tree" identity reused; fixed a real bug
+#   where the raw score decayed to near-silence before its own fade
+#   regardless of fade placement -- fixed by regenerating with an explicit
+#   "hold the final chord for 5 seconds" prompt, verified by measuring
+#   volume over time, not by ear alone.
+# - SFX: 7-layer ambient/effect bed via `build_sfx.py` (desert/hall/gold/
+#   courtyard/choir layers), sidechain-ducked under narration.
+# - **Series-wide decision, NOT per-episode: NO burned-in captions for
+#   swirls-of-life** (user: "I think this series we dont need it" -- see
+#   memory `feedback-swirls-no-burned-captions`). Real timestamped .srt via
+#   ElevenLabs forced-alignment instead (`build_srt.py`, shared script).
+# - Built `swirls_upload_tracker.py` -- a SEPARATE lightweight tracker just
+#   for this series (deliberately NOT integrated into the main engine's
+#   76-episode catalogue tracker, user's explicit call after being asked).
+#   Auto-discovers episodes via their own `episode.py` MANIFEST. Now wired
+#   into `swirls_episode.py`'s `cmd_assemble()` -- every future clean
+#   assemble automatically gets its .srt + tracker refresh, no manual step.
+#   Board: `poc_living_water_ink_style_test/_SWIRLS_UPLOAD_TRACKER.html`.
+#   Backfilled SRTs for all 3 already-shipped episodes (pilot, 2, 8) too.
+#
+# ── REAL BUGS FOUND AND FIXED (verify-by-measurement, not by eye/ear alone):
+# 1. Two pages had literally zero native motion in their Kling clips --
+#    caught by pixel-diff sampling, not by watching the contact sheet.
+# 2. `concat()` in `_devise_fills.py` used the ffmpeg concat DEMUXER, which
+#    flattened smooth brightness ramps into flat-then-jump-then-flat --
+#    fixed by switching to the concat FILTER.
+# 3. "freeze" fill mode only padded short clips, never trimmed long ones
+#    (only "boomerang" mode trimmed) -- caught via the assembly log's own
+#    `native=.../slot=.../held=...` line showing a page held far longer
+#    than its slot, before the user ever saw the file.
+# 4. Halo Tour's 4-stop default timing didn't fit some pages' time budgets
+#    -- fixed via a single-stop custom-timing call.
+# 5. Odd pixel height crashed libx264 on one fill -- fixed via even-rounding.
+#
+# ── NOT YET DONE / open for next session (no assumption made, ask first):
+# - Episode 1 is NOT posted anywhere yet (tracker shows "not posted").
+# - Whether to pick the next swirls episode to build, or focus on posting/
+#   upload for episode 1 first, is an open question for the user.
+# - Whether to retrofit the new SFX-bed + no-caption-SRT finishing chain
+#   onto the 3 older episodes (pilot, 2, 8 -- they only got the SRT
+#   backfill this session, not an SFX bed) is a separate, NOT-yet-asked
+#   decision -- do not assume either way.
+# ══════════════════════════════════════════════════════════════════════════
+
+# ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★★★ [SUPERSEDED] episode 1 "The Queen Who Came
 # to Test Him" (1 Kings 10:1-13) — narration + voice casting DONE, audio
-# NOT YET SYNTHESIZED. READ THIS FIRST.
+# NOT YET SYNTHESIZED. (Kept for history; episode 1 is now fully LOCKED,
+# see the new block above.)
 #
 # ── STATUS: episode 8 is LOCKED, finished, pushed to origin/main (see the
 # block right below this one). This session then started episode #1 from

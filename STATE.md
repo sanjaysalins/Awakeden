@@ -1,5 +1,45 @@
 # STATE.md — progress tracker
 
+**2026-08-25 Swirls of Life episode 1 ("The Queen Who Came to Test Him,"
+1 Kings 10:1-13 + Matthew 12:42) built end-to-end and LOCKED, through the
+full finishing chain (audio -> stills -> animation -> assembly -> SFX ->
+SRT -> upload tracker) for the first time in this series.** First-ever
+female voice in the project (the Queen). User rejected plain freeze-frame
+gap fills outright ("now you are just doing a freeze, which hate") --
+replaced with devised per-page fills (Halo Tour spotlight, Live Ink Hold
+color pulse, plain boomerang), several real bugs found and fixed along the
+way: two pages with zero native motion (missing living-motion language in
+the animation prompt), a concat-demuxer timing bug flattening smooth
+ramps, freeze mode silently not trimming over-long clips, and a felt-piano
+score that decayed to near-silence before its own fade (fixed by
+regenerating with an explicit hold-the-chord prompt) -- all caught by
+measurement (pixel-diff over time, volume-over-time sampling, the
+assembly log's own held/slot numbers), not by eye/ear alone. Made a
+series-wide call (not per-episode): no burned-in captions for swirls-of-
+life, real ElevenLabs-timestamped .srt instead. Built a new swirls-only
+upload tracker, deliberately kept separate from the main engine's
+76-episode catalogue tracker (user's explicit choice), and wired both the
+SRT build and the tracker refresh into `swirls_episode.py`'s assemble step
+so future episodes get them automatically. Backfilled SRTs for the 3
+already-shipped episodes too.
+
+**Spend:** audio synth + visual stills/clips for episode 1's 7 pages + 2
+covers, plus one score regeneration -- real spend happened but was NOT
+logged to `data/spend_ledger.jsonl` this session (checked: zero episode-1
+entries there, unlike every prior session's practice of logging as it
+went). No dollar figure to quote reliably; reconcile against the HF/
+ElevenLabs account directly if the user asks for a number.
+
+**Commits:** yes -- this session's full episode 1 build + the SRT/tracker
+system is committed on `main` (not yet pushed to origin).
+
+**Next session:** see `RESUME.md`'s top block -- episode 1 is fully locked
+with nothing outstanding on it except posting/upload, which is an open
+question (not yet decided): post episode 1, build the next swirls episode,
+or retrofit the new SFX+SRT finishing chain onto the 3 older episodes.
+
+## ════════════════════════════════════════════════════════════════
+
 **2026-08-23 (evening) Swirls of Life episode 8 ("Can Any Good Thing," John
 1:45-51) build started through the now-hardened pipeline, stopped mid-visual
 build at the user's request.** Audio is done and locked (61.04s, 3 voices).
