@@ -28,14 +28,19 @@ All 3 verified with `check_landing_hold.py` (all `ok`, gap <=0.02s) and
 re-run and all 4 episodes now show `final video` + `sfx bed` +
 `timestamped captions` pills. New files: each episode's own new
 `build_sfx.py` (pilot/ep02/ep08 folders) + the `_final_sfx.mp4` outputs.
-Not yet committed to git.
+
+**Commits:** yes -- committed as `eb2a771` on `main` (not pushed to
+origin; local is 3 commits ahead). Working tree clean at end of session.
+
+**Stopped here deliberately** (user: "let's stop for [today] ... work on
+it tomorrow") -- nothing mid-edit, nothing broken.
 
 **Next session:** open items are the same as before this retrofit --
 episode 1 still isn't posted anywhere, and the older episodes' `_final_sfx.mp4`
 outputs from this session are unreviewed by ear (only verified by
 measurement/gate so far, per the project's own "verify by measurement, not
 by eye/ear alone" discipline, but a real listen is still worth doing before
-calling them done). See `RESUME.md`'s top block for full detail.
+calling them done). See `RESUME.md`'s new top "START HERE TOMORROW" block.
 
 ## ════════════════════════════════════════════════════════════════
 

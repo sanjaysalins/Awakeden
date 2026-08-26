@@ -1,4 +1,18 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ▶▶▶ START HERE TOMORROW (stopped deliberately at a clean point, end of day
+# 2026-08-26, user: "let's stop for [today] ... work on it tomorrow"). Commit
+# eb2a771 on `main`, working tree clean, 3 commits ahead of origin/main
+# (not pushed). Nothing is broken, nothing is mid-edit. Pick ONE of:
+#
+#   1. Ear-review the 3 new SFX mixes from today (see block just below) —
+#      the one real unfinished piece of today's work.
+#   2. Decide episode 1's posting status — still not posted anywhere.
+#   3. Start the next Swirls of Life episode.
+#
+# No default has been chosen for you — ask the user which, don't assume.
+# ══════════════════════════════════════════════════════════════════════════
+
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★★★ SFX-BED RETROFIT DONE, 2026-08-26 — pilot + episode 2 +
 # episode 8 all now have an ambient/SFX bed, matching episode 1. This was
 # the "retrofit the new SFX+SRT finishing chain onto the 3 older episodes"
