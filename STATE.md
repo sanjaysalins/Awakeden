@@ -1,5 +1,44 @@
 # STATE.md — progress tracker
 
+**2026-08-26 Retrofitted the SFX-bed finishing step onto the 3 pre-episode-1
+Swirls of Life pieces (pilot "The Ladder," episode 2 "The Ashes That Made
+Clean," episode 8 "Can Any Good Thing")** -- the item RESUME.md left open
+from the 2026-08-25 session. SRTs were already backfilled; only the
+ambient/SFX bed was missing. Reused episode 1's own `sfx_pilots/sfxlib.py`
+engine unchanged, $0, reuse-only from `sound_library`. Per-episode layer
+maps were hand-designed from each piece's own locked visual content (read
+straight from each episode's PageSpec/render script, not guessed) and its
+own real unit timeline (derived by ffprobing each `_assembly` folder's held
+clips against `concat.txt`, cross-checked against the actual final .mp4's
+duration plus the +3.0s INV-26 hold -- confirmed to the millisecond on all
+3). Each keeps the same design discipline episode 1 set: environmental beds
+matched to what's actually drawn (desert wind bookending the pilot's
+flight/dawn, wilderness wind + fire + trickling water on the ashes/ritual
+imagery, dawn birdsong + real footsteps on episode 8's fig-tree/Nazareth
+scenes), a deliberately DRY stretch during the most dialogue-dense/vision
+moments (echoing the pilot's own "held breath" theophany page), and the one
+heavenly-choir device reserved for the gospel-pivot beat rather than
+scattered throughout. Episode 8 differs from the other two on purpose: since
+Jesus is already speaking in his own voice for its whole back half (not an
+OT vision awaiting a later NT link), its choir is built as one continuous
+swell across confession -> vision -> landing (two overlapping takes at
+different levels faking a crescendo) instead of a single terminal cue.
+All 3 verified with `check_landing_hold.py` (all `ok`, gap <=0.02s) and
+`sfxlib.measure()` per-region volumedetect readings; `swirls_upload_tracker.py`
+re-run and all 4 episodes now show `final video` + `sfx bed` +
+`timestamped captions` pills. New files: each episode's own new
+`build_sfx.py` (pilot/ep02/ep08 folders) + the `_final_sfx.mp4` outputs.
+Not yet committed to git.
+
+**Next session:** open items are the same as before this retrofit --
+episode 1 still isn't posted anywhere, and the older episodes' `_final_sfx.mp4`
+outputs from this session are unreviewed by ear (only verified by
+measurement/gate so far, per the project's own "verify by measurement, not
+by eye/ear alone" discipline, but a real listen is still worth doing before
+calling them done). See `RESUME.md`'s top block for full detail.
+
+## ════════════════════════════════════════════════════════════════
+
 **2026-08-25 Swirls of Life episode 1 ("The Queen Who Came to Test Him,"
 1 Kings 10:1-13 + Matthew 12:42) built end-to-end and LOCKED, through the
 full finishing chain (audio -> stills -> animation -> assembly -> SFX ->

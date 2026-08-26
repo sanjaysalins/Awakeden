@@ -1,4 +1,57 @@
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★★★ SFX-BED RETROFIT DONE, 2026-08-26 — pilot + episode 2 +
+# episode 8 all now have an ambient/SFX bed, matching episode 1. This was
+# the "retrofit the new SFX+SRT finishing chain onto the 3 older episodes"
+# open item from the block below. READ THIS FIRST for that item; it is now
+# closed. Everything else in the block below (episode 1 posting status,
+# etc.) is UNCHANGED and still open.
+#
+# ── WHAT SHIPPED:
+# - New `build_sfx.py` in each of `swirls_pilot_01_jacobs_ladder/`,
+#   `swirls_episode_02_ashes_that_made_clean/`, `swirls_episode_08_can_any_
+#   good_thing/` — same `sfx_pilots/sfxlib.py` engine episode 1 used, $0,
+#   reuse-only from `sound_library`. Layer maps were hand-designed per
+#   episode from each piece's own already-locked PageSpec/render-script
+#   scene descriptions (not guessed) and each piece's own real unit
+#   timeline (ffprobed from `_assembly/concat.txt`'s held clips, cross-
+#   checked against the actual final .mp4 duration + the +3.0s INV-26 hold
+#   — matched to the millisecond on all 3).
+# - Design notes (see each build_sfx.py's own docstring for full detail):
+#   pilot bookends desert wind on the flight/dawn and holds a "held breath"
+#   near-silence through the dream+theophany page, one choir swell saved
+#   for the gospel-pivot line only; episode 2 runs one continuous
+#   wilderness-wind bed the whole length plus fire under the heifer's
+#   burning and real trickling water under the hyssop/rinsing scene;
+#   episode 8 opens on dawn birdsong + Philip's real running footsteps,
+#   stays deliberately DRY through the sneer/first-meeting dialogue (the
+#   words carry it), then builds ONE continuous choir arc (two overlapping
+#   takes faking a crescendo) across the confession -> the Jacob's-Ladder
+#   vision -> the dusk landing, since Jesus is already speaking in his own
+#   voice for that whole back half, unlike the pilot/episode 2's OT-vision-
+#   awaiting-a-later-NT-link structure.
+# - Output files: `THE_LADDER_BOOK_final_sfx.mp4`, `THE_ASHES_BOOK_
+#   final_sfx.mp4`, `CAN_ANY_GOOD_THING_final_sfx.mp4` (same
+#   `<final>_sfx.mp4` naming convention `swirls_upload_tracker.py` already
+#   expects, so no tracker-script change needed).
+#
+# ── VERIFIED, NOT YET EAR-REVIEWED:
+# - `check_landing_hold.py` passes on all 3 (`ok`, gap <=0.02s).
+# - `sfxlib.measure()` per-region volumedetect numbers were checked (each
+#   region's mean/max is sane, no clipping, no region silently empty) —
+#   but this is a measurement check, not a listen. Per this project's own
+#   "verify by measurement, not by eye/ear alone" rule, measurement is the
+#   floor, not the ceiling — these 3 new mixes have NOT yet been reviewed
+#   by ear the way episode 1's was. Worth an actual listen before calling
+#   this fully done, especially episode 8's two-take choir crossfade
+#   (33-46s) and pilot's near-silent theophany stretch (5-34s) — both are
+#   judgment calls about *feel*, not something a dB reading confirms.
+# - `swirls_upload_tracker.py` re-run: `_SWIRLS_UPLOAD_TRACKER.html` now
+#   shows all 4 episodes (pilot, 1, 2, 8) with `final video` + `sfx bed` +
+#   `timestamped captions` pills.
+# - NOT committed to git yet — ask before committing/pushing.
+# ══════════════════════════════════════════════════════════════════════════
+
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★★★ EPISODE 1 "THE QUEEN WHO CAME TO TEST HIM" — LOCKED,
 # 2026-08-25. Full finishing chain done: audio -> stills -> animation ->
 # assembly -> SFX bed -> SRT -> upload tracker. READ THIS FIRST, supersedes
