@@ -1,0 +1,53 @@
+{
+  "bakeoff": "HF (Higgsfield) vs OpenArt -- same prompts, same reference images, episode 1 (The Queen Who Came to Test Him)",
+  "date": "2026-08-27",
+  "pages_tested": ["F01 (no ref image)", "F06 (uses jesus_ref.png)"],
+  "rates": {
+    "hf_usd_per_credit": 0.05,
+    "hf_usd_per_credit_source": "CORRECTED 2026-08-27 by the user's real billing: $250 for 5,000 credits. (Earlier draft used $0.15/credit inferred from a stale ledger top-up note -- wrong, superseded.)",
+    "openart_usd_per_credit": 0.002,
+    "openart_usd_per_credit_source": "CORRECTED 2026-08-27 by the user's real billing: $50 for 25,000 credits. (Earlier draft used $0.00183/credit from openart.ai/pricing's list price -- close, but this is the real paid rate.)",
+    "openart_mcp_discount": "10% off list price on MCP-originated generations, rounded half-up per unit"
+  },
+  "hf_existing_pipeline": {
+    "still_model": "nano_banana_pro, 2K, 9:16",
+    "anim_model": "kling3_0, mode=pro, sound=off (only tier this pipeline uses)",
+    "F01": {"still_credits": 2, "still_usd": 0.10, "anim_duration_s": 5, "anim_credits": 8.75, "anim_usd": 0.4375, "total_credits": 10.75, "total_usd": 0.5375},
+    "F06": {"still_credits": 2, "still_usd": 0.10, "anim_duration_s": 9, "anim_credits": 15.75, "anim_usd": 0.7875, "total_credits": 17.75, "total_usd": 0.8875},
+    "combined_credits": 28.5,
+    "combined_usd": 1.425
+  },
+  "openart": {
+    "still_model": "nano-banana-pro, 2K, 9:16 (text2image for F01, image2image + jesus_ref.png for F06)",
+    "anim_model": "kling-3-omni, image2video, generateSound=false",
+    "F01": {
+      "still_credits_discounted": 36, "still_usd": 0.072,
+      "anim_pro_credits_discounted": 158, "anim_pro_usd": 0.316,
+      "anim_std_credits_discounted": 113, "anim_std_usd": 0.226
+    },
+    "F06": {
+      "still_credits_discounted": 36, "still_usd": 0.072,
+      "anim_pro_credits_discounted": 284, "anim_pro_usd": 0.568,
+      "anim_std_credits_discounted": 203, "anim_std_usd": 0.406
+    },
+    "totals": {
+      "stills_only_credits": 72, "stills_only_usd": 0.144,
+      "stills_plus_pro_anims_credits": 514, "stills_plus_pro_anims_usd": 1.028,
+      "stills_plus_std_anims_credits": 388, "stills_plus_std_anims_usd": 0.776,
+      "everything_rendered_this_bakeoff_credits": 830, "everything_rendered_this_bakeoff_usd": 1.66,
+      "everything_confirmed_via_real_credit_balance_diff": "23982 -> 23152 credits, matches formula exactly (credit counts unaffected by the rate correction)"
+    }
+  },
+  "headline": {
+    "matching_pro_tier": "OpenArt $1.028 vs HF $1.425 -- OpenArt ~1.4x cheaper for the same nano-banana-pro + Kling pro settings",
+    "openart_std_720p_no_sound": "OpenArt $0.776 vs HF $1.425 (HF has no cheaper tier in this pipeline) -- OpenArt ~1.8x cheaper",
+    "correction_note": "CORRECTED 2026-08-27: an earlier draft of this file used $0.15/credit for HF and $0.00183/credit for OpenArt, giving a false 4.5x-6x headline. The user's real billing is $0.05/credit (HF) and $0.002/credit (OpenArt) -- corrected here. Credit counts (what each generation actually costs in that provider's own currency) are unchanged; only the USD conversion was wrong."
+  },
+  "quality_notes": [
+    "F01: OpenArt's blue ink motif thread breaks the top frame border and spills into the page margin above the illustration box. HF's version keeps it inside the frame, rising cleanly from the horizon city notch as the prompt specifies.",
+    "F06: OpenArt collapsed the 2-line stacked caption (caption_lines: 'a greater than Solomon' / 'is here') into one line and added quotation marks not present in the prompt. HF rendered the exact 2-line stack with no quote marks, matching the spec literally.",
+    "Both providers nailed the structural requirements: title, frame number, 3 circled panels, single main scene, caption, corner note, no stray text.",
+    "Jesus character consistency from jesus_ref.png held up well on both -- same hair part, beard, robe colors -- no drift observed.",
+    "Not yet checked: real playback motion quality (only frame-level stills judged so far), panel-internal motion, and whether OpenArt's Kling pass respects the 'no line redraws' fence discipline this series relies on."
+  ]
+}

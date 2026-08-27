@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>OpenArt MCP POC</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #fafafa; margin: 0; padding: 24px; }
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  .sub { color: #555; font-size: 16px; margin-bottom: 24px; }
+  .ok { color: #1a7a1a; font-weight: bold; }
+  .card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); max-width: 700px; margin-bottom: 20px; }
+  img { max-width: 100%; border-radius: 8px; display: block; margin: 12px 0; }
+  table { border-collapse: collapse; width: 100%; font-size: 16px; }
+  td { padding: 6px 8px; vertical-align: top; }
+  td.label { color: #777; width: 160px; }
+  code { background: #eee; padding: 2px 6px; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<h1>OpenArt MCP — POC Result</h1>
+<div class="sub">Test: generate one image via the OpenArt MCP server. Result: <span class="ok">WORKED ✅</span></div>
+
+<div class="card">
+  <img src="test_image_01.png" alt="OpenArt test image — candle on wooden table">
+  <table>
+    <tr><td class="label">Model</td><td>Nano Banana 2 (<code>nano-banana-2</code>), text-to-image</td></tr>
+    <tr><td class="label">Prompt</td><td>A single lit candle on a rustic wooden table in a dim room, warm golden light, soft shadows, photographic still life</td></tr>
+    <tr><td class="label">Size</td><td>1024x1024 (1K, 1:1)</td></tr>
+    <tr><td class="label">Cost</td><td>20 credits list price (~18 with the account's 10% MCP discount)</td></tr>
+    <tr><td class="label">Account</td><td>Pro plan, 24,000 credits balance</td></tr>
+    <tr><td class="label">History ID</td><td><code>Jv93oeaO2AFYEVg5hMiG</code></td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <b>What this proves:</b> the OpenArt MCP server is connected, authenticated, and can
+  generate + return a real image end to end (submit job &rarr; poll &rarr; download).
+  Full tool list and account details are in <code>poc_result.json</code> next to this file.
+</div>
+
+</body>
+</html>

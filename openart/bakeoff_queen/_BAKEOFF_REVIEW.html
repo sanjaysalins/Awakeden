@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HF vs OpenArt Bake-off</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #f7f5f0; margin: 0; padding: 24px; color: #222; }
+  h1 { font-size: 30px; margin-bottom: 2px; }
+  h2 { font-size: 22px; margin-top: 40px; border-bottom: 3px solid #333; padding-bottom: 6px; }
+  h3 { font-size: 17px; margin: 18px 0 6px; }
+  .sub { color: #555; font-size: 17px; margin-bottom: 20px; }
+  .row { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 10px; }
+  .card { background: white; border-radius: 12px; padding: 14px; box-shadow: 0 1px 4px rgba(0,0,0,0.12); flex: 1; min-width: 260px; }
+  .card img, .card video { width: 100%; border-radius: 8px; display: block; cursor: zoom-in; }
+  .tag { display: inline-block; font-size: 13px; font-weight: bold; padding: 3px 10px; border-radius: 20px; margin-bottom: 8px; }
+  .tag-hf { background: #ffe0b2; color: #7a3e00; }
+  .tag-openart-pro { background: #c8e6c9; color: #1b5e20; }
+  .tag-openart-std { background: #bbdefb; color: #0d47a1; }
+  .price { font-size: 20px; font-weight: bold; margin-top: 8px; }
+  .price small { font-weight: normal; color: #666; font-size: 14px; }
+  table { border-collapse: collapse; width: 100%; font-size: 16px; background: white; border-radius: 10px; overflow: hidden; }
+  th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid #eee; }
+  th { background: #333; color: white; }
+  .win { color: #1b5e20; font-weight: bold; }
+  .headline { background: #1b5e20; color: white; border-radius: 12px; padding: 20px 24px; font-size: 20px; margin: 16px 0 30px; }
+  .headline b { font-size: 26px; }
+  .notes { background: white; border-radius: 12px; padding: 18px 24px; }
+  .notes li { margin-bottom: 10px; font-size: 16px; }
+  .zoombox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 99; align-items: center; justify-content: center; }
+  .zoombox img { max-width: 95%; max-height: 95%; border-radius: 8px; }
+  .zoombox.open { display: flex; }
+</style>
+</head>
+<body>
+
+<h1>Bake-off: HF (Higgsfield) vs OpenArt</h1>
+<div class="sub">Same prompts, same reference images, 2 real pages from episode 1 (The Queen Who Came to Test Him). Click any image to zoom.</div>
+
+<div class="headline">
+  OpenArt made the SAME 2 pages, stills + animation, for<br>
+  <b>$0.78 – $1.03</b> instead of HF's <b>$1.43</b> &mdash; about <b>1.4x&ndash;1.8x cheaper</b>.
+</div>
+<div class="sub" style="background:#fff3cd;border-radius:8px;padding:10px 16px;margin:-14px 0 24px;">
+  <b>Correction (2026-08-27):</b> the first version of this page said "~5x cheaper" using a wrong HF rate
+  ($0.15/credit). The user's real billing is $0.05/credit on HF and $0.002/credit on OpenArt &mdash;
+  corrected throughout. OpenArt is still genuinely cheaper, just not by as much as first reported.
+</div>
+
+<h2>Page F01 &mdash; "To See For Herself" (no reference image needed)</h2>
+
+<h3>Stills</h3>
+<div class="row">
+  <div class="card">
+    <span class="tag tag-hf">HF &middot; nano_banana_pro</span>
+    <img src="hf_F01_still.png" onclick="zoom(this.src)">
+    <div class="price">$0.10 <small>2 credits</small></div>
+  </div>
+  <div class="card">
+    <span class="tag tag-openart-pro">OpenArt &middot; nano-banana-pro</span>
+    <img src="openart_F01_still.png" onclick="zoom(this.src)">
+    <div class="price">$0.072 <small>36 credits</small></div>
+  </div>
+</div>
+
+<h3>Animation (5s)</h3>
+<div class="row">
+  <div class="card">
+    <span class="tag tag-hf">HF &middot; kling3_0 pro, no sound</span>
+    <video src="hf_F01_anim.mp4" controls></video>
+    <div class="price">$0.44 <small>8.75 credits</small></div>
+  </div>
+  <div class="card">
+    <span class="tag tag-openart-pro">OpenArt &middot; Kling 3 Omni, pro, no sound</span>
+    <video src="openart_F01_anim_pro.mp4" controls></video>
+    <div class="price">$0.32 <small>158 credits</small></div>
+  </div>
+  <div class="card">
+    <span class="tag tag-openart-std">OpenArt &middot; Kling 3 Omni, std/720p, no sound</span>
+    <video src="openart_F01_anim_std.mp4" controls></video>
+    <div class="price">$0.23 <small>113 credits</small></div>
+  </div>
+</div>
+
+<h2>Page F06 &mdash; "Greater Than Solomon" (uses jesus_ref.png, the gospel-pivot page)</h2>
+
+<h3>Stills</h3>
+<div class="row">
+  <div class="card">
+    <span class="tag tag-hf">HF &middot; nano_banana_pro + ref</span>
+    <img src="hf_F06_still.png" onclick="zoom(this.src)">
+    <div class="price">$0.10 <small>2 credits</small></div>
+  </div>
+  <div class="card">
+    <span class="tag tag-openart-pro">OpenArt &middot; nano-banana-pro + ref</span>
+    <img src="openart_F06_still.png" onclick="zoom(this.src)">
+    <div class="price">$0.072 <small>36 credits</small></div>
+  </div>
+</div>
+
+<h3>Animation (9s)</h3>
+<div class="row">
+  <div class="card">
+    <span class="tag tag-hf">HF &middot; kling3_0 pro, no sound</span>
+    <video src="hf_F06_anim.mp4" controls></video>
+    <div class="price">$0.79 <small>15.75 credits</small></div>
+  </div>
+  <div class="card">
+    <span class="tag tag-openart-pro">OpenArt &middot; Kling 3 Omni, pro, no sound</span>
+    <video src="openart_F06_anim_pro.mp4" controls></video>
+    <div class="price">$0.57 <small>284 credits</small></div>
+  </div>
+  <div class="card">
+    <span class="tag tag-openart-std">OpenArt &middot; Kling 3 Omni, std/720p, no sound</span>
+    <video src="openart_F06_anim_std.mp4" controls></video>
+    <div class="price">$0.41 <small>203 credits</small></div>
+  </div>
+</div>
+
+<h2>Cost table (real, both pages combined)</h2>
+<table>
+  <tr><th>Setup</th><th>Stills</th><th>Animation</th><th>Total</th><th>vs HF</th></tr>
+  <tr><td>HF (current pipeline) &mdash; only tier it has</td><td>$0.20</td><td>$1.23</td><td>$1.43</td><td>&mdash;</td></tr>
+  <tr><td>OpenArt &mdash; matching "pro" tier</td><td>$0.14</td><td>$0.88</td><td>$1.03</td><td class="win">1.4x cheaper</td></tr>
+  <tr><td>OpenArt &mdash; std/720p, no sound</td><td>$0.14</td><td>$0.63</td><td>$0.78</td><td class="win">1.8x cheaper</td></tr>
+</table>
+<div class="sub">HF: $0.05/credit (user's real billed rate: $250 for 5,000 credits). OpenArt: $0.002/credit (user's real billed rate: $50 for 25,000 credits). Credit counts per generation are from real quotes/API calls; both $/credit rates are the user's own actual billing, not estimates.</div>
+
+<h2>What I noticed looking at them</h2>
+<div class="notes">
+  <ul>
+    <li><b>Structure: both nailed it.</b> Title, frame number, 3 circled panels, one main scene, caption, corner note &mdash; no stray text on either.</li>
+    <li><b>Jesus stayed on-model.</b> Same hair, beard, robe colors as jesus_ref.png on both. No drift.</li>
+    <li><b>F01 defect (OpenArt):</b> the blue ink thread breaks out of the page's frame border and spills into the margin above it. HF's version keeps it inside the frame, rising cleanly from the horizon like the prompt says.</li>
+    <li><b>F06 defect (OpenArt):</b> the 2-line caption ("a greater than Solomon" / "is here") got squashed onto one line with quote marks added &mdash; the prompt didn't ask for quote marks. HF rendered the exact 2 lines, no quotes.</li>
+    <li><b>Not checked yet:</b> real playback quality of the motion (this review only judged the stills carefully) &mdash; watch both clips above by ear/eye before trusting them, same rule as always on this project.</li>
+  </ul>
+</div>
+
+<div class="zoombox" id="zoombox" onclick="this.classList.remove('open')"><img id="zoomimg"></div>
+<script>
+function zoom(src) {
+  document.getElementById('zoomimg').src = src;
+  document.getElementById('zoombox').classList.add('open');
+}
+</script>
+
+</body>
+</html>

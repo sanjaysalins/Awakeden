@@ -247,6 +247,36 @@ they're never animated; `VISION_AUDIT_MODEL`=Haiku for the coarse assembly verif
 
 ## Locked decisions (do not relitigate without the user)
 
+- **Swirls-of-Life stills+animation default provider: OpenArt, not Higgsfield**
+  (locked 2026-08-27, after a real-cost bake-off on episode 1's F01/F06 pages,
+  `openart/bakeoff_queen/_BAKEOFF_REVIEW.html` + `bakeoff_costs.json`). Same
+  models under the hood (nano-banana-pro stills, Kling 3 for animation) but
+  through OpenArt's Pro-plan credits instead of Higgsfield's — measured ~1.4x
+  cheaper at matching "pro" quality ($1.03 vs $1.43 for 2 pages, stills+anim),
+  ~1.8x cheaper at OpenArt's std/720p tier ($0.78). Rates are the user's real
+  billing (corrected same day from an earlier wrong estimate that had claimed
+  4.5x-6x): HF $0.05/credit ($250/5,000cr), OpenArt $0.002/credit
+  ($50/25,000cr) — always re-derive from the user's actual invoice, never
+  assume a provider's list price. Quality nearly identical; two minor
+  OpenArt-side defects found (a blue ink motif thread breaking the frame
+  border, a 2-line caption collapsing to one line with added quote marks) —
+  worth an eye-check per page, not blocking. **OpenArt has no REST API or API
+  key (MCP-only, OAuth)** — unlike `hf.exe`, a standalone `episode.py` can't
+  call it directly, so `test_the_cross/swirls_page.py` now routes through a
+  new file-bridge (`openart_bridge.py` + `.agent_bridge/gen_requests/` /
+  `gen_responses/`, documented in full in `AGENT_BRIDGE.md`'s "Image / video
+  generation (OpenArt)" section) that a live Claude Code session must
+  actively service — an OpenArt-backed episode build is not a true
+  unattended run. **Higgsfield stays as the fallback, but NEVER switched to
+  automatically** (user instruction, 2026-08-27) — any OpenArt failure or
+  bridge timeout stops with a clear message; falling back requires setting
+  `SWIRLS_GEN_PROVIDER=hf` yourself first, a deliberate confirmed choice, not
+  a silent code path. `SWIRLS_ANIM_RESOLUTION` (default `pro`, matching HF's
+  quality bar) can drop to `std` for the larger measured savings once you've
+  eyeballed a std clip and are happy with it. This decision covers the
+  Swirls-of-Life POC pipeline only — the main 4-stage engine
+  (`cli.py`/`cli_visual.py`/`cli_assemble.py`) is untouched.
+
 - **🔒 NON-NEGOTIABLE — sound doctrine, proven BOTH ways** (user, 2026-06-26):
   every piece's doctrine must be SOUND and GROUNDED IN THE BIBLE, and verified
   BOTH independently (my own red-team/self-check) AND by the 5-CLI panel — never

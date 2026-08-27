@@ -1,0 +1,35 @@
+{
+  "poc": "OpenArt MCP integration test",
+  "date": "2026-08-27",
+  "mcp_server": "https://mcp.openart.ai/mcp",
+  "account": {
+    "email": "sanjaysalins@gmail.com",
+    "plan": "Pro",
+    "credits_at_time": 24000
+  },
+  "generation": {
+    "tool": "mcp__openart__openart_generate_image",
+    "model": "nano-banana-2",
+    "mode": "text2image",
+    "prompt": "A single lit candle on a rustic wooden table in a dim room, warm golden light, soft shadows, photographic still life",
+    "params": {
+      "imageCount": 1,
+      "aspectRatio": "1:1",
+      "resolution": "1K",
+      "autoEnhancePrompt": false
+    },
+    "historyId": "Jv93oeaO2AFYEVg5hMiG",
+    "status": "COMPLETED",
+    "cost_credits_list_price": 20,
+    "cost_credits_est_with_10pct_mcp_discount": 18,
+    "result": {
+      "resourceId": "bpCINUcw7Y8uJbjzweiC",
+      "url": "https://cdn.openart.ai/openart-ai/production/2026-08/create-image/EsbOTmkjtrfHKP88sIj3/image_1787863434188_d673e4ac_1787863434234_3db07b78.png",
+      "thumbnailUrl": "https://cdn.openart.ai/openart/thumbnail/production/2026-08/create-image/EsbOTmkjtrfHKP88sIj3/image_1787863434188_d673e4ac_1787863434401_2ad30d07.webp",
+      "width": 1024,
+      "height": 1024,
+      "format": "png",
+      "local_copy": "F:\\slk\\PycharmProjects\\JesusInTheBible\\openart\\test_image_01.png"
+    }
+  }
+}

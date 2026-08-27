@@ -18,6 +18,7 @@ construction is shared).
 """
 from __future__ import annotations
 
+import os
 import re
 import subprocess
 import urllib.request
@@ -26,7 +27,20 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Literal
 
+import openart_bridge
+
 HF_CLI = r"C:\Users\sanjay\bin\hf.exe"
+
+# Which provider actually renders stills/animations. "openart" (default, locked
+# 2026-08-27 after the queen-episode bake-off showed ~5x lower real $ cost at
+# matching quality) or "hf" (Higgsfield, the original/fallback path). NEVER
+# switched automatically on an openart failure -- that is a human decision;
+# set SWIRLS_GEN_PROVIDER=hf yourself to confirm the fallback for a run.
+GEN_PROVIDER = os.environ.get("SWIRLS_GEN_PROVIDER", "openart")
+# OpenArt Kling 3 Omni resolution tier for animations: std (720p) | pro (1080p) | 4k.
+# HF's pipeline only ever used "pro" -- default matches that quality bar; drop to
+# "std" for cheaper batch exploration (bake-off measured ~6x cheaper than HF at std).
+ANIM_RESOLUTION = os.environ.get("SWIRLS_ANIM_RESOLUTION", "pro")
 
 _IMG_URL_RE = re.compile(r"https://\S+?\.(?:png|jpg|jpeg|webp)", re.IGNORECASE)
 _VID_URL_RE = re.compile(r"https://\S+?\.(?:mp4|mov|webm)", re.IGNORECASE)
@@ -314,7 +328,8 @@ def _run_hf(cmd: list[str], out_path: Path, url_re: re.Pattern, timeout: int) ->
     return True
 
 
-def render_still(spec: PageSpec, out_png: Path) -> bool:
+def render_still(spec: PageSpec, out_png: Path, provider: str | None = None) -> bool:
+    provider = provider or GEN_PROVIDER
     if out_png.exists():
         print(f"  [skip] {out_png.name} already exists")
         return True
@@ -325,25 +340,66 @@ def render_still(spec: PageSpec, out_png: Path) -> bool:
         print("  (ref-chaining rule: a recurring subject with no chained ref is a hard stop — "
               "crop it from its first approved render before spending.)")
         return False
+    if provider == "hf":
+        return _render_still_hf(spec, out_png)
+    if provider == "openart":
+        return _render_still_openart(spec, out_png)
+    raise ValueError(f"unknown provider {provider!r} (expected 'openart' or 'hf')")
+
+
+def _render_still_hf(spec: PageSpec, out_png: Path) -> bool:
     prompt = assemble_still_prompt(spec)
     cmd = [HF_CLI, "generate", "create", "nano_banana_pro", "--prompt", prompt]
     for r in spec.refs:
         cmd += ["--image", r.path]
     cmd += ["--aspect_ratio", spec.aspect_ratio, "--resolution", "2k", "--wait"]
-    print(f"  [nano_banana_pro] rendering {out_png.name}...")
+    print(f"  [hf/nano_banana_pro] rendering {out_png.name}...")
     ok = _run_hf(cmd, out_png, _IMG_URL_RE, 600)
     if ok:
         print("  NOW: eyeball at 1:1 + referent check BEFORE animating.")
     return ok
 
 
-def render_animation(spec: PageSpec, png: Path, out_mp4: Path) -> bool:
+def _render_still_openart(spec: PageSpec, out_png: Path) -> bool:
+    prompt = assemble_still_prompt(spec)
+    payload = {
+        "kind": "still",
+        "model": "nano-banana-pro",
+        "mode": "image2image" if spec.refs else "text2image",
+        "prompt": prompt,
+        "aspect_ratio": spec.aspect_ratio,
+        "resolution": "2K",
+        "refs": [{"path": r.path, "subject": r.subject} for r in spec.refs],
+        "out_path": str(out_png),
+    }
+    print(f"  [openart/nano-banana-pro] requesting {out_png.name}...")
+    try:
+        resp = openart_bridge.submit(payload)
+    except openart_bridge.OpenArtBridgeError as e:
+        print(f"  FAILED: {e}")
+        return False
+    print(f"  -> {out_png.name} (~{resp.get('credits_spent', '?')} credits, "
+          f"~${resp.get('usd_est', 0):.3f})")
+    print("  NOW: eyeball at 1:1 + referent check BEFORE animating.")
+    return True
+
+
+def render_animation(spec: PageSpec, png: Path, out_mp4: Path, provider: str | None = None) -> bool:
+    provider = provider or GEN_PROVIDER
     if out_mp4.exists():
         print(f"  [skip] {out_mp4.name} already exists")
         return True
     if not png.exists():
         print(f"  FAILED: still {png.name} not rendered yet.")
         return False
+    if provider == "hf":
+        return _render_animation_hf(spec, png, out_mp4)
+    if provider == "openart":
+        return _render_animation_openart(spec, png, out_mp4)
+    raise ValueError(f"unknown provider {provider!r} (expected 'openart' or 'hf')")
+
+
+def _render_animation_hf(spec: PageSpec, png: Path, out_mp4: Path) -> bool:
     prompt = assemble_animation_prompt(spec)
     cmd = [HF_CLI, "generate", "create", spec.model_tier, "--prompt", prompt,
            "--start-image", str(png), "--aspect_ratio", spec.aspect_ratio]
@@ -354,8 +410,34 @@ def render_animation(spec: PageSpec, png: Path, out_mp4: Path) -> bool:
         duration = spec.clip_duration if spec.clip_duration is not None else 4
         cmd += ["--duration", str(duration)]
     cmd += ["--wait"]
-    print(f"  [{spec.model_tier}] rendering {out_mp4.name}...")
+    print(f"  [hf/{spec.model_tier}] rendering {out_mp4.name}...")
     ok = _run_hf(cmd, out_mp4, _VID_URL_RE, 900)
     if ok:
         print("  NOW: 4-frame contact sheet + real playback (QC law).")
     return ok
+
+
+def _render_animation_openart(spec: PageSpec, png: Path, out_mp4: Path) -> bool:
+    prompt = assemble_animation_prompt(spec)
+    duration = spec.clip_duration if spec.clip_duration is not None else 5
+    payload = {
+        "kind": "anim",
+        "model": "kling-3-omni",
+        "mode": "image2video",
+        "prompt": prompt,
+        "start_image_path": str(png),
+        "duration": duration,
+        "resolution": ANIM_RESOLUTION,
+        "generate_sound": False,
+        "out_path": str(out_mp4),
+    }
+    print(f"  [openart/kling-3-omni] requesting {out_mp4.name} ({duration}s, {ANIM_RESOLUTION})...")
+    try:
+        resp = openart_bridge.submit(payload)
+    except openart_bridge.OpenArtBridgeError as e:
+        print(f"  FAILED: {e}")
+        return False
+    print(f"  -> {out_mp4.name} (~{resp.get('credits_spent', '?')} credits, "
+          f"~${resp.get('usd_est', 0):.3f})")
+    print("  NOW: 4-frame contact sheet + real playback (QC law).")
+    return True

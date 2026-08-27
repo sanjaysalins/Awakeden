@@ -72,6 +72,71 @@ If a run hangs, it is almost always an **unserviced request** — check
 `.agent_bridge/requests/`. To kill the wait, write the reply, or stop the process
 and re-run with `LLM_PROVIDER=api`.
 
+## Image / video generation (OpenArt) — Swirls-of-Life pipeline only
+
+Separate channel, separate reason. OpenArt (`poc_living_water_ink_style_test/`'s
+image/video provider, replacing Higgsfield as of 2026-08-27 after a real-cost
+bake-off, `openart/bakeoff_queen/_BAKEOFF_REVIEW.html`) has **no REST API or API
+key at all** — it's MCP-only, OAuth ("no keys to create, rotate, or leak"). So
+unlike `hf.exe` (a real CLI binary any script can subprocess), a standalone
+script literally cannot call OpenArt itself. `test_the_cross/openart_bridge.py`
+is the client half of the same file-bridge trick as above, on its own
+directories so it can't collide with the text servicer:
+
+```
+.agent_bridge/
+  gen_requests/<id>.request.json    <- swirls_page.py writes prompt+params here
+  gen_responses/<id>.response.json  <- the AGENT writes the result here
+  gen_archive/                       <- serviced pairs move here
+```
+
+**Request schema** (`kind: "still"`):
+`{id, kind, model: "nano-banana-pro", mode: "text2image"|"image2image", prompt,
+aspect_ratio, resolution: "2K", refs: [{path, subject}], out_path}`
+
+**Request schema** (`kind: "anim"`):
+`{id, kind, model: "kling-3-omni", mode: "image2video", prompt,
+start_image_path, duration, resolution: "std"|"pro"|"4k", generate_sound: false,
+out_path}`
+
+**Response schema**: `{status: "ok"|"error", out_path, credits_spent, usd_est,
+error?}`. `status != "ok"` (or a timeout) is terminal — `openart_bridge.py`
+raises, and `swirls_page.py` does NOT fall back to Higgsfield automatically.
+That is a deliberate, locked policy (user instruction, 2026-08-27): falling
+back requires a human decision. To use HF for a run, set
+`SWIRLS_GEN_PROVIDER=hf` yourself first.
+
+**Servicing steps** (same loop as above — run the episode script in the
+background, watch `.agent_bridge/gen_requests/`, but each file needs real MCP
+tool calls, not a text reply):
+
+1. Read the request JSON.
+2. For each entry in `refs` (stills only): `openart_upload_sign` (mediaType
+   image, size/contentType from the local file) → PUT the bytes to `signURL`
+   with curl → build `{type:"image", id, url, label: subject}`.
+3. Call `mcp__openart__openart_generate_image` (stills) or
+   `..._generate_video` (anims) with the request's model/mode/prompt/params
+   (`visualReferences` for stills with refs, `startFrame` for anims — use the
+   uploaded/generation resource's own `{type, id, url, label}` object, not a
+   bare URL).
+4. `openart_creation_wait` until `COMPLETED` (may need several calls back to
+   back — video often outlasts one wait window).
+5. Download the result URL to the request's `out_path` (curl -sL -o).
+6. Get a cost estimate via `openart_model_cost` for the same config (or diff
+   `openart_account_get` before/after for the real figure) and write
+   `gen_responses/<id>.response.json`: `{status:"ok", out_path, credits_spent,
+   usd_est}`. On any failure: `{status:"error", error: "<what happened>"}` —
+   never invent a fallback yourself.
+7. Also append an entry to `data/spend_ledger.jsonl` (provider: "openart",
+   same shape as existing HF entries) so `/spend` and `/cost` keep working —
+   the script itself has no visibility into OpenArt credits, only the servicer
+   does.
+
+**Knobs (env)**: `SWIRLS_GEN_PROVIDER` (`openart` default | `hf`),
+`SWIRLS_ANIM_RESOLUTION` (`pro` default, matches HF's quality bar | `std` for
+~1.8x cheaper, bake-off-validated | `4k`), `OPENART_BRIDGE_TIMEOUT` (3600s
+default), `OPENART_BRIDGE_POLL` (3s default).
+
 ## Watcher (don't lose track of a stuck request)
 
 `watcher_service.py` (start once via `start_watcher.vbs`, keeps running in the
