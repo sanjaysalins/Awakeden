@@ -561,6 +561,15 @@ MANIFEST = EpisodeManifest(
             duck=DuckProfile(gain_db=-6, threshold=0.12, ratio=2.5, release_ms=250),
             out=HERE / "CAN_ANY_GOOD_THING_final.mp4",
         ),
+        # NEW (2026-08-27, Fable "epic-soft" north-star pass): upgrades Fig Tree with a
+        # slow continuous string-widen, no swell (the SFX bed already runs a real choir
+        # crescendo across the back half). Solo mean -18.5dB vs narration -18.6dB
+        # (essentially matched) -- same duck family as "original" is still the safe start.
+        "epic": ScoreVariant(
+            score=HERE / "score_epic.mp3",
+            duck=DuckProfile(gain_db=-6, threshold=0.12, ratio=2.5, release_ms=250),
+            out=HERE / "CAN_ANY_GOOD_THING_final_epic.mp4",
+        ),
     },
     panel_style="woodcut_hybrid",
 )

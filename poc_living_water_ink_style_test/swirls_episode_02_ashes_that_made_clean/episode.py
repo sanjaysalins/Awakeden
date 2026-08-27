@@ -311,6 +311,15 @@ MANIFEST = EpisodeManifest(
             duck=DuckProfile(gain_db=2, threshold=0.55, ratio=1.25, release_ms=400),
             out=HERE / "THE_ASHES_BOOK_final_somber.mp4",
         ),
+        # NEW (2026-08-27, Fable "epic-soft" north-star pass): felt piano + strings +
+        # choir, not the old trance -- ambient-pad duck (score_mix.py default), not the
+        # rhythmic-tuned "original" duck above. Solo mean -17.8dB vs narration -20.3dB
+        # (louder by 2.5dB, same magnitude ep8's Fig Tree needed gain_db=-6 for).
+        "epic": ScoreVariant(
+            score=HERE / "score_epic.mp3",
+            duck=DuckProfile(gain_db=-6, threshold=0.12, ratio=2.5, release_ms=250),
+            out=HERE / "THE_ASHES_BOOK_final_epic.mp4",
+        ),
     },
     panel_style="woodcut_hybrid",
 )
