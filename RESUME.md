@@ -1422,6 +1422,72 @@
 # ══════════════════════════════════════════════════════════════════════════
 #
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-27/28 (session end — user asked to
+# stop for the evening, commit+push everything) — READ THIS FIRST, supersedes
+# every block below.
+#
+# ── START HERE TOMORROW (in priority order):
+#   1. **Check for repeat file corruption FIRST, before trusting anything.**
+#      The user was mid-way through deleting C:\Users\sanjay\PycharmProjects\
+#      JesusInTheBible\ and consolidating fully onto F: during this session.
+#      Something in that migration bulk-copied stale Aug-14-dated content back
+#      onto 10 live tracked files on F: (RESUME.md, STATE.md, CLAUDE.md,
+#      config.py, data/spend_ledger.jsonl, .gitignore, independent_review.py,
+#      pipeline/narration_parse.py, pipeline/score_mix.py,
+#      pipeline/test_score_mix.py) mid-session, silently, with zero warning --
+#      also wiped an AGENT_BRIDGE.md edit with NO diff signal (reverted to
+#      exactly match HEAD). All recovered via `git restore` before anything
+#      was committed, both lost edits (CLAUDE.md, AGENT_BRIDGE.md) redone.
+#      Run `git diff --stat` FIRST THING next session -- if it shows mass
+#      deletions across unrelated files again, the C: copy is still alive
+#      and still syncing; STOP and ask the user before touching anything,
+#      don't just fix and continue like this session had to.
+#   2. **Run a REAL episode build through the new OpenArt bridge, end to
+#      end.** Everything so far is a 2-page manual bake-off
+#      (openart/bakeoff_queen/) plus one trivial smoke-test image (a dove
+#      sketch) -- swirls_page.py's new render_still/render_animation
+#      OpenArt path has never actually been driven by a real `episode.py`
+#      script run. Pick an unbuilt page (or a fresh episode) and run it for
+#      real, watching `.agent_bridge/gen_requests/` and servicing live per
+#      AGENT_BRIDGE.md's "Image / video generation (OpenArt)" section --
+#      don't assume the bridge "just works" beyond the smoke test.
+#   3. **Log real OpenArt spend to `data/spend_ledger.jsonl`.** Not done
+#      yet for the bake-off/smoke-test spend (~$1.76 total) -- the servicer
+#      (whoever's watching the bridge) is responsible for this per
+#      AGENT_BRIDGE.md, not automated.
+#   4. Optional: once a std/720p OpenArt clip has been eyeballed and
+#      approved by the user, consider switching `SWIRLS_ANIM_RESOLUTION`'s
+#      running default from `pro` to `std` for the larger measured saving
+#      (~1.8x vs HF instead of ~1.4x) -- not decided yet, still `pro`.
+#
+# ── WHAT HAPPENED: built an OpenArt MCP POC (openart/), ran a real
+# same-prompt bake-off against episode 1's F01/F06 pages comparing OpenArt
+# vs the existing Higgsfield pipeline (same underlying models: nano-banana-
+# pro stills, Kling 3 for animation), got real billed $/credit rates from
+# the user directly (HF $0.05/credit, OpenArt $0.002/credit -- corrected
+# mid-session from a wrong first estimate that had claimed a much bigger
+# 4.5x-6x saving; the real number is ~1.4x-1.8x, still worth switching but
+# far more modest). Built a new file-bridge (test_the_cross/
+# openart_bridge.py) since OpenArt has no REST API/key (MCP-only, OAuth) --
+# a standalone script literally cannot call it, so it mirrors the project's
+# existing LLM agent-bridge pattern exactly. swirls_page.py now defaults to
+# OpenArt; Higgsfield is NEVER auto-selected as a fallback, only via an
+# explicit SWIRLS_GEN_PROVIDER=hf. Verified the bridge mechanism end-to-end
+# with a real live smoke test before calling any of this done.
+#
+# ── COMMITS THIS BLOCK: JesusInTheBible `c013eac` (the OpenArt integration:
+# swirls_page.py, openart_bridge.py, AGENT_BRIDGE.md, CLAUDE.md, openart/)
+# and `ae2dfd0` (an unrelated pending "epic" score-variant pass from earlier
+# the same day -- pre-existing uncommitted work, not authored or verified by
+# me this session, committed as-is to close out cleanly). Both pushed to
+# origin at the user's explicit request.
+#
+# ── Clean-slate check at session end: `git status` clean after both
+# commits and the corruption recovery above -- nothing from this session
+# left uncommitted. No PythonProject1 changes this session.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-16 (session end — user asked to
 # save everything, commit everything, and hand off to a fresh session) —
 # READ THIS FIRST, supersedes every block below. The block right under this

@@ -1,5 +1,74 @@
 # STATE.md — progress tracker
 
+**2026-08-27/28 Switched the Swirls-of-Life pipeline's image/video provider
+to OpenArt (default), Higgsfield now a confirm-only fallback.** Built a small
+standalone OpenArt MCP POC first (`openart/`, one test image, tool
+inventory), then ran a real same-prompt bake-off on episode 1's F01 (no ref)
+and F06 (uses jesus_ref.png) pages -- same exact prompts pulled from
+`swirls_page.py` itself, rendered through OpenArt's nano-banana-pro +
+Kling 3 Omni instead of Higgsfield's nano_banana_pro/kling3_0
+(`openart/bakeoff_queen/_BAKEOFF_REVIEW.html`). Real billed rates (corrected
+mid-session from a wrong first estimate): HF $0.05/credit ($250/5,000cr),
+OpenArt $0.002/credit ($50/25,000cr) -- OpenArt ~1.4x cheaper at matching
+"pro" quality, ~1.8x cheaper at its std/720p tier. Quality close; two minor
+OpenArt defects noted (ink-motif thread breaking the frame border on F01, a
+2-line caption collapsing to one line with added quotes on F06).
+
+OpenArt has no REST API/key (MCP-only, OAuth) -- unlike hf.exe, a standalone
+script can't call it. Built a new file-bridge (`test_the_cross/
+openart_bridge.py` + `.agent_bridge/gen_requests/`/`gen_responses/`,
+documented in `AGENT_BRIDGE.md`'s new "Image / video generation (OpenArt)"
+section) mirroring the project's existing LLM agent-bridge -- a live Claude
+session must service each request. `swirls_page.py`'s `render_still`/
+`render_animation` now dispatch on `SWIRLS_GEN_PROVIDER` (default `openart`);
+Higgsfield is NEVER auto-selected on failure, only via an explicit
+`SWIRLS_GEN_PROVIDER=hf`. Verified the whole bridge mechanism end-to-end with
+a real live smoke test (a dove sketch) before calling it done -- request
+written, serviced live through the real MCP tools, response consumed,
+background process unblocked cleanly, pair archived correctly.
+
+**Real incident mid-session, found and fixed:** the user was mid-way through
+deleting everything on C: and consolidating fully onto F: (same ~1 hour
+window). Something in that migration bulk-copied stale, Aug-14-dated content
+back onto 10 LIVE, TRACKED files in this F: repo -- `RESUME.md` (-1423
+lines), `STATE.md` (-334), `config.py` (-66, gone entirely),
+`data/spend_ledger.jsonl` (-215), plus `CLAUDE.md`, `.gitignore`,
+`independent_review.py`, `pipeline/narration_parse.py`,
+`pipeline/score_mix.py`, `pipeline/test_score_mix.py`, and silently reverted
+my own `AGENT_BRIDGE.md` edit with zero diff signal (matched HEAD exactly).
+Caught via an unrelated `CLAUDE.md` mtime anomaly (frozen at a past
+timestamp right after a successful edit), traced to the stale
+`C:\Users\sanjay\PycharmProjects\JesusInTheBible\` copy the user confirmed
+they were mid-deleting. Nothing was ever committed in the corrupted state --
+`git restore` recovered all 10 files cleanly from HEAD (verified line counts
+match), then I re-applied my own 2 lost edits (`CLAUDE.md`'s locked-decision
+entry, `AGENT_BRIDGE.md`'s new section) with the corrected cost numbers
+before committing. **Worth checking at the START of next session: is the C:
+copy actually gone now, and did anything get silently reverted again
+overnight?** -- re-run `git diff --stat` first thing before trusting any
+file's content.
+
+**Spend:** real, small -- one OpenArt POC image (~$0.03), the F01/F06
+bake-off (~$1.66 total across both quality tiers, both stills+anim), one
+smoke-test image (~$0.07). Not yet logged to `data/spend_ledger.jsonl`
+(that's the servicer's manual responsibility per `AGENT_BRIDGE.md`, not done
+this session -- a real gap to close next time OpenArt is used for real).
+
+**Commits:** yes -- two commits on `main`: `c013eac` (the OpenArt
+integration itself) and `ae2dfd0` (carrying forward an unrelated pending
+"epic" score-variant pass from earlier the same day, pre-existing, not
+authored or verified by me this session). Pushed to origin at the user's
+explicit request.
+
+**Stopped here deliberately** (user: "let's stop for the evening and resume
+tomorrow") -- working tree clean, nothing mid-edit.
+
+**Next session:** see `RESUME.md`'s new top "START HERE TOMORROW" block --
+the OpenArt bridge has only been exercised by the 2-page bake-off + one
+trivial smoke test, never by a real `episode.py` run end-to-end.
+
+## ════════════════════════════════════════════════════════════════
+
 **2026-08-26 Retrofitted the SFX-bed finishing step onto the 3 pre-episode-1
 Swirls of Life pieces (pilot "The Ladder," episode 2 "The Ashes That Made
 Clean," episode 8 "Can Any Good Thing")** -- the item RESUME.md left open
