@@ -39,7 +39,7 @@ sys.path.insert(0, str(HERE))
 
 from swirls_page import PageSpec, Panel, Ref  # noqa: E402
 from swirls_cover import CoverSpec  # noqa: E402
-from swirls_assemble import EpisodeManifest, Unit  # noqa: E402
+from swirls_assemble import DuckProfile, EpisodeManifest, ScoreVariant, Unit  # noqa: E402
 
 REFS_DIR = HERE / "refs"
 
@@ -511,6 +511,22 @@ MANIFEST = EpisodeManifest(
         Unit("f06", HERE / f"{HERE.name}_f06_9x16.mp4", 35, "boomerang"),
         Unit("back", HERE / "back_cover.mp4", 30, "boomerang"),
     ],
-    scores={},  # added once a score is generated, before running `assemble`
+    scores={
+        # "The Argument" -- Fable design pass (2026-08-29), solo cello, built for THIS
+        # episode's own shape (fury at F03 -> gentle turning -> plain healing at F05 ->
+        # quiet landing), not a reuse of episode 8's felt-piano north star. Duck profile
+        # STARTS from episode 8's own working "Fig Tree" values (gain_db=-6, threshold=0.12,
+        # ratio=2.5, release_ms=250) as a reasonable first guess for another sparse
+        # solo-instrument score -- solo score/narration mean-volume check (-17.7dB vs
+        # -18.4dB, nearly equal, the same trap that made the old trance score "too loud")
+        # confirms a real duck is needed here, NOT that these exact numbers are right for
+        # THIS track. Re-measure the actual mixed output before calling this final --
+        # a duck does not transfer between score generations (see SCORE_STYLE_BANK.md).
+        "cello": ScoreVariant(
+            score=HERE / "score_cello.mp3",
+            duck=DuckProfile(gain_db=-6, threshold=0.12, ratio=2.5, release_ms=250),
+            out=HERE / f"{HERE.name}_final.mp4",
+        ),
+    },
     panel_style="woodcut_hybrid",
 )
