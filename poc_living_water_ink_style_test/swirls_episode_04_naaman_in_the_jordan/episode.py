@@ -536,6 +536,9 @@ MANIFEST = EpisodeManifest(
         # string entry moves to ~50s to land on the healing beat. Same starting duck
         # profile as "cello" (same solo-volume trap measured: -18.8dB vs narration's
         # -18.4dB) -- still needs re-measuring against the real mixed output.
+        #
+        # LOCKED by the user 2026-08-29: "lock this, this is great". This is the score
+        # for the final cut -- "cello" kept only for the record, not to be used.
         "piano": ScoreVariant(
             score=HERE / "score_piano.mp3",
             duck=DuckProfile(gain_db=-6, threshold=0.12, ratio=2.5, release_ms=250),
