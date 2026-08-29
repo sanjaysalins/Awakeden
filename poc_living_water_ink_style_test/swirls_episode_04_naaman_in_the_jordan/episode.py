@@ -502,13 +502,23 @@ MANIFEST = EpisodeManifest(
     episode_dir=HERE,
     narration=HERE / "narration.mp3",
     units=[
-        Unit("front", HERE / "front_cover.mp4", 21, "boomerang"),
+        # front + f06: user caught real reversal artifacts in the assembled cut (front's
+        # crowd visibly WALKING BACKWARDS; f06's foreground man's raised fist cycling up/
+        # down) -- both were mis-categorized as "genuinely ambient" boomerang candidates
+        # (their own animation prompts say "without advancing"/similar) but Kling rendered
+        # real directional motion anyway (strides, a repeated fist gesture) that boomerang's
+        # reversal exposes as walking/gesturing backward. Switched to plain freeze (hold the
+        # last frame for the extension) -- neither has an established "completing gesture"
+        # near its own clip end to use tail_loop instead. See
+        # [[project_naaman_episode_4]]/feedback on the boomerang-unsafe-on-continuous-motion
+        # pattern (previously only confirmed on a different Swirls episode, now seen here too).
+        Unit("front", HERE / "front_cover.mp4", 21, "freeze"),
         Unit("f01", HERE / f"{HERE.name}_f01_9x16.mp4", 16, "freeze", tail_loop_seconds=1.0),
         Unit("f02", HERE / f"{HERE.name}_f02_9x16.mp4", 15, "boomerang"),
         Unit("f03", HERE / f"{HERE.name}_f03_9x16.mp4", 28, "freeze", tail_loop_seconds=1.5),
         Unit("f04", HERE / f"{HERE.name}_f04_9x16.mp4", 37, "freeze", tail_loop_seconds=1.8),
         Unit("f05", HERE / f"{HERE.name}_f05_9x16.mp4", 12, "boomerang"),
-        Unit("f06", HERE / f"{HERE.name}_f06_9x16.mp4", 35, "boomerang"),
+        Unit("f06", HERE / f"{HERE.name}_f06_9x16.mp4", 35, "freeze"),
         Unit("back", HERE / "back_cover.mp4", 30, "boomerang"),
     ],
     scores={
