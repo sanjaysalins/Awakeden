@@ -427,10 +427,13 @@ FRONT_COVER = CoverSpec(
     scene=(
         f"{JESUS_BUILD}, standing isolated in the lower third at the very brow of a high rocky cliff "
         "outside a hillside town, square, still, and unhurried, facing out; behind and above him on the "
-        "slope, the men of Nazareth as one dark surging hatched mass -- townsmen in plain undyed and ochre "
-        "wool, drawn with repeated dense hatching as a single surging shape, no single face individuated -- "
-        "pressing downhill toward him but drawn frozen mid-press; the low flat rooftops of Nazareth small on "
-        "the hill's shoulder; a long drop of wind-scoured crags falling away below the brow."
+        "slope, the men of Nazareth as one dark surging mass -- townsmen in plain undyed and ochre wool, "
+        "no single face individuated, but every single man in the mass, all the way back to the ones nearest "
+        "the town, drawn as a solid whole figure with a clear head, shoulders, and body, never thinning into "
+        "bare parallel hatch lines or a texture pattern, the same solid density of drawn men from the nearest "
+        "rank to the farthest -- pressing downhill toward him but drawn frozen mid-press; the low flat "
+        "rooftops of Nazareth small on the hill's shoulder; a long drop of wind-scoured crags falling away "
+        "below the brow."
     ),
     lighting=(
         "Late golden-afternoon light breaking low and warm across the cliff brow and the standing figure, "
