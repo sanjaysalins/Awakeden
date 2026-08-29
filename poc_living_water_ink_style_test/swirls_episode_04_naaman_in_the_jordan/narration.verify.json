@@ -1,0 +1,54 @@
+{
+  "folder": "swirls_episode_04_naaman_in_the_jordan",
+  "stage": "verify",
+  "generated_at": "2026-08-28T23:50:52Z",
+  "deterministic": {
+    "char_count_after_comment_strip": 1026,
+    "char_cap": 2000,
+    "within_cap": true,
+    "non_empty": true
+  },
+  "voice_roster": {
+    "voices_json_present": true,
+    "speakers_in_roster": [
+      "jesus",
+      "naaman",
+      "narrator",
+      "servants"
+    ]
+  },
+  "anthropic_review": {
+    "coherence": "good",
+    "beat_count": 10,
+    "tonal_register": [
+      "serious",
+      "dramatic",
+      "reflective"
+    ],
+    "multi_voice_candidates": [
+      {
+        "line_excerpt": "Are not Abana and Pharpar, rivers of Damascus, better than all the waters of",
+        "suggested_speaker": "naaman",
+        "rationale": "Directly attributed by the preceding line 'Naaman was furious:'."
+      },
+      {
+        "line_excerpt": "My father, if the prophet had bid thee do some great thing, wouldest thou not",
+        "suggested_speaker": "servants",
+        "rationale": "Directly attributed by the preceding line 'His own servants stopped him:'."
+      },
+      {
+        "line_excerpt": "Many lepers were in Israel in the time of Eliseus the prophet; and none of",
+        "suggested_speaker": "jesus",
+        "rationale": "Directly attributed by the preceding line 'This is the story Jesus told' -- this is Jesus's own recorded speech in Luke 4:27."
+      }
+    ],
+    "spoken_length_estimate_seconds": 73,
+    "concerns": [
+      "Final revision: added a short plant ('Elisha didn't even come out. He sent one line:') so 'Naaman was furious' reads as wounded pride at the snub, not just generic anger, and replaced the landing entirely with a new one centered on Naaman's own pride-vs-plain-cure realization rather than the earlier crowd/cliff parallel. This is now ~188 words, the longest version tried this session -- strongly recommend a higher --target than the 66s used last time (roughly 68-70s) to keep narrator atempo comfortably under the 1.3x line, and confirm against the real synth log rather than this estimate."
+    ],
+    "model": "claude-opus-4-7",
+    "request_id": null,
+    "input_tokens": null,
+    "output_tokens": null
+  }
+}

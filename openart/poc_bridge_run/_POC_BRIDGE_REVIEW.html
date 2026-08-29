@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OpenArt Bridge POC</title>
+<style>
+  body { font-family: Arial, Helvetica, sans-serif; background:#faf6ef; color:#222; max-width: 900px; margin: 30px auto; padding: 0 20px; line-height:1.5; }
+  h1 { font-size: 28px; }
+  h2 { font-size: 20px; margin-top: 40px; border-bottom: 2px solid #ddd; padding-bottom: 6px; }
+  .ok { color: #1a7a1a; font-weight: bold; }
+  .bad { color: #b3261e; font-weight: bold; }
+  .box { background: #fff; border: 1px solid #ddd; border-radius: 10px; padding: 18px; margin: 16px 0; }
+  img, video { max-width: 100%; border-radius: 8px; border: 1px solid #ccc; }
+  .row { display:flex; gap:14px; flex-wrap:wrap; }
+  .row div { flex: 1 1 200px; text-align:center; }
+  .row img { max-width: 100%; }
+  .cap { font-size: 13px; color:#555; margin-top:6px; }
+  .big { font-size: 18px; }
+  code { background:#eee; padding: 2px 6px; border-radius:4px; }
+</style>
+</head>
+<body>
+
+<h1>OpenArt Bridge POC &mdash; does it work?</h1>
+
+<p class="big"><span class="ok">Yes.</span> The full loop worked, four times in a row: script asks for an image, I make it live, script asks for a video, I make that too, script moves to the next page on its own. This is the first time this had been tested for real (before this it was only a manual test, no live script).</p>
+
+<div class="box">
+  <b>What was made:</b> 3 pages from episode 1 &mdash; F01 (no reference image), F02 and F06 (each with a reference image, testing the upload step too). Each got a still, then an animated clip from that still.<br>
+  <b>Cost:</b> $0.39 (F01) + $0.39 (F02) + $0.64 (F06, longer clip) = <b>$1.42 total</b>. Logged.<br>
+  <b>Files did not touch</b> the real episode 1 folder &mdash; these are test copies only.
+</div>
+
+<h2>Page 1 &mdash; F01 (no reference image)</h2>
+<div class="box">
+  <img src="f01_still.png" alt="F01 still">
+  <p class="cap">Looks right. Small known issue (already seen before): the thin blue line pokes above the page border near the top &mdash; a known small OpenArt quirk, not new.</p>
+</div>
+
+<div class="box">
+  <p><span class="bad">Found a defect:</span> the handwritten label under panel 2 (&ldquo;the cargo&rdquo;) fades away and is gone by the end of the clip. The rule for these clips is that <b>no text should ever change</b>. This breaks that rule.</p>
+  <div class="row">
+    <div><img src="chk_1.jpg"><div class="cap">3.75s &mdash; label solid</div></div>
+    <div><img src="chk_3.jpg"><div class="cap">4.67s &mdash; label fading</div></div>
+    <div><img src="frame_4.jpg"><div class="cap">4.96s (last frame) &mdash; label gone</div></div>
+  </div>
+  <video src="f01_anim.mp4" controls muted></video>
+</div>
+
+<h2>Page 2 &mdash; F02 (uses a reference image: the queen)</h2>
+<div class="box">
+  <img src="f02_still.png" alt="F02 still">
+  <p class="cap">First real test of uploading a reference image through the bridge &mdash; worked cleanly. The queen matches her reference. The blue line stays properly inside the frame this time too.</p>
+  <p><span class="ok">No fade this time</span> &mdash; checked 5 frames across the whole clip, every label stayed solid start to finish.</p>
+  <video src="f02_anim.mp4" controls muted></video>
+</div>
+
+<h2>Page 3 &mdash; F06 (uses a reference image: Jesus, longest clip &mdash; 9s)</h2>
+<div class="box">
+  <img src="f06_still.png" alt="F06 still">
+  <p class="cap">This is the exact page where the 2-line caption (&ldquo;a greater than Solomon&rdquo; / &ldquo;is here&rdquo;) broke last time &mdash; collapsed to one line with quote marks added. <span class="ok">This time it rendered correctly</span>, two clean stacked lines, no quote marks.</p>
+  <p><span class="ok">No fade here either</span> &mdash; checked 6 frames across the full 9 seconds, every label stayed solid.</p>
+  <video src="f06_anim.mp4" controls muted></video>
+</div>
+
+<h2>What this means</h2>
+<div class="box">
+  <p>Good news: the bridge itself (script &rarr; me &rarr; OpenArt &rarr; back to script) works cleanly across multiple pages in a row, including uploading reference images. No code changes needed.</p>
+  <p>Real caution: both problems seen so far &mdash; the fading caption, and the broken 2-line caption &mdash; look like they come and go rather than happening every time. Out of 3 pages tested, only 1 showed the fade, and the 2-line-caption break didn&rsquo;t repeat on a second try. That&rsquo;s good news (not a guaranteed failure) but also means <b>every OpenArt page still needs a real eyeball check before shipping</b> &mdash; you can&rsquo;t assume a clean run just because the last one was clean.</p>
+</div>
+
+<p style="margin-top:40px; color:#888; font-size:13px;">Files: <code>F:\slk\PycharmProjects\JesusInTheBible\openart\poc_bridge_run\</code></p>
+
+</body>
+</html>

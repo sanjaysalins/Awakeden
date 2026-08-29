@@ -1,0 +1,35 @@
+{
+  "folder": "swirls_episode_04_naaman_in_the_jordan",
+  "stage": "audit",
+  "generated_at": "2026-08-28T23:52:08Z",
+  "deterministic": {
+    "tag_validation": "passed",
+    "speaker_validation": "passed",
+    "roster": [
+      "jesus",
+      "naaman",
+      "servants"
+    ]
+  },
+  "round_trip": {
+    "exact_match": true,
+    "blocking": false,
+    "diff_segments": [],
+    "added_words": 0,
+    "removed_words": 0
+  },
+  "anthropic_audit": {
+    "tag_economy": "appropriate",
+    "tag_quality_overall": "good",
+    "missed_speaker_opportunities": [],
+    "tonal_mismatches": [],
+    "concerns": [
+      "Spot-checked the tagged output against the final narration.md: every word and punctuation mark, including quote marks inside each <speaker> block, is preserved verbatim -- no drift.",
+      "This is the final revision for this session (new plant before 'Naaman was furious', new landing centered on Naaman's own pride-vs-plain-cure realization). At ~188 words this is the longest version tried across all four iterations today -- use a --target around 68-70s for this synth pass, not the 66s used last time, and check the real atempo the render reports before treating it as done."
+    ],
+    "model": "claude-opus-4-7",
+    "request_id": null,
+    "input_tokens": null,
+    "output_tokens": null
+  }
+}

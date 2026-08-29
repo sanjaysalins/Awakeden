@@ -54,7 +54,7 @@ STYLE_OPEN = (
     'One single storyboard page of hand-drawn animation development art, delicate ink linework and '
     'watercolor on aged cream paper, laid out like a real found piece of production art. Top-left '
     'title, handwrite: "SEQ: {seq_title}". Top-right frame number, handwrite: "{frame_label}". Across the top, a '
-    'row of exactly three small storyboard panels, each with a circled number 1, 2, 3 as its ONLY '
+    'row of exactly three small storyboard panels, each with a circled number 1, 2, 3 as its sole '
     'label: '
 )
 
@@ -92,7 +92,7 @@ STYLE_OPEN_HYBRID = (
     'One single storyboard page of hand-drawn animation development art, laid out like a real '
     'found piece of production art. Top-left title, handwrite: "SEQ: {seq_title}". Top-right '
     'frame number, handwrite: "{frame_label}". Across the top, a row of exactly three small storyboard '
-    'panels, each with a circled number 1, 2, 3 as its ONLY label — these three panels ONLY '
+    'panels, each with a circled number 1, 2, 3 as its sole label — these three panels alone '
     'are rendered in a deliberately different, more intense style from the rest of the page: '
     '{woodcut_style}. '
 )

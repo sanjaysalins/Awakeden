@@ -1,0 +1,97 @@
+{
+  "folder": "swirls_episode_04_naaman_in_the_jordan",
+  "stage": "per_turn_synth",
+  "mode": "dialogue_per_turn_with_narrator_atempo",
+  "generated_at": "2026-08-28T23:53:51Z",
+  "model_id": "eleven_v3",
+  "output_format": "mp3_44100_128",
+  "target_seconds": 69.0,
+  "natural_total_seconds": 79.36,
+  "narrator_natural_seconds": 51.76,
+  "quote_total_seconds": 27.6,
+  "narrator_atempo_factor": 1.2876,
+  "pre_quote_pause_seconds": 0.4,
+  "post_quote_pause_seconds": 0.0,
+  "pause_total_seconds": 1.2,
+  "final_total_seconds": 69.018,
+  "delta_vs_target_seconds": 0.018,
+  "turns": [
+    {
+      "index": 0,
+      "speaker": "narrator",
+      "chars": 354,
+      "natural_seconds": 23.68,
+      "final_seconds": 18.396,
+      "atempo_applied": true
+    },
+    {
+      "index": 1,
+      "speaker": "naaman",
+      "chars": 124,
+      "natural_seconds": 8.8,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 2,
+      "speaker": "narrator",
+      "chars": 59,
+      "natural_seconds": 3.2,
+      "final_seconds": 8.8,
+      "atempo_applied": true
+    },
+    {
+      "index": 3,
+      "speaker": "servants",
+      "chars": 158,
+      "natural_seconds": 9.76,
+      "final_seconds": 2.492,
+      "atempo_applied": false
+    },
+    {
+      "index": 4,
+      "speaker": "narrator",
+      "chars": 193,
+      "natural_seconds": 13.52,
+      "final_seconds": 0.4,
+      "atempo_applied": true
+    },
+    {
+      "index": 5,
+      "speaker": "jesus",
+      "chars": 121,
+      "natural_seconds": 9.04,
+      "final_seconds": 9.76,
+      "atempo_applied": false
+    },
+    {
+      "index": 6,
+      "speaker": "narrator",
+      "chars": 193,
+      "natural_seconds": 11.36,
+      "final_seconds": 10.511,
+      "atempo_applied": true
+    }
+  ],
+  "speakers": {
+    "narrator": {
+      "voice_id": "LSi9zNCeliLuhIGGS0By",
+      "audio_tag": null
+    },
+    "jesus": {
+      "voice_id": "UzI1NsMEV3ni5JRkRSls",
+      "audio_tag": null
+    },
+    "naaman": {
+      "voice_id": "puDRtQWF8NtQiPMJygTb",
+      "audio_tag": null
+    },
+    "servants": {
+      "voice_id": "LSi9zNCeliLuhIGGS0By",
+      "audio_tag": null
+    }
+  },
+  "settings": {
+    "stability": 0.65
+  }
+}
