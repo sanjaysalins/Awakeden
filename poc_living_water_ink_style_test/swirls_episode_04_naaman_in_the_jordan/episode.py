@@ -527,6 +527,20 @@ MANIFEST = EpisodeManifest(
             duck=DuckProfile(gain_db=-6, threshold=0.12, ratio=2.5, release_ms=250),
             out=HERE / f"{HERE.name}_final.mp4",
         ),
+        # Take 2 (2026-08-29): user rejected "cello" ("not fables best work") --
+        # see [[feedback_naaman_score_cello_rejected]]. This evolves episode 8's loved
+        # felt-piano "Fig Tree"/epic-soft identity near-verbatim (same instrument, same
+        # sparse/no-rhythm core, same never-a-swell rule) with exactly two surgical
+        # edits: the SAME piano turns hard (low register, harder attacks, dissonant
+        # clusters) for the ~30s fury passage instead of switching instruments, and the
+        # string entry moves to ~50s to land on the healing beat. Same starting duck
+        # profile as "cello" (same solo-volume trap measured: -18.8dB vs narration's
+        # -18.4dB) -- still needs re-measuring against the real mixed output.
+        "piano": ScoreVariant(
+            score=HERE / "score_piano.mp3",
+            duck=DuckProfile(gain_db=-6, threshold=0.12, ratio=2.5, release_ms=250),
+            out=HERE / f"{HERE.name}_final_piano.mp4",
+        ),
     },
     panel_style="woodcut_hybrid",
 )
