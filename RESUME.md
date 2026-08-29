@@ -1422,6 +1422,106 @@
 # ══════════════════════════════════════════════════════════════════════════
 #
 # ══════════════════════════════════════════════════════════════════════════
+# ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-28/29 (session end — user asked to
+# commit, save everything, and stop for the night) — READ THIS FIRST,
+# supersedes every block below.
+#
+# ── START HERE TOMORROW (in priority order):
+#   1. **QC F02's 2nd animation attempt properly before trusting it.** It
+#      passed a 3-frame spot-check (n=0/60/118) but has NOT had the denser
+#      frame sweep that actually caught the 1st attempt's defect (that one
+#      also looked fine at low sample density until a targeted sweep found
+#      the corner note fading out). Do this before animating F03 -- if it
+#      also has a defect, better to know before building on top of it.
+#   2. **Continue the Naaman build from F03.** Ref-chain is ready (naaman_ref,
+#      naaman_face_ref, chariot_ref, door_ref all cropped and approved from
+#      F01/F02). Run `swirls_episode.py <dir> still f03`, service the
+#      OpenArt bridge live (`.agent_bridge/gen_requests/` +
+#      `.agent_bridge/gen_responses/`, see AGENT_BRIDGE.md), eyeball every
+#      render before animating (Read tool, not the audit alone), animate,
+#      frame-sweep-check, repeat for F04 (crop nothing new), F05 (crop
+#      jordan_ref after approval), F06 (uses jesus_ref, already in place),
+#      then the two covers (front needs jesus_ref; back needs naaman_ref +
+#      jordan_ref, so back cover must wait for F05's approval).
+#   3. **Known open engine gap, not blocking but worth knowing:** the OpenArt
+#      animation path in `swirls_page.py`'s `_render_animation_openart()`
+#      hardcodes `model: "kling-3-omni"` regardless of `PageSpec.model_tier`
+#      -- so F02/F05/F06/both covers all rendered via Kling even though
+#      their spec says `veo3_1_lite`. Not fixed this session (didn't want to
+#      touch the shared render path mid-build without testing); either fix
+#      the OpenArt branch to route by model_tier, or accept Kling-only for
+#      this whole episode and say so explicitly -- the user's call.
+#   4. **Score, SFX, captions, upload tracker** are all still ahead once the
+#      6 pages + 2 covers are done -- MANIFEST.scores is currently `{}`,
+#      needs a real score generated and wired in before `assemble` can run.
+#
+# ── WHAT HAPPENED: two real pieces of work.
+#
+# (A) OpenArt bridge validated end-to-end for the first time with a live
+# script (`openart/poc_bridge_run.py` + `poc_bridge_run2.py`) -- previously
+# only a manual bake-off had exercised it. 3 pages through it clean,
+# including the ref-upload path (`openart_upload_sign` + curl PUT) which had
+# never been tested. Two real findings: an intermittent Kling caption-fade
+# defect (a baked label visibly fades out over a clip, roughly 1-in-3, only
+# catchable by extracting several frames across the WHOLE clip, not 3
+# samples) -- recurred again on Naaman F02's first animation attempt, caught
+# and regenerated clean. And the earlier bake-off's 2-line-caption-collapse
+# defect did NOT reproduce on a second try -- both defects now read as
+# intermittent, not deterministic, n is still small. Real spend $1.42 (POC)
+# logged to `data/spend_ledger.jsonl`.
+#
+# (B) Naaman in the Jordan (episode 4, 2 Kings 5 + Luke 4:27) started for
+# real. User flagged this series' whole CTA pattern as tired ("will you
+# come, will you see, will you...") after hearing the first narration draft
+# -- traced to all 4 shipped episodes sharing one shape (see the new
+# `feedback_swirls_landing_fatigue` memory). Took 3 real Fable design
+# rounds to fix: round 1 broke the tired shape but lost the actual point
+# (user: "what is the point and what is the take away of the ending");
+# round 2 fixed clarity but missed the story's real essence (user: "none of
+# them are really hitting the main essence of this story") -- only landed
+# after I proposed my own reading of the essence in plain words and the
+# user confirmed it directly, THEN a 3rd Fable round built on that
+# confirmed target. Landing lesson for future episodes, not just this one:
+# when a creative fix keeps missing on iteration, stop iterating on variants
+# and state your own read of the point in one paragraph for the user to
+# confirm BEFORE the next design pass.
+#
+# Full 8-page visual design brief (Fable, grounded in the actual locked
+# templates -- read NORTH_STAR_PROMPT.md/NORTH_STAR_ANIMATION_PROMPT.md/
+# NORTH_STAR_COVER_PROMPT.md/swirls_page.py/2 precedent episode.py files
+# itself before designing) translated into
+# `poc_living_water_ink_style_test/swirls_episode_04_naaman_in_the_jordan/
+# episode.py`. One genuinely novel structural call: the narration's hook
+# cold-opens on Nazareth (Luke 4:28-29, centuries after Naaman) before
+# flashing back -- so the FRONT COVER shows Jesus at the Nazareth cliff, not
+# Naaman, so picture matches the hook's own audio; back cover swings to
+# Naaman at the river (first cover in the series to lead with the NT scene).
+# Full review: `_DESIGN_BRIEF_REVIEW.html` in the episode folder.
+#
+# F01 + F02 (stills + animations) done, refs cropped and approved. Real
+# defect found and FIXED AT THE SHARED-TEMPLATE LEVEL (affects every future
+# OpenArt render in the series, not just this page): `swirls_page.py`'s
+# `STYLE_OPEN`/`STYLE_OPEN_HYBRID` constants used ALL-CAPS "ONLY" for
+# instruction emphasis ("...as its ONLY label") -- OpenArt's nano-banana-pro
+# was reading that as literal content and baking the word "ONLY" onto the
+# page as visible text, twice in a row (2/2), once also baking a stray
+# "ONE". Reworded to "sole"/"alone" at the template level; 3rd attempt (and
+# every render since) clean. Also fixed a duplicate-name bug in my own
+# episode.py (`f"Naaman, {NAAMAN_BUILD}"` where `NAAMAN_BUILD` already
+# starts with "Naaman," -- caught before spending, in the request file,
+# before servicing it).
+#
+# ── COMMIT: `f196852` on `main`, NOT pushed to origin (following this
+# project's own default -- push only on explicit request). Working tree
+# clean.
+#
+# ── Real spend this session: $1.42 (OpenArt bridge POC) + ~$1.24 (Naaman
+# F01/F02 stills+anims, including 2 wasted F01 stills from the ONLY-bug and
+# 1 wasted F02 anim from the fade-bug, all logged honestly) = **~$2.66
+# total**, all in `data/spend_ledger.jsonl`.
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ══════════════════════════════════════════════════════════════════════════
 # ★★★★★★★★★★★★★ SESSION HANDOVER 2026-08-27/28 (session end — user asked to
 # stop for the evening, commit+push everything) — READ THIS FIRST, supersedes
 # every block below.

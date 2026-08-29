@@ -1,5 +1,38 @@
 # STATE.md — progress tracker
 
+**2026-08-28/29 OpenArt bridge validated end-to-end with a live script (first
+time, not just a manual bake-off) + Naaman in the Jordan (episode 4) started.**
+`openart/poc_bridge_run.py`/`poc_bridge_run2.py`: 3 pages through the real
+bridge mechanism, including the ref-upload path (`openart_upload_sign` + PUT)
+untested before. Found an intermittent Kling caption-fade defect (a baked
+label fades out over a clip, ~1-in-3, only catchable by a real frame sweep
+across the whole clip) and confirmed the earlier bake-off's 2-line-caption-
+collapse defect does NOT reproduce reliably -- both now read as intermittent,
+not deterministic. $1.42 real spend, logged.
+
+Then started Naaman in the Jordan (2 Kings 5 + Luke 4:27) for real. User
+flagged the whole series' CTA shape as tired ("will you come, will you see,
+will you...") -- all 4 shipped episodes share one "Ready to/Will you/Just ask
+Him/Come and see" invitation-question shape (new `feedback_swirls_landing_
+fatigue` memory). Took 3 Fable design rounds to actually fix: round 1 broke
+the shape but lost the point; round 2 fixed clarity but missed the story's
+real essence; only converged after I proposed my own plain-language reading
+of the essence and the user confirmed it, THEN round 3 built on that
+confirmed target. Full 8-page visual brief (Fable, grounded in the real
+locked templates) -> `episode.py`. One real structural call: front cover
+shows Jesus at the Nazareth cliff (matching the hook's own audio), not
+Naaman -- first cover in the series to lead with the NT scene.
+
+F01+F02 done (stills+anims, refs cropped/approved). Real defect found and
+fixed AT THE SHARED-TEMPLATE LEVEL (affects every future OpenArt render, not
+just this page): `swirls_page.py`'s `STYLE_OPEN`/`STYLE_OPEN_HYBRID` used
+ALL-CAPS "ONLY" for emphasis, which OpenArt's nano-banana-pro baked as
+literal page text, 2/2 attempts, until reworded to "sole"/"alone". F02's 1st
+animation attempt hit the same caption-fade defect noted above, regenerated
+clean (2nd attempt NOT yet given the denser frame-sweep check -- next
+session's first job). Committed `f196852`, not pushed. Real spend ~$2.66
+total this session, all logged. Full detail: `RESUME.md`'s top block.
+
 **2026-08-27/28 Switched the Swirls-of-Life pipeline's image/video provider
 to OpenArt (default), Higgsfield now a confirm-only fallback.** Built a small
 standalone OpenArt MCP POC first (`openart/`, one test image, tool
