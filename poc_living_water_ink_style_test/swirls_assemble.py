@@ -96,9 +96,56 @@ def encode(cmd_tail: list[str], out: Path, manifest: EpisodeManifest, prefilter:
          "-pix_fmt", "yuv420p", "-an", str(out)])
 
 
-def make_freeze(src: Path, out: Path, slot: float, cdur: float, manifest: EpisodeManifest) -> None:
-    encode(["-i", str(src)], out, manifest,
-           prefilter=f"tpad=stop_mode=clone:stop_duration={max(slot - cdur, 0):.3f}")
+def make_freeze(src: Path, out: Path, slot: float, cdur: float, work: Path, tag: str,
+                 manifest: EpisodeManifest) -> None:
+    extension = max(slot - cdur, 0)
+    if extension <= 0:
+        encode(["-i", str(src)], out, manifest)
+        return
+    # BUG FIX (2026-08-29, user: "several freeze frames across the clips, we must fix
+    # that"): a plain tpad clone extends with a dead, motionless duplicated frame -- no
+    # reversal artifact (unlike boomerang on continuous motion, see
+    # project_swirls_boomerang_continuous_motion_unsafe), but reads as visibly frozen/
+    # stiff on a long extension (several seconds on some units). Give the extension a
+    # slow, continuous, subtle zoom instead -- consistent with this engine's own
+    # "frozen tableau, only the camera moves" language (SKILL_locked.md) -- rather than
+    # a flat static clone.
+    #
+    # This MUST be built as two separate passes, not one chained `tpad=...,zoompan=...`
+    # filter: applying zoompan directly after tpad on the same stream silently drops
+    # frames and shortens the output (confirmed by direct test -- with zoompan's own
+    # `fps=` sub-param the output came in ~1.5s short of the requested duration; without
+    # it, ~0.3-0.5s short; both leave the final mux's video track shorter than its audio
+    # track, INV-26 territory). zoompan on a single looped still image (the classic
+    # image-to-video idiom, `-loop 1 -i still.png ... d=<frames>`) is exact and reliable
+    # by contrast -- so extract the clip's own last frame as a still, zoompan THAT for
+    # exactly `extension` seconds, then concat it onto the untouched native clip (same
+    # concat-filter pattern as make_boomerang/make_freeze_tail_loop). The native footage's
+    # own motion is never touched, only the added hold gets the push.
+    last_frame = work / f"{tag}__lastframe.png"
+    run(["ffmpeg", "-y", "-v", "error", "-sseof", "-0.1", "-i", str(src),
+         "-vsync", "0", "-frames:v", "1", str(last_frame)])
+    ext_frames = max(int(round(extension * manifest.fps)), 1)
+    zoompan = (f"zoompan=z='min(1+0.06*on/{ext_frames},1.06)':d={ext_frames}:"
+               f"s={manifest.w}x{manifest.h}:fps={manifest.fps}")
+    tail = work / f"{tag}__zoomtail.mp4"
+    run(["ffmpeg", "-y", "-v", "error", "-loop", "1", "-i", str(last_frame), "-vf",
+         f"{zoompan},scale={manifest.w}:{manifest.h}:flags=lanczos,setsar=1",
+         "-t", f"{extension:.3f}", "-r", str(manifest.fps),
+         "-c:v", "libx264", "-crf", "18", "-preset", "medium",
+         "-pix_fmt", "yuv420p", str(tail)])
+    parts = [src, tail]
+    cmd = ["ffmpeg", "-y", "-v", "error"]
+    for p in parts:
+        cmd += ["-i", str(p)]
+    scale_filters = [f"[{i}:v]scale={manifest.w}:{manifest.h}:flags=lanczos,setsar=1[s{i}]"
+                      for i in range(len(parts))]
+    scale_labels = [f"[s{i}]" for i in range(len(parts))]
+    filt = ";".join(scale_filters) + ";" + "".join(scale_labels) + f"concat=n={len(parts)}:v=1:a=0[v]"
+    cmd += ["-filter_complex", filt, "-map", "[v]", "-t", f"{slot:.3f}",
+            "-r", str(manifest.fps), "-c:v", "libx264", "-crf", "18", "-preset", "medium",
+            "-pix_fmt", "yuv420p", "-an", str(out)]
+    run(cmd)
 
 
 def make_freeze_tail_loop(src: Path, out: Path, slot: float, cdur: float, work: Path, tag: str,
@@ -236,7 +283,7 @@ def assemble(manifest: EpisodeManifest, score_name: str, *, work_dirname: str = 
             make_freeze_tail_loop(u.src, out, slot, cdur, work, u.tag, manifest,
                                    tail_seconds=u.tail_loop_seconds)
         else:
-            make_freeze(u.src, out, slot, cdur, manifest)
+            make_freeze(u.src, out, slot, cdur, work, u.tag, manifest)
         held_duration = dur(out)
         mode_label = f"{u.mode}+tail_loop" if u.tail_loop_seconds is not None else u.mode
         print(f"  [{u.tag}] native={cdur:.2f}s -> slot={slot:.2f}s held={held_duration:.2f}s ({mode_label})")
