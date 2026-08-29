@@ -24,7 +24,10 @@ import sys
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE / "test_the_cross"))
-from swirls_page import HF_CLI, Ref, _IMG_URL_RE, _VID_URL_RE, _refs_clause, _run_hf  # noqa: E402
+from swirls_page import (  # noqa: E402
+    GEN_PROVIDER, ANIM_RESOLUTION, HF_CLI, Ref, _IMG_URL_RE, _VID_URL_RE, _refs_clause, _run_hf,
+)
+import openart_bridge  # noqa: E402
 
 # ---- fixed boilerplate, verbatim from the validated scripts (Jacob's Ladder
 # render_covers.py / animate_covers.py) -- see NORTH_STAR_COVER_PROMPT.md's
@@ -169,7 +172,8 @@ def assemble_cover_animation_prompt(spec: CoverSpec) -> str:
     return f"{lock} {spec.animation.strip()}; {ANIM_CLOSER}"
 
 
-def render_cover_still(spec: CoverSpec, out_png: Path) -> bool:
+def render_cover_still(spec: CoverSpec, out_png: Path, provider: str | None = None) -> bool:
+    provider = provider or GEN_PROVIDER
     if out_png.exists():
         print(f"  [skip] {out_png.name} already exists")
         return True
@@ -180,31 +184,99 @@ def render_cover_still(spec: CoverSpec, out_png: Path) -> bool:
         print("  (ref-chaining rule: a recurring subject with no chained ref is a hard stop — "
               "crop it from its first approved render before spending.)")
         return False
+    if provider == "hf":
+        return _render_cover_still_hf(spec, out_png)
+    if provider == "openart":
+        return _render_cover_still_openart(spec, out_png)
+    raise ValueError(f"unknown provider {provider!r} (expected 'openart' or 'hf')")
+
+
+def _render_cover_still_hf(spec: CoverSpec, out_png: Path) -> bool:
     prompt = assemble_cover_still_prompt(spec)
     cmd = [HF_CLI, "generate", "create", "nano_banana_pro", "--prompt", prompt]
     for r in spec.refs:
         cmd += ["--image", r.path]
     cmd += ["--aspect_ratio", spec.aspect_ratio, "--resolution", "2k", "--wait"]
-    print(f"  [nano_banana_pro] rendering {out_png.name} ({spec.side} cover)...")
+    print(f"  [hf/nano_banana_pro] rendering {out_png.name} ({spec.side} cover)...")
     ok = _run_hf(cmd, out_png, _IMG_URL_RE, 600)
     if ok:
         print("  NOW: eyeball at 1:1 + referent check BEFORE animating.")
     return ok
 
 
-def render_cover_animation(spec: CoverSpec, png: Path, out_mp4: Path) -> bool:
+def _render_cover_still_openart(spec: CoverSpec, out_png: Path) -> bool:
+    prompt = assemble_cover_still_prompt(spec)
+    payload = {
+        "kind": "still",
+        "model": "nano-banana-pro",
+        "mode": "image2image" if spec.refs else "text2image",
+        "prompt": prompt,
+        "aspect_ratio": spec.aspect_ratio,
+        "resolution": "2K",
+        "refs": [{"path": r.path, "subject": r.subject} for r in spec.refs],
+        "out_path": str(out_png),
+    }
+    print(f"  [openart/nano-banana-pro] requesting {out_png.name} ({spec.side} cover)...")
+    try:
+        resp = openart_bridge.submit(payload)
+    except openart_bridge.OpenArtBridgeError as e:
+        print(f"  FAILED: {e}")
+        return False
+    print(f"  -> {out_png.name} (~{resp.get('credits_spent', '?')} credits, "
+          f"~${resp.get('usd_est', 0):.3f})")
+    print("  NOW: eyeball at 1:1 + referent check BEFORE animating.")
+    return True
+
+
+def render_cover_animation(spec: CoverSpec, png: Path, out_mp4: Path, provider: str | None = None) -> bool:
+    provider = provider or GEN_PROVIDER
     if out_mp4.exists():
         print(f"  [skip] {out_mp4.name} already exists")
         return True
     if not png.exists():
         print(f"  FAILED: still {png.name} not rendered yet.")
         return False
+    if provider == "hf":
+        return _render_cover_animation_hf(spec, png, out_mp4)
+    if provider == "openart":
+        return _render_cover_animation_openart(spec, png, out_mp4)
+    raise ValueError(f"unknown provider {provider!r} (expected 'openart' or 'hf')")
+
+
+def _render_cover_animation_hf(spec: CoverSpec, png: Path, out_mp4: Path) -> bool:
     prompt = assemble_cover_animation_prompt(spec)
     cmd = [HF_CLI, "generate", "create", "veo3_1_lite", "--prompt", prompt,
            "--start-image", str(png), "--aspect_ratio", spec.aspect_ratio,
            "--duration", str(spec.clip_duration), "--wait"]
-    print(f"  [veo3_1_lite] rendering {out_mp4.name} ({spec.side} cover)...")
+    print(f"  [hf/veo3_1_lite] rendering {out_mp4.name} ({spec.side} cover)...")
     ok = _run_hf(cmd, out_mp4, _VID_URL_RE, 900)
     if ok:
         print("  NOW: 4-frame contact sheet + real playback (QC law).")
     return ok
+
+
+def _render_cover_animation_openart(spec: CoverSpec, png: Path, out_mp4: Path) -> bool:
+    prompt = assemble_cover_animation_prompt(spec)
+    duration = spec.clip_duration if spec.clip_duration is not None else 5
+    payload = {
+        "kind": "anim",
+        "model": "kling-3-omni",
+        "mode": "image2video",
+        "prompt": prompt,
+        "start_image_path": str(png),
+        "duration": duration,
+        "resolution": ANIM_RESOLUTION,
+        "generate_sound": False,
+        "out_path": str(out_mp4),
+    }
+    print(f"  [openart/kling-3-omni] requesting {out_mp4.name} ({spec.side} cover, {duration}s, "
+          f"{ANIM_RESOLUTION})...")
+    try:
+        resp = openart_bridge.submit(payload)
+    except openart_bridge.OpenArtBridgeError as e:
+        print(f"  FAILED: {e}")
+        return False
+    print(f"  -> {out_mp4.name} (~{resp.get('credits_spent', '?')} credits, "
+          f"~${resp.get('usd_est', 0):.3f})")
+    print("  NOW: 4-frame contact sheet + real playback (QC law).")
+    return True

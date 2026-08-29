@@ -269,7 +269,11 @@ F04 = PageSpec(
         "weathered man in a simple undyed wool tunic with a rope belt, fully inside the frame, standing close "
         "before Naaman, his open empty hands lifted palms-up in appeal; two younger servants in plain olive "
         "and muted-brown dress, bare-headed, hands empty, standing behind him, their bearing respectful but "
-        f"unafraid, fully inside the frame. {NAAMAN_BUILD}, fully inside the frame, half-turned away "
+        f"unafraid, fully inside the frame. {NAAMAN_BUILD} -- his hair, beard, and head-cloth matching "
+        "reference image 1 and image 2 EXACTLY: the same grey-streaked dark hair fully covered by the dark "
+        "head-cloth bound with its narrow matte bronze band, never bare brown hair, never a plain circlet "
+        "alone, and the same short dark beard streaked with iron grey, never a solid dark-brown beard -- "
+        f"fully inside the frame, half-turned away "
         f"from them, his head just beginning to bow, {NAAMAN_PATCHES}. A cold grey-umber stain lies in the "
         "paper, still crossing the drawn frame border into the margin, but its edge on the side toward the "
         "descending road has already dried to a pale ring -- turning, not yet cleared. Stage 1 dosage: exactly "
@@ -397,11 +401,13 @@ F06 = PageSpec(
         "the far distant figures stand undisturbed, dignified",
     ),
     main_scene_animation=(
-        "the crowd mass leans slowly in as one body without advancing, not rising further; Jesus stays "
-        "exactly as drawn, one slow steady breath, his lips staying exactly as drawn, not speaking; the "
-        "threads and bloom on the scroll drift gently within their own small area, never spreading beyond the "
-        "scroll and the air above it, never fading; no new figure or mark appears anywhere on the page at any "
-        "point;"
+        "the crowd mass leans slowly in as one body without advancing, not rising further; every man in the "
+        "crowd keeps his lips exactly as drawn, not speaking, not shouting, never opening; no speech bubble, "
+        "dialogue balloon, or any bubble-shaped mark of any kind ever appears near any figure at any point; "
+        "Jesus stays exactly as drawn, one slow steady breath, his lips staying exactly as drawn, not "
+        "speaking; the threads and bloom on the scroll drift gently within their own small area, never "
+        "spreading beyond the scroll and the air above it, never fading; no new figure, bubble, or mark "
+        "appears anywhere on the page at any point;"
     ),
     fence_kind="none",
     caption_lines=("saving Naaman the Syrian",),
@@ -461,7 +467,10 @@ BACK_COVER = CoverSpec(
     lighting=(
         "Dawn gold breaking low along the gorge rim and catching the water's far edge warm, against cold "
         "grey-green river shadow and blue-grey rock holding the near bank, cinematic atmospheric haze, "
-        "photographic tonality."
+        "photographic tonality. The lowest strip of the frame is a wide flat sunlit sandbank, bare warm-lit "
+        "stone catching the same dawn gold as the gorge rim above -- open, uncluttered ground with nothing "
+        "drawn on it, wide enough across the full frame to carve the title straight into that lit stone "
+        "itself, the letters made of the same rock and light as the bank around them."
     ),
     title="STILL WORTH LOSING",
     subtitle="LUKE 4:27",
