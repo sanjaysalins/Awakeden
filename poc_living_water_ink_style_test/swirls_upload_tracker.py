@@ -69,7 +69,15 @@ def discover() -> list[tuple[str, str, Path | None]]:
             mod = _load_episode_module(folder)
             title = getattr(mod, "FRONT_COVER", None)
             title = title.title if title is not None else folder.name
-            variant = next(iter(mod.MANIFEST.scores.values()), None)
+            # Prefer whichever score variant was actually rendered (its `.out`
+            # file exists on disk) over just the first one defined -- an
+            # episode can carry a rejected variant (e.g. a discarded score
+            # take) ahead of the locked one in MANIFEST.scores's own
+            # insertion order, and dict order isn't "which one shipped".
+            variants = list(mod.MANIFEST.scores.values())
+            variant = next((v for v in variants if v.out.is_file()), None)
+            if variant is None:
+                variant = variants[0] if variants else None
             final = variant.out if variant is not None else None
         except Exception as e:
             print(f"  !! could not introspect {folder.name}/episode.py: {e}")
