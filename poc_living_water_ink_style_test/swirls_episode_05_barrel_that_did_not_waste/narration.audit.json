@@ -1,0 +1,36 @@
+{
+  "folder": "swirls_episode_05_barrel_that_did_not_waste",
+  "stage": "audit",
+  "generated_at": "2026-08-30T09:09:10Z",
+  "deterministic": {
+    "tag_validation": "passed",
+    "speaker_validation": "passed",
+    "roster": [
+      "elijah",
+      "jesus",
+      "widow"
+    ]
+  },
+  "round_trip": {
+    "exact_match": true,
+    "blocking": false,
+    "diff_segments": [],
+    "added_words": 0,
+    "removed_words": 0
+  },
+  "anthropic_audit": {
+    "tag_economy": "appropriate",
+    "tag_quality_overall": "good",
+    "missed_speaker_opportunities": [],
+    "tonal_mismatches": [],
+    "concerns": [
+      "Two KJV quotes use a mid-quote ellipsis ('...') to elide a clause -- ElevenLabs v3 can read '...' as a long trailing pause rather than a smooth join; worth a quick listen on synth to confirm it doesn't sound like the widow/Jesus trail off mid-thought.",
+      "Narration runs ~210 words; at a likely ~59-61s target this needs a meaningful atempo speed-up on synth -- watch for the single-stage 2.0x atempo cap this project has hit before on longer pieces.",
+      "The closing line shifts from third-person narration ('God went to the one...') to direct second-person address ('your barrel', 'He needs it open') -- this is an intentional CTA voice shift, not a tagging defect, flagged only so it isn't mistaken for an inconsistency."
+    ],
+    "model": "claude-opus-4-7",
+    "request_id": null,
+    "input_tokens": null,
+    "output_tokens": null
+  }
+}

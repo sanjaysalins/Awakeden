@@ -1,0 +1,97 @@
+{
+  "folder": "swirls_episode_05_barrel_that_did_not_waste",
+  "stage": "per_turn_synth",
+  "mode": "dialogue_per_turn_with_narrator_atempo",
+  "generated_at": "2026-08-30T22:39:05Z",
+  "model_id": "eleven_v3",
+  "output_format": "mp3_44100_128",
+  "target_seconds": 65.5,
+  "natural_total_seconds": 84.48,
+  "narrator_natural_seconds": 53.2,
+  "quote_total_seconds": 31.28,
+  "narrator_atempo_factor": 1.6111,
+  "pre_quote_pause_seconds": 0.4,
+  "post_quote_pause_seconds": 0.0,
+  "pause_total_seconds": 1.2,
+  "final_total_seconds": 65.506,
+  "delta_vs_target_seconds": 0.006,
+  "turns": [
+    {
+      "index": 0,
+      "speaker": "narrator",
+      "chars": 225,
+      "natural_seconds": 14.4,
+      "final_seconds": 8.939,
+      "atempo_applied": true
+    },
+    {
+      "index": 1,
+      "speaker": "widow",
+      "chars": 116,
+      "natural_seconds": 9.44,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 2,
+      "speaker": "narrator",
+      "chars": 52,
+      "natural_seconds": 2.0,
+      "final_seconds": 9.44,
+      "atempo_applied": true
+    },
+    {
+      "index": 3,
+      "speaker": "elijah",
+      "chars": 144,
+      "natural_seconds": 11.44,
+      "final_seconds": 1.236,
+      "atempo_applied": false
+    },
+    {
+      "index": 4,
+      "speaker": "narrator",
+      "chars": 246,
+      "natural_seconds": 15.36,
+      "final_seconds": 0.4,
+      "atempo_applied": true
+    },
+    {
+      "index": 5,
+      "speaker": "jesus",
+      "chars": 157,
+      "natural_seconds": 10.4,
+      "final_seconds": 11.44,
+      "atempo_applied": false
+    },
+    {
+      "index": 6,
+      "speaker": "narrator",
+      "chars": 309,
+      "natural_seconds": 21.44,
+      "final_seconds": 9.543,
+      "atempo_applied": true
+    }
+  ],
+  "speakers": {
+    "narrator": {
+      "voice_id": "LSi9zNCeliLuhIGGS0By",
+      "audio_tag": null
+    },
+    "jesus": {
+      "voice_id": "UzI1NsMEV3ni5JRkRSls",
+      "audio_tag": null
+    },
+    "elijah": {
+      "voice_id": "puDRtQWF8NtQiPMJygTb",
+      "audio_tag": null
+    },
+    "widow": {
+      "voice_id": "NbkKnEAZ7Bqw4EAkVEaz",
+      "audio_tag": null
+    }
+  },
+  "settings": {
+    "stability": 0.65
+  }
+}

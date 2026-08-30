@@ -1,13 +1,37 @@
 # ══════════════════════════════════════════════════════════════════════════
 # ▶▶▶ START HERE TOMORROW (stopped deliberately at a clean point, end of day
-# 2026-08-26, user: "let's stop for [today] ... work on it tomorrow"). Commit
-# eb2a771 on `main`, working tree clean, 3 commits ahead of origin/main
-# (not pushed). Nothing is broken, nothing is mid-edit. Pick ONE of:
+# 2026-08-30, user: "lets stop for tonight and start tommorrow"). Two full
+# Swirls-of-Life episodes finished THIS session:
 #
-#   1. Ear-review the 3 new SFX mixes from today (see block just below) —
-#      the one real unfinished piece of today's work.
-#   2. Decide episode 1's posting status — still not posted anywhere.
-#   3. Start the next Swirls of Life episode.
+#   - Naaman ep4 ("An Old Story"): assemble+SFX+SRT+tracker all done,
+#     committed to `main` at commit b75f3d5. Not posted anywhere yet.
+#   - Barrel ep5 ("The Barrel That Did Not Waste", widow of Zarephath):
+#     built start-to-finish this session -- narration, audio, Fable design
+#     brief, 8 stills, 8 animations, score, assembly, a real narrator-pace
+#     fix (atempo 1.95x->1.61x, user caught it by ear), SFX, SRT, tracker.
+#     All green. ~$9.43 real spend, logged to data/spend_ledger.jsonl.
+#     Full detail + every defect/fix: memory `project_barrel_episode_5.md`.
+#     **NOT yet committed to git** -- working tree has the whole new
+#     poc_living_water_ink_style_test/swirls_episode_05_barrel_that_did_not_waste/
+#     folder untracked, plus modified kjv_cache.json/spend_ledger.jsonl/
+#     _SWIRLS_UPLOAD_TRACKER.html. Nothing is broken, nothing is mid-edit --
+#     the finishing chain is genuinely complete, just uncommitted.
+#
+# Pick ONE of:
+#
+#   1. Commit ep5's work to git (ask first, per this project's own rule --
+#      never assumed).
+#   2. Decide posting status for either/both episodes -- neither is posted
+#      anywhere yet.
+#   3. Start the next Swirls of Life episode. Per SWIRLS_OF_LIFE_SERIES_
+#      PLAN_V4.md's own build order, #14 ("This Day Is This Scripture
+#      Fulfilled", the long-form Nazareth sermon) is now UNLOCKED for the
+#      first time -- both its named prerequisites (Naaman #4, Barrel #5)
+#      have shipped. That's a real, bigger long-form build though (7
+#      movements, 16:9); the remaining SHORT picks are #6 Talitha Cumi,
+#      #7 The Bier He Touched, #9 The Woman at the Border, #10 She Loved
+#      Much, #11 Where Are the Nine, #12 Ye Are Not All Clean, #13 The
+#      Cross That Wasn't His.
 #
 # No default has been chosen for you — ask the user which, don't assume.
 # ══════════════════════════════════════════════════════════════════════════

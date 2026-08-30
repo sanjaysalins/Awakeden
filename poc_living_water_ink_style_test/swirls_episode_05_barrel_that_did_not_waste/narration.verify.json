@@ -1,0 +1,57 @@
+{
+  "folder": "swirls_episode_05_barrel_that_did_not_waste",
+  "stage": "verify",
+  "generated_at": "2026-08-30T09:07:24Z",
+  "deterministic": {
+    "char_count_after_comment_strip": 1070,
+    "char_cap": 2000,
+    "within_cap": true,
+    "non_empty": true
+  },
+  "voice_roster": {
+    "voices_json_present": true,
+    "speakers_in_roster": [
+      "elijah",
+      "jesus",
+      "narrator",
+      "widow"
+    ]
+  },
+  "anthropic_review": {
+    "coherence": "good",
+    "beat_count": 10,
+    "tonal_register": [
+      "urgent",
+      "serious",
+      "devotional",
+      "tender"
+    ],
+    "multi_voice_candidates": [
+      {
+        "line_excerpt": "I have not a cake, but an handful of meal in a barrel, and a little",
+        "suggested_speaker": "widow",
+        "rationale": "Her own direct KJV quote, introduced by the preceding narrator line ending in a colon."
+      },
+      {
+        "line_excerpt": "Fear not; go and do as thou hast said: but make me thereof a little cake",
+        "suggested_speaker": "elijah",
+        "rationale": "Directly attributed by the preceding 'Elijah answered:' line."
+      },
+      {
+        "line_excerpt": "Many widows were in Israel in the days of Elias... but unto none of them",
+        "suggested_speaker": "jesus",
+        "rationale": "Jesus's own words (Luke 4:25-26), introduced by 'Jesus named her by her own city:'."
+      }
+    ],
+    "spoken_length_estimate_seconds": 82,
+    "concerns": [
+      "The widow's quote has no explicit 'she said' verb, only a colon-ended narrator line as implicit attribution -- consistent with this series' established pattern but worth the auto-tagger double-checking the speaker boundary.",
+      "Two of the three KJV quotes use a mid-quote ellipsis to elide a clause (an established convention in this narration corpus) -- the audit stage should treat this as intentional compression, not a verbatim omission defect.",
+      "At an 82s baseline estimate against a likely ~59-61s target, synth will need a meaningful atempo speed-up -- watch for the single-stage 2.0x atempo cap this project has hit before on long pieces."
+    ],
+    "model": "claude-opus-4-7",
+    "request_id": null,
+    "input_tokens": null,
+    "output_tokens": null
+  }
+}
