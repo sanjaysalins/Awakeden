@@ -1,0 +1,33 @@
+{
+  "folder": "swirls_episode_07_the_bier_he_touched",
+  "stage": "audit",
+  "generated_at": "2026-08-31T16:11:50Z",
+  "deterministic": {
+    "tag_validation": "passed",
+    "speaker_validation": "passed",
+    "roster": [
+      "jesus"
+    ]
+  },
+  "round_trip": {
+    "exact_match": true,
+    "blocking": false,
+    "diff_segments": [],
+    "added_words": 0,
+    "removed_words": 0
+  },
+  "anthropic_audit": {
+    "tag_economy": "appropriate",
+    "tag_quality_overall": "good",
+    "missed_speaker_opportunities": [],
+    "tonal_mismatches": [],
+    "concerns": [
+      "Beat 5 carries a single [deliberate][emphasized] tag across both the tense build ('the touch should have made him unclean') and the immediate release after the command lands ('sat up, and began to speak'). One tag pair can't capture that internal shift; if the synthesized read sounds too flat/uniform across that beat, consider splitting it into two shorter paragraphs at the Arise! quote so the release gets its own tag.",
+      "Two beats in a row (6 and 7) both carry [reflective]; intentional (they are the thesis + landing), but worth a listen to confirm it doesn't read as repetitive."
+    ],
+    "model": "claude-opus-4-7",
+    "request_id": null,
+    "input_tokens": null,
+    "output_tokens": null
+  }
+}

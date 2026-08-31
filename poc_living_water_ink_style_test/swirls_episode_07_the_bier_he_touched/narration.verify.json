@@ -1,0 +1,46 @@
+{
+  "folder": "swirls_episode_07_the_bier_he_touched",
+  "stage": "verify",
+  "generated_at": "2026-08-31T16:08:43Z",
+  "deterministic": {
+    "char_count_after_comment_strip": 975,
+    "char_cap": 2000,
+    "within_cap": true,
+    "non_empty": true
+  },
+  "voice_roster": {
+    "voices_json_present": true,
+    "speakers_in_roster": [
+      "jesus",
+      "narrator"
+    ]
+  },
+  "anthropic_review": {
+    "coherence": "good",
+    "beat_count": 7,
+    "tonal_register": [
+      "serious",
+      "compassionate",
+      "reflective",
+      "devotional"
+    ],
+    "multi_voice_candidates": [
+      {
+        "line_excerpt": "Weep not.",
+        "suggested_speaker": "jesus",
+        "rationale": "Direct quoted words of Jesus to the widow (Luke 7:13); attribution frame stays narrator."
+      },
+      {
+        "line_excerpt": "Young man, I say unto thee, Arise.",
+        "suggested_speaker": "jesus",
+        "rationale": "Direct quoted command of Jesus to the dead man (Luke 7:14); attribution frame stays narrator."
+      }
+    ],
+    "spoken_length_estimate_seconds": 72,
+    "concerns": [],
+    "model": "claude-opus-4-7",
+    "request_id": null,
+    "input_tokens": null,
+    "output_tokens": null
+  }
+}

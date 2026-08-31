@@ -1,37 +1,52 @@
 # ══════════════════════════════════════════════════════════════════════════
-# ▶▶▶ START HERE TOMORROW (stopped deliberately at a clean point, end of day
-# 2026-08-30, user: "lets stop for tonight and start tommorrow"). Two full
-# Swirls-of-Life episodes finished THIS session:
+# ▶▶▶ START HERE TOMORROW (updated 2026-08-31, end of day -- user: "lets
+# close for the day and resume tommorrow"). THREE things going on:
 #
-#   - Naaman ep4 ("An Old Story"): assemble+SFX+SRT+tracker all done,
-#     committed to `main` at commit b75f3d5. Not posted anywhere yet.
-#   - Barrel ep5 ("The Barrel That Did Not Waste", widow of Zarephath):
-#     built start-to-finish this session -- narration, audio, Fable design
-#     brief, 8 stills, 8 animations, score, assembly, a real narrator-pace
-#     fix (atempo 1.95x->1.61x, user caught it by ear), SFX, SRT, tracker.
-#     All green. ~$9.43 real spend, logged to data/spend_ledger.jsonl.
-#     Full detail + every defect/fix: memory `project_barrel_episode_5.md`.
-#     **NOT yet committed to git** -- working tree has the whole new
-#     poc_living_water_ink_style_test/swirls_episode_05_barrel_that_did_not_waste/
-#     folder untracked, plus modified kjv_cache.json/spend_ledger.jsonl/
-#     _SWIRLS_UPLOAD_TRACKER.html. Nothing is broken, nothing is mid-edit --
-#     the finishing chain is genuinely complete, just uncommitted.
+# 1. Episode 7 "The Bier He Touched" (Luke 7:11-17, widow of Nain) is
+#    IN PROGRESS, stopped clean at HUMAN GATE 1 (audio approval).
+#    `poc_living_water_ink_style_test/swirls_episode_07_the_bier_he_touched/`
+#    -- narration.md written and fixed (KJV attribution frames moved OUT
+#    of the <speaker> quote per this project's own locked rule), passed
+#    the $0 narration_gate.py clean (lands on "touched", a real word from
+#    the text), ran the full verify->tag->audit chain (all PASS, round-trip
+#    prose exact match), synthesized via per_turn_synth.py: narration.mp3,
+#    69.03s, atempo 1.14x (comfortable, well under the 2.0x cap). File:
+#    `.../swirls_episode_07_the_bier_he_touched/narration.mp3`.
+#    **NOT yet ear-approved by the user** -- that's the very next step
+#    tomorrow, before any real image/animation spend. Nothing past audio
+#    has been built (no design brief, no stills) -- correctly stopped at
+#    the gate, not mid-build. Voice cast: narrator + jesus only (no other
+#    character speaks in this pericope).
 #
-# Pick ONE of:
+# 2. Naaman ep4 and Barrel ep5 are FULLY FINISHED + LOCKED end-to-end
+#    (final SFX mixes ear-reviewed and approved by the user -- ep4 on
+#    2026-08-30, ep5 on 2026-08-31, both "lock it"), committed to git
+#    (b75f3d5 / 0377775). Full detail: memory `project_naaman_episode_4.md`
+#    / `project_barrel_episode_5.md`. Neither is posted anywhere yet --
+#    confirmed via `poc_living_water_ink_style_test/
+#    _swirls_release_ledger.json` (doesn't exist, so no episode in the
+#    whole series has ever been posted).
 #
-#   1. Commit ep5's work to git (ask first, per this project's own rule --
-#      never assumed).
-#   2. Decide posting status for either/both episodes -- neither is posted
-#      anywhere yet.
-#   3. Start the next Swirls of Life episode. Per SWIRLS_OF_LIFE_SERIES_
-#      PLAN_V4.md's own build order, #14 ("This Day Is This Scripture
-#      Fulfilled", the long-form Nazareth sermon) is now UNLOCKED for the
-#      first time -- both its named prerequisites (Naaman #4, Barrel #5)
-#      have shipped. That's a real, bigger long-form build though (7
-#      movements, 16:9); the remaining SHORT picks are #6 Talitha Cumi,
-#      #7 The Bier He Touched, #9 The Woman at the Border, #10 She Loved
-#      Much, #11 Where Are the Nine, #12 Ye Are Not All Clean, #13 The
-#      Cross That Wasn't His.
+# 3. `cli_publish.py` (/publish) does NOT support the Swirls-of-Life
+#    folder layout -- it only recognizes the main engine's v1/short
+#    folders (needs narration.creation.json, or visual/ or visual_16x9*,
+#    or FINAL_VIDEO.txt). Confirmed even episode 1 (LOCKED since
+#    2026-08-25) has never had a publish/ pack built. Posting copy for
+#    Swirls episodes needs either hand-written copy or a real code change
+#    to pipeline/upload_engine.py's harvest_facts() to recognize this
+#    layout -- not yet decided which.
+#
+# Pick ONE of, tomorrow:
+#
+#   1. Listen to episode 7's narration.mp3, clear GATE 1, and continue its
+#      build (Fable design brief -> stills -> GATE 2 -> animation -> GATE 3
+#      -> score -> assembly -> SFX -> SRT -> tracker) -- the natural next
+#      step since it's already mid-flight.
+#   2. Decide posting status for ep4/ep5 instead.
+#   3. Something else -- e.g. the remaining short picks after #7: #6
+#      Talitha Cumi, #9 The Woman at the Border, #10 She Loved Much, #11
+#      Where Are the Nine, #12 Ye Are Not All Clean, #13 The Cross That
+#      Wasn't His, or the now-unlocked #14 long-form Nazareth sermon.
 #
 # No default has been chosen for you — ask the user which, don't assume.
 # ══════════════════════════════════════════════════════════════════════════

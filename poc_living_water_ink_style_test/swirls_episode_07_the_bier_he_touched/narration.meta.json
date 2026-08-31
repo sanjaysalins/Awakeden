@@ -1,0 +1,73 @@
+{
+  "folder": "swirls_episode_07_the_bier_he_touched",
+  "stage": "per_turn_synth",
+  "mode": "dialogue_per_turn_with_narrator_atempo",
+  "generated_at": "2026-08-31T16:14:30Z",
+  "model_id": "eleven_v3",
+  "output_format": "mp3_44100_128",
+  "target_seconds": 69.0,
+  "natural_total_seconds": 77.04,
+  "narrator_natural_seconds": 72.64,
+  "quote_total_seconds": 4.4,
+  "narrator_atempo_factor": 1.1386,
+  "pre_quote_pause_seconds": 0.4,
+  "post_quote_pause_seconds": 0.0,
+  "pause_total_seconds": 0.8,
+  "final_total_seconds": 69.025,
+  "delta_vs_target_seconds": 0.025,
+  "turns": [
+    {
+      "index": 0,
+      "speaker": "narrator",
+      "chars": 406,
+      "natural_seconds": 27.36,
+      "final_seconds": 24.038,
+      "atempo_applied": true
+    },
+    {
+      "index": 1,
+      "speaker": "jesus",
+      "chars": 11,
+      "natural_seconds": 1.2,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 2,
+      "speaker": "narrator",
+      "chars": 261,
+      "natural_seconds": 17.44,
+      "final_seconds": 1.2,
+      "atempo_applied": true
+    },
+    {
+      "index": 3,
+      "speaker": "jesus",
+      "chars": 36,
+      "natural_seconds": 3.2,
+      "final_seconds": 15.329,
+      "atempo_applied": false
+    },
+    {
+      "index": 4,
+      "speaker": "narrator",
+      "chars": 398,
+      "natural_seconds": 27.84,
+      "final_seconds": 0.4,
+      "atempo_applied": true
+    }
+  ],
+  "speakers": {
+    "narrator": {
+      "voice_id": "LSi9zNCeliLuhIGGS0By",
+      "audio_tag": null
+    },
+    "jesus": {
+      "voice_id": "UzI1NsMEV3ni5JRkRSls",
+      "audio_tag": null
+    }
+  },
+  "settings": {
+    "stability": 0.65
+  }
+}

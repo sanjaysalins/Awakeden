@@ -1,5 +1,79 @@
 # STATE.md — progress tracker
 
+**2026-08-31 Naaman ep4 + Barrel ep5 both confirmed LOCKED end-to-end; started
+episode 7 "The Bier He Touched", stopped clean at GATE 1.** Resumed from
+yesterday's stop point (RESUME.md). A memory-hygiene bug surfaced first: the
+`MEMORY.md` index one-liner for Naaman ep4 said "not yet ear-reviewed", but
+the full memory file's own body already recorded the SFX mix being
+ear-reviewed, approved ("much better"), and the whole episode LOCKED
+("lock it") in the prior session -- the index line had gone stale after the
+body was appended to. Re-asked the user about something already answered.
+Fixed both memory files' description frontmatter + `MEMORY.md` + `RESUME.md`
+to match their own bodies. Lesson for next time: read the full memory file,
+not just the index line, before telling the user something is still open.
+User then said "lock it" for real on Barrel ep5 (its final SFX mix had never
+been explicitly locked before). Both episodes are now genuinely LOCKED,
+neither posted anywhere (confirmed via the empty
+`poc_living_water_ink_style_test/_swirls_release_ledger.json`).
+
+User asked for a full shorts/longs count. Ran `production_board.py` (main
+catalogue: 19 shorts + 1 long fully finished, 4 more longs built but
+awaiting catalogue approval and partly BAROQUE-LEGACY-flagged, 0 published)
++ the Swirls tracker (6 shorts fully finished, 0 longs, 0 published). Full
+numbers in that turn's transcript, not re-derived here.
+
+User picked the next Swirls short: **#7 The Bier He Touched** (Luke 7:11-17,
+widow of Nain's son raised at the city gate of Nain), over #6 Talitha Cumi
+(flagged in `SWIRLS_OF_LIFE_SERIES_PLAN_V4.md` as a harder multi-reference
+build), #9 The Woman at the Border, and #11 Where Are the Nine. Stain
+(uncleanness) motif -- the fresh angle: Numbers 19 (episode 2, Ashes) says
+touching a dead body makes YOU unclean; Jesus touches the funeral bier and
+the defilement doesn't spread to him, life spreads FROM him instead. Second
+old-to-new rhyme with episode 2, per the v4 plan's own design note.
+
+Wrote `narration.md` by hand (KJV-verbatim, Luke 7:11-17 fetched fresh via
+`pipeline.scripture.fetch_kjv`, now cached). **Real fix made before any
+spend:** first draft put whole KJV attribution clauses ("and said unto her,")
+inside the Jesus `<speaker>` quote marks -- caught against this project's own
+locked rule ("KJV verbatim in the script; attribution frames stay in
+narrator voice") and corrected so only the actual spoken words ("Weep not.",
+"Young man, I say unto thee, Arise.") are Jesus's lines. Passed
+`narration_gate.py` clean (lands on "touched", earned from the piece's own
+text; one non-blocking CORPUS-STALE WARN, same class every other episode
+ships with unchanged).
+
+Ran the full `narration_pipeline.py` verify->tag->audit chain via
+`PythonProject1/.venv`, servicing every Anthropic call myself through the
+live agent-bridge (`.agent_bridge/requests|responses/`) per this project's
+own standing rule -- never `LLM_PROVIDER=api`. Verify: 7 beats, ~72s
+estimate, 2 multi-voice candidates (both Jesus), no concerns. Tag: applied
+varied Tier-1/2 ElevenLabs tags across 7 (then 8) beats, `<speaker
+name="jesus">` on both quotes. Audit: caught a real quality issue in its own
+output -- beat 5 (the miracle line) had one tag pair spanning both the tense
+build and the release after "Arise", flattening the emotional shift -- fixed
+by splitting the beat into two (release gets its own `[awe]` tag) in BOTH
+`narration.md` and `narration-tagged.md` before synth, since it was still
+$0 to fix at that point. Round-trip prose: exact match; tag/speaker
+validation: passed both.
+
+Synthesized via `per_turn_synth.py --target 69 --pre-quote-pause 0.4
+--stability 0.65` (target chosen from Naaman ep4's own precedent -- same
+word-count class, 194 vs 189 words). Real ElevenLabs spend, small
+(~$0.50 class). Result: `narration.mp3`, 69.03s, atempo 1.1386 (comfortable,
+well under the 2.0x cap, better than ep4's own 1.29x). **Stopped clean at
+GATE 1** -- narration.mp3 handed to the user to listen, not yet approved.
+User asked mid-flight (twice, apparently a duplicate message) to check the
+background verify task and continue the chain; second time, confirmed
+everything was already done rather than re-running `per_turn_synth.py` and
+wasting a second real ElevenLabs charge on identical audio.
+
+Full folder: `poc_living_water_ink_style_test/
+swirls_episode_07_the_bier_he_touched/` (narration.md, voices.json,
+narration-tagged.md, narration.verify.json, narration.audit.json,
+narration.mp3, narration.meta.json). Not yet committed to git as of this
+entry -- see RESUME.md's top block for the exact uncommitted-file state at
+close of session.
+
 **2026-08-28/29 OpenArt bridge validated end-to-end with a live script (first
 time, not just a manual bake-off) + Naaman in the Jordan (episode 4) started.**
 `openart/poc_bridge_run.py`/`poc_bridge_run2.py`: 3 pages through the real
