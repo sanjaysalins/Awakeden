@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>F01 review — The Bier He Touched</title>
+<style>
+  body { font-family: Georgia, serif; background: #f4efe6; margin: 0; padding: 24px; color: #2a2420; }
+  h1 { font-size: 28px; margin: 0 0 6px; }
+  p.sub { font-size: 18px; color: #6b5f52; margin: 0 0 20px; }
+  .wrap { max-width: 900px; margin: 0 auto; }
+  img { width: 100%; height: auto; border: 1px solid #ccc; border-radius: 6px; cursor: zoom-in; }
+  #lightbox { display: none; position: fixed; inset: 0; background: rgba(20,15,10,0.88); z-index: 999; cursor: zoom-out; align-items: center; justify-content: center; padding: 24px; }
+  #lightbox.open { display: flex; }
+  #lightbox img { max-width: 95vw; max-height: 92vh; border-radius: 6px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
+  .note { background: #fff; border-radius: 8px; padding: 18px 22px; margin-top: 20px; font-size: 19px; line-height: 1.5; }
+  .note b { color: #7a3b2e; }
+  .good { color: #2e6b3b; }
+  .flag { color: #b5591f; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>F01 — "Everyone kept their distance" (fixed)</h1>
+  <p class="sub">Rerolled after fixing a real bug: the first render put the page on a wood desk with taped corners instead of filling the frame. Fixed the shared prompt template — every future page benefits, not just this one.</p>
+  <img src="swirls_episode_07_the_bier_he_touched_f01_9x16.png" onclick="openZoom(this.src)">
+  <p class="sub">(click the image to zoom)</p>
+  <div class="note">
+    <p><b>What looks right:</b></p>
+    <ul>
+      <li class="good">Page fills the frame edge-to-edge now — no desk, no tape corners.</li>
+      <li class="good">Title, frame number, all 3 panel labels, caption, corner note — all spelled correctly.</li>
+      <li class="good">The bier is drawn correctly: open plank, carried on shoulders, no coffin/box/lid.</li>
+      <li class="good">Villagers now properly flank at the road's edges, watching from a distance, instead of queuing in line behind the widow.</li>
+      <li class="good">No blue ink anywhere (correct for Stage 0). Widow's linework is steady, no fray (correct — she carries no motif).</li>
+      <li class="good">The grey stain now clearly bleeds past the main scene's own drawn border into the blank paper margin below — the effect the design asked for.</li>
+    </ul>
+    <p><b>One thing to check:</b></p>
+    <ul>
+      <li class="flag">The widow is walking more beside/ahead of the bier than strictly behind it, and the stain sits close to her feet — worth your own eye on whether the gap between the stain and the figures holds.</li>
+    </ul>
+  </div>
+</div>
+<div id="lightbox" onclick="closeZoom()">
+  <img id="lightbox-img" src="">
+</div>
+<script>
+  function openZoom(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('open');
+  }
+  function closeZoom() { document.getElementById('lightbox').classList.remove('open'); }
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeZoom(); });
+</script>
+</body>
+</html>

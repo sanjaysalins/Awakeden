@@ -28,6 +28,18 @@ f08_hybrid_spec = dataclasses.replace(hybrid_test.F08, panel_style="woodcut_hybr
 generated = assemble_still_prompt(f08_hybrid_spec)
 original = hybrid_test.PROMPT
 
+# SECOND KNOWN, DISCLOSED deviation (fix, not a bug -- 2026-08-31): the original
+# one-off test's own opening sentence never named "aged cream paper" (STYLE_OPEN_HYBRID
+# used to open straight into "...laid out like a real found piece of production art",
+# omitting the substrate clause STYLE_OPEN's plain-template sibling has always carried).
+# Real-world consequence: episode 7 F01 rendered as a photo of the page taped to a
+# wood-grain desk instead of the page filling the frame edge-to-edge -- every prior
+# hybrid-style episode (2/4/5/8) happened not to trigger this, but the missing anchor
+# was there the whole time. STYLE_OPEN_HYBRID now carries the same "aged cream paper"
+# phrase as STYLE_OPEN plus an explicit no-desk/no-tape negative; this script's
+# byte-identical check on the CORE PROSE is expected to diff starting at that clause.
+# See swirls_episode_07_the_bier_he_touched/_f01_review.html for the defective render.
+
 # KNOWN, DISCLOSED deviation (not a bug): render_hybrid_panels.py was a one-off style
 # test that passed its refs only as `--image` CLI flags, never as a prompt-text
 # manifest -- it predates this module's ref-chaining convention. Every other page in
