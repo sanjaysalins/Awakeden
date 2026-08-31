@@ -1,22 +1,69 @@
 # ══════════════════════════════════════════════════════════════════════════
 # ▶▶▶ START HERE TOMORROW (updated 2026-08-31, end of day -- user: "lets
-# close for the day and resume tommorrow"). THREE things going on:
+# stop for tonight, lets commit everything and lets create a handover and
+# resume for tommorrow"). Committed at 1e84023. THREE things going on:
 #
-# 1. Episode 7 "The Bier He Touched" (Luke 7:11-17, widow of Nain) is
-#    IN PROGRESS, stopped clean at HUMAN GATE 1 (audio approval).
+# 1. Episode 7 "The Bier He Touched" (Luke 7:11-17, widow of Nain) reached
+#    **GATE 2 tonight -- all 8 stills LOCKED and approved.**
 #    `poc_living_water_ink_style_test/swirls_episode_07_the_bier_he_touched/`
-#    -- narration.md written and fixed (KJV attribution frames moved OUT
-#    of the <speaker> quote per this project's own locked rule), passed
-#    the $0 narration_gate.py clean (lands on "touched", a real word from
-#    the text), ran the full verify->tag->audit chain (all PASS, round-trip
-#    prose exact match), synthesized via per_turn_synth.py: narration.mp3,
-#    69.03s, atempo 1.14x (comfortable, well under the 2.0x cap). File:
-#    `.../swirls_episode_07_the_bier_he_touched/narration.mp3`.
-#    **NOT yet ear-approved by the user** -- that's the very next step
-#    tomorrow, before any real image/animation spend. Nothing past audio
-#    has been built (no design brief, no stills) -- correctly stopped at
-#    the gate, not mid-build. Voice cast: narrator + jesus only (no other
-#    character speaks in this pericope).
+#    Review page: `_GATE2_REVIEW.html` in that folder (open with
+#    `file:///F:/slk/PycharmProjects/JesusInTheBible/poc_living_water_ink_style_test/
+#    swirls_episode_07_the_bier_he_touched/_GATE2_REVIEW.html`).
+#    GATE 1 (audio) cleared earlier tonight -- narration.mp3, 69.03s, LOCKED.
+#    Fable wrote `_DESIGN_BRIEF.md` (the hard problem: Stain motif on the
+#    BIER-AS-OBJECT, not the widow -- her grief carries no motif at all;
+#    the narration's reversal, "death didn't spread from the boy to Jesus,
+#    life spread from Jesus to the boy," is told through the stain's own
+#    DRYING GEOMETRY from the touch point outward, never an on-camera cure).
+#    All 4 confirmed-by-user open questions from the brief were taken as
+#    recommended (NUMBERS 19:11 back-cover subtitle, Stage 3 swirl on F06,
+#    the empty-bier panel-crop ref -- later abandoned as defective, F04's
+#    2+2 high-tide cap kept). Sonnet implemented `episode.py`.
+#    Spend: 18 renders, ~648 credits (~$1.30), all logged in
+#    `data/spend_ledger.jsonl`. Real defects found + fixed along the way
+#    (all documented in episode.py's own docstring and the ledger notes):
+#      - **A genuine bug in the SHARED engine**, not just this episode:
+#        `swirls_page.py`'s `STYLE_OPEN_HYBRID` (used by EVERY
+#        `panel_style="woodcut_hybrid"` page, i.e. most episodes) was
+#        missing the "aged cream paper" anchor clause the plain template
+#        has -- let a render put the whole page on a photographed wood
+#        desk with taped corners instead of filling the frame. FIXED for
+#        every future episode, not just this one (see
+#        `_validate_swirls_page_hybrid.py`'s updated disclosed-deviation
+#        note for the full diff).
+#      - The bier rendered as a boxed coffin on 3 separate pages (F02,
+#        F03, F04) before the never-box guard held reliably.
+#      - A floating disconnected carrying-pole on F03 (the reference
+#        image's own carrying-height pose was fighting the grounded-bier
+#        text instruction).
+#      - **Bier-CONSTRUCTION consistency across the whole episode** --
+#        user caught F03 (trestle-leg support) vs F04 (bearers holding it
+#        low) vs the front cover (side rails) all drawing a differently-
+#        shaped bier. Fixed by locking F03's trestle-leg render as the
+#        one canonical "grounded" look, cropping a fresh
+#        `refs/bier_grounded_ref.png` directly from it, and rebuilding F04
+#        + the front cover to match it exactly. Two refs now cover the
+#        whole episode, one per pose family (confirmed with the user,
+#        NOT collapsed to a single ref -- a single ref fighting two poses
+#        is exactly what caused the drift): `bier_ref.png` (carried,
+#        shoulder-height -- F01/F02/F05/front cover) and
+#        `bier_grounded_ref.png` (resting on trestle legs -- F03/F04).
+#      - Per user's own staging note: the bier is physically SET DOWN on
+#        the ground for F03 (the touch) and F04 (the "Arise" pause) --
+#        holding it aloft through two long static beats read as awkward.
+#        F01/F02 stay in motion, F05/F06 stay shoulder-borne/resuming.
+#    **NOT yet started: Phase C (animation).** Needs a fresh `/cost` quote
+#    before any spend -- do not assume the stills-phase quote covers it.
+#    **One known open item before animating the BACK COVER specifically**:
+#    it fails the deterministic SW-F1 freeze-budget gate (veo3_1_lite's 8s
+#    max duration can't hit the 35% static-ratio budget for its 12.6s
+#    slot -- `plan` shows `[FAIL] SW-F1[back]`). This does NOT block
+#    animating any other page/cover. Resolve before spending on that one
+#    clip: boomerang was explicitly rejected by the design brief for this
+#    unit (drifting dust motes would visibly reverse), so the real choices
+#    are an `_overrides.json` entry (no precedent yet in this whole
+#    project -- would be the first) or accepting the FAIL. Put it to the
+#    user, don't decide alone.
 #
 # 2. Naaman ep4 and Barrel ep5 are FULLY FINISHED + LOCKED end-to-end
 #    (final SFX mixes ear-reviewed and approved by the user -- ep4 on
@@ -25,7 +72,7 @@
 #    / `project_barrel_episode_5.md`. Neither is posted anywhere yet --
 #    confirmed via `poc_living_water_ink_style_test/
 #    _swirls_release_ledger.json` (doesn't exist, so no episode in the
-#    whole series has ever been posted).
+#    whole series has ever been posted). UNCHANGED tonight -- not touched.
 #
 # 3. `cli_publish.py` (/publish) does NOT support the Swirls-of-Life
 #    folder layout -- it only recognizes the main engine's v1/short
@@ -34,14 +81,15 @@
 #    2026-08-25) has never had a publish/ pack built. Posting copy for
 #    Swirls episodes needs either hand-written copy or a real code change
 #    to pipeline/upload_engine.py's harvest_facts() to recognize this
-#    layout -- not yet decided which.
+#    layout -- not yet decided which. UNCHANGED tonight.
 #
 # Pick ONE of, tomorrow:
 #
-#   1. Listen to episode 7's narration.mp3, clear GATE 1, and continue its
-#      build (Fable design brief -> stills -> GATE 2 -> animation -> GATE 3
-#      -> score -> assembly -> SFX -> SRT -> tracker) -- the natural next
-#      step since it's already mid-flight.
+#   1. Continue episode 7: quote Phase C (animation) cost, get the user's
+#      OK, animate all 8 clips -> GATE 3 (exclude glitchy clips) -> score
+#      -> assembly -> SFX -> SRT -> tracker. Resolve the back-cover SW-F1
+#      item first (see above) -- it'll block that one clip's `animate`
+#      call otherwise. The natural next step since it's already mid-flight.
 #   2. Decide posting status for ep4/ep5 instead.
 #   3. Something else -- e.g. the remaining short picks after #7: #6
 #      Talitha Cumi, #9 The Woman at the Border, #10 She Loved Much, #11
