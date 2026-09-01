@@ -1,5 +1,81 @@
 # STATE.md — progress tracker
 
+**2026-09-01 Swirls ep7 "The Bier He Touched" — Phase C (animation) run
+end-to-end, GATE 3 reached and LOCKED.** Resumed from yesterday's stop
+point (RESUME.md, GATE 2 already locked). User picked "Episode 7
+animation" over the other two open threads (ep4/ep5 posting status,
+starting a new short).
+
+Resolved the one known open item first: the back cover failed the
+deterministic SW-F1 freeze-budget gate (veo3_1_lite's 8s cap couldn't
+hit the 35% static-ratio budget for its 12.6s slot). Fixed by trimming
+its assembly word-weight 34->32 (shrinks the slot without touching the
+art) rather than an `_overrides.json` override — put to the user first,
+per the prior night's own note not to decide alone. Quoted Phase C cost
+via `hf generate cost` before spending — quote turned out to be against
+the WRONG PROVIDER (the actual render path is OpenArt `kling-3-omni`,
+not Higgsfield; OpenArt has no Veo model at all, so every
+`model_tier="veo3_1_lite"` page renders as Kling regardless). Corrected
+the quote (35cr/s, ~1,986cr discounted) before the user approved spend.
+
+Serviced the OpenArt file-bridge personally throughout (no REST API,
+MCP-only — `AGENT_BRIDGE.md`'s "Image / video generation (OpenArt)"
+section), mostly by delegating the repetitive upload/generate/wait/
+download loop to forked agents while doing visual QC and judgment calls
+myself. Real defects found and fixed, several only after the USER's own
+close review caught things my QC missed:
+
+- Initial 8-clip batch: f01 (baked-caption fade) and f04 (hallucinated
+  ground puddle) both needed rerolls. f04's reroll kept failing the same
+  way — root cause was a documented `swirls_page.py` warning: kling3_0 +
+  a 2-line stacked caption is a known failure combo (3/3 prior on a
+  different episode). Collapsed the caption to one line and fixed the
+  animation prompt (was asking the ink to "drift," almost certainly the
+  puddle's actual cause) — fixed after a still redesign.
+- User then caught something my own QC missed entirely: F03/F04's
+  "grounded" bier read as a **completely different object** from the
+  bier being carried in F01/F02 (invented trestle legs + a raised rail
+  that were never in the carried version). Root cause: F03's own prompt
+  was self-contradictory — said "no legs, flat on ground" in one place
+  and referenced a "wooden side rail" in another. Rewrote both pages to
+  drop the separate `bier_grounded_ref.png` entirely and describe the
+  SAME flat plank-and-poles stretcher the carried bier already is, just
+  lying low on the ground, Jesus bending down to reach it. Both stills
+  now genuinely match.
+- F04 then failed 7 total animate attempts across 2 engines chasing that
+  fix, each one swapping one defect for another: speech-bubble caption,
+  ground puddle (both on OpenArt/Kling), a genuinely frozen/motionless
+  render (HF veo3_1_lite — "there is no animation" per the user), then a
+  new invented stain growing mid-air after a stronger motion cue.
+  **Stopped gambling on generative renders and switched to a $0
+  deterministic Ken Burns push** on the approved still (plain ffmpeg
+  zoompan, bias-cropped to keep the caption in frame) — zero
+  hallucination risk by construction, real visible motion, done.
+- User caught one more real issue: F02's front-right bearer was crouched
+  with a hand on the ground — confirmed present in the ORIGINAL GATE-2-
+  locked still from the prior session, not introduced this session.
+  Added an explicit standing-bearers guard; 1st reroll fixed the pose
+  but broke the panel layout (3 stacked panels instead of the standard
+  3-across row); 2nd reroll got both right.
+
+Also fixed two of my own process mistakes along the way, logged
+honestly in the ledger notes: used the wrong OpenArt param name
+(`aspect_ratio` instead of `aspectRatio`) on one still generation,
+wasting one render; double-logged one ledger entry for a single real
+spend (caught and removed the duplicate).
+
+**Total spend: 4,172 OpenArt credits (~$7.51-$8.34) + 1 HF veo3_1_lite
+render (8cr quote only, not reconciled against real billing).** All
+logged in `data/spend_ledger.jsonl`. GATE 3 review:
+`poc_living_water_ink_style_test/swirls_episode_07_the_bier_he_touched/
+_GATE3_REVIEW.html`. User said "yes lock it" — **GATE 3 LOCKED**, all 8
+clips kept, none excluded. f01 kept as-is with a known minor defect
+(baked captions fade in the last ~0.4s of 6s) by explicit user choice.
+
+Committed at `0c20f25`. **NOT yet started: score -> assembly -> SFX ->
+SRT -> tracker** (the rest of the pipeline after GATE 3). User asked to
+stop for the night here.
+
 **2026-08-31 Naaman ep4 + Barrel ep5 both confirmed LOCKED end-to-end; started
 episode 7 "The Bier He Touched", stopped clean at GATE 1.** Resumed from
 yesterday's stop point (RESUME.md). A memory-hygiene bug surfaced first: the
