@@ -267,7 +267,9 @@ F02 = PageSpec(
         "no doubled or tremored line anywhere in her figure. Behind and beside them, the open "
         "wooden hand-bier held steady on the four bearers' shoulders, the shrouded form with its "
         "napkin-bound face lying on its open top, never a coffin, never any lid, fully inside the "
-        "frame; the halted crowds drawn as unindividuated hatched masses beyond. The cold "
+        "frame, all four bearers standing fully upright at shoulder height, none crouching, "
+        "kneeling, or bent over, no bearer's knee or hand touching the ground anywhere; the "
+        "halted crowds drawn as unindividuated hatched masses beyond. The cold "
         "grey-umber stain lies in the paper beneath the bier, unchanged from before, still "
         "crossing the drawn frame border into the lower margin, never over any face, a band of "
         "clean paper between the stain and every living figure, the stain nowhere near Jesus and "
@@ -345,11 +347,15 @@ F03 = PageSpec(
         "or bordering it on any side -- setting the bier down on the ground changes ONLY its "
         "height, never its flat open shape -- its plank resting low and level just above "
         "the dust -- never on built-in legs, a table, a bench, or any raised stand, the "
-        f"bier's own bare wood the only thing touching the ground. {JESUS_BUILD}, fully inside the "
-        "frame, standing at the side of the grounded bier, bending slightly toward it, his right "
-        "hand laid flat and full on the bier's wooden side rail, palm down, in complete unbroken "
-        "contact with the wood, fully inside the frame -- the hand and the rail touching with no "
-        "gap between them; the four bearers standing upright beside the grounded bier, their own "
+        "bier's own bare wood the only thing touching the ground -- this is the SAME flat "
+        "plank-and-poles stretcher the bearers were just carrying, the identical object, now "
+        f"simply lying low on the earth instead of at shoulder height. {JESUS_BUILD}, fully inside "
+        "the frame, standing at the side of the grounded bier, bending down low at the waist to "
+        "reach it since it lies close to the ground, his right hand laid flat and full on the "
+        "bier's own low plank exactly where it lies near the ground, palm down, in complete "
+        "unbroken contact with the wood, fully inside the frame -- the hand and the plank touching "
+        "with no gap between them, no rail, rung, or raised edge anywhere under or around his "
+        "hand; the four bearers standing upright beside the grounded bier, their own "
         "hands empty and open at their sides, not touching the bier anywhere, no longer bearing "
         "its weight, their heads turned toward him, watching, none of their faces "
         f"individuated or finished; {SON_SHROUDED}, lying "
@@ -362,7 +368,7 @@ F03 = PageSpec(
         "only toward the bier's far end, away from him; no stain of any kind on Jesus's figure, "
         "hand, sleeve, or the paper beneath him -- his side of the page the cleanest paper on it. "
         "Stage 1 dosage, held: the same single restrained thread of blue ink, now rising thin "
-        "from the back of his right hand where it rests on the rail, straight up, touching only "
+        "from the back of his right hand where it touches the low plank, straight up, touching only "
         "his hand and the air above it, the only blue on the whole page, behaving like one stroke "
         "of wet ink bled into the paper, a wide band of untouched clean paper between the thread "
         "and the stain's wet remainder at every point."
@@ -378,7 +384,7 @@ F03 = PageSpec(
     ),
     main_scene_animation=(
         "Jesus's head bows slightly toward the shrouded form and stills, finishing early and "
-        "holding -- his hand staying laid flat on the rail exactly as drawn, pressing without "
+        "holding -- his hand staying laid flat on the low plank exactly as drawn, pressing without "
         "moving, never lifting, never sliding; the bearers stand upright and still beside the "
         "grounded bier, exactly as drawn, each one slow breath; the bier itself stays resting on "
         "the ground exactly as drawn, its poles never lifting; the shrouded form lies completely "
@@ -420,12 +426,16 @@ F04 = PageSpec(
     anim_shot_desc="medium shot",
     main_scene_still=(
         "close along the side of the bier, resting exactly as it was set down in the previous "
-        "scene -- the SAME simple low wooden trestle-leg frame at each end (crossed X-braced legs, "
-        "tied at the crossing, holding the plank a short distance clear of the dust), the plank "
-        "itself flat, open, and bare, no raised side walls, no coffin, no box, matching that "
+        "scene -- the SAME flat plank-and-poles stretcher the bearers were carrying earlier, the "
+        "identical object, both of its long poles lying flat and level along the bare ground "
+        "running its full length, no pole, rail, rung, or any part of it held up or raised off "
+        "the earth anywhere, never on built-in legs, a table, a bench, or any raised stand -- the "
+        "plank itself flat, open, and bare, no raised side walls, no coffin, no box, matching that "
         f"construction exactly. {JESUS_BUILD}, fully inside the "
-        "frame, standing at the bier's head end, bending slightly toward it, his right hand "
-        "resting on the wooden rail, his face turned down toward the shrouded form, calm, "
+        "frame, standing at the bier's head end, bending down low at the waist to reach it since "
+        "it lies close to the ground, his right hand "
+        "resting on the bier's own low plank exactly where it lies near the ground, no rail, rung, "
+        "or raised edge anywhere under or around his hand, his face turned down toward the shrouded form, calm, "
         "unhurried, his gaze steady on the "
         f"napkin-bound face; {SON_SHROUDED}, lying full-length on the open boards, fully inside "
         "the frame; two of the bearers standing upright beside the grounded bier, no longer "
@@ -437,7 +447,7 @@ F04 = PageSpec(
         "including where it once crossed the drawn frame border into the margin -- has dried to "
         "a pale ring; never over any face, no stain anywhere on Jesus or the paper beneath him. "
         "Stage 2 dosage: the blue ink motif quietly present -- a few soft blue threads and one "
-        "small rounded watercolor bloom rising from the back of his hand on the rail into the air "
+        "small rounded watercolor bloom rising from the back of his hand on the low plank into the air "
         "above it, the bloom a soft blurred stain of pigment with no stem, no petals, no wings, and "
         "no leaf shape, never a literal flower, insect, or butterfly, and no sparkle, glint, or "
         "star-point of any kind anywhere on the page, touching only his hand and the air, touching "
@@ -457,24 +467,41 @@ F04 = PageSpec(
         "her clasped hands press once slightly tighter and still",
     ),
     main_scene_animation=(
-        "Jesus stays exactly as drawn, his hand resting on the rail without moving, one slow "
-        "steady breath, his lips staying closed and completely still -- he is not speaking and "
+        "a faint breeze stirs the loose edge of Jesus's mantle and a few strands of his hair, "
+        "once, visibly, then settles -- this gentle stir is the one clearly visible motion in the "
+        "shot, not a static frame; Jesus otherwise stays exactly as drawn, his hand resting on the low plank without moving, one slow "
+        "steady breath -- his chest visibly rises and falls once, slowly -- his lips staying closed and completely still -- he is not speaking and "
         "his mouth does not move at all; the shrouded form lies completely still, exactly as "
         "drawn, no rise or fall of breath, no stir anywhere in the linen, for the whole clip; the "
         "widow's grip on her mantle's edge tightens once and stills; the bearers stand upright and "
         "still beside the grounded bier, exactly as drawn; the bier itself stays resting on the "
-        "ground exactly as drawn, its poles never lifting; the soft blue threads at his hand drift "
-        "gently within their own small area, never "
-        "spreading beyond his hand and the air above it; the stain remainder and its dried ring "
-        "stay exactly as drawn, never deepening, never spreading, never fading;"
+        "ground exactly as drawn, its poles never lifting; the soft blue threads at his hand stay "
+        "exactly as drawn, in place, for the whole clip, never drifting, never spreading beyond "
+        "his hand and the air above it, never touching or reaching the ground; the stain remainder "
+        "and its dried ring stay exactly as drawn, never deepening, never spreading, never fading;"
     ),
     fence_kind="stain",
     fence_callout="the narrow wet remainder of the stain beneath the bier's head, its dried pale ring, and the blue threads at his hand",
-    caption_lines=("I say unto thee,", "Arise"),
+    # Was a 2-line stacked caption ("I say unto thee," / "Arise") -- collapsed to one line
+    # (user, 2026-09-01) after 2 OpenArt reroll attempts both garbled this exact caption with
+    # a stray speech-bubble tail. swirls_page.py's own render-time warning flags kling3_0 +
+    # a 2-line stacked caption as a documented 3/3 failure combo (Thomas F02, 2026-08-21) --
+    # OpenArt has no Veo model, so it always renders via Kling regardless of model_tier,
+    # making this the only real fix available without a provider switch.
+    caption_lines=("I say unto thee, Arise",),
     corner_note="NOTE: no stain on him",
-    refs=[R_JESUS, R_BIER_GROUNDED, R_WIDOW, R_WIDOW_FACE],
-    model_tier="kling3_0",
-    clip_duration=9,
+    # R_BIER_GROUNDED dropped 2026-09-01 -- that ref (cropped from an earlier F03 render that had
+    # drifted into an invented trestle-leg/rail construction) was propagating a different-looking
+    # object from the carried bier. F03 was redesigned to reference R_BIER directly (the flat
+    # plank-and-poles stretcher, just resting low on the ground); F04 now does the same.
+    refs=[R_JESUS, R_BIER, R_WIDOW, R_WIDOW_FACE],
+    # Switched kling3_0 -> veo3_1_lite (user, 2026-09-01), HF-only for this one clip: two
+    # consecutive OpenArt/kling-3-omni animate attempts both produced a speech-bubble caption
+    # AND a hallucinated ground puddle with Jesus bent low touching the plank -- reads as a
+    # real model limitation for this composition, not bad luck. User approved the documented
+    # HF fallback (SWIRLS_GEN_PROVIDER=hf) for this clip specifically, not a policy change.
+    model_tier="veo3_1_lite",
+    clip_duration=8,  # veo3_1_lite's legal set is 4/6/8s only (HF rejects 9) -- was 9 for kling3_0
     panel_style="woodcut_hybrid",
 )
 
@@ -717,7 +744,13 @@ MANIFEST = EpisodeManifest(
         Unit("f04", HERE / f"{HERE.name}_f04_9x16.mp4", 28, "freeze", tail_loop_seconds=1.0),
         Unit("f05", HERE / f"{HERE.name}_f05_9x16.mp4", 18, "freeze", tail_loop_seconds=1.0),
         Unit("f06", HERE / f"{HERE.name}_f06_9x16.mp4", 15, "freeze"),
-        Unit("back", HERE / "back_cover.mp4", 34, "freeze"),
+        # Word-weight trimmed 34->32 (user, 2026-09-01): at 34 the back cover's slot
+        # (12.62s) forced a 36.6% frozen tail on its 8s-max veo3_1_lite render, over
+        # SW-F1's 35% cap -- boomerang/tail-loop both ruled out (continuous drifting
+        # dust motes would visibly reverse). 32 shrinks the slot to ~12.0s (~33%
+        # frozen), clearing the gate without touching the art; the ~0.6s freed is
+        # redistributed in fractions of a second across the other 7 units.
+        Unit("back", HERE / "back_cover.mp4", 32, "freeze"),
     ],
     scores={
         # Felt-piano identity reused near-verbatim from episode 5/8/Naaman (the series

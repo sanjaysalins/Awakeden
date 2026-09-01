@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>GATE 3 LOCKED — The Bier He Touched</title>
+<style>
+  body { font-family: Georgia, serif; background: #f4efe6; margin: 0; padding: 24px; color: #2a2420; }
+  h1 { font-size: 32px; margin: 0 0 4px; }
+  p.sub { font-size: 19px; color: #6b5f52; margin: 0 0 24px; }
+  .wrap { max-width: 1000px; margin: 0 auto; }
+  .card { background: #fff; border-radius: 10px; padding: 18px; margin-bottom: 22px; }
+  .card h2 { font-size: 22px; margin: 0 0 10px; }
+  .card video { width: 100%; height: auto; border: 1px solid #ccc; border-radius: 6px; display: block; margin: 0 auto; background: #000; }
+  .card p { font-size: 18px; line-height: 1.5; margin: 12px 0 0; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+  .top { background: #fff3d6; border: 1px solid #e0c98a; border-radius: 10px; padding: 18px 22px; margin-bottom: 26px; font-size: 19px; line-height: 1.6; }
+  .top b { color: #7a3b2e; }
+  .flag { display: inline-block; font-size: 15px; font-weight: bold; padding: 3px 10px; border-radius: 6px; margin-left: 8px; vertical-align: middle; }
+  .flag.clean { background: #dff0d8; color: #3c763d; }
+  .flag.note { background: #fcf3cf; color: #7a5c00; }
+  .flag.bad { background: #f8d7da; color: #842029; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Episode 7 — GATE 3 <span class="flag clean">LOCKED</span></h1>
+  <p class="sub">"The Bier He Touched" — all 8 clips animated. Click play on any clip below.</p>
+
+  <div class="top">
+    <b>What this cost:</b> 4,172 OpenArt credits (~$7.51–$8.34) + 1 HF veo3_1_lite render (8cr quote, not reconciled) across the whole animation pass, still + video combined. Roughly $0.30 of the OpenArt spend was wasted on mistakes (a wrong API param, discarded regen attempts).<br>
+    <b>Bier redesign:</b> you caught that F03/F04's "grounded" bier looked like a completely different object from the bier being carried in F01/F02 — and you were right: it had invented trestle legs and a raised rail that were never in the carried version. Rewrote both pages to drop the separate grounded-only reference and describe the SAME flat plank-and-poles stretcher just lying low on the ground. Both stills now genuinely match the carried bier.<br>
+    <b>F03: clean.</b> Fully static held tableau, bier construction solid throughout.<br>
+    <b>F04: took 4 animate attempts across 2 engines.</b> Kling kept failing the same 2 ways (speech-bubble caption, growing ground puddle) with Jesus bent low touching the plank. Switched to HF veo3_1_lite — fixed those, but then rendered essentially frozen (no visible motion). A stronger motion cue fixed the freeze but invented a new stain mark growing in mid-air. After 7 total animate attempts, switched to a $0 deterministic Ken Burns push on the approved still instead of another generative gamble — zero hallucination risk by construction, real visible motion, caption stays in frame throughout.<br>
+    <b>F02: fixed.</b> You caught the front-right bearer crouched with a hand on the ground — confirmed present in the original locked still from before this session. Added an explicit standing-bearers guard and rerolled (1st attempt fixed the pose but broke the panel layout into 3 stacked panels; 2nd attempt got both right). Re-animated: all 4 bearers stand upright throughout, real visible motion confirmed by eye.<br>
+    <b>f01:</b> kept as-is by your choice — its baked captions fade out in the very last ~0.4s of the 6s clip.<br>
+    <b>f05, f06, front, back:</b> clean, unaffected by this round.<br>
+    <b>Status: LOCKED.</b> All 8 clips approved, none excluded. Next: score → assembly → SFX → SRT → tracker.
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Front cover <span class="flag clean">clean</span></h2>
+      <video src="front_cover.mp4" controls muted playsinline></video>
+      <p>The procession carrying the bier out through the gate.</p>
+    </div>
+    <div class="card">
+      <h2>F01 — the law <span class="flag note">caption fades late</span></h2>
+      <video src="swirls_episode_07_the_bier_he_touched_f01_9x16.mp4" controls muted playsinline></video>
+      <p>Everyone kept their distance. Captions fade in the last ~0.4s of 6s — kept as-is by your choice.</p>
+    </div>
+    <div class="card">
+      <h2>F02 — Weep not <span class="flag clean">clean (bearers fixed)</span></h2>
+      <video src="swirls_episode_07_the_bier_he_touched_f02_9x16.mp4" controls muted playsinline></video>
+      <p>Jesus enters. The first blue thread arrives with him. All 4 bearers now stand upright, carrying properly — the crouching pose from the original still is fixed.</p>
+    </div>
+    <div class="card">
+      <h2>F03 — the touch <span class="flag clean">clean (bier redesigned)</span></h2>
+      <video src="swirls_episode_07_the_bier_he_touched_f03_9x16.mp4" controls muted playsinline></video>
+      <p>The title act. Bier now matches the carried version exactly — same flat plank-and-poles stretcher, no invented legs or rail.</p>
+    </div>
+    <div class="card">
+      <h2>F04 — Arise <span class="flag clean">clean ($0 Ken Burns push)</span></h2>
+      <video src="swirls_episode_07_the_bier_he_touched_f04_9x16.mp4" controls muted playsinline></video>
+      <p>The doctrinal pivot. Bier matches the carried version now. After 7 generative attempts across 2 engines each swapped one defect for another, switched to a deterministic camera push on the approved still — no hallucination risk, real motion, caption stays in frame.</p>
+    </div>
+    <div class="card">
+      <h2>F05 — he sat up <span class="flag clean">clean</span></h2>
+      <video src="swirls_episode_07_the_bier_he_touched_f05_9x16.mp4" controls muted playsinline></video>
+      <p>The miracle happened entirely between the pages.</p>
+    </div>
+    <div class="card">
+      <h2>F06 — the other direction <span class="flag clean">clean</span></h2>
+      <video src="swirls_episode_07_the_bier_he_touched_f06_9x16.mp4" controls muted playsinline></video>
+      <p>Life spread from Jesus to the boy. The one Stage 3 page.</p>
+    </div>
+    <div class="card">
+      <h2>Back cover <span class="flag clean">clean</span></h2>
+      <video src="back_cover.mp4" controls muted playsinline></video>
+      <p>The empty bier at dawn. The canceled funeral.</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
