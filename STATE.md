@@ -1,5 +1,139 @@
 # STATE.md — progress tracker
 
+**2026-09-02 Swirls ep7 "The Bier He Touched" — score, assembly, SFX,
+SRT, tracker built; FULLY FINISHED + LOCKED end-to-end after three
+separate fix rounds.** Resumed from yesterday's GATE 3 "LOCKED" stop
+point. User picked "continue episode 7" over the other open threads.
+
+Before spending on the score, generated it (felt-piano, evolved from the
+ep5/ep8/Naaman identity, re-timed to this episode's own two-turn arc:
+grief -> guarded distance -> "Weep not" softening -> held breath at the
+touch -> "Arise" resolves -> gathering strings -> still landing). Then
+ran `swirls_episode.py ... assemble --score piano` — which runs the V2
+vision-audit gate on every still BEFORE encoding. This was the first time
+that gate had ever actually run on this episode: no `.audit.json`
+sidecars existed anywhere, despite both GATE 2 and GATE 3 having been
+called "LOCKED" in the last two sessions' own handovers. Serviced all 8
+audits personally (reading each image directly, per this project's own
+"look at images yourself" rule) rather than trusting a pass/fail signal.
+
+**Round 1 — the real V2 audit caught 5 defects the prior sessions' own
+eyeball QC had missed:**
+- F02: the blue ink swirl rendered off the ground near a small flower,
+  nowhere near Jesus's raised hand. Root cause: the hand-mention and the
+  ink-payoff sentence sat far apart in a long prompt. Fixed by restating
+  a redundant hand-anchor clause right where the hand is first described,
+  not just in the later "Stage N dosage" paragraph.
+- F04: the ink dripped DOWN into a ground puddle — the exact defect that
+  burned 7 animate attempts the night before, this time baked into the
+  STILL itself. First reroll fixed the puddle but introduced a literal
+  flower shape with visible petals (the word "bloom" plus an explicit
+  "never a literal flower" ban still let a flower render — naming a
+  banned shape can partially render it). Second reroll, with "bloom"
+  removed entirely in favor of "irregular hazy patch... like a drop of
+  watercolor spreading," came back clean.
+- F05: top panel row rendered 1 wide + 2 narrow instead of 3 equal panels
+  (one-off model variance, fixed by a plain reroll); ink swirl floated
+  disconnected in mid-air between Jesus and the boy (fixed with the same
+  hand-anchor technique as F02).
+- F06: the empty leaning bier rendered as a multi-rung LADDER, not the
+  established flat plank-and-poles shape — the same "bier reads as a
+  different object" failure class already fought twice during GATE 2/3.
+  Fixed with an explicit "ONE flat plank... never a ladder, never rungs"
+  clause.
+- Back cover: the empty bier split into TWO wooden objects (a plain
+  door-like board leaning on the wall + the real bier lying separately on
+  the ground holding the linen); the ink motif rendered as a literal
+  metallic ring/bracelet, traced to the phrase "closed loop." Fixed with
+  a "ONE object... nothing else made of wood" clause and rewriting the
+  ink shape as a "hooked curl... WITHOUT fully closing into a ring."
+
+**Then discovered a deeper pipeline gap:** `swirls_assemble.py` builds
+the final cut from each `Unit`'s `.mp4` file, not its `.png` still — so
+fixing the 5 stills alone did nothing to the assembled video; the OLD,
+defective animated clips were still what would have shipped. Confirmed by
+comparing file mtimes (PNGs from today, MP4s from the night before). Had
+to also re-animate F02/F05/F06/back cover (F04's clip is a $0 Ken-Burns
+push over its still, so rebuilding that was free). Re-animation itself
+introduced 3 fresh one-off defects, each caught only by extracting and
+eyeballing start/mid/end frames of the actual clip, never by trusting a
+successful render: F02 attempt 1 grew an unrequested speech bubble around
+its caption and garbled the corner-note text; F05 attempt 1's corner note
+faded to blank by the end of the clip; F06 attempt 1 had Jesus completely
+vanish from frame by the last third of the clip. Each cleared on a plain
+regen. Full writeup, including the OpenArt-bridge servicing mechanics (
+upload_sign + curl PUT + generate_image/video + creation_wait + download
++ write the response JSON), saved to memory as
+`feedback_assemble_uses_mp4_not_png`.
+
+Rebuilt the final cut + SFX bed clean: 0 FAIL gates, healthy mix levels.
+Published a `_REAUDIT_REVIEW.html` (the 5 defects found) and then a
+`_FINISHED_REVIEW.html` + `_ALL_STILLS.html` gallery for the user.
+
+**Round 2 — user reviewed all 8 stills directly and caught 2 more:**
+- F05: the boy read as hanging in the air with no support. Root cause:
+  "SITTING FULLY UPRIGHT" described a bolt-vertical seated pose sitting
+  on top of a steeply TILTED plank, so his posture never followed the
+  board's own slope. Fixed by describing actual weight-bearing contact
+  (seat/thighs flush against the sloped plank, leaning back into the
+  slope, one hand gripping the near edge) — fixed on the first reroll.
+- Back cover: the folded linen read as floating beside the plank. Fought
+  back for 5 still attempts — attempt 1 (weight+shadow wording) invented
+  an unrequested easel/shelf structure under the cloth AND a drawn border
+  reappeared; attempt 2 (moved the cloth to the ground, explicit no-
+  shelf/no-easel bans) made it WORSE — the cloth split into two separate
+  pieces and the border came back even stronger with a full margin
+  (confirms naming banned objects can still partially render them);
+  attempt 3 (reverted to a MINIMAL surgical edit over the ORIGINAL
+  working sentence, dropped all the elaboration) got the cloth right but
+  the border was still there; attempt 4 (plain reroll, no prompt change)
+  finally cleared it. Lesson: when a fix attempt makes things worse,
+  revert to the smallest possible edit over the original working text
+  rather than continuing to elaborate.
+- User also asked F03 to stop using generative animation entirely — swap
+  to the same $0 Ken-Burns push F04 already uses. Done, no cost.
+Both F05 and the back cover then needed re-animation to ship the still
+fixes. F05's re-animate needed 2 attempts (1st had the same caption-decay
+defect as round 1; 2nd clean). Back cover's re-animate was clean first
+try. **Twice this round a background engine process was left genuinely
+blocked** (not exited) because a retry's result was downloaded straight
+to disk without writing the matching `gen_responses/<id>.response.json`
+— surfaced later as delayed "failed... timed out after 3600s"
+notifications, harmless (the real files were already correct) but
+confusing. Fixed going forward: write the response.json immediately
+after every download, first attempt or retry alike.
+
+**Round 3 — user listened to the finished mix and caught 2 more, both
+free fixes:**
+- A "gospel_choir" SFX layer (heavenly_choir_soft) placed under the score
+  at F04's "Arise" (34-51s, the piece's own middle) read as a SECOND,
+  competing piece of music playing against the felt-piano score, not
+  supporting ambience. Removed entirely rather than turned down — this
+  project's usual "reserve one choir swell for the gospel-link page"
+  pattern (proven safe on ep1/ep5, which have no real instrumental score
+  competing with it) does NOT transfer safely to an episode with a real
+  score already playing. Treat it as a genuine per-episode risk to check
+  by ear going forward, not a safe default.
+- The back cover's Kling clip had the folded linen suddenly appear then
+  disappear mid-clip. Switched to the same $0 freeze-and-gentle-zoom
+  already used on F03/F04, per the user's own instruction ("just freeze
+  before that and zoom in gently").
+
+**Locked** after a final gate sweep: full `swirls_episode.py ... plan` —
+0 FAIL, 2 CONDITIONAL (SW-F1[back] static_ratio 33.4%, expected/accepted
+since the back cover is now a deterministic zoom with no generative
+motion to offset the ratio, well under the 35% FAIL cap; SW-L5 word-count
+sum within its documented tolerance). `check_landing_hold.py`: 0 FAIL
+across all 67 files in the repo. Total spend across the whole day: ~$6.00
+(score ~$1, round 1 ~$3.40, round 2 ~$1.60, round 3 free), all itemized
+in `data/spend_ledger.jsonl`. Matches the Naaman ep4 / Barrel ep5
+precedent of locking on the user's own ear/eye review rather than a
+5-CLI panel call (that gate is for narration text and significant plans;
+this pipeline's own deterministic gates + Vision audits + human review
+fill that role for the visual/assembly stages). Not yet posted.
+
+---
+
 **2026-09-01 Swirls ep7 "The Bier He Touched" — Phase C (animation) run
 end-to-end, GATE 3 reached and LOCKED.** Resumed from yesterday's stop
 point (RESUME.md, GATE 2 already locked). User picked "Episode 7
