@@ -1,0 +1,42 @@
+{
+  "folder": "swirls_episode_10_she_loved_much",
+  "stage": "audit",
+  "generated_at": "2026-09-03T09:45:08Z",
+  "deterministic": {
+    "tag_validation": "passed",
+    "speaker_validation": "passed",
+    "roster": [
+      "jesus",
+      "simon"
+    ]
+  },
+  "round_trip": {
+    "exact_match": true,
+    "blocking": false,
+    "diff_segments": [],
+    "added_words": 0,
+    "removed_words": 0
+  },
+  "anthropic_audit": {
+    "tag_economy": "appropriate",
+    "tag_quality_overall": "good",
+    "missed_speaker_opportunities": [],
+    "tonal_mismatches": [
+      {
+        "line_excerpt": "Simon thought it, not out loud: \"This man, if he were a prophet...\"",
+        "current_tags": "[matter-of-fact][deliberate]",
+        "suggested_tags": "[matter-of-fact][deliberate]",
+        "rationale": "Beat spans three distinct registers (Simon's cold unspoken judgment, Jesus's measured parable-telling, Simon's grudging reply) under one shared tag-set; acceptable under this project's one-tag-set-per-paragraph convention, but the tag captures the parable's cadence better than Simon's flatter opening and closing lines."
+      }
+    ],
+    "concerns": [
+      "The <speaker name=\"jesus\"> block on 'Which of them will love him most?' is a short, isolated dialogue turn; per-turn synthesis renders non-narrator turns at natural (untouched) speed, so confirm this short line doesn't sound clipped or abrupt in isolation.",
+      "Three separate quotes use mid-quote ellipses to mark elided KJV clauses; confirm ElevenLabs renders '...' as a clean join rather than an audible pause/trail-off, since a hesitation reading would misrepresent these as edited, not elided, text.",
+      "Paragraph 4 is the piece's one 3-tag rhetorical peak ([reflective][deliberate][emphasized]) per the tag-economy rule reserving 3 tags for a single peak beat; confirm on listen-back that '[emphasized]' lands on the forgiveness declaration and not inadvertently on the preceding narrator aside."
+    ],
+    "model": "claude-opus-4-7",
+    "request_id": null,
+    "input_tokens": null,
+    "output_tokens": null
+  }
+}

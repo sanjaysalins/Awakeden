@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>F01 review — She Loved Much</title>
+<style>
+  body { font-family: Georgia, serif; background: #f4efe6; margin: 0; padding: 24px; color: #2a2420; }
+  h1 { font-size: 32px; margin: 0 0 4px; }
+  p.sub { font-size: 19px; color: #6b5f52; margin: 0 0 24px; }
+  .wrap { max-width: 900px; margin: 0 auto; }
+  .top { background: #fff3d6; border: 1px solid #e0c98a; border-radius: 10px; padding: 18px 22px; margin-bottom: 26px; font-size: 19px; line-height: 1.6; }
+  .top b { color: #7a3b2e; }
+  .row { display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap; }
+  .card { background: #fff; border-radius: 10px; padding: 18px; margin-bottom: 20px; }
+  .card img { width: 100%; height: auto; border: 1px solid #ccc; border-radius: 6px; display: block; cursor: zoom-in; }
+  .card p { font-size: 17px; line-height: 1.5; margin: 10px 0 0; }
+  .refs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+  .refs div { text-align: center; font-size: 14px; }
+  .refs img { width: 100%; border-radius: 6px; border: 1px solid #ccc; cursor: zoom-in; }
+  .note { background: #eef2ea; border: 1px solid #c9d6c0; border-radius: 10px; padding: 16px 20px; font-size: 17px; line-height: 1.6; margin-top: 20px; }
+  .ask { background: #f6e6e0; border: 1px solid #d9a98f; border-radius: 10px; padding: 18px 22px; font-size: 18px; line-height: 1.6; margin-top: 20px; }
+  .ask h2 { font-size: 20px; margin: 0 0 8px; color: #7a3b2e; }
+  #lightbox { display: none; position: fixed; inset: 0; background: rgba(20,15,10,0.88); z-index: 999; cursor: zoom-out; align-items: center; justify-content: center; padding: 24px; }
+  #lightbox.open { display: flex; }
+  #lightbox img { max-width: 95vw; max-height: 92vh; border-radius: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>F01 — first still, approved</h1>
+  <p class="sub">The room's establishing shot. One fix needed and made along the way.</p>
+
+  <div class="top">
+    <b>What happened:</b> first render had Jesus AND the woman both still wearing sandals — a real problem, since the whole story is about washing/kissing/anointing his bare feet. Caught it by zooming in, fixed the wording, re-rendered. Second one's clean.<br>
+    <b>Cost so far:</b> $0.14 (two renders, first one was the fix).
+  </div>
+
+  <div class="card">
+    <img src="swirls_episode_10_she_loved_much_f01_9x16.png" onclick="openZoom(this.src)">
+    <p>Click to zoom. Look at the grey-brown smudge under her feet near the door — that's the "stain" (her sin/guilt), sitting in the paper, not on her body.</p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0;">Reference crops taken from this page</h3>
+    <div class="refs">
+      <div><img src="refs/jesus_ref.png" onclick="openZoom(this.src)">Jesus (reused)</div>
+      <div><img src="refs/woman_ref.png" onclick="openZoom(this.src)">The woman</div>
+      <div><img src="refs/woman_face_ref.png" onclick="openZoom(this.src)">Her face</div>
+      <div><img src="refs/simon_ref.png" onclick="openZoom(this.src)">Simon</div>
+      <div><img src="refs/alabaster_ref.png" onclick="openZoom(this.src)">The flask</div>
+    </div>
+  </div>
+
+  <div class="note">
+    <b>Next:</b> render F02 and F03 (the weeping and the kiss) and the front cover — these are ready to go now that the refs exist. Simon's close-up face ref still needs one more page (F04) before the rest can render.
+  </div>
+
+  <div class="ask">
+    <h2>Your "stain under the jar" idea</h2>
+    <p>On this page (F01) she's still holding the sealed flask in her hands, so there's no floor spot for the stain to share with it yet. From F03 onward she sets the flask down on the floor beside her — that's the first point your idea could apply. Right now the stain sits in the paper directly under her, a little apart from where the flask ends up.</p>
+    <p>Want me to move the stain so it sits right around/under the flask's floor spot instead, from F03 on? One thing to flag: the flask is deliberately kept "clean" in the current design — the story's whole point is "not thy ointment," so if the stain touches the flask's spot, it risks looking like the ointment itself is what's tainted, which is backwards. Happy to try it either way — just want to flag that risk before I do.</p>
+  </div>
+</div>
+<div id="lightbox" onclick="this.classList.remove('open')"><img id="lightbox-img"></div>
+<script>
+function openZoom(src){document.getElementById('lightbox-img').src=src;document.getElementById('lightbox').classList.add('open');}
+</script>
+</body>
+</html>

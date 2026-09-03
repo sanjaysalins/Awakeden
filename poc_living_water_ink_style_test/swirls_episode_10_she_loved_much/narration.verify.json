@@ -1,0 +1,77 @@
+{
+  "folder": "swirls_episode_10_she_loved_much",
+  "stage": "verify",
+  "generated_at": "2026-09-03T09:43:09Z",
+  "deterministic": {
+    "char_count_after_comment_strip": 1326,
+    "char_cap": 2000,
+    "within_cap": true,
+    "non_empty": true
+  },
+  "voice_roster": {
+    "voices_json_present": true,
+    "speakers_in_roster": [
+      "jesus",
+      "narrator",
+      "simon"
+    ]
+  },
+  "anthropic_review": {
+    "coherence": "good",
+    "beat_count": 5,
+    "tonal_register": [
+      "serious",
+      "reflective",
+      "devotional",
+      "intimate"
+    ],
+    "multi_voice_candidates": [
+      {
+        "line_excerpt": "This man, if he were a prophet, would have known... for she is a sinner.",
+        "suggested_speaker": "simon",
+        "rationale": "Simon's unspoken inner judgment, explicitly framed by 'Simon thought it, not out loud'."
+      },
+      {
+        "line_excerpt": "When they had nothing to pay, he frankly forgave them both",
+        "suggested_speaker": "jesus",
+        "rationale": "Jesus telling the debtor parable to Simon."
+      },
+      {
+        "line_excerpt": "Which of them will love him most?",
+        "suggested_speaker": "jesus",
+        "rationale": "Jesus's question closing the parable, same speech as the line before it."
+      },
+      {
+        "line_excerpt": "I suppose that he, to whom he forgave most.",
+        "suggested_speaker": "simon",
+        "rationale": "Simon's hedged reply, explicitly framed by 'Simon hedged'."
+      },
+      {
+        "line_excerpt": "Seest thou this woman?",
+        "suggested_speaker": "jesus",
+        "rationale": "Jesus turning to address Simon about the woman."
+      },
+      {
+        "line_excerpt": "Her sins, which are many, are forgiven; for she loved much: but to whom little is forgiven, the same loveth little.",
+        "suggested_speaker": "jesus",
+        "rationale": "Continuation of Jesus's same speech to Simon, separated only by a narrator aside."
+      },
+      {
+        "line_excerpt": "Thy faith hath saved thee; go in peace.",
+        "suggested_speaker": "jesus",
+        "rationale": "Jesus's closing declaration spoken directly to the woman."
+      }
+    ],
+    "spoken_length_estimate_seconds": 93,
+    "concerns": [
+      "'Simon thought it, not out loud:' is immediately followed by a quoted line — an auto-tagger keying only on colon+quote may mis-tag this as spoken dialogue rather than unvoiced inner thought; the emotion/delivery tag should reflect silent thought, not speech.",
+      "Paragraph 3 has three speaker changes in one paragraph (narrator -> simon (unspoken) -> narrator -> jesus (parable) -> simon (reply)) -- tagger needs to track mid-paragraph speaker switches, not assume one speaker per paragraph.",
+      "Ellipses inside several KJV quotes mark elided clauses, not a trailing pause -- do not render them as a spoken pause/trail-off.",
+      "The woman never speaks and has no voice entry in the roster; all lines describing her actions stay in narrator voice by design, not an omission."
+    ],
+    "model": "claude-opus-4-7",
+    "request_id": null,
+    "input_tokens": null,
+    "output_tokens": null
+  }
+}

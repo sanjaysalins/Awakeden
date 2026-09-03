@@ -1,0 +1,46 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: narration
+
+LENS — judge this NARRATION on (be specific, cite the exact line/phrase):
+- Doctrinal soundness: evangelical, biblically faithful; NO invented doctrine, NO contrarian/
+  clickbait/contested readings used to chase freshness.
+- KJV verbatim: every word inside quotation marks must be exact KJV. Flag any altered word.
+- Clarity on first hearing: a listener with zero Bible knowledge must follow it; no clever-but-
+  confusing conceit, no logic trick, no self-contradiction.
+- Grace-anchored conviction: NO fear / gain-loss / self-interest / works framing; the Spirit
+  convicts, the script invites.
+- Freshness = faithful depth: surprising about the TEXT, orthodox in the claim and the landing.
+- One thread spine from hook -> middle -> CTA (no thread-swapping).
+- SCORE THE HOOK 1-10 (state the number): would a stranger stop scrolling in the first
+  ~5 seconds? A template open ("Did you know / Imagine / What if I told you") caps at 5.
+- SCORE THE LANDING 1-10 (state the number): is the closing CTA built from THIS piece's
+  own image/verb, and does it land in the bones? Ask: "could this exact final sentence
+  end a DIFFERENT piece?" If yes ("Come to Jesus", "turn to Him", "look to Jesus"), it is
+  a stock closer — cap at 5. Anything under 8 on either score = VERDICT REVISE.
+
+ADDITIONAL CONTEXT / BRIEF:
+Swirls of Life ep10, Luke 7:36-50, Stain(sin/guilt) motif. FOURTH PASS, likely final automated round -- please be direct about whether remaining issues are genuinely blocking vs. polish. Round 3's 3/5 reviewers converged on: 'whoever still carries what she carried in' reads as the alabaster box (named next sentence) not her sin. Fixed to: 'That answer holds for whoever still carries what Simon called her -- a sinner.' Also restored Simon's KJV hedge INSIDE his quote per cursor/codex: 'he, to whom he forgave most' -> 'I suppose that he, to whom he forgave most.' Also fixed claude's 'said nothing out loud' + immediate quote self-contradiction: 'Simon said nothing out loud:' -> 'Simon thought it, not out loud:'. Also front-loaded the hook's concrete triad per grok/cursor's repeated ask: now opens 'No water for his feet. No kiss. No oil. That's what Simon the Pharisee never gave Jesus at his own table. A woman he hadn't invited walked in anyway, and gave him all three.' Note: hook has scored 7/10 across 3 consecutive rounds through substantive edits -- if it's still 7 now, please say plainly whether that's a real fixable defect or the practical ceiling for this entry point without inventing a different hook concept entirely (which would be a bigger creative decision for the human producer, not a line-edit).
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block (on the VERDICT line write exactly ONE word —
+PASS or REVISE or FAIL — never the list of options):
+
+VERDICT: <PASS or REVISE or FAIL>
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+No water for his feet. No kiss. No oil. That's what Simon the Pharisee never gave Jesus at his own table. A woman he hadn't invited walked in anyway, and gave him all three.
+
+"A woman in the city, which was a sinner... brought an alabaster box of ointment, and stood at his feet behind him weeping, and began to wash his feet with tears... and kissed his feet, and anointed them with the ointment."
+
+Simon thought it, not out loud: "This man, if he were a prophet, would have known... for she is a sinner." Jesus answered anyway. A creditor had two debtors — one owed five hundred pence, one fifty. "When they had nothing to pay, he frankly forgave them both" — frankly, that's freely. "Which of them will love him most?" Simon hedged: "I suppose that he, to whom he forgave most."
+
+Jesus turned to her, and asked Simon: "Seest thou this woman?" Simon had seen the sin. Never the woman. "Her sins, which are many, are forgiven; for she loved much: but to whom little is forgiven, the same loveth little."
+
+Forgiven first — love was the receipt, not the price. He turned from the parable to her: "Thy faith hath saved thee; go in peace." Not thy tears. Not thy ointment. Thy faith. That answer holds for whoever still carries what Simon called her — a sinner. She came in carrying an alabaster box. She left carrying his peace.
+----- ARTIFACT END -----

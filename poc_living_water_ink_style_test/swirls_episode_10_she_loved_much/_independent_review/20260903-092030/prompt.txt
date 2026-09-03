@@ -1,0 +1,46 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: narration
+
+LENS — judge this NARRATION on (be specific, cite the exact line/phrase):
+- Doctrinal soundness: evangelical, biblically faithful; NO invented doctrine, NO contrarian/
+  clickbait/contested readings used to chase freshness.
+- KJV verbatim: every word inside quotation marks must be exact KJV. Flag any altered word.
+- Clarity on first hearing: a listener with zero Bible knowledge must follow it; no clever-but-
+  confusing conceit, no logic trick, no self-contradiction.
+- Grace-anchored conviction: NO fear / gain-loss / self-interest / works framing; the Spirit
+  convicts, the script invites.
+- Freshness = faithful depth: surprising about the TEXT, orthodox in the claim and the landing.
+- One thread spine from hook -> middle -> CTA (no thread-swapping).
+- SCORE THE HOOK 1-10 (state the number): would a stranger stop scrolling in the first
+  ~5 seconds? A template open ("Did you know / Imagine / What if I told you") caps at 5.
+- SCORE THE LANDING 1-10 (state the number): is the closing CTA built from THIS piece's
+  own image/verb, and does it land in the bones? Ask: "could this exact final sentence
+  end a DIFFERENT piece?" If yes ("Come to Jesus", "turn to Him", "look to Jesus"), it is
+  a stock closer — cap at 5. Anything under 8 on either score = VERDICT REVISE.
+
+ADDITIONAL CONTEXT / BRIEF:
+Swirls of Life series ep10, Luke 7:36-50, Stain(sin/guilt) motif on the woman. THIRD PASS. Round 2's 4/4 reviewers all flagged the same broken bridge sentence at the landing ('Thy faith -- still his word over whatever you walked in carrying' -- ungrammatical, thy/you pronoun collision). Fixed to: 'Not thy tears. Not thy ointment. Thy faith. Whoever still carries what she carried in gets the same answer. She came in carrying an alabaster box. She left carrying his peace.' Also softened the hook per codex's repeated (2-round) objection to 'owes'/'guest list' importing unstated debt/anachronism language: now 'Simon the Pharisee invited Jesus to dinner, and never gave him the courtesies a host gives... A woman he hadn't invited walked in anyway, and gave him all three.' And restored Simon's KJV hedge ('I suppose') tone: 'Simon knew' -> 'Simon answered carefully'. Note: NOT adopting gemini's repeated demand to lexicalize the word 'stain'/'mark' in the prose -- checked against this series' own shipped, locked episodes (e.g. episode 7's narration.md) and none of them name their visual dead-ink motif in the narration text either; it's a downstream visual-pipeline layer, not a narration requirement. Also not adding ellipses to 'Which of them will love him most?' / 'he, to whom he forgave most' per gemini's ask -- checked against episode 7's own locked, shipped narration.md, which drops leading words (e.g. 'And') from KJV quotes without a leading ellipsis marker; this is established series convention, not an error. Please confirm whether the landing fix actually resolves the grammar/pronoun problem, and give final hook/landing scores.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block (on the VERDICT line write exactly ONE word —
+PASS or REVISE or FAIL — never the list of options):
+
+VERDICT: <PASS or REVISE or FAIL>
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+Simon the Pharisee invited Jesus to dinner, and never gave him the courtesies a host gives: no water for his feet, no kiss, no oil for his head. A woman he hadn't invited walked in anyway, and gave him all three.
+
+"A woman in the city, which was a sinner... brought an alabaster box of ointment, and stood at his feet behind him weeping, and began to wash his feet with tears... and kissed his feet, and anointed them with the ointment."
+
+Simon said nothing out loud: "This man, if he were a prophet, would have known... for she is a sinner." Jesus answered anyway. A creditor had two debtors — one owed five hundred pence, one fifty. "When they had nothing to pay, he frankly forgave them both" — frankly, that's freely. "Which of them will love him most?" Simon answered carefully: "he, to whom he forgave most."
+
+Jesus turned to her, and asked Simon: "Seest thou this woman?" Simon had seen the sin. Never the woman. "Her sins, which are many, are forgiven; for she loved much: but to whom little is forgiven, the same loveth little."
+
+Forgiven first — love was the receipt, not the price. He turned from the parable to her: "Thy faith hath saved thee; go in peace." Not thy tears. Not thy ointment. Thy faith. Whoever still carries what she carried in gets the same answer. She came in carrying an alabaster box. She left carrying his peace.
+----- ARTIFACT END -----
