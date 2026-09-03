@@ -1,5 +1,99 @@
 # STATE.md — progress tracker
 
+**2026-09-03 Swirls ep10 "She Loved Much" — narration, design, stills,
+animation, score, assembly, SFX built fresh end-to-end; FULLY FINISHED +
+LOCKED, committed `fb847af`.** User picked "start a new short pick" over
+deciding posting status for the 3 already-finished episodes (deferred
+again, see RESUME.md's open item, now covering 4 episodes).
+
+Ran a new process end-to-end for the first time, at the user's explicit
+request ("can we get fable and ai panels to weigh in on this and do the
+best version we can"): a Fable creative pass on the narration draft, then
+4 rounds of the 5-CLI independent panel (`independent_review.py`) iterated
+to real convergence (2 PASS / 2 REVISE-not-blocking, recommended stopping
+there, user agreed), then voiced with `per_turn_synth.py --natural` at
+natural speed (no time-stretch), landing at 103.29s. User's own words
+after hearing it: "beutifully crafter narration and very nicely done
+11labs narration, this is the standard we should maintain, almost a north
+star for me" — now the default process for future narrations, not a
+one-off (memory `feedback_narration_process_gold_standard`).
+
+Visual design: dispatched a Fable design pass over the locked narration +
+the series' own north-star prompts, producing a full brief for 9 pages +
+2 covers (dead-ink stain-of-guilt motif carried on the woman herself,
+1 John 4:19 for the back-cover subtitle, F08 "her sins are forgiven" as
+hero). User made the visual calls via AskUserQuestion (kept Fable's
+opening-pages design, picked the verse, picked the hero page, approved
+~$2-3 stills spend) then said "the still is good, lets go ahead" after
+seeing F01 rendered.
+
+All 11 stills + 2 covers rendered via OpenArt nano-banana-pro, each
+eyeball-approved at full resolution one at a time. Recurring defect class:
+bare feet kept slipping back onto sandals for Jesus/Simon despite strong
+prompt guards, across F01/F04/F06/F09 -- required per-render vigilance,
+not a one-time fix. F04 alone needed 4 full attempts, each hitting a
+DIFFERENT defect (sandals + a spurious 4th grid panel; fixed panels but
+invented stray numbers; numbers fixed but "A MEDIUM TWO-SHOT" baked as
+literal visible text; succeeded on the 4th after dropping the shot-type
+prefix and adding explicit no-numerals/no-shot-label guards). User gave
+one piece of non-blocking quality feedback (F06 Simon "slightly off... but
+still workable") -- noted, not fixed, per the user's own framing.
+
+Animation: quoted real OpenArt/Kling pricing (~$7-10) before spending,
+user said "go ahead with animation". All 11 clips rendered via Kling 3
+Omni (OpenArt has no veo model at all, so the episode's designed veo/kling
+split was advisory only and never actually used). 3 clips needed a retry
+for genuine defects: F07 corner text ("he saw her") garbled/dissolved
+across frames, fixed with explicit pixel-identical-text language; F09
+invented the woman WALKING through the doorway when the design called for
+her holding still, fixed with explicit feet-planted language; the back
+cover's ink curl grew into a blob on attempt 1, over-corrected into
+vanishing entirely on attempt 2 (stacking negative "does not grow/spread"
+clauses backfired -- matches prior memory
+`feedback_kling_negative_clauses_backfire`), succeeded on attempt 3 with
+positive-only phrasing instead.
+
+**The one significant catch, worth remembering on every future episode**
+(new memory `feedback_animation_can_read_worse_than_still`): F03 ("and
+kissed his feet") passed still QC clean -- face hidden by hair, fully
+clothed, reverent framing, matched the design brief's own guards. The
+generative Kling ANIMATION of that exact same approved still read as NSFW
+once in motion. User caught it and named the fix himself: "F03 -- and
+kissed his feet is coming off as nsfw, can we perhaps just ken burn zoom
+in." Replaced with a $0 local ffmpeg zoompan Ken-Burns push over the
+still (same 6% zoom formula as `swirls_assemble.py`'s own `make_freeze`),
+zero hallucination risk by construction -- same fallback episode 7 already
+proved on its own equivalent fragile page. Frame-diff/text-stability
+checks do NOT catch this failure class; only actually watching the clip
+(or the user doing so) surfaces it.
+
+Score: wrote a fresh felt-piano prompt for this episode's own arc
+(`generate_score_piano.py`, modeled on ep7's proven identity), deliberately
+withheld/unresolved through her tears and the kiss (f02-f03), resolving
+only at the F08 "her sins are forgiven" declaration -- matches the
+doctrinal rule that her weeping/kiss must not read as earning forgiveness.
+
+Assembly: `swirls_episode.py ... assemble piano --score piano` -- had to
+first run `verify` and personally service all 11 Vision-audit agent-bridge
+requests (no `.audit.json` sidecars existed yet, since only manual eyeball
+QC had been done up to that point) before `SW-V2-gate` would allow
+assembly to proceed. 0 FAIL on every duration/sync gate.
+
+SFX (`build_sfx.py`): deliberately sparse, 2 layers only -- her arrival
+footsteps + a dawn ambience bed under the back cover. No `sound_library`
+asset fit "quiet reclining dinner guests" (closest match was tagged
+outdoor/jeering, wrong tone), so the interior stretch stays genuinely dry
+rather than forcing a mismatched asset in at low volume -- same "the
+words carry it" call ep8 made on its own dry stretch. Documented in the
+script's own docstring, not just here.
+
+`check_landing_hold.py`: clean. Total spend: ~$8.46 (stills + animation,
+OpenArt) + a small narration voice + one ElevenLabs Music score
+generation, both untracked in the OpenArt ledger. Full detail: memory
+`project_she_loved_much_episode_10.md`.
+
+---
+
 **2026-09-02 Swirls ep7 "The Bier He Touched" — score, assembly, SFX,
 SRT, tracker built; FULLY FINISHED + LOCKED end-to-end after three
 separate fix rounds.** Resumed from yesterday's GATE 3 "LOCKED" stop

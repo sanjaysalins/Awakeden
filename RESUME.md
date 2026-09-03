@@ -1,8 +1,75 @@
 # ══════════════════════════════════════════════════════════════════════════
-# ▶▶▶ START HERE TOMORROW (updated 2026-09-02, end of day -- user: "when
-# you come to a logical point save everything, commit everything and
-# update the handover and resume document to be picked tomorrow"). TWO
-# things going on:
+# ▶▶▶ START HERE TOMORROW (updated 2026-09-03, end of day -- user: "For now
+# save and commit everything and update the handover and resume document
+# tommorrow"). ONE thing happened today, and it changes the standing
+# open item below:
+#
+# Episode 10 "She Loved Much" (Luke 7:36-50, the sinful woman anointing
+# Jesus's feet at Simon the Pharisee's house) is now **FULLY FINISHED +
+# LOCKED end-to-end.** Committed as `fb847af`.
+#   `poc_living_water_ink_style_test/swirls_episode_10_she_loved_much/`
+#   Review page: `file:///F:/slk/PycharmProjects/JesusInTheBible/
+#   poc_living_water_ink_style_test/swirls_episode_10_she_loved_much/
+#   _FINISHED_REVIEW.html`
+#   Final file: `swirls_episode_10_she_loved_much_final_piano_sfx.mp4`
+#   (106.17s). Full detail: memory `project_she_loved_much_episode_10.md`.
+#
+# This episode ran a NEW process the user explicitly asked to keep as the
+# default going forward (memory `feedback_narration_process_gold_standard`):
+# a Fable creative pass on the narration, THEN 4 rounds of the 5-CLI
+# independent panel iterated to real convergence (not just one pass), THEN
+# voiced at natural speed with no time-stretch. User's own words: "beutifully
+# crafter narration and very nicely done 11labs narration, this is the
+# standard we should maintain, almost a north star for me." Use this
+# sequence on the next new narration by default, not just when asked.
+#
+# Visual design also went through a full Fable pass (9 pages + 2 covers,
+# dead-ink stain-of-guilt motif on the woman herself), all 11 stills +
+# covers rendered via OpenArt nano-banana-pro, all animated via Kling 3
+# Omni (OpenArt has no veo model). One real mid-build catch worth
+# remembering for every future episode (memory
+# `feedback_animation_can_read_worse_than_still`): F03 ("and kissed his
+# feet") PASSED still QC clean but the generative Kling animation of that
+# same approved still read as NSFW once in motion -- user caught it and
+# proposed the fix himself ("can we perhaps just ken burn zoom in"). Fixed
+# with a $0 ffmpeg zoompan Ken-Burns push over the still instead of a
+# regen -- same fallback already proven on ep7's F03. Don't assume a clean
+# still-QC pass guarantees a safe animated clip; budget for this fallback
+# on any reverence-critical page.
+#
+# Total spend: ~$8.46 (stills + animation) + small narration/score cost.
+# 0 FAIL on every gate, landing hold clean.
+#
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ▶▶▶ THE OPEN ITEM, NOW BIGGER: four episodes finished, locked, and
+# NONE posted anywhere. Naaman ep4 + Barrel ep5 + Bier ep7 + She Loved
+# Much ep10. Nothing in the whole Swirls-of-Life series has ever shipped.
+# This was already the single most valuable next step yesterday with
+# three episodes stacked up; today it grew to four because the user chose
+# to start a new episode instead of deciding this, again. Strongly
+# consider raising this FIRST tomorrow rather than starting a fifth
+# episode -- at minimum ask explicitly rather than defaulting to "start
+# another short."
+#
+# Also still open, unchanged: `cli_publish.py` (/publish) does NOT support
+# the Swirls-of-Life folder layout at all (only the main engine's v1/short
+# folders) -- posting copy needs either hand-written copy or a real code
+# change to `pipeline/upload_engine.py`'s `harvest_facts()`.
+#
+# Remaining short picks if a NEW episode is chosen instead: #6 Talitha
+# Cumi, #9 The Woman at the Border, #11 Where Are the Nine, #12 Ye Are Not
+# All Clean, #13 The Cross That Wasn't His, or the now-unlocked #14
+# long-form Nazareth sermon.
+#
+# No default has been chosen for you — ask the user which, don't assume.
+# ══════════════════════════════════════════════════════════════════════════
+
+# ══════════════════════════════════════════════════════════════════════════
+# ▶▶▶ (superseded by the 2026-09-03 block above) 2026-09-02, end of day --
+# user: "when you come to a logical point save everything, commit
+# everything and update the handover and resume document to be picked
+# tomorrow". TWO things going on:
 #
 # 1. Episode 7 "The Bier He Touched" (Luke 7:11-17, widow of Nain) is now
 #    **FULLY FINISHED + LOCKED end-to-end.**
