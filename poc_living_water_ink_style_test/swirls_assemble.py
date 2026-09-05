@@ -12,6 +12,7 @@ SCORE_STYLE_BANK.md).
 """
 from __future__ import annotations
 
+import json
 import subprocess
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -247,14 +248,42 @@ def make_boomerang(src: Path, out: Path, slot: float, cdur: float, work: Path, t
     run(cmd)
 
 
+def _unit_slots_from_timing_file(manifest: EpisodeManifest) -> dict[str, float] | None:
+    """OPT-IN override (SCORE_DESIGN_EARLY.md): if `unit_timing.json` exists in the
+    episode folder (written by the early-score stage from REAL per-word alignment
+    timestamps), use its per-unit `end_s - start_s` spans as slot durations instead
+    of the word-count-proportional estimate below. Absent file -> None, and every
+    caller falls back to the exact prior proportional behavior unchanged -- this
+    keeps every already-shipped episode (none of which have this file) byte-for-byte
+    identical to before. See SCORE_DESIGN_EARLY.md section on the assembler fix."""
+    path = manifest.episode_dir / "unit_timing.json"
+    if not path.exists():
+        return None
+    data = json.loads(path.read_text(encoding="utf-8"))
+    units = data.get("units", {})
+    slots: dict[str, float] = {}
+    for tag, span in units.items():
+        slots[tag] = float(span["end_s"]) - float(span["start_s"])
+    return slots
+
+
+def _unit_slot_seconds(manifest: EpisodeManifest, u: "Unit", narration_len: float,
+                        total_words: int, real_slots: dict[str, float] | None) -> float:
+    if real_slots is not None and u.tag in real_slots:
+        return real_slots[u.tag]
+    return narration_len * u.words / total_words
+
+
 def plan_units(manifest: EpisodeManifest) -> list[dict]:
-    """$0 -- word-proportional slot + native duration per unit, no rendering.
-    Used by `swirls_episode.py plan` and swirls_verify.py's freeze-hold gate."""
+    """$0 -- real-timing slot (if unit_timing.json exists) or word-proportional
+    slot, + native duration per unit, no rendering. Used by `swirls_episode.py
+    plan` and swirls_verify.py's freeze-hold gate."""
     narration_len = dur(manifest.narration)
     total_words = sum(u.words for u in manifest.units)
+    real_slots = _unit_slots_from_timing_file(manifest)
     stats = []
     for u in manifest.units:
-        slot = narration_len * u.words / total_words
+        slot = _unit_slot_seconds(manifest, u, narration_len, total_words, real_slots)
         native = dur(u.src) if u.src.exists() else None
         stats.append({"tag": u.tag, "mode": u.mode, "words": u.words, "slot": slot,
                        "native": native})
@@ -266,7 +295,12 @@ def assemble(manifest: EpisodeManifest, score_name: str, *, work_dirname: str = 
     narration_len = dur(manifest.narration)
     total_words = sum(u.words for u in manifest.units)
     total = narration_len + manifest.outro_hold
-    print(f"[plan] narration={narration_len:.2f}s total(+{manifest.outro_hold}s hold)={total:.2f}s")
+    real_slots = _unit_slots_from_timing_file(manifest)
+    if real_slots is not None:
+        print(f"[plan] narration={narration_len:.2f}s total(+{manifest.outro_hold}s hold)={total:.2f}s "
+              f"(unit_timing.json found -- using REAL alignment boundaries, not word-proportion)")
+    else:
+        print(f"[plan] narration={narration_len:.2f}s total(+{manifest.outro_hold}s hold)={total:.2f}s")
 
     work = manifest.episode_dir / work_dirname
     work.mkdir(exist_ok=True)
@@ -274,7 +308,7 @@ def assemble(manifest: EpisodeManifest, score_name: str, *, work_dirname: str = 
     held = []
     unit_stats = []
     for u in manifest.units:
-        slot = narration_len * u.words / total_words
+        slot = _unit_slot_seconds(manifest, u, narration_len, total_words, real_slots)
         cdur = dur(u.src)
         out = work / f"{u.tag}__held.mp4"
         if u.mode == "boomerang":

@@ -1,0 +1,40 @@
+{
+  "folder": "swirls_episode_11_where_are_the_nine",
+  "stage": "audit",
+  "generated_at": "2026-09-04T11:04:00Z",
+  "deterministic": {
+    "tag_validation": "passed",
+    "speaker_validation": "passed",
+    "roster": [
+      "jesus"
+    ]
+  },
+  "round_trip": {
+    "exact_match": true,
+    "blocking": false,
+    "diff_segments": [],
+    "added_words": 0,
+    "removed_words": 0
+  },
+  "anthropic_audit": {
+    "tag_economy": "appropriate",
+    "tag_quality_overall": "good",
+    "missed_speaker_opportunities": [],
+    "tonal_mismatches": [
+      {
+        "line_excerpt": "They'd stood at a distance, as their disease required, and cried out, \"Jesus, Master, have mercy on us.\"",
+        "current_tags": "[matter-of-fact]",
+        "suggested_tags": "[serious]",
+        "rationale": "The beat opens on a desperate collective cry for mercy before settling into the flat command; matter-of-fact undersells the plea, though it does fit the command line that follows in the same beat."
+      }
+    ],
+    "concerns": [
+      "The lepers' collective cry ('Jesus, Master, have mercy on us') has no roster speaker and correctly stays as narrator-delivered quoted speech; flagging only so the narrator's read doesn't flatten it relative to the attributed jesus lines.",
+      "Beat 2 carries two tonal registers (a plea, then a flat command) under one tag pair — acceptable for a 60s short, but the narrator/director should be aware the tag applies loosely across the whole beat."
+    ],
+    "model": "claude-opus-4-7",
+    "request_id": null,
+    "input_tokens": null,
+    "output_tokens": null
+  }
+}

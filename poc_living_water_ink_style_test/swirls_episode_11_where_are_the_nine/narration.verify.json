@@ -1,0 +1,57 @@
+{
+  "folder": "swirls_episode_11_where_are_the_nine",
+  "stage": "verify",
+  "generated_at": "2026-09-04T11:02:06Z",
+  "deterministic": {
+    "char_count_after_comment_strip": 1079,
+    "char_cap": 2000,
+    "within_cap": true,
+    "non_empty": true
+  },
+  "voice_roster": {
+    "voices_json_present": false,
+    "speakers_in_roster": []
+  },
+  "anthropic_review": {
+    "coherence": "good",
+    "beat_count": 6,
+    "tonal_register": [
+      "serious",
+      "reflective",
+      "devotional",
+      "earnest"
+    ],
+    "multi_voice_candidates": [
+      {
+        "line_excerpt": "Jesus, Master, have mercy on us.",
+        "suggested_speaker": "unspecified",
+        "rationale": "Spoken collectively by the ten lepers as a group, not a single named character; no individual voice to assign."
+      },
+      {
+        "line_excerpt": "Go shew yourselves unto the priests.",
+        "suggested_speaker": "jesus",
+        "rationale": "Explicitly attributed dialogue: 'He told them, ...'"
+      },
+      {
+        "line_excerpt": "Were there not ten cleansed? but where are the nine?",
+        "suggested_speaker": "jesus",
+        "rationale": "Explicitly attributed dialogue: 'Jesus asked it out loud...'"
+      },
+      {
+        "line_excerpt": "Arise, go thy way: thy faith hath made thee whole.",
+        "suggested_speaker": "jesus",
+        "rationale": "Explicitly attributed dialogue: 'he said, ...'"
+      }
+    ],
+    "spoken_length_estimate_seconds": 78,
+    "concerns": [
+      "The lepers' collective cry has no individual speaker to attribute if only narrator/jesus voices exist; narrator will need to carry it.",
+      "Archaic KJV forms ('shew') may need pronunciation checking in TTS.",
+      "Several mid-sentence embedded quotes (quote begins after a colon or em-dash) may need careful phrase-boundary handling by the auto-tagger."
+    ],
+    "model": "claude-opus-4-7",
+    "request_id": null,
+    "input_tokens": null,
+    "output_tokens": null
+  }
+}

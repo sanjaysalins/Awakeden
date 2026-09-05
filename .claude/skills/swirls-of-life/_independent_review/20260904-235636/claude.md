@@ -1,0 +1,27 @@
+# Independent review — claude (OK, 117s)
+
+That field checks out. I now have enough to write the review.
+
+VERDICT: REVISE
+
+**Findings, most important first:**
+
+1. **The plan's central technical mechanism (`composition_plan`/`music_v2` chunks) was already investigated in this repo and found not to work — the plan never mentions this.** `STATE.md` line 2562-2568 (2026-08-10, Seed of the Woman trailer score) records: *"the `composition_plan` structured format a memory described turned out to be stale/never actually built anywhere runnable — the real, working pattern is a free-text prompt (concrete musical tags, not prose) + `music_length_ms`."* Every single `generate_score*.py` in this repo (11+ files across Swirls episodes, pilots, and `pipeline/eleven_music.py`) uses `model_id: "music_v1"` + free-text `prompt` + `music_length_ms`, with zero prior working examples of `composition_plan`. Section 9 lists five open risks but omits the one piece of first-party evidence that this exact route was tried before and abandoned. This isn't a new unknown to "settle before spending" (section 9's framing) — it's a known prior failure the plan should have surfaced and explained why this attempt differs (new API version? re-tested since 2026-08-10? different endpoint?). As written, a reader would not know this history exists.
+
+2. **Section 7's smoke test is the right instinct but is sequenced after too much design investment.** Sections 1-6 (the entire mechanism, chunk boundary rules, styles-per-chunk, turning-point mapping) are fully designed before step 7.2's "2-chunk, ~8-second" smoke test ever runs. Given finding #1, the smoke test should run FIRST, before any more of this document is written or before `independent_review.py` is invoked on it — if `composition_plan` still 404s, drops chunks, or ignores `duration_ms` the way the 2026-08-10 investigation suggests, most of sections 3-6 needs a rewrite anyway.
+
+3. **Section 9.1's self-citation undercuts its own confidence.** It cites "This repo has already met 'a vocals-injecting music_v2' once (STATE.md, 2026-06-24, #31)" as the reason the smoke test is mandatory — correctly cautious — but then doesn't connect that #31 also used `music_v2` and also failed to stay on the free-text-prompt path (per STATE.md #31 context, the team ultimately swapped to a `music_library` chained bed instead of fixing the ElevenLabs Music route at all). Two independent incidents on `music_v2`-family generation in this repo, both resolved by abandoning ElevenLabs Music's structured/v2 path rather than fixing it, and the plan treats each as an isolated open question rather than a pattern.
+
+4. **8.1's assembler-mismatch is a correctly-flagged real gap, but the plan ships value with it unresolved.** The whole point of moving to real alignment timing is to make the score land precisely on page turns — but `swirls_assemble.py:257,277`'s `slot = narration_len * u.words / total_words` (confirmed real) means the pages themselves will still be up to 1.65s off from the new precise score. Section 8.1 correctly declines to fix this here ("decide it with the user"), but that means adopting this plan alone does NOT deliver the benefit it's sold on ("So the hero chord would sound ~1s before the hero page turns") — the plan should say explicitly that Phase 1 (score design) has near-zero payoff until the assembler fix ships too, rather than filing it as a downstream footnote.
+
+5. **Minor citation error:** section 9.6 calls it "the two-second early-fade quirk" and cites `reshape_music()`, but that function's own docstring (`sfx_pilots/add_music.py:48-51`, confirmed) describes the raw ElevenLabs generation crashing to near-silence "~10s early" — the "2s" in the code is the measurement window size, not the quirk's magnitude. Small, but this doc cites code precisely elsewhere and gets this one wrong.
+
+6. **Reuse is otherwise good.** Verified accurate: `pipeline/assembly_align.align()` exists and is reused correctly (section 2); `swirls_assemble.py`'s `ScoreVariant`/proportional-slot logic citations are byte-accurate; the current `generate_score_piano.py`'s `force_instrumental: True, model_id: "music_v1"` matches the "Old" column exactly; episode 11's `narration.meta.json` has `final_total_seconds` and `narrator_atempo_factor` as claimed. The plan is not sloppy about the parts of the codebase it checked — it just didn't check STATE.md for prior art on its own core mechanism.
+
+7. **Cost/spend:** appropriately gated (section 7.5, `/cost` pre-flight) and the smoke test is cheap. Not a concern once finding #1/#2 are resolved.
+
+VERDICT: REVISE
+TOP FIXES:
+1. Before anything else, re-run (or explicitly re-verify) the composition_plan/music_v2 smoke test given STATE.md's 2026-08-10 finding that this exact API shape was "stale/never actually built anywhere runnable" here — cite that entry in section 9 and explain what's different now, or abandon the plan for a free-text-prompt-with-precise-timing-cues alternative if it isn't.
+2. Move section 7's smoke test to run before finalizing sections 3-6's detailed chunk/style mechanism — don't design 10 pages of chunk semantics against an unverified API shape.
+3. Make section 8.1's assembler mismatch a blocking precondition, not a footnote — state plainly that this plan delivers ~zero user-visible benefit until `swirls_assemble.py` reads real alignment boundaries too, so both changes should be scoped/decided together.

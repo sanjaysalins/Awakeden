@@ -1,0 +1,23 @@
+{
+  "schema": "swirls-of-life/unit_timing v1",
+  "episode": "swirls_episode_11_where_are_the_nine",
+  "written": "2026-09-05",
+  "source": "narration.alignment.json (ElevenLabs forced alignment, real per-word timestamps) -- boundaries verified word-for-word against the raw alignment file before use",
+  "boundary_rule": "unit k spans [start_s of unit k's first spoken word, start_s of unit k+1's first spoken word); the last unit runs to narration_end + outro_hold",
+  "narration_seconds": 80.61,
+  "outro_hold_seconds": 3.0,
+  "units": {
+    "front": {"start_s": 0.0,    "end_s": 3.139},
+    "f01":   {"start_s": 3.139,  "end_s": 10.979},
+    "f02":   {"start_s": 10.979, "end_s": 19.18},
+    "f03":   {"start_s": 19.18,  "end_s": 25.42},
+    "f04":   {"start_s": 25.42,  "end_s": 29.939},
+    "f05":   {"start_s": 29.939, "end_s": 35.719},
+    "f06":   {"start_s": 35.719, "end_s": 41.899},
+    "f07":   {"start_s": 41.899, "end_s": 50.799},
+    "f08":   {"start_s": 50.799, "end_s": 55.319},
+    "f09":   {"start_s": 55.319, "end_s": 62.199},
+    "f10":   {"start_s": 62.199, "end_s": 74.58},
+    "back":  {"start_s": 74.58,  "end_s": 83.61}
+  }
+}

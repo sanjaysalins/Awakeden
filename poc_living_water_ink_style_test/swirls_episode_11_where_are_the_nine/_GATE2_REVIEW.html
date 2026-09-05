@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>GATE 2 review — Where Are the Nine</title>
+<style>
+  body { font-family: Georgia, serif; background: #f4efe6; margin: 0; padding: 24px; color: #2a2420; }
+  h1 { font-size: 32px; margin: 0 0 4px; }
+  p.sub { font-size: 19px; color: #6b5f52; margin: 0 0 24px; }
+  .wrap { max-width: 1000px; margin: 0 auto; }
+  .card { background: #fff; border-radius: 10px; padding: 18px; margin-bottom: 22px; }
+  .card h2 { font-size: 22px; margin: 0 0 10px; }
+  .card img { width: 100%; height: auto; border: 1px solid #ccc; border-radius: 6px; display: block; margin: 0 auto; cursor: zoom-in; }
+  .card p { font-size: 18px; line-height: 1.5; margin: 12px 0 0; }
+  .card.fixed { border: 2px solid #6a9a6a; }
+  .card p.fixnote { color: #3a6a3a; font-weight: bold; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+  .top { background: #fff3d6; border: 1px solid #e0c98a; border-radius: 10px; padding: 18px 22px; margin-bottom: 26px; font-size: 19px; line-height: 1.6; }
+  .top b { color: #7a3b2e; }
+  .note { background: #eef2ea; border: 1px solid #c9d6c0; border-radius: 10px; padding: 16px 20px; font-size: 17px; line-height: 1.6; margin-bottom: 22px; }
+  .note h2 { font-size: 20px; margin: 0 0 10px; }
+  .note ul { margin: 0; padding-left: 22px; }
+  .note li { margin-bottom: 8px; }
+  #lightbox { display: none; position: fixed; inset: 0; background: rgba(20,15,10,0.88); z-index: 999; cursor: zoom-out; align-items: center; justify-content: center; padding: 24px; }
+  #lightbox.open { display: flex; }
+  #lightbox img { max-width: 95vw; max-height: 92vh; border-radius: 6px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Episode 11 — GATE 2 (round 2)</h1>
+  <p class="sub">"Where Are the Nine" — all 12 stills fixed for consistency, and the back cover completely reimagined. Click any image to zoom.</p>
+
+  <div class="top">
+    <b>What you flagged, and what changed:</b> the Samaritan wore a different outfit almost every time he appeared (a bold diagonal sash, sometimes a headband, sometimes a vertical stripe), and "the ten" didn't read as the same group page to page. Root cause: his reference photo was cropped from an already-inconsistent early render, then dropped from some pages to fix a different bug — nothing ever locked. Fix: built one clean, plain reference photo of him from scratch (bare head, a single thin red trim on his mantle's edge, nothing else) and re-rendered all 10 interior pages and the front cover against it. The group-of-ten reference didn't chain reliably at all (even identical ref, different result) — dropped it, relying on the already-precise costume description instead.<br><br>
+    <b>Back cover:</b> completely reimagined, not just re-rendered — the close-up feet + pressed-face-in-dust concept is gone. New scene: both figures held at a clear middle distance (matching the front cover's own composition), Jesus standing still with empty hands, the Samaritan already down in a held, dignified stillness.<br><br>
+    <b>Total cost across every round so far:</b> <b>$2.96</b> — still inside the original estimate.
+  </div>
+
+  <div class="note">
+    <h2>One real trade-off worth knowing about</h2>
+    <ul>
+      <li>On the two pages where every man's mouth must be covered (F02, F03), chaining the Samaritan's face photo kept overriding the cloth and leaving his mouth bare — so on those two pages specifically, he's identified only by his red mantle-trim and general build, not an exact face match (his face is mostly hidden by the cloth anyway, so this isn't visible to a viewer). Everywhere his face IS visible (F01, F05–F10, front cover isn't a close read either), it's chained to the same clean reference.</li>
+      <li>Exact headcount on the densest group pages (F01, F02, F04) is still genuinely hard to verify by eye — worth your own count too.</li>
+    </ul>
+  </div>
+
+  <div class="grid">
+    <div class="card fixed">
+      <h2>Front cover — Where Are the Nine</h2>
+      <img src="front_cover.png" onclick="openZoom(this.src)">
+      <p class="fixnote">Unchanged from the last round — already consistent.</p>
+    </div>
+    <div class="card fixed">
+      <h2>F01 — before a single one was healed</h2>
+      <img src="swirls_episode_11_where_are_the_nine_f01_9x16.png" onclick="openZoom(this.src)">
+      <p class="fixnote">Fixed: thin edge-trim only, blended into the line — no more diagonal sash.</p>
+    </div>
+    <div class="card fixed">
+      <h2>F02 — Jesus, Master, have mercy on us</h2>
+      <img src="swirls_episode_11_where_are_the_nine_f02_9x16.png" onclick="openZoom(this.src)">
+      <p class="fixnote">Fixed: all ten mouths covered, consistent edge-trim.</p>
+    </div>
+    <div class="card fixed">
+      <h2>F03 — Go shew yourselves unto the priests</h2>
+      <img src="swirls_episode_11_where_are_the_nine_f03_9x16.png" onclick="openZoom(this.src)">
+      <p class="fixnote">Fixed: consistent edge-trim, mouths covered.</p>
+    </div>
+    <div class="card fixed">
+      <h2>F04 — as they went, they were cleansed</h2>
+      <img src="swirls_episode_11_where_are_the_nine_f04_9x16.png" onclick="openZoom(this.src)">
+      <p class="fixnote">Fixed: ten figures, no extra leader figure, consistent look.</p>
+    </div>
+    <div class="card fixed">
+      <h2>F05 — One turned back</h2>
+      <img src="swirls_episode_11_where_are_the_nine_f05_9x16.png" onclick="openZoom(this.src)">
+      <p class="fixnote">Fixed: face now closely matches the reference.</p>
+    </div>
+    <div class="card fixed">
+      <h2>F06 — giving him thanks</h2>
+      <img src="swirls_episode_11_where_are_the_nine_f06_9x16.png" onclick="openZoom(this.src)">
+      <p class="fixnote">Fixed: face closeup matches the reference.</p>
+    </div>
+    <div class="card fixed">
+      <h2>F07 — but where are the nine?</h2>
+      <img src="swirls_episode_11_where_are_the_nine_f07_9x16.png" onclick="openZoom(this.src)">
+      <p class="fixnote">Fixed: consistent with F06.</p>
+    </div>
+    <div class="card fixed">
+      <h2>F08 — save this stranger</h2>
+      <img src="swirls_episode_11_where_are_the_nine_f08_9x16.png" onclick="openZoom(this.src)">
+      <p class="fixnote">Fixed: consistent with F06/F07.</p>
+    </div>
+    <div class="card fixed">
+      <h2>F09 — HERO — thy faith hath made thee whole</h2>
+      <img src="swirls_episode_11_where_are_the_nine_f09_9x16.png" onclick="openZoom(this.src)">
+      <p class="fixnote">Re-rendered even though already approved: old version had a red headband. New version has none.</p>
+    </div>
+    <div class="card fixed">
+      <h2>F10 — Luke calls it thanks. Jesus calls it faith.</h2>
+      <img src="swirls_episode_11_where_are_the_nine_f10_9x16.png" onclick="openZoom(this.src)">
+      <p class="fixnote">Fixed: consistent look, no headband.</p>
+    </div>
+    <div class="card fixed">
+      <h2>Back cover — At his feet, not on the road (reimagined)</h2>
+      <img src="back_cover.png" onclick="openZoom(this.src)">
+      <p class="fixnote">New concept: both figures held at a middle distance, Jesus's hands empty at his sides, the Samaritan already down in a held stillness — no more close-up pressed-face device.</p>
+    </div>
+  </div>
+</div>
+<div id="lightbox" onclick="this.classList.remove('open')"><img id="lightbox-img"></div>
+<script>
+function openZoom(src){document.getElementById('lightbox-img').src=src;document.getElementById('lightbox').classList.add('open');}
+</script>
+</body>
+</html>

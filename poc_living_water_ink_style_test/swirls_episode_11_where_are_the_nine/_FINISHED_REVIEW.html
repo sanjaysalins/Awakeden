@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Finished — Where Are the Nine</title>
+<style>
+  body { font-family: Georgia, serif; background: #f4efe6; margin: 0; padding: 24px; color: #2a2420; }
+  h1 { font-size: 32px; margin: 0 0 4px; }
+  p.sub { font-size: 19px; color: #6b5f52; margin: 0 0 24px; }
+  .wrap { max-width: 700px; margin: 0 auto; }
+  .top { background: #fff3d6; border: 1px solid #e0c98a; border-radius: 10px; padding: 18px 22px; margin-bottom: 26px; font-size: 19px; line-height: 1.6; }
+  .top b { color: #7a3b2e; }
+  .card { background: #fff; border-radius: 10px; padding: 18px; margin-bottom: 22px; }
+  .card video { width: 100%; height: auto; border-radius: 6px; display: block; background: #000; }
+  .note { background: #eef2ea; border: 1px solid #c9d6c0; border-radius: 10px; padding: 16px 20px; font-size: 17px; line-height: 1.6; margin-bottom: 22px; }
+  .note h2 { font-size: 20px; margin: 0 0 10px; }
+  .note ul { margin: 0; padding-left: 22px; }
+  .note li { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Episode 11 — finished</h1>
+  <p class="sub">"Where Are the Nine" (Luke 17:11-19). 83.61s, score + SFX mixed in.</p>
+
+  <div class="card">
+    <video controls src="swirls_episode_11_where_are_the_nine_final_piano_sfx.mp4"></video>
+  </div>
+
+  <div class="top">
+    <b>Total spend:</b> ~$14.51 (stills + a real consistency-fix pass + covers + animation + score, incl. one score regeneration), all logged to the ledger. Higher than a typical episode because four real defects were caught and fixed rather than shipped: cast consistency across the group/Samaritan, a chest-hole animation defect on F02, the Samaritan visibly standing up by the end of the back-cover clip, and a broken score-timing mechanism caught by the independent panel before it shipped (see below).<br>
+    <b>Gates:</b> 0 FAIL — all 12 stills passed their content audit, all duration/sync checks passed, final duration matches (83.57s), landing hold clean.<br>
+    <b>One known, accepted imperfection:</b> the new real-timestamp score timing exposed a separate limitation — "freeze" mode can pad a short clip but never trim a long one, and 3 clips (front, F08, F09) are very slightly longer than their new tighter real-time slots, so the hero page now starts about 1.35s later than its resolution chord. The user watched/heard the finished cut and called it fine — locked as-is rather than spending on 3 more small re-renders to close that gap.<br>
+    <b>Status: LOCKED, finished end-to-end, not yet posted anywhere.</b>
+  </div>
+
+  <div class="note">
+    <h2>What this build covered</h2>
+    <ul>
+      <li>Narration: drafted, Fable pass, then 7 rounds of the 5-CLI panel to real convergence on a genuinely hard doctrinal question (the ending had to land on "gift vs. Giver," not a "cleansed vs. whole" two-tier reading) — locked, voiced at natural speed (80.61s, no time-stretch).</li>
+      <li>10 pages + 2 covers designed by Fable, solving two hard problems: showing the healing itself with Jesus off-page (a single ink thread stands in for his word), and keeping the nine-vs-one ending from reading as "the nine got less."</li>
+      <li>Real consistency defect caught after first review: the Samaritan wore a different outfit almost every page, and "the ten" didn't read as the same group. Fixed with one clean reference image and a full re-render pass across all affected pages.</li>
+      <li>Back cover rejected outright and completely reimagined (a pressed-face-in-dust device read as death, not welcome) — replaced with Jesus standing, the Samaritan already reverent at his feet, the road empty behind.</li>
+      <li>All 12 clips animated (PixVerse V6 primary, Kling-3-Omni fallback per the user's own call after a real bake-off) — 7 passed first try, 4 needed the fallback, 1 (F03) never animated cleanly after 4 attempts and ships as a static hold.</li>
+      <li>A real defect caught by the user's own eye after GATE 3 approval: F02's panel 2 developed a dark hole on the man's chest mid-clip. Took 2 more attempts (a different failure each time) before a clean fix landed.</li>
+      <li>A second real defect caught on my own final check of the assembled cut (after this episode had already been assembled and called finished once): the back cover's animation showed the Samaritan visibly rising from prostrate to standing over its own 6 seconds — directly contradicting the design and the caption's own meaning ("at his feet"). PixVerse's retry improved it but still drifted; Kling's retry held the pose pixel-for-pixel from first frame to last. Re-assembled and re-SFX'd on the corrected clip.</li>
+      <li>Felt-piano score written fresh for this episode's own arc — a small honest opening at the free universal cleansing (f04), held back again through the fork and the question, resolving only at the personal encounter (f09).</li>
+      <li>User asked to move score design early (right after narration locks) and use ElevenLabs' precise timed-composition feature. Fable designed it; the 5-CLI panel found the specific mechanism (a structured "composition plan") is a confirmed dead end in this exact project — tried twice before, never worked, once injected vocals — verified directly against this repo's own history. Corrected to the proven mechanism (a free-text prompt, same as always) but with every timing cue now a REAL per-word timestamp instead of a word-count guess. Also fixed <code>swirls_assemble.py</code> (backward-compatible, opt-in) so the video itself now cuts at those same real timestamps — the hero's resolution chord and the video's own page-turn now land within a fraction of a second of each other, instead of ~1s apart as before. Regenerated the score and rebuilt the assembly + SFX on the corrected timing.</li>
+      <li>SFX: a continuous desert wind carries the whole outdoor wilderness setting, footsteps mark the one stretch where the text has the company actually walking, dawn ambience under the back cover.</li>
+    </ul>
+  </div>
+
+  <div class="note">
+    <h2>Still open</h2>
+    <p>Not posted anywhere yet. Episodes 4, 5, 7, and 10 are also finished and unposted — five episodes now stacked up with nothing shipped.</p>
+  </div>
+</div>
+</body>
+</html>

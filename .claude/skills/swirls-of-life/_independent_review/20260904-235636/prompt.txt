@@ -1,0 +1,355 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: plan
+
+LENS — judge this PLAN on (be specific, cite the exact step/claim):
+- Feasibility against the real codebase / tools (does it assume things that exist?).
+- Hidden risks, false assumptions, single points of failure.
+- Over-engineering / premature building before the idea is proven.
+- Missing steps, edge cases, or verification gaps.
+- Reuse: does it duplicate tools that already exist instead of reusing them?
+- Cost / spend and whether it's justified.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block (on the VERDICT line write exactly ONE word —
+PASS or REVISE or FAIL — never the list of options):
+
+VERDICT: <PASS or REVISE or FAIL>
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# SCORE_DESIGN_EARLY — score the narration, not the video
+
+Proposed 2026-09-04. **Status: DESIGN, not yet run for real.** Nothing here has
+spent money or rendered audio. Before it becomes the standing process it needs
+(a) the open questions in section 9 answered, (b) one cheap smoke test
+(section 7), and (c) `independent_review.py --type plan` — this is a new
+pipeline stage, so the repo's own rule applies.
+
+## 1. What changes, in one breath
+
+Today the score is the LAST thing built. `generate_score_piano.py` (one per
+episode) sends ONE prose prompt to ElevenLabs Music with cues like "around
+eighteen seconds in the piano goes plainer..." — timings guessed from word
+counts, after the stills and clips already exist.
+
+New: the score is designed **right after the narration locks and the audio is
+approved**, from the narration's REAL word timestamps, as an ElevenLabs
+**composition plan** — an ordered list of sections, each with an exact
+`duration_ms`. The musical identity and the per-episode arc reasoning do not
+change. Only two things change: the MECHANISM (timed chunks instead of one
+approximate prompt) and WHEN (before visual design, not after assembly).
+
+## 2. Where it sits in the pipeline
+
+```
+/narrate  → narration.md LOCKED (5-CLI panel to convergence)
+/voice    → narration.mp3 + narration.meta.json (per_turn_synth, natural speed)
+             + narration.alignment.json (build_srt.py, ElevenLabs forced alignment)
+          → HUMAN GATE 1: audio approved by ear
+SCORE DESIGN (this doc)  ← NEW POSITION
+          → score_composition_plan.json + score_piano_raw.mp3 + score_piano.mp3
+Fable design brief (_DESIGN_BRIEF.md)   ← should now RECEIVE the score arc (section 8)
+stills → animation → assemble → sfx → srt / tracker
+```
+
+Alignment timing note: `narration.alignment.json` is written by
+`pipeline/assembly_align.align()` (ElevenLabs forced alignment, cached,
+idempotent). Today the only caller is `build_srt.py`, which runs at the END
+of the chain. This stage needs that same call run **right after /voice** —
+same function, same cache file, no new code; the later srt step then reuses
+the cache for free.
+
+Hard precondition: narration text AND audio are locked. A re-synth changes
+every timestamp. The plan file carries sha256 of `narration.md`,
+`narration.mp3` and `narration.alignment.json`; if any hash differs at render
+time, the plan is stale — rebuild it, do not render it.
+
+## 3. Inputs
+
+| Input | File | What it gives |
+|---|---|---|
+| Locked narration | `narration.md` / `narration-tagged.md` / `voices.json` | the words, the narrator/jesus turn structure |
+| Audio facts | `narration.meta.json` | `final_total_seconds`, atempo factor (must be natural speed, per the gold-standard memory) |
+| Real timing | `narration.alignment.json` | `words[]` with `start`/`end` per token (space tokens and punctuation-only tokens like the em-dash included — drop them) |
+| Unit table | authored here, FIRST | one row per page: tag, exact contiguous narration text, word count. The same table `_DESIGN_BRIEF.md` section 1 later uses — write it once, here |
+| Series identity | section 5 below | felt piano, locked on ep8 ("perhaps the best north star score"), evolved ep4/5/7/10/11 |
+| Episode arc | authored here | what each unit's music MEANS (the turning-moment reasoning the old script kept in its docstring) |
+
+Who authors: Sonnet, by the global rule (Fable only for a major design
+decision). The identity is already Fable's (ep8) and is locked; a normal
+episode's arc is an evolution of the previous episode's, near-verbatim, not a
+rewrite (`feedback_fable_prompt_rewrite_dilutes_proven_direction`).
+
+## 4. Outputs
+
+| File | What |
+|---|---|
+| `score_composition_plan.json` | the plan: `request` (the exact POST body) + `fit` + `derivation` + `provenance` |
+| `score_piano_raw.mp3` | the untrimmed API output |
+| `score_piano.mp3` | fitted: trimmed to narration + 3.0s hold, 1.0s fade-in, 2.0s fade-out — the SAME name and length contract `episode.py`'s `ScoreVariant` already consumes. Nothing downstream changes |
+
+Plan file shape (episode 11's is the worked example):
+
+```
+{
+  "request": {                      # POST this object verbatim to /v1/music
+    "model_id": "music_v2",
+    "composition_plan": { "chunks": [ {text, duration_ms, positive_styles,
+                                       negative_styles, context_adherence}, ... ] }
+  },
+  "fit":        { narration_seconds, outro_hold_seconds, fitted_seconds,
+                  outro_margin_seconds, generated_seconds, ffmpeg },
+  "derivation": { boundary_rule, unit_word_counts, strings_enter_at,
+                  hero_resolution_chunk, chunks: [per-chunk word/time facts] },
+  "provenance": { sha256 of narration.md / .mp3 / .alignment.json }
+}
+```
+
+## 5. The locked identity (unchanged — restated so it lands on every chunk)
+
+- Intimate modern-classical **felt piano**, slow, rubato, ~60 bpm. ONE small
+  motif carries the whole piece. Sparse. Long pedal decays. Real silence
+  between phrases.
+- **Never:** drums, percussion, bassline, anything rhythmic, a big swell, a
+  crescendo, a peak.
+- **Strings:** enter only AFTER the piece's true resolution, one section at a
+  time (violas → muted violins → low cellos), and only ever widen and warm —
+  far behind the piano, never a peak.
+- Clean, airy mix, generous headroom, everything soft and underneath.
+- Mixing: the piano/duck profile is episode-tuned and measured, never
+  inherited (`project_swirls_score_duck_is_track_specific`).
+
+Not this: `SCORE_STYLE_BANK.md`'s dream-trance/groove bank — that was the
+Jacob's Ladder pilot's direction, superseded for mainline episodes.
+
+## 6. The mechanism — narration beats → timed chunks
+
+### 6.1 Unit table
+One row per page in reading order (front, F01..F10, back for a 10-page
+episode). Each row: tag, the exact contiguous narration text, word count.
+Word counts must sum to the narration's total. This is the ONE beat map for
+the episode; the design brief reuses it.
+
+### 6.2 Boundaries from the alignment
+Load `narration.alignment.json` → `words[]`. Keep only tokens with at least
+one letter/digit (drops spaces and the em-dash tokens). Walk the unit word
+counts through that list. For each unit record its first spoken word's
+`start` and last spoken word's `end`.
+
+**Boundary rule:** chunk k starts at the START of unit k's first spoken word.
+Chunk 1 starts at 0.000 (not at the first word — the file starts at zero).
+The last chunk runs to `narration_end + 3.0s hold + 2.5s margin`. The margin
+is trimmed by the fitted fade, exactly as today — the rendered output contract
+does not change.
+
+Why first-word start and not the silence before it: it is the same event a
+page turn should key to (a page begins when its text begins), and it is
+unambiguous. A per-chunk lead (music moves a few hundred ms before the word)
+is a possible later refinement — not in v1.
+
+### 6.3 Chunk count
+One chunk per unit. A 10-page episode = 12 chunks; the series runs ~8–14.
+The API cap is 30 — never a constraint here.
+
+- A unit shorter than **3,000 ms** cannot be its own chunk (API minimum).
+  Merge it into its neighbour and carry its direction as a second clause in
+  that chunk's `{...}`. Episode 11's front cover is 3,139 ms — 139 ms clear.
+  Check this on every episode.
+- Do not split a unit into sub-chunks unless a real musical event needs its
+  own boundary AND both halves are ≥ 3,000 ms. (Section 9 has the one case
+  where this matters.)
+
+### 6.4 The `text` field — direction only, never bare prose
+Format, every chunk:
+
+```
+[F04 - cleansed as they went]
+{on the first beat one gentle warmer interval is struck and left to ring ... }
+```
+
+- Line 1: a bracketed section label (the unit tag + a 3–7 word gloss).
+- Line 2: ONE `{...}` block holding the whole musical direction.
+- **No bare text.** The docs say the model writes lyrics when none are given
+  and treats braces as directions, brackets as labels. Anything outside those
+  is a lyric candidate. This series has no lyrics, ever.
+- The direction wording is the validated prose prompt's own wording, cut at
+  the unit boundaries — near-verbatim, per the memory. Each unit gets its own
+  clause even where the old prompt merged two (ep11's old prompt merged
+  F01+F02 into one "around three seconds" cue; the plan gives them each their
+  own — same meaning, more precise).
+
+### 6.5 Styles — the identity on EVERY chunk so it cannot drift
+Chunks are independent sections. A rule stated once (in chunk 1) is not a
+rule in chunk 7. So:
+
+- `positive_styles` on every chunk = the identity base (`felt piano`, `solo
+  piano`, `intimate`, `modern classical`, `sparse`, `rubato`, `slow 60 bpm`,
+  `long pedal decay`, `instrumental`) + 3–5 mood tags for that unit.
+- `negative_styles` on every chunk = the vocals family (`vocals`, `lyrics`,
+  `singing`, `choir`, `humming`) + the rhythm family (`drums`, `percussion`,
+  `bassline`, `beat`) + the wrong-palette family (`synth`, `pads`, `guitar`,
+  `electronic`) + the swell family (`big swell`, `crescendo`, `epic`).
+- **The strings gate is encoded per chunk:** every chunk BEFORE the strings
+  entry carries `strings`, `orchestra`, `cello`, `violin` in
+  `negative_styles`. From the entry chunk on, those flip to
+  `positive_styles` (`soft strings underneath`, `violas`, `muted violins`,
+  `low cellos`, `sustained warm string tones`, `widening harmony`, `strings
+  far behind the piano`) and the negatives become the cap (`soaring
+  strings`, `string swell`, `string peak`, `tremolo strings`).
+- Keep the lists short-ish (the cookbook suggests ~6–7 styles set the tone in
+  early chunks; the cap is 50). Mood tags, not sentences.
+- `context_adherence`: `high` on every chunk — one motif runs through the
+  whole piece. Lowering it on the resolution chunk is a knob if a render's
+  turn is too subtle, not a default.
+
+### 6.6 Turning points → specific chunks (the project's own rules, mapped)
+- **Hero = gospel pivot = the resolution chunk.** The unit that carries
+  Christ's own word is the ONLY chunk whose direction says "resolves". Its
+  first beat is the chord. Every chunk before it says `unresolved` /
+  `withheld` in both text and tags.
+- **A gift that is not yet the turn** (ep11's F04 cleansing, ep10's two
+  tender pages) gets a brief opening INSIDE its chunk that draws back before
+  the chunk ends — never a resolution, never strings.
+- **Strings enter in the chunk AFTER the resolution chunk**, never in it
+  (the resolution chunk's own text says `piano alone, no strings yet`).
+- **The back cover / landing** = the motif slowest and simplest, over the
+  string glow, fading to silence — still no peak.
+
+### 6.7 The request
+`POST https://api.elevenlabs.io/v1/music` with `Accept: audio/mpeg` and the
+plan's `request` object. Differences from the current script, all required
+by the API:
+
+| Field | Old (prompt) | New (composition plan) |
+|---|---|---|
+| `prompt` | the prose | **absent** (mutually exclusive with `composition_plan`) |
+| `music_length_ms` | narration + 5.5s | **absent** — total = sum of chunk `duration_ms` |
+| `model_id` | `music_v1` | `music_v2` (the chunks variant requires it) |
+| `force_instrumental` | `true` | **not allowed** with a plan — instrumental is enforced only by `negative_styles` + no lyrics (see section 9) |
+| `seed` | — | allowed; pin one when re-rendering a near-identical plan |
+
+Then the fit step, unchanged: `ffmpeg -af afade=in 1.0s, afade=out 2.0s
+-t <narration+3.0>` → `score_piano.mp3`.
+
+## 7. Verification (in order, cheapest first)
+
+1. **$0 plan lint** (the derivation script asserts these): word counts sum to
+   the narration's; chunk durations sum to `generated_seconds`; every chunk
+   3,000–120,000 ms; ≤ 30 chunks; ≤ 50 styles per list; every `text` body is
+   one `{...}` block after one `[label]` line; identity base present on every
+   chunk; `strings` negatives on every pre-entry chunk; provenance hashes
+   match the files on disk.
+2. **One cheap smoke test before the first real episode:** a 2-chunk,
+   ~8-second plan with the same style lists. Listen for vocals/humming and
+   for drums. If either appears, the composition-plan route is not usable
+   for this series until a fix is found — stop, do not scale.
+3. **After the full render, $0 measurement:** ffprobe length equals the
+   plan's `generated_seconds` ± 0.3s; an RMS/novelty sweep shows the
+   resolution chord within ± 0.5s of the hero chunk's start and the strings'
+   first entry no earlier than the entry chunk's start. Measure — do not eye
+   a waveform (`feedback_animation_motion_check_by_pixel_diff` discipline,
+   audio version).
+4. **Ear check by the user** (the real gate). Then the episode-tuned duck,
+   measured at several timestamps (`feedback_groove_score_needs_looser_duck`).
+5. `/cost` pre-flight and ledger entry, as for every metered call.
+
+## 8. Downstream consequences (not solved here — flagged)
+
+**8.1 The assembler cuts pages at word-count proportions, not real time.**
+`swirls_assemble.py` (`slot = narration_len * u.words / total_words`, lines
+257 and 277) places each page by word weight. The score now moves at REAL
+word boundaries. For episode 11 the two disagree by up to 1.7s:
+
+| Page turn | proportional (assembler) | real (alignment) | delta |
+|---|---|---|---|
+| F03 | 18.36 | 19.18 | +0.82 |
+| F06 | 35.12 | 35.72 | +0.60 |
+| F09 hero | 56.27 | 55.32 | −0.95 |
+| F10 strings | 63.85 | 62.20 | **−1.65** |
+| back | 73.03 | 74.58 | +1.55 |
+
+So the hero chord would sound ~1s before the hero page turns, and the strings
+~1.7s before F10 appears. A precisely-timed score buys nothing unless the
+pages cut at the same times. **Recommendation:** the assembler should read
+the same unit boundaries (from the plan's `derivation.chunks`, or a shared
+`unit_timing.json` written by this stage) instead of recomputing proportions.
+That is a separate `swirls_assemble.py` change — decide it with the user, do
+not silently accept the mismatch and do not fudge the plan toward the
+proportional numbers.
+
+**8.2 The visual design brief should now receive the score.** Today
+`_DESIGN_BRIEF.md` never mentions music (ep11's brief: zero hits for
+score/music/piano). With the score designed first, the Fable stills/animation
+pass should be handed, per unit: the chunk's direction, whether it is
+`unresolved` / `brief opening` / `resolution` / `strings`, and the exact
+boundary times. Whether that changes page pacing, motif dosage, or the
+freeze/boomerang choices is an **open design question for
+`/swirls-of-life` Step 0** — not redesigned here.
+
+**8.3 Unchanged:** `build_sfx.py`, the duck profile workflow, `episode.py`'s
+`ScoreVariant` path and the `score_piano.mp3` length contract.
+
+## 9. Open questions and risks — settle before spending
+
+1. **Instrumental cannot be forced.** `force_instrumental` is prompt-only.
+   The docs say to put `vocals` in `negative_styles` and give no lyrics; they
+   also say the model writes its own lyrics when none are given. This repo
+   has already met "a vocals-injecting music_v2" once (STATE.md, 2026-06-24,
+   #31). Section 7 step 2's smoke test is mandatory, not optional.
+2. **Duration enforcement on `music_v2` is asserted by the docs, not yet
+   measured by us.** `respect_sections_durations` applies to `music_v1`'s
+   sections variant only; the docs say v2 chunk durations are always
+   enforced. Verify with section 7 step 3 on the first real render.
+3. **Where exactly does the resolution land?** The plan puts the chord at the
+   F09 page turn (55.32s, "To the one still on his face, he said,") — the same
+   event the old prompt's "around fifty-six seconds" pointed at. Christ's own
+   word "Arise" is spoken at 57.90s, 2.6s later. Landing the chord ON "Arise"
+   is arguably more precise doctrinally, but the narrator lead-in is only
+   2.58s — under the 3,000 ms chunk minimum — so it would mean merging that
+   lead-in into F08's stillness chunk. This is a real choice the new precision
+   exposes for the first time. User's call; the shipped plan keeps the page
+   turn.
+4. **Text-field semantics.** Bracket labels and brace directions are
+   documented; whether a long `{...}` direction is honoured as fully as a
+   short one is not. If a render ignores the inside-chunk shape (F04's
+   "brighten then draw back"), shorten the direction to its first clause and
+   move the rest into style tags.
+5. **Billing.** Assumed to be per second of output like the prompt route;
+   not confirmed for the plan route. Check the ledger after the smoke test.
+6. **The two-second early-fade quirk** (`sfx_pilots/add_music.py`'s
+   `reshape_music()` exists because of it) may or may not appear on v2 plans.
+   The 2.5s margin + our own fade covers a mild case; a severe one needs the
+   reshape.
+7. **Panel review.** A new pipeline stage → `independent_review.py --type
+   plan` on this document before adoption.
+
+## 10. Episode 11, applied retroactively (the worked example)
+
+`poc_living_water_ink_style_test/swirls_episode_11_where_are_the_nine/score_composition_plan.json`
+— derived from the real alignment, DESIGN ONLY (the shipped `score_piano.mp3`
+still comes from the single-prompt script; nothing was re-rendered).
+
+| # | Unit | Start → end (s) | ms | Music |
+|---|---|---|---|---|
+| 1 | front | 0.000 → 3.139 | 3,139 | spare, cool, unresolved motif — sent before healed |
+| 2 | F01 | 3.139 → 10.979 | 7,840 | quickens slightly, quiet urgency, nothing given |
+| 3 | F02 | 10.979 → 19.180 | 8,201 | the cry — plaintive, reaching, unanswered |
+| 4 | F03 | 19.180 → 25.420 | 6,240 | plainer, shorter phrases — obeyed without proof |
+| 5 | F04 | 25.420 → 29.939 | 4,519 | one warm interval rings, then draws back — the gift, not the turn |
+| 6 | F05 | 29.939 → 35.719 | 5,780 | the fork — split attention, lingering |
+| 7 | F06 | 35.719 → 41.899 | 6,180 | private tenderness, aching, incomplete |
+| 8 | F07 | 41.899 → 50.799 | 8,900 | one long held tone — the question hangs |
+| 9 | F08 | 50.799 → 55.319 | 4,520 | stillness continues — a name almost spoken |
+| 10 | **F09 hero** | 55.319 → 62.199 | 6,880 | **the resolution** — one warm chord, motif steadied, piano alone |
+| 11 | F10 | 62.199 → 74.580 | 12,381 | **strings enter** — violas, violins, cellos, widening, no swell |
+| 12 | back | 74.580 → 86.109 | 11,529 | slowest, simplest, over the string glow, fades (fitted end 83.609) |
+
+Total 86,109 ms generated → trimmed to 83.609 s (80.609 narration + 3.0 hold).
+Every boundary is a real first-word start from `narration.alignment.json`.
+The old script's guesses were off by up to 1.65s at the strings entry.
+----- ARTIFACT END -----
