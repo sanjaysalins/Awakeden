@@ -1,5 +1,76 @@
 # STATE.md — progress tracker
 
+**2026-09-05 Swirls ep11 "Where Are the Nine" (Luke 17:11-19, ten lepers) —
+narration, design, stills, animation, score, assembly, SFX built fresh
+end-to-end; FULLY FINISHED + LOCKED, committed `4ef997a`.** User picked a new
+episode over deciding posting status again (now 5 episodes stacked up
+unposted: Naaman ep4, Barrel ep5, Bier ep7, She Loved Much ep10, this one).
+
+Narration took 7 rounds of the 5-CLI panel — the hardest doctrinal knot yet.
+Every attempt to contrast "cleansed" (all ten) vs. "whole" (the one who
+returned) as two prize tiers got flagged as a contested works-adjacent
+two-tier doctrine, no matter the wording. Fable's synthesis (after I
+explicitly asked Fable + the panel to resolve the FORK itself, not just
+re-score drafts) broke it: name the act with the text's own two words
+instead — "Luke calls it thanks. Jesus calls it faith." — landing on Jesus
+without ever touching the contested comparison. New memory:
+`feedback_synthesize_via_fable_panel_before_asking_user`.
+
+Fable's visual design solved two hard problems: (1) the actual cleansing
+happens with Jesus off-page ("as they went, they were cleansed") — fixed
+with a single blue ink thread standing in for his spoken word, never his
+body; (2) keeping the nine-vs-one ending from reading as "the nine got
+less" — the stain (the gift) clears identically for all ten before anyone
+responds; the swirl (the Giver) only ever anchors to Jesus's own hand.
+
+Four real defects caught and fixed rather than shipped, each a genuine
+lesson:
+- **Cast inconsistency** (user's own catch): the Samaritan wore a visibly
+  different outfit almost every page (sash vs. headband vs. plain band) and
+  "the ten" didn't read as one group. Root cause: his reference photo was
+  cropped from an already-inconsistent early render, then inconsistently
+  dropped/chained across pages while fixing a DIFFERENT bug (an
+  over-prominent "leader figure"). Fixed with one clean, text-only-derived
+  reference, re-rendered across all affected pages.
+- **F02 chest-hole** (user's own catch, post-GATE-3): an animation
+  instruction to let a torn garment's "frayed edge stir faintly" caused a
+  dark hole to develop on the man's chest mid-clip. Took 3 attempts (2 real,
+  different failures) before a fix held.
+- **Back-cover rising** (my own catch, on a self-review pass AFTER the
+  episode had already been assembled and called finished once): the
+  Samaritan visibly stood up from prostrate to standing over the clip's own
+  6 seconds, contradicting the design and undercutting the title's own
+  meaning ("at his feet") right as it loops. My earlier QC had only sampled
+  early/mid frames — new memory `feedback_animation_full_clip_check_not_sample`
+  (always diff the literal first vs. last frame on any "must stay static"
+  clip, not percentage-based samples).
+- **Broken score mechanism** (independent-panel catch): user asked to move
+  score design early (right after narration lock) using ElevenLabs' precise
+  timed-composition feature. Fable designed a real plan using
+  `composition_plan`/`music_v2` — the panel found (and I verified directly
+  against this file) that this exact mechanism was already tried twice in
+  this project and failed both times (2026-08-10, 2026-06-24 below). Fixed:
+  same "design early from real per-word timestamps" idea, but expressed as
+  a normal free-text prompt (the proven mechanism), plus a
+  backward-compatible opt-in fix to `swirls_assemble.py` so real timestamps
+  drive page-turn slots too — new `.claude/skills/swirls-of-life/
+  SCORE_DESIGN_EARLY.md`, new memory `feedback_score_design_early_validated`.
+  One residual, accepted imperfection: "freeze" mode can't trim a clip
+  longer than its slot, so 3 clips (front/F08/F09) run slightly over their
+  new tighter real-time slots and the drift compounds — the hero page now
+  starts ~1.35s after its own resolution chord. User watched/heard it,
+  called it fine, locked as-is rather than spending on 3 small re-renders.
+
+PixVerse V6 vs. Kling-3-Omni bake-off run mid-episode (user's own ask,
+"perhaps do a bake-off"): PixVerse cheaper (~14% at matching 1080p/pro) but
+failed 4/4 real attempts on any fuller composition (invented walking motion,
+global color drift) — only succeeded on genuinely static poses. Kept as
+primary per the user's own call anyway, Kling as fallback; this is now the
+per-clip pattern other Swirls episodes should expect too.
+
+~$14.51 total spend, 0 FAIL gates. Full detail: memory
+`project_where_are_the_nine_episode_11`.
+
 **2026-09-03 Swirls ep10 "She Loved Much" — narration, design, stills,
 animation, score, assembly, SFX built fresh end-to-end; FULLY FINISHED +
 LOCKED, committed `fb847af`.** User picked "start a new short pick" over

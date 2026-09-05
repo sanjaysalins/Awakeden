@@ -1,5 +1,86 @@
 # ══════════════════════════════════════════════════════════════════════════
-# ▶▶▶ START HERE TOMORROW (updated 2026-09-03, end of day -- user: "For now
+# ▶▶▶ START HERE TOMORROW (updated 2026-09-05, end of day -- user: "lets
+# close for the night and commit and save everything and update the resume
+# to be picked tommorrow"). Episode 11 is locked; the open item below is now
+# FIVE episodes deep. Read this whole block before picking up.
+#
+# Episode 11 "Where Are the Nine" (Luke 17:11-19, the ten lepers, one -- a
+# Samaritan -- returns) is now **FULLY FINISHED + LOCKED end-to-end.**
+# Committed `4ef997a`.
+#   `poc_living_water_ink_style_test/swirls_episode_11_where_are_the_nine/`
+#   Review page: `file:///F:/slk/PycharmProjects/JesusInTheBible/
+#   poc_living_water_ink_style_test/swirls_episode_11_where_are_the_nine/
+#   _FINISHED_REVIEW.html`
+#   Final file: `swirls_episode_11_where_are_the_nine_final_piano_sfx.mp4`
+#   (83.57s). Full detail: memory `project_where_are_the_nine_episode_11.md`.
+#
+# This was the hardest narration yet -- 7 rounds of the 5-CLI panel. The
+# fix that broke the deadlock was asking Fable + the panel to resolve the
+# FORK itself (not just re-score another draft) -- see memory
+# `feedback_synthesize_via_fable_panel_before_asking_user.md`. Worth doing
+# again immediately, not as a last resort, whenever review rounds start
+# oscillating instead of converging.
+#
+# Four real defects were caught and fixed rather than shipped, each with its
+# own lesson now in memory: cast-consistency drift on the stills (a
+# contaminated reference photo silently re-drifted across pages), a
+# chest-hole animation defect on F02, the Samaritan visibly standing up by
+# the END of the back-cover clip (my own QC had only sampled early/mid
+# frames -- see `feedback_animation_full_clip_check_not_sample.md`, now
+# always diff literal first-vs-last frame on any "must stay static" clip),
+# and a broken ElevenLabs `composition_plan`/`music_v2` score mechanism the
+# panel caught before it shipped (confirmed dead-end, tried twice before in
+# this exact project -- see `feedback_score_design_early_validated.md`).
+#
+# NEW STANDING PROCESS this session: score composition now designs EARLY,
+# right after narration locks, from REAL per-word alignment timestamps
+# instead of word-count-proportional guesses -- `.claude/skills/
+# swirls-of-life/SCORE_DESIGN_EARLY.md`. Use this on the NEXT new episode by
+# default. `swirls_assemble.py` also gained a backward-compatible opt-in
+# (`unit_timing.json`) so real timestamps drive video page-turns too, not
+# just the score -- absent file = unchanged behavior, so the 5 already-
+# shipped episodes are untouched. One known gotcha to watch on the next
+# episode that uses this: "freeze" mode can pad a short clip but never trim
+# a long one -- if any clip's native duration exceeds its new tighter
+# real-time slot, the excess compounds across every later unit. Check the
+# assembler's own `[plan]` console line for `native > slot` before trusting
+# the timing is actually precise; the `SW-A2` gate won't catch it (it was
+# deliberately loosened to expect `max(slot, native)` on an earlier
+# episode).
+#
+# Also this session: a real PixVerse V6 vs. Kling-3-Omni bake-off (user's
+# own ask). PixVerse is ~14% cheaper at matching quality but failed 4 of 4
+# real attempts on any fuller composition (invented walking motion, global
+# color drift) -- only succeeded on genuinely static poses. Kept as primary
+# anyway per the user's own call, Kling as fallback. Expect to keep hitting
+# the PixVerse fallback often on future episodes; budget for it.
+#
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ▶▶▶ THE OPEN ITEM, NOW FIVE DEEP: Naaman ep4 + Barrel ep5 + Bier ep7 +
+# She Loved Much ep10 + Where Are the Nine ep11 -- all finished, locked, and
+# NONE posted anywhere. This has been raised and deferred four sessions
+# running now. Strongly consider raising this FIRST tomorrow, or just
+# deciding it yourself rather than asking again -- at minimum name it
+# explicitly before defaulting to a sixth episode.
+#
+# `cli_publish.py` (/publish) still does NOT support the Swirls-of-Life
+# folder layout (only the main engine's v1/short folders) -- posting needs
+# either hand-written copy or a real code change to
+# `pipeline/upload_engine.py`'s `harvest_facts()`. This has also been open
+# unchanged for five sessions.
+#
+# Remaining short picks if a NEW episode is chosen instead (all still
+# unbuilt): #6 Talitha Cumi (Mark 5:21-24,35-43), #9 The Woman at the
+# Border (Mark 7:24-30), #12 Ye Are Not All Clean (John 13:1-30), #13 The
+# Cross That Wasn't His (Mark 15:21), or the long-form #14 Nazareth sermon.
+# (#11 Where Are the Nine, Luke 17:11-19, is the one just finished today.)
+#
+# No default has been chosen for you -- ask the user which, don't assume.
+# ══════════════════════════════════════════════════════════════════════════
+
+# ══════════════════════════════════════════════════════════════════════════
+# ▶▶▶ (superseded by the 2026-09-05 block above) START HERE TOMORROW (updated 2026-09-03, end of day -- user: "For now
 # save and commit everything and update the handover and resume document
 # tommorrow"). ONE thing happened today, and it changes the standing
 # open item below:
