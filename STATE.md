@@ -1,5 +1,61 @@
 # STATE.md — progress tracker
 
+**2026-09-06 Swirls ep13 "The Cross That Wasn't His" (Mark 15:21/Luke 23:26, Simon of
+Cyrene; Hebrews 13:11-13 "without the camp/gate" typology) — narration + GATE 2 stills
+LOCKED, GATE 3 animation DONE (all 11 clips), PAUSED at GATE 3 for the user's own review.
+NOT YET assembled/scored — resume there tomorrow.** Full detail: memory
+`project_the_cross_that_wasnt_his_episode_13`.
+`poc_living_water_ink_style_test/swirls_episode_13_the_cross_that_wasnt_his/`
+GATE 3 review page: `file:///F:/slk/PycharmProjects/JesusInTheBible/
+poc_living_water_ink_style_test/swirls_episode_13_the_cross_that_wasnt_his/
+_GATE3_REVIEW.html`
+
+This episode had TWO real defect catches from the user, both worth remembering:
+
+1. **"Log not cross"** — the GATE-2-approved beam read as generic smooth lumber, not a
+   Roman execution implement, because its build was written as pure negative constraints
+   ("no cross shape") fighting a real hallucination, and never stated a positive identity.
+   Fixed with an era-accurate patibulum ref (rough-hewn, adze-scarred, one empty mortise
+   notch). New memory `feedback_recurring_prop_needs_positive_identity` — any recurring
+   prop built mainly from negatives needs an equally explicit positive "what it concretely
+   IS" clause, or it silently drifts generic.
+
+2. **"But people always associate the whole cross"** — even the era-accurate crossbeam-only
+   design still just read as "a log" to an ordinary viewer, because the brief itself bans
+   any execution-ground context (no hill, no upright, no Golgotha) that would signal
+   "this is for crucifixion." User made an explicit, deliberate call to reverse the whole
+   design: switch from the historically-precise patibulum to the traditional full Latin
+   cross, for legibility over strict precision. All 9 interior pages re-rendered against the
+   new `CROSS_BUILD` — only 13 generations, mostly clean first-try, since this leaned INTO
+   the model's own cross-shape prior instead of fighting it (contrast: the beam-correction
+   pass needed ~20 regens fighting that same prior).
+
+Two more generalizable lessons from the fix rounds that followed:
+- **F05's cross kept rendering as a symmetric X/saltire even after 3 straight wording
+  escalations** (relative language, an explicit ratio, a "lowercase-t" analogy) — what
+  actually fixed it was changing Simon's POSE from a flat side profile to a three-quarter
+  back view (matching pages that already worked). New memory
+  `feedback_pose_angle_over_wording_after_repeated_failures`: if a shape/proportion defect
+  survives 2-3 wording escalations unchanged, try a camera-angle change next, not more text.
+- **Cover borders resisted both negative AND positive wording** across 6+ attempts (see
+  `feedback_cover_border_resists_positive_and_negative_wording`) — a rare case where the
+  "give it a positive identity" fix that worked for the beam did NOT generalize; don't
+  assume one technique transfers to every defect without verifying by pixel measurement.
+
+**GATE 3 (animation) findings, ~$9.59 total spend (4795 credits, biggest cost driver as
+expected):** a recurring, apparently structural Kling-3-Omni limitation — static-camera
+shots holding TWO separated figure-groups apart (a near figure + a distant group) either
+converge (groups merge) or drop one group from frame entirely, regardless of prompt
+forcefulness. Single-figure shots never hit this. Accepted open items: F01 (Simon ends up
+a bit closer to the group than designed), F03 (Jesus+soldier vanish from the true last
+frame on all 3 tries — confirmed structural, not fixable by wording), front cover (2 failed
+Kling attempts, resolved via a **$0 static-hold fallback** direct from the approved still —
+matches this project's standing "zero-new-motion push over more rerolls" rule).
+
+**NEXT TASK:** user needs to open the GATE 3 review page above and approve (or flag more
+fixes) before assembly/score/SFX begins. If approved, follow the standard chain: assemble →
+score → SFX → captions → tracker, same as ep10/ep11.
+
 **2026-09-05 Swirls ep11 "Where Are the Nine" (Luke 17:11-19, ten lepers) —
 narration, design, stills, animation, score, assembly, SFX built fresh
 end-to-end; FULLY FINISHED + LOCKED, committed `4ef997a`.** User picked a new

@@ -166,6 +166,15 @@ class PageSpec:
     caption_lines: tuple[str, ...] = ()
     corner_note: str = ""
     refs: list[Ref] = field(default_factory=list)   # chained subject refs, in attach order
+    still_model: Literal["nano-banana-pro", "seedream-4-5"] = "nano-banana-pro"
+        # Locked 2026-09-05 (real bake-off, see memory project-cheap-image-model-bakeoff):
+        # "seedream-4-5" is a validated CHEAPER option (15cr vs 40cr on OpenArt) for calm,
+        # non-crowd interior pages only -- a featured single/pair of figures, no headcount-
+        # critical crowd. Same per-page human-judgment pattern as model_tier below (Kling
+        # for action/crowd, Seedance for calm single-figure): the page's own AUTHOR decides
+        # this at design time, it is never inferred automatically from panel content. Covers
+        # (swirls_cover.py) are NOT affected by this field -- covers always render on
+        # nano-banana-pro, a separate locked decision, hardcoded there on purpose.
     model_tier: Literal["kling3_0", "veo3_1_lite"] = "kling3_0"
     aspect_ratio: Literal["9:16", "16:9"] = "9:16"
     include_no_bubble_clause: bool = True
@@ -366,7 +375,7 @@ def _render_still_openart(spec: PageSpec, out_png: Path) -> bool:
     prompt = assemble_still_prompt(spec)
     payload = {
         "kind": "still",
-        "model": "nano-banana-pro",
+        "model": spec.still_model,
         "mode": "image2image" if spec.refs else "text2image",
         "prompt": prompt,
         "aspect_ratio": spec.aspect_ratio,
@@ -374,7 +383,7 @@ def _render_still_openart(spec: PageSpec, out_png: Path) -> bool:
         "refs": [{"path": r.path, "subject": r.subject} for r in spec.refs],
         "out_path": str(out_png),
     }
-    print(f"  [openart/nano-banana-pro] requesting {out_png.name}...")
+    print(f"  [openart/{spec.still_model}] requesting {out_png.name}...")
     try:
         resp = openart_bridge.submit(payload)
     except openart_bridge.OpenArtBridgeError as e:

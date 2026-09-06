@@ -1,0 +1,32 @@
+{
+  "folder": "swirls_episode_13_the_cross_that_wasnt_his",
+  "stage": "audit",
+  "generated_at": "2026-09-05T20:37:35Z",
+  "deterministic": {
+    "tag_validation": "passed",
+    "speaker_validation": "passed",
+    "roster": []
+  },
+  "round_trip": {
+    "exact_match": true,
+    "blocking": false,
+    "diff_segments": [],
+    "added_words": 0,
+    "removed_words": 0
+  },
+  "anthropic_audit": {
+    "tag_economy": "appropriate",
+    "tag_quality_overall": "good",
+    "missed_speaker_opportunities": [],
+    "tonal_mismatches": [],
+    "concerns": [
+      "Pronoun ambiguity at 'Now he is through the gate' (beat 3, tagged [reflective][deliberate]): 'he' technically resolves to Simon but sits one clause before the passage pivots to Jesus's own suffering 'without the gate' -- a listener could momentarily misassign the referent. This is a text-level concern already flagged by the independent-review panel, not a tagging fix; narration text is locked, so no change made here.",
+      "Beat 3 (sin-offering / tabernacle mechanics: 'blood carried into the sanctuary... burned without the camp') is the single densest new-concept introduction in the script. The [deliberate] tag gives it room; confirm the VO does not rush past it.",
+      "Script carries three separate KJV citations across three books (Mark, Luke, Hebrews) plus a Levitical typology bridge -- verified spoken-length estimate is ~85s, above this project's shorts ~59s default ceiling. Confirm the intended target duration with per_turn_synth before synthesizing; this piece likely wants a longer target or --natural pacing rather than compression to 59s."
+    ],
+    "model": "claude-opus-4-7",
+    "request_id": null,
+    "input_tokens": null,
+    "output_tokens": null
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "folder": "swirls_episode_13_the_cross_that_wasnt_his",
+  "stage": "verify",
+  "generated_at": "2026-09-05T20:30:59Z",
+  "deterministic": {
+    "char_count_after_comment_strip": 1241,
+    "char_cap": 2000,
+    "within_cap": true,
+    "non_empty": true
+  },
+  "voice_roster": {
+    "voices_json_present": true,
+    "speakers_in_roster": [
+      "narrator"
+    ]
+  },
+  "anthropic_review": {
+    "coherence": "good",
+    "beat_count": 4,
+    "tonal_register": [
+      "serious",
+      "reflective",
+      "devotional"
+    ],
+    "multi_voice_candidates": [],
+    "spoken_length_estimate_seconds": 85,
+    "concerns": [
+      "Three distinct KJV quotes from three different books (Mark, Luke, Hebrews) are woven closely together; ensure natural pauses between attribution frames so listeners can track the source shifts.",
+      "The word 'without' is used four times with an archaic meaning (outside); no punctuation issue, but a reader/TTS engine should not stress it as a negation."
+    ],
+    "model": "claude-opus-4-7",
+    "request_id": null,
+    "input_tokens": null,
+    "output_tokens": null
+  }
+}

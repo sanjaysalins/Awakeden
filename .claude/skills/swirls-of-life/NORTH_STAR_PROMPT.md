@@ -58,7 +58,7 @@ hf generate create nano_banana_pro --prompt "<filled template>" ^
   --aspect_ratio 9:16 --resolution 2k --wait
 ```
 
-A shot with a recurring subject and no chained ref is a hard stop. **A second aspect ratio of the SAME shot counts as a recurring shot for this rule too (added 2026-08-20, "The Hem" 16:9 finding)** — a brand-new character rendered without a ref in 9:16, then rendered again text-only for 16:9, is two independent generations and will drift exactly like two different shots would; chain her crop into the 16:9 render even though it's "the same page." Eyeball every PNG at 1:1 — baked spelling, ref likeness, layout held, dose matches stage, **AND (added 2026-08-20, Fable design-critique finding) no un-requested text anywhere on the page, and every MUST-SHOW element actually visible in frame** — both failures on the Gold Exemplar passed the original 4-point checklist; an independent review looking specifically for missing/extra elements is what caught them. A Higgsfield 503 is transient — retry, don't rewrite.
+A shot with a recurring subject and no chained ref is a hard stop. **A second aspect ratio of the SAME shot counts as a recurring shot for this rule too (added 2026-08-20, "The Hem" 16:9 finding)** — a brand-new character rendered without a ref in 9:16, then rendered again text-only for 16:9, is two independent generations and will drift exactly like two different shots would; chain her crop into the 16:9 render even though it's "the same page." Eyeball every PNG at 1:1 — baked spelling, ref likeness, layout held, dose matches stage, **AND (added 2026-08-20, Fable design-critique finding) no un-requested text anywhere on the page, and every MUST-SHOW element actually visible in frame** — both failures on the Gold Exemplar passed the original 4-point checklist; an independent review looking specifically for missing/extra elements is what caught them. A Higgsfield 503 is transient — retry, don't rewrite. **AND (added 2026-09-05, Seedream 4.5 bake-off finding, episode 11's F08) no distinguishing mark authored for ONE named figure (e.g. the Samaritan's clay-red hem-trim) appears on any OTHER figure on the page, including Jesus** — a page's own prose usually only states "his ONLY distinguishing mark is X... not repeated anywhere else on HIS clothing," which a cheaper/less careful model can satisfy while still painting X onto a different figure; when authoring this kind of one-figure-only mark, add an explicit second clause naming who else must NEVER show it (e.g. "and no other figure on this page, including Jesus, ever wears this mark").
 
 ## Validation run — LOCKED 2026-08-19
 
@@ -237,3 +237,33 @@ still or clip test yet).
 - **Kling3.0 produced a visible line/seam artifact on this style, confirmed in the raw render itself (not this project's compositing).** User caught it watching the raw per-shot clips directly, before any assembly/panel-lock/concat touched them — isolated to the 3 shots rendered on Kling (4, 6, 7), never appeared on the 5 veo3_1_lite shots. Not reproduced as a static-frame artifact (checked full-res frame grabs from all 3 Kling clips, found nothing) — likely only visible in motion/playback. Fix applied: switched all 3 shots to veo3_1_lite instead of troubleshooting/rerolling Kling further. Contrary to this project's older documented veo weakness ("does not reliably execute a designed/cued gesture"), veo3_1_lite handled shot 7's real running locomotion well here — re-check that old finding before assuming veo can't do action for THIS style.
 - **veo3_1_lite can invent a held object tied to a composition, resistant to positive-prompt correction.** Shot 7 (she runs, near a well with a waterpot visibly left behind) generated with a pot in her hands on 2 separate veo3_1_lite attempts — including a rewrite that explicitly added "her arms and hands are empty and swing freely... she carries nothing in either hand" (positive framing, per this project's own "Gemini/veo honors positives, drops negatives" finding) — no change. This reads as a strong compositional prior (running figure + nearby vessel = carrying it) that prompt language alone did not override twice. Third attempt on Kling3.0 rendered it correctly (empty hands, pot stays on the well) with no line-artifact recurrence for THIS composition specifically — the Kling line-artifact finding above is real but evidently not universal across every shot; when a specific composition is fighting one model, trying the other is a reasonable next step before more rerolls on the same model.
 - **If a panel-cut or zoom fill IS revisited later:** the resolution-source bug is worth remembering even though the feature itself was reverted — crop any panel-region punch-in from the SOURCE STILL (2k), never from a rendered clip's last frame (veo3_1_lite renders as low as 720px tall, Kling ~1080px, both well under the still's 1536-2752px) — cropping a small region out of the low-res frame and blowing it up 5-6x is very visibly soft. Panel boxes are template-fixed per ratio and can be measured once via ink-density scan of the border lines (kept in git history in `assemble.py` if needed again).
+
+## Recurring-prop identity check — POSITIVE, not just negative (user catch, 2026-09-06)
+
+A prop build that describes itself only by what it must NOT look like can pass every
+negative test while losing its actual identity entirely. Found on ep13's beam: `BEAM_BUILD`
+was written purely as "single plank... no cross shape... no second timber" (fighting a real,
+recurring hallucination — the model kept drawing a full crucifix). Every render that passed
+that negative test did it by becoming smooth, pale, generic carpentry lumber — visually
+disconnected from what the text actually names it (Mark 15:21/Luke 23:26: Simon bore "his
+cross," Gk *stauros*, not "a beam"). Eleven renders shipped to GATE 2 before the user asked
+the plain question: **"was he carrying a log or a cross?"**
+
+**The fix pattern, not just this one prop:** any recurring object/costume/mark built mainly
+from negative constraints ("no X, never Y, not Z-shaped") needs an equally explicit POSITIVE
+identity clause stating what it concretely IS, era-and-location-grounded, so a render can't
+satisfy the negative rule by drifting into generic/anonymous territory. For ep13's beam that
+meant: named as a Roman *patibulum* (execution crossbeam) specifically, not just "a beam";
+rough-hewn/adze-scarred/weathered-dark (era-accurate — 1st-century Roman military-grade
+timber, reused, NOT fresh pale lumber); and one empty mortise notch cut into the wood (the
+single detail that reads as "this attaches to a cross" without ever drawing the forbidden
+second timber). Verified this doesn't reopen the original hallucination — the notch is
+explicitly carved INTO the one timber, never a separate piece, and the "trace one straight
+line end to end" test explicitly ignores it.
+
+**Standing QC addition (every episode, every recurring prop/artifact, not just ep13):**
+alongside whatever negative shape/count/mark rules a prop needs, ask **"does this read as
+era-compliant, location-compliant, and biblically/historically identifiable as the actual
+named object — or has it drifted into something generic?"** A prop that only ever gets
+checked against what it must avoid will silently drift toward the least distinctive thing
+that satisfies the avoidance rule.

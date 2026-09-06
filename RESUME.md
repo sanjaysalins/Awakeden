@@ -1,5 +1,67 @@
 # ══════════════════════════════════════════════════════════════════════════
-# ▶▶▶ START HERE TOMORROW (updated 2026-09-05, end of day -- user: "lets
+# ▶▶▶ START HERE TOMORROW (updated 2026-09-06, end of day -- user: "lets stop
+# for the day, bring everything to a logical point and lets restart tomorrow.
+# commit and push and update the handover and resume document"). Episode 13
+# is NOT finished -- it's paused mid-pipeline at GATE 3, waiting on the
+# user's own review. Read this whole block before picking up.
+#
+# Episode 13 "The Cross That Wasn't His" (Mark 15:21/Luke 23:26, Simon of
+# Cyrene compelled to bear the cross; Hebrews 13:11-13 "without the camp/
+# gate" typology) has: narration LOCKED, GATE 2 (stills) LOCKED, GATE 3
+# (animation) all 11 clips rendered and QC'd. **Nothing has been assembled,
+# scored, or had SFX added yet.**
+#   `poc_living_water_ink_style_test/swirls_episode_13_the_cross_that_wasnt_his/`
+#   GATE 3 review page: `file:///F:/slk/PycharmProjects/JesusInTheBible/
+#   poc_living_water_ink_style_test/swirls_episode_13_the_cross_that_wasnt_his/
+#   _GATE3_REVIEW.html`
+#   Full detail: memory `project_the_cross_that_wasnt_his_episode_13.md`.
+#
+# **FIRST THING TOMORROW: open that GATE 3 review page and get the user's
+# call.** If approved, proceed straight to assembly -> score -> SFX ->
+# captions -> tracker, same chain as every prior episode. If they want more
+# fixes on any clip, go back into the animation loop (same bridge-servicing
+# pattern documented in the project skill) before assembling.
+#
+# This episode had a real user-caught defect saga worth knowing before you
+# touch anything else in this style: the GATE-2-approved wooden object Simon
+# carries was caught TWICE by the user as reading wrong -- first as "a log,
+# not a cross" (fixed with an era-accurate Roman patibulum reference), then
+# a second time as still not being recognizable enough ("but people always
+# associate the whole cross") -- which led to a deliberate, user-approved
+# reversal of the whole design: switched from the historically-precise
+# crossbeam-only patibulum to the traditional full Latin cross, for
+# legibility over strict archaeological precision. If you touch this
+# episode's cross prop again, read `episode.py`'s `CROSS_BUILD` comments in
+# full (search "LOCKED 2026-09-06 v3") before changing anything -- the
+# reasoning is dated and detailed there.
+#
+# Two new generalizable lessons landed in memory this session, useful on
+# ANY future episode, not just this one:
+# - `feedback_pose_angle_over_wording_after_repeated_failures.md` -- if a
+#   shape/proportion defect survives 2-3 wording escalations unchanged on a
+#   still, try changing the figure's POSE/camera angle next, not more text
+#   (validated on F05's cross, which kept rendering as a symmetric X until
+#   the camera angle changed, not the wording).
+# - GATE 3 (animation) surfaced a likely-structural Kling-3-Omni limit:
+#   static shots holding TWO separated figure-groups apart tend to either
+#   converge them or drop one group from frame entirely, no matter how
+#   forcefully the prompt insists on holding position -- single-figure shots
+#   never hit this. Expect 2-3 rounds minimum on any future "two groups held
+#   apart" composition, and don't be surprised if one has to be accepted as
+#   a known open item (as F03 was here) or given a $0 static-hold fallback
+#   (as this episode's front cover was, after 2 failed paid attempts).
+#
+# Animation (GATE 3) cost ~$9.59 for this episode alone (4795 OpenArt
+# credits) -- the single biggest cost stage, consistent with this project's
+# own cost model. Mid-pass the OpenArt account ran 3 credits short and
+# needed a real top-up (user did this) -- if credits run low again on the
+# next episode, that's a real-money ask for the user, not something to
+# quietly downgrade resolution on without asking first.
+#
+# ══════════════════════════════════════════════════════════════════════════
+
+# ══════════════════════════════════════════════════════════════════════════
+# ▶▶▶ (superseded by the 2026-09-06 block above) START HERE TOMORROW (updated 2026-09-05, end of day -- user: "lets
 # close for the night and commit and save everything and update the resume
 # to be picked tommorrow"). Episode 11 is locked; the open item below is now
 # FIVE episodes deep. Read this whole block before picking up.
