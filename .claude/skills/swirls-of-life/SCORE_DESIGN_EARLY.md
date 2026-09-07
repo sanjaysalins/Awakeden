@@ -1,10 +1,16 @@
 # SCORE_DESIGN_EARLY — score the narration, not the video
 
-Proposed 2026-09-04. **Status: DESIGN, not yet run for real.** Nothing here has
-spent money or rendered audio. Before it becomes the standing process it needs
-(a) the open questions in section 9 answered, (b) one cheap smoke test
-(section 7), and (c) `independent_review.py --type plan` — this is a new
-pipeline stage, so the repo's own rule applies.
+Proposed 2026-09-04. **Status: LOCKED STANDARD**, validated on episode 11
+("this is fine, lock it, the score is really great" —
+[[feedback_score_design_early_validated]]) and refined on episode 13 after a
+real, user-caught defect (silence for the majority of the runtime) —
+**two-part generation (section 6.8) is now the default mechanism for every
+new episode's score**, not an edge-case fallback. Design from real per-word
+alignment timestamps; generate via `music_v1` free-text prompts (never
+`composition_plan`/`music_v2` — a confirmed dead end, section 9.1); split
+the generation into two calls at the piece's own resolution boundary by
+default (user's own call, 2026-09-07: "great score, this should be a
+standard" — see [[feedback_score_dead_air_two_part_generation_fix]]).
 
 ## 1. What changes, in one breath
 
@@ -196,7 +202,58 @@ rule in chunk 7. So:
 - **The back cover / landing** = the motif slowest and simplest, over the
   string glow, fading to silence — still no peak.
 
-### 6.7 The request
+### 6.8 THE ACTUAL STANDARD MECHANISM — free-text, two-part (supersedes 6.7 below)
+
+**Section 6.7 below describes the original `composition_plan`/`music_v2`
+mechanism — a confirmed dead end (section 9.1), never used for a real
+episode.** Kept for historical record only. The real, validated, LOCKED
+standard as of episode 13 (2026-09-07) is:
+
+1. Write ONE free-text `music_v1` prompt per PART (not one prompt for the
+   whole piece), using the validated felt-piano identity (section 5) and
+   "around Xs in..." cues for that part's own internal beats, timed from the
+   real per-word boundaries (section 6.2) same as always.
+2. **Split into exactly two generations at the piece's own resolution
+   boundary** (the hero unit's start — already the point every episode's
+   own arc identifies as "the one true resolution," so this costs no extra
+   design work). Part 1 covers everything before it (withheld throughout);
+   Part 2 opens ALREADY resolved, its very first bar the warm chord, struck
+   immediately — this is what makes Part 2 safe from the dead-air defect
+   below, since there is no "stay quiet" instruction anywhere near its start.
+3. Request each part a little longer than its own span (+`OUTRO_MARGIN`,
+   same constant as the old single-generation script), same as before.
+4. **Verify EACH part's own first ~10s is genuinely audible** (a coarse
+   `volumedetect` sweep in ~4s windows, fail loud if nothing clears roughly
+   -55dB) BEFORE joining — a bad half can be re-rolled alone, far cheaper
+   than redoing the whole score.
+5. Join the two parts with a short (~0.4s) `ffmpeg acrossfade` at the
+   splice, then run the SAME fade-in(1.0s)/fade-out(2.0s)/trim-to-total
+   contract the single-generation script always used — nothing downstream
+   (`episode.py`'s `ScoreVariant`, `swirls_assemble.py`) changes at all.
+6. **Before calling the score done, sweep the WHOLE final joined timeline**
+   (every ~15s, not just the file's overall mean/max — an aggregate stat
+   can completely hide a long dead stretch behind a few loud seconds, which
+   is exactly how this defect shipped once already, caught only by the user
+   on real playback after the episode had been marked finished).
+
+Why this is now the DEFAULT, not a fallback: two independent single-
+generation attempts at one long (~109s) "withheld" prompt on episode 13 both
+produced 50-63 SECONDS of literal near-total silence (-90dB) before the
+piano ever became audible — not the mild, already-known ~10s-early-death
+quirk `reshape_music()` fixes (that's a TRAILING problem; this is a LEADING
+one covering the majority of the runtime, far too large to time-stretch
+without destroying the piece). Adding an explicit "stay audible" prompt
+clause to the single long generation did NOT fix it on a second attempt —
+this is a real generation-length limit, not a wording problem. See
+[[feedback_score_dead_air_two_part_generation_fix]] for the full incident,
+[[project_the_cross_that_wasnt_his_episode_13]] for the specific
+measurements, and `generate_score_piano.py` in that episode's own folder
+for the reference implementation (`check_no_dead_intro`, `_gen_music`,
+the crossfade join) — copy that script's structure for the next new
+episode rather than the single-generation shape of earlier episodes'
+`generate_score_piano.py` files.
+
+### 6.7 The request (HISTORICAL — composition_plan, never actually used; see 6.8 above)
 `POST https://api.elevenlabs.io/v1/music` with `Accept: audio/mpeg` and the
 plan's `request` object. Differences from the current script, all required
 by the API:
@@ -303,6 +360,11 @@ freeze/boomerang choices is an **open design question for
    reshape.
 7. **Panel review.** A new pipeline stage → `independent_review.py --type
    plan` on this document before adoption.
+8. **SEVERE dead-air (found episode 13, 2026-09-07), distinct from item 6
+   above (that one's a mild ~10s trailing fade; this is 50-63s of literal
+   near-total silence covering the MAJORITY of the track, from a single long
+   free-text generation).** Full incident, the fix, and why it's now the
+   default mechanism: see section 6.8 above.
 
 ## 10. Episode 11, applied retroactively (the worked example)
 

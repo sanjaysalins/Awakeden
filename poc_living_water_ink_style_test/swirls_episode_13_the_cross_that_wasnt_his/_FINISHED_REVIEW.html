@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Finished — The Cross That Wasn't His</title>
+<style>
+  body { font-family: Georgia, serif; background: #f4efe6; margin: 0; padding: 24px; color: #2a2420; }
+  h1 { font-size: 32px; margin: 0 0 4px; }
+  p.sub { font-size: 19px; color: #6b5f52; margin: 0 0 24px; }
+  .wrap { max-width: 700px; margin: 0 auto; }
+  .top { background: #fff3d6; border: 1px solid #e0c98a; border-radius: 10px; padding: 18px 22px; margin-bottom: 26px; font-size: 19px; line-height: 1.6; }
+  .top b { color: #7a3b2e; }
+  .card { background: #fff; border-radius: 10px; padding: 18px; margin-bottom: 22px; }
+  .card video { width: 100%; height: auto; border-radius: 6px; display: block; background: #000; }
+  .note { background: #eef2ea; border: 1px solid #c9d6c0; border-radius: 10px; padding: 16px 20px; font-size: 17px; line-height: 1.6; margin-bottom: 22px; }
+  .note h2 { font-size: 20px; margin: 0 0 10px; }
+  .note ul { margin: 0; padding-left: 22px; }
+  .note li { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Episode 13 — finished</h1>
+  <p class="sub">"The Cross That Wasn't His" (Mark 15:20-21, Luke 23:26, Hebrews 13:11-13). 106.43s, score + SFX mixed in.</p>
+
+  <div class="card">
+    <video controls src="swirls_episode_13_the_cross_that_wasnt_his_final_piano_sfx.mp4"></video>
+  </div>
+
+  <div class="top">
+    <b>Total spend:</b> ~$21.10 (stills, a beam-then-full-cross redesign pass, covers, animation across 17 renders, score including one wasted attempt + a two-part fix), all logged to the ledger.<br>
+    <b>Gates:</b> 0 FAIL — all 11 stills passed their content audit (front + F01-F09 + back), duration/sync checks all passed, final duration matches (106.43s), landing hold clean (3.0s).<br>
+    <b>Status: LOCKED, finished end-to-end, not yet posted anywhere.</b>
+  </div>
+
+  <div class="note">
+    <h2>What this build covered</h2>
+    <ul>
+      <li>Narration: locked 2026-09-05 (227 words, 103.44s natural audio, 6 panel rounds to converge).</li>
+      <li>9 pages + 2 covers designed by Fable. The wooden object Simon carries went through two real user-caught defects and fixes: first read as "a log" (fixed with an era-accurate Roman crossbeam reference), then — even correct — still didn't read as a cross to an ordinary viewer, so by explicit user decision it was redesigned again as the traditional full Latin cross, for legibility over strict archaeological precision.</li>
+      <li>All 11 clips animated via Kling 3 Omni through the OpenArt bridge (~$9.59, the single biggest cost, consistent with this project's cost model). One real open item surfaced and was fixed this session: F03 kept losing Jesus's own pair from the true final frame, 3 straight tries, on a flat "two groups abreast" shot — a hard limit of the animation tool on that kind of composition, not a wording problem. Fixed by re-angling the shot entirely (close behind Simon, shot through the gate archway, Jesus's pair now small and atmospheric far down the receding road, drawing on this project's own richer camera vocabulary in <code>northstar_shortform/</code>) — clean on the first animation try after the re-angle.</li>
+      <li>Felt-piano score written fresh for this episode's own arc, designed early from real per-word alignment timestamps (<code>unit_timing.json</code>): F03 (Simon's own turn) is a real but costly, partial opening that draws back — the piece's one true resolution is held for F06 ("suffered without the gate," Christ's own atoning word), strings entering at F07, the same cut where the visual design also turns to address the viewer directly ("Hebrews turns to you").</li>
+      <li>SFX: a bleak desert wind carries the whole "compelled" first half (front through the sin-offering typology at F05); soldiers' armor marks the compulsion itself (F01-F02, gone by Simon's own turn at F03); one gate-creak lands exactly where the gate is first crossed under compulsion (F01); one footstep lands exactly on Simon's own first step of the turn (F03); F06, the hero, is left deliberately bare — words and score alone, no ambience, the same rule this project's score/SFX design has used at every prior episode's resolution beat; the wind returns from F07 through the landing, unchanged in character (not a dawn cue — this episode's back cover is dusk, not dawn, unlike episode 11's).</li>
+      <li><b>Real defect caught by the user on playback, after this build was first called "finished":</b> the shipped score was near-total silence for the first ~63 seconds — a full-timeline check I hadn't run (only the whole-file average, which looked fine) missed it. A second single-generation attempt failed the same way even with an explicit "stay audible" instruction added. Fixed by splitting the score into two separate, shorter generations at the resolution point (F06) instead of more wording — Part 1 stays withheld but short enough not to trip the defect, Part 2 opens already resolved. Verified audible start-to-finish this time by sweeping the real timeline, not just checking the average. Re-assembled and re-mixed on the corrected score.</li>
+    </ul>
+  </div>
+
+  <div class="note">
+    <h2>Known, accepted (non-doctrinal) imperfections</h2>
+    <ul>
+      <li>Front + back cover carry a faint hairline border — tried and failed to remove across 6+ prompt attempts on an earlier episode; accepted rather than continuing to spend chasing a cosmetic line.</li>
+      <li>F05's caption "without the camp" bakes twice, side by side, on the main scene — two fix attempts both regressed the (correct) cross back to a wrong shape, so this was left as-is; correct doctrine and history over a cosmetic caption.</li>
+      <li>F01: Simon drifts a little closer to the gate by a clip's end than designed; F09 top-left panel shows a soldier's grip reading slightly like restraint rather than a plain hand-on-arm. Both minor, both accepted.</li>
+    </ul>
+  </div>
+
+  <div class="note">
+    <h2>Still open</h2>
+    <p>Not posted anywhere yet. Episodes 4, 5, 7, 10, and 11 are also finished and unposted — six episodes now finished with nothing shipped. Publish packs already exist for the first five (see <code>_PUBLISH_PACKS_READY.html</code>).</p>
+  </div>
+</div>
+</body>
+</html>

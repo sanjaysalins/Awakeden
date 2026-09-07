@@ -1,0 +1,55 @@
+{
+  "schema": "swirls-of-life/unit_timing v1",
+  "episode": "swirls_episode_13_the_cross_that_wasnt_his",
+  "written": "2026-09-07",
+  "source": "narration.alignment.json (ElevenLabs forced alignment, real per-word timestamps)",
+  "boundary_rule": "unit k spans [start_s of unit k's first spoken word, start_s of unit k+1's first spoken word); the last unit runs to narration_end + outro_hold",
+  "narration_seconds": 103.431,
+  "outro_hold_seconds": 3.0,
+  "units": {
+    "front": {
+      "start_s": 0.0,
+      "end_s": 5.699
+    },
+    "f01": {
+      "start_s": 5.699,
+      "end_s": 15.299
+    },
+    "f02": {
+      "start_s": 15.299,
+      "end_s": 25.059
+    },
+    "f03": {
+      "start_s": 25.059,
+      "end_s": 35.899
+    },
+    "f04": {
+      "start_s": 35.899,
+      "end_s": 42.52
+    },
+    "f05": {
+      "start_s": 42.52,
+      "end_s": 54.479
+    },
+    "f06": {
+      "start_s": 54.479,
+      "end_s": 67.18
+    },
+    "f07": {
+      "start_s": 67.18,
+      "end_s": 75.08
+    },
+    "f08": {
+      "start_s": 75.08,
+      "end_s": 82.22
+    },
+    "f09": {
+      "start_s": 82.22,
+      "end_s": 92.9
+    },
+    "back": {
+      "start_s": 92.9,
+      "end_s": 106.431
+    }
+  }
+}

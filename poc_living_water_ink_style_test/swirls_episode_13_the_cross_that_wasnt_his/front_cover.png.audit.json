@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "The artwork must fill the entire frame -- no drawn border of any kind",
+      "actual": "a thin black hairline border/rule is visible around the full edge of the frame -- a known, already-user-accepted cosmetic defect (feedback_cover_border_resists_positive_and_negative_wording): tried both negative and positive prompt wording across 6+ attempts, the model keeps drawing an inset rule rather than bleeding to the edge; accepted at GATE 2 lock rather than continuing to spend chasing it. Not new, not blocking -- this is the same already-approved front_cover.png, unchanged."
+    }
+  ],
+  "banned_token_hits": [],
+  "png_sha256": "dad29230bf00b2ef9e272c63064914da9a8a944e9b3ba9120c43df1e7b3ff171"
+}

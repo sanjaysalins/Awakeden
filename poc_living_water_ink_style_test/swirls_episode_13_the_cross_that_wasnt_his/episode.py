@@ -556,37 +556,55 @@ F03 = PageSpec(
     panels=(
         Panel("they laid", "a beam lying across a man's shoulders seen from behind, its two "
               "raw ends jutting out either side, close, no face"),
-        Panel("after Jesus", "Jesus's back, small, walking away to the right along a road, his "
-              "head bare -- no crown of thorns, no crown of any kind, nothing encircling his "
-              "head, plain hair only -- a soldier beside him"),
+        Panel("after Jesus", "Jesus's back, tiny and far, walking away along a receding road, "
+              "his head bare -- no crown of thorns, no crown of any kind, nothing encircling "
+              "his head, plain hair only -- a soldier beside him"),
         Panel("turns", "a single pair of sandaled feet on a broad worn threshold stone, toes "
               "pointing RIGHT, the rear heel lifting, low and close"),
     ),
-    still_shot_type="MEDIUM WIDE shot",
-    anim_shot_desc="medium wide shot",
+    # LOCKED 2026-09-07 -- re-angled after 3 straight animation failures on the original
+    # flat MEDIUM WIDE "two groups abreast" composition (Jesus's pair kept vanishing from the
+    # true final frame every try -- a structural Kling limit on holding two same-scale
+    # separated groups, see the episode-13 memory). User's own call: stop re-wording the same
+    # shot, draw on the richer camera vocabulary already validated in
+    # poc_living_water_ink_style_test/northstar_shortform/ ("THE WELL" 8-shot pattern-lock --
+    # WIDE / MEDIUM TWO-SHOT / WIDE MOVING / HELD SINGLE etc., real variety, never flat parity
+    # between two subjects). New composition uses genuine depth instead: Simon large and near
+    # in the foreground, Jesus's pair small and atmospheric far down the receding road -- not
+    # two equal-weight rival subjects, so there is nothing for the animator to "resolve".
+    still_shot_type="WIDE MOVING shot",
+    anim_shot_desc="wide moving shot, low rear three-quarter behind Simon, road receding into depth",
     main_scene_still=(
-        f"the gate of the city ({GATE_BUILD}) at the left, its doorway open behind him, its "
-        f"broad worn threshold stone fully inside the frame; AT the threshold, {SIMON_BUILD} "
-        "TURNED -- now facing RIGHT toward the open road -- the beam "
-        f"({CROSS_BUILD}) across the back of his shoulders, both hands gripping it, "
+        "a WIDE MOVING shot, the camera low and close, a single stride behind and a little to "
+        "the side of Simon in a three-quarter REAR view -- his face turned away toward the "
+        "road ahead, never toward camera; Simon fills the near foreground, large in frame: "
+        f"{SIMON_BUILD} TURNED -- now facing RIGHT toward the open road -- the beam "
+        f"({CROSS_BUILD}) across the back of his shoulders; seen from THIS SPECIFIC rear "
+        "three-quarter angle, the cross sits close to HORIZONTAL across his shoulders, tilted "
+        "only slightly, never rotated up toward a steep diagonal -- the short upper end of the "
+        "upright stops right at his shoulder height and rises no higher than the top of his "
+        "own head, while the long lower end of the upright trails down past his hip and reaches "
+        "at least as low as the back of his knee; from this angle the two ends of the upright "
+        "must read as obviously, unmistakably unequal -- one short stub barely clearing his "
+        "shoulder, one long tail reaching down past his hip toward his knee -- and never as two "
+        "arms of similar length crossing near their own midpoints, both hands gripping it, "
         "mid-first-step outward: his front foot on the dry road outside, his rear heel just "
-        "lifting from the threshold stone, his face toward the road ahead, his eyes open, "
-        "his mouth closed, fully inside the frame, drawn in the same steady, confident, "
-        "single-struck line as every figure on the page; the broad worn threshold stone is a "
-        "clearly visible pale slab lying flat across the doorway's foot, directly beneath and "
-        "a little behind Simon's lifting rear heel, distinct from the wooden door and its "
-        "frame, plainly readable as a separate stone object in the paving; TWO SEPARATE "
-        f"soldier figures, count them, with visible open space between them, not touching "
-        f"each other: one of {SOLDIERS_BUILD}, empty-handed now, walking immediately beside "
-        "and a little behind Simon, close to him; and, several full strides further along the "
-        f"road, a SECOND, separate soldier walking beside {JESUS_BUILD} -- a few paces ahead "
-        "outside to the right, Jesus walking RIGHT at an even pace, this second soldier's "
-        "hand on his upper arm, unburdened, not looking back, touching no one, "
-        f"{JESUS_PASSION_GUARD}, fully inside the frame; a visible gap of open road lies "
-        "between the Simon pair and the Jesus pair -- exactly two soldiers total on this "
-        "page, one in each pair, never both soldiers standing together in one place; the "
-        "road running out to the right over the rise; the ground dry, no water anywhere; no "
-        "hill, no crosses, no crowd. Stage 1 dosage: exactly one SMALL, MODEST, RESTRAINED "
+        "lifting from the broad worn threshold stone beneath him, the stone a clearly visible "
+        "pale slab in the paving directly under his lifting heel, distinct from the wooden "
+        "door and its frame; drawn in the same steady, confident, single-struck line as every "
+        f"figure on the page; one of {SOLDIERS_BUILD}, empty-handed now, walking immediately "
+        "beside him at the same large near size, shoulder to shoulder, close enough to touch "
+        "but not touching; ahead of them both the dry road runs away into real depth, "
+        "narrowing with distance toward a low stony rise on the horizon; "
+        f"{GATE_BUILD}, its doorway and wall falling away behind and to the left, out of the "
+        "frame's main focus; far down the receding road, small and soft with real atmospheric "
+        "distance -- clearly smaller and less detailed than Simon and his own soldier in the "
+        f"foreground -- a SECOND, separate pair: {JESUS_BUILD} walking RIGHT at an even pace, "
+        f"{JESUS_PASSION_GUARD}, a second soldier's hand on his upper arm, unburdened, not "
+        "looking back, touching no one; exactly two soldiers total on this page, one large and "
+        "near beside Simon, one small and far beside Jesus, never both soldiers standing "
+        "together in one place; the ground dry, no water anywhere; no hill, no crosses, no "
+        "crowd. Stage 1 dosage: exactly one SMALL, MODEST, RESTRAINED "
         "thread of blue ink rising from the top surface of the worn threshold stone itself -- "
         "from the stone just behind Simon's lifting heel -- its whole visible length no "
         "taller than the height of Simon's own knee, a short simple gentle curve with NO "
@@ -614,30 +632,23 @@ F03 = PageSpec(
         "a little dust lifts from under the lifting heel and drifts",
     ),
     main_scene_animation=(
-        "ALL FOUR figures (Simon, his soldier, Jesus, his soldier) must still be clearly "
-        "visible in the frame at every single point in the clip, including the true final "
-        "frame -- if any one of them is missing, cropped out, or has exited the frame at any "
-        "point, that is wrong; only small, contained motion happens, not a long journey: "
-        "Simon takes a few small unhurried steps out from left to right along the road away "
-        "from the gate, staying well within the frame the whole time, the beam steady across "
-        "his shoulders, his hands gripping it, his face toward the road ahead, his lips "
-        "closed and completely still; the soldier beside him takes the exact same small "
-        "steps at Simon's exact pace, staying right beside him shoulder-to-shoulder the "
-        "whole clip -- he never falls behind, never stops early, and never drifts back "
-        "toward the gate; Jesus and his soldier, further along the road, are the most "
-        "important figures to keep drawn and visible for the ENTIRE clip -- if there is any "
-        "doubt about how to animate them, the correct choice is to keep them PERFECTLY "
-        "MOTIONLESS, like a frozen photograph, exactly as drawn in the first frame, rather "
-        "than move them, fade them, or let them leave the frame; Jesus and his soldier are "
-        "drawn, present, and fully visible in every single frame from the very first to the "
-        "very last, never once disappearing, never fading out, never becoming transparent, "
-        "never exiting past the frame's edge -- at most Jesus takes a few small unhurried "
-        "steps of his own while staying well within the frame, the soldier's hand on his "
-        "arm, never looking back, his lips closed, but if that motion risks losing either "
-        "figure from view, they simply hold still instead; the single thin blue ink thread "
-        "at the threshold stone stays exactly as "
-        "drawn, in place, for the whole clip; a low thin haze of dust drifts along the road; "
-        "no new stain, spot, or darkening appears anywhere on the page at any point."
+        "Simon, large and near in the foreground, takes a few small unhurried steps out along "
+        "the road, staying well within the frame the whole time, the beam steady across his "
+        "shoulders, his hands gripping it, his face turned away toward the road ahead, never "
+        "toward camera, his lips closed and completely still; the soldier beside him takes the "
+        "exact same small steps at Simon's exact pace, staying right beside him "
+        "shoulder-to-shoulder the whole clip -- he never falls behind, never stops early, and "
+        "never drifts back toward the gate; far down the receding road, small and soft with "
+        "distance, Jesus and his own soldier are drawn, present, and visible, small and far, "
+        "in every single frame from the very first to the very last -- they are the least "
+        "important motion in this shot, a still, quiet, atmospheric detail deep in the "
+        "background; if there is any doubt about how to animate them, the correct choice is to "
+        "hold them PERFECTLY MOTIONLESS, like a distant photograph, exactly as drawn in the "
+        "first frame, rather than move them, fade them, resolve them into Simon's own pair, or "
+        "let them leave the frame; the single thin blue ink thread at the threshold stone "
+        "beneath Simon's lifting heel stays exactly as drawn, in place, for the whole clip; a "
+        "low thin haze of dust lifts from under Simon's own lifting heel and drifts; no new "
+        "stain, spot, or darkening appears anywhere on the page at any point."
     ),
     fence_kind="none",
     caption_lines=("after Jesus",),

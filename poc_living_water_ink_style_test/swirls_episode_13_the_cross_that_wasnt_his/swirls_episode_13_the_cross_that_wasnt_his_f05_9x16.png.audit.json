@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "issues": [
+    {
+      "claim": "Only the exact handwritten strings given (one caption 'without the camp') should appear",
+      "actual": "the caption 'without the camp' is baked twice, side by side, at the bottom of the main scene -- a known, already-user-accepted cosmetic defect from the GATE 2 lock session (2 prior fix attempts both regressed the cross back to a saltire, so this was deliberately left as-is; correct doctrine/history over cosmetic caption). Not a new issue, not blocking."
+    }
+  ],
+  "banned_token_hits": [],
+  "png_sha256": "cc180ea12756d78fb51ca4301c347d1d5a12c7f0fae3ee7af4f8134e51781e5f"
+}
