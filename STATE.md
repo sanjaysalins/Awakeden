@@ -1,5 +1,92 @@
 # STATE.md — progress tracker
 
+**2026-09-07 Swirls ep13 "The Cross That Wasn't His" — GATE 3 reviewed and locked,
+FULLY FINISHED end-to-end, AND its publish pack built and GREEN. Six episodes now
+finished/locked/unposted, all six with ready-to-post publish packs.** Full detail:
+memory `project_the_cross_that_wasnt_his_episode_13`.
+Finished review: `poc_living_water_ink_style_test/swirls_episode_13_the_cross_that_wasnt_his/_FINISHED_REVIEW.html`
+Publish pack: `poc_living_water_ink_style_test/swirls_episode_13_the_cross_that_wasnt_his/publish/PUBLISH_INDEX.html`
+
+**GATE 3 → F03 re-angled, not re-worded.** User's own call at review: stop re-wording
+the same failing shot (Jesus's pair kept vanishing from the true last frame, 3 straight
+tries, on a flat "two groups abreast" composition), draw on this project's own richer
+camera vocabulary instead (`poc_living_water_ink_style_test/northstar_shortform/`'s
+8-shot "THE WELL" pattern-lock — WIDE, MEDIUM TWO-SHOT, WIDE MOVING, HELD SINGLE etc.,
+real variety, never the flat "MEDIUM WIDE" used on nearly every other page). Re-angled to
+a WIDE MOVING shot, close behind Simon, shot through the gate archway — Jesus's pair now
+small and atmospheric far down the receding road instead of an equal rival subject.
+Animation came out clean on the FIRST try. New memory
+`feedback_depth_composition_fixes_two_group_animation_hold`: when two separated
+figures/groups won't hold together on animation no matter how the prompt insists, fix
+the SHOT (depth: one near/large, one far/small/atmospheric), not the wording — this is
+the animation-stage analogue of the already-known static-shape lesson from F05.
+
+Getting there cost one wasted regen: the first re-angled still was rejected as "the
+cross reads as a saltire," but a full-frame recheck afterward showed it was correct all
+along — the QC crop had cut off the cross's own long trailing arm, making a correct
+asymmetric Latin cross look like a symmetric X. New memory
+`feedback_crop_qc_false_positive_shape_defect`: always verify a diagonal/carried
+object's shape at FULL FRAME, not a tight crop on the joint, before rejecting a render.
+
+**Score design (real per-word timestamps): F06 ("suffered without the gate") carries
+the one true resolution, strings enter at F07 — same pattern as every prior episode's
+arc discipline.** But a REAL, previously-undocumented defect shipped once undetected:
+the first score generation was near-total silence (-90dB) from 0s to ~63s, only becoming
+audible past the piece's own resolution point. The episode was called "finished" and a
+full write-up done before this was caught — by the USER, on playback, saying "can we
+have a score right from the start to the end please." A whole-file mean/max check
+(-21dB/-1.6dB) had looked completely normal; only a real timeline sweep (every ~15s)
+revealed the dead stretch. A second single-generation attempt with an explicit "the
+piano is audibly present throughout, never falls silent" prompt clause STILL failed the
+same way through 50s+ — a real generation-length limit, not a wording problem.
+
+**The fix that worked, and is now LOCKED STANDARD (user: "great score, this should be a
+standard"):** split the generation into TWO independent, shorter calls at the piece's
+own resolution boundary. Part 1 (front..F05) stays withheld throughout but is short
+enough not to trigger the defect; Part 2 (F06..back) opens ALREADY resolved in its very
+first bar — a warm chord struck immediately, which is inherently unlikely to render as
+silence since there is no "stay quiet" instruction anywhere near its start. Each part is
+verified audible-from-start (`check_no_dead_intro`) before being joined with a short
+`acrossfade`. This is now the default mechanism for every future episode's score, not a
+fallback — see `.claude/skills/swirls-of-life/SCORE_DESIGN_EARLY.md` section 6.8 (the
+standing procedure, doc status upgraded from "design, not yet run for real" to "LOCKED
+STANDARD") and episode 13's own `generate_score_piano.py` (the reference implementation
+to copy). Memory `feedback_score_dead_air_two_part_generation_fix`. Re-assembled and
+re-SFX-mixed on the corrected score; re-verified end to end (audible every ~15s across
+the full 106.43s, no clipping).
+
+**Publish pack built for episode 13 tonight, and its own red-team caught two real
+issues before shipping:** a YouTube long-form title citing "(Hebrews 13:11-13)" right
+next to the carrying-the-cross claim — that narrative is Mark 15/Luke 23, not Hebrews,
+so the citation was misleading; fixed to cite both honestly. And an Instagram quote that
+used "..." to elide words from the middle of a KJV verse — fails the verbatim-KJV gate
+outright (UK-G2); fixed to quote the full clause with no ellipsis. Both caught and fixed
+before the pack went GREEN (0 fail, 0 warn) on the second pass. Also cleared a batch of
+AI-slop em-dashes across every platform's copy (UK-G7) — worth remembering that this
+project's own de-slop policy (previously only enforced on captions.srt) applies to
+upload copy too.
+
+Also earlier the same day: `/publish` (`cli_publish.py`) was extended to support the
+Swirls-of-Life folder layout end-to-end (facts harvest, platform-compliant thumbnails,
+de-slopped reused captions.srt, hashtags folded into the copy body) — memory
+`project_publish_engine_swirls_support`. All 5 backlog episodes (Naaman ep4, Barrel
+ep5, Bier ep7, She Loved Much ep10, Where Are the Nine ep11) got GREEN publish packs the
+same day. Summary page: `poc_living_water_ink_style_test/_PUBLISH_PACKS_READY.html`.
+
+Three commits landed and pushed to `origin/main` today: `cb13516` (/publish supports
+Swirls + 5 backlog packs), `dc61f85` (episode 13 GATE 3 fix + fully finished), and this
+handover's own commit (episode 13's publish pack + the score/depth-composition/crop-QC
+lessons folded into the skill docs).
+
+**NEXT TASK: post the backlog.** Six episodes are finished, locked, and have GREEN
+publish packs sitting in `_UPLOAD_TRACKER.html` — this has been raised and deferred six
+sessions running now, and there is no more prep work left to justify deferring it
+again. The only remaining step is the human action of opening each platform and
+pasting from the tracker; log each posted URL with `upload_tracker.py --set` (main
+engine) or `swirls_upload_tracker.py --set` (Swirls) so the ledger stays in sync.
+
+---
+
 **2026-09-06 Swirls ep13 "The Cross That Wasn't His" (Mark 15:21/Luke 23:26, Simon of
 Cyrene; Hebrews 13:11-13 "without the camp/gate" typology) — narration + GATE 2 stills
 LOCKED, GATE 3 animation DONE (all 11 clips), PAUSED at GATE 3 for the user's own review.

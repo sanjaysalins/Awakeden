@@ -1,5 +1,110 @@
 # ══════════════════════════════════════════════════════════════════════════
-# ▶▶▶ START HERE TOMORROW (updated 2026-09-06, end of day -- user: "lets stop
+# ▶▶▶ START HERE TOMORROW (updated 2026-09-07, end of day -- user: "lets close
+# for the night and lets commit and update all the files, update the handover
+# and resume document"). Episode 13 is now FULLY FINISHED end-to-end AND has a
+# clean publish pack -- the open item below is now SIX episodes deep, every
+# one of them ready to post right now. Read this whole block before picking up.
+#
+# Episode 13 "The Cross That Wasn't His" (Mark 15:21/Luke 23:26, Simon of
+# Cyrene; Hebrews 13:11-13 "without the camp/gate" typology) went from
+# "paused at GATE 3" to fully shipped today: user reviewed GATE 3, sent F03
+# back for a re-angle (not a re-word), then locked it; assembled, scored,
+# SFX-mixed, tracker-refreshed; a real score defect was caught on playback
+# AFTER it was first called "finished" and fixed properly; then a publish
+# pack was built and its own red-team caught two real issues before it
+# shipped. Finished review:
+#   `poc_living_water_ink_style_test/swirls_episode_13_the_cross_that_wasnt_his/_FINISHED_REVIEW.html`
+# Publish pack: `poc_living_water_ink_style_test/swirls_episode_13_the_cross_that_wasnt_his/publish/PUBLISH_INDEX.html`
+# Full detail: memory `project_the_cross_that_wasnt_his_episode_13.md`.
+#
+# **FOUR real, generalizable lessons landed today -- useful on every future
+# episode, not just this one:**
+#
+# 1. **F03's animation kept dropping Jesus's own pair from the true last
+#    frame, 3 straight tries, on a flat "two groups abreast" shot.** User's
+#    own call: stop re-wording, draw on this project's own richer camera
+#    vocabulary (`poc_living_water_ink_style_test/northstar_shortform/`,
+#    "THE WELL" 8-shot pattern-lock) instead of the flat "MEDIUM WIDE"
+#    framing used on nearly every page. Re-angled to a WIDE MOVING shot,
+#    close behind Simon, shot through the gate archway -- Jesus's pair now
+#    small and atmospheric far down the road instead of an equal rival
+#    subject -- and the animation came out clean on the FIRST try. New
+#    standing lesson, memory `feedback_depth_composition_fixes_two_group_animation_hold`:
+#    when two separated figures/groups won't hold together on animation, fix
+#    the SHOT (depth: one near/large, one far/small), not the wording.
+# 2. **A too-tight QC crop nearly caused a wasted regen.** Rejected the first
+#    re-angled still as "the cross reads as a saltire," but a full-frame
+#    recheck afterward showed it was correct all along -- the crop had just
+#    cut off the cross's own long trailing arm. Memory
+#    `feedback_crop_qc_false_positive_shape_defect`: always verify a
+#    diagonal/carried object's shape at FULL FRAME before rejecting a render.
+# 3. **THE BIG ONE -- score dead-air, now a LOCKED STANDARD.** A single long
+#    (~109s) ElevenLabs Music generation with a "quiet/withheld" felt-piano
+#    character came back with 50-63 SECONDS of near-total silence before the
+#    piano ever started -- shipped once undetected (whole-file mean/max
+#    looked fine; only a real timeline sweep caught it), caught by the user
+#    on playback with "can we have a score right from the start to the end
+#    please." A second single-generation attempt with explicit "stay
+#    audible" wording STILL failed the same way. Fix: split into two
+#    independent, shorter generations at the piece's own resolution
+#    boundary -- Part 1 stays withheld but short enough not to trigger it,
+#    Part 2 opens ALREADY resolved in its first bar. User, on hearing the
+#    fixed result: **"great score, this should be a standard"** -- this is
+#    now the DEFAULT mechanism for every future episode's score, not a
+#    fallback. See `.claude/skills/swirls-of-life/SCORE_DESIGN_EARLY.md`
+#    section 6.8 (the standing procedure) and episode 13's own
+#    `generate_score_piano.py` (the reference implementation to copy --
+#    `check_no_dead_intro`, `_gen_music`, the `acrossfade` join). Memory
+#    `feedback_score_dead_air_two_part_generation_fix`.
+# 4. **The publish-pack red-team is earning its keep.** Building episode
+#    13's own pack, it caught two REAL issues before shipping: a YouTube
+#    long-form title citing "(Hebrews 13:11-13)" right next to the
+#    carrying-the-cross claim (that story is Mark 15/Luke 23, not Hebrews --
+#    fixed to cite both honestly), and an Instagram quote that used "..." to
+#    elide words mid-verse (fails the verbatim-KJV gate outright -- fixed to
+#    quote the full clause). Both caught and fixed before the pack went
+#    GREEN. Worth remembering: the automated red-team is not theatre, it
+#    finds real things.
+#
+# Separately, earlier the same session: `/publish` (`cli_publish.py`) was
+# extended to support the Swirls-of-Life folder layout end-to-end (facts
+# harvest, platform-compliant thumbnails, de-slopped reused captions.srt,
+# hashtags folded into the copy body) -- see memory
+# `project_publish_engine_swirls_support.md`. All 5 backlog episodes
+# (Naaman ep4, Barrel ep5, Bier ep7, She Loved Much ep10, Where Are the Nine
+# ep11) got GREEN publish packs the same session. Summary page:
+# `poc_living_water_ink_style_test/_PUBLISH_PACKS_READY.html`.
+#
+# **Three commits landed and pushed today** (all on `origin/main`):
+# `cb13516` (/publish supports Swirls + 5 backlog packs), `dc61f85`
+# (episode 13 GATE 3 fix + fully finished), and this handover's own commit
+# (episode 13's publish pack + the score/depth-composition/crop-QC memory
+# fixes folded into the skill docs). The combined tracker (all 6 episodes,
+# click-to-copy paste-ready copy per platform):
+# `file:///F:/slk/PycharmProjects/JesusInTheBible/_UPLOAD_TRACKER.html`
+#
+# ══════════════════════════════════════════════════════════════════════════
+#
+# ▶▶▶ THE OPEN ITEM, NOW SIX DEEP, AND EVERY ONE OF THEM IS READY TO POST
+# RIGHT NOW: Naaman ep4, Barrel ep5, Bier ep7, She Loved Much ep10, Where Are
+# the Nine ep11, and now The Cross That Wasn't His ep13 -- all finished,
+# locked, AND with GREEN publish packs sitting in the tracker. This has been
+# raised and deferred SIX sessions running now. There is no more prep work
+# left to justify deferring it again -- the only remaining step is the
+# human action of actually opening each platform and pasting from
+# `_UPLOAD_TRACKER.html`. Strongly recommend this is the FIRST thing
+# tomorrow, ahead of any new episode, or a deliberate explicit decision not
+# to -- not another silent default into a seventh episode.
+#
+# If posting happens, log each URL with `upload_tracker.py --set <slug>
+# <platform> <url>` (main-engine pieces) or `poc_living_water_ink_style_test\
+# swirls_upload_tracker.py --set <slug> <platform> <url>` (Swirls episodes)
+# so the tracker and manifest stay in sync -- never hand-edit the ledger.
+#
+# ══════════════════════════════════════════════════════════════════════════
+
+# ══════════════════════════════════════════════════════════════════════════
+# ▶▶▶ (superseded by the 2026-09-07 block above) START HERE TOMORROW (updated 2026-09-06, end of day -- user: "lets stop
 # for the day, bring everything to a logical point and lets restart tomorrow.
 # commit and push and update the handover and resume document"). Episode 13
 # is NOT finished -- it's paused mid-pipeline at GATE 3, waiting on the
