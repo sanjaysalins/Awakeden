@@ -57,6 +57,30 @@ def _load_episode_module(folder: Path):
     return mod
 
 
+_FINAL_PIN = "FINAL_VIDEO.txt"
+
+
+def _write_final_pin(folder: Path, final: Path) -> None:
+    """Pin the real final video into pipeline/finality.py's own documented escape
+    hatch (FINAL_VIDEO.txt, first line = relative path) -- the ONE place every
+    other tool (upload_engine/publish_pack/production_board) already knows how to
+    read a "the rule can't detect this layout" final from, so /publish (and
+    anything else built on finality.py) understands a Swirls episode for free,
+    with no Swirls-specific video-discovery code duplicated anywhere else.
+
+    Prefers the `_sfx.mp4` sibling when one exists -- same CAPTION POLICY
+    finality.py's own main-engine lanes already apply ("the SFX bed IS the
+    postable final"), just applied here since Swirls' SFX bed is a separate
+    build_sfx.py step outside EpisodeManifest's own score-variant `.out`."""
+    sfx = final.with_name(final.name.replace(".mp4", "_sfx.mp4"))
+    if sfx.is_file():
+        final = sfx
+    rel = final.relative_to(folder).as_posix()
+    pin = folder / _FINAL_PIN
+    if not pin.is_file() or pin.read_text(encoding="utf-8").strip().splitlines()[:1] != [rel]:
+        pin.write_text(rel + "\n", encoding="utf-8")
+
+
 def discover() -> list[tuple[str, str, Path | None]]:
     """(title, folder_name, final_video_path_or_None) for every episode.py-based
     episode found, by actually importing its own locked MANIFEST/FRONT_COVER --
@@ -79,6 +103,8 @@ def discover() -> list[tuple[str, str, Path | None]]:
             if variant is None:
                 variant = variants[0] if variants else None
             final = variant.out if variant is not None else None
+            if final is not None and final.is_file():
+                _write_final_pin(folder, final)
         except Exception as e:
             print(f"  !! could not introspect {folder.name}/episode.py: {e}")
             title, final = folder.name, None

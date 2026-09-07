@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cheapest Image Model — Bake-Off</title>
+<style>
+  body { font-family: Verdana, Arial, sans-serif; background: #faf7f0; color: #222;
+         max-width: 1000px; margin: 40px auto; padding: 0 20px; line-height: 1.5; }
+  h1 { font-size: 26px; color: #7a4a12; margin-bottom: 4px; }
+  .sub { color: #666; font-size: 15px; margin-bottom: 26px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .card { background: #fff; border: 1px solid #e2d9c8; border-radius: 12px; padding: 14px; }
+  .card h2 { font-size: 16px; color: #7a4a12; margin: 0 0 6px; }
+  .card img { width: 100%; border-radius: 8px; border: 1px solid #e2d9c8; }
+  .price { font-size: 22px; font-weight: bold; color: #1a5c1a; margin: 8px 0 2px; }
+  .price.high { color: #a8231d; }
+  .note { font-size: 13px; color: #444; margin-top: 6px; }
+  .verdict { background: #fff; border: 1px solid #e2d9c8; border-radius: 12px;
+             padding: 18px 22px; margin-top: 24px; }
+  .verdict h2 { font-size: 18px; color: #7a4a12; margin: 0 0 10px; }
+  .verdict ul { margin: 0; padding-left: 20px; }
+  .verdict li { margin: 6px 0; }
+  .bad { color: #a8231d; font-weight: bold; }
+  .good { color: #1a5c1a; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<h1>Cheapest Image Model — Bake-Off</h1>
+<div class="sub">Same still (episode 11's front cover, "Where Are the Nine"), same exact prompt text,
+no reference images on either new render (a clean test of the MODEL alone). All on OpenArt.</div>
+
+<div class="grid">
+  <div class="card">
+    <h2>What we already shipped</h2>
+    <img src="original_shipped_nanobananapro_withrefs.png">
+    <div class="price">Nano Banana Pro</div>
+    <div class="note">The real, locked episode cover. Used character/location reference images
+    (this is the only one of the three that did).</div>
+  </div>
+  <div class="card">
+    <h2>Same model, no refs</h2>
+    <img src="nano_banana_pro_norefs.png">
+    <div class="price high">40 credits (~$0.08)</div>
+    <div class="note">Nano Banana Pro, prompt only. Very close to the shipped look even
+    without reference images.</div>
+  </div>
+  <div class="card">
+    <h2>Cheapest image model</h2>
+    <img src="kling_3_omni_norefs.png">
+    <div class="price">10 credits (~$0.02)</div>
+    <div class="note">Kling 3 Omni, prompt only. 4x cheaper than Nano Banana Pro.</div>
+  </div>
+</div>
+
+<div class="verdict">
+  <h2>What I found</h2>
+  <ul>
+    <li><span class="good">Kling 3 Omni is 4x cheaper</span> (10 credits vs 40, about $0.02 vs $0.08
+    per still) and its woodcut linework actually looks MORE period-authentic than Nano Banana Pro's —
+    denser hatching, more like a real 16th-century print.</li>
+    <li><span class="bad">But it undressed the men.</span> The prompt asked for "coarse rent tunics
+    torn open at the breast" — still substantially clothed, just torn at the chest. Kling drew them
+    almost bare-chested with just a cloth sling, far more exposed than intended for a reverent Bible
+    channel. Nano Banana Pro kept them properly clothed, ragged but decent.</li>
+    <li><span class="bad">Title placement and framing are off.</span> The title was supposed to sit
+    "near the top of the frame" — Kling dropped it into the middle of the hillside instead, and
+    cropped the men's feet at the very bottom edge instead of leaving them fully inside the frame.</li>
+    <li>Nano Banana Pro without any reference images still holds up well — close to the shipped
+    version's look, so most of the quality here is coming from the model itself, not the refs.</li>
+  </ul>
+  <h2 style="margin-top:18px">Bottom line</h2>
+  <p>Kling 3 Omni is a genuinely cheaper option and wins on raw woodcut texture, but as tested here
+  it is not a safe drop-in replacement — the under-dressed figures alone would fail this project's
+  own reverence bar. It might be worth a second try with a stronger "fully clothed, chest covered"
+  clause and a tighter framing instruction, but I would not switch the whole series to it without
+  that follow-up test passing clean. Nano Banana Pro stays the safer default for now.</p>
+</div>
+
+</body>
+</html>

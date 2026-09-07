@@ -5,7 +5,9 @@ agent-mode (LLM_PROVIDER=agent) they go to the in-chat agent via the file bridge
 """
 from __future__ import annotations
 
+import importlib.util
 import json
+import re
 from pathlib import Path
 
 import config
@@ -159,8 +161,70 @@ def _harvest_batch_facts(d: Path, fmt: str = "short") -> SourceFacts:
     )
 
 
+_ANCHOR_REF_RE = re.compile(r"^([1-3]?\s?[A-Za-z]+\s+\d+(?::\d+(?:-\d+)?)?)\s*\(")
+
+
+def _swirls_anchor_ref(design_brief: Path, subtitle: str) -> str:
+    """The precise verse range from _DESIGN_BRIEF.md's opening line
+    ("Luke 17:11-19 (ten lepers cleansed...) ...") when a brief exists;
+    otherwise the cover's own chapter-only subtitle (e.g. "2 KINGS 5")."""
+    if design_brief.is_file():
+        for line in design_brief.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            m = _ANCHOR_REF_RE.match(line)
+            if m:
+                return m.group(1).strip()
+    return subtitle.title()
+
+
+def _harvest_swirls_facts(d: Path) -> SourceFacts:
+    """Swirls-of-Life episode (poc_living_water_ink_style_test/swirls_episode_*/):
+    a bare episode.py (no narration.creation.json) holds FRONT_COVER (subtitle =
+    the anchor ref) + MANIFEST. The real final video comes from finality.py via
+    the FINAL_VIDEO.txt pin swirls_upload_tracker.py's discover() writes -- not
+    re-derived here, so there is only ONE place that picks which score/sfx
+    variant shipped."""
+    spec = importlib.util.spec_from_file_location(f"swirls_episode_{d.name}", d / "episode.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    front = getattr(mod, "FRONT_COVER", None)
+    subtitle = (getattr(front, "subtitle", "") or "").strip() if front else ""
+
+    spoken = ""
+    md = d / "narration.md"
+    if md.is_file():
+        spoken = md.read_text(encoding="utf-8")
+
+    anchor_ref = _swirls_anchor_ref(d / "_DESIGN_BRIEF.md", subtitle)
+    anchor_kjv = (scripture.fetch_kjv(anchor_ref) or "").strip() if anchor_ref else ""
+
+    prefix = f"swirls_episode_{d.name.split('_')[2]}_" if d.name.startswith("swirls_episode_") else ""
+    title = d.name[len(prefix):].replace("_", " ").title() if prefix else d.name.replace("_", " ").title()
+
+    return SourceFacts(
+        media_dir=str(d),
+        video_path=_find_video(d, "short"),
+        format="short",
+        series_name="Swirls of Life",
+        brand="Awakeden",
+        episode_title=title,
+        anchor_ref=anchor_ref,
+        anchor_kjv=anchor_kjv,
+        kjv_verified=bool(anchor_kjv),
+        thread="",
+        thread_lever="",
+        hook_line=_first_sentence(spoken) if spoken else "",
+        spoken_script=" ".join(spoken.split())[:4000],
+        beats=[],
+    )
+
+
 def harvest_facts(media_dir: str) -> SourceFacts:
     d = Path(media_dir).resolve()
+    if not (d / "narration.creation.json").is_file() and (d / "episode.py").is_file():
+        return _harvest_swirls_facts(d)         # Swirls-of-Life episode.py layout
     if not (d / "narration.creation.json").is_file() and (d / "visual").is_dir():
         return _harvest_batch_facts(d, "short")   # batch living-page layout
     if not (d / "narration.creation.json").is_file() and (

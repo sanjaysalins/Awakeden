@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Seedream 4.5 Follow-Up</title>
+<style>
+  body { font-family: Verdana, Arial, sans-serif; background: #faf7f0; color: #222;
+         max-width: 1100px; margin: 40px auto; padding: 0 20px; line-height: 1.5; }
+  h1 { font-size: 26px; color: #7a4a12; margin-bottom: 4px; }
+  h2 { font-size: 20px; color: #7a4a12; margin: 34px 0 6px; }
+  .sub { color: #666; font-size: 15px; margin-bottom: 20px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 10px; }
+  .card { background: #fff; border: 1px solid #e2d9c8; border-radius: 12px; padding: 12px; }
+  .card h3 { font-size: 15px; color: #7a4a12; margin: 0 0 4px; }
+  .card img { width: 100%; border-radius: 8px; border: 1px solid #e2d9c8; cursor: zoom-in; }
+  .price { font-size: 13px; font-weight: bold; color: #1a5c1a; margin: 6px 0 2px; }
+  .price.shipped { color: #555; }
+  .verdict { font-size: 13px; color: #333; }
+  .verdict .bad { color: #a8231d; }
+  .verdict .good { color: #1a5c1a; }
+  .final { background: #fff; border: 1px solid #e2d9c8; border-radius: 12px;
+           padding: 20px 24px; margin-top: 30px; }
+  .final h2 { margin-top: 0; }
+  .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.85);
+              z-index: 99; align-items: center; justify-content: center; }
+  .lightbox img { max-width: 92vw; max-height: 92vh; border-radius: 6px; }
+</style>
+</head>
+<body>
+
+<h1>Seedream 4.5 Follow-Up — Simpler Content</h1>
+<div class="sub">Testing the one standout from the full bake-off (Seedream 4.5, 15cr) against the
+current default (Nano Banana Pro, 40cr) on two SIMPLER interior pages from episode 11 — not
+crowd covers (covers stay Nano Banana Pro, per your call). Both from the same episode, same real
+reference images, same real production prompt. Real spend: ~110 credits (~$0.22). Click to zoom.</div>
+
+<h2>F05 — the Samaritan turns back, nine walk on</h2>
+<div class="grid">
+  <div class="card">
+    <h3>What we already shipped</h3>
+    <img src="f05/shipped_original.png" onclick="zoom(this)">
+    <div class="price shipped">Nano Banana Pro (original refs)</div>
+  </div>
+  <div class="card">
+    <h3>Nano Banana Pro (control)</h3>
+    <img src="f05/nbp_40cr.png" onclick="zoom(this)">
+    <div class="price">40 credits (~$0.08)</div>
+    <div class="verdict"><span class="good">Clean — panels correct, Samaritan facing viewer
+    with his red hem-trim, nine walking away, faint blue thread in the sky.</span></div>
+  </div>
+  <div class="card">
+    <h3>Seedream 4.5</h3>
+    <img src="f05/seedream45_15cr.jpg" onclick="zoom(this)">
+    <div class="price">15 credits (~$0.03)</div>
+    <div class="verdict"><span class="good">Just as clean — correct panels, correct red
+    hem-trim ONLY on the Samaritan, nine men correctly walking away, blue thread present, fully
+    clothed (no exposure issue this time). Matches the shipped look closely.</span></div>
+  </div>
+</div>
+
+<h2>F08 — Jesus and the fallen Samaritan (the closest, calmest shot in the episode)</h2>
+<div class="grid">
+  <div class="card">
+    <h3>What we already shipped</h3>
+    <img src="f08/shipped_original.png" onclick="zoom(this)">
+    <div class="price shipped">Nano Banana Pro (original refs)</div>
+  </div>
+  <div class="card">
+    <h3>Nano Banana Pro (control)</h3>
+    <img src="f08/nbp_40cr.png" onclick="zoom(this)">
+    <div class="price">40 credits (~$0.08)</div>
+    <div class="verdict"><span class="good">Correct text, Jesus's red trim absent as it should
+    be, blue threads correctly rising from his hand only.</span>
+    <span class="bad">But the Samaritan isn't actually prostrate — the brief calls for
+    forehead-to-the-ground; here he's kneeling upright, face raised toward Jesus. Even the
+    current default missed this one.</span></div>
+  </div>
+  <div class="card">
+    <h3>Seedream 4.5</h3>
+    <img src="f08/seedream45_15cr.jpg" onclick="zoom(this)">
+    <div class="price">15 credits (~$0.03)</div>
+    <div class="verdict"><span class="good">Got the pose RIGHT where Nano Banana Pro didn't —
+    genuinely prostrate, forehead to the dust, hands spread.</span>
+    <span class="bad">But gave Jesus the same red hem-trim that's supposed to be the
+    Samaritan's ONE distinguishing mark in this whole episode — a real continuity slip, not
+    a cosmetic one.</span></div>
+  </div>
+</div>
+
+<div class="final">
+  <h2>What this changes</h2>
+  <p><b>F05 (a featured figure with a calm background group): Seedream 4.5 matched the current
+  default cleanly</b> — no exposure issue, no spelling issue, correct wardrobe rule. This is the
+  content type I'd expect it to handle well, and it did.</p>
+  <p><b>F08 (the closest two-person shot in the whole episode) split the difference</b>: neither
+  model was fully compliant. Nano Banana Pro missed the Samaritan's pose; Seedream 4.5 got the
+  pose right but leaked the Samaritan's one distinguishing mark onto Jesus. Worth remembering:
+  the CURRENT default isn't automatically perfect either — this project's own Vision-audit gate
+  is what actually catches this, not blind trust in whichever model rendered it.</p>
+  <p><b>Overall: this strengthens the earlier read, doesn't fully settle it.</b> Seedream 4.5 is
+  a real, usable option for calmer content (one clean pass, one pass with a fixable, specific
+  defect — "never repeat the Samaritan's hem-trim on any other figure" is a one-line addition to
+  the standing prompt rule, not a deep problem). I'd still gate any real switch through the
+  existing Vision content audit before it ever ships, exactly like every other render — that
+  part of the pipeline doesn't change regardless of which model wins.</p>
+</div>
+
+<div class="lightbox" id="lb" onclick="this.style.display='none'"><img id="lbimg"></div>
+<script>
+function zoom(img) {
+  document.getElementById('lbimg').src = img.src;
+  document.getElementById('lb').style.display = 'flex';
+}
+</script>
+
+</body>
+</html>

@@ -114,7 +114,8 @@ def main() -> int:
                 print(f"  panel -> {u['res']['panel_dir']}")
         units.append({"title": Path(t).name,
                       "platforms": [(lbl, p) for lbl, p in pack["platforms"]],
-                      "video": pack["video"]})
+                      "video": pack["video"],
+                      "pub": pack["pub"]})
 
     # one clickable index covering everything processed
     if args.all_shorts:

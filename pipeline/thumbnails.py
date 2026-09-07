@@ -2,7 +2,7 @@
 
 Design: the piece's hero FRAME (pulled from the finished _sfx video at its strongest
 beat) cover-cropped, a bottom ink gradient, the title in ivory Georgia Bold caps, the
-verse ref beneath, and the red AWAKEDEN wordmark with a red rule. Writes to
+verse ref beneath, and the red AWAKEDEN wordmark. Writes to
 <piece>/publish/thumbs/. Also exports the standalone brand watermark assets
 (_brand/awakeden_watermark*.png) for YouTube Studio's branding slot.
 
@@ -22,7 +22,6 @@ ROOT = Path(__file__).resolve().parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-RED = (168, 35, 29)        # awakeden red
 IVORY = (245, 240, 208)    # caption ivory
 INK = (12, 10, 8)
 
@@ -181,8 +180,7 @@ def compose(frame: Image.Image, size_key: str, title: list[str], ref: str) -> Im
         dr.text((margin + 4, ty + 4), line, font=f_title, fill=(0, 0, 0, 210))  # shadow
         dr.text((margin, ty), line, font=f_title, fill=IVORY)
         ty += int(ts * 1.08)
-    dr.rectangle([margin, ty + int(ts * 0.12), margin + int(w * 0.14), ty + int(ts * 0.12) + max(6, ts // 14)], fill=RED)
-    dr.text((margin + int(w * 0.16), ty), ref, font=f_ref, fill=IVORY)
+    dr.text((margin, ty), ref, font=f_ref, fill=IVORY)
 
     # site wordmark (AWAK bone + EDEN red) — top-right (16:9, 1:1) / bottom-left (9:16)
     from pipeline.channel_dress import draw_wordmark, wordmark_width
@@ -237,11 +235,8 @@ def compose_tiktok(frame: Image.Image, title: list[str], ref: str) -> Image.Imag
 
     ry = art_y + art.height + int(ts * 0.45)
     rw = dr.textlength(ref, font=f_ref)
-    bar_w = int(w * 0.11)
-    x0 = (w - rw - bar_w - int(ts * 0.35)) / 2
-    dr.rectangle([x0, ry + int(ts * 0.14), x0 + bar_w,
-                  ry + int(ts * 0.14) + max(6, ts // 15)], fill=RED)
-    dr.text((x0 + bar_w + int(ts * 0.35), ry), ref, font=f_ref, fill=IVORY)
+    x0 = (w - rw) / 2
+    dr.text((x0, ry), ref, font=f_ref, fill=IVORY)
 
     from pipeline.channel_dress import draw_wordmark, wordmark_width
     bsize = int(ts * 0.30)
@@ -249,6 +244,127 @@ def compose_tiktok(frame: Image.Image, title: list[str], ref: str) -> Image.Imag
     by = min(ry + int(ts * 1.1), zone_bot - int(bsize * 1.6))
     draw_wordmark(im, bx, by, bsize, glow=False, shadow=True)
     return im
+
+
+# Per-surface SAFE ZONE (fraction of canvas reserved at each edge, where no text/
+# logo/important art may sit). Researched 2026-09 against each platform's own
+# published guidance (YouTube: support.google.com/youtube/answer/72431; TikTok:
+# kreatli.com/guides/tiktok-safe-zone + checksafe.zone's 2026 safe-area guide;
+# Instagram: outfy.com's safe-zone guide + postfa.st's Reel-cover safe-zone guide;
+# Facebook Reels: sendshort.ai's Facebook Reels size guide).
+#
+# 16:9 and 1:1 are STATIC thumbnail/post surfaces (YouTube search/suggested grid,
+# Instagram feed) with no player chrome drawn over them -- only a small legibility
+# margin is needed. 9:16 is a FULL-SCREEN PLAYER surface shared by YouTube Shorts,
+# TikTok, Instagram Reels, and Facebook Reels alike, and each reserves real screen
+# space for its own chrome while playing (profile/follow/live badge at the top;
+# a like/comment/share icon column plus caption/username/sound-title band at the
+# bottom-right) -- and grid/profile previews (Shorts shelf ~2:3, IG profile ~3:4)
+# crop the same canvas further, shaving more off the top and bottom. The numbers
+# below are the STRICTEST combination across all four platforms (top 150-200px,
+# bottom 250-400px, right 100-270px on a 1080x1920 canvas), used symmetrically
+# left+right for simplicity/safety, so ONE 9:16 export is safe on every one of
+# them rather than tuned to just one.
+SAFE_ZONES = {
+    "16x9": {"top": 0.05, "bottom": 0.05, "left": 0.05, "right": 0.05},
+    "9x16": {"top": 0.104, "bottom": 0.208, "left": 0.083, "right": 0.083},
+    "1x1": {"top": 0.05, "bottom": 0.05, "left": 0.05, "right": 0.05},
+}
+
+
+def compose_centered(frame: Image.Image, w: int, h: int, title: list[str], ref: str,
+                     safe: dict | None = None) -> Image.Image:
+    """Swirls-of-Life thumbnail: works for ANY target aspect (16:9, 9:16, 1:1) via one
+    code path, unlike compose()/compose_tiktok() above (main-engine, horizontally-shot
+    footage where a directional crop makes sense). Swirls stills are shot 9:16 and
+    describe subjects small against the landscape anywhere in the frame (e.g. a line of
+    figures across the LOWER third) -- compose()'s crop bias would cut real subject
+    content out of a 16:9/1:1 canvas. So here the source is never cropped: a blurred
+    full-bleed backdrop of it fills the canvas, the WHOLE frame is scaled to fit and
+    centered on top -- but title, art, ref, and wordmark are ALL laid out strictly
+    inside `safe` (see SAFE_ZONES), never just centered on the raw canvas, so nothing
+    important lands where a platform's own on-screen chrome would cover it."""
+    safe = safe or SAFE_ZONES["16x9"]
+    im = cover_crop(frame, w, h).filter(ImageFilter.GaussianBlur(28))
+    im = Image.eval(im, lambda px: int(px * 0.42))
+    dr = ImageDraw.Draw(im, "RGBA")
+
+    sx0, sx1 = w * safe["left"], w * (1 - safe["right"])
+    sy0, sy1 = h * safe["top"], h * (1 - safe["bottom"])
+    safe_w, safe_h = sx1 - sx0, sy1 - sy0
+
+    ts0 = int(min(safe_w, safe_h) * 0.16)
+    f_title = _fit_title_font(dr, title, ts0, safe_w)
+    ts = f_title.size
+    f_ref = _font(GEORGIA, int(ts * 0.36))
+
+    title_block_h = len(title) * int(ts * 1.1) + int(ts * 0.5)
+    bottom_block_h = int(ts * 1.6)  # ref + wordmark row
+    gap = int(ts * 0.35)
+    art_max_w = safe_w
+    art_max_h = max(1, safe_h - title_block_h - bottom_block_h - 2 * gap)
+
+    scale = min(art_max_w / frame.width, art_max_h / frame.height, 1.0)
+    art = frame.resize((max(1, round(frame.width * scale)), max(1, round(frame.height * scale))), Image.LANCZOS)
+    art_x = int(sx0 + (safe_w - art.width) / 2)
+    art_y = int(sy0 + title_block_h + gap)
+    im.paste(art, (art_x, art_y))
+    dr.rectangle([art_x - 3, art_y - 3, art_x + art.width + 3, art_y + art.height + 3],
+                 outline=IVORY + (160,), width=3)
+
+    ty = int(sy0)
+    for line in title:
+        lw = dr.textlength(line, font=f_title)
+        x = sx0 + (safe_w - lw) / 2
+        dr.text((x + 3, ty + 3), line, font=f_title, fill=(0, 0, 0, 210))
+        dr.text((x, ty), line, font=f_title, fill=IVORY)
+        ty += int(ts * 1.1)
+
+    ry = art_y + art.height + gap
+    rw = dr.textlength(ref, font=f_ref)
+    x0 = sx0 + (safe_w - rw) / 2
+    dr.text((x0, ry), ref, font=f_ref, fill=IVORY)
+
+    from pipeline.channel_dress import draw_wordmark, wordmark_width
+    bsize = int(ts * 0.28)
+    bw = wordmark_width(bsize)
+    by = min(ry + int(ts * 1.1), sy1 - int(bsize * 1.3))
+    draw_wordmark(im, sx0 + (safe_w - bw) / 2, by, bsize, glow=False, shadow=True)
+    return im
+
+
+def build_swirls_thumbnails(episode_dir: Path) -> list[Path]:
+    """Thumbnails for one Swirls-of-Life episode (poc_living_water_ink_style_test/
+    swirls_episode_*/). Source art is the episode's own front_cover.png -- a real
+    composed hero image, not a video-frame grab (grabbing a frame from the finished
+    ANIMATED cover risks landing mid-motion; the cover art itself is already the
+    intended hero shot). Title/ref come from the SAME FRONT_COVER the episode's own
+    on-screen title card uses (via episode.py, same MANIFEST introspection
+    upload_engine.harvest_facts() already uses) -- one source of truth for the title,
+    not a second guess at it."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(f"swirls_episode_{episode_dir.name}", episode_dir / "episode.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    front = mod.FRONT_COVER
+
+    cover = episode_dir / "front_cover.png"
+    if not cover.is_file():
+        cover = episode_dir / "front_cover_9x16.png"  # older episodes (pre-episode.py naming, e.g. Naaman)
+    if not cover.is_file():
+        raise FileNotFoundError(f"no front_cover.png / front_cover_9x16.png under {episode_dir}")
+    frame = Image.open(cover).convert("RGB")
+    title = _default_title(front.title)
+    ref = front.subtitle
+
+    pub = episode_dir / "publish" / "thumbs"
+    pub.mkdir(parents=True, exist_ok=True)
+    out_paths = []
+    for key, (w, h) in SIZES.items():
+        out = pub / f"thumb_{key}.jpg"
+        compose_centered(frame, w, h, title, ref, safe=SAFE_ZONES[key]).save(out, quality=92)
+        out_paths.append(out)
+    return out_paths
 
 
 def brand_assets(out_dir: Path) -> None:
@@ -322,9 +438,30 @@ def _duration(video: Path) -> float:
         return 30.0
 
 
+_SWIRLS_DIR = ROOT / "poc_living_water_ink_style_test"
+
+
+def _main_swirls(arg: str) -> int:
+    """arg is either a Swirls episode folder (has episode.py) or '--swirls' to do
+    every swirls_episode_* under poc_living_water_ink_style_test/."""
+    if arg == "--swirls":
+        dirs = sorted(d for d in _SWIRLS_DIR.glob("swirls_episode_*") if (d / "episode.py").is_file())
+    else:
+        dirs = [Path(arg).resolve()]
+    made = 0
+    for d in dirs:
+        out = build_swirls_thumbnails(d)
+        made += len(out)
+        print(f"{d.name}: {len(out)} thumbnails -> {out[0].parent}")
+    print(f"\n{made} thumbnails written")
+    return 0
+
+
 def main() -> int:
     from pipeline import finality, release_state
     flt = sys.argv[1] if len(sys.argv) > 1 else ""
+    if flt == "--swirls" or (flt and (Path(flt) / "episode.py").is_file()):
+        return _main_swirls(flt)
     brand_assets(ROOT / "_brand")
     states, _orphans, _orphan_pages = release_state.gather()
     made, skipped = [], []

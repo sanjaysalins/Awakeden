@@ -277,6 +277,35 @@ they're never animated; `VISION_AUDIT_MODEL`=Haiku for the coarse assembly verif
   Swirls-of-Life POC pipeline only — the main 4-stage engine
   (`cli.py`/`cli_visual.py`/`cli_assemble.py`) is untouched.
 
+- **Swirls-of-Life interior-page still model: content-complexity tiering, locked
+  2026-09-05** after a real bake-off (`poc_living_water_ink_style_test/
+  swirls_episode_11_where_are_the_nine/_bakeoff_all_cheap_models/
+  _BAKEOFF_REVIEW.html` + the Seedream-4.5-only follow-up in
+  `_bakeoff_followup_seedream45/`). **Covers always render on Nano Banana Pro,
+  full stop** (user's own call) — never parameterized, hardcoded in
+  `swirls_cover.py`. **Interior pages** (`swirls_page.py`'s `PageSpec`) gained a
+  new `still_model` field, same per-page human-judgment pattern as the existing
+  `model_tier` animation field (Kling for action/crowd, Seedance for calm
+  single-figure): default stays `nano-banana-pro` (safe, matches every
+  already-authored page); a page's own author may set
+  `still_model="seedream-4-5"` (~15cr vs 40cr on OpenArt, ~a third the price)
+  ONLY for calm, non-crowd content — a featured single or paired figure, not a
+  headcount-critical crowd scene. Real evidence: an 8-model, 2-content-type
+  bake-off found NO model clean on crowd content (undercounting, chest
+  exposure, or garbled text on every one of 8 cheap models tested), but
+  Seedream 4.5 matched Nano Banana Pro cleanly on a calm single-figure-plus-
+  background page; a second, harder two-person close shot found a REAL defect
+  in the current default too (Nano Banana Pro drew the Samaritan kneeling
+  upright instead of the brief's own "prostrate, forehead to the ground") —
+  Seedream 4.5 got that pose right but leaked the Samaritan's own one
+  distinguishing mark onto Jesus, now fixed as a standing authoring rule (see
+  `NORTH_STAR_PROMPT.md`'s 2026-09-05 checklist addition: any one-figure-only
+  mark needs an explicit "no other figure ever wears this" clause). This is
+  NEVER automatic/heuristic — the page's own author decides at design time,
+  same discipline as the animation tier — and every render still goes through
+  the existing per-image Vision content audit regardless of which model made
+  it.
+
 - **🔒 NON-NEGOTIABLE — sound doctrine, proven BOTH ways** (user, 2026-06-26):
   every piece's doctrine must be SOUND and GROUNDED IN THE BIBLE, and verified
   BOTH independently (my own red-team/self-check) AND by the 5-CLI panel — never

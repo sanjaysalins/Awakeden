@@ -133,6 +133,29 @@ def build_srt(words_json: str | Path, *, max_chars: int = 42, max_dur: float = 6
     return "\n".join(out)
 
 
+# AI-slop typography a caption file can inherit from the narration prose it
+# transcribes (em/en-dash, ellipsis, curly quotes) -- see UK-G7's own _SLOP_CHARS
+# in upload_gates.py for the drafted-copy version of this same house rule.
+# Captions get the characters actually REMOVED (not just flagged), since a
+# subtitle file is a transcript, not authored copy someone can hand-edit before
+# posting -- the plain-ASCII standard applies here too, dashes and ellipses
+# never carry spoken content, so stripping them changes no meaning.
+_CAPTION_DESLOP = {
+    "—": " ", "–": " ", "…": "",
+    "‘": "'", "’": "'", "“": '"', "”": '"',
+}
+
+
+def deslop_caption_text(text: str) -> str:
+    for bad, good in _CAPTION_DESLOP.items():
+        text = text.replace(bad, good)
+    text = text.replace("...", "")
+    text = re.sub(r"[ \t]{2,}", " ", text)
+    text = re.sub(r"[ \t]+\n", "\n", text)
+    text = re.sub(r"\n[ \t]+", "\n", text)
+    return text
+
+
 # ----------------------------------------------------------------------------
 # per-platform copy file (rendered FROM the auto-drafted/paneled kit)
 # ----------------------------------------------------------------------------
@@ -147,7 +170,15 @@ def render_platform_md(meta: PlatformMeta, *, is_long: bool,
     out = [f"# {title}", ""]
     if meta.title:
         out.append(_section("TITLE", meta.title))
-    out.append(_section(body_label, meta.description))
+    # Hashtags are appended into the body itself (not just the separate HASHTAGS
+    # section below) so ONE copy of DESCRIPTION/CAPTION is paste-ready on its own —
+    # real platforms want hashtags inside the caption/description text, not in a
+    # second field posted separately. HASHTAGS stays a real section too: it is
+    # what publish_check re-parses back into the gated hashtag list on a refresh.
+    body = meta.description
+    if meta.hashtags:
+        body = f"{body}\n\n{' '.join(meta.hashtags)}".strip()
+    out.append(_section(body_label, body))
     if meta.platform in _TAGS_PLATFORMS:
         out.append(_section("TAGS", ", ".join(meta.tags)))
     out.append(_section("HASHTAGS", " ".join(meta.hashtags)))
@@ -215,6 +246,10 @@ pre{white-space:pre-wrap;word-break:break-word;background:#14110f;border:1px sol
 .copy{background:#3a4a2f;color:#dfe8c0;border:0;border-radius:6px;padding:2px 9px;font-size:11px;cursor:pointer}
 .copy:hover{background:#4d6440}.copy.done{background:#2f6f4a}
 .legend{font-size:13px;color:#b59e86;margin:8px 0 0}.legend b.g{color:#7bd07b}.legend b.r{color:#e08a55}
+.res{margin:6px 0 14px}.res a{color:#7fb5e6;font-size:14px}
+.thumbs{display:flex;gap:12px;margin:6px 0 14px;flex-wrap:wrap}
+.thumbs a{color:#b59e86;font-size:12px;text-align:center;text-decoration:none}
+.thumbs img{display:block;height:110px;border-radius:6px;border:1px solid #352d26;margin-bottom:4px}
 """
 
 _JS = """
@@ -250,9 +285,31 @@ def _render_card(label: str, copy_path: Path, video: str) -> str:
     return f'<section class="card">{head}{media}{"".join(rows)}</section>'
 
 
+def _render_resources(pub_dir: Path) -> str:
+    """Per-unit resources that aren't per-platform copy: the subtitle file and the
+    thumbnail set. Both are easy to lose track of otherwise (they sit on disk with
+    no field/copy-button of their own) — surfaced here so the index page is the
+    ONE place to find everything the pack produced, not just the platform copy."""
+    parts = []
+    srt = pub_dir / "captions.srt"
+    if srt.is_file():
+        href = f"file:///{str(srt.resolve()).replace(chr(92), '/')}"
+        parts.append(f'<div class="res"><a href="{href}">captions.srt (upload as subtitles)</a></div>')
+    thumbs = pub_dir / "thumbs"
+    imgs = []
+    for key, label in (("16x9", "16:9"), ("9x16", "9:16"), ("1x1", "1:1")):
+        p = thumbs / f"thumb_{key}.jpg"
+        if p.is_file():
+            href = f"file:///{str(p.resolve()).replace(chr(92), '/')}"
+            imgs.append(f'<a href="{href}"><img src="{href}" alt="{label}"><span>{label}</span></a>')
+    if imgs:
+        parts.append(f'<div class="thumbs">{"".join(imgs)}</div>')
+    return "".join(parts)
+
+
 def build_index(pub: Path, units: list[dict]) -> Path:
-    """units = [{'title','platforms':[(label, md_path)], 'video'}]. Cards are parsed
-    FROM the on-disk md files, so the index always reflects the current copy."""
+    """units = [{'title','platforms':[(label, md_path)], 'video','pub'}]. Cards are
+    parsed FROM the on-disk md files, so the index always reflects the current copy."""
     parts = [
         "<!doctype html><meta charset='utf-8'>",
         f"<title>Publish pack</title><style>{_CSS}</style>",
@@ -263,6 +320,8 @@ def build_index(pub: Path, units: list[dict]) -> Path:
     ]
     for u in units:
         parts.append(f"<h2>{_esc(u['title'])}</h2>")
+        if u.get("pub"):
+            parts.append(_render_resources(Path(u["pub"])))
         for label, md_path in u["platforms"]:
             parts.append(_render_card(label, Path(md_path), u.get("video", "")))
     parts.append(f"<script>{_JS}</script>")
@@ -307,12 +366,24 @@ def write_unit_pack(kit: UploadKit, *, chapters: str = "", pinned: str = "",
 
     video, words = final_video_and_words(media)
     srt_note = ""
+    captions_source = "missing"
+    existing_srt = sorted(media.glob("*.srt"))
     if words:
-        (pub / "captions.srt").write_text(build_srt(words), encoding="utf-8")
+        (pub / "captions.srt").write_text(deslop_caption_text(build_srt(words)), encoding="utf-8")
+        captions_source = "aligned"
+    elif existing_srt:
+        # no forced-aligned words.json (e.g. Swirls-of-Life, which never burns
+        # captions and instead ships its own real ElevenLabs-aligned .srt at the
+        # episode root via build_srt.py) — reuse that file rather than rebuild it,
+        # de-slopped the same way (see deslop_caption_text above).
+        (pub / "captions.srt").write_text(
+            deslop_caption_text(existing_srt[0].read_text(encoding="utf-8")), encoding="utf-8")
+        captions_source = "reused_srt"
     else:
         srt_note = "no <final video>.words.json found — captions.srt not built"
 
     src = build_source(kit, video, words)
+    src["captions_source"] = captions_source
     # copy_final_sha = what the COPY was authored against. A mechanical --index
     # refresh restamps final_sha but must NOT restamp this — otherwise one batch
     # refresh launders wave-stale copy as reviewed (commit 9007339's failure).

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>All Cheap Models — Bake-Off</title>
+<style>
+  body { font-family: Verdana, Arial, sans-serif; background: #faf7f0; color: #222;
+         max-width: 1300px; margin: 40px auto; padding: 0 20px; line-height: 1.5; }
+  h1 { font-size: 26px; color: #7a4a12; margin-bottom: 4px; }
+  h2 { font-size: 20px; color: #7a4a12; margin: 34px 0 6px; }
+  .sub { color: #666; font-size: 15px; margin-bottom: 20px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 10px; }
+  @media (min-width: 1100px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+  .card { background: #fff; border: 1px solid #e2d9c8; border-radius: 12px; padding: 12px; }
+  .card.win { border: 2px solid #1a5c1a; background: #f3fbf3; }
+  .card h3 { font-size: 15px; color: #7a4a12; margin: 0 0 4px; }
+  .card img { width: 100%; border-radius: 8px; border: 1px solid #e2d9c8; cursor: zoom-in; }
+  .price { font-size: 13px; font-weight: bold; color: #1a5c1a; margin: 6px 0 2px; }
+  .price.shipped { color: #555; }
+  .verdict { font-size: 13px; color: #333; }
+  .verdict .bad { color: #a8231d; }
+  .verdict .good { color: #1a5c1a; }
+  .final { background: #fff; border: 1px solid #e2d9c8; border-radius: 12px;
+           padding: 20px 24px; margin-top: 30px; }
+  .final h2 { margin-top: 0; }
+  table.summary { width: 100%; border-collapse: collapse; font-size: 14px; margin: 10px 0 30px; }
+  table.summary th, table.summary td { text-align: left; padding: 6px 10px; border-bottom: 1px solid #e2d9c8; }
+  table.summary th { color: #7a4a12; }
+  .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.85);
+              z-index: 99; align-items: center; justify-content: center; }
+  .lightbox img { max-width: 92vw; max-height: 92vh; border-radius: 6px; }
+</style>
+</head>
+<body>
+
+<h1>All Cheap Image Models — Bake-Off</h1>
+<div class="sub">Two real pieces of episode 11 ("Where Are the Nine"), each recreated by every cheap
+model on OpenArt, all with the same real reference images attached (village edge for the cover;
+Jesus + the Samaritan for the interior panel) so this tests the model, not the refs.
+Total real spend: ~320 credits (~$0.64). Click any image to zoom.</div>
+
+<table class="summary">
+<tr><th>Model</th><th>Cost/image</th><th>Cover verdict</th><th>Panel verdict</th></tr>
+<tr><td>Wan 2.7</td><td>6cr (~$0.01)</td><td>Best-looking scene, but only 9 men and an unwanted drawn border</td><td>Best panel layout by far, but only 6 men</td></tr>
+<tr><td>Kling 3 Omni</td><td>10cr (~$0.02)</td><td>Fully clothed (refs fixed the earlier nudity problem), ~7 men, mouths unclear</td><td>Wrong format entirely — 3 headshot circles, not a storyboard grid; garbled labels; "reguired"</td></tr>
+<tr><td>Nano Banana 2 Lite</td><td>15cr (~$0.03)</td><td>Correct headcount (10), solid, small margin strip at bottom</td><td>Clean, correct panels, mild chest exposure</td></tr>
+<tr><td>Seedream 4.5</td><td>15cr (~$0.03)</td><td>Gorgeous atmosphere, but chests too exposed</td><td><b>Best result of the whole test</b> — correct count, correct Samaritan mark, clean text</td></tr>
+<tr><td>Seedream 5 Lite</td><td>15cr (~$0.03)</td><td>Misspelled "LUCKE 17"</td><td>Multiple garbled words: "covered rip", an illegible 2nd label, "Jessus... or us"</td></tr>
+<tr><td>Nano Banana 2</td><td>20cr (~$0.04)</td><td>Misspelled "WHRE ARE THE NINE", chests exposed</td><td>Correct text, but an unwanted drawn border again</td></tr>
+<tr><td>Seedream 5 Pro</td><td>30cr (~$0.06)</td><td>Correct text, best sky/light, chests exposed</td><td>Very strong — correct count, correct text, Samaritan marked</td></tr>
+<tr><td>Grok Imagine 2.0</td><td>33cr (~$0.07)</td><td>Correct text, chests exposed, one man breaks pose looking up</td><td>Clean, correctly clothed, solid</td></tr>
+</table>
+
+<h2>The Cover</h2>
+<div class="grid">
+  <div class="card">
+    <h3>What we already shipped</h3>
+    <img src="cover/0_shipped_original.png" onclick="zoom(this)">
+    <div class="price shipped">Nano Banana Pro (original refs)</div>
+  </div>
+  <div class="card">
+    <h3>Wan 2.7</h3>
+    <img src="cover/1_wan27_6cr.png" onclick="zoom(this)">
+    <div class="price">6 credits (~$0.01)</div>
+    <div class="verdict"><span class="good">Best village/tree/lighting of all 8.</span>
+    <span class="bad">Only 9 men (needs 10), and a drawn border around the whole page (should be edge to edge).</span></div>
+  </div>
+  <div class="card">
+    <h3>Kling 3 Omni</h3>
+    <img src="cover/2_kling3omni_10cr.png" onclick="zoom(this)">
+    <div class="price">10 credits (~$0.02)</div>
+    <div class="verdict"><span class="good">Fully clothed this time (refs fixed the nudity from the earlier test).</span>
+    <span class="bad">Only ~7 men visible, mouth-cloths not clearly drawn.</span></div>
+  </div>
+  <div class="card">
+    <h3>Nano Banana 2 Lite</h3>
+    <img src="cover/3_nanobanana2lite_15cr.jpg" onclick="zoom(this)">
+    <div class="price">15 credits (~$0.03)</div>
+    <div class="verdict"><span class="good">Correct headcount (10).</span>
+    <span class="bad">Small cream margin strip at the very bottom.</span></div>
+  </div>
+  <div class="card">
+    <h3>Seedream 4.5</h3>
+    <img src="cover/4_seedream45_15cr.jpg" onclick="zoom(this)">
+    <div class="price">15 credits (~$0.03)</div>
+    <div class="verdict"><span class="good">Gorgeous atmosphere and detail.</span>
+    <span class="bad">Robes hang open, chests too exposed for the channel's own reverence bar.</span></div>
+  </div>
+  <div class="card">
+    <h3>Seedream 5 Lite</h3>
+    <img src="cover/5_seedream5lite_15cr.png" onclick="zoom(this)">
+    <div class="price">15 credits (~$0.03)</div>
+    <div class="verdict"><span class="bad">Misspells the reference: "LUCKE 17".</span></div>
+  </div>
+  <div class="card">
+    <h3>Nano Banana 2</h3>
+    <img src="cover/6_nanobanana2_20cr.png" onclick="zoom(this)">
+    <div class="price">20 credits (~$0.04)</div>
+    <div class="verdict"><span class="bad">Misspells the title: "WHRE ARE THE NINE". Chests exposed.</span></div>
+  </div>
+  <div class="card win">
+    <h3>Seedream 5 Pro</h3>
+    <img src="cover/7_seedream5pro_30cr.png" onclick="zoom(this)">
+    <div class="price">30 credits (~$0.06)</div>
+    <div class="verdict"><span class="good">Correct spelling, correct count (10), best sky in the whole set.</span>
+    <span class="bad">Chests still too exposed.</span></div>
+  </div>
+  <div class="card">
+    <h3>Grok Imagine 2.0</h3>
+    <img src="cover/8_grokimagine2_33cr.png" onclick="zoom(this)">
+    <div class="price">33 credits (~$0.07)</div>
+    <div class="verdict"><span class="good">Correct spelling, correct count.</span>
+    <span class="bad">Chests exposed; one man looks up, breaking the uniform pose.</span></div>
+  </div>
+</div>
+
+<h2>The Interior Panel (F02 — the debut page)</h2>
+<div class="grid">
+  <div class="card">
+    <h3>What we already shipped</h3>
+    <img src="panel/0_shipped_original.png" onclick="zoom(this)">
+    <div class="price shipped">Nano Banana Pro (original refs)</div>
+  </div>
+  <div class="card">
+    <h3>Wan 2.7</h3>
+    <img src="panel/1_wan27_6cr.png" onclick="zoom(this)">
+    <div class="price">6 credits (~$0.01)</div>
+    <div class="verdict"><span class="good">By far the best storyboard-page LAYOUT of the whole test — real 3-panel row, correct labels, right style.</span>
+    <span class="bad">Only 6 men, not 10.</span></div>
+  </div>
+  <div class="card">
+    <h3>Kling 3 Omni</h3>
+    <img src="panel/2_kling3omni_10cr.png" onclick="zoom(this)">
+    <div class="price">10 credits (~$0.02)</div>
+    <div class="verdict"><span class="bad">Ignored the storyboard-page format entirely — 3 circular headshots instead, wrong labels ("2", "13"), a different comic style, "NOTE: reguired" misspelled.</span></div>
+  </div>
+  <div class="card win">
+    <h3>Nano Banana 2 Lite</h3>
+    <img src="panel/3_nanobanana2lite_15cr.jpg" onclick="zoom(this)">
+    <div class="price">15 credits (~$0.03)</div>
+    <div class="verdict"><span class="good">Clean, correct panels, right text.</span>
+    <span class="bad">Some chest exposure.</span></div>
+  </div>
+  <div class="card win">
+    <h3>Seedream 4.5</h3>
+    <img src="panel/4_seedream45_15cr.jpg" onclick="zoom(this)">
+    <div class="price">15 credits (~$0.03)</div>
+    <div class="verdict"><span class="good">The best result of the entire test: correct count (10), the Samaritan correctly marked with the red hem-trim, correct panel labels and caption, Jesus properly separate from the group.</span></div>
+  </div>
+  <div class="card">
+    <h3>Seedream 5 Lite</h3>
+    <img src="panel/5_seedream5lite_15cr.png" onclick="zoom(this)">
+    <div class="price">15 credits (~$0.03)</div>
+    <div class="verdict"><span class="bad">Badly garbled text: "covered rip", an illegible second label, and the caption reads "Jessus, Master, have mercy or us".</span></div>
+  </div>
+  <div class="card">
+    <h3>Nano Banana 2</h3>
+    <img src="panel/6_nanobanana2_20cr.png" onclick="zoom(this)">
+    <div class="price">20 credits (~$0.04)</div>
+    <div class="verdict"><span class="good">Correct text this time.</span>
+    <span class="bad">An unwanted drawn border around the main scene (same defect as its own cover).</span></div>
+  </div>
+  <div class="card win">
+    <h3>Seedream 5 Pro</h3>
+    <img src="panel/7_seedream5pro_30cr.png" onclick="zoom(this)">
+    <div class="price">30 credits (~$0.06)</div>
+    <div class="verdict"><span class="good">Very strong: correct count, correct text, Samaritan marked, all mouths covered.</span></div>
+  </div>
+  <div class="card">
+    <h3>Grok Imagine 2.0</h3>
+    <img src="panel/8_grokimagine2_33cr.png" onclick="zoom(this)">
+    <div class="price">33 credits (~$0.07)</div>
+    <div class="verdict"><span class="good">Clean, correctly clothed, correct text.</span></div>
+  </div>
+</div>
+
+<div class="final">
+  <h2>Bottom line</h2>
+  <p><b>No model was clean on both pieces</b> — every one of the 8 had at least one real defect
+  somewhere. Two patterns showed up across MULTIPLE models, not just one, which matters more than
+  any single model's score:</p>
+  <ul>
+    <li><b>Bare-chest exposure</b> (Seedream 4.5, Nano Banana 2, Seedream 5 Pro, Grok — half the
+    field) shows up whenever a model is asked for "torn open at the breast." That phrase itself may
+    need rewording project-wide, not just picking a different model.</li>
+    <li><b>Garbled baked text</b> (Seedream 5 Lite badly, Nano Banana 2 and Kling to a lesser
+    degree) is a real, repeat risk on the cheaper tier — captions need a real proofread, every time,
+    on any model outside the two currently used (Nano Banana Pro / NBP).</li>
+  </ul>
+  <p><b>If I had to pick a cheaper alternative to trial next: Seedream 4.5</b> (15 credits, about
+  a third of Nano Banana Pro's 40). It was the only model that got the harder interior panel
+  fully right — correct count, correct Samaritan mark, clean text — and its one flaw (chest
+  exposure) is fixable with the same wardrobe-wording fix every model needs anyway. Seedream 5 Pro
+  (30cr) is the safer but pricier runner-up. Wan 2.7 is remarkably good stylistically at just
+  6 credits but keeps undercounting figures, which is a harder defect to prompt away.</p>
+  <p>Nothing here is a decision to switch — this is a first look, not a validated replacement.
+  A real swap would still need the wardrobe/headcount issues fixed and re-tested clean before
+  touching a real episode.</p>
+</div>
+
+<div class="lightbox" id="lb" onclick="this.style.display='none'"><img id="lbimg"></div>
+<script>
+function zoom(img) {
+  document.getElementById('lbimg').src = img.src;
+  document.getElementById('lb').style.display = 'flex';
+}
+</script>
+
+</body>
+</html>
