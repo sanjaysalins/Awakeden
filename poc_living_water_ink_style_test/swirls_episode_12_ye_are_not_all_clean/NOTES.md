@@ -76,13 +76,31 @@ the 65s target ceiling; per this project's standing rule (never compress to hit 
 words instead if it matters — see `feedback_narration_process_gold_standard`), this was accepted
 as-is rather than compressed. **HUMAN GATE 1 — APPROVED 2026-09-09** (user: "lock it").
 
-## Next steps now that the narration is locked, voiced, and GATE 1 approved
+## Visual design brief — LOCKED 2026-09-09
 
-1. Now the `/swirls-of-life` skill's own Step 0 — the Fable "design machine" pass over the locked
-   narration + `NORTH_STAR_PROMPT.md` + `NORTH_STAR_ANIMATION_PROMPT.md` — to produce the full
-   shot-by-shot still+animation design table, including the Stain-motif dosage per page
-   (`stainDose + swirlStage <= 4`, this page's own AT-CAP 2+2 shape already sanity-checked against
-   ep7 F04 / ep10 F07 precedent).
+`_DESIGN_BRIEF.md` (862 lines) written — as SONNET, not Fable, per the global "Fable for major
+pivots only" rule (this is routine per-episode design within an already-established house style).
+Followed the `_DESIGN_BRIEF.md` + `episode.py` pattern from ep11/ep13 (the SKILL.md's own
+"one storyboard page" template is a superseded prototype format, not what's actually shipped).
+
+**Shape:** 6 interior pages (F01-F06) + front/back covers, `panel_style="woodcut_hybrid"`. Two hard
+doctrinal calls, both reasoned explicitly: **no Stain/mark on Judas** (would visually assert what
+nine narration rounds fought to avoid claiming — that his exclusion was a visible defect, not a
+heart Jesus already knew), and the **Swirls-of-Life ink motif anchored to the water in the basin**,
+never to a person (a first for the series — every prior episode anchored to a hand/threshold — but
+the only way to guarantee the motif never touches Judas). The episode's own landing beat ("He knows
+your heart... bring Him your worst") maps to the BACK COVER, not an interior page — the direct-
+address turn to the viewer, past Judas's own unresolved exit.
+
+10 open questions flagged, none silently resolved — **all approved on the recommended option**
+2026-09-09 (user: "lock it"). Full list + resolutions in `_DESIGN_BRIEF.md` §8 and
+`_DESIGN_BRIEF_QUESTIONS.html` in this folder.
+
+## Next steps now that the design brief is locked
+
+1. Implement `episode.py` from the brief (PageSpec per page, refs, CROSS_BUILD-style constants) —
+   not yet done.
 2. Decide generation route: OpenArt/HF (this series' locked default) or Google Flow (now proven
    end-to-end on "My Lord and My God," see memory `project_google_flow_pilot_process`) — not yet
    decided for this episode specifically.
+3. Build refs (Judas, basin/towel, table/room), render stills, GATE 2 review.

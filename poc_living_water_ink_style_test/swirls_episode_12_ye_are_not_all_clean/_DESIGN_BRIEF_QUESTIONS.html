@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Episode 12 — Design Questions</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Arial, sans-serif; max-width: 780px; margin: 0 auto; padding: 30px 20px 60px; background: #faf8f4; color: #222; font-size: 19px; line-height: 1.5; }
+  h1 { font-size: 26px; margin-bottom: 4px; }
+  .sub { color: #777; margin-bottom: 26px; font-size: 16px; }
+  .q { background: #fff; border: 2px solid #ddd6c8; border-radius: 12px; padding: 18px 22px; margin-bottom: 14px; }
+  .q .num { display: inline-block; background: #eef3fb; color: #2a4d8f; font-weight: 700; border-radius: 20px; padding: 3px 12px; font-size: 14px; margin-bottom: 8px; }
+  .q .title { font-weight: 700; font-size: 19px; margin-bottom: 8px; }
+  .q .rec { background: #e3f5e6; border-radius: 8px; padding: 8px 12px; margin-top: 8px; font-size: 17px; }
+  .q .rec b { color: #1c6b2e; }
+  .q .why { color: #555; font-size: 16px; margin-top: 6px; }
+  .banner { background: #fdf1d8; border: 2px solid #f0d99a; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; font-size: 17px; }
+</style>
+</head>
+<body>
+
+<h1>Episode 12 — Design Questions</h1>
+<div class="sub">From the visual design brief. 10 items, none silently decided.</div>
+
+<div class="banner"><b>Default plan:</b> if you don't say otherwise, I'll go with my recommendation on all 10 and move to rendering. Just flag any number you want changed.</div>
+
+<div class="q"><span class="num">1</span>
+<div class="title">Where the blue-ink motif "lives" on the page</div>
+<div class="rec"><b>Recommend:</b> anchor it to the water in the basin, not to a person's hand (every past episode used a hand or threshold).</div>
+<div class="why">Why: this episode needs the motif to never touch Judas — anchoring it to the water is the only way to guarantee that. First time the series has done it this way, so flagging the change.</div>
+</div>
+
+<div class="q"><span class="num">2</span>
+<div class="title">Does Jesus's figure appear on the hero page (F06)?</div>
+<div class="rec"><b>Recommend:</b> yes, show him — a page about his love with no trace of him risks feeling generic.</div>
+<div class="why">Alternative: just the basin + towel + water, no figure — echoes the back cover a page early.</div>
+</div>
+
+<div class="q"><span class="num">3</span>
+<div class="title">F03's baked caption — full line or short?</div>
+<div class="rec"><b>Recommend:</b> just "not all" (2 words) — the full "ye are clean but not all" (6 words) may be too long to render legibly.</div>
+<div class="why">The full line stays as the front-cover title instead.</div>
+</div>
+
+<div class="q"><span class="num">4</span>
+<div class="title">F06's baked caption</div>
+<div class="rec"><b>Recommend:</b> "knowing he wouldn't" — a short authored paraphrase, since no verbatim fragment of that line is short and strong enough.</div>
+<div class="why">Breaks this episode's own all-verbatim-caption pattern — flagging that trade explicitly. Alternative: "he wouldn't" (verbatim but unclear alone), or no caption on this page at all.</div>
+</div>
+
+<div class="q"><span class="num">5</span>
+<div class="title">How to draw "the old word" (the Scripture quote) on F03</div>
+<div class="rec"><b>Recommend:</b> a hand-gesture-as-speech panel, not a drawn scroll.</div>
+<div class="why">Matches how the rest of the episode avoids literalizing quotations. Minor call either way.</div>
+</div>
+
+<div class="q"><span class="num">6</span>
+<div class="title">Doorway reference image — reuse or fresh?</div>
+<div class="rec"><b>Recommend:</b> just a heads-up, not really a decision — if F04 doesn't naturally show a doorway, F05 needs its own fresh approval pass rather than reusing a crop.</div>
+<div class="why">Flagging so the render step doesn't assume a crop exists that isn't there yet.</div>
+</div>
+
+<div class="q"><span class="num">7</span>
+<div class="title">Back cover Scripture subtitle</div>
+<div class="rec"><b>Recommend:</b> 1 John 1:9 ("if we confess our sins... cleanse us") — matches the landing's "bring Him your worst" line best.</div>
+<div class="why">Trade-off: it's outside John's Gospel, breaking the pattern of every other episode staying within its own passage. Alternative: John 13:35 (in-passage, but about love shown, not being made clean).</div>
+</div>
+
+<div class="q"><span class="num">8</span>
+<div class="title">Running header title (seq_title)</div>
+<div class="rec"><b>Recommend:</b> "THE BASIN AND THE DOOR" — names the episode's own visual geometry.</div>
+<div class="why">Alternative: "NOT ALL CLEAN" — closer to verbatim, matches the front-cover title's own words.</div>
+</div>
+
+<div class="q"><span class="num">9</span>
+<div class="title">F02's animation style (which AI model)</div>
+<div class="rec"><b>Recommend:</b> not a real decision yet — this gets judged against the actual rendered image, not on paper.</div>
+<div class="why">Called it "kling" for now; may switch to "veo" once we see the real still.</div>
+</div>
+
+<div class="q"><span class="num">10</span>
+<div class="title">F03's composition — wide room shot or tight on Jesus+Judas?</div>
+<div class="rec"><b>Recommend:</b> wide (the text says Jesus spoke "to the room").</div>
+<div class="why">Fallback: a tighter frame is easier to keep visually clean of the blue-ink motif near background figures, if the wide version proves hard to render cleanly.</div>
+</div>
+
+</body>
+</html>
