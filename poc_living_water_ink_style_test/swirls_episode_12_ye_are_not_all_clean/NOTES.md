@@ -60,15 +60,29 @@ panel rounds, now LOCKED. See memory `project_ye_are_not_all_clean_episode_12` f
 round-by-round history, including the note on which specific fixes worked and which introduced new
 problems (useful precedent for future episodes on this same "washed ≠ saved" territory).
 
-## Next steps now that the narration is locked
+## Voice synthesis — DONE 2026-09-09
 
-1. Voice synthesis (Stage 1b) — needs its own `/cost` pre-flight before spending on ElevenLabs,
-   not yet run.
-2. Then the `/swirls-of-life` skill's own Step 0 — the Fable "design machine" pass over the locked
+Ran the real pipeline: `PythonProject1/jesus/narration_pipeline.py --stage verify` → `--stage tag`
+→ `--stage audit` (agent-bridge serviced live, 3 requests: verify, tag, audit — all passed, tag
+validation/speaker validation/round-trip prose all clean), then
+`PythonProject1/jesus/narration/per_turn_synth.py --target 65 --pre-quote-pause 0.4 --stability 0.65
+--natural` (real ElevenLabs spend, user-approved). One tonal tag fix applied from the audit's own
+finding (dropped `[deliberate]` off paragraph 4 — it fought the text's own "do quickly"/
+"immediately" urgency).
+
+**Result:** `narration.mp3`, 74.55s, natural pace (no time-stretch — `narrator_atempo_factor: 1.0`
+in `narration.meta.json`), voice `LSi9zNCeliLuhIGGS0By` (series-standard narrator). Ran 9.56s over
+the 65s target ceiling; per this project's standing rule (never compress to hit a target, trim
+words instead if it matters — see `feedback_narration_process_gold_standard`), this was accepted
+as-is rather than compressed. **HUMAN GATE 1 — APPROVED 2026-09-09** (user: "lock it").
+
+## Next steps now that the narration is locked, voiced, and GATE 1 approved
+
+1. Now the `/swirls-of-life` skill's own Step 0 — the Fable "design machine" pass over the locked
    narration + `NORTH_STAR_PROMPT.md` + `NORTH_STAR_ANIMATION_PROMPT.md` — to produce the full
    shot-by-shot still+animation design table, including the Stain-motif dosage per page
    (`stainDose + swirlStage <= 4`, this page's own AT-CAP 2+2 shape already sanity-checked against
    ep7 F04 / ep10 F07 precedent).
-3. Decide generation route: OpenArt/HF (this series' locked default) or Google Flow (now proven
+2. Decide generation route: OpenArt/HF (this series' locked default) or Google Flow (now proven
    end-to-end on "My Lord and My God," see memory `project_google_flow_pilot_process`) — not yet
    decided for this episode specifically.

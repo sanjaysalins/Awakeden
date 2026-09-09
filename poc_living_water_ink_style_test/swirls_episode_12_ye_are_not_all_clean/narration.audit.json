@@ -1,0 +1,38 @@
+{
+  "folder": "swirls_episode_12_ye_are_not_all_clean",
+  "stage": "audit",
+  "generated_at": "2026-09-09T18:03:18Z",
+  "deterministic": {
+    "tag_validation": "passed",
+    "speaker_validation": "passed",
+    "roster": []
+  },
+  "round_trip": {
+    "exact_match": true,
+    "blocking": false,
+    "diff_segments": [],
+    "added_words": 0,
+    "removed_words": 0
+  },
+  "anthropic_audit": {
+    "tag_economy": "appropriate",
+    "tag_quality_overall": "good",
+    "missed_speaker_opportunities": [],
+    "tonal_mismatches": [
+      {
+        "line_excerpt": "He handed Judas the sop — a piece of dipped bread. \"That thou doest, do quickly.\"",
+        "current_tags": "[serious][deliberate]",
+        "suggested_tags": "[serious] (drop the pacing tag)",
+        "rationale": "The line's own content describes urgency ('do quickly', 'went immediately out'); [deliberate] signals slow/measured pacing, which works against that — better to let natural cadence carry here rather than fight the text."
+      }
+    ],
+    "concerns": [
+      "That same beat (paragraph 4) spans two different emotional registers — the brisk dismissal ('do quickly') and the quiet finality of 'and it was night' — under one tag-set applied to the whole paragraph; current tooling tags per-paragraph only, so this shift has no way to register mid-beat",
+      "Tag variety is good (6 unique tags, none over 50% usage) and the single 3-tag beat is correctly reserved for the piece's actual rhetorical peak (paragraph 5)"
+    ],
+    "model": "claude-opus-4-7",
+    "request_id": null,
+    "input_tokens": null,
+    "output_tokens": null
+  }
+}

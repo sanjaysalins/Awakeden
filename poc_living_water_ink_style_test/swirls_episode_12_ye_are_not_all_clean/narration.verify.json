@@ -1,0 +1,48 @@
+{
+  "folder": "swirls_episode_12_ye_are_not_all_clean",
+  "stage": "verify",
+  "generated_at": "2026-09-09T18:01:26Z",
+  "deterministic": {
+    "char_count_after_comment_strip": 881,
+    "char_cap": 2000,
+    "within_cap": true,
+    "non_empty": true
+  },
+  "voice_roster": {
+    "voices_json_present": true,
+    "speakers_in_roster": [
+      "narrator"
+    ]
+  },
+  "anthropic_review": {
+    "coherence": "good",
+    "beat_count": 6,
+    "tonal_register": [
+      "serious",
+      "reflective",
+      "devotional"
+    ],
+    "multi_voice_candidates": [
+      {
+        "line_excerpt": "ye are clean, but not all.",
+        "suggested_speaker": "unspecified",
+        "rationale": "Jesus speaking directly, but this series keeps every clip narrator-read (lips closed) by design, and no non-narrator voice exists in the roster."
+      },
+      {
+        "line_excerpt": "That thou doest, do quickly.",
+        "suggested_speaker": "unspecified",
+        "rationale": "Jesus's spoken line to Judas; same narrator-only convention applies, and the sentence itself carries no inline speaker tag."
+      }
+    ],
+    "spoken_length_estimate_seconds": 65,
+    "concerns": [
+      "\"That thou doest, do quickly\" has no speaker tag in its own sentence; attribution relies on context from the prior sentence",
+      "em-dash mid-sentence in the closing line (\"the towel down — bring Him your worst\") may need an explicit pause cue for natural pacing",
+      "paragraph 2 stacks two embedded KJV quotes close together (\"ye are clean, but not all\" / \"lifted up his heel against me\") with only light narrator framing between them"
+    ],
+    "model": "claude-opus-4-7",
+    "request_id": null,
+    "input_tokens": null,
+    "output_tokens": null
+  }
+}
