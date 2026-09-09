@@ -329,6 +329,19 @@ they're never animated; `VISION_AUDIT_MODEL`=Haiku for the coarse assembly verif
   REVISE I dispute. This is in addition to the in-engine red-team, not a replacement.
 - **Freshness = faithful depth** — surprising about the *text*, never about
   the *truth*. Novelty in entry point; orthodoxy in claim and landing.
+- **🔒 Global audience, simple relatable words** (user, 2026-09-09): this series
+  is watched worldwide, including by non-native English speakers — every
+  narration must be clever in STRUCTURE/IRONY (the story's own twist), never in
+  VOCABULARY. Archaic or obscure KJV idioms (e.g. "clean every whit," "girded
+  himself") are fine to quote once in passing, but must never be the load-bearing
+  word a landing/CTA leans its whole meaning on — paraphrase the concept in
+  plain, globally-common English instead, and save the direct quote for short,
+  easily-parsed phrases. Applies to every narration, main-engine and Swirls
+  alike. Found on episode 12 ("Ye Are Not All Clean"): "clean every whit" had
+  become the CTA's anchor word across 9 independent-review rounds — replaced
+  with "clean, all the way through" resolved both the accessibility problem
+  and (as a side effect) most of the reviewers' precision complaints, since the
+  plain phrasing no longer invited a literal misreading of the archaic idiom.
 - **One thread spine through hook → middle → CTA**, mirrored hook → climax →
   closing in the visual arc. Never swap threads to placate freshness feedback;
   reshape the lines instead.
