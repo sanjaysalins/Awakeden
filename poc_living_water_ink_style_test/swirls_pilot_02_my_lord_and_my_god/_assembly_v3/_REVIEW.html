@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>My Lord and My God — assembled cut</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #f7f3ea; color: #222; margin: 0; padding: 20px; font-size: 18px; line-height: 1.4; max-width: 760px; }
+  h1 { font-size: 26px; margin-bottom: 4px; }
+  .sub { color: #555; margin-bottom: 20px; }
+  .banner { background: #fff3cd; border: 2px solid #e0a800; border-radius: 10px; padding: 14px 18px; margin-bottom: 20px; }
+  .good { background: #e6f4e6; border: 2px solid #1a7a1a; border-radius: 10px; padding: 14px 18px; margin-bottom: 20px; }
+  video { width: 100%; max-width: 380px; border-radius: 10px; border: 2px solid #ccc; display: block; margin: 0 auto 20px; }
+  table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+  td, th { border: 1px solid #ccc; padding: 8px 10px; text-align: left; font-size: 16px; }
+  th { background: #eee; }
+</style>
+</head>
+<body>
+
+<h1>My Lord and My God — assembled cut (v4, fixed)</h1>
+<div class="sub">Built from the real Flow v2-run-sheet delivery (`_flow_delivery_v7`) + a corrected Shot 6 (`_flow_fix_shot6`) + the real synthesized narration (`narration.mp3`)</div>
+
+<div class="good">
+<b>The Shot 6 defect is fixed.</b> The earlier cut had a stray line of text baked into the "My Lord
+and my God" close-up — traced to a QC sentence that had accidentally been left inside the actual
+image prompt (not a Flow mistake). Regenerated that one still+clip through Flow with the sentence
+removed; the new clip is confirmed clean (both real caption lines only, nothing else) and is now
+swapped into this cut in place of the old one. No other shot changed.
+</div>
+
+<div class="good">
+<b>Landing-hold gate: PASS.</b> Video 64.40s, audio 64.40s, gap 0.00s — narration ends at 61.30s,
+so the hold after the last word is 3.10s (needs ≥3.0s). All 8 shots present, right order, right
+real content, each trimmed or held to its real target from `ASSEMBLY_PLAN.md`.
+</div>
+
+<video controls>
+  <source src="viral_cut.mp4" type="video/mp4">
+</video>
+
+<table>
+<tr><th>#</th><th>Shot</th><th>Real length used</th><th>Note</th></tr>
+<tr><td>1</td><td>Front Cover</td><td>7.1s</td><td>trimmed</td></tr>
+<tr><td>2</td><td>F01 "I will not believe"</td><td>11.4s</td><td>freeze-held +1.4s</td></tr>
+<tr><td>3</td><td>F02 "Eight Days"</td><td>5.5s</td><td>trimmed</td></tr>
+<tr><td>4</td><td>F03 "Peace be unto you"</td><td>7.3s</td><td>trimmed</td></tr>
+<tr><td>5</td><td>F04 "Reach hither"</td><td>12.8s</td><td>freeze-held +2.8s</td></tr>
+<tr><td>6</td><td>F05 "My Lord and my God"</td><td>4.9s</td><td>trimmed — corrected version, defect fixed</td></tr>
+<tr><td>7</td><td>F06 "Answered You Too"</td><td>3.8s</td><td>trimmed</td></tr>
+<tr><td>8</td><td>Back Cover</td><td>11.6s</td><td>freeze-held +1.6s, carries the landing hold</td></tr>
+</table>
+
+<p>Total: 64.4s. Source clips: <code>_flow_delivery_v7/</code>. Narration: <code>narration.mp3</code>
+(61.30s, real synthesized audio, unchanged).</p>
+
+</body>
+</html>

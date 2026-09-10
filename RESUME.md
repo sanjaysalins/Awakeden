@@ -1,5 +1,118 @@
 # ══════════════════════════════════════════════════════════════════════════
-# ▶▶▶ START HERE TOMORROW (updated 2026-09-07, end of day -- user: "lets close
+# ▶▶▶ START HERE TOMORROW (updated 2026-09-10, end of night -- user: "lets close
+# for the night and resume tommorrow, save and commit evetyhing and push it,
+# update the handover and resume docs"). FIRST THING: episode 12 is built
+# end-to-end but NOT YET USER-APPROVED -- get the user's watch/listen on the
+# current cut before doing anything else with it.
+#
+# **Episode 12, "Ye Are Not All Clean" (John 13:1-30, Judas) -- carried all the
+# way from locked narration through a full Google-Flow build to an assembled,
+# scored final cut in one long session. Paused mid-polish, not because
+# anything is unresolved in principle, but because it's late and the user
+# wants to sleep on the latest fix before calling it done.**
+#
+# Full blow-by-blow:
+#   `poc_living_water_ink_style_test/swirls_episode_12_ye_are_not_all_clean/NOTES.md`
+# (very long, reads chronologically -- the last few sections are what matters
+# for tomorrow). Full narration/lock history: memory
+# `project_ye_are_not_all_clean_episode_12`.
+#
+# **Where it stands right now:**
+# - Narration LOCKED (15 independent-review rounds, two lineages -- a Sonnet
+#   hand-edit pass, then a genuine Fable creative rewrite the user asked for
+#   to find more conviction). Voice synthesized, GATE 1 approved
+#   (`narration.mp3`, 74.55s natural pace).
+# - `_DESIGN_BRIEF.md` LOCKED (862 lines, all 10 open questions resolved on
+#   their recommended defaults). `FLOW_RUN_SHEET.md` built and red-teamed (5-CLI
+#   panel: 3 FAIL/2 REVISE, all confirmed real and fixed before it went to Flow).
+# - User ran it through Google Flow; 20 real generations delivered and reviewed
+#   at the pixel level, not just trusted. **2 real defects found, both accepted
+#   as-is per the user's explicit call ("just assemble it and show it to me"),
+#   NOT regenerated:** F03's still/clip leaked internal prompt text as visible
+#   captions (and may have a zone-proximity issue with the Judas figure -- could
+#   not be confirmed with full confidence), and F02's clip animated a stray
+#   ink thread from the wrong location. If the episode is ever pushed toward
+#   final release rather than staying in the 30-episode hold, revisit these two
+#   before calling it truly finished -- they were deferred, not resolved.
+# - Assembled and iterated three more times chasing real user feedback, each
+#   round catching a genuine bug before or immediately after shipping:
+#   1. First assembly: fixed an `apad`+`-shortest` truncation bug (would have
+#      silently deleted the whole landing hold) and a landing hold that came in
+#      0.02s under the 3.0s INV-26 minimum -- both caught before showing the
+#      user anything.
+#   2. User caught that my assembly had wrongly stripped the clips' OWN real
+#      baked ambient audio with `-an` while normalizing -- rebuilt preserving
+#      it, then added the two-part felt-piano score (caught a real dead-air
+#      defect in my own prompt wording via a new full-timeline-sweep QC check
+#      before it shipped, fixed and regenerated only the affected half).
+#   3. User: spoken-word artifact at 0:14, and "I hate freeze frame, we should
+#      look at doing some ken burn motion." Muted the two clips bordering that
+#      timestamp (confirmed real vocal-band energy via `astats`, trusted the
+#      user's ear since I cannot literally hear the artifact myself). Tried Ken
+#      Burns zoom-tails first; user then asked for reverse-boomerang instead --
+#      checked the one real risk this project's own memory flags (a
+#      continuously-drifting clip visibly reversing when boomeranged) directly
+#      via pixel-diff before trusting it everywhere, rather than assuming.
+#   4. User: "you cut the narration abruptly in the end," then, after a first
+#      fix, "it cut again before completing." Traced to a real defect in the
+#      raw TTS render itself (`narration.mp3` sits at -10 to -14dB right up to
+#      its literal last sample, zero natural decay) -- NOT an assembly bug. A
+#      first, more aggressive fix attempt (500ms fade + a room echo) was caught
+#      BEFORE shipping: it started fading 74.054535s in, which is DURING the
+#      actual last word ("worst." spans 73.94-74.32s), and the echo filter
+#      turned out to apply across the whole track, not just the tail. Shipped
+#      fix instead: a 234ms fade confined strictly to the file's real trailing
+#      tail (74.32s, the word's own end timestamp, to 74.554535s, the file's
+#      true end) -- verified in isolation to never touch real speech.
+# - **Current final:**
+#     `poc_living_water_ink_style_test/swirls_episode_12_ye_are_not_all_clean/_assembly_v1/viral_cut_final.mp4`
+#   78.03s, video/audio parity exact, mean -22.7dB/peak -6.7dB (no clipping),
+#   landing hold 3.71s. Three earlier attempts kept alongside it as
+#   `viral_cut_final.mp4.SUPERSEDED_*` (freeze-frame+spoken-word, Ken-Burns+
+#   hard-stop, boomerang-with-short-fade) -- newest fix is the current file.
+#
+# **NOT YET DONE -- pick up here:**
+# 1. Get the user's actual watch/listen on the CURRENT `viral_cut_final.mp4`.
+#    Nothing past this point should happen until that's in.
+# 2. If the narration ending still reads as cut short: the 234ms fade has hit
+#    its real ceiling (that's ALL the trailing audio the source file actually
+#    contains) -- a fade alone cannot manufacture audio that was never
+#    recorded. Next move is either a properly-scoped tail extension (split the
+#    audio at 74.32s, apply reverb/echo ONLY to the split-off tail chunk, then
+#    re-concatenate -- NOT a whole-track filter, which is what went wrong with
+#    the discarded `aecho` attempt) or a `per_turn_synth.py` re-render of just
+#    the last turn with more natural trailing room.
+# 3. Decide whether to revisit the two accepted-as-is Flow defects (F03 leaked
+#    text/possible zone issue, F02 stray ink thread) before calling the
+#    episode truly finished, or ship as-is -- it's still under the standing
+#    30-episode posting hold regardless.
+# 4. `_assembly_v1/` was cleaned of ~190MB of throwaway ffmpeg intermediates
+#    before tonight's commit (kept only named milestone files + the current
+#    video-with-ambient staging file + the SUPERSEDED chain) -- if resuming
+#    the boomerang/Ken-Burns work, note the per-segment `_kb`/`_bm`/`_wa`
+#    working files are gone; `video_bm_with_ambient.mp4` (the pre-final-mix
+#    video track) is still there if only the audio mix needs redoing again.
+#
+# **Also finished today, before episode 12:** "My Lord and My God" (John
+# 20:24-29, Thomas) -- FULLY FINISHED + LOCKED end-to-end, the first Swirls
+# episode ever built through Google Flow instead of the paid OpenArt/HF stack.
+# Final file:
+#   `poc_living_water_ink_style_test/swirls_pilot_02_my_lord_and_my_god/_assembly_v5/viral_cut_final.mp4`
+# 64.40s. Full arc + reusable lessons (verification language inside a
+# generation prompt gets rendered as literal text; a delivered clip's own
+# ambient audio can get silently stripped by a careless assembly pass; `-ss`
+# placement relative to `-i` can give a false alarm on an audio-level check)
+# in memory `project_google_flow_pilot_process` + `project_my_lord_and_my_god_pilot`.
+# 7th finished/unposted episode -- STILL under the standing 30-episode
+# posting hold, unchanged.
+#
+# ──────────────────────────────────────────────────────────────────────────
+# Everything below this line is prior history (2026-09-09 and earlier),
+# preserved as-is.
+# ══════════════════════════════════════════════════════════════════════════
+
+# ══════════════════════════════════════════════════════════════════════════
+# ▶▶▶ (2026-09-07 end of day -- user: "lets close
 # for the night and lets commit and update all the files, update the handover
 # and resume document"). Episode 13 is now FULLY FINISHED end-to-end AND has a
 # clean publish pack -- the open item below is now SIX episodes deep, every

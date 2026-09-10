@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Episode 12 — GATE 2 Review</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 30px 20px 60px; background: #faf8f4; color: #222; font-size: 19px; line-height: 1.5; }
+  h1 { font-size: 26px; margin-bottom: 4px; }
+  .sub { color: #777; margin-bottom: 26px; font-size: 16px; }
+  .status-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 30px; }
+  .pill { padding: 8px 14px; border-radius: 20px; font-size: 15px; font-weight: 600; }
+  .pill.green { background: #e3f5e6; color: #1c6b2e; }
+  .pill.amber { background: #fdf1d8; color: #8a5a00; }
+  .pill.red { background: #fbe4e4; color: #9c2b2b; }
+  h2 { font-size: 21px; margin-top: 36px; margin-bottom: 10px; }
+  .problem { background: #fff; border: 3px solid #d9534f; border-radius: 12px; padding: 20px 22px; margin-bottom: 22px; }
+  .problem h3 { margin-top: 0; color: #9c2b2b; }
+  .good { background: #fff; border: 2px solid #ddd6c8; border-radius: 12px; padding: 14px 18px; margin-bottom: 10px; display: flex; align-items: center; gap: 14px; }
+  .good img { width: 90px; border-radius: 6px; }
+  .good .label { font-weight: 600; }
+  .imgrow { display: flex; gap: 14px; flex-wrap: wrap; margin: 14px 0; }
+  .imgrow figure { margin: 0; flex: 1; min-width: 220px; }
+  .imgrow img { width: 100%; border-radius: 8px; border: 1px solid #ccc; }
+  .imgrow figcaption { font-size: 15px; color: #666; text-align: center; margin-top: 4px; }
+  .note { color: #555; font-size: 17px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin: 14px 0; }
+  .grid img { width: 100%; border-radius: 6px; border: 1px solid #ccc; }
+  .grid figcaption { font-size: 13px; color: #666; text-align: center; }
+</style>
+</head>
+<body>
+
+<h1>Episode 12 — GATE 2 Review</h1>
+<div class="sub">20 generations back from Google Flow. Real pixels checked directly, not self-reported pass/fail.</div>
+
+<div class="status-row">
+  <span class="pill green">6 of 8 stills clean</span>
+  <span class="pill green">6 of 8 clips clean</span>
+  <span class="pill red">2 real problems — need your call</span>
+</div>
+
+<h2>Problem 1 — F03 has leaked text, and possibly a real zone violation</h2>
+<div class="problem">
+<h3>What's wrong</h3>
+<p><b>Leaked text (confirmed):</b> under each of the 3 top panel captions, Flow also printed my own internal
+prompt description as extra small text — e.g. under "clean" it also printed "single washed foot, dry,
+resting no floor, close-up, no face." That was meant to guide the drawing, not appear on the page.</p>
+<p><b>Possible zone violation (needs your eye):</b> the man kneeling right next to the basin, reaching
+toward Jesus, has the same dark hair, beard, and tan robe with draped sash as the confirmed Judas figure
+on F04 (shown below for comparison). If that kneeling man IS Judas, he's sitting well within reach of the
+basin — not "at least an arm's length away" as the design required. I can't be 100% certain from the image
+alone; your eye is the tie-breaker here.</p>
+<div class="imgrow">
+<figure><img src="Storyboard_page_depicting_washin…_20260909232947.jpeg"><figcaption>F03 — the page in question</figcaption></figure>
+<figure><img src="Man_handing_bread_to_man_20260909232947.jpeg"><figcaption>F04 — confirmed Judas, for comparison</figcaption></figure>
+</div>
+<p class="note"><b>Recommend:</b> regenerate F03 (and its clip) with a stronger "no extra text" instruction
+and, if you agree that's Judas, an explicit note pulling him further from the basin.</p>
+</div>
+
+<h2>Problem 2 — F02's clip grew a stray ink thread in the wrong spot</h2>
+<div class="problem">
+<p>The approved still didn't show a clear thread. In the animated clip's last frame, a blue thread appears
+— but rising from near the wall/lamp shelf, not from the basin's water surface as required. It doesn't
+reach toward anyone, so the "stay away from Judas" rule holds, but it breaks the "anchored to the water,
+touching nothing else" rule.</p>
+<div class="imgrow">
+<figure><img src="_frames/Jesus_washing_disciples_feet_basin_20260909232948_first.jpg"><figcaption>First frame — no thread</figcaption></figure>
+<figure><img src="_frames/Jesus_washing_disciples_feet_basin_20260909232948_last.jpg"><figcaption>Last frame — thread appears near the wall, not the water</figcaption></figure>
+</div>
+<p class="note"><b>Recommend:</b> regenerate this one clip only (the still itself is fine) with a firmer
+"the thread must visibly touch the water's surface, nowhere else" instruction.</p>
+</div>
+
+<h2>Everything else — clean</h2>
+<div class="grid">
+<figure><img src="Man_walking_through_doorway_20260909232947.jpeg"><figcaption>Front Cover</figcaption></figure>
+<figure><img src="Storyboard_page_production_art_20260909232947.jpeg"><figcaption>F01</figcaption></figure>
+<figure><img src="Man_handing_bread_to_man_20260909232947.jpeg"><figcaption>F04</figcaption></figure>
+<figure><img src="Man_walking_through_doorway_20260909232947_2.jpeg"><figcaption>F05 — the dark page</figcaption></figure>
+<figure><img src="Storyboard_art_of_the_basin_20260909232947.jpeg"><figcaption>F06 — hero</figcaption></figure>
+<figure><img src="Bronze_basin_and_towel_with_20260909232947.jpeg"><figcaption>Back Cover</figcaption></figure>
+</div>
+<p class="note">All 6 of these pass their CRITICAL checks on direct inspection: correct captions,
+correct motif dose (present and basin-anchored on F06, fully absent on F04/F05, correctly diffused and
+floating free on the Back Cover), no leaked text, no era-breaking objects. Their clips hold up the same
+way — checked first vs. last frame on each, not just eyeballed playback.</p>
+
+<h2>Minor, not blocking</h2>
+<p class="note">The doorway reference has a European-style hinged door with a round handle — a small
+era-accuracy slip (1st-century doors were more likely a simple wood door or curtain, no round knob). It's
+background-only on F05 and the Front Cover; your call whether it's worth a redo or fine to leave.</p>
+
+<h2>Also — clip lengths, as expected</h2>
+<p class="note">All 8 clips came back at Flow's normal 8-10s ceiling, not the requested "longest available"
+on the 4 LONG shots (F03, F04, F06, Back Cover) — matches what <code>ASSEMBLY_PLAN.md</code> already
+planned for. F03/F06/Back Cover need a freeze-hold extension at assembly; F02/Front Cover/F05 came back
+longer than needed and will get trimmed.</p>
+
+</body>
+</html>

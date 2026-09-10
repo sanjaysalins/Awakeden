@@ -1,0 +1,41 @@
+{
+  "folder": "swirls_pilot_02_my_lord_and_my_god",
+  "stage": "audit",
+  "generated_at": "2026-09-08T11:05:14Z",
+  "deterministic": {
+    "tag_validation": "passed",
+    "speaker_validation": "passed",
+    "roster": [
+      "jesus",
+      "thomas"
+    ]
+  },
+  "round_trip": {
+    "exact_match": true,
+    "blocking": false,
+    "diff_segments": [],
+    "added_words": 0,
+    "removed_words": 0
+  },
+  "anthropic_audit": {
+    "tag_economy": "appropriate",
+    "tag_quality_overall": "good",
+    "missed_speaker_opportunities": [],
+    "tonal_mismatches": [
+      {
+        "line_excerpt": "He turned straight to Thomas: \"Reach hither thy finger, and behold my hands;",
+        "current_tags": "[deliberate]",
+        "suggested_tags": "[deliberate][emphasized]",
+        "rationale": "The single tag spans the whole quote, but the line moves from a gentle opening invitation ('Reach hither thy finger, and behold my hands') to a firm closing charge ('be not faithless, but believing') — [deliberate] alone risks flattening that shift into one even register; adding [emphasized] gives the closing charge its own weight."
+      }
+    ],
+    "concerns": [
+      "The opening line's quote ('We have seen the Lord') is correctly left unattributed since it belongs to a collective group ('ten men') not in the roster — confirmed intentional, not an oversight.",
+      "Beat 3 ('Eight days he stayed with them anyway') is tagged [reflective]; [matter-of-fact] would also be defensible for this more expository bridging line — not a real mismatch, just noting the alternative reading."
+    ],
+    "model": "claude-opus-4-7",
+    "request_id": null,
+    "input_tokens": null,
+    "output_tokens": null
+  }
+}

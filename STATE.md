@@ -1,5 +1,68 @@
 # STATE.md — progress tracker
 
+**2026-09-10 — episode 12 "Ye Are Not All Clean" (John 13:1-30, Judas) carried all the way through
+narration, voice, design, Flow generation, and assembly in one session — not yet user-approved,
+paused for the night mid-polish.** Narration LOCKED (15 independent-review rounds across a Sonnet
+lineage then a Fable creative rewrite), voice synthesized and GATE 1 approved (`narration.mp3`,
+74.55s), `_DESIGN_BRIEF.md` LOCKED (862 lines, all 10 open questions resolved), `FLOW_RUN_SHEET.md`
+built + red-teamed (5-CLI panel, 3 FAIL/2 REVISE, all confirmed and fixed) and run through Google
+Flow — 20 real generations delivered, reviewed at the pixel level (2 real defects found: F03 leaked
+prompt text, F02 clip's stray ink thread — both accepted as-is per the user's explicit call, not
+regenerated). Assembled end-to-end 3 times over the course of the evening chasing user feedback:
+(1) first cut caught and fixed 2 of my own real ffmpeg bugs (an `apad`+`-shortest` truncation bug, a
+0.02s-short landing hold); (2) user caught that I'd wrongly stripped the clips' own real baked
+ambient audio with `-an` — rebuilt preserving it, added the two-part felt-piano score (caught and
+fixed a real dead-air defect via a new full-timeline-sweep check before it shipped); (3) user then
+flagged a spoken-word artifact at 0:14 (muted the two bordering clips' ambient tracks) and disliked
+the freeze-frame extensions (tried Ken Burns zoom first, user asked for reverse-boomerang instead —
+verified the one real risk, a continuously-drifting ink clip, was actually safe to reverse before
+using it everywhere); (4) user then caught that the narration itself cuts off abruptly at the very
+end — traced to the raw TTS render having zero natural decay in its own last samples, fixed with a
+234ms fade confined strictly to the file's own true trailing tail (never touching real speech) after
+a first, over-eager attempt was caught fading INTO the actual last word before it shipped. Current
+final: `poc_living_water_ink_style_test/swirls_episode_12_ye_are_not_all_clean/_assembly_v1/
+viral_cut_final.mp4`, 78.03s, parity exact, landing hold 3.71s — **awaiting the user's own re-watch/
+listen, not yet approved.** If the narration ending still reads as cut short next session, the fade
+has hit its real ceiling (only 234ms of trailing audio exists in the source) and the next move is a
+properly-scoped tail extension or a `per_turn_synth.py` re-render, not another fade tweak. Full
+history: `poc_living_water_ink_style_test/swirls_episode_12_ye_are_not_all_clean/NOTES.md`, memory
+`project_ye_are_not_all_clean_episode_12`.
+
+---
+
+**2026-09-09 — "My Lord and My God" (John 20:24-29, Thomas) FULLY FINISHED + LOCKED end-to-end —
+first Swirls episode ever built through Google Flow instead of the paid OpenArt/HF stack, a real
+complete proof that route works.** Final file:
+`poc_living_water_ink_style_test/swirls_pilot_02_my_lord_and_my_god/_assembly_v5/viral_cut_final.mp4`
+— 64.40s, real narration + real per-clip ambient SFX (restored after the first assembly pass
+silently dropped it) + a sparse felt-piano score, every layer independently measured/verified before
+being called done. 7th finished/unposted episode; still under the standing 30-episode posting hold.
+Full arc across the whole day: brief → phase-structured run sheet (rebuilt after the first real Flow
+run drew 2 FAIL/3 REVISE from the 5-CLI panel on real structural bugs, and separately after Flow's
+own agent volunteered the same structural fix unprompted) → second real Flow run, dramatically
+better → one self-authored bug found and fixed (a QC-verification sentence left inside an actual
+`PROMPT STARTS`/`PROMPT ENDS` block got rendered as literal on-image text by Flow — see memory
+`feedback_verification_language_inside_prompt_gets_rendered`) → ambient SFX restored → score added.
+Full detail: memory `project_google_flow_pilot_process` + `project_my_lord_and_my_god_pilot`.
+
+**Same day, moved episode 12 "Ye Are Not All Clean" (John 13:1-30, Judas) from "next in backlog" to
+"first narration draft written."** Plan-only verification pass (before any stills spend) CLEARED:
+the QUAD-lock zone-separation storyboard holds against John 13's literal foot-washing contact
+(Judas's own distinct beat naturally lands at the LATER sop scene, not the washing scene), and the
+`pipeline/handoff.py` wide-ref-span risk carried across 3 planning documents (v4/v5/v6) turned out
+not to apply at all — confirmed by direct code check that no Swirls script anywhere calls that
+module. First Fable narration draft written and saved (grounded in the real KJV text fetched fresh,
+every quoted clause checked against source), NOT yet through the self-review/independent-
+review/5-CLI-panel chain. **Blocked on one open call, not yet made:** the draft lands on "and it was
+night" with no explicit CTA-to-Jesus phrase, a deliberate choice since this is the one episode whose
+Stain doesn't clear — is that an acceptable Swirls-specific exemption, or does it need one small
+added closing beat? Full writeup:
+`poc_living_water_ink_style_test/swirls_episode_12_ye_are_not_all_clean/NOTES.md` and memory
+`project_ye_are_not_all_clean_episode_12`. Settle this first next session before anything else on
+this episode.
+
+---
+
 **2026-09-07 Swirls ep13 "The Cross That Wasn't His" — GATE 3 reviewed and locked,
 FULLY FINISHED end-to-end, AND its publish pack built and GREEN. Six episodes now
 finished/locked/unposted, all six with ready-to-post publish packs.** Full detail:

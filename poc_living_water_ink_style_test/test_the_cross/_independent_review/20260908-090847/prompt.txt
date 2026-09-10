@@ -1,0 +1,295 @@
+You are an INDEPENDENT, ADVERSARIAL reviewer. You did NOT write this and you
+are NOT here to praise it or rewrite it. Find the problems. Default to skepticism.
+
+ARTIFACT TYPE: plan
+
+LENS — judge this PLAN on (be specific, cite the exact step/claim):
+- Feasibility against the real codebase / tools (does it assume things that exist?).
+- Hidden risks, false assumptions, single points of failure.
+- Over-engineering / premature building before the idea is proven.
+- Missing steps, edge cases, or verification gaps.
+- Reuse: does it duplicate tools that already exist instead of reusing them?
+- Cost / spend and whether it's justified.
+
+Read the artifact below. Give concrete, specific findings (cite the exact line/phrase).
+Then end your reply with EXACTLY this block (on the VERDICT line write exactly ONE word —
+PASS or REVISE or FAIL — never the list of options):
+
+VERDICT: <PASS or REVISE or FAIL>
+TOP FIXES:
+1. <most important fix>
+2. <second>
+3. <third>
+
+----- ARTIFACT START -----
+# Swirls of Life — season direction (v5, DRAFT)
+
+JesusInTheBible · series design · 2026-09-08 · supersedes v4's forward-looking
+sections (the 10 shipped episodes are unchanged history, not touched here)
+
+> **Why v5 exists.** 10 of v4's 15 episodes are shipped and locked; 5 remain
+> unbuilt. The user asked for a genuine content-strategy pass before any more
+> episodes get built: independent ideation from Fable (this project's design
+> model) + adversarial review from the 5-CLI panel, and a **new standing
+> gate** — every episode in this list, before it can be finalized, must
+> answer three questions (below). This document is a DRAFT: it has had the
+> Fable ideation pass; it has NOT yet been through `independent_review.py
+> --type plan`. Do not treat anything here as locked until that panel has
+> run and its findings are addressed.
+
+## The new standing gate — apply to every episode below
+
+Before any episode in this list is finalized (not just narrated — at
+candidate-selection time):
+
+1. **Who is this for? Who NEEDS to hear this?** Name ONE real kind of
+   person — not "everyone." (This restates the main engine's own G8
+   question — the constitution's #4 — now pulled forward to apply at
+   backlog-selection time too, not only at narration-draft time.)
+2. **What is their takeaway?** Not a fact — a CHANGE: one true thing about
+   Christ that reorders how they see Him. Information alone fails this.
+3. **What is our intention with this episode?** The specific strategic
+   reason THIS story earns its place THIS season — a motif the system
+   hasn't proven, an OT→NT rhyme, a real gap in what's been covered, a
+   named risk worth taking. "It's a good story" is not an answer.
+
+## The dead-ink system (unchanged from v4)
+
+Swirl (Christ's presence, Stage 0→3, OT-capped at 1-2 unless fulfilment is
+on-page) · Stain (moral sin/guilt OR ceremonial/Levitical uncleanness, never
+a third case) · Fray (fear/doubt ONLY, earned by the text's own vocabulary)
+· high-tide exclusion (`stainDose + swirlStage <= 4`) · swirl-only when
+forcing a diagnosis would be invention.
+
+### OPEN QUESTION for the panel — a possible fourth grammar
+
+Fable's review surfaced a real gap: **hardness/refusal has no mark.** The
+Nazareth crowd's wrath (#14), the Pharisee's self-trust, Jonah's anger,
+Peter's "thou shalt never" — none use fear/doubt vocabulary (not Fray), none
+use sin/unclean vocabulary about themselves (not Stain — they don't confess
+anything). Proposed fix, NOT yet adopted: hardness reads as the paper
+**not taking** the swirl where that person stands — a dry patch on a page
+otherwise at Stage 3, like wax resist. Diagnosis-free (states nothing about
+what's specifically wrong with them), and it's load-bearing for #14 before
+that long-form builds. **This is a request FOR the panel, not a decision**:
+does "wax resist" count as a fourth dead-ink category (violating the
+"never a third case" discipline that makes the system teachable), or is it
+categorically different — an absence-of-mark, not a new mark — and
+therefore fine?
+
+## Part 1 — Reassessing the 5 remaining v4 items
+
+### #6 Talitha Cumi (Mark 5:21-24, 35-43) — REDESIGN before build, not next
+
+- Problem found: the sandwich structure puts two diagnoses on one page.
+  Jairus is Fray ("Be not afraid, only believe," 5:36 — Jesus's own words).
+  The bleeding woman is Stain/uncleanness — but that would be the
+  **fifth** ceremonial-uncleanness Stain this season (heifer, Naaman, Nain,
+  the nine already shipped). That category is proven; a fifth doesn't earn
+  its place.
+- **Fix:** Jairus-POV only. The woman stays undiagnosed on the page — one
+  panel, a blur at the hem, camera stays on Jairus's face.
+- Who: the one who asked, and it got worse while they waited — watching
+  Jesus stop for someone else while their own crisis burns.
+- Takeaway: Jesus isn't troubled by "too late." He stopped on purpose, then
+  turned to Jairus, not the crowd. *Talitha cumi* — Mark's own preserved
+  Aramaic — is the hook.
+- Intention: the "too late" person hasn't been named yet this season.
+
+### #9 The Woman at the Border (Mark 7:24-30) — RE-AIM, keep swirl-only
+
+- Problem found: correctly swirl-only (the daughter's affliction is
+  demonic, not Levitical — forcing a Stain would misdiagnose it), but the
+  "outsider/border" framing is the season's most over-used person (Sheba,
+  Naaman, the Samaritan leper, Simon of Cyrene, Nathanael — 6 of 15 already
+  lean outsider).
+- **Fix — retitle:** *"Yet the Dogs"* or *"The Crumb."* Drop "border" from
+  the frame entirely.
+- Who: the one who's asked and got what felt like silence or a no, and is
+  about to stop asking.
+- Takeaway: His hard word was a door held open, not shut — she treats a
+  crumb as enough, and He calls that "great faith" (Matt 15:28).
+- Intention: the only episode where a human presses Jesus and He visibly
+  yields the exchange — a structural beat the season has never used.
+
+### #12 Ye Are Not All Clean (John 13:1-30) — GREENLIT, build next
+
+- Strongest of the five, unchanged design, ready to build now — no plan
+  overhead. See "Immediate recommendation" below.
+- Who: the insider who's been at the table for years, already served,
+  already washed, and is quietly already gone.
+- Takeaway: Jesus washed the feet of the man He knew would betray Him.
+  Grace wasn't withheld — it was refused, sop still in hand. The basin is
+  still there.
+- Intention: fills the moral-sin Stain gap (4 of 5 shipped Stains are
+  ceremonial uncleanness, only 1 — She Loved Much — is moral sin). "Ye are
+  not all clean" is Jesus's own clean/unclean vocabulary, moral not
+  ceremonial — the tag is earned to the letter. `stainDose + swirlStage <=
+  4` caps Judas at dose 1 while the room runs Stage 3 — a small dark dot
+  walking out of a page alive with light. That's correct theology, not a
+  constraint to work around. Landing on "and it was night" (13:30) — no
+  CTA — is the sharpest available fix for the landing-fatigue problem
+  already logged in memory.
+
+### #14 This Day Is This Scripture Fulfilled (Luke 4:16-30, long-form) — KEYSTONE, sequence after #4+#5 are live
+
+- Luke 4:25-27: Jesus cites the widow of Zarephath (shipped ep 5) and
+  Naaman (shipped ep 4) by name — the season's own earlier pages, read back
+  to it by Christ Himself.
+- Who: the one for whom Jesus is too familiar to be Lord. "Is not this
+  Joseph's son?"
+- Takeaway: the most explicit "this day" in the Gospels, met with a cliff.
+  Familiarity is its own unbelief. He closes the book mid-verse (stops
+  before "the day of vengeance," 4:20) and walks through the crowd's
+  middle.
+- Intention: **use the format's own native device — the sketchbook turns
+  back to pages 4 and 5.** No other format can do this. This is the reason
+  the season is a season, not a playlist. Depends on the wax-resist
+  decision above for the crowd's wrath.
+
+### #15 Road to Emmaus (Luke 24:13-35, long-form, finale) — UNCHANGED, keep last
+
+Fully earns its place as designed in v4. Luke 24:27 — "beginning at Moses
+and all the prophets… the things concerning himself" — is the series'
+thesis statement in Christ's own mouth; if it isn't already the series
+tagline, it should become one.
+
+## Part 2 — New candidates
+
+Cross-checked against the project's own 44-item narration backlog
+(`PythonProject1/jesus/narration/`) where a title matched — verified refs
+below, not guessed.
+
+### Ready to plan now
+
+| Working title | Passage | Motif | OT/NT | Who | Takeaway | Intention |
+|---|---|---|---|---|---|---|
+| Ye Are Not All Clean *(#12, unchanged)* | John 13:1-30 | Stain/sin, does not clear | NT | the leaving insider | grace refused, not withheld — the basin stays | moral-Stain gap, landing-fatigue fix |
+| But If Not | Daniel 3:16-28 | swirl-only (Stage 2) | OT | the one whose obedience is costing them now, no rescue in sight | He didn't put the fire out — He got in it | most literal OT swirl-presence page; **doctrine risk, see below** |
+| Until the Breaking of the Day | Genesis 32:22-32 | Fray | OT | the one running back to a promise they fled 20 years ago | blessed AND limping, together | first RETURN episode — sketchbook turns back to ep 3 (the Ladder) |
+| Where Art Thou? / Grace Spoken First | Genesis 3:8-21 (+3:15 protoevangelium) | Stain/sin, **covered not cleared** | OT | the one hiding from God, assuming He's coming to condemn | His first word to fallen man is a question, not a sentence | **note: this passage is ALSO already a locked backlog script, `44_Grace_Spoken_First` (Genesis 3:15) — merge these into one build, don't run both** |
+
+### Needs a build decision, doctrine-sensitive — do not schedule until panel-checked
+
+| Working title | Passage | Why it's flagged |
+|---|---|---|
+| But If Not (Daniel 3) | Dan 3:25, 28 | KJV says "like the Son of God" then "his angel" — narration must NOT assert "this was Jesus." Swirl Stage 2 can say presence without asserting identity; wording needs the sound-doctrine-both-ways check this project requires on every episode, not just the flagged ones. |
+| Nevertheless (Gethsemane) | Luke 22:39-46 + Hebrews 5:7 | Hebrews 5:7 ("was heard in that he feared") earns Fray ON CHRIST HIMSELF — a first. Must read as fear, never doubt (Heb 4:15 — He never doubted the Father). Highest doctrinal stakes in the whole candidate list; build only when the panel process is at full strength, and expect a real live doctrinal debate, not a rubber stamp. |
+
+### Season-2 pool (real candidates, sequenced after the current season closes)
+
+| Working title | Passage | Motif | Note |
+|---|---|---|---|
+| A Man of Unclean Lips | Isaiah 6:1-8 | Stain/sin | tests the OT-cap rule at its edge — recommendation is to KEEP the cap at Stage 2 even though John 12:41 identifies the glory as Christ's; don't except this one |
+| A Cloud Like a Man's Hand | 1 Kings 18:36-46 | swirl-only | same drought as shipped ep 5 (1 Kings 17→18) AND cited in #14 (Luke 4:25) — chains 5→this→14; caution: "evening sacrifice = the cross" is tradition, not KJV text, don't use it |
+| Two Men Went Up | Luke 18:9-14 | Stain/sin (self-diagnosed) | the season's first PARABLE (currently zero); forces a real design decision — where does the swirl live when Jesus is TELLING the story, not standing in it (proposal: the margin, along the border, touching the publican's line at "justified") |
+| Doest Thou Well to Be Angry? | Jonah 4 | swirl-only | the insider who resents grace reaching the wrong people; ends on God's unanswered question — a second open-ending landing after #12 |
+| For Jonathan's Sake | 2 Samuel 9 | Fray | earned via David's own "Fear not" (9:7); season has no David yet; do NOT force a Stain — lameness isn't Levitical uncleanness for a layman |
+| Carest Thou Not? | Mark 4:35-41 | Fray (Stage 3) | most textually-earned Fray in the Gospels; v41's second fear ("feared exceedingly") is NOT dead ink — don't invent a "converted Fray," carry it in faces/swirl only; `papermakers-mark` device already built for exactly this "hidden presence" beat |
+| Of Whom Speaketh the Prophet This? | Acts 8:26-40 | swirl-only | first Acts episode; deliberate rhyme with #15's Luke 24:27; hold swirl at Stage 2 (resurrection is preached, not on-page) |
+| Can These Bones Live? | Ezekiel 37:1-14 | swirl-only | only Spirit-forward episode in the set; maps bones→sinews→flesh→breath to swirl stages; breath arrives as the swirl's first MOVEMENT, not more diffusion, respecting the OT cap |
+| He Never Said Yes *(confirmed backlog, John 5:6)* | John 5:2-9, Bethesda | TBD — likely swirl-only | 38-year infirmity is not clearly Levitical; needs its own motif check before scheduling, don't assume Stain |
+
+### Parked, with reasons (not dropped, just not now)
+
+- **Genesis 22 "Where Is the Lamb"** — sharp ("it's a RAM, Isaac's question
+  stays open until John 1:29") but the most-preached type in Christendom;
+  hold for freshness.
+- **Hosea 3 "Fifteen Pieces of Silver"** — fully earns Stain/sin, badly
+  under-preached, but first adultery page in this style (real NSFW render
+  risk) and the 15/30-silver Judas rhyme is coincidence, not a text link.
+- **Zacchaeus** — same person-shape as shipped She Loved Much (the sinner
+  welcomed). Redundant right now.
+- **Bronze serpent (Numbers 21)** — already built twice elsewhere in this
+  project in other styles; only worth a Swirls page if the pole-as-first-
+  vertical-swirl image is the whole reason to do it again.
+- **"The Kiss That Cut Off the Bargain" (Judas, backlog)** — collides with
+  #12. One Judas per season.
+- **"Not Plan B" (confirmed backlog, Galatians 4:4)** — real protoevangelium
+  fulfilment thread, pairs with Genesis 3 above, but Galatians 4:4 is Paul's
+  reflection, not a drawable scene with acting characters — weaker fit for
+  this storyboard-page format than the narrative candidates. Keep as a
+  possible NT half of a Genesis-3 OT→NT pair, not a priority build.
+- **"The Pronouns That Preached the Gospel" (1 Peter, backlog)** — same
+  problem: epistle, not narrative. Note only.
+
+## Part 3 — Season-level gaps (Fable's review, unedited findings)
+
+- **Stain sub-type is lopsided:** 4 of 5 shipped Stains are ceremonial
+  uncleanness, only 1 is moral sin. **Rule going forward: no more
+  uncleanness Stains this season** — every new Stain (Judas, Genesis 3, the
+  publican, Isaiah 6) is moral, rebalancing to roughly even.
+- **"Outsider" is worn out:** ~6 of 15 planned episodes lean on "the
+  unexpected outsider welcomed." The under-served person is the
+  **insider** — the one who's been in it for years and is hard, resentful,
+  performing, or leaving (Judas, the Nazareth crowd, Jonah, the Pharisee,
+  the disciples in the boat). New picks should skew here.
+- **Healing miracles dominate:** 6 of 10 shipped episodes are a body healed
+  or raised. Nothing yet from a parable, a prophet-as-person, a Psalm, Acts,
+  an epistle, or Genesis 1-27/Exodus/David/Daniel/Jonah. The candidate list
+  above adds Genesis x2, 2 Samuel, Isaiah, Ezekiel, Daniel, Jonah, Acts,
+  and the season's first parable.
+- **OT/NT is drifting NT:** all 5 remaining v4 items are NT. Left alone the
+  season ends 5 OT / 10 NT for a series whose spine is the whole canon.
+  Insert OT builds between the remaining NT ones (see season map below).
+- **Persons of the Trinity:** the Spirit has never appeared on a page
+  (Ezekiel 37 fixes this); the Father is never who Jesus turns to on-page
+  (Gethsemane fixes this, doctrine-gated).
+- **Landing fatigue** (already logged in memory
+  `feedback_swirls_landing_fatigue`): #12's "and it was night" and Jonah
+  4's unanswered question are real FORM fixes, not just wording fixes —
+  both close on a question or a withheld resolution instead of a CTA
+  phrase.
+
+## Part 4 — Immediate recommendation
+
+**Build #12 "Ye Are Not All Clean" next**, not #6 per v4's original build
+order. It's already slate-approved, needs no further plan work, proves the
+season's most important untested motif behaviour (a Stain that stays), and
+fixes the landing-fatigue problem in one stroke.
+
+**In parallel, not instead:** this v5 document goes to
+`independent_review.py --type plan` for the 5-CLI panel before any of Part
+2's NEW candidates are treated as scheduled — especially the two
+doctrine-flagged ones (Daniel 3, Gethsemane), which need the panel's sound-
+doctrine-both-ways check before a word of narration is written. Once #6 and
+#9's redesigns are panel-clean, they resume as the next two builds; Daniel 3
+and Genesis 32 follow.
+
+### Proposed season shape after this pass: 18 episodes (not 15)
+
+| # | Title | Passage | Motif | OT/NT |
+|---|---|---|---|---|
+| 1-5, 7, 8, 10, 11, 13 | *(shipped, unchanged)* | | | 5 OT / 5 NT |
+| next | Ye Are Not All Clean | John 13 | Stain/sin, stays | NT |
+| then | But If Not | Daniel 3 | swirl-only | OT |
+| then | Until the Breaking of the Day | Genesis 32 | Fray | OT |
+| then | Talitha Cumi (Jairus-POV redesign) | Mark 5 | Fray | NT |
+| then | Yet the Dogs (re-aimed #9) | Mark 7 | swirl-only | NT |
+| then | A Man of Unclean Lips | Isaiah 6 | Stain/sin | OT |
+| keystone | This Day Is This Scripture Fulfilled | Luke 4 | swirl S3 + resist(?) | NT, long |
+| finale | Road to Emmaus | Luke 24 | Fray, delayed | NT, long |
+
+Resulting balance: 8 OT / 10 NT, 3 more moral-sin Stains added, first
+parable and first Acts episode deferred to season 2.
+
+## Open items for the panel, explicitly
+
+1. Is "wax resist" (hardness/refusal as the paper not taking the swirl) a
+   legitimate addition to the dead-ink grammar, or does it violate the
+   system's own "never a third case" discipline? Needed before #14 builds.
+2. Daniel 3 — does "swirl Stage 2, presence without asserting identity"
+   hold up as sound doctrine both ways, or does any wording risk crossing
+   into claiming the fourth man in the furnace WAS the pre-incarnate Christ
+   (a real, disputed theological claim, not KJV-explicit)?
+3. Gethsemane — is Fray-on-Christ-Himself (Hebrews 5:7) safe to render at
+   all in this format, or does the risk of implying doubt (not fear)
+   outweigh the payoff? A genuine REVISE-or-park candidate.
+4. The Genesis 3 merge — one build combining "Where Art Thou" (Fable's
+   frame) and the locked backlog script `44_Grace_Spoken_First` (Genesis
+   3:15 protoevangelium), or two separate episodes? Recommendation above is
+   ONE merged build; panel should confirm or push back.
+5. Does the "no more uncleanness Stains" self-imposed rule hold, or is
+   there a strong-enough uncleanness story in the new candidates that
+   should override it?
+----- ARTIFACT END -----

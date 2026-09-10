@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Flow batch v6 review</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #f7f3ea; color: #222; margin: 0; padding: 20px; font-size: 18px; line-height: 1.4; }
+  h1 { font-size: 26px; margin-bottom: 4px; }
+  .sub { color: #555; margin-bottom: 20px; }
+  .banner { background: #fff3cd; border: 2px solid #e0a800; border-radius: 10px; padding: 14px 18px; margin-bottom: 24px; }
+  .good { color: #1a7a1a; font-weight: bold; }
+  .bad { color: #b00020; font-weight: bold; }
+  .shot { background: #fff; border-radius: 12px; padding: 16px; margin-bottom: 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.15); }
+  .shot h2 { margin-top: 0; font-size: 22px; }
+  .row { display: flex; gap: 14px; flex-wrap: wrap; align-items: flex-start; }
+  .card { text-align: center; }
+  .card img { width: 220px; border-radius: 8px; border: 2px solid #ccc; cursor: zoom-in; }
+  .card .label { font-size: 14px; color: #444; margin-top: 4px; max-width: 220px; }
+  .verdict { margin-top: 10px; padding: 10px; border-radius: 8px; font-size: 17px; }
+  .verdict.ok { background: #e6f4e6; }
+  .verdict.warn { background: #fdecea; }
+  a { color: #0645ad; }
+  .fname { font-family: monospace; font-size: 12px; color: #777; word-break: break-all; }
+</style>
+</head>
+<body>
+
+<h1>What Google Flow actually made — batch v6</h1>
+<div class="sub">Zip: Sept 08 - 16_54.zip &nbsp;|&nbsp; 11 images + 8 clips delivered (target was 10 + 8)</div>
+
+<div class="banner">
+<b>Short version:</b><br>
+✅ The still→clip animation link mostly worked — checked several clips, their first frame really is the matching still.<br>
+❌ Flow's own filenames threw out our STILL_01/CLIP_01 naming — everything had to be matched by looking at content, by hand.<br>
+❌ Front Cover came out in the wrong art style and wrong composition (door wide open, not glimpsed through a gap).<br>
+❌ One shot (F04) rendered as a pencil sketch instead of ink-and-watercolor.<br>
+❌ Thomas's "doubt" wobbly-line look isn't reading on 2 shots — his line looks steady like everyone else's.<br>
+✅ Back Cover and the "no door opened" rule both came out very close to spec.
+</div>
+
+<div class="shot">
+<h2>Front Cover (Shot 1) — <span class="bad">wrong style, wrong composition</span></h2>
+<div class="row">
+  <div class="card">
+    <img src="../_flow_delivery_v6/Man_glimpsed_through_doorway_202609081725.jpeg" onclick="window.open(this.src)">
+    <div class="label">Delivered still</div>
+    <div class="fname">Man_glimpsed_through_doorway...jpeg</div>
+  </div>
+  <div class="card">
+    <img src="_frames/Person_pressing_hand_near_lamplight_202609081725_first.jpg" onclick="window.open(this.src)">
+    <div class="label">Matching clip's first frame</div>
+    <div class="fname">Person_pressing_hand_near_lamplight...mp4</div>
+  </div>
+</div>
+<div class="verdict warn">
+Door is wide open with the whole street and Thomas standing in it — spec asked for the door shut, with only a narrow gap of lamplight and Thomas glimpsed small inside it. Art style also reads as a bold modern comic/movie-poster style, not the carved woodcut look every other cover shot should share. Title font isn't the carved wood-block lettering either. This is the shot that needs a real redo, not a tweak.
+</div>
+</div>
+
+<div class="shot">
+<h2>F01 "I will not believe" (Shot 2) — <span class="bad">doubt-line not reading</span></h2>
+<div class="row">
+  <div class="card">
+    <img src="../_flow_delivery_v6/Storyboard_panels_of_disciples_a…_202609081725.jpeg" onclick="window.open(this.src)">
+    <div class="label">Delivered still</div>
+  </div>
+</div>
+<div class="verdict warn">
+Composition and captions match well. But Thomas's outline looks just as steady/clean as the other three disciples — the "broken, doubled, tremored" doubt-line that's supposed to set him apart isn't visible. That line-contrast is one of this series' core storytelling devices (the Fray motif), so this is worth a redo too.
+</div>
+</div>
+
+<div class="shot">
+<h2>F02 "yet he stayed" (Shot 3) — <span class="good">mostly good</span></h2>
+<div class="row">
+  <div class="card">
+    <img src="../_flow_delivery_v6/Storyboard_page_depicting_Thomas…_202609081725.jpeg" onclick="window.open(this.src)">
+    <div class="label">Delivered still</div>
+  </div>
+  <div class="card">
+    <img src="_frames/Lamp_flickers_as_Thomas_breathes_202609081725_first.jpg" onclick="window.open(this.src)">
+    <div class="label">Matching clip's first frame</div>
+  </div>
+</div>
+<div class="verdict ok">
+Right room, right mood, right captions. Same soft issue as F01 — Thomas's line reads steady rather than unsteady. Otherwise usable.
+</div>
+</div>
+
+<div class="shot">
+<h2>F03 "Peace be unto you" (Shot 4) — <span class="good">door check passed</span></h2>
+<div class="row">
+  <div class="card">
+    <img src="../_flow_delivery_v6/Storyboard_page_showing_Thomas_d…_202609081725.jpeg" onclick="window.open(this.src)">
+    <div class="label">Delivered still</div>
+  </div>
+  <div class="card">
+    <img src="_frames/Jesus_lowers_hand_among_disciples_202609081725_first.jpg" onclick="window.open(this.src)">
+    <div class="label">Matching clip's first frame</div>
+  </div>
+</div>
+<div class="verdict ok">
+Door stays shut and barred — the exact defect we flagged as CRITICAL didn't happen here. Good sign the CRITICAL-tier checks are the right idea. Small nit: it added an extra invented line of text ("nothing marking how arrival occurred") beyond what was asked.
+</div>
+</div>
+
+<div class="shot">
+<h2>F04 "Reach hither" (Shot 5) — <span class="bad">wrong medium entirely</span></h2>
+<div class="row">
+  <div class="card">
+    <img src="../_flow_delivery_v6/Storyboard_page_depicting_Thomas…_202609081725_2.jpeg" onclick="window.open(this.src)">
+    <div class="label">Delivered still</div>
+  </div>
+  <div class="card">
+    <img src="_frames/Thomas_hand_reaching_toward_Jesus_202609081725_first.jpg" onclick="window.open(this.src)">
+    <div class="label">Matching clip's first frame</div>
+  </div>
+</div>
+<div class="verdict warn">
+This one rendered as a graphite pencil sketch, not ink-and-watercolor — a completely different medium from every other page. Needs a redo.
+</div>
+</div>
+
+<div class="shot">
+<h2>F05 "My Lord and my God" (Shot 6) — <span class="good">good, animation confirmed</span></h2>
+<div class="row">
+  <div class="card">
+    <img src="../_flow_delivery_v6/Storyboard_art_of_Thomas_kneeling_202609081725.jpeg" onclick="window.open(this.src)">
+    <div class="label">Delivered still</div>
+  </div>
+  <div class="card">
+    <img src="_frames/Man_breathing_during_silent_worship_202609081725_first.jpg" onclick="window.open(this.src)">
+    <div class="label">Clip first frame</div>
+  </div>
+  <div class="card">
+    <img src="_frames/Man_breathing_during_silent_worship_202609081725_last.jpg" onclick="window.open(this.src)">
+    <div class="label">Clip last frame</div>
+  </div>
+</div>
+<div class="verdict ok">
+Both caption lines present, hand-gap intact, this clip's first frame is a pixel match for the still — real confirmation the still→clip animation link genuinely works. Small nit: two bits of invented label text ("ONLY", "ONE: CLOSE TWO-SHOT") appear that weren't asked for.
+</div>
+</div>
+
+<div class="shot">
+<h2>F06 "Answered You Too" (Shot 7) — <span class="good">good match</span></h2>
+<div class="row">
+  <div class="card">
+    <img src="../_flow_delivery_v6/Storyboard_page_of_animation_art_202609081725.jpeg" onclick="window.open(this.src)">
+    <div class="label">Delivered still</div>
+  </div>
+  <div class="card">
+    <img src="_frames/Disciples_and_Jesus_resting_quietly_202609081725_first.jpg" onclick="window.open(this.src)">
+    <div class="label">Matching clip's first frame</div>
+  </div>
+</div>
+<div class="verdict ok">
+Very close to the intended composition and captions — one of the best matches in the batch.
+</div>
+</div>
+
+<div class="shot">
+<h2>Back Cover (Shot 8) — <span class="good">best of the batch</span></h2>
+<div class="row">
+  <div class="card">
+    <img src="../_flow_delivery_v6/People_walking_on_road_202609081725.jpeg" onclick="window.open(this.src)">
+    <div class="label">Delivered still</div>
+  </div>
+  <div class="card">
+    <img src="_frames/Figures_walk_along_road_202609081725_first.jpg" onclick="window.open(this.src)">
+    <div class="label">Matching clip's first frame</div>
+  </div>
+</div>
+<div class="verdict ok">
+Real woodcut hatching, warm+cool light contrast, edge-to-edge art, no blank border. This is the shot to point at as "yes, Flow can hit this style."
+</div>
+</div>
+
+<div class="shot">
+<h2>References</h2>
+<div class="row">
+  <div class="card">
+    <img src="../_flow_delivery_v6/Man_standing_on_paper_ground_202609081725.jpeg" onclick="window.open(this.src)">
+    <div class="label">REF_THOMAS — good match</div>
+  </div>
+  <div class="card">
+    <img src="../_flow_delivery_v6/Man_standing_with_open_hands_202609081725.jpeg" onclick="window.open(this.src)">
+    <div class="label">This is the real REF_JESUS — good match</div>
+  </div>
+  <div class="card">
+    <img src="../_flow_delivery_v6/jesus_ref_upscaled3x.png_202609081725.jpeg" onclick="window.open(this.src)">
+    <div class="label">Mystery 11th image — filename says "jesus ref" but it's a random close-up panel, not a clean reference</div>
+  </div>
+</div>
+<div class="verdict warn">
+Flow named this stray file after the uploaded reference, which is misleading — it is not the actual generated reference. The real REF_JESUS is the "open hands" image next to it. This is the labeling risk we flagged before the run: Flow's own filenames don't track our labels at all, so every asset has to be matched by eye.
+</div>
+</div>
+
+</body>
+</html>

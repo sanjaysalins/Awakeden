@@ -1,0 +1,1193 @@
+# FLOW_RUN_SHEET.md — "Ye Are Not All Clean" — hand this whole file to Flow's agent, once
+
+Built from `_DESIGN_BRIEF.md` (locked, all 10 open design questions resolved) and
+`ASSEMBLY_PLAN.md` (real forced-alignment timing) in this same folder, following the exact
+structural pattern validated on the first Flow pilot episode ("My Lord and My God" —
+`poc_living_water_ink_style_test/swirls_pilot_02_my_lord_and_my_god/FLOW_RUN_SHEET.md`).
+
+This is a single, fully self-contained execution document. Paste it into a FRESH Google Flow
+project as one message (or, if it's too long to paste at once, split it at any `## Step` or
+`## PHASE` heading — never mid-step). The agent then runs the whole thing itself, start to finish,
+with no human re-pasting anything in between.
+
+**Before you paste anything, read Section 0.5 (Flow settings and cost) below** — Flow's Agent asks
+permission before spending credits by default, which would silently stall an "unattended" run.
+
+**Companion documents in this same folder:** `_DESIGN_BRIEF.md` (the full creative reasoning —
+why Judas looks like nothing, why the motif is anchored to the water, the two hard doctrinal
+calls) and `ASSEMBLY_PLAN.md` (the real per-shot timing this run sheet's Global Settings table is
+built from, including the F04→F05 zero-gap finding). This file supersedes both on generation
+mechanics specifically — if anything reads inconsistent, this file wins for what to actually send
+to Flow.
+
+---
+
+## Section 0 — Message to the Flow agent
+
+**Read this entire message before generating anything. Then execute every phase in order, on your
+own, start to finish.**
+
+You are producing the complete visual footage for one ~75-second episode, "Ye Are Not All Clean"
+(John 13:1-30, the foot-washing and Judas): first 4 reference images (Judas, the basin and towel,
+the supper room, the doorway at night — Jesus's own reference is provided as an uploaded file, not
+generated), then 8 storyboard stills, then 8 video clips — each clip animated from its matching
+still. That is 12 stills-and-refs and 8 clips — 20 generations, run in four phases (Section headed
+"PHASE 1" through "PHASE 4" below). You do all 20 in this one conversation, in the order written,
+without pausing for approval and without asking me anything. I am not watching between steps. You
+send me exactly two messages: one line now — "Read. 20 generations, 4 phases. Starting Phase 1." —
+and the FINAL REPORT (Phase 4) when everything is done.
+
+**Two things this episode's design absolutely depends on — read carefully, they govern every step:**
+
+1. **Judas must never look different from anyone else in the room.** The narration's own point is
+   that nothing visible marked him as the betrayer — "ye are clean, but not all" names a heart
+   Jesus already knew, not a defect anyone else could have seen. So Judas is drawn with the exact
+   same calm face, the exact same steady confident ink line, the exact same plain dress as every
+   other disciple — no dark robe, no shadowed face, no shifty eyes, nothing "villain-coded." His
+   only distinguishing detail, anywhere, is a small leather coin-purse at his belt (a real textual
+   detail, John 13:29 — "he had the bag"). No other figure carries one.
+2. **The blue-and-gold "Swirls of Life" ink motif is anchored to the water in the basin itself, and
+   the rule has two parts — read both, they are not the same rule:**
+   - On F02 and F03, Judas IS in the same wide frame as the motif — that is correct, by design. The
+     rule there is **proximity, not frame-sharing**: the motif must stay small, fixed at the basin's
+     water, and must never touch, grow toward, or appear anywhere near Judas himself — he sits at
+     least an arm's length away. A wide shot correctly showing both, at a safe distance, PASSES.
+   - On F04 and F05 — Judas's own zone, after he has left the basin's area — the rule is stricter:
+     **zero motif anywhere on the page at all**, regardless of distance. No blue or gold ink of any
+     kind, anywhere in frame, full stop.
+   This is the mechanical device that keeps the story's grace-visual (the motif) from ever reading as
+   something Judas earned, lost, or was denied. On every step below where Judas is in frame, the
+   checklist's first line is always the zone check — read it first, and read which of the two rules
+   above applies to that specific step (stated in that step's own checklist).
+
+**One more distinction the zone check depends on: the MOTIF is not the same thing as the PALETTE.**
+Several prompts describe a general "soft gold wash" as part of this style's ordinary watercolor
+palette (a warm tint on the aged paper itself, present throughout the piece, unrelated to Judas or
+the basin) — that is NOT the Swirls-of-Life motif and is not banned near Judas. The motif specifically
+means a recognizable blue-ink thread, curl, or watercolor bloom (sometimes paired with muted gold)
+that reads as a distinct, deliberate mark — not the paper's own background warmth. When a "no blue
+or gold ink near Judas" check runs, it is checking for the MOTIF specifically — a visible thread or
+bloom — not flagging the ordinary warm paper tone that's part of the art style on every page,
+including Judas's own. If a page's general palette instruction and its zone-check instruction ever
+seem to conflict, this distinction resolves it: ordinary paper warmth is always fine; a recognizable
+motif mark is what's restricted.
+
+These rules apply to every step. None of them relax at any point.
+
+1. **Prompts are verbatim.** Every generation has its prompt between a line reading `PROMPT STARTS`
+   and a line reading `PROMPT ENDS`. Send that text to the image or video model exactly as written —
+   do not summarize, shorten, reorder, translate, "improve," merge, or add to it. If Flow offers any
+   prompt-enhancement, auto-improve, or rewrite option, turn it off for this whole session.
+2. **Each step stands alone.** Everything a step needs is inside that step. Carry nothing forward
+   from an earlier step except the images the step names by label.
+3. **Nobody speaks. Ever.** No dialogue, no character speech, no narrator, no music, in any clip.
+   Lips stay closed on every figure in every clip. All spoken lines are added later, outside Flow.
+4. **Images carry forward by label, tracked in a running log — not by Flow's own filenames.** Flow's
+   own auto-generated names will NOT match REF_JUDAS / STILL_0N / CLIP_0N — expect completely
+   different, content-descriptive names. After EVERY single generation, immediately add one line to
+   a running log you keep for this whole session: `[our label] = [Flow's own filename or a one-line
+   description of exactly what it shows]`. This log is the real mechanism for matching outputs to
+   labels — never rely on a title/name field actually holding our label text; it won't. You will
+   generate REF_JUDAS, REF_BASIN_TOWEL, REF_SUPPER_ROOM, and REF_DOORWAY in Phase 1. Phase 2 and
+   Phase 3 steps tell you which of REF_JESUS (the uploaded file) / REF_JUDAS / REF_BASIN_TOWEL /
+   REF_SUPPER_ROOM / REF_DOORWAY to attach as Ingredients — attach exactly the ones named, those
+   images from this conversation, never a file, never a substitute, never a re-made version. Every
+   clip is animated from the still labeled in its own step, as the starting frame.
+5. **Check every result yourself before moving on.** Each step lists a compact SUCCESS line plus a
+   full checklist below it. If any line fails, regenerate that one generation once, unchanged. If it
+   fails again, keep the better of the two, write the failure under Flags in the FINAL REPORT, and
+   continue. If Flow refuses to generate something, write that under Flags and continue. Never fix a
+   defect by editing a prompt. Never stop the run.
+6. **One output per generation.** If Flow gives you more than one candidate, judge them against the
+   step's checks, keep exactly one, log only that one, and never use the others for anything.
+7. **Do not skip, reorder, repeat, or add steps.** Follow the four phases in order: PHASE 1 (R1-R4)
+   → PHASE 2 (STILL_01 through STILL_08) → PHASE 3 (CLIP_01 through CLIP_08) → PHASE 4 (FINAL
+   REPORT). Within a phase, follow its steps in the order written. Generate nothing not on this
+   sheet.
+8. **Aspect ratio is vertical 9:16 for every generation.** Clip length varies by shot — the table in
+   Global Settings below gives each clip's real target, from `ASSEMBLY_PLAN.md`'s real measured
+   timing. When a target exceeds one generation's normal length, ask for the model's longest
+   available single-clip length for that generation, and report the actual length delivered either
+   way.
+
+---
+
+## Section 0.5 — Before you paste this: Flow settings and cost
+
+Do this in Flow itself, before pasting Section 0 onward, or the "unattended, never stop" behavior
+in Section 0 rule 5 will silently stall waiting for clicks:
+
+1. **Turn off generation confirmation.** In Flow's settings, set "Confirm before generating" (or
+   whatever your account calls the credit-spend confirmation prompt) to Off / Never. Telling the
+   agent not to pause does not change this setting on its own — it's a separate Flow-side toggle.
+2. **Set output count to 1 per generation**, if Flow offers a "number of candidates" setting. Flow
+   bills per generated output, not per request — leaving this above 1 pays for images/clips this
+   plan then discards anyway.
+3. **Know your cost ceiling before you start.** This plan is 20 generations (4 refs, 8 stills, 8
+   clips). Every single one of the 20 steps carries at least one CRITICAL checklist line, and a
+   CRITICAL fail earns up to 2 extra retries (3 attempts total) — so the real worst-case range is
+   **20-60 generation attempts, not 45.** Video credit cost per clip varies a lot by model on Flow.
+   Check your own plan's current per-generation credit cost for whichever still and video models
+   you're using, multiply by up to **60**, and confirm that's a spend you're happy with before
+   pasting Section 0.
+4. **Upload the one reference file this run uses, before pasting Section 0.** File:
+   `F:\slk\PycharmProjects\JesusInTheBible\.claude\skills\swirls-of-life\references\jesus_ref.png`
+   — the same Jesus likeness used across every Swirls-of-Life episode. Add it to this Flow project
+   so it's ready to attach when the agent reaches Steps S2, S3, S4, S5(F04 clarification — see
+   Step S5's own note), and S7. This is the only file provided anywhere in this run — Judas, the
+   basin/towel, the supper room, the doorway, all 8 stills, and all 8 clips are otherwise generated
+   by Flow itself from text alone.
+5. **Count outputs against the target when the zip comes back.** Count files against 4 refs + 8
+   stills + 8 clips = 20, and use the running label-mapping log (Section 0 rule 4) to spot any extra
+   or orphaned file before assembly.
+
+---
+
+## Global settings
+
+| Setting | Value |
+|---|---|
+| Aspect ratio | 9:16, always |
+| Image model | whatever this Flow project's image model is currently set to |
+| Video model | whatever this Flow project's video model is currently set to |
+| Retry budget, ordinary checks | 1 extra attempt (2 attempts total) |
+| Retry budget, CRITICAL checks (marked per step) | 2 extra attempts (3 attempts total) before falling back |
+| Prompt enhancement / auto-improve | OFF for the whole session |
+| Total generations | 4 refs + 8 stills + 8 clips = 20 (up to 60 attempts with retries — every step carries at least one CRITICAL line, worst case 20×3) |
+| Labels | REF_JUDAS, REF_BASIN_TOWEL, REF_SUPPER_ROOM, REF_DOORWAY, REF_JESUS (uploaded, not generated), STILL_01–STILL_08, CLIP_01–CLIP_08 |
+
+**Per-clip length target**, from `ASSEMBLY_PLAN.md`'s real forced-alignment timing (not a
+word-count guess). Ask for the model's longest available single-clip length on the four marked
+LONG; the rest are fine at the model's normal default (typically 8-10s). Flow's own documented
+per-generation ceiling (as of this writing) tops out around 8-10s regardless of "longest available"
+— none of the four LONG clips can be natively generated at their real target length (10.6-13.6s) in
+one shot; "longest available" gets you as close as Flow allows, and the remainder is covered by a
+freeze-hold at assembly (see `ASSEMBLY_PLAN.md`'s own notes per clip), not by Flow itself:
+
+| Clip | Real target | Ask for |
+|---|---|---|
+| CLIP_01 Front Cover | ~3.7s | default length (heavy trim at assembly) |
+| CLIP_02 F01 | ~8.2s | default length |
+| CLIP_03 F02 | ~4.9s | default length (trim at assembly) |
+| CLIP_04 F03 | ~13.6s | **LONG — longest available** (this episode's densest page — two KJV quotes in one breath; may still need a small freeze-hold at assembly even at the model's longest) |
+| CLIP_05 F04 | ~10.6s | **LONG — longest available** |
+| CLIP_06 F05 | ~3.9s | default length (trim/freeze at assembly) |
+| CLIP_07 F06 | ~11.4s | **LONG — longest available** (this episode's hero/rhetorical peak) |
+| CLIP_08 Back Cover | ~9.5s + a required ≥3.0s landing hold ≈ 12.5-13s | **LONG — longest available**; this clip must still read as visibly alive (the blue-gold band still drifting) all the way through its final seconds, not frozen dead the instant its own motion would normally settle |
+
+Report whatever length Flow actually delivers in the FINAL REPORT — assembly trims or holds
+against the real footage, not the target.
+
+**Known real finding from `ASSEMBLY_PLAN.md`, for context only (does not change any generation
+step):** the narration has a 0.00s gap between the F04 and F05 beats — "...thought he had gone to
+buy food. Judas 'went immediately out: and it was night'" runs as one continuous breath. This
+affects the final assembly cut, not anything Flow generates here.
+
+Which references each still attaches (restated inside each step too):
+
+| Step | Attach |
+|---|---|
+| S1 Front Cover | REF_JUDAS + REF_DOORWAY + REF_SUPPER_ROOM (background) |
+| S2 F01 | REF_JESUS (uploaded) + REF_SUPPER_ROOM |
+| S3 F02 | REF_JESUS (uploaded) + REF_SUPPER_ROOM + REF_JUDAS + REF_BASIN_TOWEL |
+| S4 F03 | REF_JESUS (uploaded) + REF_SUPPER_ROOM + REF_BASIN_TOWEL + REF_JUDAS |
+| S5 F04 | REF_JESUS (uploaded) + REF_JUDAS + REF_SUPPER_ROOM |
+| S6 F05 | REF_JUDAS + REF_DOORWAY |
+| S7 F06 | REF_JESUS (uploaded) + REF_BASIN_TOWEL |
+| S8 Back Cover | REF_BASIN_TOWEL + the accepted STILL_01 (Front Cover), attached as a style-match Ingredient — no human/figure reference needed, since no figure appears anywhere on this page |
+
+**A note on S5 (F04):** `_DESIGN_BRIEF.md` §3's own summary table lists Jesus as absent from F04,
+but §6's actual page-by-page scene description for F04 explicitly has Jesus handing Judas the sop
+— that's the scene's whole content (John 13:26). This is an internal inconsistency in the source
+brief; the more specific, actually-written scene description in §6 governs, so REF_JESUS is
+attached to S5. Flagging this so nobody "fixes" it back to the summary table's version later.
+
+---
+
+## Section 3 — The check-and-retry loop (applied after every generation)
+
+After every generation and before the next step: for a still, look at the whole image; for a clip,
+watch it end to end AND listen to its audio track — not just the opening seconds, not video only.
+Check the compact SUCCESS line first, then go through the full checklist below it line by line. Each
+step's full checklist is grouped "Must not fail" and "Also check" — some "Must not fail" lines are
+additionally marked **CRITICAL**.
+
+- All pass → log it (Section 0 rule 4) → next.
+- An ordinary line fails → regenerate that one generation once, same prompt, same attached images,
+  nothing changed. Still failing → keep the attempt that passes more lines, log it, write the failed
+  line under Flags in the FINAL REPORT, continue.
+- **A CRITICAL line fails → regenerate up to twice more** (three attempts total), same prompt and
+  Ingredients each time, nothing changed. Still failing on the third attempt → keep the best of the
+  three, log it as normal so the run can continue, but write it under a separate **CRITICAL — review
+  before assembly** heading at the top of Flags in the FINAL REPORT, not mixed in with ordinary
+  flags. This never stops the run — Flow can't ask me anything mid-session — but it makes sure a
+  genuinely broken shot doesn't disappear quietly into a list of other notes.
+
+**The ZONE check runs first, before anything else, on every step where Judas is in frame.** Section
+0's rule 2 has two cases — check which one applies to the step in front of you (its own SUCCESS
+line and checklist say which):
+- **F02 / F03 (Judas present, motif dose above 0 — this is correct by design):** does any blue or
+  gold ink touch, approach, or appear anywhere near Judas himself? If yes, CRITICAL fail. The motif
+  staying small and fixed at the basin's water, with Judas at a safe distance elsewhere in the same
+  wide frame, PASSES — that is the intended picture, not a defect.
+- **F04 / F05 (Judas's own zone, motif dose must be 0):** does any blue or gold ink appear anywhere
+  in this frame at all, at any point, regardless of distance from Judas? If yes, CRITICAL fail.
+Applying the F04/F05 zero-tolerance rule to F02/F03, or the F02/F03 proximity rule to F04/F05, are
+both wrong — each step's own checklist states which rule governs it; when in doubt, that step's own
+text wins over this general summary.
+
+For every clip, two comparisons: the element the prompt names as moving must be visibly different
+between the first frame and the last frame; every element the prompt says stays as drawn must be
+unchanged in content and position between the first frame and the last frame (allow for the normal
+frame-to-frame redraw of a generative video model — "unchanged" here means nothing new appears,
+nothing drawn disappears, nothing shifts position; it does not mean literal pixel equality, which no
+eye or agent can actually certify from playback).
+
+---
+---
+
+# PHASE 1: CHARACTER / OBJECT / LOCATION REFERENCE GENERATION
+
+## Step R1 [REF_JUDAS]
+
+- **ACTION:** `generate_image` | **Inputs:** Text only, no Ingredients
+- **SUCCESS:** 1 figure? Yes. Ordinary calm face, no mark, no shadow? Yes. Plain grey-brown robe,
+  small coin-purse at belt (the ONE distinguishing detail)? Yes. No blue/gold anywhere, no halo?
+  Yes. Outline one steady unbroken line? Yes. Plain paper ground, no text? Yes.
+
+```
+PROMPT STARTS
+A single clean character reference image of one figure on a plain aged-cream paper ground, no background scene: hand-drawn animation development art, delicate ink linework and watercolor on aged cream paper with visible grain — not photorealistic, not anime, not Disney, no polished graphic design, no clean comic-book inking, no Renaissance religious staging, no glowing spiritual VFX. Palette: black ink, ochre, muted brown, olive green, clay-red, touches of soft gold wash. Vertical 9:16 frame. A Judean man in his thirties, ordinary build and height, sun-browned skin no different in tone from an ordinary man, dark hair cut and combed in a plain ordinary way, a short trimmed dark beard, an ordinary calm face with no scowl, no narrowed eyes, no shadow cast across it that would not be cast the same way on any other ordinary face — ordinary and unremarkable is the entire point of this reference. Wearing a simple knee-to-ankle-length robe of undyed grey-brown wool, a plain rope belt, a small worn leather coin-purse hanging at the belt — this coin-purse is the one and only distinguishing detail anywhere on this figure. No dark palette, no ominous shading, no visual cue of villainy of any kind beyond the small purse. Standing three-quarter view, close enough to read the face clearly, wide enough to read the robe, build, and belt, calm neutral expression, arms visible at his sides, steady confident single-struck ink line — the same line weight and care as an entirely ordinary figure, nothing about the linework itself signals anything unusual. No blue and no gold anywhere on him. No halo. Period, 1st-century Roman Judea — simple ankle-length tunics in undyed cream or muted natural-dye colors, a looser mantle draped over one shoulder, a woven or roped belt, plain leather sandals — no visible buttons, zippers, buckles, or metal fasteners of any kind beyond simple cloth ties and the one coin-purse. No eyeglasses, no wristwatches, no modern haircut shapes, no bright synthetic-looking dye colors. High resolution, sharp linework, no blur, no text, no caption, no background scene — just the figure on a plain aged-cream paper ground.
+PROMPT ENDS
+```
+
+Full checklist:
+
+Must not fail — **CRITICAL, all lines** (five downstream shots — S1, S3, S4, S5, S6 — depend on
+this reference):
+- Exactly one figure, face clearly readable, robe and build readable, arms at his sides.
+- Ordinary calm face — no scowl, no narrowed eyes, no shadow that isn't a normal, even lighting
+  shadow. Nothing "villain-coded" about the face, posture, or expression.
+- Plain grey-brown robe, plain rope belt. A small leather coin-purse at the belt — this is the ONLY
+  distinguishing detail on the entire figure.
+- No blue and no gold anywhere on him. No halo.
+- His outline is one single confident unbroken line — no broken, doubled, or tremored line. (A man
+  "about to betray" is exactly what a render instinct loosens into a shaky line — that reading is
+  explicitly wrong here: the text says the betrayal was already decided before this episode opens,
+  not wavering in progress.)
+- No text, letters, numbers, caption, or scene — plain aged-cream paper ground only.
+
+Also check:
+- Ink linework and watercolor on grained paper — not photoreal, anime, 3D, or glossy.
+- Hands correct, no extra limbs, no duplicate or transparent figure.
+- No buttons, zippers, buckles, eyeglasses, wristwatch, or modern haircut.
+
+All lines pass → log this image as REF_JUDAS. Go to Step R2.
+Any line fails → regenerate up to twice more (three attempts total, the CRITICAL rule in Section 3),
+same prompt, nothing changed. Still failing on the third attempt → keep the best attempt, log it as
+REF_JUDAS anyway (the run can't stop to ask), but write it under **CRITICAL — review before
+assembly** at the top of Flags in your FINAL REPORT. Go to Step R2. Do not ask. Do not edit the
+prompt. REF_JUDAS is never regenerated after this step.
+
+---
+
+## Step R2 [REF_BASIN_TOWEL]
+
+- **ACTION:** `generate_image` | **Inputs:** Text only, no Ingredients
+- **SUCCESS:** Plain bronze basin with water, plain linen towel, no ornament of any kind? Yes. No
+  figure, no blue/gold ink? Yes. Plain paper ground, no text? Yes.
+
+```
+PROMPT STARTS
+A single clean object reference image on a plain aged-cream paper ground, no background scene, no figure: hand-drawn animation development art, delicate ink linework and watercolor on aged cream paper with visible grain — not photorealistic, not anime, no polished graphic design, no clean comic-book inking, no glowing spiritual VFX. Palette: black ink, ochre, muted brown, olive green, clay-red, touches of soft gold wash. Vertical 9:16 frame. A wide shallow basin of plain hammered bronze, its water resting still within it, sitting on the floor. Beside it, a plain undyed linen towel, long enough to gird about a waist, its cloth simple and entirely unmarked — no embroidery, no border pattern, no color beyond its natural undyed cream. No ornament, no engraving, no color, no pattern on either object — plain household ware, nothing ceremonial or decorative about either piece. No blue or gold ink anywhere in this reference — this is a plain, undosed object study, the motif is never baked into the reference itself, only added per-page later. No figure, no hand, no foot, no face anywhere in the frame. High resolution, sharp linework, no blur, no text, no caption, no background scene — just the basin and towel on a plain aged-cream paper ground.
+PROMPT ENDS
+```
+
+Full checklist:
+
+Must not fail — **CRITICAL, all lines** (four downstream shots — S3, S4, S7, S8 — depend on this
+reference):
+- The basin is plain hammered bronze, unornamented — not silver, not patterned, not engraved.
+- The towel is plain undyed linen, unmarked — no embroidery, no color pattern.
+- No blue or gold ink anywhere on this reference image.
+- No figure, hand, or face anywhere in the frame.
+- No text, letters, numbers, caption, or scene — plain aged-cream paper ground only.
+
+Also check:
+- Ink linework and watercolor on grained paper — not photoreal, glossy, or a product-shot style.
+- The water in the basin reads as still, plain water — no unusual color or shimmer.
+
+All lines pass → log this image as REF_BASIN_TOWEL. Go to Step R3.
+Any line fails → regenerate up to twice more (three attempts total); still failing on the third
+attempt → keep the best attempt, log it as REF_BASIN_TOWEL anyway, write it under **CRITICAL —
+review before assembly** in Flags. Go to Step R3. Do not ask. Do not edit the prompt.
+
+---
+
+## Step R3 [REF_SUPPER_ROOM]
+
+- **ACTION:** `generate_image` | **Inputs:** Text only, no Ingredients
+- **SUCCESS:** Plain lamplit upper room, low table, no windows to night sky, no luxury? Yes. No
+  figure (or at most soft unindividuated background shapes), no blue/gold ink? Yes. Plain paper
+  ground border only, no baked title/caption? Yes.
+
+```
+PROMPT STARTS
+A single clean location reference image on a plain aged-cream paper ground: hand-drawn animation development art, delicate ink linework and watercolor on aged cream paper with visible grain — not photorealistic, not anime, no polished graphic design, no clean comic-book inking, no glowing spiritual VFX. Palette: black ink, ochre, muted brown, olive green, clay-red, touches of soft gold wash. Vertical 9:16 frame. The interior of a plain upper room by lamplight: a low rectangular table surrounded by simple cushions and low couches, a few small clay oil lamps burning on stands or ledges giving warm low light, plain plastered walls, no windows showing night sky directly in frame, simple clay dishes and bread on the table, no luxury, no ornament anywhere in the room. No figure in this reference, or at most the barest soft, unindividuated suggestion of a seated shape at the table's far edge, out of focus, no face readable — this reference is for the ROOM, not any person in it. No blue or gold ink anywhere in this reference — a plain, undosed location study. High resolution, sharp linework, no blur, no text, no caption, no baked title anywhere — just the room on a plain aged-cream paper ground.
+PROMPT ENDS
+```
+
+Full checklist:
+
+Must not fail — **CRITICAL, all lines** (five downstream shots — S1, S2, S3, S4, S5 — depend on
+this reference):
+- A plain lamplit upper room: low table, cushions/couches, a few clay oil lamps, plastered walls,
+  no visible night sky through any window.
+- No luxury, no ornament, no carved relief, no stained glass.
+- No blue or gold ink anywhere in this reference.
+- No individually readable face or figure — at most a soft, out-of-focus background suggestion.
+- No text, letters, numbers, caption, or baked title anywhere.
+
+Also check:
+- Ink linework and watercolor on grained paper — not photoreal or glossy.
+- No electric light anywhere — only oil-lamp glow.
+
+All lines pass → log this image as REF_SUPPER_ROOM. Go to Step R4.
+Any line fails → regenerate up to twice more (three attempts total); still failing on the third
+attempt → keep the best attempt, log it as REF_SUPPER_ROOM anyway, write it under **CRITICAL —
+review before assembly** in Flags. Go to Step R4. Do not ask. Do not edit the prompt.
+
+---
+
+## Step R4 [REF_DOORWAY]
+
+- **ACTION:** `generate_image` | **Inputs:** Text only, no Ingredients
+- **SUCCESS:** Doorway with warm light spilling only a step or two past the threshold, near-total
+  darkness beyond, no stars/moon/other light? Yes. No figure, no blue/gold ink? Yes. Plain paper
+  ground, no text? Yes.
+
+```
+PROMPT STARTS
+A single clean location reference image on a plain aged-cream paper ground: hand-drawn animation development art, delicate ink linework and watercolor on aged cream paper with visible grain — not photorealistic, not anime, no polished graphic design, no clean comic-book inking, no glowing spiritual VFX. Palette: black ink, ochre, muted brown, olive green, clay-red, touches of soft gold wash, and for the darkness itself, deep near-black cool grey-blue. Vertical 9:16 frame. A plain doorway at the edge of a room, its wooden door standing open onto a dark stone stairway or passage beyond, lit only by the faint warm spill of lamplight from the room behind it, spilling no more than a step or two past the threshold. Beyond the doorway: near-total darkness — no stars, no moon, no other light source of any kind visible anywhere in the frame. The doorway itself and its frame are plain, unornamented wood and stone. No figure anywhere in this reference — this is for the DOORWAY and the darkness beyond it, not any person passing through it. No blue or gold ink anywhere in this reference. High resolution, sharp linework, no blur, no text, no caption — just the doorway on a plain aged-cream paper ground.
+PROMPT ENDS
+```
+
+Full checklist:
+
+Must not fail — **CRITICAL, all lines** (two downstream shots — S1, S6 — depend on this reference,
+and S6 is this episode's single darkest, most load-bearing page):
+- Warm lamplight spills only a short way past the threshold — not flooding the whole frame.
+- Beyond the doorway: near-total darkness, no stars, no moon, no other light source.
+- The doorway/frame are plain wood and stone, no ornament.
+- No figure anywhere in this reference.
+- No blue or gold ink anywhere. No text, letters, numbers, or caption anywhere.
+
+Also check:
+- Ink linework and watercolor on grained paper — not photoreal or glossy.
+- The darkness reads as genuinely dark (deep cool grey-blue/black), not merely dim or twilight.
+
+All lines pass → log this image as REF_DOORWAY. Go to Phase 2, Step S1.
+Any line fails → regenerate up to twice more (three attempts total); still failing on the third
+attempt → keep the best attempt, log it as REF_DOORWAY anyway, write it under **CRITICAL — review
+before assembly** in Flags. Go to Phase 2. Do not ask. Do not edit the prompt.
+
+---
+---
+
+# PHASE 2: STORYBOARD STILL GENERATION
+
+Generate all 8 stills in this phase before generating any clip. Do not animate a still the moment
+you make it — that happens later, in Phase 3.
+
+## Step S1 [STILL_01] — Front Cover
+
+- **ACTION:** `generate_image` | **Inputs:** REF: `REF_JUDAS`, `REF_DOORWAY`, `REF_SUPPER_ROOM`
+  (background)
+- **SUCCESS:** Judas mid-stride walking away through a doorway, face turned slightly away but still
+  matches REF_JUDAS? Yes. Warm lit room behind him, near-total darkness ahead? Yes. Title exactly
+  "YE ARE NOT ALL CLEAN" once + "JOHN 13"? Yes. No blue/gold ink anywhere? Yes. No storyboard panel
+  grid — this is cover art? Yes.
+
+```
+PROMPT STARTS
+16th-century Albrecht Dürer woodcut linework blended with contemporary cinematic landscape photography — dense parallel hatching, hard black contours, ink-on-block texture, dramatic volumetric light rays, photographic tonality. This is the exact same rendering technique as this episode's Back Cover shot — the same dense woodcut hatching, the same carved wood-block lettering, the same cinematic-landscape treatment — not a modern comic-book or movie-poster illustration style, not clean cel-shaded color, not a bold sans-serif or slab title font. Stationary camera, wide static shot, ultra-crisp. Vertical 9:16 frame. No storyboard panel grid, no "SEQ:"/frame-number labels — this is cover art, not a story page. A man matching the attached Judas reference image, mid-stride, walking away from the viewer through a plain doorway into darkness beyond it, his back and side visible, his face turned slightly away from the viewer — not fully hidden, his face and build should still be recognizable as the same man in the attached reference. Behind him, filling most of the frame, the warm lamplit edge of a room he is leaving — a corner of a low table, a hint of a few other seated figures as soft, smaller, out-of-focus shapes, no individually readable faces among them, no blue or gold ink anywhere in this room. Ahead of him, through the doorway, near-total darkness — no stars, no moon, no other light source of any kind. Warm amber lamplight fills the room behind him, catching the edge of his robe and shoulder as he moves away from it; cold near-black darkness lies ahead of him through the doorway — both a genuinely warm note and a genuinely cool note must be clearly present in the same image. No halo, no glow, no spiritual VFX anywhere. No blue or gold Swirls-of-Life ink motif appears anywhere on this page — covers never carry the interior motif. Near the top of the frame, bold engraved wood-block title lettering, carved in the same dense woodcut style as the rest of the image — thick confident carved strokes, NOT a modern font, no drop shadow, no glow, no banner or box behind it, reading: "YE ARE NOT ALL CLEAN" — write this exact phrase once, as one continuous title, do not repeat any word in it. Smaller matching carved lettering beneath it reading: "JOHN 13". No other text, letters, numbers, or words appear anywhere on the image beyond these two lines. The artwork fills the entire image edge to edge — never a drawn border, picture frame, caption strip, or margin band around the scene; the scene's own artwork runs all the way to the canvas edge on every side, fully painted, no blank paper showing. Period costume: the man wears a simple knee-to-ankle robe of undyed grey-brown wool, a plain rope belt, a small worn leather coin-purse at his belt — no visible buttons, zippers, buckles, or metal fasteners of any kind beyond simple cloth ties, no eyeglasses, no wristwatch, no modern haircut shapes. Avoid: modern clothing, busy foreground, bright neon colors, deformed anatomy, blurry rendering, smooth photorealism without linework, a stain or mark or shadow on his face or robe beyond the ordinary, a crowd of more than a few soft background figures, any other figure looking directly at him.
+PROMPT ENDS
+```
+
+Full checklist:
+
+Must not fail:
+- **CRITICAL** — the man matches REF_JUDAS: ordinary calm face and build, plain grey-brown robe,
+  small coin-purse at his belt, no mark, no shadow beyond the ordinary. His face is turned slightly
+  away but still readable as the same reference figure, not obscured entirely.
+- **CRITICAL** — rendered in the same woodcut-engraving technique as Step S8's Back Cover — dense
+  hatching, hard black contours, carved-looking title lettering — not a modern comic-book or
+  movie-poster illustration style.
+- **CRITICAL** — no blue or gold ink anywhere on this page. Covers never carry the interior motif.
+- Title reads exactly "YE ARE NOT ALL CLEAN", written once, no repeated word. Subtitle reads exactly
+  "JOHN 13". No other text anywhere on the image.
+- At least one genuinely warm note (the lit room behind him) AND at least one genuinely cool note
+  (the darkness ahead) both clearly present in the same image — not one flat temperature.
+- The artwork runs fully to the edge of the frame on all sides — no blank paper margin band anywhere.
+- No storyboard panel grid, no "SEQ:" or frame-number label anywhere — this is a cover, not a story
+  page.
+- No halo on the man or anyone.
+
+Also check:
+- No modern clothing, no modern objects, no deformed anatomy, no blurry rendering.
+- No more than a few soft, out-of-focus background figures; nobody else looks directly at him.
+
+All lines pass → log this image as STILL_01. Go to Step S2.
+An ordinary line fails → regenerate once: same prompt, same Ingredients, nothing changed; still
+failing, keep the better attempt, log it as STILL_01, write it under Flags, go to Step S2. A
+CRITICAL line fails → regenerate up to twice more (three attempts total); still failing, keep the
+best attempt, log it as STILL_01, write it under **CRITICAL — review before assembly** at the top
+of Flags, go to Step S2. Do not stop. Do not ask. Do not edit the prompt. Do not regenerate
+REF_JUDAS, REF_DOORWAY, or REF_SUPPER_ROOM.
+
+---
+
+## Step S2 [STILL_02] — F01 "Jesus knew"
+
+- **ACTION:** `generate_image` | **Inputs:** REF: `REF_JESUS` (uploaded), `REF_SUPPER_ROOM`
+- **Continuity anchor:** the room's own recurring details (plastered walls, low table, clay oil
+  lamps) carry forward unchanged across S2-S5 — this is the same room throughout.
+- **SUCCESS:** Jesus's face calm, unchanged, no sorrow/distress/anger visible? Yes. Judas NOT shown
+  anywhere on the page (deliberately absent — only an empty place at the table)? Yes. No blue/gold
+  ink anywhere (Stage 0)? Yes. SEQ/F01 header + 3 panels + caption exact, nothing extra? Yes.
+
+```
+PROMPT STARTS
+One single storyboard page of hand-drawn animation development art, laid out like a real found piece of production art. Across the top, a row of exactly three small storyboard panels, each with a circled number 1, 2, 3 as its ONLY label — these three panels ONLY are rendered in a deliberately different, more intense style from the rest of the page: 16th-century Albrecht Dürer woodcut linework blended with contemporary cinematic landscape photography — dense parallel hatching, hard black contours, ink-on-block texture, dramatic volumetric light rays, deep teal shadows, golden-hour glow, photographic tonality. Panel 1 (handwrite: "the heart") a closed hand resting on a knee, close, no face visible, drawn in that woodcut-cinematic style. Panel 2 (handwrite: "Judas") an empty place at a low table with a plain clay cup, no figure present, drawn in that woodcut-cinematic style. Panel 3 (handwrite: "Jesus knew") a close view of Jesus's own eyes, calm and direct, matching the attached Jesus reference image, drawn in that woodcut-cinematic style. Below them, ONE large full-scene illustration filling the lower half of the page — returning fully to the page's OWN gentle hand-drawn style, delicate ink linework and soft watercolor on aged cream paper, NOT the panels' denser woodcut-cinematic treatment — a MEDIUM shot: the interior of a plain lamplit upper room (matching the attached room reference), warm low light; a man matching the attached Jesus reference image seated at a low table among a soft, general group of other men, unindividuated, smaller and a little out of focus, no individual faces readable among them; his face turned slightly toward the viewer, his gaze calm, steady, and direct, his expression entirely unchanged — no sorrow, no distress, no anger visible on his face anywhere on this page, fully inside the frame. No other figure singled out or named by the composition. No one matching a specific "Judas" appearance is shown anywhere on this page — the room is otherwise a soft, general, unindividuated group. The room reads warm and ordinary. No blue or gold Swirls-of-Life ink motif appears anywhere on this page — no blue or gold ink anywhere in the scene, the panels, or the margins; nothing on this page carries any unusual ink, and the room, the table, and every face are entirely free of any mark. Vertical 9:16 frame. Top-left title, handwrite: "SEQ: THE BASIN AND THE DOOR". Top-right frame number, handwrite: "F01". Small handwritten production notes: a caption beneath the main scene, handwrite: "Jesus knew", and a corner note, handwrite: "NOTE: already decided". No other text, letters, numbers, or words appear anywhere on the page beyond the exact handwrite strings given above — no invented captions, signs, inscriptions, or titulus — this includes not adding any shot-type or camera-framing label anywhere on the page itself (never write words like "MEDIUM SHOT" or any other scene-description text as if it were part of the artwork), and not extending, completing, or adding to any caption beyond the exact words quoted above. Palette for the MAIN SCENE ONLY: black ink, ochre, muted brown, olive green, clay-red, touches of soft gold wash on aged cream paper with visible grain, not photorealistic, not anime, no polished graphic design, no clean comic-book inking, no glowing spiritual VFX. The three top panels keep their own separate deep teal and gold cinematic woodcut palette, described above, distinct from the main scene's palette. Every figure drawn in the same steady, confident, single-struck line, no doubled or tremored contour. Period, 1st-century Roman Judea — simple ankle-length tunics in undyed cream or muted natural-dye colors, a looser mantle draped over one shoulder, a woven or roped belt, plain leather sandals — no visible buttons, zippers, buckles, or modern haircut shapes. No electric light anywhere — only oil-lamp glow. No speech bubble, thought bubble, text box, or banner around any note.
+PROMPT ENDS
+```
+
+Full checklist:
+
+Must not fail:
+- **CRITICAL** — Jesus's face matches REF_JESUS's identity, and his expression is calm, steady, and
+  completely unchanged — no sorrow, distress, or anger visible anywhere on this page. (The natural
+  render instinct on "Jesus knows Judas will betray him" is to draw grief or tension — that is
+  explicitly wrong here; it would pre-empt F06's own claim that his motive was love, not
+  resignation.)
+- **CRITICAL** — no individually readable "Judas" figure appears anywhere on this page — panel 2 is
+  an empty place at the table, not a person. The rest of the room stays a soft, unindividuated
+  group.
+- **CRITICAL** — no blue or gold ink anywhere on this page, in the panels, the main scene, or the
+  margins.
+- Top-left reads "SEQ: THE BASIN AND THE DOOR", top-right reads "F01", corner note reads "NOTE:
+  already decided". Exactly three small panels, labeled only with a circled 1/2/3, their
+  handwritten captions reading "the heart", "Judas", "Jesus knew". Main caption reads "Jesus knew".
+  No other letters, numbers, or words anywhere.
+- No storyboard shot-type label (e.g. "MEDIUM SHOT") baked anywhere on the page as if it were art.
+
+Also check:
+- Ink-and-watercolor on grained cream paper — not photoreal, anime, 3D, or glossy.
+- No extra limbs, no malformed hands, no duplicate, blurred, or transparent figure.
+- Era-accurate dress, no electric light, no modern objects.
+
+All lines pass → log this image as STILL_02. Go to Step S3.
+An ordinary line fails → regenerate once, same prompt/Ingredients, nothing changed; still failing,
+keep the better attempt, log it, write it under Flags, go to Step S3. A CRITICAL line fails →
+regenerate up to twice more (three attempts total); still failing, keep the best attempt, log it,
+write it under **CRITICAL — review before assembly** in Flags, go to Step S3. Do not stop. Do not
+ask. Do not edit the prompt. Do not regenerate any Phase 1 reference.
+
+---
+
+## Step S3 [STILL_03] — F02 "dried their feet" — THE GOSPEL TURN
+
+- **ACTION:** `generate_image` | **Inputs:** REF: `REF_JESUS` (uploaded), `REF_SUPPER_ROOM`,
+  `REF_JUDAS`, `REF_BASIN_TOWEL`
+- **Continuity anchor:** same room as S2. Judas debuts here — seated among the others, an arm's
+  length or more from the basin.
+- **SUCCESS:** Jesus kneeling at the basin washing a foot, face calm/unchanged? Yes. Judas seated
+  among the group, ordinary, no mark, at least an arm's length from the basin? Yes. Exactly ONE
+  restrained thread of blue ink rising from the water only — nowhere near Judas, nowhere near any
+  hand or foot? Yes. ZONE check: no blue ink anywhere near Judas? Yes.
+
+```
+PROMPT STARTS
+One single storyboard page of hand-drawn animation development art, laid out like a real found piece of production art. Across the top, a row of exactly three small storyboard panels, each with a circled number 1, 2, 3 as its ONLY label — these three panels ONLY are rendered in a deliberately different, more intense style from the rest of the page: 16th-century Albrecht Dürer woodcut linework blended with contemporary cinematic landscape photography — dense parallel hatching, hard black contours, ink-on-block texture, dramatic volumetric light rays, deep teal shadows, golden-hour glow, photographic tonality. Panel 1 (handwrite: "poured") water pouring from a plain vessel into a basin, close, no face, drawn in that woodcut-cinematic style. Panel 2 (handwrite: "the water") the basin's still water surface, close, no figure, drawn in that woodcut-cinematic style. Panel 3 (handwrite: "the towel") a plain linen towel gathered at a waist, close, no face, drawn in that woodcut-cinematic style. Below them, ONE large full-scene illustration filling the lower half of the page — returning fully to the page's OWN gentle hand-drawn style, delicate ink linework and soft watercolor on aged cream paper, NOT the panels' denser woodcut-cinematic treatment — a MEDIUM WIDE shot: a man matching the attached Jesus reference image kneeling beside a wide shallow bronze basin matching the attached basin-and-towel reference, its water within it, a plain linen towel girded at his waist, his hands at the water's surface mid-motion, washing another man's foot, his face calm and unhurried, his expression entirely unchanged, no sorrow or distress visible anywhere on his face, fully inside the frame. Nearby at a low table, a man matching the attached Judas reference image, seated among a group of other ordinary men (plain undyed robes in earth tones, unindividuated faces), an ordinary man among ordinary men, his own feet not yet the ones being washed, no mark or shadow distinguishing him from anyone else at the table, seated at least an arm's length away from the basin itself. The room is warm, lamplit, ordinary, matching the attached room reference. Exactly one restrained thread of blue ink rises from the surface of the water in the basin itself — touching only the water and the air just above it, never a foot, never a hand, never the kneeling man's own hands, never any seated figure's face, and never anywhere near the man matching the Judas reference — this is the only blue ink anywhere on the whole page, behaving like one stroke of wet ink bled into the paper, smooth and open in its curl, never blot-shaped, never a glow. Vertical 9:16 frame. Top-left title, handwrite: "SEQ: THE BASIN AND THE DOOR". Top-right frame number, handwrite: "F02". Small handwritten production notes: a caption beneath the main scene, handwrite: "dried their feet", and a corner note, handwrite: "NOTE: all of them". No other text, letters, numbers, or words appear anywhere on the page beyond the exact handwrite strings given above — no invented captions, signs, inscriptions, or titulus — this includes not adding any shot-type or camera-framing label anywhere on the page itself, and not extending, completing, or adding to any caption beyond the exact words quoted above. Palette for the MAIN SCENE ONLY: black ink, ochre, muted brown, olive green, clay-red, touches of soft gold wash on aged cream paper with visible grain, not photorealistic, not anime, no polished graphic design, no clean comic-book inking, no glowing spiritual VFX. The three top panels keep their own separate deep teal and gold cinematic woodcut palette, described above, distinct from the main scene's palette. Every figure drawn in the same steady, confident, single-struck line, no doubled or tremored contour — including the man matching the Judas reference, who is drawn with exactly the same calm, ordinary care as every other figure in the room. Period, 1st-century Roman Judea — simple ankle-length tunics in undyed cream or muted natural-dye colors, a woven or roped belt, plain leather sandals — no buttons, zippers, buckles, or modern haircut shapes. No electric light anywhere — only oil-lamp glow. No speech bubble, thought bubble, text box, or banner around any note.
+PROMPT ENDS
+```
+
+Full checklist:
+
+Must not fail:
+- **CRITICAL — ZONE CHECK, first:** no blue or gold ink appears anywhere near the man matching
+  REF_JUDAS, or near any hand, foot, or face other than the single thread rising from the basin's
+  water itself. The thread touches only the water and the air just above it.
+- **CRITICAL** — the man matching REF_JUDAS is seated at least an arm's length from the basin, with
+  no mark, shadow, dark palette, or isolated seating distinguishing him from anyone else at the
+  table — the same ordinary calm face and dress as REF_JUDAS.
+- **CRITICAL** — Jesus's face (matching REF_JESUS) is calm and unhurried, his expression entirely
+  unchanged — no sorrow, distress, or anger visible.
+- Exactly one restrained thread of blue ink, rising only from the basin's water, smooth and
+  open-curled, never blot-shaped, never a glow — the only blue ink anywhere on the page.
+- The basin and towel match REF_BASIN_TOWEL: plain hammered bronze, plain unmarked linen, no
+  ornament.
+- Top-left reads "SEQ: THE BASIN AND THE DOOR", top-right reads "F02", corner note reads "NOTE: all
+  of them". Exactly three small panels captioned "poured", "the water", "the towel". Main caption
+  reads "dried their feet". No other letters, numbers, or words anywhere.
+
+Also check:
+- Ink-and-watercolor on grained cream paper — not photoreal, anime, 3D, or glossy.
+- No extra limbs, no malformed hands, no duplicate, blurred, or transparent figure.
+- Era-accurate dress, no electric light, no modern objects.
+
+All lines pass → log this image as STILL_03. Go to Step S4.
+An ordinary line fails → regenerate once, nothing changed; still failing, keep the better attempt,
+log it, write it under Flags, go to Step S4. **A CRITICAL line fails (especially the ZONE check) →
+regenerate up to twice more** (three attempts total); still failing, keep the best attempt, log it,
+write it under **CRITICAL — review before assembly** in Flags — flag this one prominently, this
+page is where the zone-separation rule is first tested. Go to Step S4. Do not stop. Do not ask. Do
+not edit the prompt. Do not regenerate any Phase 1 reference.
+
+---
+
+## Step S4 [STILL_04] — F03 "not all"
+
+- **ACTION:** `generate_image` | **Inputs:** REF: `REF_JESUS` (uploaded), `REF_SUPPER_ROOM`,
+  `REF_BASIN_TOWEL`, `REF_JUDAS`
+- **Continuity anchor:** the widest composition in the episode — the full table, the full company,
+  Judas now clearly placed among them.
+- **SUCCESS:** Jesus speaking, calm, hand open toward the room? Yes. Judas at his own place at the
+  table, ordinary, arm's length+ from the basin? Yes. The SAME single blue thread from F02, now
+  small in the wider frame, still only at the basin, nowhere near Judas or anyone else? Yes. ZONE
+  check passes? Yes.
+
+```
+PROMPT STARTS
+One single storyboard page of hand-drawn animation development art, laid out like a real found piece of production art. Across the top, a row of exactly three small storyboard panels, each with a circled number 1, 2, 3 as its ONLY label — these three panels ONLY are rendered in a deliberately different, more intense style from the rest of the page: 16th-century Albrecht Dürer woodcut linework blended with contemporary cinematic landscape photography — dense parallel hatching, hard black contours, ink-on-block texture, dramatic volumetric light rays, deep teal shadows, golden-hour glow, photographic tonality. Panel 1 (handwrite: "clean") a single washed foot, dry, resting on a floor mat, close, no face, drawn in that woodcut-cinematic style. Panel 2 (handwrite: "not all") a soft row of ordinary faces, unindividuated, no one singled out, drawn in that woodcut-cinematic style. Panel 3 (handwrite: "the old word") a hand gesturing as if quoting or reciting, close, no other feature, drawn in that woodcut-cinematic style. Below them, ONE large full-scene illustration filling the lower half of the page — returning fully to the page's OWN gentle hand-drawn style, delicate ink linework and soft watercolor on aged cream paper, NOT the panels' denser woodcut-cinematic treatment — a WIDE shot: the interior of a plain lamplit upper room (matching the attached room reference), a low table and a seated company of ordinary men now fully in frame; a man matching the attached Jesus reference image standing or kneeling near a basin matching the attached basin-and-towel reference, mid-speech but with his mouth closed and lips together (this is a narrator-voiced series — no figure's mouth is ever open, even when shown speaking), his hand open in a plain gesture toward the room, his face calm and direct, his expression unchanged. Among the seated men, a man matching the attached Judas reference image sits at his own place at the table, an arm's length or more from the basin, his face as calm and ordinary as every other face in the room, no mark, no shadow, no isolation in the seating — he is simply one of the company. The basin's water is small and a little apart in the composition, positioned near Jesus, not near the man matching the Judas reference. Exactly one restrained thread of blue ink — the same single thread from the washing, now small in this wider room — rises from the basin's water only, touching nothing else, and especially not touching or approaching any figure near it or across the room, including the man matching the Judas reference — this is the only blue ink anywhere on the whole page. Vertical 9:16 frame. Top-left title, handwrite: "SEQ: THE BASIN AND THE DOOR". Top-right frame number, handwrite: "F03". Small handwritten production notes: a caption beneath the main scene, handwrite: "not all", and a corner note, handwrite: "NOTE: he knew". No other text, letters, numbers, or words appear anywhere on the page beyond the exact handwrite strings given above — no invented captions, signs, inscriptions, or titulus — this includes not adding any shot-type or camera-framing label anywhere on the page itself, and not extending, completing, or adding to any caption beyond the exact words quoted above. Palette for the MAIN SCENE ONLY: black ink, ochre, muted brown, olive green, clay-red, touches of soft gold wash on aged cream paper with visible grain, not photorealistic, not anime, no polished graphic design, no clean comic-book inking, no glowing spiritual VFX. The three top panels keep their own separate deep teal and gold cinematic woodcut palette, described above, distinct from the main scene's palette. Every figure drawn in the same steady, confident, single-struck line, no doubled or tremored contour — including the man matching the Judas reference. Period, 1st-century Roman Judea — simple ankle-length tunics, a woven or roped belt, plain leather sandals — no buttons, zippers, buckles, or modern haircut shapes. No electric light anywhere — only oil-lamp glow. No speech bubble, thought bubble, text box, or banner around any note.
+PROMPT ENDS
+```
+
+Full checklist:
+
+Must not fail:
+- **CRITICAL — ZONE CHECK, first:** no blue or gold ink appears anywhere near the man matching
+  REF_JUDAS, or near any figure other than the small thread at the basin's water.
+- **CRITICAL** — the man matching REF_JUDAS is seated at his own place among the company, at least
+  an arm's length from the basin, exactly as ordinary and calm as everyone else, no isolation, no
+  mark.
+- **CRITICAL** — the blue thread is small (matching its F02 scale, held flat, not grown or
+  intensified) and touches nothing but the basin's water.
+- Jesus's face is calm and direct, gesture completing naturally, expression unchanged.
+- Jesus's mouth is closed, lips together, even though he is shown mid-speech — no open mouth on
+  any figure anywhere on this page.
+- Top-left reads "SEQ: THE BASIN AND THE DOOR", top-right reads "F03", corner note reads "NOTE: he
+  knew". Exactly three small panels captioned "clean", "not all", "the old word". Main caption
+  reads "not all". No other letters, numbers, or words anywhere.
+
+Also check:
+- This is the widest, most crowded composition in the episode — confirm the full table and company
+  are legible, not an unreadable jumble.
+- Ink-and-watercolor on grained cream paper — not photoreal, anime, 3D, or glossy.
+- Era-accurate dress, no electric light, no modern objects.
+
+All lines pass → log this image as STILL_04. Go to Step S5.
+An ordinary line fails → regenerate once, nothing changed; still failing, keep the better attempt,
+log it, write it under Flags, go to Step S5. **A CRITICAL line fails (especially the ZONE check) →
+regenerate up to twice more** (three attempts total); still failing, keep the best attempt, log it,
+write it under **CRITICAL — review before assembly** in Flags. Go to Step S5. Do not stop. Do not
+ask. Do not edit the prompt. Do not regenerate any Phase 1 reference.
+
+---
+
+## Step S5 [STILL_05] — F04 "that thou doest do quickly"
+
+- **ACTION:** `generate_image` | **Inputs:** REF: `REF_JESUS` (uploaded), `REF_JUDAS`,
+  `REF_SUPPER_ROOM`
+- **Note:** Jesus IS in this scene (he hands Judas the sop, John 13:26) — see this document's own
+  note under Global Settings' ref-attachment table for why this differs from `_DESIGN_BRIEF.md`
+  §3's summary table.
+- **SUCCESS:** Jesus handing Judas a piece of bread, both faces calm? Yes. Basin and its water
+  entirely ABSENT from this frame? Yes. No blue/gold ink anywhere (Stage 0)? Yes. Judas's coin-purse
+  visible in panel 3? Yes.
+
+```
+PROMPT STARTS
+One single storyboard page of hand-drawn animation development art, laid out like a real found piece of production art. Across the top, a row of exactly three small storyboard panels, each with a circled number 1, 2, 3 as its ONLY label — these three panels ONLY are rendered in a deliberately different, more intense style from the rest of the page: 16th-century Albrecht Dürer woodcut linework blended with contemporary cinematic landscape photography — dense parallel hatching, hard black contours, ink-on-block texture, dramatic volumetric light rays, deep teal shadows, golden-hour glow, photographic tonality. Panel 1 (handwrite: "the sop") a piece of bread held between two fingers, close, no face, drawn in that woodcut-cinematic style. Panel 2 (handwrite: "do quickly") a calm jaw and closed mouth in profile, close, no other feature, drawn in that woodcut-cinematic style. Panel 3 (handwrite: "buy food") a small leather coin-purse hanging at a belt, close, no face, drawn in that woodcut-cinematic style. Below them, ONE large full-scene illustration filling the lower half of the page — returning fully to the page's OWN gentle hand-drawn style, delicate ink linework and soft watercolor on aged cream paper, NOT the panels' denser woodcut-cinematic treatment — a MEDIUM shot: the interior of a plain lamplit upper room (matching the attached room reference), lamplight a little lower and warmer now, a low table nearby. A man matching the attached Jesus reference image is handing a small piece of dipped bread to a man matching the attached Judas reference image; both men's faces are calm — Jesus's unchanged and direct, Judas's ordinary, with no mark, no shadow, no expression of guilt or fear, exactly as calm as any other disciple at this table would look. The basin and its water are NOT visible anywhere in this frame, entirely absent from the composition — no trace of the basin anywhere. A few other men are nearby, unremarkable, glancing without alarm, faces unindividuated. No blue or gold Swirls-of-Life ink motif appears anywhere on this page — no blue or gold ink anywhere in the scene, the panels, or the margins, even though a basin exists elsewhere in this room's world; this page carries no unusual ink of any kind. Vertical 9:16 frame. Top-left title, handwrite: "SEQ: THE BASIN AND THE DOOR". Top-right frame number, handwrite: "F04". Small handwritten production notes: a caption beneath the main scene, handwrite: "that thou doest do quickly", and a corner note, handwrite: "NOTE: no man knew". No other text, letters, numbers, or words appear anywhere on the page beyond the exact handwrite strings given above — no invented captions, signs, inscriptions, or titulus — this includes not adding any shot-type or camera-framing label anywhere on the page itself, and not extending, completing, or adding to any caption beyond the exact words quoted above. Palette for the MAIN SCENE ONLY: black ink, ochre, muted brown, olive green, clay-red, touches of soft gold wash on aged cream paper with visible grain, not photorealistic, not anime, no polished graphic design, no clean comic-book inking, no glowing spiritual VFX. The three top panels keep their own separate deep teal and gold cinematic woodcut palette, described above, distinct from the main scene's palette. Every figure drawn in the same steady, confident, single-struck line, no doubled or tremored contour — including the man matching the Judas reference, drawn with exactly the same calm, ordinary care as every other figure. Period, 1st-century Roman Judea — simple ankle-length tunics, a woven or roped belt, plain leather sandals — no buttons, zippers, buckles, or modern haircut shapes. No electric light anywhere — only oil-lamp glow. No speech bubble, thought bubble, text box, or banner around any note.
+PROMPT ENDS
+```
+
+Full checklist:
+
+Must not fail:
+- **CRITICAL** — no blue or gold ink anywhere on this page, in any panel, the main scene, or the
+  margins.
+- **CRITICAL** — the basin and its water are entirely absent from this frame — no trace of them
+  anywhere in the composition.
+- **CRITICAL** — the man matching REF_JUDAS has a calm, ordinary face — no guilt, no fear, no mark,
+  exactly as calm as any other disciple would look.
+- Jesus's face (matching REF_JESUS) is calm, direct, unchanged.
+- Panel 3 shows the small leather coin-purse clearly — this is Judas's one distinguishing detail,
+  echoed here deliberately.
+- Top-left reads "SEQ: THE BASIN AND THE DOOR", top-right reads "F04", corner note reads "NOTE: no
+  man knew". Exactly three small panels captioned "the sop", "do quickly", "buy food". Main caption
+  reads "that thou doest do quickly". No other letters, numbers, or words anywhere.
+
+Also check:
+- Ink-and-watercolor on grained cream paper — not photoreal, anime, 3D, or glossy.
+- Era-accurate dress, no electric light, no modern objects.
+- Background disciples read as unremarkable, not alarmed.
+
+All lines pass → log this image as STILL_05. Go to Step S6.
+An ordinary line fails → regenerate once, nothing changed; still failing, keep the better attempt,
+log it, write it under Flags, go to Step S6. A CRITICAL line fails → regenerate up to twice more
+(three attempts total); still failing, keep the best attempt, log it, write it under **CRITICAL —
+review before assembly** in Flags. Go to Step S6. Do not stop. Do not ask. Do not edit the prompt.
+Do not regenerate any Phase 1 reference.
+
+---
+
+## Step S6 [STILL_06] — F05 "and it was night" — THE DARK PAGE
+
+- **ACTION:** `generate_image` | **Inputs:** REF: `REF_JUDAS`, `REF_DOORWAY`
+- **SUCCESS:** Judas alone, walking away through the doorway into near-total darkness? Yes. No other
+  figure anywhere? Yes. No blue/gold ink, no unusual light? Yes. This is the darkest page in the
+  episode by design.
+
+```
+PROMPT STARTS
+One single storyboard page of hand-drawn animation development art, laid out like a real found piece of production art. Across the top, a row of exactly three small storyboard panels, each with a circled number 1, 2, 3 as its ONLY label — these three panels ONLY are rendered in a deliberately different, more intense style from the rest of the page: 16th-century Albrecht Dürer woodcut linework blended with contemporary cinematic landscape photography — dense parallel hatching, hard black contours, ink-on-block texture, dramatic volumetric light rays, deep teal shadows, golden-hour glow, photographic tonality. Panel 1 (handwrite: "immediately") a hand pushing a door further open, close, no face, drawn in that woodcut-cinematic style. Panel 2 (handwrite: "out") a sandaled foot crossing a threshold stone, close, no face, drawn in that woodcut-cinematic style. Panel 3 (handwrite: "night") near-total darkness with the faintest warm sliver of lamplight at one edge, no figure, drawn in that woodcut-cinematic style. Below them, ONE large full-scene illustration filling the lower half of the page — returning fully to the page's OWN gentle hand-drawn style, delicate ink linework and soft watercolor on aged cream paper, NOT the panels' denser woodcut-cinematic treatment — a MEDIUM WIDE shot: a man matching the attached Judas reference image, alone, walking through a plain doorway matching the attached doorway reference, away from the viewer, his back mostly to the frame; the warm lamplight of a room behind him spills only a short way past the threshold and no further. Ahead of him: near-total darkness, no stars, no moon, no other light source of any kind. No other figure anywhere in the frame. The ground at the threshold is dry stone, plain, unmarked. No blue or gold Swirls-of-Life ink motif appears anywhere on this page — no blue or gold ink anywhere in the scene, the panels, or the margins; this is the darkest page in the episode by design, and it stays entirely free of any ink or unusual light. Vertical 9:16 frame. Top-left title, handwrite: "SEQ: THE BASIN AND THE DOOR". Top-right frame number, handwrite: "F05". Small handwritten production notes: a caption beneath the main scene, handwrite: "and it was night", and a corner note, handwrite: "NOTE: alone". No other text, letters, numbers, or words appear anywhere on the page beyond the exact handwrite strings given above — no invented captions, signs, inscriptions, or titulus — this includes not adding any shot-type or camera-framing label anywhere on the page itself, and not extending, completing, or adding to any caption beyond the exact words quoted above. Palette for the MAIN SCENE ONLY: black ink, ochre, muted brown, olive green, clay-red, deep near-black cool grey-blue for the darkness, touches of soft gold wash only in the small warm sliver behind him, on aged cream paper with visible grain, not photorealistic, not anime, no polished graphic design, no clean comic-book inking, no glowing spiritual VFX. The three top panels keep their own separate deep teal and gold cinematic woodcut palette, described above, distinct from the main scene's palette. The man matching the Judas reference is drawn in the same steady, confident, single-struck line as on every other page — no doubled or tremored contour, even here; his betrayal was already decided, not wavering in this moment. Period, 1st-century Roman Judea — simple ankle-length tunic, a woven or roped belt, plain leather sandals, the small leather coin-purse at his belt — no buttons, zippers, buckles, or modern haircut shapes. No speech bubble, thought bubble, text box, or banner around any note.
+PROMPT ENDS
+```
+
+Full checklist:
+
+Must not fail:
+- **CRITICAL** — no blue or gold ink anywhere on this page, in any panel, the main scene, or the
+  margins. This is the darkest page in the episode by design.
+- **CRITICAL** — beyond the doorway is near-total darkness — no stars, no moon, no other light
+  source; the warm lamplight spills only a short way past the threshold, not flooding the scene.
+- The man matching REF_JUDAS is alone — no other figure anywhere in the frame.
+- His outline stays the same steady, single-struck line as every other page — not shaky, not
+  tremored, not doubled, even on his darkest page.
+- Top-left reads "SEQ: THE BASIN AND THE DOOR", top-right reads "F05", corner note reads "NOTE:
+  alone". Exactly three small panels captioned "immediately", "out", "night". Main caption reads
+  "and it was night". No other letters, numbers, or words anywhere.
+
+Also check:
+- Ink-and-watercolor on grained cream paper — not photoreal, anime, 3D, or glossy.
+- The threshold stone is plain and unmarked.
+- Era-accurate dress including the coin-purse.
+
+All lines pass → log this image as STILL_06. Go to Step S7.
+An ordinary line fails → regenerate once, nothing changed; still failing, keep the better attempt,
+log it, write it under Flags, go to Step S7. A CRITICAL line fails → regenerate up to twice more
+(three attempts total); still failing, keep the best attempt, log it, write it under **CRITICAL —
+review before assembly** in Flags. Go to Step S7. Do not stop. Do not ask. Do not edit the prompt.
+Do not regenerate any Phase 1 reference.
+
+---
+
+## Step S7 [STILL_07] — F06 "knowing he wouldn't" — HERO
+
+- **ACTION:** `generate_image` | **Inputs:** REF: `REF_JESUS` (uploaded), `REF_BASIN_TOWEL`
+- **Note:** Judas is absent from this page by design — he has already left. Do not attach REF_JUDAS.
+- **SUCCESS:** Jesus kneeling alone at the basin, calm/unchanged face — no grief, no anger, no
+  triumph? Yes. Motif RETURNS — soft threads + one small bloom, above the water only, present but
+  not spectacular? Yes. No figure other than Jesus anywhere? Yes.
+
+```
+PROMPT STARTS
+One single storyboard page of hand-drawn animation development art, laid out like a real found piece of production art. Across the top, a row of exactly three small storyboard panels, each with a circled number 1, 2, 3 as its ONLY label — these three panels ONLY are rendered in a deliberately different, more intense style from the rest of the page: 16th-century Albrecht Dürer woodcut linework blended with contemporary cinematic landscape photography — dense parallel hatching, hard black contours, ink-on-block texture, dramatic volumetric light rays, deep teal shadows, golden-hour glow, photographic tonality. Panel 1 (handwrite: "did not earn") an open, empty hand, palm up, close, no face, drawn in that woodcut-cinematic style. Panel 2 (handwrite: "knowing") a close view of Jesus's own eyes, calm and unchanged, matching the attached Jesus reference image, drawn in that woodcut-cinematic style. Panel 3 (handwrite: "anyway") the basin's still water, close, no figure, drawn in that woodcut-cinematic style. Below them, ONE large full-scene illustration filling the lower half of the page — returning fully to the page's OWN gentle hand-drawn style, delicate ink linework and soft watercolor on aged cream paper, NOT the panels' denser woodcut-cinematic treatment — a MEDIUM WIDE shot: the interior of a plain lamplit upper room, quieter now, one place at the table left disturbed and empty. A man matching the attached Jesus reference image kneels alone beside a wide shallow bronze basin matching the attached basin-and-towel reference, the towel still girded at his waist, his hands resting lightly at the basin's rim, his face calm, steady, and entirely unchanged from every prior page — no grief, no anger, no triumph visible anywhere on his face. No other figure appears anywhere on this page — he is alone with the basin. The blue-and-gold Swirls-of-Life ink motif returns here, now quietly present rather than a single restrained thread: a few soft blue threads and one small, entirely amorphous watercolor bloom with soft feathered edges, hanging in the air just above the basin's water, present but not spectacular, echoing the single earlier thread without repeating it exactly — touching only the water and the air just above it, never Jesus's hands, never anywhere else on the page. Vertical 9:16 frame. Top-left title, handwrite: "SEQ: THE BASIN AND THE DOOR". Top-right frame number, handwrite: "F06". Small handwritten production notes: a caption beneath the main scene, handwrite: "knowing he wouldn't", and a corner note, handwrite: "NOTE: that is love". No other text, letters, numbers, or words appear anywhere on the page beyond the exact handwrite strings given above — no invented captions, signs, inscriptions, or titulus — this includes not adding any shot-type or camera-framing label anywhere on the page itself, and not extending, completing, or adding to any caption beyond the exact words quoted above. Palette for the MAIN SCENE ONLY: black ink, ochre, muted brown, olive green, clay-red, touches of soft gold wash on aged cream paper with visible grain, not photorealistic, not anime, no polished graphic design, no clean comic-book inking, no glowing spiritual VFX; the blue and muted-gold ink behaves like literal wet ink bled into the paper, never a magic-particle glow. The three top panels keep their own separate deep teal and gold cinematic woodcut palette, described above, distinct from the main scene's palette. Period, 1st-century Roman Judea — simple ankle-length robe, plain rope belt, plain leather sandals — no buttons, zippers, buckles, or modern haircut shapes. No electric light anywhere — only oil-lamp glow. No speech bubble, thought bubble, text box, or banner around any note.
+PROMPT ENDS
+```
+
+Full checklist:
+
+Must not fail:
+- **CRITICAL** — no other figure appears anywhere on this page — Judas is absent, Jesus is alone
+  with the basin.
+- **CRITICAL** — Jesus's face is calm, steady, entirely unchanged — no grief, anger, or triumph.
+- **CRITICAL** — the motif is present but restrained: a few soft threads and one small amorphous
+  bloom, above the water only, never touching Jesus's hands, never spreading elsewhere on the page —
+  quietly present, not spectacular, not a large bloom, not a glow.
+- The basin and towel match REF_BASIN_TOWEL: plain, unornamented.
+- Top-left reads "SEQ: THE BASIN AND THE DOOR", top-right reads "F06", corner note reads "NOTE:
+  that is love". Exactly three small panels captioned "did not earn", "knowing", "anyway". Main
+  caption reads "knowing he wouldn't". No other letters, numbers, or words anywhere.
+
+Also check:
+- Ink-and-watercolor on grained cream paper — not photoreal, anime, 3D, or glossy.
+- The room reads quieter than earlier pages — one place at the table left empty/disturbed.
+- Era-accurate dress, no electric light, no modern objects.
+
+All lines pass → log this image as STILL_07. Go to Step S8.
+An ordinary line fails → regenerate once, nothing changed; still failing, keep the better attempt,
+log it, write it under Flags, go to Step S8. A CRITICAL line fails → regenerate up to twice more
+(three attempts total); still failing, keep the best attempt, log it, write it under **CRITICAL —
+review before assembly** in Flags. Go to Step S8. Do not stop. Do not ask. Do not edit the prompt.
+Do not regenerate any Phase 1 reference.
+
+---
+
+## Step S8 [STILL_08] — Back Cover
+
+- **ACTION:** `generate_image` | **Inputs:** REF: `REF_BASIN_TOWEL`, `STILL_01` (the accepted Front
+  Cover image itself, attached as a style reference — text description alone ("same technique as
+  the Front Cover") is not reliable; the pilot's own real defect was exactly this failure, the Front
+  Cover rendering in a completely different art style. Attaching the actual accepted image is the
+  only real conditioning mechanism.)
+- **SUCCESS:** No human figure anywhere in the frame? Yes. Same woodcut style as the attached Front
+  Cover image? Yes.
+  A loose, free-floating band of blue-and-gold ink drifts HIGH in the frame, not anchored to the
+  basin, well above it, touching nothing? Yes. Title exactly "BRING HIM YOUR WORST" once + "1 JOHN
+  1:9"? Yes.
+
+```
+PROMPT STARTS
+16th-century Albrecht Dürer woodcut linework blended with contemporary cinematic landscape photography — dense parallel hatching, hard black contours, ink-on-block texture, dramatic volumetric light rays, photographic tonality. Match the exact rendering technique of the attached Front Cover reference image — the same dense woodcut hatching, the same carved wood-block lettering, the same cinematic-landscape treatment — not a modern comic-book or movie-poster illustration style, not clean cel-shaded color, not a bold sans-serif or slab title font. Stationary camera, wide static shot, ultra-crisp. Vertical 9:16 frame. No storyboard panel grid, no "SEQ:"/frame-number labels — this is cover art, not a story page. A wide shallow basin of plain hammered bronze matching the attached basin-and-towel reference, its water resting within it, and a plain undyed linen towel beside it, sitting alone on the floor beside a low table in a plain room. No human figure, no face, no hand, no door, no darkness appears anywhere in this frame — the room is empty and still. Warm lamplight fills the frame, low and even, steady throughout — no shadowed or dark area anywhere in this composition, the opposite lighting logic of the Front Cover, on purpose. High in the upper part of the frame, well above the basin and touching nothing, a loose, open band of blue-and-muted-gold ink threads drifts freely across the width of the frame — tied to no object, anchored to nothing, the only page in this episode where the ink is not anchored to the basin's water itself. The blue and gold ink behaves like literal wet ink bled into the paper, never a magic-particle glow, never sparkling. No halo, no glow, no other spiritual VFX. Near the bottom of the frame, bold engraved wood-block title lettering, carved in the same dense woodcut style as the rest of the image — thick confident carved strokes, NOT a modern font, no drop shadow, no glow, no banner or box behind it, reading: "BRING HIM YOUR WORST" — write this exact phrase once, as one continuous line, do not repeat any word in it. Smaller matching carved lettering beneath or beside it reading: "1 JOHN 1:9". No other text, letters, numbers, or words appear anywhere on the image beyond these two lines. The artwork fills the entire image edge to edge — never a drawn border, picture frame, caption strip, or margin band around the scene; the scene's own artwork runs all the way to the canvas edge on every side, fully painted, no blank paper showing. Avoid: any human figure, a face, a hand, a door, darkness, a stain or mark of any kind, jewelry, bright neon, a drawn border or caption strip, modern objects, deformed anatomy, blurry rendering.
+PROMPT ENDS
+```
+
+Full checklist:
+
+Must not fail:
+- **CRITICAL** — no human figure, face, hand, or door appears anywhere in this frame. No darkness
+  anywhere — warm, even lamplight fills the whole composition.
+- **CRITICAL** — rendered in the same woodcut-engraving technique as the attached STILL_01 (Front
+  Cover) reference image — compare against the actual attached image, not memory of the text
+  description.
+- **CRITICAL** — the blue-and-gold ink band drifts freely, high in the frame, well above the basin,
+  touching nothing — this is the ONE page where the ink is NOT anchored to the basin's water.
+- Title reads exactly "BRING HIM YOUR WORST", written once, no repeated word. Subtitle reads
+  exactly "1 JOHN 1:9". No other text anywhere on the image.
+- The basin and towel match REF_BASIN_TOWEL: plain, unornamented bronze and linen.
+- The artwork runs fully to the edge of the frame on all sides — no blank paper margin band.
+- No storyboard panel grid, no "SEQ:" or frame-number label anywhere.
+
+Also check:
+- No modern objects, no deformed anatomy, no blurry rendering.
+- The lighting reads as genuinely warm and even throughout — no cool or dark note anywhere (the
+  deliberate opposite of the Front Cover).
+
+All lines pass → log this image as STILL_08. Go to Phase 3, Step V1.
+An ordinary line fails → regenerate once, nothing changed; still failing, keep the better attempt,
+log it, write it under Flags, go to Phase 3. A CRITICAL line fails → regenerate up to twice more
+(three attempts total); still failing, keep the best attempt, log it, write it under **CRITICAL —
+review before assembly** in Flags. Go to Phase 3. Do not stop. Do not ask. Do not edit the prompt.
+Do not regenerate REF_BASIN_TOWEL.
+
+---
+---
+
+# PHASE 3: ANIMATION (I2V)
+
+Generate all 8 clips in this phase, each animated from its matching still already generated and
+logged in Phase 2. Do not generate a new still here — attach the exact logged still as the starting
+frame for each clip below.
+
+## Step V1 [CLIP_01] — animates STILL_01 (Front Cover)
+
+- **ACTION:** `generate_video_with_first_frame` | **Inputs:** START: `STILL_01` | **Duration:**
+  default length (see Global Settings table)
+- **SUCCESS:** Judas keeps walking away at a steady pace, one continuous motion? Yes. Warm room
+  behind him and darkness ahead both stay unchanged? Yes. Title text unchanged first-to-last? Yes.
+  Nobody speaks? Yes.
+
+```
+PROMPT STARTS
+The man matching the Judas reference keeps walking away from the viewer at a steady, unhurried pace, one continuous motion for the entire clip, his robe swaying naturally with each step. Camera: stationary, locked wide shot, no pan, no zoom. The warm light in the room behind him stays exactly as warm and steady as it already is, unchanged for the whole clip — it does not brighten, dim, or flicker. The darkness ahead of him through the doorway stays exactly as dark as it already is — nothing new appears in it, no star, no glow, no second light source. The baked title lettering at the top stays pixel-for-pixel identical throughout — same opacity, no fade, no drift, no duplication. No new figure, mark, or text appears at any point.
+Audio: faint distant night ambience, the soft sound of footsteps and cloth. Ambient sound only — no dialogue, no character speech of any kind, no narrator voice, no music. Lips stay closed and do not move on every figure in this clip; nobody speaks on camera — all spoken lines are added afterward as separate narration audio.
+PROMPT ENDS
+```
+
+Full checklist:
+
+Must not fail:
+- Motion exists: Judas is visibly further along his walk, first frame to last — a real, continuous
+  motion, not a static hold.
+- **CRITICAL** — the warm room behind him and the darkness ahead of him both stay exactly as drawn —
+  no brightening, no dimming, no new light source appearing in the darkness at any point.
+- The baked title text does not visibly change, fade, drift, or duplicate between the first frame
+  and the last frame.
+- Nobody's lips move. No speech, no words, no narrator, no music on the audio track — ambient only.
+
+Also check:
+- Camera does not pan, zoom, orbit, dolly, or shake.
+- Note the clip's actual length for the FINAL REPORT.
+
+All lines pass → log this video as CLIP_01. Go to Step V2.
+An ordinary line fails → regenerate once: same prompt, same starting frame STILL_01, nothing
+changed; still failing, keep the better attempt, log it as CLIP_01, write it under Flags, go to
+Step V2. A CRITICAL line fails → regenerate up to twice more (three attempts total); still failing,
+keep the best attempt, log it, write it under **CRITICAL — review before assembly** in Flags. Go to
+Step V2. Do not stop. Do not ask. Do not edit the prompt. Do not regenerate STILL_01 to fix a clip.
+
+---
+
+## Step V2 [CLIP_02] — animates STILL_02 (F01)
+
+- **ACTION:** `generate_video_with_first_frame` | **Inputs:** START: `STILL_02` | **Duration:**
+  default length
+- **SUCCESS:** Jesus's gaze holds steady, expression completely unchanged throughout? Yes. Lamplight
+  flickers gently? Yes. No blue/gold ink appears at any point? Yes. Nobody speaks?
+
+```
+PROMPT STARTS
+Jesus's gaze holds steady on the viewer/room, unmoving, his expression completely unchanged for the whole clip — no sorrow, distress, or anger appears at any point. He blinks once, slowly, midway through the clip: his eyes close, then open again fully, ending wide open and steady — a complete, real blink, not a held-shut expression. The soft background figures hold their positions, tone-only, a very small settling shift at most. The lamplight flickers gently and warmly throughout, unchanged in color or intensity. Camera: stationary, locked, no pan, no zoom. No blue or gold ink appears anywhere at any point in this clip. No new figure, mark, or text appears at any point.
+Audio: faint room tone, the barest crackle of the oil lamp. Ambient sound only — no dialogue, no character speech of any kind, no narrator voice, no music. Lips stay closed and do not move on every figure in this clip; nobody speaks on camera — all spoken lines are added afterward as separate narration audio.
+PROMPT ENDS
+```
+
+Full checklist:
+
+Must not fail:
+- Motion exists: the lamplight visibly flickers and Jesus completes one real blink (closes, then
+  reopens fully), both visible between the first frame and the last frame.
+- **CRITICAL** — Jesus's expression stays completely unchanged throughout — no sorrow, distress, or
+  anger appears at any point, including during the blink.
+- **CRITICAL** — no blue or gold ink appears anywhere in this clip at any point.
+- Nobody's lips move. No speech, no words, no narrator, no music — ambient only.
+
+Also check:
+- Camera does not pan, zoom, orbit, dolly, or shake.
+- No individually readable "Judas" figure appears at any point.
+- Note the clip's actual length for the FINAL REPORT.
+
+All lines pass → log this video as CLIP_02. Go to Step V3.
+An ordinary line fails → regenerate once, nothing changed; still failing, keep the better attempt,
+log it, write it under Flags, go to Step V3. A CRITICAL line fails → regenerate up to twice more;
+still failing, keep the best attempt, log it, write it under **CRITICAL — review before assembly**
+in Flags. Go to Step V3. Do not stop. Do not ask. Do not edit the prompt. Do not regenerate STILL_02.
+
+---
+
+## Step V3 [CLIP_03] — animates STILL_03 (F02) — THE GOSPEL TURN
+
+- **ACTION:** `generate_video_with_first_frame` | **Inputs:** START: `STILL_03` | **Duration:**
+  default length
+- **SUCCESS:** Jesus's washing motion continues, completing cleanly? Yes. The single blue thread
+  stays fixed in place, never drifting toward Judas or anyone? Yes. Judas holds quietly at the
+  table, at his stated distance? Yes. Nobody speaks?
+
+```
+PROMPT STARTS
+Jesus's hands continue their washing motion at the basin, steady and unhurried, completing a real, visible washing gesture across the clip — his face stays calm and unchanged throughout, his lips closed and still. The seated disciples, including the man matching the Judas reference, hold quietly at the table, tone-only, no one moving toward or away from the basin at any point. The single thin blue ink thread rising from the basin's water stays exactly as drawn, fixed in place, for the entire clip — it does not grow, brighten, drift, or move toward any figure, and especially not toward the man matching the Judas reference. Camera: locked static, no pan, no zoom. No new stain, spot, or darkening appears anywhere on the page at any point, and no blue ink appears anywhere near Judas at any point in the clip.
+Audio: faint room tone, the soft sound of water, quiet breathing. Ambient sound only — no dialogue, no character speech of any kind, no narrator voice, no music. Lips stay closed and do not move on every figure in this clip; nobody speaks on camera — all spoken lines are added afterward as separate narration audio.
+PROMPT ENDS
+```
+
+Full checklist:
+
+Must not fail:
+- Motion exists: Jesus's washing motion is visibly continuing/completing between the first and last
+  frame — a real, readable gesture, not a static hold.
+- **CRITICAL — ZONE CHECK:** the blue thread stays in its exact fixed position at the basin's water,
+  first frame to last — it never grows, brightens, drifts, or moves toward the man matching the
+  Judas reference or anyone else.
+- **CRITICAL** — the man matching the Judas reference stays seated at his stated distance from the
+  basin throughout — he does not move toward it.
+- Nobody's lips move. No speech, no words, no narrator, no music — ambient only.
+
+Also check:
+- Camera does not pan, zoom, orbit, dolly, or shake.
+- Note the clip's actual length for the FINAL REPORT.
+
+All lines pass → log this video as CLIP_03. Go to Step V4.
+An ordinary line fails → regenerate once, nothing changed; still failing, keep the better attempt,
+log it, write it under Flags, go to Step V4. **A CRITICAL line fails (especially the ZONE check) →
+regenerate up to twice more**; still failing, keep the best attempt, log it, write it under
+**CRITICAL — review before assembly** in Flags, flagged prominently. Go to Step V4. Do not stop. Do
+not ask. Do not edit the prompt. Do not regenerate STILL_03.
+
+---
+
+## Step V4 [CLIP_04] — animates STILL_04 (F03)
+
+- **ACTION:** `generate_video_with_first_frame` | **Inputs:** START: `STILL_04` | **Duration:**
+  **LONG — longest available**
+- **SUCCESS:** Jesus's gesture completes and settles, speaking continues to read naturally? Yes. The
+  small blue thread stays fixed at the basin throughout, never nearing Judas? Yes. The seated
+  company, including Judas, holds attentively without alarm? Yes. Nobody speaks?
+
+```
+PROMPT STARTS
+Jesus continues speaking, his open hand's gesture completing a real, visible motion and settling into its final position across roughly the first half of the clip, then holding there for the remainder — his face stays calm throughout, his lips closed and still (this is a narrator-voiced series, no lip-sync ever, even though Jesus is shown mid-speech). The seated company, including the man matching the Judas reference, holds attentively at the table, no one reacting visibly, tone-only small shifts of weight at most, no one moving toward the basin at any point. The small blue thread at the basin's water stays exactly as drawn, fixed in place, for the entire clip — it does not grow, brighten, or drift toward the man matching the Judas reference or any other figure at any point. Camera: locked static, no pan, no zoom. No new stain, spot, or darkening appears anywhere on the page at any point.
+Audio: faint room tone, the quiet murmur and stillness of a company listening, soft cloth rustle. Ambient sound only — no dialogue, no character speech of any kind, no narrator voice, no music. Lips stay closed and do not move on every figure in this clip; nobody speaks on camera — all spoken lines are added afterward as separate narration audio.
+PROMPT ENDS
+```
+
+Full checklist:
+
+Must not fail:
+- Motion exists: Jesus's gesture is visibly settling/complete between the first and last frame.
+- **CRITICAL — ZONE CHECK:** the blue thread stays fixed at the basin throughout — it never grows,
+  brightens, or drifts toward the man matching the Judas reference or anyone else in the wide room.
+- **CRITICAL** — the man matching the Judas reference stays seated at his place, calm, no visible
+  reaction, throughout the clip.
+- Nobody's lips move, including Jesus mid-speech. No speech, no words, no narrator, no music —
+  ambient only.
+
+Also check:
+- Camera does not pan, zoom, orbit, dolly, or shake.
+- This is the episode's longest, most crowded clip — confirm motion is still visible in the back
+  half, not going dead partway through.
+- Note the clip's actual length for the FINAL REPORT — this is one of the three LONG shots.
+
+All lines pass → log this video as CLIP_04. Go to Step V5.
+An ordinary line fails → regenerate once, nothing changed; still failing, keep the better attempt,
+log it, write it under Flags, go to Step V5. **A CRITICAL line fails (especially the ZONE check) →
+regenerate up to twice more**; still failing, keep the best attempt, log it, write it under
+**CRITICAL — review before assembly** in Flags. Go to Step V5. Do not stop. Do not ask. Do not edit
+the prompt. Do not regenerate STILL_04.
+
+---
+
+## Step V5 [CLIP_05] — animates STILL_05 (F04)
+
+- **ACTION:** `generate_video_with_first_frame` | **Inputs:** START: `STILL_05` | **Duration:**
+  **LONG — longest available**
+- **SUCCESS:** The bread finishes passing hand to hand, both faces stay calm? Yes. No blue/gold ink
+  appears at any point? Yes. Basin stays absent from frame throughout? Yes. Nobody speaks?
+
+```
+PROMPT STARTS
+The piece of bread finishes passing from Jesus's hand to the hand of the man matching the Judas reference, a real, visible, completing motion across roughly the first half of the clip, then both hands hold their final position for the remainder. Both men's faces stay calm and unchanged throughout, lips closed and still. The nearby disciples hold, unremarkable, tone-only small shifts at most. No blue or gold ink appears anywhere in this clip at any point. The basin and its water stay entirely absent from the frame throughout — nothing of it ever comes into view. Camera: locked static, no pan, no zoom. No new stain, spot, or darkening appears anywhere on the page at any point.
+Audio: faint room tone, the quiet sound of cloth and a hand receiving bread. Ambient sound only — no dialogue, no character speech of any kind, no narrator voice, no music. Lips stay closed and do not move on every figure in this clip; nobody speaks on camera — all spoken lines are added afterward as separate narration audio.
+PROMPT ENDS
+```
+
+Full checklist:
+
+Must not fail:
+- Motion exists: the bread is visibly further along its hand-to-hand pass, or fully passed, between
+  the first and last frame — a real, completing motion.
+- **CRITICAL** — no blue or gold ink appears anywhere in this clip at any point.
+- **CRITICAL** — the basin and its water never come into frame at any point in the clip.
+- Both faces (matching REF_JESUS and REF_JUDAS) stay calm and unchanged throughout.
+- Nobody's lips move. No speech, no words, no narrator, no music — ambient only.
+
+Also check:
+- Camera does not pan, zoom, orbit, dolly, or shake.
+- Note the clip's actual length for the FINAL REPORT — this is one of the three LONG shots.
+
+All lines pass → log this video as CLIP_05. Go to Step V6.
+An ordinary line fails → regenerate once, nothing changed; still failing, keep the better attempt,
+log it, write it under Flags, go to Step V6. A CRITICAL line fails → regenerate up to twice more;
+still failing, keep the best attempt, log it, write it under **CRITICAL — review before assembly**
+in Flags. Go to Step V6. Do not stop. Do not ask. Do not edit the prompt. Do not regenerate STILL_05.
+
+---
+
+## Step V6 [CLIP_06] — animates STILL_06 (F05) — THE DARK PAGE
+
+- **ACTION:** `generate_video_with_first_frame` | **Inputs:** START: `STILL_06` | **Duration:**
+  default length
+- **SUCCESS:** Judas keeps walking away at a steady pace into the darkness, one continuous motion?
+  Yes. No new light or ink appears at any point? Yes. Nobody speaks?
+
+```
+PROMPT STARTS
+The man matching the Judas reference keeps walking away from the viewer through the doorway at a steady, unhurried pace, one continuous motion for the entire clip, moving further into the dark passage beyond. Camera: stationary, locked, no pan, no zoom. The warm light behind him stays exactly as warm and contained as it already is, spilling no further past the threshold than it already does at any point. The darkness ahead of him stays exactly as dark as it already is, with no new light, star, or glow appearing anywhere at any point. No blue or gold ink appears anywhere at any point in this clip — this page has no motif to protect, but the rule is written for consistency. No new figure, mark, or text appears at any point.
+Audio: faint footsteps on stone, the barest whisper of night air, then near-silence as he moves further from the light. Ambient sound only — no dialogue, no character speech of any kind, no narrator voice, no music. Lips stay closed and do not move on every figure in this clip; nobody speaks on camera — all spoken lines are added afterward as separate narration audio.
+PROMPT ENDS
+```
+
+Full checklist:
+
+Must not fail:
+- Motion exists: Judas is visibly further into the dark passage, first frame to last.
+- **CRITICAL** — no new light source, star, or glow appears anywhere in the darkness at any point.
+  No blue or gold ink appears anywhere at any point.
+- The warm light behind him stays exactly as contained as it already is — it does not spread
+  further past the threshold.
+- Nobody's lips move. No speech, no words, no narrator, no music — ambient only.
+
+Also check:
+- Camera does not pan, zoom, orbit, dolly, or shake.
+- Note the clip's actual length for the FINAL REPORT.
+
+All lines pass → log this video as CLIP_06. Go to Step V7.
+An ordinary line fails → regenerate once, nothing changed; still failing, keep the better attempt,
+log it, write it under Flags, go to Step V7. A CRITICAL line fails → regenerate up to twice more;
+still failing, keep the best attempt, log it, write it under **CRITICAL — review before assembly**
+in Flags. Go to Step V7. Do not stop. Do not ask. Do not edit the prompt. Do not regenerate STILL_06.
+
+---
+
+## Step V7 [CLIP_07] — animates STILL_07 (F06) — HERO
+
+- **ACTION:** `generate_video_with_first_frame` | **Inputs:** START: `STILL_07` | **Duration:**
+  **LONG — longest available**
+- **SUCCESS:** Jesus's hands rest still at the basin, face completely unchanged throughout? Yes. The
+  soft threads and small bloom drift gently within their own small area, never lowering toward
+  Jesus's hands? Yes. Nobody speaks?
+
+```
+PROMPT STARTS
+Jesus's hands rest lightly at the basin's rim, unmoving, for the whole clip — his face stays calm and completely unchanged throughout, no grief, anger, or triumph appearing at any point, his lips closed and still. The soft blue threads and the small amorphous bloom above the water drift very gently within their own small area, a slow, quiet, continuous drift — they never leave that area, never lower toward Jesus's hands, never grow larger or brighter. The room holds quiet and warm around him, tone-only. Camera: locked static, no pan, no zoom. No new stain, spot, or darkening appears anywhere on the page at any point, and no other figure appears at any point.
+Audio: near-silence, the faintest room tone, the barest sound of still water. Ambient sound only — no dialogue, no character speech of any kind, no narrator voice, no music. Lips stay closed and do not move; nobody speaks on camera — all spoken lines are added afterward as separate narration audio.
+PROMPT ENDS
+```
+
+Full checklist:
+
+Must not fail:
+- Motion exists: the soft blue threads/bloom are visibly drifting between the first and last frame —
+  real, continuous, gentle motion, not a static hold.
+- **CRITICAL** — Jesus's expression stays completely unchanged throughout — no grief, anger, or
+  triumph at any point.
+- **CRITICAL** — the threads/bloom stay within their own small area above the water — they never
+  lower toward Jesus's hands, never grow larger, never brighten into something spectacular.
+- **CRITICAL** — no other figure appears at any point in the clip — Jesus is alone throughout.
+- Nobody's lips move. No speech, no words, no narrator, no music — ambient only.
+
+Also check:
+- Camera does not pan, zoom, orbit, dolly, or shake.
+- Note the clip's actual length for the FINAL REPORT — this is one of the three LONG shots, and the
+  episode's rhetorical peak.
+
+All lines pass → log this video as CLIP_07. Go to Step V8.
+An ordinary line fails → regenerate once, nothing changed; still failing, keep the better attempt,
+log it, write it under Flags, go to Step V8. A CRITICAL line fails → regenerate up to twice more;
+still failing, keep the best attempt, log it, write it under **CRITICAL — review before assembly**
+in Flags. Go to Step V8. Do not stop. Do not ask. Do not edit the prompt. Do not regenerate STILL_07.
+
+---
+
+## Step V8 [CLIP_08] — animates STILL_08 (Back Cover)
+
+- **ACTION:** `generate_video_with_first_frame` | **Inputs:** START: `STILL_08` | **Duration:**
+  **LONG — longest available**
+- **SUCCESS:** The free-floating blue-gold band drifts slowly high in the frame, staying visibly
+  alive all the way to the last frame, never lowering toward the basin? Yes. Lamplight and the basin
+  stay unchanged? Yes. Nobody speaks?
+
+```
+PROMPT STARTS
+The loose band of blue-and-gold ink threads drifts slowly within its own region high in the frame, a continuous, gentle, unhurried drift that stays visibly alive and moving all the way through to the very last frame of the clip — it never speeds up, never settles into stillness early, never lowers toward the basin, never leaves the upper part of the frame. This slow drift is the clip's entire visible motion, and it must still be moving in the clip's final seconds, not frozen. The warm lamplight stays exactly as warm and steady as it already is, unchanged for the whole clip. The basin and towel lie exactly as drawn, completely undisturbed, no figure ever entering the frame. Camera: locked static, no pan, no zoom. No new figure, mark, or text appears at any point.
+Audio: near-silence, the faintest warm room tone. Ambient sound only — no dialogue, no character speech of any kind, no narrator voice, no music. Lips stay closed on any figure — none appear in this clip; nobody speaks — all spoken lines are added afterward as separate narration audio.
+PROMPT ENDS
+```
+
+Full checklist:
+
+Must not fail:
+- Motion exists AND lasts: the blue-gold band is visibly drifting between the first and last frame,
+  and is STILL visibly moving in the final portion of the clip — this clip carries this episode's
+  mandatory ≥3.0s landing hold at assembly, so it must not read as dead or frozen toward its end.
+- **CRITICAL** — the band never lowers toward the basin and never leaves the upper part of the
+  frame — it stays free-floating throughout, the one page where the ink is not anchored.
+- No human figure enters the frame at any point.
+- The lamplight and the basin/towel stay exactly as drawn, unchanged.
+- Nobody's lips move (none appear). No speech, no words, no narrator, no music — ambient only.
+
+Also check:
+- Camera does not pan, zoom, orbit, dolly, or shake.
+- Note the clip's actual length for the FINAL REPORT — this is one of the three LONG shots, and it
+  must be long/alive enough to carry the mandatory landing hold at assembly (see `ASSEMBLY_PLAN.md`).
+
+All lines pass → log this video as CLIP_08. Go to Phase 4.
+An ordinary line fails → regenerate once, nothing changed; still failing, keep the better attempt,
+log it, write it under Flags, go to Phase 4. A CRITICAL line fails → regenerate up to twice more;
+still failing, keep the best attempt, log it, write it under **CRITICAL — review before assembly**
+in Flags. Go to Phase 4. Do not stop. Do not ask. Do not edit the prompt. Do not regenerate STILL_08.
+
+---
+---
+
+# PHASE 4: FINAL REPORTING
+
+You are finished when all 20 labels below exist and this FINAL REPORT is posted as your last
+message. After posting it, generate nothing further. I will download the assets from Flow myself.
+
+The **Ingredient/label record** below IS the running log you kept per Section 0 rule 4 — reproduce
+it in full, one line per generation, in the exact order you made them. This is the real mechanism
+for matching Flow's own filenames back to our labels; do not rely on a title/name field alone.
+
+```
+FINAL REPORT — Ye Are Not All Clean — 20 generations
+
+| Label | Flow's own filename or content description | Attempts (1-3) | All checks passed? (yes/no) | Actual length (clips only) | Position in session |
+|---|---|---|---|---|---|
+| REF_JUDAS | | | | — | |
+| REF_BASIN_TOWEL | | | | — | |
+| REF_SUPPER_ROOM | | | | — | |
+| REF_DOORWAY | | | | — | |
+| STILL_01 | | | | — | |
+| STILL_02 | | | | — | |
+| STILL_03 | | | | — | |
+| STILL_04 | | | | — | |
+| STILL_05 | | | | — | |
+| STILL_06 | | | | — | |
+| STILL_07 | | | | — | |
+| STILL_08 | | | | — | |
+| CLIP_01 | | | | | |
+| CLIP_02 | | | | | |
+| CLIP_03 | | | | | |
+| CLIP_04 | | | | | |
+| CLIP_05 | | | | | |
+| CLIP_06 | | | | | |
+| CLIP_07 | | | | | |
+| CLIP_08 | | | | | |
+
+Totals: __ of 12 stills-and-refs, __ of 8 clips. Total images generated this session (should be
+12 — flag if more): __
+Not generated (list, or "none"):
+CRITICAL — review before assembly (every line that failed a CRITICAL check even after 3 attempts,
+by label, in the words of the check — flag anything involving the ZONE check by name):
+Flags — every other failed check line, by label, in the words of the check:
+```
+
+Suggested download filenames, matching this episode's assembly step — rename to these when you save
+the zip locally (Flow itself will not produce these names):
+
+| Label | Suggested filename |
+|---|---|
+| REF_JUDAS | ref_judas.png |
+| REF_BASIN_TOWEL | ref_basin_towel.png |
+| REF_SUPPER_ROOM | ref_supper_room.png |
+| REF_DOORWAY | ref_doorway.png |
+| STILL_01 / CLIP_01 | 01_front_cover.png / 01_front_cover.mp4 |
+| STILL_02 / CLIP_02 | 02_f01_jesus_knew.png / 02_f01_jesus_knew.mp4 |
+| STILL_03 / CLIP_03 | 03_f02_the_gospel_turn.png / 03_f02_the_gospel_turn.mp4 |
+| STILL_04 / CLIP_04 | 04_f03_not_all.png / 04_f03_not_all.mp4 |
+| STILL_05 / CLIP_05 | 05_f04_do_quickly.png / 05_f04_do_quickly.mp4 |
+| STILL_06 / CLIP_06 | 06_f05_and_it_was_night.png / 06_f05_and_it_was_night.mp4 |
+| STILL_07 / CLIP_07 | 07_f06_hero.png / 07_f06_hero.mp4 |
+| STILL_08 / CLIP_08 | 08_back_cover.png / 08_back_cover.mp4 |
+
+---
+
+## After the zip comes back (not part of the Flow run — for whoever assembles this next)
+
+Match the FINAL REPORT's label log against the actual delivered files (never trust Flow's own
+filenames alone — the mismatch found on the pilot's first real run was real and expected to recur).
+
+**Four independent human/Claude QC passes, all required, none of them satisfied by the Flow agent's
+own in-session checklist alone:**
+
+1. **ZONE check, by eye, on every still and clip where Judas appears.** This episode's single most
+   important visual QC pass — do it a second time independently even though the Flow agent's own
+   checklist already covers it once. An LLM chat agent cannot reliably self-certify strict spatial
+   claims ("at least an arm's length," "touching nothing") on its own generated image — treat every
+   in-session PASS as a claim to verify, not a fact.
+2. **Baked-text zoom check, on every still.** Zoom to 2x or more on the actual pixels of every
+   handwritten string (titles, frame numbers, panel captions, corner notes) — a moderate-zoom or
+   thumbnail look is not enough to catch a dash rendering as a pasted typeset glyph or a misspelled
+   word (memory: `feedback_baked_text_needs_full_zoom_check`). Every still bakes 2-5 short strings;
+   check all of them, on all 8 stills.
+3. **Motion check by measured frame diff, on every clip — not eyeballing "does it look stable."** A
+   contact sheet or a first/last-frame glance cannot tell "genuinely static" from "drifted and no one
+   noticed" (memory: `feedback_animation_motion_check_by_pixel_diff`). For clips where the prompt
+   says an element must stay fixed (the blue thread in CLIP_03/CLIP_04, the panel/title lettering in
+   every clip), measure pixel difference between the true first and true last frame, not a sampled
+   middle frame — invented motion can complete entirely in a clip's final ~10%.
+4. **Landing hold — verify manually, do not trust the automated gate alone for this episode.**
+   `check_landing_hold.py` exists but (a) its no-argument mode only scans `batches/`, `longform/`,
+   and `poc_living_sketchbook/` — never this episode's own `poc_living_water_ink_style_test/` folder
+   — and (b) run against a single file path, it checks only audio/video duration PARITY (that the two
+   streams match length), not whether the hold itself is actually ≥3.0s. Run it against the final
+   cut's file path for the parity check, but separately confirm by hand: final video duration must be
+   ≥77.3s (74.32s of narration + the mandatory ≥3.0s hold), and the video must stay visibly alive
+   through that hold (the back cover's blue-gold drift should still be moving at the very last frame,
+   not frozen).
+
+Then build the real assembly against `ASSEMBLY_PLAN.md`'s real timing (front cover 0.00-3.74s, F01
+5.14-13.36s, F02 14.58-19.52s, F03 20.82-34.38s, F04 35.84-46.46s, F05 46.46-50.34s — note the hard
+cut, no natural pause — F06 51.92-63.34s, back cover 64.78-74.32s plus the ≥3.0s landing hold).

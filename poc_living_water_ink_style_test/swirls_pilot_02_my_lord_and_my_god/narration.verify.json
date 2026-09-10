@@ -1,0 +1,71 @@
+{
+  "folder": "swirls_pilot_02_my_lord_and_my_god",
+  "stage": "verify",
+  "generated_at": "2026-09-08T11:02:38Z",
+  "deterministic": {
+    "char_count_after_comment_strip": 794,
+    "char_cap": 2000,
+    "within_cap": true,
+    "non_empty": true
+  },
+  "voice_roster": {
+    "voices_json_present": true,
+    "speakers_in_roster": [
+      "jesus",
+      "narrator",
+      "thomas"
+    ]
+  },
+  "anthropic_review": {
+    "coherence": "good",
+    "beat_count": 7,
+    "tonal_register": [
+      "reflective",
+      "devotional",
+      "intimate",
+      "reverent"
+    ],
+    "multi_voice_candidates": [
+      {
+        "line_excerpt": "We have seen the Lord.",
+        "suggested_speaker": "unspecified",
+        "rationale": "Collective quote from \"ten men\" as a group, not a single named roster speaker."
+      },
+      {
+        "line_excerpt": "Except I shall see in his hands the print of the nails, and put my finger",
+        "suggested_speaker": "thomas",
+        "rationale": "Directly attributed to Thomas by the preceding narrator clause."
+      },
+      {
+        "line_excerpt": "Peace be unto you.",
+        "suggested_speaker": "jesus",
+        "rationale": "Directly attributed to Jesus by the preceding narrator clause."
+      },
+      {
+        "line_excerpt": "Reach hither thy finger, and behold my hands; and reach hither thy hand",
+        "suggested_speaker": "jesus",
+        "rationale": "Jesus turns and speaks directly to Thomas."
+      },
+      {
+        "line_excerpt": "My Lord and my God.",
+        "suggested_speaker": "thomas",
+        "rationale": "Thomas's own confession, explicitly attributed."
+      },
+      {
+        "line_excerpt": "Because thou hast seen me, thou hast believed: blessed are they that have",
+        "suggested_speaker": "jesus",
+        "rationale": "Jesus's closing answer, explicitly attributed."
+      }
+    ],
+    "spoken_length_estimate_seconds": 57,
+    "concerns": [
+      "The opening quote (\"We have seen the Lord\") is attributed to a collective group (\"ten men\"), not a single roster speaker — auto-tagger has no clean individual voice to assign it without inventing a 'disciples' role.",
+      "\"answered him — answered you too\" briefly breaks third-person narrative voice with a direct second-person address; confirm this is an intentional authorial aside, not an attribution ambiguity for the tagger.",
+      "Several KJV clauses in the Jesus/Thomas quotes are joined with semicolons and colons (e.g. the 'Reach hither...' line) — worth a manual listen after synth to confirm the pacing doesn't rush across those internal pauses."
+    ],
+    "model": "claude-opus-4-7",
+    "request_id": null,
+    "input_tokens": null,
+    "output_tokens": null
+  }
+}

@@ -9,8 +9,8 @@ narration review fought to avoid (treating cleanness as a mark you can see rathe
 heart Jesus reads). No figure wavers or doubts on-page either (Judas's betrayal is
 already decided before the episode opens — "the devil had already put into the heart of
 Judas" — so a Fray, which reads as doubt-in-progress, would misdate the moment). NT
-episode, Jesus present and active on every page except the two Judas-alone pages (F04,
-F05) — Stage 3 is reached only on the back cover, the direct address to the viewer ·
+episode, Jesus present and active on every page except F05 (Judas alone at the door) —
+Stage 3 is reached only on the back cover, the direct address to the viewer ·
 `panel_style` **woodcut_hybrid** throughout · Voices: **narrator only** (confirmed at the
 audio-tag stage — no speaker roster beyond narrator; lips stay closed on every figure on
 every clip).
@@ -283,9 +283,10 @@ distress visible on his face."* This last clause is the episode's real fragility
 the natural render instinct on "Jesus knows Judas will betray him" is to draw grief or
 tension in Jesus's face, which would visually pre-empt F06's own claim that his motive was
 love, not resignation. **Where Jesus appears:** F02 (kneeling at the basin, medium),
-F03 (a little further back, still near the basin, speaking to the room, medium), F06
-(optional — see §8 open question on whether F06 shows him at all or only the basin/towel).
-NOT on F04, F05, front cover, or back cover.
+F03 (a little further back, still near the basin, speaking to the room, medium), F04
+(handing Judas the sop, John 13:26 — this is F04's own scene content, see §6; an earlier
+draft of this table incorrectly listed him as absent here, corrected 2026-09-09), F06
+(shown — see §8 Q2, resolved). NOT on F05, front cover, or back cover.
 
 **JUDAS ISCARIOT** — new to the series, and the episode's central design problem (§2, hard
 problem #2). Build text (use verbatim):
