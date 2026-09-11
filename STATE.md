@@ -1,5 +1,28 @@
 # STATE.md — progress tracker
 
+**2026-09-10/11 — episode 12 "Ye Are Not All Clean": 7 rounds chasing a "narration cuts off/cropped"
+complaint, 3 real bugs found and fixed, but the core symptom is STILL UNRESOLVED at close of day.**
+Real fixes made (all verified, not guesses): (1) the raw TTS render's last sample never returned to
+true zero — a real digital click at the tail, fixed with a 50ms zero-crossing fade; (2) score+ambient
+were masking the narration, worst right where the voice naturally quietens at the end — user confirmed
+a music-muted test sounded right, fixed by pulling score/ambient down further (-8/-13dB -> -14/-19dB);
+(3) every build had the MP4 `moov` atom at the end of the file instead of the front (inherited from
+`-c:v copy` remuxing) — fixed with `-movflags +faststart` and a full re-encode (not just copy) to rule
+out anything in the underlying bitstream. Ruled out with hard evidence: browser caching (tested a
+never-before-opened filename, same complaint), the narration audio being wrong/missing in the real
+file (checksum + matching windowed-RMS proof), and the reverse-boomerang tails doing something visual
+(full frame-by-frame pixel-diff scan across all 2,340 frames — zero anomalies beyond the 7 expected
+clip cuts). **Not yet tested: whether this is specific to the user's browser's own video decoder** —
+last ask of the session was for the user to try VLC/Windows' own player instead of a browser tab,
+answer not received before close of day. Spent ~$1.05 across 3 fresh ElevenLabs re-renders tonight
+(narration itself paced differently each time: 74.55 -> 74.00 -> 73.36 -> 71.68s), all user-approved
+before spending. Current file unchanged in content vs last session's, just fixed:
+`poc_living_water_ink_style_test/swirls_episode_12_ye_are_not_all_clean/_assembly_v1/
+viral_cut_final.mp4`. Full round-by-round detail in NOTES.md and RESUME.md's top block — read those
+before touching this again, the superseded-file chain documents exactly what's already been tried.
+
+---
+
 **2026-09-10 — episode 12 "Ye Are Not All Clean" (John 13:1-30, Judas) carried all the way through
 narration, voice, design, Flow generation, and assembly in one session — not yet user-approved,
 paused for the night mid-polish.** Narration LOCKED (15 independent-review rounds across a Sonnet

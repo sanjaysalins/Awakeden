@@ -362,15 +362,178 @@ extension (split narration at 74.32s, apply reverb/echo only to the split-off ta
 re-concatenate) rather than a filter applied to the whole track. Not attempted tonight — flagging as
 the next step if needed, not silently declaring this fully solved.
 
+## Narration ending, round 3 — re-render, not another fade — 2026-09-10
+
+User, after the 234ms-fade build: "the clip is cutting before the narration ends." Confirmed via
+finger-pointing question that the cut reads at the very end (after "worst."), not mid-sentence
+(a separate, real ~300ms dead-silent gap was also found inside "your worst" during investigation,
+73.5-73.8s — most likely a dramatic pre-emphasis pause before the landing word, left alone since
+the user confirmed the complaint was about the ending, not this spot).
+
+234ms was always the real ceiling of the raw TTS render's own trailing audio — the fix at that
+ceiling could only ever be cosmetic. Moved to the next tier flagged in round 2: re-rendered ONLY
+the final paragraph ("He knows your heart... bring Him your worst.") as its own fresh ElevenLabs
+call (same voice `LSi9zNCeliLuhIGGS0By`, model `eleven_v3`, stability 0.65 — matched from
+`narration.meta.json`), ~$0.07 spent (~130 chars), user approved before spending. Verified the new
+render's own tail in isolation first: real gradual decay -20dB -> -33dB over its last ~200ms,
+unlike the old file's flat stop. Spliced onto the original narration at the natural inter-paragraph
+silence (63.34-64.78s gap, cut at 64.0s) with an 80ms `acrossfade` — new `narration.mp3` is 74.00s
+(was 74.55s; the fresh render paced slightly differently, expected).
+
+**Real bug hit and fixed while rebuilding the final mix:** the first attempt at remixing
+video-ambient + score + new narration via a plain 3-way `amix duration=longest` produced audio
+93.66s long against a 78.03s video — bisected to confirm the mismatch specifically appeared
+whenever the video's own AAC ambient audio track was one of the mixed inputs (score+narration alone
+mixed correctly; ambient+anything did not), most likely an AAC-priming/timebase quirk `amix`
+mishandled. Fixed by explicitly `aresample`+`apad`+`atrim`-ing every one of the three audio inputs
+to the exact video length (78.033333s) before mixing, instead of trusting `amix`'s own
+`duration=longest` padding. New mix: video/audio parity exact (78.033333s / 78.032993s), mean
+-23.4dB / peak -7.5 to -8.2dB (matches the prior mix's -22.7dB/-6.7dB closely, no clipping), tail now
+decays smoothly -18dB -> -49dB from 74.0s to 75.7s instead of stopping flat, score+ambient carry the
+landing hold through to 78.03s as before.
+
+Old files preserved: `narration.mp3.SUPERSEDED_234ms_fade_still_abrupt`,
+`_assembly_v1/viral_cut_final.mp4.SUPERSEDED_234ms_fade_round3`. **Not personally verified by
+ear** — same as every prior round, this needs the user's own re-listen.
+
+## Narration ending, round 4 — full fresh re-render, not a splice — 2026-09-10
+
+User listened to the standalone `narration.mp3` from round 3 (the tail-only splice) and still heard
+it as cut off. Escalated past patching: re-rendered the ENTIRE narration text in one clean ElevenLabs
+pass (all 1,017 chars, exact same text pulled programmatically from `narration-tagged.md` — same
+voice/model/stability as original), ~$0.50, user approved before spending. New render is 73.36s (was
+74.55s original / 74.00s round-3 patch). Verified the new render's own tail in isolation before
+touching anything else: genuine smooth decay -17dB -> -44dB over its last ~350ms, no splice seam,
+no flat stop.
+
+Rebuilt the final mix the same safe way round 3 established (explicit `aresample`+`apad`+`atrim` on
+every audio input to the exact video length before `amix`, NOT plain `duration=longest` — that
+bug is now a known landmine for this build, not just a one-off). New mix: video/audio parity exact
+(78.033333s / 78.032993s), mean -21.9dB / peak -5.6dB (no clipping, slightly hotter peak than before
+but still safe — natural render variance).
+
+Old files preserved: `narration.mp3.SUPERSEDED_splice_patch_round2`,
+`_assembly_v1/viral_cut_final.mp4.SUPERSEDED_splice_patch_round2`. Full superseded chain now 5 deep,
+oldest to newest: freezeframe_and_spokenword_artifact -> kenburns_and_narration_hardstop ->
+boomerang_v1_short_fade -> 234ms_fade_round3 -> splice_patch_round2 -> current. **Not personally
+verified by ear** — needs the user's own re-listen.
+
+## Narration ending, round 5 — the REAL root cause: a literal click, not a decay problem — 2026-09-10
+
+User, after the full fresh re-render: "already know in the end can be heard and then cuts off" —
+described it as audible-then-abrupt-stop, not a taper problem. That phrasing prompted checking
+something none of rounds 1-4 had checked: the LITERAL LAST PCM SAMPLE of the file, not the RMS
+envelope.
+
+**Found it.** Dumped raw PCM (`ffmpeg -f s16le`) for the last bytes of `narration.mp3`: the file's
+true final sample was -554 (roughly -35dBFS), nowhere near zero. Every round so far had measured
+RMS in ~50ms windows, which shows the *average* level trending down nicely — but a 50ms window
+completely hides a single-sample discontinuity. Truncating a waveform anywhere except a zero
+crossing produces a real, audible digital click/pop, independent of how quiet the surrounding
+material is. That is exactly "you can hear it, then it cuts off": the voice was already fading
+(all four prior rounds got that part genuinely right), but the file physically stopped mid-wave
+instead of reaching silence, so every version clicked at the cut.
+
+Root cause is upstream of any of the prior fixes — it's simply where ElevenLabs happens to stop
+generating; no amount of re-rendering (round 4) or re-splicing (round 3) was ever going to land on
+a zero crossing by chance.
+
+**Fix:** a genuine 50ms linear `afade=t=out` at the true tail (73.31s -> 73.36s, entirely inside the
+already-quiet decay region — confirmed no real word content there), forcing the last sample to
+exactly 0 (verified: last several samples now `0xfffe`/`0x0000`, true silence). This is a real
+audio-engineering fix (close the waveform to zero), not another taste-based fade tweak.
+
+Rebuilt the mix the same verified-safe way (per-input `aresample`+`apad`+`atrim` before `amix`).
+Video/audio parity exact (78.033333s / 78.032993s). Old files preserved:
+`narration.mp3.SUPERSEDED_full_rerender_had_click`,
+`_assembly_v1/viral_cut_final.mp4.SUPERSEDED_full_rerender_had_click`. **Not personally verified by
+ear** — needs the user's own re-listen, as always.
+
+**Generalizable lesson for this project:** any "abrupt stop" / "click" complaint on a TTS-sourced
+tail needs a raw-PCM last-sample check, not just an RMS-envelope check — the two catch different
+classes of defect (perceived loudness taper vs. literal waveform discontinuity) and neither
+substitutes for the other.
+
+## Narration ending, round 6 — real root cause was mix balance, not the narration file — 2026-09-10
+
+User, after the click fix: "somehow the above narration is not in the clip[,] something is broken."
+Investigated properly instead of re-asserting the checksum proof already given (rounds 1-5 had all
+been chasing the NARRATION FILE itself, which was a dead end by this point):
+
+- Ruled out clip-baked contamination: scanned all 19 real silence gaps in the narration across
+  `video_bm_with_ambient.mp4`'s own ambient track for stray vocal-band energy (the exact failure
+  class already caught once this session at 0:14) — all measured near-digital-silence, nothing
+  hiding in the footage.
+- Built a proper apples-to-apples comparison: the SAME absolute time window (65.36-73.36s, where
+  narration actually plays) extracted from both the standalone narration and the real mixed video.
+  First attempt used `-ss`/`-t` as bare CLI flags with a separate `-af astats` call — this produced a
+  suspicious flat, unmoving reading (a measurement bug: astats with `reset=0` was accumulating over
+  the whole decoded stream, not the requested window). Caught it, redid it with the project's own
+  proven `atrim`+`asetnsamples`+`astats reset=1` pattern — real word-level variation showed up,
+  matching between the two files almost exactly (e.g. -48.17dB vs -48.63dB at the same instant).
+  **The narration audio genuinely was correct and present in the real file the whole time.**
+- User confirmed a narration-only (score+ambient fully muted) cut of that same window sounded
+  "better" — the real defect was the score/ambient bed masking the voice, worst right at the ending
+  where the narration is naturally quietest (its own decay tail) and the music doesn't get quieter
+  at all in the same place. A mix-balance problem, not a missing- or wrong-audio problem.
+
+**Fix attempt 1 (sidechain duck):** tried `sidechaincompress` keyed off the narration to duck
+score+ambient dynamically. New ffmpeg bug: output audio came out 62.24s against a 78.03s video —
+dropped this approach rather than debug a third filter-graph landmine in one night.
+
+**Fix shipped:** reused the proven flat-gain 3-way `amix` (same `aresample`+`apad`+`atrim` safety
+pattern from rounds 3-5), just with score/ambient pulled down harder: ambient -8dB -> **-14dB**,
+score -13dB -> **-19dB**, narration untouched. Video/audio parity exact (78.033333s / 78.032993s).
+Old file preserved: `_assembly_v1/viral_cut_final.mp4.SUPERSEDED_music_masked_narration`.
+
+**Generalizable lesson:** "the narration is missing/wrong/cropped" can be a mix-balance complaint in
+disguise, not a content complaint — always test with competing tracks muted before assuming the
+narration file itself is broken. Also: a quick ad-hoc `-ss`/`-t`+`astats` check is NOT equivalent to
+this project's own established `atrim`+`asetnsamples`+`reset=1` windowed-measurement pattern; use the
+proven one or risk a false read.
+
+## Narration ending, round 7 — ruled out browser cache, ruled out moov/container, still unresolved — 2026-09-10/11
+
+User still reported "cut" after the mix-rebalance fix. Ruled out two more entire classes of cause
+before touching audio again:
+
+- **Not a browser cache issue**: gave a never-before-opened filename (`FRESH_CHECK_*.mp4`) — same
+  complaint. Definitively rules out stale file:// caching, which had been the leading theory.
+- **Not a moov-atom/faststart issue**: found and fixed a REAL bug (every build tonight had `moov`
+  at the very end of the file instead of the front, which can cause some players/browsers to
+  mishandle duration/seeking) — fixed with `-movflags +faststart`. User: "same issue."
+- **Video stream decode-clean, full re-encode done**: `-c:v copy` had been passing the same video
+  bitstream through unchanged across every rebuild tonight (inherited from before tonight's
+  session). Did a genuine full re-encode (`libx264 high profile, yuv420p, cfr 30fps, crf 18`, not
+  copy) in case something in the original bitstream itself was the issue. No decode errors found
+  either before or after. User asked for exact bitrate/size (2.27 Mbps, 21.1MB, nothing abnormal)
+  and pushed for "reassemble everything from scratch" / "something foundationally wrong."
+
+**Not yet resolved as of this write-up.** At user's request, generated ANOTHER brand new full
+narration render (5th total ElevenLabs render this session, ~$0.50, 71.68s this time — every fresh
+render paces slightly differently, 74.55 -> 74.00(splice) -> 73.36 -> 71.68s across attempts) with
+the same zero-crossing tail-fade safety fix, and rebuilt the video the same fully-verified way
+(rebalanced mix -14dB/-19dB, full re-encode not copy, faststart). Old file preserved:
+`_assembly_v1/viral_cut_final.mp4.SUPERSEDED_prev_narration`, narration backup:
+`narration.mp3.SUPERSEDED_music_masked_round`.
+
+**Open question for next session, if this ALSO doesn't resolve it**: every technical avenue
+addressable from ffmpeg/ffprobe/raw-PCM/container-structure analysis has now been checked and
+either fixed or ruled out (audio content correctness, click at tail, mix masking, moov position,
+video decode integrity, browser cache). If the user reports the same symptom on this 7th rebuild,
+the remaining live hypotheses are: (a) something specific to the user's own browser's H.264/AAC
+decoder that ffmpeg-side analysis cannot detect (try VLC or Windows' own player instead of a
+browser, to isolate browser-vs-file), or (b) the two of us may be describing/checking different
+things under the word "cut" and need to get on a call/screen-share rather than iterate over links,
+since 7 rounds of independently-verified fixes have not changed the reported symptom once.
+
 ## Next steps
 
-1. **User re-watches/listens to the new `_assembly_v1/viral_cut_final.mp4`** — confirm the narration
-   ending now reads as a natural taper (not a cut), and that the reverse-boomerang motion reads well.
-   This is the last real gate before this episode joins the other finished-but-unposted ones.
-2. If the narration ending still reads as cut short, the fade has hit its ceiling (only 234ms of real
-   trailing audio exists) — next move is a properly-scoped tail-extension (split + reverb the tail
-   chunk only, re-concatenate) or a `per_turn_synth.py` re-render of the last turn, not another fade
-   tweak.
+1. **User re-watches `_assembly_v1/viral_cut_final.mp4`, ideally in a NON-browser player (VLC /
+   Windows' own player) this time** — to isolate whether this is a browser-specific decode issue.
+   Report the exact seek-bar duration shown.
+2. If still "cut" even outside a browser, this is a genuinely deep, unresolved issue — worth a
+   screen-share rather than further blind link-iteration.
 3. Decide whether to revisit the two accepted-as-is Flow issues (F03's leaked text/possible zone
    proximity, F02 clip's stray ink thread) before calling this episode fully finished, or ship
    as-is (episode 12 is still under the standing 30-episode posting hold either way).

@@ -1,5 +1,79 @@
 # ══════════════════════════════════════════════════════════════════════════
-# ▶▶▶ START HERE TOMORROW (updated 2026-09-10, end of night -- user: "lets close
+# ▶▶▶ START HERE TOMORROW (updated 2026-09-11, end of night -- user: "lets close
+# for the day save everything and lets resume tommorrow. commit all and push").
+# FIRST THING: episode 12's `viral_cut_final.mp4` has an UNRESOLVED, genuinely
+# confusing playback complaint -- read this whole block before touching it again.
+#
+# **Episode 12, "Ye Are Not All Clean" -- narration is fine, the video's file
+# structure is fine, but the user keeps reporting the SAME "it's cropped/cuts
+# off" symptom in their browser no matter what gets fixed.** Full blow-by-blow
+# (7 rounds, all logged): `poc_living_water_ink_style_test/
+# swirls_episode_12_ye_are_not_all_clean/NOTES.md` (read from "Narration
+# ending, round 1" onward -- long, but the pattern matters).
+#
+# **Real bugs found and fixed tonight (verified, not guesses):**
+# 1. The raw TTS render's last sample never returned to true zero -> a real
+#    digital click at the end of every narration take. Fixed with a 50ms
+#    zero-crossing fade at the tail (NOT the same as a taste-fade -- this
+#    closes the waveform to literal silence).
+# 2. Score+ambient were masking the narration, worst exactly where the voice
+#    naturally quietens at the end. User confirmed a narration-only (music
+#    muted) test sounded right. Fixed by pulling score/ambient down harder
+#    (-8dB->-14dB ambient, -13dB->-19dB score).
+# 3. Every build tonight had the MP4 `moov` atom at the END of the file
+#    instead of the front (`-c:v copy` remuxing had been carrying this
+#    forward from earlier in the week) -- can cause browsers to mishandle
+#    seeking/duration on local file:// playback. Fixed with `-movflags
+#    +faststart`, then did a full genuine re-encode (not just copy) to rule
+#    out anything inherited in the underlying bitstream from many generations
+#    of stream-copy remuxing.
+#
+# **Ruled out, with evidence, not just asserted:**
+# - Browser caching a stale file at the same URL -- gave a never-before-opened
+#   filename, user reported the SAME issue, so this is NOT a cache artifact.
+# - The narration audio itself being wrong/different in the built video --
+#   proven byte-identical via checksum AND via matching windowed RMS envelopes
+#   between the standalone file and the real mixed video at the same absolute
+#   timestamps.
+# - The reverse-boomerang tails (user's own suspicion) doing something
+#   visually broken -- ran a full frame-by-frame pixel-difference scan across
+#   all 2,340 frames of the final video; the only large jumps are the 7
+#   expected clip-to-clip cuts, nothing anomalous inside any of the 5
+#   boomerang pads (F01/F03/F04/F06/back cover), including the one at the very
+#   end that overlaps the narration's tail. Also eyeballed several actual
+#   frames from that region directly -- calm, consistent, no glitch visible.
+# - Video decode integrity -- full `ffmpeg -f null -` decode pass, zero
+#   errors, clean monotonic timestamps straight through to 78.0s.
+#
+# **NOT YET RESOLVED. The one thing not yet tested: is this specific to the
+# user's browser's own video decoder?** Last message of the session was asking
+# the user to try VLC or Windows' own player instead of the browser, to
+# isolate browser-vs-file. **That answer never came in before close-of-day --
+# get it FIRST thing tomorrow, before any more rebuilding.** If VLC/Windows
+# player also shows the same cropped symptom, this is a genuinely deeper
+# mystery than anything checkable via ffmpeg/ffprobe and may need a live
+# screen-share rather than more link-iteration. If VLC/Windows player plays it
+# correctly, the file has been fine for a while now and this is purely a
+# browser-decoder quirk with this specific file -- worth understanding WHY
+# (something about the H.264 profile/level, the concat history, etc.) before
+# calling it done, since future episodes will hit the same browser if so.
+#
+# Current file: `poc_living_water_ink_style_test/swirls_episode_12_ye_are_not_all_clean/
+# _assembly_v1/viral_cut_final.mp4` -- 78.03s, narration is the 5th fresh
+# ElevenLabs render of the session (71.68s, ~$1.05 spent across 3 renders
+# tonight, all user-approved before spending), full re-encode (not stream
+# copy), faststart, rebalanced mix. Long superseded chain preserved in
+# `_assembly_v1/` and next to `narration.mp3`, oldest to newest -- do not
+# delete any of it without the user's say-so, it's the only record of what
+# was already tried.
+#
+# ──────────────────────────────────────────────────────────────────────────
+# Everything below this line is prior history (2026-09-10 and earlier),
+# preserved as-is.
+# ══════════════════════════════════════════════════════════════════════════
+
+# ══════════════════════════════════════════════════════════════════════════
+# ▶▶▶ (2026-09-10, end of night -- user: "lets close
 # for the night and resume tommorrow, save and commit evetyhing and push it,
 # update the handover and resume docs"). FIRST THING: episode 12 is built
 # end-to-end but NOT YET USER-APPROVED -- get the user's watch/listen on the
