@@ -1,0 +1,1 @@
+Living-sketchbook short (9:16). Final pinned from poc_living_sketchbook/_rewrite_v3/video/ via ../FINAL_VIDEO.txt. Words LOCKED 2026-11-01 (_rewrite_v3/LOCKED_WORDS_2026-11-01.md); re-timed over existing spreads.

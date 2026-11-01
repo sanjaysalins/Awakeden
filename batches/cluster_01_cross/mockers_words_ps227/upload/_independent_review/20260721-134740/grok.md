@@ -74,7 +74,7 @@ Psalm 22:27 is **paraphrased** (not quoted as KJV) on Short/FB/IG — OK if not 
 
 | Platform | Title / open | Call |
 |---|---|---|
-| **YT Short (chosen)** | *“The Mockers at the Cross Were Quoting a 1,000-Year-Old Psalm”* | Honest curiosity; not clickbait. Slight stretch: “quoting” can sound intentional; video frame is *unwitting* recital — acceptable if body keeps “unwilling witnesses.” |
+| **YT Short (chosen)** | *“Taunts at the Cross Were Written 1,000 Years Before”* | Honest curiosity; not clickbait. Slight stretch: “quoting” can sound intentional; video frame is *unwitting* recital — acceptable if body keeps “unwilling witnesses.” |
 | **YT Long** | *“The Script the Crowd Never Knew It Was Reading”* | True, a bit limp for search (red-team’s note stands; not blocking). |
 | **Facebook** | *“They Thought They Were Inventing the Cruelty. They Were Reciting Prophecy.”* | Strong and honest. |
 | **Option 3 (unused)** | *“…Match Psalm 22 **Line for Line**”* | Overclaim relative to real wording; do not promote if chosen later. |

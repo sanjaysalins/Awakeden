@@ -32,7 +32,7 @@ VERDICT: PASS
 - Doctrine: "he bound her wound from inside his own" is vivid but faithful to the
   scene; no Marian overclaim (no mediation language, no veneration) - the CTA lands
   on the SON beholding the viewer, which is the video's landing. Grace-anchored.
-- Titles: "While Dying, He Arranged His Mother's Care" - true, understated, strong.
+- Titles: "A Warning at Jesus' Birth Came True at the Cross" - true, understated, strong.
   "The Word Nobody Preaches On" (candidate 3) borders on rhetorical inflation but is
   NOT the chosen title. Chosen set is clean.
 - Nothing blocking.
@@ -40,7 +40,7 @@ VERDICT: PASS
 
 ## Title options (chosen first)
 
-1. **While Dying, He Arranged His Mother's Care** ⟵ CHOSEN  
+1. **A Warning at Jesus' Birth Came True at the Cross** ⟵ CHOSEN  
    _angle: the third Word: intercession in agony_
 2. **A Sword Was Promised at His Birth. It Landed at the Cross.**  
    _angle: Simeon's prophecy to Mary fulfilled_
@@ -53,7 +53,7 @@ VERDICT: PASS
 
 **TITLE** (copy):
 ```
-While Dying, He Arranged His Mother's Care
+A Warning at Jesus' Birth Came True at the Cross
 ```
 _42 characters_
 

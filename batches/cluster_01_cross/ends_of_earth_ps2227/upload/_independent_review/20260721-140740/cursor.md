@@ -9,7 +9,7 @@ The header claims **“Gates: ALL PASS ✅”** and lists UK-G1–G7 as passing,
 
 ### HOOKY BUT HONEST / overclaim
 
-**YouTube Short — TITLE:** *“The Psalm That Starts With One Dying Man and Ends With Every Nation”*  
+**YouTube Short — TITLE:** *“Psalm 22 Starts With One Dying Man. Where Does It End?”*  
 Psalm 22 does **not** end at 22:27; vv. 28–31 follow (your sibling *he_hath_done_this* correctly anchors v31 as the psalm’s last line). “Ends with every nation” compresses the arc for hook value and matches the **spoken** script, so it is not a bait-and-switch against the video — but it **overstates psalm structure** for anyone who knows the text. Safer honest hook: *“…and closes with the nations turning”* or name v27 explicitly.
 
 **YouTube Short / Long / Facebook / TikTok — DESCRIPTION (shared opener):** *“Psalm 22 opens with one forsaken man dying alone, and ends with every nation on earth”*  

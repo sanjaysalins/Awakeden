@@ -1,7 +1,7 @@
 # youtube_short — YouTube (Short)
 
 ## TITLE
-The Psalm That Starts With One Dying Man and Ends With Every Nation
+Psalm 22 Starts With One Dying Man. Where Does It End?
 
 ## DESCRIPTION
 Psalm 22 opens with one forsaken man dying alone, and ends with every nation on earth (Psalm 22:27).

@@ -1,0 +1,182 @@
+# Upload Kit — The First Gospel in the Curse
+
+**Status:** RED-TEAMED  ·  **Gates:** FAILURES ❌
+**Video:** `F:\slk\PycharmProjects\JesusInTheBible\poc_living_sketchbook\first_gospel_in_the_curse\FIRSTGOSPELINTHECURSE_living_sketchbook_cc_scored_sfx.mp4`
+**Format:** short  ·  **Series:** Types & Shadows  ·  **Anchor:** Genesis 3:14-15
+
+> Copy each block straight into the platform's upload form. Title, description,
+> tags and hashtags are pre-checked, red-teamed and panel-reviewed.
+
+## ✔ Verification
+
+✅ **UK-G1 length** — all fields within hard limits
+✅ **UK-G2 KJV-strict** — anchor verse quoted verbatim
+✅ **UK-G3 doctrine** — no clickbait/overclaim tokens
+✅ **UK-G4 brand** — footer + CTA-to-Jesus present
+✅ **UK-G5 platform** — hashtag counts + link rules OK
+✅ **UK-G6 no-repeat** — no title collisions with siblings
+❌ **UK-G7 lint** — youtube_short: anchor ref 'genesis' not in the first 157 chars (front-load the verse/hook before the 'more' fold); youtube_long: anchor ref 'genesis' not in the first 157 chars (front-load the verse/hook before the 'more' fold)
+
+### Red-team (in-engine hostile auditor)
+
+```
+VERDICT: REVISE
+- title_candidates[2] 'Before God Spoke to Adam, He Spoke to the Snake' is false: Genesis 3:9-13 has God questioning Adam and Eve BEFORE the serpent's curse. Drop it. The chosen title is accurate only in the narrow sense that the curse on the serpent (with the promise) precedes the sentences on Eve and Adam; keep the description's wording 'before He speaks their sentence'.
+- youtube_short: 'waiting to hear what God will do' is narration framing, not text. Acceptable.
+- Verse quote verbatim KJV: PASS.
+```
+
+## Title options (chosen first)
+
+1. **God Promised Rescue Before He Gave the Sentence** ⟵ CHOSEN  
+   _angle: honest hook_
+2. **The First Gospel Was Hidden Inside a Curse**  
+   _angle: alt_
+3. **Before God Spoke to Adam, He Spoke to the Snake**  
+   _angle: alt_
+4. **Genesis 3: Grace Came First**  
+   _angle: alt_
+
+## YouTube (Short)
+
+**TITLE** (copy):
+```
+God Promised Rescue Before He Gave the Sentence
+```
+_47 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+Adam and Eve stand in the trees, waiting to hear what God will do to them. But God turns to the serpent first, and buries a promise for them inside that curse.
+
+"And I will put enmity between thee and the woman, and between thy seed and her seed; it shall bruise thy head, and thou shalt bruise his heel." (Genesis 3:15, KJV)
+
+Only then does He speak their own sentence. Rescue was spoken before ruin. That promise has a name now: Jesus, the Seed who crushed the serpent's head.
+
+Grace was spoken before your sentence. Come meet the Voice that spoke first.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_784 characters_
+
+**TAGS** (copy — paste into the keyword/tags field):
+```
+genesis 3 15, protoevangelium, first gospel, seed of the woman, adam and eve, curse of the serpent, types and shadows, jesus christ, kjv bible, bible shorts, old testament, bible study
+```
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Genesis3 #SeedOfTheWoman #KJV
+```
+
+---
+## YouTube (Long-form 16:9)
+
+**TITLE** (copy):
+```
+God Promised Rescue Before He Gave the Sentence
+```
+_47 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+Adam and Eve stand in the trees, waiting to hear what God will do to them. But God turns to the serpent first, and buries a promise for them inside that curse.
+
+"And I will put enmity between thee and the woman, and between thy seed and her seed; it shall bruise thy head, and thou shalt bruise his heel." (Genesis 3:15, KJV)
+
+Only then does He speak their own sentence. Rescue was spoken before ruin. That promise has a name now: Jesus, the Seed who crushed the serpent's head.
+
+Grace was spoken before your sentence. Come meet the Voice that spoke first.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_784 characters_
+
+**TAGS** (copy — paste into the keyword/tags field):
+```
+genesis 3 15, protoevangelium, first gospel, seed of the woman, adam and eve, curse of the serpent, types and shadows, jesus christ, kjv bible, bible shorts, old testament, bible study
+```
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Genesis3
+```
+
+---
+## TikTok
+
+**DESCRIPTION / CAPTION** (copy):
+```
+Before God told Adam and Eve their sentence, He spoke to the snake first and hid a promise inside the curse. Genesis 3:15. Grace was spoken first. Come meet the Voice that spoke first.
+
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+```
+_256 characters_
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Genesis3 #SeedOfTheWoman #KJV
+```
+
+---
+## Facebook (Reel/Video)
+
+**TITLE** (copy):
+```
+God promised rescue before He gave the sentence
+```
+_47 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+Genesis 3:15. "And I will put enmity between thee and the woman, and between thy seed and her seed; it shall bruise thy head, and thou shalt bruise his heel." (KJV)
+
+Before God spoke their sentence, He spoke a promise. Grace was spoken first. Come meet the Voice that spoke first.
+
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_502 characters_
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Genesis3
+```
+
+---
+## Instagram (Reel)
+
+**DESCRIPTION / CAPTION** (copy):
+```
+Before God told Adam and Eve their sentence, He hid a promise inside the curse. Genesis 3:15. Grace was spoken first. Come meet the Voice that spoke first.
+
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+```
+_227 characters_
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Genesis3 #SeedOfTheWoman #KJV #Grace #BibleStudy #Faith
+```
+
+---

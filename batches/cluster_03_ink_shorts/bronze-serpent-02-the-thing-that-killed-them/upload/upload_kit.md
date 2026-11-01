@@ -1,0 +1,181 @@
+# Upload Kit — The Thing That Killed Them, Lifted Up
+
+**Status:** RED-TEAMED  ·  **Gates:** ALL PASS ✅
+**Video:** `F:\slk\PycharmProjects\JesusInTheBible\poc_living_sketchbook\god_hung_up_a_snake\GODHUNGUPASNAKE_living_sketchbook_cc_scored_sfx.mp4`
+**Format:** short  ·  **Series:** Types & Shadows  ·  **Anchor:** Numbers 21:9
+
+> Copy each block straight into the platform's upload form. Title, description,
+> tags and hashtags are pre-checked, red-teamed and panel-reviewed.
+
+## ✔ Verification
+
+✅ **UK-G1 length** — all fields within hard limits
+✅ **UK-G2 KJV-strict** — anchor verse quoted verbatim
+✅ **UK-G3 doctrine** — no clickbait/overclaim tokens
+✅ **UK-G4 brand** — footer + CTA-to-Jesus present
+✅ **UK-G5 platform** — hashtag counts + link rules OK
+✅ **UK-G6 no-repeat** — no title collisions with siblings
+✅ **UK-G7 lint** — plain ASCII, grace-anchored, verse front-loaded
+
+### Red-team (in-engine hostile auditor)
+
+```
+VERDICT: REVISE
+- Title 'It Was the Cure' overstates: Numbers 21:9 says those who LOOKED at it lived. Fix: add 'look' in the body (already present at end) and keep the title as a question hook, or use 'God Hung Up a Snake. Looking at It Saved Them.'
+- Verse quote Numbers 21:9 verbatim: PASS.
+```
+
+## Title options (chosen first)
+
+1. **God Hung Up a Snake. It Was the Cure.** ⟵ CHOSEN  
+   _angle: honest hook_
+2. **The Cure Looked Like the Thing That Was Killing Them**  
+   _angle: alt_
+3. **Why Did God Hang a Snake on a Pole?**  
+   _angle: alt_
+4. **A Bronze Snake Saved a Dying Camp**  
+   _angle: alt_
+
+## YouTube (Short)
+
+**TITLE** (copy):
+```
+God Hung Up a Snake. It Was the Cure.
+```
+_37 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+You would expect a cure to look hopeful. In Numbers 21, God hung up a snake.
+
+"And Moses made a serpent of brass, and put it upon a pole, and it came to pass, that if a serpent had bitten any man, when he beheld the serpent of brass, he lived." (Numbers 21:9, KJV)
+
+It was not a comforting symbol. It was the exact shape of what was killing them, lifted up where the whole camp could see it. God never dressed it up as something else.
+
+That is the picture of what Christ did. He did not become a general sacrifice. He took the curse itself. Look at what was lifted up for you, and live.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_814 characters_
+
+**TAGS** (copy — paste into the keyword/tags field):
+```
+numbers 21, bronze serpent, brass serpent, serpent on a pole, moses, types and shadows, jesus christ, christ lifted up, kjv bible, bible shorts, old testament, bible study
+```
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #BronzeSerpent #Numbers21 #KJV
+```
+
+---
+## YouTube (Long-form 16:9)
+
+**TITLE** (copy):
+```
+God Hung Up a Snake. It Was the Cure.
+```
+_37 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+You would expect a cure to look hopeful. In Numbers 21, God hung up a snake.
+
+"And Moses made a serpent of brass, and put it upon a pole, and it came to pass, that if a serpent had bitten any man, when he beheld the serpent of brass, he lived." (Numbers 21:9, KJV)
+
+It was not a comforting symbol. It was the exact shape of what was killing them, lifted up where the whole camp could see it. God never dressed it up as something else.
+
+That is the picture of what Christ did. He did not become a general sacrifice. He took the curse itself. Look at what was lifted up for you, and live.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_814 characters_
+
+**TAGS** (copy — paste into the keyword/tags field):
+```
+numbers 21, bronze serpent, brass serpent, serpent on a pole, moses, types and shadows, jesus christ, christ lifted up, kjv bible, bible shorts, old testament, bible study
+```
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #BronzeSerpent
+```
+
+---
+## TikTok
+
+**DESCRIPTION / CAPTION** (copy):
+```
+God hung up a snake. Not a comforting symbol. The exact shape of their death, lifted up so the whole camp could see it. Numbers 21:9. Christ took your curse. Look and live.
+
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+```
+_244 characters_
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #BronzeSerpent #Numbers21 #KJV
+```
+
+---
+## Facebook (Reel/Video)
+
+**TITLE** (copy):
+```
+God hung up a snake. It was the cure.
+```
+_37 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+Numbers 21:9. "And Moses made a serpent of brass, and put it upon a pole, and it came to pass, that if a serpent had bitten any man, when he beheld the serpent of brass, he lived." (KJV)
+
+The cure was the exact shape of what was killing them, lifted up where everyone could see it. Christ took your curse. Look at what was lifted up for you, and live.
+
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_573 characters_
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #BronzeSerpent
+```
+
+---
+## Instagram (Reel)
+
+**DESCRIPTION / CAPTION** (copy):
+```
+God hung up a snake. It was the cure. Numbers 21:9. The exact shape of their death, lifted up for all to see. Christ took your curse. Look and live.
+
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+```
+_220 characters_
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #BronzeSerpent #Numbers21 #KJV #LookAndLive #BibleStudy #Faith
+```
+
+---

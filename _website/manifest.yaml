@@ -26,7 +26,7 @@ items:
   series_id: jesus-in-ot
   cluster: psalm-22
   cluster_order: 0
-  public_status: in_production
+  public_status: studio_complete
   featured: true
   featured_order: 2
   preview_approved: true
@@ -426,7 +426,7 @@ items:
   ref: Matthew 8:26
   series_id: miracles-of-jesus
   cluster: null
-  public_status: in_production
+  public_status: studio_complete
   featured: false
   preview_approved: false
   preview_source: null
@@ -435,6 +435,7 @@ items:
     screaming for their lives. And in the stern, He is asleep.
   public_blurb: Waves breaking over the rail. Water in the boat past your knees. Men
     screaming for their lives. And in the stern, He is asleep.
+  source: ../batches/cluster_03_ink_shorts/he-was-asleep-in-the-storm
 - slug: the-pronouns-that-preached-the-gospel
   kind: short
   title: The Pronouns That Preached the Gospel
@@ -1034,7 +1035,7 @@ items:
   series_id: jesus-in-ot
   cluster: bronze-serpent
   cluster_order: 0
-  public_status: in_production
+  public_status: studio_complete
   featured: false
   preview_approved: false
   preview_source: null
@@ -1053,7 +1054,7 @@ items:
   series_id: jesus-in-ot
   cluster: seed-of-the-woman
   cluster_order: 0
-  public_status: in_production
+  public_status: studio_complete
   featured: false
   preview_approved: false
   preview_source: null
@@ -1072,7 +1073,7 @@ items:
   series_id: jesus-in-ot
   cluster: day-of-atonement
   cluster_order: 0
-  public_status: in_production
+  public_status: studio_complete
   featured: false
   preview_approved: false
   preview_source: null
@@ -1156,7 +1157,7 @@ items:
   cluster: bronze-serpent
   cluster_order: 1
   parent: bronze-serpent
-  public_status: planned
+  public_status: studio_complete
   featured: false
   preview_approved: false
   preview_source: null
@@ -1164,6 +1165,7 @@ items:
   public_hook: Planned short from The Bronze Serpent (Numbers 21:8-9) - not yet narrated.
   public_blurb: 'Distilled from the locked long-form study. Anchor verse: Numbers
     21:8-9. Narration not yet written.'
+  source: ../batches/cluster_03_ink_shorts/bronze-serpent-01-look-and-live
 - slug: bronze-serpent-02-the-thing-that-killed-them
   kind: short
   title: The Thing That Killed Them, Lifted Up
@@ -1172,7 +1174,7 @@ items:
   cluster: bronze-serpent
   cluster_order: 2
   parent: bronze-serpent
-  public_status: planned
+  public_status: studio_complete
   featured: false
   preview_approved: false
   preview_source: null
@@ -1180,6 +1182,7 @@ items:
   public_hook: Planned short from The Bronze Serpent (Numbers 21:9) - not yet narrated.
   public_blurb: 'Distilled from the locked long-form study. Anchor verse: Numbers
     21:9. Narration not yet written.'
+  source: ../batches/cluster_03_ink_shorts/bronze-serpent-02-the-thing-that-killed-them
 - slug: bronze-serpent-03-son-of-man-lifted-up
   kind: short
   title: Even So Must the Son of Man Be Lifted Up
@@ -1188,7 +1191,7 @@ items:
   cluster: bronze-serpent
   cluster_order: 3
   parent: bronze-serpent
-  public_status: planned
+  public_status: studio_complete
   featured: false
   preview_approved: false
   preview_source: null
@@ -1196,6 +1199,7 @@ items:
   public_hook: Planned short from The Bronze Serpent (John 3:14-15) - not yet narrated.
   public_blurb: 'Distilled from the locked long-form study. Anchor verse: John 3:14-15.
     Narration not yet written.'
+  source: ../batches/cluster_03_ink_shorts/bronze-serpent-03-son-of-man-lifted-up
 - slug: seed-of-woman-01-first-gospel-in-the-curse
   kind: short
   title: The First Gospel in the Curse
@@ -1204,7 +1208,7 @@ items:
   cluster: seed-of-the-woman
   cluster_order: 1
   parent: seed-of-the-woman
-  public_status: planned
+  public_status: studio_complete
   featured: false
   preview_approved: false
   preview_source: null
@@ -1212,6 +1216,7 @@ items:
   public_hook: Planned short from The Seed of the Woman (Genesis 3:15) - not yet narrated.
   public_blurb: 'Distilled from the locked long-form study. Anchor verse: Genesis
     3:15. Narration not yet written.'
+  source: ../batches/cluster_03_ink_shorts/seed-of-woman-01-first-gospel-in-the-curse
 - slug: seed-of-woman-02-her-seed
   kind: short
   title: Her Seed
@@ -1220,7 +1225,7 @@ items:
   cluster: seed-of-the-woman
   cluster_order: 2
   parent: seed-of-the-woman
-  public_status: planned
+  public_status: studio_complete
   featured: false
   preview_approved: false
   preview_source: null
@@ -1229,6 +1234,7 @@ items:
     narrated.
   public_blurb: 'Distilled from the locked long-form study. Anchor verse: Galatians
     4:4. Narration not yet written.'
+  source: ../batches/cluster_03_ink_shorts/seed-of-woman-02-her-seed
 - slug: seed-of-woman-03-heel-vs-head
   kind: short
   title: Heel vs Head
@@ -1237,7 +1243,7 @@ items:
   cluster: seed-of-the-woman
   cluster_order: 3
   parent: seed-of-the-woman
-  public_status: planned
+  public_status: studio_complete
   featured: false
   preview_approved: false
   preview_source: null
@@ -1245,6 +1251,7 @@ items:
   public_hook: Planned short from The Seed of the Woman (Genesis 3:15) - not yet narrated.
   public_blurb: 'Distilled from the locked long-form study. Anchor verse: Genesis
     3:15. Narration not yet written.'
+  source: ../batches/cluster_03_ink_shorts/seed-of-woman-03-heel-vs-head
 - slug: seed-of-woman-04-serpent-crusher-promised
   kind: short
   title: The Serpent-Crusher, Promised
@@ -1253,7 +1260,7 @@ items:
   cluster: seed-of-the-woman
   cluster_order: 4
   parent: seed-of-the-woman
-  public_status: planned
+  public_status: studio_complete
   featured: false
   preview_approved: false
   preview_source: null
@@ -1261,6 +1268,7 @@ items:
   public_hook: Planned short from The Seed of the Woman (Romans 16:20) - not yet narrated.
   public_blurb: 'Distilled from the locked long-form study. Anchor verse: Romans 16:20.
     Narration not yet written.'
+  source: ../batches/cluster_03_ink_shorts/seed-of-woman-04-serpent-crusher-promised
 - slug: day-of-atonement-01-goat-that-carried-it-away
   kind: short
   title: The Goat That Carried It Away

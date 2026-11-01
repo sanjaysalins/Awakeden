@@ -1,0 +1,1 @@
+Final video is pinned from poc_living_sketchbook/son_of_man_lifted_up/ via ../FINAL_VIDEO.txt. Source narration: C:\Users\sanjay\PycharmProjects\PythonProject1\jesus\narration\47_Lifted_Up_in_Shame,_Lifted_Up_in_Glory\v1

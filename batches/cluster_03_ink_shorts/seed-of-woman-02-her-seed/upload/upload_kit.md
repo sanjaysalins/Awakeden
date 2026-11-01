@@ -1,0 +1,181 @@
+# Upload Kit — Her Seed
+
+**Status:** RED-TEAMED  ·  **Gates:** FAILURES ❌
+**Video:** `F:\slk\PycharmProjects\JesusInTheBible\poc_living_sketchbook\her_seed\HERSEED_living_sketchbook_cc_scored_sfx.mp4`
+**Format:** short  ·  **Series:** Types & Shadows  ·  **Anchor:** Galatians 4:4
+
+> Copy each block straight into the platform's upload form. Title, description,
+> tags and hashtags are pre-checked, red-teamed and panel-reviewed.
+
+## ✔ Verification
+
+✅ **UK-G1 length** — all fields within hard limits
+✅ **UK-G2 KJV-strict** — anchor verse quoted verbatim
+✅ **UK-G3 doctrine** — no clickbait/overclaim tokens
+✅ **UK-G4 brand** — footer + CTA-to-Jesus present
+✅ **UK-G5 platform** — hashtag counts + link rules OK
+✅ **UK-G6 no-repeat** — no title collisions with siblings
+❌ **UK-G7 lint** — youtube_short: anchor ref 'galatians' not in the first 157 chars (front-load the verse/hook before the 'more' fold); youtube_long: anchor ref 'galatians' not in the first 157 chars (front-load the verse/hook before the 'more' fold)
+
+### Red-team (in-engine hostile auditor)
+
+```
+VERDICT: PASS
+- Minor: 'Genesis says no' is slightly strong; the narration's point is that Genesis already named this seed. Acceptable as a question hook.
+- Verse quote Galatians 4:4 verbatim: PASS.
+```
+
+## Title options (chosen first)
+
+1. **Was Jesus God's Plan B? Genesis Says No** ⟵ CHOSEN  
+   _angle: honest hook_
+2. **Why Paul Wrote 'Made of a Woman'**  
+   _angle: alt_
+3. **Eden Fell Apart. Did God Improvise?**  
+   _angle: alt_
+4. **The Plan Named in the Garden**  
+   _angle: alt_
+
+## YouTube (Short)
+
+**TITLE** (copy):
+```
+Was Jesus God's Plan B? Genesis Says No
+```
+_39 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+You may have heard it as Plan B: Eden fell apart, so God improvised a rescue. That is not what the oldest promise says. Genesis already named this seed.
+
+"But when the fulness of the time was come, God sent forth his Son, made of a woman, made under the law," (Galatians 4:4, KJV)
+
+Paul could have written son of David or son of Abraham. He wrote made of a woman, the woman promised in the garden. Jesus was not a rescue invented later. He was the plan, named first, kept word for word.
+
+The plan was never yours to write, and He has already arrived for you.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_786 characters_
+
+**TAGS** (copy — paste into the keyword/tags field):
+```
+galatians 4 4, made of a woman, seed of the woman, genesis 3 15, plan b, fulness of the time, types and shadows, jesus christ, kjv bible, bible shorts, apostle paul, bible study
+```
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Galatians4 #SeedOfTheWoman #KJV
+```
+
+---
+## YouTube (Long-form 16:9)
+
+**TITLE** (copy):
+```
+Was Jesus God's Plan B? Genesis Says No
+```
+_39 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+You may have heard it as Plan B: Eden fell apart, so God improvised a rescue. That is not what the oldest promise says. Genesis already named this seed.
+
+"But when the fulness of the time was come, God sent forth his Son, made of a woman, made under the law," (Galatians 4:4, KJV)
+
+Paul could have written son of David or son of Abraham. He wrote made of a woman, the woman promised in the garden. Jesus was not a rescue invented later. He was the plan, named first, kept word for word.
+
+The plan was never yours to write, and He has already arrived for you.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_786 characters_
+
+**TAGS** (copy — paste into the keyword/tags field):
+```
+galatians 4 4, made of a woman, seed of the woman, genesis 3 15, plan b, fulness of the time, types and shadows, jesus christ, kjv bible, bible shorts, apostle paul, bible study
+```
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Galatians4
+```
+
+---
+## TikTok
+
+**DESCRIPTION / CAPTION** (copy):
+```
+Plan B? Genesis already named this seed. Paul writes made of a woman, the woman promised in the garden. Galatians 4:4. This was never Plan B. He has already arrived for you.
+
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+```
+_245 characters_
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Galatians4 #SeedOfTheWoman #KJV
+```
+
+---
+## Facebook (Reel/Video)
+
+**TITLE** (copy):
+```
+Was Jesus God's Plan B? Genesis says no
+```
+_39 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+Galatians 4:4. "But when the fulness of the time was come, God sent forth his Son, made of a woman, made under the law," (KJV)
+
+Jesus was not a rescue invented later. He was the plan, named first, kept word for word. He has already arrived for you.
+
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_470 characters_
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Galatians4
+```
+
+---
+## Instagram (Reel)
+
+**DESCRIPTION / CAPTION** (copy):
+```
+Plan B? Genesis already named this seed. Galatians 4:4, made of a woman. This was never Plan B. He has already arrived for you.
+
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+```
+_199 characters_
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #Galatians4 #SeedOfTheWoman #KJV #PlanB #BibleStudy #Faith
+```
+
+---

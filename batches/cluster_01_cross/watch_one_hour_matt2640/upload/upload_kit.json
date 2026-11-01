@@ -21,7 +21,7 @@
     {
       "platform": "youtube_short",
       "label": "YouTube (Short)",
-      "title": "Jesus Asked Three Fishermen for One Thing. They Failed in an Hour.",
+      "title": "Jesus Asked 3 Friends for One Hour. They Failed.",
       "description": "Matthew 26:40 - Jesus asked Peter, James and John to watch with him one hour in Gethsemane, the night before the cross. They slept. His answer was not a curse. It was a diagnosis full of mercy.\n\n\"And he cometh unto the disciples, and findeth them asleep, and saith unto Peter, What, could ye not watch with me one hour?\" (Matthew 26:40, KJV)\n\nThe cup he asked to pass, he drank - on the cross, for you. He watched that hour alone, so that no hour of yours is watched alone. Bring Jesus the weak flesh he already knows.\n\nFind Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝\n\nhttps://awakeden.com\n\nScripture quoted from the King James Version (KJV), public domain.",
       "tags": [
         "Matthew 26:40",
@@ -90,7 +90,7 @@
     {
       "platform": "facebook",
       "label": "Facebook (Reel/Video)",
-      "title": "Jesus Asked Three Fishermen for One Thing. They Failed in an Hour.",
+      "title": "Jesus Asked 3 Friends for One Hour. They Failed.",
       "description": "Matthew 26:40 - the night before the cross, Jesus asked Peter, James and John to watch with him one hour in Gethsemane. They slept.\n\n\"And he cometh unto the disciples, and findeth them asleep, and saith unto Peter, What, could ye not watch with me one hour?\" (Matthew 26:40, KJV)\n\nHis question was not a curse. It was a diagnosis full of mercy - the spirit indeed is willing, but the flesh is weak. Then he drank the cup he had asked to pass. On the cross. For you.\n\nHe watched that hour alone. Now no hour of yours is watched alone. Bring Jesus the weak flesh he already knows.\n\nFind Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝\n\nhttps://awakeden.com\n\nScripture quoted from the King James Version (KJV), public domain.",
       "tags": [],
       "hashtags": [
@@ -117,7 +117,7 @@
   ],
   "title_candidates": [
     {
-      "text": "Jesus Asked Three Fishermen for One Thing. They Failed in an Hour.",
+      "text": "Jesus Asked 3 Friends for One Hour. They Failed.",
       "angle": "the failure hook - the ask was small and they still could not do it",
       "chosen": true,
       "reason": "highest-ranked hook by the generator"
@@ -186,7 +186,7 @@
     }
   ],
   "all_gates_pass": false,
-  "redteam": "VERDICT: PASS\n\n- youtube_long: \"This episode ... walks through the Gethsemane account ... panel by panel\" - this block describes a long-form deep-dive but the source video is a 60-second short. The pack for a short only ships youtube_short/tiktok/facebook/instagram, so this block is unused today; if it is ever pasted for a long upload, rewrite it against the actual long video first. Not blocking for this short's pack.\n- youtube_short title \"Jesus Asked Three Fishermen for One Thing. They Failed in an Hour.\" - honest to the narration (\"They failed inside an hour\"), no curiosity-gap lie. Keep.\n- Verse check: the Matthew 26:40 quote in youtube_short and facebook matches the supplied KJV string character-for-character, including \"What, could ye not watch with me one hour?\". PASS.\n- Doctrine: \"not a curse, a diagnosis full of mercy\" and \"no hour of yours is watched alone\" are the video's own landing lines - no overclaim, no fear/gain-loss framing. The CTA points to Jesus. PASS.\n- TikTok/Instagram: first line is the hook, no URLs, caption under budget. PASS.\n- Minor: \"ONE thing\" in all-caps on TikTok/IG reads as emphasis, not shouting - acceptable, but do not stack more caps.",
+  "redteam": "VERDICT: PASS\n\n- youtube_long: \"This episode ... walks through the Gethsemane account ... panel by panel\" - this block describes a long-form deep-dive but the source video is a 60-second short. The pack for a short only ships youtube_short/tiktok/facebook/instagram, so this block is unused today; if it is ever pasted for a long upload, rewrite it against the actual long video first. Not blocking for this short's pack.\n- youtube_short title \"Jesus Asked 3 Friends for One Hour. They Failed.\" - honest to the narration (\"They failed inside an hour\"), no curiosity-gap lie. Keep.\n- Verse check: the Matthew 26:40 quote in youtube_short and facebook matches the supplied KJV string character-for-character, including \"What, could ye not watch with me one hour?\". PASS.\n- Doctrine: \"not a curse, a diagnosis full of mercy\" and \"no hour of yours is watched alone\" are the video's own landing lines - no overclaim, no fear/gain-loss framing. The CTA points to Jesus. PASS.\n- TikTok/Instagram: first line is the hook, no URLs, caption under budget. PASS.\n- Minor: \"ONE thing\" in all-caps on TikTok/IG reads as emphasis, not shouting - acceptable, but do not stack more caps.",
   "panel_verdict": "",
   "notes": []
 }

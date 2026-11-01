@@ -1,0 +1,1 @@
+Final video is pinned from poc_living_sketchbook/first_gospel_in_the_curse/ via ../FINAL_VIDEO.txt. Source narration: C:\Users\sanjay\PycharmProjects\PythonProject1\jesus\narration\44_Grace_Spoken_First\v1

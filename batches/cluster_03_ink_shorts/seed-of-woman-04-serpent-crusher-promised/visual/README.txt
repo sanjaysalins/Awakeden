@@ -1,0 +1,1 @@
+Final video is pinned from poc_living_sketchbook/serpent_crusher_promised/ via ../FINAL_VIDEO.txt. Source narration: C:\Users\sanjay\PycharmProjects\PythonProject1\jesus\narration\46_Old_Story._Unfinished\v1

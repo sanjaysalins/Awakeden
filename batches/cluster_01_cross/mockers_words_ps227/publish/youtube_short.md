@@ -1,7 +1,7 @@
 # youtube_short — YouTube (Short)
 
 ## TITLE
-The Mockers at the Cross Were Quoting a 1,000-Year-Old Psalm
+Taunts at the Cross Were Written 1,000 Years Before
 
 ## DESCRIPTION
 The crowd at the cross thought they were inventing their taunts. They were reciting a script written a thousand years before (Psalm 22:7-8; Matthew 27:43).

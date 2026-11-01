@@ -1,3 +1,40 @@
+## 2026-11-01 (night) HANDOVER - single upload tracker + 3 ink-short rewrites
+
+**Where we are.** `_UPLOAD_TRACKER.html` is the ONE tracker (calendar order, "Next up to post (32)",
+"ready state (14)"). `release_check.py` GREEN (78 items, 0 FAIL). Done this session: hook thumbnails + curiosity-gap
+titles on 20 catalogue + 5 long + 8 ink shorts; Swirls packs 1/2/8 (+ others) built but HIDDEN by the 30-episode hold;
+art_style.py false-positive Baroque ban fixed (sketchbook ancestor => GRAPHIC_NOVEL, tested).
+
+**The 3 failed ink shorts (Jericho, Two Goats, Bronze Serpent EW04) - rewritten, recorded, re-timed, NOT yet packed.**
+- Words LOCKED by owner (v3, 2 panel rounds): `poc_living_sketchbook/_rewrite_v3/LOCKED_WORDS_2026-11-01.md`.
+  Panel round 2 on v2 was 5/5 REVISE; v3 fixed the convergent points but had no 3rd panel (house rule: stop at 2).
+- Recorded (ElevenLabs, ~2.7k chars, ~$1, owner-approved): `_rewrite_v3/audio/<piece>/narration.mp3`, `timing.json`, `alignment.json`
+  (script `_rewrite_v3/record_v3.py`; narrator + disciples voice for spies' line + Jesus voice for John 3:14).
+- Re-timed over EXISTING spreads, $0 (`_rewrite_v3/retime_v3.py`), then captions + logo (`_rewrite_v3/finish_v3.py`).
+  Finals: `poc_living_sketchbook/_rewrite_v3/video/{jericho,two_goats,bronze_serpent}_v3_cc.mp4` (pre-logo `.prewm.bak.mp4` kept).
+  Lengths ~71.4 / 71.2 / 65.1 s (Jericho + Two Goats are over 60s; owner has NOT yet watched any of the three).
+  Simpler than originals: one music bed, no SFX, no verse cards/counters; closest spread held where a beat has no picture.
+- Batch folders created (pin + narration + alignment + publish_meta only; NO publish/ pack yet):
+  `batches/cluster_03_ink_shorts/{rahab-and-the-scarlet-cord, aaron-and-the-two-goats, moses-and-the-snake-on-a-pole}/`.
+  Titles in publish_meta: "Why One Red Cord Survived the Fall of Jericho" / "One Goat Died. One Was Sent Away. Why Two?" /
+  "God Answered Snakebite With a Snake on a Pole". Thumb hooks set; thumb frame time `t` not tuned.
+
+**Do first tomorrow (in order).**
+1. Owner watches the 3 `_v3_cc.mp4` (links in chat; never auto-open). Fix anything (re-time = $0; new stills = ask + price first).
+2. Build packs: `cli_publish.py batches/cluster_03_ink_shorts/<slug> --index` flow via AGENT BRIDGE (I write
+   `.agent_bridge/responses/<id>.txt`), then 5-CLI panel, then gates UK-G1..G7 (G2 KJV-strict, G7 anchor ref in first 157 chars,
+   no "..." dash-slop). Thumbnails: `pipeline/thumbnails.py <slug>`. Run a doctrine 5-CLI panel on the FINAL narration too.
+3. Manifest (`_website/manifest.yaml`, line-edit only, `studio_complete`, `source:`), add the 3 to `POST_ORDER` in
+   `build_upload_tracker.py`, drop their "BLOCKED: narration failed doctrine panel" labels, run `release_check.py`, rebuild tracker.
+4. Then the owner can start posting from the tracker (engine is paste-only; never upload for the owner).
+
+**Still-open blockers (owner knows):** Swirls ep12 "cuts off" playback bug; two Swirls pilots have no episode.py; doubled wordmark on
+long 16:9 thumbnails (engine change needed). Swirls posting held until 30 episodes.
+
+**Standing rules reminder:** words lock != spend order (recording/animation each need own ask + price); full `file:///` links; never
+auto-open anything; short plain replies ending in ONE question; independent Fable seat + AI panel on every assessment.
+Mp4/mp3/png are git-ignored: the finals live only on disk (paths above).
+
 # STATE.md — progress tracker
 
 **2026-09-10/11 — episode 12 "Ye Are Not All Clean": 7 rounds chasing a "narration cuts off/cropped"

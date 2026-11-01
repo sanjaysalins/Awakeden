@@ -70,7 +70,7 @@ The short never says “Great Commission,” never cites Matthew 28. Narration n
 
 | Title | Verdict |
 |--------|---------|
-| **Chosen YT Short:** “The Psalm That Starts With One Dying Man and Ends With Every Nation” | Tracks the video’s own arc (“ends with every nation on earth”). Curiosity is real, not bait-and-switch. Soft risk: “Every Nation” can sound like completed universal conversion; the *body* copy usually corrects this — TikTok does not. |
+| **Chosen YT Short:** “Psalm 22 Starts With One Dying Man. Where Does It End?” | Tracks the video’s own arc (“ends with every nation on earth”). Curiosity is real, not bait-and-switch. Soft risk: “Every Nation” can sound like completed universal conversion; the *body* copy usually corrects this — TikTok does not. |
 | **Option 2:** “How Far Does the Cross Reach? Psalm 22 Already Said.” | Honest reach-question. |
 | **Option 3:** “One Man Dying Alone. Then the Ends of the Earth.” | Clean, stark, true. |
 | **Option 4:** “The Song That Swept the Whole Earth” | Matches landing line; a bit grandiose if taken as finished global conquest — not chosen. |

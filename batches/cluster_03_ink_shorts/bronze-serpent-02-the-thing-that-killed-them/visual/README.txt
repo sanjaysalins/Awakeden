@@ -1,0 +1,1 @@
+Final video is pinned from poc_living_sketchbook/god_hung_up_a_snake/ via ../FINAL_VIDEO.txt. Source narration: C:\Users\sanjay\PycharmProjects\PythonProject1\jesus\narration\42_God_Hung_Up_a_Snake\v1

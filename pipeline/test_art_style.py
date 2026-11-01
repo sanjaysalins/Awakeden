@@ -116,3 +116,17 @@ if __name__ == "__main__":
     import sys
     import pytest
     sys.exit(pytest.main([__file__, "-q"]))
+
+
+def test_sketchbook_lane_final_beats_stale_baroque_artifacts(tmp_path):
+    # Seed of the Woman / Day of Atonement longs: v1/ still holds an old Baroque
+    # scene plan, but the pinned final ships from poc_living_sketchbook/ (current style).
+    sk = tmp_path / "poc_living_sketchbook" / "piece"
+    sk.mkdir(parents=True)
+    (sk / "FINAL_cc.mp4").write_bytes(b"x")
+    v1 = tmp_path / "longform" / "05_x" / "v1"
+    (v1 / "visual_16x9").mkdir(parents=True)
+    (v1 / "visual_16x9" / "scene_plan.json").write_text(
+        json.dumps({"style_base": "Baroque oil painting"}), encoding="utf-8")
+    (v1 / "FINAL_VIDEO.txt").write_text("../../../poc_living_sketchbook/piece/FINAL_cc.mp4", encoding="utf-8")
+    assert art_style.detect_art_style(v1) == art_style.GRAPHIC_NOVEL

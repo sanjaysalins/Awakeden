@@ -1,7 +1,7 @@
 # youtube_short - YouTube (Short)
 
 ## TITLE
-Jesus Asked Three Fishermen for One Thing. They Failed in an Hour.
+Jesus Asked 3 Friends for One Hour. They Failed.
 
 ## DESCRIPTION
 Matthew 26:40, Jesus asked Peter, James and John to watch with him one hour in Gethsemane, the night before the cross. They slept. His answer was not a curse. It was a diagnosis full of mercy.

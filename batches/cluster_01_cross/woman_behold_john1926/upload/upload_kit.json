@@ -21,7 +21,7 @@
     {
       "platform": "youtube_short",
       "label": "YouTube (Short)",
-      "title": "While Dying, He Arranged His Mother's Care",
+      "title": "A Warning at Jesus' Birth Came True at the Cross",
       "description": "At the cross (John 19:26), a thirty-year-old sentence finally lands.\n\nWhen Mary carried her baby into the temple, old Simeon told her one dark thing: a sword shall pierce through thy own soul also. Now she stands close enough to watch her son die. The sword has landed.\n\nAnd Jesus looks down, sees her wound, and turns to bind it: \"When Jesus therefore saw his mother, and the disciple standing by, whom he loved, he saith unto his mother, Woman, behold thy son!\" (John 19:26, KJV). Then to the disciple: behold thy mother. And from that hour, John took her into his own home.\n\nWhile judgment fell on him, he cared for someone else. That is who is dying there.\n\nYour wound is not invisible to him either. Stand where Mary stood. The Son who saw her will behold you, and bind what the sword tore.\n\nFind Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝\nRead it panel by panel: https://awakeden.com/read/woman-behold-thy-son.html\nhttps://awakeden.com\n\nhttps://awakeden.com\n\nScripture quoted from the King James Version (KJV), public domain.",
       "tags": [
         "john 19 26",
@@ -122,7 +122,7 @@
   ],
   "title_candidates": [
     {
-      "text": "While Dying, He Arranged His Mother's Care",
+      "text": "A Warning at Jesus' Birth Came True at the Cross",
       "angle": "the third Word: intercession in agony",
       "chosen": true,
       "reason": "highest-ranked hook by the generator"
@@ -191,7 +191,7 @@
     }
   ],
   "all_gates_pass": false,
-  "redteam": "VERDICT: PASS\n\n- Verbatim: the John 19:26 anchor is character-exact everywhere quoted. The Simeon\n  line \"Yea, a sword shall pierce through thy own soul also\" is quoted with its Luke\n  2:35 ref in the long description and rendered unquoted-paraphrase elsewhere - clean.\n- Ref front-load: \"(John 19:26)\" appears inside the first 157 chars of youtube_short\n  and youtube_long; facebook opens with \"(Luke 2:35)\" then carries John 19:26 - the\n  anchor ref 'john' also appears within the fold via the verse cite. Clean.\n- Typography: all-ASCII. Clean.\n- Doctrine: \"he bound her wound from inside his own\" is vivid but faithful to the\n  scene; no Marian overclaim (no mediation language, no veneration) - the CTA lands\n  on the SON beholding the viewer, which is the video's landing. Grace-anchored.\n- Titles: \"While Dying, He Arranged His Mother's Care\" - true, understated, strong.\n  \"The Word Nobody Preaches On\" (candidate 3) borders on rhetorical inflation but is\n  NOT the chosen title. Chosen set is clean.\n- Nothing blocking.",
+  "redteam": "VERDICT: PASS\n\n- Verbatim: the John 19:26 anchor is character-exact everywhere quoted. The Simeon\n  line \"Yea, a sword shall pierce through thy own soul also\" is quoted with its Luke\n  2:35 ref in the long description and rendered unquoted-paraphrase elsewhere - clean.\n- Ref front-load: \"(John 19:26)\" appears inside the first 157 chars of youtube_short\n  and youtube_long; facebook opens with \"(Luke 2:35)\" then carries John 19:26 - the\n  anchor ref 'john' also appears within the fold via the verse cite. Clean.\n- Typography: all-ASCII. Clean.\n- Doctrine: \"he bound her wound from inside his own\" is vivid but faithful to the\n  scene; no Marian overclaim (no mediation language, no veneration) - the CTA lands\n  on the SON beholding the viewer, which is the video's landing. Grace-anchored.\n- Titles: \"A Warning at Jesus' Birth Came True at the Cross\" - true, understated, strong.\n  \"The Word Nobody Preaches On\" (candidate 3) borders on rhetorical inflation but is\n  NOT the chosen title. Chosen set is clean.\n- Nothing blocking.",
   "panel_verdict": "",
   "notes": []
 }

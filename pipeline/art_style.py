@@ -88,6 +88,13 @@ def detect_art_style(piece_dir: Path | str) -> str:
     if video is not None:
         if "inked" in video.parent.name.lower() or video.name.lower().startswith("livingpage"):
             return GRAPHIC_NOVEL
+        # A final that ships from the living-sketchbook lane (poc_living_sketchbook/)
+        # is the CURRENT ink-and-watercolor style (frames of Seed of the Woman, Day
+        # of Atonement and Bronze Serpent longs eyeballed 2026-11-01), even when the
+        # piece's own v1/ folder still holds stale pre-migration Baroque artifacts
+        # the pass-2 text-scan would otherwise trip on.
+        if "poc_living_sketchbook" in {x.name.lower() for x in video.resolve().parents}:
+            return GRAPHIC_NOVEL
 
     # Pass 2: text-scan whatever artifacts exist, preferring the shipping
     # lane's own directory when known.

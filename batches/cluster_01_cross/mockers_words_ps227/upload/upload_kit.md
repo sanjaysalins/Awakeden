@@ -32,7 +32,7 @@ VERDICT: REVISE
 
 ## Title options (chosen first)
 
-1. **The Mockers at the Cross Were Quoting a 1,000-Year-Old Psalm** ⟵ CHOSEN  
+1. **Taunts at the Cross Were Written 1,000 Years Before** ⟵ CHOSEN  
    _angle: prophecy-script: the taunts were written down a millennium in advance_
 2. **They Mocked Jesus With Words Written a Thousand Years Before**  
    _angle: unwitting-witnesses: the cruelty itself confirmed the prophecy_
@@ -45,7 +45,7 @@ VERDICT: REVISE
 
 **TITLE** (copy):
 ```
-The Mockers at the Cross Were Quoting a 1,000-Year-Old Psalm
+Taunts at the Cross Were Written 1,000 Years Before
 ```
 _60 characters_
 

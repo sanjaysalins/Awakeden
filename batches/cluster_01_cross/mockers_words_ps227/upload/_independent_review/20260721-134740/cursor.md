@@ -15,7 +15,7 @@
 - **TikTok — `"Matthew heard them repeated word for word"`** — Overclaim. The video narration says **“nearly line for line”**; Matthew 27:43 differs from Psalm 22:8 (“**He trusted in God**” vs “**He trusted on the LORD**”). This is bait-and-switch against the piece’s own precision standard.
 - **Title option 3 (unused but present):** `"Why the Taunts at the Cross Match Psalm 22 Line for Line"` — Same overclaim if ever swapped in; contradicts the video’s “nearly line for line” framing.
 - **YouTube (Long-form) — `"He proved it by staying"`** — Doctrinal drift. The locked narration deliberately uses **“showed He was the Son”** (not “proved”), per Rom 1:4/resurrection precision in `narration.md`. Metadata reintroduces “proved.”
-- **Chosen title — `"The Mockers at the Cross Were Quoting a 1,000-Year-Old Psalm"`** — Honest enough; curiosity hook matches content. Not blocking.
+- **Chosen title — `"Taunts at the Cross Were Written 1,000 Years Before"`** — Honest enough; curiosity hook matches content. Not blocking.
 - **“1,000 years”** — Rounded but defensible (David → crucifixion). Not sensationalist.
 
 ---

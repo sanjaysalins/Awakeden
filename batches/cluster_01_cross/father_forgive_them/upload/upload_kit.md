@@ -30,7 +30,7 @@ VERDICT: PASS
   language (Romans 5:8 phrasing) without a false attribution to Luke - acceptable and
   matches the video's own narration.
 - Typography: all-ASCII. Clean.
-- Titles: "His First Words on the Cross Were a Prayer for His Killers" - true, honest,
+- Titles: "On the Cross, His First Words Were Not a Curse" - true, honest,
   strong. "They Were Still Gambling When He Forgave Them" - matches Luke's actual
   sequencing which the video makes explicit. No clickbait, no fear/gain-loss framing;
   the CTA is grace-anchored ("come, and receive it by faith").
@@ -40,7 +40,7 @@ VERDICT: PASS
 
 ## Title options (chosen first)
 
-1. **His First Words on the Cross Were a Prayer for His Killers** ⟵ CHOSEN  
+1. **On the Cross, His First Words Were Not a Curse** ⟵ CHOSEN  
    _angle: the unexpected first word: intercession, not a curse_
 2. **They Were Still Gambling When He Forgave Them**  
    _angle: Luke's timing: the prayer rises as the lots fall_
@@ -53,7 +53,7 @@ VERDICT: PASS
 
 **TITLE** (copy):
 ```
-His First Words on the Cross Were a Prayer for His Killers
+On the Cross, His First Words Were Not a Curse
 ```
 _58 characters_
 

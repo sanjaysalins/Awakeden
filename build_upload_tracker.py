@@ -239,6 +239,119 @@ def _group_by_episode(items: list, episodes: list, missing_by_slug: dict) -> tup
     return ep_html, standalone_html
 
 
+SKETCH_DIR = ROOT / "poc_living_sketchbook"
+_SKETCH_LONGS = {"seed_of_the_woman", "bronze_serpent_long", "day_of_atonement"}  # already catalogue longs
+
+
+def _has(folder: Path, *rel: str) -> bool:
+    return all((folder / r).is_file() for r in rel)
+
+
+def _row(name: str, kind: str, video: Path | None, folder: Path, state: str, tone: str) -> str:
+    pub = folder / "publish"
+    def yn(ok, label, link=None):
+        if ok and link:
+            return f"<a href='{flink(link, '').split(chr(39))[1]}'>✅ {label}</a>"
+        return f"✅ {label}" if ok else f"<span class='bad'>✗ {label}</span>"
+    thumbs = pub / "thumbs"
+    n_th = len(list(thumbs.glob("thumb_*.jpg"))) if thumbs.is_dir() else 0
+    srt = list(pub.glob("captions.srt")) + list(folder.glob("*.srt"))
+    return (f"<tr><td><b>{esc(name)}</b><br><span class=slug>{esc(kind)}</span></td>"
+            f"<td>{flink(video, '▶ video') if video else '<span class=bad>✗ no final</span>'}</td>"
+            f"<td>{yn((pub / 'PUBLISH_INDEX.html').is_file(), 'pack', pub / 'PUBLISH_INDEX.html') if (pub / 'PUBLISH_INDEX.html').is_file() else yn(False, 'pack')}</td>"
+            f"<td>{yn(n_th >= 3, f'thumbs ({n_th})')}</td>"
+            f"<td>{yn(bool(srt), 'captions')}</td>"
+            f"<td><span class='c {tone}'>{esc(state)}</span></td></tr>")
+
+
+def finished_inventory(states, queue_slugs: set) -> tuple[str, dict]:
+    """ONE table of EVERY finished video on disk and its ready state, so nothing
+    finished is invisible just because the catalogue hasn't cleared it."""
+    rows, counts = [], {"ready": 0, "blocked": 0, "hold": 0}
+    # 1. catalogue pieces with a FINAL video that are not in the post queue and not posted
+    for st in states:
+        if st.video and st.finality.startswith("FINAL") and st.slug not in queue_slugs and not st.ledger:
+            has_pack = (st.source_dir / "publish" / "PUBLISH_INDEX.html").is_file()
+            state = ("NEEDS CATALOGUE APPROVAL (set studio_complete) — files ready" if has_pack
+                     else "NEEDS PUBLISH PACK")
+            rows.append(_row(st.title, st.kind, st.video, st.source_dir, state, "warn"))
+            counts["blocked"] += 1
+    # 2. Swirls of Life — every folder
+    for d in sorted(SWIRLS_DIR.glob("swirls_*")):
+        if not d.is_dir():
+            continue
+        pin = d / "FINAL_VIDEO.txt"
+        video = None
+        if pin.is_file():
+            cand = d / pin.read_text(encoding="utf-8").strip().splitlines()[0].strip()
+            video = cand if cand.is_file() else None
+        if video is None:
+            fin = sorted(d.glob("*final*sfx*.mp4"), key=lambda x: x.stat().st_mtime)
+            video = fin[-1] if fin else None
+        if "episode_12" in d.name:
+            state, tone = "BLOCKED: 'cuts off' playback bug still open", "bad"
+        elif video is None:
+            continue
+        elif not (d / "publish" / "PUBLISH_INDEX.html").is_file():
+            state, tone = "HOLD (30-ep rule) + NEEDS PUBLISH PACK", "warn"
+        else:
+            state, tone = "HOLD (30-ep rule) — pack ready", "swirls"
+        rows.append(_row(d.name.replace("swirls_", "Swirls: ").replace("_", " "), "swirls", video, d, state, tone))
+        counts["hold"] += 1
+    # 3. Living-sketchbook ink shorts / longs not in the catalogue
+    _pinned = " ".join(
+        pf.read_text(encoding="utf-8") for pf in (ROOT / "batches").glob("cluster_*/*/FINAL_VIDEO.txt"))
+    for d in sorted(SKETCH_DIR.iterdir()) if SKETCH_DIR.is_dir() else []:
+        if not d.is_dir() or d.name in _SKETCH_LONGS or d.name.startswith("_"):
+            continue
+        if f"poc_living_sketchbook/{d.name}/" in _pinned.replace(chr(92), "/"):
+            continue  # already a catalogue piece (see the post queue above)
+        cc = sorted(d.glob("*_cc.mp4"))
+        if cc:
+            rows.append(_row(d.name.replace("_", " ").title(), "ink short", cc[-1], d,
+                             "BLOCKED: narration failed doctrine panel (all seats REVISE) - needs rewrite + re-record",
+                             "bad"))
+            counts["blocked"] += 1
+    html_ = ("<table class=inv><tr><th>Piece</th><th>Video</th><th>Pack</th><th>Thumbs</th><th>Captions</th>"
+             "<th>State</th></tr>" + "".join(rows) + "</table>")
+    return html_, counts
+
+
+# Posting order from RELEASE_CALENDAR.md (slug -> slot label). Anything not listed
+# sorts last. The 5 "spare bank" Psalm-22 shorts are older-identity pieces the
+# calendar says to publish only after a style check.
+POST_ORDER = [
+    ("zechariah-12-10-pierced", "Wk1 Mon - LAUNCH"),
+    ("thirty-pieces-of-silver", "Wk1 Wed - LAUNCH"),
+    ("ps22-01-crucifixion-foretold", "Wk1 Fri - LAUNCH"),
+    ("could-ye-not-watch-one-hour", "Wk2 Mon - LAUNCH"),
+    ("father-forgive-them", "Wk2 Wed - LAUNCH"),
+    ("today-in-paradise", "Wk2 Fri - LAUNCH"),
+    ("woman-behold-thy-son", "Wk3 Mon"),
+    ("ps22-03-forsaken-cry", "Wk3 Wed"),
+    ("ps22-08-i-thirst", "Wk3 Fri (short slot)"),
+    ("it-is-finished", "Wk4 Mon - HERO"),
+    ("father-into-thy-hands", "Wk4 Wed"),
+    ("isaiah-53-suffering-servant", "Wk4 Fri - LONG"),
+    ("sign-of-jonah", "Season 2 opener"),
+    ("the-empty-tomb", "Season 2"),
+    ("women-first-witnesses", "Season 2"),
+    ("seed-of-woman-01-first-gospel-in-the-curse", "Season 3 - Seed of the Woman"),
+    ("seed-of-woman-02-her-seed", "Season 3 - Seed of the Woman"),
+    ("seed-of-woman-03-heel-vs-head", "Season 3 - Seed of the Woman"),
+    ("seed-of-woman-04-serpent-crusher-promised", "Season 3 - Seed of the Woman"),
+    ("bronze-serpent-02-the-thing-that-killed-them", "Season 3 - Bronze Serpent"),
+    ("bronze-serpent-03-son-of-man-lifted-up", "Season 3 - Bronze Serpent"),
+    ("ps22-02-mockers-words", "SPARE BANK - style-check first"),
+    ("ps22-04-declared-to-brethren", "SPARE BANK - style-check first"),
+    ("ps22-05-he-hath-done-this", "SPARE BANK - style-check first"),
+    ("ps22-06-ends-of-the-earth", "SPARE BANK - style-check first"),
+    ("ps22-07-body-foretold", "SPARE BANK - style-check first"),
+]
+# Owner's rule: ALL Swirls posting is held until the 30-episode target.
+SWIRLS_HOLD = True
+
+
 def main() -> int:
     states, _orphans, _pages = release_state.gather()
     episodes = gather_episodes(states)
@@ -248,7 +361,15 @@ def main() -> int:
     partial = {s.slug: missing for s, missing in queue}
 
     todo_items = [s for s, _ in queue]
-    ep_todo, standalone_todo = _group_by_episode(todo_items, episodes, partial)
+    # TO-POST list: flat, in calendar order, numbered (not grouped by episode).
+    rank = {slug: i for i, (slug, _l) in enumerate(POST_ORDER)}
+    label = dict(POST_ORDER)
+    todo_sorted = sorted(todo_items, key=lambda x: rank.get(x.slug, 999))
+    ep_todo, standalone_todo = "", "".join(
+        f"<div class=sub><b>#{i} &middot; {esc(label.get(x.slug, 'unscheduled'))}</b></div>"
+        + card(x, partial.get(x.slug, []))
+        for i, x in enumerate(todo_sorted, 1))
+    _e, _s = _group_by_episode([], episodes, partial)
     ep_done, standalone_done = _group_by_episode(posted, episodes, partial)
     cards_todo = ep_todo + standalone_todo
     cards_done = ep_done + standalone_done
@@ -260,7 +381,7 @@ def main() -> int:
     swirls_entries = ([(t, s, SWIRLS_DIR / s / f) for t, s, f in swirls_mod.LEGACY]
                       + swirls_mod.discover())
     n_swirls_todo = n_swirls_done = 0
-    for title, slug, final in swirls_entries:
+    for title, slug, final in ([] if SWIRLS_HOLD else swirls_entries):
         card_html, missing = swirls_card(title, slug, final, swirls_ledger.get(slug, {}))
         if missing:
             cards_todo += card_html
@@ -269,6 +390,7 @@ def main() -> int:
             cards_done += card_html
             n_swirls_done += 1
 
+    inv_html, inv_counts = finished_inventory(states, q_slugs)
     n_queue, n_posted = len(queue) + n_swirls_todo, len(posted) + n_swirls_done
     canon = "".join(f"<tr><td>{esc(k)}</td><td>{esc(v)}</td></tr>" for k, v in CANON)
 
@@ -294,7 +416,8 @@ button.big{{padding:9px 16px;font-size:13px}}
 .epblock-head h3{{margin:10px 0 4px;font-size:16px;font-family:Georgia,serif}}
 .epblock .barwrap{{background:#171410;border-radius:99px;height:6px;margin:6px 0 4px;overflow:hidden}}
 .epblock .bar.posted{{background:#c9a55a;height:100%}}
-.epblock .card{{background:#211d17}}</style>
+.epblock .card{{background:#211d17}}
+.inv th{{text-align:left;color:#b59e86;font-size:12px}} .inv .bad{{color:#e0675d}} .inv a{{color:#c9a55a}}</style>
 <h1>Awakeden — upload tracker</h1>
 <div class=sub>Every upload-ready piece, longs and shorts, in one place — the main catalogue
 (<code>data/release_ledger.json</code>) AND <span class='c swirls'>SWIRLS OF LIFE</span>
@@ -310,8 +433,15 @@ is a view; regenerate: <code>.venv\\Scripts\\python.exe build_upload_tracker.py<
 <button class=big onclick="all_cmds(this)">COPY ALL filled boxes as one script</button>
 <h2>YouTube settings — same every video</h2>
 <div class=card><table class=canon>{canon}</table></div>
-<h2>Next up to post ({n_queue})</h2>
+<h2>Next up to post ({n_queue}) — in calendar order</h2>
+<div class=sub>Swirls of Life is on HOLD until 30 episodes (hidden here). Not ready: Psalm 22 LONG
+(awaiting catalogue approval). Pre-launch checklist items still open in RELEASE_CALENDAR.md:
+channel dress/playlist, brand fields, safe-zone test upload.</div>
 {cards_todo or "<div class=sub>nothing ready and unposted</div>"}
+<h2>All other finished media — ready state ({inv_counts["blocked"] + inv_counts["hold"]})</h2>
+<div class=sub>Everything with a finished video on disk that is NOT in the list above, and exactly what it still needs.
+Red ✗ = missing. Nothing here can be logged until it is cleared and has a pack.</div>
+{inv_html}
 <h2>Posted ({n_posted})</h2>
 {cards_done or "<div class=sub>nothing posted yet</div>"}
 <script>

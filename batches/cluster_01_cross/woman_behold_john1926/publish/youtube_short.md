@@ -1,7 +1,7 @@
 # youtube_short — YouTube (Short)
 
 ## TITLE
-While Dying, He Arranged His Mother's Care
+A Warning at Jesus' Birth Came True at the Cross
 
 ## DESCRIPTION
 At the cross (John 19:26), a thirty-year-old sentence finally lands.

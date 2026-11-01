@@ -1,0 +1,1 @@
+Final video is pinned from poc_living_sketchbook/look_and_live/ via ../FINAL_VIDEO.txt. Source narration: C:\Users\sanjay\PycharmProjects\PythonProject1\jesus\narration\41_The_Cure_Looked_Like_the_Curse\v1

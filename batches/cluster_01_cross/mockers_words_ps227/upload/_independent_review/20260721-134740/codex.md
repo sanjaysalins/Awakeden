@@ -2,7 +2,7 @@
 
 Findings:
 
-- YouTube Short title: “The Mockers at the Cross Were Quoting a 1,000-Year-Old Psalm” overstates the case. “Quoting” implies deliberate or verbatim quotation; the copy later says “nearly line for line.” Use “echoing” or “fulfilling” unless the video proves conscious quotation.
+- YouTube Short title: “Taunts at the Cross Were Written 1,000 Years Before” overstates the case. “Quoting” implies deliberate or verbatim quotation; the copy later says “nearly line for line.” Use “echoing” or “fulfilling” unless the video proves conscious quotation.
 
 - YouTube Short description: “the wagging heads, the sneer, the very words… (Psalm 22:8)” is citation-wrong. “They shake the head” is Psalm 22:7 KJV; Psalm 22:8 contains the trust/deliverance taunt. Cite “Psalm 22:7-8.”
 

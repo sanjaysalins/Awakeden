@@ -21,7 +21,7 @@
   {
    "platform": "youtube_short",
    "label": "YouTube (Short)",
-   "title": "His First Words on the Cross Were a Prayer for His Killers",
+   "title": "On the Cross, His First Words Were Not a Curse",
    "description": "Nails through his hands (Luke 23:34). Soldiers at his feet, gambling for his clothes. And from the cross comes a word no one expected. Not a curse. A prayer.\n\n\"Then said Jesus, Father, forgive them; for they know not what they do. And they parted his raiment, and cast lots\" (Luke 23:34, KJV).\n\nAs they divide his clothing, Jesus prays for the very people putting him to death. \"They know not what they do\" does not excuse the sin; it intercedes for the sinner. And the sin that put him there was ours too.\n\nHe gave himself willingly, and the Lord who prayed for his executioners still lives to make intercession for sinners. This is the gospel: while we were yet sinners, Christ died for us, pleading mercy before we knew we needed it.\n\nThat mercy is held out to you now. Come, and receive it by faith.\n\nFind Jesus in the whole Bible - one panel at a time. Subscribe to Awakeden. ✝\nRead it panel by panel: https://awakeden.com/read/father-forgive-them.html\nhttps://awakeden.com\n\nhttps://awakeden.com\n\nScripture quoted from the King James Version (KJV), public domain.",
    "tags": [
     "luke 23 34",
@@ -122,7 +122,7 @@
  ],
  "title_candidates": [
   {
-   "text": "His First Words on the Cross Were a Prayer for His Killers",
+   "text": "On the Cross, His First Words Were Not a Curse",
    "angle": "the unexpected first word: intercession, not a curse",
    "chosen": true,
    "reason": "highest-ranked hook by the generator"
@@ -191,7 +191,7 @@
   }
  ],
  "all_gates_pass": false,
- "redteam": "VERDICT: PASS\n\n- Verbatim: the quoted verse \"Then said Jesus, Father, forgive them; for they know not\n  what they do. And they parted his raiment, and cast lots\" matches the given KJV\n  character for character everywhere it appears; the IG short-quote \"Father, forgive\n  them; for they know not what they do.\" is a contiguous verbatim substring. Clean.\n- \"while we were yet sinners, Christ died for us\" is presented as gospel summary\n  language (Romans 5:8 phrasing) without a false attribution to Luke - acceptable and\n  matches the video's own narration.\n- Typography: all-ASCII. Clean.\n- Titles: \"His First Words on the Cross Were a Prayer for His Killers\" - true, honest,\n  strong. \"They Were Still Gambling When He Forgave Them\" - matches Luke's actual\n  sequencing which the video makes explicit. No clickbait, no fear/gain-loss framing;\n  the CTA is grace-anchored (\"come, and receive it by faith\").\n- Thread match: exactly the piece. Platform tones differentiated, hooks first-line.\n- Nothing blocking.",
+ "redteam": "VERDICT: PASS\n\n- Verbatim: the quoted verse \"Then said Jesus, Father, forgive them; for they know not\n  what they do. And they parted his raiment, and cast lots\" matches the given KJV\n  character for character everywhere it appears; the IG short-quote \"Father, forgive\n  them; for they know not what they do.\" is a contiguous verbatim substring. Clean.\n- \"while we were yet sinners, Christ died for us\" is presented as gospel summary\n  language (Romans 5:8 phrasing) without a false attribution to Luke - acceptable and\n  matches the video's own narration.\n- Typography: all-ASCII. Clean.\n- Titles: \"On the Cross, His First Words Were Not a Curse\" - true, honest,\n  strong. \"They Were Still Gambling When He Forgave Them\" - matches Luke's actual\n  sequencing which the video makes explicit. No clickbait, no fear/gain-loss framing;\n  the CTA is grace-anchored (\"come, and receive it by faith\").\n- Thread match: exactly the piece. Platform tones differentiated, hooks first-line.\n- Nothing blocking.",
  "panel_verdict": "",
  "notes": [
   "2026-07-15 Wave E: video repointed from the retired mocomic to the livingpage final (visual/father_forgive_them_sfx.mp4); copy unchanged (narration identical); thumbnails + website frames pending the user wave gate"

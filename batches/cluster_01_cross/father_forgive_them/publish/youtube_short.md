@@ -1,7 +1,7 @@
 # youtube_short — YouTube (Short)
 
 ## TITLE
-His First Words on the Cross Were a Prayer for His Killers
+On the Cross, His First Words Were Not a Curse
 
 ## DESCRIPTION
 Nails through his hands (Luke 23:34). Soldiers at his feet, gambling for his clothes. And from the cross comes a word no one expected. Not a curse. A prayer.

@@ -1,7 +1,7 @@
 # youtube_short — YouTube (Short)
 
 ## TITLE
-Psalm 22's Last Line Meets "It Is Finished"
+How Psalm 22 Ends Will Remind You of "It Is Finished"
 
 ## DESCRIPTION
 A psalm's last line and Jesus' dying word in John's gospel close on the very same note (Psalm 22:31; John 19:30).

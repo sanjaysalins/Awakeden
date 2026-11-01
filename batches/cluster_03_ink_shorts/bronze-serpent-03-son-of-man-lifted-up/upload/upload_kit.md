@@ -1,0 +1,182 @@
+# Upload Kit — Even So Must the Son of Man Be Lifted Up
+
+**Status:** RED-TEAMED  ·  **Gates:** ALL PASS ✅
+**Video:** `F:\slk\PycharmProjects\JesusInTheBible\poc_living_sketchbook\son_of_man_lifted_up\SONOFMANLIFTEDUP_living_sketchbook_cc_scored_sfx.mp4`
+**Format:** short  ·  **Series:** Types & Shadows  ·  **Anchor:** John 3:14-15
+
+> Copy each block straight into the platform's upload form. Title, description,
+> tags and hashtags are pre-checked, red-teamed and panel-reviewed.
+
+## ✔ Verification
+
+✅ **UK-G1 length** — all fields within hard limits
+✅ **UK-G2 KJV-strict** — anchor verse quoted verbatim
+✅ **UK-G3 doctrine** — no clickbait/overclaim tokens
+✅ **UK-G4 brand** — footer + CTA-to-Jesus present
+✅ **UK-G5 platform** — hashtag counts + link rules OK
+✅ **UK-G6 no-repeat** — no title collisions with siblings
+✅ **UK-G7 lint** — plain ASCII, grace-anchored, verse front-loaded
+
+### Red-team (in-engine hostile auditor)
+
+```
+VERDICT: REVISE
+- youtube_short: 'John uses the same word of lifting again at the cross' is an unsourced claim in the copy. Fix: add the supporting reference (John 12:32-33) so a viewer can check it.
+- Title 'One Word Joins Jesus Shame and His Glory' promises a Greek-word point; the video delivers it. Keep.
+- Verse quote John 3:14-15 verbatim: PASS.
+```
+
+## Title options (chosen first)
+
+1. **One Word Joins Jesus' Shame and His Glory** ⟵ CHOSEN  
+   _angle: honest hook_
+2. **Jesus Told a Pharisee the Cross Was His Glory**  
+   _angle: alt_
+3. **Why Did Jesus Compare Himself to a Snake on a Pole?**  
+   _angle: alt_
+4. **Lifted Up: Shame or Glory? John Says Both**  
+   _angle: alt_
+
+## YouTube (Short)
+
+**TITLE** (copy):
+```
+One Word Joins Jesus' Shame and His Glory
+```
+_41 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+By night, Jesus tells a Pharisee something strange: the lifting that shames Him is what John calls His glory.
+
+"And as Moses lifted up the serpent in the wilderness, even so must the Son of man be lifted up: That whosoever believeth in him should not perish, but have eternal life." (John 3:14-15, KJV)
+
+Centuries earlier a bronze serpent healed dying Israel with a look. John uses the same word of lifting again at the cross: shame and glory, one lifting. You cannot want Christ's glory without His cross.
+
+Believe on Christ, lifted up for you, and live.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_783 characters_
+
+**TAGS** (copy — paste into the keyword/tags field):
+```
+john 3 14, nicodemus, lifted up, bronze serpent, son of man, glory of christ, types and shadows, jesus christ, kjv bible, bible shorts, gospel of john, bible study
+```
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #John3 #Nicodemus #KJV
+```
+
+---
+## YouTube (Long-form 16:9)
+
+**TITLE** (copy):
+```
+One Word Joins Jesus' Shame and His Glory
+```
+_41 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+By night, Jesus tells a Pharisee something strange: the lifting that shames Him is what John calls His glory.
+
+"And as Moses lifted up the serpent in the wilderness, even so must the Son of man be lifted up: That whosoever believeth in him should not perish, but have eternal life." (John 3:14-15, KJV)
+
+Centuries earlier a bronze serpent healed dying Israel with a look. John uses the same word of lifting again at the cross: shame and glory, one lifting. You cannot want Christ's glory without His cross.
+
+Believe on Christ, lifted up for you, and live.
+
+Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_783 characters_
+
+**TAGS** (copy — paste into the keyword/tags field):
+```
+john 3 14, nicodemus, lifted up, bronze serpent, son of man, glory of christ, types and shadows, jesus christ, kjv bible, bible shorts, gospel of john, bible study
+```
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #John3
+```
+
+---
+## TikTok
+
+**DESCRIPTION / CAPTION** (copy):
+```
+By night, Jesus tells a Pharisee: the lifting that shames Him is His glory. John 3:14-15. One word, shame and glory together. Believe on Christ, lifted up for you, and live.
+
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+```
+_245 characters_
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #John3 #Nicodemus #KJV
+```
+
+---
+## Facebook (Reel/Video)
+
+**TITLE** (copy):
+```
+One word joins Jesus' shame and His glory
+```
+_41 characters_
+
+**DESCRIPTION / CAPTION** (copy):
+```
+John 3:14-15. "And as Moses lifted up the serpent in the wilderness, even so must the Son of man be lifted up: That whosoever believeth in him should not perish, but have eternal life." (KJV)
+
+The lifting that shamed Him is the word John uses for His glory. Believe on Christ, lifted up for you, and live.
+
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+
+Follow:
+YouTube: @awakeden (https://youtube.com/@awakeden)
+
+https://awakeden.com
+
+Scripture quoted from the King James Version (KJV), public domain.
+```
+_527 characters_
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #John3
+```
+
+---
+## Instagram (Reel)
+
+**DESCRIPTION / CAPTION** (copy):
+```
+By night, Jesus tells a Pharisee: the lifting that shames Him is His glory. John 3:14-15. One word, shame and glory together. Believe on Christ, lifted up for you, and live.
+
+Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+```
+_245 characters_
+
+**HASHTAGS** (copy):
+```
+#Bible #Jesus #John3 #Nicodemus #KJV #LiftedUp #BibleStudy #Faith
+```
+
+---

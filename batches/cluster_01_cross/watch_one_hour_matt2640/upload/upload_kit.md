@@ -23,7 +23,7 @@
 VERDICT: PASS
 
 - youtube_long: "This episode ... walks through the Gethsemane account ... panel by panel" - this block describes a long-form deep-dive but the source video is a 60-second short. The pack for a short only ships youtube_short/tiktok/facebook/instagram, so this block is unused today; if it is ever pasted for a long upload, rewrite it against the actual long video first. Not blocking for this short's pack.
-- youtube_short title "Jesus Asked Three Fishermen for One Thing. They Failed in an Hour." - honest to the narration ("They failed inside an hour"), no curiosity-gap lie. Keep.
+- youtube_short title "Jesus Asked 3 Friends for One Hour. They Failed." - honest to the narration ("They failed inside an hour"), no curiosity-gap lie. Keep.
 - Verse check: the Matthew 26:40 quote in youtube_short and facebook matches the supplied KJV string character-for-character, including "What, could ye not watch with me one hour?". PASS.
 - Doctrine: "not a curse, a diagnosis full of mercy" and "no hour of yours is watched alone" are the video's own landing lines - no overclaim, no fear/gain-loss framing. The CTA points to Jesus. PASS.
 - TikTok/Instagram: first line is the hook, no URLs, caption under budget. PASS.
@@ -32,7 +32,7 @@ VERDICT: PASS
 
 ## Title options (chosen first)
 
-1. **Jesus Asked Three Fishermen for One Thing. They Failed in an Hour.** ⟵ CHOSEN  
+1. **Jesus Asked 3 Friends for One Hour. They Failed.** ⟵ CHOSEN  
    _angle: the failure hook - the ask was small and they still could not do it_
 2. **Could Ye Not Watch With Me One Hour? (Matthew 26:40)**  
    _angle: the question itself, verbatim, with the reference_
@@ -45,7 +45,7 @@ VERDICT: PASS
 
 **TITLE** (copy):
 ```
-Jesus Asked Three Fishermen for One Thing. They Failed in an Hour.
+Jesus Asked 3 Friends for One Hour. They Failed.
 ```
 _66 characters_
 
@@ -135,7 +135,7 @@ _313 characters_
 
 **TITLE** (copy):
 ```
-Jesus Asked Three Fishermen for One Thing. They Failed in an Hour.
+Jesus Asked 3 Friends for One Hour. They Failed.
 ```
 _66 characters_
 
