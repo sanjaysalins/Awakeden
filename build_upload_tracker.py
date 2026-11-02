@@ -304,8 +304,9 @@ def finished_inventory(states, queue_slugs: set) -> tuple[str, dict]:
     for d in sorted(SKETCH_DIR.iterdir()) if SKETCH_DIR.is_dir() else []:
         if not d.is_dir() or d.name in _SKETCH_LONGS or d.name.startswith("_"):
             continue
-        if f"poc_living_sketchbook/{d.name}/" in _pinned.replace(chr(92), "/"):
-            continue  # already a catalogue piece (see the post queue above)
+        _p = _pinned.replace(chr(92), "/")
+        if f"poc_living_sketchbook/{d.name}/" in _p or f"/{d.name}_v" in _p:
+            continue  # already a catalogue piece (see the post queue above); also v3/v4 rewrites pinned from _rewrite_v*/video/
         cc = sorted(d.glob("*_cc.mp4"))
         if cc:
             rows.append(_row(d.name.replace("_", " ").title(), "ink short", cc[-1], d,
