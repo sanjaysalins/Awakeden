@@ -1320,6 +1320,48 @@ items:
     - not yet narrated.
   public_blurb: 'Distilled from the locked long-form study. Anchor verse: Hebrews
     10:11-12. Narration not yet written.'
+- slug: rahab-and-the-scarlet-cord
+  kind: short
+  title: Why One Red Cord Survived the Fall of Jericho
+  ref: Joshua 2:18
+  series_id: jesus-in-ot
+  cluster: null
+  public_status: studio_complete
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: One red cord kept a woman alive when a city fell.
+  public_blurb: One red cord kept a woman alive when a city fell. Rahab was saved by faith, not by her past.
+  source: ../batches/cluster_03_ink_shorts/rahab-and-the-scarlet-cord
+- slug: aaron-and-the-two-goats
+  kind: short
+  title: One Goat Died. One Was Sent Away. Why Two?
+  ref: Leviticus 16:8
+  series_id: jesus-in-ot
+  cluster: null
+  public_status: studio_complete
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: One goat died. One was sent away. Why two?
+  public_blurb: Two goats on the Day of Atonement, and the one picture they make together.
+  source: ../batches/cluster_03_ink_shorts/aaron-and-the-two-goats
+- slug: moses-and-the-snake-on-a-pole
+  kind: short
+  title: God Answered Snakebite With a Snake on a Pole
+  ref: Numbers 21:8-9
+  series_id: jesus-in-ot
+  cluster: null
+  public_status: studio_complete
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: God answered snakebite with a snake on a pole.
+  public_blurb: Numbers 21 and John 3:14. Look and live.
+  source: ../batches/cluster_03_ink_shorts/moses-and-the-snake-on-a-pole
 series:
 - slug: he-is-risen
   title: He Is Risen

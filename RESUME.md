@@ -1,3 +1,17 @@
+## 2026-11-02 HANDOVER - 3 ink shorts REWRITTEN (v4), recorded, re-timed, packed
+
+**State.** Jericho/Rahab, Two Goats, Moses-snake-on-a-pole: words LOCKED v4 (`poc_living_sketchbook/_rewrite_v4/LOCKED_WORDS_2026-11-02.md`),
+recorded (ElevenLabs, 2145 chars, ledger est ~$0.43), re-timed, captioned, logo'd (`_rewrite_v4/video/<piece>_v4_cc.mp4`, 56.8/54.0/59.6 s).
+Packs rebuilt GREEN, thumbs from clean frames, manifest entries added, tracker rebuilt, release_check GREEN (81 items). Owner approved audio + videos.
+Why: the v3 words failed a 15-seat doctrine/clarity panel (all REVISE). v4 went through blind 5-writer drafting, judge table
+(`_rewrite_v4/panel_r1/JUDGE_TABLE.md`), 2 blind audience rounds (Fable + AI panel). Process = words-before-money rule.
+
+**Still weak / not re-tested:** 3 late fixes (Rahab "bring everyone you love inside"; Goats "to pay for the people's sin"; Moses 2 Cor 5:21 line).
+Rahab last line still generic-ish. Goats "could not pay" is a Christian reading. Orphan one-word caption ("sin.") in Goats SRT.
+No outside 5-CLI panel on the final pack copy (I wrote copy + red-team verdicts via the agent bridge).
+
+**Next.** Owner posts from `_UPLOAD_TRACKER.html` (engine is paste-only; use `upload_tracker.py --set` after posting). Real seed viewers still recommended.
+
 ## 2026-11-01 (night) HANDOVER - single upload tracker + 3 ink-short rewrites
 
 **Where we are.** `_UPLOAD_TRACKER.html` is the ONE tracker (calendar order, "Next up to post (32)",

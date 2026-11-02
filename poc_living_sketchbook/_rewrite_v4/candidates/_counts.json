@@ -1,0 +1,32 @@
+{
+ "jericho_X": {
+  "words": 143,
+  "silence": 3.0,
+  "est_runtime_s": 64.6
+ },
+ "jericho_Y": {
+  "words": 130,
+  "silence": 2.0,
+  "est_runtime_s": 58.3
+ },
+ "two_goats_X": {
+  "words": 138,
+  "silence": 3.0,
+  "est_runtime_s": 62.6
+ },
+ "two_goats_Y": {
+  "words": 136,
+  "silence": 2.0,
+  "est_runtime_s": 60.7
+ },
+ "bronze_serpent_X": {
+  "words": 142,
+  "silence": 3.0,
+  "est_runtime_s": 64.2
+ },
+ "bronze_serpent_Y": {
+  "words": 119,
+  "silence": 2.0,
+  "est_runtime_s": 53.8
+ }
+}
