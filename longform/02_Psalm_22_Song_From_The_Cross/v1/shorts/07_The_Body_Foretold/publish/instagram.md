@@ -5,5 +5,7 @@ David described a crucifixion in Psalm 22 a thousand years before Rome invented 
 
 Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
 
+#Psalm22 #BibleProphecy #Jesus #KJV #Christian #Faith #BibleVerse #OldTestament #Prophecy #JesusChrist
+
 ## HASHTAGS
 #Psalm22 #BibleProphecy #Jesus #KJV #Christian #Faith #BibleVerse #OldTestament #Prophecy #JesusChrist

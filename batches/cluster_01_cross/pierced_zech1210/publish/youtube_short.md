@@ -24,6 +24,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Bible #Jesus #Zechariah #MessianicProphecy #KJV
+
 ## TAGS
 zechariah 12 10, jesus in the old testament, messianic prophecy, the crucifixion, pierced, john 19 37, bible shorts, kjv bible, old testament prophecy, jesus christ, cross of christ, bible study
 

@@ -26,6 +26,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Bible #Jesus #WordsFromTheCross #Psalm31 #KJV
+
 ## TAGS
 luke 23 46, into thy hands i commend my spirit, psalm 31 5, words from the cross, last words of jesus, jewish evening prayer, kjv bible, bible shorts, the crucifixion, jesus christ, gospel, bible study
 

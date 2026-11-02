@@ -23,6 +23,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Psalm22 #BibleProphecy #JesusInTheBible #KJV #ChristianShorts
+
 ## TAGS
 psalm 22, jesus cross, bible prophecy, old testament prophecy, matthew 27, jesus fulfills prophecy, bible shorts, christian shorts, kjv bible, messianic prophecy, crucifixion, mockers
 

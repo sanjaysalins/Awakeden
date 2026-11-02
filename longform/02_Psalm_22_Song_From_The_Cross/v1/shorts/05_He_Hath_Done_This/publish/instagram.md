@@ -5,5 +5,7 @@ Psalm 22's last line and Jesus' last breath in John close on the same note: it i
 
 Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
 
+#Psalm22 #BibleProphecy #Jesus #KJV #Christian #Faith #BibleVerse #OldTestament #FinishedWork #JesusChrist
+
 ## HASHTAGS
 #Psalm22 #BibleProphecy #Jesus #KJV #Christian #Faith #BibleVerse #OldTestament #FinishedWork #JesusChrist

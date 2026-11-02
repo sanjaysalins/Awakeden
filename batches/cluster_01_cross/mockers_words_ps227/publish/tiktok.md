@@ -5,5 +5,7 @@ The mob at the cross was reading from a script written a thousand years earlier.
 
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 
+#Bible #Jesus #Psalm22 #Cross #KJV
+
 ## HASHTAGS
 #Bible #Jesus #Psalm22 #Cross #KJV

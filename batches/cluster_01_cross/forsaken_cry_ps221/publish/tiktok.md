@@ -6,5 +6,7 @@ Jesus' darkest cry was a quote, written 1,000 years before the cross. "My God, m
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 Follow @awakeden
 
+#Bible #Jesus #Psalm22 #Forsaken #Cross #KJV
+
 ## HASHTAGS
 #Bible #Jesus #Psalm22 #Forsaken #Cross #KJV

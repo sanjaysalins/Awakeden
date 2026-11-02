@@ -28,6 +28,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#BronzeSerpent #Numbers21 #BibleProphecy #LookAndLive #JesusChrist
+
 ## TAGS
 Bronze Serpent, Numbers 21, Bible prophecy, Old Testament typology, John 3:14-15, look and live, Moses lifted up the serpent, Son of man lifted up, Jesus crucifixion, Bible study, KJV Bible, Bible deep dive, types and shadows, Nicodemus, John 3:16, Bible symbolism, Jesus fulfills prophecy, Numbers
 

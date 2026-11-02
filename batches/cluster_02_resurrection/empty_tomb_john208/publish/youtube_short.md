@@ -19,6 +19,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Bible #Jesus #EmptyTomb #Resurrection #Shorts
+
 ## TAGS
 empty tomb, john 20, resurrection of jesus, mary magdalene, peter and john, grave clothes, napkin wrapped together, doubting thomas, gospel of john, kjv bible, bible shorts, jesus is risen
 

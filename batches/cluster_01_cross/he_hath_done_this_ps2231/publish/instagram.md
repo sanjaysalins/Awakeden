@@ -5,5 +5,7 @@ Psalm 22's last line: he hath done this. Jesus' dying word in John: It is finish
 
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 
+#Bible #Jesus #Psalm22 #ItIsFinished #KJV #BibleShorts #Gospel #Christian #FinishedWork #Awakeden
+
 ## HASHTAGS
 #Bible #Jesus #Psalm22 #ItIsFinished #KJV #BibleShorts #Gospel #Christian #FinishedWork #Awakeden

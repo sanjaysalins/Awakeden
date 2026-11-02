@@ -5,5 +5,7 @@ Most people stop reading Psalm 22 at the cross. At verse 22 the voice turns to p
 
 Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
 
+#Psalm22 #BibleProphecy #Jesus #KJV #Christian #Faith #BibleVerse #OldTestament #Resurrection #JesusChrist
+
 ## HASHTAGS
 #Psalm22 #BibleProphecy #Jesus #KJV #Christian #Faith #BibleVerse #OldTestament #Resurrection #JesusChrist

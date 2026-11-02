@@ -1,12 +1,13 @@
 {
-  "media_dir": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\crucifixion_foretold_ps2218",
+  "media_dir": "F:\\slk\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\crucifixion_foretold_ps2218",
   "episode_title": "The Crucifixion Foretold",
   "format": "short",
   "series": "Jesus in the Old Testament",
   "anchor_ref": "Psalm 22:18",
-  "video": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\crucifixion_foretold_ps2218\\visual\\crucifixion_foretold_ps2218_sfx.mp4",
-  "words_json": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\crucifixion_foretold_ps2218\\audio\\alignment.json",
+  "video": "F:\\slk\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\crucifixion_foretold_ps2218\\visual\\crucifixion_foretold_ps2218_sfx.mp4",
+  "words_json": "F:\\slk\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\crucifixion_foretold_ps2218\\audio\\alignment.json",
   "final_sha": "38e0d27200cd6baeb87eb385e3119aa8613adca63c9d8bcff466ec3e6127c232",
-  "thumbnail": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\crucifixion_foretold_ps2218\\publish\\thumbs\\thumb_16x9.jpg",
+  "thumbnail": "F:\\slk\\PycharmProjects\\JesusInTheBible\\batches\\cluster_01_cross\\crucifixion_foretold_ps2218\\publish\\thumbs\\thumb_16x9.jpg",
+  "captions_source": "aligned",
   "copy_final_sha": "38e0d27200cd6baeb87eb385e3119aa8613adca63c9d8bcff466ec3e6127c232"
 }

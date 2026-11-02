@@ -23,6 +23,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Psalm22 #BibleProphecy #JesusInTheBible #KJV #ChristianShorts
+
 ## TAGS
 psalm 22, i thirst, john 19, jesus cross, bible prophecy, messianic psalm, old testament prophecy, kjv bible, bible shorts, christian shorts, jesus in the old testament, living water
 

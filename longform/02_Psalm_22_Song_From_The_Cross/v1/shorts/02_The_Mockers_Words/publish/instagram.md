@@ -5,5 +5,7 @@ They shook their heads and sneered the exact taunt Psalm 22 had written 1,000 ye
 
 Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
 
+#Psalm22 #BibleProphecy #Jesus #KJV #Christian #Faith #BibleVerse #OldTestament #Prophecy #JesusChrist
+
 ## HASHTAGS
 #Psalm22 #BibleProphecy #Jesus #KJV #Christian #Faith #BibleVerse #OldTestament #Prophecy #JesusChrist

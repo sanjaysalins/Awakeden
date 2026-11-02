@@ -22,6 +22,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Bible #Jesus #Prophecy #ThirtyPiecesOfSilver #KJV
+
 ## TAGS
 zechariah 11 13, thirty pieces of silver, judas iscariot, messianic prophecy, jesus in the old testament, matthew 27, potters field, kjv bible, bible shorts, prophecy fulfilled, jesus christ, bible study
 

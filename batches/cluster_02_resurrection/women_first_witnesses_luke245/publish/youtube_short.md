@@ -17,6 +17,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Bible #Jesus #HeIsRisen #EmptyTomb #Resurrection
+
 ## TAGS
 women at the tomb, resurrection, Luke 24, empty tomb, first witnesses, Mary Magdalene, Joanna, He is risen, why seek the living among the dead, Easter, Bible, Jesus, gospel, Christian shorts, Awakeden
 

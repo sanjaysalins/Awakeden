@@ -10,5 +10,7 @@ No accident. The plan.
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 Follow @awakeden
 
+#Bible #Jesus #Psalm22 #Prophecy #Cross #KJV #OldTestament #BibleShorts #Awakeden
+
 ## HASHTAGS
 #Bible #Jesus #Psalm22 #Prophecy #Cross #KJV #OldTestament #BibleShorts #Awakeden

@@ -5,5 +5,7 @@ They rolled dice for the clothes off his back, never knowing they were quoting a
 
 Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
 
+#Psalm22 #BibleProphecy #Jesus #KJV #Christian #Faith #BibleVerse #OldTestament #Prophecy #JesusChrist
+
 ## HASHTAGS
 #Psalm22 #BibleProphecy #Jesus #KJV #Christian #Faith #BibleVerse #OldTestament #Prophecy #JesusChrist

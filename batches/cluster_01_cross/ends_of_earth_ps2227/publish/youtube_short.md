@@ -22,6 +22,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Bible #Jesus #Psalm22 #Gospel #KJV
+
 ## TAGS
 psalm 22, psalm 22 27, ends of the earth, all nations, kindreds of the nations, reach of the cross, messianic psalm, the crucifixion, resurrection, kjv bible, bible shorts, jesus christ, gospel
 

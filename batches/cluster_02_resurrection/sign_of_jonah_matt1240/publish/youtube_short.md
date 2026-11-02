@@ -24,6 +24,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Bible #Jesus #Jonah #Resurrection #KJV
+
 ## TAGS
 matthew 12 40, sign of jonah, jonah and the whale, jonah and jesus, resurrection prophecy, three days and three nights, jesus in the old testament, kjv bible, bible shorts, the resurrection, jesus christ, gospel
 

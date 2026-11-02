@@ -6,5 +6,7 @@ Two criminals. Same nails. Same hill. Opposite eternities. One asked: remember m
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 Follow @awakeden
 
+#Bible #Jesus #ThiefOnTheCross #Paradise #Gospel #KJV
+
 ## HASHTAGS
 #Bible #Jesus #ThiefOnTheCross #Paradise #Gospel #KJV

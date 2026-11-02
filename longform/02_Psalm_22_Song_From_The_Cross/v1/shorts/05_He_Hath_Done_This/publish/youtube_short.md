@@ -25,6 +25,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Psalm22 #BibleProphecy #JesusInTheBible #KJV #ChristianShorts
+
 ## TAGS
 psalm 22, it is finished, john 19 30, finished work of christ, bible prophecy, messianic psalm, old testament, kjv bible, bible shorts, christian shorts, jesus in the old testament, he hath done this
 

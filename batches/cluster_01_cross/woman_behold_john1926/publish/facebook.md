@@ -18,5 +18,7 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Bible #Jesus #Mary
+
 ## HASHTAGS
 #Bible #Jesus #Mary

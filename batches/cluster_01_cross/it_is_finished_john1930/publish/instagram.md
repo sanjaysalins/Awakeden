@@ -10,5 +10,7 @@ Two finished works. One Workman. He bowed his head so you could lift yours. Ente
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 Follow @awakeden
 
+#Bible #Jesus #ItIsFinished #Cross #Gospel #KJV #Creation #BibleShorts #Awakeden
+
 ## HASHTAGS
 #Bible #Jesus #ItIsFinished #Cross #Gospel #KJV #Creation #BibleShorts #Awakeden

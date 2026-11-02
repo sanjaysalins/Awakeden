@@ -5,5 +5,7 @@ The taunts at the cross were written down a thousand years before they were shou
 
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 
+#Bible #Jesus #Psalm22 #Cross #KJV #BibleShorts #Prophecy #Gospel #Christian #Awakeden
+
 ## HASHTAGS
 #Bible #Jesus #Psalm22 #Cross #KJV #BibleShorts #Prophecy #Gospel #Christian #Awakeden

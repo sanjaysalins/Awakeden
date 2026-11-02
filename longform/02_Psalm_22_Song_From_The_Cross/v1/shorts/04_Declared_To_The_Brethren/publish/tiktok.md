@@ -5,5 +5,7 @@ Most people stop reading Psalm 22 at the cross. At verse 22 the same voice turns
 
 Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
 
+#Psalm22 #BibleProphecy #Jesus #KJV #ChristianTikTok #BibleFacts
+
 ## HASHTAGS
 #Psalm22 #BibleProphecy #Jesus #KJV #ChristianTikTok #BibleFacts

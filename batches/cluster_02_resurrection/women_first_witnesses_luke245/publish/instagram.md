@@ -5,5 +5,7 @@ The first news that Jesus was alive was dismissed as nonsense, by His own apostl
 
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 
+#Bible #Jesus #HeIsRisen #Resurrection #EmptyTomb #Faith #Gospel #Scripture #Christian #Easter #Awakeden
+
 ## HASHTAGS
 #Bible #Jesus #HeIsRisen #Resurrection #EmptyTomb #Faith #Gospel #Scripture #Christian #Easter #Awakeden

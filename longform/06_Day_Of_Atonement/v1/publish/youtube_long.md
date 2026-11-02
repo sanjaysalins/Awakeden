@@ -26,6 +26,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Bible #Jesus #DayOfAtonement #Leviticus16 #Atonement
+
 ## TAGS
 Bible, Jesus, Day of Atonement, Leviticus 16, scapegoat, atonement, Old Testament, Hebrews 9, sin offering, Bible study, Christian, gospel, types and shadows, mercy seat, Christian teaching
 

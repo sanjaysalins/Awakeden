@@ -5,5 +5,7 @@ They called the first Easter report an "idle tale," and it came from women no co
 
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 
+#Bible #Jesus #HeIsRisen #Resurrection #EmptyTomb #Faith
+
 ## HASHTAGS
 #Bible #Jesus #HeIsRisen #Resurrection #EmptyTomb #Faith

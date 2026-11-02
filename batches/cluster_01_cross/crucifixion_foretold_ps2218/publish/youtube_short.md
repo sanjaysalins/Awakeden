@@ -22,6 +22,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Bible #Jesus #Psalm22 #Prophecy #KJV
+
 ## TAGS
 psalm 22 18, crucifixion foretold, messianic prophecy, jesus in the old testament, casting lots garments, john 19 24, kjv bible, bible shorts, prophecy fulfilled, david psalm 22, jesus christ, bible study
 

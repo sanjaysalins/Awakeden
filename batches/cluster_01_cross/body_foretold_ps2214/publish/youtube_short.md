@@ -24,6 +24,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Bible #Jesus #Psalm22 #Cross #KJV
+
 ## TAGS
 psalm 22, psalm 22 14, psalm 22 17, david, messianic psalm, crucifixion foretold in psalms, poured out like water, bones out of joint, the crucifixion, kjv bible, bible shorts, jesus christ, gospel
 

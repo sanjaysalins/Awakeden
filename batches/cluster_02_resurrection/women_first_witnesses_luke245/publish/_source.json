@@ -1,12 +1,13 @@
 {
-  "media_dir": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_02_resurrection\\women_first_witnesses_luke245",
+  "media_dir": "F:\\slk\\PycharmProjects\\JesusInTheBible\\batches\\cluster_02_resurrection\\women_first_witnesses_luke245",
   "episode_title": "Women as First Witnesses",
   "format": "short",
   "series": "Awakeden",
   "anchor_ref": "Luke 24:5-6",
-  "video": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_02_resurrection\\women_first_witnesses_luke245\\visual\\women_first_witnesses_luke245_sfx.mp4",
-  "words_json": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_02_resurrection\\women_first_witnesses_luke245\\audio\\alignment.json",
+  "video": "F:\\slk\\PycharmProjects\\JesusInTheBible\\batches\\cluster_02_resurrection\\women_first_witnesses_luke245\\visual\\women_first_witnesses_luke245_sfx.mp4",
+  "words_json": "F:\\slk\\PycharmProjects\\JesusInTheBible\\batches\\cluster_02_resurrection\\women_first_witnesses_luke245\\audio\\alignment.json",
   "final_sha": "a1d0377f71ac09beaaacf3c17b5a19aa4e6f7dd9bd2e4fedff3c4e4a4b0c295f",
-  "thumbnail": "C:\\Users\\sanjay\\PycharmProjects\\JesusInTheBible\\batches\\cluster_02_resurrection\\women_first_witnesses_luke245\\publish\\thumbs\\thumb_16x9.jpg",
+  "thumbnail": "F:\\slk\\PycharmProjects\\JesusInTheBible\\batches\\cluster_02_resurrection\\women_first_witnesses_luke245\\publish\\thumbs\\thumb_16x9.jpg",
+  "captions_source": "aligned",
   "copy_final_sha": "a1d0377f71ac09beaaacf3c17b5a19aa4e6f7dd9bd2e4fedff3c4e4a4b0c295f"
 }

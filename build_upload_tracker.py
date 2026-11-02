@@ -387,14 +387,22 @@ def main() -> int:
     swirls_entries = ([(t, s, SWIRLS_DIR / s / f) for t, s, f in swirls_mod.LEGACY]
                       + swirls_mod.discover())
     n_swirls_todo = n_swirls_done = 0
-    for title, slug, final in ([] if SWIRLS_HOLD else swirls_entries):
+    cards_held, n_swirls_held = "", 0
+    _seen_sw = set()
+    for title, slug, final in swirls_entries:
+        if slug in _seen_sw:
+            continue
+        _seen_sw.add(slug)
         card_html, missing = swirls_card(title, slug, final, swirls_ledger.get(slug, {}))
-        if missing:
+        if not missing:
+            cards_done += card_html          # fully posted -> Posted, hold or not
+            n_swirls_done += 1
+        elif SWIRLS_HOLD:
+            cards_held += card_html          # 30-ep hold: tracked, URL boxes live, not in Next up
+            n_swirls_held += 1
+        else:
             cards_todo += card_html
             n_swirls_todo += 1
-        else:
-            cards_done += card_html
-            n_swirls_done += 1
 
     inv_html, inv_counts = finished_inventory(states, q_slugs)
     n_queue, n_posted = len(queue) + n_swirls_todo, len(posted) + n_swirls_done
@@ -444,6 +452,10 @@ is a view; regenerate: <code>.venv\\Scripts\\python.exe build_upload_tracker.py<
 (awaiting catalogue approval). Pre-launch checklist items still open in RELEASE_CALENDAR.md:
 channel dress/playlist, brand fields, safe-zone test upload.</div>
 {cards_todo or "<div class=sub>nothing ready and unposted</div>"}
+<h2>On hold: Swirls of Life ({n_swirls_held}) &mdash; 30-episode rule</h2>
+<div class=sub>Finished Swirls episodes. NOT to be posted until 30 episodes exist. The URL boxes work, so a URL
+can still be logged if you ever break the hold. Once every platform is logged, the episode moves to Posted.</div>
+{cards_held or "<div class=sub>none on hold</div>"}
 <h2>All other finished media — ready state ({inv_counts["blocked"] + inv_counts["hold"]})</h2>
 <div class=sub>Everything with a finished video on disk that is NOT in the list above, and exactly what it still needs.
 Red ✗ = missing. Nothing here can be logged until it is cleared and has a pack.</div>

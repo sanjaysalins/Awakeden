@@ -5,5 +5,7 @@ Psalm 22 opens with one forsaken man dying alone and ends with every nation on e
 
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 
+#Bible #Jesus #Psalm22 #Gospel #KJV
+
 ## HASHTAGS
 #Bible #Jesus #Psalm22 #Gospel #KJV

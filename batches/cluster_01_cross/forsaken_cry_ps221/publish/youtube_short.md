@@ -22,6 +22,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Bible #Jesus #Psalm22 #Forsaken #KJV
+
 ## TAGS
 psalm 22 1, my god my god why hast thou forsaken me, forsaken cry, words from the cross, matthew 27 46, jesus in the old testament, kjv bible, bible shorts, the crucifixion, jesus christ, gospel, bible study
 

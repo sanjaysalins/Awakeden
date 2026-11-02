@@ -6,5 +6,7 @@ Ten centuries before the cross, a song recorded how a dying man's clothes would 
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 Follow @awakeden
 
+#Bible #Jesus #Psalm22 #Prophecy #Cross #KJV
+
 ## HASHTAGS
 #Bible #Jesus #Psalm22 #Prophecy #Cross #KJV

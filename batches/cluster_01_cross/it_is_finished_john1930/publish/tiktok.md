@@ -6,5 +6,7 @@ The first time the Bible says finished, nothing was broken yet. Creation: finish
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 Follow @awakeden
 
+#Bible #Jesus #ItIsFinished #Cross #Gospel #KJV
+
 ## HASHTAGS
 #Bible #Jesus #ItIsFinished #Cross #Gospel #KJV

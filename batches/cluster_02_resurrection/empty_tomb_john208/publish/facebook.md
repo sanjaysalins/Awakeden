@@ -19,5 +19,7 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Bible #Jesus #EmptyTomb #Resurrection
+
 ## HASHTAGS
 #Bible #Jesus #EmptyTomb #Resurrection

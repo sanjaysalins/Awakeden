@@ -20,6 +20,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Bible #Jesus #Gethsemane #KJV #Shorts
+
 ## TAGS
 Matthew 26:40, Gethsemane, watch and pray, Jesus prayer, could ye not watch one hour, Bible shorts, KJV Bible, words of Jesus, Peter James John, the flesh is weak, Bible comic, Awakeden
 

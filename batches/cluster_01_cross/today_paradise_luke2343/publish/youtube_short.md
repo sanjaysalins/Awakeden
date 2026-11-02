@@ -24,6 +24,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Bible #Jesus #ThiefOnTheCross #Paradise #KJV
+
 ## TAGS
 luke 23 43, thief on the cross, today in paradise, words from the cross, the crucifixion, penitent thief, salvation by faith, kjv bible, bible shorts, jesus christ, gospel, bible study
 

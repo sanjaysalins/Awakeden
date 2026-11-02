@@ -10,5 +10,7 @@ He died like a child falling asleep in his father's arms. On the third day, morn
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 Follow @awakeden
 
+#Bible #Jesus #Cross #WordsFromTheCross #Psalm31 #KJV #Gospel #BibleShorts #Awakeden
+
 ## HASHTAGS
 #Bible #Jesus #Cross #WordsFromTheCross #Psalm31 #KJV #Gospel #BibleShorts #Awakeden

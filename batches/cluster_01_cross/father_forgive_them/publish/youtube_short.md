@@ -24,6 +24,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Bible #Jesus #FatherForgiveThem #Cross #KJV
+
 ## TAGS
 luke 23 34, father forgive them, words from the cross, seven sayings of the cross, jesus prays for enemies, the crucifixion, kjv bible, bible shorts, intercession of christ, jesus christ, gospel, bible study
 

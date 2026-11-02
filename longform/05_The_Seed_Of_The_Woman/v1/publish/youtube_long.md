@@ -26,6 +26,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Bible #Jesus #Genesis #BibleProphecy #BibleStudy
+
 ## TAGS
 Genesis 3:15, protoevangelium, seed of the woman, first gospel prophecy, messianic prophecy, Old Testament prophecy of Jesus, Jesus in the Old Testament, types and shadows Bible, Bible prophecy fulfilled, Christian apologetics, Bible study deep dive, Eden the fall, Romans 16:20, Galatians 4:4, protoevangelium explained
 

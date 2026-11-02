@@ -23,6 +23,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Psalm22 #BibleProphecy #JesusInTheBible #KJV #ChristianShorts
+
 ## TAGS
 psalm 22, jesus cross, my god my god, cry of dereliction, matthew 27 46, bible prophecy, messianic psalm, old testament prophecy, kjv bible, bible shorts, christian shorts, jesus in the old testament
 

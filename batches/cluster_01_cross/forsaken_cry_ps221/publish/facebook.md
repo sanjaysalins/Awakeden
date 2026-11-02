@@ -20,5 +20,7 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Bible #Jesus #Psalm22
+
 ## HASHTAGS
 #Bible #Jesus #Psalm22

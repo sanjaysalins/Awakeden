@@ -19,5 +19,7 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Psalm22 #Jesus #BibleProphecy #KJV #Faith
+
 ## HASHTAGS
 #Psalm22 #Jesus #BibleProphecy #KJV #Faith

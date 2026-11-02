@@ -6,5 +6,7 @@ A sword was promised at his birth. It landed at the cross. Mary watched her son 
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 Follow @awakeden
 
+#Bible #Jesus #Mary #Cross #WordsFromTheCross #KJV
+
 ## HASHTAGS
 #Bible #Jesus #Mary #Cross #WordsFromTheCross #KJV

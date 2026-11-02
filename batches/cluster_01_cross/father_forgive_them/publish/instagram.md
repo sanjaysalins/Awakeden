@@ -10,5 +10,7 @@ Mercy was pleading for you before you knew you needed it. It is held out to you 
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 Follow @awakeden
 
+#Bible #Jesus #FatherForgiveThem #Cross #Gospel #KJV #WordsFromTheCross #BibleShorts #Awakeden
+
 ## HASHTAGS
 #Bible #Jesus #FatherForgiveThem #Cross #Gospel #KJV #WordsFromTheCross #BibleShorts #Awakeden

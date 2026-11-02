@@ -5,5 +5,7 @@ Psalm 22's last line and Jesus' last word from the cross close on the same note:
 
 Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
 
+#Psalm22 #BibleProphecy #Jesus #KJV #ChristianTikTok #BibleFacts
+
 ## HASHTAGS
 #Psalm22 #BibleProphecy #Jesus #KJV #ChristianTikTok #BibleFacts

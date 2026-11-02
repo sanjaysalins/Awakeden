@@ -22,6 +22,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Bible #Jesus #Psalm22 #Risen #KJV
+
 ## TAGS
 psalm 22, psalm 22 22, hebrews 2 12, hebrews 2 11, risen christ, not ashamed to call them brethren, resurrection, messianic psalm, kjv bible, bible shorts, jesus christ, gospel, family of god
 

@@ -6,5 +6,7 @@ Nails through his hands. Soldiers gambling for his clothes. And his first words 
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 Follow @awakeden
 
+#Bible #Jesus #FatherForgiveThem #Cross #Gospel #KJV
+
 ## HASHTAGS
 #Bible #Jesus #FatherForgiveThem #Cross #Gospel #KJV

@@ -24,6 +24,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Bible #Jesus #ItIsFinished #Gospel #KJV
+
 ## TAGS
 john 19 30, it is finished, tetelestai, words from the cross, genesis 2 1, creation and redemption, kjv bible, bible shorts, the crucifixion, jesus christ, gospel, rest in christ
 

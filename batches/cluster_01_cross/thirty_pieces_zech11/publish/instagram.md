@@ -10,5 +10,7 @@ Nobody was steering. Every coin found its mark. His blood bought you back. Recei
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 Follow @awakeden
 
+#Bible #Jesus #Zechariah #Prophecy #ThirtyPiecesOfSilver #KJV #OldTestament #BibleShorts #Awakeden
+
 ## HASHTAGS
 #Bible #Jesus #Zechariah #Prophecy #ThirtyPiecesOfSilver #KJV #OldTestament #BibleShorts #Awakeden

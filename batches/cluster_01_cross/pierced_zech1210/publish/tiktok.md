@@ -6,5 +6,7 @@ A Roman spear finished a sentence God wrote 500 years earlier. Zechariah 12:10, 
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 Follow @awakeden
 
+#Bible #Jesus #Prophecy #Zechariah #Cross #KJV
+
 ## HASHTAGS
 #Bible #Jesus #Prophecy #Zechariah #Cross #KJV

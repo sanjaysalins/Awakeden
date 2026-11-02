@@ -10,5 +10,7 @@ No merit, no ladder to climb. Repentance and trust. We are all one of those two 
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 Follow @awakeden
 
+#Bible #Jesus #ThiefOnTheCross #Paradise #Cross #KJV #Gospel #BibleShorts #Awakeden
+
 ## HASHTAGS
 #Bible #Jesus #ThiefOnTheCross #Paradise #Cross #KJV #Gospel #BibleShorts #Awakeden

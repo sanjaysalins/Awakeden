@@ -1,3 +1,24 @@
+## 2026-11-02 (night) HANDOVER - Jacob's Ladder pilot built, tracker "On hold" section, hashtags folded into bodies
+
+**Done today (after the 3 ink-short v4 entry below).**
+- **Swirls pilot 01 Jacob's Ladder is now a real episode** (was a bare folder). Blind-panel narration, words LOCKED
+  (`poc_living_sketchbook/_rewrite_v4/panel_jl/LOCKED_WORDS_JL_2026-11-02.md`), one paid recording (~$0.15, ledger row added),
+  re-timed 56.5 s video (`.../panel_jl/video/jacobs_ladder_v3_sfx.mp4`), `episode.py` shim, publish + upload packs GREEN 0/0, thumbs.
+  Owner approved audio + video. Pin: `poc_living_water_ink_style_test/swirls_pilot_01_jacobs_ladder/FINAL_VIDEO.txt`. Held by the 30-episode rule.
+- **Tracker:** new "On hold: Swirls of Life (10) - 30-episode rule" section with URL boxes (`build_upload_tracker.py`, `cards_held`);
+  Swirls deduped by slug; pilots without `episode.py` get a PILOT label.
+- **Hashtags now inside the main DESCRIPTION/CAPTION body** of every non-archive pack (owner request). `fold_hashtags.py <pack_folder>...`
+  is idempotent; 31 folders folded, all re-gated GREEN, 0 non-archive files missing. 4 `archive/*` files left alone on purpose.
+  New packs already do this via `render_platform_md`. The separate `## HASHTAGS` box stays (the gate reads it).
+
+**Still weak.** Jacob's Ladder: thumbnail shows the title twice (baked in cover art + engine overlay; needs a text-free picture);
+front cover is a ~10 s still hold; F04 caption says "I am with thee" while voice says "I will not leave thee" (same Gen 28:15 speech);
+no outside 5-CLI panel on the pack copy; Jesus quote is in narrator voice (pilot has no Jesus voice). Real seed viewers still recommended.
+
+**Next (owner picks).** (1) Owner posts the 3 ink shorts from `_UPLOAD_TRACKER.html` (paste-only; then `upload_tracker.py --set <slug> <platform> <url>`).
+(2) Fix Jacob's Ladder doubled thumb title (ask + price first for new art). (3) Outside 5-CLI panel on pack copy. (4) Keep building toward the 30-episode Swirls target.
+Gentle mode is ON (cap 3) until "/gentle off".
+
 ## 2026-11-01 (night) HANDOVER - single upload tracker + 3 ink-short rewrites
 
 **Where we are.** `_UPLOAD_TRACKER.html` is the ONE tracker (calendar order, "Next up to post (32)",

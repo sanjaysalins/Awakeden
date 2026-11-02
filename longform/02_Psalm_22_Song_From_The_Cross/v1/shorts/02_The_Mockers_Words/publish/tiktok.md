@@ -5,5 +5,7 @@ At the cross they shook their heads and sneered the exact taunt Psalm 22 had rec
 
 Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
 
+#Psalm22 #BibleProphecy #Jesus #KJV #ChristianTikTok #BibleFacts
+
 ## HASHTAGS
 #Psalm22 #BibleProphecy #Jesus #KJV #ChristianTikTok #BibleFacts

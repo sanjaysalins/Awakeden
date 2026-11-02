@@ -23,6 +23,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Psalm22 #BibleProphecy #JesusInTheBible #KJV #ChristianShorts
+
 ## TAGS
 psalm 22, jesus cross, bible prophecy, crucifixion prophecy, john 19, old testament prophecy, cast lots, messianic psalm, kjv bible, bible shorts, christian shorts, jesus in the old testament
 

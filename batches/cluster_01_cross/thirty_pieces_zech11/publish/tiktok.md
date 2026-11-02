@@ -6,5 +6,7 @@ Thirty coins hit the temple floor. Each lands on a mark written 500 years early.
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 Follow @awakeden
 
+#Bible #Jesus #Prophecy #ThirtyPiecesOfSilver #Judas #KJV
+
 ## HASHTAGS
 #Bible #Jesus #Prophecy #ThirtyPiecesOfSilver #Judas #KJV

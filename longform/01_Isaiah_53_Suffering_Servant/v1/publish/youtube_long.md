@@ -23,6 +23,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Bible #Jesus #Isaiah53 #Prophecy #KJV
+
 ## TAGS
 isaiah 53, suffering servant, isaiah 53 5, isaiah 53 explained, wounded for our transgressions, with his stripes we are healed, messianic prophecy, fourth servant song, is the servant israel, acts 8, ethiopian eunuch, philip preached jesus, old testament prophecy, kjv bible, bible study, jesus christ, gospel
 

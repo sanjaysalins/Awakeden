@@ -5,5 +5,7 @@ A psalm's last line and Jesus' dying word in John's gospel close on the same not
 
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 
+#Bible #Jesus #Psalm22 #ItIsFinished #KJV
+
 ## HASHTAGS
 #Bible #Jesus #Psalm22 #ItIsFinished #KJV

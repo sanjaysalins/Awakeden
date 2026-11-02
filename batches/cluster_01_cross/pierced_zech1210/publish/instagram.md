@@ -10,5 +10,7 @@ The promise starts with grace poured out, not wrath. Look at him, and live.
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 Follow @awakeden
 
+#Bible #Jesus #Zechariah #MessianicProphecy #KJV #Cross #OldTestament #BibleShorts #Awakeden
+
 ## HASHTAGS
 #Bible #Jesus #Zechariah #MessianicProphecy #KJV #Cross #OldTestament #BibleShorts #Awakeden

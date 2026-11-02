@@ -10,5 +10,7 @@ Even forsaken, he says MY God. He bore the forsaking our sin deserved, so that y
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 Follow @awakeden
 
+#Bible #Jesus #Psalm22 #Forsaken #Cross #KJV #WordsFromTheCross #BibleShorts #Awakeden
+
 ## HASHTAGS
 #Bible #Jesus #Psalm22 #Forsaken #Cross #KJV #WordsFromTheCross #BibleShorts #Awakeden

@@ -26,6 +26,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Bible #Jesus #IThirst #LivingWater #KJV
+
 ## TAGS
 john 19 28, i thirst, words from the cross, psalm 22 15, jesus in the old testament, living water, kjv bible, bible shorts, the crucifixion, jesus christ, gospel, bible study
 

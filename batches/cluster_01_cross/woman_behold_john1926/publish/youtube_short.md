@@ -24,6 +24,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Bible #Jesus #WordsFromTheCross #Mary #KJV
+
 ## TAGS
 john 19 26, woman behold thy son, words from the cross, mary at the cross, simeon prophecy sword, luke 2 35, kjv bible, bible shorts, the crucifixion, jesus christ, gospel, bible study
 

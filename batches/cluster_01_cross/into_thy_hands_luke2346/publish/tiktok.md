@@ -6,5 +6,7 @@ His last words were a child's bedtime prayer, with one word added: FATHER. He di
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 Follow @awakeden
 
+#Bible #Jesus #Cross #WordsFromTheCross #Psalm31 #KJV
+
 ## HASHTAGS
 #Bible #Jesus #Cross #WordsFromTheCross #Psalm31 #KJV

@@ -5,5 +5,7 @@ Someone took the body, that was Mary's first thought at the empty tomb. Then Joh
 
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 
+#Bible #Jesus #EmptyTomb #Resurrection #JesusIsRisen #GospelOfJohn #BibleShorts #ChristianReels #Faith #KJV
+
 ## HASHTAGS
 #Bible #Jesus #EmptyTomb #Resurrection #JesusIsRisen #GospelOfJohn #BibleShorts #ChristianReels #Faith #KJV

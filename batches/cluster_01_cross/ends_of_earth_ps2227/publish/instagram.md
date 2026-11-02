@@ -5,5 +5,7 @@ One forsaken man dying alone. Then: "All the ends of the world shall remember an
 
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 
+#Bible #Jesus #Psalm22 #Gospel #KJV #BibleShorts #Cross #Christian #Nations #Awakeden
+
 ## HASHTAGS
 #Bible #Jesus #Psalm22 #Gospel #KJV #BibleShorts #Cross #Christian #Nations #Awakeden

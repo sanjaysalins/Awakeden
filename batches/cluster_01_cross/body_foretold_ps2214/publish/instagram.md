@@ -5,5 +5,7 @@ A king described a dying body he never saw: "I am poured out like water, and all
 
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 
+#Bible #Jesus #Psalm22 #Cross #KJV #BibleShorts #David #Gospel #Christian #Awakeden
+
 ## HASHTAGS
 #Bible #Jesus #Psalm22 #Cross #KJV #BibleShorts #David #Gospel #Christian #Awakeden

@@ -5,5 +5,7 @@ Most people stop reading Psalm 22 at the cross. Keep going. The forsaken cry tur
 
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 
+#Bible #Jesus #Psalm22 #Risen #KJV
+
 ## HASHTAGS
 #Bible #Jesus #Psalm22 #Risen #KJV

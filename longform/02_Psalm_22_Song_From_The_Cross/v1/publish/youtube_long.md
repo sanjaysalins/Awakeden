@@ -32,6 +32,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Bible #Jesus #Psalm22 #MessianicProphecy #KJV
+
 ## TAGS
 psalm 22 explained, psalm 22 crucifixion, the song from the cross, my god my god why hast thou forsaken me meaning, messianic prophecy explained, crucifixion prophecy, jesus in the old testament, kjv bible, bible documentary, matthew 27 46, hebrews 2 12, prophecy fulfilled, bible teaching, who is jesus, it is finished, david and jesus
 

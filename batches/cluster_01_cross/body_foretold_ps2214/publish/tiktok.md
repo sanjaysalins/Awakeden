@@ -5,5 +5,7 @@ A king described a dying body so exactly it reads like an eyewitness account of 
 
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 
+#Bible #Jesus #Psalm22 #Cross #KJV
+
 ## HASHTAGS
 #Bible #Jesus #Psalm22 #Cross #KJV

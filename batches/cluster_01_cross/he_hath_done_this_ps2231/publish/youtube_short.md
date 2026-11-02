@@ -22,6 +22,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Bible #Jesus #Psalm22 #ItIsFinished #KJV
+
 ## TAGS
 psalm 22, psalm 22 31, john 19 30, it is finished, he hath done this, finished work, messianic psalm, the crucifixion, kjv bible, bible shorts, jesus christ, gospel, grace
 

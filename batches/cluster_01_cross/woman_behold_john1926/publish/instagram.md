@@ -10,5 +10,7 @@ Your wound is not invisible to him. Stand where Mary stood.
 Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
 Follow @awakeden
 
+#Bible #Jesus #Mary #Cross #WordsFromTheCross #KJV #Simeon #BibleShorts #Awakeden
+
 ## HASHTAGS
 #Bible #Jesus #Mary #Cross #WordsFromTheCross #KJV #Simeon #BibleShorts #Awakeden

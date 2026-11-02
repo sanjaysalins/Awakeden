@@ -22,6 +22,8 @@ https://awakeden.com
 
 Scripture quoted from the King James Version (KJV), public domain.
 
+#Bible #Jesus #Psalm22 #Cross #KJV
+
 ## TAGS
 psalm 22, psalm 22 7 8, matthew 27 43, mockery of jesus, messianic prophecy, prophecy fulfilled, the crucifixion, words at the cross, come down from the cross, kjv bible, bible shorts, jesus christ, gospel
 
