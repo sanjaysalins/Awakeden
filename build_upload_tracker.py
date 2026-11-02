@@ -292,6 +292,8 @@ def finished_inventory(states, queue_slugs: set) -> tuple[str, dict]:
             state, tone = "BLOCKED: 'cuts off' playback bug still open", "bad"
         elif video is None:
             continue
+        elif "pilot" in d.name and not (d / "episode.py").is_file():
+            state, tone = "PILOT: no episode.py, narration needs rewrite, not packed (30-ep hold)", "swirls"
         elif not (d / "publish" / "PUBLISH_INDEX.html").is_file():
             state, tone = "HOLD (30-ep rule) + NEEDS PUBLISH PACK", "warn"
         else:
