@@ -1,0 +1,12 @@
+{
+ "piece": "today_paradise_short32",
+ "locked": "2026-11-09",
+ "locked_by": "owner (said: lock it)",
+ "final_video": "visual/today_paradise_short32_final.mp4",
+ "final_sha256": "6a80c4d2561e8852ec89618492fa722d38b13b3b2e880892026ec79db492b738",
+ "words": "LOCKED 2026-11-09 (poc_comic_page/_ELEVATE/short32/FINAL_WORDS.md)",
+ "audio": "audio/narration_landing3s.mp3 (35.0s speech + 3.0s hold, recorded 2026-11-09, ~USD 0.08)",
+ "publish_pack": "publish/ GREEN (1 warn: no thumbnail)",
+ "not_done": ["thumbnail (piece not on board)", "upload", "seed viewers"],
+ "note": "Any change to the film or words needs the owner's say-so and a new sha."
+}
