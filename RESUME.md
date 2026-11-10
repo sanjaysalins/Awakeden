@@ -1,3 +1,128 @@
+## 2026-11-10 (later) - Barabbas RE-LOCKED as A8 `visual/barabbas_short_A8_final.mp4` (sha e15a11bd...) after red-team r2 (3/3 REVISE on A6; `red_team/r2_A6/_RED_TEAM_A6.html`). Fixed: plain elders, praying Jesus alone on Abba line, upright cross/empty hill, sparks + sky hand cut; new thumbs from g2 Pilate panel. Spend +$2.43 (total ~$11.4). Pack GREEN, release_check GREEN, tracker rebuilt. NEXT: owner uploads, then `upload_tracker.py --set barabbas-son-of-the-father <platform> <url>`. Left: opening ghost Jesus (~$1.23), flame aura (style), crowd headwear; no fresh re-test run yet.
+
+## 2026-11-10 UPDATE - Barabbas re-locked as A6: `visual/barabbas_short_A6_final.mp4` (sha 42f7f3c3...). Era fix: trouser clip c1 -> new tunic+shackles moment e1 (~$0.55, owner yes); loudness -19.7 -> -14.7 LUFS. FINAL_VIDEO/LOCKED/pack/thumbs meta updated; landing hold + release_check GREEN. Still: owner ear-check, upload, commit (text only). Crowd headcloths 15-21s left (borderline).
+
+## 2026-11-09 (late night) HANDOVER - COMIC lane: Barabbas short FINISHED + LOCKED (A5), upload-ready, NOT uploaded, NOT committed (stopped for the night)
+
+**Full detail:** `poc_comic_page/_ELEVATE/HANDOVER_RESUME.md` (rewritten tonight). Piece: `batches/cluster_01_cross/barabbas_short/` (slug `barabbas-son-of-the-father`).
+- Final film `visual/barabbas_short_A5_animated.mp4` (41.6 s, 4 animated 3-panel manga grids + 6 animated moment clips, owner's grid-animation idea; owner: "absolutely great"). Words v4 locked (name angle: Bar-abbas = son of the father -> Abba, Mark 14:36 -> last line tagged Galatians 4:5-6). Voice recorded + 3 lines re-recorded (~$0.13 total). Pack GREEN, thumbs done, catalogue entry + tracker row in, release_check GREEN, landing hold OK, LOCKED.json re-stamped.
+- Red team (Fable + Opus + Sonnet, film-only) = 3/3 REVISE; free fixes + 3-line re-record applied. Left alone: flame aura, X-looking cross beam, faint ghost Jesus in the first-3-s overview.
+- **Spend ~$8.55 total** (ledger rows added; the auto hook under-counts). Higgsfield balance is shared with other sessions: check it first.
+- **Owner TODO / resume:** ear-check the sound mix (nobody has heard it); upload and send links (`upload_tracker.py --set barabbas-son-of-the-father <platform> <url>`); say when to commit (TEXT ONLY, no media: check `git diff --cached --name-only`). Optional: upright cross picture ~$0.70; rebuild pan-only B for the A/B audience test; next story ideas Jesus wept (John 11:35) / Zacchaeus (Luke 19).
+- Rules: nothing paid without quote + separate yes; blind panels with a Fable seat; 4 questions on every pick page; no media to GitHub; gentle mode on.
+
+## 2026-11-09 (night) HANDOVER - Swirls ep 6 "Talitha Cumi" SHORT cut + vector-style visual POC (stopped for the night)
+
+**Lane:** swirls. Folder: `poc_living_water_ink_style_test/swirls_episode_06_talitha_cumi/`. Full-length cut (97 s) was locked earlier; owner then wanted a much shorter version (<40 s, even 30 s). Takeaway sentence the owner approved: "Someone told you 'too late.' Jesus heard it, and He kept going."
+
+**WORDS state**
+- LOCKED short = **G3** (`short_g3/`, 52.1 s, owner "lock it"). 5-CLI panel on G3 = 5/5 REVISE (timeline, invented quote marks, reversal-promise risk, bare echo closer).
+- Candidates since: **G4** (`short_g4/`, 49.4 s, panel 5/5 REVISE), **G5** (`short_g5/`, **50.8 s**, ending "...hear Him instead: 'Be not afraid, only believe.'", blind read 8/8/7, 5-CLI panel 5/5 REVISE: reversal hedge, slow hook, Aramaic gloss stacking), **G6** (`short_g6/`, text only, NOT recorded, blind read ending 6 = worse; do not use).
+- G5 is the version used in the preview. **Owner has NOT yet ear-reviewed G5 vs G3 and has NOT said "lock G5".** G3 remains the locked fallback. Closest-to-length recording is F1 (`short_f1/`, 40.3 s) but its ending was judged flat.
+- Panel rounds are past the 2-round rule and scores flatten ~7-8; further word passes are polish. Doctrine rule kept: Mark's gloss "Damsel, I say unto thee, arise." stays in NARRATOR voice.
+- Length goal (<40 s) is still NOT met by any ending the owner liked (G3/G4/G5 are 49-52 s).
+
+**VISUAL POC (owner pasted a "universal master prompt": stylized graphic vector, orange/teal/turquoise/white) in `style_poc_vector/`**
+- Test 1: 4 stills (`s1..s4`, `STYLE_POC.html`), then fix-up: 4 character refs (`refs/`, review `REFS.html`), 6 pages with chained refs (`pages/`, review `PAGES.html`), re-dos, then 6 Kling 3.0 clips (`clips/c1..c6.mp4`, review `CLIPS.html`).
+- **Chosen pages:** p1_plea, p2_news_v3, p3_walk, p4_hand_v2, p5_rise (ORIGINAL; teal mantle), p6_family. Rejected: p5_rise_v3 (girl drawn twice), p2_news / p4_hand / p5_rise_v2 superseded.
+- **Preview film:** `style_poc_vector/TALITHA_PREVIEW_G5.mp4` (51.5 s, 1080x1920, clips slowed up to 1.6x + held last frame with slow push, G5 narration, no score/SFX), page `PREVIEW.html`. Built by scratchpad `build_preview.ps1` (re-create if needed: 6 segments mapped to G5 turn timings: p1 0-5, p2 5-14, p3 14-20.2, p4 20.2-33.3, p5 33.3-41.5, p6 41.5-50.8). **Not played end to end by the assistant, only 6 frames checked.**
+- Known small misses: p5 mantle teal not navy; Jairus short sleeves; some bystanders in p1 have wrapped head cloths; tool only honored 2 reference images per call (that is why Jesus's mantle drifted on room pages).
+- Era rules used: no turbans/keffiyeh, flat mudbrick/limestone, clay lamps, no Roman arches, no head halo, "Capernaum" dropped (Mark 5 does not name it).
+
+**SPEND (all owner-approved with quoted prices; ledger rows `est_only`)**
+- Audio (ElevenLabs), whole episode so far: ~1.21 USD across 8 recordings (earlier full cut + trim, 33s, d3, e4, f1, g3, g4 0.125, g5 0.127); see data/spend_ledger.jsonl.
+- OpenArt (rate $0.002/credit): 4 test stills 0.32; 4 refs 0.32; 6 pages 0.48; re-do 3 pages 0.24; re-do 2 pages 0.16; 6 Kling clips 2.10 = **~3.62 USD** (1,810 credits est). Balance was ~63,284 cr.
+- Together ~4.8 USD for this episode today. Nothing past what was approved at each step.
+
+**RESUME TOMORROW (needs owner)**
+1. Owner plays `TALITHA_PREVIEW_G5.mp4` (and ear-compares `short_g5/narration.mp3` vs `short_g3/narration.mp3`).
+2. Ask: lock G5 or keep G3? And: is the vector style a go for the audience test? (Posting is held until 30 episodes anyway.)
+3. If a <40 s cut is still wanted: write a shorter ending (blind seats, $0) and quote a re-record (~$0.10-0.13 each, each needs its own yes).
+4. If style approved for the series: fix page 5 mantle (navy), Jairus sleeves, then score/SFX (free reuse first), then packaging. Each paid step needs its own quoted price + yes.
+5. Coordinator housekeeping: add `talitha_cumi` to `coord/BOARD.json` (claim said "no such piece"); update `LOCKED_WORDS.md` only after the owner picks G3 vs G5.
+6. Older open items: ep12 "cuts off" playback bug; two pilots without episode.py.
+
+## 2026-11-08 (late 8) - Built `coord/` (two lanes swirls + comic, one coordinator). Board `coord/BOARD.json`, tool `coord/coord.py`, rules `coord/README.md`, session prompts `coord/LANE_*.md`, `coord/COORDINATOR.md`. No git worktrees (800 MB repo, uncommitted work would not carry); lanes share the folder, own separate subfolders, only the coordinator edits shared files and commits.
+
+## 2026-11-08 (late 7) - Mockers: guardrail panel on FINISHED film (5 seats, `poc_comic_page/_panel_mockers_y7_final/panel_r1/`): 0 wrong claims, scores ~6/10 flat. Owner chose A = upload as is. Known small items (not fixed): "shout" vs KJV "reviled/said" (L1, L5, title, line 1); "felt" vs "saw" the earthquake (L10); match meaning never stated; Luke 23:34 narrator voice. Mockers READY TO UPLOAD (pack GREEN, tracker rebuilt).
+
+## 2026-11-08 (late 6) - Mockers Y7 LOCKED after owner ear-review ("good"). Landing hold OK (v=76.40 a=76.39). Pack GREEN, tracker rebuilt (`_UPLOAD_TRACKER.html`). Ready for owner to upload; record URLs with `upload_tracker.py --set ps22-02-mockers-words youtube <url>`.
+
+## 2026-11-08 (late 5) - Mockers PACKAGING done, pack GREEN. Blind panel x2 (8 seats). Card `batches/cluster_01_cross/mockers_words_ps227/packaging.json`, owner page `_PACKAGING_PICK.html`. Final film pinned via `FINAL_VIDEO.txt` -> `visual/mockers_words_ps227_y7_sfx.mp4`. New thumbs (THEIR INSULT WAS / 1,000 YEARS OLD) + hand-written copy in `publish/`; `cli_publish.py --index` GREEN, `--copy-ok` stamped. Not uploaded. Open: ear-review of sound, line 1 not re-tested, fresh-seat retest of Y7 words, finished-film guardrail panel.
+
+## 2026-11-08 (late 4) - Mockers Y7 film LOCKED by owner ("lock it"): m05 now ink-style v4 still `visual/wagging_heads_close_v4.png` + Kling clip `visual/clips/wagging_heads_close_v4.mp4` (9.5 cr, ledgered). Final: `poc_comic_page/_living_comic/out/the_mockers_y7_sfx.mp4` (76.4 s, audio=video). Visuals + words locked. Still open: owner ear-review of score/SFX, packaging card/title, fresh-seat retest of Y7 fixes, guardrail on finished film, lc_compose audio-short bug, m09/m10 loose clips, no Luke 23:34 Jesus voice. Locking spends nothing.
+
+## 2026-11-08 (late 3) - Mockers Y7 sound added ($0 reuse): `poc_comic_page/_living_comic/out/the_mockers_y7_sfx.mp4` (76.4 s, audio=video, landing hold OK). Build `sfx_pilots/build_mockers_y7.py` (crowd/wind/shouts, reused `score_reverent_grace` from 46 s, thunder at "died", rumble at earthquake). NOT ear-reviewed. Bug found: lc_compose output has audio 3 s shorter than video (no audio landing hold) - the sfx build pads it; fix in lc_compose later. Ear-review next, then packaging.
+
+## 2026-11-08 (late 2) - m05 FIXED: new no-hands still `visual/wagging_heads_close_v2.png` + Kling clip `visual/clips/wagging_heads_close_v3.mp4` (9.5 cr, ledgered), film rebuilt `out/the_mockers_y7.mp4`. Cards now see-through. Hero-animated rule saved to memory.
+
+## 2026-11-08 (late) - m05 retry: Kling v2 clip (7.5 cr, ledgered) STILL grows an extra floating fist -> not used; m05 keeps free arc. Clip `batches/cluster_01_cross/mockers_words_ps227/visual/clips/wagging_heads_close_v2.mp4`. Do not retry same still; a recomposed still (no raised hands) would be the fix.
+
+## 2026-11-08 (night) - Mockers Y7 recorded + film rebuilt
+
+- Re-recorded 6 narrator turns (~$0.15 est, ledger row added). Audio `batches/cluster_01_cross/mockers_words_ps227/audio_y4/narration.mp3` 73.41 s. Backups: `audio_y4_prev_Y4/`, `audio_y4_prev_Y5/`.
+- Film: `poc_comic_page/_living_comic/out/the_mockers_y7.mp4` (76.4 s, 8 gates LC-READY, hook card "WHOSE WORDS ARE THESE?", soldier balloon label "THE OFFICER"). Scripts `make_mockers_json_y7.py`, `make_mockers_wire_y7.py`. Prev json `episode_mockers.prev_y5.json`.
+- Not eye-checked. Open: m09/m10 reuse $0 clips (loose match); no score/SFX; Y7 fixes not re-tested by fresh seats; packaging card/title; Luke 23:34 has no own Jesus voice.
+
+## 2026-11-08 (later) - Mockers words LOCKED = Y7 (words only, nothing re-recorded)
+
+- Guardrail panel (5 blind seats, 2 rounds) on the Y5 film: score flat ~6, 0 wrong claims. Pages: `poc_comic_page/_MOCKERS_GUARDRAIL_R1.html`, `_MOCKERS_GUARDRAIL_R2.html`. Seat files: `poc_comic_page/_panel_mockers_y5/`, `_panel_mockers_y5_r2/`.
+- Owner locked **Y7**: `poc_comic_page/_words_mockers_r4/cand_Y7.md` (Y6 was the round-2 test text; Y7 adds the 2-round fixes, not re-tested).
+- **Next (needs its own price + yes):** re-record 6 narrator turns (all except Luke 23:34), ~760 chars, est $0.15-0.35; then `make_mockers_json_y5.py` pattern (copy to y7, cand_Y7.md, card text "WHOSE WORDS ARE THESE?", soldier balloon), wire, gates, compose. Delete changed `_turns/*.mp3` first (stale-cache gotcha). Back up `audio_y4` first.
+- Current film on disk is still Y5 (`out/the_mockers_y5.mp4`).
+
+## 2026-11-08 HANDOVER - Mockers ending replaced (Y5), re-recorded, film rebuilt
+
+- Ending picked after blind panel (Fable + Sonnet seats): C fixed. Words LOCKED = Y5 `poc_comic_page/_words_mockers_r4/cand_Y5.md`; pick page `poc_comic_page/_MOCKERS_ENDING_PICK.html`.
+- Re-recorded last 2 narrator turns (~$0.15, owner yes; NOT in ledger). Audio `batches/cluster_01_cross/mockers_words_ps227/audio_y4/narration.mp3` 70.13 s (old Y4 copy in `audio_y4_prev_Y4/`).
+- Film: `poc_comic_page/_living_comic/out/the_mockers_y5.mp4` (73.1 s, 8 gates LC-READY). Scripts: `make_mockers_json_y5.py`, `make_mockers_wire_y5.py`. Old json saved `episode_mockers.prev_y4.json`.
+- Weak: ending panels reuse $0 clips (ninth_hour_darkness, us_under_cross_shadow) - soldier panel is a loose match; soldier balloon not eye-checked; no score/SFX; guardrail panel on finished film still open; Psalm 22 "every nation" thread cut.
+
+## 2026-11-07 (night) HANDOVER - Living Comic Piece 2 "The Mockers' Words" built end to end (first full cut), ending line being rewritten
+
+**Done today.**
+- **Words LOCKED = Y4** (owner picked A). Text: `poc_comic_page/_words_mockers_r4/cand_Y4.md`, lock page `_MOCKERS_WORDS_LOCK.html`. 4 blind rounds, scores flat ~5.6, accuracy clean (all quotes verbatim KJV).
+- **Recorded** (owner yes, ~$0.50): `batches/cluster_01_cross/mockers_words_ps227/audio_y4/narration.mp3` 71.26 s natural speed (old 78 s audio in `audio/` untouched, belongs to the old script). Called `per_turn_synth.py --natural --no-gate` directly, so NOT in the spend ledger (add a row if wanted).
+- **Reuse check ($0)** `poc_comic_page/_living_comic/_MOCKERS_REUSE.html`: 6/10 panels reused old clips, 4 needed clips. Owner said "go with your pick" (A).
+- **4 new clips (~$3.70, owner yes, not in ledger)** in `batches/.../mockers_words_ps227/visual/clips/`: david_writing_psalm, psalm_scroll_night (Seedance), rulers_sneering, wagging_heads_close (Kling). QC by frames: first three good. **wagging_heads_close has a floating body-less hand 0.5-4 s -> NOT used**; panel m05 uses the free arc `visual/_dyncam_work/wagging_heads_close_arc.mp4`.
+- **Film built:** `poc_comic_page/_living_comic/out/the_mockers_y4.mp4` (74.3 s, 10 panels, 10 balloons, hook card WHO WROTE THE INSULTS?, decode card DELIVER = RESCUE). All 8 gates LC-READY. Watch page `_MOCKERS_FILM.html`.
+- **Pipeline files:** `make_mockers_json_y4.py` (builds episode_mockers.json from real `_turns` durations; balloons chunked to 5 words) -> `make_mockers_wire.py` (clip_src per panel) -> `lc_gates.py` -> `lc_compose.py`. Old panel map saved `episode_mockers.prev_old78s.json`.
+- **Composer bug fixed:** `lc_compose.py` balloon y used the GLOBAL balloon index, so later balloons went off-screen; now slot resets at each chain start.
+
+**Open right now: the ENDING falls flat (owner: "very basic and generic").** Current last 2 lines: "That same song had these insults a thousand years early. Later in that song, David says people from every nation will turn to God." / "Jesus stayed for the people who mocked Him. You can turn to Him too." The last is a stock closer (fails `narration_gate.py` spirit). Fix = earn the landing from the piece's own word ("deliver", "come down", "stayed", "forgive").
+Blind writers launched (words-before-money): Sonnet + Opus came back; **Fable seat had not reported when we stopped (re-run it if its result is gone).**
+- Sonnet pick E1: "He saved others; himself he cannot save." (Matt 27:42) ... mockers' insult is the gospel ... "He did not come down. He stayed. For you."
+- Opus pick E1: same Matt 27:42 quote, "He could. He chose not to." / "To save the very people shouting, He did not come down. He stayed. He stayed for them." (Opus E3 flags "That prayer reaches you too" as going past Luke 23:34 text.)
+- Both rank the Matt 27:42 twist top; Sonnet E2 "deliver them" flip also strong. Converging idea: use "He saved others; himself he cannot save" and land on "He stayed for them." Verify any quote against KJV by script (`judge_words_r1.in_kjv`; corpus misses one Matthew 26 verse).
+**Next for the ending:** collect Fable seat -> judge table -> 2-3 candidates -> one blind test (5 seats) -> owner page with ONE pick. Re-record only the last 1-2 narrator turns (~$0.15, own price + yes), re-time, recompose.
+
+**Other open items for Piece 2:** no score / SFX yet; panel m09 ("every nation", old `look_up_faces` clip) is a rough match (new still up to ~$0.40 + clip ~$0.72-1.13, own yes); Wet Ink first-panel not wired (no sketch); landing hold 3.0 s is in the 74.3 s; guardrail panel on the finished film; Witness Edge debut; packaging card + title.
+**Older open (unchanged):** 20 pack WARNs need `cli_publish.py <dir> --copy-ok` after owner watches new Shorts; 7 skipped shorts + 5 longs unfixed; `print_grade.py` colour bug; title-question proposals not applied; Swirls 30-ep hold and earlier items from the 2026-11-06 entry below.
+**Rules in force:** nothing paid without a quoted price + separate yes; a pick locks WORDS only; panels blind with a Fable seat; owner dyslexic - short pages, ONE question, full `file:///` links, never auto-open.
+**Spend today:** ~$0.50 voice + ~$3.70 clips (neither in ledger).
+
+## 2026-11-06 (night) HANDOVER - Lemo-Opuscar skill installed + tested (side trip; main plan unchanged)
+
+**Done.** Owner asked to check/install `github.com/lemomo-ai/lemo-opuscar` (66 code-made film styles, no video model).
+- Plugin installed (user scope): `claude plugin install lemo-opuscar@lemolab`. Remove: `claude plugin uninstall lemo-opuscar@lemolab`.
+  I read its `setup.sh` on disk: clean (git clone + npm + pip + headless browser; no keys, nothing in our project).
+- Library cloned to `C:\Users\sanjay\lemo-opuscar`. Node deps + Chromium installed. **Python tier NOT installed**
+  (script expects a Linux `.venv/bin`; fails on Windows) -> no voice / sfx / srt tools. Picture-only works.
+  Needs `LEMO_OPUSCAR_HOME=/c/Users/sanjay/lemo-opuscar` set, and run from outside the lib folder, or setup.sh mis-detects the path.
+- Test: one Woodcut plate, Jacob's Ladder Gen 28:12, 1080x1920, 7 s, $0, renders in 14 s. Look is strong (black block, white cuts, one gold light),
+  verse text crisp. Weak: crude angels, blob sleeper, motion = cuts appearing only, not the Swirls/Baroque look.
+  Files (scratchpad, temp): `C:\Users\sanjay\AppData\Local\Temp\claude\6f3845a98aec2db1\e93e0871-bc52-4197-aa81-40be462b2f64\scratchpad\woodcut_ladder\`
+  (`_REVIEW.html`, `out\woodcut_ladder_test.mp4`). Nothing was added to the repo.
+
+**Verdict / my pick.** Keep installed, do NOT build into episodes. Use only for $0 verse/title cards (Woodcut). Engraving / ink-wash / silhouette
+styles might suit a separate Types & Shadows short series. Stained Glass is out (its rules ban crosses, saints, halos).
+Owner has not yet answered my offer: "draft a one-page note on how to slot it into the pipeline?"
+
+**Main plan unchanged - still open (owner picks):** (1) owner posts the 3 ink shorts from `_UPLOAD_TRACKER.html`; (2) fix Jacob's Ladder doubled thumb title
+(ask + price first); (3) outside 5-CLI panel on pack copy (my pick: this, $0); (4) keep building toward 30 Swirls episodes (posting held until then).
+Other blockers: Swirls ep12 "cuts off" playback bug; 2 Swirls pilots lack episode.py; doubled wordmark on long 16:9 thumbs.
+Gentle mode was ON (cap 3) - tell me "/gentle off" if wanted.
+
 ## 2026-11-02 (night) HANDOVER - Jacob's Ladder pilot built, tracker "On hold" section, hashtags folded into bodies
 
 **Done today (after the 3 ink-short v4 entry below).**

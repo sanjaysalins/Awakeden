@@ -1,0 +1,29 @@
+{
+ "piece": "jesus_wept_short",
+ "locked": "2026-11-10",
+ "locked_by": "owner ('lock it and build the upload pack', 2026-11-10)",
+ "final_video": "visual/jesus_wept_final.mp4",
+ "final_sha256": "56cc49d01067ecee9951c5a3d998ea8d8a1ab10803b1ca0426d17a8b31981c11",
+ "source": "poc_paper_flat/jesus_wept/JESUS_WEPT_POC.mp4 (same bytes); builder poc_paper_flat/jesus_wept/build_film.py, then +1.7 dB with a limiter (pre-loudness copy poc_paper_flat/jesus_wept/_work/JESUS_WEPT_POC_pre_loud.mp4)",
+ "words": "LOCKED v2.1 2026-11-10: poc_paper_flat/jesus_wept/words2/FINAL_WORDS.md",
+ "audio": "audio/narration.mp3 65.94s natural speed, 5 voices; film 69.0s (3s landing hold); -14.8 LUFS / -2.0 dBTP",
+ "visual": "13 stills, one consistent Jesus (style_refs/jesus_ref.png), no halo; fix rounds: owner slop round, two-Marthas, guardrail r1 (s01 stranger woman, s05 Mary at His feet)",
+ "spend_usd": 16.55,
+ "not_done": [
+  "upload",
+  "seed viewers",
+  "ear-check of the sound mix by the owner (never heard by Claude)",
+  "kept on purpose: Lazarus linen drawn loose (KJV 'bound hand and foot'), 1 seat only",
+  "commit (owner has not asked; text only, NO media)"
+ ],
+ "note": "Any change to the film or words needs the owner's say-so and a new sha.",
+ "publish_pack": "LOCKED 2026-11-10 (owner: 'lock it' after publish red team). publish/ GREEN (0 fail, 0 warn), thumbs 16x9/9x16/1x1/tiktok, release_check GREEN, catalogue slug jesus-wept-the-sentence",
+ "publish_pack_sha16": {
+  "youtube_short.md": "ed10498702df3258",
+  "tiktok.md": "f35d434293ae2ab1",
+  "facebook.md": "8113a663476af7b2",
+  "instagram.md": "a3ba226d70b857b5",
+  "captions.srt": "4e1cb42c6d3c74a5"
+ },
+ "red_team_publish": "3 blind seats (Fable 7.5, Opus 7.5, Sonnet 7) REVISE; convergent fixes applied; red_team/_RED_TEAM_PUBLISH.html. Not fixed: thumb mouth reads slightly smiling (~USD 0.70 to redraw, owner chose to ship)."
+}

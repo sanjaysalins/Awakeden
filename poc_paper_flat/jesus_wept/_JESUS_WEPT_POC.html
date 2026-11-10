@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jesus Wept POC</title>
+<style>
+:root{--bg:#f4efe6;--fg:#1d1b18;--card:#fffdf8;--muted:#6b645a;--ok:#2e7d32;--line:#e2d8c8}
+@media (prefers-color-scheme:dark){:root{--bg:#191612;--fg:#f1ece4;--card:#231f1a;--muted:#a79f93;--ok:#81c784;--line:#3a332b}}
+body{background:var(--bg);color:var(--fg);font:21px/1.55 Verdana,Arial,sans-serif;margin:0;padding:16px}
+main{max-width:900px;margin:auto}h1{font-size:32px;margin:.2em 0}h2{font-size:24px;margin:1.2em 0 .4em}
+video{width:100%;max-width:420px;display:block;margin:auto;border-radius:12px;background:#000}
+.stills{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px}.stills img{width:100%;border-radius:6px;cursor:zoom-in}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+.pick{background:var(--card);border:3px solid var(--ok);border-radius:12px;padding:14px;font-size:22px}
+dialog{border:0;padding:0;background:#000}dialog img{max-width:95vw;max-height:95vh;display:block}
+</style></head><body><main>
+<h1>Jesus Wept — paper style test</h1>
+<video controls preload="metadata" src="JESUS_WEPT_POC.mp4"></video>
+<p style="text-align:center">69 s · 13 animated shots · voice + soft score · captions</p>
+
+<h2>4 questions</h2>
+<div class="card">
+<b>Who for:</b> anyone grieving alone, who feels God came too late.<br>
+<b>Take-away:</b> Jesus does not argue with your hardest sentence. He cried, went into the grave for us, and is alive.<br>
+<b>Curiosity gap:</b> what did Jesus say when two sisters told Him "You were too late"?<br>
+<b>Global:</b> plain lines; the old KJV sentence is said in plain English first.
+</div>
+
+<h2>13 shots</h2>
+<div class="stills">
+<img src="stills/s01.png"><img src="stills/s02.png"><img src="stills/s03.png"><img src="stills/s04.png"><img src="stills/s05.png"><img src="stills/s06.png"><img src="stills/s07.png"><img src="stills/s08.png"><img src="stills/s09.png"><img src="stills/s10.png"><img src="stills/s11.png"><img src="stills/s12.png"><img src="stills/s13.png">
+</div>
+
+<h2>Cost</h2>
+<p>Voice $0.16 · pictures ~327 credits (~$16.35) · <b>total ~$16.55</b>. Words, panels, assembly: $0.</p>
+
+<h2>Not done yet</h2>
+<p>• No blind film check yet (the 5 guardrail questions).<br>
+• Nobody has heard the sound mix.<br>
+• Fixed: one consistent Jesus (no halo), slop shots redrawn, captions moved off faces.<br>
+• Loudness −15.2 (target −14).</p>
+
+<div class="pick"><b>My pick:</b> watch it. Then I run the free blind film check before any upload pack.</div>
+</main>
+<dialog id="d" onclick="this.close()"><img id="di"></dialog>
+<script>document.querySelectorAll('.stills img').forEach(i=>i.onclick=()=>{di.src=i.src;d.showModal()})</script>
+</body></html>

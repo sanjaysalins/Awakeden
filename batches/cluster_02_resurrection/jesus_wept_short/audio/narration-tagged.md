@@ -1,0 +1,16 @@
+<speaker name="narrator">You said it to God, alone: "If You had been here, they would not have died."</speaker>
+<speaker name="narrator">Two sisters said that same sentence to Jesus.</speaker>
+<speaker name="narrator">Their brother Lazarus, Jesus's friend, had been in the grave four days.</speaker>
+<speaker name="martha">Lord, if thou hadst been here, my brother had not died.</speaker>
+<speaker name="narrator">Her sister Mary stayed in the house, until Martha whispered:</speaker>
+<speaker name="martha">[whispering] The Master is come, and calleth for thee.</speaker>
+<speaker name="narrator">He was asking for the one who stayed behind.</speaker>
+<speaker name="mary">Lord, if thou hadst been here, my brother had not died.</speaker>
+<speaker name="narrator">He did not argue. He asked:</speaker>
+<speaker name="jesus">Where have ye laid him?</speaker>
+<speaker name="mourners">Lord, come and see.</speaker>
+<speaker name="narrator">Jesus wept.</speaker>
+<speaker name="mourners">Behold how he loved him!</speaker>
+<speaker name="narrator">Then He called Lazarus out of the grave, alive. He gave a dead man life, so the leaders planned to kill Him.</speaker>
+<speaker name="narrator">He did not only cry at a grave. He died on a cross for us, was laid in a grave, and rose.</speaker>
+<speaker name="narrator">The Jesus who wept is alive. Say it to Him.</speaker>

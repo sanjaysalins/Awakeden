@@ -774,6 +774,20 @@ items:
   public_hook: In Aramaic, Barabbas means "son of the father." Look who went free.
   public_blurb: A 40-second short on the name Barabbas. The crowd freed the man named son of the father, and sent Jesus, the true Son of the Father, to the cross.
   source: ../batches/cluster_01_cross/barabbas_short
+- slug: jesus-wept-the-sentence
+  kind: short
+  title: 'Jesus Wept: The Sentence Two Sisters Said'
+  ref: John 11:17-53
+  series_id: people-who-encountered-jesus
+  cluster: null
+  public_status: studio_complete
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Two sisters said the same sentence to Jesus. He did not argue. He wept.
+  public_blurb: A 69-second short on John 11. Martha and Mary both said "if thou hadst been here." Jesus wept with them, raised Lazarus, and is alive to hear that sentence today.
+  source: ../batches/cluster_02_resurrection/jesus_wept_short
 - slug: woman-behold-thy-son
   kind: short
   title: Woman, Behold Thy Son
