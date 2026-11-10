@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Barabbas Red Team</title>
+<style>
+:root{--bg:#faf7f2;--fg:#1d1b18;--card:#fff;--muted:#6b645a;--bad:#b3261e;--ok:#2e7d32;--amber:#a86200;--line:#e4ddd2}
+@media (prefers-color-scheme:dark){:root{--bg:#171512;--fg:#f1ece4;--card:#221f1b;--muted:#a79f93;--bad:#ff8a80;--ok:#81c784;--amber:#ffb74d;--line:#3a352e}}
+body{background:var(--bg);color:var(--fg);font:20px/1.5 Verdana,Arial,sans-serif;margin:0;padding:16px}
+main{max-width:1000px;margin:auto}
+h1{font-size:30px;margin:.2em 0}h2{font-size:24px;margin:1.4em 0 .4em}
+.v{font-size:22px;font-weight:bold;color:var(--bad)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.c{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px}
+.c img{width:100%;border-radius:8px;cursor:zoom-in}
+.c b{display:block;margin-top:6px}.c span{color:var(--muted);font-size:17px}
+table{border-collapse:collapse;width:100%;background:var(--card)}td,th{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}
+.free{color:var(--ok);font-weight:bold}.paid{color:var(--amber);font-weight:bold}
+.pick{background:var(--card);border:3px solid var(--ok);border-radius:12px;padding:14px;font-size:22px}
+dialog{border:0;padding:0;background:#000}dialog img{max-width:95vw;max-height:95vh;display:block}
+</style></head><body><main>
+<h1>Barabbas A6 — red team</h1>
+<p class="v">3 of 3 seats: REVISE</p>
+<p>Fable, Opus, Sonnet. Blind. Film frames + words only.<br>
+<b>Words: good.</b> True to the Bible. No group blamed in the words.<br>
+<b>Pictures: the problem.</b></p>
+
+<h2>What 2 or 3 seats found</h2>
+<div class="grid">
+<div class="c"><img src="img/p2_leaders.jpg"><b>1. Leaders look like villains</b><span>3 of 3. Hooded, plotting. Can read as anti-Jewish. Not 1st-century dress. 0-3 s, 7-10 s.</span></div>
+<div class="c"><img src="img/p4_meeting.jpg"><b>2. Made-up meeting</b><span>3 of 3. Barabbas and Jesus side by side. Not in the Bible. Sits on the "Abba" line. 24-28 s.</span></div>
+<div class="c"><img src="img/p3_flame.jpg"><b>3. Jesus looks on fire</b><span>3 of 3. Flame aura reads as burning or "power-up". Worst at 19-20 s and the cross.</span></div>
+<div class="c"><img src="img/p7_cross.jpg"><b>4. Cross looks like an X</b><span>2 of 3. Crosses already stand on the hill. This is the LAST picture.</span></div>
+<div class="c"><img src="img/p1_ghost.jpg"><b>5. Ghost Jesus</b><span>3 of 3. Floating head behind the leaders, 0-3 s. Second Jesus at 23 s and 30 s.</span></div>
+<div class="c"><img src="img/p5_chains.jpg"><b>6. Chains explode</b><span>3 of 3. Magic sparks. He was just let go. 29 s.</span></div>
+<div class="c"><img src="img/p6_hand.jpg"><b>7. Giant hand in sky</b><span>3 of 3. Ghostly, unclear. 34-35 s.</span></div>
+<div class="c"><img src="img/p8_crowd.jpg"><b>8. Some modern headwear</b><span>1 of 3 (+ my own check). Cloth + band. 15-18 s. Borderline.</span></div>
+</div>
+
+<h2>Words (small)</h2>
+<p>• 3 of 3: never says "Bar = son". Newcomers may miss the link.<br>
+• 3 of 3: "we" in the last line can sound like everyone. Maybe "all who trust him".<br>
+• 2 of 3: "means" is stated as sure. Maybe "can mean".<br>
+• Words are locked. Changing them = re-record (~$0.05) + your yes.</p>
+
+<h2>How to fix</h2>
+<table>
+<tr><th>Fix</th><th>Cost</th></tr>
+<tr><td>Put the praying-Jesus picture on the "Abba" line. Drop the made-up meeting.</td><td class="free">Free</td></tr>
+<tr><td>Cut the sky hand. Cut the chain sparks if I can.</td><td class="free">Free</td></tr>
+<tr><td>New thumbnails without the made-up meeting.</td><td class="free">Free</td></tr>
+<tr><td>Redraw the leaders: plain, calm, 1st-century dress. No ghost Jesus.</td><td class="paid">~$0.55 each shot, quote first</td></tr>
+<tr><td>Redraw the last cross shot: upright cross, no crosses standing yet, soft light.</td><td class="paid">~$0.55-0.70, quote first</td></tr>
+<tr><td>Flame aura: your style. All 3 seats disliked it.</td><td>Your call</td></tr>
+</table>
+
+<h2>Not asked by the seats, kept as your rule</h2>
+<p>2 seats wanted an "AI art" line. Left out (your no-AI-wording rule).</p>
+
+<div class="pick"><b>My pick:</b> do the free fixes now. Then I quote the 2 redraws (leaders + last cross).</div>
+<p style="color:var(--muted);font-size:16px">Seat files: seat_fable.md, seat_opus.md, seat_sonnet.md in this folder. Note: gentle mode was on, so 3 seats only (no Codex/Grok CLI seats).</p>
+</main>
+<dialog id="d" onclick="this.close()"><img id="di"></dialog>
+<script>document.querySelectorAll('.c img').forEach(i=>i.onclick=()=>{di.src=i.src;d.showModal()})</script>
+</body></html>

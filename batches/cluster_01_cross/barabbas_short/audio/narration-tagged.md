@@ -1,0 +1,10 @@
+<speaker name="narrator">In Aramaic, "Barabbas" means "son of the father."</speaker>
+<speaker name="narrator">He was a robber in prison.</speaker>
+<speaker name="narrator">Pilate, the governor, offered to free one man. Pilate knew the leaders were jealous of Jesus.</speaker>
+<speaker name="pilate">Barabbas, or Jesus which is called Christ?</speaker>
+<speaker name="crowd">Barabbas.</speaker>
+<speaker name="pilate">Why, what evil hath he done?</speaker>
+<speaker name="crowd">Let him be crucified.</speaker>
+<speaker name="narrator">Listen: Bar-ABBA. Jesus called God "Abba." It means Father.</speaker>
+<speaker name="narrator">So the robber went free. The true Son of the Father did not.</speaker>
+<speaker name="narrator">Barabbas only had the name. Jesus died so we could call God Father too.</speaker>

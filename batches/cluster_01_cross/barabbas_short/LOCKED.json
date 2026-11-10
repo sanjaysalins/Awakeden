@@ -1,0 +1,23 @@
+{
+ "piece": "barabbas_short",
+ "locked": "2026-11-09",
+ "locked_by": "owner (lock it 2026-11-09); re-locked twice after red-team fixes (owner yes each time); re-locked 2026-11-10 as A6 (owner yes); re-locked 2026-11-10 as A8 after red-team r2 (owner: lock it)",
+ "final_video": "visual/barabbas_short_A8_final.mp4",
+ "final_sha256": "e15a11bde835835b9c1f43845c4f98394b8e729299e3d7735b80d74192739e28",
+ "words": "LOCKED v4 2026-11-09: In Aramaic hedge, 'Pilate knew', new last line + Galatians 4:5-6 tag (poc_comic_page/_ELEVATE/short_barabbas/FINAL_WORDS.md)",
+ "audio": "audio/narration.mp3 (38.52s, 3 lines re-recorded 2026-11-09 for ~USD 0.04) + 3.08s landing hold in the mix; v1 backup audio/narration_v1_backup.mp3",
+ "visual": "A8: 4 grid clips (a1,a2,a3 part) + moments e1,f1,f2,f3b,d1. Spend ~USD 11.4 total incl. voice.",
+ "publish_pack": "publish/ GREEN (0 fail, 0 warn), thumbs 16x9/9x16/1x1/tiktok",
+ "not_done": [
+  "upload",
+  "seed viewers",
+  "ear-check of the sound mix by the owner (never heard by Claude)",
+  "optional: upright cross picture ~USD 0.70 (beam reads like an X)",
+  "opening grid overview still shows a faint Jesus above the priests (minor)",
+  "commit (owner has not asked; text only, NO media)"
+ ],
+ "note": "A/B test idea: animated (A3) vs the $0 pan version (B, visual/barabbas_short_B_pan.mp4, built from the first 4 grids only). Any change to the film or words needs the owner's say-so and a new sha.",
+ "red_team": "3 blind seats (Fable, Opus, Sonnet) all REVISE; red_team/_RED_TEAM_BARABBAS.html. Free fixes applied in A4: sky marks cut, tag 27:23, burst moved to 'went free', ends on Jesus with cross, clean tall thumbs, 'In Aramaic' in card+copy, #Gospel for #Easter.",
+ "era_fix_2026-11-10": "A6: c1 clip (ragged modern trousers, not era-correct) replaced by new moment e1 (bare legs under knee-length tunic, ankle shackles; nano_banana_2 still + gemini_omni_flash_1_2 4s, ~USD 0.55, owner yes). Audio loudnorm to -14.7 LUFS / -1.4 dBTP (was -19.7). Crowd headcloths (15-21s) left as borderline.",
+ "red_team_r2_A6": "2026-11-10: 3/3 REVISE (Fable, Opus, Sonnet; red_team/r2_A6/_RED_TEAM_A6.html). Words OK; pictures: villain-look leaders, invented Barabbas-Jesus meeting 24-28s, flame aura, X cross, ghost Jesus, exploding chains, sky hand. Owner to decide; not yet fixed. FIXED in A8 (owner yes ~USD 2.43): plain elders (f2), praying Jesus alone on Abba line (f1), upright cross + empty hill + soft light (f3b), chain sparks + sky hand + tearful look-back cut, new thumbs from g2 Pilate panel. Still left: opening ghost Jesus 0-3s (~USD 1.23), flame aura 15-20s (owner style), borderline crowd headwear 15-18s."
+}
