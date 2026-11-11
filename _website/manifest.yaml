@@ -788,6 +788,20 @@ items:
   public_hook: Two sisters said the same sentence to Jesus. He did not argue. He wept.
   public_blurb: A 69-second short on John 11. Martha and Mary both said "if thou hadst been here." Jesus wept with them, raised Lazarus, and is alive to hear that sentence today.
   source: ../batches/cluster_02_resurrection/jesus_wept_short
+- slug: zacchaeus-who-was-looking
+  kind: short
+  title: 'Zacchaeus: Who Was Looking for Whom?'
+  ref: Luke 19:1-10
+  series_id: people-who-encountered-jesus
+  cluster: null
+  public_status: studio_complete
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: A man climbed a tree to see Jesus. But Jesus was looking for him.
+  public_blurb: An 85-second short on Luke 19. Zacchaeus came to look; Jesus came to find him. Jesus came first, and the change came after.
+  source: ../batches/cluster_04_encounters/zacchaeus_short
 - slug: woman-behold-thy-son
   kind: short
   title: Woman, Behold Thy Son

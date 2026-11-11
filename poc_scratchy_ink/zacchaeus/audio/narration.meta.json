@@ -1,0 +1,149 @@
+{
+  "folder": "audio",
+  "stage": "per_turn_synth",
+  "mode": "dialogue_per_turn_with_narrator_atempo",
+  "generated_at": "2026-11-11T10:43:16Z",
+  "model_id": "eleven_v3",
+  "output_format": "mp3_44100_128",
+  "target_seconds": 80.0,
+  "natural_total_seconds": 79.68,
+  "narrator_natural_seconds": 60.8,
+  "quote_total_seconds": 18.88,
+  "narrator_atempo_factor": 1.0,
+  "pre_quote_pause_seconds": 0.4,
+  "post_quote_pause_seconds": 0.0,
+  "pause_total_seconds": 1.6,
+  "final_total_seconds": 81.222,
+  "delta_vs_target_seconds": 1.222,
+  "turns": [
+    {
+      "index": 0,
+      "speaker": "narrator",
+      "chars": 65,
+      "natural_seconds": 5.68,
+      "final_seconds": 5.672,
+      "atempo_applied": true
+    },
+    {
+      "index": 1,
+      "speaker": "narrator",
+      "chars": 175,
+      "natural_seconds": 11.6,
+      "final_seconds": 11.595,
+      "atempo_applied": true
+    },
+    {
+      "index": 2,
+      "speaker": "narrator",
+      "chars": 49,
+      "natural_seconds": 3.6,
+      "final_seconds": 3.592,
+      "atempo_applied": true
+    },
+    {
+      "index": 3,
+      "speaker": "jesus",
+      "chars": 75,
+      "natural_seconds": 6.08,
+      "final_seconds": 0.4,
+      "atempo_applied": false
+    },
+    {
+      "index": 4,
+      "speaker": "narrator",
+      "chars": 72,
+      "natural_seconds": 5.76,
+      "final_seconds": 6.08,
+      "atempo_applied": true
+    },
+    {
+      "index": 5,
+      "speaker": "narrator",
+      "chars": 74,
+      "natural_seconds": 6.08,
+      "final_seconds": 5.758,
+      "atempo_applied": true
+    },
+    {
+      "index": 6,
+      "speaker": "narrator",
+      "chars": 58,
+      "natural_seconds": 4.08,
+      "final_seconds": 6.072,
+      "atempo_applied": true
+    },
+    {
+      "index": 7,
+      "speaker": "zacchaeus",
+      "chars": 54,
+      "natural_seconds": 4.16,
+      "final_seconds": 4.071,
+      "atempo_applied": false
+    },
+    {
+      "index": 8,
+      "speaker": "narrator",
+      "chars": 79,
+      "natural_seconds": 5.84,
+      "final_seconds": 0.4,
+      "atempo_applied": true
+    },
+    {
+      "index": 9,
+      "speaker": "jesus",
+      "chars": 41,
+      "natural_seconds": 3.68,
+      "final_seconds": 4.16,
+      "atempo_applied": false
+    },
+    {
+      "index": 10,
+      "speaker": "narrator",
+      "chars": 59,
+      "natural_seconds": 3.6,
+      "final_seconds": 5.835,
+      "atempo_applied": true
+    },
+    {
+      "index": 11,
+      "speaker": "narrator",
+      "chars": 40,
+      "natural_seconds": 3.28,
+      "final_seconds": 0.4,
+      "atempo_applied": true
+    },
+    {
+      "index": 12,
+      "speaker": "jesus",
+      "chars": 67,
+      "natural_seconds": 4.96,
+      "final_seconds": 3.68,
+      "atempo_applied": false
+    },
+    {
+      "index": 13,
+      "speaker": "narrator",
+      "chars": 151,
+      "natural_seconds": 11.28,
+      "final_seconds": 3.595,
+      "atempo_applied": true
+    }
+  ],
+  "speakers": {
+    "narrator": {
+      "voice_id": "LSi9zNCeliLuhIGGS0By",
+      "audio_tag": null
+    },
+    "jesus": {
+      "voice_id": "tlETan7Okc4pzjD0z62P",
+      "audio_tag": null
+    },
+    "zacchaeus": {
+      "voice_id": "puDRtQWF8NtQiPMJygTb",
+      "audio_tag": null
+    }
+  },
+  "settings": {
+    "stability": 0.65
+  }
+}

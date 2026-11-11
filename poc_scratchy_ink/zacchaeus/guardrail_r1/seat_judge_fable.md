@@ -1,0 +1,3 @@
+(Fable seat, judge/no hat. Score 6.5/10, curiosity 6/10.)
+Key: line 2 lacks stake (why hated: collected for Rome from own people) -> lines 6,7,10,14 weaker. Line 6 fragment unclear "he". Lines 11-14 stack fast. Words that fail: make haste, abide, thy, Behold, goods, Son of man, that which was lost, died for our sins. Accuracy: line 1 mildly overclaimed (his mind not given); line 12 sound gloss; line 15 imported 1 Cor 15:3-4; v8 fourfold + v9 son of Abraham dropped. Line 9 must stay (grace before works).
+Fixes: L2 "He took taxes from his own people for Rome. He was rich, and people hated him."; L5 "The crowd was angry. They said Jesus was going to eat with a bad man:"; L15 "Jesus, the Son of man, came to find him. He is looking for you too."

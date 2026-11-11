@@ -1,0 +1,62 @@
+You are ONE independent voice on a review panel (you have not seen the other voices). Be honest and specific; do not flatter; do not give generic advice. Everything you need is in the EVIDENCE PACK below. Do not ask questions. Do not use tools. Output the review text only.
+
+
+YOUR SEAT: THE LIFELONG BIBLE READER AND FACT CHECKER
+You know the Bible well and you must check every factual claim in the SPOKEN lines against the KJV text below (the film is based on Luke 19:1-10; other passages are for context). Question 4 is your main job: go line by line, mark each claim RIGHT / OVERCLAIMED / UNSUPPORTED / WRONG, quote the line, cite the verse. Check every quoted KJV phrase is word-for-word. Then answer the other questions as a Bible reader (would you send it to your church group?).
+
+KJV TEXT (the only authority; quote it):
+## Luke 19:1-10
+And Jesus entered and passed through Jericho. And, behold, there was a man named Zacchaeus, which was the chief among the publicans, and he was rich. And he sought to see Jesus who he was; and could not for the press, because he was little of stature. And he ran before, and climbed up into a sycomore tree to see him: for he was to pass that way. And when Jesus came to the place, he looked up, and saw him, and said unto him, Zacchaeus, make haste, and come down; for to day I must abide at thy house. And he made haste, and came down, and received him joyfully. And when they saw it, they all murmured, saying, That he was gone to be guest with a man that is a sinner. And Zacchaeus stood, and said unto the Lord; Behold, Lord, the half of my goods I give to the poor; and if I have taken any thing from any man by false accusation, I restore him fourfold. And Jesus said unto him, This day is salvation come to this house, forsomuch as he also is a son of Abraham. For the Son of man is come to seek and to save that which was lost.
+
+## Luke 18:18-27
+And a certain ruler asked him, saying, Good Master, what shall I do to inherit eternal life? And Jesus said unto him, Why callest thou me good? none is good, save one, that is, God. Thou knowest the commandments, Do not commit adultery, Do not kill, Do not steal, Do not bear false witness, Honour thy father and thy mother. And he said, All these have I kept from my youth up. Now when Jesus heard these things, he said unto him, Yet lackest thou one thing: sell all that thou hast, and distribute unto the poor, and thou shalt have treasure in heaven: and come, follow me. And when he heard this, he was very sorrowful: for he was very rich. And when Jesus saw that he was very sorrowful, he said, How hardly shall they that have riches enter into the kingdom of God! For it is easier for a camel to go through a needle’s eye, than for a rich man to enter into the kingdom of God. And they that heard it said, Who then can be saved? And he said, The things which are impossible with men are possible with God.
+
+## Luke 18:35-43
+And it came to pass, that as he was come nigh unto Jericho, a certain blind man sat by the way side begging: And hearing the multitude pass by, he asked what it meant. And they told him, that Jesus of Nazareth passeth by. And he cried, saying, Jesus, thou Son of David, have mercy on me. And they which went before rebuked him, that he should hold his peace: but he cried so much the more, Thou Son of David, have mercy on me. And Jesus stood, and commanded him to be brought unto him: and when he was come near, he asked him, Saying, What wilt thou that I shall do unto thee? And he said, Lord, that I may receive my sight. And Jesus said unto him, Receive thy sight: thy faith hath saved thee. And immediately he received his sight, and followed him, glorifying God: and all the people, when they saw it, gave praise unto God.
+
+## Luke 15:1-2
+Then drew near unto him all the publicans and sinners for to hear him. And the Pharisees and scribes murmured, saying, This man receiveth sinners, and eateth with them.
+
+## Luke 5:30-32
+But their scribes and Pharisees murmured against his disciples, saying, Why do ye eat and drink with publicans and sinners? And Jesus answering said unto them, They that are whole need not a physician; but they that are sick. I came not to call the righteous, but sinners to repentance.
+
+## Ezekiel 34:16
+I will seek that which was lost, and bring again that which was driven away, and will bind up that which was broken, and will strengthen that which was sick: but I will destroy the fat and the strong; I will feed them with judgment.
+
+## Exodus 22:1
+If a man shall steal an ox, or a sheep, and kill it, or sell it; he shall restore five oxen for an ox, and four sheep for a sheep.
+
+## 1 Timothy 1:15
+This is a faithful saying, and worthy of all acceptation, that Christ Jesus came into the world to save sinners; of whom I am chief.
+
+## 1 Corinthians 15:3-4
+For I delivered unto you first of all that which I also received, how that Christ died for our sins according to the scriptures; And that he was buried, and that he rose again the third day according to the scriptures:
+
+=== EVIDENCE PACK ===
+A 70-75 second vertical short video (phone, 9:16), voiced by a narrator plus separate voices for Jesus, Zacchaeus and the crowd. Pictures: hand-drawn scratchy-ink comic style. Story: Luke 19:1-10. The SPOKEN WORDS, numbered (the [label] is who speaks, not spoken):
+
+1. [narrator] A man climbed a tree to see Jesus. But Jesus was looking for him.
+2. [narrator] Zacchaeus was a chief tax collector at Jericho. Tax men often took extra money from their own people. He was rich, and called a sinner. He was too short to see over the crowd.
+3. [narrator] Jesus came by, looked up, and called him by name.
+4. [jesus] "Zacchaeus, make haste, and come down; for to day I must abide at thy house."
+5. [narrator] Hurry down, Jesus said. Today I will stay at your house. Zacchaeus came down fast, full of joy.
+6. [narrator] The crowd grumbled: Jesus is going to a sinner's house! Jesus went anyway.
+7. (pause)
+8. [narrator] Jesus came first. The change came after. Zacchaeus stood up and said:
+9. [zacchaeus] "Behold, Lord, the half of my goods I give to the poor."
+10. [narrator] Half of all he had. And four times back to anyone he cheated.
+11. [jesus] "This day is salvation come to this house."
+12. [narrator] Salvation means God rescues you and brings you back to Him.
+13. [narrator] Jesus, the Son of man, said why He came:
+14. [jesus] "For the Son of man is come to seek and to save that which was lost."
+15. [narrator] Zacchaeus came to look. Jesus came to find him. Later, to save the lost, Jesus died for our sins, and rose again the third day.
+
+OUTPUT FORMAT (Markdown, max ~600 words in total, exactly these headings, cite the numbered line each time):
+## 1. WHO IS THIS FOR (one named viewer; who stops, who finishes, who shares; who is NOT served)
+## 2. MAIN TAKEAWAY (one sentence a viewer could say back; which line carries it; did the film make it clear?)
+## 3. GLOBAL AUDIENCE (who / what / why in my own words; where I got lost or misled, quote the line; words that fail in translation)
+## 4. BIBLICALLY ACCURATE (claim by claim: RIGHT / OVERCLAIMED / UNSUPPORTED / WRONG, quote the line; say only what you can support)
+## 5. BEST VERSION POSSIBLE (what would the best explainer in the world do differently; the ONE highest-value change; score 0-10 against that bar)
+## CURIOSITY GAP (opens at line __, pays off at line __; score 0-10; worth the wait?)
+## THREE SMALLEST FIXES (line number + exact replacement wording)
+

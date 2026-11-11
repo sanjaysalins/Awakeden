@@ -1,0 +1,29 @@
+{
+ "piece": "zacchaeus_short",
+ "locked": "2026-11-11",
+ "locked_by": "owner ('lock it and do the next publish ready steps', 2026-11-11)",
+ "final_video": "visual/zacchaeus_final.mp4",
+ "final_sha256": "6997b049d229d9fd6d940fee6dce1fd92b68fcc4875c2a98e6e73816ab11ff3f",
+ "source": "poc_scratchy_ink/zacchaeus/ZACCHAEUS_POC.mp4 (same bytes); builder poc_scratchy_ink/zacchaeus/build_film.py (trim-only clips, 1 s pause, two-pass loudness)",
+ "words": "LOCKED v3.1 2026-11-11: poc_scratchy_ink/zacchaeus/words/FINAL_WORDS_v3.md",
+ "audio": "audio/narration.mp3 81.22s natural speed, 3 voices; film 85.2s (1 s pause + 3 s landing hold); -14.3 LUFS / -1.4 dBTP",
+ "visual": "14 scenes, one fig tree, one meal room, one Jesus (t1 sheet ref), no halo; fix rounds: 4 redraws (pose/tree/empty), consistency round (tree + room)",
+ "spend_usd": 15.1,
+ "not_done": [
+  "upload",
+  "seed viewers",
+  "commit (text only, NO media)",
+  "search terms unverified against real autocomplete"
+ ],
+ "note": "Any change to the film or words needs the owner's say-so and a new sha.",
+ "publish_pack": "LOCKED 2026-11-11 (owner: 'lock it and do the next publish ready steps'). publish/ GREEN (0 fail, 0 warn), thumbs 16x9/9x16/1x1/tiktok from clean stills (publish/make_thumbs.py), release_check GREEN, catalogue slug zacchaeus-who-was-looking",
+ "publish_pack_sha16": {
+  "youtube_short.md": "6ef5e529f4307296",
+  "tiktok.md": "e673b0867bdac7d1",
+  "facebook.md": "eadd24f28f6999af",
+  "instagram.md": "7c0c1d9b6c328273",
+  "captions.srt": "f60fc9f80480cde5"
+ },
+ "packaging": "packaging/PACKAGING_CARD_MERGED.md (3 blind writers: Fable, Opus, Sonnet)",
+ "red_team_publish": "3 blind seats (Fable 6, Opus 7, Sonnet 7.5) REVISE; all KJV quotes exact; convergent fixes applied (9x16 thumb covered Jesus's eyes 3/3, thumb words 'WHO FOUND WHOM?' unclear 3/3 -> 'HE CLIMBED A TREE. JESUS FOUND HIM.' + 'ZACCHAEUS', #Shorts off non-YouTube 2/3, 'Jesus stopped' -> 'came by' (accuracy), title 'Found Him First' -> 'Called Him by Name' (accuracy), plain-word fixes). Not re-tested."
+}

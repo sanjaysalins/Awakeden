@@ -1,0 +1,14 @@
+<speaker name="narrator">A man climbed a tree to see Jesus. But Jesus was looking for him.</speaker>
+<speaker name="narrator">Zacchaeus was a chief tax collector at Jericho. Tax men often took extra money from their own people. He was rich, and called a sinner. He was too short to see over the crowd.</speaker>
+<speaker name="narrator">Jesus came by, looked up, and called him by name.</speaker>
+<speaker name="jesus">Zacchaeus, make haste, and come down; for to day I must abide at thy house.</speaker>
+<speaker name="narrator">Jesus must stay at his house today! Zacchaeus hurried down, full of joy.</speaker>
+<speaker name="narrator">The crowd grumbled: Jesus is going to a sinner's house! Jesus went anyway.</speaker>
+<speaker name="narrator">Jesus came to him first. Then Zacchaeus stood up and said:</speaker>
+<speaker name="zacchaeus">Behold, Lord, the half of my goods I give to the poor.</speaker>
+<speaker name="narrator">Half of all he had. And if he had cheated anyone, he would pay back four times.</speaker>
+<speaker name="jesus">This day is salvation come to this house.</speaker>
+<speaker name="narrator">Salvation means God rescues you and brings you back to Him.</speaker>
+<speaker name="narrator">Jesus, the Son of man, said why He came:</speaker>
+<speaker name="jesus">For the Son of man is come to seek and to save that which was lost.</speaker>
+<speaker name="narrator">Zacchaeus came to look. Jesus came to find him. He still looks for the lost. To save them, He later died for our sins, and rose again on the third day.</speaker>

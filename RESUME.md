@@ -1,3 +1,29 @@
+## 2026-11-10 (late night) HANDOVER - SWIRLS lane: ep12 + Talitha upload-ready; NEW "Let the Little Children Come" (Mark 10) words ready to lock. Stopped for the night.
+
+**Full detail:** `poc_living_water_ink_style_test/swirls_episode_16_let_the_little_children/HANDOVER_RESUME.md`.
+- **RESUME FIRST:** ask the owner "Lock the words (X3)?" Page `poc_living_water_ink_style_test/swirls_episode_16_let_the_little_children/_PICK_WORDS.html`. Owner's own still (Jesus holding two laughing girls) = cover + last picture + style ref. 5 blind writers converged; tests 7.5-8 then 7-8; 0 wrong KJV. $0 spent on this episode.
+- **Ep12 "Ye Are Not All Clean"** upload-ready: final `swirls_episode_12_ye_are_not_all_clean_v3_final_sfx.mp4`, pack GREEN + PACKAGING-READY, red team r2 (Fable/Claude/Codex/Grok) fixes applied, page `swirls_episode_12_ye_are_not_all_clean/_READY_TO_POST.html`. After posting: `swirls_upload_tracker.py --set swirls_episode_12_ye_are_not_all_clean youtube <url>`.
+- **Talitha (ep6)** upload-ready since earlier today; owner posting it; log URL the same way (`swirls_episode_06_talitha_cumi`).
+- **Brand footer changed (owner yes):** "one panel at a time" -> "one story at a time" in `data/upload_brand.json` + 365 pack files (records/logs/website/spec left alone). Open: channel banner art still says it (`pipeline/channel_dress.py:135`) - owner not yet answered whether to redraw.
+- Nothing committed. Commit text only, only when asked.
+
+## 2026-11-11 - Zacchaeus (Luke 19) DONE: film locked + publish pack GREEN (not uploaded, not committed)
+
+- Piece `batches/cluster_04_encounters/zacchaeus_short/` (slug `zacchaeus-who-was-looking`), film `visual/zacchaeus_final.mp4` 85.2 s, -14.3 LUFS, sha 6997b049...
+- Words v3.1 locked after guardrail r1+r2; 14 trim-only clips (owner rule: no freeze/boomerang/zoom fill); one fig tree + one room consistency fix.
+- Motion-graphics push (Fable design, Remotion `ZaccPreview`) tried and REJECTED by owner ("sloppy"); kept the plain cut.
+- Packaging 3 blind cards merged; publish red team 6/7/7.5 REVISE -> fixes applied (thumbs, words); pack + release_check GREEN.
+- Spend $15.10 (ledger). Owner TODO: upload, then `upload_tracker.py --set zacchaeus-who-was-looking <platform> <url>`. Commit text only when asked.
+- Full detail: `poc_scratchy_ink/zacchaeus/HANDOVER_RESUME.md`.
+
+## 2026-11-10 (night) HANDOVER - Jesus Wept DONE + pushed (a1f1eaa). NEW: Zacchaeus (Luke 19) in the owner's Google Flow style - words written, 4 test stills made. Stopped for the night.
+
+**Full detail:** `poc_scratchy_ink/zacchaeus/HANDOVER_RESUME.md`.
+- Jesus Wept: film + publish pack locked, red-teamed, GREEN, committed + pushed (text only). Owner still to upload Jesus Wept + Barabbas and send links (`upload_tracker.py --set <slug> <platform> <url>`; slugs `jesus-wept-the-sentence`, `barabbas-son-of-the-father`).
+- Zacchaeus: angle A "Who was looking for whom?". Words `words/FINAL_WORDS.md` (~65 s) - NOT locked. 4 test stills (~$0.40, ledgered): t1/t2/t4 good, t3 weak. Page `_ZACCHAEUS_VISUALS.html`.
+- **RESUME FIRST:** ask the owner "Lock the words + redraw t3 (~$0.10)?" Then guardrail panel ($0), then quote voice (~$0.16) and stills+animation (~$8-9) - each its own yes.
+- Not committed: Zacchaeus, Lazarus ideas, Jonah style tests. Commit text only, only when asked.
+
 ## 2026-11-10 (later) - Barabbas RE-LOCKED as A8 `visual/barabbas_short_A8_final.mp4` (sha e15a11bd...) after red-team r2 (3/3 REVISE on A6; `red_team/r2_A6/_RED_TEAM_A6.html`). Fixed: plain elders, praying Jesus alone on Abba line, upright cross/empty hill, sparks + sky hand cut; new thumbs from g2 Pilate panel. Spend +$2.43 (total ~$11.4). Pack GREEN, release_check GREEN, tracker rebuilt. NEXT: owner uploads, then `upload_tracker.py --set barabbas-son-of-the-father <platform> <url>`. Left: opening ghost Jesus (~$1.23), flame aura (style), crowd headwear; no fresh re-test run yet.
 
 ## 2026-11-10 UPDATE - Barabbas re-locked as A6: `visual/barabbas_short_A6_final.mp4` (sha 42f7f3c3...). Era fix: trouser clip c1 -> new tunic+shackles moment e1 (~$0.55, owner yes); loudness -19.7 -> -14.7 LUFS. FINAL_VIDEO/LOCKED/pack/thumbs meta updated; landing hold + release_check GREEN. Still: owner ear-check, upload, commit (text only). Crowd headcloths 15-21s left (borderline).
