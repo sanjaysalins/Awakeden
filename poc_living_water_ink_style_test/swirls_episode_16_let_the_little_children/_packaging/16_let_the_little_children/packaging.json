@@ -1,0 +1,116 @@
+{
+  "schema": "packaging/1",
+  "_status": "2026-11-11 card for the LOCKED v3 film (owner: 'its beautiful, lock it'). Title proposed by Claude from real autocomplete; owner has not picked yet. Film red team r1 (blind: Fable, Sonnet newcomer, codex Bible, grok hook; red_team_r1/) fed the copy: 'suffer' glossed, full Mark 10:15 quoted, 'not now' said plainly to be the film's own words not a Bible quote, 'angry' tied to 'much displeased'. AI-disclosure wording declined: owner override 2026-10-31 bans AI wording in public text; platform AI switches stay ON. Class A: 'let the children come to me' and 'suffer the little children' have real search demand. 2026-11-11 final copy red team r2 (blind, fresh seats: Fable + claude/codex/grok CLIs, publish/_redteam_r2): all 4 REVISE; fixed by convergence: pinned comment no longer puts 'not now' in the disciples' mouths, 'suffer' glossed on every platform, Mark 10:15 quoted (no 'grown-ups come'), Mark 10:16 quoted, 'not now' marked as not a Bible quote on every platform, thumbnail text 'Look Who Jesus Picked Up' -> 'Jesus Held the Children' (slang/ESL risk beside children; re-test: words must match the owner's still, which shows a shoulder ride), 'old English' -> 'Here', teaser idiom removed, Instagram 5 hashtags, 'disciples' named, title 'Got' -> 'Was'. Re-test (fresh blind: Fable 8/10 light revise, claude REVISE minor, grok REVISE; publish/_redteam_r2/retest): fixed 'with them' -> 'with the disciples' (Instagram), plain line after Mark 10:15 on Facebook, 'not now' marked 'ours, not the Bible's' everywhere, verse 16 payoff on TikTok/Instagram, single quotes for 'not now' in captions. Left for owner: film's own label 'Jesus · Mark 10:14' on a paraphrase, 38.8-43.8 s children walk away, last line 'picked up', 'Angry' in titles (1 seat).",
+  "episode": "16_let_the_little_children",
+  "person": "Jesus and the little children",
+  "person_tag": "#LetTheChildrenCome",
+  "name_match": "Jesus",
+  "women": false,
+  "search_class": "modest-strong: 'let the children come to me' (+ bible verse), 'suffer the little children' (+ to come unto me; crowded by songs and a Stephen King story), 'jesus and the children' (+ story), 'jesus blesses the children', 'mark 10 13-16' all autocomplete. 'jesus was angry' is busy but mostly the temple story.",
+  "search_phrases": [
+    "let the children come to me",
+    "suffer the little children",
+    "jesus and the children",
+    "jesus blesses the children",
+    "mark 10 13-16"
+  ],
+  "search_evidence": {
+    "source": "YouTube search suggestions (suggestqueries.google.com, client=firefox, ds=yt, hl=en), fetched 2026-11-11, 11 queries; file _packaging/16_let_the_little_children/autocomplete_2026-11-11.txt",
+    "grade": "B (one dated snapshot of autocomplete, not search volume)"
+  },
+  "famous_neighbours": [
+    "Jesus",
+    "the disciples",
+    "Let the children come to me",
+    "Jesus loves the little children"
+  ],
+  "curiosity_gap": "Jesus' own followers tried to stop parents bringing children to Him. Jesus was angry, but at whom, and what did He do next?",
+  "curiosity_question": "Has someone ever told you 'not now'?",
+  "scripture": {
+    "primary": "Mark 10:13-16",
+    "read_it": "Mark 10:13-16, Matthew 19:13-15, Luke 18:15-17",
+    "narration_covers": [
+      "Mark 10:13",
+      "Mark 10:14",
+      "Mark 10:15",
+      "Mark 10:16"
+    ]
+  },
+  "name_reveal": {
+    "decision": "early_spoken",
+    "note": "Jesus is named in the fourth spoken sentence (7.9 s); first seen at 21 s. The hook box from frame 0 states the viewer's stake ('Pushed away?').",
+    "compensation": [
+      "title",
+      "description_line_1"
+    ]
+  },
+  "first_seconds": {
+    "stake_in_3s": true,
+    "first_spoken_line": "Has someone pushed you away? Told you 'not now'?",
+    "stake_source": "on-screen words 'Pushed away?' from frame 0 (to 5.4 s) over a crying boy; spoken at 0.0-1.6 s",
+    "waiver": ""
+  },
+  "youtube": {
+    "title": "Let the Children Come to Me: Why Jesus Was Angry | Bible Story",
+    "line1": "Jesus and the little children in the Bible (Mark 10:13-16): His disciples tried to stop people bringing children to Him, and Jesus was angry.",
+    "line2": "\"Suffer the little children to come unto me, and forbid them not: for of such is the kingdom of God.\" Here, 'suffer' means 'let'.",
+    "read_it": "Read it: Mark 10:13-16 (also Matthew 19:13-15, Luke 18:15-17).",
+    "hashtags": [
+      "#LetTheChildrenCome",
+      "#Mark10",
+      "#Jesus",
+      "#Bible",
+      "#BibleStory"
+    ],
+    "tags": [
+      "let the children come to me",
+      "let the little children come to me",
+      "suffer the little children",
+      "suffer the little children to come unto me",
+      "jesus and the children",
+      "jesus and the children story",
+      "jesus and the children bible story",
+      "jesus blesses the children",
+      "mark 10 13-16",
+      "mark 10 kjv",
+      "why was jesus angry",
+      "jesus was angry",
+      "bible story short"
+    ]
+  },
+  "title_class": "A",
+  "send_to": "someone who has been told 'not now'",
+  "next_teaser": "Next: a mother who kept asking Jesus to help her daughter.",
+  "shareable_fact": "In Mark 10:14 Jesus is 'much displeased' when His own disciples try to stop children being brought to Him.",
+  "ask_line": "Follow for Jesus in the whole Bible, one story at a time.",
+  "pinned_comment": "Has anyone ever told you 'not now'? What did Jesus do when His own disciples tried to stop people bringing children to Him? Read it: Mark 10:13-16.",
+  "spoiler_patterns": [
+    "picked up",
+    "his arms"
+  ],
+  "release": {
+    "stage": 1,
+    "order": 3,
+    "note": "Upload-ready 2026-11-11. Owner decides when to post (30-episode posting hold applies)."
+  },
+  "content_note": "",
+  "measured": {
+    "violence_words_in_narration": 0,
+    "duration_s": 75.7,
+    "name_first_spoken_pct": 10,
+    "ending_pct": 4,
+    "source": "measured on swirls_episode_16_let_the_little_children_v3_final.mp4 (voice ends 72.8 s, 2.9 s hold) and its .srt; 'angry' and 'rebuked' are spoken, nothing violent is shown"
+  },
+  "panels": {
+    "discoverability": {
+      "run": true,
+      "record": "swirls_episode_16_let_the_little_children/publish/_redteam_r2",
+      "note": "2026-11-11. Blind copy red team on the real upload text (Fable + claude/codex/grok CLIs), then a fresh-seat re-test. Film hook judged blind in red_team_r1 (grok hook seat, Fable judge)."
+    },
+    "guardrails": {
+      "run": true,
+      "record": "swirls_episode_16_let_the_little_children/red_team_r1",
+      "note": "2026-11-11. Blind, finished film: Fable judge, Sonnet newcomer, codex CLI Bible reader, grok CLI hook. 5 guardrail questions answered by every seat. Words were also panelled blind before lock (guardrail_r1, guardrail_r2)."
+    }
+  }
+}

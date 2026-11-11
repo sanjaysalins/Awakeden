@@ -64,3 +64,12 @@ Nothing paid without quoted price + separate yes; a pick locks WORDS only; blind
 - Owner: north stars = p07 (He lifts the boy) + owner still; rest looked off/inconsistent; v2 p09 clip = AI slop (girl passes through arm).
 - v3/stills: 15 redrawn with ONLY p07 + owner still as refs ($1.20, p05 redo for giant Jesus). v3/clips: 16 Kling PRO (15 + calm p09), $6.10. Job ids v3/_jobs.txt. build_v3.py -> EP16_PREVIEW_v3.mp4 (=Remotion base now; v2 base backed up in _build_v3/). Text v2 made more see-through (60%) -> EP16_REMOTION_v3.mp4 -> EP16_SCORED_v3.mp4. Page _FILM_V3.html. Total ~$21.
 - Next: owner OK -> SFX -> packaging card + red team + publish pack -> V6 roster #16.
+
+## 2026-11-11 night: UPLOAD-READY ($0)
+- Packaging card `_packaging/16_let_the_little_children/packaging.json` -> PACKAGING-READY (run check_packaging.js with PACKAGING_ROOT=<this folder>/_packaging). Autocomplete snapshot beside it.
+- Film red team `red_team_r1/` (blind: Fable, Sonnet newcomer, codex Bible, grok hook; pack built by `_build_pack.py`, leak-checked). All FIX small (5-7/10). Top: 38.8-43.8 s children walk AWAY under "let them come" (4/4); "not now" slip reads as a disciples' quote.
+- Publish pack `publish/` via cli_publish.py (bridge answered in-chat) -> GREEN --strict. Copy red team `publish/_redteam_r2/` (fresh blind Fable + claude/codex/grok, `_build.py`), all REVISE -> fixed by convergence -> `retest/` (fresh Fable 8/10, claude/grok minor). Before copy in `_redteam_r2/before/`.
+- Thumbnail text (FRONT_COVER) now "Jesus Held the Children" (was "Look Who Jesus Picked Up": slang risk next to little girls). Subtitle "Mark 10:13-16".
+- captions: merged orphan "them." cue; 'not now' in single quotes (episode .srt + publish/captions.srt).
+- Owner page `_UPLOAD_READY.html`. Owner to pick: title (A recommended), whether to do a $0 clip swap at 38.8 s, Made for kids = NO, AI switches ON.
+- Not done: add #16 to V6 roster; no SFX bed on this film.
