@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Little Children: Pictures</title>
+<style>
+:root{--bg:#fbf7ef;--ink:#2a2420;--soft:#6b5f55;--card:#fff;--line:#e6dccb;--hi:#fff2c6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d1a17;--ink:#f1ebe2;--soft:#b8ab9c;--card:#29241f;--line:#3d352d;--hi:#4a3f1c}}
+body{background:var(--bg);color:var(--ink);font:20px/1.5 Verdana,Arial,sans-serif;margin:0;padding:16px}
+.w{max-width:1100px;margin:auto}h1{font-size:30px}
+.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.c{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px}
+.c img{width:100%;border-radius:8px;cursor:zoom-in}.n{font-size:24px;font-weight:bold}small{color:var(--soft)}
+.wide img{width:100%;border-radius:10px;cursor:zoom-in}
+.pick{background:var(--hi);border-radius:12px;padding:16px;font-size:24px;margin-top:20px}
+#z{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);align-items:center;justify-content:center;z-index:9}
+#z img{max-width:96vw;max-height:96vh}
+</style></head><body><div class="w">
+<h1>Little Children: 8 pictures + your still</h1>
+<p>Click any picture to zoom. Cost: 400 credits ≈ $0.80.</p>
+<div class="wide c"><span class="n">Jesus look sheet</span> <small>helper, not in film</small><img src="pictures/00_jesus_ref.png"></div>
+<div class="g" style="margin-top:14px">
+<div class="c"><span class="n">1</span> <small>"pushed you away?"</small><img src="pictures/01_child_edge.png"></div>
+<div class="c"><span class="n">2</span> <small>"bringing young children"</small> <small>(redo)</small><img src="pictures/02_families_road.png"></div>
+<div class="c"><span class="n">3</span> <small>"tried to stop them"</small><img src="pictures/03_followers_block.png"></div>
+<div class="c"><span class="n">4</span> <small>"Angry."</small><img src="pictures/04_jesus_angry.png"></div>
+<div class="c"><span class="n">5</span> <small>Jesus's line</small><img src="pictures/05_children_run.png"></div>
+<div class="c"><span class="n">6</span> <small>"grown-ups too"</small><img src="pictures/06_grandmother.png"></div>
+<div class="c"><span class="n">7</span> <small>"in his arms"</small><img src="pictures/07_lifts_child.png"></div>
+<div class="c"><span class="n">8</span> <small>"hands upon them"</small><img src="pictures/08_blessing.png"></div>
+<div class="c"><span class="n">9</span> <small>YOUR still (last frame)</small><img src="style_ref_owner_still.jpg"></div>
+</div>
+<div class="pick">Approve all 8? (Next: clips, with their own price.)</div>
+</div>
+<div id="z" onclick="this.style.display='none'"><img></div>
+<script>document.querySelectorAll('.c img').forEach(i=>i.onclick=()=>{const z=document.getElementById('z');z.querySelector('img').src=i.src;z.style.display='flex'});</script>
+</body></html>

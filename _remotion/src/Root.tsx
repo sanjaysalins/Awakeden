@@ -6,6 +6,11 @@ import { EW01Open, EW01Climax, EW01Range, OPEN_FRAMES, CLIMAX_FRAMES, RANGE_FRAM
 import { DnaPocFilm, POC_FRAMES as DNAPOC_FRAMES, POC_FPS as DNAPOC_FPS } from "./DnaPocFilm";
 import { DnaTrailerHook, HOOK_FRAMES, HOOK_FPS } from "./DnaTrailerHook";
 import { DnaSplashHook, SPLASH_FRAMES, SPLASH_FPS } from "./DnaSplashHook";
+import { TalithaCumi, TC_FRAMES, TC_FPS } from "./TalithaCumi";
+import { Ep12Towel, EP12_FRAMES, EP12_FPS } from "./Ep12Towel";
+import { Ep16Children, EP16_FRAMES, EP16_FPS } from "./Ep16Children";
+import { Ep16ChildrenV2 } from "./Ep16ChildrenV2";
+import { ZaccPreview, ZP_FRAMES, ZP_FPS } from "./ZaccPreview";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -27,6 +32,11 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="DnaPocFilm" component={DnaPocFilm} durationInFrames={DNAPOC_FRAMES} fps={DNAPOC_FPS} width={1920} height={1080} />
       <Composition id="DnaTrailerHook" component={DnaTrailerHook} durationInFrames={HOOK_FRAMES} fps={HOOK_FPS} width={1920} height={1080} />
       <Composition id="DnaSplashHook" component={DnaSplashHook} durationInFrames={SPLASH_FRAMES} fps={SPLASH_FPS} width={1920} height={1080} />
+      <Composition id="TalithaCumi" component={TalithaCumi} durationInFrames={TC_FRAMES} fps={TC_FPS} width={1080} height={1920} />
+      <Composition id="Ep12Towel" component={Ep12Towel} durationInFrames={EP12_FRAMES} fps={EP12_FPS} width={1080} height={1920} />
+      <Composition id="Ep16Children" component={Ep16Children} durationInFrames={EP16_FRAMES} fps={EP16_FPS} width={1080} height={1920} />
+      <Composition id="Ep16ChildrenV2" component={Ep16ChildrenV2} durationInFrames={EP16_FRAMES} fps={EP16_FPS} width={1080} height={1920} />
+      <Composition id="ZaccPreview" component={ZaccPreview} durationInFrames={ZP_FRAMES} fps={ZP_FPS} width={1080} height={1920} />
     </>
   );
 };
