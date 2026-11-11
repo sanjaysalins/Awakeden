@@ -73,3 +73,4 @@ Nothing paid without quoted price + separate yes; a pick locks WORDS only; blind
 - captions: merged orphan "them." cue; 'not now' in single quotes (episode .srt + publish/captions.srt).
 - Owner page `_UPLOAD_READY.html`. Owner to pick: title (A recommended), whether to do a $0 clip swap at 38.8 s, Made for kids = NO, AI switches ON.
 - Not done: add #16 to V6 roster; no SFX bed on this film.
+- 2026-11-11: owner title 'Why Jesus Was Angry' (R03 override written). Thumbnail words 'They Tried to Stop Them' (blind Fable pair test 7/10, _THUMB_PICK.html). 16:9 thumb rebuilt side-by-side (_thumb_16x9_side.py) because the shared engine shrank the art to a stamp. Publish gate GREEN --strict.

@@ -1,7 +1,7 @@
 # youtube_short — YouTube (Short)
 
 ## TITLE
-Let the Children Come to Me: Why Jesus Was Angry | Bible Story
+Why Jesus Was Angry
 
 ## DESCRIPTION
 Jesus and the little children in the Bible (Mark 10:13-16): His disciples tried to stop people bringing children to Him, and Jesus was angry.
