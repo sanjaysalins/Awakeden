@@ -1,0 +1,59 @@
+# REVISION BRIEF: one short film on Luke 10:38-42 (Martha and Mary) — make it TIGHTER, with a stronger ENDING
+
+**The channel:** short vertical films (YouTube Shorts / Reels) that find Jesus across the whole Bible, for a worldwide audience (many viewers speak English as a second language). Look: warm hand-drawn pencil-and-gouache storybook pictures, gently animated, cozy and tender. One narrator voice; Jesus's own words get a Jesus voice; Martha's own words get a woman's voice. The music is soft felt piano that turns warm and resolves near the end.
+
+**Who this film is for:** a person who is worn out from doing everything. Someone scrolling late, tired, who keeps the house, the job, the family running, and feels nobody notices and nobody helps. They did not come looking for a Bible story.
+
+## THE CURRENT FILM (recorded, 179 words, 82 s of voice + 3 s hold)
+NARRATOR: You do everything for everyone. Does anyone even care? A tired woman once asked Jesus that. Her name was Martha. She had opened her home to Him. While she served, pulled in every direction, her sister Mary sat at His feet and listened.
+MARTHA: Lord, dost thou not care that my sister hath left me to serve alone? bid her therefore that she help me.
+NARRATOR: His first words? Her name.
+JESUS: Martha, Martha,
+NARRATOR: Twice.
+JESUS: thou art careful and troubled about many things: But one thing is needful: and Mary hath chosen that good part, which shall not be taken away from her.
+NARRATOR: "Careful" means full of worry. The one thing needed was not another job. It was Him. Mary chose to stay close and hear Him, and no one would take that from her. He never called Martha's work wrong. He named her worry. So, did He care? Later, the Bible says it plainly, about this family: "Now Jesus loved Martha, and her sister, and Lazarus." She felt left to serve alone. But Jesus was right there, in her own house.
+
+Earlier blind tests scored this 7.5-8/10. What tested well: the 2-second hook (the viewer's own question), Jesus answering with her name twice, the plain gloss of "careful", "He never called Martha's work wrong. He named her worry.", the John 11:5 answer to "did He care?".
+
+## THE NAMED PROBLEMS (from the owner; no fixes are given, find your own)
+- **P1 ENDING.** The owner feels the ending is not insightful enough for a global audience. A newcomer must leave with ONE clear, true insight about Jesus they could say back in their own words, and it should feel like a small discovery, not a slogan.
+- **P2 TIGHTER.** The film is too long and loose. Target **100-130 spoken words** (about 50-60 s). Every line must earn its place; cut repetition and slow bridges.
+- **P3 KEEP IT WHOLE.** Tighter must not lose clarity: a newcomer must still get who Martha is, what she asked, what Jesus said, and why it matters.
+
+## THE PICTURES (already animated, $0 to reuse; you may use fewer, reorder, or drop any; each used at most once; a picture can cover AT MOST its clip length)
+s01 (6.0 s) Martha alone at the hearth, tired, pot steaming, bread and jars around
+s02 (5.0 s) close: Martha's tired face, looking off toward the main room
+s03 (5.0 s) Martha welcoming Jesus in at the curtained doorway, sunlight behind Him
+s04 (5.0 s) Mary sitting at Jesus' feet, listening
+s05 (8.0 s) Martha standing, work cloth in one hand, other hand open toward Mary, upset and tired (not mean); Jesus seated
+s06 (6.0 s) close: Jesus looking up at Martha, kind
+s07 (7.0 s) close: Martha's face starting to soften, eyes wet
+s08 (6.0 s) wide: the busy kitchen corner, many pots, breads, baskets, jars (the "many things"), nobody in it
+s09 (5.0 s) close: Mary listening, face lifted, calm
+s10 (7.0 s) close: Martha's hands slowly putting down the work cloth
+s11 (8.0 s) wide: one room, Jesus on a stool, Mary on the mat, Martha standing near
+s12 (6.0 s) Jesus takes Martha's hand
+s13 (6.0 s) Martha sitting down on a mat for the first time, hands in her lap
+s14 (8.0 s) close group: Jesus in the middle, Martha and Mary each side, their brother Lazarus
+s15 (10.0 s, last picture, also carries a 3 s silent hold) Martha sits beside Jesus holding a clay cup, steam, eyes closed, at peace
+
+**The house rules (all binding):**
+- Every Bible quote is word-for-word King James (KJV, below). Keep quotes short; never let an old word carry the meaning ("cumbered" = pulled in many directions, "careful" = full of worry, not "cautious"; say it in plain English around the quote).
+- Lands on Jesus. Grace, not pressure. No fear, no guilt trip, no "will you / are you ready / just ask Him / come to Jesus" closer. Martha is not the villain: she opened her home to Him, serving is not a sin. Not "stop working".
+- The ending must be EARNED: built from a concrete word, object or moment inside this passage, set up earlier and paid off at the end.
+- One thread from first line to last. First 2 seconds carry a human stake. Open a curiosity gap and pay it off.
+- Faithful: do not invent facts, motives or feelings and present them as Scripture. Do not over-promise.
+- Clever in STRUCTURE, never in vocabulary. School English.
+
+**Your job:** write the WHOLE film again from scratch, your own way (you may keep any line from the current film that still earns its place).
+
+## KJV TEXT (the only authority; quote it exactly)
+Luke 10:38 Now it came to pass, as they went, that he entered into a certain village: and a certain woman named Martha received him into her house.
+Luke 10:39 And she had a sister called Mary, which also sat at Jesus' feet, and heard his word.
+Luke 10:40 But Martha was cumbered about much serving, and came to him, and said, Lord, dost thou not care that my sister hath left me to serve alone? bid her therefore that she help me.
+Luke 10:41 And Jesus answered and said unto her, Martha, Martha, thou art careful and troubled about many things:
+Luke 10:42 But one thing is needful: and Mary hath chosen that good part, which shall not be taken away from her.
+
+Related (may be used, quote exactly):
+John 11:1 Now a certain man was sick, named Lazarus, of Bethany, the town of Mary and her sister Martha.
+John 11:5 Now Jesus loved Martha, and her sister, and Lazarus.

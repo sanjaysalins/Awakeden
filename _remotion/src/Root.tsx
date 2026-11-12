@@ -11,6 +11,10 @@ import { Ep12Towel, EP12_FRAMES, EP12_FPS } from "./Ep12Towel";
 import { Ep16Children, EP16_FRAMES, EP16_FPS } from "./Ep16Children";
 import { Ep16ChildrenV2 } from "./Ep16ChildrenV2";
 import { ZaccPreview, ZP_FRAMES, ZP_FPS } from "./ZaccPreview";
+import { MaryMarthaV1, MM_FRAMES, MM_FPS } from "./MaryMarthaV1";
+import { MaryMarthaV2 } from "./MaryMarthaV2";
+import { MaryMarthaV3, MM3_FRAMES } from "./MaryMarthaV3";
+import { MaryMarthaV4, MM4_FRAMES } from "./MaryMarthaV4";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -37,6 +41,10 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="Ep16Children" component={Ep16Children} durationInFrames={EP16_FRAMES} fps={EP16_FPS} width={1080} height={1920} />
       <Composition id="Ep16ChildrenV2" component={Ep16ChildrenV2} durationInFrames={EP16_FRAMES} fps={EP16_FPS} width={1080} height={1920} />
       <Composition id="ZaccPreview" component={ZaccPreview} durationInFrames={ZP_FRAMES} fps={ZP_FPS} width={1080} height={1920} />
+      <Composition id="MaryMarthaV1" component={MaryMarthaV1} durationInFrames={MM_FRAMES} fps={MM_FPS} width={1080} height={1920} />
+      <Composition id="MaryMarthaV2" component={MaryMarthaV2} durationInFrames={MM_FRAMES} fps={MM_FPS} width={1080} height={1920} />
+      <Composition id="MaryMarthaV3" component={MaryMarthaV3} durationInFrames={MM3_FRAMES} fps={MM_FPS} width={1080} height={1920} />
+      <Composition id="MaryMarthaV4" component={MaryMarthaV4} durationInFrames={MM4_FRAMES} fps={MM_FPS} width={1080} height={1920} />
     </>
   );
 };

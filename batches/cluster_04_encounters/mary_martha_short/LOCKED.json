@@ -1,0 +1,30 @@
+{
+ "piece": "mary_martha_short",
+ "locked": "2026-11-12",
+ "locked_by": "owner ('Lock v6 and finish the publish step', 2026-11-12); v7 re-lock 2026-11-12 (owner 'yes' to the Luke 10:42 line fix from upload red team r2)",
+ "final_video": "visual/mary_martha_final.mp4",
+ "final_sha256": "90f607b3b35b192a14464bd1e5b33142a86f276aebe5e73f7a9318a5183efe30",
+ "source": "poc_warm_storybook_style/MARY_MARTHA_MOTION_v7.mp4 (same bytes); FILM_LOCK.md; motion _remotion/src/MaryMarthaV4.tsx",
+ "words": "LOCKED words H2 2026-11-12: poc_warm_storybook_style/voice_v4/narration.md (H + 'And He said it would not be taken away from her.')",
+ "audio": "audio/narration.mp3 69.97 s natural speed, 3 voices; film 72.97 s (3 s landing hold); felt-piano score (2 parts)",
+ "visual": "15 Nano Banana Pro stills -> Kling v3 pro clips, trim-only 1.0x; Remotion motion layer (pencil lamp, gold flames, gold sprig, flowers/vines/butterflies)",
+ "spend_usd": 11.96,
+ "not_done": [
+  "upload (30-episode hold)",
+  "seed viewers",
+  "commit (text only, NO media)",
+  "search terms unverified against real autocomplete"
+ ],
+ "note": "Any change to the film or words needs the owner's say-so and a new sha.",
+ "publish_pack": "publish/ GREEN --strict (0 fail, 0 warn); thumbs 16x9 side-by-side, 9x16 + tiktok framed, 1x1 framed, all from clean still s05 (publish/make_thumbs.py)",
+ "publish_pack_sha16": {
+  "youtube_short.md": "23520ef1cbd643bf",
+  "tiktok.md": "2f72e27668fff21a",
+  "facebook.md": "778b1dc95ed3b757",
+  "instagram.md": "94db31800e39b12b",
+  "captions.srt": "c526c54a78ba2db3"
+ },
+ "packaging": "packaging/PACKAGING_CARD_MERGED.md (3 blind writers: Fable, Opus, Sonnet)",
+ "red_team_publish": "3 blind seats (Fable 7.5 REVISE, Opus 7.5 REVISE, Sonnet 8 PASS); all KJV exact, Martha never put down. Convergent fixes applied: 9x16/1x1 band hid Mary's face 3/3 -> framed layouts; FB quote cut short 3/3 -> full Luke 10:40b; YT hook buried 3/3 -> hook first; 'did all the serving' -> 'busy with much serving'; added 'One thing is needful' (Fable); 'old English' -> 'King James Bible'; Lazarus = their brother; KJV tag on TikTok/IG. Not re-tested.",
+ "red_team_publish_r2": "2026-11-12 owner 'please red team the upload details': fresh blind seats on the real upload text + thumbs (red_team_r2/, leak-checked): Fable 8, Claude CLI 7.5, Codex 7, Grok 6, all REVISE, no KJV error. Applied (2+ seats or factual): plain-word opening before the fold (3), 'His answer began with her name' (2), FB title no longer repeats thumb -> 'He Said Her Name Twice' (2), 1x1 AWAKEDEN (3), IG #Reels dropped (2), 'Mary had chosen that good part' + 'sat at His feet and heard His word' (2, KJV-close), 'asked Jesus if He cared' (2), 'busy serving' (2), Lazarus-brother ref John 11:1-2 (factual), YT title fragment -> 'Martha Asked Jesus If He Cared. He Said Her Name Twice.' (2), softened shareable fact (2). Film-level (not changed, locked): 'And He would not send her away' loosely reads Luke 10:42 (Codex, Claude). Not re-tested."
+}

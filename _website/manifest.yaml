@@ -802,6 +802,20 @@ items:
   public_hook: A man climbed a tree to see Jesus. But Jesus was looking for him.
   public_blurb: An 85-second short on Luke 19. Zacchaeus came to look; Jesus came to find him. Jesus came first, and the change came after.
   source: ../batches/cluster_04_encounters/zacchaeus_short
+- slug: mary-and-martha-did-he-care
+  kind: short
+  title: 'Mary and Martha: Did Jesus Care?'
+  ref: Luke 10:38-42
+  series_id: people-who-encountered-jesus
+  cluster: null
+  public_status: studio_complete
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Martha asked Jesus, "Lord, dost thou not care?" He answered with her name, twice.
+  public_blurb: A 74-second short on Luke 10 and John 11:5. Jesus did not call Martha's work wrong. Under all her work, He saw her worry, and He loved her.
+  source: ../batches/cluster_04_encounters/mary_martha_short
 - slug: woman-behold-thy-son
   kind: short
   title: Woman, Behold Thy Son
