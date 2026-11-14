@@ -12,14 +12,14 @@ Many read that as an echo of the promise about the woman's seed in Genesis 3:15.
 
 The plan was never yours to write. He has already come for you.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
 
 Follow:
 YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #Galatians4 #SeedOfTheWoman #KJV
 

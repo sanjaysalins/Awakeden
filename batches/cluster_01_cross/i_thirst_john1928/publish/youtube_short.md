@@ -16,7 +16,7 @@ The One who offers the world living water hung there dry, in your place.
 
 Bring him your thirst, and drink. That water is himself.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/ps22-08-i-thirst.html
 
 Follow:
@@ -24,7 +24,7 @@ YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #IThirst #LivingWater #KJV
 

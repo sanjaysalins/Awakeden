@@ -14,7 +14,7 @@ David wrote it in the first person, but he was describing someone else's death. 
 
 This is what Jesus bore to bring you home: every wrenched joint, every cold stare, recorded centuries early so you would know none of it was chance. He was crushed in your place. Come home to him.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/ps22-07-body-foretold.html
 
 Follow:
@@ -22,7 +22,7 @@ YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #Psalm22 #Cross #KJV
 

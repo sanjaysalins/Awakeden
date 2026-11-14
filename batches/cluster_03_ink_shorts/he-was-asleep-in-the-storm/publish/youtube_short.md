@@ -10,14 +10,14 @@ His disciples woke Him: "Lord, save us: we perish." He asked them one question: 
 
 The One who could sleep through the storm is the One who silenced it with a word. When the water reaches you, come to Him.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
 
 Follow:
 YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #JesusCalmsTheStorm #Matthew8 #KJV
 

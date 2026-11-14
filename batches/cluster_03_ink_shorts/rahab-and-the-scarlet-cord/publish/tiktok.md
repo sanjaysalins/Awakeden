@@ -3,7 +3,8 @@
 ## CAPTION
 When Jericho fell, one family walked out alive. A red cord marked Rahab's house, and faith saved her (Joshua 2:18). Tie your trust to Jesus, and bring everyone you love inside.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
+Art and voices made with AI tools.
 
 #Bible #Jesus #Rahab #Jericho #Faith
 

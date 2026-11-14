@@ -7,7 +7,8 @@ Simon of Cyrene wasn't heading toward Jesus. He was compelled, mid-stride, force
 
 Hebrews turns it toward you: "Let us go forth therefore unto him without the camp, bearing his reproach." Only the shame is yours to carry, freely this time.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
+Art and voices made with AI tools.
 
 #Bible #Jesus #Gospel #SimonOfCyrene #Hebrews13 #Mark15 #KJV #CarryTheCross #WithoutTheGate #Crucifixion #BibleStudy #FaithInAction
 

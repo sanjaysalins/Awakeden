@@ -14,14 +14,14 @@ Nathanael answered, "Rabbi, thou art the Son of God; thou art the King of Israel
 
 Jesus met this honest question with welcome. Come and see.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
 
 Follow:
 YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #ComeAndSee #KJV #Nathanael
 

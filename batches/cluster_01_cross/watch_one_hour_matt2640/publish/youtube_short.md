@@ -10,7 +10,7 @@ Matthew 26:40, Jesus asked Peter, James and John to watch with him one hour in G
 
 The cup he asked to pass, he drank, on the cross, for you. He watched that hour alone, so that no hour of yours is watched alone. Bring Jesus the weak flesh he already knows.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/could-ye-not-watch-one-hour.html
 
 Follow:
@@ -18,7 +18,7 @@ YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #Gethsemane #KJV #Shorts
 

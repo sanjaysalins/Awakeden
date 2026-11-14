@@ -3,7 +3,8 @@
 ## CAPTION
 Matthew 8:23-27. A great tempest arose, and Jesus was asleep. They woke Him: "Lord, save us: we perish." One question, then a great calm. The One who slept through the storm silenced it with a word. Come to Him.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
+Art and voices made with AI tools.
 
 #Bible #Jesus #JesusCalmsTheStorm #Matthew8 #KJV #Faith #BibleStudy #Peace
 

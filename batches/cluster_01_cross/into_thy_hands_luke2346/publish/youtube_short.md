@@ -16,7 +16,7 @@ The Psalm he prayed says thou hast redeemed me. On that cross, he was buying tha
 
 You can close your eyes in those same hands. Not because death is small. Because the hands are strong. He keeps the morning.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/father-into-thy-hands.html
 
 Follow:
@@ -24,7 +24,7 @@ YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #WordsFromTheCross #Psalm31 #KJV
 

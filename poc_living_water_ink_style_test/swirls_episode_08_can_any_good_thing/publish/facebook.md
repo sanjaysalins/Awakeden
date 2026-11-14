@@ -8,14 +8,14 @@ John 1:46-47. Nathanael said, "Can there any good thing come out of Nazareth?" P
 
 Jesus met this honest question with welcome. Come and see.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
 
 Follow:
 YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #KJV
 

@@ -10,7 +10,7 @@ A thousand years later, John watched soldiers divide Jesus' clothes and cast lot
 
 The cross was no accident. It was the plan, and it was to win you back.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/ps22-01-crucifixion-foretold.html
 
 Follow:
@@ -18,7 +18,7 @@ YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #Psalm22
 

@@ -10,14 +10,14 @@ Romans 16:20. Paul ends his letter to the believers in Rome with a promise that 
 
 In Genesis 3:15 God promised that the woman's Seed would bruise the serpent. Christians read the cross as where the decisive blow fell, and Paul says that victory will reach you under your own feet. Stand where His grace has set your feet.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
 
 Follow:
 YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #Romans16 #SeedOfTheWoman #KJV
 

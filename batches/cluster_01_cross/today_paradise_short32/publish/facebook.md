@@ -10,14 +10,14 @@ He asked for very little. Listen to what Jesus said back: "To day shalt thou be 
 
 Send this to someone who thinks it is too late to ask.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
 
 Follow:
 YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #ThiefOnTheCross #Luke23 #Jesus
 

@@ -8,14 +8,14 @@ Romans 16:20. "And the God of peace shall bruise Satan under your feet shortly. 
 
 This echoes God's promise in Genesis 3:15. Christ's cross is where the blow fell. Stand where His grace has set your feet.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
 
 Follow:
 YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #Romans16
 

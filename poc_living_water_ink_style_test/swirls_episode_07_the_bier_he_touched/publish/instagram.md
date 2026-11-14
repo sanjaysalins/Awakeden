@@ -3,7 +3,8 @@
 ## CAPTION
 A widow was burying her only son. Touching a dead body made you unclean, so everyone kept their distance. Jesus touched the coffin anyway, and told the boy to get up. He did. Death did not spread to Jesus, life spread from Jesus.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
+Art and voices made with AI tools.
 
 #Bible #Jesus #Miracle #Compassion #Faith #KJV #Hope
 

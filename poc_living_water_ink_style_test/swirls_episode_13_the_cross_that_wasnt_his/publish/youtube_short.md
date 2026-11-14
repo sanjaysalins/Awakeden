@@ -12,14 +12,14 @@ Then Hebrews turns the same invitation toward us: "Let us go forth therefore unt
 
 Simon carried it forced. We're only asked to carry the shame, freely this time. The atoning was His alone, with His own blood.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
 
 Follow:
 YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #SimonOfCyrene #Hebrews13 #CarryTheCross
 

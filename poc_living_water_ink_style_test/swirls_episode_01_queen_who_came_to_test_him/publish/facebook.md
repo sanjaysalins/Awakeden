@@ -8,14 +8,14 @@ A Queen Came to Test Solomon. Jesus Said Someone Greater Was Here.
 
 Someone greater is already in front of you. Bring Him your hardest question.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
 
 Follow:
 YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #QueenOfSheba
 

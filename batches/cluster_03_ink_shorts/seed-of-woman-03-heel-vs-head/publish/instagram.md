@@ -3,7 +3,8 @@
 ## CAPTION
 Genesis 3:15 names two wounds: the serpent's head and the Seed's heel. Christians read it as the cross, where Jesus was wounded and the serpent's power was broken. Come to Jesus.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
+Art and voices made with AI tools.
 
 #Bible #Jesus #Genesis3 #SeedOfTheWoman #KJV #HeelVsHead #BibleStudy #Faith
 

@@ -12,7 +12,7 @@ His question was not a curse. It was a diagnosis full of mercy, the spirit indee
 
 He watched that hour alone. Now no hour of yours is watched alone. Bring Jesus the weak flesh he already knows.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/could-ye-not-watch-one-hour.html
 
 Follow:
@@ -20,7 +20,7 @@ YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #Gethsemane #KJV
 

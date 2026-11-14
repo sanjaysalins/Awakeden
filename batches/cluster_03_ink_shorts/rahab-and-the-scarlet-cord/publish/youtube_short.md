@@ -10,14 +10,14 @@ Joshua 2:18: when Jericho's wall fell, one family walked out alive. A red cord i
 
 Rahab could not stop a wall. She tied one cord to a promise. Tie your trust to Jesus, and bring everyone you love inside.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
 
 Follow:
 YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #Rahab #Jericho
 

@@ -18,7 +18,7 @@ This deep dive follows the bronze serpent from Numbers 21 to the cross: the stra
 
 You do not have to get the poison out first, or feel strong, or be certain your faith is large enough. You only have to stop staring at the bite, and look up. Lift your eyes from the poison to the Saviour. What He has done on that cross is enough.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
 Read it panel by panel: https://awakeden.com
 
 Follow:
@@ -26,7 +26,7 @@ YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #BronzeSerpent #Numbers21 #BibleProphecy #LookAndLive #JesusChrist
 

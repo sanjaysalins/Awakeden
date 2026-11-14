@@ -8,14 +8,14 @@ John 3:14-15. "And as Moses lifted up the serpent in the wilderness, even so mus
 
 John shows the same lifting is both the cross and the hour of glory (John 12:23, 32-33). Believe on Christ, lifted up for you, and live.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
 
 Follow:
 YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #John3
 

@@ -1,11 +1,12 @@
 # instagram — Instagram (Reel)
 
 ## CAPTION
-The taunts at the cross were written down a thousand years before they were shouted. Psalm 22 recorded the mockery in advance; the crowd recited it without knowing. They told the King to come down. He stayed, to win the scorners. The song they never finished ends with the whole world turning to him.
+They shouted at Jesus, "Come down from the cross." He did not. Almost the same words are in Psalm 22:8, written about 1,000 years earlier. Watch why He stayed, and who spoke last. Matthew 27:40,43 · Psalm 22:8 · Luke 23:34 · Matthew 27:54 (KJV).
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Send this to a friend, then read Psalm 22 and Matthew 27 side by side. ✝ Follow Awakeden.
+Art and voices made with AI tools.
 
-#Bible #Jesus #Psalm22 #Cross #KJV #BibleShorts #Prophecy #Gospel #Christian #Awakeden
+#Psalm22 #Bible #Jesus #Cross #KJV #BibleShorts #Gospel #Awakeden
 
 ## HASHTAGS
-#Bible #Jesus #Psalm22 #Cross #KJV #BibleShorts #Prophecy #Gospel #Christian #Awakeden
+#Psalm22 #Bible #Jesus #Cross #KJV #BibleShorts #Gospel #Awakeden

@@ -8,14 +8,14 @@ Luke 24:5-6: "Why seek ye the living among the dead? He is not here, but is rise
 
 The idle tale was true, and it went first to the witnesses the world would not hear. He still sends His word to the overlooked. Stop seeking the living among the dead. The risen Christ is seeking you.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
 
 Follow:
 YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #HeIsRisen #EmptyTomb #Resurrection
 

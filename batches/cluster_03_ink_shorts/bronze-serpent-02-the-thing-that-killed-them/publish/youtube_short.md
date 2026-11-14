@@ -12,14 +12,14 @@ It was not a comforting symbol. It was the shape of what was killing them, lifte
 
 Christ was lifted up for you. Look to Him, and live.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
 
 Follow:
 YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #BronzeSerpent #Numbers21 #KJV
 

@@ -12,14 +12,14 @@ Centuries later, Jesus pointed back to her to say something about Himself: "beho
 
 She came a long way to check a king's wisdom. Someone greater is already in front of you. Bring Him your hardest question.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
 
 Follow:
 YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #QueenOfSheba #Solomon #KJV
 

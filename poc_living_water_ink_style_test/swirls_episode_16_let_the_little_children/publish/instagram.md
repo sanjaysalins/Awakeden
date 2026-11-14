@@ -6,6 +6,7 @@ Pushed away? Told 'not now'? In Mark 10, Jesus' disciples tried to stop people b
 Send this to someone who has been told 'not now'.
 
 Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
+Art and voices made with AI tools.
 
 #LetTheChildrenCome #Mark10 #Jesus #Bible #BibleStory
 

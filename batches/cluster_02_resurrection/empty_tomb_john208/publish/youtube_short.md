@@ -10,14 +10,14 @@ Someone took the body. That was Mary's first thought at the empty tomb. But when
 
 You were not at the tomb. You never saw the linen. Jesus was speaking about you. Believe what John believed, the Lord is risen.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
 
 Follow:
 YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #EmptyTomb #Resurrection #Shorts
 

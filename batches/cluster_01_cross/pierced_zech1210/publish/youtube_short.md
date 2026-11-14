@@ -14,7 +14,7 @@ And the promise begins with grace: grace poured out, not wrath: "the spirit of g
 
 Do what the verse says. Look at him, and live.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/zechariah-12-10-pierced.html
 
 Follow:
@@ -22,7 +22,7 @@ YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #Zechariah #MessianicProphecy #KJV
 

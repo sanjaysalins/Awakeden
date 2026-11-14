@@ -14,14 +14,14 @@ Jesus walked toward her instead. "And when the Lord saw her, he had compassion o
 
 Death did not spread from the boy to Jesus. Life spread from Jesus to the boy.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
 
 Follow:
 YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #Miracle
 

@@ -10,7 +10,7 @@ He died like a child falling asleep in his father's arms, and on the third day, 
 
 You can close your eyes in those same hands. Not because death is small. Because the hands are strong. He keeps the morning.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/father-into-thy-hands.html
 
 Follow:
@@ -18,7 +18,7 @@ YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #Psalm31
 

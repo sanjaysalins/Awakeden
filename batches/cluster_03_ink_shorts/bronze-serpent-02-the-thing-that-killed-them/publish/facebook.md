@@ -8,14 +8,14 @@ Numbers 21:9. "And Moses made a serpent of brass, and put it upon a pole, and it
 
 The cure was the shape of what was killing them, lifted up where everyone could see it. Jesus pointed back to it in John 3:14. Christ was lifted up for you. Look to Him, and live.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
 
 Follow:
 YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #BronzeSerpent
 

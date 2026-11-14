@@ -16,7 +16,7 @@ Every year, the priest does this again. The blood never finally finishes the job
 
 If your sin is on Him, it is not just covered for another year. It is carried away, as far as the east is from the west. You have only to come.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
 Read it panel by panel: https://awakeden.com
 
 Follow:
@@ -24,7 +24,7 @@ YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #DayOfAtonement #Leviticus16 #Atonement
 

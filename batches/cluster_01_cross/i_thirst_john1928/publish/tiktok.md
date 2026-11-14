@@ -3,7 +3,8 @@
 ## CAPTION
 The One who made every ocean gasped two words on a cross: I thirst. Psalm 22 painted that dying thirst 1,000 years early. The Giver of living water hung dry, in your place. Bring him your thirst, and drink.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
+Art and voices made with AI tools.
 Follow @awakeden
 
 #Bible #Jesus #IThirst #Psalm22 #Cross #KJV

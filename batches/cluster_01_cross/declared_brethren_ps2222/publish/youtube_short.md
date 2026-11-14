@@ -12,7 +12,7 @@ Who is that praising voice? Hebrews puts this verse in the mouth of the risen Ch
 
 The same Jesus who cried out forsaken now lives, and he is calling you into that family.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/ps22-04-declared-to-brethren.html
 
 Follow:
@@ -20,7 +20,7 @@ YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #Psalm22 #Risen #KJV
 

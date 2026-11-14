@@ -12,14 +12,14 @@ Jesus asked the question out loud: "Were there not ten cleansed? but where are t
 
 Getting exactly what you asked for is not the same as turning back to the One who gave it.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
 
 Follow:
 YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #Luke17 #Gratitude
 

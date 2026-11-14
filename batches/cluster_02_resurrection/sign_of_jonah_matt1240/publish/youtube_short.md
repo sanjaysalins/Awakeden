@@ -14,7 +14,7 @@ I went down guilty; the storm was mine. He went down innocent, bearing what was 
 
 You who are sure you have fallen too far: that is how far his mercy reaches. It cost him the grave. Stop running, and turn. Come up out of the deep, and live.
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/sign-of-jonah.html
 
 Follow:
@@ -22,7 +22,7 @@ YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #Jonah #Resurrection #KJV
 

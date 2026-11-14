@@ -1,18 +1,18 @@
 # youtube_short — YouTube (Short)
 
 ## TITLE
-Taunts at the Cross Were Written 1,000 Years Before
+Who Wrote the Words They Shouted at Jesus? Psalm 22 | Bible
 
 ## DESCRIPTION
-The crowd at the cross thought they were inventing their taunts. They were reciting a script written a thousand years before (Psalm 22:7-8; Matthew 27:43).
+Bible: they shouted at Jesus, "Come down from the cross" (Matthew 27:40). He did not. Watch why, and who spoke last.
 
-"He trusted in God; let him deliver him now, if he will have him: for he said, I am the Son of God" (Matthew 27:43, KJV).
+The leaders at the cross said: "He trusted in God; let him deliver him now, if he will have him: for he said, I am the Son of God" (Matthew 27:43, KJV). Almost the same words are in Psalm 22:8, a song King David wrote about 1,000 years earlier.
 
-Psalm 22 recorded the mockery in advance: the wagging heads, the sneer, the very words. At Golgotha the passers-by and the rulers repeated them nearly line for line, unwilling witnesses that this was the One. They told the King to come down. He stayed, bearing scorn he could have silenced, for the very people throwing it.
+They said, come down. He stayed. And on the cross He prayed for them: "Father, forgive them; for they know not what they do" (Luke 23:34, KJV). A Roman officer saw it. Truly this was the Son of God, he said (Matthew 27:54, KJV).
 
-And the psalm they never finished ends with all the ends of the world turning to him. Turn, and come to the One who would not come down.
+Read it: Psalm 22:8 · Matthew 27:40,43 · Luke 23:34 · Matthew 27:54 · John 10:18 (KJV)
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/ps22-02-mockers-words.html
 
 Follow:
@@ -20,12 +20,12 @@ YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
-#Bible #Jesus #Psalm22 #Cross #KJV
+#Psalm22 #Bible #Jesus #Cross #KJV
 
 ## TAGS
-psalm 22, psalm 22 7 8, matthew 27 43, mockery of jesus, messianic prophecy, prophecy fulfilled, the crucifixion, words at the cross, come down from the cross, kjv bible, bible shorts, jesus christ, gospel
+psalm 22, psalm 22 prophecy, matthew 27 43, mocking of jesus, jesus on the cross, come down from the cross, bible story, kjv bible, bible shorts, gospel
 
 ## HASHTAGS
-#Bible #Jesus #Psalm22 #Cross #KJV
+#Psalm22 #Bible #Jesus #Cross #KJV

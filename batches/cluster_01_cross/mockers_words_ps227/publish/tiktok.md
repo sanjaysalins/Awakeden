@@ -1,11 +1,12 @@
 # tiktok — TikTok
 
 ## CAPTION
-The mob at the cross was reading from a script written a thousand years earlier. Psalm 22 recorded the taunts in advance, and Matthew heard them repeated nearly line for line. They told the King to come down. He stayed, to win the scorners.
+They shouted at Jesus: "Come down from the cross." He did not. Almost the same words are in Psalm 22:8, written 1,000 years earlier. Watch why He stayed, and who spoke last. (Matthew 27:40,43; Psalm 22:8; KJV)
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Send this to a friend, then read Psalm 22 and Matthew 27 side by side. ✝ Follow Awakeden.
+Art and voices made with AI tools.
 
-#Bible #Jesus #Psalm22 #Cross #KJV
+#Psalm22 #Bible #Jesus #Cross #KJV
 
 ## HASHTAGS
-#Bible #Jesus #Psalm22 #Cross #KJV
+#Psalm22 #Bible #Jesus #Cross #KJV

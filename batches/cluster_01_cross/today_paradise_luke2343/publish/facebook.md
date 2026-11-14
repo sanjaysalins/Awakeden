@@ -12,7 +12,7 @@ No merit. No time left to earn anything. Just repentance and trust, answered the
 
 We are all one of those two men. Ask what the thief asked, and hear his answer.
 
-Find Jesus in the whole Bible, one panel at a time. Follow Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
 Read it panel by panel: https://awakeden.com/read/today-in-paradise.html
 
 Follow:
@@ -20,7 +20,7 @@ YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #Gospel
 

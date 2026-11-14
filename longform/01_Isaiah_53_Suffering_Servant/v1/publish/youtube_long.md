@@ -14,14 +14,14 @@ The arm of the LORD is not a thing. It is a person, and he has your name in vers
 
 The report is true. The arm of the LORD has a name. Have you believed the report?
 
-Find Jesus in the whole Bible, one panel at a time. Subscribe to Awakeden. ✝
+Find Jesus in the whole Bible, one story at a time. Subscribe to Awakeden. ✝
 
 Follow:
 YouTube: @awakeden (https://youtube.com/@awakeden)
 
 https://awakeden.com
 
-Scripture quoted from the King James Version (KJV), public domain.
+Scripture quoted from the King James Version (KJV), public domain. Art and voices made with AI tools.
 
 #Bible #Jesus #Isaiah53 #Prophecy #KJV
 
