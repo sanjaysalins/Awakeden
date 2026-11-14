@@ -4,7 +4,7 @@
 A sword was promised at his birth. It landed at the cross. Mary watched her son die, and while dying he arranged her care: a son, a home. Your wound is not invisible to him. Stand where Mary stood.
 
 Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
-Art and voices made with AI tools.
+
 Follow @awakeden
 
 #Bible #Jesus #Mary #Cross #WordsFromTheCross #KJV

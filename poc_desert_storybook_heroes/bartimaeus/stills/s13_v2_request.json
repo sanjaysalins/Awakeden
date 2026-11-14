@@ -1,0 +1,29 @@
+{
+ "model": "gpt-image-2",
+ "mode": "image2image",
+ "params": {
+  "aspectRatio": "9:16",
+  "resolutionTier": "2k",
+  "quality": "medium",
+  "imageCount": 1,
+  "visualReferences": [
+   {
+    "type": "image",
+    "id": "xSPddGKHjfMiAplGRZpf",
+    "url": "https://cdn.openart.ai/openart-uploads/production/2026-11/create-image/EsbOTmkjtrfHKP88sIj3/look_1794597670322_21c4659c.jpg",
+    "label": "look_style_ref"
+   },
+   {
+    "type": "image",
+    "id": "resource:jC92w1zs6la05iuxY59r",
+    "label": "ref_jesus"
+   },
+   {
+    "type": "image",
+    "id": "resource:AJ3MffapXP1FhaxCDw2U",
+    "label": "ref_bartimaeus"
+   }
+  ],
+  "prompt": "Draw a new picture in the EXACT same art style as the image labelled look_style_ref, as if made by the same artist for the same animated film: rough dry chalky gouache brushwork, scratchy textured painted surfaces, flat simplified shapes, muted palette of olive, teal, tan, ochre and warm cream, warm late-afternoon light. Heavily stretched stylised proportions: very small heads, long thin necks, extremely long thin legs, long pointed noses, simple eyes with solid dark pupils, few facial lines. From look_style_ref take ONLY the style: no classroom, no school clothes, no ties, no clock, no papers. JESUS: copy his exact design, face, hair and clothes from ref_jesus (long dark wavy hair, short dark beard, cream tunic, sage-green mantle, brown belt, sandals). BARTIMAEUS: copy his exact design, face, hair and clothes from ref_bartimaeus (blind beggar, messy grey-brown hair, scruffy grey-brown beard, eyes CLOSED unless the scene says open, patched tan tunic, frayed rust-brown cloak, barefoot).  Any crowd people wear plain ancient Judean robes and headcloths in muted earth tones; nothing modern. Vertical 9:16. No text, no lettering, no writing, no border, no watermark, no logo. Every visible hand has five fingers. SCENE: Camera BEHIND everyone, low on the road, looking UP the road the same way they walk. EVERY person in this picture has their BACK to the viewer and walks AWAY from us, up the road into the distance toward far hills. Out ahead in the middle distance, inside the crowd and a head taller than everyone, JESUS walks away from us: we see only his back, long dark wavy hair and sage-green mantle. In the near foreground, a few steps behind the crowd, BARTIMAEUS follows him, walking away from us: we see his back (tan tunic, no cloak, barefoot), his head turned a little to the side in three-quarter view so we glimpse his face, eyes OPEN, glad and full of wonder, looking ahead at Jesus. Nobody faces the camera. Long golden afternoon light from ahead, long shadows falling back toward us, dust. Exactly one Jesus and exactly one Bartimaeus."
+ }
+}

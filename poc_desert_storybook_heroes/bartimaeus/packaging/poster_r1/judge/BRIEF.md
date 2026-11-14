@@ -1,0 +1,5 @@
+# Blind judge: which movie poster makes a stranger tap?
+You judge ALONE. Look at the images with your image-reading tool: Q1.jpg ... Q6.jpg and PHONE_SIZE.jpg (all six at real phone thumbnail size, left to right Q1..Q6) in this folder. Read no other file.
+The video is a 79 s vertical Bible short in a warm painted storybook look. Its video title (fixed) is "On His Way to Die, Jesus Stopped | Blind Bartimaeus". Story: a blind beggar shouts for Jesus; the crowd says be quiet; he shouts louder; Jesus, on the road where He will die, stands still for him, heals him; he follows Jesus. Last line: "On His way to die and rise again, Jesus stood still for one man."
+Score each poster 0-10 for: (a) stops the thumb at phone size, (b) the poster title + tagline open a question the video title does not already answer, (c) honest to the story, (d) looks like a real film release. Check: exactly one Jesus and one blind man, faces and hands look right, text readable at phone size.
+Output (markdown): a table Q | a | b | c | d | one-line reason; then YOUR PICK, one fix if any, the biggest risk. Write it to the file named in your task.

@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bartimaeus - new words look (v2)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=IM+Fell+English:ital@0;1&family=Protest+Revolution&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2B1D14; --bone:#FBF1DA; --red:#B23A22; --sage:#2F5347; --gold:#E9B043; --glint:#FFF2C9; --dusk:#14302E;
+    --page:#F4EAD3; --card:#FFF9EA; --line:#D9C7A0;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--page);color:var(--ink);font:20px/1.5 Verdana,Arial,sans-serif}
+  main{max-width:1180px;margin:0 auto;padding:24px 16px 80px}
+  h1{font-size:34px;margin:8px 0 4px}
+  h2{font-size:26px;margin:0 0 6px}
+  p{margin:6px 0}
+  .big{font-size:22px}
+  .box{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:18px 20px;margin:18px 0}
+  .hands{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .hand{background:#EAD9B2;border-radius:12px;padding:14px;text-align:center}
+  .hand b{display:block;font:14px Verdana,sans-serif;letter-spacing:1px;margin-bottom:6px}
+  .hand .s{font-size:44px;line-height:1.1}
+  .hand small{display:block;font-size:16px;margin-top:6px}
+  .sw{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+  .sw span{display:inline-block;padding:10px 14px;border-radius:10px;font-size:15px;border:1px solid #0002}
+  .beat{margin:34px 0}
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+  .tag{font-weight:bold;font-size:18px;margin:0 0 6px}
+  .old{color:#7a5a3a}.new{color:#1f6a3a}
+  .v1 img{width:100%;display:block;border-radius:10px;cursor:zoom-in}
+  .why{font-size:20px;margin-top:10px}
+  @media (max-width:700px){.pair{grid-template-columns:1fr}.hands{grid-template-columns:1fr}}
+
+  /* ---- the stage: every number below is a real 1080x1920 pixel ---- */
+  .stage{position:relative;width:100%;aspect-ratio:9/16;overflow:hidden;border-radius:10px;container-type:inline-size;background:#000;cursor:zoom-in}
+  .cv{position:absolute;inset:0;--u:calc(100cqw / 1080)}
+  .cv>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .dim>img{filter:saturate(.86) brightness(.97)}
+  .dark{position:absolute;inset:0;mix-blend-mode:multiply;pointer-events:none;
+        box-shadow:inset 0 0 calc(34*var(--u)) calc(var(--T)*var(--u)) rgba(46,33,26,.6), inset 0 0 calc(50*var(--u)) calc((var(--T) + 60)*var(--u)) rgba(46,33,26,.22);
+        border-radius:calc(60*var(--u))}
+  .t{position:absolute;white-space:nowrap;line-height:1;font-size:calc(var(--s)*var(--u))}
+  .row{position:absolute;display:flex;align-items:baseline;white-space:nowrap;line-height:1;gap:calc(26*var(--u))}
+  .row span{font-size:calc(var(--s)*var(--u))}
+  .shout{font-family:"Protest Revolution","Impact",sans-serif;color:var(--red)}
+  .teller{font-family:"Caveat Brush","Comic Sans MS",cursive}
+  .word{font-family:"IM Fell English",Georgia,serif;-webkit-text-stroke:calc(1.4*var(--u)) currentColor}
+  .ink{color:var(--ink);mix-blend-mode:multiply}
+  .g{filter:url(#gouache)}
+  /* under-coat: same letters, second colour, pushed off to one side */
+  .coat{position:relative;display:inline-block;isolation:isolate}
+  .coat::before{content:attr(data-t);position:absolute;z-index:-1;left:calc(var(--ox,-3)*var(--u));top:calc(var(--oy,-4)*var(--u));
+        color:var(--cc,var(--bone));-webkit-text-stroke:calc(var(--cw,10)*var(--u)) var(--cc,var(--bone))}
+  .hollow{color:transparent !important}
+  .lift{text-shadow:0 0 calc(10*var(--u)) rgba(251,241,218,.9),0 0 calc(18*var(--u)) rgba(251,241,218,.7)}
+  .liftdark{text-shadow:0 0 calc(12*var(--u)) rgba(20,48,46,.75),0 0 calc(22*var(--u)) rgba(20,48,46,.5)}
+  .stage.zoom{position:fixed;z-index:50;inset:0;margin:auto;width:min(100vw,56.25vh);height:auto;border-radius:0;cursor:zoom-out;box-shadow:0 0 0 100vmax #000d}
+  .v1 img.zoom{position:fixed;z-index:50;inset:0;margin:auto;width:min(100vw,56.25vh);height:auto;border-radius:0;cursor:zoom-out;box-shadow:0 0 0 100vmax #000d}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <filter id="gouache" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="3"/>
+      <feDisplacementMap in="SourceGraphic" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="ragged" x="-5%" y="-10%" width="110%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02 0.06" numOctaves="3" seed="11"/>
+      <feDisplacementMap in="SourceGraphic" scale="14" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+</svg>
+
+<main>
+  <h1>Bartimaeus - a new look for the words</h1>
+  <p class="big">Only the words change. All the dust, light, rings and wipes stay.</p>
+
+  <div class="box">
+    <h2>The idea: three hands</h2>
+    <p class="big"><b>Colour = who is speaking. The hand = how.</b></p>
+    <div class="hands">
+      <div class="hand"><b>1. THE SHOUT (him)</b><div class="s" style="font-family:'Protest Revolution',Impact,sans-serif;color:#B23A22">HAVE MERCY</div><small>Rough red paint. Thrown from his mouth. Gets bigger.</small></div>
+      <div class="hand"><b>2. THE TELLER (the story)</b><div class="s" style="font-family:'Caveat Brush',cursive;color:#2B1D14">He stopped for one man.</div><small>Soft brush. Ink on the wall. No outline.</small></div>
+      <div class="hand"><b>3. THE WORD (Bible)</b><div class="s" style="font-family:'IM Fell English',Georgia,serif;color:#2F5347">And Jesus stood still</div><small>Old Bible type. It never moves.</small></div>
+    </div>
+    <div class="sw">
+      <span style="background:#2B1D14;color:#fff">Ink</span>
+      <span style="background:#B23A22;color:#fff">Red earth = him</span>
+      <span style="background:#2F5347;color:#fff">Sage = Jesus speaks</span>
+      <span style="background:#FBF1DA">Bone paper</span>
+      <span style="background:#E9B043">Gold = only after he sees</span>
+    </div>
+    <p style="margin-top:12px">Click any picture to make it big. Click again to close. These are still pictures, so the moves are told in words.</p>
+  </div>
+
+  <!-- ============ 1 ============ -->
+  <div class="beat box">
+    <h2>1. The second cry (23 s)</h2>
+    <div class="pair">
+      <div class="v1"><p class="tag old">OLD (v1)</p><img src="frames/v1_765.jpg" alt="v1 frame 765"></div>
+      <div><p class="tag new">NEW (v2)</p>
+        <div class="stage"><div class="cv dim"><img src="frames/base_765.jpg" alt="">
+          <div class="dark" style="--T:150"></div>
+          <div class="row shout g" style="left:50%;top:calc(196*var(--u));transform:translateX(-50%) rotate(-2deg)">
+            <span class="coat" data-t="HAVE" style="--s:88">HAVE</span>
+            <span class="coat" data-t="MERCY" style="--s:106">MERCY</span>
+            <span class="coat" data-t="ON" style="--s:126">ON</span>
+            <span class="coat" data-t="ME." style="--s:152">ME.</span>
+          </div>
+          <svg viewBox="0 0 1080 1920" style="position:absolute;inset:0;width:100%;height:100%">
+            <g fill="#B23A22"><ellipse cx="985" cy="205" rx="22" ry="6" transform="rotate(-30 985 205)"/><ellipse cx="1012" cy="246" rx="15" ry="5" transform="rotate(-12 1012 246)"/><ellipse cx="962" cy="176" rx="12" ry="4" transform="rotate(-50 962 176)"/><ellipse cx="1030" cy="300" rx="18" ry="5" transform="rotate(10 1030 300)"/></g>
+          </svg>
+        </div></div>
+      </div>
+    </div>
+    <p class="why"><b>Why:</b> each word is bigger than the last. The cry paints <b>over the dark frame</b>. The dark can not hold him.</p>
+  </div>
+
+  <!-- ============ 2 ============ -->
+  <div class="beat box">
+    <h2>2. Jesus stood still (27 s)</h2>
+    <div class="pair">
+      <div class="v1"><p class="tag old">OLD (v1)</p><img src="frames/v1_830.jpg" alt="v1 frame 830"></div>
+      <div><p class="tag new">NEW (v2)</p>
+        <div class="stage"><div class="cv dim"><img src="frames/base_830.jpg" alt="">
+          <div class="dark" style="--T:60"></div>
+          <div class="t word ink lift" style="--s:76;right:calc(680*var(--u));top:calc(1409*var(--u))">And Jesus</div>
+          <div class="t word ink lift" style="--s:76;left:calc(668*var(--u));top:calc(1409*var(--u))">stood still</div>
+          <div class="t ink lift" style="--s:40;left:calc(668*var(--u));top:calc(1498*var(--u));font-family:'IM Fell English',Georgia,serif;font-style:italic">Mark 10:49</div>
+        </div></div>
+      </div>
+    </div>
+    <p class="why"><b>Why:</b> He stands <b>inside</b> the sentence. The words do not cover His robe. Bible type. Nothing moves.</p>
+  </div>
+
+  <!-- ============ 3 ============ -->
+  <div class="beat box">
+    <h2>3. Jesus speaks (39 s)</h2>
+    <div class="pair">
+      <div class="v1"><p class="tag old">OLD (v1)</p><img src="frames/v1_1240.jpg" alt="v1 frame 1240"></div>
+      <div><p class="tag new">NEW (v2)</p>
+        <div class="stage"><div class="cv dim"><img src="frames/base_1240.jpg" alt="">
+          <div class="dark" style="--T:100"></div>
+          <svg viewBox="0 0 1080 1920" style="position:absolute;inset:0;width:100%;height:100%">
+            <path d="M70,1322 C300,1284 800,1280 1010,1300 L1002,1502 C760,1548 320,1542 84,1526 Z" fill="#FBF1DA" opacity=".92" filter="url(#ragged)"/>
+          </svg>
+          <div class="t word" style="--s:70;left:50%;transform:translateX(-50%);top:calc(1338*var(--u));color:var(--sage)">What wilt thou that I</div>
+          <div class="t word" style="--s:70;left:50%;transform:translateX(-50%);top:calc(1428*var(--u));color:var(--sage)">should do unto thee?</div>
+        </div></div>
+      </div>
+    </div>
+    <p class="why"><b>Why:</b> no banner. His words sit on <b>bare paper</b>, like the page of a book, in His green.</p>
+  </div>
+
+  <!-- ============ 4 ============ -->
+  <div class="beat box">
+    <h2>4. "...my sight." (44 s)</h2>
+    <div class="pair">
+      <div class="v1"><p class="tag old">OLD (v1)</p><img src="frames/v1_1335.jpg" alt="v1 frame 1335"></div>
+      <div><p class="tag new">NEW (v2)</p>
+        <div class="stage"><div class="cv dim"><img src="frames/base_1335.jpg" alt="">
+          <div class="dark" style="--T:150"></div>
+          <div class="teller g" style="position:absolute;right:calc(70*var(--u));top:calc(286*var(--u));text-align:right;color:var(--red);line-height:1;--cw:8">
+            <div style="font-size:calc(80*var(--u));height:calc(90*var(--u))"><span class="coat" data-t="Lord,">Lord,</span></div>
+            <div style="font-size:calc(80*var(--u));height:calc(90*var(--u))"><span class="coat" data-t="that I">that I</span></div>
+            <div style="font-size:calc(80*var(--u));height:calc(90*var(--u))"><span class="coat" data-t="might">might</span></div>
+            <div style="font-size:calc(80*var(--u));height:calc(90*var(--u))"><span class="coat" data-t="receive">receive</span></div>
+            <div style="font-size:calc(80*var(--u));height:calc(90*var(--u))"><span class="coat" data-t="my">my</span></div>
+            <div style="font-size:calc(96*var(--u));height:calc(100*var(--u))"><span class="coat hollow" data-t="sight.">sight.</span></div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+    <p class="why"><b>Why:</b> bigger and easy to read. The last word, <b>sight.</b>, is left <b>empty</b>. It is the thing he does not have.</p>
+  </div>
+
+  <!-- ============ 5 ============ -->
+  <div class="beat box">
+    <h2>5. He can see (54 s)</h2>
+    <div class="pair">
+      <div class="v1"><p class="tag old">OLD (v1)</p><img src="frames/v1_1640.jpg" alt="v1 frame 1640"></div>
+      <div><p class="tag new">NEW (v2)</p>
+        <div class="stage"><div class="cv"><img src="frames/base_1640.jpg" alt="" style="filter:saturate(1.06) brightness(1.02)">
+          <div class="t teller ink g" style="--s:72;right:calc(70*var(--u));top:calc(204*var(--u))">At once he could</div>
+          <div class="t teller g" style="--s:160;right:calc(70*var(--u));top:calc(272*var(--u));color:var(--gold)"><span class="coat" data-t="see." style="--cc:#2B1D14;--cw:7;--ox:3;--oy:4">see.</span></div>
+        </div></div>
+      </div>
+    </div>
+    <p class="why"><b>Why:</b> the line starts <b>blurry</b> and comes into focus, like his eyes. <b>see.</b> is the first gold word. It fills the empty word from before.</p>
+  </div>
+
+  <!-- ============ 6 ============ -->
+  <div class="beat box">
+    <h2>6. The cross (62 s)</h2>
+    <div class="pair">
+      <div class="v1"><p class="tag old">OLD (v1)</p><img src="frames/v1_1900.jpg" alt="v1 frame 1900"></div>
+      <div><p class="tag new">NEW (v2)</p>
+        <div class="stage"><div class="cv"><img src="frames/base_1900.jpg" alt="">
+          <div class="t word liftdark" style="--s:88;right:calc(80*var(--u));top:calc(235*var(--u));color:var(--bone)">He died</div>
+          <div class="t word liftdark" style="--s:88;right:calc(80*var(--u));top:calc(335*var(--u));color:var(--bone)">for our sins.</div>
+        </div></div>
+      </div>
+    </div>
+    <p class="why"><b>Why:</b> calm. Bible type only. High in the dark sky, far from the cross. No outline, no effect.</p>
+  </div>
+
+  <div class="box">
+    <h2>Good to know</h2>
+    <p>This page is a sketch in a web browser, not the real render. Spots may shift a little.</p>
+    <p>I could not look at this page myself (the no-open rule). First build step = 6 real test frames.</p>
+    <p>Fonts load from Google. You need to be online.</p>
+    <p class="big" style="margin-top:14px"><b>My pick: build 6 test frames in this look ($0). Say yes?</b></p>
+  </div>
+</main>
+
+<script>
+  document.querySelectorAll('.stage, .v1 img').forEach(function(el){
+    el.addEventListener('click', function(){ el.classList.toggle('zoom'); });
+  });
+</script>
+</body>
+</html>

@@ -8,7 +8,7 @@ Jonah went down guilty; the storm was his. Christ went down innocent, bearing ou
 However far you have fallen, his mercy reaches further. It cost him the grave. Come up out of the deep, and live.
 
 Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
-Art and voices made with AI tools.
+
 Follow @awakeden
 
 #Bible #Jesus #Jonah #SignOfJonah #Resurrection #KJV #EmptyTomb #BibleShorts #Awakeden

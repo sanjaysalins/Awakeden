@@ -1,0 +1,19 @@
+{
+ "piece": "bartimaeus_short",
+ "locked": "2026-11-14",
+ "locked_by": "owner ('lock it', 2026-11-14) on motion v2 film; line-12 fix 'ok' after finished-film guardrail panel; title from blind title round; movie-poster thumb = owner pick ('I liked ... frozen_stood.jpg') 2026-11-14",
+ "final_video": "visual/bartimaeus_final.mp4",
+ "final_sha256": "14e687a8875a2213f72d7d31cd5636d04248993344b771fd91bf14f5fc1b087f",
+ "source": "poc_desert_storybook_heroes/bartimaeus/motion_v2_type/BARTIMAEUS_MOTION_v2.mp4 (same bytes); motion _remotion/src/BartimaeusV2.tsx; recipe poc_desert_storybook_heroes/EPISODE_PLAYBOOK.md",
+ "words": "poc_desert_storybook_heroes/bartimaeus/words/LOCKED_WORDS.md",
+ "audio": "audio/narration.mp3, 3 voices (narrator/jesus/bartimaeus); film 79.17 s (76.17 voice + 3 s hold); felt piano + cello score (2 parts) + SFX",
+ "visual": "desert-storybook gouache stills (GPT Image 2) -> Kling 3 Omni pro clips, trim-only 1.0x; Remotion 'The Road Stops' motion + 'Three Hands' lettering",
+ "spend_usd": 17.0,
+ "packaging": "packaging/PACKAGING_LOCK.md (title_r1 + poster_r1 blind rounds; owner poster pick)",
+ "not_done": [
+  "upload (30-episode hold)",
+  "seed viewers",
+  "commit (text only, NO media)"
+ ],
+ "note": "Any change to the film or words needs the owner's say-so and a new sha."
+}

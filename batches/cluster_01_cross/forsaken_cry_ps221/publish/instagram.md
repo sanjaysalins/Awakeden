@@ -8,7 +8,7 @@ His darkest cry was already written, a thousand years early.
 Even forsaken, he says MY God. He bore the forsaking our sin deserved, so that you never will be. The way home is open.
 
 Find Jesus in the whole Bible, one story at a time. Follow Awakeden. ✝
-Art and voices made with AI tools.
+
 Follow @awakeden
 
 #Bible #Jesus #Psalm22 #Forsaken #Cross #KJV #WordsFromTheCross #BibleShorts #Awakeden

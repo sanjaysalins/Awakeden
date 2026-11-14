@@ -1,0 +1,41 @@
+"""Build the 17 GPT Image 2 still requests (owner yes ~$1.80, 2026-11-13). Writes stills/requests.json."""
+import json
+from pathlib import Path
+H = Path(__file__).resolve().parent
+LOOK = {"type": "image", "id": "xSPddGKHjfMiAplGRZpf", "url": "https://cdn.openart.ai/openart-uploads/production/2026-11/create-image/EsbOTmkjtrfHKP88sIj3/look_1794597670322_21c4659c.jpg", "label": "look_style_ref"}
+J = {"type": "image", "id": "resource:jC92w1zs6la05iuxY59r", "label": "ref_jesus"}
+B = {"type": "image", "id": "resource:AJ3MffapXP1FhaxCDw2U", "label": "ref_bartimaeus"}
+STYLE = ("Draw a new picture in the EXACT same art style as the image labelled look_style_ref, as if made by the same artist for the same animated film: "
+         "rough dry chalky gouache brushwork, scratchy textured painted surfaces, flat simplified shapes, muted palette of olive, teal, tan, ochre and warm cream, warm late-afternoon light. "
+         "Heavily stretched stylised proportions: very small heads, long thin necks, extremely long thin legs, long pointed noses, simple eyes with solid dark pupils, few facial lines. "
+         "From look_style_ref take ONLY the style: no classroom, no school clothes, no ties, no clock, no papers. ")
+CH = {"J": "JESUS: copy his exact design, face, hair and clothes from ref_jesus (long dark wavy hair, short dark beard, cream tunic, sage-green mantle, brown belt, sandals). ",
+      "B": "BARTIMAEUS: copy his exact design, face, hair and clothes from ref_bartimaeus (blind beggar, messy grey-brown hair, scruffy grey-brown beard, eyes CLOSED unless the scene says open, patched tan tunic, frayed rust-brown cloak, barefoot). "}
+TAIL = (" Any crowd people wear plain ancient Judean robes and headcloths in muted earth tones; nothing modern. Vertical 9:16. "
+        "No text, no lettering, no writing, no border, no watermark, no logo. Every visible hand has five fingers. SCENE: ")
+S = [
+ ("s01", "B", "Close-up, low angle: BARTIMAEUS sits in the dust at the edge of a road, head thrown back, mouth wide open shouting with all his strength, eyes closed, both long thin hands reaching out toward the viewer, his wooden bowl tipped over in the dust beside him. Warm dust in the air behind him, blurred legs of passing travellers in the background. Exactly one clear face: Bartimaeus. Jesus is not in this picture."),
+ ("s02", "B", "Medium shot from just behind BARTIMAEUS's shoulder (he sits at the lower left, eyes closed, shouting): several people in the passing crowd turn toward him, frowning; one man holds a finger to his lips, a woman waves a hand at him to hush, another man leans down sternly. Warm dust, road. Jesus is NOT in this picture. Exactly one Bartimaeus."),
+ ("s03", "B", "Wide establishing shot: a dusty road leading out of the ancient walled town of Jericho, mud-brick walls and a gate, tall date palms, dry hills. Small at the roadside in the foreground-left, BARTIMAEUS sits alone on a low stone wrapped in his rust cloak, his wooden begging bowl in front of him. A stream of travellers walks out of the gate along the road. Jesus is NOT visible. Exactly one Bartimaeus."),
+ ("s04", "J", "Long view down the road: in the middle distance a large crowd of travellers walks out of Jericho toward the viewer, raising golden dust in the low sun; at the centre of the crowd, a head taller than everyone, JESUS walks calmly. Palms and town wall behind. Exactly one Jesus. Bartimaeus is not in this picture."),
+ ("s05", "B", "BARTIMAEUS has pushed himself up onto his knees in the dust at the roadside, back arched, head raised high, both hands cupped around his mouth, shouting even louder, eyes closed, his cloak slipping off one shoulder. Blurred travellers around him step back. Strong warm diagonal light. Exactly one Bartimaeus. Jesus is not in this picture."),
+ ("s06", "J", "JESUS has stopped completely still in the middle of the road, standing tall and calm, head turned slightly, listening. All around him the crowd keeps moving and flowing past on both sides, slightly blurred with motion, robes swinging, dust in the air; he is the only still figure. A warm golden diagonal beam of light falls on him. Exactly one Jesus. Bartimaeus is not in this picture."),
+ ("s07", "J", "Medium shot: JESUS stands on the road, turned toward the roadside, looking with kind attention at someone off-picture, one long arm raised, beckoning. Two travellers beside him turn and lean to call out too. Exactly one Jesus. Bartimaeus is not in this picture."),
+ ("s08", "B", "Action moment: BARTIMAEUS springs up from the roadside, flinging his frayed rust-brown cloak off his shoulders so it flies through the air behind him, his long thin body rising, one hand reaching forward, eyes still closed, eager. His wooden bowl lies left behind in the dust. Exactly one Bartimaeus and exactly one cloak. Jesus is not in this picture."),
+ ("s09", "JB", "Close two-shot: JESUS bends down gently toward BARTIMAEUS, faces close, Jesus's kind face in warm light, one hand open, asking him a question. Bartimaeus stands before him in his tan tunic with NO cloak, eyes closed, head tilted up toward the voice. Crowd softly blurred behind. Exactly one Jesus and one Bartimaeus."),
+ ("s10", "B", "Close-up portrait of BARTIMAEUS's face: eyes closed, a tear at the edge, hopeful trembling expression, lips parted as he speaks, his two hands pressed together near his chin. Tan tunic, no cloak. Warm light on his face. Exactly one person."),
+ ("s11", "JB", "Side-view two-shot: JESUS stands facing BARTIMAEUS, resting one hand gently on Bartimaeus's shoulder, speaking kindly with a soft smile. Bartimaeus (tan tunic, no cloak, eyes still closed) listens with his face lifted. Road and blurred crowd behind, golden light. Exactly one Jesus and one Bartimaeus."),
+ ("s12", "JB", "Close-up from over JESUS's shoulder: BARTIMAEUS's face fills the frame as his eyes are OPEN for the very first time: wide open, bright round eyes with dark pupils and white highlights, amazed and joyful, wet with tears, looking straight up at Jesus. Warm light floods his face. Only the back edge of Jesus's long dark hair and sage-green mantle shows in the near foreground. Exactly one Jesus and one Bartimaeus. In this picture Bartimaeus's eyes are OPEN."),
+ ("s13", "JB", "Seen from behind: BARTIMAEUS (tan tunic, no cloak, walking upright and glad, head turned to look around in wonder) walks along the dusty road following the crowd; ahead of him, taller than everyone, JESUS walks with the crowd. Long road ahead, golden afternoon. Exactly one Jesus and one Bartimaeus."),
+ ("s14", "", "Very wide landscape: a long winding road climbing up through dry rocky hills toward a far-away walled city on a hill with a large temple, in late-afternoon haze. Tiny figures of a crowd walk along the road far away. Dramatic warm sky. No close faces."),
+ ("s15", "", "Silent, reverent wide shot at dusk: on a bare hill outside a far city wall, ONE tall plain wooden cross stands alone against a deep orange and teal sky, painted as a dark silhouette. Nobody on the cross, no people, no blood. Quiet and solemn."),
+ ("s16", "", "An empty rock-cut tomb in a garden at sunrise: the dark doorway of the tomb stands open and empty, warm golden morning light pouring out across the ground, a folded linen cloth visible inside. NO stone anywhere in the picture: no round stone, no boulder. No people."),
+ ("s17", "JB", "Wide sunset shot on the road: JESUS and BARTIMAEUS walk side by side on the dusty road toward the hills, seen from slightly behind and to the side; Bartimaeus (tan tunic, no cloak, eyes OPEN) looks up at Jesus, who looks down at him with a warm smile. Long golden shadows, glowing sky, a small crowd far ahead. Exactly one Jesus and one Bartimaeus."),
+]
+reqs = []
+for sid, c, sc in S:
+    refs = [LOOK] + ([J] if "J" in c else []) + ([B] if "B" in c else [])
+    reqs.append({"model": "gpt-image-2", "mode": "image2image", "params": {"aspectRatio": "9:16", "resolutionTier": "2k", "quality": "medium", "imageCount": 1,
+                 "visualReferences": refs, "prompt": STYLE + "".join(CH[k] for k in c) + TAIL + sc}})
+(H / "requests.json").write_text(json.dumps({"ids": [s[0] for s in S], "requests": reqs}, indent=1), encoding="utf-8")
+print(len(reqs), "requests")

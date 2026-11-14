@@ -177,6 +177,13 @@ def check_unit(media_dir: str | Path, *, sibling_titles: list[str] | None = None
             slop = [t for t in _SLOP_TOKENS if t in bare]
             if slop:
                 fails.append(f"UK-G7 dash-slop {md.name}:{n}: {slop} in {line.strip()[:60]!r}")
+    # NO AI WORDING in any public text (owner rule 2026-10-31, restated 2026-11-14:
+    # "always remove any AI tool reference"). The platform AI switches are a setting, not copy.
+    _AI = re.compile(r"\bAI\b|artificial intelligence|A\.I\.", re.I)
+    for md in sorted(pub.glob("*.md")):
+        for n, line in enumerate(md.read_text(encoding="utf-8").splitlines(), 1):
+            if _AI.search(_url.sub("", line)):
+                fails.append(f"NO-AI-WORDING {md.name}:{n}: {line.strip()[:70]!r}")
     srt_path = pub / "captions.srt"
     if srt_path.exists():
         _srt_index_or_ts = re.compile(r"^\d+$|-->")

@@ -1,0 +1,27 @@
+## TITLES:
+- ★ **A Voice in Dust** | What can one ignored man say that stops everything? | Earthy, cinematic, and built around an unlikely protagonist.
+- ★ **After the Miracle** | When he can finally go anywhere, why does he follow Jesus? | Promises a story beyond the familiar healing scene.
+- **The First Face** | Whom does he see when the darkness lifts? | An intimate title with the emotional pull of a revelation.
+- **Against the Crowd** | What makes him keep shouting when everyone wants silence? | Sounds like a human drama driven by defiance.
+- **Mercy Road** | What will happen when these two lives cross? | A compact, memorable title with a strong sense of place.
+- **Beyond Jericho** | What does he leave behind—and where is he going? | Suggests a journey whose destination carries consequences.
+
+### THE BREAK IN THE CROWD (title: A Voice in Dust)
+- **THE IDEA:** Turn the moving crowd into one uninterrupted horizontal brushstroke, broken only by the still figure of Jesus above a huge, shouting Bartimaeus.
+- **WHAT YOU SEE:** Top: clean sand-coloured space. Across the upper middle, the crowd sweeps sideways as a broad umber smear; no individual faces compete. Jesus stands sharply defined inside its single interruption, cream tunic and sage mantle. Below, Bartimaeus fills the lower three-fifths: head thrown back, eyes firmly shut, hands cupped around his mouth. His face is the largest, clearest shape. Dark brushed corners press toward him; warm light catches his cheek and fingers.
+- **LETTERING:** Add real type later in the top sand area: **A VOICE / IN DUST**, two substantial lines of condensed, slightly weathered serif lettering. Title spans roughly 80% of the width. TAGLINE: **They said be quiet.**
+- **THE CURIOSITY GAP:** What is this man shouting that makes one person stop while everyone else keeps moving? The film answers through his repeated appeal, the crowd’s resistance, and the sudden musical silence at “And Jesus stood still.”
+- **PHONE TEST:** Three things survive: the shouting face, the horizontal crowd streak, and the solitary cream-and-green figure breaking it. Bartimaeus’s closed eyes and cupped hands communicate before any lettering does.
+- **IMAGE PROMPT:** Vertical 9:16 theatrical key art in a warm gouache storybook style, soft painted texture, desert light, expressive cartoon-storybook faces. Use film pictures 1 and 3 as references for Bartimaeus and picture 4 for Jesus. Reserve the top 18 percent as quiet pale sand-coloured space. Bartimaeus dominates the lower three-fifths, large head and shoulders, eyes shut, head tilted back, both hands cupped around his shouting mouth, worn umber clothing. Behind him across the upper middle, simplify the passing crowd into one broad horizontal sweep of dusty umber painted motion. Interrupt that sweep with one sharply defined stationary Jesus, long brown hair, beard, cream tunic, sage-green mantle, turned toward Bartimaeus. Strong scale hierarchy, minimal background detail, dark brushed lower corners, warm light on the beggar’s face, no lettering, no text
+
+### THE ROAD HE CHOOSES (title: After the Miracle)
+- **THE IDEA:** Place an enormous newly sighted face beside a single gold road carrying a small Jesus away.
+- **WHAT YOU SEE:** Top: pale gold space for the title. Below, Bartimaeus’s three-quarter portrait occupies most of the left and lower frame: open eye, tear, the beginning of a smile. His gaze leads up and right. Beside his cheek, a narrow gold road climbs through a deep umber field toward Jesus, seen from behind. This is deliberate poster scale: intimate portrait beside distant journey. No crowd, buildings, or cross. The road remains unfinished at the upper edge.
+- **LETTERING:** Add real type later across the top: **AFTER THE MIRACLE**, large, closely spaced serif capitals over two lines. TAGLINE: **He could walk away.**
+- **THE CURIOSITY GAP:** He has received what he wanted. Why follow this man into what comes next? The answer arrives in the final walking scene and the revelation of Jesus’s destination.
+- **PHONE TEST:** One shining open eye, one tear, one gold diagonal, one departing figure. Bartimaeus remains the dominant human presence.
+- **IMAGE PROMPT:** Vertical 9:16 theatrical poster, warm gouache storybook style, soft desert pigments and expressive cartoon-storybook character design. Use film picture 6 for Bartimaeus’s face and picture 7 for Jesus and the uphill road. Create a graphic cinematic montage with an enormous three-quarter portrait of newly sighted Bartimaeus filling the left and lower 75 percent, open eyes looking upward right, one visible tear and a small wondering smile, plain umber tunic. Beside his face, a single narrow golden desert road rises diagonally through a dark brushed umber field toward the upper right. A small Jesus walks away uphill, long brown hair, cream tunic, sage-green mantle. Reserve the upper 18 percent as pale gold space. Bold portrait-to-journey scale contrast, restrained detail, visible gouache grain, no lettering, no text
+
+### MY #1 and why
+**A Voice in Dust — THE BREAK IN THE CROWD.** The shouting face makes the emotion immediate; the single still figure makes the composition mysterious.  
+Its strongest selling point is visible without reading: everyone passes this man except one.

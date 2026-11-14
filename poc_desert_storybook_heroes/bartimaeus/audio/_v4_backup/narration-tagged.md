@@ -1,0 +1,17 @@
+<speaker name="bartimaeus">Jesus, thou Son of David, have mercy on me.</speaker>
+<speaker name="narrator">Many told the blind beggar to be quiet.</speaker>
+<speaker name="narrator">His name was Bartimaeus. He sat begging by the road near Jericho. "Son of David" meant God's promised King.</speaker>
+<speaker name="narrator">Jesus was on the road to Jerusalem. He had told His followers He would be killed there. Would He stop for a beggar?</speaker>
+<speaker name="narrator">But Bartimaeus shouted even louder.</speaker>
+<speaker name="bartimaeus">Thou Son of David, have mercy on me.</speaker>
+<speaker name="narrator">"And Jesus stood still." A whole crowd was moving. He stopped for one man, and called for him.</speaker>
+<speaker name="narrator">Bartimaeus threw off his cloak and came. Jesus asked him what he wanted:</speaker>
+<speaker name="jesus">What wilt thou that I should do unto thee?</speaker>
+<speaker name="bartimaeus">Lord, that I might receive my sight.</speaker>
+<speaker name="jesus">Go thy way; thy faith hath made thee whole.</speaker>
+<speaker name="narrator">He trusted Jesus. Jesus made him well. At once he could see.</speaker>
+<speaker name="narrator">Jesus told him to go his way. But Bartimaeus followed Jesus.</speaker>
+<speaker name="narrator">Up the road to Jerusalem.</speaker>
+<speaker name="narrator">There Jesus died on a cross for our sins, for the wrong things we have done.</speaker>
+<speaker name="narrator">On the third day, He rose to life.</speaker>
+<speaker name="narrator">On His way to die and rise again, Jesus stood still for one man.</speaker>

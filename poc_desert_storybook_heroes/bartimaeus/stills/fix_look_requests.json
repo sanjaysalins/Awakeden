@@ -1,0 +1,150 @@
+{
+ "ids": [
+  "s09",
+  "s10",
+  "s11",
+  "s12",
+  "s13",
+  "s17"
+ ],
+ "requests": [
+  {
+   "model": "gpt-image-2",
+   "mode": "image2image",
+   "params": {
+    "aspectRatio": "9:16",
+    "resolutionTier": "2k",
+    "quality": "medium",
+    "imageCount": 1,
+    "visualReferences": [
+     {
+      "type": "image",
+      "id": "resource:b5pGmcXOjkmUN1GlfuBq",
+      "label": "scene_to_fix"
+     },
+     {
+      "type": "image",
+      "id": "resource:EuioyGCv9eHU1wkoskM6",
+      "label": "ref_bartimaeus_nocloak"
+     }
+    ],
+    "prompt": "Edit the image labelled scene_to_fix. Keep EVERYTHING in it exactly the same: same art style, same composition, same camera angle, same framing and crop, same background, same light, same Jesus (same face, hair, cream tunic, sage-green mantle), same crowd, same poses and gestures. ONLY fix the blind man BARTIMAEUS so he is EXACTLY the man in ref_bartimaeus_nocloak: same small head, same long pointed nose, same thin weathered face of a grown man in his forties (NOT a boy, NOT round-faced, NOT a long full beard), same messy grey-brown hair, same short scruffy grey-brown beard, same very tall thin body with long thin legs, barefoot. His clothes are EXACTLY as in ref_bartimaeus_nocloak: a long patched olive-tan tunic down to the calves, LONG sleeves to the wrists, brown rope belt, ragged frayed hem. NOT a short beige tunic, NOT knee-length, NOT sleeveless, NO cloak. His eyes CLOSED (he is still blind). Keep his pose, position and size in the frame the same as in scene_to_fix. Exactly one Bartimaeus and exactly one Jesus. Every visible hand has five fingers. No text, no lettering, no border, no watermark."
+   }
+  },
+  {
+   "model": "gpt-image-2",
+   "mode": "image2image",
+   "params": {
+    "aspectRatio": "9:16",
+    "resolutionTier": "2k",
+    "quality": "medium",
+    "imageCount": 1,
+    "visualReferences": [
+     {
+      "type": "image",
+      "id": "resource:KfiFDlF3pQwiAh1SN8cj",
+      "label": "scene_to_fix"
+     },
+     {
+      "type": "image",
+      "id": "resource:EuioyGCv9eHU1wkoskM6",
+      "label": "ref_bartimaeus_nocloak"
+     }
+    ],
+    "prompt": "Edit the image labelled scene_to_fix. Keep EVERYTHING in it exactly the same: same art style, same composition, same camera angle, same framing and crop, same background, same light, same poses and gestures. ONLY fix the blind man BARTIMAEUS so he is EXACTLY the man in ref_bartimaeus_nocloak: same small head, same long pointed nose, same thin weathered face of a grown man in his forties (NOT a boy, NOT round-faced, NOT a long full beard), same messy grey-brown hair, same short scruffy grey-brown beard, same very tall thin body with long thin legs, barefoot. His clothes are EXACTLY as in ref_bartimaeus_nocloak: a long patched olive-tan tunic down to the calves, LONG sleeves to the wrists, brown rope belt, ragged frayed hem. NOT a short beige tunic, NOT knee-length, NOT sleeveless, NO cloak. His eyes CLOSED (he is still blind). Keep his pose, position and size in the frame the same as in scene_to_fix. This is a close-up of Bartimaeus alone; do not add any other person. Every visible hand has five fingers. No text, no lettering, no border, no watermark."
+   }
+  },
+  {
+   "model": "gpt-image-2",
+   "mode": "image2image",
+   "params": {
+    "aspectRatio": "9:16",
+    "resolutionTier": "2k",
+    "quality": "medium",
+    "imageCount": 1,
+    "visualReferences": [
+     {
+      "type": "image",
+      "id": "resource:22MyG19UqPDarCfONh5x",
+      "label": "scene_to_fix"
+     },
+     {
+      "type": "image",
+      "id": "resource:EuioyGCv9eHU1wkoskM6",
+      "label": "ref_bartimaeus_nocloak"
+     }
+    ],
+    "prompt": "Edit the image labelled scene_to_fix. Keep EVERYTHING in it exactly the same: same art style, same composition, same camera angle, same framing and crop, same background, same light, same Jesus (same face, hair, cream tunic, sage-green mantle), same crowd, same poses and gestures. ONLY fix the blind man BARTIMAEUS so he is EXACTLY the man in ref_bartimaeus_nocloak: same small head, same long pointed nose, same thin weathered face of a grown man in his forties (NOT a boy, NOT round-faced, NOT a long full beard), same messy grey-brown hair, same short scruffy grey-brown beard, same very tall thin body with long thin legs, barefoot. His clothes are EXACTLY as in ref_bartimaeus_nocloak: a long patched olive-tan tunic down to the calves, LONG sleeves to the wrists, brown rope belt, ragged frayed hem. NOT a short beige tunic, NOT knee-length, NOT sleeveless, NO cloak. His eyes CLOSED (he is still blind). Keep his pose, position and size in the frame the same as in scene_to_fix. Exactly one Bartimaeus and exactly one Jesus. Every visible hand has five fingers. No text, no lettering, no border, no watermark."
+   }
+  },
+  {
+   "model": "gpt-image-2",
+   "mode": "image2image",
+   "params": {
+    "aspectRatio": "9:16",
+    "resolutionTier": "2k",
+    "quality": "medium",
+    "imageCount": 1,
+    "visualReferences": [
+     {
+      "type": "image",
+      "id": "resource:iTuFfnmtAOf12vngB6Ns",
+      "label": "scene_to_fix"
+     },
+     {
+      "type": "image",
+      "id": "resource:EuioyGCv9eHU1wkoskM6",
+      "label": "ref_bartimaeus_nocloak"
+     }
+    ],
+    "prompt": "Edit the image labelled scene_to_fix. Keep EVERYTHING in it exactly the same: same art style, same composition, same camera angle, same framing and crop, same background, same light, same Jesus (same face, hair, cream tunic, sage-green mantle), same crowd, same poses and gestures. ONLY fix the blind man BARTIMAEUS so he is EXACTLY the man in ref_bartimaeus_nocloak: same small head, same long pointed nose, same thin weathered face of a grown man in his forties (NOT a boy, NOT round-faced, NOT a long full beard), same messy grey-brown hair, same short scruffy grey-brown beard, same very tall thin body with long thin legs, barefoot. His clothes are EXACTLY as in ref_bartimaeus_nocloak: a long patched olive-tan tunic down to the calves, LONG sleeves to the wrists, brown rope belt, ragged frayed hem. NOT a short beige tunic, NOT knee-length, NOT sleeveless, NO cloak. His eyes OPEN, wide with wonder, exactly as in scene_to_fix. Keep his pose, position and size in the frame the same as in scene_to_fix. Exactly one Bartimaeus and exactly one Jesus. Every visible hand has five fingers. No text, no lettering, no border, no watermark."
+   }
+  },
+  {
+   "model": "gpt-image-2",
+   "mode": "image2image",
+   "params": {
+    "aspectRatio": "9:16",
+    "resolutionTier": "2k",
+    "quality": "medium",
+    "imageCount": 1,
+    "visualReferences": [
+     {
+      "type": "image",
+      "id": "resource:ITmhfuL2noBkHW8Wwu1l",
+      "label": "scene_to_fix"
+     },
+     {
+      "type": "image",
+      "id": "resource:EuioyGCv9eHU1wkoskM6",
+      "label": "ref_bartimaeus_nocloak"
+     }
+    ],
+    "prompt": "Edit the image labelled scene_to_fix. Keep EVERYTHING in it exactly the same: same art style, same composition, same camera angle, same framing and crop, same background, same light, same Jesus (same face, hair, cream tunic, sage-green mantle), same crowd, same poses and gestures. ONLY fix the blind man BARTIMAEUS so he is EXACTLY the man in ref_bartimaeus_nocloak: same small head, same long pointed nose, same thin weathered face of a grown man in his forties (NOT a boy, NOT round-faced, NOT a long full beard), same messy grey-brown hair, same short scruffy grey-brown beard, same very tall thin body with long thin legs, barefoot. His clothes are EXACTLY as in ref_bartimaeus_nocloak: a long patched olive-tan tunic down to the calves, LONG sleeves to the wrists, brown rope belt, ragged frayed hem. NOT a short beige tunic, NOT knee-length, NOT sleeveless, NO cloak. His eyes OPEN. Keep his pose, position and size in the frame the same as in scene_to_fix. Exactly one Bartimaeus and exactly one Jesus. Every visible hand has five fingers. No text, no lettering, no border, no watermark."
+   }
+  },
+  {
+   "model": "gpt-image-2",
+   "mode": "image2image",
+   "params": {
+    "aspectRatio": "9:16",
+    "resolutionTier": "2k",
+    "quality": "medium",
+    "imageCount": 1,
+    "visualReferences": [
+     {
+      "type": "image",
+      "id": "resource:hhUcsD2bfxFxZsgQQqcX",
+      "label": "scene_to_fix"
+     },
+     {
+      "type": "image",
+      "id": "resource:EuioyGCv9eHU1wkoskM6",
+      "label": "ref_bartimaeus_nocloak"
+     }
+    ],
+    "prompt": "Edit the image labelled scene_to_fix. Keep EVERYTHING in it exactly the same: same art style, same composition, same camera angle, same framing and crop, same background, same light, same Jesus (same face, hair, cream tunic, sage-green mantle), same crowd, same poses and gestures. ONLY fix the blind man BARTIMAEUS so he is EXACTLY the man in ref_bartimaeus_nocloak: same small head, same long pointed nose, same thin weathered face of a grown man in his forties (NOT a boy, NOT round-faced, NOT a long full beard), same messy grey-brown hair, same short scruffy grey-brown beard, same very tall thin body with long thin legs, barefoot. His clothes are EXACTLY as in ref_bartimaeus_nocloak: a long patched olive-tan tunic down to the calves, LONG sleeves to the wrists, brown rope belt, ragged frayed hem. NOT a short beige tunic, NOT knee-length, NOT sleeveless, NO cloak. His eyes OPEN. Keep his pose, position and size in the frame the same as in scene_to_fix. Exactly one Bartimaeus and exactly one Jesus. Every visible hand has five fingers. No text, no lettering, no border, no watermark."
+   }
+  }
+ ]
+}

@@ -1,0 +1,123 @@
+{
+  "schema": "packaging/1",
+  "_status": "2026-11-14 card for the LOCKED motion v2 film (owner 'lock it'; line-12 finished-film panel fix, owner 'ok'). Title from a blind title round (packaging/title_r1: 5 writers incl. Fable; 5 blind judges, 4 of 5 picked it). Poster from a blind key-art round (packaging/poster_r1: 4 seats incl. Fable, 4 renders, 3 blind judges all picked LOUDER); OWNER OVERRIDE: owner picked the STOOD STILL / 'for one blind man.' poster; judge fixes applied (bigger tagline, lifted clear of Jesus). Known: 'STOOD STILL' echoes 'Jesus Stopped' in the title. Publish copy: in-engine red team + external 5-CLI panel (upload/_independent_review/20261114-220831), all REVISE; convergent fixes applied: 'a whole crowd' -> 'many' (Mark 10:48, 5/5), cut 'He still hears the one who calls' and used the film's own last line (4/5), Mark 10:52 KJV added so healing tags are honest (2/5), AI footer line removed (owner rule, 4/5). OWNER RED TEAM 2026-11-14 (publish/_redteam_owner_r1: Fable, Claude, Codex, Gemini, Grok; 4 FIX FIRST + 1 BLOCK): applied convergent fixes - 1 Cor 15:3-4 + Mark 10:32-34 cited everywhere (5/5), pinned 'a whole crowd'->'many' (5/5), 'Would He stop?' (answered by title+thumb) -> 'What would He do for one blind beggar?' (5/5), captions re-cut by phrase (5/5), 'hold his peace'->'be quiet' (3/5), tags/hashtag order (2/5), KJV rights line no 'public domain' (accuracy, 1/5).",
+  "episode": "18_bartimaeus",
+  "person": "Blind Bartimaeus",
+  "person_tag": "#BlindBartimaeus",
+  "name_match": "Bartimaeus|Jesus",
+  "women": false,
+  "search_class": "modest: 'blind bartimaeus' (+ bible story, + sermon, + song, + superbook, + the chosen), 'bartimaeus the blind man' (+ story, + superbook), 'bartimaeus story in the bible'; strong neighbour: 'jesus heals the blind man' (+ bartimaeus, + bible story, + the chosen), 'jesus heals blind man'; 'mark 10 46-52' (+ explained, + sermon). 'jesus stood still', 'blind beggar jesus', 'jericho blind man' have no suggestions.",
+  "search_phrases": [
+    "blind bartimaeus",
+    "bartimaeus the blind man",
+    "jesus heals the blind man",
+    "jesus heals the blind man bartimaeus",
+    "blind bartimaeus bible story",
+    "mark 10 46-52"
+  ],
+  "search_evidence": {
+    "source": "YouTube search suggestions (suggestqueries.google.com, client=firefox, ds=yt), fetched 2026-11-14, 13 queries; file _packaging/18_bartimaeus/autocomplete_2026-11-14.txt",
+    "grade": "B (one dated snapshot of autocomplete, not search volume)"
+  },
+  "famous_neighbours": [
+    "Jesus",
+    "Jericho",
+    "Jerusalem",
+    "Son of David",
+    "Jesus heals the blind man"
+  ],
+  "curiosity_gap": "Jesus was walking to Jerusalem, where He said He would be killed, and many told a blind beggar to be quiet. What would He do for one man?",
+  "curiosity_question": "Would a man on His way to die stop for one blind beggar?",
+  "scripture": {
+    "primary": "Mark 10:46-52",
+    "read_it": "Mark 10:32-52; 1 Corinthians 15:3-4",
+    "narration_covers": [
+      "Mark 10:32-34",
+      "Mark 10:46-52",
+      "1 Corinthians 15:3-4"
+    ]
+  },
+  "name_reveal": {
+    "decision": "early_spoken",
+    "note": "'Jesus' is the first spoken word (0.0 s); 'Bartimaeus' is spoken at about 5 s (6% of runtime) and shown on screen.",
+    "compensation": [
+      "title",
+      "description_line_1"
+    ]
+  },
+  "first_seconds": {
+    "stake_in_3s": true,
+    "first_spoken_line": "Jesus, thou Son of David, have mercy on me.",
+    "stake_source": "spoken cry 0.0-3.0 s over the blind beggar shouting, with on-screen 'HAVE MERCY ON ME.' and the crowd's 'Be quiet!' at 3-5 s",
+    "waiver": ""
+  },
+  "youtube": {
+    "title": "On His Way to Die, Jesus Stopped | Blind Bartimaeus",
+    "line1": "Blind Bartimaeus in the Bible (Mark 10:46-52): many told him to be quiet, and Jesus was on His way to die. What would He do for one blind beggar?",
+    "line2": "\"And Jesus stood still, and commanded him to be called.\" (Mark 10:49, KJV)",
+    "read_it": "Read the whole story: Mark 10:46-52, with Mark 10:32-34 and 1 Corinthians 15:3-4.",
+    "hashtags": [
+      "#BlindBartimaeus",
+      "#Bartimaeus",
+      "#Jesus",
+      "#Bible",
+      "#Mark10"
+    ],
+    "tags": [
+      "blind bartimaeus",
+      "bartimaeus the blind man",
+      "who was bartimaeus",
+      "bartimaeus story in the bible",
+      "blind bartimaeus bible story",
+      "jesus heals the blind man",
+      "jesus heals the blind man bartimaeus",
+      "jesus heals blind man",
+      "mark 10 46-52",
+      "mark 10 46-52 explained",
+      "son of david have mercy on me",
+      "jericho",
+      "jesus stood still",
+      "bible story short"
+    ]
+  },
+  "title_class": "B",
+  "send_to": "someone who feels nobody stops for them",
+  "next_teaser": "More people who met Jesus, one story at a time.",
+  "shareable_fact": "In Mark 10:49 a whole crowd is moving to Jerusalem, and Jesus stands still for one blind beggar the crowd told to be quiet.",
+  "ask_line": "Follow for Jesus in the whole Bible, one story at a time.",
+  "pinned_comment": "Many told him to be quiet. He cried out even more, and Jesus stood still. Who do you know who needs to hear that? Read it: Mark 10:46-52 and 1 Corinthians 15:3-4.",
+  "spoiler_patterns": [
+    "receive my sight",
+    "could see",
+    "made thee whole",
+    "rose"
+  ],
+  "release": {
+    "stage": 1,
+    "order": 5,
+    "note": "Upload-ready 2026-11-14. Owner decides when to post (30-episode posting hold applies)."
+  },
+  "content_note": "Mentions that Jesus would be killed and died on a cross for our sins; no violence is shown.",
+  "measured": {
+    "violence_words_in_narration": 1,
+    "duration_s": 79.17,
+    "name_first_spoken_pct": 0,
+    "ending_pct": 4,
+    "source": "measured on batches/cluster_04_encounters/bartimaeus_short/visual/bartimaeus_final.mp4 and its words.json: 'Jesus' first at 0.0 s, 'Bartimaeus' about 5 s, voice ends 76.17 s, 3.0 s hold; 'killed' once (Mark 10:33-34 context)"
+  },
+  "panels": {
+    "discoverability": {
+      "run": true,
+      "record": "poc_desert_storybook_heroes/bartimaeus/packaging/title_r1 + poster_r1; batches/cluster_04_encounters/bartimaeus_short/upload/_independent_review/20261114-220831",
+      "note": "2026-11-14. Blind title round (5 writers + 5 judges incl. Fable), blind key-art round (4 seats incl. Fable + 3 blind judges incl. Fable), then the external 5-CLI panel on the real upload text."
+    },
+    "guardrails": {
+      "run": true,
+      "record": "poc_desert_storybook_heroes/bartimaeus/guardrail_r3_film",
+      "note": "2026-11-14. Blind finished-film panel (Fable judge, Sonnet newcomer, Claude Bible, Codex hook, Gemini global; Grok timed out): 0 Bible errors, scores 7-8; line 12 fixed (owner ok)."
+    }
+  },
+  "overrides": {
+    "R03": "Title picked by a blind title round (4 of 5 judges) and the owner: 'On His Way to Die, Jesus Stopped | Blind Bartimaeus'. 'Bible' is carried by description line 1, #Bible and the tags; the title's job is the curiosity stake plus the searched phrase 'blind bartimaeus'."
+  }
+}

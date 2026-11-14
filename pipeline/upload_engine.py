@@ -77,15 +77,12 @@ def build_footer(platform: str, brand: dict, read_url: str = "") -> str:
         if _filled(handle):
             lines.append(f"Follow {handle}")
 
-    # Honest AI disclosure, once per platform copy (owner packaging rule
-    # 2026-09-19). On YT/FB it rides the public-domain line; TikTok/Instagram
-    # get it on its own short line (no public-domain note there, keep it punchy).
-    ai_note = (brand.get("ai_note") or "").strip()
+    # NO AI wording in public text, ever (owner rule 2026-10-31, restated 2026-11-14:
+    # "always remove any AI tool reference"). Disclosure is the platform's AI switch at
+    # upload, not copy. (Was: an ai_note line here, from the 2026-09-19 packaging rule.)
     if scripture_note and link_friendly:
         lines.append("")
-        lines.append(f"{scripture_note} {ai_note}".strip())
-    elif ai_note:
-        lines.append(ai_note)
+        lines.append(scripture_note)
     return "\n".join(lines).strip()
 
 

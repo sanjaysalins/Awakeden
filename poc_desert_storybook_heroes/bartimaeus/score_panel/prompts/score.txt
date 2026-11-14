@@ -1,0 +1,52 @@
+You are ONE independent seat on a blind creative panel. You have NOT seen any other seat's work and no draft is given to you.
+Write YOUR OWN plan from scratch. Be specific and bold, but serve the voice and the story. Everything you need is in the
+EVIDENCE PACK below. Do not ask questions. Do not use tools. Output the plan text only.
+
+EVIDENCE PACK:
+# FILM: "Blind Bartimaeus" (Mark 10:46-52) - 79.17 s vertical gospel short, worldwide audience
+LOOK: warm painted desert-storybook (gouache picture-book). Sun-baked Jericho road, ochre/sand/olive, soft dusty light.
+17 animated shots, hard cuts. Bartimaeus = blind beggar (eyes closed until 49 s), Jesus in a moving crowd.
+KEY PICTURES: 0-3 s his close-up shouting; 15-20.8 s the long road climbing to Jerusalem; 26.6-30 s HERO: Jesus stopped
+still in the moving crowd; 33.7 s cloak flung off; 49-56 s HERO: his eyes open, he sees; 56-61 s backs to us, he follows
+Jesus up the road; 61-65 s one cross at dusk; 65-69 s open tomb; 69-79.17 s HERO bookend at sunset (3 s+ hold after the
+last word, film ends 79.17 s).
+Voices: one warm narrator, Bartimaeus (raw, shouting cries), Jesus (gentle, low). Voice is final; music must sit UNDER it.
+Planned pauses: ~25.6-26.6 s (silence after his second cry, before "And Jesus stood still") and ~68.4-69.4 s (after "rose to life").
+Story arc: a cry for mercy -> people hush him -> Jesus is walking to die in Jerusalem; would He stop? -> he cries louder ->
+JESUS STANDS STILL -> called, cloak off -> "what wilt thou" -> "my sight" -> "thy faith hath made thee whole" -> he sees ->
+he follows Jesus up the road -> the cross -> He rose -> "Jesus stood still for one man".
+Score tool: ElevenLabs Music free-text prompt (music_v1). Known facts: long single generations can render dead air,
+so a score is made in TWO parts joined at a split second; each prompt can use "around N seconds in" cues.
+Never use composition_plan. Budget ~2 generations (~90 s total).
+
+TIMED NARRATION (film seconds):
+  0.00-  2.96  [bartimaeus] Jesus, thou Son of David, have mercy on me.
+  2.96-  4.96  [narrator] Many told the blind beggar to be quiet.
+  4.96- 12.71  [narrator] His name was Bartimaeus. He sat begging by the road near Jericho. "Son of David" meant God's promised King.
+ 12.71- 20.79  [narrator] Jesus was on the road to Jerusalem. He had told His followers He would be killed there. Would He stop for a beggar?
+ 20.79- 22.70  [narrator] But Bartimaeus shouted even louder.
+ 23.10- 25.58  [bartimaeus] Thou Son of David, have mercy on me.
+ 26.58- 33.70  [narrator] "And Jesus stood still." A whole crowd was moving. He stopped for one man, and called for him.
+ 33.70- 38.41  [narrator] Bartimaeus threw off his cloak and came. Jesus asked him what he wanted:
+ 38.81- 41.61  [jesus] What wilt thou that I should do unto thee?
+ 42.01- 44.65  [bartimaeus] Lord, that I might receive my sight.
+ 45.05- 48.89  [jesus] Go thy way; thy faith hath made thee whole.
+ 48.89- 54.80  [narrator] He trusted Jesus. Jesus made him well. At once he could see.
+ 54.80- 59.76  [narrator] Jesus told him to go his way. But Bartimaeus followed Jesus.
+ 59.76- 61.27  [narrator] Up the road to Jerusalem.
+ 61.27- 65.98  [narrator] There Jesus died on a cross for our sins, for the wrong things we have done.
+ 65.98- 68.38  [narrator] On the third day, He rose to life.
+ 69.38- 76.17  [narrator] On His way to die and rise again, Jesus stood still for one man.
+
+YOUR LENS: COMPOSER: the score for this film
+Design the music for this 79 s film. The owner wants REAL MELODY AND FEELING: a tune a viewer can hum after one listen, carried mainly by FELT PIANO and WARM STRINGS (a soft solo cello or violin may sing it), with only a light touch of Middle-Eastern colour (a little oud or ney) so it still feels like a Jericho road. Not ambient texture, not a drone, not a trailer. The music must still serve KJV narration with three voices and sit UNDER the voice. Story idea to honour: a blind man's cry for mercy -> Jesus STOPS for one man -> sight -> he follows Jesus up the road to the cross and the empty tomb. Give the melody a clear shape (first heard as an unfinished question, finally sung whole), a clear emotional arc, and say exactly where it lifts, where it drops nearly out (especially around 'And Jesus stood still'), and what plays in the 3 s hold.
+
+OUTPUT FORMAT (use these headings, keep it tight, under 800 words):
+1. SCORE IDEA - one sentence, then the instruments and the motif in plain words.
+2. WHY IT FITS a warm desert-storybook painted look AND this story - 2-3 bullets.
+3. SCORE CUE SHEET - a table: time range | what the music does | why (tie to the words/pictures).
+4. SPLIT - the split second for the two parts and why.
+5. MUSIC PROMPTS - the exact ElevenLabs free-text prompts for part 1 and part 2, ready to paste, with "around N seconds in" cues (cue times counted from the START OF THAT PART).
+6. MIX NOTES - music level vs voice, where it lifts, where it drops out, the 3 s hold.
+7. RISKS - the 3 ways this could go wrong, and how to check each by measurement or by ear.
+

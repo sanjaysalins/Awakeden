@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bartimaeus Motion v2</title>
+<style>
+:root{--bg:#f6efe2;--ink:#2b1d14;--red:#b23a22;--card:#fffaf0}
+body{margin:0;background:var(--bg);color:var(--ink);font:20px/1.4 system-ui,sans-serif;padding:16px}
+h1{font-size:34px;margin:6px 0}h2{font-size:24px;margin:8px 0}
+.row{display:flex;gap:20px;flex-wrap:wrap}.col{flex:1 1 320px;background:var(--card);border-radius:14px;padding:12px}
+video{width:100%;max-width:420px;border-radius:10px;background:#000;display:block}
+img{width:100%;border-radius:10px;cursor:zoom-in}img.big{position:fixed;inset:0;margin:auto;width:auto;max-width:98vw;max-height:98vh;z-index:9;cursor:zoom-out;box-shadow:0 0 0 100vmax rgba(0,0,0,.8)}
+.new{color:var(--red);font-weight:700}
+</style></head><body>
+<h1>Bartimaeus: new words</h1>
+<p>Same motion. <b class="new">New lettering</b>: red cry, ink storyteller, still Bible type, gold "see."</p>
+<div class="row">
+<div class="col"><h2 class="new">NEW (v2)</h2><video controls src="motion_v2_type/BARTIMAEUS_MOTION_v2.mp4"></video></div>
+<div class="col"><h2>Old (v1)</h2><video controls src="motion_v1/BARTIMAEUS_MOTION_v1.mp4"></video></div>
+</div>
+<h2>Frames (tap to zoom)</h2>
+<img src="motion_v2_type/render/qc/a.jpg" alt="start">
+<img src="motion_v2_type/render/qc/b.jpg" alt="middle">
+<img src="motion_v2_type/render/qc/c.jpg" alt="end">
+<script>document.querySelectorAll('img').forEach(i=>i.onclick=()=>i.classList.toggle('big'))</script>
+</body></html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bartimaeus Title Pick</title>
+<style>
+:root{--bg:#f6efe2;--ink:#2b1d14;--red:#b23a22;--card:#fffaf0;--gold:#e9b043}
+body{margin:0;background:var(--bg);color:var(--ink);font:21px/1.45 system-ui,sans-serif;padding:16px;max-width:900px}
+h1{font-size:34px;margin:6px 0}h2{font-size:24px;margin:18px 0 6px}
+.card{background:var(--card);border-radius:14px;padding:14px 16px;margin:10px 0}
+.win{border:4px solid var(--gold)}
+.t{font-size:28px;font-weight:800}.th{font-size:30px;font-weight:900;color:var(--red);letter-spacing:1px}
+table{border-collapse:collapse;width:100%}td,th{padding:6px 8px;border-bottom:1px solid #e3d6bd;text-align:left}
+img{width:100%;max-width:300px;border-radius:10px;cursor:zoom-in}img.big{position:fixed;inset:0;margin:auto;width:auto;max-width:98vw;max-height:98vh;z-index:9;cursor:zoom-out;box-shadow:0 0 0 100vmax rgba(0,0,0,.8)}
+</style></head><body>
+<h1>Bartimaeus: title + thumbnail</h1>
+<p>5 blind writers, then 5 blind judges. <b>4 of 5 judges picked the same pair.</b></p>
+
+<div class="card win">
+<p>Title</p>
+<p class="t">On His Way to Die, Jesus Stopped | Blind Bartimaeus</p>
+<p>Thumbnail words</p>
+<p class="th">FOR ONE<br>BLIND MAN</p>
+<p>Together they read as one sentence. It is also the film's last line.</p>
+</div>
+
+<h2>The judges</h2>
+<div class="card">
+<table>
+<tr><th>Pair</th><th>Picked by</th></tr>
+<tr><td><b>"On His Way to Die, Jesus Stopped"</b> + FOR ONE / BLIND MAN</td><td><b>Fable, Claude, Gemini, Grok</b></td></tr>
+<tr><td>"Why Jesus Stopped for a Blind Beggar" + THEY SAID "BE QUIET"</td><td>Codex</td></tr>
+</table>
+<p>Search data: people really type <b>"blind Bartimaeus"</b>, so it goes at the end of the title.</p>
+</div>
+
+<h2>One worry (4 judges)</h2>
+<div class="card">
+<p>A plain film frame is too quiet, and the small beggar gets lost on a phone.</p>
+<p><b>Fix:</b> a painted movie poster. The blind man is big in front, arms out and shouting. Jesus stands still behind him in a blurred crowd.</p>
+<img src="stills/s05.png" alt="his cry"> <img src="stills/s06.png" alt="Jesus stood still">
+<p>Tap to zoom. These are the two film pictures the poster would combine.</p>
+</div>
+
+<h2>Cost</h2>
+<div class="card">
+<p>4 poster tries with GPT Image 2 (the same look as the film): <b>about $0.40</b>, with a cap of <b>$0.60</b>.</p>
+</div>
+<script>document.querySelectorAll('img').forEach(i=>i.onclick=()=>i.classList.toggle('big'))</script>
+</body></html>

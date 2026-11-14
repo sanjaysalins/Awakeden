@@ -1,0 +1,27 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Bartimaeus Pictures</title><style>
+body{font-family:Verdana,sans-serif;background:#f6efe4;color:#2b2218;margin:0;padding:20px;font-size:20px;line-height:1.5}
+h1{font-size:30px;margin:0 0 6px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+.card{background:#fff;border-radius:14px;padding:10px;box-shadow:0 2px 8px #0002}.card img{width:100%;border-radius:10px;cursor:zoom-in}
+.t{font-weight:bold;margin-top:6px}.ok{color:#2e7d32}.fix{color:#b23c17;font-weight:bold}
+#zoom{display:none;position:fixed;inset:0;background:#000d;align-items:center;justify-content:center;cursor:zoom-out}#zoom img{max-height:96vh;max-width:96vw}
+</style></head><body><h1>Blind Bartimaeus: 17 pictures</h1><div>Click to zoom. Cost about $1.98 (incl. 2 redos). All 17 OK.</div><br><div class="grid">
+<div class="card"><img src="refs/ref_jesus.png"><div class="t">Jesus (guide)</div><div class="ok">✓ </div></div>
+<div class="card"><img src="refs/ref_bartimaeus.png"><div class="t">Bartimaeus (guide)</div><div class="ok">✓ </div></div>
+<div class="card"><img src="stills/s01.png"><div class="t">1. He shouts</div><div class="ok">✓ Great. 5 fingers each hand.</div></div>
+<div class="card"><img src="stills/s02.png"><div class="t">2. Crowd: be quiet</div><div class="ok">✓ Finger on lips. Good.</div></div>
+<div class="card"><img src="stills/s03.png"><div class="t">3. By the road, Jericho</div><div class="ok">✓ </div></div>
+<div class="card"><img src="stills/s04.png"><div class="t">4. Jesus in the crowd</div><div class="ok">✓ </div></div>
+<div class="card"><img src="stills/s05.png"><div class="t">5. Shouts louder</div><div class="ok">✓ </div></div>
+<div class="card"><img src="stills/s06.png"><div class="t">6. HERO: Jesus stood still</div><div class="ok">✓ Crowd moves, He is still.</div></div>
+<div class="card"><img src="stills/s07.png"><div class="t">7. Jesus calls for him</div><div class="ok">✓ </div></div>
+<div class="card"><img src="stills/s08.png"><div class="t">8. Throws off his cloak</div><div class="ok">✓ Bowl left behind.</div></div>
+<div class="card"><img src="stills/s09.png"><div class="t">9. Jesus asks</div><div class="ok">✓ Eyes closed. Good.</div></div>
+<div class="card"><img src="stills/s10.png"><div class="t">10. 'My sight'</div><div class="ok">✓ </div></div>
+<div class="card"><img src="stills/s11.png"><div class="t">11. 'Go thy way'</div><div class="ok">✓ Hand on shoulder.</div></div>
+<div class="card"><img src="stills/s12.png?v=2"><div class="t">12. HERO: he can see</div><div class="ok">✓ Redone: eyes open, no cloak now.</div></div>
+<div class="card"><img src="stills/s13.png"><div class="t">13. He follows Jesus</div><div class="ok">✓ </div></div>
+<div class="card"><img src="stills/s14.png?v=2"><div class="t">14. Road to Jerusalem</div><div class="ok">✓ Redone: Jewish temple, not Greek.</div></div>
+<div class="card"><img src="stills/s15.png"><div class="t">15. The cross</div><div class="ok">✓ Empty, quiet.</div></div>
+<div class="card"><img src="stills/s16.png"><div class="t">16. Empty tomb</div><div class="ok">✓ No stone.</div></div>
+<div class="card"><img src="stills/s17.png"><div class="t">17. HERO: together on the road</div><div class="ok">✓ </div></div>
+</div><div id="zoom" onclick="this.style.display='none'"><img></div><script>document.querySelectorAll(".card img").forEach(i=>i.onclick=()=>{const z=document.getElementById("zoom");z.querySelector("img").src=i.src;z.style.display="flex"});</script></body></html>
