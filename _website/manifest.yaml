@@ -816,6 +816,20 @@ items:
   public_hook: Martha asked Jesus, "Lord, dost thou not care?" He answered with her name, twice.
   public_blurb: A 74-second short on Luke 10 and John 11:5. Jesus did not call Martha's work wrong. Under all her work, He saw her worry, and He loved her.
   source: ../batches/cluster_04_encounters/mary_martha_short
+- slug: second-fire-he-fed-him-first
+  kind: short
+  title: The Second Fire
+  ref: John 21:1-17
+  series_id: people-who-encountered-jesus
+  cluster: null
+  public_status: studio_complete
+  featured: false
+  preview_approved: false
+  preview_source: null
+  youtube_id: null
+  public_hook: Peter said no three times by a fire. After Jesus rose, another fire was waiting on the beach.
+  public_blurb: An 88-second short on John 18 and John 21. In the King James Bible, "a fire of coals" appears only twice. Before Jesus asked Peter to feed anyone, Jesus fed Peter.
+  source: ../batches/cluster_04_encounters/second_fire_short
 - slug: woman-behold-thy-son
   kind: short
   title: Woman, Behold Thy Son

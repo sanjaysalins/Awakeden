@@ -1,0 +1,10 @@
+OUTPUT FORMAT (use these headings, keep it tight, under 900 words):
+1. SCORE IDEA - one sentence, then the instruments and the motif in plain words.
+2. WHY IT BEATS a sparse solo felt piano - 2-3 bullets.
+3. SCORE CUE SHEET - a table: time range | what the music does | why (tie to the words).
+4. SPLIT - one part or two? If two, the split second and why.
+5. MUSIC PROMPT(S) - the exact ElevenLabs free-text prompt(s), ready to paste, with "around N seconds in" cues.
+6. SFX CUE SHEET - a table: start s | end s | sound (library slug OR "NEW: <exact generation prompt>") | level (soft/medium) | why.
+   Mark the 2-4 SFX moments that matter most with a star.
+7. MIX NOTES - music level vs voice, where it lifts, where it drops out, what plays in the 3 s hold.
+8. RISKS - the 3 ways this plan could go wrong, and how to check each by measurement or by ear.

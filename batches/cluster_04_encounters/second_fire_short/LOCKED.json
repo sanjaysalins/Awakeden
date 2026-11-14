@@ -1,0 +1,22 @@
+{
+ "piece": "second_fire_short",
+ "locked": "2026-11-13",
+ "locked_by": "owner ('yes' to 'lock v3 and do the packaging', 2026-11-13)",
+ "final_video": "visual/second_fire_final.mp4",
+ "final_sha256": "f6568e7d9107e368bb0069f9084311e1565fecbc868b2cda9d01e3c08c332bba",
+ "source": "poc_folk_print_style/SECOND_FIRE_MOTION_v3.mp4 (same bytes); FILM_LOCK.md; motion _remotion/src/SecondFireV1.tsx",
+ "words": "LOCKED words v3 2026-11-13: poc_folk_print_style/narration.md (KJV-fact fix: 'In the King James Bible, these words appear only twice.')",
+ "audio": "audio/narration.mp3 84.89 s natural speed (one sentence re-recorded and spliced at 40.30-44.38 s); film 87.9 s (3 s landing hold); oud/ney/cello score + fire SFX",
+ "visual": "Folk Print style: Nano Banana Pro stills -> 17 Kling v3 pro clips, trim-only 1.0x; Remotion motion layer (art-own doodles, 3 count coals, ember iris / sunrise ray wipe / wave wipe)",
+ "spend_usd": 18.3,
+ "not_done": [
+  "upload (30-episode hold)",
+  "seed viewers",
+  "commit (text only, NO media)",
+  "search terms checked once against YouTube autocomplete 2026-11-13 (a dated snapshot, not volume)",
+  "no separate hostile discoverability panel run on the final text"
+ ],
+ "note": "Any change to the film or words needs the owner's say-so and a new sha.",
+ "thumbs": "LOCKED posters used as-is: shorts/TikTok/Reels 9x16 tagline 'HE FED HIM FIRST.'; YouTube wide 16x9 tagline 'HE CARRIED THAT NIGHT.'; 1x1 = poster padded, not redrawn (publish/make_thumbs.py)",
+ "packaging": "packaging/PACKAGING_CARD_MERGED.md + packaging/packaging.json (3 blind writers: Fable, Opus, Sonnet)"
+}

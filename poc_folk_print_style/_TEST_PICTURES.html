@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Second Fire test pictures</title>
+<style>
+:root{--bg:#fbf4e8;--ink:#2a2420;--org:#d9612b;--teal:#1f5c5a;--soft:#efe3cf}
+body{margin:0;background:var(--bg);color:var(--ink);font:20px/1.5 Verdana,Arial,sans-serif}
+main{max-width:1100px;margin:0 auto;padding:20px 16px 60px}
+h1{color:var(--org);font-size:32px;margin:.2em 0}h2{color:var(--teal);margin:1.2em 0 .3em}
+.row{display:flex;flex-wrap:wrap;gap:14px}
+.c{flex:1 1 300px;background:var(--soft);border-radius:10px;padding:10px}
+.c.s{flex:1 1 180px}
+img{width:100%;border-radius:8px;cursor:zoom-in;display:block}
+img.big{position:fixed;inset:0;width:100%;height:100%;object-fit:contain;background:#000e;z-index:9;border-radius:0;cursor:zoom-out}
+.ok{color:var(--teal);font-weight:bold}
+.ask{background:var(--org);color:#fff;border-radius:10px;padding:16px 18px;font-size:22px;font-weight:bold;margin-top:26px}
+</style></head><body><main>
+<h1>The Second Fire: test pictures</h1>
+<p>Click any picture to zoom.</p>
+
+<h2>3 test stills</h2>
+<div class="row">
+<div class="c"><img src="test/t1_i_am_not.png" onclick="this.classList.toggle('big')"><b>"I am not."</b><br>Night fire. Peter says no. <span class="ok">Looks good.</span></div>
+<div class="c"><img src="test/t2_face_to_face.png" onclick="this.classList.toggle('big')"><b>"Lovest thou me?"</b><br>Jesus and Peter by the second fire. <span class="ok">Looks good.</span></div>
+<div class="c"><img src="test/t3_bread_hands.png" onclick="this.classList.toggle('big')"><b>"Jesus fed Peter."</b><br>The last picture. <span class="ok">Hands checked up close.</span></div>
+</div>
+
+<h2>5 references (keep everyone the same)</h2>
+<div class="row">
+<div class="c s"><img src="refs/R1_jesus.png" onclick="this.classList.toggle('big')">Jesus</div>
+<div class="c s"><img src="refs/R2_peter.png" onclick="this.classList.toggle('big')">Peter</div>
+<div class="c s"><img src="refs/R3_young_disciple.png" onclick="this.classList.toggle('big')">Young disciple</div>
+<div class="c s"><img src="refs/R4_courtyard_night.png" onclick="this.classList.toggle('big')">Night fire</div>
+<div class="c s"><img src="refs/R5_shore_sunrise.png" onclick="this.classList.toggle('big')">Morning fire</div>
+</div>
+
+<h2>Small things I saw</h2>
+<ul>
+<li>Peter's tears are drawn as blue cartoon drops (in the last picture). Fine for this style?</li>
+<li>The bread has a cross-cut on top. It's normal bread scoring.</li>
+<li>Spent so far on pictures: $0.64.</li>
+</ul>
+
+<div class="ask">My pick: the style works. Make the other 14 pictures for ~$1.12 (3 tests reused). Say yes?</div>
+</main></body></html>

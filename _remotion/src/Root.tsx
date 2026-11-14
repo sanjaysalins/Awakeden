@@ -15,6 +15,7 @@ import { MaryMarthaV1, MM_FRAMES, MM_FPS } from "./MaryMarthaV1";
 import { MaryMarthaV2 } from "./MaryMarthaV2";
 import { MaryMarthaV3, MM3_FRAMES } from "./MaryMarthaV3";
 import { MaryMarthaV4, MM4_FRAMES } from "./MaryMarthaV4";
+import { SecondFireV1, SF_FRAMES, SF_FPS } from "./SecondFireV1";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -45,6 +46,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="MaryMarthaV2" component={MaryMarthaV2} durationInFrames={MM_FRAMES} fps={MM_FPS} width={1080} height={1920} />
       <Composition id="MaryMarthaV3" component={MaryMarthaV3} durationInFrames={MM3_FRAMES} fps={MM_FPS} width={1080} height={1920} />
       <Composition id="MaryMarthaV4" component={MaryMarthaV4} durationInFrames={MM4_FRAMES} fps={MM_FPS} width={1080} height={1920} />
+      <Composition id="SecondFireV1" component={SecondFireV1} durationInFrames={SF_FRAMES} fps={SF_FPS} width={1080} height={1920} defaultProps={{ DENSITY: 1 }} />
     </>
   );
 };

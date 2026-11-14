@@ -1,0 +1,101 @@
+{
+ "schema": "packaging/1",
+ "episode": "01_second_fire",
+ "person": "Peter",
+ "person_tag": "#Peter",
+ "name_match": "Peter",
+ "title_class": "B",
+ "search_class": "medium on the neighbour (Peter's denial), none on the title: real YouTube autocomplete 2026-11-13 shows 'peter denied jesus 3 times' / 'peter denied jesus three times' / 'peter denied jesus 3 times bible story' / 'jesus restores peter'; 'fire of coals' returns only 'burning coals of fire'; 'the second fire' returns unrelated results. Crowded by Superbook / The Chosen. One dated snapshot, not volume.",
+ "search_phrases": [
+  "peter denied jesus three times",
+  "peter denied jesus 3 times bible story",
+  "jesus restores peter",
+  "jesus breakfast on the beach",
+  "feed my sheep"
+ ],
+ "famous_neighbours": [
+  "Peter",
+  "Peter's denial",
+  "feed my sheep"
+ ],
+ "curiosity_gap": "One night Peter said no beside a fire of coals; why was a second fire of coals waiting on the beach, and where had Peter seen one before?",
+ "curiosity_question": "Why was there a fire of coals on the beach, and where had Peter seen one before?",
+ "send_to": "someone who can't stop thinking about one bad night",
+ "scripture": {
+  "primary": "John 21:1-17",
+  "read_it": "John 18:15-27 (the night Peter said no, in part) and John 21:1-17 (the beach)",
+  "narration_covers": [
+   "John 18:15-27",
+   "John 21:1-17"
+  ]
+ },
+ "name_reveal": {
+  "decision": "early_spoken",
+  "note": "Peter is named at about 5 s ('His friend Peter'); the title carries the film name, Peter is searchable in line 1, tags and the pinned comment.",
+  "compensation": [
+   "title",
+   "description_line_1",
+   "pinned_comment"
+  ]
+ },
+ "first_seconds": {
+  "stake_in_3s": true,
+  "first_spoken_line": "Is there one night you can't stop thinking about?",
+  "stake_source": "the spoken opener (0.1-2.5 s) over Peter's face in firelight asks the viewer's own question. The locked film has no on-screen hook label, so none is claimed.",
+  "waiver": "n/a"
+ },
+ "youtube": {
+  "title": "The Second Fire: Why a Fire Was Waiting for Peter",
+  "title_alt": "The Second Fire: After Peter Said No Three Times",
+  "line1": "Bible story: Peter said no to Jesus three times by a fire. After Jesus rose, another fire was waiting on the beach. (John 18, 21)",
+  "line2": "John 18:15-27 (in part) and John 21:1-17 (KJV). Quoted: John 18:17, 18:18, 18:25, 21:7, 21:9, 21:12, 21:15-17.",
+  "hashtags": [
+   "#Peter",
+   "#Jesus",
+   "#BibleStory",
+   "#John21",
+   "#Shorts"
+  ],
+  "tags": [
+   "The Second Fire",
+   "Peter denied Jesus",
+   "Peter denied Jesus 3 times",
+   "Jesus restores Peter",
+   "Peter Bible story",
+   "Peter and Jesus",
+   "John 21",
+   "John 18",
+   "fire of coals",
+   "feed my sheep",
+   "Jesus breakfast on the beach",
+   "KJV"
+  ]
+ },
+ "shareable_fact": "In the King James Bible, the words \"a fire of coals\" appear only twice: John 18:18, the night Peter said no, and John 21:9, the morning on the beach.",
+ "pinned_comment": "Which line stays with you most: \"Come and dine\" or \"Feed my sheep\"? Read it: John 21:1-17.",
+ "ask_line": "Send this to someone who can't stop thinking about one bad night.",
+ "next_teaser": "Next: another person who thought it was too late, and found Jesus already there.",
+ "spoiler_patterns": [
+  "fed Peter",
+  "fed him first"
+ ],
+ "release": {
+  "stage": 1,
+  "order": 1
+ },
+ "measured": {
+  "name_first_spoken_pct": 6,
+  "ending_pct": 3.4,
+  "violence_words_in_narration": 0
+ },
+ "overrides": {
+  "R03": "Owner-locked movie-style title 'The Second Fire'; the word Bible is in line 1 and the tags, and a long Bible tail would bury the film name.",
+  "R04": "Class B hook-first; the film name leads (owner likes short movie-like titles), Peter sits in tags, line 1 and the pinned comment."
+ },
+ "panels": {
+  "discoverability": {
+   "run": true,
+   "note": "3 blind card writers (Fable, Opus, Sonnet) merged by convergence 2026-11-13. A separate hostile discoverability panel has NOT been run on the final text; recommend it before upload."
+  }
+ }
+}

@@ -1,0 +1,47 @@
+# EVIDENCE PACK: one vertical short film (YouTube Shorts / Reels), about 88 seconds
+
+What the viewer gets: a calm narrator speaks; Peter's own words are in a man's voice; Jesus's own words are in a second, separate voice. Music underneath: a plucked oud, a wooden flute and a low cello play one small three-note tune, dark and falling in the night scenes, warm and rising from sunrise on. Real sounds: a crackling fire (the SAME fire sound at the night fire, the beach fire and the end), a distant crowd, one far rooster, oars and waves, a splash, fish sizzling, bread tearing, sheep.
+The pictures are flat folk-art prints (burnt orange, mustard, coral, deep teal, cream, grain texture, sunburst skies), gently animated. Over them, printed doodles in the same style: sparks rising from fires, small four-point stars, dotted lines along the sun rays, scalloped wave lines, folk flowers, gulls, leaping fish, steam curls. THREE SMALL COALS with flames appear by the fire at night and go out one by one on Peter's denials; three cold coals appear by the beach fire and light one by one on "Three times, yes"; the three lit coals rest under the bread on the last picture. Transitions: a ring of fire opens the picture on each of the three fire moments; once, at sunrise, the new picture opens like a spinning fan of sun rays; twice a wave rises up the screen into a sea scene; other cuts are plain. No words are written on screen.
+
+## THE SPOKEN LINES (numbered)
+1. NARRATOR: Is there one night you can't stop thinking about? The night Jesus was arrested, His friend Peter stood by a fire. People asked if he was one of His followers.
+2. PETER: I am not.
+3. NARRATOR: Three times, he said no. Jesus died. He rose from the dead. Peter went back to fishing. All night, nothing. At sunrise, Jesus stands on the shore. He tells them where to throw the net. It fills with fish. A friend cries, "It is the Lord." Peter jumps into the sea to reach Him. On the beach: "a fire of coals." In the King James Bible, these words appear only twice. Here, and the night Peter said no.
+4. JESUS: Come and dine.
+5. NARRATOR: Come and eat. Jesus hands them bread and fish. After the meal, He asks Peter three times:
+6. JESUS: Lovest thou me?
+7. NARRATOR: Do you love me? The third time, Peter is sad.
+8. PETER: Lord, thou knowest all things; thou knowest that I love thee.
+9. NARRATOR: You know everything. You know I love you.
+10. JESUS: Feed my sheep.
+11. NARRATOR: Take care of my people. Three times, no, that night. Three times, yes, at the second fire. And before Jesus asked Peter to feed anyone, Jesus fed Peter.
+(3 seconds of music and fire after the last word.)
+
+## THE PICTURES IN ORDER (time in seconds, one line each)
+1 (0-3) Peter close, at night, worried, firelight on his face; sparks rise and turn into stars.
+2 (3-8) Night stone courtyard: men around a fire bowl, Peter among them; three small lit coals appear in front of the fire.
+3 (8-13) A servant girl points at Peter; he turns his face away; the first small coal goes out on "I am not".
+4 (13-16) A rooster on the courtyard wall, Peter walking away; the other two coals go out.
+5 (16-19) An empty rock tomb, stone rolled away, first sunlight; dotted sun rays and flowers appear on "He rose".
+6 (19-24) Night sea, one boat, men pulling up an empty net; ripples, no fish.
+7 (24-29) Sunrise; Jesus standing on the shore pointing; a boat on the water; gulls and flowers.
+8 (29-34) The net bulging with fish beside the boat; a young man points to the shore; fish leap.
+9 (34-37) Peter leaps from the boat into the water; a splash; a tiny figure and a fire on the shore.
+10 (37-40) Close: a ring of stones with glowing coals, fish and bread on it; flames, steam, sparks.
+11 (40-48) One picture split: top half the night courtyard fire (teal), bottom half the sunrise beach fire (orange), joined by a woven band; sparks fly from the beach fire up into the night fire and light it.
+12 (48-53) Jesus by the fire holding out bread to wet, tired fishermen.
+13 (53-60) Jesus and Peter sitting face to face by the fire, Jesus speaking gently; three cold coals appear in the sand.
+14 (60-68) Close: Peter's face, wet eyes, hand on his chest; on "I love thee" sparks rise and stay lit.
+15 (68-75) Jesus's hand on Peter's shoulder; both look at sheep on a green hill; flowers bloom under the sheep on "Feed my sheep".
+16 (75-80) Wide shore, Jesus and Peter by the small fire, sun fully up; three cold coals light one, two, three on "Three times, yes".
+17 (80-88) Close: Jesus's hands giving round bread into Peter's open hands over the coals; Peter has a tear and a smile; the three lit coals sit under the bread.
+
+## WHAT THE OWNER WANTS NOW
+A thumbnail that looks like a MOVIE POSTER, and a title that sounds like a MOVIE TITLE. The film's working title is "The Second Fire".
+- Audience: worldwide, many with English as a second language, many with no Bible knowledge. Shown small on a phone.
+- The owner likes short, simple titles. Title + thumbnail must work as ONE curiosity unit: together they open a question
+  the film really answers. No false or clickbait promises; never imply something the film does not show.
+- Platform: YouTube Shorts / Reels / TikTok cover (vertical 9:16), plus a 16:9 version for YouTube search.
+- Art can be (a) built from the film's own 17 flat folk-art pictures (described above) with poster type added, or
+  (b) NEW poster art generated in the same folk-art style (Jesus: long dark hair, beard, cream tunic, teal + orange patterned
+  mantle; Peter: broad fisherman ~40, short curly dark hair, short beard with grey flecks, rust-brown tunic). No halo shapes.
