@@ -63,8 +63,35 @@ def flink(p: Path, label: str) -> str:
     return f"<a href='file:///{str(p).replace(chr(92), '/')}'>{html.escape(label)}</a>"
 
 
+def thumb_img(thumbs: Path, prefer: str) -> str:
+    """Small clickable thumbnail so each card shows at a glance what the video is."""
+    for key in (prefer, "9x16", "16x9", "tiktok", "1x1"):
+        t = thumbs / f"thumb_{key}.jpg"
+        if t.is_file():
+            u = "file:///" + str(t).replace(chr(92), "/")
+            return f"<a href='{u}'><img class=thumb src='{u}' alt='thumbnail'></a>"
+    return ""
+
+
 def esc(x) -> str:
     return html.escape(str(x), quote=True)
+
+
+def _load_v5() -> dict:
+    """v5 hook/decode-card candidates from poc_comic_page/_audit/fixes (review first; NOT the pinned final)."""
+    out = {}
+    for f in (ROOT / "poc_comic_page" / "_audit" / "fixes").glob("*.json"):
+        try:
+            d = json.loads(f.read_text(encoding="utf-8-sig"))
+        except Exception:
+            continue
+        o = d.get("output")
+        if d.get("verified") and o and Path(o).is_file():
+            out[d["id"]] = (Path(o), d)
+    return out
+
+
+V5 = _load_v5()
 
 
 def card(s: release_state.PieceState, missing: list[str]) -> str:
@@ -73,6 +100,12 @@ def card(s: release_state.PieceState, missing: list[str]) -> str:
     links = []
     if s.video:
         links.append(flink(s.video, "▶ video file"))
+    if s.slug in V5:
+        v5p, v5d = V5[s.slug]
+        cards = ([" ".join(str(v5d["hook_text"]).split())] if v5d.get("hook_text") else []) + [
+            f'{c.get("old")}={c.get("plain")}' for c in v5d.get("decode_cards", [])]
+        links.append(flink(v5p, "✨ v5 hook-fixed (PINNED final; old pin in FINAL_VIDEO.txt.prev_v4)" if Path(v5p).resolve() == Path(s.video).resolve() else "✨ v5 hook candidate (review, not pinned)") +
+                     f" <span class=slug>cards: {esc('; '.join(cards)) or '-'}</span>")
     if (pub / "PUBLISH_INDEX.html").is_file():
         links.append(flink(pub / "PUBLISH_INDEX.html", "📦 publish pack (copy buttons)"))
     if (pub / "captions.srt").is_file():
@@ -116,6 +149,7 @@ def card(s: release_state.PieceState, missing: list[str]) -> str:
     todo = (f"<span class='c warn'>to post: {', '.join(missing)}</span>"
             if missing else "<span class='c ok'>all platforms posted</span>")
     return (f"<div class=card id='{esc(s.slug)}'>"
+            + thumb_img(thumbs, "16x9" if s.kind == "long" else "9x16") +
             f"<h3>{badge}{esc(s.title)} <span class=slug>{esc(s.slug)}"
             f"{' · ' + esc(s.cluster) if s.cluster else ''}</span> {todo}</h3>"
             f"<div class=links>{' · '.join(links)} {tech}</div>"
@@ -185,6 +219,7 @@ def swirls_card(title: str, slug: str, final: Path | None, ledger_entry: dict) -
             if missing else "<span class='c ok'>all platforms posted</span>")
     subref = f" · {esc(ref)}" if ref else ""
     card_html = (f"<div class=card id='swirls-{esc(slug)}'>"
+                + thumb_img(pub / "thumbs", "9x16") +
                 f"<h3><span class='c swirls'>SWIRLS OF LIFE</span> {esc(title)} "
                 f"<span class=slug>{esc(slug)}{subref}</span> {todo}</h3>"
                 f"<div class=links>{' · '.join(links)}</div>"
@@ -414,6 +449,7 @@ h1{{font-family:Georgia,serif;font-size:22px;margin:0 0 4px}} h2{{font-family:Ge
 .sub{{color:#a89e8e;font-size:13px;margin-bottom:6px;line-height:1.5}}
 .flow{{background:#211d17;border:1px solid #38322a;border-radius:8px;padding:12px 16px;font-size:13px;line-height:1.7;margin:14px 0}}
 .card{{background:#211d17;border:1px solid #38322a;border-radius:8px;padding:12px 16px;margin:12px 0}}
+.card{{overflow:hidden}} .thumb{{float:left;height:150px;max-width:150px;object-fit:cover;border-radius:6px;margin:0 14px 6px 0;border:1px solid #38322a}}
 .card h3{{margin:0 0 6px;font-size:15px}} .slug{{color:#a89e8e;font-size:11px;font-weight:400}}
 .links{{font-size:12px;margin-bottom:8px;line-height:1.9}} a{{color:#c9a55a}}
 .tech{{color:#a89e8e;margin-left:8px}} .ok{{color:#7dbb8b}} .bad{{color:#e08a7a}}
